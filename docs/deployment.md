@@ -36,3 +36,9 @@ Crie um projeto apontando para a pasta `frontend`.
   - `VITE_API_URL=https://one2axes-backend.onrender.com`
 
 Depois que a URL final da Vercel existir, atualize `FRONTEND_ORIGINS` no Render com esse dominio.
+
+URL atual de producao do frontend:
+
+```txt
+https://12axes.vercel.app
+```

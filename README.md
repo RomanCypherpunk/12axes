@@ -409,6 +409,13 @@ frontend/dist/
 
 O projeto foi pensado para deploy gratuito/semi-gratuito com frontend e backend separados.
 
+URLs atuais de producao:
+
+| Servico | URL |
+|---|---|
+| Frontend | `https://12axes.vercel.app` |
+| Backend | `https://one2axes-backend.onrender.com` |
+
 ### Backend no Render
 
 Configuracao recomendada:
