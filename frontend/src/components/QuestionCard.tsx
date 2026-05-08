@@ -19,24 +19,30 @@ interface QuestionCardProps {
 
 export function QuestionCard({ question, axisLabel, options, selected, disabled = false, onSelect }: QuestionCardProps) {
   return (
-    <section className="question-card" aria-labelledby="question-title">
+    <article className="question-card" aria-labelledby="question-title">
       <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
       <h2 id="question-title">{question.text}</h2>
-      <div className="answer-grid">
-        {options.map((option) => (
-          <button
-            key={option.id}
-            className={selected === option.id ? `${answerClassById[option.id]} selected` : answerClassById[option.id]}
-            type="button"
-            disabled={disabled}
-            onClick={() => onSelect(option.id)}
-          >
-            <AnswerIcon answer={option.id} />
-            <span>{option.label}</span>
-          </button>
-        ))}
+      <div className="answer-grid" role="radiogroup" aria-label="Opções de resposta">
+        {options.map((option) => {
+          const isSelected = selected === option.id;
+          return (
+            <button
+              key={option.id}
+              className={isSelected ? `${answerClassById[option.id]} selected` : answerClassById[option.id]}
+              type="button"
+              role="radio"
+              aria-checked={isSelected}
+              disabled={disabled}
+              onClick={() => onSelect(option.id)}
+            >
+              <AnswerIcon answer={option.id} />
+              <span>{option.label}</span>
+              <span aria-hidden="true" />
+            </button>
+          );
+        })}
       </div>
-    </section>
+    </article>
   );
 }
 

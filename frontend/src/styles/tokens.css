@@ -1,52 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
-
 :root {
   color-scheme: light;
-  font-family:
-    Poppins, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #101522;
-  --page: #ffffff;
-  --page-soft: #f2f2f2;
-  --text: #101522;
-  --muted: #5f6673;
-  --muted-strong: #343b48;
-  --line: #dde2ea;
-  --line-strong: #cdd5df;
-  --surface: rgba(255, 255, 255, 0.92);
-  --surface-strong: #ffffff;
-  --green-dark: #009a38;
-  --green: #2bdd6c;
-  --neutral: #3f4652;
-  --red: #c03221;
-  --red-dark: #9f1000;
-  --green-soft: #eaf9ef;
-  --red-soft: #fff0ed;
-  --gray-soft: #f2f2f2;
-  --shadow: 0 24px 70px rgba(16, 21, 34, 0.10);
-  --shadow-soft: 0 14px 34px rgba(16, 21, 34, 0.07);
-  --radius: 8px;
-  --gradient: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
-  --gradient-red: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+
+  /* Brand palette */
+  --brand-green: #009A38;
+  --brand-green-strong: #007A2D;
+  --brand-green-light: #2BDD6C;
+  --brand-green-soft: #E8F8EE;
+  --brand-green-tint: #F4FCF7;
+
+  --brand-red: #C03221;
+  --brand-red-strong: #9F1000;
+  --brand-red-light: #E15A4A;
+  --brand-red-soft: #FFEEEA;
+  --brand-red-tint: #FFF7F5;
+
+  /* Surfaces */
+  --bg: #FAFAF7;
+  --bg-grain: #F4F4F0;
+  --surface: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+  --surface-soft: #F6F7F4;
+
+  /* Text */
+  --text: #0E1726;
+  --text-strong: #050B15;
+  --text-muted: #5A6478;
+  --text-soft: #8A93A4;
+
+  /* Lines */
+  --line: #E6EAF0;
+  --line-soft: #EFF1F4;
+  --line-strong: #D4DAE3;
+
+  /* Neutral (used for "neutro/inseguro") */
+  --neutral: #4A5263;
+  --neutral-soft: #EEF0F4;
+
+  /* Effects */
+  --shadow-xs: 0 1px 2px rgba(14, 23, 38, 0.04);
+  --shadow-sm: 0 4px 14px rgba(14, 23, 38, 0.06);
+  --shadow-md: 0 12px 28px rgba(14, 23, 38, 0.08);
+  --shadow-lg: 0 24px 60px rgba(14, 23, 38, 0.12);
+  --shadow-green: 0 14px 30px rgba(0, 154, 56, 0.22);
+  --shadow-red: 0 14px 30px rgba(192, 50, 33, 0.20);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Gradients */
+  --gradient-green: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-light) 100%);
+  --gradient-red: linear-gradient(135deg, var(--brand-red-strong) 0%, var(--brand-red) 100%);
+  --gradient-soft: linear-gradient(180deg, #FFFFFF 0%, var(--brand-green-tint) 100%);
+
+  /* Typography */
+  --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(1100px 500px at 90% -10%, rgba(43, 221, 108, 0.08), transparent 60%),
+    radial-gradient(900px 480px at -10% 110%, rgba(192, 50, 33, 0.05), transparent 65%),
+    linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100dvh;
 }
 
 h1,
 h2,
 h3,
-strong,
-button {
-  font-family:
-    Sora, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+h4,
+.brand-mark,
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
 }
 
 button,
@@ -54,8 +121,32 @@ input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 button {
   cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--brand-green-soft);
+  color: var(--brand-green-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
