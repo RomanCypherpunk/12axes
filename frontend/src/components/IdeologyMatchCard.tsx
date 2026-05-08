@@ -7,6 +7,7 @@ interface IdeologyMatchCardProps {
 
 export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCardProps) {
   const pct = Math.max(0, Math.min(100, match.compatibility));
+  const description = featured ? match.longDescription : match.description;
 
   return (
     <article className={featured ? 'match-card featured' : 'match-card'}>
@@ -24,7 +25,7 @@ export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCard
           <small>match</small>
         </span>
       </div>
-      <p>{match.description}</p>
+      <p>{description}</p>
     </article>
   );
 }

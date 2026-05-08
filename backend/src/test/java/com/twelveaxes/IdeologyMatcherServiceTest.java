@@ -3,6 +3,7 @@ package com.twelveaxes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.twelveaxes.model.AnswerValue;
+import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.IdeologyMatch;
 import com.twelveaxes.model.Pole;
 import com.twelveaxes.model.Question;
@@ -12,6 +13,7 @@ import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
 import java.util.List;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -50,6 +52,53 @@ class IdeologyMatcherServiceTest {
         assertThat(matches).isNotEmpty();
         assertThat(matches.get(0).ideologyId()).isEqualTo("centrismo");
         assertThat(matches.get(0).compatibility()).isEqualTo(100.0);
+    }
+
+    @Test
+    void rightAuthoritarianTraditionalProfileDoesNotFavorTransversalOrMemeIdeologies() {
+        var axes = axisResults(Map.ofEntries(
+                Map.entry("estrutura", 75.0),
+                Map.entry("representacao", 18.8),
+                Map.entry("poder", 62.5),
+                Map.entry("imigracao", 87.5),
+                Map.entry("diplomacia", 62.5),
+                Map.entry("intervencao", 56.3),
+                Map.entry("economia", 25.0),
+                Map.entry("controle", 43.8),
+                Map.entry("comercio", 43.8),
+                Map.entry("religiao", 81.3),
+                Map.entry("moral", 0.0),
+                Map.entry("tecnologia", 87.5)
+        ));
+
+        var matches = matcherService.findMatches(axes);
+
+        assertThat(matches).hasSize(4);
+        assertThat(matches.get(0).category()).isEqualTo("Direita Autoritária");
+        assertThat(matches.get(0).ideologyId()).isIn(
+                "alt-lite",
+                "darwinismo-social",
+                "aceleracionismo-de-direita",
+                "capitalismo-autoritario",
+                "alt-right",
+                "neorreacionarismo"
+        );
+        assertThat(matches).extracting(IdeologyMatch::ideologyId)
+                .doesNotContain("ambientalismo", "anarco-fascismo");
+    }
+
+    @Test
+    void matchDescriptionsHaveShortAndDetailedVariants() {
+        List<SubmittedAnswer> answers = dataService.getQuestions().stream()
+                .map(q -> new SubmittedAnswer(q.id(), AnswerValue.NEUTRAL))
+                .toList();
+        var axes = scoringService.score(new ResultRequest(answers));
+
+        var match = matcherService.findMatches(axes).get(0);
+
+        assertThat(match.description()).isNotBlank();
+        assertThat(match.longDescription()).contains("compatibilidade");
+        assertThat(match.longDescription().length()).isGreaterThan(match.description().length());
     }
 
     @Test
@@ -134,5 +183,25 @@ class IdeologyMatcherServiceTest {
             answer = towardLeftPole ? AnswerValue.STRONGLY_DISAGREE : AnswerValue.STRONGLY_AGREE;
         }
         return new SubmittedAnswer(q.id(), answer);
+    }
+
+    private List<AxisResult> axisResults(Map<String, Double> vector) {
+        return dataService.getAxes().stream()
+                .map(axis -> {
+                    double leftPercent = vector.getOrDefault(axis.id(), 50.0);
+                    double rightPercent = Math.round((100.0 - leftPercent) * 10.0) / 10.0;
+                    String dominantPole = leftPercent >= rightPercent ? axis.leftPole() : axis.rightPole();
+                    return new AxisResult(
+                            axis.id(),
+                            axis.label(),
+                            axis.leftPole(),
+                            axis.rightPole(),
+                            leftPercent,
+                            rightPercent,
+                            dominantPole,
+                            ""
+                    );
+                })
+                .toList();
     }
 }
