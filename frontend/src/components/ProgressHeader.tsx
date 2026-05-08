@@ -10,7 +10,7 @@ export function ProgressHeader({ current, total }: ProgressHeaderProps) {
     <header className="progress-header">
       <div>
         <span className="eyebrow">Pergunta {current} de {total}</span>
-        <strong>{percent}% concluido</strong>
+        <strong>{percent}% concluído</strong>
       </div>
       <div className="progress-track" aria-label={`Progresso: ${percent}%`}>
         <span style={{ width: `${percent}%` }} />

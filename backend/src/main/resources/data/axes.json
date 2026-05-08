@@ -3,13 +3,13 @@
     "id": "estrutura",
     "label": "Estrutura",
     "leftPole": "Federal",
-    "rightPole": "Unitario",
+    "rightPole": "Unitário",
     "leftColor": "#2f80ed",
     "rightColor": "#f2994a"
   },
   {
     "id": "representacao",
-    "label": "Representacao",
+    "label": "Representação",
     "leftPole": "Democracia",
     "rightPole": "Autocracia",
     "leftColor": "#00a896",
@@ -18,14 +18,14 @@
   {
     "id": "poder",
     "label": "Poder",
-    "leftPole": "Seguranca",
+    "leftPole": "Segurança",
     "rightPole": "Liberdade",
     "leftColor": "#4c6ef5",
     "rightColor": "#ffd43b"
   },
   {
     "id": "imigracao",
-    "label": "Imigracao",
+    "label": "Imigração",
     "leftPole": "Assimilacionista",
     "rightPole": "Multiculturalista",
     "leftColor": "#f06595",
@@ -41,8 +41,8 @@
   },
   {
     "id": "intervencao",
-    "label": "Intervencao",
-    "leftPole": "Nao intervencionista",
+    "label": "Intervenção",
+    "leftPole": "Não intervencionista",
     "rightPole": "Nacionalista",
     "leftColor": "#ffe066",
     "rightColor": "#c15f00"
@@ -50,30 +50,30 @@
   {
     "id": "economia",
     "label": "Economia",
-    "leftPole": "Servico publico",
-    "rightPole": "Servico privado",
+    "leftPole": "Serviço público",
+    "rightPole": "Serviço privado",
     "leftColor": "#ff3b30",
     "rightColor": "#ffd166"
   },
   {
     "id": "controle",
     "label": "Controle",
-    "leftPole": "Planejamento economico",
+    "leftPole": "Planejamento econômico",
     "rightPole": "Livre mercado",
     "leftColor": "#bf2600",
     "rightColor": "#00897b"
   },
   {
     "id": "comercio",
-    "label": "Trocas / Comercio",
+    "label": "Trocas / Comércio",
     "leftPole": "Protecionismo",
-    "rightPole": "Globalismo / Livre comercio",
+    "rightPole": "Globalismo / Livre comércio",
     "leftColor": "#9c27b0",
     "rightColor": "#03a9f4"
   },
   {
     "id": "religiao",
-    "label": "Religiao",
+    "label": "Religião",
     "leftPole": "Irreligioso",
     "rightPole": "Religioso",
     "leftColor": "#ff9800",

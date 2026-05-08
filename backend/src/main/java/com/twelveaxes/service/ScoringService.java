@@ -56,7 +56,7 @@ public class ScoringService {
                     .collect(Collectors.toSet());
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,
-                    "Respostas invalidas. Faltando: " + missing + ". Desconhecidas: " + unknown
+                    "Respostas inválidas. Faltando: " + missing + ". Desconhecidas: " + unknown
             );
         }
     }

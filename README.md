@@ -1,31 +1,31 @@
 # 12 Axes
 
-Aplicacao web full stack para um quiz politico baseado em 12 eixos ideologicos. O usuario responde 48 perguntas em escala Likert, recebe um resultado percentual em cada eixo e ve a ideologia politica aproximada com base em uma base local de 155 possibilidades.
+Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário responde 48 perguntas em escala Likert, recebe um resultado percentual em cada eixo e vê a ideologia política aproximada com base em uma base local de 155 possibilidades.
 
-O projeto foi estruturado como um produto de portfolio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy planejado para Render + Vercel.
+O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy planejado para Render + Vercel.
 
 ---
 
 ## Sobre o Projeto
 
-O **12 Axes** e um quiz de orientacao politica inspirado em testes como 8values, 12axes e compassos politicos, mas com arquitetura propria e separacao clara entre regra de negocio, dados do quiz, calculo de pontuacao e interface.
+O **12 Axes** é um quiz de orientação política inspirado em testes como 8values, 12axes e compassos políticos, mas com arquitetura própria e separação clara entre regra de negócio, dados do quiz, cálculo de pontuação e interface.
 
-O objetivo nao e rotular o usuario de forma definitiva, mas apresentar uma aproximacao ideologica baseada em respostas a perguntas sobre governo, economia, cultura, religiao, tecnologia, diplomacia e liberdade individual.
+O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma aproximação ideológica baseada em respostas a perguntas sobre governo, economia, cultura, religião, tecnologia, diplomacia e liberdade individual.
 
 ### Os 12 eixos avaliados
 
 | Eixo | Polo A | Polo B |
 |---|---|---|
-| Estrutura | Federal | Unitario |
-| Representacao | Democracia | Autocracia |
-| Poder | Seguranca | Liberdade |
-| Imigracao | Assimilacionista | Multiculturalista |
+| Estrutura | Federal | Unitário |
+| Representação | Democracia | Autocracia |
+| Poder | Segurança | Liberdade |
+| Imigração | Assimilacionista | Multiculturalista |
 | Diplomacia | Militarista | Pacifista |
-| Intervencao | Nao intervencionista | Nacionalista |
-| Economia | Servico publico | Servico privado |
-| Controle | Planejamento economico | Livre mercado |
-| Trocas / Comercio | Protecionismo | Globalismo / Livre comercio |
-| Religiao | Irreligioso | Religioso |
+| Intervenção | Não intervencionista | Nacionalista |
+| Economia | Serviço público | Serviço privado |
+| Controle | Planejamento econômico | Livre mercado |
+| Trocas / Comércio | Protecionismo | Globalismo / Livre comércio |
+| Religião | Irreligioso | Religioso |
 | Moral | Progressista | Tradicionalista |
 | Tecnologia | Tecnologia | Bioconservacionismo |
 
@@ -33,29 +33,29 @@ O objetivo nao e rotular o usuario de forma definitiva, mas apresentar uma aprox
 
 ## Funcionalidades
 
-### Quiz politico
+### Quiz político
 
 - 48 perguntas no total
 - 4 perguntas para cada um dos 12 eixos
-- Escala de resposta com 5 opcoes:
+- Escala de resposta com 5 opções:
   - Concordo totalmente
   - Concordo
   - Neutro / Inseguro
   - Discordo
   - Discordo totalmente
-- Navegacao por pergunta com progresso visual
+- Navegação por pergunta com progresso visual
 - Possibilidade de voltar e alterar respostas antes do resultado
 
-### Calculo de pontuacao
+### Cálculo de pontuação
 
-- Cada resposta e convertida em um valor numerico entre `0.0` e `1.0`
+- Cada resposta é convertida em um valor numérico entre `0.0` e `1.0`
 - Cada pergunta aponta para um dos polos do eixo
-- O backend calcula a media das 4 perguntas de cada eixo
-- O resultado final e exibido em porcentagem para os dois polos
+- O backend calcula a média das 4 perguntas de cada eixo
+- O resultado final é exibido em porcentagem para os dois polos
 
 Exemplo de regra:
 
-| Resposta | Pontuacao para o polo de concordancia |
+| Resposta | Pontuação para o polo de concordância |
 |---|---:|
 | Concordo totalmente | 1.00 |
 | Concordo | 0.75 |
@@ -63,38 +63,38 @@ Exemplo de regra:
 | Discordo | 0.25 |
 | Discordo totalmente | 0.00 |
 
-### Resultado ideologico
+### Resultado ideológico
 
-- Exibe a ideologia aproximada do usuario
+- Exibe a ideologia aproximada do usuário
 - Mostra percentual de compatibilidade
-- Lista outras correspondencias proximas
+- Lista outras correspondências próximas
 - Mostra os 12 eixos com barras percentuais
-- Inclui descricao resumida da ideologia encontrada
+- Inclui descrição resumida da ideologia encontrada
 
 ### Base de ideologias
 
-- O arquivo original esta em `data/ideologias/ideologias_polcompball.pdf`
-- O backend usa uma versao estruturada em `backend/src/main/resources/data/ideologies.json`
+- O arquivo original está em `data/ideologias/ideologias_polcompball.pdf`
+- O backend usa uma versão estruturada em `backend/src/main/resources/data/ideologies.json`
 - A base tem 155 entradas no projeto:
-  - 154 ideologias extraidas do PDF
+  - 154 ideologias extraídas do PDF
   - 1 entrada adicionada manualmente: `Centrismo`
-- Perfis ideologicos explicitos ficam em `ideology-profiles.json`
-- Ideologias sem perfil manual usam heuristica por categoria e palavras-chave
+- Perfis ideológicos explícitos ficam em `ideology-profiles.json`
+- Ideologias sem perfil manual usam heurística por categoria e palavras-chave
 
 ---
 
-## Stack Tecnologica
+## Stack Tecnológica
 
 | Camada | Tecnologia | Papel no projeto |
 |---|---|---|
-| Backend | Java 21 + Spring Boot 3 | API REST, regras de pontuacao e matching ideologico |
+| Backend | Java 21 + Spring Boot 3 | API REST, regras de pontuação e matching ideológico |
 | Frontend | React 18 + TypeScript + Vite | Interface do quiz e tela de resultado |
 | Dados | JSON versionado | Perguntas, eixos, ideologias e perfis de matching |
-| Testes | JUnit + Spring Boot Test | Validacao da regra de pontuacao |
+| Testes | JUnit + Spring Boot Test | Validação da regra de pontuação |
 | Deploy backend | Render | Web Service via Docker |
-| Deploy frontend | Vercel | Hospedagem estatica do React |
-| Build backend | Maven | Geracao do JAR Spring Boot |
-| Build frontend | npm + Vite | Build de producao |
+| Deploy frontend | Vercel | Hospedagem estática do React |
+| Build backend | Maven | Geração do JAR Spring Boot |
+| Build frontend | npm + Vite | Build de produção |
 
 ---
 
@@ -102,7 +102,7 @@ Exemplo de regra:
 
 ```mermaid
 flowchart LR
-    User["Usuario"] --> React["Frontend React / Vite"]
+    User["Usuário"] --> React["Frontend React / Vite"]
     React --> API["Backend Java / Spring Boot"]
     API --> QuizData["axes.json + questions.json"]
     API --> IdeologyData["ideologies.json + ideology-profiles.json"]
@@ -110,14 +110,14 @@ flowchart LR
     Result --> React
 ```
 
-### Decisoes tecnicas
+### Decisões técnicas
 
-- **Sem banco de dados:** os dados sao estaticos e versionados em JSON, o que reduz custo e complexidade para o MVP.
-- **Backend separado do frontend:** permite evoluir regras de pontuacao sem acoplar tudo no cliente.
-- **Matching no servidor:** evita expor toda a logica de classificacao como responsabilidade do frontend.
-- **Docker no Render:** caminho mais previsivel para hospedar Spring Boot em ambiente gratuito.
-- **Vercel no frontend:** deploy simples para aplicacao React estatica.
-- **CORS configuravel por ambiente:** `FRONTEND_ORIGINS` define quais dominios podem chamar a API.
+- **Sem banco de dados:** os dados são estáticos e versionados em JSON, o que reduz custo e complexidade para o MVP.
+- **Backend separado do frontend:** permite evoluir regras de pontuação sem acoplar tudo no cliente.
+- **Matching no servidor:** evita expor toda a lógica de classificação como responsabilidade do frontend.
+- **Docker no Render:** caminho mais previsível para hospedar Spring Boot em ambiente gratuito.
+- **Vercel no frontend:** deploy simples para aplicação React estática.
+- **CORS configurável por ambiente:** `FRONTEND_ORIGINS` define quais domínios podem chamar a API.
 
 ---
 
@@ -176,7 +176,7 @@ flowchart LR
 - Servir os dados do quiz
 - Validar respostas enviadas pelo frontend
 - Calcular os percentuais dos 12 eixos
-- Comparar o vetor final do usuario com os perfis ideologicos
+- Comparar o vetor final do usuário com os perfis ideológicos
 - Retornar resultado completo para a interface
 
 ### Principais classes
@@ -184,17 +184,17 @@ flowchart LR
 | Pacote | Papel |
 |---|---|
 | `controller` | Endpoints REST da API |
-| `service` | Regras de negocio, leitura dos JSONs, pontuacao e matching |
+| `service` | Regras de negócio, leitura dos JSONs, pontuação e matching |
 | `model` | Records e enums usados como contrato de dados |
-| `config` | Configuracao de CORS |
+| `config` | Configuração de CORS |
 
-### Servicos principais
+### Serviços principais
 
 | Classe | Responsabilidade |
 |---|---|
 | `QuizDataService` | Carrega `axes.json`, `questions.json`, `ideologies.json` e `ideology-profiles.json` |
 | `ScoringService` | Calcula os percentuais dos eixos com base nas respostas |
-| `IdeologyMatcherService` | Encontra as ideologias mais proximas do vetor final do usuario |
+| `IdeologyMatcherService` | Encontra as ideologias mais próximas do vetor final do usuário |
 
 ---
 
@@ -203,7 +203,7 @@ flowchart LR
 ### Responsabilidades
 
 - Exibir tela inicial do quiz
-- Carregar perguntas e opcoes da API
+- Carregar perguntas e opções da API
 - Controlar progresso e respostas localmente
 - Enviar respostas ao backend
 - Renderizar resultado com ideologia, compatibilidade e barras dos eixos
@@ -212,10 +212,10 @@ flowchart LR
 
 | Componente | Papel |
 |---|---|
-| `QuestionCard` | Exibe a pergunta atual e as opcoes de resposta |
+| `QuestionCard` | Exibe a pergunta atual e as opções de resposta |
 | `ProgressHeader` | Mostra progresso do quiz |
 | `AxisResultBar` | Renderiza uma barra percentual por eixo |
-| `IdeologyMatchCard` | Exibe ideologia, categoria, descricao e compatibilidade |
+| `IdeologyMatchCard` | Exibe ideologia, categoria, descrição e compatibilidade |
 
 ### Design e UX
 
@@ -223,7 +223,7 @@ flowchart LR
 - Visual limpo com fundo claro
 - Gradientes em CTAs e destaques
 - Cards com bordas sutis e sombras leves
-- Botoes com estados de hover e selecao
+- Botões com estados de hover e seleção
 - Tipografia baseada em fontes do sistema para performance
 - Barras coloridas para facilitar leitura dos resultados
 
@@ -231,10 +231,10 @@ flowchart LR
 
 ## Endpoints da API
 
-| Metodo | Endpoint | Descricao |
+| Método | Endpoint | Descrição |
 |---|---|---|
-| `GET` | `/api/health` | Verifica se a API esta online |
-| `GET` | `/api/quiz` | Retorna titulo, descricao, eixos, perguntas e opcoes |
+| `GET` | `/api/health` | Verifica se a API está online |
+| `GET` | `/api/quiz` | Retorna título, descrição, eixos, perguntas e opções |
 | `POST` | `/api/results` | Recebe respostas e retorna resultado final |
 | `GET` | `/api/ideologies` | Lista as ideologias cadastradas |
 | `GET` | `/api/ideologies/{id}` | Busca uma ideologia por ID |
@@ -283,7 +283,7 @@ flowchart LR
 
 ## Como Rodar Localmente
 
-### Pre-requisitos
+### Pré-requisitos
 
 - Java 21 ou superior
 - Maven 3.9+
@@ -291,10 +291,10 @@ flowchart LR
 - npm
 - Git
 
-### 1. Clone o repositorio
+### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone <url-do-repositório>
 cd 12Axes
 ```
 
@@ -305,13 +305,13 @@ cd backend
 mvn spring-boot:run
 ```
 
-A API ficara disponivel em:
+A API ficará disponível em:
 
 ```txt
 http://localhost:8080
 ```
 
-Teste rapido:
+Teste rápido:
 
 ```bash
 curl http://localhost:8080/api/health
@@ -333,13 +333,13 @@ npm install
 npm run dev
 ```
 
-O site ficara disponivel em:
+O site ficará disponível em:
 
 ```txt
 http://localhost:5173
 ```
 
-Por padrao, o frontend chama a API em `http://localhost:8080`.
+Por padrão, o frontend chama a API em `http://localhost:8080`.
 
 ### 4. Configurar API remota no frontend
 
@@ -375,7 +375,7 @@ cd backend
 mvn package -DskipTests
 ```
 
-O JAR sera gerado em:
+O JAR será gerado em:
 
 ```txt
 backend/target/backend-0.1.0.jar
@@ -388,7 +388,7 @@ cd frontend
 npm run build
 ```
 
-O build de producao sera gerado em:
+O build de produção será gerado em:
 
 ```txt
 frontend/dist/
@@ -397,28 +397,28 @@ frontend/dist/
 ### Fluxo manual recomendado
 
 1. Acesse `http://localhost:5173`
-2. Clique em `Comecar quiz`
+2. Clique em `Começar quiz`
 3. Responda as 48 perguntas
 4. Confira a ideologia aproximada
 5. Verifique as barras dos 12 eixos
-6. Refaca o quiz com respostas diferentes para comparar resultados
+6. Refaça o quiz com respostas diferentes para comparar resultados
 
 ---
 
 ## Deploy
 
-O projeto foi pensado para deploy gratuito/semi-gratuito com frontend e backend separados.
+O projeto foi pensado para deploy gratuito/semigratuito com frontend e backend separados.
 
-URLs atuais de producao:
+URLs atuais de produção:
 
-| Servico | URL |
+| Serviço | URL |
 |---|---|
 | Frontend | `https://12axes.vercel.app` |
 | Backend | `https://one2axes-backend.onrender.com` |
 
 ### Backend no Render
 
-Configuracao recomendada:
+Configuração recomendada:
 
 | Campo | Valor |
 |---|---|
@@ -428,7 +428,7 @@ Configuracao recomendada:
 | Instance Type | Free |
 | Health Check Path | `/api/health` |
 
-Variavel de ambiente:
+Variável de ambiente:
 
 ```bash
 FRONTEND_ORIGINS=https://12axes.vercel.app
@@ -444,7 +444,7 @@ Assim o Render injeta a porta automaticamente.
 
 ### Frontend na Vercel
 
-Configuracao recomendada:
+Configuração recomendada:
 
 | Campo | Valor |
 |---|---|
@@ -453,13 +453,13 @@ Configuracao recomendada:
 | Build Command | `npm run build` |
 | Output Directory | `dist` |
 
-Variavel de ambiente:
+Variável de ambiente:
 
 ```bash
 VITE_API_URL=https://one2axes-backend.onrender.com
 ```
 
-Mais detalhes estao em `docs/deployment.md`.
+Mais detalhes estão em `docs/deployment.md`.
 
 ---
 
@@ -482,13 +482,13 @@ Define os 12 eixos, seus polos e cores.
 
 ### `questions.json`
 
-Define perguntas, eixo relacionado e polo favorecido pela concordancia.
+Define perguntas, eixo relacionado e polo favorecido pela concordância.
 
 ```json
 {
   "id": "moral_01",
   "axisId": "moral",
-  "text": "Normas sociais devem se adaptar rapidamente a novas formas de identidade, familia e comportamento.",
+  "text": "Normas sociais devem se adaptar rapidamente a novas formas de identidade, família e comportamento.",
   "agreePole": "LEFT",
   "weight": 1
 }
@@ -496,7 +496,7 @@ Define perguntas, eixo relacionado e polo favorecido pela concordancia.
 
 ### `ideologies.json`
 
-Define nome, categoria e descricao das ideologias.
+Define nome, categoria e descrição das ideologias.
 
 ```json
 {
@@ -509,7 +509,7 @@ Define nome, categoria e descricao das ideologias.
 
 ### `ideology-profiles.json`
 
-Define vetores percentuais esperados para ideologias especificas.
+Define vetores percentuais esperados para ideologias específicas.
 
 ```json
 {
@@ -526,9 +526,9 @@ Define vetores percentuais esperados para ideologias especificas.
 
 ---
 
-## Metodo de Matching Ideologico
+## Método de Matching Ideológico
 
-O usuario gera um vetor com 12 valores percentuais, um para cada eixo.
+O usuário gera um vetor com 12 valores percentuais, um para cada eixo.
 
 Exemplo:
 
@@ -541,26 +541,26 @@ Exemplo:
 }
 ```
 
-Cada ideologia tambem possui um vetor esperado. O backend calcula a distancia media entre o vetor do usuario e o vetor da ideologia.
+Cada ideologia também possui um vetor esperado. O backend calcula a distância média entre o vetor do usuário e o vetor da ideologia.
 
-Formula simplificada:
+Fórmula simplificada:
 
 ```txt
 distanciaMedia = media(abs(usuario[eixo] - ideologia[eixo]))
 compatibilidade = 100 - distanciaMedia
 ```
 
-Quanto menor a distancia, maior a compatibilidade.
+Quanto menor a distância, maior a compatibilidade.
 
-### Observacao importante
+### Observação importante
 
-O matcher atual e um MVP funcional. Ele ja diferencia ideologias por perfis manuais e heuristicas, mas a precisao pode ser melhorada expandindo `ideology-profiles.json` com vetores revisados para mais ideologias.
+O matcher atual é um MVP funcional. Ele já diferencia ideologias por perfis manuais e heurísticas, mas a precisão pode ser melhorada expandindo `ideology-profiles.json` com vetores revisados para mais ideologias.
 
 ---
 
-## Qualidade e Validacao
+## Qualidade e Validação
 
-Validacoes realizadas durante o desenvolvimento:
+Validações realizadas durante o desenvolvimento:
 
 ```txt
 mvn test
@@ -584,12 +584,12 @@ Eixos: 50% / 50%
 
 Melhorias planejadas para evoluir o projeto:
 
-- Refinar os 155 vetores ideologicos em `ideology-profiles.json`
+- Refinar os 155 vetores ideológicos em `ideology-profiles.json`
 - Criar testes para o endpoint `/api/results`
-- Adicionar pagina explicativa de metodologia
+- Adicionar página explicativa de metodologia
 - Adicionar compartilhamento de resultado como imagem
-- Criar modo de revisao das respostas antes do envio
-- Adicionar internacionalizacao PT/EN
+- Criar modo de revisão das respostas antes do envio
+- Adicionar internacionalização PT/EN
 - Melhorar acessibilidade com testes automatizados
 - Adicionar pipeline CI com build de backend e frontend
 
@@ -597,18 +597,18 @@ Melhorias planejadas para evoluir o projeto:
 
 ## O que este projeto demonstra
 
-Para avaliacao tecnica, o 12 Axes demonstra:
+Para avaliação técnica, o 12 Axes demonstra:
 
-- Organizacao de projeto full stack
+- Organização de projeto full stack
 - Backend Java com Spring Boot e API REST
 - Modelagem de dados sem banco usando JSON versionado
-- Separacao entre controller, service e model
-- Regras de negocio testaveis
+- Separação entre controller, service e model
+- Regras de negócio testáveis
 - Frontend React com TypeScript
-- Consumo de API via camada de servico
+- Consumo de API via camada de serviço
 - Interface responsiva e orientada a fluxo
 - Deploy pensado para ambientes reais
-- Documentacao clara para execucao, manutencao e evolucao
+- Documentação clara para execução, manutenção e evolução
 
 ---
 
@@ -616,4 +616,4 @@ Para avaliacao tecnica, o 12 Axes demonstra:
 
 **Enzo Xavier Santos**
 
-Projeto desenvolvido para portfolio e estudo de arquitetura full stack com Java, React e deploy em cloud.
+Projeto desenvolvido para portfólio e estudo de arquitetura full stack com Java, React e deploy em cloud.

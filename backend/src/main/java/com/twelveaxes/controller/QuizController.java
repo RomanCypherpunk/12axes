@@ -57,6 +57,6 @@ public class QuizController {
         return dataService.getIdeologies().stream()
                 .filter(ideology -> ideology.id().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ideologia nao encontrada"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ideologia não encontrada"));
     }
 }

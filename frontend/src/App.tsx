@@ -127,7 +127,7 @@ export default function App() {
       setResult(nextResult);
       setScreen('results');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Nao foi possivel calcular o resultado.');
+      setError(err instanceof Error ? err.message : 'Não foi possível calcular o resultado.');
     } finally {
       setIsSubmitting(false);
     }
@@ -160,7 +160,7 @@ export default function App() {
     <main className="app-shell">
       <section className="hero-band">
         <div>
-          <span className="eyebrow">Quiz politico</span>
+          <span className="eyebrow">Quiz político</span>
           <h1>12 Axes</h1>
           <p>{quiz.description}</p>
         </div>
@@ -173,12 +173,12 @@ export default function App() {
       {screen === 'home' && (
         <section className="home-layout">
           <div className="intro-panel">
-            <h2>Descubra seu perfil politico aproximado</h2>
+            <h2>Descubra seu perfil político aproximado</h2>
             <p>
-              Suas respostas serao convertidas em porcentagens nos 12 eixos e comparadas com a base de ideologias do projeto.
+              Suas respostas serão convertidas em porcentagens nos 12 eixos e comparadas com a base de ideologias do projeto.
             </p>
             <button className="primary-button" type="button" onClick={startQuiz}>
-              Comecar quiz
+              Começar quiz
             </button>
           </div>
           <div className="axis-preview">
@@ -202,7 +202,7 @@ export default function App() {
             disabled={isAdvancing || isSubmitting}
             onSelect={selectAnswer}
           />
-          <nav className="quiz-actions" aria-label="Navegacao do quiz">
+          <nav className="quiz-actions" aria-label="Navegação do quiz">
             <button
               className="secondary-button"
               type="button"
@@ -218,7 +218,7 @@ export default function App() {
                 onClick={goToNextQuestion}
                 disabled={!answers[currentQuestion.id] || isAdvancing}
               >
-                Avancar
+                Avançar
               </button>
             ) : (
               <button className="primary-button" type="button" onClick={() => finishQuiz()} disabled={!canFinish || isSubmitting}>
@@ -247,7 +247,7 @@ export default function App() {
             <section className="results-section">
               <div className="section-heading">
                 <span className="eyebrow">Proximidade</span>
-                <h2>Outras correspondencias</h2>
+                <h2>Outras correspondências</h2>
               </div>
               <div className="match-list">
                 {result.matches.slice(1).map((match) => (

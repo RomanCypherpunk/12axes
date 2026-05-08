@@ -45,7 +45,7 @@ public class QuizDataService {
     public QuizPayload getQuiz() {
         return new QuizPayload(
                 "12 Axes",
-                "Um quiz de 48 perguntas para estimar sua posicao nos 12 eixos politicos.",
+                "Um quiz de 48 perguntas para estimar sua posição nos 12 eixos políticos.",
                 axes,
                 questions,
                 answerOptions()
