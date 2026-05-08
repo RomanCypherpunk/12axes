@@ -352,7 +352,7 @@ frontend/.env.local
 Com:
 
 ```bash
-VITE_API_URL=https://seu-backend.onrender.com
+VITE_API_URL=https://one2axes-backend.onrender.com
 ```
 
 ---
@@ -424,7 +424,7 @@ Configuracao recomendada:
 Variavel de ambiente:
 
 ```bash
-FRONTEND_ORIGINS=https://seu-frontend.vercel.app
+FRONTEND_ORIGINS=https://12axes.vercel.app
 ```
 
 O backend usa:
@@ -449,7 +449,7 @@ Configuracao recomendada:
 Variavel de ambiente:
 
 ```bash
-VITE_API_URL=https://seu-backend.onrender.com
+VITE_API_URL=https://one2axes-backend.onrender.com
 ```
 
 Mais detalhes estao em `docs/deployment.md`.
