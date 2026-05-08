@@ -111,7 +111,7 @@ export default function App() {
       isAdvancingRef.current = false;
       setIsAdvancing(false);
       advanceTimerRef.current = null;
-    }, 180);
+    }, 200);
   }
 
   async function finishQuiz(answerMap = answers) {
@@ -147,7 +147,10 @@ export default function App() {
       <main className="app-shell center-shell">
         <div className="loading-panel">
           <div className="loading-spinner" />
-          <p>Carregando 12 Axes…</p>
+          <div>
+            <h1 style={{ fontSize: '1.4rem', marginBottom: 6 }}>12 Axes</h1>
+            <p style={{ margin: 0, color: 'var(--text-muted)' }}>Carregando análise política…</p>
+          </div>
         </div>
       </main>
     );
@@ -172,114 +175,95 @@ export default function App() {
     <main className="app-shell" data-screen={screen}>
       <header className="site-header">
         <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
-          <span>12</span> Axes
+          <span>12 Axes</span>
         </button>
-        <nav className="site-nav" aria-label="Seções principais">
-          <a href="#inicio" className={screen === 'home' ? 'active' : ''} onClick={() => setScreen('home')}>Início</a>
-          <a href="#sobre">Sobre o quiz</a>
-          <a href="#eixos">Eixos</a>
-          <a href="#metodologia">Metodologia</a>
-          <a href="#resultados" className={screen === 'results' ? 'active' : ''}>Resultados</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <button className="primary-button header-cta" type="button" onClick={startQuiz}>
-          {screen === 'results' ? 'Refazer quiz' : 'Começar quiz'}
-          <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14" />
-            <path d="m13 6 6 6-6 6" />
-          </svg>
-        </button>
+        {screen !== 'home' && (
+          <button className="primary-button header-cta" type="button" onClick={startQuiz}>
+            {screen === 'results' ? 'Refazer quiz' : 'Reiniciar quiz'}
+            <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </button>
+        )}
       </header>
 
       {screen === 'home' && (
         <section className="home-layout" id="inicio">
           <div className="home-grid">
-            <div className="intro-panel fade-up d-1">
-              <span className="eyebrow">Quiz político</span>
-              <h1>
-                Descubra seu <em>perfil político</em> nos 12 eixos.
+            <div className="intro-panel">
+              <span className="intro-eyebrow fade-up d-1">
+                <strong>Análise política</strong>
+                <small>· 12 dimensões · 48 questões</small>
+              </span>
+              <h1 className="fade-up d-2">
+                Descubra seu <em>perfil ideológico</em> em 12 eixos.
               </h1>
-              <p>
-                Responda 48 perguntas e veja onde você se posiciona em temas
-                que moldam o debate político atual.
+              <p className="intro-lead fade-up d-3">
+                Análise inteligente baseada em 48 perguntas. Resultados detalhados,
+                comparação ideológica e visualização precisa da sua posição no
+                espectro político brasileiro.
               </p>
-              <div className="hero-actions">
+              <div className="intro-actions fade-up d-4">
                 <button className="primary-button" type="button" onClick={startQuiz}>
-                  Começar quiz
+                  Começar análise
                   <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" />
                     <path d="m13 6 6 6-6 6" />
                   </svg>
                 </button>
-                <span className="hero-note">100% gratuito · sem cadastro</span>
               </div>
-              <div className="trust-row" aria-label="Características do quiz">
-                <span>Resultados detalhados</span>
-                <span>Respostas anônimas</span>
-                <span>Base ideológica local</span>
+              <div className="intro-meta fade-up d-5">
+                <span className="intro-meta-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                  <strong>~6 min</strong>
+                </span>
+                <span className="intro-meta-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                  100% gratuito
+                </span>
+                <span className="intro-meta-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="10" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  Anônimo
+                </span>
               </div>
             </div>
 
-            <div className="axis-preview fade-up d-2" id="eixos">
-              {quiz.axes.map((axis) => (
-                <article
-                  key={axis.id}
-                  className={`axis-chip${TONE_RED_AXES.has(axis.id) ? ' tone-red' : ''}`}
-                >
-                  <div className="axis-chip-head">
-                    <span className="axis-chip-icon" aria-hidden="true">
+            <div className="canvas-panel">
+              <div className="canvas-stat fade-up d-2">
+                <span className="canvas-stat-num">48</span>
+                <div className="canvas-stat-text">
+                  <strong>perguntas curadas</strong>
+                  <span>distribuídas em 12 eixos políticos para mapear sua posição</span>
+                </div>
+                <span className="canvas-stat-tag">ao vivo</span>
+              </div>
+
+              <div className="axis-mosaic fade-up d-3" id="eixos">
+                {quiz.axes.map((axis, index) => (
+                  <article
+                    key={axis.id}
+                    className={`axis-tile${TONE_RED_AXES.has(axis.id) ? ' tone-red' : ''}`}
+                  >
+                    <span className="axis-tile-num">0{index + 1 < 10 ? index + 1 : index + 1}</span>
+                    <span className="axis-tile-icon" aria-hidden="true">
                       <AxisIcon id={axis.id} />
                     </span>
-                    <strong>{axis.label}</strong>
-                  </div>
-                  <small>{axis.leftPole} × {axis.rightPole}</small>
-                </article>
-              ))}
-            </div>
-
-            <aside className="hero-stat fade-up d-3" aria-label="Total de perguntas">
-              <strong>{quiz.questions.length}</strong>
-              <span>perguntas</span>
-              <small>para mapear sua posição nos 12 eixos políticos.</small>
-            </aside>
-          </div>
-
-          <div className="home-strip fade-up d-4" aria-label="Como funciona">
-            <div className="home-strip-item">
-              <span className="home-strip-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 7h16M4 12h10M4 17h16" />
-                </svg>
-              </span>
-              <span><strong>12 eixos</strong> mapeados</span>
-            </div>
-            <div className="home-strip-item">
-              <span className="home-strip-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 2" />
-                </svg>
-              </span>
-              <span><strong>~6 min</strong> para responder</span>
-            </div>
-            <div className="home-strip-item">
-              <span className="home-strip-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M3 12 9 6l4 4 8-8" />
-                  <path d="M14 4h7v7" />
-                </svg>
-              </span>
-              <span><strong>Resultados</strong> comparativos</span>
-            </div>
-            <div className="home-strip-item">
-              <span className="home-strip-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v18" />
-                  <path d="M6 8h12" />
-                  <path d="M5 13h14" />
-                </svg>
-              </span>
-              <span><strong>Imparcial</strong> e baseado em dados</span>
+                    <div>
+                      <span className="axis-tile-name">{axis.label}</span>
+                      <span className="axis-tile-poles">{axis.leftPole} × {axis.rightPole}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -287,20 +271,10 @@ export default function App() {
 
       {screen === 'quiz' && currentQuestion && (
         <section className="quiz-layout">
-          <header className="quiz-meta">
-            <div className="quiz-meta-text">
-              <span className="eyebrow">Quiz político</span>
-              <h1>12 Axes</h1>
-            </div>
-            <div className="quiz-meta-stat" aria-label="Progresso">
-              <strong>{Object.keys(answers).length}</strong>
-              <span>de {quiz.questions.length}</span>
-            </div>
-          </header>
-
           <ProgressHeader current={currentIndex + 1} total={quiz.questions.length} />
 
           <QuestionCard
+            key={currentQuestion.id}
             question={currentQuestion}
             axisLabel={quiz.axes.find((axis) => axis.id === currentQuestion.axisId)?.label}
             options={quiz.answerOptions}
@@ -352,60 +326,70 @@ export default function App() {
       {screen === 'results' && result && (
         <section className="results-layout" id="resultados">
           <header className="results-hero">
-            <div>
-              <span className="eyebrow">Seus resultados</span>
+            <div className="results-hero-text fade-up d-1">
+              <span className="results-eyebrow">Análise concluída</span>
               <h1>
-                <em>Resultados</em> 12 Axes
+                Seu <em>perfil ideológico</em>
               </h1>
               <p>
-                Seu perfil político baseado nas 12 dimensões fundamentais da
-                ideologia. Confira abaixo o resultado em cada eixo e suas
-                correspondências ideológicas.
+                Análise baseada em {quiz.questions.length} respostas distribuídas
+                em 12 dimensões fundamentais da ideologia política. Confira sua
+                posição em cada eixo e suas correspondências ideológicas.
               </p>
             </div>
-            <div className="result-meta-card">
-              <div className="result-meta-icon">
-                <AxisIcon id="controle" />
+            <aside className="results-meta-card fade-up d-2" aria-label="Resumo da análise">
+              <div className="results-meta-row">
+                <span>Perguntas respondidas</span>
+                <strong>{quiz.questions.length}</strong>
               </div>
-              <div>
-                <strong>Perfil analisado</strong>
-                <span>12 eixos · {quiz.questions.length} perguntas</span>
+              <div className="results-meta-row">
+                <span>Eixos analisados</span>
+                <strong>12</strong>
               </div>
-            </div>
+              <div className="results-meta-row">
+                <span>Top match</span>
+                <strong>{result.topMatch.compatibility.toFixed(1)}%</strong>
+              </div>
+            </aside>
           </header>
 
-          <IdeologyMatchCard match={result.topMatch} featured />
+          <div className="fade-up d-3">
+            <IdeologyMatchCard match={result.topMatch} featured />
+          </div>
 
-          <div className="results-grid">
-            <section className="results-section">
-              <div className="section-heading">
-                <span className="eyebrow">Eixos</span>
-                <h2>Seu resultado percentual</h2>
-              </div>
+          <section className="results-section results-section-axes fade-up d-4">
+            <div className="section-heading">
+              <span className="eyebrow">Eixos políticos</span>
+              <h2>Resultado percentual por eixo</h2>
+            </div>
+            <div className="axis-rows">
               {quiz.axes.map((axis) => {
                 const axisResult = resultByAxis.get(axis.id);
                 return axisResult ? <AxisResultBar key={axis.id} axis={axis} result={axisResult} /> : null;
               })}
-            </section>
+            </div>
+          </section>
 
-            <section className="results-section">
-              <div className="section-heading">
-                <span className="eyebrow">Proximidade</span>
-                <h2>Outras correspondências</h2>
-              </div>
-              <div className="match-list">
-                {result.matches.slice(1).map((match) => (
-                  <IdeologyMatchCard key={match.ideologyId} match={match} />
-                ))}
-              </div>
-              <button className="primary-button full-button" type="button" onClick={startQuiz}>
-                Refazer quiz
-                <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21 12a9 9 0 1 1-3-6.7" />
-                  <path d="M21 4v5h-5" />
-                </svg>
-              </button>
-            </section>
+          <section className="results-section fade-up d-5">
+            <div className="section-heading">
+              <span className="eyebrow">Proximidade ideológica</span>
+              <h2>Outras correspondências</h2>
+            </div>
+            <div className="match-grid">
+              {result.matches.slice(1, 4).map((match) => (
+                <IdeologyMatchCard key={match.ideologyId} match={match} />
+              ))}
+            </div>
+          </section>
+
+          <div className="results-cta fade-up d-5">
+            <button className="primary-button" type="button" onClick={startQuiz}>
+              Refazer análise
+              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12a9 9 0 1 1-3-6.7" />
+                <path d="M21 4v5h-5" />
+              </svg>
+            </button>
           </div>
         </section>
       )}

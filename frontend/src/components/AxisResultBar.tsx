@@ -17,7 +17,7 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
         <div className="axis-row-header">
           <div>
             <span>{result.label}</span>
-            <strong>{result.intensity}: {result.dominantPole}</strong>
+            <strong>{result.intensity} · {result.dominantPole}</strong>
           </div>
           <p>{result.leftPercent.toFixed(1)}% / {result.rightPercent.toFixed(1)}%</p>
         </div>

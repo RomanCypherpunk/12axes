@@ -6,13 +6,24 @@ interface IdeologyMatchCardProps {
 }
 
 export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCardProps) {
+  const pct = Math.max(0, Math.min(100, match.compatibility));
+
   return (
     <article className={featured ? 'match-card featured' : 'match-card'}>
-      <div>
-        <span className="eyebrow">{match.category}</span>
+      <div className="match-card-text">
+        <span>{match.category}</span>
         <h3>{match.name}</h3>
       </div>
-      <strong className="compatibility">{match.compatibility.toFixed(1)}%</strong>
+      <div
+        className="compatibility-ring"
+        style={{ ['--pct' as string]: pct }}
+        aria-label={`Compatibilidade: ${pct.toFixed(1)} por cento`}
+      >
+        <span>
+          {pct.toFixed(0)}%
+          <small>match</small>
+        </span>
+      </div>
       <p>{match.description}</p>
     </article>
   );

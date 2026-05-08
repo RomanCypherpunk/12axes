@@ -1,78 +1,141 @@
 :root {
   color-scheme: light;
 
-  /* Brand palette */
-  --brand-green: #009A38;
-  --brand-green-strong: #007A2D;
-  --brand-green-light: #2BDD6C;
-  --brand-green-soft: #E8F8EE;
-  --brand-green-tint: #F4FCF7;
+  /* ================================
+     Brand palette (refined)
+     ================================ */
+  --green-50:  #EBFBF1;
+  --green-100: #D2F4DF;
+  --green-200: #A4E8C0;
+  --green-300: #6FD89B;
+  --green-400: #2BDD6C;   /* brand light */
+  --green-500: #009A38;   /* brand primary */
+  --green-600: #007A2D;
+  --green-700: #006023;
+  --green-800: #04471F;
 
-  --brand-red: #C03221;
-  --brand-red-strong: #9F1000;
-  --brand-red-light: #E15A4A;
-  --brand-red-soft: #FFEEEA;
-  --brand-red-tint: #FFF7F5;
+  --red-50:  #FFEEEA;
+  --red-100: #FBD9D2;
+  --red-200: #F4A99C;
+  --red-300: #E15A4A;
+  --red-400: #C03221;     /* brand */
+  --red-500: #9F1000;     /* brand strong */
+  --red-600: #7E1B0E;
+  --red-700: #4A0A03;
 
-  /* Surfaces */
-  --bg: #FAFAF7;
-  --bg-grain: #F4F4F0;
-  --surface: #FFFFFF;
-  --surface-elevated: #FFFFFF;
-  --surface-soft: #F6F7F4;
+  /* Neutral (warm gray) */
+  --ink-950: #050B15;
+  --ink-900: #0E1726;
+  --ink-800: #1C2433;
+  --ink-700: #2D3848;
+  --ink-600: #475063;
+  --ink-500: #5A6478;
+  --ink-400: #8A93A4;
+  --ink-300: #B5BCC8;
+  --ink-200: #D4DAE3;
+  --ink-100: #E6EAF0;
+  --ink-50:  #F1F3F7;
+  --ink-25:  #F8F9FB;
 
-  /* Text */
-  --text: #0E1726;
-  --text-strong: #050B15;
-  --text-muted: #5A6478;
-  --text-soft: #8A93A4;
+  /* Surface (warm) */
+  --canvas: #F7F7F2;
+  --canvas-tint: #FBFBF7;
+  --paper: #FFFFFF;
+  --paper-soft: #FCFCF9;
 
-  /* Lines */
-  --line: #E6EAF0;
-  --line-soft: #EFF1F4;
-  --line-strong: #D4DAE3;
+  /* Semantic aliases */
+  --bg: var(--canvas);
+  --surface: var(--paper);
+  --surface-soft: var(--paper-soft);
+  --text: var(--ink-900);
+  --text-strong: var(--ink-950);
+  --text-muted: var(--ink-500);
+  --text-soft: var(--ink-400);
+  --line: rgba(14, 23, 38, 0.08);
+  --line-strong: rgba(14, 23, 38, 0.12);
+  --line-soft: rgba(14, 23, 38, 0.04);
 
-  /* Neutral (used for "neutro/inseguro") */
-  --neutral: #4A5263;
-  --neutral-soft: #EEF0F4;
+  /* Brand semantic */
+  --accent: var(--green-500);
+  --accent-bright: var(--green-400);
+  --accent-deep: var(--green-700);
+  --accent-soft: var(--green-50);
+  --critical: var(--red-400);
+  --critical-deep: var(--red-500);
+  --critical-soft: var(--red-50);
+  --neutral-tone: var(--ink-700);
+  --neutral-soft: var(--ink-50);
 
-  /* Effects */
-  --shadow-xs: 0 1px 2px rgba(14, 23, 38, 0.04);
-  --shadow-sm: 0 4px 14px rgba(14, 23, 38, 0.06);
-  --shadow-md: 0 12px 28px rgba(14, 23, 38, 0.08);
-  --shadow-lg: 0 24px 60px rgba(14, 23, 38, 0.12);
-  --shadow-green: 0 14px 30px rgba(0, 154, 56, 0.22);
-  --shadow-red: 0 14px 30px rgba(192, 50, 33, 0.20);
+  /* ================================
+     Effects
+     ================================ */
+  --shadow-xs:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(14, 23, 38, 0.04);
+  --shadow-sm:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 4px 12px rgba(14, 23, 38, 0.05);
+  --shadow-md:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 12px 28px -8px rgba(14, 23, 38, 0.10);
+  --shadow-lg:  0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 28px 60px -20px rgba(14, 23, 38, 0.18);
+  --shadow-xl:  0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 40px 80px -28px rgba(14, 23, 38, 0.24);
 
-  /* Radii */
+  --shadow-accent:    0 14px 36px -10px rgba(0, 154, 56, 0.45);
+  --shadow-accent-lg: 0 26px 60px -16px rgba(0, 154, 56, 0.55);
+  --shadow-critical:  0 14px 36px -10px rgba(192, 50, 33, 0.40);
+
+  --ring-accent: 0 0 0 4px rgba(0, 154, 56, 0.18);
+  --ring-critical: 0 0 0 4px rgba(192, 50, 33, 0.22);
+
+  --glass-tint: rgba(255, 255, 255, 0.62);
+  --glass-tint-strong: rgba(255, 255, 255, 0.82);
+  --glass-line: rgba(255, 255, 255, 0.65);
+  --glass-blur: blur(22px) saturate(140%);
+
+  /* ================================
+     Radii
+     ================================ */
   --radius-xs: 6px;
   --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
+  --radius-2xl: 36px;
   --radius-pill: 999px;
 
-  /* Gradients */
-  --gradient-green: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-light) 100%);
-  --gradient-red: linear-gradient(135deg, var(--brand-red-strong) 0%, var(--brand-red) 100%);
-  --gradient-soft: linear-gradient(180deg, #FFFFFF 0%, var(--brand-green-tint) 100%);
+  /* ================================
+     Gradients
+     ================================ */
+  --grad-accent: linear-gradient(135deg, var(--green-700) 0%, var(--green-500) 45%, var(--green-400) 100%);
+  --grad-accent-soft: linear-gradient(180deg, var(--paper) 0%, var(--green-50) 100%);
+  --grad-critical: linear-gradient(135deg, var(--red-500) 0%, var(--red-400) 100%);
+  --grad-spectrum: linear-gradient(90deg, var(--green-500) 0%, var(--green-400) 33%, var(--ink-300) 50%, var(--red-300) 66%, var(--red-400) 100%);
+  --grad-mesh:
+    radial-gradient(900px 600px at 92% -10%, rgba(43, 221, 108, 0.18), transparent 65%),
+    radial-gradient(800px 540px at -10% 110%, rgba(192, 50, 33, 0.10), transparent 70%),
+    radial-gradient(620px 420px at 50% 110%, rgba(0, 154, 56, 0.06), transparent 70%);
 
-  /* Typography */
+  /* ================================
+     Typography
+     ================================ */
   --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
 
-  /* Motion */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* ================================
+     Motion
+     ================================ */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:     cubic-bezier(0.4, 0, 1, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-fast: 140ms;
-  --dur-base: 220ms;
-  --dur-slow: 360ms;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-instant: 80ms;
+  --dur-fast:    140ms;
+  --dur-base:    220ms;
+  --dur-slow:    360ms;
+  --dur-deliberate: 520ms;
 
   font-family: var(--font-body);
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "ss02", "cv11";
 }
 
 * {
@@ -94,32 +157,44 @@ body {
 
 body {
   background-image:
-    radial-gradient(1100px 500px at 90% -10%, rgba(43, 221, 108, 0.08), transparent 60%),
-    radial-gradient(900px 480px at -10% 110%, rgba(192, 50, 33, 0.05), transparent 65%),
-    linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+    var(--grad-mesh),
+    linear-gradient(180deg, var(--paper) 0%, var(--canvas) 80%);
   background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Subtle grid pattern overlay for depth (only on home/results) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(14, 23, 38, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 23, 38, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 0%, transparent 75%);
 }
 
 #root {
+  position: relative;
+  z-index: 1;
   min-height: 100dvh;
 }
 
-h1,
-h2,
-h3,
-h4,
-.brand-mark,
-.display {
+h1, h2, h3, h4,
+.display, .brand-mark {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-strong);
+  margin: 0;
 }
 
-button,
-input,
-textarea,
-select {
+button, input, textarea, select {
   font: inherit;
   color: inherit;
 }
@@ -128,6 +203,7 @@ button {
   cursor: pointer;
   background: none;
   border: 0;
+  padding: 0;
 }
 
 a {
@@ -136,8 +212,14 @@ a {
 }
 
 ::selection {
-  background: var(--brand-green-soft);
-  color: var(--brand-green-strong);
+  background: var(--green-500);
+  color: white;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-accent);
+  border-radius: var(--radius-sm);
 }
 
 @media (prefers-reduced-motion: reduce) {
