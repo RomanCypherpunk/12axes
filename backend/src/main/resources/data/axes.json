@@ -1,0 +1,98 @@
+[
+  {
+    "id": "estrutura",
+    "label": "Estrutura",
+    "leftPole": "Federal",
+    "rightPole": "Unitario",
+    "leftColor": "#2f80ed",
+    "rightColor": "#f2994a"
+  },
+  {
+    "id": "representacao",
+    "label": "Representacao",
+    "leftPole": "Democracia",
+    "rightPole": "Autocracia",
+    "leftColor": "#00a896",
+    "rightColor": "#ff6b6b"
+  },
+  {
+    "id": "poder",
+    "label": "Poder",
+    "leftPole": "Seguranca",
+    "rightPole": "Liberdade",
+    "leftColor": "#4c6ef5",
+    "rightColor": "#ffd43b"
+  },
+  {
+    "id": "imigracao",
+    "label": "Imigracao",
+    "leftPole": "Assimilacionista",
+    "rightPole": "Multiculturalista",
+    "leftColor": "#f06595",
+    "rightColor": "#5c7cfa"
+  },
+  {
+    "id": "diplomacia",
+    "label": "Diplomacia",
+    "leftPole": "Militarista",
+    "rightPole": "Pacifista",
+    "leftColor": "#82c91e",
+    "rightColor": "#f783ac"
+  },
+  {
+    "id": "intervencao",
+    "label": "Intervencao",
+    "leftPole": "Nao intervencionista",
+    "rightPole": "Nacionalista",
+    "leftColor": "#ffe066",
+    "rightColor": "#c15f00"
+  },
+  {
+    "id": "economia",
+    "label": "Economia",
+    "leftPole": "Servico publico",
+    "rightPole": "Servico privado",
+    "leftColor": "#ff3b30",
+    "rightColor": "#ffd166"
+  },
+  {
+    "id": "controle",
+    "label": "Controle",
+    "leftPole": "Planejamento economico",
+    "rightPole": "Livre mercado",
+    "leftColor": "#bf2600",
+    "rightColor": "#00897b"
+  },
+  {
+    "id": "comercio",
+    "label": "Trocas / Comercio",
+    "leftPole": "Protecionismo",
+    "rightPole": "Globalismo / Livre comercio",
+    "leftColor": "#9c27b0",
+    "rightColor": "#03a9f4"
+  },
+  {
+    "id": "religiao",
+    "label": "Religiao",
+    "leftPole": "Irreligioso",
+    "rightPole": "Religioso",
+    "leftColor": "#ff9800",
+    "rightColor": "#00a6d6"
+  },
+  {
+    "id": "moral",
+    "label": "Moral",
+    "leftPole": "Progressista",
+    "rightPole": "Tradicionalista",
+    "leftColor": "#9c27b0",
+    "rightColor": "#8bc34a"
+  },
+  {
+    "id": "tecnologia",
+    "label": "Tecnologia",
+    "leftPole": "Tecnologia",
+    "rightPole": "Bioconservacionismo",
+    "leftColor": "#6aa6b0",
+    "rightColor": "#f6ad55"
+  }
+]

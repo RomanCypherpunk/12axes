@@ -1,0 +1,172 @@
+[
+  {
+    "ideologyId": "centrismo",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 50,
+      "poder": 50,
+      "imigracao": 50,
+      "diplomacia": 50,
+      "intervencao": 50,
+      "economia": 50,
+      "controle": 50,
+      "comercio": 50,
+      "religiao": 50,
+      "moral": 50,
+      "tecnologia": 50
+    }
+  },
+  {
+    "ideologyId": "liberalismo",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 82,
+      "poder": 28,
+      "imigracao": 68,
+      "diplomacia": 42,
+      "intervencao": 62,
+      "economia": 38,
+      "controle": 32,
+      "comercio": 28,
+      "religiao": 62,
+      "moral": 66,
+      "tecnologia": 72
+    }
+  },
+  {
+    "ideologyId": "libertarianismo",
+    "vector": {
+      "estrutura": 68,
+      "representacao": 78,
+      "poder": 16,
+      "imigracao": 55,
+      "diplomacia": 26,
+      "intervencao": 74,
+      "economia": 18,
+      "controle": 12,
+      "comercio": 18,
+      "religiao": 52,
+      "moral": 58,
+      "tecnologia": 72
+    }
+  },
+  {
+    "ideologyId": "conservadorismo",
+    "vector": {
+      "estrutura": 42,
+      "representacao": 66,
+      "poder": 64,
+      "imigracao": 34,
+      "diplomacia": 58,
+      "intervencao": 34,
+      "economia": 34,
+      "controle": 36,
+      "comercio": 46,
+      "religiao": 28,
+      "moral": 24,
+      "tecnologia": 42
+    }
+  },
+  {
+    "ideologyId": "social-democracia",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 82,
+      "poder": 38,
+      "imigracao": 70,
+      "diplomacia": 32,
+      "intervencao": 60,
+      "economia": 76,
+      "controle": 58,
+      "comercio": 48,
+      "religiao": 68,
+      "moral": 78,
+      "tecnologia": 72
+    }
+  },
+  {
+    "ideologyId": "marxismo-leninismo",
+    "vector": {
+      "estrutura": 26,
+      "representacao": 18,
+      "poder": 82,
+      "imigracao": 56,
+      "diplomacia": 66,
+      "intervencao": 44,
+      "economia": 94,
+      "controle": 94,
+      "comercio": 76,
+      "religiao": 86,
+      "moral": 66,
+      "tecnologia": 68
+    }
+  },
+  {
+    "ideologyId": "fascismo",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 8,
+      "poder": 92,
+      "imigracao": 18,
+      "diplomacia": 88,
+      "intervencao": 10,
+      "economia": 38,
+      "controle": 72,
+      "comercio": 82,
+      "religiao": 34,
+      "moral": 18,
+      "tecnologia": 48
+    }
+  },
+  {
+    "ideologyId": "anarcocapitalismo",
+    "vector": {
+      "estrutura": 90,
+      "representacao": 84,
+      "poder": 8,
+      "imigracao": 56,
+      "diplomacia": 20,
+      "intervencao": 84,
+      "economia": 6,
+      "controle": 4,
+      "comercio": 12,
+      "religiao": 52,
+      "moral": 54,
+      "tecnologia": 72
+    }
+  },
+  {
+    "ideologyId": "anarquismo-social",
+    "vector": {
+      "estrutura": 92,
+      "representacao": 92,
+      "poder": 10,
+      "imigracao": 86,
+      "diplomacia": 18,
+      "intervencao": 82,
+      "economia": 94,
+      "controle": 54,
+      "comercio": 48,
+      "religiao": 82,
+      "moral": 88,
+      "tecnologia": 66
+    }
+  },
+  {
+    "ideologyId": "nacional-socialismo",
+    "vector": {
+      "estrutura": 16,
+      "representacao": 4,
+      "poder": 96,
+      "imigracao": 8,
+      "diplomacia": 92,
+      "intervencao": 6,
+      "economia": 42,
+      "controle": 76,
+      "comercio": 88,
+      "religiao": 24,
+      "moral": 8,
+      "tecnologia": 44
+    }
+  }
+]

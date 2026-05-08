@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: 12axes-backend
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: FRONTEND_ORIGINS
+        value: http://localhost:5173,https://12axes.vercel.app

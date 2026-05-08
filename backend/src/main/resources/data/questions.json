@@ -1,0 +1,338 @@
+[
+  {
+    "id": "estrutura_01",
+    "axisId": "estrutura",
+    "text": "Estados, provincias ou municipios deveriam ter mais autonomia para criar suas proprias politicas.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "estrutura_02",
+    "axisId": "estrutura",
+    "text": "Leis nacionais uniformes sao preferiveis a regras diferentes em cada regiao.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "estrutura_03",
+    "axisId": "estrutura",
+    "text": "Politicas publicas devem poder variar bastante conforme as necessidades locais.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "estrutura_04",
+    "axisId": "estrutura",
+    "text": "O governo central deve concentrar as principais decisoes para evitar desigualdades regionais.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "representacao_01",
+    "axisId": "representacao",
+    "text": "Lideres politicos devem depender de eleicoes competitivas e poder ser removidos pelo voto.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "representacao_02",
+    "axisId": "representacao",
+    "text": "Em momentos de crise, um lider forte deve poder governar com poucos obstaculos institucionais.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "representacao_03",
+    "axisId": "representacao",
+    "text": "Oposicao politica, imprensa livre e protestos devem ser protegidos mesmo quando incomodam o governo.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "representacao_04",
+    "axisId": "representacao",
+    "text": "Decisoes politicas importantes deveriam ficar nas maos de uma autoridade ou elite tecnica, nao da maioria.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "poder_01",
+    "axisId": "poder",
+    "text": "O Estado deve priorizar seguranca publica mesmo quando isso restringe algumas liberdades individuais.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "poder_02",
+    "axisId": "poder",
+    "text": "Privacidade e liberdades civis devem prevalecer mesmo quando isso dificulta a acao policial.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "poder_03",
+    "axisId": "poder",
+    "text": "Monitoramento governamental amplo pode ser aceitavel se reduzir crimes e ameacas.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "poder_04",
+    "axisId": "poder",
+    "text": "Leis devem evitar restringir escolhas pessoais, mesmo quando parte da sociedade considera essas escolhas arriscadas.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "imigracao_01",
+    "axisId": "imigracao",
+    "text": "Imigrantes devem adotar o idioma e os costumes predominantes do pais que os recebe.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "imigracao_02",
+    "axisId": "imigracao",
+    "text": "Uma sociedade pode se fortalecer ao preservar varias culturas convivendo lado a lado.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "imigracao_03",
+    "axisId": "imigracao",
+    "text": "A cidadania deveria exigir forte assimilacao cultural.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "imigracao_04",
+    "axisId": "imigracao",
+    "text": "Politicas publicas devem facilitar a manutencao de identidades culturais distintas.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "diplomacia_01",
+    "axisId": "diplomacia",
+    "text": "Manter forcas armadas muito fortes e essencial para garantir respeito internacional.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "diplomacia_02",
+    "axisId": "diplomacia",
+    "text": "Negociacao diplomatica e organismos internacionais devem ser preferidos a demonstracoes de forca.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "diplomacia_03",
+    "axisId": "diplomacia",
+    "text": "Acoes militares preventivas podem ser justificadas para neutralizar ameacas futuras.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "diplomacia_04",
+    "axisId": "diplomacia",
+    "text": "A guerra deve ser considerada apenas como ultimo recurso absoluto.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "intervencao_01",
+    "axisId": "intervencao",
+    "text": "Um pais deve evitar interferir em assuntos internos de outros paises.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "intervencao_02",
+    "axisId": "intervencao",
+    "text": "Defender o interesse nacional pode justificar pressao politica, economica ou militar no exterior.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "intervencao_03",
+    "axisId": "intervencao",
+    "text": "Aliancas internacionais nao devem arrastar o pais para conflitos que nao sao seus.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "intervencao_04",
+    "axisId": "intervencao",
+    "text": "A soberania e a grandeza nacional devem guiar a politica externa acima de compromissos globais.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "economia_01",
+    "axisId": "economia",
+    "text": "Servicos essenciais como saude, educacao e transporte devem ser majoritariamente publicos.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "economia_02",
+    "axisId": "economia",
+    "text": "Empresas privadas costumam oferecer servicos melhores que o Estado.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "economia_03",
+    "axisId": "economia",
+    "text": "Bens e servicos basicos nao deveriam depender principalmente da capacidade de pagamento individual.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "economia_04",
+    "axisId": "economia",
+    "text": "Privatizacoes tendem a aumentar eficiencia e qualidade quando ha concorrencia.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "controle_01",
+    "axisId": "controle",
+    "text": "O planejamento economico do Estado e necessario para orientar investimentos importantes.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "controle_02",
+    "axisId": "controle",
+    "text": "Precos, producao e consumo devem ser definidos principalmente pelo livre mercado.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "controle_03",
+    "axisId": "controle",
+    "text": "O governo deve direcionar setores estrategicos mesmo que isso reduza a liberdade das empresas.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "controle_04",
+    "axisId": "controle",
+    "text": "Regulacoes economicas excessivas atrapalham inovacao, emprego e crescimento.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "comercio_01",
+    "axisId": "comercio",
+    "text": "O pais deve proteger industrias nacionais com tarifas ou barreiras comerciais quando necessario.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "comercio_02",
+    "axisId": "comercio",
+    "text": "Livre comercio internacional tende a beneficiar consumidores e aumentar eficiencia.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "comercio_03",
+    "axisId": "comercio",
+    "text": "Setores nacionais estrategicos devem receber prioridade sobre concorrentes estrangeiros.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "comercio_04",
+    "axisId": "comercio",
+    "text": "Integracao economica global e acordos de comercio aberto sao positivos para o desenvolvimento.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "religiao_01",
+    "axisId": "religiao",
+    "text": "Leis e politicas publicas devem ser neutras em relacao a religiao.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "religiao_02",
+    "axisId": "religiao",
+    "text": "Valores religiosos devem ter influencia clara nas decisoes politicas.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "religiao_03",
+    "axisId": "religiao",
+    "text": "O Estado deve ser laico mesmo quando a maioria da populacao segue uma religiao.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "religiao_04",
+    "axisId": "religiao",
+    "text": "Tradicoes religiosas merecem protecao especial nas instituicoes publicas.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "moral_01",
+    "axisId": "moral",
+    "text": "Normas sociais devem se adaptar rapidamente a novas formas de identidade, familia e comportamento.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "moral_02",
+    "axisId": "moral",
+    "text": "Tradicoes familiares e comunitarias sao uma base moral que deve ser preservada.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "moral_03",
+    "axisId": "moral",
+    "text": "Minorias sexuais e de genero devem ter os mesmos direitos civis e reconhecimento social que qualquer outra pessoa.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "moral_04",
+    "axisId": "moral",
+    "text": "Mudancas morais muito rapidas podem enfraquecer a coesao social.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "tecnologia_01",
+    "axisId": "tecnologia",
+    "text": "Inovacao cientifica e tecnologica deve ser incentivada mesmo quando transforma profundamente a sociedade.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "tecnologia_02",
+    "axisId": "tecnologia",
+    "text": "A sociedade deve limitar tecnologias que alterem radicalmente o corpo humano ou a reproducao.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  },
+  {
+    "id": "tecnologia_03",
+    "axisId": "tecnologia",
+    "text": "Automacao, inteligencia artificial e biotecnologia devem ser exploradas com regulacao, nao bloqueadas.",
+    "agreePole": "LEFT",
+    "weight": 1
+  },
+  {
+    "id": "tecnologia_04",
+    "axisId": "tecnologia",
+    "text": "Preservar limites biologicos naturais e mais importante que buscar aperfeicoamento tecnologico humano.",
+    "agreePole": "RIGHT",
+    "weight": 1
+  }
+]

@@ -1,0 +1,21 @@
+# Java
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.npm-cache/
+
+# Local env
+.env
+.env.local
+frontend/.env
+frontend/.env.local
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

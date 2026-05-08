@@ -1,0 +1,31 @@
+import type { QuizPayload, QuizResult, SubmittedAnswer } from '../types/quiz';
+
+const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+
+async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  const response = await fetch(`${API_URL}${path}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      ...options?.headers
+    },
+    ...options
+  });
+
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(message || `Erro HTTP ${response.status}`);
+  }
+
+  return response.json() as Promise<T>;
+}
+
+export function fetchQuiz(): Promise<QuizPayload> {
+  return request<QuizPayload>('/api/quiz');
+}
+
+export function submitResults(answers: SubmittedAnswer[]): Promise<QuizResult> {
+  return request<QuizResult>('/api/results', {
+    method: 'POST',
+    body: JSON.stringify({ answers })
+  });
+}
