@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AxisResultBar } from './components/AxisResultBar';
+import { AxisIcon } from './components/AxisIcon';
 import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
@@ -158,45 +159,74 @@ export default function App() {
 
   return (
     <main className="app-shell">
-      <section className="hero-band">
-        <div>
-          <span className="eyebrow">Quiz político</span>
-          <h1>12 Axes</h1>
-          <p>{quiz.description}</p>
-        </div>
-        <div className="hero-stat">
-          <strong>{quiz.questions.length}</strong>
-          <span>perguntas</span>
-        </div>
-      </section>
+      <header className="site-header">
+        <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
+          <span>12</span> Axes
+        </button>
+        <nav className="site-nav" aria-label="Seções principais">
+          <a href="#inicio">Início</a>
+          <a href="#eixos">Eixos</a>
+          <a href="#resultados">Resultados</a>
+        </nav>
+        <button className="primary-button header-cta" type="button" onClick={startQuiz}>
+          {screen === 'results' ? 'Refazer quiz' : 'Começar quiz'}
+        </button>
+      </header>
 
       {screen === 'home' && (
-        <section className="home-layout">
+        <section className="home-layout" id="inicio">
           <div className="intro-panel">
-            <h2>Descubra seu perfil político aproximado</h2>
+            <span className="eyebrow">Quiz político</span>
+            <h1>Descubra seu perfil político nos 12 eixos.</h1>
             <p>
-              Suas respostas serão convertidas em porcentagens nos 12 eixos e comparadas com a base de ideologias do projeto.
+              Responda 48 perguntas e veja onde você se posiciona em temas que moldam o debate político atual.
             </p>
-            <button className="primary-button" type="button" onClick={startQuiz}>
-              Começar quiz
-            </button>
+            <div className="hero-actions">
+              <button className="primary-button" type="button" onClick={startQuiz}>
+                Começar quiz
+              </button>
+              <span className="hero-note">100% gratuito e sem cadastro obrigatório</span>
+            </div>
+            <div className="trust-row" aria-label="Características do quiz">
+              <span>Resultados detalhados</span>
+              <span>Respostas anônimas</span>
+              <span>Base ideológica local</span>
+            </div>
           </div>
-          <div className="axis-preview">
+          <div className="axis-preview" id="eixos">
             {quiz.axes.map((axis) => (
               <div key={axis.id} className="axis-chip">
-                <span>{axis.label}</span>
+                <AxisIcon id={axis.id} />
+                <strong>{axis.label}</strong>
                 <small>{axis.leftPole} x {axis.rightPole}</small>
               </div>
             ))}
+          </div>
+          <div className="hero-stat">
+            <strong>{quiz.questions.length}</strong>
+            <span>perguntas</span>
+            <small>para estimar sua posição nos 12 eixos políticos.</small>
           </div>
         </section>
       )}
 
       {screen === 'quiz' && currentQuestion && (
         <section className="quiz-layout">
+          <section className="hero-band">
+            <div>
+              <span className="eyebrow">Quiz político</span>
+              <h1>12 Axes</h1>
+              <p>{quiz.description}</p>
+            </div>
+            <div className="hero-stat compact">
+              <strong>{quiz.questions.length}</strong>
+              <span>perguntas</span>
+            </div>
+          </section>
           <ProgressHeader current={currentIndex + 1} total={quiz.questions.length} />
           <QuestionCard
             question={currentQuestion}
+            axisLabel={quiz.axes.find((axis) => axis.id === currentQuestion.axisId)?.label}
             options={quiz.answerOptions}
             selected={answers[currentQuestion.id]}
             disabled={isAdvancing || isSubmitting}
@@ -231,7 +261,21 @@ export default function App() {
       )}
 
       {screen === 'results' && result && (
-        <section className="results-layout">
+        <section className="results-layout" id="resultados">
+          <section className="hero-band results-hero">
+            <div>
+              <span className="eyebrow">Seus resultados</span>
+              <h1>Resultados 12 Axes</h1>
+              <p>Seu perfil político baseado nas 12 dimensões fundamentais da ideologia.</p>
+            </div>
+            <div className="result-meta-card">
+              <AxisIcon id="controle" />
+              <div>
+                <strong>Perfil analisado</strong>
+                <span>12 eixos · {quiz.questions.length} perguntas</span>
+              </div>
+            </div>
+          </section>
           <IdeologyMatchCard match={result.topMatch} featured />
           <div className="results-grid">
             <section className="results-section">

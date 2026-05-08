@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
+
 :root {
   color-scheme: light;
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    Poppins, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #ffffff;
-  color: #121826;
+  color: #101522;
   --page: #ffffff;
-  --text: #121826;
-  --muted: #667085;
-  --line: #e6eaf2;
-  --surface: rgba(255, 255, 255, 0.82);
+  --page-soft: #f2f2f2;
+  --text: #101522;
+  --muted: #5f6673;
+  --muted-strong: #343b48;
+  --line: #dde2ea;
+  --line-strong: #cdd5df;
+  --surface: rgba(255, 255, 255, 0.92);
   --surface-strong: #ffffff;
-  --shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
-  --shadow-soft: 0 12px 36px rgba(15, 23, 42, 0.08);
+  --green-dark: #009a38;
+  --green: #2bdd6c;
+  --neutral: #3f4652;
+  --red: #c03221;
+  --red-dark: #9f1000;
+  --green-soft: #eaf9ef;
+  --red-soft: #fff0ed;
+  --gray-soft: #f2f2f2;
+  --shadow: 0 24px 70px rgba(16, 21, 34, 0.10);
+  --shadow-soft: 0 14px 34px rgba(16, 21, 34, 0.07);
   --radius: 8px;
-  --gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 48%, #db2777 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(219, 39, 119, 0.10));
+  --gradient: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+  --gradient-red: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
 }
 
 * {
@@ -25,6 +38,15 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+strong,
+button {
+  font-family:
+    Sora, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 button,
