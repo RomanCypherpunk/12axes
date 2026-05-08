@@ -168,7 +168,8 @@ body {
 }
 
 .primary-button:disabled,
-.secondary-button:disabled {
+.secondary-button:disabled,
+.answer-button:disabled {
   cursor: not-allowed;
   opacity: 0.52;
 }

@@ -4,10 +4,11 @@ interface QuestionCardProps {
   question: Question;
   options: AnswerOption[];
   selected?: AnswerValue;
+  disabled?: boolean;
   onSelect: (answer: AnswerValue) => void;
 }
 
-export function QuestionCard({ question, options, selected, onSelect }: QuestionCardProps) {
+export function QuestionCard({ question, options, selected, disabled = false, onSelect }: QuestionCardProps) {
   return (
     <section className="question-card" aria-labelledby="question-title">
       <p className="question-axis">{question.axisId.replace('-', ' ')}</p>
@@ -18,6 +19,7 @@ export function QuestionCard({ question, options, selected, onSelect }: Question
             key={option.id}
             className={selected === option.id ? 'answer-button selected' : 'answer-button'}
             type="button"
+            disabled={disabled}
             onClick={() => onSelect(option.id)}
           >
             {option.label}

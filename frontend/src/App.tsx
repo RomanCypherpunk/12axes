@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AxisResultBar } from './components/AxisResultBar';
 import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
@@ -16,13 +16,24 @@ export default function App() {
   const [result, setResult] = useState<QuizResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const advanceTimerRef = useRef<number | null>(null);
+  const isAdvancingRef = useRef(false);
 
   useEffect(() => {
     fetchQuiz()
       .then(setQuiz)
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (advanceTimerRef.current !== null) {
+        window.clearTimeout(advanceTimerRef.current);
+      }
+    };
   }, []);
 
   const currentQuestion = quiz?.questions[currentIndex];
@@ -37,32 +48,80 @@ export default function App() {
   }, [result]);
 
   function startQuiz() {
+    clearPendingAdvance();
     setAnswers({});
     setResult(null);
+    setError(null);
     setCurrentIndex(0);
     setScreen('quiz');
   }
 
-  function selectAnswer(answer: AnswerValue) {
-    if (!currentQuestion || !quiz) {
-      return;
+  function clearPendingAdvance() {
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
     }
-    setAnswers((previous) => ({ ...previous, [currentQuestion.id]: answer }));
-    if (currentIndex < quiz.questions.length - 1) {
-      window.setTimeout(() => setCurrentIndex((index) => Math.min(index + 1, quiz.questions.length - 1)), 160);
-    }
+    isAdvancingRef.current = false;
+    setIsAdvancing(false);
   }
 
-  async function finishQuiz() {
-    if (!quiz || !canFinish) {
+  function goToPreviousQuestion() {
+    clearPendingAdvance();
+    setCurrentIndex((index) => Math.max(0, index - 1));
+  }
+
+  function goToNextQuestion() {
+    if (!currentQuestion || !answers[currentQuestion.id] || isAdvancingRef.current) {
       return;
     }
+    clearPendingAdvance();
+    setCurrentIndex((index) => Math.min((quiz?.questions.length ?? 1) - 1, index + 1));
+  }
+
+  function selectAnswer(answer: AnswerValue) {
+    if (!currentQuestion || !quiz || isSubmitting || isAdvancingRef.current) {
+      return;
+    }
+    const questionIndex = currentIndex;
+    const nextAnswers = { ...answers, [currentQuestion.id]: answer };
+    setAnswers(nextAnswers);
+    setError(null);
+
+    if (questionIndex === quiz.questions.length - 1) {
+      void finishQuiz(nextAnswers);
+      return;
+    }
+
+    isAdvancingRef.current = true;
+    setIsAdvancing(true);
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current);
+    }
+    advanceTimerRef.current = window.setTimeout(() => {
+      setCurrentIndex((index) => (index === questionIndex ? questionIndex + 1 : index));
+      isAdvancingRef.current = false;
+      setIsAdvancing(false);
+      advanceTimerRef.current = null;
+    }, 160);
+  }
+
+  async function finishQuiz(answerMap = answers) {
+    if (!quiz || isSubmitting) {
+      return;
+    }
+    const firstMissingIndex = quiz.questions.findIndex((question) => !answerMap[question.id]);
+    if (firstMissingIndex !== -1) {
+      setCurrentIndex(firstMissingIndex);
+      setError('Ainda falta responder esta pergunta antes de ver o resultado.');
+      return;
+    }
+
     setIsSubmitting(true);
     setError(null);
     try {
       const payload = quiz.questions.map((question) => ({
         questionId: question.id,
-        answer: answers[question.id] as AnswerValue
+        answer: answerMap[question.id] as AnswerValue
       }));
       const nextResult = await submitResults(payload);
       setResult(nextResult);
@@ -140,14 +199,15 @@ export default function App() {
             question={currentQuestion}
             options={quiz.answerOptions}
             selected={answers[currentQuestion.id]}
+            disabled={isAdvancing || isSubmitting}
             onSelect={selectAnswer}
           />
           <nav className="quiz-actions" aria-label="Navegacao do quiz">
             <button
               className="secondary-button"
               type="button"
-              onClick={() => setCurrentIndex((index) => Math.max(0, index - 1))}
-              disabled={currentIndex === 0}
+              onClick={goToPreviousQuestion}
+              disabled={currentIndex === 0 || isAdvancing}
             >
               Voltar
             </button>
@@ -155,13 +215,13 @@ export default function App() {
               <button
                 className="secondary-button"
                 type="button"
-                onClick={() => setCurrentIndex((index) => Math.min(quiz.questions.length - 1, index + 1))}
-                disabled={!answers[currentQuestion.id]}
+                onClick={goToNextQuestion}
+                disabled={!answers[currentQuestion.id] || isAdvancing}
               >
                 Avancar
               </button>
             ) : (
-              <button className="primary-button" type="button" onClick={finishQuiz} disabled={!canFinish || isSubmitting}>
+              <button className="primary-button" type="button" onClick={() => finishQuiz()} disabled={!canFinish || isSubmitting}>
                 {isSubmitting ? 'Calculando...' : 'Ver resultado'}
               </button>
             )}
