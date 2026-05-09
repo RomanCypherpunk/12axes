@@ -26,8 +26,8 @@
   {
     "id": "imigracao",
     "label": "Imigração",
-    "leftPole": "Assimilacionista",
-    "rightPole": "Multiculturalista",
+    "leftPole": "Assimilação",
+    "rightPole": "Multicultura",
     "leftColor": "#f06595",
     "rightColor": "#5c7cfa"
   },
@@ -50,22 +50,22 @@
   {
     "id": "economia",
     "label": "Economia",
-    "leftPole": "Serviço público",
-    "rightPole": "Serviço privado",
+    "leftPole": "Público",
+    "rightPole": "Privado",
     "leftColor": "#ff3b30",
     "rightColor": "#ffd166"
   },
   {
     "id": "controle",
     "label": "Controle",
-    "leftPole": "Planejamento econômico",
+    "leftPole": "Planejamento",
     "rightPole": "Livre mercado",
     "leftColor": "#bf2600",
     "rightColor": "#00897b"
   },
   {
     "id": "comercio",
-    "label": "Trocas / Comércio",
+    "label": "Comércio",
     "leftPole": "Protecionismo",
     "rightPole": "Globalismo",
     "leftColor": "#9c27b0",
@@ -91,7 +91,7 @@
     "id": "tecnologia",
     "label": "Tecnologia",
     "leftPole": "Tecnologia",
-    "rightPole": "Bioconservacionismo",
+    "rightPole": "Meio-ambiente",
     "leftColor": "#6aa6b0",
     "rightColor": "#f6ad55"
   }
