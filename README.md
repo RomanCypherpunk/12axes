@@ -1,8 +1,8 @@
 # 12 Axes
 
-Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 48 perguntas e uma versão extensa com 120 perguntas, recebe um resultado percentual em cada eixo e vê a ideologia política aproximada com base em uma base local de 155 possibilidades.
+Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 48 perguntas e uma versão completa com 120 perguntas, recebe um resultado percentual em cada eixo, vê a ideologia política aproximada com base em uma base local de 155 possibilidades e pode baixar o resultado em PNG para compartilhar.
 
-O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy planejado para Render + Vercel.
+O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy configurado para Render + Vercel.
 
 ---
 
@@ -19,12 +19,12 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 | Estrutura | Federal | Unitário |
 | Representação | Democracia | Autocracia |
 | Poder | Segurança | Liberdade |
-| Imigração | Assimilacionista | Multiculturalista |
+| Imigração | Assimilação | Multicultura |
 | Diplomacia | Militarista | Pacifista |
 | Intervenção | Não intervencionista | Nacionalista |
-| Economia | Serviço público | Serviço privado |
-| Controle | Planejamento econômico | Livre mercado |
-| Trocas / Comércio | Protecionismo | Globalismo / Livre comércio |
+| Economia | Público | Privado |
+| Controle | Planejamento | Livre mercado |
+| Comércio | Protecionismo | Globalismo |
 | Religião | Irreligioso | Religioso |
 | Moral | Progressista | Tradicionalista |
 | Tecnologia | Tecnologia | Biologia |
@@ -36,7 +36,7 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 ### Quiz político
 
 - Versão curta com 48 perguntas
-- Versão extensa com 120 perguntas
+- Versão completa com 120 perguntas
 - 4 ou 10 perguntas para cada um dos 12 eixos
 - Escala de resposta com 5 opções:
   - Concordo totalmente
@@ -69,17 +69,16 @@ Exemplo de regra:
 - Exibe a ideologia aproximada do usuário
 - Mostra percentual de compatibilidade
 - Lista outras correspondências próximas
-- Mostra os 12 eixos com barras percentuais
-- Inclui descrição resumida da ideologia encontrada
+- Mostra os 12 eixos com barras percentuais, cores próprias e cartões laterais dos polos
+- Inclui descrição resumida e descrição detalhada da ideologia encontrada
+- Permite baixar um PNG do resultado pelo botão `Compartilhar`
 
 ### Base de ideologias
 
 - O backend usa uma base estruturada em `backend/src/main/resources/data/ideologies.json`
-- A base tem 155 entradas no projeto:
-  - 154 ideologias extraídas do PDF
-  - 1 entrada adicionada manualmente: `Centrismo`
+- A base tem 155 entradas no projeto
 - Perfis ideológicos explícitos ficam em `ideology-profiles.json`
-- Ideologias sem perfil manual usam heurística por categoria e palavras-chave
+- As 155 ideologias têm vetor de matching explícito; se algum perfil futuro não existir, o backend cai para vetor neutro como fallback
 
 ---
 
@@ -90,7 +89,7 @@ Exemplo de regra:
 | Backend | Java 21 + Spring Boot 3 | API REST, regras de pontuação e matching ideológico |
 | Frontend | React 18 + TypeScript + Vite | Interface do quiz e tela de resultado |
 | Dados | JSON versionado | Perguntas, eixos, ideologias e perfis de matching |
-| Testes | JUnit + Spring Boot Test | Validação da regra de pontuação |
+| Testes | JUnit + Spring Boot Test | Validação de pontuação, variantes e matching |
 | Deploy backend | Render | Web Service via Docker |
 | Deploy frontend | Vercel | Hospedagem estática do React |
 | Build backend | Maven | Geração do JAR Spring Boot |
@@ -207,7 +206,7 @@ flowchart LR
 - Carregar perguntas e opções da API
 - Controlar progresso e respostas localmente
 - Enviar respostas ao backend
-- Renderizar resultado com ideologia, compatibilidade e barras dos eixos
+- Renderizar resultado com ideologia, compatibilidade, barras dos eixos e exportação em PNG
 
 ### Componentes principais
 
@@ -225,8 +224,9 @@ flowchart LR
 - Gradientes em CTAs e destaques
 - Cards com bordas sutis e sombras leves
 - Botões com estados de hover e seleção
-- Tipografia baseada em fontes do sistema para performance
-- Barras coloridas para facilitar leitura dos resultados
+- Tipografia com Poppins e Sora carregadas no `index.html`
+- Barras de resultado com cartões laterais, ícones SVG e as cores definidas em `axes.json`
+- Exportação de resultado em PNG desenhada diretamente em canvas, sem depender de screenshot do DOM
 
 ---
 
@@ -236,7 +236,7 @@ flowchart LR
 |---|---|---|
 | `GET` | `/api/health` | Verifica se a API está online |
 | `GET` | `/api/quiz?variant=short` | Retorna título, descrição, eixos, perguntas e opções da versão curta |
-| `GET` | `/api/quiz?variant=extended` | Retorna título, descrição, eixos, perguntas e opções da versão extensa |
+| `GET` | `/api/quiz?variant=extended` | Retorna título, descrição, eixos, perguntas e opções da versão completa |
 | `POST` | `/api/results` | Recebe respostas e retorna resultado final |
 | `GET` | `/api/ideologies` | Lista as ideologias cadastradas |
 | `GET` | `/api/ideologies/{id}` | Busca uma ideologia por ID |
@@ -401,11 +401,12 @@ frontend/dist/
 
 1. Acesse `http://localhost:5173`
 2. Clique em `Começar Quiz`
-3. Escolha entre versão curta ou extensa
+3. Escolha entre versão curta ou completa
 4. Responda as perguntas
 5. Confira a ideologia aproximada
 6. Verifique as barras dos 12 eixos
-7. Refaça o quiz com respostas diferentes para comparar resultados
+7. Use `Compartilhar` para baixar o resultado em PNG
+8. Refaça o quiz com respostas diferentes para comparar resultados
 
 ---
 
@@ -490,7 +491,7 @@ Define as 48 perguntas da versão curta, eixo relacionado e polo favorecido pela
 
 ### `questions-extended.json`
 
-Define as 120 perguntas da versão extensa, com 10 perguntas por eixo e equilíbrio entre os dois polos.
+Define as 120 perguntas da versão completa, com 10 perguntas por eixo e equilíbrio entre os dois polos.
 
 ```json
 {
@@ -508,9 +509,9 @@ Define nome, categoria e descrição das ideologias.
 
 ```json
 {
-  "id": "liberalismo",
-  "name": "Liberalismo",
-  "category": "Centro",
+  "id": "marxismo-leninismo",
+  "name": "Marxismo-Leninismo",
+  "category": "Esquerda Autoritária",
   "description": "..."
 }
 ```
@@ -521,13 +522,13 @@ Define vetores percentuais esperados para ideologias específicas.
 
 ```json
 {
-  "ideologyId": "libertarianismo",
+  "ideologyId": "marxismo-leninismo",
   "vector": {
-    "estrutura": 68,
-    "representacao": 78,
-    "poder": 16,
-    "economia": 18,
-    "controle": 12
+    "estrutura": 22,
+    "representacao": 8,
+    "poder": 90,
+    "economia": 95,
+    "controle": 95
   }
 }
 ```
@@ -549,20 +550,21 @@ Exemplo:
 }
 ```
 
-Cada ideologia também possui um vetor esperado. O backend calcula a distância média entre o vetor do usuário e o vetor da ideologia.
+Cada ideologia também possui um vetor esperado. O backend calcula similaridade por eixo com pesos por dimensão e combina isso com uma distância ponderada entre o vetor do usuário e o vetor da ideologia.
 
 Fórmula simplificada:
 
 ```txt
-distanciaMedia = media(abs(usuario[eixo] - ideologia[eixo]))
-compatibilidade = 100 - distanciaMedia
+similaridadePorEixo = mediaPonderada(similaridade(usuario[eixo], ideologia[eixo]))
+distanciaPonderada = rmsePonderado(usuario, ideologia)
+compatibilidade = 0.65 * similaridadePorEixo + 0.35 * decaimentoPorDistancia
 ```
 
 Quanto menor a distância, maior a compatibilidade.
 
 ### Observação importante
 
-O matcher atual é um MVP funcional. Ele já diferencia ideologias por perfis manuais e heurísticas, mas a precisão pode ser melhorada expandindo `ideology-profiles.json` com vetores revisados para mais ideologias.
+O matcher atual já usa perfis explícitos para as 155 ideologias. A precisão ainda pode ser melhorada revisando os vetores em `ideology-profiles.json`, especialmente em ideologias próximas entre si ou em perfis historicamente ambíguos.
 
 ---
 
@@ -576,6 +578,7 @@ mvn package -DskipTests
 npm run build
 GET /api/health
 POST /api/results com respostas neutras
+GET /api/quiz?variant=extended com 120 perguntas
 ```
 
 Resultado esperado para todas as respostas neutras:
@@ -595,7 +598,6 @@ Melhorias planejadas para evoluir o projeto:
 - Refinar os 155 vetores ideológicos em `ideology-profiles.json`
 - Criar testes para o endpoint `/api/results`
 - Adicionar página explicativa de metodologia
-- Adicionar compartilhamento de resultado como imagem
 - Criar modo de revisão das respostas antes do envio
 - Adicionar internacionalização PT/EN
 - Melhorar acessibilidade com testes automatizados
