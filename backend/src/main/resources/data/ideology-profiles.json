@@ -22,7 +22,7 @@
       "estrutura": 15,
       "representacao": 4,
       "poder": 96,
-      "imigracao": 35,
+      "imigracao": 75,
       "diplomacia": 78,
       "intervencao": 20,
       "economia": 96,
@@ -39,7 +39,7 @@
       "estrutura": 18,
       "representacao": 6,
       "poder": 94,
-      "imigracao": 40,
+      "imigracao": 70,
       "diplomacia": 72,
       "intervencao": 25,
       "economia": 95,
@@ -294,7 +294,7 @@
       "estrutura": 20,
       "representacao": 30,
       "poder": 78,
-      "imigracao": 30,
+      "imigracao": 85,
       "diplomacia": 60,
       "intervencao": 28,
       "economia": 65,
@@ -317,7 +317,7 @@
       "economia": 88,
       "controle": 88,
       "comercio": 85,
-      "religiao": 50,
+      "religiao": 40,
       "moral": 35,
       "tecnologia": 55
     }
@@ -328,7 +328,7 @@
       "estrutura": 18,
       "representacao": 10,
       "poder": 90,
-      "imigracao": 25,
+      "imigracao": 78,
       "diplomacia": 75,
       "intervencao": 15,
       "economia": 80,
@@ -370,7 +370,7 @@
       "comercio": 88,
       "religiao": 30,
       "moral": 12,
-      "tecnologia": 50
+      "tecnologia": 35
     }
   },
   {
@@ -487,7 +487,7 @@
       "economia": 18,
       "controle": 18,
       "comercio": 30,
-      "religiao": 25,
+      "religiao": 18,
       "moral": 15,
       "tecnologia": 60
     }
@@ -504,7 +504,7 @@
       "economia": 22,
       "controle": 22,
       "comercio": 38,
-      "religiao": 50,
+      "religiao": 45,
       "moral": 30,
       "tecnologia": 70
     }
@@ -640,7 +640,7 @@
       "economia": 50,
       "controle": 55,
       "comercio": 78,
-      "religiao": 20,
+      "religiao": 40,
       "moral": 8,
       "tecnologia": 20
     }
@@ -670,7 +670,7 @@
       "poder": 70,
       "imigracao": 65,
       "diplomacia": 78,
-      "intervencao": 8,
+      "intervencao": 12,
       "economia": 35,
       "controle": 30,
       "comercio": 30,
@@ -691,9 +691,9 @@
       "economia": 15,
       "controle": 18,
       "comercio": 35,
-      "religiao": 50,
+      "religiao": 72,
       "moral": 15,
-      "tecnologia": 75
+      "tecnologia": 28
     }
   },
   {
@@ -835,18 +835,18 @@
   {
     "ideologyId": "neorreacionarismo",
     "vector": {
-      "estrutura": 15,
-      "representacao": 5,
-      "poder": 92,
+      "estrutura": 70,
+      "representacao": 8,
+      "poder": 75,
       "imigracao": 70,
       "diplomacia": 60,
       "intervencao": 35,
       "economia": 25,
       "controle": 30,
-      "comercio": 50,
-      "religiao": 25,
+      "comercio": 55,
+      "religiao": 62,
       "moral": 8,
-      "tecnologia": 85
+      "tecnologia": 92
     }
   },
   {
@@ -889,13 +889,13 @@
       "estrutura": 40,
       "representacao": 20,
       "poder": 85,
-      "imigracao": 50,
+      "imigracao": 35,
       "diplomacia": 60,
       "intervencao": 30,
       "economia": 55,
       "controle": 60,
       "comercio": 70,
-      "religiao": 30,
+      "religiao": 20,
       "moral": 20,
       "tecnologia": 30
     }
@@ -1042,7 +1042,7 @@
       "estrutura": 55,
       "representacao": 75,
       "poder": 38,
-      "imigracao": 55,
+      "imigracao": 45,
       "diplomacia": 45,
       "intervencao": 50,
       "economia": 35,
@@ -1212,7 +1212,7 @@
       "estrutura": 45,
       "representacao": 70,
       "poder": 60,
-      "imigracao": 30,
+      "imigracao": 65,
       "diplomacia": 55,
       "intervencao": 35,
       "economia": 35,
@@ -1337,7 +1337,7 @@
       "economia": 50,
       "controle": 45,
       "comercio": 50,
-      "religiao": 25,
+      "religiao": 38,
       "moral": 40,
       "tecnologia": 70
     }
@@ -2102,7 +2102,7 @@
       "economia": 5,
       "controle": 4,
       "comercio": 10,
-      "religiao": 50,
+      "religiao": 60,
       "moral": 55,
       "tecnologia": 78
     }
@@ -2145,9 +2145,9 @@
     "ideologyId": "paleolibertarianismo",
     "vector": {
       "estrutura": 78,
-      "representacao": 75,
+      "representacao": 55,
       "poder": 22,
-      "imigracao": 35,
+      "imigracao": 80,
       "diplomacia": 30,
       "intervencao": 75,
       "economia": 12,
@@ -2553,7 +2553,7 @@
     "ideologyId": "korwinismo",
     "vector": {
       "estrutura": 60,
-      "representacao": 50,
+      "representacao": 28,
       "poder": 35,
       "imigracao": 55,
       "diplomacia": 50,

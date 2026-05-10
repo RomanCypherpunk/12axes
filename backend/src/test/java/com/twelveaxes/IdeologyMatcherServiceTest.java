@@ -41,6 +41,35 @@ class IdeologyMatcherServiceTest {
     }
 
     @Test
+    void canonicalVectorsMatchTheirOwnIdeologies() {
+        List.of(
+                "marxismo-leninismo",
+                "neorreacionarismo",
+                "paleolibertarianismo",
+                "anarcocomunismo",
+                "fascismo"
+        ).forEach(ideologyId -> {
+            var profile = dataService.getIdeologyProfiles().get(ideologyId);
+
+            assertThat(profile)
+                    .as("Perfil canônico deve existir para %s", ideologyId)
+                    .isNotNull();
+
+            var matches = matcherService.findMatches(axisResults(profile.vector()));
+
+            assertThat(matches)
+                    .as("Vetor canônico de %s deve produzir matches", ideologyId)
+                    .isNotEmpty();
+            assertThat(matches.getFirst().ideologyId())
+                    .as("Vetor canônico de %s deve retornar a própria ideologia", ideologyId)
+                    .isEqualTo(ideologyId);
+            assertThat(matches.getFirst().compatibility())
+                    .as("Vetor canônico de %s deve ter compatibilidade perfeita", ideologyId)
+                    .isEqualTo(100.0);
+        });
+    }
+
+    @Test
     void neutralAnswersFavorCentrismo() {
         List<SubmittedAnswer> answers = dataService.getQuestions().stream()
                 .map(q -> new SubmittedAnswer(q.id(), AnswerValue.NEUTRAL))
