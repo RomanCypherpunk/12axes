@@ -147,7 +147,7 @@ class IdeologyMatcherServiceTest {
             case "comercio"      -> true;  // protecionismo
             case "religiao"      -> false; // religioso
             case "moral"         -> false; // tradicionalista
-            case "tecnologia"    -> false; // bioconservacionismo
+            case "tecnologia"    -> false; // biologia
             default -> false;
         };
         AnswerValue answer;

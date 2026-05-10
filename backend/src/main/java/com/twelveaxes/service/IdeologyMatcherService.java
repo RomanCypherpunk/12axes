@@ -164,10 +164,9 @@ public class IdeologyMatcherService {
     }
 
     private String shortDescription(String rawDescription) {
-        String clean = cleanDescription(rawDescription);
-        String withoutTags = clean.replaceFirst("\\s+Politicamente:.*$", "").trim();
-        String[] sentences = withoutTags.split("(?<=[.!?])\\s+");
-        String summary = sentences.length == 0 ? withoutTags : sentences[0];
+        DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
+        String[] sentences = parts.summary().split("(?<=[.!?])\\s+");
+        String summary = sentences.length == 0 ? parts.summary() : sentences[0];
         if (sentences.length > 1 && summary.length() < 140) {
             summary = summary + " " + sentences[1];
         }
@@ -175,10 +174,45 @@ public class IdeologyMatcherService {
     }
 
     private String longDescription(String rawDescription) {
-        String clean = cleanDescription(rawDescription);
-        String detail = " A compatibilidade é calculada pela proximidade do seu vetor percentual nos 12 eixos, "
-                + "penalizando divergências fortes em dimensões centrais como representação, economia, moral e poder.";
-        return clean.endsWith(".") ? clean + detail : clean + "." + detail;
+        DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
+        StringBuilder description = new StringBuilder(parts.summary());
+        if (!parts.summary().endsWith(".")) {
+            description.append(".");
+        }
+        if (!parts.isEmpty()) {
+            description.append(" Em termos práticos: valores políticos e forma de governo tendem a ")
+                    .append("ser ")
+                    .append(parts.political())
+                    .append("; economia tende a ser ")
+                    .append(parts.economic())
+                    .append("; normas sociais tendem a ser ")
+                    .append(parts.social())
+                    .append(".");
+        }
+        description.append(" A compatibilidade é calculada pela proximidade do seu vetor percentual nos 12 eixos, ")
+                .append("penalizando divergências fortes em dimensões centrais como representação, economia, moral e poder.");
+        return description.toString();
+    }
+
+    private DescriptionParts splitDescription(String cleanDescription) {
+        String[] split = cleanDescription.split("\\s+Politicamente:", 2);
+        String summary = split[0].trim();
+        if (split.length == 1) {
+            return new DescriptionParts(summary, "", "", "");
+        }
+
+        String[] fields = split[1].split("\\s+\\|\\s+");
+        String political = fields.length > 0 ? fields[0].trim() : "";
+        String economic = fields.length > 1 ? fields[1].replaceFirst("^Economicamente:\\s*", "").trim() : "";
+        String social = fields.length > 2 ? fields[2].replaceFirst("^Socialmente:\\s*", "").trim() : "";
+        return new DescriptionParts(summary, normalizeProfileField(political), normalizeProfileField(economic), normalizeProfileField(social));
+    }
+
+    private String normalizeProfileField(String value) {
+        if (value == null || value.isBlank()) {
+            return "variável conforme o contexto";
+        }
+        return value.substring(0, 1).toLowerCase(Locale.ROOT) + value.substring(1);
     }
 
     private String cleanDescription(String rawDescription) {
@@ -215,5 +249,11 @@ public class IdeologyMatcherService {
     }
 
     private record MatchScore(double compatibility, double weightedRmse) {
+    }
+
+    private record DescriptionParts(String summary, String political, String economic, String social) {
+        private boolean isEmpty() {
+            return political.isBlank() && economic.isBlank() && social.isBlank();
+        }
     }
 }

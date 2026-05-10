@@ -1,6 +1,6 @@
 # 12 Axes
 
-Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário responde 48 perguntas em escala Likert, recebe um resultado percentual em cada eixo e vê a ideologia política aproximada com base em uma base local de 155 possibilidades.
+Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 48 perguntas e uma versão extensa com 120 perguntas, recebe um resultado percentual em cada eixo e vê a ideologia política aproximada com base em uma base local de 155 possibilidades.
 
 O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy planejado para Render + Vercel.
 
@@ -27,7 +27,7 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 | Trocas / Comércio | Protecionismo | Globalismo / Livre comércio |
 | Religião | Irreligioso | Religioso |
 | Moral | Progressista | Tradicionalista |
-| Tecnologia | Tecnologia | Bioconservacionismo |
+| Tecnologia | Tecnologia | Biologia |
 
 ---
 
@@ -35,8 +35,9 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 
 ### Quiz político
 
-- 48 perguntas no total
-- 4 perguntas para cada um dos 12 eixos
+- Versão curta com 48 perguntas
+- Versão extensa com 120 perguntas
+- 4 ou 10 perguntas para cada um dos 12 eixos
 - Escala de resposta com 5 opções:
   - Concordo totalmente
   - Concordo
@@ -50,7 +51,7 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 
 - Cada resposta é convertida em um valor numérico entre `0.0` e `1.0`
 - Cada pergunta aponta para um dos polos do eixo
-- O backend calcula a média das 4 perguntas de cada eixo
+- O backend calcula a média das perguntas de cada eixo conforme a versão escolhida
 - O resultado final é exibido em porcentagem para os dois polos
 
 Exemplo de regra:
@@ -73,8 +74,7 @@ Exemplo de regra:
 
 ### Base de ideologias
 
-- O arquivo original está em `data/ideologias/ideologias_polcompball.pdf`
-- O backend usa uma versão estruturada em `backend/src/main/resources/data/ideologies.json`
+- O backend usa uma base estruturada em `backend/src/main/resources/data/ideologies.json`
 - A base tem 155 entradas no projeto:
   - 154 ideologias extraídas do PDF
   - 1 entrada adicionada manualmente: `Centrismo`
@@ -104,7 +104,7 @@ Exemplo de regra:
 flowchart LR
     User["Usuário"] --> React["Frontend React / Vite"]
     React --> API["Backend Java / Spring Boot"]
-    API --> QuizData["axes.json + questions.json"]
+    API --> QuizData["axes.json + questions.json + questions-extended.json"]
     API --> IdeologyData["ideologies.json + ideology-profiles.json"]
     API --> Result["Resultado percentual + ideologia aproximada"]
     Result --> React
@@ -140,6 +140,7 @@ flowchart LR
 |       |       `-- data/
 |       |           |-- axes.json
 |       |           |-- questions.json
+|       |           |-- questions-extended.json
 |       |           |-- ideologies.json
 |       |           `-- ideology-profiles.json
 |       `-- test/
@@ -192,7 +193,7 @@ flowchart LR
 
 | Classe | Responsabilidade |
 |---|---|
-| `QuizDataService` | Carrega `axes.json`, `questions.json`, `ideologies.json` e `ideology-profiles.json` |
+| `QuizDataService` | Carrega `axes.json`, `questions.json`, `questions-extended.json`, `ideologies.json` e `ideology-profiles.json` |
 | `ScoringService` | Calcula os percentuais dos eixos com base nas respostas |
 | `IdeologyMatcherService` | Encontra as ideologias mais próximas do vetor final do usuário |
 
@@ -234,7 +235,8 @@ flowchart LR
 | Método | Endpoint | Descrição |
 |---|---|---|
 | `GET` | `/api/health` | Verifica se a API está online |
-| `GET` | `/api/quiz` | Retorna título, descrição, eixos, perguntas e opções |
+| `GET` | `/api/quiz?variant=short` | Retorna título, descrição, eixos, perguntas e opções da versão curta |
+| `GET` | `/api/quiz?variant=extended` | Retorna título, descrição, eixos, perguntas e opções da versão extensa |
 | `POST` | `/api/results` | Recebe respostas e retorna resultado final |
 | `GET` | `/api/ideologies` | Lista as ideologias cadastradas |
 | `GET` | `/api/ideologies/{id}` | Busca uma ideologia por ID |
@@ -243,6 +245,7 @@ flowchart LR
 
 ```json
 {
+  "variant": "short",
   "answers": [
     {
       "questionId": "estrutura_01",
@@ -397,11 +400,12 @@ frontend/dist/
 ### Fluxo manual recomendado
 
 1. Acesse `http://localhost:5173`
-2. Clique em `Começar quiz`
-3. Responda as 48 perguntas
-4. Confira a ideologia aproximada
-5. Verifique as barras dos 12 eixos
-6. Refaça o quiz com respostas diferentes para comparar resultados
+2. Clique em `Começar Quiz`
+3. Escolha entre versão curta ou extensa
+4. Responda as perguntas
+5. Confira a ideologia aproximada
+6. Verifique as barras dos 12 eixos
+7. Refaça o quiz com respostas diferentes para comparar resultados
 
 ---
 
@@ -482,7 +486,11 @@ Define os 12 eixos, seus polos e cores.
 
 ### `questions.json`
 
-Define perguntas, eixo relacionado e polo favorecido pela concordância.
+Define as 48 perguntas da versão curta, eixo relacionado e polo favorecido pela concordância.
+
+### `questions-extended.json`
+
+Define as 120 perguntas da versão extensa, com 10 perguntas por eixo e equilíbrio entre os dois polos.
 
 ```json
 {

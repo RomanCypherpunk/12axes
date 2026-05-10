@@ -7,6 +7,8 @@ export type AnswerValue =
 
 export type Pole = 'LEFT' | 'RIGHT';
 
+export type QuizVariant = 'short' | 'extended';
+
 export interface Axis {
   id: string;
   label: string;
@@ -33,6 +35,8 @@ export interface AnswerOption {
 export interface QuizPayload {
   title: string;
   description: string;
+  variant: QuizVariant;
+  questionCount: number;
   axes: Axis[];
   questions: Question[];
   answerOptions: AnswerOption[];

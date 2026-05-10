@@ -25,15 +25,16 @@ public class ScoringService {
     }
 
     public List<AxisResult> score(ResultRequest request) {
+        List<Question> questions = dataService.getQuestions(request.variant());
         Map<String, SubmittedAnswer> answerByQuestion = request.answers().stream()
                 .collect(Collectors.toMap(SubmittedAnswer::questionId, Function.identity(), (first, ignored) -> first));
-        Map<String, Question> questionById = dataService.getQuestions().stream()
+        Map<String, Question> questionById = questions.stream()
                 .collect(Collectors.toMap(Question::id, Function.identity()));
 
         validateAnswers(answerByQuestion.keySet(), questionById.keySet());
 
         Map<String, WeightedScore> scores = new HashMap<>();
-        for (Question question : dataService.getQuestions()) {
+        for (Question question : questions) {
             SubmittedAnswer submittedAnswer = answerByQuestion.get(question.id());
             double towardAgreement = submittedAnswer.answer().scoreTowardAgreement();
             double leftScore = question.agreePole() == Pole.LEFT ? towardAgreement : 1.0 - towardAgreement;

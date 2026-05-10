@@ -1,4 +1,4 @@
-import type { QuizPayload, QuizResult, SubmittedAnswer } from '../types/quiz';
+import type { QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
 
@@ -19,13 +19,13 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   return response.json() as Promise<T>;
 }
 
-export function fetchQuiz(): Promise<QuizPayload> {
-  return request<QuizPayload>('/api/quiz');
+export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> {
+  return request<QuizPayload>(`/api/quiz?variant=${variant}`);
 }
 
-export function submitResults(answers: SubmittedAnswer[]): Promise<QuizResult> {
+export function submitResults(variant: QuizVariant, answers: SubmittedAnswer[]): Promise<QuizResult> {
   return request<QuizResult>('/api/results', {
     method: 'POST',
-    body: JSON.stringify({ answers })
+    body: JSON.stringify({ variant, answers })
   });
 }

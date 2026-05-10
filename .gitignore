@@ -6,6 +6,7 @@ backend/.mvn/wrapper/maven-wrapper.jar
 frontend/node_modules/
 frontend/dist/
 frontend/.npm-cache/
+.tools/
 
 # Local env
 .env

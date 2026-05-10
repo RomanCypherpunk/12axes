@@ -8,6 +8,7 @@ import com.twelveaxes.model.SubmittedAnswer;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,6 +28,31 @@ class ScoringServiceTest {
                 .toList();
 
         var results = scoringService.score(new ResultRequest(answers));
+
+        assertThat(results).hasSize(12);
+        assertThat(results).allSatisfy(axis -> {
+            assertThat(axis.leftPercent()).isEqualTo(50.0);
+            assertThat(axis.rightPercent()).isEqualTo(50.0);
+            assertThat(axis.intensity()).isEqualTo("Equilibrado");
+        });
+    }
+
+    @Test
+    void extendedQuizHasTenQuestionsPerAxis() {
+        var questionsByAxis = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
+                .collect(Collectors.groupingBy(question -> question.axisId(), Collectors.counting()));
+
+        assertThat(questionsByAxis).hasSize(12);
+        assertThat(questionsByAxis).allSatisfy((axisId, count) -> assertThat(count).isEqualTo(10));
+    }
+
+    @Test
+    void extendedNeutralAnswersProduceCenteredAxes() {
+        List<SubmittedAnswer> answers = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
+                .map(question -> new SubmittedAnswer(question.id(), AnswerValue.NEUTRAL))
+                .toList();
+
+        var results = scoringService.score(new ResultRequest(answers, QuizDataService.EXTENDED_VARIANT));
 
         assertThat(results).hasSize(12);
         assertThat(results).allSatisfy(axis -> {

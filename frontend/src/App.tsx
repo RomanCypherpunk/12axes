@@ -5,9 +5,9 @@ import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuiz, submitResults } from './services/quizApi';
-import type { AnswerValue, QuizPayload, QuizResult } from './types/quiz';
+import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 
-type Screen = 'home' | 'quiz' | 'results';
+type Screen = 'home' | 'variant' | 'quiz' | 'results';
 
 const TONE_RED_AXES = new Set([
   'imigracao',
@@ -22,16 +22,19 @@ export default function App() {
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screen, setScreen] = useState<Screen>('home');
+  const [selectedVariant, setSelectedVariant] = useState<QuizVariant>('short');
   const [result, setResult] = useState<QuizResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
+  const resultsRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    fetchQuiz()
+    fetchQuiz('short')
       .then(setQuiz)
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
@@ -56,13 +59,33 @@ export default function App() {
     return new Map(result.axes.map((axis) => [axis.axisId, axis]));
   }, [result]);
 
-  function startQuiz() {
+  function openVariantChooser() {
     clearPendingAdvance();
     setAnswers({});
     setResult(null);
     setError(null);
     setCurrentIndex(0);
-    setScreen('quiz');
+    setScreen('variant');
+  }
+
+  async function startQuiz(variant: QuizVariant = selectedVariant) {
+    clearPendingAdvance();
+    setSelectedVariant(variant);
+    setAnswers({});
+    setResult(null);
+    setError(null);
+    setCurrentIndex(0);
+    setIsLoading(true);
+
+    try {
+      const nextQuiz = await fetchQuiz(variant);
+      setQuiz(nextQuiz);
+      setScreen('quiz');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   function clearPendingAdvance() {
@@ -132,13 +155,28 @@ export default function App() {
         questionId: question.id,
         answer: answerMap[question.id] as AnswerValue
       }));
-      const nextResult = await submitResults(payload);
+      const nextResult = await submitResults(quiz.variant ?? selectedVariant, payload);
       setResult(nextResult);
       setScreen('results');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível calcular o resultado.');
     } finally {
       setIsSubmitting(false);
+    }
+  }
+
+  async function downloadResultsPng() {
+    if (!resultsRef.current || isSharing) {
+      return;
+    }
+    setIsSharing(true);
+    setError(null);
+    try {
+      await exportElementAsPng(resultsRef.current, `12axes-resultado-${new Date().toISOString().slice(0, 10)}.png`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Não foi possível gerar a imagem do resultado.');
+    } finally {
+      setIsSharing(false);
     }
   }
 
@@ -177,8 +215,8 @@ export default function App() {
         <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
           <span>12 Axes</span>
         </button>
-        {screen !== 'home' && (
-          <button className="primary-button header-cta" type="button" onClick={startQuiz}>
+        {(screen === 'quiz' || screen === 'results') && (
+          <button className="primary-button header-cta" type="button" onClick={() => void startQuiz(selectedVariant)}>
             {screen === 'results' ? 'Refazer quiz' : 'Reiniciar quiz'}
             <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14" />
@@ -194,19 +232,19 @@ export default function App() {
             <div className="intro-panel">
               <span className="intro-eyebrow fade-up d-1">
                 <strong>Análise política</strong>
-                <small>· 12 dimensões · 48 questões</small>
+                <small>· 12 dimensões · 48 perguntas</small>
               </span>
               <h1 className="fade-up d-2">
                 Descubra seu <em>perfil ideológico</em> em 12 eixos.
               </h1>
               <p className="intro-lead fade-up d-3">
-                Análise inteligente baseada em 48 perguntas. Resultados detalhados,
+                Análise detalhada baseada nas suas respostas. Resultados percentuais,
                 comparação ideológica e visualização precisa da sua posição no
                 espectro político brasileiro.
               </p>
               <div className="intro-actions fade-up d-4">
-                <button className="primary-button" type="button" onClick={startQuiz}>
-                  Começar análise
+                <button className="primary-button" type="button" onClick={openVariantChooser}>
+                  Começar Quiz
                   <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" />
                     <path d="m13 6 6 6-6 6" />
@@ -225,7 +263,7 @@ export default function App() {
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12l5 5L20 7" />
                   </svg>
-                  100% gratuito
+                  48 perguntas
                 </span>
                 <span className="intro-meta-item">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -242,7 +280,7 @@ export default function App() {
                 <span className="canvas-stat-num">48</span>
                 <div className="canvas-stat-text">
                   <strong>perguntas curadas</strong>
-                  <span>distribuídas em 12 eixos políticos para mapear sua posição</span>
+                  <span>distribuídas em 12 eixos políticos</span>
                 </div>
                 <span className="canvas-stat-tag">ao vivo</span>
               </div>
@@ -266,6 +304,36 @@ export default function App() {
               </div>
             </div>
           </div>
+        </section>
+      )}
+
+      {screen === 'variant' && (
+        <section className="variant-layout" aria-labelledby="variant-title">
+          <div className="variant-heading fade-up d-1">
+            <span className="eyebrow">Escolha o formato</span>
+            <h1 id="variant-title">Qual versão do teste você quer fazer?</h1>
+            <p>
+              A versão curta revela o resultado de forma rápida. A completa aumenta
+              a precisão para aproximar melhor seu resultado dos perfis ideológicos.
+            </p>
+          </div>
+
+          <div className="variant-grid">
+            <button className="variant-card fade-up d-2" type="button" onClick={() => void startQuiz('short')}>
+              <span className="variant-card-kicker">Curta</span>
+              <strong>48 perguntas</strong>
+              <span>Descubra sua ideologia aproximada de forma rápida</span>
+              <span className="variant-card-action">Começar versão curta</span>
+            </button>
+
+            <button className="variant-card featured fade-up d-3" type="button" onClick={() => void startQuiz('extended')}>
+              <span className="variant-card-kicker">Completo</span>
+              <strong>120 Perguntas</strong>
+              <span>Responda o quiz completo para descobrir exatamente a síntese do seu pensamento</span>
+              <span className="variant-card-action">Começar versão completa</span>
+            </button>
+          </div>
+          {error && <p className="inline-error" role="alert">{error}</p>}
         </section>
       )}
 
@@ -324,7 +392,7 @@ export default function App() {
       )}
 
       {screen === 'results' && result && (
-        <section className="results-layout" id="resultados">
+        <section className="results-layout" id="resultados" ref={resultsRef}>
           <header className="results-hero">
             <div className="results-hero-text fade-up d-1">
               <span className="results-eyebrow">Análise concluída</span>
@@ -382,17 +450,133 @@ export default function App() {
             </div>
           </section>
 
-          <div className="results-cta fade-up d-5">
-            <button className="primary-button" type="button" onClick={startQuiz}>
+          <div className="results-cta fade-up d-5" data-export-hidden="true">
+            <button className="primary-button" type="button" onClick={() => void startQuiz(selectedVariant)}>
               Refazer análise
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M21 12a9 9 0 1 1-3-6.7" />
                 <path d="M21 4v5h-5" />
               </svg>
             </button>
+            <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
+              {isSharing ? 'Gerando PNG...' : 'Compartilhar'}
+              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v12" />
+                <path d="m7 10 5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+            </button>
+            {error && <p className="inline-error" role="alert">{error}</p>}
           </div>
         </section>
       )}
     </main>
   );
+}
+
+async function exportElementAsPng(element: HTMLElement, fileName: string) {
+  if (document.fonts) {
+    await document.fonts.ready;
+  }
+
+  const exportPadding = 32;
+  const exportScale = Math.min(2, window.devicePixelRatio || 1);
+  const sourceWidth = Math.ceil(element.scrollWidth);
+  const sourceHeight = Math.ceil(element.scrollHeight);
+  const exportWidth = sourceWidth + exportPadding * 2;
+  const exportHeight = sourceHeight + exportPadding * 2;
+  const clone = element.cloneNode(true) as HTMLElement;
+
+  clone.querySelectorAll('[data-export-hidden="true"]').forEach((node) => node.remove());
+  copyComputedStyles(element, clone);
+  clone.style.width = `${sourceWidth}px`;
+  clone.style.maxWidth = 'none';
+  clone.style.margin = '0';
+  clone.style.animation = 'none';
+  clone.style.transform = 'none';
+
+  const wrapper = document.createElement('div');
+  wrapper.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+  wrapper.style.boxSizing = 'border-box';
+  wrapper.style.width = `${exportWidth}px`;
+  wrapper.style.minHeight = `${exportHeight}px`;
+  wrapper.style.padding = `${exportPadding}px`;
+  wrapper.style.background = '#F7F7F2';
+  wrapper.appendChild(clone);
+
+  const serialized = new XMLSerializer().serializeToString(wrapper);
+  const svg = [
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${exportWidth}" height="${exportHeight}" viewBox="0 0 ${exportWidth} ${exportHeight}">`,
+    `<foreignObject width="100%" height="100%">${serialized}</foreignObject>`,
+    '</svg>'
+  ].join('');
+  const svgUrl = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml;charset=utf-8' }));
+
+  try {
+    const image = await loadImage(svgUrl);
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.ceil(exportWidth * exportScale);
+    canvas.height = Math.ceil(exportHeight * exportScale);
+    const context = canvas.getContext('2d');
+    if (!context) {
+      throw new Error('Não foi possível preparar o arquivo PNG.');
+    }
+
+    context.scale(exportScale, exportScale);
+    context.fillStyle = '#F7F7F2';
+    context.fillRect(0, 0, exportWidth, exportHeight);
+    context.drawImage(image, 0, 0, exportWidth, exportHeight);
+
+    const pngBlob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob((blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error('Não foi possível gerar o PNG do resultado.'));
+        }
+      }, 'image/png', 0.95);
+    });
+    downloadBlob(pngBlob, fileName);
+  } finally {
+    URL.revokeObjectURL(svgUrl);
+  }
+}
+
+function copyComputedStyles(source: Element, target: Element) {
+  if (target instanceof HTMLElement || target instanceof SVGElement) {
+    const computed = window.getComputedStyle(source);
+    const cssText = Array.from(computed)
+      .map((property) => `${property}: ${computed.getPropertyValue(property)};`)
+      .join(' ');
+    target.setAttribute('style', cssText);
+    (target as HTMLElement).style.animation = 'none';
+    (target as HTMLElement).style.transition = 'none';
+  }
+
+  Array.from(source.children).forEach((sourceChild, index) => {
+    const targetChild = target.children.item(index);
+    if (targetChild) {
+      copyComputedStyles(sourceChild, targetChild);
+    }
+  });
+}
+
+function loadImage(url: string) {
+  return new Promise<HTMLImageElement>((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error('Não foi possível renderizar a imagem do resultado.'));
+    image.src = url;
+  });
+}
+
+function downloadBlob(blob: Blob, fileName: string) {
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = fileName;
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }

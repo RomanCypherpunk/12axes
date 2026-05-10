@@ -18,13 +18,19 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class QuizDataService {
+    public static final String SHORT_VARIANT = "short";
+    public static final String EXTENDED_VARIANT = "extended";
+
     private final ObjectMapper objectMapper;
     private List<Axis> axes;
-    private List<Question> questions;
+    private List<Question> shortQuestions;
+    private List<Question> extendedQuestions;
     private List<Ideology> ideologies;
     private Map<String, IdeologyProfile> ideologyProfiles;
 
@@ -35,7 +41,8 @@ public class QuizDataService {
     @PostConstruct
     void loadData() throws IOException {
         axes = readJson("data/axes.json", new TypeReference<>() {});
-        questions = readJson("data/questions.json", new TypeReference<>() {});
+        shortQuestions = readJson("data/questions.json", new TypeReference<>() {});
+        extendedQuestions = readJson("data/questions-extended.json", new TypeReference<>() {});
         ideologies = readJson("data/ideologies.json", new TypeReference<>() {});
         List<IdeologyProfile> profiles = readJson("data/ideology-profiles.json", new TypeReference<>() {});
         ideologyProfiles = profiles.stream()
@@ -43,11 +50,19 @@ public class QuizDataService {
     }
 
     public QuizPayload getQuiz() {
+        return getQuiz(SHORT_VARIANT);
+    }
+
+    public QuizPayload getQuiz(String variant) {
+        String normalizedVariant = normalizeVariant(variant);
+        List<Question> selectedQuestions = getQuestions(normalizedVariant);
         return new QuizPayload(
                 "12 Axes",
-                "Um quiz de 48 perguntas para estimar sua posição nos 12 eixos políticos.",
+                "Um quiz de " + selectedQuestions.size() + " perguntas para estimar sua posição nos 12 eixos políticos.",
+                normalizedVariant,
+                selectedQuestions.size(),
                 axes,
-                questions,
+                selectedQuestions,
                 answerOptions()
         );
     }
@@ -57,7 +72,15 @@ public class QuizDataService {
     }
 
     public List<Question> getQuestions() {
-        return questions;
+        return shortQuestions;
+    }
+
+    public List<Question> getQuestions(String variant) {
+        return switch (normalizeVariant(variant)) {
+            case SHORT_VARIANT -> shortQuestions;
+            case EXTENDED_VARIANT -> extendedQuestions;
+            default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Versão de quiz inválida");
+        };
     }
 
     public List<Ideology> getIdeologies() {
@@ -81,6 +104,17 @@ public class QuizDataService {
             case NEUTRAL -> "Neutro / Inseguro";
             case DISAGREE -> "Discordo";
             case STRONGLY_DISAGREE -> "Discordo totalmente";
+        };
+    }
+
+    private String normalizeVariant(String variant) {
+        if (variant == null || variant.isBlank()) {
+            return SHORT_VARIANT;
+        }
+        return switch (variant.trim().toLowerCase()) {
+            case SHORT_VARIANT, "curta" -> SHORT_VARIANT;
+            case EXTENDED_VARIANT, "extensa" -> EXTENDED_VARIANT;
+            default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Versão de quiz inválida");
         };
     }
 
