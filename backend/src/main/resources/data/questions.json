@@ -21,13 +21,6 @@
     "weight": 1
   },
   {
-    "id": "estrutura_04",
-    "axisId": "estrutura",
-    "text": "O governo central deve concentrar as principais decisões para evitar desigualdades regionais.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "representacao_01",
     "axisId": "representacao",
     "text": "Líderes políticos devem depender de eleições competitivas e poder ser removidos pelo voto.",
@@ -46,13 +39,6 @@
     "axisId": "representacao",
     "text": "Oposição política, imprensa livre e protestos devem ser protegidos mesmo quando incomodam o governo.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "representacao_04",
-    "axisId": "representacao",
-    "text": "Decisões políticas importantes deveriam ficar nas mãos de uma autoridade ou elite técnica, não da maioria.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -77,13 +63,6 @@
     "weight": 1
   },
   {
-    "id": "poder_04",
-    "axisId": "poder",
-    "text": "Leis devem evitar restringir escolhas pessoais, mesmo quando parte da sociedade considera essas escolhas arriscadas.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "imigracao_01",
     "axisId": "imigracao",
     "text": "Imigrantes devem adotar o idioma e os costumes predominantes do país que os recebe.",
@@ -102,13 +81,6 @@
     "axisId": "imigracao",
     "text": "A cidadania deveria exigir forte assimilação cultural.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "imigracao_04",
-    "axisId": "imigracao",
-    "text": "Políticas públicas devem facilitar a manutenção de identidades culturais distintas.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -133,13 +105,6 @@
     "weight": 1
   },
   {
-    "id": "diplomacia_04",
-    "axisId": "diplomacia",
-    "text": "A guerra deve ser considerada apenas como último recurso absoluto.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "intervencao_01",
     "axisId": "intervencao",
     "text": "Um país deve evitar interferir em assuntos internos de outros países.",
@@ -158,13 +123,6 @@
     "axisId": "intervencao",
     "text": "Alianças internacionais não devem arrastar o país para conflitos que não são seus.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "intervencao_04",
-    "axisId": "intervencao",
-    "text": "A soberania e a grandeza nacional devem guiar a política externa acima de compromissos globais.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -189,13 +147,6 @@
     "weight": 1
   },
   {
-    "id": "economia_04",
-    "axisId": "economia",
-    "text": "Privatizações tendem a aumentar eficiência e qualidade quando há concorrência.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "controle_01",
     "axisId": "controle",
     "text": "O planejamento econômico do Estado é necessário para orientar investimentos importantes.",
@@ -214,13 +165,6 @@
     "axisId": "controle",
     "text": "O governo deve direcionar setores estratégicos mesmo que isso reduza a liberdade das empresas.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "controle_04",
-    "axisId": "controle",
-    "text": "Regulações econômicas excessivas atrapalham inovação, emprego e crescimento.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -245,13 +189,6 @@
     "weight": 1
   },
   {
-    "id": "comercio_04",
-    "axisId": "comercio",
-    "text": "Integração econômica global e acordos de comércio aberto são positivos para o desenvolvimento.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "religiao_01",
     "axisId": "religiao",
     "text": "Leis e políticas públicas devem ser neutras em relação à religião.",
@@ -270,13 +207,6 @@
     "axisId": "religiao",
     "text": "Uma pessoa pode viver de forma moral e plena sem religião.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_04",
-    "axisId": "religiao",
-    "text": "A fé religiosa deveria ocupar papel central na vida familiar e comunitária.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -301,13 +231,6 @@
     "weight": 1
   },
   {
-    "id": "moral_04",
-    "axisId": "moral",
-    "text": "Mudanças morais muito rápidas podem enfraquecer a coesão social.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "tecnologia_01",
     "axisId": "tecnologia",
     "text": "Inovação científica e tecnológica deve ser incentivada mesmo quando transforma profundamente a sociedade.",
@@ -326,13 +249,6 @@
     "axisId": "tecnologia",
     "text": "Automação, computação avançada e biotecnologia devem ser exploradas com regulação, não bloqueadas.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "tecnologia_04",
-    "axisId": "tecnologia",
-    "text": "Preservar limites biológicos naturais é mais importante que buscar aperfeiçoamento tecnológico humano.",
-    "agreePole": "RIGHT",
     "weight": 1
   }
 ]

@@ -233,7 +233,7 @@ export default function App() {
             <div className="intro-panel">
               <span className="intro-eyebrow fade-up d-1">
                 <strong>Análise política</strong>
-                <small>· 12 dimensões · 48 perguntas</small>
+                <small>· 12 dimensões · 36 perguntas</small>
               </span>
               <h1 className="fade-up d-2">
                 Descubra seu <em>perfil ideológico</em> em 12 eixos.
@@ -258,13 +258,13 @@ export default function App() {
                     <circle cx="12" cy="12" r="9" />
                     <path d="M12 7v5l3 2" />
                   </svg>
-                  <strong>~6 min</strong>
+                  <strong>~5 min</strong>
                 </span>
                 <span className="intro-meta-item">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12l5 5L20 7" />
                   </svg>
-                  48 perguntas
+                  36 perguntas
                 </span>
                 <span className="intro-meta-item">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -278,7 +278,7 @@ export default function App() {
 
             <div className="canvas-panel">
               <div className="canvas-stat fade-up d-2">
-                <span className="canvas-stat-num">48</span>
+                <span className="canvas-stat-num">36</span>
                 <div className="canvas-stat-text">
                   <strong>perguntas curadas</strong>
                   <span>distribuídas em 12 eixos políticos</span>
@@ -322,7 +322,7 @@ export default function App() {
           <div className="variant-grid">
             <button className="variant-card fade-up d-2" type="button" onClick={() => void startQuiz('short')}>
               <span className="variant-card-kicker">Curta</span>
-              <strong>48 perguntas</strong>
+              <strong>36 perguntas</strong>
               <span>Descubra sua ideologia aproximada de forma rápida</span>
               <span className="variant-card-action">Começar versão curta</span>
             </button>

@@ -38,6 +38,17 @@ class ScoringServiceTest {
     }
 
     @Test
+    void shortQuizHasThreeQuestionsPerAxis() {
+        var questions = dataService.getQuestions(QuizDataService.SHORT_VARIANT);
+        var questionsByAxis = questions.stream()
+                .collect(Collectors.groupingBy(question -> question.axisId(), Collectors.counting()));
+
+        assertThat(questions).hasSize(36);
+        assertThat(questionsByAxis).hasSize(12);
+        assertThat(questionsByAxis).allSatisfy((axisId, count) -> assertThat(count).isEqualTo(3));
+    }
+
+    @Test
     void extendedQuizHasTenQuestionsPerAxis() {
         var questionsByAxis = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
                 .collect(Collectors.groupingBy(question -> question.axisId(), Collectors.counting()));
