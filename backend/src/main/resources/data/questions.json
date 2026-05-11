@@ -9,14 +9,14 @@
   {
     "id": "estrutura_02",
     "axisId": "estrutura",
-    "text": "Leis nacionais uniformes são melhores que regras regionais diferentes.",
+    "text": "Saúde, educação e segurança devem seguir diretrizes nacionais fortes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "estrutura_03",
     "axisId": "estrutura",
-    "text": "Municípios devem adaptar impostos e serviços às necessidades locais.",
+    "text": "Regiões com identidade própria devem poder rejeitar leis nacionais sensíveis.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -51,14 +51,14 @@
   {
     "id": "poder_02",
     "axisId": "poder",
-    "text": "Direitos individuais devem limitar a ação policial e estatal.",
+    "text": "Cidadãos devem poder portar armas para defesa pessoal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "poder_03",
     "axisId": "poder",
-    "text": "Monitoramento estatal amplo pode ser aceitável contra crimes e ameaças.",
+    "text": "Operações policiais duras são aceitáveis em áreas dominadas pelo crime.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -72,14 +72,14 @@
   {
     "id": "imigracao_02",
     "axisId": "imigracao",
-    "text": "A sociedade se fortalece ao preservar várias culturas lado a lado.",
+    "text": "Políticas públicas devem proteger identidades culturais distintas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "imigracao_03",
     "axisId": "imigracao",
-    "text": "A cidadania deve exigir assimilação cultural clara.",
+    "text": "Residência permanente deve exigir aceitação dos princípios constitucionais.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -93,14 +93,14 @@
   {
     "id": "diplomacia_02",
     "axisId": "diplomacia",
-    "text": "Diplomacia e organismos internacionais devem vir antes da força.",
+    "text": "A guerra deve ser último recurso, após alternativas diplomáticas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "diplomacia_03",
     "axisId": "diplomacia",
-    "text": "Ações militares preventivas podem neutralizar ameaças futuras.",
+    "text": "Ataques preventivos são aceitáveis contra ameaças militares crescentes.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -114,21 +114,21 @@
   {
     "id": "intervencao_02",
     "axisId": "intervencao",
-    "text": "O interesse nacional pode justificar pressão externa.",
+    "text": "Projetar poder no exterior é parte de uma política nacional forte.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "intervencao_03",
     "axisId": "intervencao",
-    "text": "Alianças não devem arrastar o país para conflitos alheios.",
+    "text": "Mesmo regimes abusivos devem ser mudados por seus próprios povos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_01",
     "axisId": "economia",
-    "text": "Empresas privadas costumam gerir serviços com mais eficiência que o Estado.",
+    "text": "Lucro e concorrência estimulam inovação e melhor atendimento.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -156,14 +156,14 @@
   {
     "id": "controle_02",
     "axisId": "controle",
-    "text": "Planejamento econômico estatal é necessário para orientar investimentos.",
+    "text": "O governo deve direcionar setores estratégicos da economia.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "controle_03",
     "axisId": "controle",
-    "text": "Empresas devem ter ampla liberdade para produzir, contratar e definir preços.",
+    "text": "Mesmo em crises, controle de preços tende a gerar escassez.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -177,35 +177,35 @@
   {
     "id": "comercio_02",
     "axisId": "comercio",
-    "text": "A indústria nacional deve ser protegida por tarifas quando necessário.",
+    "text": "Setores estratégicos devem ter prioridade sobre concorrentes estrangeiros.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "comercio_03",
     "axisId": "comercio",
-    "text": "Acordos comerciais abertos favorecem crescimento e investimento.",
+    "text": "Consumidores devem poder comprar importados baratos, mesmo com perda industrial.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_01",
     "axisId": "religiao",
-    "text": "Valores religiosos devem influenciar decisões sobre moral pública.",
+    "text": "A fé religiosa faz parte importante da minha identidade ou visão de mundo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_02",
     "axisId": "religiao",
-    "text": "Leis e políticas públicas devem ser neutras em relação à religião.",
+    "text": "Minha vida seria praticamente a mesma sem fé religiosa.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "religiao_03",
     "axisId": "religiao",
-    "text": "Tradições religiosas fortalecem família, comunidade e vida cívica.",
+    "text": "Valores religiosos devem poder participar do debate público sobre leis e costumes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -226,28 +226,28 @@
   {
     "id": "moral_03",
     "axisId": "moral",
-    "text": "Mudanças culturais rápidas podem enfraquecer a coesão social.",
+    "text": "O Estado deve restringir conteúdos considerados nocivos a crianças.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_01",
     "axisId": "tecnologia",
-    "text": "Limites biológicos devem ser preservados diante de novas tecnologias.",
+    "text": "Políticas ambientais devem limitar plástico, emissões e desperdício, mesmo com custo econômico.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_02",
     "axisId": "tecnologia",
-    "text": "Inovação científica deve avançar mesmo quando transforma costumes.",
+    "text": "Tecnologias como IA e automação aumentam a produtividade e eficiência.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_03",
     "axisId": "tecnologia",
-    "text": "Tecnologias que alteram corpo e reprodução exigem limites rígidos.",
+    "text": "Tecnologias que alteram corpo, mente ou reprodução exigem limites rígidos.",
     "agreePole": "RIGHT",
     "weight": 1
   }
