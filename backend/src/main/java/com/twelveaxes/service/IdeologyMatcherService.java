@@ -30,13 +30,12 @@ public class IdeologyMatcherService {
 
     private static final Map<String, Double> AXIS_WEIGHTS = Map.ofEntries(
             // Primeira prateleira: eixos centrais para definir a ideologia.
-            Map.entry("representacao", 1.15),
-            Map.entry("poder", 1.15),
-            Map.entry("economia", 1.15),
-            Map.entry("moral", 1.15),
+            Map.entry("representacao", 1.20),
+            Map.entry("poder", 1.20),
+            Map.entry("economia", 1.20),
+            Map.entry("moral", 1.20),
 
             // Segunda prateleira: eixos caracterizadores do perfil.
-            Map.entry("estrutura", 1.00),
             Map.entry("religiao", 1.00),
             Map.entry("controle", 1.00),
             Map.entry("comercio", 1.00),
@@ -44,7 +43,8 @@ public class IdeologyMatcherService {
             // Terceira prateleira: eixos complementares.
             Map.entry("imigracao", 0.85),
             Map.entry("diplomacia", 0.85),
-            Map.entry("intervencao", 0.85),
+            Map.entry("intervencao", 0.90),
+            Map.entry("estrutura", 0.90),
             Map.entry("tecnologia", 0.85)
     );
 
