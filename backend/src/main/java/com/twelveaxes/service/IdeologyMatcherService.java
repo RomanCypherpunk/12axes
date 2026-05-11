@@ -157,7 +157,7 @@ public class IdeologyMatcherService {
         if (ideology.vector() != null && !ideology.vector().isEmpty()) {
             return ideology.vector();
         }
-        // All 155 ideologies should have explicit profiles. Fallback to neutral.
+        // All ideologies should have explicit profiles. Fallback to neutral.
         Map<String, Double> neutral = new HashMap<>();
         AXIS_IDS.forEach(axisId -> neutral.put(axisId, 50.0));
         return neutral;

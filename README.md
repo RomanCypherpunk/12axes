@@ -1,6 +1,6 @@
 # 12 Axes
 
-Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 36 perguntas e uma versão completa com 120 perguntas, recebe um resultado percentual em cada eixo, vê a ideologia política aproximada com base em uma base local de 155 possibilidades e pode baixar o resultado em PNG para compartilhar.
+Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 36 perguntas e uma versão completa com 120 perguntas, recebe um resultado percentual em cada eixo, vê a ideologia política aproximada com base em uma base local de 139 possibilidades e pode baixar o resultado em PNG para compartilhar.
 
 O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy configurado para Render + Vercel.
 
@@ -76,9 +76,9 @@ Exemplo de regra:
 ### Base de ideologias
 
 - O backend usa uma base estruturada em `backend/src/main/resources/data/ideologies.json`
-- A base tem 155 entradas no projeto
+- A base tem 139 entradas no projeto
 - Perfis ideológicos explícitos ficam em `ideology-profiles.json`
-- As 155 ideologias têm vetor de matching explícito; se algum perfil futuro não existir, o backend cai para vetor neutro como fallback
+- As 139 ideologias têm vetor de matching explícito; se algum perfil futuro não existir, o backend cai para vetor neutro como fallback
 
 ---
 
@@ -226,7 +226,7 @@ flowchart LR
 - Botões com estados de hover e seleção
 - Tipografia com Poppins e Sora carregadas no `index.html`
 - Barras de resultado com cartões laterais, ícones SVG e as cores definidas em `axes.json`
-- Exportação de resultado em PNG desenhada diretamente em canvas, sem depender de screenshot do DOM
+- Exportação de resultado em PNG com `html-to-image`, usando um nó dedicado de exportação para evitar capturar controles da interface
 
 ---
 
@@ -564,7 +564,7 @@ Quanto menor a distância, maior a compatibilidade.
 
 ### Observação importante
 
-O matcher atual já usa perfis explícitos para as 155 ideologias. A precisão ainda pode ser melhorada revisando os vetores em `ideology-profiles.json`, especialmente em ideologias próximas entre si ou em perfis historicamente ambíguos.
+O matcher atual já usa perfis explícitos para as 139 ideologias. A precisão ainda pode ser melhorada revisando os vetores em `ideology-profiles.json`, especialmente em ideologias próximas entre si ou em perfis historicamente ambíguos.
 
 ---
 
@@ -596,7 +596,7 @@ Eixos: 50% / 50%
 
 Melhorias planejadas para evoluir o projeto:
 
-- Refinar os 155 vetores ideológicos em `ideology-profiles.json`
+- Refinar os vetores ideológicos em `ideology-profiles.json`
 - Criar testes para o endpoint `/api/results`
 - Adicionar página explicativa de metodologia
 - Criar modo de revisão das respostas antes do envio

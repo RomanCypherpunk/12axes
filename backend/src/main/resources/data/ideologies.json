@@ -91,27 +91,6 @@
     "vector": null
   },
   {
-    "id": "ingsoc",
-    "name": "Ingsoc",
-    "category": "Esquerda Autoritária",
-    "description": "Ideologia fictícia do romance '1984' de George Orwell. Representa o totalitarismo absoluto: controle total da informação, vigilância permanente, manipulação da linguagem (novilíngua) e da história. Usada como referência crítica ao autoritarismo de esquerda. Politicamente: Totalitário absoluto | Economicamente: Planificado | Socialmente: Distópico",
-    "vector": null
-  },
-  {
-    "id": "posadismo",
-    "name": "Posadismo",
-    "category": "Esquerda Autoritária",
-    "description": "Corrente trotskista extrema de J. Posadas. Notória por defender que uma guerra nuclear poderia acelerar a revolução mundial, e por teorias sobre contato extraterrestre como evidência de sociedades comunistas avançadas. Marginal mas culturalmente conhecida. Politicamente: Revolucionário | Economicamente: Coletivista | Socialmente: Apocalíptico",
-    "vector": null
-  },
-  {
-    "id": "neobolchevismo",
-    "name": "Neobolchevismo",
-    "category": "Esquerda Autoritária",
-    "description": "Tentativa de reviver e atualizar o bolchevismo original para o contexto contemporâneo. Mantém a defesa do partido de vanguarda, da revolução proletária e da ditadura do proletariado, rejeitando tanto o reformismo quanto o stalinismo. Politicamente: Revolucionário/Vanguardista | Economicamente: Planificado/Coletivista | Socialmente: Internacionalista",
-    "vector": null
-  },
-  {
     "id": "marxismo-reformista",
     "name": "Marxismo Reformista",
     "category": "Esquerda Autoritária",
@@ -154,13 +133,6 @@
     "vector": null
   },
   {
-    "id": "fascismo-britanico",
-    "name": "Fascismo Britânico",
-    "category": "Direita Autoritária",
-    "description": "Variante do fascismo no Reino Unido, liderada por Oswald Mosley e a British Union of Fascists. Combinava corporativismo econômico, nacionalismo imperial britânico e antissemitismo. Nunca chegou ao poder. Politicamente: Totalitário | Economicamente: Corporativista | Socialmente: Imperialista",
-    "vector": null
-  },
-  {
     "id": "fascismo-clerical",
     "name": "Fascismo Clerical",
     "category": "Direita Autoritária",
@@ -172,20 +144,6 @@
     "name": "Falangismo",
     "category": "Direita Autoritária",
     "description": "Ideologia fascista espanhola fundada por José Antonio Primo de Rivera. Combina nacionalismo espanhol, catolicismo, sindicalismo nacional e corporativismo. Base do regime franquista na Espanha. Politicamente: Autoritário/Partido único | Economicamente: Corporativista/Sindicalismo nacional | Socialmente: Católico/Nacionalista",
-    "vector": null
-  },
-  {
-    "id": "falangismo-polones",
-    "name": "Falangismo Polonês",
-    "category": "Direita Autoritária",
-    "description": "Adaptação do falangismo para o contexto polonês. Combina nacionalismo polonês radical com catolicismo integrista, anticomunismo e corporativismo. Movimento marginal na extrema-direita polonesa. Politicamente: Autoritário | Economicamente: Corporativista | Socialmente: Católico integrista",
-    "vector": null
-  },
-  {
-    "id": "legionarismo",
-    "name": "Legionarismo",
-    "category": "Direita Autoritária",
-    "description": "Ideologia da Guarda de Ferro romena de Corneliu Codreanu. Mistura fascismo com misticismo ortodoxo cristão, nacionalismo romeno extremo, antissemitismo e culto ao sacrifício. Uma das formas mais espiritualistas do fascismo europeu. Politicamente: Totalitário/Místico | Economicamente: Corporativista | Socialmente: Ortodoxo/Ultranacionalista",
     "vector": null
   },
   {
@@ -266,13 +224,6 @@
     "vector": null
   },
   {
-    "id": "odalismo",
-    "name": "Odalismo",
-    "category": "Direita Autoritária",
-    "description": "Ideologia de Varg Vikernes que combina nacionalismo nórdico, neopaganismo, primitivismo e separatismo étnico. Rejeita o cristianismo e a civilização moderna em favor de um retorno à vida tribal europeia pré-cristã. Politicamente: Separatista | Economicamente: Primitivista | Socialmente: Neopagão/Etnicista",
-    "vector": null
-  },
-  {
     "id": "neoconservadorismo",
     "name": "Neoconservadorismo",
     "category": "Direita Autoritária",
@@ -284,13 +235,6 @@
     "name": "Darwinismo Social",
     "category": "Direita Autoritária",
     "description": "Aplicação distorcida da teoria da evolução à sociedade. Defende que indivíduos, raças e nações competem pela sobrevivência e que o Estado não deve intervir. Historicamente usado para justificar imperialismo, racismo e eugenia. Politicamente: Elitista | Economicamente: Laissez-faire extremo | Socialmente: Hierarquista",
-    "vector": null
-  },
-  {
-    "id": "culto-a-morte-death-worship",
-    "name": "Culto à Morte (Death Worship)",
-    "category": "Direita Autoritária",
-    "description": "Referência inspirada em distopias como 1984 para posições que normalizam guerra permanente, sacrifício social e culto à destruição. Historicamente dialoga com críticas a regimes militarizados e propaganda totalitária. Defende Estado de guerra, economia dirigida para fins bélicos, disciplina coletiva e normas sociais que valorizam obediência, martírio e violência política. Politicamente: Militarista absoluto | Economicamente: Bélico/Dirigido | Socialmente: Niilista",
     "vector": null
   },
   {
@@ -357,13 +301,6 @@
     "vector": null
   },
   {
-    "id": "kraterocracria",
-    "name": "Kraterocracria",
-    "category": "Direita Autoritária",
-    "description": "Governo pelos mais fortes ou mais capazes. Derivado do grego 'kratos' (poder). Defende que o poder deve pertencer àqueles com capacidade de exercê-lo, sem considerações morais. Associada ao darwinismo social político. Politicamente: Elitista/Meritocrático | Economicamente: Variável | Socialmente: Darwinista",
-    "vector": null
-  },
-  {
     "id": "quarta-teoria-politica",
     "name": "Quarta Teoria Política",
     "category": "Direita Autoritária",
@@ -375,13 +312,6 @@
     "name": "Democracia Nacional",
     "category": "Direita Autoritária",
     "description": "Corrente que combina democracia com nacionalismo forte. Defende soberania popular dentro de um quadro nacionalista, frequentemente com posições conservadoras em questões sociais e protecionistas na economia. Politicamente: Democrático/Nacionalista | Economicamente: Protecionista | Socialmente: Conservador",
-    "vector": null
-  },
-  {
-    "id": "hivemind-coletivismo-total",
-    "name": "Hivemind (Coletivismo Total)",
-    "category": "Direita Autoritária",
-    "description": "Conceito teórico e ficcional de uma consciência coletiva em que a individualidade é suprimida em favor do grupo. Serve como alerta contra formas extremas de coletivismo autoritário, nas quais dissidência, privacidade e autonomia pessoal desaparecem. Politicamente: Totalitário absoluto | Economicamente: Coletivista total | Socialmente: Anti-individualista",
     "vector": null
   },
   {
@@ -826,13 +756,6 @@
     "vector": null
   },
   {
-    "id": "soulismo",
-    "name": "Soulismo",
-    "category": "Esquerda Libertária",
-    "description": "Conceito especulativo e humorístico usado para representar rejeição extrema a toda forma de autoridade, limite ou estrutura social. É mais útil como marcador de radicalismo libertário abstrato do que como programa político histórico. Politicamente: Pós-anarquista | Economicamente: Pós-escassez | Socialmente: Metafísico",
-    "vector": null
-  },
-  {
     "id": "anarquismo-social",
     "name": "Anarquismo Social",
     "category": "Esquerda Libertária",
@@ -1022,13 +945,6 @@
     "vector": null
   },
   {
-    "id": "anarco-fronteirismo",
-    "name": "Anarco-Fronteirismo",
-    "category": "Direita Libertária",
-    "description": "Anarquismo inspirado no espírito da fronteira americana. Valoriza autossuficiência, homesteading, liberdade individual radical e ausência de governo. Politicamente: Anti-estatal | Economicamente: Autossuficiente | Socialmente: Pioneiro/Individualista",
-    "vector": null
-  },
-  {
     "id": "anarcodistributismo",
     "name": "Anarcodistributismo",
     "category": "Direita Libertária",
@@ -1043,38 +959,10 @@
     "vector": null
   },
   {
-    "id": "avaritismo",
-    "name": "Avaritismo",
-    "category": "Direita Libertária",
-    "description": "Caricatura conceitual de egoísmo econômico extremo, em que lucro e interesse próprio são tratados como critérios quase absolutos. Rejeita limites morais, redistribuição e regulação, levando a lógica do capitalismo irrestrito ao ponto mais radical. Politicamente: Anti-estatal | Economicamente: Capitalismo irrestrito | Socialmente: Niilista/Egoísta",
-    "vector": null
-  },
-  {
     "id": "korwinismo",
     "name": "Korwinismo",
     "category": "Direita Libertária",
     "description": "Ideologia de Janusz Korwin-Mikke, político polonês. Ultralibertarianismo econômico combinado com conservadorismo social, monarquismo e rejeição da União Europeia. Politicamente: Monárquico/Antidemocrata | Economicamente: Ultraliberal | Socialmente: Conservador radical",
-    "vector": null
-  },
-  {
-    "id": "hidrarcria",
-    "name": "Hidrarcria",
-    "category": "Direita Libertária",
-    "description": "Governo ou sociedade baseada nos oceanos, fora da jurisdição de qualquer Estado. Associada ao seasteading (cidades flutuantes) como laboratório de sociedades livres. Politicamente: Extraterritorial | Economicamente: Livre mercado | Socialmente: Experimentalista",
-    "vector": null
-  },
-  {
-    "id": "pos-libertarianismo",
-    "name": "Pós-Libertarianismo",
-    "category": "Direita Libertária",
-    "description": "Evolução do libertarianismo que reconhece suas limitações e busca incorporar insights de outras tradições. Mantém o núcleo libertário mas é mais pragmático. Politicamente: Estado mínimo pragmático | Economicamente: Livre mercado moderado | Socialmente: Pragmático",
-    "vector": null
-  },
-  {
-    "id": "anarco-fascismo",
-    "name": "Anarco-Fascismo",
-    "category": "Direita Libertária",
-    "description": "Rótulo contraditório e marginal que tenta combinar rejeição ao Estado formal com valores fascistas de hierarquia, identidade coletiva e violência política. Na prática, serve mais como crítica a misturas incoerentes entre anarquismo e autoritarismo do que como tradição histórica organizada. Politicamente: Contraditório | Economicamente: Indefinido | Socialmente: Autoritário",
     "vector": null
   },
   {
