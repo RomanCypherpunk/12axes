@@ -36,7 +36,7 @@ export default function App() {
 
   useEffect(() => {
     fetchQuiz('short')
-      .then(setQuiz)
+      .then((payload) => setQuiz(shuffleQuizQuestions(payload)))
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
   }, []);
@@ -80,7 +80,7 @@ export default function App() {
 
     try {
       const nextQuiz = await fetchQuiz(variant);
-      setQuiz(nextQuiz);
+      setQuiz(shuffleQuizQuestions(nextQuiz));
       setScreen('quiz');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
@@ -473,6 +473,22 @@ export default function App() {
       )}
     </main>
   );
+}
+
+function shuffleQuizQuestions(quiz: QuizPayload): QuizPayload {
+  return {
+    ...quiz,
+    questions: shuffleArray(quiz.questions)
+  };
+}
+
+function shuffleArray<T>(items: T[]): T[] {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
 }
 
 async function exportResultAsPng(quiz: QuizPayload, result: QuizResult, fileName: string) {
