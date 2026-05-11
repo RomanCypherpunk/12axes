@@ -9,28 +9,37 @@ interface AxisResultBarProps {
 export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftInk = readableInk(axis.leftColor);
   const rightInk = readableInk(axis.rightColor);
-  const leaningText = result.intensity === 'Equilibrado'
+  const isBalanced = result.intensity === 'Equilibrado';
+  const leaningText = isBalanced
     ? 'Equilibrado'
     : `${result.intensity} para ${result.dominantPole}`;
+
+  const statusColor = isBalanced
+    ? 'var(--accent)'
+    : result.dominantPole === result.leftPole
+      ? axis.leftColor
+      : axis.rightColor;
 
   return (
     <article className="axis-row">
       <header className="axis-row-title">
-        <h3>{result.label}: <span>{leaningText}</span></h3>
+        <h3>
+          {result.label}: <span style={{ color: statusColor }}>{leaningText}</span>
+        </h3>
       </header>
 
-      <div
-        className="pole-card pole-card-left"
-        style={{
-          ['--pole-color' as string]: axis.leftColor,
-          ['--pole-ink' as string]: leftInk
-        }}
-      >
-        <PoleIcon axisId={axis.id} side="left" />
-        <span>{result.leftPole}</span>
-      </div>
+      <div className="axis-row-body">
+        <div
+          className="pole-card pole-card-left"
+          style={{
+            ['--pole-color' as string]: axis.leftColor,
+            ['--pole-ink' as string]: leftInk
+          }}
+        >
+          <PoleIcon axisId={axis.id} side="left" />
+          <span>{result.leftPole}</span>
+        </div>
 
-      <div className="axis-row-main">
         <div
           className="axis-scale"
           aria-label={`${result.label}: ${result.leftPole} ${result.leftPercent.toFixed(1)}%, ${result.rightPole} ${result.rightPercent.toFixed(1)}%`}
@@ -39,7 +48,7 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
             className="axis-fill-left"
             style={{
               width: `${result.leftPercent}%`,
-              background: axis.leftColor,
+              ['--bar-color' as string]: axis.leftColor,
               color: leftInk
             }}
           >
@@ -49,24 +58,24 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
             className="axis-fill-right"
             style={{
               width: `${result.rightPercent}%`,
-              background: axis.rightColor,
+              ['--bar-color' as string]: axis.rightColor,
               color: rightInk
             }}
           >
             <strong>{result.rightPercent.toFixed(1)}%</strong>
           </span>
         </div>
-      </div>
 
-      <div
-        className="pole-card pole-card-right"
-        style={{
-          ['--pole-color' as string]: axis.rightColor,
-          ['--pole-ink' as string]: rightInk
-        }}
-      >
-        <PoleIcon axisId={axis.id} side="right" />
-        <span>{result.rightPole}</span>
+        <div
+          className="pole-card pole-card-right"
+          style={{
+            ['--pole-color' as string]: axis.rightColor,
+            ['--pole-ink' as string]: rightInk
+          }}
+        >
+          <PoleIcon axisId={axis.id} side="right" />
+          <span>{result.rightPole}</span>
+        </div>
       </div>
     </article>
   );
