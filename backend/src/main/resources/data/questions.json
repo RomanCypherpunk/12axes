@@ -2,252 +2,252 @@
   {
     "id": "estrutura_01",
     "axisId": "estrutura",
-    "text": "Decisões sobre políticas públicas devem ser tomadas no nível mais próximo possível da população afetada.",
+    "text": "Estados e municípios devem ter ampla autonomia para criar políticas próprias.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "estrutura_02",
     "axisId": "estrutura",
-    "text": "O país precisa de regras nacionais uniformes para evitar desigualdades e conflitos entre regiões.",
+    "text": "Leis nacionais uniformes são melhores que regras regionais diferentes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "estrutura_03",
     "axisId": "estrutura",
-    "text": "Governos regionais devem ter autonomia real para adaptar impostos, serviços e regulações às necessidades locais.",
+    "text": "Municípios devem adaptar impostos e serviços às necessidades locais.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "representacao_01",
     "axisId": "representacao",
-    "text": "A legitimidade de um governo depende de eleições competitivas, alternância de poder e possibilidade real de derrota dos governantes.",
+    "text": "Governos só são legítimos com eleições competitivas e alternância de poder.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "representacao_02",
     "axisId": "representacao",
-    "text": "Em crises graves, concentrar autoridade em uma liderança forte pode ser mais importante do que preservar todos os freios institucionais.",
+    "text": "Em crises graves, um líder forte deve governar com poucos bloqueios.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "representacao_03",
     "axisId": "representacao",
-    "text": "Oposição política, imprensa livre e direito de protesto devem ser protegidos mesmo quando dificultam a ação do governo.",
+    "text": "Imprensa livre, oposição e protestos devem ser protegidos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "poder_01",
     "axisId": "poder",
-    "text": "O Estado deve priorizar ordem pública e segurança coletiva mesmo quando isso restringe algumas liberdades individuais.",
+    "text": "Segurança pública deve pesar mais que algumas liberdades individuais.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "poder_02",
     "axisId": "poder",
-    "text": "Direitos individuais devem limitar o poder do Estado mesmo quando a maioria exige respostas mais duras.",
+    "text": "Direitos individuais devem limitar a ação policial e estatal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "poder_03",
     "axisId": "poder",
-    "text": "Polícias e tribunais precisam de instrumentos fortes para neutralizar ameaças antes que elas cresçam.",
+    "text": "Monitoramento estatal amplo pode ser aceitável contra crimes e ameaças.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "imigracao_01",
     "axisId": "imigracao",
-    "text": "Imigrantes devem aprender o idioma, as normas cívicas e os costumes básicos do país que os recebe.",
+    "text": "Imigrantes devem aprender o idioma e os costumes do país.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "imigracao_02",
     "axisId": "imigracao",
-    "text": "Uma sociedade pode se fortalecer quando permite que diferentes culturas mantenham identidades visíveis.",
+    "text": "A sociedade se fortalece ao preservar várias culturas lado a lado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "imigracao_03",
     "axisId": "imigracao",
-    "text": "A cidadania deve exigir compromisso claro com a cultura política comum do país.",
+    "text": "A cidadania deve exigir assimilação cultural clara.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_01",
     "axisId": "diplomacia",
-    "text": "Forças armadas fortes são essenciais para dissuadir adversários e garantir respeito internacional.",
+    "text": "Forças armadas fortes são essenciais para respeito internacional.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_02",
     "axisId": "diplomacia",
-    "text": "Negociação, mediação e organismos internacionais devem ser preferidos a demonstrações de força.",
+    "text": "Diplomacia e organismos internacionais devem vir antes da força.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "diplomacia_03",
     "axisId": "diplomacia",
-    "text": "Um país seguro precisa estar disposto a usar poder militar antes que ameaças se tornem incontroláveis.",
+    "text": "Ações militares preventivas podem neutralizar ameaças futuras.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_01",
     "axisId": "intervencao",
-    "text": "Um país deve evitar interferir na política interna de outros países, mesmo quando discorda de seus governos.",
+    "text": "Um país deve evitar interferir na política interna de outros países.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_02",
     "axisId": "intervencao",
-    "text": "Defender interesses nacionais pode justificar pressão política, econômica ou militar no exterior.",
+    "text": "O interesse nacional pode justificar pressão externa.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "intervencao_03",
     "axisId": "intervencao",
-    "text": "Alianças internacionais não devem arrastar o país para conflitos que não ameaçam diretamente sua população.",
+    "text": "Alianças não devem arrastar o país para conflitos alheios.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_01",
     "axisId": "economia",
-    "text": "A propriedade e a gestão privadas tendem a produzir serviços mais eficientes do que estruturas estatais.",
+    "text": "Empresas privadas costumam gerir serviços com mais eficiência que o Estado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "economia_02",
     "axisId": "economia",
-    "text": "Serviços essenciais devem ser organizados prioritariamente para acesso universal, não para lucro.",
+    "text": "Serviços essenciais devem ser majoritariamente públicos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_03",
     "axisId": "economia",
-    "text": "Consumidores se beneficiam quando podem escolher entre diferentes prestadores privados.",
+    "text": "Privatizações tendem a melhorar qualidade quando há concorrência.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "controle_01",
     "axisId": "controle",
-    "text": "Preços, produção e consumo devem ser definidos principalmente por escolhas livres de empresas e consumidores.",
+    "text": "Preços, produção e consumo devem ser definidos pelo livre mercado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "controle_02",
     "axisId": "controle",
-    "text": "Planejamento estatal é necessário para orientar investimentos que o mercado não prioriza adequadamente.",
+    "text": "Planejamento econômico estatal é necessário para orientar investimentos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "controle_03",
     "axisId": "controle",
-    "text": "Empresas devem ter ampla liberdade para decidir produção, preços, contratação e estratégia.",
+    "text": "Empresas devem ter ampla liberdade para produzir, contratar e definir preços.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "comercio_01",
     "axisId": "comercio",
-    "text": "A abertura comercial aumenta eficiência, reduz custos e amplia opções para consumidores.",
+    "text": "Livre comércio internacional beneficia consumidores e aumenta eficiência.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "comercio_02",
     "axisId": "comercio",
-    "text": "Indústrias nacionais devem ser protegidas quando enfrentam concorrência estrangeira desigual.",
+    "text": "A indústria nacional deve ser protegida por tarifas quando necessário.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "comercio_03",
     "axisId": "comercio",
-    "text": "A integração econômica global tende a tornar empresas nacionais mais produtivas e competitivas.",
+    "text": "Acordos comerciais abertos favorecem crescimento e investimento.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_01",
     "axisId": "religiao",
-    "text": "Valores religiosos devem influenciar leis e políticas públicas em temas morais relevantes.",
+    "text": "Valores religiosos devem influenciar decisões sobre moral pública.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_02",
     "axisId": "religiao",
-    "text": "Leis e instituições públicas devem permanecer neutras em relação a doutrinas religiosas.",
+    "text": "Leis e políticas públicas devem ser neutras em relação à religião.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "religiao_03",
     "axisId": "religiao",
-    "text": "Tradições religiosas ajudam a sustentar a vida familiar, comunitária e cívica.",
+    "text": "Tradições religiosas fortalecem família, comunidade e vida cívica.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_01",
     "axisId": "moral",
-    "text": "Tradições familiares e comunitárias são bases morais que devem ser preservadas.",
+    "text": "Tradições familiares e comunitárias devem ser preservadas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_02",
     "axisId": "moral",
-    "text": "Normas sociais devem se adaptar a novas formas de identidade, família e comportamento.",
+    "text": "Normas sociais devem se adaptar a novas identidades e famílias.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_03",
     "axisId": "moral",
-    "text": "Mudanças culturais rápidas podem enfraquecer vínculos sociais importantes.",
+    "text": "Mudanças culturais rápidas podem enfraquecer a coesão social.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_01",
     "axisId": "tecnologia",
-    "text": "A sociedade deve preservar limites biológicos importantes mesmo quando novas tecnologias prometem benefícios.",
+    "text": "Limites biológicos devem ser preservados diante de novas tecnologias.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_02",
     "axisId": "tecnologia",
-    "text": "Inovação científica deve ser incentivada mesmo quando transforma profundamente costumes e instituições.",
+    "text": "Inovação científica deve avançar mesmo quando transforma costumes.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_03",
     "axisId": "tecnologia",
-    "text": "Tecnologias que alteram corpo, reprodução ou cognição humana devem enfrentar limites rigorosos.",
+    "text": "Tecnologias que alteram corpo e reprodução exigem limites rígidos.",
     "agreePole": "RIGHT",
     "weight": 1
   }
