@@ -3,6 +3,7 @@ package com.twelveaxes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.twelveaxes.model.AnswerValue;
+import com.twelveaxes.model.Pole;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.model.SubmittedAnswer;
 import com.twelveaxes.service.QuizDataService;
@@ -55,6 +56,31 @@ class ScoringServiceTest {
 
         assertThat(questionsByAxis).hasSize(12);
         assertThat(questionsByAxis).allSatisfy((axisId, count) -> assertThat(count).isEqualTo(10));
+    }
+
+    @Test
+    void extendedQuizIsBalancedAndAlternatesPolesPerAxis() {
+        var questionsByAxis = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
+                .collect(Collectors.groupingBy(question -> question.axisId()));
+
+        assertThat(questionsByAxis).allSatisfy((axisId, questions) -> {
+            assertThat(questions).hasSize(10);
+            assertThat(questions).filteredOn(question -> question.agreePole() == Pole.LEFT).hasSize(5);
+            assertThat(questions).filteredOn(question -> question.agreePole() == Pole.RIGHT).hasSize(5);
+            for (int index = 1; index < questions.size(); index++) {
+                assertThat(questions.get(index).agreePole()).isNotEqualTo(questions.get(index - 1).agreePole());
+            }
+            assertThat(List.of(questions.get(8).agreePole(), questions.get(9).agreePole()))
+                    .containsExactlyInAnyOrder(Pole.LEFT, Pole.RIGHT);
+        });
+    }
+
+    @Test
+    void shortQuizIsGloballyBalancedAcrossPoles() {
+        var questions = dataService.getQuestions(QuizDataService.SHORT_VARIANT);
+
+        assertThat(questions).filteredOn(question -> question.agreePole() == Pole.LEFT).hasSize(18);
+        assertThat(questions).filteredOn(question -> question.agreePole() == Pole.RIGHT).hasSize(18);
     }
 
     @Test
