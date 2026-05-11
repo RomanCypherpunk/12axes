@@ -1,6 +1,6 @@
 import type { QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${API_URL}${path}`, {
