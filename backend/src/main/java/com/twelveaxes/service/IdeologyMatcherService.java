@@ -29,23 +29,18 @@ public class IdeologyMatcherService {
     );
 
     private static final Map<String, Double> AXIS_WEIGHTS = Map.ofEntries(
-            // Primeira prateleira: eixos centrais para definir a ideologia.
-            Map.entry("representacao", 1.20),
-            Map.entry("poder", 1.20),
-            Map.entry("economia", 1.20),
-            Map.entry("moral", 1.20),
-
-            // Segunda prateleira: eixos caracterizadores do perfil.
-            Map.entry("religiao", 1.00),
+            Map.entry("estrutura", 1.00),
+            Map.entry("representacao", 1.00),
+            Map.entry("poder", 1.00),
+            Map.entry("imigracao", 1.00),
+            Map.entry("diplomacia", 1.00),
+            Map.entry("intervencao", 1.00),
+            Map.entry("economia", 1.00),
             Map.entry("controle", 1.00),
             Map.entry("comercio", 1.00),
-
-            // Terceira prateleira: eixos complementares.
-            Map.entry("imigracao", 0.85),
-            Map.entry("diplomacia", 0.85),
-            Map.entry("intervencao", 0.90),
-            Map.entry("estrutura", 0.90),
-            Map.entry("tecnologia", 0.85)
+            Map.entry("religiao", 1.00),
+            Map.entry("moral", 1.00),
+            Map.entry("tecnologia", 1.00)
     );
 
     private static final double AXIS_SIMILARITY_SPREAD = 55.0;
@@ -195,7 +190,7 @@ public class IdeologyMatcherService {
                     .append(".");
         }
         description.append(" A compatibilidade é calculada pela proximidade do seu vetor percentual nos 12 eixos, ")
-                .append("penalizando divergências fortes em dimensões centrais como representação, economia, moral e poder.");
+                .append("com todos os eixos contribuindo com o mesmo peso.");
         return description.toString();
     }
 
