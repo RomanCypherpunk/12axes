@@ -1,6 +1,6 @@
 # 12 Axes
 
-Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 36 perguntas e uma versão completa com 120 perguntas, recebe um resultado percentual em cada eixo, vê a ideologia política aproximada com base em uma base local de 139 possibilidades e pode baixar o resultado em PNG para compartilhar.
+Aplicação web full stack para um quiz político baseado em 12 eixos ideológicos. O usuário escolhe entre uma versão curta com 36 perguntas e uma versão completa com 60 perguntas, recebe um resultado percentual em cada eixo, vê a ideologia política aproximada com base em uma base local de 156 possibilidades e pode baixar o resultado em PNG para compartilhar.
 
 O projeto foi estruturado como um produto de portfólio: backend em Java com Spring Boot, frontend em React com Vite, dados versionados em JSON, sem banco de dados, e deploy configurado para Render + Vercel.
 
@@ -36,8 +36,8 @@ O objetivo não é rotular o usuário de forma definitiva, mas apresentar uma ap
 ### Quiz político
 
 - Versão curta com 36 perguntas
-- Versão completa com 120 perguntas
-- 3 ou 10 perguntas para cada um dos 12 eixos
+- Versão completa com 60 perguntas
+- 3 ou 5 perguntas para cada um dos 12 eixos
 - Escala de resposta com 5 opções:
   - Concordo totalmente
   - Concordo
@@ -491,7 +491,7 @@ Define as 36 perguntas da versão curta, eixo relacionado e polo favorecido pela
 
 ### `questions-extended.json`
 
-Define as 120 perguntas da versão completa, com 10 perguntas por eixo e equilíbrio entre os dois polos.
+Define as 60 perguntas da versão completa, com 5 perguntas por eixo e equilíbrio global entre os dois polos.
 
 ```json
 {
@@ -579,7 +579,7 @@ npm run build
 GET /api/health
 POST /api/results com respostas neutras
 GET /api/quiz?variant=short com 36 perguntas
-GET /api/quiz?variant=extended com 120 perguntas
+GET /api/quiz?variant=extended com 60 perguntas
 ```
 
 Resultado esperado para todas as respostas neutras:

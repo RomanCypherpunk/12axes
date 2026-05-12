@@ -21,34 +21,6 @@
     "weight": 1
   },
   {
-    "id": "estrutura_04",
-    "axisId": "estrutura",
-    "text": "O governo central deve definir padrões mínimos para serviços públicos.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "estrutura_05",
-    "axisId": "estrutura",
-    "text": "Governos locais devem poder testar políticas antes de uma regra nacional.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "estrutura_06",
-    "axisId": "estrutura",
-    "text": "Conflitos entre regiões devem ser decididos pela autoridade nacional.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "estrutura_07",
-    "axisId": "estrutura",
-    "text": "Estados e municípios devem ter mais controle sobre recursos públicos.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
     "id": "estrutura_08",
     "axisId": "estrutura",
     "text": "Saúde, educação e segurança devem seguir diretrizes nacionais fortes.",
@@ -60,13 +32,6 @@
     "axisId": "estrutura",
     "text": "Regiões com identidade própria devem poder rejeitar leis nacionais sensíveis.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "estrutura_10",
-    "axisId": "estrutura",
-    "text": "O governo central deve intervir quando regiões desafiam decisões nacionais.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -105,41 +70,6 @@
     "weight": 1
   },
   {
-    "id": "representacao_06",
-    "axisId": "representacao",
-    "text": "Debates parlamentares longos não devem impedir reformas urgentes.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "representacao_07",
-    "axisId": "representacao",
-    "text": "Referendos e consultas públicas devem influenciar decisões importantes.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "representacao_08",
-    "axisId": "representacao",
-    "text": "A estabilidade política justifica restringir grupos anti-sistema.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "representacao_09",
-    "axisId": "representacao",
-    "text": "Grupos radicais devem disputar eleições se rejeitarem a violência.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "representacao_10",
-    "axisId": "representacao",
-    "text": "Partidos que ameaçam a ordem nacional devem poder ser proibidos.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "poder_01",
     "axisId": "poder",
     "text": "Segurança pública deve pesar mais que algumas liberdades individuais.",
@@ -168,45 +98,10 @@
     "weight": 1
   },
   {
-    "id": "poder_05",
-    "axisId": "poder",
-    "text": "A pena de morte deve ser permitida para crimes extremos.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "poder_06",
-    "axisId": "poder",
-    "text": "Cidadãos devem poder portar armas para defesa pessoal.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "poder_07",
-    "axisId": "poder",
-    "text": "Crises de segurança podem justificar restrições temporárias de circulação.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "poder_08",
-    "axisId": "poder",
-    "text": "Adultos não devem ser presos por consumo de drogas.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "poder_09",
     "axisId": "poder",
     "text": "Operações policiais duras são aceitáveis em áreas dominadas pelo crime.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "poder_10",
-    "axisId": "poder",
-    "text": "Suspeitos de crimes graves devem manter garantias processuais completas.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -224,37 +119,9 @@
     "weight": 1
   },
   {
-    "id": "imigracao_03",
-    "axisId": "imigracao",
-    "text": "A cidadania deve exigir assimilação cultural clara.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "imigracao_04",
-    "axisId": "imigracao",
-    "text": "Políticas públicas devem proteger identidades culturais distintas.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "imigracao_05",
     "axisId": "imigracao",
     "text": "Programas de integração devem ensinar valores cívicos comuns.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "imigracao_06",
-    "axisId": "imigracao",
-    "text": "Imigrantes devem manter suas tradições sem pressão para abandoná-las.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "imigracao_07",
-    "axisId": "imigracao",
-    "text": "Símbolos nacionais comuns ajudam a integrar grupos diferentes.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -270,13 +137,6 @@
     "axisId": "imigracao",
     "text": "Residência permanente deve exigir aceitação dos princípios constitucionais.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "imigracao_10",
-    "axisId": "imigracao",
-    "text": "Práticas culturais impopulares devem ser toleradas se não violam direitos.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -315,41 +175,6 @@
     "weight": 1
   },
   {
-    "id": "diplomacia_06",
-    "axisId": "diplomacia",
-    "text": "Concessões diplomáticas são preferíveis a aumentar tensões.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "diplomacia_07",
-    "axisId": "diplomacia",
-    "text": "Armas nucleares podem ser necessárias para dissuasão militar.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "diplomacia_08",
-    "axisId": "diplomacia",
-    "text": "Cooperação internacional reduz riscos melhor que intimidação militar.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "diplomacia_09",
-    "axisId": "diplomacia",
-    "text": "Ataques preventivos são aceitáveis contra ameaças militares crescentes.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "diplomacia_10",
-    "axisId": "diplomacia",
-    "text": "Mesmo contra regimes hostis, a guerra deve ser evitada enquanto houver negociação.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "intervencao_01",
     "axisId": "intervencao",
     "text": "Um país deve evitar interferir na política interna de outros países.",
@@ -378,45 +203,10 @@
     "weight": 1
   },
   {
-    "id": "intervencao_05",
-    "axisId": "intervencao",
-    "text": "Sanções externas devem ser usadas com muita cautela.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "intervencao_06",
-    "axisId": "intervencao",
-    "text": "O país deve apoiar aliados para fortalecer sua posição estratégica.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "intervencao_07",
     "axisId": "intervencao",
     "text": "Recursos nacionais devem priorizar problemas internos.",
     "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "intervencao_08",
-    "axisId": "intervencao",
-    "text": "Projetar poder no exterior é parte de uma política nacional forte.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "intervencao_09",
-    "axisId": "intervencao",
-    "text": "Mesmo regimes abusivos devem ser mudados por seus próprios povos.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "intervencao_10",
-    "axisId": "intervencao",
-    "text": "Intervenções externas podem proteger aliados ou populações ameaçadas.",
-    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -434,37 +224,9 @@
     "weight": 1
   },
   {
-    "id": "economia_03",
-    "axisId": "economia",
-    "text": "Privatizações tendem a melhorar qualidade quando há concorrência.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "economia_04",
-    "axisId": "economia",
-    "text": "Saúde, educação e transporte não devem depender do lucro.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
     "id": "economia_05",
     "axisId": "economia",
     "text": "Parcerias privadas podem melhorar serviços públicos com fiscalização.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "economia_06",
-    "axisId": "economia",
-    "text": "Bens básicos não devem depender da renda individual.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "economia_07",
-    "axisId": "economia",
-    "text": "Lucro e concorrência estimulam inovação e melhor atendimento.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -480,13 +242,6 @@
     "axisId": "economia",
     "text": "Mesmo serviços essenciais podem ser privados com regulação clara.",
     "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "economia_10",
-    "axisId": "economia",
-    "text": "Setores estratégicos devem poder ser estatizados em nome do interesse público.",
-    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -511,37 +266,9 @@
     "weight": 1
   },
   {
-    "id": "controle_04",
-    "axisId": "controle",
-    "text": "O governo deve direcionar setores estratégicos da economia.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "controle_05",
-    "axisId": "controle",
-    "text": "Impostos altos reduzem investimento, emprego e crescimento.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "controle_06",
     "axisId": "controle",
     "text": "A taxação de grandes fortunas deve financiar políticas públicas.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "controle_07",
-    "axisId": "controle",
-    "text": "Sinais de preço corrigem erros melhor que ordens do governo.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "controle_08",
-    "axisId": "controle",
-    "text": "Terras improdutivas devem poder ser desapropriadas para reforma agrária.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -550,13 +277,6 @@
     "axisId": "controle",
     "text": "Mesmo em crises, controle de preços tende a gerar escassez.",
     "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "controle_10",
-    "axisId": "controle",
-    "text": "Em emergências, o governo deve poder congelar preços e direcionar produção.",
-    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -581,20 +301,6 @@
     "weight": 1
   },
   {
-    "id": "comercio_04",
-    "axisId": "comercio",
-    "text": "Setores estratégicos devem ter prioridade sobre concorrentes estrangeiros.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "comercio_05",
-    "axisId": "comercio",
-    "text": "Empresas nacionais ficam mais fortes competindo no mercado global.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
     "id": "comercio_06",
     "axisId": "comercio",
     "text": "Produtos estratégicos devem ser fabricados no país, mesmo com custo maior.",
@@ -609,44 +315,9 @@
     "weight": 1
   },
   {
-    "id": "comercio_08",
-    "axisId": "comercio",
-    "text": "Tarifas podem proteger empregos locais contra concorrência desigual.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "comercio_09",
-    "axisId": "comercio",
-    "text": "Consumidores devem poder comprar importados baratos, mesmo com perda industrial.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "comercio_10",
-    "axisId": "comercio",
-    "text": "Importações que ameaçam setores estratégicos devem ser barradas.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
     "id": "religiao_01",
     "axisId": "religiao",
     "text": "A fé religiosa faz parte importante da minha identidade ou visão de mundo.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_02",
-    "axisId": "religiao",
-    "text": "Minha vida seria praticamente a mesma sem fé religiosa.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_03",
-    "axisId": "religiao",
-    "text": "Valores religiosos devem poder participar do debate público sobre leis e costumes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -658,23 +329,9 @@
     "weight": 1
   },
   {
-    "id": "religiao_05",
+    "id": "religiao_03",
     "axisId": "religiao",
-    "text": "Oração, culto ou práticas espirituais têm valor real na minha vida.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_06",
-    "axisId": "religiao",
-    "text": "Eu costumo interpretar a vida sem recorrer a crenças religiosas ou espirituais.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_07",
-    "axisId": "religiao",
-    "text": "Comunidades religiosas devem ter voz reconhecida em debates morais.",
+    "text": "Valores religiosos devem poder participar do debate público sobre leis e costumes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -690,13 +347,6 @@
     "axisId": "religiao",
     "text": "Preservar tradições religiosas é importante na minha vida familiar ou pessoal.",
     "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "religiao_10",
-    "axisId": "religiao",
-    "text": "Críticas públicas a religiões devem ser permitidas mesmo quando ofendem fiéis.",
-    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -728,45 +378,10 @@
     "weight": 1
   },
   {
-    "id": "moral_05",
-    "axisId": "moral",
-    "text": "Escolas devem transmitir disciplina, respeito e valores familiares.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "moral_06",
-    "axisId": "moral",
-    "text": "Direitos dos animais devem limitar práticas econômicas e culturais.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "moral_07",
-    "axisId": "moral",
-    "text": "Mudanças morais devem avançar com prudência.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "moral_08",
-    "axisId": "moral",
-    "text": "Adultos devem poder viver identidades e relações fora do padrão tradicional.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
     "id": "moral_09",
     "axisId": "moral",
     "text": "O Estado deve restringir conteúdos considerados nocivos a crianças.",
     "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "moral_10",
-    "axisId": "moral",
-    "text": "Identidades fora do padrão devem ser reconhecidas mesmo contra a maioria.",
-    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -798,45 +413,10 @@
     "weight": 1
   },
   {
-    "id": "tecnologia_05",
-    "axisId": "tecnologia",
-    "text": "Indústrias de alto consumo energético devem ser contidas quando pressionam clima e recursos naturais.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "tecnologia_06",
-    "axisId": "tecnologia",
-    "text": "Adultos informados devem poder usar aprimoramento corporal ou cognitivo.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
     "id": "tecnologia_07",
     "axisId": "tecnologia",
     "text": "Ecossistemas frágeis devem ser preservados mesmo quando isso reduz eficiência produtiva.",
     "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "tecnologia_08",
-    "axisId": "tecnologia",
-    "text": "Energias renováveis, baterias e redes inteligentes devem substituir práticas tradicionais menos eficientes.",
-    "agreePole": "LEFT",
-    "weight": 1
-  },
-  {
-    "id": "tecnologia_09",
-    "axisId": "tecnologia",
-    "text": "Reflorestamento e restauração ambiental devem ter prioridade sobre expansão urbana ou industrial.",
-    "agreePole": "RIGHT",
-    "weight": 1
-  },
-  {
-    "id": "tecnologia_10",
-    "axisId": "tecnologia",
-    "text": "O combate ao aquecimento global depende mais de inovação tecnológica do que de reduzir o consumo.",
-    "agreePole": "LEFT",
     "weight": 1
   }
 ]

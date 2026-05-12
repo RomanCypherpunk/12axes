@@ -353,7 +353,7 @@ export default function App() {
 
             <button className="variant-card featured fade-up d-3" type="button" onClick={() => void startQuiz('extended')}>
               <span className="variant-card-kicker">Completo</span>
-              <strong>120 Perguntas</strong>
+              <strong>60 perguntas</strong>
               <span>Responda o quiz completo para descobrir exatamente a síntese do seu pensamento</span>
               <span className="variant-card-action">Começar versão completa</span>
             </button>

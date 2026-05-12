@@ -9,12 +9,12 @@
   {
     "id": "estrutura_02",
     "axisId": "estrutura",
-    "text": "Saúde, educação e segurança devem seguir diretrizes nacionais fortes.",
+    "text": "Leis nacionais uniformes são melhores que regras regionais diferentes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
-    "id": "estrutura_03",
+    "id": "estrutura_09",
     "axisId": "estrutura",
     "text": "Regiões com identidade própria devem poder rejeitar leis nacionais sensíveis.",
     "agreePole": "LEFT",
@@ -51,12 +51,12 @@
   {
     "id": "poder_02",
     "axisId": "poder",
-    "text": "Cidadãos devem poder portar armas para defesa pessoal.",
+    "text": "Direitos individuais devem limitar a ação policial e estatal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
-    "id": "poder_03",
+    "id": "poder_09",
     "axisId": "poder",
     "text": "Operações policiais duras são aceitáveis em áreas dominadas pelo crime.",
     "agreePole": "LEFT",
@@ -72,12 +72,12 @@
   {
     "id": "imigracao_02",
     "axisId": "imigracao",
-    "text": "Políticas públicas devem proteger identidades culturais distintas.",
+    "text": "A sociedade se fortalece ao preservar várias culturas lado a lado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
-    "id": "imigracao_03",
+    "id": "imigracao_09",
     "axisId": "imigracao",
     "text": "Residência permanente deve exigir aceitação dos princípios constitucionais.",
     "agreePole": "LEFT",
@@ -93,14 +93,14 @@
   {
     "id": "diplomacia_02",
     "axisId": "diplomacia",
-    "text": "A guerra deve ser último recurso, após alternativas diplomáticas.",
+    "text": "Diplomacia e organismos internacionais devem vir antes da força.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "diplomacia_03",
     "axisId": "diplomacia",
-    "text": "Ataques preventivos são aceitáveis contra ameaças militares crescentes.",
+    "text": "Ações militares preventivas podem neutralizar ameaças futuras.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -114,21 +114,21 @@
   {
     "id": "intervencao_02",
     "axisId": "intervencao",
-    "text": "Projetar poder no exterior é parte de uma política nacional forte.",
+    "text": "O interesse nacional pode justificar pressão externa.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
-    "id": "intervencao_03",
+    "id": "intervencao_07",
     "axisId": "intervencao",
-    "text": "Mesmo regimes abusivos devem ser mudados por seus próprios povos.",
+    "text": "Recursos nacionais devem priorizar problemas internos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_01",
     "axisId": "economia",
-    "text": "Lucro e concorrência estimulam inovação e melhor atendimento.",
+    "text": "Empresas privadas costumam gerir serviços com mais eficiência que o Estado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -140,9 +140,9 @@
     "weight": 1
   },
   {
-    "id": "economia_03",
+    "id": "economia_09",
     "axisId": "economia",
-    "text": "Privatizações tendem a melhorar qualidade quando há concorrência.",
+    "text": "Mesmo serviços essenciais podem ser privados com regulação clara.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -156,12 +156,12 @@
   {
     "id": "controle_02",
     "axisId": "controle",
-    "text": "O governo deve direcionar setores estratégicos da economia.",
+    "text": "Planejamento econômico estatal é necessário para orientar investimentos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
-    "id": "controle_03",
+    "id": "controle_09",
     "axisId": "controle",
     "text": "Mesmo em crises, controle de preços tende a gerar escassez.",
     "agreePole": "RIGHT",
@@ -177,14 +177,14 @@
   {
     "id": "comercio_02",
     "axisId": "comercio",
-    "text": "Setores estratégicos devem ter prioridade sobre concorrentes estrangeiros.",
+    "text": "A indústria nacional deve ser protegida por tarifas quando necessário.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
-    "id": "comercio_03",
+    "id": "comercio_07",
     "axisId": "comercio",
-    "text": "Consumidores devem poder comprar importados baratos, mesmo com perda industrial.",
+    "text": "Importações baratas ampliam opções e reduzem custo de vida.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -196,16 +196,16 @@
     "weight": 1
   },
   {
-    "id": "religiao_02",
+    "id": "religiao_04",
     "axisId": "religiao",
-    "text": "Minha vida seria praticamente a mesma sem fé religiosa.",
+    "text": "Leis e políticas públicas devem ser neutras em relação à religião.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
-    "id": "religiao_03",
+    "id": "religiao_09",
     "axisId": "religiao",
-    "text": "Valores religiosos devem poder participar do debate público sobre leis e costumes.",
+    "text": "Preservar tradições religiosas é importante na minha vida familiar ou pessoal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -224,7 +224,7 @@
     "weight": 1
   },
   {
-    "id": "moral_03",
+    "id": "moral_09",
     "axisId": "moral",
     "text": "O Estado deve restringir conteúdos considerados nocivos a crianças.",
     "agreePole": "RIGHT",
@@ -240,7 +240,7 @@
   {
     "id": "tecnologia_02",
     "axisId": "tecnologia",
-    "text": "Tecnologias como IA e automação aumentam a produtividade e eficiência.",
+    "text": "Energia nuclear e engenharia avançada devem ser usadas para resolver grandes problemas.",
     "agreePole": "LEFT",
     "weight": 1
   },

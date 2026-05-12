@@ -50,29 +50,32 @@ class ScoringServiceTest {
     }
 
     @Test
-    void extendedQuizHasTenQuestionsPerAxis() {
-        var questionsByAxis = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
+    void extendedQuizHasFiveQuestionsPerAxis() {
+        var questions = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT);
+        var questionsByAxis = questions.stream()
                 .collect(Collectors.groupingBy(question -> question.axisId(), Collectors.counting()));
 
+        assertThat(questions).hasSize(60);
         assertThat(questionsByAxis).hasSize(12);
-        assertThat(questionsByAxis).allSatisfy((axisId, count) -> assertThat(count).isEqualTo(10));
+        assertThat(questionsByAxis).allSatisfy((axisId, count) -> assertThat(count).isEqualTo(5));
     }
 
     @Test
-    void extendedQuizIsBalancedAndAlternatesPolesPerAxis() {
+    void extendedQuizAlternatesPolesPerAxisAndIsGloballyBalanced() {
+        var questions = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT);
         var questionsByAxis = dataService.getQuestions(QuizDataService.EXTENDED_VARIANT).stream()
                 .collect(Collectors.groupingBy(question -> question.axisId()));
 
-        assertThat(questionsByAxis).allSatisfy((axisId, questions) -> {
-            assertThat(questions).hasSize(10);
-            assertThat(questions).filteredOn(question -> question.agreePole() == Pole.LEFT).hasSize(5);
-            assertThat(questions).filteredOn(question -> question.agreePole() == Pole.RIGHT).hasSize(5);
-            for (int index = 1; index < questions.size(); index++) {
-                assertThat(questions.get(index).agreePole()).isNotEqualTo(questions.get(index - 1).agreePole());
+        assertThat(questionsByAxis).allSatisfy((axisId, axisQuestions) -> {
+            assertThat(axisQuestions).hasSize(5);
+            assertThat(axisQuestions).filteredOn(question -> question.agreePole() == Pole.LEFT).hasSizeBetween(2, 3);
+            assertThat(axisQuestions).filteredOn(question -> question.agreePole() == Pole.RIGHT).hasSizeBetween(2, 3);
+            for (int index = 1; index < axisQuestions.size(); index++) {
+                assertThat(axisQuestions.get(index).agreePole()).isNotEqualTo(axisQuestions.get(index - 1).agreePole());
             }
-            assertThat(List.of(questions.get(8).agreePole(), questions.get(9).agreePole()))
-                    .containsExactlyInAnyOrder(Pole.LEFT, Pole.RIGHT);
         });
+        assertThat(questions).filteredOn(question -> question.agreePole() == Pole.LEFT).hasSize(30);
+        assertThat(questions).filteredOn(question -> question.agreePole() == Pole.RIGHT).hasSize(30);
     }
 
     @Test
