@@ -35,24 +35,10 @@
     "vector": null
   },
   {
-    "id": "titoismo",
-    "name": "Titoísmo",
-    "category": "Esquerda Autoritária",
-    "description": "Modelo socialista da Iugoslávia sob Josip Broz Tito. Caracteriza-se pela autogestão operária nas empresas, não-alinhamento na Guerra Fria, federalismo multiétnico e independência em relação a Moscou. Representou uma terceira via dentro do socialismo real. Politicamente: Autoritário | Economicamente: Autogestionário/Misto | Socialmente: Federalista",
-    "vector": null
-  },
-  {
     "id": "comunismo-nacional",
     "name": "Comunismo Nacional",
     "category": "Esquerda Autoritária",
     "description": "Fusão de comunismo com nacionalismo. Defende a construção do socialismo adaptada às condições nacionais específicas, rejeitando a submissão a potências comunistas externas. Exemplos incluem a Romênia de Ceausescu e aspectos do titoísmo. Politicamente: Autoritário | Economicamente: Planificado | Socialmente: Nacionalista",
-    "vector": null
-  },
-  {
-    "id": "blanquismo",
-    "name": "Blanquismo",
-    "category": "Esquerda Autoritária",
-    "description": "Doutrina revolucionária de Auguste Blanqui. Propõe a tomada do poder por um pequeno grupo conspiratório de revolucionários profissionais, seguida de uma ditadura revolucionária temporária para transformar a sociedade. Precursor do vanguardismo leninista. Politicamente: Conspirativo/Ditatorial | Economicamente: Coletivista | Socialmente: Revolucionário",
     "vector": null
   },
   {
@@ -74,13 +60,6 @@
     "name": "Socialismo de Estado",
     "category": "Esquerda Autoritária",
     "description": "Sistema onde o Estado possui e administra os principais meios de produção. Difere do comunismo puro ao manter estruturas estatais fortes. A economia é planificada centralmente, com o Estado controlando indústrias, bancos e comércio exterior. Politicamente: Autoritário | Economicamente: Planificado/Estatista | Socialmente: Coletivista",
-    "vector": null
-  },
-  {
-    "id": "baathismo",
-    "name": "Baathismo",
-    "category": "Esquerda Autoritária",
-    "description": "Ideologia pan-árabe do Partido Baath, influente na Síria e no Iraque. Combina socialismo árabe, secularismo, nacionalismo pan-árabe e modernização autoritária. Defende a unidade do mundo árabe, reforma agrária e nacionalização de recursos naturais. Politicamente: Autoritário/Partido único | Economicamente: Socialista/Estatista | Socialmente: Secularista/Pan-árabe",
     "vector": null
   },
   {
@@ -109,13 +88,6 @@
     "name": "Marxismo Reformista",
     "category": "Esquerda Autoritária",
     "description": "Corrente que busca alcançar os objetivos marxistas por meios graduais e parlamentares, mas mantendo o Estado como instrumento central de transformação. Diferencia-se da social-democracia por manter a meta final de superar o capitalismo completamente. Politicamente: Parlamentar/Estatista | Economicamente: Socialista/Transição | Socialmente: Reformista",
-    "vector": null
-  },
-  {
-    "id": "kemalismo",
-    "name": "Kemalismo",
-    "category": "Esquerda Autoritária",
-    "description": "Ideologia fundadora da República da Turquia por Mustafa Kemal Atatürk. Baseada em seis pilares: republicanismo, populismo, secularismo, reformismo, nacionalismo e estatismo. Modernização autoritária, laicização forçada e construção de identidade nacional turca. Politicamente: Autoritário/Republicano | Economicamente: Estatista/Misto | Socialmente: Secularista/Modernizador",
     "vector": null
   },
   {
@@ -165,13 +137,6 @@
     "name": "Integralismo Brasileiro",
     "category": "Direita Autoritária",
     "description": "Movimento fascista brasileiro dos anos 1930 liderado por Plínio Salgado. Lema: 'Deus, Pátria e Família'. Combinava nacionalismo, corporativismo, catolicismo e antiliberalismo. Diferenciava-se do fascismo europeu por rejeitar o racismo biológico. Politicamente: Autoritário | Economicamente: Corporativista | Socialmente: Católico/Nacionalista",
-    "vector": null
-  },
-  {
-    "id": "pinochetismo",
-    "name": "Pinochetismo",
-    "category": "Direita Autoritária",
-    "description": "Modelo do Chile de Pinochet. Combina ditadura militar com liberalismo econômico radical (Chicago Boys). Repressão política severa, desmantelamento do Estado de bem-estar e privatizações massivas. Politicamente: Ditatorial/Militar | Economicamente: Ultraliberal | Socialmente: Repressivo",
     "vector": null
   },
   {
@@ -231,13 +196,6 @@
     "vector": null
   },
   {
-    "id": "volkismo",
-    "name": "Volkismo",
-    "category": "Direita Autoritária",
-    "description": "Movimento völkisch alemão que romantizava o povo germânico, sua conexão com a terra e suas tradições pagãs. Combinava nacionalismo étnico, misticismo, antissemitismo e anticapitalismo. Precursor ideológico do nazismo. Politicamente: Autoritário/Místico | Economicamente: Anticapitalista/Agrarianista | Socialmente: Etnonacionalista",
-    "vector": null
-  },
-  {
     "id": "neoconservadorismo",
     "name": "Neoconservadorismo",
     "category": "Direita Autoritária",
@@ -249,13 +207,6 @@
     "name": "Darwinismo Social",
     "category": "Direita Autoritária",
     "description": "Aplicação distorcida da teoria da evolução à sociedade. Defende que indivíduos, raças e nações competem pela sobrevivência e que o Estado não deve intervir. Historicamente usado para justificar imperialismo, racismo e eugenia. Politicamente: Elitista | Economicamente: Laissez-faire extremo | Socialmente: Hierarquista",
-    "vector": null
-  },
-  {
-    "id": "futurismo",
-    "name": "Futurismo",
-    "category": "Direita Autoritária",
-    "description": "Movimento artístico e político italiano de Marinetti. Glorificava velocidade, tecnologia, juventude, violência e modernidade radical. Politicamente, aliou-se ao fascismo italiano. Rejeitava tradição em favor do progresso radical. Politicamente: Proto-fascista | Economicamente: Industrialista | Socialmente: Antitradição/Vanguardista",
     "vector": null
   },
   {
@@ -333,20 +284,6 @@
     "name": "Bioconservadorismo",
     "category": "Direita Autoritária",
     "description": "Corrente que desconfia de biotecnologia, transhumanismo, engenharia genética e mudanças antropológicas radicais. Defende limites morais, prudência científica, preservação da natureza humana e instituições tradicionais diante de avanços técnicos sobre corpo, reprodução e vida. Politicamente: Conservador regulador | Economicamente: Variável | Socialmente: Bioconservador/Tradicional",
-    "vector": null
-  },
-  {
-    "id": "bonapartismo",
-    "name": "Bonapartismo",
-    "category": "Direita Autoritária",
-    "description": "Modelo político associado a Napoleão Bonaparte e seus herdeiros. Combina executivo forte, centralização administrativa, plebiscitos, nacionalismo, ordem pública e modernização estatal acima das divisões partidárias tradicionais. Politicamente: Autoritário/Plebiscitário | Economicamente: Dirigista/Misto | Socialmente: Nacional-modernizador",
-    "vector": null
-  },
-  {
-    "id": "bukelismo",
-    "name": "Bukelismo",
-    "category": "Direita Autoritária",
-    "description": "Estilo político associado a Nayib Bukele em El Salvador. Combina presidencialismo forte, populismo antipartidário, política de segurança extremamente dura, comunicação digital, pragmatismo econômico e imagem tecnófila, incluindo experiências com Bitcoin e modernização administrativa. Politicamente: Autoritário/Populista | Economicamente: Pragmático pró-mercado | Socialmente: Securitário/Conservador",
     "vector": null
   },
   {
@@ -497,13 +434,6 @@
     "vector": null
   },
   {
-    "id": "piratismo",
-    "name": "Piratismo",
-    "category": "Centro",
-    "description": "Movimento dos Partidos Piratas. Foca em liberdade na internet, privacidade digital, transparência governamental, reforma de direitos autorais, democracia direta e governo aberto. Originou-se na Suécia em 2006. Politicamente: Democrático/Transparente | Economicamente: Misto | Socialmente: Digital/Libertário",
-    "vector": null
-  },
-  {
     "id": "feminismo",
     "name": "Feminismo",
     "category": "Centro",
@@ -567,34 +497,6 @@
     "vector": null
   },
   {
-    "id": "pan-asianismo",
-    "name": "Pan-Asianismo",
-    "category": "Centro",
-    "description": "Movimento pela solidariedade e cooperação entre povos asiáticos. Historicamente usado pelo Japão imperial para justificar a 'Esfera de Co-Prosperidade'. Hoje manifesta-se em formas mais pacíficas de cooperação regional. Politicamente: Internacionalista regional | Economicamente: Variável | Socialmente: Pan-étnico",
-    "vector": null
-  },
-  {
-    "id": "pan-eslavismo",
-    "name": "Pan-Eslavismo",
-    "category": "Centro",
-    "description": "Movimento pela unidade dos povos eslavos. Originou-se no século XIX como resistência aos impérios otomano e austro-húngaro. Historicamente associado à influência russa sobre outros povos eslavos. Politicamente: Internacionalista regional | Economicamente: Variável | Socialmente: Pan-étnico",
-    "vector": null
-  },
-  {
-    "id": "sionismo",
-    "name": "Sionismo",
-    "category": "Centro",
-    "description": "Movimento nacional judaico pela criação e manutenção de um Estado judeu na Terra de Israel. Fundado por Theodor Herzl no século XIX em resposta ao antissemitismo europeu. Resultou na criação do Estado de Israel em 1948. Politicamente: Nacionalista | Economicamente: Variável | Socialmente: Judaico/Nacional",
-    "vector": null
-  },
-  {
-    "id": "fordismo",
-    "name": "Fordismo",
-    "category": "Centro",
-    "description": "Modelo econômico e social baseado na produção em massa, consumo de massa e altos salários. Nomeado a partir de Henry Ford. Implica forte regulação estatal, sindicalismo corporativista e Estado de bem-estar para manter a demanda. Politicamente: Regulador | Economicamente: Capitalismo regulado | Socialmente: Corporativista",
-    "vector": null
-  },
-  {
     "id": "autoritarismo-social",
     "name": "Autoritarismo Social",
     "category": "Centro",
@@ -606,13 +508,6 @@
     "name": "Indigenismo",
     "category": "Centro",
     "description": "Movimento pela proteção e valorização dos povos indígenas e suas culturas. Pode variar de políticas públicas de proteção a movimentos de autodeterminação indígena. Na América Latina, forte componente de justiça social. Politicamente: Transversal | Economicamente: Comunitário | Socialmente: Identitário/Cultural",
-    "vector": null
-  },
-  {
-    "id": "saadismo",
-    "name": "Saadismo",
-    "category": "Centro",
-    "description": "Ideologia pan-arabista moderada, associada ao presidente egípcio Anwar Sadat. Combinava nacionalismo árabe com abertura econômica (Infitah) e pragmatismo diplomático, incluindo paz com Israel. Politicamente: Autoritário moderado | Economicamente: Abertura de mercado | Socialmente: Pragmático/Pan-árabe",
     "vector": null
   },
   {
@@ -763,13 +658,6 @@
     "vector": null
   },
   {
-    "id": "zapatismo",
-    "name": "Zapatismo",
-    "category": "Esquerda Libertária",
-    "description": "Movimento do EZLN em Chiapas, México. Combina marxismo com direitos indígenas, democracia participativa e autonomia local. Lema: 'Para todos, todo; para nosotros, nada.' Politicamente: Autonomista | Economicamente: Comunitário | Socialmente: Indígena/Participativo",
-    "vector": null
-  },
-  {
     "id": "ecossocialismo",
     "name": "Ecossocialismo",
     "category": "Esquerda Libertária",
@@ -840,13 +728,6 @@
     "vector": null
   },
   {
-    "id": "anarquismo-taoista",
-    "name": "Anarquismo Taoísta",
-    "category": "Esquerda Libertária",
-    "description": "Aplica princípios do taoísmo (wu wei, harmonia natural, rejeição de artifício) à política. Lao Tsé e Chuang Tsé como precursores do pensamento anarquista. Politicamente: Anti-estatal | Economicamente: Natural/Espontâneo | Socialmente: Harmonista",
-    "vector": null
-  },
-  {
     "id": "anarco-naturalismo",
     "name": "Anarco-Naturalismo",
     "category": "Esquerda Libertária",
@@ -872,13 +753,6 @@
     "name": "Geoanarquismo",
     "category": "Esquerda Libertária",
     "description": "Combinação de anarquismo com georgismo. Rejeita o Estado mas defende que recursos naturais são comuns. Propõe que comunidades voluntárias cobrem rendas pela terra. Politicamente: Anti-estatal | Economicamente: Georgista/Comunal | Socialmente: Igualitarista",
-    "vector": null
-  },
-  {
-    "id": "socialismo-paleolibertario",
-    "name": "Socialismo Paleolibertário",
-    "category": "Esquerda Libertária",
-    "description": "Conceito que combina elementos paleolibertários (culturalmente conservadores) com socialismo cooperativista. Rejeita tanto o Estado quanto o capitalismo corporativo, mantendo valores tradicionais. Politicamente: Anti-estatal | Economicamente: Cooperativista | Socialmente: Conservador cultural",
     "vector": null
   },
   {
@@ -1075,13 +949,6 @@
     "name": "Anarcoindividualismo",
     "category": "Direita Libertária",
     "description": "Anarquismo centrado no indivíduo soberano. Defende liberdade absoluta contra todo coletivo e toda autoridade. Influenciado por Stirner, Tucker e Spooner. Politicamente: Anti-estatal | Economicamente: Mercado individualista | Socialmente: Individualista radical",
-    "vector": null
-  },
-  {
-    "id": "korwinismo",
-    "name": "Korwinismo",
-    "category": "Direita Libertária",
-    "description": "Ideologia de Janusz Korwin-Mikke, político polonês. Ultralibertarianismo econômico combinado com conservadorismo social, monarquismo e rejeição da União Europeia. Politicamente: Monárquico/Antidemocrata | Economicamente: Ultraliberal | Socialmente: Conservador radical",
     "vector": null
   },
   {
