@@ -14,6 +14,7 @@ frontend/.npm-cache/
 frontend/.env
 frontend/.env.local
 *.log
+.claude/
 
 # OS/editor
 .DS_Store
