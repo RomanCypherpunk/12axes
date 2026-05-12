@@ -189,8 +189,6 @@ public class IdeologyMatcherService {
                     .append(parts.social())
                     .append(".");
         }
-        description.append(" A compatibilidade é calculada pela proximidade do seu vetor percentual nos 12 eixos, ")
-                .append("com todos os eixos contribuindo com o mesmo peso.");
         return description.toString();
     }
 
