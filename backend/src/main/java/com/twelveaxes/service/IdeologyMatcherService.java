@@ -40,7 +40,7 @@ public class IdeologyMatcherService {
             Map.entry("comercio", 1.00),
             Map.entry("religiao", 1.00),
             Map.entry("moral", 1.00),
-            Map.entry("tecnologia", 1.00)
+            Map.entry("tecnologia", 0.75)
     );
 
     private static final double AXIS_SIMILARITY_SPREAD = 55.0;
