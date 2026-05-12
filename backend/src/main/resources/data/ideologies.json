@@ -91,6 +91,20 @@
     "vector": null
   },
   {
+    "id": "ecoautoritarismo",
+    "name": "Ecoautoritarismo",
+    "category": "Esquerda Autoritária",
+    "description": "Corrente que defende usar um Estado forte, planejamento obrigatório e restrições coletivas para enfrentar crises ambientais. Prioriza metas ecológicas, racionamento, controle de emissões e reorganização produtiva mesmo quando isso reduz liberdades individuais ou consumo. Politicamente: Autoritário ecológico | Economicamente: Planejamento verde | Socialmente: Ambientalista disciplinador",
+    "vector": null
+  },
+  {
+    "id": "tecnocracia-de-esquerda",
+    "name": "Tecnocracia de Esquerda",
+    "category": "Esquerda Autoritária",
+    "description": "Modelo tecnocrático orientado por igualdade material, serviços públicos robustos e planejamento científico da economia. Defende especialistas e órgãos técnicos conduzindo políticas industriais, redistribuição, infraestrutura e transição ecológica com forte capacidade estatal. Politicamente: Técnico-estatista | Economicamente: Planejado/Redistributivo | Socialmente: Progressista científico",
+    "vector": null
+  },
+  {
     "id": "marxismo-reformista",
     "name": "Marxismo Reformista",
     "category": "Esquerda Autoritária",
@@ -312,6 +326,97 @@
     "name": "Democracia Nacional",
     "category": "Direita Autoritária",
     "description": "Corrente que combina democracia com nacionalismo forte. Defende soberania popular dentro de um quadro nacionalista, frequentemente com posições conservadoras em questões sociais e protecionistas na economia. Politicamente: Democrático/Nacionalista | Economicamente: Protecionista | Socialmente: Conservador",
+    "vector": null
+  },
+  {
+    "id": "bioconservadorismo",
+    "name": "Bioconservadorismo",
+    "category": "Direita Autoritária",
+    "description": "Corrente que desconfia de biotecnologia, transhumanismo, engenharia genética e mudanças antropológicas radicais. Defende limites morais, prudência científica, preservação da natureza humana e instituições tradicionais diante de avanços técnicos sobre corpo, reprodução e vida. Politicamente: Conservador regulador | Economicamente: Variável | Socialmente: Bioconservador/Tradicional",
+    "vector": null
+  },
+  {
+    "id": "bonapartismo",
+    "name": "Bonapartismo",
+    "category": "Direita Autoritária",
+    "description": "Modelo político associado a Napoleão Bonaparte e seus herdeiros. Combina executivo forte, centralização administrativa, plebiscitos, nacionalismo, ordem pública e modernização estatal acima das divisões partidárias tradicionais. Politicamente: Autoritário/Plebiscitário | Economicamente: Dirigista/Misto | Socialmente: Nacional-modernizador",
+    "vector": null
+  },
+  {
+    "id": "bukelismo",
+    "name": "Bukelismo",
+    "category": "Direita Autoritária",
+    "description": "Estilo político associado a Nayib Bukele em El Salvador. Combina presidencialismo forte, populismo antipartidário, política de segurança extremamente dura, comunicação digital, pragmatismo econômico e imagem tecnófila, incluindo experiências com Bitcoin e modernização administrativa. Politicamente: Autoritário/Populista | Economicamente: Pragmático pró-mercado | Socialmente: Securitário/Conservador",
+    "vector": null
+  },
+  {
+    "id": "tecnocracia-de-direita",
+    "name": "Tecnocracia de Direita",
+    "category": "Direita Autoritária",
+    "description": "Modelo tecnocrático voltado a eficiência administrativa, estabilidade monetária, segurança pública, competitividade e gestão empresarial do Estado. Favorece especialistas, indicadores e autoridade executiva para proteger mercados, infraestrutura e ordem social. Politicamente: Técnico-autoritário | Economicamente: Mercado administrado | Socialmente: Meritocrático/Ordem",
+    "vector": null
+  },
+  {
+    "id": "democracia-crista",
+    "name": "Democracia Cristã",
+    "category": "Centro",
+    "description": "Corrente de inspiração social-cristã que combina democracia constitucional, economia social de mercado, subsidiariedade, pluralismo institucional e proteção social. Valoriza família, comunidade e dignidade humana sem rejeitar eleições livres e Estado de direito. Politicamente: Democrático/Social-cristão | Economicamente: Economia social de mercado | Socialmente: Conservador moderado",
+    "vector": null
+  },
+  {
+    "id": "republicanismo",
+    "name": "Republicanismo",
+    "category": "Centro",
+    "description": "Tradição política centrada na res publica, no Estado de direito, na cidadania ativa, na virtude cívica e na limitação de poderes pessoais ou hereditários. Defende instituições impessoais, participação pública e liberdade como não-dominação. Politicamente: Constitucional/Cívico | Economicamente: Misto | Socialmente: Cívico",
+    "vector": null
+  },
+  {
+    "id": "monarquismo-constitucional",
+    "name": "Monarquismo Constitucional",
+    "category": "Centro",
+    "description": "Defende uma monarquia limitada por constituição, parlamento eleito e Estado de direito. O monarca atua como símbolo de continuidade institucional e unidade nacional, enquanto o governo cotidiano permanece submetido a regras constitucionais e representação democrática. Politicamente: Constitucional/Monárquico | Economicamente: Misto | Socialmente: Tradicional moderado",
+    "vector": null
+  },
+  {
+    "id": "neoliberalismo",
+    "name": "Neoliberalismo",
+    "category": "Centro",
+    "description": "Corrente liberal contemporânea que enfatiza privatizações, disciplina fiscal, abertura comercial, bancos centrais independentes, desregulação seletiva e competição de mercado como motores de eficiência. Aceita instituições fortes para proteger mercados e estabilidade monetária. Politicamente: Liberal/Institucional | Economicamente: Mercado global | Socialmente: Individualista/Modernizador",
+    "vector": null
+  },
+  {
+    "id": "ordoliberalismo",
+    "name": "Ordoliberalismo",
+    "category": "Centro",
+    "description": "Escola liberal alemã que defende economia de mercado sustentada por uma ordem jurídica forte, política antimonopólio, estabilidade monetária e Estado regulador que preserve a concorrência. Base importante da economia social de mercado. Politicamente: Constitucional/Regulador | Economicamente: Mercado ordenado | Socialmente: Moderado",
+    "vector": null
+  },
+  {
+    "id": "distributismo",
+    "name": "Distributismo",
+    "category": "Centro",
+    "description": "Doutrina econômica inspirada na tradição social católica, associada a G. K. Chesterton e Hilaire Belloc. Defende ampla distribuição da propriedade produtiva, pequenas empresas, cooperativas, famílias proprietárias e economia local contra concentração capitalista ou estatismo socialista. Politicamente: Subsidiário/Comunitário | Economicamente: Propriedade distribuída | Socialmente: Católico/Tradicional",
+    "vector": null
+  },
+  {
+    "id": "tecnocracia",
+    "name": "Tecnocracia",
+    "category": "Centro",
+    "description": "Modelo de governo que privilegia especialistas, planejamento racional, indicadores técnicos e administração científica sobre disputas ideológicas ou partidárias. Pode variar de gestão democrática baseada em evidências a formas autoritárias de governo por técnicos. Politicamente: Técnico/Administrativo | Economicamente: Planejamento racional | Socialmente: Cientificista",
+    "vector": null
+  },
+  {
+    "id": "comunitarismo",
+    "name": "Comunitarismo",
+    "category": "Centro",
+    "description": "Corrente que enfatiza vínculos comunitários, deveres cívicos, instituições locais e bens comuns contra o individualismo extremo. Defende que liberdade e identidade dependem de comunidades vivas, participação pública, solidariedade e responsabilidade social. Politicamente: Localista/Participativo | Economicamente: Comunitário/Misto | Socialmente: Solidarista",
+    "vector": null
+  },
+  {
+    "id": "meritocracia",
+    "name": "Meritocracia",
+    "category": "Centro",
+    "description": "Modelo que legitima posições sociais e cargos públicos pela competência, esforço, desempenho e qualificação mensurável. Valoriza educação, concursos, avaliação técnica e mobilidade social, defendendo que instituições recompensem mérito em vez de origem familiar, clientelismo ou privilégio herdado. Politicamente: Institucional/Avaliativo | Economicamente: Competitivo regulado | Socialmente: Meritocrático",
     "vector": null
   },
   {
@@ -812,6 +917,13 @@
     "vector": null
   },
   {
+    "id": "hoppeanismo",
+    "name": "Hoppeanismo",
+    "category": "Direita Libertária",
+    "description": "Vertente libertária associada a Hans-Hermann Hoppe. Combina anarcocapitalismo ou Estado mínimo extremo com crítica radical à democracia, defesa de propriedade privada absoluta, comunidades por contrato e conservadorismo cultural rigoroso. Politicamente: Antidemocrático/Proprietarista | Economicamente: Livre mercado absoluto | Socialmente: Conservador radical",
+    "vector": null
+  },
+  {
     "id": "libertarianismo-de-chicago",
     "name": "Libertarianismo de Chicago",
     "category": "Direita Libertária",
@@ -823,6 +935,13 @@
     "name": "Capitalismo",
     "category": "Direita Libertária",
     "description": "Sistema econômico baseado em propriedade privada, livre mercado, lucro, competição e investimento privado. Historicamente se consolidou com a industrialização moderna e foi defendido por autores como Adam Smith, Ludwig von Mises, Friedrich Hayek e Milton Friedman. Valoriza iniciativa individual, concorrência, inovação e normas sociais favoráveis ao empreendedorismo. Politicamente: Pró-mercado | Economicamente: Laissez-faire | Socialmente: Competitivo",
+    "vector": null
+  },
+  {
+    "id": "objetivismo",
+    "name": "Objetivismo",
+    "category": "Direita Libertária",
+    "description": "Filosofia de Ayn Rand aplicada à política. Defende razão, individualismo, egoísmo racional, direitos individuais, capitalismo laissez-faire e Estado limitado à proteção contra força e fraude. Rejeita coletivismo, altruísmo obrigatório e intervenção econômica. Politicamente: Constitucional/Individualista | Economicamente: Capitalismo laissez-faire | Socialmente: Secular individualista",
     "vector": null
   },
   {

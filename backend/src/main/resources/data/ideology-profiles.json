@@ -221,6 +221,40 @@
     }
   },
   {
+    "ideologyId": "ecoautoritarismo",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 20,
+      "poder": 85,
+      "imigracao": 50,
+      "diplomacia": 35,
+      "intervencao": 35,
+      "economia": 85,
+      "controle": 90,
+      "comercio": 75,
+      "religiao": 75,
+      "moral": 65,
+      "tecnologia": 20
+    }
+  },
+  {
+    "ideologyId": "tecnocracia-de-esquerda",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 45,
+      "poder": 70,
+      "imigracao": 60,
+      "diplomacia": 35,
+      "intervencao": 55,
+      "economia": 80,
+      "controle": 85,
+      "comercio": 55,
+      "religiao": 90,
+      "moral": 85,
+      "tecnologia": 95
+    }
+  },
+  {
     "ideologyId": "marxismo-reformista",
     "vector": {
       "estrutura": 45,
@@ -762,6 +796,227 @@
       "religiao": 35,
       "moral": 28,
       "tecnologia": 55
+    }
+  },
+  {
+    "ideologyId": "bioconservadorismo",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 50,
+      "poder": 65,
+      "imigracao": 60,
+      "diplomacia": 50,
+      "intervencao": 40,
+      "economia": 45,
+      "controle": 50,
+      "comercio": 50,
+      "religiao": 25,
+      "moral": 15,
+      "tecnologia": 10
+    }
+  },
+  {
+    "ideologyId": "bonapartismo",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 25,
+      "poder": 85,
+      "imigracao": 65,
+      "diplomacia": 75,
+      "intervencao": 20,
+      "economia": 48,
+      "controle": 65,
+      "comercio": 65,
+      "religiao": 45,
+      "moral": 35,
+      "tecnologia": 70
+    }
+  },
+  {
+    "ideologyId": "bukelismo",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 25,
+      "poder": 95,
+      "imigracao": 60,
+      "diplomacia": 55,
+      "intervencao": 25,
+      "economia": 30,
+      "controle": 40,
+      "comercio": 45,
+      "religiao": 35,
+      "moral": 30,
+      "tecnologia": 88
+    }
+  },
+  {
+    "ideologyId": "tecnocracia-de-direita",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 30,
+      "poder": 75,
+      "imigracao": 60,
+      "diplomacia": 55,
+      "intervencao": 40,
+      "economia": 25,
+      "controle": 45,
+      "comercio": 30,
+      "religiao": 75,
+      "moral": 55,
+      "tecnologia": 95
+    }
+  },
+  {
+    "ideologyId": "democracia-crista",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 78,
+      "poder": 55,
+      "imigracao": 55,
+      "diplomacia": 35,
+      "intervencao": 55,
+      "economia": 55,
+      "controle": 50,
+      "comercio": 45,
+      "religiao": 18,
+      "moral": 25,
+      "tecnologia": 60
+    }
+  },
+  {
+    "ideologyId": "republicanismo",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 82,
+      "poder": 55,
+      "imigracao": 55,
+      "diplomacia": 45,
+      "intervencao": 45,
+      "economia": 50,
+      "controle": 50,
+      "comercio": 45,
+      "religiao": 60,
+      "moral": 60,
+      "tecnologia": 65
+    }
+  },
+  {
+    "ideologyId": "monarquismo-constitucional",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 70,
+      "poder": 55,
+      "imigracao": 55,
+      "diplomacia": 45,
+      "intervencao": 45,
+      "economia": 40,
+      "controle": 45,
+      "comercio": 45,
+      "religiao": 25,
+      "moral": 25,
+      "tecnologia": 55
+    }
+  },
+  {
+    "ideologyId": "neoliberalismo",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 75,
+      "poder": 35,
+      "imigracao": 45,
+      "diplomacia": 45,
+      "intervencao": 65,
+      "economia": 20,
+      "controle": 18,
+      "comercio": 15,
+      "religiao": 65,
+      "moral": 65,
+      "tecnologia": 80
+    }
+  },
+  {
+    "ideologyId": "ordoliberalismo",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 78,
+      "poder": 45,
+      "imigracao": 55,
+      "diplomacia": 40,
+      "intervencao": 60,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 28,
+      "religiao": 55,
+      "moral": 55,
+      "tecnologia": 70
+    }
+  },
+  {
+    "ideologyId": "distributismo",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 70,
+      "poder": 45,
+      "imigracao": 55,
+      "diplomacia": 25,
+      "intervencao": 65,
+      "economia": 50,
+      "controle": 45,
+      "comercio": 65,
+      "religiao": 15,
+      "moral": 20,
+      "tecnologia": 35
+    }
+  },
+  {
+    "ideologyId": "tecnocracia",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 45,
+      "poder": 60,
+      "imigracao": 50,
+      "diplomacia": 45,
+      "intervencao": 50,
+      "economia": 50,
+      "controle": 60,
+      "comercio": 45,
+      "religiao": 80,
+      "moral": 60,
+      "tecnologia": 90
+    }
+  },
+  {
+    "ideologyId": "comunitarismo",
+    "vector": {
+      "estrutura": 80,
+      "representacao": 75,
+      "poder": 45,
+      "imigracao": 45,
+      "diplomacia": 30,
+      "intervencao": 65,
+      "economia": 65,
+      "controle": 60,
+      "comercio": 65,
+      "religiao": 35,
+      "moral": 40,
+      "tecnologia": 45
+    }
+  },
+  {
+    "ideologyId": "meritocracia",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 60,
+      "poder": 65,
+      "imigracao": 55,
+      "diplomacia": 50,
+      "intervencao": 45,
+      "economia": 35,
+      "controle": 45,
+      "comercio": 35,
+      "religiao": 70,
+      "moral": 60,
+      "tecnologia": 85
     }
   },
   {
@@ -1972,6 +2227,23 @@
     }
   },
   {
+    "ideologyId": "hoppeanismo",
+    "vector": {
+      "estrutura": 85,
+      "representacao": 15,
+      "poder": 30,
+      "imigracao": 80,
+      "diplomacia": 25,
+      "intervencao": 80,
+      "economia": 8,
+      "controle": 5,
+      "comercio": 30,
+      "religiao": 20,
+      "moral": 10,
+      "tecnologia": 55
+    }
+  },
+  {
     "ideologyId": "libertarianismo-de-chicago",
     "vector": {
       "estrutura": 70,
@@ -2003,6 +2275,23 @@
       "religiao": 50,
       "moral": 55,
       "tecnologia": 75
+    }
+  },
+  {
+    "ideologyId": "objetivismo",
+    "vector": {
+      "estrutura": 75,
+      "representacao": 75,
+      "poder": 20,
+      "imigracao": 55,
+      "diplomacia": 50,
+      "intervencao": 65,
+      "economia": 10,
+      "controle": 8,
+      "comercio": 20,
+      "religiao": 90,
+      "moral": 60,
+      "tecnologia": 85
     }
   },
   {

@@ -36,7 +36,7 @@ class IdeologyMatcherServiceTest {
                 .map(i -> i.id())
                 .toList();
 
-        assertThat(ideologyIds).hasSize(139);
+        assertThat(ideologyIds).hasSize(156);
         assertThat(profileIds).containsExactlyInAnyOrderElementsOf(ideologyIds);
     }
 
