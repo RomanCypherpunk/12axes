@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { selectAndBalanceQuestions } from './utils/quizSelection';
 import { toPng } from 'html-to-image';
 import { AxisResultBar } from './components/AxisResultBar';
 import { AxisIcon } from './components/AxisIcon';
@@ -35,7 +36,7 @@ export default function App() {
 
   useEffect(() => {
     fetchQuiz('short')
-      .then((payload) => setQuiz(shuffleQuizQuestions(payload)))
+      .then((payload) => setQuiz(selectAndBalanceQuestions(payload)))
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
   }, []);
@@ -79,7 +80,7 @@ export default function App() {
 
     try {
       const nextQuiz = await fetchQuiz(variant);
-      setQuiz(shuffleQuizQuestions(nextQuiz));
+      setQuiz(selectAndBalanceQuestions(nextQuiz));
       setScreen('quiz');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
@@ -497,22 +498,6 @@ export default function App() {
       )}
     </main>
   );
-}
-
-function shuffleQuizQuestions(quiz: QuizPayload): QuizPayload {
-  return {
-    ...quiz,
-    questions: shuffleArray(quiz.questions)
-  };
-}
-
-function shuffleArray<T>(items: T[]): T[] {
-  const shuffled = [...items];
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
-  }
-  return shuffled;
 }
 
 function downloadDataUrl(dataUrl: string, fileName: string) {
