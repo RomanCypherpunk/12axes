@@ -25,17 +25,14 @@ public class ScoringService {
     }
 
     public List<AxisResult> score(ResultRequest request) {
-        List<Question> questions = dataService.getQuestions(request.variant());
-        Map<String, SubmittedAnswer> answerByQuestion = request.answers().stream()
-                .collect(Collectors.toMap(SubmittedAnswer::questionId, Function.identity(), (first, ignored) -> first));
-        Map<String, Question> questionById = questions.stream()
+        Map<String, Question> questionById = dataService.getQuestions().stream()
                 .collect(Collectors.toMap(Question::id, Function.identity()));
 
-        validateAnswers(answerByQuestion.keySet(), questionById.keySet());
+        validateAnswers(request.answers(), questionById);
 
         Map<String, WeightedScore> scores = new HashMap<>();
-        for (Question question : questions) {
-            SubmittedAnswer submittedAnswer = answerByQuestion.get(question.id());
+        for (SubmittedAnswer submittedAnswer : request.answers()) {
+            Question question = questionById.get(submittedAnswer.questionId());
             double towardAgreement = submittedAnswer.answer().scoreTowardAgreement();
             double leftScore = question.agreePole() == Pole.LEFT ? towardAgreement : 1.0 - towardAgreement;
             scores.computeIfAbsent(question.axisId(), ignored -> new WeightedScore())
@@ -47,17 +44,15 @@ public class ScoringService {
                 .toList();
     }
 
-    private void validateAnswers(Set<String> submittedIds, Set<String> expectedIds) {
-        if (!expectedIds.equals(submittedIds)) {
-            Set<String> missing = expectedIds.stream()
-                    .filter(id -> !submittedIds.contains(id))
-                    .collect(Collectors.toSet());
-            Set<String> unknown = submittedIds.stream()
-                    .filter(id -> !expectedIds.contains(id))
-                    .collect(Collectors.toSet());
+    private void validateAnswers(List<SubmittedAnswer> answers, Map<String, Question> questionById) {
+        Set<String> unknown = answers.stream()
+                .map(SubmittedAnswer::questionId)
+                .filter(id -> !questionById.containsKey(id))
+                .collect(Collectors.toSet());
+        if (!unknown.isEmpty()) {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,
-                    "Respostas inválidas. Faltando: " + missing + ". Desconhecidas: " + unknown
+                    "Respostas inválidas. IDs desconhecidos: " + unknown
             );
         }
     }
