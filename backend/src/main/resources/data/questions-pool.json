@@ -359,8 +359,8 @@
   {
     "id": "poder_12",
     "axisId": "poder",
-    "text": "Aborto deve ser uma decisão da mulher, não do Estado.",
-    "agreePole": "RIGHT",
+    "text": "O Estado deveria poder obrigar campanhas de vacinação, mesmo contra a vontade de quem se recusa.",
+    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -429,8 +429,8 @@
   {
     "id": "imigracao_02",
     "axisId": "imigracao",
-    "text": "Nenhuma cultura é superior a outra, todas têm contribuições únicas para a humanidade.",
-    "agreePole": "RIGHT",
+    "text": "Imigrantes que vivem no Brasil não deveriam receber atendimento público em sua língua de origem.",
+    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -450,7 +450,7 @@
   {
     "id": "imigracao_05",
     "axisId": "imigracao",
-    "text": "Algumas culturas têm costumes incompatíveis com uma sociedade civilizada.",
+    "text": "Algumas culturas têm costumes incompatíveis com uma sociedade democrática.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -506,7 +506,7 @@
   {
     "id": "imigracao_13",
     "axisId": "imigracao",
-    "text": "Imigrantes de culturas com histórico de violência e intolerância devem ser barrados nas fronteiras.",
+    "text": "O Brasil deveria adotar um sistema seletivo de imigração que priorize qualificação profissional e capacidade de integração.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -534,14 +534,14 @@
   {
     "id": "imigracao_17",
     "axisId": "imigracao",
-    "text": "Tolerar costumes degradantes em nome da diversidade cultural é um erro.",
+    "text": "Comunidades de imigrantes que vivem em grupos fechados criam problemas de integração.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "imigracao_18",
     "axisId": "imigracao",
-    "text": "Chamar uma cultura de perigosa ou inferior é preconceito disfarçado de argumento.",
+    "text": "Rotular uma cultura inteira como perigosa ou inferior é preconceito disfarçado de argumento.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -555,7 +555,7 @@
   {
     "id": "imigracao_20",
     "axisId": "imigracao",
-    "text": "Quem foge de perseguição tem o direito de reconstruir sua vida e sua cultura em outro país.",
+    "text": "O Brasil deveria aumentar o número de refugiados aceitos por ano.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -625,8 +625,8 @@
   {
     "id": "diplomacia_10",
     "axisId": "diplomacia",
-    "text": "Conflitos modernos prejudicam mais civis que soldados, e por isso devem ser evitados.",
-    "agreePole": "RIGHT",
+    "text": "O Brasil deveria aumentar seus gastos militares para se fortalecer.",
+    "agreePole": "LEFT",
     "weight": 1
   },
   {
@@ -681,7 +681,7 @@
   {
     "id": "diplomacia_18",
     "axisId": "diplomacia",
-    "text": "Convenções de Genebra e leis de guerra devem ser respeitadas sem exceção.",
+    "text": "Quando um aliado estratégico comete crimes de guerra, o Brasil deve romper acordos com ele.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -779,14 +779,14 @@
   {
     "id": "intervencao_12",
     "axisId": "intervencao",
-    "text": "Soberania nacional sobre Amazônia e recursos vale mais que pressão internacional.",
+    "text": "O Brasil deveria usar sua influência regional para obter vantagem de países latino-americanos.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "intervencao_13",
     "axisId": "intervencao",
-    "text": "Cada povo deve resolver seus próprios problemas sem ajuda nem ingerência externa.",
+    "text": "Cada povo deve resolver seus próprios problemas sem ajuda externa.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1059,7 +1059,7 @@
   {
     "id": "controle_12",
     "axisId": "controle",
-    "text": "O governo deveria escolher empresas campeãs nacionais e apoiá-los para competir lá fora.",
+    "text": "O governo deveria escolher empresas campeãs nacionais e apoiá-las para competir lá fora.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1339,7 +1339,7 @@
   {
     "id": "religiao_12",
     "axisId": "religiao",
-    "text": "Religião costuma ser usada para justificar opressão e atraso social.",
+    "text": "Líderes políticos que governam com base em princípios religiosos prejudicam a democracia.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1409,7 +1409,7 @@
   {
     "id": "moral_02",
     "axisId": "moral",
-    "text": "Pessoas LGBT devem ter pleno reconhecimento social e legal.",
+    "text": "Casais do mesmo sexo têm o mesmo direito de adotar crianças que casais heterossexuais.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1423,7 +1423,7 @@
   {
     "id": "moral_04",
     "axisId": "moral",
-    "text": "Leis devem combater preconceito contra negros, mulheres e minorias.",
+    "text": "Empresas grandes deveriam ser obrigadas por lei a manter proporção mínima de negros nos cargos de gestão.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1479,14 +1479,14 @@
   {
     "id": "moral_12",
     "axisId": "moral",
-    "text": "Educação sexual nas escolas previne abusos e gravidez precoce.",
+    "text": "Escolas públicas deveriam incluir conteúdos sobre identidade de gênero a partir do ensino fundamental.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_13",
     "axisId": "moral",
-    "text": "Educação sexual responsabilidade da família, não do Estado.",
+    "text": "Educação sexual é responsabilidade da família, não do Estado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1508,7 +1508,7 @@
     "id": "moral_16",
     "axisId": "moral",
     "text": "Drogas, prostituição e pornografia são um problema que deveria ser combatido.",
-    "agreePole": "LEFT",
+    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -1535,8 +1535,8 @@
   {
     "id": "moral_20",
     "axisId": "moral",
-    "text": "Tradições que oprimem mulheres ou minorias devem ser superadas.",
-    "agreePole": "LEFT",
+    "text": "Homens e mulheres têm diferenças naturais que justificam papéis distintos dentro da família e da sociedade.",
+    "agreePole": "RIGHT",
     "weight": 1
   },
   {
@@ -1556,7 +1556,7 @@
   {
     "id": "tecnologia_03",
     "axisId": "tecnologia",
-    "text": "Tecnologias que alteram corpo, mente ou reprodução precisam ser combatidos.",
+    "text": "Tecnologias que alteram corpo, mente ou reprodução precisam ser combatidas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1591,7 +1591,7 @@
   {
     "id": "tecnologia_08",
     "axisId": "tecnologia",
-    "text": "Carros elétricos e usinas nucleares são o futuro do mundo.",
+    "text": "Inteligência artificial e usinas nucleares são o futuro do mundo.",
     "agreePole": "LEFT",
     "weight": 1
   },
