@@ -43,7 +43,7 @@ public class IdeologyMatcherService {
             Map.entry("tecnologia", 0.75)
     );
 
-    private static final double AXIS_SIMILARITY_SPREAD = 55.0;
+    private static final double AXIS_SIMILARITY_SPREAD = 50.0;
     private static final double DISTANCE_DECAY_SPREAD = 35.0;
     private static final double OPPOSITE_SIDE_FACTOR = 0.55;
 
@@ -71,7 +71,7 @@ public class IdeologyMatcherService {
 
     private IdeologyMatch toMatch(Ideology ideology, Map<String, Double> userVector) {
         Map<String, Double> targetVector = targetVectorFor(ideology);
-        MatchScore score = score(userVector, targetVector, ideology);
+        MatchScore score = score(userVector, targetVector);
         String shortDescription = shortDescription(ideology.description());
         String longDescription = longDescription(ideology.description());
         double compatibility = round(score.compatibility());
@@ -91,12 +91,11 @@ public class IdeologyMatcherService {
         );
     }
 
-    private MatchScore score(Map<String, Double> userVector, Map<String, Double> targetVector, Ideology ideology) {
+    private MatchScore score(Map<String, Double> userVector, Map<String, Double> targetVector) {
         double weightedAxisSimilarity = weightedAxisSimilarity(userVector, targetVector);
         double weightedRmse = weightedRmse(userVector, targetVector);
         double distanceSimilarity = 100.0 * Math.exp(-Math.pow(weightedRmse / DISTANCE_DECAY_SPREAD, 1.8));
         double compatibility = (weightedAxisSimilarity * 0.65) + (distanceSimilarity * 0.35);
-        compatibility -= profileCautionPenalty(ideology, weightedRmse);
         return new MatchScore(Math.max(0.0, Math.min(100.0, compatibility)), weightedRmse);
     }
 
@@ -111,7 +110,7 @@ public class IdeologyMatcherService {
 
             double userSide = Math.abs(userValue - 50.0);
             double targetSide = Math.abs(targetValue - 50.0);
-            if ((userValue - 50.0) * (targetValue - 50.0) < 0.0 && userSide >= 20.0 && targetSide >= 15.0) {
+            if ((userValue - 50.0) * (targetValue - 50.0) < 0.0 && userSide >= 12.0 && targetSide >= 15.0) {
                 similarity *= OPPOSITE_SIDE_FACTOR;
             }
 
@@ -134,19 +133,6 @@ public class IdeologyMatcherService {
         }
 
         return totalWeight == 0.0 ? 0.0 : Math.sqrt(sumOfSquares / totalWeight);
-    }
-
-    private double profileCautionPenalty(Ideology ideology, double weightedRmse) {
-        String text = (ideology.name() + " " + cleanDescription(ideology.description())).toLowerCase(Locale.ROOT);
-        double distanceFactor = Math.min(1.0, weightedRmse / 25.0);
-        double penalty = 0.0;
-        if (containsAny(text, "meme", "contradit", "irônic", "ironico")) {
-            penalty += 12.0;
-        }
-        if (text.contains("transversal")) {
-            penalty += 4.0;
-        }
-        return penalty * distanceFactor;
     }
 
     private Map<String, Double> targetVectorFor(Ideology ideology) {
@@ -180,7 +166,8 @@ public class IdeologyMatcherService {
             description.append(".");
         }
         if (!parts.isEmpty()) {
-            description.append(" Em termos práticos: valores políticos e forma de governo tendem a ")
+            description.append(" A compatibilidade indica proximidade entre suas respostas e esse perfil. ")
+                    .append("Em termos práticos: valores políticos e forma de governo tendem a ")
                     .append("ser ")
                     .append(parts.political())
                     .append("; economia tende a ser ")
@@ -231,15 +218,6 @@ public class IdeologyMatcherService {
             cut = maxLength - 1;
         }
         return value.substring(0, cut).trim() + "...";
-    }
-
-    private boolean containsAny(String text, String... needles) {
-        for (String needle : needles) {
-            if (text.contains(needle)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private double round(double value) {
