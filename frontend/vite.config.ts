@@ -9,6 +9,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    test: {
+      environment: 'node',
+    },
     server: {
       port: 5173,
       strictPort: false,

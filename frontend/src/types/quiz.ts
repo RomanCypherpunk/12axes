@@ -37,6 +37,7 @@ export interface QuizPayload {
   description: string;
   variant: QuizVariant;
   questionCount: number;
+  questionsPerAxis: number;
   axes: Axis[];
   questions: Question[];
   answerOptions: AnswerOption[];
