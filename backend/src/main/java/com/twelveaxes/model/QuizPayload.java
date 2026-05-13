@@ -7,17 +7,8 @@ public record QuizPayload(
         String description,
         String variant,
         int questionCount,
+        int questionsPerAxis,
         List<Axis> axes,
         List<Question> questions,
         List<AnswerOption> answerOptions
-) {
-    public QuizPayload(
-            String title,
-            String description,
-            List<Axis> axes,
-            List<Question> questions,
-            List<AnswerOption> answerOptions
-    ) {
-        this(title, description, "short", questions.size(), axes, questions, answerOptions);
-    }
-}
+) {}

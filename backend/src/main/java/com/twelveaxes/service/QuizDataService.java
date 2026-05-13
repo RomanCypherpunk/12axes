@@ -29,8 +29,7 @@ public class QuizDataService {
 
     private final ObjectMapper objectMapper;
     private List<Axis> axes;
-    private List<Question> shortQuestions;
-    private List<Question> extendedQuestions;
+    private List<Question> poolQuestions;
     private List<Ideology> ideologies;
     private Map<String, IdeologyProfile> ideologyProfiles;
 
@@ -41,8 +40,7 @@ public class QuizDataService {
     @PostConstruct
     void loadData() throws IOException {
         axes = readJson("data/axes.json", new TypeReference<>() {});
-        shortQuestions = readJson("data/questions.json", new TypeReference<>() {});
-        extendedQuestions = readJson("data/questions-extended.json", new TypeReference<>() {});
+        poolQuestions = readJson("data/questions-pool.json", new TypeReference<>() {});
         ideologies = readJson("data/ideologies.json", new TypeReference<>() {});
         List<IdeologyProfile> profiles = readJson("data/ideology-profiles.json", new TypeReference<>() {});
         ideologyProfiles = profiles.stream()
@@ -55,14 +53,16 @@ public class QuizDataService {
 
     public QuizPayload getQuiz(String variant) {
         String normalizedVariant = normalizeVariant(variant);
-        List<Question> selectedQuestions = getQuestions(normalizedVariant);
+        int questionsPerAxis = normalizedVariant.equals(EXTENDED_VARIANT) ? 5 : 3;
+        int questionCount = questionsPerAxis * axes.size();
         return new QuizPayload(
                 "12 Axes",
-                "Um quiz de " + selectedQuestions.size() + " perguntas para estimar sua posição nos 12 eixos políticos.",
+                "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.",
                 normalizedVariant,
-                selectedQuestions.size(),
+                questionCount,
+                questionsPerAxis,
                 axes,
-                selectedQuestions,
+                poolQuestions,
                 answerOptions()
         );
     }
@@ -72,15 +72,12 @@ public class QuizDataService {
     }
 
     public List<Question> getQuestions() {
-        return shortQuestions;
+        return poolQuestions;
     }
 
     public List<Question> getQuestions(String variant) {
-        return switch (normalizeVariant(variant)) {
-            case SHORT_VARIANT -> shortQuestions;
-            case EXTENDED_VARIANT -> extendedQuestions;
-            default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Versão de quiz inválida");
-        };
+        normalizeVariant(variant);
+        return poolQuestions;
     }
 
     public List<Ideology> getIdeologies() {
