@@ -1,7 +1,10 @@
 import type { QuizPayload, Question } from '../types/quiz';
 
 export function selectAndBalanceQuestions(payload: QuizPayload): QuizPayload {
-  const { questions: pool, questionsPerAxis } = payload;
+  const { questions: pool } = payload;
+  const questionsPerAxis = payload.questionsPerAxis > 0
+    ? payload.questionsPerAxis
+    : payload.variant === 'extended' ? 5 : 3;
 
   const byAxis = new Map<string, Question[]>();
   for (const q of pool) {
