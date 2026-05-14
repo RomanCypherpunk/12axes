@@ -2259,5 +2259,39 @@
       "moral": 62,
       "tecnologia": 80
     }
+  },
+  {
+    "ideologyId": "conservadorismo-secular",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 72,
+      "poder": 62,
+      "imigracao": 72,
+      "diplomacia": 58,
+      "intervencao": 35,
+      "economia": 28,
+      "controle": 30,
+      "comercio": 45,
+      "religiao": 78,
+      "moral": 30,
+      "tecnologia": 62
+    }
+  },
+  {
+    "ideologyId": "progressismo-cristao",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 82,
+      "poder": 40,
+      "imigracao": 30,
+      "diplomacia": 25,
+      "intervencao": 58,
+      "economia": 70,
+      "controle": 58,
+      "comercio": 52,
+      "religiao": 22,
+      "moral": 72,
+      "tecnologia": 55
+    }
   }
 ]
