@@ -165,8 +165,9 @@ public class IdeologyMatcherService {
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
+        description.append(" A compatibilidade indica proximidade entre suas respostas e esse perfil.");
         if (!parts.isEmpty()) {
-            description.append(" A compatibilidade indica proximidade entre suas respostas e esse perfil. ")
+            description.append(" ")
                     .append("Em termos práticos: valores políticos e forma de governo tendem a ")
                     .append("ser ")
                     .append(parts.political())

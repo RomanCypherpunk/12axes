@@ -2293,5 +2293,73 @@
       "moral": 72,
       "tecnologia": 55
     }
+  },
+  {
+    "ideologyId": "autoritarismo-modernizador",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 20,
+      "poder": 80,
+      "imigracao": 40,
+      "diplomacia": 72,
+      "intervencao": 45,
+      "economia": 42,
+      "controle": 48,
+      "comercio": 55,
+      "religiao": 68,
+      "moral": 55,
+      "tecnologia": 55
+    }
+  },
+  {
+    "ideologyId": "desenvolvimentismo-de-estado",
+    "vector": {
+      "estrutura": 28,
+      "representacao": 25,
+      "poder": 72,
+      "imigracao": 55,
+      "diplomacia": 25,
+      "intervencao": 40,
+      "economia": 70,
+      "controle": 75,
+      "comercio": 62,
+      "religiao": 72,
+      "moral": 62,
+      "tecnologia": 78
+    }
+  },
+  {
+    "ideologyId": "atlantismo",
+    "vector": {
+      "estrutura": 52,
+      "representacao": 68,
+      "poder": 62,
+      "imigracao": 50,
+      "diplomacia": 82,
+      "intervencao": 15,
+      "economia": 22,
+      "controle": 18,
+      "comercio": 18,
+      "religiao": 48,
+      "moral": 42,
+      "tecnologia": 68
+    }
+  },
+  {
+    "ideologyId": "federalismo-privado",
+    "vector": {
+      "estrutura": 92,
+      "representacao": 8,
+      "poder": 42,
+      "imigracao": 68,
+      "diplomacia": 28,
+      "intervencao": 82,
+      "economia": 15,
+      "controle": 15,
+      "comercio": 42,
+      "religiao": 40,
+      "moral": 32,
+      "tecnologia": 72
+    }
   }
 ]

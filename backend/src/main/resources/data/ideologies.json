@@ -3,945 +3,973 @@
     "id": "marxismo-leninismo",
     "name": "Marxismo-Leninismo",
     "category": "Esquerda Autoritária",
-    "description": "Ideologia oficial da União Soviética. Defende a ditadura do proletariado liderada por um partido de vanguarda, economia planificada centralmente, coletivização dos meios de produção e internacionalismo proletário. Contexto histórico: Desenvolvida por Lenin a partir de Marx, foi a base dos regimes comunistas do século XX. Politicamente: Totalitário | Economicamente: Planificado/Coletivista | Socialmente: Revolucionário",
+    "description": "Socialismo revolucionário de partido único, baseado na ditadura do proletariado, economia planificada, coletivização produtiva e internacionalismo comunista conduzido por uma vanguarda centralizada.",
     "vector": null
   },
   {
     "id": "stalinismo",
     "name": "Stalinismo",
     "category": "Esquerda Autoritária",
-    "description": "Variante do marxismo-leninismo praticada por Stalin. Caracteriza-se pelo socialismo em um só país, industrialização forçada, coletivização agrícola brutal, culto à personalidade e uso extensivo de repressão política. Contexto histórico: Priorizava o fortalecimento do Estado soviético sobre a revolução mundial. Politicamente: Totalitário | Economicamente: Planificado/Estatista | Socialmente: Ultrarrepressivo",
+    "description": "Modelo soviético centralizador, com partido único, industrialização forçada, planejamento estatal rígido, culto ao líder, repressão política intensa e prioridade absoluta ao poder do Estado.",
     "vector": null
   },
   {
     "id": "maoismo",
     "name": "Maoísmo",
     "category": "Esquerda Autoritária",
-    "description": "Adaptação do marxismo-leninismo às condições agrárias da China por Mao Zedong. Enfatiza o papel do campesinato como classe revolucionária, a guerra popular prolongada, a revolução cultural permanente e a luta contra o revisionismo. Contexto histórico: Influenciou movimentos guerrilheiros em todo o mundo. Politicamente: Totalitário | Economicamente: Planificado/Coletivista | Socialmente: Revolucionário",
+    "description": "Comunismo revolucionário adaptado ao campesinato, com partido único, guerra popular, mobilização permanente das massas, coletivismo econômico e ruptura radical com estruturas tradicionais.",
     "vector": null
   },
   {
     "id": "trotskismo",
     "name": "Trotskismo",
     "category": "Esquerda Autoritária",
-    "description": "Corrente marxista de Leon Trotsky. Defende a revolução permanente (em oposição ao socialismo em um só país), o internacionalismo proletário radical, a democracia operária dentro do partido e a crítica à burocracia stalinista. Contexto histórico: Historicamente organizado em torno da Quarta Internacional. Politicamente: Revolucionário | Economicamente: Planificado/Coletivista | Socialmente: Internacionalista",
+    "description": "Marxismo revolucionário internacionalista, defensor da revolução permanente, democracia operária, planejamento socialista e oposição à burocratização autoritária dos regimes comunistas.",
     "vector": null
   },
   {
     "id": "luxemburguismo",
     "name": "Luxemburguismo",
     "category": "Esquerda Autoritária",
-    "description": "Baseado nas ideias de Rosa Luxemburgo. Combina marxismo revolucionário com ênfase na espontaneidade das massas, democracia operária e crítica tanto ao reformismo social-democrata quanto ao centralismo leninista. Contexto histórico: Defende a greve de massas como instrumento revolucionário. Politicamente: Revolucionário | Economicamente: Coletivista | Socialmente: Democrático-operário",
+    "description": "Marxismo democrático e revolucionário que valoriza ação espontânea das massas, conselhos operários, greve de massas e crítica ao reformismo parlamentar e ao centralismo partidário.",
     "vector": null
   },
   {
     "id": "comunismo-nacional",
     "name": "Comunismo Nacional",
     "category": "Esquerda Autoritária",
-    "description": "Fusão de comunismo com nacionalismo. Defende a construção do socialismo adaptada às condições nacionais específicas, rejeitando a submissão a potências comunistas externas. Exemplos incluem a Romênia de Ceausescu e aspectos do titoísmo. Politicamente: Autoritário | Economicamente: Planificado | Socialmente: Nacionalista",
+    "description": "Socialismo autoritário adaptado à identidade nacional, com economia planificada, soberania política, rejeição à tutela externa e prioridade à construção estatal do socialismo local.",
     "vector": null
   },
   {
     "id": "pol-potismo",
     "name": "Pol Potismo",
     "category": "Esquerda Autoritária",
-    "description": "Ideologia extrema do Khmer Vermelho no Camboja. Combinava maoísmo radical com ultranacionalismo, forçando a evacuação das cidades, abolição da moeda, destruição de instituições e genocídio. Contexto histórico: Resultou na morte de cerca de 25% da população cambojana. Politicamente: Totalitário/Genocida | Economicamente: Primitivista/Coletivista | Socialmente: Ultrarrepressivo",
+    "description": "Comunismo agrário extremo, ultranacionalista e totalitário, voltado à destruição das cidades, da moeda e das instituições modernas em favor de coletivismo rural coercitivo.",
     "vector": null
   },
   {
     "id": "dengismo",
     "name": "Dengismo",
     "category": "Esquerda Autoritária",
-    "description": "Modelo de Deng Xiaoping para a China. Mantém o controle político autoritário do Partido Comunista enquanto adota reformas de mercado e abertura econômica. Contexto histórico: Conhecido como 'socialismo com características chinesas', combina capitalismo de Estado com partido único. Politicamente: Autoritário/Partido único | Economicamente: Capitalismo de Estado | Socialmente: Pragmático",
+    "description": "Socialismo de partido único com abertura econômica, mercados regulados, capitalismo de Estado, pragmatismo tecnológico e manutenção rígida do monopólio político comunista.",
     "vector": null
   },
   {
     "id": "socialismo-de-estado",
     "name": "Socialismo de Estado",
     "category": "Esquerda Autoritária",
-    "description": "Sistema onde o Estado possui e administra os principais meios de produção. Difere do comunismo puro ao manter estruturas estatais fortes. A economia é planificada centralmente, com o Estado controlando indústrias, bancos e comércio exterior. Politicamente: Autoritário | Economicamente: Planificado/Estatista | Socialmente: Coletivista",
+    "description": "Sistema em que o Estado possui e dirige os meios estratégicos de produção, com planejamento central, controle econômico amplo e hierarquia política forte em nome da igualdade material.",
     "vector": null
   },
   {
     "id": "progressivismo-autoritario",
     "name": "Progressivismo Autoritário",
     "category": "Esquerda Autoritária",
-    "description": "Combinação de políticas sociais progressistas com métodos autoritários de governo. Busca impor reformas sociais, igualdade e modernização através do poder estatal centralizado, restringindo liberdades políticas em nome do progresso social. Politicamente: Autoritário | Economicamente: Intervencionista | Socialmente: Progressista",
+    "description": "Projeto que usa Estado forte e autoridade central para impor reformas sociais progressistas, igualdade legal, modernização cultural e controle político em nome do avanço coletivo.",
     "vector": null
   },
   {
     "id": "ecoautoritarismo",
     "name": "Ecoautoritarismo",
     "category": "Esquerda Autoritária",
-    "description": "Corrente que defende usar um Estado forte, planejamento obrigatório e restrições coletivas para enfrentar crises ambientais. Prioriza metas ecológicas, racionamento, controle de emissões e reorganização produtiva mesmo quando isso reduz liberdades individuais ou consumo. Politicamente: Autoritário ecológico | Economicamente: Planejamento verde | Socialmente: Ambientalista disciplinador",
+    "description": "Ambientalismo de Estado forte, com planejamento compulsório, restrições de consumo, metas ecológicas rígidas e subordinação de liberdades individuais à sobrevivência ambiental.",
     "vector": null
   },
   {
     "id": "tecnocracia-de-esquerda",
     "name": "Tecnocracia de Esquerda",
     "category": "Esquerda Autoritária",
-    "description": "Modelo tecnocrático orientado por igualdade material, serviços públicos robustos e planejamento científico da economia. Defende especialistas e órgãos técnicos conduzindo políticas industriais, redistribuição, infraestrutura e transição ecológica com forte capacidade estatal. Politicamente: Técnico-estatista | Economicamente: Planejado/Redistributivo | Socialmente: Progressista científico",
+    "description": "Governo de especialistas voltado à igualdade material, serviços públicos robustos, planejamento científico, redistribuição, política industrial e transição ecológica dirigida pelo Estado.",
     "vector": null
   },
   {
     "id": "marxismo-reformista",
     "name": "Marxismo Reformista",
     "category": "Esquerda Autoritária",
-    "description": "Corrente que busca alcançar os objetivos marxistas por meios graduais e parlamentares, mas mantendo o Estado como instrumento central de transformação. Diferencia-se da social-democracia por manter a meta final de superar o capitalismo completamente. Politicamente: Parlamentar/Estatista | Economicamente: Socialista/Transição | Socialmente: Reformista",
+    "description": "Corrente marxista que busca superar o capitalismo por meios graduais e institucionais, usando democracia parlamentar, reformas econômicas e Estado forte como instrumentos de transição.",
     "vector": null
   },
   {
     "id": "nacional-bolchevismo",
     "name": "Nacional-Bolchevismo",
     "category": "Esquerda Autoritária",
-    "description": "Síntese heterodoxa de nacionalismo extremo com bolchevismo. Defende revolução nacional e social simultaneamente, combinando coletivismo econômico com ultranacionalismo. Associada a Ernst Niekisch e Eduard Limonov. Politicamente: Totalitário | Economicamente: Coletivista | Socialmente: Ultranacionalista",
+    "description": "Síntese de bolchevismo e nacionalismo radical, combinando revolução social, coletivismo econômico, soberania agressiva e rejeição simultânea ao liberalismo e ao cosmopolitismo.",
     "vector": null
   },
   {
     "id": "strasserismo",
     "name": "Strasserismo",
     "category": "Esquerda Autoritária",
-    "description": "Corrente dos irmãos Strasser dentro do nazismo, enfatizando o componente 'socialista' do nacional-socialismo. Defende nacionalismo com políticas econômicas anticapitalistas: nacionalização, cooperativismo e distribuição dentro da comunidade nacional. Politicamente: Autoritário/Nacionalista | Economicamente: Anticapitalista/Corporativista | Socialmente: Nacionalista radical",
+    "description": "Vertente nacionalista radical com economia anticapitalista, corporativismo, nacionalizações e redistribuição interna subordinada à comunidade nacional e a um Estado autoritário.",
     "vector": null
   },
   {
     "id": "fascismo",
     "name": "Fascismo",
     "category": "Direita Autoritária",
-    "description": "Ideologia totalitária criada por Mussolini na Itália. Caracteriza-se por ultranacionalismo, corporativismo estatal, culto ao líder, militarismo, rejeição do liberalismo e do marxismo, e mobilização de massas. Contexto histórico: Economia mista sob controle estatal, com propriedade privada subordinada ao Estado. Politicamente: Totalitário | Economicamente: Corporativista/Dirigido | Socialmente: Ultranacionalista",
+    "description": "Ideologia totalitária de ultranacionalismo, culto ao líder, militarismo, partido único, mobilização de massas e economia corporativa subordinada aos objetivos do Estado.",
     "vector": null
   },
   {
     "id": "nacional-socialismo",
     "name": "Nacional-Socialismo",
     "category": "Direita Autoritária",
-    "description": "Ideologia do Terceiro Reich de Hitler. Combina ultranacionalismo, racismo biológico (supremacia ariana), antissemitismo, expansionismo militar, economia dirigida e totalitarismo. Responsável pelo Holocausto e pela Segunda Guerra Mundial na Europa. Politicamente: Totalitário/Genocida | Economicamente: Dirigido/Corporativista | Socialmente: Supremacista racial",
+    "description": "Totalitarismo racista e expansionista, baseado em supremacia racial, antissemitismo, culto ao líder, militarização social, economia dirigida e eliminação violenta de inimigos internos.",
     "vector": null
   },
   {
     "id": "fascismo-clerical",
     "name": "Fascismo Clerical",
     "category": "Direita Autoritária",
-    "description": "Fusão de fascismo com catolicismo conservador. Defende Estado autoritário baseado em princípios religiosos católicos, corporativismo e anticomunismo. Exemplos: regime de Dollfuss na Áustria, Ustasha na Croácia. Politicamente: Autoritário/Teocrático | Economicamente: Corporativista | Socialmente: Católico integrista",
+    "description": "Fusão de autoritarismo fascista com catolicismo político, defendendo Estado forte, corporativismo, anticomunismo e organização social guiada por moral religiosa conservadora.",
     "vector": null
   },
   {
     "id": "falangismo",
     "name": "Falangismo",
     "category": "Direita Autoritária",
-    "description": "Ideologia fascista espanhola fundada por José Antonio Primo de Rivera. Combina nacionalismo espanhol, catolicismo, sindicalismo nacional e corporativismo. Base do regime franquista na Espanha. Politicamente: Autoritário/Partido único | Economicamente: Corporativista/Sindicalismo nacional | Socialmente: Católico/Nacionalista",
+    "description": "Nacionalismo espanhol autoritário, católico e corporativista, que combina partido único, sindicalismo nacional, unidade orgânica da nação e rejeição ao liberalismo e ao marxismo.",
     "vector": null
   },
   {
     "id": "integralismo-brasileiro",
     "name": "Integralismo Brasileiro",
     "category": "Direita Autoritária",
-    "description": "Movimento fascista brasileiro dos anos 1930 liderado por Plínio Salgado. Lema: 'Deus, Pátria e Família'. Combinava nacionalismo, corporativismo, catolicismo e antiliberalismo. Diferenciava-se do fascismo europeu por rejeitar o racismo biológico. Politicamente: Autoritário | Economicamente: Corporativista | Socialmente: Católico/Nacionalista",
+    "description": "Movimento nacionalista brasileiro de inspiração fascista, centrado em Deus, Pátria e Família, com corporativismo, anticomunismo, autoridade estatal e mobilização conservadora.",
     "vector": null
   },
   {
     "id": "capitalismo-autoritario",
     "name": "Capitalismo Autoritário",
     "category": "Direita Autoritária",
-    "description": "Sistema que mantém economia de mercado capitalista sob governo autoritário. O Estado protege a propriedade privada e os mercados, mas suprime liberdades políticas. Exemplos: Singapura sob Lee Kuan Yew, China pós-Deng. Politicamente: Autoritário | Economicamente: Capitalista/Mercado | Socialmente: Meritocrático",
+    "description": "Sistema que preserva propriedade privada, investimento e mercado sob governo autoritário, com repressão política, gestão tecnocrática e prioridade à estabilidade e ao crescimento.",
     "vector": null
   },
   {
     "id": "capitalismo-nacional",
     "name": "Capitalismo Nacional",
     "category": "Direita Autoritária",
-    "description": "Capitalismo que prioriza interesses nacionais. Defende protecionismo, empresas nacionais fortes, restrição ao capital estrangeiro e autossuficiência econômica. O Estado intervém para garantir que o capitalismo sirva aos objetivos nacionais. Politicamente: Autoritário/Nacionalista | Economicamente: Protecionista/Capitalista | Socialmente: Nacionalista",
+    "description": "Capitalismo orientado pela soberania nacional, com proteção a empresas locais, intervenção estratégica, restrição a dependências externas e mercado subordinado a objetivos nacionais.",
     "vector": null
   },
   {
     "id": "alt-right",
     "name": "Direita radical",
     "category": "Direita Autoritária",
-    "description": "Movimento de extrema-direita contemporâneo, principalmente nos EUA. Combina nacionalismo branco, identitarismo, antifeminismo e anti-imigração com estética de internet. Rejeita o conservadorismo mainstream como insuficiente. Politicamente: Extrema-direita | Economicamente: Variável | Socialmente: Identitário/Supremacista",
+    "description": "Extrema-direita identitária contemporânea, marcada por nacionalismo branco, antifeminismo, anti-imigração, rejeição ao conservadorismo convencional e uso de cultura digital radicalizada.",
     "vector": null
   },
   {
     "id": "alt-lite",
     "name": "Direita alternativa",
     "category": "Direita Autoritária",
-    "description": "Vertente da direita populista contemporânea que combina forte crítica ao establishment político, cultural e midiático com defesa de valores nacionalistas, soberania nacional e maior controle migratório. Costuma rejeitar o globalismo, o progressismo identitário e o politicamente correto. Politicamente: Populista/Direita | Economicamente: Variável | Socialmente: Anti-establishment",
+    "description": "Direita populista anti-establishment, nacionalista e culturalmente conservadora, crítica ao globalismo, ao progressismo identitário, à mídia tradicional e à imigração em massa.",
     "vector": null
   },
   {
     "id": "aceleracionismo-de-direita",
     "name": "Aceleracionismo de Direita",
     "category": "Direita Autoritária",
-    "description": "Defende acelerar as contradições do sistema atual para provocar seu colapso e substituí-lo por uma ordem de direita. Inclui aceleracionismo tecnológico (Nick Land) ou aceleracionismo político para crise e tomada de poder. Politicamente: Anti-sistêmico | Economicamente: Hipercapitalista | Socialmente: Aceleracionista",
+    "description": "Corrente que busca acelerar crises políticas, sociais ou tecnológicas para colapsar a ordem liberal e abrir espaço a uma reorganização hierárquica, autoritária ou hipercapitalista.",
     "vector": null
   },
   {
     "id": "nacionalismo-racial",
     "name": "Nacionalismo Racial",
     "category": "Direita Autoritária",
-    "description": "Nacionalismo baseado exclusivamente em raça. Defende que cada raça deve ter seu próprio Estado homogêneo. Inclui movimentos supremacistas e separatistas raciais. Associado a políticas de segregação e limpeza étnica. Politicamente: Autoritário/Separatista | Economicamente: Variável | Socialmente: Racialista",
+    "description": "Nacionalismo baseado em raça, defendendo Estados etnicamente homogêneos, separação racial, hierarquias biológicas e políticas de exclusão ou segregação em nome da identidade coletiva.",
     "vector": null
   },
   {
     "id": "neoconservadorismo",
     "name": "Neoconservadorismo",
     "category": "Direita Autoritária",
-    "description": "Corrente que combina intervencionismo militar para promover a democracia liberal, economia de mercado e valores tradicionais. Originalmente formada por ex-esquerdistas desiludidos. Contexto histórico: Influente na política externa americana. Politicamente: Intervencionista | Economicamente: Capitalista/Mercado | Socialmente: Conservador/Globalista",
+    "description": "Direita intervencionista que combina economia de mercado, valores tradicionais e uso ativo do poder militar para promover hegemonia internacional e ordem liberal favorável.",
     "vector": null
   },
   {
     "id": "darwinismo-social",
     "name": "Darwinismo Social",
     "category": "Direita Autoritária",
-    "description": "Aplicação distorcida da teoria da evolução à sociedade. Defende que indivíduos, raças e nações competem pela sobrevivência e que o Estado não deve intervir. Historicamente usado para justificar imperialismo, racismo e eugenia. Politicamente: Elitista | Economicamente: Laissez-faire extremo | Socialmente: Hierarquista",
+    "description": "Visão hierárquica que aplica competição e seleção à sociedade, justificando desigualdade, elitismo, imperialismo ou eugenia como resultados naturais da luta entre indivíduos e grupos.",
     "vector": null
   },
   {
     "id": "monarquismo-absoluto",
     "name": "Monarquismo Absoluto",
     "category": "Direita Autoritária",
-    "description": "Defende que todo o poder político resida no monarca, sem limitações constitucionais ou parlamentares. O rei governa por direito divino ou tradição. Historicamente dominante na Europa até as revoluções liberais. Contexto histórico: Exemplos: França de Luís XIV, Arábia Saudita. Politicamente: Absolutista | Economicamente: Variável/Mercantilista | Socialmente: Tradicionalista",
+    "description": "Defesa de poder concentrado no monarca, legitimado por tradição ou direito divino, sem controle parlamentar efetivo e com autoridade pessoal sobre Estado, lei e governo.",
     "vector": null
   },
   {
     "id": "conservadorismo-autoritario",
     "name": "Conservadorismo Autoritário",
     "category": "Direita Autoritária",
-    "description": "Combina valores conservadores tradicionais com governo autoritário. Defende hierarquia social, ordem, religião e tradição, usando o poder estatal para preservar esses valores. Exemplos: regimes de Salazar em Portugal e Franco na Espanha. Politicamente: Autoritário | Economicamente: Corporativista/Misto | Socialmente: Tradicionalista",
+    "description": "Conservadorismo de Estado forte, voltado à ordem, hierarquia, religião e tradição, usando autoridade política para conter mudanças sociais e preservar instituições tradicionais.",
     "vector": null
   },
   {
     "id": "conservadorismo-nacional",
     "name": "Conservadorismo Nacional",
     "category": "Direita Autoritária",
-    "description": "Fusão de conservadorismo com nacionalismo forte. Prioriza soberania nacional, valores tradicionais, protecionismo econômico moderado e identidade cultural. Opõe-se ao globalismo e à imigração em massa. Politicamente: Autoritário/Democrático | Economicamente: Protecionista | Socialmente: Tradicionalista/Nacionalista",
+    "description": "Direita que combina soberania nacional, identidade cultural, valores tradicionais, fronteiras controladas e protecionismo moderado contra globalismo e liberalismo cosmopolita.",
     "vector": null
   },
   {
     "id": "conservadorismo-paternalista",
     "name": "Conservadorismo Paternalista",
     "category": "Direita Autoritária",
-    "description": "Vertente conservadora que aceita intervenção estatal para proteger os mais vulneráveis, mantendo a ordem social hierárquica. Inspirado no 'noblesse oblige'. Associado ao conservadorismo 'one-nation' britânico. Politicamente: Autoritário moderado | Economicamente: Intervencionista/Welfare | Socialmente: Paternalista",
+    "description": "Conservadorismo hierárquico que aceita proteção social e intervenção limitada para preservar coesão nacional, dever das elites e estabilidade sem romper a ordem tradicional.",
     "vector": null
   },
   {
     "id": "fundamentalismo-religioso",
     "name": "Fundamentalismo Religioso",
     "category": "Direita Autoritária",
-    "description": "Defende que leis, governo e moral pública sigam uma interpretação rígida da religião. Combina fé politizada, autoridade forte e controle de costumes contra práticas vistas como ameaça espiritual ou social. Politicamente: Teocrático/Autoritário | Economicamente: Variável/Comunitário | Socialmente: Religioso fundamentalista",
+    "description": "Política guiada por interpretação rígida da religião, defendendo leis confessionais, autoridade moral forte, controle de costumes e combate a práticas vistas como ameaça espiritual.",
     "vector": null
   },
   {
     "id": "nacionalismo-etnico",
     "name": "Nacionalismo Étnico",
     "category": "Direita Autoritária",
-    "description": "Nacionalismo baseado em identidade étnica, língua e ancestralidade compartilhada. Defende que a nação deve corresponder a um grupo étnico. Pode variar de movimentos de autodeterminação legítimos a formas exclusivistas. Politicamente: Autoritário/Exclusivista | Economicamente: Variável | Socialmente: Etnicista",
+    "description": "Nacionalismo fundado em ancestralidade, língua e identidade étnica comum, buscando correspondência entre povo e Estado e podendo assumir formas exclusivistas ou separatistas.",
     "vector": null
   },
   {
     "id": "nacionalismo-cultural",
     "name": "Nacionalismo Cultural",
     "category": "Direita Autoritária",
-    "description": "Enfatiza a preservação da cultura, língua e tradições nacionais como base da identidade. Menos focado em etnia que o nacionalismo étnico, prioriza a herança cultural. Pode apoiar políticas de imigração restritivas. Politicamente: Conservador | Economicamente: Variável | Socialmente: Culturalista",
+    "description": "Defesa da cultura nacional como base da comunidade política, com preservação de língua, costumes e memória histórica, frequentemente acompanhada de assimilação e imigração restrita.",
     "vector": null
   },
   {
     "id": "neorreacionarismo",
     "name": "Neorreacionarismo",
     "category": "Direita Autoritária",
-    "description": "Movimento intelectual contemporâneo (também chamado 'Dark Enlightenment') que rejeita a democracia e o Iluminismo. Defende formas de governo hierárquicas não-democráticas e ultracapitalistas, como cidades-Estado corporativas. Contexto histórico: Associado a Curtis Yarvin (Mencius Moldbug) e Nick Land. Politicamente: Anti-democrático | Economicamente: Capitalista | Socialmente: Reacionário",
+    "description": "Corrente antidemocrática contemporânea que rejeita igualitarismo liberal e defende hierarquias, governo empresarial, soberania privada e formas tecnológicas de autoridade pós-democrática.",
     "vector": null
   },
   {
     "id": "reacionarismo",
     "name": "Reacionarismo",
     "category": "Direita Autoritária",
-    "description": "Posição que busca retornar a um estado anterior da sociedade, opondo-se a mudanças progressistas. Pode defender o retorno à monarquia, a valores pré-modernos ou a estruturas sociais tradicionais. Contexto histórico: Difere do conservadorismo por não apenas preservar, mas reverter. Politicamente: Restauracionista | Economicamente: Variável | Socialmente: Antiluminista",
+    "description": "Projeto de retorno a uma ordem social anterior, restaurando hierarquias, tradições e instituições pré-modernas contra liberalismo, secularização e mudanças progressistas.",
     "vector": null
   },
   {
     "id": "quarta-teoria-politica",
     "name": "Quarta Teoria Política",
     "category": "Direita Autoritária",
-    "description": "Ideologia de Alexander Dugin que pretende superar liberalismo, comunismo e fascismo. Baseia-se no conceito de 'Dasein' de Heidegger, multipolaridade geopolítica, tradição e identidade civilizacional contra o globalismo liberal. Politicamente: Autoritário/Civilizacional | Economicamente: Anti-liberal | Socialmente: Tradicionalista/Multipolar",
+    "description": "Doutrina civilizacional e multipolar que rejeita liberalismo, comunismo e fascismo, defendendo tradição, identidade coletiva, antiocidentalismo e autoridade política contra o globalismo.",
     "vector": null
   },
   {
     "id": "democracia-nacional",
     "name": "Democracia Nacional",
     "category": "Direita Autoritária",
-    "description": "Corrente que combina democracia com nacionalismo forte. Defende soberania popular dentro de um quadro nacionalista, frequentemente com posições conservadoras em questões sociais e protecionistas na economia. Politicamente: Democrático/Nacionalista | Economicamente: Protecionista | Socialmente: Conservador",
+    "description": "Democracia majoritária orientada por soberania nacional, identidade cultural, protecionismo e conservadorismo social, priorizando o povo nacional sobre normas cosmopolitas.",
     "vector": null
   },
   {
     "id": "bioconservadorismo",
     "name": "Bioconservadorismo",
     "category": "Direita Autoritária",
-    "description": "Corrente que desconfia de biotecnologia, transhumanismo, engenharia genética e mudanças antropológicas radicais. Defende limites morais, prudência científica, preservação da natureza humana e instituições tradicionais diante de avanços técnicos sobre corpo, reprodução e vida. Politicamente: Conservador regulador | Economicamente: Variável | Socialmente: Bioconservador/Tradicional",
+    "description": "Corrente que impõe limites morais à biotecnologia, engenharia genética e transhumanismo, defendendo prudência científica, natureza humana e instituições tradicionais.",
     "vector": null
   },
   {
     "id": "tecnocracia-de-direita",
     "name": "Tecnocracia de Direita",
     "category": "Direita Autoritária",
-    "description": "Modelo tecnocrático voltado a eficiência administrativa, estabilidade monetária, segurança pública, competitividade e gestão empresarial do Estado. Favorece especialistas, indicadores e autoridade executiva para proteger mercados, infraestrutura e ordem social. Politicamente: Técnico-autoritário | Economicamente: Mercado administrado | Socialmente: Meritocrático/Ordem",
+    "description": "Governo de especialistas voltado à eficiência estatal, segurança, estabilidade monetária, competitividade e administração empresarial, preservando mercados e ordem social.",
     "vector": null
   },
   {
     "id": "democracia-crista",
     "name": "Democracia Cristã",
     "category": "Centro",
-    "description": "Corrente de inspiração social-cristã que combina democracia constitucional, economia social de mercado, subsidiariedade, pluralismo institucional e proteção social. Valoriza família, comunidade e dignidade humana sem rejeitar eleições livres e Estado de direito. Politicamente: Democrático/Social-cristão | Economicamente: Economia social de mercado | Socialmente: Conservador moderado",
+    "description": "Doutrina democrática inspirada no cristianismo social, combinando economia social de mercado, subsidiariedade, pluralismo, família, comunidade e proteção da dignidade humana.",
     "vector": null
   },
   {
     "id": "conservadorismo-cristao",
     "name": "Conservadorismo Cristão",
     "category": "Centro",
-    "description": "Conservadorismo guiado por valores cristãos, defesa da família, moral tradicional e ordem social. Costuma aceitar democracia constitucional e economia de mercado, mas quer que leis e costumes preservem princípios religiosos. Politicamente: Democrático/Conservador | Economicamente: Mercado moderado | Socialmente: Cristão tradicional",
+    "description": "Conservadorismo fundamentado em valores cristãos, família, moral tradicional e ordem social, aceitando democracia e mercado quando preservam princípios religiosos.",
     "vector": null
   },
   {
     "id": "republicanismo",
     "name": "Republicanismo",
     "category": "Centro",
-    "description": "Tradição política centrada na res publica, no Estado de direito, na cidadania ativa, na virtude cívica e na limitação de poderes pessoais ou hereditários. Defende instituições impessoais, participação pública e liberdade como não-dominação. Politicamente: Constitucional/Cívico | Economicamente: Misto | Socialmente: Cívico",
+    "description": "Tradição centrada na coisa pública, cidadania ativa, virtude cívica, Estado de direito e limitação de poderes pessoais para proteger liberdade como não-dominação.",
     "vector": null
   },
   {
     "id": "monarquismo-constitucional",
     "name": "Monarquismo Constitucional",
     "category": "Centro",
-    "description": "Defende uma monarquia limitada por constituição, parlamento eleito e Estado de direito. O monarca atua como símbolo de continuidade institucional e unidade nacional, enquanto o governo cotidiano permanece submetido a regras constitucionais e representação democrática. Politicamente: Constitucional/Monárquico | Economicamente: Misto | Socialmente: Tradicional moderado",
+    "description": "Sistema em que uma monarquia simbólica e hereditária convive com constituição, parlamento eleito, Estado de direito e governo responsável perante instituições democráticas.",
     "vector": null
   },
   {
     "id": "neoliberalismo",
     "name": "Neoliberalismo",
     "category": "Centro",
-    "description": "Corrente liberal contemporânea que enfatiza privatizações, disciplina fiscal, abertura comercial, bancos centrais independentes, desregulação seletiva e competição de mercado como motores de eficiência. Aceita instituições fortes para proteger mercados e estabilidade monetária. Politicamente: Liberal/Institucional | Economicamente: Mercado global | Socialmente: Individualista/Modernizador",
+    "description": "Liberalismo pró-mercado que valoriza privatizações, abertura comercial, disciplina fiscal, competição, bancos centrais independentes e instituições fortes para proteger estabilidade econômica.",
     "vector": null
   },
   {
     "id": "ordoliberalismo",
     "name": "Ordoliberalismo",
     "category": "Centro",
-    "description": "Escola liberal alemã que defende economia de mercado sustentada por uma ordem jurídica forte, política antimonopólio, estabilidade monetária e Estado regulador que preserve a concorrência. Base importante da economia social de mercado. Politicamente: Constitucional/Regulador | Economicamente: Mercado ordenado | Socialmente: Moderado",
+    "description": "Liberalismo alemão que defende mercado competitivo sustentado por regras fortes, política antimonopólio, estabilidade monetária e Estado regulador voltado à ordem econômica.",
     "vector": null
   },
   {
     "id": "distributismo",
     "name": "Distributismo",
     "category": "Centro",
-    "description": "Doutrina econômica inspirada na tradição social católica, associada a G. K. Chesterton e Hilaire Belloc. Contexto histórico: Defende ampla distribuição da propriedade produtiva, pequenas empresas, cooperativas, famílias proprietárias e economia local contra concentração capitalista ou estatismo socialista. Politicamente: Subsidiário/Comunitário | Economicamente: Propriedade distribuída | Socialmente: Católico/Tradicional",
+    "description": "Doutrina social-cristã que busca propriedade produtiva amplamente distribuída, pequenas empresas, cooperativas, economia local e resistência tanto ao socialismo estatal quanto ao grande capital.",
     "vector": null
   },
   {
     "id": "tecnocracia",
     "name": "Tecnocracia",
     "category": "Centro",
-    "description": "Modelo de governo que privilegia especialistas, planejamento racional, indicadores técnicos e administração científica sobre disputas ideológicas ou partidárias. Pode variar de gestão democrática baseada em evidências a formas autoritárias de governo por técnicos. Politicamente: Técnico/Administrativo | Economicamente: Planejamento racional | Socialmente: Cientificista",
+    "description": "Modelo que entrega decisões públicas a especialistas, métodos científicos e indicadores, priorizando competência, planejamento racional e eficiência administrativa sobre disputa ideológica.",
     "vector": null
   },
   {
     "id": "comunitarismo",
     "name": "Comunitarismo",
     "category": "Centro",
-    "description": "Corrente que enfatiza vínculos comunitários, deveres cívicos, instituições locais e bens comuns contra o individualismo extremo. Defende que liberdade e identidade dependem de comunidades vivas, participação pública, solidariedade e responsabilidade social. Politicamente: Localista/Participativo | Economicamente: Comunitário/Misto | Socialmente: Solidarista",
+    "description": "Filosofia que valoriza comunidade, vínculos sociais, deveres compartilhados e bens comuns, criticando individualismo abstrato e defendendo políticas enraizadas em contextos locais.",
     "vector": null
   },
   {
     "id": "meritocracia",
     "name": "Meritocracia",
     "category": "Centro",
-    "description": "Modelo que legitima posições sociais e cargos públicos pela competência, esforço, desempenho e qualificação mensurável. Valoriza educação, concursos, avaliação técnica e mobilidade social, defendendo que instituições recompensem mérito em vez de origem familiar, clientelismo ou privilégio herdado. Politicamente: Institucional/Avaliativo | Economicamente: Competitivo regulado | Socialmente: Meritocrático",
+    "description": "Sistema que justifica posições sociais por talento, esforço e desempenho, defendendo seleção competitiva, educação, produtividade e recompensa proporcional à contribuição individual.",
     "vector": null
   },
   {
     "id": "liberalismo",
     "name": "Liberalismo",
     "category": "Centro",
-    "description": "Filosofia política baseada em liberdade individual, direitos naturais, Estado de direito, governo limitado e economia de mercado. Surgiu no Iluminismo com Locke, Montesquieu e Adam Smith. Contexto histórico: Base das democracias ocidentais modernas. Politicamente: Democrático/Constitucional | Economicamente: Mercado | Socialmente: Individualista",
+    "description": "Tradição política centrada em liberdade individual, direitos civis, governo limitado, pluralismo, Estado de direito e economia de mercado regulada por instituições constitucionais.",
     "vector": null
   },
   {
     "id": "liberalismo-classico",
     "name": "Liberalismo Clássico",
     "category": "Centro",
-    "description": "Forma original do liberalismo. Enfatiza direitos individuais inalienáveis, governo mínimo, livre mercado, propriedade privada e Estado de direito. Pensadores: Locke, Smith, Mill. Difere do liberalismo moderno por rejeitar o Estado de bem-estar. Politicamente: Governo limitado | Economicamente: Livre mercado | Socialmente: Individualista",
+    "description": "Liberalismo de governo limitado, propriedade privada, livre comércio, direitos individuais e desconfiança da intervenção estatal, defendendo mercados abertos e ordem constitucional.",
     "vector": null
   },
   {
     "id": "libertarianismo",
     "name": "Libertarianismo",
     "category": "Centro",
-    "description": "Defende a máxima liberdade individual e mínima intervenção estatal. O Estado deve limitar-se a proteger vida, liberdade e propriedade. Abrange desde minarquismo até anarcocapitalismo. Contexto histórico: Pilar: princípio da não-agressão. Politicamente: Minimalista | Economicamente: Livre mercado | Socialmente: Individualista",
+    "description": "Corrente pró-liberdade individual e propriedade privada, com Estado mínimo, baixa tributação, mercados livres e forte oposição à coerção estatal sobre escolhas pessoais.",
     "vector": null
   },
   {
     "id": "liberalismo-verde",
     "name": "Liberalismo Verde",
     "category": "Centro",
-    "description": "Síntese de liberalismo com ambientalismo. Defende que a proteção ambiental é compatível com liberdade individual e mercado, usando mecanismos de mercado (impostos verdes, cap-and-trade) para resolver problemas ambientais. Politicamente: Democrático | Economicamente: Mercado com regulação verde | Socialmente: Ambientalista",
+    "description": "Liberalismo que integra direitos individuais e mercado com proteção ambiental, regulação ecológica, inovação limpa e incentivos econômicos para reduzir danos ambientais.",
     "vector": null
   },
   {
     "id": "liberalismo-social",
     "name": "Liberalismo Social",
     "category": "Centro",
-    "description": "Evolução do liberalismo clássico que aceita intervenção estatal para garantir igualdade de oportunidades. Defende liberdades civis, Estado de bem-estar moderado, economia mista e justiça social. Contexto histórico: Rawls como referência. Politicamente: Democrático | Economicamente: Misto/Welfare | Socialmente: Progressista moderado",
+    "description": "Liberalismo que combina direitos civis, democracia e mercado com políticas sociais, educação, saúde e redistribuição moderada para ampliar oportunidades reais.",
     "vector": null
   },
   {
     "id": "liberalismo-radical",
     "name": "Liberalismo Radical",
     "category": "Centro",
-    "description": "Forma mais enfática de liberalismo que prioriza a máxima extensão de direitos individuais e liberdades civis. Inclui secularismo radical, igualdade total perante a lei e reforma institucional profunda. Politicamente: Democrático radical | Economicamente: Mercado | Socialmente: Progressista",
+    "description": "Liberalismo igualitário e reformista, voltado à expansão de direitos civis, secularismo, democracia, liberdade individual e remoção de privilégios legais ou sociais.",
     "vector": null
   },
   {
     "id": "liberalismo-conservador",
     "name": "Liberalismo Conservador",
     "category": "Centro",
-    "description": "Combinação de princípios liberais econômicos com conservadorismo social moderado. Defende livre mercado, governo limitado e tradição. Posição dominante em muitos partidos de centro-direita europeus. Politicamente: Democrático/Moderado | Economicamente: Livre mercado | Socialmente: Conservador moderado",
+    "description": "Síntese de livre mercado, governo constitucional e valores tradicionais, defendendo liberdade econômica e instituições estáveis sem ruptura cultural acelerada.",
     "vector": null
   },
   {
     "id": "liberaltarianismo",
     "name": "Liberaltarianismo",
     "category": "Centro",
-    "description": "Ponte entre liberalismo e libertarianismo. Aceita um Estado mínimo com alguma rede de segurança social, mas enfatiza liberdades individuais extensas, tanto econômicas quanto civis. Contexto histórico: Associado a pensadores como Brink Lindsey. Politicamente: Minimalista | Economicamente: Livre mercado com rede mínima | Socialmente: Individualista",
+    "description": "Combinação de liberalismo institucional com ceticismo libertário sobre o Estado, defendendo mercados livres, direitos civis, abertura social e governo relativamente limitado.",
     "vector": null
   },
   {
     "id": "panarchismo",
     "name": "Panarchismo",
     "category": "Centro",
-    "description": "Sistema onde indivíduos escolhem voluntariamente sob qual governo viver, independentemente de território. Múltiplos sistemas políticos coexistem no mesmo espaço geográfico. Proposto por Paul Émile de Puydt em 1860. Politicamente: Pluralista radical | Economicamente: Variável/Voluntário | Socialmente: Individualista",
+    "description": "Sistema em que pessoas escolhem voluntariamente entre diferentes governos ou ordens jurídicas concorrentes, sem depender de território único ou monopólio estatal fixo.",
     "vector": null
   },
   {
     "id": "georgismo",
     "name": "Georgismo",
     "category": "Centro",
-    "description": "Filosofia econômica de Henry George. Defende que a terra e recursos naturais pertencem a todos, propondo um imposto único sobre o valor da terra (Land Value Tax). Compatível com livre mercado para trabalho e capital. Politicamente: Reformista | Economicamente: Mercado + LVT | Socialmente: Igualitarista",
+    "description": "Doutrina que defende propriedade privada e mercado, mas trata a renda da terra como riqueza comum a ser tributada para reduzir desigualdade e privilégios fundiários.",
     "vector": null
   },
   {
     "id": "geolibertarianismo",
     "name": "Geolibertarianismo",
     "category": "Centro",
-    "description": "Fusão de libertarianismo com georgismo. Aceita o princípio libertário de autopropriedade e livre mercado, mas defende que recursos naturais são comuns. Propõe o imposto sobre valor da terra como única forma legítima de tributação. Politicamente: Minimalista | Economicamente: Livre mercado + LVT | Socialmente: Individualista",
+    "description": "Libertarianismo que preserva propriedade privada e Estado mínimo, mas considera recursos naturais comuns, financiando serviços ou dividendos por renda da terra.",
     "vector": null
   },
   {
     "id": "feminismo",
     "name": "Feminismo",
     "category": "Centro",
-    "description": "Movimento pela igualdade entre os sexos. Abrange múltiplas ondas: sufrágio (1a), direitos civis e reprodutivos (2a), interseccionalidade (3a), e debates contemporâneos (4a). Na posição centrista, refere-se ao feminismo liberal mainstream. Politicamente: Transversal | Economicamente: Transversal | Socialmente: Igualitarista",
+    "description": "Movimento pela igualdade de gênero, autonomia das mulheres, direitos civis, combate à violência e superação de hierarquias sociais, legais e econômicas baseadas no sexo.",
     "vector": null
   },
   {
     "id": "feminismo-liberal",
     "name": "Feminismo Liberal",
     "category": "Centro",
-    "description": "Corrente do feminismo que busca igualdade de gênero através de reformas legais e institucionais dentro do sistema existente. Foca em igualdade de direitos, oportunidades de emprego, educação e combate à discriminação. Politicamente: Democrático/Reformista | Economicamente: Mercado | Socialmente: Igualitarista",
+    "description": "Feminismo centrado em igualdade legal, oportunidades individuais, direitos civis, educação, trabalho e participação política plena das mulheres dentro de instituições liberais.",
     "vector": null
   },
   {
     "id": "liberalismo-de-estado",
     "name": "Liberalismo de Estado",
     "category": "Centro",
-    "description": "Modelo em que o Estado usa autoridade centralizada para impor direitos civis progressistas, diversidade, inclusão e secularismo. Combina metas associadas ao liberalismo social com instrumentos administrativos fortes, limitando resistências culturais ou institucionais. Politicamente: Autoritário liberal | Economicamente: Misto | Socialmente: Progressista impositivo",
+    "description": "Modelo que preserva direitos liberais e mercado, mas usa Estado forte para modernização, infraestrutura, segurança institucional e direção estratégica do desenvolvimento.",
     "vector": null
   },
   {
     "id": "ambientalismo",
     "name": "Ambientalismo",
     "category": "Centro",
-    "description": "Movimento pela proteção do meio ambiente e uso sustentável de recursos naturais. Abrange desde conservacionismo moderado até ecologia radical. Permeia diversas ideologias políticas. Politicamente: Transversal | Economicamente: Transversal | Socialmente: Ecológico",
+    "description": "Corrente voltada à proteção ambiental, conservação de ecossistemas, redução da poluição e compatibilização entre atividade humana, ciência, regulação e sustentabilidade.",
     "vector": null
   },
   {
     "id": "conservadorismo",
     "name": "Conservadorismo",
     "category": "Centro",
-    "description": "Filosofia que valoriza tradição, instituições estabelecidas, mudança gradual e prudência. Desconfia de reformas radicais e utopias. Pensadores: Burke, Oakeshott. Varia enormemente por contexto. Politicamente: Moderado/Gradualista | Economicamente: Variável | Socialmente: Tradicionalista",
+    "description": "Doutrina que valoriza tradição, continuidade institucional, ordem social, prudência política e mudanças graduais, preservando costumes e autoridades herdadas contra rupturas radicais.",
     "vector": null
   },
   {
     "id": "progressivismo",
     "name": "Progressivismo",
     "category": "Centro",
-    "description": "Posição política que favorece reformas sociais, igualdade, direitos civis e mudança social. Acredita que a sociedade pode e deve ser melhorada através de políticas públicas. Historicamente associado a movimentos trabalhistas. Politicamente: Reformista | Economicamente: Intervencionista moderado | Socialmente: Progressista",
+    "description": "Corrente reformista que busca ampliar direitos, igualdade social, inclusão e modernização cultural por meio de políticas públicas, democracia e crítica a hierarquias tradicionais.",
     "vector": null
   },
   {
     "id": "aceleracionismo",
     "name": "Aceleracionismo",
     "category": "Centro",
-    "description": "Teoria que defende intensificar processos (capitalismo, tecnologia) para ultrapassar suas contradições e alcançar uma transformação radical. Possui versões de esquerda (pós-capitalismo) e direita (colapso). Politicamente: Anti-sistêmico | Economicamente: Aceleracionista | Socialmente: Transversal",
+    "description": "Ideia de intensificar tendências tecnológicas, econômicas ou sociais do presente para superar a ordem atual e produzir uma transformação sistêmica mais rápida.",
     "vector": null
   },
   {
     "id": "nacionalismo",
     "name": "Nacionalismo",
     "category": "Centro",
-    "description": "Ideologia centrada na nação como unidade política fundamental. Defende soberania, autodeterminação, identidade cultural e interesses nacionais. Varia amplamente: pode ser cívico (baseado em valores) ou étnico (baseado em ascendência). Politicamente: Soberanista | Economicamente: Variável | Socialmente: Nacionalista",
+    "description": "Doutrina que coloca a nação como comunidade política central, defendendo soberania, identidade comum, unidade territorial e prioridade dos interesses nacionais.",
     "vector": null
   },
   {
     "id": "nacionalismo-civico",
     "name": "Nacionalismo Cívico",
     "category": "Centro",
-    "description": "Forma de nacionalismo baseada em valores compartilhados, instituições e cidadania, não em etnia ou raça. Defende que qualquer pessoa pode pertencer à nação ao adotar seus valores e leis. Contexto histórico: Exemplo: patriotismo constitucional. Politicamente: Democrático/Soberanista | Economicamente: Variável | Socialmente: Inclusivo/Cívico",
+    "description": "Nacionalismo baseado em cidadania, instituições, língua pública e lealdade constitucional, definindo pertencimento político por adesão cívica em vez de origem étnica.",
     "vector": null
   },
   {
     "id": "indigenismo",
     "name": "Indigenismo",
     "category": "Centro",
-    "description": "Movimento pela proteção e valorização dos povos indígenas e suas culturas. Pode variar de políticas públicas de proteção a movimentos de autodeterminação indígena. Na América Latina, forte componente de justiça social. Politicamente: Transversal | Economicamente: Comunitário | Socialmente: Identitário/Cultural",
+    "description": "Corrente que defende direitos, autonomia, território e culturas indígenas, criticando assimilação forçada e priorizando pluralismo, reparação histórica e proteção comunitária.",
     "vector": null
   },
   {
     "id": "conservadorismo-socialista",
     "name": "Conservadorismo Socialista",
     "category": "Centro",
-    "description": "Combina críticas conservadoras da modernidade com redistribuição econômica. Defende Estado de bem-estar forte enquanto preserva valores tradicionais, comunidade e ordem. Rejeita tanto liberalismo quanto socialismo revolucionário. Politicamente: Moderado/Paternalista | Economicamente: Redistributivo | Socialmente: Tradicionalista",
+    "description": "Síntese de economia redistributiva ou estatal com valores sociais tradicionais, nacionalismo cultural, comunidade orgânica e crítica ao liberalismo econômico e moral.",
     "vector": null
   },
   {
     "id": "anarquismo",
     "name": "Anarquismo",
     "category": "Esquerda Libertária",
-    "description": "Filosofia política que rejeita toda forma de hierarquia involuntária e governo coercitivo. Defende organização social voluntária, ajuda mútua e autogestão. Pensadores: Proudhon, Bakunin, Kropotkin. Politicamente: Anti-estatal | Economicamente: Coletivista/Variável | Socialmente: Libertário radical",
+    "description": "Filosofia antiestatal que rejeita hierarquias coercitivas e defende autogestão, associação voluntária, apoio mútuo e organização social descentralizada sem governo central.",
     "vector": null
   },
   {
     "id": "anarcocomunismo",
     "name": "Anarcocomunismo",
     "category": "Esquerda Libertária",
-    "description": "Fusão de anarquismo com comunismo. Defende abolição do Estado e da propriedade privada simultaneamente, organizando a sociedade em comunas livres baseadas no princípio 'de cada um segundo sua capacidade, a cada um segundo suas necessidades'. Contexto histórico: Kropotkin como principal teórico. Politicamente: Anti-estatal | Economicamente: Comunista/Comunal | Socialmente: Igualitarista radical",
+    "description": "Anarquismo que defende abolição do Estado, propriedade comum, produção cooperativa e distribuição segundo necessidades, organizada por comunas livres e federações voluntárias.",
     "vector": null
   },
   {
     "id": "anarcocoletivismo",
     "name": "Anarcocoletivismo",
     "category": "Esquerda Libertária",
-    "description": "Vertente anarquista de Bakunin. Defende propriedade coletiva dos meios de produção gerida por assembleias de trabalhadores. Remuneração baseada no trabalho realizado. Influente na Primeira Internacional. Politicamente: Anti-estatal | Economicamente: Coletivista | Socialmente: Assembleísta",
+    "description": "Anarquismo socialista que propõe propriedade coletiva dos meios de produção, autogestão e remuneração pelo trabalho, sem Estado central ou propriedade capitalista.",
     "vector": null
   },
   {
     "id": "anarcossindicalismo",
     "name": "Anarcossindicalismo",
     "category": "Esquerda Libertária",
-    "description": "Combina anarquismo com sindicalismo revolucionário. Os sindicatos são a base da organização social e instrumento de revolução. A greve geral abolirá o capitalismo e o Estado. Exemplo histórico: CNT na Espanha. Politicamente: Anti-estatal/Sindical | Economicamente: Autogestão operária | Socialmente: Revolucionário",
+    "description": "Estratégia anarquista baseada em sindicatos combativos, greve geral, autogestão dos trabalhadores e substituição do Estado e do capital por federações laborais.",
     "vector": null
   },
   {
     "id": "sindicalismo",
     "name": "Sindicalismo",
     "category": "Esquerda Libertária",
-    "description": "Movimento que defende os sindicatos como base da organização política e econômica. A ação direta dos trabalhadores, especialmente a greve, é o meio de transformação social. Politicamente: Operário | Economicamente: Autogestão | Socialmente: Trabalhista",
+    "description": "Corrente que coloca sindicatos e organização dos trabalhadores no centro da política, defendendo negociação coletiva, ação direta e controle laboral sobre produção.",
     "vector": null
   },
   {
     "id": "socialismo-libertario",
     "name": "Socialismo Libertário",
     "category": "Esquerda Libertária",
-    "description": "Corrente que combina socialismo com antiautoritarismo. Rejeita tanto o capitalismo quanto o socialismo de Estado. Defende propriedade social dos meios de produção gerida democraticamente pelos trabalhadores. Politicamente: Anti-estatal | Economicamente: Socialista/Autogestão | Socialmente: Libertário",
+    "description": "Socialismo anti-autoritário que combina igualdade econômica, autogestão, democracia direta, descentralização e rejeição tanto ao capitalismo quanto ao socialismo estatal centralizado.",
     "vector": null
   },
   {
     "id": "marxismo-libertario",
     "name": "Marxismo Libertário",
     "category": "Esquerda Libertária",
-    "description": "Corrente marxista que rejeita o leninismo e o partido de vanguarda. Enfatiza os aspectos libertários de Marx: emancipação humana, abolição do trabalho alienado, conselhos operários. Contexto histórico: Associada ao comunismo de conselhos. Politicamente: Conselhista | Economicamente: Socialista | Socialmente: Emancipatório",
+    "description": "Marxismo anti-autoritário que valoriza conselhos, autogestão operária e emancipação de classe sem partido único, burocracia estatal ou centralismo político rígido.",
     "vector": null
   },
   {
     "id": "socialismo-de-mercado-libertario",
     "name": "Socialismo de Mercado Libertário",
     "category": "Esquerda Libertária",
-    "description": "Combina socialismo com mecanismos de mercado e liberdade individual. Empresas são cooperativas de trabalhadores que competem em mercados. Rejeita planejamento central e propriedade estatal. Politicamente: Descentralizado | Economicamente: Cooperativismo de mercado | Socialmente: Libertário",
+    "description": "Modelo de cooperativas autogeridas competindo em mercado descentralizado, combinando propriedade social, preços livres, democracia econômica e mínima coerção estatal.",
     "vector": null
   },
   {
     "id": "socialismo-de-mercado",
     "name": "Socialismo de Mercado",
     "category": "Esquerda Libertária",
-    "description": "Sistema onde os meios de produção são socialmente possuídos, mas alocação de recursos ocorre via mercado. Combina propriedade cooperativa ou pública com competição de mercado. Politicamente: Descentralizado | Economicamente: Cooperativismo de mercado | Socialmente: Misto",
+    "description": "Sistema que une propriedade pública, social ou cooperativa com mecanismos de mercado, buscando eficiência econômica, planejamento limitado e distribuição mais igualitária.",
     "vector": null
   },
   {
     "id": "mutualismo",
     "name": "Mutualismo",
     "category": "Esquerda Libertária",
-    "description": "Filosofia anarquista de Proudhon. Defende reciprocidade, mercados livres sem capitalismo, bancos de crédito mútuo, propriedade baseada no uso e federação de comunidades autônomas. Precursor do anarquismo moderno. Politicamente: Anti-estatal | Economicamente: Mercado livre sem capitalismo | Socialmente: Reciprocitário",
+    "description": "Socialismo libertário de mercado, baseado em cooperativas, crédito mútuo, posse pelo uso, trocas voluntárias e oposição simultânea ao Estado e ao capital rentista.",
     "vector": null
   },
   {
     "id": "minarco-mutualismo",
     "name": "Minarco-Mutualismo",
     "category": "Esquerda Libertária",
-    "description": "Síntese de minarquismo com mutualismo. Aceita um Estado mínimo para arbitragem, mas organiza a economia segundo princípios mutualistas: propriedade de uso, crédito mútuo e trocas voluntárias. Politicamente: Estado mínimo | Economicamente: Mutualista | Socialmente: Libertário",
+    "description": "Mutualismo com Estado mínimo, combinando mercados cooperativos, crédito popular, posse pelo uso e proteção institucional limitada contra monopólios e coerção.",
     "vector": null
   },
   {
     "id": "minarco-socialismo",
     "name": "Minarco-Socialismo",
     "category": "Esquerda Libertária",
-    "description": "Combinação de Estado mínimo com socialismo. O Estado existiria apenas para funções essenciais, enquanto a economia seria organizada cooperativamente. Politicamente: Estado mínimo | Economicamente: Cooperativista | Socialmente: Libertário",
+    "description": "Socialismo democrático com Estado reduzido, preservando serviços essenciais, direitos sociais e propriedade coletiva ou cooperativa sem planejamento central abrangente.",
     "vector": null
   },
   {
     "id": "socialismo-individualista",
     "name": "Socialismo Individualista",
     "category": "Esquerda Libertária",
-    "description": "Vertente que combina propriedade pessoal e liberdade individual com socialismo. Influenciada por Benjamin Tucker e Lysander Spooner. Defende mercados livres genuínos como caminho para equidade. Politicamente: Anti-estatal | Economicamente: Mercado livre antimonopólio | Socialmente: Individualista",
+    "description": "Socialismo que enfatiza autonomia pessoal, propriedade cooperativa, liberdade individual e crítica a monopólios, buscando igualdade sem suprimir iniciativa e diversidade de estilos de vida.",
     "vector": null
   },
   {
     "id": "comunalismo",
     "name": "Comunalismo",
     "category": "Esquerda Libertária",
-    "description": "Filosofia de Murray Bookchin. Defende democracia direta em assembleias municipais, federalismo, ecologia social e economia coletiva local. Influenciou o confederalismo democrático curdo de Rojava. Politicamente: Democracia direta/Municipal | Economicamente: Comunitário | Socialmente: Ecológico/Participativo",
+    "description": "Projeto municipalista de democracia direta, assembleias populares, confederação de comunas, ecologia social e economia local cooperativa contra Estado centralizado e capitalismo.",
     "vector": null
   },
   {
     "id": "socialismo-cristao",
     "name": "Socialismo Cristão",
     "category": "Esquerda Libertária",
-    "description": "Movimento que interpreta os ensinamentos de Cristo como apoio ao socialismo. Defende justiça social, igualdade econômica e comunidade baseadas no Evangelho. Influenciou a Teologia da Libertação. Politicamente: Reformista/Comunitário | Economicamente: Redistributivo | Socialmente: Cristão/Igualitarista",
+    "description": "Socialismo inspirado na ética cristã de solidariedade, justiça social e cuidado com os pobres, defendendo redistribuição, comunidade e crítica moral ao capitalismo.",
     "vector": null
   },
   {
     "id": "trabalhismo-cristao",
     "name": "Trabalhismo Cristão",
     "category": "Centro",
-    "description": "Combina doutrina social cristã com defesa do trabalhador, sindicatos e proteção social. Busca justiça social, família, comunidade e democracia sem romper com a religião. Politicamente: Democrático/Social-cristão | Economicamente: Trabalhista/Intervencionista | Socialmente: Cristão comunitário",
+    "description": "Corrente social-cristã centrada em direitos trabalhistas, sindicatos, dignidade do trabalho, família e proteção social dentro de uma ordem democrática reformista.",
     "vector": null
   },
   {
     "id": "socialismo-religioso",
     "name": "Socialismo Religioso",
     "category": "Esquerda Libertária",
-    "description": "Corrente que fundamenta o socialismo em princípios religiosos diversos. Argumenta que justiça social e igualdade são mandamentos divinos. Inclui socialismo islâmico, budista e outras vertentes. Politicamente: Reformista/Comunitário | Economicamente: Redistributivo | Socialmente: Religioso/Igualitarista",
+    "description": "Socialismo fundamentado em valores religiosos de justiça, comunidade e compaixão, defendendo redistribuição, economia solidária e crítica espiritual à exploração.",
     "vector": null
   },
   {
     "id": "social-democracia",
     "name": "Social-Democracia",
     "category": "Esquerda Libertária",
-    "description": "Movimento que busca reformar o capitalismo através de democracia parlamentar, Estado de bem-estar robusto, regulação e direitos trabalhistas. Abandonou o objetivo revolucionário em favor de reformas graduais. Contexto histórico: Dominante nos países nórdicos. Politicamente: Democrático/Parlamentar | Economicamente: Capitalismo regulado/Welfare | Socialmente: Progressista",
+    "description": "Reformismo democrático que mantém economia de mercado regulada, Estado de bem-estar, direitos trabalhistas, redistribuição e expansão gradual de igualdade social.",
     "vector": null
   },
   {
     "id": "socialismo",
     "name": "Socialismo",
     "category": "Esquerda Libertária",
-    "description": "Ampla família de ideologias que defendem propriedade social ou coletiva dos meios de produção e distribuição equitativa da riqueza. Pilar: crítica à exploração capitalista e busca de igualdade material. Politicamente: Variável | Economicamente: Coletivista | Socialmente: Igualitarista",
+    "description": "Família de ideias que defende propriedade social ou coletiva, igualdade material, crítica à exploração capitalista e organização econômica voltada ao bem comum.",
     "vector": null
   },
   {
     "id": "socialismo-liberal",
     "name": "Socialismo Liberal",
     "category": "Esquerda Libertária",
-    "description": "Fusão de socialismo com liberalismo político. Defende igualdade econômica e justiça social enquanto preserva liberdades individuais, pluralismo e democracia. Politicamente: Democrático | Economicamente: Misto/Redistributivo | Socialmente: Progressista/Pluralista",
+    "description": "Síntese de socialismo e liberalismo político, combinando justiça econômica, democracia pluralista, direitos individuais e redistribuição sem abolir liberdades civis.",
     "vector": null
   },
   {
     "id": "libertarianismo-social",
     "name": "Libertarianismo Social",
     "category": "Esquerda Libertária",
-    "description": "Vertente do libertarianismo que reconhece que desigualdades estruturais limitam a liberdade real. Aceita algumas políticas redistributivas como compatíveis com a liberdade. Politicamente: Minimalista moderado | Economicamente: Mercado + redistribuição | Socialmente: Igualitarista",
+    "description": "Libertarianismo preocupado com desigualdades estruturais, defendendo liberdade individual, mercados ou associações voluntárias e alguma redistribuição para ampliar autonomia real.",
     "vector": null
   },
   {
     "id": "ecossocialismo",
     "name": "Ecossocialismo",
     "category": "Esquerda Libertária",
-    "description": "Fusão de ecologia com socialismo. Argumenta que a crise ambiental é inseparável do capitalismo. Defende transformação das relações de produção para compatibilizar economia com limites ecológicos. Politicamente: Reformista/Revolucionário | Economicamente: Socialista/Ecológico | Socialmente: Ambientalista",
+    "description": "Socialismo ecológico que vê capitalismo e crise ambiental como ligados, defendendo propriedade social, planejamento democrático e produção dentro dos limites da natureza.",
     "vector": null
   },
   {
     "id": "ecofeminismo",
     "name": "Ecofeminismo",
     "category": "Esquerda Libertária",
-    "description": "Conecta opressão das mulheres com exploração da natureza. Argumenta que patriarcado e capitalismo são raízes comuns da dominação sobre mulheres e meio ambiente. Politicamente: Anti-hierárquico | Economicamente: Comunitário | Socialmente: Feminista/Ecológico",
+    "description": "Corrente que liga opressão das mulheres e exploração da natureza, criticando patriarcado, capitalismo e hierarquias de dominação em favor de cuidado e sustentabilidade.",
     "vector": null
   },
   {
     "id": "ecologia-profunda",
     "name": "Ecologia Profunda",
     "category": "Esquerda Libertária",
-    "description": "Filosofia que atribui valor intrínseco a toda vida, não apenas utilidade humana. Defende redução drástica da população humana, fim do crescimento econômico e restauração de ecossistemas. Contexto histórico: Pensador: Arne Naess. Politicamente: Anti-crescimento | Economicamente: Decrescimentista | Socialmente: Biocêntrico",
+    "description": "Filosofia biocêntrica que atribui valor intrínseco à vida não humana, defendendo redução do crescimento, preservação radical e transformação da relação humana com a natureza.",
     "vector": null
   },
   {
     "id": "anarquismo-agrario",
     "name": "Anarquismo Agrário",
     "category": "Esquerda Libertária",
-    "description": "Anarquismo com foco na vida rural e agrícola. Defende reforma agrária radical, comunas agrícolas autogestionadas e oposição ao latifúndio e à industrialização da agricultura. Politicamente: Anti-estatal | Economicamente: Comunal/Agrário | Socialmente: Camponês",
+    "description": "Anarquismo rural que defende reforma agrária, comunas camponesas, autogestão agrícola, oposição ao latifúndio e vida comunitária descentralizada no campo.",
     "vector": null
   },
   {
     "id": "anarquismo-verde",
     "name": "Anarquismo Verde",
     "category": "Esquerda Libertária",
-    "description": "Síntese de anarquismo com ecologia. Defende descentralização radical, comunidades ecológicas autônomas, tecnologia apropriada e oposição ao industrialismo. Politicamente: Anti-estatal | Economicamente: Comunitário/Ecológico | Socialmente: Ambientalista radical",
+    "description": "Anarquismo ecológico que une descentralização radical, comunidades autônomas, tecnologia apropriada, crítica ao industrialismo e organização social em harmonia com ecossistemas.",
     "vector": null
   },
   {
     "id": "anarcofeminismo",
     "name": "Anarcofeminismo",
     "category": "Esquerda Libertária",
-    "description": "Combinação de anarquismo com feminismo. Argumenta que Estado e patriarcado são formas de dominação interligadas. Figuras: Emma Goldman, Voltairine de Cleyre. Politicamente: Anti-estatal | Economicamente: Coletivista | Socialmente: Feminista radical",
+    "description": "Fusão de anarquismo e feminismo, rejeitando Estado, patriarcado e hierarquias de gênero em favor de autonomia, apoio mútuo e relações sociais igualitárias.",
     "vector": null
   },
   {
     "id": "anarquismo-queer",
     "name": "Anarquismo Queer",
     "category": "Esquerda Libertária",
-    "description": "Aplica princípios anarquistas à libertação LGBTQ+. Rejeita tanto a homofobia quanto a assimilação ao sistema heteronormativo. Defende que gênero e sexualidade são construções livremente exploráveis. Politicamente: Anti-estatal | Economicamente: Coletivista | Socialmente: Queer/Libertário",
+    "description": "Anarquismo voltado à libertação LGBTQ+, rejeitando Estado, normas de gênero, heteronormatividade e assimilação institucional em favor de autonomia corporal e sexual.",
     "vector": null
   },
   {
     "id": "anarcopacifismo",
     "name": "Anarcopacifismo",
     "category": "Esquerda Libertária",
-    "description": "Corrente anarquista que rejeita toda violência como meio político. Defende resistência não-violenta, desobediência civil e transformação social pacífica. Influenciado por Tolstoi e Gandhi. Politicamente: Anti-estatal/Pacifista | Economicamente: Coletivista | Socialmente: Não-violento",
+    "description": "Anarquismo não violento que rejeita Estado, guerra e coerção, defendendo desobediência civil, resistência pacífica, comunidades voluntárias e transformação social sem violência.",
     "vector": null
   },
   {
     "id": "anarquismo-cristao",
     "name": "Anarquismo Cristão",
     "category": "Esquerda Libertária",
-    "description": "Interpreta o cristianismo como incompatível com o Estado e a coerção. Defende não-violência, comunidade voluntária e rejeição de toda autoridade terrena. Principal teórico: Leon Tolstoi. Politicamente: Anti-estatal | Economicamente: Comunitário | Socialmente: Cristão/Pacifista",
+    "description": "Cristianismo antiestatal que rejeita coerção política, violência e autoridade terrena, defendendo comunidade voluntária, simplicidade, não violência e obediência ética ao evangelho.",
     "vector": null
   },
   {
     "id": "anarco-naturalismo",
     "name": "Anarco-Naturalismo",
     "category": "Esquerda Libertária",
-    "description": "Anarquismo que enfatiza a volta à natureza, nudismo, vegetarianismo e vida simples. Rejeita convenções sociais artificiais e a civilização industrial. Politicamente: Anti-estatal | Economicamente: Subsistência | Socialmente: Naturista",
+    "description": "Anarquismo naturista que valoriza vida simples, contato com a natureza, vegetarianismo, nudismo e rejeição a convenções artificiais da civilização industrial.",
     "vector": null
   },
   {
     "id": "anarcoprimitivismo",
     "name": "Anarcoprimitivismo",
     "category": "Esquerda Libertária",
-    "description": "Vertente radical que rejeita toda civilização e tecnologia. Defende retorno a sociedades de caçadores-coletores como único modo verdadeiramente livre e sustentável. Teórico: John Zerzan. Politicamente: Anti-civilização | Economicamente: Pré-agrícola | Socialmente: Primitivista",
+    "description": "Anarquismo radical que rejeita civilização, agricultura industrial e tecnologia moderna, defendendo retorno a formas de vida pré-estatais, simples e ecologicamente integradas.",
     "vector": null
   },
   {
     "id": "geoanarquismo",
     "name": "Geoanarquismo",
     "category": "Esquerda Libertária",
-    "description": "Combinação de anarquismo com georgismo. Rejeita o Estado mas defende que recursos naturais são comuns. Propõe que comunidades voluntárias cobrem rendas pela terra. Politicamente: Anti-estatal | Economicamente: Georgista/Comunal | Socialmente: Igualitarista",
+    "description": "Anarquismo georgista que rejeita Estado e monopólio fundiário, tratando terra e recursos naturais como comuns administrados por comunidades voluntárias.",
     "vector": null
   },
   {
     "id": "anarquismo-egoista",
     "name": "Anarquismo Egoísta",
     "category": "Esquerda Libertária",
-    "description": "Baseado no egoísmo filosófico de Max Stirner. Rejeita todas as abstrações (Estado, moralidade, sociedade) como 'fantasmas' que limitam o indivíduo. A 'união de egoístas' substitui a sociedade. Politicamente: Anti-estatal | Economicamente: Individualista | Socialmente: Niilista/Egoísta",
+    "description": "Anarquismo inspirado em Max Stirner, que rejeita Estado, moral abstrata e coletivos sagrados, defendendo autonomia individual e associações voluntárias entre egoístas.",
     "vector": null
   },
   {
     "id": "anarcocapitalismo",
     "name": "Anarcocapitalismo",
     "category": "Direita Libertária",
-    "description": "Defende eliminação total do Estado, com todas as funções (incluindo segurança e justiça) fornecidas pelo mercado. Propriedade privada absoluta e princípio da não-agressão como base. Contexto histórico: Teóricos: Murray Rothbard, David Friedman. Politicamente: Anti-estatal | Economicamente: Livre mercado absoluto | Socialmente: Individualista",
+    "description": "Doutrina que elimina o Estado e entrega segurança, justiça e serviços ao mercado, baseada em propriedade privada absoluta, contratos voluntários e não-agressão.",
     "vector": null
   },
   {
     "id": "minarquismo",
     "name": "Minarquismo",
     "category": "Direita Libertária",
-    "description": "Defende o Estado mínimo ('guarda-noturno') limitado a polícia, tribunais e defesa militar. Todas as outras funções devem ser privadas. Pilar do libertarianismo moderado. Associado a Robert Nozick e Ayn Rand. Politicamente: Estado mínimo | Economicamente: Livre mercado | Socialmente: Individualista",
+    "description": "Libertarianismo de Estado mínimo, limitado a polícia, tribunais e defesa, deixando educação, saúde, infraestrutura e economia à iniciativa privada e voluntária.",
     "vector": null
   },
   {
     "id": "austrolibertarianismo",
     "name": "Austrolibertarianismo",
     "category": "Direita Libertária",
-    "description": "Libertarianismo fundamentado na Escola Austríaca de economia (Mises, Hayek, Rothbard). Defende livre mercado radical, padrão-ouro, abolição do banco central, propriedade privada absoluta e rejeição de toda intervenção estatal. Politicamente: Anti-intervencionista | Economicamente: Escola Austríaca | Socialmente: Individualista",
+    "description": "Libertarianismo inspirado na Escola Austríaca, defensor de mercado radical, moeda forte, propriedade privada, empreendedorismo e rejeição à intervenção estatal e ao banco central.",
     "vector": null
   },
   {
     "id": "paleolibertarianismo",
     "name": "Paleolibertarianismo",
     "category": "Direita Libertária",
-    "description": "Combinação de libertarianismo com conservadorismo cultural. Defende livre mercado radical e Estado mínimo, mas também valores tradicionais, restrição à imigração e identidade cultural. Contexto histórico: Associado a Rothbard (fase tardia) e Hans-Hermann Hoppe. Politicamente: Anti-estatal/Conservador | Economicamente: Escola Austríaca | Socialmente: Conservador cultural",
+    "description": "Libertarianismo econômico radical unido a conservadorismo cultural, propriedade privada, Estado mínimo, comunidades tradicionais, restrição migratória e crítica ao igualitarismo progressista.",
     "vector": null
   },
   {
     "id": "hoppeanismo",
     "name": "Hoppeanismo",
     "category": "Direita Libertária",
-    "description": "Vertente libertária associada a Hans-Hermann Hoppe. Combina anarcocapitalismo ou Estado mínimo extremo com crítica radical à democracia, defesa de propriedade privada absoluta, comunidades por contrato e conservadorismo cultural rigoroso. Politicamente: Antidemocrático/Proprietarista | Economicamente: Livre mercado absoluto | Socialmente: Conservador radical",
+    "description": "Libertarianismo antidemocrático que combina propriedade privada absoluta, comunidades contratuais, livre mercado extremo, ordem cultural conservadora e crítica radical à democracia.",
     "vector": null
   },
   {
     "id": "libertarianismo-de-chicago",
     "name": "Libertarianismo de Chicago",
     "category": "Direita Libertária",
-    "description": "Libertarianismo baseado na Escola de Chicago (Milton Friedman). Aceita um Estado um pouco maior que o austrolibertarianismo: banco central (com regras), alguma rede de segurança (imposto negativo). Contexto histórico: Mais pragmático. Politicamente: Estado limitado | Economicamente: Monetarista/Mercado | Socialmente: Pragmático",
+    "description": "Libertarianismo pragmático e monetarista, favorável a mercados livres, regras econômicas estáveis, Estado limitado e reformas como vouchers ou imposto negativo.",
     "vector": null
   },
   {
     "id": "capitalismo",
     "name": "Capitalismo",
     "category": "Direita Libertária",
-    "description": "Sistema econômico baseado em propriedade privada, livre mercado, lucro, competição e investimento privado. Historicamente se consolidou com a industrialização moderna e foi defendido por autores como Adam Smith, Ludwig von Mises, Friedrich Hayek e Milton Friedman. Contexto histórico: Valoriza iniciativa individual, concorrência, inovação e normas sociais favoráveis ao empreendedorismo. Politicamente: Pró-mercado | Economicamente: Laissez-faire | Socialmente: Competitivo",
+    "description": "Sistema econômico baseado em propriedade privada, investimento, lucro, competição e mercados, valorizando iniciativa individual, inovação, acumulação de capital e trocas voluntárias.",
     "vector": null
   },
   {
     "id": "objetivismo",
     "name": "Objetivismo",
     "category": "Direita Libertária",
-    "description": "Filosofia de Ayn Rand aplicada à política. Defende razão, individualismo, egoísmo racional, direitos individuais, capitalismo laissez-faire e Estado limitado à proteção contra força e fraude. Contexto histórico: Rejeita coletivismo, altruísmo obrigatório e intervenção econômica. Politicamente: Constitucional/Individualista | Economicamente: Capitalismo laissez-faire | Socialmente: Secular individualista",
+    "description": "Filosofia de Ayn Rand que defende razão, egoísmo racional, direitos individuais, capitalismo laissez-faire e Estado limitado à proteção contra força e fraude.",
     "vector": null
   },
   {
     "id": "ecocapitalismo",
     "name": "Ecocapitalismo",
     "category": "Direita Libertária",
-    "description": "Defende que o capitalismo pode resolver problemas ambientais através de mecanismos de mercado: precificação de carbono, mercados de emissões, inovação verde. Crescimento e sustentabilidade seriam compatíveis. Politicamente: Liberal | Economicamente: Capitalismo verde | Socialmente: Ambientalista moderado",
+    "description": "Visão que usa mercados, inovação, propriedade privada e preços ambientais para resolver problemas ecológicos, conciliando crescimento econômico e sustentabilidade por incentivos.",
     "vector": null
   },
   {
     "id": "ecoconservadorismo",
     "name": "Ecoconservadorismo",
     "category": "Direita Libertária",
-    "description": "Conservadorismo com compromisso ambiental. Defende proteção da natureza como dever de conservação (stewardship), usando princípios de mercado e tradição. Politicamente: Conservador | Economicamente: Mercado + stewardship | Socialmente: Conservador/Ecológico",
+    "description": "Conservadorismo ambiental que trata preservação da natureza como dever moral de continuidade, combinando tradição, propriedade, responsabilidade local e prudência ecológica.",
     "vector": null
   },
   {
     "id": "econacionalismo",
     "name": "Econacionalismo",
     "category": "Direita Libertária",
-    "description": "Fusão de ecologia com nacionalismo. Defende proteção ambiental como proteção do território e patrimônio nacional. Pode combinar imigração restrita com conservação ambiental. Politicamente: Nacionalista | Economicamente: Mercado + proteção | Socialmente: Nacionalista/Ecológico",
+    "description": "Nacionalismo ambiental que vincula conservação da natureza à defesa do território, patrimônio nacional, soberania ecológica e controle de fronteiras ou recursos.",
     "vector": null
   },
   {
     "id": "agorismo",
     "name": "Agorismo",
     "category": "Direita Libertária",
-    "description": "Estratégia libertária de Samuel Konkin III. Defende a contra-economia (mercados negro e cinza) como método de minar o Estado. Rejeita participação eleitoral. Politicamente: Contra-econômico | Economicamente: Mercado negro/cinza | Socialmente: Anti-político",
+    "description": "Estratégia libertária que usa mercados negros e cinzentos, contra-economia e desobediência econômica para enfraquecer o Estado sem disputa eleitoral.",
     "vector": null
   },
   {
     "id": "criptoanarquismo",
     "name": "Criptoanarquismo",
     "category": "Direita Libertária",
-    "description": "Usa criptografia e tecnologia para criar espaços livres do Estado. Defende privacidade absoluta, moedas digitais (Bitcoin), contratos inteligentes e mercados descentralizados. Timothy May (1988). Politicamente: Anti-estatal/Digital | Economicamente: Cripto/Descentralizado | Socialmente: Cypherpunk",
+    "description": "Anarquismo digital que usa criptografia, privacidade, moedas descentralizadas e contratos inteligentes para criar espaços econômicos e comunicacionais fora do controle estatal.",
     "vector": null
   },
   {
     "id": "anarco-transhumanismo",
     "name": "Anarco-Transhumanismo",
     "category": "Direita Libertária",
-    "description": "Combina anarquismo com transhumanismo. Defende que tecnologia e biotecnologia podem reduzir a necessidade do Estado e transcender limitações humanas. Politicamente: Anti-estatal | Economicamente: Tecnocapitalista | Socialmente: Transhumanista",
+    "description": "Fusão de anarquismo e transhumanismo, defendendo tecnologia, biotecnologia e redes descentralizadas como meios de ampliar autonomia e reduzir coerção estatal.",
     "vector": null
   },
   {
     "id": "libertarianismo-bleeding-heart",
     "name": "Libertarianismo Bleeding-Heart",
     "category": "Direita Libertária",
-    "description": "Vertente libertária que integra preocupação com justiça social. Argumenta que o livre mercado é o melhor caminho para ajudar os mais pobres. Politicamente: Estado mínimo | Economicamente: Livre mercado | Socialmente: Compassivo",
+    "description": "Libertarianismo sensível à justiça social, argumentando que mercados livres, propriedade privada e instituições voluntárias são os melhores meios de ajudar os vulneráveis.",
     "vector": null
   },
   {
     "id": "libertarianismo-nacional",
     "name": "Libertarianismo Nacional",
     "category": "Direita Libertária",
-    "description": "Combina libertarianismo econômico com nacionalismo. Defende livre mercado interno mas controle de fronteiras, soberania nacional e identidade cultural. Politicamente: Estado mínimo/Soberanista | Economicamente: Livre mercado | Socialmente: Nacionalista",
+    "description": "Libertarianismo econômico combinado com soberania nacional, mercado interno livre, fronteiras controladas, identidade cultural e rejeição a instituições globalistas.",
     "vector": null
   },
   {
     "id": "monarquismo-libertario",
     "name": "Monarquismo Libertário",
     "category": "Direita Libertária",
-    "description": "Defende monarquia como forma mais libertária de governo. Argumenta (via Hoppe) que o monarca, como 'proprietário' do reino, tem incentivo de longo prazo para preservar liberdade e prosperidade. Politicamente: Monárquico/Antidemocrata | Economicamente: Livre mercado | Socialmente: Tradicionalista",
+    "description": "Visão que considera a monarquia mais compatível com liberdade e propriedade, por supor incentivos de longo prazo, governo limitado e ordem tradicional.",
     "vector": null
   },
   {
     "id": "conservadorismo-libertario",
     "name": "Conservadorismo Libertário",
     "category": "Direita Libertária",
-    "description": "Fusão de libertarianismo com conservadorismo. Defende livre mercado, governo limitado e valores tradicionais como complementares. Liberdade floresce em sociedades com instituições morais fortes. Politicamente: Estado limitado | Economicamente: Livre mercado | Socialmente: Conservador",
+    "description": "Síntese de Estado limitado, livre mercado e valores tradicionais, defendendo que liberdade econômica depende de família, religião, comunidade e normas morais estáveis.",
     "vector": null
   },
   {
     "id": "feminismo-libertario",
     "name": "Feminismo Libertário",
     "category": "Direita Libertária",
-    "description": "Aplica princípios libertários à igualdade de gênero. Argumenta que o Estado, não o mercado, é a principal fonte de opressão das mulheres. Figura: Wendy McElroy. Politicamente: Estado mínimo | Economicamente: Livre mercado | Socialmente: Feminista individualista",
+    "description": "Feminismo individualista que aplica princípios libertários à igualdade de gênero, criticando coerção estatal e defendendo escolha, mercado, propriedade e autonomia pessoal.",
     "vector": null
   },
   {
     "id": "pacifismo-libertario",
     "name": "Pacifismo Libertário",
     "category": "Direita Libertária",
-    "description": "Vertente libertária que defende não-intervencionismo radical e oposição a toda guerra. Guerras são a 'saúde do Estado'. Associada a Rothbard e Ron Paul. Politicamente: Não-intervencionista | Economicamente: Livre mercado | Socialmente: Pacifista",
+    "description": "Libertarianismo anti-guerra que vê intervenção militar, alistamento e imperialismo como expansões do Estado, defendendo paz, comércio voluntário e não-intervencionismo.",
     "vector": null
   },
   {
     "id": "anarcoconservadorismo",
     "name": "Anarcoconservadorismo",
     "category": "Direita Libertária",
-    "description": "Combinação de anarquismo com conservadorismo. Defende abolição do Estado enquanto mantém valores tradicionais, comunidades orgânicas e instituições sociais (família, igreja). Politicamente: Anti-estatal | Economicamente: Livre mercado | Socialmente: Conservador/Comunitário",
+    "description": "Anarquismo de orientação conservadora, que rejeita o Estado mas preserva família, religião, costumes, comunidades orgânicas e autoridade social voluntária.",
     "vector": null
   },
   {
     "id": "anarcodistributismo",
     "name": "Anarcodistributismo",
     "category": "Direita Libertária",
-    "description": "Fusão de anarquismo com distributismo católico. Defende ampla distribuição de propriedade produtiva, cooperativismo e economia local sem Estado. Baseado em Chesterton e Belloc. Politicamente: Anti-estatal | Economicamente: Distributista | Socialmente: Católico/Comunitário",
+    "description": "Fusão de anarquismo e distributismo cristão, defendendo propriedade produtiva espalhada, cooperativas, economia local, família e comunidade sem Estado central.",
     "vector": null
   },
   {
     "id": "anarcoindividualismo",
     "name": "Anarcoindividualismo",
     "category": "Direita Libertária",
-    "description": "Anarquismo centrado no indivíduo soberano. Defende liberdade absoluta contra todo coletivo e toda autoridade. Influenciado por Stirner, Tucker e Spooner. Politicamente: Anti-estatal | Economicamente: Mercado individualista | Socialmente: Individualista radical",
+    "description": "Anarquismo centrado no indivíduo soberano, rejeitando Estado, autoridade coletiva e coerção social em favor de contratos, autonomia e liberdade pessoal radical.",
     "vector": null
   },
   {
     "id": "centrismo",
     "name": "Centrismo",
     "category": "Centro",
-    "description": "Posição política que busca equilíbrio entre reformas e conservação, combinando elementos moderados de diferentes correntes conforme o contexto institucional, econômico e social. Historicamente aparece em partidos liberais, democrata-cristãos, social-democratas moderados e coalizões pragmáticas. Politicamente: Moderado/Pragmático | Economicamente: Misto | Socialmente: Moderado",
+    "description": "Postura moderada e pragmática que combina reformas graduais, estabilidade institucional e elementos de diferentes tradições conforme contexto, evitando extremos ideológicos rígidos.",
     "vector": null
   },
   {
     "id": "trabalhismo",
     "name": "Trabalhismo",
     "category": "Esquerda Libertária",
-    "description": "Corrente política centrada nos direitos dos trabalhadores, sindicatos e distribuição de renda. Defende Estado de bem-estar social, proteção trabalhista, negociação coletiva e participação popular nas decisões econômicas. No Brasil, associado ao trabalhismo getulista, ao PTB histórico e às vertentes do PT, PSB e PDT que valorizam a identidade laboral e os direitos sindicais. Politicamente: Democrático/Parlamentar | Economicamente: Welfare/Trabalhista | Socialmente: Progressista moderado",
+    "description": "Corrente centrada em direitos dos trabalhadores, sindicatos, salário digno, proteção social e participação popular, buscando justiça econômica por meios democráticos e reformistas.",
     "vector": null
   },
   {
     "id": "positivismo",
     "name": "Positivismo",
     "category": "Centro",
-    "description": "Filosofia política derivada de Auguste Comte que defende o governo pela ciência, pela técnica e pela razão, em substituição à religião e à metafísica. No Brasil, moldou a República de 1889 e o lema 'Ordem e Progresso': Estado forte, laicismo radical, planejamento racional e modernização acelerada sob tutela de uma elite técnica. Associado ao castilhismo gaúcho e às raízes do getulismo. Politicamente: Republicano tecnocrático | Economicamente: Planejamento estatal moderado | Socialmente: Laico/Modernizador",
+    "description": "Filosofia política que valoriza ciência, técnica, ordem e progresso, defendendo governo racional, laicismo, planejamento estatal e modernização guiada por elites técnicas.",
     "vector": null
   },
   {
     "id": "conservadorismo-secular",
     "name": "Conservadorismo Secular",
     "category": "Centro",
-    "description": "Corrente conservadora que defende ordem, tradição e mercado livre sem recorrer a argumentos religiosos. Rejeita a influência da Igreja na política pública e nas leis, separando rigorosamente o espaço laico do espaço confessional. Valoriza disciplina fiscal, identidade nacional, segurança pública e instituições fortes sem depender de fundamentos teológicos. Presente no gaullismo, no thatcherismo e em partidos conservadores seculares europeus. Politicamente: Democrático/Conservador | Economicamente: Mercado liberal | Socialmente: Laico/Tradicional",
+    "description": "Conservadorismo laico que defende ordem, tradição, segurança, identidade nacional e mercado sem base religiosa, separando política pública de autoridade confessional.",
     "vector": null
   },
   {
     "id": "progressismo-cristao",
     "name": "Progressismo Cristão",
     "category": "Centro",
-    "description": "Corrente que fundamenta o progressismo social nos ensinamentos de Cristo: acolhida ao migrante, cuidado com os pobres, justiça racial e inclusão. Influenciada pela Teologia da Libertação, pelo magistério social do Papa Francisco e por comunidades protestantes afirmativas. Aceita democracia e mercado, mas prioriza solidariedade, redistribuição e dignidade humana como mandamentos evangélicos. Distingue-se do socialismo cristão por manter postura mais reformista e do conservadorismo cristão por abraçar pautas progressistas de gênero e raça. Politicamente: Democrático/Comunitário | Economicamente: Redistributivo moderado | Socialmente: Progressista cristão",
+    "description": "Progressismo inspirado no cristianismo, voltado a justiça social, acolhida aos vulneráveis, redistribuição, inclusão e dignidade humana por meio de reformas democráticas.",
+    "vector": null
+  },
+  {
+    "id": "autoritarismo-modernizador",
+    "name": "Autoritarismo Modernizador",
+    "category": "Direita Autoritária",
+    "description": "Autoritarismo secular e nacional modernizador, com executivo forte, codificação legal uniforme, capitalismo de Estado, militarismo e meritocracia administrativa guiada por razão técnica.",
+    "vector": null
+  },
+  {
+    "id": "desenvolvimentismo-de-estado",
+    "name": "Desenvolvimentismo de Estado",
+    "category": "Esquerda Autoritária",
+    "description": "Socialismo ou estatismo desenvolvimentista voltado à industrialização, planejamento central, propriedade estratégica estatal e modernização tecnológica conduzida por partido ou burocracia técnica.",
+    "vector": null
+  },
+  {
+    "id": "atlantismo",
+    "name": "Atlantismo",
+    "category": "Direita Autoritária",
+    "description": "Doutrina que combina democracia liberal e livre mercado internos com intervencionismo militar externo, alianças hegemônicas, livre comércio global e projeção armada de poder.",
+    "vector": null
+  },
+  {
+    "id": "federalismo-privado",
+    "name": "Federalismo Privado",
+    "category": "Direita Libertária",
+    "description": "Sistema de cidades-Estado privadas concorrentes, governadas como corporações soberanas, com cidadania contratual, livre saída entre jurisdições e governança tecnológica eficiente.",
     "vector": null
   }
 ]
