@@ -106,7 +106,6 @@ class IdeologyMatcherServiceTest {
         assertThat(matches.get(0).category()).isEqualTo("Direita Autoritária");
         assertThat(matches.get(0).ideologyId()).isIn(
                 "alt-lite",
-                "darwinismo-social",
                 "aceleracionismo-de-direita",
                 "capitalismo-autoritario",
                 "alt-right",
