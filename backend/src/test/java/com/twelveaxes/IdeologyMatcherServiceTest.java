@@ -109,7 +109,8 @@ class IdeologyMatcherServiceTest {
                 "aceleracionismo-de-direita",
                 "capitalismo-autoritario",
                 "alt-right",
-                "neorreacionarismo"
+                "neorreacionarismo",
+                "neocameralismo"
         );
         assertThat(matches).extracting(IdeologyMatch::ideologyId)
                 .doesNotContain("ambientalismo", "anarco-fascismo");
