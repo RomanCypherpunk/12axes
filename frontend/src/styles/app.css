@@ -1265,6 +1265,128 @@
   margin-top: 4px;
 }
 
+.country-match-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 100%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.country-match-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--grad-accent);
+}
+
+.country-match-visual {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--ink-50);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.country-match-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.country-match-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.country-match-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+}
+
+.country-match-kicker {
+  display: inline-flex;
+  margin-bottom: 8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.country-match-heading h2 {
+  font-size: clamp(2rem, 2.4vw + 0.7rem, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+}
+
+.country-match-score {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border: 1px solid rgba(0, 154, 56, 0.18);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.country-match-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.country-match-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-50);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.country-match-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.country-match-note {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .results-section {
   position: relative;
   padding: 28px clamp(20px, 3vw, 36px);
@@ -1544,6 +1666,66 @@
 
 .export-ideology-description {
   margin: 6px 0 0 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.export-country-card {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 36px 40px;
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+.export-country-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-strong);
+  background: #f8fafc;
+}
+
+.export-country-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export-country-kicker,
+.export-country-meta {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.export-country-meta {
+  color: var(--text-muted);
+}
+
+.export-country-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--text-strong);
+  line-height: 1.05;
+}
+
+.export-country-description {
+  margin: 8px 0 0 0;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
@@ -1957,6 +2139,32 @@
 
   .results-section {
     padding: 18px;
+  }
+
+  .country-match-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .country-match-visual {
+    max-width: none;
+    border-radius: var(--radius-md);
+  }
+
+  .country-match-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .country-match-heading h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .country-match-content p {
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 
   .axis-rows {

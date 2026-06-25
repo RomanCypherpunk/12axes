@@ -3,6 +3,7 @@ import { selectAndBalanceQuestions } from './utils/quizSelection';
 import { toPng } from 'html-to-image';
 import { AxisResultBar } from './components/AxisResultBar';
 import { AxisIcon } from './components/AxisIcon';
+import { CountryMatchCard } from './components/CountryMatchCard';
 import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
@@ -187,6 +188,7 @@ export default function App() {
       const { stage: builtStage, target } = buildExportNode(result, axesSection);
       stage = builtStage;
       document.body.appendChild(stage);
+      await waitForImages(target);
 
       const dataUrl = await toPng(target, {
         backgroundColor: '#F7F7F2',
@@ -464,6 +466,10 @@ export default function App() {
             </div>
           </section>
 
+          <div className="fade-up d-5">
+            <CountryMatchCard match={result.topCountryMatch} />
+          </div>
+
           <section className="results-section fade-up d-5">
             <div className="section-heading">
               <span className="eyebrow">Proximidade ideológica</span>
@@ -558,9 +564,61 @@ function buildExportNode(
     el.classList.remove('fade-up');
   });
 
+  const countryCard = buildExportCountryCard(result.topCountryMatch);
+
   card.append(category, name, description);
-  target.append(card, axesClone);
+  target.append(card, axesClone, countryCard);
   stage.append(target);
 
   return { stage, target };
+}
+
+function buildExportCountryCard(country: QuizResult['topCountryMatch']) {
+  const card = document.createElement('article');
+  card.className = 'export-country-card';
+
+  const image = document.createElement('img');
+  image.src = country.flagPath;
+  const isStrictFlag = !country.flagKind || country.flagKind === 'official-flag' || country.flagKind === 'historical-flag';
+  image.alt = `${isStrictFlag ? 'Bandeira' : 'Bandeira / símbolo histórico'} de ${country.name}`;
+
+  const text = document.createElement('div');
+  text.className = 'export-country-text';
+
+  const kicker = document.createElement('span');
+  kicker.className = 'export-country-kicker';
+  kicker.textContent = 'País mais compatível';
+
+  const name = document.createElement('h2');
+  name.className = 'export-country-name';
+  name.textContent = country.name;
+
+  const meta = document.createElement('span');
+  meta.className = 'export-country-meta';
+  meta.textContent = country.historical && country.period
+    ? `${country.category} · ${country.period}`
+    : country.category;
+
+  const description = document.createElement('p');
+  description.className = 'export-country-description';
+  description.textContent = country.flagNote
+    ? `${country.description} ${country.flagNote}`
+    : country.description;
+
+  text.append(kicker, name, meta, description);
+  card.append(image, text);
+  return card;
+}
+
+function waitForImages(root: HTMLElement) {
+  const images = Array.from(root.querySelectorAll('img'));
+  return Promise.all(images.map((image) => {
+    if (image.complete) {
+      return Promise.resolve();
+    }
+    return new Promise<void>((resolve) => {
+      image.addEventListener('load', () => resolve(), { once: true });
+      image.addEventListener('error', () => resolve(), { once: true });
+    });
+  }));
 }

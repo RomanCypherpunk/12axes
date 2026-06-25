@@ -1,9 +1,11 @@
 package com.twelveaxes.controller;
 
+import com.twelveaxes.model.Country;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
+import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
@@ -24,15 +26,18 @@ public class QuizController {
     private final QuizDataService dataService;
     private final ScoringService scoringService;
     private final IdeologyMatcherService matcherService;
+    private final CountryMatcherService countryMatcherService;
 
     public QuizController(
             QuizDataService dataService,
             ScoringService scoringService,
-            IdeologyMatcherService matcherService
+            IdeologyMatcherService matcherService,
+            CountryMatcherService countryMatcherService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
         this.matcherService = matcherService;
+        this.countryMatcherService = countryMatcherService;
     }
 
     @GetMapping("/api/quiz")
@@ -45,7 +50,8 @@ public class QuizController {
     public QuizResult results(@Valid @RequestBody ResultRequest request) {
         var axes = scoringService.score(request);
         var matches = matcherService.findMatches(axes);
-        return new QuizResult(axes, matches.getFirst(), matches);
+        var topCountryMatch = countryMatcherService.findTopMatch(axes);
+        return new QuizResult(axes, matches.getFirst(), matches, topCountryMatch);
     }
 
     @GetMapping("/api/ideologies")
@@ -59,5 +65,18 @@ public class QuizController {
                 .filter(ideology -> ideology.id().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ideologia não encontrada"));
+    }
+
+    @GetMapping("/api/countries")
+    public List<Country> countries() {
+        return dataService.getCountries();
+    }
+
+    @GetMapping("/api/countries/{id}")
+    public Country country(@PathVariable String id) {
+        return dataService.getCountries().stream()
+                .filter(country -> country.id().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PaÃ­s nÃ£o encontrado"));
     }
 }

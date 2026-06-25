@@ -1,0 +1,852 @@
+[
+  {
+    "countryId": "brasil",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 73,
+      "poder": 47,
+      "imigracao": 44,
+      "diplomacia": 28,
+      "intervencao": 59,
+      "economia": 55,
+      "controle": 58,
+      "comercio": 55,
+      "religiao": 38,
+      "moral": 54,
+      "tecnologia": 58
+    }
+  },
+  {
+    "countryId": "estados-unidos",
+    "vector": {
+      "estrutura": 84,
+      "representacao": 77,
+      "poder": 29,
+      "imigracao": 44,
+      "diplomacia": 68,
+      "intervencao": 51,
+      "economia": 24,
+      "controle": 27,
+      "comercio": 26,
+      "religiao": 42,
+      "moral": 59,
+      "tecnologia": 86
+    }
+  },
+  {
+    "countryId": "mexico",
+    "vector": {
+      "estrutura": 69,
+      "representacao": 70,
+      "poder": 46,
+      "imigracao": 48,
+      "diplomacia": 28,
+      "intervencao": 56,
+      "economia": 53,
+      "controle": 52,
+      "comercio": 56,
+      "religiao": 40,
+      "moral": 57,
+      "tecnologia": 60
+    }
+  },
+  {
+    "countryId": "chile",
+    "vector": {
+      "estrutura": 33,
+      "representacao": 82,
+      "poder": 28,
+      "imigracao": 38,
+      "diplomacia": 14,
+      "intervencao": 67,
+      "economia": 58,
+      "controle": 46,
+      "comercio": 46,
+      "religiao": 54,
+      "moral": 82,
+      "tecnologia": 65
+    }
+  },
+  {
+    "countryId": "bolivia",
+    "vector": {
+      "estrutura": 48,
+      "representacao": 68,
+      "poder": 41,
+      "imigracao": 46,
+      "diplomacia": 32,
+      "intervencao": 56,
+      "economia": 53,
+      "controle": 57,
+      "comercio": 52,
+      "religiao": 43,
+      "moral": 58,
+      "tecnologia": 66
+    }
+  },
+  {
+    "countryId": "venezuela",
+    "vector": {
+      "estrutura": 34,
+      "representacao": 23,
+      "poder": 86,
+      "imigracao": 76,
+      "diplomacia": 73,
+      "intervencao": 13,
+      "economia": 60,
+      "controle": 62,
+      "comercio": 69,
+      "religiao": 21,
+      "moral": 17,
+      "tecnologia": 66
+    }
+  },
+  {
+    "countryId": "cuba",
+    "vector": {
+      "estrutura": 24,
+      "representacao": 16,
+      "poder": 88,
+      "imigracao": 65,
+      "diplomacia": 51,
+      "intervencao": 26,
+      "economia": 87,
+      "controle": 84,
+      "comercio": 74,
+      "religiao": 84,
+      "moral": 54,
+      "tecnologia": 60
+    }
+  },
+  {
+    "countryId": "costa-rica",
+    "vector": {
+      "estrutura": 43,
+      "representacao": 88,
+      "poder": 29,
+      "imigracao": 42,
+      "diplomacia": 15,
+      "intervencao": 70,
+      "economia": 42,
+      "controle": 33,
+      "comercio": 27,
+      "religiao": 58,
+      "moral": 68,
+      "tecnologia": 77
+    }
+  },
+  {
+    "countryId": "suica",
+    "vector": {
+      "estrutura": 92,
+      "representacao": 92,
+      "poder": 25,
+      "imigracao": 59,
+      "diplomacia": 12,
+      "intervencao": 87,
+      "economia": 35,
+      "controle": 37,
+      "comercio": 25,
+      "religiao": 47,
+      "moral": 55,
+      "tecnologia": 77
+    }
+  },
+  {
+    "countryId": "suecia",
+    "vector": {
+      "estrutura": 37,
+      "representacao": 90,
+      "poder": 23,
+      "imigracao": 32,
+      "diplomacia": 17,
+      "intervencao": 82,
+      "economia": 69,
+      "controle": 61,
+      "comercio": 26,
+      "religiao": 76,
+      "moral": 84,
+      "tecnologia": 76
+    }
+  },
+  {
+    "countryId": "alemanha",
+    "vector": {
+      "estrutura": 83,
+      "representacao": 82,
+      "poder": 34,
+      "imigracao": 51,
+      "diplomacia": 52,
+      "intervencao": 48,
+      "economia": 31,
+      "controle": 26,
+      "comercio": 28,
+      "religiao": 44,
+      "moral": 60,
+      "tecnologia": 84
+    }
+  },
+  {
+    "countryId": "franca",
+    "vector": {
+      "estrutura": 24,
+      "representacao": 83,
+      "poder": 37,
+      "imigracao": 48,
+      "diplomacia": 50,
+      "intervencao": 66,
+      "economia": 56,
+      "controle": 45,
+      "comercio": 31,
+      "religiao": 66,
+      "moral": 65,
+      "tecnologia": 74
+    }
+  },
+  {
+    "countryId": "reino-unido",
+    "vector": {
+      "estrutura": 38,
+      "representacao": 82,
+      "poder": 26,
+      "imigracao": 38,
+      "diplomacia": 48,
+      "intervencao": 68,
+      "economia": 34,
+      "controle": 39,
+      "comercio": 23,
+      "religiao": 58,
+      "moral": 72,
+      "tecnologia": 76
+    }
+  },
+  {
+    "countryId": "hungria",
+    "vector": {
+      "estrutura": 51,
+      "representacao": 55,
+      "poder": 44,
+      "imigracao": 68,
+      "diplomacia": 45,
+      "intervencao": 43,
+      "economia": 36,
+      "controle": 41,
+      "comercio": 43,
+      "religiao": 26,
+      "moral": 28,
+      "tecnologia": 63
+    }
+  },
+  {
+    "countryId": "russia",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 24,
+      "poder": 81,
+      "imigracao": 76,
+      "diplomacia": 70,
+      "intervencao": 18,
+      "economia": 35,
+      "controle": 57,
+      "comercio": 67,
+      "religiao": 22,
+      "moral": 20,
+      "tecnologia": 60
+    }
+  },
+  {
+    "countryId": "japao",
+    "vector": {
+      "estrutura": 56,
+      "representacao": 68,
+      "poder": 44,
+      "imigracao": 72,
+      "diplomacia": 44,
+      "intervencao": 43,
+      "economia": 42,
+      "controle": 43,
+      "comercio": 43,
+      "religiao": 62,
+      "moral": 30,
+      "tecnologia": 60
+    }
+  },
+  {
+    "countryId": "coreia-do-sul",
+    "vector": {
+      "estrutura": 39,
+      "representacao": 66,
+      "poder": 48,
+      "imigracao": 65,
+      "diplomacia": 74,
+      "intervencao": 14,
+      "economia": 32,
+      "controle": 41,
+      "comercio": 40,
+      "religiao": 48,
+      "moral": 39,
+      "tecnologia": 81
+    }
+  },
+  {
+    "countryId": "china",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 19,
+      "poder": 86,
+      "imigracao": 65,
+      "diplomacia": 59,
+      "intervencao": 31,
+      "economia": 64,
+      "controle": 70,
+      "comercio": 72,
+      "religiao": 86,
+      "moral": 61,
+      "tecnologia": 61
+    }
+  },
+  {
+    "countryId": "coreia-do-norte",
+    "vector": {
+      "estrutura": 24,
+      "representacao": 16,
+      "poder": 90,
+      "imigracao": 63,
+      "diplomacia": 82,
+      "intervencao": 34,
+      "economia": 87,
+      "controle": 86,
+      "comercio": 71,
+      "religiao": 88,
+      "moral": 60,
+      "tecnologia": 64
+    }
+  },
+  {
+    "countryId": "india",
+    "vector": {
+      "estrutura": 64,
+      "representacao": 73,
+      "poder": 46,
+      "imigracao": 69,
+      "diplomacia": 43,
+      "intervencao": 42,
+      "economia": 41,
+      "controle": 39,
+      "comercio": 45,
+      "religiao": 28,
+      "moral": 36,
+      "tecnologia": 65
+    }
+  },
+  {
+    "countryId": "singapura",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 36,
+      "poder": 77,
+      "imigracao": 59,
+      "diplomacia": 28,
+      "intervencao": 41,
+      "economia": 19,
+      "controle": 42,
+      "comercio": 17,
+      "religiao": 48,
+      "moral": 34,
+      "tecnologia": 94
+    }
+  },
+  {
+    "countryId": "vietna",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 20,
+      "poder": 74,
+      "imigracao": 65,
+      "diplomacia": 37,
+      "intervencao": 32,
+      "economia": 58,
+      "controle": 69,
+      "comercio": 53,
+      "religiao": 71,
+      "moral": 49,
+      "tecnologia": 69
+    }
+  },
+  {
+    "countryId": "indonesia",
+    "vector": {
+      "estrutura": 53,
+      "representacao": 69,
+      "poder": 56,
+      "imigracao": 52,
+      "diplomacia": 44,
+      "intervencao": 37,
+      "economia": 52,
+      "controle": 56,
+      "comercio": 52,
+      "religiao": 33,
+      "moral": 43,
+      "tecnologia": 61
+    }
+  },
+  {
+    "countryId": "turquia",
+    "vector": {
+      "estrutura": 33,
+      "representacao": 33,
+      "poder": 81,
+      "imigracao": 77,
+      "diplomacia": 69,
+      "intervencao": 11,
+      "economia": 34,
+      "controle": 61,
+      "comercio": 66,
+      "religiao": 24,
+      "moral": 19,
+      "tecnologia": 65
+    }
+  },
+  {
+    "countryId": "ira",
+    "vector": {
+      "estrutura": 19,
+      "representacao": 14,
+      "poder": 83,
+      "imigracao": 68,
+      "diplomacia": 66,
+      "intervencao": 18,
+      "economia": 55,
+      "controle": 67,
+      "comercio": 70,
+      "religiao": 6,
+      "moral": 2,
+      "tecnologia": 55
+    }
+  },
+  {
+    "countryId": "arabia-saudita",
+    "vector": {
+      "estrutura": 14,
+      "representacao": 9,
+      "poder": 87,
+      "imigracao": 60,
+      "diplomacia": 47,
+      "intervencao": 26,
+      "economia": 30,
+      "controle": 62,
+      "comercio": 44,
+      "religiao": 1,
+      "moral": 2,
+      "tecnologia": 61
+    }
+  },
+  {
+    "countryId": "israel",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 74,
+      "poder": 45,
+      "imigracao": 71,
+      "diplomacia": 72,
+      "intervencao": 43,
+      "economia": 44,
+      "controle": 41,
+      "comercio": 45,
+      "religiao": 26,
+      "moral": 35,
+      "tecnologia": 66
+    }
+  },
+  {
+    "countryId": "afeganistao",
+    "vector": {
+      "estrutura": 31,
+      "representacao": 19,
+      "poder": 85,
+      "imigracao": 82,
+      "diplomacia": 71,
+      "intervencao": 16,
+      "economia": 34,
+      "controle": 57,
+      "comercio": 67,
+      "religiao": 21,
+      "moral": 21,
+      "tecnologia": 59
+    }
+  },
+  {
+    "countryId": "africa-do-sul",
+    "vector": {
+      "estrutura": 51,
+      "representacao": 69,
+      "poder": 54,
+      "imigracao": 59,
+      "diplomacia": 42,
+      "intervencao": 40,
+      "economia": 47,
+      "controle": 49,
+      "comercio": 52,
+      "religiao": 34,
+      "moral": 42,
+      "tecnologia": 59
+    }
+  },
+  {
+    "countryId": "nigeria",
+    "vector": {
+      "estrutura": 64,
+      "representacao": 66,
+      "poder": 56,
+      "imigracao": 56,
+      "diplomacia": 38,
+      "intervencao": 37,
+      "economia": 54,
+      "controle": 52,
+      "comercio": 49,
+      "religiao": 34,
+      "moral": 42,
+      "tecnologia": 65
+    }
+  },
+  {
+    "countryId": "ruanda",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 25,
+      "poder": 79,
+      "imigracao": 71,
+      "diplomacia": 72,
+      "intervencao": 23,
+      "economia": 55,
+      "controle": 69,
+      "comercio": 68,
+      "religiao": 19,
+      "moral": 18,
+      "tecnologia": 38
+    }
+  },
+  {
+    "countryId": "atenas-democratica",
+    "vector": {
+      "estrutura": 81,
+      "representacao": 77,
+      "poder": 43,
+      "imigracao": 62,
+      "diplomacia": 63,
+      "intervencao": 39,
+      "economia": 41,
+      "controle": 50,
+      "comercio": 36,
+      "religiao": 21,
+      "moral": 32,
+      "tecnologia": 35
+    }
+  },
+  {
+    "countryId": "esparta",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 20,
+      "poder": 86,
+      "imigracao": 87,
+      "diplomacia": 89,
+      "intervencao": 8,
+      "economia": 50,
+      "controle": 65,
+      "comercio": 76,
+      "religiao": 11,
+      "moral": 9,
+      "tecnologia": 22
+    }
+  },
+  {
+    "countryId": "imperio-romano",
+    "vector": {
+      "estrutura": 14,
+      "representacao": 16,
+      "poder": 84,
+      "imigracao": 73,
+      "diplomacia": 92,
+      "intervencao": 7,
+      "economia": 38,
+      "controle": 59,
+      "comercio": 57,
+      "religiao": 26,
+      "moral": 21,
+      "tecnologia": 50
+    }
+  },
+  {
+    "countryId": "sacro-imperio-romano-germanico",
+    "vector": {
+      "estrutura": 84,
+      "representacao": 21,
+      "poder": 58,
+      "imigracao": 62,
+      "diplomacia": 57,
+      "intervencao": 32,
+      "economia": 39,
+      "controle": 49,
+      "comercio": 64,
+      "religiao": 3,
+      "moral": 5,
+      "tecnologia": 17
+    }
+  },
+  {
+    "countryId": "republica-de-veneza",
+    "vector": {
+      "estrutura": 71,
+      "representacao": 40,
+      "poder": 49,
+      "imigracao": 38,
+      "diplomacia": 37,
+      "intervencao": 56,
+      "economia": 25,
+      "controle": 34,
+      "comercio": 12,
+      "religiao": 27,
+      "moral": 31,
+      "tecnologia": 52
+    }
+  },
+  {
+    "countryId": "imperio-otomano",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 6,
+      "poder": 83,
+      "imigracao": 72,
+      "diplomacia": 69,
+      "intervencao": 20,
+      "economia": 43,
+      "controle": 56,
+      "comercio": 62,
+      "religiao": 1,
+      "moral": 1,
+      "tecnologia": 29
+    }
+  },
+  {
+    "countryId": "reino-unido-vitoriano-imperio-britanico",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 31,
+      "poder": 70,
+      "imigracao": 68,
+      "diplomacia": 82,
+      "intervencao": 9,
+      "economia": 32,
+      "controle": 36,
+      "comercio": 31,
+      "religiao": 22,
+      "moral": 19,
+      "tecnologia": 61
+    }
+  },
+  {
+    "countryId": "imperio-do-brasil",
+    "vector": {
+      "estrutura": 36,
+      "representacao": 49,
+      "poder": 56,
+      "imigracao": 55,
+      "diplomacia": 44,
+      "intervencao": 42,
+      "economia": 33,
+      "controle": 38,
+      "comercio": 52,
+      "religiao": 14,
+      "moral": 18,
+      "tecnologia": 44
+    }
+  },
+  {
+    "countryId": "alemanha-nazista-terceiro-reich",
+    "vector": {
+      "estrutura": 13,
+      "representacao": 6,
+      "poder": 92,
+      "imigracao": 94,
+      "diplomacia": 90,
+      "intervencao": 2,
+      "economia": 38,
+      "controle": 78,
+      "comercio": 85,
+      "religiao": 36,
+      "moral": 12,
+      "tecnologia": 34
+    }
+  },
+  {
+    "countryId": "italia-fascista-mussolini",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 9,
+      "poder": 94,
+      "imigracao": 84,
+      "diplomacia": 90,
+      "intervencao": 5,
+      "economia": 34,
+      "controle": 76,
+      "comercio": 84,
+      "religiao": 21,
+      "moral": 13,
+      "tecnologia": 48
+    }
+  },
+  {
+    "countryId": "chile-de-pinochet",
+    "vector": {
+      "estrutura": 28,
+      "representacao": 16,
+      "poder": 87,
+      "imigracao": 74,
+      "diplomacia": 67,
+      "intervencao": 20,
+      "economia": 21,
+      "controle": 33,
+      "comercio": 55,
+      "religiao": 19,
+      "moral": 11,
+      "tecnologia": 51
+    }
+  },
+  {
+    "countryId": "uniao-sovietica-urss",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 4,
+      "poder": 92,
+      "imigracao": 68,
+      "diplomacia": 66,
+      "intervencao": 26,
+      "economia": 96,
+      "controle": 97,
+      "comercio": 84,
+      "religiao": 95,
+      "moral": 59,
+      "tecnologia": 66
+    }
+  },
+  {
+    "countryId": "china-maoista",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 2,
+      "poder": 97,
+      "imigracao": 68,
+      "diplomacia": 69,
+      "intervencao": 29,
+      "economia": 97,
+      "controle": 98,
+      "comercio": 84,
+      "religiao": 87,
+      "moral": 60,
+      "tecnologia": 56
+    }
+  },
+  {
+    "countryId": "camboja-do-khmer-vermelho-pol-pot",
+    "vector": {
+      "estrutura": 10,
+      "representacao": 0,
+      "poder": 94,
+      "imigracao": 90,
+      "diplomacia": 84,
+      "intervencao": 13,
+      "economia": 92,
+      "controle": 100,
+      "comercio": 93,
+      "religiao": 92,
+      "moral": 36,
+      "tecnologia": 12
+    }
+  },
+  {
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "vector": {
+      "estrutura": 95,
+      "representacao": 89,
+      "poder": 5,
+      "imigracao": 31,
+      "diplomacia": 19,
+      "intervencao": 78,
+      "economia": 88,
+      "controle": 73,
+      "comercio": 60,
+      "religiao": 87,
+      "moral": 85,
+      "tecnologia": 57
+    }
+  },
+  {
+    "countryId": "argentina-peronista",
+    "vector": {
+      "estrutura": 48,
+      "representacao": 14,
+      "poder": 65,
+      "imigracao": 60,
+      "diplomacia": 53,
+      "intervencao": 35,
+      "economia": 62,
+      "controle": 58,
+      "comercio": 69,
+      "religiao": 32,
+      "moral": 35,
+      "tecnologia": 22
+    }
+  },
+  {
+    "countryId": "egito-de-nasser",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 14,
+      "poder": 82,
+      "imigracao": 64,
+      "diplomacia": 66,
+      "intervencao": 22,
+      "economia": 68,
+      "controle": 80,
+      "comercio": 69,
+      "religiao": 36,
+      "moral": 36,
+      "tecnologia": 57
+    }
+  },
+  {
+    "countryId": "africa-do-sul-do-apartheid",
+    "vector": {
+      "estrutura": 33,
+      "representacao": 7,
+      "poder": 96,
+      "imigracao": 91,
+      "diplomacia": 66,
+      "intervencao": 21,
+      "economia": 32,
+      "controle": 40,
+      "comercio": 74,
+      "religiao": 20,
+      "moral": 2,
+      "tecnologia": 49
+    }
+  },
+  {
+    "countryId": "estado-islamico-autoproclamado",
+    "vector": {
+      "estrutura": 12,
+      "representacao": 1,
+      "poder": 100,
+      "imigracao": 89,
+      "diplomacia": 95,
+      "intervencao": 1,
+      "economia": 51,
+      "controle": 73,
+      "comercio": 89,
+      "religiao": 0,
+      "moral": 0,
+      "tecnologia": 24
+    }
+  }
+]

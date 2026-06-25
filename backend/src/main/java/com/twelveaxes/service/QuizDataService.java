@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twelveaxes.model.AnswerOption;
 import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.Axis;
+import com.twelveaxes.model.Country;
+import com.twelveaxes.model.CountryProfile;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyProfile;
 import com.twelveaxes.model.Question;
@@ -32,6 +34,8 @@ public class QuizDataService {
     private List<Question> poolQuestions;
     private List<Ideology> ideologies;
     private Map<String, IdeologyProfile> ideologyProfiles;
+    private List<Country> countries;
+    private Map<String, CountryProfile> countryProfiles;
 
     public QuizDataService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
@@ -45,6 +49,10 @@ public class QuizDataService {
         List<IdeologyProfile> profiles = readJson("data/ideology-profiles.json", new TypeReference<>() {});
         ideologyProfiles = profiles.stream()
                 .collect(Collectors.toUnmodifiableMap(IdeologyProfile::ideologyId, Function.identity()));
+        countries = readJson("data/countries.json", new TypeReference<>() {});
+        List<CountryProfile> countryProfileList = readJson("data/countries-profiles.json", new TypeReference<>() {});
+        countryProfiles = countryProfileList.stream()
+                .collect(Collectors.toUnmodifiableMap(CountryProfile::countryId, Function.identity()));
     }
 
     public QuizPayload getQuiz() {
@@ -86,6 +94,14 @@ public class QuizDataService {
 
     public Map<String, IdeologyProfile> getIdeologyProfiles() {
         return ideologyProfiles;
+    }
+
+    public List<Country> getCountries() {
+        return countries;
+    }
+
+    public Map<String, CountryProfile> getCountryProfiles() {
+        return countryProfiles;
     }
 
     private List<AnswerOption> answerOptions() {

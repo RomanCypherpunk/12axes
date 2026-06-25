@@ -68,8 +68,24 @@ export interface IdeologyMatch {
   compatibility: number;
 }
 
+export interface CountryMatch {
+  countryId: string;
+  name: string;
+  category: string;
+  description: string;
+  flagPath: string;
+  flagKind?: string;
+  flagSourceName?: string;
+  flagSourceUrl?: string;
+  flagNote?: string;
+  historical: boolean;
+  period: string;
+  compatibility: number;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
   matches: IdeologyMatch[];
+  topCountryMatch: CountryMatch;
 }
