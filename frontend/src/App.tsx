@@ -9,6 +9,7 @@ import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuiz, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
+import { flagFileName, resolveCountryFlagSrc } from './utils/countryFlags';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
 
@@ -176,8 +177,8 @@ export default function App() {
 
     let stage: HTMLDivElement | null = null;
     try {
-      const axesSection = document.querySelector('.results-section-axes');
-      if (!axesSection) {
+      const resultsSection = document.querySelector<HTMLElement>('.results-layout');
+      if (!resultsSection) {
         throw new Error('Página de resultados não encontrada.');
       }
 
@@ -185,15 +186,16 @@ export default function App() {
         await document.fonts.ready;
       }
 
-      const { stage: builtStage, target } = buildExportNode(result, axesSection);
+      const { stage: builtStage, target } = buildExportNode(result, resultsSection);
       stage = builtStage;
       document.body.appendChild(stage);
-      await waitForImages(target);
+      await prepareImagesForExport(target);
 
       const dataUrl = await toPng(target, {
         backgroundColor: '#F7F7F2',
         pixelRatio: Math.min(2, window.devicePixelRatio || 1),
-        cacheBust: true
+        cacheBust: true,
+        skipFonts: true
       });
 
       downloadDataUrl(
@@ -212,10 +214,12 @@ export default function App() {
     return (
       <main className="app-shell center-shell">
         <div className="loading-panel">
-          <div className="loading-spinner" />
+          <div className="loading-mark" aria-hidden="true">
+            <div className="loading-spinner" />
+          </div>
           <div>
-            <h1 style={{ fontSize: '1.4rem', marginBottom: 6 }}>12 Axes</h1>
-            <p style={{ margin: 0, color: 'var(--text-muted)' }}>Carregando análise política…</p>
+            <h1>12 Axes</h1>
+            <p>Carregando análise política…</p>
           </div>
         </div>
       </main>
@@ -228,6 +232,9 @@ export default function App() {
         <div className="error-panel">
           <h1>12 Axes</h1>
           <p>{error}</p>
+          <button className="secondary-button" type="button" onClick={() => window.location.reload()}>
+            Tentar novamente
+          </button>
         </div>
       </main>
     );
@@ -349,15 +356,17 @@ export default function App() {
           <div className="variant-grid">
             <button className="variant-card fade-up d-2" type="button" onClick={() => void startQuiz('short')}>
               <span className="variant-card-kicker">Curta</span>
-              <strong>36 perguntas</strong>
-              <span>Descubra sua ideologia aproximada de forma rápida</span>
+              <span className="variant-card-title">36 perguntas</span>
+              <span>Resultado rápido, ideal para uma primeira leitura do seu perfil.</span>
+              <span className="variant-card-meta">12 eixos · ~5 minutos</span>
               <span className="variant-card-action">Começar versão curta</span>
             </button>
 
             <button className="variant-card featured fade-up d-3" type="button" onClick={() => void startQuiz('extended')}>
               <span className="variant-card-kicker">Completo</span>
-              <strong>60 perguntas</strong>
-              <span>Responda o quiz completo para descobrir exatamente a síntese do seu pensamento</span>
+              <span className="variant-card-title">60 perguntas</span>
+              <span>Mais precisão para aproximar seu resultado dos perfis ideológicos.</span>
+              <span className="variant-card-meta">12 eixos · ~9 minutos</span>
               <span className="variant-card-action">Começar versão completa</span>
             </button>
           </div>
@@ -543,6 +552,19 @@ function buildExportNode(
     gap: '28px'
   } as Partial<CSSStyleDeclaration>);
 
+  const pageClone = axesSection.cloneNode(true) as HTMLElement;
+  pageClone.removeAttribute('id');
+  pageClone.classList.remove('fade-up');
+  pageClone.querySelectorAll<HTMLElement>('[data-export-hidden]').forEach((el) => el.remove());
+  pageClone.querySelectorAll<HTMLElement>('.fade-up').forEach((el) => {
+    el.classList.remove('fade-up');
+  });
+
+  target.append(pageClone);
+  stage.append(target);
+
+  return { stage, target };
+
   const card = document.createElement('article');
   card.className = 'export-ideology-card';
 
@@ -578,7 +600,8 @@ function buildExportCountryCard(country: QuizResult['topCountryMatch']) {
   card.className = 'export-country-card';
 
   const image = document.createElement('img');
-  image.src = country.flagPath;
+  image.src = resolveCountryFlagSrc(country.flagPath);
+  image.crossOrigin = 'anonymous';
   const isStrictFlag = !country.flagKind || country.flagKind === 'official-flag' || country.flagKind === 'historical-flag';
   image.alt = `${isStrictFlag ? 'Bandeira' : 'Bandeira / símbolo histórico'} de ${country.name}`;
 
@@ -610,15 +633,50 @@ function buildExportCountryCard(country: QuizResult['topCountryMatch']) {
   return card;
 }
 
-function waitForImages(root: HTMLElement) {
+function prepareImagesForExport(root: HTMLElement) {
   const images = Array.from(root.querySelectorAll('img'));
-  return Promise.all(images.map((image) => {
-    if (image.complete) {
-      return Promise.resolve();
-    }
-    return new Promise<void>((resolve) => {
-      image.addEventListener('load', () => resolve(), { once: true });
-      image.addEventListener('error', () => resolve(), { once: true });
+  return Promise.all(images.map(waitForImage)).then(() => {
+    images.forEach((image) => {
+      if (!image.complete || image.naturalWidth === 0) {
+        replaceBrokenExportImage(image);
+      }
     });
-  }));
+  });
+}
+
+function waitForImage(image: HTMLImageElement) {
+  if (image.complete && image.naturalWidth > 0) {
+    return Promise.resolve();
+  }
+
+  return new Promise<void>((resolve) => {
+    const timeout = window.setTimeout(resolve, 2500);
+    const finish = () => {
+      window.clearTimeout(timeout);
+      resolve();
+    };
+
+    image.addEventListener('load', finish, { once: true });
+    image.addEventListener('error', finish, { once: true });
+  });
+}
+
+function replaceBrokenExportImage(image: HTMLImageElement) {
+  const fallback = document.createElement('div');
+  fallback.className = 'export-country-flag-fallback';
+  fallback.setAttribute('role', 'img');
+  fallback.setAttribute('aria-label', image.alt || 'Bandeira indisponível');
+
+  const title = document.createElement('span');
+  title.textContent = 'Bandeira indisponível';
+  fallback.append(title);
+
+  const fileName = flagFileName(image.getAttribute('src') ?? '');
+  if (fileName) {
+    const detail = document.createElement('small');
+    detail.textContent = fileName;
+    fallback.append(detail);
+  }
+
+  image.replaceWith(fallback);
 }

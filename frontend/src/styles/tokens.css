@@ -43,10 +43,10 @@
   --critical-deep: var(--red-500);
   --critical-soft: var(--red-50);
 
-  --shadow-xs:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(14, 23, 38, 0.04);
-  --shadow-sm:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 4px 12px rgba(14, 23, 38, 0.05);
-  --shadow-md:  0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 12px 28px -8px rgba(14, 23, 38, 0.10);
-  --shadow-lg:  0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 28px 60px -20px rgba(14, 23, 38, 0.18);
+  --shadow-xs:  0 1px 2px rgba(14, 23, 38, 0.04);
+  --shadow-sm:  0 3px 10px rgba(14, 23, 38, 0.05);
+  --shadow-md:  0 12px 28px -18px rgba(14, 23, 38, 0.22);
+  --shadow-lg:  0 24px 48px -28px rgba(14, 23, 38, 0.28);
 
   --shadow-accent:    0 14px 36px -10px rgba(0, 154, 56, 0.45);
   --shadow-accent-lg: 0 26px 60px -16px rgba(0, 154, 56, 0.55);
@@ -54,23 +54,22 @@
 
   --ring-accent: 0 0 0 4px rgba(0, 154, 56, 0.18);
 
-  --glass-tint: rgba(255, 255, 255, 0.62);
-  --glass-tint-strong: rgba(255, 255, 255, 0.82);
-  --glass-line: rgba(255, 255, 255, 0.65);
-  --glass-blur: blur(22px) saturate(140%);
+  --glass-tint: rgba(255, 255, 255, 0.9);
+  --glass-tint-strong: rgba(255, 255, 255, 0.96);
+  --glass-line: var(--line);
+  --glass-blur: none;
 
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
   --radius-pill: 999px;
 
   --grad-accent: linear-gradient(135deg, var(--green-700) 0%, var(--green-500) 45%, var(--green-400) 100%);
   --grad-critical: linear-gradient(135deg, var(--red-500) 0%, var(--red-400) 100%);
   --grad-mesh:
-    radial-gradient(900px 600px at 92% -10%, rgba(43, 221, 108, 0.18), transparent 65%),
-    radial-gradient(800px 540px at -10% 110%, rgba(192, 50, 33, 0.10), transparent 70%),
-    radial-gradient(620px 420px at 50% 110%, rgba(0, 154, 56, 0.06), transparent 70%);
+    linear-gradient(120deg, rgba(0, 154, 56, 0.08), transparent 28%),
+    linear-gradient(240deg, rgba(192, 50, 33, 0.045), transparent 32%);
 
   --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;

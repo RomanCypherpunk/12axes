@@ -20,8 +20,10 @@ interface QuestionCardProps {
 export function QuestionCard({ question, axisLabel, options, selected, disabled = false, onSelect }: QuestionCardProps) {
   return (
     <article className="question-card" aria-labelledby="question-title">
-      <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
-      <h2 id="question-title">{question.text}</h2>
+      <header className="question-card-header">
+        <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
+        <h2 id="question-title">{question.text}</h2>
+      </header>
       <div className="answer-grid" role="radiogroup" aria-label="Opções de resposta">
         {options.map((option) => {
           const isSelected = selected === option.id;
@@ -29,6 +31,7 @@ export function QuestionCard({ question, axisLabel, options, selected, disabled 
             <button
               key={option.id}
               className={isSelected ? `${answerClassById[option.id]} selected` : answerClassById[option.id]}
+              data-answer={option.id}
               type="button"
               role="radio"
               aria-checked={isSelected}

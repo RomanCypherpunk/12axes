@@ -11,19 +11,21 @@ export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCard
 
   return (
     <article className={featured ? 'match-card featured' : 'match-card'}>
-      <div className="match-card-text">
-        <span>{match.category}</span>
-        <h3>{match.name}</h3>
-      </div>
-      <div
-        className="compatibility-ring"
-        style={{ ['--pct' as string]: pct }}
-        aria-label={`Compatibilidade: ${pct.toFixed(1)} por cento`}
-      >
-        <span>
-          {pct.toFixed(0)}%
-          <small>match</small>
-        </span>
+      <div className="match-card-header">
+        <div className="match-card-text">
+          <span>{match.category}</span>
+          <h3>{match.name}</h3>
+        </div>
+        <div
+          className="compatibility-ring"
+          style={{ ['--pct' as string]: pct }}
+          aria-label={`Compatibilidade: ${pct.toFixed(1)} por cento`}
+        >
+          <span>
+            {pct.toFixed(0)}%
+            <small>match</small>
+          </span>
+        </div>
       </div>
       <p>{description}</p>
     </article>
