@@ -192,7 +192,7 @@ export default function App() {
       await prepareImagesForExport(target);
 
       const dataUrl = await toPng(target, {
-        backgroundColor: '#F7F7F2',
+        backgroundColor: '#F4F6FA',
         pixelRatio: Math.min(2, window.devicePixelRatio || 1),
         cacheBust: true,
         skipFonts: true
@@ -248,7 +248,8 @@ export default function App() {
     <main className="app-shell" data-screen={screen}>
       <header className="site-header">
         <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
-          <span>12 Axes</span>
+          <span className="brand-num">12</span>
+          <span className="brand-word">axes</span>
         </button>
         {(screen === 'quiz' || screen === 'results') && (
           <button className="primary-button header-cta" type="button" onClick={() => void startQuiz(selectedVariant)}>
@@ -545,7 +546,7 @@ function buildExportNode(
   Object.assign(target.style, {
     width: '1100px',
     padding: '48px',
-    background: '#F7F7F2',
+    background: '#F4F6FA',
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',

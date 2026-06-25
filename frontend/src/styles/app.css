@@ -57,34 +57,27 @@
 
 .brand-lockup {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  align-items: baseline;
+  gap: 3px;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.25rem, 1.4vw + 0.6rem, 1.6rem);
+  font-size: clamp(1.3rem, 1.4vw + 0.6rem, 1.6rem);
   line-height: 1;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
   color: var(--text-strong);
 }
 
-.brand-lockup::before {
-  content: "";
-  display: block;
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  background: var(--grad-accent);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.6) inset,
-    0 6px 14px -4px rgba(0, 154, 56, 0.5);
-  position: relative;
-}
-
-.brand-lockup span {
-  background: linear-gradient(135deg, var(--ink-950) 0%, var(--ink-700) 100%);
+.brand-lockup .brand-num {
+  background: var(--grad-brand);
+  background-size: 140% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.brand-lockup .brand-word {
+  color: var(--text-strong);
 }
 
 .primary-button,
@@ -225,13 +218,13 @@
   height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(0, 154, 56, 0.18);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
   animation: pulse 2.4s var(--ease-in-out) infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(0, 154, 56, 0.18); }
-  50% { box-shadow: 0 0 0 7px rgba(0, 154, 56, 0); }
+  0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); }
+  50% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
 }
 
 .intro-eyebrow strong {
@@ -257,7 +250,7 @@
 .intro-panel h1 em {
   font-style: normal;
   display: inline-block;
-  background: linear-gradient(135deg, var(--green-700) 0%, var(--green-500) 50%, var(--green-400) 100%);
+  background: var(--grad-brand);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -347,7 +340,7 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(43, 221, 108, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -358,7 +351,7 @@
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.85;
-  background: linear-gradient(135deg, var(--green-700) 0%, var(--green-400) 100%);
+  background: var(--grad-brand);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -622,7 +615,7 @@
 
 .variant-card.featured {
   background: linear-gradient(180deg, var(--paper) 0%, var(--green-50) 130%);
-  border-color: rgba(0, 154, 56, 0.25);
+  border-color: rgba(34, 197, 94, 0.25);
   box-shadow: var(--shadow-md);
 }
 
@@ -716,7 +709,7 @@
   background: var(--grad-accent);
   transition: width var(--dur-deliberate) var(--ease-out);
   position: relative;
-  box-shadow: 0 0 18px rgba(0, 154, 56, 0.5);
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.5);
 }
 
 .progress-track span::after {
@@ -730,8 +723,8 @@
   border-radius: 50%;
   background: var(--green-400);
   box-shadow:
-    0 0 0 3px rgba(43, 221, 108, 0.25),
-    0 0 14px rgba(43, 221, 108, 0.6);
+    0 0 0 3px rgba(34, 197, 94, 0.25),
+    0 0 14px rgba(34, 197, 94, 0.6);
 }
 
 .question-card {
@@ -767,7 +760,7 @@
   transform: translateX(-50%);
   width: 200px;
   height: 80px;
-  background: radial-gradient(ellipse at top, rgba(0, 154, 56, 0.12), transparent 70%);
+  background: radial-gradient(ellipse at top, rgba(34, 197, 94, 0.12), transparent 70%);
   pointer-events: none;
 }
 
@@ -902,7 +895,7 @@
 .answer-agree {
   background: var(--green-50);
   color: var(--green-800);
-  border-color: rgba(0, 154, 56, 0.32);
+  border-color: rgba(34, 197, 94, 0.32);
 }
 
 .answer-agree .answer-icon {
@@ -926,7 +919,7 @@
 .answer-disagree {
   background: var(--red-50);
   color: var(--red-600);
-  border-color: rgba(192, 50, 33, 0.28);
+  border-color: rgba(239, 68, 68, 0.28);
 }
 
 .answer-disagree .answer-icon {
@@ -1011,7 +1004,7 @@
   color: var(--red-600);
   font-size: 0.86rem;
   font-weight: 500;
-  border: 1px solid rgba(192, 50, 33, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.18);
 }
 
 .results-layout {
@@ -1070,7 +1063,7 @@
 
 .results-hero h1 em {
   font-style: normal;
-  background: linear-gradient(135deg, var(--green-700) 0%, var(--green-400) 100%);
+  background: var(--grad-brand);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1108,7 +1101,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(43, 221, 108, 0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 70%);
   pointer-events: none;
 }
 
@@ -1154,7 +1147,7 @@
 .match-card.featured {
   background:
     linear-gradient(180deg, var(--paper) 0%, var(--green-50) 130%);
-  border-color: rgba(0, 154, 56, 0.25);
+  border-color: rgba(34, 197, 94, 0.25);
   box-shadow: var(--shadow-lg);
 }
 
@@ -1226,7 +1219,7 @@
   height: var(--size);
   border-radius: 50%;
   background:
-    conic-gradient(from -90deg, var(--green-500) calc(var(--pct) * 1%), rgba(0, 154, 56, 0.12) 0%);
+    conic-gradient(from -90deg, var(--accent-deep) 0%, var(--accent) calc(var(--pct) * 1%), rgba(34, 197, 94, 0.14) 0%);
   font-family: var(--font-display);
   font-weight: 800;
   color: var(--accent-deep);
@@ -1383,7 +1376,7 @@
   border-radius: var(--radius-pill);
   background: var(--accent-soft);
   color: var(--accent-deep);
-  border: 1px solid rgba(0, 154, 56, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.18);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -1676,7 +1669,7 @@
   padding: 36px 40px;
   border-radius: var(--radius-xl);
   background: linear-gradient(180deg, var(--paper) 0%, var(--green-50) 130%);
-  border: 1px solid rgba(0, 154, 56, 0.25);
+  border: 1px solid rgba(34, 197, 94, 0.25);
   box-shadow: var(--shadow-md);
 }
 
@@ -2351,14 +2344,7 @@
 }
 
 .brand-lockup {
-  font-size: 1.25rem;
-}
-
-.brand-lockup::before {
-  width: 30px;
-  height: 30px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  font-size: 1.35rem;
 }
 
 .primary-button,
@@ -2379,7 +2365,7 @@
 .primary-button {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 10px 22px -16px rgba(0, 154, 56, 0.7);
+  box-shadow: 0 10px 22px -16px rgba(34, 197, 94, 0.7);
 }
 
 .primary-button::after {
@@ -2528,7 +2514,7 @@
 
 .variant-card.featured {
   background: var(--paper);
-  border-color: rgba(0, 154, 56, 0.34);
+  border-color: rgba(34, 197, 94, 0.34);
 }
 
 .variant-card-kicker,
@@ -2773,7 +2759,7 @@
   min-height: 28px;
   align-items: center;
   padding: 0 9px;
-  border: 1px solid rgba(0, 154, 56, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.18);
   border-radius: var(--radius-md);
   background: var(--accent-soft);
   color: var(--accent-deep);
@@ -2965,5 +2951,265 @@
 
   .compatibility-ring {
     --size: 74px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   Axis result meter — cohesive green / gunmetal redesign
+   ════════════════════════════════════════════════════════ */
+.axis-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px clamp(16px, 2vw, 24px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-spring);
+}
+
+.axis-row:hover {
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.axis-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.axis-row-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.axis-row-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: var(--ink-50);
+  color: var(--text-strong);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.axis-row-icon .axis-symbol {
+  width: 18px;
+  height: 18px;
+}
+
+.axis-row-id h3 {
+  font-family: var(--font-display);
+  font-size: clamp(0.98rem, 0.6vw + 0.8rem, 1.18rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.axis-lean {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+}
+
+.axis-lean::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.axis-lean[data-balanced="true"] {
+  background: var(--ink-50);
+  color: var(--text-muted);
+  border-color: var(--line);
+}
+
+.axis-lean[data-balanced="true"]::before {
+  background: var(--ink-400);
+}
+
+.axis-meter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr) minmax(0, 1fr);
+  grid-template-areas: "lpole track rpole";
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 18px);
+}
+
+.axis-pole {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.axis-pole[data-side="left"] {
+  grid-area: lpole;
+}
+
+.axis-pole[data-side="right"] {
+  grid-area: rpole;
+  justify-content: flex-end;
+}
+
+.axis-pole-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--ink-50);
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.axis-pole-icon .axis-symbol {
+  width: 17px;
+  height: 17px;
+}
+
+.axis-pole-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.axis-pole[data-side="right"] .axis-pole-text {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.axis-pole-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.axis-pole-value {
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.axis-pole.is-active .axis-pole-icon {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border-color: color-mix(in srgb, var(--accent) 32%, transparent);
+}
+
+.axis-pole.is-active .axis-pole-name {
+  color: var(--text-strong);
+}
+
+.axis-pole.is-active .axis-pole-value {
+  color: var(--accent-deep);
+}
+
+.axis-track {
+  grid-area: track;
+  position: relative;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-100);
+  box-shadow: inset 0 1px 2px rgba(11, 16, 32, 0.07);
+}
+
+.axis-track-center {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(var(--ink-300) 0 3px, transparent 3px 6px);
+  border-radius: 2px;
+}
+
+.axis-track-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--grad-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 0 12px -2px rgba(34, 197, 94, 0.5);
+  transition:
+    left var(--dur-deliberate) var(--ease-out),
+    width var(--dur-deliberate) var(--ease-out);
+}
+
+.axis-track-thumb {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--paper);
+  border: 3px solid var(--accent);
+  box-shadow: 0 2px 7px rgba(11, 16, 32, 0.22);
+  transition: left var(--dur-deliberate) var(--ease-out);
+  z-index: 1;
+}
+
+.axis-track-thumb[data-balanced="true"] {
+  border-color: var(--ink-400);
+}
+
+@media (max-width: 620px) {
+  .axis-meter {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "lpole rpole"
+      "track track";
+    gap: 12px 14px;
+  }
+
+  .axis-pole-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .axis-pole-name {
+    font-size: 0.76rem;
   }
 }

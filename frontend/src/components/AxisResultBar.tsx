@@ -1,5 +1,5 @@
 import type { Axis, AxisResult } from '../types/quiz';
-import { PoleIcon } from './AxisIcon';
+import { AxisIcon, PoleIcon } from './AxisIcon';
 
 interface AxisResultBarProps {
   axis: Axis;
@@ -7,88 +7,82 @@ interface AxisResultBarProps {
 }
 
 export function AxisResultBar({ axis, result }: AxisResultBarProps) {
-  const leftInk = readableInk(axis.leftColor);
-  const rightInk = readableInk(axis.rightColor);
+  const leftPercent = clamp(result.leftPercent);
+  const rightPercent = clamp(result.rightPercent);
   const isBalanced = result.intensity === 'Equilibrado';
+  const leaningRight = rightPercent > leftPercent;
+  const leftActive = !isBalanced && !leaningRight;
+  const rightActive = !isBalanced && leaningRight;
+
+  // Position of the marker across the track (0 = full left pole, 100 = full right pole).
+  const position = rightPercent;
+  const fillLeft = Math.min(position, 50);
+  const fillWidth = isBalanced ? 0 : Math.abs(position - 50);
+
   const leaningText = isBalanced
     ? 'Equilibrado'
-    : `${result.intensity} para ${result.dominantPole}`;
-
-  const statusColor = isBalanced
-    ? 'var(--accent)'
-    : result.dominantPole === result.leftPole
-      ? axis.leftColor
-      : axis.rightColor;
+    : `${result.intensity} · ${result.dominantPole}`;
 
   return (
     <article className="axis-row">
-      <header className="axis-row-title">
-        <h3>
-          {result.label}: <span style={{ color: statusColor }}>{leaningText}</span>
-        </h3>
+      <header className="axis-row-head">
+        <div className="axis-row-id">
+          <span className="axis-row-icon" aria-hidden="true">
+            <AxisIcon id={axis.id} />
+          </span>
+          <h3>{result.label}</h3>
+        </div>
+        <span className="axis-lean" data-balanced={isBalanced}>
+          {leaningText}
+        </span>
       </header>
 
-      <div className="axis-row-body">
-        <div
-          className="pole-card pole-card-left"
-          style={{
-            ['--pole-color' as string]: axis.leftColor,
-            ['--pole-ink' as string]: leftInk
-          }}
-        >
-          <PoleIcon axisId={axis.id} side="left" />
-          <span>{result.leftPole}</span>
-        </div>
-
-        <div
-          className="axis-scale"
-          aria-label={`${result.label}: ${result.leftPole} ${result.leftPercent.toFixed(1)}%, ${result.rightPole} ${result.rightPercent.toFixed(1)}%`}
-        >
-          <span
-            className="axis-fill-left"
-            style={{
-              width: `${result.leftPercent}%`,
-              ['--bar-color' as string]: axis.leftColor,
-              color: leftInk
-            }}
-          >
-            <strong>{result.leftPercent.toFixed(1)}%</strong>
+      <div className="axis-meter">
+        <div className={`axis-pole${leftActive ? ' is-active' : ''}`} data-side="left">
+          <span className="axis-pole-icon" aria-hidden="true">
+            <PoleIcon axisId={axis.id} side="left" />
           </span>
-          <span
-            className="axis-fill-right"
-            style={{
-              width: `${result.rightPercent}%`,
-              ['--bar-color' as string]: axis.rightColor,
-              color: rightInk
-            }}
-          >
-            <strong>{result.rightPercent.toFixed(1)}%</strong>
+          <span className="axis-pole-text">
+            <span className="axis-pole-name">{result.leftPole}</span>
+            <span className="axis-pole-value">{leftPercent.toFixed(0)}%</span>
           </span>
         </div>
 
         <div
-          className="pole-card pole-card-right"
-          style={{
-            ['--pole-color' as string]: axis.rightColor,
-            ['--pole-ink' as string]: rightInk
-          }}
+          className="axis-track"
+          role="img"
+          aria-label={`${result.label}: ${result.leftPole} ${leftPercent.toFixed(0)}%, ${result.rightPole} ${rightPercent.toFixed(0)}%`}
         >
-          <PoleIcon axisId={axis.id} side="right" />
-          <span>{result.rightPole}</span>
+          <span className="axis-track-center" aria-hidden="true" />
+          {fillWidth > 0 && (
+            <span
+              className="axis-track-fill"
+              style={{ left: `${fillLeft}%`, width: `${fillWidth}%` }}
+              aria-hidden="true"
+            />
+          )}
+          <span
+            className="axis-track-thumb"
+            style={{ left: `${position}%` }}
+            data-balanced={isBalanced}
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className={`axis-pole${rightActive ? ' is-active' : ''}`} data-side="right">
+          <span className="axis-pole-text">
+            <span className="axis-pole-name">{result.rightPole}</span>
+            <span className="axis-pole-value">{rightPercent.toFixed(0)}%</span>
+          </span>
+          <span className="axis-pole-icon" aria-hidden="true">
+            <PoleIcon axisId={axis.id} side="right" />
+          </span>
         </div>
       </div>
     </article>
   );
 }
 
-function readableInk(hexColor: string) {
-  const normalized = hexColor.replace('#', '');
-  const value = normalized.length === 3
-    ? normalized.split('').map((part) => part + part).join('')
-    : normalized;
-  const red = Number.parseInt(value.slice(0, 2), 16);
-  const green = Number.parseInt(value.slice(2, 4), 16);
-  const blue = Number.parseInt(value.slice(4, 6), 16);
-  const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
-  return luminance > 0.62 ? '#111111' : '#ffffff';
+function clamp(value: number) {
+  return Math.max(0, Math.min(100, value));
 }

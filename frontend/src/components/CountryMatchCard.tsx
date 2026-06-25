@@ -45,11 +45,6 @@ export function CountryMatchCard({ match }: CountryMatchCardProps) {
         </div>
         <p>{match.description}</p>
         {match.flagNote && <p className="country-match-note">{match.flagNote}</p>}
-        {match.flagSourceUrl && (
-          <a className="country-match-source" href={match.flagSourceUrl} target="_blank" rel="noreferrer">
-            Fonte da imagem: {match.flagSourceName ?? 'referência pública'}
-          </a>
-        )}
       </div>
     </article>
   );
