@@ -1,10 +1,13 @@
+import type { CSSProperties } from 'react';
 import type { Axis, AxisResult } from '../types/quiz';
-import { AxisIcon, PoleIcon } from './AxisIcon';
+import { PoleIcon } from './AxisIcon';
 
 interface AxisResultBarProps {
   axis: Axis;
   result: AxisResult;
 }
+
+const BALANCED_COLOR = '#94A3B8';
 
 export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftPercent = clamp(result.leftPercent);
@@ -14,22 +17,29 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftActive = !isBalanced && !leaningRight;
   const rightActive = !isBalanced && leaningRight;
 
+  const dominantColor = isBalanced ? BALANCED_COLOR : leaningRight ? axis.rightColor : axis.leftColor;
+
   // Position of the marker across the track (0 = full left pole, 100 = full right pole).
   const position = rightPercent;
   const fillLeft = Math.min(position, 50);
   const fillWidth = isBalanced ? 0 : Math.abs(position - 50);
 
-  const leaningText = isBalanced
-    ? 'Equilibrado'
-    : `${result.intensity} · ${result.dominantPole}`;
+  const leaningText = isBalanced ? 'Equilibrado' : `${result.intensity} · ${result.dominantPole}`;
+
+  const rowStyle = {
+    ['--axis-left']: axis.leftColor,
+    ['--axis-right']: axis.rightColor,
+    ['--axis-dom']: dominantColor,
+    ['--axis-dom-ink']: readableInk(dominantColor)
+  } as CSSProperties;
+
+  const leftPoleStyle = { ['--pole']: axis.leftColor, ['--pole-ink']: readableInk(axis.leftColor) } as CSSProperties;
+  const rightPoleStyle = { ['--pole']: axis.rightColor, ['--pole-ink']: readableInk(axis.rightColor) } as CSSProperties;
 
   return (
-    <article className="axis-row">
+    <article className="axis-row" style={rowStyle}>
       <header className="axis-row-head">
         <div className="axis-row-id">
-          <span className="axis-row-icon" aria-hidden="true">
-            <AxisIcon id={axis.id} />
-          </span>
           <h3>{result.label}</h3>
         </div>
         <span className="axis-lean" data-balanced={isBalanced}>
@@ -38,7 +48,7 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
       </header>
 
       <div className="axis-meter">
-        <div className={`axis-pole${leftActive ? ' is-active' : ''}`} data-side="left">
+        <div className={`axis-pole${leftActive ? ' is-active' : ''}`} data-side="left" style={leftPoleStyle}>
           <span className="axis-pole-icon" aria-hidden="true">
             <PoleIcon axisId={axis.id} side="left" />
           </span>
@@ -69,7 +79,7 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
           />
         </div>
 
-        <div className={`axis-pole${rightActive ? ' is-active' : ''}`} data-side="right">
+        <div className={`axis-pole${rightActive ? ' is-active' : ''}`} data-side="right" style={rightPoleStyle}>
           <span className="axis-pole-text">
             <span className="axis-pole-name">{result.rightPole}</span>
             <span className="axis-pole-value">{rightPercent.toFixed(0)}%</span>
@@ -85,4 +95,20 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
 
 function clamp(value: number) {
   return Math.max(0, Math.min(100, value));
+}
+
+function readableInk(hexColor: string) {
+  const normalized = hexColor.replace('#', '');
+  const value =
+    normalized.length === 3
+      ? normalized
+          .split('')
+          .map((part) => part + part)
+          .join('')
+      : normalized;
+  const red = Number.parseInt(value.slice(0, 2), 16);
+  const green = Number.parseInt(value.slice(2, 4), 16);
+  const blue = Number.parseInt(value.slice(4, 6), 16);
+  const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
+  return luminance > 0.62 ? '#0B1020' : '#ffffff';
 }

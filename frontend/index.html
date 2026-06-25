@@ -3,16 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#FFFFFF" />
-    <meta name="description" content="Descubra seu perfil político nos 12 eixos. Quiz com 36 perguntas para mapear sua posição ideológica." />
+    <meta name="theme-color" content="#0B1020" />
+
+    <!-- Primary SEO -->
+    <title>12 Axes — Quiz Político de Ideologia em 12 Eixos | Teste Ideológico</title>
+    <meta
+      name="description"
+      content="Quiz político gratuito que mapeia sua ideologia em 12 eixos. Descubra seu perfil ideológico, as ideologias mais compatíveis e o país que mais combina com você. Teste de ideologia política rápido, anônimo e em português."
+    />
+    <meta
+      name="keywords"
+      content="quiz político, 12axes, 12 axes, 12 eixos, ideologia política, quiz ideológico, teste político, teste ideológico, perfil ideológico, espectro político, quiz de ideologia, teste de ideologia, bússola política, political compass"
+    />
+    <meta name="author" content="12 Axes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="Portuguese" />
+    <link rel="canonical" href="https://12axes.vercel.app/" />
+
+    <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <link rel="apple-touch-icon" href="/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="12 Axes" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://12axes.vercel.app/" />
+    <meta property="og:title" content="12 Axes — Quiz Político de Ideologia em 12 Eixos" />
+    <meta
+      property="og:description"
+      content="Descubra seu perfil ideológico em 12 eixos. Quiz político gratuito, anônimo e em português, com as ideologias e o país mais compatíveis com você."
+    />
+    <meta property="og:image" content="https://12axes.vercel.app/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Logo do 12 Axes — quiz político de 12 eixos" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="12 Axes — Quiz Político de Ideologia em 12 Eixos" />
+    <meta
+      name="twitter:description"
+      content="Descubra seu perfil ideológico em 12 eixos. Quiz político gratuito, anônimo e em português."
+    />
+    <meta name="twitter:image" content="https://12axes.vercel.app/logo.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" />
-    <title>12 Axes — Quiz político</title>
+
+    <!-- Structured data: WebApplication + FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "12 Axes",
+        "alternateName": "12 Eixos — Quiz Político",
+        "url": "https://12axes.vercel.app/",
+        "description": "Quiz político que mapeia a ideologia do usuário em 12 eixos e retorna as ideologias e o país mais compatíveis com o seu perfil.",
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "pt-BR",
+        "isAccessibleForFree": true,
+        "image": "https://12axes.vercel.app/logo.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        },
+        "keywords": "quiz político, 12 eixos, ideologia política, quiz ideológico, teste político, perfil ideológico, espectro político"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que é o quiz político 12 Axes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O 12 Axes é um quiz político gratuito que analisa suas opiniões em 12 eixos ideológicos independentes e mostra seu perfil ideológico, as ideologias mais compatíveis e o país que mais combina com você."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva o teste ideológico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A versão curta tem 36 perguntas e leva cerca de 5 minutos. A versão completa tem 60 perguntas para um resultado mais preciso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O quiz de ideologia é anônimo e gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O 12 Axes é totalmente gratuito, anônimo e não exige cadastro. Suas respostas não são associadas à sua identidade."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

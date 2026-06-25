@@ -68,7 +68,7 @@
 }
 
 .brand-lockup .brand-num {
-  background: var(--grad-brand);
+  background: var(--grad-logo);
   background-size: 140% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -2998,9 +2998,9 @@
   width: 34px;
   height: 34px;
   border-radius: var(--radius-md);
-  background: var(--ink-50);
-  color: var(--text-strong);
-  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--axis-dom, var(--ink-400)) 14%, var(--paper));
+  color: color-mix(in srgb, var(--axis-dom, var(--ink-700)) 70%, var(--ink-950));
+  border: 1px solid color-mix(in srgb, var(--axis-dom, var(--ink-400)) 26%, transparent);
   flex-shrink: 0;
 }
 
@@ -3027,9 +3027,9 @@
   gap: 6px;
   padding: 5px 12px;
   border-radius: var(--radius-pill);
-  background: var(--accent-soft);
-  color: var(--accent-deep);
-  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  background: color-mix(in srgb, var(--axis-dom, var(--accent)) 14%, var(--paper));
+  color: color-mix(in srgb, var(--axis-dom, var(--accent)) 68%, var(--ink-950));
+  border: 1px solid color-mix(in srgb, var(--axis-dom, var(--accent)) 26%, transparent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.005em;
@@ -3041,7 +3041,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--axis-dom, var(--accent));
 }
 
 .axis-lean[data-balanced="true"] {
@@ -3084,9 +3084,9 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-md);
-  background: var(--ink-50);
-  color: var(--text-muted);
-  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--pole, var(--ink-400)) 12%, var(--paper));
+  color: color-mix(in srgb, var(--pole, var(--ink-500)) 66%, var(--ink-950));
+  border: 1px solid color-mix(in srgb, var(--pole, var(--ink-400)) 22%, transparent);
   flex-shrink: 0;
   transition:
     background var(--dur-base) var(--ease-out),
@@ -3132,9 +3132,10 @@
 }
 
 .axis-pole.is-active .axis-pole-icon {
-  background: var(--accent-soft);
-  color: var(--accent-deep);
-  border-color: color-mix(in srgb, var(--accent) 32%, transparent);
+  background: var(--pole);
+  color: var(--pole-ink, #fff);
+  border-color: var(--pole);
+  box-shadow: 0 4px 12px -4px color-mix(in srgb, var(--pole) 60%, transparent);
 }
 
 .axis-pole.is-active .axis-pole-name {
@@ -3142,7 +3143,7 @@
 }
 
 .axis-pole.is-active .axis-pole-value {
-  color: var(--accent-deep);
+  color: color-mix(in srgb, var(--pole) 70%, var(--ink-950));
 }
 
 .axis-track {
@@ -3169,9 +3170,13 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  background: var(--grad-accent);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--axis-dom, var(--accent)) 82%, white) 0%,
+    var(--axis-dom, var(--accent)) 100%
+  );
   border-radius: var(--radius-pill);
-  box-shadow: 0 0 12px -2px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 12px -2px color-mix(in srgb, var(--axis-dom, var(--accent)) 55%, transparent);
   transition:
     left var(--dur-deliberate) var(--ease-out),
     width var(--dur-deliberate) var(--ease-out);
@@ -3185,7 +3190,7 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--paper);
-  border: 3px solid var(--accent);
+  border: 3px solid var(--axis-dom, var(--accent));
   box-shadow: 0 2px 7px rgba(11, 16, 32, 0.22);
   transition: left var(--dur-deliberate) var(--ease-out);
   z-index: 1;
@@ -3211,5 +3216,167 @@
 
   .axis-pole-name {
     font-size: 0.76rem;
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   Home — SEO content (how it works + FAQ)
+   ════════════════════════════════════════════════════════ */
+.home-seo {
+  margin-top: clamp(40px, 6vw, 76px);
+  display: grid;
+  gap: clamp(32px, 5vw, 56px);
+}
+
+.seo-block {
+  display: grid;
+  gap: 22px;
+}
+
+.seo-block .section-heading {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  align-items: flex-start;
+  max-width: 760px;
+}
+
+.seo-block .section-heading h2 {
+  font-size: clamp(1.5rem, 1.4vw + 1rem, 2.1rem);
+  letter-spacing: -0.025em;
+}
+
+.seo-block .section-heading p {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.step-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--dur-base) var(--ease-spring),
+    border-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  box-shadow: var(--shadow-md);
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+.step-card h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 840px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+.faq-item[open] {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform var(--dur-base) var(--ease-spring);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item > p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
+@media (max-width: 760px) {
+  .step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-block .section-heading h2 {
+    font-size: clamp(1.35rem, 5.5vw, 1.7rem);
   }
 }

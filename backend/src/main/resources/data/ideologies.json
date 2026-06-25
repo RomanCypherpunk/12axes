@@ -896,13 +896,6 @@
     "vector": null
   },
   {
-    "id": "xavierismo",
-    "name": "Xavierismo",
-    "category": "Direita Libertária",
-    "description": "Pensamento de nicho que combina hierarquia política, federalismo radical, capitalismo de livre mercado, aceleração tecnológica com ordem tradicional sob um Estado secular.",
-    "vector": null
-  },
-  {
     "id": "conservadorismo-libertario",
     "name": "Conservadorismo Libertário",
     "category": "Direita Libertária",
@@ -1005,6 +998,27 @@
     "name": "Federalismo Privado",
     "category": "Direita Libertária",
     "description": "Sistema de cidades-Estado privadas concorrentes, governadas como corporações soberanas, com cidadania contratual, livre saída entre jurisdições e governança tecnológica eficiente.",
+    "vector": null
+  },
+  {
+    "id": "tecno-monarquismo",
+    "name": "Tecno-Monarquismo",
+    "category": "Direita Autoritária",
+    "description": "Monarquia modernizada em que um soberano único governa um Estado-empresa de alta tecnologia, com administração por dados, eficiência tecnocrática, ordem hierárquica e autoridade secular centralizada.",
+    "vector": null
+  },
+  {
+    "id": "tecno-socialismo",
+    "name": "Tecno-Socialismo",
+    "category": "Esquerda Libertária",
+    "description": "Socialismo de planejamento cibernético que usa automação, dados e inteligência artificial para coordenar a produção, eliminar a escassez e distribuir abundância material de forma coletiva e igualitária.",
+    "vector": null
+  },
+  {
+    "id": "tecno-fascismo",
+    "name": "Tecno-Fascismo",
+    "category": "Direita Autoritária",
+    "description": "Totalitarismo ultranacionalista que funde culto ao líder, vigilância em massa, controle algorítmico e poder corporativo-estatal, usando tecnologia avançada para subordinar a sociedade ao Estado.",
     "vector": null
   }
 ]

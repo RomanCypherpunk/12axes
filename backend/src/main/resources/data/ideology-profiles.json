@@ -2176,23 +2176,6 @@
     }
   },
   {
-    "ideologyId": "xavierismo",
-    "vector": {
-      "estrutura": 85,
-      "representacao": 15,
-      "poder": 50,
-      "imigracao": 75,
-      "diplomacia": 60,
-      "intervencao": 40,
-      "economia": 15,
-      "controle": 15,
-      "comercio": 20,
-      "religiao": 85,
-      "moral": 20,
-      "tecnologia": 85
-    }
-  },
-  {
     "ideologyId": "conservadorismo-libertario",
     "vector": {
       "estrutura": 70,
@@ -2445,6 +2428,57 @@
       "religiao": 40,
       "moral": 32,
       "tecnologia": 72
+    }
+  },
+  {
+    "ideologyId": "tecno-monarquismo",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 15,
+      "poder": 85,
+      "imigracao": 65,
+      "diplomacia": 58,
+      "intervencao": 35,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 48,
+      "religiao": 68,
+      "moral": 28,
+      "tecnologia": 95
+    }
+  },
+  {
+    "ideologyId": "tecno-socialismo",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 60,
+      "poder": 48,
+      "imigracao": 45,
+      "diplomacia": 33,
+      "intervencao": 55,
+      "economia": 88,
+      "controle": 82,
+      "comercio": 50,
+      "religiao": 88,
+      "moral": 86,
+      "tecnologia": 96
+    }
+  },
+  {
+    "ideologyId": "tecno-fascismo",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 6,
+      "poder": 94,
+      "imigracao": 85,
+      "diplomacia": 85,
+      "intervencao": 12,
+      "economia": 40,
+      "controle": 70,
+      "comercio": 80,
+      "religiao": 62,
+      "moral": 25,
+      "tecnologia": 96
     }
   }
 ]

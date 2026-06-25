@@ -271,12 +271,13 @@ export default function App() {
                 <small>· 12 dimensões · 36 perguntas</small>
               </span>
               <h1 className="fade-up d-2">
-                Descubra seu <em>perfil ideológico</em> em 12 eixos.
+                Quiz político: descubra seu <em>perfil ideológico</em> em 12 eixos.
               </h1>
               <p className="intro-lead fade-up d-3">
-                Análise detalhada baseada nas suas respostas. Resultados percentuais,
-                comparação ideológica e visualização precisa da sua posição no
-                espectro político brasileiro.
+                Faça o teste ideológico do <strong>12 Axes</strong> e mapeie sua
+                ideologia política em 12 dimensões independentes. Veja suas
+                correspondências ideológicas, o país mais compatível e sua posição
+                no espectro político — grátis, anônimo e em português.
               </p>
               <div className="intro-actions fade-up d-4">
                 <button className="primary-button" type="button" onClick={openVariantChooser}>
@@ -339,6 +340,87 @@ export default function App() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="home-seo">
+            <section className="seo-block fade-up" aria-labelledby="como-funciona">
+              <div className="section-heading">
+                <span className="eyebrow">Como funciona</span>
+                <h2 id="como-funciona">Como funciona o quiz político 12 Axes</h2>
+                <p>
+                  Um teste de ideologia política simples e visual: você responde,
+                  o 12 Axes calcula e mostra onde você está no espectro político.
+                </p>
+              </div>
+              <div className="step-grid">
+                <article className="step-card">
+                  <span className="step-num">1</span>
+                  <h3>Responda às perguntas</h3>
+                  <p>
+                    Concorde ou discorde de afirmações sobre economia, Estado,
+                    liberdades, valores e política externa. 36 ou 60 perguntas.
+                  </p>
+                </article>
+                <article className="step-card">
+                  <span className="step-num">2</span>
+                  <h3>Análise em 12 eixos</h3>
+                  <p>
+                    Cada resposta posiciona você em 12 eixos ideológicos
+                    independentes — do livre mercado ao intervencionismo, do
+                    nacionalismo ao globalismo.
+                  </p>
+                </article>
+                <article className="step-card">
+                  <span className="step-num">3</span>
+                  <h3>Descubra seu perfil</h3>
+                  <p>
+                    Receba seu perfil ideológico, as ideologias mais compatíveis e
+                    o país que mais combina com as suas ideias.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section className="seo-block fade-up" aria-labelledby="faq">
+              <div className="section-heading">
+                <span className="eyebrow">Dúvidas</span>
+                <h2 id="faq">Perguntas frequentes sobre o teste ideológico</h2>
+              </div>
+              <div className="faq-list">
+                <details className="faq-item">
+                  <summary>O que é o quiz político 12 Axes?</summary>
+                  <p>
+                    O 12 Axes é um quiz político gratuito que analisa suas opiniões
+                    em 12 eixos ideológicos independentes e mostra seu perfil
+                    ideológico, as ideologias mais compatíveis e o país que mais
+                    combina com você.
+                  </p>
+                </details>
+                <details className="faq-item">
+                  <summary>Quanto tempo leva o teste ideológico?</summary>
+                  <p>
+                    A versão curta tem 36 perguntas e leva cerca de 5 minutos. A
+                    versão completa tem 60 perguntas para um resultado mais preciso.
+                  </p>
+                </details>
+                <details className="faq-item">
+                  <summary>O quiz de ideologia é anônimo e gratuito?</summary>
+                  <p>
+                    Sim. O 12 Axes é totalmente gratuito, anônimo e não exige
+                    cadastro — suas respostas não são associadas à sua identidade.
+                  </p>
+                </details>
+                <details className="faq-item">
+                  <summary>O que são os 12 eixos da ideologia política?</summary>
+                  <p>
+                    São 12 dimensões que descrevem a sua posição política para além
+                    da simples divisão esquerda e direita: economia, Estado,
+                    liberdades, autoridade, valores, religião, meio ambiente,
+                    política externa e mais.
+                  </p>
+                </details>
+              </div>
+            </section>
           </div>
         </section>
       )}
