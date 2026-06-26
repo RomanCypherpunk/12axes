@@ -5,7 +5,7 @@ import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
-import com.twelveaxes.service.CountryMatcherService;
+import com.twelveaxes.service.CountryResolverService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
@@ -26,18 +26,18 @@ public class QuizController {
     private final QuizDataService dataService;
     private final ScoringService scoringService;
     private final IdeologyMatcherService matcherService;
-    private final CountryMatcherService countryMatcherService;
+    private final CountryResolverService countryResolverService;
 
     public QuizController(
             QuizDataService dataService,
             ScoringService scoringService,
             IdeologyMatcherService matcherService,
-            CountryMatcherService countryMatcherService
+            CountryResolverService countryResolverService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
         this.matcherService = matcherService;
-        this.countryMatcherService = countryMatcherService;
+        this.countryResolverService = countryResolverService;
     }
 
     @GetMapping("/api/quiz")
@@ -50,8 +50,9 @@ public class QuizController {
     public QuizResult results(@Valid @RequestBody ResultRequest request) {
         var axes = scoringService.score(request);
         var matches = matcherService.findMatches(axes);
-        var topCountryMatch = countryMatcherService.findTopMatch(axes);
-        return new QuizResult(axes, matches.getFirst(), matches, topCountryMatch);
+        var topMatch = matches.getFirst();
+        var topCountryMatch = countryResolverService.resolveFor(topMatch);
+        return new QuizResult(axes, topMatch, matches, topCountryMatch);
     }
 
     @GetMapping("/api/ideologies")

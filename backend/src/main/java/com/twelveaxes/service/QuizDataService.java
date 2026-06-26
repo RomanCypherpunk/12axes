@@ -33,8 +33,10 @@ public class QuizDataService {
     private List<Axis> axes;
     private List<Question> poolQuestions;
     private List<Ideology> ideologies;
+    private Map<String, Ideology> ideologiesById;
     private Map<String, IdeologyProfile> ideologyProfiles;
     private List<Country> countries;
+    private Map<String, Country> countriesById;
     private Map<String, CountryProfile> countryProfiles;
 
     public QuizDataService(ObjectMapper objectMapper) {
@@ -46,13 +48,33 @@ public class QuizDataService {
         axes = readJson("data/axes.json", new TypeReference<>() {});
         poolQuestions = readJson("data/questions-pool.json", new TypeReference<>() {});
         ideologies = readJson("data/ideologies.json", new TypeReference<>() {});
+        ideologiesById = ideologies.stream()
+                .collect(Collectors.toUnmodifiableMap(Ideology::id, Function.identity()));
         List<IdeologyProfile> profiles = readJson("data/ideology-profiles.json", new TypeReference<>() {});
         ideologyProfiles = profiles.stream()
                 .collect(Collectors.toUnmodifiableMap(IdeologyProfile::ideologyId, Function.identity()));
         countries = readJson("data/countries.json", new TypeReference<>() {});
+        countriesById = countries.stream()
+                .collect(Collectors.toUnmodifiableMap(Country::id, Function.identity()));
         List<CountryProfile> countryProfileList = readJson("data/countries-profiles.json", new TypeReference<>() {});
         countryProfiles = countryProfileList.stream()
                 .collect(Collectors.toUnmodifiableMap(CountryProfile::countryId, Function.identity()));
+
+        validateIdeologyCountryLinks();
+    }
+
+    private void validateIdeologyCountryLinks() {
+        List<String> broken = ideologies.stream()
+                .filter(ideology -> ideology.countryId() == null
+                        || ideology.countryId().isBlank()
+                        || !countriesById.containsKey(ideology.countryId()))
+                .map(ideology -> ideology.id() + " -> " + ideology.countryId())
+                .toList();
+        if (!broken.isEmpty()) {
+            throw new IllegalStateException(
+                    "Toda ideologia precisa de um countryId que resolva para um país existente. Inválidos: " + broken
+            );
+        }
     }
 
     public QuizPayload getQuiz() {
@@ -90,6 +112,14 @@ public class QuizDataService {
 
     public List<Ideology> getIdeologies() {
         return ideologies;
+    }
+
+    public Ideology getIdeologyById(String id) {
+        return ideologiesById.get(id);
+    }
+
+    public Country getCountryById(String id) {
+        return countriesById.get(id);
     }
 
     public Map<String, IdeologyProfile> getIdeologyProfiles() {
