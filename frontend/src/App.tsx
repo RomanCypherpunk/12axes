@@ -10,7 +10,7 @@ import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuiz, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
-import { SHARE_COLORS, SHARE_SIZE, buildShareCard, prepareImagesForExport } from './utils/shareCard';
+import { SHARE_COLORS, SHARE_HEIGHT, SHARE_WIDTH, buildShareCard, prepareImagesForExport } from './utils/shareCard';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
 
@@ -206,8 +206,8 @@ export default function App() {
       await prepareImagesForExport(target);
 
       const dataUrl = await toPng(target, {
-        width: SHARE_SIZE,
-        height: SHARE_SIZE,
+        width: SHARE_WIDTH,
+        height: SHARE_HEIGHT,
         backgroundColor: SHARE_COLORS.soft,
         pixelRatio: 1,
         cacheBust: true,
