@@ -10,7 +10,7 @@ import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuiz, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
-import { flagFileName, resolveCountryFlagSrc } from './utils/countryFlags';
+import { SHARE_COLORS, SHARE_SIZE, buildShareCard, prepareImagesForExport } from './utils/shareCard';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
 
@@ -196,30 +196,27 @@ export default function App() {
 
     let stage: HTMLDivElement | null = null;
     try {
-      const resultsSection = document.querySelector<HTMLElement>('.results-layout');
-      if (!resultsSection) {
-        throw new Error('Página de resultados não encontrada.');
-      }
-
       if (document.fonts) {
         await document.fonts.ready;
       }
 
-      const { stage: builtStage, target } = buildExportNode(result, resultsSection);
+      const { stage: builtStage, target } = buildShareCard(result, quiz);
       stage = builtStage;
       document.body.appendChild(stage);
       await prepareImagesForExport(target);
 
       const dataUrl = await toPng(target, {
-        backgroundColor: '#F4F6FA',
-        pixelRatio: Math.min(2, window.devicePixelRatio || 1),
+        width: SHARE_SIZE,
+        height: SHARE_SIZE,
+        backgroundColor: SHARE_COLORS.soft,
+        pixelRatio: 1,
         cacheBust: true,
         skipFonts: true
       });
 
       downloadDataUrl(
         dataUrl,
-        `12axes-resultado-${new Date().toISOString().slice(0, 10)}.png`
+        `12axes-perfil-${new Date().toISOString().slice(0, 10)}.png`
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível gerar a imagem do resultado.');
@@ -632,161 +629,4 @@ function downloadDataUrl(dataUrl: string, fileName: string) {
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
-}
-
-function buildExportNode(
-  result: QuizResult,
-  axesSection: Element
-): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const stage = document.createElement('div');
-  Object.assign(stage.style, {
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    width: '0',
-    height: '0',
-    overflow: 'hidden',
-    pointerEvents: 'none',
-    zIndex: '-1'
-  } as Partial<CSSStyleDeclaration>);
-
-  const target = document.createElement('div');
-  target.className = 'export-root';
-  Object.assign(target.style, {
-    width: '1100px',
-    padding: '48px',
-    background: '#F4F6FA',
-    boxSizing: 'border-box',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '28px'
-  } as Partial<CSSStyleDeclaration>);
-
-  const pageClone = axesSection.cloneNode(true) as HTMLElement;
-  pageClone.removeAttribute('id');
-  pageClone.classList.remove('fade-up');
-  pageClone.querySelectorAll<HTMLElement>('[data-export-hidden]').forEach((el) => el.remove());
-  pageClone.querySelectorAll<HTMLElement>('.fade-up').forEach((el) => {
-    el.classList.remove('fade-up');
-  });
-
-  target.append(pageClone);
-  stage.append(target);
-
-  return { stage, target };
-
-  const card = document.createElement('article');
-  card.className = 'export-ideology-card';
-
-  const category = document.createElement('span');
-  category.className = 'export-ideology-category';
-  category.textContent = result.topMatch.category;
-
-  const name = document.createElement('h2');
-  name.className = 'export-ideology-name';
-  name.textContent = result.topMatch.name;
-
-  const description = document.createElement('p');
-  description.className = 'export-ideology-description';
-  description.textContent = result.topMatch.longDescription;
-
-  const axesClone = axesSection.cloneNode(true) as HTMLElement;
-  axesClone.classList.remove('fade-up');
-  axesClone.querySelectorAll<HTMLElement>('.fade-up').forEach((el) => {
-    el.classList.remove('fade-up');
-  });
-
-  const countryCard = buildExportCountryCard(result.topCountryMatch);
-
-  card.append(category, name, description);
-  target.append(card, axesClone, countryCard);
-  stage.append(target);
-
-  return { stage, target };
-}
-
-function buildExportCountryCard(country: QuizResult['topCountryMatch']) {
-  const card = document.createElement('article');
-  card.className = 'export-country-card';
-
-  const image = document.createElement('img');
-  image.src = resolveCountryFlagSrc(country.flagPath);
-  image.crossOrigin = 'anonymous';
-  const isStrictFlag = !country.flagKind || country.flagKind === 'official-flag' || country.flagKind === 'historical-flag';
-  image.alt = `${isStrictFlag ? 'Bandeira' : 'Bandeira / símbolo histórico'} de ${country.name}`;
-
-  const text = document.createElement('div');
-  text.className = 'export-country-text';
-
-  const kicker = document.createElement('span');
-  kicker.className = 'export-country-kicker';
-  kicker.textContent = 'País mais compatível';
-
-  const name = document.createElement('h2');
-  name.className = 'export-country-name';
-  name.textContent = country.name;
-
-  const meta = document.createElement('span');
-  meta.className = 'export-country-meta';
-  meta.textContent = country.historical && country.period
-    ? `${country.category} · ${country.period}`
-    : country.category;
-
-  const description = document.createElement('p');
-  description.className = 'export-country-description';
-  description.textContent = country.flagNote
-    ? `${country.description} ${country.flagNote}`
-    : country.description;
-
-  text.append(kicker, name, meta, description);
-  card.append(image, text);
-  return card;
-}
-
-function prepareImagesForExport(root: HTMLElement) {
-  const images = Array.from(root.querySelectorAll('img'));
-  return Promise.all(images.map(waitForImage)).then(() => {
-    images.forEach((image) => {
-      if (!image.complete || image.naturalWidth === 0) {
-        replaceBrokenExportImage(image);
-      }
-    });
-  });
-}
-
-function waitForImage(image: HTMLImageElement) {
-  if (image.complete && image.naturalWidth > 0) {
-    return Promise.resolve();
-  }
-
-  return new Promise<void>((resolve) => {
-    const timeout = window.setTimeout(resolve, 2500);
-    const finish = () => {
-      window.clearTimeout(timeout);
-      resolve();
-    };
-
-    image.addEventListener('load', finish, { once: true });
-    image.addEventListener('error', finish, { once: true });
-  });
-}
-
-function replaceBrokenExportImage(image: HTMLImageElement) {
-  const fallback = document.createElement('div');
-  fallback.className = 'export-country-flag-fallback';
-  fallback.setAttribute('role', 'img');
-  fallback.setAttribute('aria-label', image.alt || 'Bandeira indisponível');
-
-  const title = document.createElement('span');
-  title.textContent = 'Bandeira indisponível';
-  fallback.append(title);
-
-  const fileName = flagFileName(image.getAttribute('src') ?? '');
-  if (fileName) {
-    const detail = document.createElement('small');
-    detail.textContent = fileName;
-    fallback.append(detail);
-  }
-
-  image.replaceWith(fallback);
 }
