@@ -3380,3 +3380,164 @@
     font-size: clamp(1.35rem, 5.5vw, 1.7rem);
   }
 }
+
+/* ════════════════════════════════════════════════════════
+   Quiz — fit-to-viewport (no scroll to reach the actions)
+   ════════════════════════════════════════════════════════ */
+.app-shell[data-screen="quiz"] {
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell[data-screen="quiz"] .quiz-layout {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: clamp(10px, 1.6vh, 16px);
+  padding: clamp(10px, 1.6vh, 18px) 0 clamp(12px, 2vh, 20px);
+}
+
+.app-shell[data-screen="quiz"] .progress-header {
+  flex: 0 0 auto;
+  padding: clamp(11px, 1.4vh, 15px) 16px;
+  gap: 8px;
+}
+
+.app-shell[data-screen="quiz"] .question-card {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vh, 20px);
+  padding: clamp(16px, 2.4vh, 28px) clamp(16px, 3vw, 30px);
+  overflow: hidden;
+}
+
+.app-shell[data-screen="quiz"] .question-card-header {
+  flex: 0 0 auto;
+}
+
+.app-shell[data-screen="quiz"] .question-card h2 {
+  font-size: clamp(1.1rem, 1.2vw + 0.85rem, 1.55rem);
+  line-height: 1.22;
+}
+
+.app-shell[data-screen="quiz"] .answer-grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(7px, 1.1vh, 11px);
+}
+
+.app-shell[data-screen="quiz"] .answer-button {
+  flex: 1 1 0;
+  min-height: 42px;
+  max-height: 62px;
+}
+
+.app-shell[data-screen="quiz"] .quiz-actions {
+  flex: 0 0 auto;
+}
+
+/* Keep the validation message from breaking the locked layout */
+.app-shell[data-screen="quiz"] .inline-error {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  font-size: 0.82rem;
+}
+
+/* Roomy phones: don't let the card stretch the rows too tall */
+@media (min-height: 780px) {
+  .app-shell[data-screen="quiz"] .answer-button {
+    max-height: 66px;
+  }
+}
+
+/* Accessibility + responsive polish */
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 60;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  color: var(--accent-deep);
+  font-weight: 800;
+  box-shadow: var(--shadow-md);
+  transform: translate(-50%, -160%);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+}
+
+.skip-target {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-target:focus {
+  outline: none;
+}
+
+.app-shell[data-screen="home"] {
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+.app-shell[data-screen="quiz"] .question-card {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.app-shell[data-screen="quiz"] .question-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-shell[data-screen="quiz"] .question-card::-webkit-scrollbar-thumb {
+  background: var(--ink-300);
+  border-radius: var(--radius-pill);
+}
+
+.app-shell[data-screen="quiz"] .answer-button {
+  touch-action: manipulation;
+}
+
+@media (max-width: 760px) {
+  .app-shell[data-screen="home"] .home-grid {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .app-shell[data-screen="home"] .canvas-panel {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-height: 640px) {
+  .app-shell[data-screen="quiz"] .answer-grid {
+    justify-content: flex-start;
+  }
+
+  .app-shell[data-screen="quiz"] .answer-button {
+    flex: 0 0 auto;
+  }
+}

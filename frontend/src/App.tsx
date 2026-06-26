@@ -246,6 +246,9 @@ export default function App() {
 
   return (
     <main className="app-shell" data-screen={screen}>
+      <a className="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo
+      </a>
       <header className="site-header">
         <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
           <span className="brand-num">12</span>
@@ -261,6 +264,7 @@ export default function App() {
           </button>
         )}
       </header>
+      <span id="conteudo-principal" className="skip-target" tabIndex={-1} />
 
       {screen === 'home' && (
         <section className="home-layout" id="inicio">

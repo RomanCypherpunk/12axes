@@ -12,8 +12,15 @@ export function ProgressHeader({ current, total }: ProgressHeaderProps) {
         <span className="eyebrow">Pergunta {current} de {total}</span>
         <strong>{percent}% concluído</strong>
       </div>
-      <div className="progress-track" aria-label={`Progresso: ${percent}%`}>
-        <span style={{ width: `${percent}%` }} />
+      <div
+        className="progress-track"
+        role="progressbar"
+        aria-label={`Progresso do quiz: ${percent}%`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percent}
+      >
+        <span aria-hidden="true" style={{ width: `${percent}%` }} />
       </div>
     </header>
   );
