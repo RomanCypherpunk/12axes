@@ -3572,14 +3572,19 @@
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  gap: clamp(10px, 1.6vh, 16px);
-  padding: clamp(10px, 1.6vh, 18px) 0 clamp(12px, 2vh, 20px);
+  gap: clamp(8px, 1.25vh, 14px);
+  padding: clamp(8px, 1.35vh, 16px) 0 clamp(10px, 1.7vh, 18px);
+}
+
+.app-shell[data-screen="quiz"] .site-header {
+  flex: 0 0 auto;
+  padding-block: clamp(8px, 1.45vh, 14px);
 }
 
 .app-shell[data-screen="quiz"] .progress-header {
   flex: 0 0 auto;
-  padding: clamp(11px, 1.4vh, 15px) 16px;
-  gap: 8px;
+  padding: clamp(9px, 1.15vh, 14px) 16px;
+  gap: clamp(5px, 0.75vh, 8px);
 }
 
 .app-shell[data-screen="quiz"] .question-card {
@@ -3587,8 +3592,8 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(12px, 2vh, 20px);
-  padding: clamp(16px, 2.4vh, 28px) clamp(16px, 3vw, 30px);
+  gap: clamp(8px, 1.45vh, 16px);
+  padding: clamp(14px, 2vh, 24px) clamp(16px, 3vw, 30px);
   overflow: hidden;
 }
 
@@ -3597,8 +3602,8 @@
 }
 
 .app-shell[data-screen="quiz"] .question-card h2 {
-  font-size: clamp(1.1rem, 1.2vw + 0.85rem, 1.55rem);
-  line-height: 1.22;
+  font-size: clamp(1.05rem, 1.05vw + 0.82rem, 1.48rem);
+  line-height: 1.16;
 }
 
 .app-shell[data-screen="quiz"] .answer-grid {
@@ -3606,18 +3611,20 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(7px, 1.1vh, 11px);
+  justify-content: space-between;
+  gap: clamp(6px, 0.95vh, 10px);
 }
 
 .app-shell[data-screen="quiz"] .answer-button {
   flex: 1 1 0;
-  min-height: 42px;
-  max-height: 62px;
+  min-height: 38px;
+  max-height: 58px;
+  padding-block: clamp(7px, 1vh, 10px);
 }
 
 .app-shell[data-screen="quiz"] .quiz-actions {
   flex: 0 0 auto;
+  min-height: clamp(38px, 5.4vh, 46px);
 }
 
 /* Keep the validation message from breaking the locked layout */
@@ -3630,7 +3637,7 @@
 /* Roomy phones: don't let the card stretch the rows too tall */
 @media (min-height: 780px) {
   .app-shell[data-screen="quiz"] .answer-button {
-    max-height: 66px;
+    max-height: 64px;
   }
 }
 
@@ -3676,18 +3683,7 @@
 }
 
 .app-shell[data-screen="quiz"] .question-card {
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-gutter: stable;
-}
-
-.app-shell[data-screen="quiz"] .question-card::-webkit-scrollbar {
-  width: 8px;
-}
-
-.app-shell[data-screen="quiz"] .question-card::-webkit-scrollbar-thumb {
-  background: var(--ink-300);
-  border-radius: var(--radius-pill);
+  overflow: hidden;
 }
 
 .app-shell[data-screen="quiz"] .answer-button {
@@ -3707,12 +3703,64 @@
 }
 
 @media (max-height: 640px) {
+  .app-shell[data-screen="quiz"] .site-header {
+    padding-block: 6px;
+  }
+
+  .app-shell[data-screen="quiz"] .header-cta {
+    min-height: 36px;
+    padding-inline: 14px;
+  }
+
+  .app-shell[data-screen="quiz"] .progress-header {
+    padding: 8px 12px;
+  }
+
+  .app-shell[data-screen="quiz"] .progress-track {
+    height: 5px;
+  }
+
+  .app-shell[data-screen="quiz"] .question-card {
+    gap: 7px;
+    padding-block: 12px;
+  }
+
+  .app-shell[data-screen="quiz"] .question-axis,
+  .app-shell[data-screen="quiz"] .progress-header .eyebrow {
+    min-height: 24px;
+    padding: 3px 9px;
+    font-size: 0.62rem;
+  }
+
+  .app-shell[data-screen="quiz"] .question-card-header {
+    gap: 8px;
+  }
+
+  .app-shell[data-screen="quiz"] .question-card h2 {
+    font-size: clamp(0.98rem, 1.5vw, 1.2rem);
+    line-height: 1.12;
+  }
+
   .app-shell[data-screen="quiz"] .answer-grid {
-    justify-content: flex-start;
+    gap: 5px;
   }
 
   .app-shell[data-screen="quiz"] .answer-button {
-    flex: 0 0 auto;
+    min-height: 34px;
+    max-height: 42px;
+    grid-template-columns: 24px minmax(0, 1fr) 18px;
+    gap: 10px;
+    padding: 6px 12px;
+    font-size: 0.86rem;
+  }
+
+  .app-shell[data-screen="quiz"] .answer-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .app-shell[data-screen="quiz"] .quiz-actions {
+    min-height: 36px;
   }
 }
 

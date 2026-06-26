@@ -76,8 +76,7 @@
   /* Signature gradients — green family only */
   --grad-accent: linear-gradient(135deg, var(--green-700) 0%, var(--green-500) 55%, var(--green-400) 100%);
   --grad-brand:  linear-gradient(120deg, var(--green-700) 0%, var(--green-500) 50%, var(--green-400) 100%);
-  /* Logo lockup gradient (warm orange → green, matches the brand logo) */
-  --grad-logo: linear-gradient(145deg, #F97316 0%, #EAB308 24%, #84CC16 52%, #22C55E 80%, #16A34A 100%);
+  --grad-logo: linear-gradient(145deg, var(--green-800) 0%, var(--green-700) 38%, var(--green-500) 72%, var(--green-400) 100%);
   --grad-critical: linear-gradient(135deg, var(--red-700) 0%, var(--red-500) 100%);
   --grad-mesh:
     radial-gradient(42% 38% at 8% 2%, rgba(34, 197, 94, 0.10), transparent 70%),
