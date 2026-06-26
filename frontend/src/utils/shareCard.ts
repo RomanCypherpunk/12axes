@@ -32,7 +32,7 @@ export const SHARE_COLORS = {
   balanced: '#94A3B8'
 };
 const SHARE_FONT_DISPLAY = '"Sora", ui-sans-serif, system-ui, -apple-system, sans-serif';
-const SHARE_FONT_BODY = '"Inter", ui-sans-serif, system-ui, -apple-system, sans-serif';
+const SHARE_FONT_BODY = '"Poppins", ui-sans-serif, system-ui, -apple-system, sans-serif';
 const SHARE_ACCENT_GRAD = 'linear-gradient(135deg, #15803D 0%, #22C55E 55%, #4ADE80 100%)';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const SHARE_MATCH_RING_BG = 'rgba(34, 197, 94, 0.14)';
@@ -403,7 +403,8 @@ function buildShareIdeologyHeader(result: QuizResult): HTMLElement {
       background: C.green50,
       border: '1px solid rgba(34, 197, 94, 0.2)',
       borderRadius: '999px',
-      padding: '4px 10px'
+      padding: '4px 10px',
+      whiteSpace: 'nowrap'
     }, 'Top match'),
     buildMatchRing(pct)
   );
@@ -556,7 +557,7 @@ function buildSharePole(
     display: 'flex',
     alignItems: 'center',
     justifyContent: side === 'right' ? 'flex-end' : 'flex-start',
-    flexDirection: side === 'right' ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     gap: '6px',
     minWidth: '0',
     minHeight: '36px',
@@ -589,6 +590,7 @@ function buildSharePole(
     flexDirection: 'column',
     minWidth: '0',
     alignItems: side === 'right' ? 'flex-end' : 'flex-start',
+    textAlign: side === 'right' ? 'right' : 'left',
     lineHeight: '1.06'
   });
   text.append(
@@ -609,7 +611,11 @@ function buildSharePole(
     }, `${Math.round(value)}%`)
   );
 
-  wrap.append(icon, text);
+  if (side === 'right') {
+    wrap.append(text, icon);
+  } else {
+    wrap.append(icon, text);
+  }
   return wrap;
 }
 
