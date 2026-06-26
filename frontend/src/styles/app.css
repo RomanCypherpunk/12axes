@@ -4094,9 +4094,25 @@
 }
 
 .axis-vector-card .axis-pole:not(.is-active) {
-  border-color: color-mix(in srgb, var(--pole, var(--ink-400)) 15%, var(--line));
-  background: color-mix(in srgb, var(--pole, var(--ink-400)) 4%, var(--paper));
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.62)),
+    var(--paper-soft);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.axis-vector-card .axis-pole:not(.is-active) .axis-pole-icon {
+  background: color-mix(in srgb, var(--ink-100) 76%, var(--paper));
+  color: var(--text-muted);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+.axis-vector-card .axis-pole:not(.is-active) .axis-pole-name {
+  color: var(--ink-700);
+}
+
+.axis-vector-card .axis-pole:not(.is-active) .axis-pole-value {
+  color: var(--text-muted);
 }
 
 .axis-vector-card .axis-pole.is-active {
@@ -4113,21 +4129,19 @@
   position: relative;
   isolation: isolate;
   overflow: visible;
-  background:
-    linear-gradient(90deg, color-mix(in srgb, var(--axis-left) 14%, var(--ink-100)) 0%, var(--ink-100) 42%, var(--ink-100) 58%, color-mix(in srgb, var(--axis-right) 14%, var(--ink-100)) 100%);
+  background: linear-gradient(90deg, var(--ink-100), var(--ink-50) 50%, var(--ink-100));
   box-shadow:
     inset 0 1px 2px rgba(11, 16, 32, 0.1),
     0 8px 18px -16px rgba(11, 16, 32, 0.35);
 }
 
 .axis-vector-card .axis-track::before {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   z-index: 0;
   border-radius: inherit;
-  background:
-    linear-gradient(90deg, color-mix(in srgb, var(--axis-left) 26%, transparent) 0%, transparent 40%, transparent 60%, color-mix(in srgb, var(--axis-right) 26%, transparent) 100%);
+  background: transparent;
   pointer-events: none;
 }
 
@@ -4147,13 +4161,13 @@
   z-index: 1;
   width: var(--axis-fill-width);
   border-radius: inherit;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--axis-dom) 72%, var(--paper)), var(--axis-dom));
+  background: var(--axis-dom);
   box-shadow: 0 8px 18px -14px color-mix(in srgb, var(--axis-dom) 74%, transparent);
   pointer-events: none;
 }
 
 .axis-vector-card .axis-track[data-lean="left"] .axis-track-fill {
-  background: linear-gradient(90deg, var(--axis-dom), color-mix(in srgb, var(--axis-dom) 72%, var(--paper)));
+  background: var(--axis-dom);
 }
 
 .axis-vector-card .axis-track[data-lean="balanced"] .axis-track-fill {
