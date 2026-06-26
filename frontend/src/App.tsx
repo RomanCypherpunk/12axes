@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { selectAndBalanceQuestions } from './utils/quizSelection';
+import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { toPng } from 'html-to-image';
 import { AxisResultBar } from './components/AxisResultBar';
 import { AxisIcon } from './components/AxisIcon';
@@ -12,6 +12,15 @@ import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/
 import { flagFileName, resolveCountryFlagSrc } from './utils/countryFlags';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
+
+// Página oculta (não linkada): /240questions roda o quiz com TODAS as perguntas do pool.
+const FULL_MODE =
+  typeof window !== 'undefined' &&
+  window.location.pathname.replace(/\/+$/, '').endsWith('/240questions');
+
+function buildQuizForMode(payload: QuizPayload): QuizPayload {
+  return FULL_MODE ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
+}
 
 const TONE_RED_AXES = new Set([
   'imigracao',
@@ -37,8 +46,14 @@ export default function App() {
   const isAdvancingRef = useRef(false);
 
   useEffect(() => {
-    fetchQuiz('short')
-      .then((payload) => setQuiz(selectAndBalanceQuestions(payload)))
+    fetchQuiz(FULL_MODE ? 'extended' : 'short')
+      .then((payload) => {
+        setQuiz(buildQuizForMode(payload));
+        if (FULL_MODE) {
+          setSelectedVariant('extended');
+          setScreen('quiz');
+        }
+      })
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
   }, []);
@@ -81,8 +96,8 @@ export default function App() {
     setIsLoading(true);
 
     try {
-      const nextQuiz = await fetchQuiz(variant);
-      setQuiz(selectAndBalanceQuestions(nextQuiz));
+      const nextQuiz = await fetchQuiz(FULL_MODE ? 'extended' : variant);
+      setQuiz(buildQuizForMode(nextQuiz));
       setScreen('quiz');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
@@ -158,7 +173,10 @@ export default function App() {
         questionId: question.id,
         answer: answerMap[question.id] as AnswerValue
       }));
-      const nextResult = await submitResults(quiz.variant ?? selectedVariant, payload);
+      const nextResult = await submitResults(
+        FULL_MODE ? 'extended' : (quiz.variant ?? selectedVariant),
+        payload
+      );
       setResult(nextResult);
       setScreen('results');
     } catch (err) {

@@ -50,6 +50,41 @@ export function selectAndBalanceQuestions(payload: QuizPayload): QuizPayload {
   return { ...payload, questions: ordered };
 }
 
+/**
+ * Modo oculto "/240questions": usa TODAS as perguntas do pool (sem subselecionar),
+ * apenas reordenando para intercalar afirmações LEFT/RIGHT como no quiz normal.
+ */
+export function selectAllQuestionsBalanced(payload: QuizPayload): QuizPayload {
+  const pool = payload.questions;
+  const leftQueue = shuffleArray(pool.filter((q) => q.agreePole === 'LEFT'));
+  const rightQueue = shuffleArray(pool.filter((q) => q.agreePole === 'RIGHT'));
+  const ordered: Question[] = [];
+  let li = 0;
+  let ri = 0;
+  let pickLeft = Math.random() < 0.5;
+
+  for (let i = 0; i < pool.length; i++) {
+    if (pickLeft && li < leftQueue.length) {
+      ordered.push(leftQueue[li++]);
+    } else if (!pickLeft && ri < rightQueue.length) {
+      ordered.push(rightQueue[ri++]);
+    } else if (li < leftQueue.length) {
+      ordered.push(leftQueue[li++]);
+    } else {
+      ordered.push(rightQueue[ri++]);
+    }
+    pickLeft = !pickLeft;
+  }
+
+  return {
+    ...payload,
+    variant: 'extended',
+    questions: ordered,
+    questionCount: ordered.length,
+    questionsPerAxis: 0
+  };
+}
+
 function shuffleArray<T>(items: T[]): T[] {
   const shuffled = [...items];
   for (let i = shuffled.length - 1; i > 0; i--) {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { selectAndBalanceQuestions } from './quizSelection';
+import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './quizSelection';
 import type { QuizPayload } from '../types/quiz';
 
 const AXIS_IDS = [
@@ -56,6 +56,33 @@ describe('selectAndBalanceQuestions — quiz curto (3 por eixo)', () => {
 
   it('não apresenta dois polos iguais consecutivos', () => {
     const result = selectAndBalanceQuestions(makePool(20, 3));
+    for (let i = 1; i < result.questions.length; i++) {
+      expect(
+        result.questions[i].agreePole,
+        `questões ${i - 1} e ${i} têm mesmo polo`
+      ).not.toBe(result.questions[i - 1].agreePole);
+    }
+  });
+});
+
+describe('selectAllQuestionsBalanced — modo oculto /240questions', () => {
+  it('mantém TODAS as perguntas do pool (sem perder nem duplicar)', () => {
+    const pool = makePool(20, 3);
+    const result = selectAllQuestionsBalanced(pool);
+    expect(result.questions).toHaveLength(pool.questions.length);
+    const ids = new Set(result.questions.map((q) => q.id));
+    expect(ids.size).toBe(pool.questions.length);
+    expect(ids).toEqual(new Set(pool.questions.map((q) => q.id)));
+  });
+
+  it('marca a versão como extended e ajusta a contagem', () => {
+    const result = selectAllQuestionsBalanced(makePool(20, 3));
+    expect(result.variant).toBe('extended');
+    expect(result.questionCount).toBe(result.questions.length);
+  });
+
+  it('intercala polos sempre que ainda há de ambos os lados', () => {
+    const result = selectAllQuestionsBalanced(makePool(20, 3));
     for (let i = 1; i < result.questions.length; i++) {
       expect(
         result.questions[i].agreePole,
