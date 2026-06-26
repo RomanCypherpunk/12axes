@@ -13,18 +13,20 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftPercent = clamp(result.leftPercent);
   const rightPercent = clamp(result.rightPercent);
   const isBalanced = result.intensity === 'Equilibrado';
-  const leaningRight = rightPercent > leftPercent;
+  const leaningRight = result.dominantPole === result.rightPole;
   const leftActive = !isBalanced && !leaningRight;
   const rightActive = !isBalanced && leaningRight;
 
   const dominantColor = isBalanced ? BALANCED_COLOR : leaningRight ? axis.rightColor : axis.leftColor;
 
-  // Position of the marker across the track (0 = full left pole, 100 = full right pole).
+  // Backend scores store the left pole as 100 - rightPercent, so the visual axis
+  // coordinate is rightPercent: 0 = left pole, 50 = center, 100 = right pole.
   const position = rightPercent;
   const fillLeft = Math.min(position, 50);
   const fillWidth = isBalanced ? 0 : Math.abs(position - 50);
+  const leanDirection = isBalanced ? 'balanced' : leaningRight ? 'right' : 'left';
 
-  const leaningText = isBalanced ? 'Equilibrado' : `${result.intensity} · ${result.dominantPole}`;
+  const leaningText = isBalanced ? 'Equilibrado' : `${result.intensity} - ${result.dominantPole}`;
 
   const rowStyle = {
     ['--axis-left']: axis.leftColor,
@@ -35,9 +37,14 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
 
   const leftPoleStyle = { ['--pole']: axis.leftColor, ['--pole-ink']: readableInk(axis.leftColor) } as CSSProperties;
   const rightPoleStyle = { ['--pole']: axis.rightColor, ['--pole-ink']: readableInk(axis.rightColor) } as CSSProperties;
+  const trackStyle = {
+    ['--axis-position']: `${position}%`,
+    ['--axis-fill-left']: `${fillLeft}%`,
+    ['--axis-fill-width']: `${fillWidth}%`
+  } as CSSProperties;
 
   return (
-    <article className="axis-row" style={rowStyle}>
+    <article className="axis-row axis-vector-card" style={rowStyle}>
       <header className="axis-row-head">
         <div className="axis-row-id">
           <h3>{result.label}</h3>
@@ -60,20 +67,15 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
 
         <div
           className="axis-track"
+          data-lean={leanDirection}
           role="img"
           aria-label={`${result.label}: ${result.leftPole} ${leftPercent.toFixed(0)}%, ${result.rightPole} ${rightPercent.toFixed(0)}%`}
+          style={trackStyle}
         >
           <span className="axis-track-center" aria-hidden="true" />
-          {fillWidth > 0 && (
-            <span
-              className="axis-track-fill"
-              style={{ left: `${fillLeft}%`, width: `${fillWidth}%` }}
-              aria-hidden="true"
-            />
-          )}
+          <span className="axis-track-fill" aria-hidden="true" />
           <span
             className="axis-track-thumb"
-            style={{ left: `${position}%` }}
             data-balanced={isBalanced}
             aria-hidden="true"
           />
