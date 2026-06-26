@@ -6,6 +6,7 @@ public record QuizResult(
         List<AxisResult> axes,
         IdeologyMatch topMatch,
         List<IdeologyMatch> matches,
-        CountryMatch topCountryMatch
+        CountryMatch topCountryMatch,
+        PersonalityMatch topPersonalityMatch
 ) {
 }

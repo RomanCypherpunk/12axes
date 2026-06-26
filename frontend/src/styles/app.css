@@ -1418,6 +1418,146 @@
   line-height: 1.5;
 }
 
+/* Personality match card — espelha o card de país, com retrato quadrado */
+.personality-match-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.58fr) minmax(0, 1.42fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 100%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.personality-match-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--grad-accent);
+}
+
+.personality-match-visual {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.personality-match-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.personality-match-visual.is-missing {
+  display: grid;
+  place-items: center;
+}
+
+.personality-match-initials {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--grad-accent);
+}
+
+.personality-match-initials span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.personality-match-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.personality-match-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+}
+
+.personality-match-kicker {
+  display: inline-flex;
+  margin-bottom: 8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.personality-match-heading h2 {
+  font-size: clamp(2rem, 2.4vw + 0.7rem, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+}
+
+.personality-match-score {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.personality-match-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personality-match-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-50);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.personality-match-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
 .results-section {
   position: relative;
   padding: 28px clamp(20px, 3vw, 36px);
@@ -2204,6 +2344,44 @@
   .country-match-content p {
     font-size: 0.9rem;
     line-height: 1.55;
+  }
+
+  .personality-match-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .personality-match-visual {
+    max-width: 200px;
+    border-radius: var(--radius-md);
+  }
+
+  .personality-match-heading {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .personality-match-heading h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .personality-match-meta {
+    justify-content: center;
+  }
+
+  .personality-match-content {
+    align-items: center;
+  }
+
+  .personality-match-content p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    text-align: center;
   }
 
   .axis-rows {

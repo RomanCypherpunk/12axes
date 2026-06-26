@@ -7,6 +7,7 @@ import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.CountryResolverService;
 import com.twelveaxes.service.IdeologyMatcherService;
+import com.twelveaxes.service.PersonalityResolverService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
 import jakarta.validation.Valid;
@@ -27,17 +28,20 @@ public class QuizController {
     private final ScoringService scoringService;
     private final IdeologyMatcherService matcherService;
     private final CountryResolverService countryResolverService;
+    private final PersonalityResolverService personalityResolverService;
 
     public QuizController(
             QuizDataService dataService,
             ScoringService scoringService,
             IdeologyMatcherService matcherService,
-            CountryResolverService countryResolverService
+            CountryResolverService countryResolverService,
+            PersonalityResolverService personalityResolverService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
         this.matcherService = matcherService;
         this.countryResolverService = countryResolverService;
+        this.personalityResolverService = personalityResolverService;
     }
 
     @GetMapping("/api/quiz")
@@ -52,7 +56,8 @@ public class QuizController {
         var matches = matcherService.findMatches(axes);
         var topMatch = matches.getFirst();
         var topCountryMatch = countryResolverService.resolveFor(topMatch);
-        return new QuizResult(axes, topMatch, matches, topCountryMatch);
+        var topPersonalityMatch = personalityResolverService.resolveFor(topMatch);
+        return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
     }
 
     @GetMapping("/api/ideologies")

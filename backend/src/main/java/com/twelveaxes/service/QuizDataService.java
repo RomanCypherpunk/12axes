@@ -9,6 +9,7 @@ import com.twelveaxes.model.Country;
 import com.twelveaxes.model.CountryProfile;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyProfile;
+import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.Question;
 import com.twelveaxes.model.QuizPayload;
 import jakarta.annotation.PostConstruct;
@@ -38,6 +39,8 @@ public class QuizDataService {
     private List<Country> countries;
     private Map<String, Country> countriesById;
     private Map<String, CountryProfile> countryProfiles;
+    private List<Personality> personalities;
+    private Map<String, Personality> personalitiesById;
 
     public QuizDataService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
@@ -59,8 +62,12 @@ public class QuizDataService {
         List<CountryProfile> countryProfileList = readJson("data/countries-profiles.json", new TypeReference<>() {});
         countryProfiles = countryProfileList.stream()
                 .collect(Collectors.toUnmodifiableMap(CountryProfile::countryId, Function.identity()));
+        personalities = readJson("data/personalities.json", new TypeReference<>() {});
+        personalitiesById = personalities.stream()
+                .collect(Collectors.toUnmodifiableMap(Personality::id, Function.identity()));
 
         validateIdeologyCountryLinks();
+        validateIdeologyPersonalityLinks();
     }
 
     private void validateIdeologyCountryLinks() {
@@ -73,6 +80,20 @@ public class QuizDataService {
         if (!broken.isEmpty()) {
             throw new IllegalStateException(
                     "Toda ideologia precisa de um countryId que resolva para um país existente. Inválidos: " + broken
+            );
+        }
+    }
+
+    private void validateIdeologyPersonalityLinks() {
+        List<String> broken = ideologies.stream()
+                .filter(ideology -> ideology.personalityId() == null
+                        || ideology.personalityId().isBlank()
+                        || !personalitiesById.containsKey(ideology.personalityId()))
+                .map(ideology -> ideology.id() + " -> " + ideology.personalityId())
+                .toList();
+        if (!broken.isEmpty()) {
+            throw new IllegalStateException(
+                    "Toda ideologia precisa de um personalityId que resolva para uma personalidade existente. Inválidos: " + broken
             );
         }
     }
@@ -120,6 +141,14 @@ public class QuizDataService {
 
     public Country getCountryById(String id) {
         return countriesById.get(id);
+    }
+
+    public List<Personality> getPersonalities() {
+        return personalities;
+    }
+
+    public Personality getPersonalityById(String id) {
+        return personalitiesById.get(id);
     }
 
     public Map<String, IdeologyProfile> getIdeologyProfiles() {

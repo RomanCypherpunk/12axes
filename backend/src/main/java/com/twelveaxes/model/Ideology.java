@@ -8,6 +8,7 @@ public record Ideology(
         String category,
         String description,
         String countryId,
+        String personalityId,
         Map<String, Double> vector
 ) {
 }

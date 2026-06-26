@@ -4,6 +4,7 @@ import { toPng } from 'html-to-image';
 import { AxisResultBar } from './components/AxisResultBar';
 import { AxisIcon } from './components/AxisIcon';
 import { CountryMatchCard } from './components/CountryMatchCard';
+import { PersonalityMatchCard } from './components/PersonalityMatchCard';
 import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
@@ -582,6 +583,10 @@ export default function App() {
 
           <div className="fade-up d-5">
             <CountryMatchCard match={result.topCountryMatch} />
+          </div>
+
+          <div className="fade-up d-5">
+            <PersonalityMatchCard match={result.topPersonalityMatch} />
           </div>
 
           <section className="results-section fade-up d-5">

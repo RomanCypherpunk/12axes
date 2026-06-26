@@ -5,7 +5,8 @@
     "category": "Esquerda Autoritária",
     "description": "Socialismo revolucionário de partido único, baseado na ditadura do proletariado, economia planificada, coletivização produtiva e internacionalismo comunista conduzido por uma vanguarda centralizada.",
     "vector": null,
-    "countryId": "uniao-sovietica-urss"
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "lenin"
   },
   {
     "id": "stalinismo",
@@ -13,7 +14,8 @@
     "category": "Esquerda Autoritária",
     "description": "Modelo soviético centralizador, com partido único, industrialização forçada, planejamento estatal rígido, culto ao líder, repressão política intensa e prioridade absoluta ao poder do Estado.",
     "vector": null,
-    "countryId": "uniao-sovietica-urss"
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "stalin"
   },
   {
     "id": "maoismo",
@@ -21,7 +23,8 @@
     "category": "Esquerda Autoritária",
     "description": "Comunismo revolucionário adaptado ao campesinato, com partido único, guerra popular, mobilização permanente das massas, coletivismo econômico e ruptura radical com estruturas tradicionais.",
     "vector": null,
-    "countryId": "china-maoista"
+    "countryId": "china-maoista",
+    "personalityId": "mao-zedong"
   },
   {
     "id": "trotskismo",
@@ -29,7 +32,8 @@
     "category": "Esquerda Autoritária",
     "description": "Marxismo revolucionário internacionalista, defensor da revolução permanente, democracia operária, planejamento socialista e oposição à burocratização autoritária dos regimes comunistas.",
     "vector": null,
-    "countryId": "uniao-sovietica-urss"
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "trotsky"
   },
   {
     "id": "luxemburguismo",
@@ -37,7 +41,8 @@
     "category": "Esquerda Autoritária",
     "description": "Marxismo democrático e revolucionário que valoriza ação espontânea das massas, conselhos operários, greve de massas e crítica ao reformismo parlamentar e ao centralismo partidário.",
     "vector": null,
-    "countryId": "alemanha"
+    "countryId": "alemanha",
+    "personalityId": "rosa-luxemburg"
   },
   {
     "id": "comunismo-nacional",
@@ -45,7 +50,8 @@
     "category": "Esquerda Autoritária",
     "description": "Socialismo autoritário adaptado à identidade nacional, com economia planificada, soberania política, rejeição à tutela externa e prioridade à construção estatal do socialismo local.",
     "vector": null,
-    "countryId": "coreia-do-norte"
+    "countryId": "coreia-do-norte",
+    "personalityId": "kim-il-sung"
   },
   {
     "id": "pol-potismo",
@@ -53,7 +59,8 @@
     "category": "Esquerda Autoritária",
     "description": "Comunismo agrário extremo, ultranacionalista e totalitário, voltado à destruição das cidades, da moeda e das instituições modernas em favor de coletivismo rural coercitivo.",
     "vector": null,
-    "countryId": "camboja-do-khmer-vermelho-pol-pot"
+    "countryId": "camboja-do-khmer-vermelho-pol-pot",
+    "personalityId": "pol-pot"
   },
   {
     "id": "dengismo",
@@ -61,7 +68,8 @@
     "category": "Esquerda Autoritária",
     "description": "Socialismo de partido único com abertura econômica, mercados regulados, capitalismo de Estado, pragmatismo tecnológico e manutenção rígida do monopólio político comunista.",
     "vector": null,
-    "countryId": "china"
+    "countryId": "china",
+    "personalityId": "deng-xiaoping"
   },
   {
     "id": "socialismo-de-estado",
@@ -69,7 +77,8 @@
     "category": "Esquerda Autoritária",
     "description": "Sistema em que o Estado possui e dirige os meios estratégicos de produção, com planejamento central, controle econômico amplo e hierarquia política forte em nome da igualdade material.",
     "vector": null,
-    "countryId": "uniao-sovietica-urss"
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "ferdinand-lassalle"
   },
   {
     "id": "progressivismo-autoritario",
@@ -77,7 +86,8 @@
     "category": "Esquerda Autoritária",
     "description": "Projeto que usa Estado forte e autoridade central para impor reformas sociais progressistas, igualdade legal, modernização cultural e controle político em nome do avanço coletivo.",
     "vector": null,
-    "countryId": "turquia"
+    "countryId": "turquia",
+    "personalityId": "ataturk"
   },
   {
     "id": "ecoautoritarismo",
@@ -85,7 +95,8 @@
     "category": "Esquerda Autoritária",
     "description": "Ambientalismo de Estado forte, com planejamento compulsório, restrições de consumo, metas ecológicas rígidas e subordinação de liberdades individuais à sobrevivência ambiental.",
     "vector": null,
-    "countryId": "china"
+    "countryId": "china",
+    "personalityId": "garrett-hardin"
   },
   {
     "id": "tecnocracia-de-esquerda",
@@ -93,7 +104,8 @@
     "category": "Esquerda Autoritária",
     "description": "Governo de especialistas voltado à igualdade material, serviços públicos robustos, planejamento científico, redistribuição, política industrial e transição ecológica dirigida pelo Estado.",
     "vector": null,
-    "countryId": "china"
+    "countryId": "china",
+    "personalityId": "otto-neurath"
   },
   {
     "id": "marxismo-reformista",
@@ -101,7 +113,8 @@
     "category": "Esquerda Autoritária",
     "description": "Corrente marxista que busca superar o capitalismo por meios graduais e institucionais, usando democracia parlamentar, reformas econômicas e Estado forte como instrumentos de transição.",
     "vector": null,
-    "countryId": "chile"
+    "countryId": "chile",
+    "personalityId": "eduard-bernstein"
   },
   {
     "id": "nacional-bolchevismo",
@@ -109,7 +122,8 @@
     "category": "Esquerda Autoritária",
     "description": "Síntese de bolchevismo e nacionalismo radical, combinando revolução social, coletivismo econômico, soberania agressiva e rejeição simultânea ao liberalismo e ao cosmopolitismo.",
     "vector": null,
-    "countryId": "russia"
+    "countryId": "russia",
+    "personalityId": "ernst-niekisch"
   },
   {
     "id": "strasserismo",
@@ -117,7 +131,8 @@
     "category": "Esquerda Autoritária",
     "description": "Vertente nacionalista radical com economia anticapitalista, corporativismo, nacionalizações e redistribuição interna subordinada à comunidade nacional e a um Estado autoritário.",
     "vector": null,
-    "countryId": "alemanha-nazista-terceiro-reich"
+    "countryId": "alemanha-nazista-terceiro-reich",
+    "personalityId": "gregor-strasser"
   },
   {
     "id": "fascismo",
@@ -125,7 +140,8 @@
     "category": "Direita Autoritária",
     "description": "Ideologia totalitária de ultranacionalismo, culto ao líder, militarismo, partido único, mobilização de massas e economia corporativa subordinada aos objetivos do Estado.",
     "vector": null,
-    "countryId": "italia-fascista-mussolini"
+    "countryId": "italia-fascista-mussolini",
+    "personalityId": "mussolini"
   },
   {
     "id": "nacional-socialismo",
@@ -133,7 +149,8 @@
     "category": "Direita Autoritária",
     "description": "Totalitarismo racista e expansionista, baseado em supremacia racial, antissemitismo, culto ao líder, militarização social, economia dirigida e eliminação violenta de inimigos internos.",
     "vector": null,
-    "countryId": "alemanha-nazista-terceiro-reich"
+    "countryId": "alemanha-nazista-terceiro-reich",
+    "personalityId": "hitler"
   },
   {
     "id": "fascismo-clerical",
@@ -141,7 +158,8 @@
     "category": "Direita Autoritária",
     "description": "Fusão de autoritarismo fascista com catolicismo político, defendendo Estado forte, corporativismo, anticomunismo e organização social guiada por moral religiosa conservadora.",
     "vector": null,
-    "countryId": "espanha-franquista"
+    "countryId": "espanha-franquista",
+    "personalityId": "engelbert-dollfuss"
   },
   {
     "id": "falangismo",
@@ -149,7 +167,8 @@
     "category": "Direita Autoritária",
     "description": "Nacionalismo espanhol autoritário, católico e corporativista, que combina partido único, sindicalismo nacional, unidade orgânica da nação e rejeição ao liberalismo e ao marxismo.",
     "vector": null,
-    "countryId": "espanha-franquista"
+    "countryId": "espanha-franquista",
+    "personalityId": "jose-antonio-primo-de-rivera"
   },
   {
     "id": "integralismo-brasileiro",
@@ -157,7 +176,8 @@
     "category": "Direita Autoritária",
     "description": "Movimento nacionalista brasileiro de inspiração fascista, centrado em Deus, Pátria e Família, com corporativismo, anticomunismo, autoridade estatal e mobilização conservadora.",
     "vector": null,
-    "countryId": "imperio-do-brasil"
+    "countryId": "imperio-do-brasil",
+    "personalityId": "plinio-salgado"
   },
   {
     "id": "capitalismo-autoritario",
@@ -165,7 +185,8 @@
     "category": "Direita Autoritária",
     "description": "Sistema que preserva propriedade privada, investimento e mercado sob governo autoritário, com repressão política, gestão tecnocrática e prioridade à estabilidade e ao crescimento.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "lee-kuan-yew"
   },
   {
     "id": "capitalismo-nacional",
@@ -173,7 +194,8 @@
     "category": "Direita Autoritária",
     "description": "Capitalismo orientado pela soberania nacional, com proteção a empresas locais, intervenção estratégica, restrição a dependências externas e mercado subordinado a objetivos nacionais.",
     "vector": null,
-    "countryId": "russia"
+    "countryId": "russia",
+    "personalityId": "putin"
   },
   {
     "id": "alt-right",
@@ -181,7 +203,8 @@
     "category": "Direita Autoritária",
     "description": "Extrema-direita identitária contemporânea, marcada por nacionalismo branco, antifeminismo, anti-imigração, rejeição ao conservadorismo convencional e uso de cultura digital radicalizada.",
     "vector": null,
-    "countryId": "estados-unidos"
+    "countryId": "estados-unidos",
+    "personalityId": "richard-spencer"
   },
   {
     "id": "alt-lite",
@@ -189,7 +212,8 @@
     "category": "Direita Autoritária",
     "description": "Direita populista anti-establishment, nacionalista e culturalmente conservadora, crítica ao globalismo, ao progressismo identitário, à mídia tradicional e à imigração em massa.",
     "vector": null,
-    "countryId": "estados-unidos"
+    "countryId": "estados-unidos",
+    "personalityId": "steve-bannon"
   },
   {
     "id": "aceleracionismo-de-direita",
@@ -197,7 +221,8 @@
     "category": "Direita Autoritária",
     "description": "Corrente que busca acelerar crises políticas, sociais ou tecnológicas para colapsar a ordem liberal e abrir espaço a uma reorganização hierárquica, autoritária ou hipercapitalista.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "nick-land"
   },
   {
     "id": "nacionalismo-racial",
@@ -205,7 +230,8 @@
     "category": "Direita Autoritária",
     "description": "Nacionalismo baseado em raça, defendendo Estados etnicamente homogêneos, separação racial, hierarquias biológicas e políticas de exclusão ou segregação em nome da identidade coletiva.",
     "vector": null,
-    "countryId": "africa-do-sul-do-apartheid"
+    "countryId": "africa-do-sul-do-apartheid",
+    "personalityId": "hendrik-verwoerd"
   },
   {
     "id": "neoconservadorismo",
@@ -213,7 +239,8 @@
     "category": "Direita Autoritária",
     "description": "Direita intervencionista que combina economia de mercado, valores tradicionais e uso ativo do poder militar para promover hegemonia internacional e ordem liberal favorável.",
     "vector": null,
-    "countryId": "eua-washington-dc"
+    "countryId": "eua-washington-dc",
+    "personalityId": "irving-kristol"
   },
   {
     "id": "monarquismo-absoluto",
@@ -221,7 +248,8 @@
     "category": "Direita Autoritária",
     "description": "Defesa de poder concentrado no monarca, legitimado por tradição ou direito divino, sem controle parlamentar efetivo e com autoridade pessoal sobre Estado, lei e governo.",
     "vector": null,
-    "countryId": "arabia-saudita"
+    "countryId": "arabia-saudita",
+    "personalityId": "louis-xiv"
   },
   {
     "id": "conservadorismo-autoritario",
@@ -229,7 +257,8 @@
     "category": "Direita Autoritária",
     "description": "Conservadorismo de Estado forte, voltado à ordem, hierarquia, religião e tradição, usando autoridade política para conter mudanças sociais e preservar instituições tradicionais.",
     "vector": null,
-    "countryId": "portugal-estado-novo"
+    "countryId": "portugal-estado-novo",
+    "personalityId": "salazar"
   },
   {
     "id": "conservadorismo-nacional",
@@ -237,7 +266,8 @@
     "category": "Direita Autoritária",
     "description": "Direita que combina soberania nacional, identidade cultural, valores tradicionais, fronteiras controladas e protecionismo moderado contra globalismo e liberalismo cosmopolita.",
     "vector": null,
-    "countryId": "hungria"
+    "countryId": "hungria",
+    "personalityId": "viktor-orban"
   },
   {
     "id": "conservadorismo-paternalista",
@@ -245,7 +275,8 @@
     "category": "Direita Autoritária",
     "description": "Conservadorismo hierárquico que aceita proteção social e intervenção limitada para preservar coesão nacional, dever das elites e estabilidade sem romper a ordem tradicional.",
     "vector": null,
-    "countryId": "reino-unido-vitoriano-imperio-britanico"
+    "countryId": "reino-unido-vitoriano-imperio-britanico",
+    "personalityId": "benjamin-disraeli"
   },
   {
     "id": "fundamentalismo-religioso",
@@ -253,7 +284,8 @@
     "category": "Direita Autoritária",
     "description": "Política guiada por interpretação rígida da religião, defendendo leis confessionais, autoridade moral forte, controle de costumes e combate a práticas vistas como ameaça espiritual.",
     "vector": null,
-    "countryId": "ira"
+    "countryId": "ira",
+    "personalityId": "khomeini"
   },
   {
     "id": "nacionalismo-etnico",
@@ -261,7 +293,8 @@
     "category": "Direita Autoritária",
     "description": "Nacionalismo fundado em ancestralidade, língua e identidade étnica comum, buscando correspondência entre povo e Estado e podendo assumir formas exclusivistas ou separatistas.",
     "vector": null,
-    "countryId": "israel"
+    "countryId": "israel",
+    "personalityId": "jabotinsky"
   },
   {
     "id": "nacionalismo-cultural",
@@ -269,7 +302,8 @@
     "category": "Direita Autoritária",
     "description": "Defesa da cultura nacional como base da comunidade política, com preservação de língua, costumes e memória histórica, frequentemente acompanhada de assimilação e imigração restrita.",
     "vector": null,
-    "countryId": "israel"
+    "countryId": "israel",
+    "personalityId": "ahad-haam"
   },
   {
     "id": "neorreacionarismo",
@@ -277,7 +311,8 @@
     "category": "Direita Autoritária",
     "description": "Corrente antidemocrática contemporânea que rejeita igualitarismo liberal e defende hierarquias, governo empresarial, soberania privada e formas tecnológicas de autoridade pós-democrática.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "curtis-yarvin"
   },
   {
     "id": "neocameralismo",
@@ -285,7 +320,8 @@
     "category": "Direita Autoritária",
     "description": "Modelo que trata o governo como corporação soberana, com gestão empresarial, acionistas, residentes como clientes e concorrência entre jurisdições por eficiência.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "curtis-yarvin"
   },
   {
     "id": "cameralismo",
@@ -293,7 +329,8 @@
     "category": "Direita Autoritária",
     "description": "Doutrina administrativa absolutista que defende burocracia profissional, finanças centralizadas, mercantilismo estatal e gestão racional para fortalecer o Estado.",
     "vector": null,
-    "countryId": "prussia"
+    "countryId": "prussia",
+    "personalityId": "frederico-ii-da-prussia"
   },
   {
     "id": "corporativismo",
@@ -301,7 +338,8 @@
     "category": "Direita Autoritária",
     "description": "Sistema que organiza sociedade e economia por corporações profissionais mediadas pelo Estado, buscando cooperação de classes, coordenação produtiva e hierarquia nacional.",
     "vector": null,
-    "countryId": "italia-fascista-mussolini"
+    "countryId": "italia-fascista-mussolini",
+    "personalityId": "mussolini"
   },
   {
     "id": "reacionarismo",
@@ -309,7 +347,8 @@
     "category": "Direita Autoritária",
     "description": "Projeto de retorno a uma ordem social anterior, restaurando hierarquias, tradições e instituições pré-modernas contra liberalismo, secularização e mudanças progressistas.",
     "vector": null,
-    "countryId": "sacro-imperio-romano-germanico"
+    "countryId": "sacro-imperio-romano-germanico",
+    "personalityId": "joseph-de-maistre"
   },
   {
     "id": "quarta-teoria-politica",
@@ -317,7 +356,8 @@
     "category": "Direita Autoritária",
     "description": "Doutrina civilizacional e multipolar que rejeita liberalismo, comunismo e fascismo, defendendo tradição, identidade coletiva, antiocidentalismo e autoridade política contra o globalismo.",
     "vector": null,
-    "countryId": "russia"
+    "countryId": "russia",
+    "personalityId": "aleksandr-dugin"
   },
   {
     "id": "democracia-nacional",
@@ -325,7 +365,8 @@
     "category": "Direita Autoritária",
     "description": "Democracia majoritária orientada por soberania nacional, identidade cultural, protecionismo e conservadorismo social, priorizando o povo nacional sobre normas cosmopolitas.",
     "vector": null,
-    "countryId": "polonia"
+    "countryId": "polonia",
+    "personalityId": "roman-dmowski"
   },
   {
     "id": "bioconservadorismo",
@@ -333,7 +374,8 @@
     "category": "Direita Autoritária",
     "description": "Corrente que impõe limites morais à biotecnologia, engenharia genética e transhumanismo, defendendo prudência científica, natureza humana e instituições tradicionais.",
     "vector": null,
-    "countryId": "japao"
+    "countryId": "japao",
+    "personalityId": "leon-kass"
   },
   {
     "id": "tecnocracia-de-direita",
@@ -341,7 +383,8 @@
     "category": "Direita Autoritária",
     "description": "Governo de especialistas voltado à eficiência estatal, segurança, estabilidade monetária, competitividade e administração empresarial, preservando mercados e ordem social.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "lee-kuan-yew"
   },
   {
     "id": "democracia-crista",
@@ -349,7 +392,8 @@
     "category": "Centro",
     "description": "Doutrina democrática inspirada no cristianismo social, combinando economia social de mercado, subsidiariedade, pluralismo, família, comunidade e proteção da dignidade humana.",
     "vector": null,
-    "countryId": "brasil"
+    "countryId": "brasil",
+    "personalityId": "konrad-adenauer"
   },
   {
     "id": "conservadorismo-cristao",
@@ -357,7 +401,8 @@
     "category": "Centro",
     "description": "Conservadorismo fundamentado em valores cristãos, família, moral tradicional e ordem social, aceitando democracia e mercado quando preservam princípios religiosos.",
     "vector": null,
-    "countryId": "eua-texas"
+    "countryId": "eua-texas",
+    "personalityId": "william-f-buckley"
   },
   {
     "id": "republicanismo",
@@ -365,7 +410,8 @@
     "category": "Centro",
     "description": "Tradição centrada na coisa pública, cidadania ativa, virtude cívica, Estado de direito e limitação de poderes pessoais para proteger liberdade como não-dominação.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "cicero"
   },
   {
     "id": "monarquismo-constitucional",
@@ -373,7 +419,8 @@
     "category": "Centro",
     "description": "Sistema em que uma monarquia simbólica e hereditária convive com constituição, parlamento eleito, Estado de direito e governo responsável perante instituições democráticas.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "montesquieu"
   },
   {
     "id": "neoliberalismo",
@@ -381,7 +428,8 @@
     "category": "Centro",
     "description": "Liberalismo pró-mercado que valoriza privatizações, abertura comercial, disciplina fiscal, competição, bancos centrais independentes e instituições fortes para proteger estabilidade econômica.",
     "vector": null,
-    "countryId": "eua-nova-york"
+    "countryId": "eua-nova-york",
+    "personalityId": "milton-friedman"
   },
   {
     "id": "ordoliberalismo",
@@ -389,7 +437,8 @@
     "category": "Centro",
     "description": "Liberalismo alemão que defende mercado competitivo sustentado por regras fortes, política antimonopólio, estabilidade monetária e Estado regulador voltado à ordem econômica.",
     "vector": null,
-    "countryId": "alemanha"
+    "countryId": "alemanha",
+    "personalityId": "ludwig-erhard"
   },
   {
     "id": "distributismo",
@@ -397,7 +446,8 @@
     "category": "Centro",
     "description": "Doutrina social-cristã que busca propriedade produtiva amplamente distribuída, pequenas empresas, cooperativas, economia local e resistência tanto ao socialismo estatal quanto ao grande capital.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "gk-chesterton"
   },
   {
     "id": "tecnocracia",
@@ -405,7 +455,8 @@
     "category": "Centro",
     "description": "Modelo que entrega decisões públicas a especialistas, métodos científicos e indicadores, priorizando competência, planejamento racional e eficiência administrativa sobre disputa ideológica.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "henri-de-saint-simon"
   },
   {
     "id": "comunitarismo",
@@ -413,7 +464,8 @@
     "category": "Centro",
     "description": "Filosofia que valoriza comunidade, vínculos sociais, deveres compartilhados e bens comuns, criticando individualismo abstrato e defendendo políticas enraizadas em contextos locais.",
     "vector": null,
-    "countryId": "japao"
+    "countryId": "japao",
+    "personalityId": "amitai-etzioni"
   },
   {
     "id": "meritocracia",
@@ -421,7 +473,8 @@
     "category": "Centro",
     "description": "Sistema que justifica posições sociais por talento, esforço e desempenho, defendendo seleção competitiva, educação, produtividade e recompensa proporcional à contribuição individual.",
     "vector": null,
-    "countryId": "singapura"
+    "countryId": "singapura",
+    "personalityId": "michael-young"
   },
   {
     "id": "liberalismo",
@@ -429,7 +482,8 @@
     "category": "Centro",
     "description": "Tradição política centrada em liberdade individual, direitos civis, governo limitado, pluralismo, Estado de direito e economia de mercado regulada por instituições constitucionais.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "john-stuart-mill"
   },
   {
     "id": "liberalismo-classico",
@@ -437,7 +491,8 @@
     "category": "Centro",
     "description": "Liberalismo de governo limitado, propriedade privada, livre comércio, direitos individuais e desconfiança da intervenção estatal, defendendo mercados abertos e ordem constitucional.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "john-locke"
   },
   {
     "id": "libertarianismo",
@@ -445,7 +500,8 @@
     "category": "Centro",
     "description": "Corrente pró-liberdade individual e propriedade privada, com Estado mínimo, baixa tributação, mercados livres e forte oposição à coerção estatal sobre escolhas pessoais.",
     "vector": null,
-    "countryId": "eua-new-hampshire"
+    "countryId": "eua-new-hampshire",
+    "personalityId": "robert-nozick"
   },
   {
     "id": "liberalismo-verde",
@@ -453,7 +509,8 @@
     "category": "Centro",
     "description": "Liberalismo que integra direitos individuais e mercado com proteção ambiental, regulação ecológica, inovação limpa e incentivos econômicos para reduzir danos ambientais.",
     "vector": null,
-    "countryId": "alemanha"
+    "countryId": "alemanha",
+    "personalityId": "al-gore"
   },
   {
     "id": "liberalismo-social",
@@ -461,7 +518,8 @@
     "category": "Centro",
     "description": "Liberalismo que combina direitos civis, democracia e mercado com políticas sociais, educação, saúde e redistribuição moderada para ampliar oportunidades reais.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "beveridge"
   },
   {
     "id": "liberalismo-radical",
@@ -469,7 +527,8 @@
     "category": "Centro",
     "description": "Liberalismo igualitário e reformista, voltado à expansão de direitos civis, secularismo, democracia, liberdade individual e remoção de privilégios legais ou sociais.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "thomas-paine"
   },
   {
     "id": "liberalismo-conservador",
@@ -477,7 +536,8 @@
     "category": "Centro",
     "description": "Síntese de livre mercado, governo constitucional e valores tradicionais, defendendo liberdade econômica e instituições estáveis sem ruptura cultural acelerada.",
     "vector": null,
-    "countryId": "eua-nova-york"
+    "countryId": "eua-nova-york",
+    "personalityId": "edmund-burke"
   },
   {
     "id": "liberaltarianismo",
@@ -485,7 +545,8 @@
     "category": "Centro",
     "description": "Combinação de liberalismo institucional com ceticismo libertário sobre o Estado, defendendo mercados livres, direitos civis, abertura social e governo relativamente limitado.",
     "vector": null,
-    "countryId": "eua-new-hampshire"
+    "countryId": "eua-new-hampshire",
+    "personalityId": "hayek"
   },
   {
     "id": "panarchismo",
@@ -493,7 +554,8 @@
     "category": "Centro",
     "description": "Sistema em que pessoas escolhem voluntariamente entre diferentes governos ou ordens jurídicas concorrentes, sem depender de território único ou monopólio estatal fixo.",
     "vector": null,
-    "countryId": "suica"
+    "countryId": "suica",
+    "personalityId": "de-puydt"
   },
   {
     "id": "georgismo",
@@ -501,7 +563,8 @@
     "category": "Centro",
     "description": "Doutrina que defende propriedade privada e mercado, mas trata a renda da terra como riqueza comum a ser tributada para reduzir desigualdade e privilégios fundiários.",
     "vector": null,
-    "countryId": "hong-kong"
+    "countryId": "hong-kong",
+    "personalityId": "henry-george"
   },
   {
     "id": "geolibertarianismo",
@@ -509,7 +572,8 @@
     "category": "Centro",
     "description": "Libertarianismo que preserva propriedade privada e Estado mínimo, mas considera recursos naturais comuns, financiando serviços ou dividendos por renda da terra.",
     "vector": null,
-    "countryId": "hong-kong"
+    "countryId": "hong-kong",
+    "personalityId": "henry-george"
   },
   {
     "id": "feminismo",
@@ -517,7 +581,8 @@
     "category": "Centro",
     "description": "Movimento pela igualdade de gênero, autonomia das mulheres, direitos civis, combate à violência e superação de hierarquias sociais, legais e econômicas baseadas no sexo.",
     "vector": null,
-    "countryId": "suecia"
+    "countryId": "suecia",
+    "personalityId": "simone-de-beauvoir"
   },
   {
     "id": "feminismo-liberal",
@@ -525,7 +590,8 @@
     "category": "Centro",
     "description": "Feminismo centrado em igualdade legal, oportunidades individuais, direitos civis, educação, trabalho e participação política plena das mulheres dentro de instituições liberais.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "betty-friedan"
   },
   {
     "id": "liberalismo-de-estado",
@@ -533,7 +599,8 @@
     "category": "Centro",
     "description": "Modelo que preserva direitos liberais e mercado, mas usa Estado forte para modernização, infraestrutura, segurança institucional e direção estratégica do desenvolvimento.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "john-rawls"
   },
   {
     "id": "ambientalismo",
@@ -541,7 +608,8 @@
     "category": "Centro",
     "description": "Corrente voltada à proteção ambiental, conservação de ecossistemas, redução da poluição e compatibilização entre atividade humana, ciência, regulação e sustentabilidade.",
     "vector": null,
-    "countryId": "costa-rica"
+    "countryId": "costa-rica",
+    "personalityId": "rachel-carson"
   },
   {
     "id": "conservadorismo",
@@ -549,7 +617,8 @@
     "category": "Centro",
     "description": "Doutrina que valoriza tradição, continuidade institucional, ordem social, prudência política e mudanças graduais, preservando costumes e autoridades herdadas contra rupturas radicais.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "edmund-burke"
   },
   {
     "id": "progressivismo",
@@ -557,7 +626,8 @@
     "category": "Centro",
     "description": "Corrente reformista que busca ampliar direitos, igualdade social, inclusão e modernização cultural por meio de políticas públicas, democracia e crítica a hierarquias tradicionais.",
     "vector": null,
-    "countryId": "suecia"
+    "countryId": "suecia",
+    "personalityId": "theodore-roosevelt"
   },
   {
     "id": "aceleracionismo",
@@ -565,7 +635,8 @@
     "category": "Centro",
     "description": "Ideia de intensificar tendências tecnológicas, econômicas ou sociais do presente para superar a ordem atual e produzir uma transformação sistêmica mais rápida.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "srnicek"
   },
   {
     "id": "transhumanismo",
@@ -573,7 +644,8 @@
     "category": "Centro",
     "description": "Corrente que usa ciência e tecnologia para ampliar capacidades humanas, defendendo liberdade morfológica, longevidade, aprimoramento cognitivo e autonomia individual.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "ray-kurzweil"
   },
   {
     "id": "nacionalismo",
@@ -581,7 +653,8 @@
     "category": "Centro",
     "description": "Doutrina que coloca a nação como comunidade política central, defendendo soberania, identidade comum, unidade territorial e prioridade dos interesses nacionais.",
     "vector": null,
-    "countryId": "brasil-era-vargas"
+    "countryId": "brasil-era-vargas",
+    "personalityId": "getulio-vargas"
   },
   {
     "id": "nacionalismo-civico",
@@ -589,7 +662,8 @@
     "category": "Centro",
     "description": "Nacionalismo baseado em cidadania, instituições, língua pública e lealdade constitucional, definindo pertencimento político por adesão cívica em vez de origem étnica.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "ernest-renan"
   },
   {
     "id": "indigenismo",
@@ -597,7 +671,8 @@
     "category": "Centro",
     "description": "Corrente que defende direitos, autonomia, território e culturas indígenas, criticando assimilação forçada e priorizando pluralismo, reparação histórica e proteção comunitária.",
     "vector": null,
-    "countryId": "bolivia"
+    "countryId": "bolivia",
+    "personalityId": "evo-morales"
   },
   {
     "id": "conservadorismo-socialista",
@@ -605,7 +680,8 @@
     "category": "Centro",
     "description": "Síntese de economia redistributiva ou estatal com valores sociais tradicionais, nacionalismo cultural, comunidade orgânica e crítica ao liberalismo econômico e moral.",
     "vector": null,
-    "countryId": "russia"
+    "countryId": "russia",
+    "personalityId": "bismarck"
   },
   {
     "id": "anarquismo",
@@ -613,7 +689,8 @@
     "category": "Esquerda Libertária",
     "description": "Filosofia antiestatal que rejeita hierarquias coercitivas e defende autogestão, associação voluntária, apoio mútuo e organização social descentralizada sem governo central.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "bakunin"
   },
   {
     "id": "anarcocomunismo",
@@ -621,7 +698,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo que defende abolição do Estado, propriedade comum, produção cooperativa e distribuição segundo necessidades, organizada por comunas livres e federações voluntárias.",
     "vector": null,
-    "countryId": "ucrania-territorio-livre"
+    "countryId": "ucrania-territorio-livre",
+    "personalityId": "kropotkin"
   },
   {
     "id": "anarcocoletivismo",
@@ -629,7 +707,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo socialista que propõe propriedade coletiva dos meios de produção, autogestão e remuneração pelo trabalho, sem Estado central ou propriedade capitalista.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "bakunin"
   },
   {
     "id": "anarcossindicalismo",
@@ -637,7 +716,8 @@
     "category": "Esquerda Libertária",
     "description": "Estratégia anarquista baseada em sindicatos combativos, greve geral, autogestão dos trabalhadores e substituição do Estado e do capital por federações laborais.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "durruti"
   },
   {
     "id": "sindicalismo",
@@ -645,7 +725,8 @@
     "category": "Esquerda Libertária",
     "description": "Corrente que coloca sindicatos e organização dos trabalhadores no centro da política, defendendo negociação coletiva, ação direta e controle laboral sobre produção.",
     "vector": null,
-    "countryId": "italia-fascista-mussolini"
+    "countryId": "italia-fascista-mussolini",
+    "personalityId": "sorel"
   },
   {
     "id": "socialismo-libertario",
@@ -653,7 +734,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo anti-autoritário que combina igualdade econômica, autogestão, democracia direta, descentralização e rejeição tanto ao capitalismo quanto ao socialismo estatal centralizado.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "chomsky"
   },
   {
     "id": "marxismo-libertario",
@@ -661,7 +743,8 @@
     "category": "Esquerda Libertária",
     "description": "Marxismo anti-autoritário que valoriza conselhos, autogestão operária e emancipação de classe sem partido único, burocracia estatal ou centralismo político rígido.",
     "vector": null,
-    "countryId": "iugoslavia-socialista"
+    "countryId": "iugoslavia-socialista",
+    "personalityId": "gramsci"
   },
   {
     "id": "socialismo-de-mercado-libertario",
@@ -669,7 +752,8 @@
     "category": "Esquerda Libertária",
     "description": "Modelo de cooperativas autogeridas competindo em mercado descentralizado, combinando propriedade social, preços livres, democracia econômica e mínima coerção estatal.",
     "vector": null,
-    "countryId": "iugoslavia-socialista"
+    "countryId": "iugoslavia-socialista",
+    "personalityId": "tito"
   },
   {
     "id": "socialismo-de-mercado",
@@ -677,7 +761,8 @@
     "category": "Esquerda Libertária",
     "description": "Sistema que une propriedade pública, social ou cooperativa com mecanismos de mercado, buscando eficiência econômica, planejamento limitado e distribuição mais igualitária.",
     "vector": null,
-    "countryId": "iugoslavia-socialista"
+    "countryId": "iugoslavia-socialista",
+    "personalityId": "oskar-lange"
   },
   {
     "id": "mutualismo",
@@ -685,7 +770,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo libertário de mercado, baseado em cooperativas, crédito mútuo, posse pelo uso, trocas voluntárias e oposição simultânea ao Estado e ao capital rentista.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "proudhon"
   },
   {
     "id": "minarco-mutualismo",
@@ -693,7 +779,8 @@
     "category": "Esquerda Libertária",
     "description": "Mutualismo com Estado mínimo, combinando mercados cooperativos, crédito popular, posse pelo uso e proteção institucional limitada contra monopólios e coerção.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "proudhon"
   },
   {
     "id": "minarco-socialismo",
@@ -701,7 +788,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo democrático com Estado reduzido, preservando serviços essenciais, direitos sociais e propriedade coletiva ou cooperativa sem planejamento central abrangente.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "ocalan"
   },
   {
     "id": "socialismo-individualista",
@@ -709,7 +797,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo que enfatiza autonomia pessoal, propriedade cooperativa, liberdade individual e crítica a monopólios, buscando igualdade sem suprimir iniciativa e diversidade de estilos de vida.",
     "vector": null,
-    "countryId": "eua-massachusetts"
+    "countryId": "eua-massachusetts",
+    "personalityId": "benjamin-tucker"
   },
   {
     "id": "comunalismo",
@@ -717,7 +806,8 @@
     "category": "Esquerda Libertária",
     "description": "Projeto municipalista de democracia direta, assembleias populares, confederação de comunas, ecologia social e economia local cooperativa contra Estado centralizado e capitalismo.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "bookchin"
   },
   {
     "id": "socialismo-cristao",
@@ -725,7 +815,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo inspirado na ética cristã de solidariedade, justiça social e cuidado com os pobres, defendendo redistribuição, comunidade e crítica moral ao capitalismo.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "keir-hardie"
   },
   {
     "id": "trabalhismo-cristao",
@@ -733,7 +824,8 @@
     "category": "Centro",
     "description": "Corrente social-cristã centrada em direitos trabalhistas, sindicatos, dignidade do trabalho, família e proteção social dentro de uma ordem democrática reformista.",
     "vector": null,
-    "countryId": "brasil"
+    "countryId": "brasil",
+    "personalityId": "maritain"
   },
   {
     "id": "socialismo-religioso",
@@ -741,7 +833,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo fundamentado em valores religiosos de justiça, comunidade e compaixão, defendendo redistribuição, economia solidária e crítica espiritual à exploração.",
     "vector": null,
-    "countryId": "israel"
+    "countryId": "israel",
+    "personalityId": "buber"
   },
   {
     "id": "social-democracia",
@@ -749,7 +842,8 @@
     "category": "Esquerda Libertária",
     "description": "Reformismo democrático que mantém economia de mercado regulada, Estado de bem-estar, direitos trabalhistas, redistribuição e expansão gradual de igualdade social.",
     "vector": null,
-    "countryId": "suecia"
+    "countryId": "suecia",
+    "personalityId": "olof-palme"
   },
   {
     "id": "socialismo",
@@ -757,7 +851,8 @@
     "category": "Esquerda Libertária",
     "description": "Família de ideias que defende propriedade social ou coletiva, igualdade material, crítica à exploração capitalista e organização econômica voltada ao bem comum.",
     "vector": null,
-    "countryId": "suecia"
+    "countryId": "suecia",
+    "personalityId": "karl-marx"
   },
   {
     "id": "socialismo-liberal",
@@ -765,7 +860,8 @@
     "category": "Esquerda Libertária",
     "description": "Síntese de socialismo e liberalismo político, combinando justiça econômica, democracia pluralista, direitos individuais e redistribuição sem abolir liberdades civis.",
     "vector": null,
-    "countryId": "franca"
+    "countryId": "franca",
+    "personalityId": "rosselli"
   },
   {
     "id": "libertarianismo-social",
@@ -773,7 +869,8 @@
     "category": "Esquerda Libertária",
     "description": "Libertarianismo preocupado com desigualdades estruturais, defendendo liberdade individual, mercados ou associações voluntárias e alguma redistribuição para ampliar autonomia real.",
     "vector": null,
-    "countryId": "suecia"
+    "countryId": "suecia",
+    "personalityId": "orwell"
   },
   {
     "id": "ecossocialismo",
@@ -781,7 +878,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo ecológico que vê capitalismo e crise ambiental como ligados, defendendo propriedade social, planejamento democrático e produção dentro dos limites da natureza.",
     "vector": null,
-    "countryId": "bolivia"
+    "countryId": "bolivia",
+    "personalityId": "andre-gorz"
   },
   {
     "id": "ecofeminismo",
@@ -789,7 +887,8 @@
     "category": "Esquerda Libertária",
     "description": "Corrente que liga opressão das mulheres e exploração da natureza, criticando patriarcado, capitalismo e hierarquias de dominação em favor de cuidado e sustentabilidade.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "vandana-shiva"
   },
   {
     "id": "ecologia-profunda",
@@ -797,7 +896,8 @@
     "category": "Esquerda Libertária",
     "description": "Filosofia biocêntrica que atribui valor intrínseco à vida não humana, defendendo redução do crescimento, preservação radical e transformação da relação humana com a natureza.",
     "vector": null,
-    "countryId": "costa-rica"
+    "countryId": "costa-rica",
+    "personalityId": "arne-naess"
   },
   {
     "id": "anarquismo-agrario",
@@ -805,7 +905,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo rural que defende reforma agrária, comunas camponesas, autogestão agrícola, oposição ao latifúndio e vida comunitária descentralizada no campo.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "zapata"
   },
   {
     "id": "anarquismo-verde",
@@ -813,7 +914,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo ecológico que une descentralização radical, comunidades autônomas, tecnologia apropriada, crítica ao industrialismo e organização social em harmonia com ecossistemas.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "bookchin"
   },
   {
     "id": "anarcofeminismo",
@@ -821,7 +923,8 @@
     "category": "Esquerda Libertária",
     "description": "Fusão de anarquismo e feminismo, rejeitando Estado, patriarcado e hierarquias de gênero em favor de autonomia, apoio mútuo e relações sociais igualitárias.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "emma-goldman"
   },
   {
     "id": "anarquismo-queer",
@@ -829,7 +932,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo voltado à libertação LGBTQ+, rejeitando Estado, normas de gênero, heteronormatividade e assimilação institucional em favor de autonomia corporal e sexual.",
     "vector": null,
-    "countryId": "rojava"
+    "countryId": "rojava",
+    "personalityId": "judith-butler"
   },
   {
     "id": "anarcopacifismo",
@@ -837,7 +941,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo não violento que rejeita Estado, guerra e coerção, defendendo desobediência civil, resistência pacífica, comunidades voluntárias e transformação social sem violência.",
     "vector": null,
-    "countryId": "costa-rica"
+    "countryId": "costa-rica",
+    "personalityId": "tolstoy"
   },
   {
     "id": "anarquismo-cristao",
@@ -845,7 +950,8 @@
     "category": "Esquerda Libertária",
     "description": "Cristianismo antiestatal que rejeita coerção política, violência e autoridade terrena, defendendo comunidade voluntária, simplicidade, não violência e obediência ética ao evangelho.",
     "vector": null,
-    "countryId": "russia"
+    "countryId": "russia",
+    "personalityId": "tolstoy"
   },
   {
     "id": "anarco-naturalismo",
@@ -853,7 +959,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo naturista que valoriza vida simples, contato com a natureza, vegetarianismo, nudismo e rejeição a convenções artificiais da civilização industrial.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "thoreau"
   },
   {
     "id": "anarcoprimitivismo",
@@ -861,7 +968,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo radical que rejeita civilização, agricultura industrial e tecnologia moderna, defendendo retorno a formas de vida pré-estatais, simples e ecologicamente integradas.",
     "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola"
+    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "personalityId": "john-zerzan"
   },
   {
     "id": "geoanarquismo",
@@ -869,7 +977,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo georgista que rejeita Estado e monopólio fundiário, tratando terra e recursos naturais como comuns administrados por comunidades voluntárias.",
     "vector": null,
-    "countryId": "hong-kong"
+    "countryId": "hong-kong",
+    "personalityId": "henry-george"
   },
   {
     "id": "anarquismo-egoista",
@@ -877,7 +986,8 @@
     "category": "Esquerda Libertária",
     "description": "Anarquismo inspirado em Max Stirner, que rejeita Estado, moral abstrata e coletivos sagrados, defendendo autonomia individual e associações voluntárias entre egoístas.",
     "vector": null,
-    "countryId": "alemanha"
+    "countryId": "alemanha",
+    "personalityId": "max-stirner"
   },
   {
     "id": "anarcocapitalismo",
@@ -885,7 +995,8 @@
     "category": "Direita Libertária",
     "description": "Doutrina que elimina o Estado e entrega segurança, justiça e serviços ao mercado, baseada em propriedade privada absoluta, contratos voluntários e não-agressão.",
     "vector": null,
-    "countryId": "islandia-medieval"
+    "countryId": "islandia-medieval",
+    "personalityId": "rothbard"
   },
   {
     "id": "minarquismo",
@@ -893,7 +1004,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo de Estado mínimo, limitado a polícia, tribunais e defesa, deixando educação, saúde, infraestrutura e economia à iniciativa privada e voluntária.",
     "vector": null,
-    "countryId": "eua-new-hampshire"
+    "countryId": "eua-new-hampshire",
+    "personalityId": "bastiat"
   },
   {
     "id": "austrolibertarianismo",
@@ -901,7 +1013,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo inspirado na Escola Austríaca, defensor de mercado radical, moeda forte, propriedade privada, empreendedorismo e rejeição à intervenção estatal e ao banco central.",
     "vector": null,
-    "countryId": "argentina"
+    "countryId": "argentina",
+    "personalityId": "mises"
   },
   {
     "id": "paleolibertarianismo",
@@ -909,7 +1022,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo econômico radical unido a conservadorismo cultural, propriedade privada, Estado mínimo, comunidades tradicionais, restrição migratória e crítica ao igualitarismo progressista.",
     "vector": null,
-    "countryId": "eua-texas"
+    "countryId": "eua-texas",
+    "personalityId": "ron-paul"
   },
   {
     "id": "hoppeanismo",
@@ -917,7 +1031,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo antidemocrático que combina propriedade privada absoluta, comunidades contratuais, livre mercado extremo, ordem cultural conservadora e crítica radical à democracia.",
     "vector": null,
-    "countryId": "liechtenstein"
+    "countryId": "liechtenstein",
+    "personalityId": "hoppe"
   },
   {
     "id": "libertarianismo-de-chicago",
@@ -925,7 +1040,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo pragmático e monetarista, favorável a mercados livres, regras econômicas estáveis, Estado limitado e reformas como vouchers ou imposto negativo.",
     "vector": null,
-    "countryId": "chile-de-pinochet"
+    "countryId": "chile-de-pinochet",
+    "personalityId": "milton-friedman"
   },
   {
     "id": "capitalismo",
@@ -933,7 +1049,8 @@
     "category": "Direita Libertária",
     "description": "Sistema econômico baseado em propriedade privada, investimento, lucro, competição e mercados, valorizando iniciativa individual, inovação, acumulação de capital e trocas voluntárias.",
     "vector": null,
-    "countryId": "eua-texas"
+    "countryId": "eua-texas",
+    "personalityId": "adam-smith"
   },
   {
     "id": "objetivismo",
@@ -941,7 +1058,8 @@
     "category": "Direita Libertária",
     "description": "Filosofia de Ayn Rand que defende razão, egoísmo racional, direitos individuais, capitalismo laissez-faire e Estado limitado à proteção contra força e fraude.",
     "vector": null,
-    "countryId": "eua-nova-york"
+    "countryId": "eua-nova-york",
+    "personalityId": "ayn-rand"
   },
   {
     "id": "ecocapitalismo",
@@ -949,7 +1067,8 @@
     "category": "Direita Libertária",
     "description": "Visão que usa mercados, inovação, propriedade privada e preços ambientais para resolver problemas ecológicos, conciliando crescimento econômico e sustentabilidade por incentivos.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "elon-musk"
   },
   {
     "id": "ecoconservadorismo",
@@ -957,7 +1076,8 @@
     "category": "Direita Libertária",
     "description": "Conservadorismo ambiental que trata preservação da natureza como dever moral de continuidade, combinando tradição, propriedade, responsabilidade local e prudência ecológica.",
     "vector": null,
-    "countryId": "reino-unido"
+    "countryId": "reino-unido",
+    "personalityId": "scruton"
   },
   {
     "id": "econacionalismo",
@@ -965,7 +1085,8 @@
     "category": "Direita Libertária",
     "description": "Nacionalismo ambiental que vincula conservação da natureza à defesa do território, patrimônio nacional, soberania ecológica e controle de fronteiras ou recursos.",
     "vector": null,
-    "countryId": "eua-texas"
+    "countryId": "eua-texas",
+    "personalityId": "friedrich-list"
   },
   {
     "id": "agorismo",
@@ -973,7 +1094,8 @@
     "category": "Direita Libertária",
     "description": "Estratégia libertária que usa mercados negros e cinzentos, contra-economia e desobediência econômica para enfraquecer o Estado sem disputa eleitoral.",
     "vector": null,
-    "countryId": "eua-new-hampshire"
+    "countryId": "eua-new-hampshire",
+    "personalityId": "konkin"
   },
   {
     "id": "criptoanarquismo",
@@ -981,7 +1103,8 @@
     "category": "Direita Libertária",
     "description": "Anarquismo digital que usa criptografia, privacidade, moedas descentralizadas e contratos inteligentes para criar espaços econômicos e comunicacionais fora do controle estatal.",
     "vector": null,
-    "countryId": "suica"
+    "countryId": "suica",
+    "personalityId": "tim-may"
   },
   {
     "id": "anarco-transhumanismo",
@@ -989,7 +1112,8 @@
     "category": "Direita Libertária",
     "description": "Fusão de anarquismo e transhumanismo, defendendo tecnologia, biotecnologia e redes descentralizadas como meios de ampliar autonomia e reduzir coerção estatal.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "max-more"
   },
   {
     "id": "libertarianismo-bleeding-heart",
@@ -997,7 +1121,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo sensível à justiça social, argumentando que mercados livres, propriedade privada e instituições voluntárias são os melhores meios de ajudar os vulneráveis.",
     "vector": null,
-    "countryId": "eua-new-hampshire"
+    "countryId": "eua-new-hampshire",
+    "personalityId": "hayek"
   },
   {
     "id": "libertarianismo-nacional",
@@ -1005,7 +1130,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo econômico combinado com soberania nacional, mercado interno livre, fronteiras controladas, identidade cultural e rejeição a instituições globalistas.",
     "vector": null,
-    "countryId": "argentina"
+    "countryId": "argentina",
+    "personalityId": "javier-milei"
   },
   {
     "id": "monarquismo-libertario",
@@ -1013,7 +1139,8 @@
     "category": "Direita Libertária",
     "description": "Visão que considera a monarquia mais compatível com liberdade e propriedade, por supor incentivos de longo prazo, governo limitado e ordem tradicional.",
     "vector": null,
-    "countryId": "liechtenstein"
+    "countryId": "liechtenstein",
+    "personalityId": "hoppe"
   },
   {
     "id": "monarquia-federativa",
@@ -1021,7 +1148,8 @@
     "category": "Direita Libertária",
     "description": "Monarquia hereditária combinada a forte federalismo, em que uma coroa unificadora e moderadora coexiste com Estados-membros autônomos, autogoverno regional, tradição compartilhada e poder político amplamente descentralizado.",
     "vector": null,
-    "countryId": "sacro-imperio-romano-germanico"
+    "countryId": "sacro-imperio-romano-germanico",
+    "personalityId": "otto-von-habsburg"
   },
   {
     "id": "conservadorismo-libertario",
@@ -1029,7 +1157,8 @@
     "category": "Direita Libertária",
     "description": "Síntese de Estado limitado, livre mercado e valores tradicionais, defendendo que liberdade econômica depende de família, religião, comunidade e normas morais estáveis.",
     "vector": null,
-    "countryId": "eua-texas"
+    "countryId": "eua-texas",
+    "personalityId": "goldwater"
   },
   {
     "id": "feminismo-libertario",
@@ -1037,7 +1166,8 @@
     "category": "Direita Libertária",
     "description": "Feminismo individualista que aplica princípios libertários à igualdade de gênero, criticando coerção estatal e defendendo escolha, mercado, propriedade e autonomia pessoal.",
     "vector": null,
-    "countryId": "eua-california"
+    "countryId": "eua-california",
+    "personalityId": "mcelroy"
   },
   {
     "id": "pacifismo-libertario",
@@ -1045,7 +1175,8 @@
     "category": "Direita Libertária",
     "description": "Libertarianismo anti-guerra que vê intervenção militar, alistamento e imperialismo como expansões do Estado, defendendo paz, comércio voluntário e não-intervencionismo.",
     "vector": null,
-    "countryId": "costa-rica"
+    "countryId": "costa-rica",
+    "personalityId": "randolph-bourne"
   },
   {
     "id": "anarcoconservadorismo",
@@ -1053,7 +1184,8 @@
     "category": "Direita Libertária",
     "description": "Anarquismo de orientação conservadora, que rejeita o Estado mas preserva família, religião, costumes, comunidades orgânicas e autoridade social voluntária.",
     "vector": null,
-    "countryId": "islandia-medieval"
+    "countryId": "islandia-medieval",
+    "personalityId": "hoppe"
   },
   {
     "id": "anarcodistributismo",
@@ -1061,7 +1193,8 @@
     "category": "Direita Libertária",
     "description": "Fusão de anarquismo e distributismo cristão, defendendo propriedade produtiva espalhada, cooperativas, economia local, família e comunidade sem Estado central.",
     "vector": null,
-    "countryId": "costa-rica"
+    "countryId": "costa-rica",
+    "personalityId": "dorothy-day"
   },
   {
     "id": "anarcoindividualismo",
@@ -1069,7 +1202,8 @@
     "category": "Direita Libertária",
     "description": "Anarquismo centrado no indivíduo soberano, rejeitando Estado, autoridade coletiva e coerção social em favor de contratos, autonomia e liberdade pessoal radical.",
     "vector": null,
-    "countryId": "eua-massachusetts"
+    "countryId": "eua-massachusetts",
+    "personalityId": "lysander-spooner"
   },
   {
     "id": "centrismo",
@@ -1077,7 +1211,8 @@
     "category": "Centro",
     "description": "Postura moderada e pragmática que combina reformas graduais, estabilidade institucional e elementos de diferentes tradições conforme contexto, evitando extremos ideológicos rígidos.",
     "vector": null,
-    "countryId": "suica"
+    "countryId": "suica",
+    "personalityId": "macron"
   },
   {
     "id": "trabalhismo",
@@ -1085,7 +1220,8 @@
     "category": "Esquerda Libertária",
     "description": "Corrente centrada em direitos dos trabalhadores, sindicatos, salário digno, proteção social e participação popular, buscando justiça econômica por meios democráticos e reformistas.",
     "vector": null,
-    "countryId": "brasil-era-vargas"
+    "countryId": "brasil-era-vargas",
+    "personalityId": "getulio-vargas"
   },
   {
     "id": "positivismo",
@@ -1093,7 +1229,8 @@
     "category": "Centro",
     "description": "Filosofia política que valoriza ciência, técnica, ordem e progresso, defendendo governo racional, laicismo, planejamento estatal e modernização guiada por elites técnicas.",
     "vector": null,
-    "countryId": "brasil-era-vargas"
+    "countryId": "brasil-era-vargas",
+    "personalityId": "comte"
   },
   {
     "id": "conservadorismo-secular",
@@ -1101,7 +1238,8 @@
     "category": "Centro",
     "description": "Conservadorismo laico que defende ordem, tradição, segurança, identidade nacional e mercado sem base religiosa, separando política pública de autoridade confessional.",
     "vector": null,
-    "countryId": "tchequia"
+    "countryId": "tchequia",
+    "personalityId": "masaryk"
   },
   {
     "id": "progressismo-cristao",
@@ -1109,7 +1247,8 @@
     "category": "Centro",
     "description": "Progressismo inspirado no cristianismo, voltado a justiça social, acolhida aos vulneráveis, redistribuição, inclusão e dignidade humana por meio de reformas democráticas.",
     "vector": null,
-    "countryId": "brasil"
+    "countryId": "brasil",
+    "personalityId": "leonardo-boff"
   },
   {
     "id": "autoritarismo-modernizador",
@@ -1117,7 +1256,8 @@
     "category": "Direita Autoritária",
     "description": "Autoritarismo secular e nacional modernizador, com executivo forte, codificação legal uniforme, capitalismo de Estado, militarismo e meritocracia administrativa guiada por razão técnica.",
     "vector": null,
-    "countryId": "coreia-do-sul"
+    "countryId": "coreia-do-sul",
+    "personalityId": "park-chung-hee"
   },
   {
     "id": "desenvolvimentismo-de-estado",
@@ -1125,7 +1265,8 @@
     "category": "Esquerda Autoritária",
     "description": "Socialismo ou estatismo desenvolvimentista voltado à industrialização, planejamento central, propriedade estratégica estatal e modernização tecnológica conduzida por partido ou burocracia técnica.",
     "vector": null,
-    "countryId": "coreia-do-sul"
+    "countryId": "coreia-do-sul",
+    "personalityId": "park-chung-hee"
   },
   {
     "id": "atlantismo",
@@ -1133,7 +1274,8 @@
     "category": "Direita Autoritária",
     "description": "Doutrina que combina democracia liberal e livre mercado internos com intervencionismo militar externo, alianças hegemônicas, livre comércio global e projeção armada de poder.",
     "vector": null,
-    "countryId": "eua-washington-dc"
+    "countryId": "eua-washington-dc",
+    "personalityId": "kissinger"
   },
   {
     "id": "federalismo-privado",
@@ -1141,7 +1283,8 @@
     "category": "Direita Libertária",
     "description": "Sistema de cidades-Estado privadas concorrentes, governadas como corporações soberanas, com cidadania contratual, livre saída entre jurisdições e governança tecnológica eficiente.",
     "vector": null,
-    "countryId": "liechtenstein"
+    "countryId": "liechtenstein",
+    "personalityId": "paul-romer"
   },
   {
     "id": "tecno-monarquismo",
@@ -1149,7 +1292,8 @@
     "category": "Direita Autoritária",
     "description": "Monarquia modernizada em que um soberano único governa um Estado-empresa de alta tecnologia, com administração por dados, eficiência tecnocrática, ordem hierárquica e autoridade secular centralizada.",
     "vector": null,
-    "countryId": "emirados-arabes-unidos"
+    "countryId": "emirados-arabes-unidos",
+    "personalityId": "peter-thiel"
   },
   {
     "id": "tecno-socialismo",
@@ -1157,7 +1301,8 @@
     "category": "Esquerda Libertária",
     "description": "Socialismo de planejamento cibernético que usa automação, dados e inteligência artificial para coordenar a produção, eliminar a escassez e distribuir abundância material de forma coletiva e igualitária.",
     "vector": null,
-    "countryId": "chile"
+    "countryId": "chile",
+    "personalityId": "allende"
   },
   {
     "id": "tecno-fascismo",
@@ -1165,6 +1310,7 @@
     "category": "Direita Autoritária",
     "description": "Totalitarismo ultranacionalista que funde culto ao líder, vigilância em massa, controle algorítmico e poder corporativo-estatal, usando tecnologia avançada para subordinar a sociedade ao Estado.",
     "vector": null,
-    "countryId": "china"
+    "countryId": "china",
+    "personalityId": "marinetti"
   }
 ]

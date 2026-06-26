@@ -83,9 +83,23 @@ export interface CountryMatch {
   compatibility: number;
 }
 
+export interface PersonalityMatch {
+  personalityId: string;
+  name: string;
+  role: string;
+  lifespan: string;
+  description: string;
+  imagePath: string;
+  imageSourceName?: string;
+  imageSourceUrl?: string;
+  imageNote?: string;
+  compatibility: number;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
   matches: IdeologyMatch[];
   topCountryMatch: CountryMatch;
+  topPersonalityMatch: PersonalityMatch;
 }
