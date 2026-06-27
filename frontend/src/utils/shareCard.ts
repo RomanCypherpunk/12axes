@@ -958,14 +958,99 @@ function buildSharePersonality(person: QuizResult['topPersonalityMatch']): HTMLE
   return card;
 }
 
-export function prepareImagesForExport(root: HTMLElement): Promise<void> {
+export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
   const images = Array.from(root.querySelectorAll('img'));
-  return Promise.all(images.map(waitForImage)).then(() => {
-    images.forEach((image) => {
-      if (!image.complete || image.naturalWidth === 0) {
-        replaceBrokenExportImage(image);
+  await Promise.all(images.map(inlineImageForExport));
+}
+
+/**
+ * Converte cada imagem para um data: URI ANTES da rasterização, para que o
+ * html-to-image não precise refazer nenhum fetch de rede durante o export.
+ *
+ * O fetch interno do html-to-image (com cacheBust) pode falhar em produção
+ * por cache/CORS/quirks de navegador e, quando falha, ele deixa a moldura
+ * totalmente em branco — sem nem cair no fallback. Aqui usamos a imagem que
+ * já foi carregada na tela (via canvas, sem rede) para gerar o data: URI;
+ * se isso não for possível, tentamos um fetch e, em último caso, mostramos o
+ * fallback (bandeira indisponível / iniciais).
+ */
+async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
+  const src = image.getAttribute('src') ?? '';
+  if (!src) {
+    replaceBrokenExportImage(image);
+    return;
+  }
+  if (src.startsWith('data:')) {
+    return;
+  }
+
+  await waitForImage(image);
+
+  if (image.complete && image.naturalWidth > 0) {
+    const dataUrl = canvasDataUrl(image);
+    if (dataUrl) {
+      await applyImageSrc(image, dataUrl);
+      return;
+    }
+  }
+
+  try {
+    const dataUrl = await fetchAsDataUrl(src);
+    await applyImageSrc(image, dataUrl);
+  } catch {
+    replaceBrokenExportImage(image);
+  }
+}
+
+/** Desenha a imagem já carregada num canvas e retorna o data: URI (sem rede). */
+function canvasDataUrl(image: HTMLImageElement): string | null {
+  try {
+    const canvas = document.createElement('canvas');
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return null;
+    }
+    ctx.drawImage(image, 0, 0);
+    return canvas.toDataURL('image/png');
+  } catch {
+    // canvas "tainted" (imagem cross-origin sem CORS) — deixa o fetch tentar.
+    return null;
+  }
+}
+
+function fetchAsDataUrl(url: string): Promise<string> {
+  return fetch(url, { cache: 'force-cache' })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
       }
-    });
+      return res.blob();
+    })
+    .then(
+      (blob) =>
+        new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onerror = () => reject(reader.error);
+          reader.onload = () => resolve(reader.result as string);
+          reader.readAsDataURL(blob);
+        })
+    );
+}
+
+function applyImageSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
+  return new Promise((resolve) => {
+    image.addEventListener('load', () => resolve(), { once: true });
+    image.addEventListener(
+      'error',
+      () => {
+        replaceBrokenExportImage(image);
+        resolve();
+      },
+      { once: true }
+    );
+    image.src = dataUrl;
   });
 }
 

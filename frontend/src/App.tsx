@@ -210,7 +210,7 @@ export default function App() {
         height: SHARE_HEIGHT,
         backgroundColor: SHARE_COLORS.soft,
         pixelRatio: 1,
-        cacheBust: true,
+        cacheBust: false,
         skipFonts: true
       });
 
