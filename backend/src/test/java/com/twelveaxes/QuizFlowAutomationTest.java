@@ -39,7 +39,7 @@ class QuizFlowAutomationTest {
 
     @ParameterizedTest
     @MethodSource("variants")
-    void shortAndExtendedQuizzesAcceptEveryAnswerOption(String variant) throws Exception {
+    void quizzesAcceptEveryAnswerOption(String variant) throws Exception {
         for (AnswerValue answer : AnswerValue.values()) {
             QuizPayload quiz = fetchQuiz(variant);
             List<SubmittedAnswer> answers = selectQuestionsForVariant(quiz).stream()
@@ -58,7 +58,7 @@ class QuizFlowAutomationTest {
 
     @ParameterizedTest
     @MethodSource("variants")
-    void neutralAnswersInShortAndExtendedQuizzesProduceCentrism(String variant) throws Exception {
+    void neutralAnswersProduceCentrism(String variant) throws Exception {
         QuizPayload quiz = fetchQuiz(variant);
         List<SubmittedAnswer> answers = selectQuestionsForVariant(quiz).stream()
                 .map(question -> new SubmittedAnswer(question.id(), AnswerValue.NEUTRAL))
@@ -74,7 +74,7 @@ class QuizFlowAutomationTest {
 
     @ParameterizedTest
     @MethodSource("variants")
-    void differentAnswerProfilesProduceDifferentResultsInShortAndExtendedQuizzes(String variant) throws Exception {
+    void differentAnswerProfilesProduceDifferentResults(String variant) throws Exception {
         QuizPayload quiz = fetchQuiz(variant);
 
         QuizResult authoritarianTraditional = postResults(variant, answersTowardProfile(quiz, Map.ofEntries(
@@ -161,6 +161,11 @@ class QuizFlowAutomationTest {
     }
 
     private List<Question> selectQuestionsForVariant(QuizPayload quiz) {
+        if (quiz.questionsPerAxis() == 0) {
+            assertThat(quiz.questions()).hasSize(quiz.questionCount());
+            return quiz.questions();
+        }
+
         Map<String, List<Question>> questionsByAxis = new LinkedHashMap<>();
         for (Question question : quiz.questions()) {
             questionsByAxis.computeIfAbsent(question.axisId(), ignored -> new java.util.ArrayList<>()).add(question);
@@ -175,7 +180,11 @@ class QuizFlowAutomationTest {
     }
 
     private static Stream<String> variants() {
-        return Stream.of(QuizDataService.SHORT_VARIANT, QuizDataService.EXTENDED_VARIANT);
+        return Stream.of(
+                QuizDataService.SHORT_VARIANT,
+                QuizDataService.EXTENDED_VARIANT,
+                QuizDataService.EXTREME_VARIANT
+        );
     }
 
     private String expectedLabel(AnswerValue answer) {

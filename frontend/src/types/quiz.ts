@@ -7,7 +7,7 @@ export type AnswerValue =
 
 export type Pole = 'LEFT' | 'RIGHT';
 
-export type QuizVariant = 'short' | 'extended';
+export type QuizVariant = 'short' | 'extended' | 'extreme';
 
 export interface Axis {
   id: string;

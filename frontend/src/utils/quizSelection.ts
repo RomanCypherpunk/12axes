@@ -51,8 +51,8 @@ export function selectAndBalanceQuestions(payload: QuizPayload): QuizPayload {
 }
 
 /**
- * Modo oculto "/240questions": usa TODAS as perguntas do pool (sem subselecionar),
- * apenas reordenando para intercalar afirmações LEFT/RIGHT como no quiz normal.
+ * Versão extrema: usa TODAS as perguntas do pool (sem subselecionar), apenas
+ * reordenando para intercalar afirmações LEFT/RIGHT como no quiz normal.
  */
 export function selectAllQuestionsBalanced(payload: QuizPayload): QuizPayload {
   const pool = payload.questions;
@@ -78,7 +78,7 @@ export function selectAllQuestionsBalanced(payload: QuizPayload): QuizPayload {
 
   return {
     ...payload,
-    variant: 'extended',
+    variant: 'extreme',
     questions: ordered,
     questionCount: ordered.length,
     questionsPerAxis: 0

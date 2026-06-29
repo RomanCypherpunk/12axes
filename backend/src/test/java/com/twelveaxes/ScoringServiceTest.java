@@ -79,4 +79,12 @@ class ScoringServiceTest {
         assertThat(payload.questionCount()).isEqualTo(60);
         assertThat(payload.questions()).hasSize(240);
     }
+
+    @Test
+    void extremeQuizPayloadUsesTheFullQuestionPool() {
+        var payload = dataService.getQuiz(QuizDataService.EXTREME_VARIANT);
+        assertThat(payload.questionsPerAxis()).isZero();
+        assertThat(payload.questionCount()).isEqualTo(240);
+        assertThat(payload.questions()).hasSize(240);
+    }
 }

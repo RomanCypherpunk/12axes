@@ -13,14 +13,53 @@ import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/
 import { SHARE_COLORS, SHARE_HEIGHT, SHARE_WIDTH, buildShareCard, prepareImagesForExport } from './utils/shareCard';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
+type QuizFormatOption = {
+  variant: QuizVariant;
+  label: string;
+  questionCount: string;
+  description: string;
+  duration: string;
+  action: string;
+  featured?: boolean;
+};
 
-// Página oculta (não linkada): /240questions roda o quiz com TODAS as perguntas do pool.
+// Mantém compatibilidade com a rota direta antiga.
 const FULL_MODE =
   typeof window !== 'undefined' &&
   window.location.pathname.replace(/\/+$/, '').endsWith('/240questions');
 
-function buildQuizForMode(payload: QuizPayload): QuizPayload {
-  return FULL_MODE ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
+const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
+
+const QUIZ_FORMATS: QuizFormatOption[] = [
+  {
+    variant: 'short',
+    label: 'Curta',
+    questionCount: '36 perguntas',
+    description: 'Resultado rápido, ideal para uma primeira leitura do seu perfil',
+    duration: 'Aprox. 5min',
+    action: 'Começar versão curta'
+  },
+  {
+    variant: 'extended',
+    label: 'Completa',
+    questionCount: '60 perguntas',
+    description: 'Mais precisão para aproximar seu resultado dos perfis ideológicos.',
+    duration: 'Aprox. 9min',
+    action: 'Começar versão completa',
+    featured: true
+  },
+  {
+    variant: 'extreme',
+    label: 'Extrema',
+    questionCount: '240 perguntas',
+    description: 'Saiba exatamente a síntese do seu pensamento com 100% de precisão.',
+    duration: 'Aprox. 30min',
+    action: 'Começar versão extrema'
+  }
+];
+
+function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPayload {
+  return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
 }
 
 const TONE_RED_AXES = new Set([
@@ -36,7 +75,7 @@ export default function App() {
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const [screen, setScreen] = useState<Screen>('home');
-  const [selectedVariant, setSelectedVariant] = useState<QuizVariant>('short');
+  const [selectedVariant, setSelectedVariant] = useState<QuizVariant>(INITIAL_VARIANT);
   const [result, setResult] = useState<QuizResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,11 +86,10 @@ export default function App() {
   const isAdvancingRef = useRef(false);
 
   useEffect(() => {
-    fetchQuiz(FULL_MODE ? 'extended' : 'short')
+    fetchQuiz(INITIAL_VARIANT)
       .then((payload) => {
-        setQuiz(buildQuizForMode(payload));
+        setQuiz(buildQuizForVariant(payload, INITIAL_VARIANT));
         if (FULL_MODE) {
-          setSelectedVariant('extended');
           setScreen('quiz');
         }
       })
@@ -97,8 +135,8 @@ export default function App() {
     setIsLoading(true);
 
     try {
-      const nextQuiz = await fetchQuiz(FULL_MODE ? 'extended' : variant);
-      setQuiz(buildQuizForMode(nextQuiz));
+      const nextQuiz = await fetchQuiz(variant);
+      setQuiz(buildQuizForVariant(nextQuiz, variant));
       setScreen('quiz');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
@@ -175,7 +213,7 @@ export default function App() {
         answer: answerMap[question.id] as AnswerValue
       }));
       const nextResult = await submitResults(
-        FULL_MODE ? 'extended' : (quiz.variant ?? selectedVariant),
+        quiz.variant ?? selectedVariant,
         payload
       );
       setResult(nextResult);
@@ -378,7 +416,7 @@ export default function App() {
                   <h3>Responda às perguntas</h3>
                   <p>
                     Concorde ou discorde de afirmações sobre economia, Estado,
-                    liberdades, valores e política externa. 36 ou 60 perguntas.
+                    liberdades, valores e política externa. 36, 60 ou 240 perguntas.
                   </p>
                 </article>
                 <article className="step-card">
@@ -420,7 +458,8 @@ export default function App() {
                   <summary>Quanto tempo leva o teste ideológico?</summary>
                   <p>
                     A versão curta tem 36 perguntas e leva cerca de 5 minutos. A
-                    versão completa tem 60 perguntas para um resultado mais preciso.
+                    versão completa tem 60 perguntas. A versão extrema usa as 240
+                    perguntas do pool.
                   </p>
                 </details>
                 <details className="faq-item">
@@ -457,21 +496,26 @@ export default function App() {
           </div>
 
           <div className="variant-grid">
-            <button className="variant-card fade-up d-2" type="button" onClick={() => void startQuiz('short')}>
-              <span className="variant-card-kicker">Curta</span>
-              <span className="variant-card-title">36 perguntas</span>
-              <span>Resultado rápido, ideal para uma primeira leitura do seu perfil.</span>
-              <span className="variant-card-meta">12 eixos · ~5 minutos</span>
-              <span className="variant-card-action">Começar versão curta</span>
-            </button>
-
-            <button className="variant-card featured fade-up d-3" type="button" onClick={() => void startQuiz('extended')}>
-              <span className="variant-card-kicker">Completo</span>
-              <span className="variant-card-title">60 perguntas</span>
-              <span>Mais precisão para aproximar seu resultado dos perfis ideológicos.</span>
-              <span className="variant-card-meta">12 eixos · ~9 minutos</span>
-              <span className="variant-card-action">Começar versão completa</span>
-            </button>
+            {QUIZ_FORMATS.map((format, index) => (
+              <button
+                key={format.variant}
+                className={`variant-card fade-up d-${index + 2}${format.featured ? ' featured' : ''}`}
+                type="button"
+                onClick={() => void startQuiz(format.variant)}
+              >
+                <span className="variant-card-kicker">{format.label}</span>
+                <span className="variant-card-title">{format.questionCount}</span>
+                <span className="variant-card-description">{format.description}</span>
+                <span className="variant-card-meta">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                  {format.duration}
+                </span>
+                <span className="variant-card-action">{format.action}</span>
+              </button>
+            ))}
           </div>
           {error && <p className="inline-error" role="alert">{error}</p>}
         </section>

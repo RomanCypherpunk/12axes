@@ -183,6 +183,13 @@ class RandomQuizSimulationTest {
     }
 
     private List<Question> selectRandomQuestions(QuizPayload quiz, Random random) {
+        if (quiz.questionsPerAxis() == 0) {
+            List<Question> selected = new ArrayList<>(quiz.questions());
+            selected.sort(Comparator.comparing(Question::id));
+            shuffle(selected, random);
+            return selected;
+        }
+
         Map<String, List<Question>> questionsByAxis = new LinkedHashMap<>();
         for (Question question : quiz.questions()) {
             questionsByAxis.computeIfAbsent(question.axisId(), ignored -> new ArrayList<>()).add(question);

@@ -65,7 +65,7 @@ describe('selectAndBalanceQuestions — quiz curto (3 por eixo)', () => {
   });
 });
 
-describe('selectAllQuestionsBalanced — modo oculto /240questions', () => {
+describe('selectAllQuestionsBalanced — quiz extremo', () => {
   it('mantém TODAS as perguntas do pool (sem perder nem duplicar)', () => {
     const pool = makePool(20, 3);
     const result = selectAllQuestionsBalanced(pool);
@@ -75,9 +75,9 @@ describe('selectAllQuestionsBalanced — modo oculto /240questions', () => {
     expect(ids).toEqual(new Set(pool.questions.map((q) => q.id)));
   });
 
-  it('marca a versão como extended e ajusta a contagem', () => {
+  it('marca a versão como extreme e ajusta a contagem', () => {
     const result = selectAllQuestionsBalanced(makePool(20, 3));
-    expect(result.variant).toBe('extended');
+    expect(result.variant).toBe('extreme');
     expect(result.questionCount).toBe(result.questions.length);
   });
 

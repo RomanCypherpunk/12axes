@@ -29,6 +29,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class QuizDataService {
     public static final String SHORT_VARIANT = "short";
     public static final String EXTENDED_VARIANT = "extended";
+    public static final String EXTREME_VARIANT = "extreme";
 
     private final ObjectMapper objectMapper;
     private List<Axis> axes;
@@ -104,8 +105,14 @@ public class QuizDataService {
 
     public QuizPayload getQuiz(String variant) {
         String normalizedVariant = normalizeVariant(variant);
-        int questionsPerAxis = normalizedVariant.equals(EXTENDED_VARIANT) ? 5 : 3;
-        int questionCount = questionsPerAxis * axes.size();
+        int questionsPerAxis = switch (normalizedVariant) {
+            case EXTREME_VARIANT -> 0;
+            case EXTENDED_VARIANT -> 5;
+            default -> 3;
+        };
+        int questionCount = normalizedVariant.equals(EXTREME_VARIANT)
+                ? poolQuestions.size()
+                : questionsPerAxis * axes.size();
         return new QuizPayload(
                 "12 Axes",
                 "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.",
@@ -186,6 +193,7 @@ public class QuizDataService {
         return switch (variant.trim().toLowerCase()) {
             case SHORT_VARIANT, "curta" -> SHORT_VARIANT;
             case EXTENDED_VARIANT, "extensa" -> EXTENDED_VARIANT;
+            case EXTREME_VARIANT, "extrema", "240", "240questions" -> EXTREME_VARIANT;
             default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Versão de quiz inválida");
         };
     }
