@@ -30,7 +30,7 @@
   {
     "id": "estrutura_05",
     "axisId": "estrutura",
-    "text": "Cada estado deve poder definir suas próprias regras sobre porte de armas.",
+    "text": "Cada estado deve poder definir sua própria Constituição, justiça e administração.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -72,7 +72,7 @@
   {
     "id": "estrutura_11",
     "axisId": "estrutura",
-    "text": "Estados ricos não deveriam ser obrigados a sustentar estados pobres.",
+    "text": "A maior parte dos impostos deveria ficar no estado onde foi arrecadada.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -86,7 +86,7 @@
   {
     "id": "estrutura_13",
     "axisId": "estrutura",
-    "text": "Capitais e grandes cidades deveriam ter mais autonomia política que pequenos municípios.",
+    "text": "Estados deveriam ter direito de se separar da federação se a maioria local quiser.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -114,28 +114,28 @@
   {
     "id": "estrutura_17",
     "axisId": "estrutura",
-    "text": "Se uma cidade quer descriminalizar algo, ela deve ter esse direito mesmo contra a lei federal.",
+    "text": "Cidades deveriam poder criar regras administrativas diferentes da lei nacional.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "estrutura_18",
     "axisId": "estrutura",
-    "text": "Costumes regionais e festas locais não deveriam virar políticas oficiais do estado.",
+    "text": "O governo nacional deve ter autoridade para anular regras locais divergentes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "estrutura_19",
     "axisId": "estrutura",
-    "text": "Vereadores e prefeitos são quem realmente sabe o que a comunidade precisa.",
+    "text": "O Brasil funcionaria melhor como uma confederação de estados quase soberanos.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "estrutura_20",
     "axisId": "estrutura",
-    "text": "Federalismo demais enfraquece o país e dá poder a caciques regionais.",
+    "text": "Governadores e prefeitos deveriam obedecer a planos nacionais, não agir como poderes independentes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -198,7 +198,7 @@
   {
     "id": "representacao_09",
     "axisId": "representacao",
-    "text": "Trocar o governo pelo voto é melhor que tentar derrubá-lo na rua.",
+    "text": "Uma sociedade anarquista, organizada por assembleias locais, seria melhor que governo profissional.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -212,7 +212,7 @@
   {
     "id": "representacao_11",
     "axisId": "representacao",
-    "text": "Plebiscitos e referendos deveriam ser usados em decisões importantes.",
+    "text": "Plebiscitos deveriam poder derrubar leis e autoridades sem depender do Congresso.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -247,7 +247,7 @@
   {
     "id": "representacao_16",
     "axisId": "representacao",
-    "text": "Quem entende de economia ou tecnologia deveria ter mais peso nas decisões que o eleitor médio.",
+    "text": "Uma tecnocracia comandada por especialistas seria melhor que governo escolhido pelo eleitor comum.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -275,21 +275,21 @@
   {
     "id": "representacao_20",
     "axisId": "representacao",
-    "text": "É legítimo que militares ou tribunais intervenham se um governo eleito ameaçar o país.",
+    "text": "Uma ditadura competente pode ser legítima se entregar ordem e desenvolvimento.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "poder_01",
     "axisId": "poder",
-    "text": "Operações policiais agressivas são justificadas em regiões com alto índice de violência.",
+    "text": "Em áreas dominadas pelo crime, mandados coletivos e ocupações policiais prolongadas são aceitáveis.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "poder_02",
     "axisId": "poder",
-    "text": "Adultos devem ter o direito de consumir drogas sem serem criminalizados por isso.",
+    "text": "Maconha deveria ser legalizada para produção, venda e consumo adulto.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -303,14 +303,14 @@
   {
     "id": "poder_04",
     "axisId": "poder",
-    "text": "Pessoas adultas devem poder decidir o que fazem com o próprio corpo, mesmo que se prejudiquem.",
+    "text": "Drogas, prostituição, apostas e pornografia entre adultos não deveriam ser caso de polícia.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "poder_05",
     "axisId": "poder",
-    "text": "Quem comete crimes graves deve ser monitorado por câmeras e dados mesmo após cumprir pena.",
+    "text": "O Estado deveria monitorar comunicações digitais para prevenir terrorismo e crime organizado.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -422,28 +422,28 @@
   {
     "id": "imigracao_01",
     "axisId": "imigracao",
-    "text": "Imigrantes que recusam aprender o idioma local não deveriam receber benefícios públicos.",
+    "text": "Imigrantes que recusam aprender o idioma local não se integram plenamente à comunidade nacional.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "imigracao_02",
     "axisId": "imigracao",
-    "text": "O governo deveria oferecer serviços públicos em múltiplos idiomas para facilitar a integração de imigrantes.",
+    "text": "Uma sociedade multicultural deve aceitar vários idiomas no cotidiano público.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "imigracao_03",
     "axisId": "imigracao",
-    "text": "Fronteiras existem para proteger a identidade cultural de uma nação.",
+    "text": "Fronteiras fechadas podem ser necessárias para preservar a identidade cultural de um país.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "imigracao_04",
     "axisId": "imigracao",
-    "text": "Fronteiras abertas permitem que culturas diferentes se encontrem e evoluam juntas.",
+    "text": "Pessoas pacíficas deveriam poder morar e trabalhar no país mesmo sem barreiras migratórias rígidas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -506,7 +506,7 @@
   {
     "id": "imigracao_13",
     "axisId": "imigracao",
-    "text": "O Brasil deveria adotar um sistema seletivo de imigração que priorize qualificação profissional e capacidade de integração.",
+    "text": "Imigração permanente deveria exigir domínio do idioma e disposição de assimilação cultural.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -555,7 +555,7 @@
   {
     "id": "imigracao_20",
     "axisId": "imigracao",
-    "text": "O Brasil deveria aumentar o número de refugiados aceitos por ano.",
+    "text": "Refugiados de culturas diferentes podem enriquecer a identidade nacional.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -604,14 +604,14 @@
   {
     "id": "diplomacia_07",
     "axisId": "diplomacia",
-    "text": "Todo país precisa de capacidade de dissuasão, inclusive nuclear se possível.",
+    "text": "O Brasil deveria buscar capacidade nuclear militar para não depender da proteção de potências estrangeiras.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_08",
     "axisId": "diplomacia",
-    "text": "Cortar gastos militares para investir em saúde e educação é uma boa troca.",
+    "text": "Gastos militares altos tornam conflitos externos mais prováveis.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -639,7 +639,7 @@
   {
     "id": "diplomacia_12",
     "axisId": "diplomacia",
-    "text": "A guerra deve ser o último recurso, mesmo contra agressores.",
+    "text": "Nenhuma causa ideológica justifica iniciar uma guerra.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -667,7 +667,7 @@
   {
     "id": "diplomacia_16",
     "axisId": "diplomacia",
-    "text": "Embargos econômicos costumam machucar civis mais que governos.",
+    "text": "Mesmo contra regimes hostis, diálogo costuma ser melhor que coerção externa.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -688,14 +688,14 @@
   {
     "id": "diplomacia_19",
     "axisId": "diplomacia",
-    "text": "Em política internacional, força é mais respeitada que princípios.",
+    "text": "Confrontar potências imperialistas pode exigir força militar, não apenas notas diplomáticas.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_20",
     "axisId": "diplomacia",
-    "text": "Países que reduzem gastos militares conseguem melhor qualidade de vida interna.",
+    "text": "O país deveria aceitar vulnerabilidade militar se isso reduzir o risco de guerra.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -737,14 +737,14 @@
   {
     "id": "intervencao_06",
     "axisId": "intervencao",
-    "text": "Não devemos enviar tropas para ajudar outros países, nem por causas humanitárias.",
+    "text": "O Brasil não deveria enviar tropas ao exterior nem para missões humanitárias.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_07",
     "axisId": "intervencao",
-    "text": "Dinheiro público deve resolver problemas internos antes de causas externas.",
+    "text": "Crises externas raramente justificam envolvimento direto do Brasil.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -758,28 +758,28 @@
   {
     "id": "intervencao_09",
     "axisId": "intervencao",
-    "text": "Acolher refugiados de outros países é responsabilidade da ONU, não do Brasil.",
+    "text": "Problemas de outros países devem ser resolvidos por organismos internacionais, não pelo Brasil.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_10",
     "axisId": "intervencao",
-    "text": "O país deve agir como potência regional, influenciando vizinhos quando preciso.",
+    "text": "O Brasil deveria impor liderança política sobre a América do Sul quando seus interesses estiverem em jogo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "intervencao_11",
     "axisId": "intervencao",
-    "text": "Mais vale comércio aberto com todos que aliança fechada com qualquer um.",
+    "text": "O Brasil deve evitar blocos geopolíticos fechados e alianças permanentes.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_12",
     "axisId": "intervencao",
-    "text": "O Brasil deveria usar sua influência regional para obter vantagem de países latino-americanos.",
+    "text": "Influenciar governos vizinhos é legítimo quando aumenta a segurança e a vantagem brasileira.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -821,14 +821,14 @@
   {
     "id": "intervencao_18",
     "axisId": "intervencao",
-    "text": "Diplomacia ativa abre mercados e gera empregos dentro do país.",
+    "text": "O Brasil deve disputar influência política fora de suas fronteiras.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "intervencao_19",
     "axisId": "intervencao",
-    "text": "O Brasil deve manter neutralidade nos grandes conflitos globais.",
+    "text": "Neutralidade deve ser mantida mesmo quando aliados pressionam por apoio.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -849,14 +849,14 @@
   {
     "id": "economia_02",
     "axisId": "economia",
-    "text": "Países socialistas tendem a ser mais justos que países capitalistas.",
+    "text": "Uma revolução socialista pode ser necessária para substituir o poder dos grandes proprietários.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_03",
     "axisId": "economia",
-    "text": "Saúde, educação e previdência funcionam melhor quando há opção privada concorrendo.",
+    "text": "Saúde, educação e previdência deveriam funcionar principalmente por serviços privados concorrentes.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -877,14 +877,14 @@
   {
     "id": "economia_06",
     "axisId": "economia",
-    "text": "Quem ganha muito deveria pagar imposto bem mais alto que quem ganha pouco.",
+    "text": "Grandes empresas e bancos deveriam ser estatizados se forem essenciais para a população.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_07",
     "axisId": "economia",
-    "text": "Imposto sobre herança e grandes fortunas afasta investimento e gera fuga de capital.",
+    "text": "Herança e propriedade familiar devem ficar protegidas de projetos coletivistas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -905,7 +905,7 @@
   {
     "id": "economia_10",
     "axisId": "economia",
-    "text": "Sem Estado regulando, empresas exploram trabalhadores e consumidores.",
+    "text": "Serviços essenciais não deveriam depender da lógica de lucro.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -933,14 +933,14 @@
   {
     "id": "economia_14",
     "axisId": "economia",
-    "text": "Grandes empresas pagam pouco imposto no Brasil e isso precisa mudar.",
+    "text": "Grandes empresas privadas concentram poder demais sobre a vida das pessoas.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "economia_15",
     "axisId": "economia",
-    "text": "Sindicatos obrigatórios deveriam acabar.",
+    "text": "Relações de trabalho funcionam melhor por contrato direto do que por estruturas coletivas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -954,7 +954,7 @@
   {
     "id": "economia_17",
     "axisId": "economia",
-    "text": "Propriedade privada é um direito fundamental e quase intocável.",
+    "text": "A propriedade privada deve ser protegida mesmo quando gera grande desigualdade.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1045,14 +1045,14 @@
   {
     "id": "controle_10",
     "axisId": "controle",
-    "text": "Tabelar preços de combustíveis e medicamentos protege a população.",
+    "text": "Em crises, o governo deve poder congelar preços, salários e aluguéis.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "controle_11",
     "axisId": "controle",
-    "text": "Bitcoin e criptomoedas livres são melhor reserva de valor que moedas fiduciárias.",
+    "text": "Moedas privadas e criptomoedas deveriam poder competir livremente com a moeda estatal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1080,7 +1080,7 @@
   {
     "id": "controle_15",
     "axisId": "controle",
-    "text": "Dinheiro com lastro fixo evita que o governo nos roube via inflação.",
+    "text": "Banco Central independente e moeda com lastro rígido valem mais que flexibilidade política.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1101,7 +1101,7 @@
   {
     "id": "controle_18",
     "axisId": "controle",
-    "text": "Tetos de gasto e regras fiscais rígidas amarram demais o governo em crises.",
+    "text": "O governo deveria poder controlar saída de capital e câmbio para proteger a economia.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1122,7 +1122,7 @@
   {
     "id": "comercio_01",
     "axisId": "comercio",
-    "text": "Produtos importados baratos são bons mesmo quando prejudicam empresas locais.",
+    "text": "Tarifas deveriam ser quase zeradas mesmo que algumas indústrias nacionais quebrem.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1157,21 +1157,21 @@
   {
     "id": "comercio_06",
     "axisId": "comercio",
-    "text": "Produtos estratégicos devem ser fabricados no país, mesmo custando mais.",
+    "text": "Produtos estratégicos deveriam ser fabricados no país mesmo que fiquem muito mais caros.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "comercio_07",
     "axisId": "comercio",
-    "text": "Consumidores devem poder comprar importados baratos sem barreiras.",
+    "text": "Consumidores e empresas deveriam comprar de qualquer país sem proteção estatal.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "comercio_08",
     "axisId": "comercio",
-    "text": "Quando o real fica forte demais, o governo deveria agir para baratear nossas exportações.",
+    "text": "O governo deveria limitar importações que prejudiquem exportadores e indústria nacional.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1241,7 +1241,7 @@
   {
     "id": "comercio_18",
     "axisId": "comercio",
-    "text": "Cadeias produtivas estratégicas precisam ser nacionalizadas.",
+    "text": "Cadeias produtivas estratégicas devem ser protegidas da concorrência externa.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1276,7 +1276,7 @@
   {
     "id": "religiao_03",
     "axisId": "religiao",
-    "text": "Valores religiosos devem influenciar debates sobre leis e costumes.",
+    "text": "As leis deveriam refletir os valores da religião majoritária do país.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1290,7 +1290,7 @@
   {
     "id": "religiao_05",
     "axisId": "religiao",
-    "text": "Famílias religiosas tendem a criar filhos com valores mais sólidos.",
+    "text": "A religião torna a vida familiar e comunitária mais sólida.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1304,7 +1304,7 @@
   {
     "id": "religiao_07",
     "axisId": "religiao",
-    "text": "Escolas públicas deveriam ter ensino religioso, mesmo que opcional.",
+    "text": "O Estado deveria assumir uma identidade religiosa oficial.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1374,14 +1374,14 @@
   {
     "id": "religiao_17",
     "axisId": "religiao",
-    "text": "Médicos e funcionários públicos devem poder se recusar a agir contra sua consciência religiosa.",
+    "text": "A consciência religiosa deve pesar mais que normas profissionais em dilemas morais graves.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_18",
     "axisId": "religiao",
-    "text": "Religião deveria recuar à esfera privada conforme a sociedade evolui.",
+    "text": "Religião deveria ficar totalmente fora da política, das escolas públicas e dos prédios do Estado.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1395,7 +1395,7 @@
   {
     "id": "religiao_20",
     "axisId": "religiao",
-    "text": "Estado e Igreja devem estar absolutamente separados.",
+    "text": "Nenhuma igreja deveria receber privilégio fiscal, simbólico ou jurídico do governo.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1423,14 +1423,14 @@
   {
     "id": "moral_04",
     "axisId": "moral",
-    "text": "Empresas grandes deveriam ser obrigadas por lei a manter proporção mínima de negros nos cargos de gestão.",
+    "text": "Diversidade racial em cargos de liderança é sinal de justiça social.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_05",
     "axisId": "moral",
-    "text": "Adolescentes têm o direito de explorar sua identidade de gênero.",
+    "text": "A identidade de gênero autodeclarada deve ser respeitada socialmente.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1465,28 +1465,28 @@
   {
     "id": "moral_10",
     "axisId": "moral",
-    "text": "Aborto até certo prazo deve ser um direito da mulher.",
+    "text": "Aborto no início da gestação pode ser uma escolha moralmente aceitável.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_11",
     "axisId": "moral",
-    "text": "Aborto é o fim de uma vida, deve ser criminalizado.",
+    "text": "Aborto é moralmente errado porque interrompe uma vida humana.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_12",
     "axisId": "moral",
-    "text": "Escolas públicas deveriam incluir conteúdos sobre identidade de gênero a partir do ensino fundamental.",
+    "text": "Crianças e adolescentes deveriam conhecer identidades de gênero sem tabu.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_13",
     "axisId": "moral",
-    "text": "Educação sexual é responsabilidade da família, não do Estado.",
+    "text": "Educação sexual deveria seguir principalmente os valores da família.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1507,7 +1507,7 @@
   {
     "id": "moral_16",
     "axisId": "moral",
-    "text": "Drogas, prostituição e pornografia são um problema que deveria ser combatido.",
+    "text": "Pornografia, prostituição e drogas são sinais de decadência moral.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1521,28 +1521,28 @@
   {
     "id": "moral_18",
     "axisId": "moral",
-    "text": "Castigo físico em crianças deveria ser proibido.",
+    "text": "Castigo físico em crianças é uma prática moralmente inaceitável.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_19",
     "axisId": "moral",
-    "text": "Pais devem ter liberdade ampla para educar e disciplinar seus filhos.",
+    "text": "Pais devem ser a principal autoridade moral na educação dos filhos.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_20",
     "axisId": "moral",
-    "text": "Paridade de gênero em cargos de liderança deve ser uma meta buscada por empresas e governos.",
+    "text": "Paridade de gênero em liderança é um ideal social positivo.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_01",
     "axisId": "tecnologia",
-    "text": "Empresas devem poluir menos, mesmo que produtos fiquem mais caros.",
+    "text": "Reduzir plástico descartável e poluição vale mesmo quando exige abrir mão de conveniência.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1577,7 +1577,7 @@
   {
     "id": "tecnologia_06",
     "axisId": "tecnologia",
-    "text": "Agrotóxicos contaminam a comida e deveriam ser bem mais restritos.",
+    "text": "Agrotóxicos representam risco ambiental maior do que seus ganhos produtivos.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1612,21 +1612,21 @@
   {
     "id": "tecnologia_11",
     "axisId": "tecnologia",
-    "text": "Mineração na Amazônia deve ser proibida, mesmo com tecnologia limpa.",
+    "text": "Mesmo mineração limpa na Amazônia ultrapassa um limite ecológico.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_12",
     "axisId": "tecnologia",
-    "text": "Engenharia genética em humanos pode acabar com doenças hereditárias.",
+    "text": "Eugenia e melhoramento genético humano podem ser formas legítimas de reduzir doenças e ampliar capacidades.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_13",
     "axisId": "tecnologia",
-    "text": "Mexer no DNA humano cruza uma linha ética que não deveria ser cruzada.",
+    "text": "Editar embriões para melhorar inteligência, aparência ou força ultrapassa um limite ético.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1661,7 +1661,7 @@
   {
     "id": "tecnologia_18",
     "axisId": "tecnologia",
-    "text": "Implantes cerebrais e próteses inteligentes são evoluções a celebrar.",
+    "text": "Implantes cerebrais, próteses inteligentes e edição genética são caminhos legítimos para superar limites humanos.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1675,7 +1675,7 @@
   {
     "id": "tecnologia_20",
     "axisId": "tecnologia",
-    "text": "Pecuária moderna pode ser eficiente, veganismo obrigatório seria um retrocesso.",
+    "text": "Pecuária moderna pode ser compatível com progresso técnico e responsabilidade ambiental.",
     "agreePole": "LEFT",
     "weight": 1
   }
