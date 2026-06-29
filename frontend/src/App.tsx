@@ -8,6 +8,7 @@ import { PersonalityMatchCard } from './components/PersonalityMatchCard';
 import { IdeologyMatchCard } from './components/IdeologyMatchCard';
 import { ProgressHeader } from './components/ProgressHeader';
 import { QuestionCard } from './components/QuestionCard';
+import { HOME_AXES } from './data/homeAxes';
 import { fetchQuiz, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { SHARE_COLORS, SHARE_HEIGHT, SHARE_WIDTH, buildShareCard, prepareImagesForExport } from './utils/shareCard';
@@ -77,7 +78,7 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
   const [selectedVariant, setSelectedVariant] = useState<QuizVariant>(INITIAL_VARIANT);
   const [result, setResult] = useState<QuizResult | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(FULL_MODE);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
@@ -86,12 +87,14 @@ export default function App() {
   const isAdvancingRef = useRef(false);
 
   useEffect(() => {
+    if (!FULL_MODE) {
+      return;
+    }
+
     fetchQuiz(INITIAL_VARIANT)
       .then((payload) => {
         setQuiz(buildQuizForVariant(payload, INITIAL_VARIANT));
-        if (FULL_MODE) {
-          setScreen('quiz');
-        }
+        setScreen('quiz');
       })
       .catch((err: Error) => setError(err.message))
       .finally(() => setIsLoading(false));
@@ -115,6 +118,7 @@ export default function App() {
     }
     return new Map(result.axes.map((axis) => [axis.axisId, axis]));
   }, [result]);
+  const homeAxes = quiz?.axes ?? HOME_AXES;
 
   function openVariantChooser() {
     clearPendingAdvance();
@@ -280,7 +284,7 @@ export default function App() {
     );
   }
 
-  if (error && !quiz) {
+  if (error && !quiz && FULL_MODE) {
     return (
       <main className="app-shell center-shell">
         <div className="error-panel">
@@ -294,7 +298,7 @@ export default function App() {
     );
   }
 
-  if (!quiz) {
+  if (!quiz && (screen === 'quiz' || screen === 'results')) {
     return null;
   }
 
@@ -381,7 +385,7 @@ export default function App() {
               </div>
 
               <div className="axis-mosaic fade-up d-3" id="eixos">
-                {quiz.axes.map((axis, index) => (
+                {homeAxes.map((axis, index) => (
                   <article
                     key={axis.id}
                     className={`axis-tile${TONE_RED_AXES.has(axis.id) ? ' tone-red' : ''}`}
@@ -521,7 +525,7 @@ export default function App() {
         </section>
       )}
 
-      {screen === 'quiz' && currentQuestion && (
+      {screen === 'quiz' && quiz && currentQuestion && (
         <section className="quiz-layout">
           <ProgressHeader current={currentIndex + 1} total={quiz.questions.length} />
 
@@ -575,7 +579,7 @@ export default function App() {
         </section>
       )}
 
-      {screen === 'results' && result && (
+      {screen === 'results' && quiz && result && (
         <section className="results-layout" id="resultados">
           <header className="results-hero">
             <div className="results-hero-text fade-up d-1">

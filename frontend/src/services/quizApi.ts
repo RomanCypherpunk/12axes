@@ -13,10 +13,30 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
   if (!response.ok) {
     const message = await response.text();
-    throw new Error(message || `Erro HTTP ${response.status}`);
+    throw new Error(formatApiError(message, response.status));
   }
 
   return response.json() as Promise<T>;
+}
+
+function formatApiError(message: string, status: number): string {
+  if (!message) {
+    return `Erro HTTP ${status}`;
+  }
+
+  try {
+    const payload = JSON.parse(message) as { error?: unknown; message?: unknown };
+    if (typeof payload.message === 'string' && payload.message.trim()) {
+      return payload.message;
+    }
+    if (typeof payload.error === 'string' && payload.error.trim()) {
+      return payload.error;
+    }
+  } catch {
+    // The backend may return plain text for non-Spring errors.
+  }
+
+  return message;
 }
 
 export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> {
