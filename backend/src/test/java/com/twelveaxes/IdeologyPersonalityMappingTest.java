@@ -6,6 +6,7 @@ import com.twelveaxes.model.IdeologyMatch;
 import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.service.PersonalityResolverService;
 import com.twelveaxes.service.QuizDataService;
+import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -62,5 +63,31 @@ class IdeologyPersonalityMappingTest {
                     assertThat(personality.imagePath()).startsWith("/personalities/portraits/");
                     assertThat(personality.imageSourceUrl()).startsWith("https://");
                 });
+    }
+
+    @Test
+    void everyPersonalityImagePathPointsToAPublicAsset() {
+        Path frontendPublic = frontendPublicPath();
+
+        assertThat(dataService.getPersonalities())
+                .isNotEmpty()
+                .allSatisfy(personality -> {
+                    String relativePath = personality.imagePath().replaceFirst("^/+", "");
+                    Path imagePath = frontendPublic.resolve(relativePath).normalize();
+
+                    assertThat(imagePath)
+                            .as("Imagem de %s deve existir em frontend/public: %s",
+                                    personality.id(), personality.imagePath())
+                            .isRegularFile();
+                });
+    }
+
+    private Path frontendPublicPath() {
+        Path cwd = Path.of(System.getProperty("user.dir")).toAbsolutePath();
+        Path fromBackend = cwd.resolve("../frontend/public").normalize();
+        if (fromBackend.toFile().isDirectory()) {
+            return fromBackend;
+        }
+        return cwd.resolve("frontend/public").normalize();
     }
 }
