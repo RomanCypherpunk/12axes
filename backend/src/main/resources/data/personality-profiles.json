@@ -385,7 +385,7 @@
       "economia": 30,
       "controle": 25,
       "comercio": 75,
-      "religiao": 25,
+      "religiao": 62,
       "moral": 8,
       "tecnologia": 60
     }
@@ -555,7 +555,7 @@
       "economia": 45,
       "controle": 50,
       "comercio": 78,
-      "religiao": 28,
+      "religiao": 58,
       "moral": 15,
       "tecnologia": 50
     }
@@ -912,7 +912,7 @@
       "economia": 50,
       "controle": 45,
       "comercio": 35,
-      "religiao": 70,
+      "religiao": 42,
       "moral": 80,
       "tecnologia": 75
     }
@@ -1113,8 +1113,8 @@
       "imigracao": 60,
       "diplomacia": 50,
       "intervencao": 50,
-      "economia": 45,
-      "controle": 45,
+      "economia": 68,
+      "controle": 62,
       "comercio": 35,
       "religiao": 70,
       "moral": 75,
@@ -1385,8 +1385,8 @@
       "imigracao": 55,
       "diplomacia": 30,
       "intervencao": 75,
-      "economia": 70,
-      "controle": 55,
+      "economia": 42,
+      "controle": 35,
       "comercio": 50,
       "religiao": 70,
       "moral": 82,
@@ -1914,7 +1914,7 @@
       "intervencao": 60,
       "economia": 18,
       "controle": 15,
-      "comercio": 60,
+      "comercio": 18,
       "religiao": 35,
       "moral": 30,
       "tecnologia": 65
@@ -1924,14 +1924,14 @@
     "personalityId": "otto-von-habsburg",
     "vector": {
       "estrutura": 85,
-      "representacao": 38,
+      "representacao": 62,
       "poder": 50,
       "imigracao": 65,
       "diplomacia": 52,
       "intervencao": 42,
       "economia": 40,
       "controle": 38,
-      "comercio": 50,
+      "comercio": 22,
       "religiao": 32,
       "moral": 25,
       "tecnologia": 50
@@ -2128,13 +2128,13 @@
     "personalityId": "paul-romer",
     "vector": {
       "estrutura": 92,
-      "representacao": 45,
+      "representacao": 62,
       "poder": 35,
       "imigracao": 68,
       "diplomacia": 28,
       "intervencao": 82,
-      "economia": 15,
-      "controle": 15,
+      "economia": 35,
+      "controle": 30,
       "comercio": 42,
       "religiao": 40,
       "moral": 32,
@@ -2153,7 +2153,7 @@
       "economia": 25,
       "controle": 30,
       "comercio": 35,
-      "religiao": 68,
+      "religiao": 32,
       "moral": 28,
       "tecnologia": 95
     }
