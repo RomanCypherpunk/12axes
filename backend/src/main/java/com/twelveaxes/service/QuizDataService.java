@@ -73,6 +73,7 @@ public class QuizDataService {
                 .collect(Collectors.toUnmodifiableMap(PersonalityProfile::personalityId, Function.identity()));
 
         validateCountryProfiles();
+        validateIdeologyProfiles();
         validateIdeologyPersonalityLinks();
         validatePersonalityProfiles();
     }
@@ -104,6 +105,39 @@ public class QuizDataService {
         if (!untagged.isEmpty()) {
             throw new IllegalStateException(
                     "Todo perfil de pais precisa de pelo menos uma tag de sistema. Sem tags: " + untagged
+            );
+        }
+    }
+
+    private void validateIdeologyProfiles() {
+        List<String> missing = ideologies.stream()
+                .map(Ideology::id)
+                .filter(id -> !ideologyProfiles.containsKey(id))
+                .toList();
+        if (!missing.isEmpty()) {
+            throw new IllegalStateException(
+                    "Toda ideologia precisa de um perfil em ideology-profiles.json. Faltando: " + missing
+            );
+        }
+
+        List<String> untagged = ideologyProfiles.values().stream()
+                .filter(profile -> profile.countryTags().stream().noneMatch(tag -> tag != null && !tag.isBlank()))
+                .map(IdeologyProfile::ideologyId)
+                .toList();
+        if (!untagged.isEmpty()) {
+            throw new IllegalStateException(
+                    "Todo perfil de ideologia precisa de countryTags para matching de pais. Sem tags: " + untagged
+            );
+        }
+
+        List<String> impossible = ideologyProfiles.values().stream()
+                .filter(profile -> countryProfiles.values().stream()
+                        .noneMatch(country -> country.tags().containsAll(profile.countryTags())))
+                .map(profile -> profile.ideologyId() + " -> " + profile.countryTags())
+                .toList();
+        if (!impossible.isEmpty()) {
+            throw new IllegalStateException(
+                    "countryTags de ideologias sem pais candidato estrito: " + impossible
             );
         }
     }

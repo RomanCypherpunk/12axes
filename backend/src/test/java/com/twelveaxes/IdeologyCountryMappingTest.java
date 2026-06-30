@@ -55,6 +55,22 @@ class IdeologyCountryMappingTest {
     }
 
     @Test
+    void everyIdeologyProfileDeclaresCountryTagsWithStrictCountryCandidates() {
+        assertThat(dataService.getIdeologyProfiles().values())
+                .allSatisfy(profile -> {
+                    assertThat(profile.countryTags())
+                            .as("Ideology profile %s must declare countryTags", profile.ideologyId())
+                            .isNotEmpty()
+                            .allSatisfy(tag -> assertThat(tag).isNotBlank());
+                    assertThat(dataService.getCountryProfiles().values())
+                            .as("Ideology profile %s countryTags must match at least one country: %s",
+                                    profile.ideologyId(), profile.countryTags())
+                            .anySatisfy(countryProfile ->
+                                    assertThat(countryProfile.tags()).containsAll(profile.countryTags()));
+                });
+    }
+
+    @Test
     void monarchistFederativeProfileOnlyReturnsMonarchyFederationCandidates() {
         var ideologyProfile = dataService.getIdeologyProfiles().get("monarquia-federativa");
         CountryMatch country = countryMatcherService.findTopMatch(

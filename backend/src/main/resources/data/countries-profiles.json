@@ -384,7 +384,7 @@
       "comercio": 43,
       "religiao": 62,
       "moral": 30,
-      "tecnologia": 60
+      "tecnologia": 82
     },
     "tags": [
       "monarquia",
@@ -432,7 +432,7 @@
       "controle": 70,
       "comercio": 72,
       "religiao": 86,
-      "moral": 61,
+      "moral": 45,
       "tecnologia": 82
     },
     "tags": [
@@ -458,8 +458,8 @@
       "controle": 86,
       "comercio": 71,
       "religiao": 88,
-      "moral": 60,
-      "tecnologia": 64
+      "moral": 35,
+      "tecnologia": 50
     },
     "tags": [
       "republica",
@@ -907,7 +907,7 @@
     "countryId": "reino-unido-vitoriano-imperio-britanico",
     "vector": {
       "estrutura": 25,
-      "representacao": 31,
+      "representacao": 45,
       "poder": 70,
       "imigracao": 68,
       "diplomacia": 82,
@@ -1124,7 +1124,7 @@
     "countryId": "argentina-peronista",
     "vector": {
       "estrutura": 48,
-      "representacao": 14,
+      "representacao": 32,
       "poder": 65,
       "imigracao": 60,
       "diplomacia": 53,
@@ -1138,7 +1138,7 @@
     },
     "tags": [
       "republica",
-      "ditadura",
+      "regime-hibrido",
       "populismo",
       "nacionalismo",
       "corporativismo",
