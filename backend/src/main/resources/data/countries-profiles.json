@@ -1710,5 +1710,725 @@
       "capitalismo",
       "progressismo"
     ]
+  },
+  {
+    "countryId": "canada",
+    "vector": {
+      "estrutura": 80,
+      "representacao": 82,
+      "poder": 30,
+      "imigracao": 20,
+      "diplomacia": 35,
+      "intervencao": 60,
+      "economia": 55,
+      "controle": 50,
+      "comercio": 30,
+      "religiao": 70,
+      "moral": 80,
+      "tecnologia": 75
+    },
+    "tags": [
+      "federacao",
+      "democracia",
+      "multiculturalismo",
+      "social-democracia",
+      "capitalismo"
+    ]
+  },
+  {
+    "countryId": "paises-baixos",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 85,
+      "poder": 25,
+      "imigracao": 35,
+      "diplomacia": 38,
+      "intervencao": 60,
+      "economia": 45,
+      "controle": 42,
+      "comercio": 18,
+      "religiao": 75,
+      "moral": 88,
+      "tecnologia": 78
+    },
+    "tags": [
+      "democracia",
+      "liberalismo",
+      "livre-comercio",
+      "multiculturalismo",
+      "progressismo"
+    ]
+  },
+  {
+    "countryId": "italia",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 72,
+      "poder": 50,
+      "imigracao": 72,
+      "diplomacia": 45,
+      "intervencao": 40,
+      "economia": 48,
+      "controle": 48,
+      "comercio": 50,
+      "religiao": 32,
+      "moral": 38,
+      "tecnologia": 60
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "conservadorismo",
+      "soberanismo",
+      "capitalismo"
+    ]
+  },
+  {
+    "countryId": "espanha",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 80,
+      "poder": 35,
+      "imigracao": 45,
+      "diplomacia": 35,
+      "intervencao": 60,
+      "economia": 55,
+      "controle": 52,
+      "comercio": 35,
+      "religiao": 60,
+      "moral": 78,
+      "tecnologia": 65
+    },
+    "tags": [
+      "monarquia-parlamentar",
+      "democracia",
+      "autonomias",
+      "social-democracia",
+      "progressismo"
+    ]
+  },
+  {
+    "countryId": "noruega",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 90,
+      "poder": 30,
+      "imigracao": 38,
+      "diplomacia": 35,
+      "intervencao": 65,
+      "economia": 70,
+      "controle": 60,
+      "comercio": 35,
+      "religiao": 75,
+      "moral": 85,
+      "tecnologia": 78
+    },
+    "tags": [
+      "monarquia-parlamentar",
+      "democracia",
+      "social-democracia",
+      "bem-estar",
+      "progressismo"
+    ]
+  },
+  {
+    "countryId": "dinamarca",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 90,
+      "poder": 32,
+      "imigracao": 60,
+      "diplomacia": 40,
+      "intervencao": 60,
+      "economia": 68,
+      "controle": 58,
+      "comercio": 25,
+      "religiao": 78,
+      "moral": 84,
+      "tecnologia": 80
+    },
+    "tags": [
+      "monarquia-parlamentar",
+      "democracia",
+      "social-democracia",
+      "bem-estar",
+      "assimilacionismo"
+    ]
+  },
+  {
+    "countryId": "australia",
+    "vector": {
+      "estrutura": 80,
+      "representacao": 80,
+      "poder": 40,
+      "imigracao": 55,
+      "diplomacia": 52,
+      "intervencao": 45,
+      "economia": 40,
+      "controle": 42,
+      "comercio": 28,
+      "religiao": 68,
+      "moral": 75,
+      "tecnologia": 72
+    },
+    "tags": [
+      "federacao",
+      "democracia",
+      "multiculturalismo",
+      "capitalismo",
+      "ocidente"
+    ]
+  },
+  {
+    "countryId": "nova-zelandia",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 88,
+      "poder": 30,
+      "imigracao": 35,
+      "diplomacia": 25,
+      "intervencao": 65,
+      "economia": 45,
+      "controle": 45,
+      "comercio": 28,
+      "religiao": 72,
+      "moral": 85,
+      "tecnologia": 70
+    },
+    "tags": [
+      "democracia",
+      "progressismo",
+      "pacifismo",
+      "biculturalismo",
+      "mercado"
+    ]
+  },
+  {
+    "countryId": "irlanda",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 85,
+      "poder": 35,
+      "imigracao": 45,
+      "diplomacia": 30,
+      "intervencao": 62,
+      "economia": 30,
+      "controle": 40,
+      "comercio": 18,
+      "religiao": 45,
+      "moral": 72,
+      "tecnologia": 80
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "livre-comercio",
+      "neutralidade",
+      "progressismo"
+    ]
+  },
+  {
+    "countryId": "ucrania",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 65,
+      "poder": 62,
+      "imigracao": 58,
+      "diplomacia": 78,
+      "intervencao": 35,
+      "economia": 42,
+      "controle": 45,
+      "comercio": 35,
+      "religiao": 35,
+      "moral": 50,
+      "tecnologia": 68
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "nacionalismo",
+      "guerra",
+      "ocidente"
+    ]
+  },
+  {
+    "countryId": "bielorrussia",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 12,
+      "poder": 85,
+      "imigracao": 55,
+      "diplomacia": 55,
+      "intervencao": 25,
+      "economia": 58,
+      "controle": 68,
+      "comercio": 60,
+      "religiao": 48,
+      "moral": 32,
+      "tecnologia": 55
+    },
+    "tags": [
+      "autocracia",
+      "estatismo",
+      "pos-sovietico",
+      "autoritarismo",
+      "conservadorismo"
+    ]
+  },
+  {
+    "countryId": "cazaquistao",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 22,
+      "poder": 78,
+      "imigracao": 58,
+      "diplomacia": 45,
+      "intervencao": 40,
+      "economia": 45,
+      "controle": 55,
+      "comercio": 55,
+      "religiao": 50,
+      "moral": 35,
+      "tecnologia": 60
+    },
+    "tags": [
+      "autocracia",
+      "capitalismo-de-estado",
+      "recursos",
+      "secularismo",
+      "eurasia"
+    ]
+  },
+  {
+    "countryId": "catar",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 8,
+      "poder": 80,
+      "imigracao": 55,
+      "diplomacia": 45,
+      "intervencao": 42,
+      "economia": 22,
+      "controle": 50,
+      "comercio": 28,
+      "religiao": 15,
+      "moral": 15,
+      "tecnologia": 82
+    },
+    "tags": [
+      "monarquia-absoluta",
+      "rentismo",
+      "islamismo",
+      "conservadorismo",
+      "soft-power"
+    ]
+  },
+  {
+    "countryId": "egito-atual",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 18,
+      "poder": 88,
+      "imigracao": 60,
+      "diplomacia": 62,
+      "intervencao": 30,
+      "economia": 45,
+      "controle": 58,
+      "comercio": 55,
+      "religiao": 28,
+      "moral": 25,
+      "tecnologia": 56
+    },
+    "tags": [
+      "autocracia",
+      "militarismo",
+      "estatismo",
+      "seguranca",
+      "nacionalismo"
+    ]
+  },
+  {
+    "countryId": "libano",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 50,
+      "poder": 45,
+      "imigracao": 30,
+      "diplomacia": 50,
+      "intervencao": 50,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 30,
+      "religiao": 50,
+      "moral": 50,
+      "tecnologia": 58
+    },
+    "tags": [
+      "democracia-consociativa",
+      "confessionalismo",
+      "pluralismo",
+      "descentralizacao",
+      "servicos"
+    ]
+  },
+  {
+    "countryId": "siria",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 25,
+      "poder": 80,
+      "imigracao": 60,
+      "diplomacia": 58,
+      "intervencao": 35,
+      "economia": 45,
+      "controle": 50,
+      "comercio": 55,
+      "religiao": 18,
+      "moral": 22,
+      "tecnologia": 45
+    },
+    "tags": [
+      "transicao",
+      "islamismo",
+      "autoritarismo",
+      "reconstrucao",
+      "conservadorismo"
+    ]
+  },
+  {
+    "countryId": "paquistao",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 35,
+      "poder": 80,
+      "imigracao": 65,
+      "diplomacia": 70,
+      "intervencao": 30,
+      "economia": 45,
+      "controle": 55,
+      "comercio": 58,
+      "religiao": 12,
+      "moral": 18,
+      "tecnologia": 50
+    },
+    "tags": [
+      "republica-islamica",
+      "militarismo",
+      "federacao",
+      "nacionalismo",
+      "islamismo"
+    ]
+  },
+  {
+    "countryId": "filipinas",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 55,
+      "poder": 75,
+      "imigracao": 55,
+      "diplomacia": 50,
+      "intervencao": 45,
+      "economia": 40,
+      "controle": 45,
+      "comercio": 45,
+      "religiao": 12,
+      "moral": 25,
+      "tecnologia": 55
+    },
+    "tags": [
+      "democracia",
+      "dinastias",
+      "seguranca",
+      "catolicismo",
+      "mercado"
+    ]
+  },
+  {
+    "countryId": "tailandia",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 30,
+      "poder": 78,
+      "imigracao": 60,
+      "diplomacia": 50,
+      "intervencao": 45,
+      "economia": 45,
+      "controle": 50,
+      "comercio": 45,
+      "religiao": 25,
+      "moral": 32,
+      "tecnologia": 62
+    },
+    "tags": [
+      "monarquia",
+      "militarismo",
+      "budismo",
+      "seguranca",
+      "mercado"
+    ]
+  },
+  {
+    "countryId": "malasia",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 55,
+      "poder": 60,
+      "imigracao": 45,
+      "diplomacia": 45,
+      "intervencao": 45,
+      "economia": 50,
+      "controle": 55,
+      "comercio": 48,
+      "religiao": 20,
+      "moral": 28,
+      "tecnologia": 65
+    },
+    "tags": [
+      "federacao",
+      "multietnico",
+      "islamismo",
+      "capitalismo-de-estado",
+      "acao-afirmativa"
+    ]
+  },
+  {
+    "countryId": "taiwan",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 85,
+      "poder": 45,
+      "imigracao": 58,
+      "diplomacia": 55,
+      "intervencao": 45,
+      "economia": 35,
+      "controle": 42,
+      "comercio": 30,
+      "religiao": 55,
+      "moral": 75,
+      "tecnologia": 90
+    },
+    "tags": [
+      "democracia",
+      "tecnologia",
+      "defesa",
+      "progressismo",
+      "mercado"
+    ]
+  },
+  {
+    "countryId": "etiopia",
+    "vector": {
+      "estrutura": 75,
+      "representacao": 30,
+      "poder": 78,
+      "imigracao": 50,
+      "diplomacia": 65,
+      "intervencao": 35,
+      "economia": 55,
+      "controle": 65,
+      "comercio": 60,
+      "religiao": 22,
+      "moral": 22,
+      "tecnologia": 48
+    },
+    "tags": [
+      "federacao-etnica",
+      "autoritarismo",
+      "desenvolvimentismo",
+      "religiosidade",
+      "conflito"
+    ]
+  },
+  {
+    "countryId": "quenia",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 60,
+      "poder": 60,
+      "imigracao": 55,
+      "diplomacia": 45,
+      "intervencao": 45,
+      "economia": 45,
+      "controle": 48,
+      "comercio": 50,
+      "religiao": 22,
+      "moral": 28,
+      "tecnologia": 65
+    },
+    "tags": [
+      "democracia",
+      "devolucao",
+      "cristianismo",
+      "mercado",
+      "tecnologia"
+    ]
+  },
+  {
+    "countryId": "el-salvador",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 30,
+      "poder": 92,
+      "imigracao": 55,
+      "diplomacia": 48,
+      "intervencao": 45,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 32,
+      "religiao": 32,
+      "moral": 30,
+      "tecnologia": 75
+    },
+    "tags": [
+      "democracia-plebiscitaria",
+      "seguranca",
+      "punitivismo",
+      "bitcoin",
+      "tecno-populismo"
+    ]
+  },
+  {
+    "countryId": "colombia",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 68,
+      "poder": 50,
+      "imigracao": 50,
+      "diplomacia": 45,
+      "intervencao": 50,
+      "economia": 55,
+      "controle": 52,
+      "comercio": 45,
+      "religiao": 30,
+      "moral": 48,
+      "tecnologia": 58
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "esquerda",
+      "catolicismo",
+      "mercado"
+    ]
+  },
+  {
+    "countryId": "uruguai",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 88,
+      "poder": 32,
+      "imigracao": 50,
+      "diplomacia": 25,
+      "intervencao": 62,
+      "economia": 58,
+      "controle": 52,
+      "comercio": 40,
+      "religiao": 82,
+      "moral": 85,
+      "tecnologia": 70
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "laicidade",
+      "social-democracia",
+      "progressismo"
+    ]
+  },
+  {
+    "countryId": "japao-meiji",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 30,
+      "poder": 80,
+      "imigracao": 75,
+      "diplomacia": 75,
+      "intervencao": 30,
+      "economia": 45,
+      "controle": 60,
+      "comercio": 62,
+      "religiao": 22,
+      "moral": 20,
+      "tecnologia": 65
+    },
+    "tags": [
+      "monarquia",
+      "centralizacao",
+      "modernizacao",
+      "industrializacao",
+      "nacionalismo"
+    ]
+  },
+  {
+    "countryId": "republica-holandesa",
+    "vector": {
+      "estrutura": 88,
+      "representacao": 55,
+      "poder": 35,
+      "imigracao": 45,
+      "diplomacia": 50,
+      "intervencao": 60,
+      "economia": 20,
+      "controle": 25,
+      "comercio": 10,
+      "religiao": 55,
+      "moral": 45,
+      "tecnologia": 60
+    },
+    "tags": [
+      "confederacao",
+      "republica-oligarquica",
+      "capitalismo-mercantil",
+      "livre-comercio",
+      "tolerancia"
+    ]
+  },
+  {
+    "countryId": "republica-de-weimar",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 88,
+      "poder": 30,
+      "imigracao": 55,
+      "diplomacia": 35,
+      "intervencao": 55,
+      "economia": 55,
+      "controle": 50,
+      "comercio": 50,
+      "religiao": 55,
+      "moral": 75,
+      "tecnologia": 70
+    },
+    "tags": [
+      "republica",
+      "democracia-proporcional",
+      "progressismo-cultural",
+      "pluralismo",
+      "instabilidade"
+    ]
+  },
+  {
+    "countryId": "gra-colombia",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 45,
+      "poder": 60,
+      "imigracao": 55,
+      "diplomacia": 70,
+      "intervencao": 35,
+      "economia": 45,
+      "controle": 50,
+      "comercio": 45,
+      "religiao": 35,
+      "moral": 45,
+      "tecnologia": 45
+    },
+    "tags": [
+      "republica",
+      "centralismo",
+      "militarismo",
+      "bolivarismo",
+      "independencia"
+    ]
   }
 ]

@@ -854,5 +854,305 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Massachusetts.svg",
     "flagNote": "Bandeira do estado de Massachusetts (Estados Unidos) usada como referência visual da região."
+  },
+  {
+    "id": "canada",
+    "name": "Canadá",
+    "category": "Federação multicultural",
+    "description": "Canadá é modelado como federação liberal multicultural, com federalismo forte, Estado de bem-estar relevante, comércio aberto, pluralismo social e progressismo cultural institucionalizado. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/canada.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "paises-baixos",
+    "name": "Países Baixos",
+    "category": "Democracia mercantil liberal",
+    "description": "Países Baixos são modelados como democracia liberal mercantil, com tolerância social, secularização forte, tradição de livre comércio, mercado regulado e instituições consensuais. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/paises-baixos.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "italia",
+    "name": "Itália",
+    "category": "República parlamentar",
+    "description": "Itália é modelada como república parlamentar nacional-conservadora, com soberanismo moderado, identidade católica, restrição migratória, economia mista europeia e coalizões instáveis. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/italia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "espanha",
+    "name": "Espanha",
+    "category": "Monarquia parlamentar",
+    "description": "Espanha é modelada como monarquia parlamentar quase-federal, com governo social-democrata, secularização avançada, autonomia regional relevante e progressismo moral. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/espanha.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "noruega",
+    "name": "Noruega",
+    "category": "Social-democracia petroleira",
+    "description": "Noruega é modelada como social-democracia nórdica petroleira, com Estado de bem-estar amplo, fundo soberano estratégico, economia aberta, secularização e progressismo consolidado. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/noruega.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "dinamarca",
+    "name": "Dinamarca",
+    "category": "Social-democracia nórdica",
+    "description": "Dinamarca é modelada como social-democracia nórdica, com bem-estar universal, livre comércio, alta confiança institucional, progressismo moral e política migratória assimilacionista rígida. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/dinamarca.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "australia",
+    "name": "Austrália",
+    "category": "Federação anglófona",
+    "description": "Austrália é modelada como federação democrática anglófona, com mercado liberalizado, multiculturalismo regulado por controle de fronteiras, parlamentarismo estável e aliança militar ocidental. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/australia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "nova-zelandia",
+    "name": "Nova Zelândia",
+    "category": "Democracia progressista",
+    "description": "Nova Zelândia é modelada como democracia unitária progressista, com mercado moderado, biculturalismo maori, política externa de baixo militarismo e tradição de reformas sociais. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/nova-zelandia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "irlanda",
+    "name": "Irlanda",
+    "category": "República liberal aberta",
+    "description": "Irlanda é modelada como república liberal de economia aberta, com baixa tributação corporativa, integração europeia, neutralidade diplomática, secularização acelerada e progressismo social. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/irlanda.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "ucrania",
+    "name": "Ucrânia",
+    "category": "República em guerra",
+    "description": "Ucrânia é modelada como república democrática em mobilização de guerra, com nacionalismo defensivo, reforma de mercado pró-ocidental, centralidade militar e setor tecnológico estratégico. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/ucrania.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "bielorrussia",
+    "name": "Bielorrússia",
+    "category": "Autocracia pós-soviética",
+    "description": "Bielorrússia é modelada como autocracia presidencial pós-soviética, com poder executivo concentrado, economia estatizada, alinhamento à Rússia, repressão política e conservadorismo de molde soviético. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/bielorrussia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "cazaquistao",
+    "name": "Cazaquistão",
+    "category": "Autocracia de recursos",
+    "description": "Cazaquistão é modelado como autocracia gerenciada centro-asiática, com capitalismo de recursos, secularismo muçulmano moderado, diplomacia multivetorial e poder estatal centralizado. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/cazaquistao.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "catar",
+    "name": "Catar",
+    "category": "Monarquia rentista",
+    "description": "Catar é modelado como monarquia absoluta rentista, com riqueza do gás, autoridade dinástica, Islã conservador, modernização tecnológica e soft power internacional. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/catar.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "egito-atual",
+    "name": "Egito",
+    "category": "Regime militar",
+    "description": "Egito é modelado como regime militar presidencialista, com aparato de segurança forte, economia influenciada pelas Forças Armadas, megaprojetos estatais e controle político central. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/egito-atual.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "libano",
+    "name": "Líbano",
+    "category": "Democracia consociativa",
+    "description": "Líbano é modelado como democracia consociativa confessional, com pluralismo religioso, descentralização sectária, economia de serviços, elites comunitárias e instabilidade crônica. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/libano.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "siria",
+    "name": "Síria",
+    "category": "Transição pós-Assad",
+    "description": "Síria (2024–presente) é modelada como transição pós-Assad, com governo interino de inspiração islamista, vazio de segurança, reconstrução econômica e reorientação conservadora. O perfil representa o recorte histórico indicado, não o território atual.",
+    "flagPath": "/countries/flags/siria.gif",
+    "historical": true,
+    "period": "2024–",
+    "vector": null
+  },
+  {
+    "id": "paquistao",
+    "name": "Paquistão",
+    "category": "República islâmica",
+    "description": "Paquistão é modelado como república islâmica federal, com forte tutela militar, identidade religiosa pública, tensão nacionalista com a Índia, economia mista frágil e instituições eleitorais limitadas. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/paquistao.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "filipinas",
+    "name": "Filipinas",
+    "category": "Democracia dinástica",
+    "description": "Filipinas são modeladas como democracia dinástica de viés securitário, com presidencialismo personalista, catolicismo profundo, guerra às drogas, elites familiares e economia de mercado. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/filipinas.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "tailandia",
+    "name": "Tailândia",
+    "category": "Monarquia militarizada",
+    "description": "Tailândia é modelada como monarquia constitucional militarizada, com tutela militar recorrente, budismo público, leis de lèse-majesté, hierarquia social e economia de mercado. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/tailandia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "malasia",
+    "name": "Malásia",
+    "category": "Federação multiétnica",
+    "description": "Malásia é modelada como federação multiétnica de democracia limitada, com Islã oficial, ação afirmativa bumiputera, capitalismo dirigido pelo Estado e equilíbrio comunitário. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/malasia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "taiwan",
+    "name": "Taiwan",
+    "category": "Democracia tecnológica",
+    "description": "Taiwan é modelado como democracia liberal tecnológica, com indústria de semicondutores, defesa militar contra a China, pluralismo eleitoral, economia exportadora e progressismo social asiático. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/taiwan.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "etiopia",
+    "name": "Etiópia",
+    "category": "Federação étnica",
+    "description": "Etiópia é modelada como federação étnica autoritária, com Estado desenvolvimentista, forte religiosidade social, conflitos internos, planejamento dirigido e centralização política. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/etiopia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "quenia",
+    "name": "Quênia",
+    "category": "Democracia devolvida",
+    "description": "Quênia é modelado como democracia competitiva devolvida a condados, com cristianismo social forte, economia de mercado, polo tecnológico regional e instituições eleitorais disputadas. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/quenia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "el-salvador",
+    "name": "El Salvador",
+    "category": "Estado de segurança bitcoin",
+    "description": "El Salvador é modelado como democracia plebiscitária de segurança, com Estado punitivista, megaprisões, dolarização, Bitcoin como moeda legal e estilo tecno-populista. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/el-salvador.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "colombia",
+    "name": "Colômbia",
+    "category": "República presidencial",
+    "description": "Colômbia é modelada como república presidencial democrática, com governo de esquerda, agenda social, economia de mercado, catolicismo majoritário e conflitos internos persistentes. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/colombia.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "uruguai",
+    "name": "Uruguai",
+    "category": "Social-democracia secular",
+    "description": "Uruguai é modelado como social-democracia secular latino-americana, com instituições estáveis, bem-estar público, empresas estatais relevantes, laicidade forte e progressismo moral. O perfil aproxima sua posição política atual nos 12 eixos do teste.",
+    "flagPath": "/countries/flags/uruguai.gif",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "japao-meiji",
+    "name": "Japão Meiji",
+    "category": "Monarquia modernizadora",
+    "description": "Japão Meiji (1868–1912) é modelado como monarquia modernizadora, com centralização imperial, industrialização dirigida pelo Estado, Xintoísmo oficial e militarismo emergente. O perfil representa o recorte histórico indicado, não o território atual.",
+    "flagPath": "/countries/flags/japao-meiji.gif",
+    "historical": true,
+    "period": "1868–1912",
+    "vector": null
+  },
+  {
+    "id": "republica-holandesa",
+    "name": "República Holandesa (Províncias Unidas)",
+    "category": "Confederação mercantil",
+    "description": "República Holandesa (1581–1795) é modelada como confederação mercantil, com regentes urbanos, capitalismo comercial, livre comércio global, tolerância religiosa relativa e ciência de ponta. O perfil representa o recorte histórico indicado, não o território atual.",
+    "flagPath": "/countries/flags/republica-holandesa.gif",
+    "historical": true,
+    "period": "1581–1795",
+    "vector": null
+  },
+  {
+    "id": "republica-de-weimar",
+    "name": "República de Weimar",
+    "category": "Democracia parlamentar frágil",
+    "description": "República de Weimar (1919–1933) é modelada como democracia parlamentar frágil, com representação proporcional, pluralismo intenso, vanguarda cultural progressista e baixa estabilidade institucional. O perfil representa o recorte histórico indicado, não o território atual.",
+    "flagPath": "/countries/flags/republica-de-weimar.gif",
+    "historical": true,
+    "period": "1919–1933",
+    "vector": null
+  },
+  {
+    "id": "gra-colombia",
+    "name": "Grã-Colômbia",
+    "category": "República bolivariana",
+    "description": "Grã-Colômbia (1819–1831) é modelada como república bolivariana centralista, com executivo forte, militarização libertadora, nacionalismo de independência e tensão entre centralistas e federalistas. O perfil representa o recorte histórico indicado, não o território atual.",
+    "flagPath": "/countries/flags/gra-colombia.gif",
+    "historical": true,
+    "period": "1819–1831",
+    "vector": null
   }
 ]
