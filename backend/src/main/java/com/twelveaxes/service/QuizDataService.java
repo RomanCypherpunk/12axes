@@ -10,6 +10,7 @@ import com.twelveaxes.model.CountryProfile;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyProfile;
 import com.twelveaxes.model.Personality;
+import com.twelveaxes.model.PersonalityProfile;
 import com.twelveaxes.model.Question;
 import com.twelveaxes.model.QuizPayload;
 import jakarta.annotation.PostConstruct;
@@ -42,6 +43,7 @@ public class QuizDataService {
     private Map<String, CountryProfile> countryProfiles;
     private List<Personality> personalities;
     private Map<String, Personality> personalitiesById;
+    private Map<String, PersonalityProfile> personalityProfiles;
 
     public QuizDataService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
@@ -66,21 +68,42 @@ public class QuizDataService {
         personalities = readJson("data/personalities.json", new TypeReference<>() {});
         personalitiesById = personalities.stream()
                 .collect(Collectors.toUnmodifiableMap(Personality::id, Function.identity()));
+        List<PersonalityProfile> personalityProfileList = readJson("data/personality-profiles.json", new TypeReference<>() {});
+        personalityProfiles = personalityProfileList.stream()
+                .collect(Collectors.toUnmodifiableMap(PersonalityProfile::personalityId, Function.identity()));
 
-        validateIdeologyCountryLinks();
+        validateCountryProfiles();
         validateIdeologyPersonalityLinks();
+        validatePersonalityProfiles();
     }
 
-    private void validateIdeologyCountryLinks() {
-        List<String> broken = ideologies.stream()
-                .filter(ideology -> ideology.countryId() == null
-                        || ideology.countryId().isBlank()
-                        || !countriesById.containsKey(ideology.countryId()))
-                .map(ideology -> ideology.id() + " -> " + ideology.countryId())
+    private void validateCountryProfiles() {
+        List<String> missing = countries.stream()
+                .map(Country::id)
+                .filter(id -> !countryProfiles.containsKey(id))
                 .toList();
-        if (!broken.isEmpty()) {
+        if (!missing.isEmpty()) {
             throw new IllegalStateException(
-                    "Toda ideologia precisa de um countryId que resolva para um país existente. Inválidos: " + broken
+                    "Todo pais precisa de um perfil em countries-profiles.json. Faltando: " + missing
+            );
+        }
+
+        List<String> unknown = countryProfiles.keySet().stream()
+                .filter(id -> !countriesById.containsKey(id))
+                .toList();
+        if (!unknown.isEmpty()) {
+            throw new IllegalStateException(
+                    "countries-profiles.json aponta para paises inexistentes: " + unknown
+            );
+        }
+
+        List<String> untagged = countryProfiles.values().stream()
+                .filter(profile -> profile.tags().stream().noneMatch(tag -> tag != null && !tag.isBlank()))
+                .map(CountryProfile::countryId)
+                .toList();
+        if (!untagged.isEmpty()) {
+            throw new IllegalStateException(
+                    "Todo perfil de pais precisa de pelo menos uma tag de sistema. Sem tags: " + untagged
             );
         }
     }
@@ -95,6 +118,18 @@ public class QuizDataService {
         if (!broken.isEmpty()) {
             throw new IllegalStateException(
                     "Toda ideologia precisa de um personalityId que resolva para uma personalidade existente. Inválidos: " + broken
+            );
+        }
+    }
+
+    private void validatePersonalityProfiles() {
+        List<String> missing = personalities.stream()
+                .map(Personality::id)
+                .filter(id -> !personalityProfiles.containsKey(id))
+                .toList();
+        if (!missing.isEmpty()) {
+            throw new IllegalStateException(
+                    "Toda personalidade precisa de um perfil em personality-profiles.json. Faltando: " + missing
             );
         }
     }
@@ -168,6 +203,10 @@ public class QuizDataService {
 
     public Map<String, CountryProfile> getCountryProfiles() {
         return countryProfiles;
+    }
+
+    public Map<String, PersonalityProfile> getPersonalityProfiles() {
+        return personalityProfiles;
     }
 
     private List<AnswerOption> answerOptions() {

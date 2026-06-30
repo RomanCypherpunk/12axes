@@ -1,6 +1,6 @@
 [
   {
-    "ideologyId": "marxismo-leninismo",
+    "personalityId": "lenin",
     "vector": {
       "estrutura": 22,
       "representacao": 8,
@@ -17,7 +17,7 @@
     }
   },
   {
-    "ideologyId": "stalinismo",
+    "personalityId": "stalin",
     "vector": {
       "estrutura": 15,
       "representacao": 4,
@@ -34,7 +34,7 @@
     }
   },
   {
-    "ideologyId": "maoismo",
+    "personalityId": "mao-zedong",
     "vector": {
       "estrutura": 18,
       "representacao": 6,
@@ -51,7 +51,7 @@
     }
   },
   {
-    "ideologyId": "trotskismo",
+    "personalityId": "trotsky",
     "vector": {
       "estrutura": 28,
       "representacao": 45,
@@ -68,24 +68,24 @@
     }
   },
   {
-    "ideologyId": "luxemburguismo",
+    "personalityId": "anton-pannekoek",
     "vector": {
-      "estrutura": 70,
-      "representacao": 85,
-      "poder": 35,
-      "imigracao": 75,
-      "diplomacia": 50,
-      "intervencao": 65,
-      "economia": 88,
+      "estrutura": 75,
+      "representacao": 88,
+      "poder": 25,
+      "imigracao": 45,
+      "diplomacia": 30,
+      "intervencao": 70,
+      "economia": 90,
       "controle": 80,
       "comercio": 55,
-      "religiao": 80,
-      "moral": 80,
+      "religiao": 85,
+      "moral": 85,
       "tecnologia": 70
     }
   },
   {
-    "ideologyId": "comunismo-nacional",
+    "personalityId": "kim-il-sung",
     "vector": {
       "estrutura": 20,
       "representacao": 15,
@@ -102,7 +102,7 @@
     }
   },
   {
-    "ideologyId": "pol-potismo",
+    "personalityId": "pol-pot",
     "vector": {
       "estrutura": 10,
       "representacao": 2,
@@ -119,7 +119,7 @@
     }
   },
   {
-    "ideologyId": "dengismo",
+    "personalityId": "deng-xiaoping",
     "vector": {
       "estrutura": 25,
       "representacao": 15,
@@ -136,24 +136,24 @@
     }
   },
   {
-    "ideologyId": "socialismo-de-estado",
+    "personalityId": "ferdinand-lassalle",
     "vector": {
-      "estrutura": 25,
-      "representacao": 25,
-      "poder": 80,
-      "imigracao": 50,
-      "diplomacia": 55,
-      "intervencao": 40,
-      "economia": 92,
-      "controle": 92,
-      "comercio": 70,
-      "religiao": 75,
-      "moral": 55,
-      "tecnologia": 60
+      "estrutura": 35,
+      "representacao": 70,
+      "poder": 55,
+      "imigracao": 55,
+      "diplomacia": 40,
+      "intervencao": 55,
+      "economia": 88,
+      "controle": 82,
+      "comercio": 65,
+      "religiao": 70,
+      "moral": 60,
+      "tecnologia": 65
     }
   },
   {
-    "ideologyId": "progressivismo-autoritario",
+    "personalityId": "ataturk",
     "vector": {
       "estrutura": 25,
       "representacao": 20,
@@ -170,12 +170,12 @@
     }
   },
   {
-    "ideologyId": "ecoautoritarismo",
+    "personalityId": "garrett-hardin",
     "vector": {
       "estrutura": 25,
       "representacao": 20,
       "poder": 85,
-      "imigracao": 65,
+      "imigracao": 85,
       "diplomacia": 35,
       "intervencao": 35,
       "economia": 45,
@@ -187,7 +187,7 @@
     }
   },
   {
-    "ideologyId": "tecnocracia-de-esquerda",
+    "personalityId": "otto-neurath",
     "vector": {
       "estrutura": 35,
       "representacao": 45,
@@ -204,7 +204,7 @@
     }
   },
   {
-    "ideologyId": "marxismo-reformista",
+    "personalityId": "eduard-bernstein",
     "vector": {
       "estrutura": 45,
       "representacao": 60,
@@ -221,7 +221,7 @@
     }
   },
   {
-    "ideologyId": "nacional-bolchevismo",
+    "personalityId": "ernst-niekisch",
     "vector": {
       "estrutura": 15,
       "representacao": 8,
@@ -238,7 +238,7 @@
     }
   },
   {
-    "ideologyId": "strasserismo",
+    "personalityId": "gregor-strasser",
     "vector": {
       "estrutura": 18,
       "representacao": 10,
@@ -255,24 +255,24 @@
     }
   },
   {
-    "ideologyId": "fascismo",
+    "personalityId": "mussolini",
     "vector": {
-      "estrutura": 20,
-      "representacao": 8,
-      "poder": 92,
-      "imigracao": 85,
-      "diplomacia": 88,
-      "intervencao": 10,
-      "economia": 38,
-      "controle": 72,
-      "comercio": 82,
-      "religiao": 35,
-      "moral": 18,
-      "tecnologia": 55
+      "estrutura": 22.5,
+      "representacao": 16.5,
+      "poder": 86,
+      "imigracao": 75,
+      "diplomacia": 74,
+      "intervencao": 19,
+      "economia": 46.5,
+      "controle": 71,
+      "comercio": 75,
+      "religiao": 31.5,
+      "moral": 16.5,
+      "tecnologia": 50
     }
   },
   {
-    "ideologyId": "nacional-socialismo",
+    "personalityId": "hitler",
     "vector": {
       "estrutura": 15,
       "representacao": 4,
@@ -289,7 +289,7 @@
     }
   },
   {
-    "ideologyId": "fascismo-clerical",
+    "personalityId": "engelbert-dollfuss",
     "vector": {
       "estrutura": 20,
       "representacao": 8,
@@ -306,7 +306,7 @@
     }
   },
   {
-    "ideologyId": "falangismo",
+    "personalityId": "jose-antonio-primo-de-rivera",
     "vector": {
       "estrutura": 20,
       "representacao": 10,
@@ -323,7 +323,7 @@
     }
   },
   {
-    "ideologyId": "integralismo-brasileiro",
+    "personalityId": "plinio-salgado",
     "vector": {
       "estrutura": 22,
       "representacao": 10,
@@ -340,24 +340,24 @@
     }
   },
   {
-    "ideologyId": "capitalismo-autoritario",
+    "personalityId": "lee-kuan-yew",
     "vector": {
-      "estrutura": 28,
-      "representacao": 18,
-      "poder": 86,
+      "estrutura": 29,
+      "representacao": 24,
+      "poder": 80.5,
       "imigracao": 60,
-      "diplomacia": 60,
-      "intervencao": 35,
-      "economia": 22,
-      "controle": 35,
-      "comercio": 38,
-      "religiao": 45,
-      "moral": 30,
-      "tecnologia": 70
+      "diplomacia": 57.5,
+      "intervencao": 37.5,
+      "economia": 23.5,
+      "controle": 40,
+      "comercio": 34,
+      "religiao": 65,
+      "moral": 44,
+      "tecnologia": 82.5
     }
   },
   {
-    "ideologyId": "capitalismo-nacional",
+    "personalityId": "putin",
     "vector": {
       "estrutura": 28,
       "representacao": 22,
@@ -374,7 +374,7 @@
     }
   },
   {
-    "ideologyId": "alt-right",
+    "personalityId": "richard-spencer",
     "vector": {
       "estrutura": 40,
       "representacao": 25,
@@ -391,7 +391,7 @@
     }
   },
   {
-    "ideologyId": "alt-lite",
+    "personalityId": "steve-bannon",
     "vector": {
       "estrutura": 50,
       "representacao": 45,
@@ -408,7 +408,7 @@
     }
   },
   {
-    "ideologyId": "aceleracionismo-de-direita",
+    "personalityId": "nick-land",
     "vector": {
       "estrutura": 30,
       "representacao": 12,
@@ -425,7 +425,7 @@
     }
   },
   {
-    "ideologyId": "nacionalismo-racial",
+    "personalityId": "hendrik-verwoerd",
     "vector": {
       "estrutura": 20,
       "representacao": 10,
@@ -442,7 +442,7 @@
     }
   },
   {
-    "ideologyId": "neoconservadorismo",
+    "personalityId": "irving-kristol",
     "vector": {
       "estrutura": 40,
       "representacao": 55,
@@ -459,7 +459,7 @@
     }
   },
   {
-    "ideologyId": "monarquismo-absoluto",
+    "personalityId": "louis-xiv",
     "vector": {
       "estrutura": 15,
       "representacao": 4,
@@ -476,7 +476,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-autoritario",
+    "personalityId": "salazar",
     "vector": {
       "estrutura": 25,
       "representacao": 20,
@@ -493,7 +493,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-nacional",
+    "personalityId": "viktor-orban",
     "vector": {
       "estrutura": 35,
       "representacao": 48,
@@ -510,7 +510,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-paternalista",
+    "personalityId": "benjamin-disraeli",
     "vector": {
       "estrutura": 30,
       "representacao": 50,
@@ -527,7 +527,7 @@
     }
   },
   {
-    "ideologyId": "fundamentalismo-religioso",
+    "personalityId": "khomeini",
     "vector": {
       "estrutura": 25,
       "representacao": 12,
@@ -544,7 +544,7 @@
     }
   },
   {
-    "ideologyId": "nacionalismo-etnico",
+    "personalityId": "jabotinsky",
     "vector": {
       "estrutura": 25,
       "representacao": 18,
@@ -561,7 +561,7 @@
     }
   },
   {
-    "ideologyId": "nacionalismo-cultural",
+    "personalityId": "ahad-haam",
     "vector": {
       "estrutura": 35,
       "representacao": 35,
@@ -578,75 +578,41 @@
     }
   },
   {
-    "ideologyId": "neorreacionarismo",
+    "personalityId": "curtis-yarvin",
     "vector": {
-      "estrutura": 70,
-      "representacao": 8,
-      "poder": 75,
-      "imigracao": 70,
-      "diplomacia": 60,
-      "intervencao": 35,
-      "economia": 25,
-      "controle": 30,
-      "comercio": 55,
-      "religiao": 55,
-      "moral": 8,
-      "tecnologia": 92
-    }
-  },
-  {
-    "ideologyId": "neocameralismo",
-    "vector": {
-      "estrutura": 80,
-      "representacao": 6,
+      "estrutura": 55,
+      "representacao": 7,
       "poder": 82,
       "imigracao": 70,
-      "diplomacia": 48,
-      "intervencao": 62,
-      "economia": 15,
-      "controle": 28,
-      "comercio": 40,
-      "religiao": 68,
-      "moral": 18,
-      "tecnologia": 90
+      "diplomacia": 54,
+      "intervencao": 48.5,
+      "economia": 18,
+      "controle": 25,
+      "comercio": 47.5,
+      "religiao": 61.5,
+      "moral": 13,
+      "tecnologia": 91
     }
   },
   {
-    "ideologyId": "cameralismo",
+    "personalityId": "frederico-ii-da-prussia",
     "vector": {
       "estrutura": 18,
       "representacao": 8,
       "poder": 88,
-      "imigracao": 45,
+      "imigracao": 60,
       "diplomacia": 60,
       "intervencao": 25,
       "economia": 45,
       "controle": 65,
       "comercio": 78,
-      "religiao": 22,
-      "moral": 12,
-      "tecnologia": 40
+      "religiao": 70,
+      "moral": 55,
+      "tecnologia": 60
     }
   },
   {
-    "ideologyId": "corporativismo",
-    "vector": {
-      "estrutura": 25,
-      "representacao": 25,
-      "poder": 80,
-      "imigracao": 65,
-      "diplomacia": 60,
-      "intervencao": 28,
-      "economia": 55,
-      "controle": 70,
-      "comercio": 68,
-      "religiao": 28,
-      "moral": 15,
-      "tecnologia": 45
-    }
-  },
-  {
-    "ideologyId": "reacionarismo",
+    "personalityId": "joseph-de-maistre",
     "vector": {
       "estrutura": 18,
       "representacao": 8,
@@ -663,7 +629,7 @@
     }
   },
   {
-    "ideologyId": "quarta-teoria-politica",
+    "personalityId": "aleksandr-dugin",
     "vector": {
       "estrutura": 40,
       "representacao": 20,
@@ -680,7 +646,7 @@
     }
   },
   {
-    "ideologyId": "democracia-nacional",
+    "personalityId": "roman-dmowski",
     "vector": {
       "estrutura": 40,
       "representacao": 60,
@@ -697,7 +663,7 @@
     }
   },
   {
-    "ideologyId": "bioconservadorismo",
+    "personalityId": "leon-kass",
     "vector": {
       "estrutura": 40,
       "representacao": 50,
@@ -714,24 +680,7 @@
     }
   },
   {
-    "ideologyId": "tecnocracia-de-direita",
-    "vector": {
-      "estrutura": 30,
-      "representacao": 30,
-      "poder": 75,
-      "imigracao": 60,
-      "diplomacia": 55,
-      "intervencao": 40,
-      "economia": 25,
-      "controle": 45,
-      "comercio": 30,
-      "religiao": 85,
-      "moral": 58,
-      "tecnologia": 95
-    }
-  },
-  {
-    "ideologyId": "democracia-crista",
+    "personalityId": "konrad-adenauer",
     "vector": {
       "estrutura": 55,
       "representacao": 78,
@@ -748,7 +697,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-cristao",
+    "personalityId": "william-f-buckley",
     "vector": {
       "estrutura": 50,
       "representacao": 68,
@@ -765,7 +714,7 @@
     }
   },
   {
-    "ideologyId": "republicanismo",
+    "personalityId": "cicero",
     "vector": {
       "estrutura": 50,
       "representacao": 82,
@@ -782,10 +731,10 @@
     }
   },
   {
-    "ideologyId": "monarquismo-constitucional",
+    "personalityId": "montesquieu",
     "vector": {
       "estrutura": 40,
-      "representacao": 70,
+      "representacao": 78,
       "poder": 55,
       "imigracao": 55,
       "diplomacia": 45,
@@ -793,30 +742,30 @@
       "economia": 40,
       "controle": 45,
       "comercio": 45,
-      "religiao": 25,
-      "moral": 25,
-      "tecnologia": 55
-    }
-  },
-  {
-    "ideologyId": "neoliberalismo",
-    "vector": {
-      "estrutura": 55,
-      "representacao": 75,
-      "poder": 35,
-      "imigracao": 45,
-      "diplomacia": 45,
-      "intervencao": 65,
-      "economia": 20,
-      "controle": 18,
-      "comercio": 15,
       "religiao": 65,
-      "moral": 65,
-      "tecnologia": 80
+      "moral": 58,
+      "tecnologia": 65
     }
   },
   {
-    "ideologyId": "ordoliberalismo",
+    "personalityId": "milton-friedman",
+    "vector": {
+      "estrutura": 62.5,
+      "representacao": 72.5,
+      "poder": 26.5,
+      "imigracao": 50,
+      "diplomacia": 37.5,
+      "intervencao": 70,
+      "economia": 19,
+      "controle": 16.5,
+      "comercio": 15,
+      "religiao": 60,
+      "moral": 63.5,
+      "tecnologia": 79
+    }
+  },
+  {
+    "personalityId": "ludwig-erhard",
     "vector": {
       "estrutura": 50,
       "representacao": 78,
@@ -833,7 +782,7 @@
     }
   },
   {
-    "ideologyId": "distributismo",
+    "personalityId": "gk-chesterton",
     "vector": {
       "estrutura": 70,
       "representacao": 70,
@@ -850,24 +799,24 @@
     }
   },
   {
-    "ideologyId": "tecnocracia",
+    "personalityId": "henri-de-saint-simon",
     "vector": {
       "estrutura": 40,
-      "representacao": 45,
-      "poder": 60,
+      "representacao": 35,
+      "poder": 65,
       "imigracao": 50,
       "diplomacia": 45,
       "intervencao": 50,
       "economia": 50,
-      "controle": 60,
+      "controle": 70,
       "comercio": 45,
-      "religiao": 80,
+      "religiao": 60,
       "moral": 60,
       "tecnologia": 90
     }
   },
   {
-    "ideologyId": "comunitarismo",
+    "personalityId": "michael-sandel",
     "vector": {
       "estrutura": 80,
       "representacao": 75,
@@ -884,7 +833,7 @@
     }
   },
   {
-    "ideologyId": "meritocracia",
+    "personalityId": "adrian-wooldridge",
     "vector": {
       "estrutura": 45,
       "representacao": 60,
@@ -901,7 +850,7 @@
     }
   },
   {
-    "ideologyId": "liberalismo",
+    "personalityId": "john-stuart-mill",
     "vector": {
       "estrutura": 60,
       "representacao": 82,
@@ -918,7 +867,7 @@
     }
   },
   {
-    "ideologyId": "liberalismo-classico",
+    "personalityId": "john-locke",
     "vector": {
       "estrutura": 65,
       "representacao": 80,
@@ -935,7 +884,7 @@
     }
   },
   {
-    "ideologyId": "libertarianismo",
+    "personalityId": "robert-nozick",
     "vector": {
       "estrutura": 78,
       "representacao": 78,
@@ -952,7 +901,7 @@
     }
   },
   {
-    "ideologyId": "liberalismo-verde",
+    "personalityId": "al-gore",
     "vector": {
       "estrutura": 65,
       "representacao": 85,
@@ -965,11 +914,11 @@
       "comercio": 35,
       "religiao": 70,
       "moral": 80,
-      "tecnologia": 65
+      "tecnologia": 75
     }
   },
   {
-    "ideologyId": "liberalismo-social",
+    "personalityId": "beveridge",
     "vector": {
       "estrutura": 60,
       "representacao": 85,
@@ -986,7 +935,7 @@
     }
   },
   {
-    "ideologyId": "liberalismo-radical",
+    "personalityId": "thomas-paine",
     "vector": {
       "estrutura": 70,
       "representacao": 90,
@@ -1003,41 +952,41 @@
     }
   },
   {
-    "ideologyId": "liberalismo-conservador",
+    "personalityId": "edmund-burke",
     "vector": {
-      "estrutura": 55,
-      "representacao": 65,
+      "estrutura": 50,
+      "representacao": 67.5,
       "poder": 60,
-      "imigracao": 60,
+      "imigracao": 62.5,
       "diplomacia": 55,
-      "intervencao": 50,
-      "economia": 25,
-      "controle": 28,
-      "comercio": 35,
-      "religiao": 35,
-      "moral": 38,
-      "tecnologia": 50
+      "intervencao": 42.5,
+      "economia": 30,
+      "controle": 31.5,
+      "comercio": 42.5,
+      "religiao": 33.5,
+      "moral": 33,
+      "tecnologia": 47.5
     }
   },
   {
-    "ideologyId": "liberaltarianismo",
+    "personalityId": "hayek",
     "vector": {
-      "estrutura": 70,
-      "representacao": 82,
-      "poder": 18,
-      "imigracao": 62,
-      "diplomacia": 28,
+      "estrutura": 65,
+      "representacao": 80,
+      "poder": 20,
+      "imigracao": 60,
+      "diplomacia": 25,
       "intervencao": 75,
-      "economia": 22,
-      "controle": 16,
-      "comercio": 20,
+      "economia": 20,
+      "controle": 15,
+      "comercio": 18,
       "religiao": 60,
-      "moral": 65,
+      "moral": 60,
       "tecnologia": 75
     }
   },
   {
-    "ideologyId": "panarchismo",
+    "personalityId": "gustave-de-molinari",
     "vector": {
       "estrutura": 95,
       "representacao": 90,
@@ -1045,50 +994,33 @@
       "imigracao": 50,
       "diplomacia": 25,
       "intervencao": 80,
-      "economia": 15,
-      "controle": 10,
-      "comercio": 20,
+      "economia": 8,
+      "controle": 5,
+      "comercio": 15,
       "religiao": 60,
       "moral": 60,
       "tecnologia": 65
     }
   },
   {
-    "ideologyId": "georgismo",
+    "personalityId": "henry-george",
     "vector": {
-      "estrutura": 60,
-      "representacao": 80,
-      "poder": 30,
-      "imigracao": 60,
-      "diplomacia": 30,
-      "intervencao": 65,
-      "economia": 45,
-      "controle": 35,
+      "estrutura": 74.7,
+      "representacao": 84,
+      "poder": 20,
+      "imigracao": 52.7,
+      "diplomacia": 27.7,
+      "intervencao": 72.7,
+      "economia": 50,
+      "controle": 30,
       "comercio": 28,
-      "religiao": 65,
-      "moral": 70,
+      "religiao": 63.3,
+      "moral": 69,
       "tecnologia": 70
     }
   },
   {
-    "ideologyId": "geolibertarianismo",
-    "vector": {
-      "estrutura": 72,
-      "representacao": 82,
-      "poder": 18,
-      "imigracao": 48,
-      "diplomacia": 28,
-      "intervencao": 75,
-      "economia": 38,
-      "controle": 28,
-      "comercio": 25,
-      "religiao": 60,
-      "moral": 62,
-      "tecnologia": 75
-    }
-  },
-  {
-    "ideologyId": "feminismo",
+    "personalityId": "charles-fourier",
     "vector": {
       "estrutura": 60,
       "representacao": 85,
@@ -1105,7 +1037,7 @@
     }
   },
   {
-    "ideologyId": "feminismo-liberal",
+    "personalityId": "nicolas-de-condorcet",
     "vector": {
       "estrutura": 60,
       "representacao": 88,
@@ -1122,24 +1054,24 @@
     }
   },
   {
-    "ideologyId": "liberalismo-de-estado",
+    "personalityId": "john-rawls",
     "vector": {
       "estrutura": 40,
-      "representacao": 70,
-      "poder": 45,
+      "representacao": 85,
+      "poder": 35,
       "imigracao": 55,
       "diplomacia": 40,
       "intervencao": 50,
-      "economia": 60,
+      "economia": 65,
       "controle": 55,
       "comercio": 45,
-      "religiao": 60,
-      "moral": 60,
+      "religiao": 70,
+      "moral": 75,
       "tecnologia": 70
     }
   },
   {
-    "ideologyId": "ambientalismo",
+    "personalityId": "aldo-leopold",
     "vector": {
       "estrutura": 55,
       "representacao": 75,
@@ -1156,41 +1088,24 @@
     }
   },
   {
-    "ideologyId": "conservadorismo",
-    "vector": {
-      "estrutura": 45,
-      "representacao": 70,
-      "poder": 60,
-      "imigracao": 65,
-      "diplomacia": 55,
-      "intervencao": 35,
-      "economia": 35,
-      "controle": 35,
-      "comercio": 50,
-      "religiao": 32,
-      "moral": 28,
-      "tecnologia": 45
-    }
-  },
-  {
-    "ideologyId": "progressivismo",
+    "personalityId": "theodore-roosevelt",
     "vector": {
       "estrutura": 62,
-      "representacao": 85,
-      "poder": 38,
+      "representacao": 72,
+      "poder": 58,
       "imigracao": 65,
-      "diplomacia": 32,
-      "intervencao": 60,
-      "economia": 65,
-      "controle": 60,
-      "comercio": 42,
-      "religiao": 80,
-      "moral": 90,
-      "tecnologia": 82
+      "diplomacia": 68,
+      "intervencao": 35,
+      "economia": 58,
+      "controle": 62,
+      "comercio": 48,
+      "religiao": 45,
+      "moral": 55,
+      "tecnologia": 70
     }
   },
   {
-    "ideologyId": "aceleracionismo",
+    "personalityId": "srnicek",
     "vector": {
       "estrutura": 55,
       "representacao": 60,
@@ -1207,7 +1122,7 @@
     }
   },
   {
-    "ideologyId": "transhumanismo",
+    "personalityId": "ray-kurzweil",
     "vector": {
       "estrutura": 55,
       "representacao": 65,
@@ -1224,24 +1139,24 @@
     }
   },
   {
-    "ideologyId": "nacionalismo",
+    "personalityId": "getulio-vargas",
     "vector": {
-      "estrutura": 35,
-      "representacao": 55,
-      "poder": 65,
-      "imigracao": 75,
-      "diplomacia": 60,
-      "intervencao": 25,
-      "economia": 55,
-      "controle": 55,
+      "estrutura": 30,
+      "representacao": 25,
+      "poder": 75,
+      "imigracao": 65,
+      "diplomacia": 58,
+      "intervencao": 20,
+      "economia": 65,
+      "controle": 70,
       "comercio": 70,
-      "religiao": 40,
+      "religiao": 35,
       "moral": 35,
-      "tecnologia": 55
+      "tecnologia": 60
     }
   },
   {
-    "ideologyId": "nacionalismo-civico",
+    "personalityId": "ernest-renan",
     "vector": {
       "estrutura": 45,
       "representacao": 70,
@@ -1258,7 +1173,7 @@
     }
   },
   {
-    "ideologyId": "indigenismo",
+    "personalityId": "evo-morales",
     "vector": {
       "estrutura": 75,
       "representacao": 70,
@@ -1275,41 +1190,41 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-socialista",
+    "personalityId": "bismarck",
     "vector": {
-      "estrutura": 35,
-      "representacao": 50,
-      "poder": 65,
+      "estrutura": 30,
+      "representacao": 45,
+      "poder": 75,
       "imigracao": 50,
-      "diplomacia": 55,
-      "intervencao": 40,
-      "economia": 80,
-      "controle": 75,
-      "comercio": 65,
-      "religiao": 30,
-      "moral": 25,
+      "diplomacia": 60,
+      "intervencao": 25,
+      "economia": 55,
+      "controle": 65,
+      "comercio": 70,
+      "religiao": 25,
+      "moral": 20,
       "tecnologia": 50
     }
   },
   {
-    "ideologyId": "anarquismo",
+    "personalityId": "bakunin",
     "vector": {
       "estrutura": 95,
-      "representacao": 95,
-      "poder": 5,
-      "imigracao": 35,
-      "diplomacia": 18,
-      "intervencao": 80,
-      "economia": 85,
-      "controle": 60,
-      "comercio": 50,
-      "religiao": 75,
-      "moral": 82,
+      "representacao": 93.5,
+      "poder": 7.5,
+      "imigracao": 32.5,
+      "diplomacia": 20,
+      "intervencao": 79,
+      "economia": 90,
+      "controle": 77.5,
+      "comercio": 55,
+      "religiao": 80.5,
+      "moral": 85,
       "tecnologia": 60
     }
   },
   {
-    "ideologyId": "anarcocomunismo",
+    "personalityId": "kropotkin",
     "vector": {
       "estrutura": 95,
       "representacao": 92,
@@ -1326,24 +1241,7 @@
     }
   },
   {
-    "ideologyId": "anarcocoletivismo",
-    "vector": {
-      "estrutura": 95,
-      "representacao": 92,
-      "poder": 10,
-      "imigracao": 30,
-      "diplomacia": 22,
-      "intervencao": 78,
-      "economia": 95,
-      "controle": 95,
-      "comercio": 60,
-      "religiao": 86,
-      "moral": 88,
-      "tecnologia": 60
-    }
-  },
-  {
-    "ideologyId": "anarcossindicalismo",
+    "personalityId": "durruti",
     "vector": {
       "estrutura": 88,
       "representacao": 90,
@@ -1360,24 +1258,24 @@
     }
   },
   {
-    "ideologyId": "sindicalismo",
+    "personalityId": "sorel",
     "vector": {
       "estrutura": 80,
-      "representacao": 85,
-      "poder": 25,
+      "representacao": 60,
+      "poder": 40,
       "imigracao": 40,
       "diplomacia": 30,
       "intervencao": 65,
       "economia": 88,
       "controle": 80,
       "comercio": 60,
-      "religiao": 70,
-      "moral": 80,
+      "religiao": 60,
+      "moral": 55,
       "tecnologia": 60
     }
   },
   {
-    "ideologyId": "socialismo-libertario",
+    "personalityId": "chomsky",
     "vector": {
       "estrutura": 85,
       "representacao": 90,
@@ -1394,16 +1292,16 @@
     }
   },
   {
-    "ideologyId": "marxismo-libertario",
+    "personalityId": "gramsci",
     "vector": {
       "estrutura": 80,
-      "representacao": 88,
-      "poder": 22,
+      "representacao": 82,
+      "poder": 35,
       "imigracao": 50,
       "diplomacia": 30,
       "intervencao": 65,
       "economia": 92,
-      "controle": 85,
+      "controle": 75,
       "comercio": 55,
       "religiao": 88,
       "moral": 85,
@@ -1411,24 +1309,24 @@
     }
   },
   {
-    "ideologyId": "socialismo-de-mercado-libertario",
+    "personalityId": "tito",
     "vector": {
       "estrutura": 80,
-      "representacao": 88,
-      "poder": 18,
-      "imigracao": 50,
-      "diplomacia": 28,
+      "representacao": 35,
+      "poder": 65,
+      "imigracao": 45,
+      "diplomacia": 35,
       "intervencao": 75,
       "economia": 70,
       "controle": 50,
       "comercio": 40,
-      "religiao": 70,
-      "moral": 80,
+      "religiao": 75,
+      "moral": 65,
       "tecnologia": 70
     }
   },
   {
-    "ideologyId": "socialismo-de-mercado",
+    "personalityId": "oskar-lange",
     "vector": {
       "estrutura": 60,
       "representacao": 80,
@@ -1437,7 +1335,7 @@
       "diplomacia": 35,
       "intervencao": 60,
       "economia": 70,
-      "controle": 50,
+      "controle": 72,
       "comercio": 40,
       "religiao": 65,
       "moral": 75,
@@ -1445,41 +1343,24 @@
     }
   },
   {
-    "ideologyId": "mutualismo",
+    "personalityId": "proudhon",
     "vector": {
-      "estrutura": 92,
-      "representacao": 95,
-      "poder": 12,
+      "estrutura": 83.5,
+      "representacao": 87.5,
+      "poder": 21,
       "imigracao": 50,
-      "diplomacia": 25,
+      "diplomacia": 26.5,
       "intervencao": 78,
-      "economia": 62,
-      "controle": 55,
+      "economia": 60,
+      "controle": 45,
       "comercio": 45,
       "religiao": 65,
-      "moral": 78,
-      "tecnologia": 60
+      "moral": 76.5,
+      "tecnologia": 62.5
     }
   },
   {
-    "ideologyId": "minarco-mutualismo",
-    "vector": {
-      "estrutura": 75,
-      "representacao": 80,
-      "poder": 30,
-      "imigracao": 50,
-      "diplomacia": 28,
-      "intervencao": 78,
-      "economia": 65,
-      "controle": 50,
-      "comercio": 45,
-      "religiao": 65,
-      "moral": 75,
-      "tecnologia": 65
-    }
-  },
-  {
-    "ideologyId": "minarco-socialismo",
+    "personalityId": "ocalan",
     "vector": {
       "estrutura": 75,
       "representacao": 85,
@@ -1496,7 +1377,7 @@
     }
   },
   {
-    "ideologyId": "socialismo-individualista",
+    "personalityId": "benjamin-tucker",
     "vector": {
       "estrutura": 80,
       "representacao": 85,
@@ -1513,24 +1394,24 @@
     }
   },
   {
-    "ideologyId": "comunalismo",
+    "personalityId": "bookchin",
     "vector": {
-      "estrutura": 90,
-      "representacao": 88,
-      "poder": 18,
-      "imigracao": 35,
-      "diplomacia": 25,
-      "intervencao": 70,
-      "economia": 88,
-      "controle": 78,
-      "comercio": 60,
-      "religiao": 75,
-      "moral": 85,
+      "estrutura": 88.3,
+      "representacao": 89.3,
+      "poder": 16.7,
+      "imigracao": 36.7,
+      "diplomacia": 21.7,
+      "intervencao": 71,
+      "economia": 86,
+      "controle": 76,
+      "comercio": 58.3,
+      "religiao": 80,
+      "moral": 90,
       "tecnologia": 65
     }
   },
   {
-    "ideologyId": "socialismo-cristao",
+    "personalityId": "keir-hardie",
     "vector": {
       "estrutura": 65,
       "representacao": 85,
@@ -1547,7 +1428,7 @@
     }
   },
   {
-    "ideologyId": "trabalhismo-cristao",
+    "personalityId": "maritain",
     "vector": {
       "estrutura": 55,
       "representacao": 78,
@@ -1564,7 +1445,7 @@
     }
   },
   {
-    "ideologyId": "socialismo-religioso",
+    "personalityId": "buber",
     "vector": {
       "estrutura": 60,
       "representacao": 75,
@@ -1581,7 +1462,7 @@
     }
   },
   {
-    "ideologyId": "social-democracia",
+    "personalityId": "olof-palme",
     "vector": {
       "estrutura": 55,
       "representacao": 72,
@@ -1598,7 +1479,7 @@
     }
   },
   {
-    "ideologyId": "socialismo",
+    "personalityId": "karl-marx",
     "vector": {
       "estrutura": 60,
       "representacao": 70,
@@ -1606,16 +1487,16 @@
       "imigracao": 55,
       "diplomacia": 35,
       "intervencao": 50,
-      "economia": 78,
-      "controle": 68,
+      "economia": 92,
+      "controle": 85,
       "comercio": 60,
-      "religiao": 70,
-      "moral": 72,
-      "tecnologia": 70
+      "religiao": 92,
+      "moral": 75,
+      "tecnologia": 75
     }
   },
   {
-    "ideologyId": "socialismo-liberal",
+    "personalityId": "rosselli",
     "vector": {
       "estrutura": 60,
       "representacao": 88,
@@ -1632,7 +1513,7 @@
     }
   },
   {
-    "ideologyId": "libertarianismo-social",
+    "personalityId": "orwell",
     "vector": {
       "estrutura": 80,
       "representacao": 88,
@@ -1649,7 +1530,7 @@
     }
   },
   {
-    "ideologyId": "ecossocialismo",
+    "personalityId": "andre-gorz",
     "vector": {
       "estrutura": 75,
       "representacao": 85,
@@ -1666,24 +1547,7 @@
     }
   },
   {
-    "ideologyId": "ecofeminismo",
-    "vector": {
-      "estrutura": 80,
-      "representacao": 88,
-      "poder": 22,
-      "imigracao": 45,
-      "diplomacia": 22,
-      "intervencao": 65,
-      "economia": 85,
-      "controle": 75,
-      "comercio": 55,
-      "religiao": 65,
-      "moral": 92,
-      "tecnologia": 30
-    }
-  },
-  {
-    "ideologyId": "ecologia-profunda",
+    "personalityId": "arne-naess",
     "vector": {
       "estrutura": 80,
       "representacao": 80,
@@ -1700,7 +1564,7 @@
     }
   },
   {
-    "ideologyId": "anarquismo-agrario",
+    "personalityId": "zapata",
     "vector": {
       "estrutura": 95,
       "representacao": 90,
@@ -1717,24 +1581,7 @@
     }
   },
   {
-    "ideologyId": "anarquismo-verde",
-    "vector": {
-      "estrutura": 95,
-      "representacao": 92,
-      "poder": 10,
-      "imigracao": 30,
-      "diplomacia": 18,
-      "intervencao": 78,
-      "economia": 85,
-      "controle": 75,
-      "comercio": 60,
-      "religiao": 65,
-      "moral": 80,
-      "tecnologia": 18
-    }
-  },
-  {
-    "ideologyId": "anarcofeminismo",
+    "personalityId": "emile-armand",
     "vector": {
       "estrutura": 95,
       "representacao": 95,
@@ -1751,7 +1598,7 @@
     }
   },
   {
-    "ideologyId": "anarquismo-queer",
+    "personalityId": "daniel-guerin",
     "vector": {
       "estrutura": 95,
       "representacao": 95,
@@ -1768,41 +1615,24 @@
     }
   },
   {
-    "ideologyId": "anarcopacifismo",
+    "personalityId": "tolstoy",
     "vector": {
-      "estrutura": 95,
-      "representacao": 95,
-      "poder": 5,
+      "estrutura": 93.5,
+      "representacao": 92.5,
+      "poder": 7.5,
       "imigracao": 35,
-      "diplomacia": 5,
-      "intervencao": 88,
-      "economia": 80,
-      "controle": 65,
-      "comercio": 50,
-      "religiao": 75,
-      "moral": 90,
-      "tecnologia": 55
+      "diplomacia": 8.5,
+      "intervencao": 81.5,
+      "economia": 77.5,
+      "controle": 62.5,
+      "comercio": 52.5,
+      "religiao": 15,
+      "moral": 55,
+      "tecnologia": 45
     }
   },
   {
-    "ideologyId": "anarquismo-cristao",
-    "vector": {
-      "estrutura": 92,
-      "representacao": 90,
-      "poder": 10,
-      "imigracao": 35,
-      "diplomacia": 12,
-      "intervencao": 75,
-      "economia": 75,
-      "controle": 60,
-      "comercio": 55,
-      "religiao": 5,
-      "moral": 50,
-      "tecnologia": 35
-    }
-  },
-  {
-    "ideologyId": "anarco-naturalismo",
+    "personalityId": "thoreau",
     "vector": {
       "estrutura": 95,
       "representacao": 90,
@@ -1819,7 +1649,7 @@
     }
   },
   {
-    "ideologyId": "anarcoprimitivismo",
+    "personalityId": "john-zerzan",
     "vector": {
       "estrutura": 98,
       "representacao": 88,
@@ -1836,24 +1666,7 @@
     }
   },
   {
-    "ideologyId": "geoanarquismo",
-    "vector": {
-      "estrutura": 92,
-      "representacao": 90,
-      "poder": 12,
-      "imigracao": 50,
-      "diplomacia": 25,
-      "intervencao": 78,
-      "economia": 70,
-      "controle": 50,
-      "comercio": 40,
-      "religiao": 65,
-      "moral": 75,
-      "tecnologia": 65
-    }
-  },
-  {
-    "ideologyId": "anarquismo-egoista",
+    "personalityId": "max-stirner",
     "vector": {
       "estrutura": 95,
       "representacao": 88,
@@ -1870,7 +1683,7 @@
     }
   },
   {
-    "ideologyId": "anarcocapitalismo",
+    "personalityId": "rothbard",
     "vector": {
       "estrutura": 95,
       "representacao": 85,
@@ -1887,7 +1700,7 @@
     }
   },
   {
-    "ideologyId": "minarquismo",
+    "personalityId": "bastiat",
     "vector": {
       "estrutura": 82,
       "representacao": 90,
@@ -1904,7 +1717,7 @@
     }
   },
   {
-    "ideologyId": "austrolibertarianismo",
+    "personalityId": "mises",
     "vector": {
       "estrutura": 80,
       "representacao": 80,
@@ -1921,7 +1734,7 @@
     }
   },
   {
-    "ideologyId": "paleolibertarianismo",
+    "personalityId": "ron-paul",
     "vector": {
       "estrutura": 78,
       "representacao": 55,
@@ -1938,41 +1751,24 @@
     }
   },
   {
-    "ideologyId": "hoppeanismo",
+    "personalityId": "hoppe",
     "vector": {
-      "estrutura": 85,
-      "representacao": 15,
-      "poder": 30,
-      "imigracao": 80,
-      "diplomacia": 25,
-      "intervencao": 80,
-      "economia": 8,
-      "controle": 5,
-      "comercio": 30,
-      "religiao": 20,
-      "moral": 10,
-      "tecnologia": 55
+      "estrutura": 78.3,
+      "representacao": 40,
+      "poder": 27.7,
+      "imigracao": 67.3,
+      "diplomacia": 31.7,
+      "intervencao": 74.3,
+      "economia": 19.3,
+      "controle": 16.3,
+      "comercio": 33.3,
+      "religiao": 22.7,
+      "moral": 17.7,
+      "tecnologia": 46.7
     }
   },
   {
-    "ideologyId": "libertarianismo-de-chicago",
-    "vector": {
-      "estrutura": 70,
-      "representacao": 70,
-      "poder": 18,
-      "imigracao": 55,
-      "diplomacia": 30,
-      "intervencao": 75,
-      "economia": 18,
-      "controle": 15,
-      "comercio": 15,
-      "religiao": 55,
-      "moral": 62,
-      "tecnologia": 78
-    }
-  },
-  {
-    "ideologyId": "capitalismo",
+    "personalityId": "adam-smith",
     "vector": {
       "estrutura": 50,
       "representacao": 65,
@@ -1989,7 +1785,7 @@
     }
   },
   {
-    "ideologyId": "objetivismo",
+    "personalityId": "leonard-peikoff",
     "vector": {
       "estrutura": 75,
       "representacao": 75,
@@ -2006,24 +1802,24 @@
     }
   },
   {
-    "ideologyId": "ecocapitalismo",
+    "personalityId": "elon-musk",
     "vector": {
       "estrutura": 60,
       "representacao": 70,
-      "poder": 28,
+      "poder": 25,
       "imigracao": 55,
       "diplomacia": 30,
       "intervencao": 60,
       "economia": 20,
-      "controle": 18,
+      "controle": 15,
       "comercio": 30,
       "religiao": 55,
-      "moral": 65,
-      "tecnologia": 82
+      "moral": 45,
+      "tecnologia": 95
     }
   },
   {
-    "ideologyId": "ecoconservadorismo",
+    "personalityId": "scruton",
     "vector": {
       "estrutura": 50,
       "representacao": 65,
@@ -2034,13 +1830,13 @@
       "economia": 35,
       "controle": 35,
       "comercio": 45,
-      "religiao": 30,
-      "moral": 30,
-      "tecnologia": 25
+      "religiao": 25,
+      "moral": 20,
+      "tecnologia": 30
     }
   },
   {
-    "ideologyId": "econacionalismo",
+    "personalityId": "friedrich-list",
     "vector": {
       "estrutura": 40,
       "representacao": 55,
@@ -2048,16 +1844,16 @@
       "imigracao": 75,
       "diplomacia": 55,
       "intervencao": 25,
-      "economia": 45,
-      "controle": 45,
-      "comercio": 75,
+      "economia": 35,
+      "controle": 55,
+      "comercio": 85,
       "religiao": 40,
       "moral": 30,
       "tecnologia": 50
     }
   },
   {
-    "ideologyId": "agorismo",
+    "personalityId": "konkin",
     "vector": {
       "estrutura": 98,
       "representacao": 88,
@@ -2074,7 +1870,7 @@
     }
   },
   {
-    "ideologyId": "criptoanarquismo",
+    "personalityId": "phil-zimmermann",
     "vector": {
       "estrutura": 98,
       "representacao": 90,
@@ -2091,7 +1887,7 @@
     }
   },
   {
-    "ideologyId": "anarco-transhumanismo",
+    "personalityId": "max-more",
     "vector": {
       "estrutura": 95,
       "representacao": 88,
@@ -2108,24 +1904,7 @@
     }
   },
   {
-    "ideologyId": "libertarianismo-bleeding-heart",
-    "vector": {
-      "estrutura": 72,
-      "representacao": 85,
-      "poder": 20,
-      "imigracao": 65,
-      "diplomacia": 25,
-      "intervencao": 72,
-      "economia": 38,
-      "controle": 30,
-      "comercio": 25,
-      "religiao": 65,
-      "moral": 75,
-      "tecnologia": 75
-    }
-  },
-  {
-    "ideologyId": "libertarianismo-nacional",
+    "personalityId": "javier-milei",
     "vector": {
       "estrutura": 60,
       "representacao": 70,
@@ -2142,24 +1921,7 @@
     }
   },
   {
-    "ideologyId": "monarquismo-libertario",
-    "vector": {
-      "estrutura": 65,
-      "representacao": 30,
-      "poder": 35,
-      "imigracao": 72,
-      "diplomacia": 35,
-      "intervencao": 65,
-      "economia": 25,
-      "controle": 22,
-      "comercio": 35,
-      "religiao": 30,
-      "moral": 25,
-      "tecnologia": 45
-    }
-  },
-  {
-    "ideologyId": "monarquia-federativa",
+    "personalityId": "otto-von-habsburg",
     "vector": {
       "estrutura": 85,
       "representacao": 38,
@@ -2176,7 +1938,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-libertario",
+    "personalityId": "goldwater",
     "vector": {
       "estrutura": 70,
       "representacao": 75,
@@ -2187,13 +1949,13 @@
       "economia": 18,
       "controle": 15,
       "comercio": 30,
-      "religiao": 25,
-      "moral": 22,
+      "religiao": 45,
+      "moral": 45,
       "tecnologia": 60
     }
   },
   {
-    "ideologyId": "feminismo-libertario",
+    "personalityId": "ezra-heywood",
     "vector": {
       "estrutura": 80,
       "representacao": 88,
@@ -2210,7 +1972,7 @@
     }
   },
   {
-    "ideologyId": "pacifismo-libertario",
+    "personalityId": "randolph-bourne",
     "vector": {
       "estrutura": 80,
       "representacao": 90,
@@ -2227,24 +1989,7 @@
     }
   },
   {
-    "ideologyId": "anarcoconservadorismo",
-    "vector": {
-      "estrutura": 85,
-      "representacao": 75,
-      "poder": 18,
-      "imigracao": 50,
-      "diplomacia": 35,
-      "intervencao": 78,
-      "economia": 25,
-      "controle": 22,
-      "comercio": 35,
-      "religiao": 18,
-      "moral": 18,
-      "tecnologia": 40
-    }
-  },
-  {
-    "ideologyId": "anarcodistributismo",
+    "personalityId": "peter-maurin",
     "vector": {
       "estrutura": 88,
       "representacao": 82,
@@ -2261,7 +2006,7 @@
     }
   },
   {
-    "ideologyId": "anarcoindividualismo",
+    "personalityId": "lysander-spooner",
     "vector": {
       "estrutura": 95,
       "representacao": 88,
@@ -2278,41 +2023,24 @@
     }
   },
   {
-    "ideologyId": "centrismo",
+    "personalityId": "macron",
     "vector": {
-      "estrutura": 50,
-      "representacao": 50,
-      "poder": 50,
-      "imigracao": 50,
-      "diplomacia": 50,
-      "intervencao": 50,
-      "economia": 50,
-      "controle": 50,
-      "comercio": 50,
-      "religiao": 50,
-      "moral": 50,
-      "tecnologia": 50
-    }
-  },
-  {
-    "ideologyId": "trabalhismo",
-    "vector": {
-      "estrutura": 60,
-      "representacao": 80,
+      "estrutura": 55,
+      "representacao": 75,
       "poder": 45,
-      "imigracao": 52,
-      "diplomacia": 42,
-      "intervencao": 48,
-      "economia": 72,
-      "controle": 68,
-      "comercio": 58,
-      "religiao": 62,
-      "moral": 68,
-      "tecnologia": 60
+      "imigracao": 45,
+      "diplomacia": 45,
+      "intervencao": 55,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 25,
+      "religiao": 75,
+      "moral": 70,
+      "tecnologia": 75
     }
   },
   {
-    "ideologyId": "positivismo",
+    "personalityId": "comte",
     "vector": {
       "estrutura": 55,
       "representacao": 38,
@@ -2329,7 +2057,7 @@
     }
   },
   {
-    "ideologyId": "conservadorismo-secular",
+    "personalityId": "masaryk",
     "vector": {
       "estrutura": 40,
       "representacao": 72,
@@ -2346,7 +2074,7 @@
     }
   },
   {
-    "ideologyId": "progressismo-cristao",
+    "personalityId": "leonardo-boff",
     "vector": {
       "estrutura": 65,
       "representacao": 82,
@@ -2363,41 +2091,24 @@
     }
   },
   {
-    "ideologyId": "autoritarismo-modernizador",
+    "personalityId": "park-chung-hee",
     "vector": {
-      "estrutura": 30,
-      "representacao": 20,
-      "poder": 80,
-      "imigracao": 40,
-      "diplomacia": 72,
-      "intervencao": 45,
-      "economia": 35,
-      "controle": 65,
-      "comercio": 55,
-      "religiao": 80,
-      "moral": 55,
-      "tecnologia": 80
+      "estrutura": 29,
+      "representacao": 22.5,
+      "poder": 76,
+      "imigracao": 47.5,
+      "diplomacia": 48.5,
+      "intervencao": 42.5,
+      "economia": 52.5,
+      "controle": 70,
+      "comercio": 58.5,
+      "religiao": 76,
+      "moral": 58.5,
+      "tecnologia": 79
     }
   },
   {
-    "ideologyId": "desenvolvimentismo-de-estado",
-    "vector": {
-      "estrutura": 28,
-      "representacao": 25,
-      "poder": 72,
-      "imigracao": 55,
-      "diplomacia": 25,
-      "intervencao": 40,
-      "economia": 70,
-      "controle": 75,
-      "comercio": 62,
-      "religiao": 72,
-      "moral": 62,
-      "tecnologia": 78
-    }
-  },
-  {
-    "ideologyId": "atlantismo",
+    "personalityId": "kissinger",
     "vector": {
       "estrutura": 52,
       "representacao": 68,
@@ -2414,11 +2125,11 @@
     }
   },
   {
-    "ideologyId": "federalismo-privado",
+    "personalityId": "paul-romer",
     "vector": {
       "estrutura": 92,
-      "representacao": 8,
-      "poder": 42,
+      "representacao": 45,
+      "poder": 35,
       "imigracao": 68,
       "diplomacia": 28,
       "intervencao": 82,
@@ -2431,7 +2142,7 @@
     }
   },
   {
-    "ideologyId": "tecno-monarquismo",
+    "personalityId": "peter-thiel",
     "vector": {
       "estrutura": 25,
       "representacao": 15,
@@ -2439,33 +2150,33 @@
       "imigracao": 65,
       "diplomacia": 58,
       "intervencao": 35,
-      "economia": 35,
-      "controle": 40,
-      "comercio": 48,
+      "economia": 25,
+      "controle": 30,
+      "comercio": 35,
       "religiao": 68,
       "moral": 28,
       "tecnologia": 95
     }
   },
   {
-    "ideologyId": "tecno-socialismo",
+    "personalityId": "allende",
     "vector": {
       "estrutura": 50,
-      "representacao": 82,
+      "representacao": 88,
       "poder": 35,
       "imigracao": 45,
-      "diplomacia": 33,
+      "diplomacia": 35,
       "intervencao": 55,
       "economia": 88,
-      "controle": 82,
+      "controle": 80,
       "comercio": 50,
-      "religiao": 82,
-      "moral": 82,
-      "tecnologia": 96
+      "religiao": 80,
+      "moral": 80,
+      "tecnologia": 70
     }
   },
   {
-    "ideologyId": "tecno-fascismo",
+    "personalityId": "marinetti",
     "vector": {
       "estrutura": 18,
       "representacao": 6,

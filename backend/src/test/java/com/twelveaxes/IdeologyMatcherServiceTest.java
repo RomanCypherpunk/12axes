@@ -41,6 +41,23 @@ class IdeologyMatcherServiceTest {
     }
 
     @Test
+    void everyIdeologyProfileUsesTheTwelveKnownAxes() {
+        var axisIds = dataService.getAxes().stream()
+                .map(axis -> axis.id())
+                .toList();
+
+        assertThat(dataService.getIdeologyProfiles().values())
+                .allSatisfy(profile -> {
+                    assertThat(profile.vector().keySet())
+                            .as("Profile %s must define exactly the known axes", profile.ideologyId())
+                            .containsExactlyInAnyOrderElementsOf(axisIds);
+                    assertThat(profile.vector().values())
+                            .as("Profile %s values must be percentages", profile.ideologyId())
+                            .allSatisfy(value -> assertThat(value).isBetween(0.0, 100.0));
+                });
+    }
+
+    @Test
     void canonicalVectorsMatchTheirOwnIdeologies() {
         List.of(
                 "marxismo-leninismo",

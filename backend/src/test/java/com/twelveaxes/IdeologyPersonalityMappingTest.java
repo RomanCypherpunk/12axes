@@ -2,11 +2,13 @@ package com.twelveaxes;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.twelveaxes.model.IdeologyMatch;
+import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.PersonalityMatch;
-import com.twelveaxes.service.PersonalityResolverService;
+import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import java.nio.file.Path;
+import java.util.List;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +19,7 @@ class IdeologyPersonalityMappingTest {
     private QuizDataService dataService;
 
     @Autowired
-    private PersonalityResolverService personalityResolverService;
+    private PersonalityMatcherService personalityMatcherService;
 
     @Test
     void everyIdeologyLinksToAnExistingPersonality() {
@@ -25,30 +27,67 @@ class IdeologyPersonalityMappingTest {
                 .isNotEmpty()
                 .allSatisfy(ideology -> {
                     assertThat(ideology.personalityId())
-                            .as("Ideologia %s precisa de um personalityId", ideology.id())
+                            .as("Ideology %s must have a personalityId", ideology.id())
                             .isNotBlank();
                     assertThat(dataService.getPersonalityById(ideology.personalityId()))
-                            .as("personalityId de %s deve resolver para uma personalidade existente: %s",
+                            .as("personalityId for %s must resolve to an existing personality: %s",
                                     ideology.id(), ideology.personalityId())
                             .isNotNull();
                 });
     }
 
     @Test
-    void resolvedPersonalityMatchesTheChosenIdeology() {
-        dataService.getIdeologies().forEach(ideology -> {
-            IdeologyMatch top = new IdeologyMatch(
-                    ideology.id(), ideology.name(), ideology.category(),
-                    ideology.description(), ideology.description(), 87.3);
+    void everyPersonalityHasAnExplicitProfile() {
+        var profileIds = dataService.getPersonalityProfiles().keySet();
+        var personalityIds = dataService.getPersonalities().stream()
+                .map(personality -> personality.id())
+                .toList();
 
-            PersonalityMatch personality = personalityResolverService.resolveFor(top);
+        assertThat(personalityIds).hasSizeGreaterThan(100);
+        assertThat(profileIds).containsExactlyInAnyOrderElementsOf(personalityIds);
+    }
 
-            assertThat(personality.personalityId())
-                    .as("Personalidade retornada deve ser a atrelada à ideologia %s", ideology.id())
-                    .isEqualTo(ideology.personalityId());
-            assertThat(personality.compatibility())
-                    .as("Compatibilidade da personalidade espelha a da ideologia")
-                    .isEqualTo(87.3);
+    @Test
+    void everyPersonalityProfileUsesTheTwelveKnownAxes() {
+        var axisIds = dataService.getAxes().stream()
+                .map(axis -> axis.id())
+                .toList();
+
+        assertThat(dataService.getPersonalityProfiles().values())
+                .allSatisfy(profile -> {
+                    assertThat(profile.vector().keySet())
+                            .as("Profile %s must define exactly the known axes", profile.personalityId())
+                            .containsExactlyInAnyOrderElementsOf(axisIds);
+                    assertThat(profile.vector().values())
+                            .as("Profile %s values must be percentages", profile.personalityId())
+                            .allSatisfy(value -> assertThat(value).isBetween(0.0, 100.0));
+                });
+    }
+
+    @Test
+    void canonicalPersonalityVectorsMatchTheirOwnPersonalities() {
+        List.of(
+                "lenin",
+                "mao-zedong",
+                "adam-smith",
+                "hayek",
+                "bookchin",
+                "hoppe"
+        ).forEach(personalityId -> {
+            var profile = dataService.getPersonalityProfiles().get(personalityId);
+
+            assertThat(profile)
+                    .as("Canonical personality profile must exist for %s", personalityId)
+                    .isNotNull();
+
+            PersonalityMatch topMatch = personalityMatcherService.findTopMatch(axisResults(profile.vector()));
+
+            assertThat(topMatch.personalityId())
+                    .as("Canonical personality vector for %s must return itself", personalityId)
+                    .isEqualTo(personalityId);
+            assertThat(topMatch.compatibility())
+                    .as("Canonical personality vector for %s must have perfect compatibility", personalityId)
+                    .isEqualTo(100.0);
         });
     }
 
@@ -76,10 +115,30 @@ class IdeologyPersonalityMappingTest {
                     Path imagePath = frontendPublic.resolve(relativePath).normalize();
 
                     assertThat(imagePath)
-                            .as("Imagem de %s deve existir em frontend/public: %s",
+                            .as("Image for %s must exist in frontend/public: %s",
                                     personality.id(), personality.imagePath())
                             .isRegularFile();
                 });
+    }
+
+    private List<AxisResult> axisResults(Map<String, Double> vector) {
+        return dataService.getAxes().stream()
+                .map(axis -> {
+                    double leftPercent = vector.getOrDefault(axis.id(), 50.0);
+                    double rightPercent = Math.round((100.0 - leftPercent) * 10.0) / 10.0;
+                    String dominantPole = leftPercent >= rightPercent ? axis.leftPole() : axis.rightPole();
+                    return new AxisResult(
+                            axis.id(),
+                            axis.label(),
+                            axis.leftPole(),
+                            axis.rightPole(),
+                            leftPercent,
+                            rightPercent,
+                            dominantPole,
+                            ""
+                    );
+                })
+                .toList();
     }
 
     private Path frontendPublicPath() {

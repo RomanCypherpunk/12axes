@@ -61,6 +61,8 @@ class QuizFlowAutomationTest {
                     .andExpect(status().isOk())
                     .andExpect(jsonPath("$.axes.length()").value(12))
                     .andExpect(jsonPath("$.topMatch.ideologyId").isNotEmpty())
+                    .andExpect(jsonPath("$.topPersonalityMatch.personalityId").isNotEmpty())
+                    .andExpect(jsonPath("$.topPersonalityMatch.compatibility").isNumber())
                     .andExpect(jsonPath("$.matches.length()").value(4));
         }
     }

@@ -14,7 +14,15 @@
       "religiao": 38,
       "moral": 54,
       "tecnologia": 58
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "presidencialismo",
+      "social-democracia",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "estados-unidos",
@@ -31,7 +39,15 @@
       "religiao": 42,
       "moral": 59,
       "tecnologia": 86
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "presidencialismo",
+      "capitalismo",
+      "liberalismo"
+    ]
   },
   {
     "countryId": "mexico",
@@ -48,7 +64,15 @@
       "religiao": 40,
       "moral": 57,
       "tecnologia": 60
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "presidencialismo",
+      "social-democracia",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "chile",
@@ -65,7 +89,15 @@
       "religiao": 54,
       "moral": 82,
       "tecnologia": 65
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "progressismo",
+      "social-democracia",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "bolivia",
@@ -82,7 +114,14 @@
       "religiao": 43,
       "moral": 58,
       "tecnologia": 66
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "socialismo",
+      "indigenismo"
+    ]
   },
   {
     "countryId": "venezuela",
@@ -99,7 +138,14 @@
       "religiao": 21,
       "moral": 17,
       "tecnologia": 66
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "presidencialismo",
+      "socialismo",
+      "nacionalismo"
+    ]
   },
   {
     "countryId": "cuba",
@@ -116,7 +162,15 @@
       "religiao": 84,
       "moral": 54,
       "tecnologia": 60
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "comunismo",
+      "planejamento"
+    ]
   },
   {
     "countryId": "costa-rica",
@@ -133,7 +187,15 @@
       "religiao": 58,
       "moral": 68,
       "tecnologia": 77
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "liberalismo",
+      "ambientalismo",
+      "pacifismo"
+    ]
   },
   {
     "countryId": "suica",
@@ -150,7 +212,15 @@
       "religiao": 47,
       "moral": 55,
       "tecnologia": 77
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "democracia-direta",
+      "capitalismo",
+      "neutralidade"
+    ]
   },
   {
     "countryId": "suecia",
@@ -167,7 +237,14 @@
       "religiao": 76,
       "moral": 84,
       "tecnologia": 76
-    }
+    },
+    "tags": [
+      "monarquia",
+      "democracia",
+      "parlamentarismo",
+      "social-democracia",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "alemanha",
@@ -184,7 +261,15 @@
       "religiao": 44,
       "moral": 60,
       "tecnologia": 84
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "parlamentarismo",
+      "capitalismo",
+      "social-democracia"
+    ]
   },
   {
     "countryId": "franca",
@@ -201,7 +286,15 @@
       "religiao": 66,
       "moral": 65,
       "tecnologia": 74
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "social-democracia",
+      "capitalismo",
+      "secularismo"
+    ]
   },
   {
     "countryId": "reino-unido",
@@ -218,7 +311,14 @@
       "religiao": 58,
       "moral": 72,
       "tecnologia": 76
-    }
+    },
+    "tags": [
+      "monarquia",
+      "democracia",
+      "parlamentarismo",
+      "capitalismo",
+      "liberalismo"
+    ]
   },
   {
     "countryId": "hungria",
@@ -235,7 +335,16 @@
       "religiao": 26,
       "moral": 28,
       "tecnologia": 63
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "parlamentarismo",
+      "regime-hibrido",
+      "iliberalismo",
+      "conservadorismo",
+      "nacionalismo"
+    ]
   },
   {
     "countryId": "russia",
@@ -252,7 +361,14 @@
       "religiao": 22,
       "moral": 20,
       "tecnologia": 60
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "presidencialismo",
+      "nacionalismo",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "japao",
@@ -269,7 +385,14 @@
       "religiao": 62,
       "moral": 30,
       "tecnologia": 60
-    }
+    },
+    "tags": [
+      "monarquia",
+      "democracia",
+      "parlamentarismo",
+      "capitalismo",
+      "conservadorismo"
+    ]
   },
   {
     "countryId": "coreia-do-sul",
@@ -286,7 +409,15 @@
       "religiao": 48,
       "moral": 39,
       "tecnologia": 81
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "capitalismo",
+      "tecnocracia",
+      "desenvolvimentismo"
+    ]
   },
   {
     "countryId": "china",
@@ -302,8 +433,17 @@
       "comercio": 72,
       "religiao": 86,
       "moral": 61,
-      "tecnologia": 61
-    }
+      "tecnologia": 82
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "capitalismo",
+      "tecnocracia",
+      "desenvolvimentismo"
+    ]
   },
   {
     "countryId": "coreia-do-norte",
@@ -320,7 +460,15 @@
       "religiao": 88,
       "moral": 60,
       "tecnologia": 64
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "comunismo",
+      "nacionalismo"
+    ]
   },
   {
     "countryId": "india",
@@ -337,7 +485,15 @@
       "religiao": 28,
       "moral": 36,
       "tecnologia": 65
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "parlamentarismo",
+      "capitalismo",
+      "conservadorismo"
+    ]
   },
   {
     "countryId": "singapura",
@@ -354,7 +510,16 @@
       "religiao": 48,
       "moral": 34,
       "tecnologia": 94
-    }
+    },
+    "tags": [
+      "republica",
+      "parlamentarismo",
+      "partido-dominante",
+      "regime-hibrido",
+      "tecnocracia",
+      "capitalismo",
+      "desenvolvimentismo"
+    ]
   },
   {
     "countryId": "vietna",
@@ -371,7 +536,15 @@
       "religiao": 71,
       "moral": 49,
       "tecnologia": 69
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "capitalismo",
+      "desenvolvimentismo"
+    ]
   },
   {
     "countryId": "indonesia",
@@ -388,7 +561,15 @@
       "religiao": 33,
       "moral": 43,
       "tecnologia": 61
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "desenvolvimentismo",
+      "capitalismo",
+      "religiao"
+    ]
   },
   {
     "countryId": "turquia",
@@ -405,7 +586,16 @@
       "religiao": 24,
       "moral": 19,
       "tecnologia": 65
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "regime-hibrido",
+      "presidencialismo",
+      "nacionalismo",
+      "conservadorismo",
+      "religiao"
+    ]
   },
   {
     "countryId": "ira",
@@ -422,7 +612,14 @@
       "religiao": 6,
       "moral": 2,
       "tecnologia": 55
-    }
+    },
+    "tags": [
+      "republica",
+      "teocracia",
+      "ditadura",
+      "religiao",
+      "islamismo"
+    ]
   },
   {
     "countryId": "arabia-saudita",
@@ -439,7 +636,14 @@
       "religiao": 1,
       "moral": 2,
       "tecnologia": 61
-    }
+    },
+    "tags": [
+      "monarquia",
+      "teocracia",
+      "ditadura",
+      "religiao",
+      "islamismo"
+    ]
   },
   {
     "countryId": "israel",
@@ -456,7 +660,15 @@
       "religiao": 26,
       "moral": 35,
       "tecnologia": 66
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "parlamentarismo",
+      "nacionalismo",
+      "religiao",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "afeganistao",
@@ -470,10 +682,16 @@
       "economia": 34,
       "controle": 57,
       "comercio": 67,
-      "religiao": 21,
-      "moral": 21,
-      "tecnologia": 59
-    }
+      "religiao": 4,
+      "moral": 4,
+      "tecnologia": 22
+    },
+    "tags": [
+      "teocracia",
+      "ditadura",
+      "religiao",
+      "islamismo"
+    ]
   },
   {
     "countryId": "africa-do-sul",
@@ -490,7 +708,14 @@
       "religiao": 34,
       "moral": 42,
       "tecnologia": 59
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "parlamentarismo",
+      "desenvolvimentismo",
+      "capitalismo"
+    ]
   },
   {
     "countryId": "nigeria",
@@ -507,7 +732,15 @@
       "religiao": 34,
       "moral": 42,
       "tecnologia": 65
-    }
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "presidencialismo",
+      "desenvolvimentismo",
+      "religiao"
+    ]
   },
   {
     "countryId": "ruanda",
@@ -523,8 +756,15 @@
       "comercio": 68,
       "religiao": 19,
       "moral": 18,
-      "tecnologia": 38
-    }
+      "tecnologia": 66
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "presidencialismo",
+      "desenvolvimentismo",
+      "tecnocracia"
+    ]
   },
   {
     "countryId": "atenas-democratica",
@@ -541,7 +781,12 @@
       "religiao": 21,
       "moral": 32,
       "tecnologia": 35
-    }
+    },
+    "tags": [
+      "democracia",
+      "democracia-direta",
+      "cidade-estado"
+    ]
   },
   {
     "countryId": "esparta",
@@ -558,7 +803,13 @@
       "religiao": 11,
       "moral": 9,
       "tecnologia": 22
-    }
+    },
+    "tags": [
+      "monarquia",
+      "oligarquia",
+      "militarismo",
+      "conservadorismo"
+    ]
   },
   {
     "countryId": "imperio-romano",
@@ -575,7 +826,13 @@
       "religiao": 26,
       "moral": 21,
       "tecnologia": 50
-    }
+    },
+    "tags": [
+      "imperio",
+      "ditadura",
+      "militarismo",
+      "religiao"
+    ]
   },
   {
     "countryId": "sacro-imperio-romano-germanico",
@@ -592,7 +849,13 @@
       "religiao": 3,
       "moral": 5,
       "tecnologia": 17
-    }
+    },
+    "tags": [
+      "monarquia",
+      "imperio",
+      "federacao",
+      "religiao"
+    ]
   },
   {
     "countryId": "republica-de-veneza",
@@ -609,7 +872,13 @@
       "religiao": 27,
       "moral": 31,
       "tecnologia": 52
-    }
+    },
+    "tags": [
+      "republica",
+      "oligarquia",
+      "capitalismo",
+      "comercio"
+    ]
   },
   {
     "countryId": "imperio-otomano",
@@ -626,7 +895,13 @@
       "religiao": 1,
       "moral": 1,
       "tecnologia": 29
-    }
+    },
+    "tags": [
+      "monarquia",
+      "imperio",
+      "teocracia",
+      "religiao"
+    ]
   },
   {
     "countryId": "reino-unido-vitoriano-imperio-britanico",
@@ -643,7 +918,14 @@
       "religiao": 22,
       "moral": 19,
       "tecnologia": 61
-    }
+    },
+    "tags": [
+      "monarquia",
+      "imperio",
+      "parlamentarismo",
+      "capitalismo",
+      "colonialismo"
+    ]
   },
   {
     "countryId": "imperio-do-brasil",
@@ -660,7 +942,13 @@
       "religiao": 14,
       "moral": 18,
       "tecnologia": 44
-    }
+    },
+    "tags": [
+      "monarquia",
+      "imperio",
+      "parlamentarismo",
+      "religiao"
+    ]
   },
   {
     "countryId": "alemanha-nazista-terceiro-reich",
@@ -677,7 +965,14 @@
       "religiao": 36,
       "moral": 12,
       "tecnologia": 34
-    }
+    },
+    "tags": [
+      "ditadura",
+      "fascismo",
+      "nacionalismo",
+      "racismo",
+      "militarismo"
+    ]
   },
   {
     "countryId": "italia-fascista-mussolini",
@@ -694,7 +989,14 @@
       "religiao": 21,
       "moral": 13,
       "tecnologia": 48
-    }
+    },
+    "tags": [
+      "ditadura",
+      "fascismo",
+      "nacionalismo",
+      "corporativismo",
+      "militarismo"
+    ]
   },
   {
     "countryId": "chile-de-pinochet",
@@ -711,7 +1013,14 @@
       "religiao": 19,
       "moral": 11,
       "tecnologia": 51
-    }
+    },
+    "tags": [
+      "ditadura",
+      "militarismo",
+      "capitalismo",
+      "livre-mercado",
+      "conservadorismo"
+    ]
   },
   {
     "countryId": "uniao-sovietica-urss",
@@ -728,7 +1037,15 @@
       "religiao": 95,
       "moral": 59,
       "tecnologia": 66
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "comunismo",
+      "planejamento"
+    ]
   },
   {
     "countryId": "china-maoista",
@@ -745,7 +1062,15 @@
       "religiao": 87,
       "moral": 60,
       "tecnologia": 56
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "comunismo",
+      "maoismo"
+    ]
   },
   {
     "countryId": "camboja-do-khmer-vermelho-pol-pot",
@@ -762,7 +1087,15 @@
       "religiao": 92,
       "moral": 36,
       "tecnologia": 12
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "partido-unico",
+      "socialismo",
+      "comunismo",
+      "agrarismo"
+    ]
   },
   {
     "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
@@ -779,7 +1112,13 @@
       "religiao": 87,
       "moral": 85,
       "tecnologia": 57
-    }
+    },
+    "tags": [
+      "anarquia",
+      "socialismo",
+      "libertario",
+      "democracia-direta"
+    ]
   },
   {
     "countryId": "argentina-peronista",
@@ -796,7 +1135,15 @@
       "religiao": 32,
       "moral": 35,
       "tecnologia": 22
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "populismo",
+      "nacionalismo",
+      "corporativismo",
+      "trabalhismo"
+    ]
   },
   {
     "countryId": "egito-de-nasser",
@@ -813,7 +1160,14 @@
       "religiao": 36,
       "moral": 36,
       "tecnologia": 57
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "socialismo",
+      "nacionalismo",
+      "desenvolvimentismo"
+    ]
   },
   {
     "countryId": "africa-do-sul-do-apartheid",
@@ -830,7 +1184,14 @@
       "religiao": 20,
       "moral": 2,
       "tecnologia": 49
-    }
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "apartheid",
+      "nacionalismo",
+      "racismo"
+    ]
   },
   {
     "countryId": "estado-islamico-autoproclamado",
@@ -847,6 +1208,507 @@
       "religiao": 0,
       "moral": 0,
       "tecnologia": 24
-    }
+    },
+    "tags": [
+      "teocracia",
+      "ditadura",
+      "religiao",
+      "islamismo",
+      "totalitarismo"
+    ]
+  },
+  {
+    "countryId": "hong-kong",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 35,
+      "poder": 42,
+      "imigracao": 45,
+      "diplomacia": 30,
+      "intervencao": 65,
+      "economia": 8,
+      "controle": 5,
+      "comercio": 6,
+      "religiao": 65,
+      "moral": 60,
+      "tecnologia": 85
+    },
+    "tags": [
+      "capitalismo",
+      "livre-mercado",
+      "globalismo",
+      "tecnocracia",
+      "autonomia"
+    ]
+  },
+  {
+    "countryId": "argentina",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 68,
+      "poder": 22,
+      "imigracao": 48,
+      "diplomacia": 28,
+      "intervencao": 72,
+      "economia": 12,
+      "controle": 10,
+      "comercio": 18,
+      "religiao": 42,
+      "moral": 45,
+      "tecnologia": 72
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "presidencialismo",
+      "capitalismo",
+      "libertario",
+      "livre-mercado"
+    ]
+  },
+  {
+    "countryId": "liechtenstein",
+    "vector": {
+      "estrutura": 88,
+      "representacao": 60,
+      "poder": 25,
+      "imigracao": 58,
+      "diplomacia": 12,
+      "intervencao": 85,
+      "economia": 12,
+      "controle": 8,
+      "comercio": 14,
+      "religiao": 30,
+      "moral": 35,
+      "tecnologia": 68
+    },
+    "tags": [
+      "monarquia",
+      "democracia",
+      "parlamentarismo",
+      "capitalismo",
+      "libertario"
+    ]
+  },
+  {
+    "countryId": "rojava",
+    "vector": {
+      "estrutura": 97,
+      "representacao": 86,
+      "poder": 18,
+      "imigracao": 18,
+      "diplomacia": 40,
+      "intervencao": 68,
+      "economia": 82,
+      "controle": 70,
+      "comercio": 65,
+      "religiao": 82,
+      "moral": 92,
+      "tecnologia": 58
+    },
+    "tags": [
+      "democracia",
+      "federacao",
+      "socialismo",
+      "anarquia",
+      "libertario",
+      "ambientalismo"
+    ]
+  },
+  {
+    "countryId": "iugoslavia-socialista",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 22,
+      "poder": 68,
+      "imigracao": 45,
+      "diplomacia": 45,
+      "intervencao": 50,
+      "economia": 82,
+      "controle": 70,
+      "comercio": 45,
+      "religiao": 78,
+      "moral": 58,
+      "tecnologia": 60
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "federacao",
+      "partido-unico",
+      "socialismo",
+      "autogestao"
+    ]
+  },
+  {
+    "countryId": "espanha-franquista",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 4,
+      "poder": 90,
+      "imigracao": 78,
+      "diplomacia": 58,
+      "intervencao": 18,
+      "economia": 45,
+      "controle": 75,
+      "comercio": 78,
+      "religiao": 10,
+      "moral": 4,
+      "tecnologia": 38
+    },
+    "tags": [
+      "ditadura",
+      "fascismo",
+      "religiao",
+      "nacionalismo",
+      "corporativismo"
+    ]
+  },
+  {
+    "countryId": "islandia-medieval",
+    "vector": {
+      "estrutura": 98,
+      "representacao": 62,
+      "poder": 5,
+      "imigracao": 50,
+      "diplomacia": 25,
+      "intervencao": 90,
+      "economia": 20,
+      "controle": 8,
+      "comercio": 38,
+      "religiao": 25,
+      "moral": 25,
+      "tecnologia": 20
+    },
+    "tags": [
+      "anarquia",
+      "capitalismo",
+      "libertario",
+      "democracia-direta"
+    ]
+  },
+  {
+    "countryId": "emirados-arabes-unidos",
+    "vector": {
+      "estrutura": 75,
+      "representacao": 8,
+      "poder": 80,
+      "imigracao": 42,
+      "diplomacia": 40,
+      "intervencao": 42,
+      "economia": 18,
+      "controle": 34,
+      "comercio": 15,
+      "religiao": 12,
+      "moral": 12,
+      "tecnologia": 88
+    },
+    "tags": [
+      "monarquia",
+      "federacao",
+      "ditadura",
+      "tecnocracia",
+      "capitalismo",
+      "livre-mercado"
+    ]
+  },
+  {
+    "countryId": "portugal-estado-novo",
+    "vector": {
+      "estrutura": 16,
+      "representacao": 3,
+      "poder": 86,
+      "imigracao": 72,
+      "diplomacia": 45,
+      "intervencao": 30,
+      "economia": 48,
+      "controle": 72,
+      "comercio": 65,
+      "religiao": 12,
+      "moral": 8,
+      "tecnologia": 35
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "corporativismo",
+      "conservadorismo",
+      "religiao",
+      "nacionalismo"
+    ]
+  },
+  {
+    "countryId": "prussia",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 8,
+      "poder": 88,
+      "imigracao": 62,
+      "diplomacia": 72,
+      "intervencao": 28,
+      "economia": 45,
+      "controle": 78,
+      "comercio": 62,
+      "religiao": 25,
+      "moral": 18,
+      "tecnologia": 58
+    },
+    "tags": [
+      "monarquia",
+      "ditadura",
+      "militarismo",
+      "cameralismo",
+      "desenvolvimentismo"
+    ]
+  },
+  {
+    "countryId": "polonia",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 68,
+      "poder": 55,
+      "imigracao": 75,
+      "diplomacia": 55,
+      "intervencao": 30,
+      "economia": 35,
+      "controle": 42,
+      "comercio": 45,
+      "religiao": 18,
+      "moral": 22,
+      "tecnologia": 58
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "parlamentarismo",
+      "conservadorismo",
+      "nacionalismo",
+      "religiao"
+    ]
+  },
+  {
+    "countryId": "ucrania-territorio-livre",
+    "vector": {
+      "estrutura": 98,
+      "representacao": 90,
+      "poder": 6,
+      "imigracao": 30,
+      "diplomacia": 35,
+      "intervencao": 80,
+      "economia": 92,
+      "controle": 75,
+      "comercio": 70,
+      "religiao": 86,
+      "moral": 82,
+      "tecnologia": 35
+    },
+    "tags": [
+      "anarquia",
+      "socialismo",
+      "libertario",
+      "comunismo"
+    ]
+  },
+  {
+    "countryId": "brasil-era-vargas",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 10,
+      "poder": 78,
+      "imigracao": 52,
+      "diplomacia": 42,
+      "intervencao": 24,
+      "economia": 68,
+      "controle": 82,
+      "comercio": 76,
+      "religiao": 28,
+      "moral": 30,
+      "tecnologia": 45
+    },
+    "tags": [
+      "republica",
+      "ditadura",
+      "desenvolvimentismo",
+      "trabalhismo",
+      "nacionalismo",
+      "corporativismo"
+    ]
+  },
+  {
+    "countryId": "tchequia",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 78,
+      "poder": 35,
+      "imigracao": 50,
+      "diplomacia": 30,
+      "intervencao": 62,
+      "economia": 30,
+      "controle": 28,
+      "comercio": 22,
+      "religiao": 92,
+      "moral": 65,
+      "tecnologia": 70
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "parlamentarismo",
+      "liberalismo",
+      "secularismo",
+      "capitalismo"
+    ]
+  },
+  {
+    "countryId": "eua-california",
+    "vector": {
+      "estrutura": 80,
+      "representacao": 78,
+      "poder": 42,
+      "imigracao": 25,
+      "diplomacia": 42,
+      "intervencao": 52,
+      "economia": 42,
+      "controle": 45,
+      "comercio": 30,
+      "religiao": 82,
+      "moral": 88,
+      "tecnologia": 96
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "progressismo",
+      "tecnocracia",
+      "capitalismo",
+      "ambientalismo"
+    ]
+  },
+  {
+    "countryId": "eua-texas",
+    "vector": {
+      "estrutura": 86,
+      "representacao": 72,
+      "poder": 28,
+      "imigracao": 62,
+      "diplomacia": 54,
+      "intervencao": 45,
+      "economia": 15,
+      "controle": 12,
+      "comercio": 25,
+      "religiao": 25,
+      "moral": 30,
+      "tecnologia": 70
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "conservadorismo",
+      "capitalismo",
+      "libertario",
+      "religiao"
+    ]
+  },
+  {
+    "countryId": "eua-nova-york",
+    "vector": {
+      "estrutura": 75,
+      "representacao": 78,
+      "poder": 40,
+      "imigracao": 22,
+      "diplomacia": 48,
+      "intervencao": 50,
+      "economia": 20,
+      "controle": 20,
+      "comercio": 12,
+      "religiao": 78,
+      "moral": 75,
+      "tecnologia": 85
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "capitalismo",
+      "globalismo",
+      "liberalismo"
+    ]
+  },
+  {
+    "countryId": "eua-new-hampshire",
+    "vector": {
+      "estrutura": 88,
+      "representacao": 78,
+      "poder": 15,
+      "imigracao": 45,
+      "diplomacia": 20,
+      "intervencao": 82,
+      "economia": 10,
+      "controle": 8,
+      "comercio": 18,
+      "religiao": 72,
+      "moral": 58,
+      "tecnologia": 72
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "capitalismo",
+      "libertario",
+      "livre-mercado"
+    ]
+  },
+  {
+    "countryId": "eua-washington-dc",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 70,
+      "poder": 65,
+      "imigracao": 38,
+      "diplomacia": 75,
+      "intervencao": 25,
+      "economia": 32,
+      "controle": 42,
+      "comercio": 18,
+      "religiao": 60,
+      "moral": 62,
+      "tecnologia": 78
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "capital-federal",
+      "atlantismo",
+      "globalismo",
+      "militarismo"
+    ]
+  },
+  {
+    "countryId": "eua-massachusetts",
+    "vector": {
+      "estrutura": 82,
+      "representacao": 80,
+      "poder": 18,
+      "imigracao": 22,
+      "diplomacia": 18,
+      "intervencao": 82,
+      "economia": 35,
+      "controle": 28,
+      "comercio": 28,
+      "religiao": 85,
+      "moral": 82,
+      "tecnologia": 72
+    },
+    "tags": [
+      "republica",
+      "democracia",
+      "federacao",
+      "libertario",
+      "capitalismo",
+      "progressismo"
+    ]
   }
 ]
