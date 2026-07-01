@@ -232,6 +232,7 @@ export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
+  const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
@@ -257,6 +258,27 @@ export default function App() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (screen !== 'home') {
+      setIsHomeSeoReady(false);
+      return;
+    }
+
+    setIsHomeSeoReady(false);
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+
+    if (idleWindow.requestIdleCallback) {
+      const idleId = idleWindow.requestIdleCallback(() => setIsHomeSeoReady(true), { timeout: 1600 });
+      return () => idleWindow.cancelIdleCallback?.(idleId);
+    }
+
+    const timeoutId = window.setTimeout(() => setIsHomeSeoReady(true), 900);
+    return () => window.clearTimeout(timeoutId);
+  }, [screen]);
 
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
@@ -546,6 +568,7 @@ export default function App() {
             </div>
           </div>
 
+          {isHomeSeoReady && (
           <div className="home-seo">
             <section className="seo-block fade-up" aria-labelledby="como-funciona">
               <div className="section-heading">
@@ -686,6 +709,7 @@ export default function App() {
               </div>
             </section>
           </div>
+          )}
         </section>
       )}
 
