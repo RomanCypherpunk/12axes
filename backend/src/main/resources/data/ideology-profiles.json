@@ -713,7 +713,7 @@
   {
     "ideologyId": "neorreacionarismo",
     "vector": {
-      "estrutura": 70,
+      "estrutura": 50,
       "representacao": 8,
       "poder": 60,
       "imigracao": 70,
@@ -721,7 +721,7 @@
       "intervencao": 35,
       "economia": 25,
       "controle": 30,
-      "comercio": 55,
+      "comercio": 35,
       "religiao": 55,
       "moral": 8,
       "tecnologia": 92
@@ -734,15 +734,15 @@
   {
     "ideologyId": "neocameralismo",
     "vector": {
-      "estrutura": 80,
+      "estrutura": 90,
       "representacao": 6,
-      "poder": 60,
+      "poder": 50,
       "imigracao": 70,
       "diplomacia": 48,
       "intervencao": 62,
       "economia": 15,
       "controle": 28,
-      "comercio": 40,
+      "comercio": 35,
       "religiao": 68,
       "moral": 18,
       "tecnologia": 90
@@ -2981,16 +2981,16 @@
   {
     "ideologyId": "tecno-monarquismo",
     "vector": {
-      "estrutura": 25,
+      "estrutura": 50,
       "representacao": 15,
-      "poder": 85,
+      "poder": 65,
       "imigracao": 65,
       "diplomacia": 58,
       "intervencao": 35,
       "economia": 35,
       "controle": 40,
-      "comercio": 48,
-      "religiao": 68,
+      "comercio": 30,
+      "religiao": 55,
       "moral": 28,
       "tecnologia": 95
     },
