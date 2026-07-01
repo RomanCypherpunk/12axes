@@ -32,7 +32,7 @@ export const SHARE_COLORS = {
   balanced: '#94A3B8'
 };
 const SHARE_FONT_DISPLAY = '"Sora", ui-sans-serif, system-ui, -apple-system, sans-serif';
-const SHARE_FONT_BODY = '"Poppins", ui-sans-serif, system-ui, -apple-system, sans-serif';
+const SHARE_FONT_BODY = '"Inter", ui-sans-serif, system-ui, -apple-system, sans-serif';
 const SHARE_ACCENT_GRAD = 'linear-gradient(135deg, #15803D 0%, #22C55E 55%, #4ADE80 100%)';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const SHARE_MATCH_RING_BG = 'rgba(34, 197, 94, 0.14)';
