@@ -253,7 +253,7 @@ public class QuizDataService {
         return switch (value) {
             case STRONGLY_AGREE -> "Concordo totalmente";
             case AGREE -> "Concordo";
-            case NEUTRAL -> "Neutro / Inseguro";
+            case NEUTRAL -> "Neutro ou Depende";
             case DISAGREE -> "Discordo";
             case STRONGLY_DISAGREE -> "Discordo totalmente";
         };

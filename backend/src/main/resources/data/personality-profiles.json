@@ -2264,8 +2264,8 @@
     "personalityId": "nayib-bukele",
     "vector": {
       "estrutura": 30,
-      "representacao": 28,
-      "poder": 92,
+      "representacao": 38,
+      "poder": 72,
       "imigracao": 55,
       "diplomacia": 48,
       "intervencao": 40,
@@ -2853,6 +2853,329 @@
       "religiao": 55,
       "moral": 62,
       "tecnologia": 58
+    }
+  },
+  {
+    "personalityId": "francisco-franco",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 6,
+      "poder": 92,
+      "imigracao": 80,
+      "diplomacia": 70,
+      "intervencao": 15,
+      "economia": 38,
+      "controle": 55,
+      "comercio": 75,
+      "religiao": 8,
+      "moral": 8,
+      "tecnologia": 35
+    }
+  },
+  {
+    "personalityId": "barack-obama",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 85,
+      "poder": 35,
+      "imigracao": 35,
+      "diplomacia": 38,
+      "intervencao": 60,
+      "economia": 58,
+      "controle": 50,
+      "comercio": 35,
+      "religiao": 55,
+      "moral": 75,
+      "tecnologia": 75
+    }
+  },
+  {
+    "personalityId": "benjamin-netanyahu",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 45,
+      "poder": 78,
+      "imigracao": 80,
+      "diplomacia": 75,
+      "intervencao": 18,
+      "economia": 25,
+      "controle": 30,
+      "comercio": 55,
+      "religiao": 30,
+      "moral": 22,
+      "tecnologia": 70
+    }
+  },
+  {
+    "personalityId": "augusto-pinochet",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 5,
+      "poder": 92,
+      "imigracao": 65,
+      "diplomacia": 70,
+      "intervencao": 18,
+      "economia": 22,
+      "controle": 15,
+      "comercio": 45,
+      "religiao": 22,
+      "moral": 12,
+      "tecnologia": 55
+    }
+  },
+  {
+    "personalityId": "fidel-castro",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 8,
+      "poder": 88,
+      "imigracao": 55,
+      "diplomacia": 60,
+      "intervencao": 20,
+      "economia": 92,
+      "controle": 92,
+      "comercio": 78,
+      "religiao": 85,
+      "moral": 65,
+      "tecnologia": 55
+    }
+  },
+  {
+    "personalityId": "jose-mujica",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 88,
+      "poder": 25,
+      "imigracao": 35,
+      "diplomacia": 15,
+      "intervencao": 65,
+      "economia": 70,
+      "controle": 55,
+      "comercio": 55,
+      "religiao": 80,
+      "moral": 90,
+      "tecnologia": 50
+    }
+  },
+  {
+    "personalityId": "recep-tayyip-erdogan",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 25,
+      "poder": 80,
+      "imigracao": 70,
+      "diplomacia": 62,
+      "intervencao": 22,
+      "economia": 35,
+      "controle": 45,
+      "comercio": 55,
+      "religiao": 12,
+      "moral": 15,
+      "tecnologia": 60
+    }
+  },
+  {
+    "personalityId": "jd-vance",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 55,
+      "poder": 65,
+      "imigracao": 82,
+      "diplomacia": 38,
+      "intervencao": 40,
+      "economia": 38,
+      "controle": 38,
+      "comercio": 78,
+      "religiao": 25,
+      "moral": 18,
+      "tecnologia": 60
+    }
+  },
+  {
+    "personalityId": "bashar-al-assad",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 4,
+      "poder": 95,
+      "imigracao": 70,
+      "diplomacia": 85,
+      "intervencao": 18,
+      "economia": 60,
+      "controle": 70,
+      "comercio": 70,
+      "religiao": 65,
+      "moral": 45,
+      "tecnologia": 45
+    }
+  },
+  {
+    "personalityId": "john-f-kennedy",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 82,
+      "poder": 48,
+      "imigracao": 45,
+      "diplomacia": 58,
+      "intervencao": 45,
+      "economia": 62,
+      "controle": 55,
+      "comercio": 38,
+      "religiao": 45,
+      "moral": 62,
+      "tecnologia": 85
+    }
+  },
+  {
+    "personalityId": "ronald-reagan",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 70,
+      "poder": 45,
+      "imigracao": 55,
+      "diplomacia": 72,
+      "intervencao": 30,
+      "economia": 18,
+      "controle": 18,
+      "comercio": 35,
+      "religiao": 18,
+      "moral": 20,
+      "tecnologia": 65
+    }
+  },
+  {
+    "personalityId": "george-w-bush",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 65,
+      "poder": 72,
+      "imigracao": 52,
+      "diplomacia": 85,
+      "intervencao": 18,
+      "economia": 25,
+      "controle": 25,
+      "comercio": 30,
+      "religiao": 18,
+      "moral": 22,
+      "tecnologia": 65
+    }
+  },
+  {
+    "personalityId": "joe-biden",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 82,
+      "poder": 45,
+      "imigracao": 35,
+      "diplomacia": 52,
+      "intervencao": 58,
+      "economia": 62,
+      "controle": 55,
+      "comercio": 40,
+      "religiao": 42,
+      "moral": 72,
+      "tecnologia": 70
+    }
+  },
+  {
+    "personalityId": "fernando-haddad",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 78,
+      "poder": 40,
+      "imigracao": 45,
+      "diplomacia": 35,
+      "intervencao": 45,
+      "economia": 68,
+      "controle": 62,
+      "comercio": 55,
+      "religiao": 65,
+      "moral": 75,
+      "tecnologia": 70
+    }
+  },
+  {
+    "personalityId": "john-mcafee",
+    "vector": {
+      "estrutura": 85,
+      "representacao": 75,
+      "poder": 10,
+      "imigracao": 45,
+      "diplomacia": 25,
+      "intervencao": 82,
+      "economia": 10,
+      "controle": 5,
+      "comercio": 20,
+      "religiao": 82,
+      "moral": 78,
+      "tecnologia": 95
+    }
+  },
+  {
+    "personalityId": "hal-finney",
+    "vector": {
+      "estrutura": 82,
+      "representacao": 78,
+      "poder": 12,
+      "imigracao": 50,
+      "diplomacia": 25,
+      "intervencao": 82,
+      "economia": 18,
+      "controle": 10,
+      "comercio": 25,
+      "religiao": 80,
+      "moral": 72,
+      "tecnologia": 98
+    }
+  },
+  {
+    "personalityId": "kim-jong-un",
+    "vector": {
+      "estrutura": 12,
+      "representacao": 2,
+      "poder": 98,
+      "imigracao": 85,
+      "diplomacia": 82,
+      "intervencao": 12,
+      "economia": 92,
+      "controle": 94,
+      "comercio": 90,
+      "religiao": 88,
+      "moral": 35,
+      "tecnologia": 65
+    }
+  },
+  {
+    "personalityId": "nick-fuentes",
+    "vector": {
+      "estrutura": 28,
+      "representacao": 10,
+      "poder": 88,
+      "imigracao": 95,
+      "diplomacia": 45,
+      "intervencao": 25,
+      "economia": 35,
+      "controle": 40,
+      "comercio": 82,
+      "religiao": 5,
+      "moral": 5,
+      "tecnologia": 45
+    }
+  },
+  {
+    "personalityId": "ben-shapiro",
+    "vector": {
+      "estrutura": 62,
+      "representacao": 68,
+      "poder": 58,
+      "imigracao": 68,
+      "diplomacia": 65,
+      "intervencao": 35,
+      "economia": 18,
+      "controle": 18,
+      "comercio": 32,
+      "religiao": 12,
+      "moral": 12,
+      "tecnologia": 60
     }
   }
 ]
