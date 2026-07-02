@@ -4039,8 +4039,9 @@
 }
 
 .app-shell[data-screen="quiz"] .question-card {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-height: 0;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 2vh, 20px);
@@ -4058,18 +4059,18 @@
 }
 
 .app-shell[data-screen="quiz"] .answer-grid {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(7px, 1.1vh, 11px);
 }
 
 .app-shell[data-screen="quiz"] .answer-button {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   min-height: 42px;
-  max-height: 62px;
+  max-height: none;
 }
 
 .app-shell[data-screen="quiz"] .quiz-actions {
@@ -4083,10 +4084,10 @@
   font-size: 0.82rem;
 }
 
-/* Roomy phones: don't let the card stretch the rows too tall */
+/* Roomy phones: keep the tap targets comfortable without stretching the card */
 @media (min-height: 780px) {
   .app-shell[data-screen="quiz"] .answer-button {
-    max-height: 66px;
+    min-height: 46px;
   }
 }
 
