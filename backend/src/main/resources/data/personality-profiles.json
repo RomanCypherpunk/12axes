@@ -3517,5 +3517,141 @@
       "moral": 8,
       "tecnologia": 65
     }
+  },
+  {
+    "personalityId": "aristoteles",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 55,
+      "poder": 65,
+      "imigracao": 65,
+      "diplomacia": 45,
+      "intervencao": 35,
+      "economia": 35,
+      "controle": 42,
+      "comercio": 62,
+      "religiao": 35,
+      "moral": 20,
+      "tecnologia": 28
+    }
+  },
+  {
+    "personalityId": "platao",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 12,
+      "poder": 82,
+      "imigracao": 72,
+      "diplomacia": 55,
+      "intervencao": 28,
+      "economia": 72,
+      "controle": 82,
+      "comercio": 78,
+      "religiao": 35,
+      "moral": 18,
+      "tecnologia": 25
+    }
+  },
+  {
+    "personalityId": "foucault",
+    "vector": {
+      "estrutura": 78,
+      "representacao": 82,
+      "poder": 12,
+      "imigracao": 35,
+      "diplomacia": 25,
+      "intervencao": 70,
+      "economia": 68,
+      "controle": 45,
+      "comercio": 50,
+      "religiao": 88,
+      "moral": 92,
+      "tecnologia": 55
+    }
+  },
+  {
+    "personalityId": "tocqueville",
+    "vector": {
+      "estrutura": 82,
+      "representacao": 82,
+      "poder": 32,
+      "imigracao": 55,
+      "diplomacia": 38,
+      "intervencao": 62,
+      "economia": 28,
+      "controle": 25,
+      "comercio": 30,
+      "religiao": 35,
+      "moral": 45,
+      "tecnologia": 62
+    }
+  },
+  {
+    "personalityId": "nietzsche",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 18,
+      "poder": 42,
+      "imigracao": 60,
+      "diplomacia": 48,
+      "intervencao": 45,
+      "economia": 25,
+      "controle": 28,
+      "comercio": 45,
+      "religiao": 92,
+      "moral": 62,
+      "tecnologia": 35
+    }
+  },
+  {
+    "personalityId": "rousseau",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 88,
+      "poder": 62,
+      "imigracao": 70,
+      "diplomacia": 25,
+      "intervencao": 32,
+      "economia": 70,
+      "controle": 72,
+      "comercio": 78,
+      "religiao": 35,
+      "moral": 45,
+      "tecnologia": 18
+    }
+  },
+  {
+    "personalityId": "hobbes",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 10,
+      "poder": 94,
+      "imigracao": 62,
+      "diplomacia": 62,
+      "intervencao": 28,
+      "economia": 25,
+      "controle": 32,
+      "comercio": 45,
+      "religiao": 55,
+      "moral": 35,
+      "tecnologia": 58
+    }
+  },
+  {
+    "personalityId": "maquiavel",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 62,
+      "poder": 82,
+      "imigracao": 60,
+      "diplomacia": 72,
+      "intervencao": 22,
+      "economia": 38,
+      "controle": 45,
+      "comercio": 55,
+      "religiao": 68,
+      "moral": 38,
+      "tecnologia": 62
+    }
   }
 ]
