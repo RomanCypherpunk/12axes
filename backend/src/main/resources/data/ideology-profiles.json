@@ -226,7 +226,7 @@
       "estrutura": 15,
       "representacao": 8,
       "poder": 92,
-      "imigracao": 75,
+      "imigracao": 90,
       "diplomacia": 80,
       "intervencao": 12,
       "economia": 88,
@@ -319,6 +319,23 @@
       "comercio": 80,
       "religiao": 12,
       "moral": 12,
+      "tecnologia": 42
+    }
+  },
+  {
+    "ideologyId": "nacional-sindicalismo",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 10,
+      "poder": 90,
+      "imigracao": 80,
+      "diplomacia": 78,
+      "intervencao": 12,
+      "economia": 58,
+      "controle": 78,
+      "comercio": 82,
+      "religiao": 18,
+      "moral": 15,
       "tecnologia": 42
     }
   },
@@ -642,6 +659,23 @@
       "comercio": 68,
       "religiao": 28,
       "moral": 15,
+      "tecnologia": 45
+    }
+  },
+  {
+    "ideologyId": "terceira-posicao-politica",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 12,
+      "poder": 88,
+      "imigracao": 76,
+      "diplomacia": 74,
+      "intervencao": 18,
+      "economia": 68,
+      "controle": 72,
+      "comercio": 78,
+      "religiao": 32,
+      "moral": 22,
       "tecnologia": 45
     }
   },

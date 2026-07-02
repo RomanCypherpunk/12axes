@@ -118,9 +118,9 @@
   },
   {
     "id": "nacional-bolchevismo",
-    "name": "Nacional-Bolchevismo",
+    "name": "Nacional-Bolchevismo (NazBol)",
     "category": "Esquerda Autoritária",
-    "description": "Ideologia sincrética que funde socialismo revolucionário e nacionalismo radical, combinando economia coletivista com autoritarismo estatal e rejeição comum ao liberalismo, ao Ocidente e ao individualismo burguês.",
+    "description": "Ideologia sincrética, também chamada NazBol, que funde socialismo revolucionário e nacionalismo radical, combinando economia coletivista, autoritarismo estatal e rejeição ao liberalismo, ao Ocidente e ao individualismo burguês.",
     "vector": null,
     "countryId": "russia",
     "personalityId": "ernst-niekisch"
@@ -166,6 +166,15 @@
     "name": "Falangismo",
     "category": "Direita Autoritária",
     "description": "Nacionalismo autoritário espanhol de inspiração católica e sindicalista, que defende um Estado corporativo, a unidade nacional e a hierarquia social, tornando-se o pilar ideológico do regime de Franco na Espanha.",
+    "vector": null,
+    "countryId": "espanha-franquista",
+    "personalityId": "jose-antonio-primo-de-rivera"
+  },
+  {
+    "id": "nacional-sindicalismo",
+    "name": "Nacional-Sindicalismo",
+    "category": "Direita Autoritária",
+    "description": "Corrente nacionalista e sindicalista que rejeita liberalismo e marxismo, defendendo unidade nacional, organização corporativa do trabalho, justiça social autoritária e mobilização popular em torno do Estado.",
     "vector": null,
     "countryId": "espanha-franquista",
     "personalityId": "jose-antonio-primo-de-rivera"
@@ -340,6 +349,15 @@
     "vector": null,
     "countryId": "italia-fascista-mussolini",
     "personalityId": "mussolini"
+  },
+  {
+    "id": "terceira-posicao-politica",
+    "name": "Terceira Posição Política",
+    "category": "Direita Autoritária",
+    "description": "Família ideológica que busca uma terceira via contra liberalismo capitalista e marxismo, combinando nacionalismo, corporativismo, soberania econômica e crítica à democracia liberal de massas.",
+    "vector": null,
+    "countryId": "italia-fascista-mussolini",
+    "personalityId": "julius-evola"
   },
   {
     "id": "reacionarismo",
