@@ -3040,5 +3040,48 @@
       "ditadura",
       "fascismo"
     ]
+  },
+  {
+    "ideologyId": "liberalismo-autoritario",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 22,
+      "poder": 30,
+      "imigracao": 48,
+      "diplomacia": 45,
+      "intervencao": 55,
+      "economia": 15,
+      "controle": 22,
+      "comercio": 20,
+      "religiao": 65,
+      "moral": 62,
+      "tecnologia": 78
+    },
+    "countryTags": [
+      "regime-hibrido",
+      "capitalismo",
+      "tecnocracia"
+    ]
+  },
+  {
+    "ideologyId": "nacionalismo-progressista",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 74,
+      "poder": 52,
+      "imigracao": 35,
+      "diplomacia": 58,
+      "intervencao": 28,
+      "economia": 70,
+      "controle": 65,
+      "comercio": 75,
+      "religiao": 75,
+      "moral": 88,
+      "tecnologia": 70
+    },
+    "countryTags": [
+      "democracia",
+      "socialismo"
+    ]
   }
 ]

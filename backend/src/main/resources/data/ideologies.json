@@ -1312,5 +1312,23 @@
     "vector": null,
     "countryId": "china",
     "personalityId": "marinetti"
+  },
+  {
+    "id": "liberalismo-autoritario",
+    "name": "Liberalismo Autoritário",
+    "category": "Direita Autoritária",
+    "description": "Corrente que combina economia de mercado, propriedade privada, abertura comercial e tecnocracia com baixa participação democrática, defendendo que um Estado forte e eficiente preserve ordem, estabilidade e crescimento.",
+    "vector": null,
+    "countryId": "singapura",
+    "personalityId": "lee-kuan-yew"
+  },
+  {
+    "id": "nacionalismo-progressista",
+    "name": "Nacionalismo Progressista",
+    "category": "Esquerda Autoritária",
+    "description": "Corrente que une soberania nacional, proteção econômica e integração popular a reformas sociais progressistas, buscando um Estado capaz de defender a nação enquanto amplia direitos, igualdade e inclusão.",
+    "vector": null,
+    "countryId": "bolivia",
+    "personalityId": "abraham-lincoln"
   }
 ]

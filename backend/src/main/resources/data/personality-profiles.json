@@ -3177,5 +3177,56 @@
       "moral": 12,
       "tecnologia": 60
     }
+  },
+  {
+    "personalityId": "george-washington",
+    "vector": {
+      "estrutura": 78,
+      "representacao": 72,
+      "poder": 45,
+      "imigracao": 55,
+      "diplomacia": 70,
+      "intervencao": 78,
+      "economia": 25,
+      "controle": 30,
+      "comercio": 42,
+      "religiao": 35,
+      "moral": 38,
+      "tecnologia": 55
+    }
+  },
+  {
+    "personalityId": "benjamin-franklin",
+    "vector": {
+      "estrutura": 75,
+      "representacao": 82,
+      "poder": 28,
+      "imigracao": 35,
+      "diplomacia": 35,
+      "intervencao": 72,
+      "economia": 25,
+      "controle": 20,
+      "comercio": 20,
+      "religiao": 70,
+      "moral": 78,
+      "tecnologia": 88
+    }
+  },
+  {
+    "personalityId": "abraham-lincoln",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 78,
+      "poder": 55,
+      "imigracao": 42,
+      "diplomacia": 55,
+      "intervencao": 32,
+      "economia": 55,
+      "controle": 58,
+      "comercio": 70,
+      "religiao": 35,
+      "moral": 82,
+      "tecnologia": 72
+    }
   }
 ]
