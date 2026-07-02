@@ -1698,5 +1698,124 @@
       "moral": 45,
       "tecnologia": 45
     }
+  },
+  {
+    "countryId": "vaticano",
+    "vector": {
+      "estrutura": 8,
+      "representacao": 2,
+      "poder": 65,
+      "imigracao": 80,
+      "diplomacia": 10,
+      "intervencao": 82,
+      "economia": 50,
+      "controle": 55,
+      "comercio": 55,
+      "religiao": 0,
+      "moral": 0,
+      "tecnologia": 35
+    }
+  },
+  {
+    "countryId": "monaco",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 42,
+      "poder": 42,
+      "imigracao": 65,
+      "diplomacia": 12,
+      "intervencao": 82,
+      "economia": 10,
+      "controle": 15,
+      "comercio": 12,
+      "religiao": 25,
+      "moral": 35,
+      "tecnologia": 65
+    }
+  },
+  {
+    "countryId": "estonia",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 86,
+      "poder": 35,
+      "imigracao": 55,
+      "diplomacia": 55,
+      "intervencao": 45,
+      "economia": 22,
+      "controle": 18,
+      "comercio": 20,
+      "religiao": 88,
+      "moral": 75,
+      "tecnologia": 95
+    }
+  },
+  {
+    "countryId": "luxemburgo",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 82,
+      "poder": 30,
+      "imigracao": 35,
+      "diplomacia": 25,
+      "intervencao": 62,
+      "economia": 20,
+      "controle": 30,
+      "comercio": 12,
+      "religiao": 55,
+      "moral": 70,
+      "tecnologia": 78
+    }
+  },
+  {
+    "countryId": "eua-florida",
+    "vector": {
+      "estrutura": 84,
+      "representacao": 70,
+      "poder": 38,
+      "imigracao": 65,
+      "diplomacia": 45,
+      "intervencao": 55,
+      "economia": 12,
+      "controle": 10,
+      "comercio": 25,
+      "religiao": 25,
+      "moral": 22,
+      "tecnologia": 75
+    }
+  },
+  {
+    "countryId": "imperio-do-japao",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 8,
+      "poder": 94,
+      "imigracao": 85,
+      "diplomacia": 92,
+      "intervencao": 5,
+      "economia": 45,
+      "controle": 72,
+      "comercio": 82,
+      "religiao": 12,
+      "moral": 10,
+      "tecnologia": 70
+    }
+  },
+  {
+    "countryId": "imperio-austro-hungaro",
+    "vector": {
+      "estrutura": 70,
+      "representacao": 25,
+      "poder": 65,
+      "imigracao": 55,
+      "diplomacia": 70,
+      "intervencao": 25,
+      "economia": 42,
+      "controle": 50,
+      "comercio": 55,
+      "religiao": 10,
+      "moral": 12,
+      "tecnologia": 45
+    }
   }
 ]

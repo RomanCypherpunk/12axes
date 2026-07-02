@@ -1174,5 +1174,83 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Gran_Colombia.svg",
     "flagNote": "Bandeira histórica usada como referência visual para o período."
+  },
+  {
+    "id": "vaticano",
+    "name": "Vaticano",
+    "category": "Monarquia teocrática eletiva",
+    "description": "Cidade-Estado governada pela Santa Sé, o Vaticano combina soberania religiosa, monarquia eletiva absoluta e administração clerical, funcionando como centro institucional da Igreja Católica e ator diplomático global.",
+    "flagPath": "/countries/flags/vaticano.png",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "monaco",
+    "name": "Mônaco",
+    "category": "Monarquia constitucional rentista",
+    "description": "Pequeno principado mediterrâneo, Mônaco combina monarquia constitucional, baixa tributação, forte dependência de serviços financeiros e turismo de luxo, mantendo ordem social conservadora e grande abertura econômica.",
+    "flagPath": "/countries/flags/monaco.png",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "estonia",
+    "name": "Estônia",
+    "category": "Democracia digital báltica",
+    "description": "República parlamentar báltica, a Estônia une democracia liberal, economia aberta, Estado digital avançado e forte alinhamento euro-atlântico, mantendo preocupação com soberania nacional diante da pressão russa.",
+    "flagPath": "/countries/flags/estonia.png",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "luxemburgo",
+    "name": "Luxemburgo",
+    "category": "Monarquia parlamentar financeira",
+    "description": "Grão-ducado europeu e centro financeiro global, Luxemburgo combina monarquia parlamentar, economia aberta, alta integração europeia e sociedade multicultural sustentada por serviços, tecnologia e finanças.",
+    "flagPath": "/countries/flags/luxemburgo.png",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "eua-florida",
+    "name": "Estados Unidos (Flórida)",
+    "category": "Região norte-americana conservadora de mercado",
+    "description": "Estado norte-americano de perfil conservador e pró-mercado, a Flórida combina baixa tributação, turismo, imigração intensa, política cultural combativa e governo estadual ativo em segurança e educação.",
+    "flagPath": "/countries/flags/eua-florida.png",
+    "historical": false,
+    "period": "",
+    "vector": null
+  },
+  {
+    "id": "imperio-do-japao",
+    "name": "Império do Japão",
+    "category": "Império militar modernizador",
+    "description": "Regime imperial japonês do início do século XX, combinou monarquia sagrada, militarismo, industrialização acelerada, nacionalismo expansionista e forte disciplina social até sua derrota na Segunda Guerra Mundial.",
+    "flagPath": "/countries/flags/imperio-do-japao.png",
+    "historical": true,
+    "period": "1868–1947",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan_(1870%E2%80%931999).svg",
+    "flagNote": "Bandeira histórica usada como referência visual para o período."
+  },
+  {
+    "id": "imperio-austro-hungaro",
+    "name": "Império Austro-Húngaro",
+    "category": "Monarquia dual multinacional",
+    "description": "Monarquia dual da Europa Central, o Império Austro-Húngaro reuniu múltiplas nacionalidades sob a dinastia Habsburgo, combinando aristocracia, burocracia imperial, catolicismo político e tensões nacionalistas crescentes.",
+    "flagPath": "/countries/flags/imperio-austro-hungaro.png",
+    "historical": true,
+    "period": "1867–1918",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Ensign_of_Austro-Hungarian_civil_fleet_(1869-1918).svg",
+    "flagNote": "Bandeira histórica usada como referência visual para o período."
   }
 ]

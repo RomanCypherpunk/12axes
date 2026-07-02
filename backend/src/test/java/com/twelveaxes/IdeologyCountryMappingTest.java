@@ -28,7 +28,7 @@ class IdeologyCountryMappingTest {
                 .map(country -> country.id())
                 .toList();
 
-        assertThat(dataService.getCountries()).hasSize(100);
+        assertThat(dataService.getCountries()).hasSize(107);
         assertThat(profileIds).containsExactlyInAnyOrderElementsOf(countryIds);
     }
 
@@ -63,7 +63,7 @@ class IdeologyCountryMappingTest {
     @Test
     void everyCountryFlagIsAValidRasterAsset() {
         assertThat(dataService.getCountries())
-                .hasSize(100)
+                .hasSize(107)
                 .allSatisfy(country -> {
                     assertThat(country.flagPath()).startsWith("/countries/flags/");
                     assertThat(country.flagPath()).matches(".+\\.(gif|png|jpg|jpeg|webp)$");
