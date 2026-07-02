@@ -55,7 +55,7 @@ public class QuizController {
         var axes = scoringService.score(request);
         var matches = matcherService.findMatches(axes);
         var topMatch = matches.getFirst();
-        var topCountryMatch = countryMatcherService.findTopMatch(axes, topMatch);
+        var topCountryMatch = countryMatcherService.findTopMatch(axes);
         var topPersonalityMatch = personalityMatcherService.findTopMatch(axes);
         return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
     }

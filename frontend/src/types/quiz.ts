@@ -80,7 +80,6 @@ export interface CountryMatch {
   flagNote?: string;
   historical: boolean;
   period: string;
-  tags: string[];
   compatibility: number;
 }
 

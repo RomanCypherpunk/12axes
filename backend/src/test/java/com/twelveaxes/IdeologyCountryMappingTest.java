@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.CountryMatch;
-import com.twelveaxes.model.IdeologyMatch;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import java.nio.file.Path;
@@ -34,7 +33,7 @@ class IdeologyCountryMappingTest {
     }
 
     @Test
-    void everyCountryProfileUsesTheTwelveKnownAxesAndSystemTags() {
+    void everyCountryProfileUsesTheTwelveKnownAxes() {
         var axisIds = dataService.getAxes().stream()
                 .map(axis -> axis.id())
                 .toList();
@@ -47,62 +46,18 @@ class IdeologyCountryMappingTest {
                     assertThat(profile.vector().values())
                             .as("Country profile %s values must be percentages", profile.countryId())
                             .allSatisfy(value -> assertThat(value).isBetween(0.0, 100.0));
-                    assertThat(profile.tags())
-                            .as("Country profile %s must declare system tags", profile.countryId())
-                            .isNotEmpty()
-                            .allSatisfy(tag -> assertThat(tag).isNotBlank());
                 });
     }
 
     @Test
-    void everyIdeologyProfileDeclaresCountryTagsWithStrictCountryCandidates() {
-        assertThat(dataService.getIdeologyProfiles().values())
-                .allSatisfy(profile -> {
-                    assertThat(profile.countryTags())
-                            .as("Ideology profile %s must declare countryTags", profile.ideologyId())
-                            .isNotEmpty()
-                            .allSatisfy(tag -> assertThat(tag).isNotBlank());
-                    assertThat(dataService.getCountryProfiles().values())
-                            .as("Ideology profile %s countryTags must match at least one country: %s",
-                                    profile.ideologyId(), profile.countryTags())
-                            .anySatisfy(countryProfile ->
-                                    assertThat(countryProfile.tags()).containsAll(profile.countryTags()));
-                });
-    }
-
-    @Test
-    void monarchistFederativeProfileOnlyReturnsMonarchyFederationCandidates() {
-        var ideologyProfile = dataService.getIdeologyProfiles().get("monarquia-federativa");
-        CountryMatch country = countryMatcherService.findTopMatch(
-                axisResults(ideologyProfile.vector()),
-                ideologyMatch("monarquia-federativa", "Direita Libertaria", 91.0)
-        );
-
-        assertThat(country.tags()).contains("monarquia", "federacao");
-    }
-
-    @Test
-    void anarchoCapitalistProfileOnlyReturnsAnarchistCapitalistCandidates() {
-        var ideologyProfile = dataService.getIdeologyProfiles().get("anarcocapitalismo");
-        CountryMatch country = countryMatcherService.findTopMatch(
-                axisResults(ideologyProfile.vector()),
-                ideologyMatch("anarcocapitalismo", "Direita Libertaria", 91.0)
-        );
-
-        assertThat(country.tags()).contains("anarquia", "capitalismo");
-    }
-
-    @Test
-    void countryCompatibilityIsScoredIndependentlyFromIdeologyCompatibility() {
+    void countryMatchIsDrivenPurelyByVectorProximity() {
         var countryProfile = dataService.getCountryProfiles().get("islandia-medieval");
         CountryMatch country = countryMatcherService.findTopMatch(
-                axisResults(countryProfile.vector()),
-                ideologyMatch("anarcocapitalismo", "Direita Libertaria", 12.3)
+                axisResults(countryProfile.vector())
         );
 
         assertThat(country.countryId()).isEqualTo("islandia-medieval");
         assertThat(country.compatibility()).isGreaterThan(99.0);
-        assertThat(country.compatibility()).isNotEqualTo(12.3);
     }
 
     @Test
@@ -136,10 +91,6 @@ class IdeologyCountryMappingTest {
                             .as("Flag for %s must exist in frontend/public: %s", country.id(), country.flagPath())
                             .isRegularFile();
                 });
-    }
-
-    private IdeologyMatch ideologyMatch(String id, String category, double compatibility) {
-        return new IdeologyMatch(id, id, category, "", "", compatibility);
     }
 
     private List<AxisResult> axisResults(Map<String, Double> vector) {
