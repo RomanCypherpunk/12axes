@@ -1339,5 +1339,50 @@
     "vector": null,
     "countryId": "bolivia",
     "personalityId": "abraham-lincoln"
+  },
+  {
+    "id": "ecofascismo",
+    "name": "Ecofascismo",
+    "category": "Direita Autoritária",
+    "description": "Corrente que funde ecologia radical, autoritarismo e nacionalismo orgânico, defendendo controle populacional, preservação ambiental coercitiva e subordinação das liberdades individuais à sobrevivência da comunidade nacional.",
+    "vector": null,
+    "countryId": "italia",
+    "personalityId": "garrett-hardin"
+  },
+  {
+    "id": "comunismo-agrario",
+    "name": "Comunismo Agrário",
+    "category": "Esquerda Autoritária",
+    "description": "Modelo revolucionário que idealiza a vida camponesa e a produção rural coletiva, rejeitando cidades, mercados e propriedade privada em favor de uma igualdade imposta por mobilização estatal e disciplina comunitária.",
+    "vector": null,
+    "countryId": "camboja-do-khmer-vermelho-pol-pot",
+    "personalityId": "pol-pot"
+  },
+  {
+    "id": "socialismo-bolivariano",
+    "name": "Socialismo Bolivariano",
+    "category": "Esquerda Autoritária",
+    "description": "Projeto latino-americano que combina nacionalismo popular, anti-imperialismo, redistribuição social e forte liderança presidencial, usando o Estado e recursos estratégicos para promover soberania e inclusão popular.",
+    "vector": null,
+    "countryId": "venezuela",
+    "personalityId": "hugo-chavez"
+  },
+  {
+    "id": "nacional-desenvolvimentismo",
+    "name": "Nacional-Desenvolvimentismo",
+    "category": "Centro",
+    "description": "Corrente que defende industrialização, soberania nacional e planejamento estratégico do Estado, buscando modernizar a economia por investimento público, proteção produtiva e coordenação entre governo, ciência e empresas nacionais.",
+    "vector": null,
+    "countryId": "brasil-era-vargas",
+    "personalityId": "eneas-carneiro"
+  },
+  {
+    "id": "populismo-libertario",
+    "name": "Populismo Libertário",
+    "category": "Direita Libertária",
+    "description": "Vertente que une antipolítica, livre mercado radical e comunicação popular direta, atacando burocracias, impostos e elites partidárias em nome da liberdade individual, do empreendedorismo e da soberania do cidadão comum.",
+    "vector": null,
+    "countryId": "argentina",
+    "personalityId": "javier-milei"
   }
 ]

@@ -2531,5 +2531,90 @@
       "moral": 88,
       "tecnologia": 70
     }
+  },
+  {
+    "ideologyId": "ecofascismo",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 5,
+      "poder": 94,
+      "imigracao": 88,
+      "diplomacia": 78,
+      "intervencao": 12,
+      "economia": 55,
+      "controle": 72,
+      "comercio": 82,
+      "religiao": 30,
+      "moral": 20,
+      "tecnologia": 25
+    }
+  },
+  {
+    "ideologyId": "comunismo-agrario",
+    "vector": {
+      "estrutura": 12,
+      "representacao": 4,
+      "poder": 96,
+      "imigracao": 85,
+      "diplomacia": 80,
+      "intervencao": 18,
+      "economia": 96,
+      "controle": 96,
+      "comercio": 88,
+      "religiao": 92,
+      "moral": 35,
+      "tecnologia": 12
+    }
+  },
+  {
+    "ideologyId": "socialismo-bolivariano",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 55,
+      "poder": 72,
+      "imigracao": 45,
+      "diplomacia": 60,
+      "intervencao": 25,
+      "economia": 82,
+      "controle": 78,
+      "comercio": 80,
+      "religiao": 45,
+      "moral": 65,
+      "tecnologia": 55
+    }
+  },
+  {
+    "ideologyId": "nacional-desenvolvimentismo",
+    "vector": {
+      "estrutura": 42,
+      "representacao": 62,
+      "poder": 62,
+      "imigracao": 60,
+      "diplomacia": 55,
+      "intervencao": 20,
+      "economia": 62,
+      "controle": 68,
+      "comercio": 85,
+      "religiao": 40,
+      "moral": 45,
+      "tecnologia": 68
+    }
+  },
+  {
+    "ideologyId": "populismo-libertario",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 62,
+      "poder": 38,
+      "imigracao": 70,
+      "diplomacia": 45,
+      "intervencao": 58,
+      "economia": 12,
+      "controle": 12,
+      "comercio": 35,
+      "religiao": 25,
+      "moral": 25,
+      "tecnologia": 70
+    }
   }
 ]
