@@ -93,11 +93,11 @@
       "imigracao": 76,
       "diplomacia": 73,
       "intervencao": 13,
-      "economia": 70,
-      "controle": 72,
-      "comercio": 69,
+      "economia": 72,
+      "controle": 82,
+      "comercio": 85,
       "religiao": 21,
-      "moral": 17,
+      "moral": 42,
       "tecnologia": 66
     }
   },
@@ -130,7 +130,7 @@
       "economia": 42,
       "controle": 33,
       "comercio": 27,
-      "religiao": 58,
+      "religiao": 40,
       "moral": 68,
       "tecnologia": 77
     }
@@ -224,7 +224,7 @@
     "countryId": "hungria",
     "vector": {
       "estrutura": 51,
-      "representacao": 55,
+      "representacao": 40,
       "poder": 44,
       "imigracao": 68,
       "diplomacia": 45,
@@ -246,7 +246,7 @@
       "imigracao": 76,
       "diplomacia": 70,
       "intervencao": 18,
-      "economia": 35,
+      "economia": 50,
       "controle": 57,
       "comercio": 67,
       "religiao": 22,
@@ -546,7 +546,7 @@
   {
     "countryId": "esparta",
     "vector": {
-      "estrutura": 58,
+      "estrutura": 32,
       "representacao": 20,
       "poder": 86,
       "imigracao": 87,
@@ -597,7 +597,7 @@
   {
     "countryId": "republica-de-veneza",
     "vector": {
-      "estrutura": 71,
+      "estrutura": 31,
       "representacao": 40,
       "poder": 49,
       "imigracao": 38,
