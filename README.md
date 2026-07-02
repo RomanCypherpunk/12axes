@@ -89,7 +89,7 @@ Cada resposta gera um vetor de 12 valores (percentual do polo esquerdo por eixo)
 |----------|------:|
 | Concordo totalmente | 1.00 |
 | Concordo | 0.75 |
-| Neutro / Inseguro | 0.50 |
+| Neutro ou Depende | 0.50 |
 | Discordo | 0.25 |
 | Discordo totalmente | 0.00 |
 
