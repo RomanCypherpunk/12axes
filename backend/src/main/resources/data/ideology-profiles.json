@@ -12,7 +12,7 @@
       "controle": 95,
       "comercio": 75,
       "religiao": 90,
-      "moral": 65,
+      "moral": 58,
       "tecnologia": 70
     }
   },
@@ -46,24 +46,24 @@
       "controle": 95,
       "comercio": 80,
       "religiao": 88,
-      "moral": 55,
-      "tecnologia": 55
+      "moral": 60,
+      "tecnologia": 40
     }
   },
   {
     "ideologyId": "trotskismo",
     "vector": {
       "estrutura": 28,
-      "representacao": 45,
-      "poder": 72,
+      "representacao": 22,
+      "poder": 82,
       "imigracao": 40,
-      "diplomacia": 60,
+      "diplomacia": 65,
       "intervencao": 68,
       "economia": 92,
       "controle": 92,
       "comercio": 50,
       "religiao": 88,
-      "moral": 80,
+      "moral": 68,
       "tecnologia": 72
     }
   },
@@ -331,10 +331,10 @@
       "imigracao": 80,
       "diplomacia": 78,
       "intervencao": 12,
-      "economia": 58,
+      "economia": 62,
       "controle": 78,
       "comercio": 82,
-      "religiao": 18,
+      "religiao": 28,
       "moral": 15,
       "tecnologia": 42
     }
@@ -1130,7 +1130,7 @@
       "imigracao": 20,
       "diplomacia": 32,
       "intervencao": 65,
-      "economia": 80,
+      "economia": 70,
       "controle": 60,
       "comercio": 40,
       "religiao": 70,
@@ -1368,11 +1368,11 @@
       "imigracao": 30,
       "diplomacia": 22,
       "intervencao": 78,
-      "economia": 95,
-      "controle": 95,
+      "economia": 90,
+      "controle": 82,
       "comercio": 60,
       "religiao": 86,
-      "moral": 88,
+      "moral": 82,
       "tecnologia": 60
     }
   },
@@ -1488,7 +1488,7 @@
       "diplomacia": 25,
       "intervencao": 78,
       "economia": 62,
-      "controle": 55,
+      "controle": 48,
       "comercio": 45,
       "religiao": 65,
       "moral": 78,
@@ -1549,7 +1549,7 @@
   {
     "ideologyId": "comunalismo",
     "vector": {
-      "estrutura": 90,
+      "estrutura": 94,
       "representacao": 88,
       "poder": 18,
       "imigracao": 35,
@@ -1560,7 +1560,7 @@
       "comercio": 60,
       "religiao": 75,
       "moral": 85,
-      "tecnologia": 65
+      "tecnologia": 55
     }
   },
   {
@@ -1712,8 +1712,8 @@
       "controle": 75,
       "comercio": 55,
       "religiao": 65,
-      "moral": 92,
-      "tecnologia": 30
+      "moral": 96,
+      "tecnologia": 25
     }
   },
   {
@@ -1878,9 +1878,9 @@
       "imigracao": 50,
       "diplomacia": 25,
       "intervencao": 78,
-      "economia": 70,
+      "economia": 62,
       "controle": 50,
-      "comercio": 40,
+      "comercio": 35,
       "religiao": 65,
       "moral": 75,
       "tecnologia": 65
@@ -1983,7 +1983,7 @@
       "economia": 8,
       "controle": 5,
       "comercio": 30,
-      "religiao": 20,
+      "religiao": 30,
       "moral": 17,
       "tecnologia": 55
     }
@@ -2096,13 +2096,13 @@
       "estrutura": 98,
       "representacao": 88,
       "poder": 5,
-      "imigracao": 55,
+      "imigracao": 45,
       "diplomacia": 15,
       "intervencao": 92,
       "economia": 8,
       "controle": 5,
       "comercio": 10,
-      "religiao": 55,
+      "religiao": 60,
       "moral": 65,
       "tecnologia": 80
     }
@@ -2467,15 +2467,15 @@
   {
     "ideologyId": "tecno-monarquismo",
     "vector": {
-      "estrutura": 65,
+      "estrutura": 85,
       "representacao": 15,
-      "poder": 78,
-      "imigracao": 65,
+      "poder": 75,
+      "imigracao": 75,
       "diplomacia": 58,
-      "intervencao": 35,
-      "economia": 35,
-      "controle": 40,
-      "comercio": 30,
+      "intervencao": 45,
+      "economia": 22,
+      "controle": 30,
+      "comercio": 37,
       "religiao": 55,
       "moral": 28,
       "tecnologia": 95
@@ -2586,18 +2586,18 @@
   {
     "ideologyId": "comunismo-agrario",
     "vector": {
-      "estrutura": 12,
-      "representacao": 4,
-      "poder": 96,
-      "imigracao": 85,
-      "diplomacia": 80,
+      "estrutura": 28,
+      "representacao": 18,
+      "poder": 82,
+      "imigracao": 68,
+      "diplomacia": 58,
       "intervencao": 18,
-      "economia": 96,
-      "controle": 96,
-      "comercio": 88,
-      "religiao": 92,
-      "moral": 35,
-      "tecnologia": 12
+      "economia": 92,
+      "controle": 90,
+      "comercio": 82,
+      "religiao": 78,
+      "moral": 42,
+      "tecnologia": 15
     }
   },
   {
