@@ -3891,5 +3891,56 @@
       "moral": 70,
       "tecnologia": 78
     }
+  },
+  {
+    "personalityId": "satoshi-nakamoto",
+    "vector": {
+      "estrutura": 95,
+      "representacao": 82,
+      "poder": 1,
+      "imigracao": 50,
+      "diplomacia": 15,
+      "intervencao": 92,
+      "economia": 1,
+      "controle": 1,
+      "comercio": 1,
+      "religiao": 85,
+      "moral": 75,
+      "tecnologia": 100
+    }
+  },
+  {
+    "personalityId": "george-soros",
+    "vector": {
+      "estrutura": 68,
+      "representacao": 90,
+      "poder": 25,
+      "imigracao": 18,
+      "diplomacia": 25,
+      "intervencao": 78,
+      "economia": 55,
+      "controle": 52,
+      "comercio": 18,
+      "religiao": 82,
+      "moral": 90,
+      "tecnologia": 72
+    }
+  },
+  {
+    "personalityId": "bill-gates",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 75,
+      "poder": 55,
+      "imigracao": 35,
+      "diplomacia": 30,
+      "intervencao": 65,
+      "economia": 55,
+      "controle": 62,
+      "comercio": 25,
+      "religiao": 78,
+      "moral": 75,
+      "tecnologia": 88
+    }
   }
 ]

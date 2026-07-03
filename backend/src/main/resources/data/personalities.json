@@ -2517,5 +2517,38 @@
     "imageSourceName": "Wikimedia Commons / Wikipédia",
     "imageSourceUrl": "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt",
     "imageNote": "Retrato de Franklin D. Roosevelt via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "satoshi-nakamoto",
+    "name": "Satoshi Nakamoto",
+    "role": "Criador do Bitcoin",
+    "lifespan": "s.d.–",
+    "description": "Pseudônimo do criador do Bitcoin, Satoshi Nakamoto formulou uma moeda digital peer-to-peer baseada em prova criptográfica, descentralização, escassez programada e privacidade relativa sem depender de bancos, governos ou intermediários.",
+    "imagePath": "/personalities/portraits/satoshi-nakamoto.jpg",
+    "imageSourceName": "Imagem local",
+    "imageSourceUrl": "https://bitcoin.org/bitcoin.pdf",
+    "imageNote": "Imagem local fornecida no projeto para representar Satoshi Nakamoto."
+  },
+  {
+    "id": "george-soros",
+    "name": "George Soros",
+    "role": "Investidor e filantropo",
+    "lifespan": "1930–",
+    "description": "Investidor e fundador da Open Society Foundations, Soros defende democracia liberal, direitos humanos, sociedade civil, multiculturalismo, reforma da política de drogas, secularismo e instituições abertas contra autoritarismo e nacionalismo fechado.",
+    "imagePath": "/personalities/portraits/george-soros.jpg",
+    "imageSourceName": "Imagem local",
+    "imageSourceUrl": "https://www.opensocietyfoundations.org/george-soros",
+    "imageNote": "Imagem local fornecida no projeto para retratar George Soros."
+  },
+  {
+    "id": "bill-gates",
+    "name": "Bill Gates",
+    "role": "Empresário e filantropo",
+    "lifespan": "1955–",
+    "description": "Cofundador da Microsoft e líder da Gates Foundation, Gates combina capitalismo tecnológico, filantropia global, saúde pública, educação, combate à pobreza, inovação climática e confiança em ciência, métricas e soluções tecnocráticas.",
+    "imagePath": "/personalities/portraits/bill-gates.jpg",
+    "imageSourceName": "Imagem local",
+    "imageSourceUrl": "https://www.gatesnotes.com/",
+    "imageNote": "Imagem local fornecida no projeto para retratar Bill Gates."
   }
 ]
