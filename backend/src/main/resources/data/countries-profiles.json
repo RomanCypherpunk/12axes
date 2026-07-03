@@ -5,15 +5,15 @@
       "estrutura": 70,
       "representacao": 73,
       "poder": 47,
-      "imigracao": 44,
-      "diplomacia": 28,
-      "intervencao": 59,
-      "economia": 55,
+      "imigracao": 40,
+      "diplomacia": 20,
+      "intervencao": 65,
+      "economia": 60,
       "controle": 58,
-      "comercio": 55,
-      "religiao": 38,
-      "moral": 54,
-      "tecnologia": 58
+      "comercio": 70,
+      "religiao": 30,
+      "moral": 48,
+      "tecnologia": 55
     }
   },
   {
@@ -40,13 +40,13 @@
       "representacao": 70,
       "poder": 46,
       "imigracao": 48,
-      "diplomacia": 28,
-      "intervencao": 56,
-      "economia": 53,
-      "controle": 52,
-      "comercio": 56,
-      "religiao": 40,
-      "moral": 57,
+      "diplomacia": 30,
+      "intervencao": 65,
+      "economia": 60,
+      "controle": 58,
+      "comercio": 40,
+      "religiao": 45,
+      "moral": 60,
       "tecnologia": 60
     }
   },
@@ -70,18 +70,18 @@
   {
     "countryId": "bolivia",
     "vector": {
-      "estrutura": 48,
-      "representacao": 68,
-      "poder": 41,
-      "imigracao": 46,
+      "estrutura": 60,
+      "representacao": 60,
+      "poder": 50,
+      "imigracao": 55,
       "diplomacia": 32,
-      "intervencao": 56,
-      "economia": 53,
-      "controle": 57,
-      "comercio": 52,
-      "religiao": 43,
+      "intervencao": 50,
+      "economia": 70,
+      "controle": 65,
+      "comercio": 65,
+      "religiao": 45,
       "moral": 58,
-      "tecnologia": 66
+      "tecnologia": 45
     }
   },
   {
@@ -376,18 +376,18 @@
   {
     "countryId": "indonesia",
     "vector": {
-      "estrutura": 53,
+      "estrutura": 40,
       "representacao": 69,
-      "poder": 56,
-      "imigracao": 52,
-      "diplomacia": 44,
-      "intervencao": 37,
-      "economia": 52,
+      "poder": 62,
+      "imigracao": 60,
+      "diplomacia": 40,
+      "intervencao": 50,
+      "economia": 55,
       "controle": 56,
-      "comercio": 52,
+      "comercio": 65,
       "religiao": 33,
       "moral": 43,
-      "tecnologia": 61
+      "tecnologia": 65
     }
   },
   {
@@ -480,12 +480,12 @@
     "vector": {
       "estrutura": 51,
       "representacao": 69,
-      "poder": 54,
-      "imigracao": 59,
-      "diplomacia": 42,
-      "intervencao": 40,
-      "economia": 47,
-      "controle": 49,
+      "poder": 50,
+      "imigracao": 65,
+      "diplomacia": 35,
+      "intervencao": 55,
+      "economia": 58,
+      "controle": 55,
       "comercio": 52,
       "religiao": 34,
       "moral": 42,
@@ -496,17 +496,17 @@
     "countryId": "nigeria",
     "vector": {
       "estrutura": 64,
-      "representacao": 66,
-      "poder": 56,
+      "representacao": 55,
+      "poder": 62,
       "imigracao": 56,
-      "diplomacia": 38,
+      "diplomacia": 45,
       "intervencao": 37,
-      "economia": 54,
+      "economia": 48,
       "controle": 52,
-      "comercio": 49,
-      "religiao": 34,
-      "moral": 42,
-      "tecnologia": 65
+      "comercio": 55,
+      "religiao": 15,
+      "moral": 25,
+      "tecnologia": 55
     }
   },
   {
@@ -1226,17 +1226,17 @@
   {
     "countryId": "italia",
     "vector": {
-      "estrutura": 55,
+      "estrutura": 45,
       "representacao": 72,
-      "poder": 50,
+      "poder": 55,
       "imigracao": 72,
-      "diplomacia": 45,
+      "diplomacia": 50,
       "intervencao": 40,
       "economia": 48,
       "controle": 48,
-      "comercio": 50,
-      "religiao": 32,
-      "moral": 38,
+      "comercio": 45,
+      "religiao": 28,
+      "moral": 30,
       "tecnologia": 60
     }
   },
@@ -1431,17 +1431,17 @@
     "countryId": "libano",
     "vector": {
       "estrutura": 70,
-      "representacao": 50,
-      "poder": 45,
+      "representacao": 45,
+      "poder": 50,
       "imigracao": 30,
-      "diplomacia": 50,
+      "diplomacia": 55,
       "intervencao": 50,
-      "economia": 35,
-      "controle": 40,
-      "comercio": 30,
-      "religiao": 50,
-      "moral": 50,
-      "tecnologia": 58
+      "economia": 30,
+      "controle": 30,
+      "comercio": 25,
+      "religiao": 30,
+      "moral": 38,
+      "tecnologia": 50
     }
   },
   {
@@ -1517,16 +1517,16 @@
     "vector": {
       "estrutura": 65,
       "representacao": 55,
-      "poder": 60,
-      "imigracao": 45,
+      "poder": 65,
+      "imigracao": 60,
       "diplomacia": 45,
       "intervencao": 45,
-      "economia": 50,
-      "controle": 55,
-      "comercio": 48,
+      "economia": 55,
+      "controle": 60,
+      "comercio": 35,
       "religiao": 20,
-      "moral": 28,
-      "tecnologia": 65
+      "moral": 22,
+      "tecnologia": 72
     }
   },
   {
@@ -1566,18 +1566,18 @@
   {
     "countryId": "quenia",
     "vector": {
-      "estrutura": 60,
+      "estrutura": 70,
       "representacao": 60,
-      "poder": 60,
+      "poder": 55,
       "imigracao": 55,
       "diplomacia": 45,
       "intervencao": 45,
-      "economia": 45,
-      "controle": 48,
-      "comercio": 50,
+      "economia": 38,
+      "controle": 42,
+      "comercio": 45,
       "religiao": 22,
       "moral": 28,
-      "tecnologia": 65
+      "tecnologia": 70
     }
   },
   {
@@ -1600,18 +1600,18 @@
   {
     "countryId": "colombia",
     "vector": {
-      "estrutura": 55,
-      "representacao": 68,
-      "poder": 50,
+      "estrutura": 35,
+      "representacao": 65,
+      "poder": 60,
       "imigracao": 50,
-      "diplomacia": 45,
-      "intervencao": 50,
-      "economia": 55,
-      "controle": 52,
-      "comercio": 45,
-      "religiao": 30,
-      "moral": 48,
-      "tecnologia": 58
+      "diplomacia": 48,
+      "intervencao": 45,
+      "economia": 52,
+      "controle": 50,
+      "comercio": 48,
+      "religiao": 25,
+      "moral": 45,
+      "tecnologia": 55
     }
   },
   {
@@ -1686,17 +1686,17 @@
     "countryId": "gra-colombia",
     "vector": {
       "estrutura": 25,
-      "representacao": 45,
-      "poder": 60,
+      "representacao": 35,
+      "poder": 68,
       "imigracao": 55,
-      "diplomacia": 70,
+      "diplomacia": 75,
       "intervencao": 35,
       "economia": 45,
       "controle": 50,
-      "comercio": 45,
-      "religiao": 35,
+      "comercio": 50,
+      "religiao": 40,
       "moral": 45,
-      "tecnologia": 45
+      "tecnologia": 35
     }
   },
   {
