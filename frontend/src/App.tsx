@@ -717,7 +717,7 @@ export default function App() {
         <section className="variant-layout" aria-labelledby="variant-title">
           <div className="variant-heading fade-up d-1">
             <span className="eyebrow">Escolha o formato</span>
-            <h1 id="variant-title">Qual versão do teste você quer fazer?</h1>
+            <h1 id="variant-title">Você quer velocidade ou precisão?</h1>
             <p>
               A versão curta revela o resultado de forma rápida. A completa aumenta
               a precisão para aproximar melhor seu resultado dos perfis ideológicos.
