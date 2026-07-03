@@ -3602,5 +3602,56 @@
       "moral": 75,
       "tecnologia": 88
     }
+  },
+  {
+    "personalityId": "dalai-lama",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 55,
+      "poder": 30,
+      "imigracao": 60,
+      "diplomacia": 3,
+      "intervencao": 72,
+      "economia": 60,
+      "controle": 55,
+      "comercio": 60,
+      "religiao": 2,
+      "moral": 25,
+      "tecnologia": 30
+    }
+  },
+  {
+    "personalityId": "pentti-linkola",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 8,
+      "poder": 90,
+      "imigracao": 90,
+      "diplomacia": 70,
+      "intervencao": 45,
+      "economia": 60,
+      "controle": 70,
+      "comercio": 85,
+      "religiao": 55,
+      "moral": 25,
+      "tecnologia": 3
+    }
+  },
+  {
+    "personalityId": "thomas-jefferson",
+    "vector": {
+      "estrutura": 90,
+      "representacao": 85,
+      "poder": 25,
+      "imigracao": 50,
+      "diplomacia": 35,
+      "intervencao": 72,
+      "economia": 35,
+      "controle": 30,
+      "comercio": 45,
+      "religiao": 65,
+      "moral": 55,
+      "tecnologia": 50
+    }
   }
 ]

@@ -1402,5 +1402,23 @@
     "vector": null,
     "countryId": "argentina",
     "personalityId": "javier-milei"
+  },
+  {
+    "id": "teocracia-crista",
+    "name": "Teocracia Cristã",
+    "category": "Direita Autoritária",
+    "description": "Doutrina que subordina o poder político à autoridade religiosa cristã, defendendo que a lei divina e a Igreja devem reger o Estado e os costumes, do ultramontanismo medieval e papal aos projetos reconstrucionistas modernos.",
+    "vector": null,
+    "countryId": "vaticano",
+    "personalityId": "joseph-de-maistre"
+  },
+  {
+    "id": "titoismo",
+    "name": "Titoísmo",
+    "category": "Esquerda Autoritária",
+    "description": "Variante do socialismo desenvolvida na Iugoslávia de Tito, combinando partido único e culto ao líder com autogestão operária das empresas, descentralização federal, abertura ao mercado e não alinhamento entre os blocos da Guerra Fria.",
+    "vector": null,
+    "countryId": "iugoslavia-socialista",
+    "personalityId": "tito"
   }
 ]

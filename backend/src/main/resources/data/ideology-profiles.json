@@ -2650,5 +2650,39 @@
       "moral": 25,
       "tecnologia": 70
     }
+  },
+  {
+    "ideologyId": "teocracia-crista",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 8,
+      "poder": 75,
+      "imigracao": 72,
+      "diplomacia": 25,
+      "intervencao": 55,
+      "economia": 52,
+      "controle": 58,
+      "comercio": 58,
+      "religiao": 1,
+      "moral": 2,
+      "tecnologia": 25
+    }
+  },
+  {
+    "ideologyId": "titoismo",
+    "vector": {
+      "estrutura": 65,
+      "representacao": 30,
+      "poder": 66,
+      "imigracao": 45,
+      "diplomacia": 42,
+      "intervencao": 62,
+      "economia": 78,
+      "controle": 58,
+      "comercio": 45,
+      "religiao": 75,
+      "moral": 60,
+      "tecnologia": 62
+    }
   }
 ]
