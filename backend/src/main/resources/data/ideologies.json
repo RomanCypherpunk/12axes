@@ -38,7 +38,7 @@
   {
     "id": "luxemburguismo",
     "name": "Luxemburguismo",
-    "category": "Esquerda Autoritária",
+    "category": "Esquerda",
     "description": "Marxismo democrático inspirado em Rosa Luxemburgo, que une revolução e liberdade, valoriza a espontaneidade das massas e a greve geral e critica tanto o reformismo quanto o centralismo autoritário dos partidos de vanguarda.",
     "vector": null,
     "countryId": "alemanha",
@@ -65,7 +65,7 @@
   {
     "id": "dengismo",
     "name": "Dengismo",
-    "category": "Esquerda Autoritária",
+    "category": "Direita Autoritária",
     "description": "Reforma pragmática iniciada por Deng Xiaoping que introduziu mercado, propriedade privada e abertura econômica sob controle absoluto do Partido Comunista, formando o modelo de socialismo com características chinesas.",
     "vector": null,
     "countryId": "china",
@@ -110,7 +110,7 @@
   {
     "id": "marxismo-reformista",
     "name": "Marxismo Reformista",
-    "category": "Esquerda Autoritária",
+    "category": "Esquerda",
     "description": "Vertente que busca alcançar o socialismo por reformas graduais dentro da democracia, ampliando direitos e regulação do mercado sem ruptura revolucionária, aproximando o marxismo da via institucional e parlamentar.",
     "vector": null,
     "countryId": "chile",
@@ -218,7 +218,7 @@
   {
     "id": "alt-lite",
     "name": "Direita alternativa",
-    "category": "Direita Autoritária",
+    "category": "Direita",
     "description": "Vertente mais moderada da direita alternativa, nacionalista e antiglobalista, que rejeita o supremacismo racial explícito mas defende identidade cultural, crítica à imigração e combate ao politicamente correto.",
     "vector": null,
     "countryId": "estados-unidos",
@@ -245,7 +245,7 @@
   {
     "id": "neoconservadorismo",
     "name": "Neoconservadorismo",
-    "category": "Direita Autoritária",
+    "category": "Direita",
     "description": "Corrente da direita que une livre mercado, valores tradicionais e política externa intervencionista, defendendo a promoção da democracia e dos interesses nacionais pela força militar e liderança global.",
     "vector": null,
     "countryId": "eua-washington-dc",
@@ -272,7 +272,7 @@
   {
     "id": "conservadorismo-nacional",
     "name": "Conservadorismo Nacional",
-    "category": "Direita Autoritária",
+    "category": "Direita",
     "description": "Corrente que une valores tradicionais, família e religião a um nacionalismo cultural forte, defendendo soberania, fronteiras e identidade do povo dentro da democracia, com clara desconfiança do globalismo.",
     "vector": null,
     "countryId": "hungria",
@@ -281,7 +281,7 @@
   {
     "id": "conservadorismo-paternalista",
     "name": "Conservadorismo Paternalista",
-    "category": "Direita Autoritária",
+    "category": "Centro-Direita",
     "description": "Tradição conservadora que aceita reformas sociais e proteção aos mais pobres para preservar a coesão nacional, vendo as elites como responsáveis pelo bem-estar do povo e pela harmonia entre as classes.",
     "vector": null,
     "countryId": "reino-unido-vitoriano-imperio-britanico",
@@ -308,7 +308,7 @@
   {
     "id": "nacionalismo-cultural",
     "name": "Nacionalismo Cultural",
-    "category": "Direita Autoritária",
+    "category": "Centro-Direita",
     "description": "Nacionalismo baseado na língua, nas tradições e na herança compartilhadas, e não na raça, que valoriza a identidade cultural do povo e a integração de quem adota esses valores, defendendo a coesão da nação.",
     "vector": null,
     "countryId": "israel",
@@ -380,7 +380,7 @@
   {
     "id": "democracia-nacional",
     "name": "Democracia Nacional",
-    "category": "Direita Autoritária",
+    "category": "Centro-Direita",
     "description": "Corrente que combina soberania popular e instituições democráticas com nacionalismo cultural forte, priorizando os interesses e a identidade da nação sobre compromissos supranacionais e o multiculturalismo.",
     "vector": null,
     "countryId": "polonia",
@@ -389,7 +389,7 @@
   {
     "id": "bioconservadorismo",
     "name": "Bioconservadorismo",
-    "category": "Direita Autoritária",
+    "category": "Centro",
     "description": "Posição que se opõe à manipulação genética e ao aprimoramento tecnológico do corpo humano, defendendo limites éticos à ciência em nome da dignidade, da natureza humana e da prudência diante do futuro.",
     "vector": null,
     "countryId": "japao",
@@ -416,7 +416,7 @@
   {
     "id": "conservadorismo-cristao",
     "name": "Conservadorismo Cristão",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Vertente que fundamenta a política na moral e na tradição cristãs, defendendo família, vida e valores religiosos dentro da democracia, com ênfase na preservação dos costumes e da herança cultural do povo.",
     "vector": null,
     "countryId": "eua-texas",
@@ -443,7 +443,7 @@
   {
     "id": "neoliberalismo",
     "name": "Neoliberalismo",
-    "category": "Centro",
+    "category": "Centro-Direita",
     "description": "Corrente que defende livre mercado, desregulamentação, privatizações e disciplina fiscal, reduzindo o papel econômico do Estado e confiando na concorrência e na estabilidade monetária como motores da prosperidade.",
     "vector": null,
     "countryId": "eua-nova-york",
@@ -461,7 +461,7 @@
   {
     "id": "distributismo",
     "name": "Distributismo",
-    "category": "Centro",
+    "category": "Centro-Direita",
     "description": "Doutrina de inspiração cristã que defende a ampla distribuição da propriedade e da pequena produção, opondo-se tanto ao capitalismo monopolista quanto ao socialismo estatal em favor de comunidades autônomas.",
     "vector": null,
     "countryId": "reino-unido",
@@ -497,7 +497,7 @@
   {
     "id": "liberalismo",
     "name": "Liberalismo",
-    "category": "Centro",
+    "category": "Esquerda Libertária",
     "description": "Tradição política que coloca a liberdade individual no centro, defendendo direitos, tolerância, Estado de direito, economia de mercado e limites ao poder, com o governo submetido ao consentimento dos cidadãos.",
     "vector": null,
     "countryId": "franca",
@@ -506,7 +506,7 @@
   {
     "id": "liberalismo-classico",
     "name": "Liberalismo Clássico",
-    "category": "Centro",
+    "category": "Direita Libertária",
     "description": "Vertente original do liberalismo que defende direitos naturais, propriedade, livre mercado e Estado mínimo, vendo a liberdade individual e a limitação rígida do poder como fundamentos da sociedade justa.",
     "vector": null,
     "countryId": "reino-unido",
@@ -515,7 +515,7 @@
   {
     "id": "libertarianismo",
     "name": "Libertarianismo",
-    "category": "Centro",
+    "category": "Direita Libertária",
     "description": "Filosofia que defende a máxima liberdade individual e um Estado reduzido às funções essenciais, valorizando propriedade privada, livre mercado e autonomia pessoal e rejeitando a coerção estatal sobre a vida.",
     "vector": null,
     "countryId": "eua-new-hampshire",
@@ -524,7 +524,7 @@
   {
     "id": "liberalismo-verde",
     "name": "Liberalismo Verde",
-    "category": "Centro",
+    "category": "Centro-Esquerda",
     "description": "Corrente que une liberdade individual, mercado e democracia à agenda ecológica, defendendo sustentabilidade, direitos e inovação para conciliar a prosperidade econômica com a proteção efetiva do meio ambiente.",
     "vector": null,
     "countryId": "alemanha",
@@ -533,7 +533,7 @@
   {
     "id": "liberalismo-social",
     "name": "Liberalismo Social",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Vertente que combina liberdades individuais com forte ação do Estado para garantir bem-estar, educação e saúde, defendendo igualdade de oportunidades e seguridade social dentro da economia de mercado.",
     "vector": null,
     "countryId": "reino-unido",
@@ -542,7 +542,7 @@
   {
     "id": "liberalismo-radical",
     "name": "Liberalismo Radical",
-    "category": "Centro",
+    "category": "Esquerda Libertária",
     "description": "Corrente que leva ao extremo a defesa das liberdades individuais e da igualdade de direitos, apoiando reformas democráticas amplas, emancipação social e expansão das liberdades civis, políticas e culturais.",
     "vector": null,
     "countryId": "franca",
@@ -551,7 +551,7 @@
   {
     "id": "liberalismo-conservador",
     "name": "Liberalismo Conservador",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Síntese que une o livre mercado e as liberdades econômicas à valorização da tradição, da ordem e das instituições, defendendo a mudança prudente e a estabilidade social dentro da moldura da democracia liberal.",
     "vector": null,
     "countryId": "eua-nova-york",
@@ -560,7 +560,7 @@
   {
     "id": "liberaltarianismo",
     "name": "Liberaltarianismo",
-    "category": "Centro",
+    "category": "Direita Libertária",
     "description": "Corrente que aproxima o libertarianismo do liberalismo social, defendendo liberdades individuais e mercado livre junto a alguma preocupação com justiça social e igualdade de oportunidades para os mais pobres.",
     "vector": null,
     "countryId": "eua-new-hampshire",
@@ -569,7 +569,7 @@
   {
     "id": "panarchismo",
     "name": "Panarchismo",
-    "category": "Centro",
+    "category": "Direita Libertária",
     "description": "Ideia de que cada pessoa poderia escolher livremente o governo ou sistema político ao qual se submete, sem vínculo territorial, permitindo múltiplas jurisdições voluntárias coexistindo no mesmo espaço.",
     "vector": null,
     "countryId": "suica",
@@ -587,7 +587,7 @@
   {
     "id": "geolibertarianismo",
     "name": "Geolibertarianismo",
-    "category": "Centro",
+    "category": "Direita Libertária",
     "description": "Síntese entre libertarianismo e georgismo que combina livre mercado e liberdades individuais com a taxação do valor da terra, vista como recurso comum, para financiar o Estado mínimo sem punir o trabalho.",
     "vector": null,
     "countryId": "hong-kong",
@@ -596,7 +596,7 @@
   {
     "id": "feminismo",
     "name": "Feminismo",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Movimento que defende a igualdade de direitos e oportunidades entre os sexos e o fim da opressão das mulheres, combatendo a discriminação de gênero na política, no trabalho, na cultura e na vida privada.",
     "vector": null,
     "countryId": "suecia",
@@ -605,7 +605,7 @@
   {
     "id": "feminismo-liberal",
     "name": "Feminismo Liberal",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Vertente do feminismo que busca a igualdade entre homens e mulheres por meio de reformas legais e institucionais, garantindo direitos iguais, acesso ao mercado e liberdade individual dentro da democracia.",
     "vector": null,
     "countryId": "eua-california",
@@ -623,7 +623,7 @@
   {
     "id": "ambientalismo",
     "name": "Ambientalismo",
-    "category": "Centro",
+    "category": "Centro-Esquerda",
     "description": "Movimento voltado à proteção do meio ambiente e ao uso sustentável dos recursos, defendendo políticas contra a poluição e a mudança climática e a harmonia entre desenvolvimento humano e equilíbrio ecológico.",
     "vector": null,
     "countryId": "costa-rica",
@@ -632,7 +632,7 @@
   {
     "id": "conservadorismo",
     "name": "Conservadorismo",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Tradição política que valoriza a ordem, os costumes, a família e as instituições consolidadas, preferindo a mudança gradual e prudente à ruptura, com base na experiência histórica e no ceticismo diante de utopias.",
     "vector": null,
     "countryId": "reino-unido",
@@ -641,7 +641,7 @@
   {
     "id": "progressivismo",
     "name": "Progressivismo",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Corrente que defende reformas sociais e ampliação de direitos para promover igualdade e justiça, confiando no progresso, na ciência e na ação coletiva para transformar instituições e superar desigualdades.",
     "vector": null,
     "countryId": "suecia",
@@ -650,7 +650,7 @@
   {
     "id": "aceleracionismo",
     "name": "Aceleracionismo",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Corrente que propõe intensificar o desenvolvimento tecnológico e as forças da modernidade para transformar radicalmente a sociedade, apostando na automação e na mudança rápida como caminho para o futuro.",
     "vector": null,
     "countryId": "eua-california",
@@ -659,7 +659,7 @@
   {
     "id": "transhumanismo",
     "name": "Transhumanismo",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Movimento que defende usar a ciência e a tecnologia para superar os limites biológicos humanos, ampliando capacidades físicas e mentais e buscando prolongar a vida rumo a uma etapa pós-humana da existência.",
     "vector": null,
     "countryId": "eua-california",
@@ -686,7 +686,7 @@
   {
     "id": "indigenismo",
     "name": "Indigenismo",
-    "category": "Centro",
+    "category": "Centro-Esquerda",
     "description": "Corrente que valoriza os povos originários e seus direitos, defendendo autonomia, território, cultura e participação política, além de modelos de desenvolvimento e Estado plurinacional que respeitem suas tradições.",
     "vector": null,
     "countryId": "bolivia",
@@ -695,7 +695,7 @@
   {
     "id": "conservadorismo-socialista",
     "name": "Conservadorismo Socialista",
-    "category": "Centro",
+    "category": "Esquerda Autoritária",
     "description": "Vertente que une economia socialista e valores tradicionais, defendendo proteção social e forte papel do Estado ao lado de família, ordem e costumes, distante do progressismo cultural das esquerdas liberais.",
     "vector": null,
     "countryId": "russia",
@@ -740,7 +740,7 @@
   {
     "id": "sindicalismo",
     "name": "Sindicalismo",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Movimento que coloca sindicatos e organização dos trabalhadores no centro da política, defendendo negociação coletiva, ação direta e controle laboral sobre a produção como via de emancipação da classe operária.",
     "vector": null,
     "countryId": "italia-fascista-mussolini",
@@ -758,7 +758,7 @@
   {
     "id": "marxismo-libertario",
     "name": "Marxismo Libertário",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Vertente do marxismo que rejeita o Estado centralizado e a burocracia partidária, defendendo conselhos operários, autogestão e a emancipação das massas pela sua própria ação revolucionária, coletiva e autônoma.",
     "vector": null,
     "countryId": "iugoslavia-socialista",
@@ -776,7 +776,7 @@
   {
     "id": "socialismo-de-mercado",
     "name": "Socialismo de Mercado",
-    "category": "Esquerda Libertária",
+    "category": "Centro-Esquerda",
     "description": "Sistema em que empresas de propriedade coletiva ou pública competem em mercados, unindo eficiência da concorrência e distribuição socialista dos lucros sem o planejamento central rígido das economias estatais.",
     "vector": null,
     "countryId": "iugoslavia-socialista",
@@ -794,7 +794,7 @@
   {
     "id": "minarco-mutualismo",
     "name": "Minarco-Mutualismo",
-    "category": "Esquerda Libertária",
+    "category": "Centro-Esquerda",
     "description": "Síntese que une o mutualismo a um Estado mínimo, combinando trocas justas, cooperativas e crédito livre com uma estrutura pública reduzida às funções essenciais de proteção de direitos, contratos e liberdades.",
     "vector": null,
     "countryId": "franca",
@@ -803,7 +803,7 @@
   {
     "id": "minarco-socialismo",
     "name": "Minarco-Socialismo",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Corrente que busca objetivos socialistas com um Estado mínimo, unindo propriedade coletiva ou cooperativa e justiça social a ampla liberdade individual e à recusa de burocracias amplas e centralizadas.",
     "vector": null,
     "countryId": "rojava",
@@ -830,7 +830,7 @@
   {
     "id": "socialismo-cristao",
     "name": "Socialismo Cristão",
-    "category": "Esquerda Libertária",
+    "category": "Centro-Esquerda",
     "description": "Corrente que une a fé cristã à luta por justiça social, defendendo solidariedade, igualdade e crítica ao capitalismo em nome do Evangelho, com forte compromisso com os pobres e a dignidade do trabalho.",
     "vector": null,
     "countryId": "reino-unido",
@@ -848,7 +848,7 @@
   {
     "id": "socialismo-religioso",
     "name": "Socialismo Religioso",
-    "category": "Esquerda Libertária",
+    "category": "Centro",
     "description": "Corrente que fundamenta o socialismo em valores espirituais e religiosos, vendo na fé um chamado à justiça, à igualdade e à solidariedade, e unindo a crítica ao capitalismo à ética e à comunidade de crentes.",
     "vector": null,
     "countryId": "israel",
@@ -857,7 +857,7 @@
   {
     "id": "social-democracia",
     "name": "Social-Democracia",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Corrente que busca conciliar capitalismo e justiça social pela democracia, defendendo mercado regulado, forte Estado de bem-estar, direitos trabalhistas e redistribuição para reduzir desigualdades sociais.",
     "vector": null,
     "countryId": "suecia",
@@ -866,7 +866,7 @@
   {
     "id": "socialismo",
     "name": "Socialismo",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Doutrina que defende a propriedade social ou coletiva dos meios de produção e a distribuição mais igualitária da riqueza, buscando superar a exploração do capitalismo por cooperação e planejamento econômico.",
     "vector": null,
     "countryId": "suecia",
@@ -875,7 +875,7 @@
   {
     "id": "socialismo-liberal",
     "name": "Socialismo Liberal",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Corrente que une objetivos socialistas de igualdade e justiça social à defesa das liberdades individuais e da democracia, combinando forte proteção social com pluralismo, direitos civis e economia mista.",
     "vector": null,
     "countryId": "franca",
@@ -893,7 +893,7 @@
   {
     "id": "ecossocialismo",
     "name": "Ecossocialismo",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Corrente que funde socialismo e ecologia, atribuindo a crise ambiental ao capitalismo e defendendo produção coletiva, sustentável e democrática que respeite os limites da natureza e as necessidades sociais.",
     "vector": null,
     "countryId": "bolivia",
@@ -911,7 +911,7 @@
   {
     "id": "ecologia-profunda",
     "name": "Ecologia Profunda",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Corrente que atribui valor intrínseco a toda vida e não apenas ao ser humano, defendendo uma profunda mudança de valores, a redução do impacto humano e o respeito ao equilíbrio dos ecossistemas do planeta.",
     "vector": null,
     "countryId": "costa-rica",
@@ -1001,7 +1001,7 @@
   {
     "id": "anarquismo-egoista",
     "name": "Anarquismo Egoísta",
-    "category": "Esquerda Libertária",
+    "category": "Direita Libertária",
     "description": "Corrente inspirada em Max Stirner que rejeita Estado, moral e instituições como abstrações opressoras, colocando o indivíduo soberano e seus interesses no centro e defendendo uniões livres entre egoístas.",
     "vector": null,
     "countryId": "alemanha",
@@ -1064,7 +1064,7 @@
   {
     "id": "capitalismo",
     "name": "Capitalismo",
-    "category": "Direita Libertária",
+    "category": "Centro-Direita",
     "description": "Sistema econômico baseado na propriedade privada, no livre mercado e na busca do lucro, em que a produção e os preços são regulados pela concorrência e pela oferta e demanda, com iniciativa individual como motor.",
     "vector": null,
     "countryId": "eua-texas",
@@ -1091,7 +1091,7 @@
   {
     "id": "ecoconservadorismo",
     "name": "Ecoconservadorismo",
-    "category": "Direita Libertária",
+    "category": "Centro-Direita",
     "description": "Vertente que une conservadorismo e proteção ambiental, defendendo a preservação da natureza como parte da tradição e do patrimônio a ser transmitido às gerações futuras, com prudência diante de mudanças.",
     "vector": null,
     "countryId": "reino-unido",
@@ -1100,7 +1100,7 @@
   {
     "id": "econacionalismo",
     "name": "Econacionalismo",
-    "category": "Direita Libertária",
+    "category": "Centro-Direita",
     "description": "Corrente que liga defesa do meio ambiente à soberania nacional, priorizando a proteção dos recursos naturais e da terra do próprio país e o desenvolvimento sustentável dentro das fronteiras nacionais.",
     "vector": null,
     "countryId": "eua-texas",
@@ -1127,7 +1127,7 @@
   {
     "id": "anarco-transhumanismo",
     "name": "Anarco-Transhumanismo",
-    "category": "Direita Libertária",
+    "category": "Esquerda Libertária",
     "description": "Síntese entre anarquismo e transhumanismo que defende usar a tecnologia para libertar e ampliar as capacidades humanas sem Estado nem hierarquias, tornando o aprimoramento acessível e emancipador para todos.",
     "vector": null,
     "countryId": "eua-california",
@@ -1136,7 +1136,7 @@
   {
     "id": "libertarianismo-bleeding-heart",
     "name": "Libertarianismo Bleeding-Heart",
-    "category": "Direita Libertária",
+    "category": "Esquerda Libertária",
     "description": "Corrente que une livre mercado e liberdades individuais à preocupação com a justiça social, defendendo que a liberdade econômica também deve melhorar concretamente a vida dos mais pobres e vulneráveis.",
     "vector": null,
     "countryId": "eua-new-hampshire",
@@ -1163,7 +1163,7 @@
   {
     "id": "monarquia-federativa",
     "name": "Monarquia Federativa",
-    "category": "Direita Libertária",
+    "category": "Direita",
     "description": "Modelo que une a monarquia a uma estrutura federal, com poder dividido entre a coroa e regiões autônomas, combinando unidade simbólica e continuidade histórica com descentralização e autogoverno local.",
     "vector": null,
     "countryId": "sacro-imperio-romano-germanico",
@@ -1181,7 +1181,7 @@
   {
     "id": "feminismo-libertario",
     "name": "Feminismo Libertário",
-    "category": "Direita Libertária",
+    "category": "Esquerda Libertária",
     "description": "Vertente que busca a igualdade de gênero por meio da liberdade individual e do mercado, e não do Estado, defendendo autonomia, direitos iguais e o fim de restrições legais sobre as escolhas das mulheres.",
     "vector": null,
     "countryId": "eua-california",
@@ -1235,7 +1235,7 @@
   {
     "id": "trabalhismo",
     "name": "Trabalhismo",
-    "category": "Esquerda Libertária",
+    "category": "Centro-Esquerda",
     "description": "Corrente que defende os interesses dos trabalhadores dentro da democracia, promovendo direitos laborais, seguridade social, sindicatos fortes e distribuição de renda por meio de reformas e do Estado de bem-estar.",
     "vector": null,
     "countryId": "brasil",
@@ -1244,7 +1244,7 @@
   {
     "id": "positivismo",
     "name": "Positivismo",
-    "category": "Centro",
+    "category": "Esquerda Autoritária",
     "description": "Corrente inspirada em Auguste Comte que confia na ciência e na razão para organizar a sociedade, defendendo ordem, progresso e administração técnica guiada pelo conhecimento em lugar da metafísica e da tradição.",
     "vector": null,
     "countryId": "brasil-era-vargas",
@@ -1253,7 +1253,7 @@
   {
     "id": "conservadorismo-secular",
     "name": "Conservadorismo Secular",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Vertente conservadora que defende ordem, tradição e instituições sem fundamentá-las na religião, apoiando valores culturais e estabilidade social a partir de argumentos laicos, históricos e pragmáticos.",
     "vector": null,
     "countryId": "tchequia",
@@ -1262,7 +1262,7 @@
   {
     "id": "progressismo-cristao",
     "name": "Progressismo Cristão",
-    "category": "Centro",
+    "category": "Centro-Esquerda",
     "description": "Corrente que une a fé cristã à defesa de justiça social, direitos e reformas, vendo no Evangelho um chamado à solidariedade, à igualdade e ao cuidado com os pobres e marginalizados da sociedade e do mundo.",
     "vector": null,
     "countryId": "brasil",
@@ -1270,8 +1270,8 @@
   },
   {
     "id": "autoritarismo-modernizador",
-    "name": "Autoritarismo Modernizador",
-    "category": "Direita Autoritária",
+    "name": "Autoritrismo Modernizador",
+    "category": "Centro",
     "description": "Modelo em que um regime forte impõe de cima a modernização econômica e social, promovendo industrialização, educação e reformas rápidas enquanto restringe liberdades políticas em nome do progresso nacional.",
     "vector": null,
     "countryId": "coreia-do-sul",
@@ -1289,7 +1289,7 @@
   {
     "id": "atlantismo",
     "name": "Atlantismo",
-    "category": "Direita Autoritária",
+    "category": "Direita",
     "description": "Doutrina de política externa que defende a aliança estreita entre América do Norte e Europa, sustentando a cooperação militar e política do Ocidente e a defesa comum de seus valores e interesses no mundo.",
     "vector": null,
     "countryId": "eua-washington-dc",
@@ -1316,7 +1316,7 @@
   {
     "id": "direita-progressista",
     "name": "Direita Progressista",
-    "category": "Direita Autoritária",
+    "category": "Centro",
     "description": "Vertente que une capitalismo, culto ao progresso tecnológico a uma cultura socialmente progressista, pragmático e secular, confiando o rumo da sociedade a uma elite técnica em vez da democracia de massas.",
     "vector": null,
     "countryId": "eua-california",
@@ -1325,7 +1325,7 @@
   {
     "id": "tecno-socialismo",
     "name": "Tecno-Socialismo",
-    "category": "Esquerda Libertária",
+    "category": "Esquerda",
     "description": "Modelo que usa tecnologia, automação e dados para planejar a economia de forma eficiente e democrática, buscando distribuir a abundância produzida pelas máquinas e reduzir o trabalho e as desigualdades.",
     "vector": null,
     "countryId": "chile",
@@ -1352,7 +1352,7 @@
   {
     "id": "nacionalismo-progressista",
     "name": "Nacionalismo Progressista",
-    "category": "Esquerda Autoritária",
+    "category": "Esquerda",
     "description": "Corrente que une soberania nacional, proteção econômica e integração popular a reformas sociais progressistas, buscando um Estado capaz de defender a nação enquanto amplia direitos, igualdade e inclusão.",
     "vector": null,
     "countryId": "bolivia",
