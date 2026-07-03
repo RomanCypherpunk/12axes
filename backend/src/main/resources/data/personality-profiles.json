@@ -3806,5 +3806,90 @@
       "moral": 10,
       "tecnologia": 60
     }
+  },
+  {
+    "personalityId": "keynes",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 85,
+      "poder": 38,
+      "imigracao": 35,
+      "diplomacia": 32,
+      "intervencao": 65,
+      "economia": 62,
+      "controle": 60,
+      "comercio": 45,
+      "religiao": 78,
+      "moral": 80,
+      "tecnologia": 75
+    }
+  },
+  {
+    "personalityId": "dom-pedro-i",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 45,
+      "poder": 68,
+      "imigracao": 52,
+      "diplomacia": 70,
+      "intervencao": 30,
+      "economia": 45,
+      "controle": 42,
+      "comercio": 45,
+      "religiao": 25,
+      "moral": 35,
+      "tecnologia": 50
+    }
+  },
+  {
+    "personalityId": "dom-pedro-ii",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 65,
+      "poder": 48,
+      "imigracao": 45,
+      "diplomacia": 42,
+      "intervencao": 45,
+      "economia": 45,
+      "controle": 45,
+      "comercio": 40,
+      "religiao": 40,
+      "moral": 45,
+      "tecnologia": 62
+    }
+  },
+  {
+    "personalityId": "peron",
+    "vector": {
+      "estrutura": 42,
+      "representacao": 38,
+      "poder": 68,
+      "imigracao": 58,
+      "diplomacia": 52,
+      "intervencao": 28,
+      "economia": 68,
+      "controle": 65,
+      "comercio": 72,
+      "religiao": 38,
+      "moral": 42,
+      "tecnologia": 55
+    }
+  },
+  {
+    "personalityId": "franklin-roosevelt",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 82,
+      "poder": 46,
+      "imigracao": 45,
+      "diplomacia": 45,
+      "intervencao": 55,
+      "economia": 72,
+      "controle": 65,
+      "comercio": 45,
+      "religiao": 62,
+      "moral": 70,
+      "tecnologia": 78
+    }
   }
 ]
