@@ -1902,5 +1902,56 @@
       "moral": 28,
       "tecnologia": 55
     }
+  },
+  {
+    "countryId": "roma-republicana",
+    "vector": {
+      "estrutura": 55,
+      "representacao": 45,
+      "poder": 70,
+      "imigracao": 60,
+      "diplomacia": 80,
+      "intervencao": 20,
+      "economia": 40,
+      "controle": 50,
+      "comercio": 55,
+      "religiao": 25,
+      "moral": 25,
+      "tecnologia": 40
+    }
+  },
+  {
+    "countryId": "hungria-de-kadar",
+    "vector": {
+      "estrutura": 35,
+      "representacao": 15,
+      "poder": 72,
+      "imigracao": 55,
+      "diplomacia": 45,
+      "intervencao": 45,
+      "economia": 80,
+      "controle": 72,
+      "comercio": 55,
+      "religiao": 78,
+      "moral": 50,
+      "tecnologia": 55
+    }
+  },
+  {
+    "countryId": "chile-de-allende",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 80,
+      "poder": 40,
+      "imigracao": 48,
+      "diplomacia": 35,
+      "intervencao": 55,
+      "economia": 85,
+      "controle": 80,
+      "comercio": 55,
+      "religiao": 70,
+      "moral": 72,
+      "tecnologia": 62
+    }
   }
 ]

@@ -1322,5 +1322,47 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Florence.svg",
     "flagNote": "Bandeira com o giglio de Florença usada como referência visual para o período."
+  },
+  {
+    "id": "roma-republicana",
+    "name": "Roma Republicana",
+    "category": "República senatorial militarista",
+    "description": "República aristocrática da Antiguidade, Roma equilibrava cônsules, Senado e tribunos da plebe em um sistema misto de magistraturas eletivas, expandindo-se pelo Mediterrâneo por meio de legiões cidadãs e de um forte culto à virtude cívica.",
+    "flagPath": "/countries/flags/imperio-romano.png",
+    "historical": true,
+    "period": "509–27 a.C.",
+    "vector": null,
+    "flagKind": "reconstructed-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Vexilloid_of_the_Roman_Empire.svg",
+    "flagNote": "Vexilo com a sigla SPQR usado como referência visual para o período."
+  },
+  {
+    "id": "hungria-de-kadar",
+    "name": "Hungria de Kádár",
+    "category": "Socialismo goulash de partido único",
+    "description": "Instaurado após o esmagamento da revolução de 1956, o regime de Kádár combinou partido único e alinhamento soviético com liberalização econômica gradual, pequeno setor privado e relativo bem-estar de consumo, o chamado 'comunismo goulash'.",
+    "flagPath": "/countries/flags/hungria-de-kadar.png",
+    "historical": true,
+    "period": "1956–1989",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary_(1957-1989).svg",
+    "flagNote": "Bandeira da República Popular da Hungria (1957–1989)."
+  },
+  {
+    "id": "chile-de-allende",
+    "name": "Chile de Allende",
+    "category": "Socialismo democrático em crise",
+    "description": "Sob a Unidade Popular de Allende, o Chile tentou a 'via chilena ao socialismo': nacionalização do cobre e dos bancos, reforma agrária e planejamento econômico dentro da legalidade democrática, em meio a polarização extrema encerrada pelo golpe de 1973.",
+    "flagPath": "/countries/flags/chile.gif",
+    "historical": true,
+    "period": "1970–1973",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
+    "flagNote": "O governo da Unidade Popular manteve a bandeira chilena."
   }
 ]
