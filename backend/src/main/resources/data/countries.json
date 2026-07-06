@@ -1370,7 +1370,7 @@
     "name": "Burkina Faso de Sankara",
     "category": "Socialismo anticolonial revolucionário",
     "description": "Sob Thomas Sankara, o Alto Volta virou Burkina Faso — 'terra dos homens íntegros' — com autossuficiência alimentar, vacinação e alfabetização em massa, emancipação feminina, rejeição da dívida externa e ruptura frontal com o neocolonialismo francês.",
-    "flagPath": "/countries/flags/burkina-faso.png",
+    "flagPath": "/countries/flags/burkina-faso-de-sankara.png",
     "historical": true,
     "period": "1983–1987",
     "vector": null,
@@ -1378,5 +1378,33 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Burkina_Faso.svg",
     "flagNote": "Bandeira adotada em 1984 pelo governo Sankara, mantida até hoje."
+  },
+  {
+    "id": "eua-confederados",
+    "name": "Estados Confederados da América",
+    "category": "Confederação escravista agrária",
+    "description": "Formados pela secessão de onze estados do Sul para preservar a escravidão, os Estados Confederados combinavam confederalismo radical dos estados, sociedade agrária profundamente tradicionalista e religiosa e livre comércio constitucional, sendo derrotados na Guerra Civil.",
+    "flagPath": "/countries/flags/eua-confederados.png",
+    "historical": true,
+    "period": "1861–1865",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Confederate_States_of_America_(1861-1863).svg",
+    "flagNote": "Primeira bandeira nacional confederada ('Stars and Bars'), 1861–1863."
+  },
+  {
+    "id": "macau",
+    "name": "Macau",
+    "category": "Cidade-Estado do jogo e do livre mercado",
+    "description": "Região administrativa especial chinesa e maior centro de jogos de azar do mundo, Macau une impostos baixíssimos, economia hiperaberta de cassinos e turismo, herança católica portuguesa e um sistema político controlado por Pequim, sem democracia plena.",
+    "flagPath": "/countries/flags/macau.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Macau.svg",
+    "flagNote": "Bandeira oficial da RAE de Macau."
   }
 ]

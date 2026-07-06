@@ -1970,5 +1970,39 @@
       "moral": 75,
       "tecnologia": 40
     }
+  },
+  {
+    "countryId": "eua-confederados",
+    "vector": {
+      "estrutura": 85,
+      "representacao": 40,
+      "poder": 65,
+      "imigracao": 85,
+      "diplomacia": 75,
+      "intervencao": 35,
+      "economia": 20,
+      "controle": 35,
+      "comercio": 25,
+      "religiao": 15,
+      "moral": 5,
+      "tecnologia": 25
+    }
+  },
+  {
+    "countryId": "macau",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 25,
+      "poder": 60,
+      "imigracao": 55,
+      "diplomacia": 20,
+      "intervencao": 60,
+      "economia": 20,
+      "controle": 30,
+      "comercio": 15,
+      "religiao": 45,
+      "moral": 35,
+      "tecnologia": 70
+    }
   }
 ]
