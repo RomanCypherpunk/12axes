@@ -1,0 +1,14 @@
+[
+  { "id": "estrutura", "label": "Structure", "leftPole": "Federal", "rightPole": "Unitary" },
+  { "id": "representacao", "label": "Representation", "leftPole": "Democracy", "rightPole": "Autocracy" },
+  { "id": "poder", "label": "Power", "leftPole": "Security", "rightPole": "Liberty" },
+  { "id": "imigracao", "label": "Immigration", "leftPole": "Assimilation", "rightPole": "Multiculturalism" },
+  { "id": "diplomacia", "label": "Diplomacy", "leftPole": "Militarist", "rightPole": "Pacifist" },
+  { "id": "intervencao", "label": "Intervention", "leftPole": "Non-interventionist", "rightPole": "Nationalist" },
+  { "id": "economia", "label": "Economy", "leftPole": "Public", "rightPole": "Private" },
+  { "id": "controle", "label": "Control", "leftPole": "Planning", "rightPole": "Free market" },
+  { "id": "comercio", "label": "Trade", "leftPole": "Protectionism", "rightPole": "Globalism" },
+  { "id": "religiao", "label": "Religion", "leftPole": "Irreligious", "rightPole": "Religious" },
+  { "id": "moral", "label": "Morality", "leftPole": "Progressive", "rightPole": "Traditionalist" },
+  { "id": "tecnologia", "label": "Technology", "leftPole": "Technology", "rightPole": "Biology" }
+]

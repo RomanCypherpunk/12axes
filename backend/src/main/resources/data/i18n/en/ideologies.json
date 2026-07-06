@@ -1,0 +1,980 @@
+[
+  {
+    "id": "marxismo-leninismo",
+    "name": "Marxism–Leninism",
+    "category": "Authoritarian Left",
+    "description": "Revolutionary branch of Marxism that advocates the seizure of power by a vanguard party and the dictatorship of the proletariat, with a planned economy and collectivization, serving as the foundation of the communist regimes of the 20th century."
+  },
+  {
+    "id": "stalinismo",
+    "name": "Stalinism",
+    "category": "Authoritarian Left",
+    "description": "Soviet model consolidated by Stalin, marked by forced industrialization, agrarian collectivization, rigid central planning, a cult of the leader, and mass repression against real or suspected opponents of the regime."
+  },
+  {
+    "id": "maoismo",
+    "name": "Maoism",
+    "category": "Authoritarian Left",
+    "description": "Mao's Chinese adaptation of Marxism, centered on the peasantry as the revolutionary force, protracted people's war, permanent mass mobilization, and cultural revolution against the party bureaucracy."
+  },
+  {
+    "id": "trotskismo",
+    "name": "Trotskyism",
+    "category": "Authoritarian Left",
+    "description": "Marxist current of Trotsky that advocates permanent revolution and internationalism, opposing Stalinist bureaucratization and socialism in one country, with a focus on workers' democracy and the worldwide spread of the revolution."
+  },
+  {
+    "id": "luxemburguismo",
+    "name": "Luxemburgism",
+    "category": "Left",
+    "description": "Democratic Marxism inspired by Rosa Luxemburg, which unites revolution and freedom, values the spontaneity of the masses and the general strike, and criticizes both reformism and the authoritarian centralism of vanguard parties."
+  },
+  {
+    "id": "comunismo-nacional",
+    "name": "National Communism",
+    "category": "Authoritarian Left",
+    "description": "Current that combines a planned socialist economy with a strong national identity, prioritizing the sovereignty and interests of its own country over internationalism, often under personalist and centralized leadership."
+  },
+  {
+    "id": "socialismo-juche",
+    "name": "Juche Socialism",
+    "category": "Authoritarian Left",
+    "description": "North Korean doctrine formulated by Kim Il-sung that combines state socialism, national self-reliance, single-party rule, a cult of the leader, militarization, and rejection of external dependence, subordinating economy and society to the regime's sovereignty."
+  },
+  {
+    "id": "pol-potismo",
+    "name": "Pol Potism",
+    "category": "Authoritarian Left",
+    "description": "Radical agrarian communism of the Khmer Rouge that emptied cities, abolished money and markets, and pursued an egalitarian peasant society by force, causing one of the greatest genocides of the 20th century in Cambodia."
+  },
+  {
+    "id": "dengismo",
+    "name": "Dengism",
+    "category": "Authoritarian Right",
+    "description": "Pragmatic reform initiated by Deng Xiaoping that introduced markets, private property, and economic opening under the absolute control of the Communist Party, forming the model of socialism with Chinese characteristics."
+  },
+  {
+    "id": "socialismo-de-estado",
+    "name": "State Socialism",
+    "category": "Authoritarian Left",
+    "description": "System in which the state controls the means of production and directs the economy through central planning, promoting industrialization and welfare under strong political authority and limited popular democratic participation."
+  },
+  {
+    "id": "progressivismo-autoritario",
+    "name": "Authoritarian Progressivism",
+    "category": "Authoritarian Left",
+    "description": "Project that imposes progressive social transformations from above, using state power to accelerate changes in customs and equality, even at the cost of individual liberties and organized political opposition."
+  },
+  {
+    "id": "ecoautoritarismo",
+    "name": "Eco-Authoritarianism",
+    "category": "Authoritarian Left",
+    "description": "Current that advocates a strong, interventionist state to confront the environmental crisis, subordinating economic and political freedoms to ecological urgency and strict control of consumption and production."
+  },
+  {
+    "id": "tecnocracia-de-esquerda",
+    "name": "Left-Wing Technocracy",
+    "category": "Authoritarian Left",
+    "description": "Model that combines socialist planning with scientific management of the economy, entrusting experts and technology with the rational organization of production and the egalitarian distribution of society's resources."
+  },
+  {
+    "id": "marxismo-reformista",
+    "name": "Reformist Marxism",
+    "category": "Left",
+    "description": "Current that seeks to achieve socialism through gradual reforms within democracy, expanding rights and market regulation without revolutionary rupture, bringing Marxism closer to the institutional and parliamentary path."
+  },
+  {
+    "id": "nacional-bolchevismo",
+    "name": "National Bolshevism (NazBol)",
+    "category": "Authoritarian Left",
+    "description": "Syncretic ideology, also called NazBol, that fuses revolutionary socialism and radical nationalism, combining a collectivist economy, state authoritarianism, and rejection of liberalism, the West, and bourgeois individualism."
+  },
+  {
+    "id": "strasserismo",
+    "name": "Strasserism",
+    "category": "Authoritarian Left",
+    "description": "Anti-capitalist wing of National Socialism, linked to Gregor Strasser, which emphasized a mass nationalist socialism, nationalization, and social revolution within the movement, later crushed by Hitler."
+  },
+  {
+    "id": "fascismo",
+    "name": "Fascism",
+    "category": "Authoritarian Right",
+    "description": "Totalitarian ideology of ultranationalism that exalts the strong state, the cult of the leader, militarism, and mass mobilization, suppressing opposition and subordinating the corporatist economy to national goals."
+  },
+  {
+    "id": "nacional-socialismo",
+    "name": "National Socialism",
+    "category": "Authoritarian Right",
+    "description": "German variant of fascism based on racism, antisemitism, and expansionism, which united totalitarianism, the cult of Hitler, and the idea of a superior race, culminating in World War II and the Holocaust."
+  },
+  {
+    "id": "fascismo-clerical",
+    "name": "Clerical Fascism",
+    "category": "Authoritarian Right",
+    "description": "Fusion of fascist authoritarianism with religious power, in which the corporatist state relies on the Church hierarchy and traditional morality to legitimize order and repress modern socialism and liberalism."
+  },
+  {
+    "id": "falangismo",
+    "name": "Falangism",
+    "category": "Authoritarian Right",
+    "description": "Spanish authoritarian nationalism of Catholic and syndicalist inspiration, advocating a corporatist state, national unity, and social hierarchy, becoming the ideological pillar of Franco's regime in Spain."
+  },
+  {
+    "id": "nacional-sindicalismo",
+    "name": "National Syndicalism",
+    "category": "Authoritarian Right",
+    "description": "Nationalist and syndicalist current that rejects liberalism and Marxism, advocating national unity, corporatist organization of labor, authoritarian social justice, and popular mobilization around the state."
+  },
+  {
+    "id": "integralismo-brasileiro",
+    "name": "Brazilian Integralism",
+    "category": "Authoritarian Right",
+    "description": "Authoritarian nationalist movement that emerged in 1930s Brazil, with a Christian and corporatist base, the motto God, Fatherland and Family, mass aesthetics, and frontal opposition to liberalism and communism."
+  },
+  {
+    "id": "capitalismo-autoritario",
+    "name": "Authoritarian Capitalism",
+    "category": "Authoritarian Right",
+    "description": "Model that combines a market economy and private property with a closed political regime, in which the state guarantees order, growth, and stability while restricting civil liberties and political competition."
+  },
+  {
+    "id": "capitalismo-nacional",
+    "name": "National Capitalism",
+    "category": "Authoritarian Right",
+    "description": "System that unites free enterprise with strong protectionism and state direction, prioritizing industry, jobs, and national sovereignty over global free trade and unchecked foreign capital."
+  },
+  {
+    "id": "alt-right",
+    "name": "Radical Right",
+    "category": "Authoritarian Right",
+    "description": "Radical right movement born on the internet, mixing identitarian nationalism, opposition to immigration and multiculturalism, and provocative rhetoric, with positions frequently linked to white supremacy."
+  },
+  {
+    "id": "alt-lite",
+    "name": "Alt-Lite",
+    "category": "Right",
+    "description": "More moderate branch of the alternative right, nationalist and anti-globalist, which rejects explicit racial supremacism but defends cultural identity, criticism of immigration, and the fight against political correctness."
+  },
+  {
+    "id": "aceleracionismo-de-direita",
+    "name": "Right-Wing Accelerationism",
+    "category": "Authoritarian Right",
+    "description": "Current that advocates accelerating the system's contradictions through technology and the collapse of liberal institutions, betting on the rupture of the existing order to forge a new social and political hierarchy."
+  },
+  {
+    "id": "nacionalismo-racial",
+    "name": "Racial Nationalism",
+    "category": "Authoritarian Right",
+    "description": "Ideology that defines the nation by race and advocates the ethnic homogeneity of the state, upholding racial hierarchies and the separation or exclusion of groups deemed foreign to the people — positions widely repudiated."
+  },
+  {
+    "id": "neoconservadorismo",
+    "name": "Neoconservatism",
+    "category": "Right",
+    "description": "Right-wing current that unites free markets, traditional values, and an interventionist foreign policy, advocating the promotion of democracy and national interests through military force and global leadership."
+  },
+  {
+    "id": "monarquismo-absoluto",
+    "name": "Absolute Monarchism",
+    "category": "Authoritarian Right",
+    "description": "Defense of monarchy with unlimited power concentrated in the sovereign, legitimized by tradition or divine right, without a constitution or parliament to restrict the king's authority over state and society."
+  },
+  {
+    "id": "conservadorismo-autoritario",
+    "name": "Authoritarian Conservatism",
+    "category": "Authoritarian Right",
+    "description": "Current that preserves order, tradition, and hierarchy through a strong state, restricting freedoms and political participation in the name of social stability, morality, religion, and established authority."
+  },
+  {
+    "id": "conservadorismo-nacional",
+    "name": "National Conservatism",
+    "category": "Right",
+    "description": "Current that unites traditional values, family, and religion with strong cultural nationalism, defending sovereignty, borders, and the people's identity within democracy, with clear distrust of globalism."
+  },
+  {
+    "id": "conservadorismo-paternalista",
+    "name": "Paternalistic Conservatism",
+    "category": "Center-Right",
+    "description": "Conservative tradition that accepts social reforms and protection for the poorest to preserve national cohesion, seeing elites as responsible for the people's welfare and for harmony between classes."
+  },
+  {
+    "id": "fundamentalismo-religioso",
+    "name": "Religious Fundamentalism",
+    "category": "Authoritarian Right",
+    "description": "Project that seeks to organize state and society according to the strict interpretation of a religious doctrine, subordinating laws, customs, and politics to sacred precepts and rejecting modern secularism."
+  },
+  {
+    "id": "nacionalismo-etnico",
+    "name": "Ethnic Nationalism",
+    "category": "Authoritarian Right",
+    "description": "Conception that defines the nation by common origin, language, and ancestry, advocating a state of the dominant ethnicity and the preservation of its identity, with a tendency to exclude minorities and immigrants from the national body."
+  },
+  {
+    "id": "nacionalismo-cultural",
+    "name": "Cultural Nationalism",
+    "category": "Center-Right",
+    "description": "Nationalism based on shared language, traditions, and heritage rather than race, which values the people's cultural identity and the integration of those who adopt these values, defending the nation's cohesion."
+  },
+  {
+    "id": "neorreacionarismo",
+    "name": "Neoreaction",
+    "category": "Authoritarian Right",
+    "description": "Current that rejects modern democracy and egalitarianism and proposes replacing them with hierarchical, efficient governments run like companies by a sovereign, combining traditionalism and technology."
+  },
+  {
+    "id": "neocameralismo",
+    "name": "Neocameralism",
+    "category": "Authoritarian Right",
+    "description": "Idea formulated by Curtis Yarvin of running the state as a company controlled by shareholders, with a sovereign-executive accountable for results, replacing democratic politics with efficient management."
+  },
+  {
+    "id": "cameralismo",
+    "name": "Cameralism",
+    "category": "Authoritarian Right",
+    "description": "Administrative doctrine of enlightened absolutism that organized the state through a disciplined bureaucracy and centralized finances, promoting industry, population, and revenue as sources of the monarch's power."
+  },
+  {
+    "id": "corporativismo",
+    "name": "Corporatism",
+    "category": "Authoritarian Right",
+    "description": "Model that organizes society into corporations of workers and employers integrated into the state, seeking harmony between classes and directed economic cooperation instead of conflict or free competition."
+  },
+  {
+    "id": "terceira-posicao-politica",
+    "name": "Third Position",
+    "category": "Authoritarian Right",
+    "description": "Ideological family that seeks a third way against capitalist liberalism and Marxism, combining nationalism, corporatism, economic sovereignty, and criticism of mass liberal democracy."
+  },
+  {
+    "id": "reacionarismo",
+    "name": "Reactionaryism",
+    "category": "Authoritarian Right",
+    "description": "Stance that rejects modernity and seeks to restore the pre-revolutionary order, defending monarchy, religion, tradition, and hierarchy against Enlightenment rationalism, liberalism, and democracy."
+  },
+  {
+    "id": "quarta-teoria-politica",
+    "name": "Fourth Political Theory",
+    "category": "Authoritarian Right",
+    "description": "Theory by Aleksandr Dugin that rejects liberalism, communism, and fascism and proposes a multipolar world founded on civilizations, tradition, and collective identity, opposing globalism and Western hegemony."
+  },
+  {
+    "id": "democracia-nacional",
+    "name": "National Democracy",
+    "category": "Center-Right",
+    "description": "Current that combines popular sovereignty and democratic institutions with strong cultural nationalism, prioritizing the nation's interests and identity over supranational commitments and multiculturalism."
+  },
+  {
+    "id": "bioconservadorismo",
+    "name": "Bioconservatism",
+    "category": "Center",
+    "description": "Position that opposes genetic manipulation and the technological enhancement of the human body, defending ethical limits on science in the name of dignity, human nature, and prudence toward the future."
+  },
+  {
+    "id": "tecnocracia-de-direita",
+    "name": "Right-Wing Technocracy",
+    "category": "Authoritarian Right",
+    "description": "Model that entrusts the management of the state and the economy to experts and technological efficiency, combining markets, innovation, and technical decisions instead of political deliberation and traditional party competition."
+  },
+  {
+    "id": "democracia-crista",
+    "name": "Christian Democracy",
+    "category": "Center",
+    "description": "Centrist current that applies Christian values to democratic politics, defending the social market economy, family, solidarity, and the common good as the foundation of free and pluralist institutions."
+  },
+  {
+    "id": "conservadorismo-cristao",
+    "name": "Christian Conservatism",
+    "category": "Right",
+    "description": "Current that grounds politics in Christian morality and tradition, defending family, life, and religious values within democracy, with emphasis on preserving the people's customs and cultural heritage."
+  },
+  {
+    "id": "republicanismo",
+    "name": "Republicanism",
+    "category": "Center",
+    "description": "Political tradition that values popular sovereignty, civic virtue, and the rule of law, defending citizens' self-government, the separation of powers, and protection against tyranny and the corruption of power."
+  },
+  {
+    "id": "monarquismo-constitucional",
+    "name": "Constitutional Monarchism",
+    "category": "Center",
+    "description": "Defense of monarchy as a symbol of unity and continuity, with the king subject to the constitution and parliament, uniting tradition and institutional stability with representative democracy and the rule of law."
+  },
+  {
+    "id": "neoliberalismo",
+    "name": "Neoliberalism",
+    "category": "Center-Right",
+    "description": "Current that advocates free markets, deregulation, privatization, and fiscal discipline, reducing the state's economic role and trusting competition and monetary stability as engines of prosperity."
+  },
+  {
+    "id": "ordoliberalismo",
+    "name": "Ordoliberalism",
+    "category": "Center",
+    "description": "German liberal school that defends the free market within firm rules guaranteed by the state, fighting monopolies and ensuring competition and stability, serving as the basis of the social market economy."
+  },
+  {
+    "id": "distributismo",
+    "name": "Distributism",
+    "category": "Center-Right",
+    "description": "Doctrine of Christian inspiration that advocates the wide distribution of property and small-scale production, opposing both monopoly capitalism and state socialism in favor of autonomous communities."
+  },
+  {
+    "id": "tecnocracia",
+    "name": "Technocracy",
+    "category": "Center",
+    "description": "Model of government in which decisions are made by experts and technical, scientific criteria, entrusting engineers, economists, and scientists with the rational and efficient management of the state and the economy."
+  },
+  {
+    "id": "comunitarismo",
+    "name": "Communitarianism",
+    "category": "Center",
+    "description": "Current that values community bonds, traditions, and the common good above individualism, holding that justice and identity arise from life in community and the responsibilities people share."
+  },
+  {
+    "id": "meritocracia",
+    "name": "Meritocracy",
+    "category": "Center",
+    "description": "Principle according to which positions and rewards should be distributed by talent, effort, and performance rather than origin or privilege, defending equal opportunity and selection by ability."
+  },
+  {
+    "id": "liberalismo",
+    "name": "Liberalism",
+    "category": "Libertarian Left",
+    "description": "Political tradition that places individual freedom at the center, defending rights, tolerance, the rule of law, a market economy, and limits on power, with government subject to the consent of citizens."
+  },
+  {
+    "id": "liberalismo-classico",
+    "name": "Classical Liberalism",
+    "category": "Libertarian Right",
+    "description": "Original branch of liberalism that defends natural rights, property, free markets, and a minimal state, seeing individual freedom and the strict limitation of power as the foundations of a just society."
+  },
+  {
+    "id": "libertarianismo",
+    "name": "Libertarianism",
+    "category": "Libertarian Right",
+    "description": "Philosophy that advocates maximum individual freedom and a state reduced to essential functions, valuing private property, free markets, and personal autonomy while rejecting state coercion over life."
+  },
+  {
+    "id": "liberalismo-verde",
+    "name": "Green Liberalism",
+    "category": "Center-Left",
+    "description": "Current that unites individual freedom, markets, and democracy with the ecological agenda, defending sustainability, rights, and innovation to reconcile economic prosperity with effective environmental protection."
+  },
+  {
+    "id": "liberalismo-social",
+    "name": "Social Liberalism",
+    "category": "Left",
+    "description": "Branch that combines individual freedoms with strong state action to guarantee welfare, education, and healthcare, defending equal opportunity and social security within the market economy."
+  },
+  {
+    "id": "liberalismo-radical",
+    "name": "Radical Liberalism",
+    "category": "Libertarian Left",
+    "description": "Current that takes the defense of individual freedoms and equal rights to its fullest, supporting broad democratic reforms, social emancipation, and the expansion of civil, political, and cultural liberties."
+  },
+  {
+    "id": "liberalismo-conservador",
+    "name": "Conservative Liberalism",
+    "category": "Right",
+    "description": "Synthesis that unites free markets and economic freedoms with the appreciation of tradition, order, and institutions, defending prudent change and social stability within the framework of liberal democracy."
+  },
+  {
+    "id": "liberaltarianismo",
+    "name": "Liberaltarianism",
+    "category": "Libertarian Right",
+    "description": "Current that brings libertarianism closer to social liberalism, defending individual freedoms and free markets alongside some concern for social justice and equal opportunity for the poorest."
+  },
+  {
+    "id": "panarchismo",
+    "name": "Panarchism",
+    "category": "Libertarian Right",
+    "description": "Idea that each person could freely choose the government or political system they submit to, without territorial ties, allowing multiple voluntary jurisdictions to coexist in the same space."
+  },
+  {
+    "id": "georgismo",
+    "name": "Georgism",
+    "category": "Center",
+    "description": "Current created by Henry George proposing to fund society with a single tax on land value, holding that land rent belongs to everyone and that labor and capital should not be taxed."
+  },
+  {
+    "id": "geolibertarianismo",
+    "name": "Geolibertarianism",
+    "category": "Libertarian Right",
+    "description": "Synthesis of libertarianism and Georgism that combines free markets and individual freedoms with the taxation of land value, seen as a common resource, to fund the minimal state without punishing labor."
+  },
+  {
+    "id": "feminismo",
+    "name": "Feminism",
+    "category": "Left",
+    "description": "Movement that advocates equal rights and opportunities between the sexes and the end of women's oppression, fighting gender discrimination in politics, work, culture, and private life."
+  },
+  {
+    "id": "feminismo-liberal",
+    "name": "Liberal Feminism",
+    "category": "Left",
+    "description": "Branch of feminism that seeks equality between men and women through legal and institutional reforms, guaranteeing equal rights, market access, and individual freedom within democracy."
+  },
+  {
+    "id": "liberalismo-de-estado",
+    "name": "State Liberalism",
+    "category": "Center",
+    "description": "Liberal current that accepts an active role for the state in the economy and in guaranteeing rights, combining individual freedoms and markets with regulation and public policies aimed at the collective good and equality."
+  },
+  {
+    "id": "ambientalismo",
+    "name": "Environmentalism",
+    "category": "Center-Left",
+    "description": "Movement dedicated to protecting the environment and the sustainable use of resources, advocating policies against pollution and climate change and harmony between human development and ecological balance."
+  },
+  {
+    "id": "conservadorismo",
+    "name": "Conservatism",
+    "category": "Right",
+    "description": "Political tradition that values order, customs, family, and consolidated institutions, preferring gradual and prudent change over rupture, based on historical experience and skepticism toward utopias."
+  },
+  {
+    "id": "progressivismo",
+    "name": "Progressivism",
+    "category": "Left",
+    "description": "Current that advocates social reforms and the expansion of rights to promote equality and justice, trusting progress, science, and collective action to transform institutions and overcome inequalities."
+  },
+  {
+    "id": "aceleracionismo",
+    "name": "Accelerationism",
+    "category": "Left",
+    "description": "Current that proposes intensifying technological development and the forces of modernity to radically transform society, betting on automation and rapid change as the path to the future."
+  },
+  {
+    "id": "transhumanismo",
+    "name": "Transhumanism",
+    "category": "Left",
+    "description": "Movement that advocates using science and technology to overcome human biological limits, expanding physical and mental capacities and seeking to prolong life toward a post-human stage of existence."
+  },
+  {
+    "id": "nacionalismo",
+    "name": "Nationalism",
+    "category": "Center",
+    "description": "Ideology that places the nation as the central value, defending its sovereignty, unity, and identity, and prioritizing the interests of the people and the nation-state over external influences and globalism."
+  },
+  {
+    "id": "nacionalismo-civico",
+    "name": "Civic Nationalism",
+    "category": "Center",
+    "description": "Nationalism based on citizenship and shared values rather than ethnicity, defining the nation by adherence to common laws and institutions, open to all who accept its democratic and civic principles."
+  },
+  {
+    "id": "indigenismo",
+    "name": "Indigenism",
+    "category": "Center-Left",
+    "description": "Current that values indigenous peoples and their rights, defending autonomy, territory, culture, and political participation, along with development models and a plurinational state that respect their traditions."
+  },
+  {
+    "id": "conservadorismo-socialista",
+    "name": "Socialist Conservatism",
+    "category": "Authoritarian Left",
+    "description": "Current that unites a socialist economy with traditional values, defending social protection and a strong state role alongside family, order, and customs, far from the cultural progressivism of liberal lefts."
+  },
+  {
+    "id": "anarquismo",
+    "name": "Anarchism",
+    "category": "Libertarian Left",
+    "description": "Philosophy that rejects the state and all coercive authority, defending the free organization of society through voluntary associations, cooperation, and self-management, with freedom and equality as central values."
+  },
+  {
+    "id": "anarcocomunismo",
+    "name": "Anarcho-Communism",
+    "category": "Libertarian Left",
+    "description": "Current that unites anarchism and communism, proposing a society without state or private property, with collective production and distribution according to need, based on free association and mutual aid."
+  },
+  {
+    "id": "anarcocoletivismo",
+    "name": "Anarcho-Collectivism",
+    "category": "Libertarian Left",
+    "description": "Anarchist branch that would abolish the state and private ownership of the means of production, keeping remuneration according to work, with collective management by free, federated associations of producers."
+  },
+  {
+    "id": "anarcossindicalismo",
+    "name": "Anarcho-Syndicalism",
+    "category": "Libertarian Left",
+    "description": "Current that sees revolutionary unions as the basis for overthrowing capitalism through direct action and the general strike, organizing production by the workers themselves in a free, stateless society."
+  },
+  {
+    "id": "sindicalismo",
+    "name": "Syndicalism",
+    "category": "Left",
+    "description": "Movement that places unions and workers' organization at the center of politics, defending collective bargaining, direct action, and labor control over production as the path to working-class emancipation."
+  },
+  {
+    "id": "socialismo-libertario",
+    "name": "Libertarian Socialism",
+    "category": "Libertarian Left",
+    "description": "Current that pursues socialism without an authoritarian state, uniting collective ownership and self-management with broad individual freedom, organized from the bottom up by free communities and workers."
+  },
+  {
+    "id": "marxismo-libertario",
+    "name": "Libertarian Marxism",
+    "category": "Left",
+    "description": "Branch of Marxism that rejects the centralized state and party bureaucracy, defending workers' councils, self-management, and the emancipation of the masses through their own revolutionary, collective, and autonomous action."
+  },
+  {
+    "id": "socialismo-de-mercado-libertario",
+    "name": "Libertarian Market Socialism",
+    "category": "Libertarian Left",
+    "description": "Model that combines collective or cooperative ownership of the means of production with market mechanisms and broad autonomy, dispensing with central planning and the authoritarian state in the socialist economy."
+  },
+  {
+    "id": "socialismo-de-mercado",
+    "name": "Market Socialism",
+    "category": "Center-Left",
+    "description": "System in which collectively or publicly owned enterprises compete in markets, uniting the efficiency of competition with the socialist distribution of profits, without the rigid central planning of state economies."
+  },
+  {
+    "id": "mutualismo",
+    "name": "Mutualism",
+    "category": "Libertarian Left",
+    "description": "Anarchist current founded by Proudhon that advocates fair exchange, free credit, and use-based property, with producers and cooperatives trading among themselves without exploitation, bosses, or a central state."
+  },
+  {
+    "id": "minarco-mutualismo",
+    "name": "Minarcho-Mutualism",
+    "category": "Center-Left",
+    "description": "Synthesis that unites mutualism with a minimal state, combining fair exchange, cooperatives, and free credit with a public structure reduced to the essential functions of protecting rights, contracts, and freedoms."
+  },
+  {
+    "id": "minarco-socialismo",
+    "name": "Minarcho-Socialism",
+    "category": "Left",
+    "description": "Current that pursues socialist goals with a minimal state, uniting collective or cooperative ownership and social justice with broad individual freedom and the refusal of large, centralized bureaucracies."
+  },
+  {
+    "id": "socialismo-individualista",
+    "name": "Individualist Socialism",
+    "category": "Libertarian Left",
+    "description": "Branch that reconciles socialist ideals with strong emphasis on personal autonomy and freedom, defending cooperation and collective ownership without sacrificing each person's independence and uniqueness."
+  },
+  {
+    "id": "comunalismo",
+    "name": "Communalism",
+    "category": "Libertarian Left",
+    "description": "Model created by Murray Bookchin based on autonomous municipalities and federated popular assemblies, with a community economy and direct democracy, seeking to replace the state with a free confederation."
+  },
+  {
+    "id": "socialismo-cristao",
+    "name": "Christian Socialism",
+    "category": "Center-Left",
+    "description": "Current that unites Christian faith with the struggle for social justice, defending solidarity, equality, and criticism of capitalism in the name of the Gospel, with strong commitment to the poor and the dignity of labor."
+  },
+  {
+    "id": "trabalhismo-cristao",
+    "name": "Christian Labourism",
+    "category": "Center",
+    "description": "Branch that combines the defense of workers and social justice with Christian values, promoting labor rights, solidarity, and social protection within democracy, inspired by the social doctrine of the Church."
+  },
+  {
+    "id": "socialismo-religioso",
+    "name": "Religious Socialism",
+    "category": "Center",
+    "description": "Current that grounds socialism in spiritual and religious values, seeing in faith a call to justice, equality, and solidarity, and uniting the critique of capitalism with ethics and the community of believers."
+  },
+  {
+    "id": "social-democracia",
+    "name": "Social Democracy",
+    "category": "Left",
+    "description": "Current that seeks to reconcile capitalism and social justice through democracy, defending regulated markets, a strong welfare state, labor rights, and redistribution to reduce social inequalities."
+  },
+  {
+    "id": "socialismo",
+    "name": "Socialism",
+    "category": "Left",
+    "description": "Doctrine that advocates social or collective ownership of the means of production and a more egalitarian distribution of wealth, seeking to overcome capitalist exploitation through cooperation and economic planning."
+  },
+  {
+    "id": "socialismo-liberal",
+    "name": "Liberal Socialism",
+    "category": "Left",
+    "description": "Current that unites socialist goals of equality and social justice with the defense of individual freedoms and democracy, combining strong social protection with pluralism, civil rights, and a mixed economy."
+  },
+  {
+    "id": "libertarianismo-social",
+    "name": "Social Libertarianism",
+    "category": "Libertarian Left",
+    "description": "Left-libertarian branch that unites broad individual freedom with collective or shared ownership of resources, defending autonomy, cooperation, and the rejection of both the authoritarian state and capital."
+  },
+  {
+    "id": "ecossocialismo",
+    "name": "Eco-Socialism",
+    "category": "Left",
+    "description": "Current that fuses socialism and ecology, attributing the environmental crisis to capitalism and defending collective, sustainable, and democratic production that respects the limits of nature and social needs."
+  },
+  {
+    "id": "ecofeminismo",
+    "name": "Ecofeminism",
+    "category": "Libertarian Left",
+    "description": "Current that links the exploitation of nature to the oppression of women, holding that overcoming patriarchy and predatory dominance over the environment are part of one struggle for equality and sustainability."
+  },
+  {
+    "id": "ecologia-profunda",
+    "name": "Deep Ecology",
+    "category": "Left",
+    "description": "Current that attributes intrinsic value to all life and not only to human beings, defending a profound change of values, the reduction of human impact, and respect for the balance of the planet's ecosystems."
+  },
+  {
+    "id": "anarquismo-agrario",
+    "name": "Agrarian Anarchism",
+    "category": "Libertarian Left",
+    "description": "Anarchist branch centered on the countryside, defending autonomous rural communities, collective ownership of land, and peasant cooperation, rejecting the state and land concentration in favor of self-management."
+  },
+  {
+    "id": "anarquismo-verde",
+    "name": "Green Anarchism",
+    "category": "Libertarian Left",
+    "description": "Current that unites anarchism and radical ecology, defending decentralized, sustainable communities without a state or exploitation of nature, in harmony with ecological cycles and non-human life."
+  },
+  {
+    "id": "anarcofeminismo",
+    "name": "Anarcha-Feminism",
+    "category": "Libertarian Left",
+    "description": "Branch that combines anarchism and feminism, seeing patriarchy and the state as forms of domination to be abolished, and defending freedom, gender equality, and social organization without hierarchies."
+  },
+  {
+    "id": "anarquismo-queer",
+    "name": "Queer Anarchism",
+    "category": "Libertarian Left",
+    "description": "Current that unites anarchism with the critique of gender and sexuality norms, fighting the state and the hierarchies that oppress LGBT people and defending freedom, diversity, and autonomy over body and identity."
+  },
+  {
+    "id": "anarcopacifismo",
+    "name": "Anarcho-Pacifism",
+    "category": "Libertarian Left",
+    "description": "Anarchist branch that rejects the state and all violence, defending social transformation through nonviolent means, civil disobedience, and voluntary cooperation as the path to a free and just society."
+  },
+  {
+    "id": "anarquismo-cristao",
+    "name": "Christian Anarchism",
+    "category": "Libertarian Left",
+    "description": "Current that unites Christian faith with anarchism, holding that the Gospel preaches love, equality, and nonviolence incompatible with the state, and defending free communities based on conscience and charity."
+  },
+  {
+    "id": "anarco-naturalismo",
+    "name": "Anarcho-Naturism",
+    "category": "Libertarian Left",
+    "description": "Anarchist branch linked to naturism that defends simple living in contact with nature, without a state or oppressive conventions, valuing individual autonomy, health, and harmony with the natural world."
+  },
+  {
+    "id": "anarcoprimitivismo",
+    "name": "Anarcho-Primitivism",
+    "category": "Libertarian Left",
+    "description": "Radical current that criticizes industrial civilization and technology as sources of domination and defends a return to simple, communal ways of life, close to nature and free of state and hierarchy."
+  },
+  {
+    "id": "geoanarquismo",
+    "name": "Geoanarchism",
+    "category": "Libertarian Left",
+    "description": "Synthesis of anarchism and Georgism that rejects the state but treats land and natural resources as commons, defending that their rent be shared by the whole community in a free and egalitarian way."
+  },
+  {
+    "id": "anarquismo-egoista",
+    "name": "Egoist Anarchism",
+    "category": "Libertarian Right",
+    "description": "Current inspired by Max Stirner that rejects state, morality, and institutions as oppressive abstractions, placing the sovereign individual and their interests at the center and defending free unions of egoists."
+  },
+  {
+    "id": "anarcocapitalismo",
+    "name": "Anarcho-Capitalism",
+    "category": "Libertarian Right",
+    "description": "Current that proposes abolishing the state and organizing all of society through contracts and free markets, with security, justice, and services provided by competing private companies under absolute property rights."
+  },
+  {
+    "id": "minarquismo",
+    "name": "Minarchism",
+    "category": "Libertarian Right",
+    "description": "Libertarian branch that defends a minimal state limited to police, courts, and defense, leaving everything else to the market and private initiative, to protect individual rights without oppressing freedom."
+  },
+  {
+    "id": "austrolibertarianismo",
+    "name": "Austro-Libertarianism",
+    "category": "Libertarian Right",
+    "description": "Current that unites libertarianism with the Austrian School of economics, defending free markets, sound money, and criticism of state intervention, based on individual human action and the spontaneous order of the market."
+  },
+  {
+    "id": "paleolibertarianismo",
+    "name": "Paleolibertarianism",
+    "category": "Libertarian Right",
+    "description": "Branch that combines radical free markets with traditional, conservative cultural values, defending economic freedom, property, and autonomous local communities against the state and progressivism."
+  },
+  {
+    "id": "hoppeanismo",
+    "name": "Hoppeanism",
+    "category": "Libertarian Right",
+    "description": "Current linked to Hans-Hermann Hoppe that unites anarcho-capitalism, absolute private property, and criticism of democracy, defending social orders based on contract, voluntary exclusion, and private authority."
+  },
+  {
+    "id": "libertarianismo-de-chicago",
+    "name": "Chicago Libertarianism",
+    "category": "Libertarian Right",
+    "description": "Market-liberal branch inspired by the Chicago School, defending free competition, deregulation, and stable monetary policy, trusting prices and the market to allocate resources efficiently."
+  },
+  {
+    "id": "capitalismo",
+    "name": "Capitalism",
+    "category": "Center-Right",
+    "description": "Economic system based on private property, free markets, and the pursuit of profit, in which production and prices are regulated by competition and supply and demand, with individual initiative as its engine."
+  },
+  {
+    "id": "objetivismo",
+    "name": "Objectivism",
+    "category": "Libertarian Right",
+    "description": "Philosophy created by Ayn Rand that exalts reason, individualism, and rational egoism, defending laissez-faire capitalism and the pursuit of one's own happiness as the supreme moral purpose of each person's life."
+  },
+  {
+    "id": "ecocapitalismo",
+    "name": "Eco-Capitalism",
+    "category": "Libertarian Right",
+    "description": "Current that seeks to solve the environmental crisis through the market, using pricing, green technology, and incentives to make protecting nature profitable and compatible with growth and free enterprise."
+  },
+  {
+    "id": "ecoconservadorismo",
+    "name": "Eco-Conservatism",
+    "category": "Center-Right",
+    "description": "Branch that unites conservatism and environmental protection, defending the preservation of nature as part of the tradition and heritage to be passed on to future generations, with prudence toward change."
+  },
+  {
+    "id": "econacionalismo",
+    "name": "Eco-Nationalism",
+    "category": "Center-Right",
+    "description": "Current that links environmental protection to national sovereignty, prioritizing the protection of the country's own natural resources and land and sustainable development within national borders."
+  },
+  {
+    "id": "agorismo",
+    "name": "Agorism",
+    "category": "Libertarian Right",
+    "description": "Libertarian current that advocates replacing the state through free and parallel markets, using the informal economy and counter-economics to undermine state power and build a voluntary society."
+  },
+  {
+    "id": "criptoanarquismo",
+    "name": "Crypto-Anarchism",
+    "category": "Libertarian Right",
+    "description": "Current that uses cryptography and digital technologies to guarantee privacy, freedom, and transactions beyond state control, seeking to weaken surveillance and authority through technological means."
+  },
+  {
+    "id": "anarco-transhumanismo",
+    "name": "Anarcho-Transhumanism",
+    "category": "Libertarian Left",
+    "description": "Synthesis of anarchism and transhumanism that advocates using technology to liberate and expand human capacities without state or hierarchies, making enhancement accessible and emancipatory for all."
+  },
+  {
+    "id": "libertarianismo-bleeding-heart",
+    "name": "Bleeding-Heart Libertarianism",
+    "category": "Libertarian Left",
+    "description": "Current that unites free markets and individual freedoms with concern for social justice, holding that economic freedom must also concretely improve the lives of the poorest and most vulnerable."
+  },
+  {
+    "id": "libertarianismo-nacional",
+    "name": "National Libertarianism",
+    "category": "Libertarian Right",
+    "description": "Branch that combines the defense of individual freedoms and free markets with appreciation for national sovereignty and identity, defending limited government alongside border control and the nation."
+  },
+  {
+    "id": "monarquismo-libertario",
+    "name": "Libertarian Monarchism",
+    "category": "Libertarian Right",
+    "description": "Current that sees monarchy as a guarantee of freedom and stability, defending a king with limited power who protects property and individual rights and maintains a lean, minimally interventionist state."
+  },
+  {
+    "id": "monarquia-federativa",
+    "name": "Federative Monarchy",
+    "category": "Right",
+    "description": "Model that unites monarchy with a federal structure, with power divided between the crown and autonomous regions, combining symbolic unity and historical continuity with decentralization and local self-government."
+  },
+  {
+    "id": "conservadorismo-libertario",
+    "name": "Libertarian Conservatism",
+    "category": "Libertarian Right",
+    "description": "Synthesis that unites free markets and a minimal state with the defense of tradition, family, and order, valuing individual freedom and personal responsibility alongside the preservation of customs and institutions."
+  },
+  {
+    "id": "feminismo-libertario",
+    "name": "Libertarian Feminism",
+    "category": "Libertarian Left",
+    "description": "Branch that pursues gender equality through individual freedom and the market rather than the state, defending autonomy, equal rights, and the end of legal restrictions on women's choices."
+  },
+  {
+    "id": "pacifismo-libertario",
+    "name": "Libertarian Pacifism",
+    "category": "Libertarian Right",
+    "description": "Current that unites the defense of individual freedom with the refusal of war and state violence, opposing militarism and interventionism and defending the peaceful, voluntary resolution of conflicts."
+  },
+  {
+    "id": "anarcoconservadorismo",
+    "name": "Anarcho-Conservatism",
+    "category": "Libertarian Right",
+    "description": "Current that rejects the state but preserves tradition, religion, and community values, defending a spontaneous social order based on customs, family, and natural authority instead of central political power."
+  },
+  {
+    "id": "anarcodistributismo",
+    "name": "Anarcho-Distributism",
+    "category": "Libertarian Right",
+    "description": "Synthesis of anarchism and distributism that defends the wide distribution of property and small-scale production, with autonomous communities and cooperatives organized without a state or large monopolies."
+  },
+  {
+    "id": "anarcoindividualismo",
+    "name": "Individualist Anarchism",
+    "category": "Libertarian Right",
+    "description": "Anarchist branch that places the sovereignty and freedom of the individual above all, rejecting the state and collective coercion and defending voluntary associations that preserve each person's autonomy."
+  },
+  {
+    "id": "centrismo",
+    "name": "Centrism",
+    "category": "Center",
+    "description": "Political position that seeks balance between left and right, valuing moderation, pragmatism, and consensus, and combining elements of different currents to avoid extremes and favor gradual reforms."
+  },
+  {
+    "id": "trabalhismo",
+    "name": "Labourism",
+    "category": "Center-Left",
+    "description": "Current that defends workers' interests within democracy, promoting labor rights, social security, strong unions, and income distribution through reforms and the welfare state."
+  },
+  {
+    "id": "positivismo",
+    "name": "Positivism",
+    "category": "Authoritarian Left",
+    "description": "Current inspired by Auguste Comte that trusts science and reason to organize society, defending order, progress, and technical administration guided by knowledge in place of metaphysics and tradition."
+  },
+  {
+    "id": "conservadorismo-secular",
+    "name": "Secular Conservatism",
+    "category": "Right",
+    "description": "Conservative branch that defends order, tradition, and institutions without grounding them in religion, supporting cultural values and social stability with secular, historical, and pragmatic arguments."
+  },
+  {
+    "id": "progressismo-cristao",
+    "name": "Christian Progressivism",
+    "category": "Center-Left",
+    "description": "Current that unites Christian faith with the defense of social justice, rights, and reforms, seeing in the Gospel a call to solidarity, equality, and care for the poor and marginalized of society and the world."
+  },
+  {
+    "id": "autoritarismo-modernizador",
+    "name": "Modernizing Authoritarianism",
+    "category": "Center",
+    "description": "Model in which a strong regime imposes economic and social modernization from above, promoting industrialization, education, and rapid reforms while restricting political freedoms in the name of national progress."
+  },
+  {
+    "id": "desenvolvimentismo-de-estado",
+    "name": "State Developmentalism",
+    "category": "Authoritarian Left",
+    "description": "Model in which the state directs industrialization and economic growth through planning, public investment, and industrial protection, seeking to overcome the nation's backwardness and external dependence."
+  },
+  {
+    "id": "atlantismo",
+    "name": "Atlanticism",
+    "category": "Right",
+    "description": "Foreign policy doctrine that advocates a close alliance between North America and Europe, sustaining the West's military and political cooperation and the common defense of its values and interests in the world."
+  },
+  {
+    "id": "federalismo-privado",
+    "name": "Private Federalism",
+    "category": "Libertarian Right",
+    "description": "Model that organizes society into private, voluntary jurisdictions that compete with one another, offering laws and services by contract, with individuals free to choose the community they join."
+  },
+  {
+    "id": "tecno-monarquismo",
+    "name": "Techno-Monarchism",
+    "category": "Authoritarian Right",
+    "description": "Current that unites monarchy with technology and efficient management, proposing a sovereign who governs like an executive, supported by data and innovation, to give the state stability and long-term direction."
+  },
+  {
+    "id": "direita-progressista",
+    "name": "Progressive Right",
+    "category": "Center",
+    "description": "Branch that unites capitalism and the cult of technological progress with a socially progressive, pragmatic, and secular culture, entrusting society's direction to a technical elite rather than mass democracy."
+  },
+  {
+    "id": "tecno-socialismo",
+    "name": "Techno-Socialism",
+    "category": "Left",
+    "description": "Model that uses technology, automation, and data to plan the economy efficiently and democratically, seeking to distribute the abundance produced by machines and reduce labor and inequalities."
+  },
+  {
+    "id": "tecno-fascismo",
+    "name": "Techno-Fascism",
+    "category": "Authoritarian Right",
+    "description": "Dystopia that combines the totalitarian authoritarianism of fascism with digital surveillance, artificial intelligence, and technological control of the masses, using technique to repress, manipulate, and dominate all of society."
+  },
+  {
+    "id": "liberalismo-autoritario",
+    "name": "Authoritarian Liberalism",
+    "category": "Authoritarian Right",
+    "description": "Current that combines a market economy, private property, trade openness, and technocracy with low democratic participation, holding that a strong, efficient state should preserve order, stability, and growth."
+  },
+  {
+    "id": "nacionalismo-progressista",
+    "name": "Progressive Nationalism",
+    "category": "Left",
+    "description": "Current that unites national sovereignty, economic protection, and popular integration with progressive social reforms, seeking a state capable of defending the nation while expanding rights, equality, and inclusion."
+  },
+  {
+    "id": "ecofascismo",
+    "name": "Eco-Fascism",
+    "category": "Authoritarian Right",
+    "description": "Current that fuses radical ecology, authoritarianism, and organic nationalism, defending population control, coercive environmental preservation, and the subordination of individual freedoms to the survival of the national community."
+  },
+  {
+    "id": "comunismo-agrario",
+    "name": "Agrarian Communism",
+    "category": "Authoritarian Left",
+    "description": "Revolutionary model that idealizes peasant life and collective rural production, rejecting cities, markets, and private property in favor of an equality imposed by state mobilization and communal discipline."
+  },
+  {
+    "id": "socialismo-bolivariano",
+    "name": "Bolivarian Socialism",
+    "category": "Authoritarian Left",
+    "description": "Latin American project that combines popular nationalism, anti-imperialism, social redistribution, and strong presidential leadership, using the state and strategic resources to promote sovereignty and popular inclusion."
+  },
+  {
+    "id": "nacional-desenvolvimentismo",
+    "name": "National Developmentalism",
+    "category": "Center",
+    "description": "Current that advocates industrialization, national sovereignty, and strategic state planning, seeking to modernize the economy through public investment, productive protection, and coordination between government, science, and national companies."
+  },
+  {
+    "id": "populismo-libertario",
+    "name": "Libertarian Populism",
+    "category": "Libertarian Right",
+    "description": "Branch that unites anti-politics, radical free markets, and direct popular communication, attacking bureaucracies, taxes, and party elites in the name of individual freedom, entrepreneurship, and the sovereignty of the ordinary citizen."
+  },
+  {
+    "id": "teocracia-crista",
+    "name": "Christian Theocracy",
+    "category": "Authoritarian Right",
+    "description": "Doctrine that subordinates political power to Christian religious authority, holding that divine law and the Church should govern the state and customs, from medieval and papal ultramontanism to modern reconstructionist projects."
+  },
+  {
+    "id": "titoismo",
+    "name": "Titoism",
+    "category": "Authoritarian Left",
+    "description": "Variant of socialism developed in Tito's Yugoslavia, combining single-party rule and a cult of the leader with workers' self-management of enterprises, federal decentralization, market openness, and non-alignment between the Cold War blocs."
+  },
+  {
+    "id": "socialismo-anticolonial",
+    "name": "Anti-Colonial Socialism",
+    "category": "Left",
+    "description": "Socialist current born of national liberation struggles in Africa, Asia, and Latin America; it defends economic sovereignty, nationalization of resources, non-alignment between the powers, and solidarity of the peoples of the Global South against imperialism."
+  },
+  {
+    "id": "tecno-comunismo",
+    "name": "Techno-Communism",
+    "category": "Authoritarian Left",
+    "description": "Project of integral communism made possible by technology: total economic planning executed by computers and artificial intelligence, absolute collective ownership, and a strong technological state leading society to post-scarcity abundance."
+  },
+  {
+    "id": "tecno-anarquismo",
+    "name": "Techno-Anarchism",
+    "category": "Libertarian Left",
+    "description": "Anarchism that sees technology as the path to abolishing the state: automation and abundant energy eliminating scarcity, decentralized networks replacing governments, and self-managed voluntary communities with digital tools and free local production."
+  },
+  {
+    "id": "tecno-cristianismo",
+    "name": "Techno-Christianity",
+    "category": "Right",
+    "description": "Synthesis of Christian faith and technological optimism: it sees innovation, artificial intelligence, and the expansion of civilization as a God-given vocation, uniting traditional morality, communities of faith, and the accelerated construction of the future against secular stagnationism."
+  }
+]
