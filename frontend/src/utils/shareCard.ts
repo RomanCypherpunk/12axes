@@ -267,7 +267,7 @@ function buildShareTitle(): HTMLElement {
       color: SHARE_COLORS.green700,
       textAlign: 'center'
     },
-    'Seu perfil ideológico'
+    'Seu perfil ideológico - 12Axes'
   );
 }
 
