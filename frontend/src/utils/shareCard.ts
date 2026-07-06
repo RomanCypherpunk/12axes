@@ -264,7 +264,7 @@ function buildShareTitle(): HTMLElement {
       fontWeight: '800',
       fontSize: '34px',
       letterSpacing: '-0.03em',
-      color: SHARE_COLORS.green700,
+      color: SHARE_COLORS.ink900,
       textAlign: 'center'
     },
     'Seu perfil ideológico - 12Axes'
