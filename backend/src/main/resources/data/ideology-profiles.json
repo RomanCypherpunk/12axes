@@ -2701,5 +2701,56 @@
       "moral": 55,
       "tecnologia": 42
     }
+  },
+  {
+    "ideologyId": "socialismo-juche",
+    "vector": {
+      "estrutura": 12,
+      "representacao": 5,
+      "poder": 95,
+      "imigracao": 65,
+      "diplomacia": 78,
+      "intervencao": 25,
+      "economia": 95,
+      "controle": 92,
+      "comercio": 92,
+      "religiao": 85,
+      "moral": 40,
+      "tecnologia": 50
+    }
+  },
+  {
+    "ideologyId": "tecno-comunismo",
+    "vector": {
+      "estrutura": 20,
+      "representacao": 12,
+      "poder": 88,
+      "imigracao": 55,
+      "diplomacia": 55,
+      "intervencao": 40,
+      "economia": 98,
+      "controle": 98,
+      "comercio": 70,
+      "religiao": 95,
+      "moral": 70,
+      "tecnologia": 100
+    }
+  },
+  {
+    "ideologyId": "tecno-anarquismo",
+    "vector": {
+      "estrutura": 95,
+      "representacao": 75,
+      "poder": 8,
+      "imigracao": 30,
+      "diplomacia": 15,
+      "intervencao": 70,
+      "economia": 78,
+      "controle": 55,
+      "comercio": 45,
+      "religiao": 88,
+      "moral": 88,
+      "tecnologia": 97
+    }
   }
 ]

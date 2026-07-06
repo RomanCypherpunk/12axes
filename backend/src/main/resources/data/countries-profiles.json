@@ -325,7 +325,7 @@
   {
     "countryId": "india",
     "vector": {
-      "estrutura": 64,
+      "estrutura": 62,
       "representacao": 73,
       "poder": 46,
       "imigracao": 69,
@@ -333,9 +333,9 @@
       "intervencao": 42,
       "economia": 41,
       "controle": 39,
-      "comercio": 45,
-      "religiao": 28,
-      "moral": 36,
+      "comercio": 65,
+      "religiao": 15,
+      "moral": 28,
       "tecnologia": 65
     }
   },
@@ -1266,9 +1266,9 @@
       "imigracao": 38,
       "diplomacia": 35,
       "intervencao": 65,
-      "economia": 70,
+      "economia": 62,
       "controle": 60,
-      "comercio": 35,
+      "comercio": 52,
       "religiao": 75,
       "moral": 85,
       "tecnologia": 78
@@ -1952,6 +1952,23 @@
       "religiao": 70,
       "moral": 72,
       "tecnologia": 62
+    }
+  },
+  {
+    "countryId": "burkina-faso-de-sankara",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 35,
+      "poder": 65,
+      "imigracao": 40,
+      "diplomacia": 55,
+      "intervencao": 45,
+      "economia": 85,
+      "controle": 80,
+      "comercio": 80,
+      "religiao": 60,
+      "moral": 75,
+      "tecnologia": 40
     }
   }
 ]
