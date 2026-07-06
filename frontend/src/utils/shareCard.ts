@@ -267,7 +267,7 @@ function buildShareTitle(): HTMLElement {
       color: SHARE_COLORS.ink900,
       textAlign: 'center'
     },
-    'Seu perfil ideológico - 12Axes'
+    'Seu perfil ideológico | 12axes.vercel.app'
   );
 }
 
