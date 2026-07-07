@@ -976,6 +976,9 @@ export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
  */
 async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   const src = image.getAttribute('src') ?? '';
+  const rasterOptions = image.dataset.kind === 'portrait'
+    ? { width: 220, height: 264, fit: 'cover-top' as const }
+    : undefined;
   if (!src) {
     replaceBrokenExportImage(image);
     return;
@@ -985,7 +988,7 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   }
 
   try {
-    const dataUrl = await fetchAsDataUrl(src);
+    const dataUrl = await fetchAsPngDataUrl(src, rasterOptions);
     await applyImageSrc(image, dataUrl);
     return;
   } catch {
@@ -995,7 +998,7 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   await waitForImage(image);
 
   if (image.complete && image.naturalWidth > 0) {
-    const dataUrl = canvasDataUrl(image);
+    const dataUrl = canvasDataUrl(image, rasterOptions);
     if (dataUrl) {
       await applyImageSrc(image, dataUrl);
       return;
@@ -1005,17 +1008,39 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   replaceBrokenExportImage(image);
 }
 
+type RasterOptions = {
+  width: number;
+  height: number;
+  fit: 'cover-top';
+};
+
 /** Desenha a imagem já carregada num canvas e retorna o data: URI (sem rede). */
-function canvasDataUrl(image: HTMLImageElement): string | null {
+function canvasDataUrl(image: HTMLImageElement, options?: RasterOptions): string | null {
   try {
+    const sourceWidth = image.naturalWidth;
+    const sourceHeight = image.naturalHeight;
+    if (!sourceWidth || !sourceHeight) {
+      return null;
+    }
+    const width = options?.width ?? sourceWidth;
+    const height = options?.height ?? sourceHeight;
     const canvas = document.createElement('canvas');
-    canvas.width = image.naturalWidth;
-    canvas.height = image.naturalHeight;
+    canvas.width = width;
+    canvas.height = height;
     const ctx = canvas.getContext('2d');
     if (!ctx) {
       return null;
     }
-    ctx.drawImage(image, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    if (options?.fit === 'cover-top') {
+      const scale = Math.max(width / sourceWidth, height / sourceHeight);
+      const drawWidth = sourceWidth * scale;
+      const drawHeight = sourceHeight * scale;
+      ctx.drawImage(image, (width - drawWidth) / 2, 0, drawWidth, drawHeight);
+    } else {
+      ctx.drawImage(image, 0, 0, width, height);
+    }
     return canvas.toDataURL('image/png');
   } catch {
     // canvas "tainted" (imagem cross-origin sem CORS) — deixa o fetch tentar.
@@ -1023,7 +1048,7 @@ function canvasDataUrl(image: HTMLImageElement): string | null {
   }
 }
 
-function fetchAsDataUrl(url: string): Promise<string> {
+function fetchAsPngDataUrl(url: string, options?: RasterOptions): Promise<string> {
   const href = new URL(url, window.location.href).href;
   return fetch(href, { cache: 'force-cache', credentials: 'same-origin' })
     .then((res) => {
@@ -1032,15 +1057,30 @@ function fetchAsDataUrl(url: string): Promise<string> {
       }
       return res.blob();
     })
-    .then(
-      (blob) =>
-        new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onerror = () => reject(reader.error);
-          reader.onload = () => resolve(reader.result as string);
-          reader.readAsDataURL(blob);
-        })
-    );
+    .then((blob) => blobToPngDataUrl(blob, options));
+}
+
+function blobToPngDataUrl(blob: Blob, options?: RasterOptions): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const objectUrl = URL.createObjectURL(blob);
+    const loadedImage = new Image();
+    const cleanup = () => URL.revokeObjectURL(objectUrl);
+
+    loadedImage.onload = () => {
+      const dataUrl = canvasDataUrl(loadedImage, options);
+      cleanup();
+      if (dataUrl) {
+        resolve(dataUrl);
+      } else {
+        reject(new Error('Could not convert image to PNG'));
+      }
+    };
+    loadedImage.onerror = () => {
+      cleanup();
+      reject(new Error('Could not decode image'));
+    };
+    loadedImage.src = objectUrl;
+  });
 }
 
 function applyImageSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
@@ -1054,6 +1094,10 @@ function applyImageSrc(image: HTMLImageElement, dataUrl: string): Promise<void> 
       },
       { once: true }
     );
+    if (image.dataset.kind === 'portrait') {
+      image.style.objectFit = 'fill';
+      image.style.objectPosition = 'center';
+    }
     image.src = dataUrl;
   });
 }
