@@ -740,6 +740,9 @@ function buildShareCountry(country: QuizResult['topCountryMatch']): HTMLElement 
     overflow: 'hidden',
     boxShadow: '0 3px 10px rgba(11, 16, 32, 0.06)'
   });
+  const flagSrc = resolveCountryFlagSrc(country.flagPath);
+  frame.dataset.exportImageKind = 'flag';
+  frame.dataset.exportImageSrc = flagSrc;
   const flag = el('img', {
     width: 'auto',
     height: 'auto',
@@ -747,7 +750,7 @@ function buildShareCountry(country: QuizResult['topCountryMatch']): HTMLElement 
     maxHeight: '154px',
     objectFit: 'contain'
   }) as HTMLImageElement;
-  flag.src = resolveCountryFlagSrc(country.flagPath);
+  flag.src = flagSrc;
   flag.alt = `Bandeira de ${country.name}`;
   flag.dataset.kind = 'flag';
   frame.append(flag);
@@ -875,13 +878,16 @@ function buildSharePersonality(person: QuizResult['topPersonalityMatch']): HTMLE
     alignItems: 'center',
     justifyContent: 'center'
   });
+  const portraitSrc = resolvePersonalityImageSrc(person.imagePath);
+  frame.dataset.exportImageKind = 'portrait';
+  frame.dataset.exportImageSrc = portraitSrc;
   const portrait = el('img', {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
     objectPosition: 'center top'
   }) as HTMLImageElement;
-  portrait.src = resolvePersonalityImageSrc(person.imagePath);
+  portrait.src = portraitSrc;
   portrait.alt = `Retrato de ${person.name}`;
   portrait.dataset.kind = 'portrait';
   portrait.dataset.initials = personalityInitials(person.name);
@@ -959,10 +965,9 @@ function buildSharePersonality(person: QuizResult['topPersonalityMatch']): HTMLE
 }
 
 export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
-  const images = Array.from(root.querySelectorAll('img'));
-  for (const image of images) {
-    await inlineImageForExport(image);
-  }
+  root.querySelectorAll<HTMLImageElement>('img[data-kind]').forEach((image) => {
+    image.style.opacity = '0';
+  });
   await waitForExportPaint();
 }
 
@@ -1212,4 +1217,164 @@ function replaceBrokenExportImage(image: HTMLImageElement) {
   }
 
   image.replaceWith(fallback);
+}
+
+export async function drawShareImagesOnPng(dataUrl: string, root: HTMLElement): Promise<string> {
+  const overlays = collectCanvasOverlays(root);
+  if (overlays.length === 0) {
+    return dataUrl;
+  }
+
+  const base = await loadCanvasImage(dataUrl);
+  const canvas = document.createElement('canvas');
+  canvas.width = base.naturalWidth || SHARE_WIDTH;
+  canvas.height = base.naturalHeight || SHARE_HEIGHT;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    return dataUrl;
+  }
+
+  ctx.drawImage(base, 0, 0, canvas.width, canvas.height);
+  const scaleX = canvas.width / SHARE_WIDTH;
+  const scaleY = canvas.height / SHARE_HEIGHT;
+
+  for (const overlay of overlays) {
+    try {
+      const image = await loadCanvasAsset(overlay.src);
+      const rect = {
+        x: overlay.x * scaleX,
+        y: overlay.y * scaleY,
+        width: overlay.width * scaleX,
+        height: overlay.height * scaleY
+      };
+      if (overlay.kind === 'portrait') {
+        drawCanvasCoverTop(ctx, image, insetCanvasRect(rect, 1.5 * scaleX, 1.5 * scaleY), 11 * scaleX);
+      } else {
+        drawCanvasContain(ctx, image, rect);
+      }
+    } catch {
+      // Se o iOS nao decodificar o asset, mantemos a moldura gerada pelo DOM.
+    }
+  }
+
+  return canvas.toDataURL('image/png');
+}
+
+type CanvasOverlayKind = 'flag' | 'portrait';
+type CanvasOverlay = {
+  kind: CanvasOverlayKind;
+  src: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
+type CanvasRect = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
+
+function collectCanvasOverlays(root: HTMLElement): CanvasOverlay[] {
+  const rootRect = root.getBoundingClientRect();
+  return Array.from(root.querySelectorAll<HTMLElement>('[data-export-image-kind][data-export-image-src]'))
+    .map((frame) => {
+      const kind = frame.dataset.exportImageKind;
+      const src = frame.dataset.exportImageSrc ?? '';
+      const rect = frame.getBoundingClientRect();
+      if ((kind !== 'flag' && kind !== 'portrait') || !src || rect.width <= 0 || rect.height <= 0) {
+        return null;
+      }
+      return {
+        kind,
+        src,
+        x: rect.left - rootRect.left,
+        y: rect.top - rootRect.top,
+        width: rect.width,
+        height: rect.height
+      };
+    })
+    .filter((item): item is CanvasOverlay => item !== null);
+}
+
+async function loadCanvasAsset(src: string): Promise<HTMLImageElement> {
+  const href = new URL(src, window.location.href).href;
+  const response = await fetch(href, { cache: 'force-cache', credentials: 'same-origin' });
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+  const blob = await response.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  try {
+    return await loadCanvasImage(objectUrl);
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+  }
+}
+
+function loadCanvasImage(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error('Could not decode image'));
+    image.src = src;
+  });
+}
+
+function drawCanvasContain(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: CanvasRect) {
+  const maxWidth = frame.width * 0.86;
+  const maxHeight = frame.height * (154 / 188);
+  const scale = Math.min(maxWidth / image.naturalWidth, maxHeight / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  ctx.drawImage(
+    image,
+    frame.x + (frame.width - width) / 2,
+    frame.y + (frame.height - height) / 2,
+    width,
+    height
+  );
+}
+
+function drawCanvasCoverTop(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: CanvasRect, radius: number) {
+  const scale = Math.max(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  ctx.save();
+  canvasRoundedRectPath(ctx, frame.x, frame.y, frame.width, frame.height, radius);
+  ctx.clip();
+  ctx.drawImage(image, frame.x + (frame.width - width) / 2, frame.y, width, height);
+  ctx.restore();
+}
+
+function insetCanvasRect(rect: CanvasRect, xInset: number, yInset: number): CanvasRect {
+  return {
+    x: rect.x + xInset,
+    y: rect.y + yInset,
+    width: Math.max(0, rect.width - xInset * 2),
+    height: Math.max(0, rect.height - yInset * 2)
+  };
+}
+
+function canvasRoundedRectPath(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  radius: number
+) {
+  const r = Math.min(radius, width / 2, height / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + width - r, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + r);
+  ctx.lineTo(x + width, y + height - r);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - r, y + height);
+  ctx.lineTo(x + r, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
 }

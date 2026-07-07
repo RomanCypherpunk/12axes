@@ -351,6 +351,7 @@ export default function App() {
         SHARE_HEIGHT,
         SHARE_WIDTH,
         buildShareCard,
+        drawShareImagesOnPng,
         prepareImagesForExport
       } = shareCard;
 
@@ -359,7 +360,7 @@ export default function App() {
       document.body.appendChild(stage);
       await prepareImagesForExport(target);
 
-      const dataUrl = await toPng(target, {
+      let dataUrl = await toPng(target, {
         width: SHARE_WIDTH,
         height: SHARE_HEIGHT,
         backgroundColor: SHARE_COLORS.soft,
@@ -367,6 +368,7 @@ export default function App() {
         cacheBust: false,
         skipFonts: true
       });
+      dataUrl = await drawShareImagesOnPng(dataUrl, target);
 
       downloadDataUrl(
         dataUrl,
