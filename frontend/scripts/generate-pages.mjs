@@ -756,6 +756,15 @@ function buildHomeVariants() {
 
   writeFileSync(join(DIST, 'br.html'), index);
 
+  // Rotas do app servidas como arquivos físicos (via cleanUrls), sem depender
+  // do rewrite de SPA. results.html fica sem canonical/hreflang para que cada
+  // URL de resultado compartilhado possa ser indexada individualmente.
+  writeFileSync(join(DIST, '240questions.html'), index);
+  const results = index
+    .replace(/^\s*<link rel="canonical"[^\n]*\n/m, '')
+    .replace(/^\s*<link rel="alternate" hreflang=[^\n]*\n/gm, '');
+  writeFileSync(join(DIST, 'results.html'), results);
+
   const enSeoBlock = `<!-- Primary SEO -->
     <title>12 Axes — Political Quiz and Ideology Test across 12 Axes</title>
     <meta
