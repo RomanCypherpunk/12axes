@@ -963,6 +963,7 @@ export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
   for (const image of images) {
     await inlineImageForExport(image);
   }
+  await waitForExportPaint();
 }
 
 /**
@@ -978,7 +979,8 @@ export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
  */
 async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   const src = image.getAttribute('src') ?? '';
-  const rasterOptions = image.dataset.kind === 'portrait'
+  const kind = image.dataset.kind;
+  const rasterOptions = kind === 'portrait'
     ? { width: 220, height: 264, fit: 'cover-top' as const }
     : undefined;
   if (!src) {
@@ -990,8 +992,10 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   }
 
   try {
-    const dataUrl = await fetchAsPngDataUrl(src, rasterOptions);
-    await applyImageSrc(image, dataUrl);
+    const dataUrl = kind === 'portrait'
+      ? await fetchAsPngDataUrl(src, rasterOptions)
+      : await fetchAsOriginalDataUrl(src);
+    await applyImageDataUrl(image, dataUrl);
     return;
   } catch {
     // Se o fetch direto falhar, ainda podemos aproveitar uma imagem já carregada.
@@ -1002,7 +1006,7 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   if (image.complete && image.naturalWidth > 0) {
     const dataUrl = canvasDataUrl(image, rasterOptions);
     if (dataUrl) {
-      await applyImageSrc(image, dataUrl);
+      await applyImageDataUrl(image, dataUrl);
       return;
     }
   }
@@ -1062,6 +1066,27 @@ function fetchAsPngDataUrl(url: string, options?: RasterOptions): Promise<string
     .then((blob) => blobToPngDataUrl(blob, options));
 }
 
+function fetchAsOriginalDataUrl(url: string): Promise<string> {
+  const href = new URL(url, window.location.href).href;
+  return fetch(href, { cache: 'force-cache', credentials: 'same-origin' })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      return res.blob();
+    })
+    .then(readBlobAsDataUrl);
+}
+
+function readBlobAsDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(reader.error);
+    reader.onload = () => resolve(reader.result as string);
+    reader.readAsDataURL(blob);
+  });
+}
+
 function blobToPngDataUrl(blob: Blob, options?: RasterOptions): Promise<string> {
   return new Promise((resolve, reject) => {
     const objectUrl = URL.createObjectURL(blob);
@@ -1085,9 +1110,34 @@ function blobToPngDataUrl(blob: Blob, options?: RasterOptions): Promise<string> 
   });
 }
 
-function applyImageSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
-  replaceImageWithExportBackground(image, dataUrl);
-  return Promise.resolve();
+function applyImageDataUrl(image: HTMLImageElement, dataUrl: string): Promise<void> {
+  if (image.dataset.kind === 'portrait') {
+    replaceImageWithExportBackground(image, dataUrl);
+    return Promise.resolve();
+  }
+
+  return applyImageElementSrc(image, dataUrl);
+}
+
+function applyImageElementSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
+  return new Promise((resolve) => {
+    const timeout = window.setTimeout(resolve, 1000);
+    const finish = () => {
+      window.clearTimeout(timeout);
+      resolve();
+    };
+
+    image.addEventListener('load', finish, { once: true });
+    image.addEventListener(
+      'error',
+      () => {
+        replaceBrokenExportImage(image);
+        finish();
+      },
+      { once: true }
+    );
+    image.src = dataUrl;
+  });
 }
 
 function replaceImageWithExportBackground(image: HTMLImageElement, dataUrl: string) {
@@ -1119,6 +1169,14 @@ function waitForImage(image: HTMLImageElement): Promise<void> {
 
     image.addEventListener('load', finish, { once: true });
     image.addEventListener('error', finish, { once: true });
+  });
+}
+
+function waitForExportPaint(): Promise<void> {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => resolve());
+    });
   });
 }
 
