@@ -117,6 +117,7 @@ interface Strings {
   resultsH1Pre: string;
   resultsH1Em: string;
   resultsLead: (count: number) => string;
+  resultsLeadShared: string;
   resultsSummaryAria: string;
   metaAnswered: string;
   metaAxes: string;
@@ -366,6 +367,8 @@ const pt: Strings = {
   resultsH1Em: 'perfil ideológico',
   resultsLead: (count) =>
     `Análise baseada em ${count} respostas distribuídas em 12 dimensões fundamentais da ideologia política. Confira sua posição em cada eixo e suas correspondências ideológicas.`,
+  resultsLeadShared:
+    'Resultado compartilhado: a posição em cada um dos 12 eixos políticos e as correspondências ideológicas calculadas a partir dele. Faça o teste para descobrir o seu.',
   resultsSummaryAria: 'Resumo da análise',
   metaAnswered: 'Perguntas respondidas',
   metaAxes: 'Eixos analisados',
@@ -628,6 +631,8 @@ const en: Strings = {
   resultsH1Em: 'ideological profile',
   resultsLead: (count) =>
     `Analysis based on ${count} answers distributed across 12 fundamental dimensions of political ideology. Check your position on each axis and your ideological matches.`,
+  resultsLeadShared:
+    'Shared result: the position on each of the 12 political axes and the ideological matches calculated from it. Take the test to discover yours.',
   resultsSummaryAria: 'Analysis summary',
   metaAnswered: 'Questions answered',
   metaAxes: 'Axes analyzed',

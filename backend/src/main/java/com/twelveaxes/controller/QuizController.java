@@ -66,6 +66,36 @@ public class QuizController {
         return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
     }
 
+    // Resultado compartilhável: reconstrói matches a partir do vetor de eixos
+    // (12 leftPercents separados por vírgula, na ordem de axes.json).
+    @GetMapping("/api/results/by-axes")
+    public QuizResult resultsByAxes(
+            @RequestParam("v") String values,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        var axes = scoringService.scoreFromLeftPercents(parseAxisValues(values), lang);
+        var matches = matcherService.findMatches(axes, lang);
+        var topMatch = matches.getFirst();
+        var topCountryMatch = countryMatcherService.findTopMatch(axes, lang);
+        var topPersonalityMatch = personalityMatcherService.findTopMatch(axes, lang);
+        return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
+    }
+
+    private List<Double> parseAxisValues(String values) {
+        try {
+            List<Double> parsed = java.util.Arrays.stream(values.split(","))
+                    .map(String::trim)
+                    .map(Double::parseDouble)
+                    .toList();
+            if (parsed.stream().anyMatch(value -> value.isNaN() || value < 0 || value > 100)) {
+                throw new NumberFormatException("fora do intervalo 0-100");
+            }
+            return parsed;
+        } catch (NumberFormatException exception) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Vetor de eixos inválido");
+        }
+    }
+
     @GetMapping("/api/ideologies")
     public List<Ideology> ideologies(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
         return dataService.getIdeologies(lang);

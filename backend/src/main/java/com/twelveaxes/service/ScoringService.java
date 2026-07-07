@@ -49,6 +49,22 @@ public class ScoringService {
                 .toList();
     }
 
+    // Reconstrói o resultado a partir de um vetor de leftPercent (um valor por
+    // eixo, na ordem de axes.json) — usado pelas URLs de resultado compartilhado.
+    public List<AxisResult> scoreFromLeftPercents(List<Double> leftPercents, String lang) {
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        List<Axis> axes = dataService.getAxes(normalizedLang);
+        if (leftPercents.size() != axes.size()) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Vetor de eixos inválido: esperados " + axes.size() + " valores"
+            );
+        }
+        return java.util.stream.IntStream.range(0, axes.size())
+                .mapToObj(index -> buildAxisResult(axes.get(index), leftPercents.get(index), normalizedLang))
+                .toList();
+    }
+
     private void validateAnswers(List<SubmittedAnswer> answers, Map<String, Question> questionById) {
         Set<String> unknown = answers.stream()
                 .map(SubmittedAnswer::questionId)
@@ -63,7 +79,11 @@ public class ScoringService {
     }
 
     private AxisResult toAxisResult(Axis axis, WeightedScore weightedScore, String lang) {
-        double leftPercent = round(weightedScore.average() * 100.0);
+        return buildAxisResult(axis, weightedScore.average() * 100.0, lang);
+    }
+
+    private AxisResult buildAxisResult(Axis axis, double rawLeftPercent, String lang) {
+        double leftPercent = round(Math.max(0.0, Math.min(100.0, rawLeftPercent)));
         double rightPercent = round(100.0 - leftPercent);
         String dominantPole = leftPercent >= rightPercent ? axis.leftPole() : axis.rightPole();
         double distanceFromCenter = Math.abs(leftPercent - 50.0);

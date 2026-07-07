@@ -50,3 +50,7 @@ export function submitResults(variant: QuizVariant, answers: SubmittedAnswer[]):
     body: JSON.stringify({ variant, answers })
   });
 }
+
+export function fetchSharedResult(leftPercents: number[]): Promise<QuizResult> {
+  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}`);
+}

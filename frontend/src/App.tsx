@@ -3,7 +3,7 @@ import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/q
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
 import { LANG, setLang, t } from './i18n';
-import { fetchQuiz, submitResults } from './services/quizApi';
+import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'results';
@@ -42,6 +42,39 @@ const FULL_MODE =
   window.location.pathname.replace(/\/+$/, '').endsWith('/240questions');
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
+
+// URL de resultado compartilhável: /results?est=65&rep=32.5&... (uma chave por
+// eixo, valor = % do polo esquerdo, na mesma ordem de axes.json).
+const AXIS_URL_KEYS = ['est', 'rep', 'pod', 'imi', 'dip', 'int', 'eco', 'con', 'com', 'rel', 'mor', 'tec'];
+
+function parseSharedResultUrl(): number[] | null {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+  const path = window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+  if (path !== '/results') {
+    return null;
+  }
+  const params = new URLSearchParams(window.location.search);
+  const rawValues = AXIS_URL_KEYS.map((key) => params.get(key));
+  if (rawValues.some((raw) => raw === null || raw.trim() === '')) {
+    return null;
+  }
+  const values = rawValues.map((raw) => Number(raw));
+  if (values.some((value) => !Number.isFinite(value) || value < 0 || value > 100)) {
+    return null;
+  }
+  return values;
+}
+
+const SHARED_RESULT_VALUES = parseSharedResultUrl();
+
+function sharedResultUrl(result: QuizResult): string {
+  const query = result.axes
+    .map((axis, index) => `${AXIS_URL_KEYS[index] ?? `x${index}`}=${axis.leftPercent}`)
+    .join('&');
+  return `/results?${query}`;
+}
 
 function LoadingPanel({ message }: { message: string }) {
   return (
@@ -90,7 +123,8 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
   const [selectedVariant, setSelectedVariant] = useState<QuizVariant>(INITIAL_VARIANT);
   const [result, setResult] = useState<QuizResult | null>(null);
-  const [isLoading, setIsLoading] = useState(FULL_MODE);
+  const [isLoading, setIsLoading] = useState(FULL_MODE || SHARED_RESULT_VALUES !== null);
+  const [isSharedView, setIsSharedView] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
@@ -100,6 +134,18 @@ export default function App() {
   const isAdvancingRef = useRef(false);
 
   useEffect(() => {
+    if (SHARED_RESULT_VALUES) {
+      fetchSharedResult(SHARED_RESULT_VALUES)
+        .then((sharedResult) => {
+          setResult(sharedResult);
+          setIsSharedView(true);
+          setScreen('results');
+        })
+        .catch((err: Error) => setError(err.message))
+        .finally(() => setIsLoading(false));
+      return;
+    }
+
     if (!FULL_MODE) {
       return;
     }
@@ -162,8 +208,16 @@ export default function App() {
     document.title = t.docTitle;
   }, []);
 
+  function resetSharedUrl() {
+    if (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') === '/results') {
+      window.history.replaceState(null, '', '/');
+    }
+    setIsSharedView(false);
+  }
+
   function openVariantChooser() {
     clearPendingAdvance();
+    resetSharedUrl();
     setAnswers({});
     setResult(null);
     setError(null);
@@ -173,6 +227,7 @@ export default function App() {
 
   async function startQuiz(variant: QuizVariant = selectedVariant) {
     clearPendingAdvance();
+    resetSharedUrl();
     setSelectedVariant(variant);
     setAnswers({});
     setResult(null);
@@ -263,6 +318,9 @@ export default function App() {
         payload
       );
       setResult(nextResult);
+      setIsSharedView(false);
+      // URL compartilhável: quem abrir este link vê o mesmo resultado.
+      window.history.replaceState(null, '', sharedResultUrl(nextResult));
       setScreen('results');
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errCalc);
@@ -330,7 +388,7 @@ export default function App() {
     );
   }
 
-  if (error && !quiz && FULL_MODE) {
+  if (error && !quiz && !result && (FULL_MODE || SHARED_RESULT_VALUES !== null)) {
     return (
       <main className="app-shell center-shell">
         <div className="error-panel">
@@ -344,7 +402,10 @@ export default function App() {
     );
   }
 
-  if (!quiz && (screen === 'quiz' || screen === 'results')) {
+  if (!quiz && screen === 'quiz') {
+    return null;
+  }
+  if (!quiz && !result && screen === 'results') {
     return null;
   }
 
@@ -649,7 +710,7 @@ export default function App() {
         </Suspense>
       )}
 
-      {screen === 'results' && quiz && result && (
+      {screen === 'results' && result && (quiz || isSharedView) && (
         <Suspense
           fallback={(
             <section className="results-layout">
@@ -664,13 +725,15 @@ export default function App() {
               <h1>
                 {t.resultsH1Pre}<em>{t.resultsH1Em}</em>
               </h1>
-              <p>{t.resultsLead(quiz.questions.length)}</p>
+              <p>{quiz ? t.resultsLead(quiz.questions.length) : t.resultsLeadShared}</p>
             </div>
             <aside className="results-meta-card fade-up d-2" aria-label={t.resultsSummaryAria}>
-              <div className="results-meta-row">
-                <span>{t.metaAnswered}</span>
-                <strong>{quiz.questions.length}</strong>
-              </div>
+              {quiz && (
+                <div className="results-meta-row">
+                  <span>{t.metaAnswered}</span>
+                  <strong>{quiz.questions.length}</strong>
+                </div>
+              )}
               <div className="results-meta-row">
                 <span>{t.metaAxes}</span>
                 <strong>12</strong>
@@ -692,7 +755,7 @@ export default function App() {
               <h2>{t.axesSectionTitle}</h2>
             </div>
             <div className="axis-rows">
-              {quiz.axes.map((axis) => {
+              {(quiz?.axes ?? homeAxes).map((axis) => {
                 const axisResult = resultByAxis.get(axis.id);
                 return axisResult ? <AxisResultBar key={axis.id} axis={axis} result={axisResult} /> : null;
               })}
@@ -727,14 +790,16 @@ export default function App() {
                 <path d="M21 4v5h-5" />
               </svg>
             </button>
-            <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
-              {isSharing ? t.generatingPng : t.share}
-              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3v12" />
-                <path d="m7 10 5 5 5-5" />
-                <path d="M5 21h14" />
-              </svg>
-            </button>
+            {quiz && (
+              <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
+                {isSharing ? t.generatingPng : t.share}
+                <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12" />
+                  <path d="m7 10 5 5 5-5" />
+                  <path d="M5 21h14" />
+                </svg>
+              </button>
+            )}
             {error && <p className="inline-error" role="alert">{error}</p>}
           </div>
         </section>
