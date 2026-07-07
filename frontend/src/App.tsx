@@ -330,11 +330,21 @@ export default function App() {
   }
 
   async function downloadResultsPng() {
-    if (!quiz || !result || isSharing) {
+    if (!result || isSharing) {
       return;
     }
     setIsSharing(true);
     setError(null);
+    const exportQuiz: QuizPayload = quiz ?? {
+      title: '',
+      description: '',
+      variant: selectedVariant,
+      questionCount: 0,
+      questionsPerAxis: 0,
+      axes: homeAxes,
+      questions: [],
+      answerOptions: []
+    };
 
     let stage: HTMLDivElement | null = null;
     try {
@@ -355,7 +365,7 @@ export default function App() {
         prepareImagesForExport
       } = shareCard;
 
-      const { stage: builtStage, target } = buildShareCard(result, quiz);
+      const { stage: builtStage, target } = buildShareCard(result, exportQuiz);
       stage = builtStage;
       document.body.appendChild(stage);
       await prepareImagesForExport(target);
@@ -793,16 +803,14 @@ export default function App() {
                 <path d="M21 4v5h-5" />
               </svg>
             </button>
-            {quiz && (
-              <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
-                {isSharing ? t.generatingPng : t.share}
-                <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v12" />
-                  <path d="m7 10 5 5 5-5" />
-                  <path d="M5 21h14" />
-                </svg>
-              </button>
-            )}
+            <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
+              {isSharing ? t.generatingPng : t.share}
+              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v12" />
+                <path d="m7 10 5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+            </button>
             {error && <p className="inline-error" role="alert">{error}</p>}
           </div>
         </section>
