@@ -227,10 +227,9 @@ export function buildShareCard(
   const stage = el('div', {
     position: 'fixed',
     top: '0',
-    left: '0',
-    width: '0',
-    height: '0',
-    overflow: 'hidden',
+    left: `-${SHARE_WIDTH + 200}px`,
+    width: `${SHARE_WIDTH}px`,
+    height: `${SHARE_HEIGHT}px`,
     pointerEvents: 'none',
     zIndex: '-1'
   }) as HTMLDivElement;
@@ -985,6 +984,14 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
     return;
   }
 
+  try {
+    const dataUrl = await fetchAsDataUrl(src);
+    await applyImageSrc(image, dataUrl);
+    return;
+  } catch {
+    // Se o fetch direto falhar, ainda podemos aproveitar uma imagem já carregada.
+  }
+
   await waitForImage(image);
 
   if (image.complete && image.naturalWidth > 0) {
@@ -995,12 +1002,7 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
     }
   }
 
-  try {
-    const dataUrl = await fetchAsDataUrl(src);
-    await applyImageSrc(image, dataUrl);
-  } catch {
-    replaceBrokenExportImage(image);
-  }
+  replaceBrokenExportImage(image);
 }
 
 /** Desenha a imagem já carregada num canvas e retorna o data: URI (sem rede). */
@@ -1022,7 +1024,8 @@ function canvasDataUrl(image: HTMLImageElement): string | null {
 }
 
 function fetchAsDataUrl(url: string): Promise<string> {
-  return fetch(url, { cache: 'force-cache' })
+  const href = new URL(url, window.location.href).href;
+  return fetch(href, { cache: 'force-cache', credentials: 'same-origin' })
     .then((res) => {
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}`);
