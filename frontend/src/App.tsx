@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
+import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 
@@ -57,157 +58,18 @@ function LoadingPanel({ message }: { message: string }) {
 }
 
 const QUIZ_FORMATS: QuizFormatOption[] = [
-  {
-    variant: 'short',
-    label: 'Curta',
-    questionCount: '36 perguntas',
-    description: 'Resultado rápido, ideal para uma primeira leitura do seu perfil',
-    duration: 'Aprox. 5min',
-    action: 'Começar versão curta'
-  },
-  {
-    variant: 'extended',
-    label: 'Completa',
-    questionCount: '60 perguntas',
-    description: 'Mais precisão para aproximar seu resultado dos perfis ideológicos.',
-    duration: 'Aprox. 9min',
-    action: 'Começar versão completa',
-    featured: true
-  },
-  {
-    variant: 'extreme',
-    label: 'Extrema',
-    questionCount: '240 perguntas',
-    description: 'Saiba exatamente a síntese do seu pensamento com 100% de precisão.',
-    duration: 'Aprox. 30min',
-    action: 'Começar versão extrema'
-  }
+  { variant: 'short', ...t.formats.short },
+  { variant: 'extended', ...t.formats.extended, featured: true },
+  { variant: 'extreme', ...t.formats.extreme }
 ];
 
-const HERO_LABELS = [
-  'Gratuito',
-  'Anônimo',
-  'Rápido',
-  'Resultado imediato'
-];
+const HERO_LABELS = t.heroLabels;
 
-const AXIS_EXPLANATIONS: Record<string, string> = {
-  estrutura:
-    'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
-  representacao:
-    'Compara confiança em eleições, oposição e instituições democráticas com preferência por liderança forte, tecnocracia, monarquia ou regimes autoritários.',
-  poder:
-    'Avalia o equilíbrio entre ordem, vigilância, punição e controle estatal versus privacidade, liberdade individual e autonomia civil.',
-  imigracao:
-    'Observa se você valoriza assimilação cultural, idioma e identidade nacional ou multiculturalismo, abertura migratória e pluralidade de costumes.',
-  diplomacia:
-    'Analisa sua posição sobre Forças Armadas, armamento, dissuasão e intervenção militar em contraste com negociação, pacifismo e organismos internacionais.',
-  intervencao:
-    'Mede a inclinação entre não intervencionismo externo e soberania nacional mais assertiva, nacionalismo geopolítico e defesa ativa de interesses nacionais.',
-  economia:
-    'Compara preferência por propriedade pública, estatais e serviços coletivos com propriedade privada, privatização e protagonismo empresarial.',
-  controle:
-    'Avalia planejamento estatal, regulação e política econômica ativa contra livre mercado, baixa interferência, autonomia monetária e competição.',
-  comercio:
-    'Mede protecionismo, soberania produtiva e defesa da indústria nacional contra globalismo, livre comércio e integração econômica internacional.',
-  religiao:
-    'Compara laicidade, separação entre religião e Estado e crítica a privilégios religiosos com influência pública da fé e valores religiosos.',
-  moral:
-    'Avalia progressismo cultural, direitos civis e mudanças sociais em contraste com tradição, família, costumes e conservadorismo moral.',
-  tecnologia:
-    'Mede entusiasmo por tecnologia, IA, engenharia genética e desenvolvimento técnico contra cautela biológica, ambiental e preservacionista.'
-};
+const AXIS_EXPLANATIONS: Record<string, string> = t.axisExplanations;
 
-const SPECTRUM_ITEMS = [
-  {
-    id: 'left-authoritarian',
-    label: 'Esquerda autoritária',
-    tone: 'red',
-    description:
-      'Combina igualdade econômica, socialismo ou forte política econômica estatal com maior centralização, disciplina institucional e poder do Estado.'
-  },
-  {
-    id: 'left-libertarian',
-    label: 'Esquerda libertária',
-    tone: 'green',
-    description:
-      'Valoriza progressismo, direitos civis, democracia direta, crítica ao capitalismo concentrado e mais liberdade social, cultural e comunitária.'
-  },
-  {
-    id: 'center',
-    label: 'Centro',
-    tone: 'gray',
-    description:
-      'Busca equilíbrio entre esquerda e direita, mercado e Estado, reformas e estabilidade, com posicionamento político moderado ou pragmático.'
-  },
-  {
-    id: 'right-libertarian',
-    label: 'Direita libertária',
-    tone: 'yellow',
-    description:
-      'Defende capitalismo, livre mercado, propriedade privada, menor intervenção estatal e liberdades individuais acima de soluções centralizadas.'
-  },
-  {
-    id: 'right-authoritarian',
-    label: 'Direita autoritária',
-    tone: 'blue',
-    description:
-      'Combina valores de ordem, conservadorismo, autoridade, soberania nacional e hierarquia com economia mais pró-mercado ou nacionalista.'
-  }
-];
+const SPECTRUM_ITEMS = t.spectrumItems;
 
-const FAQ_ITEMS = [
-  {
-    question: 'O teste é confiável?',
-    answer:
-      'O teste político 12 Axes é confiável como ferramenta de leitura e comparação de posicionamento político. Ele usa perguntas distribuídas por 12 eixos para reduzir vieses de um único tema, mas não substitui estudo, debate ou análise acadêmica.'
-  },
-  {
-    question: 'Quanto tempo demora?',
-    answer:
-      'A versão curta demora cerca de 5 minutos. A versão completa leva aproximadamente 9 minutos. A versão extrema, com 240 perguntas, pode levar cerca de 30 minutos.'
-  },
-  {
-    question: 'Posso refazer?',
-    answer:
-      'Sim. Você pode refazer o quiz político quantas vezes quiser, inclusive escolhendo outra profundidade para comparar se o resultado muda.'
-  },
-  {
-    question: 'Existe resposta certa?',
-    answer:
-      'Não existe resposta certa. O teste ideológico mede preferências sobre democracia, monarquia, federalismo, imigração, religião na política, política econômica, comércio internacional, liberalismo, conservadorismo, progressismo e outros temas.'
-  },
-  {
-    question: 'Como o algoritmo calcula?',
-    answer:
-      'Cada resposta soma pontos em um polo específico. O algoritmo calcula percentuais por eixo, compara seu vetor ideológico com perfis de correntes políticas, países e personalidades, e retorna as maiores compatibilidades.'
-  },
-  {
-    question: 'O resultado muda?',
-    answer:
-      'Pode mudar se suas opiniões mudarem, se você responder com mais nuance ou se fizer uma versão mais longa. A versão extrema tende a reduzir oscilações por usar mais perguntas.'
-  },
-  {
-    question: 'O teste é científico?',
-    answer:
-      'O 12 Axes não é um instrumento científico validado clinicamente. Ele é um teste político educativo, inspirado em modelos de espectro político e quiz ideológico, útil para reflexão e comparação.'
-  },
-  {
-    question: 'Posso compartilhar?',
-    answer:
-      'Sim. Ao terminar, você pode compartilhar seu resultado para discutir ideologia política, espectro político, esquerda, direita, centro e os 12 eixos com outras pessoas.'
-  },
-  {
-    question: 'O teste coleta dados?',
-    answer:
-      'O teste é anônimo e não exige cadastro. As respostas são usadas para calcular o resultado no momento do quiz, sem pedir nome, e-mail ou identificação pessoal.'
-  },
-  {
-    question: 'Posso responder pelo celular?',
-    answer:
-      'Sim. A interface foi pensada para celular e desktop, então você pode fazer o teste político pelo navegador do smartphone.'
-  }
-];
+const FAQ_ITEMS = t.faqItems;
 
 function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPayload {
   return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
@@ -290,7 +152,15 @@ export default function App() {
     }
     return new Map(result.axes.map((axis) => [axis.axisId, axis]));
   }, [result]);
-  const homeAxes = quiz?.axes ?? HOME_AXES;
+  const homeAxes = useMemo(
+    () => quiz?.axes ?? HOME_AXES.map((axis) => ({ ...axis, ...(t.homeAxes[axis.id] ?? {}) })),
+    [quiz]
+  );
+
+  useEffect(() => {
+    document.documentElement.lang = t.htmlLang;
+    document.title = t.docTitle;
+  }, []);
 
   function openVariantChooser() {
     clearPendingAdvance();
@@ -315,7 +185,7 @@ export default function App() {
       setQuiz(buildQuizForVariant(nextQuiz, variant));
       setScreen('quiz');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Não foi possível carregar o quiz.');
+      setError(err instanceof Error ? err.message : t.errLoadQuiz);
     } finally {
       setIsLoading(false);
     }
@@ -377,7 +247,7 @@ export default function App() {
     const firstMissingIndex = quiz.questions.findIndex((question) => !answerMap[question.id]);
     if (firstMissingIndex !== -1) {
       setCurrentIndex(firstMissingIndex);
-      setError('Ainda falta responder esta pergunta antes de ver o resultado.');
+      setError(t.errMissingAnswer);
       return;
     }
 
@@ -395,7 +265,7 @@ export default function App() {
       setResult(nextResult);
       setScreen('results');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Não foi possível calcular o resultado.');
+      setError(err instanceof Error ? err.message : t.errCalc);
     } finally {
       setIsSubmitting(false);
     }
@@ -442,10 +312,10 @@ export default function App() {
 
       downloadDataUrl(
         dataUrl,
-        `12axes-perfil-${new Date().toISOString().slice(0, 10)}.png`
+        `${t.shareFilePrefix}-${new Date().toISOString().slice(0, 10)}.png`
       );
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Não foi possível gerar a imagem do resultado.');
+      setError(err instanceof Error ? err.message : t.errImage);
     } finally {
       stage?.remove();
       setIsSharing(false);
@@ -455,7 +325,7 @@ export default function App() {
   if (isLoading) {
     return (
       <main className="app-shell center-shell">
-        <LoadingPanel message="Carregando análise política..." />
+        <LoadingPanel message={t.loadingAnalysis} />
       </main>
     );
   }
@@ -467,7 +337,7 @@ export default function App() {
           <h1>12 Axes</h1>
           <p>{error}</p>
           <button className="secondary-button" type="button" onClick={() => window.location.reload()}>
-            Tentar novamente
+            {t.tryAgain}
           </button>
         </div>
       </main>
@@ -481,24 +351,32 @@ export default function App() {
   return (
     <main className="app-shell" data-screen={screen}>
       <a className="skip-link" href="#conteudo-principal">
-        Pular para o conteúdo
+        {t.skipToContent}
       </a>
       <header className="site-header">
-        <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar para o início">
+        <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label={t.backToStartAria}>
           <span className="brand-num">12</span>
           <span className="brand-word">axes</span>
         </button>
         {screen === 'home' && (
-          <nav className="home-nav" aria-label="Navegação principal">
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#guia-eixos">12 Eixos</a>
-            <a href="#espectro-politico">Espectro</a>
-            <a href="#faq">FAQ</a>
+          <nav className="home-nav" aria-label={t.mainNavAria}>
+            <a href="#como-funciona">{t.navHow}</a>
+            <a href="#guia-eixos">{t.navAxes}</a>
+            <a href="#espectro-politico">{t.navSpectrum}</a>
+            <a href="#faq">{t.navFaq}</a>
+            <button
+              className="lang-toggle"
+              type="button"
+              onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
+              aria-label={t.langToggleAria}
+            >
+              {t.langToggleLabel}
+            </button>
           </nav>
         )}
         {(screen === 'quiz' || screen === 'results') && (
           <button className="primary-button header-cta" type="button" onClick={() => void startQuiz(selectedVariant)}>
-            {screen === 'results' ? 'Refazer quiz' : 'Reiniciar quiz'}
+            {screen === 'results' ? t.redoQuiz : t.restartQuiz}
             <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14" />
               <path d="m13 6 6 6-6 6" />
@@ -513,26 +391,24 @@ export default function App() {
           <div className="home-grid">
             <div className="intro-panel">
               <span className="intro-eyebrow fade-up d-1">
-                <strong>Quiz político</strong>
+                <strong>{t.heroEyebrow}</strong>
               </span>
               <h1 className="fade-up d-2">
-                Descubra sua <em>posição política</em> em apenas 5 minutos
+                {t.h1Pre}<em>{t.h1Em}</em>{t.h1Post}
               </h1>
               <p className="intro-lead fade-up d-3">
-                Analise suas opiniões em 12 dimensões independentes, compare seus
-                resultados com diferentes correntes políticas, países e personalidades
-                e entenda como suas ideias se distribuem no espectro político.
+                {t.introLead}
               </p>
               <div className="intro-actions fade-up d-4">
                 <button className="primary-button hero-cta" type="button" onClick={openVariantChooser}>
-                  Começar o Quiz
+                  {t.startQuiz}
                   <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" />
                     <path d="m13 6 6 6-6 6" />
                   </svg>
                 </button>
                 <a className="secondary-button" href="#guia-eixos">
-                  Ver os 12 eixos
+                  {t.seeAxes}
                 </a>
               </div>
               <div className="intro-meta fade-up d-5">
@@ -572,53 +448,26 @@ export default function App() {
           <div className="home-seo">
             <section className="seo-block fade-up" aria-labelledby="como-funciona">
               <div className="section-heading">
-                <span className="eyebrow">Como funciona</span>
-                <h2 id="como-funciona">Como funciona o quiz político 12 Axes</h2>
-                <p>
-                  Um teste de ideologia política simples e visual: você responde a
-                  afirmações, o 12 Axes calcula seus percentuais e mostra onde você
-                  está no espectro político em cada dimensão.
-                </p>
+                <span className="eyebrow">{t.howEyebrow}</span>
+                <h2 id="como-funciona">{t.howTitle}</h2>
+                <p>{t.howLead}</p>
               </div>
               <div className="step-grid">
-                <article className="step-card">
-                  <span className="step-num">1</span>
-                  <h3>Responda às perguntas</h3>
-                  <p>
-                    Concorde ou discorde de afirmações sobre economia, Estado,
-                    liberdades civis, valores, religião, política externa e tecnologia.
-                  </p>
-                </article>
-                <article className="step-card">
-                  <span className="step-num">2</span>
-                  <h3>Análise em 12 eixos</h3>
-                  <p>
-                    Cada resposta posiciona você em 12 eixos ideológicos
-                    independentes - do livre mercado ao planejamento, do
-                    nacionalismo ao globalismo.
-                  </p>
-                </article>
-                <article className="step-card">
-                  <span className="step-num">3</span>
-                  <h3>Descubra seu perfil</h3>
-                  <p>
-                    Receba seu perfil ideológico, ideologias mais compatíveis,
-                    país mais próximo, personalidade relacionada e resultado por eixo.
-                  </p>
-                </article>
+                {t.steps.map((step, index) => (
+                  <article className="step-card" key={step.title}>
+                    <span className="step-num">{index + 1}</span>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </article>
+                ))}
               </div>
             </section>
 
             <section className="seo-block fade-up" aria-labelledby="guia-eixos">
               <div className="section-heading">
-                <span className="eyebrow">12 eixos</span>
-                <h2 id="guia-eixos">O que significa cada eixo?</h2>
-                <p>
-                  O teste ideológico 12 Axes analisa federalismo, representação
-                  política, democracia, eleições, imigração, comércio internacional,
-                  religião na política, política econômica, moral e tecnologia em
-                  dimensões separadas.
-                </p>
+                <span className="eyebrow">{t.axesGuideEyebrow}</span>
+                <h2 id="guia-eixos">{t.axesGuideTitle}</h2>
+                <p>{t.axesGuideLead}</p>
               </div>
               <div className="axis-guide-grid">
                 {homeAxes.map((axis, index) => (
@@ -641,14 +490,9 @@ export default function App() {
 
             <section className="seo-block fade-up" aria-labelledby="espectro-politico">
               <div className="section-heading">
-                <span className="eyebrow">Espectro político</span>
-                <h2 id="espectro-politico">Descubra seu espectro político</h2>
-                <p>
-                  O resultado ajuda a visualizar seu posicionamento político entre
-                  esquerda, direita e centro, mas também separa tendências libertárias
-                  e autoritárias que aparecem em ideologias como liberalismo,
-                  libertarianismo, socialismo, conservadorismo e progressismo.
-                </p>
+                <span className="eyebrow">{t.spectrumEyebrow}</span>
+                <h2 id="espectro-politico">{t.spectrumTitle}</h2>
+                <p>{t.spectrumLead}</p>
               </div>
               <div className="spectrum-grid">
                 {SPECTRUM_ITEMS.map((item) => (
@@ -663,8 +507,8 @@ export default function App() {
 
             <section className="seo-block fade-up" aria-labelledby="faq">
               <div className="section-heading">
-                <span className="eyebrow">FAQ</span>
-                <h2 id="faq">FAQ - Perguntas frequentes</h2>
+                <span className="eyebrow">{t.navFaq}</span>
+                <h2 id="faq">{t.faqTitle}</h2>
               </div>
               <div className="faq-list">
                 {FAQ_ITEMS.map((item) => (
@@ -678,13 +522,9 @@ export default function App() {
 
             <section className="seo-block final-cta fade-up" aria-labelledby="versoes-teste">
               <div className="section-heading">
-                <span className="eyebrow">Versões</span>
-                <h2 id="versoes-teste">Escolha a profundidade</h2>
-                <p>
-                  Comece pelo quiz político rápido ou faça uma análise mais completa
-                  do seu espectro político. Todas as versões usam os mesmos 12 eixos
-                  e retornam o resultado imediatamente.
-                </p>
+                <span className="eyebrow">{t.versionsEyebrow}</span>
+                <h2 id="versoes-teste">{t.versionsTitle}</h2>
+                <p>{t.versionsLead}</p>
               </div>
               <div className="home-format-grid">
                 {QUIZ_FORMATS.map((format) => (
@@ -716,12 +556,9 @@ export default function App() {
       {screen === 'variant' && (
         <section className="variant-layout" aria-labelledby="variant-title">
           <div className="variant-heading fade-up d-1">
-            <span className="eyebrow">Escolha o formato</span>
-            <h1 id="variant-title">Você quer velocidade ou precisão?</h1>
-            <p>
-              A versão curta revela o resultado de forma rápida. A completa aumenta
-              a precisão para aproximar melhor seu resultado dos perfis ideológicos.
-            </p>
+            <span className="eyebrow">{t.variantEyebrow}</span>
+            <h1 id="variant-title">{t.variantTitle}</h1>
+            <p>{t.variantLead}</p>
           </div>
 
           <div className="variant-grid">
@@ -754,7 +591,7 @@ export default function App() {
         <Suspense
           fallback={(
             <section className="quiz-layout">
-              <LoadingPanel message="Carregando quiz..." />
+              <LoadingPanel message={t.loadingQuiz} />
             </section>
           )}
         >
@@ -771,7 +608,7 @@ export default function App() {
             onSelect={selectAnswer}
           />
 
-          <nav className="quiz-actions" aria-label="Navegação do quiz">
+          <nav className="quiz-actions" aria-label={t.quizNavAria}>
             <button
               className="secondary-button"
               type="button"
@@ -782,7 +619,7 @@ export default function App() {
                 <path d="M5 12h14" />
                 <path d="m13 6 6 6-6 6" />
               </svg>
-              Voltar
+              {t.back}
             </button>
             {currentIndex < quiz.questions.length - 1 ? (
               <button
@@ -791,7 +628,7 @@ export default function App() {
                 onClick={goToNextQuestion}
                 disabled={!answers[currentQuestion.id] || isAdvancing}
               >
-                Avançar
+                {t.next}
                 <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" />
                   <path d="m13 6 6 6-6 6" />
@@ -799,7 +636,7 @@ export default function App() {
               </button>
             ) : (
               <button className="primary-button" type="button" onClick={() => finishQuiz()} disabled={!canFinish || isSubmitting}>
-                {isSubmitting ? 'Calculando…' : 'Ver resultado'}
+                {isSubmitting ? t.calculating : t.seeResult}
                 <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" />
                   <path d="m13 6 6 6-6 6" />
@@ -816,34 +653,30 @@ export default function App() {
         <Suspense
           fallback={(
             <section className="results-layout">
-              <LoadingPanel message="Carregando resultado..." />
+              <LoadingPanel message={t.loadingResult} />
             </section>
           )}
         >
         <section className="results-layout" id="resultados">
           <header className="results-hero">
             <div className="results-hero-text fade-up d-1">
-              <span className="results-eyebrow">Análise concluída</span>
+              <span className="results-eyebrow">{t.resultsEyebrow}</span>
               <h1>
-                Seu <em>perfil ideológico</em>
+                {t.resultsH1Pre}<em>{t.resultsH1Em}</em>
               </h1>
-              <p>
-                Análise baseada em {quiz.questions.length} respostas distribuídas
-                em 12 dimensões fundamentais da ideologia política. Confira sua
-                posição em cada eixo e suas correspondências ideológicas.
-              </p>
+              <p>{t.resultsLead(quiz.questions.length)}</p>
             </div>
-            <aside className="results-meta-card fade-up d-2" aria-label="Resumo da análise">
+            <aside className="results-meta-card fade-up d-2" aria-label={t.resultsSummaryAria}>
               <div className="results-meta-row">
-                <span>Perguntas respondidas</span>
+                <span>{t.metaAnswered}</span>
                 <strong>{quiz.questions.length}</strong>
               </div>
               <div className="results-meta-row">
-                <span>Eixos analisados</span>
+                <span>{t.metaAxes}</span>
                 <strong>12</strong>
               </div>
               <div className="results-meta-row">
-                <span>Top match</span>
+                <span>{t.metaTop}</span>
                 <strong>{result.topMatch.compatibility.toFixed(1)}%</strong>
               </div>
             </aside>
@@ -855,8 +688,8 @@ export default function App() {
 
           <section className="results-section results-section-axes fade-up d-4">
             <div className="section-heading">
-              <span className="eyebrow">Eixos políticos</span>
-              <h2>Resultado percentual por eixo</h2>
+              <span className="eyebrow">{t.axesSectionEyebrow}</span>
+              <h2>{t.axesSectionTitle}</h2>
             </div>
             <div className="axis-rows">
               {quiz.axes.map((axis) => {
@@ -876,8 +709,8 @@ export default function App() {
 
           <section className="results-section fade-up d-5">
             <div className="section-heading">
-              <span className="eyebrow">Proximidade ideológica</span>
-              <h2>Outras correspondências</h2>
+              <span className="eyebrow">{t.proximityEyebrow}</span>
+              <h2>{t.otherMatches}</h2>
             </div>
             <div className="match-grid">
               {result.matches.slice(1, 4).map((match) => (
@@ -888,14 +721,14 @@ export default function App() {
 
           <div className="results-cta fade-up d-5" data-export-hidden="true">
             <button className="primary-button" type="button" onClick={() => void startQuiz(selectedVariant)}>
-              Refazer análise
+              {t.redoAnalysis}
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M21 12a9 9 0 1 1-3-6.7" />
                 <path d="M21 4v5h-5" />
               </svg>
             </button>
             <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
-              {isSharing ? 'Gerando PNG...' : 'Compartilhar'}
+              {isSharing ? t.generatingPng : t.share}
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 3v12" />
                 <path d="m7 10 5 5 5-5" />

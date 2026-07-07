@@ -1,7 +1,8 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) a partir
-// dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
-// Nenhum arquivo gerado aqui é editado à mão: a fonte é sempre backend/src/main/resources/data.
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT e EN
+// a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
+// Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
+// overlays em data/i18n/en/*.json (chaveados por id, com fallback para PT).
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,20 +12,143 @@ const DATA_DIR = resolve(ROOT, '../backend/src/main/resources/data');
 const DIST = join(ROOT, 'dist');
 const SITE = 'https://12axes.vercel.app';
 
-const readJson = (name) => JSON.parse(readFileSync(join(DATA_DIR, name), 'utf8'));
+const readJson = (path) => JSON.parse(readFileSync(join(DATA_DIR, path), 'utf8'));
 
-const axes = readJson('axes.json');
-const ideologies = readJson('ideologies.json');
+const baseAxes = readJson('axes.json');
+const baseIdeologies = readJson('ideologies.json');
+const baseCountries = readJson('countries.json');
+const basePersonalities = readJson('personalities.json');
 const ideologyProfiles = new Map(readJson('ideology-profiles.json').map((p) => [p.ideologyId, p.vector]));
-const countries = readJson('countries.json');
 const countryProfiles = new Map(readJson('countries-profiles.json').map((p) => [p.countryId, p.vector]));
-const personalities = readJson('personalities.json');
 const personalityProfiles = new Map(readJson('personality-profiles.json').map((p) => [p.personalityId, p.vector]));
 
-const countryById = new Map(countries.map((c) => [c.id, c]));
-const personalityById = new Map(personalities.map((p) => [p.id, p]));
-const ideologiesByCountry = groupBy(ideologies, (i) => i.countryId);
-const ideologiesByPersonality = groupBy(ideologies, (i) => i.personalityId);
+function overlay(base, locale, file) {
+  if (locale === 'pt') return base;
+  const path = join(DATA_DIR, 'i18n', locale, file);
+  if (!existsSync(path)) {
+    console.warn(`[i18n] overlay ausente: ${locale}/${file} — usando PT`);
+    return base;
+  }
+  const byId = new Map(JSON.parse(readFileSync(path, 'utf8')).map((item) => [item.id, item]));
+  return base.map((item) => {
+    const tr = byId.get(item.id);
+    if (!tr) console.warn(`[i18n] sem tradução ${locale}: ${file} → ${item.id} (fallback PT)`);
+    return tr ? { ...item, ...tr } : item;
+  });
+}
+
+const STR = {
+  pt: {
+    htmlLang: 'pt-BR',
+    ogLocale: 'pt_BR',
+    prefix: '',
+    home: 'Início',
+    navIdeologies: 'Ideologias',
+    navCountries: 'Países',
+    navPersonalities: 'Personalidades',
+    takeTheTest: 'Fazer o teste',
+    footerTagline: '12 Axes — quiz político e teste ideológico gratuito em 12 eixos.',
+    axesTitle: 'Perfil nos 12 eixos',
+    axesLead: (name) => `Como ${name} se posiciona em cada uma das 12 dimensões políticas medidas pelo 12 Axes.`,
+    relatedTitle: 'Relacionados',
+    countryIdeologiesTitle: 'Ideologias ligadas a este país',
+    personalityIdeologiesTitle: 'Ideologias associadas',
+    ctaTitle: 'E você, onde está no espectro político?',
+    ctaText: 'Responda ao quiz e descubra suas compatibilidades com ideologias, países e personalidades nos 12 eixos.',
+    ctaButton: 'Fazer o teste político',
+    closestCountry: 'País mais próximo',
+    associatedPersonality: 'Personalidade associada',
+    countryChip: (name) => `País: ${name}`,
+    referenceChip: (name) => `Referência: ${name}`,
+    currentCountry: 'País atual',
+    historicalRegime: (period) => `Regime histórico${period ? ` · ${period}` : ''}`,
+    flagAlt: (name) => `Bandeira: ${name}`,
+    portraitAlt: (name) => `Retrato: ${name}`,
+    imageSource: 'Fonte da imagem',
+    breadcrumbLabel: 'Trilha de navegação',
+    sectionsLabel: 'Seções',
+    footerLabel: 'Rodapé',
+    homeAria: '12 Axes — página inicial',
+    balanced: 'Equilibrado',
+    intensity: ['Equilibrado', 'Inclinado', 'Forte', 'Muito forte'],
+    subjectPrefix: (name, kind) => (kind === 'ideology' ? `o ${name}` : name),
+    ideologyTitle: (name) => `${name} — o que é e posição nos 12 eixos políticos | 12 Axes`,
+    countryTitle: (name) => `${name} — perfil político nos 12 eixos | 12 Axes`,
+    personalityTitle: (name) => `${name} — posição política nos 12 eixos | 12 Axes`,
+    ideologyHeadline: (name) => `${name} — posição política nos 12 eixos`,
+    countryHeadline: (name) => `${name} — perfil político nos 12 eixos`,
+    ideologiesIndexTitle: (n) => `Ideologias políticas: lista completa com ${n} correntes | 12 Axes`,
+    ideologiesIndexDesc: (n) => `Explore ${n} ideologias políticas — do comunismo ao libertarianismo — com descrição e posição em 12 eixos. Descubra a sua com o quiz político 12 Axes.`,
+    ideologiesIndexHeading: 'Ideologias políticas',
+    ideologiesIndexLead: (n) => `As ${n} correntes políticas mapeadas pelo 12 Axes, cada uma com descrição e perfil completo nos 12 eixos. Faça o teste para descobrir com quais você é compatível.`,
+    countriesIndexTitle: (n) => `Perfis políticos de ${n} países e regimes históricos | 12 Axes`,
+    countriesIndexDesc: (n) => `Compare o perfil político de ${n} países e regimes históricos em 12 eixos — democracia, economia, liberdades e mais. Descubra seu país mais compatível.`,
+    countriesIndexHeading: 'Países e regimes',
+    countriesIndexLead: (n) => `${n} países atuais e regimes históricos com perfil político completo nos 12 eixos. Faça o teste para descobrir qual é o mais próximo de você.`,
+    currentCountriesGroup: 'Países atuais',
+    historicalCountriesGroup: 'Regimes históricos',
+    personalitiesIndexTitle: (n) => `${n} personalidades políticas e suas posições | 12 Axes`,
+    personalitiesIndexDesc: (n) => `Veja a posição política de ${n} personalidades históricas e contemporâneas em 12 eixos. Descubra com quem você mais se parece no quiz 12 Axes.`,
+    personalitiesIndexHeading: 'Personalidades políticas',
+    personalitiesIndexLead: (n) => `${n} líderes, pensadores e figuras históricas com perfil político nos 12 eixos. Faça o teste para descobrir com quem você mais se parece.`
+  },
+  en: {
+    htmlLang: 'en',
+    ogLocale: 'en_US',
+    prefix: '/en',
+    home: 'Home',
+    navIdeologies: 'Ideologies',
+    navCountries: 'Countries',
+    navPersonalities: 'Personalities',
+    takeTheTest: 'Take the test',
+    footerTagline: '12 Axes — a free political quiz and ideology test across 12 axes.',
+    axesTitle: 'Profile across the 12 axes',
+    axesLead: (name) => `How ${name} positions on each of the 12 political dimensions measured by 12 Axes.`,
+    relatedTitle: 'Related',
+    countryIdeologiesTitle: 'Ideologies linked to this country',
+    personalityIdeologiesTitle: 'Associated ideologies',
+    ctaTitle: 'Where do you stand on the political spectrum?',
+    ctaText: 'Take the quiz and discover your compatibility with ideologies, countries, and personalities across the 12 axes.',
+    ctaButton: 'Take the political test',
+    closestCountry: 'Closest country',
+    associatedPersonality: 'Associated personality',
+    countryChip: (name) => `Country: ${name}`,
+    referenceChip: (name) => `Key figure: ${name}`,
+    currentCountry: 'Modern country',
+    historicalRegime: (period) => `Historical regime${period ? ` · ${period}` : ''}`,
+    flagAlt: (name) => `Flag: ${name}`,
+    portraitAlt: (name) => `Portrait: ${name}`,
+    imageSource: 'Image source',
+    breadcrumbLabel: 'Breadcrumb',
+    sectionsLabel: 'Sections',
+    footerLabel: 'Footer',
+    homeAria: '12 Axes — home page',
+    balanced: 'Balanced',
+    intensity: ['Balanced', 'Leaning', 'Strong', 'Very strong'],
+    subjectPrefix: (name) => name,
+    ideologyTitle: (name) => `${name} — what it is and its position on the 12 political axes | 12 Axes`,
+    countryTitle: (name) => `${name} — political profile across the 12 axes | 12 Axes`,
+    personalityTitle: (name) => `${name} — political position on the 12 axes | 12 Axes`,
+    ideologyHeadline: (name) => `${name} — political position on the 12 axes`,
+    countryHeadline: (name) => `${name} — political profile across the 12 axes`,
+    ideologiesIndexTitle: (n) => `Political ideologies: full list of ${n} currents | 12 Axes`,
+    ideologiesIndexDesc: (n) => `Explore ${n} political ideologies — from communism to libertarianism — with descriptions and positions on 12 axes. Find yours with the 12 Axes political quiz.`,
+    ideologiesIndexHeading: 'Political ideologies',
+    ideologiesIndexLead: (n) => `The ${n} political currents mapped by 12 Axes, each with a description and a full profile across the 12 axes. Take the test to discover which ones match you.`,
+    countriesIndexTitle: (n) => `Political profiles of ${n} countries and historical regimes | 12 Axes`,
+    countriesIndexDesc: (n) => `Compare the political profile of ${n} countries and historical regimes across 12 axes — democracy, economy, liberties, and more. Find your most compatible country.`,
+    countriesIndexHeading: 'Countries and regimes',
+    countriesIndexLead: (n) => `${n} modern countries and historical regimes with a full political profile across the 12 axes. Take the test to discover which one is closest to you.`,
+    currentCountriesGroup: 'Modern countries',
+    historicalCountriesGroup: 'Historical regimes',
+    personalitiesIndexTitle: (n) => `${n} political personalities and their positions | 12 Axes`,
+    personalitiesIndexDesc: (n) => `See the political position of ${n} historical and contemporary personalities across 12 axes. Discover who you resemble most with the 12 Axes quiz.`,
+    personalitiesIndexHeading: 'Political personalities',
+    personalitiesIndexLead: (n) => `${n} leaders, thinkers, and historical figures with a political profile across the 12 axes. Take the test to discover who you resemble most.`
+  }
+};
+
+const LOCALES = ['pt', 'en'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -56,23 +180,23 @@ function readableInk(hexColor) {
   return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.62 ? '#0B1020' : '#ffffff';
 }
 
-function intensityFor(distance) {
-  if (distance < 7.5) return 'Equilibrado';
-  if (distance < 22.5) return 'Inclinado';
-  if (distance < 37.5) return 'Forte';
-  return 'Muito forte';
+function intensityFor(distance, labels) {
+  if (distance < 7.5) return labels[0];
+  if (distance < 22.5) return labels[1];
+  if (distance < 37.5) return labels[2];
+  return labels[3];
 }
 
 // ── Barra de eixo (mesma semântica do AxisResultBar.tsx: vetor = leftPercent) ──
-function axisRow(axis, leftPercent) {
+function axisRow(L, axis, leftPercent) {
   const left = Math.max(0, Math.min(100, leftPercent));
   const right = 100 - left;
   const balanced = Math.abs(left - 50) < 7.5;
   const leaningRight = right > left;
   const domColor = balanced ? '#94A3B8' : leaningRight ? axis.rightColor : axis.leftColor;
   const leanText = balanced
-    ? 'Equilibrado'
-    : `${intensityFor(Math.abs(left - 50))} - ${leaningRight ? axis.rightPole : axis.leftPole}`;
+    ? L.s.balanced
+    : `${intensityFor(Math.abs(left - 50), L.s.intensity)} - ${leaningRight ? axis.rightPole : axis.leftPole}`;
   const position = right; // 0 = polo esquerdo, 100 = polo direito
   const fillLeft = Math.min(position, 50);
   const fillWidth = balanced ? 0 : Math.abs(position - 50);
@@ -105,12 +229,12 @@ function axisRow(axis, leftPercent) {
 </article>`;
 }
 
-function axesSection(subjectName, vector) {
-  const rows = axes.map((axis) => axisRow(axis, vector[axis.id] ?? 50)).join('\n');
+function axesSection(L, subjectName, vector) {
+  const rows = L.axes.map((axis) => axisRow(L, axis, vector[axis.id] ?? 50)).join('\n');
   return `
 <section class="page-section" aria-labelledby="axes-title">
-  <h2 id="axes-title">Perfil nos 12 eixos</h2>
-  <p class="section-lead">Como ${escapeHtml(subjectName)} se posiciona em cada uma das 12 dimensões políticas medidas pelo 12 Axes.</p>
+  <h2 id="axes-title">${escapeHtml(L.s.axesTitle)}</h2>
+  <p class="section-lead">${escapeHtml(L.s.axesLead(subjectName))}</p>
   <div class="axis-rows">${rows}</div>
 </section>`;
 }
@@ -124,36 +248,38 @@ function relatedCard(href, eyebrow, title, description) {
 </a>`;
 }
 
-function ctaSection() {
+function ctaSection(L) {
   return `
 <section class="cta-panel">
-  <h2>E você, onde está no espectro político?</h2>
-  <p>Responda ao quiz e descubra suas compatibilidades com ideologias, países e personalidades nos 12 eixos.</p>
-  <a class="primary-button hero-cta" href="/">Fazer o teste político
+  <h2>${escapeHtml(L.s.ctaTitle)}</h2>
+  <p>${escapeHtml(L.s.ctaText)}</p>
+  <a class="primary-button hero-cta" href="/">${escapeHtml(L.s.ctaButton)}
     <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </a>
 </section>`;
 }
 
-function breadcrumbLd(sectionLabel, sectionPath, name, path) {
+function breadcrumbLd(L, sectionLabel, sectionPath, name, path) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '12 Axes', item: `${SITE}/` },
-      { '@type': 'ListItem', position: 2, name: sectionLabel, item: `${SITE}${sectionPath}` },
+      { '@type': 'ListItem', position: 2, name: sectionLabel, item: `${SITE}${L.s.prefix}${sectionPath}` },
       { '@type': 'ListItem', position: 3, name, item: `${SITE}${path}` }
     ]
   };
 }
 
-function layout({ path, title, description, ogImage, jsonLd, body }) {
+// basePath: caminho sem prefixo de locale — usado para gerar os pares hreflang.
+function layout(L, { basePath, title, description, ogImage, jsonLd, body }) {
+  const path = `${L.s.prefix}${basePath}`;
   const url = `${SITE}${path}`;
   const ldBlocks = jsonLd
     .map((ld) => `<script type="application/ld+json">${JSON.stringify(ld)}</script>`)
     .join('\n    ');
   return `<!doctype html>
-<html lang="pt-BR">
+<html lang="${L.s.htmlLang}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -162,12 +288,15 @@ function layout({ path, title, description, ogImage, jsonLd, body }) {
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
+    <link rel="alternate" hreflang="pt-BR" href="${SITE}${basePath}" />
+    <link rel="alternate" hreflang="en" href="${SITE}/en${basePath}" />
+    <link rel="alternate" hreflang="x-default" href="${SITE}/en${basePath}" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="12 Axes" />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="${L.s.ogLocale}" />
     <meta property="og:url" content="${url}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
@@ -185,33 +314,34 @@ function layout({ path, title, description, ogImage, jsonLd, body }) {
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand-lockup" href="/" aria-label="12 Axes — página inicial"><span class="brand-num">12</span><span class="brand-word">Axes</span></a>
-        <nav class="home-nav" aria-label="Seções">
-          <a href="/ideologies">Ideologias</a>
-          <a href="/countries">Países</a>
-          <a href="/personalities">Personalidades</a>
+        <a class="brand-lockup" href="/" aria-label="${escapeHtml(L.s.homeAria)}"><span class="brand-num">12</span><span class="brand-word">Axes</span></a>
+        <nav class="home-nav" aria-label="${escapeHtml(L.s.sectionsLabel)}">
+          <a href="${L.s.prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a>
+          <a href="${L.s.prefix}/countries">${escapeHtml(L.s.navCountries)}</a>
+          <a href="${L.s.prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a>
         </nav>
       </header>
       <main class="page-main">${body}</main>
       <footer class="page-footer">
         <a class="brand-lockup" href="/"><span class="brand-num">12</span><span class="brand-word">Axes</span></a>
-        <nav aria-label="Rodapé">
-          <a href="/">Fazer o teste</a>
-          <a href="/ideologies">Ideologias</a>
-          <a href="/countries">Países</a>
-          <a href="/personalities">Personalidades</a>
+        <nav aria-label="${escapeHtml(L.s.footerLabel)}">
+          <a href="/">${escapeHtml(L.s.takeTheTest)}</a>
+          <a href="${L.s.prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a>
+          <a href="${L.s.prefix}/countries">${escapeHtml(L.s.navCountries)}</a>
+          <a href="${L.s.prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a>
+          <a href="${L.s.prefix === '' ? '/en' : ''}${basePath}">${L.s.prefix === '' ? 'English' : 'Português'}</a>
         </nav>
-        <p>12 Axes — quiz político e teste ideológico gratuito em 12 eixos.</p>
+        <p>${escapeHtml(L.s.footerTagline)}</p>
       </footer>
     </div>
   </body>
 </html>`;
 }
 
-function crumbs(sectionLabel, sectionPath, name) {
+function crumbs(L, sectionLabel, sectionPath, name) {
   return `
-<nav class="crumbs" aria-label="Trilha de navegação">
-  <a href="/">Início</a><span aria-hidden="true">/</span><a href="${sectionPath}">${escapeHtml(sectionLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(name)}</span>
+<nav class="crumbs" aria-label="${escapeHtml(L.s.breadcrumbLabel)}">
+  <a href="${L.s.prefix || '/'}">${escapeHtml(L.s.home)}</a><span aria-hidden="true">/</span><a href="${L.s.prefix}${sectionPath}">${escapeHtml(sectionLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(name)}</span>
 </nav>`;
 }
 
@@ -220,55 +350,56 @@ function metaChip(text) {
 }
 
 // ── Páginas de detalhe ──────────────────────────────────────────────────────
-function ideologyPage(ideology) {
-  const path = `/ideologies/${ideology.id}`;
-  const country = countryById.get(ideology.countryId);
-  const personality = personalityById.get(ideology.personalityId);
+function ideologyPage(L, ideology) {
+  const basePath = `/ideologies/${ideology.id}`;
+  const country = L.countryById.get(ideology.countryId);
+  const personality = L.personalityById.get(ideology.personalityId);
   const vector = ideologyProfiles.get(ideology.id);
-  const siblings = ideologies
+  const siblings = L.ideologies
     .filter((i) => i.category === ideology.category && i.id !== ideology.id)
     .slice(0, 6);
 
+  const p = L.s.prefix;
   const related = [
-    country && relatedCard(`/countries/${country.id}`, 'País mais próximo', country.name, country.description),
-    personality && relatedCard(`/personalities/${personality.id}`, 'Personalidade associada', personality.name, personality.description),
-    ...siblings.map((s) => relatedCard(`/ideologies/${s.id}`, s.category, s.name, s.description))
+    country && relatedCard(`${p}/countries/${country.id}`, L.s.closestCountry, country.name, country.description),
+    personality && relatedCard(`${p}/personalities/${personality.id}`, L.s.associatedPersonality, personality.name, personality.description),
+    ...siblings.map((s) => relatedCard(`${p}/ideologies/${s.id}`, s.category, s.name, s.description))
   ].filter(Boolean);
 
   const body = `
-${crumbs('Ideologias', '/ideologies', ideology.name)}
+${crumbs(L, L.s.navIdeologies, '/ideologies', ideology.name)}
 <section class="entity-hero">
   <span class="intro-eyebrow">${escapeHtml(ideology.category)}</span>
   <h1>${escapeHtml(ideology.name)}</h1>
   <p class="intro-lead">${escapeHtml(ideology.description)}</p>
   <div class="intro-meta">
-    ${country ? metaChip(`País: ${country.name}`) : ''}
-    ${personality ? metaChip(`Referência: ${personality.name}`) : ''}
+    ${country ? metaChip(L.s.countryChip(country.name)) : ''}
+    ${personality ? metaChip(L.s.referenceChip(personality.name)) : ''}
   </div>
 </section>
-${axesSection(`o ${ideology.name}`, vector)}
+${axesSection(L, L.s.subjectPrefix(ideology.name, 'ideology'), vector)}
 <section class="page-section" aria-labelledby="related-title">
-  <h2 id="related-title">Relacionados</h2>
+  <h2 id="related-title">${escapeHtml(L.s.relatedTitle)}</h2>
   <div class="related-grid">${related.join('\n')}</div>
 </section>
-${ctaSection()}`;
+${ctaSection(L)}`;
 
   return {
-    path,
-    html: layout({
-      path,
-      title: `${ideology.name} — o que é e posição nos 12 eixos políticos | 12 Axes`,
+    basePath,
+    html: layout(L, {
+      basePath,
+      title: L.s.ideologyTitle(ideology.name),
       description: truncate(ideology.description),
       ogImage: '/logo.png',
       jsonLd: [
-        breadcrumbLd('Ideologias', '/ideologies', ideology.name, path),
+        breadcrumbLd(L, L.s.navIdeologies, '/ideologies', ideology.name, `${p}${basePath}`),
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: `${ideology.name} — posição política nos 12 eixos`,
+          headline: L.s.ideologyHeadline(ideology.name),
           description: truncate(ideology.description),
-          inLanguage: 'pt-BR',
-          mainEntityOfPage: `${SITE}${path}`,
+          inLanguage: L.s.htmlLang,
+          mainEntityOfPage: `${SITE}${p}${basePath}`,
           author: { '@type': 'Organization', name: '12 Axes', url: `${SITE}/` }
         }
       ],
@@ -277,51 +408,52 @@ ${ctaSection()}`;
   };
 }
 
-function countryPage(country) {
-  const path = `/countries/${country.id}`;
+function countryPage(L, country) {
+  const basePath = `/countries/${country.id}`;
   const vector = countryProfiles.get(country.id);
-  const linked = ideologiesByCountry.get(country.id) ?? [];
-  const related = linked.map((i) => relatedCard(`/ideologies/${i.id}`, i.category, i.name, i.description));
+  const linked = L.ideologiesByCountry.get(country.id) ?? [];
+  const p = L.s.prefix;
+  const related = linked.map((i) => relatedCard(`${p}/ideologies/${i.id}`, i.category, i.name, i.description));
 
   const body = `
-${crumbs('Países', '/countries', country.name)}
+${crumbs(L, L.s.navCountries, '/countries', country.name)}
 <section class="entity-hero has-figure">
   <div class="entity-intro">
     <span class="intro-eyebrow">${escapeHtml(country.category)}</span>
     <h1>${escapeHtml(country.name)}</h1>
     <p class="intro-lead">${escapeHtml(country.description)}</p>
     <div class="intro-meta">
-      ${country.historical ? metaChip(`Regime histórico${country.period ? ` · ${country.period}` : ''}`) : metaChip('País atual')}
+      ${country.historical ? metaChip(L.s.historicalRegime(country.period)) : metaChip(L.s.currentCountry)}
     </div>
   </div>
   <figure class="entity-figure">
-    <img src="${country.flagPath}" alt="${escapeHtml(`Bandeira: ${country.name}`)}" width="220" loading="lazy" />
+    <img src="${country.flagPath}" alt="${escapeHtml(L.s.flagAlt(country.name))}" width="220" loading="lazy" />
   </figure>
 </section>
-${axesSection(country.name, vector)}
+${axesSection(L, country.name, vector)}
 ${related.length ? `
 <section class="page-section" aria-labelledby="related-title">
-  <h2 id="related-title">Ideologias ligadas a este país</h2>
+  <h2 id="related-title">${escapeHtml(L.s.countryIdeologiesTitle)}</h2>
   <div class="related-grid">${related.join('\n')}</div>
 </section>` : ''}
-${ctaSection()}`;
+${ctaSection(L)}`;
 
   return {
-    path,
-    html: layout({
-      path,
-      title: `${country.name} — perfil político nos 12 eixos | 12 Axes`,
+    basePath,
+    html: layout(L, {
+      basePath,
+      title: L.s.countryTitle(country.name),
       description: truncate(country.description),
       ogImage: country.flagPath,
       jsonLd: [
-        breadcrumbLd('Países', '/countries', country.name, path),
+        breadcrumbLd(L, L.s.navCountries, '/countries', country.name, `${p}${basePath}`),
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: `${country.name} — perfil político nos 12 eixos`,
+          headline: L.s.countryHeadline(country.name),
           description: truncate(country.description),
-          inLanguage: 'pt-BR',
-          mainEntityOfPage: `${SITE}${path}`,
+          inLanguage: L.s.htmlLang,
+          mainEntityOfPage: `${SITE}${p}${basePath}`,
           author: { '@type': 'Organization', name: '12 Axes', url: `${SITE}/` }
         }
       ],
@@ -330,18 +462,19 @@ ${ctaSection()}`;
   };
 }
 
-function personalityPage(personality) {
-  const path = `/personalities/${personality.id}`;
+function personalityPage(L, personality) {
+  const basePath = `/personalities/${personality.id}`;
   const vector = personalityProfiles.get(personality.id);
-  const linked = ideologiesByPersonality.get(personality.id) ?? [];
-  const related = linked.map((i) => relatedCard(`/ideologies/${i.id}`, i.category, i.name, i.description));
+  const linked = L.ideologiesByPersonality.get(personality.id) ?? [];
+  const p = L.s.prefix;
+  const related = linked.map((i) => relatedCard(`${p}/ideologies/${i.id}`, i.category, i.name, i.description));
 
   const credit = personality.imageSourceUrl
-    ? `<figcaption><a href="${personality.imageSourceUrl}" rel="noopener nofollow" target="_blank">${escapeHtml(personality.imageSourceName || 'Fonte da imagem')}</a></figcaption>`
+    ? `<figcaption><a href="${personality.imageSourceUrl}" rel="noopener nofollow" target="_blank">${escapeHtml(personality.imageSourceName || L.s.imageSource)}</a></figcaption>`
     : '';
 
   const body = `
-${crumbs('Personalidades', '/personalities', personality.name)}
+${crumbs(L, L.s.navPersonalities, '/personalities', personality.name)}
 <section class="entity-hero has-figure">
   <div class="entity-intro">
     <span class="intro-eyebrow">${escapeHtml(personality.role)}</span>
@@ -352,27 +485,27 @@ ${crumbs('Personalidades', '/personalities', personality.name)}
     </div>
   </div>
   <figure class="entity-figure is-portrait">
-    <img src="${personality.imagePath}" alt="${escapeHtml(`Retrato: ${personality.name}`)}" width="220" loading="lazy" />
+    <img src="${personality.imagePath}" alt="${escapeHtml(L.s.portraitAlt(personality.name))}" width="220" loading="lazy" />
     ${credit}
   </figure>
 </section>
-${axesSection(personality.name, vector)}
+${axesSection(L, personality.name, vector)}
 ${related.length ? `
 <section class="page-section" aria-labelledby="related-title">
-  <h2 id="related-title">Ideologias associadas</h2>
+  <h2 id="related-title">${escapeHtml(L.s.personalityIdeologiesTitle)}</h2>
   <div class="related-grid">${related.join('\n')}</div>
 </section>` : ''}
-${ctaSection()}`;
+${ctaSection(L)}`;
 
   return {
-    path,
-    html: layout({
-      path,
-      title: `${personality.name} — posição política nos 12 eixos | 12 Axes`,
+    basePath,
+    html: layout(L, {
+      basePath,
+      title: L.s.personalityTitle(personality.name),
       description: truncate(personality.description),
       ogImage: personality.imagePath,
       jsonLd: [
-        breadcrumbLd('Personalidades', '/personalities', personality.name, path),
+        breadcrumbLd(L, L.s.navPersonalities, '/personalities', personality.name, `${p}${basePath}`),
         {
           '@context': 'https://schema.org',
           '@type': 'ProfilePage',
@@ -381,8 +514,8 @@ ${ctaSection()}`;
             name: personality.name,
             description: truncate(personality.description)
           },
-          inLanguage: 'pt-BR',
-          url: `${SITE}${path}`
+          inLanguage: L.s.htmlLang,
+          url: `${SITE}${p}${basePath}`
         }
       ],
       body
@@ -391,7 +524,7 @@ ${ctaSection()}`;
 }
 
 // ── Páginas de índice ───────────────────────────────────────────────────────
-function indexPage({ path, title, description, heading, lead, groups }) {
+function indexPage(L, { basePath, title, description, heading, lead, groups }) {
   const sections = groups
     .map(
       ({ label, items }) => `
@@ -408,12 +541,12 @@ function indexPage({ path, title, description, heading, lead, groups }) {
   <p class="intro-lead">${escapeHtml(lead)}</p>
 </section>
 ${sections}
-${ctaSection()}`;
+${ctaSection(L)}`;
 
   return {
-    path,
-    html: layout({
-      path,
+    basePath,
+    html: layout(L, {
+      basePath,
       title,
       description,
       ogImage: '/logo.png',
@@ -423,8 +556,8 @@ ${ctaSection()}`;
           '@type': 'CollectionPage',
           name: heading,
           description,
-          inLanguage: 'pt-BR',
-          url: `${SITE}${path}`
+          inLanguage: L.s.htmlLang,
+          url: `${SITE}${L.s.prefix}${basePath}`
         }
       ],
       body
@@ -432,55 +565,58 @@ ${ctaSection()}`;
   };
 }
 
-function buildIndexes() {
-  const ideologyGroups = [...groupBy(ideologies, (i) => i.category)].map(([label, items]) => ({
+function buildIndexes(L) {
+  const p = L.s.prefix;
+  const ideologyGroups = [...groupBy(L.ideologies, (i) => i.category)].map(([label, items]) => ({
     label,
-    items: items.map((i) => relatedCard(`/ideologies/${i.id}`, label, i.name, i.description))
+    items: items.map((i) => relatedCard(`${p}/ideologies/${i.id}`, label, i.name, i.description))
   }));
 
-  const currentCountries = countries.filter((c) => !c.historical);
-  const historicalCountries = countries.filter((c) => c.historical);
+  const currentCountries = L.countries.filter((c) => !c.historical);
+  const historicalCountries = L.countries.filter((c) => c.historical);
   const countryGroups = [
     {
-      label: 'Países atuais',
-      items: currentCountries.map((c) => relatedCard(`/countries/${c.id}`, c.category, c.name, c.description))
+      label: L.s.currentCountriesGroup,
+      items: currentCountries.map((c) => relatedCard(`${p}/countries/${c.id}`, c.category, c.name, c.description))
     },
     {
-      label: 'Regimes históricos',
+      label: L.s.historicalCountriesGroup,
       items: historicalCountries.map((c) =>
-        relatedCard(`/countries/${c.id}`, c.period ? `${c.category} · ${c.period}` : c.category, c.name, c.description)
+        relatedCard(`${p}/countries/${c.id}`, c.period ? `${c.category} · ${c.period}` : c.category, c.name, c.description)
       )
     }
   ];
 
-  const personalityGroups = [...groupBy(personalities, (p) => p.role)].map(([label, items]) => ({
+  const personalityGroups = [...groupBy(L.personalities, (pers) => pers.role)].map(([label, items]) => ({
     label,
-    items: items.map((p) => relatedCard(`/personalities/${p.id}`, label, p.name, p.description))
+    items: items.map((pers) => relatedCard(`${p}/personalities/${pers.id}`, label, pers.name, pers.description))
   }));
 
+  const n = { i: L.ideologies.length, c: L.countries.length, p: L.personalities.length };
+
   return [
-    indexPage({
-      path: '/ideologies',
-      title: `Ideologias políticas: lista completa com ${ideologies.length} correntes | 12 Axes`,
-      description: `Explore ${ideologies.length} ideologias políticas — do comunismo ao libertarianismo — com descrição e posição em 12 eixos. Descubra a sua com o quiz político 12 Axes.`,
-      heading: 'Ideologias políticas',
-      lead: `As ${ideologies.length} correntes políticas mapeadas pelo 12 Axes, cada uma com descrição e perfil completo nos 12 eixos. Faça o teste para descobrir com quais você é compatível.`,
+    indexPage(L, {
+      basePath: '/ideologies',
+      title: L.s.ideologiesIndexTitle(n.i),
+      description: L.s.ideologiesIndexDesc(n.i),
+      heading: L.s.ideologiesIndexHeading,
+      lead: L.s.ideologiesIndexLead(n.i),
       groups: ideologyGroups
     }),
-    indexPage({
-      path: '/countries',
-      title: `Perfis políticos de ${countries.length} países e regimes históricos | 12 Axes`,
-      description: `Compare o perfil político de ${countries.length} países e regimes históricos em 12 eixos — democracia, economia, liberdades e mais. Descubra seu país mais compatível.`,
-      heading: 'Países e regimes',
-      lead: `${countries.length} países atuais e regimes históricos com perfil político completo nos 12 eixos. Faça o teste para descobrir qual é o mais próximo de você.`,
+    indexPage(L, {
+      basePath: '/countries',
+      title: L.s.countriesIndexTitle(n.c),
+      description: L.s.countriesIndexDesc(n.c),
+      heading: L.s.countriesIndexHeading,
+      lead: L.s.countriesIndexLead(n.c),
       groups: countryGroups
     }),
-    indexPage({
-      path: '/personalities',
-      title: `${personalities.length} personalidades políticas e suas posições | 12 Axes`,
-      description: `Veja a posição política de ${personalities.length} personalidades históricas e contemporâneas em 12 eixos. Descubra com quem você mais se parece no quiz 12 Axes.`,
-      heading: 'Personalidades políticas',
-      lead: `${personalities.length} líderes, pensadores e figuras históricas com perfil político nos 12 eixos. Faça o teste para descobrir com quem você mais se parece.`,
+    indexPage(L, {
+      basePath: '/personalities',
+      title: L.s.personalitiesIndexTitle(n.p),
+      description: L.s.personalitiesIndexDesc(n.p),
+      heading: L.s.personalitiesIndexHeading,
+      lead: L.s.personalitiesIndexLead(n.p),
       groups: personalityGroups
     })
   ];
@@ -575,27 +711,199 @@ function buildCss() {
 }`;
 }
 
-// ── Escrita ─────────────────────────────────────────────────────────────────
-function writePage({ path, html }) {
-  const file = join(DIST, `${path.replace(/^\//, '')}.html`);
-  mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, html);
-  return path;
+// ── Montagem por locale ─────────────────────────────────────────────────────
+function buildLocaleContext(locale) {
+  const ideologies = overlay(baseIdeologies, locale, 'ideologies.json');
+  const countries = overlay(baseCountries, locale, 'countries.json');
+  const personalities = overlay(basePersonalities, locale, 'personalities.json');
+  return {
+    s: STR[locale],
+    axes: overlay(baseAxes, locale, 'axes.json'),
+    ideologies,
+    countries,
+    personalities,
+    countryById: new Map(countries.map((c) => [c.id, c])),
+    personalityById: new Map(personalities.map((p) => [p.id, p])),
+    ideologiesByCountry: groupBy(ideologies, (i) => i.countryId),
+    ideologiesByPersonality: groupBy(ideologies, (i) => i.personalityId)
+  };
 }
 
-const pages = [
-  ...buildIndexes(),
-  ...ideologies.map(ideologyPage),
-  ...countries.map(countryPage),
-  ...personalities.map(personalityPage)
-];
+function writePage(prefix, { basePath, html }) {
+  const file = join(DIST, `${(prefix + basePath).replace(/^\//, '')}.html`);
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, html);
+  return prefix + basePath;
+}
 
-const paths = pages.map(writePage);
+// ── Homes /en e /br ─────────────────────────────────────────────────────────
+// dist/en.html: cópia do index compilado com todo o SEO trocado para inglês
+// (título, description, OG, JSON-LD) e canonical próprio — é o que o Google
+// mostra para quem busca em inglês. dist/br.html: cópia fiel do index (o
+// canonical continua apontando para /, então não cria conteúdo duplicado);
+// o idioma forçado em ambos vem do caminho, resolvido pelo app.
+function replaceBetween(html, startMarker, endMarker, replacement) {
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker, start);
+  if (start === -1 || end === -1) {
+    throw new Error(`Marcador não encontrado no index.html: ${startMarker} … ${endMarker}`);
+  }
+  return html.slice(0, start) + replacement + html.slice(end);
+}
+
+function buildHomeVariants() {
+  const index = readFileSync(join(DIST, 'index.html'), 'utf8');
+
+  writeFileSync(join(DIST, 'br.html'), index);
+
+  const enSeoBlock = `<!-- Primary SEO -->
+    <title>12 Axes — Political Quiz and Ideology Test across 12 Axes</title>
+    <meta
+      name="description"
+      content="Discover your political position in 5 minutes with 12 Axes. A free political quiz and ideology test that maps your political spectrum — left, right, center — across 12 axes."
+    />
+    <meta
+      name="keywords"
+      content="political test, ideology test, political spectrum, political position, political ideology, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism, democracy, federalism, immigration, international trade, religion in politics, economic policy, political representation, 12 axes, 12axes, political quiz, elections, monarchy, political compass"
+    />
+    <meta name="author" content="12 Axes" />
+    <meta name="application-name" content="12 Axes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="English" />
+    <link rel="canonical" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
+
+    `;
+
+  const enOgBlock = `<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="12 Axes" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://12axes.vercel.app/en" />
+    <meta property="og:title" content="12 Axes — Political Quiz and Ideology Test across 12 Axes" />
+    <meta
+      property="og:description"
+      content="Discover your political position in 5 minutes. A free political quiz that maps your political spectrum, political ideology, and 12 axes."
+    />
+    <meta property="og:image" content="https://12axes.vercel.app/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="12 Axes logo — a 12-axis political quiz" />
+
+    `;
+
+  const enTwitterBlock = `<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="12 Axes — Political Quiz and Ideology Test across 12 Axes" />
+    <meta
+      name="twitter:description"
+      content="Discover your political position in 5 minutes with a free political quiz in English."
+    />
+    <meta name="twitter:image" content="https://12axes.vercel.app/logo.png" />
+
+    `;
+
+  const enWebApp = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '12 Axes',
+    alternateName: ['12 Axes Political Quiz', '12 Axes Ideology Test'],
+    url: 'https://12axes.vercel.app/en',
+    description:
+      'A political quiz and ideology test that maps your political position across 12 axes and returns your political spectrum, compatible ideologies, closest country, and related personality.',
+    applicationCategory: 'EducationApplication',
+    operatingSystem: 'Web',
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    image: 'https://12axes.vercel.app/logo.png',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    keywords:
+      'political test, ideology test, political spectrum, political position, political ideology, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism, democracy, federalism, immigration, international trade, religion in politics, economic policy, political representation, 12 axes, political quiz, elections, monarchy',
+    about: [
+      'Political structure',
+      'Democratic representation',
+      'Elections',
+      'Monarchy',
+      'Civil liberties',
+      'Immigration',
+      'Diplomacy',
+      'Intervention',
+      'Economic policy',
+      'Capitalism',
+      'Socialism',
+      'Free markets',
+      'International trade',
+      'Religion in politics',
+      'Morality',
+      'Technology',
+      'Liberalism',
+      'Conservatism',
+      'Progressivism',
+      'Libertarianism'
+    ]
+  };
+
+  const enFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      ['Is the test reliable?', 'The 12 Axes political test is reliable as a tool for reading and comparing political positions. It uses questions spread across 12 axes to reduce single-topic bias, but it does not replace study, debate, or academic analysis.'],
+      ['How long does it take?', 'The short version takes about 5 minutes. The full version takes roughly 9 minutes. The extreme version, with 240 questions, can take about 30 minutes.'],
+      ['Can I retake it?', 'Yes. You can retake the political quiz as many times as you like, including choosing another depth to compare whether your result changes.'],
+      ['Is there a right answer?', 'There is no right answer. The ideology test measures preferences about democracy, monarchy, federalism, immigration, religion in politics, economic policy, international trade, liberalism, conservatism, progressivism, and other topics.'],
+      ['How does the algorithm calculate?', 'Each answer adds points to a specific pole. The algorithm calculates percentages per axis, compares your ideological vector with the profiles of political currents, countries, and personalities, and returns the highest compatibilities.'],
+      ['Does the result change?', 'It can change if your opinions change, if you answer with more nuance, or if you take a longer version. The extreme version tends to reduce fluctuations by using more questions.'],
+      ['Is the test scientific?', '12 Axes is not a clinically validated scientific instrument. It is an educational political test, inspired by political spectrum models and ideology quizzes, useful for reflection and comparison.'],
+      ['Can I share it?', 'Yes. When you finish, you can share your result to discuss political ideology, the political spectrum, left, right, center, and the 12 axes with other people.'],
+      ['Does the test collect data?', 'The test is anonymous and requires no sign-up. Answers are used to calculate the result at quiz time, without asking for your name, email, or personal identification.'],
+      ['Can I take it on my phone?', 'Yes. The interface was designed for mobile and desktop, so you can take the political test in your smartphone browser.']
+    ].map(([question, answer]) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer }
+    }))
+  };
+
+  const enJsonLdBlocks = [JSON.stringify(enWebApp), JSON.stringify(enFaq)];
+
+  let en = index.replace('<html lang="pt-BR">', '<html lang="en">');
+  en = replaceBetween(en, '<!-- Primary SEO -->', '<!-- Icons -->', enSeoBlock);
+  en = replaceBetween(en, '<!-- Open Graph -->', '<!-- Twitter -->', enOgBlock);
+  en = replaceBetween(en, '<!-- Twitter -->', '<style>', enTwitterBlock);
+  // Troca apenas o conteúdo dos dois blocos ld+json (WebApplication e FAQ),
+  // preservando os scripts do app que o Vite injeta no <head>.
+  let ldIndex = 0;
+  en = en.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (block) =>
+    ldIndex < enJsonLdBlocks.length
+      ? `<script type="application/ld+json">${enJsonLdBlocks[ldIndex++]}</script>`
+      : block
+  );
+  if (ldIndex !== enJsonLdBlocks.length) {
+    throw new Error(`Esperava 2 blocos ld+json no index.html, encontrei ${ldIndex}`);
+  }
+  writeFileSync(join(DIST, 'en.html'), en);
+}
+
+const allPaths = [];
+for (const locale of LOCALES) {
+  const L = buildLocaleContext(locale);
+  const pages = [
+    ...buildIndexes(L),
+    ...L.ideologies.map((i) => ideologyPage(L, i)),
+    ...L.countries.map((c) => countryPage(L, c)),
+    ...L.personalities.map((p) => personalityPage(L, p))
+  ];
+  for (const page of pages) allPaths.push(writePage(L.s.prefix, page));
+}
+
+buildHomeVariants();
 
 writeFileSync(join(DIST, 'pages.css'), buildCss());
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', ...paths]
+const sitemapUrls = ['/', '/en', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(
@@ -605,4 +913,4 @@ writeFileSync(
 
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`Geradas ${pages.length} páginas + sitemap.xml + robots.txt + pages.css em dist/`);
+console.log(`Geradas ${allPaths.length} páginas (${LOCALES.join(', ')}) + sitemap.xml + robots.txt + pages.css em dist/`);

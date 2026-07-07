@@ -1,3 +1,5 @@
+import { t } from '../i18n';
+
 interface ProgressHeaderProps {
   current: number;
   total: number;
@@ -9,13 +11,13 @@ export function ProgressHeader({ current, total }: ProgressHeaderProps) {
   return (
     <header className="progress-header">
       <div>
-        <span className="eyebrow">Pergunta {current} de {total}</span>
-        <strong>{percent}% concluído</strong>
+        <span className="eyebrow">{t.progress(current, total)}</span>
+        <strong>{t.progressDone(percent)}</strong>
       </div>
       <div
         className="progress-track"
         role="progressbar"
-        aria-label={`Progresso do quiz: ${percent}%`}
+        aria-label={t.progressAria(percent)}
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={percent}

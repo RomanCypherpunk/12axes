@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { t } from '../i18n';
 import type { PersonalityMatch } from '../types/quiz';
 import { personalityInitials, resolvePersonalityImageSrc } from '../utils/personalityImage';
 
@@ -18,12 +19,12 @@ export function PersonalityMatchCard({ match }: PersonalityMatchCardProps) {
         {showImage ? (
           <img
             src={imageSrc}
-            alt={`Retrato de ${match.name}`}
+            alt={t.portraitAlt(match.name)}
             loading="lazy"
             onError={() => setFailedSrc(imageSrc)}
           />
         ) : (
-          <div className="personality-match-initials" role="img" aria-label={`Retrato indisponível de ${match.name}`}>
+          <div className="personality-match-initials" role="img" aria-label={t.portraitUnavailableAria(match.name)}>
             <span>{personalityInitials(match.name)}</span>
           </div>
         )}
@@ -31,10 +32,10 @@ export function PersonalityMatchCard({ match }: PersonalityMatchCardProps) {
       <div className="personality-match-content">
         <div className="personality-match-heading">
           <div>
-            <span className="personality-match-kicker">Personalidade mais compatível</span>
+            <span className="personality-match-kicker">{t.personalityKicker}</span>
             <h2>{match.name}</h2>
           </div>
-          <span className="personality-match-score">{pct.toFixed(0)}% match</span>
+          <span className="personality-match-score">{pct.toFixed(0)}% {t.matchWord}</span>
         </div>
         <div className="personality-match-meta">
           <span>{match.role}</span>

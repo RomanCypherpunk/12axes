@@ -23,22 +23,27 @@ public class IdeologyMatcherService {
     }
 
     public List<IdeologyMatch> findMatches(List<AxisResult> axisResults) {
+        return findMatches(axisResults, QuizDataService.LANG_PT);
+    }
+
+    public List<IdeologyMatch> findMatches(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
+        String normalizedLang = QuizDataService.normalizeLang(lang);
 
         Comparator<IdeologyMatch> byScore = Comparator.comparingDouble(IdeologyMatch::compatibility).reversed();
         Comparator<IdeologyMatch> byName = Comparator.comparing(IdeologyMatch::name);
 
-        return dataService.getIdeologies().stream()
-                .map(ideology -> toMatch(ideology, userVector))
+        return dataService.getIdeologies(normalizedLang).stream()
+                .map(ideology -> toMatch(ideology, userVector, normalizedLang))
                 .sorted(byScore.thenComparing(byName))
                 .limit(TOP_MATCHES)
                 .toList();
     }
 
-    private IdeologyMatch toMatch(Ideology ideology, Map<String, Double> userVector) {
+    private IdeologyMatch toMatch(Ideology ideology, Map<String, Double> userVector, String lang) {
         Map<String, Double> targetVector = targetVectorFor(ideology);
         String shortDescription = shortDescription(ideology.description());
-        String longDescription = longDescription(ideology.description());
+        String longDescription = longDescription(ideology.description(), lang);
         double compatibility = profileMatchScorer.compatibility(userVector, targetVector);
         return new IdeologyMatch(
                 ideology.id(),
@@ -71,23 +76,38 @@ public class IdeologyMatcherService {
         return abbreviate(summary, 230);
     }
 
-    private String longDescription(String rawDescription) {
+    private String longDescription(String rawDescription, String lang) {
+        boolean en = QuizDataService.LANG_EN.equals(lang);
         DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
         StringBuilder description = new StringBuilder(parts.summary());
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
-        description.append(" A compatibilidade indica proximidade entre suas respostas e esse perfil.");
+        description.append(en
+                ? " Compatibility indicates how close your answers are to this profile."
+                : " A compatibilidade indica proximidade entre suas respostas e esse perfil.");
         if (!parts.isEmpty()) {
-            description.append(" ")
-                    .append("Em termos práticos: valores políticos e forma de governo tendem a ")
-                    .append("ser ")
-                    .append(parts.political())
-                    .append("; economia tende a ser ")
-                    .append(parts.economic())
-                    .append("; normas sociais tendem a ser ")
-                    .append(parts.social())
-                    .append(".");
+            if (en) {
+                description.append(" ")
+                        .append("In practical terms: political values and form of government tend to ")
+                        .append("be ")
+                        .append(parts.political())
+                        .append("; the economy tends to be ")
+                        .append(parts.economic())
+                        .append("; social norms tend to be ")
+                        .append(parts.social())
+                        .append(".");
+            } else {
+                description.append(" ")
+                        .append("Em termos práticos: valores políticos e forma de governo tendem a ")
+                        .append("ser ")
+                        .append(parts.political())
+                        .append("; economia tende a ser ")
+                        .append(parts.economic())
+                        .append("; normas sociais tendem a ser ")
+                        .append(parts.social())
+                        .append(".");
+            }
         }
         return description.toString();
     }

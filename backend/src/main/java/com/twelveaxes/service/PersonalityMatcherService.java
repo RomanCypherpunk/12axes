@@ -22,12 +22,16 @@ public class PersonalityMatcherService {
     }
 
     public List<PersonalityMatch> findMatches(List<AxisResult> axisResults) {
+        return findMatches(axisResults, QuizDataService.LANG_PT);
+    }
+
+    public List<PersonalityMatch> findMatches(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
 
         Comparator<PersonalityMatch> byScore = Comparator.comparingDouble(PersonalityMatch::compatibility).reversed();
         Comparator<PersonalityMatch> byName = Comparator.comparing(PersonalityMatch::name);
 
-        return dataService.getPersonalities().stream()
+        return dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
                 .map(personality -> toMatch(personality, userVector))
                 .sorted(byScore.thenComparing(byName))
                 .limit(TOP_MATCHES)
@@ -35,7 +39,11 @@ public class PersonalityMatcherService {
     }
 
     public PersonalityMatch findTopMatch(List<AxisResult> axisResults) {
-        return findMatches(axisResults).getFirst();
+        return findTopMatch(axisResults, QuizDataService.LANG_PT);
+    }
+
+    public PersonalityMatch findTopMatch(List<AxisResult> axisResults, String lang) {
+        return findMatches(axisResults, lang).getFirst();
     }
 
     private PersonalityMatch toMatch(Personality personality, Map<String, Double> userVector) {

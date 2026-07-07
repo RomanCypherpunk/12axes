@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 import type { AnswerOption, AnswerValue, Question } from '../types/quiz';
 
 const answerClassById: Record<AnswerValue, string> = {
@@ -24,7 +25,7 @@ export function QuestionCard({ question, axisLabel, options, selected, disabled 
         <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
         <h2 id="question-title">{question.text}</h2>
       </header>
-      <div className="answer-grid" role="radiogroup" aria-label="Opções de resposta">
+      <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>
         {options.map((option) => {
           const isSelected = selected === option.id;
           return (

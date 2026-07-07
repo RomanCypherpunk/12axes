@@ -1,0 +1,1316 @@
+[
+  {
+    "id": "lenin",
+    "name": "Vladimir Lenin",
+    "role": "Revolutionary",
+    "description": "Leader of the 1917 Russian Revolution and founder of the Soviet Union, Lenin theorized the vanguard party, the dictatorship of the proletariat, and imperialism as the final stage of capitalism, shaping 20th-century communism."
+  },
+  {
+    "id": "stalin",
+    "name": "Joseph Stalin",
+    "role": "Dictator",
+    "description": "At the head of the Soviet Union, Stalin imposed forced industrialization, agrarian collectivization, and central planning, consolidating a single-party regime marked by purges, terror, and mass repression."
+  },
+  {
+    "id": "mao-zedong",
+    "name": "Mao Zedong",
+    "role": "Revolutionary",
+    "description": "Leader of the Chinese Revolution and founder of the People's Republic, Mao adapted Marxism to the peasantry through people's war, collectivization, and the permanent mobilization of the masses in campaigns of radical transformation."
+  },
+  {
+    "id": "trotsky",
+    "name": "Leon Trotsky",
+    "role": "Revolutionary",
+    "description": "Organizer of the Red Army, Trotsky championed permanent revolution and internationalism, becoming the main left-wing opponent of Stalinist bureaucratization until he was exiled and assassinated in Mexico."
+  },
+  {
+    "id": "anton-pannekoek",
+    "name": "Anton Pannekoek",
+    "role": "Marxist theorist",
+    "description": "A Dutch astronomer and Marxist, Pannekoek championed workers' councils and the self-organization of the masses, criticizing both reformist parliamentarism and the centralism of vanguard communist parties."
+  },
+  {
+    "id": "kim-il-sung",
+    "name": "Kim Il-sung",
+    "role": "Dictator",
+    "description": "Founder of North Korea, Kim Il-sung created the Juche doctrine of national self-reliance and established a single-party regime with a cult of the leader that fuses communism, nationalism, and hereditary dynastic power."
+  },
+  {
+    "id": "pol-pot",
+    "name": "Pol Pot",
+    "role": "Dictator",
+    "description": "Leader of the Khmer Rouge in Cambodia, Pol Pot imposed radical agrarian communism that emptied the cities and abolished property, causing one of the greatest genocides of the 20th century in the name of a peasant utopia."
+  },
+  {
+    "id": "deng-xiaoping",
+    "name": "Deng Xiaoping",
+    "role": "Statesman",
+    "description": "The leader who reoriented China after Mao, Deng promoted market reforms and economic opening under Communist Party control, creating the model of socialism with Chinese characteristics and the country's rapid growth."
+  },
+  {
+    "id": "ferdinand-lassalle",
+    "name": "Ferdinand Lassalle",
+    "role": "Socialist theorist",
+    "description": "A pioneer of state socialism, Lassalle championed universal suffrage and state-funded cooperatives, founding the first major German workers' party and influencing European social democracy."
+  },
+  {
+    "id": "ataturk",
+    "name": "Mustafa Kemal Atatürk",
+    "role": "Statesman",
+    "description": "Founder of modern Turkey, Atatürk imposed radical modernization from above, with secularization, a new alphabet, civil rights for women, and developmentalist nationalism, breaking with the Ottoman and religious heritage."
+  },
+  {
+    "id": "garrett-hardin",
+    "name": "Garrett Hardin",
+    "role": "Ecologist",
+    "description": "An American ecologist, Hardin popularized the Tragedy of the Commons, arguing that shared resources degrade without control, a thesis that influenced debates on the environment, property, and population control."
+  },
+  {
+    "id": "otto-neurath",
+    "name": "Otto Neurath",
+    "role": "Philosopher and economist",
+    "description": "An Austrian philosopher and economist, Neurath championed a planned economy and the technical administration of production, rejecting the market and also creating the visual language of data known as Isotype."
+  },
+  {
+    "id": "eduard-bernstein",
+    "name": "Eduard Bernstein",
+    "role": "Socialist theorist",
+    "description": "The father of Marxist revisionism, Bernstein championed a gradual, democratic transition to socialism through reforms, rejecting the inevitability of capitalist collapse and influencing modern social democracy."
+  },
+  {
+    "id": "ernst-niekisch",
+    "name": "Ernst Niekisch",
+    "role": "Political theorist",
+    "description": "The leading figure of German National Bolshevism, Niekisch united radical nationalism and socialist revolution against liberalism and Western influence, seeking to bring Germany closer to the East and Russia."
+  },
+  {
+    "id": "gregor-strasser",
+    "name": "Gregor Strasser",
+    "role": "Politician",
+    "description": "Leader of the anti-capitalist wing of Nazism, Strasser championed a mass nationalist socialism with nationalizations and social reform, before being eliminated by Hitler in the Night of the Long Knives in 1934."
+  },
+  {
+    "id": "mussolini",
+    "name": "Benito Mussolini",
+    "role": "Dictator",
+    "description": "The creator of fascism, Mussolini ruled Italy as a totalitarian dictatorship, fusing nationalism, a corporatist state, a cult of the leader, and expansionist militarism, serving as a model for European authoritarian regimes."
+  },
+  {
+    "id": "hitler",
+    "name": "Adolf Hitler",
+    "role": "Dictator",
+    "description": "Leader of National Socialism and the Third Reich, Hitler imposed a totalitarian, racist, expansionist regime, responsible for unleashing World War II and committing the genocide known as the Holocaust."
+  },
+  {
+    "id": "engelbert-dollfuss",
+    "name": "Engelbert Dollfuss",
+    "role": "Dictator",
+    "description": "An Austrian chancellor, Dollfuss established Austrofascism, an authoritarian corporatist state with a Catholic base that dissolved parliament and repressed socialists and Nazis until his assassination by Nazi agents."
+  },
+  {
+    "id": "jose-antonio-primo-de-rivera",
+    "name": "José Antonio Primo de Rivera",
+    "role": "Politician",
+    "description": "Founder of the Spanish Falange, Primo de Rivera created national syndicalism, advocating a corporatist, nationalist, Catholic state against liberalism and Marxism, becoming a martyr of the Francoist right."
+  },
+  {
+    "id": "plinio-salgado",
+    "name": "Plínio Salgado",
+    "role": "Politician",
+    "description": "Leader of Brazilian Integralism, Plínio Salgado created an authoritarian nationalist movement of Christian inspiration, with the motto God, Fatherland and Family and mass aesthetics inspired by the European fascisms of the 1930s."
+  },
+  {
+    "id": "lee-kuan-yew",
+    "name": "Lee Kuan Yew",
+    "role": "Statesman",
+    "description": "Founder of Singapore, Lee Kuan Yew transformed the city-state into a model of authoritarian capitalism, uniting open markets, technocratic meritocracy, strict order, and heavily restricted political freedoms."
+  },
+  {
+    "id": "putin",
+    "name": "Vladimir Putin",
+    "role": "Statesman",
+    "description": "Russia's leader, Putin centralized power in a model of nationalist state capitalism, with strong political control, geopolitical assertion, and confrontation with the liberal West, including the war against Ukraine."
+  },
+  {
+    "id": "richard-spencer",
+    "name": "Richard Spencer",
+    "role": "Activist",
+    "description": "An American activist, Spencer popularized the term alt-right and advocates identitarian white nationalism and an ethnically homogeneous state, supremacist positions widely repudiated inside and outside the United States."
+  },
+  {
+    "id": "steve-bannon",
+    "name": "Steve Bannon",
+    "role": "Political strategist",
+    "description": "An American political strategist, Bannon articulated right-wing national populism, pitting globalist elites against an economic, cultural, and sovereigntist nationalism that influenced populist campaigns around the world."
+  },
+  {
+    "id": "nick-land",
+    "name": "Nick Land",
+    "role": "Philosopher",
+    "description": "A British philosopher, Land founded accelerationism and the so-called Dark Enlightenment, advocating the acceleration of capitalism and technology and criticizing egalitarian democracy in favor of new hierarchies."
+  },
+  {
+    "id": "hendrik-verwoerd",
+    "name": "Hendrik Verwoerd",
+    "role": "Politician",
+    "description": "Known as the architect of apartheid, Verwoerd systematized institutional racial segregation in South Africa, grounding racial nationalism in the legal and territorial separation imposed on the country's Black majority."
+  },
+  {
+    "id": "irving-kristol",
+    "name": "Irving Kristol",
+    "role": "Intellectual",
+    "description": "Considered the godfather of neoconservatism, Kristol united free markets, traditional values, and an interventionist foreign policy, shaping the American intellectual right of the second half of the 20th century."
+  },
+  {
+    "id": "louis-xiv",
+    "name": "Louis XIV",
+    "role": "Monarch",
+    "description": "France's Sun King, Louis XIV personified monarchical absolutism by divine right, centralizing power, subjecting the nobility to the court of Versailles, and expanding the cultural and military prestige of the French kingdom."
+  },
+  {
+    "id": "salazar",
+    "name": "António de Oliveira Salazar",
+    "role": "Dictator",
+    "description": "Leader of the Portuguese Estado Novo, Salazar ran a conservative, corporatist dictatorship that united order, Catholic nationalism, and political control without mass mobilization, keeping the country isolated for decades."
+  },
+  {
+    "id": "viktor-orban",
+    "name": "Viktor Orbán",
+    "role": "Statesman",
+    "description": "Hungary's prime minister, Orbán governs under so-called illiberal democracy, combining nationalism, Christian conservatism, sovereignty vis-à-vis the European Union, and strong control over media, courts, and institutions."
+  },
+  {
+    "id": "benjamin-disraeli",
+    "name": "Benjamin Disraeli",
+    "role": "Statesman",
+    "description": "A British statesman, Disraeli formulated one-nation paternalistic conservatism, reconciling tradition, monarchy, and social reforms to integrate the working classes and strengthen the country's cohesion."
+  },
+  {
+    "id": "khomeini",
+    "name": "Ruhollah Khomeini",
+    "role": "Religious leader",
+    "description": "Leader of the 1979 Iranian Revolution, Khomeini created the Islamic republic and instituted the rule of the religious jurist, fusing theocracy and state and transforming Iran into a revolutionary power of Shia Islam."
+  },
+  {
+    "id": "jabotinsky",
+    "name": "Ze'ev Jabotinsky",
+    "role": "Politician",
+    "description": "Leader of Revisionist Zionism, Jabotinsky championed an assertive Jewish nationalism, an independent military force, and a Jewish-majority state, becoming an inspiration for the contemporary Israeli right."
+  },
+  {
+    "id": "ahad-haam",
+    "name": "Ahad Ha'am",
+    "role": "Thinker",
+    "description": "A Zionist thinker, Ahad Ha'am formulated cultural Zionism, proposing that Jewish national renewal should come first through culture, language, and ethics rather than immediate political and territorial sovereignty."
+  },
+  {
+    "id": "curtis-yarvin",
+    "name": "Curtis Yarvin",
+    "role": "Political theorist",
+    "description": "A political theorist known as Mencius Moldbug, Yarvin formulated neoreaction, proposing to replace democracy with a state run like a company by a sovereign-executive, on the model of neocameralism."
+  },
+  {
+    "id": "frederico-ii-da-prussia",
+    "name": "Frederick the Great",
+    "role": "Monarch",
+    "description": "King of Prussia, Frederick the Great made the kingdom a military and administrative power, embodying enlightened despotism and the cameralist state of disciplined bureaucracy, centralized finances, and tolerance."
+  },
+  {
+    "id": "joseph-de-maistre",
+    "name": "Joseph de Maistre",
+    "role": "Philosopher",
+    "description": "The leading reactionary theorist, Maistre opposed the French Revolution by defending monarchy and the authority of tradition and religion against Enlightenment rationalism, influencing European conservative thought."
+  },
+  {
+    "id": "aleksandr-dugin",
+    "name": "Aleksandr Dugin",
+    "role": "Philosopher",
+    "description": "A Russian philosopher, Dugin formulated the Fourth Political Theory and Eurasianism, proposing a multipolar world founded on civilizations and tradition against liberalism and globalism, influencing the nationalist right."
+  },
+  {
+    "id": "roman-dmowski",
+    "name": "Roman Dmowski",
+    "role": "Politician",
+    "description": "Founder of Polish National Democracy, Dmowski united ethnic nationalism, Catholicism, and sovereignty in a project of a homogeneous nation-state, becoming a central figure of modern Polish nationalism."
+  },
+  {
+    "id": "leon-kass",
+    "name": "Leon Kass",
+    "role": "Bioethicist",
+    "description": "An American bioethicist, Kass is the leading voice of bioconservatism, warning against genetic manipulation and human enhancement in the name of dignity, human nature, and the ethical limits of science."
+  },
+  {
+    "id": "konrad-adenauer",
+    "name": "Konrad Adenauer",
+    "role": "Statesman",
+    "description": "West Germany's first chancellor, Adenauer consolidated Christian democracy, the social market economy, and the country's integration into the West, rebuilding the nation after the war and anchoring it in Europe."
+  },
+  {
+    "id": "william-f-buckley",
+    "name": "William F. Buckley Jr.",
+    "role": "Intellectual",
+    "description": "An American intellectual, Buckley articulated modern conservatism in the United States, uniting free markets, anti-communism, and traditional Christian values into a coherent, influential political and cultural force."
+  },
+  {
+    "id": "cicero",
+    "name": "Cicero",
+    "role": "Statesman and philosopher",
+    "description": "A Roman statesman and philosopher, Cicero defended the republic, mixed government, and the rule of law, bequeathing the tradition of civic republicanism and natural law that influenced Western political thought."
+  },
+  {
+    "id": "montesquieu",
+    "name": "Montesquieu",
+    "role": "Philosopher",
+    "description": "A French Enlightenment philosopher, Montesquieu formulated the separation of powers and institutional moderation, defending constitutional monarchy and government limited by laws as a defense against despotism."
+  },
+  {
+    "id": "milton-friedman",
+    "name": "Milton Friedman",
+    "role": "Economist",
+    "description": "An American economist, Friedman led neoliberalism and monetarism, defending free markets, monetary stability, and a smaller state as essential conditions of freedom and prosperity."
+  },
+  {
+    "id": "ludwig-erhard",
+    "name": "Ludwig Erhard",
+    "role": "Economist and statesman",
+    "description": "The father of the German economic miracle, Erhard implemented the ordoliberal social market economy, uniting regulated free competition, monetary stability, and welfare, later governing as Germany's chancellor."
+  },
+  {
+    "id": "gk-chesterton",
+    "name": "G. K. Chesterton",
+    "role": "Writer",
+    "description": "A British writer, Chesterton popularized distributism, defending the wide distribution of property and small-scale production against monopoly capitalism and state socialism, with strong Christian inspiration."
+  },
+  {
+    "id": "henri-de-saint-simon",
+    "name": "Henri de Saint-Simon",
+    "role": "Thinker",
+    "description": "A precursor of technocracy, Saint-Simon proposed an industrial society governed by scientists, engineers, and producers instead of politicians and aristocrats, influencing later socialism and positivism."
+  },
+  {
+    "id": "michael-sandel",
+    "name": "Michael Sandel",
+    "role": "Political philosopher",
+    "description": "An American political philosopher, Sandel is one of the leading exponents of communitarianism, criticizing procedural liberalism and holding that justice, virtue, and the common good arise from community bonds."
+  },
+  {
+    "id": "adrian-wooldridge",
+    "name": "Adrian Wooldridge",
+    "role": "Journalist and essayist",
+    "description": "A British journalist and essayist, Wooldridge is one of the leading defenders of meritocracy, arguing that selection by merit and ability drove the modern world and needs to be renewed in our time."
+  },
+  {
+    "id": "john-stuart-mill",
+    "name": "John Stuart Mill",
+    "role": "Philosopher",
+    "description": "A British liberal philosopher, Mill championed individual liberty, tolerance, and utilitarianism, holding that the state may limit freedom only to prevent harm to others — the foundation of modern liberalism."
+  },
+  {
+    "id": "john-locke",
+    "name": "John Locke",
+    "role": "Philosopher",
+    "description": "The father of classical liberalism, Locke grounded the natural rights to life, liberty, and property and government limited by consent and the separation of powers, inspiring the modern liberal revolutions."
+  },
+  {
+    "id": "robert-nozick",
+    "name": "Robert Nozick",
+    "role": "Philosopher",
+    "description": "An American philosopher, Nozick defended libertarianism and the minimal state in Anarchy, State, and Utopia, arguing that only the protection of individual rights justifies the existence of state power."
+  },
+  {
+    "id": "al-gore",
+    "name": "Al Gore",
+    "role": "Politician",
+    "description": "A former US vice president, Al Gore became a reference of liberal environmentalism, advocating global climate action and market solutions to the ecological crisis, which earned him the Nobel Peace Prize."
+  },
+  {
+    "id": "beveridge",
+    "name": "William Beveridge",
+    "role": "Economist",
+    "description": "A British economist, Beveridge designed the United Kingdom's welfare state, proposing universal social security against poverty, disease, and unemployment — the basis of social liberalism and the public health system."
+  },
+  {
+    "id": "thomas-paine",
+    "name": "Thomas Paine",
+    "role": "Thinker",
+    "description": "A pamphleteer of the American and French revolutions, Paine defended the rights of man, the republic, and radical social reforms in popular language, spreading democratic ideals among the masses of his time."
+  },
+  {
+    "id": "edmund-burke",
+    "name": "Edmund Burke",
+    "role": "Statesman and philosopher",
+    "description": "The father of modern conservatism, Burke defended prudent reform, tradition, and institutions against abstract rationalism and revolutionary rupture, harshly criticizing the excesses of the French Revolution."
+  },
+  {
+    "id": "hayek",
+    "name": "Friedrich Hayek",
+    "role": "Economist",
+    "description": "An Austrian economist, Hayek championed the free market and spontaneous order, warning that central planning leads to serfdom and suppresses dispersed knowledge, becoming a reference of 20th-century liberalism."
+  },
+  {
+    "id": "gustave-de-molinari",
+    "name": "Gustave de Molinari",
+    "role": "Political economist",
+    "description": "A Belgian economist, Molinari pioneered the idea of competitive government, proposing free competition in the provision of security and governance — the intellectual root of anarcho-capitalism and voluntary choice of jurisdictions."
+  },
+  {
+    "id": "henry-george",
+    "name": "Henry George",
+    "role": "Economist",
+    "description": "An American economist, Henry George proposed the single tax on land value, arguing that land rent — not labor or capital — should fund society and reduce inequality."
+  },
+  {
+    "id": "charles-fourier",
+    "name": "Charles Fourier",
+    "role": "Socialist philosopher",
+    "description": "A French utopian socialist, Fourier linked social progress to the emancipation of women and criticized the patriarchal family, moral repression, and social hierarchies, imagining ideal cooperative communities."
+  },
+  {
+    "id": "nicolas-de-condorcet",
+    "name": "Nicolas de Condorcet",
+    "role": "Enlightenment philosopher",
+    "description": "A French Enlightenment philosopher, Condorcet championed civil rights, legal equality, and women's suffrage, linking political liberalism to universalist reforms and confidence in the progress of human reason."
+  },
+  {
+    "id": "john-rawls",
+    "name": "John Rawls",
+    "role": "Philosopher",
+    "description": "An American philosopher, Rawls reformulated liberalism with the idea of justice as fairness, defending equal liberties and inequalities acceptable only if they benefit the least advantaged in society."
+  },
+  {
+    "id": "aldo-leopold",
+    "name": "Aldo Leopold",
+    "role": "Conservationist",
+    "description": "An American conservationist, Leopold formulated the land ethic and defended a responsible relationship between human communities and soils, waters, and ecosystems, inspiring modern environmentalism."
+  },
+  {
+    "id": "theodore-roosevelt",
+    "name": "Theodore Roosevelt",
+    "role": "Statesman",
+    "description": "A US president, Theodore Roosevelt led the Progressive Era, fighting monopolies, regulating the market, and creating policies of environmental conservation and protection for consumers and workers."
+  },
+  {
+    "id": "srnicek",
+    "name": "Nick Srnicek",
+    "role": "Political theorist",
+    "description": "A Canadian political theorist, Srnicek advocates left accelerationism, proposing to use technology, automation, and basic income to move beyond work and build a post-capitalist future of shared abundance."
+  },
+  {
+    "id": "ray-kurzweil",
+    "name": "Ray Kurzweil",
+    "role": "Inventor and futurist",
+    "description": "An American inventor and futurist, Kurzweil popularized transhumanism and the Singularity, predicting the fusion of humans and machines and the radical expansion of human capacities through technology."
+  },
+  {
+    "id": "getulio-vargas",
+    "name": "Getúlio Vargas",
+    "role": "Statesman",
+    "description": "A Brazilian statesman, Vargas shaped modern Brazil with developmentalist nationalism, state-directed industrialization, and labor legislation, founding Brazilian labourism and marking decades of national politics."
+  },
+  {
+    "id": "ernest-renan",
+    "name": "Ernest Renan",
+    "role": "Philosopher",
+    "description": "A French philosopher, Renan defined the nation as a daily plebiscite, founded on the will to live together and shared memory, offering the intellectual basis of civic nationalism as opposed to ethnic nationalism."
+  },
+  {
+    "id": "evo-morales",
+    "name": "Evo Morales",
+    "role": "Statesman",
+    "description": "Bolivia's first indigenous president, Evo Morales led indigenism and the plurinational state, nationalizing resources and expanding the rights of native peoples within a left-wing project."
+  },
+  {
+    "id": "bismarck",
+    "name": "Otto von Bismarck",
+    "role": "Statesman",
+    "description": "The unifier of Germany, Bismarck created the first modern welfare state, using conservative social reforms to contain socialism and strengthen order, and steered European diplomacy for decades."
+  },
+  {
+    "id": "bakunin",
+    "name": "Mikhail Bakunin",
+    "role": "Revolutionary",
+    "description": "A Russian revolutionary, Bakunin was the great theorist of collectivist anarchism, opposing the state and authoritarian Marxism and defending spontaneous social revolution and the free federation of communities and workers."
+  },
+  {
+    "id": "kropotkin",
+    "name": "Peter Kropotkin",
+    "role": "Anarchist theorist",
+    "description": "A Russian anarchist theorist, Kropotkin developed anarcho-communism and the idea of mutual aid as a factor of evolution, defending a stateless society based on cooperation, science, and free association."
+  },
+  {
+    "id": "durruti",
+    "name": "Buenaventura Durruti",
+    "role": "Revolutionary",
+    "description": "A Spanish anarcho-syndicalist revolutionary, Durruti was a central figure of the Spanish Revolution, leading workers' militias and collectivization during the civil war, becoming a symbol of militant anarchism."
+  },
+  {
+    "id": "sorel",
+    "name": "Georges Sorel",
+    "role": "Theorist",
+    "description": "A French theorist, Sorel developed revolutionary syndicalism and the idea of the myth of the general strike, exalting direct action and proletarian violence — an influence that marked both the left and fascism."
+  },
+  {
+    "id": "chomsky",
+    "name": "Noam Chomsky",
+    "role": "Linguist and thinker",
+    "description": "An American linguist and thinker, Chomsky revolutionized linguistics and became an influential voice of libertarian socialism, criticizing corporate power, the media, and US imperialism in the world."
+  },
+  {
+    "id": "gramsci",
+    "name": "Antonio Gramsci",
+    "role": "Marxist theorist",
+    "description": "An Italian Marxist theorist, Gramsci developed the concept of cultural hegemony, showing how ruling classes govern through consent, and championed cultural struggle as the path to social transformation."
+  },
+  {
+    "id": "tito",
+    "name": "Josip Broz Tito",
+    "role": "Statesman",
+    "description": "Leader of socialist Yugoslavia, Tito unified diverse peoples under a single party, adopted workers' self-management, and broke with Moscow, leading the Non-Aligned Movement during the Cold War."
+  },
+  {
+    "id": "oskar-lange",
+    "name": "Oskar Lange",
+    "role": "Economist",
+    "description": "A Polish economist, Lange championed market socialism, arguing that planning could simulate prices and allocate resources efficiently, in the famous socialist calculation debate."
+  },
+  {
+    "id": "proudhon",
+    "name": "Pierre-Joseph Proudhon",
+    "role": "Philosopher",
+    "description": "A French philosopher, Proudhon was the first to declare himself an anarchist and formulated mutualism, defending fair exchange, free credit, and use-based property, with the famous phrase that property is theft."
+  },
+  {
+    "id": "ocalan",
+    "name": "Abdullah Öcalan",
+    "role": "Political leader",
+    "description": "A Kurdish political leader, Öcalan abandoned revolutionary Marxism and formulated democratic confederalism, inspiring the autonomous experiment of Rojava, based on self-management, ecology, and gender equality."
+  },
+  {
+    "id": "benjamin-tucker",
+    "name": "Benjamin Tucker",
+    "role": "Anarchist",
+    "description": "An American individualist anarchist, Tucker championed a free market without state or monopolies, uniting radical individual freedom and mutualism, and translated the great libertarian thinkers of his time."
+  },
+  {
+    "id": "bookchin",
+    "name": "Murray Bookchin",
+    "role": "Thinker",
+    "description": "An American thinker, Bookchin created social ecology and communalism, defending autonomous municipalities, direct democracy, and harmony with nature, influencing radical environmentalism and the Rojava experiment."
+  },
+  {
+    "id": "keir-hardie",
+    "name": "Keir Hardie",
+    "role": "Politician",
+    "description": "A Scottish politician, Keir Hardie was a founder of the British Labour Party, defending workers' rights, suffrage, and social reforms within democracy, marking the birth of modern labourism."
+  },
+  {
+    "id": "maritain",
+    "name": "Jacques Maritain",
+    "role": "Philosopher",
+    "description": "A French Catholic philosopher, Maritain renewed Christian thought and influenced Christian democracy, defending human rights, integral humanism, and the compatibility of faith, reason, and democratic freedom."
+  },
+  {
+    "id": "buber",
+    "name": "Martin Buber",
+    "role": "Philosopher",
+    "description": "An Austrian Jewish philosopher, Buber developed the philosophy of dialogue, summed up in the I–Thou relationship, and championed a communitarian, humanist socialism, influencing religious thought and cultural Zionism."
+  },
+  {
+    "id": "olof-palme",
+    "name": "Olof Palme",
+    "role": "Statesman",
+    "description": "A Swedish statesman, Olof Palme was one of the greatest names of social democracy, expanding the welfare state and championing disarmament, international solidarity, and the rights of poorer countries."
+  },
+  {
+    "id": "karl-marx",
+    "name": "Karl Marx",
+    "role": "Philosopher and economist",
+    "description": "A German philosopher and economist, Marx created historical materialism and the critique of capitalism, analyzing class struggle and the exploitation of labor, and became the greatest reference of socialism and communism."
+  },
+  {
+    "id": "rosselli",
+    "name": "Carlo Rosselli",
+    "role": "Thinker",
+    "description": "An Italian antifascist thinker, Rosselli formulated liberal socialism, seeking to unite liberalism's ideals of freedom with socialism's social justice, and organized the resistance against Mussolini's regime."
+  },
+  {
+    "id": "orwell",
+    "name": "George Orwell",
+    "role": "Writer",
+    "description": "A British writer, Orwell was a democratic socialist and fierce critic of totalitarianism, denouncing in works such as 1984 and Animal Farm authoritarianism, the manipulation of truth, and the oppression of power."
+  },
+  {
+    "id": "andre-gorz",
+    "name": "André Gorz",
+    "role": "Philosopher",
+    "description": "An Austro-French philosopher, Gorz was a pioneer of political ecology and post-Marxism, criticizing productivism and wage labor and defending shorter working hours and basic income in a freer society."
+  },
+  {
+    "id": "arne-naess",
+    "name": "Arne Næss",
+    "role": "Philosopher",
+    "description": "A Norwegian philosopher, Næss founded deep ecology, defending the intrinsic value of all life and a radical change of values to reduce human impact and restore harmony between people and nature."
+  },
+  {
+    "id": "zapata",
+    "name": "Emiliano Zapata",
+    "role": "Revolutionary",
+    "description": "A Mexican revolutionary, Zapata led peasants in the Mexican Revolution under the motto Land and Liberty, defending agrarian reform and the autonomy of rural communities against large landowners and the state."
+  },
+  {
+    "id": "emile-armand",
+    "name": "Émile Armand",
+    "role": "Individualist anarchist",
+    "description": "A French individualist anarchist, Émile Armand championed the absolute sovereignty of the individual, a life free of moral and state impositions, and free association, influencing egoist anarchism and the counterculture."
+  },
+  {
+    "id": "daniel-guerin",
+    "name": "Daniel Guérin",
+    "role": "Libertarian socialist",
+    "description": "A French libertarian socialist, Guérin sought to unite Marxism and anarchism, defending workers' self-management and sexual liberation, and was an important historian of revolutions and the labor movement."
+  },
+  {
+    "id": "tolstoy",
+    "name": "Leo Tolstoy",
+    "role": "Writer",
+    "description": "A Russian writer, Tolstoy united his great literary works with a pacifist Christian anarchism, preaching nonviolence, simplicity, and the refusal of the state — ideas that influenced Gandhi and later movements."
+  },
+  {
+    "id": "thoreau",
+    "name": "Henry David Thoreau",
+    "role": "Writer",
+    "description": "An American writer, Thoreau championed civil disobedience and simple living in contact with nature, upholding the right to resist unjust laws — a lasting influence on pacifists and environmentalists."
+  },
+  {
+    "id": "john-zerzan",
+    "name": "John Zerzan",
+    "role": "Philosopher",
+    "description": "An American philosopher, Zerzan is one of the leading voices of anarcho-primitivism, criticizing civilization, technology, and domestication as sources of oppression and defending a return to ancestral ways of life."
+  },
+  {
+    "id": "max-stirner",
+    "name": "Max Stirner",
+    "role": "Philosopher",
+    "description": "A German philosopher, Stirner is the great reference of egoist anarchism, rejecting state, morality, and institutions as oppressive abstractions and placing the sovereign individual and their interests at the center of everything."
+  },
+  {
+    "id": "rothbard",
+    "name": "Murray Rothbard",
+    "role": "Economist",
+    "description": "An American economist, Rothbard was the main formulator of anarcho-capitalism, defending the abolition of the state, absolute private property, and the provision of security and justice by the free market."
+  },
+  {
+    "id": "bastiat",
+    "name": "Frédéric Bastiat",
+    "role": "Economist",
+    "description": "A French economist, Bastiat defended free trade and limited government with clarity and irony, denouncing protectionism and what is not seen in economic policies, becoming a classic of liberal thought."
+  },
+  {
+    "id": "mises",
+    "name": "Ludwig von Mises",
+    "role": "Economist",
+    "description": "An Austrian economist, Mises was a great defender of the free market and demonstrated the impossibility of rational economic calculation under socialism, becoming a pillar of the Austrian School and an inspiration for modern libertarianism."
+  },
+  {
+    "id": "ron-paul",
+    "name": "Ron Paul",
+    "role": "Politician",
+    "description": "An American politician, Ron Paul popularized libertarianism in the United States, defending the minimal state, individual freedom, sound money, and a non-interventionist foreign policy against the establishment."
+  },
+  {
+    "id": "hoppe",
+    "name": "Hans-Hermann Hoppe",
+    "role": "Economist",
+    "description": "A German economist, Hoppe radicalized anarcho-capitalism, defending absolute private property and criticizing democracy as a system that erodes freedom, proposing social orders based on voluntary contract."
+  },
+  {
+    "id": "adam-smith",
+    "name": "Adam Smith",
+    "role": "Economist",
+    "description": "A Scottish economist, Adam Smith founded modern economics in The Wealth of Nations, showing how the market and the division of labor generate prosperity and how the invisible hand coordinates individual interests."
+  },
+  {
+    "id": "leonard-peikoff",
+    "name": "Leonard Peikoff",
+    "role": "Objectivist philosopher",
+    "description": "An Objectivist philosopher, Peikoff was Ayn Rand's principal intellectual heir, systematizing Objectivism and defending reason, individualism, and laissez-faire capitalism as the foundations of life and morality."
+  },
+  {
+    "id": "elon-musk",
+    "name": "Elon Musk",
+    "role": "Entrepreneur",
+    "description": "An entrepreneur and billionaire, Musk leads technology companies such as Tesla and SpaceX and champions technological accelerationism, the colonization of Mars, and libertarian ideas, influencing the global public debate."
+  },
+  {
+    "id": "scruton",
+    "name": "Roger Scruton",
+    "role": "Philosopher",
+    "description": "A British philosopher, Scruton was one of the great contemporary conservative thinkers, defending tradition, beauty, nation, and institutions as sources of meaning and order against relativism and progressivism."
+  },
+  {
+    "id": "friedrich-list",
+    "name": "Friedrich List",
+    "role": "Economist",
+    "description": "A German economist, List championed economic nationalism and the protection of infant industry, arguing that lagging countries need tariffs and a strong state to develop and catch up with rich nations."
+  },
+  {
+    "id": "konkin",
+    "name": "Samuel Edward Konkin III",
+    "role": "Libertarian theorist",
+    "description": "An American libertarian theorist, Konkin created agorism, advocating the replacement of the state through free, parallel markets and counter-economics, using informal activity to erode state power."
+  },
+  {
+    "id": "phil-zimmermann",
+    "name": "Phil Zimmermann",
+    "role": "Cryptographer",
+    "description": "An American cryptographer, Zimmermann created PGP, making strong cryptography accessible to everyone and defending digital privacy as a right, becoming a reference for crypto-anarchism and civil liberties."
+  },
+  {
+    "id": "max-more",
+    "name": "Max More",
+    "role": "Philosopher",
+    "description": "A British philosopher, Max More is one of the founders of modern transhumanism and extropianism, defending the use of technology to overcome human limits, extend life, and expand individual freedom."
+  },
+  {
+    "id": "javier-milei",
+    "name": "Javier Milei",
+    "role": "Statesman and economist",
+    "description": "An Argentine statesman and economist, Milei champions anarcho-capitalism and radical liberalism, proposing to drastically cut the state, dollarize the economy, and fight inflation, reaching Argentina's presidency."
+  },
+  {
+    "id": "otto-von-habsburg",
+    "name": "Otto von Habsburg",
+    "role": "Politician",
+    "description": "An Austrian politician and heir of the Habsburgs, Otto was a defender of constitutional monarchy, European federalism, and continental integration, serving for decades as a European parliamentarian and critic of totalitarianism."
+  },
+  {
+    "id": "goldwater",
+    "name": "Barry Goldwater",
+    "role": "Politician",
+    "description": "An American politician, Goldwater was a decisive figure of the modern right in the United States, defending free markets, anti-communism, and limited government, and paving the way for Reaganite conservatism."
+  },
+  {
+    "id": "ezra-heywood",
+    "name": "Ezra Heywood",
+    "role": "Individualist anarchist",
+    "description": "An American individualist anarchist, Heywood championed a free market without monopolies, the abolition of the state, and the emancipation of women, uniting radical economic freedom with the fight for sexual and civil liberty."
+  },
+  {
+    "id": "randolph-bourne",
+    "name": "Randolph Bourne",
+    "role": "Essayist",
+    "description": "An American essayist, Bourne sharply criticized militarism and nationalism, coining the idea that war is the health of the state, and championed a cultural cosmopolitanism open to diversity and freedom."
+  },
+  {
+    "id": "peter-maurin",
+    "name": "Peter Maurin",
+    "role": "Christian activist",
+    "description": "A French Christian activist, Maurin co-founded the Catholic Worker Movement, defending social justice, voluntary poverty, and communities of work and mutual aid inspired by the social doctrine of the Church."
+  },
+  {
+    "id": "lysander-spooner",
+    "name": "Lysander Spooner",
+    "role": "Jurist",
+    "description": "An American jurist and anarchist, Spooner championed natural law and the free market, questioned the legitimacy of the Constitution and the state, and challenged public monopolies, influencing libertarianism."
+  },
+  {
+    "id": "macron",
+    "name": "Emmanuel Macron",
+    "role": "Statesman",
+    "description": "A French statesman, Macron reached France's presidency as a centrist, liberal reformer, defending markets, European integration, and economic reforms, seeking to overcome the traditional divide between left and right."
+  },
+  {
+    "id": "comte",
+    "name": "Auguste Comte",
+    "role": "Philosopher",
+    "description": "A French philosopher, Comte founded positivism and sociology, holding that science should organize society toward order and progress, with strong influence on republican and technocratic thought."
+  },
+  {
+    "id": "masaryk",
+    "name": "Tomáš Garrigue Masaryk",
+    "role": "Statesman and philosopher",
+    "description": "A Czech statesman and philosopher, Masaryk was the founder and first president of Czechoslovakia, defending humanist democracy, minority rights, and ethical values as the basis of national political life."
+  },
+  {
+    "id": "leonardo-boff",
+    "name": "Leonardo Boff",
+    "role": "Theologian",
+    "description": "A Brazilian theologian, Boff is one of the leading names of Liberation Theology, uniting Christian faith with the struggle for social justice and the defense of the poor and the environment, with strong criticism of capitalism and inequality."
+  },
+  {
+    "id": "park-chung-hee",
+    "name": "Park Chung-hee",
+    "role": "Dictator",
+    "description": "A South Korean dictator, Park Chung-hee led an authoritarian developmentalist regime that rapidly industrialized South Korea through state planning and discipline, turning the country into an economic power."
+  },
+  {
+    "id": "kissinger",
+    "name": "Henry Kissinger",
+    "role": "Diplomat",
+    "description": "An American diplomat, Kissinger was a master of realpolitik, shaping US foreign policy in the Cold War with détente, the opening to China, and controversial interventions in the name of the national interest."
+  },
+  {
+    "id": "paul-romer",
+    "name": "Paul Romer",
+    "role": "Economist",
+    "description": "An American economist, Romer is a reference of endogenous growth theory, showing how ideas, innovation, and knowledge drive development, and proposed charter cities as an institutional reform."
+  },
+  {
+    "id": "peter-thiel",
+    "name": "Peter Thiel",
+    "role": "Entrepreneur",
+    "description": "An American entrepreneur and investor, Thiel is an influential figure of tech capitalism and champions libertarian and neoreactionary ideas, skeptical of democracy and enthusiastic about disruptive innovation."
+  },
+  {
+    "id": "allende",
+    "name": "Salvador Allende",
+    "role": "Statesman",
+    "description": "A Chilean statesman, Allende was the first democratically elected Marxist president in Latin America, seeking to build socialism by peaceful means until he was overthrown by Pinochet's military coup in 1973."
+  },
+  {
+    "id": "marinetti",
+    "name": "Filippo Tommaso Marinetti",
+    "role": "Poet",
+    "description": "An Italian poet, Marinetti founded futurism, exalting speed, the machine, war, and the break with the past, and drew close to fascism, uniting artistic avant-garde and revolutionary nationalism."
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "role": "Politician",
+    "description": "An entrepreneur and US president, Trump leads the nationalist populism of the MAGA movement, with tariff protectionism, restrictive immigration policy, and anti-establishment rhetoric that redefined the right."
+  },
+  {
+    "id": "xi-jinping",
+    "name": "Xi Jinping",
+    "role": "Statesman",
+    "description": "China's leader, Xi Jinping concentrated power like no successor of Mao, reinforcing the Communist Party's control, nationalism, and the country's global projection through technology and economic influence."
+  },
+  {
+    "id": "narendra-modi",
+    "name": "Narendra Modi",
+    "role": "Statesman",
+    "description": "India's prime minister, Modi leads a conservative Hindu nationalism, combining market economic reforms, strong popular appeal, and the assertion of the religious and cultural identity of the country's majority."
+  },
+  {
+    "id": "lula-da-silva",
+    "name": "Lula da Silva",
+    "role": "Statesman",
+    "description": "A Brazilian statesman, Lula rose from union activism to Brazil's presidency, leading the left with social programs, anti-poverty policies, and a development project with a strong state presence."
+  },
+  {
+    "id": "nayib-bukele",
+    "name": "Nayib Bukele",
+    "role": "Statesman",
+    "description": "El Salvador's president, Bukele gained prominence for his tough security policy against gangs and the adoption of bitcoin, uniting strong popular support, digital communication, and growing concentration of power."
+  },
+  {
+    "id": "volodymyr-zelensky",
+    "name": "Volodymyr Zelensky",
+    "role": "Statesman",
+    "description": "Ukraine's president, Zelensky went from actor to statesman and became a symbol of national resistance to the Russian invasion, defending democracy, sovereignty, and his country's rapprochement with the West."
+  },
+  {
+    "id": "bernie-sanders",
+    "name": "Bernie Sanders",
+    "role": "Politician",
+    "description": "An American politician, Bernie Sanders is the leading voice of democratic socialism in the United States, defending universal public healthcare, labor rights, and the fight against inequality and the power of large corporations."
+  },
+  {
+    "id": "mohammed-bin-salman",
+    "name": "Mohammed bin Salman",
+    "role": "Statesman",
+    "description": "Saudi Arabia's crown prince, Mohammed bin Salman concentrates power and conducts a controlled economic and social modernization, diversifying the oil economy while maintaining strong political repression."
+  },
+  {
+    "id": "mahatma-gandhi",
+    "name": "Mahatma Gandhi",
+    "role": "Political leader",
+    "description": "Leader of India's independence, Gandhi developed nonviolent resistance and civil disobedience against British rule, becoming a world symbol of the peaceful struggle for freedom and social justice."
+  },
+  {
+    "id": "br-ambedkar",
+    "name": "B. R. Ambedkar",
+    "role": "Jurist and reformer",
+    "description": "An Indian jurist and reformer, Ambedkar was the principal architect of India's Constitution and leader of the Dalits, fighting the caste system and defending rights, equality, and social justice for the oppressed."
+  },
+  {
+    "id": "frantz-fanon",
+    "name": "Frantz Fanon",
+    "role": "Psychiatrist and theorist",
+    "description": "A Martinican psychiatrist and theorist, Fanon was a great anti-colonial thinker, analyzing the psychological effects of racism and colonization and defending the liberation of oppressed peoples from imperial rule."
+  },
+  {
+    "id": "thomas-sankara",
+    "name": "Thomas Sankara",
+    "role": "Revolutionary",
+    "description": "A revolutionary from Burkina Faso, Sankara led a Marxist, pan-Africanist government that promoted self-sufficiency, women's rights, and radical social reforms, becoming an anti-imperialist icon of Africa."
+  },
+  {
+    "id": "nelson-mandela",
+    "name": "Nelson Mandela",
+    "role": "Statesman",
+    "description": "A South African statesman, Mandela led the struggle against apartheid, spent decades in prison, and became the country's first Black president, a world symbol of reconciliation, democracy, and human rights."
+  },
+  {
+    "id": "malcolm-x",
+    "name": "Malcolm X",
+    "role": "Activist",
+    "description": "An American activist, Malcolm X was a radical voice of the Black struggle in the United States, defending pride, self-defense, and African-American emancipation, evolving toward a more universalist vision before his assassination."
+  },
+  {
+    "id": "sayyid-qutb",
+    "name": "Sayyid Qutb",
+    "role": "Islamist theorist",
+    "description": "An Egyptian theorist, Qutb was one of the main ideologues of modern Islamism, advocating a return to Islamic law and the rejection of Western influence, becoming a reference for fundamentalist movements."
+  },
+  {
+    "id": "carl-schmitt",
+    "name": "Carl Schmitt",
+    "role": "Jurist",
+    "description": "A German jurist, Schmitt was an influential and controversial theorist of power, defining politics by the friend–enemy distinction and defending sovereignty and the state of exception — ideas associated with authoritarianism."
+  },
+  {
+    "id": "confucio",
+    "name": "Confucius",
+    "role": "Philosopher",
+    "description": "An ancient Chinese philosopher, Confucius created an ethic based on virtue, social harmony, and respect for hierarchies and traditions — a central influence on China's culture, morality, and politics for millennia."
+  },
+  {
+    "id": "sun-yat-sen",
+    "name": "Sun Yat-sen",
+    "role": "Statesman",
+    "description": "A Chinese statesman, Sun Yat-sen led the revolution that overthrew the empire and founded the Republic of China, formulating the Three Principles of the People, uniting nationalism, democracy, and the people's welfare."
+  },
+  {
+    "id": "theodor-herzl",
+    "name": "Theodor Herzl",
+    "role": "Journalist",
+    "description": "An Austro-Hungarian journalist, Herzl was the founder of modern political Zionism, advocating the creation of a Jewish national state as a response to antisemitism, becoming a central figure in Israel's history."
+  },
+  {
+    "id": "hugo-chavez",
+    "name": "Hugo Chávez",
+    "role": "Statesman",
+    "description": "A Venezuelan statesman, Chávez led 21st-century socialism, nationalizing sectors, funding social programs with oil, and concentrating power in a Bolivarian project of strong popular and nationalist appeal."
+  },
+  {
+    "id": "simon-bolivar",
+    "name": "Simón Bolívar",
+    "role": "Military leader",
+    "description": "A South American military leader, Bolívar was the great liberator who led the independence of several countries of Spanish America, dreaming of uniting the continent under strong, centralized republics."
+  },
+  {
+    "id": "julius-evola",
+    "name": "Julius Evola",
+    "role": "Philosopher",
+    "description": "An Italian philosopher, Evola was a traditionalist theorist of the radical right, defending hierarchy, spirituality, and the refusal of the modern world, becoming a reference of 20th-century reactionary and esoteric thought."
+  },
+  {
+    "id": "slavoj-zizek",
+    "name": "Slavoj Žižek",
+    "role": "Philosopher",
+    "description": "A Slovenian philosopher, Žižek unites Marxism, psychoanalysis, and cultural criticism to analyze ideology and contemporary capitalism, becoming one of the most popular and provocative left-wing thinkers of our time."
+  },
+  {
+    "id": "isaiah-berlin",
+    "name": "Isaiah Berlin",
+    "role": "Philosopher",
+    "description": "A British philosopher, Berlin distinguished negative from positive liberty and championed value pluralism, warning against totalitarian utopias and becoming a reference of 20th-century liberal thought."
+  },
+  {
+    "id": "karl-liebknecht",
+    "name": "Karl Liebknecht",
+    "role": "Revolutionary",
+    "description": "A German revolutionary, Liebknecht was a socialist leader and co-founder of the Spartacus League, opposing World War I and leading the failed 1919 uprising, being murdered alongside Rosa Luxemburg."
+  },
+  {
+    "id": "nathaniel-branden",
+    "name": "Nathaniel Branden",
+    "role": "Objectivist psychologist",
+    "description": "An Objectivist psychologist, Branden was Ayn Rand's collaborator and a pioneer of the psychology of self-esteem, uniting Objectivism with the appreciation of reason, individualism, and personal responsibility in mental life."
+  },
+  {
+    "id": "jean-paul-sartre",
+    "name": "Jean-Paul Sartre",
+    "role": "Philosopher",
+    "description": "A French philosopher, Sartre was the great name of existentialism, defending the radical freedom and responsibility of the individual, and drew close to Marxism, engaging in the great political causes of his time."
+  },
+  {
+    "id": "jose-bove",
+    "name": "José Bové",
+    "role": "Activist",
+    "description": "A French activist, José Bové became a symbol of the anti-globalization movement and peasant agriculture, defending food sovereignty, ecology, and resistance to multinationals and genetically modified food."
+  },
+  {
+    "id": "matteo-salvini",
+    "name": "Matteo Salvini",
+    "role": "Politician",
+    "description": "An Italian politician, Salvini leads Italy's nationalist right, championing the fight against immigration, national sovereignty, and skepticism toward the European Union, with strong populist and identitarian appeal."
+  },
+  {
+    "id": "jeremy-corbyn",
+    "name": "Jeremy Corbyn",
+    "role": "Politician",
+    "description": "A British politician, Corbyn led the socialist wing of the Labour Party, defending the nationalization of services, the welfare state, anti-imperialism, and policies of strong income redistribution."
+  },
+  {
+    "id": "ciro-gomes",
+    "name": "Ciro Gomes",
+    "role": "Politician",
+    "description": "A Brazilian politician, Ciro Gomes champions a national-developmentalist project, with a strong state role in the economy, industrialization, and national sovereignty, positioning himself as a voice of center-left labourism."
+  },
+  {
+    "id": "jair-bolsonaro",
+    "name": "Jair Bolsonaro",
+    "role": "Politician",
+    "description": "A Brazilian politician, Bolsonaro reached the presidency leading the nationalist, conservative right, with agendas of security, traditional values, economic liberalism, and strong anti-establishment rhetoric."
+  },
+  {
+    "id": "michel-temer",
+    "name": "Michel Temer",
+    "role": "Statesman",
+    "description": "A Brazilian statesman, Temer assumed Brazil's presidency after Dilma's impeachment, conducting a liberal agenda of economic reforms and fiscal adjustment with the support of the political center and the business community."
+  },
+  {
+    "id": "fernando-henrique-cardoso",
+    "name": "Fernando Henrique Cardoso",
+    "role": "Sociologist and statesman",
+    "description": "A Brazilian sociologist and statesman, Fernando Henrique stabilized the economy with the Real Plan and, as president, conducted liberal reforms, privatizations, and the modernization of the state within social democracy."
+  },
+  {
+    "id": "emilio-medici",
+    "name": "Emílio Garrastazu Médici",
+    "role": "Dictator",
+    "description": "A Brazilian general and dictator, Médici governed during the most repressive period of the military dictatorship, uniting heavy censorship and political persecution with the so-called economic miracle of accelerated growth and colossal public works."
+  },
+  {
+    "id": "castelo-branco",
+    "name": "Humberto Castelo Branco",
+    "role": "Military officer and statesman",
+    "description": "A Brazilian military officer and statesman, Castelo Branco was the first president of the military dictatorship begun in 1964, conducting the initial repression and economic reforms of liberal orientation and alignment with the United States."
+  },
+  {
+    "id": "joao-goulart",
+    "name": "João Goulart",
+    "role": "Statesman",
+    "description": "A Brazilian statesman, João Goulart was a reformist left-wing president, a defender of grassroots reforms and workers' rights, deposed by the 1964 military coup that began the dictatorship in Brazil."
+  },
+  {
+    "id": "leonel-brizola",
+    "name": "Leonel Brizola",
+    "role": "Politician",
+    "description": "A Brazilian politician, Brizola was one of the great names of labourism, defending nationalism, social reforms, public education, and workers' rights, with strong activity before and after the dictatorship."
+  },
+  {
+    "id": "francisco-franco",
+    "name": "Francisco Franco",
+    "role": "Dictator",
+    "description": "A Spanish general and dictator, Franco won the Civil War and ruled for decades over a nationalist, Catholic, authoritarian regime, repressing opponents and preserving a corporatist order until his death."
+  },
+  {
+    "id": "barack-obama",
+    "name": "Barack Obama",
+    "role": "Statesman",
+    "description": "An American statesman, Obama symbolized moderate progressive liberalism, expanding public healthcare, civil rights, and multilateral diplomacy within an institutional market economy."
+  },
+  {
+    "id": "benjamin-netanyahu",
+    "name": "Benjamin Netanyahu",
+    "role": "Politician",
+    "description": "An Israeli politician, Netanyahu became a central figure of Israel's nationalist, security-focused right, uniting economic liberalism, conservative Zionism, and a hard line against regional adversaries."
+  },
+  {
+    "id": "augusto-pinochet",
+    "name": "Augusto Pinochet",
+    "role": "Dictator",
+    "description": "A Chilean general and dictator, Pinochet overthrew Allende and established an anti-communist military regime, combining political repression, authoritarian conservatism, and neoliberal reforms."
+  },
+  {
+    "id": "fidel-castro",
+    "name": "Fidel Castro",
+    "role": "Revolutionary",
+    "description": "A Cuban revolutionary, Fidel Castro led the 1959 revolution and built a single-party socialist state, anti-imperialist and nationalist, with a state-run economy and strong repression."
+  },
+  {
+    "id": "jose-mujica",
+    "name": "José Mujica",
+    "role": "Statesman",
+    "description": "A former guerrilla and Uruguayan statesman, Mujica embodied a democratic left, austere and libertarian in customs, defending moderate redistribution, civil rights, and a critique of consumerism."
+  },
+  {
+    "id": "recep-tayyip-erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "Statesman",
+    "description": "A Turkish statesman, Erdoğan shifted Turkey toward Islamic, nationalist conservatism, combining presidential centralization, an assertive foreign policy, and the erosion of democratic checks."
+  },
+  {
+    "id": "bashar-al-assad",
+    "name": "Bashar al-Assad",
+    "role": "Dictator",
+    "description": "A Syrian dictator, Bashar al-Assad preserved the Baathist regime through the military apparatus, repression, and Russian-Iranian support during the civil war, until being overthrown in 2024 and departing into exile."
+  },
+  {
+    "id": "john-f-kennedy",
+    "name": "John F. Kennedy",
+    "role": "Statesman",
+    "description": "An American statesman, Kennedy combined reformist liberalism, Cold War anti-communism, civil rights, and technological modernization, symbolizing the New Frontier agenda."
+  },
+  {
+    "id": "ronald-reagan",
+    "name": "Ronald Reagan",
+    "role": "Statesman",
+    "description": "An American statesman, Reagan led the modern conservative right, championing tax cuts, free markets, traditional values, firm anti-communism, and expanded military power."
+  },
+  {
+    "id": "george-w-bush",
+    "name": "George W. Bush",
+    "role": "Statesman",
+    "description": "An American statesman, George W. Bush united religious conservatism, tax cuts, and a neoconservative foreign policy, marked by the War on Terror and the invasions of Afghanistan and Iraq."
+  },
+  {
+    "id": "joe-biden",
+    "name": "Joe Biden",
+    "role": "Statesman",
+    "description": "An American statesman, Biden represents the liberal Democratic center, combining a moderate welfare state, international alliances, institutional defense, and gradual progressive advances."
+  },
+  {
+    "id": "john-mcafee",
+    "name": "John McAfee",
+    "role": "Entrepreneur and activist",
+    "description": "A programmer and entrepreneur, McAfee became a radical libertarian voice, defending privacy, cryptocurrencies, individual freedom, and deep distrust of the state, taxes, and government surveillance."
+  },
+  {
+    "id": "hal-finney",
+    "name": "Hal Finney",
+    "role": "Cryptographer",
+    "description": "A cryptographer and cypherpunk pioneer, Finney created reusable proof-of-work, received the first Bitcoin transaction, and championed digital privacy, decentralization, and technical freedom."
+  },
+  {
+    "id": "kim-jong-un",
+    "name": "Kim Jong Un",
+    "role": "Dictator",
+    "description": "The North Korean dictator, Kim Jong Un preserved the dynastic Juche regime, with single-party rule, a cult of the leader, nuclear militarization, a state economy, and rigid isolation from the outside world."
+  },
+  {
+    "id": "nick-fuentes",
+    "name": "Nick Fuentes",
+    "role": "Activist",
+    "description": "An American far-right activist, Fuentes promotes white nationalism, political Christianity, social traditionalism, and the rejection of liberalism, immigration, and conventional conservatism."
+  },
+  {
+    "id": "george-washington",
+    "name": "George Washington",
+    "role": "Statesman and military leader",
+    "description": "Founder and first president of the United States, Washington combined military leadership, constitutional republicanism, federalism, and diplomatic prudence, defending a strong republic without permanent entanglement in foreign alliances."
+  },
+  {
+    "id": "benjamin-franklin",
+    "name": "Benjamin Franklin",
+    "role": "Statesman and scientist",
+    "description": "A polymath, diplomat, and founder of the United States, Franklin united republicanism, free thought, commerce, science, innovation, and institutional pragmatism, symbolizing a liberal, cosmopolitan, Enlightenment strand of modern politics."
+  },
+  {
+    "id": "abraham-lincoln",
+    "name": "Abraham Lincoln",
+    "role": "Statesman",
+    "description": "US president during the Civil War, Lincoln preserved the Union, strengthened the federal government, and led the abolition of slavery, combining civic nationalism, democratic republicanism, and progressive moral reform."
+  },
+  {
+    "id": "alex-karp",
+    "name": "Alex Karp",
+    "role": "Entrepreneur",
+    "description": "An American entrepreneur, Karp leads Palantir and symbolizes a security-focused technocracy that brings together state, defense, data, and artificial intelligence, defending strategic technology in the service of Western democracies."
+  },
+  {
+    "id": "james-madison",
+    "name": "James Madison",
+    "role": "Statesman",
+    "description": "A founder of the United States and principal architect of the Constitution, Madison championed federalism, the separation of powers, and individual rights, seeking to balance strong republican government with checks against tyranny."
+  },
+  {
+    "id": "alexander-hamilton",
+    "name": "Alexander Hamilton",
+    "role": "Statesman",
+    "description": "A founder of the United States, Hamilton championed strong federal government, robust public finances, a national bank, and industrialization, combining constitutional republicanism with modernizing economic nationalism."
+  },
+  {
+    "id": "maximilien-robespierre",
+    "name": "Maximilien Robespierre",
+    "role": "Revolutionary",
+    "description": "A central figure of the French Revolution, Robespierre linked republican virtue, popular sovereignty, and civil equality to a centralized revolutionary power, becoming a symbol of Jacobinism and the Terror."
+  },
+  {
+    "id": "napoleao-bonaparte",
+    "name": "Napoleon Bonaparte",
+    "role": "Emperor",
+    "description": "A French general and emperor, Napoleon consolidated the Revolution's administrative and legal reforms while concentrating personal power, expanding France militarily and shaping European modernizing authoritarianism."
+  },
+  {
+    "id": "julio-cesar",
+    "name": "Julius Caesar",
+    "role": "Military leader",
+    "description": "A Roman general and statesman, Caesar combined military prestige, popular reforms, and the concentration of personal authority, weakening the aristocratic republic and paving the way for imperial power in Rome."
+  },
+  {
+    "id": "cesar-augusto",
+    "name": "Caesar Augustus",
+    "role": "Emperor",
+    "description": "The first Roman emperor, Augustus turned the republican crisis into a stable imperial order, preserving institutional forms while centralizing military command, administration, and political authority."
+  },
+  {
+    "id": "carlos-magno",
+    "name": "Charlemagne",
+    "role": "Monarch",
+    "description": "King of the Franks and emperor, Charlemagne united military expansion, Christianization, administrative reform, and cultural patronage, becoming a symbol of imperial Christian monarchy and the medieval European order."
+  },
+  {
+    "id": "eneas-carneiro",
+    "name": "Enéas Carneiro",
+    "role": "Politician",
+    "description": "A Brazilian physician and politician, Enéas championed economic nationalism, technological sovereignty, nuclear energy, strong armed forces, and state planning, becoming a popular symbol of national developmentalism."
+  },
+  {
+    "id": "jordan-peterson",
+    "name": "Jordan Peterson",
+    "role": "Psychologist and essayist",
+    "description": "A Canadian psychologist, Peterson became a reference of liberal cultural conservatism, criticizing identity progressivism and defending individual responsibility, tradition, free speech, and symbolic order."
+  },
+  {
+    "id": "aristoteles",
+    "name": "Aristotle",
+    "role": "Philosopher",
+    "description": "A Greek philosopher, Aristotle formulated a political vision centered on the polis, civic virtue, and mixed government, defending moderate private property, natural hierarchy, and moral education as the foundations of common life."
+  },
+  {
+    "id": "platao",
+    "name": "Plato",
+    "role": "Philosopher",
+    "description": "A Greek philosopher, Plato criticized Athenian democracy and imagined a city governed by philosophers, with rigid education, moral censorship, and the strong subordination of private interests to the harmony of the political community."
+  },
+  {
+    "id": "foucault",
+    "name": "Michel Foucault",
+    "role": "Philosopher",
+    "description": "A French philosopher, Foucault analyzed prisons, sexuality, medicine, and modern knowledge as forms of disciplinary power, becoming a reference for critiques of social normalization, institutions of control, and cultural hierarchies."
+  },
+  {
+    "id": "tocqueville",
+    "name": "Alexis de Tocqueville",
+    "role": "Philosopher and statesman",
+    "description": "A French liberal thinker, Tocqueville studied American democracy and championed civil associations, decentralization, and political freedom as antidotes to the tyranny of the majority and the administrative centralization of the modern state."
+  },
+  {
+    "id": "nietzsche",
+    "name": "Friedrich Nietzsche",
+    "role": "Philosopher",
+    "description": "A German philosopher, Nietzsche attacked egalitarian morality, Christianity, and modern resentment, defending the aristocratic creation of values, the affirmation of life, and the overcoming of inherited moral conventions."
+  },
+  {
+    "id": "rousseau",
+    "name": "Jean-Jacques Rousseau",
+    "role": "Philosopher",
+    "description": "An Enlightenment philosopher, Rousseau criticized social inequality and championed popular sovereignty, the general will, and a republican political community capable of forming free citizens through civic education and public virtue."
+  },
+  {
+    "id": "hobbes",
+    "name": "Thomas Hobbes",
+    "role": "Philosopher",
+    "description": "An English philosopher, Hobbes founded a contractualist theory of the sovereign state, defending strong central authority to contain civil war, guarantee security, and subordinate religious and factional conflicts to public peace."
+  },
+  {
+    "id": "maquiavel",
+    "name": "Niccolò Machiavelli",
+    "role": "Philosopher and diplomat",
+    "description": "A Florentine diplomat and thinker, Machiavelli analyzed political power realistically, valuing virtù, one's own military force, reason of state, and republican institutions capable of preserving liberty and civic greatness."
+  },
+  {
+    "id": "keynes",
+    "name": "John Maynard Keynes",
+    "role": "Economist",
+    "description": "A British economist, Keynes formulated modern macroeconomics and championed the use of fiscal policy, public investment, and demand management to stabilize liberal capitalism without abolishing private property."
+  },
+  {
+    "id": "dom-pedro-i",
+    "name": "Pedro I of Brazil",
+    "role": "Emperor",
+    "description": "Brazil's first emperor, Pedro I led independence and established a centralized constitutional monarchy, reconciling dynastic liberalism, personal authority, territorial unity, and the defense of the imperial order."
+  },
+  {
+    "id": "dom-pedro-ii",
+    "name": "Pedro II of Brazil",
+    "role": "Emperor",
+    "description": "Brazil's second emperor, Pedro II governed as a constitutional monarch, valuing parliamentarism, institutional stability, science, education, and gradual abolition, preserving national unity under the moderating power."
+  },
+  {
+    "id": "peron",
+    "name": "Juan Domingo Perón",
+    "role": "Statesman",
+    "description": "An Argentine president and founder of Peronism, Perón combined popular nationalism, labor rights, corporatism, protected industrialization, charismatic leadership, and a third position between liberalism and communism."
+  },
+  {
+    "id": "franklin-roosevelt",
+    "name": "Franklin D. Roosevelt",
+    "role": "Statesman",
+    "description": "US president during the Great Depression and World War II, Roosevelt created the New Deal, expanding regulation, social rights, and federal intervention to save liberal democracy and reformed capitalism."
+  },
+  {
+    "id": "satoshi-nakamoto",
+    "name": "Satoshi Nakamoto",
+    "role": "Creator of Bitcoin",
+    "description": "The pseudonym of Bitcoin's creator, Satoshi Nakamoto formulated a peer-to-peer digital currency based on cryptographic proof, decentralization, programmed scarcity, and relative privacy, without depending on banks, governments, or intermediaries."
+  },
+  {
+    "id": "george-soros",
+    "name": "George Soros",
+    "role": "Investor and philanthropist",
+    "description": "An investor and founder of the Open Society Foundations, Soros defends liberal democracy, human rights, civil society, multiculturalism, drug policy reform, secularism, and open institutions against authoritarianism and closed nationalism."
+  },
+  {
+    "id": "bill-gates",
+    "name": "Bill Gates",
+    "role": "Entrepreneur and philanthropist",
+    "description": "Co-founder of Microsoft and leader of the Gates Foundation, Gates combines technological capitalism, global philanthropy, public health, education, the fight against poverty, climate innovation, and trust in science, metrics, and technocratic solutions."
+  },
+  {
+    "id": "dalai-lama",
+    "name": "Dalai Lama (Tenzin Gyatso)",
+    "role": "Religious leader",
+    "description": "The spiritual leader of Tibetan Buddhism and head of the government-in-exile for decades, the 14th Dalai Lama champions nonviolence, Tibetan autonomy through the 'middle way', the democratization of his community, and dialogue between science and religion."
+  },
+  {
+    "id": "pentti-linkola",
+    "name": "Pentti Linkola",
+    "role": "Radical ecologist",
+    "description": "A Finnish fisherman and thinker, Linkola advocated an anti-democratic, anti-technological deep ecology, with a strong state, an end to economic growth, and a drastic reduction of population to save the biosphere, becoming a reference of eco-authoritarianism."
+  },
+  {
+    "id": "thomas-jefferson",
+    "name": "Thomas Jefferson",
+    "role": "Statesman",
+    "description": "Author of the Declaration of Independence and third US president, Jefferson championed an agrarian republic of small landowners, limited and decentralized government, religious freedom, and distrust of banks, armies, and cities."
+  },
+  {
+    "id": "janos-kadar",
+    "name": "János Kádár",
+    "role": "Dictator",
+    "description": "Hungary's leader for more than three decades, Kádár came to power after the 1956 Soviet repression and evolved toward a pragmatic communism of consumption, summed up in the motto 'whoever is not against us is with us', with limited economic opening."
+  },
+  {
+    "id": "h-l-mencken",
+    "name": "H. L. Mencken",
+    "role": "Journalist",
+    "description": "The most scathing critic of American democracy, Mencken combined economic libertarianism, Nietzschean elitism, and militant atheism, ridiculing the 'booboisie', puritanism, and the faith of the masses in newspapers and essays that defined an era."
+  },
+  {
+    "id": "marcus-garvey",
+    "name": "Marcus Garvey",
+    "role": "Activist",
+    "description": "Founder of the largest Black mass movement in history, Garvey preached Black nationalism, racial pride, entrepreneurship as a path to emancipation, and the return to Africa, rejecting integration in favor of separation and self-reliance."
+  },
+  {
+    "id": "julius-nyerere",
+    "name": "Julius Nyerere",
+    "role": "Statesman",
+    "description": "The father of Tanzania's independence, Nyerere created Ujamaa — African socialism based on the communal village, self-reliance, and national unity above ethnicity — becoming a moral reference of anti-colonialism and non-alignment."
+  }
+]

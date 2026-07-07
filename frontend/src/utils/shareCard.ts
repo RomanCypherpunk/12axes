@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 import type { QuizPayload, QuizResult } from '../types/quiz';
 import { resolveCountryFlagSrc } from './countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from './personalityImage';
@@ -267,7 +268,7 @@ function buildShareTitle(): HTMLElement {
       color: SHARE_COLORS.ink700,
       textAlign: 'center'
     },
-    'Seu perfil ideológico | 12axes.vercel.app'
+    t.shareTitle
   );
 }
 
@@ -405,7 +406,7 @@ function buildShareIdeologyHeader(result: QuizResult): HTMLElement {
       borderRadius: '999px',
       padding: '4px 10px',
       whiteSpace: 'nowrap'
-    }, 'Top match'),
+    }, t.shareTopMatch),
     buildMatchRing(pct)
   );
 
@@ -776,7 +777,7 @@ function buildShareCountry(country: QuizResult['topCountryMatch']): HTMLElement 
           fontWeight: '800',
           letterSpacing: '0.09em',
           textTransform: 'uppercase'
-        }, 'País mais compatível'),
+        }, t.shareCountry),
         el('div', {
           fontFamily: SHARE_FONT_DISPLAY,
           fontWeight: '800',
@@ -903,7 +904,7 @@ function buildSharePersonality(person: QuizResult['topPersonalityMatch']): HTMLE
       fontWeight: '800',
       letterSpacing: '0.09em',
       textTransform: 'uppercase'
-    }, 'Personalidade'),
+    }, t.sharePersonality),
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '800',

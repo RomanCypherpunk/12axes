@@ -12,7 +12,8 @@ const BALANCED_COLOR = '#94A3B8';
 export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftPercent = clamp(result.leftPercent);
   const rightPercent = clamp(result.rightPercent);
-  const isBalanced = result.intensity === 'Equilibrado';
+  // Mesma regra do backend (distância < 7.5 do centro) — independe do idioma do rótulo.
+  const isBalanced = Math.abs(rightPercent - 50) < 7.5;
   const leaningRight = result.dominantPole === result.rightPole;
   const leftActive = !isBalanced && !leaningRight;
   const rightActive = !isBalanced && leaningRight;
@@ -26,7 +27,7 @@ export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const fillWidth = isBalanced ? 0 : Math.abs(position - 50);
   const leanDirection = isBalanced ? 'balanced' : leaningRight ? 'right' : 'left';
 
-  const leaningText = isBalanced ? 'Equilibrado' : `${result.intensity} - ${result.dominantPole}`;
+  const leaningText = isBalanced ? result.intensity : `${result.intensity} - ${result.dominantPole}`;
 
   const rowStyle = {
     ['--axis-left']: axis.leftColor,

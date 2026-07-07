@@ -84,6 +84,27 @@
   color: var(--accent-deep);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-strong);
+  color: var(--text-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.lang-toggle:hover {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
 .brand-lockup {
   display: inline-flex;
   align-items: baseline;

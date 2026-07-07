@@ -25,6 +25,10 @@ public class ScoringService {
     }
 
     public List<AxisResult> score(ResultRequest request) {
+        return score(request, QuizDataService.LANG_PT);
+    }
+
+    public List<AxisResult> score(ResultRequest request, String lang) {
         Map<String, Question> questionById = dataService.getQuestions().stream()
                 .collect(Collectors.toMap(Question::id, Function.identity()));
 
@@ -39,8 +43,9 @@ public class ScoringService {
                     .add(leftScore, question.weight());
         }
 
-        return dataService.getAxes().stream()
-                .map(axis -> toAxisResult(axis, scores.get(axis.id())))
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        return dataService.getAxes(normalizedLang).stream()
+                .map(axis -> toAxisResult(axis, scores.get(axis.id()), normalizedLang))
                 .toList();
     }
 
@@ -57,12 +62,12 @@ public class ScoringService {
         }
     }
 
-    private AxisResult toAxisResult(Axis axis, WeightedScore weightedScore) {
+    private AxisResult toAxisResult(Axis axis, WeightedScore weightedScore, String lang) {
         double leftPercent = round(weightedScore.average() * 100.0);
         double rightPercent = round(100.0 - leftPercent);
         String dominantPole = leftPercent >= rightPercent ? axis.leftPole() : axis.rightPole();
         double distanceFromCenter = Math.abs(leftPercent - 50.0);
-        String intensity = intensityFor(distanceFromCenter);
+        String intensity = intensityFor(distanceFromCenter, lang);
         return new AxisResult(
                 axis.id(),
                 axis.label(),
@@ -75,17 +80,18 @@ public class ScoringService {
         );
     }
 
-    private String intensityFor(double distanceFromCenter) {
+    private String intensityFor(double distanceFromCenter, String lang) {
+        boolean en = QuizDataService.LANG_EN.equals(lang);
         if (distanceFromCenter < 7.5) {
-            return "Equilibrado";
+            return en ? "Balanced" : "Equilibrado";
         }
         if (distanceFromCenter < 22.5) {
-            return "Inclinado";
+            return en ? "Leaning" : "Inclinado";
         }
         if (distanceFromCenter < 37.5) {
-            return "Forte";
+            return en ? "Strong" : "Forte";
         }
-        return "Muito forte";
+        return en ? "Very strong" : "Muito forte";
     }
 
     private double round(double value) {

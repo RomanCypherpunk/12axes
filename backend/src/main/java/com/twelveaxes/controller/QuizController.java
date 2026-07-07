@@ -45,44 +45,56 @@ public class QuizController {
     }
 
     @GetMapping("/api/quiz")
-    public QuizPayload quiz(@RequestParam(defaultValue = QuizDataService.SHORT_VARIANT) String variant) {
-        return dataService.getQuiz(variant);
+    public QuizPayload quiz(
+            @RequestParam(defaultValue = QuizDataService.SHORT_VARIANT) String variant,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        return dataService.getQuiz(variant, lang);
     }
 
     @PostMapping("/api/results")
     @ResponseStatus(HttpStatus.OK)
-    public QuizResult results(@Valid @RequestBody ResultRequest request) {
-        var axes = scoringService.score(request);
-        var matches = matcherService.findMatches(axes);
+    public QuizResult results(
+            @Valid @RequestBody ResultRequest request,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        var axes = scoringService.score(request, lang);
+        var matches = matcherService.findMatches(axes, lang);
         var topMatch = matches.getFirst();
-        var topCountryMatch = countryMatcherService.findTopMatch(axes);
-        var topPersonalityMatch = personalityMatcherService.findTopMatch(axes);
+        var topCountryMatch = countryMatcherService.findTopMatch(axes, lang);
+        var topPersonalityMatch = personalityMatcherService.findTopMatch(axes, lang);
         return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
     }
 
     @GetMapping("/api/ideologies")
-    public List<Ideology> ideologies() {
-        return dataService.getIdeologies();
+    public List<Ideology> ideologies(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
+        return dataService.getIdeologies(lang);
     }
 
     @GetMapping("/api/ideologies/{id}")
-    public Ideology ideology(@PathVariable String id) {
-        return dataService.getIdeologies().stream()
+    public Ideology ideology(
+            @PathVariable String id,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        return dataService.getIdeologies(lang).stream()
                 .filter(ideology -> ideology.id().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ideologia não encontrada"));
     }
 
     @GetMapping("/api/countries")
-    public List<Country> countries() {
-        return dataService.getCountries();
+    public List<Country> countries(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
+        return dataService.getCountries(lang);
     }
 
     @GetMapping("/api/countries/{id}")
-    public Country country(@PathVariable String id) {
-        return dataService.getCountries().stream()
+    public Country country(
+            @PathVariable String id,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        return dataService.getCountries(lang).stream()
                 .filter(country -> country.id().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PaÃ­s nÃ£o encontrado"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "País não encontrado"));
     }
 }

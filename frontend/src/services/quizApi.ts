@@ -1,3 +1,4 @@
+import { LANG, t } from '../i18n';
 import type { QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
@@ -21,7 +22,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
 function formatApiError(message: string, status: number): string {
   if (!message) {
-    return `Erro HTTP ${status}`;
+    return t.errHttp(status);
   }
 
   try {
@@ -40,11 +41,11 @@ function formatApiError(message: string, status: number): string {
 }
 
 export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> {
-  return request<QuizPayload>(`/api/quiz?variant=${variant}`);
+  return request<QuizPayload>(`/api/quiz?variant=${variant}&lang=${LANG}`);
 }
 
 export function submitResults(variant: QuizVariant, answers: SubmittedAnswer[]): Promise<QuizResult> {
-  return request<QuizResult>('/api/results', {
+  return request<QuizResult>(`/api/results?lang=${LANG}`, {
     method: 'POST',
     body: JSON.stringify({ variant, answers })
   });

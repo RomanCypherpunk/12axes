@@ -20,13 +20,17 @@ public class CountryMatcherService {
     }
 
     public CountryMatch findTopMatch(List<AxisResult> axisResults) {
+        return findTopMatch(axisResults, QuizDataService.LANG_PT);
+    }
+
+    public CountryMatch findTopMatch(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
 
         Comparator<CountryCandidate> byCompatibility =
                 Comparator.comparingDouble(CountryCandidate::compatibility).reversed();
         Comparator<CountryCandidate> byName = Comparator.comparing(candidate -> candidate.country().name());
 
-        return dataService.getCountries().stream()
+        return dataService.getCountries(QuizDataService.normalizeLang(lang)).stream()
                 .map(country -> toCandidate(country, userVector))
                 .sorted(byCompatibility.thenComparing(byName))
                 .findFirst()

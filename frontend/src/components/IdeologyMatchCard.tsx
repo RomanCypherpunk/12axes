@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 import type { IdeologyMatch } from '../types/quiz';
 
 interface IdeologyMatchCardProps {
@@ -19,11 +20,11 @@ export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCard
         <div
           className="compatibility-ring"
           style={{ ['--pct' as string]: pct }}
-          aria-label={`Compatibilidade: ${pct.toFixed(1)} por cento`}
+          aria-label={t.compatibilityAria(pct.toFixed(1))}
         >
           <span>
             {pct.toFixed(0)}%
-            <small>match</small>
+            <small>{t.matchWord}</small>
           </span>
         </div>
       </div>
