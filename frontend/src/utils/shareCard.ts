@@ -960,7 +960,9 @@ function buildSharePersonality(person: QuizResult['topPersonalityMatch']): HTMLE
 
 export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
   const images = Array.from(root.querySelectorAll('img'));
-  await Promise.all(images.map(inlineImageForExport));
+  for (const image of images) {
+    await inlineImageForExport(image);
+  }
 }
 
 /**
@@ -1084,22 +1086,23 @@ function blobToPngDataUrl(blob: Blob, options?: RasterOptions): Promise<string> 
 }
 
 function applyImageSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
-  return new Promise((resolve) => {
-    image.addEventListener('load', () => resolve(), { once: true });
-    image.addEventListener(
-      'error',
-      () => {
-        replaceBrokenExportImage(image);
-        resolve();
-      },
-      { once: true }
-    );
-    if (image.dataset.kind === 'portrait') {
-      image.style.objectFit = 'fill';
-      image.style.objectPosition = 'center';
-    }
-    image.src = dataUrl;
+  replaceImageWithExportBackground(image, dataUrl);
+  return Promise.resolve();
+}
+
+function replaceImageWithExportBackground(image: HTMLImageElement, dataUrl: string) {
+  const isPortrait = image.dataset.kind === 'portrait';
+  const replacement = el('div', {
+    width: isPortrait ? '100%' : '86%',
+    height: isPortrait ? '100%' : '154px',
+    backgroundImage: `url(${dataUrl})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: isPortrait ? '100% 100%' : 'contain'
   });
+  replacement.setAttribute('role', 'img');
+  replacement.setAttribute('aria-label', image.alt || '');
+  image.replaceWith(replacement);
 }
 
 function waitForImage(image: HTMLImageElement): Promise<void> {
