@@ -130,6 +130,14 @@ interface Strings {
   share: string;
   generatingPng: string;
   shareFilePrefix: string;
+  shareMessage: (
+    ideology: string,
+    ideologyPct: number,
+    country: string,
+    countryPct: number,
+    personality: string,
+    personalityPct: number
+  ) => string;
   progress: (current: number, total: number) => string;
   progressDone: (percent: number) => string;
   progressAria: (percent: number) => string;
@@ -381,6 +389,12 @@ const pt: Strings = {
   share: 'Compartilhar',
   generatingPng: 'Gerando PNG...',
   shareFilePrefix: '12axes-perfil',
+  shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
+    `Descobri meu perfil ideológico no Quiz Político 12 Axes!\n\n` +
+    `${ideology}: ${ideologyPct}% de compatibilidade\n` +
+    `${country}: ${countryPct}% de compatibilidade\n` +
+    `${personality}: ${personalityPct}% de compatibilidade\n\n` +
+    `👉 Faça o teste e compartilhe seu resultado:\nhttps://12axes.vercel.app`,
   progress: (current, total) => `Pergunta ${current} de ${total}`,
   progressDone: (percent) => `${percent}% concluído`,
   progressAria: (percent) => `Progresso do quiz: ${percent}%`,
@@ -645,6 +659,12 @@ const en: Strings = {
   share: 'Share',
   generatingPng: 'Generating PNG...',
   shareFilePrefix: '12axes-profile',
+  shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
+    `I discovered my ideological profile on the 12 Axes Political Quiz!\n\n` +
+    `${ideology}: ${ideologyPct}% match\n` +
+    `${country}: ${countryPct}% match\n` +
+    `${personality}: ${personalityPct}% match\n\n` +
+    `👉 Take the test and share your result:\nhttps://12axes.vercel.app/en`,
   progress: (current, total) => `Question ${current} of ${total}`,
   progressDone: (percent) => `${percent}% complete`,
   progressAria: (percent) => `Quiz progress: ${percent}%`,

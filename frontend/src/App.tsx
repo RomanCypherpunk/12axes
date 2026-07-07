@@ -372,6 +372,7 @@ export default function App() {
         dataUrl,
         `${t.shareFilePrefix}-${new Date().toISOString().slice(0, 10)}.png`
       );
+      await tryNativeShare(dataUrl, result);
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errImage);
     } finally {
@@ -807,6 +808,49 @@ export default function App() {
       )}
     </main>
   );
+}
+
+// Abre a folha de compartilhamento nativa (iPhone/Android) com a imagem do
+// resultado e um texto pronto. Em navegadores sem Web Share API (ou se o
+// usuário cancelar), fica só o download que já aconteceu antes.
+async function tryNativeShare(dataUrl: string, result: QuizResult) {
+  if (typeof navigator.share !== 'function') {
+    return;
+  }
+  try {
+    const message = t.shareMessage(
+      result.topMatch.name,
+      Math.round(result.topMatch.compatibility),
+      result.topCountryMatch.name,
+      Math.round(result.topCountryMatch.compatibility),
+      result.topPersonalityMatch.name,
+      Math.round(result.topPersonalityMatch.compatibility)
+    );
+
+    const blob = await (await fetch(dataUrl)).blob();
+    const file = new File([blob], `${t.shareFilePrefix}.png`, { type: 'image/png' });
+    const textShare: ShareData = { title: t.shareTitle, text: message };
+
+    if (navigator.canShare?.({ files: [file] }) === false) {
+      await navigator.share(textShare);
+      return;
+    }
+
+    try {
+      await navigator.share({ ...textShare, files: [file] });
+    } catch (err) {
+      if (isShareAbort(err)) {
+        return;
+      }
+      await navigator.share(textShare);
+    }
+  } catch {
+    // Cancelado pelo usuário ou sem permissão — o download já garantiu a imagem.
+  }
+}
+
+function isShareAbort(err: unknown): boolean {
+  return err instanceof DOMException && err.name === 'AbortError';
 }
 
 function downloadDataUrl(dataUrl: string, fileName: string) {
