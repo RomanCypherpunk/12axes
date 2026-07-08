@@ -391,10 +391,13 @@ const pt: Strings = {
   shareFilePrefix: '12axes-perfil',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
     `Descobri meu perfil ideológico no Quiz Político 12 Axes!\n\n` +
-    `${ideology}: ${ideologyPct}% de compatibilidade\n` +
-    `${country}: ${countryPct}% de compatibilidade\n` +
-    `${personality}: ${personalityPct}% de compatibilidade\n\n` +
-    `👉 Faça o teste e compartilhe seu resultado:\nhttps://12axes.vercel.app`,
+    `💡 Ideologia mais compatível:\n` +
+    `${ideology} - ${ideologyPct}% de compatibilidade\n\n` +
+    `🌎 País/Nação mais compatível:\n` +
+    `${country} - ${countryPct}% de compatibilidade\n\n` +
+    `👤 Personalidade mais compatível:\n` +
+    `${personality} - ${personalityPct}% de compatibilidade\n\n` +
+    `👉 Faça o teste e compartilhe seu resultado:\n12axes.vercel.app`,
   progress: (current, total) => `Pergunta ${current} de ${total}`,
   progressDone: (percent) => `${percent}% concluído`,
   progressAria: (percent) => `Progresso do quiz: ${percent}%`,
@@ -661,10 +664,13 @@ const en: Strings = {
   shareFilePrefix: '12axes-profile',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
     `I discovered my ideological profile on the 12 Axes Political Quiz!\n\n` +
-    `${ideology}: ${ideologyPct}% match\n` +
-    `${country}: ${countryPct}% match\n` +
-    `${personality}: ${personalityPct}% match\n\n` +
-    `👉 Take the test and share your result:\nhttps://12axes.vercel.app/en`,
+    `💡 Most compatible ideology:\n` +
+    `${ideology} - ${ideologyPct}% compatibility\n\n` +
+    `🌎 Most compatible country/nation:\n` +
+    `${country} - ${countryPct}% compatibility\n\n` +
+    `👤 Most compatible personality:\n` +
+    `${personality} - ${personalityPct}% compatibility\n\n` +
+    `👉 Take the test and share your result:\n12axes.vercel.app/en`,
   progress: (current, total) => `Question ${current} of ${total}`,
   progressDone: (percent) => `${percent}% complete`,
   progressAria: (percent) => `Quiz progress: ${percent}%`,
