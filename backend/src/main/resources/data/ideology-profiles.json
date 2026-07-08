@@ -29,7 +29,7 @@
       "controle": 96,
       "comercio": 82,
       "religiao": 88,
-      "moral": 50,
+      "moral": 38,
       "tecnologia": 65
     }
   },
@@ -58,7 +58,7 @@
       "poder": 82,
       "imigracao": 40,
       "diplomacia": 65,
-      "intervencao": 68,
+      "intervencao": 38,
       "economia": 92,
       "controle": 92,
       "comercio": 50,
@@ -139,8 +139,8 @@
     "ideologyId": "socialismo-de-estado",
     "vector": {
       "estrutura": 25,
-      "representacao": 25,
-      "poder": 80,
+      "representacao": 35,
+      "poder": 75,
       "imigracao": 50,
       "diplomacia": 55,
       "intervencao": 40,
@@ -178,7 +178,7 @@
       "imigracao": 65,
       "diplomacia": 35,
       "intervencao": 35,
-      "economia": 45,
+      "economia": 60,
       "controle": 85,
       "comercio": 75,
       "religiao": 75,
@@ -190,7 +190,7 @@
     "ideologyId": "tecnocracia-de-esquerda",
     "vector": {
       "estrutura": 35,
-      "representacao": 45,
+      "representacao": 38,
       "poder": 70,
       "imigracao": 60,
       "diplomacia": 35,
@@ -285,7 +285,7 @@
       "comercio": 88,
       "religiao": 50,
       "moral": 12,
-      "tecnologia": 35
+      "tecnologia": 45
     }
   },
   {
@@ -760,7 +760,7 @@
       "controle": 45,
       "comercio": 30,
       "religiao": 85,
-      "moral": 58,
+      "moral": 45,
       "tecnologia": 95
     }
   },
@@ -820,7 +820,7 @@
     "vector": {
       "estrutura": 30,
       "representacao": 65,
-      "poder": 60,
+      "poder": 48,
       "imigracao": 55,
       "diplomacia": 45,
       "intervencao": 45,
@@ -957,7 +957,7 @@
       "estrutura": 65,
       "representacao": 80,
       "poder": 22,
-      "imigracao": 60,
+      "imigracao": 50,
       "diplomacia": 30,
       "intervencao": 70,
       "economia": 22,
@@ -974,7 +974,7 @@
       "estrutura": 78,
       "representacao": 78,
       "poder": 14,
-      "imigracao": 55,
+      "imigracao": 45,
       "diplomacia": 25,
       "intervencao": 78,
       "economia": 18,
@@ -1895,7 +1895,7 @@
       "imigracao": 50,
       "diplomacia": 28,
       "intervencao": 80,
-      "economia": 25,
+      "economia": 38,
       "controle": 18,
       "comercio": 30,
       "religiao": 75,
@@ -1975,7 +1975,7 @@
     "ideologyId": "hoppeanismo",
     "vector": {
       "estrutura": 85,
-      "representacao": 15,
+      "representacao": 30,
       "poder": 30,
       "imigracao": 80,
       "diplomacia": 30,
@@ -2030,7 +2030,7 @@
       "poder": 20,
       "imigracao": 55,
       "diplomacia": 50,
-      "intervencao": 65,
+      "intervencao": 50,
       "economia": 10,
       "controle": 8,
       "comercio": 20,
@@ -2221,8 +2221,8 @@
       "economia": 12,
       "controle": 10,
       "comercio": 35,
-      "religiao": 20,
-      "moral": 18,
+      "religiao": 30,
+      "moral": 30,
       "tecnologia": 60
     }
   },
@@ -2266,7 +2266,7 @@
       "estrutura": 85,
       "representacao": 75,
       "poder": 18,
-      "imigracao": 50,
+      "imigracao": 65,
       "diplomacia": 35,
       "intervencao": 78,
       "economia": 25,
@@ -2303,8 +2303,8 @@
       "imigracao": 60,
       "diplomacia": 20,
       "intervencao": 88,
-      "economia": 18,
-      "controle": 10,
+      "economia": 38,
+      "controle": 30,
       "comercio": 18,
       "religiao": 75,
       "moral": 80,
@@ -2402,7 +2402,7 @@
       "estrutura": 30,
       "representacao": 20,
       "poder": 80,
-      "imigracao": 40,
+      "imigracao": 60,
       "diplomacia": 58,
       "intervencao": 45,
       "economia": 45,
@@ -2451,7 +2451,7 @@
     "ideologyId": "federalismo-privado",
     "vector": {
       "estrutura": 92,
-      "representacao": 8,
+      "representacao": 35,
       "poder": 42,
       "imigracao": 68,
       "diplomacia": 28,
@@ -2467,12 +2467,12 @@
   {
     "ideologyId": "tecno-monarquismo",
     "vector": {
-      "estrutura": 85,
+      "estrutura": 65,
       "representacao": 15,
       "poder": 75,
       "imigracao": 75,
       "diplomacia": 58,
-      "intervencao": 45,
+      "intervencao": 50,
       "economia": 22,
       "controle": 30,
       "comercio": 37,
@@ -2527,8 +2527,8 @@
       "economia": 35,
       "controle": 72,
       "comercio": 82,
-      "religiao": 35,
-      "moral": 22,
+      "religiao": 48,
+      "moral": 38,
       "tecnologia": 98
     }
   },
@@ -2537,7 +2537,7 @@
     "vector": {
       "estrutura": 35,
       "representacao": 22,
-      "poder": 50,
+      "poder": 70,
       "imigracao": 48,
       "diplomacia": 45,
       "intervencao": 55,
@@ -2561,7 +2561,7 @@
       "economia": 70,
       "controle": 65,
       "comercio": 75,
-      "religiao": 75,
+      "religiao": 58,
       "moral": 88,
       "tecnologia": 70
     }
@@ -2578,7 +2578,7 @@
       "economia": 55,
       "controle": 72,
       "comercio": 82,
-      "religiao": 30,
+      "religiao": 45,
       "moral": 20,
       "tecnologia": 25
     }
@@ -2604,7 +2604,7 @@
     "ideologyId": "socialismo-bolivariano",
     "vector": {
       "estrutura": 38,
-      "representacao": 55,
+      "representacao": 38,
       "poder": 72,
       "imigracao": 45,
       "diplomacia": 60,
@@ -2658,7 +2658,7 @@
       "representacao": 8,
       "poder": 75,
       "imigracao": 72,
-      "diplomacia": 25,
+      "diplomacia": 45,
       "intervencao": 55,
       "economia": 52,
       "controle": 58,
@@ -2757,7 +2757,7 @@
     "ideologyId": "tecno-cristianismo",
     "vector": {
       "estrutura": 55,
-      "representacao": 45,
+      "representacao": 38,
       "poder": 55,
       "imigracao": 70,
       "diplomacia": 50,
