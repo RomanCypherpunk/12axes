@@ -47,7 +47,7 @@
       "comercio": 80,
       "religiao": 88,
       "moral": 60,
-      "tecnologia": 40
+      "tecnologia": 35
     }
   },
   {
@@ -165,7 +165,7 @@
       "controle": 80,
       "comercio": 55,
       "religiao": 80,
-      "moral": 88,
+      "moral": 92,
       "tecnologia": 75
     }
   },
@@ -232,8 +232,8 @@
       "economia": 88,
       "controle": 88,
       "comercio": 85,
-      "religiao": 40,
-      "moral": 35,
+      "religiao": 55,
+      "moral": 45,
       "tecnologia": 55
     }
   },
@@ -263,7 +263,7 @@
       "imigracao": 88,
       "diplomacia": 90,
       "intervencao": 8,
-      "economia": 42,
+      "economia": 45,
       "controle": 70,
       "comercio": 85,
       "religiao": 32,
@@ -360,7 +360,7 @@
     "ideologyId": "capitalismo-autoritario",
     "vector": {
       "estrutura": 28,
-      "representacao": 18,
+      "representacao": 25,
       "poder": 86,
       "imigracao": 60,
       "diplomacia": 60,
@@ -619,7 +619,7 @@
       "poder": 55,
       "imigracao": 70,
       "diplomacia": 48,
-      "intervencao": 62,
+      "intervencao": 75,
       "economia": 15,
       "controle": 55,
       "comercio": 45,
@@ -699,18 +699,18 @@
   {
     "ideologyId": "quarta-teoria-politica",
     "vector": {
-      "estrutura": 40,
+      "estrutura": 50,
       "representacao": 20,
       "poder": 85,
-      "imigracao": 55,
-      "diplomacia": 60,
+      "imigracao": 70,
+      "diplomacia": 70,
       "intervencao": 30,
       "economia": 55,
       "controle": 60,
       "comercio": 70,
       "religiao": 20,
       "moral": 20,
-      "tecnologia": 30
+      "tecnologia": 35
     }
   },
   {
@@ -755,7 +755,7 @@
       "poder": 75,
       "imigracao": 60,
       "diplomacia": 55,
-      "intervencao": 40,
+      "intervencao": 55,
       "economia": 25,
       "controle": 45,
       "comercio": 30,
@@ -2485,7 +2485,7 @@
     "ideologyId": "direita-progressista",
     "vector": {
       "estrutura": 55,
-      "representacao": 35,
+      "representacao": 45,
       "poder": 55,
       "imigracao": 45,
       "diplomacia": 45,
@@ -2603,7 +2603,7 @@
   {
     "ideologyId": "socialismo-bolivariano",
     "vector": {
-      "estrutura": 45,
+      "estrutura": 38,
       "representacao": 55,
       "poder": 72,
       "imigracao": 45,
