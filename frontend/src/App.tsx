@@ -841,9 +841,8 @@ async function tryNativeShare(dataUrl: string, result: QuizResult) {
     const file = new File([blob], `${t.shareFilePrefix}.png`, { type: 'image/png' });
     const textShare: ShareData = { title: t.shareTitle, text: message };
     const fileShare: ShareData = { ...textShare, files: [file] };
-    await copyShareText(message);
 
-    if (navigator.canShare?.(fileShare) === false) {
+    if (navigator.canShare?.({ files: [file] }) === false) {
       await navigator.share(textShare);
       return;
     }
@@ -858,14 +857,6 @@ async function tryNativeShare(dataUrl: string, result: QuizResult) {
     }
   } catch {
     // Cancelado pelo usuário ou sem permissão — o download já garantiu a imagem.
-  }
-}
-
-async function copyShareText(message: string): Promise<void> {
-  try {
-    await navigator.clipboard?.writeText(message);
-  } catch {
-    // O compartilhamento nativo ainda será aberto; alguns navegadores bloqueiam clipboard após tarefas assíncronas.
   }
 }
 
