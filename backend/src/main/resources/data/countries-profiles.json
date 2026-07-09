@@ -1919,5 +1919,90 @@
       "moral": 35,
       "tecnologia": 70
     }
+  },
+  {
+    "countryId": "estados-papais",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 5,
+      "poder": 88,
+      "imigracao": 78,
+      "diplomacia": 62,
+      "intervencao": 22,
+      "economia": 52,
+      "controle": 62,
+      "comercio": 62,
+      "religiao": 2,
+      "moral": 5,
+      "tecnologia": 25
+    }
+  },
+  {
+    "countryId": "imperio-bizantino",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 8,
+      "poder": 82,
+      "imigracao": 55,
+      "diplomacia": 72,
+      "intervencao": 18,
+      "economia": 48,
+      "controle": 65,
+      "comercio": 55,
+      "religiao": 8,
+      "moral": 12,
+      "tecnologia": 45
+    }
+  },
+  {
+    "countryId": "espanha-habsburgos",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 6,
+      "poder": 90,
+      "imigracao": 88,
+      "diplomacia": 85,
+      "intervencao": 10,
+      "economia": 45,
+      "controle": 62,
+      "comercio": 70,
+      "religiao": 3,
+      "moral": 5,
+      "tecnologia": 45
+    }
+  },
+  {
+    "countryId": "imperio-russo-czarista",
+    "vector": {
+      "estrutura": 22,
+      "representacao": 6,
+      "poder": 86,
+      "imigracao": 72,
+      "diplomacia": 78,
+      "intervencao": 15,
+      "economia": 52,
+      "controle": 65,
+      "comercio": 68,
+      "religiao": 10,
+      "moral": 12,
+      "tecnologia": 42
+    }
+  },
+  {
+    "countryId": "genebra-calvinista",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 15,
+      "poder": 92,
+      "imigracao": 78,
+      "diplomacia": 42,
+      "intervencao": 45,
+      "economia": 45,
+      "controle": 55,
+      "comercio": 48,
+      "religiao": 4,
+      "moral": 5,
+      "tecnologia": 45
+    }
   }
 ]

@@ -1356,5 +1356,65 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Macau.svg",
     "flagNote": "Bandeira oficial da RAE de Macau."
+  },
+  {
+    "id": "estados-papais",
+    "name": "Estados Papais",
+    "category": "Teocracia católica eletiva",
+    "description": "Estado temporal do Papado romano do século VIII a 1870, os Estados Papais reuniam autoridade espiritual e política sob o Papa, aplicando o direito canônico, a Inquisição onde instalada e um governo administrado pela Cúria sobre a Itália central — caso paradigmático de teocracia cristã com poder temporal real.",
+    "flagPath": "/countries/flags/estados-papais.jpg",
+    "historical": true,
+    "period": "756–1870",
+    "vector": null
+  },
+  {
+    "id": "imperio-bizantino",
+    "name": "Império Bizantino",
+    "category": "Cesaropapismo cristão ortodoxo",
+    "description": "Herdeiro do Império Romano no Oriente, Bizâncio durou mil anos fundindo cristianismo ortodoxo, autocracia imperial e direito justinianeu. O imperador era chefe da Igreja, impunha a ortodoxia doutrinária, sustentava Constantinopla como capital cristã e defendia a Europa de sucessivas invasões.",
+    "flagPath": "/countries/flags/imperio-bizantino.png",
+    "historical": true,
+    "period": "330–1453",
+    "vector": null
+  },
+  {
+    "id": "espanha-habsburgos",
+    "name": "Espanha dos Habsburgos",
+    "category": "Monarquia católica militante",
+    "description": "A Espanha dos Habsburgos (séculos XVI-XVII), especialmente sob Filipe II, foi o paradigma do Estado católico contrarreformista: Inquisição, estatutos de limpeza de sangue, expulsão de judeus e mouriscos, evangelização global e guerras permanentes em nome da fé verdadeira — o equivalente cristão mais próximo de um Estado religioso militante.",
+    "flagPath": "/countries/flags/espanha-habsburgos.png",
+    "historical": true,
+    "period": "1516–1700",
+    "vector": null
+  },
+  {
+    "id": "imperio-russo-czarista",
+    "name": "Império Russo Czarista",
+    "category": "Autocracia ortodoxa",
+    "description": "O Império Russo sob os Romanov (1613–1917) fundiu cristianismo ortodoxo, autocracia dinástica e expansão territorial. O czar era chefe político e defensor da Fé Ortodoxa, comandando um império burocrático agrário com servidão, russificação de minorias e a doutrina da 'Ortodoxia, Autocracia e Nacionalidade'.",
+    "flagPath": "/countries/flags/imperio-russo.png",
+    "historical": true,
+    "period": "1613–1917",
+    "vector": null
+  },
+  {
+    "id": "genebra-calvinista",
+    "name": "Genebra Calvinista",
+    "category": "Teocracia protestante reformada",
+    "description": "A cidade de Genebra sob a direção de Calvino (1541–1564) organizou-se como teocracia reformada urbana: o Consistório disciplinava moralidade pública, adultério, dança e blasfêmia; as Ordonnances Ecclésiastiques regulavam toda a vida religiosa e civil. O modelo exportou o puritanismo reformado para a Escócia, Países Baixos e Nova Inglaterra puritana.",
+    "flagPath": "/countries/flags/genebra.png",
+    "historical": true,
+    "period": "1541–1564",
+    "vector": null
+  },
+  {
+    "id": "imperio-portugues",
+    "name": "Império Português",
+    "category": "Monarquia católica ultramarina",
+    "description": "Primeiro e mais longevo dos impérios coloniais europeus, o Império Português (1415–1822) uniu monarquia absoluta, catolicismo militante e talassocracia global. Sob o Padroado, o rei tinha autoridade eclesiástica nas colônias; a Inquisição portuguesa reprimia hereges e cristãos-novos; a Casa da Índia monopolizava o comércio de especiarias; e a expansão marítima levou a fé cristã, o direito, o idioma e a administração portuguesa da América do Sul à África, Índia, Malaca, Timor e Macau.",
+    "flagPath": "/countries/flags/imperio-portugues.png",
+    "historical": true,
+    "period": "1415–1822",
+    "vector": null
   }
 ]
