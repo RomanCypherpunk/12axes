@@ -11,6 +11,10 @@ const ROOT = resolve(__dirname, '..');
 const DATA_DIR = resolve(ROOT, '../backend/src/main/resources/data');
 const DIST = join(ROOT, 'dist');
 const SITE = 'https://12axes.vercel.app';
+const VERCEL_ANALYTICS_SNIPPET = `<script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>`;
 
 const readJson = (path) => JSON.parse(readFileSync(join(DATA_DIR, path), 'utf8'));
 
@@ -310,6 +314,7 @@ function layout(L, { basePath, title, description, ogImage, jsonLd, body }) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" />
     <link rel="stylesheet" href="/pages.css" />
     ${ldBlocks}
+    ${VERCEL_ANALYTICS_SNIPPET}
   </head>
   <body>
     <div class="page-shell">
