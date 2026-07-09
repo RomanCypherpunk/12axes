@@ -308,6 +308,20 @@
     "flagNote": "Reconstrução histórica usada como referência visual para o período."
   },
   {
+    "id": "imperio-macedonico",
+    "name": "Império Macedônico",
+    "category": "Monarquia conquistadora helenística",
+    "description": "Império formado pelas conquistas de Filipe II e Alexandre, o Grande, que uniu a monarquia militar macedônica à administração persa, fundou cidades gregas pelo Oriente e abriu o período helenístico por meio de expansão militar e fusão cultural entre elites macedônicas, gregas e asiáticas.",
+    "flagPath": "/countries/flags/imperio-macedonico.png",
+    "historical": true,
+    "period": "336–323 a.C.",
+    "vector": null,
+    "flagKind": "historical-symbol",
+    "flagSourceName": "12 Axes / Sol de Vergina",
+    "flagSourceUrl": "https://en.wikipedia.org/wiki/Vergina_Sun",
+    "flagNote": "Símbolo solar associado à dinastia argéada usado como referência visual; não representa uma bandeira estatal moderna."
+  },
+  {
     "id": "imperio-romano",
     "name": "Império Romano",
     "category": "Império militar centralizado",
