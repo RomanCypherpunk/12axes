@@ -841,7 +841,7 @@
     "role": "Teórico marxista",
     "lifespan": "1891–1937",
     "description": "Teórico marxista italiano, Gramsci desenvolveu o conceito de hegemonia cultural, mostrando como as classes dominantes governam pelo consenso, e defendeu a luta cultural como caminho para a transformação social.",
-    "imagePath": "/personalities/portraits/gramsci.jpg",
+    "imagePath": "/personalities/portraits/gramsci.png",
     "imageSourceName": "Wikimedia Commons / Wikipédia",
     "imageSourceUrl": "https://en.wikipedia.org/wiki/Antonio_Gramsci",
     "imageNote": "Retrato de Antonio Gramsci via Wikipédia/Wikimedia Commons."
@@ -2002,17 +2002,6 @@
     "imageNote": "Retrato de Kim Jong Un via Wikipédia/Wikimedia Commons."
   },
   {
-    "id": "nick-fuentes",
-    "name": "Nick Fuentes",
-    "role": "Ativista",
-    "lifespan": "1998–",
-    "description": "Ativista norte-americano de extrema direita, Fuentes promove nacionalismo branco, cristianismo político, tradicionalismo social e rejeição ao liberalismo, à imigração e ao conservadorismo convencional.",
-    "imagePath": "/personalities/portraits/nick-fuentes.jpg",
-    "imageSourceName": "Wikimedia Commons / Wikipédia",
-    "imageSourceUrl": "https://en.wikipedia.org/wiki/Nick_Fuentes",
-    "imageNote": "Retrato de Nick Fuentes via Wikipédia/Wikimedia Commons."
-  },
-  {
     "id": "george-washington",
     "name": "George Washington",
     "role": "Estadista e militar",
@@ -2407,5 +2396,71 @@
     "imageSourceName": "Wikimedia Commons / Wikipédia",
     "imageSourceUrl": "https://pt.wikipedia.org/wiki/Julius_Nyerere",
     "imageNote": "Retrato de Julius Nyerere via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "papa-pio-ix",
+    "name": "Papa Pio IX",
+    "role": "Papa e monarca dos Estados Papais",
+    "lifespan": "1792–1878",
+    "description": "Último Papa-Rei, Pio IX governou os Estados Papais de 1846 a 1870 e a Igreja até 1878, o pontificado mais longo da história. Definiu o dogma da Imaculada Conceição, convocou o Concílio Vaticano I que proclamou a infalibilidade papal e publicou o Syllabus Errorum condenando liberalismo, socialismo, racionalismo e a separação Igreja-Estado — modelo do ultramontanismo católico.",
+    "imagePath": "/personalities/portraits/papa-pio-ix.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Papa_Pio_IX",
+    "imageNote": "Retrato de Papa Pio IX via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "justiniano-i",
+    "name": "Justiniano I",
+    "role": "Imperador bizantino",
+    "lifespan": "482–565",
+    "description": "Imperador do Império Bizantino no período de máxima glória, Justiniano I codificou o direito romano no Corpus Juris Civilis (base de todo direito civil ocidental), reconquistou Itália, África do Norte e sul da Espanha, mandou construir a Basílica de Santa Sofia e impôs a ortodoxia calcedoniana esmagando pagãos e monofisitas.",
+    "imagePath": "/personalities/portraits/justiniano.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Justiniano",
+    "imageNote": "Mosaico de Justiniano I via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "filipe-ii-da-espanha",
+    "name": "Filipe II da Espanha",
+    "role": "Rei da Espanha e imperador global",
+    "lifespan": "1527–1598",
+    "description": "'El Rey Prudente', Filipe II governou o maior império de sua época sobre o qual 'o sol nunca se punha'. Campeão da Contra-Reforma, financiou a Inquisição, expulsou os mouriscos, armou a Invencível Armada contra a Inglaterra protestante, construiu o Escorial como palácio-monastério e transformou Madri em capital de uma monarquia católica militante e absoluta.",
+    "imagePath": "/personalities/portraits/felipe-ii.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Filipe_II_de_Espanha",
+    "imageNote": "Retrato de Filipe II da Espanha via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "pedro-o-grande",
+    "name": "Pedro, o Grande",
+    "role": "Czar da Rússia",
+    "lifespan": "1672–1725",
+    "description": "Czar da Rússia entre 1682 e 1725, Pedro I modernizou o Império Russo à força europeizando a nobreza, criando a marinha, fundando São Petersburgo como janela para o Ocidente, subordinando a Igreja Ortodoxa ao Estado pelo Santo Sínodo e derrotando a Suécia na Grande Guerra do Norte. É o arquétipo do autocrata modernizador ortodoxo.",
+    "imagePath": "/personalities/portraits/pedro-o-grande.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Pedro,_o_Grande",
+    "imageNote": "Retrato de Pedro, o Grande via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "joao-calvino",
+    "name": "João Calvino",
+    "role": "Reformador protestante",
+    "lifespan": "1509–1564",
+    "description": "Teólogo francês, autor das Instituições da Religião Cristã e principal reformador da tradição reformada (calvinista). Organizou Genebra como república teocrática protestante entre 1541 e 1564, com o Consistório disciplinando moralidade pública, executando o antitrinitariano Servet em 1553 e criando o modelo puritano exportado para Escócia, Holanda, Inglaterra e Nova Inglaterra.",
+    "imagePath": "/personalities/portraits/joao-calvino.png",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/João_Calvino",
+    "imageNote": "Retrato de João Calvino via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "dom-manuel-i",
+    "name": "Dom Manuel I",
+    "role": "Rei de Portugal",
+    "lifespan": "1469–1521",
+    "description": "'O Venturoso', Dom Manuel I reinou entre 1495 e 1521 no auge da expansão marítima portuguesa: Vasco da Gama chegou à Índia em 1498, Pedro Álvares Cabral chegou ao Brasil em 1500, Afonso de Albuquerque conquistou Goa e Malaca. Estabeleceu a Casa da Índia como monopólio real do comércio de especiarias e decretou em 1497 a conversão forçada de judeus em Portugal — o rei do Império Português em seu apogeu.",
+    "imagePath": "/personalities/portraits/dom-manuel-i.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Manuel_I_de_Portugal",
+    "imageNote": "Retrato de Dom Manuel I via Wikipédia/Wikimedia Commons."
   }
 ]

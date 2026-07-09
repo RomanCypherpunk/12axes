@@ -3094,23 +3094,6 @@
     }
   },
   {
-    "personalityId": "nick-fuentes",
-    "vector": {
-      "estrutura": 28,
-      "representacao": 10,
-      "poder": 88,
-      "imigracao": 95,
-      "diplomacia": 40,
-      "intervencao": 60,
-      "economia": 35,
-      "controle": 40,
-      "comercio": 82,
-      "religiao": 5,
-      "moral": 5,
-      "tecnologia": 45
-    }
-  },
-  {
     "personalityId": "george-washington",
     "vector": {
       "estrutura": 78,
@@ -3720,6 +3703,108 @@
       "religiao": 30,
       "moral": 45,
       "tecnologia": 35
+    }
+  },
+  {
+    "personalityId": "papa-pio-ix",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 4,
+      "poder": 90,
+      "imigracao": 80,
+      "diplomacia": 58,
+      "intervencao": 20,
+      "economia": 55,
+      "controle": 65,
+      "comercio": 58,
+      "religiao": 1,
+      "moral": 2,
+      "tecnologia": 18
+    }
+  },
+  {
+    "personalityId": "justiniano-i",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 5,
+      "poder": 92,
+      "imigracao": 50,
+      "diplomacia": 80,
+      "intervencao": 12,
+      "economia": 45,
+      "controle": 72,
+      "comercio": 52,
+      "religiao": 6,
+      "moral": 15,
+      "tecnologia": 45
+    }
+  },
+  {
+    "personalityId": "filipe-ii-da-espanha",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 4,
+      "poder": 92,
+      "imigracao": 92,
+      "diplomacia": 85,
+      "intervencao": 8,
+      "economia": 42,
+      "controle": 62,
+      "comercio": 68,
+      "religiao": 2,
+      "moral": 3,
+      "tecnologia": 40
+    }
+  },
+  {
+    "personalityId": "pedro-o-grande",
+    "vector": {
+      "estrutura": 12,
+      "representacao": 3,
+      "poder": 94,
+      "imigracao": 52,
+      "diplomacia": 85,
+      "intervencao": 15,
+      "economia": 48,
+      "controle": 72,
+      "comercio": 52,
+      "religiao": 28,
+      "moral": 32,
+      "tecnologia": 72
+    }
+  },
+  {
+    "personalityId": "joao-calvino",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 12,
+      "poder": 95,
+      "imigracao": 75,
+      "diplomacia": 40,
+      "intervencao": 45,
+      "economia": 45,
+      "controle": 55,
+      "comercio": 50,
+      "religiao": 3,
+      "moral": 3,
+      "tecnologia": 42
+    }
+  },
+  {
+    "personalityId": "dom-manuel-i",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 5,
+      "poder": 85,
+      "imigracao": 82,
+      "diplomacia": 82,
+      "intervencao": 12,
+      "economia": 45,
+      "controle": 68,
+      "comercio": 72,
+      "religiao": 4,
+      "moral": 5,
+      "tecnologia": 58
     }
   }
 ]
