@@ -397,7 +397,7 @@ const pt: Strings = {
     `${country} - ${countryPct}% de compatibilidade\n\n` +
     `👤 Personalidade mais compatível:\n` +
     `${personality} - ${personalityPct}% de compatibilidade\n\n` +
-    `👉 Faça o teste e compartilhe seu resultado:\n12axes.vercel.app`,
+    `👉 Faça o teste e compartilhe seu resultado:\nhttps://12axes.vercel.app/`,
   progress: (current, total) => `Pergunta ${current} de ${total}`,
   progressDone: (percent) => `${percent}% concluído`,
   progressAria: (percent) => `Progresso do quiz: ${percent}%`,
@@ -670,7 +670,7 @@ const en: Strings = {
     `${country} - ${countryPct}% compatibility\n\n` +
     `👤 Most compatible personality:\n` +
     `${personality} - ${personalityPct}% compatibility\n\n` +
-    `👉 Take the test and share your result:\n12axes.vercel.app/en`,
+    `👉 Take the test and share your result:\nhttps://12axes.vercel.app/en`,
   progress: (current, total) => `Question ${current} of ${total}`,
   progressDone: (percent) => `${percent}% complete`,
   progressAria: (percent) => `Quiz progress: ${percent}%`,
