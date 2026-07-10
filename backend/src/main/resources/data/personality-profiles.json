@@ -121,17 +121,17 @@
   {
     "personalityId": "deng-xiaoping",
     "vector": {
-      "estrutura": 25,
+      "estrutura": 20,
       "representacao": 15,
       "poder": 82,
       "imigracao": 78,
       "diplomacia": 45,
-      "intervencao": 30,
+      "intervencao": 48,
       "economia": 58,
-      "controle": 62,
-      "comercio": 35,
+      "controle": 66,
+      "comercio": 42,
       "religiao": 80,
-      "moral": 28,
+      "moral": 42,
       "tecnologia": 80
     }
   },
@@ -342,8 +342,8 @@
   {
     "personalityId": "lee-kuan-yew",
     "vector": {
-      "estrutura": 30,
-      "representacao": 35,
+      "estrutura": 22,
+      "representacao": 28,
       "poder": 85,
       "imigracao": 75,
       "diplomacia": 55,
@@ -351,7 +351,7 @@
       "economia": 45,
       "controle": 55,
       "comercio": 25,
-      "religiao": 65,
+      "religiao": 55,
       "moral": 30,
       "tecnologia": 85
     }
@@ -1722,14 +1722,14 @@
       "estrutura": 80,
       "representacao": 80,
       "poder": 10,
-      "imigracao": 50,
+      "imigracao": 48,
       "diplomacia": 20,
       "intervencao": 85,
       "economia": 5,
       "controle": 5,
       "comercio": 10,
       "religiao": 60,
-      "moral": 55,
+      "moral": 58,
       "tecnologia": 80
     }
   },
@@ -1754,9 +1754,9 @@
     "personalityId": "hoppe",
     "vector": {
       "estrutura": 90,
-      "representacao": 15,
-      "poder": 25,
-      "imigracao": 90,
+      "representacao": 26,
+      "poder": 22,
+      "imigracao": 84,
       "diplomacia": 20,
       "intervencao": 85,
       "economia": 5,
