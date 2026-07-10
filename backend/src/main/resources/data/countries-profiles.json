@@ -317,8 +317,8 @@
       "economia": 45,
       "controle": 72,
       "comercio": 52,
-      "religiao": 62,
-      "moral": 42,
+      "religiao": 52,
+      "moral": 39,
       "tecnologia": 82
     }
   },
@@ -2054,6 +2054,108 @@
       "religiao": 4,
       "moral": 5,
       "tecnologia": 50
+    }
+  },
+  {
+    "countryId": "austria",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 74,
+      "poder": 38,
+      "imigracao": 52,
+      "diplomacia": 30,
+      "intervencao": 58,
+      "economia": 38,
+      "controle": 37,
+      "comercio": 38,
+      "religiao": 47,
+      "moral": 55,
+      "tecnologia": 57
+    }
+  },
+  {
+    "countryId": "imperio-alemao",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 26,
+      "poder": 63,
+      "imigracao": 64,
+      "diplomacia": 56,
+      "intervencao": 38,
+      "economia": 38,
+      "controle": 46,
+      "comercio": 53,
+      "religiao": 35,
+      "moral": 24,
+      "tecnologia": 55
+    }
+  },
+  {
+    "countryId": "portugal",
+    "vector": {
+      "estrutura": 48,
+      "representacao": 70,
+      "poder": 48,
+      "imigracao": 52,
+      "diplomacia": 42,
+      "intervencao": 50,
+      "economia": 50,
+      "controle": 50,
+      "comercio": 45,
+      "religiao": 55,
+      "moral": 55,
+      "tecnologia": 62
+    }
+  },
+  {
+    "countryId": "alemanha-oriental",
+    "vector": {
+      "estrutura": 18,
+      "representacao": 8,
+      "poder": 94,
+      "imigracao": 60,
+      "diplomacia": 66,
+      "intervencao": 30,
+      "economia": 94,
+      "controle": 95,
+      "comercio": 80,
+      "religiao": 90,
+      "moral": 52,
+      "tecnologia": 58
+    }
+  },
+  {
+    "countryId": "islandia",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 82,
+      "poder": 32,
+      "imigracao": 30,
+      "diplomacia": 25,
+      "intervencao": 65,
+      "economia": 55,
+      "controle": 52,
+      "comercio": 40,
+      "religiao": 72,
+      "moral": 86,
+      "tecnologia": 75
+    }
+  },
+  {
+    "countryId": "finlandia",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 82,
+      "poder": 32,
+      "imigracao": 45,
+      "diplomacia": 35,
+      "intervencao": 65,
+      "economia": 40,
+      "controle": 38,
+      "comercio": 30,
+      "religiao": 70,
+      "moral": 70,
+      "tecnologia": 78
     }
   },
   {
