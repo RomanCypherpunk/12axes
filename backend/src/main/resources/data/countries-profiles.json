@@ -204,6 +204,23 @@
     }
   },
   {
+    "countryId": "uniao-europeia",
+    "vector": {
+      "estrutura": 82,
+      "representacao": 80,
+      "poder": 32,
+      "imigracao": 42,
+      "diplomacia": 28,
+      "intervencao": 72,
+      "economia": 42,
+      "controle": 44,
+      "comercio": 24,
+      "religiao": 76,
+      "moral": 74,
+      "tecnologia": 76
+    }
+  },
+  {
     "countryId": "reino-unido",
     "vector": {
       "estrutura": 38,
@@ -225,7 +242,7 @@
     "vector": {
       "estrutura": 51,
       "representacao": 40,
-      "poder": 44,
+      "poder": 60,
       "imigracao": 68,
       "diplomacia": 35,
       "intervencao": 43,
@@ -740,7 +757,7 @@
       "diplomacia": 19,
       "intervencao": 78,
       "economia": 88,
-      "controle": 73,
+      "controle": 42,
       "comercio": 60,
       "religiao": 87,
       "moral": 85,
@@ -859,7 +876,7 @@
       "diplomacia": 40,
       "intervencao": 68,
       "economia": 82,
-      "controle": 70,
+      "controle": 42,
       "comercio": 65,
       "religiao": 82,
       "moral": 92,
@@ -995,7 +1012,7 @@
       "diplomacia": 35,
       "intervencao": 80,
       "economia": 92,
-      "controle": 75,
+      "controle": 42,
       "comercio": 70,
       "religiao": 86,
       "moral": 82,
@@ -1777,7 +1794,7 @@
       "diplomacia": 60,
       "intervencao": 45,
       "economia": 85,
-      "controle": 70,
+      "controle": 48,
       "comercio": 70,
       "religiao": 85,
       "moral": 80,
