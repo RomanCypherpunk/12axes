@@ -240,17 +240,17 @@
   {
     "countryId": "hungria",
     "vector": {
-      "estrutura": 51,
+      "estrutura": 35,
       "representacao": 40,
-      "poder": 60,
-      "imigracao": 68,
-      "diplomacia": 35,
-      "intervencao": 43,
-      "economia": 36,
-      "controle": 41,
-      "comercio": 43,
+      "poder": 62,
+      "imigracao": 72,
+      "diplomacia": 45,
+      "intervencao": 35,
+      "economia": 42,
+      "controle": 48,
+      "comercio": 60,
       "religiao": 26,
-      "moral": 28,
+      "moral": 22,
       "tecnologia": 63
     }
   },
@@ -303,6 +303,23 @@
       "religiao": 48,
       "moral": 39,
       "tecnologia": 81
+    }
+  },
+  {
+    "countryId": "coreia-do-sul-de-park-chung-hee",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 22,
+      "poder": 78,
+      "imigracao": 55,
+      "diplomacia": 55,
+      "intervencao": 42,
+      "economia": 45,
+      "controle": 72,
+      "comercio": 52,
+      "religiao": 62,
+      "moral": 42,
+      "tecnologia": 82
     }
   },
   {
@@ -363,7 +380,7 @@
       "representacao": 36,
       "poder": 77,
       "imigracao": 59,
-      "diplomacia": 28,
+      "diplomacia": 48,
       "intervencao": 41,
       "economia": 32,
       "controle": 48,
@@ -1277,18 +1294,18 @@
   {
     "countryId": "nova-zelandia",
     "vector": {
-      "estrutura": 45,
+      "estrutura": 50,
       "representacao": 88,
-      "poder": 30,
-      "imigracao": 35,
+      "poder": 32,
+      "imigracao": 40,
       "diplomacia": 25,
       "intervencao": 65,
-      "economia": 45,
-      "controle": 45,
-      "comercio": 28,
-      "religiao": 72,
-      "moral": 85,
-      "tecnologia": 70
+      "economia": 56,
+      "controle": 53,
+      "comercio": 40,
+      "religiao": 68,
+      "moral": 82,
+      "tecnologia": 48
     }
   },
   {
