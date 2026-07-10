@@ -90,8 +90,8 @@
     "personalityId": "ferdinand-lassalle"
   },
   {
-    "id": "progressivismo-autoritario",
-    "name": "Progressivismo Autoritário",
+    "id": "progressismo-autoritario",
+    "name": "Progressismo Autoritário",
     "category": "Esquerda Autoritária",
     "description": "Projeto que impõe de cima transformações sociais progressistas, usando o poder do Estado para acelerar mudanças de costumes e igualdade, mesmo à custa de liberdades individuais e da oposição política organizada.",
     "vector": null,
@@ -228,7 +228,7 @@
     "id": "alt-lite",
     "name": "Direita alternativa",
     "category": "Direita",
-    "description": "Vertente mais moderada da direita alternativa, nacionalista e antiglobalista, que rejeita o supremacismo racial explícito mas defende identidade cultural, crítica à imigração e combate ao politicamente correto.",
+    "description": "Vertente mais moderada da direita radical, nacionalista e antiglobalista, que rejeita o supremacismo racial explícito mas defende identidade cultural, crítica à imigração e combate ao politicamente correto.",
     "vector": null,
     "countryId": "estados-unidos",
     "personalityId": "steve-bannon"
@@ -576,8 +576,8 @@
     "personalityId": "hayek"
   },
   {
-    "id": "panarchismo",
-    "name": "Panarchismo",
+    "id": "panarquismo",
+    "name": "Panarquismo",
     "category": "Direita Libertária",
     "description": "Ideia de que cada pessoa poderia escolher livremente o governo ou sistema político ao qual se submete, sem vínculo territorial, permitindo múltiplas jurisdições voluntárias coexistindo no mesmo espaço.",
     "vector": null,
@@ -648,8 +648,8 @@
     "personalityId": "edmund-burke"
   },
   {
-    "id": "progressivismo",
-    "name": "Progressivismo",
+    "id": "progressismo",
+    "name": "Progressismo",
     "category": "Esquerda",
     "description": "Corrente que defende reformas sociais e ampliação de direitos para promover igualdade e justiça, confiando no progresso, na ciência e na ação coletiva para transformar instituições e superar desigualdades.",
     "vector": null,
@@ -1170,10 +1170,10 @@
     "personalityId": "hoppe"
   },
   {
-    "id": "monarquia-federativa",
-    "name": "Monarquia Federativa",
+    "id": "monarquismo-federalista",
+    "name": "Monarquismo Federalista",
     "category": "Direita",
-    "description": "Modelo que une a monarquia a uma estrutura federal, com poder dividido entre a coroa e regiões autônomas, combinando unidade simbólica e continuidade histórica com descentralização e autogoverno local.",
+    "description": "Corrente monarquista que defende uma coroa limitada por uma estrutura federal, com poder dividido entre o soberano e regiões autônomas, combinando unidade simbólica e continuidade histórica com descentralização e autogoverno local.",
     "vector": null,
     "countryId": "sacro-imperio-romano-germanico",
     "personalityId": "otto-von-habsburg"
@@ -1323,10 +1323,10 @@
     "personalityId": "peter-thiel"
   },
   {
-    "id": "direita-progressista",
-    "name": "Direita Progressista",
+    "id": "progressismo-de-direita",
+    "name": "Progressismo de Direita",
     "category": "Centro",
-    "description": "Vertente que une capitalismo, culto ao progresso tecnológico a uma cultura socialmente progressista, pragmático e secular, confiando o rumo da sociedade a uma elite técnica em vez da democracia de massas.",
+    "description": "Vertente progressista de direita que une capitalismo e culto ao progresso tecnológico a uma cultura socialmente progressista, pragmática e secular, confiando o rumo da sociedade a uma elite técnica em vez da democracia de massas.",
     "vector": null,
     "countryId": "eua-california",
     "personalityId": "elon-musk"
@@ -1413,10 +1413,10 @@
     "personalityId": "javier-milei"
   },
   {
-    "id": "teocracia-crista",
-    "name": "Teocracia Cristã",
+    "id": "teocratismo-cristao",
+    "name": "Teocratismo Cristão",
     "category": "Direita Autoritária",
-    "description": "Doutrina que subordina o poder político à autoridade religiosa cristã, defendendo que a lei divina e a Igreja devem reger o Estado e os costumes, do ultramontanismo medieval e papal aos projetos reconstrucionistas modernos.",
+    "description": "Doutrina teocratista cristã que subordina o poder político à autoridade religiosa, defendendo que a lei divina e a Igreja devem reger o Estado e os costumes, do ultramontanismo medieval e papal aos projetos reconstrucionistas modernos.",
     "vector": null,
     "countryId": "vaticano",
     "personalityId": "joseph-de-maistre"
