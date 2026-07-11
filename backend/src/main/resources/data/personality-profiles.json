@@ -87,7 +87,7 @@
   {
     "personalityId": "kim-il-sung",
     "vector": {
-      "estrutura": 15,
+      "estrutura": 10,
       "representacao": 6,
       "poder": 92,
       "imigracao": 80,
@@ -95,10 +95,10 @@
       "intervencao": 18,
       "economia": 90,
       "controle": 90,
-      "comercio": 88,
-      "religiao": 85,
+      "comercio": 92,
+      "religiao": 88,
       "moral": 50,
-      "tecnologia": 55
+      "tecnologia": 45
     }
   },
   {
@@ -295,11 +295,11 @@
       "representacao": 8,
       "poder": 92,
       "imigracao": 85,
-      "diplomacia": 80,
+      "diplomacia": 45,
       "intervencao": 12,
-      "economia": 40,
+      "economia": 55,
       "controle": 68,
-      "comercio": 80,
+      "comercio": 70,
       "religiao": 8,
       "moral": 10,
       "tecnologia": 35
@@ -420,7 +420,7 @@
       "controle": 10,
       "comercio": 16,
       "religiao": 72,
-      "moral": 56,
+      "moral": 45,
       "tecnologia": 91
     }
   },
@@ -589,7 +589,7 @@
       "economia": 25,
       "controle": 30,
       "comercio": 35,
-      "religiao": 49,
+      "religiao": 60,
       "moral": 29,
       "tecnologia": 72
     }
@@ -2030,7 +2030,7 @@
       "poder": 52,
       "imigracao": 45,
       "diplomacia": 58,
-      "intervencao": 60,
+      "intervencao": 45,
       "economia": 35,
       "controle": 40,
       "comercio": 25,
@@ -2849,10 +2849,10 @@
       "intervencao": 15,
       "economia": 52,
       "controle": 62,
-      "comercio": 75,
+      "comercio": 80,
       "religiao": 8,
       "moral": 8,
-      "tecnologia": 35
+      "tecnologia": 45
     }
   },
   {
@@ -3283,7 +3283,7 @@
   {
     "personalityId": "carlos-magno",
     "vector": {
-      "estrutura": 35,
+      "estrutura": 50,
       "representacao": 5,
       "poder": 90,
       "imigracao": 65,
@@ -3294,7 +3294,7 @@
       "comercio": 75,
       "religiao": 5,
       "moral": 8,
-      "tecnologia": 40
+      "tecnologia": 30
     }
   },
   {
