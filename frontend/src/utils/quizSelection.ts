@@ -85,6 +85,61 @@ export function selectAllQuestionsBalanced(payload: QuizPayload): QuizPayload {
   };
 }
 
+/**
+ * Extensão do quiz curto (36 → 60): escolhe `perPolePerAxis` novas afirmações
+ * LEFT e RIGHT de cada eixo, ignorando as que o usuário já respondeu, e
+ * intercala os polos para não repetir dois iguais em sequência.
+ */
+export function selectExtensionQuestions(
+  payload: QuizPayload,
+  excludeIds: Set<string>,
+  perPolePerAxis = 1
+): Question[] {
+  const byAxis = new Map<string, Question[]>();
+  for (const q of payload.questions) {
+    if (excludeIds.has(q.id)) {
+      continue;
+    }
+    const group = byAxis.get(q.axisId) ?? [];
+    group.push(q);
+    byAxis.set(q.axisId, group);
+  }
+
+  const selected: Question[] = [];
+  for (const axisQuestions of byAxis.values()) {
+    const leftPool = shuffleArray(axisQuestions.filter((q) => q.agreePole === 'LEFT'));
+    const rightPool = shuffleArray(axisQuestions.filter((q) => q.agreePole === 'RIGHT'));
+    selected.push(...leftPool.slice(0, perPolePerAxis), ...rightPool.slice(0, perPolePerAxis));
+  }
+
+  return interleaveByPole(selected);
+}
+
+// Reordena para alternar afirmações LEFT/RIGHT enquanto houver de ambos os lados.
+function interleaveByPole(questions: Question[]): Question[] {
+  const leftQueue = shuffleArray(questions.filter((q) => q.agreePole === 'LEFT'));
+  const rightQueue = shuffleArray(questions.filter((q) => q.agreePole === 'RIGHT'));
+  const ordered: Question[] = [];
+  let li = 0;
+  let ri = 0;
+  let pickLeft = Math.random() < 0.5;
+
+  for (let i = 0; i < questions.length; i++) {
+    if (pickLeft && li < leftQueue.length) {
+      ordered.push(leftQueue[li++]);
+    } else if (!pickLeft && ri < rightQueue.length) {
+      ordered.push(rightQueue[ri++]);
+    } else if (li < leftQueue.length) {
+      ordered.push(leftQueue[li++]);
+    } else {
+      ordered.push(rightQueue[ri++]);
+    }
+    pickLeft = !pickLeft;
+  }
+
+  return ordered;
+}
+
 function shuffleArray<T>(items: T[]): T[] {
   const shuffled = [...items];
   for (let i = shuffled.length - 1; i > 0; i--) {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './quizSelection';
+import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './quizSelection';
 import type { QuizPayload } from '../types/quiz';
 
 const AXIS_IDS = [
@@ -88,6 +88,38 @@ describe('selectAllQuestionsBalanced — quiz extremo', () => {
         result.questions[i].agreePole,
         `questões ${i - 1} e ${i} têm mesmo polo`
       ).not.toBe(result.questions[i - 1].agreePole);
+    }
+  });
+});
+
+describe('selectExtensionQuestions — extensão do quiz curto (36 → 60)', () => {
+  it('retorna 24 questões novas (2 por eixo) sem repetir as já respondidas', () => {
+    const pool = makePool(20, 3);
+    const base = selectAndBalanceQuestions(pool);
+    const usedIds = new Set(base.questions.map((q) => q.id));
+
+    const extra = selectExtensionQuestions(pool, usedIds, 1);
+
+    expect(extra).toHaveLength(24);
+    for (const axisId of AXIS_IDS) {
+      expect(extra.filter((q) => q.axisId === axisId), `eixo ${axisId}`).toHaveLength(2);
+    }
+    // Uma LEFT e uma RIGHT por eixo.
+    expect(extra.filter((q) => q.agreePole === 'LEFT')).toHaveLength(12);
+    expect(extra.filter((q) => q.agreePole === 'RIGHT')).toHaveLength(12);
+    // Nenhuma repete as 36 originais.
+    expect(extra.every((q) => !usedIds.has(q.id))).toBe(true);
+    // As 60 finais são todas distintas.
+    const allIds = new Set([...base.questions, ...extra].map((q) => q.id));
+    expect(allIds.size).toBe(60);
+  });
+
+  it('não apresenta dois polos iguais consecutivos', () => {
+    const pool = makePool(20, 3);
+    const usedIds = new Set(selectAndBalanceQuestions(pool).questions.map((q) => q.id));
+    const extra = selectExtensionQuestions(pool, usedIds, 1);
+    for (let i = 1; i < extra.length; i++) {
+      expect(extra[i].agreePole).not.toBe(extra[i - 1].agreePole);
     }
   });
 });

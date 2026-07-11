@@ -1,12 +1,13 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
+import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './utils/quizSelection';
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 
-type Screen = 'home' | 'variant' | 'quiz' | 'results';
+type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
+type ExtendChoice = 'yes' | 'no';
 type QuizFormatOption = {
   variant: QuizVariant;
   label: string;
@@ -130,8 +131,13 @@ export default function App() {
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isExtended, setIsExtended] = useState(false);
+  const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
+  // Pool completo (240 perguntas) recebido do backend, guardado para poder
+  // sortear as 24 questões extras da extensão sem repetir as já respondidas.
+  const poolRef = useRef<QuizPayload | null>(null);
 
   useEffect(() => {
     if (SHARED_RESULT_VALUES) {
@@ -152,6 +158,7 @@ export default function App() {
 
     fetchQuiz(INITIAL_VARIANT)
       .then((payload) => {
+        poolRef.current = payload;
         setQuiz(buildQuizForVariant(payload, INITIAL_VARIANT));
         setScreen('quiz');
       })
@@ -222,6 +229,8 @@ export default function App() {
     setResult(null);
     setError(null);
     setCurrentIndex(0);
+    setIsExtended(false);
+    setExtendChoice(null);
     setScreen('variant');
   }
 
@@ -233,10 +242,13 @@ export default function App() {
     setResult(null);
     setError(null);
     setCurrentIndex(0);
+    setIsExtended(false);
+    setExtendChoice(null);
     setIsLoading(true);
 
     try {
       const nextQuiz = await fetchQuiz(variant);
+      poolRef.current = nextQuiz;
       setQuiz(buildQuizForVariant(nextQuiz, variant));
       setScreen('quiz');
     } catch (err) {
@@ -278,7 +290,7 @@ export default function App() {
     setError(null);
 
     if (questionIndex === quiz.questions.length - 1) {
-      void finishQuiz(nextAnswers);
+      handleQuizEnd(nextAnswers);
       return;
     }
 
@@ -293,6 +305,64 @@ export default function App() {
       setIsAdvancing(false);
       advanceTimerRef.current = null;
     }, 200);
+  }
+
+  // Fim do quiz: na versão curta (36) ainda não estendida, oferece as 24
+  // questões extras antes de calcular; nas demais, vai direto ao resultado.
+  function handleQuizEnd(answerMap = answers) {
+    if (quiz?.variant === 'short' && !isExtended) {
+      clearPendingAdvance();
+      setExtendChoice(null);
+      setError(null);
+      setScreen('extend');
+      return;
+    }
+    void finishQuiz(answerMap);
+  }
+
+  // Igual às demais perguntas: clicar na opção já avança, sem botão "Avançar".
+  function chooseExtend(choice: ExtendChoice) {
+    if (isSubmitting) {
+      return;
+    }
+    setExtendChoice(choice);
+    if (choice === 'yes') {
+      extendQuiz();
+    } else {
+      void finishQuiz();
+    }
+  }
+
+  // Volta da tela de extensão para a última questão respondida.
+  function goBackFromExtend() {
+    if (!quiz) {
+      return;
+    }
+    setScreen('quiz');
+    setCurrentIndex(quiz.questions.length - 1);
+  }
+
+  // Estende o quiz curto de 36 → 60: sorteia 24 novas questões (2 por eixo,
+  // uma LEFT e uma RIGHT), sem repetir as já respondidas, e segue na 37ª.
+  function extendQuiz() {
+    const pool = poolRef.current;
+    if (!quiz || !pool) {
+      void finishQuiz();
+      return;
+    }
+    const usedIds = new Set(quiz.questions.map((question) => question.id));
+    const extraQuestions = selectExtensionQuestions(pool, usedIds, 1);
+    if (extraQuestions.length === 0) {
+      void finishQuiz();
+      return;
+    }
+    const startIndex = quiz.questions.length;
+    const nextQuestions = [...quiz.questions, ...extraQuestions];
+    setQuiz({ ...quiz, questions: nextQuestions, questionCount: nextQuestions.length });
+    setIsExtended(true);
+    setError(null);
+    setCurrentIndex(startIndex);
+    setScreen('quiz');
   }
 
   async function finishQuiz(answerMap = answers) {
@@ -448,7 +518,7 @@ export default function App() {
             </button>
           </nav>
         )}
-        {(screen === 'quiz' || screen === 'results') && (
+        {(screen === 'quiz' || screen === 'extend' || screen === 'results') && (
           <button className="primary-button header-cta" type="button" onClick={() => void startQuiz(selectedVariant)}>
             {screen === 'results' ? t.redoQuiz : t.restartQuiz}
             <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
@@ -709,8 +779,8 @@ export default function App() {
                 </svg>
               </button>
             ) : (
-              <button className="primary-button" type="button" onClick={() => finishQuiz()} disabled={!canFinish || isSubmitting}>
-                {isSubmitting ? t.calculating : t.seeResult}
+              <button className="primary-button" type="button" onClick={() => handleQuizEnd()} disabled={!canFinish || isSubmitting}>
+                {quiz.variant === 'short' && !isExtended ? t.next : isSubmitting ? t.calculating : t.seeResult}
                 <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" />
                   <path d="m13 6 6 6-6 6" />
@@ -721,6 +791,65 @@ export default function App() {
           {error && <p className="inline-error" role="alert">{error}</p>}
         </section>
         </Suspense>
+      )}
+
+      {screen === 'extend' && quiz && (
+        <section className="quiz-layout">
+          <article className="question-card extend-card" aria-labelledby="extend-title">
+            <header className="question-card-header">
+              <p className="question-axis">{t.progress(quiz.questions.length, 60)}</p>
+              <h2 id="extend-title">{t.extendTitle}</h2>
+            </header>
+            <div className="answer-grid" role="radiogroup" aria-label={t.extendAria}>
+              <button
+                className={extendChoice === 'yes' ? 'answer-button selected' : 'answer-button'}
+                data-answer="STRONGLY_AGREE"
+                type="button"
+                role="radio"
+                aria-checked={extendChoice === 'yes'}
+                disabled={isSubmitting}
+                onClick={() => chooseExtend('yes')}
+              >
+                <span className="answer-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="m6 12 4 4 8-8" />
+                  </svg>
+                </span>
+                <span>{t.extendYes}</span>
+                <span aria-hidden="true" />
+              </button>
+              <button
+                className={extendChoice === 'no' ? 'answer-button selected' : 'answer-button'}
+                data-answer="NEUTRAL"
+                type="button"
+                role="radio"
+                aria-checked={extendChoice === 'no'}
+                disabled={isSubmitting}
+                onClick={() => chooseExtend('no')}
+              >
+                <span className="answer-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="m7 7 10 10" />
+                    <path d="m17 7-10 10" />
+                  </svg>
+                </span>
+                <span>{t.extendNo}</span>
+                <span aria-hidden="true" />
+              </button>
+            </div>
+          </article>
+
+          <nav className="quiz-actions" aria-label={t.quizNavAria}>
+            <button className="secondary-button" type="button" onClick={goBackFromExtend} disabled={isSubmitting}>
+              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true" style={{ transform: 'rotate(180deg)' }}>
+                <path d="M5 12h14" />
+                <path d="m13 6 6 6-6 6" />
+              </svg>
+              {t.back}
+            </button>
+          </nav>
+          {error && <p className="inline-error" role="alert">{error}</p>}
+        </section>
       )}
 
       {screen === 'results' && result && (quiz || isSharedView) && (
