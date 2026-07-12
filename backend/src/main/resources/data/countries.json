@@ -1538,5 +1538,33 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Mongol_Empire.svg",
     "flagNote": "Bandeira conjectural marcada no Commons como especulativa; usada apenas como referência visual por falta de bandeira estatal comprovada para o período."
+  },
+  {
+    "id": "brasil-regime-militar",
+    "name": "Brasil do Regime Militar",
+    "category": "Ditadura desenvolvimentista",
+    "description": "Instaurado pelo golpe de 1964, o regime militar combinou repressão política com AI-5, censura e DOI-CODI, um desenvolvimentismo estatal do milagre econômico e do II PND e moralismo conservador.",
+    "flagPath": "/countries/flags/brasil.gif",
+    "historical": true,
+    "period": "1964–1985",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
+    "flagNote": "O regime manteve a bandeira nacional brasileira."
+  },
+  {
+    "id": "mexico-de-cardenas",
+    "name": "México de Cárdenas",
+    "category": "Nacional-populismo revolucionário",
+    "description": "Auge da revolução institucionalizada: Cárdenas nacionalizou o petróleo, realizou a maior reforma agrária das Américas com os ejidos coletivos, incorporou sindicatos e camponeses ao partido e consolidou um Estado laico, popular e corporativista.",
+    "flagPath": "/countries/flags/mexico-de-cardenas.png",
+    "historical": true,
+    "period": "1934–1940",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico_(1934-1968).svg",
+    "flagNote": "Bandeira mexicana com o escudo do período 1934–1968."
   }
 ]

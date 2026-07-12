@@ -2769,5 +2769,107 @@
       "moral": 20,
       "tecnologia": 92
     }
+  },
+  {
+    "ideologyId": "populismo-de-direita",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 30,
+      "poder": 66,
+      "imigracao": 72,
+      "diplomacia": 68,
+      "intervencao": 30,
+      "economia": 55,
+      "controle": 55,
+      "comercio": 60,
+      "religiao": 18,
+      "moral": 18,
+      "tecnologia": 45
+    }
+  },
+  {
+    "ideologyId": "populismo-de-esquerda",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 55,
+      "poder": 55,
+      "imigracao": 35,
+      "diplomacia": 45,
+      "intervencao": 35,
+      "economia": 80,
+      "controle": 72,
+      "comercio": 72,
+      "religiao": 60,
+      "moral": 70,
+      "tecnologia": 50
+    }
+  },
+  {
+    "ideologyId": "centrismo-social",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 70,
+      "poder": 52,
+      "imigracao": 42,
+      "diplomacia": 38,
+      "intervencao": 55,
+      "economia": 68,
+      "controle": 62,
+      "comercio": 55,
+      "religiao": 58,
+      "moral": 68,
+      "tecnologia": 58
+    }
+  },
+  {
+    "ideologyId": "centrismo-liberal",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 80,
+      "poder": 35,
+      "imigracao": 42,
+      "diplomacia": 42,
+      "intervencao": 60,
+      "economia": 35,
+      "controle": 38,
+      "comercio": 42,
+      "religiao": 62,
+      "moral": 64,
+      "tecnologia": 62
+    }
+  },
+  {
+    "ideologyId": "centrismo-ambientalista",
+    "vector": {
+      "estrutura": 52,
+      "representacao": 74,
+      "poder": 45,
+      "imigracao": 48,
+      "diplomacia": 32,
+      "intervencao": 58,
+      "economia": 58,
+      "controle": 56,
+      "comercio": 52,
+      "religiao": 62,
+      "moral": 64,
+      "tecnologia": 28
+    }
+  },
+  {
+    "ideologyId": "centrismo-conservador",
+    "vector": {
+      "estrutura": 48,
+      "representacao": 64,
+      "poder": 58,
+      "imigracao": 66,
+      "diplomacia": 50,
+      "intervencao": 48,
+      "economia": 52,
+      "controle": 52,
+      "comercio": 56,
+      "religiao": 30,
+      "moral": 28,
+      "tecnologia": 45
+    }
   }
 ]

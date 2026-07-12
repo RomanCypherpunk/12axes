@@ -1872,18 +1872,18 @@
   {
     "personalityId": "phil-zimmermann",
     "vector": {
-      "estrutura": 98,
-      "representacao": 90,
-      "poder": 5,
-      "imigracao": 60,
-      "diplomacia": 15,
-      "intervencao": 92,
-      "economia": 10,
-      "controle": 5,
-      "comercio": 10,
-      "religiao": 75,
-      "moral": 75,
-      "tecnologia": 98
+      "estrutura": 75,
+      "representacao": 88,
+      "poder": 3,
+      "imigracao": 40,
+      "diplomacia": 8,
+      "intervencao": 80,
+      "economia": 35,
+      "controle": 38,
+      "comercio": 30,
+      "religiao": 72,
+      "moral": 85,
+      "tecnologia": 95
     }
   },
   {
@@ -3839,6 +3839,23 @@
       "religiao": 55,
       "moral": 25,
       "tecnologia": 42
+    }
+  },
+  {
+    "personalityId": "lazaro-cardenas",
+    "vector": {
+      "estrutura": 45,
+      "representacao": 52,
+      "poder": 55,
+      "imigracao": 35,
+      "diplomacia": 45,
+      "intervencao": 55,
+      "economia": 88,
+      "controle": 80,
+      "comercio": 75,
+      "religiao": 70,
+      "moral": 62,
+      "tecnologia": 40
     }
   }
 ]

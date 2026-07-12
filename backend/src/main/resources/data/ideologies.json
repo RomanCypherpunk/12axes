@@ -1465,5 +1465,59 @@
     "vector": null,
     "countryId": "eua-texas",
     "personalityId": "peter-thiel"
+  },
+  {
+    "id": "populismo-de-direita",
+    "name": "Populismo de Direita",
+    "category": "Direita Autoritária",
+    "description": "Corrente que opõe-se ao socialismo e ao progressismo, combinando nacionalismo, restrição migratória dura, defesa dos valores tradicionais e da religião com Estado forte na segurança e pragmatismo econômico.",
+    "vector": null,
+    "countryId": "hungria",
+    "personalityId": "viktor-orban"
+  },
+  {
+    "id": "populismo-de-esquerda",
+    "name": "Populismo de Esquerda",
+    "category": "Esquerda",
+    "description": "Mobiliza o povo contra as elites econômicas e o sistema financeiro, defendendo redistribuição agressiva, controle público da economia, soberania contra o capital estrangeiro e democracia plebiscitária, na linha de Podemos, Mélenchon e do bolivarianismo moderado.",
+    "vector": null,
+    "countryId": "bolivia",
+    "personalityId": "evo-morales"
+  },
+  {
+    "id": "centrismo-social",
+    "name": "Centrismo Social",
+    "category": "Centro",
+    "description": "Centro com coração social-democrata: aceita o mercado, mas prioriza redes de proteção, serviços públicos fortes e avanços graduais nos costumes, buscando consenso e estabilidade em vez de ruptura para qualquer lado.",
+    "vector": null,
+    "countryId": "costa-rica",
+    "personalityId": "barack-obama"
+  },
+  {
+    "id": "centrismo-liberal",
+    "name": "Centrismo Liberal",
+    "category": "Centro",
+    "description": "Centro pró-mercado e institucionalista: livre iniciativa com responsabilidade fiscal, democracia liberal sólida, abertura moderada ao mundo e pragmatismo nos costumes, típico de reformistas de centro que rejeitam tanto o estatismo quanto o radicalismo libertário.",
+    "vector": null,
+    "countryId": "chile",
+    "personalityId": "fernando-henrique-cardoso"
+  },
+  {
+    "id": "centrismo-ambientalista",
+    "name": "Centrismo Ambientalista",
+    "category": "Centro",
+    "description": "Centro verde e pragmático: leva a crise climática a sério com transição gradual, regulação ambiental e cautela tecnológica, mas sem o anticapitalismo da esquerda ecológica — sustentabilidade dentro do mercado e das instituições.",
+    "vector": null,
+    "countryId": "nova-zelandia",
+    "personalityId": "al-gore"
+  },
+  {
+    "id": "centrismo-conservador",
+    "name": "Centrismo Conservador",
+    "category": "Centro",
+    "description": "Centro de costumes tradicionais: moderado em economia e apegado às instituições, mas socialmente conservador — família, religião e ordem valorizadas sem o radicalismo da direita autoritária, no espírito do conservadorismo de uma nação.",
+    "vector": null,
+    "countryId": "austria",
+    "personalityId": "benjamin-disraeli"
   }
 ]

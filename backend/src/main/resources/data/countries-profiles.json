@@ -2174,5 +2174,39 @@
       "moral": 30,
       "tecnologia": 42
     }
+  },
+  {
+    "countryId": "brasil-regime-militar",
+    "vector": {
+      "estrutura": 30,
+      "representacao": 15,
+      "poder": 88,
+      "imigracao": 60,
+      "diplomacia": 55,
+      "intervencao": 40,
+      "economia": 62,
+      "controle": 72,
+      "comercio": 78,
+      "religiao": 30,
+      "moral": 12,
+      "tecnologia": 68
+    }
+  },
+  {
+    "countryId": "mexico-de-cardenas",
+    "vector": {
+      "estrutura": 40,
+      "representacao": 48,
+      "poder": 58,
+      "imigracao": 45,
+      "diplomacia": 55,
+      "intervencao": 42,
+      "economia": 85,
+      "controle": 78,
+      "comercio": 72,
+      "religiao": 75,
+      "moral": 70,
+      "tecnologia": 40
+    }
   }
 ]
