@@ -136,6 +136,32 @@ class IdeologyMatcherServiceTest {
     }
 
     @Test
+    void diverseMatchesAreReturnedInCompatibilityOrder() {
+        var axes = axisResults(Map.ofEntries(
+                Map.entry("estrutura", 75.0),
+                Map.entry("representacao", 18.8),
+                Map.entry("poder", 62.5),
+                Map.entry("imigracao", 87.5),
+                Map.entry("diplomacia", 62.5),
+                Map.entry("intervencao", 56.3),
+                Map.entry("economia", 25.0),
+                Map.entry("controle", 43.8),
+                Map.entry("comercio", 43.8),
+                Map.entry("religiao", 81.3),
+                Map.entry("moral", 0.0),
+                Map.entry("tecnologia", 87.5)
+        ));
+
+        var matches = matcherService.findMatches(axes);
+
+        assertThat(matches).hasSize(4);
+        for (int index = 1; index < matches.size(); index++) {
+            assertThat(matches.get(index).compatibility())
+                    .isLessThanOrEqualTo(matches.get(index - 1).compatibility());
+        }
+    }
+
+    @Test
     void matchDescriptionsHaveShortAndDetailedVariants() {
         List<SubmittedAnswer> answers = dataService.getQuestions().stream()
                 .map(q -> new SubmittedAnswer(q.id(), AnswerValue.NEUTRAL))

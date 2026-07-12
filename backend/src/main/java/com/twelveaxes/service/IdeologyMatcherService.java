@@ -33,6 +33,7 @@ public class IdeologyMatcherService {
         String normalizedLang = QuizDataService.normalizeLang(lang);
 
         return selectDiverseMatches(rankCandidates(userVector, normalizedLang)).stream()
+                .sorted(byScoreThenName())
                 .map(candidate -> toMatch(candidate, normalizedLang))
                 .toList();
     }
@@ -47,10 +48,6 @@ public class IdeologyMatcherService {
     }
 
     private List<IdeologyCandidate> rankCandidates(Map<String, Double> userVector, String normalizedLang) {
-        Comparator<IdeologyCandidate> byScore =
-                Comparator.comparingDouble(IdeologyCandidate::compatibility).reversed();
-        Comparator<IdeologyCandidate> byName = Comparator.comparing(candidate -> candidate.ideology().name());
-
         List<IdeologyCandidate> candidates = dataService.getIdeologies(normalizedLang).stream()
                 .map(ideology -> toCandidate(ideology, userVector))
                 .toList();
@@ -59,8 +56,14 @@ public class IdeologyMatcherService {
                 .toList();
         return candidates.stream()
                 .map(candidate -> withPercentile(candidate, catalogScores))
-                .sorted(byScore.thenComparing(byName))
+                .sorted(byScoreThenName())
                 .toList();
+    }
+
+    private Comparator<IdeologyCandidate> byScoreThenName() {
+        return Comparator.comparingDouble(IdeologyCandidate::compatibility)
+                .reversed()
+                .thenComparing(candidate -> candidate.ideology().name());
     }
 
     private List<IdeologyCandidate> selectDiverseMatches(List<IdeologyCandidate> rankedCandidates) {
