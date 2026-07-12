@@ -9,7 +9,6 @@ interface PersonalityMatchCardProps {
 
 export function PersonalityMatchCard({ match }: PersonalityMatchCardProps) {
   const pct = Math.max(0, Math.min(100, match.compatibility));
-  const percentile = Math.max(0, Math.min(100, match.compatibilityPercentile ?? 0));
   const imageSrc = resolvePersonalityImageSrc(match.imagePath);
   const [failedSrc, setFailedSrc] = useState<string | null>(null);
   const showImage = Boolean(imageSrc) && failedSrc !== imageSrc;
@@ -36,10 +35,7 @@ export function PersonalityMatchCard({ match }: PersonalityMatchCardProps) {
             <span className="personality-match-kicker">{t.personalityKicker}</span>
             <h2>{match.name}</h2>
           </div>
-          <span className="personality-match-score">
-            {pct.toFixed(0)}% {t.matchWord}
-            <small>{t.percentileLabel(percentile.toFixed(0))}</small>
-          </span>
+          <span className="personality-match-score">{pct.toFixed(0)}% {t.matchWord}</span>
         </div>
         <div className="personality-match-meta">
           <span>{match.role}</span>

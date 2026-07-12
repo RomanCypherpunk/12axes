@@ -9,7 +9,6 @@ interface CountryMatchCardProps {
 
 export function CountryMatchCard({ match }: CountryMatchCardProps) {
   const pct = Math.max(0, Math.min(100, match.compatibility));
-  const percentile = Math.max(0, Math.min(100, match.compatibilityPercentile ?? 0));
   const isStrictFlag = !match.flagKind || match.flagKind === 'official-flag' || match.flagKind === 'historical-flag';
   const visualLabel = isStrictFlag ? t.flagLabel : t.flagHistoricLabel;
   const flagSrc = resolveCountryFlagSrc(match.flagPath);
@@ -39,10 +38,7 @@ export function CountryMatchCard({ match }: CountryMatchCardProps) {
             <span className="country-match-kicker">{t.countryKicker}</span>
             <h2>{match.name}</h2>
           </div>
-          <span className="country-match-score">
-            {pct.toFixed(0)}% {t.matchWord}
-            <small>{t.percentileLabel(percentile.toFixed(0))}</small>
-          </span>
+          <span className="country-match-score">{pct.toFixed(0)}% {t.matchWord}</span>
         </div>
         <div className="country-match-meta">
           <span>{match.category}</span>
