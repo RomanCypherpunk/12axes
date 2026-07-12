@@ -157,6 +157,7 @@ interface Strings {
   portraitUnavailableAria: (name: string) => string;
   compatibilityAria: (pct: string) => string;
   matchWord: string;
+  percentileLabel: (pct: string) => string;
   shareTitle: string;
   shareTopMatch: string;
   shareCountry: string;
@@ -186,7 +187,7 @@ const pt: Strings = {
   h1Em: 'posição política',
   h1Post: ' em apenas 5 minutos',
   introLead:
-    'Analise suas opiniões em 12 dimensões independentes, compare seus resultados com diferentes correntes políticas, países e personalidades e entenda como suas ideias se distribuem no espectro político.',
+    'Analise suas opiniões em 12 dimensões políticas, compare seus resultados com diferentes correntes políticas, países e personalidades e entenda como suas ideias se distribuem no espectro político.',
   startQuiz: 'Começar o Quiz',
   seeAxes: 'Ver os 12 eixos',
   heroLabels: ['Gratuito', 'Anônimo', 'Rápido', 'Resultado imediato'],
@@ -340,7 +341,7 @@ const pt: Strings = {
     },
     {
       title: 'Análise em 12 eixos',
-      text: 'Cada resposta posiciona você em 12 eixos ideológicos independentes - do livre mercado ao planejamento, do nacionalismo ao globalismo.'
+      text: 'Cada resposta posiciona você em 12 eixos ideológicos - do livre mercado ao planejamento, do nacionalismo ao globalismo.'
     },
     {
       title: 'Descubra seu perfil',
@@ -421,6 +422,7 @@ const pt: Strings = {
   portraitUnavailableAria: (name) => `Retrato indisponível de ${name}`,
   compatibilityAria: (pct) => `Compatibilidade: ${pct} por cento`,
   matchWord: 'match',
+  percentileLabel: (pct) => `mais próximo que ${pct}% do catálogo`,
   shareTitle: 'Seu perfil ideológico | 12axes.vercel.app',
   shareTopMatch: 'Top match',
   shareCountry: 'País mais compatível',
@@ -450,7 +452,7 @@ const en: Strings = {
   h1Em: 'political position',
   h1Post: ' in just 5 minutes',
   introLead:
-    'Analyze your opinions across 12 independent dimensions, compare your results with different political currents, countries, and personalities, and understand how your ideas are distributed across the political spectrum.',
+    'Analyze your opinions across 12 political dimensions, compare your results with different political currents, countries, and personalities, and understand how your ideas are distributed across the political spectrum.',
   startQuiz: 'Start the Quiz',
   seeAxes: 'See the 12 axes',
   heroLabels: ['Free', 'Anonymous', 'Fast', 'Instant results'],
@@ -617,7 +619,7 @@ const en: Strings = {
     },
     {
       title: 'Analysis across 12 axes',
-      text: 'Each answer positions you on 12 independent ideological axes - from free markets to planning, from nationalism to globalism.'
+      text: 'Each answer positions you on 12 ideological axes - from free markets to planning, from nationalism to globalism.'
     },
     {
       title: 'Discover your profile',
@@ -698,6 +700,7 @@ const en: Strings = {
   portraitUnavailableAria: (name) => `Portrait unavailable for ${name}`,
   compatibilityAria: (pct) => `Compatibility: ${pct} percent`,
   matchWord: 'match',
+  percentileLabel: (pct) => `closer than ${pct}% of this catalog`,
   shareTitle: 'My ideological profile | 12axes.vercel.app',
   shareTopMatch: 'Top match',
   shareCountry: 'Most compatible country',

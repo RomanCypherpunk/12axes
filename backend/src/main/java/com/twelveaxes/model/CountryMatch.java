@@ -12,6 +12,7 @@ public record CountryMatch(
         String flagNote,
         boolean historical,
         String period,
-        double compatibility
+        double compatibility,
+        double compatibilityPercentile
 ) {
 }

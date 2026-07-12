@@ -8,6 +8,7 @@ interface IdeologyMatchCardProps {
 
 export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCardProps) {
   const pct = Math.max(0, Math.min(100, match.compatibility));
+  const percentile = Math.max(0, Math.min(100, match.compatibilityPercentile ?? 0));
   const description = featured ? match.longDescription : match.description;
 
   return (
@@ -28,6 +29,7 @@ export function IdeologyMatchCard({ match, featured = false }: IdeologyMatchCard
           </span>
         </div>
       </div>
+      <span className="match-percentile">{t.percentileLabel(percentile.toFixed(0))}</span>
       <p>{description}</p>
     </article>
   );

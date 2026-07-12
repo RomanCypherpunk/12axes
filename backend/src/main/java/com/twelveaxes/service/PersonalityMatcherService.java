@@ -28,13 +28,22 @@ public class PersonalityMatcherService {
     public List<PersonalityMatch> findMatches(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
 
-        Comparator<PersonalityMatch> byScore = Comparator.comparingDouble(PersonalityMatch::compatibility).reversed();
-        Comparator<PersonalityMatch> byName = Comparator.comparing(PersonalityMatch::name);
+        Comparator<PersonalityCandidate> byScore =
+                Comparator.comparingDouble(PersonalityCandidate::compatibility).reversed();
+        Comparator<PersonalityCandidate> byName = Comparator.comparing(candidate -> candidate.personality().name());
 
-        return dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
-                .map(personality -> toMatch(personality, userVector))
+        List<PersonalityCandidate> candidates = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
+                .map(personality -> toCandidate(personality, userVector))
+                .toList();
+        List<Double> catalogScores = candidates.stream()
+                .map(PersonalityCandidate::compatibility)
+                .toList();
+
+        return candidates.stream()
+                .map(candidate -> withPercentile(candidate, catalogScores))
                 .sorted(byScore.thenComparing(byName))
                 .limit(TOP_MATCHES)
+                .map(this::toMatch)
                 .toList();
     }
 
@@ -46,8 +55,18 @@ public class PersonalityMatcherService {
         return findMatches(axisResults, lang).getFirst();
     }
 
-    private PersonalityMatch toMatch(Personality personality, Map<String, Double> userVector) {
+    private PersonalityCandidate toCandidate(Personality personality, Map<String, Double> userVector) {
         double compatibility = profileMatchScorer.compatibility(userVector, targetVectorFor(personality));
+        return new PersonalityCandidate(personality, compatibility, 0.0);
+    }
+
+    private PersonalityCandidate withPercentile(PersonalityCandidate candidate, List<Double> catalogScores) {
+        double percentile = profileMatchScorer.percentile(candidate.compatibility(), catalogScores);
+        return new PersonalityCandidate(candidate.personality(), candidate.compatibility(), percentile);
+    }
+
+    private PersonalityMatch toMatch(PersonalityCandidate candidate) {
+        Personality personality = candidate.personality();
         return new PersonalityMatch(
                 personality.id(),
                 personality.name(),
@@ -58,7 +77,8 @@ public class PersonalityMatcherService {
                 personality.imageSourceName(),
                 personality.imageSourceUrl(),
                 personality.imageNote(),
-                compatibility
+                candidate.compatibility(),
+                candidate.compatibilityPercentile()
         );
     }
 
@@ -68,5 +88,12 @@ public class PersonalityMatcherService {
             return profile.vector();
         }
         return profileMatchScorer.neutralVector();
+    }
+
+    private record PersonalityCandidate(
+            Personality personality,
+            double compatibility,
+            double compatibilityPercentile
+    ) {
     }
 }

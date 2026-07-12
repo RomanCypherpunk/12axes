@@ -97,7 +97,8 @@ class IdeologyMatcherServiceTest {
 
         assertThat(matches).isNotEmpty();
         assertThat(matches.get(0).ideologyId()).isEqualTo("centrismo");
-        assertThat(matches.get(0).compatibility()).isEqualTo(100.0);
+        assertThat(Double.isFinite(matches.get(0).compatibility())).isTrue();
+        assertThat(matches.get(0).compatibilityPercentile()).isGreaterThan(95.0);
     }
 
     @Test
@@ -127,7 +128,8 @@ class IdeologyMatcherServiceTest {
                 "capitalismo-autoritario",
                 "alt-right",
                 "neorreacionarismo",
-                "neocameralismo"
+                "neocameralismo",
+                "tecno-monarquismo"
         );
         assertThat(matches).extracting(IdeologyMatch::ideologyId)
                 .doesNotContain("ambientalismo", "anarco-fascismo");

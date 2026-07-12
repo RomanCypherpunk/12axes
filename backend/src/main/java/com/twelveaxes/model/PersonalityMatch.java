@@ -10,6 +10,7 @@ public record PersonalityMatch(
         String imageSourceName,
         String imageSourceUrl,
         String imageNote,
-        double compatibility
+        double compatibility,
+        double compatibilityPercentile
 ) {
 }

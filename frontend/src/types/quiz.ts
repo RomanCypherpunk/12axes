@@ -66,6 +66,7 @@ export interface IdeologyMatch {
   description: string;
   longDescription: string;
   compatibility: number;
+  compatibilityPercentile: number;
 }
 
 export interface CountryMatch {
@@ -81,6 +82,7 @@ export interface CountryMatch {
   historical: boolean;
   period: string;
   compatibility: number;
+  compatibilityPercentile: number;
 }
 
 export interface PersonalityMatch {
@@ -94,6 +96,7 @@ export interface PersonalityMatch {
   imageSourceUrl?: string;
   imageNote?: string;
   compatibility: number;
+  compatibilityPercentile: number;
 }
 
 export interface QuizResult {

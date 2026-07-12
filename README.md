@@ -1,6 +1,6 @@
 # 12 Axes - Quiz Político de 12 Eixos
 
-> Aplicação full stack que estima a posição política do usuário em **12 eixos independentes** e compara o resultado com **ideologias, países/experiências históricas e personalidades políticas**.
+> Aplicação full stack que estima a posição política do usuário em **12 eixos políticos** e compara o resultado com **ideologias, países/experiências históricas e personalidades políticas**.
 
 **Demo:** [12axes.vercel.app](https://12axes.vercel.app) | **API:** [one2axes-backend.onrender.com/api/health](https://one2axes-backend.onrender.com/api/health)
 
@@ -57,7 +57,7 @@ Não há banco de dados. Os JSONs são carregados na inicialização do backend 
 | Moral | Progressista | Tradicionalista |
 | Tecnologia | Tecnologia | Biologia |
 
-Cada eixo é independente. O resultado não reduz o usuário a esquerda/direita: ele mostra combinações, tensões e aproximações entre dimensões políticas diferentes.
+Os eixos são exibidos separadamente, mas os dados cadastrados têm blocos correlacionados, especialmente autoridade, economia e costumes. O resultado não reduz o usuário a esquerda/direita: ele mostra combinações, tensões e aproximações entre dimensões políticas diferentes.
 
 ---
 
@@ -123,17 +123,18 @@ Intensidade pelo desvio em relação ao centro:
 
 ## Matching
 
-O resultado vira um vetor de 12 valores, de `0` a `100`, que representa o percentual do polo esquerdo em cada eixo. Esse vetor é comparado com perfis de ideologias, países e personalidades.
+O resultado vira um vetor de 12 valores, de `0` a `100`, que representa o percentual do polo esquerdo em cada eixo. Esse vetor é comparado separadamente com os perfis de ideologias, países e personalidades; um catálogo não participa do cálculo de outro.
 
 O score combina:
 
-- Similaridade eixo a eixo com curva quadrática e `spread = 50`.
-- Penalidade para lados opostos relevantes (`factor = 0.55`).
-- RMSE ponderado com decaimento exponencial (`spread = 35`).
-- Fórmula final: `0.65 * weightedAxisSimilarity + 0.35 * distanceSimilarity`.
-- Todos os 12 eixos têm peso `1.0` no scorer atual.
+- Similaridade eixo a eixo com curva quadrática: `max(0, 1 - (diff / 50)^2)`.
+- Penalidade contínua para lados opostos: `1 - 0.45 * tanh(abs(userValue - 50) / 25) * tanh(abs(targetValue - 50) / 25)`.
+- Similaridade de direção por cosseno, usando os vetores centralizados em `50`: `50 + 50 * cosine(user - 50, target - 50)`. Se um vetor estiver exatamente no centro, esse componente fica neutro em `50`.
+- Fórmula final: `0.50 * axisSimilarity + 0.50 * directionSimilarity`.
 
-O backend retorna as 4 ideologias mais compatíveis, o país/experiência histórica mais próximo e a personalidade mais próxima.
+Além do score bruto (`compatibility`), cada match retorna `compatibilityPercentile`, que indica a posição relativa dentro do próprio catálogo. As três bases não são comparáveis diretamente: ideologias tendem a ser vetores mais extremos, enquanto países e regimes históricos são perfis mais comprimidos por compromissos de governo.
+
+O backend retorna o top-1 de ideologia por score bruto e mais 3 ideologias escolhidas por MMR (`lambda = 0.70`) para reduzir redundância entre perfis quase idênticos. Por isso, `matches` significa "principal match + vizinhos diversos", não mais "os 4 maiores scores estritos". País/experiência histórica e personalidade continuam separados e retornam o perfil mais próximo em seus próprios catálogos. Campos editoriais como `countryId` e `personalityId` não são usados como rótulos de matching ou avaliação.
 
 ---
 
@@ -274,6 +275,7 @@ Cobertura principal:
 - Respostas neutras produzindo centro e match de centrismo.
 - Perfis explícitos para ideologias, países e personalidades.
 - Vetores com exatamente os 12 eixos conhecidos e valores entre 0 e 100.
+- Harness de recall para impedir regressão silenciosa nos vínculos `ideology -> country/personality`.
 - Endpoints REST, payloads e IDs de pergunta inválidos.
 - Seleção frontend sem perder perguntas e alternando polos.
 - Assets de bandeiras e retratos existentes em `frontend/public`.

@@ -1,6 +1,7 @@
 package com.twelveaxes;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -80,7 +81,8 @@ class QuizFlowAutomationTest {
                         .content(objectMapper.writeValueAsString(new ResultRequest(answers, variant))))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.topMatch.ideologyId").value("centrismo"))
-                .andExpect(jsonPath("$.topMatch.compatibility").value(100.0));
+                .andExpect(jsonPath("$.topMatch.compatibility").isNumber())
+                .andExpect(jsonPath("$.topMatch.compatibilityPercentile").value(greaterThan(95.0)));
     }
 
     @ParameterizedTest
