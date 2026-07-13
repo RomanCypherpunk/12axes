@@ -341,8 +341,8 @@
     "period": "336–323 a.C.",
     "vector": null,
     "flagKind": "historical-symbol",
-    "flagSourceName": "12 Axes / Sol de Vergina",
-    "flagSourceUrl": "https://en.wikipedia.org/wiki/Vergina_Sun",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Vergina_Sun.svg",
     "flagNote": "Símbolo solar associado à dinastia argéada usado como referência visual; não representa uma bandeira estatal moderna."
   },
   {
@@ -1389,7 +1389,11 @@
     "flagPath": "/countries/flags/estados-papais.jpg",
     "historical": true,
     "period": "756–1870",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Papal_States_(1808-1870).svg",
+    "flagNote": "Bandeira historica dos Estados Papais usada como referencia visual."
   },
   {
     "id": "imperio-bizantino",
@@ -1399,7 +1403,11 @@
     "flagPath": "/countries/flags/imperio-bizantino.png",
     "historical": true,
     "period": "330–1453",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-symbol",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_imperial_flag,_14th_century.svg",
+    "flagNote": "Simbolo imperial bizantino tardio usado como referencia visual."
   },
   {
     "id": "espanha-habsburgos",
@@ -1409,7 +1417,11 @@
     "flagPath": "/countries/flags/espanha-habsburgos.png",
     "historical": true,
     "period": "1516–1700",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cross_of_Burgundy.svg",
+    "flagNote": "Cruz de Borgonha usada como referencia visual da monarquia hispanica dos Habsburgos."
   },
   {
     "id": "imperio-russo-czarista",
@@ -1419,7 +1431,11 @@
     "flagPath": "/countries/flags/imperio-russo.png",
     "historical": true,
     "period": "1613–1917",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia.svg",
+    "flagNote": "Tricolor russo historico usado como referencia visual do Imperio Russo."
   },
   {
     "id": "genebra-calvinista",
@@ -1429,7 +1445,11 @@
     "flagPath": "/countries/flags/genebra.png",
     "historical": true,
     "period": "1541–1564",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-symbol",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Canton_of_Geneva.svg",
+    "flagNote": "Bandeira de Genebra usada como referencia visual da cidade reformada."
   },
   {
     "id": "imperio-portugues",
@@ -1439,7 +1459,11 @@
     "flagPath": "/countries/flags/imperio-portugues.png",
     "historical": true,
     "period": "1415–1822",
-    "vector": null
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_Portugal_(1640).svg",
+    "flagNote": "Bandeira historica portuguesa usada como referencia visual do imperio ultramarino."
   },
   {
     "id": "austria",

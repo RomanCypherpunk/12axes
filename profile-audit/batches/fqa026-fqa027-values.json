@@ -1,0 +1,202 @@
+[
+  {
+    "batch": "FQA026",
+    "catalog": "ideology",
+    "profileId": "anarco-transhumanismo",
+    "note": "anarquismo civil-libertario com emancipacao tecnologica, secularismo forte, moral progressista e economia mais coletiva que anarcocapitalista",
+    "values": {
+      "estrutura": 97.5,
+      "representacao": 90,
+      "poder": 5,
+      "imigracao": 30,
+      "diplomacia": 12.5,
+      "intervencao": 87.5,
+      "economia": 62.5,
+      "controle": 30,
+      "comercio": 20,
+      "religiao": 92.5,
+      "moral": 97.5,
+      "tecnologia": 97.5
+    }
+  },
+  {
+    "batch": "FQA026",
+    "catalog": "ideology",
+    "profileId": "libertarianismo-bleeding-heart",
+    "note": "liberal-libertario pró-mercado com preocupacao social, direitos civis, multiculturalismo e nao intervencionismo",
+    "values": {
+      "estrutura": 70,
+      "representacao": 87.5,
+      "poder": 17.5,
+      "imigracao": 22.5,
+      "diplomacia": 22.5,
+      "intervencao": 75,
+      "economia": 42.5,
+      "controle": 37.5,
+      "comercio": 22.5,
+      "religiao": 70,
+      "moral": 92.5,
+      "tecnologia": 75
+    }
+  },
+  {
+    "batch": "FQA026",
+    "catalog": "ideology",
+    "profileId": "libertarianismo-nacional",
+    "note": "Estado limitado e mercado privado com identidade nacional, assimilacao cultural, soberania e comercio menos globalista",
+    "values": {
+      "estrutura": 70,
+      "representacao": 70,
+      "poder": 30,
+      "imigracao": 82.5,
+      "diplomacia": 40,
+      "intervencao": 62.5,
+      "economia": 12.5,
+      "controle": 10,
+      "comercio": 42.5,
+      "religiao": 35,
+      "moral": 30,
+      "tecnologia": 65
+    }
+  },
+  {
+    "batch": "FQA026",
+    "catalog": "ideology",
+    "profileId": "monarquismo-libertario",
+    "note": "monarquia limitada como guardia de propriedade e estabilidade, mercado forte, costumes tradicionais e alguma descentralizacao",
+    "values": {
+      "estrutura": 62.5,
+      "representacao": 22.5,
+      "poder": 32.5,
+      "imigracao": 72.5,
+      "diplomacia": 37.5,
+      "intervencao": 65,
+      "economia": 22.5,
+      "controle": 20,
+      "comercio": 37.5,
+      "religiao": 25,
+      "moral": 20,
+      "tecnologia": 45
+    }
+  },
+  {
+    "batch": "FQA026",
+    "catalog": "ideology",
+    "profileId": "monarquismo-federalista",
+    "note": "coroa constitucional e simbolica com autonomia regional, tradicao religiosa/cultural e economia moderada",
+    "values": {
+      "estrutura": 87.5,
+      "representacao": 42.5,
+      "poder": 50,
+      "imigracao": 65,
+      "diplomacia": 52.5,
+      "intervencao": 42.5,
+      "economia": 40,
+      "controle": 40,
+      "comercio": 50,
+      "religiao": 30,
+      "moral": 20,
+      "tecnologia": 50
+    }
+  },
+  {
+    "batch": "FQA027",
+    "catalog": "ideology",
+    "profileId": "conservadorismo-libertario",
+    "note": "mercado e Estado minimo combinados com familia, tradicao, ordem voluntaria e nao intervencionismo",
+    "values": {
+      "estrutura": 70,
+      "representacao": 77.5,
+      "poder": 32.5,
+      "imigracao": 55,
+      "diplomacia": 40,
+      "intervencao": 75,
+      "economia": 12.5,
+      "controle": 12.5,
+      "comercio": 32.5,
+      "religiao": 30,
+      "moral": 25,
+      "tecnologia": 62.5
+    }
+  },
+  {
+    "batch": "FQA027",
+    "catalog": "ideology",
+    "profileId": "feminismo-libertario",
+    "note": "igualdade de genero por autonomia individual e mercado, forte secularismo, progressismo moral e baixa tutela estatal",
+    "values": {
+      "estrutura": 85,
+      "representacao": 90,
+      "poder": 15,
+      "imigracao": 25,
+      "diplomacia": 20,
+      "intervencao": 85,
+      "economia": 25,
+      "controle": 20,
+      "comercio": 20,
+      "religiao": 90,
+      "moral": 97.5,
+      "tecnologia": 85
+    }
+  },
+  {
+    "batch": "FQA027",
+    "catalog": "ideology",
+    "profileId": "pacifismo-libertario",
+    "note": "liberdade civil, anti-guerra, anti-intervencao, mercado limitado e resolucao voluntaria de conflitos",
+    "values": {
+      "estrutura": 90,
+      "representacao": 92.5,
+      "poder": 5,
+      "imigracao": 40,
+      "diplomacia": 2.5,
+      "intervencao": 97.5,
+      "economia": 22.5,
+      "controle": 15,
+      "comercio": 20,
+      "religiao": 70,
+      "moral": 82.5,
+      "tecnologia": 62.5
+    }
+  },
+  {
+    "batch": "FQA027",
+    "catalog": "ideology",
+    "profileId": "anarcoconservadorismo",
+    "note": "anti-Estado com ordem espontanea tradicional, religiao, familia, comunidades locais e propriedade descentralizada",
+    "values": {
+      "estrutura": 97.5,
+      "representacao": 72.5,
+      "poder": 12.5,
+      "imigracao": 70,
+      "diplomacia": 30,
+      "intervencao": 85,
+      "economia": 30,
+      "controle": 30,
+      "comercio": 42.5,
+      "religiao": 15,
+      "moral": 12.5,
+      "tecnologia": 35
+    }
+  },
+  {
+    "batch": "FQA027",
+    "catalog": "ideology",
+    "profileId": "anarcodistributismo",
+    "note": "anarquismo comunitario e distributista, propriedade pequena e difundida, localismo, religiao e protecionismo comunitario",
+    "values": {
+      "estrutura": 92.5,
+      "representacao": 87.5,
+      "poder": 20,
+      "imigracao": 45,
+      "diplomacia": 20,
+      "intervencao": 82.5,
+      "economia": 55,
+      "controle": 45,
+      "comercio": 70,
+      "religiao": 15,
+      "moral": 25,
+      "tecnologia": 30
+    }
+  }
+]

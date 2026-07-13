@@ -1,0 +1,857 @@
+# Profile Full Audit Queue
+
+Fila para auditoria 100% pergunta a pergunta.
+
+```text
+profiles: 527
+axisUnits: 6324
+questionsPerAxis: 20
+questionDecisions: 126480
+batches: 106
+```
+
+## FQA001 - done (60/60)
+
+- [x] ideology:marxismo-leninismo - Marxismo-Leninismo (12/12)
+- [x] ideology:socialismo-stalinista - Socialismo Stalinista (12/12)
+- [x] ideology:comunismo-maoista - Comunismo Maoísta (12/12)
+- [x] ideology:comunismo-trotskista - Comunismo Trotskista (12/12)
+- [x] ideology:socialismo-luxemburguista - Socialismo Luxemburguista (12/12)
+
+## FQA002 - done (60/60)
+
+- [x] ideology:comunismo-nacional - Comunismo Nacional (12/12)
+- [x] ideology:socialismo-pol-potista - Socialismo Pol-Potista (12/12)
+- [x] ideology:socialismo-denguista - Socialismo Denguista (12/12)
+- [x] ideology:socialismo-de-estado - Socialismo de Estado (12/12)
+- [x] ideology:progressismo-autoritario - Progressismo Autoritário (12/12)
+
+## FQA003 - done (60/60)
+
+- [x] ideology:ecoautoritarismo - Ecoautoritarismo (12/12)
+- [x] ideology:tecnocracia-de-esquerda - Tecnocracia de Esquerda (12/12)
+- [x] ideology:marxismo-reformista - Marxismo Reformista (12/12)
+- [x] ideology:nacional-bolchevismo - Nacional-Bolchevismo (NazBol) (12/12)
+- [x] ideology:socialismo-strasserista - Socialismo Strasserista (12/12)
+
+## FQA004 - done (60/60)
+
+- [x] ideology:fascismo - Fascismo (12/12)
+- [x] ideology:nacional-socialismo - Nacional-Socialismo (12/12)
+- [x] ideology:fascismo-clerical - Fascismo Clerical (12/12)
+- [x] ideology:falangismo - Falangismo (12/12)
+- [x] ideology:nacional-sindicalismo - Nacional-Sindicalismo (12/12)
+
+## FQA005 - done (60/60)
+
+- [x] ideology:integralismo-brasileiro - Integralismo Brasileiro (12/12)
+- [x] ideology:capitalismo-autoritario - Capitalismo Autoritário (12/12)
+- [x] ideology:capitalismo-nacional - Capitalismo Nacional (12/12)
+- [x] ideology:alt-right - Direita radical (12/12)
+- [x] ideology:alt-lite - Direita alternativa (12/12)
+
+## FQA006 - done (60/60)
+
+- [x] ideology:aceleracionismo-de-direita - Aceleracionismo de Direita (12/12)
+- [x] ideology:nacionalismo-racial - Nacionalismo Racial (12/12)
+- [x] ideology:neoconservadorismo - Neoconservadorismo (12/12)
+- [x] ideology:monarquismo-absoluto - Monarquismo Absoluto (12/12)
+- [x] ideology:conservadorismo-autoritario - Conservadorismo Autoritário (12/12)
+
+## FQA007 - done (60/60)
+
+- [x] ideology:conservadorismo-nacional - Conservadorismo Nacional (12/12)
+- [x] ideology:conservadorismo-paternalista - Conservadorismo Paternalista (12/12)
+- [x] ideology:fundamentalismo-religioso - Fundamentalismo Religioso (12/12)
+- [x] ideology:nacionalismo-etnico - Nacionalismo Étnico (12/12)
+- [x] ideology:nacionalismo-cultural - Nacionalismo Cultural (12/12)
+
+## FQA008 - done (60/60)
+
+- [x] ideology:neorreacionarismo - Neorreacionarismo (12/12)
+- [x] ideology:neocameralismo - Neocameralismo (12/12)
+- [x] ideology:cameralismo - Cameralismo (12/12)
+- [x] ideology:corporativismo - Corporativismo (12/12)
+- [x] ideology:terceira-posicao-politica - Terceira Posição Política (12/12)
+
+## FQA009 - done (60/60)
+
+- [x] ideology:reacionarismo - Reacionarismo (12/12)
+- [x] ideology:quarta-teoria-politica - Quarta Teoria Política (12/12)
+- [x] ideology:democracia-nacional - Democracia Nacional (12/12)
+- [x] ideology:bioconservadorismo - Bioconservadorismo (12/12)
+- [x] ideology:tecnocracia-de-direita - Tecnocracia de Direita (12/12)
+
+## FQA010 - done (60/60)
+
+- [x] ideology:democracia-crista - Democracia Cristã (12/12)
+- [x] ideology:conservadorismo-cristao - Conservadorismo Cristão (12/12)
+- [x] ideology:republicanismo - Republicanismo (12/12)
+- [x] ideology:monarquismo-constitucional - Monarquismo Constitucional (12/12)
+- [x] ideology:neoliberalismo - Neoliberalismo (12/12)
+
+## FQA011 - done (60/60)
+
+- [x] ideology:ordoliberalismo - Ordoliberalismo (12/12)
+- [x] ideology:distributismo - Distributismo (12/12)
+- [x] ideology:tecnocracia - Tecnocracia (12/12)
+- [x] ideology:comunitarismo - Comunitarismo (12/12)
+- [x] ideology:meritocracia - Meritocracia (12/12)
+
+## FQA012 - done (60/60)
+
+- [x] ideology:liberalismo - Liberalismo (12/12)
+- [x] ideology:liberalismo-classico - Liberalismo Clássico (12/12)
+- [x] ideology:libertarianismo - Libertarianismo (12/12)
+- [x] ideology:liberalismo-verde - Liberalismo Verde (12/12)
+- [x] ideology:liberalismo-social - Liberalismo Social (12/12)
+
+## FQA013 - done (60/60)
+
+- [x] ideology:liberalismo-radical - Liberalismo Radical (12/12)
+- [x] ideology:liberalismo-conservador - Liberalismo Conservador (12/12)
+- [x] ideology:liberaltarianismo - Liberaltarianismo (12/12)
+- [x] ideology:panarquismo - Panarquismo (12/12)
+- [x] ideology:reformismo-georgista - Reformismo Georgista (12/12)
+
+## FQA014 - done (60/60)
+
+- [x] ideology:geolibertarianismo - Geolibertarianismo (12/12)
+- [x] ideology:feminismo - Feminismo (12/12)
+- [x] ideology:feminismo-liberal - Feminismo Liberal (12/12)
+- [x] ideology:liberalismo-de-estado - Liberalismo de Estado (12/12)
+- [x] ideology:ambientalismo - Ambientalismo (12/12)
+
+## FQA015 - done (60/60)
+
+- [x] ideology:conservadorismo - Conservadorismo (12/12)
+- [x] ideology:progressismo - Progressismo (12/12)
+- [x] ideology:aceleracionismo - Aceleracionismo (12/12)
+- [x] ideology:transhumanismo - Transhumanismo (12/12)
+- [x] ideology:nacionalismo - Nacionalismo (12/12)
+
+## FQA016 - done (60/60)
+
+- [x] ideology:nacionalismo-civico - Nacionalismo Cívico (12/12)
+- [x] ideology:indigenismo - Indigenismo (12/12)
+- [x] ideology:conservadorismo-socialista - Conservadorismo Socialista (12/12)
+- [x] ideology:anarquismo - Anarquismo (12/12)
+- [x] ideology:anarcocomunismo - Anarcocomunismo (12/12)
+
+## FQA017 - done (60/60)
+
+- [x] ideology:anarcocoletivismo - Anarcocoletivismo (12/12)
+- [x] ideology:anarcossindicalismo - Anarcossindicalismo (12/12)
+- [x] ideology:sindicalismo - Sindicalismo (12/12)
+- [x] ideology:socialismo-libertario - Socialismo Libertário (12/12)
+- [x] ideology:marxismo-libertario - Marxismo Libertário (12/12)
+
+## FQA018 - done (60/60)
+
+- [x] ideology:socialismo-de-mercado-libertario - Socialismo de Mercado Libertário (12/12)
+- [x] ideology:socialismo-de-mercado - Socialismo de Mercado (12/12)
+- [x] ideology:mutualismo - Mutualismo (12/12)
+- [x] ideology:minarco-mutualismo - Minarco-Mutualismo (12/12)
+- [x] ideology:minarco-socialismo - Minarco-Socialismo (12/12)
+
+## FQA019 - done (60/60)
+
+- [x] ideology:socialismo-individualista - Socialismo Individualista (12/12)
+- [x] ideology:comunalismo - Comunalismo (12/12)
+- [x] ideology:socialismo-cristao - Socialismo Cristão (12/12)
+- [x] ideology:trabalhismo-cristao - Trabalhismo Cristão (12/12)
+- [x] ideology:socialismo-religioso - Socialismo Religioso (12/12)
+
+## FQA020 - done (60/60)
+
+- [x] ideology:social-democracia - Social-Democracia (12/12)
+- [x] ideology:socialismo - Socialismo (12/12)
+- [x] ideology:socialismo-liberal - Socialismo Liberal (12/12)
+- [x] ideology:libertarianismo-social - Libertarianismo Social (12/12)
+- [x] ideology:ecossocialismo - Ecossocialismo (12/12)
+
+## FQA021 - done (60/60)
+
+- [x] ideology:ecofeminismo - Ecofeminismo (12/12)
+- [x] ideology:ecologia-profunda - Ecologia Profunda (12/12)
+- [x] ideology:anarquismo-agrario - Anarquismo Agrário (12/12)
+- [x] ideology:anarquismo-verde - Anarquismo Verde (12/12)
+- [x] ideology:anarcofeminismo - Anarcofeminismo (12/12)
+
+## FQA022 - done (60/60)
+
+- [x] ideology:anarquismo-queer - Anarquismo Queer (12/12)
+- [x] ideology:anarcopacifismo - Anarcopacifismo (12/12)
+- [x] ideology:anarquismo-cristao - Anarquismo Cristão (12/12)
+- [x] ideology:anarco-naturalismo - Anarco-Naturalismo (12/12)
+- [x] ideology:anarcoprimitivismo - Anarcoprimitivismo (12/12)
+
+## FQA023 - done (60/60)
+
+- [x] ideology:geoanarquismo - Geoanarquismo (12/12)
+- [x] ideology:anarquismo-egoista - Anarquismo Egoísta (12/12)
+- [x] ideology:anarcocapitalismo - Anarcocapitalismo (12/12)
+- [x] ideology:minarquismo - Minarquismo (12/12)
+- [x] ideology:austrolibertarianismo - Austrolibertarianismo (12/12)
+
+## FQA024 - done (60/60)
+
+- [x] ideology:paleolibertarianismo - Paleolibertarianismo (12/12)
+- [x] ideology:libertarianismo-hoppeano - Libertarianismo Hoppeano (12/12)
+- [x] ideology:libertarianismo-de-chicago - Libertarianismo de Chicago (12/12)
+- [x] ideology:capitalismo - Capitalismo (12/12)
+- [x] ideology:objetivismo - Objetivismo (12/12)
+
+## FQA025 - done (60/60)
+
+- [x] ideology:ecocapitalismo - Ecocapitalismo (12/12)
+- [x] ideology:ecoconservadorismo - Ecoconservadorismo (12/12)
+- [x] ideology:econacionalismo - Econacionalismo (12/12)
+- [x] ideology:agorismo - Agorismo (12/12)
+- [x] ideology:criptoanarquismo - Criptoanarquismo (12/12)
+
+## FQA026 - done (60/60)
+
+- [x] ideology:anarco-transhumanismo - Anarco-Transhumanismo (12/12)
+- [x] ideology:libertarianismo-bleeding-heart - Libertarianismo Bleeding-Heart (12/12)
+- [x] ideology:libertarianismo-nacional - Libertarianismo Nacional (12/12)
+- [x] ideology:monarquismo-libertario - Monarquismo Libertário (12/12)
+- [x] ideology:monarquismo-federalista - Monarquismo Federalista (12/12)
+
+## FQA027 - done (60/60)
+
+- [x] ideology:conservadorismo-libertario - Conservadorismo Libertário (12/12)
+- [x] ideology:feminismo-libertario - Feminismo Libertário (12/12)
+- [x] ideology:pacifismo-libertario - Pacifismo Libertário (12/12)
+- [x] ideology:anarcoconservadorismo - Anarcoconservadorismo (12/12)
+- [x] ideology:anarcodistributismo - Anarcodistributismo (12/12)
+
+## FQA028 - done (60/60)
+
+- [x] ideology:anarcoindividualismo - Anarcoindividualismo (12/12)
+- [x] ideology:centrismo - Centrismo (12/12)
+- [x] ideology:trabalhismo - Trabalhismo (12/12)
+- [x] ideology:positivismo - Positivismo (12/12)
+- [x] ideology:conservadorismo-secular - Conservadorismo Secular (12/12)
+
+## FQA029 - done (60/60)
+
+- [x] ideology:progressismo-cristao - Progressismo Cristão (12/12)
+- [x] ideology:autoritarismo-modernizador - Autoritarismo Modernizador (12/12)
+- [x] ideology:desenvolvimentismo-de-estado - Desenvolvimentismo de Estado (12/12)
+- [x] ideology:atlantismo - Atlantismo (12/12)
+- [x] ideology:federalismo-privado - Federalismo Privado (12/12)
+
+## FQA030 - done (60/60)
+
+- [x] ideology:tecno-monarquismo - Tecno-Monarquismo (12/12)
+- [x] ideology:progressismo-de-direita - Progressismo de Direita (12/12)
+- [x] ideology:tecno-socialismo - Tecno-Socialismo (12/12)
+- [x] ideology:tecno-fascismo - Tecno-Fascismo (12/12)
+- [x] ideology:liberalismo-autoritario - Liberalismo Autoritário (12/12)
+
+## FQA031 - done (60/60)
+
+- [x] ideology:nacionalismo-progressista - Nacionalismo Progressista (12/12)
+- [x] ideology:ecofascismo - Ecofascismo (12/12)
+- [x] ideology:comunismo-agrario - Comunismo Agrário (12/12)
+- [x] ideology:socialismo-bolivariano - Socialismo Bolivariano (12/12)
+- [x] ideology:nacional-desenvolvimentismo - Nacional-Desenvolvimentismo (12/12)
+
+## FQA032 - done (60/60)
+
+- [x] ideology:populismo-libertario - Populismo Libertário (12/12)
+- [x] ideology:teocratismo-cristao - Teocratismo Cristão (12/12)
+- [x] ideology:socialismo-titoista - Socialismo Titoísta (12/12)
+- [x] ideology:socialismo-anticolonial - Socialismo Anticolonial (12/12)
+- [x] ideology:socialismo-juche - Socialismo Juche (12/12)
+
+## FQA033 - done (60/60)
+
+- [x] ideology:tecno-comunismo - Tecno-Comunismo (12/12)
+- [x] ideology:tecno-anarquismo - Tecno-Anarquismo (12/12)
+- [x] ideology:tecno-cristianismo - Tecno-Cristianismo (12/12)
+- [x] ideology:populismo-de-direita - Populismo de Direita (12/12)
+- [x] ideology:populismo-de-esquerda - Populismo de Esquerda (12/12)
+
+## FQA034 - in_progress (48/60)
+
+- [x] ideology:centrismo-social - Centrismo Social (12/12)
+- [x] ideology:centrismo-liberal - Centrismo Liberal (12/12)
+- [x] ideology:centrismo-ambientalista - Centrismo Ambientalista (12/12)
+- [x] ideology:centrismo-conservador - Centrismo Conservador (12/12)
+- [ ] ideology:nacional-liberalismo - Nacional-Liberalismo (0/12)
+
+## FQA035 - pending (0/60)
+
+- [ ] country:brasil - Brasil (0/12)
+- [ ] country:estados-unidos - Estados Unidos (0/12)
+- [ ] country:mexico - México (0/12)
+- [ ] country:chile - Chile (0/12)
+- [ ] country:bolivia - Bolívia (0/12)
+
+## FQA036 - pending (0/60)
+
+- [ ] country:venezuela - Venezuela (0/12)
+- [ ] country:cuba - Cuba (0/12)
+- [ ] country:costa-rica - Costa Rica (0/12)
+- [ ] country:suica - Suíça (0/12)
+- [ ] country:suecia - Suécia (0/12)
+
+## FQA037 - pending (0/60)
+
+- [ ] country:alemanha - Alemanha (0/12)
+- [ ] country:franca - França (0/12)
+- [ ] country:uniao-europeia - União Europeia (0/12)
+- [ ] country:reino-unido - Reino Unido (0/12)
+- [ ] country:hungria - Hungria (0/12)
+
+## FQA038 - pending (0/60)
+
+- [ ] country:russia - Rússia (0/12)
+- [ ] country:japao - Japão (0/12)
+- [ ] country:coreia-do-sul - Coreia do Sul (0/12)
+- [ ] country:coreia-do-sul-de-park-chung-hee - Coreia do Sul de Park Chung Hee (0/12)
+- [ ] country:china - China (0/12)
+
+## FQA039 - pending (0/60)
+
+- [ ] country:coreia-do-norte - Coreia do Norte (0/12)
+- [ ] country:india - Índia (0/12)
+- [ ] country:singapura - Singapura (0/12)
+- [ ] country:vietna - Vietnã (0/12)
+- [ ] country:indonesia - Indonésia (0/12)
+
+## FQA040 - pending (0/60)
+
+- [ ] country:turquia - Turquia (0/12)
+- [ ] country:ira - Irã (0/12)
+- [ ] country:arabia-saudita - Arábia Saudita (0/12)
+- [ ] country:israel - Israel (0/12)
+- [ ] country:africa-do-sul - África do Sul (0/12)
+
+## FQA041 - pending (0/60)
+
+- [ ] country:atenas-democratica - Atenas Democrática (0/12)
+- [ ] country:esparta - Esparta (0/12)
+- [ ] country:imperio-macedonico - Império Macedônico (0/12)
+- [ ] country:imperio-romano - Império Romano (0/12)
+- [ ] country:sacro-imperio-romano-germanico - Sacro Império Romano-Germânico (0/12)
+
+## FQA042 - pending (0/60)
+
+- [ ] country:republica-de-veneza - República de Veneza (0/12)
+- [ ] country:imperio-otomano - Império Otomano (0/12)
+- [ ] country:reino-unido-vitoriano-imperio-britanico - Império Britânico (0/12)
+- [ ] country:imperio-do-brasil - Império do Brasil (0/12)
+- [ ] country:alemanha-nazista-terceiro-reich - Alemanha Nazista (Terceiro Reich) (0/12)
+
+## FQA043 - pending (0/60)
+
+- [ ] country:italia-fascista-mussolini - Itália Fascista (Mussolini) (0/12)
+- [ ] country:chile-de-pinochet - Chile de Pinochet (0/12)
+- [ ] country:uniao-sovietica-urss - União Soviética (URSS) (0/12)
+- [ ] country:china-maoista - China Maoísta (0/12)
+- [ ] country:camboja-do-khmer-vermelho-pol-pot - Camboja do Khmer Vermelho (Pol Pot) (0/12)
+
+## FQA044 - pending (0/60)
+
+- [ ] country:aragao-e-catalunha-anarquistas-revolucao-espanhola - Aragão e Catalunha Anarquistas (Revolução Espanhola) (0/12)
+- [ ] country:argentina-peronista - Argentina Peronista (0/12)
+- [ ] country:egito-de-nasser - Egito de Nasser (0/12)
+- [ ] country:africa-do-sul-do-apartheid - África do Sul do Apartheid (0/12)
+- [ ] country:hong-kong - Hong Kong (0/12)
+
+## FQA045 - pending (0/60)
+
+- [ ] country:argentina - Argentina (0/12)
+- [ ] country:liechtenstein - Liechtenstein (0/12)
+- [ ] country:rojava - Rojava (Norte e Leste da Síria) (0/12)
+- [ ] country:iugoslavia-socialista - Iugoslávia Socialista (0/12)
+- [ ] country:espanha-franquista - Espanha Franquista (0/12)
+
+## FQA046 - pending (0/60)
+
+- [ ] country:islandia-medieval - Islândia Medieval (Mancomunidade) (0/12)
+- [ ] country:emirados-arabes-unidos - Emirados Árabes Unidos (0/12)
+- [ ] country:portugal-estado-novo - Portugal (Estado Novo) (0/12)
+- [ ] country:prussia - Reino da Prússia (0/12)
+- [ ] country:polonia - Polônia (0/12)
+
+## FQA047 - pending (0/60)
+
+- [ ] country:ucrania-territorio-livre - Território Livre (Makhnovshchina) (0/12)
+- [ ] country:brasil-era-vargas - Brasil (Era Vargas) (0/12)
+- [ ] country:tchequia - Tchéquia (0/12)
+- [ ] country:eua-california - Estados Unidos (Califórnia) (0/12)
+- [ ] country:eua-texas - Estados Unidos (Texas) (0/12)
+
+## FQA048 - pending (0/60)
+
+- [ ] country:eua-nova-york - Estados Unidos (Nova York) (0/12)
+- [ ] country:eua-new-hampshire - Estados Unidos (New Hampshire) (0/12)
+- [ ] country:eua-washington-dc - Estados Unidos (Washington, D.C.) (0/12)
+- [ ] country:eua-massachusetts - Estados Unidos (Massachusetts) (0/12)
+- [ ] country:canada - Canadá (0/12)
+
+## FQA049 - pending (0/60)
+
+- [ ] country:paises-baixos - Países Baixos (0/12)
+- [ ] country:italia - Itália (0/12)
+- [ ] country:espanha - Espanha (0/12)
+- [ ] country:noruega - Noruega (0/12)
+- [ ] country:dinamarca - Dinamarca (0/12)
+
+## FQA050 - pending (0/60)
+
+- [ ] country:australia - Austrália (0/12)
+- [ ] country:nova-zelandia - Nova Zelândia (0/12)
+- [ ] country:irlanda - Irlanda (0/12)
+- [ ] country:ucrania - Ucrânia (0/12)
+- [ ] country:bielorrussia - Bielorrússia (0/12)
+
+## FQA051 - pending (0/60)
+
+- [ ] country:cazaquistao - Cazaquistão (0/12)
+- [ ] country:catar - Catar (0/12)
+- [ ] country:egito-atual - Egito (0/12)
+- [ ] country:libano - Líbano (0/12)
+- [ ] country:siria - Síria (0/12)
+
+## FQA052 - pending (0/60)
+
+- [ ] country:paquistao - Paquistão (0/12)
+- [ ] country:filipinas - Filipinas (0/12)
+- [ ] country:tailandia - Tailândia (0/12)
+- [ ] country:malasia - Malásia (0/12)
+- [ ] country:taiwan - Taiwan (0/12)
+
+## FQA053 - pending (0/60)
+
+- [ ] country:el-salvador - El Salvador (0/12)
+- [ ] country:colombia - Colômbia (0/12)
+- [ ] country:uruguai - Uruguai (0/12)
+- [ ] country:japao-meiji - Japão Meiji (0/12)
+- [ ] country:republica-holandesa - República Holandesa (Províncias Unidas) (0/12)
+
+## FQA054 - pending (0/60)
+
+- [ ] country:republica-de-weimar - República de Weimar (0/12)
+- [ ] country:gra-colombia - Grã-Colômbia (0/12)
+- [ ] country:vaticano - Vaticano (0/12)
+- [ ] country:monaco - Mônaco (0/12)
+- [ ] country:estonia - Estônia (0/12)
+
+## FQA055 - pending (0/60)
+
+- [ ] country:luxemburgo - Luxemburgo (0/12)
+- [ ] country:eua-florida - Estados Unidos (Flórida) (0/12)
+- [ ] country:imperio-do-japao - Império do Japão (0/12)
+- [ ] country:imperio-austro-hungaro - Império Austro-Húngaro (0/12)
+- [ ] country:butao - Butão (0/12)
+
+## FQA056 - pending (0/60)
+
+- [ ] country:imperio-persa-aquemenida - Império Persa (Aquemênida) (0/12)
+- [ ] country:comuna-de-paris - Comuna de Paris (0/12)
+- [ ] country:catalunha - Catalunha (0/12)
+- [ ] country:florenca-renascentista - Florença Renascentista (0/12)
+- [ ] country:roma-republicana - Roma Republicana (0/12)
+
+## FQA057 - pending (0/60)
+
+- [ ] country:hungria-de-kadar - Hungria de Kádár (0/12)
+- [ ] country:chile-de-allende - Chile de Allende (0/12)
+- [ ] country:burkina-faso-de-sankara - Burkina Faso de Sankara (0/12)
+- [ ] country:eua-confederados - Estados Confederados da América (0/12)
+- [ ] country:macau - Macau (0/12)
+
+## FQA058 - pending (0/60)
+
+- [ ] country:estados-papais - Estados Papais (0/12)
+- [ ] country:imperio-bizantino - Império Bizantino (0/12)
+- [ ] country:espanha-habsburgos - Espanha dos Habsburgos (0/12)
+- [ ] country:imperio-russo-czarista - Império Russo Czarista (0/12)
+- [ ] country:genebra-calvinista - Genebra Calvinista (0/12)
+
+## FQA059 - pending (0/60)
+
+- [ ] country:imperio-portugues - Império Português (0/12)
+- [ ] country:austria - Áustria (0/12)
+- [ ] country:imperio-alemao - Império Alemão (0/12)
+- [ ] country:portugal - Portugal (0/12)
+- [ ] country:alemanha-oriental - Alemanha Oriental (0/12)
+
+## FQA060 - pending (0/60)
+
+- [ ] country:islandia - Islândia (0/12)
+- [ ] country:finlandia - Finlândia (0/12)
+- [ ] country:imperio-mongol - Império Mongol (0/12)
+- [ ] country:brasil-regime-militar - Brasil do Regime Militar (0/12)
+- [ ] country:mexico-de-cardenas - México de Cárdenas (0/12)
+
+## FQA061 - pending (0/60)
+
+- [ ] personality:lenin - Vladimir Lênin (0/12)
+- [ ] personality:stalin - Josef Stálin (0/12)
+- [ ] personality:mao-zedong - Mao Tsé-Tung (0/12)
+- [ ] personality:trotsky - Leon Trótski (0/12)
+- [ ] personality:anton-pannekoek - Anton Pannekoek (0/12)
+
+## FQA062 - pending (0/60)
+
+- [ ] personality:kim-il-sung - Kim Il-sung (0/12)
+- [ ] personality:pol-pot - Pol Pot (0/12)
+- [ ] personality:deng-xiaoping - Deng Xiaoping (0/12)
+- [ ] personality:ferdinand-lassalle - Ferdinand Lassalle (0/12)
+- [ ] personality:ataturk - Mustafa Kemal Atatürk (0/12)
+
+## FQA063 - pending (0/60)
+
+- [ ] personality:garrett-hardin - Garrett Hardin (0/12)
+- [ ] personality:otto-neurath - Otto Neurath (0/12)
+- [ ] personality:eduard-bernstein - Eduard Bernstein (0/12)
+- [ ] personality:ernst-niekisch - Ernst Niekisch (0/12)
+- [ ] personality:gregor-strasser - Gregor Strasser (0/12)
+
+## FQA064 - pending (0/60)
+
+- [ ] personality:mussolini - Benito Mussolini (0/12)
+- [ ] personality:hitler - Adolf Hitler (0/12)
+- [ ] personality:engelbert-dollfuss - Engelbert Dollfuss (0/12)
+- [ ] personality:jose-antonio-primo-de-rivera - José Antonio Primo de Rivera (0/12)
+- [ ] personality:plinio-salgado - Plínio Salgado (0/12)
+
+## FQA065 - pending (0/60)
+
+- [ ] personality:lee-kuan-yew - Lee Kuan Yew (0/12)
+- [ ] personality:putin - Vladimir Putin (0/12)
+- [ ] personality:richard-spencer - Richard Spencer (0/12)
+- [ ] personality:steve-bannon - Steve Bannon (0/12)
+- [ ] personality:nick-land - Nick Land (0/12)
+
+## FQA066 - pending (0/60)
+
+- [ ] personality:hendrik-verwoerd - Hendrik Verwoerd (0/12)
+- [ ] personality:irving-kristol - Irving Kristol (0/12)
+- [ ] personality:louis-xiv - Luís XIV (0/12)
+- [ ] personality:salazar - António de Oliveira Salazar (0/12)
+- [ ] personality:viktor-orban - Viktor Orbán (0/12)
+
+## FQA067 - pending (0/60)
+
+- [ ] personality:benjamin-disraeli - Benjamin Disraeli (0/12)
+- [ ] personality:khomeini - Ruhollah Khomeini (0/12)
+- [ ] personality:jabotinsky - Zeev Jabotinsky (0/12)
+- [ ] personality:ahad-haam - Ahad Haam (0/12)
+- [ ] personality:curtis-yarvin - Curtis Yarvin (0/12)
+
+## FQA068 - pending (0/60)
+
+- [ ] personality:frederico-ii-da-prussia - Frederico, o Grande (0/12)
+- [ ] personality:joseph-de-maistre - Joseph de Maistre (0/12)
+- [ ] personality:aleksandr-dugin - Aleksandr Dugin (0/12)
+- [ ] personality:roman-dmowski - Roman Dmowski (0/12)
+- [ ] personality:leon-kass - Leon Kass (0/12)
+
+## FQA069 - pending (0/60)
+
+- [ ] personality:konrad-adenauer - Konrad Adenauer (0/12)
+- [ ] personality:william-f-buckley - William F. Buckley Jr. (0/12)
+- [ ] personality:cicero - Cícero (0/12)
+- [ ] personality:montesquieu - Montesquieu (0/12)
+- [ ] personality:milton-friedman - Milton Friedman (0/12)
+
+## FQA070 - pending (0/60)
+
+- [ ] personality:ludwig-erhard - Ludwig Erhard (0/12)
+- [ ] personality:gk-chesterton - G. K. Chesterton (0/12)
+- [ ] personality:henri-de-saint-simon - Henri de Saint-Simon (0/12)
+- [ ] personality:michael-sandel - Michael Sandel (0/12)
+- [ ] personality:adrian-wooldridge - Adrian Wooldridge (0/12)
+
+## FQA071 - pending (0/60)
+
+- [ ] personality:john-stuart-mill - John Stuart Mill (0/12)
+- [ ] personality:john-locke - John Locke (0/12)
+- [ ] personality:robert-nozick - Robert Nozick (0/12)
+- [ ] personality:al-gore - Al Gore (0/12)
+- [ ] personality:beveridge - William Beveridge (0/12)
+
+## FQA072 - pending (0/60)
+
+- [ ] personality:thomas-paine - Thomas Paine (0/12)
+- [ ] personality:edmund-burke - Edmund Burke (0/12)
+- [ ] personality:hayek - Friedrich Hayek (0/12)
+- [ ] personality:gustave-de-molinari - Gustave de Molinari (0/12)
+- [ ] personality:henry-george - Henry George (0/12)
+
+## FQA073 - pending (0/60)
+
+- [ ] personality:charles-fourier - Charles Fourier (0/12)
+- [ ] personality:nicolas-de-condorcet - Nicolas de Condorcet (0/12)
+- [ ] personality:john-rawls - John Rawls (0/12)
+- [ ] personality:aldo-leopold - Aldo Leopold (0/12)
+- [ ] personality:theodore-roosevelt - Theodore Roosevelt (0/12)
+
+## FQA074 - pending (0/60)
+
+- [ ] personality:srnicek - Nick Srnicek (0/12)
+- [ ] personality:ray-kurzweil - Ray Kurzweil (0/12)
+- [ ] personality:getulio-vargas - Getúlio Vargas (0/12)
+- [ ] personality:ernest-renan - Ernest Renan (0/12)
+- [ ] personality:evo-morales - Evo Morales (0/12)
+
+## FQA075 - pending (0/60)
+
+- [ ] personality:bismarck - Otto von Bismarck (0/12)
+- [ ] personality:bakunin - Mikhail Bakunin (0/12)
+- [ ] personality:kropotkin - Piotr Kropotkin (0/12)
+- [ ] personality:durruti - Buenaventura Durruti (0/12)
+- [ ] personality:sorel - Georges Sorel (0/12)
+
+## FQA076 - pending (0/60)
+
+- [ ] personality:chomsky - Noam Chomsky (0/12)
+- [ ] personality:gramsci - Antonio Gramsci (0/12)
+- [ ] personality:tito - Josip Broz Tito (0/12)
+- [ ] personality:oskar-lange - Oskar Lange (0/12)
+- [ ] personality:proudhon - Pierre-Joseph Proudhon (0/12)
+
+## FQA077 - pending (0/60)
+
+- [ ] personality:ocalan - Abdullah Öcalan (0/12)
+- [ ] personality:benjamin-tucker - Benjamin Tucker (0/12)
+- [ ] personality:bookchin - Murray Bookchin (0/12)
+- [ ] personality:keir-hardie - Keir Hardie (0/12)
+- [ ] personality:maritain - Jacques Maritain (0/12)
+
+## FQA078 - pending (0/60)
+
+- [ ] personality:buber - Martin Buber (0/12)
+- [ ] personality:olof-palme - Olof Palme (0/12)
+- [ ] personality:karl-marx - Karl Marx (0/12)
+- [ ] personality:rosselli - Carlo Rosselli (0/12)
+- [ ] personality:orwell - George Orwell (0/12)
+
+## FQA079 - pending (0/60)
+
+- [ ] personality:andre-gorz - André Gorz (0/12)
+- [ ] personality:arne-naess - Arne Næss (0/12)
+- [ ] personality:zapata - Emiliano Zapata (0/12)
+- [ ] personality:emile-armand - Émile Armand (0/12)
+- [ ] personality:daniel-guerin - Daniel Guérin (0/12)
+
+## FQA080 - pending (0/60)
+
+- [ ] personality:tolstoy - Liev Tolstói (0/12)
+- [ ] personality:thoreau - Henry David Thoreau (0/12)
+- [ ] personality:john-zerzan - John Zerzan (0/12)
+- [ ] personality:max-stirner - Max Stirner (0/12)
+- [ ] personality:rothbard - Murray Rothbard (0/12)
+
+## FQA081 - pending (0/60)
+
+- [ ] personality:bastiat - Frédéric Bastiat (0/12)
+- [ ] personality:mises - Ludwig von Mises (0/12)
+- [ ] personality:ron-paul - Ron Paul (0/12)
+- [ ] personality:hoppe - Hans-Hermann Hoppe (0/12)
+- [ ] personality:adam-smith - Adam Smith (0/12)
+
+## FQA082 - pending (0/60)
+
+- [ ] personality:leonard-peikoff - Leonard Peikoff (0/12)
+- [ ] personality:elon-musk - Elon Musk (0/12)
+- [ ] personality:scruton - Roger Scruton (0/12)
+- [ ] personality:friedrich-list - Friedrich List (0/12)
+- [ ] personality:konkin - Samuel Edward Konkin III (0/12)
+
+## FQA083 - pending (0/60)
+
+- [ ] personality:phil-zimmermann - Phil Zimmermann (0/12)
+- [ ] personality:max-more - Max More (0/12)
+- [ ] personality:javier-milei - Javier Milei (0/12)
+- [ ] personality:otto-von-habsburg - Otto von Habsburg (0/12)
+- [ ] personality:goldwater - Barry Goldwater (0/12)
+
+## FQA084 - pending (0/60)
+
+- [ ] personality:ezra-heywood - Ezra Heywood (0/12)
+- [ ] personality:randolph-bourne - Randolph Bourne (0/12)
+- [ ] personality:peter-maurin - Peter Maurin (0/12)
+- [ ] personality:lysander-spooner - Lysander Spooner (0/12)
+- [ ] personality:macron - Emmanuel Macron (0/12)
+
+## FQA085 - pending (0/60)
+
+- [ ] personality:comte - Auguste Comte (0/12)
+- [ ] personality:masaryk - Tomáš Garrigue Masaryk (0/12)
+- [ ] personality:leonardo-boff - Leonardo Boff (0/12)
+- [ ] personality:park-chung-hee - Park Chung-hee (0/12)
+- [ ] personality:kissinger - Henry Kissinger (0/12)
+
+## FQA086 - pending (0/60)
+
+- [ ] personality:paul-romer - Paul Romer (0/12)
+- [ ] personality:peter-thiel - Peter Thiel (0/12)
+- [ ] personality:allende - Salvador Allende (0/12)
+- [ ] personality:marinetti - Filippo Tommaso Marinetti (0/12)
+- [ ] personality:donald-trump - Donald Trump (0/12)
+
+## FQA087 - pending (0/60)
+
+- [ ] personality:xi-jinping - Xi Jinping (0/12)
+- [ ] personality:narendra-modi - Narendra Modi (0/12)
+- [ ] personality:lula-da-silva - Lula da Silva (0/12)
+- [ ] personality:nayib-bukele - Nayib Bukele (0/12)
+- [ ] personality:volodymyr-zelensky - Volodymyr Zelensky (0/12)
+
+## FQA088 - pending (0/60)
+
+- [ ] personality:bernie-sanders - Bernie Sanders (0/12)
+- [ ] personality:mohammed-bin-salman - Mohammed bin Salman (0/12)
+- [ ] personality:mahatma-gandhi - Mahatma Gandhi (0/12)
+- [ ] personality:br-ambedkar - B. R. Ambedkar (0/12)
+- [ ] personality:frantz-fanon - Frantz Fanon (0/12)
+
+## FQA089 - pending (0/60)
+
+- [ ] personality:thomas-sankara - Thomas Sankara (0/12)
+- [ ] personality:nelson-mandela - Nelson Mandela (0/12)
+- [ ] personality:malcolm-x - Malcolm X (0/12)
+- [ ] personality:sayyid-qutb - Sayyid Qutb (0/12)
+- [ ] personality:carl-schmitt - Carl Schmitt (0/12)
+
+## FQA090 - pending (0/60)
+
+- [ ] personality:confucio - Confúcio (0/12)
+- [ ] personality:sun-yat-sen - Sun Yat-sen (0/12)
+- [ ] personality:theodor-herzl - Theodor Herzl (0/12)
+- [ ] personality:hugo-chavez - Hugo Chávez (0/12)
+- [ ] personality:simon-bolivar - Simón Bolívar (0/12)
+
+## FQA091 - pending (0/60)
+
+- [ ] personality:julius-evola - Julius Evola (0/12)
+- [ ] personality:slavoj-zizek - Slavoj Žižek (0/12)
+- [ ] personality:isaiah-berlin - Isaiah Berlin (0/12)
+- [ ] personality:karl-liebknecht - Karl Liebknecht (0/12)
+- [ ] personality:nathaniel-branden - Nathaniel Branden (0/12)
+
+## FQA092 - pending (0/60)
+
+- [ ] personality:jean-paul-sartre - Jean-Paul Sartre (0/12)
+- [ ] personality:jose-bove - José Bové (0/12)
+- [ ] personality:matteo-salvini - Matteo Salvini (0/12)
+- [ ] personality:jeremy-corbyn - Jeremy Corbyn (0/12)
+- [ ] personality:ciro-gomes - Ciro Gomes (0/12)
+
+## FQA093 - pending (0/60)
+
+- [ ] personality:jair-bolsonaro - Jair Bolsonaro (0/12)
+- [ ] personality:michel-temer - Michel Temer (0/12)
+- [ ] personality:fernando-henrique-cardoso - Fernando Henrique Cardoso (0/12)
+- [ ] personality:emilio-medici - Emílio Garrastazu Médici (0/12)
+- [ ] personality:castelo-branco - Humberto Castelo Branco (0/12)
+
+## FQA094 - pending (0/60)
+
+- [ ] personality:joao-goulart - João Goulart (0/12)
+- [ ] personality:leonel-brizola - Leonel Brizola (0/12)
+- [ ] personality:francisco-franco - Francisco Franco (0/12)
+- [ ] personality:barack-obama - Barack Obama (0/12)
+- [ ] personality:benjamin-netanyahu - Benjamin Netanyahu (0/12)
+
+## FQA095 - pending (0/60)
+
+- [ ] personality:augusto-pinochet - Augusto Pinochet (0/12)
+- [ ] personality:fidel-castro - Fidel Castro (0/12)
+- [ ] personality:jose-mujica - José Mujica (0/12)
+- [ ] personality:recep-tayyip-erdogan - Recep Tayyip Erdoğan (0/12)
+- [ ] personality:bashar-al-assad - Bashar al-Assad (0/12)
+
+## FQA096 - pending (0/60)
+
+- [ ] personality:john-f-kennedy - John F. Kennedy (0/12)
+- [ ] personality:ronald-reagan - Ronald Reagan (0/12)
+- [ ] personality:george-w-bush - George W. Bush (0/12)
+- [ ] personality:joe-biden - Joe Biden (0/12)
+- [ ] personality:john-mcafee - John McAfee (0/12)
+
+## FQA097 - pending (0/60)
+
+- [ ] personality:hal-finney - Hal Finney (0/12)
+- [ ] personality:kim-jong-un - Kim Jong Un (0/12)
+- [ ] personality:george-washington - George Washington (0/12)
+- [ ] personality:benjamin-franklin - Benjamin Franklin (0/12)
+- [ ] personality:abraham-lincoln - Abraham Lincoln (0/12)
+
+## FQA098 - pending (0/60)
+
+- [ ] personality:alex-karp - Alex Karp (0/12)
+- [ ] personality:james-madison - James Madison (0/12)
+- [ ] personality:alexander-hamilton - Alexander Hamilton (0/12)
+- [ ] personality:maximilien-robespierre - Maximilien Robespierre (0/12)
+- [ ] personality:alexandre-o-grande - Alexandre, o Grande (0/12)
+
+## FQA099 - pending (0/60)
+
+- [ ] personality:napoleao-bonaparte - Napoleão Bonaparte (0/12)
+- [ ] personality:julio-cesar - Júlio César (0/12)
+- [ ] personality:cesar-augusto - César Augusto (0/12)
+- [ ] personality:carlos-magno - Carlos Magno (0/12)
+- [ ] personality:eneas-carneiro - Enéas Carneiro (0/12)
+
+## FQA100 - pending (0/60)
+
+- [ ] personality:jordan-peterson - Jordan Peterson (0/12)
+- [ ] personality:aristoteles - Aristóteles (0/12)
+- [ ] personality:platao - Platão (0/12)
+- [ ] personality:foucault - Michel Foucault (0/12)
+- [ ] personality:tocqueville - Alexis de Tocqueville (0/12)
+
+## FQA101 - pending (0/60)
+
+- [ ] personality:nietzsche - Friedrich Nietzsche (0/12)
+- [ ] personality:rousseau - Jean-Jacques Rousseau (0/12)
+- [ ] personality:hobbes - Thomas Hobbes (0/12)
+- [ ] personality:maquiavel - Nicolau Maquiavel (0/12)
+- [ ] personality:keynes - John Maynard Keynes (0/12)
+
+## FQA102 - pending (0/60)
+
+- [ ] personality:dom-pedro-i - Dom Pedro I (0/12)
+- [ ] personality:dom-pedro-ii - Dom Pedro II (0/12)
+- [ ] personality:peron - Juan Domingo Perón (0/12)
+- [ ] personality:franklin-roosevelt - Franklin D. Roosevelt (0/12)
+- [ ] personality:satoshi-nakamoto - Satoshi Nakamoto (0/12)
+
+## FQA103 - pending (0/60)
+
+- [ ] personality:george-soros - George Soros (0/12)
+- [ ] personality:bill-gates - Bill Gates (0/12)
+- [ ] personality:dalai-lama - Dalai Lama (Tenzin Gyatso) (0/12)
+- [ ] personality:pentti-linkola - Pentti Linkola (0/12)
+- [ ] personality:thomas-jefferson - Thomas Jefferson (0/12)
+
+## FQA104 - pending (0/60)
+
+- [ ] personality:janos-kadar - János Kádár (0/12)
+- [ ] personality:h-l-mencken - H. L. Mencken (0/12)
+- [ ] personality:marcus-garvey - Marcus Garvey (0/12)
+- [ ] personality:julius-nyerere - Julius Nyerere (0/12)
+- [ ] personality:papa-pio-ix - Papa Pio IX (0/12)
+
+## FQA105 - pending (0/60)
+
+- [ ] personality:justiniano-i - Justiniano I (0/12)
+- [ ] personality:filipe-ii-da-espanha - Filipe II da Espanha (0/12)
+- [ ] personality:pedro-o-grande - Pedro, o Grande (0/12)
+- [ ] personality:joao-calvino - João Calvino (0/12)
+- [ ] personality:dom-manuel-i - Dom Manuel I (0/12)
+
+## FQA106 - pending (0/24)
+
+- [ ] personality:genghis-khan - Genghis Khan (0/12)
+- [ ] personality:lazaro-cardenas - Lázaro Cárdenas (0/12)
+
