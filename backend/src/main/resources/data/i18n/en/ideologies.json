@@ -1014,9 +1014,15 @@
     "description": "Centrist branch that combines economic moderation and institutional respect with social conservatism, valuing family, religion, order, and gradual change without joining the authoritarian right or populist radicalism."
   },
   {
-  "id": "nacional-liberalismo",
-  "name": "National Liberalism",
-  "category": "Right",
-  "description": "Right-wing current that combines free markets, free trade, and limited government with strong national identity, cultural assimilation, traditional and religious values, and a robust military."
-}
+    "id": "nacional-liberalismo",
+    "name": "National Liberalism",
+    "category": "Right",
+    "description": "Right-wing current that combines free markets, free trade, and limited government with strong national identity, cultural assimilation, traditional and religious values, and a robust military."
+  },
+  {
+    "id": "arqueofuturismo",
+    "name": "Archeofuturism",
+    "category": "Authoritarian Right",
+    "description": "A doctrine coined by Guillaume Faye that fuses archaic, hierarchical and traditionalist values — ethnic identity, spirituality and a warrior ethos — with an unreserved embrace of advanced technology, arguing that an approaching civilizational collapse will force humanity to combine tribal social order with hyper-modern science."
+  }
 ]
