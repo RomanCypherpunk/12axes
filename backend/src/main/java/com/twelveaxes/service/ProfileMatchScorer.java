@@ -26,7 +26,9 @@ public class ProfileMatchScorer {
 
     private static final double CENTER = 50.0;
     private static final double AXIS_SPREAD = 50.0;
-    static final double AXIS_WEIGHT = 0.50;
+    static final double AXIS_WEIGHT = 0.45;
+    static final double DIRECTION_WEIGHT = 0.35;
+    static final double MAGNITUDE_WEIGHT = 0.20;
     private static final double OPPOSITE_SIDE_MAX_PENALTY = 0.45;
     private static final double OPPOSITE_SIDE_SPREAD = 25.0;
 
@@ -38,9 +40,11 @@ public class ProfileMatchScorer {
     public double compatibility(Map<String, Double> userVector, Map<String, Double> targetVector) {
         double axisSimilarity = axisSimilarity(userVector, targetVector);
         double directionSimilarity = directionSimilarity(userVector, targetVector);
+        double magnitudeSimilarity = magnitudeSimilarity(userVector, targetVector);
         return round1(clamp(
                 AXIS_WEIGHT * axisSimilarity
-                        + (1.0 - AXIS_WEIGHT) * directionSimilarity
+                        + DIRECTION_WEIGHT * directionSimilarity
+                        + MAGNITUDE_WEIGHT * magnitudeSimilarity
         ));
     }
 
@@ -95,6 +99,19 @@ public class ProfileMatchScorer {
         }
         double cosine = dotProduct / (Math.sqrt(userNormSquared) * Math.sqrt(targetNormSquared));
         return CENTER + CENTER * cosine;
+    }
+
+    private double magnitudeSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
+        double userIntensity = averageDistanceFromCenter(userVector);
+        double targetIntensity = averageDistanceFromCenter(targetVector);
+        return 100.0 - 2.0 * Math.abs(userIntensity - targetIntensity);
+    }
+
+    private double averageDistanceFromCenter(Map<String, Double> vector) {
+        return AXIS_IDS.stream()
+                .mapToDouble(axisId -> Math.abs(vector.getOrDefault(axisId, CENTER) - CENTER))
+                .average()
+                .orElse(0.0);
     }
 
     private double oppositeSideSimilarityFactor(double userValue, double targetValue) {

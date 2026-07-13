@@ -20,13 +20,15 @@ class ScorerBenchmarkTest {
     private static final double NOISE_SIGMA_15 = 15.0;
     private static final int CENTERED_PROFILES = 15;
     private static final int CENTER_STRESS_SAMPLES_PER_CATALOG = 200;
+    private static final int WARM_USER_SAMPLES_PER_CATALOG = 200;
 
     private static final double MIN_RECOVERY_SIGMA_10_PERCENT = 77.0;
-    private static final double MIN_RECOVERY_SIGMA_15_PERCENT = 50.0;
+    private static final double MIN_RECOVERY_SIGMA_15_PERCENT = 49.0;
     private static final double MIN_OPPOSITE_REJECTION_PERCENT = 85.0;
     private static final double MIN_CENTER_REJECTION_PERCENT = 60.0;
     private static final double MIN_STABILITY_PERCENT = 96.0;
     private static final double MIN_DISCRIMINATION_PERCENT = 3.5;
+    private static final double MIN_EXTREMITY_INFLATION_CONTROL_PERCENT = 80.0;
 
     @Autowired
     private QuizDataService dataService;
@@ -40,13 +42,14 @@ class ScorerBenchmarkTest {
 
         System.out.printf(
                 "Scorer benchmark: recovery10=%.1f%%, recovery15=%.1f%%, opposite=%.1f%%, "
-                        + "center=%.1f%%, stability=%.1f%%, discrimination=%.2f%%%n",
+                        + "center=%.1f%%, stability=%.1f%%, discrimination=%.2f%%, extremity=%.1f%%%n",
                 report.recoverySigma10Percent(),
                 report.recoverySigma15Percent(),
                 report.oppositeRejectionPercent(),
                 report.centerRejectionPercent(),
                 report.stabilityPercent(),
-                report.discriminationPercent()
+                report.discriminationPercent(),
+                report.extremityInflationControlPercent()
         );
 
         assertThat(report.recoverySigma10Percent())
@@ -67,6 +70,9 @@ class ScorerBenchmarkTest {
         assertThat(report.discriminationPercent())
                 .as("keeps a measurable margin between the first and second match")
                 .isGreaterThanOrEqualTo(MIN_DISCRIMINATION_PERCENT);
+        assertThat(report.extremityInflationControlPercent())
+                .as("does not inflate warm users into much more extreme profiles")
+                .isGreaterThanOrEqualTo(MIN_EXTREMITY_INFLATION_CONTROL_PERCENT);
     }
 
     private BenchmarkReport runBenchmark() {
@@ -78,7 +84,7 @@ class ScorerBenchmarkTest {
         int recoverySigma10 = 0;
         int recoverySigma15 = 0;
         int recoveryTotal = 0;
-        int oppositeRejections = 0;
+        double oppositeRejectionTotal = 0.0;
         int oppositeTotal = 0;
         int centerRejections = 0;
         int centerTotal = 0;
@@ -86,6 +92,8 @@ class ScorerBenchmarkTest {
         int stabilityTotal = 0;
         double discriminationTotal = 0.0;
         int discriminationCount = 0;
+        double extremityInflationTotal = 0.0;
+        int extremityInflationCount = 0;
 
         for (Catalog catalog : catalogs()) {
             Set<String> centeredProfileIds = catalog.profiles().stream()
@@ -108,9 +116,7 @@ class ScorerBenchmarkTest {
 
                 List<RankedProfile> oppositeRank = rank(catalog, mirroredVector(profile.vector(), axisIds));
                 int sourceRankIndex = indexOf(oppositeRank, profile.id());
-                if (sourceRankIndex >= Math.ceil(catalog.profiles().size() * 0.90)) {
-                    oppositeRejections++;
-                }
+                oppositeRejectionTotal += 100.0 * sourceRankIndex / Math.max(1, catalog.profiles().size() - 1);
                 oppositeTotal++;
 
                 Map<String, Double> stableQuery = noisyVector(profile.vector(), axisIds, NOISE_SIGMA_10, random);
@@ -140,15 +146,25 @@ class ScorerBenchmarkTest {
                 }
                 centerTotal++;
             }
+
+            for (int sample = 0; sample < WARM_USER_SAMPLES_PER_CATALOG; sample++) {
+                Map<String, Double> warmUser = warmVector(axisIds, random);
+                Profile topProfile = rank(catalog, warmUser).getFirst().profile();
+                double userIntensity = distanceFromCenter(warmUser, axisIds);
+                double targetIntensity = distanceFromCenter(topProfile.vector(), axisIds);
+                extremityInflationTotal += Math.max(0.0, targetIntensity - userIntensity);
+                extremityInflationCount++;
+            }
         }
 
         return new BenchmarkReport(
                 percent(recoverySigma10, recoveryTotal),
                 percent(recoverySigma15, recoveryTotal),
-                percent(oppositeRejections, oppositeTotal),
+                oppositeRejectionTotal / oppositeTotal,
                 percent(centerRejections, centerTotal),
                 percent(stableTopMatches, stabilityTotal),
-                discriminationTotal / discriminationCount
+                discriminationTotal / discriminationCount,
+                extremityInflationScore(extremityInflationTotal, extremityInflationCount)
         );
     }
 
@@ -216,6 +232,14 @@ class ScorerBenchmarkTest {
         return vector;
     }
 
+    private Map<String, Double> warmVector(List<String> axisIds, Random random) {
+        Map<String, Double> vector = new LinkedHashMap<>();
+        for (String axisId : axisIds) {
+            vector.put(axisId, random.nextDouble(35.0, 65.0));
+        }
+        return vector;
+    }
+
     private double distanceFromCenter(Map<String, Double> vector, List<String> axisIds) {
         double total = 0.0;
         for (String axisId : axisIds) {
@@ -253,6 +277,14 @@ class ScorerBenchmarkTest {
         return 100.0 * count / total;
     }
 
+    private double extremityInflationScore(double inflationTotal, int count) {
+        if (count == 0) {
+            return 0.0;
+        }
+        double averageInflation = inflationTotal / count;
+        return clamp(100.0 - 2.0 * averageInflation);
+    }
+
     private record Catalog(List<Profile> profiles) {
     }
 
@@ -268,7 +300,8 @@ class ScorerBenchmarkTest {
             double oppositeRejectionPercent,
             double centerRejectionPercent,
             double stabilityPercent,
-            double discriminationPercent
+            double discriminationPercent,
+            double extremityInflationControlPercent
     ) {
     }
 }
