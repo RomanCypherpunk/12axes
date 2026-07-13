@@ -3,11 +3,11 @@
 Fila para auditoria 100% pergunta a pergunta.
 
 ```text
-profiles: 527
-axisUnits: 6324
+profiles: 529
+axisUnits: 6348
 questionsPerAxis: 20
-questionDecisions: 126480
-batches: 106
+questionDecisions: 126960
+batches: 107
 ```
 
 ## FQA001 - done (60/60)
@@ -274,93 +274,93 @@ batches: 106
 - [x] ideology:populismo-de-direita - Populismo de Direita (12/12)
 - [x] ideology:populismo-de-esquerda - Populismo de Esquerda (12/12)
 
-## FQA034 - in_progress (48/60)
+## FQA034 - done (60/60)
 
 - [x] ideology:centrismo-social - Centrismo Social (12/12)
 - [x] ideology:centrismo-liberal - Centrismo Liberal (12/12)
 - [x] ideology:centrismo-ambientalista - Centrismo Ambientalista (12/12)
 - [x] ideology:centrismo-conservador - Centrismo Conservador (12/12)
-- [ ] ideology:nacional-liberalismo - Nacional-Liberalismo (0/12)
+- [x] ideology:nacional-liberalismo - Nacional-Liberalismo (12/12)
 
-## FQA035 - pending (0/60)
+## FQA035 - done (60/60)
 
-- [ ] country:brasil - Brasil (0/12)
-- [ ] country:estados-unidos - Estados Unidos (0/12)
-- [ ] country:mexico - México (0/12)
-- [ ] country:chile - Chile (0/12)
-- [ ] country:bolivia - Bolívia (0/12)
+- [x] country:brasil - Brasil (12/12)
+- [x] country:estados-unidos - Estados Unidos (12/12)
+- [x] country:mexico - México (12/12)
+- [x] country:chile - Chile (12/12)
+- [x] country:bolivia - Bolívia (12/12)
 
-## FQA036 - pending (0/60)
+## FQA036 - done (60/60)
 
-- [ ] country:venezuela - Venezuela (0/12)
-- [ ] country:cuba - Cuba (0/12)
-- [ ] country:costa-rica - Costa Rica (0/12)
-- [ ] country:suica - Suíça (0/12)
-- [ ] country:suecia - Suécia (0/12)
+- [x] country:venezuela - Venezuela (12/12)
+- [x] country:cuba - Cuba (12/12)
+- [x] country:costa-rica - Costa Rica (12/12)
+- [x] country:suica - Suíça (12/12)
+- [x] country:suecia - Suécia (12/12)
 
-## FQA037 - pending (0/60)
+## FQA037 - done (60/60)
 
-- [ ] country:alemanha - Alemanha (0/12)
-- [ ] country:franca - França (0/12)
-- [ ] country:uniao-europeia - União Europeia (0/12)
-- [ ] country:reino-unido - Reino Unido (0/12)
-- [ ] country:hungria - Hungria (0/12)
+- [x] country:alemanha - Alemanha (12/12)
+- [x] country:franca - França (12/12)
+- [x] country:uniao-europeia - União Europeia (12/12)
+- [x] country:reino-unido - Reino Unido (12/12)
+- [x] country:hungria - Hungria (12/12)
 
-## FQA038 - pending (0/60)
+## FQA038 - done (60/60)
 
-- [ ] country:russia - Rússia (0/12)
-- [ ] country:japao - Japão (0/12)
-- [ ] country:coreia-do-sul - Coreia do Sul (0/12)
-- [ ] country:coreia-do-sul-de-park-chung-hee - Coreia do Sul de Park Chung Hee (0/12)
-- [ ] country:china - China (0/12)
+- [x] country:russia - Rússia (12/12)
+- [x] country:japao - Japão (12/12)
+- [x] country:coreia-do-sul - Coreia do Sul (12/12)
+- [x] country:coreia-do-sul-de-park-chung-hee - Coreia do Sul de Park Chung Hee (12/12)
+- [x] country:china - China (12/12)
 
-## FQA039 - pending (0/60)
+## FQA039 - done (60/60)
 
-- [ ] country:coreia-do-norte - Coreia do Norte (0/12)
-- [ ] country:india - Índia (0/12)
-- [ ] country:singapura - Singapura (0/12)
-- [ ] country:vietna - Vietnã (0/12)
-- [ ] country:indonesia - Indonésia (0/12)
+- [x] country:coreia-do-norte - Coreia do Norte (12/12)
+- [x] country:india - Índia (12/12)
+- [x] country:singapura - Singapura (12/12)
+- [x] country:vietna - Vietnã (12/12)
+- [x] country:indonesia - Indonésia (12/12)
 
-## FQA040 - pending (0/60)
+## FQA040 - done (60/60)
 
-- [ ] country:turquia - Turquia (0/12)
-- [ ] country:ira - Irã (0/12)
-- [ ] country:arabia-saudita - Arábia Saudita (0/12)
-- [ ] country:israel - Israel (0/12)
-- [ ] country:africa-do-sul - África do Sul (0/12)
+- [x] country:turquia - Turquia (12/12)
+- [x] country:ira - Irã (12/12)
+- [x] country:arabia-saudita - Arábia Saudita (12/12)
+- [x] country:israel - Israel (12/12)
+- [x] country:africa-do-sul - África do Sul (12/12)
 
-## FQA041 - pending (0/60)
+## FQA041 - done (60/60)
 
-- [ ] country:atenas-democratica - Atenas Democrática (0/12)
-- [ ] country:esparta - Esparta (0/12)
-- [ ] country:imperio-macedonico - Império Macedônico (0/12)
-- [ ] country:imperio-romano - Império Romano (0/12)
-- [ ] country:sacro-imperio-romano-germanico - Sacro Império Romano-Germânico (0/12)
+- [x] country:atenas-democratica - Atenas Democrática (12/12)
+- [x] country:esparta - Esparta (12/12)
+- [x] country:imperio-macedonico - Império Macedônico (12/12)
+- [x] country:imperio-romano - Império Romano (12/12)
+- [x] country:sacro-imperio-romano-germanico - Sacro Império Romano-Germânico (12/12)
 
-## FQA042 - pending (0/60)
+## FQA042 - done (60/60)
 
-- [ ] country:republica-de-veneza - República de Veneza (0/12)
-- [ ] country:imperio-otomano - Império Otomano (0/12)
-- [ ] country:reino-unido-vitoriano-imperio-britanico - Império Britânico (0/12)
-- [ ] country:imperio-do-brasil - Império do Brasil (0/12)
-- [ ] country:alemanha-nazista-terceiro-reich - Alemanha Nazista (Terceiro Reich) (0/12)
+- [x] country:republica-de-veneza - República de Veneza (12/12)
+- [x] country:imperio-otomano - Império Otomano (12/12)
+- [x] country:reino-unido-vitoriano-imperio-britanico - Império Britânico (12/12)
+- [x] country:imperio-do-brasil - Império do Brasil (12/12)
+- [x] country:alemanha-nazista-terceiro-reich - Alemanha Nazista (Terceiro Reich) (12/12)
 
-## FQA043 - pending (0/60)
+## FQA043 - done (60/60)
 
-- [ ] country:italia-fascista-mussolini - Itália Fascista (Mussolini) (0/12)
-- [ ] country:chile-de-pinochet - Chile de Pinochet (0/12)
-- [ ] country:uniao-sovietica-urss - União Soviética (URSS) (0/12)
-- [ ] country:china-maoista - China Maoísta (0/12)
-- [ ] country:camboja-do-khmer-vermelho-pol-pot - Camboja do Khmer Vermelho (Pol Pot) (0/12)
+- [x] country:italia-fascista-mussolini - Itália Fascista (Mussolini) (12/12)
+- [x] country:chile-de-pinochet - Chile de Pinochet (12/12)
+- [x] country:uniao-sovietica-urss - União Soviética (URSS) (12/12)
+- [x] country:china-maoista - China Maoísta (12/12)
+- [x] country:camboja-do-khmer-vermelho-pol-pot - Camboja do Khmer Vermelho (Pol Pot) (12/12)
 
-## FQA044 - pending (0/60)
+## FQA044 - done (60/60)
 
-- [ ] country:aragao-e-catalunha-anarquistas-revolucao-espanhola - Aragão e Catalunha Anarquistas (Revolução Espanhola) (0/12)
-- [ ] country:argentina-peronista - Argentina Peronista (0/12)
-- [ ] country:egito-de-nasser - Egito de Nasser (0/12)
-- [ ] country:africa-do-sul-do-apartheid - África do Sul do Apartheid (0/12)
-- [ ] country:hong-kong - Hong Kong (0/12)
+- [x] country:aragao-e-catalunha-anarquistas-revolucao-espanhola - Aragão e Catalunha Anarquistas (Revolução Espanhola) (12/12)
+- [x] country:argentina-peronista - Argentina Peronista (12/12)
+- [x] country:egito-de-nasser - Egito de Nasser (12/12)
+- [x] country:africa-do-sul-do-apartheid - África do Sul do Apartheid (12/12)
+- [x] country:hong-kong - Hong Kong (12/12)
 
 ## FQA045 - pending (0/60)
 
@@ -854,4 +854,9 @@ batches: 106
 
 - [ ] personality:genghis-khan - Genghis Khan (0/12)
 - [ ] personality:lazaro-cardenas - Lázaro Cárdenas (0/12)
+
+## FQA107 - done (24/24)
+
+- [x] ideology:arqueofuturismo - Arqueofuturismo (12/12)
+- [x] personality:guillaume-faye - Guillaume Faye (12/12)
 

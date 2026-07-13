@@ -192,13 +192,13 @@ export function renderQueueMarkdown(queue) {
   lines.push("```");
   lines.push("");
   for (const batch of queue.batches) {
-    const doneUnits = batch.units.filter((unit) => unit.status === "done").length;
+    const doneUnits = batch.units.filter((unit) => unit.status === "done" || unit.status === "skipped").length;
     lines.push(`## ${batch.batchId} - ${batch.status} (${doneUnits}/${batch.units.length})`);
     lines.push("");
     const profiles = groupBy(batch.units, (unit) => `${unit.catalog}:${unit.profileId}`);
     for (const [profileKey, units] of profiles) {
       const first = units[0];
-      const done = units.filter((unit) => unit.status === "done").length;
+      const done = units.filter((unit) => unit.status === "done" || unit.status === "skipped").length;
       lines.push(`- [${done === units.length ? "x" : " "}] ${profileKey} - ${first.name} (${done}/12)`);
     }
     lines.push("");
