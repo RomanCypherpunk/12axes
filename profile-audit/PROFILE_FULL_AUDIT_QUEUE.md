@@ -362,21 +362,21 @@ batches: 107
 - [x] country:africa-do-sul-do-apartheid - África do Sul do Apartheid (12/12)
 - [x] country:hong-kong - Hong Kong (12/12)
 
-## FQA045 - pending (0/60)
+## FQA045 - done (60/60)
 
-- [ ] country:argentina - Argentina (0/12)
-- [ ] country:liechtenstein - Liechtenstein (0/12)
-- [ ] country:rojava - Rojava (Norte e Leste da Síria) (0/12)
-- [ ] country:iugoslavia-socialista - Iugoslávia Socialista (0/12)
-- [ ] country:espanha-franquista - Espanha Franquista (0/12)
+- [x] country:argentina - Argentina (12/12)
+- [x] country:liechtenstein - Liechtenstein (12/12)
+- [x] country:rojava - Rojava (Norte e Leste da Síria) (12/12)
+- [x] country:iugoslavia-socialista - Iugoslávia Socialista (12/12)
+- [x] country:espanha-franquista - Espanha Franquista (12/12)
 
-## FQA046 - pending (0/60)
+## FQA046 - done (60/60)
 
-- [ ] country:islandia-medieval - Islândia Medieval (Mancomunidade) (0/12)
-- [ ] country:emirados-arabes-unidos - Emirados Árabes Unidos (0/12)
-- [ ] country:portugal-estado-novo - Portugal (Estado Novo) (0/12)
-- [ ] country:prussia - Reino da Prússia (0/12)
-- [ ] country:polonia - Polônia (0/12)
+- [x] country:islandia-medieval - Islândia Medieval (Mancomunidade) (12/12)
+- [x] country:emirados-arabes-unidos - Emirados Árabes Unidos (12/12)
+- [x] country:portugal-estado-novo - Portugal (Estado Novo) (12/12)
+- [x] country:prussia - Reino da Prússia (12/12)
+- [x] country:polonia - Polônia (12/12)
 
 ## FQA047 - pending (0/60)
 

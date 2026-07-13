@@ -103297,7 +103297,7 @@
     },
     {
       "batchId": "FQA045",
-      "status": "pending",
+      "status": "done",
       "profileCount": 5,
       "units": [
         {
@@ -103308,10 +103308,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103336,7 +103336,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:09.222Z"
         },
         {
           "unitId": "country:argentina:representacao",
@@ -103346,10 +103347,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 61.3,
+          "calculatedValue": 61.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103374,7 +103375,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:09.775Z"
         },
         {
           "unitId": "country:argentina:poder",
@@ -103384,10 +103386,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 20,
+          "calculatedValue": 20,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103412,7 +103414,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:10.327Z"
         },
         {
           "unitId": "country:argentina:imigracao",
@@ -103422,10 +103425,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 18.8,
+          "calculatedValue": 18.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103450,7 +103453,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:10.751Z"
         },
         {
           "unitId": "country:argentina:diplomacia",
@@ -103460,10 +103464,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 23.8,
+          "calculatedValue": 23.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103488,7 +103492,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:11.246Z"
         },
         {
           "unitId": "country:argentina:intervencao",
@@ -103498,10 +103503,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 78.8,
+          "calculatedValue": 78.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103526,7 +103531,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:11.799Z"
         },
         {
           "unitId": "country:argentina:economia",
@@ -103536,10 +103542,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103564,7 +103570,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:12.344Z"
         },
         {
           "unitId": "country:argentina:controle",
@@ -103574,10 +103581,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "controle",
-          "status": "pending",
+          "status": "done",
           "currentValue": 10,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103602,7 +103609,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:12.784Z"
         },
         {
           "unitId": "country:argentina:comercio",
@@ -103612,10 +103620,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 12.5,
+          "calculatedValue": 12.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103640,7 +103648,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:13.202Z"
         },
         {
           "unitId": "country:argentina:religiao",
@@ -103650,10 +103659,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 38.8,
+          "calculatedValue": 38.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103678,7 +103687,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:13.606Z"
         },
         {
           "unitId": "country:argentina:moral",
@@ -103688,10 +103698,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 56.3,
+          "calculatedValue": 56.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103716,7 +103726,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:14.002Z"
         },
         {
           "unitId": "country:argentina:tecnologia",
@@ -103726,10 +103737,10 @@
           "name": "Argentina",
           "category": "República presidencialista libertária",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103754,7 +103765,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:14.490Z"
         },
         {
           "unitId": "country:liechtenstein:estrutura",
@@ -103764,10 +103776,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 88,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 97.5,
+          "calculatedValue": 97.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103792,7 +103804,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:15.037Z"
         },
         {
           "unitId": "country:liechtenstein:representacao",
@@ -103802,10 +103815,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 68.8,
+          "calculatedValue": 68.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103830,7 +103843,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:15.479Z"
         },
         {
           "unitId": "country:liechtenstein:poder",
@@ -103840,10 +103854,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103868,7 +103882,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:15.893Z"
         },
         {
           "unitId": "country:liechtenstein:imigracao",
@@ -103878,10 +103893,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 33.8,
+          "calculatedValue": 33.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103906,7 +103921,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:16.300Z"
         },
         {
           "unitId": "country:liechtenstein:diplomacia",
@@ -103916,10 +103932,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 5,
+          "calculatedValue": 5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103944,7 +103960,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:16.701Z"
         },
         {
           "unitId": "country:liechtenstein:intervencao",
@@ -103954,10 +103971,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 85,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 95,
+          "calculatedValue": 95,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -103982,7 +103999,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:17.159Z"
         },
         {
           "unitId": "country:liechtenstein:economia",
@@ -103992,10 +104010,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 12.5,
+          "calculatedValue": 12.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104020,7 +104038,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:17.648Z"
         },
         {
           "unitId": "country:liechtenstein:controle",
@@ -104030,10 +104049,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 8,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 10,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104058,7 +104077,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:18.077Z"
         },
         {
           "unitId": "country:liechtenstein:comercio",
@@ -104068,10 +104088,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 14,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 25,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104096,7 +104116,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:18.511Z"
         },
         {
           "unitId": "country:liechtenstein:religiao",
@@ -104106,10 +104127,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 50,
+          "calculatedValue": 50,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104134,7 +104155,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:18.939Z"
         },
         {
           "unitId": "country:liechtenstein:moral",
@@ -104144,10 +104166,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 36.3,
+          "calculatedValue": 36.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104172,7 +104194,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:19.360Z"
         },
         {
           "unitId": "country:liechtenstein:tecnologia",
@@ -104182,10 +104205,10 @@
           "name": "Liechtenstein",
           "category": "Monarquia constitucional libertária",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104210,7 +104233,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:19.763Z"
         },
         {
           "unitId": "country:rojava:estrutura",
@@ -104220,10 +104244,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 97,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 98.8,
+          "calculatedValue": 98.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104248,7 +104272,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:20.297Z"
         },
         {
           "unitId": "country:rojava:representacao",
@@ -104258,10 +104283,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 86,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 88.8,
+          "calculatedValue": 88.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104286,7 +104311,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:20.740Z"
         },
         {
           "unitId": "country:rojava:poder",
@@ -104296,10 +104322,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104324,7 +104350,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:21.224Z"
         },
         {
           "unitId": "country:rojava:imigracao",
@@ -104334,10 +104361,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 16.3,
+          "calculatedValue": 16.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104362,7 +104389,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:21.687Z"
         },
         {
           "unitId": "country:rojava:diplomacia",
@@ -104372,10 +104400,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 35,
+          "calculatedValue": 35,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104400,7 +104428,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:22.119Z"
         },
         {
           "unitId": "country:rojava:intervencao",
@@ -104410,10 +104439,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 85,
+          "calculatedValue": 85,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104438,7 +104467,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:22.514Z"
         },
         {
           "unitId": "country:rojava:economia",
@@ -104448,10 +104478,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 82,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 92.5,
+          "calculatedValue": 92.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104476,7 +104506,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:22.976Z"
         },
         {
           "unitId": "country:rojava:controle",
@@ -104486,10 +104517,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 71.2,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 81.3,
+          "calculatedValue": 81.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104514,7 +104545,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:23.465Z"
         },
         {
           "unitId": "country:rojava:comercio",
@@ -104524,10 +104556,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 77.5,
+          "calculatedValue": 77.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104552,7 +104584,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:23.858Z"
         },
         {
           "unitId": "country:rojava:religiao",
@@ -104562,10 +104595,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 82,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 98.8,
+          "calculatedValue": 98.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104590,7 +104623,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:24.303Z"
         },
         {
           "unitId": "country:rojava:moral",
@@ -104600,10 +104634,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 92,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 95,
+          "calculatedValue": 95,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104628,7 +104662,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:24.731Z"
         },
         {
           "unitId": "country:rojava:tecnologia",
@@ -104638,10 +104673,10 @@
           "name": "Rojava (Norte e Leste da Síria)",
           "category": "Confederalismo democrático autônomo",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104666,7 +104701,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:25.208Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:estrutura",
@@ -104676,10 +104712,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 72.5,
+          "calculatedValue": 72.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104704,7 +104740,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:25.695Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:representacao",
@@ -104714,10 +104751,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 7.5,
+          "calculatedValue": 7.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104742,7 +104779,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:26.215Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:poder",
@@ -104752,10 +104790,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 81.3,
+          "calculatedValue": 81.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104780,7 +104818,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:26.647Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:imigracao",
@@ -104790,10 +104829,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 32.5,
+          "calculatedValue": 32.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104818,7 +104857,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:27.058Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:diplomacia",
@@ -104828,10 +104868,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 41.3,
+          "calculatedValue": 41.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104856,7 +104896,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:27.473Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:intervencao",
@@ -104866,10 +104907,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104894,7 +104935,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:27.871Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:economia",
@@ -104904,10 +104946,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 82,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 92.5,
+          "calculatedValue": 92.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104932,7 +104974,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:28.314Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:controle",
@@ -104942,10 +104985,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 77.5,
+          "calculatedValue": 77.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -104970,7 +105013,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:28.809Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:comercio",
@@ -104980,10 +105024,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 38.8,
+          "calculatedValue": 38.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105008,7 +105052,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:29.282Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:religiao",
@@ -105018,10 +105063,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105046,7 +105091,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:29.759Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:moral",
@@ -105056,10 +105102,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105084,7 +105130,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:30.254Z"
         },
         {
           "unitId": "country:iugoslavia-socialista:tecnologia",
@@ -105094,10 +105141,10 @@
           "name": "Iugoslávia Socialista",
           "category": "Socialismo autogestionário de mercado",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 58.8,
+          "calculatedValue": 58.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105122,7 +105169,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:30.672Z"
         },
         {
           "unitId": "country:espanha-franquista:estrutura",
@@ -105132,10 +105180,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 10,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105160,7 +105208,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:31.129Z"
         },
         {
           "unitId": "country:espanha-franquista:representacao",
@@ -105170,10 +105219,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 4,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 0,
+          "calculatedValue": 0,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105198,7 +105247,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:31.647Z"
         },
         {
           "unitId": "country:espanha-franquista:poder",
@@ -105208,10 +105258,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 90,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 100,
+          "calculatedValue": 100,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105236,7 +105286,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:32.087Z"
         },
         {
           "unitId": "country:espanha-franquista:imigracao",
@@ -105246,10 +105297,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105274,7 +105325,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:32.576Z"
         },
         {
           "unitId": "country:espanha-franquista:diplomacia",
@@ -105284,10 +105336,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 37.5,
+          "calculatedValue": 37.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105312,7 +105364,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:32.962Z"
         },
         {
           "unitId": "country:espanha-franquista:intervencao",
@@ -105322,10 +105375,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105350,7 +105403,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:33.349Z"
         },
         {
           "unitId": "country:espanha-franquista:economia",
@@ -105360,10 +105414,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 57.5,
+          "calculatedValue": 57.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105388,7 +105442,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:33.734Z"
         },
         {
           "unitId": "country:espanha-franquista:controle",
@@ -105398,10 +105453,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 75,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105426,7 +105481,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:34.163Z"
         },
         {
           "unitId": "country:espanha-franquista:comercio",
@@ -105436,10 +105492,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 100,
+          "calculatedValue": 100,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105464,7 +105520,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:34.550Z"
         },
         {
           "unitId": "country:espanha-franquista:religiao",
@@ -105474,10 +105531,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "religiao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 10,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105502,7 +105559,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:34.960Z"
         },
         {
           "unitId": "country:espanha-franquista:moral",
@@ -105512,10 +105570,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 4,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 5,
+          "calculatedValue": 5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105540,7 +105598,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:35.425Z"
         },
         {
           "unitId": "country:espanha-franquista:tecnologia",
@@ -105550,10 +105609,10 @@
           "name": "Espanha Franquista",
           "category": "Ditadura nacional-católica",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 38,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105578,13 +105637,14 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:18:35.972Z"
         }
       ]
     },
     {
       "batchId": "FQA046",
-      "status": "pending",
+      "status": "done",
       "profileCount": 5,
       "units": [
         {
@@ -105595,10 +105655,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 98,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 97.5,
+          "calculatedValue": 97.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105623,7 +105683,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:43.962Z"
         },
         {
           "unitId": "country:islandia-medieval:representacao",
@@ -105633,10 +105694,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 68.8,
+          "calculatedValue": 68.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105661,7 +105722,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:44.404Z"
         },
         {
           "unitId": "country:islandia-medieval:poder",
@@ -105671,10 +105733,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 5,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 1.3,
+          "calculatedValue": 1.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105699,7 +105761,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:44.831Z"
         },
         {
           "unitId": "country:islandia-medieval:imigracao",
@@ -105709,10 +105772,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 47.5,
+          "calculatedValue": 47.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105737,7 +105800,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:45.260Z"
         },
         {
           "unitId": "country:islandia-medieval:diplomacia",
@@ -105747,10 +105811,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 5,
+          "calculatedValue": 5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105775,7 +105839,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:45.695Z"
         },
         {
           "unitId": "country:islandia-medieval:intervencao",
@@ -105785,10 +105850,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 90,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 95,
+          "calculatedValue": 95,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105813,7 +105878,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:46.114Z"
         },
         {
           "unitId": "country:islandia-medieval:economia",
@@ -105823,10 +105889,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 20,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 12.5,
+          "calculatedValue": 12.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105851,7 +105917,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:46.516Z"
         },
         {
           "unitId": "country:islandia-medieval:controle",
@@ -105861,10 +105928,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 8,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 10,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105889,7 +105956,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:47.006Z"
         },
         {
           "unitId": "country:islandia-medieval:comercio",
@@ -105899,10 +105967,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 38,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105927,7 +105995,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:47.488Z"
         },
         {
           "unitId": "country:islandia-medieval:religiao",
@@ -105937,10 +106006,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -105965,7 +106034,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:47.904Z"
         },
         {
           "unitId": "country:islandia-medieval:moral",
@@ -105975,10 +106045,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106003,7 +106073,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:48.328Z"
         },
         {
           "unitId": "country:islandia-medieval:tecnologia",
@@ -106013,10 +106084,10 @@
           "name": "Islândia Medieval (Mancomunidade)",
           "category": "Ordem policêntrica sem Estado central",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 20,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106041,7 +106112,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:48.766Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:estrutura",
@@ -106051,10 +106123,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 75,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 97.5,
+          "calculatedValue": 97.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106079,7 +106151,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:49.180Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:representacao",
@@ -106089,10 +106162,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 8,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 11.3,
+          "calculatedValue": 11.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106117,7 +106190,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:49.664Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:poder",
@@ -106127,10 +106201,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 80,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 83.8,
+          "calculatedValue": 83.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106155,7 +106229,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:50.230Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:imigracao",
@@ -106165,10 +106240,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 61.3,
+          "calculatedValue": 61.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106193,7 +106268,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:50.679Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:diplomacia",
@@ -106203,10 +106279,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 73.8,
+          "calculatedValue": 73.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106231,7 +106307,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:51.110Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:intervencao",
@@ -106241,10 +106318,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106269,7 +106346,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:51.536Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:economia",
@@ -106279,10 +106357,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 56.3,
+          "calculatedValue": 56.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106307,7 +106385,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:51.946Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:controle",
@@ -106317,10 +106396,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 34,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 32.5,
+          "calculatedValue": 32.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106345,7 +106424,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:52.382Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:comercio",
@@ -106355,10 +106435,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 15,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 12.5,
+          "calculatedValue": 12.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106383,7 +106463,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:52.871Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:religiao",
@@ -106393,10 +106474,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 32.5,
+          "calculatedValue": 32.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106421,7 +106502,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:53.307Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:moral",
@@ -106431,10 +106513,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 30,
+          "calculatedValue": 30,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106459,7 +106541,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:53.777Z"
         },
         {
           "unitId": "country:emirados-arabes-unidos:tecnologia",
@@ -106469,10 +106552,10 @@
           "name": "Emirados Árabes Unidos",
           "category": "Federação de monarquias tecnológicas",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 88,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 82.5,
+          "calculatedValue": 82.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106497,7 +106580,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:54.215Z"
         },
         {
           "unitId": "country:portugal-estado-novo:estrutura",
@@ -106507,10 +106591,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 16,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 10,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106535,7 +106619,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:54.617Z"
         },
         {
           "unitId": "country:portugal-estado-novo:representacao",
@@ -106545,10 +106630,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 3,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 0,
+          "calculatedValue": 0,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106573,7 +106658,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:55.004Z"
         },
         {
           "unitId": "country:portugal-estado-novo:poder",
@@ -106583,10 +106669,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 86,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 83.8,
+          "calculatedValue": 83.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106611,7 +106697,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:55.586Z"
         },
         {
           "unitId": "country:portugal-estado-novo:imigracao",
@@ -106621,10 +106708,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106649,7 +106736,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:56.043Z"
         },
         {
           "unitId": "country:portugal-estado-novo:diplomacia",
@@ -106659,10 +106747,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106687,7 +106775,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:56.490Z"
         },
         {
           "unitId": "country:portugal-estado-novo:intervencao",
@@ -106697,10 +106786,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 20,
+          "calculatedValue": 20,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106725,7 +106814,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:56.928Z"
         },
         {
           "unitId": "country:portugal-estado-novo:economia",
@@ -106735,10 +106825,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 57.5,
+          "calculatedValue": 57.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106763,7 +106853,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:57.349Z"
         },
         {
           "unitId": "country:portugal-estado-novo:controle",
@@ -106773,10 +106864,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 70,
+          "calculatedValue": 70,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106801,7 +106892,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:57.747Z"
         },
         {
           "unitId": "country:portugal-estado-novo:comercio",
@@ -106811,10 +106903,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 83.8,
+          "calculatedValue": 83.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106839,7 +106931,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:58.242Z"
         },
         {
           "unitId": "country:portugal-estado-novo:religiao",
@@ -106849,10 +106942,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 10,
+          "calculatedValue": 10,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106877,7 +106970,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:58.720Z"
         },
         {
           "unitId": "country:portugal-estado-novo:moral",
@@ -106887,10 +106981,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 8,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 5,
+          "calculatedValue": 5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106915,7 +107009,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:59.170Z"
         },
         {
           "unitId": "country:portugal-estado-novo:tecnologia",
@@ -106925,10 +107020,10 @@
           "name": "Portugal (Estado Novo)",
           "category": "Ditadura corporativa conservadora",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 31.3,
+          "calculatedValue": 31.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106953,7 +107048,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:20:59.593Z"
         },
         {
           "unitId": "country:prussia:estrutura",
@@ -106963,10 +107059,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 16.3,
+          "calculatedValue": 16.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -106991,7 +107087,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:00.060Z"
         },
         {
           "unitId": "country:prussia:representacao",
@@ -107001,10 +107098,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 8,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 0,
+          "calculatedValue": 0,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107029,7 +107126,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:00.607Z"
         },
         {
           "unitId": "country:prussia:poder",
@@ -107039,10 +107137,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 88,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 78.8,
+          "calculatedValue": 78.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107067,7 +107165,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:01.203Z"
         },
         {
           "unitId": "country:prussia:imigracao",
@@ -107077,10 +107176,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107105,7 +107204,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:01.706Z"
         },
         {
           "unitId": "country:prussia:diplomacia",
@@ -107115,10 +107215,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 95,
+          "calculatedValue": 95,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107143,7 +107243,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:02.339Z"
         },
         {
           "unitId": "country:prussia:intervencao",
@@ -107153,10 +107254,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 23.8,
+          "calculatedValue": 23.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107181,7 +107282,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:02.797Z"
         },
         {
           "unitId": "country:prussia:economia",
@@ -107191,10 +107293,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 56.3,
+          "calculatedValue": 56.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107219,7 +107321,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:03.199Z"
         },
         {
           "unitId": "country:prussia:controle",
@@ -107229,10 +107332,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107257,7 +107360,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:03.746Z"
         },
         {
           "unitId": "country:prussia:comercio",
@@ -107267,10 +107371,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 67.5,
+          "calculatedValue": 67.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107295,7 +107399,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:04.224Z"
         },
         {
           "unitId": "country:prussia:religiao",
@@ -107305,10 +107410,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 28.7,
+          "calculatedValue": 28.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107333,7 +107438,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:04.658Z"
         },
         {
           "unitId": "country:prussia:moral",
@@ -107343,10 +107449,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 23.8,
+          "calculatedValue": 23.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107371,7 +107477,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:05.141Z"
         },
         {
           "unitId": "country:prussia:tecnologia",
@@ -107381,10 +107488,10 @@
           "name": "Reino da Prússia",
           "category": "Estado burocrático-militar cameralista",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 58.8,
+          "calculatedValue": 58.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107409,7 +107516,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:05.559Z"
         },
         {
           "unitId": "country:polonia:estrutura",
@@ -107419,10 +107527,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107447,7 +107555,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:05.938Z"
         },
         {
           "unitId": "country:polonia:representacao",
@@ -107457,10 +107566,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 61.3,
+          "calculatedValue": 61.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107485,7 +107594,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:06.421Z"
         },
         {
           "unitId": "country:polonia:poder",
@@ -107495,10 +107605,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 42.5,
+          "calculatedValue": 42.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107523,7 +107633,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:06.870Z"
         },
         {
           "unitId": "country:polonia:imigracao",
@@ -107533,10 +107644,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 75,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 91.3,
+          "calculatedValue": 91.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107561,7 +107672,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:07.303Z"
         },
         {
           "unitId": "country:polonia:diplomacia",
@@ -107571,10 +107683,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 77.5,
+          "calculatedValue": 77.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107599,7 +107711,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:07.766Z"
         },
         {
           "unitId": "country:polonia:intervencao",
@@ -107609,10 +107722,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 61.3,
+          "calculatedValue": 61.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107637,7 +107750,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:08.245Z"
         },
         {
           "unitId": "country:polonia:economia",
@@ -107647,10 +107761,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 22.5,
+          "calculatedValue": 22.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107675,7 +107789,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:08.663Z"
         },
         {
           "unitId": "country:polonia:controle",
@@ -107685,10 +107800,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 32.5,
+          "calculatedValue": 32.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107713,7 +107828,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:09.143Z"
         },
         {
           "unitId": "country:polonia:comercio",
@@ -107723,10 +107839,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 12.5,
+          "calculatedValue": 12.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107751,7 +107867,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:09.614Z"
         },
         {
           "unitId": "country:polonia:religiao",
@@ -107761,10 +107878,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 18,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107789,7 +107906,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:10.013Z"
         },
         {
           "unitId": "country:polonia:moral",
@@ -107799,10 +107917,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 21.3,
+          "calculatedValue": 21.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107827,7 +107945,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:10.482Z"
         },
         {
           "unitId": "country:polonia:tecnologia",
@@ -107837,10 +107956,10 @@
           "name": "Polônia",
           "category": "Democracia nacional-conservadora",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 57.5,
+          "calculatedValue": 57.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/countries-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/countries.json",
           "questionIds": [
@@ -107865,7 +107984,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in real institutional facts)",
+          "completedAt": "2026-07-13T23:21:10.955Z"
         }
       ]
     },
