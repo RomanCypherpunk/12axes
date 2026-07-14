@@ -1,3 +1,17 @@
+// ============================================================================================
+// ⚠️  DO NOT USE — see profile-audit/INSTRUCOES-NOVA-AUDITORIA.md, secao "Script perigoso".
+// This script does NOT perform genuine re-auditing. It mechanically swaps/perturbs individual
+// answer letters (candidateVariants: pairwise swaps, +-1 deltas) for a duplicated unit UNTIL the
+// byte sequence no longer matches another profile's, while deliberately constraining every
+// candidate to preserve the exact same rounded axisValue as before (see the
+// `calculateAxisValue(candidateRows) === originalValue` check below). That means it can make a
+// duplicate-cluster detector go quiet WITHOUT any real independent judgment ever happening — the
+// new letters are essentially arbitrary noise, not a reconsidered opinion. Running this against
+// the duplicate clusters found by find-duplicate-answer-sequences.mjs (or by the new isolated-
+// audit pipeline's gate) would defeat the entire purpose of the audit. Use
+// run-batch-isolated.mjs's automatic reprocessing (which asks a fresh, isolated model call to
+// actually reconsider the profile) instead.
+// ============================================================================================
 import {
   ANSWER_LABELS,
   ANSWER_SCORES,
