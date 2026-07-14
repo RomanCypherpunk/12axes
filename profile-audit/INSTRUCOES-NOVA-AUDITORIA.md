@@ -16,11 +16,15 @@ genuinamente independente.
 achado**: neste momento existem **665 clusters de resposta idêntica** (20/20 respostas byte-a-byte
 iguais entre dois ou mais perfis, no mesmo eixo) espalhados pelos três catálogos:
 
-| Catálogo | Clusters | Unidades (perfil×eixo) afetadas |
-|---|---|---|
-| Personalidade | 178 | 1211 |
-| País | 254 | 1000 |
-| Ideologia | 294 | 1080 |
+| Catálogo | Total de perfis | Nunca auditados (0/12 eixos) | Já auditados | ...dos quais duplicados |
+|---|---|---|---|---|
+| Personalidade | 228 | **112** | 116 | **116 (100%)** |
+| País | 130 | 0 | 130 | 130 (100%) |
+| Ideologia | 171 | 1 | 170 | 146 (86%) |
+
+Ou seja: em personalidade, **todo perfil que já foi auditado está duplicado com outro** (116 de
+116) — e ainda faltam 112 perfis que nunca foram tocados. São dois problemas diferentes que pedem
+tratamento diferente (seção 3.2 explica os dois).
 
 A causa raiz, como o revisor diagnosticou: numa sessão de chat contínua, ao processar um perfil
 parecido com outro já respondido no mesmo eixo, o modelo reconhece a semelhança de alto nível
@@ -118,27 +122,48 @@ igual à Opção A, só que sem chave de API separada.
 
 **Diferença importante:** aqui o retrabalho é **por perfil inteiro** (os 12 eixos de uma vez), não
 eixo por eixo — porque cópia entre eixos do mesmo perfil nunca foi o problema, só cópia entre
-perfis diferentes. Isso já reduz bastante o volume:
+perfis diferentes. Isso já reduz bastante o volume. Mas existem **dois grupos distintos de
+perfis**, e é fácil misturar os dois por engano:
 
-| Catálogo | Unidades eixo×perfil duplicadas | Perfis únicos afetados |
-|---|---|---|
-| Personalidade | 1211 | **116** |
-| País | 1000 | **130** (praticamente o catálogo inteiro) |
-| Ideologia | 1080 | **146** |
+1. **Já auditados, mas duplicados** (`export-duplicate-units.mjs --profiles`) — têm resposta gravada,
+   mas ela colidiu com outra. Precisam ser *reavaliados* (a gravação nova substitui a antiga).
+2. **Nunca auditados** (`export-pending-profiles.mjs`) — não têm nenhuma resposta gravada ainda.
+   Precisam de auditoria *pela primeira vez*, não de retrabalho.
 
-Para gerar a lista de perfis a retrabalhar:
+O fluxo de subagente é idêntico para os dois grupos (mesmo prompt, mesma gravação via
+`record-full-axis-answers.mjs`) — a única diferença é se você está sobrescrevendo algo que já
+existia ou escrevendo pela primeira vez. Pode processar os dois grupos juntos.
+
+| Catálogo | Grupo 1: já auditado + duplicado | Grupo 2: nunca auditado | Total a processar |
+|---|---|---|---|
+| Personalidade | 116 (100% dos já auditados) | **112** | **228** |
+| País | 130 (100% dos já auditados) | 0 | 130 |
+| Ideologia | 146 (86% dos já auditados) | 1 | 147 |
+
+Para gerar as listas:
 ```bash
-node profile-audit/scripts/export-duplicate-units.mjs personality --profiles > personality-profiles-rework.json
-node profile-audit/scripts/export-duplicate-units.mjs country --profiles > country-profiles-rework.json
-node profile-audit/scripts/export-duplicate-units.mjs ideology --profiles > ideology-profiles-rework.json
+# Grupo 1 — já auditados mas duplicados
+node profile-audit/scripts/export-duplicate-units.mjs personality --profiles > personality-rework.json
+node profile-audit/scripts/export-duplicate-units.mjs country --profiles > country-rework.json
+node profile-audit/scripts/export-duplicate-units.mjs ideology --profiles > ideology-rework.json
+
+# Grupo 2 — nunca auditados
+node profile-audit/scripts/export-pending-profiles.mjs personality > personality-pending.json
+node profile-audit/scripts/export-pending-profiles.mjs country > country-pending.json
+node profile-audit/scripts/export-pending-profiles.mjs ideology > ideology-pending.json
 ```
+
+Em personalidade especificamente, isso significa **os dois arquivos juntos cobrem o catálogo
+inteiro** (116 + 112 = 228) — não sobra nenhum perfil "só confirmando que já está bom", porque
+literalmente nenhum perfil de personalidade escapou da duplicação ou da ausência total.
 
 **O que pedir para o Claude Code fazer** (cole isto, ou algo parecido, numa sessão nova — ela não
 precisa ter acompanhado nada do histórico anterior, só precisa deste arquivo):
 
 > Leia `profile-audit/INSTRUCOES-NOVA-AUDITORIA.md` inteiro. Depois, para cada perfil listado em
-> `personality-profiles-rework.json` (comece por este catálogo), dispare um subagente (Agent tool,
-> `subagent_type: general-purpose`, sem acesso à sua própria conversa) com um prompt autocontido
+> `personality-rework.json` e `personality-pending.json` (comece por este catálogo — junte os dois
+> arquivos, a ordem não importa), dispare um subagente (Agent tool, `subagent_type: general-purpose`,
+> sem acesso à sua própria conversa) com um prompt autocontido
 > contendo: (1) a `description`/`category`/`role`/`lifespan` desse perfil, lidos direto de
 > `backend/src/main/resources/data/personalities.json` (ou `countries.json`/`ideologies.json`
 > conforme o catálogo); (2) as 20 perguntas de cada um dos 12 eixos (`backend/src/main/resources/data/questions-pool.json`),
@@ -177,14 +202,18 @@ projeto e do prompt da seção 3.2. Nenhuma configuração extra.
 
 ## 5. Escala esperada
 
-- **Opção A (por unidade eixo×perfil)**: 1211 (personalidade) + 1000 (país) + 1080 (ideologia) =
-  **3291 unidades**, cada uma = 1 chamada de API (mais eventuais reprocessamentos do gate). Tem custo
-  real de API por token.
-- **Opção B (por perfil inteiro)**: 116 (personalidade) + 130 (país) + 146 (ideologia) = **392
-  perfis**, cada um = 1 subagente cobrindo os 12 eixos de uma vez. Sem custo de API separado, mas
-  consome uso normal do Claude Code e precisa de alguém disparando os subagentes.
-- **Personalidade tem prioridade** (seção 6.7 da revisão): é o catálogo com maior taxa de duplicação
-  proporcional e ainda tem perfis nunca auditados (os 23 lotes pendentes da fila antiga, seção 8).
+Contando os dois grupos da seção 3.2 (duplicados + nunca auditados):
+
+- **Opção A**: no modo por unidade eixo×perfil, o retrabalho dos duplicados é 1211 (personalidade) +
+  1000 (país) + 1080 (ideologia) = 3291 unidades; os nunca-auditados somam mais 112×12 (personalidade)
+  + 0 (país) + 1×12 (ideologia) = 1356 unidades. Total **≈4647 chamadas de API** (mais eventuais
+  reprocessamentos do gate). Tem custo real de API por token.
+- **Opção B (por perfil inteiro)**: 228 (personalidade: 116 duplicados + 112 nunca auditados) + 130
+  (país) + 147 (ideologia: 146 duplicados + 1 nunca auditado) = **505 perfis**, cada um = 1 subagente
+  cobrindo os 12 eixos de uma vez. Sem custo de API separado, mas consome uso normal do Claude Code e
+  precisa de alguém disparando os subagentes.
+- **Personalidade tem prioridade** (seção 6.7 da revisão): é o catálogo mais comprometido — 100% dos
+  perfis já auditados estão duplicados, e quase metade do catálogo (112/228) nunca foi tocado.
 - Em qualquer uma das opções: rode um lote pequeno de teste primeiro (5-15 perfis) e confira a
   qualidade das respostas antes de soltar o resto.
 
