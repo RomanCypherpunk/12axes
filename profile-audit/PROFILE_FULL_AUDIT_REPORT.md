@@ -3,9 +3,9 @@
 Relatorio gerado a partir de `PROFILE_FULL_AUDIT_ANSWERS.jsonl`.
 
 ```text
-answerRows: 92640
-completedAxisUnits: 4632/6348
-completedProfiles: 386/529
+answerRows: 99840
+completedAxisUnits: 4992/6348
+completedProfiles: 416/529
 patchCandidates(abs(delta) >= 7.5): 0
 errors: 0
 ```
@@ -16,5 +16,5 @@ Nenhum candidato enquanto nao houver respostas completas ou deltas relevantes.
 
 ## Incomplete
 
-1716 unidades de eixo ainda incompletas.
+1356 unidades de eixo ainda incompletas.
 
