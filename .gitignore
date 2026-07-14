@@ -16,6 +16,9 @@ frontend/.env.local
 *.log
 .claude/
 
+# Subagent audit scratch (Opção B orchestration outputs)
+profile-audit/.subagent-out/
+
 # OS/editor
 .DS_Store
 Thumbs.db
