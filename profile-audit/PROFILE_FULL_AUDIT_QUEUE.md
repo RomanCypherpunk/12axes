@@ -594,21 +594,21 @@ batches: 107
 - [x] personality:aldo-leopold - Aldo Leopold (12/12)
 - [x] personality:theodore-roosevelt - Theodore Roosevelt (12/12)
 
-## FQA074 - pending (0/60)
+## FQA074 - done (60/60)
 
-- [ ] personality:srnicek - Nick Srnicek (0/12)
-- [ ] personality:ray-kurzweil - Ray Kurzweil (0/12)
-- [ ] personality:getulio-vargas - Getúlio Vargas (0/12)
-- [ ] personality:ernest-renan - Ernest Renan (0/12)
-- [ ] personality:evo-morales - Evo Morales (0/12)
+- [x] personality:srnicek - Nick Srnicek (12/12)
+- [x] personality:ray-kurzweil - Ray Kurzweil (12/12)
+- [x] personality:getulio-vargas - Getúlio Vargas (12/12)
+- [x] personality:ernest-renan - Ernest Renan (12/12)
+- [x] personality:evo-morales - Evo Morales (12/12)
 
-## FQA075 - pending (0/60)
+## FQA075 - done (60/60)
 
-- [ ] personality:bismarck - Otto von Bismarck (0/12)
-- [ ] personality:bakunin - Mikhail Bakunin (0/12)
-- [ ] personality:kropotkin - Piotr Kropotkin (0/12)
-- [ ] personality:durruti - Buenaventura Durruti (0/12)
-- [ ] personality:sorel - Georges Sorel (0/12)
+- [x] personality:bismarck - Otto von Bismarck (12/12)
+- [x] personality:bakunin - Mikhail Bakunin (12/12)
+- [x] personality:kropotkin - Piotr Kropotkin (12/12)
+- [x] personality:durruti - Buenaventura Durruti (12/12)
+- [x] personality:sorel - Georges Sorel (12/12)
 
 ## FQA076 - pending (0/60)
 
