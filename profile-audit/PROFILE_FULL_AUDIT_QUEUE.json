@@ -166666,7 +166666,7 @@
     },
     {
       "batchId": "FQA072",
-      "status": "pending",
+      "status": "done",
       "profileCount": 5,
       "units": [
         {
@@ -166677,10 +166677,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 72.5,
+          "calculatedValue": 72.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166705,7 +166705,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:02.412Z"
         },
         {
           "unitId": "personality:thomas-paine:representacao",
@@ -166715,10 +166716,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 92,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 85,
+          "calculatedValue": 85,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166743,7 +166744,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:03.019Z"
         },
         {
           "unitId": "personality:thomas-paine:poder",
@@ -166753,10 +166755,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166781,7 +166783,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:03.521Z"
         },
         {
           "unitId": "personality:thomas-paine:imigracao",
@@ -166791,10 +166794,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 8.8,
+          "calculatedValue": 8.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166819,7 +166822,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:03.984Z"
         },
         {
           "unitId": "personality:thomas-paine:diplomacia",
@@ -166829,10 +166833,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 16.3,
+          "calculatedValue": 16.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166857,7 +166861,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:04.468Z"
         },
         {
           "unitId": "personality:thomas-paine:intervencao",
@@ -166867,10 +166872,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166895,7 +166900,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:04.942Z"
         },
         {
           "unitId": "personality:thomas-paine:economia",
@@ -166905,10 +166911,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 88.8,
+          "calculatedValue": 88.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166933,7 +166939,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:05.411Z"
         },
         {
           "unitId": "personality:thomas-paine:controle",
@@ -166943,10 +166950,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -166971,7 +166978,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:05.950Z"
         },
         {
           "unitId": "personality:thomas-paine:comercio",
@@ -166981,10 +166989,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167009,7 +167017,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:06.488Z"
         },
         {
           "unitId": "personality:thomas-paine:religiao",
@@ -167019,10 +167028,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 92.5,
+          "calculatedValue": 92.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167047,7 +167056,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:07.033Z"
         },
         {
           "unitId": "personality:thomas-paine:moral",
@@ -167057,10 +167067,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 86,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167085,7 +167095,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:07.546Z"
         },
         {
           "unitId": "personality:thomas-paine:tecnologia",
@@ -167095,10 +167106,10 @@
           "name": "Thomas Paine",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167123,7 +167134,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:08.041Z"
         },
         {
           "unitId": "personality:edmund-burke:estrutura",
@@ -167133,10 +167145,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 38.8,
+          "calculatedValue": 38.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167161,7 +167173,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:08.617Z"
         },
         {
           "unitId": "personality:edmund-burke:representacao",
@@ -167171,10 +167184,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 31.3,
+          "calculatedValue": 31.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167199,7 +167212,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:09.106Z"
         },
         {
           "unitId": "personality:edmund-burke:poder",
@@ -167209,10 +167223,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 50,
+          "calculatedValue": 50,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167237,7 +167251,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:09.611Z"
         },
         {
           "unitId": "personality:edmund-burke:imigracao",
@@ -167247,10 +167262,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 71.3,
+          "calculatedValue": 71.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167275,7 +167290,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:10.067Z"
         },
         {
           "unitId": "personality:edmund-burke:diplomacia",
@@ -167285,10 +167301,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 65,
+          "calculatedValue": 65,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167313,7 +167329,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:10.515Z"
         },
         {
           "unitId": "personality:edmund-burke:intervencao",
@@ -167323,10 +167340,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 57.5,
+          "calculatedValue": 57.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167351,7 +167368,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:11.054Z"
         },
         {
           "unitId": "personality:edmund-burke:economia",
@@ -167361,10 +167379,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167389,7 +167407,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:11.548Z"
         },
         {
           "unitId": "personality:edmund-burke:controle",
@@ -167399,10 +167418,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 32,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167427,7 +167446,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:12.042Z"
         },
         {
           "unitId": "personality:edmund-burke:comercio",
@@ -167437,10 +167457,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167465,7 +167485,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:12.538Z"
         },
         {
           "unitId": "personality:edmund-burke:religiao",
@@ -167475,10 +167496,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 21.3,
+          "calculatedValue": 21.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167503,7 +167524,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:13.106Z"
         },
         {
           "unitId": "personality:edmund-burke:moral",
@@ -167513,10 +167535,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 45,
+          "calculatedValue": 45,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167541,7 +167563,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:13.628Z"
         },
         {
           "unitId": "personality:edmund-burke:tecnologia",
@@ -167551,10 +167574,10 @@
           "name": "Edmund Burke",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 50,
+          "calculatedValue": 50,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167579,7 +167602,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:14.133Z"
         },
         {
           "unitId": "personality:hayek:estrutura",
@@ -167589,10 +167613,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 82.5,
+          "calculatedValue": 82.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167617,7 +167641,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:14.647Z"
         },
         {
           "unitId": "personality:hayek:representacao",
@@ -167627,10 +167652,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 66,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 80,
+          "calculatedValue": 80,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167655,7 +167680,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:15.162Z"
         },
         {
           "unitId": "personality:hayek:poder",
@@ -167665,10 +167691,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167693,7 +167719,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:15.625Z"
         },
         {
           "unitId": "personality:hayek:imigracao",
@@ -167703,10 +167730,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167731,7 +167758,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:16.119Z"
         },
         {
           "unitId": "personality:hayek:diplomacia",
@@ -167741,10 +167769,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 25,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167769,7 +167797,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:16.631Z"
         },
         {
           "unitId": "personality:hayek:intervencao",
@@ -167779,10 +167808,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167807,7 +167836,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:17.140Z"
         },
         {
           "unitId": "personality:hayek:economia",
@@ -167817,10 +167847,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 20,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167845,7 +167875,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:17.624Z"
         },
         {
           "unitId": "personality:hayek:controle",
@@ -167855,10 +167886,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 8.8,
+          "calculatedValue": 8.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167883,7 +167914,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:18.153Z"
         },
         {
           "unitId": "personality:hayek:comercio",
@@ -167893,10 +167925,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 15,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167921,7 +167953,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:18.623Z"
         },
         {
           "unitId": "personality:hayek:religiao",
@@ -167931,10 +167964,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 48.8,
+          "calculatedValue": 48.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167959,7 +167992,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:19.131Z"
         },
         {
           "unitId": "personality:hayek:moral",
@@ -167969,10 +168003,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 42,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -167997,7 +168031,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:19.642Z"
         },
         {
           "unitId": "personality:hayek:tecnologia",
@@ -168007,10 +168042,10 @@
           "name": "Friedrich Hayek",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168035,7 +168070,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:20.148Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:estrutura",
@@ -168045,10 +168081,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 98,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 100,
+          "calculatedValue": 100,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168073,7 +168109,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:20.681Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:representacao",
@@ -168083,10 +168120,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 82.5,
+          "calculatedValue": 82.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168111,7 +168148,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:21.204Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:poder",
@@ -168121,10 +168159,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 10,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 5,
+          "calculatedValue": 5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168149,7 +168187,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:21.749Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:imigracao",
@@ -168159,10 +168198,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 8.8,
+          "calculatedValue": 8.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168187,7 +168226,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:22.239Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:diplomacia",
@@ -168197,10 +168237,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 25,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168225,7 +168265,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:22.728Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:intervencao",
@@ -168235,10 +168276,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 85,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 87.5,
+          "calculatedValue": 87.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168263,7 +168304,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:23.246Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:economia",
@@ -168273,10 +168315,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 6,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168301,7 +168343,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:23.733Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:controle",
@@ -168311,10 +168354,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 3,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 0,
+          "calculatedValue": 0,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168339,7 +168382,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:24.283Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:comercio",
@@ -168349,10 +168393,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 12,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168377,7 +168421,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:24.810Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:religiao",
@@ -168387,10 +168432,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 48.8,
+          "calculatedValue": 48.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168415,7 +168460,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:25.343Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:moral",
@@ -168425,10 +168471,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168453,7 +168499,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:25.837Z"
         },
         {
           "unitId": "personality:gustave-de-molinari:tecnologia",
@@ -168463,10 +168510,10 @@
           "name": "Gustave de Molinari",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 52,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168491,7 +168538,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:26.290Z"
         },
         {
           "unitId": "personality:henry-george:estrutura",
@@ -168501,10 +168549,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 72.5,
+          "calculatedValue": 72.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168529,7 +168577,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:26.733Z"
         },
         {
           "unitId": "personality:henry-george:representacao",
@@ -168539,10 +168588,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 84,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 80,
+          "calculatedValue": 80,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168567,7 +168616,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:27.240Z"
         },
         {
           "unitId": "personality:henry-george:poder",
@@ -168577,10 +168627,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 20,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168605,7 +168655,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:27.722Z"
         },
         {
           "unitId": "personality:henry-george:imigracao",
@@ -168615,10 +168666,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168643,7 +168694,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:28.239Z"
         },
         {
           "unitId": "personality:henry-george:diplomacia",
@@ -168653,10 +168705,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 25,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168681,7 +168733,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:28.763Z"
         },
         {
           "unitId": "personality:henry-george:intervencao",
@@ -168691,10 +168744,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168719,7 +168772,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:29.248Z"
         },
         {
           "unitId": "personality:henry-george:economia",
@@ -168729,10 +168783,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168757,7 +168811,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:29.745Z"
         },
         {
           "unitId": "personality:henry-george:controle",
@@ -168767,10 +168822,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 34,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 67.5,
+          "calculatedValue": 67.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168795,7 +168850,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:30.249Z"
         },
         {
           "unitId": "personality:henry-george:comercio",
@@ -168805,10 +168861,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 20,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 3.8,
+          "calculatedValue": 3.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168833,7 +168889,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:30.756Z"
         },
         {
           "unitId": "personality:henry-george:religiao",
@@ -168843,10 +168900,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 46.3,
+          "calculatedValue": 46.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168871,7 +168928,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:31.257Z"
         },
         {
           "unitId": "personality:henry-george:moral",
@@ -168881,10 +168939,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168909,7 +168967,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:31.741Z"
         },
         {
           "unitId": "personality:henry-george:tecnologia",
@@ -168919,10 +168978,10 @@
           "name": "Henry George",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168947,13 +169006,14 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:30:32.223Z"
         }
       ]
     },
     {
       "batchId": "FQA073",
-      "status": "pending",
+      "status": "done",
       "profileCount": 5,
       "units": [
         {
@@ -168964,10 +169024,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 100,
+          "calculatedValue": 100,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -168992,7 +169052,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:21.407Z"
         },
         {
           "unitId": "personality:charles-fourier:representacao",
@@ -169002,10 +169063,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 85,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169030,7 +169091,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:21.941Z"
         },
         {
           "unitId": "personality:charles-fourier:poder",
@@ -169040,10 +169102,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 28,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169068,7 +169130,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:22.458Z"
         },
         {
           "unitId": "personality:charles-fourier:imigracao",
@@ -169078,10 +169141,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 8.8,
+          "calculatedValue": 8.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169106,7 +169169,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:23.008Z"
         },
         {
           "unitId": "personality:charles-fourier:diplomacia",
@@ -169116,10 +169180,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 32,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 28.7,
+          "calculatedValue": 28.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169144,7 +169208,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:23.659Z"
         },
         {
           "unitId": "personality:charles-fourier:intervencao",
@@ -169154,10 +169219,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169182,7 +169247,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:24.176Z"
         },
         {
           "unitId": "personality:charles-fourier:economia",
@@ -169192,10 +169258,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 90,
+          "calculatedValue": 90,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169220,7 +169286,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:24.701Z"
         },
         {
           "unitId": "personality:charles-fourier:controle",
@@ -169230,10 +169297,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169258,7 +169325,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:25.195Z"
         },
         {
           "unitId": "personality:charles-fourier:comercio",
@@ -169268,10 +169336,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 77.5,
+          "calculatedValue": 77.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169296,7 +169364,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:25.697Z"
         },
         {
           "unitId": "personality:charles-fourier:religiao",
@@ -169306,10 +169375,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 61.3,
+          "calculatedValue": 61.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169334,7 +169403,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:26.219Z"
         },
         {
           "unitId": "personality:charles-fourier:moral",
@@ -169344,10 +169414,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 96,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 97.5,
+          "calculatedValue": 97.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169372,7 +169442,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:26.721Z"
         },
         {
           "unitId": "personality:charles-fourier:tecnologia",
@@ -169382,10 +169453,10 @@
           "name": "Charles Fourier",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 56.3,
+          "calculatedValue": 56.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169410,7 +169481,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:27.225Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:estrutura",
@@ -169420,10 +169492,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 72.5,
+          "calculatedValue": 72.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169448,7 +169520,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:27.737Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:representacao",
@@ -169458,10 +169531,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 92,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 86.3,
+          "calculatedValue": 86.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169486,7 +169559,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:28.263Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:poder",
@@ -169496,10 +169570,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 26,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169524,7 +169598,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:28.858Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:imigracao",
@@ -169534,10 +169609,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 32,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 8.8,
+          "calculatedValue": 8.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169562,7 +169637,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:29.506Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:diplomacia",
@@ -169572,10 +169648,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 30,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 27.5,
+          "calculatedValue": 27.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169600,7 +169676,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:30.027Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:intervencao",
@@ -169610,10 +169687,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169638,7 +169715,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:30.523Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:economia",
@@ -169648,10 +169726,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 71.3,
+          "calculatedValue": 71.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169676,7 +169754,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:31.073Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:controle",
@@ -169686,10 +169765,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 68.8,
+          "calculatedValue": 68.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169714,7 +169793,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:31.644Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:comercio",
@@ -169724,10 +169804,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 32,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169752,7 +169832,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:32.167Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:religiao",
@@ -169762,10 +169843,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 84,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 95,
+          "calculatedValue": 95,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169790,7 +169871,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:32.694Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:moral",
@@ -169800,10 +169882,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 94,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 87.5,
+          "calculatedValue": 87.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169828,7 +169910,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:33.229Z"
         },
         {
           "unitId": "personality:nicolas-de-condorcet:tecnologia",
@@ -169838,10 +169921,10 @@
           "name": "Nicolas de Condorcet",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 92,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 77.5,
+          "calculatedValue": 77.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169866,7 +169949,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:33.776Z"
         },
         {
           "unitId": "personality:john-rawls:estrutura",
@@ -169876,10 +169960,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 72.5,
+          "calculatedValue": 72.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169904,7 +169988,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:34.396Z"
         },
         {
           "unitId": "personality:john-rawls:representacao",
@@ -169914,10 +169999,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 85,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 85,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169942,7 +170027,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:34.952Z"
         },
         {
           "unitId": "personality:john-rawls:poder",
@@ -169952,10 +170038,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 15,
+          "calculatedValue": 15,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -169980,7 +170066,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:35.545Z"
         },
         {
           "unitId": "personality:john-rawls:imigracao",
@@ -169990,10 +170077,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 41.3,
+          "calculatedValue": 41.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170018,7 +170105,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:36.262Z"
         },
         {
           "unitId": "personality:john-rawls:diplomacia",
@@ -170028,10 +170116,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 40,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 25,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170056,7 +170144,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:36.867Z"
         },
         {
           "unitId": "personality:john-rawls:intervencao",
@@ -170066,10 +170155,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170094,7 +170183,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:37.381Z"
         },
         {
           "unitId": "personality:john-rawls:economia",
@@ -170104,10 +170194,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 67.5,
+          "calculatedValue": 67.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170132,7 +170222,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:37.930Z"
         },
         {
           "unitId": "personality:john-rawls:controle",
@@ -170142,10 +170233,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 65,
+          "calculatedValue": 65,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170170,7 +170261,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:38.484Z"
         },
         {
           "unitId": "personality:john-rawls:comercio",
@@ -170180,10 +170272,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170208,7 +170300,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:39.058Z"
         },
         {
           "unitId": "personality:john-rawls:religiao",
@@ -170218,10 +170311,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170246,7 +170339,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:39.638Z"
         },
         {
           "unitId": "personality:john-rawls:moral",
@@ -170256,10 +170350,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 75,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 85,
+          "calculatedValue": 85,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170284,7 +170378,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:40.161Z"
         },
         {
           "unitId": "personality:john-rawls:tecnologia",
@@ -170294,10 +170389,10 @@
           "name": "John Rawls",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 65,
+          "calculatedValue": 65,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170322,7 +170417,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:40.653Z"
         },
         {
           "unitId": "personality:aldo-leopold:estrutura",
@@ -170332,10 +170428,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 38.8,
+          "calculatedValue": 38.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170360,7 +170456,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:41.190Z"
         },
         {
           "unitId": "personality:aldo-leopold:representacao",
@@ -170370,10 +170467,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 75,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 60,
+          "calculatedValue": 60,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170398,7 +170495,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:41.782Z"
         },
         {
           "unitId": "personality:aldo-leopold:poder",
@@ -170408,10 +170506,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 37.5,
+          "calculatedValue": 37.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170436,7 +170534,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:42.334Z"
         },
         {
           "unitId": "personality:aldo-leopold:imigracao",
@@ -170446,10 +170545,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 60,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 26.3,
+          "calculatedValue": 26.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170474,7 +170573,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:42.889Z"
         },
         {
           "unitId": "personality:aldo-leopold:diplomacia",
@@ -170484,10 +170584,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
+          "status": "done",
           "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 25,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170512,7 +170612,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:43.559Z"
         },
         {
           "unitId": "personality:aldo-leopold:intervencao",
@@ -170522,10 +170623,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 53.8,
+          "calculatedValue": 53.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170550,7 +170651,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:44.151Z"
         },
         {
           "unitId": "personality:aldo-leopold:economia",
@@ -170560,10 +170662,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 62.5,
+          "calculatedValue": 62.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170588,7 +170690,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:44.690Z"
         },
         {
           "unitId": "personality:aldo-leopold:controle",
@@ -170598,10 +170701,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 68.8,
+          "calculatedValue": 68.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170626,7 +170729,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:45.340Z"
         },
         {
           "unitId": "personality:aldo-leopold:comercio",
@@ -170636,10 +170740,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 50,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 37.5,
+          "calculatedValue": 37.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170664,7 +170768,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:45.881Z"
         },
         {
           "unitId": "personality:aldo-leopold:religiao",
@@ -170674,10 +170779,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 75,
+          "calculatedValue": 75,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170702,7 +170807,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:46.401Z"
         },
         {
           "unitId": "personality:aldo-leopold:moral",
@@ -170712,10 +170818,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170740,7 +170846,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:47.036Z"
         },
         {
           "unitId": "personality:aldo-leopold:tecnologia",
@@ -170750,10 +170857,10 @@
           "name": "Aldo Leopold",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 25,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 33.8,
+          "calculatedValue": 33.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170778,7 +170885,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:47.701Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:estrutura",
@@ -170788,10 +170896,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 27.5,
+          "calculatedValue": 27.5,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170816,7 +170924,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:48.346Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:representacao",
@@ -170826,10 +170935,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
-          "currentValue": 72,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 55,
+          "calculatedValue": 55,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170854,7 +170963,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:48.913Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:poder",
@@ -170864,10 +170974,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 51.2,
+          "calculatedValue": 51.2,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170892,7 +171002,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:49.496Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:imigracao",
@@ -170902,10 +171013,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
-          "currentValue": 65,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 80,
+          "calculatedValue": 80,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170930,7 +171041,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:50.019Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:diplomacia",
@@ -170940,10 +171052,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
-          "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 81.3,
+          "calculatedValue": 81.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -170968,7 +171080,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:50.561Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:intervencao",
@@ -170978,10 +171091,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
-          "currentValue": 35,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 16.3,
+          "calculatedValue": 16.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171006,7 +171119,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:51.129Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:economia",
@@ -171016,10 +171130,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
-          "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 65,
+          "calculatedValue": 65,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171044,7 +171158,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:51.943Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:controle",
@@ -171054,10 +171169,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
-          "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 68.8,
+          "calculatedValue": 68.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171082,7 +171197,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:52.561Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:comercio",
@@ -171092,10 +171208,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
-          "currentValue": 48,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 73.8,
+          "calculatedValue": 73.8,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171120,7 +171236,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:53.213Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:religiao",
@@ -171130,10 +171247,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
-          "currentValue": 45,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 46.3,
+          "calculatedValue": 46.3,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171158,7 +171275,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:53.855Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:moral",
@@ -171168,10 +171286,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
-          "currentValue": 55,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 45,
+          "calculatedValue": 45,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171196,7 +171314,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:54.631Z"
         },
         {
           "unitId": "personality:theodore-roosevelt:tecnologia",
@@ -171206,10 +171325,10 @@
           "name": "Theodore Roosevelt",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
-          "currentValue": 70,
-          "calculatedValue": null,
-          "delta": null,
+          "status": "done",
+          "currentValue": 63.7,
+          "calculatedValue": 63.7,
+          "delta": 0,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -171234,7 +171353,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
+          "completedAt": "2026-07-14T09:33:55.332Z"
         }
       ]
     },

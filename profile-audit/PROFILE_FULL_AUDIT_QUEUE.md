@@ -578,21 +578,21 @@ batches: 107
 - [x] personality:al-gore - Al Gore (12/12)
 - [x] personality:beveridge - William Beveridge (12/12)
 
-## FQA072 - pending (0/60)
+## FQA072 - done (60/60)
 
-- [ ] personality:thomas-paine - Thomas Paine (0/12)
-- [ ] personality:edmund-burke - Edmund Burke (0/12)
-- [ ] personality:hayek - Friedrich Hayek (0/12)
-- [ ] personality:gustave-de-molinari - Gustave de Molinari (0/12)
-- [ ] personality:henry-george - Henry George (0/12)
+- [x] personality:thomas-paine - Thomas Paine (12/12)
+- [x] personality:edmund-burke - Edmund Burke (12/12)
+- [x] personality:hayek - Friedrich Hayek (12/12)
+- [x] personality:gustave-de-molinari - Gustave de Molinari (12/12)
+- [x] personality:henry-george - Henry George (12/12)
 
-## FQA073 - pending (0/60)
+## FQA073 - done (60/60)
 
-- [ ] personality:charles-fourier - Charles Fourier (0/12)
-- [ ] personality:nicolas-de-condorcet - Nicolas de Condorcet (0/12)
-- [ ] personality:john-rawls - John Rawls (0/12)
-- [ ] personality:aldo-leopold - Aldo Leopold (0/12)
-- [ ] personality:theodore-roosevelt - Theodore Roosevelt (0/12)
+- [x] personality:charles-fourier - Charles Fourier (12/12)
+- [x] personality:nicolas-de-condorcet - Nicolas de Condorcet (12/12)
+- [x] personality:john-rawls - John Rawls (12/12)
+- [x] personality:aldo-leopold - Aldo Leopold (12/12)
+- [x] personality:theodore-roosevelt - Theodore Roosevelt (12/12)
 
 ## FQA074 - pending (0/60)
 
