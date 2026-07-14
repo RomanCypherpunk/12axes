@@ -610,21 +610,21 @@ batches: 107
 - [x] personality:durruti - Buenaventura Durruti (12/12)
 - [x] personality:sorel - Georges Sorel (12/12)
 
-## FQA076 - pending (0/60)
+## FQA076 - done (60/60)
 
-- [ ] personality:chomsky - Noam Chomsky (0/12)
-- [ ] personality:gramsci - Antonio Gramsci (0/12)
-- [ ] personality:tito - Josip Broz Tito (0/12)
-- [ ] personality:oskar-lange - Oskar Lange (0/12)
-- [ ] personality:proudhon - Pierre-Joseph Proudhon (0/12)
+- [x] personality:chomsky - Noam Chomsky (12/12)
+- [x] personality:gramsci - Antonio Gramsci (12/12)
+- [x] personality:tito - Josip Broz Tito (12/12)
+- [x] personality:oskar-lange - Oskar Lange (12/12)
+- [x] personality:proudhon - Pierre-Joseph Proudhon (12/12)
 
-## FQA077 - pending (0/60)
+## FQA077 - done (60/60)
 
-- [ ] personality:ocalan - Abdullah Öcalan (0/12)
-- [ ] personality:benjamin-tucker - Benjamin Tucker (0/12)
-- [ ] personality:bookchin - Murray Bookchin (0/12)
-- [ ] personality:keir-hardie - Keir Hardie (0/12)
-- [ ] personality:maritain - Jacques Maritain (0/12)
+- [x] personality:ocalan - Abdullah Öcalan (12/12)
+- [x] personality:benjamin-tucker - Benjamin Tucker (12/12)
+- [x] personality:bookchin - Murray Bookchin (12/12)
+- [x] personality:keir-hardie - Keir Hardie (12/12)
+- [x] personality:maritain - Jacques Maritain (12/12)
 
 ## FQA078 - pending (0/60)
 
