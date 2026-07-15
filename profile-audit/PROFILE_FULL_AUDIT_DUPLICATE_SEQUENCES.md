@@ -4,7 +4,7 @@ Sequencias completas de 20 respostas repetidas entre perfis auditados.
 
 Minimo: 2 perfis.
 
-## representacao - 32 perfis
+## representacao - 29 perfis
 
 Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
@@ -21,7 +21,6 @@ Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 - country:espanha-habsburgos:representacao
 - country:imperio-portugues:representacao
 - country:alemanha-oriental:representacao
-- personality:stalin:representacao
 - personality:mao-zedong:representacao
 - personality:kim-il-sung:representacao
 - personality:pol-pot:representacao
@@ -31,17 +30,15 @@ Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 - personality:hitler:representacao
 - personality:jose-antonio-primo-de-rivera:representacao
 - personality:putin:representacao
-- personality:nick-land:representacao
 - personality:hendrik-verwoerd:representacao
 - personality:louis-xiv:representacao
 - personality:salazar:representacao
 - personality:khomeini:representacao
-- personality:curtis-yarvin:representacao
 - personality:frederico-ii-da-prussia:representacao
 - personality:joseph-de-maistre:representacao
 - personality:aleksandr-dugin:representacao
 
-## estrutura - 26 perfis
+## estrutura - 25 perfis
 
 Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
 
@@ -57,7 +54,6 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
 - country:estados-papais:estrutura
 - country:imperio-russo-czarista:estrutura
 - country:alemanha-oriental:estrutura
-- personality:stalin:estrutura
 - personality:mao-zedong:estrutura
 - personality:kim-il-sung:estrutura
 - personality:pol-pot:estrutura
@@ -72,7 +68,7 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
 - personality:frederico-ii-da-prussia:estrutura
 - personality:joseph-de-maistre:estrutura
 
-## comercio - 21 perfis
+## comercio - 19 perfis
 
 Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,C,D`
 
@@ -91,154 +87,10 @@ Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,C,D`
 - personality:hendrik-verwoerd:comercio
 - personality:jabotinsky:comercio
 - personality:joseph-de-maistre:comercio
-- personality:cicero:comercio
-- personality:michael-sandel:comercio
 - personality:theodore-roosevelt:comercio
 - personality:ernest-renan:comercio
 - personality:bismarck:comercio
 - personality:scruton:comercio
-
-## comercio - 20 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
-
-- ideology:atlantismo:comercio
-- ideology:federalismo-privado:comercio
-- ideology:tecno-monarquismo:comercio
-- ideology:progressismo-de-direita:comercio
-- ideology:liberalismo-autoritario:comercio
-- country:chile:comercio
-- country:reino-unido:comercio
-- country:singapura:comercio
-- country:republica-de-veneza:comercio
-- country:reino-unido-vitoriano-imperio-britanico:comercio
-- country:chile-de-pinochet:comercio
-- country:hong-kong:comercio
-- country:argentina:comercio
-- country:emirados-arabes-unidos:comercio
-- country:polonia:comercio
-- country:florenca-renascentista:comercio
-- personality:deng-xiaoping:comercio
-- personality:john-stuart-mill:comercio
-- personality:adam-smith:comercio
-- personality:otto-von-habsburg:comercio
-
-## diplomacia - 20 perfis
-
-Sequencia: `CT,D,C,D,CT,D,C,D,CT,D,C,D,C,N,C,D,CT,DT,CT,D`
-
-- country:paquistao:diplomacia
-- country:japao-meiji:diplomacia
-- country:roma-republicana:diplomacia
-- country:eua-confederados:diplomacia
-- country:imperio-russo-czarista:diplomacia
-- country:imperio-portugues:diplomacia
-- country:imperio-alemao:diplomacia
-- personality:stalin:diplomacia
-- personality:kim-il-sung:diplomacia
-- personality:ernst-niekisch:diplomacia
-- personality:jose-antonio-primo-de-rivera:diplomacia
-- personality:putin:diplomacia
-- personality:louis-xiv:diplomacia
-- personality:jabotinsky:diplomacia
-- personality:frederico-ii-da-prussia:diplomacia
-- personality:aleksandr-dugin:diplomacia
-- personality:theodore-roosevelt:diplomacia
-- personality:bismarck:diplomacia
-- personality:durruti:diplomacia
-- personality:goldwater:diplomacia
-
-## imigracao - 18 perfis
-
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,D,D,C,D`
-
-- country:bielorrussia:imigracao
-- country:cazaquistao:imigracao
-- country:gra-colombia:imigracao
-- country:hungria-de-kadar:imigracao
-- country:imperio-bizantino:imigracao
-- country:austria:imigracao
-- country:alemanha-oriental:imigracao
-- country:brasil-regime-militar:imigracao
-- country:mexico-de-cardenas:imigracao
-- personality:deng-xiaoping:imigracao
-- personality:nick-land:imigracao
-- personality:curtis-yarvin:imigracao
-- personality:edmund-burke:imigracao
-- personality:sorel:imigracao
-- personality:tito:imigracao
-- personality:zapata:imigracao
-- personality:friedrich-list:imigracao
-- personality:otto-von-habsburg:imigracao
-
-## imigracao - 18 perfis
-
-Sequencia: `CT,D,C,D,C,D,CT,D,C,D,CT,D,C,D,C,D,C,D,C,DT`
-
-- country:paquistao:imigracao
-- country:japao-meiji:imigracao
-- country:genebra-calvinista:imigracao
-- country:imperio-alemao:imigracao
-- personality:ernst-niekisch:imigracao
-- personality:plinio-salgado:imigracao
-- personality:mussolini:imigracao
-- personality:jose-antonio-primo-de-rivera:imigracao
-- personality:lee-kuan-yew:imigracao
-- personality:putin:imigracao
-- personality:louis-xiv:imigracao
-- personality:salazar:imigracao
-- personality:khomeini:imigracao
-- personality:jabotinsky:imigracao
-- personality:joseph-de-maistre:imigracao
-- personality:theodore-roosevelt:imigracao
-- personality:bismarck:imigracao
-- personality:scruton:imigracao
-
-## intervencao - 18 perfis
-
-Sequencia: `C,D,C,D,C,D,N,C,C,D,C,D,C,D,C,D,D,C,D,D`
-
-- country:australia:intervencao
-- country:egito-atual:intervencao
-- country:tailandia:intervencao
-- country:malasia:intervencao
-- country:colombia:intervencao
-- country:estonia:intervencao
-- country:chile-de-allende:intervencao
-- country:imperio-bizantino:intervencao
-- personality:lenin:intervencao
-- personality:anton-pannekoek:intervencao
-- personality:deng-xiaoping:intervencao
-- personality:lee-kuan-yew:intervencao
-- personality:cicero:intervencao
-- personality:montesquieu:intervencao
-- personality:michael-sandel:intervencao
-- personality:hayek:intervencao
-- personality:max-more:intervencao
-- personality:otto-von-habsburg:intervencao
-
-## moral - 18 perfis
-
-Sequencia: `CT,DT,CT,D,C,DT,CT,D,CT,DT,C,DT,C,D,C,D,C,DT,CT,D`
-
-- country:espanha:moral
-- country:noruega:moral
-- country:dinamarca:moral
-- country:nova-zelandia:moral
-- country:irlanda:moral
-- country:uruguai:moral
-- country:estonia:moral
-- country:catalunha:moral
-- country:islandia:moral
-- country:finlandia:moral
-- personality:john-stuart-mill:moral
-- personality:bakunin:moral
-- personality:kropotkin:moral
-- personality:durruti:moral
-- personality:chomsky:moral
-- personality:ocalan:moral
-- personality:bookchin:moral
-- personality:andre-gorz:moral
 
 ## poder - 18 perfis
 
@@ -263,50 +115,71 @@ Sequencia: `CT,D,CT,D,CT,D,CT,D,D,CT,CT,D,C,D,CT,D,CT,D,CT,D`
 - personality:frederico-ii-da-prussia:poder
 - personality:sorel:poder
 
-## religiao - 18 perfis
+## comercio - 17 perfis
 
-Sequencia: `CT,DT,CT,DT,C,DT,CT,DT,CT,DT,C,DT,C,DT,CT,DT,C,DT,CT,DT`
+Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
-- country:paises-baixos:religiao
-- country:noruega:religiao
-- country:nova-zelandia:religiao
-- country:uruguai:religiao
-- country:estonia:religiao
-- country:comuna-de-paris:religiao
-- country:alemanha-oriental:religiao
-- country:islandia:religiao
-- country:finlandia:religiao
-- personality:nick-land:religiao
-- personality:frederico-ii-da-prussia:religiao
-- personality:john-stuart-mill:religiao
-- personality:bakunin:religiao
-- personality:kropotkin:religiao
-- personality:durruti:religiao
-- personality:chomsky:religiao
-- personality:bookchin:religiao
-- personality:max-more:religiao
+- ideology:atlantismo:comercio
+- ideology:federalismo-privado:comercio
+- ideology:tecno-monarquismo:comercio
+- ideology:progressismo-de-direita:comercio
+- ideology:liberalismo-autoritario:comercio
+- country:chile:comercio
+- country:reino-unido:comercio
+- country:singapura:comercio
+- country:republica-de-veneza:comercio
+- country:reino-unido-vitoriano-imperio-britanico:comercio
+- country:chile-de-pinochet:comercio
+- country:hong-kong:comercio
+- country:argentina:comercio
+- country:emirados-arabes-unidos:comercio
+- country:polonia:comercio
+- country:florenca-renascentista:comercio
+- personality:adam-smith:comercio
+
+## diplomacia - 17 perfis
+
+Sequencia: `CT,D,C,D,CT,D,C,D,CT,D,C,D,C,N,C,D,CT,DT,CT,D`
+
+- country:paquistao:diplomacia
+- country:japao-meiji:diplomacia
+- country:roma-republicana:diplomacia
+- country:eua-confederados:diplomacia
+- country:imperio-russo-czarista:diplomacia
+- country:imperio-portugues:diplomacia
+- country:imperio-alemao:diplomacia
+- personality:kim-il-sung:diplomacia
+- personality:ernst-niekisch:diplomacia
+- personality:jose-antonio-primo-de-rivera:diplomacia
+- personality:putin:diplomacia
+- personality:louis-xiv:diplomacia
+- personality:jabotinsky:diplomacia
+- personality:frederico-ii-da-prussia:diplomacia
+- personality:aleksandr-dugin:diplomacia
+- personality:theodore-roosevelt:diplomacia
+- personality:bismarck:diplomacia
 
 ## imigracao - 17 perfis
 
-Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
+Sequencia: `CT,D,C,D,C,D,CT,D,C,D,CT,D,C,D,C,D,C,D,C,DT`
 
-- ideology:socialismo-pol-potista:imigracao
-- ideology:nacional-socialismo:imigracao
-- ideology:nacionalismo-racial:imigracao
-- ideology:nacionalismo-etnico:imigracao
-- personality:guillaume-faye:imigracao
-- country:imperio-do-japao:imigracao
-- country:eua-confederados:imigracao
-- country:espanha-habsburgos:imigracao
-- country:imperio-russo-czarista:imigracao
-- country:imperio-portugues:imigracao
-- personality:stalin:imigracao
-- personality:mao-zedong:imigracao
-- personality:kim-il-sung:imigracao
-- personality:pol-pot:imigracao
-- personality:garrett-hardin:imigracao
-- personality:hitler:imigracao
-- personality:richard-spencer:imigracao
+- country:paquistao:imigracao
+- country:japao-meiji:imigracao
+- country:genebra-calvinista:imigracao
+- country:imperio-alemao:imigracao
+- personality:ernst-niekisch:imigracao
+- personality:plinio-salgado:imigracao
+- personality:mussolini:imigracao
+- personality:jose-antonio-primo-de-rivera:imigracao
+- personality:putin:imigracao
+- personality:louis-xiv:imigracao
+- personality:salazar:imigracao
+- personality:khomeini:imigracao
+- personality:jabotinsky:imigracao
+- personality:joseph-de-maistre:imigracao
+- personality:theodore-roosevelt:imigracao
+- personality:bismarck:imigracao
+- personality:scruton:imigracao
 
 ## intervencao - 17 perfis
 
@@ -330,92 +203,6 @@ Sequencia: `C,N,C,N,C,N,C,N,C,N,C,N,C,N,N,N,C,N,C,N`
 - ideology:indigenismo:intervencao
 - ideology:sindicalismo:intervencao
 
-## moral - 17 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,N,CT,D,CT,D,CT`
-
-- country:catar:moral
-- country:paquistao:moral
-- country:japao-meiji:moral
-- country:gra-colombia:moral
-- country:imperio-austro-hungaro:moral
-- country:roma-republicana:moral
-- country:imperio-bizantino:moral
-- country:imperio-russo-czarista:moral
-- country:imperio-alemao:moral
-- country:brasil-regime-militar:moral
-- personality:ernst-niekisch:moral
-- personality:gregor-strasser:moral
-- personality:lee-kuan-yew:moral
-- personality:putin:moral
-- personality:viktor-orban:moral
-- personality:aleksandr-dugin:moral
-- personality:bismarck:moral
-
-## religiao - 17 perfis
-
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D`
-
-- country:eua-nova-york:religiao
-- country:eua-new-hampshire:religiao
-- country:eua-washington-dc:religiao
-- country:eua-massachusetts:religiao
-- country:canada:religiao
-- country:australia:religiao
-- country:irlanda:religiao
-- country:taiwan:religiao
-- country:luxemburgo:religiao
-- country:macau:religiao
-- country:austria:religiao
-- country:portugal:religiao
-- personality:garrett-hardin:religiao
-- personality:jabotinsky:religiao
-- personality:beveridge:religiao
-- personality:aldo-leopold:religiao
-- personality:goldwater:religiao
-
-## comercio - 16 perfis
-
-Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,N,C,D,C,D,C`
-
-- country:libano:comercio
-- country:tailandia:comercio
-- country:malasia:comercio
-- country:uruguai:comercio
-- country:republica-de-weimar:comercio
-- country:catalunha:comercio
-- country:austria:comercio
-- country:portugal:comercio
-- country:finlandia:comercio
-- personality:curtis-yarvin:comercio
-- personality:montesquieu:comercio
-- personality:john-locke:comercio
-- personality:edmund-burke:comercio
-- personality:tito:comercio
-- personality:max-more:comercio
-- personality:goldwater:comercio
-
-## comercio - 16 perfis
-
-Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,N,D,CT,D,CT,N`
-
-- personality:lenin:comercio
-- personality:stalin:comercio
-- personality:trotsky:comercio
-- personality:ernst-niekisch:comercio
-- personality:gregor-strasser:comercio
-- personality:plinio-salgado:comercio
-- personality:mussolini:comercio
-- personality:hitler:comercio
-- personality:jose-antonio-primo-de-rivera:comercio
-- personality:putin:comercio
-- personality:louis-xiv:comercio
-- personality:salazar:comercio
-- personality:khomeini:comercio
-- personality:frederico-ii-da-prussia:comercio
-- personality:aleksandr-dugin:comercio
-- personality:sorel:comercio
-
 ## controle - 16 perfis
 
 Sequencia: `C,D,N,DT,CT,DT,N,DT,C,D,D,N,C,DT,C,N,D,N,CT,DT`
@@ -437,26 +224,26 @@ Sequencia: `C,D,N,DT,CT,DT,N,DT,C,D,D,N,C,DT,C,N,D,N,CT,DT`
 - ideology:libertarianismo-social:controle
 - ideology:socialismo-libertario:controle
 
-## estrutura - 16 perfis
+## imigracao - 16 perfis
 
 Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
 
-- ideology:federalismo-privado:estrutura
-- ideology:tecno-anarquismo:estrutura
-- country:ucrania-territorio-livre:estrutura
-- country:republica-holandesa:estrutura
-- country:comuna-de-paris:estrutura
-- country:eua-confederados:estrutura
-- personality:anton-pannekoek:estrutura
-- personality:nick-land:estrutura
-- personality:gustave-de-molinari:estrutura
-- personality:bakunin:estrutura
-- personality:kropotkin:estrutura
-- personality:durruti:estrutura
-- personality:chomsky:estrutura
-- personality:ocalan:estrutura
-- personality:bookchin:estrutura
-- personality:zapata:estrutura
+- ideology:socialismo-pol-potista:imigracao
+- ideology:nacional-socialismo:imigracao
+- ideology:nacionalismo-racial:imigracao
+- ideology:nacionalismo-etnico:imigracao
+- personality:guillaume-faye:imigracao
+- country:imperio-do-japao:imigracao
+- country:eua-confederados:imigracao
+- country:espanha-habsburgos:imigracao
+- country:imperio-russo-czarista:imigracao
+- country:imperio-portugues:imigracao
+- personality:mao-zedong:imigracao
+- personality:kim-il-sung:imigracao
+- personality:pol-pot:imigracao
+- personality:garrett-hardin:imigracao
+- personality:hitler:imigracao
+- personality:richard-spencer:imigracao
 
 ## intervencao - 16 perfis
 
@@ -479,6 +266,27 @@ Sequencia: `N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N`
 - ideology:centrismo-social:intervencao
 - ideology:centrismo-ambientalista:intervencao
 
+## moral - 16 perfis
+
+Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,N,CT,D,CT,D,CT`
+
+- country:catar:moral
+- country:paquistao:moral
+- country:japao-meiji:moral
+- country:gra-colombia:moral
+- country:imperio-austro-hungaro:moral
+- country:roma-republicana:moral
+- country:imperio-bizantino:moral
+- country:imperio-russo-czarista:moral
+- country:imperio-alemao:moral
+- country:brasil-regime-militar:moral
+- personality:ernst-niekisch:moral
+- personality:gregor-strasser:moral
+- personality:putin:moral
+- personality:viktor-orban:moral
+- personality:aleksandr-dugin:moral
+- personality:bismarck:moral
+
 ## estrutura - 15 perfis
 
 Sequencia: `D,CT,D,CT,D,CT,D,CT,DT,CT,D,CT,D,CT,DT,CT,D,CT,D,CT`
@@ -498,26 +306,6 @@ Sequencia: `D,CT,D,CT,D,CT,D,CT,DT,CT,D,CT,D,CT,DT,CT,D,CT,D,CT`
 - country:egito-de-nasser:estrutura
 - country:espanha-franquista:estrutura
 - country:portugal-estado-novo:estrutura
-
-## imigracao - 15 perfis
-
-Sequencia: `C,D,C,N,C,D,C,D,C,D,C,D,N,D,C,D,D,D,C,D`
-
-- country:noruega:imigracao
-- country:nova-zelandia:imigracao
-- country:tailandia:imigracao
-- country:taiwan:imigracao
-- country:colombia:imigracao
-- country:chile-de-allende:imigracao
-- country:macau:imigracao
-- country:portugal:imigracao
-- country:islandia:imigracao
-- country:finlandia:imigracao
-- personality:cicero:imigracao
-- personality:michael-sandel:imigracao
-- personality:arne-naess:imigracao
-- personality:adam-smith:imigracao
-- personality:max-more:imigracao
 
 ## poder - 15 perfis
 
@@ -541,23 +329,42 @@ Sequencia: `CT,D,CT,D,CT,D,CT,D,C,D,CT,D,C,D,C,D,CT,D,CT,D`
 
 ## religiao - 15 perfis
 
-Sequencia: `C,C,C,C,C,C,C,D,C,C,N,C,D,C,D,C,D,D,C,C`
+Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D`
 
-- country:italia:religiao
-- country:ucrania:religiao
-- country:colombia:religiao
-- country:republica-de-weimar:religiao
-- country:hungria-de-kadar:religiao
-- country:chile-de-allende:religiao
-- country:imperio-alemao:religiao
-- country:brasil-regime-militar:religiao
-- personality:ernst-niekisch:religiao
-- personality:lee-kuan-yew:religiao
-- personality:cicero:religiao
-- personality:john-locke:religiao
-- personality:theodore-roosevelt:religiao
-- personality:bismarck:religiao
-- personality:sorel:religiao
+- country:eua-nova-york:religiao
+- country:eua-new-hampshire:religiao
+- country:eua-washington-dc:religiao
+- country:eua-massachusetts:religiao
+- country:canada:religiao
+- country:australia:religiao
+- country:irlanda:religiao
+- country:taiwan:religiao
+- country:luxemburgo:religiao
+- country:macau:religiao
+- country:austria:religiao
+- country:portugal:religiao
+- personality:garrett-hardin:religiao
+- personality:jabotinsky:religiao
+- personality:beveridge:religiao
+
+## comercio - 14 perfis
+
+Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,N,D,CT,D,CT,N`
+
+- personality:trotsky:comercio
+- personality:ernst-niekisch:comercio
+- personality:gregor-strasser:comercio
+- personality:plinio-salgado:comercio
+- personality:mussolini:comercio
+- personality:hitler:comercio
+- personality:jose-antonio-primo-de-rivera:comercio
+- personality:putin:comercio
+- personality:louis-xiv:comercio
+- personality:salazar:comercio
+- personality:khomeini:comercio
+- personality:frederico-ii-da-prussia:comercio
+- personality:aleksandr-dugin:comercio
+- personality:sorel:comercio
 
 ## diplomacia - 14 perfis
 
@@ -577,63 +384,6 @@ Sequencia: `C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,D,C,N`
 - ideology:cameralismo:diplomacia
 - ideology:corporativismo:diplomacia
 - ideology:reacionarismo:diplomacia
-
-## diplomacia - 14 perfis
-
-Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
-
-- ideology:federalismo-privado:diplomacia
-- country:luxemburgo:diplomacia
-- country:catalunha:diplomacia
-- country:genebra-calvinista:diplomacia
-- country:portugal:diplomacia
-- country:mexico-de-cardenas:diplomacia
-- personality:michael-sandel:diplomacia
-- personality:john-stuart-mill:diplomacia
-- personality:hayek:diplomacia
-- personality:gustave-de-molinari:diplomacia
-- personality:aldo-leopold:diplomacia
-- personality:evo-morales:diplomacia
-- personality:max-more:diplomacia
-- personality:otto-neurath:diplomacia
-
-## diplomacia - 14 perfis
-
-Sequencia: `N,C,D,C,N,C,D,C,N,C,N,N,N,C,D,C,D,D,N,N`
-
-- country:cazaquistao:diplomacia
-- country:malasia:diplomacia
-- country:el-salvador:diplomacia
-- country:hungria-de-kadar:diplomacia
-- country:chile-de-allende:diplomacia
-- personality:garrett-hardin:diplomacia
-- personality:lee-kuan-yew:diplomacia
-- personality:nick-land:diplomacia
-- personality:viktor-orban:diplomacia
-- personality:curtis-yarvin:diplomacia
-- personality:cicero:diplomacia
-- personality:montesquieu:diplomacia
-- personality:john-locke:diplomacia
-- personality:beveridge:diplomacia
-
-## poder - 14 perfis
-
-Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,DT,CT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
-
-- country:imperio-do-japao:poder
-- country:estados-papais:poder
-- country:espanha-habsburgos:poder
-- country:imperio-portugues:poder
-- country:alemanha-oriental:poder
-- country:imperio-mongol:poder
-- personality:stalin:poder
-- personality:mao-zedong:poder
-- personality:kim-il-sung:poder
-- personality:pol-pot:poder
-- personality:hitler:poder
-- personality:hendrik-verwoerd:poder
-- personality:khomeini:poder
-- personality:joseph-de-maistre:poder
 
 ## representacao - 14 perfis
 
@@ -673,42 +423,6 @@ Sequencia: `CT,DT,CT,D,C,DT,CT,D,C,DT,C,DT,D,D,CT,DT,D,DT,CT,DT`
 - country:islandia:representacao
 - country:finlandia:representacao
 
-## diplomacia - 13 perfis
-
-Sequencia: `C,C,C,C,C,D,C,D,C,D,C,N,C,N,C,D,C,DT,C,N`
-
-- country:taiwan:diplomacia
-- country:estonia:diplomacia
-- country:eua-florida:diplomacia
-- country:imperio-austro-hungaro:diplomacia
-- country:imperio-persa-aquemenida:diplomacia
-- country:finlandia:diplomacia
-- personality:mao-zedong:diplomacia
-- personality:plinio-salgado:diplomacia
-- personality:hendrik-verwoerd:diplomacia
-- personality:salazar:diplomacia
-- personality:khomeini:diplomacia
-- personality:joseph-de-maistre:diplomacia
-- personality:tito:diplomacia
-
-## diplomacia - 13 perfis
-
-Sequencia: `C,C,D,C,C,D,C,D,C,D,C,N,C,N,C,D,C,DT,C,N`
-
-- country:republica-holandesa:diplomacia
-- country:estados-papais:diplomacia
-- country:imperio-bizantino:diplomacia
-- country:alemanha-oriental:diplomacia
-- personality:lenin:diplomacia
-- personality:trotsky:diplomacia
-- personality:richard-spencer:diplomacia
-- personality:edmund-burke:diplomacia
-- personality:ernest-renan:diplomacia
-- personality:sorel:diplomacia
-- personality:adam-smith:diplomacia
-- personality:scruton:diplomacia
-- personality:friedrich-list:diplomacia
-
 ## estrutura - 13 perfis
 
 Sequencia: `N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N`
@@ -727,41 +441,23 @@ Sequencia: `N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N`
 - ideology:centrismo-ambientalista:estrutura
 - ideology:centrismo-conservador:estrutura
 
-## estrutura - 13 perfis
+## poder - 13 perfis
 
-Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
+Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,DT,CT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
 
-- ideology:liberalismo-autoritario:estrutura
-- country:egito-atual:estrutura
-- country:el-salvador:estrutura
-- country:monaco:estrutura
-- country:hungria-de-kadar:estrutura
-- country:imperio-bizantino:estrutura
-- country:brasil-regime-militar:estrutura
-- personality:lee-kuan-yew:estrutura
-- personality:richard-spencer:estrutura
-- personality:salazar:estrutura
-- personality:viktor-orban:estrutura
-- personality:aleksandr-dugin:estrutura
-- personality:beveridge:estrutura
-
-## intervencao - 13 perfis
-
-Sequencia: `D,CT,D,CT,D,C,N,CT,D,CT,D,C,D,CT,D,CT,D,CT,D,CT`
-
-- personality:trotsky:intervencao
-- personality:kim-il-sung:intervencao
-- personality:salazar:intervencao
-- personality:khomeini:intervencao
-- personality:jabotinsky:intervencao
-- personality:joseph-de-maistre:intervencao
-- personality:john-locke:intervencao
-- personality:theodore-roosevelt:intervencao
-- personality:sorel:intervencao
-- personality:zapata:intervencao
-- personality:adam-smith:intervencao
-- personality:scruton:intervencao
-- personality:goldwater:intervencao
+- country:imperio-do-japao:poder
+- country:estados-papais:poder
+- country:espanha-habsburgos:poder
+- country:imperio-portugues:poder
+- country:alemanha-oriental:poder
+- country:imperio-mongol:poder
+- personality:mao-zedong:poder
+- personality:kim-il-sung:poder
+- personality:pol-pot:poder
+- personality:hitler:poder
+- personality:hendrik-verwoerd:poder
+- personality:khomeini:poder
+- personality:joseph-de-maistre:poder
 
 ## controle - 12 perfis
 
@@ -797,6 +493,40 @@ Sequencia: `D,C,D,C,D,C,D,C,N,C,D,C,D,C,N,C,D,N,N,C`
 - ideology:sindicalismo:diplomacia
 - ideology:marxismo-libertario:diplomacia
 
+## diplomacia - 12 perfis
+
+Sequencia: `C,C,C,C,C,D,C,D,C,D,C,N,C,N,C,D,C,DT,C,N`
+
+- country:taiwan:diplomacia
+- country:estonia:diplomacia
+- country:eua-florida:diplomacia
+- country:imperio-austro-hungaro:diplomacia
+- country:imperio-persa-aquemenida:diplomacia
+- country:finlandia:diplomacia
+- personality:mao-zedong:diplomacia
+- personality:plinio-salgado:diplomacia
+- personality:hendrik-verwoerd:diplomacia
+- personality:salazar:diplomacia
+- personality:khomeini:diplomacia
+- personality:joseph-de-maistre:diplomacia
+
+## estrutura - 12 perfis
+
+Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
+
+- ideology:liberalismo-autoritario:estrutura
+- country:egito-atual:estrutura
+- country:el-salvador:estrutura
+- country:monaco:estrutura
+- country:hungria-de-kadar:estrutura
+- country:imperio-bizantino:estrutura
+- country:brasil-regime-militar:estrutura
+- personality:richard-spencer:estrutura
+- personality:salazar:estrutura
+- personality:viktor-orban:estrutura
+- personality:aleksandr-dugin:estrutura
+- personality:beveridge:estrutura
+
 ## estrutura - 12 perfis
 
 Sequencia: `D,C,D,C,D,C,D,C,D,C,N,C,D,C,D,C,N,C,D,C`
@@ -830,6 +560,23 @@ Sequencia: `C,D,C,D,C,D,C,D,C,N,C,N,C,D,C,D,N,DT,C,D`
 - ideology:quarta-teoria-politica:imigracao
 - ideology:democracia-nacional:imigracao
 - ideology:nacionalismo:imigracao
+
+## imigracao - 12 perfis
+
+Sequencia: `C,D,C,N,C,D,C,D,C,D,C,D,N,D,C,D,D,D,C,D`
+
+- country:noruega:imigracao
+- country:nova-zelandia:imigracao
+- country:tailandia:imigracao
+- country:taiwan:imigracao
+- country:colombia:imigracao
+- country:chile-de-allende:imigracao
+- country:macau:imigracao
+- country:portugal:imigracao
+- country:islandia:imigracao
+- country:finlandia:imigracao
+- personality:arne-naess:imigracao
+- personality:adam-smith:imigracao
 
 ## intervencao - 12 perfis
 
@@ -882,23 +629,6 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,DT,DT,CT,DT,CT`
 - country:espanha-franquista:moral
 - country:portugal-estado-novo:moral
 
-## moral - 12 perfis
-
-Sequencia: `C,N,C,N,N,D,C,N,C,D,C,D,N,N,N,D,N,D,C,N`
-
-- country:tchequia:moral
-- country:eua-new-hampshire:moral
-- country:libano:moral
-- country:tailandia:moral
-- country:hungria-de-kadar:moral
-- country:austria:moral
-- personality:garrett-hardin:moral
-- personality:jabotinsky:moral
-- personality:frederico-ii-da-prussia:moral
-- personality:hayek:moral
-- personality:aldo-leopold:moral
-- personality:adam-smith:moral
-
 ## poder - 12 perfis
 
 Sequencia: `CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D`
@@ -915,23 +645,6 @@ Sequencia: `CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D`
 - ideology:ecofascismo:poder
 - ideology:comunismo-agrario:poder
 - ideology:socialismo-juche:poder
-
-## poder - 12 perfis
-
-Sequencia: `D,C,D,C,D,C,D,C,D,D,N,C,D,C,DT,C,D,C,D,C`
-
-- country:noruega:poder
-- country:dinamarca:poder
-- country:irlanda:poder
-- country:republica-holandesa:poder
-- country:estonia:poder
-- country:luxemburgo:poder
-- country:austria:poder
-- country:islandia:poder
-- country:finlandia:poder
-- personality:montesquieu:poder
-- personality:beveridge:poder
-- personality:arne-naess:poder
 
 ## religiao - 12 perfis
 
@@ -950,22 +663,22 @@ Sequencia: `D,C,D,C,D,C,D,C,N,C,D,C,N,C,N,C,N,C,N,C`
 - ideology:indigenismo:religiao
 - ideology:conservadorismo-socialista:religiao
 
-## tecnologia - 12 perfis
+## religiao - 12 perfis
 
-Sequencia: `N,C,N,N,N,N,N,N,N,N,N,N,C,N,N,N,N,N,N,N`
+Sequencia: `C,C,C,C,C,C,C,D,C,C,N,C,D,C,D,C,D,D,C,C`
 
-- country:tailandia:tecnologia
-- country:hungria-de-kadar:tecnologia
-- personality:cicero:tecnologia
-- personality:montesquieu:tecnologia
-- personality:michael-sandel:tecnologia
-- personality:john-locke:tecnologia
-- personality:beveridge:tecnologia
-- personality:edmund-burke:tecnologia
-- personality:ernest-renan:tecnologia
-- personality:bismarck:tecnologia
-- personality:sorel:tecnologia
-- personality:otto-von-habsburg:tecnologia
+- country:italia:religiao
+- country:ucrania:religiao
+- country:colombia:religiao
+- country:republica-de-weimar:religiao
+- country:hungria-de-kadar:religiao
+- country:chile-de-allende:religiao
+- country:imperio-alemao:religiao
+- country:brasil-regime-militar:religiao
+- personality:ernst-niekisch:religiao
+- personality:theodore-roosevelt:religiao
+- personality:bismarck:religiao
+- personality:sorel:religiao
 
 ## comercio - 11 perfis
 
@@ -983,21 +696,21 @@ Sequencia: `CT,DT,C,D,C,D,CT,DT,C,D,CT,D,CT,D,C,D,CT,D,C,DT`
 - country:china-maoista:comercio
 - country:egito-de-nasser:comercio
 
-## comercio - 11 perfis
+## diplomacia - 11 perfis
 
-Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,DT,CT,DT,CT,DT,CT`
+Sequencia: `C,C,D,C,C,D,C,D,C,D,C,N,C,N,C,D,C,DT,C,N`
 
-- country:irlanda:comercio
-- country:republica-holandesa:comercio
-- country:monaco:comercio
-- country:estonia:comercio
-- country:luxemburgo:comercio
-- country:macau:comercio
-- personality:lee-kuan-yew:comercio
-- personality:nick-land:comercio
-- personality:hayek:comercio
-- personality:gustave-de-molinari:comercio
-- personality:javier-milei:comercio
+- country:republica-holandesa:diplomacia
+- country:estados-papais:diplomacia
+- country:imperio-bizantino:diplomacia
+- country:alemanha-oriental:diplomacia
+- personality:trotsky:diplomacia
+- personality:richard-spencer:diplomacia
+- personality:ernest-renan:diplomacia
+- personality:sorel:diplomacia
+- personality:adam-smith:diplomacia
+- personality:scruton:diplomacia
+- personality:friedrich-list:diplomacia
 
 ## estrutura - 11 perfis
 
@@ -1017,35 +730,19 @@ Sequencia: `C,D,C,D,C,D,C,D,D,D,C,D,C,D,C,D,C,D,C,D`
 
 ## imigracao - 11 perfis
 
-Sequencia: `D,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,C,DT,C`
+Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,D,D,C,D`
 
-- country:eua-nova-york:imigracao
-- country:eua-washington-dc:imigracao
-- country:eua-massachusetts:imigracao
-- personality:gustave-de-molinari:imigracao
-- personality:evo-morales:imigracao
-- personality:bakunin:imigracao
-- personality:kropotkin:imigracao
-- personality:durruti:imigracao
-- personality:chomsky:imigracao
-- personality:ocalan:imigracao
-- personality:bookchin:imigracao
-
-## intervencao - 11 perfis
-
-Sequencia: `C,D,C,D,D,C,N,C,N,C,C,C,C,D,C,D,N,C,C,C`
-
-- country:ucrania:intervencao
-- country:siria:intervencao
-- country:comuna-de-paris:intervencao
-- country:eua-confederados:intervencao
-- personality:john-stuart-mill:intervencao
-- personality:aldo-leopold:intervencao
-- personality:tito:intervencao
-- personality:ocalan:intervencao
-- personality:bookchin:intervencao
-- personality:andre-gorz:intervencao
-- personality:arne-naess:intervencao
+- country:bielorrussia:imigracao
+- country:cazaquistao:imigracao
+- country:gra-colombia:imigracao
+- country:hungria-de-kadar:imigracao
+- country:imperio-bizantino:imigracao
+- country:austria:imigracao
+- country:alemanha-oriental:imigracao
+- country:brasil-regime-militar:imigracao
+- country:mexico-de-cardenas:imigracao
+- personality:sorel:imigracao
+- personality:friedrich-list:imigracao
 
 ## moral - 11 perfis
 
@@ -1065,19 +762,35 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,C,DT,CT,DT,CT,DT,C,N,CT,D,CT,DT,CT`
 
 ## poder - 11 perfis
 
-Sequencia: `C,C,C,C,C,C,C,D,C,D,C,C,N,C,D,D,C,C,D,C`
+Sequencia: `D,C,D,C,D,C,D,C,D,D,N,C,D,C,DT,C,D,C,D,C`
 
-- country:imperio-austro-hungaro:poder
-- country:butao:poder
-- country:imperio-persa-aquemenida:poder
-- country:roma-republicana:poder
-- country:hungria-de-kadar:poder
-- country:macau:poder
-- personality:jabotinsky:poder
-- personality:theodore-roosevelt:poder
-- personality:evo-morales:poder
-- personality:tito:poder
-- personality:javier-milei:poder
+- country:noruega:poder
+- country:dinamarca:poder
+- country:irlanda:poder
+- country:republica-holandesa:poder
+- country:estonia:poder
+- country:luxemburgo:poder
+- country:austria:poder
+- country:islandia:poder
+- country:finlandia:poder
+- personality:beveridge:poder
+- personality:arne-naess:poder
+
+## religiao - 11 perfis
+
+Sequencia: `CT,DT,CT,DT,C,DT,CT,DT,CT,DT,C,DT,C,DT,CT,DT,C,DT,CT,DT`
+
+- country:paises-baixos:religiao
+- country:noruega:religiao
+- country:nova-zelandia:religiao
+- country:uruguai:religiao
+- country:estonia:religiao
+- country:comuna-de-paris:religiao
+- country:alemanha-oriental:religiao
+- country:islandia:religiao
+- country:finlandia:religiao
+- personality:frederico-ii-da-prussia:religiao
+- personality:otto-neurath:religiao
 
 ## representacao - 11 perfis
 
@@ -1155,21 +868,6 @@ Sequencia: `N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,D,N,N`
 - ideology:neoliberalismo:diplomacia
 - ideology:tecnocracia:diplomacia
 
-## economia - 10 perfis
-
-Sequencia: `CT,DT,CT,DT,CT,DT,C,DT,CT,D,C,N,CT,DT,CT,DT,C,DT,C,DT`
-
-- country:ucrania-territorio-livre:economia
-- country:comuna-de-paris:economia
-- country:chile-de-allende:economia
-- country:alemanha-oriental:economia
-- country:mexico-de-cardenas:economia
-- personality:stalin:economia
-- personality:mao-zedong:economia
-- personality:kim-il-sung:economia
-- personality:ernst-niekisch:economia
-- personality:kropotkin:economia
-
 ## intervencao - 10 perfis
 
 Sequencia: `DT,CT,D,CT,DT,CT,DT,CT,D,CT,D,CT,C,D,CT,DT,D,CT,D,CT`
@@ -1184,6 +882,51 @@ Sequencia: `DT,CT,D,CT,DT,CT,DT,CT,D,CT,D,CT,C,D,CT,DT,D,CT,D,CT`
 - country:italia-fascista-mussolini:intervencao
 - country:uniao-sovietica-urss:intervencao
 - country:prussia:intervencao
+
+## intervencao - 10 perfis
+
+Sequencia: `D,CT,D,CT,D,C,N,CT,D,CT,D,C,D,CT,D,CT,D,CT,D,CT`
+
+- personality:trotsky:intervencao
+- personality:kim-il-sung:intervencao
+- personality:salazar:intervencao
+- personality:khomeini:intervencao
+- personality:jabotinsky:intervencao
+- personality:joseph-de-maistre:intervencao
+- personality:theodore-roosevelt:intervencao
+- personality:sorel:intervencao
+- personality:adam-smith:intervencao
+- personality:scruton:intervencao
+
+## moral - 10 perfis
+
+Sequencia: `C,N,C,N,N,D,C,N,C,D,C,D,N,N,N,D,N,D,C,N`
+
+- country:tchequia:moral
+- country:eua-new-hampshire:moral
+- country:libano:moral
+- country:tailandia:moral
+- country:hungria-de-kadar:moral
+- country:austria:moral
+- personality:garrett-hardin:moral
+- personality:jabotinsky:moral
+- personality:frederico-ii-da-prussia:moral
+- personality:adam-smith:moral
+
+## moral - 10 perfis
+
+Sequencia: `CT,DT,CT,D,C,DT,CT,D,CT,DT,C,DT,C,D,C,D,C,DT,CT,D`
+
+- country:espanha:moral
+- country:noruega:moral
+- country:dinamarca:moral
+- country:nova-zelandia:moral
+- country:irlanda:moral
+- country:uruguai:moral
+- country:estonia:moral
+- country:catalunha:moral
+- country:islandia:moral
+- country:finlandia:moral
 
 ## poder - 10 perfis
 
@@ -1215,21 +958,6 @@ Sequencia: `C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N`
 - ideology:nacionalismo:poder
 - ideology:conservadorismo-socialista:poder
 
-## poder - 10 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,D,C,DT,CT,D,CT,N,C,DT,CT,D,C,D,CT`
-
-- country:taiwan:poder
-- country:portugal:poder
-- personality:anton-pannekoek:poder
-- personality:nick-land:poder
-- personality:john-stuart-mill:poder
-- personality:john-locke:poder
-- personality:hayek:poder
-- personality:kropotkin:poder
-- personality:andre-gorz:poder
-- personality:max-more:poder
-
 ## religiao - 10 perfis
 
 Sequencia: `DT,CT,DT,CT,D,CT,DT,CT,DT,CT,D,CT,D,CT,DT,CT,D,CT,DT,CT`
@@ -1260,19 +988,19 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
 - country:portugal-estado-novo:representacao
 - country:prussia:representacao
 
-## controle - 9 perfis
+## comercio - 9 perfis
 
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,D,D,C,C,N,D,C,D`
+Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,N,C,D,C,D,C`
 
-- country:austria:controle
-- country:finlandia:controle
-- personality:deng-xiaoping:controle
-- personality:viktor-orban:controle
-- personality:michael-sandel:controle
-- personality:beveridge:controle
-- personality:theodore-roosevelt:controle
-- personality:tito:controle
-- personality:otto-von-habsburg:controle
+- country:libano:comercio
+- country:tailandia:comercio
+- country:malasia:comercio
+- country:uruguai:comercio
+- country:republica-de-weimar:comercio
+- country:catalunha:comercio
+- country:austria:comercio
+- country:portugal:comercio
+- country:finlandia:comercio
 
 ## intervencao - 9 perfis
 
@@ -1302,19 +1030,19 @@ Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
 - ideology:centrismo-liberal:intervencao
 - country:eua-washington-dc:intervencao
 
-## intervencao - 9 perfis
+## poder - 9 perfis
 
-Sequencia: `D,CT,D,CT,D,C,N,C,D,CT,D,C,D,C,D,CT,D,CT,D,CT`
+Sequencia: `C,C,C,C,C,C,C,D,C,D,C,C,N,C,D,D,C,C,D,C`
 
-- country:republica-de-weimar:intervencao
-- country:imperio-austro-hungaro:intervencao
-- country:florenca-renascentista:intervencao
-- country:hungria-de-kadar:intervencao
-- country:estados-papais:intervencao
-- country:imperio-alemao:intervencao
-- country:alemanha-oriental:intervencao
-- personality:stalin:intervencao
-- personality:ernest-renan:intervencao
+- country:imperio-austro-hungaro:poder
+- country:butao:poder
+- country:imperio-persa-aquemenida:poder
+- country:roma-republicana:poder
+- country:hungria-de-kadar:poder
+- country:macau:poder
+- personality:jabotinsky:poder
+- personality:theodore-roosevelt:poder
+- personality:javier-milei:poder
 
 ## religiao - 9 perfis
 
@@ -1369,18 +1097,18 @@ Sequencia: `D,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,CT,D,CT,D,CT,D,CT`
 - country:liechtenstein:controle
 - country:islandia-medieval:controle
 
-## controle - 8 perfis
+## diplomacia - 8 perfis
 
-Sequencia: `C,D,C,D,CT,D,C,D,CT,D,C,D,D,DT,C,D,N,N,C,DT`
+Sequencia: `N,C,D,C,N,C,D,C,N,C,N,N,N,C,D,C,D,D,N,N`
 
-- personality:bakunin:controle
-- personality:kropotkin:controle
-- personality:durruti:controle
-- personality:chomsky:controle
-- personality:ocalan:controle
-- personality:bookchin:controle
-- personality:andre-gorz:controle
-- personality:zapata:controle
+- country:cazaquistao:diplomacia
+- country:malasia:diplomacia
+- country:el-salvador:diplomacia
+- country:hungria-de-kadar:diplomacia
+- country:chile-de-allende:diplomacia
+- personality:garrett-hardin:diplomacia
+- personality:viktor-orban:diplomacia
+- personality:beveridge:diplomacia
 
 ## economia - 8 perfis
 
@@ -1407,6 +1135,19 @@ Sequencia: `N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N`
 - ideology:tecnocracia:economia
 - ideology:aceleracionismo:economia
 - ideology:centrismo:economia
+
+## economia - 8 perfis
+
+Sequencia: `CT,DT,CT,DT,CT,DT,C,DT,CT,D,C,N,CT,DT,CT,DT,C,DT,C,DT`
+
+- country:ucrania-territorio-livre:economia
+- country:comuna-de-paris:economia
+- country:chile-de-allende:economia
+- country:alemanha-oriental:economia
+- country:mexico-de-cardenas:economia
+- personality:mao-zedong:economia
+- personality:kim-il-sung:economia
+- personality:ernst-niekisch:economia
 
 ## imigracao - 8 perfis
 
@@ -1449,6 +1190,19 @@ Sequencia: `D,C,D,C,D,C,N,C,D,C,D,C,D,C,D,C,D,C,D,C`
 
 ## intervencao - 8 perfis
 
+Sequencia: `C,D,C,D,C,D,N,C,C,D,C,D,C,D,C,D,D,C,D,D`
+
+- country:australia:intervencao
+- country:egito-atual:intervencao
+- country:tailandia:intervencao
+- country:malasia:intervencao
+- country:colombia:intervencao
+- country:estonia:intervencao
+- country:chile-de-allende:intervencao
+- country:imperio-bizantino:intervencao
+
+## intervencao - 8 perfis
+
 Sequencia: `CT,DT,C,D,CT,D,C,D,CT,DT,C,D,CT,DT,C,D,C,D,CT,DT`
 
 - country:irlanda:intervencao
@@ -1460,18 +1214,18 @@ Sequencia: `CT,DT,C,D,CT,D,C,D,CT,DT,C,D,CT,DT,C,D,C,D,CT,DT`
 - country:portugal:intervencao
 - country:islandia:intervencao
 
-## representacao - 8 perfis
+## intervencao - 8 perfis
 
-Sequencia: `CT,DT,CT,D,C,DT,CT,D,CT,DT,CT,DT,D,D,CT,DT,C,DT,CT,C`
+Sequencia: `D,CT,D,CT,D,C,N,C,D,CT,D,C,D,C,D,CT,D,CT,D,CT`
 
-- personality:anton-pannekoek:representacao
-- personality:bakunin:representacao
-- personality:kropotkin:representacao
-- personality:durruti:representacao
-- personality:chomsky:representacao
-- personality:ocalan:representacao
-- personality:bookchin:representacao
-- personality:zapata:representacao
+- country:republica-de-weimar:intervencao
+- country:imperio-austro-hungaro:intervencao
+- country:florenca-renascentista:intervencao
+- country:hungria-de-kadar:intervencao
+- country:estados-papais:intervencao
+- country:imperio-alemao:intervencao
+- country:alemanha-oriental:intervencao
+- personality:ernest-renan:intervencao
 
 ## tecnologia - 8 perfis
 
@@ -1524,27 +1278,15 @@ Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
 
 ## comercio - 7 perfis
 
-Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,N,D,CT,D,CT,D`
+Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,DT,CT,DT,CT,DT,CT`
 
-- country:japao-meiji:comercio
-- country:imperio-do-japao:comercio
-- country:hungria-de-kadar:comercio
-- country:espanha-habsburgos:comercio
-- country:imperio-portugues:comercio
-- country:alemanha-oriental:comercio
-- personality:chomsky:comercio
-
-## comercio - 7 perfis
-
-Sequencia: `C,D,C,D,C,D,C,N,C,D,CT,DT,C,D,C,D,C,DT,C,D`
-
-- country:comuna-de-paris:comercio
-- country:chile-de-allende:comercio
-- personality:bakunin:comercio
-- personality:durruti:comercio
-- personality:ocalan:comercio
-- personality:bookchin:comercio
-- personality:andre-gorz:comercio
+- country:irlanda:comercio
+- country:republica-holandesa:comercio
+- country:monaco:comercio
+- country:estonia:comercio
+- country:luxemburgo:comercio
+- country:macau:comercio
+- personality:javier-milei:comercio
 
 ## controle - 7 perfis
 
@@ -1557,18 +1299,6 @@ Sequencia: `CT,D,C,C,C,D,CT,D,CT,D,CT,D,C,D,C,D,CT,DT,CT,D`
 - country:aragao-e-catalunha-anarquistas-revolucao-espanhola:controle
 - country:egito-de-nasser:controle
 - country:rojava:controle
-
-## controle - 7 perfis
-
-Sequencia: `CT,D,C,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,N`
-
-- personality:lenin:controle
-- personality:trotsky:controle
-- personality:ernst-niekisch:controle
-- personality:gregor-strasser:controle
-- personality:louis-xiv:controle
-- personality:frederico-ii-da-prussia:controle
-- personality:sorel:controle
 
 ## controle - 7 perfis
 
@@ -1605,30 +1335,6 @@ Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,DT,CT,D`
 - country:reino-unido-vitoriano-imperio-britanico:diplomacia
 - country:italia-fascista-mussolini:diplomacia
 - country:prussia:diplomacia
-
-## economia - 7 perfis
-
-Sequencia: `DT,CT,D,CT,DT,CT,D,C,D,CT,D,CT,D,C,DT,CT,D,CT,D,CT`
-
-- country:irlanda:economia
-- country:republica-holandesa:economia
-- country:estonia:economia
-- country:luxemburgo:economia
-- country:florenca-renascentista:economia
-- personality:lee-kuan-yew:economia
-- personality:john-locke:economia
-
-## estrutura - 7 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
-
-- ideology:positivismo:estrutura
-- ideology:autoritarismo-modernizador:estrutura
-- ideology:tecno-fascismo:estrutura
-- ideology:ecofascismo:estrutura
-- ideology:socialismo-juche:estrutura
-- personality:lenin:estrutura
-- personality:trotsky:estrutura
 
 ## intervencao - 7 perfis
 
@@ -1702,18 +1408,6 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,DT,CT,D,CT,DT,CT`
 - personality:khomeini:religiao
 - personality:joseph-de-maistre:religiao
 
-## religiao - 7 perfis
-
-Sequencia: `C,C,C,D,C,C,C,D,C,D,N,C,D,C,D,D,D,D,C,D`
-
-- country:burkina-faso-de-sankara:religiao
-- country:mexico-de-cardenas:religiao
-- personality:gregor-strasser:religiao
-- personality:hitler:religiao
-- personality:evo-morales:religiao
-- personality:tito:religiao
-- personality:javier-milei:religiao
-
 ## tecnologia - 7 perfis
 
 Sequencia: `C,D,C,N,C,N,N,C,C,C,C,D,C,D,C,D,C,D,C,N`
@@ -1736,6 +1430,17 @@ Sequencia: `N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C`
 - ideology:feminismo:comercio
 - ideology:ambientalismo:comercio
 - ideology:progressismo:comercio
+
+## comercio - 6 perfis
+
+Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,N,D,CT,D,CT,D`
+
+- country:japao-meiji:comercio
+- country:imperio-do-japao:comercio
+- country:hungria-de-kadar:comercio
+- country:espanha-habsburgos:comercio
+- country:imperio-portugues:comercio
+- country:alemanha-oriental:comercio
 
 ## controle - 6 perfis
 
@@ -1770,6 +1475,17 @@ Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,D,D,C,D,C,D,C,D`
 - country:egito-atual:controle
 - country:paquistao:controle
 
+## controle - 6 perfis
+
+Sequencia: `CT,D,C,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,N`
+
+- personality:trotsky:controle
+- personality:ernst-niekisch:controle
+- personality:gregor-strasser:controle
+- personality:louis-xiv:controle
+- personality:frederico-ii-da-prussia:controle
+- personality:sorel:controle
+
 ## diplomacia - 6 perfis
 
 Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,DT,CT,D,CT`
@@ -1783,6 +1499,17 @@ Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,DT,CT,D,CT`
 
 ## diplomacia - 6 perfis
 
+Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
+
+- ideology:federalismo-privado:diplomacia
+- country:luxemburgo:diplomacia
+- country:catalunha:diplomacia
+- country:genebra-calvinista:diplomacia
+- country:portugal:diplomacia
+- country:mexico-de-cardenas:diplomacia
+
+## diplomacia - 6 perfis
+
 Sequencia: `N,C,D,C,N,C,D,C,N,C,C,D,C,C,N,C,D,D,N,C`
 
 - country:alemanha:diplomacia
@@ -1791,17 +1518,6 @@ Sequencia: `N,C,D,C,N,C,D,C,N,C,C,D,C,C,N,C,D,D,N,C`
 - country:sacro-imperio-romano-germanico:diplomacia
 - country:republica-de-veneza:diplomacia
 - country:iugoslavia-socialista:diplomacia
-
-## diplomacia - 6 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,DT,CT,D,CT,D,C,D,C,D,CT,D,D,DT,CT`
-
-- personality:bakunin:diplomacia
-- personality:kropotkin:diplomacia
-- personality:chomsky:diplomacia
-- personality:ocalan:diplomacia
-- personality:bookchin:diplomacia
-- personality:andre-gorz:diplomacia
 
 ## economia - 6 perfis
 
@@ -1816,6 +1532,28 @@ Sequencia: `N,C,N,C,D,C,N,C,N,C,D,C,N,C,D,C,N,C,N,C`
 
 ## estrutura - 6 perfis
 
+Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
+
+- ideology:positivismo:estrutura
+- ideology:autoritarismo-modernizador:estrutura
+- ideology:tecno-fascismo:estrutura
+- ideology:ecofascismo:estrutura
+- ideology:socialismo-juche:estrutura
+- personality:trotsky:estrutura
+
+## estrutura - 6 perfis
+
+Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
+
+- ideology:federalismo-privado:estrutura
+- ideology:tecno-anarquismo:estrutura
+- country:ucrania-territorio-livre:estrutura
+- country:republica-holandesa:estrutura
+- country:comuna-de-paris:estrutura
+- country:eua-confederados:estrutura
+
+## estrutura - 6 perfis
+
 Sequencia: `C,C,C,C,C,D,C,N,D,C,CT,C,C,D,D,C,C,CT,C,D`
 
 - country:costa-rica:estrutura
@@ -1824,17 +1562,6 @@ Sequencia: `C,C,C,C,C,D,C,N,D,C,CT,C,C,D,D,C,C,CT,C,D`
 - country:india:estrutura
 - country:israel:estrutura
 - country:argentina:estrutura
-
-## estrutura - 6 perfis
-
-Sequencia: `N,C,N,C,D,C,N,C,D,C,N,C,D,C,N,C,N,D,N,D`
-
-- personality:edmund-burke:estrutura
-- personality:aldo-leopold:estrutura
-- personality:ernest-renan:estrutura
-- personality:sorel:estrutura
-- personality:adam-smith:estrutura
-- personality:scruton:estrutura
 
 ## imigracao - 6 perfis
 
@@ -1868,28 +1595,6 @@ Sequencia: `C,C,D,C,N,C,C,C,N,C,C,C,N,C,N,D,D,D,D,N`
 - country:el-salvador:imigracao
 - country:roma-republicana:imigracao
 - personality:beveridge:imigracao
-
-## intervencao - 6 perfis
-
-Sequencia: `N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C`
-
-- ideology:socialismo-de-estado:intervencao
-- ideology:capitalismo-autoritario:intervencao
-- ideology:alt-lite:intervencao
-- ideology:conservadorismo:intervencao
-- personality:nick-land:intervencao
-- personality:curtis-yarvin:intervencao
-
-## intervencao - 6 perfis
-
-Sequencia: `CT,DT,C,D,CT,DT,C,D,CT,DT,C,D,CT,DT,C,D,C,D,CT,DT`
-
-- country:butao:intervencao
-- country:catalunha:intervencao
-- country:macau:intervencao
-- personality:garrett-hardin:intervencao
-- personality:gustave-de-molinari:intervencao
-- personality:chomsky:intervencao
 
 ## moral - 6 perfis
 
@@ -1926,17 +1631,6 @@ Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,D,CT,D,C,D,CT`
 
 ## moral - 6 perfis
 
-Sequencia: `CT,D,CT,D,C,DT,CT,D,CT,DT,C,DT,C,D,C,D,C,DT,CT,D`
-
-- country:eua-california:moral
-- country:eua-washington-dc:moral
-- country:eua-massachusetts:moral
-- country:luxemburgo:moral
-- country:portugal:moral
-- personality:gustave-de-molinari:moral
-
-## moral - 6 perfis
-
 Sequencia: `DT,CT,DT,CT,D,CT,DT,C,DT,CT,DT,CT,DT,C,N,CT,D,CT,DT,CT`
 
 - personality:plinio-salgado:moral
@@ -1945,28 +1639,6 @@ Sequencia: `DT,CT,DT,CT,D,CT,DT,C,DT,CT,DT,CT,DT,C,N,CT,D,CT,DT,CT`
 - personality:hendrik-verwoerd:moral
 - personality:louis-xiv:moral
 - personality:salazar:moral
-
-## poder - 6 perfis
-
-Sequencia: `CT,D,CT,D,CT,D,CT,D,D,CT,CT,D,CT,D,CT,D,CT,D,CT,D`
-
-- country:bielorrussia:poder
-- country:catar:poder
-- country:el-salvador:poder
-- country:genebra-calvinista:poder
-- personality:garrett-hardin:poder
-- personality:lee-kuan-yew:poder
-
-## poder - 6 perfis
-
-Sequencia: `C,C,C,C,C,D,C,D,C,D,C,C,N,D,D,D,C,C,D,D`
-
-- country:burkina-faso-de-sankara:poder
-- country:mexico-de-cardenas:poder
-- personality:viktor-orban:poder
-- personality:curtis-yarvin:poder
-- personality:cicero:poder
-- personality:durruti:poder
 
 ## religiao - 6 perfis
 
@@ -2000,17 +1672,6 @@ Sequencia: `CT,D,CT,D,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N`
 - ideology:liberaltarianismo:religiao
 - ideology:feminismo:religiao
 - ideology:feminismo-liberal:religiao
-
-## religiao - 6 perfis
-
-Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,D,CT,D,DT,CT,DT,CT,DT,CT,DT`
-
-- personality:lenin:religiao
-- personality:stalin:religiao
-- personality:mao-zedong:religiao
-- personality:trotsky:religiao
-- personality:kim-il-sung:religiao
-- personality:pol-pot:religiao
 
 ## representacao - 6 perfis
 
@@ -2069,17 +1730,6 @@ Sequencia: `C,D,C,C,C,D,C,D,C,D,C,D,D,C,C,D,D,C,C,D`
 
 ## representacao - 6 perfis
 
-Sequencia: `D,CT,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,CT,D,C,D,CT`
-
-- country:egito-atual:representacao
-- country:imperio-persa-aquemenida:representacao
-- country:hungria-de-kadar:representacao
-- country:brasil-regime-militar:representacao
-- personality:lee-kuan-yew:representacao
-- personality:richard-spencer:representacao
-
-## representacao - 6 perfis
-
 Sequencia: `C,CT,C,C,D,CT,C,C,D,CT,C,CT,D,C,C,CT,D,C,D,CT`
 
 - country:tailandia:representacao
@@ -2088,17 +1738,6 @@ Sequencia: `C,CT,C,C,D,CT,C,C,D,CT,C,CT,D,C,C,CT,D,C,D,CT`
 - country:mexico-de-cardenas:representacao
 - personality:garrett-hardin:representacao
 - personality:bismarck:representacao
-
-## representacao - 6 perfis
-
-Sequencia: `C,C,C,C,D,C,C,C,D,C,C,C,D,C,C,D,D,D,C,D`
-
-- country:imperio-austro-hungaro:representacao
-- country:roma-republicana:representacao
-- personality:ernest-renan:representacao
-- personality:adam-smith:representacao
-- personality:friedrich-list:representacao
-- personality:otto-von-habsburg:representacao
 
 ## tecnologia - 6 perfis
 
@@ -2113,14 +1752,14 @@ Sequencia: `D,C,D,C,N,C,N,C,D,C,D,C,N,C,D,C,D,C,D,C`
 
 ## tecnologia - 6 perfis
 
-Sequencia: `C,D,C,N,C,C,N,C,C,C,C,D,C,D,C,D,N,D,C,N`
+Sequencia: `N,C,N,N,N,N,N,N,N,N,N,N,C,N,N,N,N,N,N,N`
 
-- personality:curtis-yarvin:tecnologia
-- personality:hayek:tecnologia
-- personality:gustave-de-molinari:tecnologia
-- personality:kropotkin:tecnologia
-- personality:tito:tecnologia
-- personality:adam-smith:tecnologia
+- country:tailandia:tecnologia
+- country:hungria-de-kadar:tecnologia
+- personality:beveridge:tecnologia
+- personality:ernest-renan:tecnologia
+- personality:bismarck:tecnologia
+- personality:sorel:tecnologia
 
 ## comercio - 5 perfis
 
@@ -2164,13 +1803,13 @@ Sequencia: `DT,CT,D,C,D,C,D,C,D,C,D,C,N,C,D,C,D,C,N,C`
 
 ## controle - 5 perfis
 
-Sequencia: `CT,D,C,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,D`
+Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,D,D,C,C,N,D,C,D`
 
-- country:burkina-faso-de-sankara:controle
-- country:genebra-calvinista:controle
-- country:mexico-de-cardenas:controle
-- personality:garrett-hardin:controle
-- personality:evo-morales:controle
+- country:austria:controle
+- country:finlandia:controle
+- personality:viktor-orban:controle
+- personality:beveridge:controle
+- personality:theodore-roosevelt:controle
 
 ## diplomacia - 5 perfis
 
@@ -2201,16 +1840,6 @@ Sequencia: `DT,CT,D,C,D,C,D,C,D,C,D,C,D,C,N,C,D,N,D,C`
 - ideology:anarcocoletivismo:diplomacia
 - ideology:anarcossindicalismo:diplomacia
 - ideology:socialismo-libertario:diplomacia
-
-## diplomacia - 5 perfis
-
-Sequencia: `D,C,D,CT,D,CT,DT,CT,D,CT,D,C,D,C,D,CT,D,D,D,C`
-
-- country:nova-zelandia:diplomacia
-- country:uruguai:diplomacia
-- country:republica-de-weimar:diplomacia
-- country:comuna-de-paris:diplomacia
-- personality:anton-pannekoek:diplomacia
 
 ## economia - 5 perfis
 
@@ -2264,6 +1893,16 @@ Sequencia: `C,D,C,D,C,DT,C,D,C,D,C,D,C,D,N,D,CT,D,C,D`
 
 ## economia - 5 perfis
 
+Sequencia: `DT,CT,D,CT,DT,CT,D,C,D,CT,D,CT,D,C,DT,CT,D,CT,D,CT`
+
+- country:irlanda:economia
+- country:republica-holandesa:economia
+- country:estonia:economia
+- country:luxemburgo:economia
+- country:florenca-renascentista:economia
+
+## economia - 5 perfis
+
 Sequencia: `C,D,C,D,C,D,C,D,C,D,N,D,C,D,N,D,C,D,C,D`
 
 - country:paquistao:economia
@@ -2271,36 +1910,6 @@ Sequencia: `C,D,C,D,C,D,C,D,C,D,N,D,C,D,N,D,C,D,C,D`
 - personality:garrett-hardin:economia
 - personality:salazar:economia
 - personality:joseph-de-maistre:economia
-
-## economia - 5 perfis
-
-Sequencia: `DT,CT,DT,CT,DT,CT,D,CT,DT,CT,DT,CT,D,CT,DT,CT,D,CT,DT,CT`
-
-- country:monaco:economia
-- personality:hayek:economia
-- personality:gustave-de-molinari:economia
-- personality:javier-milei:economia
-- personality:goldwater:economia
-
-## economia - 5 perfis
-
-Sequencia: `C,D,C,D,D,D,C,D,C,D,C,D,C,D,N,D,C,D,N,C`
-
-- country:finlandia:economia
-- personality:michael-sandel:economia
-- personality:beveridge:economia
-- personality:tito:economia
-- personality:otto-von-habsburg:economia
-
-## economia - 5 perfis
-
-Sequencia: `CT,DT,CT,DT,CT,D,C,DT,CT,D,C,N,CT,DT,CT,DT,C,DT,C,DT`
-
-- personality:bakunin:economia
-- personality:durruti:economia
-- personality:chomsky:economia
-- personality:ocalan:economia
-- personality:bookchin:economia
 
 ## estrutura - 5 perfis
 
@@ -2322,16 +1931,6 @@ Sequencia: `C,D,C,D,N,D,C,C,D,C,N,C,N,C,D,C,N,D,C,D`
 - ideology:socialismo:estrutura
 - ideology:socialismo-liberal:estrutura
 
-## estrutura - 5 perfis
-
-Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,D,C,DT`
-
-- personality:hayek:estrutura
-- personality:andre-gorz:estrutura
-- personality:arne-naess:estrutura
-- personality:max-more:estrutura
-- personality:otto-von-habsburg:estrutura
-
 ## imigracao - 5 perfis
 
 Sequencia: `C,D,C,D,C,D,C,D,C,C,C,C,C,D,C,D,C,D,C,D`
@@ -2352,15 +1951,15 @@ Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,D,D,C,D`
 - country:uniao-sovietica-urss:imigracao
 - country:china-maoista:imigracao
 
-## imigracao - 5 perfis
+## intervencao - 5 perfis
 
-Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,D,DT,C,D,C`
+Sequencia: `C,D,C,D,D,C,N,C,N,C,C,C,C,D,C,D,N,C,C,C`
 
-- country:burkina-faso-de-sankara:imigracao
-- personality:anton-pannekoek:imigracao
-- personality:hayek:imigracao
-- personality:aldo-leopold:imigracao
-- personality:andre-gorz:imigracao
+- country:ucrania:intervencao
+- country:siria:intervencao
+- country:comuna-de-paris:intervencao
+- country:eua-confederados:intervencao
+- personality:arne-naess:intervencao
 
 ## moral - 5 perfis
 
@@ -2404,6 +2003,16 @@ Sequencia: `D,C,DT,CT,DT,C,D,CT,D,C,D,C,D,CT,D,D,D,C,D,C`
 
 ## moral - 5 perfis
 
+Sequencia: `CT,D,CT,D,C,DT,CT,D,CT,DT,C,DT,C,D,C,D,C,DT,CT,D`
+
+- country:eua-california:moral
+- country:eua-washington-dc:moral
+- country:eua-massachusetts:moral
+- country:luxemburgo:moral
+- country:portugal:moral
+
+## moral - 5 perfis
+
 Sequencia: `D,CT,D,C,D,CT,D,C,D,CT,D,C,D,N,N,CT,N,CT,D,C`
 
 - country:egito-atual:moral
@@ -2442,6 +2051,16 @@ Sequencia: `C,C,C,C,N,C,C,D,C,C,C,C,N,C,D,C,N,N,D,C`
 - country:indonesia:poder
 - country:hong-kong:poder
 
+## poder - 5 perfis
+
+Sequencia: `CT,D,CT,D,CT,D,CT,D,D,CT,CT,D,CT,D,CT,D,CT,D,CT,D`
+
+- country:bielorrussia:poder
+- country:catar:poder
+- country:el-salvador:poder
+- country:genebra-calvinista:poder
+- personality:garrett-hardin:poder
+
 ## religiao - 5 perfis
 
 Sequencia: `N,N,N,N,N,C,N,D,N,C,D,C,N,N,D,N,N,D,C,C`
@@ -2464,23 +2083,13 @@ Sequencia: `D,C,D,C,C,CT,D,C,N,CT,D,C,D,CT,D,C,D,N,C,C`
 
 ## religiao - 5 perfis
 
-Sequencia: `C,D,C,D,C,D,C,D,C,D,N,C,D,D,D,C,D,D,C,D`
+Sequencia: `C,C,C,D,C,C,C,D,C,D,N,C,D,C,D,D,D,D,C,D`
 
-- country:republica-holandesa:religiao
-- country:imperio-mongol:religiao
-- personality:richard-spencer:religiao
-- personality:ocalan:religiao
-- personality:andre-gorz:religiao
-
-## religiao - 5 perfis
-
-Sequencia: `C,C,C,C,C,C,C,D,C,C,N,C,D,C,D,D,D,D,C,C`
-
-- personality:deng-xiaoping:religiao
-- personality:hayek:religiao
-- personality:gustave-de-molinari:religiao
-- personality:adam-smith:religiao
-- personality:friedrich-list:religiao
+- country:burkina-faso-de-sankara:religiao
+- country:mexico-de-cardenas:religiao
+- personality:gregor-strasser:religiao
+- personality:hitler:religiao
+- personality:javier-milei:religiao
 
 ## representacao - 5 perfis
 
@@ -2494,13 +2103,23 @@ Sequencia: `C,N,C,C,C,N,C,C,C,D,C,C,N,D,C,D,C,C,C,D`
 
 ## representacao - 5 perfis
 
-Sequencia: `D,CT,D,C,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,C,D,CT`
+Sequencia: `D,CT,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,CT,D,C,D,CT`
 
-- country:macau:representacao
-- country:imperio-russo-czarista:representacao
-- personality:lenin:representacao
-- personality:gregor-strasser:representacao
-- personality:sorel:representacao
+- country:egito-atual:representacao
+- country:imperio-persa-aquemenida:representacao
+- country:hungria-de-kadar:representacao
+- country:brasil-regime-militar:representacao
+- personality:richard-spencer:representacao
+
+## representacao - 5 perfis
+
+Sequencia: `C,C,C,C,D,C,C,C,D,C,C,C,D,C,C,D,D,D,C,D`
+
+- country:imperio-austro-hungaro:representacao
+- country:roma-republicana:representacao
+- personality:ernest-renan:representacao
+- personality:adam-smith:representacao
+- personality:friedrich-list:representacao
 
 ## tecnologia - 5 perfis
 
@@ -2551,26 +2170,6 @@ Sequencia: `C,D,C,D,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,D`
 - ideology:socialismo-titoista:tecnologia
 - ideology:social-democracia:tecnologia
 - ideology:socialismo-liberal:tecnologia
-
-## tecnologia - 5 perfis
-
-Sequencia: `C,D,C,N,C,C,N,C,C,C,C,D,C,D,C,D,C,D,C,N`
-
-- country:eua-nova-york:tecnologia
-- country:eua-massachusetts:tecnologia
-- country:canada:tecnologia
-- personality:lee-kuan-yew:tecnologia
-- personality:john-stuart-mill:tecnologia
-
-## tecnologia - 5 perfis
-
-Sequencia: `D,C,D,C,D,D,N,D,DT,D,D,C,C,C,D,D,D,C,N,D`
-
-- personality:evo-morales:tecnologia
-- personality:ocalan:tecnologia
-- personality:bookchin:tecnologia
-- personality:zapata:tecnologia
-- personality:scruton:tecnologia
 
 ## comercio - 4 perfis
 
@@ -2646,15 +2245,6 @@ Sequencia: `C,C,D,C,N,N,C,C,D,CT,D,CT,DT,CT,N,CT,D,DT,N,C`
 
 ## controle - 4 perfis
 
-Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,N,CT,D,CT`
-
-- country:eua-texas:controle
-- country:eua-new-hampshire:controle
-- country:eua-florida:controle
-- personality:max-more:controle
-
-## controle - 4 perfis
-
 Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
 - country:irlanda:controle
@@ -2664,21 +2254,12 @@ Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
 ## controle - 4 perfis
 
-Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
+Sequencia: `CT,D,C,D,CT,D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,D`
 
-- country:estonia:controle
-- country:macau:controle
-- personality:lee-kuan-yew:controle
-- personality:curtis-yarvin:controle
-
-## controle - 4 perfis
-
-Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
-
-- personality:nick-land:controle
-- personality:gustave-de-molinari:controle
-- personality:javier-milei:controle
-- personality:goldwater:controle
+- country:burkina-faso-de-sankara:controle
+- country:genebra-calvinista:controle
+- country:mexico-de-cardenas:controle
+- personality:garrett-hardin:controle
 
 ## diplomacia - 4 perfis
 
@@ -2734,6 +2315,15 @@ Sequencia: `CT,D,C,D,CT,D,C,D,C,D,CT,C,CT,C,C,D,C,DT,CT,D`
 - country:egito-de-nasser:diplomacia
 - country:polonia:diplomacia
 
+## diplomacia - 4 perfis
+
+Sequencia: `D,C,D,CT,D,CT,DT,CT,D,CT,D,C,D,C,D,CT,D,D,D,C`
+
+- country:nova-zelandia:diplomacia
+- country:uruguai:diplomacia
+- country:republica-de-weimar:diplomacia
+- country:comuna-de-paris:diplomacia
+
 ## economia - 4 perfis
 
 Sequencia: `C,D,CT,D,C,D,CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D`
@@ -2751,15 +2341,6 @@ Sequencia: `N,N,C,D,N,DT,C,N,C,DT,C,C,C,D,C,D,CT,N,C,D`
 - country:coreia-do-sul-de-park-chung-hee:economia
 - country:india:economia
 - country:indonesia:economia
-
-## economia - 4 perfis
-
-Sequencia: `D,C,D,C,D,D,C,C,D,D,N,C,D,D,N,D,D,C,N,C`
-
-- country:el-salvador:economia
-- personality:deng-xiaoping:economia
-- personality:hendrik-verwoerd:economia
-- personality:john-stuart-mill:economia
 
 ## economia - 4 perfis
 
@@ -2799,12 +2380,12 @@ Sequencia: `C,N,C,N,N,N,C,N,N,N,C,N,N,N,N,N,C,N,N,N`
 
 ## estrutura - 4 perfis
 
-Sequencia: `C,D,C,D,C,D,C,D,D,C,C,D,C,D,C,D,C,D,C,D`
+Sequencia: `N,C,N,C,D,C,N,C,D,C,N,C,D,C,N,C,N,D,N,D`
 
-- country:imperio-alemao:estrutura
-- country:mexico-de-cardenas:estrutura
-- personality:bismarck:estrutura
-- personality:tito:estrutura
+- personality:ernest-renan:estrutura
+- personality:sorel:estrutura
+- personality:adam-smith:estrutura
+- personality:scruton:estrutura
 
 ## imigracao - 4 perfis
 
@@ -2841,6 +2422,15 @@ Sequencia: `D,CT,DT,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,DT,CT,DT,CT`
 - country:canada:imigracao
 - country:republica-holandesa:imigracao
 - country:luxemburgo:imigracao
+
+## intervencao - 4 perfis
+
+Sequencia: `N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C,N,C`
+
+- ideology:socialismo-de-estado:intervencao
+- ideology:capitalismo-autoritario:intervencao
+- ideology:alt-lite:intervencao
+- ideology:conservadorismo:intervencao
 
 ## intervencao - 4 perfis
 
@@ -2896,6 +2486,15 @@ Sequencia: `D,CT,D,C,D,C,D,CT,D,C,D,CT,C,D,D,C,D,C,D,CT`
 - country:egito-de-nasser:intervencao
 - country:africa-do-sul-do-apartheid:intervencao
 
+## intervencao - 4 perfis
+
+Sequencia: `CT,DT,C,D,CT,DT,C,D,CT,DT,C,D,CT,DT,C,D,C,D,CT,DT`
+
+- country:butao:intervencao
+- country:catalunha:intervencao
+- country:macau:intervencao
+- personality:garrett-hardin:intervencao
+
 ## moral - 4 perfis
 
 Sequencia: `C,D,C,D,C,D,C,D,C,D,C,N,N,C,C,N,C,D,C,N`
@@ -2931,15 +2530,6 @@ Sequencia: `CT,D,C,D,C,DT,CT,D,C,DT,C,DT,C,D,C,D,C,DT,CT,D`
 - country:canada:moral
 - country:australia:moral
 - country:taiwan:moral
-
-## moral - 4 perfis
-
-Sequencia: `D,C,D,C,N,D,D,N,D,D,D,N,N,N,N,D,N,D,D,N`
-
-- personality:edmund-burke:moral
-- personality:theodore-roosevelt:moral
-- personality:friedrich-list:moral
-- personality:otto-von-habsburg:moral
 
 ## poder - 4 perfis
 
@@ -3013,6 +2603,15 @@ Sequencia: `D,CT,D,CT,D,CT,D,CT,DT,CT,D,CT,D,CT,DT,CT,D,CT,D,CT`
 - country:espanha-franquista:religiao
 - country:portugal-estado-novo:religiao
 
+## religiao - 4 perfis
+
+Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,D,CT,D,DT,CT,DT,CT,DT,CT,DT`
+
+- personality:mao-zedong:religiao
+- personality:trotsky:religiao
+- personality:kim-il-sung:religiao
+- personality:pol-pot:religiao
+
 ## representacao - 4 perfis
 
 Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,DT,DT,CT,DT,C,DT,CT,DT,CT,DT,CT`
@@ -3024,21 +2623,12 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,DT,DT,CT,DT,C,DT,CT,DT,CT,DT,CT`
 
 ## representacao - 4 perfis
 
-Sequencia: `C,C,C,C,D,C,C,C,D,D,C,D,D,C,C,D,D,D,C,D`
+Sequencia: `D,CT,D,C,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,C,D,CT`
 
-- country:butao:representacao
-- country:genebra-calvinista:representacao
-- personality:viktor-orban:representacao
-- personality:cicero:representacao
-
-## representacao - 4 perfis
-
-Sequencia: `C,D,C,C,C,D,C,C,D,D,C,D,D,C,C,D,D,D,C,D`
-
-- personality:beveridge:representacao
-- personality:aldo-leopold:representacao
-- personality:arne-naess:representacao
-- personality:max-more:representacao
+- country:macau:representacao
+- country:imperio-russo-czarista:representacao
+- personality:gregor-strasser:representacao
+- personality:sorel:representacao
 
 ## tecnologia - 4 perfis
 
@@ -3154,14 +2744,6 @@ Sequencia: `N,CT,N,CT,D,CT,N,CT,C,CT,N,CT,N,CT,D,C,N,CT,N,CT`
 
 ## comercio - 3 perfis
 
-Sequencia: `N,C,N,C,D,C,N,C,N,C,D,C,N,C,N,D,N,C,N,C`
-
-- country:canada:comercio
-- personality:beveridge:comercio
-- personality:aldo-leopold:comercio
-
-## comercio - 3 perfis
-
 Sequencia: `C,C,D,C,C,C,C,C,C,C,C,C,C,C,N,C,C,C,D,C`
 
 - country:filipinas:comercio
@@ -3226,6 +2808,14 @@ Sequencia: `C,D,D,D,C,D,C,D,C,C,C,D,D,D,C,C,C,DT,C,D`
 
 ## controle - 3 perfis
 
+Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,N,CT,D,CT`
+
+- country:eua-texas:controle
+- country:eua-new-hampshire:controle
+- country:eua-florida:controle
+
+## controle - 3 perfis
+
 Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,N,D,C,D`
 
 - country:colombia:controle
@@ -3239,14 +2829,6 @@ Sequencia: `CT,D,C,D,C,D,CT,D,C,D,CT,D,D,D,C,D,CT,D,C,D`
 - country:japao-meiji:controle
 - country:butao:controle
 - country:imperio-portugues:controle
-
-## controle - 3 perfis
-
-Sequencia: `CT,DT,CT,DT,CT,D,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,C,DT`
-
-- personality:stalin:controle
-- personality:mao-zedong:controle
-- personality:kim-il-sung:controle
 
 ## diplomacia - 3 perfis
 
@@ -3295,14 +2877,6 @@ Sequencia: `D,CT,D,CT,D,CT,DT,CT,D,CT,D,C,D,C,D,CT,D,D,D,C`
 - country:butao:diplomacia
 - country:burkina-faso-de-sankara:diplomacia
 - country:austria:diplomacia
-
-## diplomacia - 3 perfis
-
-Sequencia: `C,C,D,C,C,D,C,D,C,D,C,N,C,N,D,D,C,DT,C,N`
-
-- country:brasil-regime-militar:diplomacia
-- personality:gregor-strasser:diplomacia
-- personality:zapata:diplomacia
 
 ## economia - 3 perfis
 
@@ -3402,14 +2976,6 @@ Sequencia: `D,C,D,C,D,D,C,C,D,D,N,C,D,D,N,D,D,C,C,C`
 
 ## economia - 3 perfis
 
-Sequencia: `N,C,N,D,N,D,C,D,N,D,N,D,N,D,N,D,N,D,N,D`
-
-- country:gra-colombia:economia
-- personality:cicero:economia
-- personality:montesquieu:economia
-
-## economia - 3 perfis
-
 Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,N,D,CT,D,C,D`
 
 - country:imperio-bizantino:economia
@@ -3506,14 +3072,6 @@ Sequencia: `D,C,D,C,D,C,D,CT,DT,C,N,CT,D,CT,DT,CT,D,CT,D,CT`
 
 ## estrutura - 3 perfis
 
-Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,C,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
-
-- country:aragao-e-catalunha-anarquistas-revolucao-espanhola:estrutura
-- country:rojava:estrutura
-- personality:michael-sandel:estrutura
-
-## estrutura - 3 perfis
-
 Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,C,DT,C,DT,CT,DT,CT,DT,CT,DT,CT,DT`
 
 - country:liechtenstein:estrutura
@@ -3538,19 +3096,11 @@ Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,CT,D,C,D`
 
 ## estrutura - 3 perfis
 
-Sequencia: `C,D,C,D,N,C,D,D,D,C,C,D,D,D,C,D,N,D,D,D`
+Sequencia: `C,D,C,D,C,D,C,D,D,C,C,D,C,D,C,D,C,D,C,D`
 
-- country:taiwan:estrutura
-- personality:deng-xiaoping:estrutura
-- personality:curtis-yarvin:estrutura
-
-## estrutura - 3 perfis
-
-Sequencia: `C,D,C,D,C,D,C,C,D,C,C,D,C,D,C,D,C,D,D,D`
-
-- personality:montesquieu:estrutura
-- personality:john-stuart-mill:estrutura
-- personality:john-locke:estrutura
+- country:imperio-alemao:estrutura
+- country:mexico-de-cardenas:estrutura
+- personality:bismarck:estrutura
 
 ## imigracao - 3 perfis
 
@@ -3666,6 +3216,14 @@ Sequencia: `CT,D,C,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,C,D,C,D`
 
 ## imigracao - 3 perfis
 
+Sequencia: `D,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,C,DT,C`
+
+- country:eua-nova-york:imigracao
+- country:eua-washington-dc:imigracao
+- country:eua-massachusetts:imigracao
+
+## imigracao - 3 perfis
+
 Sequencia: `D,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,CT,DT,CT`
 
 - country:imperio-persa-aquemenida:imigracao
@@ -3719,14 +3277,6 @@ Sequencia: `D,C,D,C,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,C,D,CT`
 - country:imperio-do-brasil:intervencao
 - country:camboja-do-khmer-vermelho-pol-pot:intervencao
 - country:portugal-estado-novo:intervencao
-
-## intervencao - 3 perfis
-
-Sequencia: `CT,D,C,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,D`
-
-- country:burkina-faso-de-sankara:intervencao
-- country:mexico-de-cardenas:intervencao
-- personality:evo-morales:intervencao
 
 ## moral - 3 perfis
 
@@ -3810,35 +3360,11 @@ Sequencia: `CT,D,CT,C,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,N,CT,D`
 
 ## poder - 3 perfis
 
-Sequencia: `N,C,N,C,N,C,N,D,N,C,N,C,N,C,D,C,N,C,D,C`
+Sequencia: `C,C,C,C,C,D,C,D,C,D,C,C,N,D,D,D,C,C,D,D`
 
-- country:republica-de-weimar:poder
-- personality:michael-sandel:poder
-- personality:aldo-leopold:poder
-
-## poder - 3 perfis
-
-Sequencia: `C,C,N,C,C,C,C,D,C,D,C,C,N,C,D,D,C,C,D,C`
-
-- personality:edmund-burke:poder
-- personality:ernest-renan:poder
-- personality:friedrich-list:poder
-
-## poder - 3 perfis
-
-Sequencia: `DT,CT,DT,CT,DT,CT,DT,C,DT,CT,DT,CT,N,C,DT,CT,DT,CT,DT,CT`
-
-- personality:gustave-de-molinari:poder
-- personality:bakunin:poder
-- personality:chomsky:poder
-
-## poder - 3 perfis
-
-Sequencia: `D,C,D,C,D,C,D,C,DT,C,D,C,N,C,D,C,D,C,D,C`
-
-- personality:ocalan:poder
-- personality:bookchin:poder
-- personality:zapata:poder
+- country:burkina-faso-de-sankara:poder
+- country:mexico-de-cardenas:poder
+- personality:viktor-orban:poder
 
 ## religiao - 3 perfis
 
@@ -3906,11 +3432,11 @@ Sequencia: `C,D,C,DT,C,C,C,DT,C,D,C,D,C,D,C,D,C,D,C,D`
 
 ## religiao - 3 perfis
 
-Sequencia: `D,CT,D,C,D,C,D,CT,D,C,D,C,D,CT,D,C,D,C,D,C`
+Sequencia: `C,D,C,D,C,D,C,D,C,D,N,C,D,D,D,C,D,D,C,D`
 
-- personality:edmund-burke:religiao
-- personality:scruton:religiao
-- personality:otto-von-habsburg:religiao
+- country:republica-holandesa:religiao
+- country:imperio-mongol:religiao
+- personality:richard-spencer:religiao
 
 ## representacao - 3 perfis
 
@@ -3954,19 +3480,11 @@ Sequencia: `C,D,C,D,C,N,C,D,C,D,C,D,N,D,C,D,N,D,C,D`
 
 ## representacao - 3 perfis
 
-Sequencia: `C,D,C,C,D,D,C,D,C,D,C,D,D,N,C,D,D,D,C,D`
+Sequencia: `C,C,C,C,D,C,C,C,D,D,C,D,D,C,C,D,D,D,C,D`
 
-- country:eua-texas:representacao
-- country:eua-florida:representacao
-- personality:goldwater:representacao
-
-## representacao - 3 perfis
-
-Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,D,D,CT,D,D,D,C,C`
-
-- personality:jabotinsky:representacao
-- personality:montesquieu:representacao
-- personality:michael-sandel:representacao
+- country:butao:representacao
+- country:genebra-calvinista:representacao
+- personality:viktor-orban:representacao
 
 ## tecnologia - 3 perfis
 
@@ -4042,6 +3560,14 @@ Sequencia: `C,D,N,N,N,D,D,C,D,N,D,C,D,N,D,C,N,D,N,D`
 
 ## tecnologia - 3 perfis
 
+Sequencia: `C,D,C,N,C,C,N,C,C,C,C,D,C,D,C,D,C,D,C,N`
+
+- country:eua-nova-york:tecnologia
+- country:eua-massachusetts:tecnologia
+- country:canada:tecnologia
+
+## tecnologia - 3 perfis
+
 Sequencia: `N,C,N,D,N,N,D,N,N,N,N,N,D,N,D,N,D,N,N,D`
 
 - country:siria:tecnologia
@@ -4055,22 +3581,6 @@ Sequencia: `CT,DT,CT,D,C,N,C,D,C,N,C,D,C,D,C,D,C,D,CT,D`
 - country:taiwan:tecnologia
 - country:estonia:tecnologia
 - country:finlandia:tecnologia
-
-## tecnologia - 3 perfis
-
-Sequencia: `C,D,C,D,C,D,N,D,C,D,C,D,C,D,C,D,N,D,C,D`
-
-- country:brasil-regime-militar:tecnologia
-- personality:lenin:tecnologia
-- personality:trotsky:tecnologia
-
-## tecnologia - 3 perfis
-
-Sequencia: `C,D,C,D,C,D,N,D,C,D,N,D,C,D,C,D,N,D,C,D`
-
-- personality:stalin:tecnologia
-- personality:ernst-niekisch:tecnologia
-- personality:putin:tecnologia
 
 ## tecnologia - 3 perfis
 
@@ -4209,6 +3719,13 @@ Sequencia: `N,C,N,C,D,C,N,C,D,C,N,C,D,C,N,D,N,C,N,C`
 
 ## comercio - 2 perfis
 
+Sequencia: `N,C,N,C,D,C,N,C,N,C,D,C,N,C,N,D,N,C,N,C`
+
+- country:canada:comercio
+- personality:beveridge:comercio
+
+## comercio - 2 perfis
+
 Sequencia: `D,CT,D,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
 - country:paises-baixos:comercio
@@ -4216,17 +3733,17 @@ Sequencia: `D,CT,D,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
 ## comercio - 2 perfis
 
+Sequencia: `C,D,C,D,C,D,C,N,C,D,CT,DT,C,D,C,D,C,DT,C,D`
+
+- country:comuna-de-paris:comercio
+- country:chile-de-allende:comercio
+
+## comercio - 2 perfis
+
 Sequencia: `CT,DT,CT,DT,C,D,CT,DT,C,D,CT,D,C,D,N,D,CT,DT,CT,N`
 
 - personality:mao-zedong:comercio
 - personality:kim-il-sung:comercio
-
-## comercio - 2 perfis
-
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,N,D,C,D,C,N`
-
-- personality:anton-pannekoek:comercio
-- personality:richard-spencer:comercio
 
 ## controle - 2 perfis
 
@@ -4426,10 +3943,17 @@ Sequencia: `N,C,D,C,C,D,C,D,C,D,D,C,D,C,C,C,D,D,C,D`
 
 ## controle - 2 perfis
 
-Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,N,C,D,C`
+Sequencia: `D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT,D,CT`
 
-- personality:edmund-burke:controle
-- personality:scruton:controle
+- country:estonia:controle
+- country:macau:controle
+
+## controle - 2 perfis
+
+Sequencia: `CT,DT,CT,DT,CT,D,CT,DT,CT,D,CT,D,CT,D,CT,D,CT,DT,C,DT`
+
+- personality:mao-zedong:controle
+- personality:kim-il-sung:controle
 
 ## diplomacia - 2 perfis
 
@@ -4535,6 +4059,13 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT`
 
 - country:vaticano:diplomacia
 - country:macau:diplomacia
+
+## diplomacia - 2 perfis
+
+Sequencia: `C,C,D,C,C,D,C,D,C,D,C,N,C,N,D,D,C,DT,C,N`
+
+- country:brasil-regime-militar:diplomacia
+- personality:gregor-strasser:diplomacia
 
 ## economia - 2 perfis
 
@@ -4699,10 +4230,24 @@ Sequencia: `D,C,C,D,D,DT,C,C,C,D,D,C,C,D,N,D,C,D,C,D`
 
 ## economia - 2 perfis
 
-Sequencia: `CT,DT,CT,DT,CT,DT,C,DT,CT,D,C,N,CT,DT,CT,D,C,DT,C,DT`
+Sequencia: `D,C,D,C,D,D,C,C,D,D,N,C,D,D,N,D,D,C,N,C`
 
-- personality:lenin:economia
-- personality:trotsky:economia
+- country:el-salvador:economia
+- personality:hendrik-verwoerd:economia
+
+## economia - 2 perfis
+
+Sequencia: `DT,CT,DT,CT,DT,CT,D,CT,DT,CT,DT,CT,D,CT,DT,CT,D,CT,DT,CT`
+
+- country:monaco:economia
+- personality:javier-milei:economia
+
+## economia - 2 perfis
+
+Sequencia: `C,D,C,D,D,D,C,D,C,D,C,D,C,D,N,D,C,D,N,C`
+
+- country:finlandia:economia
+- personality:beveridge:economia
 
 ## economia - 2 perfis
 
@@ -4710,20 +4255,6 @@ Sequencia: `CT,DT,CT,DT,CT,D,C,DT,CT,D,C,N,CT,DT,CT,D,C,DT,C,DT`
 
 - personality:gregor-strasser:economia
 - personality:sorel:economia
-
-## economia - 2 perfis
-
-Sequencia: `D,CT,D,CT,D,CT,D,C,D,CT,D,CT,D,C,DT,CT,D,CT,D,CT`
-
-- personality:curtis-yarvin:economia
-- personality:max-more:economia
-
-## economia - 2 perfis
-
-Sequencia: `C,D,C,D,D,D,C,D,C,D,C,D,C,D,N,D,D,C,N,C`
-
-- personality:aldo-leopold:economia
-- personality:arne-naess:economia
 
 ## estrutura - 2 perfis
 
@@ -4846,17 +4377,10 @@ Sequencia: `D,C,D,C,D,C,D,C,DT,C,N,C,D,C,DT,C,D,C,D,C`
 
 ## estrutura - 2 perfis
 
-Sequencia: `CT,D,CT,D,CT,D,CT,D,C,D,CT,D,CT,DT,C,D,C,DT,CT,DT`
+Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,C,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT`
 
-- country:eua-texas:estrutura
-- personality:goldwater:estrutura
-
-## estrutura - 2 perfis
-
-Sequencia: `C,D,C,D,D,C,D,C,N,C,C,D,D,C,C,D,N,C,D,D`
-
-- country:filipinas:estrutura
-- personality:cicero:estrutura
+- country:aragao-e-catalunha-anarquistas-revolucao-espanhola:estrutura
+- country:rojava:estrutura
 
 ## estrutura - 2 perfis
 
@@ -4864,13 +4388,6 @@ Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,D,D,C`
 
 - personality:theodore-roosevelt:estrutura
 - personality:friedrich-list:estrutura
-
-## estrutura - 2 perfis
-
-Sequencia: `D,C,D,C,DT,C,D,C,DT,C,N,C,D,C,DT,C,D,C,D,D`
-
-- personality:henri-de-saint-simon:estrutura
-- personality:oskar-lange:estrutura
 
 ## imigracao - 2 perfis
 
@@ -4993,31 +4510,10 @@ Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,CT,D,C,D,C,DT,CT,DT`
 
 ## imigracao - 2 perfis
 
-Sequencia: `C,D,C,D,C,D,C,N,C,D,C,D,N,D,N,D,D,D,C,D`
+Sequencia: `C,D,C,D,C,D,C,D,C,N,C,N,C,D,C,D,D,DT,D,DT`
 
-- country:eua-new-hampshire:imigracao
-- personality:goldwater:imigracao
-
-## imigracao - 2 perfis
-
-Sequencia: `D,CT,D,C,D,C,D,C,D,CT,D,C,D,C,D,D,DT,C,D,C`
-
-- personality:lenin:imigracao
-- personality:trotsky:imigracao
-
-## imigracao - 2 perfis
-
-Sequencia: `N,C,D,C,N,C,D,C,N,C,N,C,N,C,N,D,N,D,N,N`
-
-- personality:montesquieu:imigracao
-- personality:john-stuart-mill:imigracao
-
-## imigracao - 2 perfis
-
-Sequencia: `D,C,DT,C,D,C,D,C,D,C,D,C,D,C,D,C,DT,C,DT,C`
-
-- personality:thomas-paine:imigracao
-- personality:karl-marx:imigracao
+- personality:proudhon:imigracao
+- personality:edmund-burke:imigracao
 
 ## intervencao - 2 perfis
 
@@ -5133,6 +4629,13 @@ Sequencia: `C,D,C,D,C,D,N,C,C,D,C,D,C,D,C,D,C,D,C,D`
 
 ## intervencao - 2 perfis
 
+Sequencia: `CT,D,C,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,D`
+
+- country:burkina-faso-de-sankara:intervencao
+- country:mexico-de-cardenas:intervencao
+
+## intervencao - 2 perfis
+
 Sequencia: `C,D,C,D,C,D,N,C,D,D,C,D,C,D,C,D,D,C,D,D`
 
 - personality:mao-zedong:intervencao
@@ -5144,27 +4647,6 @@ Sequencia: `D,CT,D,CT,DT,CT,DT,CT,DT,CT,D,CT,D,CT,D,CT,DT,CT,DT,CT`
 
 - personality:plinio-salgado:intervencao
 - personality:jose-antonio-primo-de-rivera:intervencao
-
-## intervencao - 2 perfis
-
-Sequencia: `DT,CT,D,CT,DT,CT,D,CT,DT,CT,D,CT,DT,CT,D,CT,D,CT,DT,CT`
-
-- personality:bakunin:intervencao
-- personality:durruti:intervencao
-
-## intervencao - 2 perfis
-
-Sequencia: `C,D,C,D,N,D,D,N,C,DT,C,D,C,DT,C,D,N,N,C,N`
-
-- personality:thomas-paine:intervencao
-- personality:orwell:intervencao
-
-## intervencao - 2 perfis
-
-Sequencia: `C,D,C,D,C,D,D,D,C,DT,C,D,C,DT,C,D,C,D,C,D`
-
-- personality:henry-george:intervencao
-- personality:srnicek:intervencao
 
 ## moral - 2 perfis
 
@@ -5280,13 +4762,6 @@ Sequencia: `CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,CT,CT,DT,CT,DT`
 
 ## moral - 2 perfis
 
-Sequencia: `C,N,C,N,C,D,C,N,C,D,N,D,N,N,N,D,N,D,C,N`
-
-- country:chile-de-allende:moral
-- personality:evo-morales:moral
-
-## moral - 2 perfis
-
 Sequencia: `N,C,N,N,N,D,N,N,N,D,N,N,D,N,N,D,N,D,N,N`
 
 - country:imperio-mongol:moral
@@ -5294,31 +4769,10 @@ Sequencia: `N,C,N,N,N,D,N,N,N,D,N,N,D,N,N,D,N,D,N,N`
 
 ## moral - 2 perfis
 
-Sequencia: `C,N,C,N,C,D,C,N,C,D,C,D,N,N,N,D,N,D,C,N`
+Sequencia: `D,C,D,C,N,D,D,N,D,D,D,N,N,N,N,D,N,D,D,N`
 
-- country:mexico-de-cardenas:moral
-- personality:goldwater:moral
-
-## moral - 2 perfis
-
-Sequencia: `C,D,C,N,C,D,C,N,CT,DT,C,D,N,N,N,D,N,D,C,D`
-
-- personality:lenin:moral
-- personality:trotsky:moral
-
-## moral - 2 perfis
-
-Sequencia: `D,C,D,C,D,C,D,N,D,C,D,N,N,N,N,C,N,C,D,N`
-
-- personality:deng-xiaoping:moral
-- personality:curtis-yarvin:moral
-
-## moral - 2 perfis
-
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,N,D,N,D,N,DT,C,D`
-
-- personality:gramsci:moral
-- personality:olof-palme:moral
+- personality:theodore-roosevelt:moral
+- personality:friedrich-list:moral
 
 ## poder - 2 perfis
 
@@ -5469,6 +4923,13 @@ Sequencia: `CT,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,N,CT,D`
 
 ## poder - 2 perfis
 
+Sequencia: `D,CT,D,CT,D,CT,D,C,DT,CT,D,CT,N,C,DT,CT,D,C,D,CT`
+
+- country:taiwan:poder
+- country:portugal:poder
+
+## poder - 2 perfis
+
 Sequencia: `CT,D,C,D,CT,D,C,D,D,CT,CT,D,N,D,CT,D,CT,D,CT,D`
 
 - country:gra-colombia:poder
@@ -5480,6 +4941,13 @@ Sequencia: `C,D,C,D,C,C,C,D,C,D,C,C,N,D,D,D,C,C,D,D`
 
 - country:imperio-alemao:poder
 - personality:bismarck:poder
+
+## poder - 2 perfis
+
+Sequencia: `C,C,N,C,C,C,C,D,C,D,C,C,N,C,D,D,C,C,D,C`
+
+- personality:ernest-renan:poder
+- personality:friedrich-list:poder
 
 ## religiao - 2 perfis
 
@@ -5637,10 +5105,10 @@ Sequencia: `D,CT,D,C,D,CT,D,C,D,CT,D,C,D,CT,D,C,D,CT,D,C`
 
 ## religiao - 2 perfis
 
-Sequencia: `C,N,C,N,C,D,C,N,C,D,N,D,N,C,N,D,N,D,C,N`
+Sequencia: `C,C,C,C,C,C,C,D,C,C,N,C,D,C,D,D,D,D,C,C`
 
-- personality:montesquieu:religiao
-- personality:michael-sandel:religiao
+- personality:adam-smith:religiao
+- personality:friedrich-list:religiao
 
 ## representacao - 2 perfis
 
@@ -5742,6 +5210,13 @@ Sequencia: `C,D,C,C,C,D,C,D,C,D,C,D,N,D,C,D,C,C,C,D`
 
 ## representacao - 2 perfis
 
+Sequencia: `C,D,C,C,D,D,C,D,C,D,C,D,D,N,C,D,D,D,C,D`
+
+- country:eua-texas:representacao
+- country:eua-florida:representacao
+
+## representacao - 2 perfis
+
 Sequencia: `CT,D,CT,D,C,D,CT,D,C,DT,C,DT,D,D,CT,DT,D,DT,C,DT`
 
 - country:espanha:representacao
@@ -5749,24 +5224,10 @@ Sequencia: `CT,D,CT,D,C,D,CT,D,C,DT,C,DT,D,D,CT,DT,D,DT,C,DT`
 
 ## representacao - 2 perfis
 
-Sequencia: `D,C,D,C,D,CT,D,C,D,CT,D,C,D,C,D,CT,D,C,D,CT`
+Sequencia: `C,D,C,C,C,D,C,C,D,D,C,D,D,C,C,D,D,D,C,D`
 
-- personality:deng-xiaoping:representacao
-- personality:tito:representacao
-
-## representacao - 2 perfis
-
-Sequencia: `CT,D,CT,C,C,D,CT,C,C,D,CT,D,C,C,CT,D,D,D,CT,C`
-
-- personality:john-stuart-mill:representacao
-- personality:john-locke:representacao
-
-## representacao - 2 perfis
-
-Sequencia: `C,C,C,C,D,CT,C,C,D,CT,C,CT,D,C,C,CT,D,C,D,CT`
-
-- personality:edmund-burke:representacao
-- personality:scruton:representacao
+- personality:beveridge:representacao
+- personality:arne-naess:representacao
 
 ## tecnologia - 2 perfis
 
@@ -5802,13 +5263,6 @@ Sequencia: `D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C`
 
 - ideology:indigenismo:tecnologia
 - ideology:teocratismo-cristao:tecnologia
-
-## tecnologia - 2 perfis
-
-Sequencia: `C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D,C,D`
-
-- ideology:libertarianismo-bleeding-heart:tecnologia
-- personality:anton-pannekoek:tecnologia
 
 ## tecnologia - 2 perfis
 
@@ -5931,10 +5385,10 @@ Sequencia: `C,D,N,N,N,N,N,N,N,N,N,N,C,N,N,N,N,N,N,N`
 
 ## tecnologia - 2 perfis
 
-Sequencia: `D,C,D,C,D,C,N,C,DT,C,D,C,C,C,D,D,D,C,N,D`
+Sequencia: `C,D,C,D,C,D,N,D,C,D,C,D,C,D,C,D,N,D,C,D`
 
-- country:butao:tecnologia
-- personality:aldo-leopold:tecnologia
+- country:brasil-regime-militar:tecnologia
+- personality:trotsky:tecnologia
 
 ## tecnologia - 2 perfis
 
@@ -5942,6 +5396,13 @@ Sequencia: `DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,DT,CT,D,CT,DT,CT,DT,CT,DT,CT`
 
 - personality:pol-pot:tecnologia
 - personality:arne-naess:tecnologia
+
+## tecnologia - 2 perfis
+
+Sequencia: `C,D,C,D,C,D,N,D,C,D,N,D,C,D,C,D,N,D,C,D`
+
+- personality:ernst-niekisch:tecnologia
+- personality:putin:tecnologia
 
 ## tecnologia - 2 perfis
 
@@ -5956,18 +5417,4 @@ Sequencia: `N,C,N,N,N,N,D,N,N,N,N,N,C,N,N,N,D,N,N,D`
 
 - personality:jose-antonio-primo-de-rivera:tecnologia
 - personality:hendrik-verwoerd:tecnologia
-
-## tecnologia - 2 perfis
-
-Sequencia: `C,D,N,N,N,N,D,N,N,N,N,N,D,N,D,N,N,C,N,D`
-
-- personality:bakunin:tecnologia
-- personality:durruti:tecnologia
-
-## tecnologia - 2 perfis
-
-Sequencia: `C,D,C,N,C,N,N,C,C,C,C,D,C,D,C,D,N,D,C,N`
-
-- personality:javier-milei:tecnologia
-- personality:goldwater:tecnologia
 
