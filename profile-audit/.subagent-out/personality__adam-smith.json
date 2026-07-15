@@ -1,8 +1,8 @@
 {
   "estrutura": {
-    "personaBrief": "Smith desconfiava do poder centralizado em Londres e via valor na autonomia local para decisões econômicas e administrativas, mas isso não o tornava um separatista — sua preocupação era com boas instituições, não com fronteiras jurisdicionais.",
+    "personaBrief": "Smith desconfiava de concentraÃ§Ãµes excessivas de poder e monopÃ³lio polÃ­tico, valorizando arranjos institucionais mais prÃ³ximos da vida econÃ´mica real. Ainda assim, sua preocupaÃ§Ã£o principal era a boa administraÃ§Ã£o e a justiÃ§a comum, nÃ£o o separatismo.",
     "answers": {
-      "estrutura_01": "N",
+      "estrutura_01": "C",
       "estrutura_15": "D",
       "estrutura_06": "N",
       "estrutura_07": "C",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "Smith escreveu sob uma monarquia constitucional britânica e via com desconfiança o poder concentrado sem freios — sua economia política pressupõe governo limitado, prestação de contas e liberdade civil, não um déspota esclarecido.",
+    "personaBrief": "A economia polÃ­tica de Smith pressupÃµe freios ao arbÃ­trio, publicidade e governo responsÃ¡vel, nÃ£o poder pessoal sem controle. Como iluminista moderado, ele tenderia a preferir instituiÃ§Ãµes livres, ainda que sem romantizar a competÃªncia do eleitorado.",
     "answers": {
       "representacao_04": "C",
       "representacao_11": "N",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "Como filósofo moral que também escreveu sobre simpatia e liberdade individual, Smith tendia a favorecer a liberdade civil e via com ceticismo intervenções coercitivas do Estado sobre a vida privada dos indivíduos, embora reconhecesse um papel legítimo do Estado na justiça e na ordem.",
+    "personaBrief": "Smith ligava prosperidade e ordem social Ã  liberdade civil, Ã  seguranÃ§a jurÃ­dica e Ã  limitaÃ§Ã£o de abusos do poder. Ele admitia funÃ§Ãµes estatais de justiÃ§a e defesa, mas seria cÃ©tico com coerÃ§Ã£o ampla sobre adultos e com vigilÃ¢ncia arbitrÃ¡ria.",
     "answers": {
       "poder_05": "D",
       "poder_01": "N",
@@ -75,14 +75,14 @@
     }
   },
   "imigracao": {
-    "personaBrief": "Smith foi um cosmopolita iluminista que via o comércio e a troca entre povos como fonte de prosperidade mútua, sem grande preocupação com pureza cultural, embora escrevesse como um homem de seu tempo, ancorado na sociedade escocesa e britânica.",
+    "personaBrief": "Smith via a circulaÃ§Ã£o entre povos e a troca internacional como fontes de enriquecimento mÃºtuo, nÃ£o como ameaÃ§a automÃ¡tica. Seu horizonte era cosmopolita para o sÃ©culo XVIII, embora sem defender o apagamento completo de identidades nacionais.",
     "answers": {
       "imigracao_19": "DT",
       "imigracao_10": "C",
       "imigracao_20": "N",
       "imigracao_01": "N",
       "imigracao_03": "D",
-      "imigracao_06": "N",
+      "imigracao_06": "C",
       "imigracao_12": "C",
       "imigracao_16": "N",
       "imigracao_05": "D",
@@ -95,23 +95,23 @@
       "imigracao_07": "D",
       "imigracao_09": "D",
       "imigracao_02": "N",
-      "imigracao_08": "N",
+      "imigracao_08": "C",
       "imigracao_11": "N"
     }
   },
   "diplomacia": {
-    "personaBrief": "Smith criticou duramente o mercantilismo e as guerras coloniais que o acompanhavam, argumentando que o comércio livre entre nações é mais benéfico que a conquista e o conflito armado, embora reconhecesse a necessidade de defesa nacional.",
+    "personaBrief": "Smith criticou o mercantilismo e as guerras imperiais que sacrificavam riqueza e liberdade em nome de rivalidades estatais. Seu impulso bÃ¡sico neste eixo Ã© preferir comÃ©rcio, negociaÃ§Ã£o e contenÃ§Ã£o militar, sem negar a necessidade de defesa.",
     "answers": {
       "diplomacia_16": "C",
       "diplomacia_10": "C",
       "diplomacia_09": "D",
       "diplomacia_04": "C",
       "diplomacia_20": "N",
-      "diplomacia_07": "N",
-      "diplomacia_05": "N",
+      "diplomacia_07": "D",
+      "diplomacia_05": "D",
       "diplomacia_14": "N",
       "diplomacia_01": "D",
-      "diplomacia_15": "N",
+      "diplomacia_15": "D",
       "diplomacia_03": "D",
       "diplomacia_12": "C",
       "diplomacia_06": "C",
@@ -125,16 +125,16 @@
     }
   },
   "intervencao": {
-    "personaBrief": "Smith condenou o expansionismo mercantilista e colonial de sua época como custoso e injusto, favorecendo relações internacionais baseadas em comércio pacífico e vantagem mútua em vez de dominação política ou militar sobre outras nações.",
+    "personaBrief": "Como crÃ­tico do colonialismo custoso e do nacionalismo mercantilista, Smith tenderia a rejeitar ingerÃªncia externa e projeÃ§Ã£o de poder por prestÃ­gio. RelaÃ§Ãµes entre paÃ­ses deveriam buscar paz, seguranÃ§a e comÃ©rcio, nÃ£o tutela polÃ­tica sobre vizinhos.",
     "answers": {
       "intervencao_08": "N",
-      "intervencao_17": "N",
-      "intervencao_09": "N",
+      "intervencao_17": "C",
+      "intervencao_09": "C",
       "intervencao_03": "C",
       "intervencao_15": "C",
       "intervencao_02": "N",
-      "intervencao_11": "N",
-      "intervencao_07": "D",
+      "intervencao_11": "C",
+      "intervencao_07": "N",
       "intervencao_10": "D",
       "intervencao_18": "N",
       "intervencao_14": "DT",
@@ -142,7 +142,7 @@
       "intervencao_16": "D",
       "intervencao_05": "N",
       "intervencao_12": "D",
-      "intervencao_19": "N",
+      "intervencao_19": "C",
       "intervencao_04": "D",
       "intervencao_01": "C",
       "intervencao_20": "N",
@@ -150,17 +150,17 @@
     }
   },
   "economia": {
-    "personaBrief": "Smith é o fundador da defesa moderna da propriedade privada, da livre iniciativa e da divisão do trabalho como motores de prosperidade, argumentando que os interesses individuais coordenados pelo mercado (a 'mão invisível') superam a alocação centralizada de recursos.",
+    "personaBrief": "Smith fundou a defesa clÃ¡ssica da propriedade privada, da livre iniciativa e da divisÃ£o do trabalho como motores de prosperidade. Ao mesmo tempo, nÃ£o era anarcocapitalista: admitia funÃ§Ãµes pÃºblicas limitadas quando o mercado nÃ£o entregava certos bens sociais.",
     "answers": {
-      "economia_07": "D",
+      "economia_07": "N",
       "economia_19": "N",
       "economia_03": "D",
       "economia_01": "DT",
       "economia_17": "D",
-      "economia_04": "C",
+      "economia_04": "N",
       "economia_14": "C",
       "economia_12": "C",
-      "economia_06": "N",
+      "economia_06": "D",
       "economia_08": "C",
       "economia_13": "N",
       "economia_09": "D",
@@ -175,32 +175,32 @@
     }
   },
   "controle": {
-    "personaBrief": "Smith é o autor clássico da defesa do livre mercado contra o planejamento estatal mercantilista, defendendo que preços, salários e produção se regulam melhor pela livre concorrência do que por decisões de governo, ainda que reconhecesse funções legítimas e limitadas do Estado.",
+    "personaBrief": "A 'mÃ£o invisÃ­vel' de Smith Ã© precisamente uma crÃ­tica Ã  direÃ§Ã£o mercantilista da economia por governantes e monopÃ³lios favorecidos. Ele tenderia a confiar mais em preÃ§os, concorrÃªncia e comÃ©rcio do que em planejamento, congelamentos e polÃ­tica industrial discricionÃ¡ria.",
     "answers": {
       "controle_11": "D",
       "controle_19": "D",
       "controle_02": "CT",
-      "controle_16": "C",
+      "controle_16": "N",
       "controle_13": "DT",
       "controle_17": "D",
       "controle_06": "C",
       "controle_20": "C",
       "controle_07": "D",
       "controle_08": "C",
-      "controle_14": "N",
+      "controle_14": "C",
       "controle_18": "N",
-      "controle_03": "N",
-      "controle_05": "N",
+      "controle_03": "D",
+      "controle_05": "C",
       "controle_12": "N",
       "controle_09": "D",
-      "controle_15": "N",
+      "controle_15": "D",
       "controle_01": "D",
       "controle_04": "C",
       "controle_10": "C"
     }
   },
   "comercio": {
-    "personaBrief": "Smith é o maior crítico histórico do protecionismo mercantilista, defendendo que o livre comércio internacional e a vantagem comparativa entre nações geram mais riqueza para todos do que barreiras tarifárias e autossuficiência forçada.",
+    "personaBrief": "Poucos autores estÃ£o tÃ£o ligados ao livre comÃ©rcio quanto Smith, que atacou tarifas, monopÃ³lios e autossuficiÃªncia forÃ§ada como fontes de pobreza. Para ele, a abertura comercial tende a ampliar riqueza, eficiÃªncia e inovaÃ§Ã£o entre naÃ§Ãµes.",
     "answers": {
       "comercio_19": "D",
       "comercio_18": "C",
@@ -225,32 +225,32 @@
     }
   },
   "religiao": {
-    "personaBrief": "Smith foi um filósofo do Iluminismo escocês, associado a um deísmo moderado e cético quanto ao clero organizado, mas que via a religião com pragmatismo social — nem hostil abertamente, nem defensor de um Estado confessional.",
+    "personaBrief": "Smith foi um pensador do Iluminismo escocÃªs, religiosamente moderado e pouco inclinado a subordinar a polÃ­tica ao clero. Sua tendÃªncia aqui Ã© secular e institucional: a religiÃ£o pode existir na vida social, mas nÃ£o deve comandar o Estado.",
     "answers": {
       "religiao_13": "N",
-      "religiao_07": "N",
+      "religiao_07": "C",
       "religiao_08": "D",
       "religiao_16": "N",
-      "religiao_15": "N",
+      "religiao_15": "C",
       "religiao_02": "D",
       "religiao_14": "N",
       "religiao_04": "D",
-      "religiao_12": "N",
+      "religiao_12": "D",
       "religiao_18": "D",
-      "religiao_11": "D",
+      "religiao_11": "N",
       "religiao_01": "C",
       "religiao_03": "C",
-      "religiao_17": "D",
+      "religiao_17": "N",
       "religiao_10": "N",
-      "religiao_20": "N",
+      "religiao_20": "D",
       "religiao_19": "C",
       "religiao_06": "N",
-      "religiao_09": "N",
-      "religiao_05": "N"
+      "religiao_09": "C",
+      "religiao_05": "C"
     }
   },
   "moral": {
-    "personaBrief": "Smith, autor de 'A Teoria dos Sentimentos Morais', ancorava a moralidade na simpatia e nos costumes sociais de sua época — um homem do século XVIII, moderado e convencional em temas de família e sexualidade, sem os debates modernos sobre gênero e identidade.",
+    "personaBrief": "Em 'A Teoria dos Sentimentos Morais', Smith tratou a moral como produto de simpatia, autocontrole e costumes sociais. Isso o colocaria como um moderado convencional de seu sÃ©culo: nem libertino militante, nem moralista teocrÃ¡tico.",
     "answers": {
       "moral_12": "C",
       "moral_16": "N",
@@ -275,7 +275,7 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Smith via a divisão do trabalho, a inovação técnica e o progresso material como motores centrais do enriquecimento das nações, favorecendo o avanço tecnológico e industrial como caminho de prosperidade, ainda que sem conceito de biotecnologia moderna.",
+    "personaBrief": "Smith associou prosperidade ao avanÃ§o produtivo, Ã  divisÃ£o do trabalho e Ã  melhoria tÃ©cnica contÃ­nua. Ele tenderia a ver inovaÃ§Ã£o como alavanca de riqueza, embora sem um impulso cego para qualquer ruptura tecnolÃ³gica sem consideraÃ§Ã£o moral.",
     "answers": {
       "tecnologia_18": "D",
       "tecnologia_01": "C",
