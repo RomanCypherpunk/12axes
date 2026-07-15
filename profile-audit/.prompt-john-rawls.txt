@@ -1,0 +1,305 @@
+Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "John Rawls" (catálogo: figura histórica/pública) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
+
+Dados curados deste perfil (não invente informação além disto; se precisar de contexto histórico adicional, baseie-se apenas em fatos amplamente documentados e verificáveis sobre esta entidade específica):
+id: john-rawls
+name: John Rawls
+role: Filósofo
+lifespan: 1921–2002
+description: Filósofo norte-americano, Rawls reformulou o liberalismo com a ideia de justiça como equidade, defendendo liberdades iguais e desigualdades aceitáveis apenas se beneficiam os mais desfavorecidos da sociedade.
+
+METODOLOGIA (obrigatória):
+- Para CADA um dos 12 eixos: primeiro escreva um persona brief de 1-2 frases conectando especificamente a description acima ao tema daquele eixo (não repita a description inteira — extraia só a parte relevante àquele eixo).
+- Depois responda as 20 perguntas do eixo, uma a uma, com um destes códigos: DT (discordo totalmente), D (discordo), N (neutro/indiferente), C (concordo), CT (concordo totalmente).
+- Simule genuinamente como o próprio perfil / seus porta-vozes reais responderiam CADA pergunta individualmente. NÃO escolha um valor-alvo para o eixo e trabalhe de trás para frente. Aceite o que resultar, mesmo que surpreendente.
+- Cada pergunta é independente. As perguntas já vêm em ordem embaralhada. Responda pelo id da pergunta.
+- Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente econômico. Se este perfil for anti-estatista mas quiser coordenação econômica coletiva/planejada (ex.: anarquistas, comunistas libertários), julgue pelo ESPÍRITO de coordenação coletiva vs. mercado, não pela agência estatal literal. Já no eixo "representacao", a ausência de Estado formal (anarquia) conta do lado democrático/anti-autocrático, não autocrático.
+
+SAÍDA (obrigatória): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentários) exatamente neste caminho:
+C:\Users\gasometro\Documents\12Axes\profile-audit\.subagent-out\personality__john-rawls.json
+
+Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; cada eixo com exatamente 20 respostas; todos os 12 eixos presentes):
+{
+  "estrutura": { "personaBrief": "...", "answers": { "estrutura_01": "C", "estrutura_07": "DT", ... } },
+  "representacao": { "personaBrief": "...", "answers": { ... } },
+  ... (todos os 12 eixos: estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia)
+}
+
+Depois de gravar o arquivo, responda apenas com "OK personality:john-rawls" e um resumo de 1 linha. Não cole o JSON inteiro na resposta.
+
+=== PERGUNTAS POR EIXO ===
+
+### Eixo "estrutura" — grau de centralização vs. fragmentação/federalismo do poder político
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=estrutura_02] O país inteiro deve seguir as mesmas leis, mesmo contra as preferências de cada estado.
+2. [id=estrutura_08] Saúde, educação e segurança devem seguir um comando nacional forte.
+3. [id=estrutura_05] Cada estado deveria ter sua própria Constituição, suas leis e sua polícia.
+4. [id=estrutura_09] Estados deveriam ter o direito de se separar do país se a maioria local votar por isso.
+5. [id=estrutura_12] As leis trabalhistas devem ser iguais em todo o país, sem negociações locais.
+6. [id=estrutura_04] Um currículo escolar único para todo o país é melhor do que cada estado ensinar de um jeito.
+7. [id=estrutura_03] Impostos e serviços públicos devem ser decididos o mais perto possível da população local.
+8. [id=estrutura_13] Cidades deveriam poder criar leis próprias, mesmo diferentes das leis nacionais.
+9. [id=estrutura_16] O governo federal deve poder anular leis estaduais e municipais que contrariem o interesse nacional.
+10. [id=estrutura_01] Estados e municípios devem poder contrariar decisões do governo federal quando a população local discordar.
+11. [id=estrutura_19] Educação e saúde funcionam melhor administradas pelas prefeituras do que por Brasília.
+12. [id=estrutura_06] Uma polícia única e nacional funcionaria melhor do que várias polícias estaduais autônomas.
+13. [id=estrutura_07] A maior parte dos impostos deveria ficar no estado ou município onde foi arrecadada.
+14. [id=estrutura_14] Quando governador e presidente entram em conflito, a palavra final deve ser do presidente.
+15. [id=estrutura_11] Comunidades indígenas e quilombolas devem poder viver sob regras próprias dentro de seus territórios.
+16. [id=estrutura_18] Movimentos separatistas deveriam ser tratados como crime contra a unidade do país.
+17. [id=estrutura_15] O Brasil funcionaria melhor como uma união de estados quase independentes.
+18. [id=estrutura_10] A guerra fiscal entre estados mostra que os impostos devem ser definidos nacionalmente.
+19. [id=estrutura_17] Regiões com cultura forte, como o Sul ou o Nordeste, deveriam ter mais autonomia política.
+20. [id=estrutura_20] Governadores e prefeitos deveriam ser meros executores das ordens do governo central.
+
+### Eixo "representacao" — grau de democracia/prestação de contas vs. autocracia/poder não eleito
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=representacao_10] Uma monarquia pode dar mais estabilidade a um país do que eleições constantes.
+2. [id=representacao_07] O voto secreto e universal é inegociável, mesmo para eleitores mal informados.
+3. [id=representacao_05] Cortes constitucionais, como o STF, devem poder barrar leis da maioria que firam a Constituição.
+4. [id=representacao_09] O povo deveria poder derrubar leis por referendo, sem depender do Congresso.
+5. [id=representacao_04] A maioria dos eleitores vota sem entender os temas que estão em jogo.
+6. [id=representacao_20] Uma ditadura pode ser legítima se garantir ordem, segurança e prosperidade.
+7. [id=representacao_01] Eleições livres devem ser mantidas mesmo quando elegem governos ruins.
+8. [id=representacao_17] Uma sociedade organizada por assembleias e sem governantes profissionais, poderia funcionar.
+9. [id=representacao_11] Eleitores deveriam poder cassar o mandato de um político ruim antes do fim do prazo.
+10. [id=representacao_15] Ninguém deveria governar sem ter passado pelo voto popular.
+11. [id=representacao_06] Um país avança mais com um líder competente do que com eleições disputadas o tempo todo.
+12. [id=representacao_16] O direito de voto deveria ser restrito, nem todo adulto deveria poder votar.
+13. [id=representacao_19] Mesmo um governo eleito com enorme maioria deve respeitar todos os direitos da oposição.
+14. [id=representacao_02] Em crises graves, um líder forte deve poder governar sem depender do Congresso.
+15. [id=representacao_14] Um governo de especialistas escolhidos por mérito seria melhor do que políticos eleitos.
+16. [id=representacao_18] Reformas profundas exigem tempo e não deveriam ser interrompidas por eleições frequentes.
+17. [id=representacao_03] Imprensa, oposição e protestos devem poder criticar duramente qualquer governo.
+18. [id=representacao_08] Um governante que entrega resultados merece continuar no poder enquanto for capaz.
+19. [id=representacao_13] Cargos públicos poderiam ser sorteados entre cidadãos comuns, como num júri, em vez de eleitos.
+20. [id=representacao_12] Algumas ditaduras desenvolveram seus países mais rápido do que muitas democracias.
+
+### Eixo "poder" — segurança/vigilância/coerção estatal vs. liberdade individual e civil
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=poder_02] A maconha deveria ser legalizada para produção, venda e consumo entre adultos.
+2. [id=poder_04] A liberdade de expressão deve valer até para ideias extremistas e ofensivas.
+3. [id=poder_08] Todas as drogas, incluindo cocaína, deveriam ser legalizadas para adultos.
+4. [id=poder_12] A eutanásia voluntária deveria ser legalizada para quem sofre de doenças terminais.
+5. [id=poder_10] Cidadãos honestos devem poder usar armas para defender sua casa e sua família.
+6. [id=poder_15] A pena de morte deveria ser adotada para crimes como estupro e assassinato.
+7. [id=poder_09] O acesso de civis a armas de fogo deve ser severamente restringido.
+8. [id=poder_06] O que adultos fazem entre si como drogas, apostas e prostituição não deveria ser caso de polícia.
+9. [id=poder_20] Ninguém deveria ser obrigado a desbloquear o celular para a polícia.
+10. [id=poder_16] Toda lei que proíbe o que adultos fazem em privado é um abuso do Estado.
+11. [id=poder_07] Partidos e grupos que ameaçam a ordem pública deveriam poder ser dissolvidos pelo Estado.
+12. [id=poder_14] É melhor deixar um culpado livre do que condenar um inocente.
+13. [id=poder_19] Suspeitos de terrorismo deveriam poder ser presos sem julgamento até a ameaça passar.
+14. [id=poder_13] A vacinação deve ser obrigatória, mesmo contra a vontade de quem se recusa.
+15. [id=poder_18] Transações digitais como o Pix, dá ao governo um poder perigoso de vigiar cada compra.
+16. [id=poder_17] O governo deve poder tirar do ar sites e perfis que espalham fake news.
+17. [id=poder_03] O Estado deveria poder monitorar conversas digitais para impedir terrorismo e crime organizado.
+18. [id=poder_01] Em áreas dominadas pelo crime, operações policiais duras e mandados coletivos são aceitáveis.
+19. [id=poder_05] Câmeras com reconhecimento facial nas ruas deveriam ser ampliadas para reduzir o crime.
+20. [id=poder_11] Em situações graves, toque de recolher e estado de exceção são ferramentas legítimas.
+
+### Eixo "imigracao" — assimilação cultural exigida vs. multiculturalismo celebrado
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=imigracao_04] Uma sociedade que acolhe costumes diferentes fica mais rica e criativa.
+2. [id=imigracao_03] Fechar as fronteiras pode ser necessário para preservar a identidade cultural de um país.
+3. [id=imigracao_07] Preservar as tradições nacionais importa mais do que acomodar costumes estrangeiros.
+4. [id=imigracao_12] O Brasil agiu certo ao acolher venezuelanos e haitianos nas últimas décadas.
+5. [id=imigracao_20] A ideia de identidade nacional está ultrapassada: somos todos cidadãos do mundo.
+6. [id=imigracao_18] As fronteiras deveriam ser abertas: qualquer pessoa pacífica poderia viver em qualquer país.
+7. [id=imigracao_05] Algumas culturas e povos têm costumes incompatíveis com uma sociedade livre.
+8. [id=imigracao_01] Quem imigra para um país deve aprender o idioma e adotar os costumes locais.
+9. [id=imigracao_11] Exigir que o imigrante se adapte à cultura local não é preconceito, é condição de convivência.
+10. [id=imigracao_17] O ideal seria cada povo viver separado em seu próprio território, sem misturar culturas.
+11. [id=imigracao_09] Países têm o direito de preferir imigrantes de culturas parecidas com a sua.
+12. [id=imigracao_08] A mistura de línguas e culturas no mesmo território é sinal de progresso, não de crise.
+13. [id=imigracao_13] Um povo que perde sua língua e seus costumes deixa de existir como nação.
+14. [id=imigracao_19] Imigrantes ilegais deveriam ser deportados em massa, sem nenhuma exceção.
+15. [id=imigracao_16] Filhos de imigrantes deveriam poder estudar também na língua dos pais, em escolas bilíngues.
+16. [id=imigracao_10] As culturas que chegaram ao Brasil: africanas, europeias e asiáticas, fazem parte da nossa identidade.
+17. [id=imigracao_14] Julgar uma cultura inteira como atrasada ou perigosa é preconceito, não argumento.
+18. [id=imigracao_06] Imigrantes não deveriam ter que abandonar seus costumes para viver bem no país.
+19. [id=imigracao_15] Bairros de imigrantes que vivem fechados na própria cultura criam problemas para o país.
+20. [id=imigracao_02] Uma sociedade multicultural deve conviver com vários idiomas no dia a dia.
+
+### Eixo "diplomacia" — militarismo/força armada vs. pacifismo/diplomacia
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=diplomacia_15] Drones e armas autônomas dão vantagem decisiva, e o Brasil deveria desenvolvê-los.
+2. [id=diplomacia_12] Nenhuma causa política ou ideológica justifica começar uma guerra.
+3. [id=diplomacia_17] O Brasil deveria estar pronto para iniciar uma guerra se isso garantir seus interesses vitais.
+4. [id=diplomacia_01] Um país só é respeitado no mundo se tiver Forças Armadas fortes.
+5. [id=diplomacia_03] Ataques preventivos são aceitáveis contra inimigos que se preparam para atacar.
+6. [id=diplomacia_16] Mesmo com regimes hostis, dialogar costuma funcionar melhor do que ameaçar.
+7. [id=diplomacia_04] Guerras quase nunca valem a pena, mesmo contra regimes hostis.
+8. [id=diplomacia_06] Diplomacia inteligente evita mais conflitos do que arsenal militar pesado.
+9. [id=diplomacia_11] O país deve ter indústria própria de armas, e não depender de comprar de fora.
+10. [id=diplomacia_13] Espionagem e operações militares secretas são ferramentas legítimas de um Estado.
+11. [id=diplomacia_07] O Brasil deveria buscar armas nucleares para não depender da proteção de nenhuma potência.
+12. [id=diplomacia_14] Tribunais internacionais devem julgar crimes de guerra, inclusive os de países aliados.
+13. [id=diplomacia_05] Gastar pesado com defesa é necessário, mesmo com outras áreas precisando de dinheiro.
+14. [id=diplomacia_09] O serviço militar obrigatório forma cidadãos mais disciplinados e patriotas.
+15. [id=diplomacia_10] Acordos de desarmamento fazem mais pela paz do que corridas armamentistas.
+16. [id=diplomacia_08] Quanto mais os países gastam com armas, maior o risco de guerra para todos.
+17. [id=diplomacia_02] Negociação e diplomacia devem ser esgotadas antes de qualquer ação militar.
+18. [id=diplomacia_19] A paz só existe quando o inimigo sabe que a resposta a um ataque será devastadora.
+19. [id=diplomacia_18] O Brasil deveria extinguir suas Forças Armadas, como fez a Costa Rica.
+20. [id=diplomacia_20] A ONU e os organismos internacionais deveriam ter mais poder para impedir guerras.
+
+### Eixo "intervencao" — não-intervencionismo vs. nacionalismo assertivo em política externa
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=intervencao_07] Mesmo diante de um genocídio em um país vizinho, o Brasil não deveria se envolver militarmente.
+2. [id=intervencao_13] Cada povo deve resolver seus próprios problemas, sem interferência de fora.
+3. [id=intervencao_17] O Brasil deve permanecer neutro em guerras, mesmo sob pressão de aliados.
+4. [id=intervencao_20] Se um país vizinho ameaçar brasileiros ou empresas brasileiras, o Brasil deve reagir com dureza.
+5. [id=intervencao_12] Influenciar governos vizinhos é aceitável quando aumenta a segurança do Brasil.
+6. [id=intervencao_01] Nenhum país tem o direito de tentar mudar o governo de outro.
+7. [id=intervencao_05] O Brasil não deveria enviar soldados para o exterior, nem em missões de paz.
+8. [id=intervencao_11] O Brasil deve evitar blocos geopolíticos fechados e alianças permanentes.
+9. [id=intervencao_03] Alianças militares acabam arrastando países para guerras que não são suas.
+10. [id=intervencao_16] Nenhum tratado internacional deve valer mais do que o interesse nacional.
+11. [id=intervencao_10] O Brasil deveria exercer liderança política sobre a América do Sul.
+12. [id=intervencao_09] Conflitos entre países devem ser resolvidos por organismos internacionais, não por potências.
+13. [id=intervencao_14] O Brasil deveria usar até força militar para garantir seus interesses na América do Sul.
+14. [id=intervencao_08] Sanções e pressão diplomática são legítimas quando interesses brasileiros são ameaçados.
+15. [id=intervencao_06] O Brasil deve usar seu peso para defender empresas brasileiras no exterior.
+16. [id=intervencao_15] Embargos e sanções quase nunca funcionam e acabam punindo civis inocentes.
+17. [id=intervencao_18] Países que defendem seus interesses com firmeza são mais respeitados.
+18. [id=intervencao_02] Pressionar outros países é legítimo quando o interesse nacional está em jogo.
+19. [id=intervencao_04] A política externa deve buscar vantagem, soberania e influência, não aplausos internacionais.
+20. [id=intervencao_19] Manter bases militares em outros países é desperdício de dinheiro.
+
+### Eixo "economia" — propriedade/produção pública-coletiva vs. privada-individual
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=economia_12] A estabilidade vitalícia do servidor público trava e encarece o Estado.
+2. [id=economia_03] Petrobras, Correios e as estatais estratégicas devem permanecer sob controle público.
+3. [id=economia_11] Uma renda básica paga a todos os cidadãos seria um avanço civilizatório.
+4. [id=economia_02] Com concorrência, empresas privadas prestam serviços melhores do que o Estado.
+5. [id=economia_06] Até estradas, polícia e tribunais poderiam ser serviços privados, pagos por quem usa.
+6. [id=economia_13] Grandes empresas privadas concentram poder demais sobre a vida das pessoas.
+7. [id=economia_09] Saúde, educação e água não deveriam funcionar sob a lógica do lucro.
+8. [id=economia_18] A propriedade privada deve ser respeitada mesmo quando gera muita desigualdade.
+9. [id=economia_10] Cobrar impostos é, no fundo, uma forma de roubo.
+10. [id=economia_17] Bancos públicos como BNDES e Caixa são essenciais para o desenvolvimento do país.
+11. [id=economia_01] Uma revolução pode ser necessária para tirar o poder econômico das mãos de poucos.
+12. [id=economia_14] Auxílios como o Bolsa Família geram dependência quando duram tempo demais.
+13. [id=economia_07] Quando o mercado exclui os pobres, o Estado deve assumir o serviço diretamente.
+14. [id=economia_05] Fábricas, bancos e grandes empresas deveriam pertencer aos trabalhadores ou à sociedade, não a donos privados.
+15. [id=economia_15] A reforma agrária ainda é uma medida necessária no Brasil.
+16. [id=economia_20] O Estado é quase sempre menos eficiente do que o setor privado.
+17. [id=economia_19] As privatizações brasileiras entregaram patrimônio público por um preço muito baixo.
+18. [id=economia_08] Herança e propriedade familiar devem ser protegidas de qualquer projeto de redistribuição.
+19. [id=economia_04] Saúde, educação e previdência deveriam funcionar principalmente pela iniciativa privada.
+20. [id=economia_16] O trabalhador ganha mais negociando direto com o patrão do que por meio de sindicatos.
+
+### Eixo "controle" — planejamento e direção estatal da economia vs. livre-mercado
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=controle_13] Uma economia totalmente planejada pelo Estado funcionaria melhor do que o livre mercado.
+2. [id=controle_10] Congelar preços por lei gera desabastecimento, filas e mercado paralelo.
+3. [id=controle_02] O livre mercado define preços e salários melhor do que qualquer político.
+4. [id=controle_06] Quanto menor a carga tributária, mais a economia cresce.
+5. [id=controle_19] O salário mínimo definido por lei protege o trabalhador mais do que a livre negociação.
+6. [id=controle_04] Empresas devem poder contratar, demitir e definir preços com o mínimo de interferência.
+7. [id=controle_14] Toda regulação nova é, no fundo, um imposto disfarçado sobre quem produz.
+8. [id=controle_18] O Banco Central deveria ser abolido, deixando a moeda e os juros para o mercado.
+9. [id=controle_12] Criptomoedas como o Bitcoin deveriam poder competir livremente com o dinheiro do governo.
+10. [id=controle_07] O Estado deve subsidiar indústrias estratégicas como semicondutores, aço e defesa.
+11. [id=controle_05] Grandes fortunas devem pagar mais impostos para financiar políticas públicas.
+12. [id=controle_01] O governo deve planejar setores estratégicos como energia, moradia e indústria.
+13. [id=controle_08] Um salário mínimo alto demais destrói o emprego dos mais pobres.
+14. [id=controle_09] Em crises graves, o governo deve poder congelar preços e aluguéis.
+15. [id=controle_15] Em recessão, o governo deve gastar mais para reaquecer a economia, mesmo aumentando a dívida.
+16. [id=controle_03] O Banco Central deve obedecer ao governo eleito, e não agir com independência total.
+17. [id=controle_20] Quem tem dinheiro deve poder mandá-lo para fora do país sem pedir licença ao governo.
+18. [id=controle_16] Um Banco Central independente vale mais do que a vontade política do governo da vez.
+19. [id=controle_11] O governo deveria escolher e apoiar empresas campeãs nacionais para competir lá fora.
+20. [id=controle_17] O governo deve poder controlar o câmbio e a saída de dinheiro do país para se proteger.
+
+### Eixo "comercio" — protecionismo vs. globalismo comercial
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=comercio_15] Carros elétricos chineses baratos deveriam pagar tarifas para proteger as fábricas locais.
+2. [id=comercio_18] As multinacionais pagam impostos, geram empregos e qualificam os trabalhadores locais.
+3. [id=comercio_13] As compras do governo e das estatais devem priorizar empresas brasileiras.
+4. [id=comercio_06] Quanto mais aberto ao mundo, mais inovação e qualidade chegam ao consumidor.
+5. [id=comercio_08] O mundo estaria melhor sem fronteiras econômicas, funcionando como um único mercado global.
+6. [id=comercio_19] Soberania econômica vale mais do que preço baixo no supermercado.
+7. [id=comercio_07] O governo deve limitar importações que ameacem a indústria e o emprego local.
+8. [id=comercio_14] O comércio internacional reduz a pobreza no mundo inteiro.
+9. [id=comercio_16] As tarifas de importação no Brasil beneficiam poucos empresários e encarecem a vida de todos.
+10. [id=comercio_03] Importação demais quebra a indústria nacional e gera desemprego.
+11. [id=comercio_10] Acordos como Mercosul e União Europeia trazem mais ganhos do que perdas.
+12. [id=comercio_12] O investimento estrangeiro gera empregos e traz tecnologia para o país.
+13. [id=comercio_04] Acordos de livre comércio com outros países fazem a economia crescer.
+14. [id=comercio_20] A globalização elevou o padrão de vida da maior parte da humanidade.
+15. [id=comercio_09] Empresas estrangeiras deveriam ser proibidas de comprar terras e empresas estratégicas brasileiras.
+16. [id=comercio_17] Cadeias estratégicas, como remédios e chips, devem ser protegidas da concorrência externa.
+17. [id=comercio_05] O Brasil deveria produzir internamente tudo o que consome, mesmo pagando muito mais caro por isso.
+18. [id=comercio_11] Segurança alimentar é produzir comida no próprio país, não depender de importação barata.
+19. [id=comercio_01] A indústria nacional deve ser protegida com tarifas sempre que necessário.
+20. [id=comercio_02] As tarifas deveriam ser quase zeradas, mesmo que algumas indústrias nacionais quebrem.
+
+### Eixo "religiao" — irreligiosidade/secularismo vs. religiosidade
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=religiao_08] O Estado brasileiro deveria assumir oficialmente uma identidade religiosa.
+2. [id=religiao_09] Uma sociedade guiada pela ciência funciona melhor do que uma guiada pela fé.
+3. [id=religiao_04] As leis do país deveriam refletir os valores da religião da maioria.
+4. [id=religiao_01] Religião é assunto pessoal e não deve influenciar políticas públicas.
+5. [id=religiao_14] Casamento e família são instituições sagradas, não apenas contratos.
+6. [id=religiao_06] A religião torna a família e a vida em comunidade mais fortes.
+7. [id=religiao_03] As leis devem ser neutras e não seguir os valores de nenhuma religião.
+8. [id=religiao_10] As tradições religiosas devem ser preservadas na família e passadas aos filhos.
+9. [id=religiao_07] Prédios públicos, como escolas e tribunais, não deveriam exibir símbolos religiosos.
+10. [id=religiao_18] Quando a lei dos homens contraria a lei de Deus, a lei de Deus vem primeiro.
+11. [id=religiao_20] A fé religiosa é parte da identidade nacional e merece proteção.
+12. [id=religiao_17] Ensinar religião a crianças pequenas é uma forma de doutrinação.
+13. [id=religiao_19] Não é preciso acreditar em Deus para ser uma pessoa ética e boa.
+14. [id=religiao_15] A palavra 'Deus' não deveria aparecer na Constituição nem no dinheiro.
+15. [id=religiao_05] Igrejas e templos deveriam pagar impostos como qualquer outra organização.
+16. [id=religiao_13] Feriados religiosos não deveriam ser oficiais em um Estado laico.
+17. [id=religiao_11] No fim das contas, a humanidade estaria melhor sem nenhuma religião.
+18. [id=religiao_02] A fé deve orientar minhas escolhas morais e políticas.
+19. [id=religiao_16] A religião dá um sentido à vida que nenhuma filosofia consegue dar.
+20. [id=religiao_12] Afastar Deus da vida pública causou parte dos problemas morais de hoje.
+
+### Eixo "moral" — progressismo social vs. tradicionalismo
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=moral_09] O aborto no início da gravidez pode ser uma escolha moralmente aceitável.
+2. [id=moral_19] Nudez no cinema, na arte e nas praias não deveria escandalizar ninguém.
+3. [id=moral_11] Crianças e adolescentes deveriam aprender sobre sexualidade e gênero sem tabus.
+4. [id=moral_12] A educação sexual dos filhos deve seguir os valores da família, não os da escola.
+5. [id=moral_14] A linguagem neutra é uma imposição ideológica que distorce o idioma.
+6. [id=moral_06] Casamento de verdade é entre um homem e uma mulher.
+7. [id=moral_07] Casais LGBT devem poder demonstrar afeto em público como qualquer outro casal.
+8. [id=moral_18] O papel mais importante da mulher é cuidar da família e do lar.
+9. [id=moral_02] A família tradicional e os bons costumes ainda devem guiar a sociedade.
+10. [id=moral_03] A identidade de gênero declarada por cada pessoa deve ser respeitada.
+11. [id=moral_13] A prostituição é um trabalho como qualquer outro e merece o mesmo respeito.
+12. [id=moral_20] Os pais devem ser a autoridade final na educação moral dos filhos.
+13. [id=moral_17] Relações abertas e poliamor são escolhas tão legítimas quanto o casamento tradicional.
+14. [id=moral_10] O aborto é errado porque interrompe uma vida humana.
+15. [id=moral_16] Pornografia, prostituição e drogas são sinais de decadência moral.
+16. [id=moral_15] Reduzir o consumo de carne por respeito aos animais é um avanço moral.
+17. [id=moral_01] Casais do mesmo sexo criam filhos tão bem quanto casais de homem e mulher.
+18. [id=moral_05] Cotas raciais corrigem uma injustiça histórica e ainda são necessárias.
+19. [id=moral_08] Cotas raciais aprofundam a divisão por cor em vez de superá-la.
+20. [id=moral_04] Mudanças culturais rápidas demais acabam desestruturando a sociedade inteira.
+
+### Eixo "tecnologia" — abraçar tecnologia/biotecnologia vs. priorizar natureza/limites biológicos
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=tecnologia_16] Resolver os problemas da Terra vem antes de gastar bilhões com o espaço.
+2. [id=tecnologia_09] Editar genes de embriões para criar pessoas mais inteligentes e saudáveis é um avanço legítimo.
+3. [id=tecnologia_12] Mesmo uma mineração limpa na Amazônia ultrapassa um limite que não deveria ser cruzado.
+4. [id=tecnologia_11] Explorar o espaço e colonizar outros planetas é um destino natural da humanidade.
+5. [id=tecnologia_18] A vida simples do campo é mais saudável do que a vida nas metrópoles.
+6. [id=tecnologia_04] Tecnologias que mexem no corpo, na mente ou na reprodução humana devem ser barradas.
+7. [id=tecnologia_03] IA e automação são bem-vindas, mesmo que eliminem muitas profissões atuais.
+8. [id=tecnologia_02] A humanidade viveria melhor com menos tecnologia, num modo de vida mais simples e natural.
+9. [id=tecnologia_20] O corpo humano não deveria ser melhorado com chips e modificações artificiais.
+10. [id=tecnologia_07] É possível minerar e explorar recursos da Amazônia mantendo a floresta em pé.
+11. [id=tecnologia_14] Editar embriões para escolher inteligência ou aparência ultrapassa um limite ético.
+12. [id=tecnologia_08] Natureza preservada vale mais do que crescimento industrial acelerado.
+13. [id=tecnologia_15] Implantes cerebrais e próteses para ampliar as capacidades humanas são um caminho legítimo.
+14. [id=tecnologia_19] Contra o aquecimento global, apostar em tecnologia faz mais sentido do que reduzir o consumo.
+15. [id=tecnologia_10] O aquecimento global é uma emergência e exige mudanças imediatas no nosso modo de vida.
+16. [id=tecnologia_06] Os agrotóxicos causam mais dano ao ambiente do que trazem ganho na produção.
+17. [id=tecnologia_05] Os transgênicos alimentaram bilhões de pessoas e devem continuar sendo desenvolvidos.
+18. [id=tecnologia_17] A carne cultivada em laboratório é um avanço que pode substituir a pecuária.
+19. [id=tecnologia_01] Energia nuclear, IA e engenharia genética devem ser abraçadas sem medo excessivo.
+20. [id=tecnologia_13] A vida nas grandes cidades oferece mais oportunidades do que a vida no campo.
