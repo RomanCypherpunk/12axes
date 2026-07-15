@@ -674,9 +674,9 @@ batches: 107
 - [x] personality:otto-von-habsburg - Otto von Habsburg (12/12)
 - [x] personality:goldwater - Barry Goldwater (12/12)
 
-## FQA084 - pending (0/60)
+## FQA084 - in_progress (12/60)
 
-- [ ] personality:ezra-heywood - Ezra Heywood (0/12)
+- [x] personality:ezra-heywood - Ezra Heywood (12/12)
 - [ ] personality:randolph-bourne - Randolph Bourne (0/12)
 - [ ] personality:peter-maurin - Peter Maurin (0/12)
 - [ ] personality:lysander-spooner - Lysander Spooner (0/12)

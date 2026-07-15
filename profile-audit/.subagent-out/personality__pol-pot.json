@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "Pol Pot impôs um comando central absoluto do Partido Comunista de Kampuchea sobre todo o país, abolindo qualquer autonomia local, regional ou administrativa em nome de uma reorganização total e uniforme da sociedade.",
+    "personaBrief": "Pol Pot impôs um comando central absoluto do Khmer Vermelho sobre todo o país, abolindo qualquer autonomia local ou regional em nome de uma reorganização uniforme da sociedade camponesa.",
     "answers": {
       "estrutura_09": "DT",
       "estrutura_11": "DT",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "O regime do Khmer Vermelho foi uma ditadura de partido único sem eleições, imprensa livre ou qualquer prestação de contas, governada por um núcleo secreto ('Angkar') que exercia poder absoluto e não eleito.",
+    "personaBrief": "O regime de Pol Pot foi uma ditadura revolucionária opaca, sem eleições livres, oposição legítima ou imprensa independente, concentrando poder absoluto na Angkar e no partido.",
     "answers": {
       "representacao_03": "DT",
       "representacao_09": "DT",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "O Khmer Vermelho instaurou vigilância total, delação, prisões arbitrárias, trabalho forçado e execuções em massa (campos como Tuol Sleng), eliminando qualquer esfera de liberdade individual ou privacidade.",
+    "personaBrief": "O Khmer Vermelho governou por vigilância total, delação, prisões arbitrárias, trabalho forçado e execuções em massa, deixando praticamente nenhuma esfera protegida de liberdade individual.",
     "answers": {
       "poder_16": "DT",
       "poder_13": "CT",
@@ -75,7 +75,7 @@
     }
   },
   "imigracao": {
-    "personaBrief": "O regime foi xenófobo e isolacionista ao extremo, perseguindo minorias étnicas (vietnamitas, chineses, chams) e fechando o Camboja ao mundo em nome de uma identidade camponesa khmer pura.",
+    "personaBrief": "Pol Pot associava pureza nacional khmer à sobrevivência do regime, perseguindo vietnamitas, chineses e chams e fechando o Camboja ao cosmopolitismo e à mistura cultural.",
     "answers": {
       "imigracao_13": "CT",
       "imigracao_16": "DT",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Pol Pot militarizou toda a sociedade cambojana, mobilizou crianças-soldado e recorreu a conflitos armados contra o Vietnã e minorias internas para impor e defender seu projeto revolucionário.",
+    "personaBrief": "Seu projeto revolucionário foi sustentado por militarização intensa, guerra com o Vietnã e uso de força extrema contra inimigos internos e externos, com pouca confiança em freios diplomáticos.",
     "answers": {
       "diplomacia_09": "CT",
       "diplomacia_02": "DT",
@@ -125,7 +125,7 @@
     }
   },
   "intervencao": {
-    "personaBrief": "Apesar do isolacionismo cultural, o regime foi assertivamente nacionalista em política externa, reivindicando território e travando guerra contra o Vietnã em nome da soberania e superioridade khmer.",
+    "personaBrief": "Embora isolacionista culturalmente, Pol Pot adotou uma política externa nacionalista e agressiva, tratando soberania khmer, fronteiras e coerção regional como interesses absolutos.",
     "answers": {
       "intervencao_10": "C",
       "intervencao_13": "C",
@@ -150,7 +150,7 @@
     }
   },
   "economia": {
-    "personaBrief": "Pol Pot aboliu completamente a propriedade privada, o dinheiro e o mercado, coletivizando à força toda a terra e produção em comunas agrárias controladas pelo Estado/Partido.",
+    "personaBrief": "Pol Pot aboliu propriedade privada, dinheiro e mercado, impondo coletivização forçada da terra e da produção em comunas agrárias dirigidas pelo partido.",
     "answers": {
       "economia_10": "DT",
       "economia_08": "DT",
@@ -175,7 +175,7 @@
     }
   },
   "controle": {
-    "personaBrief": "O regime aboliu o dinheiro e o mercado, substituindo-os por um planejamento coletivo total da produção agrícola e industrial sob o comando direto do Partido, sem qualquer margem para preços ou trocas livres.",
+    "personaBrief": "Seu regime substituiu o mercado por direção total da economia, decidindo produção, distribuição e trabalho de forma compulsória e rejeitando preços livres ou autonomia financeira.",
     "answers": {
       "controle_11": "N",
       "controle_12": "DT",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "O Camboja de Pol Pot cortou quase todo comércio exterior e buscou autarquia total, priorizando a autossuficiência agrária mesmo ao custo de fome e colapso econômico.",
+    "personaBrief": "O Camboja de Pol Pot buscou autarquia quase total e autossuficiência agrária, sacrificando comércio exterior, integração internacional e eficiência econômica em nome da soberania revolucionária.",
     "answers": {
       "comercio_15": "CT",
       "comercio_11": "CT",
@@ -225,7 +225,7 @@
     }
   },
   "religiao": {
-    "personaBrief": "O Khmer Vermelho perseguiu violentamente o budismo e todas as religiões, forçando monges a trabalhar em campos ou executando-os, impondo um secularismo revolucionário radical.",
+    "personaBrief": "O Khmer Vermelho perseguiu budistas e outras religiões, desmontando instituições de fé e substituindo a autoridade espiritual por um secularismo revolucionário violento.",
     "answers": {
       "religiao_18": "DT",
       "religiao_04": "DT",
@@ -250,7 +250,7 @@
     }
   },
   "moral": {
-    "personaBrief": "O regime impôs um puritanismo revolucionário coletivista: aboliu a família nuclear tradicional, casamentos eram arranjados pelo Partido, mas também reprimiu duramente qualquer expressão de individualidade, sexualidade ou 'decadência burguesa'.",
+    "personaBrief": "Pol Pot combinou puritanismo revolucionário com destruição da vida privada: o partido interferia em casamento, família e costumes, reprimindo sexualidade, individualidade e qualquer traço visto como decadente ou burguês.",
     "answers": {
       "moral_16": "CT",
       "moral_03": "DT",
@@ -275,7 +275,7 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Pol Pot esvaziou as cidades e rejeitou violentamente a vida urbana, o conhecimento técnico-científico e a modernidade industrial, glorificando um retorno forçado ao trabalho manual agrário como ideal civilizacional.",
+    "personaBrief": "Pol Pot glorificava o retorno forçado ao campo, esvaziou cidades e rejeitou a modernidade técnico-científica, tratando vida urbana, especialização e alta tecnologia como desvios corruptores.",
     "answers": {
       "tecnologia_13": "DT",
       "tecnologia_07": "D",

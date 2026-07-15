@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "Frederico construiu um Estado cameralista com burocracia disciplinada e finanças centralizadas, comandado diretamente pelo rei em Berlim, sem tolerância para autonomias locais que enfraquecessem o aparelho estatal.",
+    "personaBrief": "Frederico construiu um Estado cameralista com burocracia disciplinada e financas centralizadas, comandado diretamente pela Coroa. Autonomias locais eram aceitaveis apenas se servissem ao interesse do centro.",
     "answers": {
       "estrutura_04": "C",
       "estrutura_12": "C",
@@ -12,7 +12,7 @@
       "estrutura_18": "CT",
       "estrutura_17": "DT",
       "estrutura_08": "CT",
-      "estrutura_02": "C",
+      "estrutura_02": "CT",
       "estrutura_09": "DT",
       "estrutura_20": "CT",
       "estrutura_15": "DT",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "Como monarca absoluto e ícone do despotismo esclarecido, Frederico acreditava que a legitimidade vinha da competência e do serviço ao Estado, não do voto popular — o rei era 'o primeiro servidor do Estado', mas servidor não eleito e irrevogável.",
+    "personaBrief": "Como monarca absoluto e expoente do despotismo esclarecido, Frederico via a boa governanca como obra de um soberano capaz e de servidores meritocraticos. A legitimidade vinha do desempenho do Estado, nao do sufragio popular.",
     "answers": {
       "representacao_11": "DT",
       "representacao_09": "DT",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "O Estado cameralista de Frederico exigia ordem rigorosa e disciplina militar-administrativa, mas sua fama de tolerância religiosa e iluminismo o levava a permitir liberdades de consciência e crítica filosófica incomuns para a época.",
+    "personaBrief": "A ordem prussiana de Frederico dependia de disciplina, hierarquia e capacidade coercitiva do Estado. Ao mesmo tempo, seu iluminismo o tornava menos hostil a algumas liberdades de consciencia e de expressao do que outros soberanos da epoca.",
     "answers": {
       "poder_13": "C",
       "poder_20": "D",
@@ -75,7 +75,7 @@
     }
   },
   "imigracao": {
-    "personaBrief": "Frederico praticou tolerância religiosa e acolheu imigrantes úteis ao Estado (huguenotes, colonos), mas via isso como política pragmática de povoamento e produtividade, não como celebração multicultural — o alemão e a disciplina prussiana permaneciam o centro da identidade.",
+    "personaBrief": "Frederico acolhia imigrantes e minorias religiosas quando isso aumentava populacao, producao e receita do reino. Essa abertura era pragmatica e assimiladora, nao uma celebracao abstrata do multiculturalismo.",
     "answers": {
       "imigracao_02": "D",
       "imigracao_04": "C",
@@ -91,7 +91,7 @@
       "imigracao_07": "C",
       "imigracao_10": "N",
       "imigracao_17": "D",
-      "imigracao_01": "C",
+      "imigracao_01": "CT",
       "imigracao_14": "D",
       "imigracao_15": "C",
       "imigracao_03": "C",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Frederico fez da Prússia uma potência militar respeitada pela força de suas Forças Armadas, travando guerras de conquista (Silésia) e defesa (Guerra dos Sete Anos) e cultivando a dissuasão pela força como base da sobrevivência do reino.",
+    "personaBrief": "Frederico transformou a Prussia em grande potencia por meio de um exercito altamente disciplinado, guerras calculadas e dissuasao. Para ele, prestigio internacional dependia da capacidade real de lutar e vencer.",
     "answers": {
       "diplomacia_09": "CT",
       "diplomacia_20": "DT",
@@ -125,7 +125,7 @@
     }
   },
   "intervencao": {
-    "personaBrief": "O engrandecimento da Prússia por Frederico dependeu de assertividade nacionalista pura — anexar a Silésia, jogar as potências vizinhas umas contra as outras e agir sempre pelo interesse de Estado, sem qualquer submissão a organismos ou causas coletivas.",
+    "personaBrief": "A politica externa de Frederico era abertamente orientada por interesse de Estado, equilibrio de poder e oportunidade estrategica. Influenciar vizinhos e agir com firmeza eram instrumentos normais do engrandecimento prussiano.",
     "answers": {
       "intervencao_09": "DT",
       "intervencao_07": "C",
@@ -150,7 +150,7 @@
     }
   },
   "economia": {
-    "personaBrief": "O cameralismo de Frederico organizava a economia como instrumento do poder estatal, com manufaturas protegidas e finanças reais centralizadas, mas mantendo a propriedade privada e a hierarquia social (nobreza, servos, burguesia) como base do sistema.",
+    "personaBrief": "O cameralismo fredericiano usava a economia como base fiscal e militar do Estado, protegendo setores uteis e dirigindo a administracao. Ainda assim, preservava propriedade privada, hierarquia social e elites proprietarias.",
     "answers": {
       "economia_05": "DT",
       "economia_09": "N",
@@ -175,7 +175,7 @@
     }
   },
   "controle": {
-    "personaBrief": "Frederico foi o arquétipo do dirigismo cameralista: o Estado planejava manufaturas, subsidiava indústrias estratégicas, controlava o comércio de grãos e dirigia a economia com mão firme para fortalecer o poder militar e fiscal do reino.",
+    "personaBrief": "Frederico foi um dos exemplos classicos de dirigismo cameralista: o governo planejava, subsidiava, regulava e coordenava setores chave para reforcar o exercito, a receita e a autossuficiencia do reino. Mercado existia, mas sob direcao firme da Coroa.",
     "answers": {
       "controle_03": "CT",
       "controle_01": "CT",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "Fiel ao mercantilismo do seu tempo, Frederico protegia manufaturas prussianas com tarifas, buscava autossuficiência estratégica e via o comércio exterior como arma de poder nacional, não como livre integração global.",
+    "personaBrief": "Como soberano do seculo XVIII, Frederico via o comercio internacional pelo prisma mercantilista: proteger manufaturas, garantir suprimentos estrategicos e usar tarifas para fortalecer o poder nacional. Livre-comercio abstrato teria parecido ingenuo e perigoso.",
     "answers": {
       "comercio_13": "CT",
       "comercio_06": "D",
@@ -225,7 +225,7 @@
     }
   },
   "religiao": {
-    "personaBrief": "Frederico é lembrado por sua tolerância religiosa quase secular para os padrões do século XVIII ('cada um deve se salvar à sua maneira'), influenciado pelo Iluminismo e cético em matéria de fé pessoal, mas mantendo a religião como instrumento de coesão social.",
+    "personaBrief": "Frederico era um monarca iluminista e pessoalmente cÃ©tico, famoso pela tolerancia religiosa utilitaria do Estado prussiano. Defendia conviccao privada e neutralidade relativa do governo, sem querer abolir a religiao como fato social.",
     "answers": {
       "religiao_02": "D",
       "religiao_04": "D",
@@ -250,7 +250,7 @@
     }
   },
   "moral": {
-    "personaBrief": "Como déspota esclarecido e figura do Iluminismo europeu, Frederico rompeu com convenções morais do seu tempo em vários aspectos pessoais e filosóficos, mas seu governo reforçava a ordem social hierárquica e a família tradicional como pilares do Estado.",
+    "personaBrief": "Frederico combinava irreverencia iluminista em assuntos pessoais com um governo comprometido com ordem social, disciplina e papeis tradicionais. Nao seria um moralista clerical, mas tampouco um progressista social moderno.",
     "answers": {
       "moral_05": "N",
       "moral_07": "N",
@@ -275,7 +275,7 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Frederico promoveu ativamente ciência, agricultura moderna (a batata), manufaturas e engenharia militar como instrumentos de progresso e poder estatal, típico do racionalismo iluminista aplicado ao governo.",
+    "personaBrief": "Frederico promovia ciencia aplicada, agricultura moderna, obras publicas, engenharia e inovacao militar como instrumentos de progresso estatal. Seu instinto seria racionalista e pro-tecnica, embora sem a sensibilidade ambiental contemporanea.",
     "answers": {
       "tecnologia_14": "N",
       "tecnologia_06": "N",

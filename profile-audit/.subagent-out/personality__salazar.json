@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "Salazar construiu um Estado Novo fortemente centralizado, com Lisboa comandando o país inteiro e suprimindo qualquer autonomia regional ou local que pudesse fragmentar a autoridade central.",
+    "personaBrief": "Salazar construiu o Estado Novo como um regime unitário e centralizador, desconfiando de autonomias locais que pudessem fragmentar a autoridade nacional. Sua ideia de ordem política passava por comando forte a partir do centro e uniformidade institucional.",
     "answers": {
       "estrutura_11": "DT",
       "estrutura_15": "DT",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "Salazar rejeitava explicitamente a democracia liberal de massas e o parlamentarismo partidário, defendendo um governo autoritário de técnicos e notáveis, sem eleições competitivas reais, sustentado por ordem e resultados.",
+    "personaBrief": "Salazar rejeitava a democracia liberal de massas e o pluralismo partidário, preferindo um governo autoritário de técnicos, elites sociais e instituições controladas. Para ele, ordem, competência e estabilidade valiam mais do que competição eleitoral aberta.",
     "answers": {
       "representacao_11": "DT",
       "representacao_08": "CT",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "O Estado Novo manteve uma polícia política (PIDE) que vigiava, censurava e reprimia opositores, priorizando ordem pública e moral tradicional sobre liberdades civis individuais.",
+    "personaBrief": "O Estado Novo combinou censura, polícia política e repressão sistemática para preservar a ordem, a moral e a autoridade do regime. Liberdades civis eram subordinadas à segurança do Estado e à disciplina social.",
     "answers": {
       "poder_09": "CT",
       "poder_17": "CT",
@@ -66,7 +66,7 @@
       "poder_19": "CT",
       "poder_04": "DT",
       "poder_14": "D",
-      "poder_15": "C",
+      "poder_15": "N",
       "poder_18": "D",
       "poder_07": "CT",
       "poder_06": "DT",
@@ -75,7 +75,7 @@
     }
   },
   "imigracao": {
-    "personaBrief": "Salazar defendia um nacionalismo cultural e católico fechado, promovendo a identidade portuguesa e a assimilação de valores tradicionais, com desconfiança de misturas culturais e cosmopolitismo.",
+    "personaBrief": "Salazar via a nação como uma comunidade histórica, católica e disciplinada, na qual estrangeiros deveriam adaptar-se à cultura dominante. Cosmopolitismo, fronteiras abertas e relativização da identidade nacional lhe pareceriam dissolventes.",
     "answers": {
       "imigracao_06": "D",
       "imigracao_08": "DT",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Salazar manteve Portugal fora das grandes guerras através de neutralidade calculada, mas sustentou um forte aparato militar para defender o império colonial, incluindo guerras coloniais prolongadas em África.",
+    "personaBrief": "Salazar praticou neutralidade cautelosa quando isso preservava o regime, mas valorizava forças armadas disciplinadas para defender soberania e império. Sua diplomacia era prudente, sem pacifismo de princípio.",
     "answers": {
       "diplomacia_17": "C",
       "diplomacia_18": "DT",
@@ -125,7 +125,7 @@
     }
   },
   "intervencao": {
-    "personaBrief": "Salazar era ferrenho defensor da soberania nacional e do império colonial português, rejeitando pressões internacionais para descolonizar e travando guerras para manter Angola, Moçambique e Guiné sob domínio português.",
+    "personaBrief": "Salazar defendia rigidamente soberania e interesse nacional, resistindo a pressões externas contra Portugal e seu império. Ao mesmo tempo, desconfiava de alianças permanentes e de intervenções moralistas comandadas por terceiros.",
     "answers": {
       "intervencao_15": "C",
       "intervencao_03": "C",
@@ -150,7 +150,7 @@
     }
   },
   "economia": {
-    "personaBrief": "O corporativismo de Salazar organizava a economia em corporações estatais e privadas sob supervisão do Estado, respeitando a propriedade privada mas subordinando-a à disciplina e ao interesse nacional, com fortes estatais estratégicas.",
+    "personaBrief": "O salazarismo combinou propriedade privada, disciplina fiscal e corporativismo, subordinando capital e trabalho ao interesse nacional sob tutela estatal. Não era socialismo, mas tampouco aceitava um laissez-faire irrestrito.",
     "answers": {
       "economia_03": "CT",
       "economia_04": "D",
@@ -169,25 +169,25 @@
       "economia_18": "CT",
       "economia_19": "N",
       "economia_08": "CT",
-      "economia_09": "D",
+      "economia_09": "C",
       "economia_02": "N",
       "economia_11": "DT"
     }
   },
   "controle": {
-    "personaBrief": "O Estado Novo era um sistema corporativista de planejamento e controle estatal detalhado da economia, com forte disciplina fiscal, controle cambial rígido e intervenção direta em setores estratégicos, longe do livre mercado puro.",
+    "personaBrief": "Salazar dirigiu uma economia corporativista, regulada e prudente, com controle cambial, tutela sobre setores estratégicos e grande desconfiança do mercado deixado sozinho. Ainda assim, preferia direção estatal conservadora a um planejamento total de tipo socialista.",
     "answers": {
       "controle_20": "DT",
       "controle_18": "DT",
       "controle_10": "N",
       "controle_09": "C",
-      "controle_13": "C",
+      "controle_13": "D",
       "controle_06": "D",
       "controle_08": "N",
       "controle_11": "CT",
-      "controle_15": "N",
+      "controle_15": "DT",
       "controle_19": "C",
-      "controle_05": "N",
+      "controle_05": "D",
       "controle_07": "CT",
       "controle_04": "D",
       "controle_03": "CT",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "Salazar praticou um protecionismo econômico deliberado, buscando autarcia e autossuficiência nacional, protegendo a indústria e a agricultura portuguesas do comércio externo e do capital estrangeiro.",
+    "personaBrief": "O regime salazarista foi protecionista e inclinou-se à autarcia, defendendo produção nacional, compras patrióticas e cautela com dependência externa. Soberania econômica pesava mais do que integração comercial ampla.",
     "answers": {
       "comercio_19": "CT",
       "comercio_12": "D",
@@ -218,14 +218,14 @@
       "comercio_15": "C",
       "comercio_10": "N",
       "comercio_01": "CT",
-      "comercio_17": "DT",
+      "comercio_17": "CT",
       "comercio_07": "CT",
       "comercio_03": "C",
       "comercio_02": "DT"
     }
   },
   "religiao": {
-    "personaBrief": "Salazar, católico devoto e ex-seminarista, uniu Estado e Igreja Católica como pilares morais do Estado Novo, sob o lema 'Deus, Pátria e Família', fazendo da religiosidade um eixo central da identidade nacional.",
+    "personaBrief": "Católico devoto, Salazar fez da religião um dos pilares simbólicos e morais do Estado Novo, articulando ordem política com tradição cristã. A fé, para ele, não era apenas privada, mas parte da identidade nacional e da vida pública.",
     "answers": {
       "religiao_08": "C",
       "religiao_04": "CT",
@@ -250,7 +250,7 @@
     }
   },
   "moral": {
-    "personaBrief": "Sob o lema 'Deus, Pátria e Família', Salazar impôs um tradicionalismo moral rígido, com a mulher confinada ao lar, censura de costumes e rejeição de qualquer diversidade sexual ou de gênero.",
+    "personaBrief": "O salazarismo exaltava Deus, Pátria e Família, defendendo hierarquia doméstica, papéis sexuais tradicionais e censura de costumes vistos como dissolventes. Mudanças rápidas na moral social seriam tratadas como ameaça à ordem civilizacional.",
     "answers": {
       "moral_05": "DT",
       "moral_12": "CT",
@@ -275,20 +275,20 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Salazar priorizava uma visão ruralista e tradicionalista de Portugal, celebrando a vida simples do campo e desconfiando de modernizações aceleradas que ameaçassem a ordem social e os costumes estabelecidos.",
+    "personaBrief": "Salazar valorizava uma sociedade rural, sóbria e tradicional, desconfiando de modernizações aceleradas que corroessem costumes, hierarquias e estabilidade social. Seu instinto seria aceitar técnica útil sob controle, mas rejeitar transformações tecnológicas que alterem a natureza humana ou a ordem moral.",
     "answers": {
       "tecnologia_11": "N",
       "tecnologia_01": "D",
       "tecnologia_15": "DT",
       "tecnologia_17": "D",
       "tecnologia_18": "CT",
-      "tecnologia_19": "N",
+      "tecnologia_19": "D",
       "tecnologia_13": "D",
       "tecnologia_14": "CT",
       "tecnologia_12": "D",
       "tecnologia_20": "CT",
       "tecnologia_06": "N",
-      "tecnologia_16": "N",
+      "tecnologia_16": "C",
       "tecnologia_04": "C",
       "tecnologia_07": "N",
       "tecnologia_08": "C",

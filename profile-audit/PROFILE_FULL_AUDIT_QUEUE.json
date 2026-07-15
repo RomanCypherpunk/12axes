@@ -141798,8 +141798,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 12.5,
+          "delta": 12.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -141824,8 +141824,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:23.463Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao construiu um Estado central forte via o Partido Comunista, unificando a China sob comando unico apos decadas de fragmentacao. A mobilizacao local existia, mas como instrumento subordinado ao centr",
+          "completedAt": "2026-07-15T19:49:44.342Z"
         },
         {
           "unitId": "personality:mao-zedong:representacao",
@@ -141837,8 +141837,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 20,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -141863,8 +141863,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:23.962Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao rejeitava a democracia liberal e defendia a ditadura democratica popular dirigida pelo Partido. Sua pratica politica concentrou autoridade extrema no lider e reduziu severamente oposicao e alterna",
+          "completedAt": "2026-07-15T19:49:46.752Z"
         },
         {
           "unitId": "personality:mao-zedong:poder",
@@ -141876,8 +141876,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": 6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -141902,8 +141902,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:24.485Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao usou vigilancia politica, campanhas de massa e coercao estatal extensa para moldar a sociedade e eliminar inimigos de classe. Liberdades civis eram subordinadas a seguranca revolucionaria e a disc",
+          "completedAt": "2026-07-15T19:49:48.881Z"
         },
         {
           "unitId": "personality:mao-zedong:imigracao",
@@ -141915,8 +141915,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 100,
-          "calculatedValue": 100,
-          "delta": 0,
+          "calculatedValue": 65,
+          "delta": -35,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -141941,8 +141941,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:24.954Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao combinava internacionalismo proletario com forte afirmacao da soberania e identidade nacional chinesa contra a influencia estrangeira. Isso sugere assimilacao civica e desconfiança de cosmopolitis",
+          "completedAt": "2026-07-15T19:49:51.439Z"
         },
         {
           "unitId": "personality:mao-zedong:diplomacia",
@@ -141954,8 +141954,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 82.5,
+          "delta": 15,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -141980,8 +141980,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:25.444Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao via a luta armada como instrumento legitimo da revolucao e da independencia nacional. Ao mesmo tempo, valorizava capacidade militar propria e dissuasao diante de potencias hostis.",
+          "completedAt": "2026-07-15T19:49:53.614Z"
         },
         {
           "unitId": "personality:mao-zedong:intervencao",
@@ -141993,8 +141993,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 61.3,
-          "calculatedValue": 61.3,
-          "delta": 0,
+          "calculatedValue": 30,
+          "delta": -31.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -142019,8 +142019,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:25.889Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao defendia soberania contra ingerencia estrangeira, mas aceitava influenciar e apoiar revolucoes fora da China quando isso favorecia seguranca, prestigio e estrategia revolucionaria. O criterio cent",
+          "completedAt": "2026-07-15T19:49:55.536Z"
         },
         {
           "unitId": "personality:mao-zedong:economia",
@@ -142032,8 +142032,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 91.3,
-          "calculatedValue": 91.3,
-          "delta": 0,
+          "calculatedValue": 92.5,
+          "delta": 1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -142058,8 +142058,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:26.356Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao defendia abolir a propriedade privada dos meios de producao, coletivizar terra e industria e deslocar poder economico das classes proprietarias para a sociedade organizada pelo Partido. A revoluca",
+          "completedAt": "2026-07-15T19:49:56.800Z"
         },
         {
           "unitId": "personality:mao-zedong:controle",
@@ -142071,8 +142071,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 92.5,
-          "calculatedValue": 92.5,
-          "delta": 0,
+          "calculatedValue": 95,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -142097,8 +142097,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:27.043Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao defendia planejamento economico central, direcao politica da producao e intervencao extensiva em precos, comercio e moeda. O mercado nao era visto como coordenador legitimo, mas como fonte de desi",
+          "completedAt": "2026-07-15T19:49:58.091Z"
         },
         {
           "unitId": "personality:mao-zedong:comercio",
@@ -142110,8 +142110,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 85,
-          "calculatedValue": 85,
-          "delta": 0,
+          "calculatedValue": 87.5,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -142136,8 +142136,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:27.652Z"
+          "notes": "Subagent isolated audit. Persona brief: Sob Mao, a China buscou autossuficiencia, desconfiou de dependencia externa e tratou comercio e capital estrangeiro como possiveis vetores de subordinacao imperialista. A prioridade era soberania econ",
+          "completedAt": "2026-07-15T19:49:59.282Z"
         },
         {
           "unitId": "personality:mao-zedong:religiao",
@@ -142149,8 +142149,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 87.5,
-          "calculatedValue": 87.5,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -142175,8 +142175,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:32:28.156Z"
+          "notes": "Subagent isolated audit. Persona brief: Mao era um ateu marxista militante e tratava religiao tradicional como supersticao feudal rival da consciencia revolucionaria. A tendencia do regime foi secularizar agressivamente a esfera publica e s",
+          "completedAt": "2026-07-15T19:50:00.534Z"
         },
         {
           "unitId": "personality:mao-zedong:moral",
@@ -143235,8 +143235,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:20.319Z"
+          "notes": "Subagent isolated audit. Persona brief: Kim Il-sung construiu um Estado rigidamente centralizado, hostil a autonomias locais e a qualquer fragmentacao do comando politico. A unidade nacional sob a lideranca central e parte essencial da logi",
+          "completedAt": "2026-07-15T19:49:20.320Z"
         },
         {
           "unitId": "personality:kim-il-sung:representacao",
@@ -143248,8 +143248,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143274,8 +143274,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:20.841Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime de Kim Il-sung rejeitou competicao eleitoral real, oposicao organizada e alternancia de poder. Sua legitimidade era apresentada como derivada da lideranca revolucionaria, da ordem e dos resul",
+          "completedAt": "2026-07-15T19:49:22.337Z"
         },
         {
           "unitId": "personality:kim-il-sung:poder",
@@ -143287,8 +143287,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 97.5,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143313,8 +143313,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:21.339Z"
+          "notes": "Subagent isolated audit. Persona brief: Kim Il-sung governou por vigilancia, repressao e forte controle social, tratando dissenso como ameaca existencial ao Estado. Liberdades civis individuais ficavam subordinadas a seguranca do regime e a",
+          "completedAt": "2026-07-15T19:49:24.037Z"
         },
         {
           "unitId": "personality:kim-il-sung:imigracao",
@@ -143599,8 +143599,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 31.3,
-          "calculatedValue": 31.3,
-          "delta": 0,
+          "calculatedValue": 12.5,
+          "delta": -18.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143625,8 +143625,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:26.106Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime de Kim Il-sung nao era liberal nos costumes: privilegiava disciplina social, autoridade familiar e condenacao de comportamentos vistos como decadentes ou desordeiros. Ao mesmo tempo, reinterp",
+          "completedAt": "2026-07-15T19:50:01.788Z"
         },
         {
           "unitId": "personality:kim-il-sung:tecnologia",
@@ -143638,8 +143638,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 68.8,
-          "calculatedValue": 68.8,
-          "delta": 0,
+          "calculatedValue": 83.8,
+          "delta": 15,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143664,8 +143664,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:26.647Z"
+          "notes": "Subagent isolated audit. Persona brief: Kim Il-sung via industrializacao, ciencia e capacidade tecnica como instrumentos de poder nacional e autossuficiencia. Limites ambientais ou biologicos tenderiam a importar menos do que a utilidade es",
+          "completedAt": "2026-07-15T19:50:03.907Z"
         },
         {
           "unitId": "personality:pol-pot:estrutura",
@@ -143677,8 +143677,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 1.3,
+          "delta": 1.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143703,8 +143703,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:27.128Z"
+          "notes": "Subagent isolated audit. Persona brief: Pol Pot impôs um comando central absoluto do Khmer Vermelho sobre todo o país, abolindo qualquer autonomia local ou regional em nome de uma reorganização uniforme da sociedade camponesa.",
+          "completedAt": "2026-07-15T19:51:18.371Z"
         },
         {
           "unitId": "personality:pol-pot:representacao",
@@ -143716,8 +143716,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143742,8 +143742,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:27.622Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime de Pol Pot foi uma ditadura revolucionária opaca, sem eleições livres, oposição legítima ou imprensa independente, concentrando poder absoluto na Angkar e no partido.",
+          "completedAt": "2026-07-15T19:51:19.407Z"
         },
         {
           "unitId": "personality:pol-pot:poder",
@@ -143755,8 +143755,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 98.8,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143781,8 +143781,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:28.348Z"
+          "notes": "Subagent isolated audit. Persona brief: O Khmer Vermelho governou por vigilância total, delação, prisões arbitrárias, trabalho forçado e execuções em massa, deixando praticamente nenhuma esfera protegida de liberdade individual.",
+          "completedAt": "2026-07-15T19:51:20.411Z"
         },
         {
           "unitId": "personality:pol-pot:imigracao",
@@ -143794,8 +143794,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 100,
-          "calculatedValue": 100,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": -3.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143820,8 +143820,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:28.947Z"
+          "notes": "Subagent isolated audit. Persona brief: Pol Pot associava pureza nacional khmer à sobrevivência do regime, perseguindo vietnamitas, chineses e chams e fechando o Camboja ao cosmopolitismo e à mistura cultural.",
+          "completedAt": "2026-07-15T19:51:21.259Z"
         },
         {
           "unitId": "personality:pol-pot:diplomacia",
@@ -143833,8 +143833,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 68.8,
-          "calculatedValue": 68.8,
-          "delta": 0,
+          "calculatedValue": 91.3,
+          "delta": 22.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143859,8 +143859,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:29.434Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu projeto revolucionário foi sustentado por militarização intensa, guerra com o Vietnã e uso de força extrema contra inimigos internos e externos, com pouca confiança em freios diplomáticos.",
+          "completedAt": "2026-07-15T19:51:22.145Z"
         },
         {
           "unitId": "personality:pol-pot:intervencao",
@@ -143872,8 +143872,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 28.7,
-          "calculatedValue": 28.7,
-          "delta": 0,
+          "calculatedValue": 33.8,
+          "delta": 5.1,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143898,8 +143898,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:29.922Z"
+          "notes": "Subagent isolated audit. Persona brief: Embora isolacionista culturalmente, Pol Pot adotou uma política externa nacionalista e agressiva, tratando soberania khmer, fronteiras e coerção regional como interesses absolutos.",
+          "completedAt": "2026-07-15T19:51:22.946Z"
         },
         {
           "unitId": "personality:pol-pot:economia",
@@ -143937,8 +143937,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:30.467Z"
+          "notes": "Subagent isolated audit. Persona brief: Pol Pot aboliu propriedade privada, dinheiro e mercado, impondo coletivização forçada da terra e da produção em comunas agrárias dirigidas pelo partido.",
+          "completedAt": "2026-07-15T19:51:23.665Z"
         },
         {
           "unitId": "personality:pol-pot:controle",
@@ -143950,8 +143950,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 98.8,
-          "calculatedValue": 98.8,
-          "delta": 0,
+          "calculatedValue": 90,
+          "delta": -8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -143976,8 +143976,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:31.094Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu regime substituiu o mercado por direção total da economia, decidindo produção, distribuição e trabalho de forma compulsória e rejeitando preços livres ou autonomia financeira.",
+          "completedAt": "2026-07-15T19:51:24.231Z"
         },
         {
           "unitId": "personality:pol-pot:comercio",
@@ -143989,8 +143989,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 92.5,
-          "calculatedValue": 92.5,
-          "delta": 0,
+          "calculatedValue": 98.8,
+          "delta": 6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -144015,8 +144015,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:31.574Z"
+          "notes": "Subagent isolated audit. Persona brief: O Camboja de Pol Pot buscou autarquia quase total e autossuficiência agrária, sacrificando comércio exterior, integração internacional e eficiência econômica em nome da soberania revolucionária.",
+          "completedAt": "2026-07-15T19:51:24.870Z"
         },
         {
           "unitId": "personality:pol-pot:religiao",
@@ -144028,8 +144028,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 87.5,
-          "calculatedValue": 87.5,
-          "delta": 0,
+          "calculatedValue": 95,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -144054,8 +144054,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:32.080Z"
+          "notes": "Subagent isolated audit. Persona brief: O Khmer Vermelho perseguiu budistas e outras religiões, desmontando instituições de fé e substituindo a autoridade espiritual por um secularismo revolucionário violento.",
+          "completedAt": "2026-07-15T19:51:25.485Z"
         },
         {
           "unitId": "personality:pol-pot:moral",
@@ -144067,8 +144067,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 32.5,
-          "calculatedValue": 32.5,
-          "delta": 0,
+          "calculatedValue": 28.7,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -144093,8 +144093,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:32.561Z"
+          "notes": "Subagent isolated audit. Persona brief: Pol Pot combinou puritanismo revolucionário com destruição da vida privada: o partido interferia em casamento, família e costumes, reprimindo sexualidade, individualidade e qualquer traço visto como d",
+          "completedAt": "2026-07-15T19:51:26.049Z"
         },
         {
           "unitId": "personality:pol-pot:tecnologia",
@@ -144106,8 +144106,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 1.3,
-          "calculatedValue": 1.3,
-          "delta": 0,
+          "calculatedValue": 10,
+          "delta": 8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -144132,8 +144132,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:35:33.082Z"
+          "notes": "Subagent isolated audit. Persona brief: Pol Pot glorificava o retorno forçado ao campo, esvaziou cidades e rejeitou a modernidade técnico-científica, tratando vida urbana, especialização e alta tecnologia como desvios corruptores.",
+          "completedAt": "2026-07-15T19:51:26.588Z"
         },
         {
           "unitId": "personality:deng-xiaoping:estrutura",
@@ -146960,8 +146960,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 7.5,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -146986,8 +146986,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:19.613Z"
+          "notes": "Subagent isolated audit. Persona brief: Niekisch subordinava particularismos regionais a uma unidade nacional revolucionaria forte. Seu nacional-bolchevismo favorecia direcao central e disciplina politica contra autonomias fragmentadoras.",
+          "completedAt": "2026-07-15T19:50:20.253Z"
         },
         {
           "unitId": "personality:ernst-niekisch:representacao",
@@ -146999,8 +146999,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 21.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147025,8 +147025,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:20.268Z"
+          "notes": "Subagent isolated audit. Persona brief: Hostil ao liberalismo parlamentar, Niekisch via a politica como conducao historica de uma nacao em luta, nao como competicao aberta e permanente entre partidos. Ele tenderia a preferir autoridade, com",
+          "completedAt": "2026-07-15T19:50:21.324Z"
         },
         {
           "unitId": "personality:ernst-niekisch:poder",
@@ -147038,8 +147038,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147064,8 +147064,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:20.752Z"
+          "notes": "Subagent isolated audit. Persona brief: Como inimigo do liberalismo e adepto de uma mobilizacao nacional intensa, Niekisch aceitaria coercao dura contra elementos vistos como dissolventes da ordem coletiva. Liberdades civis tenderiam a cede",
+          "completedAt": "2026-07-15T19:50:22.606Z"
         },
         {
           "unitId": "personality:ernst-niekisch:imigracao",
@@ -147077,8 +147077,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 83.8,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147103,8 +147103,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:21.268Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo radical de Niekisch colocava identidade historica e coesao cultural acima do cosmopolitismo liberal. Ele tenderia a exigir assimilacao e a desconfiar da diluicao da nacao por fluxos cul",
+          "completedAt": "2026-07-15T19:50:23.658Z"
         },
         {
           "unitId": "personality:ernst-niekisch:diplomacia",
@@ -147116,8 +147116,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 82.5,
+          "delta": 1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147142,8 +147142,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:21.719Z"
+          "notes": "Subagent isolated audit. Persona brief: Ao propor uma Alemanha orientada para a forca e para o eixo com a Russia contra o Ocidente liberal, Niekisch tratava poder militar como componente central da soberania. Diplomacia, para ele, valeria s",
+          "completedAt": "2026-07-15T19:50:24.323Z"
         },
         {
           "unitId": "personality:ernst-niekisch:intervencao",
@@ -147155,8 +147155,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 40,
+          "delta": 27.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147181,8 +147181,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:22.234Z"
+          "notes": "Subagent isolated audit. Persona brief: Niekisch rejeitava a tutela externa e o universalismo ocidental, mas nao por pacifismo: sua referencia era a afirmacao soberana e agressiva do interesse nacional. Por isso tenderia a condenar ingerenc",
+          "completedAt": "2026-07-15T19:50:25.046Z"
         },
         {
           "unitId": "personality:ernst-niekisch:economia",
@@ -147194,8 +147194,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 91.3,
-          "calculatedValue": 91.3,
-          "delta": 0,
+          "calculatedValue": 93.8,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147220,8 +147220,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:22.792Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu nacional-bolchevismo combinava revolucao social com nacionalismo, mirando a superacao do capitalismo liberal por formas coletivas e estrategicas de propriedade. Niekisch veria concentracao privada",
+          "completedAt": "2026-07-15T19:50:26.220Z"
         },
         {
           "unitId": "personality:ernst-niekisch:controle",
@@ -147233,8 +147233,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": 13.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147259,8 +147259,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:23.398Z"
+          "notes": "Subagent isolated audit. Persona brief: Como revolucionario antiliberal e antimecado, Niekisch inclinava-se a uma economia dirigida em nome da nacao e da transformacao social. Setores estrategicos, credito, cambio e industria tenderiam a fi",
+          "completedAt": "2026-07-15T19:50:27.058Z"
         },
         {
           "unitId": "personality:ernst-niekisch:comercio",
@@ -147272,8 +147272,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 90,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147298,8 +147298,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:23.951Z"
+          "notes": "Subagent isolated audit. Persona brief: A hostilidade de Niekisch ao Ocidente liberal e sua busca por soberania nacional-revolucionaria apontam para forte protecionismo e desconfiança da integracao comercial cosmopolita. Ele privilegiaria a",
+          "completedAt": "2026-07-15T19:50:27.831Z"
         },
         {
           "unitId": "personality:ernst-niekisch:religiao",
@@ -147311,8 +147311,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 46.3,
-          "calculatedValue": 46.3,
-          "delta": 0,
+          "calculatedValue": 83.8,
+          "delta": 37.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147337,8 +147337,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:24.447Z"
+          "notes": "Subagent isolated audit. Persona brief: A identidade politica de Niekisch era definida muito mais por nacao, revolucao e antiocidentalismo do que por fe confessional. Nesse eixo ele tenderia a um secularismo duro, aceitando religiao privada",
+          "completedAt": "2026-07-15T19:50:28.456Z"
         },
         {
           "unitId": "personality:ernst-niekisch:moral",
@@ -147350,8 +147350,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 13.8,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147376,8 +147376,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:25.016Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu combate ao liberalismo implicava rejeicao de permissividade, individualismo hedonista e dissolucao dos costumes coletivos. Niekisch tenderia a respostas socialmente austeras e disciplinadoras, ain",
+          "completedAt": "2026-07-15T19:50:29.148Z"
         },
         {
           "unitId": "personality:ernst-niekisch:tecnologia",
@@ -147389,8 +147389,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 71.3,
-          "calculatedValue": 71.3,
-          "delta": 0,
+          "calculatedValue": 65,
+          "delta": -6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147415,8 +147415,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:39:25.665Z"
+          "notes": "Subagent isolated audit. Persona brief: Como pensador de uma modernizacao nacional-revolucionaria, Niekisch estaria mais proximo do industrialismo duro do que do romantismo ecologico. Ainda assim, sua visao organica e disciplinar da comunid",
+          "completedAt": "2026-07-15T19:50:30.452Z"
         },
         {
           "unitId": "personality:gregor-strasser:estrutura",
@@ -147929,8 +147929,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:53.186Z"
+          "notes": "Subagent isolated audit. Persona brief: Mussolini defendia um Estado nacional uno, hierárquico e centralizado, hostil a autonomias locais que pudessem fragmentar a autoridade. Sua visão fascista tratava a unidade política como condição da f",
+          "completedAt": "2026-07-15T19:51:51.148Z"
         },
         {
           "unitId": "personality:mussolini:representacao",
@@ -147942,8 +147942,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 7.5,
+          "delta": -5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -147968,8 +147968,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:53.689Z"
+          "notes": "Subagent isolated audit. Persona brief: O fascismo de Mussolini exaltava o líder, desprezava o pluralismo parlamentar e subordinava representação popular à eficácia do comando. Ele via eleições, oposição e freios institucionais como obstácu",
+          "completedAt": "2026-07-15T19:51:51.662Z"
         },
         {
           "unitId": "personality:mussolini:poder",
@@ -147981,8 +147981,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 92.5,
+          "delta": 11.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148007,8 +148007,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:54.219Z"
+          "notes": "Subagent isolated audit. Persona brief: Mussolini construiu um regime de vigilância, censura e coerção, no qual direitos individuais eram subordinados à ordem e à segurança do Estado. Liberdades civis só valiam enquanto servissem à discipli",
+          "completedAt": "2026-07-15T19:51:52.206Z"
         },
         {
           "unitId": "personality:mussolini:imigracao",
@@ -148020,8 +148020,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148046,8 +148046,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:54.702Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo fascista de Mussolini exigia homogeneidade cultural, assimilação e lealdade à identidade nacional. Diferenças culturais só seriam toleradas se subordinadas à nação dominante.",
+          "completedAt": "2026-07-15T19:51:52.818Z"
         },
         {
           "unitId": "personality:mussolini:diplomacia",
@@ -148059,8 +148059,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 100,
-          "calculatedValue": 100,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": -3.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148085,8 +148085,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:55.158Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime de Mussolini glorificava militarismo, expansão e prestígio armado, tratando a força como linguagem central da política internacional. Diplomacia era útil, mas sempre subordinada à capacidade ",
+          "completedAt": "2026-07-15T19:51:53.380Z"
         },
         {
           "unitId": "personality:mussolini:intervencao",
@@ -148098,8 +148098,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 12.5,
+          "delta": 12.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148124,8 +148124,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:55.579Z"
+          "notes": "Subagent isolated audit. Persona brief: Mussolini via política externa como projeção agressiva de soberania, influência e prestígio nacional. Tratados, neutralidade e organismos multilaterais tinham valor apenas quando servissem aos interes",
+          "completedAt": "2026-07-15T19:51:53.939Z"
         },
         {
           "unitId": "personality:mussolini:economia",
@@ -148137,8 +148137,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 63.7,
-          "calculatedValue": 63.7,
-          "delta": 0,
+          "calculatedValue": 62.5,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148163,8 +148163,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:56.139Z"
+          "notes": "Subagent isolated audit. Persona brief: Mussolini rejeitava tanto o liberalismo econômico puro quanto a socialização operária total, preferindo corporativismo, setores estratégicos sob tutela pública e propriedade privada subordinada ao int",
+          "completedAt": "2026-07-15T19:51:54.530Z"
         },
         {
           "unitId": "personality:mussolini:controle",
@@ -148176,8 +148176,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148202,8 +148202,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:56.633Z"
+          "notes": "Subagent isolated audit. Persona brief: No Estado fascista, a economia deveria ser planejada, disciplinada e mobilizada em torno de prioridades nacionais, com pouca tolerância para autonomia irrestrita do mercado. Mussolini favorecia direçã",
+          "completedAt": "2026-07-15T19:51:55.600Z"
         },
         {
           "unitId": "personality:mussolini:comercio",
@@ -148215,8 +148215,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148241,8 +148241,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:57.141Z"
+          "notes": "Subagent isolated audit. Persona brief: A autossuficiência e a soberania econômica eram centrais no projeto fascista de Mussolini, que desconfiava de dependência externa e defendia proteção da indústria nacional. Comércio exterior era aceit",
+          "completedAt": "2026-07-15T19:51:56.856Z"
         },
         {
           "unitId": "personality:mussolini:religiao",
@@ -148254,8 +148254,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 17.5,
+          "delta": 1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148280,8 +148280,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:57.574Z"
+          "notes": "Subagent isolated audit. Persona brief: Embora pessoalmente tenha sido anticlerical em parte da vida, Mussolini incorporou a religião como pilar de ordem, família e identidade nacional sob o fascismo. Na prática política, favoreceu a presen",
+          "completedAt": "2026-07-15T19:51:57.687Z"
         },
         {
           "unitId": "personality:mussolini:moral",
@@ -148293,8 +148293,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 7.5,
-          "calculatedValue": 7.5,
-          "delta": 0,
+          "calculatedValue": 2.5,
+          "delta": -5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148319,8 +148319,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:58.024Z"
+          "notes": "Subagent isolated audit. Persona brief: O fascismo mussoliniano exaltava família, autoridade, disciplina sexual, papéis tradicionais de gênero e combate à decadência moral percebida. Transformações culturais liberais seriam vistas como sint",
+          "completedAt": "2026-07-15T19:51:58.387Z"
         },
         {
           "unitId": "personality:mussolini:tecnologia",
@@ -148332,8 +148332,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 66.3,
-          "calculatedValue": 66.3,
-          "delta": 0,
+          "calculatedValue": 77.5,
+          "delta": 11.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148358,8 +148358,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:58.514Z"
+          "notes": "Subagent isolated audit. Persona brief: Mussolini associava modernização técnica, industrialização e poder nacional, valorizando grandes projetos e domínio tecnológico acima de escrúpulos ecológicos. Limites naturais importariam menos do qu",
+          "completedAt": "2026-07-15T19:51:59.079Z"
         },
         {
           "unitId": "personality:hitler:estrutura",
@@ -148397,8 +148397,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:58.974Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler concentrou o poder no Reich e subordinou autonomias regionais ao comando nacional-socialista. Seu regime tratava unidade política e obediência central como condições da força nacional.",
+          "completedAt": "2026-07-15T19:52:03.060Z"
         },
         {
           "unitId": "personality:hitler:representacao",
@@ -148410,8 +148410,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 6.3,
+          "delta": -6.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148436,8 +148436,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:59.454Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler destruiu eleições livres, oposição e freios institucionais, justificando a ditadura como expressão da vontade nacional e da eficácia do líder. Seu modelo era abertamente antiparlamentar e plebi",
+          "completedAt": "2026-07-15T19:52:03.699Z"
         },
         {
           "unitId": "personality:hitler:poder",
@@ -148475,8 +148475,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:49:59.895Z"
+          "notes": "Subagent isolated audit. Persona brief: O Terceiro Reich foi um Estado policial que usou vigilância, censura, estado de exceção e repressão sistemática contra inimigos reais ou definidos pelo regime. Liberdades civis eram subordinadas à seg",
+          "completedAt": "2026-07-15T19:52:04.321Z"
         },
         {
           "unitId": "personality:hitler:imigracao",
@@ -148514,8 +148514,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:00.315Z"
+          "notes": "Subagent isolated audit. Persona brief: A visão hitlerista era etnonacionalista e racista, hostil à mistura cultural e à igualdade entre povos. O regime valorizava assimilação forçada quando aceitava presença alheia, mas preferia separação ",
+          "completedAt": "2026-07-15T19:52:05.039Z"
         },
         {
           "unitId": "personality:hitler:diplomacia",
@@ -148527,8 +148527,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 100,
-          "calculatedValue": 100,
-          "delta": 0,
+          "calculatedValue": 98.8,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148553,8 +148553,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:00.743Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler via poder militar, rearmamento e disposição para a guerra como instrumentos centrais de grandeza nacional. Diplomacia era aceita taticamente, mas subordinada à coerção, expansão e preparação bé",
+          "completedAt": "2026-07-15T19:52:05.755Z"
         },
         {
           "unitId": "personality:hitler:intervencao",
@@ -148566,8 +148566,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 5,
+          "delta": 5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148592,8 +148592,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:01.239Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime hitlerista buscou revisionismo territorial, dominação regional e mudança de governos externos quando isso servia à Alemanha. Neutralidade, não intervenção e deferência a organismos internacio",
+          "completedAt": "2026-07-15T19:52:06.403Z"
         },
         {
           "unitId": "personality:hitler:economia",
@@ -148605,8 +148605,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 75,
-          "calculatedValue": 75,
-          "delta": 0,
+          "calculatedValue": 62.5,
+          "delta": -12.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148631,8 +148631,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:01.679Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler não defendia socialização operária nem laissez-faire puro; preservou propriedade privada subordinada ao projeto nacional e de guerra. O regime aceitava intervenção, obras públicas e cooptação c",
+          "completedAt": "2026-07-15T19:52:07.060Z"
         },
         {
           "unitId": "personality:hitler:controle",
@@ -148644,8 +148644,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 91.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148670,8 +148670,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:02.135Z"
+          "notes": "Subagent isolated audit. Persona brief: A economia do Terceiro Reich combinou capital privado com forte direção política, cambial, industrial e trabalhista voltada ao rearmamento e à autossuficiência. Hitler favorecia coordenação central de",
+          "completedAt": "2026-07-15T19:52:07.696Z"
         },
         {
           "unitId": "personality:hitler:comercio",
@@ -148683,8 +148683,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 96.3,
+          "delta": 16.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148709,8 +148709,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:02.574Z"
+          "notes": "Subagent isolated audit. Persona brief: O projeto hitlerista priorizou autossuficiência, proteção industrial e soberania econômica sobre integração comercial liberal. Dependência externa era vista como fraqueza estratégica, sobretudo em cad",
+          "completedAt": "2026-07-15T19:52:08.307Z"
         },
         {
           "unitId": "personality:hitler:religiao",
@@ -148722,8 +148722,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 56.3,
-          "calculatedValue": 56.3,
-          "delta": 0,
+          "calculatedValue": 12.5,
+          "delta": -43.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148748,8 +148748,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:03.031Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler instrumentalizou referências religiosas e morais tradicionais quando serviam ao nacional-socialismo, sem defender secularismo liberal. Seu regime preferia subordinar vida pública, família e val",
+          "completedAt": "2026-07-15T19:52:09.115Z"
         },
         {
           "unitId": "personality:hitler:moral",
@@ -148761,8 +148761,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 2.5,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148787,8 +148787,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:03.542Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacional-socialismo exaltava família tradicional, disciplina sexual, papéis de gênero rígidos e condenação de comportamentos vistos como degenerados. Também recusava igualitarismo racial e boa parte",
+          "completedAt": "2026-07-15T19:52:10.056Z"
         },
         {
           "unitId": "personality:hitler:tecnologia",
@@ -148800,8 +148800,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 21.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -148826,8 +148826,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:04.009Z"
+          "notes": "Subagent isolated audit. Persona brief: Hitler valorizou tecnologia industrial, militar e infraestrutural como instrumento de poder nacional, sem compromisso com prudência ambiental ou simplicidade de vida. Ao mesmo tempo, sua visão biopolí",
+          "completedAt": "2026-07-15T19:52:11.068Z"
         },
         {
           "unitId": "personality:engelbert-dollfuss:estrutura",
@@ -149307,8 +149307,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 16.3,
+          "delta": 16.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149333,8 +149333,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:10.203Z"
+          "notes": "Subagent isolated audit. Persona brief: JosÃ© Antonio via a Espanha como uma unidade nacional indivisÃ­vel e histÃ³rica ('Espanha, Una, Grande e Livre'), rejeitando regionalismos e autonomias que via como fragmentaÃ§Ã£o do corpo nacional pr",
+          "completedAt": "2026-07-15T19:54:08.994Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:representacao",
@@ -149346,8 +149346,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 21.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149372,8 +149372,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:10.634Z"
+          "notes": "Subagent isolated audit. Persona brief: Primo de Rivera rejeitava explicitamente a democracia liberal parlamentar e o sufrÃ¡gio como mecanismo de representaÃ§Ã£o, propondo em seu lugar um Estado nacional-sindicalista organizado por corporaÃ",
+          "completedAt": "2026-07-15T19:54:09.697Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:poder",
@@ -149385,8 +149385,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 80,
+          "delta": 1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149411,8 +149411,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:11.042Z"
+          "notes": "Subagent isolated audit. Persona brief: Como fundador de um movimento paramilitar que pregava a disciplina, a hierarquia e o combate direto ao 'caos' liberal e marxista, JosÃ© Antonio defendia mÃ£o forte do Estado contra desordem e subversÃ",
+          "completedAt": "2026-07-15T19:54:10.482Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:imigracao",
@@ -149450,8 +149450,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:11.558Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo de JosÃ© Antonio se ancorava numa concepÃ§Ã£o orgÃ¢nica e catÃ³lica da naÃ§Ã£o espanhola, valorizando a unidade cultural e linguÃ­stica acima de qualquer multiculturalismo, embora sua d",
+          "completedAt": "2026-07-15T19:54:11.226Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:diplomacia",
@@ -149463,8 +149463,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 77.5,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149489,8 +149489,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:12.009Z"
+          "notes": "Subagent isolated audit. Persona brief: O ideÃ¡rio falangista celebrava o espÃ­rito militar, a hierarquia e o sacrifÃ­cio heroico como virtudes nacionais, vendo as ForÃ§as Armadas e a forÃ§a como expressÃ£o legÃ­tima da grandeza espanhola, ",
+          "completedAt": "2026-07-15T19:54:11.890Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:intervencao",
@@ -149502,8 +149502,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 28.7,
+          "delta": 22.4,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149528,8 +149528,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:12.472Z"
+          "notes": "Subagent isolated audit. Persona brief: Falangista imperial em espÃ­rito, JosÃ© Antonio sonhava com a recuperaÃ§Ã£o da grandeza histÃ³rica espanhola e sua influÃªncia hispÃ¢nica, rejeitando submissÃ£o a potÃªncias estrangeiras ou a organism",
+          "completedAt": "2026-07-15T19:54:12.457Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:economia",
@@ -149541,8 +149541,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 76.3,
-          "calculatedValue": 76.3,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": -10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149567,8 +149567,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:12.913Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacional-sindicalismo de JosÃ© Antonio propunha uma 'terceira via' entre capitalismo liberal e marxismo: um Estado corporativo que organizasse a economia por sindicatos verticais, subordinando tanto",
+          "completedAt": "2026-07-15T19:54:13.103Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:controle",
@@ -149580,8 +149580,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 73.8,
+          "delta": -8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149606,8 +149606,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:13.345Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacional-sindicalismo falangista defendia planejamento estatal corporativo forte da economia â€” sindicatos verticais, subordinaÃ§Ã£o do capital ao interesse nacional e intervenÃ§Ã£o ampla â€” rejei",
+          "completedAt": "2026-07-15T19:54:13.761Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:comercio",
@@ -149619,8 +149619,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 82.5,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149645,8 +149645,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:13.808Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo econÃ´mico falangista buscava a autossuficiÃªncia e a proteÃ§Ã£o da produÃ§Ã£o nacional espanhola como parte da soberania integral do Estado, opondo-se ao livre-comÃ©rcio globalista ass",
+          "completedAt": "2026-07-15T19:54:14.287Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:religiao",
@@ -149658,8 +149658,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 13.8,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149684,8 +149684,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:14.330Z"
+          "notes": "Subagent isolated audit. Persona brief: JosÃ© Antonio defendia uma Espanha catÃ³lica em sua tradiÃ§Ã£o e identidade nacional, vendo a fÃ© como parte constitutiva da naÃ§Ã£o, embora seu nacional-sindicalismo original fosse mais nacionalista ",
+          "completedAt": "2026-07-15T19:54:14.825Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:moral",
@@ -149697,8 +149697,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 7.5,
-          "calculatedValue": 7.5,
-          "delta": 0,
+          "calculatedValue": 5,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149723,8 +149723,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:14.778Z"
+          "notes": "Subagent isolated audit. Persona brief: Enraizado no catolicismo tradicional e no ideal de hierarquia orgÃ¢nica da sociedade espanhola dos anos 1930, JosÃ© Antonio sustentava valores familiares e de gÃªnero conservadores, opondo-se ao que v",
+          "completedAt": "2026-07-15T19:54:15.433Z"
         },
         {
           "unitId": "personality:jose-antonio-primo-de-rivera:tecnologia",
@@ -149736,8 +149736,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 48.8,
-          "calculatedValue": 48.8,
-          "delta": 0,
+          "calculatedValue": 47.5,
+          "delta": -1.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149762,8 +149762,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:15.222Z"
+          "notes": "Subagent isolated audit. Persona brief: Embora nÃ£o tenha deixado doutrina explÃ­cita sobre biotecnologia, o nacional-sindicalismo falangista valorizava a modernizaÃ§Ã£o industrial e militar da naÃ§Ã£o a serviÃ§o da grandeza espanhola, sem ",
+          "completedAt": "2026-07-15T19:54:16.210Z"
         },
         {
           "unitId": "personality:plinio-salgado:estrutura",
@@ -149775,8 +149775,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 11.3,
+          "delta": 11.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149801,8 +149801,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:37.077Z"
+          "notes": "Subagent isolated audit. Persona brief: O integralismo pregava um Estado unitário e forte, com a unidade nacional acima de autonomias regionais ou locais. Salgado via o Brasil como uma nação orgânica indivisível, hostil a fragmentações que ",
+          "completedAt": "2026-07-15T19:52:19.064Z"
         },
         {
           "unitId": "personality:plinio-salgado:representacao",
@@ -149840,8 +149840,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:37.707Z"
+          "notes": "Subagent isolated audit. Persona brief: Salgado propôs o Estado Integral, corporativista e hierárquico, com um chefe nacional acima da disputa partidária liberal. O integralismo rejeitava o parlamentarismo competitivo em favor de comando fo",
+          "completedAt": "2026-07-15T19:52:19.697Z"
         },
         {
           "unitId": "personality:plinio-salgado:poder",
@@ -149853,8 +149853,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 76.3,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149879,8 +149879,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:38.258Z"
+          "notes": "Subagent isolated audit. Persona brief: O integralismo tinha estética paramilitar, disciplina de massas e forte repressão a inimigos ideológicos, sobretudo o comunismo, combinadas com moralismo conservador nos costumes. Ordem e autoridade v",
+          "completedAt": "2026-07-15T19:52:20.350Z"
         },
         {
           "unitId": "personality:plinio-salgado:imigracao",
@@ -149892,8 +149892,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 75,
+          "delta": -5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149918,8 +149918,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:38.861Z"
+          "notes": "Subagent isolated audit. Persona brief: O integralismo exaltava a identidade nacional brasileira como algo a ser preservado e exigia assimilação plena de elementos estrangeiros, rejeitando o cosmopolitismo. A unidade cultural era um pilar d",
+          "completedAt": "2026-07-15T19:52:20.974Z"
         },
         {
           "unitId": "personality:plinio-salgado:diplomacia",
@@ -149931,8 +149931,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 81.3,
+          "delta": 13.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149957,8 +149957,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:39.365Z"
+          "notes": "Subagent isolated audit. Persona brief: A estética integralista era militarizada e nacionalista, valorizando as Forças Armadas como instrumento de respeito, soberania e disciplina cívica. Isso sugere apreço por força e prontidão, sem pacifi",
+          "completedAt": "2026-07-15T19:52:21.567Z"
         },
         {
           "unitId": "personality:plinio-salgado:intervencao",
@@ -149970,8 +149970,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 32.5,
+          "delta": 26.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -149996,8 +149996,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:39.917Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo integralista buscava soberania, prestígio e influência para o Brasil, subordinando tratados e consensos externos ao interesse nacional. A orientação é assertiva, sobretudo no entorno re",
+          "completedAt": "2026-07-15T19:52:22.106Z"
         },
         {
           "unitId": "personality:plinio-salgado:economia",
@@ -150009,8 +150009,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 56.3,
+          "delta": -11.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150035,8 +150035,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:40.522Z"
+          "notes": "Subagent isolated audit. Persona brief: O integralismo propunha um Estado corporativo de conciliação de classes, rejeitando tanto o liberalismo econômico quanto a socialização total dos meios de produção. A propriedade privada seria mantida",
+          "completedAt": "2026-07-15T19:52:22.627Z"
         },
         {
           "unitId": "personality:plinio-salgado:controle",
@@ -150048,8 +150048,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 81.3,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150074,8 +150074,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:41.247Z"
+          "notes": "Subagent isolated audit. Persona brief: O corporativismo integralista defendia forte direção estatal da economia nacional, com planejamento dos setores estratégicos e tutela sobre capital e trabalho. A coordenação nacional prevalecia sobre ",
+          "completedAt": "2026-07-15T19:52:23.128Z"
         },
         {
           "unitId": "personality:plinio-salgado:comercio",
@@ -150087,8 +150087,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 87.5,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150113,8 +150113,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:41.906Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo econômico integralista defendia industrialização nacional e proteção contra dependência estrangeira, vendo a soberania econômica como parte da grandeza da Pátria. Isso o afasta do cosmo",
+          "completedAt": "2026-07-15T19:52:23.623Z"
         },
         {
           "unitId": "personality:plinio-salgado:religiao",
@@ -150126,8 +150126,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 5,
-          "calculatedValue": 5,
-          "delta": 0,
+          "calculatedValue": 7.5,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150152,8 +150152,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:42.553Z"
+          "notes": "Subagent isolated audit. Persona brief: O lema 'Deus, Pátria e Família' colocava a fé cristã no centro do projeto integralista, com rejeição explícita ao laicismo e ao materialismo. Salgado via a religião como fundamento moral indispensável",
+          "completedAt": "2026-07-15T19:52:24.124Z"
         },
         {
           "unitId": "personality:plinio-salgado:moral",
@@ -150191,8 +150191,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:43.225Z"
+          "notes": "Subagent isolated audit. Persona brief: O polo 'Família' do lema integralista implicava defesa da família patriarcal, de papéis de gênero rígidos e de moral cristã conservadora. Salgado trataria a liberalização dos costumes como sinal de de",
+          "completedAt": "2026-07-15T19:52:24.717Z"
         },
         {
           "unitId": "personality:plinio-salgado:tecnologia",
@@ -150204,8 +150204,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 46.3,
-          "calculatedValue": 46.3,
-          "delta": 0,
+          "calculatedValue": 43.8,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150230,8 +150230,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:44:43.829Z"
+          "notes": "Subagent isolated audit. Persona brief: O integralismo valorizava grandeza nacional, industrialização e disciplina produtiva, sem inclinação ecológica forte, mas o conservadorismo cristão de Salgado o tornaria cauteloso diante de biotecnolo",
+          "completedAt": "2026-07-15T19:52:25.329Z"
         }
       ]
     },
@@ -150718,8 +150718,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 10,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150744,8 +150744,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:21.679Z"
+          "notes": "Subagent isolated audit. Persona brief: Putin concentrou autoridade no centro do Estado e tratou a unidade nacional como prioridade estratégica acima de autonomias regionais. Nesse eixo, a tendência é favorecer comando nacional forte, unifo",
+          "completedAt": "2026-07-15T19:55:47.588Z"
         },
         {
           "unitId": "personality:putin:representacao",
@@ -150757,8 +150757,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 16.3,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150783,8 +150783,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:22.168Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu modelo de poder valoriza estabilidade, continuidade e controle político mais do que competição aberta entre forças rivais. Nesse eixo, isso aponta para desconfiança da democracia liberal plena e a",
+          "completedAt": "2026-07-15T19:55:48.399Z"
         },
         {
           "unitId": "personality:putin:poder",
@@ -150796,8 +150796,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 95,
+          "delta": 16.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150822,8 +150822,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:22.622Z"
+          "notes": "Subagent isolated audit. Persona brief: A centralização putinista combina aparato de segurança robusto, vigilância e repressão a dissenso em nome da ordem e da estabilidade. Nesse eixo, isso se traduz em ampla tolerância a coerção estatal e",
+          "completedAt": "2026-07-15T19:55:49.529Z"
         },
         {
           "unitId": "personality:putin:imigracao",
@@ -150835,8 +150835,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 77.5,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150861,8 +150861,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:23.074Z"
+          "notes": "Subagent isolated audit. Persona brief: O nacionalismo estatal associado a Putin enfatiza coesão cultural, idioma comum e primazia da identidade nacional sobre pluralismos desagregadores. Nesse eixo, a inclinação é exigir assimilação e desc",
+          "completedAt": "2026-07-15T19:55:50.470Z"
         },
         {
           "unitId": "personality:putin:diplomacia",
@@ -150874,8 +150874,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 90,
+          "delta": 8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150900,8 +150900,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:23.555Z"
+          "notes": "Subagent isolated audit. Persona brief: A afirmação geopolítica do regime e a guerra contra a Ucrânia mostram uma visão em que poder militar é fundamento de respeito internacional. Nesse eixo, a tendência é valorizar dissuasão, indústria bé",
+          "completedAt": "2026-07-15T19:55:51.184Z"
         },
         {
           "unitId": "personality:putin:intervencao",
@@ -150913,8 +150913,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 23.8,
+          "delta": 23.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150939,8 +150939,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:24.036Z"
+          "notes": "Subagent isolated audit. Persona brief: A prática de Putin combina discurso de soberania com disposição para pressionar vizinhos, projetar influência regional e agir quando julga interesses estratégicos ameaçados. Nesse eixo, isso produz fo",
+          "completedAt": "2026-07-15T19:55:51.860Z"
         },
         {
           "unitId": "personality:putin:economia",
@@ -150952,8 +150952,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 63.7,
-          "calculatedValue": 63.7,
-          "delta": 0,
+          "calculatedValue": 55,
+          "delta": -8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -150978,8 +150978,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:24.546Z"
+          "notes": "Subagent isolated audit. Persona brief: O modelo putinista é de capitalismo de Estado nacionalista, com estatais estratégicas, oligarquia domesticada e pouca simpatia por igualitarismo socialista integral. Nesse eixo, isso leva a defender p",
+          "completedAt": "2026-07-15T19:55:52.748Z"
         },
         {
           "unitId": "personality:putin:controle",
@@ -150991,8 +150991,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 71.3,
-          "calculatedValue": 71.3,
-          "delta": 0,
+          "calculatedValue": 81.3,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -151017,8 +151017,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:24.985Z"
+          "notes": "Subagent isolated audit. Persona brief: A economia sob Putin foi dirigida por planejamento estratégico do alto, campeãs nacionais e coordenação estatal de setores decisivos, sem abolir mercado por completo. Nesse eixo, a inclinação é por me",
+          "completedAt": "2026-07-15T19:55:54.019Z"
         },
         {
           "unitId": "personality:putin:comercio",
@@ -151030,8 +151030,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 83.8,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -151056,8 +151056,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:25.441Z"
+          "notes": "Subagent isolated audit. Persona brief: Seu nacionalismo econômico favorece autonomia estratégica, proteção de setores sensíveis e resistência a dependências externas que reduzam soberania. Nesse eixo, a tendência é protecionista, seletiva ",
+          "completedAt": "2026-07-15T19:55:55.293Z"
         },
         {
           "unitId": "personality:putin:religiao",
@@ -151069,8 +151069,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 21.3,
+          "delta": 5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -151095,8 +151095,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:25.896Z"
+          "notes": "Subagent isolated audit. Persona brief: Putin associou o Estado russo à Igreja Ortodoxa como fonte de coesão moral, identidade nacional e legitimidade civilizacional contra o liberalismo ocidental. Nesse eixo, a tendência é religiosa e favo",
+          "completedAt": "2026-07-15T19:55:56.591Z"
         },
         {
           "unitId": "personality:putin:moral",
@@ -151108,8 +151108,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 12.5,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -151134,8 +151134,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:26.320Z"
+          "notes": "Subagent isolated audit. Persona brief: O discurso oficial do regime combina conservadorismo social, defesa da família tradicional e hostilidade a pautas liberais vistas como decadência ocidental. Nesse eixo, a inclinação é claramente tradi",
+          "completedAt": "2026-07-15T19:55:57.696Z"
         },
         {
           "unitId": "personality:putin:tecnologia",
@@ -151147,8 +151147,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 71.3,
-          "calculatedValue": 71.3,
-          "delta": 0,
+          "calculatedValue": 68.8,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -151173,8 +151173,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:50:26.732Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime valoriza poder científico, defesa, energia e capacidade tecnológica do Estado, mas sem aderir a um progressismo bioético ilimitado. Nesse eixo, a tendência é pró-tecnologia estratégica com fr",
+          "completedAt": "2026-07-15T19:55:58.490Z"
         },
         {
           "unitId": "personality:richard-spencer:estrutura",
@@ -152597,8 +152597,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 22.5,
-          "calculatedValue": 22.5,
-          "delta": 0,
+          "calculatedValue": 16.3,
+          "delta": -6.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152623,8 +152623,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:18.654Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd concentrou poder no governo nacional para impor a segregacao racial de forma uniforme e controlar os territorios segregados sem admitir autonomia politica real.",
+          "completedAt": "2026-07-15T19:56:08.310Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:representacao",
@@ -152636,8 +152636,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 21.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152662,8 +152662,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:19.102Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd operou dentro de um sistema eleitoral restrito a minoria branca e tratou exclusao politica da maioria negra como parte legitima da ordem do Estado.",
+          "completedAt": "2026-07-15T19:56:08.980Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:poder",
@@ -152675,8 +152675,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 82.5,
+          "delta": -7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152701,8 +152701,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:19.706Z"
+          "notes": "Subagent isolated audit. Persona brief: O apartheid exigia policiamento intenso, vigilancia e coercao legal para controlar movimento, organizacao politica e dissenso; liberdades civis eram subordinadas a ordem do regime.",
+          "completedAt": "2026-07-15T19:56:09.734Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:imigracao",
@@ -152714,8 +152714,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 92.5,
+          "delta": 92.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152740,8 +152740,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:20.258Z"
+          "notes": "Subagent isolated audit. Persona brief: A visao de Verwoerd era a separacao dos povos por raca e cultura, rejeitando miscigenacao civica e igualdade multicultural em nome do desenvolvimento separado.",
+          "completedAt": "2026-07-15T19:56:10.699Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:diplomacia",
@@ -152753,8 +152753,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152779,8 +152779,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:20.743Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd aceitou crescente isolamento externo para defender o regime e valorizou forca militar e seguranca, embora nao fosse um projeto voltado a conquista territorial aberta.",
+          "completedAt": "2026-07-15T19:56:11.351Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:intervencao",
@@ -152792,8 +152792,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 28.7,
-          "calculatedValue": 28.7,
-          "delta": 0,
+          "calculatedValue": 37.5,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152818,8 +152818,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:21.167Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd reagiu a pressoes de ONU e Commonwealth com defesa rigida da soberania sul-africana, mas aceitava projetar influencia regional quando isso protegia seguranca e interesse nacional.",
+          "completedAt": "2026-07-15T19:56:11.932Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:economia",
@@ -152831,8 +152831,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 41.3,
-          "calculatedValue": 41.3,
-          "delta": 0,
+          "calculatedValue": 31.3,
+          "delta": -10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152857,8 +152857,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:21.592Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd preservou capitalismo hierarquico e propriedade privada, especialmente os privilegios economicos brancos, usando o Estado para ordenar trabalho e desigualdade racial, nao para socializar a ec",
+          "completedAt": "2026-07-15T19:56:12.504Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:controle",
@@ -152870,8 +152870,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 71.3,
-          "calculatedValue": 71.3,
-          "delta": 0,
+          "calculatedValue": 57.5,
+          "delta": -13.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152896,8 +152896,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:22.113Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime de Verwoerd aceitava direcao estatal forte em setores estrategicos e no mercado de trabalho quando isso servia ao projeto nacional e racial, sem abandonar por completo a economia de mercado.",
+          "completedAt": "2026-07-15T19:56:13.068Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:comercio",
@@ -152909,8 +152909,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 73.8,
-          "calculatedValue": 73.8,
-          "delta": 0,
+          "calculatedValue": 70,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152935,8 +152935,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:22.584Z"
+          "notes": "Subagent isolated audit. Persona brief: Sob risco de boicote e isolamento, Verwoerd valorizou autossuficiencia e protecao produtiva interna como forma de blindar o regime e manter capacidade economica nacional.",
+          "completedAt": "2026-07-15T19:56:13.635Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:religiao",
@@ -152948,8 +152948,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 5,
+          "delta": -11.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -152974,8 +152974,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:23.052Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd ancorou o apartheid em linguagem calvinista e tratou a fe crista afrikaner como base moral e identitaria da ordem politica e social.",
+          "completedAt": "2026-07-15T19:56:14.207Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:moral",
@@ -152987,8 +152987,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 7.5,
-          "calculatedValue": 7.5,
-          "delta": 0,
+          "calculatedValue": 5,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153013,8 +153013,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:23.525Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd defendia tradicionalismo social rigido, familia patriarcal, moral crista conservadora e hierarquias raciais e de genero apresentadas como ordem natural.",
+          "completedAt": "2026-07-15T19:56:14.865Z"
         },
         {
           "unitId": "personality:hendrik-verwoerd:tecnologia",
@@ -153026,8 +153026,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 48.8,
-          "calculatedValue": 48.8,
-          "delta": 0,
+          "calculatedValue": 51.2,
+          "delta": 2.4,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153052,8 +153052,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:23.944Z"
+          "notes": "Subagent isolated audit. Persona brief: Verwoerd via modernizacao tecnica e industrial como instrumento de fortalecimento da Africa do Sul branca, mas dentro de limites morais conservadores e de uma visao utilitaria da natureza.",
+          "completedAt": "2026-07-15T19:56:15.737Z"
         },
         {
           "unitId": "personality:irving-kristol:estrutura",
@@ -153533,8 +153533,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153559,8 +153559,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:30.684Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV construiu o absolutismo centralizando o poder na coroa em Versalhes, esmagando o poder feudal e regional da nobreza e das províncias francesas. \"L'État, c'est moi\" resume sua rejeição total a",
+          "completedAt": "2026-07-15T19:55:05.704Z"
         },
         {
           "unitId": "personality:louis-xiv:representacao",
@@ -153572,8 +153572,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 5,
+          "delta": -7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153598,8 +153598,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:31.198Z"
+          "notes": "Subagent isolated audit. Persona brief: Como monarca de direito divino, Luís XIV encarnou a autoridade não eleita e vitalícia, considerando eleições e prestação de contas popular irrelevantes ou perigosas frente à legitimidade sagrada e à c",
+          "completedAt": "2026-07-15T19:55:06.890Z"
         },
         {
           "unitId": "personality:louis-xiv:poder",
@@ -153611,8 +153611,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 93.8,
+          "delta": 15,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153637,8 +153637,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:31.711Z"
+          "notes": "Subagent isolated audit. Persona brief: O Rei Sol governou por meio de vigilância extensa e coerção estatal ampla, submetendo até a nobreza ao controle da corte; a liberdade individual cedia sempre à razão de Estado e à ordem.",
+          "completedAt": "2026-07-15T19:55:07.865Z"
         },
         {
           "unitId": "personality:louis-xiv:imigracao",
@@ -153650,8 +153650,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 90,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153676,8 +153676,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:32.213Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV revogou o Edito de Nantes em 1685, expulsando os huguenotes e impondo uniformidade religiosa e cultural como pilar da unidade nacional francesa, valorizando homogeneidade sobre diversidade.",
+          "completedAt": "2026-07-15T19:55:08.692Z"
         },
         {
           "unitId": "personality:louis-xiv:diplomacia",
@@ -153689,8 +153689,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 88.8,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153715,8 +153715,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:32.654Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV moveu grandes guerras expansionistas e manteve o maior exército permanente da Europa, glorificando o poderio militar como instrumento central de prestígio francês.",
+          "completedAt": "2026-07-15T19:55:09.499Z"
         },
         {
           "unitId": "personality:louis-xiv:intervencao",
@@ -153728,8 +153728,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 8.8,
+          "delta": -3.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153754,8 +153754,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:33.215Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV perseguiu ativamente a hegemonia francesa na Europa, anexando territórios, intervindo em sucessões estrangeiras e subordinando a diplomacia à glória e ao interesse dinástico-nacional da Franç",
+          "completedAt": "2026-07-15T19:55:10.511Z"
         },
         {
           "unitId": "personality:louis-xiv:economia",
@@ -153767,8 +153767,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 75,
-          "calculatedValue": 75,
-          "delta": 0,
+          "calculatedValue": 47.5,
+          "delta": -27.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153793,8 +153793,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:33.695Z"
+          "notes": "Subagent isolated audit. Persona brief: Sob Colbert, Luís XIV promoveu o mercantilismo de Estado, com manufaturas reais, monopólios e forte direção estatal da economia a serviço da coroa, mas sempre preservando a propriedade e os privilégio",
+          "completedAt": "2026-07-15T19:55:11.258Z"
         },
         {
           "unitId": "personality:louis-xiv:controle",
@@ -153806,8 +153806,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 76.3,
+          "delta": -6.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153832,8 +153832,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:34.207Z"
+          "notes": "Subagent isolated audit. Persona brief: O colbertismo de Luís XIV significou planejamento estatal ativo da economia, com subsídio a manufaturas, tarifas protecionistas e regulação detalhada, sem qualquer noção de banco central independente ",
+          "completedAt": "2026-07-15T19:55:11.797Z"
         },
         {
           "unitId": "personality:louis-xiv:comercio",
@@ -153845,8 +153845,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 91.3,
+          "delta": 11.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153871,8 +153871,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:34.747Z"
+          "notes": "Subagent isolated audit. Persona brief: A política econômica de Luís XIV, guiada por Colbert, foi um mercantilismo protecionista clássico: tarifas altas contra manufaturas estrangeiras, subsídio à indústria nacional e busca de autossuficiên",
+          "completedAt": "2026-07-15T19:55:12.379Z"
         },
         {
           "unitId": "personality:louis-xiv:religiao",
@@ -153884,8 +153884,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 5,
-          "calculatedValue": 5,
-          "delta": 0,
+          "calculatedValue": 2.5,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153910,8 +153910,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:35.237Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV foi o Rei muito Cristão, defensor do catolicismo de Estado, que revogou o Edito de Nantes para impor a unidade religiosa católica e governou sob a doutrina do direito divino dos reis, unindo ",
+          "completedAt": "2026-07-15T19:55:13.107Z"
         },
         {
           "unitId": "personality:louis-xiv:moral",
@@ -153923,8 +153923,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 7.5,
-          "calculatedValue": 7.5,
-          "delta": 0,
+          "calculatedValue": 8.8,
+          "delta": 1.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153949,8 +153949,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:35.760Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV presidiu uma sociedade profundamente hierárquica e tradicional, com a família patriarcal, o casamento católico e os papéis de gênero rígidos como pilares morais, apesar da tolerância cortesã ",
+          "completedAt": "2026-07-15T19:55:13.780Z"
         },
         {
           "unitId": "personality:louis-xiv:tecnologia",
@@ -153962,8 +153962,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 46.3,
-          "calculatedValue": 46.3,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": 20,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -153988,8 +153988,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:36.494Z"
+          "notes": "Subagent isolated audit. Persona brief: Luís XIV patrocinou ciência e engenharia a serviço da glória do Estado, como academias, fortificações e obras monumentais, vendo o progresso técnico como instrumento de poder e magnificência, não como",
+          "completedAt": "2026-07-15T19:55:15.081Z"
         },
         {
           "unitId": "personality:salazar:estrutura",
@@ -154001,8 +154001,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 25,
-          "calculatedValue": 25,
-          "delta": 0,
+          "calculatedValue": 7.5,
+          "delta": -17.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154027,8 +154027,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:37.159Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar construiu o Estado Novo como um regime unitário e centralizador, desconfiando de autonomias locais que pudessem fragmentar a autoridade nacional. Sua ideia de ordem política passava por comand",
+          "completedAt": "2026-07-15T19:56:35.061Z"
         },
         {
           "unitId": "personality:salazar:representacao",
@@ -154040,8 +154040,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154066,8 +154066,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:38.035Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar rejeitava a democracia liberal de massas e o pluralismo partidário, preferindo um governo autoritário de técnicos, elites sociais e instituições controladas. Para ele, ordem, competência e est",
+          "completedAt": "2026-07-15T19:56:35.711Z"
         },
         {
           "unitId": "personality:salazar:poder",
@@ -154079,8 +154079,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 92.5,
+          "delta": 13.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154105,8 +154105,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:39.410Z"
+          "notes": "Subagent isolated audit. Persona brief: O Estado Novo combinou censura, polícia política e repressão sistemática para preservar a ordem, a moral e a autoridade do regime. Liberdades civis eram subordinadas à segurança do Estado e à discipli",
+          "completedAt": "2026-07-15T19:56:36.281Z"
         },
         {
           "unitId": "personality:salazar:imigracao",
@@ -154118,8 +154118,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 87.5,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154144,8 +154144,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:40.540Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar via a nação como uma comunidade histórica, católica e disciplinada, na qual estrangeiros deveriam adaptar-se à cultura dominante. Cosmopolitismo, fronteiras abertas e relativização da identida",
+          "completedAt": "2026-07-15T19:56:36.819Z"
         },
         {
           "unitId": "personality:salazar:diplomacia",
@@ -154157,8 +154157,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 71.3,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154183,8 +154183,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:41.502Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar praticou neutralidade cautelosa quando isso preservava o regime, mas valorizava forças armadas disciplinadas para defender soberania e império. Sua diplomacia era prudente, sem pacifismo de pr",
+          "completedAt": "2026-07-15T19:56:37.354Z"
         },
         {
           "unitId": "personality:salazar:intervencao",
@@ -154196,8 +154196,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 27.5,
+          "delta": 11.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154222,8 +154222,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:42.195Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar defendia rigidamente soberania e interesse nacional, resistindo a pressões externas contra Portugal e seu império. Ao mesmo tempo, desconfiava de alianças permanentes e de intervenções moralis",
+          "completedAt": "2026-07-15T19:56:37.893Z"
         },
         {
           "unitId": "personality:salazar:economia",
@@ -154235,8 +154235,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 72.5,
-          "calculatedValue": 72.5,
-          "delta": 0,
+          "calculatedValue": 47.5,
+          "delta": -25,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154261,8 +154261,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:42.835Z"
+          "notes": "Subagent isolated audit. Persona brief: O salazarismo combinou propriedade privada, disciplina fiscal e corporativismo, subordinando capital e trabalho ao interesse nacional sob tutela estatal. Não era socialismo, mas tampouco aceitava um l",
+          "completedAt": "2026-07-15T19:56:38.413Z"
         },
         {
           "unitId": "personality:salazar:controle",
@@ -154274,8 +154274,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 75,
+          "delta": -7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154300,8 +154300,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:43.511Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar dirigiu uma economia corporativista, regulada e prudente, com controle cambial, tutela sobre setores estratégicos e grande desconfiança do mercado deixado sozinho. Ainda assim, preferia direçã",
+          "completedAt": "2026-07-15T19:56:38.955Z"
         },
         {
           "unitId": "personality:salazar:comercio",
@@ -154313,8 +154313,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 86.3,
+          "delta": 6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154339,8 +154339,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:44.098Z"
+          "notes": "Subagent isolated audit. Persona brief: O regime salazarista foi protecionista e inclinou-se à autarcia, defendendo produção nacional, compras patrióticas e cautela com dependência externa. Soberania econômica pesava mais do que integração ",
+          "completedAt": "2026-07-15T19:56:39.478Z"
         },
         {
           "unitId": "personality:salazar:religiao",
@@ -154352,8 +154352,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 5,
-          "calculatedValue": 5,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154378,8 +154378,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:45.155Z"
+          "notes": "Subagent isolated audit. Persona brief: Católico devoto, Salazar fez da religião um dos pilares simbólicos e morais do Estado Novo, articulando ordem política com tradição cristã. A fé, para ele, não era apenas privada, mas parte da identid",
+          "completedAt": "2026-07-15T19:56:39.990Z"
         },
         {
           "unitId": "personality:salazar:moral",
@@ -154391,8 +154391,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 7.5,
-          "calculatedValue": 7.5,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -3.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154417,8 +154417,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:46.160Z"
+          "notes": "Subagent isolated audit. Persona brief: O salazarismo exaltava Deus, Pátria e Família, defendendo hierarquia doméstica, papéis sexuais tradicionais e censura de costumes vistos como dissolventes. Mudanças rápidas na moral social seriam trat",
+          "completedAt": "2026-07-15T19:56:40.586Z"
         },
         {
           "unitId": "personality:salazar:tecnologia",
@@ -154430,8 +154430,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 31.3,
-          "calculatedValue": 31.3,
-          "delta": 0,
+          "calculatedValue": 27.5,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -154456,8 +154456,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:53:47.074Z"
+          "notes": "Subagent isolated audit. Persona brief: Salazar valorizava uma sociedade rural, sóbria e tradicional, desconfiando de modernizações aceleradas que corroessem costumes, hierarquias e estabilidade social. Seu instinto seria aceitar técnica út",
+          "completedAt": "2026-07-15T19:56:41.127Z"
         },
         {
           "unitId": "personality:viktor-orban:estrutura",
@@ -155412,8 +155412,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 17.5,
+          "delta": 17.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155438,8 +155438,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:37.223Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini fundiu teocracia e Estado sob o governo do jurista religioso, concentrando autoridade suprema numa lideranÃ§a religiosa central que subordina governos locais e instituiÃ§Ãµes ao comando nacio",
+          "completedAt": "2026-07-15T19:56:23.122Z"
         },
         {
           "unitId": "personality:khomeini:representacao",
@@ -155451,8 +155451,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 17.5,
+          "delta": 5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155477,8 +155477,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:37.683Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini instituiu o governo do jurista religioso como autoridade final acima das eleiÃ§Ãµes, tornando a soberania popular subordinada Ã  soberania divina interpretada pelo clero.",
+          "completedAt": "2026-07-15T19:56:23.682Z"
         },
         {
           "unitId": "personality:khomeini:poder",
@@ -155490,8 +155490,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 91.3,
+          "delta": 1.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155516,8 +155516,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:38.146Z"
+          "notes": "Subagent isolated audit. Persona brief: Sob Khomeini, a repÃºblica islÃ¢mica usou censura, vigilÃ¢ncia e coerÃ§Ã£o extensivas para impor a ordem revolucionÃ¡ria e a lei islÃ¢mica, reprimindo oposiÃ§Ã£o polÃ­tica e costumes considerados desv",
+          "completedAt": "2026-07-15T19:56:24.257Z"
         },
         {
           "unitId": "personality:khomeini:imigracao",
@@ -155529,8 +155529,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 83.8,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155555,8 +155555,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:38.594Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini tratava a identidade islÃ¢mica xiita como base de coesÃ£o nacional e revolucionÃ¡ria, valorizando a preservaÃ§Ã£o cultural e religiosa local contra cosmopolitismo secular e influÃªncia ociden",
+          "completedAt": "2026-07-15T19:56:24.817Z"
         },
         {
           "unitId": "personality:khomeini:diplomacia",
@@ -155568,8 +155568,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 77.5,
+          "delta": 10,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155594,8 +155594,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:39.023Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini transformou o IrÃ£ numa potÃªncia revolucionÃ¡ria hostil ao Ocidente e sustentou uma guerra longa contra o Iraque, combinando retÃ³rica anti-imperialista com forte disposiÃ§Ã£o ao confronto a",
+          "completedAt": "2026-07-15T19:56:25.468Z"
         },
         {
           "unitId": "personality:khomeini:intervencao",
@@ -155607,8 +155607,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 30,
+          "delta": 13.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155633,8 +155633,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:39.552Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini buscou projetar o IrÃ£ como centro de uma revoluÃ§Ã£o islÃ¢mica transnacional, rejeitando subordinaÃ§Ã£o Ã s superpotÃªncias e defendendo soberania e influÃªncia regional assertivas.",
+          "completedAt": "2026-07-15T19:56:26.071Z"
         },
         {
           "unitId": "personality:khomeini:economia",
@@ -155646,8 +155646,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 63.7,
-          "calculatedValue": 63.7,
-          "delta": 0,
+          "calculatedValue": 67.5,
+          "delta": 3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155672,8 +155672,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:40.069Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini combinou nacionalizaÃ§Ãµes revolucionÃ¡rias em setores estratÃ©gicos com aceitaÃ§Ã£o limitada da propriedade privada sob moldura islÃ¢mica, produzindo uma economia mista fortemente tutelada p",
+          "completedAt": "2026-07-15T19:56:26.667Z"
         },
         {
           "unitId": "personality:khomeini:controle",
@@ -155685,8 +155685,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 80,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155711,8 +155711,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:40.544Z"
+          "notes": "Subagent isolated audit. Persona brief: A repÃºblica islÃ¢mica de Khomeini planejou e dirigiu setores estratÃ©gicos para defender soberania e justiÃ§a social segundo sua visÃ£o islÃ¢mica, rejeitando a lÃ³gica do livre mercado irrestrito ass",
+          "completedAt": "2026-07-15T19:56:27.236Z"
         },
         {
           "unitId": "personality:khomeini:comercio",
@@ -155724,8 +155724,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 86.3,
+          "delta": 6.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155750,8 +155750,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:41.003Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini defendia autossuficiÃªncia e desconfiava da dependÃªncia econÃ´mica de potÃªncias estrangeiras, buscando proteger soberania nacional e setores estratÃ©gicos contra influÃªncia externa.",
+          "completedAt": "2026-07-15T19:56:27.822Z"
         },
         {
           "unitId": "personality:khomeini:religiao",
@@ -155763,8 +155763,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 3.8,
-          "calculatedValue": 3.8,
-          "delta": 0,
+          "calculatedValue": 0,
+          "delta": -3.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155789,8 +155789,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:41.452Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini encarnou a fusÃ£o mÃ¡xima entre religiÃ£o e Estado, fundando uma teocracia em que a jurisprudÃªncia islÃ¢mica xiita Ã© a fonte suprema da legitimidade polÃ­tica e legal.",
+          "completedAt": "2026-07-15T19:56:28.452Z"
         },
         {
           "unitId": "personality:khomeini:moral",
@@ -155802,8 +155802,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 8.8,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155828,8 +155828,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:41.977Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini impÃ´s uma moral islÃ¢mica xiita rigorosa sobre famÃ­lia, sexualidade e costumes, revertendo liberalizaÃ§Ãµes anteriores e subordinando a vida social Ã  sharia.",
+          "completedAt": "2026-07-15T19:56:29.023Z"
         },
         {
           "unitId": "personality:khomeini:tecnologia",
@@ -155841,8 +155841,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 31.3,
-          "calculatedValue": 31.3,
-          "delta": 0,
+          "calculatedValue": 40,
+          "delta": 8.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -155867,8 +155867,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T01:59:42.445Z"
+          "notes": "Subagent isolated audit. Persona brief: Khomeini nÃ£o rejeitava tecnologia Ãºtil ao poder do Estado e Ã  revoluÃ§Ã£o, mas subordinava inovaÃ§Ã£o aos limites religiosos e via o modo de vida tradicional como moralmente superior ao materialism",
+          "completedAt": "2026-07-15T19:56:29.594Z"
         },
         {
           "unitId": "personality:jabotinsky:estrutura",
@@ -157291,8 +157291,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 7.5,
+          "delta": 7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157317,8 +157317,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:14.007Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico construiu um Estado cameralista com burocracia disciplinada e financas centralizadas, comandado diretamente pela Coroa. Autonomias locais eram aceitaveis apenas se servissem ao interesse do ",
+          "completedAt": "2026-07-15T19:57:53.012Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:representacao",
@@ -157330,8 +157330,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 10,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157356,8 +157356,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:14.462Z"
+          "notes": "Subagent isolated audit. Persona brief: Como monarca absoluto e expoente do despotismo esclarecido, Frederico via a boa governanca como obra de um soberano capaz e de servidores meritocraticos. A legitimidade vinha do desempenho do Estado, ",
+          "completedAt": "2026-07-15T19:57:53.579Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:poder",
@@ -157369,8 +157369,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 78.8,
-          "calculatedValue": 78.8,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": -12.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157395,8 +157395,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:14.929Z"
+          "notes": "Subagent isolated audit. Persona brief: A ordem prussiana de Frederico dependia de disciplina, hierarquia e capacidade coercitiva do Estado. Ao mesmo tempo, seu iluminismo o tornava menos hostil a algumas liberdades de consciencia e de expr",
+          "completedAt": "2026-07-15T19:57:54.131Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:imigracao",
@@ -157408,8 +157408,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": 60,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157434,8 +157434,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:15.407Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico acolhia imigrantes e minorias religiosas quando isso aumentava populacao, producao e receita do reino. Essa abertura era pragmatica e assimiladora, nao uma celebracao abstrata do multicultur",
+          "completedAt": "2026-07-15T19:57:54.665Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:diplomacia",
@@ -157447,8 +157447,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 81.3,
-          "calculatedValue": 81.3,
-          "delta": 0,
+          "calculatedValue": 86.3,
+          "delta": 5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157473,8 +157473,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:15.830Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico transformou a Prussia em grande potencia por meio de um exercito altamente disciplinado, guerras calculadas e dissuasao. Para ele, prestigio internacional dependia da capacidade real de luta",
+          "completedAt": "2026-07-15T19:57:55.215Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:intervencao",
@@ -157486,8 +157486,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 21.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157512,8 +157512,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:16.342Z"
+          "notes": "Subagent isolated audit. Persona brief: A politica externa de Frederico era abertamente orientada por interesse de Estado, equilibrio de poder e oportunidade estrategica. Influenciar vizinhos e agir com firmeza eram instrumentos normais do ",
+          "completedAt": "2026-07-15T19:57:55.812Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:economia",
@@ -157525,8 +157525,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 75,
-          "calculatedValue": 75,
-          "delta": 0,
+          "calculatedValue": 52.5,
+          "delta": -22.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157551,8 +157551,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:16.826Z"
+          "notes": "Subagent isolated audit. Persona brief: O cameralismo fredericiano usava a economia como base fiscal e militar do Estado, protegendo setores uteis e dirigindo a administracao. Ainda assim, preservava propriedade privada, hierarquia social e",
+          "completedAt": "2026-07-15T19:57:56.384Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:controle",
@@ -157564,8 +157564,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 75,
+          "delta": -7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157590,8 +157590,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:17.306Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico foi um dos exemplos classicos de dirigismo cameralista: o governo planejava, subsidiava, regulava e coordenava setores chave para reforcar o exercito, a receita e a autossuficiencia do reino",
+          "completedAt": "2026-07-15T19:57:56.996Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:comercio",
@@ -157603,8 +157603,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 77.5,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157629,8 +157629,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:17.757Z"
+          "notes": "Subagent isolated audit. Persona brief: Como soberano do seculo XVIII, Frederico via o comercio internacional pelo prisma mercantilista: proteger manufaturas, garantir suprimentos estrategicos e usar tarifas para fortalecer o poder nacional",
+          "completedAt": "2026-07-15T19:57:57.575Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:religiao",
@@ -157642,8 +157642,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 95,
-          "calculatedValue": 95,
-          "delta": 0,
+          "calculatedValue": 63.7,
+          "delta": -31.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157668,8 +157668,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:18.173Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico era um monarca iluminista e pessoalmente cÃ©tico, famoso pela tolerancia religiosa utilitaria do Estado prussiano. Defendia conviccao privada e neutralidade relativa do governo, sem querer a",
+          "completedAt": "2026-07-15T19:57:58.212Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:moral",
@@ -157681,8 +157681,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 63.7,
-          "calculatedValue": 63.7,
-          "delta": 0,
+          "calculatedValue": 41.3,
+          "delta": -22.4,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157707,8 +157707,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:18.692Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico combinava irreverencia iluminista em assuntos pessoais com um governo comprometido com ordem social, disciplina e papeis tradicionais. Nao seria um moralista clerical, mas tampouco um progre",
+          "completedAt": "2026-07-15T19:57:59.169Z"
         },
         {
           "unitId": "personality:frederico-ii-da-prussia:tecnologia",
@@ -157720,8 +157720,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 62.5,
-          "calculatedValue": 62.5,
-          "delta": 0,
+          "calculatedValue": 58.8,
+          "delta": -3.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157746,8 +157746,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:19.147Z"
+          "notes": "Subagent isolated audit. Persona brief: Frederico promovia ciencia aplicada, agricultura moderna, obras publicas, engenharia e inovacao militar como instrumentos de progresso estatal. Seu instinto seria racionalista e pro-tecnica, embora se",
+          "completedAt": "2026-07-15T19:57:59.848Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:estrutura",
@@ -157759,8 +157759,8 @@
           "axisId": "estrutura",
           "status": "done",
           "currentValue": 0,
-          "calculatedValue": 0,
-          "delta": 0,
+          "calculatedValue": 15,
+          "delta": 15,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157785,8 +157785,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:19.615Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre defendia a autoridade centralizada da monarquia tradicional como fonte de unidade e ordem, vendo a fragmentacao do poder como caminho para o caos revolucionario.",
+          "completedAt": "2026-07-15T19:57:35.155Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:representacao",
@@ -157798,8 +157798,8 @@
           "axisId": "representacao",
           "status": "done",
           "currentValue": 12.5,
-          "calculatedValue": 12.5,
-          "delta": 0,
+          "calculatedValue": 6.3,
+          "delta": -6.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157824,8 +157824,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:20.085Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre rejeitava a soberania popular como base da legitimidade e via a autoridade como derivada de Deus, da tradicao e da monarquia hereditaria, nao do voto.",
+          "completedAt": "2026-07-15T19:57:35.850Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:poder",
@@ -157837,8 +157837,8 @@
           "axisId": "poder",
           "status": "done",
           "currentValue": 90,
-          "calculatedValue": 90,
-          "delta": 0,
+          "calculatedValue": 82.5,
+          "delta": -7.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157863,8 +157863,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:20.617Z"
+          "notes": "Subagent isolated audit. Persona brief: Para Maistre, a ordem social depende da coercao legitima do Estado e de punicoes exemplares; liberdade civil ampla sem autoridade forte lhe pareceria dissolvente.",
+          "completedAt": "2026-07-15T19:57:36.513Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:imigracao",
@@ -157876,8 +157876,8 @@
           "axisId": "imigracao",
           "status": "done",
           "currentValue": 80,
-          "calculatedValue": 80,
-          "delta": 0,
+          "calculatedValue": 78.8,
+          "delta": -1.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157902,8 +157902,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:21.098Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre valorizava profundamente as tradicoes, linguas e costumes particulares de cada nacao e desconfiava de visoes universalistas que dissolvessem identidades historicas.",
+          "completedAt": "2026-07-15T19:57:37.092Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:diplomacia",
@@ -157915,8 +157915,8 @@
           "axisId": "diplomacia",
           "status": "done",
           "currentValue": 67.5,
-          "calculatedValue": 67.5,
-          "delta": 0,
+          "calculatedValue": 76.3,
+          "delta": 8.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157941,8 +157941,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:21.558Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre via a guerra e a forca militar como elementos permanentes da historia humana e instrumentos de preservacao da ordem, nao como males sempre evitaveis.",
+          "completedAt": "2026-07-15T19:57:37.657Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:intervencao",
@@ -157954,8 +157954,8 @@
           "axisId": "intervencao",
           "status": "done",
           "currentValue": 16.3,
-          "calculatedValue": 16.3,
-          "delta": 0,
+          "calculatedValue": 31.3,
+          "delta": 15,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -157980,8 +157980,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:22.060Z"
+          "notes": "Subagent isolated audit. Persona brief: Como pensador contra o universalismo revolucionario, Maistre tratava a politica externa como defesa firme da soberania e dos interesses do Estado, nao como submissao a normas abstratas internacionais.",
+          "completedAt": "2026-07-15T19:57:38.253Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:economia",
@@ -157993,8 +157993,8 @@
           "axisId": "economia",
           "status": "done",
           "currentValue": 72.5,
-          "calculatedValue": 72.5,
-          "delta": 0,
+          "calculatedValue": 35,
+          "delta": -37.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158019,8 +158019,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:22.536Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre defendia a ordem social hierarquica, incluindo propriedade aristocratica e eclesiastica, e rejeitava a redistribuicao revolucionaria que destruia corpos intermediarios e herdancas historicas.",
+          "completedAt": "2026-07-15T19:57:38.799Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:controle",
@@ -158032,8 +158032,8 @@
           "axisId": "controle",
           "status": "done",
           "currentValue": 82.5,
-          "calculatedValue": 82.5,
-          "delta": 0,
+          "calculatedValue": 66.3,
+          "delta": -16.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158058,8 +158058,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:23.033Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre nao era um liberal de mercado: aceitava direcao soberana sobre a vida economica quando isso preservasse ordem, hierarquia e interesse politico, sem aderir ao igualitarismo planificador moderno",
+          "completedAt": "2026-07-15T19:57:39.381Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:comercio",
@@ -158071,8 +158071,8 @@
           "axisId": "comercio",
           "status": "done",
           "currentValue": 73.8,
-          "calculatedValue": 73.8,
-          "delta": 0,
+          "calculatedValue": 76.3,
+          "delta": 2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158097,8 +158097,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:23.547Z"
+          "notes": "Subagent isolated audit. Persona brief: Sua hostilidade ao cosmopolitismo abstrato o inclinava a preferir soberania economica e protecao dos interesses nacionais acima de integracao comercial sem freios.",
+          "completedAt": "2026-07-15T19:57:39.987Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:religiao",
@@ -158110,8 +158110,8 @@
           "axisId": "religiao",
           "status": "done",
           "currentValue": 3.8,
-          "calculatedValue": 3.8,
-          "delta": 0,
+          "calculatedValue": 1.3,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158136,8 +158136,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:23.997Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre foi um dos grandes teoricos da alianca entre trono e altar e defendia a religiao catolica como fundamento indispensavel da ordem social e politica.",
+          "completedAt": "2026-07-15T19:57:40.635Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:moral",
@@ -158149,8 +158149,8 @@
           "axisId": "moral",
           "status": "done",
           "currentValue": 6.3,
-          "calculatedValue": 6.3,
-          "delta": 0,
+          "calculatedValue": 3.8,
+          "delta": -2.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158175,8 +158175,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:24.442Z"
+          "notes": "Subagent isolated audit. Persona brief: Maistre encarnava um tradicionalismo social radical, tratando familia, hierarquia sexual e costumes herdados como bases morais que a modernidade corroia.",
+          "completedAt": "2026-07-15T19:57:41.241Z"
         },
         {
           "unitId": "personality:joseph-de-maistre:tecnologia",
@@ -158188,8 +158188,8 @@
           "axisId": "tecnologia",
           "status": "done",
           "currentValue": 3.8,
-          "calculatedValue": 3.8,
-          "delta": 0,
+          "calculatedValue": 30,
+          "delta": 26.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -158214,8 +158214,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": "Batch audit (genuine per-question simulation grounded in documented views/actions)",
-          "completedAt": "2026-07-14T02:02:24.893Z"
+          "notes": "Subagent isolated audit. Persona brief: Embora anterior a quase toda tecnologia moderna, Maistre desconfiava da hybris racionalista e tenderia a rejeitar intervencoes tecnicas que violassem limites naturais, corporais ou divinos.",
+          "completedAt": "2026-07-15T19:57:41.833Z"
         },
         {
           "unitId": "personality:aleksandr-dugin:estrutura",
@@ -194830,7 +194830,7 @@
     },
     {
       "batchId": "FQA084",
-      "status": "pending",
+      "status": "in_progress",
       "profileCount": 5,
       "units": [
         {
@@ -194841,10 +194841,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "estrutura",
-          "status": "pending",
+          "status": "done",
           "currentValue": 80,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 98.8,
+          "delta": 18.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -194869,7 +194869,8 @@
             "estrutura_19",
             "estrutura_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Heywood rejeitava a centraliza��o estatal e veria a autonomia local como prote��o contra o poder pol�tico concentrado. Sua inclina��o anarquista favorece comunidades e associa��es livres acima de coma",
+          "completedAt": "2026-07-15T19:43:52.260Z"
         },
         {
           "unitId": "personality:ezra-heywood:representacao",
@@ -194879,10 +194880,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "representacao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 84,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 85,
+          "delta": 1,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -194907,7 +194908,8 @@
             "representacao_19",
             "representacao_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Como anarquista individualista, Heywood desconfiava de governantes profissionais e de poder n�o consentido. Ainda assim, preferiria formas amplas de participa��o, cr�tica e autogoverno a qualquer auto",
+          "completedAt": "2026-07-15T19:43:52.983Z"
         },
         {
           "unitId": "personality:ezra-heywood:poder",
@@ -194917,10 +194919,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "poder",
-          "status": "pending",
+          "status": "done",
           "currentValue": 14,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 3.8,
+          "delta": -10.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -194945,7 +194947,8 @@
             "poder_19",
             "poder_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Heywood defendia liberdade sexual e civil contra coer��o moral e policial do Estado. Isso o colocaria fortemente contra vigil�ncia, censura e puni��es exemplares, e a favor da ampla autonomia de adult",
+          "completedAt": "2026-07-15T19:43:53.676Z"
         },
         {
           "unitId": "personality:ezra-heywood:imigracao",
@@ -194955,10 +194958,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "imigracao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 62,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 12.5,
+          "delta": -49.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -194983,7 +194986,8 @@
             "imigracao_19",
             "imigracao_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: O universalismo individualista de Heywood pesa mais para a liberdade de circula��o e conviv�ncia do que para fronteiras culturais r�gidas. Ele tenderia a julgar pessoas por sua conduta e respeito � li",
+          "completedAt": "2026-07-15T19:43:54.405Z"
         },
         {
           "unitId": "personality:ezra-heywood:diplomacia",
@@ -194993,10 +194997,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "diplomacia",
-          "status": "pending",
+          "status": "done",
           "currentValue": 22,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 5,
+          "delta": -17,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195021,7 +195025,8 @@
             "diplomacia_19",
             "diplomacia_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: A hostilidade de Heywood ao Estado e � coer��o organizada o inclinaria ao antimilitarismo e ao pacifismo. Ele veria arsenais, conscri��o e guerras preventivas como extens�es violentas do mesmo poder q",
+          "completedAt": "2026-07-15T19:43:55.088Z"
         },
         {
           "unitId": "personality:ezra-heywood:intervencao",
@@ -195031,10 +195036,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "intervencao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 78,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 96.3,
+          "delta": 18.3,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195059,7 +195064,8 @@
             "intervencao_19",
             "intervencao_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Por princ�pio, Heywood rejeitaria a ideia de um Estado projetando poder sobre outros povos. Sua pol�tica externa tenderia ao n�o intervencionismo, � neutralidade e � cr�tica de san��es, bases e inger�",
+          "completedAt": "2026-07-15T19:43:55.744Z"
         },
         {
           "unitId": "personality:ezra-heywood:economia",
@@ -195069,10 +195075,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "economia",
-          "status": "pending",
+          "status": "done",
           "currentValue": 32,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 26.3,
+          "delta": -5.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195097,7 +195103,8 @@
             "economia_19",
             "economia_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Heywood combinava mercado livre antimonopolista com rep�dio ao Estado e aos privil�gios legais. Isso o aproxima de propriedade e troca volunt�ria, mas tamb�m de forte cr�tica � concentra��o econ�mica ",
+          "completedAt": "2026-07-15T19:43:56.375Z"
         },
         {
           "unitId": "personality:ezra-heywood:controle",
@@ -195107,10 +195114,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "controle",
-          "status": "pending",
+          "status": "done",
           "currentValue": 24,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 6.3,
+          "delta": -17.7,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195135,7 +195142,8 @@
             "controle_19",
             "controle_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: No eixo de dire��o econ�mica, Heywood ficaria no polo do mercado livre e da concorr�ncia sem monop�lios estatais. Ele rejeitaria banco central, planejamento, controles e privil�gios oficiais como dist",
+          "completedAt": "2026-07-15T19:43:57.000Z"
         },
         {
           "unitId": "personality:ezra-heywood:comercio",
@@ -195145,10 +195153,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "comercio",
-          "status": "pending",
+          "status": "done",
           "currentValue": 26,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 8.8,
+          "delta": -17.2,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195173,7 +195181,8 @@
             "comercio_19",
             "comercio_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Seu livre-mercadismo antimonopolista favoreceria circula��o aberta de bens e capital sem barreiras nacionais artificiais. Heywood tenderia a ver tarifas e prote��o estatal como privil�gios a produtore",
+          "completedAt": "2026-07-15T19:43:57.668Z"
         },
         {
           "unitId": "personality:ezra-heywood:religiao",
@@ -195183,10 +195192,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "religiao",
-          "status": "pending",
+          "status": "done",
           "currentValue": 68,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 88.8,
+          "delta": 20.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195211,7 +195220,8 @@
             "religiao_19",
             "religiao_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: A defesa heywoodiana da liberdade sexual e civil o colocava em choque com moralismos religiosos impostos por lei. Ele tenderia a um secularismo firme, preservando a cren�a como escolha privada e recus",
+          "completedAt": "2026-07-15T19:43:58.309Z"
         },
         {
           "unitId": "personality:ezra-heywood:moral",
@@ -195221,10 +195231,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "moral",
-          "status": "pending",
+          "status": "done",
           "currentValue": 96,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 82.5,
+          "delta": -13.5,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195249,7 +195259,8 @@
             "moral_19",
             "moral_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Heywood foi um defensor expl�cito da emancipa��o das mulheres e da liberdade sexual contra os costumes vitorianos. Nesse eixo, ele tenderia fortemente ao progressismo moral, � autonomia pessoal e � cr",
+          "completedAt": "2026-07-15T19:43:58.990Z"
         },
         {
           "unitId": "personality:ezra-heywood:tecnologia",
@@ -195259,10 +195270,10 @@
           "name": "Ezra Heywood",
           "category": "",
           "axisId": "tecnologia",
-          "status": "pending",
+          "status": "done",
           "currentValue": 58,
-          "calculatedValue": null,
-          "delta": null,
+          "calculatedValue": 73.8,
+          "delta": 15.8,
           "sourceProfileFile": "backend/src/main/resources/data/personality-profiles.json",
           "sourceMetaFile": "backend/src/main/resources/data/personalities.json",
           "questionIds": [
@@ -195287,7 +195298,8 @@
             "tecnologia_19",
             "tecnologia_20"
           ],
-          "notes": ""
+          "notes": "Subagent isolated audit. Persona brief: Heywood n�o foi um pensador tecnol�gico no sentido contempor�neo, mas sua confian�a na emancipa��o individual e no progresso humano o aproximaria de uma atitude favor�vel � inova��o quando ela amplia ",
+          "completedAt": "2026-07-15T19:43:59.772Z"
         },
         {
           "unitId": "personality:randolph-bourne:estrutura",

@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "O integralismo pregava um Estado unitário e forte, com o lema 'Deus, Pátria e Família' apontando para unidade nacional acima de qualquer fragmentação regional. Salgado via o Brasil como uma nação orgânica indivisível, hostil a autonomias que enfraquecessem o comando central.",
+    "personaBrief": "O integralismo pregava um Estado unitário e forte, com a unidade nacional acima de autonomias regionais ou locais. Salgado via o Brasil como uma nação orgânica indivisível, hostil a fragmentações que enfraquecessem o comando central.",
     "answers": {
       "estrutura_12": "C",
       "estrutura_14": "CT",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "Salgado propôs o 'Estado Integral', corporativista e hierárquico, com um chefe nacional acima da disputa partidária liberal, considerada fonte de divisão e fraqueza. O integralismo rejeitava o liberalismo parlamentar em favor de um comando forte e de representação por classes/corporações, não por eleições livres competitivas.",
+    "personaBrief": "Salgado propôs o Estado Integral, corporativista e hierárquico, com um chefe nacional acima da disputa partidária liberal. O integralismo rejeitava o parlamentarismo competitivo em favor de comando forte e representação orgânica por corporações.",
     "answers": {
       "representacao_13": "DT",
       "representacao_15": "D",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "O integralismo tinha estética paramilitar (camisas-verdes), disciplina de massas e forte repressão a inimigos ideológicos (sobretudo o comunismo), combinada com moralismo tradicionalista sobre costumes privados. Ordem, autoridade e combate a 'elementos desagregadores' vinham antes de liberdades civis individuais.",
+    "personaBrief": "O integralismo tinha estética paramilitar, disciplina de massas e forte repressão a inimigos ideológicos, sobretudo o comunismo, combinadas com moralismo conservador nos costumes. Ordem e autoridade vinham antes de liberdades civis individuais.",
     "answers": {
       "poder_18": "D",
       "poder_12": "DT",
@@ -64,18 +64,18 @@
       "poder_06": "DT",
       "poder_17": "C",
       "poder_01": "C",
-      "poder_10": "C",
+      "poder_10": "CT",
       "poder_15": "C",
       "poder_19": "C",
       "poder_13": "C",
       "poder_11": "CT",
-      "poder_09": "C",
+      "poder_09": "D",
       "poder_08": "DT",
       "poder_04": "D"
     }
   },
   "imigracao": {
-    "personaBrief": "O integralismo exaltava a formação étnico-cultural brasileira ('a raça brasileira', síntese de português, índio e negro) como identidade nacional fixa a ser preservada, exigindo assimilação plena de qualquer elemento estrangeiro e rejeitando o cosmopolitismo. A unidade cultural nacional era pilar do lema 'Pátria'.",
+    "personaBrief": "O integralismo exaltava a identidade nacional brasileira como algo a ser preservado e exigia assimilação plena de elementos estrangeiros, rejeitando o cosmopolitismo. A unidade cultural era um pilar do ideal de Pátria.",
     "answers": {
       "imigracao_08": "DT",
       "imigracao_06": "D",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "A estética integralista era militarizada e nacionalista, valorizando as Forças Armadas como pilar da grandeza nacional e a disciplina marcial como formadora de caráter cívico, num contexto de admiração pelos regimes fascistas europeus dos anos 1930. Isso não significava belicismo irrestrito, mas sim força como garantia de respeito e soberania.",
+    "personaBrief": "A estética integralista era militarizada e nacionalista, valorizando as Forças Armadas como instrumento de respeito, soberania e disciplina cívica. Isso sugere apreço por força e prontidão, sem pacifismo de princípio.",
     "answers": {
       "diplomacia_18": "DT",
       "diplomacia_05": "CT",
@@ -125,7 +125,7 @@
     }
   },
   "intervencao": {
-    "personaBrief": "O nacionalismo integralista buscava grandeza e soberania para o Brasil, com forte defesa do interesse nacional em detrimento de organismos internacionais ou pressões externas, mas sem vocação expansionista para além da América do Sul. A prioridade era a afirmação orgulhosa da nação, não o isolamento nem o intervencionismo global.",
+    "personaBrief": "O nacionalismo integralista buscava soberania, prestígio e influência para o Brasil, subordinando tratados e consensos externos ao interesse nacional. A orientação é assertiva, sobretudo no entorno regional, mas não universalista.",
     "answers": {
       "intervencao_19": "N",
       "intervencao_11": "N",
@@ -133,7 +133,7 @@
       "intervencao_04": "CT",
       "intervencao_18": "CT",
       "intervencao_05": "D",
-      "intervencao_01": "D",
+      "intervencao_01": "C",
       "intervencao_17": "N",
       "intervencao_02": "C",
       "intervencao_12": "C",
@@ -143,20 +143,20 @@
       "intervencao_15": "N",
       "intervencao_03": "C",
       "intervencao_06": "C",
-      "intervencao_13": "N",
+      "intervencao_13": "C",
       "intervencao_20": "CT",
       "intervencao_10": "C",
       "intervencao_09": "D"
     }
   },
   "economia": {
-    "personaBrief": "O integralismo propunha um 'Estado Corporativo' de conciliação de classes, rejeitando tanto o capitalismo liberal individualista quanto o comunismo/socialização total dos meios de produção. Defendia propriedade privada subordinada ao bem comum nacional, com forte intervenção estatal organizadora, mas não estatização generalizada.",
+    "personaBrief": "O integralismo propunha um Estado corporativo de conciliação de classes, rejeitando tanto o liberalismo econômico quanto a socialização total dos meios de produção. A propriedade privada seria mantida, mas subordinada ao bem comum nacional e à coordenação estatal.",
     "answers": {
       "economia_17": "C",
       "economia_02": "N",
       "economia_01": "DT",
       "economia_10": "D",
-      "economia_09": "N",
+      "economia_09": "C",
       "economia_18": "C",
       "economia_03": "C",
       "economia_07": "C",
@@ -175,10 +175,10 @@
     }
   },
   "controle": {
-    "personaBrief": "O corporativismo integralista defendia forte planejamento e direção estatal da economia nacional, organizando setores estratégicos e classes produtoras sob a tutela do Estado, em oposição explícita ao livre mercado liberal e ao individualismo econômico. A coordenação nacional prevalecia sobre a lógica de mercado.",
+    "personaBrief": "O corporativismo integralista defendia forte direção estatal da economia nacional, com planejamento dos setores estratégicos e tutela sobre capital e trabalho. A coordenação nacional prevalecia sobre a lógica espontânea do livre mercado.",
     "answers": {
       "controle_05": "C",
-      "controle_13": "N",
+      "controle_13": "C",
       "controle_03": "CT",
       "controle_19": "CT",
       "controle_02": "D",
@@ -192,7 +192,7 @@
       "controle_10": "N",
       "controle_14": "D",
       "controle_07": "CT",
-      "controle_20": "CT",
+      "controle_20": "DT",
       "controle_09": "C",
       "controle_12": "D",
       "controle_11": "C",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "O nacionalismo econômico integralista defendia a industrialização nacional e a proteção contra dependência estrangeira, vendo a soberania econômica como parte da grandeza da Pátria, hostil ao cosmopolitismo do livre-comércio globalista.",
+    "personaBrief": "O nacionalismo econômico integralista defendia industrialização nacional e proteção contra dependência estrangeira, vendo a soberania econômica como parte da grandeza da Pátria. Isso o afasta do cosmopolitismo do livre-comércio globalista.",
     "answers": {
       "comercio_15": "CT",
       "comercio_09": "CT",
@@ -225,7 +225,7 @@
     }
   },
   "religiao": {
-    "personaBrief": "O lema 'Deus, Pátria e Família' colocava a fé cristã (católica) explicitamente no centro do projeto político integralista, com forte rejeição ao laicismo e ao materialismo. Salgado via a religião como fundamento moral indispensável da nação.",
+    "personaBrief": "O lema 'Deus, Pátria e Família' colocava a fé cristã no centro do projeto integralista, com rejeição explícita ao laicismo e ao materialismo. Salgado via a religião como fundamento moral indispensável da nação.",
     "answers": {
       "religiao_02": "CT",
       "religiao_18": "C",
@@ -250,7 +250,7 @@
     }
   },
   "moral": {
-    "personaBrief": "O 'Família' do lema integralista significava defesa fervorosa da família patriarcal tradicional, papéis de gênero rígidos e moral cristã conservadora, em franca oposição a qualquer relativização dos costumes que Salgado via como decadência.",
+    "personaBrief": "O polo 'Família' do lema integralista implicava defesa da família patriarcal, de papéis de gênero rígidos e de moral cristã conservadora. Salgado trataria a liberalização dos costumes como sinal de decadência social.",
     "answers": {
       "moral_18": "CT",
       "moral_11": "DT",
@@ -275,7 +275,7 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "O integralismo, movimento dos anos 1930, valorizava disciplina, ordem e a grandeza nacional através do progresso industrial e da força produtiva do país, sem grande preocupação ambientalista ou bioética moderna — mas seu conservadorismo moral cristão o tornaria cauteloso diante de manipulações radicais da natureza humana.",
+    "personaBrief": "O integralismo valorizava grandeza nacional, industrialização e disciplina produtiva, sem inclinação ecológica forte, mas o conservadorismo cristão de Salgado o tornaria cauteloso diante de biotecnologias que alterem a natureza humana. O impulso seria aceitar progresso útil ao país, com freios morais nítidos.",
     "answers": {
       "tecnologia_16": "N",
       "tecnologia_10": "D",

@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "Mao construiu um Estado central forte via o Partido Comunista, unificando a China sob comando único após décadas de fragmentação por senhores da guerra, mas mobilizava o poder local (comunas, comitês revolucionários) como instrumento do centro.",
+    "personaBrief": "Mao construiu um Estado central forte via o Partido Comunista, unificando a China sob comando unico apos decadas de fragmentacao. A mobilizacao local existia, mas como instrumento subordinado ao centro revolucionario.",
     "answers": {
       "estrutura_04": "C",
       "estrutura_15": "DT",
@@ -8,7 +8,7 @@
       "estrutura_10": "C",
       "estrutura_11": "N",
       "estrutura_18": "CT",
-      "estrutura_02": "C",
+      "estrutura_02": "CT",
       "estrutura_13": "DT",
       "estrutura_17": "DT",
       "estrutura_09": "DT",
@@ -25,7 +25,7 @@
     }
   },
   "representacao": {
-    "personaBrief": "Mao rejeitava a democracia liberal burguesa em favor da 'ditadura democrática popular' guiada pelo Partido, concentrando poder supremo em si mesmo através de campanhas de mobilização permanente das massas sob sua liderança.",
+    "personaBrief": "Mao rejeitava a democracia liberal e defendia a ditadura democratica popular dirigida pelo Partido. Sua pratica politica concentrou autoridade extrema no lider e reduziu severamente oposicao e alternancia.",
     "answers": {
       "representacao_18": "CT",
       "representacao_11": "D",
@@ -50,7 +50,7 @@
     }
   },
   "poder": {
-    "personaBrief": "Mao empregava mobilização coletiva total, vigilância política e coerção estatal massiva (campanhas de reforma, comitês de bairro, tribunais populares) para eliminar 'inimigos de classe' e impor a linha revolucionária.",
+    "personaBrief": "Mao usou vigilancia politica, campanhas de massa e coercao estatal extensa para moldar a sociedade e eliminar inimigos de classe. Liberdades civis eram subordinadas a seguranca revolucionaria e a disciplina coletiva.",
     "answers": {
       "poder_13": "CT",
       "poder_20": "DT",
@@ -75,7 +75,7 @@
     }
   },
   "imigracao": {
-    "personaBrief": "Mao pensava em termos de nação chinesa unificada e soberana forjada contra o imperialismo estrangeiro, com forte ênfase na identidade e autossuficiência nacional-cultural chinesa, embora com retórica de internacionalismo proletário entre povos oprimidos.",
+    "personaBrief": "Mao combinava internacionalismo proletario com forte afirmacao da soberania e identidade nacional chinesa contra a influencia estrangeira. Isso sugere assimilacao civica e desconfiança de cosmopolitismo aberto, mais do que multiculturalismo expansivo.",
     "answers": {
       "imigracao_07": "C",
       "imigracao_11": "C",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Mao via a guerra popular e a força militar como instrumentos legítimos e necessários da revolução, defendendo forças armadas fortes e independência estratégica (inclusive nuclear) frente ao imperialismo, mesmo apoiando movimentos de guerrilha no exterior.",
+    "personaBrief": "Mao via a luta armada como instrumento legitimo da revolucao e da independencia nacional. Ao mesmo tempo, valorizava capacidade militar propria e dissuasao diante de potencias hostis.",
     "answers": {
       "diplomacia_08": "D",
       "diplomacia_01": "CT",
@@ -125,7 +125,7 @@
     }
   },
   "intervencao": {
-    "personaBrief": "Mao combinava um discurso anti-imperialista de soberania nacional e não-alinhamento formal com uma prática de exportar ativamente a revolução e apoiar movimentos guerrilheiros em outros países, priorizando sempre o interesse e a segurança do Estado chinês.",
+    "personaBrief": "Mao defendia soberania contra ingerencia estrangeira, mas aceitava influenciar e apoiar revolucoes fora da China quando isso favorecia seguranca, prestigio e estrategia revolucionaria. O criterio central era interesse politico, nao neutralidade abstrata.",
     "answers": {
       "intervencao_06": "C",
       "intervencao_16": "CT",
@@ -150,7 +150,7 @@
     }
   },
   "economia": {
-    "personaBrief": "Mao defendia a abolição da propriedade privada dos meios de produção e sua transferência coletiva ao Estado/comunas, vendo a revolução como necessária para tirar o poder econômico das mãos das classes proprietárias.",
+    "personaBrief": "Mao defendia abolir a propriedade privada dos meios de producao, coletivizar terra e industria e deslocar poder economico das classes proprietarias para a sociedade organizada pelo Partido. A revolucao era vista como meio legitimo para essa transferencia.",
     "answers": {
       "economia_19": "N",
       "economia_03": "CT",
@@ -175,7 +175,7 @@
     }
   },
   "controle": {
-    "personaBrief": "Mao defendia o planejamento estatal centralizado e coletivo da economia (coletivização agrícola, Grande Salto Adiante), rejeitando totalmente o livre mercado como mecanismo de coordenação econômica.",
+    "personaBrief": "Mao defendia planejamento economico central, direcao politica da producao e intervencao extensiva em precos, comercio e moeda. O mercado nao era visto como coordenador legitimo, mas como fonte de desigualdade e restauracao capitalista.",
     "answers": {
       "controle_16": "DT",
       "controle_10": "D",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "Mao praticou autossuficiência econômica quase total (autarcia), buscando a China produzir internamente o que consumia e desconfiando profundamente de dependência comercial e investimento estrangeiro como formas de dominação imperialista.",
+    "personaBrief": "Sob Mao, a China buscou autossuficiencia, desconfiou de dependencia externa e tratou comercio e capital estrangeiro como possiveis vetores de subordinacao imperialista. A prioridade era soberania economica, mesmo com custo de eficiencia.",
     "answers": {
       "comercio_08": "DT",
       "comercio_11": "CT",
@@ -225,7 +225,7 @@
     }
   },
   "religiao": {
-    "personaBrief": "Mao era ateu marxista militante, promovendo o materialismo dialético e reprimindo ativamente práticas religiosas tradicionais chinesas (budismo, taoísmo, confucionismo) como 'superstição feudal' incompatível com a revolução.",
+    "personaBrief": "Mao era um ateu marxista militante e tratava religiao tradicional como supersticao feudal rival da consciencia revolucionaria. A tendencia do regime foi secularizar agressivamente a esfera publica e subordinar ou reprimir instituicoes religiosas.",
     "answers": {
       "religiao_05": "CT",
       "religiao_16": "DT",
@@ -239,46 +239,46 @@
       "religiao_01": "C",
       "religiao_14": "D",
       "religiao_10": "DT",
-      "religiao_17": "D",
+      "religiao_17": "C",
       "religiao_19": "CT",
       "religiao_18": "DT",
       "religiao_12": "DT",
       "religiao_11": "CT",
       "religiao_09": "CT",
-      "religiao_03": "C",
+      "religiao_03": "CT",
       "religiao_20": "DT"
     }
   },
   "moral": {
-    "personaBrief": "Mao promoveu rupturas radicais com costumes tradicionais chineses (família patriarcal, confucionismo, papéis de gênero) em nome da revolução cultural e da igualdade, embora seu regime também fosse socialmente conservador e puritano em temas de sexualidade.",
+    "personaBrief": "Mao atacou estruturas familiares e hierarquias tradicionais ligadas ao confucionismo e defendeu igualdade formal entre homens e mulheres. Ainda assim, o maoismo social foi disciplinador e puritano em varios temas de sexualidade e comportamento privado.",
     "answers": {
-      "moral_07": "D",
+      "moral_07": "N",
       "moral_03": "D",
-      "moral_06": "N",
+      "moral_06": "D",
       "moral_12": "DT",
       "moral_08": "N",
       "moral_20": "DT",
       "moral_09": "C",
       "moral_16": "C",
       "moral_18": "DT",
-      "moral_05": "N",
-      "moral_11": "D",
+      "moral_05": "C",
       "moral_02": "DT",
+      "moral_11": "C",
       "moral_14": "N",
       "moral_15": "N",
       "moral_13": "D",
-      "moral_04": "D",
+      "moral_04": "C",
       "moral_17": "D",
-      "moral_19": "D",
+      "moral_19": "N",
       "moral_10": "N",
       "moral_01": "N"
     }
   },
   "tecnologia": {
-    "personaBrief": "Mao acreditava fervorosamente na capacidade da vontade humana e da tecnologia industrial de superar limites naturais (Grande Salto Adiante buscava industrialização acelerada e domínio da natureza), sem preocupação ambiental.",
+    "personaBrief": "Mao associava transformacao social a industrializacao acelerada, dominio da natureza e mobilizacao produtiva em grande escala. O regime tinha pouca preocupacao ambiental e forte inclinacao a sacrificar limites naturais em nome de metas de desenvolvimento e poder.",
     "answers": {
       "tecnologia_12": "DT",
-      "tecnologia_10": "D",
+      "tecnologia_10": "N",
       "tecnologia_09": "N",
       "tecnologia_01": "C",
       "tecnologia_19": "C",
