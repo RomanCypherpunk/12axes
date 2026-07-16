@@ -1,7 +1,7 @@
-Voc? est? auditando, pergunta a pergunta e de forma independente, o perfil "Centrismo" nos 12 eixos do 12axes.
-Dados: id=centrismo | name=Centrismo | category=Centro | description=Posição política que busca o equilíbrio entre esquerda e direita, valorizando moderação, pragmatismo e consenso, e combinando elementos de diferentes correntes para evitar extremos e favorecer reformas graduais.
-Metodologia: persona brief espec?fico por eixo; depois 20 respostas com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` ? descentraliza??o vs centraliza??o; `representacao` ? democracia vs autocracia; em `controle`, para antiestatistas, julgue coordena??o coletiva vs mercado; em `representacao`, aus?ncia de Estado conta do lado democr?tico/anti-autocr?tico.
-Sa?da: grave JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/centrismo.json e responda apenas com "OK ideology:centrismo" e uma linha.
+Voc? est? auditando o perfil "Atlantismo" nos 12 eixos do 12axes.
+Dados: id=atlantismo | name=Atlantismo | category=Direita | description=Doutrina de política externa que defende a aliança estreita entre América do Norte e Europa, sustentando a cooperação militar e política do Ocidente e a defesa comum de seus valores e interesses no mundo.
+Regras: persona brief por eixo; 20 respostas por eixo com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` = descentraliza??o vs centraliza??o; `representacao` = democracia vs autocracia; n?o confundir os dois eixos; em `controle`, perfis antiestatistas devem ser julgados por coordena??o coletiva vs mercado.
+Sa?da: JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/atlantismo.json e resposta curta "OK ideology:atlantismo".
 
 === PERGUNTAS POR EIXO ===
 

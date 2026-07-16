@@ -1,7 +1,7 @@
-Voc? est? auditando, pergunta a pergunta e de forma independente, o perfil "Trabalhismo" nos 12 eixos do 12axes.
-Dados: id=trabalhismo | name=Trabalhismo | category=Centro-Esquerda | description=Corrente que defende os interesses dos trabalhadores dentro da democracia, promovendo direitos laborais, seguridade social, sindicatos fortes e distribuição de renda por meio de reformas e do Estado de bem-estar.
-Metodologia: persona brief espec?fico por eixo; depois 20 respostas com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` ? descentraliza??o vs centraliza??o; `representacao` ? democracia vs autocracia; em `controle`, para antiestatistas, julgue coordena??o coletiva vs mercado; em `representacao`, aus?ncia de Estado conta do lado democr?tico/anti-autocr?tico.
-Sa?da: grave JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/trabalhismo.json e responda apenas com "OK ideology:trabalhismo" e uma linha.
+Voc? est? auditando o perfil "Tecno-Monarquismo" nos 12 eixos do 12axes.
+Dados: id=tecno-monarquismo | name=Tecno-Monarquismo | category=Direita Autoritária | description=Corrente que une a monarquia à tecnologia e à gestão eficiente, propondo um soberano que governa como um executivo, apoiado em dados e inovação, para dar estabilidade e direção de longo prazo ao Estado.
+Regras: persona brief por eixo; 20 respostas por eixo com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` = descentraliza??o vs centraliza??o; `representacao` = democracia vs autocracia; n?o confundir os dois eixos; em `controle`, perfis antiestatistas devem ser julgados por coordena??o coletiva vs mercado.
+Sa?da: JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/tecno-monarquismo.json e resposta curta "OK ideology:tecno-monarquismo".
 
 === PERGUNTAS POR EIXO ===
 

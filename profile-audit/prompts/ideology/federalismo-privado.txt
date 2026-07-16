@@ -1,7 +1,7 @@
-Voc? est? auditando, pergunta a pergunta e de forma independente, o perfil "Conservadorismo Secular" nos 12 eixos do 12axes.
-Dados: id=conservadorismo-secular | name=Conservadorismo Secular | category=Direita | description=Vertente conservadora que defende ordem, tradição e instituições sem fundamentá-las na religião, apoiando valores culturais e estabilidade social a partir de argumentos laicos, históricos e pragmáticos.
-Metodologia: persona brief espec?fico por eixo; depois 20 respostas com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` ? descentraliza??o vs centraliza??o; `representacao` ? democracia vs autocracia; em `controle`, para antiestatistas, julgue coordena??o coletiva vs mercado; em `representacao`, aus?ncia de Estado conta do lado democr?tico/anti-autocr?tico.
-Sa?da: grave JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/conservadorismo-secular.json e responda apenas com "OK ideology:conservadorismo-secular" e uma linha.
+Voc? est? auditando o perfil "Federalismo Privado" nos 12 eixos do 12axes.
+Dados: id=federalismo-privado | name=Federalismo Privado | category=Direita Libertária | description=Modelo que organiza a sociedade em jurisdições privadas e voluntárias que competem entre si, oferecendo leis e serviços por contrato, com os indivíduos livres para escolher a comunidade a que se associam.
+Regras: persona brief por eixo; 20 respostas por eixo com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` = descentraliza??o vs centraliza??o; `representacao` = democracia vs autocracia; n?o confundir os dois eixos; em `controle`, perfis antiestatistas devem ser julgados por coordena??o coletiva vs mercado.
+Sa?da: JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/federalismo-privado.json e resposta curta "OK ideology:federalismo-privado".
 
 === PERGUNTAS POR EIXO ===
 

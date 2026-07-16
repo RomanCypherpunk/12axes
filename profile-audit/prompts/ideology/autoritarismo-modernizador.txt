@@ -1,7 +1,7 @@
-Voc? est? auditando, pergunta a pergunta e de forma independente, o perfil "Positivismo" nos 12 eixos do 12axes.
-Dados: id=positivismo | name=Positivismo | category=Esquerda Autoritária | description=Corrente inspirada em Auguste Comte que confia na ciência e na razão para organizar a sociedade, defendendo ordem, progresso e administração técnica guiada pelo conhecimento em lugar da metafísica e da tradição.
-Metodologia: persona brief espec?fico por eixo; depois 20 respostas com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` ? descentraliza??o vs centraliza??o; `representacao` ? democracia vs autocracia; em `controle`, para antiestatistas, julgue coordena??o coletiva vs mercado; em `representacao`, aus?ncia de Estado conta do lado democr?tico/anti-autocr?tico.
-Sa?da: grave JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/positivismo.json e responda apenas com "OK ideology:positivismo" e uma linha.
+Voc? est? auditando o perfil "Autoritarismo Modernizador" nos 12 eixos do 12axes.
+Dados: id=autoritarismo-modernizador | name=Autoritarismo Modernizador | category=Centro | description=Modelo em que um regime forte impõe de cima a modernização econômica e social, promovendo industrialização, educação e reformas rápidas enquanto restringe liberdades políticas em nome do progresso nacional.
+Regras: persona brief por eixo; 20 respostas por eixo com DT/D/N/C/CT; responda pergunta por pergunta; `estrutura` = descentraliza??o vs centraliza??o; `representacao` = democracia vs autocracia; n?o confundir os dois eixos; em `controle`, perfis antiestatistas devem ser julgados por coordena??o coletiva vs mercado.
+Sa?da: JSON estrito em C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/autoritarismo-modernizador.json e resposta curta "OK ideology:autoritarismo-modernizador".
 
 === PERGUNTAS POR EIXO ===
 
