@@ -48,6 +48,24 @@ três catálogos** — só mudam os metadados de entrada e o arquivo de saída.
 Arquivo vivo do resto do repo que todos os catálogos compartilham:
 - `backend/src/main/resources/data/questions-pool.json` — as 240 perguntas com `id`, `axisId`, `text`, `agreePole` (LEFT/RIGHT), `weight`. É a fonte da fórmula de cálculo do vetor (seção abaixo).
 
+## Resumo rápido dos 12 eixos
+
+Use este bloco como trava anti-confusão antes de auditar qualquer perfil. A referência completa está em
+`backend/src/main/resources/data/axes-explained.md`; abaixo fica só o resumo operacional de 1 linha por eixo.
+
+- `estrutura` — Federal × Unitário: mede descentralização territorial/institucional vs. comando nacional uniforme. **Não mede democracia vs. autocracia.** Um perfil pode ser autocrático e ainda assim descentralizador/secessionista/federal.
+- `representacao` — Democracia × Autocracia: mede confiança em eleições, participação, oposição, conselhos, anarquia/organização voluntária vs. liderança forte, tecnocracia, monarquia ou regimes autoritários. **Não mede centralização territorial.**
+- `poder` — Segurança × Liberdade: mede ordem, vigilância, punição e controle estatal vs. privacidade, autonomia civil e liberdades individuais.
+- `imigracao` — Assimilação × Multicultura: mede preferência por assimilação cultural/identidade nacional vs. pluralismo cultural e abertura migratória.
+- `diplomacia` — Militarista × Pacifista: mede valorização de forças armadas, armamento e uso do poder militar vs. negociação, pacifismo e contenção bélica.
+- `intervencao` — Não intervencionista × Nacionalista: mede recusa de projeção externa e prudência geopolítica vs. afirmação agressiva de soberania e interesses nacionais.
+- `economia` — Público × Privado: mede propriedade pública/coletiva e serviços estatais vs. propriedade privada, privatização e protagonismo empresarial.
+- `controle` — Planejamento × Livre mercado: mede coordenação econômica planejada/regulada vs. mercado, competição e baixa interferência econômica.
+- `comercio` — Protecionismo × Globalismo: mede defesa da indústria/soberania produtiva nacional vs. livre comércio e integração econômica internacional.
+- `religiao` — Irreligioso × Religioso: mede secularismo/laicidade e crítica ao poder religioso vs. religião forte na vida privada e/ou no Estado.
+- `moral` — Progressista × Tradicionalista: mede progressismo cultural/direitos civis vs. tradição, costumes, família e conservadorismo moral.
+- `tecnologia` — Tecnologia × Biologia: mede entusiasmo por tecnologia, IA, industrialização e transhumanismo vs. cautela biológica, preservacionista, rural ou naturalista.
+
 ## O processo, passo a passo
 
 Escolha um catálogo (`personality`, `ideology` ou `country`) e repita este ciclo até
@@ -86,6 +104,7 @@ METODOLOGIA (obrigatória):
 - Depois responda as 20 perguntas do eixo, uma a uma, com um destes codigos: DT (discordo totalmente), D (discordo), N (neutro/indiferente), C (concordo), CT (concordo totalmente).
 - Simule genuinamente como o proprio perfil / seus porta-vozes reais responderiam CADA pergunta individualmente. NAO escolha um valor-alvo para o eixo e trabalhe de tras para frente. Aceite o que resultar, mesmo que surpreendente.
 - Cada pergunta e independente. As perguntas ja vem em ordem embaralhada. Responda pelo id da pergunta.
+- Atenção de interpretação: `estrutura` mede descentralização/federalismo/secessão vs. unitarismo/centralização; `representacao` mede democracia/participação vs. autocracia/liderança forte. **Nunca use autocracia como atalho para marcar `estrutura` como unitário, nem descentralização como atalho para marcar `representacao` como democrática.**
 - Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico. Se este perfil for anti-estatista mas quiser coordenacao economica coletiva/planejada (ex.: anarquistas, comunistas libertarios), julgue pelo ESPIRITO de coordenacao coletiva vs. mercado, nao pela agencia estatal literal. Ja no eixo "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico/anti-autocratico, nao autocratico.
 
 SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
