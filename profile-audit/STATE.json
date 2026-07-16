@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T12:34:30Z",
+  "lastUpdated": "2026-07-16T12:52:27Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,21 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "conservadorismo-autoritario",
-      "conservadorismo-nacional",
-      "conservadorismo-paternalista",
-      "fundamentalismo-religioso",
-      "nacionalismo-etnico",
-      "nacionalismo-cultural",
-      "neorreacionarismo",
-      "neocameralismo",
-      "cameralismo",
-      "corporativismo",
-      "terceira-posicao-politica",
-      "reacionarismo",
-      "quarta-teoria-politica",
-      "democracia-nacional",
-      "bioconservadorismo",
       "tecnocracia-de-direita",
       "democracia-crista",
       "conservadorismo-cristao",
@@ -410,7 +395,22 @@
       "aceleracionismo-de-direita",
       "nacionalismo-racial",
       "neoconservadorismo",
-      "monarquismo-absoluto"
+      "monarquismo-absoluto",
+      "conservadorismo-autoritario",
+      "conservadorismo-nacional",
+      "conservadorismo-paternalista",
+      "fundamentalismo-religioso",
+      "nacionalismo-etnico",
+      "nacionalismo-cultural",
+      "neorreacionarismo",
+      "neocameralismo",
+      "cameralismo",
+      "corporativismo",
+      "terceira-posicao-politica",
+      "reacionarismo",
+      "quarta-teoria-politica",
+      "democracia-nacional",
+      "bioconservadorismo"
     ]
   },
   "country": {
