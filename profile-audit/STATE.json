@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T14:16:15Z",
+  "lastUpdated": "2026-07-16T15:49:40Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,21 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "minarco-socialismo",
-      "socialismo-individualista",
-      "comunalismo",
-      "socialismo-cristao",
-      "trabalhismo-cristao",
-      "socialismo-religioso",
-      "social-democracia",
-      "socialismo",
-      "socialismo-liberal",
-      "libertarianismo-social",
-      "ecossocialismo",
-      "ecofeminismo",
-      "ecologia-profunda",
-      "anarquismo-agrario",
-      "anarquismo-verde",
       "anarcofeminismo",
       "anarquismo-queer",
       "anarcopacifismo",
@@ -410,7 +395,22 @@
       "socialismo-de-mercado-libertario",
       "socialismo-de-mercado",
       "mutualismo",
-      "minarco-mutualismo"
+      "minarco-mutualismo",
+      "minarco-socialismo",
+      "socialismo-individualista",
+      "comunalismo",
+      "socialismo-cristao",
+      "trabalhismo-cristao",
+      "socialismo-religioso",
+      "social-democracia",
+      "socialismo",
+      "socialismo-liberal",
+      "libertarianismo-social",
+      "ecossocialismo",
+      "ecofeminismo",
+      "ecologia-profunda",
+      "anarquismo-agrario",
+      "anarquismo-verde"
     ]
   },
   "country": {
