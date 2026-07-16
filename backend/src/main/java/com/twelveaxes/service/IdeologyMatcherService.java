@@ -4,7 +4,6 @@ import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyMatch;
 import com.twelveaxes.model.IdeologyProfile;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class IdeologyMatcherService {
     private static final int TOP_MATCHES = 4;
-    private static final double MMR_RELEVANCE_WEIGHT = 0.70;
 
     private final QuizDataService dataService;
     private final ProfileMatchScorer profileMatchScorer;
@@ -29,13 +27,7 @@ public class IdeologyMatcherService {
     }
 
     public List<IdeologyMatch> findMatches(List<AxisResult> axisResults, String lang) {
-        Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
-        String normalizedLang = QuizDataService.normalizeLang(lang);
-
-        return selectDiverseMatches(rankCandidates(userVector, normalizedLang)).stream()
-                .sorted(byScoreThenName())
-                .map(candidate -> toMatch(candidate, normalizedLang))
-                .toList();
+        return findRankedMatches(axisResults, lang);
     }
 
     List<IdeologyMatch> findRankedMatches(List<AxisResult> axisResults, String lang) {
@@ -64,48 +56,6 @@ public class IdeologyMatcherService {
         return Comparator.comparingDouble(IdeologyCandidate::compatibility)
                 .reversed()
                 .thenComparing(candidate -> candidate.ideology().name());
-    }
-
-    private List<IdeologyCandidate> selectDiverseMatches(List<IdeologyCandidate> rankedCandidates) {
-        if (rankedCandidates.size() <= TOP_MATCHES) {
-            return rankedCandidates;
-        }
-
-        List<IdeologyCandidate> selected = new ArrayList<>();
-        List<IdeologyCandidate> remaining = new ArrayList<>(rankedCandidates);
-        selected.add(remaining.removeFirst());
-
-        while (selected.size() < TOP_MATCHES && !remaining.isEmpty()) {
-            IdeologyCandidate best = remaining.getFirst();
-            double bestScore = mmrScore(best, selected);
-            for (IdeologyCandidate candidate : remaining) {
-                double candidateScore = mmrScore(candidate, selected);
-                if (candidateScore > bestScore
-                        || (candidateScore == bestScore && candidate.compatibility() > best.compatibility())
-                        || (candidateScore == bestScore
-                                && candidate.compatibility() == best.compatibility()
-                                && candidate.ideology().name().compareTo(best.ideology().name()) < 0)) {
-                    best = candidate;
-                    bestScore = candidateScore;
-                }
-            }
-            selected.add(best);
-            remaining.remove(best);
-        }
-
-        return selected;
-    }
-
-    private double mmrScore(IdeologyCandidate candidate, List<IdeologyCandidate> selected) {
-        double redundancy = selected.stream()
-                .mapToDouble(selectedCandidate -> profileMatchScorer.compatibility(
-                        candidate.targetVector(),
-                        selectedCandidate.targetVector()
-                ))
-                .max()
-                .orElse(0.0);
-        return MMR_RELEVANCE_WEIGHT * candidate.compatibility()
-                - (1.0 - MMR_RELEVANCE_WEIGHT) * redundancy;
     }
 
     private IdeologyCandidate toCandidate(Ideology ideology, Map<String, Double> userVector) {

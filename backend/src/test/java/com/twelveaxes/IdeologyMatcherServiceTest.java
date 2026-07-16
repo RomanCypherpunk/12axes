@@ -136,7 +136,7 @@ class IdeologyMatcherServiceTest {
     }
 
     @Test
-    void diverseMatchesAreReturnedInCompatibilityOrder() {
+    void rankedMatchesAreReturnedInCompatibilityOrder() {
         var axes = axisResults(Map.ofEntries(
                 Map.entry("estrutura", 75.0),
                 Map.entry("representacao", 18.8),

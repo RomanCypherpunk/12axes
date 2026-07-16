@@ -11,7 +11,7 @@ Este documento descreve a logica atual do backend para transformar respostas do 
 - `backend/src/main/java/com/twelveaxes/service/ProfileMatchScorer.java`
   - Formula central de compatibilidade, usada por ideologias, personalidades e paises.
 - `backend/src/main/java/com/twelveaxes/service/IdeologyMatcherService.java`
-  - Ranking, percentil e MMR para as 4 ideologias retornadas.
+  - Ranking e percentil para as 4 ideologias retornadas.
 - `backend/src/main/java/com/twelveaxes/service/PersonalityMatcherService.java`
   - Ranking de personalidades; a API usa o top-1.
 - `backend/src/main/java/com/twelveaxes/service/CountryMatcherService.java`
@@ -279,49 +279,26 @@ Importante:
 1. Converte os eixos do usuario em vetor.
 2. Calcula compatibilidade contra todas as ideologias.
 3. Calcula percentil dentro do catalogo de ideologias.
-4. Seleciona 4 ideologias com diversidade via MMR.
+4. Retorna o top 4 bruto por compatibilidade.
 
 ### Ranking base
 
-Antes da diversidade, candidatos sao ordenados por:
+Candidatos sao ordenados por:
 
 ```text
 compatibility desc
 name asc
 ```
 
-### MMR
-
-O objetivo do MMR e evitar que as 4 correspondencias sejam variacoes quase identicas da mesma ideia.
-
-O primeiro selecionado e sempre o melhor candidato bruto.
-
-Para os proximos, o score e:
-
-```text
-mmrScore =
-  0.70 * candidate.compatibility
-- 0.30 * redundancy
-```
-
-`redundancy` e a maior compatibilidade entre o vetor do candidato e os vetores ja selecionados.
-
-Empates sao resolvidos por:
-
-1. maior compatibilidade bruta.
-2. nome alfabetico.
-
-Depois da selecao diversa, a lista final e reordenada por compatibilidade decrescente antes de ir para a API. Portanto `matches` deve chegar ao frontend em ordem de similaridade.
-
 ### `findRankedMatches`
 
-Existe tambem um metodo interno de ranking puro, sem MMR:
+Existe tambem um metodo interno de ranking puro:
 
 ```text
 findRankedMatches(axisResults, lang)
 ```
 
-Ele retorna o top 4 bruto e e usado para testes/diagnostico. O fluxo normal da API usa `findMatches`.
+Ele retorna o top 4 bruto e hoje e equivalente ao fluxo normal da API.
 
 ## Matching de personalidades
 
@@ -414,9 +391,9 @@ Foi o bug observado em producao: usuario com extremidade media baixa recebeu "Qu
 
 Valor absoluto de compatibilidade depende dos pesos da formula. Teste de API deve validar invariantes de comportamento; teste de formula deve derivar o valor esperado das constantes.
 
-### Ordenar visualmente depois de aplicar MMR
+### Confundir ranking bruto com ranking diversificado
 
-MMR seleciona diversidade, mas a lista exibida deve estar em ordem de compatibilidade. O backend ja reordena a lista final com `byScoreThenName()` antes de montar `IdeologyMatch`.
+Hoje a API de ideologias retorna ranking bruto. Se no futuro voltar a existir uma camada de diversidade ou curadoria visual, isso deve ser exposto separadamente para nao mascarar a ordem real de compatibilidade.
 
 ## Como alterar a formula com seguranca
 
