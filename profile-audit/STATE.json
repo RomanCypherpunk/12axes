@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T13:06:47Z",
+  "lastUpdated": "2026-07-16T13:47:09Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,21 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "liberalismo-social",
-      "liberalismo-radical",
-      "liberalismo-conservador",
-      "liberaltarianismo",
-      "panarquismo",
-      "reformismo-georgista",
-      "geolibertarianismo",
-      "feminismo",
-      "feminismo-liberal",
-      "liberalismo-de-estado",
-      "ambientalismo",
-      "conservadorismo",
-      "progressismo",
-      "aceleracionismo",
-      "transhumanismo",
       "nacionalismo",
       "nacionalismo-civico",
       "indigenismo",
@@ -410,7 +395,22 @@
       "liberalismo",
       "liberalismo-classico",
       "libertarianismo",
-      "liberalismo-verde"
+      "liberalismo-verde",
+      "liberalismo-social",
+      "liberalismo-radical",
+      "liberalismo-conservador",
+      "liberaltarianismo",
+      "panarquismo",
+      "reformismo-georgista",
+      "geolibertarianismo",
+      "feminismo",
+      "feminismo-liberal",
+      "liberalismo-de-estado",
+      "ambientalismo",
+      "conservadorismo",
+      "progressismo",
+      "aceleracionismo",
+      "transhumanismo"
     ]
   },
   "country": {
