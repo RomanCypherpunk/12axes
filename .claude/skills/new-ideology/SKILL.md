@@ -9,7 +9,7 @@ Cria uma **ideologia** nova do zero — não confundir com reauditoria (`/audit_
 
 ## Antes de qualquer coisa
 
-Leia **NEW_PROFILE.md inteiro** (raiz do projeto) e **profile-audit/README.md inteiro** — o primeiro descreve o processo de criação completo, o segundo é reusado integralmente no passo 5 (auditoria pergunta-a-pergunta).
+Leia **NEW_PROFILE.md inteiro** (`/profile-audit`) e **profile-audit/README.md inteiro** — o primeiro descreve o processo de criação completo, o segundo é reusado integralmente no passo 5 (auditoria pergunta-a-pergunta).
 
 ## Parâmetros fixos deste catálogo
 
