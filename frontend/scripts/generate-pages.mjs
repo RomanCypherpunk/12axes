@@ -11,14 +11,10 @@ const ROOT = resolve(__dirname, '..');
 const DATA_DIR = resolve(ROOT, '../backend/src/main/resources/data');
 const DIST = join(ROOT, 'dist');
 const SITE = 'https://12axes.vercel.app';
-const SPEED_INSIGHTS_PACKAGE = JSON.parse(
-  readFileSync(resolve(ROOT, 'node_modules/@vercel/speed-insights/package.json'), 'utf8')
-);
 const VERCEL_ANALYTICS_SNIPPET = `<script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>`;
-const VERCEL_SPEED_INSIGHTS_SNIPPET = `<script defer src="/_vercel/speed-insights/script.js" data-sdkn="@vercel/speed-insights" data-sdkv="${SPEED_INSIGHTS_PACKAGE.version}"></script>`;
 const UMAMI_ANALYTICS_SNIPPET = `<script defer src="https://cloud.umami.is/script.js" data-website-id="fde12166-1136-4d98-bfe1-2a70753a9252"></script>`;
 
 const readJson = (path) => JSON.parse(readFileSync(join(DATA_DIR, path), 'utf8'));
@@ -320,7 +316,6 @@ function layout(L, { basePath, title, description, ogImage, jsonLd, body }) {
     <link rel="stylesheet" href="/pages.css" />
     ${ldBlocks}
     ${VERCEL_ANALYTICS_SNIPPET}
-    ${VERCEL_SPEED_INSIGHTS_SNIPPET}
     ${UMAMI_ANALYTICS_SNIPPET}
   </head>
   <body>
