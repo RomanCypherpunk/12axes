@@ -40,8 +40,8 @@ três catálogos** — só mudam os metadados de entrada e o arquivo de saída.
 | `README.md` | Este arquivo — leia primeiro. |
 | `STATE.json` | **Fonte única de verdade** do progresso, um bloco por catálogo (`personality`, `ideology`, `country`), cada um com `pending` e `done`. |
 | `questions-template.txt` | As 240 perguntas (12 eixos × 20), prontas para colar em qualquer prompt novo, de qualquer catálogo. Não editar sem necessidade. |
-| `prompts/<catalog>/<id>.txt` | Prompt já montado para um perfil específico, pronto para mandar a um subagente. Só existe para perfis com prompt gerado e ainda não mesclado. |
-| `subagent-out/<catalog>/<id>.json` | Saída de um subagente já rodado, aguardando merge/validação. **Temporário**: depois do merge bem-sucedido, o arquivo é apagado daqui (mas uma cópia permanece em `answers/`, ver abaixo). |
+| `prompts/<catalog>/<id>.txt` | Prompt já montado para um perfil específico, pronto para mandar a um subagente. Fora de processamento, deve conter só **um arquivo de exemplo** por catálogo (ver passo 7), para uma IA nova entender o formato sem contexto prévio. |
+| `subagent-out/<catalog>/<id>.json` | Saída de um subagente já rodado, aguardando merge/validação. **Temporário**: depois do merge bem-sucedido, o arquivo é apagado daqui (mas uma cópia permanece em `answers/`, ver abaixo) — exceto um exemplo mantido de propósito, ver passo 7. |
 | `answers/<catalog>/<id>.json` | **Arquivo permanente** com as 240 respostas (12 eixos × 20, com `personaBrief` de cada eixo) de todo perfil já mesclado. Nunca é apagado — é o arquivo que o usuário usa para auditar/conferir respostas pergunta a pergunta a qualquer momento, mesmo muito depois do merge. |
 | `_legacy/` | Pipeline antigo (scripts `.mjs`, logs, JSONs de estado de ~25MB), só de personalidades. **Não usar.** Mantido só para referência histórica. |
 
@@ -193,9 +193,14 @@ Para cada perfil mesclado com sucesso, NESTA ORDEM:
 1. Copie (não mova) `subagent-out/<catalog>/<id>.json` para `answers/<catalog>/<id>.json`. Este
    arquivo é **permanente** — é o que o usuário usa para auditar as 240 respostas de qualquer perfil
    a qualquer momento, mesmo muito tempo depois do merge. **Nunca apague nada dentro de `answers/`.**
-2. Só depois de confirmar que a cópia em `answers/` existe, apague `prompts/<catalog>/<id>.txt` e
-   `subagent-out/<catalog>/<id>.json` (esses sim são temporários — `prompts/` e `subagent-out/` devem
-   ficar vazios entre lotes, só contêm o que ainda está em processamento).
+2. Apague `prompts/<catalog>/<id>.txt` e `subagent-out/<catalog>/<id>.json` de cada perfil do lote,
+   **exceto o primeiro ID do lote**: mantenha o par `prompts/<catalog>/<id>.txt` +
+   `subagent-out/<catalog>/<id>.json` desse primeiro perfil como exemplo de referência. Isso serve
+   para que uma IA nova, numa sessão futura sem contexto nenhum, possa abrir esses dois arquivos e
+   entender exatamente o formato esperado de prompt e de saída sem precisar reconstruir do zero.
+   Se `prompts/<catalog>/` e `subagent-out/<catalog>/` já tiverem um exemplo de um lote anterior,
+   não é necessário manter mais um — um exemplo por catálogo já basta (pode sobrescrever pelo mais
+   recente, ou simplesmente deixar o mais antigo, não é crítico qual).
 
 **Nota histórica:** este processo funcionou originalmente em lotes de 5; a partir de 2026-07-16 os
 lotes passaram a ser de 15 por solicitação do usuário (mesmo processo, só o tamanho do lote mudou).
