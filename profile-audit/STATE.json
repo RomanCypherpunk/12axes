@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T12:01:03Z",
+  "lastUpdated": "2026-07-16T12:17:24Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,21 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "marxismo-leninismo",
-      "socialismo-stalinista",
-      "comunismo-maoista",
-      "comunismo-trotskista",
-      "socialismo-luxemburguista",
-      "comunismo-nacional",
-      "socialismo-juche",
-      "socialismo-pol-potista",
-      "socialismo-denguista",
-      "socialismo-de-estado",
-      "progressismo-autoritario",
-      "ecoautoritarismo",
-      "tecnocracia-de-esquerda",
-      "marxismo-reformista",
-      "nacional-bolchevismo",
       "socialismo-strasserista",
       "fascismo",
       "nacional-socialismo",
@@ -410,7 +395,23 @@
       "nacional-liberalismo",
       "arqueofuturismo"
     ],
-    "done": []
+    "done": [
+      "marxismo-leninismo",
+      "socialismo-stalinista",
+      "comunismo-maoista",
+      "comunismo-trotskista",
+      "socialismo-luxemburguista",
+      "comunismo-nacional",
+      "socialismo-juche",
+      "socialismo-pol-potista",
+      "socialismo-denguista",
+      "socialismo-de-estado",
+      "progressismo-autoritario",
+      "ecoautoritarismo",
+      "tecnocracia-de-esquerda",
+      "marxismo-reformista",
+      "nacional-bolchevismo"
+    ]
   },
   "country": {
     "totalProfiles": 130,
