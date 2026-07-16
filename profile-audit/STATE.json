@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T16:38:59Z",
+  "lastUpdated": "2026-07-16T16:55:28Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,18 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "progressismo-cristao",
-      "autoritarismo-modernizador",
-      "desenvolvimentismo-de-estado",
-      "atlantismo",
-      "federalismo-privado",
-      "tecno-monarquismo",
-      "progressismo-de-direita",
-      "tecno-socialismo",
-      "tecno-fascismo",
-      "liberalismo-autoritario",
-      "nacionalismo-progressista",
-      "ecofascismo",
       "comunismo-agrario",
       "socialismo-bolivariano",
       "nacional-desenvolvimentismo",
@@ -410,7 +398,19 @@
       "centrismo",
       "trabalhismo",
       "positivismo",
-      "conservadorismo-secular"
+      "conservadorismo-secular",
+      "progressismo-cristao",
+      "autoritarismo-modernizador",
+      "desenvolvimentismo-de-estado",
+      "atlantismo",
+      "federalismo-privado",
+      "tecno-monarquismo",
+      "progressismo-de-direita",
+      "tecno-socialismo",
+      "tecno-fascismo",
+      "liberalismo-autoritario",
+      "nacionalismo-progressista",
+      "ecofascismo"
     ]
   },
   "country": {
