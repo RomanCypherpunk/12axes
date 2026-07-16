@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T15:49:40Z",
+  "lastUpdated": "2026-07-16T16:03:29Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -238,12 +238,6 @@
   "ideology": {
     "totalProfiles": 171,
     "pending": [
-      "anarcofeminismo",
-      "anarquismo-queer",
-      "anarcopacifismo",
-      "anarquismo-cristao",
-      "anarco-naturalismo",
-      "anarcoprimitivismo",
       "geoanarquismo",
       "anarquismo-egoista",
       "anarcocapitalismo",
@@ -410,7 +404,13 @@
       "ecofeminismo",
       "ecologia-profunda",
       "anarquismo-agrario",
-      "anarquismo-verde"
+      "anarquismo-verde",
+      "anarcofeminismo",
+      "anarquismo-queer",
+      "anarcopacifismo",
+      "anarquismo-cristao",
+      "anarco-naturalismo",
+      "anarcoprimitivismo"
     ]
   },
   "country": {
