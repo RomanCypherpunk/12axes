@@ -1,25 +1,9 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T11:40:14Z",
+  "lastUpdated": "2026-07-16T12:01:03Z",
   "personality": {
     "totalProfiles": 228,
-    "pending": [
-      "pentti-linkola",
-      "thomas-jefferson",
-      "janos-kadar",
-      "h-l-mencken",
-      "marcus-garvey",
-      "julius-nyerere",
-      "papa-pio-ix",
-      "justiniano-i",
-      "filipe-ii-da-espanha",
-      "pedro-o-grande",
-      "joao-calvino",
-      "dom-manuel-i",
-      "genghis-khan",
-      "lazaro-cardenas",
-      "guillaume-faye"
-    ],
+    "pending": [],
     "done": [
       "lenin",
       "stalin",
@@ -233,7 +217,22 @@
       "satoshi-nakamoto",
       "george-soros",
       "bill-gates",
-      "dalai-lama"
+      "dalai-lama",
+      "pentti-linkola",
+      "thomas-jefferson",
+      "janos-kadar",
+      "h-l-mencken",
+      "marcus-garvey",
+      "julius-nyerere",
+      "papa-pio-ix",
+      "justiniano-i",
+      "filipe-ii-da-espanha",
+      "pedro-o-grande",
+      "joao-calvino",
+      "dom-manuel-i",
+      "genghis-khan",
+      "lazaro-cardenas",
+      "guillaume-faye"
     ]
   },
   "ideology": {
