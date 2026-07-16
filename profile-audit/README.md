@@ -41,7 +41,8 @@ três catálogos** — só mudam os metadados de entrada e o arquivo de saída.
 | `STATE.json` | **Fonte única de verdade** do progresso, um bloco por catálogo (`personality`, `ideology`, `country`), cada um com `pending` e `done`. |
 | `questions-template.txt` | As 240 perguntas (12 eixos × 20), prontas para colar em qualquer prompt novo, de qualquer catálogo. Não editar sem necessidade. |
 | `prompts/<catalog>/<id>.txt` | Prompt já montado para um perfil específico, pronto para mandar a um subagente. Só existe para perfis com prompt gerado e ainda não mesclado. |
-| `subagent-out/<catalog>/<id>.json` | Saída de um subagente já rodado, aguardando merge. Depois do merge, o arquivo é apagado. |
+| `subagent-out/<catalog>/<id>.json` | Saída de um subagente já rodado, aguardando merge/validação. **Temporário**: depois do merge bem-sucedido, o arquivo é apagado daqui (mas uma cópia permanece em `answers/`, ver abaixo). |
+| `answers/<catalog>/<id>.json` | **Arquivo permanente** com as 240 respostas (12 eixos × 20, com `personaBrief` de cada eixo) de todo perfil já mesclado. Nunca é apagado — é o arquivo que o usuário usa para auditar/conferir respostas pergunta a pergunta a qualquer momento, mesmo muito depois do merge. |
 | `_legacy/` | Pipeline antigo (scripts `.mjs`, logs, JSONs de estado de ~25MB), só de personalidades. **Não usar.** Mantido só para referência histórica. |
 
 Arquivo vivo do resto do repo que todos os catálogos compartilham:
@@ -52,9 +53,9 @@ Arquivo vivo do resto do repo que todos os catálogos compartilham:
 Escolha um catálogo (`personality`, `ideology` ou `country`) e repita este ciclo até
 `STATE.json.<catalog>.pending` ficar vazio.
 
-### 1. Escolher o próximo lote de 5
+### 1. Escolher o próximo lote de 15
 
-Pegue os 5 primeiros IDs de `STATE.json.<catalog>.pending`.
+Pegue os 15 primeiros IDs de `STATE.json.<catalog>.pending`.
 
 ### 2. Gerar o prompt de cada perfil do lote (se ainda não existir em `prompts/<catalog>/`)
 
@@ -102,17 +103,17 @@ Depois de gravar o arquivo, responda apenas com "OK {catalog}:{id}" e um resumo 
 
 Depois cole o conteúdo de `questions-template.txt` (que já começa com `=== PERGUNTAS POR EIXO ===`).
 
-### 3. Disparar os 5 subagentes SIMULTANEAMENTE
+### 3. Disparar os 15 subagentes SIMULTANEAMENTE
 
-**Regra crítica:** os 5 subagentes do lote devem ser disparados na mesma mensagem/turno (5 chamadas de
-ferramenta de agente em paralelo), nunca um de cada vez esperando o anterior terminar. Use um modelo
+**Regra crítica:** os 15 subagentes do lote devem ser disparados na mesma mensagem/turno (15 chamadas
+de ferramenta de agente em paralelo), nunca um de cada vez esperando o anterior terminar. Use um modelo
 de qualidade (ex.: Sonnet), não um modelo rápido/barato — perfis feitos com modelo fraco saem ruins
 e precisam ser refeitos.
 
 Cada subagente recebe o prompt de `prompts/<catalog>/<id>.txt` e deve gravar sua saída em
 `subagent-out/<catalog>/<id>.json`.
 
-### 4. Validar as 5 saídas
+### 4. Validar as 15 saídas
 
 Para cada `subagent-out/<catalog>/<id>.json`, confirme:
 - Existem exatamente os 12 eixos: `estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia`.
@@ -162,7 +163,7 @@ def compute_vector(answers_by_axis):
 AXIS_ORDER = ['estrutura','representacao','poder','imigracao','diplomacia','intervencao',
               'economia','controle','comercio','religiao','moral','tecnologia']
 
-ids_neste_lote = [...]  # os 5 ids do lote
+ids_neste_lote = [...]  # os 15 ids do lote
 
 profiles = json.load(open(PROFILES_FILE, encoding='utf-8'))
 by_id = {p[KEY_FIELD]: p for p in profiles}
@@ -186,20 +187,30 @@ Para cada ID do lote mesclado com sucesso, dentro do bloco `STATE.json.<catalog>
 - Adicione o ID em `done`.
 - Atualize `STATE.json.lastUpdated` (UTC, formato `YYYY-MM-DDTHH:MM:SSZ`).
 
-### 7. Limpar os arquivos temporários do lote
+### 7. Arquivar as respostas e limpar os arquivos temporários do lote
 
-Apague `prompts/<catalog>/<id>.txt` e `subagent-out/<catalog>/<id>.json` de cada perfil mesclado com
-sucesso. Pastas devem ficar vazias entre lotes — só contêm o que ainda está em processamento.
+Para cada perfil mesclado com sucesso, NESTA ORDEM:
+1. Copie (não mova) `subagent-out/<catalog>/<id>.json` para `answers/<catalog>/<id>.json`. Este
+   arquivo é **permanente** — é o que o usuário usa para auditar as 240 respostas de qualquer perfil
+   a qualquer momento, mesmo muito tempo depois do merge. **Nunca apague nada dentro de `answers/`.**
+2. Só depois de confirmar que a cópia em `answers/` existe, apague `prompts/<catalog>/<id>.txt` e
+   `subagent-out/<catalog>/<id>.json` (esses sim são temporários — `prompts/` e `subagent-out/` devem
+   ficar vazios entre lotes, só contêm o que ainda está em processamento).
+
+**Nota histórica:** este processo funcionou originalmente em lotes de 5; a partir de 2026-07-16 os
+lotes passaram a ser de 15 por solicitação do usuário (mesmo processo, só o tamanho do lote mudou).
+Também a partir de 2026-07-16, as respostas passaram a ser arquivadas permanentemente em `answers/`
+em vez de simplesmente apagadas após o merge — o usuário quer poder auditar cada resposta depois.
 
 ### 8. Perguntar antes do próximo lote
 
 Depois de mesclar, atualizar o `STATE.json` e limpar os arquivos, informe ao usuário que o lote foi
 concluído (quantos pending restam naquele catálogo) e **pergunte se deve continuar para o próximo
-lote**. Só dispare o próximo lote de 5 após confirmação explícita — não encadeie lotes sozinho.
+lote**. Só dispare o próximo lote de 15 após confirmação explícita — não encadeie lotes sozinho.
 
 ## Regras que não podem ser quebradas
 
-- **Nunca** despache os 5 subagentes de um lote um de cada vez — sempre simultâneo, mesma mensagem.
+- **Nunca** despache os 15 subagentes de um lote um de cada vez — sempre simultâneo, mesma mensagem.
 - **Nunca** use um modelo fraco/rápido para gerar as respostas — a qualidade cai visivelmente.
 - **Nunca** aproxime as respostas de um perfil às de outro perfil parecido — cada perfil é avaliado
   isoladamente, é essa independência que resolve o problema histórico de duplicação de sequências.
@@ -208,3 +219,5 @@ lote**. Só dispare o próximo lote de 5 após confirmação explícita — não
   lote validado — não é preciso perguntar para isso, só para iniciar o **próximo** lote.
 - `STATE.json` é a única fonte de verdade de progresso. Não recrie arquivos `.personality-todo.json`
   ou similares, nem consulte os arquivos em `_legacy/` para saber o que falta.
+- **Nunca** apague nem sobrescreva arquivos dentro de `answers/<catalog>/` — é o histórico permanente
+  de respostas que o usuário usa para auditoria. Só `prompts/` e `subagent-out/` são temporários.
