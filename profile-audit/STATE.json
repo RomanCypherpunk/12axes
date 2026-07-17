@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-17T15:29:32Z",
+  "lastUpdated": "2026-07-17T15:39:43Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -415,21 +415,6 @@
   "country": {
     "totalProfiles": 130,
     "pending": [
-      "monaco",
-      "estonia",
-      "luxemburgo",
-      "eua-florida",
-      "imperio-do-japao",
-      "imperio-austro-hungaro",
-      "butao",
-      "imperio-persa-aquemenida",
-      "comuna-de-paris",
-      "catalunha",
-      "florenca-renascentista",
-      "roma-republicana",
-      "hungria-de-kadar",
-      "chile-de-allende",
-      "burkina-faso-de-sankara",
       "eua-confederados",
       "macau",
       "estados-papais",
@@ -546,7 +531,22 @@
       "republica-holandesa",
       "republica-de-weimar",
       "gra-colombia",
-      "vaticano"
+      "vaticano",
+      "monaco",
+      "estonia",
+      "luxemburgo",
+      "eua-florida",
+      "imperio-do-japao",
+      "imperio-austro-hungaro",
+      "butao",
+      "imperio-persa-aquemenida",
+      "comuna-de-paris",
+      "catalunha",
+      "florenca-renascentista",
+      "roma-republicana",
+      "hungria-de-kadar",
+      "chile-de-allende",
+      "burkina-faso-de-sankara"
     ]
   }
 }
