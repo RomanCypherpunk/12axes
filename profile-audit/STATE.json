@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-17T16:06:02Z",
+  "lastUpdated": "2026-07-17T20:26:33Z",
   "personality": {
-    "totalProfiles": 234,
+    "totalProfiles": 242,
     "pending": [],
     "done": [
       "lenin",
@@ -238,7 +238,15 @@
       "zumbi-dos-palmares",
       "deodoro-da-fonseca",
       "ernesto-geisel",
-      "justin-trudeau"
+      "justin-trudeau",
+      "muammar-gaddafi",
+      "lee-teng-hui",
+      "chiang-kai-shek",
+      "hirohito",
+      "winston-churchill",
+      "franz-ferdinand",
+      "woodrow-wilson",
+      "nicolau-ii"
     ]
   },
   "ideology": {
@@ -419,7 +427,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 130,
+    "totalProfiles": 131,
     "pending": [],
     "done": [
       "brasil",
@@ -551,7 +559,8 @@
       "finlandia",
       "imperio-mongol",
       "brasil-regime-militar",
-      "mexico-de-cardenas"
+      "mexico-de-cardenas",
+      "confederacao-helvetica"
     ]
   }
 }
