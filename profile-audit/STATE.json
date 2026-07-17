@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-17T15:39:43Z",
+  "lastUpdated": "2026-07-17T15:52:50Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -414,25 +414,7 @@
   },
   "country": {
     "totalProfiles": 130,
-    "pending": [
-      "eua-confederados",
-      "macau",
-      "estados-papais",
-      "imperio-bizantino",
-      "espanha-habsburgos",
-      "imperio-russo-czarista",
-      "genebra-calvinista",
-      "imperio-portugues",
-      "austria",
-      "imperio-alemao",
-      "portugal",
-      "alemanha-oriental",
-      "islandia",
-      "finlandia",
-      "imperio-mongol",
-      "brasil-regime-militar",
-      "mexico-de-cardenas"
-    ],
+    "pending": [],
     "done": [
       "brasil",
       "estados-unidos",
@@ -546,7 +528,24 @@
       "roma-republicana",
       "hungria-de-kadar",
       "chile-de-allende",
-      "burkina-faso-de-sankara"
+      "burkina-faso-de-sankara",
+      "eua-confederados",
+      "macau",
+      "estados-papais",
+      "imperio-bizantino",
+      "espanha-habsburgos",
+      "imperio-russo-czarista",
+      "genebra-calvinista",
+      "imperio-portugues",
+      "austria",
+      "imperio-alemao",
+      "portugal",
+      "alemanha-oriental",
+      "islandia",
+      "finlandia",
+      "imperio-mongol",
+      "brasil-regime-militar",
+      "mexico-de-cardenas"
     ]
   }
 }
