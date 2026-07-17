@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T20:15:00Z",
+  "lastUpdated": "2026-07-16T20:45:00Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -415,11 +415,6 @@
   "country": {
     "totalProfiles": 130,
     "pending": [
-      "imperio-otomano",
-      "camboja-do-khmer-vermelho-pol-pot",
-      "aragao-e-catalunha-anarquistas-revolucao-espanhola",
-      "argentina-peronista",
-      "egito-de-nasser",
       "africa-do-sul-do-apartheid",
       "hong-kong",
       "argentina",
@@ -546,7 +541,12 @@
       "italia-fascista-mussolini",
       "chile-de-pinochet",
       "uniao-sovietica-urss",
-      "china-maoista"
+      "china-maoista",
+      "imperio-otomano",
+      "camboja-do-khmer-vermelho-pol-pot",
+      "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+      "argentina-peronista",
+      "egito-de-nasser"
     ]
   }
 }
