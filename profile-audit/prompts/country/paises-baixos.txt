@@ -1,10 +1,10 @@
-Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Rússia" (catálogo: país/nação) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
+Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Países Baixos" (catálogo: país/nação) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
 
 Dados curados deste perfil (não invente informação além disto; se precisar de contexto histórico adicional, baseie-se apenas em fatos amplamente documentados e verificáveis sobre esta entidade específica):
-id: russia
-name: Rússia
-category: Autoritarismo nacional centralizado
-description: República presidencialista euroasiática, a Rússia concentra o poder num regime autoritário e nacionalista, com economia dependente de recursos naturais, forte aparato militar e política externa de confronto com o Ocidente.
+id: paises-baixos
+name: Países Baixos
+category: Democracia mercantil liberal
+description: Monarquia parlamentar, os Países Baixos são conhecidos pela tradição liberal, tolerância social e livre comércio, com economia aberta e globalizada e políticas progressistas em temas de costumes e direitos individuais.
 
 METODOLOGIA (obrigatória):
 - Para CADA um dos 12 eixos: primeiro escreva um persona brief de 1-2 frases conectando especificamente a description acima ao tema daquele eixo (não repita a description inteira - extraia so a parte relevante aquele eixo).
@@ -15,7 +15,7 @@ METODOLOGIA (obrigatória):
 - Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico. Se este perfil for anti-estatista mas quiser coordenacao economica coletiva/planejada (ex.: anarquistas, comunistas libertarios), julgue pelo ESPIRITO de coordenacao coletiva vs. mercado, nao pela agencia estatal literal. Ja no eixo "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico/anti-autocratico, nao autocratico.
 
 SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
-c:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/country/russia.json
+c:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/country/paises-baixos.json
 
 Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; cada eixo com exatamente 20 respostas; todos os 12 eixos presentes):
 {
@@ -24,7 +24,7 @@ Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; ca
   ... (todos os 12 eixos: estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia)
 }
 
-Depois de gravar o arquivo, responda apenas com "OK country:russia" e um resumo de 1 linha. Não cole o JSON inteiro na resposta.
+Depois de gravar o arquivo, responda apenas com "OK country:paises-baixos" e um resumo de 1 linha. Não cole o JSON inteiro na resposta.
 
 === PERGUNTAS POR EIXO ===
 
