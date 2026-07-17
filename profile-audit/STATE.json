@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T19:40:00Z",
+  "lastUpdated": "2026-07-16T20:15:00Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -415,20 +415,7 @@
   "country": {
     "totalProfiles": 130,
     "pending": [
-      "atenas-democratica",
-      "esparta",
-      "imperio-macedonico",
-      "imperio-romano",
-      "sacro-imperio-romano-germanico",
-      "republica-de-veneza",
       "imperio-otomano",
-      "reino-unido-vitoriano-imperio-britanico",
-      "imperio-do-brasil",
-      "alemanha-nazista-terceiro-reich",
-      "italia-fascista-mussolini",
-      "chile-de-pinochet",
-      "uniao-sovietica-urss",
-      "china-maoista",
       "camboja-do-khmer-vermelho-pol-pot",
       "aragao-e-catalunha-anarquistas-revolucao-espanhola",
       "argentina-peronista",
@@ -546,7 +533,20 @@
       "ira",
       "arabia-saudita",
       "israel",
-      "africa-do-sul"
+      "africa-do-sul",
+      "atenas-democratica",
+      "esparta",
+      "imperio-macedonico",
+      "imperio-romano",
+      "sacro-imperio-romano-germanico",
+      "republica-de-veneza",
+      "reino-unido-vitoriano-imperio-britanico",
+      "imperio-do-brasil",
+      "alemanha-nazista-terceiro-reich",
+      "italia-fascista-mussolini",
+      "chile-de-pinochet",
+      "uniao-sovietica-urss",
+      "china-maoista"
     ]
   }
 }
