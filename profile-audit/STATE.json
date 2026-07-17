@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-16T21:10:00Z",
+  "lastUpdated": "2026-07-16T22:25:00Z",
   "personality": {
     "totalProfiles": 228,
     "pending": [],
@@ -415,21 +415,6 @@
   "country": {
     "totalProfiles": 130,
     "pending": [
-      "iugoslavia-socialista",
-      "espanha-franquista",
-      "islandia-medieval",
-      "emirados-arabes-unidos",
-      "portugal-estado-novo",
-      "prussia",
-      "polonia",
-      "ucrania-territorio-livre",
-      "brasil-era-vargas",
-      "tchequia",
-      "eua-california",
-      "eua-texas",
-      "eua-nova-york",
-      "eua-new-hampshire",
-      "eua-washington-dc",
       "eua-massachusetts",
       "canada",
       "paises-baixos",
@@ -546,7 +531,22 @@
       "hong-kong",
       "argentina",
       "liechtenstein",
-      "rojava"
+      "rojava",
+      "iugoslavia-socialista",
+      "espanha-franquista",
+      "islandia-medieval",
+      "emirados-arabes-unidos",
+      "portugal-estado-novo",
+      "prussia",
+      "polonia",
+      "ucrania-territorio-livre",
+      "brasil-era-vargas",
+      "tchequia",
+      "eua-california",
+      "eua-texas",
+      "eua-nova-york",
+      "eua-new-hampshire",
+      "eua-washington-dc"
     ]
   }
 }
