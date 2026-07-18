@@ -6,6 +6,6 @@
       <stop offset="100%" stop-color="#4ADE80"/>
     </linearGradient>
   </defs>
-  <text x="256" y="300" font-family="Sora, sans-serif" font-weight="800" font-size="200" letter-spacing="-8" text-anchor="middle" fill="url(#brand)">12</text>
-  <text x="256" y="392" font-family="Sora, sans-serif" font-weight="800" font-size="92" letter-spacing="-2" text-anchor="middle" fill="#0B1020">axes</text>
+  <circle cx="256" cy="256" r="256" fill="url(#brand)"/>
+  <text x="256" y="332" font-family="Sora, sans-serif" font-weight="800" font-size="260" letter-spacing="-10" text-anchor="middle" fill="#fff">12</text>
 </svg>
