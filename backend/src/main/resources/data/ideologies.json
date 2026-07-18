@@ -1535,5 +1535,32 @@
     "description": "Doutrina cunhada por Guillaume Faye que funde valores arcaicos, hierárquicos e tradicionalistas, com a adoção irrestrita de tecnologia avançada, defendendo que um colapso civilizacional iminente forçará a humanidade a combinar ordem social tribal com ciência hipermoderna.",
     "countryId": "russia",
     "personalityId": "guillaume-faye"
+  },
+  {
+    "id": "pragmatismo",
+    "name": "Pragmatismo",
+    "category": "Centro",
+    "description": "Postura política que avalia propostas pelos resultados práticos que produzem, e não pela fidelidade a um dogma ideológico, combinando medidas de mercado, regulação e políticas sociais conforme a evidência e o contexto de cada problema.",
+    "vector": null,
+    "countryId": "brasil",
+    "personalityId": "fernando-henrique-cardoso"
+  },
+  {
+    "id": "pragmatismo-de-direita",
+    "name": "Pragmatismo de Direita",
+    "category": "Centro-Direita",
+    "description": "Vertente pragmática que prioriza ajuste fiscal, estabilidade econômica e governabilidade por meio de amplas coalizões, aceitando reformas de mercado e concessões políticas em nome de resultados de curto e médio prazo.",
+    "vector": null,
+    "countryId": "eua-washington-dc",
+    "personalityId": "michel-temer"
+  },
+  {
+    "id": "pragmatismo-de-esquerda",
+    "name": "Pragmatismo de Esquerda",
+    "category": "Centro-Esquerda",
+    "description": "Vertente que busca resultados sociais concretos negociando com o mercado e as instituições existentes, priorizando austeridade fiscal responsável, políticas sociais focadas e governabilidade acima da pureza ideológica revolucionária.",
+    "vector": null,
+    "countryId": "uruguai",
+    "personalityId": "jose-mujica"
   }
 ]
