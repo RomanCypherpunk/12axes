@@ -26,11 +26,14 @@ public class ProfileMatchScorer {
 
     private static final double CENTER = 50.0;
     private static final double AXIS_SPREAD = 50.0;
-    static final double AXIS_WEIGHT = 0.45;
-    static final double DIRECTION_WEIGHT = 0.35;
-    static final double MAGNITUDE_WEIGHT = 0.20;
+    static final double AXIS_WEIGHT = 0.42;
+    static final double DIRECTION_WEIGHT = 0.33;
+    static final double MAGNITUDE_WEIGHT = 0.18;
+    static final double OUTLIER_WEIGHT = 0.07;
     private static final double OPPOSITE_SIDE_MAX_PENALTY = 0.45;
     private static final double OPPOSITE_SIDE_SPREAD = 25.0;
+    static final double OUTLIER_FULL_SPREAD = 100.0;
+    static final double OUTLIER_EXPONENT = 2.5;
 
     public Map<String, Double> userVectorFor(List<AxisResult> axisResults) {
         return axisResults.stream()
@@ -41,10 +44,12 @@ public class ProfileMatchScorer {
         double axisSimilarity = axisSimilarity(userVector, targetVector);
         double directionSimilarity = directionSimilarity(userVector, targetVector);
         double magnitudeSimilarity = magnitudeSimilarity(userVector, targetVector);
+        double outlierSimilarity = outlierSimilarity(userVector, targetVector);
         return round1(clamp(
                 AXIS_WEIGHT * axisSimilarity
                         + DIRECTION_WEIGHT * directionSimilarity
                         + MAGNITUDE_WEIGHT * magnitudeSimilarity
+                        + OUTLIER_WEIGHT * outlierSimilarity
         ));
     }
 
@@ -112,6 +117,16 @@ public class ProfileMatchScorer {
                 .mapToDouble(axisId -> Math.abs(vector.getOrDefault(axisId, CENTER) - CENTER))
                 .average()
                 .orElse(0.0);
+    }
+
+    private double outlierSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
+        double maxDiff = 0.0;
+        for (String axisId : AXIS_IDS) {
+            double userValue = userVector.getOrDefault(axisId, CENTER);
+            double targetValue = targetVector.getOrDefault(axisId, CENTER);
+            maxDiff = Math.max(maxDiff, Math.abs(userValue - targetValue));
+        }
+        return 100.0 * Math.max(0.0, 1.0 - Math.pow(maxDiff / OUTLIER_FULL_SPREAD, OUTLIER_EXPONENT));
     }
 
     private double oppositeSideSimilarityFactor(double userValue, double targetValue) {
