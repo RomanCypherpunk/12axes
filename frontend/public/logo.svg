@@ -1,20 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
   <defs>
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#4ADE80"/>
+    <linearGradient id="brand" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#15803D"/>
       <stop offset="55%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" rx="112" fill="#0B1020"/>
-  <g stroke="#3A465C" stroke-width="10" stroke-linecap="round">
-    <path d="M256 92v328"/>
-    <path d="M92 256h328"/>
-    <path d="m238 110 18-20 18 20"/>
-    <path d="m238 402 18 20 18-20"/>
-    <path d="m110 238-20 18 20 18"/>
-    <path d="m402 238 20 18-20 18"/>
-  </g>
-  <text x="256" y="300" font-family="Sora, sans-serif" font-weight="700" font-size="200" letter-spacing="-8" text-anchor="middle" fill="url(#brand)">12</text>
-  <text x="256" y="392" font-family="Sora, sans-serif" font-weight="700" font-size="92" letter-spacing="-2" text-anchor="middle" fill="#F8FAFC">axes</text>
+  <text x="256" y="300" font-family="Sora, sans-serif" font-weight="800" font-size="200" letter-spacing="-8" text-anchor="middle" fill="url(#brand)">12</text>
+  <text x="256" y="392" font-family="Sora, sans-serif" font-weight="800" font-size="92" letter-spacing="-2" text-anchor="middle" fill="#0B1020">axes</text>
 </svg>
