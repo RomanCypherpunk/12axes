@@ -81,6 +81,8 @@ interface Strings {
   startQuiz: string;
   seeAxes: string;
   heroLabels: string[];
+  heroTeaserLabel: string;
+  heroTeaserTag: string;
   formats: { short: QuizFormatStrings; extended: QuizFormatStrings; extreme: QuizFormatStrings };
   axisExplanations: Record<string, string>;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
@@ -93,6 +95,14 @@ interface Strings {
   axesGuideEyebrow: string;
   axesGuideTitle: string;
   axesGuideLead: string;
+  discoveryEyebrow: string;
+  discoveryTitle: string;
+  discoveryLead: string;
+  discoveryItems: { icon: string; title: string; text: string }[];
+  exampleEyebrow: string;
+  exampleTitle: string;
+  exampleCaption: string;
+  exampleCta: string;
   spectrumEyebrow: string;
   spectrumTitle: string;
   spectrumLead: string;
@@ -181,15 +191,17 @@ const pt: Strings = {
   langToggleAria: 'Switch to English',
   redoQuiz: 'Refazer quiz',
   restartQuiz: 'Reiniciar quiz',
-  heroEyebrow: 'Quiz político',
-  h1Pre: 'Descubra sua ',
-  h1Em: 'posição política',
-  h1Post: ' em apenas 5 minutos',
+  heroEyebrow: 'Descoberta política',
+  h1Pre: 'Você sabe mesmo qual é a sua ',
+  h1Em: 'ideologia política',
+  h1Post: '?',
   introLead:
-    'Analise suas opiniões em 12 dimensões independentes, compare seus resultados com diferentes correntes políticas, países e personalidades e entenda como suas ideias se distribuem no espectro político.',
-  startQuiz: 'Começar o Quiz',
+    'Talvez você esteja se classificando errado. Em poucos minutos, descubra sua ideologia real, o país que mais pensa como você e o líder político mais parecido com suas ideias.',
+  startQuiz: 'Descobrir meu perfil',
   seeAxes: 'Ver os 12 eixos',
   heroLabels: ['Gratuito', 'Anônimo', 'Rápido', 'Resultado imediato'],
+  heroTeaserLabel: 'match',
+  heroTeaserTag: 'Exemplo de resultado',
   formats: {
     short: {
       label: 'Curta',
@@ -351,6 +363,22 @@ const pt: Strings = {
   axesGuideTitle: 'O que significa cada eixo?',
   axesGuideLead:
     'O teste ideológico 12 Axes analisa federalismo, representação política, democracia, eleições, imigração, comércio internacional, religião na política, política econômica, moral e tecnologia em dimensões separadas.',
+  discoveryEyebrow: 'O que você vai descobrir',
+  discoveryTitle: 'Um retrato completo das suas convicções políticas',
+  discoveryLead:
+    'Mais do que esquerda ou direita: seu resultado mostra com quem, onde e com que intensidade suas ideias realmente combinam.',
+  discoveryItems: [
+    { icon: 'ideology', title: 'Sua ideologia', text: 'Qual corrente política combina com você' },
+    { icon: 'country', title: 'Seu país', text: 'Que nação pensa parecido com você' },
+    { icon: 'personality', title: 'Seu líder político', text: 'Qual figura histórica é seu par ideológico' },
+    { icon: 'spectrum', title: 'Seu espectro', text: 'Onde você fica entre esquerda e direita' },
+    { icon: 'profile', title: 'Seu perfil', text: 'Um retrato completo das suas convicções' },
+    { icon: 'compatibility', title: 'Compatibilidade', text: 'O quanto você realmente concorda com sua própria ideologia' }
+  ],
+  exampleEyebrow: 'Exemplo real',
+  exampleTitle: 'É assim que fica o seu resultado',
+  exampleCaption: 'Exemplo ilustrativo com dados reais do catálogo do 12 Axes.',
+  exampleCta: 'Quero ver o meu resultado',
   spectrumEyebrow: 'Espectro político',
   spectrumTitle: 'Descubra seu espectro político',
   spectrumLead:
@@ -359,7 +387,7 @@ const pt: Strings = {
   versionsEyebrow: 'Versões',
   versionsTitle: 'Escolha a profundidade',
   versionsLead:
-    'Comece pelo quiz político rápido ou faça uma análise mais completa do seu espectro político. Todas as versões usam os mesmos 12 eixos e retornam o resultado imediatamente.',
+    'Comece pelo quiz rápido ou aprofunde sua análise para um retrato mais preciso do seu perfil ideológico. Todas as versões usam os mesmos 12 eixos e retornam o resultado imediatamente.',
   variantEyebrow: 'Escolha o formato',
   variantTitle: 'Você quer velocidade ou precisão?',
   variantLead:
@@ -445,15 +473,17 @@ const en: Strings = {
   langToggleAria: 'Mudar para português',
   redoQuiz: 'Retake quiz',
   restartQuiz: 'Restart quiz',
-  heroEyebrow: 'Political quiz',
-  h1Pre: 'Discover your ',
-  h1Em: 'political position',
-  h1Post: ' in just 5 minutes',
+  heroEyebrow: 'Political discovery',
+  h1Pre: 'Do you really know your ',
+  h1Em: 'political ideology',
+  h1Post: '?',
   introLead:
-    'Analyze your opinions across 12 independent dimensions, compare your results with different political currents, countries, and personalities, and understand how your ideas are distributed across the political spectrum.',
-  startQuiz: 'Start the Quiz',
+    'You might be labeling yourself wrong. In a few minutes, discover your real ideology, the country that thinks most like you, and the political leader closest to your ideas.',
+  startQuiz: 'Discover my profile',
   seeAxes: 'See the 12 axes',
-  heroLabels: ['Free', 'Anonymous', 'Fast', 'Instant results'],
+  heroLabels: ['Free', 'Anonymous', 'Fast', 'Instant result'],
+  heroTeaserLabel: 'match',
+  heroTeaserTag: 'Example result',
   formats: {
     short: {
       label: 'Short',
@@ -628,6 +658,22 @@ const en: Strings = {
   axesGuideTitle: 'What does each axis mean?',
   axesGuideLead:
     'The 12 Axes ideology test analyzes federalism, political representation, democracy, elections, immigration, international trade, religion in politics, economic policy, morality, and technology in separate dimensions.',
+  discoveryEyebrow: 'What you will discover',
+  discoveryTitle: 'A complete portrait of your political convictions',
+  discoveryLead:
+    'More than left or right: your result shows who, where, and how strongly your ideas actually align.',
+  discoveryItems: [
+    { icon: 'ideology', title: 'Your ideology', text: 'Which political current matches you' },
+    { icon: 'country', title: 'Your country', text: 'Which nation thinks most like you' },
+    { icon: 'personality', title: 'Your political leader', text: 'Which historical figure is your ideological match' },
+    { icon: 'spectrum', title: 'Your spectrum', text: 'Where you fall between left and right' },
+    { icon: 'profile', title: 'Your profile', text: 'A complete portrait of your convictions' },
+    { icon: 'compatibility', title: 'Compatibility', text: 'How much you truly agree with your own ideology' }
+  ],
+  exampleEyebrow: 'Real example',
+  exampleTitle: "Here's what your result looks like",
+  exampleCaption: 'Illustrative example using real data from the 12 Axes catalog.',
+  exampleCta: 'I want to see my result',
   spectrumEyebrow: 'Political spectrum',
   spectrumTitle: 'Discover your political spectrum',
   spectrumLead:
@@ -636,7 +682,7 @@ const en: Strings = {
   versionsEyebrow: 'Versions',
   versionsTitle: 'Choose the depth',
   versionsLead:
-    'Start with the quick political quiz or run a more complete analysis of your political spectrum. All versions use the same 12 axes and return the result immediately.',
+    'Start with the quick quiz or go deeper for a more precise portrait of your ideological profile. All versions use the same 12 axes and return the result immediately.',
   variantEyebrow: 'Choose the format',
   variantTitle: 'Do you want speed or precision?',
   variantLead:

@@ -2,9 +2,12 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './utils/quizSelection';
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
+import { EXAMPLE_RESULTS } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
+import { resolveCountryFlagSrc } from './utils/countryFlags';
+import { resolvePersonalityImageSrc } from './utils/personalityImage';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
 type ExtendChoice = 'yes' | 'no';
@@ -130,6 +133,7 @@ export default function App() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
+  const [exampleIndex, setExampleIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
@@ -195,9 +199,22 @@ export default function App() {
     return () => window.clearTimeout(timeoutId);
   }, [screen]);
 
+  // Alterna o exemplo de resultado (hero + seção "Exemplo de resultado") a
+  // cada 4s enquanto a home está visível, dando variedade sem interação.
+  useEffect(() => {
+    if (screen !== 'home') {
+      return;
+    }
+    const intervalId = window.setInterval(() => {
+      setExampleIndex((index) => (index + 1) % EXAMPLE_RESULTS.length);
+    }, 4000);
+    return () => window.clearInterval(intervalId);
+  }, [screen]);
+
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
+  const currentExample = EXAMPLE_RESULTS[exampleIndex % EXAMPLE_RESULTS.length];
 
   const resultByAxis = useMemo(() => {
     if (!result) {
@@ -567,29 +584,107 @@ export default function App() {
               </div>
             </div>
 
-            <div className="canvas-panel hero-axis-panel">
-              <div className="axis-mosaic fade-up d-3" id="eixos">
-                {homeAxes.map((axis, index) => (
-                  <article
-                    key={axis.id}
-                    className={`axis-tile${TONE_RED_AXES.has(axis.id) ? ' tone-red' : ''}`}
+            <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
+              <div className="hero-teaser-tag">
+                <span />
+                {t.heroTeaserTag}
+              </div>
+              <div className="hero-teaser-fade" key={exampleIndex}>
+                <div className="hero-teaser-card">
+                  <div
+                    className="compatibility-ring hero-teaser-ring"
+                    style={{ ['--pct' as string]: currentExample.ideology.compatibility }}
                   >
-                    <span className="axis-tile-num">0{index + 1 < 10 ? index + 1 : index + 1}</span>
-                    <span className="axis-tile-icon" aria-hidden="true">
-                      <AxisIcon id={axis.id} />
+                    <span>
+                      {currentExample.ideology.compatibility}%
+                      <small>{t.heroTeaserLabel}</small>
                     </span>
-                    <div>
-                      <span className="axis-tile-name">{axis.label}</span>
-                      <span className="axis-tile-poles">{axis.leftPole} × {axis.rightPole}</span>
+                  </div>
+                  <div className="hero-teaser-text">
+                    <span>{currentExample.ideology.category}</span>
+                    <strong>{currentExample.ideology.name}</strong>
+                  </div>
+                </div>
+                <div className="hero-teaser-thumbs">
+                  <figure className="hero-teaser-thumb">
+                    <div className="hero-teaser-thumb-frame">
+                      <img
+                        src={resolveCountryFlagSrc(currentExample.country.flagPath)}
+                        alt={currentExample.country.name}
+                        loading="lazy"
+                      />
                     </div>
-                  </article>
-                ))}
+                    <figcaption>
+                      <span>{currentExample.country.name}</span>
+                      <strong>{currentExample.country.compatibility}%</strong>
+                    </figcaption>
+                  </figure>
+                  <figure className="hero-teaser-thumb">
+                    <div className="hero-teaser-thumb-frame">
+                      <img
+                        src={resolvePersonalityImageSrc(currentExample.personality.imagePath)}
+                        alt={currentExample.personality.name}
+                        loading="lazy"
+                      />
+                    </div>
+                    <figcaption>
+                      <span>{currentExample.personality.name}</span>
+                      <strong>{currentExample.personality.compatibility}%</strong>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
 
           {isHomeSeoReady && (
           <div className="home-seo">
+            <section className="seo-block fade-up" aria-labelledby="descubra">
+              <div className="section-heading">
+                <span className="eyebrow">{t.discoveryEyebrow}</span>
+                <h2 id="descubra">{t.discoveryTitle}</h2>
+                <p>{t.discoveryLead}</p>
+              </div>
+              <div className="discovery-grid">
+                {t.discoveryItems.map((item) => (
+                  <article className="discovery-card" key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="seo-block example-result fade-up" aria-labelledby="exemplo-resultado">
+              <div className="section-heading">
+                <span className="eyebrow">{t.exampleEyebrow}</span>
+                <h2 id="exemplo-resultado">{t.exampleTitle}</h2>
+                <p>{t.exampleCaption}</p>
+              </div>
+              <Suspense fallback={null}>
+                <div className="example-result-fade" key={exampleIndex}>
+                  <IdeologyMatchCard match={currentExample.ideology} featured />
+                  <div className="axis-rows example-axis-rows">
+                    {currentExample.axes.map((axisResult) => {
+                      const axis = homeAxes.find((candidate) => candidate.id === axisResult.axisId);
+                      return axis ? <AxisResultBar key={axisResult.axisId} axis={axis} result={axisResult} /> : null;
+                    })}
+                  </div>
+                  <CountryMatchCard match={currentExample.country} />
+                  <PersonalityMatchCard match={currentExample.personality} />
+                </div>
+              </Suspense>
+              <div className="example-result-cta">
+                <button className="primary-button" type="button" onClick={openVariantChooser}>
+                  {t.exampleCta}
+                  <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </section>
+
             <section className="seo-block fade-up" aria-labelledby="como-funciona">
               <div className="section-heading">
                 <span className="eyebrow">{t.howEyebrow}</span>
