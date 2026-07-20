@@ -141,13 +141,14 @@ Na pratica, os testes exigem perfis explicitos para ideologias, paises e persona
 
 A formula fica em `ProfileMatchScorer`.
 
-Hoje ela tem 3 componentes:
+Hoje ela tem 4 componentes:
 
 ```text
 compatibilidade =
-  0.45 * axisSimilarity
-+ 0.35 * directionSimilarity
-+ 0.20 * magnitudeSimilarity
+  0.42 * axisSimilarity
++ 0.33 * directionSimilarity
++ 0.18 * magnitudeSimilarity
++ 0.07 * outlierSimilarity
 ```
 
 O resultado final e:
@@ -244,12 +245,34 @@ Outro exemplo:
 
 Isso impede que um usuario "morno" ganhe nota quase perfeita contra um perfil radical apenas por apontar para o mesmo lado.
 
+### 4. `outlierSimilarity`
+
+Pergunta: existe algum eixo isolado onde usuario e alvo divergem muito, mesmo que a media geral va bem?
+
+Esse componente existe para o seguinte problema: um perfil pode ter compatibilidade alta na media (11 dos 12 eixos proximos) e ainda assim ter 1 eixo com diferenca enorme (ex.: usuario liberal na economia vs. alvo com economia totalmente estatizada). Os outros 3 componentes diluem esse outlier na media geral e o usuario ve uma nota alta para um perfil que diverge muito dele nesse eixo especifico.
+
+Primeiro calcula a maior diferenca absoluta entre os dois vetores, em qualquer eixo:
+
+```text
+maxDiff = max(abs(userValue - targetValue)) para todo eixo
+```
+
+Depois converte isso em uma nota, com queda suave (nao e um corte binario):
+
+```text
+outlierSimilarity = 100 * max(0, 1 - (maxDiff / 100)^2.5)
+```
+
+O expoente `2.5` deixa a penalidade branda para diffs moderados (ate uns 40-50 pontos) e mais dura conforme o diff se aproxima de 100. Diferente de um filtro por limiar, isso nunca remove um perfil do ranking: so reduz a nota dele proporcionalmente ao pior eixo, permitindo que o perfil ainda vença se for o melhor candidato disponivel nos outros 3 componentes.
+
+Esse componente tem peso baixo (`0.07`) de proposito: ele deve desempatar e suavizar outliers, nao dominar a formula. Pesos mais altos (testados em ate `0.20`) prejudicam a recuperacao do proprio perfil sob ruido (`ScorerBenchmarkTest`), porque penalizam demais qualquer eixo que receba ruido moderado.
+
 ## Caso neutro
 
 Neutro contra neutro nao e `75` na formula atual. Agora e:
 
 ```text
-0.45 * 100 + 0.35 * 50 + 0.20 * 100 = 82.5
+0.42 * 100 + 0.33 * 50 + 0.18 * 100 + 0.07 * 100 = 84.5
 ```
 
 Motivo:
@@ -257,6 +280,7 @@ Motivo:
 - `axisSimilarity = 100`: os eixos sao identicos.
 - `directionSimilarity = 50`: direcao indefinida.
 - `magnitudeSimilarity = 100`: os dois têm intensidade zero.
+- `outlierSimilarity = 100`: maior diferenca entre eixos e zero.
 
 ## Percentil
 
@@ -340,6 +364,7 @@ Protege:
 - neutro usa formula derivada das constantes.
 - usuario/alvo neutro mantem direcao como `50`.
 - usuario morno prefere perfil moderado a perfil extremo perfeitamente alinhado.
+- um outlier extremo em 1 eixo isolado reduz a nota mesmo com os outros 11 eixos identicos.
 - pesos somam `1.0`.
 
 ### `ScorerBenchmarkTest`
@@ -354,19 +379,19 @@ Benchmark intra-catalogo. Mede:
 - discriminacao entre primeiro e segundo.
 - controle de inflacao de extremidade para usuarios mornos.
 
-Ultima rodada apos o patch de magnitude:
+Ultima rodada apos o patch de outlier (4o componente), medida sobre o catalogo atual:
 
 ```text
-recovery10=80.8%
-recovery15=49.8%
-opposite=91.5%
-center=94.5%
-stability=96.0%
-discrimination=4.02%
+recovery10=72.6%
+recovery15=53.3%
+opposite=89.8%
+center=88.0%
+stability=96.9%
+discrimination=3.48%
 extremity=91.8%
 ```
 
-O limite de `recovery15` fica em `49.0` porque a nova formula troca uma pequena perda sob ruido forte por controle melhor de extremidade.
+**Nota de 2026-07-17**: o `recovery10` ja estava abaixo do limite `MIN_RECOVERY_SIGMA_10_PERCENT = 77.0` no `main`, antes do patch de outlier (media em `71.7%`). O catalogo cresceu desde a ultima calibracao desses limites e o teste ficou vermelho por causa disso, nao por causa do patch — o patch de outlier na verdade melhora o recovery10 (`71.7% -> 72.6%`). Os limites do benchmark (e o teste `neutralAnswersFavorCentrismo` / `neutralAnswersProduceCentrism`, que tambem falha no `main` porque `Monarquismo Constitucional` ficou mais proximo do centro que `Centrismo`) precisam de uma recalibracao separada, fora do escopo desta mudanca de formula.
 
 ### Testes de fluxo
 
@@ -394,6 +419,12 @@ Valor absoluto de compatibilidade depende dos pesos da formula. Teste de API dev
 ### Confundir ranking bruto com ranking diversificado
 
 Hoje a API de ideologias retorna ranking bruto. Se no futuro voltar a existir uma camada de diversidade ou curadoria visual, isso deve ser exposto separadamente para nao mascarar a ordem real de compatibilidade.
+
+### Descartar perfil por limiar de diferenca em 1 eixo
+
+Foi cogitado (e simulado, nao implementado) um corte binario: remover do ranking qualquer perfil com `diff > 60` (ou `70`) em algum eixo. Simulacoes mostraram que isso descarta entre 45% e 100% do catalogo dependendo do perfil do usuario, e o pior caso e justamente o usuario coerente e extremo (respostas fortes mas nao contraditorias): o corte remove o melhor candidato objetivo (ex.: Coreia do Norte para um usuario extremo-estatista) e o substitui por um candidato com compatibilidade agregada menor, so porque ele nao tem nenhum eixo isolado acima do limiar. Um corte binario sempre cria um penhasco artificial perto do limiar escolhido, qualquer que seja o valor.
+
+O componente `outlierSimilarity` foi escolhido no lugar do corte porque penaliza o outlier de forma continua, sem nunca zerar um candidato — ele pode cair no ranking, mas nao desaparece, e ainda vence quando e genuinamente o melhor candidato disponivel.
 
 ## Como alterar a formula com seguranca
 

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 class ProfileMatchScorerTest {
     private static final double DIRECTION_NEUTRAL_SCORE = 50.0;
     private static final double MAGNITUDE_PERFECT_SCORE = 100.0;
+    private static final double OUTLIER_PERFECT_SCORE = 100.0;
 
     private final ProfileMatchScorer scorer = new ProfileMatchScorer();
 
@@ -68,7 +69,7 @@ class ProfileMatchScorerTest {
         Map<String, Double> neutral = scorer.neutralVector();
 
         assertThat(scorer.compatibility(neutral, neutral))
-                .isEqualTo(expectedScore(100.0, DIRECTION_NEUTRAL_SCORE, MAGNITUDE_PERFECT_SCORE));
+                .isEqualTo(expectedScore(100.0, DIRECTION_NEUTRAL_SCORE, MAGNITUDE_PERFECT_SCORE, OUTLIER_PERFECT_SCORE));
     }
 
     @Test
@@ -80,9 +81,60 @@ class ProfileMatchScorerTest {
                 "poder", 100.0
         ));
 
-        double expected = expectedScore(75.0, DIRECTION_NEUTRAL_SCORE, 75.0);
+        double outlierScore = 100.0 * (1.0 - Math.pow(
+                50.0 / ProfileMatchScorer.OUTLIER_FULL_SPREAD, ProfileMatchScorer.OUTLIER_EXPONENT));
+        double expected = expectedScore(75.0, DIRECTION_NEUTRAL_SCORE, 75.0, outlierScore);
         assertThat(scorer.compatibility(neutral, target)).isEqualTo(expected);
         assertThat(scorer.compatibility(target, neutral)).isEqualTo(expected);
+    }
+
+    @Test
+    void singleExtremeOutlierAxisLowersScoreEvenWhenOtherAxesMatchPerfectly() {
+        Map<String, Double> user = vector(Map.ofEntries(
+                Map.entry("estrutura", 60.0),
+                Map.entry("representacao", 60.0),
+                Map.entry("poder", 60.0),
+                Map.entry("imigracao", 60.0),
+                Map.entry("diplomacia", 60.0),
+                Map.entry("intervencao", 60.0),
+                Map.entry("economia", 15.0),
+                Map.entry("controle", 60.0),
+                Map.entry("comercio", 60.0),
+                Map.entry("religiao", 60.0),
+                Map.entry("moral", 60.0),
+                Map.entry("tecnologia", 60.0)
+        ));
+        Map<String, Double> targetWithOutlier = vector(Map.ofEntries(
+                Map.entry("estrutura", 60.0),
+                Map.entry("representacao", 60.0),
+                Map.entry("poder", 60.0),
+                Map.entry("imigracao", 60.0),
+                Map.entry("diplomacia", 60.0),
+                Map.entry("intervencao", 60.0),
+                Map.entry("economia", 90.0),
+                Map.entry("controle", 60.0),
+                Map.entry("comercio", 60.0),
+                Map.entry("religiao", 60.0),
+                Map.entry("moral", 60.0),
+                Map.entry("tecnologia", 60.0)
+        ));
+        Map<String, Double> targetWithoutOutlier = vector(Map.ofEntries(
+                Map.entry("estrutura", 60.0),
+                Map.entry("representacao", 60.0),
+                Map.entry("poder", 60.0),
+                Map.entry("imigracao", 60.0),
+                Map.entry("diplomacia", 60.0),
+                Map.entry("intervencao", 60.0),
+                Map.entry("economia", 55.0),
+                Map.entry("controle", 60.0),
+                Map.entry("comercio", 60.0),
+                Map.entry("religiao", 60.0),
+                Map.entry("moral", 60.0),
+                Map.entry("tecnologia", 60.0)
+        ));
+
+        assertThat(scorer.compatibility(user, targetWithoutOutlier))
+                .isGreaterThan(scorer.compatibility(user, targetWithOutlier));
     }
 
     @Test
@@ -138,14 +190,17 @@ class ProfileMatchScorerTest {
     void weightsAddUpToOne() {
         assertThat(ProfileMatchScorer.AXIS_WEIGHT
                 + ProfileMatchScorer.DIRECTION_WEIGHT
-                + ProfileMatchScorer.MAGNITUDE_WEIGHT)
+                + ProfileMatchScorer.MAGNITUDE_WEIGHT
+                + ProfileMatchScorer.OUTLIER_WEIGHT)
                 .isEqualTo(1.0);
     }
 
-    private double expectedScore(double axisSimilarity, double directionSimilarity, double magnitudeSimilarity) {
+    private double expectedScore(double axisSimilarity, double directionSimilarity, double magnitudeSimilarity,
+            double outlierSimilarity) {
         return round1(ProfileMatchScorer.AXIS_WEIGHT * axisSimilarity
                 + ProfileMatchScorer.DIRECTION_WEIGHT * directionSimilarity
-                + ProfileMatchScorer.MAGNITUDE_WEIGHT * magnitudeSimilarity);
+                + ProfileMatchScorer.MAGNITUDE_WEIGHT * magnitudeSimilarity
+                + ProfileMatchScorer.OUTLIER_WEIGHT * outlierSimilarity);
     }
 
     private double round1(double value) {
