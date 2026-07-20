@@ -133,7 +133,7 @@ export default function App() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
-  const [exampleIndex, setExampleIndex] = useState(0);
+  const [exampleIndex, setExampleIndex] = useState(() => Math.floor(Math.random() * EXAMPLE_RESULTS.length));
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
@@ -206,7 +206,16 @@ export default function App() {
       return;
     }
     const intervalId = window.setInterval(() => {
-      setExampleIndex((index) => (index + 1) % EXAMPLE_RESULTS.length);
+      setExampleIndex((index) => {
+        if (EXAMPLE_RESULTS.length <= 1) {
+          return index;
+        }
+        let next = Math.floor(Math.random() * EXAMPLE_RESULTS.length);
+        while (next === index) {
+          next = Math.floor(Math.random() * EXAMPLE_RESULTS.length);
+        }
+        return next;
+      });
     }, 4000);
     return () => window.clearInterval(intervalId);
   }, [screen]);
@@ -585,28 +594,32 @@ export default function App() {
             </div>
 
             <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
-              <div className="hero-teaser-tag">
-                <span />
-                {t.heroTeaserTag}
-              </div>
               <div className="hero-teaser-fade" key={exampleIndex}>
                 <div className="hero-teaser-card">
-                  <div
-                    className="compatibility-ring hero-teaser-ring"
-                    style={{ ['--pct' as string]: currentExample.ideology.compatibility }}
-                  >
-                    <span>
-                      {currentExample.ideology.compatibility}%
-                      <small>{t.heroTeaserLabel}</small>
-                    </span>
+                  <div className="hero-teaser-card-head">
+                    <div className="hero-teaser-tag">
+                      <span />
+                      {t.heroTeaserTag}
+                    </div>
+                    <span className="hero-teaser-category">{currentExample.ideology.category}</span>
                   </div>
-                  <div className="hero-teaser-text">
-                    <span>{currentExample.ideology.category}</span>
-                    <strong>{currentExample.ideology.name}</strong>
+                  <div className="hero-teaser-top">
+                    <div
+                      className="compatibility-ring hero-teaser-ring"
+                      style={{ ['--pct' as string]: currentExample.ideology.compatibility }}
+                    >
+                      <span>
+                        {currentExample.ideology.compatibility}%<small>{t.heroTeaserLabel}</small>
+                      </span>
+                    </div>
+                    <div className="hero-teaser-text">
+                      <strong>{currentExample.ideology.name}</strong>
+                      <p>{currentExample.ideology.description}</p>
+                    </div>
                   </div>
                 </div>
                 <div className="hero-teaser-thumbs">
-                  <figure className="hero-teaser-thumb">
+                  <div className="hero-teaser-thumb">
                     <div className="hero-teaser-thumb-frame">
                       <img
                         src={resolveCountryFlagSrc(currentExample.country.flagPath)}
@@ -614,24 +627,56 @@ export default function App() {
                         loading="lazy"
                       />
                     </div>
-                    <figcaption>
-                      <span>{currentExample.country.name}</span>
-                      <strong>{currentExample.country.compatibility}%</strong>
-                    </figcaption>
-                  </figure>
-                  <figure className="hero-teaser-thumb">
-                    <div className="hero-teaser-thumb-frame">
+                    <div className="hero-teaser-thumb-body">
+                      <div className="hero-teaser-thumb-head">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <circle cx="12" cy="12" r="9" />
+                          <path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z" />
+                        </svg>
+                        {t.countryKicker}
+                      </div>
+                      <strong>{currentExample.country.name}</strong>
+                      <p>{currentExample.country.description}</p>
+                      <div className="hero-teaser-thumb-meter">
+                        <div className="hero-teaser-thumb-meter-track">
+                          <div
+                            className="hero-teaser-thumb-meter-fill"
+                            style={{ width: `${currentExample.country.compatibility}%` }}
+                          />
+                        </div>
+                        <strong>{currentExample.country.compatibility}%</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hero-teaser-thumb">
+                    <div className="hero-teaser-thumb-frame is-portrait">
                       <img
                         src={resolvePersonalityImageSrc(currentExample.personality.imagePath)}
                         alt={currentExample.personality.name}
                         loading="lazy"
                       />
                     </div>
-                    <figcaption>
-                      <span>{currentExample.personality.name}</span>
-                      <strong>{currentExample.personality.compatibility}%</strong>
-                    </figcaption>
-                  </figure>
+                    <div className="hero-teaser-thumb-body">
+                      <div className="hero-teaser-thumb-head">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <circle cx="12" cy="8" r="4" />
+                          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                        </svg>
+                        {t.personalityKicker}
+                      </div>
+                      <strong>{currentExample.personality.name}</strong>
+                      <p>{currentExample.personality.description}</p>
+                      <div className="hero-teaser-thumb-meter">
+                        <div className="hero-teaser-thumb-meter-track">
+                          <div
+                            className="hero-teaser-thumb-meter-fill"
+                            style={{ width: `${currentExample.personality.compatibility}%` }}
+                          />
+                        </div>
+                        <strong>{currentExample.personality.compatibility}%</strong>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

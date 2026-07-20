@@ -206,71 +206,6 @@ const pt: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'neoconservadorismo',
-      name: 'Neoconservadorismo',
-      category: 'Direita',
-      description:
-        'Corrente da direita que une livre mercado, valores tradicionais e política externa intervencionista, defendendo a promoção da democracia e dos interesses nacionais pela força militar e liderança global.',
-      longDescription:
-        'Corrente da direita que une livre mercado, valores tradicionais e política externa intervencionista, defendendo a promoção da democracia e dos interesses nacionais pela força militar e liderança global.',
-      compatibility: 90
-    },
-    country: {
-      countryId: 'eua-texas',
-      name: 'Estados Unidos (Texas)',
-      category: 'Região norte-americana de livre mercado conservador',
-      description:
-        'Segundo maior estado dos Estados Unidos, o Texas destaca-se pelo conservadorismo, pela cultura de forte liberdade individual, por baixa tributação e por uma economia de mercado dinâmica ligada à energia e à indústria.',
-      flagPath: '/countries/flags/eua-texas.png',
-      historical: false,
-      period: '',
-      compatibility: 79
-    },
-    personality: {
-      personalityId: 'jair-bolsonaro',
-      name: 'Jair Bolsonaro',
-      role: 'Político',
-      lifespan: '1955–',
-      description:
-        'Político brasileiro, Bolsonaro chegou à presidência liderando a direita nacionalista e conservadora, com pautas de segurança, valores tradicionais, liberalismo econômico e forte retórica anti-establishment.',
-      imagePath: '/personalities/portraits/jair-bolsonaro.jpg',
-      compatibility: 95
-    },
-    axes: [
-      {
-        axisId: 'representacao',
-        label: 'Representação',
-        leftPole: 'Democracia',
-        rightPole: 'Autocracia',
-        leftPercent: 61,
-        rightPercent: 39,
-        dominantPole: 'Democracia',
-        intensity: 'Inclinado'
-      },
-      {
-        axisId: 'economia',
-        label: 'Economia',
-        leftPole: 'Público',
-        rightPole: 'Privado',
-        leftPercent: 30,
-        rightPercent: 70,
-        dominantPole: 'Privado',
-        intensity: 'Inclinado'
-      },
-      {
-        axisId: 'moral',
-        label: 'Moral',
-        leftPole: 'Progressista',
-        rightPole: 'Tradicionalista',
-        leftPercent: 15,
-        rightPercent: 85,
-        dominantPole: 'Tradicionalista',
-        intensity: 'Forte'
-      }
-    ]
-  },
-  {
-    ideology: {
       ideologyId: 'nacionalismo',
       name: 'Nacionalismo',
       category: 'Centro',
@@ -346,15 +281,15 @@ const pt: ExampleResult[] = [
       compatibility: 87
     },
     country: {
-      countryId: 'eua-texas',
-      name: 'Estados Unidos (Texas)',
-      category: 'Região norte-americana de livre mercado conservador',
+      countryId: 'estados-unidos',
+      name: 'Estados Unidos',
+      category: 'República federal liberal',
       description:
-        'Segundo maior estado dos Estados Unidos, o Texas destaca-se pelo conservadorismo, pela cultura de forte liberdade individual, por baixa tributação e por uma economia de mercado dinâmica ligada à energia e à indústria.',
-      flagPath: '/countries/flags/eua-texas.png',
+        'Potência global e república federativa presidencialista, os Estados Unidos combinam forte tradição liberal, economia de mercado dinâmica, inovação tecnológica e um sistema bipartidário que polariza a vida política nacional.',
+      flagPath: '/countries/flags/estados-unidos.gif',
       historical: false,
       period: '',
-      compatibility: 77
+      compatibility: 83
     },
     personality: {
       personalityId: 'elon-musk',
@@ -401,35 +336,35 @@ const pt: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'austrolibertarianismo',
-      name: 'Austrolibertarianismo',
-      category: 'Direita Libertária',
+      ideologyId: 'conservadorismo-cristao',
+      name: 'Conservadorismo Cristão',
+      category: 'Direita',
       description:
-        'Corrente que une o libertarianismo à Escola Austríaca de economia, defendendo livre mercado, moeda sólida e crítica à intervenção estatal, com base na ação humana individual e na ordem espontânea do mercado.',
+        'Vertente que fundamenta a política na moral e na tradição cristãs, defendendo família, vida e valores religiosos dentro da democracia, com ênfase na preservação dos costumes e da herança cultural do povo.',
       longDescription:
-        'Corrente que une o libertarianismo à Escola Austríaca de economia, defendendo livre mercado, moeda sólida e crítica à intervenção estatal, com base na ação humana individual e na ordem espontânea do mercado.',
-      compatibility: 90
+        'Vertente que fundamenta a política na moral e na tradição cristãs, defendendo família, vida e valores religiosos dentro da democracia, com ênfase na preservação dos costumes e da herança cultural do povo.',
+      compatibility: 84
     },
     country: {
-      countryId: 'liechtenstein',
-      name: 'Liechtenstein',
-      category: 'Monarquia constitucional libertária',
+      countryId: 'brasil-regime-militar',
+      name: 'Brasil do Regime Militar',
+      category: 'Ditadura desenvolvimentista',
       description:
-        'Minúsculo principado europeu, o Liechtenstein é uma monarquia constitucional próspera, com forte autonomia local, economia liberal baseada em finanças e indústria e um dos maiores níveis de renda por habitante do mundo.',
-      flagPath: '/countries/flags/liechtenstein.png',
-      historical: false,
-      period: '',
-      compatibility: 82
+        'Regime instaurado em 1964, combinou repressão política, censura e órgãos de segurança com desenvolvimentismo estatal, grandes obras, reserva de mercado e moralismo conservador durante a Guerra Fria.',
+      flagPath: '/countries/flags/brasil.gif',
+      historical: true,
+      period: '1964–1985',
+      compatibility: 75
     },
     personality: {
-      personalityId: 'mises',
-      name: 'Ludwig von Mises',
-      role: 'Economista',
-      lifespan: '1881–1973',
+      personalityId: 'jair-bolsonaro',
+      name: 'Jair Bolsonaro',
+      role: 'Político',
+      lifespan: '1955–',
       description:
-        'Economista austríaco, Mises foi grande defensor do livre mercado e mostrou a impossibilidade do cálculo econômico racional no socialismo, tornando-se pilar da Escola Austríaca e inspiração do libertarianismo moderno.',
-      imagePath: '/personalities/portraits/mises.jpg',
-      compatibility: 88
+        'Político brasileiro, Bolsonaro chegou à presidência liderando a direita nacionalista e conservadora, com pautas de segurança, valores tradicionais, liberalismo econômico e forte retórica anti-establishment.',
+      imagePath: '/personalities/portraits/jair-bolsonaro.jpg',
+      compatibility: 84
     },
     axes: [
       {
@@ -437,30 +372,30 @@ const pt: ExampleResult[] = [
         label: 'Representação',
         leftPole: 'Democracia',
         rightPole: 'Autocracia',
-        leftPercent: 74,
-        rightPercent: 26,
+        leftPercent: 66,
+        rightPercent: 34,
         dominantPole: 'Democracia',
-        intensity: 'Forte'
+        intensity: 'Inclinado'
       },
       {
         axisId: 'economia',
         label: 'Economia',
         leftPole: 'Público',
         rightPole: 'Privado',
-        leftPercent: 5,
-        rightPercent: 95,
+        leftPercent: 49,
+        rightPercent: 51,
         dominantPole: 'Privado',
-        intensity: 'Muito forte'
+        intensity: 'Equilibrado'
       },
       {
         axisId: 'moral',
         label: 'Moral',
         leftPole: 'Progressista',
         rightPole: 'Tradicionalista',
-        leftPercent: 50,
-        rightPercent: 50,
-        dominantPole: 'Progressista',
-        intensity: 'Equilibrado'
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Muito forte'
       }
     ]
   },
@@ -516,6 +451,331 @@ const pt: ExampleResult[] = [
         rightPercent: 32,
         dominantPole: 'Público',
         intensity: 'Inclinado'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 4,
+        rightPercent: 96,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Muito forte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'libertarianismo-hoppeano',
+      name: 'Libertarianismo Hoppeano',
+      category: 'Direita Libertária',
+      description:
+        'Corrente ligada a Hans-Hermann Hoppe que une anarcocapitalismo, propriedade privada absoluta e crítica à democracia, defendendo ordens sociais baseadas em contrato, exclusão voluntária e autoridade privada.',
+      longDescription:
+        'Corrente ligada a Hans-Hermann Hoppe que une anarcocapitalismo, propriedade privada absoluta e crítica à democracia, defendendo ordens sociais baseadas em contrato, exclusão voluntária e autoridade privada.',
+      compatibility: 90
+    },
+    country: {
+      countryId: 'liechtenstein',
+      name: 'Liechtenstein',
+      category: 'Monarquia constitucional libertária',
+      description:
+        'Minúsculo principado europeu, o Liechtenstein é uma monarquia constitucional próspera, com forte autonomia local, economia liberal baseada em finanças e indústria e um dos maiores níveis de renda por habitante do mundo.',
+      flagPath: '/countries/flags/liechtenstein.png',
+      historical: false,
+      period: '',
+      compatibility: 80
+    },
+    personality: {
+      personalityId: 'hoppe',
+      name: 'Hans-Hermann Hoppe',
+      role: 'Economista',
+      lifespan: '1949–',
+      description:
+        'Economista alemão, Hoppe radicalizou o anarcocapitalismo, defendendo a propriedade privada absoluta e criticando a democracia como sistema que corrói a liberdade, propondo ordens sociais baseadas em contrato voluntário.',
+      imagePath: '/personalities/portraits/hoppe.jpg',
+      compatibility: 95
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representação',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 30,
+        rightPercent: 70,
+        dominantPole: 'Autocracia',
+        intensity: 'Inclinado'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economia',
+        leftPole: 'Público',
+        rightPole: 'Privado',
+        leftPercent: 3,
+        rightPercent: 97,
+        dominantPole: 'Privado',
+        intensity: 'Muito forte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Muito forte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'neoliberalismo',
+      name: 'Neoliberalismo',
+      category: 'Centro-Direita',
+      description:
+        'Corrente que defende livre mercado, desregulamentação, privatizações e disciplina fiscal, reduzindo o papel econômico do Estado e confiando na concorrência e na estabilidade monetária como motores da prosperidade.',
+      longDescription:
+        'Corrente que defende livre mercado, desregulamentação, privatizações e disciplina fiscal, reduzindo o papel econômico do Estado e confiando na concorrência e na estabilidade monetária como motores da prosperidade.',
+      compatibility: 88
+    },
+    country: {
+      countryId: 'chile',
+      name: 'Chile',
+      category: 'Democracia progressista latino-americana',
+      description:
+        'República presidencialista sul-americana, o Chile combina democracia estável, economia de mercado aberta e forte pauta social e progressista, herança do processo de redemocratização após a ditadura militar de Pinochet.',
+      flagPath: '/countries/flags/chile.gif',
+      historical: false,
+      period: '',
+      compatibility: 79
+    },
+    personality: {
+      personalityId: 'milton-friedman',
+      name: 'Milton Friedman',
+      role: 'Economista',
+      lifespan: '1912–2006',
+      description:
+        'Economista norte-americano, Friedman liderou o neoliberalismo e o monetarismo, defendendo o livre mercado, a estabilidade monetária e a redução do Estado como condições essenciais da liberdade e da prosperidade.',
+      imagePath: '/personalities/portraits/milton-friedman.jpg',
+      compatibility: 97
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representação',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Democracia',
+        intensity: 'Forte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economia',
+        leftPole: 'Público',
+        rightPole: 'Privado',
+        leftPercent: 23,
+        rightPercent: 77,
+        dominantPole: 'Privado',
+        intensity: 'Forte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 36,
+        rightPercent: 64,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Inclinado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'monarquismo-constitucional',
+      name: 'Monarquismo Constitucional',
+      category: 'Centro',
+      description:
+        'Defesa da monarquia como símbolo de unidade e continuidade, com o rei submetido à constituição e ao parlamento, unindo tradição e estabilidade institucional à democracia representativa e ao Estado de direito.',
+      longDescription:
+        'Defesa da monarquia como símbolo de unidade e continuidade, com o rei submetido à constituição e ao parlamento, unindo tradição e estabilidade institucional à democracia representativa e ao Estado de direito.',
+      compatibility: 85
+    },
+    country: {
+      countryId: 'imperio-do-brasil',
+      name: 'Império do Brasil',
+      category: 'Monarquia constitucional histórica',
+      description:
+        'Único império das Américas por longo período, o Brasil imperial foi uma monarquia parlamentar sob Pedro I e Pedro II, marcada por estabilidade política, economia agrária escravista e forte centralização do Estado.',
+      flagPath: '/countries/flags/imperio-do-brasil.png',
+      historical: true,
+      period: '1822–1889',
+      compatibility: 62
+    },
+    personality: {
+      personalityId: 'dom-pedro-ii',
+      name: 'Dom Pedro II',
+      role: 'Imperador',
+      lifespan: '1825–1891',
+      description:
+        'Segundo imperador do Brasil, Dom Pedro II governou como monarca constitucional, valorizando parlamentarismo, estabilidade institucional, ciência, educação e abolição gradual, preservando a unidade nacional sob poder moderador.',
+      imagePath: '/personalities/portraits/dom-pedro-segundo.jpg',
+      compatibility: 85
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representação',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 41,
+        rightPercent: 59,
+        dominantPole: 'Autocracia',
+        intensity: 'Equilibrado'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economia',
+        leftPole: 'Público',
+        rightPole: 'Privado',
+        leftPercent: 43,
+        rightPercent: 57,
+        dominantPole: 'Privado',
+        intensity: 'Equilibrado'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 18,
+        rightPercent: 82,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Muito forte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'socialismo-anticolonial',
+      name: 'Socialismo Anticolonial',
+      category: 'Esquerda',
+      description:
+        'Corrente socialista nascida das lutas de libertação nacional na África, Ásia e América Latina, defende soberania econômica, nacionalização dos recursos, não alinhamento entre as potências e solidariedade dos povos do Sul global contra o imperialismo.',
+      longDescription:
+        'Corrente socialista nascida das lutas de libertação nacional na África, Ásia e América Latina, defende soberania econômica, nacionalização dos recursos, não alinhamento entre as potências e solidariedade dos povos do Sul global contra o imperialismo.',
+      compatibility: 93
+    },
+    country: {
+      countryId: 'burkina-faso-de-sankara',
+      name: 'Burkina Faso de Sankara',
+      category: 'Socialismo anticolonial revolucionário',
+      description:
+        'Sob Thomas Sankara, Burkina Faso combinou autossuficiência alimentar, vacinação e alfabetização em massa, emancipação feminina, rejeição da dívida externa e ruptura frontal com o neocolonialismo francês.',
+      flagPath: '/countries/flags/burkina-faso-de-sankara.png',
+      historical: true,
+      period: '1983–1987',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'thomas-sankara',
+      name: 'Thomas Sankara',
+      role: 'Revolucionário',
+      lifespan: '1949–1987',
+      description:
+        'Revolucionário de Burkina Faso, Sankara liderou um governo marxista e pan-africanista que promoveu autossuficiência, direitos das mulheres e reformas sociais radicais, tornando-se ícone anti-imperialista da África.',
+      imagePath: '/personalities/portraits/thomas-sankara.png',
+      compatibility: 93
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representação',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 50,
+        rightPercent: 50,
+        dominantPole: 'Autocracia',
+        intensity: 'Equilibrado'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economia',
+        leftPole: 'Público',
+        rightPole: 'Privado',
+        leftPercent: 93,
+        rightPercent: 7,
+        dominantPole: 'Público',
+        intensity: 'Muito forte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 36,
+        rightPercent: 64,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Inclinado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'neorreacionarismo',
+      name: 'Neorreacionarismo',
+      category: 'Direita Autoritária',
+      description:
+        'Corrente que rejeita a democracia e o igualitarismo modernos e propõe substituí-los por governos hierárquicos e eficientes, geridos como empresas por um soberano, combinando tradicionalismo e tecnologia.',
+      longDescription:
+        'Corrente que rejeita a democracia e o igualitarismo modernos e propõe substituí-los por governos hierárquicos e eficientes, geridos como empresas por um soberano, combinando tradicionalismo e tecnologia.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'singapura',
+      name: 'Singapura',
+      category: 'Tecnocracia liberal-autoritativa',
+      description:
+        'Cidade-Estado asiática, Singapura é uma república parlamentarista dominada por um único partido, combinando capitalismo aberto, gestão tecnocrática eficiente, ordem rígida e liberdades políticas limitadas em nome do progresso.',
+      flagPath: '/countries/flags/singapura.gif',
+      historical: false,
+      period: '',
+      compatibility: 62
+    },
+    personality: {
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Teórico político',
+      lifespan: '1973–',
+      description:
+        'Teórico político conhecido como Mencius Moldbug, Yarvin formulou o neorreacionarismo, propondo substituir a democracia por um Estado gerido como empresa por um soberano-executivo, no modelo do neocameralismo.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
+      compatibility: 97
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representação',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 4,
+        rightPercent: 96,
+        dominantPole: 'Autocracia',
+        intensity: 'Muito forte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economia',
+        leftPole: 'Público',
+        rightPole: 'Privado',
+        leftPercent: 5,
+        rightPercent: 95,
+        dominantPole: 'Privado',
+        intensity: 'Muito forte'
       },
       {
         axisId: 'moral',
@@ -729,71 +989,6 @@ const en: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'neoconservadorismo',
-      name: 'Neoconservatism',
-      category: 'Right',
-      description:
-        'Right-wing current that unites free markets, traditional values, and an interventionist foreign policy, advocating the promotion of democracy and national interests through military force and global leadership.',
-      longDescription:
-        'Right-wing current that unites free markets, traditional values, and an interventionist foreign policy, advocating the promotion of democracy and national interests through military force and global leadership.',
-      compatibility: 90
-    },
-    country: {
-      countryId: 'eua-texas',
-      name: 'United States (Texas)',
-      category: 'Conservative free-market American region',
-      description:
-        'The second-largest US state, Texas stands out for its conservatism, its culture of strong individual freedom, low taxation, and a dynamic market economy tied to energy and industry.',
-      flagPath: '/countries/flags/eua-texas.png',
-      historical: false,
-      period: '',
-      compatibility: 79
-    },
-    personality: {
-      personalityId: 'jair-bolsonaro',
-      name: 'Jair Bolsonaro',
-      role: 'Politician',
-      lifespan: '1955–',
-      description:
-        'A Brazilian politician, Bolsonaro reached the presidency leading the nationalist, conservative right, with agendas of security, traditional values, economic liberalism, and strong anti-establishment rhetoric.',
-      imagePath: '/personalities/portraits/jair-bolsonaro.jpg',
-      compatibility: 95
-    },
-    axes: [
-      {
-        axisId: 'representacao',
-        label: 'Representation',
-        leftPole: 'Democracy',
-        rightPole: 'Autocracy',
-        leftPercent: 61,
-        rightPercent: 39,
-        dominantPole: 'Democracy',
-        intensity: 'Leaning'
-      },
-      {
-        axisId: 'economia',
-        label: 'Economy',
-        leftPole: 'Public',
-        rightPole: 'Private',
-        leftPercent: 30,
-        rightPercent: 70,
-        dominantPole: 'Private',
-        intensity: 'Leaning'
-      },
-      {
-        axisId: 'moral',
-        label: 'Moral',
-        leftPole: 'Progressive',
-        rightPole: 'Traditionalist',
-        leftPercent: 15,
-        rightPercent: 85,
-        dominantPole: 'Traditionalist',
-        intensity: 'Strong'
-      }
-    ]
-  },
-  {
-    ideology: {
       ideologyId: 'nacionalismo',
       name: 'Nationalism',
       category: 'Center',
@@ -869,15 +1064,15 @@ const en: ExampleResult[] = [
       compatibility: 87
     },
     country: {
-      countryId: 'eua-texas',
-      name: 'United States (Texas)',
-      category: 'Conservative free-market American region',
+      countryId: 'estados-unidos',
+      name: 'United States',
+      category: 'Liberal federal republic',
       description:
-        'The second-largest US state, Texas stands out for its conservatism, its culture of strong individual freedom, low taxation, and a dynamic market economy tied to energy and industry.',
-      flagPath: '/countries/flags/eua-texas.png',
+        'A global power and presidential federal republic, the United States combines a strong liberal tradition, a dynamic market economy, technological innovation, and a two-party system that polarizes national political life.',
+      flagPath: '/countries/flags/estados-unidos.gif',
       historical: false,
       period: '',
-      compatibility: 77
+      compatibility: 83
     },
     personality: {
       personalityId: 'elon-musk',
@@ -924,35 +1119,35 @@ const en: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'austrolibertarianismo',
-      name: 'Austro-Libertarianism',
-      category: 'Libertarian Right',
+      ideologyId: 'conservadorismo-cristao',
+      name: 'Christian Conservatism',
+      category: 'Right',
       description:
-        'Current that unites libertarianism with the Austrian School of economics, defending free markets, sound money, and criticism of state intervention, based on individual human action and the spontaneous order of the market.',
+        'A current that grounds politics in Christian morality and tradition, defending family, life, and religious values within democracy, with an emphasis on preserving the customs and cultural heritage of the people.',
       longDescription:
-        'Current that unites libertarianism with the Austrian School of economics, defending free markets, sound money, and criticism of state intervention, based on individual human action and the spontaneous order of the market.',
-      compatibility: 90
+        'A current that grounds politics in Christian morality and tradition, defending family, life, and religious values within democracy, with an emphasis on preserving the customs and cultural heritage of the people.',
+      compatibility: 84
     },
     country: {
-      countryId: 'liechtenstein',
-      name: 'Liechtenstein',
-      category: 'Libertarian constitutional monarchy',
+      countryId: 'brasil-regime-militar',
+      name: 'Brazil under Military Rule',
+      category: 'Developmentalist dictatorship',
       description:
-        'A tiny European principality, Liechtenstein is a prosperous constitutional monarchy, with strong local autonomy, a liberal economy based on finance and industry, and one of the highest income levels per capita in the world.',
-      flagPath: '/countries/flags/liechtenstein.png',
-      historical: false,
-      period: '',
-      compatibility: 82
+        'A regime installed in 1964, it combined political repression, censorship, and security agencies with state developmentalism, large public works, market reserves, and conservative moralism during the Cold War.',
+      flagPath: '/countries/flags/brasil.gif',
+      historical: true,
+      period: '1964–1985',
+      compatibility: 75
     },
     personality: {
-      personalityId: 'mises',
-      name: 'Ludwig von Mises',
-      role: 'Economist',
-      lifespan: '1881–1973',
+      personalityId: 'jair-bolsonaro',
+      name: 'Jair Bolsonaro',
+      role: 'Politician',
+      lifespan: '1955–',
       description:
-        'An Austrian economist, Mises was a great defender of the free market and demonstrated the impossibility of rational economic calculation under socialism, becoming a pillar of the Austrian School and an inspiration for modern libertarianism.',
-      imagePath: '/personalities/portraits/mises.jpg',
-      compatibility: 88
+        'A Brazilian politician, Bolsonaro reached the presidency leading the nationalist, conservative right, with agendas of security, traditional values, economic liberalism, and strong anti-establishment rhetoric.',
+      imagePath: '/personalities/portraits/jair-bolsonaro.jpg',
+      compatibility: 84
     },
     axes: [
       {
@@ -960,30 +1155,30 @@ const en: ExampleResult[] = [
         label: 'Representation',
         leftPole: 'Democracy',
         rightPole: 'Autocracy',
-        leftPercent: 74,
-        rightPercent: 26,
+        leftPercent: 66,
+        rightPercent: 34,
         dominantPole: 'Democracy',
-        intensity: 'Strong'
+        intensity: 'Leaning'
       },
       {
         axisId: 'economia',
         label: 'Economy',
         leftPole: 'Public',
         rightPole: 'Private',
-        leftPercent: 5,
-        rightPercent: 95,
+        leftPercent: 49,
+        rightPercent: 51,
         dominantPole: 'Private',
-        intensity: 'Very strong'
+        intensity: 'Balanced'
       },
       {
         axisId: 'moral',
         label: 'Moral',
         leftPole: 'Progressive',
         rightPole: 'Traditionalist',
-        leftPercent: 50,
-        rightPercent: 50,
-        dominantPole: 'Progressive',
-        intensity: 'Balanced'
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Traditionalist',
+        intensity: 'Very strong'
       }
     ]
   },
@@ -1039,6 +1234,331 @@ const en: ExampleResult[] = [
         rightPercent: 32,
         dominantPole: 'Public',
         intensity: 'Leaning'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressive',
+        rightPole: 'Traditionalist',
+        leftPercent: 4,
+        rightPercent: 96,
+        dominantPole: 'Traditionalist',
+        intensity: 'Very strong'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'libertarianismo-hoppeano',
+      name: 'Hoppean Libertarianism',
+      category: 'Libertarian Right',
+      description:
+        'A current linked to Hans-Hermann Hoppe that unites anarcho-capitalism, absolute private property, and criticism of democracy, defending social orders based on contract, voluntary exclusion, and private authority.',
+      longDescription:
+        'A current linked to Hans-Hermann Hoppe that unites anarcho-capitalism, absolute private property, and criticism of democracy, defending social orders based on contract, voluntary exclusion, and private authority.',
+      compatibility: 90
+    },
+    country: {
+      countryId: 'liechtenstein',
+      name: 'Liechtenstein',
+      category: 'Libertarian constitutional monarchy',
+      description:
+        'A tiny European principality, Liechtenstein is a prosperous constitutional monarchy, with strong local autonomy, a liberal economy based on finance and industry, and one of the highest income levels per capita in the world.',
+      flagPath: '/countries/flags/liechtenstein.png',
+      historical: false,
+      period: '',
+      compatibility: 80
+    },
+    personality: {
+      personalityId: 'hoppe',
+      name: 'Hans-Hermann Hoppe',
+      role: 'Economist',
+      lifespan: '1949–',
+      description:
+        'A German economist, Hoppe radicalized anarcho-capitalism, defending absolute private property and criticizing democracy as a system that erodes liberty, proposing social orders based on voluntary contract.',
+      imagePath: '/personalities/portraits/hoppe.jpg',
+      compatibility: 95
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representation',
+        leftPole: 'Democracy',
+        rightPole: 'Autocracy',
+        leftPercent: 30,
+        rightPercent: 70,
+        dominantPole: 'Autocracy',
+        intensity: 'Leaning'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economy',
+        leftPole: 'Public',
+        rightPole: 'Private',
+        leftPercent: 3,
+        rightPercent: 97,
+        dominantPole: 'Private',
+        intensity: 'Very strong'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressive',
+        rightPole: 'Traditionalist',
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Traditionalist',
+        intensity: 'Very strong'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'neoliberalismo',
+      name: 'Neoliberalism',
+      category: 'Center-Right',
+      description:
+        'A current that advocates free markets, deregulation, privatization, and fiscal discipline, reducing the economic role of the state and relying on competition and monetary stability as engines of prosperity.',
+      longDescription:
+        'A current that advocates free markets, deregulation, privatization, and fiscal discipline, reducing the economic role of the state and relying on competition and monetary stability as engines of prosperity.',
+      compatibility: 88
+    },
+    country: {
+      countryId: 'chile',
+      name: 'Chile',
+      category: 'Latin American progressive democracy',
+      description:
+        'A South American presidential republic, Chile combines stable democracy, an open market economy, and a strong progressive social agenda, a legacy of the redemocratization process after the Pinochet military dictatorship.',
+      flagPath: '/countries/flags/chile.gif',
+      historical: false,
+      period: '',
+      compatibility: 79
+    },
+    personality: {
+      personalityId: 'milton-friedman',
+      name: 'Milton Friedman',
+      role: 'Economist',
+      lifespan: '1912–2006',
+      description:
+        'An American economist, Friedman led neoliberalism and monetarism, defending free markets, monetary stability, and a reduced state as essential conditions for liberty and prosperity.',
+      imagePath: '/personalities/portraits/milton-friedman.jpg',
+      compatibility: 97
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representation',
+        leftPole: 'Democracy',
+        rightPole: 'Autocracy',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Democracy',
+        intensity: 'Strong'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economy',
+        leftPole: 'Public',
+        rightPole: 'Private',
+        leftPercent: 23,
+        rightPercent: 77,
+        dominantPole: 'Private',
+        intensity: 'Strong'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressive',
+        rightPole: 'Traditionalist',
+        leftPercent: 36,
+        rightPercent: 64,
+        dominantPole: 'Traditionalist',
+        intensity: 'Leaning'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'monarquismo-constitucional',
+      name: 'Constitutional Monarchism',
+      category: 'Center',
+      description:
+        'Defense of monarchy as a symbol of unity and continuity, with the king subject to the constitution and parliament, uniting tradition and institutional stability with representative democracy and the rule of law.',
+      longDescription:
+        'Defense of monarchy as a symbol of unity and continuity, with the king subject to the constitution and parliament, uniting tradition and institutional stability with representative democracy and the rule of law.',
+      compatibility: 85
+    },
+    country: {
+      countryId: 'imperio-do-brasil',
+      name: 'Empire of Brazil',
+      category: 'Historical constitutional monarchy',
+      description:
+        'The only long-lasting empire in the Americas, imperial Brazil was a parliamentary monarchy under Pedro I and Pedro II, marked by political stability, a slaveholding agrarian economy, and strong state centralization.',
+      flagPath: '/countries/flags/imperio-do-brasil.png',
+      historical: true,
+      period: '1822–1889',
+      compatibility: 62
+    },
+    personality: {
+      personalityId: 'dom-pedro-ii',
+      name: 'Dom Pedro II',
+      role: 'Emperor',
+      lifespan: '1825–1891',
+      description:
+        'The second emperor of Brazil, Dom Pedro II ruled as a constitutional monarch, valuing parliamentarism, institutional stability, science, education, and gradual abolition, preserving national unity under moderating power.',
+      imagePath: '/personalities/portraits/dom-pedro-segundo.jpg',
+      compatibility: 85
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representation',
+        leftPole: 'Democracy',
+        rightPole: 'Autocracy',
+        leftPercent: 41,
+        rightPercent: 59,
+        dominantPole: 'Autocracy',
+        intensity: 'Balanced'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economy',
+        leftPole: 'Public',
+        rightPole: 'Private',
+        leftPercent: 43,
+        rightPercent: 57,
+        dominantPole: 'Private',
+        intensity: 'Balanced'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressive',
+        rightPole: 'Traditionalist',
+        leftPercent: 18,
+        rightPercent: 82,
+        dominantPole: 'Traditionalist',
+        intensity: 'Very strong'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'socialismo-anticolonial',
+      name: 'Anti-Colonial Socialism',
+      category: 'Left',
+      description:
+        'A socialist current born from national liberation struggles in Africa, Asia, and Latin America, advocating economic sovereignty, resource nationalization, non-alignment between powers, and solidarity among the peoples of the Global South against imperialism.',
+      longDescription:
+        'A socialist current born from national liberation struggles in Africa, Asia, and Latin America, advocating economic sovereignty, resource nationalization, non-alignment between powers, and solidarity among the peoples of the Global South against imperialism.',
+      compatibility: 93
+    },
+    country: {
+      countryId: 'burkina-faso-de-sankara',
+      name: "Sankara's Burkina Faso",
+      category: 'Revolutionary anti-colonial socialism',
+      description:
+        "Under Thomas Sankara, Burkina Faso combined food self-sufficiency, mass vaccination and literacy campaigns, women's emancipation, rejection of foreign debt, and a frontal break with French neocolonialism.",
+      flagPath: '/countries/flags/burkina-faso-de-sankara.png',
+      historical: true,
+      period: '1983–1987',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'thomas-sankara',
+      name: 'Thomas Sankara',
+      role: 'Revolutionary',
+      lifespan: '1949–1987',
+      description:
+        'A revolutionary from Burkina Faso, Sankara led a Marxist and pan-Africanist government that promoted self-sufficiency, women\'s rights, and radical social reforms, becoming an anti-imperialist icon of Africa.',
+      imagePath: '/personalities/portraits/thomas-sankara.png',
+      compatibility: 93
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representation',
+        leftPole: 'Democracy',
+        rightPole: 'Autocracy',
+        leftPercent: 50,
+        rightPercent: 50,
+        dominantPole: 'Autocracy',
+        intensity: 'Balanced'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economy',
+        leftPole: 'Public',
+        rightPole: 'Private',
+        leftPercent: 93,
+        rightPercent: 7,
+        dominantPole: 'Public',
+        intensity: 'Very strong'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressive',
+        rightPole: 'Traditionalist',
+        leftPercent: 36,
+        rightPercent: 64,
+        dominantPole: 'Traditionalist',
+        intensity: 'Leaning'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'neorreacionarismo',
+      name: 'Neoreaction',
+      category: 'Authoritarian Right',
+      description:
+        'A current that rejects modern democracy and egalitarianism and proposes replacing them with hierarchical, efficient governments, run like companies by a sovereign, combining traditionalism and technology.',
+      longDescription:
+        'A current that rejects modern democracy and egalitarianism and proposes replacing them with hierarchical, efficient governments, run like companies by a sovereign, combining traditionalism and technology.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'singapura',
+      name: 'Singapore',
+      category: 'Liberal-authoritative technocracy',
+      description:
+        'An Asian city-state, Singapore is a parliamentary republic dominated by a single party, combining open capitalism, efficient technocratic management, rigid order, and limited political freedoms in the name of progress.',
+      flagPath: '/countries/flags/singapura.gif',
+      historical: false,
+      period: '',
+      compatibility: 62
+    },
+    personality: {
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Political theorist',
+      lifespan: '1973–',
+      description:
+        'A political theorist known as Mencius Moldbug, Yarvin formulated neoreaction, proposing to replace democracy with a state run as a company by a sovereign executive, in the model of neocameralism.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
+      compatibility: 97
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representation',
+        leftPole: 'Democracy',
+        rightPole: 'Autocracy',
+        leftPercent: 4,
+        rightPercent: 96,
+        dominantPole: 'Autocracy',
+        intensity: 'Very strong'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economy',
+        leftPole: 'Public',
+        rightPole: 'Private',
+        leftPercent: 5,
+        rightPercent: 95,
+        dominantPole: 'Private',
+        intensity: 'Very strong'
       },
       {
         axisId: 'moral',
