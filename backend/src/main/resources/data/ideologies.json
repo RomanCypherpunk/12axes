@@ -74,7 +74,7 @@
   {
     "id": "socialismo-denguista",
     "name": "Socialismo Denguista",
-    "category": "Direita Autoritária",
+    "category": "Esquerda Autoritária",
     "description": "Reforma pragmática iniciada por Deng Xiaoping que introduziu mercado, propriedade privada e abertura econômica sob controle absoluto do Partido Comunista, formando o modelo de socialismo com características chinesas.",
     "vector": null,
     "countryId": "china",
@@ -128,7 +128,7 @@
   {
     "id": "nacional-bolchevismo",
     "name": "Nacional-Bolchevismo (NazBol)",
-    "category": "Esquerda Autoritária",
+    "category": "Terceira Posição",
     "description": "Ideologia sincrética, também chamada NazBol, que funde socialismo revolucionário e nacionalismo radical, combinando economia coletivista, autoritarismo estatal e rejeição ao liberalismo, ao Ocidente e ao individualismo burguês.",
     "vector": null,
     "countryId": "russia",
@@ -137,7 +137,7 @@
   {
     "id": "socialismo-strasserista",
     "name": "Socialismo Strasserista",
-    "category": "Esquerda Autoritária",
+    "category": "Terceira Posição",
     "description": "Ala anticapitalista do nacional-socialismo, ligada a Gregor Strasser, que enfatizava um socialismo nacionalista de massas, nacionalização e revolução social dentro do movimento, sendo depois esmagada por Hitler.",
     "vector": null,
     "countryId": "alemanha-nazista-terceiro-reich",
@@ -173,7 +173,7 @@
   {
     "id": "falangismo",
     "name": "Falangismo",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Nacionalismo autoritário espanhol de inspiração católica e sindicalista, que defende um Estado corporativo, a unidade nacional e a hierarquia social, tornando-se o pilar ideológico do regime de Franco na Espanha.",
     "vector": null,
     "countryId": "espanha-franquista",
@@ -182,7 +182,7 @@
   {
     "id": "nacional-sindicalismo",
     "name": "Nacional-Sindicalismo",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Corrente nacionalista e sindicalista que rejeita liberalismo e marxismo, defendendo unidade nacional, organização corporativa do trabalho, justiça social autoritária e mobilização popular em torno do Estado.",
     "vector": null,
     "countryId": "espanha-franquista",
@@ -191,7 +191,7 @@
   {
     "id": "integralismo-brasileiro",
     "name": "Integralismo Brasileiro",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Movimento nacionalista autoritário surgido no Brasil dos anos 1930, de base cristã e corporativista, com o lema Deus, Pátria e Família, estética de massas e oposição frontal ao liberalismo e ao comunismo.",
     "vector": null,
     "countryId": "imperio-do-brasil",
@@ -209,7 +209,7 @@
   {
     "id": "capitalismo-nacional",
     "name": "Capitalismo Nacional",
-    "category": "Direita Autoritária",
+    "category": "Direita",
     "description": "Sistema que une livre iniciativa a forte protecionismo e direcionamento estatal, priorizando indústria, empregos e soberania nacional sobre o livre comércio global e o capital estrangeiro sem controle.",
     "vector": null,
     "countryId": "russia",
@@ -353,7 +353,7 @@
   {
     "id": "corporativismo",
     "name": "Corporativismo",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Modelo que organiza a sociedade em corporações de trabalhadores e empregadores integradas ao Estado, buscando harmonia entre classes e cooperação econômica dirigida em vez de conflito ou livre concorrência.",
     "vector": null,
     "countryId": "italia-fascista-mussolini",
@@ -362,7 +362,7 @@
   {
     "id": "terceira-posicao-politica",
     "name": "Terceira Posição Política",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Família ideológica que busca uma terceira via contra liberalismo capitalista e marxismo, combinando nacionalismo, corporativismo, soberania econômica e crítica à democracia liberal de massas.",
     "vector": null,
     "countryId": "italia-fascista-mussolini",
@@ -380,7 +380,7 @@
   {
     "id": "quarta-teoria-politica",
     "name": "Quarta Teoria Política",
-    "category": "Direita Autoritária",
+    "category": "Terceira Posição",
     "description": "Teoria de Aleksandr Dugin que rejeita liberalismo, comunismo e fascismo e propõe um mundo multipolar fundado em civilizações, tradição e identidade coletiva, opondo-se ao globalismo e à hegemonia ocidental.",
     "vector": null,
     "countryId": "russia",
@@ -506,7 +506,7 @@
   {
     "id": "liberalismo",
     "name": "Liberalismo",
-    "category": "Esquerda Libertária",
+    "category": "Centro",
     "description": "Tradição política que coloca a liberdade individual no centro, defendendo direitos, tolerância, Estado de direito, economia de mercado e limites ao poder, com o governo submetido ao consentimento dos cidadãos.",
     "vector": null,
     "countryId": "franca",
@@ -1325,7 +1325,7 @@
   {
     "id": "progressismo-de-direita",
     "name": "Progressismo de Direita",
-    "category": "Centro",
+    "category": "Direita Autoritária",
     "description": "Vertente progressista de direita que une capitalismo e culto ao progresso tecnológico a uma cultura socialmente progressista, pragmática e secular, confiando o rumo da sociedade a uma elite técnica em vez da democracia de massas.",
     "vector": null,
     "countryId": "eua-california",
@@ -1531,7 +1531,7 @@
   {
     "id": "arqueofuturismo",
     "name": "Arqueofuturismo",
-    "category": "Authoritarian Right",
+    "category": "Direita Autoritária",
     "description": "Doutrina cunhada por Guillaume Faye que funde valores arcaicos, hierárquicos e tradicionalistas, com a adoção irrestrita de tecnologia avançada, defendendo que um colapso civilizacional iminente forçará a humanidade a combinar ordem social tribal com ciência hipermoderna.",
     "countryId": "russia",
     "personalityId": "guillaume-faye"
