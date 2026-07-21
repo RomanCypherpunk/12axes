@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-20T20:04:12Z",
+  "lastUpdated": "2026-07-21T12:44:37Z",
   "personality": {
     "totalProfiles": 242,
     "pending": [],
@@ -431,7 +431,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 131,
+    "totalProfiles": 132,
     "pending": [],
     "done": [
       "brasil",
@@ -564,7 +564,8 @@
       "imperio-mongol",
       "brasil-regime-militar",
       "mexico-de-cardenas",
-      "confederacao-helvetica"
+      "confederacao-helvetica",
+      "imperio-napoleonico"
     ]
   }
 }
