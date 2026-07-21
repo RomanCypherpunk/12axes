@@ -1,7 +1,10 @@
 package com.twelveaxes.controller;
 
+import com.twelveaxes.exception.ResourceNotFoundException;
+import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.Ideology;
+import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
@@ -11,7 +14,9 @@ import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
 import jakarta.validation.Valid;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -58,12 +63,7 @@ public class QuizController {
             @Valid @RequestBody ResultRequest request,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
-        var axes = scoringService.score(request, lang);
-        var matches = matcherService.findMatches(axes, lang);
-        var topMatch = matches.getFirst();
-        var topCountryMatch = countryMatcherService.findTopMatch(axes, lang);
-        var topPersonalityMatch = personalityMatcherService.findTopMatch(axes, lang);
-        return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
+        return buildResult(scoringService.score(request, lang), lang);
     }
 
     // Resultado compartilhável: reconstrói matches a partir do vetor de eixos
@@ -73,7 +73,10 @@ public class QuizController {
             @RequestParam("v") String values,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
-        var axes = scoringService.scoreFromLeftPercents(parseAxisValues(values), lang);
+        return buildResult(scoringService.scoreFromLeftPercents(parseAxisValues(values), lang), lang);
+    }
+
+    private QuizResult buildResult(List<AxisResult> axes, String lang) {
         var matches = matcherService.findMatches(axes, lang);
         var topMatch = matches.getFirst();
         var topCountryMatch = countryMatcherService.findTopMatch(axes, lang);
@@ -83,7 +86,7 @@ public class QuizController {
 
     private List<Double> parseAxisValues(String values) {
         try {
-            List<Double> parsed = java.util.Arrays.stream(values.split(","))
+            List<Double> parsed = Arrays.stream(values.split(","))
                     .map(String::trim)
                     .map(Double::parseDouble)
                     .toList();
@@ -106,10 +109,8 @@ public class QuizController {
             @PathVariable String id,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
-        return dataService.getIdeologies(lang).stream()
-                .filter(ideology -> ideology.id().equals(id))
-                .findFirst()
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ideologia não encontrada"));
+        return Optional.ofNullable(dataService.getIdeologyById(id, lang))
+                .orElseThrow(() -> new ResourceNotFoundException("Ideologia não encontrada"));
     }
 
     @GetMapping("/api/countries")
@@ -122,9 +123,21 @@ public class QuizController {
             @PathVariable String id,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
-        return dataService.getCountries(lang).stream()
-                .filter(country -> country.id().equals(id))
-                .findFirst()
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "País não encontrado"));
+        return Optional.ofNullable(dataService.getCountryById(id, lang))
+                .orElseThrow(() -> new ResourceNotFoundException("País não encontrado"));
+    }
+
+    @GetMapping("/api/personalities")
+    public List<Personality> personalities(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
+        return dataService.getPersonalities(lang);
+    }
+
+    @GetMapping("/api/personalities/{id}")
+    public Personality personality(
+            @PathVariable String id,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        return Optional.ofNullable(dataService.getPersonalityById(id, lang))
+                .orElseThrow(() -> new ResourceNotFoundException("Personalidade não encontrada"));
     }
 }
