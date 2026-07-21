@@ -10,7 +10,7 @@
 
 O 12 Axes é um quiz político educativo, anônimo e sem cadastro. O usuário responde afirmações em escala de concordância, recebe percentuais por eixo e visualiza como suas posições se distribuem entre polos como democracia/autocracia, público/privado, planejamento/livre mercado e progressismo/tradição.
 
-Para recrutadores, o projeto mostra uma aplicação web completa: React/TypeScript, Java/Spring Boot, API REST, JSON versionado, algoritmo próprio, testes e deploy em cloud. Para entusiastas de política, funciona como leitura comparativa, não como diagnóstico científico.
+Para recrutadores, o projeto mostra uma aplicação web completa: React/TypeScript, Java/Spring Boot, API REST bilíngue (PT/EN), JSON versionado, algoritmo próprio, testes e deploy em cloud. Para entusiastas de política, funciona como leitura comparativa, não como diagnóstico científico.
 
 ---
 
@@ -36,7 +36,7 @@ Não há banco de dados. Os JSONs são carregados na inicialização do backend 
 3. Busca no backend o pool completo de perguntas e balanceia a seleção no frontend.
 4. Registra respostas em 5 pontos, com avanço automático e opção de voltar.
 5. Calcula percentuais por eixo, intensidade, ideologias compatíveis, país e personalidade mais próximos.
-6. Exibe barras por eixo, cards de compatibilidade e um PNG compartilhável.
+6. Exibe barras por eixo, cards de compatibilidade, um PNG compartilhável e um link direto para o resultado.
 
 ---
 
@@ -125,16 +125,16 @@ Intensidade pelo desvio em relação ao centro:
 
 O resultado vira um vetor de 12 valores, de `0` a `100`, que representa o percentual do polo esquerdo em cada eixo. Esse vetor é comparado separadamente com os perfis de ideologias, países e personalidades; um catálogo não participa do cálculo de outro.
 
-O score combina:
+O score (`ProfileMatchScorer`) combina quatro componentes:
 
-- Similaridade eixo a eixo com curva quadrática: `max(0, 1 - (diff / 50)^2)`.
-- Penalidade contínua para lados opostos: `1 - 0.45 * tanh(abs(userValue - 50) / 25) * tanh(abs(targetValue - 50) / 25)`.
-- Similaridade de direção por cosseno, usando os vetores centralizados em `50`: `50 + 50 * cosine(user - 50, target - 50)`. Se um vetor estiver exatamente no centro, esse componente fica neutro em `50`.
-- Fórmula final: `0.50 * axisSimilarity + 0.50 * directionSimilarity`.
+- **Eixo a eixo** (peso `0.42`): curva quadrática `max(0, 1 - (diff / 50)^2)` por eixo, com penalidade contínua quando usuário e alvo estão em lados opostos do centro: `1 - 0.45 * tanh(abs(userValue - 50) / 25) * tanh(abs(targetValue - 50) / 25)`.
+- **Direção** (peso `0.33`): similaridade de cosseno entre os vetores centralizados em `50`: `50 + 50 * cosine(user - 50, target - 50)`. Se um vetor estiver exatamente no centro, esse componente fica neutro em `50`.
+- **Magnitude** (peso `0.18`): compara a intensidade média das respostas (`avg(abs(valor - 50))`) do usuário com a do perfil: `100 - 2 * abs(userIntensity - targetIntensity)`. Evita que um usuário moderado tenha compatibilidade quase perfeita com um perfil extremo só porque a direção bate.
+- **Outlier** (peso `0.07`): penaliza perfis com um único eixo muito discrepante, mesmo com média geral boa: `100 * max(0, 1 - (maxDiff / 100)^2.5)`, onde `maxDiff` é a maior diferença absoluta entre um eixo do usuário e o do alvo.
 
-Além do score bruto (`compatibility`), cada match retorna `compatibilityPercentile`, que indica a posição relativa dentro do próprio catálogo. As três bases não são comparáveis diretamente: ideologias tendem a ser vetores mais extremos, enquanto países e regimes históricos são perfis mais comprimidos por compromissos de governo.
+Além do score bruto (`compatibility`), cada match retorna `compatibilityPercentile`, que indica a posição relativa dentro do próprio catálogo (percentual de perfis do mesmo catálogo com score menor). As três bases não são comparáveis diretamente: ideologias tendem a ser vetores mais extremos, enquanto países e regimes históricos são perfis mais comprimidos por compromissos de governo.
 
-O backend retorna o top-1 de ideologia por score bruto e mais 3 ideologias escolhidas por MMR (`lambda = 0.70`) para reduzir redundância entre perfis quase idênticos. Por isso, `matches` significa "principal match + vizinhos diversos", não mais "os 4 maiores scores estritos". País/experiência histórica e personalidade continuam separados e retornam o perfil mais próximo em seus próprios catálogos. Campos editoriais como `countryId` e `personalityId` não são usados como rótulos de matching ou avaliação.
+`matches` (ideologias) é o top-4 por `compatibility` bruto, com empate desempatado por nome — não há mais diversificação por MMR. País/experiência histórica e personalidade retornam apenas o perfil mais próximo em seus próprios catálogos (top-1). Campos editoriais como `countryId` e `personalityId` não são usados como rótulos de matching ou avaliação.
 
 ---
 
@@ -147,12 +147,17 @@ O backend retorna o top-1 de ideologia por score bruto e mais 3 ideologias escol
 | `GET` | `/api/quiz?variant=extended` | Metadados da versão completa e pool de 240 perguntas |
 | `GET` | `/api/quiz?variant=extreme` | Metadados da versão extrema e pool de 240 perguntas |
 | `POST` | `/api/results` | Calcula eixos, ideologias, país e personalidade |
+| `GET` | `/api/results/by-axes?v=...` | Recalcula o resultado a partir de 12 valores na URL, para compartilhar por link |
 | `GET` | `/api/ideologies` | Lista ideologias |
 | `GET` | `/api/ideologies/{id}` | Detalha uma ideologia |
 | `GET` | `/api/countries` | Lista países e experiências históricas |
 | `GET` | `/api/countries/{id}` | Detalha país ou experiência histórica |
+| `GET` | `/api/personalities` | Lista personalidades políticas e intelectuais |
+| `GET` | `/api/personalities/{id}` | Detalha uma personalidade |
 
 Variantes aceitas: `short`, `curta`, `extended`, `extensa`, `extreme`, `extrema`, `240`, `240questions`.
+
+Todos os endpoints (exceto `/api/health`) aceitam o parâmetro `lang` (`pt` ou `en`, padrão `pt`) e retornam textos, descrições e metadados no idioma solicitado.
 
 ### Payload de Resultado
 
@@ -184,7 +189,8 @@ Valores de `answer`: `STRONGLY_AGREE`, `AGREE`, `NEUTRAL`, `DISAGREE`, `STRONGLY
 |   `-- src/
 |       |-- main/java/com/twelveaxes/
 |       |   |-- config/        # CORS
-|       |   |-- controller/    # HealthController, QuizController
+|       |   |-- controller/    # HealthController, QuizController (quiz, results, ideologies, countries, personalities)
+|       |   |-- exception/     # ResourceNotFoundException e handler global
 |       |   |-- model/         # records e DTOs
 |       |   `-- service/       # dados, scoring e matchers
 |       |-- main/resources/
@@ -196,13 +202,13 @@ Valores de `answer`: `STRONGLY_AGREE`, `AGREE`, `NEUTRAL`, `DISAGREE`, `STRONGLY
 |   |-- src/
 |   |   |-- components/        # cards, barras, perguntas e progresso
 |   |   |-- data/              # eixos da home
+|   |   |-- i18n/              # traduções e contexto de idioma (PT/EN)
 |   |   |-- services/          # cliente HTTP
 |   |   |-- styles/            # tokens e CSS principal
 |   |   |-- types/             # tipos TypeScript
 |   |   `-- utils/             # seleção, imagens e exportação PNG
 |   |-- package.json
 |   `-- vercel.json
-|-- docs/
 |-- render.yaml
 `-- README.md
 ```
@@ -311,7 +317,7 @@ FRONTEND_ORIGINS=https://12axes.vercel.app
 VITE_API_URL=https://one2axes-backend.onrender.com
 ```
 
-O Render usa `/api/health` como health check. Mais detalhes ficam em `docs/deployment.md`.
+O Render usa `/api/health` como health check.
 
 ---
 
