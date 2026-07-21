@@ -2,7 +2,7 @@
   {
     "id": "brasil",
     "name": "Brasil",
-    "category": "República social-popular",
+    "category": "República social-desenvolvimentista",
     "description": "Maior país da América Latina, o Brasil é uma república federativa presidencialista e democrática, com economia mista, amplas políticas sociais e forte diversidade regional, cultural e política que marca suas disputas eleitorais.",
     "flagPath": "/countries/flags/brasil.gif",
     "historical": false,
@@ -12,7 +12,7 @@
   {
     "id": "estados-unidos",
     "name": "Estados Unidos",
-    "category": "República federal liberal",
+    "category": "República liberal-federal",
     "description": "Potência global e república federativa presidencialista, os Estados Unidos combinam forte tradição liberal, economia de mercado dinâmica, inovação tecnológica e um sistema bipartidário que polariza a vida política nacional.",
     "flagPath": "/countries/flags/estados-unidos.gif",
     "historical": false,
@@ -22,7 +22,7 @@
   {
     "id": "mexico",
     "name": "México",
-    "category": "República social-popular",
+    "category": "República popular-integracionista",
     "description": "República federativa presidencialista da América do Norte, o México une democracia eleitoral, economia de mercado integrada aos Estados Unidos e desafios persistentes de desigualdade, corrupção e violência ligada ao narcotráfico.",
     "flagPath": "/countries/flags/mexico.gif",
     "historical": false,
@@ -32,7 +32,7 @@
   {
     "id": "chile",
     "name": "Chile",
-    "category": "Democracia progressista latino-americana",
+    "category": "República progressista-liberal",
     "description": "República presidencialista sul-americana, o Chile combina democracia estável, economia de mercado aberta e forte pauta social e progressista, herança do processo de redemocratização após a ditadura militar de Pinochet.",
     "flagPath": "/countries/flags/chile.gif",
     "historical": false,
@@ -42,7 +42,7 @@
   {
     "id": "bolivia",
     "name": "Bolívia",
-    "category": "República social-popular",
+    "category": "República plurinacional-popular",
     "description": "República andina presidencialista, a Bolívia é marcada pelo protagonismo indígena, pela defesa dos recursos naturais e por um projeto de Estado plurinacional que une nacionalismo econômico e ampla participação popular.",
     "flagPath": "/countries/flags/bolivia.gif",
     "historical": false,
@@ -52,7 +52,7 @@
   {
     "id": "venezuela",
     "name": "Venezuela",
-    "category": "Autoritarismo nacional centralizado",
+    "category": "Autoritarismo estatal-socialista",
     "description": "República presidencialista sul-americana, a Venezuela vive sob um regime autoritário de orientação socialista e nacionalista, marcado por concentração de poder, crise econômica prolongada e forte emigração de sua população.",
     "flagPath": "/countries/flags/venezuela.gif",
     "historical": false,
@@ -62,7 +62,7 @@
   {
     "id": "cuba",
     "name": "Cuba",
-    "category": "Socialismo de partido único",
+    "category": "Socialismo unipartidário-igualitário",
     "description": "Estado socialista de partido único no Caribe, Cuba mantém economia planificada, forte controle estatal e serviços públicos universais, com poder centralizado desde a revolução liderada por Fidel Castro em 1959.",
     "flagPath": "/countries/flags/cuba.gif",
     "historical": false,
@@ -72,7 +72,7 @@
   {
     "id": "costa-rica",
     "name": "Costa Rica",
-    "category": "Democracia liberal",
+    "category": "República liberal-pacifista",
     "description": "República presidencialista da América Central, a Costa Rica destaca-se por abolir as forças armadas, pela democracia consolidada, pelo compromisso ambiental e por uma tradição de estabilidade política e paz na região.",
     "flagPath": "/countries/flags/costa-rica.gif",
     "historical": false,
@@ -82,7 +82,7 @@
   {
     "id": "suica",
     "name": "Suíça",
-    "category": "Democracia federal direta",
+    "category": "Democracia liberal-direta",
     "description": "Confederação federativa europeia, a Suíça é conhecida por sua democracia direta, forte autonomia dos cantões, neutralidade histórica e economia próspera baseada em finanças, indústria de precisão e estabilidade institucional.",
     "flagPath": "/countries/flags/suica.gif",
     "historical": false,
@@ -92,7 +92,7 @@
   {
     "id": "suecia",
     "name": "Suécia",
-    "category": "Social-democracia nórdica",
+    "category": "Monarquia social-democrata",
     "description": "Monarquia parlamentar nórdica, a Suécia é referência de social-democracia, com amplo Estado de bem-estar, altos impostos, forte igualdade social e economia de mercado aberta e inovadora combinada a valores progressistas.",
     "flagPath": "/countries/flags/suecia.gif",
     "historical": false,
@@ -102,7 +102,7 @@
   {
     "id": "alemanha",
     "name": "Alemanha",
-    "category": "República federal liberal",
+    "category": "República social-exportadora",
     "description": "República federativa parlamentarista, a Alemanha é a maior economia da Europa, com economia social de mercado, forte indústria exportadora e papel central na União Europeia, unindo estabilidade democrática e peso geopolítico.",
     "flagPath": "/countries/flags/alemanha.gif",
     "historical": false,
@@ -112,7 +112,7 @@
   {
     "id": "franca",
     "name": "França",
-    "category": "Democracia social de mercado",
+    "category": "República social-republicana",
     "description": "República semipresidencialista europeia, a França combina forte tradição republicana e laica, Estado social robusto, economia mista e destacado papel diplomático, cultural e militar na União Europeia e no mundo.",
     "flagPath": "/countries/flags/franca.gif",
     "historical": false,
@@ -122,7 +122,7 @@
   {
     "id": "uniao-europeia",
     "name": "União Europeia",
-    "category": "União supranacional democrática",
+    "category": "União supranacional regulatória",
     "description": "União política e econômica supranacional, a União Europeia integra Estados democráticos por meio de instituições compartilhadas, mercado comum, regulação coordenada, livre circulação e forte compromisso com direitos, laicidade e cooperação internacional.",
     "flagPath": "/countries/flags/uniao-europeia.png",
     "historical": false,
@@ -132,7 +132,7 @@
   {
     "id": "reino-unido",
     "name": "Reino Unido",
-    "category": "Democracia liberal",
+    "category": "Monarquia liberal-financeira",
     "description": "Monarquia parlamentar, o Reino Unido tem longa tradição liberal e democrática, economia de mercado e forte setor financeiro, mantendo influência global após sua saída da União Europeia no processo conhecido como Brexit.",
     "flagPath": "/countries/flags/reino-unido.gif",
     "historical": false,
@@ -142,7 +142,7 @@
   {
     "id": "hungria",
     "name": "Hungria",
-    "category": "Democracia conservadora",
+    "category": "República nacional-iliberal",
     "description": "República parlamentarista do Leste Europeu, a Hungria é governada sob a chamada democracia iliberal, unindo nacionalismo, conservadorismo cristão, soberania diante da União Europeia e forte controle de mídia e instituições.",
     "flagPath": "/countries/flags/hungria.gif",
     "historical": false,
@@ -152,7 +152,7 @@
   {
     "id": "russia",
     "name": "Rússia",
-    "category": "Autoritarismo nacional centralizado",
+    "category": "Autoritarismo estatal-rentista",
     "description": "República presidencialista euroasiática, a Rússia concentra o poder num regime autoritário e nacionalista, com economia dependente de recursos naturais, forte aparato militar e política externa de confronto com o Ocidente.",
     "flagPath": "/countries/flags/russia.gif",
     "historical": false,
@@ -162,7 +162,7 @@
   {
     "id": "japao",
     "name": "Japão",
-    "category": "Democracia conservadora",
+    "category": "Monarquia conservadora-tecnológica",
     "description": "Monarquia parlamentar asiática, o Japão une tradição e alta tecnologia, com economia de mercado avançada, sociedade envelhecida e política conservadora estável, mantendo pacifismo constitucional e forte peso econômico global.",
     "flagPath": "/countries/flags/japao.gif",
     "historical": false,
@@ -172,7 +172,7 @@
   {
     "id": "coreia-do-sul",
     "name": "Coreia do Sul",
-    "category": "Democracia securitária",
+    "category": "República tecnológica-securitária",
     "description": "República presidencialista asiática, a Coreia do Sul combina democracia vibrante, economia de mercado orientada à exportação e liderança tecnológica, resultado de rápido desenvolvimento sob forte impulso estatal.",
     "flagPath": "/countries/flags/coreia-do-sul.gif",
     "historical": false,
@@ -182,7 +182,7 @@
   {
     "id": "coreia-do-sul-de-park-chung-hee",
     "name": "Coreia do Sul de Park Chung Hee",
-    "category": "Ditadura desenvolvimentista anticomunista",
+    "category": "Ditadura desenvolvimentista-exportadora",
     "description": "Sob Park Chung Hee, a Coreia do Sul combinou regime militar-autoritário, anticomunismo rígido, disciplina social e planejamento estatal voltado à industrialização exportadora, formando os grandes chaebols e preparando a ascensão tecnológica do país.",
     "flagPath": "/countries/flags/coreia-do-sul.gif",
     "historical": true,
@@ -196,7 +196,7 @@
   {
     "id": "china",
     "name": "China",
-    "category": "Socialismo de partido único",
+    "category": "Socialismo unipartidário-industrial",
     "description": "Estado socialista de partido único, a China une o controle político absoluto do Partido Comunista a uma economia de mercado dirigida pelo Estado, tornando-se potência industrial, tecnológica e geopolítica global.",
     "flagPath": "/countries/flags/china.gif",
     "historical": false,
@@ -206,7 +206,7 @@
   {
     "id": "coreia-do-norte",
     "name": "Coreia do Norte",
-    "category": "Socialismo de partido único",
+    "category": "Totalitarismo dinástico-autárquico",
     "description": "Estado totalitário de partido único, a Coreia do Norte mantém economia planificada, isolamento internacional e culto à dinastia Kim, unindo comunismo, nacionalismo e a doutrina de autossuficiência conhecida como Juche.",
     "flagPath": "/countries/flags/coreia-do-norte.gif",
     "historical": false,
@@ -216,7 +216,7 @@
   {
     "id": "india",
     "name": "Índia",
-    "category": "Democracia conservadora",
+    "category": "República nacional-conservadora",
     "description": "Maior democracia do mundo, a Índia é uma república federativa parlamentarista de enorme diversidade, com economia de mercado em rápido crescimento, tensões religiosas e ascensão de um nacionalismo hindu conservador.",
     "flagPath": "/countries/flags/india.gif",
     "historical": false,
@@ -226,7 +226,7 @@
   {
     "id": "singapura",
     "name": "Singapura",
-    "category": "Tecnocracia liberal-autoritativa",
+    "category": "Tecnocracia unipartidária-liberal",
     "description": "Cidade-Estado asiática, Singapura é uma república parlamentarista dominada por um único partido, combinando capitalismo aberto, gestão tecnocrática eficiente, ordem rígida e liberdades políticas limitadas em nome do progresso.",
     "flagPath": "/countries/flags/singapura.gif",
     "historical": false,
@@ -236,7 +236,7 @@
   {
     "id": "vietna",
     "name": "Vietnã",
-    "category": "Socialismo de mercado",
+    "category": "Socialismo unipartidário-reformista",
     "description": "Estado socialista de partido único, o Vietnã mantém o controle político do Partido Comunista ao lado de reformas de mercado que abriram a economia, promovendo rápido crescimento industrial e integração ao comércio global.",
     "flagPath": "/countries/flags/vietna.gif",
     "historical": false,
@@ -246,7 +246,7 @@
   {
     "id": "indonesia",
     "name": "Indonésia",
-    "category": "Democracia desenvolvimentista",
+    "category": "República desenvolvimentista-plural",
     "description": "Maior país muçulmano do mundo, a Indonésia é uma república presidencialista democrática e arquipelágica, com economia de mercado em expansão, grande diversidade étnica e religiosa e crescente peso regional no sudeste asiático.",
     "flagPath": "/countries/flags/indonesia.gif",
     "historical": false,
@@ -256,7 +256,7 @@
   {
     "id": "turquia",
     "name": "Turquia",
-    "category": "Autoritarismo nacional centralizado",
+    "category": "Autoritarismo nacional-religioso",
     "description": "República presidencialista entre Europa e Ásia, a Turquia combina democracia eleitoral com forte concentração de poder, nacionalismo, conservadorismo religioso e política externa assertiva no Oriente Médio e no Mediterrâneo.",
     "flagPath": "/countries/flags/turquia.gif",
     "historical": false,
@@ -266,7 +266,7 @@
   {
     "id": "ira",
     "name": "Irã",
-    "category": "Estado religioso autoritário",
+    "category": "Teocracia clerical-estatizada",
     "description": "República islâmica teocrática, o Irã combina instituições eleitas à autoridade suprema dos clérigos, com o governo do jurista religioso, economia controlada pelo Estado e forte projeção regional no Oriente Médio.",
     "flagPath": "/countries/flags/ira.gif",
     "historical": false,
@@ -276,7 +276,7 @@
   {
     "id": "arabia-saudita",
     "name": "Arábia Saudita",
-    "category": "Monarquia rentista centralizada",
+    "category": "Monarquia rentista-religiosa",
     "description": "Monarquia absoluta do Golfo, a Arábia Saudita une poder concentrado na família real, aplicação rigorosa do islã e economia dependente do petróleo, buscando modernização controlada sob a liderança do príncipe herdeiro.",
     "flagPath": "/countries/flags/arabia-saudita.gif",
     "historical": false,
@@ -286,7 +286,7 @@
   {
     "id": "israel",
     "name": "Israel",
-    "category": "Democracia conservadora",
+    "category": "República nacional-tecnológica",
     "description": "República parlamentarista no Oriente Médio, Israel combina democracia vibrante, forte identidade nacional judaica, economia avançada em tecnologia e um conflito prolongado com os palestinos que domina sua política e segurança.",
     "flagPath": "/countries/flags/israel.gif",
     "historical": false,
@@ -296,7 +296,7 @@
   {
     "id": "africa-do-sul",
     "name": "África do Sul",
-    "category": "Democracia desenvolvimentista",
+    "category": "República industrial-desigual",
     "description": "República parlamentarista, a África do Sul é a maior economia industrial do continente e uma democracia multirracial nascida do fim do apartheid, marcada por diversidade cultural e por profundas desigualdades sociais.",
     "flagPath": "/countries/flags/africa-do-sul.gif",
     "historical": false,
@@ -306,7 +306,7 @@
   {
     "id": "atenas-democratica",
     "name": "Atenas Democrática",
-    "category": "Democracia cívica antiga",
+    "category": "Democracia cívica-excludente",
     "description": "Cidade-Estado da Grécia Antiga, Atenas foi berço da democracia direta, com cidadãos decidindo em assembleia os rumos da polis, embora a participação excluísse mulheres, estrangeiros e escravos da vida política.",
     "flagPath": "/countries/flags/atenas-democratica.png",
     "historical": true,
@@ -320,7 +320,7 @@
   {
     "id": "esparta",
     "name": "Esparta",
-    "category": "Oligarquia militar disciplinar",
+    "category": "Oligarquia militar-disciplinar",
     "description": "Cidade-Estado militarista da Grécia Antiga, Esparta organizava toda a sociedade em torno da guerra, com um regime misto de reis e conselho, disciplina rígida, austeridade e domínio sobre uma vasta população subjugada.",
     "flagPath": "/countries/flags/esparta.png",
     "historical": true,
@@ -334,7 +334,7 @@
   {
     "id": "imperio-macedonico",
     "name": "Império Macedônico",
-    "category": "Monarquia conquistadora helenística",
+    "category": "Monarquia militar-conquistadora",
     "description": "Império formado pelas conquistas de Filipe II e Alexandre, o Grande, que combinou monarquia militar macedônica, administração persa, fundação de cidades gregas e fusão cultural helenística sobre territórios diversos.",
     "flagPath": "/countries/flags/imperio-macedonico.png",
     "historical": true,
@@ -348,7 +348,7 @@
   {
     "id": "imperio-romano",
     "name": "Império Romano",
-    "category": "Império militar centralizado",
+    "category": "Império militar-centralizado",
     "description": "Vasto império da Antiguidade, Roma unia poder militar, direito e administração centralizada sob o imperador, expandindo-se por três continentes e legando língua, leis e instituições que moldaram a civilização ocidental.",
     "flagPath": "/countries/flags/imperio-romano.png",
     "historical": true,
@@ -362,7 +362,7 @@
   {
     "id": "sacro-imperio-romano-germanico",
     "name": "Sacro Império Romano-Germânico",
-    "category": "Ordem feudal descentralizada",
+    "category": "Monarquia eletiva-descentralizada",
     "description": "Federação de territórios da Europa central, o Sacro Império reunia principados e cidades sob um imperador eleito e forte influência da Igreja, marcado pela fragmentação do poder e pela autonomia dos seus membros.",
     "flagPath": "/countries/flags/sacro-imperio-romano-germanico.png",
     "historical": true,
@@ -376,7 +376,7 @@
   {
     "id": "republica-de-veneza",
     "name": "República de Veneza",
-    "category": "República mercantil oligárquica",
+    "category": "República oligárquica-mercantil",
     "description": "Poderosa república mercantil medieval, Veneza era governada por uma oligarquia comercial que dominava o comércio no Mediterrâneo, unindo instituições estáveis, marinha forte e imenso poder econômico por séculos.",
     "flagPath": "/countries/flags/republica-de-veneza.png",
     "historical": true,
@@ -390,7 +390,7 @@
   {
     "id": "imperio-otomano",
     "name": "Império Otomano",
-    "category": "Monarquia absolutista",
+    "category": "Monarquia absolutista-religiosa",
     "description": "Vasto império muçulmano, os otomanos governaram por séculos vastas terras entre Europa, Ásia e África sob o poder do sultão e do califa, unindo autoridade religiosa e política e grande diversidade de povos e crenças.",
     "flagPath": "/countries/flags/imperio-otomano.png",
     "historical": true,
@@ -404,7 +404,7 @@
   {
     "id": "reino-unido-vitoriano-imperio-britanico",
     "name": "Império Britânico",
-    "category": "Império colonial mercantil",
+    "category": "Monarquia colonial-industrial",
     "description": "No auge vitoriano, o Império Britânico foi o maior da história, unindo monarquia parlamentar, revolução industrial e domínio colonial global, com forte expansão comercial, naval e cultural pelo mundo.",
     "flagPath": "/countries/flags/reino-unido-vitoriano-imperio-britanico.png",
     "historical": true,
@@ -418,7 +418,7 @@
   {
     "id": "imperio-do-brasil",
     "name": "Império do Brasil",
-    "category": "Monarquia constitucional histórica",
+    "category": "Monarquia agrária-escravista",
     "description": "Único império das Américas por longo período, o Brasil imperial foi uma monarquia parlamentar sob Pedro I e Pedro II, marcada por estabilidade política, economia agrária escravista e forte centralização do Estado.",
     "flagPath": "/countries/flags/imperio-do-brasil.png",
     "historical": true,
@@ -432,7 +432,7 @@
   {
     "id": "alemanha-nazista-terceiro-reich",
     "name": "Alemanha Nazista (Terceiro Reich)",
-    "category": "Totalitarismo racial expansionista",
+    "category": "Totalitarismo racial-expansionista",
     "description": "Regime totalitário liderado por Hitler, o Terceiro Reich impôs ditadura racista e expansionista, culto ao líder e Estado policial, sendo responsável pela Segunda Guerra Mundial e pelo genocídio do Holocausto.",
     "flagPath": "/countries/flags/alemanha-nazista-terceiro-reich.png",
     "historical": true,
@@ -446,7 +446,7 @@
   {
     "id": "italia-fascista-mussolini",
     "name": "Itália Fascista (Mussolini)",
-    "category": "Fascismo nacional-autoritário",
+    "category": "Ditadura corporativa-nacionalista",
     "description": "Berço do fascismo, a Itália de Mussolini foi uma ditadura totalitária que fundiu nacionalismo, culto ao líder, Estado corporativo e militarismo, suprimindo a oposição e buscando expansão imperial pela força.",
     "flagPath": "/countries/flags/italia-fascista-mussolini.png",
     "historical": true,
@@ -460,7 +460,7 @@
   {
     "id": "chile-de-pinochet",
     "name": "Chile de Pinochet",
-    "category": "Ditadura militar de direita",
+    "category": "Ditadura militar-neoliberal",
     "description": "Ditadura militar surgida do golpe de 1973, o Chile de Pinochet uniu forte repressão política à adoção pioneira de reformas neoliberais de livre mercado, marcando profundamente a economia e a memória do país.",
     "flagPath": "/countries/flags/chile-de-pinochet.png",
     "historical": true,
@@ -474,7 +474,7 @@
   {
     "id": "uniao-sovietica-urss",
     "name": "União Soviética (URSS)",
-    "category": "Socialismo estatal autoritário",
+    "category": "Socialismo unipartidário-planificado",
     "description": "Primeiro Estado socialista do mundo, a URSS foi uma federação de partido único com economia planificada e poder centralizado, tornando-se superpotência global e polo do comunismo durante a Guerra Fria.",
     "flagPath": "/countries/flags/uniao-sovietica-urss.png",
     "historical": true,
@@ -488,7 +488,7 @@
   {
     "id": "china-maoista",
     "name": "China Maoísta",
-    "category": "Comunismo revolucionário maoísta",
+    "category": "Comunismo unipartidário-coletivista",
     "description": "Sob Mao, a China revolucionária foi um Estado comunista de partido único, com economia coletivizada e mobilização permanente das massas, marcada por campanhas como o Grande Salto Adiante e a Revolução Cultural.",
     "flagPath": "/countries/flags/china-maoista.png",
     "historical": true,
@@ -502,7 +502,7 @@
   {
     "id": "camboja-do-khmer-vermelho-pol-pot",
     "name": "Camboja do Khmer Vermelho (Pol Pot)",
-    "category": "Comunismo agrário totalitário",
+    "category": "Totalitarismo agrário-coletivista",
     "description": "Regime radical liderado por Pol Pot, o Khmer Vermelho impôs um comunismo agrário extremo, esvaziou as cidades e aboliu dinheiro e propriedade, provocando um dos maiores genocídios do século XX no Camboja.",
     "flagPath": "/countries/flags/camboja-do-khmer-vermelho-pol-pot.png",
     "historical": true,
@@ -516,7 +516,7 @@
   {
     "id": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
     "name": "Aragão e Catalunha Anarquistas (Revolução Espanhola)",
-    "category": "Autogestão anarquista",
+    "category": "Anarquismo coletivista-autogestionário",
     "description": "Durante a Revolução Espanhola, regiões de Aragão e Catalunha viveram uma experiência anarquista de coletivização da terra e das fábricas, com autogestão dos trabalhadores e organização social sem Estado central.",
     "flagPath": "/countries/flags/aragao-e-catalunha-anarquistas-revolucao-espanhola.png",
     "historical": true,
@@ -530,7 +530,7 @@
   {
     "id": "argentina-peronista",
     "name": "Argentina Peronista",
-    "category": "Populismo nacional-corporativista",
+    "category": "Populismo corporativo-trabalhista",
     "description": "Sob Perón, a Argentina viveu um regime populista e nacionalista que uniu forte apoio operário, corporativismo, industrialização e ampliação de direitos sociais, deixando marca duradoura na política do país.",
     "flagPath": "/countries/flags/argentina-peronista.png",
     "historical": true,
@@ -544,7 +544,7 @@
   {
     "id": "egito-de-nasser",
     "name": "Egito de Nasser",
-    "category": "Nacionalismo socialista árabe",
+    "category": "República nacionalista-estatizante",
     "description": "Sob Nasser, o Egito foi uma república nacionalista e desenvolvimentista que nacionalizou setores estratégicos, liderou o pan-arabismo e uniu socialismo árabe, reforma agrária e forte protagonismo no Oriente Médio.",
     "flagPath": "/countries/flags/egito-de-nasser.png",
     "historical": true,
@@ -558,7 +558,7 @@
   {
     "id": "africa-do-sul-do-apartheid",
     "name": "África do Sul do Apartheid",
-    "category": "Estado racial segregacionista",
+    "category": "Estado racial-segregacionista",
     "description": "Regime de segregação racial institucional, a África do Sul do apartheid negava direitos à maioria negra e concentrava o poder na minoria branca, com leis de separação que provocaram forte resistência interna e sanções.",
     "flagPath": "/countries/flags/africa-do-sul-do-apartheid.png",
     "historical": true,
@@ -572,7 +572,7 @@
   {
     "id": "hong-kong",
     "name": "Hong Kong",
-    "category": "Centro financeiro de livre mercado",
+    "category": "Região tecnocrática-financeira",
     "description": "Centro financeiro global, Hong Kong é uma região autônoma de forte capitalismo de livre mercado e gestão tecnocrática, cuja ampla autonomia foi crescentemente restringida pelo controle político da China continental.",
     "flagPath": "/countries/flags/hong-kong.png",
     "historical": false,
@@ -586,7 +586,7 @@
   {
     "id": "argentina",
     "name": "Argentina",
-    "category": "República presidencialista libertária",
+    "category": "República liberal-ajustista",
     "description": "República federativa presidencialista sul-americana, a Argentina vive reformas liberais de livre mercado após crises econômicas recorrentes, combinando democracia, forte tradição política e profunda instabilidade financeira.",
     "flagPath": "/countries/flags/argentina.png",
     "historical": false,
@@ -600,7 +600,7 @@
   {
     "id": "liechtenstein",
     "name": "Liechtenstein",
-    "category": "Monarquia constitucional libertária",
+    "category": "Monarquia liberal-rentista",
     "description": "Minúsculo principado europeu, o Liechtenstein é uma monarquia constitucional próspera, com forte autonomia local, economia liberal baseada em finanças e indústria e um dos maiores níveis de renda por habitante do mundo.",
     "flagPath": "/countries/flags/liechtenstein.png",
     "historical": false,
@@ -614,7 +614,7 @@
   {
     "id": "rojava",
     "name": "Rojava (Norte e Leste da Síria)",
-    "category": "Confederalismo democrático autônomo",
+    "category": "Confederalismo democrático-igualitário",
     "description": "Região autônoma no norte da Síria, Rojava organiza-se pelo confederalismo democrático, com autogestão local, igualdade de gênero, pluralismo étnico e ecologia, inspirada nas ideias libertárias de Abdullah Öcalan.",
     "flagPath": "/countries/flags/rojava.png",
     "historical": false,
@@ -628,7 +628,7 @@
   {
     "id": "iugoslavia-socialista",
     "name": "Iugoslávia Socialista",
-    "category": "Socialismo autogestionário de mercado",
+    "category": "Socialismo autogestionário-federativo",
     "description": "Federação socialista liderada por Tito, a Iugoslávia adotou a autogestão dos trabalhadores e uma via independente de Moscou, unindo diversos povos sob partido único até se fragmentar em guerras nos anos 1990.",
     "flagPath": "/countries/flags/iugoslavia-socialista.png",
     "historical": true,
@@ -656,7 +656,7 @@
   {
     "id": "islandia-medieval",
     "name": "Islândia Medieval (Mancomunidade)",
-    "category": "Ordem policêntrica sem Estado central",
+    "category": "Ordem policêntrica-consuetudinária",
     "description": "Rara sociedade sem Estado central, a Islândia medieval organizava-se por chefes locais e uma assembleia, o Althing, resolvendo disputas por leis e acordos privados em um sistema descentralizado próximo da anarquia.",
     "flagPath": "/countries/flags/islandia-medieval.png",
     "historical": true,
@@ -670,7 +670,7 @@
   {
     "id": "emirados-arabes-unidos",
     "name": "Emirados Árabes Unidos",
-    "category": "Federação de monarquias tecnológicas",
+    "category": "Federação rentista-diversificada",
     "description": "Federação de monarquias do Golfo, os Emirados Árabes Unidos combinam poder concentrado nas famílias reais, economia liberal diversificada além do petróleo e forte aposta em tecnologia, turismo e finanças globais.",
     "flagPath": "/countries/flags/emirados-arabes-unidos.png",
     "historical": false,
@@ -684,7 +684,7 @@
   {
     "id": "portugal-estado-novo",
     "name": "Portugal (Estado Novo)",
-    "category": "Ditadura corporativa conservadora",
+    "category": "Ditadura corporativa-católica",
     "description": "Sob Salazar, o Estado Novo português foi uma ditadura conservadora e corporativista, que uniu nacionalismo católico, ordem e controle político sem mobilização de massas, mantendo o país e suas colônias por décadas.",
     "flagPath": "/countries/flags/portugal-estado-novo.png",
     "historical": true,
@@ -698,7 +698,7 @@
   {
     "id": "prussia",
     "name": "Reino da Prússia",
-    "category": "Estado burocrático-militar cameralista",
+    "category": "Monarquia burocrático-militar",
     "description": "Reino alemão de forte tradição militar e administrativa, a Prússia uniu monarquia, burocracia disciplinada e exército poderoso, liderando a unificação da Alemanha e encarnando o Estado cameralista e o despotismo esclarecido.",
     "flagPath": "/countries/flags/prussia.png",
     "historical": true,
@@ -712,7 +712,7 @@
   {
     "id": "polonia",
     "name": "Polônia",
-    "category": "Democracia nacional-conservadora",
+    "category": "República nacional-católica",
     "description": "República parlamentarista do Leste Europeu, a Polônia combina democracia, forte identidade católica e nacionalista e economia de mercado em crescimento, com política marcada por tensões entre conservadorismo e liberalismo.",
     "flagPath": "/countries/flags/polonia.png",
     "historical": false,
@@ -726,7 +726,7 @@
   {
     "id": "ucrania-territorio-livre",
     "name": "Território Livre (Makhnovshchina)",
-    "category": "Comunismo libertário territorial",
+    "category": "Anarquismo camponês-miliciano",
     "description": "Durante a Revolução Russa, o Território Livre de Makhno foi uma experiência anarquista na Ucrânia, com comunas camponesas autogeridas e milícias populares que rejeitavam tanto o Estado branco quanto o poder bolchevique.",
     "flagPath": "/countries/flags/ucrania-territorio-livre.png",
     "historical": true,
@@ -754,7 +754,7 @@
   {
     "id": "tchequia",
     "name": "Tchéquia",
-    "category": "Democracia liberal secular",
+    "category": "República liberal-secular",
     "description": "República parlamentarista da Europa Central, a Tchéquia combina democracia liberal consolidada, forte tradição secular, economia de mercado industrializada e integração à União Europeia após o fim do bloco socialista.",
     "flagPath": "/countries/flags/tchequia.png",
     "historical": false,
@@ -768,7 +768,7 @@
   {
     "id": "eua-california",
     "name": "Estados Unidos (Califórnia)",
-    "category": "Região norte-americana tecno-progressista",
+    "category": "Região tecno-progressista",
     "description": "Estado mais populoso dos Estados Unidos, a Califórnia é um polo global de tecnologia e cultura, com política fortemente progressista, ambientalista e tecnocrática e uma economia de mercado gigantesca e inovadora.",
     "flagPath": "/countries/flags/eua-california.png",
     "historical": false,
@@ -782,7 +782,7 @@
   {
     "id": "eua-texas",
     "name": "Estados Unidos (Texas)",
-    "category": "Região norte-americana de livre mercado conservador",
+    "category": "Região liberal-energética",
     "description": "Segundo maior estado dos Estados Unidos, o Texas destaca-se pelo conservadorismo, pela cultura de forte liberdade individual, por baixa tributação e por uma economia de mercado dinâmica ligada à energia e à indústria.",
     "flagPath": "/countries/flags/eua-texas.png",
     "historical": false,
@@ -796,7 +796,7 @@
   {
     "id": "eua-nova-york",
     "name": "Estados Unidos (Nova York)",
-    "category": "Região norte-americana financeira e cosmopolita",
+    "category": "Região financeira-cosmopolita",
     "description": "Centro financeiro e cultural dos Estados Unidos, Nova York combina política liberal e progressista, enorme diversidade de imigrantes, economia globalizada baseada em serviços e forte peso simbólico no mundo.",
     "flagPath": "/countries/flags/eua-nova-york.png",
     "historical": false,
@@ -810,7 +810,7 @@
   {
     "id": "eua-new-hampshire",
     "name": "Estados Unidos (New Hampshire)",
-    "category": "Região norte-americana libertária",
+    "category": "Região libertária-fiscal",
     "description": "Pequeno estado do nordeste dos Estados Unidos, New Hampshire é conhecido por sua forte cultura libertária, baixa tributação, ausência de imposto de renda estadual e lema que exalta a liberdade acima de tudo.",
     "flagPath": "/countries/flags/eua-new-hampshire.png",
     "historical": false,
@@ -824,7 +824,7 @@
   {
     "id": "eua-washington-dc",
     "name": "Estados Unidos (Washington, D.C.)",
-    "category": "Capital federal e establishment de política externa",
+    "category": "Distrito federal-institucional",
     "description": "Capital dos Estados Unidos, Washington concentra o poder federal e as instituições de governo, com forte peso da máquina pública, orientação globalista e papel central na diplomacia e no poder militar do país.",
     "flagPath": "/countries/flags/eua-washington-dc.png",
     "historical": false,
@@ -838,7 +838,7 @@
   {
     "id": "eua-massachusetts",
     "name": "Estados Unidos (Massachusetts)",
-    "category": "Região norte-americana do individualismo da Nova Inglaterra",
+    "category": "Região acadêmico-progressista",
     "description": "Estado do nordeste dos Estados Unidos, Massachusetts é reduto progressista e polo de educação e ciência, com universidades de prestígio, forte tradição liberal e política voltada a direitos sociais e inovação.",
     "flagPath": "/countries/flags/eua-massachusetts.png",
     "historical": false,
@@ -852,7 +852,7 @@
   {
     "id": "canada",
     "name": "Canadá",
-    "category": "Federação multicultural",
+    "category": "Monarquia multicultural-assistencial",
     "description": "Monarquia parlamentar federativa, o Canadá combina democracia estável, multiculturalismo, amplo Estado de bem-estar e economia de mercado rica em recursos naturais, com forte compromisso com direitos e diversidade.",
     "flagPath": "/countries/flags/canada.png",
     "historical": false,
@@ -862,7 +862,7 @@
   {
     "id": "paises-baixos",
     "name": "Países Baixos",
-    "category": "Democracia mercantil liberal",
+    "category": "Monarquia liberal-mercantil",
     "description": "Monarquia parlamentar, os Países Baixos são conhecidos pela tradição liberal, tolerância social e livre comércio, com economia aberta e globalizada e políticas progressistas em temas de costumes e direitos individuais.",
     "flagPath": "/countries/flags/paises-baixos.png",
     "historical": false,
@@ -872,7 +872,7 @@
   {
     "id": "italia",
     "name": "Itália",
-    "category": "República parlamentar",
+    "category": "República fragmentada-industrial",
     "description": "República parlamentarista mediterrânea, a Itália une longa herança cultural, economia de mercado diversificada e política instável e fragmentada, com ascensão recente de forças conservadoras e nacionalistas.",
     "flagPath": "/countries/flags/italia.png",
     "historical": false,
@@ -882,7 +882,7 @@
   {
     "id": "espanha",
     "name": "Espanha",
-    "category": "Monarquia parlamentar",
+    "category": "Monarquia descentralizada-social",
     "description": "Monarquia parlamentar, a Espanha combina democracia consolidada, forte descentralização em comunidades autônomas, economia de mercado e políticas sociais e progressistas, com tensões regionais como a questão catalã.",
     "flagPath": "/countries/flags/espanha.png",
     "historical": false,
@@ -892,7 +892,7 @@
   {
     "id": "noruega",
     "name": "Noruega",
-    "category": "Social-democracia petroleira",
+    "category": "Monarquia social-petroleira",
     "description": "Monarquia parlamentar nórdica, a Noruega alia amplo Estado de bem-estar, riqueza do petróleo gerida por um grande fundo soberano e forte igualdade social, sendo referência de qualidade de vida e social-democracia.",
     "flagPath": "/countries/flags/noruega.png",
     "historical": false,
@@ -902,7 +902,7 @@
   {
     "id": "dinamarca",
     "name": "Dinamarca",
-    "category": "Social-democracia nórdica",
+    "category": "Monarquia social-competitiva",
     "description": "Monarquia parlamentar nórdica, a Dinamarca combina generoso Estado de bem-estar, altos impostos e economia de mercado competitiva, aliando forte igualdade social a políticas migratórias mais restritivas.",
     "flagPath": "/countries/flags/dinamarca.png",
     "historical": false,
@@ -912,7 +912,7 @@
   {
     "id": "australia",
     "name": "Austrália",
-    "category": "Federação anglófona",
+    "category": "Monarquia multicultural-extrativa",
     "description": "Monarquia parlamentar federativa, a Austrália une democracia estável, multiculturalismo e economia de mercado rica em recursos naturais, com forte alinhamento ao Ocidente e políticas migratórias rigorosas e seletivas.",
     "flagPath": "/countries/flags/australia.png",
     "historical": false,
@@ -922,7 +922,7 @@
   {
     "id": "nova-zelandia",
     "name": "Nova Zelândia",
-    "category": "Democracia progressista",
+    "category": "Monarquia progressista-bicultural",
     "description": "Monarquia parlamentar do Pacífico, a Nova Zelândia é conhecida por democracia progressista, bem-estar social e economia de mercado aberta, com forte reconhecimento da cultura maori e da parceria bicultural do país.",
     "flagPath": "/countries/flags/nova-zelandia.png",
     "historical": false,
@@ -932,7 +932,7 @@
   {
     "id": "irlanda",
     "name": "Irlanda",
-    "category": "República liberal aberta",
+    "category": "República liberal-multinacional",
     "description": "República parlamentarista europeia, a Irlanda combina democracia liberal, economia de mercado aberta atraída por multinacionais, tradição de neutralidade e rápidas transformações sociais rumo a políticas progressistas.",
     "flagPath": "/countries/flags/irlanda.png",
     "historical": false,
@@ -942,7 +942,7 @@
   {
     "id": "ucrania",
     "name": "Ucrânia",
-    "category": "República em guerra",
+    "category": "República resistente-ocidentalizante",
     "description": "República semipresidencialista do Leste Europeu, a Ucrânia consolida democracia, identidade nacional e aproximação ao Ocidente enquanto resiste à invasão russa, luta que domina sua política, economia e sociedade.",
     "flagPath": "/countries/flags/ucrania.png",
     "historical": false,
@@ -952,7 +952,7 @@
   {
     "id": "bielorrussia",
     "name": "Bielorrússia",
-    "category": "Autocracia pós-soviética",
+    "category": "Autocracia estatal-personalista",
     "description": "República presidencialista pós-soviética, a Bielorrússia é governada por um regime autoritário e personalista, com forte controle estatal da economia, repressão à oposição e estreita aliança política com a Rússia.",
     "flagPath": "/countries/flags/bielorrussia.png",
     "historical": false,
@@ -962,7 +962,7 @@
   {
     "id": "cazaquistao",
     "name": "Cazaquistão",
-    "category": "Autocracia de recursos",
+    "category": "Autocracia rentista-multivetorial",
     "description": "República presidencialista da Ásia Central, o Cazaquistão combina regime autoritário, economia de mercado dependente de petróleo e minerais e forte nacionalismo, buscando equilíbrio geopolítico entre Rússia, China e Ocidente.",
     "flagPath": "/countries/flags/cazaquistao.png",
     "historical": false,
@@ -972,7 +972,7 @@
   {
     "id": "catar",
     "name": "Catar",
-    "category": "Monarquia rentista",
+    "category": "Monarquia rentista-projetiva",
     "description": "Pequena monarquia absoluta do Golfo, o Catar concentra o poder na família real e apoia sua riqueza no gás natural, aliando conservadorismo religioso a intensa projeção internacional por investimentos, mídia e diplomacia.",
     "flagPath": "/countries/flags/catar.png",
     "historical": false,
@@ -982,7 +982,7 @@
   {
     "id": "egito-atual",
     "name": "Egito",
-    "category": "Regime militar",
+    "category": "Regime militar-estatizante",
     "description": "República presidencialista árabe, o Egito é governado por um regime autoritário de forte peso militar, que prioriza segurança e estabilidade, controla a oposição e dirige boa parte da economia por meio do Estado.",
     "flagPath": "/countries/flags/egito-atual.png",
     "historical": false,
@@ -992,7 +992,7 @@
   {
     "id": "libano",
     "name": "Líbano",
-    "category": "Democracia consociativa",
+    "category": "República confessional-fragmentada",
     "description": "República parlamentarista do Oriente Médio, o Líbano reparte o poder entre comunidades religiosas num sistema confessional, com pluralismo, forte setor de serviços e crônica instabilidade política e econômica.",
     "flagPath": "/countries/flags/libano.png",
     "historical": false,
@@ -1002,7 +1002,7 @@
   {
     "id": "siria",
     "name": "Síria",
-    "category": "Transição pós-Assad",
+    "category": "Estado transicional-islâmico",
     "description": "Após a queda de Assad, a Síria vive uma transição sob forças de orientação islâmica, tentando reconstruir o Estado depois de longa guerra civil, com desafios de unidade nacional, segurança e reconciliação entre grupos.",
     "flagPath": "/countries/flags/siria.png",
     "historical": true,
@@ -1016,7 +1016,7 @@
   {
     "id": "paquistao",
     "name": "Paquistão",
-    "category": "República islâmica",
+    "category": "República islâmico-militarizada",
     "description": "República islâmica federativa, o Paquistão combina democracia frágil e forte influência militar, com identidade religiosa central, nacionalismo e desafios de segurança, pobreza e tensões com a vizinha Índia.",
     "flagPath": "/countries/flags/paquistao.png",
     "historical": false,
@@ -1026,7 +1026,7 @@
   {
     "id": "filipinas",
     "name": "Filipinas",
-    "category": "Democracia dinástica",
+    "category": "Democracia dinástico-católica",
     "description": "República presidencialista arquipelágica, as Filipinas combinam democracia dominada por dinastias políticas, forte identidade católica e economia de mercado, com pautas de segurança e combate à criminalidade em destaque.",
     "flagPath": "/countries/flags/filipinas.png",
     "historical": false,
@@ -1036,7 +1036,7 @@
   {
     "id": "tailandia",
     "name": "Tailândia",
-    "category": "Monarquia militarizada",
+    "category": "Monarquia militarizada-religiosa",
     "description": "Monarquia constitucional do sudeste asiático, a Tailândia alterna governos civis e forte influência militar, com monarquia reverenciada, budismo predominante e economia de mercado voltada a turismo e exportações.",
     "flagPath": "/countries/flags/tailandia.png",
     "historical": false,
@@ -1046,7 +1046,7 @@
   {
     "id": "malasia",
     "name": "Malásia",
-    "category": "Federação multiétnica",
+    "category": "Monarquia multiétnica-islâmica",
     "description": "Monarquia federativa eletiva do sudeste asiático, a Malásia combina democracia, sociedade multiétnica, islã como religião oficial e economia de mercado dirigida pelo Estado, com políticas de ação afirmativa aos malaios.",
     "flagPath": "/countries/flags/malasia.png",
     "historical": false,
@@ -1056,7 +1056,7 @@
   {
     "id": "taiwan",
     "name": "Taiwan",
-    "category": "Democracia tecnológica",
+    "category": "República democrático-tecnológica",
     "description": "República presidencialista insular, Taiwan é uma democracia vibrante e polo mundial de tecnologia, sobretudo de semicondutores, que afirma sua autonomia diante das reivindicações de soberania da China continental.",
     "flagPath": "/countries/flags/taiwan.png",
     "historical": false,
@@ -1066,7 +1066,7 @@
   {
     "id": "el-salvador",
     "name": "El Salvador",
-    "category": "Estado de segurança bitcoin",
+    "category": "República securitário-digital",
     "description": "República presidencialista da América Central, El Salvador ganhou destaque pela dura política de segurança contra as gangues e pela adoção do bitcoin, unindo forte apoio popular e concentração de poder no Executivo.",
     "flagPath": "/countries/flags/el-salvador.png",
     "historical": false,
@@ -1076,7 +1076,7 @@
   {
     "id": "colombia",
     "name": "Colômbia",
-    "category": "República presidencial",
+    "category": "República católico-pacificadora",
     "description": "República presidencialista sul-americana, a Colômbia combina democracia, forte tradição católica e economia de mercado, buscando consolidar a paz após décadas de conflito armado sob um governo de esquerda inédito.",
     "flagPath": "/countries/flags/colombia.png",
     "historical": false,
@@ -1086,7 +1086,7 @@
   {
     "id": "uruguai",
     "name": "Uruguai",
-    "category": "Social-democracia secular",
+    "category": "República laico-progressista",
     "description": "República presidencialista sul-americana, o Uruguai é reconhecido por democracia sólida, forte laicidade, amplos direitos sociais e políticas progressistas, aliando estabilidade institucional a uma economia de mercado.",
     "flagPath": "/countries/flags/uruguai.png",
     "historical": false,
@@ -1096,7 +1096,7 @@
   {
     "id": "japao-meiji",
     "name": "Japão Meiji",
-    "category": "Monarquia modernizadora",
+    "category": "Monarquia modernizadora-industrial",
     "description": "Durante a Era Meiji, o Japão passou por rápida modernização dirigida pelo imperador, que aboliu o feudalismo, industrializou o país e criou instituições modernas, unindo tradição, nacionalismo e ascensão militar.",
     "flagPath": "/countries/flags/japao-meiji.png",
     "historical": true,
@@ -1110,7 +1110,7 @@
   {
     "id": "republica-holandesa",
     "name": "República Holandesa (Províncias Unidas)",
-    "category": "Confederação mercantil",
+    "category": "Confederação mercantil-tolerante",
     "description": "Pioneira república mercantil moderna, as Províncias Unidas eram uma confederação governada por uma oligarquia comercial, marcada por tolerância religiosa, livre comércio e imenso poder naval e financeiro no seu auge.",
     "flagPath": "/countries/flags/republica-holandesa.png",
     "historical": true,
@@ -1124,7 +1124,7 @@
   {
     "id": "republica-de-weimar",
     "name": "República de Weimar",
-    "category": "Democracia parlamentar frágil",
+    "category": "República parlamentar-instável",
     "description": "Primeira democracia alemã, a República de Weimar uniu parlamentarismo, representação proporcional e intensa vida cultural, mas foi minada por crises econômicas e instabilidade política que abriram caminho ao nazismo.",
     "flagPath": "/countries/flags/republica-de-weimar.png",
     "historical": true,
@@ -1138,7 +1138,7 @@
   {
     "id": "gra-colombia",
     "name": "Grã-Colômbia",
-    "category": "República bolivariana",
+    "category": "República centralista-militarizada",
     "description": "Efêmera república criada por Simón Bolívar, a Grã-Colômbia reuniu vastos territórios do norte da América do Sul num Estado centralista e militarizado, que se desfez em poucos anos por rivalidades regionais e políticas.",
     "flagPath": "/countries/flags/gra-colombia.png",
     "historical": true,
@@ -1152,7 +1152,7 @@
   {
     "id": "vaticano",
     "name": "Vaticano",
-    "category": "Monarquia teocrática eletiva",
+    "category": "Monarquia teocrática-clerical",
     "description": "Cidade-Estado governada pela Santa Sé, o Vaticano combina soberania religiosa, monarquia eletiva absoluta e administração clerical, funcionando como centro institucional da Igreja Católica e ator diplomático global.",
     "flagPath": "/countries/flags/vaticano.png",
     "historical": false,
@@ -1162,7 +1162,7 @@
   {
     "id": "monaco",
     "name": "Mônaco",
-    "category": "Monarquia constitucional rentista",
+    "category": "Monarquia rentista-turística",
     "description": "Pequeno principado mediterrâneo, Mônaco combina monarquia constitucional, baixa tributação, forte dependência de serviços financeiros e turismo de luxo, mantendo ordem social conservadora e grande abertura econômica.",
     "flagPath": "/countries/flags/monaco.png",
     "historical": false,
@@ -1172,7 +1172,7 @@
   {
     "id": "estonia",
     "name": "Estônia",
-    "category": "Democracia digital báltica",
+    "category": "República digital-atlântica",
     "description": "República parlamentar báltica, a Estônia une democracia liberal, economia aberta, Estado digital avançado e forte alinhamento euro-atlântico, mantendo preocupação com soberania nacional diante da pressão russa.",
     "flagPath": "/countries/flags/estonia.png",
     "historical": false,
@@ -1182,7 +1182,7 @@
   {
     "id": "luxemburgo",
     "name": "Luxemburgo",
-    "category": "Monarquia parlamentar financeira",
+    "category": "Monarquia financeira-integrada",
     "description": "Grão-ducado europeu e centro financeiro global, Luxemburgo combina monarquia parlamentar, economia aberta, alta integração europeia e sociedade multicultural sustentada por serviços, tecnologia e finanças.",
     "flagPath": "/countries/flags/luxemburgo.png",
     "historical": false,
@@ -1192,7 +1192,7 @@
   {
     "id": "eua-florida",
     "name": "Estados Unidos (Flórida)",
-    "category": "Região norte-americana conservadora de mercado",
+    "category": "Região conservadora-turística",
     "description": "Estado norte-americano de perfil conservador e pró-mercado, a Flórida combina baixa tributação, turismo, imigração intensa, política cultural combativa e governo estadual ativo em segurança e educação.",
     "flagPath": "/countries/flags/eua-florida.png",
     "historical": false,
@@ -1202,7 +1202,7 @@
   {
     "id": "imperio-do-japao",
     "name": "Império do Japão",
-    "category": "Império militar modernizador",
+    "category": "Monarquia militar-expansionista",
     "description": "Regime imperial japonês do início do século XX, combinou monarquia sagrada, militarismo, industrialização acelerada, nacionalismo expansionista e forte disciplina social até sua derrota na Segunda Guerra Mundial.",
     "flagPath": "/countries/flags/imperio-do-japao.png",
     "historical": true,
@@ -1216,7 +1216,7 @@
   {
     "id": "imperio-austro-hungaro",
     "name": "Império Austro-Húngaro",
-    "category": "Monarquia dual multinacional",
+    "category": "Monarquia dual-aristocrática",
     "description": "Monarquia dual da Europa Central, o Império Austro-Húngaro reuniu múltiplas nacionalidades sob a dinastia Habsburgo, combinando aristocracia, burocracia imperial, catolicismo político e tensões nacionalistas crescentes.",
     "flagPath": "/countries/flags/imperio-austro-hungaro.png",
     "historical": true,
@@ -1230,7 +1230,7 @@
   {
     "id": "butao",
     "name": "Butão",
-    "category": "Monarquia budista do bem-estar",
+    "category": "Monarquia budista-conservacionista",
     "description": "Pequeno reino himalaico, o Butão combina monarquia constitucional budista, forte proteção da cultura tradicional e da natureza e a Felicidade Interna Bruta como bússola de governo, com abertura cautelosa ao mundo exterior.",
     "flagPath": "/countries/flags/butao.png",
     "historical": false,
@@ -1244,7 +1244,7 @@
   {
     "id": "imperio-persa-aquemenida",
     "name": "Império Persa (Aquemênida)",
-    "category": "Império multinacional tolerante",
+    "category": "Império satrapal-tolerante",
     "description": "Primeiro grande império universal da história, a Pérsia aquemênida governava dezenas de povos por meio de satrapias autônomas, estradas e tributos, tolerando línguas, leis e religiões locais sob a autoridade absoluta do Rei dos Reis.",
     "flagPath": "/countries/flags/imperio-persa-aquemenida.png",
     "historical": true,
@@ -1258,7 +1258,7 @@
   {
     "id": "comuna-de-paris",
     "name": "Comuna de Paris",
-    "category": "Socialismo comunal revolucionário",
+    "category": "Socialismo comunal-autogestionário",
     "description": "Governo revolucionário que tomou Paris por 72 dias em 1871, a Comuna instaurou democracia direta com mandatos revogáveis, autogestão operária das oficinas, separação entre Igreja e Estado e igualdade salarial, tornando-se símbolo do socialismo comunal.",
     "flagPath": "/countries/flags/comuna-de-paris.png",
     "historical": true,
@@ -1272,7 +1272,7 @@
   {
     "id": "catalunha",
     "name": "Catalunha",
-    "category": "Região europeia progressista e separatista",
+    "category": "Região independentista-industrial",
     "description": "Região autônoma do nordeste da Espanha, a Catalunha combina identidade nacional e língua próprias, economia industrial e cosmopolita, política social progressista e um forte movimento independentista que culminou no referendo de 2017.",
     "flagPath": "/countries/flags/catalunha.png",
     "historical": false,
@@ -1286,7 +1286,7 @@
   {
     "id": "florenca-renascentista",
     "name": "Florença Renascentista",
-    "category": "República mercantil renascentista",
+    "category": "República mercantil-mecenática",
     "description": "Cidade-Estado do Renascimento italiano, Florença uniu capitalismo bancário e comercial, disputas facciosas entre guildas e famílias como os Médici e um mecenato que revolucionou as artes, as letras e o pensamento político.",
     "flagPath": "/countries/flags/florenca-renascentista.png",
     "historical": true,
@@ -1300,7 +1300,7 @@
   {
     "id": "roma-republicana",
     "name": "Roma Republicana",
-    "category": "República senatorial militarista",
+    "category": "República senatorial-expansionista",
     "description": "República aristocrática da Antiguidade, Roma equilibrava cônsules, Senado e tribunos da plebe em um sistema misto de magistraturas eletivas, expandindo-se pelo Mediterrâneo por meio de legiões cidadãs e de um forte culto à virtude cívica.",
     "flagPath": "/countries/flags/imperio-romano.png",
     "historical": true,
@@ -1314,7 +1314,7 @@
   {
     "id": "hungria-de-kadar",
     "name": "Hungria de Kádár",
-    "category": "Socialismo goulash de partido único",
+    "category": "Socialismo unipartidário-consumista",
     "description": "Instaurado após o esmagamento da revolução de 1956, o regime de Kádár combinou partido único, alinhamento soviético, liberalização econômica gradual, pequeno setor privado e bem-estar de consumo.",
     "flagPath": "/countries/flags/hungria-de-kadar.png",
     "historical": true,
@@ -1328,7 +1328,7 @@
   {
     "id": "chile-de-allende",
     "name": "Chile de Allende",
-    "category": "Socialismo democrático em crise",
+    "category": "Socialismo democrático-nacionalizante",
     "description": "Governo da Unidade Popular de Allende, tentou construir socialismo por via democrática, com nacionalização do cobre e dos bancos, reforma agrária e planejamento econômico até o golpe de 1973.",
     "flagPath": "/countries/flags/chile.gif",
     "historical": true,
@@ -1342,7 +1342,7 @@
   {
     "id": "burkina-faso-de-sankara",
     "name": "Burkina Faso de Sankara",
-    "category": "Socialismo anticolonial revolucionário",
+    "category": "Socialismo revolucionário-anticolonial",
     "description": "Sob Thomas Sankara, Burkina Faso combinou autossuficiência alimentar, vacinação e alfabetização em massa, emancipação feminina, rejeição da dívida externa e ruptura frontal com o neocolonialismo francês.",
     "flagPath": "/countries/flags/burkina-faso-de-sankara.png",
     "historical": true,
@@ -1356,7 +1356,7 @@
   {
     "id": "eua-confederados",
     "name": "Estados Confederados da América",
-    "category": "Confederação escravista agrária",
+    "category": "Confederação agrária-escravista",
     "description": "Formados pela secessão de onze estados do Sul para preservar a escravidão, os Estados Confederados combinavam confederalismo radical, sociedade agrária tradicionalista e religiosa e livre comércio, sendo derrotados na Guerra Civil.",
     "flagPath": "/countries/flags/eua-confederados.png",
     "historical": true,
@@ -1370,7 +1370,7 @@
   {
     "id": "macau",
     "name": "Macau",
-    "category": "Cidade-Estado do jogo e do livre mercado",
+    "category": "Região hiperaberta-recreativa",
     "description": "Região administrativa especial chinesa e maior centro de jogos de azar do mundo, Macau une impostos baixíssimos, economia hiperaberta de cassinos e turismo, herança católica portuguesa e um sistema político controlado por Pequim, sem democracia plena.",
     "flagPath": "/countries/flags/macau.png",
     "historical": false,
@@ -1384,7 +1384,7 @@
   {
     "id": "estados-papais",
     "name": "Estados Papais",
-    "category": "Teocracia católica eletiva",
+    "category": "Teocracia clerical-territorial",
     "description": "Estado temporal do Papado, os Estados Papais uniam autoridade espiritual e política sob o Papa, aplicando direito canônico e governo clerical sobre a Itália central por séculos.",
     "flagPath": "/countries/flags/estados-papais.jpg",
     "historical": true,
@@ -1398,7 +1398,7 @@
   {
     "id": "imperio-bizantino",
     "name": "Império Bizantino",
-    "category": "Cesaropapismo cristão ortodoxo",
+    "category": "Autocracia cesaropapista-ortodoxa",
     "description": "Herdeiro do Império Romano no Oriente, Bizâncio durou mil anos fundindo cristianismo ortodoxo, autocracia imperial e direito justinianeu, com o imperador como chefe da Igreja e Constantinopla como capital cristã defensora da Europa.",
     "flagPath": "/countries/flags/imperio-bizantino.png",
     "historical": true,
@@ -1412,7 +1412,7 @@
   {
     "id": "espanha-habsburgos",
     "name": "Espanha dos Habsburgos",
-    "category": "Monarquia católica militante",
+    "category": "Monarquia católica-contrarreformista",
     "description": "A Espanha dos Habsburgos, sobretudo sob Filipe II, foi um Estado católico contrarreformista, marcado por Inquisição, limpeza de sangue, expulsões religiosas e guerras em defesa da fé.",
     "flagPath": "/countries/flags/espanha-habsburgos.png",
     "historical": true,
@@ -1426,7 +1426,7 @@
   {
     "id": "imperio-russo-czarista",
     "name": "Império Russo Czarista",
-    "category": "Autocracia ortodoxa",
+    "category": "Autocracia dinástico-ortodoxa",
     "description": "O Império Russo dos Romanov combinou cristianismo ortodoxo, autocracia dinástica, expansão territorial e burocracia imperial, com o czar como chefe político e defensor da fé oficial.",
     "flagPath": "/countries/flags/imperio-russo.png",
     "historical": true,
@@ -1440,7 +1440,7 @@
   {
     "id": "genebra-calvinista",
     "name": "Genebra Calvinista",
-    "category": "Teocracia protestante reformada",
+    "category": "Teocracia reformada-disciplinar",
     "description": "A cidade de Genebra sob Calvino (1541–1564) organizou-se como teocracia reformada urbana, com o Consistório disciplinando a moral pública e as Ordonnances Ecclésiastiques regulando toda a vida religiosa e civil e exportando o puritanismo.",
     "flagPath": "/countries/flags/genebra.png",
     "historical": true,
@@ -1454,7 +1454,7 @@
   {
     "id": "imperio-portugues",
     "name": "Império Português",
-    "category": "Monarquia católica ultramarina",
+    "category": "Monarquia católica-talassocrática",
     "description": "Primeiro e mais longevo dos impérios coloniais europeus (1415–1822), uniu monarquia absoluta, catolicismo militante e talassocracia global, levando a fé cristã, a língua e a administração portuguesa da América à África, Índia e Ásia.",
     "flagPath": "/countries/flags/imperio-portugues.png",
     "historical": true,
@@ -1468,7 +1468,7 @@
   {
     "id": "austria",
     "name": "Áustria",
-    "category": "Democracia social de mercado",
+    "category": "República social-neutralista",
     "description": "República federal parlamentarista da Europa Central, a Áustria combina neutralidade militar, Estado de bem-estar robusto, economia social de mercado, cultura católica-secular moderada e integração profunda à União Europeia.",
     "flagPath": "/countries/flags/austria.png",
     "historical": false,
@@ -1482,7 +1482,7 @@
   {
     "id": "imperio-alemao",
     "name": "Império Alemão",
-    "category": "Monarquia constitucional militarizada",
+    "category": "Monarquia constitucional-militarista",
     "description": "Estado imperial alemão de 1871 a 1918, uniu federalismo prussiano, monarquia constitucional limitada, sufrágio masculino para o Reichstag, forte autoridade do Kaiser e do chanceler, industrialização acelerada, militarismo e política externa de potência ascendente.",
     "flagPath": "/countries/flags/imperio-alemao.png",
     "historical": true,
@@ -1496,7 +1496,7 @@
   {
     "id": "portugal",
     "name": "Portugal",
-    "category": "Democracia social-liberal atlântica",
+    "category": "República social-atlântica",
     "description": "República semipresidencialista europeia, Portugal combina democracia consolidada, economia de mercado integrada à União Europeia, Estado social moderado, baixa conflitividade institucional, herança católica secularizada e forte abertura atlântica.",
     "flagPath": "/countries/flags/portugal.png",
     "historical": false,
@@ -1510,7 +1510,7 @@
   {
     "id": "alemanha-oriental",
     "name": "Alemanha Oriental",
-    "category": "Socialismo burocrático de partido único",
+    "category": "Socialismo unipartidário-vigilante",
     "description": "A República Democrática Alemã foi um Estado socialista alinhado à União Soviética, com partido único, polícia política extensa, economia planificada, controle social rígido, secularização estatal e integração militar ao bloco oriental.",
     "flagPath": "/countries/flags/alemanha-oriental.png",
     "historical": true,
@@ -1524,7 +1524,7 @@
   {
     "id": "islandia",
     "name": "Islândia",
-    "category": "Social-democracia liberal nórdica",
+    "category": "República social-pacifista",
     "description": "República parlamentar nórdica, a Islândia combina democracia estável, Estado de bem-estar, economia de mercado aberta, sociedade altamente secular e progressista, forte confiança institucional e política externa pacífica sem forças armadas permanentes.",
     "flagPath": "/countries/flags/islandia.png",
     "historical": false,
@@ -1538,7 +1538,7 @@
   {
     "id": "finlandia",
     "name": "Finlândia",
-    "category": "Social-democracia nórdica securitária",
+    "category": "República social-defensiva",
     "description": "República parlamentar nórdica, a Finlândia combina Estado de bem-estar, economia social de mercado, alto desempenho educacional e tecnológico, valores progressistas e uma cultura estratégica marcada pela defesa territorial e pela fronteira com a Rússia.",
     "flagPath": "/countries/flags/finlandia.png",
     "historical": false,
@@ -1552,7 +1552,7 @@
   {
     "id": "imperio-mongol",
     "name": "Império Mongol",
-    "category": "Confederação imperial da estepe militarizada",
+    "category": "Confederação militar-tributária",
     "description": "Fundado por Genghis Khan, o Império Mongol unificou tribos da estepe, expandiu-se por campanhas militares devastadoras e governou povos diversos com vassalagem, tributo e tolerância religiosa pragmática.",
     "flagPath": "/countries/flags/imperio-mongol.png",
     "historical": true,
@@ -1566,7 +1566,7 @@
   {
     "id": "brasil-regime-militar",
     "name": "Brasil do Regime Militar",
-    "category": "Ditadura desenvolvimentista",
+    "category": "Ditadura desenvolvimentista-conservadora",
     "description": "Regime instaurado em 1964, combinou repressão política, censura e órgãos de segurança com desenvolvimentismo estatal, grandes obras, reserva de mercado e moralismo conservador durante a Guerra Fria.",
     "flagPath": "/countries/flags/brasil.gif",
     "historical": true,
@@ -1580,7 +1580,7 @@
   {
     "id": "mexico-de-cardenas",
     "name": "México de Cárdenas",
-    "category": "Nacional-populismo revolucionário",
+    "category": "Populismo nacionalista-agrarista",
     "description": "Governo do auge cardenista, marcou a Revolução Mexicana institucionalizada pela nacionalização do petróleo, reforma agrária em ejidos, incorporação sindical-camponesa, laicismo popular e liderança presidencial forte.",
     "flagPath": "/countries/flags/mexico-de-cardenas.png",
     "historical": true,
@@ -1594,7 +1594,7 @@
   {
     "id": "confederacao-helvetica",
     "name": "Confederação Helvética (Antiga Confederação Suíça)",
-    "category": "Confederação de cantões descentralizada",
+    "category": "Confederação cantonal-consuetudinária",
     "description": "Aliança medieval de cantões autônomos formada a partir do Pacto de 1291, a Antiga Confederação Suíça funcionava sem poder central forte, combinando democracia direta em assembleias locais (Landsgemeinde), milícias camponesas independentes e fraca coordenação militar/diplomática conjunta entre os cantões.",
     "flagPath": "/countries/flags/confederacao-helvetica.png",
     "historical": true,
