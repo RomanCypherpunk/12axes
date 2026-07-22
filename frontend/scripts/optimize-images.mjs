@@ -2,22 +2,35 @@
 // Redimensiona para no máximo MAX_WIDTH (2x o maior uso real no site, que é
 // ~220-240px) e recomprime no MESMO formato original (mantém .png como .png,
 // preservando alpha quando existir, e .jpg como .jpg) para não quebrar
-// nenhuma referência de path em dados/código. Roda uma vez, manualmente.
+// nenhuma referência de path em dados/código.
+//
+// Uso:
+//   node scripts/optimize-images.mjs                     -> varre as duas pastas inteiras
+//   node scripts/optimize-images.mjs <arquivo ou pasta>   -> otimiza só o que foi passado
+//     (uso típico: comprimir uma imagem recém-baixada em /new-personality ou /new-country
+//     antes de commitar, sem precisar reprocessar o catálogo inteiro)
 import sharp from 'sharp';
-import { readdirSync, statSync, renameSync } from 'node:fs';
+import { readdirSync, statSync, renameSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
 
-const TARGETS = ['public/personalities/portraits', 'public/countries'];
+const DEFAULT_TARGETS = ['public/personalities/portraits', 'public/countries'];
+const TARGETS = process.argv.slice(2).length ? process.argv.slice(2) : DEFAULT_TARGETS;
 const MAX_WIDTH = 480;
 const JPEG_QUALITY = 78;
 const PNG_QUALITY = 80;
 
-function walk(dir) {
+function walk(path) {
+  if (!existsSync(path)) {
+    console.warn(`[optimize-images] caminho não encontrado, ignorando: ${path}`);
+    return [];
+  }
+  const st = statSync(path);
+  if (st.isFile()) return /\.(jpe?g|png)$/i.test(path) ? [path] : [];
   const out = [];
-  for (const entry of readdirSync(dir)) {
-    const full = join(dir, entry);
-    const st = statSync(full);
-    if (st.isDirectory()) out.push(...walk(full));
+  for (const entry of readdirSync(path)) {
+    const full = join(path, entry);
+    const s = statSync(full);
+    if (s.isDirectory()) out.push(...walk(full));
     else if (/\.(jpe?g|png)$/i.test(entry)) out.push(full);
   }
   return out;

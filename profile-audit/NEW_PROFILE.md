@@ -184,6 +184,7 @@ Regras de tradução (confirmadas comparando os pares PT/EN já existentes nesse
    existir) para bater exatamente com o arquivo salvo.
 4. Para países históricos (`historical: true`), procure a bandeira do período específico, não a
    atual (ex.: bandeira do Terceiro Reich, não a bandeira alemã atual).
+5. **Comprima a imagem imediatamente após o download** — ver "Compressão obrigatória" abaixo.
 
 ### Personality (retrato)
 
@@ -198,10 +199,33 @@ Regras de tradução (confirmadas comparando os pares PT/EN já existentes nesse
 3. **Restrição validada por teste** (`IdeologyPersonalityMappingTest.everyPersonalityImagePathPointsToAPublicAsset`):
    o arquivo referenciado em `imagePath` precisa existir de fato em `frontend/public/...` — se o
    download falhar ou o caminho não bater exatamente, o build de testes quebra.
+4. **Comprima a imagem imediatamente após o download** — ver "Compressão obrigatória" abaixo.
 
 Se não for possível baixar uma imagem real (ex.: sem acesso à internet neste ambiente), documente
 isso claramente para o usuário em vez de inventar/simular um download — não prossiga fingindo que
 a imagem foi salva.
+
+### Compressão obrigatória (sempre, para qualquer imagem baixada da internet)
+
+Imagens da Wikimedia Commons frequentemente vêm em resolução/peso muito acima do necessário — já
+tivemos um retrato de **52 MB** para uma imagem exibida a ~220px no site, e no total isso consumiu
+mais de 100 MB no catálogo, disparando os limites de Fast Data Transfer/Edge Requests do plano
+gratuito da Vercel. Nenhum download de imagem (bandeira ou retrato) fica sem esse passo:
+
+```powershell
+cd frontend
+npm run optimize:images -- public/countries/flags/{id}.{ext}
+# ou, para retrato:
+npm run optimize:images -- public/personalities/portraits/{id}.jpg
+```
+
+O script (`frontend/scripts/optimize-images.mjs`) redimensiona para no máximo 480px de largura
+(2x o tamanho real de exibição no site) e recomprime no **mesmo formato** do arquivo original
+(preserva transparência em PNG quando existir; nunca renomeia o arquivo), então não quebra nenhuma
+referência em `imagePath`/`flagPath`. Rode-o **antes** do Passo 4 (conferência de consistência),
+como parte do mesmo passo de download — não deixe para depois nem trate como opcional. Depois de
+rodar, confira visualmente a imagem otimizada (abra o arquivo) para garantir que a compressão não
+degradou a legibilidade antes de prosseguir.
 
 ## Passo 4 — Conferir consistência dos metadados
 
