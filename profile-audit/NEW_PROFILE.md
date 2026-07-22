@@ -94,7 +94,13 @@ Adicione um novo objeto ao **final** do array JSON correspondente:
 
 Escreva a `description` em português, no mesmo estilo enxuto e factual dos outros perfis do
 catálogo (1 a 3 frases, sem opinião, citando fatos/características concretas verificáveis). Leia
-2-3 exemplos vizinhos no mesmo arquivo para calibrar tom e tamanho antes de escrever o seu.
+2-3 exemplos vizinhos no mesmo arquivo para calibrar tom antes de escrever o seu.
+
+**Tamanho padrão**: mire cerca de **30 palavras** (a média/mediana observada nos três catálogos),
+tolerando a faixa **~20-45 palavras**. Depois de escrever, confira a contagem (`len(description.split())`
+em um script rápido, ou conte manualmente) e corte o que for redundante ou secundário até caber
+nessa faixa — cite só os 2-3 fatos mais definidores do perfil, não uma lista exaustiva de posições.
+A mesma regra vale para a tradução em inglês do Passo 2.
 
 Exemplo de objeto novo em `ideologies.json`:
 
