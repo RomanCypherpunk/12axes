@@ -113,6 +113,17 @@ function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPa
   return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
 }
 
+// Embaralha os índices de EXAMPLE_RESULTS (Fisher-Yates) para o carrossel da home
+// percorrer todos os exemplos, em ordem aleatória, antes de repetir qualquer um.
+function shuffledExampleOrder(length: number): number[] {
+  const order = Array.from({ length }, (_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return order;
+}
+
 const TONE_RED_AXES = new Set([
   'imigracao',
   'intervencao',
@@ -134,7 +145,10 @@ export default function App() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
-  const [exampleIndex, setExampleIndex] = useState(() => Math.floor(Math.random() * EXAMPLE_RESULTS.length));
+  const [exampleCarousel, setExampleCarousel] = useState(() => ({
+    order: shuffledExampleOrder(EXAMPLE_RESULTS.length),
+    position: 0
+  }));
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
@@ -201,21 +215,22 @@ export default function App() {
   }, [screen]);
 
   // Alterna o exemplo de resultado (hero + seção "Exemplo de resultado") a
-  // cada 4s enquanto a home está visível, dando variedade sem interação.
+  // cada 4s enquanto a home está visível, percorrendo uma ordem embaralhada
+  // até mostrar todos os exemplos antes de reembaralhar e repetir.
   useEffect(() => {
     if (screen !== 'home') {
       return;
     }
     const intervalId = window.setInterval(() => {
-      setExampleIndex((index) => {
+      setExampleCarousel(({ order, position }) => {
         if (EXAMPLE_RESULTS.length <= 1) {
-          return index;
+          return { order, position };
         }
-        let next = Math.floor(Math.random() * EXAMPLE_RESULTS.length);
-        while (next === index) {
-          next = Math.floor(Math.random() * EXAMPLE_RESULTS.length);
+        const next = position + 1;
+        if (next >= order.length) {
+          return { order: shuffledExampleOrder(EXAMPLE_RESULTS.length), position: 0 };
         }
-        return next;
+        return { order, position: next };
       });
     }, 4000);
     return () => window.clearInterval(intervalId);
@@ -224,7 +239,8 @@ export default function App() {
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
-  const currentExample = EXAMPLE_RESULTS[exampleIndex % EXAMPLE_RESULTS.length];
+  const currentExample =
+    EXAMPLE_RESULTS[exampleCarousel.order[exampleCarousel.position % exampleCarousel.order.length] ?? 0];
 
   const resultByAxis = useMemo(() => {
     if (!result) {
@@ -596,7 +612,7 @@ export default function App() {
             </div>
 
             <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
-              <div className="hero-teaser-fade" key={exampleIndex}>
+              <div className="hero-teaser-fade" key={exampleCarousel.position}>
                 <div className="hero-teaser-card">
                   <div className="hero-teaser-card-head">
                     <div className="hero-teaser-tag">
@@ -709,7 +725,7 @@ export default function App() {
                 <p>{t.exampleCaption}</p>
               </div>
               <Suspense fallback={null}>
-                <div className="example-result-fade" key={exampleIndex}>
+                <div className="example-result-fade" key={exampleCarousel.position}>
                   <IdeologyMatchCard match={currentExample.ideology} featured />
                   <div className="axis-rows example-axis-rows">
                     {currentExample.axes.map((axisResult) => {
