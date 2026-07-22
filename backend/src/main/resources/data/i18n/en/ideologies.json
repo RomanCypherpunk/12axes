@@ -854,7 +854,7 @@
   {
     "id": "autoritarismo-modernizador",
     "name": "Modernizing Authoritarianism",
-    "category": "Center",
+    "category": "Left",
     "description": "Model in which a strong regime imposes economic and social modernization from above, promoting industrialization, education, and rapid reforms while restricting political freedoms in the name of national progress."
   },
   {
@@ -1048,5 +1048,11 @@
     "name": "Imperialism",
     "category": "Authoritarian Right",
     "description": "Doctrine that advocates the territorial, military, and economic expansion of a nation over other peoples and territories, subordinating colonies and spheres of influence to the interests of the metropole through force and political domination."
+  },
+  {
+    "id": "liberalismo-progressista",
+    "name": "Progressive Liberalism",
+    "category": "Center-Left",
+    "description": "Current that unites market capitalism and globalized trade with a robust welfare state, advocating progressive morality, secularism, and democratic institutions, in the Nordic social model."
   }
 ]

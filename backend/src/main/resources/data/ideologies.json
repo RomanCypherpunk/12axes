@@ -1280,7 +1280,7 @@
   {
     "id": "autoritarismo-modernizador",
     "name": "Autoritarismo Modernizador",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Modelo em que um regime forte impõe de cima a modernização econômica e social, promovendo industrialização, educação e reformas rápidas enquanto restringe liberdades políticas em nome do progresso nacional.",
     "vector": null,
     "countryId": "coreia-do-sul",
@@ -1571,5 +1571,14 @@
     "vector": null,
     "countryId": "reino-unido-vitoriano-imperio-britanico",
     "personalityId": "napoleao-bonaparte"
+  },
+  {
+    "id": "liberalismo-progressista",
+    "name": "Liberalismo Progressista",
+    "category": "Centro-Esquerda",
+    "description": "Corrente que une capitalismo de mercado e comércio globalizado a um robusto Estado de bem-estar, defendendo moral progressista, secularismo e instituições democráticas, no modelo social nórdico.",
+    "vector": null,
+    "countryId": "suecia",
+    "personalityId": "justin-trudeau"
   }
 ]
