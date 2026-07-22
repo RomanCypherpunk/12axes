@@ -8,6 +8,7 @@ import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi'
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { resolveCountryFlagSrc } from './utils/countryFlags';
 import { resolvePersonalityImageSrc } from './utils/personalityImage';
+import { SupportSection } from './components/SupportSection';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
 type ExtendChoice = 'yes' | 'no';
@@ -534,6 +535,7 @@ export default function App() {
             <a href="#guia-eixos">{t.navAxes}</a>
             <a href="#espectro-politico">{t.navSpectrum}</a>
             <a href="#faq">{t.navFaq}</a>
+            <a className="nav-support-link" href="#apoie">{t.navSupport}</a>
             <button
               className="lang-toggle"
               type="button"
@@ -832,6 +834,8 @@ export default function App() {
                 ))}
               </div>
             </section>
+
+            <SupportSection />
           </div>
           )}
         </section>

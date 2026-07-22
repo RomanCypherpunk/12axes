@@ -69,6 +69,7 @@ interface Strings {
   navAxes: string;
   navSpectrum: string;
   navFaq: string;
+  navSupport: string;
   langToggleLabel: string;
   langToggleAria: string;
   redoQuiz: string;
@@ -171,6 +172,20 @@ interface Strings {
   shareTopMatch: string;
   shareCountry: string;
   sharePersonality: string;
+  supportEyebrow: string;
+  supportTitle: string;
+  supportTitleEm: string;
+  supportLead: string;
+  supportPrivacyNote: string;
+  supportCopy: string;
+  supportCopied: string;
+  supportCopyAria: (label: string) => string;
+  supportCoins: {
+    id: string;
+    name: string;
+    network: string;
+    address: string;
+  }[];
 }
 
 const pt: Strings = {
@@ -187,6 +202,7 @@ const pt: Strings = {
   navAxes: '12 Eixos',
   navSpectrum: 'Espectro',
   navFaq: 'FAQ',
+  navSupport: 'Apoie',
   langToggleLabel: 'EN',
   langToggleAria: 'Switch to English',
   redoQuiz: 'Refazer quiz',
@@ -452,7 +468,43 @@ const pt: Strings = {
   shareTitle: 'Seu perfil ideológico | 12axes.vercel.app',
   shareTopMatch: 'Top match',
   shareCountry: 'País mais compatível',
-  sharePersonality: 'Personalidade'
+  sharePersonality: 'Personalidade',
+  supportEyebrow: 'Apoie o projeto',
+  supportTitle: 'Apoie ',
+  supportTitleEm: 'anonimamente',
+  supportLead:
+    'O 12 Axes é independente e gratuito. Se o teste te ajudou a entender melhor sua ideologia política, considere fazer uma doação 100% anônima em criptomoedas para manter o projeto no ar.',
+  supportPrivacyNote: 'Não coletamos dados. Sua doação não é rastreada nem associada a você.',
+  supportCopy: 'Copiar endereço',
+  supportCopied: 'Copiado!',
+  supportCopyAria: (label) => `Copiar endereço de ${label}`,
+  supportCoins: [
+    {
+      id: 'btc',
+      name: 'Bitcoin',
+      network: 'On-chain',
+      address: 'bc1qsuy8r8gvl39apjykqzlgh7hku79ecarezhz2zj'
+    },
+    {
+      id: 'lightning',
+      name: 'Bitcoin',
+      network: 'Lightning',
+      address: 'easternpaul90@walletofsatoshi.com'
+    },
+    {
+      id: 'eth',
+      name: 'Ethereum',
+      network: 'ERC-20',
+      address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
+    },
+    {
+      id: 'xmr',
+      name: 'Monero',
+      network: 'XMR',
+      address:
+        '85Du1EuRPkybMVXTVptC6z31dsGPpTthsiMKM3yjY7YE24BUCkyNMd9Q82kwe5CvE7BegtDTNxaG8VwYdVvTgbjDU6DpuN1'
+    }
+  ]
 };
 
 const en: Strings = {
@@ -469,6 +521,7 @@ const en: Strings = {
   navAxes: '12 Axes',
   navSpectrum: 'Spectrum',
   navFaq: 'FAQ',
+  navSupport: 'Support',
   langToggleLabel: 'PT',
   langToggleAria: 'Mudar para português',
   redoQuiz: 'Retake quiz',
@@ -747,7 +800,43 @@ const en: Strings = {
   shareTitle: 'My ideological profile | 12axes.vercel.app',
   shareTopMatch: 'Top match',
   shareCountry: 'Most compatible country',
-  sharePersonality: 'Personality'
+  sharePersonality: 'Personality',
+  supportEyebrow: 'Support the project',
+  supportTitle: 'Support ',
+  supportTitleEm: 'anonymously',
+  supportLead:
+    '12 Axes is independent and free. If the quiz helped you better understand your political ideology, consider making a 100% anonymous crypto donation to help keep the project running.',
+  supportPrivacyNote: "We don't collect data. Your donation isn't tracked or linked to you.",
+  supportCopy: 'Copy address',
+  supportCopied: 'Copied!',
+  supportCopyAria: (label) => `Copy ${label} address`,
+  supportCoins: [
+    {
+      id: 'btc',
+      name: 'Bitcoin',
+      network: 'On-chain',
+      address: 'bc1qsuy8r8gvl39apjykqzlgh7hku79ecarezhz2zj'
+    },
+    {
+      id: 'lightning',
+      name: 'Bitcoin',
+      network: 'Lightning',
+      address: 'easternpaul90@walletofsatoshi.com'
+    },
+    {
+      id: 'eth',
+      name: 'Ethereum',
+      network: 'ERC-20',
+      address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
+    },
+    {
+      id: 'xmr',
+      name: 'Monero',
+      network: 'XMR',
+      address:
+        '85Du1EuRPkybMVXTVptC6z31dsGPpTthsiMKM3yjY7YE24BUCkyNMd9Q82kwe5CvE7BegtDTNxaG8VwYdVvTgbjDU6DpuN1'
+    }
+  ]
 };
 
 export const t: Strings = LANG === 'en' ? en : pt;

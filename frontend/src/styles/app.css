@@ -5579,6 +5579,314 @@
   }
 }
 
+/* ════════════════════════════════════════════════════════
+   Header — support nav link (same treatment as other nav items)
+   ════════════════════════════════════════════════════════ */
+.nav-support-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.nav-support-link:hover {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* ════════════════════════════════════════════════════════
+   Footer — anonymous crypto support section
+   ════════════════════════════════════════════════════════ */
+.support-section {
+  display: grid;
+  gap: 22px;
+  padding: clamp(24px, 3.4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(60% 90% at 100% 0%, rgba(34, 197, 94, 0.08), transparent 60%),
+    var(--paper);
+  box-shadow: var(--shadow-md);
+}
+
+.support-heading {
+  display: grid;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.support-heading .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.support-heading h2 {
+  font-size: clamp(1.5rem, 1.4vw + 1rem, 2.1rem);
+  letter-spacing: -0.025em;
+}
+
+.support-heading h2 em {
+  font-style: normal;
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.support-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.support-privacy-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.support-privacy-note svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.support-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.support-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper-soft);
+  box-shadow: var(--shadow-xs);
+  transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+.support-row:has(.support-row-address:hover) {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  box-shadow: var(--shadow-sm);
+}
+
+.support-row-icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.support-row-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.support-row-name {
+  display: grid;
+  gap: 1px;
+  flex: 0 0 auto;
+  width: 108px;
+  min-width: 0;
+}
+
+.support-row-name strong {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  color: var(--text-strong);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.support-row-name span {
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.support-row-address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  text-align: left;
+  transition: border-color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.support-row-address:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.support-row-address-text {
+  overflow: hidden;
+  min-width: 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.support-row-copy-icon {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--text-soft);
+}
+
+.support-row-copy-icon[data-copied="true"] {
+  color: var(--accent-deep);
+}
+
+.support-row-copy-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.support-row-feedback {
+  position: absolute;
+  top: -9px;
+  right: 14px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-deep);
+  color: #ffffff;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transform: translateY(2px);
+  pointer-events: none;
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.support-row-feedback[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .support-section {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .support-list {
+    gap: 8px;
+  }
+
+  .support-row {
+    gap: 9px;
+    padding: 9px 10px;
+  }
+
+  .support-row-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .support-row-name {
+    width: 66px;
+  }
+
+  .support-row-name strong {
+    font-size: 0.76rem;
+  }
+
+  .support-row-name span {
+    font-size: 0.6rem;
+  }
+
+  .support-row-address {
+    padding: 6px 8px;
+  }
+
+  .support-row-address-text {
+    font-size: 0.66rem;
+  }
+
+  .support-row-feedback {
+    top: -8px;
+    right: 10px;
+    font-size: 0.58rem;
+  }
+
+  .support-privacy-note {
+    font-size: 0.76rem;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .support-row {
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .support-row-name {
+    width: 56px;
+  }
+
+  .support-row-address-text {
+    font-size: 0.62rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-teaser-fade,
   .example-result-fade {
