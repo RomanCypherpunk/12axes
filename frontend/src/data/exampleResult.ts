@@ -13,7 +13,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'marxismo-leninismo',
       name: 'Marxismo-Leninismo',
-      category: 'Esquerda Autoritária',
+      category: 'Esquerda Radical',
       description:
         'Vertente revolucionária do marxismo que defende a tomada do poder por um partido de vanguarda e a ditadura do proletariado, com economia planificada e coletivização, servindo de base aos regimes comunistas do século XX.',
       longDescription:
@@ -273,7 +273,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'capitalismo',
       name: 'Capitalismo',
-      category: 'Centro-Direita',
+      category: 'Direita',
       description:
         'Sistema econômico baseado na propriedade privada, no livre mercado e na busca do lucro, em que a produção e os preços são regulados pela concorrência e pela oferta e demanda, com iniciativa individual como motor.',
       longDescription:
@@ -403,7 +403,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'fascismo',
       name: 'Fascismo',
-      category: 'Direita Autoritária',
+      category: 'Extrema Direita',
       description:
         'Ideologia totalitária de ultranacionalismo que exalta o Estado forte, o culto ao líder, o militarismo e a mobilização de massas, suprimindo oposição e subordinando a economia corporativa aos objetivos nacionais.',
       longDescription:
@@ -468,7 +468,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'libertarianismo-hoppeano',
       name: 'Libertarianismo Hoppeano',
-      category: 'Direita Libertária',
+      category: 'Libertário',
       description:
         'Corrente ligada a Hans-Hermann Hoppe que une anarcocapitalismo, propriedade privada absoluta e crítica à democracia, defendendo ordens sociais baseadas em contrato, exclusão voluntária e autoridade privada.',
       longDescription:
@@ -533,7 +533,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'neoliberalismo',
       name: 'Neoliberalismo',
-      category: 'Centro-Direita',
+      category: 'Direita',
       description:
         'Corrente que defende livre mercado, desregulamentação, privatizações e disciplina fiscal, reduzindo o papel econômico do Estado e confiando na concorrência e na estabilidade monetária como motores da prosperidade.',
       longDescription:
@@ -728,7 +728,7 @@ const pt: ExampleResult[] = [
     ideology: {
       ideologyId: 'neorreacionarismo',
       name: 'Neorreacionarismo',
-      category: 'Direita Autoritária',
+      category: 'Extrema Direita',
       description:
         'Corrente que rejeita a democracia e o igualitarismo modernos e propõe substituí-los por governos hierárquicos e eficientes, geridos como empresas por um soberano, combinando tradicionalismo e tecnologia.',
       longDescription:
@@ -796,7 +796,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'marxismo-leninismo',
       name: 'Marxism–Leninism',
-      category: 'Authoritarian Left',
+      category: 'Radical Left',
       description:
         'Revolutionary branch of Marxism that advocates the seizure of power by a vanguard party and the dictatorship of the proletariat, with a planned economy and collectivization, serving as the foundation of the communist regimes of the 20th century.',
       longDescription:
@@ -1056,7 +1056,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'capitalismo',
       name: 'Capitalism',
-      category: 'Center-Right',
+      category: 'Right',
       description:
         'Economic system based on private property, free markets, and the pursuit of profit, in which production and prices are regulated by competition and supply and demand, with individual initiative as its engine.',
       longDescription:
@@ -1186,7 +1186,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'fascismo',
       name: 'Fascism',
-      category: 'Authoritarian Right',
+      category: 'Far-Right',
       description:
         'Totalitarian ideology of ultranationalism that exalts the strong state, the cult of the leader, militarism, and mass mobilization, suppressing opposition and subordinating the corporatist economy to national goals.',
       longDescription:
@@ -1251,7 +1251,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'libertarianismo-hoppeano',
       name: 'Hoppean Libertarianism',
-      category: 'Libertarian Right',
+      category: 'Libertarian',
       description:
         'A current linked to Hans-Hermann Hoppe that unites anarcho-capitalism, absolute private property, and criticism of democracy, defending social orders based on contract, voluntary exclusion, and private authority.',
       longDescription:
@@ -1316,7 +1316,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'neoliberalismo',
       name: 'Neoliberalism',
-      category: 'Center-Right',
+      category: 'Right',
       description:
         'A current that advocates free markets, deregulation, privatization, and fiscal discipline, reducing the economic role of the state and relying on competition and monetary stability as engines of prosperity.',
       longDescription:
@@ -1511,7 +1511,7 @@ const en: ExampleResult[] = [
     ideology: {
       ideologyId: 'neorreacionarismo',
       name: 'Neoreaction',
-      category: 'Authoritarian Right',
+      category: 'Far-Right',
       description:
         'A current that rejects modern democracy and egalitarianism and proposes replacing them with hierarchical, efficient governments, run like companies by a sovereign, combining traditionalism and technology.',
       longDescription:

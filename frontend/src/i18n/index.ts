@@ -270,18 +270,18 @@ const pt: Strings = {
   homeAxes: {},
   spectrumItems: [
     {
-      id: 'left-authoritarian',
-      label: 'Esquerda autoritária',
-      tone: 'red',
+      id: 'left-radical',
+      label: 'Esquerda radical',
+      tone: 'darkred',
       description:
-        'Combina igualdade econômica, socialismo ou forte política econômica estatal com maior centralização, disciplina institucional e poder do Estado.'
+        'Comunismo revolucionário ou totalitário de partido único, com economia planificada, forte centralização e concentração do poder do Estado.'
     },
     {
-      id: 'left-libertarian',
-      label: 'Esquerda libertária',
+      id: 'left',
+      label: 'Esquerda',
       tone: 'green',
       description:
-        'Valoriza progressismo, direitos civis, democracia direta, crítica ao capitalismo concentrado e mais liberdade social, cultural e comunitária.'
+        'Defende social-democracia, progressismo e maior intervenção do Estado na economia dentro da democracia liberal.'
     },
     {
       id: 'center',
@@ -291,18 +291,39 @@ const pt: Strings = {
         'Busca equilíbrio entre esquerda e direita, mercado e Estado, reformas e estabilidade, com posicionamento político moderado ou pragmático.'
     },
     {
-      id: 'right-libertarian',
-      label: 'Direita libertária',
-      tone: 'yellow',
-      description:
-        'Defende capitalismo, livre mercado, propriedade privada, menor intervenção estatal e liberdades individuais acima de soluções centralizadas.'
-    },
-    {
-      id: 'right-authoritarian',
-      label: 'Direita autoritária',
+      id: 'right',
+      label: 'Direita',
       tone: 'blue',
       description:
-        'Combina valores de ordem, conservadorismo, autoridade, soberania nacional e hierarquia com economia mais pró-mercado ou nacionalista.'
+        'Defende conservadorismo, liberalismo econômico e nacionalismo moderado dentro da democracia liberal.'
+    },
+    {
+      id: 'right-extreme',
+      label: 'Extrema direita',
+      tone: 'navy',
+      description:
+        'Fascismo, nacionalismo racial e teocracias opressivas, com rejeição explícita da democracia e concentração autoritária do poder.'
+    },
+    {
+      id: 'third-position',
+      label: 'Terceira posição',
+      tone: 'purple',
+      description:
+        'Síntese nacionalista e corporativista que rejeita tanto o capitalismo liberal quanto o marxismo, fora do eixo tradicional esquerda-direita.'
+    },
+    {
+      id: 'libertarian',
+      label: 'Libertário',
+      tone: 'amber',
+      description:
+        'Defende Estado mínimo, livre mercado, propriedade privada e liberdades individuais, sem propor a abolição total do Estado.'
+    },
+    {
+      id: 'anarchist',
+      label: 'Anarquista',
+      tone: 'charcoal',
+      description:
+        'Rejeita o Estado e toda autoridade coercitiva, defendendo organização social livre, voluntária e autogerida, de esquerda ou de direita.'
     }
   ],
   faqItems: [
@@ -398,7 +419,7 @@ const pt: Strings = {
   spectrumEyebrow: 'Espectro político',
   spectrumTitle: 'Descubra seu espectro político',
   spectrumLead:
-    'O resultado ajuda a visualizar seu posicionamento político entre esquerda, direita e centro, mas também separa tendências libertárias e autoritárias que aparecem em ideologias como liberalismo, libertarianismo, socialismo, conservadorismo e progressismo.',
+    'O resultado ajuda a visualizar seu posicionamento político entre esquerda, direita e centro, além de identificar formas mais radicais, autoritárias ou libertárias que não cabem nesse eixo, como extrema direita, esquerda radical, terceira posição, libertarianismo e anarquismo.',
   faqTitle: 'FAQ - Perguntas frequentes',
   versionsEyebrow: 'Versões',
   versionsTitle: 'Escolha a profundidade',
@@ -602,18 +623,18 @@ const en: Strings = {
   },
   spectrumItems: [
     {
-      id: 'left-authoritarian',
-      label: 'Authoritarian left',
-      tone: 'red',
+      id: 'left-radical',
+      label: 'Radical left',
+      tone: 'darkred',
       description:
-        'Combines economic equality, socialism, or strong state economic policy with greater centralization, institutional discipline, and state power.'
+        'Revolutionary or totalitarian single-party communism, with a planned economy, strong centralization, and concentrated state power.'
     },
     {
-      id: 'left-libertarian',
-      label: 'Libertarian left',
+      id: 'left',
+      label: 'Left',
       tone: 'green',
       description:
-        'Values progressivism, civil rights, direct democracy, criticism of concentrated capitalism, and more social, cultural, and community freedom.'
+        'Advocates social democracy, progressivism, and greater state intervention in the economy within liberal democracy.'
     },
     {
       id: 'center',
@@ -623,18 +644,39 @@ const en: Strings = {
         'Seeks balance between left and right, market and state, reform and stability, with a moderate or pragmatic political stance.'
     },
     {
-      id: 'right-libertarian',
-      label: 'Libertarian right',
-      tone: 'yellow',
-      description:
-        'Defends capitalism, free markets, private property, less state intervention, and individual liberties above centralized solutions.'
-    },
-    {
-      id: 'right-authoritarian',
-      label: 'Authoritarian right',
+      id: 'right',
+      label: 'Right',
       tone: 'blue',
       description:
-        'Combines values of order, conservatism, authority, national sovereignty, and hierarchy with a more pro-market or nationalist economy.'
+        'Advocates conservatism, economic liberalism, and moderate nationalism within liberal democracy.'
+    },
+    {
+      id: 'right-extreme',
+      label: 'Far-right',
+      tone: 'navy',
+      description:
+        'Fascism, racial nationalism, and oppressive theocracies, with explicit rejection of democracy and authoritarian concentration of power.'
+    },
+    {
+      id: 'third-position',
+      label: 'Third position',
+      tone: 'purple',
+      description:
+        'A nationalist, corporatist synthesis that rejects both liberal capitalism and Marxism, outside the traditional left-right axis.'
+    },
+    {
+      id: 'libertarian',
+      label: 'Libertarian',
+      tone: 'amber',
+      description:
+        'Advocates a minimal state, free markets, private property, and individual liberties, without proposing the total abolition of the state.'
+    },
+    {
+      id: 'anarchist',
+      label: 'Anarchist',
+      tone: 'charcoal',
+      description:
+        'Rejects the state and all coercive authority, advocating free, voluntary, and self-managed social organization, from the left or the right.'
     }
   ],
   faqItems: [
@@ -730,7 +772,7 @@ const en: Strings = {
   spectrumEyebrow: 'Political spectrum',
   spectrumTitle: 'Discover your political spectrum',
   spectrumLead:
-    'The result helps you visualize your political position between left, right, and center, but it also separates libertarian and authoritarian tendencies that appear in ideologies such as liberalism, libertarianism, socialism, conservatism, and progressivism.',
+    'The result helps you visualize your political position between left, right, and center, and also identifies more radical, authoritarian, or libertarian forms that fall outside that axis, such as far-right, radical left, third position, libertarianism, and anarchism.',
   faqTitle: 'FAQ - Frequently asked questions',
   versionsEyebrow: 'Versions',
   versionsTitle: 'Choose the depth',

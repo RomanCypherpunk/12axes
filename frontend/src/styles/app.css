@@ -3852,8 +3852,14 @@
 
 .spectrum-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .spectrum-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .spectrum-card {
@@ -3890,6 +3896,26 @@
 
 .spectrum-card.tone-blue {
   --spectrum: #2563EB;
+}
+
+.spectrum-card.tone-darkred {
+  --spectrum: #7A1F1F;
+}
+
+.spectrum-card.tone-navy {
+  --spectrum: #0F1E4A;
+}
+
+.spectrum-card.tone-purple {
+  --spectrum: #7C3AED;
+}
+
+.spectrum-card.tone-amber {
+  --spectrum: #B45309;
+}
+
+.spectrum-card.tone-charcoal {
+  --spectrum: #1F2937;
 }
 
 .spectrum-dot {
