@@ -34,6 +34,44 @@ Antes de escrever qualquer arquivo, você precisa saber:
    ao usuário se a ambiguidade for genuinamente impossível de resolver sozinho (ex.: dois países
    homônimos, ou uma personalidade com nome muito comum).
 
+### Pesquisa aprofundada obrigatória para personalidades vivas/contemporâneas
+
+Duas sessões de IA independentes auditando a mesma pessoa viva **já produziram vetores
+materialmente diferentes** (um caso real: `representacao` saiu 51 numa sessão e 76 noutra para o
+mesmo perfil) porque cada uma parou a pesquisa em um nível de profundidade diferente. Rótulos
+ideológicos genéricos ("liberal", "linha-dura", "nacionalista") não são suficientes para calibrar
+240 respostas — é fácil "confirmar" um rótulo com 2 buscas rasas e deixar de fora exatamente os
+fatos que mais moveriam o vetor.
+
+Se o perfil é uma pessoa viva e politicamente ativa (sobretudo candidato ou titular de cargo em
+mandato/campanha corrente), **antes de escrever a `description`**:
+
+1. Não se contente com 1-2 buscas genéricas de biografia. Faça uma busca **dedicada por eixo**
+   (ou pelo menos pelos eixos onde a pessoa tem posição pública conhecida), buscando fatos
+   específicos e citáveis, não rótulos vagos — ex.: não "é liberal na economia", mas "defende
+   processamento nacional de terras-raras e tarifas sobre importados chineses, mas se opõe a
+   privatizar a Petrobras".
+2. Cubra pelo menos: doutrina econômica concreta (privatizações defendidas/recusadas por nome,
+   tarifas, protecionismo setorial), segurança pública (métodos citados nominalmente — ex.: cita
+   outro líder/modelo como referência), estrutura federativa/administrativa (propostas concretas
+   de centralização ou descentralização), política externa, costumes/moral, religião, e qualquer
+   controvérsia recente com citação direta.
+3. Cruze pelo menos 3 fontes independentes e note a data de cada fato — priorize o que é mais
+   recente em relação à data atual da conversa.
+4. **Antes de prosseguir para o Passo 1**, releia os 12 eixos do resumo rápido de
+   `profile-audit/README.md` e verifique: para cada eixo, você tem pelo menos um fato específico e
+   sourced, ou só uma inferência genérica a partir do rótulo ideológico? Se algum eixo só tem
+   inferência genérica, faça mais uma busca dedicada a ele antes de escrever a `description`.
+5. Inclua na `description` (ou no contexto adicional do prompt de auditoria do Passo 5) os fatos
+   concretos mais reveladores — inclusive os que geram tensão ou contradição com o rótulo
+   ideológico principal da pessoa. É exatamente essa tensão que o vetor de 12 eixos deveria
+   capturar; suavizá-la no texto produz um vetor raso.
+
+Essa mesma checklist vale ao **reauditar** um perfil de pessoa viva já existente
+(`profile-audit/README.md`) — antes de gerar o prompt do lote, confirme que a `description` atual
+ainda reflete a posição mais recente da pessoa; se não refletir, atualize `personalities.json` /
+`ideologies.json` (Passo 1 deste arquivo) antes de prosseguir.
+
 | Catálogo | Campos obrigatórios | Campos condicionais |
 |---|---|---|
 | `ideology` | `id`, `name`, `category`, `description`, `countryId`, `personalityId` | — |

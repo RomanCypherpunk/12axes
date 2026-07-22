@@ -32,6 +32,13 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — ele é autossufic
 1. Leia `STATE.json.personality.pending`. Se vazio, informe ao usuário que não há mais nada pendente neste catálogo e pare.
 2. Pegue os 15 primeiros IDs de `pending` (ou o restante, se houver menos de 15).
 3. Siga **exatamente** os passos 2 a 8 de `profile-audit/README.md`, usando os parâmetros da tabela acima:
+   - **Antes de gerar qualquer prompt**: para cada ID do lote que seja pessoa viva e politicamente
+     ativa (candidato/titular de cargo em mandato ou campanha corrente), rode a checklist de
+     "Pesquisa aprofundada obrigatória para personalidades vivas/contemporâneas" em
+     `profile-audit/NEW_PROFILE.md` (Passo 0) para confirmar se a `description` atual em
+     `personalities.json` ainda reflete a posição mais recente da pessoa. Se estiver desatualizada,
+     atualize `personalities.json`/`i18n/en/personalities.json` **antes** de gerar o prompt — não
+     reaudite com uma description que você já sabe estar desatualizada.
    - Gerar `prompts/personality/<id>.txt` para cada perfil do lote.
    - Disparar os 15 subagentes **simultaneamente**, mesma mensagem, modelo de qualidade (nunca Haiku/rápido).
    - Validar as 15 saídas em `subagent-out/personality/<id>.json`.

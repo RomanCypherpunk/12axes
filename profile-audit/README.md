@@ -75,6 +75,15 @@ Escolha um catálogo (`personality`, `ideology` ou `country`) e repita este cicl
 
 Pegue os 15 primeiros IDs de `STATE.json.<catalog>.pending`.
 
+**Antes de gerar o prompt de qualquer perfil de pessoa viva e politicamente ativa** (sobretudo
+candidato ou titular de cargo em mandato/campanha corrente), confirme que a `description` em
+`personalities.json`/`ideologies.json` ainda reflete a posição mais recente da pessoa — posições de
+gente viva mudam, e duas sessões de IA independentes já produziram vetores materialmente diferentes
+para o mesmo perfil por pesquisarem em profundidades diferentes. Siga a checklist de "Pesquisa
+aprofundada obrigatória para personalidades vivas/contemporâneas" em `profile-audit/NEW_PROFILE.md`
+(Passo 0) antes de prosseguir; se a description estiver desatualizada, atualize-a primeiro (mesmo
+arquivo, Passo 1) e só então gere o prompt de auditoria abaixo.
+
 ### 2. Gerar o prompt de cada perfil do lote (se ainda não existir em `prompts/<catalog>/`)
 
 Para cada ID do lote:
