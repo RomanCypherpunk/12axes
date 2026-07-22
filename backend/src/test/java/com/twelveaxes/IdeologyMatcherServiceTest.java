@@ -121,7 +121,7 @@ class IdeologyMatcherServiceTest {
         var matches = matcherService.findMatches(axes);
 
         assertThat(matches).hasSize(4);
-        assertThat(matches.get(0).category()).isEqualTo("Direita Autoritária");
+        assertThat(matches.get(0).category()).isEqualTo("Extrema Direita");
         assertThat(matches.get(0).ideologyId()).isIn(
                 "alt-lite",
                 "aceleracionismo-de-direita",
@@ -188,7 +188,7 @@ class IdeologyMatcherServiceTest {
 
         assertThat(matches).hasSize(4);
         assertThat(matches.get(0).category())
-                .isIn("Direita Autoritária", "Esquerda Autoritária");
+                .isIn("Extrema Direita", "Esquerda Radical");
         // Every top match should have meaningful compatibility (>= 60%).
         assertThat(matches).allSatisfy(m -> assertThat(m.compatibility()).isGreaterThan(50.0));
     }
@@ -204,7 +204,7 @@ class IdeologyMatcherServiceTest {
 
         assertThat(matches).hasSize(4);
         assertThat(matches.get(0).category())
-                .isIn("Esquerda Libertária", "Direita Libertária");
+                .isIn("Anarquismo", "Libertário");
     }
 
     private SubmittedAnswer extremeFascistAnswer(Question q) {

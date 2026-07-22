@@ -119,9 +119,9 @@ class QuizFlowAutomationTest {
                 Map.entry("tecnologia", Pole.LEFT)
         )));
 
-        assertThat(authoritarianTraditional.topMatch().category()).isEqualTo("Direita Autoritária");
+        assertThat(authoritarianTraditional.topMatch().category()).isEqualTo("Extrema Direita");
         assertThat(libertarianProfile.topMatch().category())
-                .isIn("Direita Libertária", "Esquerda Libertária");
+                .isIn("Libertário", "Anarquismo");
         assertThat(authoritarianTraditional.topMatch().ideologyId())
                 .isNotEqualTo(libertarianProfile.topMatch().ideologyId());
     }
