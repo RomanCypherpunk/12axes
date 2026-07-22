@@ -304,13 +304,34 @@ para um único perfil novo (não um lote de 15):
    frontend/backend juntos neste ambiente. Se não tiver, diga isso explicitamente ao usuário em vez
    de alegar que testou visualmente.
 
-## Passo 7 — Apresentar a nova inclusão ao usuário
+## Passo 7 — Calcular os perfis mais compatíveis nos três catálogos
+
+Depois que o vetor do novo perfil estiver mesclado no arquivo de perfis (passo 5), rode o script
+utilitário que reproduz exatamente o algoritmo de `ProfileMatchScorer.java` (mesmos pesos e
+fórmulas de `axisSimilarity`/`directionSimilarity`/`magnitudeSimilarity`/`outlierSimilarity`):
+
+```powershell
+python profile-audit/compatibility.py <catalog> <id>
+```
+
+Exemplo: `python profile-audit/compatibility.py personality zohran-mamdani`.
+
+O script imprime o top 2 de personalidades, ideologias e países mais compatíveis com o vetor do
+perfil recém-criado (excluindo o próprio perfil da lista, se ele aparecer no catálogo pesquisado).
+Guarde essa saída para usar no resumo do passo 8 — **nunca estime esses matches de cabeça**, o
+cálculo de compatibilidade não é intuitivo (combina similaridade por eixo, direção do vetor,
+magnitude e outliers com pesos diferentes), então só o script dá o resultado real que o app mostra
+ao usuário final.
+
+## Passo 8 — Apresentar a nova inclusão ao usuário
 
 Feche o processo com um resumo direto ao usuário contendo:
 
 - Catálogo e `id`/`name` do novo perfil.
 - Resumo de 1-2 frases do vetor resultante (ex.: quais eixos ficaram mais extremos e para qual
   lado, comparando com perfis conhecidos do mesmo catálogo se ajudar a dar contexto).
+- As duas personalidades, duas ideologias e dois países mais compatíveis, com o percentual exato,
+  calculados no passo 7 (nunca estimados).
 - Confirmação de que os testes relevantes passaram (ou lista exata do que falhou e não pôde ser
   corrigido, se for o caso).
 - Lista dos arquivos tocados nesta execução (metadados PT, metadados EN, perfil com vetor, arquivo

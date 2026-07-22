@@ -33,7 +33,8 @@ Siga `NEW_PROFILE.md` passo a passo, na íntegra:
 5. **Passo 4** — conferir consistência dos JSONs (válidos, sem campo obrigatório vazio, `id` idêntico PT/EN).
 6. **Passo 5** — auditoria de 240 perguntas para este único perfil, reusando os passos 2-5 de `profile-audit/README.md` (um subagente só, modelo de qualidade), calcular vetor, mesclar em `personality-profiles.json`, arquivar em `answers/personality/{id}.json`, atualizar `STATE.json.personality.done` (+1 em `totalProfiles`).
 7. **Passo 6** — rodar `cd backend && ..\.tools\apache-maven-3.9.15\bin\mvn.cmd test` (ou wrapper disponível). Testes relevantes: `IdeologyPersonalityMappingTest`, `ProfileMatchScorerTest`, `ScorerBenchmarkTest`, `QuizFlowAutomationTest`, `SharedResultsTest`. Corrigir causa raiz de qualquer falha, nunca pular.
-8. **Passo 7** — apresentar resumo ao usuário: catálogo/id/name, resumo do vetor, confirmação de testes, lista de arquivos tocados.
+8. **Passo 7** — rodar `python profile-audit/compatibility.py personality {id}` para calcular as duas personalidades, duas ideologias e dois países mais compatíveis com o vetor recém-criado (mesmo algoritmo de `ProfileMatchScorer.java`). Nunca estimar esses matches de cabeça.
+9. **Passo 8** — apresentar resumo ao usuário: catálogo/id/name, resumo do vetor, os matches calculados no passo 7 com percentual exato, confirmação de testes, lista de arquivos tocados.
 
 ## Regras que não podem ser quebradas
 
