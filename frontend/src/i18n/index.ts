@@ -510,7 +510,7 @@ const pt: Strings = {
       id: 'lightning',
       name: 'Bitcoin',
       network: 'Lightning',
-      address: 'easternpaul90@walletofsatoshi.com'
+      address: 'lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhk2ctnw3jhymnsv96kcwfsa0gczg'
     },
     {
       id: 'eth',
@@ -863,7 +863,7 @@ const en: Strings = {
       id: 'lightning',
       name: 'Bitcoin',
       network: 'Lightning',
-      address: 'easternpaul90@walletofsatoshi.com'
+      address: 'lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhk2ctnw3jhymnsv96kcwfsa0gczg'
     },
     {
       id: 'eth',

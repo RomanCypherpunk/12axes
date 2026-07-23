@@ -1091,6 +1091,8 @@ export default function App() {
             </button>
             {error && <p className="inline-error" role="alert">{error}</p>}
           </div>
+
+          <SupportSection />
         </section>
         </Suspense>
       )}
