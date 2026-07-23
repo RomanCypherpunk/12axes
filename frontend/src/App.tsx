@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './utils/quizSelection';
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
-import { EXAMPLE_RESULTS } from './data/exampleResult';
+import type { ExampleResult } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
@@ -113,10 +113,7 @@ function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPa
   return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
 }
 
-// Sorteia um único índice de EXAMPLE_RESULTS ao carregar a home. Fixo pelo
-// resto da sessão — evita que o visitante baixe o retrato/bandeira de todos
-// os exemplos do catálogo (antes o carrossel girava a cada 4s pelos 16
-// exemplos, multiplicando o número de imagens carregadas por visitante).
+// Sorteia um índice aleatório dentro de EXAMPLE_RESULTS.
 function randomExampleIndex(length: number): number {
   return Math.floor(Math.random() * length);
 }
@@ -142,7 +139,7 @@ export default function App() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
-  const [exampleIndex] = useState(() => randomExampleIndex(EXAMPLE_RESULTS.length));
+  const [currentExample, setCurrentExample] = useState<ExampleResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
@@ -187,6 +184,24 @@ export default function App() {
     };
   }, []);
 
+  // Carrega os exemplos sob demanda (import dinâmico) em vez de embuti-los no
+  // bundle inicial — cada visitante só usa 1 dos 16 exemplos por sessão, então
+  // não faz sentido baixar o texto de todos de cara. Sorteia um índice fixo
+  // pelo resto da sessão assim que o módulo resolve.
+  useEffect(() => {
+    let cancelled = false;
+    import('./data/exampleResult').then(({ EXAMPLE_RESULTS }) => {
+      if (cancelled) {
+        return;
+      }
+      const index = randomExampleIndex(EXAMPLE_RESULTS.length);
+      setCurrentExample(EXAMPLE_RESULTS[index] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   useEffect(() => {
     if (screen !== 'home') {
       setIsHomeSeoReady(false);
@@ -211,7 +226,6 @@ export default function App() {
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
-  const currentExample = EXAMPLE_RESULTS[exampleIndex] ?? EXAMPLE_RESULTS[0];
 
   const resultByAxis = useMemo(() => {
     if (!result) {
@@ -583,6 +597,7 @@ export default function App() {
             </div>
 
             <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
+              {currentExample && (
               <div className="hero-teaser-fade">
                 <div className="hero-teaser-card">
                   <div className="hero-teaser-card-head">
@@ -668,6 +683,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
+              )}
             </div>
           </div>
 
@@ -695,6 +711,7 @@ export default function App() {
                 <h2 id="exemplo-resultado">{t.exampleTitle}</h2>
                 <p>{t.exampleCaption}</p>
               </div>
+              {currentExample && (
               <Suspense fallback={null}>
                 <div className="example-result-fade">
                   <IdeologyMatchCard match={currentExample.ideology} featured />
@@ -708,6 +725,7 @@ export default function App() {
                   <PersonalityMatchCard match={currentExample.personality} />
                 </div>
               </Suspense>
+              )}
               <div className="example-result-cta">
                 <button className="primary-button" type="button" onClick={openVariantChooser}>
                   {t.exampleCta}
