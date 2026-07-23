@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './utils/quizSelection';
 import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
-import { EXAMPLE_RESULTS } from './data/exampleResult';
+import type { ExampleResult } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
@@ -113,15 +113,9 @@ function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPa
   return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
 }
 
-// Embaralha os índices de EXAMPLE_RESULTS (Fisher-Yates) para o carrossel da home
-// percorrer todos os exemplos, em ordem aleatória, antes de repetir qualquer um.
-function shuffledExampleOrder(length: number): number[] {
-  const order = Array.from({ length }, (_, i) => i);
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  return order;
+// Sorteia um índice aleatório dentro de EXAMPLE_RESULTS.
+function randomExampleIndex(length: number): number {
+  return Math.floor(Math.random() * length);
 }
 
 const TONE_RED_AXES = new Set([
@@ -145,10 +139,7 @@ export default function App() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
-  const [exampleCarousel, setExampleCarousel] = useState(() => ({
-    order: shuffledExampleOrder(EXAMPLE_RESULTS.length),
-    position: 0
-  }));
+  const [currentExample, setCurrentExample] = useState<ExampleResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
@@ -193,6 +184,24 @@ export default function App() {
     };
   }, []);
 
+  // Carrega os exemplos sob demanda (import dinâmico) em vez de embuti-los no
+  // bundle inicial — cada visitante só usa 1 dos 16 exemplos por sessão, então
+  // não faz sentido baixar o texto de todos de cara. Sorteia um índice fixo
+  // pelo resto da sessão assim que o módulo resolve.
+  useEffect(() => {
+    let cancelled = false;
+    import('./data/exampleResult').then(({ EXAMPLE_RESULTS }) => {
+      if (cancelled) {
+        return;
+      }
+      const index = randomExampleIndex(EXAMPLE_RESULTS.length);
+      setCurrentExample(EXAMPLE_RESULTS[index] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   useEffect(() => {
     if (screen !== 'home') {
       setIsHomeSeoReady(false);
@@ -214,33 +223,9 @@ export default function App() {
     return () => window.clearTimeout(timeoutId);
   }, [screen]);
 
-  // Alterna o exemplo de resultado (hero + seção "Exemplo de resultado") a
-  // cada 4s enquanto a home está visível, percorrendo uma ordem embaralhada
-  // até mostrar todos os exemplos antes de reembaralhar e repetir.
-  useEffect(() => {
-    if (screen !== 'home') {
-      return;
-    }
-    const intervalId = window.setInterval(() => {
-      setExampleCarousel(({ order, position }) => {
-        if (EXAMPLE_RESULTS.length <= 1) {
-          return { order, position };
-        }
-        const next = position + 1;
-        if (next >= order.length) {
-          return { order: shuffledExampleOrder(EXAMPLE_RESULTS.length), position: 0 };
-        }
-        return { order, position: next };
-      });
-    }, 4000);
-    return () => window.clearInterval(intervalId);
-  }, [screen]);
-
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
-  const currentExample =
-    EXAMPLE_RESULTS[exampleCarousel.order[exampleCarousel.position % exampleCarousel.order.length] ?? 0];
 
   const resultByAxis = useMemo(() => {
     if (!result) {
@@ -612,7 +597,8 @@ export default function App() {
             </div>
 
             <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
-              <div className="hero-teaser-fade" key={exampleCarousel.position}>
+              {currentExample && (
+              <div className="hero-teaser-fade">
                 <div className="hero-teaser-card">
                   <div className="hero-teaser-card-head">
                     <div className="hero-teaser-tag">
@@ -697,6 +683,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
+              )}
             </div>
           </div>
 
@@ -724,8 +711,9 @@ export default function App() {
                 <h2 id="exemplo-resultado">{t.exampleTitle}</h2>
                 <p>{t.exampleCaption}</p>
               </div>
+              {currentExample && (
               <Suspense fallback={null}>
-                <div className="example-result-fade" key={exampleCarousel.position}>
+                <div className="example-result-fade">
                   <IdeologyMatchCard match={currentExample.ideology} featured />
                   <div className="axis-rows example-axis-rows">
                     {currentExample.axes.map((axisResult) => {
@@ -737,6 +725,7 @@ export default function App() {
                   <PersonalityMatchCard match={currentExample.personality} />
                 </div>
               </Suspense>
+              )}
               <div className="example-result-cta">
                 <button className="primary-button" type="button" onClick={openVariantChooser}>
                   {t.exampleCta}
