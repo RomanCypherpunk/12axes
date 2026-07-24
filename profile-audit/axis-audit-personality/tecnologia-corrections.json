@@ -1,0 +1,84 @@
+{
+  "axis": "tecnologia",
+  "corrections": [
+    {
+      "id": "stalin",
+      "oldScore": 71.3,
+      "newScore": 82.5,
+      "reason": "Industrialização forçada (Planos Quinquenais), eletrificação (GOELRO) e engenharia agrícola pseudocientífica (Lysenko) o colocam bem mais próximo do polo tecnológico do que sugere a description curta."
+    },
+    {
+      "id": "mao-zedong",
+      "oldScore": 68.8,
+      "newScore": 78.8,
+      "reason": "O Grande Salto Adiante foi um projeto industrializante radical e messiânico (fornos de quintal, metas de superar a produção de aço britânica), coerente com forte entusiasmo tecnológico-industrial apesar do fracasso catastrófico."
+    },
+    {
+      "id": "trotsky",
+      "oldScore": 67.5,
+      "newScore": 73.8,
+      "reason": "Trótski era produtivista fervoroso e entusiasta da eletrificação e racionalização industrial soviética (militarização do trabalho), tipicamente ainda mais tecnófilo que Stálin em retórica."
+    },
+    {
+      "id": "charles-darwin",
+      "oldScore": 48.8,
+      "newScore": 33.8,
+      "reason": "Darwin foi um naturalista de campo cuidadoso e gradualista, biólogo por excelência; a própria description nota que a apropriação eugenista de suas ideias foi distorção alheia que ele não endossou, então deve ficar do lado biológico do eixo, não no centro-alto."
+    },
+    {
+      "id": "al-gore",
+      "oldScore": 46.3,
+      "newScore": 32.5,
+      "reason": "Gore é a principal voz do ambientalismo climático liberal contemporâneo (An Inconvenient Truth, Nobel da Paz por ativismo climático); é fundamentalmente do lado da cautela ambiental, não centrista."
+    },
+    {
+      "id": "napoleao-iii",
+      "oldScore": 56.2,
+      "newScore": 63.7,
+      "reason": "Promoveu intensa modernização industrial e urbana da França (reforma de Haussmann em Paris, expansão ferroviária, livre-comércio com a Inglaterra), justificando posição bem mais tecnológica que o centro."
+    },
+    {
+      "id": "alexander-hamilton",
+      "oldScore": 58.8,
+      "newScore": 65,
+      "reason": "Autor do 'Report on Manufactures', defendeu explicitamente industrialização nacional planejada e um banco nacional para financiar manufatura — posição historicamente clara e forte pró-industrialização, não apenas moderada."
+    },
+    {
+      "id": "jose-bonifacio",
+      "oldScore": 51.2,
+      "newScore": 57.5,
+      "reason": "Formado em ciências naturais em Coimbra, foi pioneiro da mineralogia e geologia no Brasil (mineral bonifacita leva seu nome), com viés científico-técnico real que o move para o lado tecnológico."
+    },
+    {
+      "id": "dwight-eisenhower",
+      "oldScore": 56.2,
+      "newScore": 61.3,
+      "reason": "Construiu a rede rodoviária interestadual, o maior projeto de infraestrutura industrial dos EUA no século XX, e financiou fortemente pesquisa científica/espacial (criação da NASA e DARPA); pesa mais que seu alerta pontual sobre o complexo industrial-militar."
+    },
+    {
+      "id": "garrett-hardin",
+      "oldScore": 25,
+      "newScore": 31.2,
+      "reason": "Apesar do foco ecológico na Tragédia dos Comuns, Hardin também defendia controle populacional coercitivo baseado em ciência dura e eugenia social, elementos que o eixo trata como puxando para o polo tecnológico, moderando sua posição."
+    },
+    {
+      "id": "confucio",
+      "oldScore": 33.8,
+      "newScore": 48.8,
+      "reason": "Confúcio não tem posição documentada sobre tecnologia/industrialização versus natureza; sua ética é sobre hierarquia ritual e harmonia social, tema ortogonal a este eixo, devendo ficar próximo do centro em vez de puxado para o polo biológico."
+    },
+    {
+      "id": "papa-leao-xiv",
+      "oldScore": 36.2,
+      "newScore": 30,
+      "reason": "Description menciona explicitamente que ele alerta para os riscos da inteligência artificial sobre a dignidade humana e o trabalho — postura de cautela tecnológica clara, não apenas levemente de centro-direita no eixo."
+    },
+    {
+      "id": "dom-pedro-ii",
+      "oldScore": 60,
+      "newScore": 65,
+      "reason": "Foi mecenas ativo de ciência e tecnologia no Brasil (trouxe telefone e telégrafo, financiou expedições científicas, correspondeu-se com Pasteur e Graham Bell), justificando posição mais tecnológica que o score anterior."
+    }
+  ],
+  "summary": "Encontrado um arquivo de correções anterior nesta mesma sessão/caminho que seguia metodologia incorreta (centralizava qualquer personalidade cuja description curta não citasse literalmente 'tecnologia', violando a regra explícita de usar conhecimento factual completo). Este arquivo substitui aquele e aplica correções baseadas em conhecimento histórico real: líderes comunistas com industrialização forçada documentada (Stálin, Mao, Trótski) estavam subestimados; Darwin (naturalista biólogo cauteloso, não tecnólogo) e Al Gore (ambientalista climático) estavam superestimados rumo ao polo tecnológico; Napoleão III, Hamilton, Eisenhower e Dom Pedro II subestimados como modernizadores/mecenas científicos; Confúcio foi recentrado por falta de posição real sobre o eixo; Papa Leão XIV e Garrett Hardin tiveram pequenos ajustes por conteúdo documentado (alerta sobre IA; eugenia populacional). A maioria das 259 entradas já refletia razoavelmente bem o conhecimento histórico disponível, então as mudanças foram concentradas nos poucos casos de contradição factual clara."
+}

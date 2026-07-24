@@ -1,0 +1,72 @@
+{
+  "axis": "intervencao",
+  "corrections": [
+    {
+      "id": "eneas-carneiro",
+      "oldScore": 62.5,
+      "newScore": 22.5,
+      "reason": "Enéas era ultranacionalista declarado (lema 'Brasil acima de tudo'), soberanista, contra o FMI e a globalização, defensor de Forças Armadas fortes e soberania tecnológica — pertence claramente ao polo nacionalista, não ao não-intervencionista."
+    },
+    {
+      "id": "george-washington",
+      "oldScore": 48.8,
+      "newScore": 68.8,
+      "reason": "Autor da Farewell Address de 1796, texto fundador do não intervencionismo americano ('evitar alianças permanentes' com potências estrangeiras); score no centro-baixo contradiz essa postura doutrinária conhecida."
+    },
+    {
+      "id": "thomas-jefferson",
+      "oldScore": 66.2,
+      "newScore": 73.8,
+      "reason": "Defendia explicitamente 'paz, comércio e amizade honesta com todas as nações, alianças emaranhadas com nenhuma', e desconfiava de exércitos permanentes — mais próximo do polo não intervencionista que do meio-alto."
+    },
+    {
+      "id": "dwight-eisenhower",
+      "oldScore": 38.8,
+      "newScore": 53.8,
+      "reason": "Alertou contra o 'complexo industrial-militar', recusou intervenção militar direta em Suez (1956) e na Indochina/Diên Biên Phu, preferindo contenção diplomática e de inteligência à projeção militar assertiva."
+    },
+    {
+      "id": "jd-vance",
+      "oldScore": 40,
+      "newScore": 57.5,
+      "reason": "Voz central do 'America First' que defende reduzir ajuda militar à Ucrânia e recuo de compromissos externos dos EUA; nacionalista em soberania doméstica, mas não intervencionista em projeção externa."
+    },
+    {
+      "id": "steve-bannon",
+      "oldScore": 40,
+      "newScore": 52.5,
+      "reason": "Nacionalismo econômico e cultural combinado a forte ceticismo sobre intervenções militares no exterior e 'guerras infinitas', postura America First de recuo geopolítico, não de expansionismo."
+    },
+    {
+      "id": "otto-von-habsburg",
+      "oldScore": 51.2,
+      "newScore": 65,
+      "reason": "Federalista europeu histórico que defendia integração continental e cooperação supranacional como projeto de vida; é o oposto de nacionalismo geopolítico assertivo, não deveria estar no centro-baixo."
+    },
+    {
+      "id": "woodrow-wilson",
+      "oldScore": 32.5,
+      "newScore": 40,
+      "reason": "Seu intervencionismo era de matriz internacionalista-idealista (Liga das Nações, autodeterminação multilateral), distinto do nacionalismo geopolítico assertivo de Kissinger ou Bush, mesmo tendo levado os EUA à guerra."
+    },
+    {
+      "id": "genghis-khan",
+      "oldScore": 12.5,
+      "newScore": 6.3,
+      "reason": "Conquistador expansionista extremo cujo império mongol se expandiu por campanhas militares contínuas e devastadoras por toda a Ásia; pertence ao grupo dos escores mais baixos, junto de Alexandre e Átila-like conquistadores."
+    },
+    {
+      "id": "donald-trump",
+      "oldScore": 32.5,
+      "newScore": 38.8,
+      "reason": "Nacionalista assertivo em comércio e fronteiras, mas cético declarado de intervenções militares prolongadas no exterior ('America First', evitar novas guerras), distinto de neoconservadores intervencionistas como Bush."
+    },
+    {
+      "id": "franklin-roosevelt",
+      "oldScore": 22.5,
+      "newScore": 33.8,
+      "reason": "Além do New Deal doméstico, FDR conduziu política externa assertiva de projeção de poder (Lend-Lease, entrada calculada na Segunda Guerra, arquitetura do pós-guerra dos EUA como potência global), mas não era expansionista territorial como os ditadores do mesmo patamar de score."
+    }
+  ],
+  "summary": "Corrigidas principalmente confusões entre nacionalismo doméstico/econômico e projeção externa assertiva propriamente dita, que é o que este eixo mede. Subi o score (mais não-intervencionista) de figuras cujo nacionalismo é combinado com recuo geopolítico deliberado e doutrinário (Washington, Jefferson, Eisenhower, Vance, Bannon, Trump) e de Otto von Habsburg, federalista europeu classicamente mal-posicionado como nacionalista. Corrigi para baixo (mais nacionalista/expansionista) Enéas Carneiro, cujo nacionalismo soberanista é textual e histórico mas estava no polo oposto da escala, e Genghis Khan, cujo perfil de conquista contínua o coloca entre os expansionistas mais extremos. Ajustei Wilson e Roosevelt para refletir que intervencionismo idealista-multilateral e projeção de poder pragmática são distintos do nacionalismo geopolítico assertivo de tipo Kissinger/Bismarck."
+}

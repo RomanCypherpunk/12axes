@@ -1,0 +1,42 @@
+{
+  "axis": "moral",
+  "corrections": [
+    {
+      "id": "comunismo-maoista",
+      "oldScore": 66.7,
+      "newScore": 45,
+      "reason": "Apesar da retorica revolucionaria de classe, o maoismo foi socialmente conservador em costumes/familia na pratica (inclusive reprimindo homossexualidade e dissidencia cultural), não justificando score tão proximo do liberalismo progressista ocidental."
+    },
+    {
+      "id": "socialismo-bolivariano",
+      "oldScore": 43.8,
+      "newScore": 38,
+      "reason": "O chavismo/madurismo combina retorica popular de esquerda com forte conservadorismo social pratico (aborto ilegal na Venezuela, aliança com igrejas evangelicas e catolicas), ficando levemente mais tradicionalista que o score atual sugeria."
+    },
+    {
+      "id": "objetivismo",
+      "oldScore": 52.5,
+      "newScore": 63,
+      "reason": "Ayn Rand era atéia, individualista radical e rejeitava obrigacoes tradicionais de familia/religiao/costume em nome do egoismo racional; o Objetivismo é culturalmente muito mais liberal-individualista do que o score centrista atual indica."
+    },
+    {
+      "id": "monarquismo-constitucional",
+      "oldScore": 45,
+      "newScore": 37.5,
+      "reason": "Ajuste para maior coerencia com outras correntes monarquistas (federalista 12.5, libertario 30, absoluto 7.5): mesmo constitucional e pluralista, a monarquia constitucional preserva simbolos e hierarquias tradicionais, não sendo tão proxima do centro progressista quanto 45 sugeria."
+    },
+    {
+      "id": "monarquismo-federalista",
+      "oldScore": 12.5,
+      "newScore": 20,
+      "reason": "Corrente que enfatiza descentralizacao e autogoverno regional junto a tradicao monarquica; score muito proximo do fascismo clerical (7.5) nao refletia seu carater mais institucional-pluralista, ajustado para ficar entre monarquismo absoluto e constitucional."
+    },
+    {
+      "id": "trabalhismo-cristao",
+      "oldScore": 35,
+      "newScore": 40,
+      "reason": "Trabalhismo cristao (doutrina social da Igreja aplicada a direitos trabalhistas) é mais proximo da Democracia Crista (38.8) do que score atual sugeria, dado seu compromisso reformista com justica social dentro de valores tradicionais moderados."
+    }
+  ],
+  "summary": "Principais correcoes: regimes marxista-leninistas e maoistas foram reclassificados mais para o polo tradicionalista, pois na pratica historica reprimiram diversidade sexual/cultural e promoveram familia tradicional, apesar da retorica revolucionaria de classe (nao confundir revolucao economica com progressismo de costumes). Socialismo bolivariano ajustado levemente mais tradicionalista pelo conservadorismo social pratico do chavismo/madurismo. Objetivismo de Ayn Rand foi corrigido para mais progressista/individualista, refletindo seu ateísmo e rejeicao de obrigacoes tradicionais. Familia de ideologias monarquistas foi realinhada para maior coerencia interna entre variantes absoluta, constitucional, federalista e libertaria."
+}
