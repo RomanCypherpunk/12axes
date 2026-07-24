@@ -53,7 +53,9 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Descrição:** Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.
 
-**Temas avaliados:** separação, federação, descentralização, centralização, unitarismo, secessão, municipalismo, entre outros.
+**Temas avaliados:** separação, federação, descentralização, centralização, unitarismo, secessão e municipalismo.
+
+**Como as questões operacionalizam o eixo:** autonomia legislativa, fiscal e policial de estados e municípios; constituições estaduais; currículo, saúde, educação e segurança administrados local ou nacionalmente; repartição de impostos; conflitos entre governador e presidente; regras próprias para comunidades indígenas e quilombolas; e o direito de secessão. Este eixo trata da **distribuição territorial do poder**, não de democracia versus autoritarismo.
 
 ---
 
@@ -65,6 +67,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 - **Polo direito:** Autocracia (`#ff6b6b`) — EN: *Autocracy*
 
 **Descrição:** Compara confiança em eleições, anarquia, conselhos, organização voluntária, participação, oposição e instituições democráticas com preferência por liderança forte, tecnocracia, monarquia ou regimes autoritários.
+
+**Como as questões operacionalizam o eixo:** eleições livres, voto universal e secreto, direitos da oposição e da imprensa, cortes constitucionais, referendos, revogação de mandatos, sorteio de cargos e assembleias aparecem no polo democrático. Liderança de exceção, governo sem Congresso, tecnocracia, monarquia, restrição do sufrágio, continuidade pelo desempenho e legitimidade de ditaduras aparecem no polo autocrático. Este eixo mede **quem deve governar e sob quais controles**, não a divisão federal ou unitária do Estado.
 
 ---
 
@@ -79,6 +83,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Temas avaliados:** vigilância governamental, monitoramento nas ruas, ação do Estado na sociedade, soberania do indivíduo, proibição de práticas ou atividades, liberdade civil, autonomia, privacidade.
 
+**Como as questões operacionalizam o eixo:** policiamento duro, mandados coletivos, reconhecimento facial, interceptação digital, censura de perfis, dissolução de grupos, armas, toque de recolher, prisão sem julgamento, pena de morte e vacinação obrigatória compõem o polo da segurança. Legalização de drogas, apostas, prostituição e eutanásia, liberdade de expressão ofensiva, presunção de inocência, privacidade financeira e proteção do celular compõem o polo da liberdade. Não mede a forma de eleição do governo; mede os **limites do Estado sobre a vida civil**.
+
 ---
 
 ## 04. Imigração — Assimilação × Multicultura
@@ -89,6 +95,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 - **Polo direito:** Multicultura (`#5c7cfa`) — EN: *Multiculturalism*
 
 **Descrição:** Observa se você valoriza assimilação cultural, idioma e identidade nacional ou multiculturalismo, abertura migratória e pluralidade de costumes.
+
+**Como as questões operacionalizam o eixo:** adaptação ao idioma e aos costumes locais, controle ou fechamento de fronteiras, deportação, preferência por origens culturais semelhantes, preservação da identidade nacional e crítica a enclaves culturais compõem o polo assimilacionista. Pluralidade de idiomas, escolas bilíngues, acolhimento de refugiados, manutenção dos costumes de origem, fronteiras abertas e cosmopolitismo compõem o polo multicultural. O eixo é cultural e migratório; não é uma medida direta de racismo, segurança pública ou comércio exterior.
 
 ---
 
@@ -101,6 +109,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Descrição:** Analisa sua posição sobre Forças Armadas, armamento, dissuasão e intervenção militar em contraste com negociação, pacifismo e organismos internacionais.
 
+**Como as questões operacionalizam o eixo:** gasto em defesa, indústria nacional de armas, serviço militar, armas nucleares, ataques preventivos, espionagem, drones e dissuasão compõem o polo militarista. Negociação antes do uso da força, desarmamento, redução ou extinção das Forças Armadas, tribunais internacionais, ONU e recusa de iniciar guerras compõem o polo pacifista. O foco é a atitude diante de **força armada e guerra**, não a ambição geopolítica de projetar interesses nacionais — tratada em Intervenção.
+
 ---
 
 ## 06. Intervenção — Não intervencionista × Nacionalista
@@ -112,6 +122,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Descrição:** Mede a inclinação entre não intervencionismo externo e soberania nacional mais assertiva, nacionalismo geopolítico e defesa ativa de interesses nacionais.
 
+**Como as questões operacionalizam o eixo:** neutralidade, recusa de mudar governos estrangeiros, rejeição a bases militares, alianças permanentes, sanções, embargos, missões no exterior e intervenção mesmo diante de genocídio compõem o polo não intervencionista. Pressão sobre outros países, liderança regional, proteção de empresas nacionais no exterior, primazia do interesse nacional sobre tratados, influência sobre vizinhos e uso da força para interesses próprios compõem o polo nacionalista. Um perfil pode ser militarista e não intervencionista, ou pacifista e internacionalista; por isso este eixo é separado de Diplomacia.
+
 ---
 
 ## 07. Economia — Público × Privado
@@ -122,6 +134,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 - **Polo direito:** Privado (`#ffd166`) — EN: *Private*
 
 **Descrição:** Compara preferência por propriedade pública, estatais e serviços coletivos com propriedade privada, privatização e protagonismo empresarial.
+
+**Como as questões operacionalizam o eixo:** propriedade social ou dos trabalhadores, estatais estratégicas, bancos públicos, reforma agrária, renda básica, sindicatos, serviços universais e intervenção direta quando o mercado exclui compõem o polo público. Privatização de serviços e infraestrutura, proteção da herança e da propriedade, crítica a impostos, ao funcionalismo e a transferências sociais, além de negociação individual entre empregado e patrão, compõem o polo privado. Este eixo trata de **quem possui e presta** bens e serviços; o grau de regulação do mercado é medido em Controle.
 
 ---
 
@@ -136,6 +150,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Temas avaliados:** criptomoedas, banco central, economia circular, emissão monetária, congelamento de preços, keynesianismo, entre outros.
 
+**Como as questões operacionalizam o eixo:** planejamento setorial, subsídios e campeãs nacionais, impostos progressivos, salário mínimo, congelamento de preços, controle cambial e de capitais, Banco Central subordinado ao governo e gasto anticíclico compõem o polo do planejamento. Livre formação de preços e salários, desregulação, baixa tributação, independência ou abolição do Banco Central, criptomoedas e livre circulação de capitais compõem o polo do livre mercado. Assim, é possível defender propriedade privada e ainda preferir planejamento regulatório, ou defender propriedade pública com métodos menos centralizados.
+
 ---
 
 ## 09. Comércio — Protecionismo × Globalismo
@@ -146,6 +162,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 - **Polo direito:** Globalismo (`#03a9f4`) — EN: *Globalism*
 
 **Descrição:** Mede protecionismo, soberania produtiva e defesa da indústria nacional contra globalismo, livre comércio e integração econômica internacional.
+
+**Como as questões operacionalizam o eixo:** tarifas, limitação de importações, compras públicas nacionais, restrição a empresas estrangeiras em setores estratégicos, segurança alimentar, produção doméstica de remédios e chips e soberania econômica compõem o polo protecionista. Tarifas baixas, acordos de livre comércio, Mercosul e União Europeia, investimento estrangeiro, multinacionais, competição internacional e mercado global compõem o polo globalista. Este eixo é externo: não define, por si, se a economia interna é pública, privada, planejada ou livre.
 
 ---
 
@@ -160,6 +178,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 > **Importante:** este eixo mede tanto a posição da pessoa em relação à religião em sua vida privada quanto no Estado.
 
+**Como as questões operacionalizam o eixo:** neutralidade religiosa das leis, impostos para igrejas, retirada de símbolos e feriados religiosos do Estado, primazia da ciência, crítica à doutrinação infantil e possibilidade de uma ética sem Deus compõem o polo irreligioso. Fé como fonte de sentido e moral, transmissão religiosa na família, símbolos e identidade religiosa oficiais, leis inspiradas pela maioria religiosa e primazia da lei divina compõem o polo religioso. Não se confunde automaticamente com Moral: uma pessoa pode ser religiosa e progressista, ou secular e tradicionalista.
+
 ---
 
 ## 11. Moral — Progressista × Tradicionalista
@@ -173,6 +193,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 
 **Temas avaliados:** aborto, maconha, veganismo, nudez, prostituição, entre outros.
 
+**Como as questões operacionalizam o eixo:** igualdade para casais LGBT, reconhecimento de identidade de gênero, cotas raciais, aborto, educação sexual, prostituição como trabalho, poliamor, linguagem neutra, nudez e redução do consumo de carne compõem o polo progressista. Família tradicional, papéis de gênero convencionais, oposição ao aborto, centralidade dos pais na educação moral, crítica à linguagem neutra, à pornografia, às drogas e a mudanças culturais rápidas compõem o polo tradicionalista. O eixo mede valores culturais e direitos civis, não o grau de religiosidade pessoal ou o tamanho do Estado.
+
 ---
 
 ## 12. Tecnologia — Tecnologia × Biologia
@@ -183,6 +205,8 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 - **Polo direito:** Biologia (`#f6ad55`) — EN: *Biology*
 
 **Descrição:** Mede entusiasmo por tecnologia, IA, energia nuclear, industrialização, urbanização, transhumanismo, eugenia, engenharia genética e desenvolvimento técnico contra cautela biológica, ambiental, rural e preservacionista.
+
+**Como as questões operacionalizam o eixo:** IA e automação, energia nuclear, transgênicos, mineração tecnológica, exploração espacial, urbanização, edição genética, implantes cerebrais, carne cultivada e solução tecnológica para o clima compõem o polo tecnológico. Vida simples e rural, preservação de ecossistemas, precaução diante de agrotóxicos, mineração, engenharia genética, modificação corporal e expansão espacial, além da prioridade de reduzir consumo, compõem o polo biológico. O eixo descreve a relação com técnica, corpo e natureza; não equivale a ser economicamente liberal ou autoritário.
 
 ---
 
@@ -202,3 +226,9 @@ A **intensidade** depende da **distância até o centro (50)** — ou seja, de q
 | 10 | Religião | Irreligioso | Religioso | `religiao` |
 | 11 | Moral | Progressista | Tradicionalista | `moral` |
 | 12 | Tecnologia | Tecnologia | Biologia | `tecnologia` |
+
+---
+
+## Relação direta com o banco de questões
+
+Este documento explica o significado conceitual de cada eixo, mas sua aplicação é definida diretamente por [questions-pool.json](questions-pool.json). O arquivo contém as 20 perguntas de cada eixo, o polo com o qual concordar aproxima a resposta (`agreePole`) e o peso usado no cálculo. Ao alterar, criar ou reinterpretar uma pergunta, revise também esta documentação para manter a correspondência entre conceito, texto da questão e pontuação do quiz.
