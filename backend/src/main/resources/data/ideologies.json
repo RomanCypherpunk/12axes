@@ -117,15 +117,6 @@
     "personalityId": "otto-neurath"
   },
   {
-    "id": "marxismo-reformista",
-    "name": "Marxismo Reformista",
-    "category": "Esquerda",
-    "description": "Vertente que busca alcançar o socialismo por reformas graduais dentro da democracia, ampliando direitos e regulação do mercado sem ruptura revolucionária, aproximando o marxismo da via institucional e parlamentar.",
-    "vector": null,
-    "countryId": "chile",
-    "personalityId": "eduard-bernstein"
-  },
-  {
     "id": "nacional-bolchevismo",
     "name": "Nacional-Bolchevismo (NazBol)",
     "category": "Terceira Posição",
@@ -160,15 +151,6 @@
     "vector": null,
     "countryId": "alemanha-nazista-terceiro-reich",
     "personalityId": "hitler"
-  },
-  {
-    "id": "fascismo-clerical",
-    "name": "Fascismo Clerical",
-    "category": "Extrema Direita",
-    "description": "Fusão do autoritarismo fascista com o poder religioso, na qual o Estado corporativo se apoia na hierarquia da Igreja e na moral tradicional para legitimar a ordem e reprimir o socialismo e o liberalismo modernos.",
-    "vector": null,
-    "countryId": "espanha-franquista",
-    "personalityId": "engelbert-dollfuss"
   },
   {
     "id": "falangismo",
@@ -241,15 +223,6 @@
     "vector": null,
     "countryId": "eua-california",
     "personalityId": "nick-land"
-  },
-  {
-    "id": "nacionalismo-racial",
-    "name": "Nacionalismo Racial",
-    "category": "Extrema Direita",
-    "description": "Ideologia que define a nação pela raça e defende a homogeneidade étnica do Estado, sustentando hierarquias raciais e a separação ou exclusão de grupos considerados estranhos ao povo, posições amplamente repudiadas.",
-    "vector": null,
-    "countryId": "africa-do-sul-do-apartheid",
-    "personalityId": "hendrik-verwoerd"
   },
   {
     "id": "neoconservadorismo",
@@ -333,15 +306,6 @@
     "personalityId": "curtis-yarvin"
   },
   {
-    "id": "neocameralismo",
-    "name": "Neocameralismo",
-    "category": "Extrema Direita",
-    "description": "Ideia formulada por Curtis Yarvin de administrar o Estado como uma empresa controlada por acionistas, com um soberano-executivo responsável por resultados, substituindo a política democrática pela gestão eficiente.",
-    "vector": null,
-    "countryId": "singapura",
-    "personalityId": "curtis-yarvin"
-  },
-  {
     "id": "cameralismo",
     "name": "Cameralismo",
     "category": "Direita",
@@ -358,15 +322,6 @@
     "vector": null,
     "countryId": "italia-fascista-mussolini",
     "personalityId": "mussolini"
-  },
-  {
-    "id": "terceira-posicao-politica",
-    "name": "Terceira Posição Política",
-    "category": "Terceira Posição",
-    "description": "Família ideológica que busca uma terceira via contra liberalismo capitalista e marxismo, combinando nacionalismo, corporativismo, soberania econômica e crítica à democracia liberal de massas.",
-    "vector": null,
-    "countryId": "italia-fascista-mussolini",
-    "personalityId": "julius-evola"
   },
   {
     "id": "reacionarismo",
@@ -567,24 +522,6 @@
     "personalityId": "edmund-burke"
   },
   {
-    "id": "liberaltarianismo",
-    "name": "Liberaltarianismo",
-    "category": "Libertário",
-    "description": "Corrente que aproxima o libertarianismo do liberalismo social, defendendo liberdades individuais e mercado livre junto a alguma preocupação com justiça social e igualdade de oportunidades para os mais pobres.",
-    "vector": null,
-    "countryId": "eua-new-hampshire",
-    "personalityId": "hayek"
-  },
-  {
-    "id": "panarquismo",
-    "name": "Panarquismo",
-    "category": "Libertário",
-    "description": "Ideia de que cada pessoa poderia escolher livremente o governo ou sistema político ao qual se submete, sem vínculo territorial, permitindo múltiplas jurisdições voluntárias coexistindo no mesmo espaço.",
-    "vector": null,
-    "countryId": "suica",
-    "personalityId": "gustave-de-molinari"
-  },
-  {
     "id": "reformismo-georgista",
     "name": "Reformismo Georgista",
     "category": "Centro",
@@ -601,24 +538,6 @@
     "vector": null,
     "countryId": "hong-kong",
     "personalityId": "henry-george"
-  },
-  {
-    "id": "feminismo",
-    "name": "Feminismo",
-    "category": "Esquerda",
-    "description": "Movimento que defende a igualdade de direitos e oportunidades entre os sexos e o fim da opressão das mulheres, combatendo a discriminação de gênero na política, no trabalho, na cultura e na vida privada.",
-    "vector": null,
-    "countryId": "suecia",
-    "personalityId": "charles-fourier"
-  },
-  {
-    "id": "feminismo-liberal",
-    "name": "Feminismo Liberal",
-    "category": "Esquerda",
-    "description": "Vertente do feminismo que busca a igualdade entre homens e mulheres por meio de reformas legais e institucionais, garantindo direitos iguais, acesso ao mercado e liberdade individual dentro da democracia.",
-    "vector": null,
-    "countryId": "eua-california",
-    "personalityId": "nicolas-de-condorcet"
   },
   {
     "id": "liberalismo-de-estado",
@@ -664,15 +583,6 @@
     "vector": null,
     "countryId": "eua-california",
     "personalityId": "srnicek"
-  },
-  {
-    "id": "transhumanismo",
-    "name": "Transhumanismo",
-    "category": "Esquerda",
-    "description": "Movimento que defende usar a ciência e a tecnologia para superar os limites biológicos humanos, ampliando capacidades físicas e mentais e buscando prolongar a vida rumo a uma etapa pós-humana da existência.",
-    "vector": null,
-    "countryId": "eua-california",
-    "personalityId": "ray-kurzweil"
   },
   {
     "id": "nacionalismo",
@@ -729,15 +639,6 @@
     "personalityId": "kropotkin"
   },
   {
-    "id": "anarcocoletivismo",
-    "name": "Anarcocoletivismo",
-    "category": "Anarquismo",
-    "description": "Vertente anarquista que aboliria o Estado e a propriedade privada dos meios de produção, mantendo a remuneração conforme o trabalho, com a gestão coletiva feita por associações livres e federadas de produtores.",
-    "vector": null,
-    "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
-    "personalityId": "bakunin"
-  },
-  {
     "id": "anarcossindicalismo",
     "name": "Anarcossindicalismo",
     "category": "Anarquismo",
@@ -763,24 +664,6 @@
     "vector": null,
     "countryId": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
     "personalityId": "chomsky"
-  },
-  {
-    "id": "marxismo-libertario",
-    "name": "Marxismo Libertário",
-    "category": "Esquerda",
-    "description": "Vertente do marxismo que rejeita o Estado centralizado e a burocracia partidária, defendendo conselhos operários, autogestão e a emancipação das massas pela sua própria ação revolucionária, coletiva e autônoma.",
-    "vector": null,
-    "countryId": "iugoslavia-socialista",
-    "personalityId": "gramsci"
-  },
-  {
-    "id": "socialismo-de-mercado-libertario",
-    "name": "Socialismo de Mercado Libertário",
-    "category": "Esquerda",
-    "description": "Modelo que combina propriedade coletiva ou cooperativa dos meios de produção com mecanismos de mercado e ampla autonomia, dispensando o planejamento central e o Estado autoritário na economia socialista.",
-    "vector": null,
-    "countryId": "iugoslavia-socialista",
-    "personalityId": "tito"
   },
   {
     "id": "socialismo-de-mercado",
@@ -811,7 +694,7 @@
   },
   {
     "id": "minarco-socialismo",
-    "name": "Minarco-Socialismo",
+    "name": "Socialismo Minarquista",
     "category": "Esquerda",
     "description": "Corrente que busca objetivos socialistas com um Estado mínimo, unindo propriedade coletiva ou cooperativa e justiça social a ampla liberdade individual e à recusa de burocracias amplas e centralizadas.",
     "vector": null,
@@ -909,15 +792,6 @@
     "personalityId": "andre-gorz"
   },
   {
-    "id": "ecofeminismo",
-    "name": "Ecofeminismo",
-    "category": "Esquerda",
-    "description": "Corrente que liga a exploração da natureza à opressão das mulheres, defendendo que superar o patriarcado e o domínio predatório sobre o meio ambiente faz parte de uma mesma luta por igualdade e sustentabilidade.",
-    "vector": null,
-    "countryId": "rojava",
-    "personalityId": "bookchin"
-  },
-  {
     "id": "ecologia-profunda",
     "name": "Ecologia Profunda",
     "category": "Esquerda",
@@ -945,22 +819,13 @@
     "personalityId": "bookchin"
   },
   {
-    "id": "anarcofeminismo",
-    "name": "Anarcofeminismo",
+    "id": "anarco-progressismo",
+    "name": "Anarco-Progressismo",
     "category": "Anarquismo",
-    "description": "Vertente que combina anarquismo e feminismo, vendo o patriarcado e o Estado como formas de dominação a serem abolidas, e defendendo liberdade, igualdade de gênero e organização social sem hierarquias.",
+    "description": "Síntese das correntes anarquistas voltadas à libertação do corpo e da identidade, unindo a crítica ao patriarcado, às normas de gênero e sexualidade e a abertura à tecnologia como ferramenta de emancipação, todas sob rejeição do Estado, do capitalismo e de toda hierarquia imposta.",
     "vector": null,
     "countryId": "rojava",
     "personalityId": "emile-armand"
-  },
-  {
-    "id": "anarquismo-queer",
-    "name": "Anarquismo Queer",
-    "category": "Anarquismo",
-    "description": "Corrente que une anarquismo à crítica das normas de gênero e sexualidade, combatendo o Estado e as hierarquias que oprimem pessoas LGBT e defendendo liberdade, diversidade e autonomia sobre corpo e identidade.",
-    "vector": null,
-    "countryId": "rojava",
-    "personalityId": "daniel-guerin"
   },
   {
     "id": "anarcopacifismo",
@@ -1134,15 +999,6 @@
     "personalityId": "phil-zimmermann"
   },
   {
-    "id": "anarco-transhumanismo",
-    "name": "Anarco-Transhumanismo",
-    "category": "Anarquismo",
-    "description": "Síntese entre anarquismo e transhumanismo que defende usar a tecnologia para libertar e ampliar as capacidades humanas sem Estado nem hierarquias, tornando o aprimoramento acessível e emancipador para todos.",
-    "vector": null,
-    "countryId": "eua-california",
-    "personalityId": "max-more"
-  },
-  {
     "id": "libertarianismo-bleeding-heart",
     "name": "Libertarianismo Bleeding-Heart",
     "category": "Libertário",
@@ -1189,21 +1045,12 @@
   },
   {
     "id": "feminismo-libertario",
-    "name": "Feminismo Libertário",
+    "name": "Libertarianismo Progressista",
     "category": "Libertário",
     "description": "Vertente que busca a igualdade de gênero por meio da liberdade individual e do mercado, e não do Estado, defendendo autonomia, direitos iguais e o fim de restrições legais sobre as escolhas das mulheres.",
     "vector": null,
     "countryId": "eua-california",
     "personalityId": "ezra-heywood"
-  },
-  {
-    "id": "pacifismo-libertario",
-    "name": "Pacifismo Libertário",
-    "category": "Libertário",
-    "description": "Corrente que une a defesa da liberdade individual à recusa da guerra e da violência estatal, opondo-se ao militarismo e ao intervencionismo e defendendo a resolução pacífica e voluntária dos conflitos.",
-    "vector": null,
-    "countryId": "costa-rica",
-    "personalityId": "randolph-bourne"
   },
   {
     "id": "anarcoconservadorismo",
@@ -1303,15 +1150,6 @@
     "vector": null,
     "countryId": "eua-washington-dc",
     "personalityId": "kissinger"
-  },
-  {
-    "id": "federalismo-privado",
-    "name": "Federalismo Privado",
-    "category": "Libertário",
-    "description": "Modelo que organiza a sociedade em jurisdições privadas e voluntárias que competem entre si, oferecendo leis e serviços por contrato, com os indivíduos livres para escolher a comunidade a que se associam.",
-    "vector": null,
-    "countryId": "liechtenstein",
-    "personalityId": "paul-romer"
   },
   {
     "id": "tecno-monarquismo",

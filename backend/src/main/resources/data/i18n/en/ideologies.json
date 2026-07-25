@@ -78,12 +78,6 @@
     "description": "Model that combines socialist planning with scientific management of the economy, entrusting experts and technology with the rational organization of production and the egalitarian distribution of society's resources."
   },
   {
-    "id": "marxismo-reformista",
-    "name": "Reformist Marxism",
-    "category": "Left",
-    "description": "Current that seeks to achieve socialism through gradual reforms within democracy, expanding rights and market regulation without revolutionary rupture, bringing Marxism closer to the institutional and parliamentary path."
-  },
-  {
     "id": "nacional-bolchevismo",
     "name": "National Bolshevism (NazBol)",
     "category": "Third Position",
@@ -106,12 +100,6 @@
     "name": "National Socialism",
     "category": "Far-Right",
     "description": "German variant of fascism based on racism, antisemitism, and expansionism, which united totalitarianism, the cult of Hitler, and the idea of a superior race, culminating in World War II and the Holocaust."
-  },
-  {
-    "id": "fascismo-clerical",
-    "name": "Clerical Fascism",
-    "category": "Far-Right",
-    "description": "Fusion of fascist authoritarianism with religious power, in which the corporatist state relies on the Church hierarchy and traditional morality to legitimize order and repress modern socialism and liberalism."
   },
   {
     "id": "falangismo",
@@ -160,12 +148,6 @@
     "name": "Right-Wing Accelerationism",
     "category": "Far-Right",
     "description": "Current that advocates accelerating the system's contradictions through technology and the collapse of liberal institutions, betting on the rupture of the existing order to forge a new social and political hierarchy."
-  },
-  {
-    "id": "nacionalismo-racial",
-    "name": "Racial Nationalism",
-    "category": "Far-Right",
-    "description": "Ideology that defines the nation by race, advocates ethnic homogeneity of the state, and upholds racial hierarchies, separation, or exclusion of groups deemed foreign to the people."
   },
   {
     "id": "neoconservadorismo",
@@ -222,12 +204,6 @@
     "description": "Current that rejects modern democracy and egalitarianism and proposes replacing them with hierarchical, efficient governments run like companies by a sovereign, combining traditionalism and technology."
   },
   {
-    "id": "neocameralismo",
-    "name": "Neocameralism",
-    "category": "Far-Right",
-    "description": "Idea formulated by Curtis Yarvin of running the state as a company controlled by shareholders, with a sovereign-executive accountable for results, replacing democratic politics with efficient management."
-  },
-  {
     "id": "cameralismo",
     "name": "Cameralism",
     "category": "Right",
@@ -238,12 +214,6 @@
     "name": "Corporatism",
     "category": "Third Position",
     "description": "Model that organizes society into corporations of workers and employers integrated into the state, seeking harmony between classes and directed economic cooperation instead of conflict or free competition."
-  },
-  {
-    "id": "terceira-posicao-politica",
-    "name": "Third Position",
-    "category": "Third Position",
-    "description": "Ideological family that seeks a third way against capitalist liberalism and Marxism, combining nationalism, corporatism, economic sovereignty, and criticism of mass liberal democracy."
   },
   {
     "id": "reacionarismo",
@@ -378,18 +348,6 @@
     "description": "Synthesis that unites free markets and economic freedoms with the appreciation of tradition, order, and institutions, defending prudent change and social stability within the framework of liberal democracy."
   },
   {
-    "id": "liberaltarianismo",
-    "name": "Liberaltarianism",
-    "category": "Libertarian",
-    "description": "Current that brings libertarianism closer to social liberalism, defending individual freedoms and free markets alongside some concern for social justice and equal opportunity for the poorest."
-  },
-  {
-    "id": "panarquismo",
-    "name": "Panarchism",
-    "category": "Libertarian",
-    "description": "Idea that each person could freely choose the government or political system they submit to, without territorial ties, allowing multiple voluntary jurisdictions to coexist in the same space."
-  },
-  {
     "id": "reformismo-georgista",
     "name": "Georgist Reformism",
     "category": "Center",
@@ -400,18 +358,6 @@
     "name": "Geolibertarianism",
     "category": "Libertarian",
     "description": "Synthesis of libertarianism and Georgism that combines free markets and individual freedoms with the taxation of land value, seen as a common resource, to fund the minimal state without punishing labor."
-  },
-  {
-    "id": "feminismo",
-    "name": "Feminism",
-    "category": "Left",
-    "description": "Movement that advocates equal rights and opportunities between the sexes and the end of women's oppression, fighting gender discrimination in politics, work, culture, and private life."
-  },
-  {
-    "id": "feminismo-liberal",
-    "name": "Liberal Feminism",
-    "category": "Left",
-    "description": "Branch of feminism that seeks equality between men and women through legal and institutional reforms, guaranteeing equal rights, market access, and individual freedom within democracy."
   },
   {
     "id": "liberalismo-de-estado",
@@ -442,12 +388,6 @@
     "name": "Accelerationism",
     "category": "Left",
     "description": "Current that proposes intensifying technological development and the forces of modernity to radically transform society, betting on automation and rapid change as the path to the future."
-  },
-  {
-    "id": "transhumanismo",
-    "name": "Transhumanism",
-    "category": "Left",
-    "description": "Movement that advocates using science and technology to overcome human biological limits, expanding physical and mental capacities and seeking to prolong life toward a post-human stage of existence."
   },
   {
     "id": "nacionalismo",
@@ -486,12 +426,6 @@
     "description": "Current that unites anarchism and communism, proposing a society without state or private property, with collective production and distribution according to need, based on free association and mutual aid."
   },
   {
-    "id": "anarcocoletivismo",
-    "name": "Anarcho-Collectivism",
-    "category": "Anarchist",
-    "description": "Anarchist branch that would abolish the state and private ownership of the means of production, keeping remuneration according to work, with collective management by free, federated associations of producers."
-  },
-  {
     "id": "anarcossindicalismo",
     "name": "Anarcho-Syndicalism",
     "category": "Anarchist",
@@ -508,18 +442,6 @@
     "name": "Libertarian Socialism",
     "category": "Left",
     "description": "Current that pursues socialism without an authoritarian state, uniting collective ownership and self-management with broad individual freedom, organized from the bottom up by free communities and workers."
-  },
-  {
-    "id": "marxismo-libertario",
-    "name": "Libertarian Marxism",
-    "category": "Left",
-    "description": "Branch of Marxism that rejects the centralized state and party bureaucracy, defending workers' councils, self-management, and the emancipation of the masses through their own revolutionary, collective, and autonomous action."
-  },
-  {
-    "id": "socialismo-de-mercado-libertario",
-    "name": "Libertarian Market Socialism",
-    "category": "Left",
-    "description": "Model that combines collective or cooperative ownership of the means of production with market mechanisms and broad autonomy, dispensing with central planning and the authoritarian state in the socialist economy."
   },
   {
     "id": "socialismo-de-mercado",
@@ -541,7 +463,7 @@
   },
   {
     "id": "minarco-socialismo",
-    "name": "Minarcho-Socialism",
+    "name": "Minarchist Socialism",
     "category": "Left",
     "description": "Current that pursues socialist goals with a minimal state, uniting collective or cooperative ownership and social justice with broad individual freedom and the refusal of large, centralized bureaucracies."
   },
@@ -606,12 +528,6 @@
     "description": "Current that fuses socialism and ecology, attributing the environmental crisis to capitalism and defending collective, sustainable, and democratic production that respects the limits of nature and social needs."
   },
   {
-    "id": "ecofeminismo",
-    "name": "Ecofeminism",
-    "category": "Left",
-    "description": "Current that links the exploitation of nature to the oppression of women, holding that overcoming patriarchy and predatory dominance over the environment are part of one struggle for equality and sustainability."
-  },
-  {
     "id": "ecologia-profunda",
     "name": "Deep Ecology",
     "category": "Left",
@@ -630,16 +546,10 @@
     "description": "Current that unites anarchism and radical ecology, defending decentralized, sustainable communities without a state or exploitation of nature, in harmony with ecological cycles and non-human life."
   },
   {
-    "id": "anarcofeminismo",
-    "name": "Anarcha-Feminism",
+    "id": "anarco-progressismo",
+    "name": "Anarcho-Progressivism",
     "category": "Anarchist",
-    "description": "Branch that combines anarchism and feminism, seeing patriarchy and the state as forms of domination to be abolished, and defending freedom, gender equality, and social organization without hierarchies."
-  },
-  {
-    "id": "anarquismo-queer",
-    "name": "Queer Anarchism",
-    "category": "Anarchist",
-    "description": "Current that unites anarchism with the critique of gender and sexuality norms, fighting the state and the hierarchies that oppress LGBT people and defending freedom, diversity, and autonomy over body and identity."
+    "description": "Synthesis of anarchist currents centered on the liberation of body and identity, uniting the critique of patriarchy and of gender and sexuality norms with an openness to technology as a tool of emancipation, all under the rejection of the state, capitalism, and every imposed hierarchy."
   },
   {
     "id": "anarcopacifismo",
@@ -756,12 +666,6 @@
     "description": "Current that uses cryptography and digital technologies to guarantee privacy, freedom, and transactions beyond state control, seeking to weaken surveillance and authority through technological means."
   },
   {
-    "id": "anarco-transhumanismo",
-    "name": "Anarcho-Transhumanism",
-    "category": "Anarchist",
-    "description": "Synthesis of anarchism and transhumanism that advocates using technology to liberate and expand human capacities without state or hierarchies, making enhancement accessible and emancipatory for all."
-  },
-  {
     "id": "libertarianismo-bleeding-heart",
     "name": "Bleeding-Heart Libertarianism",
     "category": "Libertarian",
@@ -793,15 +697,9 @@
   },
   {
     "id": "feminismo-libertario",
-    "name": "Libertarian Feminism",
+    "name": "Progressive Libertarianism",
     "category": "Libertarian",
     "description": "Branch that pursues gender equality through individual freedom and the market rather than the state, defending autonomy, equal rights, and the end of legal restrictions on women's choices."
-  },
-  {
-    "id": "pacifismo-libertario",
-    "name": "Libertarian Pacifism",
-    "category": "Libertarian",
-    "description": "Current that unites the defense of individual freedom with the refusal of war and state violence, opposing militarism and interventionism and defending the peaceful, voluntary resolution of conflicts."
   },
   {
     "id": "anarcoconservadorismo",
@@ -868,12 +766,6 @@
     "name": "Atlanticism",
     "category": "Right",
     "description": "Foreign policy doctrine that advocates a close alliance between North America and Europe, sustaining the West's military and political cooperation and the common defense of its values and interests in the world."
-  },
-  {
-    "id": "federalismo-privado",
-    "name": "Private Federalism",
-    "category": "Libertarian",
-    "description": "Model that organizes society into private, voluntary jurisdictions that compete with one another, offering laws and services by contract, with individuals free to choose the community they join."
   },
   {
     "id": "tecno-monarquismo",

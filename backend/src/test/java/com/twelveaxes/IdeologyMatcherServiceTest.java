@@ -128,7 +128,6 @@ class IdeologyMatcherServiceTest {
                 "capitalismo-autoritario",
                 "alt-right",
                 "neorreacionarismo",
-                "neocameralismo",
                 "tecno-monarquismo"
         );
         assertThat(matches).extracting(IdeologyMatch::ideologyId)
