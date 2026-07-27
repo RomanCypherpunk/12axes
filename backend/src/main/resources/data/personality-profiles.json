@@ -1481,17 +1481,17 @@
   {
     "personalityId": "karl-marx",
     "vector": {
-      "estrutura": 26.3,
-      "representacao": 51.2,
-      "poder": 38.8,
-      "imigracao": 22.5,
-      "diplomacia": 26.3,
-      "intervencao": 76.3,
-      "economia": 90,
-      "controle": 87.5,
-      "comercio": 46.3,
-      "religiao": 85,
-      "moral": 71.3,
+      "estrutura": 21.2,
+      "representacao": 72.5,
+      "poder": 40.0,
+      "imigracao": 18.8,
+      "diplomacia": 28.7,
+      "intervencao": 68.8,
+      "economia": 87.5,
+      "controle": 80.0,
+      "comercio": 32.5,
+      "religiao": 87.5,
+      "moral": 68.8,
       "tecnologia": 62.5
     }
   },
@@ -4416,6 +4416,57 @@
       "comercio": 67.5,
       "religiao": 32.5,
       "moral": 23.8,
+      "tecnologia": 57.5
+    }
+  },
+  {
+    "personalityId": "rudolf-rocker",
+    "vector": {
+      "estrutura": 90.0,
+      "representacao": 77.5,
+      "poder": 10.0,
+      "imigracao": 11.2,
+      "diplomacia": 11.2,
+      "intervencao": 85.0,
+      "economia": 77.5,
+      "controle": 61.3,
+      "comercio": 37.5,
+      "religiao": 85.0,
+      "moral": 76.2,
+      "tecnologia": 52.5
+    }
+  },
+  {
+    "personalityId": "errico-malatesta",
+    "vector": {
+      "estrutura": 87.5,
+      "representacao": 81.2,
+      "poder": 5.0,
+      "imigracao": 11.2,
+      "diplomacia": 8.8,
+      "intervencao": 82.5,
+      "economia": 80.0,
+      "controle": 55.0,
+      "comercio": 41.2,
+      "religiao": 91.2,
+      "moral": 83.8,
+      "tecnologia": 41.2
+    }
+  },
+  {
+    "personalityId": "sidney-webb",
+    "vector": {
+      "estrutura": 23.8,
+      "representacao": 50.0,
+      "poder": 48.8,
+      "imigracao": 36.2,
+      "diplomacia": 27.5,
+      "intervencao": 67.5,
+      "economia": 82.5,
+      "controle": 81.2,
+      "comercio": 57.5,
+      "religiao": 77.5,
+      "moral": 55.0,
       "tecnologia": 57.5
     }
   }
