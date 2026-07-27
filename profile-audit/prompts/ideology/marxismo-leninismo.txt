@@ -1,30 +1,33 @@
-Voc? est? auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Marxismo-Leninismo" (cat?logo: ideologia pol?tica) nos 12 eixos pol?ticos do projeto 12axes. Avalie ESTE perfil sozinho ? voc? n?o tem (e n?o deve imaginar) as respostas dadas a nenhum outro perfil.
+Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Marxismo-Leninismo" (catálogo: ideologia política) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
 
-Dados curados deste perfil (n?o invente informa??o al?m disto; se precisar de contexto hist?rico adicional, baseie-se apenas em fatos amplamente documentados e verific?veis sobre esta entidade espec?fica):
+Dados curados deste perfil (não invente informação além disto; se precisar de contexto histórico adicional, baseie-se apenas em fatos amplamente documentados e verificáveis sobre esta entidade específica):
 id: marxismo-leninismo
 name: Marxismo-Leninismo
-category: Esquerda Autoritária
+category: Esquerda Radical
 description: Vertente revolucionária do marxismo que defende a tomada do poder por um partido de vanguarda e a ditadura do proletariado, com economia planificada e coletivização, servindo de base aos regimes comunistas do século XX.
 
-METODOLOGIA (obrigat?ria):
-- Para CADA um dos 12 eixos: primeiro escreva um persona brief de 1-2 frases conectando especificamente a description acima ao tema daquele eixo (n?o repita a description inteira - extraia so a parte relevante aquele eixo).
-- Depois responda as 20 perguntas do eixo, uma a uma, com um destes codigos: DT (discordo totalmente), D (discordo), N (neutro/indiferente), C (concordo), CT (concordo totalmente).
-- Simule genuinamente como a propria ideologia / seus porta-vozes reais responderiam CADA pergunta individualmente. NAO escolha um valor-alvo para o eixo e trabalhe de tras para frente. Aceite o que resultar, mesmo que surpreendente.
-- Cada pergunta e independente. As perguntas ja vem em ordem embaralhada. Responda pelo id da pergunta.
-- Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico. Se este perfil for anti-estatista mas quiser coordenacao economica coletiva/planejada (ex.: anarquistas, comunistas libertarios), julgue pelo ESPIRITO de coordenacao coletiva vs. mercado, nao pela agencia estatal literal. Ja no eixo "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico/anti-autocratico, nao autocratico.
+METODOLOGIA (obrigatória):
+- Para CADA um dos 12 eixos: primeiro escreva um persona brief de 1-2 frases conectando especificamente a description acima ao tema daquele eixo.
+- Depois responda as 20 perguntas do eixo, uma a uma, com um destes codigos: DT, D, N, C, CT.
+- Simule genuinamente como o proprio perfil / seus porta-vozes reais responderiam CADA pergunta individualmente. NAO escolha um valor-alvo para o eixo e trabalhe de tras para frente.
+- Cada pergunta e independente. Responda pelo id da pergunta.
+- Atenção: `estrutura` mede descentralizacao/federalismo vs. unitarismo/centralizacao; `representacao` mede democracia/participacao vs. autocracia/lideranca forte. Nunca use autocracia como atalho para marcar `estrutura` como unitario.
+- Nuance do eixo "controle": se o perfil for anti-estatista mas quiser coordenacao economica coletiva, julgue pelo ESPIRITO de coordenacao coletiva vs. mercado. Ja em "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico.
+- NAO preencha eixos por inercia nem marque "N" em bloco: "N" e legitimo so quando o perfil seria genuinamente indiferente aquela afirmacao especifica.
+- Atencao ao eixo moral: o vetor atual marca 46.2 (quase neutro), provavelmente um artefato. Os regimes marxista-leninistas tiveram posicoes concretas e frequentemente contraditorias em costumes (emancipacao feminina e aborto legalizado cedo, mas repressao a homossexualidade e conservadorismo familiar sob Stalin). Responda cada afirmacao daquele eixo individualmente, sem meio-termo generico como atalho.
+
+REGRA DE INTEGRIDADE DA SAIDA (obrigatoria): use EXATAMENTE os ids de pergunta listados abaixo, copiados literalmente. Cada eixo deve ter exatamente 20 chaves, sem nenhuma chave inventada, sem sufixos como "_dup", "b" ou "_check", e sem repetir id. Antes de gravar, confira a contagem de cada eixo.
 
 SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
-C:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/marxismo-leninismo.json
+c:/Users/gasometro/Documents/12Axes/profile-audit/subagent-out/ideology/marxismo-leninismo.json
 
-Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; cada eixo com exatamente 20 respostas; todos os 12 eixos presentes):
+Formato exato do JSON:
 {
-  "estrutura": { "personaBrief": "...", "answers": { "estrutura_01": "C", "estrutura_07": "DT", ... } },
-  "representacao": { "personaBrief": "...", "answers": { ... } },
+  "estrutura": { "personaBrief": "...", "answers": { "estrutura_01": "C", ... } },
   ... (todos os 12 eixos: estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia)
 }
 
-Depois de gravar o arquivo, responda apenas com "OK ideology:marxismo-leninismo" e um resumo de 1 linha. N?o cole o JSON inteiro na resposta.
-
+Depois de gravar, responda apenas com "OK ideology:marxismo-leninismo" e um resumo de 1 linha.
 
 === PERGUNTAS POR EIXO ===
 
