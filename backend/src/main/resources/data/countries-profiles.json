@@ -1192,18 +1192,18 @@
   {
     "countryId": "paises-baixos",
     "vector": {
-      "estrutura": 50,
-      "representacao": 75,
-      "poder": 31.2,
-      "imigracao": 50,
-      "diplomacia": 36.2,
-      "intervencao": 53.8,
-      "economia": 50,
-      "controle": 45,
+      "estrutura": 35.0,
+      "representacao": 77.5,
+      "poder": 36.2,
+      "imigracao": 57.5,
+      "diplomacia": 33.8,
+      "intervencao": 51.2,
+      "economia": 46.2,
+      "controle": 42.5,
       "comercio": 23.8,
-      "religiao": 73.8,
-      "moral": 76.2,
-      "tecnologia": 56.2
+      "religiao": 71.2,
+      "moral": 81.2,
+      "tecnologia": 55.0
     }
   },
   {
@@ -2275,6 +2275,74 @@
       "religiao": 60.0,
       "moral": 80.0,
       "tecnologia": 46.2
+    }
+  },
+  {
+    "countryId": "peru",
+    "vector": {
+      "estrutura": 36.2,
+      "representacao": 62.5,
+      "poder": 61.3,
+      "imigracao": 57.5,
+      "diplomacia": 33.8,
+      "intervencao": 58.8,
+      "economia": 42.5,
+      "controle": 37.5,
+      "comercio": 32.5,
+      "religiao": 36.2,
+      "moral": 33.8,
+      "tecnologia": 47.5
+    }
+  },
+  {
+    "countryId": "paraguai",
+    "vector": {
+      "estrutura": 25.0,
+      "representacao": 50.0,
+      "poder": 63.7,
+      "imigracao": 51.2,
+      "diplomacia": 33.8,
+      "intervencao": 52.5,
+      "economia": 36.2,
+      "controle": 28.7,
+      "comercio": 36.2,
+      "religiao": 30.0,
+      "moral": 32.5,
+      "tecnologia": 48.8
+    }
+  },
+  {
+    "countryId": "eslovenia",
+    "vector": {
+      "estrutura": 32.5,
+      "representacao": 78.8,
+      "poder": 38.8,
+      "imigracao": 61.3,
+      "diplomacia": 31.2,
+      "intervencao": 60.0,
+      "economia": 62.5,
+      "controle": 55.0,
+      "comercio": 38.8,
+      "religiao": 68.8,
+      "moral": 66.2,
+      "tecnologia": 40.0
+    }
+  },
+  {
+    "countryId": "eslovaquia",
+    "vector": {
+      "estrutura": 28.7,
+      "representacao": 61.3,
+      "poder": 58.8,
+      "imigracao": 73.8,
+      "diplomacia": 37.5,
+      "intervencao": 62.5,
+      "economia": 47.5,
+      "controle": 45.0,
+      "comercio": 35.0,
+      "religiao": 32.5,
+      "moral": 31.2,
+      "tecnologia": 51.2
     }
   }
 ]
