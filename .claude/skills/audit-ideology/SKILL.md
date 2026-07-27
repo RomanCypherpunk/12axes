@@ -32,7 +32,8 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — autossuficiente, 
    - Calcular vetores e mesclar em `ideology-profiles.json`.
    - Atualizar `STATE.json` (mover IDs de `pending` para `done`, atualizar `lastUpdated`).
    - Arquivar em `answers/ideology/<id>.json` (permanente, nunca apagar) e limpar temporários (mantendo só um par de exemplo em `prompts/ideology/` + `subagent-out/ideology/`).
-4. Ao final, informe quantos perfis restam em `pending` e **pergunte explicitamente** se deve continuar para o próximo lote — nunca encadeie lotes sozinho.
+4. Para **cada perfil do lote** já mesclado, rode `python profile-audit/compatibility.py ideology <id>` e leia as 2 personalidades, 2 ideologias e 2 países mais compatíveis com o vetor recém-atualizado (mesmo algoritmo de `ProfileMatchScorer.java`). Nunca estimar esses matches de cabeça.
+5. Ao final, apresente para cada perfil do lote um resumo com os matches calculados no passo anterior (percentual exato) e informe quantos perfis restam em `pending`. **Pergunte explicitamente** se deve continuar para o próximo lote — nunca encadeie lotes sozinho.
 
 ## Regras que não podem ser quebradas
 
