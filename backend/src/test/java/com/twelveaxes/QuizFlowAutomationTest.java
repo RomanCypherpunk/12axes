@@ -70,7 +70,7 @@ class QuizFlowAutomationTest {
 
     @ParameterizedTest
     @MethodSource("variants")
-    void neutralAnswersProduceCentrism(String variant) throws Exception {
+    void neutralAnswersProducePragmatismo(String variant) throws Exception {
         QuizPayload quiz = fetchQuiz(variant);
         List<SubmittedAnswer> answers = selectQuestionsForVariant(quiz).stream()
                 .map(question -> new SubmittedAnswer(question.id(), AnswerValue.NEUTRAL))
@@ -80,7 +80,7 @@ class QuizFlowAutomationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(new ResultRequest(answers, variant))))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.topMatch.ideologyId").value("centrismo"))
+                .andExpect(jsonPath("$.topMatch.ideologyId").value("pragmatismo"))
                 .andExpect(jsonPath("$.topMatch.compatibility").isNumber())
                 .andExpect(jsonPath("$.topMatch.compatibilityPercentile").value(greaterThan(95.0)));
     }
