@@ -2,7 +2,7 @@
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
   "lastUpdated": "2026-07-27T20:35:00Z",
   "personality": {
-    "totalProfiles": 260,
+    "totalProfiles": 264,
     "pending": [],
     "done": [
       "lenin",
@@ -264,7 +264,11 @@
       "marco-rubio",
       "nicolas-maduro",
       "pedro-sanchez",
-      "charles-de-gaulle"
+      "charles-de-gaulle",
+      "rudolf-rocker",
+      "errico-malatesta",
+      "sidney-webb",
+      "alberto-fujimori"
     ]
   },
   "ideology": {
@@ -428,7 +432,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 134,
+    "totalProfiles": 141,
     "pending": [],
     "done": [
       "brasil",
@@ -564,7 +568,14 @@
       "confederacao-helvetica",
       "imperio-napoleonico",
       "armenia",
-      "georgia"
+      "georgia",
+      "panama",
+      "belgica",
+      "peru",
+      "paraguai",
+      "eslovenia",
+      "eslovaquia",
+      "rodesia"
     ]
   }
 }

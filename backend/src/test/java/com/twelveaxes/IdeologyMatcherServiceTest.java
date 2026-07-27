@@ -87,7 +87,7 @@ class IdeologyMatcherServiceTest {
     }
 
     @Test
-    void neutralAnswersFavorCentrismo() {
+    void neutralAnswersFavorPragmatismo() {
         List<SubmittedAnswer> answers = dataService.getQuestions().stream()
                 .map(q -> new SubmittedAnswer(q.id(), AnswerValue.NEUTRAL))
                 .toList();
@@ -96,7 +96,7 @@ class IdeologyMatcherServiceTest {
         List<IdeologyMatch> matches = matcherService.findMatches(axes);
 
         assertThat(matches).isNotEmpty();
-        assertThat(matches.get(0).ideologyId()).isEqualTo("centrismo");
+        assertThat(matches.get(0).ideologyId()).isEqualTo("pragmatismo");
         assertThat(Double.isFinite(matches.get(0).compatibility())).isTrue();
         assertThat(matches.get(0).compatibilityPercentile()).isGreaterThan(95.0);
     }

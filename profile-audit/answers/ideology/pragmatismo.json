@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "O pragmatismo julga o nível de governo (federal, estadual ou municipal) pelo critério de qual entrega melhor resultado prático em cada política pública, sem apego dogmático a centralização ou descentralização.",
+    "personaBrief": "Pragmatismo não tem doutrina fixa sobre centralização ou federalismo: decide, questão por questão, se a solução mais eficaz é nacional (escala, uniformidade) ou local (proximidade, adaptação ao contexto).",
     "answers": {
       "estrutura_06": "N",
       "estrutura_01": "D",
@@ -14,18 +14,18 @@
       "estrutura_17": "N",
       "estrutura_19": "C",
       "estrutura_12": "N",
-      "estrutura_09": "D",
+      "estrutura_09": "DT",
       "estrutura_02": "C",
       "estrutura_08": "N",
       "estrutura_07": "N",
       "estrutura_11": "N",
-      "estrutura_14": "N",
+      "estrutura_14": "D",
       "estrutura_03": "C",
       "estrutura_10": "C"
     }
   },
   "representacao": {
-    "personaBrief": "Como avalia instituições pelo resultado prático que entregam, o pragmatismo defende a democracia liberal por ser o sistema mais testado e estável para gerar bons resultados, mas sem idealizar o processo eleitoral acima da qualidade da governança.",
+    "personaBrief": "Pragmatismo valoriza a democracia como mecanismo comprovado de correção de erros e prestação de contas, mas avalia instituições e regras pelo resultado que produzem, sem romantizar procedimentos que travam a governança eficaz.",
     "answers": {
       "representacao_01": "C",
       "representacao_05": "C",
@@ -35,25 +35,25 @@
       "representacao_03": "C",
       "representacao_08": "N",
       "representacao_12": "N",
-      "representacao_17": "D",
+      "representacao_17": "DT",
       "representacao_14": "N",
       "representacao_13": "D",
-      "representacao_09": "N",
+      "representacao_09": "D",
       "representacao_02": "D",
       "representacao_15": "C",
       "representacao_19": "C",
       "representacao_06": "N",
-      "representacao_16": "D",
+      "representacao_16": "DT",
       "representacao_18": "D",
       "representacao_10": "D",
       "representacao_07": "C"
     }
   },
   "poder": {
-    "personaBrief": "Em segurança e liberdades civis, o pragmatismo pesa caso a caso: apoia ferramentas de segurança quando a evidência mostra eficácia real contra o crime, mas resiste a medidas que ampliam vigilância ou coerção sem resultado comprovado.",
+    "personaBrief": "No eixo segurança vs. liberdade, o pragmatismo pesa evidências concretas de eficácia e custo social de cada medida, evitando tanto o absolutismo libertário quanto o autoritarismo securitário por princípio.",
     "answers": {
       "poder_03": "C",
-      "poder_15": "N",
+      "poder_15": "D",
       "poder_13": "C",
       "poder_02": "C",
       "poder_12": "C",
@@ -62,7 +62,7 @@
       "poder_18": "N",
       "poder_14": "C",
       "poder_16": "D",
-      "poder_11": "N",
+      "poder_11": "D",
       "poder_06": "C",
       "poder_01": "N",
       "poder_19": "D",
@@ -75,12 +75,12 @@
     }
   },
   "imigracao": {
-    "personaBrief": "Sobre imigração, o pragmatismo avalia pelos efeitos econômicos e sociais concretos de cada política migratória, evitando tanto o multiculturalismo irrestrito quanto o fechamento total de fronteiras por princípio.",
+    "personaBrief": "Pragmatismo avalia imigração pelo impacto prático em mercado de trabalho, segurança pública e coesão social, sem dogma multiculturalista nem nativista fixo.",
     "answers": {
       "imigracao_09": "N",
       "imigracao_10": "C",
       "imigracao_06": "N",
-      "imigracao_19": "D",
+      "imigracao_19": "DT",
       "imigracao_04": "C",
       "imigracao_15": "N",
       "imigracao_07": "N",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Em defesa nacional, o pragmatismo prefere a diplomacia como primeira via por ser mais barata e eficiente, mas reconhece a necessidade de capacidade militar mínima como instrumento prático de dissuasão e proteção de interesses.",
+    "personaBrief": "Pragmatismo prefere diplomacia por ser historicamente mais barata e eficaz, mas mantém capacidade de dissuasão militar quando os custos e riscos justificam, sem apego a pacifismo nem militarismo por princípio.",
     "answers": {
       "diplomacia_02": "C",
       "diplomacia_08": "N",
@@ -108,10 +108,10 @@
       "diplomacia_19": "N",
       "diplomacia_11": "N",
       "diplomacia_05": "N",
-      "diplomacia_12": "C",
-      "diplomacia_10": "C",
+      "diplomacia_12": "N",
+      "diplomacia_10": "N",
       "diplomacia_17": "D",
-      "diplomacia_03": "D",
+      "diplomacia_03": "N",
       "diplomacia_07": "D",
       "diplomacia_06": "C",
       "diplomacia_14": "C",
@@ -125,44 +125,44 @@
     }
   },
   "intervencao": {
-    "personaBrief": "Na política externa, o pragmatismo defende que o Brasil busque resultados concretos, soberania e proteção de interesses nacionais, sem se prender a dogmas de isolacionismo nem de intervencionismo ideológico.",
+    "personaBrief": "Pragmatismo em política externa calcula custo-benefício concreto para o interesse nacional caso a caso, evitando tanto o isolacionismo dogmático quanto o intervencionismo automático.",
     "answers": {
-      "intervencao_01": "N",
+      "intervencao_01": "D",
       "intervencao_14": "D",
       "intervencao_20": "C",
-      "intervencao_19": "N",
+      "intervencao_19": "D",
       "intervencao_08": "C",
       "intervencao_13": "N",
       "intervencao_12": "N",
       "intervencao_04": "C",
-      "intervencao_18": "C",
+      "intervencao_18": "N",
       "intervencao_11": "C",
       "intervencao_05": "D",
       "intervencao_02": "C",
       "intervencao_10": "N",
-      "intervencao_09": "N",
+      "intervencao_09": "C",
       "intervencao_16": "N",
       "intervencao_06": "C",
       "intervencao_03": "C",
-      "intervencao_07": "D",
-      "intervencao_17": "C",
+      "intervencao_07": "N",
+      "intervencao_17": "N",
       "intervencao_15": "C"
     }
   },
   "economia": {
-    "personaBrief": "No cerne do pragmatismo econômico está a combinação: mercado onde funciona melhor, Estado onde o mercado falha ou exclui — sem compromisso ideológico prévio com propriedade pública ou privada como fim em si.",
+    "personaBrief": "O coração do pragmatismo: nem propriedade privada nem coletiva é um fim em si, mas meios avaliados pelo que entrega melhores resultados em cada setor concreto — mistura de mercado e Estado conforme a evidência.",
     "answers": {
       "economia_05": "D",
-      "economia_06": "D",
+      "economia_06": "DT",
       "economia_07": "C",
-      "economia_13": "N",
+      "economia_13": "C",
       "economia_03": "N",
-      "economia_14": "N",
+      "economia_14": "C",
       "economia_19": "N",
       "economia_16": "N",
       "economia_17": "N",
       "economia_12": "C",
-      "economia_04": "D",
+      "economia_04": "N",
       "economia_11": "N",
       "economia_18": "N",
       "economia_15": "N",
@@ -175,7 +175,7 @@
     }
   },
   "controle": {
-    "personaBrief": "Sobre planejamento versus livre-mercado, o pragmatismo defende regras e instituições fortes (Banco Central técnico, regulação setorial) combinadas com liberdade de mercado, escolhendo instrumentos pela evidência e não por dogma de esquerda ou direita econômica.",
+    "personaBrief": "Pragmatismo aceita regulação estatal quando corrige falhas de mercado comprovadas e livre mercado quando funciona melhor — a régua é o resultado observável, não a doutrina de intervenção ou laissez-faire.",
     "answers": {
       "controle_05": "C",
       "controle_20": "N",
@@ -183,7 +183,7 @@
       "controle_14": "D",
       "controle_07": "N",
       "controle_04": "N",
-      "controle_02": "C",
+      "controle_02": "N",
       "controle_17": "N",
       "controle_16": "C",
       "controle_10": "C",
@@ -191,16 +191,16 @@
       "controle_08": "N",
       "controle_13": "DT",
       "controle_01": "D",
-      "controle_11": "N",
-      "controle_03": "D",
       "controle_15": "C",
-      "controle_12": "N",
+      "controle_03": "D",
+      "controle_11": "N",
+      "controle_12": "C",
       "controle_18": "D",
       "controle_09": "N"
     }
   },
   "comercio": {
-    "personaBrief": "No comércio internacional, o pragmatismo pesa abertura e proteção caso a caso: apoia livre comércio quando gera ganhos líquidos comprovados, mas aceita proteção pontual em setores estratégicos quando o resultado prático justifica.",
+    "personaBrief": "Pragmatismo pesa abertura comercial e proteção setorial pelos resultados econômicos concretos de cada cadeia produtiva, sem dogma de livre-comércio irrestrito nem de protecionismo generalizado.",
     "answers": {
       "comercio_13": "N",
       "comercio_06": "C",
@@ -215,7 +215,7 @@
       "comercio_03": "N",
       "comercio_10": "C",
       "comercio_16": "N",
-      "comercio_09": "N",
+      "comercio_09": "D",
       "comercio_05": "DT",
       "comercio_11": "N",
       "comercio_01": "D",
@@ -225,17 +225,17 @@
     }
   },
   "religiao": {
-    "personaBrief": "Em matéria religiosa, o pragmatismo defende um Estado laico funcional, que nem promove nem hostiliza a fé, avaliando cada questão pelo efeito prático na convivência social e não por posição ideológica sobre religião.",
+    "personaBrief": "Pragmatismo trata religião como questão privada, adotando secularismo funcional na esfera pública porque isso evita conflitos e garante políticas baseadas em evidência, não em posição sobre a fé em si.",
     "answers": {
-      "religiao_02": "N",
+      "religiao_02": "D",
       "religiao_11": "D",
       "religiao_19": "C",
       "religiao_03": "C",
       "religiao_10": "N",
       "religiao_13": "D",
-      "religiao_12": "N",
+      "religiao_12": "D",
       "religiao_15": "D",
-      "religiao_18": "D",
+      "religiao_18": "DT",
       "religiao_05": "N",
       "religiao_01": "C",
       "religiao_14": "N",
@@ -250,7 +250,7 @@
     }
   },
   "moral": {
-    "personaBrief": "Em costumes, o pragmatismo tende a aceitar mudanças sociais quando comprovadamente não causam dano e ampliam liberdade individual, mas sem adotar pautas identitárias como bandeira central — julga cada questão por seus efeitos práticos e não por adesão ideológica.",
+    "personaBrief": "Nas questões morais e sociais, o pragmatismo se guia pelo consenso social crescente e pelos efeitos práticos observáveis, acomodando mudanças graduais testadas em vez de defender uma bandeira ideológica fixa.",
     "answers": {
       "moral_07": "C",
       "moral_04": "N",
@@ -259,7 +259,7 @@
       "moral_03": "N",
       "moral_01": "C",
       "moral_09": "C",
-      "moral_06": "N",
+      "moral_06": "D",
       "moral_19": "N",
       "moral_02": "N",
       "moral_05": "N",
@@ -275,14 +275,14 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Diante de tecnologia e meio ambiente, o pragmatismo avalia cada inovação e cada limite ambiental pelo custo-benefício real e pela evidência científica disponível, sem tecnofobia nem tecnoutopia automáticas.",
+    "personaBrief": "Pragmatismo avalia tecnologia e biotecnologia pelo custo-benefício demonstrável de cada aplicação — nem tecnofilia acrítica nem apego romântico à vida natural, mas adoção conforme resultado prático.",
     "answers": {
       "tecnologia_01": "C",
       "tecnologia_13": "N",
-      "tecnologia_19": "N",
-      "tecnologia_12": "N",
-      "tecnologia_18": "N",
-      "tecnologia_10": "C",
+      "tecnologia_19": "C",
+      "tecnologia_12": "D",
+      "tecnologia_18": "D",
+      "tecnologia_10": "N",
       "tecnologia_05": "C",
       "tecnologia_04": "D",
       "tecnologia_16": "N",
@@ -292,7 +292,7 @@
       "tecnologia_15": "N",
       "tecnologia_20": "D",
       "tecnologia_06": "N",
-      "tecnologia_09": "N",
+      "tecnologia_09": "D",
       "tecnologia_17": "C",
       "tecnologia_02": "D",
       "tecnologia_14": "N",
