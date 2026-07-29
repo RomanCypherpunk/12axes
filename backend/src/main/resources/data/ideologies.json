@@ -567,15 +567,6 @@
     "personalityId": "theodore-roosevelt"
   },
   {
-    "id": "aceleracionismo",
-    "name": "Aceleracionismo",
-    "category": "Esquerda",
-    "description": "Corrente que propõe intensificar o desenvolvimento tecnológico e as forças da modernidade para transformar radicalmente a sociedade, apostando na automação e na mudança rápida como caminho para o futuro.",
-    "vector": null,
-    "countryId": "eua-california",
-    "personalityId": "srnicek"
-  },
-  {
     "id": "nacionalismo",
     "name": "Nacionalismo",
     "category": "Direita",
@@ -844,15 +835,6 @@
     "vector": null,
     "countryId": "hong-kong",
     "personalityId": "henry-george"
-  },
-  {
-    "id": "anarquismo-egoista",
-    "name": "Anarquismo Egoísta",
-    "category": "Anarquismo",
-    "description": "Corrente inspirada em Max Stirner que rejeita Estado, moral e instituições como abstrações opressoras, colocando o indivíduo soberano e seus interesses no centro e defendendo uniões livres entre egoístas.",
-    "vector": null,
-    "countryId": "alemanha",
-    "personalityId": "max-stirner"
   },
   {
     "id": "anarcocapitalismo",
@@ -1373,5 +1355,14 @@
     "vector": null,
     "countryId": "suica",
     "personalityId": "james-madison"
+  },
+  {
+    "id": "aceleracionismo-de-esquerda",
+    "name": "Aceleracionismo de Esquerda",
+    "category": "Esquerda Radical",
+    "description": "Corrente formulada por Srnicek e Williams que quer acelerar a automação e reivindicar a tecnologia para a esquerda, defendendo o fim do trabalho, renda básica universal e redução da jornada rumo a um pós-capitalismo de abundância.",
+    "vector": null,
+    "countryId": "eua-california",
+    "personalityId": "srnicek"
   }
 ]

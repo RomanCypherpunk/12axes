@@ -378,12 +378,6 @@
     "description": "Current that advocates social reforms and the expansion of rights to promote equality and justice, trusting progress, science, and collective action to transform institutions and overcome inequalities."
   },
   {
-    "id": "aceleracionismo",
-    "name": "Accelerationism",
-    "category": "Left",
-    "description": "Current that proposes intensifying technological development and the forces of modernity to radically transform society, betting on automation and rapid change as the path to the future."
-  },
-  {
     "id": "nacionalismo",
     "name": "Nationalism",
     "category": "Right",
@@ -562,12 +556,6 @@
     "name": "Geoanarchism",
     "category": "Anarchist",
     "description": "Synthesis of anarchism and Georgism that rejects the state but treats land and natural resources as commons, defending that their rent be shared by the whole community in a free and egalitarian way."
-  },
-  {
-    "id": "anarquismo-egoista",
-    "name": "Egoist Anarchism",
-    "category": "Anarchist",
-    "description": "Current inspired by Max Stirner that rejects state, morality, and institutions as oppressive abstractions, placing the sovereign individual and their interests at the center and defending free unions of egoists."
   },
   {
     "id": "anarcocapitalismo",
@@ -916,5 +904,11 @@
     "name": "Federalism",
     "category": "Center",
     "description": "Doctrine that organizes the state through a constitutional division of power between a central government and autonomous regional units, such as cantons or states, with their own competencies, independent courts, and mutual checks against excessive concentration of power."
+  },
+  {
+    "id": "aceleracionismo-de-esquerda",
+    "name": "Left Accelerationism",
+    "category": "Radical Left",
+    "description": "Current formulated by Srnicek and Williams that seeks to accelerate automation and reclaim technology for the left, advocating the end of work, universal basic income and shorter working hours toward a post-capitalism of abundance."
   }
 ]
