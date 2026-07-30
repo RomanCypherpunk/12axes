@@ -2599,5 +2599,124 @@
       "moral": 22.5,
       "tecnologia": 57.5
     }
+  },
+  {
+    "ideologyId": "pacifismo-militar",
+    "vector": {
+      "estrutura": 30.0,
+      "representacao": 75.0,
+      "poder": 52.5,
+      "imigracao": 65.0,
+      "diplomacia": 68.8,
+      "intervencao": 85.0,
+      "economia": 48.8,
+      "controle": 46.2,
+      "comercio": 67.5,
+      "religiao": 51.2,
+      "moral": 52.5,
+      "tecnologia": 60.0
+    }
+  },
+  {
+    "ideologyId": "democracia-securitaria",
+    "vector": {
+      "estrutura": 30.0,
+      "representacao": 78.8,
+      "poder": 75.0,
+      "imigracao": 55.0,
+      "diplomacia": 57.5,
+      "intervencao": 42.5,
+      "economia": 45.0,
+      "controle": 46.2,
+      "comercio": 53.8,
+      "religiao": 61.3,
+      "moral": 60.0,
+      "tecnologia": 63.7
+    }
+  },
+  {
+    "ideologyId": "teocracia-progressista",
+    "vector": {
+      "estrutura": 22.5,
+      "representacao": 18.8,
+      "poder": 62.5,
+      "imigracao": 22.5,
+      "diplomacia": 35.0,
+      "intervencao": 66.2,
+      "economia": 78.8,
+      "controle": 72.5,
+      "comercio": 63.7,
+      "religiao": 8.8,
+      "moral": 85.0,
+      "tecnologia": 25.0
+    }
+  },
+  {
+    "ideologyId": "ateismo-tradicionalista",
+    "vector": {
+      "estrutura": 23.8,
+      "representacao": 28.7,
+      "poder": 68.8,
+      "imigracao": 76.2,
+      "diplomacia": 76.2,
+      "intervencao": 26.2,
+      "economia": 32.5,
+      "controle": 43.8,
+      "comercio": 68.8,
+      "religiao": 82.5,
+      "moral": 26.2,
+      "tecnologia": 50.0
+    }
+  },
+  {
+    "ideologyId": "mercantilismo",
+    "vector": {
+      "estrutura": 23.8,
+      "representacao": 42.5,
+      "poder": 63.7,
+      "imigracao": 66.2,
+      "diplomacia": 75.0,
+      "intervencao": 23.8,
+      "economia": 38.8,
+      "controle": 48.8,
+      "comercio": 78.8,
+      "religiao": 55.0,
+      "moral": 32.5,
+      "tecnologia": 70.0
+    }
+  },
+  {
+    "ideologyId": "imperialismo-pluralista",
+    "vector": {
+      "estrutura": 22.5,
+      "representacao": 11.2,
+      "poder": 73.8,
+      "imigracao": 25.0,
+      "diplomacia": 85.0,
+      "intervencao": 23.8,
+      "economia": 35.0,
+      "controle": 67.5,
+      "comercio": 71.2,
+      "religiao": 28.7,
+      "moral": 26.2,
+      "tecnologia": 63.7
+    }
+  },
+  {
+    "ideologyId": "imperialismo-federalista",
+    "vector": {
+      "estrutura": 67.5,
+      "representacao": 25.0,
+      "poder": 70.0,
+      "imigracao": 63.7,
+      "diplomacia": 77.5,
+      "intervencao": 27.5,
+      "economia": 48.8,
+      "controle": 62.5,
+      "comercio": 66.2,
+      "religiao": 27.5,
+      "moral": 30.0,
+      "tecnologia": 60.0
+    }
   }
 ]

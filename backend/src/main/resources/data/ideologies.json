@@ -1373,5 +1373,68 @@
     "vector": null,
     "countryId": "eua-florida",
     "personalityId": "donald-trump"
+  },
+  {
+    "id": "democracia-securitaria",
+    "name": "Democracia Securitária",
+    "category": "Centro",
+    "description": "Doutrina da democracia militante, que autoriza o Estado democrático a restringir os inimigos da própria democracia, banindo partidos antissistema, vigiando extremistas e mantendo serviço militar e segurança reforçada para defender a ordem constitucional.",
+    "vector": null,
+    "countryId": "coreia-do-sul",
+    "personalityId": "konrad-adenauer"
+  },
+  {
+    "id": "pacifismo-militar",
+    "name": "Pacifismo Militar",
+    "category": "Centro",
+    "description": "Neutralidade armada que recusa alianças, intervenções e projeção externa, mas sustenta forças armadas robustas, serviço obrigatório e defesa territorial preparada, tratando o poderio militar como garantia de não ser arrastado a guerras alheias.",
+    "vector": null,
+    "countryId": "finlandia",
+    "personalityId": "tito"
+  },
+  {
+    "id": "teocracia-progressista",
+    "name": "Teocracia Progressista",
+    "category": "Terceira Posição",
+    "description": "Teocracia dirigida por autoridade clerical sem soberania popular, que impõe de cima uma moral progressista como mandamento divino: igualdade de gênero, libertação sexual, ecologia sagrada e ruptura com o costume herdado, tratado como superstição a ser reformada.",
+    "vector": null,
+    "countryId": "genebra-calvinista",
+    "personalityId": "joao-calvino"
+  },
+  {
+    "id": "ateismo-tradicionalista",
+    "name": "Ateísmo Tradicionalista",
+    "category": "Direita",
+    "description": "Conservadorismo integralmente secular que rejeita fé e clero, mas defende hierarquia, família, autoridade, nação e costumes herdados como bens civilizatórios, tratando a moral tradicional como necessidade social e não como mandamento divino.",
+    "vector": null,
+    "countryId": "franca",
+    "personalityId": "nietzsche"
+  },
+  {
+    "id": "mercantilismo",
+    "name": "Mercantilismo",
+    "category": "Direita",
+    "description": "Doutrina que combina livre iniciativa e concorrência no mercado interno com muralha tarifária externa, subsídio à indústria nascente, banco nacional, infraestrutura pública e superávit comercial como fonte de poder nacional.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "alexander-hamilton"
+  },
+  {
+    "id": "imperialismo-pluralista",
+    "name": "Imperialismo Pluralista",
+    "category": "Extrema Direita",
+    "description": "Ordem imperial autocrática e militarizada que expande território por conquista, mas governa os povos conquistados por autonomia comunitária, tolerância religiosa administrada e tributo, sem exigir assimilação cultural dos súditos.",
+    "vector": null,
+    "countryId": "imperio-otomano",
+    "personalityId": "justiniano-i"
+  },
+  {
+    "id": "imperialismo-federalista",
+    "name": "Imperialismo Federalista",
+    "category": "Direita",
+    "description": "Projeto de império dinástico organizado como federação de nacionalidades, com autonomia regional, parlamentos locais e línguas reconhecidas, mantendo coroa hereditária, exército unificado e afirmação militar da grandeza imperial.",
+    "vector": null,
+    "countryId": "imperio-austro-hungaro",
+    "personalityId": "franz-ferdinand"
   }
 ]
