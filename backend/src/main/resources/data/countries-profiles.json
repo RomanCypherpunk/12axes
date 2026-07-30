@@ -1651,18 +1651,18 @@
   {
     "countryId": "vaticano",
     "vector": {
-      "estrutura": 21.2,
-      "representacao": 10,
-      "poder": 55,
-      "imigracao": 35,
-      "diplomacia": 16.2,
-      "intervencao": 68.8,
-      "economia": 58.8,
-      "controle": 55,
-      "comercio": 47.5,
-      "religiao": 1,
-      "moral": 22.5,
-      "tecnologia": 32.5
+      "estrutura": 20.0,
+      "representacao": 22.5,
+      "poder": 58.8,
+      "imigracao": 28.7,
+      "diplomacia": 20.0,
+      "intervencao": 71.2,
+      "economia": 71.2,
+      "controle": 65.0,
+      "comercio": 32.5,
+      "religiao": 2.5,
+      "moral": 17.5,
+      "tecnologia": 25.0
     }
   },
   {
@@ -1787,18 +1787,18 @@
   {
     "countryId": "imperio-persa-aquemenida",
     "vector": {
-      "estrutura": 45,
+      "estrutura": 73.8,
       "representacao": 6.2,
-      "poder": 67.5,
-      "imigracao": 25,
-      "diplomacia": 74,
-      "intervencao": 17.5,
-      "economia": 46.2,
-      "controle": 63.7,
-      "comercio": 46.2,
-      "religiao": 30,
-      "moral": 31.2,
-      "tecnologia": 51.2
+      "poder": 68.8,
+      "imigracao": 30.0,
+      "diplomacia": 80.0,
+      "intervencao": 16.2,
+      "economia": 58.8,
+      "controle": 77.5,
+      "comercio": 62.5,
+      "religiao": 23.8,
+      "moral": 25.0,
+      "tecnologia": 70.0
     }
   },
   {
@@ -2394,6 +2394,23 @@
       "religiao": 23.8,
       "moral": 18.8,
       "tecnologia": 56.2
+    }
+  },
+  {
+    "countryId": "suica-zug",
+    "vector": {
+      "estrutura": 88.8,
+      "representacao": 88.8,
+      "poder": 28.7,
+      "imigracao": 57.5,
+      "diplomacia": 36.2,
+      "intervencao": 62.5,
+      "economia": 27.5,
+      "controle": 11.2,
+      "comercio": 18.8,
+      "religiao": 48.8,
+      "moral": 51.2,
+      "tecnologia": 80.0
     }
   }
 ]

@@ -1,0 +1,122 @@
+{
+  "estrutura": {
+    "personaBrief": "Um microestado dinástico é, por natureza, uma unidade única e pequena sem tensão federativa interna real: o príncipe governa um território compacto e coeso, sem regiões rivais a apaziguar, mas também sem aparato de comando nacional pesado — o mínimo de máquina de Estado possível.",
+    "answers": {
+      "estrutura_06": "N", "estrutura_01": "D", "estrutura_05": "D", "estrutura_16": "C",
+      "estrutura_04": "N", "estrutura_13": "N", "estrutura_20": "D", "estrutura_15": "D",
+      "estrutura_18": "C", "estrutura_17": "N", "estrutura_19": "N", "estrutura_12": "D",
+      "estrutura_09": "D", "estrutura_02": "C", "estrutura_08": "N", "estrutura_07": "C",
+      "estrutura_11": "N", "estrutura_14": "C", "estrutura_03": "C", "estrutura_10": "D"
+    }
+  },
+  "representacao": {
+    "personaBrief": "O príncipe hereditário detém poder real e efetivo, não meramente cerimonial: não há soberania popular que o limite de fato, e a legitimidade do modelo vem da prosperidade e estabilidade entregues, não do voto.",
+    "answers": {
+      "representacao_01": "D", "representacao_05": "D", "representacao_20": "CT", "representacao_11": "DT",
+      "representacao_04": "C", "representacao_03": "D", "representacao_08": "CT", "representacao_12": "CT",
+      "representacao_17": "DT", "representacao_14": "C", "representacao_13": "DT", "representacao_09": "DT",
+      "representacao_02": "C", "representacao_15": "D", "representacao_19": "D", "representacao_06": "CT",
+      "representacao_16": "C", "representacao_18": "C", "representacao_10": "CT", "representacao_07": "D"
+    }
+  },
+  "poder": {
+    "personaBrief": "Um microestado que vende sigilo, previsibilidade jurídica e discrição financeira precisa manter ordem estrita e controle firme, mas sem hostilidade ideológica à liberdade privada de residentes e clientes que sustentam sua economia.",
+    "answers": {
+      "poder_03": "C", "poder_15": "N", "poder_13": "N", "poder_02": "C",
+      "poder_12": "C", "poder_17": "N", "poder_20": "N", "poder_18": "D",
+      "poder_14": "N", "poder_16": "C", "poder_11": "C", "poder_06": "C",
+      "poder_01": "C", "poder_19": "C", "poder_04": "N", "poder_10": "D",
+      "poder_05": "C", "poder_07": "C", "poder_09": "C", "poder_08": "D"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Capital e residentes estrangeiros são a própria base do modelo: o microestado abre as portas a quem traz riqueza, sem exigir assimilação cultural profunda, mas por cálculo econômico frio, não por ideal humanitário de diversidade.",
+    "answers": {
+      "imigracao_09": "N", "imigracao_10": "N", "imigracao_06": "C", "imigracao_19": "D",
+      "imigracao_04": "N", "imigracao_15": "N", "imigracao_07": "D", "imigracao_20": "C",
+      "imigracao_17": "D", "imigracao_13": "N", "imigracao_11": "D", "imigracao_08": "N",
+      "imigracao_02": "C", "imigracao_18": "C", "imigracao_05": "D", "imigracao_03": "D",
+      "imigracao_01": "D", "imigracao_14": "C", "imigracao_16": "C", "imigracao_12": "N"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Sem exército próprio, o microestado depende da diplomacia e de um vizinho maior para sua segurança: não é pacifista por idealismo, mas porque manter forças armadas seria um custo incompatível com o modelo de tributação mínima.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "N", "diplomacia_15": "DT", "diplomacia_19": "D",
+      "diplomacia_11": "DT", "diplomacia_05": "DT", "diplomacia_12": "C", "diplomacia_10": "C",
+      "diplomacia_17": "D", "diplomacia_03": "D", "diplomacia_07": "DT", "diplomacia_06": "CT",
+      "diplomacia_14": "N", "diplomacia_20": "N", "diplomacia_16": "C", "diplomacia_01": "D",
+      "diplomacia_04": "C", "diplomacia_13": "N", "diplomacia_09": "DT", "diplomacia_18": "CT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Um microestado sem exército não tem meios nem interesse em projetar força fora de suas fronteiras; sua política externa é puramente pragmática, focada em manter acordos, capital e a boa vontade de vizinhos e clientes.",
+    "answers": {
+      "intervencao_01": "C", "intervencao_14": "DT", "intervencao_20": "D", "intervencao_19": "C",
+      "intervencao_08": "N", "intervencao_13": "C", "intervencao_12": "DT", "intervencao_04": "C",
+      "intervencao_18": "N", "intervencao_11": "C", "intervencao_05": "CT", "intervencao_02": "D",
+      "intervencao_10": "DT", "intervencao_09": "N", "intervencao_16": "N", "intervencao_06": "N",
+      "intervencao_03": "C", "intervencao_07": "D", "intervencao_17": "C", "intervencao_15": "C"
+    }
+  },
+  "economia": {
+    "personaBrief": "A propriedade privada e a livre iniciativa são o alicerce absoluto do modelo: o microestado existe para atrair capital privado, não para redistribuí-lo ou coletivizá-lo — não há espaço para estatização ou luta de classes.",
+    "answers": {
+      "economia_05": "DT", "economia_06": "C", "economia_07": "D", "economia_13": "D",
+      "economia_03": "D", "economia_14": "C", "economia_19": "D", "economia_16": "C",
+      "economia_17": "D", "economia_12": "CT", "economia_04": "CT", "economia_11": "D",
+      "economia_18": "CT", "economia_15": "DT", "economia_20": "CT", "economia_01": "DT",
+      "economia_10": "C", "economia_09": "D", "economia_02": "CT", "economia_08": "CT"
+    }
+  },
+  "controle": {
+    "personaBrief": "Tributação mínima e sigilo financeiro só funcionam com o mercado livre para fixar preços, câmbio e capital circulando sem entraves: qualquer planejamento estatal da economia destruiria a própria razão de ser do modelo.",
+    "answers": {
+      "controle_05": "DT", "controle_20": "CT", "controle_19": "D", "controle_14": "C",
+      "controle_07": "D", "controle_04": "CT", "controle_02": "CT", "controle_17": "DT",
+      "controle_16": "C", "controle_10": "C", "controle_06": "CT", "controle_08": "C",
+      "controle_13": "DT", "controle_01": "DT", "controle_15": "D", "controle_11": "DT",
+      "controle_03": "D", "controle_12": "CT", "controle_18": "C", "controle_09": "DT"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Toda a prosperidade do microestado depende de estar plenamente aberto a capital, comércio e serviços financeiros globais: protecionismo seria o oposto exato da estratégia de sobrevivência da dinastia.",
+    "answers": {
+      "comercio_13": "D", "comercio_06": "CT", "comercio_12": "CT", "comercio_20": "CT",
+      "comercio_15": "D", "comercio_19": "D", "comercio_04": "CT", "comercio_17": "D",
+      "comercio_07": "D", "comercio_02": "CT", "comercio_03": "D", "comercio_10": "C",
+      "comercio_16": "C", "comercio_09": "D", "comercio_05": "DT", "comercio_11": "D",
+      "comercio_01": "DT", "comercio_18": "C", "comercio_08": "C", "comercio_14": "C"
+    }
+  },
+  "religiao": {
+    "personaBrief": "O modelo é fundamentalmente secular e pragmático: a legitimidade da dinastia vem da prosperidade financeira que entrega, não de qualquer mandato divino ou identidade confessional do Estado.",
+    "answers": {
+      "religiao_02": "D", "religiao_11": "N", "religiao_19": "C", "religiao_03": "C",
+      "religiao_10": "N", "religiao_13": "D", "religiao_12": "D", "religiao_15": "N",
+      "religiao_18": "D", "religiao_05": "C", "religiao_01": "C", "religiao_14": "N",
+      "religiao_06": "N", "religiao_16": "D", "religiao_08": "D", "religiao_07": "C",
+      "religiao_09": "C", "religiao_17": "N", "religiao_20": "D", "religiao_04": "D"
+    }
+  },
+  "moral": {
+    "personaBrief": "Como plataforma cosmopolita para atrair capital e residentes estrangeiros de qualquer origem, o microestado tende a uma tolerância social discreta e pragmática, sem cruzada moral em qualquer direção — o que importa é não afugentar clientes e residentes.",
+    "answers": {
+      "moral_07": "C", "moral_04": "N", "moral_15": "N", "moral_12": "C",
+      "moral_03": "C", "moral_01": "C", "moral_09": "C", "moral_06": "D",
+      "moral_19": "C", "moral_02": "N", "moral_05": "D", "moral_17": "C",
+      "moral_13": "C", "moral_11": "N", "moral_10": "D", "moral_18": "D",
+      "moral_16": "D", "moral_14": "N", "moral_08": "N", "moral_20": "N"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Um microestado que vive de serviços financeiros e capital global abraça tecnologia e inovação sem hesitação — de fintechs a biotecnologia — como mais um ramo de negócio a atrair, sem apego romântico a limites naturais.",
+    "answers": {
+      "tecnologia_01": "CT", "tecnologia_13": "C", "tecnologia_19": "C", "tecnologia_12": "D",
+      "tecnologia_18": "D", "tecnologia_10": "D", "tecnologia_05": "C", "tecnologia_04": "D",
+      "tecnologia_16": "D", "tecnologia_07": "C", "tecnologia_08": "D", "tecnologia_03": "C",
+      "tecnologia_15": "C", "tecnologia_20": "D", "tecnologia_06": "N", "tecnologia_09": "C",
+      "tecnologia_17": "C", "tecnologia_02": "D", "tecnologia_14": "N", "tecnologia_11": "C"
+    }
+  }
+}

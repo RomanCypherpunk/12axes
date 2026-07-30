@@ -1436,5 +1436,23 @@
     "vector": null,
     "countryId": "imperio-austro-hungaro",
     "personalityId": "franz-ferdinand"
+  },
+  {
+    "id": "republicanismo-aristocratico",
+    "name": "Republicanismo Aristocrático",
+    "category": "Centro",
+    "description": "Constituição mista de inspiração aristotélica, que combina elementos monárquicos, aristocráticos e populares para evitar tanto a tirania quanto a democracia radical, reservando a cidadania plena a quem tem virtude, propriedade e formação para deliberar.",
+    "vector": null,
+    "countryId": "republica-de-veneza",
+    "personalityId": "aristoteles"
+  },
+  {
+    "id": "monarquismo-financeiro",
+    "name": "Monarquismo Financeiro",
+    "category": "Direita",
+    "description": "Modelo de microestado dinástico que troca soberania política por prosperidade: príncipe hereditário com poder real, tributação mínima, sigilo e serviços financeiros como base da renda, abertura a capital e residentes estrangeiros, sem exército próprio.",
+    "vector": null,
+    "countryId": "monaco",
+    "personalityId": "curtis-yarvin"
   }
 ]

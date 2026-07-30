@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-30T02:01:37Z",
+  "lastUpdated": "2026-07-30T02:36:28Z",
   "personality": {
     "totalProfiles": 270,
     "pending": [],
@@ -278,7 +278,7 @@
     ]
   },
   "ideology": {
-    "totalProfiles": 160,
+    "totalProfiles": 162,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -440,11 +440,13 @@
       "ateismo-tradicionalista",
       "mercantilismo",
       "imperialismo-pluralista",
-      "imperialismo-federalista"
+      "imperialismo-federalista",
+      "republicanismo-aristocratico",
+      "monarquismo-financeiro"
     ]
   },
   "country": {
-    "totalProfiles": 141,
+    "totalProfiles": 142,
     "pending": [],
     "done": [
       "brasil",
@@ -587,7 +589,8 @@
       "paraguai",
       "eslovenia",
       "eslovaquia",
-      "rodesia"
+      "rodesia",
+      "suica-zug"
     ]
   }
 }
