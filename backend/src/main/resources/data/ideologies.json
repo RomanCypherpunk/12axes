@@ -1472,5 +1472,23 @@
     "vector": null,
     "countryId": "singapura",
     "personalityId": "h-l-mencken"
+  },
+  {
+    "id": "liberalismo-jacobino",
+    "name": "Liberalismo Jacobino",
+    "category": "Centro",
+    "description": "Corrente que vê o Estado unitário e centralizado como garantidor da liberdade individual: leis uniformes, laicidade e cidadania única desmontam privilégios locais, clericais e corporativos que oprimiriam o indivíduo na ausência de um poder nacional forte.",
+    "vector": null,
+    "countryId": "franca",
+    "personalityId": "nicolas-de-condorcet"
+  },
+  {
+    "id": "militarismo-libertario",
+    "name": "Militarismo Libertário",
+    "category": "Libertário",
+    "description": "Doutrina que combina Estado mínimo em impostos, regulação e costumes com forças armadas fortes e cidadão armado: a defesa nacional é a única função estatal ampliada, tratada como condição da liberdade civil e não como sua exceção.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "goldwater"
   }
 ]

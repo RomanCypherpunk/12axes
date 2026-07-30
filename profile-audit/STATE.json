@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-30T11:45:56Z",
+  "lastUpdated": "2026-07-30T14:04:41Z",
   "personality": {
-    "totalProfiles": 272,
+    "totalProfiles": 273,
     "pending": [],
     "done": [
       "lenin",
@@ -276,11 +276,12 @@
       "nick-land",
       "scruton",
       "benjamin-constant",
-      "martin-luther-king-jr"
+      "martin-luther-king-jr",
+      "mannerheim"
     ]
   },
   "ideology": {
-    "totalProfiles": 164,
+    "totalProfiles": 166,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -446,7 +447,9 @@
       "republicanismo-aristocratico",
       "monarquismo-financeiro",
       "liberalismo-aristocratico",
-      "autoritarismo-libertario"
+      "autoritarismo-libertario",
+      "liberalismo-jacobino",
+      "militarismo-libertario"
     ]
   },
   "country": {
