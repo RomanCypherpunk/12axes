@@ -1,15 +1,15 @@
 {
   "estrutura": {
-    "personaBrief": "Liechtenstein é uma confederação de 11 comunas com forte autonomia local (inclusive direito de secessão constitucional das comunas), somada a um governo central pequeno que coordena o essencial.",
+    "personaBrief": "Liechtenstein é uma federação de 11 municípios (Gemeinden) com autonomia local muito forte, incluindo o direito constitucional (artigo 4) de cada município se separar do país por referendo — um dos exemplos mais extremos de descentralização legalmente exercitável em qualquer país atual.",
     "answers": {
       "estrutura_06": "D",
       "estrutura_01": "C",
-      "estrutura_05": "D",
+      "estrutura_05": "N",
       "estrutura_16": "D",
       "estrutura_04": "D",
       "estrutura_13": "C",
       "estrutura_20": "DT",
-      "estrutura_15": "N",
+      "estrutura_15": "C",
       "estrutura_18": "DT",
       "estrutura_17": "C",
       "estrutura_19": "C",
@@ -25,40 +25,40 @@
     }
   },
   "representacao": {
-    "personaBrief": "Monarquia constitucional com príncipe reinante que retém poderes de veto expressivos, mas combinada a democracia direta robusta (referendos frequentes) e eleições parlamentares livres.",
+    "personaBrief": "Liechtenstein tem parlamento eleito e referendos populares frequentes, mas o Príncipe reinante detém poder de veto real sobre qualquer lei e pode dissolver o governo — um equilíbrio deliberado entre legitimidade democrática e autoridade monárquica não eleita, consagrado e reforçado pelo referendo de 2003.",
     "answers": {
-      "representacao_01": "CT",
+      "representacao_01": "C",
       "representacao_05": "C",
       "representacao_20": "D",
-      "representacao_11": "C",
+      "representacao_11": "N",
       "representacao_04": "N",
-      "representacao_03": "CT",
-      "representacao_08": "D",
-      "representacao_12": "D",
-      "representacao_17": "N",
+      "representacao_03": "C",
+      "representacao_08": "N",
+      "representacao_12": "N",
+      "representacao_17": "D",
       "representacao_14": "N",
-      "representacao_13": "N",
+      "representacao_13": "D",
       "representacao_09": "C",
-      "representacao_02": "D",
+      "representacao_02": "N",
       "representacao_15": "D",
-      "representacao_19": "CT",
-      "representacao_06": "D",
-      "representacao_16": "DT",
-      "representacao_18": "D",
+      "representacao_19": "C",
+      "representacao_06": "N",
+      "representacao_16": "D",
+      "representacao_18": "N",
       "representacao_10": "C",
-      "representacao_07": "CT"
+      "representacao_07": "C"
     }
   },
   "poder": {
-    "personaBrief": "Sociedade liberal, próspera e de baixa criminalidade, com forte respeito a liberdades civis, privacidade financeira e autonomia individual, dentro de um Estado pequeno e discreto.",
+    "personaBrief": "Estado pequeno, rico e de baixa criminalidade, com tradição liberal-burguesa suíça-alemã: forte respeito por liberdades civis e privacidade financeira, mas pragmático quanto a segurança e ordem pública num país minúsculo e coeso.",
     "answers": {
-      "poder_03": "D",
+      "poder_03": "N",
       "poder_15": "DT",
       "poder_13": "D",
-      "poder_02": "C",
+      "poder_02": "N",
       "poder_12": "C",
       "poder_17": "D",
-      "poder_20": "CT",
+      "poder_20": "C",
       "poder_18": "C",
       "poder_14": "C",
       "poder_16": "C",
@@ -70,12 +70,12 @@
       "poder_10": "N",
       "poder_05": "D",
       "poder_07": "D",
-      "poder_09": "D",
-      "poder_08": "N"
+      "poder_09": "N",
+      "poder_08": "D"
     }
   },
   "imigracao": {
-    "personaBrief": "País minúsculo e homogêneo que valoriza fortemente sua identidade alemânica alpina e sua soberania, com regras de residência e naturalização bastante restritivas apesar da economia globalizada.",
+    "personaBrief": "Sociedade pequena, homogênea e historicamente conservadora em identidade nacional (com quase 1/3 de residentes estrangeiros vindos majoritariamente de países vizinhos culturalmente próximos), que valoriza a preservação de sua língua e costumes locais frente à imigração.",
     "answers": {
       "imigracao_09": "C",
       "imigracao_10": "N",
@@ -84,7 +84,7 @@
       "imigracao_04": "N",
       "imigracao_15": "C",
       "imigracao_07": "C",
-      "imigracao_20": "DT",
+      "imigracao_20": "D",
       "imigracao_17": "D",
       "imigracao_13": "C",
       "imigracao_11": "C",
@@ -100,7 +100,7 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Liechtenstein não tem exército desde 1868 e é um dos poucos países do mundo completamente desmilitarizado, apostando inteiramente em neutralidade e diplomacia.",
+    "personaBrief": "Liechtenstein não tem forças armadas desde 1868, é neutro e depende de acordos informais de defesa com a Suíça — um dos exemplos mais concretos de pacifismo estatal institucionalizado no mundo.",
     "answers": {
       "diplomacia_02": "CT",
       "diplomacia_08": "C",
@@ -121,42 +121,42 @@
       "diplomacia_04": "C",
       "diplomacia_13": "D",
       "diplomacia_09": "D",
-      "diplomacia_18": "CT"
+      "diplomacia_18": "C"
     }
   },
   "intervencao": {
-    "personaBrief": "Microestado neutro sem forças armadas, sem ambições regionais e cuja política externa se resume a manter relações econômicas amistosas e evitar qualquer tipo de envolvimento militar ou disputa de poder.",
+    "personaBrief": "Microestado neutro sem exército, sem ambições geopolíticas e sem qualquer histórico de projeção de poder além de suas fronteiras; sua política externa é de baixo perfil, cooperação multilateral (EEE, ONU) e defesa de sua própria soberania financeira, não de intervencionismo.",
     "answers": {
       "intervencao_01": "C",
       "intervencao_14": "DT",
-      "intervencao_20": "D",
+      "intervencao_20": "N",
       "intervencao_19": "CT",
       "intervencao_08": "N",
       "intervencao_13": "C",
       "intervencao_12": "DT",
       "intervencao_04": "D",
       "intervencao_18": "N",
-      "intervencao_11": "C",
-      "intervencao_05": "CT",
+      "intervencao_11": "N",
+      "intervencao_05": "C",
       "intervencao_02": "D",
       "intervencao_10": "DT",
       "intervencao_09": "C",
       "intervencao_16": "D",
-      "intervencao_06": "D",
+      "intervencao_06": "N",
       "intervencao_03": "C",
       "intervencao_07": "D",
-      "intervencao_17": "CT",
+      "intervencao_17": "C",
       "intervencao_15": "C"
     }
   },
   "economia": {
-    "personaBrief": "Economia liberal de mercado com forte propriedade privada, baixíssima carga tributária corporativa e setor financeiro/industrial privado como motor da riqueza per capita mais alta do mundo.",
+    "personaBrief": "Economia liberal-privada baseada em finanças (private banking, trusts) e indústria de alta tecnologia (Hilti, Ivoclar), com Estado estruturalmente pequeno, zero dívida pública e forte defesa da propriedade privada como base da prosperidade.",
     "answers": {
       "economia_05": "DT",
       "economia_06": "N",
       "economia_07": "D",
-      "economia_13": "D",
-      "economia_03": "N",
+      "economia_13": "N",
+      "economia_03": "D",
       "economia_14": "C",
       "economia_19": "N",
       "economia_16": "C",
@@ -171,20 +171,20 @@
       "economia_10": "D",
       "economia_09": "D",
       "economia_02": "C",
-      "economia_08": "CT"
+      "economia_08": "C"
     }
   },
   "controle": {
-    "personaBrief": "Praticante do livre mercado com carga tributária baixa, Franco Suíço estável fora do controle doméstico e ambiente regulatório mínimo que atraiu bancos, seguradoras e indústria de alta precisão.",
+    "personaBrief": "Zero dívida pública histórica, tributação corporativa historicamente baixíssima e um Estado fiscalmente conservador que evita intervenção direta na economia — o espírito é de livre mercado com disciplina fiscal, não de planejamento estatal.",
     "answers": {
       "controle_05": "D",
       "controle_20": "C",
       "controle_19": "D",
       "controle_14": "C",
       "controle_07": "D",
-      "controle_04": "CT",
-      "controle_02": "CT",
-      "controle_17": "D",
+      "controle_04": "C",
+      "controle_02": "C",
+      "controle_17": "DT",
       "controle_16": "C",
       "controle_10": "C",
       "controle_06": "C",
@@ -200,7 +200,7 @@
     }
   },
   "comercio": {
-    "personaBrief": "Membro do Espaço Econômico Europeu e da EFTA com economia extremamente aberta e exportadora (indústria de precisão, produtos farmacêuticos), profundamente dependente do livre comércio internacional.",
+    "personaBrief": "Microeconomia extremamente aberta e dependente de comércio exterior e capital estrangeiro (membro do EEE/EFTA, união aduaneira com a Suíça), cuja prosperidade financeira e industrial depende diretamente da integração aos mercados globais.",
     "answers": {
       "comercio_13": "D",
       "comercio_06": "CT",
@@ -208,13 +208,13 @@
       "comercio_20": "C",
       "comercio_15": "D",
       "comercio_19": "D",
-      "comercio_04": "CT",
+      "comercio_04": "C",
       "comercio_17": "N",
       "comercio_07": "D",
       "comercio_02": "C",
       "comercio_03": "D",
       "comercio_10": "C",
-      "comercio_16": "D",
+      "comercio_16": "N",
       "comercio_09": "D",
       "comercio_05": "DT",
       "comercio_11": "D",
@@ -225,7 +225,7 @@
     }
   },
   "religiao": {
-    "personaBrief": "País de tradição católica (religião historicamente ligada ao Estado e à Casa Principesca), mas com sociedade moderna e crescentemente secular como o restante da Europa alpina.",
+    "personaBrief": "Sociedade majoritariamente católica romana (o catolicismo é ligado à identidade histórica do principado), mas moderna e mundana em costumes cotidianos, com a fé mantendo peso simbólico maior do que em vizinhos mais secularizados como a Suíça.",
     "answers": {
       "religiao_02": "N",
       "religiao_11": "D",
@@ -241,41 +241,41 @@
       "religiao_14": "C",
       "religiao_06": "C",
       "religiao_16": "N",
-      "religiao_08": "N",
+      "religiao_08": "D",
       "religiao_07": "D",
       "religiao_09": "N",
       "religiao_17": "D",
-      "religiao_20": "N",
+      "religiao_20": "C",
       "religiao_04": "D"
     }
   },
   "moral": {
-    "personaBrief": "Sociedade europeia moderna e próspera, tradicionalmente conservadora em costumes por conta da forte influência católica e da monarquia, mas que gradualmente adotou direitos civis liberais (uniões e depois casamento igualitário).",
+    "personaBrief": "Sociedade rica e pequena, historicamente conservadora em costumes mas sob pressão crescente de modernização — legalizou parceria civil em 2011 e casamento igualitário só em 2025 via referendo, e mantém aborto muito restrito após rejeitar liberalização em referendo de 2011.",
     "answers": {
       "moral_07": "C",
-      "moral_04": "N",
+      "moral_04": "C",
       "moral_15": "N",
-      "moral_12": "N",
+      "moral_12": "C",
       "moral_03": "N",
       "moral_01": "C",
-      "moral_09": "N",
-      "moral_06": "N",
+      "moral_09": "D",
+      "moral_06": "D",
       "moral_19": "N",
-      "moral_02": "N",
+      "moral_02": "C",
       "moral_05": "D",
-      "moral_17": "N",
+      "moral_17": "D",
       "moral_13": "N",
-      "moral_11": "N",
-      "moral_10": "N",
+      "moral_11": "D",
+      "moral_10": "C",
       "moral_18": "D",
       "moral_16": "N",
       "moral_14": "N",
       "moral_08": "N",
-      "moral_20": "N"
+      "moral_20": "C"
     }
   },
   "tecnologia": {
-    "personaBrief": "Economia industrial de alta precisão (Hilti, Ivoclar) e centro financeiro sofisticado, favorável à inovação tecnológica e inclusive pioneiro regulatório em blockchain e ativos digitais (Blockchain Act).",
+    "personaBrief": "País industrial de alta tecnologia (Hilti, Ivoclar, indústria de precisão) e centro financeiro sofisticado, pragmático quanto à inovação como motor de prosperidade, mas com pequena escala territorial que naturalmente limita ambições de megaprojetos como exploração espacial.",
     "answers": {
       "tecnologia_01": "C",
       "tecnologia_13": "N",
@@ -283,7 +283,7 @@
       "tecnologia_12": "N",
       "tecnologia_18": "N",
       "tecnologia_10": "N",
-      "tecnologia_05": "N",
+      "tecnologia_05": "C",
       "tecnologia_04": "D",
       "tecnologia_16": "N",
       "tecnologia_07": "N",
@@ -295,7 +295,7 @@
       "tecnologia_09": "D",
       "tecnologia_17": "N",
       "tecnologia_02": "D",
-      "tecnologia_14": "D",
+      "tecnologia_14": "C",
       "tecnologia_11": "N"
     }
   }

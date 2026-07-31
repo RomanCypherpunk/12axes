@@ -852,18 +852,18 @@
   {
     "countryId": "liechtenstein",
     "vector": {
-      "estrutura": 76.2,
-      "representacao": 71.2,
-      "poder": 25,
-      "imigracao": 63.7,
-      "diplomacia": 16.2,
-      "intervencao": 77.5,
-      "economia": 27.5,
-      "controle": 22.5,
-      "comercio": 25,
+      "estrutura": 78.8,
+      "representacao": 55.0,
+      "poder": 31.2,
+      "imigracao": 62.5,
+      "diplomacia": 17.5,
+      "intervencao": 71.2,
+      "economia": 28.7,
+      "controle": 23.8,
+      "comercio": 25.0,
       "religiao": 43.8,
-      "moral": 52.5,
-      "tecnologia": 56.2
+      "moral": 43.8,
+      "tecnologia": 55.0
     }
   },
   {
@@ -2411,6 +2411,23 @@
       "religiao": 43.8,
       "moral": 47.5,
       "tecnologia": 50.0
+    }
+  },
+  {
+    "countryId": "eua-wyoming",
+    "vector": {
+      "estrutura": 83.8,
+      "representacao": 80.0,
+      "poder": 22.5,
+      "imigracao": 71.2,
+      "diplomacia": 60.0,
+      "intervencao": 55.0,
+      "economia": 7.5,
+      "controle": 11.2,
+      "comercio": 31.2,
+      "religiao": 38.8,
+      "moral": 32.5,
+      "tecnologia": 60.0
     }
   }
 ]
