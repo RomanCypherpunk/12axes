@@ -376,18 +376,18 @@
   {
     "personalityId": "richard-spencer",
     "vector": {
-      "estrutura": 52.5,
+      "estrutura": 70.0,
       "representacao": 21.2,
-      "poder": 57.5,
-      "imigracao": 93.8,
-      "diplomacia": 58.8,
-      "intervencao": 37.5,
-      "economia": 47.5,
-      "controle": 55,
+      "poder": 56.2,
+      "imigracao": 96.2,
+      "diplomacia": 56.2,
+      "intervencao": 47.5,
+      "economia": 66.2,
+      "controle": 68.8,
       "comercio": 73.8,
-      "religiao": 20,
-      "moral": 8.8,
-      "tecnologia": 51.2
+      "religiao": 66.2,
+      "moral": 33.8,
+      "tecnologia": 72.5
     }
   },
   {
@@ -4621,6 +4621,23 @@
       "religiao": 42.5,
       "moral": 35.0,
       "tecnologia": 52.5
+    }
+  },
+  {
+    "personalityId": "nick-fuentes",
+    "vector": {
+      "estrutura": 18.8,
+      "representacao": 5.0,
+      "poder": 68.8,
+      "imigracao": 98.8,
+      "diplomacia": 78.8,
+      "intervencao": 58.8,
+      "economia": 56.2,
+      "controle": 65.0,
+      "comercio": 91.2,
+      "religiao": 3.8,
+      "moral": 2.5,
+      "tecnologia": 45.0
     }
   }
 ]
