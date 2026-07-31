@@ -1730,5 +1730,47 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Ej%C3%A9rcito_Zapatista_de_Liberaci%C3%B3n_Nacional,_Flag.svg",
     "flagNote": "Bandeira do Exército Zapatista de Libertação Nacional (EZLN) usada como referência visual do movimento."
+  },
+  {
+    "id": "baviera",
+    "name": "Baviera (Alemanha)",
+    "category": "Região conservadora-industrial",
+    "description": "Maior estado federado da Alemanha, a Baviera combina forte identidade regional e catolicismo, domínio histórico da CSU, indústria de ponta (BMW, Siemens) e defesa ativa de sua autonomia fiscal e cultural frente a Berlim.",
+    "flagPath": "/countries/flags/baviera.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(lozengy).svg",
+    "flagNote": "Bandeira losangeada da Baviera (Alemanha) usada como referência visual da região."
+  },
+  {
+    "id": "sul-do-brasil",
+    "name": "Sul do Brasil",
+    "category": "Região separatista-liberal",
+    "description": "Movimento separatista que defende a independência do Rio Grande do Sul, Santa Catarina e Paraná, unindo forte identidade de colonização europeia, economia agroexportadora e industrial, liberalismo econômico e rejeição da centralização fiscal de Brasília.",
+    "flagPath": "/countries/flags/sul-do-brasil.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "movement-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Bandeira_do_movimento_O_Sul_%C3%A9_o_Meu_Pa%C3%ADs.svg",
+    "flagNote": "Bandeira das Três Estrelas, símbolo do movimento separatista \"O Sul é o Meu País\", usada como referência visual da região."
+  },
+  {
+    "id": "porto-rico",
+    "name": "Porto Rico (Estados Unidos)",
+    "category": "Território não incorporado colonial",
+    "description": "Território não incorporado dos Estados Unidos no Caribe, Porto Rico tem cidadania americana sem voto pleno no Congresso, vive debate constante entre estadidade, independência e o status atual, e enfrenta crise de dívida e forte dependência de incentivos fiscais federais.",
+    "flagPath": "/countries/flags/porto-rico.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Puerto_Rico.svg",
+    "flagNote": "Bandeira oficial de Porto Rico usada como referência visual do território."
   }
 ]
