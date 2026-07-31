@@ -41,7 +41,11 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — ele é autossufic
      reaudite com uma description que você já sabe estar desatualizada.
    - Gerar `prompts/personality/<id>.txt` para cada perfil do lote.
    - Disparar os 15 subagentes **simultaneamente**, mesma mensagem, modelo de qualidade (nunca Haiku/rápido).
-   - Validar as 15 saídas em `subagent-out/personality/<id>.json`.
+   - Validar as 15 saídas rodando `python profile-audit/validate.py personality <id>` em cada uma.
+     Ele checa forma, taxa de neutros e conteúdo (direção dos eixos, duplicata, coerência com as
+     ideologias que declaram o perfil). **Leia os avisos, não só o código de saída** — ver "Modos de
+     falha conhecidos" no README. Se reprovar, relance só aquele subagente dizendo qual checagem
+     falhou e quais eixos estavam errados.
    - Calcular vetores e mesclar em `personality-profiles.json`.
    - Atualizar `STATE.json` (mover IDs de `pending` para `done`, atualizar `lastUpdated`).
    - Arquivar em `answers/personality/<id>.json` (permanente, nunca apagar) e limpar temporários (mantendo só um par de exemplo em `prompts/personality/` + `subagent-out/personality/`).

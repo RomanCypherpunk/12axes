@@ -251,9 +251,16 @@ para um único perfil novo (não um lote de 15):
    Salve em `profile-audit/prompts/<catalog>/<id>.txt`.
 3. Dispare **um único subagente** (não precisa ser em lote de 15 — é só um perfil) com esse prompt,
    usando um modelo de qualidade (Sonnet ou superior — nunca Haiku ou modelo rápido/barato).
-4. Valide a saída em `profile-audit/subagent-out/<catalog>/<id>.json` (12 eixos, 20 respostas cada,
-   códigos `DT/D/N/C/CT`), exatamente como descrito na seção "4. Validar as 15 saídas" do README
-   (aplicando a mesma checagem a este único arquivo).
+4. Valide a saída rodando **`python profile-audit/validate.py <catalog> <id>`**. Ele checa forma,
+   taxa de neutros e conteúdo (direção dos eixos, duplicata, coerência com o perfil declarado) e
+   bloqueia o merge se algo grave falhar. **Leia os avisos, não só o código de saída** — validação
+   de forma sozinha já deixou passar erros graves. Ver "Modos de falha conhecidos" no README.
+
+   Para perfil **novo**, dois pontos merecem atenção especial:
+   - **Duplicata**: se o vetor sair ≥95% idêntico a um perfil existente, ele é redundante. Antes de
+     gerar o prompt, liste os vizinhos prováveis e diga ao subagente o que diferencia o novo deles.
+   - **Coerência**: uma ideologia deve bater alto com o `personalityId` que declara. Abaixo de ~92%,
+     um dos dois vetores está errado — compare eixo a eixo e descubra qual antes de mesclar.
 5. Calcule o vetor com o script Python de referência da seção "5." do README (adapte
    `ids_neste_lote` para conter só o novo `id`) e mescle no arquivo de perfis correspondente:
    - `ideology` → `backend/src/main/resources/data/ideology-profiles.json`

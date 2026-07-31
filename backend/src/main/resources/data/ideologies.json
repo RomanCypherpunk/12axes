@@ -1499,5 +1499,59 @@
     "vector": null,
     "countryId": "chiapas",
     "personalityId": "zapata"
+  },
+  {
+    "id": "sindicalismo-revolucionario",
+    "name": "Sindicalismo Revolucionário",
+    "category": "Esquerda Radical",
+    "description": "Corrente que rejeita a via parlamentar e reformista, apostando na greve geral e no mito mobilizador: a ação direta dos sindicatos e a violência proletária devem destruir o Estado e a burguesia decadente.",
+    "vector": null,
+    "countryId": "franca",
+    "personalityId": "sorel"
+  },
+  {
+    "id": "confucionismo-politico",
+    "name": "Confucionismo Político",
+    "category": "Direita",
+    "description": "Doutrina que funda a ordem política na virtude do governante, na hierarquia ritual e na piedade filial, defendendo mérito burocrático e educação moral em vez de leis coercitivas ou participação popular.",
+    "vector": null,
+    "countryId": "china",
+    "personalityId": "confucio"
+  },
+  {
+    "id": "socialismo-lassalliano",
+    "name": "Socialismo Lassalliano",
+    "category": "Esquerda",
+    "description": "Corrente socialista que busca emancipar os trabalhadores por meio do próprio Estado nacional, com sufrágio universal, cooperativas de produção financiadas por fundos públicos e recusa explícita da via revolucionária.",
+    "vector": null,
+    "countryId": "alemanha",
+    "personalityId": "ferdinand-lassalle"
+  },
+  {
+    "id": "liberal-desenvolvimentismo",
+    "name": "Liberal-Desenvolvimentismo",
+    "category": "Centro",
+    "description": "Corrente que une liberalismo social, gasto público aníclico e otimismo tecnológico, tratando obras, ciência e exploração espacial como missão nacional, sem romper com a propriedade privada nem com o mercado.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "john-f-kennedy"
+  },
+  {
+    "id": "aristocratismo",
+    "name": "Aristocratismo",
+    "category": "Direita",
+    "description": "Doutrina do governo dos melhores, que confia o poder a uma minoria qualificada por virtude, educação ou nascimento, rejeitando a igualdade política e o governo da maioria como entrega da cidade à incompetência.",
+    "vector": null,
+    "countryId": "republica-de-veneza",
+    "personalityId": "platao"
+  },
+  {
+    "id": "aristocratismo-nietzschiano",
+    "name": "Aristocratismo Nietzschiano",
+    "category": "Direita",
+    "description": "Corrente de matriz nietzschiana que rejeita a moral igualitária como ressentimento de rebanho, defendendo hierarquia de valores, criação aristócrata de sentido e afirmação trágica da vida após a morte de Deus.",
+    "vector": null,
+    "countryId": "alemanha",
+    "personalityId": "nietzsche"
   }
 ]

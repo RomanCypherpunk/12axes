@@ -143,12 +143,23 @@ Cada subagente recebe o prompt de `prompts/<catalog>/<id>.txt` e deve gravar sua
 
 ### 4. Validar as 15 saídas
 
-Para cada `subagent-out/<catalog>/<id>.json`, confirme:
-- Existem exatamente os 12 eixos: `estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia`.
-- Cada eixo tem `personaBrief` (string) e `answers` com exatamente 20 chaves.
-- Todo valor de `answers` é um destes 5 códigos: `DT`, `D`, `N`, `C`, `CT`.
+**Rode o validador em cada saída antes de mesclar:**
 
-Se algum arquivo faltar ou estiver malformado, relance só aquele subagente antes de prosseguir.
+```powershell
+python profile-audit/validate.py <catalog> <id>
+```
+
+Ele checa três níveis e sai com erro se algum bloqueante falhar:
+
+| Nível | O que verifica |
+|---|---|
+| `[FORMA]` | 12 eixos, 20 respostas por eixo, ids corretos, códigos `DT/D/N/C/CT`, `personaBrief` preenchido |
+| `[NEUTROS]` | taxa de `N` — bloqueia acima de 18% no total ou 30% em qualquer eixo |
+| `[CONTEÚDO]` | direção dos eixos contra perfis-âncora, proximidade excessiva de outro perfil (duplicata) e coerência com o perfil declarado |
+
+**Validação de forma não basta.** Saídas formalmente impecáveis já foram mescladas com erros graves — ver "Modos de falha conhecidos" no fim deste arquivo. Leia os avisos do validador, não só o código de saída.
+
+Se algum arquivo faltar, estiver malformado ou for reprovado, relance só aquele subagente antes de prosseguir, dizendo no prompt **qual** checagem falhou e **quais eixos** estavam errados.
 
 ### 5. Calcular o vetor de cada perfil e mesclar (automático, sem esperar confirmação)
 
@@ -254,3 +265,78 @@ lote**. Só dispare o próximo lote de 15 após confirmação explícita — nã
   ou similares, nem consulte os arquivos em `_legacy/` para saber o que falta.
 - **Nunca** apague nem sobrescreva arquivos dentro de `answers/<catalog>/` — é o histórico permanente
   de respostas que o usuário usa para auditoria. Só `prompts/` e `subagent-out/` são temporários.
+- **Nunca** mescle uma saída sem rodar `validate.py` e ler os avisos.
+
+## Direção real dos eixos (medida nos dados)
+
+`backend/src/main/resources/data/axes-explained.md` descreve **`religiao` e `imigracao` invertidos**
+em relação à implementação. Use esta tabela, que foi conferida contra perfis reais do catálogo:
+
+| Eixo | 0 | 100 | Âncoras |
+|---|---|---|---|
+| `estrutura` | centralizado/unitário | descentralizado/federal | Stálin 0 · Rothbard 96 |
+| `representacao` | autocracia | democracia | Kim Jong-un 3 · Mujica 86 |
+| `poder` | liberdade civil | ordem/vigilância | Rothbard 1 · Stálin 99 |
+| `imigracao` | multicultural/aberto | assimilacionista/fechado | Trudeau 23 · Hitler 100 |
+| `diplomacia` | pacifista | militarista | Dalai Lama 9 · Hitler 100 |
+| `intervencao` | nacionalista assertivo | não intervencionista | Hitler 10 · Dalai Lama 85 |
+| `economia` | privado/mercado | público/coletivo | Rothbard 6 · Stálin 94 |
+| `controle` | livre mercado | planejamento | Rothbard 5 · Stálin 100 |
+| `comercio` | livre comércio/globalista | protecionista | Friedman 10 · Hitler 96 |
+| `religiao` | religioso | irreligioso/secular | Khomeini 0 · Stálin 98 |
+| `moral` | tradicionalista | progressista | Franco 3 · Foucault 91 |
+| `tecnologia` | biologia/naturalista | tecnófilo | Kaczynski 5 · Kurzweil 86 |
+
+Antes de aceitar um valor extremo, pergunte: **quem mais está nessa faixa?** Se o perfil ficou ao lado
+de alguém incompatível, o vetor está errado — foi assim que se descobriu Nietzsche marcado como
+multiculturalista, na faixa de Obama e Trudeau.
+
+## Modos de falha conhecidos
+
+Todos estes passaram na validação de forma e teriam sido mesclados sem a checagem de conteúdo.
+
+### 1. Excesso de neutros
+Cada `N` vale exatamente 0.50 — o ponto morto. Um eixo majoritariamente `N` não mede a posição do
+perfil, apenas colapsa para ~50 e parece um centrismo moderado que ninguém defendeu.
+
+> Richard Spencer saiu com 36% de N (economia 75%, controle 60%). Perfis comparáveis do mesmo nicho
+> ficam em 12–17% (Dugin 12%, Evola 17%). Refeito: 9,6%.
+
+No prompt do subagente, diga explicitamente que `N` é só para indiferença **genuína** — nunca para
+"não falou disso" ou "é anacrônico" — e peça que ele **conte os N antes de gravar**.
+
+### 2. Duplicata de perfil existente
+Um perfil novo que sai ~95% idêntico a outro não acrescenta nada ao catálogo.
+
+> "Sindicalismo Revolucionário" saiu 90% igual a `anarcossindicalismo` e `sindicalismo`, ambos já
+> existentes — e só 63% compatível com Sorel, que dá nome à corrente.
+>
+> "Aristocratismo" saiu 96,8% igual a `integralismo-brasileiro`. O erro estava nos próprios briefs,
+> que falavam em "identidade **nacional**" e "indústria **nacional**": aristocracia clássica é
+> pré-nacional e pré-industrial.
+
+Antes de criar, liste as ideologias vizinhas e diga ao subagente **o que diferencia** a nova delas.
+
+### 3. Falso oposto — o mais sutil
+Quando um perfil rejeita um polo, o modelo assume que ele endossa o polo oposto. Mas muitos perfis
+rejeitam **os dois**. O sintoma é o brief admitir a tensão enquanto as respostas colapsam para um lado.
+
+> Nietzsche saiu com `economia` 20 e `controle` 22.5 — faixa de Rothbard e Friedman. O brief dizia
+> textualmente "**não por amor ao mercado como valor positivo**", mas todas as respostas caíram do lado
+> do mercado. Ele ataca o socialismo *e* o "espírito de loja" burguês. Corrigido: 33.8 e 38.8.
+>
+> Socialismo Lassalliano saiu com `poder` 66.2 (faixa de Bismarck e Lenin) porque confundiu estatismo
+> **econômico** com autoritarismo **policial**. Lassalle foi agitador perseguido pelo Estado prussiano.
+> Corrigido: 26.2, ao lado de Bernstein (34) e Keynes (31).
+
+Quando o perfil for heterodoxo, diga no prompt **quais dois polos ele rejeita** e que o resultado
+esperado é intermediário — deixando claro que é calibração, não alvo a atingir por construção.
+
+### 4. Normalização de figuras heterodoxas
+O modelo puxa perfis atípicos para a caixa ideológica mais familiar. Sorel virou anarquista de
+esquerda; Nietzsche virou pacifista antinacionalista. São justamente os perfis que ficam órfãos de
+ideologia — órfãos porque não cabem nas categorias usuais. Nomeie as heterodoxias no prompt.
+
+### 5. Códigos inválidos
+Um subagente já gravou `A`, `B` e `E` em vez de `DT/D/N/C/CT`, confundindo com letras de alternativa.
+O validador pega isso, mas vale reforçar no prompt que `C` significa "concordo", não "alternativa C".

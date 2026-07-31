@@ -30,7 +30,10 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — autossuficiente, 
 3. Siga **exatamente** os passos 2 a 8 de `profile-audit/README.md`, usando os parâmetros da tabela acima:
    - Gerar `prompts/country/<id>.txt` para cada perfil do lote.
    - Disparar os 15 subagentes **simultaneamente**, mesma mensagem, modelo de qualidade (nunca Haiku/rápido).
-   - Validar as 15 saídas em `subagent-out/country/<id>.json`.
+   - Validar as 15 saídas rodando `python profile-audit/validate.py country <id>` em cada uma.
+     Ele checa forma, taxa de neutros e conteúdo (direção dos eixos, duplicata de outro país).
+     **Leia os avisos, não só o código de saída** — ver "Modos de falha conhecidos" no README. Se
+     reprovar, relance só aquele subagente dizendo qual checagem falhou e quais eixos estavam errados.
    - Calcular vetores e mesclar em `countries-profiles.json`.
    - Atualizar `STATE.json` (mover IDs de `pending` para `done`, atualizar `lastUpdated`).
    - Arquivar em `answers/country/<id>.json` (permanente, nunca apagar) e limpar temporários (mantendo só um par de exemplo em `prompts/country/` + `subagent-out/country/`).
