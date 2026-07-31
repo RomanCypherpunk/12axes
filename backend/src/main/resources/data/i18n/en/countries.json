@@ -199,7 +199,7 @@
   },
   {
     "id": "sacro-imperio-romano-germanico",
-    "name": "Holy Roman Empire",
+    "name": "Holy Roman Empire (First Reich)",
     "category": "Decentralized elective monarchy",
     "description": "A federation of Central European territories, the Holy Roman Empire gathered principalities and cities under an elected emperor and strong Church influence, marked by fragmented power and the autonomy of its members."
   },
@@ -289,7 +289,7 @@
   },
   {
     "id": "hong-kong",
-    "name": "Hong Kong",
+    "name": "Hong Kong (China)",
     "category": "Technocratic-financial region",
     "description": "A global financial center, Hong Kong is an autonomous region of strong free-market capitalism and technocratic management, whose broad autonomy has been increasingly restricted by mainland China's political control."
   },
@@ -373,37 +373,37 @@
   },
   {
     "id": "eua-california",
-    "name": "United States (California)",
+    "name": "California (United States)",
     "category": "Techno-progressive region",
     "description": "The most populous US state, California is a global hub of technology and culture, with strongly progressive, environmentalist, and technocratic politics and a gigantic, innovative market economy."
   },
   {
     "id": "eua-texas",
-    "name": "United States (Texas)",
+    "name": "Texas (United States)",
     "category": "Liberal-energy region",
     "description": "The second-largest US state, Texas stands out for its conservatism, its culture of strong individual freedom, low taxation, and a dynamic market economy tied to energy and industry."
   },
   {
     "id": "eua-nova-york",
-    "name": "United States (New York)",
+    "name": "New York (United States)",
     "category": "Financial-cosmopolitan region",
     "description": "The financial and cultural center of the United States, New York combines liberal, progressive politics, enormous immigrant diversity, a globalized service-based economy, and strong symbolic weight in the world."
   },
   {
     "id": "eua-new-hampshire",
-    "name": "United States (New Hampshire)",
+    "name": "New Hampshire (United States)",
     "category": "Libertarian-fiscal region",
     "description": "A small state in the northeastern United States, New Hampshire is known for its strong libertarian culture, low taxation, absence of a state income tax, and a motto that exalts liberty above all."
   },
   {
     "id": "eua-washington-dc",
-    "name": "United States (Washington, D.C.)",
+    "name": "Washington, D.C. (United States)",
     "category": "Federal-institutional district",
     "description": "The capital of the United States, Washington concentrates federal power and government institutions, with the strong weight of the public machine, a globalist orientation, and a central role in the country's diplomacy and military power."
   },
   {
     "id": "eua-massachusetts",
-    "name": "United States (Massachusetts)",
+    "name": "Massachusetts (United States)",
     "category": "Academic-progressive region",
     "description": "A northeastern US state, Massachusetts is a progressive stronghold and a hub of education and science, with prestigious universities, a strong liberal tradition, and politics focused on social rights and innovation."
   },
@@ -583,7 +583,7 @@
   },
   {
     "id": "eua-florida",
-    "name": "United States (Florida)",
+    "name": "Florida (United States)",
     "category": "Conservative-touristic region",
     "description": "A US state with a conservative, pro-market profile, Florida combines low taxation, tourism, intense immigration, combative cultural politics, and a state government active in security and education."
   },
@@ -619,7 +619,7 @@
   },
   {
     "id": "catalunha",
-    "name": "Catalonia",
+    "name": "Catalonia (Spain)",
     "category": "Independentist-industrial region",
     "description": "An autonomous region in northeastern Spain, Catalonia combines its own national identity and language, an industrial, cosmopolitan economy, progressive social politics, and a strong independence movement that culminated in the 2017 referendum."
   },
@@ -661,7 +661,7 @@
   },
   {
     "id": "macau",
-    "name": "Macau",
+    "name": "Macau (China)",
     "category": "Hyper-open recreational region",
     "description": "A Chinese special administrative region and the world's largest gambling center, Macau unites very low taxes, a hyper-open economy of casinos and tourism, a Portuguese Catholic heritage, and a political system controlled by Beijing, without full democracy."
   },
@@ -709,7 +709,7 @@
   },
   {
     "id": "imperio-alemao",
-    "name": "German Empire",
+    "name": "German Empire (Second Reich)",
     "category": "Constitutional-militarist monarchy",
     "description": "The German imperial state from 1871 to 1918 united Prussian-led federalism, limited constitutional monarchy, male suffrage for the Reichstag, strong Kaiser and chancellor authority, rapid industrialization, militarism, and the foreign policy of a rising power."
   },
@@ -823,8 +823,14 @@
   },
   {
     "id": "suica-zug",
-    "name": "Switzerland (Canton of Zug)",
+    "name": "Zug (Switzerland)",
     "category": "Crypto-fiscal region",
     "description": "Switzerland's smallest canton and one of the lowest-taxed jurisdictions in the world, Zug attracts holdings and foundations through low taxation, hosts the Crypto Valley around Ethereum and accepts tax payments in bitcoin, under cantonal direct democracy."
+  },
+  {
+    "id": "chiapas",
+    "name": "Zapatista Chiapas (Mexico)",
+    "category": "Indigenous-communal autonomy",
+    "description": "Zapatista territories in southern Mexico, self-governed since 1994 by mostly Maya communities through caracoles and Good Government Councils, rejecting political parties and the state, with cooperative agrarian economy and strong women's leadership."
   }
 ]

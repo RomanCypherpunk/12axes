@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-30T19:24:35Z",
+  "lastUpdated": "2026-07-30T21:35:00Z",
   "personality": {
     "totalProfiles": 272,
     "pending": [],
@@ -280,7 +280,7 @@
     ]
   },
   "ideology": {
-    "totalProfiles": 166,
+    "totalProfiles": 167,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -448,11 +448,12 @@
       "liberalismo-aristocratico",
       "autoritarismo-libertario",
       "liberalismo-jacobino",
-      "militarismo-libertario"
+      "militarismo-libertario",
+      "zapatismo"
     ]
   },
   "country": {
-    "totalProfiles": 138,
+    "totalProfiles": 139,
     "pending": [],
     "done": [
       "brasil",
@@ -592,7 +593,8 @@
       "eslovenia",
       "eslovaquia",
       "rodesia",
-      "suica-zug"
+      "suica-zug",
+      "chiapas"
     ]
   }
 }
