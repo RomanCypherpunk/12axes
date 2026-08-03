@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-07-31T17:27:02Z",
+  "lastUpdated": "2026-08-03T00:17:18Z",
   "personality": {
-    "totalProfiles": 279,
+    "totalProfiles": 280,
     "pending": [],
     "done": [
       "lenin",
@@ -283,11 +283,12 @@
       "hegel",
       "marco-aurelio",
       "agostinho-de-hipona",
-      "immanuel-kant"
+      "immanuel-kant",
+      "socrates"
     ]
   },
   "ideology": {
-    "totalProfiles": 173,
+    "totalProfiles": 175,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -462,7 +463,9 @@
       "socialismo-lassalliano",
       "liberal-desenvolvimentismo",
       "aristocratismo",
-      "aristocratismo-nietzschiano"
+      "aristocratismo-nietzschiano",
+      "catolicismo",
+      "monarquismo-moderador"
     ]
   },
   "country": {

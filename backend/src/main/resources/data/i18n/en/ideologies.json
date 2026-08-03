@@ -960,10 +960,10 @@
     "description": "Project of a dynastic empire organized as a federation of nationalities, with regional autonomy, local parliaments and recognized languages, while retaining a hereditary crown, unified army and military assertion of imperial greatness."
   },
   {
-    "id": "republicanismo-aristocratico",
-    "name": "Aristocratic Republicanism",
+    "id": "aristotelismo",
+    "name": "Aristotelianism",
     "category": "Center",
-    "description": "Mixed constitution of Aristotelian inspiration, combining monarchical, aristocratic and popular elements to avoid both tyranny and radical democracy, reserving full citizenship for those with virtue, property and the education to deliberate."
+    "description": "Aristotle's political philosophy, defending a mixed constitution of monarchical, aristocratic and popular elements to avoid both tyranny and radical democracy, reserving full citizenship for those with virtue, property and the education to deliberate."
   },
   {
     "id": "monarquismo-financeiro",
@@ -1008,8 +1008,8 @@
     "description": "Current that rejects the parliamentary and reformist path, betting on the general strike and the mobilising myth: direct union action and proletarian violence should destroy the state and the decadent bourgeoisie."
   },
   {
-    "id": "confucionismo-politico",
-    "name": "Political Confucianism",
+    "id": "confucionismo",
+    "name": "Confucianism",
     "category": "Right",
     "description": "Doctrine that grounds political order in the ruler's virtue, ritual hierarchy and filial piety, favouring bureaucratic merit and moral education over coercive law or popular participation."
   },
@@ -1036,5 +1036,47 @@
     "name": "Nietzschean Aristocratism",
     "category": "Right",
     "description": "Nietzschean current that rejects egalitarian morality as herd resentment, defending a hierarchy of values, the aristocratic creation of meaning and the tragic affirmation of life after the death of God."
+  },
+  {
+    "id": "catolicismo",
+    "name": "Catholicism",
+    "category": "Centre",
+    "description": "Social doctrine of the Catholic Church, combining traditionalist morality and defense of life with concern for social justice, subsidiarity and worker dignity, under the hierarchical authority of the papacy and canon law."
+  },
+  {
+    "id": "monarquismo-moderador",
+    "name": "Moderating Monarchism",
+    "category": "Right",
+    "description": "Nineteenth-century constitutional monarchy model in which the monarch exercises a fourth Moderating Power above the Executive, Legislative and Judiciary, arbitrating conflicts and guaranteeing stability over an agrarian economy."
+  },
+  {
+    "id": "mutualismo-proudhoniano",
+    "name": "Proudhonian Mutualism",
+    "category": "Anarchism",
+    "description": "Proudhon's original doctrine, denouncing property as theft and advocating free mutual credit, federalism of autonomous communities and possession by use, with strong moral reservations about progress and customs."
+  },
+  {
+    "id": "republicanismo-kantiano",
+    "name": "Kantian Republicanism",
+    "category": "Centre",
+    "description": "Kant's political philosophy, grounding the state's legitimacy in the autonomy of reason and the rule of law, defending a moderate representative republicanism and a federation of free states as the path to perpetual peace."
+  },
+  {
+    "id": "socratismo",
+    "name": "Socratism",
+    "category": "Centre",
+    "description": "Socrates' dialectical method, examining beliefs through rational questioning and the pursuit of virtue, distrustful of mass politics and the rhetoric of demagogues, yet respectful of the city's rule of law."
+  },
+  {
+    "id": "socialismo-marxista",
+    "name": "Marxist Socialism",
+    "category": "Radical Left",
+    "description": "Marx's original doctrine, analyzing history as class struggle and predicting capitalism's overcoming through proletarian revolution, with abolition of private ownership of the means of production and strong criticism of religion."
+  },
+  {
+    "id": "platonismo",
+    "name": "Platonism",
+    "category": "Far Right",
+    "description": "Plato's political philosophy, entrusting the city's government to a philosophical elite formed by virtue and knowledge, with strong control over education, property and customs in the name of justice and social harmony."
   }
 ]

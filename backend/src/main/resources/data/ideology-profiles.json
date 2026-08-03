@@ -2720,7 +2720,7 @@
     }
   },
   {
-    "ideologyId": "republicanismo-aristocratico",
+    "ideologyId": "aristotelismo",
     "vector": {
       "estrutura": 72.5,
       "representacao": 41.2,
@@ -2856,7 +2856,7 @@
     }
   },
   {
-    "ideologyId": "confucionismo-politico",
+    "ideologyId": "confucionismo",
     "vector": {
       "estrutura": 20.0,
       "representacao": 21.2,
@@ -2938,6 +2938,125 @@
       "religiao": 80.0,
       "moral": 55.0,
       "tecnologia": 77.5
+    }
+  },
+  {
+    "ideologyId": "catolicismo",
+    "vector": {
+      "estrutura": 27.5,
+      "representacao": 32.5,
+      "poder": 65.0,
+      "imigracao": 63.7,
+      "diplomacia": 27.5,
+      "intervencao": 66.2,
+      "economia": 63.7,
+      "controle": 57.5,
+      "comercio": 62.5,
+      "religiao": 15.0,
+      "moral": 20.0,
+      "tecnologia": 41.2
+    }
+  },
+  {
+    "ideologyId": "monarquismo-moderador",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 36,
+      "poder": 53.8,
+      "imigracao": 43.8,
+      "diplomacia": 27.5,
+      "intervencao": 48.8,
+      "economia": 57.5,
+      "controle": 65,
+      "comercio": 53.8,
+      "religiao": 26.2,
+      "moral": 33.8,
+      "tecnologia": 65
+    }
+  },
+  {
+    "ideologyId": "mutualismo-proudhoniano",
+    "vector": {
+      "estrutura": 96.2,
+      "representacao": 82.5,
+      "poder": 13.8,
+      "imigracao": 68.8,
+      "diplomacia": 17.5,
+      "intervencao": 81.2,
+      "economia": 72.5,
+      "controle": 40.0,
+      "comercio": 70.0,
+      "religiao": 80.0,
+      "moral": 17.5,
+      "tecnologia": 50.0
+    }
+  },
+  {
+    "ideologyId": "republicanismo-kantiano",
+    "vector": {
+      "estrutura": 26.2,
+      "representacao": 48.8,
+      "poder": 40.0,
+      "imigracao": 33.8,
+      "diplomacia": 23.8,
+      "intervencao": 78.8,
+      "economia": 35.0,
+      "controle": 31.2,
+      "comercio": 26.2,
+      "religiao": 70.0,
+      "moral": 33.8,
+      "tecnologia": 53.8
+    }
+  },
+  {
+    "ideologyId": "socratismo",
+    "vector": {
+      "estrutura": 26.2,
+      "representacao": 41.2,
+      "poder": 58.8,
+      "imigracao": 66.2,
+      "diplomacia": 35.0,
+      "intervencao": 63.7,
+      "economia": 48.8,
+      "controle": 70.0,
+      "comercio": 70.0,
+      "religiao": 45.0,
+      "moral": 31.2,
+      "tecnologia": 36.2
+    }
+  },
+  {
+    "ideologyId": "socialismo-marxista",
+    "vector": {
+      "estrutura": 21.2,
+      "representacao": 72.5,
+      "poder": 40.0,
+      "imigracao": 18.8,
+      "diplomacia": 28.7,
+      "intervencao": 68.8,
+      "economia": 87.5,
+      "controle": 80.0,
+      "comercio": 32.5,
+      "religiao": 87.5,
+      "moral": 68.8,
+      "tecnologia": 62.5
+    }
+  },
+  {
+    "ideologyId": "platonismo",
+    "vector": {
+      "estrutura": 15,
+      "representacao": 11.2,
+      "poder": 85,
+      "imigracao": 77.5,
+      "diplomacia": 53.8,
+      "intervencao": 67.5,
+      "economia": 82.5,
+      "controle": 86.2,
+      "comercio": 86.2,
+      "religiao": 30,
+      "moral": 20,
+      "tecnologia": 23.8
     }
   }
 ]

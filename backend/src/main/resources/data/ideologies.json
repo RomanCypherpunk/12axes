@@ -1438,10 +1438,10 @@
     "personalityId": "franz-ferdinand"
   },
   {
-    "id": "republicanismo-aristocratico",
-    "name": "Republicanismo Aristocrático",
+    "id": "aristotelismo",
+    "name": "Aristotelismo",
     "category": "Centro",
-    "description": "Constituição mista de inspiração aristotélica, que combina elementos monárquicos, aristocráticos e populares para evitar tanto a tirania quanto a democracia radical, reservando a cidadania plena a quem tem virtude, propriedade e formação para deliberar.",
+    "description": "Filosofia política de Aristóteles, que defende uma constituição mista de elementos monárquicos, aristocráticos e populares para evitar tanto a tirania quanto a democracia radical, reservando a cidadania plena a quem tem virtude, propriedade e formação para deliberar.",
     "vector": null,
     "countryId": "republica-de-veneza",
     "personalityId": "aristoteles"
@@ -1510,8 +1510,8 @@
     "personalityId": "sorel"
   },
   {
-    "id": "confucionismo-politico",
-    "name": "Confucionismo Político",
+    "id": "confucionismo",
+    "name": "Confucionismo",
     "category": "Direita",
     "description": "Doutrina que funda a ordem política na virtude do governante, na hierarquia ritual e na piedade filial, defendendo mérito burocrático e educação moral em vez de leis coercitivas ou participação popular.",
     "vector": null,
@@ -1553,5 +1553,68 @@
     "vector": null,
     "countryId": "alemanha",
     "personalityId": "nietzsche"
+  },
+  {
+    "id": "catolicismo",
+    "name": "Catolicismo",
+    "category": "Centro",
+    "description": "Doutrina social da Igreja Católica, que combina moral tradicionalista e defesa da vida com preocupação pela justiça social, subsidiariedade e dignidade do trabalhador, sob a autoridade hierárquica do papado e do direito canônico.",
+    "vector": null,
+    "countryId": "vaticano",
+    "personalityId": "tomas-de-aquino"
+  },
+  {
+    "id": "monarquismo-moderador",
+    "name": "Monarquismo Moderador",
+    "category": "Direita",
+    "description": "Modelo monárquico constitucional brasileiro do século XIX, em que o imperador exerce um quarto Poder Moderador acima dos poderes Executivo, Legislativo e Judiciário, arbitrando conflitos e garantindo estabilidade sobre uma economia agrária.",
+    "vector": null,
+    "countryId": "imperio-do-brasil",
+    "personalityId": "dom-pedro-ii"
+  },
+  {
+    "id": "mutualismo-proudhoniano",
+    "name": "Mutualismo Proudhoniano",
+    "category": "Anarquismo",
+    "description": "Doutrina original de Proudhon, que denuncia a propriedade como roubo e defende crédito mútuo gratuito, federalismo de comunidades autônomas e posse pelo uso, com forte reserva moral diante do progresso e dos costumes.",
+    "vector": null,
+    "countryId": "franca",
+    "personalityId": "proudhon"
+  },
+  {
+    "id": "republicanismo-kantiano",
+    "name": "Republicanismo Kantiano",
+    "category": "Centro",
+    "description": "Filosofia política de Kant, que funda a legitimidade do Estado na autonomia da razão e no império da lei, defendendo um republicanismo representativo moderado e uma federação de Estados livres como caminho para a paz perpétua.",
+    "vector": null,
+    "countryId": "alemanha",
+    "personalityId": "immanuel-kant"
+  },
+  {
+    "id": "socratismo",
+    "name": "Socratismo",
+    "category": "Centro",
+    "description": "Método dialético de Sócrates, que examina crenças pelo questionamento racional e busca da virtude, desconfia da política de massas e da retórica dos demagogos, mas mantém respeito ao império da lei da cidade.",
+    "vector": null,
+    "countryId": "republica-de-veneza",
+    "personalityId": "socrates"
+  },
+  {
+    "id": "socialismo-marxista",
+    "name": "Socialismo Marxista",
+    "category": "Esquerda Radical",
+    "description": "Doutrina original de Marx, que analisa a história como luta de classes e prevê a superação do capitalismo pela revolução do proletariado, com abolição da propriedade privada dos meios de produção e forte crítica à religião.",
+    "vector": null,
+    "countryId": "alemanha",
+    "personalityId": "karl-marx"
+  },
+  {
+    "id": "platonismo",
+    "name": "Platonismo",
+    "category": "Extrema Direita",
+    "description": "Filosofia política de Platão, que confia o governo da cidade a uma elite filosófica formada pela virtude e pelo conhecimento, com forte controle sobre educação, propriedade e costumes em nome da justiça e da harmonia social.",
+    "vector": null,
+    "countryId": "republica-de-veneza",
+    "personalityId": "platao"
   }
 ]
