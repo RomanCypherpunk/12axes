@@ -306,7 +306,7 @@ No prompt do subagente, diga explicitamente que `N` é só para indiferença **g
 "não falou disso" ou "é anacrônico" — e peça que ele **conte os N antes de gravar**.
 
 ### 2. Duplicata de perfil existente
-Um perfil novo que sai ~95% idêntico a outro não acrescenta nada ao catálogo.
+Um perfil novo que sai ~97% idêntico a outro não acrescenta nada ao catálogo.
 
 > "Sindicalismo Revolucionário" saiu 90% igual a `anarcossindicalismo` e `sindicalismo`, ambos já
 > existentes — e só 63% compatível com Sorel, que dá nome à corrente.
@@ -316,6 +316,8 @@ Um perfil novo que sai ~95% idêntico a outro não acrescenta nada ao catálogo.
 > pré-nacional e pré-industrial.
 
 Antes de criar, liste as ideologias vizinhas e diga ao subagente **o que diferencia** a nova delas.
+
+ao final das revisões ou auditorias, se mesmo assim o perfil continuar como uma duplicata de perfis próximos, pergunte ao usuário se deseja continuar mesmo assim.
 
 ### 3. Falso oposto — o mais sutil
 Quando um perfil rejeita um polo, o modelo assume que ele endossa o polo oposto. Mas muitos perfis
