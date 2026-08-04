@@ -48,7 +48,7 @@ WARN_N_AXIS = 0.25       # avisa a partir daqui
 
 # Quao perto uma ideologia pode ficar de outra antes de ser considerada duplicata.
 DUP_WARN = 93.0
-DUP_BLOCK = 95.0
+DUP_BLOCK = 97.0
 # Quao longe o perfil pode ficar da personalidade/ideologia que ele declara representar.
 MISMATCH_WARN = 92.0
 
