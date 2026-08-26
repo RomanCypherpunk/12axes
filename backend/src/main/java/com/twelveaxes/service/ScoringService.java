@@ -48,6 +48,13 @@ public class ScoringService {
                 .map(axis -> toAxisResult(axis, scores.get(axis.id()), normalizedLang))
                 .toList();
     }
+    public List<AxisResult> scoreElection(ResultRequest request) {
+        Map<String, Question> questions = dataService.getElectionQuestions().stream().collect(Collectors.toMap(Question::id, Function.identity()));
+        validateAnswers(request.answers(), questions);
+        Map<String, WeightedScore> scores = new HashMap<>();
+        for (SubmittedAnswer answer : request.answers()) { Question q=questions.get(answer.questionId()); double left=q.agreePole()==Pole.LEFT ? answer.answer().scoreTowardAgreement() : 1-answer.answer().scoreTowardAgreement(); scores.computeIfAbsent(q.axisId(), x -> new WeightedScore()).add(left,q.weight()); }
+        return dataService.getAxes(QuizDataService.LANG_PT).stream().map(axis -> toAxisResult(axis,scores.get(axis.id()),QuizDataService.LANG_PT)).toList();
+    }
 
     // Reconstrói o resultado a partir de um vetor de leftPercent (um valor por
     // eixo, na ordem de axes.json) — usado pelas URLs de resultado compartilhado.

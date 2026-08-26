@@ -1,98 +1,18 @@
 {
-  "estrutura": {
-    "personaBrief": "A proposta mais ousada de Renan Santos é a fusão de milhares de municípios fiscalmente inviáveis, combinada com maior competência da União sobre o modelo de escolas cívico-militares e repasses a prefeitos condicionados a metas — um programa de forte coordenação central sobre estados e municípios.",
-    "answers": {
-      "eleicao_estrutura_01": "D",
-      "eleicao_estrutura_02": "C",
-      "eleicao_estrutura_03": "CT"
-    }
-  },
-  "representacao": {
-    "personaBrief": "Fundador do MBL, movimento central no impeachment de Dilma, Renan Santos apresenta sua candidatura como 'restauração' institucional contra arranjos espúrios da política tradicional, defendendo reformas político-eleitorais, mas o dossiê não detalha posições sobre redesenho de poderes entre Congresso e STF nem sobre anistia aos condenados do 8 de janeiro.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "N",
-      "eleicao_representacao_03": "N"
-    }
-  },
-  "poder": {
-    "personaBrief": "O programa combina liberdade econômica ampla com uma agenda dura de segurança: retomada territorial de áreas dominadas por facções e 'guerra ao crime' desde o primeiro dia de governo, além de apoio a maior disciplina nas escolas.",
-    "answers": {
-      "eleicao_poder_01": "CT",
-      "eleicao_poder_02": "N",
-      "eleicao_poder_03": "N"
-    }
-  },
-  "imigracao": {
-    "personaBrief": "O plano de governo de Renan Santos, resumido no 'Livro Amarelo', não traz propostas específicas sobre imigração; o documento concentra-se em segurança, economia e reforma administrativa.",
-    "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
-    }
-  },
-  "diplomacia": {
-    "personaBrief": "O plano concentra-se em política interna e econômica, sem propostas detalhadas de diplomacia ou defesa amplamente divulgadas; a retórica de 'restauração' nacional volta-se principalmente contra o crime organizado doméstico, tratado como inimigo do Estado desde o primeiro dia de governo.",
-    "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
-    }
-  },
-  "intervencao": {
-    "personaBrief": "O plano defende reduzir a dependência de matérias-primas brutas, industrializando internamente terras raras e minerais estratégicos, com a meta de tornar o Brasil uma das cinco maiores economias do mundo — uma postura nacionalista de desenvolvimento que opera dentro de mercados abertos, não de alinhamento automático a qualquer bloco.",
-    "answers": {
-      "eleicao_intervencao_01": "N",
-      "eleicao_intervencao_02": "N",
-      "eleicao_intervencao_03": "CT"
-    }
-  },
-  "economia": {
-    "personaBrief": "Embora inspirado no liberalismo econômico, o plano rejeita explicitamente 'privatizar tudo', atribuindo ao Estado um papel na coordenação de investimentos estratégicos e no desenvolvimento industrial — um liberalismo moderado, sem menção a expansão de Bolsa Família ou fortalecimento do SUS como prioridade.",
-    "answers": {
-      "eleicao_economia_01": "D",
-      "eleicao_economia_02": "N",
-      "eleicao_economia_03": "N"
-    }
-  },
-  "controle": {
-    "personaBrief": "O plano combina ajuste fiscal e reformas pró-mercado com uma 'estratégia nacional de desenvolvimento' em que o Estado coordena investimentos em terras raras e semicondutores — liberalismo com planejamento estratégico pontual, não um mercado totalmente livre nem controle de preços.",
-    "answers": {
-      "eleicao_controle_01": "N",
-      "eleicao_controle_02": "DT",
-      "eleicao_controle_03": "C"
-    }
-  },
-  "comercio": {
-    "personaBrief": "Renan Santos defende transformar o Brasil de exportador de minério bruto em fabricante de ímãs, semicondutores e baterias — uma estratégia de inserção em cadeias globais de alto valor agregado, favorável ao comércio internacional, mas concentrada em não depender apenas de commodities, sem propor taxação de importados ou preferência a empresas nacionais em compras públicas.",
-    "answers": {
-      "eleicao_comercio_01": "C",
-      "eleicao_comercio_02": "N",
-      "eleicao_comercio_03": "N"
-    }
-  },
-  "religiao": {
-    "personaBrief": "O partido Missão, fundado por Renan Santos, tem no próprio nome uma referência de inspiração religiosa e busca conectar-se com o eleitorado jovem evangélico, embora sua identidade central seja mais política e liberal-conservadora do que confessional.",
-    "answers": {
-      "eleicao_religiao_01": "C",
-      "eleicao_religiao_02": "D",
-      "eleicao_religiao_03": "N"
-    }
-  },
-  "moral": {
-    "personaBrief": "O próprio MBL descreve a orientação de Renan Santos como liberal na economia, mas conservadora em costumes — uma combinação inspirada no modelo de Javier Milei, unindo liberalismo econômico com posições tradicionais em temas de família e valores sociais.",
-    "answers": {
-      "eleicao_moral_01": "DT",
-      "eleicao_moral_02": "D",
-      "eleicao_moral_03": "C"
-    }
-  },
-  "tecnologia": {
-    "personaBrief": "Renan Santos propõe transformar o Brasil em fabricante de ímãs permanentes, semicondutores e baterias, e defende diagnóstico por inteligência artificial no SUS — uma aposta fortemente tecnológica apoiada na segunda maior reserva mundial de terras raras do país, sem posições detalhadas sobre licenciamento ambiental, demarcação indígena ou exploração de petróleo.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
-    }
-  }
+  "candidateId": "renan-santos",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "vector": {"estrutura":33.3,"representacao":91.7,"poder":66.7,"imigracao":75.0,"diplomacia":83.3,"intervencao":25.0,"economia":16.7,"controle":33.3,"comercio":58.3,"religiao":58.3,"moral":25.0,"tecnologia":75.0},
+  "estrutura":{"personaBrief":"Defende pacto federativo, gestão nacional e fusão de municípios inviáveis.","answers":{"eleicao_estrutura_01":"C","eleicao_estrutura_02":"C","eleicao_estrutura_03":"CT"},"evidence":{"eleicao_estrutura_01":{"rationale":"Inferência: autonomia administrativa com coordenação nacional.","level":"inferida","sources":[]},"eleicao_estrutura_02":{"rationale":"Responsabilidade gerencial pressupõe padrões nacionais; extensão setorial é inferida.","level":"partidária","sources":[{"url":"https://livroamarelo.org.br/","accessedAt":"2026-08-26"}]},"eleicao_estrutura_03":{"rationale":"Fusão de municípios inviáveis é proposta expressa.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]}}},
+  "representacao":{"personaBrief":"A trajetória é eleitoral e institucional; rompeu com Bolsonaro criticando o esvaziamento de mecanismos anticorrupção.","answers":{"eleicao_representacao_01":"CT","eleicao_representacao_02":"D","eleicao_representacao_03":"CT"},"evidence":{"eleicao_representacao_01":{"rationale":"Defesa inferida da competição democrática e institucional.","level":"inferida","sources":[]},"eleicao_representacao_02":{"rationale":"Propõe reformas legais, não governo por decreto contra o Congresso.","level":"inferida","sources":[]},"eleicao_representacao_03":{"rationale":"Posição institucional e ruptura com Bolsonaro sustentam proteção ao resultado eleitoral.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]}}},
+  "poder":{"personaBrief":"Promete guerra ao crime organizado, superpresídios e polícia orientada por tecnologia; armas e cannabis não são propostas específicas.","answers":{"eleicao_poder_01":"CT","eleicao_poder_02":"C","eleicao_poder_03":"D"},"evidence":{"eleicao_poder_01":{"rationale":"Guerra ao crime e superpresídios sustentam concordância máxima.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_poder_02":{"rationale":"Inferência liberal-conservadora: facilitação controlada, sem proposta localizada.","level":"inferida","sources":[]},"eleicao_poder_03":{"rationale":"Inferência: foco repressivo não indica apoio à legalização recreativa.","level":"inferida","sources":[]}}},
+  "imigracao":{"personaBrief":"Sem capítulo migratório; respostas são inferências cautelosas da orientação legalista, nacional-desenvolvimentista e de ordem pública.","answers":{"eleicao_imigracao_01":"D","eleicao_imigracao_02":"C","eleicao_imigracao_03":"D"},"evidence":{"eleicao_imigracao_01":{"rationale":"Provável acolhimento condicionado à capacidade estatal, não ampliação forte.","level":"inferida","sources":[]},"eleicao_imigracao_02":{"rationale":"Ênfase em ordem e regularidade favorece maior rigor, sem evidência máxima.","level":"inferida","sources":[]},"eleicao_imigracao_03":{"rationale":"Ênfase cultural nacional torna política bilíngue ampla pouco provável.","level":"inferida","sources":[]}}},
+  "diplomacia":{"personaBrief":"Defende Brasil mais forte por indústria, terras raras e política externa própria, sem abandonar negociação diplomática.","answers":{"eleicao_diplomacia_01":"C","eleicao_diplomacia_02":"D","eleicao_diplomacia_03":"CT"},"evidence":{"eleicao_diplomacia_01":{"rationale":"Brasil poderoso e indústria estratégica sustentam reforço relevante da defesa.","level":"inferida","sources":[]},"eleicao_diplomacia_02":{"rationale":"Política externa própria não implica recusar negociação; há ressalva contra passividade.","level":"inferida","sources":[]},"eleicao_diplomacia_03":{"rationale":"Indústria, terras raras e política externa fortalecida sustentam produção nacional de defesa.","level":"partidária","sources":[{"url":"https://livroamarelo.org.br/","accessedAt":"2026-08-26"}]}}},
+  "intervencao":{"personaBrief":"Rejeita alinhamento automático e defende soberania produtiva, sem compromisso expresso com intervencionismo militar externo.","answers":{"eleicao_intervencao_01":"N","eleicao_intervencao_02":"C","eleicao_intervencao_03":"CT"},"evidence":{"eleicao_intervencao_01":{"rationale":"Ambivalência real: soberania assertiva sem posição sobre tropas e alianças.","level":"inferida","sources":[]},"eleicao_intervencao_02":{"rationale":"Política externa própria torna provável reação firme, mas custos limitam certeza.","level":"inferida","sources":[]},"eleicao_intervencao_03":{"rationale":"Capítulo de terras raras e indústria sustenta proteção estatal forte.","level":"partidária","sources":[{"url":"https://livroamarelo.org.br/","accessedAt":"2026-08-26"}]}}},
+  "economia":{"personaBrief":"Combina ajuste fiscal, produtividade e zonas econômicas especiais com política industrial estratégica.","answers":{"eleicao_economia_01":"D","eleicao_economia_02":"CT","eleicao_economia_03":"D"},"evidence":{"eleicao_economia_01":{"rationale":"Inferência pró-mercado: não defende preservar todas as estatais federais.","level":"inferida","sources":[]},"eleicao_economia_02":{"rationale":"Zonas econômicas, produtividade e Estado enxuto indicam liderança privada.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_economia_03":{"rationale":"Propõe substituir Bolsa Família por trabalho, preservando a pauta de saúde.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]}}},
+  "controle":{"personaBrief":"Defende disciplina fiscal junto de planejamento para IA, energia, infraestrutura e indústria.","answers":{"eleicao_controle_01":"C","eleicao_controle_02":"CT","eleicao_controle_03":"D"},"evidence":{"eleicao_controle_01":{"rationale":"IA, energia, terras raras e indústria são eixos declarados da campanha.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_controle_02":{"rationale":"Inferência da tradição liberal do MBL e foco em equilíbrio fiscal.","level":"inferida","sources":[]},"eleicao_controle_03":{"rationale":"Responsabilidade gerencial e produtividade não indicam controles de preços.","level":"inferida","sources":[]}}},
+  "comercio":{"personaBrief":"Defende capacidade produtiva nacional, com abertura negociada e proteção seletiva a setores estratégicos.","answers":{"eleicao_comercio_01":"C","eleicao_comercio_02":"C","eleicao_comercio_03":"C"},"evidence":{"eleicao_comercio_01":{"rationale":"Abertura negociada é provável, com ressalva a setores estratégicos.","level":"inferida","sources":[]},"eleicao_comercio_02":{"rationale":"Política industrial e terras raras tornam provável proteção seletiva.","level":"partidária","sources":[{"url":"https://livroamarelo.org.br/","accessedAt":"2026-08-26"}]},"eleicao_comercio_03":{"rationale":"Inferência de protecionismo seletivo; não há regra específica de compras.","level":"inferida","sources":[]}}},
+  "religiao":{"personaBrief":"Usa linguagem cultural conservadora, mas não apresenta agenda religiosa explícita ou defesa de Estado confessional.","answers":{"eleicao_religiao_01":"C","eleicao_religiao_02":"C","eleicao_religiao_03":"D"},"evidence":{"eleicao_religiao_01":{"rationale":"Inferência liberal-conservadora de manutenção da isenção, com possíveis limites.","level":"inferida","sources":[]},"eleicao_religiao_02":{"rationale":"Inferência institucionalista: não há defesa de campanha eleitoral em templos.","level":"inferida","sources":[]},"eleicao_religiao_03":{"rationale":"Cultura e disciplina escolar não equivalem a ensino confessional.","level":"inferida","sources":[]}}},
+  "moral":{"personaBrief":"Prioriza disciplina escolar e cultura nacional; não propõe liberalização de aborto ou agenda de diversidade na escola.","answers":{"eleicao_moral_01":"D","eleicao_moral_02":"D","eleicao_moral_03":"C"},"evidence":{"eleicao_moral_01":{"rationale":"A campanha declara manutenção da legislação atual sobre aborto.","level":"direta","sources":[{"url":"https://www.renansantosmbl.com/entrevistas/A4-ll_eCCbM","accessedAt":"2026-08-26"}]},"eleicao_moral_02":{"rationale":"Método fônico, disciplina e identidade nacional sustentam discordância moderada.","level":"partidária","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_moral_03":{"rationale":"Inferência conservadora, sem exclusão expressa de outros arranjos.","level":"inferida","sources":[]}}},
+  "tecnologia":{"personaBrief":"Tecnologia é central: IA, energia, terras raras, agro e indústria; Amazônia protegida é limite ambiental.","answers":{"eleicao_tecnologia_01":"C","eleicao_tecnologia_02":"C","eleicao_tecnologia_03":"D"},"evidence":{"eleicao_tecnologia_01":{"rationale":"Apoia corrida da IA e produtividade, sem aval explícito à eliminação de empregos.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_tecnologia_02":{"rationale":"IA, energia e indústria nacional são propostas centrais; nuclear e biotecnologia são extensão prudente.","level":"partidária","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]},"eleicao_tecnologia_03":{"rationale":"Amazônia protegida coexistindo com energia, agro e indústria indica discordância parcial.","level":"direta","sources":[{"url":"https://www.renanpresidente.com.br/","accessedAt":"2026-08-26"}]}}}
 }

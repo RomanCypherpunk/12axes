@@ -1,98 +1,26 @@
 {
-  "estrutura": {
-    "personaBrief": "O programa de Lula mantém o federalismo vigente, mas reforça a coordenação e a indução federal em segurança, indústria e políticas sociais, com a União articulando estados e municípios em vez de deixar cada ente decidir isoladamente.",
-    "answers": {
-      "eleicao_estrutura_01": "D",
-      "eleicao_estrutura_02": "C",
-      "eleicao_estrutura_03": "N"
-    }
-  },
-  "representacao": {
-    "personaBrief": "A candidatura se apresenta como defesa da democracia diante do 8 de janeiro, defendendo reforma política e transparência orçamentária, mas sem propor mudanças no desenho institucional entre Congresso e STF nem anistia aos condenados pelos atos golpistas.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "N",
-      "eleicao_representacao_03": "CT"
-    }
-  },
-  "poder": {
-    "personaBrief": "O plano de segurança de Lula aposta em prevenção, qualificação de investigações, combate ao tráfico de armas e um novo Ministério da Segurança Pública, combinando Estado mais forte contra o crime organizado com defesa de liberdades civis e direitos individuais.",
-    "answers": {
-      "eleicao_poder_01": "N",
-      "eleicao_poder_02": "D",
-      "eleicao_poder_03": "N"
-    }
-  },
-  "imigracao": {
-    "personaBrief": "O programa trata diretamente da questão migratória, valorizando a tradição de acolhimento humanitário do governo (como a Operação Acolhida) e a integração sul-americana, tanto para imigrantes no Brasil quanto para brasileiros no exterior.",
-    "answers": {
-      "eleicao_imigracao_01": "CT",
-      "eleicao_imigracao_02": "D",
-      "eleicao_imigracao_03": "N"
-    }
-  },
-  "diplomacia": {
-    "personaBrief": "A política externa defendida é universalista e multilateral, aprofundando Mercosul, BRICS e cooperação Sul-Sul, combinada ao fortalecimento da indústria de defesa nacional (caças Gripen, submarinos) como capacidade de dissuasão.",
-    "answers": {
-      "eleicao_diplomacia_01": "C",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "C"
-    }
-  },
-  "intervencao": {
-    "personaBrief": "A soberania nacional é o eixo declarado central do programa de Lula para 2026, exercida via multilateralismo e não isolacionismo, com crítica ao servilismo a interesses estrangeiros em meio às tensões comerciais com os EUA.",
-    "answers": {
-      "eleicao_intervencao_01": "CT",
-      "eleicao_intervencao_02": "DT",
-      "eleicao_intervencao_03": "CT"
-    }
-  },
-  "economia": {
-    "personaBrief": "O programa defende papel ativo do Estado na economia, com volta da Petrobras à distribuição de combustíveis, bancos públicos e investimento público como indutor de crescimento, incluindo ampliação de programas como o Bolsa Família e fortalecimento do SUS.",
-    "answers": {
-      "eleicao_economia_01": "DT",
-      "eleicao_economia_02": "CT",
-      "eleicao_economia_03": "CT"
-    }
-  },
-  "controle": {
-    "personaBrief": "O modelo é de economia mista, com política industrial ativa, metas de investimento público e privado coordenadas, controle da inflação e responsabilidade fiscal e ambiental combinados, e planejamento estatal em setores estratégicos.",
-    "answers": {
-      "eleicao_controle_01": "D",
-      "eleicao_controle_02": "C",
-      "eleicao_controle_03": "D"
-    }
-  },
-  "comercio": {
-    "personaBrief": "O programa defende integração via Mercosul, BRICS e Sul Global, diversificação de parceiros comerciais e redução de dependências estratégicas frente às tarifas dos EUA sob Trump, num modelo de integração seletiva e multilateral.",
-    "answers": {
-      "eleicao_comercio_01": "C",
-      "eleicao_comercio_02": "C",
-      "eleicao_comercio_03": "C"
-    }
-  },
-  "religiao": {
-    "personaBrief": "O governo historicamente equilibra relações com múltiplas denominações religiosas mantendo o Estado formalmente laico, sem pautar a campanha em bandeiras religiosas específicas, buscando apoio tanto evangélico quanto progressista.",
-    "answers": {
-      "eleicao_religiao_01": "N",
-      "eleicao_religiao_02": "N",
-      "eleicao_religiao_03": "N"
-    }
-  },
-  "moral": {
-    "personaBrief": "O PT tem histórico progressista em direitos humanos, diversidade e igualdade de gênero, mas o presidente mantém posição pragmática e pouco explícita sobre temas sensíveis como aborto, para não desgastar sua ampla coalizão com setores conservadores e evangélicos.",
-    "answers": {
-      "eleicao_moral_01": "N",
-      "eleicao_moral_02": "C",
-      "eleicao_moral_03": "D"
-    }
-  },
-  "tecnologia": {
-    "personaBrief": "O programa combina explicitamente soberania tecnológica e digital (inteligência artificial nacional, infraestrutura crítica) com defesa da bioeconomia amazônica e redução do desmatamento, citando queda de 36% nos alertas de desmatamento.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "C",
-      "eleicao_tecnologia_03": "N"
-    }
-  }
+  "candidateId":"lula",
+  "auditedAt":"2026-08-26",
+  "questionSet":"election-questions.json",
+  "candidate":{"name":"Luiz Inácio Lula da Silva","party":"PT","active":true},
+  "sources":[
+    {"url":"https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2024/01/lula-201cnao-ha-perdao-para-quem-atenta-contra-a-democracia","accessedAt":"2026-08-26"},
+    {"url":"https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/%40%40download/file","accessedAt":"2026-08-26"},
+    {"url":"https://www.gov.br/defesa/pt-br/assuntos/copy_of_estado-e-defesa/estrategia-nacional-de-defesa","accessedAt":"2026-08-26"},
+    {"url":"https://www.gov.br/siscomex/pt-br/acordos-comerciais/mercosul-uniao-europeia","accessedAt":"2026-08-26"},
+    {"url":"https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial-pbia","accessedAt":"2026-08-26"}
+  ],
+  "vector":{"estrutura":58.3,"representacao":100.0,"poder":83.3,"imigracao":8.3,"diplomacia":50.0,"intervencao":58.3,"economia":91.7,"controle":83.3,"comercio":75.0,"religiao":66.7,"moral":91.7,"tecnologia":66.7},
+  "estrutura":{"personaBrief":"Defende federalismo cooperativo: coordenação nacional de direitos sociais com execução e participação locais.","answers":{"eleicao_estrutura_01":"C","eleicao_estrutura_02":"C","eleicao_estrutura_03":"D"},"evidence":{"eleicao_estrutura_01":{"rationale":"A descentralização de execução educacional é compatível com federalismo cooperativo, embora prefira coordenação nacional.","level":"inferida","sources":[]},"eleicao_estrutura_02":{"rationale":"Programas federais de saúde, educação e segurança indicam apoio a padrões nacionais sem eliminar os entes.","level":"direta","sources":[{"url":"https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/%40%40download/file","accessedAt":"2026-08-26"}]},"eleicao_estrutura_03":{"rationale":"Fusões impostas contra moradores conflitam com participação e autonomia federativa.","level":"inferida","sources":[]}}},
+  "representacao":{"personaBrief":"A defesa do Estado Democrático de Direito e a punição de ataques golpistas são posições explícitas.","answers":{"eleicao_representacao_01":"CT","eleicao_representacao_02":"DT","eleicao_representacao_03":"CT"},"evidence":{"eleicao_representacao_01":{"rationale":"Trata eleições legítimas e instituições democráticas como inegociáveis.","level":"direta","sources":[{"url":"https://www.gov.br/g20/pt-br/noticias/o-brasil-frustrou-uma-tentativa-de-golpe-o-que-aprendemos","accessedAt":"2026-08-26"}]},"eleicao_representacao_02":{"rationale":"Não defende governo por decretos contra Congresso; sua prática é de articulação legislativa.","level":"inferida","sources":[]},"eleicao_representacao_03":{"rationale":"Defendeu punição e ausência de perdão para ataques à democracia.","level":"direta","sources":[{"url":"https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2024/01/lula-201cnao-ha-perdao-para-quem-atenta-contra-a-democracia","accessedAt":"2026-08-26"}]}}},
+  "poder":{"personaBrief":"Combina repressão ao crime organizado com controle de armas; não endossa legalização recreativa ampla.","answers":{"eleicao_poder_01":"CT","eleicao_poder_02":"D","eleicao_poder_03":"D"},"evidence":{"eleicao_poder_01":{"rationale":"Operações federais integradas contra facções indicam apoio forte ao endurecimento.","level":"direta","sources":[{"url":"https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/%40%40download/file","accessedAt":"2026-08-26"}]},"eleicao_poder_02":{"rationale":"A posição recorrente de controle de armas torna improvável facilitar posse e porte.","level":"partidária","sources":[{"url":"https://pt.org.br/wp-content/uploads/2022/06/diretrizes-programa-governo-2023-2026.pdf","accessedAt":"2026-08-26"}]},"eleicao_poder_03":{"rationale":"A orientação de segurança e saúde é restritiva, sem equivaler a defender penas máximas.","level":"inferida","sources":[]}}},
+  "imigracao":{"personaBrief":"Prioriza acolhimento, regularização e integração de refugiados e migrantes, não deportação punitiva.","answers":{"eleicao_imigracao_01":"CT","eleicao_imigracao_02":"DT","eleicao_imigracao_03":"C"},"evidence":{"eleicao_imigracao_01":{"rationale":"A política federal de acolhimento e interiorização sustenta apoio forte.","level":"direta","sources":[{"url":"https://www.gov.br/mj/pt-br/assuntos/noticias/governo-federal-reforca-acolhimento-e-interiorizacao-de-migrantes-e-refugiados","accessedAt":"2026-08-26"}]},"eleicao_imigracao_02":{"rationale":"Deportação após anos de residência contradiz a orientação humanitária.","level":"inferida","sources":[]},"eleicao_imigracao_03":{"rationale":"Apoio provável a preservação cultural, sem proposta específica de ensino bilíngue universal.","level":"inferida","sources":[]}}},
+  "diplomacia":{"personaBrief":"Privilegia negociação e multilateralismo, mantendo projetos de defesa e indústria militar nacionais.","answers":{"eleicao_diplomacia_01":"C","eleicao_diplomacia_02":"CT","eleicao_diplomacia_03":"C"},"evidence":{"eleicao_diplomacia_01":{"rationale":"Mantém projetos estratégicos, sem defender expansão militar irrestrita.","level":"direta","sources":[{"url":"https://www.gov.br/defesa/pt-br/assuntos/copy_of_estado-e-defesa/estrategia-nacional-de-defesa","accessedAt":"2026-08-26"}]},"eleicao_diplomacia_02":{"rationale":"Sua diplomacia privilegia mediação, paz e solução negociada.","level":"direta","sources":[{"url":"https://funag.gov.br/biblioteca-nova/produto/loc_pdf/303/1/diplomacia_brasileira_para_a_paz","accessedAt":"2026-08-26"}]},"eleicao_diplomacia_03":{"rationale":"A Estratégia de Defesa busca domínio nacional de equipamentos e tecnologias.","level":"direta","sources":[{"url":"https://www.gov.br/defesa/pt-br/assuntos/copy_of_estado-e-defesa/estrategia-nacional-de-defesa","accessedAt":"2026-08-26"}]}}},
+  "intervencao":{"personaBrief":"Combina não alinhamento militar com defesa ativa de soberania econômica brasileira.","answers":{"eleicao_intervencao_01":"CT","eleicao_intervencao_02":"D","eleicao_intervencao_03":"CT"},"evidence":{"eleicao_intervencao_01":{"rationale":"A preferência por paz torna muito provável evitar alianças militares e tropas em guerras externas.","level":"direta","sources":[{"url":"https://funag.gov.br/biblioteca-nova/produto/loc_pdf/303/1/diplomacia_brasileira_para_a_paz","accessedAt":"2026-08-26"}]},"eleicao_intervencao_02":{"rationale":"Retaliação mesmo com prejuízo contrasta com preferência por negociação multilateral.","level":"inferida","sources":[]},"eleicao_intervencao_03":{"rationale":"Soberania e política industrial indicam proteção estatal forte de minerais estratégicos.","level":"inferida","sources":[]}}},
+  "economia":{"personaBrief":"Defende estatais estratégicas, SUS e transferência de renda, com setor privado complementar e regulado.","answers":{"eleicao_economia_01":"CT","eleicao_economia_02":"D","eleicao_economia_03":"CT"},"evidence":{"eleicao_economia_01":{"rationale":"Trata Petrobras, Caixa e Banco do Brasil como instrumentos públicos estratégicos.","level":"direta","sources":[{"url":"https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/%40%40download/file","accessedAt":"2026-08-26"}]},"eleicao_economia_02":{"rationale":"Reconhece empresa privada, mas defende atuação pública além de regular abusos.","level":"inferida","sources":[]},"eleicao_economia_03":{"rationale":"Expansão de Bolsa Família e SUS integra a agenda do governo.","level":"direta","sources":[{"url":"https://www.gov.br/casacivil/pt-br/.arquivos/mensagem-ao-congresso-nacional-2026.pdf/%40%40download/file","accessedAt":"2026-08-26"}]}}},
+  "controle":{"personaBrief":"A estratégia é desenvolvimentista: planejamento, crédito e coordenação estatal em setores estratégicos.","answers":{"eleicao_controle_01":"CT","eleicao_controle_02":"D","eleicao_controle_03":"C"},"evidence":{"eleicao_controle_01":{"rationale":"A política industrial federal coordena inovação, energia e cadeias estratégicas.","level":"direta","sources":[{"url":"https://www.gov.br/mdic/pt-br/assuntos/nova-industria-brasil","accessedAt":"2026-08-26"}]},"eleicao_controle_02":{"rationale":"Critica a autonomia como limite à coordenação econômica, sem propor abolir o Banco Central.","level":"direta","sources":[{"url":"https://www.bcb.gov.br/acessoinformacao/autonomia","accessedAt":"2026-08-26"}]},"eleicao_controle_03":{"rationale":"Aceita intervenção anticrise, sem defender controles gerais e permanentes de preços.","level":"inferida","sources":[]}}},
+  "comercio":{"personaBrief":"Favorece integração negociada, com proteção a emprego, indústria e compras públicas nacionais.","answers":{"eleicao_comercio_01":"C","eleicao_comercio_02":"CT","eleicao_comercio_03":"CT"},"evidence":{"eleicao_comercio_01":{"rationale":"O governo concluiu e defende aprofundar Mercosul-UE com salvaguardas.","level":"direta","sources":[{"url":"https://www.gov.br/siscomex/pt-br/acordos-comerciais/mercosul-uniao-europeia","accessedAt":"2026-08-26"}]},"eleicao_comercio_02":{"rationale":"Política industrial e defesa comercial favorecem proteção de emprego e produção.","level":"direta","sources":[{"url":"https://www.gov.br/mdic/pt-br/assuntos/nova-industria-brasil","accessedAt":"2026-08-26"}]},"eleicao_comercio_03":{"rationale":"Margens de preferência em compras públicas são compatíveis com a política industrial.","level":"partidária","sources":[{"url":"https://www.gov.br/mdic/pt-br/assuntos/nova-industria-brasil","accessedAt":"2026-08-26"}]}}},
+  "religiao":{"personaBrief":"Dialoga com grupos religiosos, preserva imunidades e defende laicidade e pluralismo institucionais.","answers":{"eleicao_religiao_01":"C","eleicao_religiao_02":"CT","eleicao_religiao_03":"D"},"evidence":{"eleicao_religiao_01":{"rationale":"Não propõe revogar imunidade de templos; concordância provável, sem ser pauta central.","level":"inferida","sources":[]},"eleicao_religiao_02":{"rationale":"Estado laico e eleições livres indicam separação firme entre campanha e templos.","level":"partidária","sources":[{"url":"https://pt.org.br/wp-content/uploads/2022/06/diretrizes-programa-governo-2023-2026.pdf","accessedAt":"2026-08-26"}]},"eleicao_religiao_03":{"rationale":"A orientação laica e plural torna improvável priorizar ensino confessional público.","level":"inferida","sources":[]}}},
+  "moral":{"personaBrief":"Apoia direitos das mulheres e diversidade; sobre aborto costuma formular posição gradualista de saúde pública.","answers":{"eleicao_moral_01":"C","eleicao_moral_02":"CT","eleicao_moral_03":"DT"},"evidence":{"eleicao_moral_01":{"rationale":"Defende tratar aborto como saúde pública, mas sem compromisso inequívoco de legalização ampla.","level":"inferida","sources":[]},"eleicao_moral_02":{"rationale":"Políticas contra discriminação tornam muito provável apoiar educação sobre diversidade.","level":"partidária","sources":[{"url":"https://pt.org.br/wp-content/uploads/2022/06/diretrizes-programa-governo-2023-2026.pdf","accessedAt":"2026-08-26"}]},"eleicao_moral_03":{"rationale":"Priorizar apenas uma forma de família conflita com pluralidade e não discriminação.","level":"inferida","sources":[]}}},
+  "tecnologia":{"personaBrief":"Associa IA, ciência e reindustrialização à soberania, emprego e transição ecológica.","answers":{"eleicao_tecnologia_01":"C","eleicao_tecnologia_02":"CT","eleicao_tecnologia_03":"C"},"evidence":{"eleicao_tecnologia_01":{"rationale":"Apoia IA e digitalização, condicionadas a proteção do trabalho e direitos.","level":"direta","sources":[{"url":"https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial-pbia","accessedAt":"2026-08-26"}]},"eleicao_tecnologia_02":{"rationale":"Plano nacional de IA e política científica apontam apoio forte a tecnologia nacional sob regulação.","level":"direta","sources":[{"url":"https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial-pbia","accessedAt":"2026-08-26"}]},"eleicao_tecnologia_03":{"rationale":"Desenvolvimento é condicionado à proteção ambiental, sem equivaler a veto automático.","level":"direta","sources":[{"url":"https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2023/06/lula-lanca-plano-de-acao-para-prevencao-e-controle-do-desmatamento-na-amazonia-legal","accessedAt":"2026-08-26"}]}}}
 }

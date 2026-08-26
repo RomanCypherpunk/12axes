@@ -3,6 +3,8 @@ package com.twelveaxes.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twelveaxes.model.AnswerOption;
+import com.twelveaxes.model.Candidate;
+import com.twelveaxes.model.CandidateProfile;
 import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.Axis;
 import com.twelveaxes.model.Country;
@@ -40,6 +42,9 @@ public class QuizDataService {
     private Map<String, IdeologyProfile> ideologyProfiles;
     private Map<String, CountryProfile> countryProfiles;
     private Map<String, PersonalityProfile> personalityProfiles;
+    private List<Question> electionQuestions;
+    private List<Candidate> candidates;
+    private Map<String, CandidateProfile> candidateProfiles;
 
     // Textos por locale: profiles/vetores são independentes de idioma e ficam fora do bundle.
     private record LocaleBundle(
@@ -93,6 +98,11 @@ public class QuizDataService {
         List<PersonalityProfile> personalityProfileList = readJson("data/personality-profiles.json", new TypeReference<>() {});
         personalityProfiles = personalityProfileList.stream()
                 .collect(Collectors.toUnmodifiableMap(PersonalityProfile::personalityId, Function.identity()));
+        electionQuestions = readJson("data/election-questions.json", new TypeReference<>() {});
+        candidates = readJson("data/candidates.json", new TypeReference<>() {});
+        List<CandidateProfile> candidateProfileList = readJson("data/candidate-profiles.json", new TypeReference<List<CandidateProfile>>() {});
+        candidateProfiles = candidateProfileList.stream()
+                .collect(Collectors.toUnmodifiableMap(CandidateProfile::candidateId, Function.identity()));
 
         LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities);
         LocaleBundle en = buildEnglishBundle(pt);
@@ -102,6 +112,9 @@ public class QuizDataService {
         validateIdeologyProfiles(pt);
         validateIdeologyPersonalityLinks(pt);
         validatePersonalityProfiles(pt);
+        candidates.stream().filter(Candidate::active).forEach(candidate -> {
+            if (!candidateProfiles.containsKey(candidate.id())) throw new IllegalStateException("Candidato ativo sem perfil: " + candidate.id());
+        });
     }
 
     // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
@@ -384,6 +397,11 @@ public class QuizDataService {
     public Map<String, PersonalityProfile> getPersonalityProfiles() {
         return personalityProfiles;
     }
+
+    public QuizPayload getElectionQuiz() { return new QuizPayload("12 Eixos - Eleições 2026", "36 perguntas sobre as eleições brasileiras de 2026.", "short", 36, 3, getAxes(LANG_PT), electionQuestions, answerOptions(LANG_PT)); }
+    public List<Question> getElectionQuestions() { return electionQuestions; }
+    public List<Candidate> getCandidates() { return candidates; }
+    public Map<String, CandidateProfile> getCandidateProfiles() { return candidateProfiles; }
 
     private List<AnswerOption> answerOptions(String lang) {
         return Arrays.stream(AnswerValue.values())

@@ -1,98 +1,123 @@
 {
+  "candidateId": "ronaldo-caiado",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "candidate": {"name": "Ronaldo Caiado", "party": "PSD", "active": true},
+  "sources": [
+    {"url": "https://agencia.go.gov.br/governador-para-fim-de-fundos-constitucionais-com-reforma-tributaria/", "accessedAt": "2026-08-26"},
+    {"url": "https://www.metropoles.com/sao-paulo/vou-rever-a-reforma-tributaria-e-inverter-a-logica-diz-caiado", "accessedAt": "2026-08-26"},
+    {"url": "https://agencia.go.gov.br/goias-adota-ia-no-licenciamento-ambiental/", "accessedAt": "2026-08-26"},
+    {"url": "https://legisla.casacivil.go.gov.br/pesquisa_legislacao/110694/lei-complementar-205", "accessedAt": "2026-08-26"},
+    {"url": "https://agenciacoradenoticias.go.gov.br/missao-oficial-aos-eua-abre-negociacoes-para-projetos-em-ia-data-centers-e-minerais-criticos/", "accessedAt": "2026-08-26"},
+    {"url": "https://www.metropoles.com/brasil/caiado-sai-em-defesa-da-carne-brasileira-vetada-pela-uniao-europeia", "accessedAt": "2026-08-26"}
+  ],
+  "vector": {"estrutura": 91.7, "representacao": 100.0, "poder": 75.0, "imigracao": 58.3, "diplomacia": 83.3, "intervencao": 16.7, "economia": 16.7, "controle": 25.0, "comercio": 33.3, "religiao": 33.3, "moral": 16.7, "tecnologia": 91.7},
   "estrutura": {
-    "personaBrief": "Caiado defende maior protagonismo federal na segurança pública, com um Ministério da Segurança Pública que integraria órgãos federais e estaduais, mantendo porém a execução estadual como ocorreu em Goiás, e preserva a lógica federativa nas demais áreas, com ênfase na autonomia dos estados produtivos.",
-    "answers": {
-      "eleicao_estrutura_01": "N",
-      "eleicao_estrutura_02": "N",
-      "eleicao_estrutura_03": "N"
+    "personaBrief": "Caiado faz da autonomia fiscal e administrativa de estados e municípios uma prioridade explícita, inclusive ao criticar a reforma tributária e a PEC da Segurança.",
+    "answers": {"eleicao_estrutura_01": "CT", "eleicao_estrutura_02": "D", "eleicao_estrutura_03": "DT"},
+    "evidence": {
+      "eleicao_estrutura_01": {"rationale": "Defende que estados e municípios recuperem capacidade de definir tributos, incentivos e políticas; a aplicação à educação é inferência coerente.", "level": "direta", "sources": [{"url": "https://www.metropoles.com/sao-paulo/vou-rever-a-reforma-tributaria-e-inverter-a-logica-diz-caiado", "accessedAt": "2026-08-26"}]},
+      "eleicao_estrutura_02": {"rationale": "A crítica recorrente à centralização federal indica oposição a padrões nacionais rígidos, embora aceite cooperação federativa.", "level": "direta", "sources": [{"url": "https://agencia.go.gov.br/governador-para-fim-de-fundos-constitucionais-com-reforma-tributaria/", "accessedAt": "2026-08-26"}]},
+      "eleicao_estrutura_03": {"rationale": "Não há proposta de fusão compulsória; a defesa do municipalismo torna muito improvável apoiar incorporá-los contra os moradores.", "level": "inferida", "sources": []}
     }
   },
   "representacao": {
-    "personaBrief": "Caiado propõe fim da reeleição para o Executivo e mudança para o sistema distrital misto, mas seu primeiro ato declarado como presidente seria conceder anistia total aos condenados pela tentativa de golpe de 8 de janeiro de 2023, incluindo Bolsonaro.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "N",
-      "eleicao_representacao_03": "DT"
+    "personaBrief": "Apesar de uma agenda de direita e de segurança dura, Caiado se apresenta como institucionalista e defende respeito aos Poderes e às regras eleitorais.",
+    "answers": {"eleicao_representacao_01": "CT", "eleicao_representacao_02": "DT", "eleicao_representacao_03": "CT"},
+    "evidence": {
+      "eleicao_representacao_01": {"rationale": "Não há posição que relativize eleições ou oposição; sua trajetória recente enfatiza instituições e pacificação.", "level": "inferida", "sources": []},
+      "eleicao_representacao_02": {"rationale": "A crítica a centralização e a defesa de competências constitucionais apontam contra contornar o Congresso por decretos.", "level": "inferida", "sources": []},
+      "eleicao_representacao_03": {"rationale": "Aderência ao Estado de Direito e ao resultado eleitoral é inferida de sua postura institucional; não se atribui fala específica sobre esta redação.", "level": "inferida", "sources": []}
     }
   },
   "poder": {
-    "personaBrief": "A segurança pública é o pilar central da candidatura de Caiado: enquadrar PCC e Comando Vermelho como organizações terroristas, endurecer penas, criar um Ministério da Segurança Pública e ampliar a autonomia operacional das forças de segurança, um posicionamento fortemente inclinado ao polo da segurança do Estado.",
-    "answers": {
-      "eleicao_poder_01": "CT",
-      "eleicao_poder_02": "N",
-      "eleicao_poder_03": "N"
+    "personaBrief": "A segurança pública é marca de sua gestão: favorece repressão forte ao crime, defesa armada e posições conservadoras sobre drogas.",
+    "answers": {"eleicao_poder_01": "CT", "eleicao_poder_02": "C", "eleicao_poder_03": "DT"},
+    "evidence": {
+      "eleicao_poder_01": {"rationale": "Sua agenda pública de segurança e combate a organizações criminosas sustenta concordância forte com penas mais severas.", "level": "inferida", "sources": []},
+      "eleicao_poder_02": {"rationale": "Sua posição de direita pró-segurança torna provável apoio à facilitação, sem evidência localizada de apoio irrestrito.", "level": "inferida", "sources": []},
+      "eleicao_poder_03": {"rationale": "A posição conservadora na política de drogas aponta para rejeição da descriminalização recreativa.", "level": "inferida", "sources": []}
     }
   },
   "imigracao": {
-    "personaBrief": "O plano de Caiado trata o tema migratório dentro do capítulo de segurança e controle de fronteiras, associado ao combate ao crime organizado transnacional, sem detalhar uma política de integração cultural de imigrantes.",
-    "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
+    "personaBrief": "Não apresentou agenda migratória nacional detalhada; a estimativa combina acolhimento humanitário moderado com preferência por integração à sociedade brasileira e controle de fronteiras.",
+    "answers": {"eleicao_imigracao_01": "C", "eleicao_imigracao_02": "C", "eleicao_imigracao_03": "D"},
+    "evidence": {
+      "eleicao_imigracao_01": {"rationale": "Sem proposta específica, infere-se apoio a acolhimento regulado, não a expansão irrestrita, pela orientação administrativa de sua gestão.", "level": "inferida", "sources": []},
+      "eleicao_imigracao_02": {"rationale": "O foco em ordem pública e controle territorial torna provável concordância com maior rigor migratório, ressalvado devido processo.", "level": "inferida", "sources": []},
+      "eleicao_imigracao_03": {"rationale": "Sem defesa conhecida de ensino bilíngue para comunidades migrantes, sua ênfase integracionista sugere discordância moderada.", "level": "inferida", "sources": []}
     }
   },
   "diplomacia": {
-    "personaBrief": "Caiado não detalha extensamente política externa, mas defende autonomia estratégica em minerais críticos e terras raras via iniciativa privada, além de maior integração de inteligência e controle de fronteiras, uma diplomacia voltada a interesses econômicos e de segurança nacional.",
-    "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
+    "personaBrief": "Sua agenda externa prioriza competitividade do agronegócio e defesa de interesses brasileiros; também apoia tecnologia e capacidades nacionais de segurança.",
+    "answers": {"eleicao_diplomacia_01": "CT", "eleicao_diplomacia_02": "D", "eleicao_diplomacia_03": "C"},
+    "evidence": {
+      "eleicao_diplomacia_01": {"rationale": "A orientação de segurança dura e soberania produtiva sustenta apoio forte à modernização da defesa; não há meta nacional de gasto localizada.", "level": "inferida", "sources": []},
+      "eleicao_diplomacia_02": {"rationale": "Sua atuação comercial busca negociação, mas a ênfase em assertividade reduz o apoio a prescindir de força militar.", "level": "inferida", "sources": []},
+      "eleicao_diplomacia_03": {"rationale": "Aposta em tecnologia nacional e autonomia estratégica torna provável apoio a capacidades nacionais de drones e defesa.", "level": "inferida", "sources": []}
     }
   },
   "intervencao": {
-    "personaBrief": "Caiado defende autonomia estratégica em setores como minerais críticos e terras raras, reduzindo a dependência externa nessas cadeias, uma postura nacionalista em áreas específicas combinada com abertura ao investimento privado e à parceria internacional no agronegócio.",
-    "answers": {
-      "eleicao_intervencao_01": "N",
-      "eleicao_intervencao_02": "N",
-      "eleicao_intervencao_03": "D"
+    "personaBrief": "Caiado combina abertura a parcerias internacionais com forte defesa de interesses nacionais, especialmente agroexportação e ativos estratégicos.",
+    "answers": {"eleicao_intervencao_01": "D", "eleicao_intervencao_02": "CT", "eleicao_intervencao_03": "C"},
+    "evidence": {
+      "eleicao_intervencao_01": {"rationale": "Não há defesa de intervenção militar externa; porém sua postura assertiva impede classificá-lo como totalmente não intervencionista.", "level": "inferida", "sources": []},
+      "eleicao_intervencao_02": {"rationale": "Defendeu reação ao bloqueio europeu à carne brasileira e proteção ativa de interesses exportadores; generalização para sanções é inferência forte.", "level": "direta", "sources": [{"url": "https://www.metropoles.com/brasil/caiado-sai-em-defesa-da-carne-brasileira-vetada-pela-uniao-europeia", "accessedAt": "2026-08-26"}]},
+      "eleicao_intervencao_03": {"rationale": "Busca parcerias estrangeiras para terras raras, não exclusão delas; ainda assim, a ênfase em ativo estratégico sugere proteção estatal relevante.", "level": "direta", "sources": [{"url": "https://agenciacoradenoticias.go.gov.br/missao-oficial-aos-eua-abre-negociacoes-para-projetos-em-ia-data-centers-e-minerais-criticos/", "accessedAt": "2026-08-26"}]}
     }
   },
   "economia": {
-    "personaBrief": "Caiado defende que a iniciativa privada seja o motor do crescimento, com foco em investimento e inovação, inclusive no desenvolvimento de cadeias nacionais de minerais críticos em parceria com o setor privado, mantendo o SUS na saúde.",
-    "answers": {
-      "eleicao_economia_01": "N",
-      "eleicao_economia_02": "N",
-      "eleicao_economia_03": "C"
+    "personaBrief": "Caiado defende ajuste fiscal, competitividade e protagonismo empresarial, preservando atuação estatal focalizada em saúde, segurança e desenvolvimento regional.",
+    "answers": {"eleicao_economia_01": "D", "eleicao_economia_02": "CT", "eleicao_economia_03": "D"},
+    "evidence": {
+      "eleicao_economia_01": {"rationale": "Sua orientação pró-mercado torna improvável apoio forte ao controle federal permanente das três empresas; não há proposta específica conjunta.", "level": "inferida", "sources": []},
+      "eleicao_economia_02": {"rationale": "A defesa de competitividade, incentivos e participação privada sustenta concordância forte com liderança empresarial, ressalvada regulação.", "level": "inferida", "sources": []},
+      "eleicao_economia_03": {"rationale": "Defende serviços públicos estaduais, mas a prioridade fiscal torna improvável apoiar ampliação simultânea com mais impostos.", "level": "inferida", "sources": []}
     }
   },
   "controle": {
-    "personaBrief": "Caiado propõe um \"Orçamento da Verdade\" para revisar subsídios e gastos públicos, com meta de elevar a taxa de investimento do país principalmente via participação privada, uma orientação de disciplina fiscal e mercado, mas sem o mesmo grau de liberalismo do plano de Zema.",
-    "answers": {
-      "eleicao_controle_01": "N",
-      "eleicao_controle_02": "D",
-      "eleicao_controle_03": "C"
+    "personaBrief": "Sua gestão usa incentivos e planejamento para desenvolvimento regional, mas sua candidatura privilegia ajuste fiscal, competição e menor dirigismo sobre preços e moeda.",
+    "answers": {"eleicao_controle_01": "C", "eleicao_controle_02": "CT", "eleicao_controle_03": "DT"},
+    "evidence": {
+      "eleicao_controle_01": {"rationale": "Defendeu autonomia para incentivos e Goiás aprovou política de IA com fomento público; a escala federal de semicondutores é inferida.", "level": "direta", "sources": [{"url": "https://legisla.casacivil.go.gov.br/pesquisa_legislacao/110694/lei-complementar-205", "accessedAt": "2026-08-26"}]},
+      "eleicao_controle_02": {"rationale": "O compromisso com previsibilidade e ajuste fiscal torna provável defesa máxima da autonomia do Banco Central.", "level": "inferida", "sources": []},
+      "eleicao_controle_03": {"rationale": "Sua orientação pró-mercado e crítica à intervenção centralizada indicam rejeição a controles gerais de preços.", "level": "inferida", "sources": []}
     }
   },
   "comercio": {
-    "personaBrief": "Caiado, historicamente ligado ao agronegócio exportador, tende a favorecer a abertura comercial para produtos agrícolas, ao mesmo tempo em que busca agregar valor doméstico a minerais críticos e terras raras em vez de apenas exportá-los brutos.",
-    "answers": {
-      "eleicao_comercio_01": "C",
-      "eleicao_comercio_02": "N",
-      "eleicao_comercio_03": "N"
+    "personaBrief": "Como representante político do agronegócio goiano, Caiado favorece acesso a mercados e acordos comerciais, mas admite instrumentos nacionais para setores estratégicos.",
+    "answers": {"eleicao_comercio_01": "CT", "eleicao_comercio_02": "D", "eleicao_comercio_03": "C"},
+    "evidence": {
+      "eleicao_comercio_01": {"rationale": "Defendeu explicitamente alargar a parceria Mercosul-UE e combater barreiras à carne brasileira.", "level": "direta", "sources": [{"url": "https://www.metropoles.com/brasil/caiado-sai-em-defesa-da-carne-brasileira-vetada-pela-uniao-europeia", "accessedAt": "2026-08-26"}]},
+      "eleicao_comercio_02": {"rationale": "A orientação exportadora e de competitividade sugere discordância moderada de elevar tarifas amplamente, embora possa aceitar defesa setorial.", "level": "inferida", "sources": []},
+      "eleicao_comercio_03": {"rationale": "A defesa de desenvolvimento regional e indústria nacional sugere preferência moderada em compras públicas, apesar de seu perfil liberal.", "level": "inferida", "sources": []}
     }
   },
   "religiao": {
-    "personaBrief": "Caiado, com base eleitoral tradicionalmente ligada ao agronegócio e a setores conservadores do interior do país, mantém proximidade histórica com valores religiosos tradicionais, sem fazer da religiosidade um eixo central e explícito de sua campanha.",
-    "answers": {
-      "eleicao_religiao_01": "C",
-      "eleicao_religiao_02": "N",
-      "eleicao_religiao_03": "N"
+    "personaBrief": "Caiado dialoga com eleitorado religioso e adota posições sociais conservadoras, sem evidência de propor Estado confessional.",
+    "answers": {"eleicao_religiao_01": "CT", "eleicao_religiao_02": "C", "eleicao_religiao_03": "C"},
+    "evidence": {
+      "eleicao_religiao_01": {"rationale": "Sua inserção em uma direita socialmente conservadora torna provável defesa forte da isenção, mas não foi localizada proposta própria sobre o dispositivo.", "level": "inferida", "sources": []},
+      "eleicao_religiao_02": {"rationale": "Apoia participação pública religiosa, mas a postura institucional sugere aceitar limite específico a campanha dentro de templos.", "level": "inferida", "sources": []},
+      "eleicao_religiao_03": {"rationale": "O conservadorismo moral sugere apoio a oferta confessional facultativa, sem comprovação de proposta nacional explícita.", "level": "inferida", "sources": []}
     }
   },
   "moral": {
-    "personaBrief": "Caiado projeta um perfil conservador tradicional, ligado historicamente à liderança da União Democrática Ruralista (UDR) e a valores do interior do país, com ênfase em ordem, propriedade e endurecimento penal, características associadas a uma agenda de costumes mais tradicionalista.",
-    "answers": {
-      "eleicao_moral_01": "D",
-      "eleicao_moral_02": "D",
-      "eleicao_moral_03": "C"
+    "personaBrief": "Caiado é politicamente conservador em costumes, com tendência a defender proteção à vida, valores familiares e cautela em currículos sobre gênero.",
+    "answers": {"eleicao_moral_01": "DT", "eleicao_moral_02": "D", "eleicao_moral_03": "C"},
+    "evidence": {
+      "eleicao_moral_01": {"rationale": "A posição conservadora torna muito improvável apoio à ampliação da legalização pelo SUS; não se atribui declaração literal não localizada.", "level": "inferida", "sources": []},
+      "eleicao_moral_02": {"rationale": "Provavelmente favorece abordagem restrita e participação das famílias, em vez de inclusão ampla como formulada.", "level": "inferida", "sources": []},
+      "eleicao_moral_03": {"rationale": "Sua agenda conservadora sustenta preferência moderada por políticas voltadas à família tradicional, sem inferir exclusão legal de outros arranjos.", "level": "inferida", "sources": []}
     }
   },
   "tecnologia": {
-    "personaBrief": "Caiado destaca a aplicação de tecnologia e inovação ao agronegócio e à mineração, defendendo o desenvolvimento de cadeias nacionais de processamento de minerais críticos e terras raras, uma aposta tecnológica aplicada diretamente a recursos naturais do país.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
+    "personaBrief": "Caiado promoveu IA, data centers, inovação e parcerias tecnológicas em Goiás; também associa inovação a licenciamento responsável e energia renovável.",
+    "answers": {"eleicao_tecnologia_01": "CT", "eleicao_tecnologia_02": "CT", "eleicao_tecnologia_03": "D"},
+    "evidence": {
+      "eleicao_tecnologia_01": {"rationale": "O governo adotou IA em processos de licenciamento e criou ambiente regulatório permanente; a troca por empregos é inferência sobre sua prioridade modernizadora.", "level": "direta", "sources": [{"url": "https://agencia.go.gov.br/goias-adota-ia-no-licenciamento-ambiental/", "accessedAt": "2026-08-26"}]},
+      "eleicao_tecnologia_02": {"rationale": "A Lei estadual de IA e as missões por projetos tecnológicos demonstram apoio forte à tecnologia nacional; energia nuclear é extensão inferencial.", "level": "direta", "sources": [{"url": "https://legisla.casacivil.go.gov.br/pesquisa_legislacao/110694/lei-complementar-205", "accessedAt": "2026-08-26"}]},
+      "eleicao_tecnologia_03": {"rationale": "Adoção de IA no licenciamento com verificação de APPs e territórios protegidos indica que preservação pode limitar projetos, mas não prevalecer invariavelmente.", "level": "direta", "sources": [{"url": "https://agencia.go.gov.br/goias-adota-ia-no-licenciamento-ambiental/", "accessedAt": "2026-08-26"}]}
     }
   }
 }

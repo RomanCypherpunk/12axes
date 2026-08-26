@@ -1,98 +1,116 @@
 {
+  "candidateId": "augusto-cury",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "candidateStatus": "active",
+  "methodologyNote": "Auditoria individual da candidatura de Augusto Cury (Avante). Respostas sem posição pública específica são inferências declaradas, não promessas atribuídas ao candidato.",
+  "vector": { "estrutura": 41.7, "representacao": 83.3, "poder": 66.7, "imigracao": 25.0, "diplomacia": 16.7, "intervencao": 41.7, "economia": 33.3, "controle": 58.3, "comercio": 25.0, "religiao": 58.3, "moral": 41.7, "tecnologia": 66.7 },
   "estrutura": {
-    "personaBrief": "Cury foca no desenho de poder em Brasília — semipresidencialismo e diálogo institucional entre Poderes — sem detalhar mudanças na relação União-estados-municípios, currículo escolar ou fusão de municípios.",
-    "answers": {
-      "eleicao_estrutura_01": "N",
-      "eleicao_estrutura_02": "N",
-      "eleicao_estrutura_03": "N"
+    "personaBrief": "Cury propõe semipresidencialismo com Congresso protagonista e projeto nacional de longo prazo. Não apresentou defesa de autonomia estadual ampla.",
+    "answers": { "eleicao_estrutura_01": "D", "eleicao_estrutura_02": "C", "eleicao_estrutura_03": "D" },
+    "evidence": {
+      "eleicao_estrutura_01": { "rationale": "Inferência: metas nacionais de educação e telemedicina apontam para coordenação comum, não primazia estadual.", "level": "inferida", "sources": [] },
+      "eleicao_estrutura_02": { "rationale": "O plano propõe metas nacionais de educação e telemedicina; isso é compatível com padrões federais, sem ser defesa literal da pergunta.", "level": "direta", "sources": [{ "url": "https://ladoalado2026.com.br/candidato/escritor-augusto-cury", "accessedAt": "2026-08-26" }] },
+      "eleicao_estrutura_03": { "rationale": "Inferência: sua ênfase em diálogo torna improvável apoiar incorporação coercitiva de municípios contra moradores.", "level": "inferida", "sources": [] }
     }
   },
   "representacao": {
-    "personaBrief": "Cury propõe ampliar os freios institucionais sobre o STF: indicação de ministros pelo Ministério Público e OAB em vez do presidente, fim do mandato vitalício em favor de mandatos de 8 anos, e reserva de vagas para mulheres — medidas que reduzem o poder do Executivo sobre a Corte, mas não tocam no poder do Congresso sobre decisões do STF nem em anistia.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "D",
-      "eleicao_representacao_03": "N"
+    "personaBrief": "Cury defende pacificação, alternância e equilíbrio entre os Poderes; propõe primeiro-ministro chancelado pelo Congresso, não concentração presidencial.",
+    "answers": { "eleicao_representacao_01": "CT", "eleicao_representacao_02": "D", "eleicao_representacao_03": "C" },
+    "evidence": {
+      "eleicao_representacao_01": { "rationale": "Defende liberdade, alternância e oposição como adversária de ideias; preservação eleitoral é consequência direta desses princípios.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_representacao_02": { "rationale": "Propõe primeiro-ministro chancelado pelo Congresso e Legislativo fiscalizador; isso contraria governar por decretos contra o Congresso.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_representacao_03": { "rationale": "Inferência: alternância, instituições harmônicas e rejeição a ditaduras indicam apoio a punir atos contra resultado eleitoral; não há proposta penal localizada.", "level": "inferida", "sources": [] }
     }
   },
   "poder": {
-    "personaBrief": "Cury não centra a candidatura em segurança pública ou armamento, priorizando saúde mental, redução da polarização e prevenção social à violência, incluindo doméstica, em vez de discurso de enfrentamento armado.",
-    "answers": {
-      "eleicao_poder_01": "N",
-      "eleicao_poder_02": "D",
-      "eleicao_poder_03": "N"
+    "personaBrief": "A candidatura combina integração e valorização das polícias com reeducação de adolescentes infratores. Não localizei posições específicas sobre armas ou cannabis.",
+    "answers": { "eleicao_poder_01": "C", "eleicao_poder_02": "N", "eleicao_poder_03": "D" },
+    "evidence": {
+      "eleicao_poder_01": { "rationale": "Propõe Ministério da Segurança e centro nacional de inteligência policial; sustenta concordância moderada, não promessa literal de aumentar penas.", "level": "direta", "sources": [{ "url": "https://ladoalado2026.com.br/candidato/escritor-augusto-cury", "accessedAt": "2026-08-26" }] },
+      "eleicao_poder_02": { "rationale": "Não foi localizada posição sobre facilitar posse ou porte; o conjunto disponível não autoriza inferência segura.", "level": "inferida", "sources": [] },
+      "eleicao_poder_03": { "rationale": "Inferência cautelosa: foco em saúde mental e reeducação, em vez de punição isolada, sugere abertura limitada à descriminalização.", "level": "inferida", "sources": [] }
     }
   },
   "imigracao": {
-    "personaBrief": "O plano de 200 páginas de Cury foca em saúde mental, educação e empreendedorismo, sem propostas específicas sobre política migratória.",
-    "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
+    "personaBrief": "Cury se define por direitos civis e visão de humanidade acima de nacionalidade. O plano não detalha migração, tornando o eixo de baixa confiança.",
+    "answers": { "eleicao_imigracao_01": "C", "eleicao_imigracao_02": "D", "eleicao_imigracao_03": "C" },
+    "evidence": {
+      "eleicao_imigracao_01": { "rationale": "Inferência a partir de direitos civis e visão de humanidade; não há proposta explícita de acolhimento.", "level": "inferida", "sources": [] },
+      "eleicao_imigracao_02": { "rationale": "Inferência: a visão humanista torna improvável deportação rigorosa após anos de residência.", "level": "inferida", "sources": [] },
+      "eleicao_imigracao_03": { "rationale": "Inferência moderada: escuta e direitos civis favorecem acomodação cultural, sem proposta bilíngue expressa.", "level": "inferida", "sources": [] }
     }
   },
   "diplomacia": {
-    "personaBrief": "A 'Nova Diplomacia Econômica' de Cury foca em cooperação tecnológica e comercial para atrair investimento, sem agenda de defesa ou postura militar detalhada.",
-    "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
+    "personaBrief": "A visão externa declarada privilegia paz, liberdade e cooperação. Ele reserva política internacional e Forças Armadas ao presidente, mas não propõe militarização.",
+    "answers": { "eleicao_diplomacia_01": "D", "eleicao_diplomacia_02": "CT", "eleicao_diplomacia_03": "D" },
+    "evidence": {
+      "eleicao_diplomacia_01": { "rationale": "Inferência: seu pacifismo não sugere expansão forte de defesa, apesar de reconhecer as Forças Armadas como atribuição presidencial.", "level": "inferida", "sources": [] },
+      "eleicao_diplomacia_02": { "rationale": "Afirma que só pacifismo e liberdade triunfam; sustenta concordância forte com negociação sem demonstrar força militar.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_diplomacia_03": { "rationale": "Inferência: não há proposta de armas ou drones; a preferência por pacifismo torna apoio forte improvável.", "level": "inferida", "sources": [] }
     }
   },
   "intervencao": {
-    "personaBrief": "Cury evita retórica nacionalista de soberania, propondo uma inserção internacional cooperativa e pragmática voltada a atrair investimento e tecnologia através da 'Nova Diplomacia Econômica'.",
-    "answers": {
-      "eleicao_intervencao_01": "N",
-      "eleicao_intervencao_02": "N",
-      "eleicao_intervencao_03": "N"
+    "personaBrief": "Cury privilegia cooperação e pacificação, mas defende projeto nacional de Estado. Não há proposta específica sobre alianças, sanções ou minerais.",
+    "answers": { "eleicao_intervencao_01": "C", "eleicao_intervencao_02": "C", "eleicao_intervencao_03": "C" },
+    "evidence": {
+      "eleicao_intervencao_01": { "rationale": "Inferência: pacifismo aponta para evitar alianças militares e envio de tropas, sem compromisso literal de não alinhamento.", "level": "inferida", "sources": [] },
+      "eleicao_intervencao_02": { "rationale": "Inferência moderada: projeto nacional sugere reação a coerção externa, atenuada por preferência por cooperação.", "level": "inferida", "sources": [] },
+      "eleicao_intervencao_03": { "rationale": "Inferência: política de Estado e desenvolvimento nacional favorecem proteção moderada de recursos estratégicos.", "level": "inferida", "sources": [] }
     }
   },
   "economia": {
-    "personaBrief": "Cury cria um Ministério da Empresarização e um fundo bilionário para financiar empreendedorismo, apostando fortemente no setor privado como motor de emprego, mas mantém o SUS como sistema público a ser reformado, não substituído nem privatizado.",
-    "answers": {
-      "eleicao_economia_01": "N",
-      "eleicao_economia_02": "N",
-      "eleicao_economia_03": "C"
+    "personaBrief": "Seu modelo é 'intelectualidade capitalista e emocionalidade social': responsabilidade fiscal e empreendedorismo com proteção social e SUS eficiente.",
+    "answers": { "eleicao_economia_01": "D", "eleicao_economia_02": "CT", "eleicao_economia_03": "C" },
+    "evidence": {
+      "eleicao_economia_01": { "rationale": "Cita positivamente privatização de estatais no Irã e prioriza capital privado; isso indica discordância moderada da manutenção de todas sob controle federal.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_economia_02": { "rationale": "Defende liberdade econômica, segurança jurídica, capital privado e empreendedorismo; concordância forte, embora preserve preocupação social.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_economia_03": { "rationale": "Defende manter Bolsa Família com incentivo à formalização e modernizar o SUS; a ressalva fiscal impede concordância total com expansão tributária ampla.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/sabatina-sbt-cury-quer-semipresidencialismo-e-reformar-stf", "accessedAt": "2026-08-26" }] }
     }
   },
   "controle": {
-    "personaBrief": "Cury combina incentivo ao empreendedorismo de mercado com forte presença do planejamento estatal em saúde mental e educação, sem posicionamento ideológico explícito sobre o tamanho ideal do Estado na economia, juros ou tributação.",
-    "answers": {
-      "eleicao_controle_01": "N",
-      "eleicao_controle_02": "N",
-      "eleicao_controle_03": "N"
+    "personaBrief": "Quer indução estatal seletiva em pesquisa, saúde e inovação, mas combate burocracia e defende responsabilidade fiscal e liberdade econômica.",
+    "answers": { "eleicao_controle_01": "C", "eleicao_controle_02": "D", "eleicao_controle_03": "D" },
+    "evidence": {
+      "eleicao_controle_01": { "rationale": "Propõe incentivo à pesquisa, polos tecnológicos regionais e política de Estado; concordância moderada com indução de setores estratégicos.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_controle_02": { "rationale": "Inferência: responsabilidade fiscal e crítica aos juros não equivalem a defender autonomia total do Banco Central.", "level": "inferida", "sources": [] },
+      "eleicao_controle_03": { "rationale": "Inferência: liberdade econômica e segurança jurídica tornam controles de preços improváveis, salvo situações extremas.", "level": "inferida", "sources": [] }
     }
   },
   "comercio": {
-    "personaBrief": "A 'Nova Diplomacia Econômica' de Cury, com aposta no hidrogênio verde, sugere abertura a parcerias comerciais globais em tecnologia e energia, sem detalhar política tarifária específica.",
-    "answers": {
-      "eleicao_comercio_01": "N",
-      "eleicao_comercio_02": "N",
-      "eleicao_comercio_03": "N"
+    "personaBrief": "Busca capital externo, mercado de ações mais profundo e liberdade econômica; não há proposta localizada sobre Mercosul-UE ou tarifas.",
+    "answers": { "eleicao_comercio_01": "C", "eleicao_comercio_02": "D", "eleicao_comercio_03": "D" },
+    "evidence": {
+      "eleicao_comercio_01": { "rationale": "Inferência: segurança jurídica e capital internacional favorecem abertura moderada, sem fala sobre o acordo Mercosul-UE.", "level": "inferida", "sources": [] },
+      "eleicao_comercio_02": { "rationale": "Inferência: competitividade e liberdade econômica tornam proteção tarifária ampla pouco provável.", "level": "inferida", "sources": [] },
+      "eleicao_comercio_03": { "rationale": "Inferência: preferência por eficiência e mercado torna preferência rígida por fornecedor nacional improvável.", "level": "inferida", "sources": [] }
     }
   },
   "religiao": {
-    "personaBrief": "Como psiquiatra e escritor que dialoga com filosofia e espiritualidade, Cury adota tom humanista, não confessional, sem pautar a candidatura em bandeiras religiosas específicas.",
-    "answers": {
-      "eleicao_religiao_01": "N",
-      "eleicao_religiao_02": "N",
-      "eleicao_religiao_03": "N"
+    "personaBrief": "Cury valoriza liberdade religiosa e família, mas formula Estado plural, direitos civis e convivência entre diferentes; não apresentou agenda religiosa específica.",
+    "answers": { "eleicao_religiao_01": "C", "eleicao_religiao_02": "C", "eleicao_religiao_03": "D" },
+    "evidence": {
+      "eleicao_religiao_01": { "rationale": "Inferência: valorização de liberdade religiosa torna provável apoiar a isenção vigente, sem declaração tributária localizada.", "level": "inferida", "sources": [] },
+      "eleicao_religiao_02": { "rationale": "Inferência: política de Estado, não de religião ou partido, favorece separar campanha eleitoral de templos.", "level": "inferida", "sources": [] },
+      "eleicao_religiao_03": { "rationale": "Inferência: pluralismo e direitos civis tornam mais provável ensino não confessional; não há proposta curricular específica.", "level": "inferida", "sources": [] }
     }
   },
   "moral": {
-    "personaBrief": "Cury evita explicitamente pautas de guerra cultural, priorizando pacificação e diálogo; seu plano foca em saúde mental, prevenção ao feminicídio e inclusão de neurodivergentes, sem posição pública central sobre aborto, drogas ou modelo de família.",
-    "answers": {
-      "eleicao_moral_01": "N",
-      "eleicao_moral_02": "N",
-      "eleicao_moral_03": "N"
+    "personaBrief": "Cury defende família, direitos civis e participação das mulheres, sem programa explícito sobre aborto, diversidade sexual ou preferência legal por um arranjo familiar.",
+    "answers": { "eleicao_moral_01": "D", "eleicao_moral_02": "C", "eleicao_moral_03": "C" },
+    "evidence": {
+      "eleicao_moral_01": { "rationale": "Inferência cautelosa: família e prevenção em saúde não sugerem defesa de ampliar aborto pelo SUS; ausência de fala não é neutralidade.", "level": "inferida", "sources": [] },
+      "eleicao_moral_02": { "rationale": "Inferência: direitos civis, escuta de diferenças e educação socioemocional são compatíveis com abordar diversidade.", "level": "inferida", "sources": [] },
+      "eleicao_moral_03": { "rationale": "Inferência: retórica de 'família brasileira' indica valorização moderada de famílias tradicionais, sem exclusão de outros arranjos.", "level": "inferida", "sources": [] }
     }
   },
   "tecnologia": {
-    "personaBrief": "Cury aposta fortemente em tecnologia aplicada à saúde — telemedicina, IA para diagnóstico e plataformas digitais — combinada a forte ênfase na dimensão emocional e humana, mas sem propostas sobre licenciamento ambiental, terras indígenas ou exploração de petróleo.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
+    "personaBrief": "Tecnologia é central: polos de pesquisa, IA, telemedicina e educação digital. Também propõe preservação ambiental e silvicultura.",
+    "answers": { "eleicao_tecnologia_01": "CT", "eleicao_tecnologia_02": "C", "eleicao_tecnologia_03": "C" },
+    "evidence": {
+      "eleicao_tecnologia_01": { "rationale": "Propõe IA na telemedicina, educação e polos tecnológicos; concordância forte, embora tecnologia seja descrita como aliada dos educadores.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_tecnologia_02": { "rationale": "Defende pesquisa, empresas de tecnologia, IA nacional e renováveis; não cita energia nuclear ou biotecnologia literalmente, por isso concordância moderada.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] },
+      "eleicao_tecnologia_03": { "rationale": "Reconhece desmatamento e queimadas e propõe monitoramento e silvicultura; concorda moderadamente com prevalência ambiental em impactos irreversíveis.", "level": "direta", "sources": [{ "url": "https://augustocury.com.br/carta-aberta/", "accessedAt": "2026-08-26" }] }
     }
   }
 }

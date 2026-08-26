@@ -1,98 +1,379 @@
 {
+  "candidateId": "romeu-zema",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "vector": {
+    "estrutura": 50,
+    "representacao": 91.7,
+    "poder": 33.3,
+    "imigracao": 58.3,
+    "diplomacia": 75,
+    "intervencao": 41.7,
+    "economia": 8.3,
+    "controle": 16.7,
+    "comercio": 16.7,
+    "religiao": 33.3,
+    "moral": 8.3,
+    "tecnologia": 83.3
+  },
   "estrutura": {
-    "personaBrief": "Zema centra sua candidatura na redução do tamanho do Estado, com reforma administrativa, corte de ministérios, menos cargos comissionados e reforço da autonomia das polícias e dos estados na segurança, numa lógica geral de descentralização da execução das políticas públicas.",
+    "personaBrief": "Defende autonomia de gestão, responsabilidade fiscal e racionalização administrativa estadual.",
     "answers": {
       "eleicao_estrutura_01": "C",
       "eleicao_estrutura_02": "D",
-      "eleicao_estrutura_03": "N"
+      "eleicao_estrutura_03": "CT"
+    },
+    "evidence": {
+      "eleicao_estrutura_01": {
+        "rationale": "O programa Minas Livre privilegia autonomia e desburocratização estaduais.",
+        "level": "partidária",
+        "sources": [
+          {
+            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_estrutura_02": {
+        "rationale": "Preferência por autonomia estadual; não há posição literal sobre padrões nacionais.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_estrutura_03": {
+        "rationale": "Ajuste fiscal e eficiência administrativa tornam provável apoiar fusões de municípios inviáveis.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "representacao": {
-    "personaBrief": "Zema defende anistia aos condenados pelos atos de 8 de janeiro de 2023 e propõe maior controle institucional sobre o Judiciário, com fim do foro privilegiado para a maioria das autoridades, corregedoria para fiscalizar ministros e critérios técnicos para indicações ao STF e à PGR.",
+    "personaBrief": "Atua por eleições, Legislativo e reformas constitucionais; críticas ao STF não configuram ruptura.",
     "answers": {
-      "eleicao_representacao_01": "C",
+      "eleicao_representacao_01": "CT",
       "eleicao_representacao_02": "D",
-      "eleicao_representacao_03": "DT"
+      "eleicao_representacao_03": "CT"
+    },
+    "evidence": {
+      "eleicao_representacao_01": {
+        "rationale": "Seu discurso de posse comprometeu o governo com colaboração, justiça e transparência.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.agenciaminas.mg.gov.br/governador/pronunciamento/pronunciamento-do-governador-romeu-zema-durante-reuniao-solene-para-posse-na-assembleia-legislativa",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_representacao_02": {
+        "rationale": "Seu governo negocia projetos na Assembleia; não há defesa de poder excepcional por decreto.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_representacao_03": {
+        "rationale": "Como autoridade eleita e institucional, tende a defender punição de atos contra resultado eleitoral.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "poder": {
-    "personaBrief": "Zema combina liberdade individual ampla, como na escolha familiar sobre vacinação, com um plano de segurança duro: redução da maioridade penal, presídios de segurança máxima e enquadramento de facções como PCC e Comando Vermelho como organizações terroristas.",
+    "personaBrief": "Combina endurecimento penal, valorização policial, defesa de armas e conservadorismo em drogas.",
     "answers": {
       "eleicao_poder_01": "CT",
-      "eleicao_poder_02": "N",
+      "eleicao_poder_02": "CT",
       "eleicao_poder_03": "CT"
+    },
+    "evidence": {
+      "eleicao_poder_01": {
+        "rationale": "Plano Implacável inclui redução da maioridade penal e endurecimento contra o crime.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_poder_02": {
+        "rationale": "Plano registrado propõe porte de armas na área rural.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_poder_03": {
+        "rationale": "Não há proposta exclusiva sobre cannabis; oposição forte decorre do conservadorismo penal.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "imigracao": {
-    "personaBrief": "O plano de Zema é citado entre os que tratam do tema migratório junto ao TSE, mas sem detalhamento amplamente divulgado sobre acolhimento, deportação ou integração cultural, já que o eixo central de sua candidatura é a redução do Estado e o ajuste fiscal.",
+    "personaBrief": "Não possui plataforma migratória detalhada; estima-se acolhimento regulado e integração à sociedade comum.",
     "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
+      "eleicao_imigracao_01": "C",
+      "eleicao_imigracao_02": "C",
+      "eleicao_imigracao_03": "D"
+    },
+    "evidence": {
+      "eleicao_imigracao_01": {
+        "rationale": "Apoio moderado inferido de liberalismo e acolhimento humanitário.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_imigracao_02": {
+        "rationale": "Prioridade em legalidade sugere maior rigor, sem fala específica sobre deportação.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_imigracao_03": {
+        "rationale": "Ausência de política multicultural; preferência por integração é inferida.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "diplomacia": {
-    "personaBrief": "O plano de Zema inclui um capítulo de política externa, mas o foco declarado do documento está em ajuste fiscal, segurança e reforma do Estado, sem ênfase explícita em reequipamento militar, serviço militar obrigatório ou missões de paz da ONU.",
+    "personaBrief": "A orientação liberal e de segurança sugere defesa nacional moderada, sem programa externo detalhado.",
     "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
+      "eleicao_diplomacia_01": "C",
+      "eleicao_diplomacia_02": "D",
+      "eleicao_diplomacia_03": "C"
+    },
+    "evidence": {
+      "eleicao_diplomacia_01": {
+        "rationale": "Apoio moderado a defesa decorre de sua agenda de segurança, sem proposta federal literal.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_diplomacia_02": {
+        "rationale": "Sem defesa de escalada militar, negociação é mais provável, mas não forte.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_diplomacia_03": {
+        "rationale": "Apoio moderado à indústria de defesa é inferido da agenda de inovação.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "intervencao": {
-    "personaBrief": "Zema não centra sua candidatura em retórica de soberania nacional; sua diplomacia é mais discreta, voltada a atrair investimento estrangeiro e reduzir o Custo Brasil, o que aponta para maior aproximação com parceiros ocidentais e menor apetite por protagonismo estatal em setores estratégicos.",
+    "personaBrief": "Pragmatismo internacional e soberania econômica, com menor estatismo que nacionalistas econômicos.",
     "answers": {
-      "eleicao_intervencao_01": "D",
+      "eleicao_intervencao_01": "C",
       "eleicao_intervencao_02": "C",
-      "eleicao_intervencao_03": "DT"
+      "eleicao_intervencao_03": "C"
+    },
+    "evidence": {
+      "eleicao_intervencao_01": {
+        "rationale": "Foco doméstico torna provável evitar tropas e alianças externas.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_intervencao_02": {
+        "rationale": "Defesa de interesses nacionais, ponderada por custos comerciais.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_intervencao_03": {
+        "rationale": "Proteção moderada é provável, mas sua visão pró-investimento reduz certeza de controle estatal.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "economia": {
-    "personaBrief": "Zema defende a privatização de todas as estatais, incluindo Petrobras, Caixa e Banco do Brasil, argumentando que o Estado deve se concentrar em funções essenciais como segurança e educação e deixar a atividade econômica ao setor privado.",
+    "personaBrief": "Privatização, ajuste fiscal e protagonismo empresarial são suas posições econômicas mais documentadas.",
     "answers": {
-      "eleicao_economia_01": "CT",
-      "eleicao_economia_02": "D",
+      "eleicao_economia_01": "DT",
+      "eleicao_economia_02": "CT",
       "eleicao_economia_03": "D"
+    },
+    "evidence": {
+      "eleicao_economia_01": {
+        "rationale": "Plano Implacável propõe privatizar Petrobras e Banco do Brasil.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_economia_02": {
+        "rationale": "Minas Livre instituiu garantias à livre iniciativa e desburocratização.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_economia_03": {
+        "rationale": "Prioridade fiscal indica discordância moderada, não oposição a SUS ou proteção social.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "controle": {
-    "personaBrief": "O \"Plano Implacável\" de Zema é a posição mais próxima do livre mercado entre os candidatos: menos Estado, mais privatização, reforma da Previdência, menos regulação e menor carga tributária como caminho para o crescimento.",
+    "personaBrief": "Advoga Estado enxuto, previsibilidade regulatória e livre iniciativa; admite planejamento limitado.",
     "answers": {
-      "eleicao_controle_01": "C",
-      "eleicao_controle_02": "DT",
-      "eleicao_controle_03": "CT"
+      "eleicao_controle_01": "D",
+      "eleicao_controle_02": "CT",
+      "eleicao_controle_03": "D"
+    },
+    "evidence": {
+      "eleicao_controle_01": {
+        "rationale": "Portfólio estadual buscou investimentos, mas a preferência de mercado reduz apoio a financiamento estatal setorial.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.mg.gov.br/planejamento/noticias/gestao/08/2021/em-brasilia-governador-romeu-zema-se-reune-com-bancada-mineira-e-apresenta",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_controle_02": {
+        "rationale": "Autonomia técnica do BC é posição coerente com liberalismo; classificação partidária.",
+        "level": "partidária",
+        "sources": [
+          {
+            "url": "https://www.bcb.gov.br/acessoinformacao/autonomia",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_controle_03": {
+        "rationale": "Minas Livre favorece menor intervenção; rejeição moderada é inferida.",
+        "level": "partidária",
+        "sources": [
+          {
+            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      }
     }
   },
   "comercio": {
-    "personaBrief": "A agenda liberal de Zema, com redução da carga tributária e menor intervenção estatal, tende a favorecer a abertura comercial e a integração da economia brasileira aos mercados internacionais, embora o plano não detalhe extensamente uma política tarifária específica.",
+    "personaBrief": "É pró-mercado e atração de investimentos, com baixa inclinação a tarifas ou preferência compulsória.",
     "answers": {
-      "eleicao_comercio_01": "C",
+      "eleicao_comercio_01": "CT",
       "eleicao_comercio_02": "D",
       "eleicao_comercio_03": "D"
+    },
+    "evidence": {
+      "eleicao_comercio_01": {
+        "rationale": "Abertura comercial é inferida da agenda de livre iniciativa; sem fala sobre acordo específico.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_comercio_02": {
+        "rationale": "Política de liberdade econômica fundamenta rejeição a tarifas amplas.",
+        "level": "partidária",
+        "sources": [
+          {
+            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_comercio_03": {
+        "rationale": "Orientação pró-competição indica discordância moderada de preferência compulsória.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "religiao": {
-    "personaBrief": "Zema conta com base de apoio evangélica relevante em Minas Gerais e mantém proximidade com lideranças religiosas, sem fazer da fé um tema central e recorrente de sua campanha presidencial, concentrada em economia e segurança.",
+    "personaBrief": "Direita liberal-conservadora, mas com gestão declaradamente técnica e laica.",
     "answers": {
-      "eleicao_religiao_01": "C",
-      "eleicao_religiao_02": "N",
-      "eleicao_religiao_03": "N"
+      "eleicao_religiao_01": "CT",
+      "eleicao_religiao_02": "C",
+      "eleicao_religiao_03": "C"
+    },
+    "evidence": {
+      "eleicao_religiao_01": {
+        "rationale": "Não propõe rever isenção; apoio é inferido do alinhamento conservador.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_religiao_02": {
+        "rationale": "Separação administrativa entre culto e campanha é inferida de sua postura institucional.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_religiao_03": {
+        "rationale": "Apoio moderado é inferido, sem defesa direta de ensino confessional.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "moral": {
-    "personaBrief": "Zema defendeu a liberdade das famílias de não vacinar seus filhos como escolha individual, uma posição libertária em bioética, mas seu partido, o Novo, historicamente evita posições oficiais fechadas sobre pautas de costumes como aborto, deixando o tema a critério de cada filiado.",
+    "personaBrief": "Conservador em costumes; a chapa com Eduardo Girão reforça oposição ao aborto e valorização familiar.",
     "answers": {
-      "eleicao_moral_01": "N",
-      "eleicao_moral_02": "N",
-      "eleicao_moral_03": "N"
+      "eleicao_moral_01": "DT",
+      "eleicao_moral_02": "D",
+      "eleicao_moral_03": "CT"
+    },
+    "evidence": {
+      "eleicao_moral_01": {
+        "rationale": "Oposição forte inferida do conservadorismo da candidatura, sem promessa literal.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_moral_02": {
+        "rationale": "Discordância moderada inferida; não há evidência de proibir toda abordagem pedagógica.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_moral_03": {
+        "rationale": "Apoio forte inferido da orientação pró-família, não de medida programática específica.",
+        "level": "inferida",
+        "sources": []
+      }
     }
   },
   "tecnologia": {
-    "personaBrief": "O plano de Zema não detalha extensamente uma agenda tecnológica ou ambiental específica, já que seu foco declarado está em ajuste fiscal, segurança e redução do Estado, com menor ênfase relativa a temas de licenciamento ambiental, demarcação de terras ou exploração de petróleo.",
+    "personaBrief": "Associa inovação e gestão privada à modernização, mas reconhece salvaguardas ambientais após desastres de barragens.",
     "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
+      "eleicao_tecnologia_01": "CT",
+      "eleicao_tecnologia_02": "C",
+      "eleicao_tecnologia_03": "D"
+    },
+    "evidence": {
+      "eleicao_tecnologia_01": {
+        "rationale": "Livre iniciativa e produtividade sustentam apoio forte a automação.",
+        "level": "partidária",
+        "sources": [
+          {
+            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      },
+      "eleicao_tecnologia_02": {
+        "rationale": "Apoio moderado a inovação nacional é inferido; não há plano nuclear específico.",
+        "level": "inferida",
+        "sources": []
+      },
+      "eleicao_tecnologia_03": {
+        "rationale": "Sancionou regras mais rígidas para barragens, mas agenda de desenvolvimento sugere não priorizar ambiente de modo absoluto.",
+        "level": "direta",
+        "sources": [
+          {
+            "url": "https://www.governo.mg.gov.br/Noticias/Detalhe/5180",
+            "accessedAt": "2026-08-26"
+          }
+        ]
+      }
     }
   }
 }

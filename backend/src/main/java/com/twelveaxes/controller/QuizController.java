@@ -13,6 +13,9 @@ import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ScoringService;
+import com.twelveaxes.service.CandidateMatcherService;
+import com.twelveaxes.model.Candidate;
+import com.twelveaxes.model.ElectionResult;
 import jakarta.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
@@ -34,20 +37,27 @@ public class QuizController {
     private final IdeologyMatcherService matcherService;
     private final CountryMatcherService countryMatcherService;
     private final PersonalityMatcherService personalityMatcherService;
+    private final CandidateMatcherService candidateMatcherService;
 
     public QuizController(
             QuizDataService dataService,
             ScoringService scoringService,
             IdeologyMatcherService matcherService,
             CountryMatcherService countryMatcherService,
-            PersonalityMatcherService personalityMatcherService
+            PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
         this.matcherService = matcherService;
         this.countryMatcherService = countryMatcherService;
         this.personalityMatcherService = personalityMatcherService;
+        this.candidateMatcherService = candidateMatcherService;
     }
+
+    @GetMapping("/api/election/quiz") public QuizPayload electionQuiz() { return dataService.getElectionQuiz(); }
+    @GetMapping("/api/election/candidates") public List<Candidate> electionCandidates() { return dataService.getCandidates(); }
+    @PostMapping("/api/election/results") public ElectionResult electionResults(@Valid @RequestBody ResultRequest request) { var axes=scoringService.scoreElection(request); return new ElectionResult(axes,candidateMatcherService.findMatches(axes)); }
+    @GetMapping("/api/election/results/by-axes") public ElectionResult electionByAxes(@RequestParam("v") String values) { var axes=scoringService.scoreFromLeftPercents(parseAxisValues(values), QuizDataService.LANG_PT); return new ElectionResult(axes,candidateMatcherService.findMatches(axes)); }
 
     @GetMapping("/api/quiz")
     public QuizPayload quiz(

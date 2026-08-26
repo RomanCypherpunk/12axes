@@ -4897,6 +4897,16 @@
 }
 
 /* Quiz format selection */
+.election-shell { padding-top: 0; }
+.election-hero { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 48px; align-items: center; }
+.home-hero-copy { max-width: 760px; }
+.election-hero-card { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 30px; border-radius: 22px; color: var(--ink-900); background: linear-gradient(145deg, #ecfdf5, #fff); border: 1px solid rgba(34,197,94,.25); box-shadow: 0 22px 50px -35px rgba(15,23,42,.45); }
+.election-hero-card strong { font: 800 2.25rem/1 var(--font-display); color: var(--green-700); margin-top: 12px; }
+.election-hero-card span { color: var(--ink-500); font-size: .85rem; }
+.election-catalog { padding-top: 40px; }
+.election-match-card { overflow: hidden; }
+.election-match-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; border-radius: 12px; margin-bottom: 14px; background: var(--ink-100); }
+@media (max-width: 760px) { .election-hero { grid-template-columns: 1fr; gap: 26px; } .election-hero-card { grid-template-columns: repeat(3, 1fr); text-align: center; } .election-hero-card strong { font-size: 1.6rem; } }
 .app-shell[data-screen="variant"] {
   min-height: 100dvh;
   height: 100dvh;

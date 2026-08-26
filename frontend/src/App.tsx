@@ -9,6 +9,7 @@ import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/
 import { resolveCountryFlagSrc } from './utils/countryFlags';
 import { resolvePersonalityImageSrc } from './utils/personalityImage';
 import { SupportSection } from './components/SupportSection';
+import ElectionApp from './election/ElectionApp';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
 type ExtendChoice = 'yes' | 'no';
@@ -126,7 +127,7 @@ const TONE_RED_AXES = new Set([
   'tecnologia'
 ]);
 
-export default function App() {
+function MainApp() {
   const [quiz, setQuiz] = useState<QuizPayload | null>(null);
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -1098,6 +1099,10 @@ export default function App() {
       )}
     </main>
   );
+}
+
+export default function App() {
+  return window.location.pathname.replace(/\/+$/, '') .startsWith('/eleicoes2026') ? <ElectionApp /> : <MainApp />;
 }
 
 // Abre a folha de compartilhamento nativa (iPhone/Android) com a imagem do

@@ -103,3 +103,11 @@ export interface QuizResult {
   topCountryMatch: CountryMatch;
   topPersonalityMatch: PersonalityMatch;
 }
+
+export interface Candidate {
+  id: string; name: string; role: string; description: string; party: string; partyName: string;
+  ballotNumber: string; runningMate: string; active: boolean; imagePath: string;
+  imageSourceName?: string; imageSourceUrl?: string; imageNote?: string;
+}
+export interface CandidateMatch extends Candidate { candidateId: string; compatibility: number; }
+export interface ElectionResult { axes: AxisResult[]; matches: CandidateMatch[]; }

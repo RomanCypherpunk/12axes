@@ -1,98 +1,54 @@
 {
-  "estrutura": {
-    "personaBrief": "Flávio Bolsonaro promete cortar ao menos dez ministérios e reformar Poderes e federação sem detalhar publicamente o desenho da divisão de competências entre União, estados e municípios.",
-    "answers": {
-      "eleicao_estrutura_01": "N",
-      "eleicao_estrutura_02": "N",
-      "eleicao_estrutura_03": "N"
-    }
-  },
-  "representacao": {
-    "personaBrief": "Como sucessor político de Jair Bolsonaro, condenado pela tentativa de golpe, Flávio lidera a chapa de continuidade do bolsonarismo e propõe fim da reeleição e reforma do Judiciário, mas não detalha publicamente posição sobre anistia aos condenados de 8 de janeiro.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "N",
-      "eleicao_representacao_03": "N"
-    }
-  },
-  "poder": {
-    "personaBrief": "Flávio Bolsonaro defende revogar o Estatuto do Desarmamento como bandeira de liberdade armada individual, ao mesmo tempo em que propõe um dos planos de segurança mais duros do pleito, com redução da maioridade penal, castração química e fim da progressão de pena em hediondos.",
-    "answers": {
-      "eleicao_poder_01": "CT",
-      "eleicao_poder_02": "CT",
-      "eleicao_poder_03": "CT"
-    }
-  },
-  "imigracao": {
-    "personaBrief": "O plano de Flávio Bolsonaro não traz propostas concretas de política migratória, limitando-se a um discurso favorável à miscigenação e à diversidade cultural como motivo de orgulho nacional, sem detalhamento de política pública.",
-    "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
-    }
-  },
-  "diplomacia": {
-    "personaBrief": "O plano não detalha extensamente política externa, mas dá continuidade à linha do bolsonarismo, historicamente mais alinhada aos Estados Unidos do que a temas específicos de defesa, serviço militar ou missões de paz da ONU.",
-    "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
-    }
-  },
-  "intervencao": {
-    "personaBrief": "A campanha reforça uma linha nacionalista-soberanista em segurança e costumes, com discurso crítico a organismos multilaterais e alinhamento preferencial aos Estados Unidos, mais do que ao não intervencionismo ou ao protagonismo estatal em setores estratégicos.",
-    "answers": {
-      "eleicao_intervencao_01": "D",
-      "eleicao_intervencao_02": "C",
-      "eleicao_intervencao_03": "N"
-    }
-  },
-  "economia": {
-    "personaBrief": "Flávio Bolsonaro propõe reduzir impostos e cortar ministérios, numa agenda pró-mercado e de desregulamentação, embora sem o mesmo detalhamento sobre privatizações amplas visto em outros planos, e sem menção a programas sociais ou saúde pública no dossiê.",
-    "answers": {
-      "eleicao_economia_01": "N",
-      "eleicao_economia_02": "N",
-      "eleicao_economia_03": "N"
-    }
-  },
-  "controle": {
-    "personaBrief": "O plano defende reforma tributária com redução de impostos e menos ministérios, numa agenda de desregulamentação alinhada ao livre mercado, com menos detalhamento sobre privatizações e sem posição explícita sobre autonomia do Banco Central ou intervenção em preços.",
-    "answers": {
-      "eleicao_controle_01": "N",
-      "eleicao_controle_02": "DT",
-      "eleicao_controle_03": "C"
-    }
-  },
-  "comercio": {
-    "personaBrief": "O bolsonarismo historicamente prioriza alinhamento comercial com os Estados Unidos em detrimento de blocos como os BRICS, com ceticismo em relação a acordos multilaterais amplos, combinando abertura seletiva com desconfiança de blocos alternativos ao Ocidente.",
-    "answers": {
-      "eleicao_comercio_01": "D",
-      "eleicao_comercio_02": "N",
-      "eleicao_comercio_03": "N"
-    }
-  },
-  "religiao": {
-    "personaBrief": "A base política da família Bolsonaro tem forte sobreposição histórica com a bancada evangélica e setores religiosos conservadores, refletindo-se na proximidade de Flávio com lideranças religiosas e pautas caras a esse eleitorado.",
-    "answers": {
-      "eleicao_religiao_01": "CT",
-      "eleicao_religiao_02": "D",
-      "eleicao_religiao_03": "C"
-    }
-  },
-  "moral": {
-    "personaBrief": "A campanha dá continuidade à agenda de costumes do bolsonarismo, alinhada a pautas conservadoras da bancada evangélica e de setores tradicionalistas, com forte ênfase em família e endurecimento penal, inclusive para crimes sexuais.",
-    "answers": {
-      "eleicao_moral_01": "DT",
-      "eleicao_moral_02": "DT",
-      "eleicao_moral_03": "CT"
-    }
-  },
-  "tecnologia": {
-    "personaBrief": "O plano propõe ampliar o uso de inteligência artificial nos serviços públicos como medida de modernização administrativa, sem um capítulo amplo dedicado a temas ambientais, licenciamento, mineração ou demarcação de terras indígenas nas informações disponíveis.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
-    }
-  }
+  "candidateId":"flavio-bolsonaro","candidateName":"Flávio Bolsonaro","party":"PL","status":"active","auditedAt":"2026-08-26","questionSet":"election-questions.json",
+  "method":"Respostas prováveis da candidatura, priorizando atuação parlamentar, declarações públicas e linha partidária. Inferências são identificadas e não equivalem a promessa de campanha.",
+  "vector":{"estrutura":41.7,"representacao":33.3,"poder":66.7,"imigracao":58.3,"diplomacia":75.0,"intervencao":25.0,"economia":16.7,"controle":33.3,"comercio":58.3,"religiao":0.0,"moral":0.0,"tecnologia":75.0},
+  "estrutura":{"personaBrief":"Combina defesa de coordenação federal em segurança com valorização da autonomia política dos estados; não há proposta específica de fusão municipal.","answers":{"eleicao_estrutura_01":"C","eleicao_estrutura_02":"C","eleicao_estrutura_03":"C"},"evidence":{
+    "eleicao_estrutura_01":{"rationale":"Inferência moderada: a ênfase federativa da direita bolsonarista torna provável apoio a margem estadual em educação.","level":"inferida","sources":[]},
+    "eleicao_estrutura_02":{"rationale":"A atuação em segurança pública nacional indica apoio a padrões nacionais mínimos.","level":"inferida","sources":[]},
+    "eleicao_estrutura_03":{"rationale":"Inferência de eficiência administrativa; não foi localizada posição específica sobre incorporações municipais contra vontade local.","level":"inferida","sources":[]}}},
+  "representacao":{"personaBrief":"Disputa eleições e atua no Congresso, mas sustenta anistia aos envolvidos nos atos de 8 de janeiro e critica decisões judiciais do caso.","answers":{"eleicao_representacao_01":"C","eleicao_representacao_02":"C","eleicao_representacao_03":"DT"},"evidence":{
+    "eleicao_representacao_01":{"rationale":"A candidatura busca mandato eletivo e não propõe suspensão de eleições competitivas; críticas institucionais impedem CT.","level":"inferida","sources":[]},
+    "eleicao_representacao_02":{"rationale":"Inferência baseada no discurso de bloqueio por Congresso e STF; não há proposta direta de poderes extraordinários por decreto.","level":"inferida","sources":[]},
+    "eleicao_representacao_03":{"rationale":"A defesa política dos envolvidos nos atos de 8 de janeiro torna muito improvável concordar com punição ampla da conduta descrita.","level":"direta","sources":[{"url":"https://legis.senado.leg.br/escriba-servicosweb/sessao/pdf/567687","accessedAt":"2026-08-26"}]}}},
+  "poder":{"personaBrief":"Segurança pública é o núcleo de sua atuação: defende penas mais duras e flexibilização de armas; integra frente contrária à legalização das drogas.","answers":{"eleicao_poder_01":"CT","eleicao_poder_02":"CT","eleicao_poder_03":"DT"},"evidence":{
+    "eleicao_poder_01":{"rationale":"Como presidente da CSP, declarou priorizar projetos que endurecem penas para crimes violentos.","level":"direta","sources":[{"url":"https://www12.senado.leg.br/tv/programas/noticias-1/2025/02/flavio-bolsonaro-quer-endurecimento-das-leis-penais-na-comissao-de-seguranca-publica","accessedAt":"2026-08-26"}]},
+    "eleicao_poder_02":{"rationale":"Defendeu o decreto que flexibilizava cadastro, registro, posse, porte e comercialização de armas.","level":"direta","sources":[{"url":"https://www2.senado.leg.br/bdsf/bitstream/handle/id/558604/2019-06-19.pdf?isAllowed=y&sequence=1","accessedAt":"2026-08-26"}]},
+    "eleicao_poder_03":{"rationale":"Integra frente parlamentar cuja posição declarada é contrária à legalização das drogas.","level":"partidária","sources":[{"url":"https://www12.senado.leg.br/radio/1/noticia/2023/03/13/frentes-evangelica-e-de-recursos-naturais-e-energia-vao-ser-instaladas-esta-semana","accessedAt":"2026-08-26"}]}}},
+  "imigracao":{"personaBrief":"Combina acolhimento emergencial venezuelano com tratamento de fronteiras como questão de segurança; não há proposta sobre educação bilíngue.","answers":{"eleicao_imigracao_01":"C","eleicao_imigracao_02":"C","eleicao_imigracao_03":"D"},"evidence":{
+    "eleicao_imigracao_01":{"rationale":"Apoiou recursos para a Operação Acolhida, afirmando que a ajuda beneficiaria a população de Roraima; indica apoio condicionado ao acolhimento.","level":"direta","sources":[{"url":"https://www12.senado.leg.br/radio/1/noticia/2019/05/02/mecias-de-jesus-diz-que-governo-federal-deveria-liberar-dinheiro-para-roraima-e-nao-para-venezuelanos","accessedAt":"2026-08-26"}]},
+    "eleicao_imigracao_02":{"rationale":"Em debate no Senado, associou a fronteira venezuelana à entrada de criminosos; maior rigor é inferência dessa posição.","level":"inferida","sources":[]},
+    "eleicao_imigracao_03":{"rationale":"Inferência pela prioridade a integração nacional e controle de fronteiras; não há fala sobre ensino bilíngue público.","level":"inferida","sources":[]}}},
+  "diplomacia":{"personaBrief":"A linha bolsonarista é pró-defesa, alinhada ao Ocidente e favorável a capacitação militar nacional, sem propor intervenção militar brasileira em guerras externas.","answers":{"eleicao_diplomacia_01":"C","eleicao_diplomacia_02":"D","eleicao_diplomacia_03":"C"},"evidence":{
+    "eleicao_diplomacia_01":{"rationale":"Seu projeto voltado à indústria de defesa torna provável apoio a maior investimento militar, sem prova de valor orçamentário específico.","level":"inferida","sources":[]},
+    "eleicao_diplomacia_02":{"rationale":"A ênfase em dissuasão e alinhamento geopolítico sugere discordância parcial de resolver conflitos sem demonstrar força militar.","level":"inferida","sources":[]},
+    "eleicao_diplomacia_03":{"rationale":"É autor de projeto para fomentar fábricas civis de armas e munições e a indústria de defesa.","level":"direta","sources":[{"url":"https://www12.senado.leg.br/ecidadania/visualizacaomateria?id=135687","accessedAt":"2026-08-26"}]}}},
+  "intervencao":{"personaBrief":"Tende ao nacionalismo soberanista e à resposta firme a pressões externas, mas não apresenta plataforma de envio de tropas ou alianças militares formais.","answers":{"eleicao_intervencao_01":"D","eleicao_intervencao_02":"C","eleicao_intervencao_03":"C"},"evidence":{
+    "eleicao_intervencao_01":{"rationale":"Apesar de alinhamento pró-Ocidente, a tradição bolsonarista não defende compromissos militares externos permanentes; por isso D, não DT.","level":"inferida","sources":[]},
+    "eleicao_intervencao_02":{"rationale":"Inferência da defesa recorrente de soberania nacional; não há posição sobre o cenário tarifário exato.","level":"inferida","sources":[]},
+    "eleicao_intervencao_03":{"rationale":"A defesa de indústria nacional de defesa sustenta inferência de proteção a ativos minerais estratégicos.","level":"inferida","sources":[]}}},
+  "economia":{"personaBrief":"Defende iniciativa privada, redução de interferência estatal e autonomia monetária; em estatais estratégicas, o histórico bolsonarista admite controle político.","answers":{"eleicao_economia_01":"D","eleicao_economia_02":"CT","eleicao_economia_03":"D"},"evidence":{
+    "eleicao_economia_01":{"rationale":"Inferência de sua defesa de livre iniciativa; não há posição presidencial específica para o destino conjunto das três estatais.","level":"inferida","sources":[]},
+    "eleicao_economia_02":{"rationale":"Defendendo autonomia do BC, afirmou que o Estado não deve atrapalhar quem gera empregos.","level":"direta","sources":[{"url":"https://www12.senado.leg.br/noticias/materias/2019/03/07/autonomia-do-banco-central-volta-a-ser-debatida-no-senado","accessedAt":"2026-08-26"}]},
+    "eleicao_economia_03":{"rationale":"Inferência da prioridade a redução de impostos e menor Estado; não equivale a defender corte de programas existentes.","level":"inferida","sources":[]}}},
+  "controle":{"personaBrief":"Defende autonomia robusta do Banco Central e menor interferência política na economia, mas aceita políticas nacionais para setores de defesa e segurança.","answers":{"eleicao_controle_01":"C","eleicao_controle_02":"CT","eleicao_controle_03":"D"},"evidence":{
+    "eleicao_controle_01":{"rationale":"A autoria de projeto para fomentar indústria de defesa permite inferir apoio a financiamento de setores estratégicos.","level":"inferida","sources":[]},
+    "eleicao_controle_02":{"rationale":"Defendeu repetidamente concluir a autonomia do BC e descreveu-a como proteção contra interferência política.","level":"direta","sources":[{"url":"https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/12775","accessedAt":"2026-08-26"}]},
+    "eleicao_controle_03":{"rationale":"Inferência consistente com autonomia monetária e defesa de preços de mercado; não há proposta sobre tabelamento em crises.","level":"inferida","sources":[]}}},
+  "comercio":{"personaBrief":"Combina abertura comercial pró-Ocidente com nacionalismo econômico e apoio à indústria brasileira; não equivale a globalismo irrestrito.","answers":{"eleicao_comercio_01":"C","eleicao_comercio_02":"C","eleicao_comercio_03":"C"},"evidence":{
+    "eleicao_comercio_01":{"rationale":"A diplomacia econômica bolsonarista apoiou acordos de livre comércio; não há declaração específica sobre o texto de 2026.","level":"inferida","sources":[]},
+    "eleicao_comercio_02":{"rationale":"A defesa de indústria nacional de defesa sustenta inferência de proteção setorial a produção e emprego brasileiros.","level":"inferida","sources":[]},
+    "eleicao_comercio_03":{"rationale":"Inferência de nacionalismo econômico moderado e preferência por fornecedores nacionais em setores estratégicos.","level":"inferida","sources":[]}}},
+  "religiao":{"personaBrief":"Vincula-se explicitamente a valores judaico-cristãos, à agenda evangélica e à mobilização religiosa conservadora na política.","answers":{"eleicao_religiao_01":"CT","eleicao_religiao_02":"DT","eleicao_religiao_03":"CT"},"evidence":{
+    "eleicao_religiao_01":{"rationale":"Sua vinculação à agenda evangélica sustenta forte concordância; não foi localizada proposta própria sobre isenção tributária.","level":"partidária","sources":[{"url":"https://www12.senado.leg.br/radio/1/noticia/2023/03/13/frentes-evangelica-e-de-recursos-naturais-e-energia-vao-ser-instaladas-esta-semana","accessedAt":"2026-08-26"}]},
+    "eleicao_religiao_02":{"rationale":"Em fala sobre programa partidário, colocou valores judaico-cristãos como pautas claras; oposição à vedação de campanha em templos é inferida.","level":"partidária","sources":[{"url":"https://www2.senado.leg.br/bdsf/bitstream/handle/id/645122/noticia.html?isAllowed=y&sequence=1","accessedAt":"2026-08-26"}]},
+    "eleicao_religiao_03":{"rationale":"A plataforma valoriza ensino alinhado a crenças dos pais e agenda religiosa conservadora.","level":"partidária","sources":[{"url":"https://www2.senado.leg.br/bdsf/bitstream/handle/id/645122/noticia.html?isAllowed=y&sequence=1","accessedAt":"2026-08-26"}]}}},
+  "moral":{"personaBrief":"Declara-se conservador, contrário ao aborto e à chamada ideologia de gênero, com defesa explícita de valores familiares tradicionais.","answers":{"eleicao_moral_01":"DT","eleicao_moral_02":"DT","eleicao_moral_03":"CT"},"evidence":{
+    "eleicao_moral_01":{"rationale":"Em pronunciamento, afirmou que ser contra o aborto é uma das bandeiras que o unem a Eduardo Girão.","level":"direta","sources":[{"url":"https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/pronunciamento/506928","accessedAt":"2026-08-26"}]},
+    "eleicao_moral_02":{"rationale":"Em fala sobre programa partidário, incluiu oposição à ideologia de gênero e defesa do poder dos pais sobre a escola.","level":"direta","sources":[{"url":"https://www2.senado.leg.br/bdsf/bitstream/handle/id/645122/noticia.html?isAllowed=y&sequence=1","accessedAt":"2026-08-26"}]},
+    "eleicao_moral_03":{"rationale":"A mesma formulação pública coloca família e valores judaico-cristãos como eixo da plataforma.","level":"direta","sources":[{"url":"https://www2.senado.leg.br/bdsf/bitstream/handle/id/645122/noticia.html?isAllowed=y&sequence=1","accessedAt":"2026-08-26"}]}}},
+  "tecnologia":{"personaBrief":"É favorável à modernização produtiva e à tecnologia nacional de defesa, mas sua agenda também valoriza segurança energética e interesses econômicos tradicionais.","answers":{"eleicao_tecnologia_01":"C","eleicao_tecnologia_02":"C","eleicao_tecnologia_03":"D"},"evidence":{
+    "eleicao_tecnologia_01":{"rationale":"Inferência de defesa de livre iniciativa e produtividade; não há posição direta sobre substituição de empregos por IA.","level":"inferida","sources":[]},
+    "eleicao_tecnologia_02":{"rationale":"O projeto para fomentar indústria nacional de armas e munições sustenta apoio a capacidade tecnológica nacional, sem citar todos os setores da pergunta.","level":"inferida","sources":[]},
+    "eleicao_tecnologia_03":{"rationale":"Orientação pró-exploração e segurança energética torna improvável que preservação sempre prevaleça sobre projetos tecnológicos irreversíveis.","level":"inferida","sources":[]}}},
+  "evidenceSummary":{"direta":10,"partidária":4,"inferida":22,"lowConfidenceAxes":["estrutura","representacao","intervencao","comercio","tecnologia"]}
 }

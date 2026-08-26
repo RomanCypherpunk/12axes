@@ -1,0 +1,114 @@
+{
+  "candidateId": "samara-martins",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "vector": { "estrutura": 41.7, "representacao": 91.7, "poder": 50.0, "imigracao": 8.3, "diplomacia": 33.3, "intervencao": 33.3, "economia": 100.0, "controle": 100.0, "comercio": 91.7, "religiao": 83.3, "moral": 100.0, "tecnologia": 50.0 },
+  "estrutura": {
+    "personaBrief": "A candidatura da UP combina política nacional de educação e direitos sociais com execução descentralizada junto a estados e municípios.",
+    "answers": { "eleicao_estrutura_01": "D", "eleicao_estrutura_02": "CT", "eleicao_estrutura_03": "DT" },
+    "evidence": {
+      "eleicao_estrutura_01": { "rationale": "Inferência: o plano prevê parceria descentralizada, mas defende sistema nacional de educação, não divergências estaduais amplas.", "level": "inferida", "sources": [] },
+      "eleicao_estrutura_02": { "rationale": "A UP propõe política nacional de educação e universalização de saúde e seguridade, indicando padrões federais de direitos sociais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_estrutura_03": { "rationale": "Inferência: a ênfase em conselhos, plebiscitos e poder popular torna improvável apoiar incorporação municipal contra moradores.", "level": "inferida", "sources": [] }
+    }
+  },
+  "representacao": {
+    "personaBrief": "Samara se apresenta como candidata antifascista e porta-voz de um programa de democracia direta, participação popular e defesa das liberdades democráticas.",
+    "answers": { "eleicao_representacao_01": "CT", "eleicao_representacao_02": "D", "eleicao_representacao_03": "CT" },
+    "evidence": {
+      "eleicao_representacao_01": { "rationale": "O programa da chapa de 2022, da qual Samara era vice, afirma defesa das liberdades democráticas contra ameaças golpistas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_representacao_02": { "rationale": "Inferência: a proposta de constituinte e participação direta admite mudanças institucionais, mas privilegia consultas e conselhos, não decretismo presidencial.", "level": "inferida", "sources": [] },
+      "eleicao_representacao_03": { "rationale": "O documento condena ataques à lisura das urnas e ameaças golpistas, defendendo derrotá-las nas ruas e nas urnas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "poder": {
+    "personaBrief": "Samara propõe segurança baseada em direitos sociais e desmilitarização policial, com inteligência contra crime organizado, rejeitando endurecimento penal como solução central.",
+    "answers": { "eleicao_poder_01": "D", "eleicao_poder_02": "DT", "eleicao_poder_03": "C" },
+    "evidence": {
+      "eleicao_poder_01": { "rationale": "Ela afirma que endurecer leis e encarcerar mais não reduziu a insegurança; defende prevenção social e inteligência contra crime organizado.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
+      "eleicao_poder_02": { "rationale": "Inferência: a proposta de desmilitarizar polícias e combater a lógica do inimigo interno é incompatível com ampliar armas civis.", "level": "inferida", "sources": [] },
+      "eleicao_poder_03": { "rationale": "Ela cita a mobilização que alterou a Lei de Drogas e critica respostas penais; isso indica apoio provável à descriminalização, sem fala literal sobre uso recreativo.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Não há proposta migratória específica publicada; o enquadramento internacionalista, antidiscriminatório e de solidariedade entre povos orienta estas inferências.",
+    "answers": { "eleicao_imigracao_01": "CT", "eleicao_imigracao_02": "DT", "eleicao_imigracao_03": "C" },
+    "evidence": {
+      "eleicao_imigracao_01": { "rationale": "Inferência a partir da defesa de solidariedade e autodeterminação dos povos; não há compromisso migratório específico localizado.", "level": "inferida", "sources": [] },
+      "eleicao_imigracao_02": { "rationale": "Inferência: a defesa de direitos universais, não discriminação e oposição à repressão torna deportação rigorosa improvável.", "level": "inferida", "sources": [] },
+      "eleicao_imigracao_03": { "rationale": "Inferência: o programa defende escolas diferenciadas e línguas indígenas, sinalizando valorização de pluralidade linguística e cultural.", "level": "inferida", "sources": [] }
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "A política externa proposta prioriza cooperação, integração regional e autonomia frente ao imperialismo, ao lado de industrialização e soberania tecnológica nacionais.",
+    "answers": { "eleicao_diplomacia_01": "D", "eleicao_diplomacia_02": "CT", "eleicao_diplomacia_03": "C" },
+    "evidence": {
+      "eleicao_diplomacia_01": { "rationale": "O programa prioriza cooperação e rejeita guerras imperialistas; não apresenta expansão forte de orçamento militar.", "level": "inferida", "sources": [] },
+      "eleicao_diplomacia_02": { "rationale": "Samara declarou defender relações de cooperação; o programa propõe integração regional e relações multilaterais.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
+      "eleicao_diplomacia_03": { "rationale": "Inferência: industrialização, soberania e redução da dependência tecnológica sugerem apoio moderado a tecnologias nacionais de defesa, sem defesa literal de armas.", "level": "inferida", "sources": [] }
+    }
+  },
+  "intervencao": {
+    "personaBrief": "A candidatura rejeita submissão externa e defende soberania econômica, mas sua política externa é cooperativa e não prevê intervencionismo militar brasileiro.",
+    "answers": { "eleicao_intervencao_01": "CT", "eleicao_intervencao_02": "CT", "eleicao_intervencao_03": "CT" },
+    "evidence": {
+      "eleicao_intervencao_01": { "rationale": "A defesa de cooperação e autodeterminação dos povos torna provável evitar alianças militares e envio de tropas.", "level": "inferida", "sources": [] },
+      "eleicao_intervencao_02": { "rationale": "O programa prega independência frente ao imperialismo e anulação de acordos contrários à soberania.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_intervencao_03": { "rationale": "Samara defende nacionalização das riquezas estratégicas; o programa confirma monopólio público em áreas estratégicas.", "level": "direta", "sources": [{ "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/politica/audio/2026-07/unidade-popular-oficializa-candidatura-de-samara-martins-presidencia", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "economia": {
+    "personaBrief": "Samara defende reestatização, nacionalização de riquezas, SUS universal e orçamento social, contrapondo-se à privatização de setores estratégicos.",
+    "answers": { "eleicao_economia_01": "CT", "eleicao_economia_02": "DT", "eleicao_economia_03": "CT" },
+    "evidence": {
+      "eleicao_economia_01": { "rationale": "A candidata defende reestatizar empresas privatizadas e o programa propõe monopólios públicos em setores estratégicos.", "level": "direta", "sources": [{ "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/unidade-popular-formaliza-candidatura-de-samara-martins-presidente", "accessedAt": "2026-08-26" }] },
+      "eleicao_economia_02": { "rationale": "A posição contra privatização da saúde e pela reestatização conflita com atribuir liderança dos serviços à iniciativa privada.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
+      "eleicao_economia_03": { "rationale": "Ela propõe redirecionar orçamento para saúde e educação e fortalecer o SUS.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "controle": {
+    "personaBrief": "O programa propõe planificação econômica, controle popular do Banco Central, política industrial ativa e controle de preços para atender necessidades sociais.",
+    "answers": { "eleicao_controle_01": "CT", "eleicao_controle_02": "DT", "eleicao_controle_03": "CT" },
+    "evidence": {
+      "eleicao_controle_01": { "rationale": "O programa prevê planificação e política industrial ativa com financiamento e P&D em semicondutores, saúde, software e energias limpas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_controle_02": { "rationale": "O texto propõe controle estatal e popular do Banco Central, o oposto de autonomia total.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_controle_03": { "rationale": "O programa propõe gestão econômica para estabilidade de preços e poder de compra popular.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "comercio": {
+    "personaBrief": "A candidatura apoia cooperação regional, mas quer comércio exterior sob órgãos estatais, industrialização nacional e redução da dependência externa.",
+    "answers": { "eleicao_comercio_01": "D", "eleicao_comercio_02": "CT", "eleicao_comercio_03": "CT" },
+    "evidence": {
+      "eleicao_comercio_01": { "rationale": "A UP defende integração regional, mas condiciona comércio à soberania e ao controle estatal; expor setores nacionais é improvável.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_comercio_02": { "rationale": "A política industrial, redução da dependência externa e controle estatal do comércio exterior sustentam proteção à indústria e emprego nacionais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_comercio_03": { "rationale": "O programa privilegia produção nacional, economia local e controle estatal; preferência em compras públicas é inferência forte.", "level": "inferida", "sources": [] }
+    }
+  },
+  "religiao": {
+    "personaBrief": "A UP defende liberdade religiosa e combate à discriminação, sem propor que instituições religiosas organizem o Estado ou a escola pública.",
+    "answers": { "eleicao_religiao_01": "D", "eleicao_religiao_02": "C", "eleicao_religiao_03": "DT" },
+    "evidence": {
+      "eleicao_religiao_01": { "rationale": "Não há proposta tributária específica sobre templos; a discordância moderada é inferida da tributação progressiva e de Estado laico.", "level": "inferida", "sources": [] },
+      "eleicao_religiao_02": { "rationale": "A defesa de liberdade religiosa e democratização política indica separação institucional; a aplicação a campanhas em templos é inferida.", "level": "inferida", "sources": [] },
+      "eleicao_religiao_03": { "rationale": "O programa propõe educação pública, gratuita e científica; não sustenta ensino confessional.", "level": "inferida", "sources": [] }
+    }
+  },
+  "moral": {
+    "personaBrief": "Samara é dirigente de movimentos de mulheres negras e sua plataforma defende igualdade de gênero, direitos LGBT e legalização do aborto como saúde pública.",
+    "answers": { "eleicao_moral_01": "CT", "eleicao_moral_02": "CT", "eleicao_moral_03": "DT" },
+    "evidence": {
+      "eleicao_moral_01": { "rationale": "O programa da chapa de que Samara foi vice defende descriminalização e legalização do aborto como saúde pública.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_moral_02": { "rationale": "Samara defende educação sobre igualdade de gênero nas escolas e combate à misoginia.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
+      "eleicao_moral_03": { "rationale": "O programa defende direitos iguais, combate à LGBTfobia e cuidado infantil como responsabilidade social, sem arranjo familiar privilegiado.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "A proposta combina soberania tecnológica e política industrial com controle popular da pesquisa, energias renováveis e proteção forte da natureza.",
+    "answers": { "eleicao_tecnologia_01": "C", "eleicao_tecnologia_02": "C", "eleicao_tecnologia_03": "CT" },
+    "evidence": {
+      "eleicao_tecnologia_01": { "rationale": "A UP defende industrialização e tecnologia, mas também garantia de emprego e redução de jornada; concordância moderada com automação substitutiva é inferida.", "level": "inferida", "sources": [] },
+      "eleicao_tecnologia_02": { "rationale": "O programa prevê ciência, tecnologia, semicondutores, fármacos e energias limpas para soberania; a inclusão de nuclear limita a concordância.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_tecnologia_03": { "rationale": "O programa defende proibir destruição de florestas, proteção da natureza e transição energética que evite catástrofes ambientais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
+    }
+  }
+}

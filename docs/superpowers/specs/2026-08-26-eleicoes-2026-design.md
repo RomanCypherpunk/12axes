@@ -96,7 +96,6 @@ instrumento não empurre o usuário a um candidato.
 | `romeu-zema` | Romeu Zema | Novo | 30 | Eduardo Girão |
 | `renan-santos` | Renan Santos | Missão | 14 | Coronel Medina |
 | `augusto-cury` | Augusto Cury | Avante | 70 | Júlio Delgado |
-| `pablo-marcal` | Pablo Marçal | PRTB | 28 | Leonardo Avalanche |
 | `samara-martins` | Samara Martins | UP | 80 | Raquel Bricio |
 | `rui-costa-pimenta` | Rui Costa Pimenta | PCO | 29 | Antônio Carlos |
 

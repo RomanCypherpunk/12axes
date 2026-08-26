@@ -1,98 +1,114 @@
 {
+  "candidateId": "rui-costa-pimenta",
+  "auditedAt": "2026-08-26",
+  "questionSet": "election-questions.json",
+  "vector": {"estrutura":66.7,"representacao":75.0,"poder":8.3,"imigracao":8.3,"diplomacia":83.3,"intervencao":33.3,"economia":100.0,"controle":100.0,"comercio":100.0,"religiao":100.0,"moral":83.3,"tecnologia":75.0},
   "estrutura": {
-    "personaBrief": "O PCO não organiza sua proposta em torno do federalismo tradicional, mas defende um Estado central forte conduzindo o planejamento econômico via reestatização e ruptura com a dívida pública, o que pressupõe uniformidade nacional em vez de autonomia fragmentada entre entes federativos.",
-    "answers": {
-      "eleicao_estrutura_01": "D",
-      "eleicao_estrutura_02": "C",
-      "eleicao_estrutura_03": "N"
+    "personaBrief":"O programa combina planejamento nacional e controle dos trabalhadores com gestão comunitária; não traz uma tese federalista explícita.",
+    "answers":{"eleicao_estrutura_01":"C","eleicao_estrutura_02":"C","eleicao_estrutura_03":"DT"},
+    "evidence":{
+      "eleicao_estrutura_01":{"rationale":"Inferência: controle comunitário da escola sugere espaço local, mas não endossa divergência estadual ampla.","level":"inferida","sources":[]},
+      "eleicao_estrutura_02":{"rationale":"O programa propõe piso nacional e expansão de saúde e educação públicas.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_estrutura_03":{"rationale":"Inferência: controle popular é incompatível com incorporação imposta contra moradores.","level":"inferida","sources":[]}
     }
   },
-  "representacao": {
-    "personaBrief": "O PCO não propõe reformas institucionais dentro da democracia liberal, mas uma ruptura de raiz marxista com essas instituições em favor de um governo dos trabalhadores organizado por fora dos mecanismos tradicionais de representação; o dossiê não detalha posições sobre desenho institucional entre Poderes.",
-    "answers": {
-      "eleicao_representacao_01": "N",
-      "eleicao_representacao_02": "N",
-      "eleicao_representacao_03": "N"
+  "representacao":{
+    "personaBrief":"O PCO critica instituições atuais, mas sustenta liberdade partidária, eleições amplas, mandatos revogáveis e maior representação popular.",
+    "answers":{"eleicao_representacao_01":"CT","eleicao_representacao_02":"DT","eleicao_representacao_03":"D"},
+    "evidence":{
+      "eleicao_representacao_01":{"rationale":"Defende o regime mais democrático possível, liberdade partidária irrestrita e eleições amplas.","level":"partidária","sources":[{"url":"https://pco.org.br/2022/08/25/conheca-o-pco-um-partido-revolucionario-na-defesa-da-democracia-e-dos-direitos-democraticos/","accessedAt":"2026-08-26"}]},
+      "eleicao_representacao_02":{"rationale":"Propõe reforma constitucional e representação popular, não poder presidencial excepcional contra o Congresso.","level":"partidária","sources":[{"url":"https://pco.org.br/2022/08/25/conheca-o-pco-um-partido-revolucionario-na-defesa-da-democracia-e-dos-direitos-democraticos/","accessedAt":"2026-08-26"}]},
+      "eleicao_representacao_03":{"rationale":"Defende devido processo e liberdade de manifestação; aceita responsabilização legal, mas rejeita punição política indiscriminada.","level":"partidária","sources":[{"url":"https://pco.org.br/wp-content/uploads/2025/02/nota-oficial-pco.pdf","accessedAt":"2026-08-26"}]}
     }
   },
-  "poder": {
-    "personaBrief": "O discurso do PCO não é centrado em liberdade individual nem em endurecimento penal, mas em segurança econômica coletiva da classe trabalhadora, denunciando a repressão policial como instrumento a serviço do capital, o que o distancia de agendas de recrudescimento penal ou armamentista.",
-    "answers": {
-      "eleicao_poder_01": "D",
-      "eleicao_poder_02": "DT",
-      "eleicao_poder_03": "DT"
+  "poder":{
+    "personaBrief":"A candidatura propõe dissolver o aparato repressivo, defende autodefesa e armamento dos trabalhadores e privilegia liberdades democráticas.",
+    "answers":{"eleicao_poder_01":"D","eleicao_poder_02":"CT","eleicao_poder_03":"CT"},
+    "evidence":{
+      "eleicao_poder_01":{"rationale":"Pede dissolução da Polícia Militar e combate à repressão, não endurecimento penal como eixo.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_poder_02":{"rationale":"O PCO declara defender armamento da população trabalhadora e direito de autodefesa.","level":"partidária","sources":[{"url":"https://pco.org.br/verbete/armamento/","accessedAt":"2026-08-26"}]},
+      "eleicao_poder_03":{"rationale":"A defesa de liberdades individuais e oposição à criminalização repressiva tornam descriminalização a resposta provável.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]}
     }
   },
-  "imigracao": {
-    "personaBrief": "O programa do PCO não detalha uma política migratória concreta, mas seu internacionalismo de classe trabalhadora e oposição ao imperialismo sugerem, de forma geral, solidariedade com migrantes como parte da classe trabalhadora internacional, sem propostas específicas sobre acolhimento, deportação ou ensino bilíngue.",
-    "answers": {
-      "eleicao_imigracao_01": "N",
-      "eleicao_imigracao_02": "N",
-      "eleicao_imigracao_03": "N"
+  "imigracao":{
+    "personaBrief":"O PCO é internacionalista e solidário a povos oprimidos, mas não detalha regras migratórias ou ensino bilíngue no programa de 2026.",
+    "answers":{"eleicao_imigracao_01":"CT","eleicao_imigracao_02":"DT","eleicao_imigracao_03":"C"},
+    "evidence":{
+      "eleicao_imigracao_01":{"rationale":"Inferência do internacionalismo e solidariedade a povos oprimidos; não há proposta migratória específica.","level":"inferida","sources":[]},
+      "eleicao_imigracao_02":{"rationale":"Inferência: deportação ampliada conflita com direitos democráticos e solidariedade internacional defendidos pelo partido.","level":"inferida","sources":[]},
+      "eleicao_imigracao_03":{"rationale":"Inferência moderada: defesa de direitos democráticos favorece acomodação cultural, sem proposta curricular específica.","level":"inferida","sources":[]}
     }
   },
-  "diplomacia": {
-    "personaBrief": "O PCO defende uma diplomacia de ruptura anti-imperialista, opondo-se à subordinação do Brasil ao grande capital e às potências capitalistas centrais, o que não se traduz em apoio ao reequipamento das Forças Armadas tradicionais nem em conciliação com instituições da ordem internacional vigente como a ONU.",
-    "answers": {
-      "eleicao_diplomacia_01": "N",
-      "eleicao_diplomacia_02": "N",
-      "eleicao_diplomacia_03": "N"
+  "diplomacia":{
+    "personaBrief":"O PCO é anti-imperialista, defende soberania nacional e resistência armada de povos atacados; combina negociação com capacidade autônoma de defesa.",
+    "answers":{"eleicao_diplomacia_01":"C","eleicao_diplomacia_02":"D","eleicao_diplomacia_03":"CT"},
+    "evidence":{
+      "eleicao_diplomacia_01":{"rationale":"Defende soberania territorial e autodefesa popular, embora sem meta militar orçamentária.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_diplomacia_02":{"rationale":"Apoia resistência armada de povos contra imperialismo; não aceita negociação como regra sem força militar.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_diplomacia_03":{"rationale":"Defesa de soberania e desenvolvimento autônomo torna forte o apoio à capacidade nacional de defesa.","level":"partidária","sources":[{"url":"https://pco.org.br/about/","accessedAt":"2026-08-26"}]}
     }
   },
-  "intervencao": {
-    "personaBrief": "O nacionalismo do PCO é de base socialista, associando soberania à ruptura com a dívida externa e ao fim da dependência do capital estrangeiro, o que o leva a apoiar fortemente o protagonismo estatal em setores estratégicos e a defender medidas de soberania diante de pressões externas dos EUA.",
-    "answers": {
-      "eleicao_intervencao_01": "C",
-      "eleicao_intervencao_02": "DT",
-      "eleicao_intervencao_03": "CT"
+  "intervencao":{
+    "personaBrief":"A candidatura rejeita alianças e ingerência imperialistas, mas assume nacionalismo econômico e reação vigorosa para defender soberania.",
+    "answers":{"eleicao_intervencao_01":"CT","eleicao_intervencao_02":"CT","eleicao_intervencao_03":"CT"},
+    "evidence":{
+      "eleicao_intervencao_01":{"rationale":"Defende expulsão de bases estrangeiras e oposição à ingerência, coerente com evitar alianças militares externas.","level":"partidária","sources":[{"url":"https://pco.org.br/about/","accessedAt":"2026-08-26"}]},
+      "eleicao_intervencao_02":{"rationale":"O programa sustenta confronto político com imperialismo mesmo diante de custos e rejeita ingerência de EUA e OEA.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_intervencao_03":{"rationale":"Propõe estatal para terras raras e nacionalização de reservas minerais, contra controle estrangeiro.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
-  "economia": {
-    "personaBrief": "O PCO defende a reestatização de empresas privatizadas e o controle estatal dos setores estratégicos, além de romper com o pagamento dos juros da dívida pública, sendo descrito no dossiê como a posição mais favorável ao Estado entre todos os candidatos analisados, incluindo ampliação de programas sociais e do SUS.",
-    "answers": {
-      "eleicao_economia_01": "DT",
-      "eleicao_economia_02": "CT",
-      "eleicao_economia_03": "CT"
+  "economia":{
+    "personaBrief":"O programa propõe reestatização ampla, banco estatal único, expansão de serviços públicos e ruptura com privatizações.",
+    "answers":{"eleicao_economia_01":"CT","eleicao_economia_02":"DT","eleicao_economia_03":"CT"},
+    "evidence":{
+      "eleicao_economia_01":{"rationale":"Defende Petrobras 100% estatal, barrar privatizações da Caixa e reestatizar empresas privatizadas.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_economia_02":{"rationale":"Propõe estatização de saúde, educação e sistema financeiro, incompatível com liderança privada apenas regulada.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_economia_03":{"rationale":"Prevê Bolsa Família de ao menos um salário mínimo e mais recursos sem limite para saúde pública.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
-  "controle": {
-    "personaBrief": "O PCO defende abertamente uma economia planificada sob controle dos trabalhadores, com fim do pagamento da dívida pública e nacionalização de setores estratégicos, sendo o polo mais distante do livre mercado entre os candidatos analisados, o que implica forte intervenção estatal em preços e tributação progressiva.",
-    "answers": {
-      "eleicao_controle_01": "DT",
-      "eleicao_controle_02": "CT",
-      "eleicao_controle_03": "DT"
+  "controle":{
+    "personaBrief":"A candidatura defende planejamento estatal, controle operário, banco estatal único e fim da independência do Banco Central.",
+    "answers":{"eleicao_controle_01":"CT","eleicao_controle_02":"DT","eleicao_controle_03":"CT"},
+    "evidence":{
+      "eleicao_controle_01":{"rationale":"Defende plano nacional de moradias, empresas estatais e controle dos trabalhadores em setores estratégicos.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_controle_02":{"rationale":"O programa pede expressamente o fim da independência do Banco Central.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_controle_03":{"rationale":"Propõe reduzir combustíveis em 50% e acabar com paridade cambial, indicando controle estatal de preços essenciais.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
-  "comercio": {
-    "personaBrief": "O PCO defende romper com a subordinação da economia brasileira ao capital estrangeiro e ao imperialismo, posição que se aproxima do polo protecionista de soberania econômica frente ao comércio internacional dominado por grandes potências, favorecendo produção e compras nacionais em detrimento de acordos de livre comércio.",
-    "answers": {
-      "eleicao_comercio_01": "DT",
-      "eleicao_comercio_02": "C",
-      "eleicao_comercio_03": "C"
+  "comercio":{
+    "personaBrief":"O PCO trata capital estrangeiro e imperialismo como subordinação econômica e propõe nacionalização de setores e recursos estratégicos.",
+    "answers":{"eleicao_comercio_01":"DT","eleicao_comercio_02":"CT","eleicao_comercio_03":"CT"},
+    "evidence":{
+      "eleicao_comercio_01":{"rationale":"A rejeição à entrega da economia e ao imperialismo indica oposição forte a acordo que exponha setores nacionais.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_comercio_02":{"rationale":"Nacionalização e proteção econômica tornam provável a defesa forte de instrumentos contra competição importada predatória.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_comercio_03":{"rationale":"A preferência por estatal e produção sob controle dos trabalhadores é coerente com preferência nacional em compras públicas.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
-  "religiao": {
-    "personaBrief": "Como marxista histórico, o programa de Rui Costa Pimenta não incorpora pautas religiosas, mantendo um diagnóstico político materialista e de classe, sem vínculo declarado com bancadas religiosas ou disputas sobre o papel da religião no Estado.",
-    "answers": {
-      "eleicao_religiao_01": "N",
-      "eleicao_religiao_02": "N",
-      "eleicao_religiao_03": "N"
+  "religiao":{
+    "personaBrief":"O PCO defende liberdades individuais e Estado não tutelar, mas não possui proposta específica sobre tributação de igrejas ou ensino religioso.",
+    "answers":{"eleicao_religiao_01":"DT","eleicao_religiao_02":"CT","eleicao_religiao_03":"DT"},
+    "evidence":{
+      "eleicao_religiao_01":{"rationale":"Inferência: crítica a privilégios e matriz materialista tornam improvável isenção por função religiosa.","level":"inferida","sources":[]},
+      "eleicao_religiao_02":{"rationale":"Inferência: separar organizações religiosas de campanha é coerente com oposição à tutela política privada.","level":"inferida","sources":[]},
+      "eleicao_religiao_03":{"rationale":"Inferência: ensino público laico e sem doutrinação religiosa é mais coerente com a matriz do partido.","level":"inferida","sources":[]}
     }
   },
-  "moral": {
-    "personaBrief": "O programa do PCO não centra a campanha em pautas de costumes, mas sua tradição trotskista tende historicamente a posições progressistas em direitos civis, ainda que a luta de classes permaneça o eixo central do discurso em detrimento de bandeiras identitárias específicas.",
-    "answers": {
-      "eleicao_moral_01": "C",
-      "eleicao_moral_02": "C",
-      "eleicao_moral_03": "DT"
+  "moral":{
+    "personaBrief":"O PCO defende aborto legal no SUS, direitos individuais e casamento homoafetivo; diverge do identitarismo, mas não propõe restringir direitos de diversidade.",
+    "answers":{"eleicao_moral_01":"CT","eleicao_moral_02":"N","eleicao_moral_03":"DT"},
+    "evidence":{
+      "eleicao_moral_01":{"rationale":"Defende explicitamente aborto legal na rede pública como direito democrático e de saúde.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]},
+      "eleicao_moral_02":{"rationale":"Defende direitos individuais, mas critica identitarismo; sem proposta curricular específica há ambivalência real.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]},
+      "eleicao_moral_03":{"rationale":"Defende casamento homoafetivo e liberdade individual, incompatíveis com priorização estatal de uma única família.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]}
     }
   },
-  "tecnologia": {
-    "personaBrief": "O programa do PCO aposta no desenvolvimento industrial e tecnológico nacional sob controle estatal como caminho para superar a dependência externa, citando comparações com a China, mas com pouca ênfase declarada em pautas ambientais específicas como licenciamento, demarcação de terras indígenas ou exploração de petróleo.",
-    "answers": {
-      "eleicao_tecnologia_01": "N",
-      "eleicao_tecnologia_02": "N",
-      "eleicao_tecnologia_03": "N"
+  "tecnologia":{
+    "personaBrief":"O programa prioriza emprego, planejamento e soberania, sem agenda tecnológica detalhada; as respostas são inferidas com base em desenvolvimento nacional e proteção dos trabalhadores.",
+    "answers":{"eleicao_tecnologia_01":"N","eleicao_tecnologia_02":"CT","eleicao_tecnologia_03":"D"},
+    "evidence":{
+      "eleicao_tecnologia_01":{"rationale":"Inferência: apoiaria modernização subordinada à proteção do emprego; não há posição específica sobre IA e automação.","level":"inferida","sources":[]},
+      "eleicao_tecnologia_02":{"rationale":"Inferência: nacionalização de recursos e defesa do desenvolvimento soberano indicam forte apoio à capacidade científica nacional.","level":"inferida","sources":[]},
+      "eleicao_tecnologia_03":{"rationale":"Inferência: desenvolvimento soberano e exploração nacional de recursos tornam improvável prioridade absoluta de preservação.","level":"inferida","sources":[]}
     }
   }
 }
