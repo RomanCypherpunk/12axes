@@ -287,7 +287,7 @@ export default function ElectionApp() {
                 <h2 id="candidaturas">Candidaturas analisadas</h2>
                 <p>Cada candidatura é auditada individualmente a partir de discursos, entrevistas e programa de governo.</p>
               </div>
-              <div className="match-grid">
+              <div className="match-grid election-catalog-grid">
                 {candidates.map((c) => (
                   <article className="match-card election-match-card" key={c.id}>
                     <img src={c.imagePath} alt="" loading="lazy" />

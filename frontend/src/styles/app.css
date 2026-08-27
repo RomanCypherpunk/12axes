@@ -4917,6 +4917,22 @@
   filter: drop-shadow(0 22px 40px rgba(11, 16, 32, 0.18));
 }
 
+.election-catalog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .election-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .election-catalog-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .election-match-card { overflow: hidden; }
 
 .election-match-card > img {
