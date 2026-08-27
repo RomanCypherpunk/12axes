@@ -2,36 +2,43 @@
   "candidateId": "samara-martins",
   "auditedAt": "2026-08-26",
   "questionSet": "election-questions.json",
-  "vector": { "estrutura": 41.7, "representacao": 91.7, "poder": 50.0, "imigracao": 8.3, "diplomacia": 33.3, "intervencao": 33.3, "economia": 100.0, "controle": 100.0, "comercio": 91.7, "religiao": 83.3, "moral": 100.0, "tecnologia": 50.0 },
+  "auditNote": "Revisão de 26/08/2026: cruzamento do audit anterior (majoritariamente sourced do programa de 2022, da chapa de Léo Péricles) com a candidatura de 2026 — chapa 100% feminina e majoritariamente negra com Raquel Brício (vice), primeira candidatura registrada no TSE (06/08/2026) — e com cobertura jornalística e trechos atribuídos diretamente a Samara Martins no programa de 2026. Nota de transparência: a imprensa registrou que o documento inicialmente protocolado no TSE era, por falha de sistema, a versão de 2022; a campanha pediu correção, mas não há confirmação pública de que a versão revisada já esteja publicada. As respostas abaixo usam tanto o programa histórico da UP quanto declarações e cobertura específicas de 2026.",
+  "vector": { "estrutura": 41.7, "representacao": 91.7, "poder": 50.0, "imigracao": 8.3, "diplomacia": 16.7, "intervencao": 33.3, "economia": 100.0, "controle": 100.0, "comercio": 100.0, "religiao": 83.3, "moral": 100.0, "tecnologia": 41.7 },
   "estrutura": {
-    "personaBrief": "A candidatura da UP combina política nacional de educação e direitos sociais com execução descentralizada junto a estados e municípios.",
+    "personaBrief": "A candidatura da UP combina política nacional de educação e direitos sociais com execução descentralizada junto a estados e municípios. O programa de 2026 mantém a ênfase em coordenação federal de direitos sociais (SUS, educação pública) associada a reparação histórica para populações negras e povos tradicionais.",
     "answers": { "eleicao_estrutura_01": "D", "eleicao_estrutura_02": "CT", "eleicao_estrutura_03": "DT" },
     "evidence": {
       "eleicao_estrutura_01": { "rationale": "Inferência: o plano prevê parceria descentralizada, mas defende sistema nacional de educação, não divergências estaduais amplas.", "level": "inferida", "sources": [] },
-      "eleicao_estrutura_02": { "rationale": "A UP propõe política nacional de educação e universalização de saúde e seguridade, indicando padrões federais de direitos sociais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_estrutura_02": { "rationale": "A UP propõe política nacional de educação e universalização de saúde e seguridade; o programa de 2026 reforça isso com fortalecimento do SUS e educação pública gratuita como eixos nacionais.", "level": "partidária", "sources": [
+        { "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" },
+        { "url": "https://almapreta.com.br/sessao/politica/samara-martins-programa-governo-eleicoes-2026/", "accessedAt": "2026-08-26" }
+      ] },
       "eleicao_estrutura_03": { "rationale": "Inferência: a ênfase em conselhos, plebiscitos e poder popular torna improvável apoiar incorporação municipal contra moradores.", "level": "inferida", "sources": [] }
     }
   },
   "representacao": {
-    "personaBrief": "Samara se apresenta como candidata antifascista e porta-voz de um programa de democracia direta, participação popular e defesa das liberdades democráticas.",
+    "personaBrief": "Samara se apresenta como candidata antifascista e porta-voz de um programa de democracia direta, participação popular e defesa das liberdades democráticas. A campanha de 2026 formalizou a chapa 100% feminina e majoritariamente negra com Raquel Brício, apresentando-se como continuidade do 'programa da Revolução e do Socialismo'.",
     "answers": { "eleicao_representacao_01": "CT", "eleicao_representacao_02": "D", "eleicao_representacao_03": "CT" },
     "evidence": {
-      "eleicao_representacao_01": { "rationale": "O programa da chapa de 2022, da qual Samara era vice, afirma defesa das liberdades democráticas contra ameaças golpistas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
-      "eleicao_representacao_02": { "rationale": "Inferência: a proposta de constituinte e participação direta admite mudanças institucionais, mas privilegia consultas e conselhos, não decretismo presidencial.", "level": "inferida", "sources": [] },
+      "eleicao_representacao_01": { "rationale": "O programa histórico da UP e a candidatura de 2026 (autodefinida antifascista) afirmam defesa das liberdades democráticas contra ameaças golpistas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_representacao_02": { "rationale": "Inferência: a proposta de constituinte e participação direta admite mudanças institucionais, mas privilegia consultas, conselhos e mobilização popular, não decretismo presidencial nem negociação convencional com o Congresso.", "level": "inferida", "sources": [] },
       "eleicao_representacao_03": { "rationale": "O documento condena ataques à lisura das urnas e ameaças golpistas, defendendo derrotá-las nas ruas e nas urnas.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
     }
   },
   "poder": {
-    "personaBrief": "Samara propõe segurança baseada em direitos sociais e desmilitarização policial, com inteligência contra crime organizado, rejeitando endurecimento penal como solução central.",
+    "personaBrief": "Samara propõe segurança baseada em direitos sociais e desmilitarização policial, com inteligência contra crime organizado, rejeitando endurecimento penal como solução central para o crime organizado. Uma exceção notável: o programa de 2026 defende 'prisão imediata de agressores' especificamente para violência doméstica e feminicídio, associando a persistência dessa violência a interesse econômico em manter salários femininos mais baixos.",
     "answers": { "eleicao_poder_01": "D", "eleicao_poder_02": "DT", "eleicao_poder_03": "C" },
     "evidence": {
-      "eleicao_poder_01": { "rationale": "Ela afirma que endurecer leis e encarcerar mais não reduziu a insegurança; defende prevenção social e inteligência contra crime organizado.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
+      "eleicao_poder_01": { "rationale": "Ela afirma que endurecer leis e encarcerar mais não reduziu a insegurança; defende prevenção social e inteligência contra crime organizado. A exceção de 'prisão imediata' no programa de 2026 é específica para agressores de violência de gênero, não para facções criminosas, e por isso não altera esta resposta.", "level": "direta", "sources": [
+        { "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" },
+        { "url": "https://canalmynews.com.br/eleicoes-2026/samara-martins-candidatura-tse-plano-governo/", "accessedAt": "2026-08-26" }
+      ] },
       "eleicao_poder_02": { "rationale": "Inferência: a proposta de desmilitarizar polícias e combater a lógica do inimigo interno é incompatível com ampliar armas civis.", "level": "inferida", "sources": [] },
       "eleicao_poder_03": { "rationale": "Ela cita a mobilização que alterou a Lei de Drogas e critica respostas penais; isso indica apoio provável à descriminalização, sem fala literal sobre uso recreativo.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] }
     }
   },
   "imigracao": {
-    "personaBrief": "Não há proposta migratória específica publicada; o enquadramento internacionalista, antidiscriminatório e de solidariedade entre povos orienta estas inferências.",
+    "personaBrief": "Não há proposta migratória específica publicada nem em 2022 nem no material de 2026 encontrado; o enquadramento internacionalista, antidiscriminatório e de solidariedade entre povos orienta estas inferências.",
     "answers": { "eleicao_imigracao_01": "CT", "eleicao_imigracao_02": "DT", "eleicao_imigracao_03": "C" },
     "evidence": {
       "eleicao_imigracao_01": { "rationale": "Inferência a partir da defesa de solidariedade e autodeterminação dos povos; não há compromisso migratório específico localizado.", "level": "inferida", "sources": [] },
@@ -40,30 +47,42 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "A política externa proposta prioriza cooperação, integração regional e autonomia frente ao imperialismo, ao lado de industrialização e soberania tecnológica nacionais.",
-    "answers": { "eleicao_diplomacia_01": "D", "eleicao_diplomacia_02": "CT", "eleicao_diplomacia_03": "C" },
+    "personaBrief": "A política externa proposta prioriza cooperação, integração regional e autonomia frente ao imperialismo. O programa de 2026 é explícito e concreto nesse eixo: revisão de acordos considerados de submissão militar ou comercial a potências estrangeiras, rompimento das relações diplomáticas com Israel em solidariedade à Palestina, e apoio a povos atingidos por sanções internacionais — uma diplomacia de ruptura conduzida por via diplomática (revisão de acordos, corte de relações), não por desenvolvimento de capacidade militar própria.",
+    "answers": { "eleicao_diplomacia_01": "D", "eleicao_diplomacia_02": "CT", "eleicao_diplomacia_03": "D" },
     "evidence": {
       "eleicao_diplomacia_01": { "rationale": "O programa prioriza cooperação e rejeita guerras imperialistas; não apresenta expansão forte de orçamento militar.", "level": "inferida", "sources": [] },
-      "eleicao_diplomacia_02": { "rationale": "Samara declarou defender relações de cooperação; o programa propõe integração regional e relações multilaterais.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
-      "eleicao_diplomacia_03": { "rationale": "Inferência: industrialização, soberania e redução da dependência tecnológica sugerem apoio moderado a tecnologias nacionais de defesa, sem defesa literal de armas.", "level": "inferida", "sources": [] }
+      "eleicao_diplomacia_02": { "rationale": "Samara declarou defender relações de cooperação; o programa de 2026 propõe revisão de acordos de submissão e rompimento de relações diplomáticas (com Israel) como instrumentos de pressão, não desenvolvimento de capacidade de força militar.", "level": "direta", "sources": [
+        { "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" },
+        { "url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26" }
+      ] },
+      "eleicao_diplomacia_03": { "rationale": "Correção em relação ao audit anterior: o programa de 2026 detalha uma diplomacia de ruptura conduzida por revisão de acordos e corte de relações diplomáticas, não por desenvolvimento de indústria nacional de armas ou drones — a soberania tecnológica declarada (semicondutores, fármacos, energias limpas) não inclui menção a capacidade militar, o que reduz a concordância de moderada para discordância moderada.", "level": "inferida", "sources": [{ "url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26" }] }
     }
   },
   "intervencao": {
-    "personaBrief": "A candidatura rejeita submissão externa e defende soberania econômica, mas sua política externa é cooperativa e não prevê intervencionismo militar brasileiro.",
+    "personaBrief": "A candidatura rejeita submissão a todas as grandes potências, não apenas aos EUA: 'Chega de nossas riquezas serem roubadas pelos EUA, pela China ou pela União Europeia', afirma o programa de 2026. Defende soberania econômica e apoio a povos atingidos por sanções internacionais, mas sua política externa é conduzida por via diplomática, não por intervencionismo militar brasileiro.",
     "answers": { "eleicao_intervencao_01": "CT", "eleicao_intervencao_02": "CT", "eleicao_intervencao_03": "CT" },
     "evidence": {
-      "eleicao_intervencao_01": { "rationale": "A defesa de cooperação e autodeterminação dos povos torna provável evitar alianças militares e envio de tropas.", "level": "inferida", "sources": [] },
-      "eleicao_intervencao_02": { "rationale": "O programa prega independência frente ao imperialismo e anulação de acordos contrários à soberania.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
-      "eleicao_intervencao_03": { "rationale": "Samara defende nacionalização das riquezas estratégicas; o programa confirma monopólio público em áreas estratégicas.", "level": "direta", "sources": [{ "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/politica/audio/2026-07/unidade-popular-oficializa-candidatura-de-samara-martins-presidencia", "accessedAt": "2026-08-26" }] }
+      "eleicao_intervencao_01": { "rationale": "O programa de 2026 propõe revisar acordos considerados de submissão militar a potências estrangeiras, reforçando diretamente a defesa de evitar alianças militares e envio de tropas.", "level": "direta", "sources": [{ "url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26" }] },
+      "eleicao_intervencao_02": { "rationale": "O programa prega independência frente ao imperialismo, anulação de acordos contrários à soberania, e solidariedade explícita a 'povos atingidos por sanções internacionais' — uma lógica que se aplicaria com a mesma força a sanções impostas ao próprio Brasil.", "level": "direta", "sources": [
+        { "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" },
+        { "url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26" }
+      ] },
+      "eleicao_intervencao_03": { "rationale": "Samara defende nacionalização das riquezas estratégicas; o programa confirma monopólio público em áreas estratégicas, reforçado pela crítica direta a EUA, China e UE 'roubando' riquezas nacionais.", "level": "direta", "sources": [{ "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/politica/audio/2026-07/unidade-popular-oficializa-candidatura-de-samara-martins-presidencia", "accessedAt": "2026-08-26" }] }
     }
   },
   "economia": {
-    "personaBrief": "Samara defende reestatização, nacionalização de riquezas, SUS universal e orçamento social, contrapondo-se à privatização de setores estratégicos.",
+    "personaBrief": "Samara defende reestatização, nacionalização de riquezas, SUS universal e orçamento social, contrapondo-se à privatização de setores estratégicos. O programa de 2026 detalha aumento de 100% do salário mínimo, fim da escala de trabalho 6x1, e oposição à terceirização e à 'pejotização'.",
     "answers": { "eleicao_economia_01": "CT", "eleicao_economia_02": "DT", "eleicao_economia_03": "CT" },
     "evidence": {
-      "eleicao_economia_01": { "rationale": "A candidata defende reestatizar empresas privatizadas e o programa propõe monopólios públicos em setores estratégicos.", "level": "direta", "sources": [{ "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/unidade-popular-formaliza-candidatura-de-samara-martins-presidente", "accessedAt": "2026-08-26" }] },
+      "eleicao_economia_01": { "rationale": "A candidata defende reestatizar empresas privatizadas e nacionalizar o sistema bancário; o programa de 2026 confirma monopólios públicos em setores estratégicos.", "level": "direta", "sources": [
+        { "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/unidade-popular-formaliza-candidatura-de-samara-martins-presidente", "accessedAt": "2026-08-26" },
+        { "url": "https://tvtnews.com.br/samara-martins-a-1a-candidatura-registrada-no-tse/", "accessedAt": "2026-08-26" }
+      ] },
       "eleicao_economia_02": { "rationale": "A posição contra privatização da saúde e pela reestatização conflita com atribuir liderança dos serviços à iniciativa privada.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
-      "eleicao_economia_03": { "rationale": "Ela propõe redirecionar orçamento para saúde e educação e fortalecer o SUS.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] }
+      "eleicao_economia_03": { "rationale": "Ela propõe redirecionar orçamento para saúde e educação, fortalecer o SUS, e o programa de 2026 acrescenta aumento de 100% do salário mínimo e fim da escala 6x1 — evidência ainda mais direta de ampliação de gastos sociais.", "level": "direta", "sources": [
+        { "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" },
+        { "url": "https://almapreta.com.br/sessao/politica/samara-martins-programa-governo-eleicoes-2026/", "accessedAt": "2026-08-26" }
+      ] }
     }
   },
   "controle": {
@@ -76,16 +95,16 @@
     }
   },
   "comercio": {
-    "personaBrief": "A candidatura apoia cooperação regional, mas quer comércio exterior sob órgãos estatais, industrialização nacional e redução da dependência externa.",
-    "answers": { "eleicao_comercio_01": "D", "eleicao_comercio_02": "CT", "eleicao_comercio_03": "CT" },
+    "personaBrief": "A candidatura apoia cooperação regional, mas quer comércio exterior sob órgãos estatais, industrialização nacional e redução da dependência externa. O programa de 2026 nomeia explicitamente EUA, China e União Europeia como potências que 'roubam' as riquezas brasileiras.",
+    "answers": { "eleicao_comercio_01": "DT", "eleicao_comercio_02": "CT", "eleicao_comercio_03": "CT" },
     "evidence": {
-      "eleicao_comercio_01": { "rationale": "A UP defende integração regional, mas condiciona comércio à soberania e ao controle estatal; expor setores nacionais é improvável.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_comercio_01": { "rationale": "Correção em relação ao audit anterior: o programa de 2026 cita nominalmente a União Europeia, ao lado de EUA e China, como potência que 'rouba' as riquezas do Brasil — discordância total e explícita de aprofundar o acordo Mercosul-UE, não apenas discordância moderada inferida.", "level": "direta", "sources": [{ "url": "https://canalmynews.com.br/eleicoes-2026/samara-martins-candidatura-tse-plano-governo/", "accessedAt": "2026-08-26" }] },
       "eleicao_comercio_02": { "rationale": "A política industrial, redução da dependência externa e controle estatal do comércio exterior sustentam proteção à indústria e emprego nacionais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
       "eleicao_comercio_03": { "rationale": "O programa privilegia produção nacional, economia local e controle estatal; preferência em compras públicas é inferência forte.", "level": "inferida", "sources": [] }
     }
   },
   "religiao": {
-    "personaBrief": "A UP defende liberdade religiosa e combate à discriminação, sem propor que instituições religiosas organizem o Estado ou a escola pública.",
+    "personaBrief": "A UP defende liberdade religiosa e combate à discriminação, sem propor que instituições religiosas organizem o Estado ou a escola pública. O programa de 2026 mantém a defesa específica de religiões de matriz africana (candomblé, umbanda) contra intolerância religiosa, dentro de um Estado laico.",
     "answers": { "eleicao_religiao_01": "D", "eleicao_religiao_02": "C", "eleicao_religiao_03": "DT" },
     "evidence": {
       "eleicao_religiao_01": { "rationale": "Não há proposta tributária específica sobre templos; a discordância moderada é inferida da tributação progressiva e de Estado laico.", "level": "inferida", "sources": [] },
@@ -94,20 +113,20 @@
     }
   },
   "moral": {
-    "personaBrief": "Samara é dirigente de movimentos de mulheres negras e sua plataforma defende igualdade de gênero, direitos LGBT e legalização do aborto como saúde pública.",
+    "personaBrief": "Samara é dirigente de movimentos de mulheres negras (coordenadora nacional da Frente Negra Revolucionária) e sua plataforma defende igualdade de gênero, direitos LGBT e legalização do aborto como saúde pública.",
     "answers": { "eleicao_moral_01": "CT", "eleicao_moral_02": "CT", "eleicao_moral_03": "DT" },
     "evidence": {
-      "eleicao_moral_01": { "rationale": "O programa da chapa de que Samara foi vice defende descriminalização e legalização do aborto como saúde pública.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_moral_01": { "rationale": "O programa da UP defende descriminalização e legalização do aborto como saúde pública.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
       "eleicao_moral_02": { "rationale": "Samara defende educação sobre igualdade de gênero nas escolas e combate à misoginia.", "level": "direta", "sources": [{ "url": "https://sbtnews.sbt.com.br/noticia/politica/o-que-pensa-a-unica-mulher-candidata-a-presidencia", "accessedAt": "2026-08-26" }] },
       "eleicao_moral_03": { "rationale": "O programa defende direitos iguais, combate à LGBTfobia e cuidado infantil como responsabilidade social, sem arranjo familiar privilegiado.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
     }
   },
   "tecnologia": {
-    "personaBrief": "A proposta combina soberania tecnológica e política industrial com controle popular da pesquisa, energias renováveis e proteção forte da natureza.",
-    "answers": { "eleicao_tecnologia_01": "C", "eleicao_tecnologia_02": "C", "eleicao_tecnologia_03": "CT" },
+    "personaBrief": "A proposta combina soberania tecnológica e política industrial com controle popular da pesquisa, energias renováveis e proteção forte da natureza. O forte foco em proteção do trabalho (fim da escala 6x1, oposição à terceirização) modera o entusiasmo com automação quando ela substitui empregos.",
+    "answers": { "eleicao_tecnologia_01": "D", "eleicao_tecnologia_02": "CT", "eleicao_tecnologia_03": "CT" },
     "evidence": {
-      "eleicao_tecnologia_01": { "rationale": "A UP defende industrialização e tecnologia, mas também garantia de emprego e redução de jornada; concordância moderada com automação substitutiva é inferida.", "level": "inferida", "sources": [] },
-      "eleicao_tecnologia_02": { "rationale": "O programa prevê ciência, tecnologia, semicondutores, fármacos e energias limpas para soberania; a inclusão de nuclear limita a concordância.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
+      "eleicao_tecnologia_01": { "rationale": "Correção em relação ao audit anterior: o programa de 2026 tem como bandeiras centrais o fim da escala 6x1, a oposição à terceirização e à pejotização — uma prioridade declarada de proteção ao emprego que pesa contra aceitar automação 'mesmo substituindo parte dos empregos atuais'.", "level": "inferida", "sources": [{ "url": "https://www.cnnbrasil.com.br/eleicoes/up-oficializa-candidatura-de-samara-martins-a-presidencia/", "accessedAt": "2026-08-26" }] },
+      "eleicao_tecnologia_02": { "rationale": "Correção em relação ao audit anterior: o programa lista explicitamente ciência, tecnologia, semicondutores, fármacos e energias limpas para soberania nacional — cobrindo diretamente os exemplos citados na pergunta (biotecnologia via fármacos, tecnologia de energia); a rationale anterior tratava a menção a nuclear como fator limitante, quando na verdade reforça a concordância.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] },
       "eleicao_tecnologia_03": { "rationale": "O programa defende proibir destruição de florestas, proteção da natureza e transição energética que evite catástrofes ambientais.", "level": "partidária", "sources": [{ "url": "https://backend.unidadepopular.org.br/wp-content/uploads/2022/09/Programa-2022-Unidade-Popular-pelo-Socialismo.pdf", "accessedAt": "2026-08-26" }] }
     }
   }

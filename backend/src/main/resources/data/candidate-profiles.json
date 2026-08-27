@@ -7,10 +7,10 @@
       "poder": 83.3,
       "imigracao": 8.3,
       "diplomacia": 50,
-      "intervencao": 58.3,
+      "intervencao": 33.3,
       "economia": 91.7,
       "controle": 83.3,
-      "comercio": 75,
+      "comercio": 66.7,
       "religiao": 66.7,
       "moral": 91.7,
       "tecnologia": 66.7
@@ -19,13 +19,13 @@
   {
     "candidateId": "flavio-bolsonaro",
     "vector": {
-      "estrutura": 41.7,
-      "representacao": 33.3,
-      "poder": 66.7,
+      "estrutura": 16.7,
+      "representacao": 50,
+      "poder": 75,
       "imigracao": 58.3,
       "diplomacia": 75,
       "intervencao": 25,
-      "economia": 16.7,
+      "economia": 25,
       "controle": 33.3,
       "comercio": 58.3,
       "religiao": 0,
@@ -36,17 +36,17 @@
   {
     "candidateId": "ronaldo-caiado",
     "vector": {
-      "estrutura": 91.7,
-      "representacao": 100,
+      "estrutura": 83.3,
+      "representacao": 58.3,
       "poder": 75,
-      "imigracao": 58.3,
-      "diplomacia": 83.3,
+      "imigracao": 83.3,
+      "diplomacia": 91.7,
       "intervencao": 16.7,
       "economia": 16.7,
       "controle": 25,
       "comercio": 33.3,
       "religiao": 33.3,
-      "moral": 16.7,
+      "moral": 33.3,
       "tecnologia": 91.7
     }
   },
@@ -54,15 +54,15 @@
     "candidateId": "romeu-zema",
     "vector": {
       "estrutura": 50,
-      "representacao": 91.7,
-      "poder": 33.3,
+      "representacao": 50,
+      "poder": 66.7,
       "imigracao": 58.3,
-      "diplomacia": 75,
-      "intervencao": 41.7,
+      "diplomacia": 58.3,
+      "intervencao": 75,
       "economia": 8.3,
       "controle": 16.7,
       "comercio": 16.7,
-      "religiao": 33.3,
+      "religiao": 16.7,
       "moral": 8.3,
       "tecnologia": 83.3
     }
@@ -71,13 +71,13 @@
     "candidateId": "renan-santos",
     "vector": {
       "estrutura": 33.3,
-      "representacao": 91.7,
+      "representacao": 83.3,
       "poder": 66.7,
       "imigracao": 75,
       "diplomacia": 83.3,
       "intervencao": 25,
       "economia": 16.7,
-      "controle": 33.3,
+      "controle": 50,
       "comercio": 58.3,
       "religiao": 58.3,
       "moral": 25,
@@ -87,29 +87,29 @@
   {
     "candidateId": "augusto-cury",
     "vector": {
-      "estrutura": 41.7,
+      "estrutura": 33.3,
       "representacao": 83.3,
-      "poder": 66.7,
+      "poder": 41.7,
       "imigracao": 25,
       "diplomacia": 16.7,
-      "intervencao": 41.7,
-      "economia": 33.3,
-      "controle": 58.3,
+      "intervencao": 33.3,
+      "economia": 25,
+      "controle": 50,
       "comercio": 25,
       "religiao": 58.3,
-      "moral": 41.7,
-      "tecnologia": 66.7
+      "moral": 50,
+      "tecnologia": 58.3
     }
   },
   {
     "candidateId": "rui-costa-pimenta",
     "vector": {
       "estrutura": 66.7,
-      "representacao": 75,
+      "representacao": 66.7,
       "poder": 8.3,
       "imigracao": 8.3,
       "diplomacia": 83.3,
-      "intervencao": 33.3,
+      "intervencao": 25,
       "economia": 100,
       "controle": 100,
       "comercio": 100,
@@ -125,14 +125,14 @@
       "representacao": 91.7,
       "poder": 50,
       "imigracao": 8.3,
-      "diplomacia": 33.3,
+      "diplomacia": 16.7,
       "intervencao": 33.3,
       "economia": 100,
       "controle": 100,
-      "comercio": 91.7,
+      "comercio": 100,
       "religiao": 83.3,
       "moral": 100,
-      "tecnologia": 50
+      "tecnologia": 41.7
     }
   }
 ]

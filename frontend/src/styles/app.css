@@ -4896,17 +4896,115 @@
   }
 }
 
-/* Quiz format selection */
-.election-shell { padding-top: 0; }
-.election-hero { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 48px; align-items: center; }
-.home-hero-copy { max-width: 760px; }
-.election-hero-card { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 30px; border-radius: 22px; color: var(--ink-900); background: linear-gradient(145deg, #ecfdf5, #fff); border: 1px solid rgba(34,197,94,.25); box-shadow: 0 22px 50px -35px rgba(15,23,42,.45); }
-.election-hero-card strong { font: 800 2.25rem/1 var(--font-display); color: var(--green-700); margin-top: 12px; }
-.election-hero-card span { color: var(--ink-500); font-size: .85rem; }
-.election-catalog { padding-top: 40px; }
+/* Eleições 2026 */
+.election-hero-visual {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.election-hero-visual img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  filter: drop-shadow(0 22px 40px rgba(11, 16, 32, 0.18));
+}
+
 .election-match-card { overflow: hidden; }
-.election-match-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; border-radius: 12px; margin-bottom: 14px; background: var(--ink-100); }
-@media (max-width: 760px) { .election-hero { grid-template-columns: 1fr; gap: 26px; } .election-hero-card { grid-template-columns: repeat(3, 1fr); text-align: center; } .election-hero-card strong { font-size: 1.6rem; } }
+
+.election-match-card > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  background: var(--ink-100);
+}
+
+.election-card-tag {
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+}
+
+.election-unavailable-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--critical-soft);
+  color: var(--critical-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.election-featured-card {
+  position: relative;
+}
+
+.election-featured-card::after {
+  content: "Top match";
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.election-featured-card .personality-match-visual img {
+  object-position: center;
+}
+
+@media (max-width: 760px) {
+  .election-featured-card::after {
+    top: 12px;
+    right: 18px;
+    font-size: 0.58rem;
+  }
+
+  .election-results-meta-card {
+    display: none;
+  }
+}
+
+.results-section .match-grid .election-match-card img {
+  grid-column: 1 / -1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  background: var(--ink-100);
+  order: 2;
+}
+
+.results-section .match-grid .election-match-card .match-card-header {
+  order: 1;
+}
+
+.results-section .match-grid .election-match-card p {
+  order: 3;
+}
+
+@media (max-width: 760px) {
+  .election-hero-visual {
+    display: none;
+  }
+}
 .app-shell[data-screen="variant"] {
   min-height: 100dvh;
   height: 100dvh;

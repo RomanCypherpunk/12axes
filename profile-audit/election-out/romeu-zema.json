@@ -2,22 +2,23 @@
   "candidateId": "romeu-zema",
   "auditedAt": "2026-08-26",
   "questionSet": "election-questions.json",
+  "auditNote": "Revisão de 26/08/2026: cruzamento do audit anterior com o 'Plano Implacável' (81 páginas, 20 temas) efetivamente registrado no TSE em 08/08/2026, com a chapa oficializada com o senador Eduardo Girão (Novo-CE) como vice, e com declarações de campanha recorrentes sobre anistia ao 8 de janeiro (07/08 e 25/08/2026). Duas respostas do audit anterior (poder_03 e diplomacia_02) tinham a resposta CT/D registrada no sentido oposto ao que a própria rationale descrevia — corrigidas nesta revisão.",
   "vector": {
     "estrutura": 50,
-    "representacao": 91.7,
-    "poder": 33.3,
+    "representacao": 50.0,
+    "poder": 66.7,
     "imigracao": 58.3,
-    "diplomacia": 75,
-    "intervencao": 41.7,
+    "diplomacia": 58.3,
+    "intervencao": 75.0,
     "economia": 8.3,
     "controle": 16.7,
     "comercio": 16.7,
-    "religiao": 33.3,
+    "religiao": 16.7,
     "moral": 8.3,
     "tecnologia": 83.3
   },
   "estrutura": {
-    "personaBrief": "Defende autonomia de gestão, responsabilidade fiscal e racionalização administrativa estadual.",
+    "personaBrief": "Defende autonomia de gestão, responsabilidade fiscal e racionalização administrativa estadual. O 'Plano Implacável' registrado no TSE propõe ampliar a competência legislativa dos Estados em matéria de segurança pública, na linha do que praticou como governador de Minas Gerais.",
     "answers": {
       "eleicao_estrutura_01": "C",
       "eleicao_estrutura_02": "D",
@@ -35,9 +36,9 @@
         ]
       },
       "eleicao_estrutura_02": {
-        "rationale": "Preferência por autonomia estadual; não há posição literal sobre padrões nacionais.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "O plano de governo de 2026 propõe explicitamente ampliar a competência legislativa dos Estados em matéria de segurança — o oposto de padrões nacionais obrigatórios nessa área — reforçando a preferência por autonomia estadual já observada em educação.",
+        "level": "direta",
+        "sources": [{"url": "https://www.congressoemfoco.com.br/noticia/121274/plano-de-zema-preve-choque-fiscal--limitacao-ao-stf-e-saida-do-brics", "accessedAt": "2026-08-26"}]
       },
       "eleicao_estrutura_03": {
         "rationale": "Ajuste fiscal e eficiência administrativa tornam provável apoiar fusões de municípios inviáveis.",
@@ -47,72 +48,68 @@
     }
   },
   "representacao": {
-    "personaBrief": "Atua por eleições, Legislativo e reformas constitucionais; críticas ao STF não configuram ruptura.",
+    "personaBrief": "O plano de governo de 2026 propõe limitar a atuação do STF: corregedoria independente para investigar ministros e mecanismos para obrigar o Senado a analisar pedidos de impeachment de ministros da Corte. Ao mesmo tempo, Zema defende publicamente e de forma recorrente (07/08 e 25/08/2026) anistia 'imediata' aos condenados pelos atos de 8 de janeiro de 2023, chamando as prisões de 'injustas' e citando nominalmente o caso de Débora Rodrigues ('Débora do Batom') como exemplo de 'julgamento tendencioso'.",
     "answers": {
-      "eleicao_representacao_01": "CT",
+      "eleicao_representacao_01": "C",
       "eleicao_representacao_02": "D",
-      "eleicao_representacao_03": "CT"
+      "eleicao_representacao_03": "DT"
     },
     "evidence": {
       "eleicao_representacao_01": {
-        "rationale": "Seu discurso de posse comprometeu o governo com colaboração, justiça e transparência.",
+        "rationale": "Correção em relação ao audit anterior: mantém compromisso declarado com eleições competitivas ('sou defensor da democracia'), mas a disposição recorrente de descrever condenações judiciais de aliados políticos como 'perseguição' e 'julgamento tendencioso' modera CT para C.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.agenciaminas.mg.gov.br/governador/pronunciamento/pronunciamento-do-governador-romeu-zema-durante-reuniao-solene-para-posse-na-assembleia-legislativa",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.metropoles.com/colunas/grande-angular/metropoles-entrevista-ao-vivo-romeu-zema", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_representacao_02": {
-        "rationale": "Seu governo negocia projetos na Assembleia; não há defesa de poder excepcional por decreto.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "O plano de 2026 busca conter o STF via Congresso (corregedoria, mecanismos de impeachment) em vez de ampliar poderes unilaterais do Executivo; não há defesa de governo por decreto.",
+        "level": "direta",
+        "sources": [{"url": "https://www.congressoemfoco.com.br/noticia/121274/plano-de-zema-preve-choque-fiscal--limitacao-ao-stf-e-saida-do-brics", "accessedAt": "2026-08-26"}]
       },
       "eleicao_representacao_03": {
-        "rationale": "Como autoridade eleita e institucional, tende a defender punição de atos contra resultado eleitoral.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "Correção em relação ao audit anterior: em múltiplas entrevistas de agosto de 2026, Zema prometeu anistia 'imediata' e a revogação 'total' das condenações pelos atos de 8 de janeiro, tratando-as como injustiça e perseguição política — discordância total, explícita e atual da ideia de punir atos contra o resultado eleitoral, o oposto do que o audit anterior registrava.",
+        "level": "direta",
+        "sources": [
+          {"url": "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/8/7/zema-defende-anistia-imediata-aos-condenados-pelos-atos-de-8-de-janeiro-de-2023", "accessedAt": "2026-08-26"},
+          {"url": "https://www.metropoles.com/colunas/grande-angular/metropoles-entrevista-ao-vivo-romeu-zema", "accessedAt": "2026-08-26"},
+          {"url": "https://imirante.com/noticias/brasil/2026/08/25/ipolitica-zema-discute-ajuste-e-anistia-em-foco-nas-eleicoes-2026", "accessedAt": "2026-08-26"}
+        ]
       }
     }
   },
   "poder": {
-    "personaBrief": "Combina endurecimento penal, valorização policial, defesa de armas e conservadorismo em drogas.",
+    "personaBrief": "Combina endurecimento penal, valorização policial, defesa de armas e conservadorismo em drogas. O plano de 2026 defende enquadrar facções como organizações terroristas, reduzir a maioridade penal para 16 anos e empregar as Forças Armadas em operações de domínio territorial contra o crime organizado. Em entrevista de agosto de 2026, Zema classificou a legalização do aborto e da maconha como 'pautas anticristãs' do governo Lula.",
     "answers": {
       "eleicao_poder_01": "CT",
       "eleicao_poder_02": "CT",
-      "eleicao_poder_03": "CT"
+      "eleicao_poder_03": "DT"
     },
     "evidence": {
       "eleicao_poder_01": {
-        "rationale": "Plano Implacável inclui redução da maioridade penal e endurecimento contra o crime.",
+        "rationale": "Plano Implacável inclui redução da maioridade penal para 16 anos, enquadramento de facções como organizações terroristas e emprego das Forças Armadas em operações de domínio territorial — endurecimento penal máximo e detalhado.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html", "accessedAt": "2026-08-26"},
+          {"url": "https://www.congressoemfoco.com.br/noticia/121274/plano-de-zema-preve-choque-fiscal--limitacao-ao-stf-e-saida-do-brics", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_poder_02": {
         "rationale": "Plano registrado propõe porte de armas na área rural.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_poder_03": {
-        "rationale": "Não há proposta exclusiva sobre cannabis; oposição forte decorre do conservadorismo penal.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "Correção de um erro do audit anterior: a resposta registrada (CT) contradizia a própria rationale, que já descrevia 'oposição forte' à legalização recreativa. Em entrevista de agosto de 2026, Zema classificou explicitamente a legalização da maconha como uma das 'pautas anticristãs' do governo Lula — discordância total e direta, não concordância.",
+        "level": "direta",
+        "sources": [{"url": "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/8/7/zema-defende-anistia-imediata-aos-condenados-pelos-atos-de-8-de-janeiro-de-2023", "accessedAt": "2026-08-26"}]
       }
     }
   },
   "imigracao": {
-    "personaBrief": "Não possui plataforma migratória detalhada; estima-se acolhimento regulado e integração à sociedade comum.",
+    "personaBrief": "Não possui plataforma migratória amplamente detalhada, embora o plano registrado no TSE seja citado entre os poucos que tocam no tema; estima-se acolhimento regulado e integração à sociedade comum, com prioridade declarada em legalidade e ordem.",
     "answers": {
       "eleicao_imigracao_01": "C",
       "eleicao_imigracao_02": "C",
@@ -137,57 +134,57 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "A orientação liberal e de segurança sugere defesa nacional moderada, sem programa externo detalhado.",
+    "personaBrief": "O plano de governo de 2026 propõe sair do BRICS 'de forma diplomática' (preservando relações comerciais bilaterais com os países-membros) e buscar a entrada do Brasil na OCDE, alinhando o país às democracias ocidentais e aos mercados globais — uma reorientação geopolítica explícita, conduzida por via diplomática e não por confronto.",
     "answers": {
       "eleicao_diplomacia_01": "C",
-      "eleicao_diplomacia_02": "D",
+      "eleicao_diplomacia_02": "C",
       "eleicao_diplomacia_03": "C"
     },
     "evidence": {
       "eleicao_diplomacia_01": {
-        "rationale": "Apoio moderado a defesa decorre de sua agenda de segurança, sem proposta federal literal.",
+        "rationale": "Apoio moderado a defesa decorre de sua agenda de segurança e do emprego das Forças Armadas em operações domésticas de domínio territorial; sem proposta orçamentária de defesa externa detalhada.",
         "level": "inferida",
-        "sources": []
+        "sources": [{"url": "https://www.congressoemfoco.com.br/noticia/121274/plano-de-zema-preve-choque-fiscal--limitacao-ao-stf-e-saida-do-brics", "accessedAt": "2026-08-26"}]
       },
       "eleicao_diplomacia_02": {
-        "rationale": "Sem defesa de escalada militar, negociação é mais provável, mas não forte.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "Correção de um erro do audit anterior: a resposta registrada (D) contradizia a própria rationale, que já indicava negociação como mais provável. A saída do BRICS 'de forma diplomática', preservando relações bilaterais, e a busca por entrada na OCDE confirmam preferência por negociação e alinhamento institucional em vez de demonstração de força.",
+        "level": "direta",
+        "sources": [{"url": "https://www.cnnbrasil.com.br/eleicoes/novo-oficializa-candidatura-de-zema-no-tse-e-apresenta-plano-de-governo/", "accessedAt": "2026-08-26"}]
       },
       "eleicao_diplomacia_03": {
-        "rationale": "Apoio moderado à indústria de defesa é inferido da agenda de inovação.",
+        "rationale": "Apoio moderado à indústria de defesa é inferido da agenda de inovação, sem proposta específica de armas ou drones nacionais no plano de 2026.",
         "level": "inferida",
         "sources": []
       }
     }
   },
   "intervencao": {
-    "personaBrief": "Pragmatismo internacional e soberania econômica, com menor estatismo que nacionalistas econômicos.",
+    "personaBrief": "O plano de 2026 revela uma orientação de alinhamento com o Ocidente mais do que de nacionalismo econômico assertivo: saída diplomática do BRICS, entrada pretendida na OCDE, e transformação do Mercosul em zona de livre comércio que permita ao Brasil negociar acordos bilaterais de forma independente — soberania exercida via integração aos mercados globais, não via proteção estatal ou confronto.",
     "answers": {
       "eleicao_intervencao_01": "C",
-      "eleicao_intervencao_02": "C",
-      "eleicao_intervencao_03": "C"
+      "eleicao_intervencao_02": "D",
+      "eleicao_intervencao_03": "D"
     },
     "evidence": {
       "eleicao_intervencao_01": {
-        "rationale": "Foco doméstico torna provável evitar tropas e alianças externas.",
+        "rationale": "Foco doméstico e agenda de integração aos mercados ocidentais tornam provável evitar tropas e alianças militares externas formais.",
         "level": "inferida",
         "sources": []
       },
       "eleicao_intervencao_02": {
-        "rationale": "Defesa de interesses nacionais, ponderada por custos comerciais.",
+        "rationale": "Correção em relação ao audit anterior: a saída 'diplomática' do BRICS e a busca por entrada na OCDE mostram uma estratégia de acomodação e alinhamento com o Ocidente, não de confronto; um candidato focado em atrair investimento estrangeiro e reduzir o 'Custo Brasil' tem incentivo a evitar resposta firme a sanções que possa afastar capital.",
         "level": "inferida",
-        "sources": []
+        "sources": [{"url": "https://www.cnnbrasil.com.br/eleicoes/novo-oficializa-candidatura-de-zema-no-tse-e-apresenta-plano-de-governo/", "accessedAt": "2026-08-26"}]
       },
       "eleicao_intervencao_03": {
-        "rationale": "Proteção moderada é provável, mas sua visão pró-investimento reduz certeza de controle estatal.",
+        "rationale": "Correção em relação ao audit anterior: a proposta de transformar o Mercosul em zona de livre comércio com acordos bilaterais independentes, somada à agenda de privatização e atração de investimento estrangeiro, é mais consistente com solução de mercado do que com proteção estatal forte de minerais estratégicos.",
         "level": "inferida",
-        "sources": []
+        "sources": [{"url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26"}]
       }
     }
   },
   "economia": {
-    "personaBrief": "Privatização, ajuste fiscal e protagonismo empresarial são suas posições econômicas mais documentadas.",
+    "personaBrief": "Privatização, ajuste fiscal ('choque fiscal') e protagonismo empresarial são suas posições econômicas mais documentadas. O plano de 2026 propõe privatizar todas as estatais, nova reforma da Previdência (incluindo regimes rural e militar, com idade mínima ajustada automaticamente pela expectativa de vida) e condicionar a permanência de adultos aptos no Bolsa Família à busca por emprego ou qualificação.",
     "answers": {
       "eleicao_economia_01": "DT",
       "eleicao_economia_02": "CT",
@@ -195,34 +192,30 @@
     },
     "evidence": {
       "eleicao_economia_01": {
-        "rationale": "Plano Implacável propõe privatizar Petrobras e Banco do Brasil.",
+        "rationale": "O plano de governo de 2026 confirma e detalha a privatização de todas as empresas estatais como um dos eixos do 'choque fiscal' — discordância total e direta.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.em.com.br/politica/2026/08/7475589-plano-implacavel-veja-as-propostas-de-zema-na-disputa-pela-presidencia.html", "accessedAt": "2026-08-26"},
+          {"url": "https://www.congressoemfoco.com.br/noticia/121274/plano-de-zema-preve-choque-fiscal--limitacao-ao-stf-e-saida-do-brics", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_economia_02": {
-        "rationale": "Minas Livre instituiu garantias à livre iniciativa e desburocratização.",
+        "rationale": "Minas Livre instituiu garantias à livre iniciativa e desburocratização; o plano de 2026 reforça isso com contratação da rede privada para reduzir filas do SUS.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer", "accessedAt": "2026-08-26"},
+          {"url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_economia_03": {
-        "rationale": "Prioridade fiscal indica discordância moderada, não oposição a SUS ou proteção social.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "O plano de 2026 condiciona a permanência no Bolsa Família à busca por emprego ou qualificação, em vez de ampliar o programa, e prioriza redução de juros e equilíbrio fiscal — discordância moderada, não oposição a SUS ou proteção social como um todo.",
+        "level": "direta",
+        "sources": [{"url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26"}]
       }
     }
   },
   "controle": {
-    "personaBrief": "Advoga Estado enxuto, previsibilidade regulatória e livre iniciativa; admite planejamento limitado.",
+    "personaBrief": "Advoga Estado enxuto, previsibilidade regulatória e livre iniciativa; admite planejamento limitado. O 'choque fiscal' do plano de 2026 inclui nova reforma da Previdência, redução do crescimento de despesas obrigatórias e metas progressivas de redução da carga tributária.",
     "answers": {
       "eleicao_controle_01": "D",
       "eleicao_controle_02": "CT",
@@ -230,39 +223,30 @@
     },
     "evidence": {
       "eleicao_controle_01": {
-        "rationale": "Portfólio estadual buscou investimentos, mas a preferência de mercado reduz apoio a financiamento estatal setorial.",
+        "rationale": "Portfólio estadual buscou investimentos, mas a preferência de mercado e a agenda de privatização ampla reduzem apoio a financiamento estatal setorial.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.mg.gov.br/planejamento/noticias/gestao/08/2021/em-brasilia-governador-romeu-zema-se-reune-com-bancada-mineira-e-apresenta",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.mg.gov.br/planejamento/noticias/gestao/08/2021/em-brasilia-governador-romeu-zema-se-reune-com-bancada-mineira-e-apresenta", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_controle_02": {
         "rationale": "Autonomia técnica do BC é posição coerente com liberalismo; classificação partidária.",
         "level": "partidária",
         "sources": [
-          {
-            "url": "https://www.bcb.gov.br/acessoinformacao/autonomia",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.bcb.gov.br/acessoinformacao/autonomia", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_controle_03": {
         "rationale": "Minas Livre favorece menor intervenção; rejeição moderada é inferida.",
         "level": "partidária",
         "sources": [
-          {
-            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer", "accessedAt": "2026-08-26"}
         ]
       }
     }
   },
   "comercio": {
-    "personaBrief": "É pró-mercado e atração de investimentos, com baixa inclinação a tarifas ou preferência compulsória.",
+    "personaBrief": "É pró-mercado e atração de investimentos, com baixa inclinação a tarifas ou preferência compulsória. O plano de 2026 propõe transformar o Mercosul em zona de livre comércio (permitindo acordos bilaterais independentes), sair do BRICS diplomaticamente e buscar entrada na OCDE — uma agenda de abertura comercial explícita e direta, não apenas inferida.",
     "answers": {
       "eleicao_comercio_01": "CT",
       "eleicao_comercio_02": "D",
@@ -270,44 +254,42 @@
     },
     "evidence": {
       "eleicao_comercio_01": {
-        "rationale": "Abertura comercial é inferida da agenda de livre iniciativa; sem fala sobre acordo específico.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "A proposta de transformar o Mercosul em zona de livre comércio com acordos bilaterais independentes, aliada à busca por entrada na OCDE, é evidência direta de abertura comercial ampla, mesmo sem menção literal ao texto do acordo Mercosul-UE.",
+        "level": "direta",
+        "sources": [{"url": "https://www.abcdoabc.com.br/eleicoes-2026-propostas-zema-samara-martins/", "accessedAt": "2026-08-26"}]
       },
       "eleicao_comercio_02": {
-        "rationale": "Política de liberdade econômica fundamenta rejeição a tarifas amplas.",
-        "level": "partidária",
+        "rationale": "Política de liberdade econômica e a agenda de saída do BRICS/entrada na OCDE fundamentam rejeição a tarifas amplas.",
+        "level": "direta",
         "sources": [
-          {
-            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer", "accessedAt": "2026-08-26"},
+          {"url": "https://www.cnnbrasil.com.br/eleicoes/novo-oficializa-candidatura-de-zema-no-tse-e-apresenta-plano-de-governo/", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_comercio_03": {
-        "rationale": "Orientação pró-competição indica discordância moderada de preferência compulsória.",
+        "rationale": "Orientação pró-competição e agenda de livre comércio indicam discordância moderada de preferência compulsória em compras públicas.",
         "level": "inferida",
         "sources": []
       }
     }
   },
   "religiao": {
-    "personaBrief": "Direita liberal-conservadora, mas com gestão declaradamente técnica e laica.",
+    "personaBrief": "Direita liberal-conservadora, mas com gestão declaradamente técnica e laica. A chapa oficializada com o senador Eduardo Girão (Novo-CE), figura evangélica conhecida, e a classificação de pautas do governo Lula como 'anticristãs' sinalizam uma estratégia de aproximação com o eleitorado evangélico maior do que a de outros candidatos liberais.",
     "answers": {
       "eleicao_religiao_01": "CT",
-      "eleicao_religiao_02": "C",
+      "eleicao_religiao_02": "D",
       "eleicao_religiao_03": "C"
     },
     "evidence": {
       "eleicao_religiao_01": {
-        "rationale": "Não propõe rever isenção; apoio é inferido do alinhamento conservador.",
+        "rationale": "Não propõe rever isenção; apoio é inferido do alinhamento conservador e da chapa com Eduardo Girão.",
         "level": "inferida",
         "sources": []
       },
       "eleicao_religiao_02": {
-        "rationale": "Separação administrativa entre culto e campanha é inferida de sua postura institucional.",
+        "rationale": "Correção em relação ao audit anterior: a chapa com o senador evangélico Eduardo Girão e o uso de retórica como 'pautas anticristãs' para atacar o governo Lula sugerem uma estratégia de campanha que se apoia deliberadamente em identidade religiosa, tornando uma posição de separar campanha e templos menos provável do que se supunha.",
         "level": "inferida",
-        "sources": []
+        "sources": [{"url": "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/8/7/zema-defende-anistia-imediata-aos-condenados-pelos-atos-de-8-de-janeiro-de-2023", "accessedAt": "2026-08-26"}]
       },
       "eleicao_religiao_03": {
         "rationale": "Apoio moderado é inferido, sem defesa direta de ensino confessional.",
@@ -317,7 +299,7 @@
     }
   },
   "moral": {
-    "personaBrief": "Conservador em costumes; a chapa com Eduardo Girão reforça oposição ao aborto e valorização familiar.",
+    "personaBrief": "Conservador em costumes; a chapa com o senador evangélico Eduardo Girão reforça oposição ao aborto e valorização familiar. Em entrevista de agosto de 2026, Zema classificou explicitamente a legalização do aborto e da maconha como 'pautas anticristãs' do governo Lula — indo além do que o Novo historicamente adota como posição de partido (deixar o tema a critério de cada filiado).",
     "answers": {
       "eleicao_moral_01": "DT",
       "eleicao_moral_02": "D",
@@ -325,17 +307,17 @@
     },
     "evidence": {
       "eleicao_moral_01": {
-        "rationale": "Oposição forte inferida do conservadorismo da candidatura, sem promessa literal.",
-        "level": "inferida",
-        "sources": []
+        "rationale": "Correção em relação ao audit anterior: Zema declarou explicitamente, em agosto de 2026, que a defesa da legalização do aborto é uma 'pauta anticristã' do governo Lula — discordância total e direta, e não apenas inferência do conservadorismo da candidatura ou do partido Novo.",
+        "level": "direta",
+        "sources": [{"url": "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/8/7/zema-defende-anistia-imediata-aos-condenados-pelos-atos-de-8-de-janeiro-de-2023", "accessedAt": "2026-08-26"}]
       },
       "eleicao_moral_02": {
-        "rationale": "Discordância moderada inferida; não há evidência de proibir toda abordagem pedagógica.",
+        "rationale": "Discordância moderada inferida; não há evidência de proibir toda abordagem pedagógica sobre o tema.",
         "level": "inferida",
         "sources": []
       },
       "eleicao_moral_03": {
-        "rationale": "Apoio forte inferido da orientação pró-família, não de medida programática específica.",
+        "rationale": "Apoio forte inferido da orientação pró-família e da chapa com Eduardo Girão, não de medida programática específica.",
         "level": "inferida",
         "sources": []
       }
@@ -353,10 +335,7 @@
         "rationale": "Livre iniciativa e produtividade sustentam apoio forte a automação.",
         "level": "partidária",
         "sources": [
-          {
-            "url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://desenvolvimento.mg.gov.br/inicio/noticias/noticia/997/romeu-zema-lanca-programa-minas-livre-para-crescer", "accessedAt": "2026-08-26"}
         ]
       },
       "eleicao_tecnologia_02": {
@@ -368,10 +347,7 @@
         "rationale": "Sancionou regras mais rígidas para barragens, mas agenda de desenvolvimento sugere não priorizar ambiente de modo absoluto.",
         "level": "direta",
         "sources": [
-          {
-            "url": "https://www.governo.mg.gov.br/Noticias/Detalhe/5180",
-            "accessedAt": "2026-08-26"
-          }
+          {"url": "https://www.governo.mg.gov.br/Noticias/Detalhe/5180", "accessedAt": "2026-08-26"}
         ]
       }
     }

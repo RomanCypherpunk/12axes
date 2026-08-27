@@ -2,7 +2,8 @@
   "candidateId": "rui-costa-pimenta",
   "auditedAt": "2026-08-26",
   "questionSet": "election-questions.json",
-  "vector": {"estrutura":66.7,"representacao":75.0,"poder":8.3,"imigracao":8.3,"diplomacia":83.3,"intervencao":33.3,"economia":100.0,"controle":100.0,"comercio":100.0,"religiao":100.0,"moral":83.3,"tecnologia":75.0},
+  "auditNote": "Revisão de 26/08/2026: cruzamento do audit anterior (majoritariamente sourced do programa de governo em PDF e de materiais partidários gerais) com o lançamento oficial da candidatura (08/08/2026, com Antônio Carlos Silva na vice) e, principalmente, com uma entrevista extensa e recente ao Poder360 (21/08/2026) em que Pimenta respondeu diretamente, em primeira pessoa, sobre Banco Central, STF, Bolsonaro/8 de janeiro, armamento popular, aborto e drogas — elevando várias respostas de 'partidária/inferida' para 'direta'.",
+  "vector": {"estrutura":66.7,"representacao":66.7,"poder":8.3,"imigracao":8.3,"diplomacia":83.3,"intervencao":25.0,"economia":100.0,"controle":100.0,"comercio":100.0,"religiao":100.0,"moral":83.3,"tecnologia":75.0},
   "estrutura": {
     "personaBrief":"O programa combina planejamento nacional e controle dos trabalhadores com gestão comunitária; não traz uma tese federalista explícita.",
     "answers":{"eleicao_estrutura_01":"C","eleicao_estrutura_02":"C","eleicao_estrutura_03":"DT"},
@@ -13,21 +14,27 @@
     }
   },
   "representacao":{
-    "personaBrief":"O PCO critica instituições atuais, mas sustenta liberdade partidária, eleições amplas, mandatos revogáveis e maior representação popular.",
-    "answers":{"eleicao_representacao_01":"CT","eleicao_representacao_02":"DT","eleicao_representacao_03":"D"},
+    "personaBrief":"O PCO critica instituições atuais, mas sustenta liberdade partidária irrestrita, eleições amplas e maior representação popular direta. Em entrevista de 21/08/2026, Pimenta afirmou que a inelegibilidade de Bolsonaro é 'absurda' e classificou o julgamento dos réus do 8 de janeiro como 'uma grave violação dos direitos individuais' — não por concordar com o bolsonarismo, mas por uma posição doutrinária de longa data contrária ao poder concentrado do STF e a favor de que 'quem deve decidir quem são os candidatos é o povo'. Também critica o governo Lula por aderir a 'arbitrariedades do STF' em nome do combate ao bolsonarismo, e defende liberdade de opinião irrestrita, inclusive para opiniões que classifica como racistas ou homofóbicas ('a opinião deve ser combatida com outra opinião').",
+    "answers":{"eleicao_representacao_01":"CT","eleicao_representacao_02":"DT","eleicao_representacao_03":"DT"},
     "evidence":{
-      "eleicao_representacao_01":{"rationale":"Defende o regime mais democrático possível, liberdade partidária irrestrita e eleições amplas.","level":"partidária","sources":[{"url":"https://pco.org.br/2022/08/25/conheca-o-pco-um-partido-revolucionario-na-defesa-da-democracia-e-dos-direitos-democraticos/","accessedAt":"2026-08-26"}]},
-      "eleicao_representacao_02":{"rationale":"Propõe reforma constitucional e representação popular, não poder presidencial excepcional contra o Congresso.","level":"partidária","sources":[{"url":"https://pco.org.br/2022/08/25/conheca-o-pco-um-partido-revolucionario-na-defesa-da-democracia-e-dos-direitos-democraticos/","accessedAt":"2026-08-26"}]},
-      "eleicao_representacao_03":{"rationale":"Defende devido processo e liberdade de manifestação; aceita responsabilização legal, mas rejeita punição política indiscriminada.","level":"partidária","sources":[{"url":"https://pco.org.br/wp-content/uploads/2025/02/nota-oficial-pco.pdf","accessedAt":"2026-08-26"}]}
+      "eleicao_representacao_01":{"rationale":"Defende o regime mais democrático possível, liberdade partidária irrestrita e eleições amplas; reafirmado em entrevista recente com defesa de liberdade de opinião irrestrita mesmo para ideias que rejeita.","level":"direta","sources":[
+        {"url":"https://pco.org.br/2022/08/25/conheca-o-pco-um-partido-revolucionario-na-defesa-da-democracia-e-dos-direitos-democraticos/","accessedAt":"2026-08-26"},
+        {"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}
+      ]},
+      "eleicao_representacao_02":{"rationale":"Propõe reforma constitucional e representação popular direta (mobilização nas ruas), não poder presidencial excepcional contra o Congresso — inclusive rejeita 'acordos com o atual Congresso' como método, preferindo pressão popular direta a decretos executivos.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_representacao_03":{"rationale":"Correção em relação ao audit anterior: em entrevista de 21/08/2026, Pimenta declarou explicitamente que 'a inelegibilidade do Bolsonaro é absurda' e classificou o julgamento dos manifestantes do 8 de janeiro como 'uma grave violação dos direitos individuais', defendendo que 'quem deve decidir quem são os candidatos é o povo' — discordância total e direta, não apenas aceitação moderada de responsabilização legal como o audit anterior registrava. A posição decorre de uma crítica doutrinária de longa data ao poder do STF (aplicada também aos processos contra Lula), não de simpatia ao bolsonarismo.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]}
     }
   },
   "poder":{
-    "personaBrief":"A candidatura propõe dissolver o aparato repressivo, defende autodefesa e armamento dos trabalhadores e privilegia liberdades democráticas.",
+    "personaBrief":"A candidatura propõe dissolver a Polícia Militar em favor de uma polícia local escolhida e controlada pela população, rejeita a ampliação dos excludentes de ilicitude para policiais, e defende abertamente o armamento popular. Em entrevista de 21/08/2026, Pimenta afirmou: 'Nós somos favoráveis ao armamento da população. Nós sempre defendemos isso.'",
     "answers":{"eleicao_poder_01":"D","eleicao_poder_02":"CT","eleicao_poder_03":"CT"},
     "evidence":{
-      "eleicao_poder_01":{"rationale":"Pede dissolução da Polícia Militar e combate à repressão, não endurecimento penal como eixo.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_poder_02":{"rationale":"O PCO declara defender armamento da população trabalhadora e direito de autodefesa.","level":"partidária","sources":[{"url":"https://pco.org.br/verbete/armamento/","accessedAt":"2026-08-26"}]},
-      "eleicao_poder_03":{"rationale":"A defesa de liberdades individuais e oposição à criminalização repressiva tornam descriminalização a resposta provável.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]}
+      "eleicao_poder_01":{"rationale":"Rejeita ampliação de excludentes de ilicitude para policiais e argumenta que encarceramento em massa e aumento da repressão não resolvem uma criminalidade enraizada na crise social — discordância direta com penas mais severas como solução.","level":"direta","sources":[
+        {"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"},
+        {"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}
+      ]},
+      "eleicao_poder_02":{"rationale":"Declaração direta e recente: 'Nós somos favoráveis ao armamento da população. Nós sempre defendemos isso. Nós achamos que é uma proposta democrática.'","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_poder_03":{"rationale":"Em entrevista, explicou que o PCO 'é contrário politicamente ao consumo' de drogas, mas defende a legalização por considerar que a proibição produz consequências sociais mais graves, sobretudo o encarceramento em massa — concordância total com a descriminalização, apesar da reserva moral pessoal quanto ao consumo.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]}
     }
   },
   "imigracao":{
@@ -40,74 +47,83 @@
     }
   },
   "diplomacia":{
-    "personaBrief":"O PCO é anti-imperialista, defende soberania nacional e resistência armada de povos atacados; combina negociação com capacidade autônoma de defesa.",
+    "personaBrief":"O PCO é anti-imperialista e, em entrevista de 21/08/2026, Pimenta detalhou uma política externa de alinhamento explícito: privilegiar a aproximação com a China em vez da 'submissão' aos EUA (que classifica como 'predatória'), romper relações diplomáticas com Israel por causa de Gaza, apoiar o Irã contra pressões dos EUA sobre tecnologia nuclear, e apoiar a Rússia na guerra da Ucrânia, descrevendo a expansão da OTAN como 'política agressiva' e a intervenção russa como 'autodefesa'.",
     "answers":{"eleicao_diplomacia_01":"C","eleicao_diplomacia_02":"D","eleicao_diplomacia_03":"CT"},
     "evidence":{
-      "eleicao_diplomacia_01":{"rationale":"Defende soberania territorial e autodefesa popular, embora sem meta militar orçamentária.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_diplomacia_02":{"rationale":"Apoia resistência armada de povos contra imperialismo; não aceita negociação como regra sem força militar.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_diplomacia_03":{"rationale":"Defesa de soberania e desenvolvimento autônomo torna forte o apoio à capacidade nacional de defesa.","level":"partidária","sources":[{"url":"https://pco.org.br/about/","accessedAt":"2026-08-26"}]}
+      "eleicao_diplomacia_01":{"rationale":"Defende soberania territorial e autodefesa popular, embora sem meta militar orçamentária específica no programa.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_diplomacia_02":{"rationale":"Declarou apoio explícito à intervenção militar russa na Ucrânia como 'autodefesa' e definiu a expansão da OTAN como agressão — posição que rejeita a ideia de que conflitos devam ser resolvidos sempre por negociação sem demonstração de força.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_diplomacia_03":{"rationale":"Defesa de soberania e desenvolvimento autônomo, incluindo apoio ao direito do Irã de desenvolver tecnologia nuclear contra pressão dos EUA, torna forte o apoio à capacidade nacional de defesa.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]}
     }
   },
   "intervencao":{
-    "personaBrief":"A candidatura rejeita alianças e ingerência imperialistas, mas assume nacionalismo econômico e reação vigorosa para defender soberania.",
-    "answers":{"eleicao_intervencao_01":"CT","eleicao_intervencao_02":"CT","eleicao_intervencao_03":"CT"},
+    "personaBrief":"A candidatura rejeita alianças e ingerência imperialistas dos EUA especificamente, mas não é neutra em conflitos internacionais: alinha-se explicitamente com China, Rússia e Irã contra os EUA, defende romper relações com Israel, e assume nacionalismo econômico com reação vigorosa para defender soberania.",
+    "answers":{"eleicao_intervencao_01":"C","eleicao_intervencao_02":"CT","eleicao_intervencao_03":"CT"},
     "evidence":{
-      "eleicao_intervencao_01":{"rationale":"Defende expulsão de bases estrangeiras e oposição à ingerência, coerente com evitar alianças militares externas.","level":"partidária","sources":[{"url":"https://pco.org.br/about/","accessedAt":"2026-08-26"}]},
-      "eleicao_intervencao_02":{"rationale":"O programa sustenta confronto político com imperialismo mesmo diante de custos e rejeita ingerência de EUA e OEA.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_intervencao_03":{"rationale":"Propõe estatal para terras raras e nacionalização de reservas minerais, contra controle estrangeiro.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
+      "eleicao_intervencao_01":{"rationale":"Correção em relação ao audit anterior: rejeita alianças militares formais e envio de tropas por parte do Brasil, mas sua política externa não é de neutralidade — é um alinhamento explícito e partidário com um bloco geopolítico (China, Rússia, Irã) contra outro (EUA), o que modera CT para C.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_intervencao_02":{"rationale":"Classifica a relação com os EUA como 'predatória' e defende romper relações com Israel e apoiar o Irã contra pressão americana — reação firme e explícita a pressões externas, mesmo com custos.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_intervencao_03":{"rationale":"Propõe estatização e nacionalização de reservas minerais e recursos naturais, contra controle estrangeiro e a favor de recuperar capacidade de investimento estatal.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
   "economia":{
-    "personaBrief":"O programa propõe reestatização ampla, banco estatal único, expansão de serviços públicos e ruptura com privatizações.",
+    "personaBrief":"O programa propõe reestatização ampla (Eletrobras, Vale, Petrobras 100% estatal), banco estatal único, repúdio à dívida pública ('deveria ser ignorada'), e redução da jornada de trabalho para 35 horas semanais. Em entrevista de 21/08/2026, Pimenta afirmou que 'a iniciativa privada brasileira nunca foi capaz de desenvolver o País' e que 'é absurdo que a Petrobrás dê dinheiro para acionistas particulares'.",
     "answers":{"eleicao_economia_01":"CT","eleicao_economia_02":"DT","eleicao_economia_03":"CT"},
     "evidence":{
-      "eleicao_economia_01":{"rationale":"Defende Petrobras 100% estatal, barrar privatizações da Caixa e reestatizar empresas privatizadas.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_economia_02":{"rationale":"Propõe estatização de saúde, educação e sistema financeiro, incompatível com liderança privada apenas regulada.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_economia_03":{"rationale":"Prevê Bolsa Família de ao menos um salário mínimo e mais recursos sem limite para saúde pública.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
+      "eleicao_economia_01":{"rationale":"Defende Petrobras 100% estatal, reestatização de Eletrobras e Vale, e critica diretamente a distribuição de lucros da Petrobras a acionistas privados.","level":"direta","sources":[
+        {"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"},
+        {"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}
+      ]},
+      "eleicao_economia_02":{"rationale":"Declarou diretamente que 'a iniciativa privada brasileira nunca foi capaz de desenvolver o País' e que 'esse desenvolvimento deveria ser feito pelo Estado' — discordância total e explícita da liderança do setor privado.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_economia_03":{"rationale":"Prevê Bolsa Família de ao menos um salário mínimo e mais recursos sem limite para saúde pública, financiados por repúdio à dívida pública e recuperação da capacidade de investimento estatal.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
   "controle":{
-    "personaBrief":"A candidatura defende planejamento estatal, controle operário, banco estatal único e fim da independência do Banco Central.",
+    "personaBrief":"A candidatura defende planejamento estatal, controle operário, banco estatal único e fim da independência do Banco Central. Em entrevista de 21/08/2026, Pimenta se declarou explicitamente 'contrário à autonomia do Banco Central', afirmando que torná-lo independente 'significa retirar do poder eleito uma parte fundamental da política econômica'.",
     "answers":{"eleicao_controle_01":"CT","eleicao_controle_02":"DT","eleicao_controle_03":"CT"},
     "evidence":{
-      "eleicao_controle_01":{"rationale":"Defende plano nacional de moradias, empresas estatais e controle dos trabalhadores em setores estratégicos.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
-      "eleicao_controle_02":{"rationale":"O programa pede expressamente o fim da independência do Banco Central.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_controle_01":{"rationale":"Defende plano nacional de moradias, empresas estatais e controle dos trabalhadores em setores estratégicos, reafirmado com a defesa de que o desenvolvimento 'deveria ser feito pelo Estado'.","level":"direta","sources":[
+        {"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"},
+        {"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}
+      ]},
+      "eleicao_controle_02":{"rationale":"Declaração direta e explícita em entrevista: 'contrário à autonomia do Banco Central', pois esta 'retira do poder eleito uma parte fundamental da política econômica' — não mais apenas o que o programa escrito pede, mas uma declaração pessoal recente.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
       "eleicao_controle_03":{"rationale":"Propõe reduzir combustíveis em 50% e acabar com paridade cambial, indicando controle estatal de preços essenciais.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
   "comercio":{
-    "personaBrief":"O PCO trata capital estrangeiro e imperialismo como subordinação econômica e propõe nacionalização de setores e recursos estratégicos.",
+    "personaBrief":"O PCO trata capital estrangeiro e imperialismo como subordinação econômica e propõe nacionalização de setores e recursos estratégicos. Defende privilegiar comércio e alinhamento com a China em vez dos EUA, cuja relação com o Brasil chama de 'predatória'.",
     "answers":{"eleicao_comercio_01":"DT","eleicao_comercio_02":"CT","eleicao_comercio_03":"CT"},
     "evidence":{
-      "eleicao_comercio_01":{"rationale":"A rejeição à entrega da economia e ao imperialismo indica oposição forte a acordo que exponha setores nacionais.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
+      "eleicao_comercio_01":{"rationale":"A rejeição à entrega da economia e ao imperialismo, reforçada pela descrição da relação econômica com os EUA como 'predatória', indica oposição forte a acordo que exponha setores nacionais.","level":"direta","sources":[
+        {"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"},
+        {"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}
+      ]},
       "eleicao_comercio_02":{"rationale":"Nacionalização e proteção econômica tornam provável a defesa forte de instrumentos contra competição importada predatória.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]},
       "eleicao_comercio_03":{"rationale":"A preferência por estatal e produção sob controle dos trabalhadores é coerente com preferência nacional em compras públicas.","level":"partidária","sources":[{"url":"https://candidatos.pco.org.br/wp-content/uploads/2026/08/PCO-programa-de-governo-2026.pdf","accessedAt":"2026-08-26"}]}
     }
   },
   "religiao":{
-    "personaBrief":"O PCO defende liberdades individuais e Estado não tutelar, mas não possui proposta específica sobre tributação de igrejas ou ensino religioso.",
+    "personaBrief":"O PCO defende Estado laico e liberdades individuais, com forte matriz materialista. Em entrevista de 21/08/2026, Pimenta afirmou explicitamente que 'o Estado deveria, no Brasil, ser um Estado laico, não um Estado religioso', ao defender a legalização do aborto.",
     "answers":{"eleicao_religiao_01":"DT","eleicao_religiao_02":"CT","eleicao_religiao_03":"DT"},
     "evidence":{
       "eleicao_religiao_01":{"rationale":"Inferência: crítica a privilégios e matriz materialista tornam improvável isenção por função religiosa.","level":"inferida","sources":[]},
       "eleicao_religiao_02":{"rationale":"Inferência: separar organizações religiosas de campanha é coerente com oposição à tutela política privada.","level":"inferida","sources":[]},
-      "eleicao_religiao_03":{"rationale":"Inferência: ensino público laico e sem doutrinação religiosa é mais coerente com a matriz do partido.","level":"inferida","sources":[]}
+      "eleicao_religiao_03":{"rationale":"Declaração direta e explícita de que 'o Estado deveria ser um Estado laico, não um Estado religioso' e que ele 'não tem por que aprovar leis que atendem a preceitos religiosos' — discordância total com ensino confessional público.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]}
     }
   },
   "moral":{
-    "personaBrief":"O PCO defende aborto legal no SUS, direitos individuais e casamento homoafetivo; diverge do identitarismo, mas não propõe restringir direitos de diversidade.",
+    "personaBrief":"O PCO defende aborto legal, direitos individuais e casamento homoafetivo; diverge do identitarismo como estratégia, mas não propõe restringir direitos de diversidade. Em entrevista de 21/08/2026, Pimenta declarou: 'Nós defendemos a legalização integral do aborto', argumentando que é 'um problema individual' e que o Estado brasileiro deveria ser laico.",
     "answers":{"eleicao_moral_01":"CT","eleicao_moral_02":"N","eleicao_moral_03":"DT"},
     "evidence":{
-      "eleicao_moral_01":{"rationale":"Defende explicitamente aborto legal na rede pública como direito democrático e de saúde.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]},
-      "eleicao_moral_02":{"rationale":"Defende direitos individuais, mas critica identitarismo; sem proposta curricular específica há ambivalência real.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]},
-      "eleicao_moral_03":{"rationale":"Defende casamento homoafetivo e liberdade individual, incompatíveis com priorização estatal de uma única família.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]}
+      "eleicao_moral_01":{"rationale":"Declaração direta e recente: 'Nós defendemos a legalização integral do aborto. Primeiro, porque é um problema individual e a proibição é um problema moral [religioso]... o Estado deveria ser laico.'","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
+      "eleicao_moral_02":{"rationale":"Defende direitos individuais e liberdade de opinião irrestrita ('a opinião deve ser combatida com outra opinião'), mas critica identitarismo como estratégia; sem proposta curricular específica há ambivalência real entre liberdade de cátedra e direitos de minorias.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]},
+      "eleicao_moral_03":{"rationale":"Defende casamento homoafetivo e liberdade individual, incompatíveis com priorização estatal de uma única forma de família.","level":"partidária","sources":[{"url":"https://pco.org.br/textos-politicos-e-sociais/","accessedAt":"2026-08-26"}]}
     }
   },
   "tecnologia":{
-    "personaBrief":"O programa prioriza emprego, planejamento e soberania, sem agenda tecnológica detalhada; as respostas são inferidas com base em desenvolvimento nacional e proteção dos trabalhadores.",
+    "personaBrief":"O programa prioriza emprego, planejamento e soberania, sem agenda tecnológica ambiental detalhada; cita comparações entre o Brasil e países como China, Índia, Rússia e Irã para criticar a 'desindustrialização' brasileira e defender desenvolvimento estatal.",
     "answers":{"eleicao_tecnologia_01":"N","eleicao_tecnologia_02":"CT","eleicao_tecnologia_03":"D"},
     "evidence":{
-      "eleicao_tecnologia_01":{"rationale":"Inferência: apoiaria modernização subordinada à proteção do emprego; não há posição específica sobre IA e automação.","level":"inferida","sources":[]},
-      "eleicao_tecnologia_02":{"rationale":"Inferência: nacionalização de recursos e defesa do desenvolvimento soberano indicam forte apoio à capacidade científica nacional.","level":"inferida","sources":[]},
+      "eleicao_tecnologia_01":{"rationale":"Inferência: apoiaria modernização subordinada à proteção do emprego (jornada de 35h, fim de demissões associadas à automação); não há posição específica sobre IA.","level":"inferida","sources":[]},
+      "eleicao_tecnologia_02":{"rationale":"Compara o retrocesso tecnológico e industrial do Brasil a China, Índia, Rússia e Irã, e defende o direito do Irã à tecnologia nuclear contra pressão dos EUA — apoio forte e direto ao desenvolvimento tecnológico soberano, incluindo nuclear.","level":"direta","sources":[{"url":"https://causaoperaria.org.br/2026/ao-poder360-rui-denuncia-perseguicao-da-pf-e-apresenta-programa-socialista/","accessedAt":"2026-08-26"}]},
       "eleicao_tecnologia_03":{"rationale":"Inferência: desenvolvimento soberano e exploração nacional de recursos tornam improvável prioridade absoluta de preservação.","level":"inferida","sources":[]}
     }
   }
