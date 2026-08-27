@@ -105,7 +105,7 @@ export interface QuizResult {
 }
 
 export interface Candidate {
-  id: string; name: string; role: string; description: string; party: string; partyName: string;
+  id: string; name: string; shortName: string; role: string; description: string; party: string; partyName: string;
   ballotNumber: string; runningMate: string; active: boolean; imagePath: string;
   imageSourceName?: string; imageSourceUrl?: string; imageNote?: string;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AxisResultBar } from '../components/AxisResultBar';
+import { CandidateCompatibilityChart } from '../components/CandidateCompatibilityChart';
 import { ProgressHeader } from '../components/ProgressHeader';
 import { QuestionCard } from '../components/QuestionCard';
 import { fetchElectionCandidates, fetchElectionQuiz, fetchSharedElectionResult, submitElectionResults } from '../services/quizApi';
@@ -432,25 +433,13 @@ export default function ElectionApp() {
           </div>
         </section>
 
-        <section className="results-section fade-up d-5">
+        <section className="results-section results-section-compat fade-up d-5">
           <div className="section-heading">
-            <span className="eyebrow">Outras proximidades</span>
-            <h2>Outras candidaturas compatíveis</h2>
+            <span className="eyebrow">Candidatos 2026</span>
+            <h2>Compatibilidade com cada candidato</h2>
+            <p>Veja o quão compatível você é com cada candidatura, com base nas suas respostas.</p>
           </div>
-          <div className="match-grid">
-            {result?.matches.slice(1).map((m, i) => (
-              <article className="match-card election-match-card" key={m.candidateId}>
-                <div className="match-card-header">
-                  <div className="match-card-text">
-                    <span>{i + 2}º mais compatível · {m.party} {m.ballotNumber}</span>
-                    <h3>{m.name}</h3>
-                  </div>
-                </div>
-                <img src={m.imagePath} alt="" loading="lazy" />
-                <p>{m.description}</p>
-              </article>
-            ))}
-          </div>
+          <CandidateCompatibilityChart matches={result?.matches ?? []} />
         </section>
 
         <div className="results-cta fade-up d-5" data-export-hidden="true">
