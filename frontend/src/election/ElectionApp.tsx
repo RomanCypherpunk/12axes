@@ -237,7 +237,7 @@ export default function ElectionApp() {
           <div className="home-grid">
             <div className="intro-panel">
               <span className="intro-eyebrow fade-up d-1"><strong>ESPECIAL ELEIÇÕES 2026</strong></span>
-              <h1 className="fade-up d-2">Descubra a candidatura mais <em>compatível</em> com você.</h1>
+              <h1 className="fade-up d-2">Descubra o candidato mais <em>compatível</em> com você.</h1>
               <p className="intro-lead fade-up d-3">
                 Responda 36 perguntas sobre o Brasil atual e compare suas posições nos 12 eixos com os programas e posições públicas das candidaturas presidenciais.
               </p>
