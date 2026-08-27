@@ -902,6 +902,89 @@ function buildHomeVariants() {
     throw new Error(`Esperava 2 blocos ld+json no index.html, encontrei ${ldIndex}`);
   }
   writeFileSync(join(DIST, 'en.html'), en);
+
+  buildElectionPages(index);
+}
+
+// ── Eleições 2026 ───────────────────────────────────────────────────────────
+// O quiz eleitoral é uma rota do SPA, e crawlers de WhatsApp/redes sociais não
+// executam JS: eles leem o HTML servido pelo rewrite, que é o index genérico.
+// Por isso gravamos arquivos físicos para /eleicoes2026 e /eleicoes2026/resultado
+// com OG/Twitter próprios — é o que dá o card de compartilhamento do especial.
+const ELECTION_OG_IMAGE = '/logo-eleicoes.png';
+const ELECTION_TITLE = 'Eleições 2026 — Descubra o candidato mais compatível com você';
+const ELECTION_DESCRIPTION =
+  'Responda 36 perguntas sobre o Brasil e veja sua compatibilidade com cada candidatura presidencial de 2026, eixo a eixo.';
+
+function buildElectionPages(index) {
+  const seoBlock = `<!-- Primary SEO -->
+    <title>${ELECTION_TITLE}</title>
+    <meta
+      name="description"
+      content="${ELECTION_DESCRIPTION}"
+    />
+    <meta
+      name="keywords"
+      content="eleições 2026, eleições presidenciais 2026, candidatos 2026, teste eleitoral, quiz eleitoral, compatibilidade com candidato, em quem votar, Lula, Flávio Bolsonaro, Ronaldo Caiado, Romeu Zema, Renan Santos, Augusto Cury, 12 eixos, 12 axes, teste político"
+    />
+    <meta name="author" content="12 Axes" />
+    <meta name="application-name" content="12 Axes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="Portuguese" />
+    <link rel="canonical" href="${SITE}/eleicoes2026" />
+
+    `;
+
+  const ogBlock = `<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="12 Axes" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="${SITE}/eleicoes2026" />
+    <meta property="og:title" content="${ELECTION_TITLE}" />
+    <meta
+      property="og:description"
+      content="${ELECTION_DESCRIPTION}"
+    />
+    <meta property="og:image" content="${SITE}${ELECTION_OG_IMAGE}" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Descubra o candidato mais compatível com você — Eleições 2026" />
+
+    `;
+
+  const twitterBlock = `<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${ELECTION_TITLE}" />
+    <meta
+      name="twitter:description"
+      content="${ELECTION_DESCRIPTION}"
+    />
+    <meta name="twitter:image" content="${SITE}${ELECTION_OG_IMAGE}" />
+
+    `;
+
+  let page = replaceBetween(index, '<!-- Primary SEO -->', '<!-- Icons -->', seoBlock);
+  page = replaceBetween(page, '<!-- Open Graph -->', '<!-- Twitter -->', ogBlock);
+  page = replaceBetween(page, '<!-- Twitter -->', '<style>', twitterBlock);
+  // O JSON-LD do index também aponta a imagem do app para /logo.png; nesta
+  // página o rich result do Google deve mostrar o card do especial.
+  page = page.split(`${SITE}/logo.png`).join(`${SITE}${ELECTION_OG_IMAGE}`);
+
+  if (page.includes('/logo.png')) {
+    throw new Error('eleicoes2026: sobrou referência a /logo.png nas metatags');
+  }
+  if (!page.includes(ELECTION_OG_IMAGE)) {
+    throw new Error('eleicoes2026: og:image não aponta para logo-eleicoes.png');
+  }
+
+  writeFileSync(join(DIST, 'eleicoes2026.html'), page);
+
+  // A tela de resultado compartilha o mesmo card, mas sem canonical: cada URL
+  // de resultado carrega um vetor diferente na query string.
+  const resultado = page.replace(/^\s*<link rel="canonical"[^\n]*\n/m, '');
+  mkdirSync(join(DIST, 'eleicoes2026'), { recursive: true });
+  writeFileSync(join(DIST, 'eleicoes2026', 'resultado.html'), resultado);
 }
 
 const allPaths = [];
@@ -921,7 +1004,7 @@ buildHomeVariants();
 writeFileSync(join(DIST, 'pages.css'), buildCss());
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', ...allPaths]
+const sitemapUrls = ['/', '/en', '/eleicoes2026', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(
