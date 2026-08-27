@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AxisResultBar } from '../components/AxisResultBar';
 import { ProgressHeader } from '../components/ProgressHeader';
 import { QuestionCard } from '../components/QuestionCard';
 import { fetchElectionCandidates, fetchElectionQuiz, fetchSharedElectionResult, submitElectionResults } from '../services/quizApi';
 import type { AnswerValue, Candidate, ElectionResult, QuizPayload } from '../types/quiz';
+import { interleaveByPole } from '../utils/quizSelection';
 
 type Screen = 'home' | 'quiz' | 'result';
 
@@ -79,7 +80,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Posso compartilhar meu resultado?',
-    answer: 'Sim. Ao final você pode copiar um link com seu resultado ou baixar uma imagem para compartilhar.'
+    answer: 'Sim. A página de resultado tem um link único na URL do navegador, que você pode copiar e enviar para outra pessoa ver o mesmo resultado.'
   },
   {
     question: 'O teste coleta dados pessoais?',
@@ -95,11 +96,22 @@ export default function ElectionApp() {
   const [index, setIndex] = useState(0);
   const [result, setResult] = useState<ElectionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isAdvancing, setIsAdvancing] = useState(false);
+  const advanceTimerRef = useRef<number | null>(null);
+  const isAdvancingRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      if (advanceTimerRef.current !== null) {
+        window.clearTimeout(advanceTimerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     void Promise.all([fetchElectionQuiz(), fetchElectionCandidates()])
       .then(async ([q, c]) => {
-        setQuiz(q);
+        setQuiz({ ...q, questions: interleaveByPole(q.questions) });
         setCandidates(c);
         const values = parseSharedElectionResultUrl();
         if (values) {
@@ -125,17 +137,47 @@ export default function ElectionApp() {
     }
   }
 
+  function clearPendingAdvance() {
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
+    isAdvancingRef.current = false;
+    setIsAdvancing(false);
+  }
+
+  function goToPreviousQuestion() {
+    clearPendingAdvance();
+    setIndex((current) => Math.max(0, current - 1));
+  }
+
   function selectAnswer(answer: AnswerValue) {
-    if (!question) return;
+    if (!question || !quiz || isAdvancingRef.current) return;
+    const questionIndex = index;
     const next = { ...answers, [question.id]: answer };
     setAnswers(next);
-    window.setTimeout(() => {
-      if (index === quiz!.questions.length - 1) void finish(next);
-      else setIndex((current) => current + 1);
+    setError(null);
+
+    if (questionIndex === quiz.questions.length - 1) {
+      void finish(next);
+      return;
+    }
+
+    isAdvancingRef.current = true;
+    setIsAdvancing(true);
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current);
+    }
+    advanceTimerRef.current = window.setTimeout(() => {
+      setIndex((current) => (current === questionIndex ? questionIndex + 1 : current));
+      isAdvancingRef.current = false;
+      setIsAdvancing(false);
+      advanceTimerRef.current = null;
     }, 180);
   }
 
-  function restart() {
+  async function restart() {
+    clearPendingAdvance();
     if (window.location.pathname.replace(/\/+$/, '') === '/eleicoes2026/resultado') {
       window.history.replaceState(null, '', '/eleicoes2026');
     }
@@ -143,6 +185,12 @@ export default function ElectionApp() {
     setIndex(0);
     setError(null);
     setScreen('quiz');
+    try {
+      const nextQuiz = await fetchElectionQuiz();
+      setQuiz({ ...nextQuiz, questions: interleaveByPole(nextQuiz.questions) });
+    } catch (e) {
+      setError((e as Error).message);
+    }
   }
 
   if (error) {
@@ -307,10 +355,11 @@ export default function ElectionApp() {
             axisLabel={quiz.axes.find((a) => a.id === question.axisId)?.label}
             options={quiz.answerOptions}
             selected={answers[question.id]}
+            disabled={isAdvancing}
             onSelect={selectAnswer}
           />
           <nav className="quiz-actions" aria-label="Navegação do quiz">
-            <button className="secondary-button" type="button" disabled={!index} onClick={() => setIndex(index - 1)}>
+            <button className="secondary-button" type="button" disabled={!index || isAdvancing} onClick={goToPreviousQuestion}>
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true" style={{ transform: 'rotate(180deg)' }}><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
               Voltar
             </button>
@@ -328,7 +377,7 @@ export default function ElectionApp() {
         <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label="Voltar ao início">
           <span className="brand-num">12</span><span className="brand-word">axes</span>
         </button>
-        <button className="primary-button header-cta" type="button" onClick={restart}>
+        <button className="primary-button header-cta" type="button" onClick={() => void restart()}>
           Refazer análise
           <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></svg>
         </button>
@@ -405,7 +454,7 @@ export default function ElectionApp() {
         </section>
 
         <div className="results-cta fade-up d-5" data-export-hidden="true">
-          <button className="primary-button" type="button" onClick={restart}>
+          <button className="primary-button" type="button" onClick={() => void restart()}>
             Refazer análise
             <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></svg>
           </button>

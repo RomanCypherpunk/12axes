@@ -116,7 +116,7 @@ export function selectExtensionQuestions(
 }
 
 // Reordena para alternar afirmações LEFT/RIGHT enquanto houver de ambos os lados.
-function interleaveByPole(questions: Question[]): Question[] {
+export function interleaveByPole(questions: Question[]): Question[] {
   const leftQueue = shuffleArray(questions.filter((q) => q.agreePole === 'LEFT'));
   const rightQueue = shuffleArray(questions.filter((q) => q.agreePole === 'RIGHT'));
   const ordered: Question[] = [];
