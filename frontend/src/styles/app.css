@@ -4897,16 +4897,23 @@
 }
 
 /* Eleições 2026 */
+.home-grid:has(.election-hero-visual) {
+  align-items: center;
+}
+
 .election-hero-visual {
-  display: grid;
-  place-items: center;
-  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: clamp(12px, 3vw, 28px);
 }
 
 .election-hero-visual img {
-  width: 100%;
-  max-width: 360px;
+  width: min(100%, 420px);
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   filter: drop-shadow(0 22px 40px rgba(11, 16, 32, 0.18));
 }
 
