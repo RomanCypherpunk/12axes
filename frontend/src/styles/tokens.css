@@ -94,6 +94,29 @@
   --dur-base:    220ms;
   --dur-deliberate: 520ms;
 
+  /* ── Movimento ───────────────────────────────────────────────────────────
+     O quiz e um instrumento de medicao: o movimento existe para mostrar a
+     medicao acontecendo, nunca como decoracao.
+     - settle: curva de agulha de instrumento. Sai rapido, chega devagar e
+       assenta sem oscilar. Usada em tudo que "mede" (eixos, progresso).
+     - exit:   aceleracao pura, para o que esta saindo de cena.
+     - press:  resposta tatil imediata ao toque.                             */
+  --ease-settle: cubic-bezier(0.16, 0.84, 0.28, 1);
+  --ease-exit:   cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-press:  cubic-bezier(0.2, 0, 0, 1);
+
+  --dur-press:   130ms;   /* feedback de toque */
+  --dur-exit:    150ms;   /* pergunta saindo */
+  --dur-enter:   380ms;   /* pergunta entrando */
+  --dur-measure: 900ms;   /* agulha percorrendo ate a posicao final */
+  --dur-reveal:  620ms;   /* entrada de blocos em cena */
+  --press-scale: 0.96;
+
+  /* Amplitudes: movimento precisa ser visto sem ser procurado. */
+  --shift-enter: 34px;    /* deslocamento da pergunta ao trocar */
+  --rise-reveal: 30px;    /* subida de blocos ao entrar em cena */
+  --lift-hover:  -5px;    /* elevacao no hover de cards */
+
   font-family: var(--font-body);
   font-size: 16px;
   -webkit-font-smoothing: antialiased;

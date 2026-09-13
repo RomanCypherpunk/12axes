@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AxisResultBar } from '../components/AxisResultBar';
 import { CandidateCompatibilityChart } from '../components/CandidateCompatibilityChart';
 import { ProgressHeader } from '../components/ProgressHeader';
@@ -98,6 +99,12 @@ export default function ElectionApp() {
   const [result, setResult] = useState<ElectionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isAdvancing, setIsAdvancing] = useState(false);
+  // 'forward' | 'back': define de que lado a proxima pergunta entra.
+  const [navDirection, setNavDirection] = useState<'forward' | 'back'>('forward');
+
+  // Home: blocos editoriais abaixo da dobra entram ao rolar.
+  useScrollReveal(screen === 'home', [screen]);
+
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
 
@@ -149,6 +156,7 @@ export default function ElectionApp() {
 
   function goToPreviousQuestion() {
     clearPendingAdvance();
+    setNavDirection('back');
     setIndex((current) => Math.max(0, current - 1));
   }
 
@@ -165,6 +173,7 @@ export default function ElectionApp() {
     }
 
     isAdvancingRef.current = true;
+    setNavDirection('forward');
     setIsAdvancing(true);
     if (advanceTimerRef.current !== null) {
       window.clearTimeout(advanceTimerRef.current);
@@ -265,7 +274,7 @@ export default function ElectionApp() {
           </div>
 
           <div className="home-seo">
-            <section className="seo-block fade-up" aria-labelledby="como-funciona">
+            <section className="seo-block" data-reveal aria-labelledby="como-funciona">
               <div className="section-heading">
                 <span className="eyebrow">Como funciona</span>
                 <h2 id="como-funciona">Uma análise eleitoral, não uma recomendação</h2>
@@ -282,7 +291,7 @@ export default function ElectionApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="candidaturas">
+            <section className="seo-block" data-reveal aria-labelledby="candidaturas">
               <div className="section-heading">
                 <span className="eyebrow">Catálogo 2026</span>
                 <h2 id="candidaturas">Candidaturas analisadas</h2>
@@ -301,7 +310,7 @@ export default function ElectionApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="guia-eixos">
+            <section className="seo-block" data-reveal aria-labelledby="guia-eixos">
               <div className="section-heading">
                 <span className="eyebrow">12 eixos eleitorais</span>
                 <h2 id="guia-eixos">O que significa cada eixo?</h2>
@@ -320,7 +329,7 @@ export default function ElectionApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="faq">
+            <section className="seo-block" data-reveal aria-labelledby="faq">
               <div className="section-heading">
                 <span className="eyebrow">FAQ</span>
                 <h2 id="faq">Perguntas frequentes</h2>
@@ -349,7 +358,17 @@ export default function ElectionApp() {
           </button>
         </header>
         <section className="quiz-layout">
-          <ProgressHeader current={index + 1} total={quiz.questions.length} />
+          <ProgressHeader
+            current={index + 1}
+            total={quiz.questions.length}
+            questionsPerAxis={quiz.questionsPerAxis}
+            axisCount={quiz.axes.length}
+          />
+          <div
+            className="question-stage"
+            data-direction={navDirection}
+            data-leaving={isAdvancing ? 'true' : undefined}
+          >
           <QuestionCard
             key={question.id}
             question={question}
@@ -359,6 +378,7 @@ export default function ElectionApp() {
             disabled={isAdvancing}
             onSelect={selectAnswer}
           />
+          </div>
           <nav className="quiz-actions" aria-label="Navegação do quiz">
             <button className="secondary-button" type="button" disabled={!index || isAdvancing} onClick={goToPreviousQuestion}>
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true" style={{ transform: 'rotate(180deg)' }}><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
@@ -386,12 +406,12 @@ export default function ElectionApp() {
 
       <section className="results-layout" id="resultados">
         <header className="results-hero">
-          <div className="results-hero-text fade-up d-1">
+          <div className="results-hero-text">
             <span className="results-eyebrow">Eleições 2026</span>
             <h1>Você é mais compatível com <em>{top?.name}</em></h1>
             <p>O resultado compara suas respostas com os vetores eleitorais do catálogo 12 Axes.</p>
           </div>
-          <aside className="results-meta-card election-results-meta-card fade-up d-2" aria-label="Resumo do resultado">
+          <aside className="results-meta-card election-results-meta-card" aria-label="Resumo do resultado">
             <div className="results-meta-row"><span>Perguntas</span><strong>{quiz.questions.length}</strong></div>
             <div className="results-meta-row"><span>Eixos</span><strong>12</strong></div>
             <div className="results-meta-row"><span>Compatibilidade</span><strong>{top?.compatibility.toFixed(1)}%</strong></div>
@@ -399,7 +419,7 @@ export default function ElectionApp() {
         </header>
 
         {top && (
-          <article className="personality-match-card election-featured-card fade-up d-3">
+          <article className="personality-match-card election-featured-card">
             <div className="personality-match-visual">
               <img src={top.imagePath} alt={`Retrato de ${top.name}`} loading="lazy" />
             </div>
@@ -420,7 +440,7 @@ export default function ElectionApp() {
           </article>
         )}
 
-        <section className="results-section results-section-axes fade-up d-4">
+        <section className="results-section results-section-axes">
           <div className="section-heading">
             <span className="eyebrow">Seus eixos</span>
             <h2>Como suas posições se distribuem</h2>
@@ -433,7 +453,7 @@ export default function ElectionApp() {
           </div>
         </section>
 
-        <section className="results-section results-section-compat fade-up d-5">
+        <section className="results-section results-section-compat">
           <div className="section-heading">
             <span className="eyebrow">Candidatos 2026</span>
             <h2>Compatibilidade com cada candidato</h2>
@@ -442,7 +462,7 @@ export default function ElectionApp() {
           <CandidateCompatibilityChart matches={result?.matches ?? []} />
         </section>
 
-        <div className="results-cta fade-up d-5" data-export-hidden="true">
+        <div className="results-cta" data-export-hidden="true">
           <button className="primary-button" type="button" onClick={() => void restart()}>
             Refazer análise
             <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></svg>

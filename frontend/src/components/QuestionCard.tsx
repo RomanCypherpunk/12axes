@@ -37,7 +37,16 @@ export function QuestionCard({ question, axisLabel, options, selected, disabled 
               role="radio"
               aria-checked={isSelected}
               disabled={disabled}
-              onClick={() => onSelect(option.id)}
+              onClick={(event) => {
+                // Ancora a onda de confirmacao no ponto exato do clique.
+                const target = event.currentTarget;
+                const rect = target.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                if (rect.width > 0 && Number.isFinite(x)) {
+                  target.style.setProperty('--commit-x', `${(x / rect.width) * 100}%`);
+                }
+                onSelect(option.id);
+              }}
             >
               <AnswerIcon answer={option.id} />
               <span>{option.label}</span>

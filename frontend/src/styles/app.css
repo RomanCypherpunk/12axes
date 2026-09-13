@@ -6201,9 +6201,527 @@
   }
 }
 
+
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MOVIMENTO
+   O 12 Axes e um instrumento de medicao politica: o movimento mostra a
+   medicao acontecendo. Amplitude calibrada para ser percebida sem procurar.
+
+   Excecao consciente: o card de exemplo do hero (.hero-result-teaser) fica
+   parado por decisao do cliente. Nada aqui o anima.
+
+   Neutralizado por @media (prefers-reduced-motion) no fim do arquivo.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Entrada de blocos em cena ───────────────────────────────────────────
+   Subida com amplitude visivel. Vale para a home (blocos editoriais) e para
+   os cards do resultado.                                                    */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--rise-reveal));
+  transition:
+    opacity var(--dur-reveal) var(--ease-settle),
+    transform var(--dur-reveal) var(--ease-settle);
+}
+
+[data-reveal][data-revealed] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cards internos entram em sequencia: o bloco todo nao aparece de uma vez. */
+[data-reveal] .axis-guide-card,
+[data-reveal] .spectrum-card,
+[data-reveal] .step-card,
+[data-reveal] .faq-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-settle),
+    transform var(--dur-reveal) var(--ease-settle);
+}
+
+[data-reveal][data-revealed] .axis-guide-card,
+[data-reveal][data-revealed] .spectrum-card,
+[data-reveal][data-revealed] .step-card,
+[data-reveal][data-revealed] .faq-item {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal][data-revealed] .axis-guide-card:nth-child(1),
+[data-reveal][data-revealed] .spectrum-card:nth-child(1),
+[data-reveal][data-revealed] .step-card:nth-child(1),
+[data-reveal][data-revealed] .faq-item:nth-child(1) { transition-delay: 60ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(2),
+[data-reveal][data-revealed] .spectrum-card:nth-child(2),
+[data-reveal][data-revealed] .step-card:nth-child(2),
+[data-reveal][data-revealed] .faq-item:nth-child(2) { transition-delay: 120ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(3),
+[data-reveal][data-revealed] .spectrum-card:nth-child(3),
+[data-reveal][data-revealed] .step-card:nth-child(3),
+[data-reveal][data-revealed] .faq-item:nth-child(3) { transition-delay: 180ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(4),
+[data-reveal][data-revealed] .spectrum-card:nth-child(4),
+[data-reveal][data-revealed] .step-card:nth-child(4),
+[data-reveal][data-revealed] .faq-item:nth-child(4) { transition-delay: 240ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(5),
+[data-reveal][data-revealed] .spectrum-card:nth-child(5),
+[data-reveal][data-revealed] .faq-item:nth-child(5) { transition-delay: 300ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(6),
+[data-reveal][data-revealed] .spectrum-card:nth-child(6),
+[data-reveal][data-revealed] .faq-item:nth-child(6) { transition-delay: 360ms; }
+[data-reveal][data-revealed] .axis-guide-card:nth-child(n + 7) { transition-delay: 420ms; }
+
+/* ── Home: cards dos 12 eixos ────────────────────────────────────────────
+   O hover e o principal momento de vida da home: cada eixo reage ao mouse,
+   o icone gira levemente e a cor do eixo invade a borda.                    */
+
+.axis-guide-card {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press),
+    border-color var(--dur-press) var(--ease-press);
+}
+
+[data-reveal] .axis-guide-card:hover,
+.axis-guide-card:hover {
+  transform: translateY(var(--lift-hover));
+  box-shadow: var(--shadow-lg);
+}
+
+.axis-guide-icon {
+  transition:
+    transform 320ms var(--ease-settle),
+    color var(--dur-press) var(--ease-press);
+}
+
+[data-reveal] .axis-guide-card:hover .axis-guide-icon,
+.axis-guide-card:hover .axis-guide-icon {
+  transform: scale(1.18) rotate(-6deg);
+}
+
+.axis-guide-index {
+  transition: opacity var(--dur-press) var(--ease-press),
+              transform var(--dur-press) var(--ease-press);
+}
+
+.axis-guide-card:hover .axis-guide-index {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ── Home: cards de espectro ─────────────────────────────────────────────  */
+
+.spectrum-card {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press);
+}
+
+[data-reveal] .spectrum-card:hover,
+.spectrum-card:hover {
+  transform: translateY(var(--lift-hover));
+  box-shadow: var(--shadow-md);
+}
+
+/* O ponto do espectro pulsa uma vez quando o card entra em cena. */
+@keyframes dot-arrive {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+[data-reveal][data-revealed] .spectrum-dot {
+  animation: dot-arrive 520ms var(--ease-settle) both;
+}
+
+[data-reveal][data-revealed] .spectrum-card:nth-child(2) .spectrum-dot { animation-delay: 120ms; }
+[data-reveal][data-revealed] .spectrum-card:nth-child(3) .spectrum-dot { animation-delay: 180ms; }
+[data-reveal][data-revealed] .spectrum-card:nth-child(4) .spectrum-dot { animation-delay: 240ms; }
+[data-reveal][data-revealed] .spectrum-card:nth-child(5) .spectrum-dot { animation-delay: 300ms; }
+[data-reveal][data-revealed] .spectrum-card:nth-child(6) .spectrum-dot { animation-delay: 360ms; }
+
+/* ── Home: FAQ ───────────────────────────────────────────────────────────
+   Abrir uma pergunta e uma acao do usuario: a resposta desliza para dentro. */
+
+@keyframes faq-open {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.faq-item[open] > *:not(summary) {
+  animation: faq-open 300ms var(--ease-settle) both;
+}
+
+.faq-item summary {
+  transition: color var(--dur-press) var(--ease-press);
+}
+
+/* ── Home: itens de destaque e navegacao ─────────────────────────────────  */
+
+.intro-meta-item {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    border-color var(--dur-press) var(--ease-press);
+}
+
+.intro-meta-item:hover {
+  transform: translateY(-3px);
+}
+
+.site-nav a {
+  transition: color var(--dur-press) var(--ease-press);
+}
+
+/* ── Quiz: troca de pergunta ─────────────────────────────────────────────
+   Saida e entrada sao AMBAS animation (nunca transition), senao competem
+   pela mesma propriedade e a saida e engolida.                              */
+
+.question-stage {
+  position: relative;
+}
+
+@keyframes question-enter-forward {
+  from { opacity: 0; transform: translate3d(var(--shift-enter), 0, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes question-enter-back {
+  from { opacity: 0; transform: translate3d(calc(var(--shift-enter) * -1), 0, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes question-exit {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translate3d(-26px, 0, 0); }
+}
+
+.question-stage[data-direction="forward"] .question-card {
+  animation: question-enter-forward var(--dur-enter) var(--ease-settle) both;
+}
+
+.question-stage[data-direction="back"] .question-card {
+  animation: question-enter-back var(--dur-enter) var(--ease-settle) both;
+}
+
+.question-stage[data-leaving="true"] .question-card {
+  animation: question-exit var(--dur-exit) var(--ease-exit) both;
+}
+
+/* O enunciado e as opcoes assentam em cascata curta apos o card. */
+@keyframes question-part-settle {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+.question-stage:not([data-leaving="true"]) .question-card h2 {
+  animation: question-part-settle var(--dur-enter) var(--ease-settle) 80ms both;
+}
+
+.question-stage:not([data-leaving="true"]) .answer-grid {
+  animation: question-part-settle var(--dur-enter) var(--ease-settle) 140ms both;
+}
+
+/* ── Quiz: botoes de resposta ────────────────────────────────────────────  */
+
+.answer-button {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    background var(--dur-press) var(--ease-press),
+    border-color var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press);
+}
+
+.answer-button:hover:not(:disabled):not(.selected) {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.answer-button::before {
+  transition:
+    opacity var(--dur-press) var(--ease-press),
+    width var(--dur-press) var(--ease-press);
+}
+
+.answer-button:hover:not(:disabled):not(.selected)::before {
+  opacity: 1;
+  width: 6px;
+}
+
+.answer-button:hover:not(:disabled):not(.selected) .answer-icon {
+  transform: scale(1.12);
+}
+
+.answer-button:active:not(:disabled) {
+  transform: scale(var(--press-scale));
+  transition-duration: 70ms;
+}
+
+/* Confirmacao: a cor varre o botao a partir do ponto tocado. */
+@keyframes answer-commit {
+  from { opacity: 0.55; transform: translate(-50%, -50%) scale(0.15); }
+  to   { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+
+.answer-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--commit-x, 50%);
+  width: 150%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.answer-button.selected::after {
+  animation: answer-commit 440ms var(--ease-settle) both;
+}
+
+@keyframes answer-mark {
+  0%   { transform: scale(0.4); }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.answer-button.selected .answer-icon {
+  animation: answer-mark 320ms var(--ease-settle) both;
+}
+
+/* ── Quiz: progresso ─────────────────────────────────────────────────────  */
+
+.progress-track span {
+  transition: width var(--dur-measure) var(--ease-settle);
+}
+
+/* A trilha clipa por overflow; o pulso precisa transbordar. A barra tem
+   border-radius: inherit, entao continua arredondada sem o clip. */
+.progress-track {
+  overflow: visible;
+}
+
+@keyframes axis-complete-pulse {
+  from { opacity: 0.85; transform: translate(-50%, -50%) scale(0.3); }
+  to   { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+
+.progress-track .axis-tick {
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.8) 0%, rgba(34, 197, 94, 0) 70%);
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  animation: axis-complete-pulse 700ms var(--ease-settle) both;
+}
+
+/* Hover no eixo: destaca a linha lida. */
+.axis-row {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press);
+}
+
+.axis-row:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Resultado: cards de match ───────────────────────────────────────────  */
+
+.ideology-card,
+.country-card,
+.personality-card {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press);
+}
+
+.ideology-card:hover,
+.country-card:hover,
+.personality-card:hover {
+  transform: translateY(var(--lift-hover));
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Botoes globais ──────────────────────────────────────────────────────  */
+
+.primary-button,
+.secondary-button {
+  transition:
+    transform var(--dur-press) var(--ease-press),
+    background var(--dur-press) var(--ease-press),
+    border-color var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-press) var(--ease-press),
+    opacity var(--dur-press) var(--ease-press);
+}
+
+.primary-button:hover:not(:disabled),
+.secondary-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.primary-button:active:not(:disabled),
+.secondary-button:active:not(:disabled) {
+  transform: scale(var(--press-scale));
+  transition-duration: 70ms;
+}
+
+/* ── Carregamento: skeleton ──────────────────────────────────────────────  */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skeleton-stack {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.skeleton-bar {
+  height: 14px;
+  border-radius: var(--radius-pill);
+  background-color: var(--ink-100);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 100%
+  );
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  animation: skeleton-shimmer 1.4s var(--ease-in-out) infinite;
+}
+
+.skeleton-bar[data-tall="true"] {
+  height: 52px;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-bar[data-w="70"] { width: 70%; }
+.skeleton-bar[data-w="45"] { width: 45%; }
+
+.skeleton-bar:nth-child(2) { animation-delay: 90ms; }
+.skeleton-bar:nth-child(3) { animation-delay: 180ms; }
+.skeleton-bar:nth-child(4) { animation-delay: 270ms; }
+.skeleton-bar:nth-child(5) { animation-delay: 360ms; }
+.skeleton-bar:nth-child(6) { animation-delay: 450ms; }
+
+@keyframes skeleton-shimmer {
+  from { background-position: -200px 0; }
+  to   { background-position: calc(100% + 200px) 0; }
+}
+
+/* ── Troca de tela ───────────────────────────────────────────────────────  */
+
+@keyframes screen-arrive {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.quiz-layout,
+.results-layout,
+.variant-layout {
+  animation: screen-arrive 380ms var(--ease-settle) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-teaser-fade,
   .example-result-fade {
     animation: none;
+  }
+
+  /* Conteudo revelado por scroll fica visivel mesmo sem animacao.
+     O hook tambem marca tudo como revelado; isto e a rede de seguranca CSS. */
+  [data-reveal],
+  [data-reveal] .axis-guide-card,
+  [data-reveal] .spectrum-card,
+  [data-reveal] .step-card,
+  [data-reveal] .faq-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal] .spectrum-dot,
+  .faq-item[open] > *:not(summary) {
+    animation: none !important;
+  }
+
+  .progress-track .axis-tick {
+    display: none;
+  }
+
+  .skeleton-bar {
+    animation: none;
+    background-image: none;
+  }
+
+  .question-stage .question-card,
+  .question-stage .question-card h2,
+  .question-stage .answer-grid {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .quiz-layout,
+  .results-layout,
+  .variant-layout {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-reveal] .axis-guide-card:hover,
+  .axis-guide-card:hover,
+  [data-reveal] .axis-guide-card:hover .axis-guide-icon,
+  .axis-guide-card:hover .axis-guide-icon,
+  [data-reveal] .spectrum-card:hover,
+  .spectrum-card:hover,
+  .answer-button:hover:not(:disabled):not(.selected),
+  .answer-button:active:not(:disabled),
+  .primary-button:hover:not(:disabled),
+  .secondary-button:hover:not(:disabled),
+  .primary-button:active:not(:disabled),
+  .secondary-button:active:not(:disabled),
+  .axis-row:hover,
+  .intro-meta-item:hover,
+  .ideology-card:hover,
+  .country-card:hover,
+  .personality-card:hover {
+    transform: none !important;
+  }
+
+  .answer-button.selected::after,
+  .answer-button.selected .answer-icon {
+    animation: none !important;
+    opacity: 0;
+  }
+
+  .answer-button.selected .answer-icon {
+    opacity: 1;
   }
 }

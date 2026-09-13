@@ -9,6 +9,7 @@ import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/
 import { resolveCountryFlagSrc } from './utils/countryFlags';
 import { resolvePersonalityImageSrc } from './utils/personalityImage';
 import { SupportSection } from './components/SupportSection';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
@@ -96,6 +97,21 @@ function LoadingPanel({ message }: { message: string }) {
   );
 }
 
+// Esqueleto com a forma real do que vai chegar (enunciado + cinco respostas),
+// em vez de um spinner que nao diz nada sobre o conteudo.
+function QuizSkeleton({ message }: { message: string }) {
+  return (
+    <div className="skeleton-stack" role="status" aria-live="polite">
+      <span className="sr-only">{message}</span>
+      <div className="skeleton-bar" data-w="45" aria-hidden="true" />
+      <div className="skeleton-bar" data-w="70" aria-hidden="true" />
+      <div className="skeleton-bar" data-tall="true" aria-hidden="true" />
+      <div className="skeleton-bar" data-tall="true" aria-hidden="true" />
+      <div className="skeleton-bar" data-tall="true" aria-hidden="true" />
+    </div>
+  );
+}
+
 const QUIZ_FORMATS: QuizFormatOption[] = [
   { variant: 'short', ...t.formats.short },
   { variant: 'extended', ...t.formats.extended, featured: true },
@@ -138,6 +154,8 @@ function MainApp() {
   const [isSharedView, setIsSharedView] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
+  // 'forward' | 'back': define de que lado a proxima pergunta entra.
+  const [navDirection, setNavDirection] = useState<'forward' | 'back'>('forward');
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
   const [currentExample, setCurrentExample] = useState<ExampleResult | null>(null);
@@ -224,6 +242,10 @@ function MainApp() {
     return () => window.clearTimeout(timeoutId);
   }, [screen]);
 
+  // Home: blocos abaixo da dobra entram ao rolar (conteudo editorial longo).
+  useScrollReveal(screen === 'home', [screen, isHomeSeoReady, currentExample]);
+
+
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
@@ -298,6 +320,7 @@ function MainApp() {
 
   function goToPreviousQuestion() {
     clearPendingAdvance();
+    setNavDirection('back');
     setCurrentIndex((index) => Math.max(0, index - 1));
   }
 
@@ -306,6 +329,7 @@ function MainApp() {
       return;
     }
     clearPendingAdvance();
+    setNavDirection('forward');
     setCurrentIndex((index) => Math.min((quiz?.questions.length ?? 1) - 1, index + 1));
   }
 
@@ -324,6 +348,7 @@ function MainApp() {
     }
 
     isAdvancingRef.current = true;
+    setNavDirection('forward');
     setIsAdvancing(true);
     if (advanceTimerRef.current !== null) {
       window.clearTimeout(advanceTimerRef.current);
@@ -690,7 +715,7 @@ function MainApp() {
 
           {isHomeSeoReady && (
           <div className="home-seo">
-            <section className="seo-block fade-up" aria-labelledby="descubra">
+            <section className="seo-block" data-reveal aria-labelledby="descubra">
               <div className="section-heading">
                 <span className="eyebrow">{t.discoveryEyebrow}</span>
                 <h2 id="descubra">{t.discoveryTitle}</h2>
@@ -706,7 +731,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block example-result fade-up" aria-labelledby="exemplo-resultado">
+            <section className="seo-block example-result" data-reveal aria-labelledby="exemplo-resultado">
               <div className="section-heading">
                 <span className="eyebrow">{t.exampleEyebrow}</span>
                 <h2 id="exemplo-resultado">{t.exampleTitle}</h2>
@@ -738,7 +763,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="como-funciona">
+            <section className="seo-block" data-reveal aria-labelledby="como-funciona">
               <div className="section-heading">
                 <span className="eyebrow">{t.howEyebrow}</span>
                 <h2 id="como-funciona">{t.howTitle}</h2>
@@ -755,7 +780,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="guia-eixos">
+            <section className="seo-block" data-reveal aria-labelledby="guia-eixos">
               <div className="section-heading">
                 <span className="eyebrow">{t.axesGuideEyebrow}</span>
                 <h2 id="guia-eixos">{t.axesGuideTitle}</h2>
@@ -780,7 +805,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="espectro-politico">
+            <section className="seo-block" data-reveal aria-labelledby="espectro-politico">
               <div className="section-heading">
                 <span className="eyebrow">{t.spectrumEyebrow}</span>
                 <h2 id="espectro-politico">{t.spectrumTitle}</h2>
@@ -797,7 +822,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block fade-up" aria-labelledby="faq">
+            <section className="seo-block" data-reveal aria-labelledby="faq">
               <div className="section-heading">
                 <span className="eyebrow">{t.navFaq}</span>
                 <h2 id="faq">{t.faqTitle}</h2>
@@ -812,7 +837,7 @@ function MainApp() {
               </div>
             </section>
 
-            <section className="seo-block final-cta fade-up" aria-labelledby="versoes-teste">
+            <section className="seo-block final-cta" data-reveal aria-labelledby="versoes-teste">
               <div className="section-heading">
                 <span className="eyebrow">{t.versionsEyebrow}</span>
                 <h2 id="versoes-teste">{t.versionsTitle}</h2>
@@ -885,13 +910,23 @@ function MainApp() {
         <Suspense
           fallback={(
             <section className="quiz-layout">
-              <LoadingPanel message={t.loadingQuiz} />
+              <QuizSkeleton message={t.loadingQuiz} />
             </section>
           )}
         >
         <section className="quiz-layout">
-          <ProgressHeader current={currentIndex + 1} total={quiz.questions.length} />
+          <ProgressHeader
+            current={currentIndex + 1}
+            total={quiz.questions.length}
+            questionsPerAxis={quiz.questionsPerAxis}
+            axisCount={quiz.axes.length}
+          />
 
+          <div
+            className="question-stage"
+            data-direction={navDirection}
+            data-leaving={isAdvancing ? 'true' : undefined}
+          >
           <QuestionCard
             key={currentQuestion.id}
             question={currentQuestion}
@@ -901,6 +936,7 @@ function MainApp() {
             disabled={isAdvancing || isSubmitting}
             onSelect={selectAnswer}
           />
+          </div>
 
           <nav className="quiz-actions" aria-label={t.quizNavAria}>
             <button
@@ -1006,20 +1042,20 @@ function MainApp() {
         <Suspense
           fallback={(
             <section className="results-layout">
-              <LoadingPanel message={t.loadingResult} />
+              <QuizSkeleton message={t.loadingResult} />
             </section>
           )}
         >
         <section className="results-layout" id="resultados">
           <header className="results-hero">
-            <div className="results-hero-text fade-up d-1">
+            <div className="results-hero-text">
               <span className="results-eyebrow">{t.resultsEyebrow}</span>
               <h1>
                 {t.resultsH1Pre}<em>{t.resultsH1Em}</em>
               </h1>
               <p>{quiz ? t.resultsLead(quiz.questions.length) : t.resultsLeadShared}</p>
             </div>
-            <aside className="results-meta-card fade-up d-2" aria-label={t.resultsSummaryAria}>
+            <aside className="results-meta-card" aria-label={t.resultsSummaryAria}>
               {quiz && (
                 <div className="results-meta-row">
                   <span>{t.metaAnswered}</span>
@@ -1037,11 +1073,11 @@ function MainApp() {
             </aside>
           </header>
 
-          <div className="fade-up d-3">
+          <div>
             <IdeologyMatchCard match={result.topMatch} featured />
           </div>
 
-          <section className="results-section results-section-axes fade-up d-4">
+          <section className="results-section results-section-axes">
             <div className="section-heading">
               <span className="eyebrow">{t.axesSectionEyebrow}</span>
               <h2>{t.axesSectionTitle}</h2>
@@ -1054,15 +1090,15 @@ function MainApp() {
             </div>
           </section>
 
-          <div className="fade-up d-5">
+          <div>
             <CountryMatchCard match={result.topCountryMatch} />
           </div>
 
-          <div className="fade-up d-5">
+          <div>
             <PersonalityMatchCard match={result.topPersonalityMatch} />
           </div>
 
-          <section className="results-section fade-up d-5">
+          <section className="results-section">
             <div className="section-heading">
               <span className="eyebrow">{t.proximityEyebrow}</span>
               <h2>{t.otherMatches}</h2>
@@ -1074,7 +1110,7 @@ function MainApp() {
             </div>
           </section>
 
-          <div className="results-cta fade-up d-5" data-export-hidden="true">
+          <div className="results-cta" data-export-hidden="true">
             <button className="primary-button" type="button" onClick={() => void startQuiz(selectedVariant)}>
               {t.redoAnalysis}
               <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
