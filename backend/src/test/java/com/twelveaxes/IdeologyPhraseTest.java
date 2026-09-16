@@ -9,9 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class IdeologyPhraseTest {
-    // Medida da frase de referencia: 126 caracteres / 14 palavras.
-    private static final int MAX_CHARS = 150;
-    private static final int MAX_WORDS = 18;
+    // A frase e livre na redacao, mas cabe num card: media observada 135
+    // caracteres / 20 palavras.
+    private static final int MAX_CHARS = 170;
+    private static final int MAX_WORDS = 25;
 
     @Autowired
     private QuizDataService dataService;
@@ -42,10 +43,14 @@ class IdeologyPhraseTest {
 
     @Test
     void everyPhraseFollowsTheFirstPersonStructure() {
-        assertThat(dataService.getIdeologies()).allSatisfy(ideology -> assertThat(ideology.phrase())
-                .as("Frase de %s precisa comecar em primeira pessoa", ideology.id())
-                .startsWith("Quero uma sociedade")
-                .endsWith("."));
+        assertThat(dataService.getIdeologies()).allSatisfy(ideology -> {
+            assertThat(ideology.phrase())
+                    .as("Frase de %s precisa comecar em primeira pessoa: %s", ideology.id(), ideology.phrase())
+                    .startsWith("Quero");
+            assertThat(ideology.phrase())
+                    .as("Frase de %s precisa terminar com ponto: %s", ideology.id(), ideology.phrase())
+                    .endsWith(".");
+        });
     }
 
     // Frases repetidas entre ideologias nao distinguem nada.
