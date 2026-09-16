@@ -191,6 +191,26 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* ── Outras ideologias: as tres lado a lado ──────────────────────────── */
+/* A coluna de conteudo e mais estreita que a pagina antiga (o indice ocupa
+   232px), entao o auto-fill de 280px quebrava para 2 colunas e deixava o
+   terceiro card sozinho. Aqui as tres ficam lado a lado como antes.      */
+.results-main .match-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .results-main .match-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .results-main .match-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Peso 3: cards de distancia ──────────────────────────────────────── */
 .distant-grid {
   display: grid;
