@@ -268,6 +268,12 @@ Regras de tradução (confirmadas comparando os pares PT/EN já existentes nesse
   `ideologies.json`/`countries.json`/`personalities.json` — o i18n só tem `id`, `name`,
   `category`/`role`+`lifespan`, `description` (confira o arquivo real antes de assumir, o formato
   pode ter mudado desde a escrita deste documento).
+- **Exceção: `phrase` (só `ideologies.json`) também precisa existir no i18n.** É o único campo de
+  conteúdo (não estrutural) que fica de fora da lista acima — sem ele, o card "A sentence that
+  describes you" da página de resultados em inglês exibe a frase em português (o backend cai no
+  fallback PT quando a tradução falta). Traduza a `phrase` seguindo as mesmas regras da seção
+  "O campo `phrase`" (primeira pessoa, começa com "I want", ~135 caracteres/~18 palavras, teto
+  170/25, sem esqueleto fixo), nunca uma tradução literal palavra-por-palavra que estoure o padrão.
 - Referências específicas do Brasil na `description` em PT (ex.: STF, Bolsa Família, um estado
   brasileiro) devem ser generalizadas ou removidas na versão em inglês, não traduzidas
   literalmente — a versão EN é para público internacional. Veja `[[en-content-internationalized]]`
