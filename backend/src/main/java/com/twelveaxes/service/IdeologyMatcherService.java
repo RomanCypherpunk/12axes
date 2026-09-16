@@ -30,6 +30,17 @@ public class IdeologyMatcherService {
         return findRankedMatches(axisResults, lang);
     }
 
+    // A ideologia mais distante do usuario no catalogo inteiro.
+    public IdeologyMatch findBottomMatch(List<AxisResult> axisResults, String lang) {
+        Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        List<IdeologyCandidate> ranking = rankCandidates(userVector, normalizedLang);
+        if (ranking.isEmpty()) {
+            throw new IllegalStateException("Nenhuma ideologia disponivel para matching");
+        }
+        return toMatch(ranking.getLast(), normalizedLang);
+    }
+
     List<IdeologyMatch> findRankedMatches(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         String normalizedLang = QuizDataService.normalizeLang(lang);
