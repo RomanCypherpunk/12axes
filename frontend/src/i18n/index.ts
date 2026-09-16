@@ -145,6 +145,7 @@ interface Strings {
   otherMatches: string;
   navOnThisPage: string;
   resultsNavAxes: string;
+  resultsNavSignature: string;
   resultsNavCountries: string;
   resultsNavPersonalities: string;
   resultsNavIdeologies: string;
@@ -156,6 +157,15 @@ interface Strings {
   personalitiesByAreaTitle: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
+  signatureTitle: string;
+  signatureUnusualLabel: string;
+  signatureCommonLabel: string;
+  signatureUnusualLead: (pole: string, percent: number) => string;
+  signatureUnusualNote: (axis: string) => string;
+  signatureCommonLead: (axis: string) => string;
+  signatureCommonNote: (pole: string) => string;
+  signatureMedian: string;
+  signatureYou: string;
   personalityCategories: Record<PersonalityCategory, string>;
   redoAnalysis: string;
   share: string;
@@ -476,6 +486,7 @@ const pt: Strings = {
   otherMatches: 'Outras correspondências',
   navOnThisPage: 'Nesta página',
   resultsNavAxes: 'Os 12 eixos',
+  resultsNavSignature: 'O que te distingue',
   resultsNavCountries: 'Países',
   resultsNavPersonalities: 'Personalidades',
   resultsNavIdeologies: 'Outras ideologias',
@@ -487,6 +498,15 @@ const pt: Strings = {
   personalitiesByAreaTitle: 'Também próximos, por área de atuação',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
+  signatureTitle: 'O que te distingue',
+  signatureUnusualLabel: 'Sua posição mais incomum',
+  signatureCommonLabel: 'Sua posição mais comum',
+  signatureUnusualLead: (pole, percent) => `Você é mais ${pole.toLowerCase()} que ${Math.round(percent)}% das ideologias do catálogo.`,
+  signatureUnusualNote: (axis) => `É em ${axis} que seu perfil mais se afasta do conjunto — o traço que mais te diferencia.`,
+  signatureCommonLead: (axis) => `Em ${axis}, sua posição é praticamente a mediana do catálogo.`,
+  signatureCommonNote: (pole) => `Aqui você fica no terreno comum: nem puxa para ${pole.toLowerCase()}, nem para o polo oposto.`,
+  signatureMedian: 'Mediana das ideologias',
+  signatureYou: 'Você',
   personalityCategories: {
     politico: 'Política',
     religioso: 'Religião',
@@ -852,6 +872,7 @@ const en: Strings = {
   otherMatches: 'Other matches',
   navOnThisPage: 'On this page',
   resultsNavAxes: 'The 12 axes',
+  resultsNavSignature: 'What sets you apart',
   resultsNavCountries: 'Countries',
   resultsNavPersonalities: 'Figures',
   resultsNavIdeologies: 'Other ideologies',
@@ -863,6 +884,15 @@ const en: Strings = {
   personalitiesByAreaTitle: 'Also close to you, by field',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
+  signatureTitle: 'What sets you apart',
+  signatureUnusualLabel: 'Your most unusual position',
+  signatureCommonLabel: 'Your most typical position',
+  signatureUnusualLead: (pole, percent) => `You are more ${pole.toLowerCase()} than ${Math.round(percent)}% of the ideologies in the catalog.`,
+  signatureUnusualNote: (axis) => `${axis} is where your profile departs most from the field — the trait that sets you apart.`,
+  signatureCommonLead: (axis) => `On ${axis}, your position sits almost exactly at the catalog median.`,
+  signatureCommonNote: (pole) => `This is common ground: you lean neither toward ${pole.toLowerCase()} nor to the opposite pole.`,
+  signatureMedian: 'Ideology median',
+  signatureYou: 'You',
   personalityCategories: {
     politico: 'Politics',
     religioso: 'Religion',

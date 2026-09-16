@@ -8,6 +8,7 @@ import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
+import com.twelveaxes.service.AxisOutlierService;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
@@ -38,13 +39,15 @@ public class QuizController {
     private final CountryMatcherService countryMatcherService;
     private final PersonalityMatcherService personalityMatcherService;
     private final CandidateMatcherService candidateMatcherService;
+    private final AxisOutlierService axisOutlierService;
 
     public QuizController(
             QuizDataService dataService,
             ScoringService scoringService,
             IdeologyMatcherService matcherService,
             CountryMatcherService countryMatcherService,
-            PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService
+            PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService,
+            AxisOutlierService axisOutlierService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
@@ -52,6 +55,7 @@ public class QuizController {
         this.countryMatcherService = countryMatcherService;
         this.personalityMatcherService = personalityMatcherService;
         this.candidateMatcherService = candidateMatcherService;
+        this.axisOutlierService = axisOutlierService;
     }
 
     @GetMapping("/api/election/quiz") public QuizPayload electionQuiz() { return dataService.getElectionQuiz(); }
@@ -98,7 +102,9 @@ public class QuizController {
                 countryMatcherService.findBottomMatches(axes, lang),
                 personalityMatcherService.findTopMatch(axes, lang),
                 personalityMatcherService.findCategoryMatches(axes, lang),
-                personalityMatcherService.findBottomMatches(axes, lang)
+                personalityMatcherService.findBottomMatches(axes, lang),
+                axisOutlierService.findMostUnusual(axes, lang),
+                axisOutlierService.findMostCommon(axes, lang)
         );
     }
 

@@ -14,6 +14,7 @@ import { CountriesSection } from './components/results/CountriesSection';
 import { PersonalitiesSection } from './components/results/PersonalitiesSection';
 import { IdeologiesSection } from './components/results/IdeologiesSection';
 import { CountUpValue } from './components/results/CountUpValue';
+import { SignatureSection } from './components/results/SignatureSection';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -1098,6 +1099,13 @@ function MainApp() {
                   })}
                 </div>
               </section>
+
+              <div data-reveal>
+                <SignatureSection
+                  unusual={result.mostUnusualAxis}
+                  common={result.mostCommonAxis}
+                />
+              </div>
 
               <div data-reveal>
                 <CountriesSection

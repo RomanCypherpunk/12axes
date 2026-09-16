@@ -17,6 +17,8 @@ import java.util.List;
  * @param topPersonalityMatch personalidade mais compativel, de qualquer categoria
  * @param categoryPersonalityMatches personalidades compativeis de categorias distintas
  * @param bottomPersonalityMatches personalidades mais distantes do catalogo
+ * @param mostUnusualAxis eixo em que o usuario mais destoa do catalogo de ideologias
+ * @param mostCommonAxis eixo em que o usuario mais se aproxima do catalogo
  */
 public record QuizResult(
         List<AxisResult> axes,
@@ -28,6 +30,8 @@ public record QuizResult(
         List<CountryMatch> bottomCountryMatches,
         PersonalityMatch topPersonalityMatch,
         List<PersonalityMatch> categoryPersonalityMatches,
-        List<PersonalityMatch> bottomPersonalityMatches
+        List<PersonalityMatch> bottomPersonalityMatches,
+        AxisOutlier mostUnusualAxis,
+        AxisOutlier mostCommonAxis
 ) {
 }

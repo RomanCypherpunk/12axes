@@ -191,6 +191,134 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* ── O que te distingue: incomum x comum ─────────────────────────────── */
+/* A regua usa a escala real do eixo (0-100): a distancia entre o marcador do
+   usuario e o da mediana E o dado. Cor aqui tambem mede — o card do incomum
+   destaca em ink forte (distancia), o do comum fica neutro.               */
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.signature-card {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.signature-card[data-variant='unusual'] {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.signature-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-50);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.signature-card[data-variant='unusual'] .signature-label {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+.signature-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.24rem;
+}
+
+.signature-lead {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Regua 0-100 com dois marcadores posicionados pela escala real do eixo. */
+.signature-track {
+  position: relative;
+  height: 8px;
+  margin-bottom: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-100);
+}
+
+.signature-median,
+.signature-you {
+  position: absolute;
+  top: 50%;
+  border-radius: var(--radius-pill);
+  transform: translate(-50%, -50%);
+}
+
+.signature-median {
+  left: var(--median);
+  width: 3px;
+  height: 16px;
+  background: var(--ink-400);
+}
+
+.signature-you {
+  left: var(--you);
+  width: 15px;
+  height: 15px;
+  background: var(--surface);
+  border: 3px solid var(--ink-500);
+  transition: left var(--dur-measure) var(--ease-settle);
+}
+
+.signature-card[data-variant='unusual'] .signature-you {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+
+.signature-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.signature-legend-median {
+  color: var(--text-soft);
+}
+
+.signature-legend-you {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.signature-card[data-variant='unusual'] .signature-legend-you {
+  color: var(--accent-deep);
+}
+
+.signature-note {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+/* Antes do reveal o marcador parte do centro e percorre ate a posicao real. */
+[data-reveal] .signature-you {
+  left: 50%;
+}
+
+[data-reveal][data-revealed] .signature-you {
+  left: var(--you);
+}
+
 /* ── Outras ideologias: as tres lado a lado ──────────────────────────── */
 /* A coluna de conteudo e mais estreita que a pagina antiga (o indice ocupa
    232px), entao o auto-fill de 280px quebrava para 2 colunas e deixava o

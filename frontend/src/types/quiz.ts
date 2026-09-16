@@ -107,6 +107,16 @@ export interface PersonalityMatch {
   compatibility: number;
 }
 
+export interface AxisOutlier {
+  axisId: string;
+  label: string;
+  userPercent: number;
+  catalogMedian: number;
+  distanceFromMedian: number;
+  dominantPole: string;
+  strongerThanPercent: number;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
@@ -118,6 +128,8 @@ export interface QuizResult {
   topPersonalityMatch: PersonalityMatch;
   categoryPersonalityMatches: PersonalityMatch[];
   bottomPersonalityMatches: PersonalityMatch[];
+  mostUnusualAxis: AxisOutlier;
+  mostCommonAxis: AxisOutlier;
 }
 
 export interface Candidate {

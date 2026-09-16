@@ -3,6 +3,7 @@ import { t } from '../../i18n';
 
 const SECTIONS = [
   { id: 'eixos-resultado', label: () => t.resultsNavAxes },
+  { id: 'assinatura', label: () => t.resultsNavSignature },
   { id: 'paises', label: () => t.resultsNavCountries },
   { id: 'personalidades', label: () => t.resultsNavPersonalities },
   { id: 'ideologias', label: () => t.resultsNavIdeologies },

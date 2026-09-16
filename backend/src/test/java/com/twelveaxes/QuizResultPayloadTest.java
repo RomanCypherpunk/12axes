@@ -31,7 +31,11 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.bottomCountryMatches.length()").value(3))
                 .andExpect(jsonPath("$.topPersonalityMatch.category").isNotEmpty())
                 .andExpect(jsonPath("$.categoryPersonalityMatches.length()").value(3))
-                .andExpect(jsonPath("$.bottomPersonalityMatches.length()").value(3));
+                .andExpect(jsonPath("$.bottomPersonalityMatches.length()").value(3))
+                .andExpect(jsonPath("$.mostUnusualAxis.axisId").isNotEmpty())
+                .andExpect(jsonPath("$.mostUnusualAxis.label").isNotEmpty())
+                .andExpect(jsonPath("$.mostUnusualAxis.dominantPole").isNotEmpty())
+                .andExpect(jsonPath("$.mostCommonAxis.axisId").isNotEmpty());
     }
 
     @Test
