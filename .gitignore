@@ -29,3 +29,7 @@ analytics/
 # Python (ferramentas de auditoria)
 __pycache__/
 *.pyc
+
+# Superpowers (specs/plans gerados pelo plugin)
+docs/superpowers/
+.claude/skills/superpowers*/
