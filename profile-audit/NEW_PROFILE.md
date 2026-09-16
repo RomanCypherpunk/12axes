@@ -96,11 +96,26 @@ Escreva a `description` em português, no mesmo estilo enxuto e factual dos outr
 catálogo (1 a 3 frases, sem opinião, citando fatos/características concretas verificáveis). Leia
 2-3 exemplos vizinhos no mesmo arquivo para calibrar tom antes de escrever o seu.
 
-**Tamanho padrão**: mire cerca de **30 palavras** (a média/mediana observada nos três catálogos),
-tolerando a faixa **~20-45 palavras**. Depois de escrever, confira a contagem (`len(description.split())`
-em um script rápido, ou conte manualmente) e corte o que for redundante ou secundário até caber
-nessa faixa — cite só os 2-3 fatos mais definidores do perfil, não uma lista exaustiva de posições.
-A mesma regra vale para a tradução em inglês do Passo 2.
+**Tamanho padrão** (medido nos três catálogos em 2026-09-16, n=609):
+
+| catálogo | média | mediana | faixa central (p10-p90) |
+|---|---|---|---|
+| personality | 222 car. / 31 pal. | 212 car. / 30 pal. | 201-268 caracteres |
+| ideology | 216 car. / 31 pal. | 209 car. / 30 pal. | 202-244 caracteres |
+| country | 221 car. / 31 pal. | 217 car. / 30 pal. | 205-250 caracteres |
+
+Mire **~30 palavras / ~220 caracteres**; o teto é **45 palavras / 280 caracteres**. Depois de
+escrever, **confira a contagem antes de salvar**:
+
+```python
+print(len(desc), 'caracteres,', len(desc.split()), 'palavras')
+```
+
+Se passar do teto, corte o que for redundante ou secundário — cite só os 2-3 fatos mais definidores
+do perfil, nunca uma lista exaustiva de posições. A mesma regra vale para a tradução em inglês do
+Passo 2 e para **qualquer atualização posterior** da description (inclusive as feitas durante uma
+reauditoria de perfil vivo): atualizar não é motivo para a description crescer. Quando acrescentar
+um fato novo, corte outro menos importante para compensar.
 
 Exemplo de objeto novo em `ideologies.json`:
 

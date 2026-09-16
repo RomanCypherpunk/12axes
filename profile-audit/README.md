@@ -82,7 +82,9 @@ gente viva mudam, e duas sessões de IA independentes já produziram vetores mat
 para o mesmo perfil por pesquisarem em profundidades diferentes. Siga a checklist de "Pesquisa
 aprofundada obrigatória para personalidades vivas/contemporâneas" em `profile-audit/NEW_PROFILE.md`
 (Passo 0) antes de prosseguir; se a description estiver desatualizada, atualize-a primeiro (mesmo
-arquivo, Passo 1) e só então gere o prompt de auditoria abaixo.
+arquivo, Passo 1) e só então gere o prompt de auditoria abaixo. A description reescrita tem de caber
+no tamanho padrão do catálogo (**~30 palavras / ~220 caracteres, teto 45 palavras / 280 caracteres**
+— tabela medida em `NEW_PROFILE.md`); acrescentar fato novo exige cortar outro, nunca esticar o texto.
 
 ### 2. Gerar o prompt de cada perfil do lote (se ainda não existir em `prompts/<catalog>/`)
 

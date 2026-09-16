@@ -39,7 +39,11 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — ele é autossufic
      `profile-audit/NEW_PROFILE.md` (Passo 0) para confirmar se a `description` atual em
      `personalities.json` ainda reflete a posição mais recente da pessoa. Se estiver desatualizada,
      atualize `personalities.json`/`i18n/en/personalities.json` **antes** de gerar o prompt — não
-     reaudite com uma description que você já sabe estar desatualizada.
+     reaudite com uma description que você já sabe estar desatualizada. **Ao reescrever, respeite o
+     tamanho padrão do catálogo: ~30 palavras / ~220 caracteres, teto de 45 palavras / 280
+     caracteres** (ver tabela em `NEW_PROFILE.md`). Atualizar não é motivo para a description
+     crescer — ao acrescentar um fato novo, corte outro menos importante. Confira a contagem com
+     `len(desc)` e `len(desc.split())` antes de salvar, em PT e EN.
    - Conferir que cada perfil do lote tem `category` (um dos 8 valores fechados). Perfis antigos
      sem o campo, ou classificados de forma claramente errada pela leitura que a auditoria
      acabou de fazer, devem ser corrigidos em `personalities.json` — `category` vive só no PT.

@@ -165,6 +165,20 @@ def main():
                     + ", ".join(sorted(PERSONALITY_CATEGORIES))
                 )
 
+    # ---------- [TAMANHO DA DESCRICAO] ----------
+    # Media/mediana medida nos tres catalogos: ~30 palavras / ~220 caracteres.
+    # Descricoes muito longas destoam do catalogo e crescem a cada atualizacao.
+    meta_file = CATALOGS[catalog][2]
+    entrada = {m["id"]: m for m in load(meta_file)}.get(pid)
+    if entrada and entrada.get("description"):
+        desc = entrada["description"]
+        palavras = len(desc.split())
+        if palavras > 45 or len(desc) > 280:
+            warnings.append(
+                f"[DESCRICAO] {pid}: {len(desc)} caracteres / {palavras} palavras "
+                f"(padrao ~220/~30, teto 280/45) — corte o secundario"
+            )
+
     # ---------- [FORMA] ----------
     for ax in AXES:
         if ax not in data:
