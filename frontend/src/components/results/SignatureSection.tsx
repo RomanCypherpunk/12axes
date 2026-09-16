@@ -44,6 +44,11 @@ function unusualLead(outlier: AxisOutlier): string {
   if (outlier.balanced) {
     return t.signatureUnusualLeadBalanced(outlier.label, outlier.abovePole, outlier.abovePercent);
   }
+  // "mais que 100% das ideologias" soa errado: no extremo do catalogo a frase
+  // vira uma afirmacao direta.
+  if (outlier.abovePercent >= 99.5) {
+    return t.signatureUnusualLeadMax(outlier.abovePole);
+  }
   return t.signatureUnusualLead(outlier.abovePole, outlier.abovePercent);
 }
 
