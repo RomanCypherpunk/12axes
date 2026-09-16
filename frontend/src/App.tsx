@@ -15,6 +15,7 @@ import { PersonalitiesSection } from './components/results/PersonalitiesSection'
 import { IdeologiesSection } from './components/results/IdeologiesSection';
 import { CountUpValue } from './components/results/CountUpValue';
 import { SignatureSection } from './components/results/SignatureSection';
+import { PhraseSection } from './components/results/PhraseSection';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -1086,6 +1087,10 @@ function MainApp() {
           <div className="results-layout-with-nav">
             <div className="results-main">
               <IdeologyMatchCard match={result.topMatch} featured />
+
+              <div data-reveal>
+                <PhraseSection match={result.topMatch} />
+              </div>
 
               <section className="results-section results-section-axes" id="eixos-resultado" data-reveal>
                 <div className="section-heading">

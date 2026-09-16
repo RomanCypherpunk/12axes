@@ -95,6 +95,7 @@ public class IdeologyMatcherService {
                 ideology.category(),
                 shortDescription,
                 longDescription,
+                ideology.phrase(),
                 candidate.compatibility(),
                 candidate.compatibilityPercentile()
         );

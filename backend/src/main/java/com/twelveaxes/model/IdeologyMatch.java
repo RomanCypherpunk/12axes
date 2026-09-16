@@ -6,6 +6,7 @@ public record IdeologyMatch(
         String category,
         String description,
         String longDescription,
+        String phrase,
         double compatibility,
         double compatibilityPercentile
 ) {

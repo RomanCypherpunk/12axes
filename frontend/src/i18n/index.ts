@@ -157,6 +157,8 @@ interface Strings {
   personalitiesByAreaTitle: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
+  phraseTitle: string;
+  phraseNote: (ideology: string) => string;
   signatureTitle: string;
   signatureUnusualLabel: string;
   signatureCommonLabel: string;
@@ -173,9 +175,6 @@ interface Strings {
   tensionUnique: string;
   tensionExamples: (names: string) => string;
   tensionNote: (firstAxis: string, secondAxis: string) => string;
-  tensionNoneLabel: string;
-  tensionNoneTitle: string;
-  tensionNoneBody: string;
   signatureMedian: string;
   signatureYou: string;
   personalityCategories: Record<PersonalityCategory, string>;
@@ -510,6 +509,8 @@ const pt: Strings = {
   personalitiesByAreaTitle: 'Também próximos, por área de atuação',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
+  phraseTitle: 'Uma frase que te descreve',
+  phraseNote: (ideology) => `É assim que alguém do ${ideology} resumiria a sociedade que quer.`,
   signatureTitle: 'O que te distingue',
   signatureUnusualLabel: 'Sua posição mais incomum',
   signatureCommonLabel: 'Sua posição mais comum',
@@ -527,9 +528,6 @@ const pt: Strings = {
   tensionUnique: 'Nenhuma ideologia do catálogo junta essas duas posições.',
   tensionExamples: (names) => `Quem chega perto: ${names}.`,
   tensionNote: (firstAxis, secondAxis) => `No catálogo, ${firstAxis} e ${secondAxis} costumam andar na mesma direção. Você inverte esse padrão.`,
-  tensionNoneLabel: 'Sua coerência',
-  tensionNoneTitle: 'Seu perfil segue os padrões do catálogo',
-  tensionNoneBody: 'Suas posições combinam entre si do jeito que costumam combinar nas ideologias existentes. Não há contradição marcante entre dois eixos.',
   signatureMedian: 'Mediana das ideologias',
   signatureYou: 'Você',
   personalityCategories: {
@@ -909,6 +907,8 @@ const en: Strings = {
   personalitiesByAreaTitle: 'Also close to you, by field',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
+  phraseTitle: 'A sentence that describes you',
+  phraseNote: (ideology) => `This is how someone from ${ideology} would sum up the society they want.`,
   signatureTitle: 'What sets you apart',
   signatureUnusualLabel: 'Your most unusual position',
   signatureCommonLabel: 'Your most typical position',
@@ -926,9 +926,6 @@ const en: Strings = {
   tensionUnique: 'No ideology in the catalog holds both of these positions.',
   tensionExamples: (names) => `Closest matches: ${names}.`,
   tensionNote: (firstAxis, secondAxis) => `In the catalog, ${firstAxis} and ${secondAxis} usually move together. You reverse that pattern.`,
-  tensionNoneLabel: 'Your consistency',
-  tensionNoneTitle: 'Your profile follows the catalog patterns',
-  tensionNoneBody: 'Your positions fit together the way they usually do across existing ideologies. There is no striking contradiction between any two axes.',
   signatureMedian: 'Ideology median',
   signatureYou: 'You',
   personalityCategories: {

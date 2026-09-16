@@ -18,6 +18,8 @@ const pt: ExampleResult[] = [
         'Modelo soviético consolidado por Stálin, marcado por industrialização forçada, coletivização agrária, planejamento central rígido, culto ao líder e repressão de massa contra opositores reais ou supostos do regime.',
       longDescription:
         'Modelo soviético consolidado por Stálin, marcado por industrialização forçada, coletivização agrária, planejamento central rígido, culto ao líder e repressão de massa contra opositores reais ou supostos do regime.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e irreligiosa, politicamente autocrática e centralizada, economicamente estatizada e fechada.',
       compatibility: 92
     },
     country: {
@@ -84,6 +86,8 @@ const pt: ExampleResult[] = [
         'Doutrina que defende a propriedade social ou coletiva dos meios de produção e a distribuição mais igualitária da riqueza, buscando superar a exploração do capitalismo por cooperação e planejamento econômico.',
       longDescription:
         'Doutrina que defende a propriedade social ou coletiva dos meios de produção e a distribuição mais igualitária da riqueza, buscando superar a exploração do capitalismo por cooperação e planejamento econômico.',
+      phrase:
+        'Quero uma sociedade culturalmente progressista e irreligiosa, politicamente democrática e economicamente coletiva e planificada.',
       compatibility: 89
     },
     country: {
@@ -150,6 +154,8 @@ const pt: ExampleResult[] = [
         'Posição política que busca o equilíbrio entre esquerda e direita, valorizando moderação, pragmatismo e consenso, e combinando elementos de diferentes correntes para evitar extremos e favorecer reformas graduais.',
       longDescription:
         'Posição política que busca o equilíbrio entre esquerda e direita, valorizando moderação, pragmatismo e consenso, e combinando elementos de diferentes correntes para evitar extremos e favorecer reformas graduais.',
+      phrase:
+        'Quero uma sociedade culturalmente equilibrada, politicamente democrática e moderada, e economicamente mista entre público e privado.',
       compatibility: 85
     },
     country: {
@@ -216,6 +222,8 @@ const pt: ExampleResult[] = [
         'Corrente da direita que une livre mercado, valores tradicionais e política externa intervencionista, defendendo a promoção da democracia e dos interesses nacionais pela força militar e liderança global.',
       longDescription:
         'Corrente da direita que une livre mercado, valores tradicionais e política externa intervencionista, defendendo a promoção da democracia e dos interesses nacionais pela força militar e liderança global.',
+      phrase:
+        'Quero uma sociedade culturalmente moderada, politicamente democrática e intervencionista, economicamente livre e globalista.',
       compatibility: 86
     },
     country: {
@@ -282,6 +290,8 @@ const pt: ExampleResult[] = [
         'Ideologia totalitária de ultranacionalismo que exalta o Estado forte, o culto ao líder, o militarismo e a mobilização de massas, suprimindo oposição e subordinando a economia corporativa aos objetivos nacionais.',
       longDescription:
         'Ideologia totalitária de ultranacionalismo que exalta o Estado forte, o culto ao líder, o militarismo e a mobilização de massas, suprimindo oposição e subordinando a economia corporativa aos objetivos nacionais.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e tradicionalista, politicamente autocrática, economicamente corporativista e protecionista.',
       compatibility: 81
     },
     country: {
@@ -348,6 +358,8 @@ const pt: ExampleResult[] = [
         'Movimento nacionalista autoritário surgido no Brasil dos anos 1930, de base cristã e corporativista, com o lema Deus, Pátria e Família, estética de massas e oposição frontal ao liberalismo e ao comunismo.',
       longDescription:
         'Movimento nacionalista autoritário surgido no Brasil dos anos 1930, de base cristã e corporativista, com o lema Deus, Pátria e Família, estética de massas e oposição frontal ao liberalismo e ao comunismo.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e cristã, politicamente autoritária, economicamente protecionista e dirigida.',
       compatibility: 88
     },
     country: {
@@ -414,6 +426,8 @@ const pt: ExampleResult[] = [
         'Filosofia que defende a máxima liberdade individual e um Estado reduzido às funções essenciais, valorizando propriedade privada, livre mercado e autonomia pessoal e rejeitando a coerção estatal sobre a vida.',
       longDescription:
         'Filosofia que defende a máxima liberdade individual e um Estado reduzido às funções essenciais, valorizando propriedade privada, livre mercado e autonomia pessoal e rejeitando a coerção estatal sobre a vida.',
+      phrase:
+        'Quero uma sociedade culturalmente progressista e laica, politicamente democrática e federal, e economicamente livre de controles.',
       compatibility: 90
     },
     country: {
@@ -480,6 +494,8 @@ const pt: ExampleResult[] = [
         'Filosofia que rejeita o Estado e toda autoridade coercitiva, defendendo a organização livre da sociedade por associações voluntárias, cooperação e autogestão, com liberdade e igualdade como valores centrais.',
       longDescription:
         'Filosofia que rejeita o Estado e toda autoridade coercitiva, defendendo a organização livre da sociedade por associações voluntárias, cooperação e autogestão, com liberdade e igualdade como valores centrais.',
+      phrase:
+        'Quero uma sociedade culturalmente multicultural e irreligiosa, politicamente descentralizada e sem autoridade coercitiva, economicamente coletiva.',
       compatibility: 91
     },
     country: {
@@ -549,6 +565,8 @@ const en: ExampleResult[] = [
         'Soviet model consolidated by Stalin, marked by forced industrialization, agrarian collectivization, rigid central planning, a cult of the leader, and mass repression against real or suspected opponents of the regime.',
       longDescription:
         'Soviet model consolidated by Stalin, marked by forced industrialization, agrarian collectivization, rigid central planning, a cult of the leader, and mass repression against real or suspected opponents of the regime.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e irreligiosa, politicamente autocrática e centralizada, economicamente estatizada e fechada.',
       compatibility: 92
     },
     country: {
@@ -615,6 +633,8 @@ const en: ExampleResult[] = [
         'Doctrine that advocates social or collective ownership of the means of production and a more egalitarian distribution of wealth, seeking to overcome capitalist exploitation through cooperation and economic planning.',
       longDescription:
         'Doctrine that advocates social or collective ownership of the means of production and a more egalitarian distribution of wealth, seeking to overcome capitalist exploitation through cooperation and economic planning.',
+      phrase:
+        'Quero uma sociedade culturalmente progressista e irreligiosa, politicamente democrática e economicamente coletiva e planificada.',
       compatibility: 89
     },
     country: {
@@ -681,6 +701,8 @@ const en: ExampleResult[] = [
         'Political position that seeks balance between left and right, valuing moderation, pragmatism, and consensus, and combining elements of different currents to avoid extremes and favor gradual reforms.',
       longDescription:
         'Political position that seeks balance between left and right, valuing moderation, pragmatism, and consensus, and combining elements of different currents to avoid extremes and favor gradual reforms.',
+      phrase:
+        'Quero uma sociedade culturalmente equilibrada, politicamente democrática e moderada, e economicamente mista entre público e privado.',
       compatibility: 85
     },
     country: {
@@ -747,6 +769,8 @@ const en: ExampleResult[] = [
         'Right-wing current that unites free markets, traditional values, and an interventionist foreign policy, advocating the promotion of democracy and national interests through military force and global leadership.',
       longDescription:
         'Right-wing current that unites free markets, traditional values, and an interventionist foreign policy, advocating the promotion of democracy and national interests through military force and global leadership.',
+      phrase:
+        'Quero uma sociedade culturalmente moderada, politicamente democrática e intervencionista, economicamente livre e globalista.',
       compatibility: 86
     },
     country: {
@@ -813,6 +837,8 @@ const en: ExampleResult[] = [
         'Totalitarian ideology of ultranationalism that exalts the strong state, the cult of the leader, militarism, and mass mobilization, suppressing opposition and subordinating the corporatist economy to national goals.',
       longDescription:
         'Totalitarian ideology of ultranationalism that exalts the strong state, the cult of the leader, militarism, and mass mobilization, suppressing opposition and subordinating the corporatist economy to national goals.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e tradicionalista, politicamente autocrática, economicamente corporativista e protecionista.',
       compatibility: 81
     },
     country: {
@@ -879,6 +905,8 @@ const en: ExampleResult[] = [
         'Authoritarian nationalist movement that emerged in 1930s Brazil, with a Christian and corporatist base, the motto God, Fatherland and Family, mass aesthetics, and frontal opposition to liberalism and communism.',
       longDescription:
         'Authoritarian nationalist movement that emerged in 1930s Brazil, with a Christian and corporatist base, the motto God, Fatherland and Family, mass aesthetics, and frontal opposition to liberalism and communism.',
+      phrase:
+        'Quero uma sociedade culturalmente assimilacionista e cristã, politicamente autoritária, economicamente protecionista e dirigida.',
       compatibility: 88
     },
     country: {
@@ -945,6 +973,8 @@ const en: ExampleResult[] = [
         'Philosophy that advocates maximum individual freedom and a state reduced to essential functions, valuing private property, free markets, and personal autonomy while rejecting state coercion over life.',
       longDescription:
         'Philosophy that advocates maximum individual freedom and a state reduced to essential functions, valuing private property, free markets, and personal autonomy while rejecting state coercion over life.',
+      phrase:
+        'Quero uma sociedade culturalmente progressista e laica, politicamente democrática e federal, e economicamente livre de controles.',
       compatibility: 90
     },
     country: {
@@ -1011,6 +1041,8 @@ const en: ExampleResult[] = [
         'Philosophy that rejects the state and all coercive authority, defending the free organization of society through voluntary associations, cooperation, and self-management, with freedom and equality as central values.',
       longDescription:
         'Philosophy that rejects the state and all coercive authority, defending the free organization of society through voluntary associations, cooperation, and self-management, with freedom and equality as central values.',
+      phrase:
+        'Quero uma sociedade culturalmente multicultural e irreligiosa, politicamente descentralizada e sem autoridade coercitiva, economicamente coletiva.',
       compatibility: 91
     },
     country: {

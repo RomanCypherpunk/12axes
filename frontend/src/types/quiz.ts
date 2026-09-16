@@ -65,6 +65,7 @@ export interface IdeologyMatch {
   category: string;
   description: string;
   longDescription: string;
+  phrase: string;
   compatibility: number;
 }
 

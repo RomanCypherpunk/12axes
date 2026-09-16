@@ -7,6 +7,7 @@ public record Ideology(
         String name,
         String category,
         String description,
+        String phrase,
         String countryId,
         String personalityId,
         Map<String, Double> vector

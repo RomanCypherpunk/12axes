@@ -153,6 +153,7 @@ public class QuizDataService {
                     tr.getOrDefault("name", ideology.name()),
                     tr.getOrDefault("category", ideology.category()),
                     tr.getOrDefault("description", ideology.description()),
+                    tr.getOrDefault("phrase", ideology.phrase()),
                     ideology.countryId(),
                     ideology.personalityId(),
                     ideology.vector()
