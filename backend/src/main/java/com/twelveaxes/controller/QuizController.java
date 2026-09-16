@@ -9,6 +9,7 @@ import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.AxisOutlierService;
+import com.twelveaxes.service.AxisTensionService;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
@@ -40,6 +41,7 @@ public class QuizController {
     private final PersonalityMatcherService personalityMatcherService;
     private final CandidateMatcherService candidateMatcherService;
     private final AxisOutlierService axisOutlierService;
+    private final AxisTensionService axisTensionService;
 
     public QuizController(
             QuizDataService dataService,
@@ -47,7 +49,8 @@ public class QuizController {
             IdeologyMatcherService matcherService,
             CountryMatcherService countryMatcherService,
             PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService,
-            AxisOutlierService axisOutlierService
+            AxisOutlierService axisOutlierService,
+            AxisTensionService axisTensionService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
@@ -56,6 +59,7 @@ public class QuizController {
         this.personalityMatcherService = personalityMatcherService;
         this.candidateMatcherService = candidateMatcherService;
         this.axisOutlierService = axisOutlierService;
+        this.axisTensionService = axisTensionService;
     }
 
     @GetMapping("/api/election/quiz") public QuizPayload electionQuiz() { return dataService.getElectionQuiz(); }
@@ -104,7 +108,8 @@ public class QuizController {
                 personalityMatcherService.findCategoryMatches(axes, lang),
                 personalityMatcherService.findBottomMatches(axes, lang),
                 axisOutlierService.findMostUnusual(axes, lang),
-                axisOutlierService.findMostCommon(axes, lang)
+                axisOutlierService.findMostCommon(axes, lang),
+                axisTensionService.findStrongest(axes, lang)
         );
     }
 

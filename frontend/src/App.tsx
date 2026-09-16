@@ -1104,6 +1104,7 @@ function MainApp() {
                 <SignatureSection
                   unusual={result.mostUnusualAxis}
                   common={result.mostCommonAxis}
+                  tension={result.axisTension}
                 />
               </div>
 

@@ -319,6 +319,67 @@
   left: var(--you);
 }
 
+/* ── Tensao interna ──────────────────────────────────────────────────── */
+/* Uma combinacao rara merece peso visual: fundo assentado e borda mais
+   marcada que os cards de cima. Quando nao ha tensao o card fica neutro,
+   porque ausencia de contradicao tambem e um resultado.                   */
+.tension-card {
+  margin-top: 16px;
+  padding: 22px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+}
+
+.tension-card[data-empty='true'] {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.tension-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-100);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.tension-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.tension-rare {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 0.97rem;
+  font-weight: 600;
+}
+
+.tension-examples {
+  margin: 0 0 14px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.tension-note {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.tension-card[data-empty='true'] .tension-note {
+  padding-top: 0;
+  border-top: 0;
+}
+
 /* ── Outras ideologias: as tres lado a lado ──────────────────────────── */
 /* A coluna de conteudo e mais estreita que a pagina antiga (o indice ocupa
    232px), entao o auto-fill de 280px quebrava para 2 colunas e deixava o

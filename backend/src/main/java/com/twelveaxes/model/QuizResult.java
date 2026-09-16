@@ -19,6 +19,7 @@ import java.util.List;
  * @param bottomPersonalityMatches personalidades mais distantes do catalogo
  * @param mostUnusualAxis eixo em que o usuario mais destoa do catalogo de ideologias
  * @param mostCommonAxis eixo em que o usuario mais se aproxima do catalogo
+ * @param axisTension par de eixos em que o usuario contraria o padrao do catalogo, ou null
  */
 public record QuizResult(
         List<AxisResult> axes,
@@ -32,6 +33,7 @@ public record QuizResult(
         List<PersonalityMatch> categoryPersonalityMatches,
         List<PersonalityMatch> bottomPersonalityMatches,
         AxisOutlier mostUnusualAxis,
-        AxisOutlier mostCommonAxis
+        AxisOutlier mostCommonAxis,
+        AxisTension axisTension
 ) {
 }

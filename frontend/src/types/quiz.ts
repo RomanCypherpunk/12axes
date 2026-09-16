@@ -119,6 +119,16 @@ export interface AxisOutlier {
   abovePercent: number;
 }
 
+export interface AxisTension {
+  firstAxisLabel: string;
+  firstPole: string;
+  secondAxisLabel: string;
+  secondPole: string;
+  matchingIdeologies: number;
+  catalogSize: number;
+  examples: string[];
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
@@ -132,6 +142,8 @@ export interface QuizResult {
   bottomPersonalityMatches: PersonalityMatch[];
   mostUnusualAxis: AxisOutlier;
   mostCommonAxis: AxisOutlier;
+  // null quando o perfil nao contraria padrao nenhum (centristas e moderados).
+  axisTension: AxisTension | null;
 }
 
 export interface Candidate {

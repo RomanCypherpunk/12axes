@@ -1,16 +1,17 @@
 import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
-import type { AxisOutlier } from '../../types/quiz';
+import type { AxisOutlier, AxisTension } from '../../types/quiz';
 import { CountUpValue } from './CountUpValue';
 
 interface SignatureSectionProps {
   unusual: AxisOutlier;
   common: AxisOutlier;
+  tension: AxisTension | null;
 }
 
 // Onde o perfil destoa do catalogo e onde ele se confunde com a media.
 // A regua mostra a distancia — que e o proprio dado — em vez de so citar o numero.
-export function SignatureSection({ unusual, common }: SignatureSectionProps) {
+export function SignatureSection({ unusual, common, tension }: SignatureSectionProps) {
   return (
     <section className="results-section" id="assinatura">
       <div className="section-heading">
@@ -33,7 +34,45 @@ export function SignatureSection({ unusual, common }: SignatureSectionProps) {
           note={commonNote(common)}
         />
       </div>
+
+      {tension ? <TensionCard tension={tension} /> : <NoTensionCard />}
     </section>
+  );
+}
+
+// A combinacao de eixos que contraria o padrao do catalogo. Nem todo perfil tem
+// uma: centristas e moderados nao pendem o bastante para contrariar nada.
+function TensionCard({ tension }: { tension: AxisTension }) {
+  const unique = tension.matchingIdeologies === 0;
+
+  return (
+    <article className="tension-card">
+      <span className="tension-label">{t.tensionLabel}</span>
+      <h3>{t.tensionCombo(tension.firstPole, tension.secondPole)}</h3>
+
+      <p className="tension-rare">
+        {unique ? t.tensionUnique : t.tensionRare(tension.matchingIdeologies, tension.catalogSize)}
+      </p>
+
+      {tension.examples.length > 0 && (
+        <p className="tension-examples">{t.tensionExamples(tension.examples.join(', '))}</p>
+      )}
+
+      <p className="tension-note">
+        {t.tensionNote(tension.firstAxisLabel, tension.secondAxisLabel)}
+      </p>
+    </article>
+  );
+}
+
+// Quando nao ha tensao, dizer isso e um resultado — nao um espaco vazio.
+function NoTensionCard() {
+  return (
+    <article className="tension-card" data-empty="true">
+      <span className="tension-label">{t.tensionNoneLabel}</span>
+      <h3>{t.tensionNoneTitle}</h3>
+      <p className="tension-note">{t.tensionNoneBody}</p>
+    </article>
   );
 }
 

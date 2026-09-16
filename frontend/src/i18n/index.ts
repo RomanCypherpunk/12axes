@@ -167,6 +167,15 @@ interface Strings {
   signatureCommonLead: (axis: string) => string;
   signatureCommonNote: (pole: string) => string;
   signatureCommonNoteBalanced: (axis: string) => string;
+  tensionLabel: string;
+  tensionCombo: (firstPole: string, secondPole: string) => string;
+  tensionRare: (count: number, total: number) => string;
+  tensionUnique: string;
+  tensionExamples: (names: string) => string;
+  tensionNote: (firstAxis: string, secondAxis: string) => string;
+  tensionNoneLabel: string;
+  tensionNoneTitle: string;
+  tensionNoneBody: string;
   signatureMedian: string;
   signatureYou: string;
   personalityCategories: Record<PersonalityCategory, string>;
@@ -512,6 +521,15 @@ const pt: Strings = {
   signatureCommonLead: (axis) => `Sua posição em ${axis} é praticamente a mediana do catálogo.`,
   signatureCommonNote: (pole) => `Aqui você está em terreno comum. Não puxa para ${pole.toLowerCase()} nem para o polo oposto.`,
   signatureCommonNoteBalanced: (axis) => `Você fica no centro em ${axis}, e o catálogo também. É onde seu perfil menos se distingue.`,
+  tensionLabel: 'Sua tensão interna',
+  tensionCombo: (firstPole, secondPole) => `${firstPole} e ${secondPole} ao mesmo tempo`,
+  tensionRare: (count, total) => `Só ${count} das ${total} ideologias do catálogo juntam essas duas posições.`,
+  tensionUnique: 'Nenhuma ideologia do catálogo junta essas duas posições.',
+  tensionExamples: (names) => `Quem chega perto: ${names}.`,
+  tensionNote: (firstAxis, secondAxis) => `No catálogo, ${firstAxis} e ${secondAxis} costumam andar na mesma direção. Você inverte esse padrão.`,
+  tensionNoneLabel: 'Sua coerência',
+  tensionNoneTitle: 'Seu perfil segue os padrões do catálogo',
+  tensionNoneBody: 'Suas posições combinam entre si do jeito que costumam combinar nas ideologias existentes. Não há contradição marcante entre dois eixos.',
   signatureMedian: 'Mediana das ideologias',
   signatureYou: 'Você',
   personalityCategories: {
@@ -902,6 +920,15 @@ const en: Strings = {
   signatureCommonLead: (axis) => `Your position on ${axis} sits almost exactly at the catalog median.`,
   signatureCommonNote: (pole) => `This is common ground. You lean neither toward ${pole.toLowerCase()} nor to the opposite pole.`,
   signatureCommonNoteBalanced: (axis) => `You sit at the centre on ${axis}, and so does the catalog. This is where your profile stands out least.`,
+  tensionLabel: 'Your internal tension',
+  tensionCombo: (firstPole, secondPole) => `${firstPole} and ${secondPole} at the same time`,
+  tensionRare: (count, total) => `Only ${count} of the ${total} ideologies in the catalog hold both of these positions.`,
+  tensionUnique: 'No ideology in the catalog holds both of these positions.',
+  tensionExamples: (names) => `Closest matches: ${names}.`,
+  tensionNote: (firstAxis, secondAxis) => `In the catalog, ${firstAxis} and ${secondAxis} usually move together. You reverse that pattern.`,
+  tensionNoneLabel: 'Your consistency',
+  tensionNoneTitle: 'Your profile follows the catalog patterns',
+  tensionNoneBody: 'Your positions fit together the way they usually do across existing ideologies. There is no striking contradiction between any two axes.',
   signatureMedian: 'Ideology median',
   signatureYou: 'You',
   personalityCategories: {
