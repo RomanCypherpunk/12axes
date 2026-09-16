@@ -161,9 +161,11 @@ interface Strings {
   signatureUnusualLabel: string;
   signatureCommonLabel: string;
   signatureUnusualLead: (pole: string, percent: number) => string;
+  signatureUnusualLeadBalanced: (axis: string, pole: string, percent: number) => string;
   signatureUnusualNote: (axis: string) => string;
   signatureCommonLead: (axis: string) => string;
   signatureCommonNote: (pole: string) => string;
+  signatureCommonNoteBalanced: (axis: string) => string;
   signatureMedian: string;
   signatureYou: string;
   personalityCategories: Record<PersonalityCategory, string>;
@@ -502,9 +504,12 @@ const pt: Strings = {
   signatureUnusualLabel: 'Sua posição mais incomum',
   signatureCommonLabel: 'Sua posição mais comum',
   signatureUnusualLead: (pole, percent) => `Você é mais ${pole.toLowerCase()} que ${Math.round(percent)}% das ideologias do catálogo.`,
+  signatureUnusualLeadBalanced: (axis, pole, percent) =>
+    `Você fica no meio-termo em ${axis} — e isso já te coloca mais para ${pole.toLowerCase()} que ${Math.round(percent)}% das ideologias do catálogo.`,
   signatureUnusualNote: (axis) => `É em ${axis} que seu perfil mais se afasta do conjunto — o traço que mais te diferencia.`,
   signatureCommonLead: (axis) => `Em ${axis}, sua posição é praticamente a mediana do catálogo.`,
   signatureCommonNote: (pole) => `Aqui você fica no terreno comum: nem puxa para ${pole.toLowerCase()}, nem para o polo oposto.`,
+  signatureCommonNoteBalanced: (axis) => `Em ${axis} você fica no centro, e o catálogo também — é onde seu perfil menos se distingue.`,
   signatureMedian: 'Mediana das ideologias',
   signatureYou: 'Você',
   personalityCategories: {
@@ -888,9 +893,12 @@ const en: Strings = {
   signatureUnusualLabel: 'Your most unusual position',
   signatureCommonLabel: 'Your most typical position',
   signatureUnusualLead: (pole, percent) => `You are more ${pole.toLowerCase()} than ${Math.round(percent)}% of the ideologies in the catalog.`,
+  signatureUnusualLeadBalanced: (axis, pole, percent) =>
+    `You sit in the middle on ${axis} — and that alone puts you further toward ${pole.toLowerCase()} than ${Math.round(percent)}% of the ideologies in the catalog.`,
   signatureUnusualNote: (axis) => `${axis} is where your profile departs most from the field — the trait that sets you apart.`,
   signatureCommonLead: (axis) => `On ${axis}, your position sits almost exactly at the catalog median.`,
   signatureCommonNote: (pole) => `This is common ground: you lean neither toward ${pole.toLowerCase()} nor to the opposite pole.`,
+  signatureCommonNoteBalanced: (axis) => `On ${axis} you sit at the centre, and so does the catalog — this is where your profile stands out least.`,
   signatureMedian: 'Ideology median',
   signatureYou: 'You',
   personalityCategories: {

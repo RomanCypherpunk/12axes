@@ -34,7 +34,7 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.bottomPersonalityMatches.length()").value(3))
                 .andExpect(jsonPath("$.mostUnusualAxis.axisId").isNotEmpty())
                 .andExpect(jsonPath("$.mostUnusualAxis.label").isNotEmpty())
-                .andExpect(jsonPath("$.mostUnusualAxis.dominantPole").isNotEmpty())
+                .andExpect(jsonPath("$.mostUnusualAxis.abovePole").isNotEmpty())
                 .andExpect(jsonPath("$.mostCommonAxis.axisId").isNotEmpty());
     }
 

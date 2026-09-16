@@ -113,8 +113,10 @@ export interface AxisOutlier {
   userPercent: number;
   catalogMedian: number;
   distanceFromMedian: number;
-  dominantPole: string;
-  strongerThanPercent: number;
+  dominantPole: string | null;
+  balanced: boolean;
+  abovePole: string;
+  abovePercent: number;
 }
 
 export interface QuizResult {

@@ -22,7 +22,7 @@ export function SignatureSection({ unusual, common }: SignatureSectionProps) {
           outlier={unusual}
           variant="unusual"
           label={t.signatureUnusualLabel}
-          lead={t.signatureUnusualLead(unusual.dominantPole, unusual.strongerThanPercent)}
+          lead={unusualLead(unusual)}
           note={t.signatureUnusualNote(unusual.label)}
         />
         <SignatureCard
@@ -30,11 +30,28 @@ export function SignatureSection({ unusual, common }: SignatureSectionProps) {
           variant="common"
           label={t.signatureCommonLabel}
           lead={t.signatureCommonLead(common.label)}
-          note={t.signatureCommonNote(common.dominantPole)}
+          note={commonNote(common)}
         />
       </div>
     </section>
   );
+}
+
+// Quem esta na faixa neutra nao pende para polo nenhum: dizer "voce e mais
+// democracia" seria arbitrario. Nesse caso o texto compara o centro do usuario
+// com a inclinacao do catalogo, que e o que de fato o distingue.
+function unusualLead(outlier: AxisOutlier): string {
+  if (outlier.balanced) {
+    return t.signatureUnusualLeadBalanced(outlier.label, outlier.abovePole, outlier.abovePercent);
+  }
+  return t.signatureUnusualLead(outlier.abovePole, outlier.abovePercent);
+}
+
+function commonNote(outlier: AxisOutlier): string {
+  if (outlier.balanced) {
+    return t.signatureCommonNoteBalanced(outlier.label);
+  }
+  return t.signatureCommonNote(outlier.dominantPole ?? outlier.abovePole);
 }
 
 interface SignatureCardProps {

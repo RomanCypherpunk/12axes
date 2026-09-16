@@ -11,8 +11,10 @@ package com.twelveaxes.model;
  * @param userPercent posicao do usuario no eixo (0-100, percentual do polo esquerdo)
  * @param catalogMedian mediana do catalogo de ideologias nesse eixo
  * @param distanceFromMedian distancia absoluta entre o usuario e a mediana
- * @param dominantPole polo para o qual o usuario pende nesse eixo
- * @param strongerThanPercent percentual do catalogo que o usuario supera na direcao do polo dominante
+ * @param dominantPole polo para o qual o usuario pende, ou null quando esta no centro
+ * @param balanced true quando o usuario esta perto demais do centro para pender a um polo
+ * @param abovePole polo na direcao do qual o usuario supera parte do catalogo
+ * @param abovePercent percentual do catalogo que fica atras do usuario na direcao de abovePole
  */
 public record AxisOutlier(
         String axisId,
@@ -21,6 +23,8 @@ public record AxisOutlier(
         double catalogMedian,
         double distanceFromMedian,
         String dominantPole,
-        double strongerThanPercent
+        boolean balanced,
+        String abovePole,
+        double abovePercent
 ) {
 }
