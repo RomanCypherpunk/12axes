@@ -83,10 +83,21 @@ export interface CountryMatch {
   compatibility: number;
 }
 
+export type PersonalityCategory =
+  | 'politico'
+  | 'religioso'
+  | 'economista'
+  | 'filosofo'
+  | 'teorico'
+  | 'empresario'
+  | 'intelectual'
+  | 'ativista';
+
 export interface PersonalityMatch {
   personalityId: string;
   name: string;
   role: string;
+  category: PersonalityCategory;
   lifespan: string;
   description: string;
   imagePath: string;
@@ -100,8 +111,13 @@ export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
   matches: IdeologyMatch[];
+  bottomIdeologyMatch: IdeologyMatch;
   topCountryMatch: CountryMatch;
+  topHistoricalCountryMatch: CountryMatch;
+  bottomCountryMatches: CountryMatch[];
   topPersonalityMatch: PersonalityMatch;
+  categoryPersonalityMatches: PersonalityMatch[];
+  bottomPersonalityMatches: PersonalityMatch[];
 }
 
 export interface Candidate {

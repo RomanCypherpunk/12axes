@@ -1,6 +1,8 @@
 // Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
+import type { PersonalityCategory } from '../types/quiz';
+
 export type Lang = 'pt' | 'en';
 
 const STORAGE_KEY = '12axes-lang';
@@ -141,6 +143,20 @@ interface Strings {
   axesSectionTitle: string;
   proximityEyebrow: string;
   otherMatches: string;
+  navOnThisPage: string;
+  resultsNavAxes: string;
+  resultsNavCountries: string;
+  resultsNavPersonalities: string;
+  resultsNavIdeologies: string;
+  countriesSectionTitle: string;
+  countryCurrentTab: string;
+  countryHistoricalTab: string;
+  countriesDistantTitle: string;
+  personalitiesSectionTitle: string;
+  personalitiesByAreaTitle: string;
+  personalitiesDistantTitle: string;
+  ideologyDistantTitle: string;
+  personalityCategories: Record<PersonalityCategory, string>;
   redoAnalysis: string;
   share: string;
   generatingPng: string;
@@ -458,6 +474,29 @@ const pt: Strings = {
   axesSectionTitle: 'Resultado percentual por eixo',
   proximityEyebrow: 'Proximidade ideológica',
   otherMatches: 'Outras correspondências',
+  navOnThisPage: 'Nesta página',
+  resultsNavAxes: 'Os 12 eixos',
+  resultsNavCountries: 'Países',
+  resultsNavPersonalities: 'Personalidades',
+  resultsNavIdeologies: 'Outras ideologias',
+  countriesSectionTitle: 'Países mais próximos de você',
+  countryCurrentTab: 'País atual',
+  countryHistoricalTab: 'Experiência histórica',
+  countriesDistantTitle: 'Os mais distantes de você',
+  personalitiesSectionTitle: 'Personalidades mais próximas de você',
+  personalitiesByAreaTitle: 'Também próximos, por área de atuação',
+  personalitiesDistantTitle: 'As mais distantes de você',
+  ideologyDistantTitle: 'A ideologia mais distante de você',
+  personalityCategories: {
+    politico: 'Política',
+    religioso: 'Religião',
+    economista: 'Economia',
+    filosofo: 'Filosofia',
+    teorico: 'Teoria política',
+    empresario: 'Empresariado',
+    intelectual: 'Vida intelectual',
+    ativista: 'Ativismo',
+  },
   redoAnalysis: 'Refazer análise',
   share: 'Compartilhar',
   generatingPng: 'Gerando PNG...',
@@ -811,6 +850,29 @@ const en: Strings = {
   axesSectionTitle: 'Percentage result per axis',
   proximityEyebrow: 'Ideological proximity',
   otherMatches: 'Other matches',
+  navOnThisPage: 'On this page',
+  resultsNavAxes: 'The 12 axes',
+  resultsNavCountries: 'Countries',
+  resultsNavPersonalities: 'Figures',
+  resultsNavIdeologies: 'Other ideologies',
+  countriesSectionTitle: 'Countries closest to you',
+  countryCurrentTab: 'Present-day',
+  countryHistoricalTab: 'Historical',
+  countriesDistantTitle: 'Furthest from you',
+  personalitiesSectionTitle: 'Figures closest to you',
+  personalitiesByAreaTitle: 'Also close to you, by field',
+  personalitiesDistantTitle: 'Furthest from you',
+  ideologyDistantTitle: 'The ideology furthest from you',
+  personalityCategories: {
+    politico: 'Politics',
+    religioso: 'Religion',
+    economista: 'Economics',
+    filosofo: 'Philosophy',
+    teorico: 'Political theory',
+    empresario: 'Business',
+    intelectual: 'Intellectual life',
+    ativista: 'Activism',
+  },
   redoAnalysis: 'Retake analysis',
   share: 'Share',
   generatingPng: 'Generating PNG...',

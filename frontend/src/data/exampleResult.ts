@@ -35,6 +35,7 @@ const pt: ExampleResult[] = [
       personalityId: 'stalin',
       name: 'Josef Stálin',
       role: 'Ditador',
+      category: 'politico',
       lifespan: '1878–1953',
       description:
         'À frente da União Soviética, Stálin impôs industrialização forçada, coletivização agrária e planejamento central, consolidando um regime de partido único marcado por expurgos, terror e repressão em massa.',
@@ -100,6 +101,7 @@ const pt: ExampleResult[] = [
       personalityId: 'karl-marx',
       name: 'Karl Marx',
       role: 'Filósofo e economista',
+      category: 'teorico',
       lifespan: '1818–1883',
       description:
         'Filósofo e economista alemão, Marx criou o materialismo histórico e a crítica do capitalismo, analisando a luta de classes e a exploração do trabalho, e tornou-se a maior referência do socialismo e do comunismo.',
@@ -165,6 +167,7 @@ const pt: ExampleResult[] = [
       personalityId: 'macron',
       name: 'Emmanuel Macron',
       role: 'Estadista',
+      category: 'politico',
       lifespan: '1977–',
       description:
         'Estadista francês, Macron chegou à presidência da França como reformador centrista e liberal, defendendo o mercado, a integração europeia e reformas econômicas, buscando superar a divisão tradicional entre esquerda e direita.',
@@ -230,6 +233,7 @@ const pt: ExampleResult[] = [
       personalityId: 'benjamin-netanyahu',
       name: 'Benjamin Netanyahu',
       role: 'Político',
+      category: 'politico',
       lifespan: '1949–',
       description:
         'Político israelense, Netanyahu tornou-se figura central da direita nacionalista e securitária de Israel, unindo liberalismo econômico, sionismo conservador e linha dura contra adversários regionais.',
@@ -295,6 +299,7 @@ const pt: ExampleResult[] = [
       personalityId: 'mussolini',
       name: 'Benito Mussolini',
       role: 'Ditador',
+      category: 'politico',
       lifespan: '1883–1945',
       description:
         'Criador do fascismo, Mussolini governou a Itália como ditadura totalitária, fundindo nacionalismo, Estado corporativo, culto ao líder e militarismo expansionista, servindo de modelo a regimes autoritários europeus.',
@@ -360,6 +365,7 @@ const pt: ExampleResult[] = [
       personalityId: 'plinio-salgado',
       name: 'Plínio Salgado',
       role: 'Político',
+      category: 'politico',
       lifespan: '1895–1975',
       description:
         'Líder do integralismo brasileiro, Plínio Salgado criou um movimento nacionalista autoritário de inspiração cristã, com o lema Deus, Pátria e Família e estética de massas inspirada nos fascismos europeus dos anos 1930.',
@@ -425,6 +431,7 @@ const pt: ExampleResult[] = [
       personalityId: 'mises',
       name: 'Ludwig von Mises',
       role: 'Economista',
+      category: 'economista',
       lifespan: '1881–1973',
       description:
         'Economista austríaco, Mises foi grande defensor do livre mercado e mostrou a impossibilidade do cálculo econômico racional no socialismo, tornando-se pilar da Escola Austríaca e inspiração do libertarianismo moderno.',
@@ -490,6 +497,7 @@ const pt: ExampleResult[] = [
       personalityId: 'bakunin',
       name: 'Mikhail Bakunin',
       role: 'Revolucionário',
+      category: 'teorico',
       lifespan: '1814–1876',
       description:
         'Revolucionário russo, Bakunin foi o grande teórico do anarquismo coletivista, opondo-se ao Estado e ao marxismo autoritário e defendendo a revolução social espontânea e a livre federação de comunidades e trabalhadores.',
@@ -558,6 +566,7 @@ const en: ExampleResult[] = [
       personalityId: 'stalin',
       name: 'Joseph Stalin',
       role: 'Dictator',
+      category: 'politico',
       lifespan: '1878–1953',
       description:
         'At the head of the Soviet Union, Stalin imposed forced industrialization, agrarian collectivization, and central planning, consolidating a single-party regime marked by purges, terror, and mass repression.',
@@ -623,6 +632,7 @@ const en: ExampleResult[] = [
       personalityId: 'karl-marx',
       name: 'Karl Marx',
       role: 'Philosopher and economist',
+      category: 'teorico',
       lifespan: '1818–1883',
       description:
         'A German philosopher and economist, Marx created historical materialism and the critique of capitalism, analyzing class struggle and the exploitation of labor, and became the greatest reference of socialism and communism.',
@@ -688,6 +698,7 @@ const en: ExampleResult[] = [
       personalityId: 'macron',
       name: 'Emmanuel Macron',
       role: 'Statesman',
+      category: 'politico',
       lifespan: '1977–',
       description:
         "A French statesman, Macron reached France's presidency as a centrist, liberal reformer, defending markets, European integration, and economic reforms, seeking to overcome the traditional divide between left and right.",
@@ -753,6 +764,7 @@ const en: ExampleResult[] = [
       personalityId: 'benjamin-netanyahu',
       name: 'Benjamin Netanyahu',
       role: 'Politician',
+      category: 'politico',
       lifespan: '1949–',
       description:
         "An Israeli politician, Netanyahu became a central figure of Israel's nationalist, security-focused right, uniting economic liberalism, conservative Zionism, and a hard line against regional adversaries.",
@@ -818,6 +830,7 @@ const en: ExampleResult[] = [
       personalityId: 'mussolini',
       name: 'Benito Mussolini',
       role: 'Dictator',
+      category: 'politico',
       lifespan: '1883–1945',
       description:
         'The creator of fascism, Mussolini ruled Italy as a totalitarian dictatorship, fusing nationalism, a corporatist state, a cult of the leader, and expansionist militarism, serving as a model for European authoritarian regimes.',
@@ -883,6 +896,7 @@ const en: ExampleResult[] = [
       personalityId: 'plinio-salgado',
       name: 'Plínio Salgado',
       role: 'Politician',
+      category: 'politico',
       lifespan: '1895–1975',
       description:
         'Leader of Brazilian Integralism, Plínio Salgado created an authoritarian nationalist movement of Christian inspiration, with the motto God, Fatherland and Family and mass aesthetics inspired by the European fascisms of the 1930s.',
@@ -948,6 +962,7 @@ const en: ExampleResult[] = [
       personalityId: 'mises',
       name: 'Ludwig von Mises',
       role: 'Economist',
+      category: 'economista',
       lifespan: '1881–1973',
       description:
         'An Austrian economist, Mises was a great defender of the free market and demonstrated the impossibility of rational economic calculation under socialism, becoming a pillar of the Austrian School and an inspiration for modern libertarianism.',
@@ -1013,6 +1028,7 @@ const en: ExampleResult[] = [
       personalityId: 'bakunin',
       name: 'Mikhail Bakunin',
       role: 'Revolutionary',
+      category: 'teorico',
       lifespan: '1814–1876',
       description:
         'A Russian revolutionary, Bakunin was the great theorist of collectivist anarchism, opposing the state and authoritarian Marxism and defending spontaneous social revolution and the free federation of communities and workers.',
