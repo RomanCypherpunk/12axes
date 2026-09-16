@@ -179,6 +179,28 @@ def main():
                 f"(padrao ~220/~30, teto 280/45) — corte o secundario"
             )
 
+    # ---------- [FRASE] ----------
+    # So ideologias tem phrase. E o texto do card "Uma frase que te descreve":
+    # tem de existir, caber no card e nao contradizer o vetor recem-calculado.
+    if catalog == "ideology" and entrada and entrada.get("phrase") is not None:
+        frase = entrada["phrase"]
+        if not frase.strip():
+            errors.append(f"[FRASE] {pid} sem 'phrase' — ver NEW_PROFILE.md")
+        else:
+            palavras = len(frase.split())
+            if len(frase) > 170 or palavras > 25:
+                warnings.append(
+                    f"[FRASE] {pid}: {len(frase)} caracteres / {palavras} palavras "
+                    f"(padrao ~135/~18, teto 170/25)"
+                )
+            if not frase.startswith("Quero"):
+                warnings.append(f"[FRASE] {pid}: deveria comecar com 'Quero' (primeira pessoa)")
+            if "culturalmente" in frase and "politicamente" in frase and "economicamente" in frase:
+                warnings.append(
+                    f"[FRASE] {pid}: usa o esqueleto fixo 'culturalmente/politicamente/economicamente'. "
+                    f"Reescreva com o que a ideologia realmente defende (ver NEW_PROFILE.md)."
+                )
+
     # ---------- [FORMA] ----------
     for ax in AXES:
         if ax not in data:

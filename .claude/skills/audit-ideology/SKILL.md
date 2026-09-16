@@ -19,6 +19,7 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — autossuficiente, 
 | Metadados (fonte) | `backend/src/main/resources/data/ideologies.json` |
 | Perfis salvos (destino) | `backend/src/main/resources/data/ideology-profiles.json` (chave `ideologyId`) |
 | Campos usados no prompt | `id`, `name`, `category`, `description` |
+| `phrase` | não entra no prompt, mas precisa continuar coerente com o vetor depois da reauditoria |
 | Tipo de perfil no cabeçalho do prompt | `"ideologia política"` |
 
 ## Execução
@@ -34,6 +35,10 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — autossuficiente, 
      "Modos de falha conhecidos" no README. Se reprovar, relance só aquele subagente dizendo qual
      checagem falhou e quais eixos estavam errados.
    - Calcular vetores e mesclar em `ideology-profiles.json`.
+   - **Reconferir a `phrase` de cada perfil do lote contra o vetor novo.** A reauditoria pode mover
+     eixos a ponto de a frase passar a contradizê-los (ex.: a frase diz "democrática" e o novo
+     `representacao` ficou em 12). Quando contradizer, reescreva a frase seguindo a seção
+     "O campo `phrase`" de `NEW_PROFILE.md`, em PT e EN. Não mexa nas que continuarem coerentes.
    - Atualizar `STATE.json` (mover IDs de `pending` para `done`, atualizar `lastUpdated`).
    - Arquivar em `answers/ideology/<id>.json` (permanente, nunca apagar) e limpar temporários (mantendo só um par de exemplo em `prompts/ideology/` + `subagent-out/ideology/`).
 4. Para **cada perfil do lote** já mesclado, rode `python profile-audit/compatibility.py ideology <id>` e leia as 2 personalidades, 2 ideologias e 2 países mais compatíveis com o vetor recém-atualizado (mesmo algoritmo de `ProfileMatchScorer.java`). Nunca estimar esses matches de cabeça.

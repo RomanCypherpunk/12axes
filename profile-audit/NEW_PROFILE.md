@@ -74,7 +74,7 @@ ainda reflete a posição mais recente da pessoa; se não refletir, atualize `pe
 
 | Catálogo | Campos obrigatórios | Campos condicionais |
 |---|---|---|
-| `ideology` | `id`, `name`, `category`, `description`, `countryId`, `personalityId` | — |
+| `ideology` | `id`, `name`, `category`, `description`, `phrase`, `countryId`, `personalityId` | `phrase` só existe neste catálogo, ver seção própria |
 | `personality` | `id`, `name`, `role`, `lifespan`, `description`, `imagePath`, `imageSourceName`, `imageSourceUrl`, `imageNote` | — |
 | `country` | `id`, `name`, `category`, `description`, `flagPath`, `historical`, `period`, `vector` (sempre `null` no arquivo de metadados) | `period` só é preenchido (e `historical: true`) se o perfil representa um país num momento histórico específico (ex.: "Alemanha Nazista — Terceiro Reich") |
 
@@ -125,6 +125,7 @@ Exemplo de objeto novo em `ideologies.json`:
   "name": "Exemplo de Ideologia",
   "category": "Centro-Esquerda",
   "description": "Descrição factual de 1-3 frases sobre a ideologia, seus princípios centrais e contexto histórico/geográfico relevante.",
+  "phrase": "Quero uma sociedade ... (ver seção sobre o campo phrase abaixo)",
   "countryId": "brasil",
   "personalityId": "lula-da-silva"
 }
@@ -196,6 +197,58 @@ exercício do poder é o que define a figura, e `teorico` se a obra escrita é o
 
 O teste `PersonalityCategoryTest` falha se qualquer perfil ficar sem `category` ou usar um
 valor fora dos 8.
+
+### O campo `phrase` (só ideologias)
+
+`phrase` é **obrigatório** e alimenta o card "Uma frase que te descreve" na página de resultados,
+usando a frase da ideologia mais compatível com o usuário.
+
+**É uma frase em primeira pessoa que diz o que a ideologia realmente defende.** Não é uma
+descrição de coordenadas nos eixos.
+
+Estrutura: três partes, nesta ordem, com **liberdade total de redação** em cada uma:
+
+1. **Sociedade / cultura / valores** — o que a corrente quer como base da vida em comum
+2. **Regime político** — como o poder se organiza e se legitima
+3. **Economia** — como produção e propriedade se organizam
+
+Comece com "Quero uma sociedade" ou "Quero um/uma ..." quando couber melhor à corrente. **Não** use
+o esqueleto fixo "culturalmente X, politicamente Y, economicamente Z" — ele produz frases
+intercambiáveis que não distinguem nada.
+
+Exemplos do padrão esperado:
+
+| ideologia | frase |
+|---|---|
+| Nacional-Socialismo | Quero uma sociedade baseada na raça ariana, politicamente hierárquica e autoritária, com um capitalismo de estado forte e protecionista. |
+| Socialismo Stalinista | Quero uma sociedade sob líder forte e partido único, com coletivização agrária, planos quinquenais e industrialização acelerada. |
+| Anarcocapitalismo | Quero abolir o Estado e organizar tudo por contratos e mercados livres, com segurança e justiça vendidas por empresas privadas. |
+| Zapatismo | Quero comunidades indígenas autônomas decidindo em assembleias e caracoles, cooperativas de subsistência, mandando ao obedecer ao povo. |
+
+Contraexemplo (**não faça assim** — foi a primeira versão do stalinismo, e foi rejeitada):
+
+> Quero uma sociedade culturalmente assimilacionista e irreligiosa, politicamente autocrática e
+> centralizada, economicamente estatizada e fechada.
+
+Assimilacionismo não é característica central do stalinismo; é só onde ele cai num eixo. A frase
+serviria para dezenas de outras correntes.
+
+**Regras:**
+
+- **Parta da `description`**, que contém as ideias centrais. O vetor em `ideology-profiles.json`
+  serve como **trava**: a frase não pode contradizê-lo (se `representacao=8`, não escreva
+  "democrática"; se `economia=90`, não escreva "livre mercado").
+- Use o **vocabulário próprio da corrente**: soviete, califado, corporação, cooperativa, coroa,
+  vanguarda, ordem espontânea, tradição, raça, classe, nação.
+- **Única no catálogo.** Se lembrar de outra ideologia com frase parecida, reescreva até a diferença
+  ficar visível.
+- Tamanho: mire **~135 caracteres / ~18 palavras**; teto de **170 caracteres / 25 palavras**.
+- Primeira pessoa, sem travessão, terminando em ponto final.
+- Escreva como o **adepto sincero** escreveria, mesmo para ideologias repugnantes. É o ponto de
+  vista interno dela, sem ironia nem julgamento.
+
+`IdeologyPhraseTest` falha se alguma ideologia ficar sem frase, fora do tamanho, sem começar com
+"Quero", sem ponto final, ou com frase repetida.
 
 ## Passo 2 — Traduzir para inglês
 
