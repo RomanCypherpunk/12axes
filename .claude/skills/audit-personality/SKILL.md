@@ -25,6 +25,7 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — ele é autossufic
 | Metadados (fonte) | `backend/src/main/resources/data/personalities.json` |
 | Perfis salvos (destino) | `backend/src/main/resources/data/personality-profiles.json` (chave `personalityId`) |
 | Campos usados no prompt | `id`, `name`, `role`, `lifespan`, `description` |
+| `category` | não entra no prompt de auditoria, mas deve existir e ser um dos 8 valores (ver `NEW_PROFILE.md`) |
 | Tipo de perfil no cabeçalho do prompt | `"figura histórica/pública"` |
 
 ## Execução
@@ -39,6 +40,11 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — ele é autossufic
      `personalities.json` ainda reflete a posição mais recente da pessoa. Se estiver desatualizada,
      atualize `personalities.json`/`i18n/en/personalities.json` **antes** de gerar o prompt — não
      reaudite com uma description que você já sabe estar desatualizada.
+   - Conferir que cada perfil do lote tem `category` (um dos 8 valores fechados). Perfis antigos
+     sem o campo, ou classificados de forma claramente errada pela leitura que a auditoria
+     acabou de fazer, devem ser corrigidos em `personalities.json` — `category` vive só no PT.
+     Não recategorize por conta própria só porque o `role` sugere outra coisa: `role` descreve,
+     `category` agrupa.
    - Gerar `prompts/personality/<id>.txt` para cada perfil do lote.
    - Disparar os 15 subagentes **simultaneamente**, mesma mensagem, modelo de qualidade (nunca Haiku/rápido).
    - Validar as 15 saídas rodando `python profile-audit/validate.py personality <id>` em cada uma.

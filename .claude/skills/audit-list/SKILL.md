@@ -28,7 +28,7 @@ de vetor/merge/`STATE.json`/arquivamento é o mesmo; só o tamanho do lote muda 
 
      | Catálogo | Metadados (fonte) | Perfis salvos (destino) | Campos do prompt |
      |---|---|---|---|
-     | `personality` | `backend/src/main/resources/data/personalities.json` | `backend/src/main/resources/data/personality-profiles.json` (`personalityId`) | `id`, `name`, `role`, `lifespan`, `description` |
+     | `personality` | `backend/src/main/resources/data/personalities.json` | `backend/src/main/resources/data/personality-profiles.json` (`personalityId`) | `id`, `name`, `role`, `lifespan`, `description` (+ `category` obrigatória no JSON, fora do prompt) |
      | `ideology` | `backend/src/main/resources/data/ideologies.json` | `backend/src/main/resources/data/ideology-profiles.json` (`ideologyId`) | `id`, `name`, `category`, `description` |
      | `country` | `backend/src/main/resources/data/countries.json` | `backend/src/main/resources/data/countries-profiles.json` (`countryId`) | `id`, `name`, `category`, `description` (+ `period` se `historical`) |
 

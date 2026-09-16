@@ -70,6 +70,14 @@ AXIS_POLES = {
     "tecnologia":    ("biologia/naturalista", "tecnofilo", "ted-kaczynski", "ray-kurzweil"),
 }
 
+# Categorias validas do catalogo personality. Agrupam a pessoa na secao "por
+# area de atuacao" da pagina de resultados; o campo `role` continua em texto
+# livre e apenas descreve. Espelha PersonalityCategoryTest.java.
+PERSONALITY_CATEGORIES = {
+    "politico", "religioso", "economista", "filosofo",
+    "teorico", "empresario", "intelectual", "ativista",
+}
+
 CATALOGS = {
     "personality": ("personality-profiles.json", "personalityId", "personalities.json"),
     "ideology": ("ideology-profiles.json", "ideologyId", "ideologies.json"),
@@ -136,6 +144,26 @@ def main():
 
     errors, warnings = [], []
     print(f"validando {catalog}:{pid}\n  {path}\n")
+
+    # ---------- [CATEGORIA] ----------
+    # So personalidades tem category; o backend rejeita valor fora da lista.
+    if catalog == "personality":
+        meta = {m["id"]: m for m in load(CATALOGS[catalog][2])}
+        entry = meta.get(pid)
+        if entry is None:
+            errors.append(f"[CATEGORIA] {pid} nao existe em personalities.json")
+        else:
+            category = entry.get("category")
+            if not category:
+                errors.append(
+                    f"[CATEGORIA] {pid} sem campo 'category' — escolha um de: "
+                    + ", ".join(sorted(PERSONALITY_CATEGORIES))
+                )
+            elif category not in PERSONALITY_CATEGORIES:
+                errors.append(
+                    f"[CATEGORIA] {pid} usa category invalida '{category}' — validas: "
+                    + ", ".join(sorted(PERSONALITY_CATEGORIES))
+                )
 
     # ---------- [FORMA] ----------
     for ax in AXES:

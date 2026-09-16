@@ -137,6 +137,7 @@ Exemplo de objeto novo em `personalities.json` (campos de imagem preenchidos no 
   "id": "exemplo-pessoa",
   "name": "Exemplo Pessoa",
   "role": "Estadista",
+  "category": "politico",
   "lifespan": "1900–1980",
   "description": "Descrição factual de 1-3 frases sobre a trajetória e ideias da pessoa.",
   "imagePath": "/personalities/portraits/exemplo-pessoa.jpg",
@@ -145,6 +146,41 @@ Exemplo de objeto novo em `personalities.json` (campos de imagem preenchidos no 
   "imageNote": "Retrato de Exemplo Pessoa via Wikipédia/Wikimedia Commons."
 }
 ```
+
+### O campo `category` (só personalidades)
+
+`category` é **obrigatório** e agrupa a pessoa na seção "Também próximos, por área de
+atuação" da página de resultados. São **8 valores fechados** — nunca invente um novo:
+
+| valor | abrange |
+|---|---|
+| `politico` | chefes de Estado, estadistas, ditadores, monarcas, imperadores, parlamentares |
+| `religioso` | líderes e fundadores religiosos, teólogos |
+| `economista` | economistas e teóricos econômicos |
+| `filosofo` | pensamento geral e abstrato: ética, metafísica, epistemologia, filosofia política clássica |
+| `teorico` | formuladores de doutrina política/social específica e operacional |
+| `empresario` | empresários, industriais, investidores |
+| `intelectual` | escritores, jornalistas, juristas, cientistas, militares, historiadores |
+| `ativista` | militantes de movimentos sociais e de direitos civis |
+
+**`role` e `category` são coisas diferentes.** `role` continua em texto livre e descreve
+("Ditador", "Criptógrafo", "Teórico marxista"); `category` agrupa. Stálin é `role: "Ditador"`
+com `category: "politico"`.
+
+**Fronteira `filosofo` × `teorico`** (a que mais gera erro): `filosofo` é pensamento geral e
+abstrato (Platão, Kant, Nietzsche, Arendt); `teorico` formulou doutrina política ou social
+específica e operacional (Marx, Gramsci, Bakunin, Mackinder). Quando a pessoa é genuinamente
+as duas coisas, decida pelo motivo de ela estar num catálogo de política: Marx é `teorico`
+porque o marxismo é um programa; Arendt é `filosofo` porque a obra dela é análise.
+
+Quem exerceu poder de Estado e também escreveu teoria (Lênin, Mao) entra como `politico` se o
+exercício do poder é o que define a figura, e `teorico` se a obra escrita é o que define.
+
+`category` vive **apenas no arquivo PT** — o catálogo EN traduz só `name`, `role` e
+`description`, e a categoria é propagada pelo backend. Não adicione `category` ao i18n.
+
+O teste `PersonalityCategoryTest` falha se qualquer perfil ficar sem `category` ou usar um
+valor fora dos 8.
 
 ## Passo 2 — Traduzir para inglês
 
