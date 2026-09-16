@@ -49,14 +49,28 @@ class IdeologyCountryMappingTest {
                 });
     }
 
+    // A Islandia Medieval e uma experiencia historica: quem responde com o
+    // vetor dela tem de encontra-la na secao historica, nao na de paises atuais.
     @Test
-    void countryMatchIsDrivenPurelyByVectorProximity() {
+    void historicalCountryMatchIsDrivenPurelyByVectorProximity() {
         var countryProfile = dataService.getCountryProfiles().get("islandia-medieval");
+        CountryMatch country = countryMatcherService.findTopHistoricalMatch(
+                axisResults(countryProfile.vector()),
+                QuizDataService.LANG_PT
+        );
+
+        assertThat(country.countryId()).isEqualTo("islandia-medieval");
+        assertThat(country.compatibility()).isGreaterThan(99.0);
+    }
+
+    @Test
+    void currentCountryMatchIsDrivenPurelyByVectorProximity() {
+        var countryProfile = dataService.getCountryProfiles().get("noruega");
         CountryMatch country = countryMatcherService.findTopMatch(
                 axisResults(countryProfile.vector())
         );
 
-        assertThat(country.countryId()).isEqualTo("islandia-medieval");
+        assertThat(country.countryId()).isEqualTo("noruega");
         assertThat(country.compatibility()).isGreaterThan(99.0);
     }
 

@@ -88,10 +88,18 @@ public class QuizController {
 
     private QuizResult buildResult(List<AxisResult> axes, String lang) {
         var matches = matcherService.findMatches(axes, lang);
-        var topMatch = matches.getFirst();
-        var topCountryMatch = countryMatcherService.findTopMatch(axes, lang);
-        var topPersonalityMatch = personalityMatcherService.findTopMatch(axes, lang);
-        return new QuizResult(axes, topMatch, matches, topCountryMatch, topPersonalityMatch);
+        return new QuizResult(
+                axes,
+                matches.getFirst(),
+                matches,
+                matcherService.findBottomMatch(axes, lang),
+                countryMatcherService.findTopMatch(axes, lang),
+                countryMatcherService.findTopHistoricalMatch(axes, lang),
+                countryMatcherService.findBottomMatches(axes, lang),
+                personalityMatcherService.findTopMatch(axes, lang),
+                personalityMatcherService.findCategoryMatches(axes, lang),
+                personalityMatcherService.findBottomMatches(axes, lang)
+        );
     }
 
     private List<Double> parseAxisValues(String values) {
