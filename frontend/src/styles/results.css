@@ -315,6 +315,21 @@
 }
 
 /* ── Secoes: entrada em cascata ao alcancar a viewport ───────────────── */
+/* Rede de seguranca: se o JS nao revelar (falha, observer que nao rodou),
+   o conteudo aparece sozinho depois de 1.2s. Conteudo nunca pode ficar
+   preso em opacity: 0 por causa de animacao.                             */
+.results-main [data-reveal]:not([data-revealed]) {
+  animation: reveal-failsafe 1ms var(--ease-settle) 1200ms forwards;
+}
+
+@keyframes reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
 /* Cards internos entram em sequencia, como ja acontece na home. */
 [data-reveal] .category-card,
 [data-reveal] .distant-card {
