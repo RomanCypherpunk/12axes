@@ -273,3 +273,202 @@
     flex: 1;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Movimento
+
+   Principio herdado dos tokens: o movimento mostra a medicao acontecendo,
+   nunca decora. Tudo aqui usa --ease-settle (curva de agulha de
+   instrumento) e as duracoes ja definidas em tokens.css.
+
+   Uma unica abertura orquestrada no hero; o resto da pagina se revela ao
+   ser alcancado. Nada se repete ao rolar de volta.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Hero: abertura em sequencia ─────────────────────────────────────── */
+.results-hero[data-orchestrate='true'] .results-eyebrow,
+.results-hero[data-orchestrate='true'] h1,
+.results-hero[data-orchestrate='true'] .results-hero-text p,
+.results-hero[data-orchestrate='true'] .results-meta-card {
+  animation: hero-enter var(--dur-reveal) var(--ease-settle) backwards;
+}
+
+.results-hero[data-orchestrate='true'] .results-eyebrow      { animation-delay: 60ms; }
+.results-hero[data-orchestrate='true'] h1                    { animation-delay: 160ms; }
+.results-hero[data-orchestrate='true'] .results-hero-text p  { animation-delay: 280ms; }
+.results-hero[data-orchestrate='true'] .results-meta-card    { animation-delay: 380ms; }
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise-reveal));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* O numero do topo assenta junto com a contagem que sobe dentro dele. */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Secoes: entrada em cascata ao alcancar a viewport ───────────────── */
+/* Cards internos entram em sequencia, como ja acontece na home. */
+[data-reveal] .category-card,
+[data-reveal] .distant-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-settle),
+    transform var(--dur-reveal) var(--ease-settle);
+}
+
+[data-reveal][data-revealed] .category-card,
+[data-reveal][data-revealed] .distant-card {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal][data-revealed] .category-card:nth-child(1),
+[data-reveal][data-revealed] .distant-card:nth-child(1) { transition-delay: 70ms; }
+[data-reveal][data-revealed] .category-card:nth-child(2),
+[data-reveal][data-revealed] .distant-card:nth-child(2) { transition-delay: 150ms; }
+[data-reveal][data-revealed] .category-card:nth-child(3),
+[data-reveal][data-revealed] .distant-card:nth-child(3) { transition-delay: 230ms; }
+
+/* ── Eixos: a agulha percorre do centro ate a posicao medida ─────────── */
+/* Antes do reveal a barra esta zerada no centro; ao entrar em cena ela
+   percorre ate o valor real, que e o que a barra significa.              */
+[data-reveal] .axis-track-fill {
+  left: 50%;
+  width: 0;
+}
+
+[data-reveal] .axis-track-thumb {
+  left: 50%;
+}
+
+[data-reveal][data-revealed] .axis-track-fill {
+  left: var(--axis-fill-left);
+  width: var(--axis-fill-width);
+  transition:
+    left var(--dur-measure) var(--ease-settle),
+    width var(--dur-measure) var(--ease-settle);
+}
+
+[data-reveal][data-revealed] .axis-track-thumb {
+  left: var(--axis-position);
+  transition: left var(--dur-measure) var(--ease-settle);
+}
+
+/* Cada eixo parte um pouco depois do anterior: a leitura desce a lista. */
+[data-reveal][data-revealed] .axis-row:nth-child(1) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(1) .axis-track-thumb { transition-delay: 40ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(2) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(2) .axis-track-thumb { transition-delay: 80ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(3) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(3) .axis-track-thumb { transition-delay: 120ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(4) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(4) .axis-track-thumb { transition-delay: 160ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(5) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(5) .axis-track-thumb { transition-delay: 200ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(6) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(6) .axis-track-thumb { transition-delay: 240ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(7) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(7) .axis-track-thumb { transition-delay: 280ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(8) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(8) .axis-track-thumb { transition-delay: 320ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(9) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(9) .axis-track-thumb { transition-delay: 360ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(10) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(10) .axis-track-thumb { transition-delay: 400ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(11) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(11) .axis-track-thumb { transition-delay: 440ms; }
+[data-reveal][data-revealed] .axis-row:nth-child(12) .axis-track-fill,
+[data-reveal][data-revealed] .axis-row:nth-child(12) .axis-track-thumb { transition-delay: 480ms; }
+
+/* ── Troca de aba: o card novo entra, nao pisca ──────────────────────── */
+.results-tabs button {
+  position: relative;
+}
+
+.results-tabs button[aria-selected='true'] {
+  animation: tab-settle var(--dur-base) var(--ease-settle);
+}
+
+@keyframes tab-settle {
+  from { transform: scale(0.96); }
+  to   { transform: none; }
+}
+
+.country-match-card {
+  animation: card-swap var(--dur-base) var(--ease-settle);
+}
+
+@keyframes card-swap {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Resposta ao toque ───────────────────────────────────────────────── */
+.category-card,
+.distant-card {
+  transition:
+    transform var(--dur-base) var(--ease-settle),
+    box-shadow var(--dur-base) var(--ease-settle),
+    border-color var(--dur-base) var(--ease-settle);
+}
+
+.category-card:hover {
+  transform: translateY(var(--lift-hover));
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.distant-card:hover {
+  transform: translateY(calc(var(--lift-hover) / 2));
+  border-color: var(--critical);
+}
+
+.results-nav a[data-active='true'] .results-nav-index {
+  animation: nav-mark var(--dur-base) var(--ease-settle);
+}
+
+@keyframes nav-mark {
+  from { transform: scale(0.8); }
+  to   { transform: none; }
+}
+
+/* ── Movimento reduzido: tudo chega pronto ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .results-hero[data-orchestrate='true'] .results-eyebrow,
+  .results-hero[data-orchestrate='true'] h1,
+  .results-hero[data-orchestrate='true'] .results-hero-text p,
+  .results-hero[data-orchestrate='true'] .results-meta-card,
+  .country-match-card,
+  .results-tabs button[aria-selected='true'] {
+    animation: none;
+  }
+
+  [data-reveal] .axis-track-fill {
+    left: var(--axis-fill-left);
+    width: var(--axis-fill-width);
+  }
+
+  [data-reveal] .axis-track-thumb {
+    left: var(--axis-position);
+  }
+
+  .category-card:hover,
+  .distant-card:hover {
+    transform: none;
+  }
+}

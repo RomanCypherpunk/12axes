@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { t } from '../../i18n';
 import type { PersonalityMatch } from '../../types/quiz';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
+import { CountUpValue } from './CountUpValue';
 
 interface CategoryPersonalityCardProps {
   match: PersonalityMatch;
@@ -33,7 +34,7 @@ export function CategoryPersonalityCard({ match }: CategoryPersonalityCardProps)
       </div>
       <h4>{match.name}</h4>
       <p>{match.role}</p>
-      <span className="category-score">{pct.toFixed(0)}%</span>
+      <span className="category-score"><CountUpValue value={pct} decimals={0} /></span>
     </article>
   );
 }

@@ -13,6 +13,7 @@ import { ResultsNav } from './components/results/ResultsNav';
 import { CountriesSection } from './components/results/CountriesSection';
 import { PersonalitiesSection } from './components/results/PersonalitiesSection';
 import { IdeologiesSection } from './components/results/IdeologiesSection';
+import { CountUpValue } from './components/results/CountUpValue';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -248,6 +249,10 @@ function MainApp() {
 
   // Home: blocos abaixo da dobra entram ao rolar (conteudo editorial longo).
   useScrollReveal(screen === 'home', [screen, isHomeSeoReady, currentExample]);
+
+  // Resultados: cada secao entra ao alcancar a viewport. A pagina e longa e a
+  // leitura e sequencial, entao o conteudo se revela conforme o usuario desce.
+  useScrollReveal(screen === 'results' && Boolean(result), [screen, result]);
 
 
   const currentQuestion = quiz?.questions[currentIndex];
@@ -1051,7 +1056,7 @@ function MainApp() {
           )}
         >
         <section className="results-layout" id="resultados">
-          <header className="results-hero">
+          <header className="results-hero" data-orchestrate="true">
             <div className="results-hero-text">
               <span className="results-eyebrow">{t.resultsEyebrow}</span>
               <h1>
@@ -1072,7 +1077,7 @@ function MainApp() {
               </div>
               <div className="results-meta-row">
                 <span>{t.metaTop}</span>
-                <strong>{result.topMatch.compatibility.toFixed(1)}%</strong>
+                <strong><CountUpValue value={result.topMatch.compatibility} delayMs={420} /></strong>
               </div>
             </aside>
           </header>
@@ -1081,7 +1086,7 @@ function MainApp() {
             <div className="results-main">
               <IdeologyMatchCard match={result.topMatch} featured />
 
-              <section className="results-section results-section-axes" id="eixos-resultado">
+              <section className="results-section results-section-axes" id="eixos-resultado" data-reveal>
                 <div className="section-heading">
                   <span className="eyebrow">{t.axesSectionEyebrow}</span>
                   <h2>{t.axesSectionTitle}</h2>
@@ -1094,22 +1099,28 @@ function MainApp() {
                 </div>
               </section>
 
-              <CountriesSection
-                current={result.topCountryMatch}
-                historical={result.topHistoricalCountryMatch}
-                distant={result.bottomCountryMatches}
-              />
+              <div data-reveal>
+                <CountriesSection
+                  current={result.topCountryMatch}
+                  historical={result.topHistoricalCountryMatch}
+                  distant={result.bottomCountryMatches}
+                />
+              </div>
 
-              <PersonalitiesSection
-                top={result.topPersonalityMatch}
-                byCategory={result.categoryPersonalityMatches}
-                distant={result.bottomPersonalityMatches}
-              />
+              <div data-reveal>
+                <PersonalitiesSection
+                  top={result.topPersonalityMatch}
+                  byCategory={result.categoryPersonalityMatches}
+                  distant={result.bottomPersonalityMatches}
+                />
+              </div>
 
-              <IdeologiesSection
-                others={result.matches.slice(1, 4)}
-                distant={result.bottomIdeologyMatch}
-              />
+              <div data-reveal>
+                <IdeologiesSection
+                  others={result.matches.slice(1, 4)}
+                  distant={result.bottomIdeologyMatch}
+                />
+              </div>
             </div>
 
             <ResultsNav />

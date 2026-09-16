@@ -1,3 +1,5 @@
+import { CountUpValue } from './CountUpValue';
+
 interface DistantCardProps {
   name: string;
   caption: string;
@@ -15,7 +17,7 @@ export function DistantCard({ name, caption, compatibility }: DistantCardProps) 
         <h4>{name}</h4>
         {caption && <p>{caption}</p>}
       </div>
-      <span className="distant-card-score">{pct.toFixed(0)}%</span>
+      <span className="distant-card-score"><CountUpValue value={pct} decimals={0} /></span>
     </article>
   );
 }
