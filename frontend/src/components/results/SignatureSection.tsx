@@ -35,7 +35,7 @@ export function SignatureSection({ unusual, common, tension }: SignatureSectionP
         />
       </div>
 
-      {tension ? <TensionCard tension={tension} /> : <NoTensionCard />}
+      {tension && <TensionCard tension={tension} />}
     </section>
   );
 }
@@ -61,17 +61,6 @@ function TensionCard({ tension }: { tension: AxisTension }) {
       <p className="tension-note">
         {t.tensionNote(tension.firstAxisLabel, tension.secondAxisLabel)}
       </p>
-    </article>
-  );
-}
-
-// Quando nao ha tensao, dizer isso e um resultado — nao um espaco vazio.
-function NoTensionCard() {
-  return (
-    <article className="tension-card" data-empty="true">
-      <span className="tension-label">{t.tensionNoneLabel}</span>
-      <h3>{t.tensionNoneTitle}</h3>
-      <p className="tension-note">{t.tensionNoneBody}</p>
     </article>
   );
 }
