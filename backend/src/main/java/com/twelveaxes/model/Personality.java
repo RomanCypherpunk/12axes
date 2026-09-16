@@ -7,6 +7,7 @@ public record Personality(
         String id,
         String name,
         String role,
+        String category,
         String lifespan,
         String description,
         String imagePath,

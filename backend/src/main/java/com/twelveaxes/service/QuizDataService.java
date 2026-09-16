@@ -185,6 +185,7 @@ public class QuizDataService {
                     personality.id(),
                     tr.getOrDefault("name", personality.name()),
                     tr.getOrDefault("role", personality.role()),
+                    personality.category(),
                     personality.lifespan(),
                     tr.getOrDefault("description", personality.description()),
                     personality.imagePath(),
