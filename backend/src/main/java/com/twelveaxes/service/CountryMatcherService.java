@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CountryMatcherService {
+    private static final int BOTTOM_MATCHES = 3;
+
     private final QuizDataService dataService;
     private final ProfileMatchScorer profileMatchScorer;
 
@@ -23,7 +25,34 @@ public class CountryMatcherService {
         return findTopMatch(axisResults, QuizDataService.LANG_PT);
     }
 
+    // Pais atual mais compativel. Experiencias historicas tem secao propria.
     public CountryMatch findTopMatch(List<AxisResult> axisResults, String lang) {
+        return firstMatching(axisResults, lang, false);
+    }
+
+    public CountryMatch findTopHistoricalMatch(List<AxisResult> axisResults, String lang) {
+        return firstMatching(axisResults, lang, true);
+    }
+
+    // Os tres menos compativeis do catalogo inteiro, em ordem crescente.
+    public List<CountryMatch> findBottomMatches(List<AxisResult> axisResults, String lang) {
+        List<CountryMatch> ranking = rankAll(axisResults, lang);
+        return ranking.stream()
+                .skip(Math.max(0, ranking.size() - BOTTOM_MATCHES))
+                .sorted(Comparator.comparingDouble(CountryMatch::compatibility))
+                .toList();
+    }
+
+    private CountryMatch firstMatching(List<AxisResult> axisResults, String lang, boolean historical) {
+        return rankAll(axisResults, lang).stream()
+                .filter(match -> match.historical() == historical)
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException(
+                        "Nenhum pais disponivel para matching (historical=" + historical + ")"));
+    }
+
+    // Ranking completo do catalogo, do mais ao menos compativel.
+    private List<CountryMatch> rankAll(List<AxisResult> axisResults, String lang) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
 
         Comparator<CountryCandidate> byCompatibility =
@@ -40,9 +69,8 @@ public class CountryMatcherService {
         return candidates.stream()
                 .map(candidate -> withPercentile(candidate, catalogScores))
                 .sorted(byCompatibility.thenComparing(byName))
-                .findFirst()
                 .map(this::toMatch)
-                .orElseThrow(() -> new IllegalStateException("Nenhum pais disponivel para matching"));
+                .toList();
     }
 
     private CountryCandidate toCandidate(Country country, Map<String, Double> userVector) {
