@@ -9,6 +9,10 @@ import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/
 import { resolveCountryFlagSrc } from './utils/countryFlags';
 import { resolvePersonalityImageSrc } from './utils/personalityImage';
 import { SupportSection } from './components/SupportSection';
+import { ResultsNav } from './components/results/ResultsNav';
+import { CountriesSection } from './components/results/CountriesSection';
+import { PersonalitiesSection } from './components/results/PersonalitiesSection';
+import { IdeologiesSection } from './components/results/IdeologiesSection';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -1073,42 +1077,43 @@ function MainApp() {
             </aside>
           </header>
 
-          <div>
-            <IdeologyMatchCard match={result.topMatch} featured />
+          <div className="results-layout-with-nav">
+            <div className="results-main">
+              <IdeologyMatchCard match={result.topMatch} featured />
+
+              <section className="results-section results-section-axes" id="eixos-resultado">
+                <div className="section-heading">
+                  <span className="eyebrow">{t.axesSectionEyebrow}</span>
+                  <h2>{t.axesSectionTitle}</h2>
+                </div>
+                <div className="axis-rows">
+                  {(quiz?.axes ?? homeAxes).map((axis) => {
+                    const axisResult = resultByAxis.get(axis.id);
+                    return axisResult ? <AxisResultBar key={axis.id} axis={axis} result={axisResult} /> : null;
+                  })}
+                </div>
+              </section>
+
+              <CountriesSection
+                current={result.topCountryMatch}
+                historical={result.topHistoricalCountryMatch}
+                distant={result.bottomCountryMatches}
+              />
+
+              <PersonalitiesSection
+                top={result.topPersonalityMatch}
+                byCategory={result.categoryPersonalityMatches}
+                distant={result.bottomPersonalityMatches}
+              />
+
+              <IdeologiesSection
+                others={result.matches.slice(1, 4)}
+                distant={result.bottomIdeologyMatch}
+              />
+            </div>
+
+            <ResultsNav />
           </div>
-
-          <section className="results-section results-section-axes">
-            <div className="section-heading">
-              <span className="eyebrow">{t.axesSectionEyebrow}</span>
-              <h2>{t.axesSectionTitle}</h2>
-            </div>
-            <div className="axis-rows">
-              {(quiz?.axes ?? homeAxes).map((axis) => {
-                const axisResult = resultByAxis.get(axis.id);
-                return axisResult ? <AxisResultBar key={axis.id} axis={axis} result={axisResult} /> : null;
-              })}
-            </div>
-          </section>
-
-          <div>
-            <CountryMatchCard match={result.topCountryMatch} />
-          </div>
-
-          <div>
-            <PersonalityMatchCard match={result.topPersonalityMatch} />
-          </div>
-
-          <section className="results-section">
-            <div className="section-heading">
-              <span className="eyebrow">{t.proximityEyebrow}</span>
-              <h2>{t.otherMatches}</h2>
-            </div>
-            <div className="match-grid">
-              {result.matches.slice(1, 4).map((match) => (
-                <IdeologyMatchCard key={match.ideologyId} match={match} />
-              ))}
-            </div>
-          </section>
 
           <div className="results-cta" data-export-hidden="true">
             <button className="primary-button" type="button" onClick={() => void startQuiz(selectedVariant)}>
