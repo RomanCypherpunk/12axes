@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Pagina de resultados — secoes de afinidade e distancia.
+
+   Regra de cor: verde e vermelho nunca decoram, so medem. Verde e
+   afinidade, vermelho e distancia, ink e estrutura. Nenhuma secao tem
+   cor propria — isso evita virar arco-iris ao longo de uma pagina longa.
+
+   Tres pesos de card, do mais forte ao mais fraco:
+     1. destaque  — cards existentes (country-match-card, personality-...)
+     2. grade     — .category-card: borda fina, sem sombra
+     3. distancia — .distant-card: compacto, vermelho, sem retrato
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Indice lateral ──────────────────────────────────────────────────── */
+.results-nav {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.results-nav-title {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.results-nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+  counter-reset: none;
+}
+
+.results-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+
+.results-nav a:hover {
+  background: var(--ink-50);
+  color: var(--text-strong);
+}
+
+.results-nav a[data-active='true'] {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.results-nav-index {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid currentColor;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Abas: pais atual / experiencia historica ────────────────────────── */
+.results-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 16px;
+  background: var(--ink-50);
+  border-radius: var(--radius-md);
+}
+
+.results-tabs button {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+
+.results-tabs button:hover {
+  color: var(--text-strong);
+}
+
+.results-tabs button[aria-selected='true'] {
+  background: var(--surface);
+  color: var(--text-strong);
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+/* ── Blocos internos de secao ────────────────────────────────────────── */
+.category-block,
+.distant-block {
+  margin-top: 28px;
+}
+
+.category-block h3,
+.distant-block h3 {
+  margin: 0 0 14px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ── Peso 2: cards de categoria ──────────────────────────────────────── */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.category-badge {
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.category-card-visual {
+  width: 76px;
+  height: 76px;
+  margin-top: 4px;
+}
+
+.category-card-visual img,
+.category-card-initials {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+}
+
+.category-card-visual img {
+  object-fit: cover;
+}
+
+.category-card-initials {
+  display: grid;
+  place-items: center;
+  background: var(--ink-50);
+  color: var(--text-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.category-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.category-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.category-score {
+  margin-top: 2px;
+  color: var(--accent-deep);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Peso 3: cards de distancia ──────────────────────────────────────── */
+.distant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.distant-grid-single {
+  grid-template-columns: minmax(210px, 340px);
+}
+
+.distant-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 16px;
+  background: var(--critical-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.distant-card-text {
+  min-width: 0;
+}
+
+.distant-card h4 {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.3;
+}
+
+.distant-card p {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.distant-card-score {
+  flex: 0 0 auto;
+  color: var(--critical-deep);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Duas colunas: conteudo + indice ─────────────────────────────────── */
+.results-main {
+  display: grid;
+  gap: 28px;
+  min-width: 0;
+}
+
+@media (min-width: 1100px) {
+  .results-layout-with-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 232px;
+    gap: 40px;
+    align-items: start;
+  }
+}
+
+/* Abaixo de 1100px o indice sai de cena: a pagina vira uma coluna so. */
+@media (max-width: 1099px) {
+  .results-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .distant-grid,
+  .distant-grid-single {
+    grid-template-columns: 1fr;
+  }
+
+  .results-tabs {
+    width: 100%;
+  }
+
+  .results-tabs button {
+    flex: 1;
+  }
+}
