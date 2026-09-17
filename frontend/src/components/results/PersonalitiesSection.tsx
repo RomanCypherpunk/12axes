@@ -22,7 +22,6 @@ export function PersonalitiesSection({ top, dimensions, distant }: Personalities
       {dimensions.length > 0 && (
         <div className="category-block">
           <h3>{t.dimensionsTitle}</h3>
-          <p className="block-note">{t.dimensionsNote}</p>
           <div className="dimension-grid">
             {dimensions.map((entry) => (
               <DimensionCard key={entry.dimension} entry={entry} />

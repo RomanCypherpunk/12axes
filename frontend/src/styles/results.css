@@ -512,15 +512,6 @@
   line-height: 1.4;
 }
 
-/* Nota explicativa de um bloco, entre o titulo e a grade. */
-.block-note {
-  margin: -6px 0 14px;
-  max-width: 68ch;
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
 @media (max-width: 860px) {
   .dimension-grid {
     grid-template-columns: 1fr;

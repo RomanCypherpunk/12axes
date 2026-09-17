@@ -18,7 +18,6 @@ export function AreasSection({ matches }: AreasSectionProps) {
       <div className="section-heading">
         <h2>{t.areasSectionTitle}</h2>
       </div>
-      <p className="block-note">{t.areasSectionNote}</p>
 
       <div className="category-grid">
         {matches.map((match) => (

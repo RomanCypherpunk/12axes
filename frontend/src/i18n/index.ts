@@ -157,11 +157,9 @@ interface Strings {
   personalitiesSectionTitle: string;
   personalitiesByAreaTitle: string;
   dimensionsTitle: string;
-  dimensionsNote: string;
   dimensionLabels: Record<ProfileDimension, string>;
   dimensionAxes: Record<ProfileDimension, string>;
   areasSectionTitle: string;
-  areasSectionNote: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
   phraseTitle: string;
@@ -516,7 +514,6 @@ const pt: Strings = {
   personalitiesSectionTitle: 'Personalidades mais próximas de você',
   personalitiesByAreaTitle: 'Também próximos, por área de atuação',
   dimensionsTitle: 'Também próximos, por dimensão do seu perfil',
-  dimensionsNote: 'Aqui a compatibilidade usa só os eixos de cada dimensão, e não os 12 somados. Por isso as respostas costumam ser pessoas diferentes.',
   dimensionLabels: {
     political: 'Politicamente',
     social: 'Socialmente',
@@ -528,7 +525,6 @@ const pt: Strings = {
     economic: 'Economia, Controle e Comércio',
   },
   areasSectionTitle: 'Os mais próximos de cada área de atuação',
-  areasSectionNote: 'A personalidade mais compatível de cada campo, da área que mais combina com você para a que menos combina.',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
   phraseTitle: 'Uma frase que te descreve',
@@ -929,7 +925,6 @@ const en: Strings = {
   personalitiesSectionTitle: 'Figures closest to you',
   personalitiesByAreaTitle: 'Also close to you, by field',
   dimensionsTitle: 'Also close to you, by dimension of your profile',
-  dimensionsNote: 'Here compatibility uses only the axes of each dimension, not all 12 combined. That is why the answers are usually different people.',
   dimensionLabels: {
     political: 'Politically',
     social: 'Socially',
@@ -941,7 +936,6 @@ const en: Strings = {
     economic: 'Economy, Control and Trade',
   },
   areasSectionTitle: 'The closest figure in each field',
-  areasSectionNote: 'The most compatible figure from every field, ordered from the area that fits you best to the one that fits you least.',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
   phraseTitle: 'A sentence that describes you',
