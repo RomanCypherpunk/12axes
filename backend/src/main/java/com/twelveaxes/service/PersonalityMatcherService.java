@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonalityMatcherService {
-    private static final int TOP_MATCHES = 4;
+    private static final int TOP_MATCHES = 8;
     private static final int CATEGORY_MATCHES = 3;
     private static final int BOTTOM_MATCHES = 3;
 

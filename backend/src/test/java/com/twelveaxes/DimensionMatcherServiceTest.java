@@ -42,6 +42,16 @@ class DimensionMatcherServiceTest {
     }
 
     @Test
+    void dimensionsUseTheExpectedAxisGroups() {
+        assertThat(DimensionMatcherService.POLITICAL_AXES).containsExactly(
+                "estrutura", "representacao", "poder", "diplomacia", "intervencao", "imigracao", "economia");
+        assertThat(DimensionMatcherService.SOCIAL_AXES).containsExactly(
+                "moral", "religiao", "imigracao", "tecnologia", "poder");
+        assertThat(DimensionMatcherService.ECONOMIC_AXES).containsExactly(
+                "economia", "controle", "comercio", "tecnologia");
+    }
+
+    @Test
     void returnsThePoliticalSocialAndEconomicDimensions() {
         var dimensoes = dimensionMatcherService.findAll(perfilDeTeste(), QuizDataService.LANG_PT);
 

@@ -158,8 +158,11 @@ interface Strings {
   personalitiesByAreaTitle: string;
   dimensionsTitle: string;
   dimensionLabels: Record<ProfileDimension, string>;
-  dimensionAxes: Record<ProfileDimension, string>;
+  areasGeneralTitle: string;
   areasSectionTitle: string;
+  areasTabsAria: string;
+  areasGeneralTab: string;
+  areasByAreaTab: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
   phraseTitle: string;
@@ -519,12 +522,11 @@ const pt: Strings = {
     social: 'Socialmente',
     economic: 'Economicamente',
   },
-  dimensionAxes: {
-    political: 'Estrutura, Representação, Poder, Diplomacia e Intervenção',
-    social: 'Moral, Religião, Imigração e Tecnologia',
-    economic: 'Economia, Controle e Comércio',
-  },
-  areasSectionTitle: 'Os mais próximos de cada área de atuação',
+  areasGeneralTitle: 'Os mais próximos dos seus resultados',
+  areasSectionTitle: 'Os mais próximos por área de atuação',
+  areasTabsAria: 'Modo de exibição das personalidades',
+  areasGeneralTab: 'Compatibilidade geral',
+  areasByAreaTab: 'Área de atuação',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
   phraseTitle: 'Uma frase que te descreve',
@@ -930,12 +932,11 @@ const en: Strings = {
     social: 'Socially',
     economic: 'Economically',
   },
-  dimensionAxes: {
-    political: 'Structure, Representation, Power, Diplomacy and Intervention',
-    social: 'Morals, Religion, Immigration and Technology',
-    economic: 'Economy, Control and Trade',
-  },
-  areasSectionTitle: 'The closest figure in each field',
+  areasGeneralTitle: 'The closest figures to your results',
+  areasSectionTitle: 'The closest figures by field',
+  areasTabsAria: 'How figures are grouped',
+  areasGeneralTab: 'Overall compatibility',
+  areasByAreaTab: 'Field',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
   phraseTitle: 'A sentence that describes you',

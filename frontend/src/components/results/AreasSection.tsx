@@ -1,22 +1,34 @@
+import { useState } from 'react';
 import { CategoryPersonalityCard } from './CategoryPersonalityCard';
 import { t } from '../../i18n';
 import type { PersonalityMatch } from '../../types/quiz';
 
 interface AreasSectionProps {
-  matches: PersonalityMatch[];
+  generalMatches: PersonalityMatch[];
+  areaMatches: PersonalityMatch[];
 }
 
-// A personalidade mais compativel de CADA area de atuacao, da area que mais
-// combina com o usuario para a que menos combina. Nenhuma fica de fora.
-export function AreasSection({ matches }: AreasSectionProps) {
-  if (matches.length === 0) {
+export function AreasSection({ generalMatches, areaMatches }: AreasSectionProps) {
+  const [tab, setTab] = useState<'general' | 'area'>('general');
+  const matches = tab === 'general' ? generalMatches : areaMatches;
+
+  if (generalMatches.length === 0 && areaMatches.length === 0) {
     return null;
   }
 
   return (
     <section className="results-section" id="areas">
       <div className="section-heading">
-        <h2>{t.areasSectionTitle}</h2>
+        <h2>{tab === 'general' ? t.areasGeneralTitle : t.areasSectionTitle}</h2>
+      </div>
+
+      <div className="results-tabs" role="tablist" aria-label={t.areasTabsAria}>
+        <button type="button" role="tab" aria-selected={tab === 'general'} onClick={() => setTab('general')}>
+          {t.areasGeneralTab}
+        </button>
+        <button type="button" role="tab" aria-selected={tab === 'area'} onClick={() => setTab('area')}>
+          {t.areasByAreaTab}
+        </button>
       </div>
 
       <div className="category-grid">

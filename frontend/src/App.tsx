@@ -1131,7 +1131,10 @@ function MainApp() {
               </div>
 
               <div data-reveal>
-                <AreasSection matches={result.categoryBestMatches} />
+                <AreasSection
+                  generalMatches={result.personalityMatches}
+                  areaMatches={result.categoryBestMatches}
+                />
               </div>
 
               <div data-reveal>

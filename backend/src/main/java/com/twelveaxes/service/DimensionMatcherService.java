@@ -22,17 +22,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DimensionMatcherService {
-    /** Como o poder se organiza e se legitima, e como o Estado trata o cidadao. */
-    static final List<String> POLITICAL_AXES =
-            List.of("estrutura", "representacao", "poder", "diplomacia", "intervencao");
+    /** Instituicoes, poder, politica externa, imigracao e orientacao economica. */
+    public static final List<String> POLITICAL_AXES =
+            List.of("estrutura", "representacao", "poder", "diplomacia", "intervencao", "imigracao", "economia");
 
-    /** Costumes, identidade, fe e a relacao com a tecnica. */
-    static final List<String> SOCIAL_AXES =
-            List.of("moral", "religiao", "imigracao", "tecnologia");
+    /** Costumes, fe, imigracao, tecnologia e a relacao entre liberdade e seguranca. */
+    public static final List<String> SOCIAL_AXES =
+            List.of("moral", "religiao", "imigracao", "tecnologia", "poder");
 
-    /** Propriedade, coordenacao da producao e abertura comercial. */
-    static final List<String> ECONOMIC_AXES =
-            List.of("economia", "controle", "comercio");
+    /** Propriedade, coordenacao da producao, abertura comercial e tecnologia. */
+    public static final List<String> ECONOMIC_AXES =
+            List.of("economia", "controle", "comercio", "tecnologia");
 
     public static final String POLITICAL = "political";
     public static final String SOCIAL = "social";

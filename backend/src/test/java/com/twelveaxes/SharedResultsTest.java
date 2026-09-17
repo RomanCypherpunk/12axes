@@ -37,6 +37,8 @@ class SharedResultsTest {
         assertThat(result.topMatch().name()).isNotBlank();
         assertThat(result.topCountryMatch().name()).isNotBlank();
         assertThat(result.topPersonalityMatch().name()).isNotBlank();
+        assertThat(result.personalityMatches()).hasSize(8);
+        assertThat(result.personalityMatches().getFirst()).isEqualTo(result.topPersonalityMatch());
     }
 
     @Test

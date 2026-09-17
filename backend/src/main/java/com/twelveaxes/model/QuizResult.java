@@ -15,6 +15,7 @@ import java.util.List;
  * @param topHistoricalCountryMatch experiencia historica mais compativel
  * @param bottomCountryMatches paises mais distantes do catalogo
  * @param topPersonalityMatch personalidade mais compativel, de qualquer categoria
+ * @param personalityMatches personalidades mais compativeis, sem filtro por categoria
  * @param dimensionMatches personalidade mais compativel em cada dimensao (politica, social, economica)
  * @param categoryBestMatches personalidade mais compativel de cada area de atuacao
  * @param bottomPersonalityMatches personalidades mais distantes do catalogo
@@ -31,6 +32,7 @@ public record QuizResult(
         CountryMatch topHistoricalCountryMatch,
         List<CountryMatch> bottomCountryMatches,
         PersonalityMatch topPersonalityMatch,
+        List<PersonalityMatch> personalityMatches,
         List<DimensionMatch> dimensionMatches,
         List<PersonalityMatch> categoryBestMatches,
         List<PersonalityMatch> bottomPersonalityMatches,

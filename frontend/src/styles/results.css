@@ -502,16 +502,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Os eixos que entraram na conta, em letra menor: contexto, nao destaque. */
-.dimension-axes {
-  margin: 8px 0 0;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  color: var(--text-soft);
-  font-size: 0.74rem;
-  line-height: 1.4;
-}
-
 @media (max-width: 860px) {
   .dimension-grid {
     grid-template-columns: 1fr;

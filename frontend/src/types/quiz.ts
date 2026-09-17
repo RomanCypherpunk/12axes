@@ -146,6 +146,7 @@ export interface QuizResult {
   topHistoricalCountryMatch: CountryMatch;
   bottomCountryMatches: CountryMatch[];
   topPersonalityMatch: PersonalityMatch;
+  personalityMatches: PersonalityMatch[];
   dimensionMatches: DimensionMatch[];
   categoryBestMatches: PersonalityMatch[];
   bottomPersonalityMatches: PersonalityMatch[];
