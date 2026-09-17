@@ -183,8 +183,17 @@ atuação" da página de resultados. São **8 valores fechados** — nunca inven
 ("Ditador", "Criptógrafo", "Teórico marxista"); `category` agrupa. Stálin é `role: "Ditador"`
 com `category: "politico"`.
 
+**O que entra em `religioso`.** A categoria não mede a fé da pessoa, e sim **o tema da obra
+dela**: entram tanto quem construiu uma tradição religiosa quanto quem a atacou ou tentou
+substituí-la. A favor, Tomás de Aquino, Lutero, Calvino, Khomeini, Dalai Lama; contra ou fora,
+Nietzsche (*O Anticristo*), Auguste Comte (fundou a Religião da Humanidade), Charles Darwin (a
+evolução desfez a religião natural; dizia-se agnóstico) e Confúcio (tradição ético-religiosa
+não-abraâmica). Sem isso a categoria só serve a quem tira pontuação religiosa baixa, e o card de
+resultados fica sem match decente para perfis irreligiosos. **Ser apenas irreligioso não basta**:
+Lênin, Marx e Che Guevara pontuam alto em `religiao`, mas a obra deles é revolução, não religião.
+
 **Fronteira `filosofo` × `teorico`** (a que mais gera erro): `filosofo` é pensamento geral e
-abstrato (Platão, Kant, Nietzsche, Arendt); `teorico` formulou doutrina política ou social
+abstrato (Platão, Kant, Rawls, Arendt); `teorico` formulou doutrina política ou social
 específica e operacional (Marx, Gramsci, Bakunin, Mackinder). Quando a pessoa é genuinamente
 as duas coisas, decida pelo motivo de ela estar num catálogo de política: Marx é `teorico`
 porque o marxismo é um programa; Arendt é `filosofo` porque a obra dela é análise.
