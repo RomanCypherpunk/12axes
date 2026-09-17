@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-09-17T01:22:19Z",
+  "lastUpdated": "2026-09-17T01:42:45Z",
   "personality": {
     "totalProfiles": 292,
     "pending": [],
@@ -485,7 +485,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 143,
+    "totalProfiles": 144,
     "pending": [],
     "done": [
       "brasil",
@@ -630,7 +630,8 @@
       "baviera",
       "sul-do-brasil",
       "porto-rico",
-      "eua-wyoming"
+      "eua-wyoming",
+      "peru-fujimorista"
     ]
   }
 }
