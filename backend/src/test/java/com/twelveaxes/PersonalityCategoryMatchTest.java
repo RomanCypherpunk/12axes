@@ -70,10 +70,9 @@ class PersonalityCategoryMatchTest {
                 .allSatisfy(match -> assertThat(match.category()).isNotBlank());
     }
 
-    // O topo do catalogo nao muda de tamanho: a secao de personalidades
-    // continua com um destaque so.
+    // A listagem geral exibe as oito personalidades mais compatíveis.
     @Test
-    void topMatchesStillReturnFour() {
-        assertThat(matcherService.findMatches(axesDeTeste(), QuizDataService.LANG_PT)).hasSize(4);
+    void generalMatchesReturnEight() {
+        assertThat(matcherService.findMatches(axesDeTeste(), QuizDataService.LANG_PT)).hasSize(8);
     }
 }
