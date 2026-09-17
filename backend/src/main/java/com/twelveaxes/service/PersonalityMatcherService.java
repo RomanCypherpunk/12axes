@@ -6,6 +6,7 @@ import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.model.PersonalityProfile;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -66,6 +67,21 @@ public class PersonalityMatcherService {
             }
         }
         return List.copyOf(selecionadas);
+    }
+
+    // A personalidade mais compativel de CADA categoria do catalogo, da categoria
+    // mais compativel para a menos. Diferente de findCategoryMatches, que so
+    // devolve tres: aqui nenhuma area de atuacao fica de fora.
+    public List<PersonalityMatch> findBestPerCategory(List<AxisResult> axisResults, String lang) {
+        Map<String, PersonalityMatch> melhorPorCategoria = new LinkedHashMap<>();
+        for (PersonalityMatch match : rankAll(axisResults, lang)) {
+            if (match.category() != null) {
+                melhorPorCategoria.putIfAbsent(match.category(), match);
+            }
+        }
+        return melhorPorCategoria.values().stream()
+                .sorted(Comparator.comparingDouble(PersonalityMatch::compatibility).reversed())
+                .toList();
     }
 
     // As tres menos compativeis do catalogo inteiro, em ordem crescente.

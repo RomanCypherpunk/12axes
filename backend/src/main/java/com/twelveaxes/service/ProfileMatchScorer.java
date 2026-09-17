@@ -41,10 +41,19 @@ public class ProfileMatchScorer {
     }
 
     public double compatibility(Map<String, Double> userVector, Map<String, Double> targetVector) {
-        double axisSimilarity = axisSimilarity(userVector, targetVector);
-        double directionSimilarity = directionSimilarity(userVector, targetVector);
-        double magnitudeSimilarity = magnitudeSimilarity(userVector, targetVector);
-        double outlierSimilarity = outlierSimilarity(userVector, targetVector);
+        return compatibility(userVector, targetVector, AXIS_IDS);
+    }
+
+    /**
+     * Mesma formula, restrita a um subconjunto de eixos. Usada para responder
+     * "com quem eu combino politicamente / socialmente / economicamente", em que
+     * so os eixos daquele grupo entram na conta.
+     */
+    public double compatibility(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
+        double axisSimilarity = axisSimilarity(userVector, targetVector, axisIds);
+        double directionSimilarity = directionSimilarity(userVector, targetVector, axisIds);
+        double magnitudeSimilarity = magnitudeSimilarity(userVector, targetVector, axisIds);
+        double outlierSimilarity = outlierSimilarity(userVector, targetVector, axisIds);
         return round1(clamp(
                 AXIS_WEIGHT * axisSimilarity
                         + DIRECTION_WEIGHT * directionSimilarity
@@ -69,9 +78,9 @@ public class ProfileMatchScorer {
         return neutral;
     }
 
-    private double axisSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
+    private double axisSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
         double totalSimilarity = 0.0;
-        for (String axisId : AXIS_IDS) {
+        for (String axisId : axisIds) {
             double userValue = userVector.getOrDefault(axisId, CENTER);
             double targetValue = targetVector.getOrDefault(axisId, CENTER);
             double diff = Math.abs(userValue - targetValue);
@@ -84,14 +93,14 @@ public class ProfileMatchScorer {
             totalSimilarity += similarity;
         }
 
-        return 100.0 * totalSimilarity / AXIS_IDS.size();
+        return 100.0 * totalSimilarity / axisIds.size();
     }
 
-    private double directionSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
+    private double directionSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
         double dotProduct = 0.0;
         double userNormSquared = 0.0;
         double targetNormSquared = 0.0;
-        for (String axisId : AXIS_IDS) {
+        for (String axisId : axisIds) {
             double centeredUserValue = userVector.getOrDefault(axisId, CENTER) - CENTER;
             double centeredTargetValue = targetVector.getOrDefault(axisId, CENTER) - CENTER;
             dotProduct += centeredUserValue * centeredTargetValue;
@@ -106,22 +115,22 @@ public class ProfileMatchScorer {
         return CENTER + CENTER * cosine;
     }
 
-    private double magnitudeSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
-        double userIntensity = averageDistanceFromCenter(userVector);
-        double targetIntensity = averageDistanceFromCenter(targetVector);
+    private double magnitudeSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
+        double userIntensity = averageDistanceFromCenter(userVector, axisIds);
+        double targetIntensity = averageDistanceFromCenter(targetVector, axisIds);
         return 100.0 - 2.0 * Math.abs(userIntensity - targetIntensity);
     }
 
-    private double averageDistanceFromCenter(Map<String, Double> vector) {
-        return AXIS_IDS.stream()
+    private double averageDistanceFromCenter(Map<String, Double> vector, List<String> axisIds) {
+        return axisIds.stream()
                 .mapToDouble(axisId -> Math.abs(vector.getOrDefault(axisId, CENTER) - CENTER))
                 .average()
                 .orElse(0.0);
     }
 
-    private double outlierSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector) {
+    private double outlierSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
         double maxDiff = 0.0;
-        for (String axisId : AXIS_IDS) {
+        for (String axisId : axisIds) {
             double userValue = userVector.getOrDefault(axisId, CENTER);
             double targetValue = targetVector.getOrDefault(axisId, CENTER);
             maxDiff = Math.max(maxDiff, Math.abs(userValue - targetValue));

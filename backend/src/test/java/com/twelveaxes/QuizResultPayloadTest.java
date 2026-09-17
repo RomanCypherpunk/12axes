@@ -30,7 +30,9 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.topHistoricalCountryMatch.historical").value(true))
                 .andExpect(jsonPath("$.bottomCountryMatches.length()").value(3))
                 .andExpect(jsonPath("$.topPersonalityMatch.category").isNotEmpty())
-                .andExpect(jsonPath("$.categoryPersonalityMatches.length()").value(3))
+                .andExpect(jsonPath("$.dimensionMatches.length()").value(3))
+                .andExpect(jsonPath("$.dimensionMatches[0].dimension").value("political"))
+                .andExpect(jsonPath("$.categoryBestMatches.length()").value(8))
                 .andExpect(jsonPath("$.bottomPersonalityMatches.length()").value(3))
                 .andExpect(jsonPath("$.mostUnusualAxis.axisId").isNotEmpty())
                 .andExpect(jsonPath("$.mostUnusualAxis.label").isNotEmpty())
@@ -42,8 +44,10 @@ class QuizResultPayloadTest {
     void englishResultCarriesEveryNewSection() throws Exception {
         mockMvc.perform(get("/api/results/by-axes").param("v", VETOR).param("lang", "en"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.categoryPersonalityMatches.length()").value(3))
-                .andExpect(jsonPath("$.categoryPersonalityMatches[0].category").isNotEmpty())
+                .andExpect(jsonPath("$.dimensionMatches.length()").value(3))
+                .andExpect(jsonPath("$.dimensionMatches[0].dimension").value("political"))
+                .andExpect(jsonPath("$.categoryBestMatches.length()").value(8))
+                .andExpect(jsonPath("$.categoryBestMatches[0].category").isNotEmpty())
                 .andExpect(jsonPath("$.topHistoricalCountryMatch.historical").value(true));
     }
 }

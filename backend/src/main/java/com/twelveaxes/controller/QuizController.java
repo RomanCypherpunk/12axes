@@ -10,6 +10,7 @@ import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.AxisOutlierService;
 import com.twelveaxes.service.AxisTensionService;
+import com.twelveaxes.service.DimensionMatcherService;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
@@ -42,6 +43,7 @@ public class QuizController {
     private final CandidateMatcherService candidateMatcherService;
     private final AxisOutlierService axisOutlierService;
     private final AxisTensionService axisTensionService;
+    private final DimensionMatcherService dimensionMatcherService;
 
     public QuizController(
             QuizDataService dataService,
@@ -50,7 +52,8 @@ public class QuizController {
             CountryMatcherService countryMatcherService,
             PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService,
             AxisOutlierService axisOutlierService,
-            AxisTensionService axisTensionService
+            AxisTensionService axisTensionService,
+            DimensionMatcherService dimensionMatcherService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
@@ -60,6 +63,7 @@ public class QuizController {
         this.candidateMatcherService = candidateMatcherService;
         this.axisOutlierService = axisOutlierService;
         this.axisTensionService = axisTensionService;
+        this.dimensionMatcherService = dimensionMatcherService;
     }
 
     @GetMapping("/api/election/quiz") public QuizPayload electionQuiz() { return dataService.getElectionQuiz(); }
@@ -105,7 +109,8 @@ public class QuizController {
                 countryMatcherService.findTopHistoricalMatch(axes, lang),
                 countryMatcherService.findBottomMatches(axes, lang),
                 personalityMatcherService.findTopMatch(axes, lang),
-                personalityMatcherService.findCategoryMatches(axes, lang),
+                dimensionMatcherService.findAll(axes, lang),
+                personalityMatcherService.findBestPerCategory(axes, lang),
                 personalityMatcherService.findBottomMatches(axes, lang),
                 axisOutlierService.findMostUnusual(axes, lang),
                 axisOutlierService.findMostCommon(axes, lang),

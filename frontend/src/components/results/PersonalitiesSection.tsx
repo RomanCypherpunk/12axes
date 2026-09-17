@@ -1,16 +1,16 @@
 import { PersonalityMatchCard } from '../PersonalityMatchCard';
-import { CategoryPersonalityCard } from './CategoryPersonalityCard';
+import { DimensionCard } from './DimensionCard';
 import { DistantCard } from './DistantCard';
 import { t } from '../../i18n';
-import type { PersonalityMatch } from '../../types/quiz';
+import type { DimensionMatch, PersonalityMatch } from '../../types/quiz';
 
 interface PersonalitiesSectionProps {
   top: PersonalityMatch;
-  byCategory: PersonalityMatch[];
+  dimensions: DimensionMatch[];
   distant: PersonalityMatch[];
 }
 
-export function PersonalitiesSection({ top, byCategory, distant }: PersonalitiesSectionProps) {
+export function PersonalitiesSection({ top, dimensions, distant }: PersonalitiesSectionProps) {
   return (
     <section className="results-section" id="personalidades">
       <div className="section-heading">
@@ -19,14 +19,17 @@ export function PersonalitiesSection({ top, byCategory, distant }: Personalities
 
       <PersonalityMatchCard match={top} />
 
-      <div className="category-block">
-        <h3>{t.personalitiesByAreaTitle}</h3>
-        <div className="category-grid">
-          {byCategory.map((match) => (
-            <CategoryPersonalityCard key={match.personalityId} match={match} />
-          ))}
+      {dimensions.length > 0 && (
+        <div className="category-block">
+          <h3>{t.dimensionsTitle}</h3>
+          <p className="block-note">{t.dimensionsNote}</p>
+          <div className="dimension-grid">
+            {dimensions.map((entry) => (
+              <DimensionCard key={entry.dimension} entry={entry} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="distant-block">
         <h3>{t.personalitiesDistantTitle}</h3>

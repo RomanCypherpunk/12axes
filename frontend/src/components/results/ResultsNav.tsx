@@ -6,6 +6,7 @@ const SECTIONS = [
   { id: 'assinatura', label: () => t.resultsNavSignature },
   { id: 'paises', label: () => t.resultsNavCountries },
   { id: 'personalidades', label: () => t.resultsNavPersonalities },
+  { id: 'areas', label: () => t.resultsNavAreas },
   { id: 'ideologias', label: () => t.resultsNavIdeologies },
 ];
 

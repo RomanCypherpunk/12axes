@@ -16,6 +16,7 @@ import { IdeologiesSection } from './components/results/IdeologiesSection';
 import { CountUpValue } from './components/results/CountUpValue';
 import { SignatureSection } from './components/results/SignatureSection';
 import { PhraseSection } from './components/results/PhraseSection';
+import { AreasSection } from './components/results/AreasSection';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -1124,9 +1125,13 @@ function MainApp() {
               <div data-reveal>
                 <PersonalitiesSection
                   top={result.topPersonalityMatch}
-                  byCategory={result.categoryPersonalityMatches}
+                  dimensions={result.dimensionMatches}
                   distant={result.bottomPersonalityMatches}
                 />
+              </div>
+
+              <div data-reveal>
+                <AreasSection matches={result.categoryBestMatches} />
               </div>
 
               <div data-reveal>

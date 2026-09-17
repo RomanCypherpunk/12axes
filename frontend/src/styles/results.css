@@ -427,6 +427,106 @@
   }
 }
 
+/* ── Cards por dimensao do perfil ────────────────────────────────────── */
+/* Uma nota de dimensao nao e comparavel com a geral (usa menos eixos), entao
+   o card diz quais eixos entraram na conta.                                */
+.dimension-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.dimension-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.dimension-label {
+  padding: 3px 10px;
+  margin-bottom: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.dimension-card-visual {
+  width: 76px;
+  height: 76px;
+}
+
+.dimension-card-visual img,
+.dimension-card-initials {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+}
+
+.dimension-card-visual img {
+  object-fit: cover;
+}
+
+.dimension-card-initials {
+  display: grid;
+  place-items: center;
+  background: var(--ink-50);
+  color: var(--text-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.dimension-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.dimension-role {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.dimension-score {
+  color: var(--accent-deep);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Os eixos que entraram na conta, em letra menor: contexto, nao destaque. */
+.dimension-axes {
+  margin: 8px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+/* Nota explicativa de um bloco, entre o titulo e a grade. */
+.block-note {
+  margin: -6px 0 14px;
+  max-width: 68ch;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .dimension-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Peso 3: cards de distancia ──────────────────────────────────────── */
 .distant-grid {
   display: grid;

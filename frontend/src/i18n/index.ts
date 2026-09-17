@@ -1,7 +1,7 @@
 // Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
-import type { PersonalityCategory } from '../types/quiz';
+import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
 export type Lang = 'pt' | 'en';
 
@@ -148,6 +148,7 @@ interface Strings {
   resultsNavSignature: string;
   resultsNavCountries: string;
   resultsNavPersonalities: string;
+  resultsNavAreas: string;
   resultsNavIdeologies: string;
   countriesSectionTitle: string;
   countryCurrentTab: string;
@@ -155,6 +156,12 @@ interface Strings {
   countriesDistantTitle: string;
   personalitiesSectionTitle: string;
   personalitiesByAreaTitle: string;
+  dimensionsTitle: string;
+  dimensionsNote: string;
+  dimensionLabels: Record<ProfileDimension, string>;
+  dimensionAxes: Record<ProfileDimension, string>;
+  areasSectionTitle: string;
+  areasSectionNote: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
   phraseTitle: string;
@@ -500,6 +507,7 @@ const pt: Strings = {
   resultsNavSignature: 'O que te distingue',
   resultsNavCountries: 'Países',
   resultsNavPersonalities: 'Personalidades',
+  resultsNavAreas: 'Áreas de atuação',
   resultsNavIdeologies: 'Outras ideologias',
   countriesSectionTitle: 'Países mais próximos de você',
   countryCurrentTab: 'País atual',
@@ -507,6 +515,20 @@ const pt: Strings = {
   countriesDistantTitle: 'Os mais distantes de você',
   personalitiesSectionTitle: 'Personalidades mais próximas de você',
   personalitiesByAreaTitle: 'Também próximos, por área de atuação',
+  dimensionsTitle: 'Também próximos, por dimensão do seu perfil',
+  dimensionsNote: 'Aqui a compatibilidade usa só os eixos de cada dimensão, e não os 12 somados. Por isso as respostas costumam ser pessoas diferentes.',
+  dimensionLabels: {
+    political: 'Politicamente',
+    social: 'Socialmente',
+    economic: 'Economicamente',
+  },
+  dimensionAxes: {
+    political: 'Estrutura, Representação, Poder, Diplomacia e Intervenção',
+    social: 'Moral, Religião, Imigração e Tecnologia',
+    economic: 'Economia, Controle e Comércio',
+  },
+  areasSectionTitle: 'Os mais próximos de cada área de atuação',
+  areasSectionNote: 'A personalidade mais compatível de cada campo, da área que mais combina com você para a que menos combina.',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
   phraseTitle: 'Uma frase que te descreve',
@@ -898,6 +920,7 @@ const en: Strings = {
   resultsNavSignature: 'What sets you apart',
   resultsNavCountries: 'Countries',
   resultsNavPersonalities: 'Figures',
+  resultsNavAreas: 'Fields',
   resultsNavIdeologies: 'Other ideologies',
   countriesSectionTitle: 'Countries closest to you',
   countryCurrentTab: 'Present-day',
@@ -905,6 +928,20 @@ const en: Strings = {
   countriesDistantTitle: 'Furthest from you',
   personalitiesSectionTitle: 'Figures closest to you',
   personalitiesByAreaTitle: 'Also close to you, by field',
+  dimensionsTitle: 'Also close to you, by dimension of your profile',
+  dimensionsNote: 'Here compatibility uses only the axes of each dimension, not all 12 combined. That is why the answers are usually different people.',
+  dimensionLabels: {
+    political: 'Politically',
+    social: 'Socially',
+    economic: 'Economically',
+  },
+  dimensionAxes: {
+    political: 'Structure, Representation, Power, Diplomacy and Intervention',
+    social: 'Morals, Religion, Immigration and Technology',
+    economic: 'Economy, Control and Trade',
+  },
+  areasSectionTitle: 'The closest figure in each field',
+  areasSectionNote: 'The most compatible figure from every field, ordered from the area that fits you best to the one that fits you least.',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
   phraseTitle: 'A sentence that describes you',

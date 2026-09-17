@@ -130,6 +130,13 @@ export interface AxisTension {
   examples: string[];
 }
 
+export type ProfileDimension = 'political' | 'social' | 'economic';
+
+export interface DimensionMatch {
+  dimension: ProfileDimension;
+  match: PersonalityMatch;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
@@ -139,7 +146,8 @@ export interface QuizResult {
   topHistoricalCountryMatch: CountryMatch;
   bottomCountryMatches: CountryMatch[];
   topPersonalityMatch: PersonalityMatch;
-  categoryPersonalityMatches: PersonalityMatch[];
+  dimensionMatches: DimensionMatch[];
+  categoryBestMatches: PersonalityMatch[];
   bottomPersonalityMatches: PersonalityMatch[];
   mostUnusualAxis: AxisOutlier;
   mostCommonAxis: AxisOutlier;
