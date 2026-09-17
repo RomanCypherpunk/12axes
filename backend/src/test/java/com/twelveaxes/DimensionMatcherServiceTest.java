@@ -44,11 +44,11 @@ class DimensionMatcherServiceTest {
     @Test
     void dimensionsUseTheExpectedAxisGroups() {
         assertThat(DimensionMatcherService.POLITICAL_AXES).containsExactly(
-                "estrutura", "representacao", "poder", "diplomacia", "intervencao", "imigracao", "economia");
+                "estrutura", "representacao", "poder", "diplomacia", "imigracao", "intervencao");
         assertThat(DimensionMatcherService.SOCIAL_AXES).containsExactly(
-                "moral", "religiao", "imigracao", "tecnologia", "poder");
+                "moral", "religiao", "economia", "imigracao", "poder", "tecnologia");
         assertThat(DimensionMatcherService.ECONOMIC_AXES).containsExactly(
-                "economia", "controle", "comercio", "tecnologia");
+                "economia", "controle", "comercio");
     }
 
     @Test
@@ -90,6 +90,15 @@ class DimensionMatcherServiceTest {
         assertThat(dimensoes)
                 .isNotEmpty()
                 .noneMatch(dimensao -> dimensao.match().personalityId().equals(top.personalityId()));
+    }
+
+    @Test
+    void dimensionMatchesNeverRepeatEachOther() {
+        var dimensoes = dimensionMatcherService.findAll(perfilDeTeste(), QuizDataService.LANG_PT);
+
+        assertThat(dimensoes)
+                .extracting(dimensao -> dimensao.match().personalityId())
+                .doesNotHaveDuplicates();
     }
 
     @Test

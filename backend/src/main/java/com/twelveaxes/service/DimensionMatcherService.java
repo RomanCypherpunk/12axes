@@ -7,8 +7,10 @@ import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.model.PersonalityProfile;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.springframework.stereotype.Service;
 
 /**
@@ -22,17 +24,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DimensionMatcherService {
-    /** Instituicoes, poder, politica externa, imigracao e orientacao economica. */
+    /** Instituicoes, poder, politica externa e imigracao. */
     public static final List<String> POLITICAL_AXES =
-            List.of("estrutura", "representacao", "poder", "diplomacia", "intervencao", "imigracao", "economia");
+            List.of("estrutura", "representacao", "poder", "diplomacia", "imigracao", "intervencao");
 
-    /** Costumes, fe, imigracao, tecnologia e a relacao entre liberdade e seguranca. */
+    /** Costumes, fe, economia, imigracao, poder e tecnologia. */
     public static final List<String> SOCIAL_AXES =
-            List.of("moral", "religiao", "imigracao", "tecnologia", "poder");
+            List.of("moral", "religiao", "economia", "imigracao", "poder", "tecnologia");
 
-    /** Propriedade, coordenacao da producao, abertura comercial e tecnologia. */
+    /** Propriedade, coordenacao da producao e abertura comercial. */
     public static final List<String> ECONOMIC_AXES =
-            List.of("economia", "controle", "comercio", "tecnologia");
+            List.of("economia", "controle", "comercio");
 
     public static final String POLITICAL = "political";
     public static final String SOCIAL = "social";
@@ -56,9 +58,13 @@ public class DimensionMatcherService {
      */
     public List<DimensionMatch> findAll(List<AxisResult> axisResults, String lang, String excludeId) {
         List<DimensionMatch> matches = new ArrayList<>();
-        addIfPresent(matches, POLITICAL, POLITICAL_AXES, axisResults, lang, excludeId);
-        addIfPresent(matches, SOCIAL, SOCIAL_AXES, axisResults, lang, excludeId);
-        addIfPresent(matches, ECONOMIC, ECONOMIC_AXES, axisResults, lang, excludeId);
+        Set<String> excludedIds = new LinkedHashSet<>();
+        if (excludeId != null) {
+            excludedIds.add(excludeId);
+        }
+        addIfPresent(matches, excludedIds, POLITICAL, POLITICAL_AXES, axisResults, lang);
+        addIfPresent(matches, excludedIds, SOCIAL, SOCIAL_AXES, axisResults, lang);
+        addIfPresent(matches, excludedIds, ECONOMIC, ECONOMIC_AXES, axisResults, lang);
         return List.copyOf(matches);
     }
 
@@ -68,15 +74,16 @@ public class DimensionMatcherService {
 
     private void addIfPresent(
             List<DimensionMatch> matches,
+            Set<String> excludedIds,
             String dimension,
             List<String> axisIds,
             List<AxisResult> axisResults,
-            String lang,
-            String excludeId
+            String lang
     ) {
-        PersonalityMatch match = findBestFor(axisIds, axisResults, lang, excludeId);
+        PersonalityMatch match = findBestFor(axisIds, axisResults, lang, excludedIds);
         if (match != null) {
             matches.add(new DimensionMatch(dimension, match));
+            excludedIds.add(match.personalityId());
         }
     }
 
@@ -84,11 +91,11 @@ public class DimensionMatcherService {
             List<String> axisIds,
             List<AxisResult> axisResults,
             String lang,
-            String excludeId
+            Set<String> excludedIds
     ) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
-                .filter(personality -> !personality.id().equals(excludeId))
+                .filter(personality -> !excludedIds.contains(personality.id()))
                 .toList();
         if (personalities.isEmpty()) {
             return null;
