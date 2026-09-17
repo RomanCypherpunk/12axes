@@ -44,7 +44,8 @@ class DimensionMatcherServiceTest {
     @Test
     void dimensionsUseTheExpectedAxisGroups() {
         assertThat(DimensionMatcherService.POLITICAL_AXES).containsExactly(
-                "estrutura", "representacao", "poder", "diplomacia", "imigracao", "intervencao");
+                "estrutura", "representacao", "poder", "diplomacia", "imigracao",
+                "intervencao", "tecnologia", "controle", "comercio");
         assertThat(DimensionMatcherService.SOCIAL_AXES).containsExactly(
                 "moral", "religiao", "economia", "imigracao", "poder", "tecnologia");
         assertThat(DimensionMatcherService.ECONOMIC_AXES).containsExactly(
