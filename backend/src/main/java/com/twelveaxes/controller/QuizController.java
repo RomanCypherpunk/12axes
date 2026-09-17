@@ -100,6 +100,7 @@ public class QuizController {
 
     private QuizResult buildResult(List<AxisResult> axes, String lang) {
         var matches = matcherService.findMatches(axes, lang);
+        var topPersonality = personalityMatcherService.findTopMatch(axes, lang);
         return new QuizResult(
                 axes,
                 matches.getFirst(),
@@ -108,8 +109,8 @@ public class QuizController {
                 countryMatcherService.findTopMatch(axes, lang),
                 countryMatcherService.findTopHistoricalMatch(axes, lang),
                 countryMatcherService.findBottomMatches(axes, lang),
-                personalityMatcherService.findTopMatch(axes, lang),
-                dimensionMatcherService.findAll(axes, lang),
+                topPersonality,
+                dimensionMatcherService.findAll(axes, lang, topPersonality.personalityId()),
                 personalityMatcherService.findBestPerCategory(axes, lang),
                 personalityMatcherService.findBottomMatches(axes, lang),
                 axisOutlierService.findMostUnusual(axes, lang),

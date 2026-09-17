@@ -46,13 +46,24 @@ public class DimensionMatcherService {
         this.profileMatchScorer = profileMatchScorer;
     }
 
-    /** As tres dimensoes, na ordem politica, social, economica. */
-    public List<DimensionMatch> findAll(List<AxisResult> axisResults, String lang) {
+    /**
+     * As tres dimensoes, na ordem politica, social, economica.
+     *
+     * @param excludeId personalidade a deixar de fora, normalmente a mais
+     *                  compativel no geral: a secao se chama "tambem proximos",
+     *                  entao repetir quem ja aparece como destaque nao acrescenta
+     *                  nada ao leitor.
+     */
+    public List<DimensionMatch> findAll(List<AxisResult> axisResults, String lang, String excludeId) {
         List<DimensionMatch> matches = new ArrayList<>();
-        addIfPresent(matches, POLITICAL, POLITICAL_AXES, axisResults, lang);
-        addIfPresent(matches, SOCIAL, SOCIAL_AXES, axisResults, lang);
-        addIfPresent(matches, ECONOMIC, ECONOMIC_AXES, axisResults, lang);
+        addIfPresent(matches, POLITICAL, POLITICAL_AXES, axisResults, lang, excludeId);
+        addIfPresent(matches, SOCIAL, SOCIAL_AXES, axisResults, lang, excludeId);
+        addIfPresent(matches, ECONOMIC, ECONOMIC_AXES, axisResults, lang, excludeId);
         return List.copyOf(matches);
+    }
+
+    public List<DimensionMatch> findAll(List<AxisResult> axisResults, String lang) {
+        return findAll(axisResults, lang, null);
     }
 
     private void addIfPresent(
@@ -60,17 +71,25 @@ public class DimensionMatcherService {
             String dimension,
             List<String> axisIds,
             List<AxisResult> axisResults,
-            String lang
+            String lang,
+            String excludeId
     ) {
-        PersonalityMatch match = findBestFor(axisIds, axisResults, lang);
+        PersonalityMatch match = findBestFor(axisIds, axisResults, lang, excludeId);
         if (match != null) {
             matches.add(new DimensionMatch(dimension, match));
         }
     }
 
-    private PersonalityMatch findBestFor(List<String> axisIds, List<AxisResult> axisResults, String lang) {
+    private PersonalityMatch findBestFor(
+            List<String> axisIds,
+            List<AxisResult> axisResults,
+            String lang,
+            String excludeId
+    ) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
-        List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang));
+        List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
+                .filter(personality -> !personality.id().equals(excludeId))
+                .toList();
         if (personalities.isEmpty()) {
             return null;
         }

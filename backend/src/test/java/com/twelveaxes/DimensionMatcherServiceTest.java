@@ -69,6 +69,19 @@ class DimensionMatcherServiceTest {
                         .isNotEqualTo(geral.compatibility()));
     }
 
+    // A secao se chama "tambem proximos": repetir quem ja aparece como destaque
+    // nao acrescenta nada ao leitor.
+    @Test
+    void dimensionMatchesNeverRepeatTheTopMatch() {
+        var axes = perfilDeTeste();
+        var top = personalityMatcherService.findTopMatch(axes, QuizDataService.LANG_PT);
+        var dimensoes = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT, top.personalityId());
+
+        assertThat(dimensoes)
+                .isNotEmpty()
+                .noneMatch(dimensao -> dimensao.match().personalityId().equals(top.personalityId()));
+    }
+
     @Test
     void everyDimensionMatchCarriesCategoryAndPortrait() {
         var dimensoes = dimensionMatcherService.findAll(perfilDeTeste(), QuizDataService.LANG_PT);
