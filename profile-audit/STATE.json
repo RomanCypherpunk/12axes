@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-09-18T22:00:00Z",
+  "lastUpdated": "2026-09-18T23:00:00Z",
   "personality": {
-    "totalProfiles": 311,
+    "totalProfiles": 314,
     "pending": [],
     "done": [
       "lenin",
@@ -315,11 +315,14 @@
       "jack-ma",
       "rong-yiren",
       "domenico-losurdo",
-      "espinosa"
+      "espinosa",
+      "mikhail-gorbachev",
+      "arthur-schopenhauer",
+      "max-weber"
     ]
   },
   "ideology": {
-    "totalProfiles": 181,
+    "totalProfiles": 187,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -482,7 +485,6 @@
       "mercantilismo",
       "imperialismo-pluralista",
       "imperialismo-federalista",
-      "republicanismo-aristocratico",
       "monarquismo-financeiro",
       "liberalismo-aristocratico",
       "autoritarismo-libertario",
@@ -490,7 +492,6 @@
       "militarismo-libertario",
       "zapatismo",
       "sindicalismo-revolucionario",
-      "confucionismo-politico",
       "socialismo-lassalliano",
       "liberal-desenvolvimentismo",
       "aristocratismo",
@@ -502,7 +503,15 @@
       "comunismo",
       "tecnocracia-liberal",
       "trabalhismo-de-direita",
-      "fascismo-vermelho"
+      "fascismo-vermelho",
+      "aristotelismo",
+      "socratismo",
+      "platonismo",
+      "confucionismo",
+      "mutualismo-proudhoniano",
+      "republicanismo-kantiano",
+      "socialismo-marxista",
+      "estoicismo"
     ]
   },
   "country": {
