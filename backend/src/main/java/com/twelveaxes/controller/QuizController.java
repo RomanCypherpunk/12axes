@@ -108,6 +108,7 @@ public class QuizController {
                 matches,
                 matcherService.findBottomMatch(axes, lang),
                 countryMatcherService.findTopMatch(axes, lang),
+                countryMatcherService.findTopMatches(axes, lang),
                 countryMatcherService.findTopHistoricalMatch(axes, lang),
                 countryMatcherService.findBottomMatches(axes, lang),
                 topPersonality,

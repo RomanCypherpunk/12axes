@@ -17,6 +17,7 @@ import { CountUpValue } from './components/results/CountUpValue';
 import { SignatureSection } from './components/results/SignatureSection';
 import { PhraseSection } from './components/results/PhraseSection';
 import { AreasSection } from './components/results/AreasSection';
+import { SummarySection } from './components/results/SummarySection';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
@@ -1141,6 +1142,16 @@ function MainApp() {
                 <IdeologiesSection
                   others={result.matches.slice(1, 4)}
                   distant={result.bottomIdeologyMatch}
+                />
+              </div>
+
+              <div data-reveal>
+                <SummarySection
+                  topIdeology={result.topMatch}
+                  topPersonalities={result.personalityMatches.slice(0, 3)}
+                  topCountries={result.topCountryMatches}
+                  axes={quiz?.axes ?? homeAxes}
+                  axisResults={result.axes}
                 />
               </div>
             </div>

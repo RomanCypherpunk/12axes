@@ -143,6 +143,7 @@ export interface QuizResult {
   matches: IdeologyMatch[];
   bottomIdeologyMatch: IdeologyMatch;
   topCountryMatch: CountryMatch;
+  topCountryMatches: CountryMatch[];
   topHistoricalCountryMatch: CountryMatch;
   bottomCountryMatches: CountryMatch[];
   topPersonalityMatch: PersonalityMatch;

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CountryMatcherService {
     private static final int BOTTOM_MATCHES = 3;
+    private static final int TOP_MATCHES = 3;
 
     private final QuizDataService dataService;
     private final ProfileMatchScorer profileMatchScorer;
@@ -32,6 +33,14 @@ public class CountryMatcherService {
 
     public CountryMatch findTopHistoricalMatch(List<AxisResult> axisResults, String lang) {
         return firstMatching(axisResults, lang, true);
+    }
+
+    // Os tres paises atuais mais compativeis, em ordem decrescente (exclui experiencias historicas).
+    public List<CountryMatch> findTopMatches(List<AxisResult> axisResults, String lang) {
+        return rankAll(axisResults, lang).stream()
+                .filter(match -> !match.historical())
+                .limit(TOP_MATCHES)
+                .toList();
     }
 
     // Os tres menos compativeis do catalogo inteiro, em ordem crescente.

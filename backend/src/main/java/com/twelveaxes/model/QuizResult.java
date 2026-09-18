@@ -12,6 +12,7 @@ import java.util.List;
  * @param matches ideologias mais compativeis, a comecar pela do topo
  * @param bottomIdeologyMatch ideologia mais distante do catalogo
  * @param topCountryMatch pais atual mais compativel
+ * @param topCountryMatches paises atuais mais compativeis, a comecar pelo topo
  * @param topHistoricalCountryMatch experiencia historica mais compativel
  * @param bottomCountryMatches paises mais distantes do catalogo
  * @param topPersonalityMatch personalidade mais compativel, de qualquer categoria
@@ -29,6 +30,7 @@ public record QuizResult(
         List<IdeologyMatch> matches,
         IdeologyMatch bottomIdeologyMatch,
         CountryMatch topCountryMatch,
+        List<CountryMatch> topCountryMatches,
         CountryMatch topHistoricalCountryMatch,
         List<CountryMatch> bottomCountryMatches,
         PersonalityMatch topPersonalityMatch,
