@@ -19,18 +19,18 @@
   {
     "countryId": "estados-unidos",
     "vector": {
-      "estrutura": 66.2,
-      "representacao": 75.0,
-      "poder": 45.0,
-      "imigracao": 48.8,
-      "diplomacia": 67.5,
-      "intervencao": 32.5,
-      "economia": 35.0,
-      "controle": 41.2,
-      "comercio": 50.0,
+      "estrutura": 73.8,
+      "representacao": 73.8,
+      "poder": 38.8,
+      "imigracao": 37.5,
+      "diplomacia": 78.8,
+      "intervencao": 22.5,
+      "economia": 30.0,
+      "controle": 35.0,
+      "comercio": 52.5,
       "religiao": 42.5,
       "moral": 43.8,
-      "tecnologia": 66.2
+      "tecnologia": 67.5
     }
   },
   {
@@ -223,18 +223,18 @@
   {
     "countryId": "reino-unido",
     "vector": {
-      "estrutura": 41.2,
-      "representacao": 71.2,
-      "poder": 51.2,
-      "imigracao": 57.5,
-      "diplomacia": 55,
-      "intervencao": 33.8,
+      "estrutura": 60.0,
+      "representacao": 75.0,
+      "poder": 61.3,
+      "imigracao": 53.8,
+      "diplomacia": 65.0,
+      "intervencao": 15.0,
       "economia": 46.2,
-      "controle": 45,
-      "comercio": 42.5,
-      "religiao": 55,
-      "moral": 61.3,
-      "tecnologia": 60
+      "controle": 42.5,
+      "comercio": 40.0,
+      "religiao": 55.0,
+      "moral": 56.2,
+      "tecnologia": 65.0
     }
   },
   {
@@ -359,18 +359,18 @@
   {
     "countryId": "singapura",
     "vector": {
-      "estrutura": 12.5,
-      "representacao": 20.0,
-      "poder": 90.0,
-      "imigracao": 65.0,
-      "diplomacia": 65.0,
-      "intervencao": 38.8,
-      "economia": 32.5,
-      "controle": 52.5,
-      "comercio": 16.2,
-      "religiao": 61.3,
-      "moral": 26.2,
-      "tecnologia": 63.7
+      "estrutura": 8.8,
+      "representacao": 22.5,
+      "poder": 93.8,
+      "imigracao": 55.0,
+      "diplomacia": 53.8,
+      "intervencao": 57.5,
+      "economia": 31.2,
+      "controle": 38.8,
+      "comercio": 18.8,
+      "religiao": 58.8,
+      "moral": 28.7,
+      "tecnologia": 70.0
     }
   },
   {
@@ -937,18 +937,18 @@
   {
     "countryId": "emirados-arabes-unidos",
     "vector": {
-      "estrutura": 23.8,
-      "representacao": 13.8,
-      "poder": 85.0,
-      "imigracao": 72.5,
+      "estrutura": 53.8,
+      "representacao": 12.5,
+      "poder": 80.0,
+      "imigracao": 57.5,
       "diplomacia": 65.0,
-      "intervencao": 31.2,
-      "economia": 30.0,
-      "controle": 40.0,
-      "comercio": 25.0,
+      "intervencao": 27.5,
+      "economia": 28.7,
+      "controle": 35.0,
+      "comercio": 23.8,
       "religiao": 16.2,
-      "moral": 21.2,
-      "tecnologia": 76.2
+      "moral": 22.5,
+      "tecnologia": 77.5
     }
   },
   {
@@ -1447,18 +1447,18 @@
   {
     "countryId": "taiwan",
     "vector": {
-      "estrutura": 42.5,
-      "representacao": 76.2,
-      "poder": 43.8,
-      "imigracao": 53.8,
-      "diplomacia": 53.8,
-      "intervencao": 51.2,
-      "economia": 46.2,
-      "controle": 47.5,
-      "comercio": 41.2,
-      "religiao": 57.5,
-      "moral": 63.7,
-      "tecnologia": 61.3
+      "estrutura": 26.2,
+      "representacao": 81.2,
+      "poder": 48.8,
+      "imigracao": 45.0,
+      "diplomacia": 57.5,
+      "intervencao": 46.2,
+      "economia": 48.8,
+      "controle": 55.0,
+      "comercio": 38.8,
+      "religiao": 62.5,
+      "moral": 73.8,
+      "tecnologia": 72.5
     }
   },
   {
@@ -2445,6 +2445,23 @@
       "religiao": 48.8,
       "moral": 28.7,
       "tecnologia": 63.7
+    }
+  },
+  {
+    "countryId": "palestina",
+    "vector": {
+      "estrutura": 25.0,
+      "representacao": 51.2,
+      "poder": 73.8,
+      "imigracao": 51.2,
+      "diplomacia": 27.5,
+      "intervencao": 58.8,
+      "economia": 63.7,
+      "controle": 67.5,
+      "comercio": 48.8,
+      "religiao": 41.2,
+      "moral": 27.5,
+      "tecnologia": 37.5
     }
   }
 ]
