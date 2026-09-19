@@ -28,7 +28,7 @@ public class DimensionMatcherService {
     public static final List<String> POLITICAL_AXES =
             List.of(
                     "estrutura", "representacao", "poder", "diplomacia", "imigracao",
-                    "intervencao", "tecnologia", "controle", "comercio");
+                    "intervencao", "tecnologia", "controle", "comercio", "religiao", "economia", "moral");
 
     /** Costumes, fe, economia, imigracao, poder e tecnologia. */
     public static final List<String> SOCIAL_AXES =
