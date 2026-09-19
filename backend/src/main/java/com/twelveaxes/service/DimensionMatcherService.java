@@ -32,7 +32,7 @@ public class DimensionMatcherService {
 
     /** Costumes, fe, economia, imigracao, poder e tecnologia. */
     public static final List<String> SOCIAL_AXES =
-            List.of("moral", "religiao", "economia", "imigracao", "poder", "tecnologia");
+            List.of("representacao", "moral", "religiao", "economia", "controle", "comercio", "imigracao", "poder", "tecnologia");
 
     /** Propriedade, coordenacao da producao e abertura comercial. */
     public static final List<String> ECONOMIC_AXES =
