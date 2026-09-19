@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-09-19T00:00:00Z",
+  "lastUpdated": "2026-09-19T00:30:00Z",
   "personality": {
     "totalProfiles": 314,
     "pending": [],
@@ -322,7 +322,7 @@
     ]
   },
   "ideology": {
-    "totalProfiles": 188,
+    "totalProfiles": 189,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -512,7 +512,8 @@
       "republicanismo-kantiano",
       "socialismo-marxista",
       "estoicismo",
-      "agrarianismo"
+      "agrarianismo",
+      "socialismo-utopico"
     ]
   },
   "country": {
