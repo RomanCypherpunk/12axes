@@ -165,9 +165,6 @@ interface Strings {
   areasByAreaTab: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
-  summaryEyebrow: string;
-  summaryTitle: string;
-  resultsNavSummary: string;
   phraseTitle: string;
   phraseNote: (ideology: string) => string;
   signatureTitle: string;
@@ -532,9 +529,6 @@ const pt: Strings = {
   areasByAreaTab: 'Área de atuação',
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
-  summaryEyebrow: 'Resumo',
-  summaryTitle: 'Resumo do seu resultado',
-  resultsNavSummary: 'Resumo',
   phraseTitle: 'Uma frase que te descreve',
   phraseNote: (ideology) => `É assim que alguém do ${ideology} resumiria a sociedade que quer.`,
   signatureTitle: 'O que te distingue',
@@ -945,9 +939,6 @@ const en: Strings = {
   areasByAreaTab: 'Field',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
-  summaryEyebrow: 'Summary',
-  summaryTitle: 'Summary of your result',
-  resultsNavSummary: 'Summary',
   phraseTitle: 'A sentence that describes you',
   phraseNote: (ideology) => `This is how someone from ${ideology} would sum up the society they want.`,
   signatureTitle: 'What sets you apart',

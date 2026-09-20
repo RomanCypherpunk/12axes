@@ -137,6 +137,11 @@ export interface DimensionMatch {
   match: PersonalityMatch;
 }
 
+export interface CountryDimensionMatch {
+  dimension: ProfileDimension;
+  match: CountryMatch;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
@@ -145,6 +150,7 @@ export interface QuizResult {
   topCountryMatch: CountryMatch;
   topCountryMatches: CountryMatch[];
   topHistoricalCountryMatch: CountryMatch;
+  countryDimensionMatches: CountryDimensionMatch[];
   bottomCountryMatches: CountryMatch[];
   topPersonalityMatch: PersonalityMatch;
   personalityMatches: PersonalityMatch[];

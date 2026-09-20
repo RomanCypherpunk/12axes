@@ -585,6 +585,32 @@
   }
 }
 
+.country-dimension-flag {
+  width: 112px;
+  height: 76px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--ink-50);
+}
+
+.country-dimension-flag img {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.country-dimension-flag .dimension-card-initials {
+  border: 0;
+  border-radius: 0;
+  font-size: 0.7rem;
+  padding: 4px;
+  text-align: center;
+}
+
 /* ── Peso 3: cards de distancia ──────────────────────────────────────── */
 .distant-grid {
   display: grid;
@@ -654,6 +680,28 @@
 }
 
 @media (max-width: 560px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .category-card {
+    padding: 16px 10px;
+  }
+
+  .category-card-visual {
+    width: 62px;
+    height: 62px;
+  }
+
+  .category-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .category-card p {
+    font-size: 0.78rem;
+  }
+
   .distant-grid,
   .distant-grid-single {
     grid-template-columns: 1fr;

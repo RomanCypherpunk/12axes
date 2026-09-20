@@ -8,7 +8,6 @@ const SECTIONS = [
   { id: 'personalidades', label: () => t.resultsNavPersonalities },
   { id: 'areas', label: () => t.resultsNavAreas },
   { id: 'ideologias', label: () => t.resultsNavIdeologies },
-  { id: 'resumo', label: () => t.resultsNavSummary },
 ];
 
 // Indice da pagina: a leitura e longa e ordenada, entao os numeros marcam
