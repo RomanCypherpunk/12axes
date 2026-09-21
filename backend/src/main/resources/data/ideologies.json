@@ -1846,5 +1846,25 @@
     "vector": null,
     "countryId": "argentina-peronista",
     "personalityId": "peron"
+  },
+  {
+    "id": "tecno-comercialismo",
+    "name": "Tecno-Comercialismo",
+    "category": "Extrema Direita",
+    "description": "Vertente neorreacionária que rejeita a democracia em favor de microestados administrados como empresas. Defende competição entre jurisdições, livre mercado, direito de saída e inovação tecnológica como critérios de governo.",
+    "phrase": "Quero cidades-empresa concorrentes, governadas por acionistas e abertas à saída, onde mercados e tecnologia premiem eficiência.",
+    "vector": null,
+    "countryId": "singapura",
+    "personalityId": "peter-thiel"
+  },
+  {
+    "id": "teonomismo",
+    "name": "Teonomismo",
+    "category": "Extrema Direita",
+    "description": "Vertente religiosa e tradicionalista do neorreacionarismo que subordina a autoridade política à lei natural ou divina. Defende hierarquia, família patriarcal e governo monárquico ou teocrático contra a democracia secular.",
+    "phrase": "Quero comunidades regidas pela lei divina, com famílias tradicionais e monarquia cristã, subordinando governo e mercados à autoridade religiosa.",
+    "vector": null,
+    "countryId": "sacro-imperio-romano-germanico",
+    "personalityId": "martinho-lutero"
   }
 ]
