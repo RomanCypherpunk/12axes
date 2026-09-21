@@ -3145,6 +3145,74 @@
     }
   },
   {
+    "ideologyId": "fascismo-vermelho",
+    "vector": {
+      "estrutura": 3.8,
+      "representacao": 6.2,
+      "poder": 90.0,
+      "imigracao": 91.2,
+      "diplomacia": 86.2,
+      "intervencao": 15.0,
+      "economia": 83.8,
+      "controle": 88.8,
+      "comercio": 87.5,
+      "religiao": 73.8,
+      "moral": 28.7,
+      "tecnologia": 57.5
+    }
+  },
+  {
+    "ideologyId": "estoicismo",
+    "vector": {
+      "estrutura": 22.5,
+      "representacao": 30.0,
+      "poder": 63.7,
+      "imigracao": 23.8,
+      "diplomacia": 51.2,
+      "intervencao": 28.7,
+      "economia": 40.0,
+      "controle": 63.7,
+      "comercio": 70.0,
+      "religiao": 17.5,
+      "moral": 35.0,
+      "tecnologia": 51.2
+    }
+  },
+  {
+    "ideologyId": "agrarianismo",
+    "vector": {
+      "estrutura": 82.5,
+      "representacao": 77.5,
+      "poder": 13.8,
+      "imigracao": 65.0,
+      "diplomacia": 26.2,
+      "intervencao": 78.8,
+      "economia": 37.5,
+      "controle": 17.5,
+      "comercio": 35.0,
+      "religiao": 65.0,
+      "moral": 30.0,
+      "tecnologia": 16.2
+    }
+  },
+  {
+    "ideologyId": "socialismo-utopico",
+    "vector": {
+      "estrutura": 22.5,
+      "representacao": 35.0,
+      "poder": 70.0,
+      "imigracao": 28.7,
+      "diplomacia": 23.8,
+      "intervencao": 72.5,
+      "economia": 71.2,
+      "controle": 73.8,
+      "comercio": 35.0,
+      "religiao": 71.2,
+      "moral": 68.8,
+      "tecnologia": 73.8
+    }
+  },
+  {
     "ideologyId": "tecno-comercialismo",
     "vector": {
       "estrutura": 96.2,

@@ -1848,6 +1848,46 @@
     "personalityId": "peron"
   },
   {
+    "id": "fascismo-vermelho",
+    "name": "Fascismo Vermelho",
+    "category": "Extrema Direita",
+    "description": "Regime que funde a estética e a hierarquia autoritária do fascismo, com líder forte, ordem e disciplina nacional, à economia socialista de coletivização, estatização de empresas e planejamento central dos meios de produção.",
+    "phrase": "Quero uma nação hierárquica e disciplinada sob líder forte, com fábricas e terras coletivizadas sob planejamento estatal total.",
+    "vector": null,
+    "countryId": "coreia-do-norte",
+    "personalityId": "kim-il-sung"
+  },
+  {
+    "id": "estoicismo",
+    "name": "Estoicismo",
+    "category": "Centro",
+    "description": "Filosofia greco-romana que ensina viver conforme a razão e a natureza, aceitando com serenidade o que não se controla, cultivando dever, autodomínio e virtude acima do prazer, e reconhecendo uma lei natural comum a toda a humanidade racional.",
+    "phrase": "Quero viver conforme a razão e o dever, aceitando com serenidade o destino, sob uma lei natural comum a toda a humanidade racional.",
+    "vector": null,
+    "countryId": "imperio-romano",
+    "personalityId": "marco-aurelio"
+  },
+  {
+    "id": "agrarianismo",
+    "name": "Agrarianismo",
+    "category": "Direita",
+    "description": "Tradição republicana que idealiza o pequeno agricultor proprietário como base da virtude cívica e da liberdade, defendendo ampla distribuição de terras, governo limitado e descentralizado, e desconfiança de bancos, dívida pública, indústria e grandes cidades.",
+    "phrase": "Quero uma república de pequenos fazendeiros donos de sua terra, descentralizada e sem bancos nem dívida pública, longe de fábricas e cidades.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "thomas-jefferson"
+  },
+  {
+    "id": "socialismo-utopico",
+    "name": "Socialismo Utópico",
+    "category": "Centro-Esquerda",
+    "description": "Corrente do início do século XIX que imaginava uma sociedade industrial reorganizada por planejamento racional, sob direção de cientistas, engenheiros e produtores, substituindo políticos e aristocratas sem apelar à luta de classes ou à revolução.",
+    "phrase": "Quero uma sociedade industrial dirigida por cientistas e produtores, planejada racionalmente, superando políticos e aristocratas sem revolução.",
+    "vector": null,
+    "countryId": "franca",
+    "personalityId": "henri-de-saint-simon"
+  },
+  {
     "id": "tecno-comercialismo",
     "name": "Tecno-Comercialismo",
     "category": "Extrema Direita",

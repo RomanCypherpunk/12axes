@@ -32,6 +32,7 @@ public record QuizResult(
         CountryMatch topCountryMatch,
         List<CountryMatch> topCountryMatches,
         CountryMatch topHistoricalCountryMatch,
+        List<CountryDimensionMatch> countryDimensionMatches,
         List<CountryMatch> bottomCountryMatches,
         PersonalityMatch topPersonalityMatch,
         List<PersonalityMatch> personalityMatches,

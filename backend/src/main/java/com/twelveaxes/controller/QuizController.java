@@ -12,6 +12,7 @@ import com.twelveaxes.service.AxisOutlierService;
 import com.twelveaxes.service.AxisTensionService;
 import com.twelveaxes.service.DimensionMatcherService;
 import com.twelveaxes.service.CountryMatcherService;
+import com.twelveaxes.service.CountryDimensionMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
@@ -39,6 +40,7 @@ public class QuizController {
     private final ScoringService scoringService;
     private final IdeologyMatcherService matcherService;
     private final CountryMatcherService countryMatcherService;
+    private final CountryDimensionMatcherService countryDimensionMatcherService;
     private final PersonalityMatcherService personalityMatcherService;
     private final CandidateMatcherService candidateMatcherService;
     private final AxisOutlierService axisOutlierService;
@@ -50,6 +52,7 @@ public class QuizController {
             ScoringService scoringService,
             IdeologyMatcherService matcherService,
             CountryMatcherService countryMatcherService,
+            CountryDimensionMatcherService countryDimensionMatcherService,
             PersonalityMatcherService personalityMatcherService, CandidateMatcherService candidateMatcherService,
             AxisOutlierService axisOutlierService,
             AxisTensionService axisTensionService,
@@ -59,6 +62,7 @@ public class QuizController {
         this.scoringService = scoringService;
         this.matcherService = matcherService;
         this.countryMatcherService = countryMatcherService;
+        this.countryDimensionMatcherService = countryDimensionMatcherService;
         this.personalityMatcherService = personalityMatcherService;
         this.candidateMatcherService = candidateMatcherService;
         this.axisOutlierService = axisOutlierService;
@@ -102,14 +106,18 @@ public class QuizController {
         var matches = matcherService.findMatches(axes, lang);
         var personalityMatches = personalityMatcherService.findMatches(axes, lang);
         var topPersonality = personalityMatches.getFirst();
+        var topCountry = countryMatcherService.findTopMatch(axes, lang);
+        var topHistoricalCountry = countryMatcherService.findTopHistoricalMatch(axes, lang);
         return new QuizResult(
                 axes,
                 matches.getFirst(),
                 matches,
                 matcherService.findBottomMatch(axes, lang),
-                countryMatcherService.findTopMatch(axes, lang),
+                topCountry,
                 countryMatcherService.findTopMatches(axes, lang),
-                countryMatcherService.findTopHistoricalMatch(axes, lang),
+                topHistoricalCountry,
+                countryDimensionMatcherService.findAll(
+                        axes, lang, List.of(topCountry.countryId(), topHistoricalCountry.countryId())),
                 countryMatcherService.findBottomMatches(axes, lang),
                 topPersonality,
                 personalityMatches,

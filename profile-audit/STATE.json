@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-09-21T20:20:27Z",
+  "lastUpdated": "2026-09-21T20:37:55Z",
   "personality": {
-    "totalProfiles": 310,
+    "totalProfiles": 316,
     "pending": [],
     "done": [
       "lenin",
@@ -314,11 +314,17 @@
       "bresser-pereira",
       "jack-ma",
       "rong-yiren",
-      "domenico-losurdo"
+      "domenico-losurdo",
+      "espinosa",
+      "mikhail-gorbachev",
+      "arthur-schopenhauer",
+      "max-weber",
+      "jiang-zemin",
+      "hu-jintao"
     ]
   },
   "ideology": {
-    "totalProfiles": 182,
+    "totalProfiles": 191,
     "pending": [],
     "done": [
       "marxismo-leninismo",
@@ -481,7 +487,6 @@
       "mercantilismo",
       "imperialismo-pluralista",
       "imperialismo-federalista",
-      "republicanismo-aristocratico",
       "monarquismo-financeiro",
       "liberalismo-aristocratico",
       "autoritarismo-libertario",
@@ -489,7 +494,6 @@
       "militarismo-libertario",
       "zapatismo",
       "sindicalismo-revolucionario",
-      "confucionismo-politico",
       "socialismo-lassalliano",
       "liberal-desenvolvimentismo",
       "aristocratismo",
@@ -501,6 +505,17 @@
       "comunismo",
       "tecnocracia-liberal",
       "trabalhismo-de-direita",
+      "fascismo-vermelho",
+      "aristotelismo",
+      "socratismo",
+      "platonismo",
+      "confucionismo",
+      "mutualismo-proudhoniano",
+      "republicanismo-kantiano",
+      "socialismo-marxista",
+      "estoicismo",
+      "agrarianismo",
+      "socialismo-utopico",
       "tecno-comercialismo",
       "teonomismo"
     ]

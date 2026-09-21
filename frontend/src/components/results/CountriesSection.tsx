@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { CountryMatchCard } from '../CountryMatchCard';
+import { CountryDimensionCard } from './CountryDimensionCard';
 import { DistantCard } from './DistantCard';
 import { t } from '../../i18n';
-import type { CountryMatch } from '../../types/quiz';
+import type { CountryDimensionMatch, CountryMatch } from '../../types/quiz';
 
 interface CountriesSectionProps {
   current: CountryMatch;
   historical: CountryMatch;
+  dimensions: CountryDimensionMatch[];
   distant: CountryMatch[];
 }
 
-export function CountriesSection({ current, historical, distant }: CountriesSectionProps) {
+export function CountriesSection({ current, historical, dimensions, distant }: CountriesSectionProps) {
   const [tab, setTab] = useState<'current' | 'historical'>('current');
   const shown = tab === 'current' ? current : historical;
 
@@ -40,6 +42,17 @@ export function CountriesSection({ current, historical, distant }: CountriesSect
       </div>
 
       <CountryMatchCard key={shown.countryId} match={shown} />
+
+      {dimensions.length > 0 && (
+        <div className="category-block">
+          <h3>{t.dimensionsTitle}</h3>
+          <div className="dimension-grid">
+            {dimensions.map((entry) => (
+              <CountryDimensionCard key={entry.dimension} entry={entry} />
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="distant-block">
         <h3>{t.countriesDistantTitle}</h3>

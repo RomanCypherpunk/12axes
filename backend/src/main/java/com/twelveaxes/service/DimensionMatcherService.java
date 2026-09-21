@@ -24,19 +24,20 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DimensionMatcherService {
-    /** Instituicoes, poder, politica externa, imigracao, tecnologia e orientacao comercial. */
-    public static final List<String> POLITICAL_AXES =
-            List.of(
-                    "estrutura", "representacao", "poder", "diplomacia", "imigracao",
-                    "intervencao", "tecnologia", "controle", "comercio");
+    /**
+     * Instituicoes, poder, politica externa, imigracao, tecnologia e orientacao
+     * comercial.
+     */
+    public static final List<String> POLITICAL_AXES = List.of(
+            "estrutura", "representacao", "poder", "diplomacia", "imigracao",
+            "intervencao", "tecnologia", "controle", "comercio", "religiao", "economia", "moral");
 
     /** Costumes, fe, economia, imigracao, poder e tecnologia. */
-    public static final List<String> SOCIAL_AXES =
-            List.of("moral", "religiao", "economia", "imigracao", "poder", "tecnologia");
+    public static final List<String> SOCIAL_AXES = List.of("representacao", "moral", "religiao", "economia", "controle",
+            "comercio", "imigracao", "poder", "tecnologia");
 
     /** Propriedade, coordenacao da producao e abertura comercial. */
-    public static final List<String> ECONOMIC_AXES =
-            List.of("economia", "controle", "comercio");
+    public static final List<String> ECONOMIC_AXES = List.of("economia", "controle", "comercio");
 
     public static final String POLITICAL = "political";
     public static final String SOCIAL = "social";
@@ -80,8 +81,7 @@ public class DimensionMatcherService {
             String dimension,
             List<String> axisIds,
             List<AxisResult> axisResults,
-            String lang
-    ) {
+            String lang) {
         PersonalityMatch match = findBestFor(axisIds, axisResults, lang, excludedIds);
         if (match != null) {
             matches.add(new DimensionMatch(dimension, match));
@@ -93,8 +93,7 @@ public class DimensionMatcherService {
             List<String> axisIds,
             List<AxisResult> axisResults,
             String lang,
-            Set<String> excludedIds
-    ) {
+            Set<String> excludedIds) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
                 .filter(personality -> !excludedIds.contains(personality.id()))
@@ -134,8 +133,7 @@ public class DimensionMatcherService {
                 personality.imageSourceUrl(),
                 personality.imageNote(),
                 round1(scored.score()),
-                percentile
-        );
+                percentile);
     }
 
     private Map<String, Double> targetVectorFor(Personality personality) {
