@@ -184,9 +184,11 @@ def main():
     # tem de existir, caber no card e nao contradizer o vetor recem-calculado.
     if catalog == "ideology" and entrada and entrada.get("phrase") is not None:
         frase = entrada["phrase"]
-        if not frase.strip():
+        # New profiles are audited before their vector exists; NEW_PROFILE.md
+        # requires writing the phrase only after that vector has been merged.
+        if not frase.strip() and pid in vectors("ideology"):
             errors.append(f"[FRASE] {pid} sem 'phrase' — ver NEW_PROFILE.md")
-        else:
+        elif frase.strip():
             palavras = len(frase.split())
             if len(frase) > 170 or palavras > 25:
                 warnings.append(

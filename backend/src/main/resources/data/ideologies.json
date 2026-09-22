@@ -1850,7 +1850,7 @@
   {
     "id": "fascismo-vermelho",
     "name": "Fascismo Vermelho",
-    "category": "Extrema Direita",
+    "category": "Terceira Posição",
     "description": "Regime que funde a estética e a hierarquia autoritária do fascismo, com líder forte, ordem e disciplina nacional, à economia socialista de coletivização, estatização de empresas e planejamento central dos meios de produção.",
     "phrase": "Quero uma nação hierárquica e disciplinada sob líder forte, com fábricas e terras coletivizadas sob planejamento estatal total.",
     "vector": null,
@@ -1906,5 +1906,15 @@
     "vector": null,
     "countryId": "sacro-imperio-romano-germanico",
     "personalityId": "tomas-de-aquino"
+  },
+  {
+    "id": "eurasianismo",
+    "name": "Eurasianismo",
+    "category": "Terceira Posição",
+    "description": "Corrente geopolítica russa que vê a Eurásia como civilização própria e propõe um bloco continental liderado por Moscou, com autonomias regionais e comando estratégico comum, contra o atlantismo e a hegemonia dos EUA.",
+    "phrase": "Quero povos eurasiáticos autônomos em suas tradições, unidos sob direção estratégica de Moscou, com soberania econômica e setores essenciais planejados.",
+    "vector": null,
+    "countryId": "russia",
+    "personalityId": "aleksandr-dugin"
   }
 ]

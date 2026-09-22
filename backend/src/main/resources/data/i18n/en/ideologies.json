@@ -1297,7 +1297,7 @@
   {
     "id": "fascismo-vermelho",
     "name": "Red Fascism",
-    "category": "Far Right",
+    "category": "Third Position",
     "description": "Regime that fuses fascism's authoritarian aesthetics and hierarchy, with a strong leader, order and national discipline, to a socialist economy of collectivization, nationalized enterprise and central planning of the means of production.",
     "phrase": "I want a hierarchical, disciplined nation under a strong leader, with factories and land collectivized under total state planning."
   },
@@ -1335,5 +1335,12 @@
     "category": "Far Right",
     "description": "A neoreactionary current combining the thought of Thomas Aquinas with criticism of liberal democracy, egalitarianism, and progressivism. It grounds a hierarchical, traditional political order in natural law, objective morality, reason, and the common good, allowing for sovereign monarchical or centralized authority.",
     "phrase": "I want a hierarchical political order based on natural law, tradition, and the common good, under sovereign authority independent of majority will."
+  },
+  {
+    "id": "eurasianismo",
+    "name": "Eurasianism",
+    "category": "Third Position",
+    "description": "Russian geopolitical current that sees Eurasia as a distinct civilization and proposes a Moscow-led continental bloc, with regional autonomy and shared strategic command, against Atlanticism and US hegemony.",
+    "phrase": "I want Eurasian peoples autonomous in their traditions, united under Moscow's strategic direction, with economic sovereignty and planned essential industries."
   }
 ]
