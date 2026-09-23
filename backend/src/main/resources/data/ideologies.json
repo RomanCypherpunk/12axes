@@ -1163,8 +1163,8 @@
     "id": "autoritarismo-modernizador",
     "name": "Autoritarismo Modernizador",
     "category": "Direita",
-    "description": "Modelo em que um regime forte impõe de cima a modernização econômica e social, promovendo industrialização, educação e reformas rápidas enquanto restringe liberdades políticas em nome do progresso nacional.",
-    "phrase": "Quero um regime forte que imponha industrialização e reformas de cima, restringindo liberdades políticas em nome do progresso nacional.",
+    "description": "Modelo inspirado no regime de Park Chung-hee, que combina industrialização dirigida pelo Estado, crédito a empresas privadas e planejamento com repressão política anticomunista.",
+    "phrase": "Quero um Estado desenvolvimentista que direcione crédito e indústria privada, impondo ordem política em nome do progresso nacional.",
     "vector": null,
     "countryId": "coreia-do-sul",
     "personalityId": "park-chung-hee"
@@ -1212,12 +1212,12 @@
   {
     "id": "tecno-socialismo",
     "name": "Tecno-Socialismo",
-    "category": "Esquerda",
-    "description": "Modelo que usa tecnologia, automação e dados para planejar a economia de forma eficiente e democrática, buscando distribuir a abundância produzida pelas máquinas e reduzir o trabalho e as desigualdades.",
-    "phrase": "Quero uma economia planejada por dados e automação que distribua democraticamente a abundância das máquinas e reduza o trabalho.",
+    "category": "Esquerda Radical",
+    "description": "Vertente que une ditadura do proletariado ao aceleracionismo tecnológico, defendendo partido revolucionário, planejamento por dados, automação e propriedade coletiva para conduzir a transição ao comunismo.",
+    "phrase": "Quero uma sociedade sob ditadura do proletariado, com planejamento algorítmico, automação e propriedade coletiva rumo ao comunismo.",
     "vector": null,
-    "countryId": "chile",
-    "personalityId": "allende"
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "lenin"
   },
   {
     "id": "tecno-fascismo",
@@ -1332,12 +1332,12 @@
   {
     "id": "tecno-comunismo",
     "name": "Tecno-Comunismo",
-    "category": "Esquerda Radical",
-    "description": "Comunismo tecnológico que defende planejamento econômico por computadores e inteligência artificial, propriedade coletiva integral e um Estado técnico capaz de conduzir a sociedade à abundância pós-escassez.",
-    "phrase": "Quero uma sociedade de abundância pós-escassez, planejada por algoritmos e inteligência artificial, com propriedade coletiva integral.",
+    "category": "Anarquismo",
+    "description": "Vertente que combina o estágio final do comunismo à aceleração tecnológica, usando automação e IA para superar a escassez, o trabalho necessário e a propriedade privada.",
+    "phrase": "Quero uma sociedade sem classes e de abundância, onde automação e IA superem a escassez, o trabalho necessário e a propriedade privada.",
     "vector": null,
     "countryId": "uniao-sovietica-urss",
-    "personalityId": "srnicek"
+    "personalityId": "karl-marx"
   },
   {
     "id": "tecno-anarquismo",

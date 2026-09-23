@@ -815,8 +815,8 @@
     "id": "autoritarismo-modernizador",
     "name": "Modernizing Authoritarianism",
     "category": "Right",
-    "description": "Model in which a strong regime imposes economic and social modernization from above, promoting industrialization, education, and rapid reforms while restricting political freedoms in the name of national progress.",
-    "phrase": "I want a strong regime that imposes industrialization and reforms from above, restricting political freedoms in the name of national progress."
+    "description": "Model inspired by Park Chung-hee's regime, combining state-led industrialization, credit for private firms, and planning with anti-communist political repression.",
+    "phrase": "I want a developmental state directing credit and private industry, imposing political order in the name of national progress."
   },
   {
     "id": "desenvolvimentismo-de-estado",
@@ -849,9 +849,9 @@
   {
     "id": "tecno-socialismo",
     "name": "Techno-Socialism",
-    "category": "Left",
-    "description": "Model that uses technology, automation, and data to plan the economy efficiently and democratically, seeking to distribute the abundance produced by machines and reduce labor and inequalities.",
-    "phrase": "I want an economy planned by data and automation that democratically distributes the abundance of machines and reduces labor."
+    "category": "Radical Left",
+    "description": "Current that joins the dictatorship of the proletariat with technological accelerationism, defending a revolutionary party, data-driven planning, automation, and collective ownership to lead the transition to communism.",
+    "phrase": "I want a society under the dictatorship of the proletariat, with algorithmic planning, automation, and collective ownership advancing toward communism."
   },
   {
     "id": "tecno-fascismo",
@@ -933,9 +933,9 @@
   {
     "id": "tecno-comunismo",
     "name": "Techno-Communism",
-    "category": "Radical Left",
-    "description": "Technological communism that defends economic planning by computers and artificial intelligence, integral collective ownership, and a technical state capable of leading society toward post-scarcity abundance.",
-    "phrase": "I want a post-scarcity society of abundance, planned by algorithms and artificial intelligence, with full collective ownership."
+    "category": "Anarchist",
+    "description": "Current that combines the final stage of communism with technological acceleration, using automation and AI to overcome scarcity, necessary labor, and private property.",
+    "phrase": "I want a classless society of abundance, where automation and AI overcome scarcity, necessary labour, and private property."
   },
   {
     "id": "tecno-anarquismo",
