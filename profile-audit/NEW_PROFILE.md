@@ -123,7 +123,7 @@ Exemplo de objeto novo em `ideologies.json`:
 {
   "id": "exemplo-ideologia",
   "name": "Exemplo de Ideologia",
-  "category": "Centro-Esquerda",
+  "category": "Centro",
   "description": "Descrição factual de 1-3 frases sobre a ideologia, seus princípios centrais e contexto histórico/geográfico relevante.",
   "phrase": "Quero uma sociedade ... (ver seção sobre o campo phrase abaixo)",
   "countryId": "brasil",

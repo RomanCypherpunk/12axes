@@ -35,14 +35,15 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — autossuficiente, 
      "Modos de falha conhecidos" no README. Se reprovar, relance só aquele subagente dizendo qual
      checagem falhou e quais eixos estavam errados.
    - Calcular vetores e mesclar em `ideology-profiles.json`.
+   - **Revisar a categoria de cada perfil com o vetor novo.** Leia [IDEOLOGY_CATEGORY_REVIEW.md](../../../profile-audit/IDEOLOGY_CATEGORY_REVIEW.md). A categoria deve ser decidida por família doutrinária antes de posição no espectro; vetor e vizinhos são evidências, não decisão automática. Registre categoria atual/proposta, razões e contradições. Se a proposta divergir, **não altere** `ideologies.json` nem `i18n/en/ideologies.json` sem confirmação explícita do usuário.
    - **Reconferir a `phrase` de cada perfil do lote contra o vetor novo.** A reauditoria pode mover
      eixos a ponto de a frase passar a contradizê-los (ex.: a frase diz "democrática" e o novo
      `representacao` ficou em 12). Quando contradizer, reescreva a frase seguindo a seção
      "O campo `phrase`" de `NEW_PROFILE.md`, em PT e EN. Não mexa nas que continuarem coerentes.
    - Atualizar `STATE.json` (mover IDs de `pending` para `done`, atualizar `lastUpdated`).
    - Arquivar em `answers/ideology/<id>.json` (permanente, nunca apagar) e limpar temporários (mantendo só um par de exemplo em `prompts/ideology/` + `subagent-out/ideology/`).
-4. Para **cada perfil do lote** já mesclado, rode `python profile-audit/compatibility.py ideology <id>` e leia as 2 personalidades, 2 ideologias e 2 países mais compatíveis com o vetor recém-atualizado (mesmo algoritmo de `ProfileMatchScorer.java`). Nunca estimar esses matches de cabeça.
-5. Ao final, apresente para cada perfil do lote um resumo com os matches calculados no passo anterior (percentual exato) e informe quantos perfis restam em `pending`. **Pergunte explicitamente** se deve continuar para o próximo lote — nunca encadeie lotes sozinho.
+4. Para **cada perfil do lote** já mesclado, rode `python profile-audit/compatibility.py ideology <id>` e leia as 2 personalidades, 2 ideologias e 2 países mais compatíveis com o vetor recém-atualizado (mesmo algoritmo de `ProfileMatchScorer.java`). Use esses vizinhos na revisão de categoria; nunca estime os matches de cabeça.
+5. Ao final, apresente para cada perfil do lote um resumo com os matches calculados no passo anterior e o resultado da revisão de categoria (percentual exato). Informe quantos perfis restam em `pending`. **Pergunte explicitamente** se deve continuar para o próximo lote — nunca encadeie lotes sozinho.
 
 ## Regras que não podem ser quebradas
 
