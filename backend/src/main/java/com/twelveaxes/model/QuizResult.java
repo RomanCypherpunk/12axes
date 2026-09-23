@@ -12,7 +12,8 @@ import java.util.List;
  * @param matches ideologias mais compativeis, a comecar pela do topo
  * @param bottomIdeologyMatch ideologia mais distante do catalogo
  * @param topCountryMatch pais atual mais compativel
- * @param topCountryMatches paises atuais mais compativeis, a comecar pelo topo
+ * @param topCountryMatches os 3 mais compativeis do catalogo inteiro (paises e experiencias
+ *     historicas juntos, sem distincao), a comecar pelo topo
  * @param topHistoricalCountryMatch experiencia historica mais compativel
  * @param bottomCountryMatches paises mais distantes do catalogo
  * @param topPersonalityMatch personalidade mais compativel, de qualquer categoria

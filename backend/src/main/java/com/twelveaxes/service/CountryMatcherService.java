@@ -43,6 +43,14 @@ public class CountryMatcherService {
                 .toList();
     }
 
+    // Os tres mais compativeis do catalogo inteiro, sem distincao entre paises atuais e
+    // experiencias historicas. Usado no card de compartilhamento.
+    public List<CountryMatch> findTopMatchesAny(List<AxisResult> axisResults, String lang) {
+        return rankAll(axisResults, lang).stream()
+                .limit(TOP_MATCHES)
+                .toList();
+    }
+
     // Os tres menos compativeis do catalogo inteiro, em ordem crescente.
     public List<CountryMatch> findBottomMatches(List<AxisResult> axisResults, String lang) {
         List<CountryMatch> ranking = rankAll(axisResults, lang);

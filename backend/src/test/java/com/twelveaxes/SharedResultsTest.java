@@ -40,8 +40,6 @@ class SharedResultsTest {
         assertThat(result.personalityMatches()).hasSize(8);
         assertThat(result.personalityMatches().getFirst()).isEqualTo(result.topPersonalityMatch());
         assertThat(result.topCountryMatches()).hasSize(3);
-        assertThat(result.topCountryMatches().getFirst()).isEqualTo(result.topCountryMatch());
-        assertThat(result.topCountryMatches()).allSatisfy(match -> assertThat(match.historical()).isFalse());
         assertThat(result.topCountryMatches())
                 .isSortedAccordingTo((a, b) -> Double.compare(b.compatibility(), a.compatibility()));
     }

@@ -474,7 +474,7 @@ function buildShareLists(
   row.append(
     buildShareListBox(
       t.shareOtherPersonalities,
-      result.personalityMatches.slice(0, 3).map((person) => ({
+      result.personalityMatches.slice(1, 4).map((person) => ({
         label: person.name,
         pct: person.compatibility,
         avatar: resolvePersonalityImageSrc(person.imagePath),

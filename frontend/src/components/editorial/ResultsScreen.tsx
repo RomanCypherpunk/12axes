@@ -56,6 +56,12 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <AxesSection axes={axes} results={axisResults} />
 
+          <div className="e-actions">
+            <button className="e-btn e-btn-ghost" type="button" onClick={onShare} disabled={isSharing}>
+              {isSharing ? t.generatingPng : t.saveOrShare} <DownloadIcon />
+            </button>
+          </div>
+
           <SignatureSection unusual={result.mostUnusualAxis} common={result.mostCommonAxis} tension={result.axisTension} />
 
           <CountriesSection

@@ -200,6 +200,7 @@ interface Strings {
   personalityCategories: Record<PersonalityCategory, string>;
   redoAnalysis: string;
   share: string;
+  saveOrShare: string;
   generatingPng: string;
   shareFilePrefix: string;
   shareMessage: (
@@ -593,6 +594,7 @@ const pt: Strings = {
   },
   redoAnalysis: 'Refazer análise',
   share: 'Compartilhar',
+  saveOrShare: 'Salvar ou Compartilhar',
   generatingPng: 'Gerando PNG...',
   shareFilePrefix: '12axes-perfil',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
@@ -626,7 +628,7 @@ const pt: Strings = {
   shareResultLabel: 'MEU RESULTADO',
   shareMostCompatible: 'MAIS COMPATÍVEL',
   shareYourAxes: 'SEUS 12 EIXOS',
-  shareOtherPersonalities: 'PERSONALIDADES',
+  shareOtherPersonalities: 'OUTRAS PERSONALIDADES',
   shareNearbyCountries: 'PAÍSES PRÓXIMOS',
   shareFooterCta: 'DESCUBRA SEU PERFIL',
   shareFooterUrl: '12AXES.VERCEL.APP',
@@ -1022,6 +1024,7 @@ const en: Strings = {
   },
   redoAnalysis: 'Retake analysis',
   share: 'Share',
+  saveOrShare: 'Save or Share',
   generatingPng: 'Generating PNG...',
   shareFilePrefix: '12axes-profile',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
@@ -1055,7 +1058,7 @@ const en: Strings = {
   shareResultLabel: 'MY RESULT',
   shareMostCompatible: 'MOST COMPATIBLE',
   shareYourAxes: 'YOUR 12 AXES',
-  shareOtherPersonalities: 'PERSONALITIES',
+  shareOtherPersonalities: 'OTHER PERSONALITIES',
   shareNearbyCountries: 'NEARBY COUNTRIES',
   shareFooterCta: 'DISCOVER YOUR PROFILE',
   shareFooterUrl: '12AXES.VERCEL.APP',

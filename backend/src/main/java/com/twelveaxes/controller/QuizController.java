@@ -114,7 +114,7 @@ public class QuizController {
                 matches,
                 matcherService.findBottomMatch(axes, lang),
                 topCountry,
-                countryMatcherService.findTopMatches(axes, lang),
+                countryMatcherService.findTopMatchesAny(axes, lang),
                 topHistoricalCountry,
                 countryDimensionMatcherService.findAll(
                         axes, lang, List.of(topCountry.countryId(), topHistoricalCountry.countryId())),
