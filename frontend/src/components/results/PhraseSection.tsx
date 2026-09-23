@@ -1,27 +1,27 @@
 import { t } from '../../i18n';
 import type { IdeologyMatch } from '../../types/quiz';
 
-interface PhraseSectionProps {
-  match: IdeologyMatch;
-}
-
 // A frase que a ideologia do topo diria sobre a sociedade que quer. Vem curada
 // no catalogo, uma por ideologia, na estrutura cultura / politica / economia.
-export function PhraseSection({ match }: PhraseSectionProps) {
+export function PhraseSection({ match }: { match: IdeologyMatch }) {
   if (!match.phrase) {
     return null;
   }
 
-  return (
-    <section className="results-section" id="frase">
-      <div className="section-heading">
-        <h2>{t.phraseTitle}</h2>
-      </div>
+  const [before, after] = t.phraseNote(match.name).split(match.name);
 
-      <blockquote className="phrase-card">
-        <p>{match.phrase}</p>
-        <footer>{t.phraseNote(match.name)}</footer>
-      </blockquote>
-    </section>
+  return (
+    <figure className="e-panel e-phrase" data-reveal>
+      <span className="e-q" aria-hidden="true">“</span>
+      <div>
+        <p className="e-eyebrow">{t.phraseTitle}</p>
+        <blockquote>{match.phrase}</blockquote>
+        <figcaption>
+          {before}
+          <b>{match.name}</b>
+          {after}
+        </figcaption>
+      </div>
+    </figure>
   );
 }

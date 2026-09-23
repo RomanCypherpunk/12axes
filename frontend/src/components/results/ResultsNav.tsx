@@ -10,8 +10,6 @@ const SECTIONS = [
   { id: 'ideologias', label: () => t.resultsNavIdeologies },
 ];
 
-// Indice da pagina: a leitura e longa e ordenada, entao os numeros marcam
-// percurso, nao decoracao.
 export function ResultsNav() {
   const [active, setActive] = useState(SECTIONS[0].id);
 
@@ -23,7 +21,7 @@ export function ResultsNav() {
           setActive(visible[0].target.id);
         }
       },
-      { rootMargin: '-20% 0px -70% 0px' }
+      { rootMargin: '-40% 0px -55% 0px' }
     );
 
     SECTIONS.forEach(({ id }) => {
@@ -37,18 +35,14 @@ export function ResultsNav() {
   }, []);
 
   return (
-    <nav className="results-nav" aria-label={t.navOnThisPage}>
-      <p className="results-nav-title">{t.navOnThisPage}</p>
-      <ol>
-        {SECTIONS.map(({ id, label }, index) => (
-          <li key={id}>
-            <a href={`#${id}`} data-active={active === id ? 'true' : undefined}>
-              <span className="results-nav-index" aria-hidden="true">{index + 1}</span>
-              {label()}
-            </a>
-          </li>
-        ))}
-      </ol>
+    <nav className="e-panel e-toc" aria-label={t.navOnThisPage}>
+      <p>{t.navOnThisPage}</p>
+      {SECTIONS.map(({ id, label }, index) => (
+        <a key={id} href={`#${id}`} className={active === id ? 'e-on' : undefined}>
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          {label()}
+        </a>
+      ))}
     </nav>
   );
 }

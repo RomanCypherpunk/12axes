@@ -110,11 +110,23 @@ interface Strings {
   spectrumTitle: string;
   spectrumLead: string;
   faqTitle: string;
+  faqLead: string;
+  navStart: string;
+  menuAria: string;
+  roseAria: string;
+  spectrumBarAria: string;
+  footerTagline: string;
   versionsEyebrow: string;
   versionsTitle: string;
   versionsLead: string;
   variantEyebrow: string;
-  variantTitle: string;
+  variantTitlePre: string;
+  variantTitleEm: string;
+  backToStart: string;
+  depthLabel: string;
+  depthAria: (level: number) => string;
+  recommended: string;
+  formatNotes: string[];
   variantLead: string;
   quizNavAria: string;
   back: string;
@@ -217,6 +229,13 @@ interface Strings {
   shareTopMatch: string;
   shareCountry: string;
   sharePersonality: string;
+  shareResultLabel: string;
+  shareMostCompatible: string;
+  shareYourAxes: string;
+  shareOtherPersonalities: string;
+  shareNearbyCountries: string;
+  shareFooterCta: string;
+  shareFooterUrl: string;
   supportEyebrow: string;
   supportTitle: string;
   supportTitleEm: string;
@@ -268,21 +287,21 @@ const pt: Strings = {
       label: 'Curta',
       questionCount: '36 perguntas',
       description: 'Resultado rápido, ideal para uma primeira leitura do seu perfil',
-      duration: 'Aprox. 5min',
+      duration: 'Aprox. 5 min',
       action: 'Começar versão curta'
     },
     extended: {
       label: 'Completa',
       questionCount: '60 perguntas',
       description: 'Mais precisão para aproximar seu resultado dos perfis ideológicos.',
-      duration: 'Aprox. 9min',
+      duration: 'Aprox. 9 min',
       action: 'Começar versão completa'
     },
     extreme: {
       label: 'Extrema',
       questionCount: '240 perguntas',
       description: 'Saiba exatamente a síntese do seu pensamento com 100% de precisão.',
-      duration: 'Aprox. 30min',
+      duration: 'Aprox. 30 min',
       action: 'Começar versão extrema'
     }
   },
@@ -465,13 +484,25 @@ const pt: Strings = {
   spectrumTitle: 'Descubra seu espectro político',
   spectrumLead:
     'O resultado ajuda a visualizar seu posicionamento político entre esquerda, direita e centro, além de identificar formas mais radicais, autoritárias ou libertárias que não cabem nesse eixo, como extrema direita, esquerda radical, terceira posição, libertarianismo e anarquismo.',
-  faqTitle: 'FAQ - Perguntas frequentes',
+  faqTitle: 'Perguntas frequentes',
+  faqLead: 'Tudo o que as pessoas costumam perguntar antes de fazer o teste.',
+  navStart: 'Começar',
+  menuAria: 'Abrir menu',
+  roseAria: 'Rosa dos 12 eixos',
+  spectrumBarAria: 'Barra do espectro político com as oito categorias',
+  footerTagline: 'Quiz político independente · 12axes.vercel.app',
   versionsEyebrow: 'Versões',
   versionsTitle: 'Escolha a profundidade',
   versionsLead:
     'Comece pelo quiz rápido ou aprofunde sua análise para um retrato mais preciso do seu perfil ideológico. Todas as versões usam os mesmos 12 eixos e retornam o resultado imediatamente.',
   variantEyebrow: 'Escolha o formato',
-  variantTitle: 'Você quer velocidade ou precisão?',
+  variantTitlePre: 'Você quer velocidade ou ',
+  variantTitleEm: 'precisão?',
+  backToStart: 'Voltar ao início',
+  depthLabel: 'Profundidade',
+  depthAria: (level) => `Profundidade ${level} de 3`,
+  recommended: 'Recomendada',
+  formatNotes: ['Todas as versões usam os mesmos 12 eixos', 'Anônimo, sem cadastro', 'Resultado imediato'],
   variantLead:
     'A versão curta revela o resultado de forma rápida. A completa aumenta a precisão para aproximar melhor seu resultado dos perfis ideológicos.',
   quizNavAria: 'Navegação do quiz',
@@ -489,8 +520,8 @@ const pt: Strings = {
   errImage: 'Não foi possível gerar a imagem do resultado.',
   errHttp: (status) => `Erro HTTP ${status}`,
   resultsEyebrow: 'Análise concluída',
-  resultsH1Pre: 'Seu ',
-  resultsH1Em: 'perfil ideológico',
+  resultsH1Pre: 'Seu perfil ',
+  resultsH1Em: 'ideológico',
   resultsLead: (count) =>
     `Análise baseada em ${count} respostas distribuídas em 12 dimensões fundamentais da ideologia política. Confira sua posição em cada eixo e suas correspondências ideológicas.`,
   resultsLeadShared:
@@ -592,13 +623,20 @@ const pt: Strings = {
   shareTopMatch: 'Top match',
   shareCountry: 'País mais compatível',
   sharePersonality: 'Personalidade',
+  shareResultLabel: 'MEU RESULTADO',
+  shareMostCompatible: 'MAIS COMPATÍVEL',
+  shareYourAxes: 'SEUS 12 EIXOS',
+  shareOtherPersonalities: 'PERSONALIDADES',
+  shareNearbyCountries: 'PAÍSES PRÓXIMOS',
+  shareFooterCta: 'DESCUBRA SEU PERFIL',
+  shareFooterUrl: '12AXES.VERCEL.APP',
   supportEyebrow: 'Apoie o projeto',
   supportTitle: 'Apoie ',
   supportTitleEm: 'anonimamente',
   supportLead:
     'O 12 Axes é independente e gratuito. Se o teste te ajudou a entender melhor sua ideologia política, considere fazer uma doação 100% anônima em criptomoedas para manter o projeto no ar.',
   supportPrivacyNote: 'Não coletamos dados. Sua doação não é rastreada nem associada a você.',
-  supportCopy: 'Copiar endereço',
+  supportCopy: 'Copiar',
   supportCopied: 'Copiado!',
   supportCopyAria: (label) => `Copiar endereço de ${label}`,
   supportCoins: [
@@ -875,13 +913,25 @@ const en: Strings = {
   spectrumTitle: 'Discover your political spectrum',
   spectrumLead:
     'The result helps you visualize your political position between left, right, and center, and also identifies more radical, authoritarian, or libertarian forms that fall outside that axis, such as far-right, radical left, third position, libertarianism, and anarchism.',
-  faqTitle: 'FAQ - Frequently asked questions',
+  faqTitle: 'Frequently asked questions',
+  faqLead: 'Everything people usually ask before taking the test.',
+  navStart: 'Start',
+  menuAria: 'Open menu',
+  roseAria: 'Rose of the 12 axes',
+  spectrumBarAria: 'Political spectrum bar with the eight categories',
+  footerTagline: 'Independent political quiz · 12axes.vercel.app',
   versionsEyebrow: 'Versions',
   versionsTitle: 'Choose the depth',
   versionsLead:
     'Start with the quick quiz or go deeper for a more precise portrait of your ideological profile. All versions use the same 12 axes and return the result immediately.',
   variantEyebrow: 'Choose the format',
-  variantTitle: 'Do you want speed or precision?',
+  variantTitlePre: 'Do you want speed or ',
+  variantTitleEm: 'precision?',
+  backToStart: 'Back to start',
+  depthLabel: 'Depth',
+  depthAria: (level) => `Depth ${level} of 3`,
+  recommended: 'Recommended',
+  formatNotes: ['All versions use the same 12 axes', 'Anonymous, no sign-up', 'Instant result'],
   variantLead:
     'The short version reveals the result quickly. The full version increases precision to bring your result closer to the ideological profiles.',
   quizNavAria: 'Quiz navigation',
@@ -899,8 +949,8 @@ const en: Strings = {
   errImage: 'Could not generate the result image.',
   errHttp: (status) => `HTTP error ${status}`,
   resultsEyebrow: 'Analysis complete',
-  resultsH1Pre: 'Your ',
-  resultsH1Em: 'ideological profile',
+  resultsH1Pre: 'Your ideological ',
+  resultsH1Em: 'profile',
   resultsLead: (count) =>
     `Analysis based on ${count} answers distributed across 12 fundamental dimensions of political ideology. Check your position on each axis and your ideological matches.`,
   resultsLeadShared:
@@ -1002,13 +1052,20 @@ const en: Strings = {
   shareTopMatch: 'Top match',
   shareCountry: 'Most compatible country',
   sharePersonality: 'Personality',
+  shareResultLabel: 'MY RESULT',
+  shareMostCompatible: 'MOST COMPATIBLE',
+  shareYourAxes: 'YOUR 12 AXES',
+  shareOtherPersonalities: 'PERSONALITIES',
+  shareNearbyCountries: 'NEARBY COUNTRIES',
+  shareFooterCta: 'DISCOVER YOUR PROFILE',
+  shareFooterUrl: '12AXES.VERCEL.APP',
   supportEyebrow: 'Support the project',
   supportTitle: 'Support ',
   supportTitleEm: 'anonymously',
   supportLead:
     '12 Axes is independent and free. If the quiz helped you better understand your political ideology, consider making a 100% anonymous crypto donation to help keep the project running.',
   supportPrivacyNote: "We don't collect data. Your donation isn't tracked or linked to you.",
-  supportCopy: 'Copy address',
+  supportCopy: 'Copy',
   supportCopied: 'Copied!',
   supportCopyAria: (label) => `Copy ${label} address`,
   supportCoins: [

@@ -113,5 +113,5 @@ function readableInk(hexColor: string) {
   const green = Number.parseInt(value.slice(2, 4), 16);
   const blue = Number.parseInt(value.slice(4, 6), 16);
   const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
-  return luminance > 0.62 ? '#0B1020' : '#ffffff';
+  return luminance > 0.62 ? '#101010' : '#ffffff';
 }

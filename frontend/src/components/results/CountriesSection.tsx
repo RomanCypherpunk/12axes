@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { CountryMatchCard } from '../CountryMatchCard';
-import { CountryDimensionCard } from './CountryDimensionCard';
-import { DistantCard } from './DistantCard';
 import { t } from '../../i18n';
 import type { CountryDimensionMatch, CountryMatch } from '../../types/quiz';
+import { resolveCountryFlagSrc } from '../../utils/countryFlags';
+import { SafeImg } from '../editorial/primitives';
+import { DimList, FarList, MatchHero, Tabs } from './parts';
 
 interface CountriesSectionProps {
   current: CountryMatch;
@@ -12,61 +12,75 @@ interface CountriesSectionProps {
   distant: CountryMatch[];
 }
 
+function caption(match: CountryMatch): string {
+  return match.historical && match.period ? match.period : match.category;
+}
+
+function flagAlt(match: CountryMatch): string {
+  return t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.name);
+}
+
 export function CountriesSection({ current, historical, dimensions, distant }: CountriesSectionProps) {
   const [tab, setTab] = useState<'current' | 'historical'>('current');
   const shown = tab === 'current' ? current : historical;
 
   return (
-    <section className="results-section" id="paises">
-      <div className="section-heading">
-        <h2>{t.countriesSectionTitle}</h2>
-      </div>
+    <section className="e-panel" id="paises" data-reveal>
+      <h2>{t.countriesSectionTitle}</h2>
+      <Tabs
+        label={t.countriesSectionTitle}
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: 'current', label: t.countryCurrentTab },
+          { value: 'historical', label: t.countryHistoricalTab }
+        ]}
+      />
 
-      <div className="results-tabs" role="tablist" aria-label={t.countriesSectionTitle}>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={tab === 'current'}
-          onClick={() => setTab('current')}
-        >
-          {t.countryCurrentTab}
-        </button>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={tab === 'historical'}
-          onClick={() => setTab('historical')}
-        >
-          {t.countryHistoricalTab}
-        </button>
-      </div>
+      <MatchHero
+        key={shown.countryId}
+        visual={
+          <SafeImg
+            className="e-flagbig"
+            src={resolveCountryFlagSrc(shown.flagPath)}
+            alt={flagAlt(shown)}
+            fallback={t.flagUnavailable}
+          />
+        }
+        kicker={t.countryKicker}
+        compatibility={shown.compatibility}
+        name={shown.name}
+        tags={[shown.category, shown.historical ? shown.period : ''].filter(Boolean)}
+        description={shown.description}
+      />
 
-      <CountryMatchCard key={shown.countryId} match={shown} />
-
-      {dimensions.length > 0 && (
-        <div className="category-block">
-          <h3>{t.dimensionsTitle}</h3>
-          <div className="dimension-grid">
-            {dimensions.map((entry) => (
-              <CountryDimensionCard key={entry.dimension} entry={entry} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      <div className="distant-block">
-        <h3>{t.countriesDistantTitle}</h3>
-        <div className="distant-grid">
-          {distant.map((match) => (
-            <DistantCard
-              key={match.countryId}
-              name={match.name}
-              caption={match.historical && match.period ? match.period : match.category}
-              compatibility={match.compatibility}
+      <DimList
+        items={dimensions.map(({ dimension, match }) => ({
+          key: dimension,
+          visual: (
+            <SafeImg
+              className="e-flagimg"
+              src={resolveCountryFlagSrc(match.flagPath)}
+              alt={flagAlt(match)}
+              fallback={t.flagUnavailable}
             />
-          ))}
-        </div>
-      </div>
+          ),
+          label: t.dimensionLabels[dimension],
+          name: match.name,
+          caption: caption(match),
+          compatibility: match.compatibility
+        }))}
+      />
+
+      <FarList
+        title={t.countriesDistantTitle}
+        items={distant.map((match) => ({
+          key: match.countryId,
+          name: match.name,
+          caption: caption(match),
+          compatibility: match.compatibility
+        }))}
+      />
     </section>
   );
 }

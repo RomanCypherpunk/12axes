@@ -1,49 +1,20 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions, selectExtensionQuestions } from './utils/quizSelection';
-import { AxisIcon } from './components/AxisIcon';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
-import { resolveCountryFlagSrc } from './utils/countryFlags';
-import { resolvePersonalityImageSrc } from './utils/personalityImage';
-import { SupportSection } from './components/SupportSection';
-import { ResultsNav } from './components/results/ResultsNav';
-import { CountriesSection } from './components/results/CountriesSection';
-import { PersonalitiesSection } from './components/results/PersonalitiesSection';
-import { IdeologiesSection } from './components/results/IdeologiesSection';
-import { CountUpValue } from './components/results/CountUpValue';
-import { SignatureSection } from './components/results/SignatureSection';
-import { PhraseSection } from './components/results/PhraseSection';
-import { AreasSection } from './components/results/AreasSection';
+import { HomeScreen } from './components/editorial/HomeScreen';
+import { VariantScreen } from './components/editorial/VariantScreen';
+import { ResultsScreen } from './components/editorial/ResultsScreen';
+import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import ElectionApp from './election/ElectionApp';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'extend' | 'results';
 type ExtendChoice = 'yes' | 'no';
-type QuizFormatOption = {
-  variant: QuizVariant;
-  label: string;
-  questionCount: string;
-  description: string;
-  duration: string;
-  action: string;
-  featured?: boolean;
-};
 
-const AxisResultBar = lazy(() =>
-  import('./components/AxisResultBar').then((module) => ({ default: module.AxisResultBar }))
-);
-const CountryMatchCard = lazy(() =>
-  import('./components/CountryMatchCard').then((module) => ({ default: module.CountryMatchCard }))
-);
-const PersonalityMatchCard = lazy(() =>
-  import('./components/PersonalityMatchCard').then((module) => ({ default: module.PersonalityMatchCard }))
-);
-const IdeologyMatchCard = lazy(() =>
-  import('./components/IdeologyMatchCard').then((module) => ({ default: module.IdeologyMatchCard }))
-);
 const ProgressHeader = lazy(() =>
   import('./components/ProgressHeader').then((module) => ({ default: module.ProgressHeader }))
 );
@@ -120,20 +91,6 @@ function QuizSkeleton({ message }: { message: string }) {
   );
 }
 
-const QUIZ_FORMATS: QuizFormatOption[] = [
-  { variant: 'short', ...t.formats.short },
-  { variant: 'extended', ...t.formats.extended, featured: true },
-  { variant: 'extreme', ...t.formats.extreme }
-];
-
-const HERO_LABELS = t.heroLabels;
-
-const AXIS_EXPLANATIONS: Record<string, string> = t.axisExplanations;
-
-const SPECTRUM_ITEMS = t.spectrumItems;
-
-const FAQ_ITEMS = t.faqItems;
-
 function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPayload {
   return variant === 'extreme' ? selectAllQuestionsBalanced(payload) : selectAndBalanceQuestions(payload);
 }
@@ -142,14 +99,6 @@ function buildQuizForVariant(payload: QuizPayload, variant: QuizVariant): QuizPa
 function randomExampleIndex(length: number): number {
   return Math.floor(Math.random() * length);
 }
-
-const TONE_RED_AXES = new Set([
-  'imigracao',
-  'intervencao',
-  'controle',
-  'religiao',
-  'tecnologia'
-]);
 
 function MainApp() {
   const [quiz, setQuiz] = useState<QuizPayload | null>(null);
@@ -170,6 +119,7 @@ function MainApp() {
   const [error, setError] = useState<string | null>(null);
   const [isExtended, setIsExtended] = useState(false);
   const [extendChoice, setExtendChoice] = useState<ExtendChoice | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
   // Pool completo (240 perguntas) recebido do backend, guardado para poder
@@ -272,11 +222,21 @@ function MainApp() {
     () => quiz?.axes ?? HOME_AXES.map((axis) => ({ ...axis, ...(t.homeAxes[axis.id] ?? {}) })),
     [quiz]
   );
-
   useEffect(() => {
     document.documentElement.lang = t.htmlLang;
     document.title = t.docTitle;
   }, []);
+
+  // Cada tela é uma página própria: sem isso a tela nova abre na altura em que
+  // o usuário estava rolando a anterior.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [screen]);
+
+  function goHome() {
+    setIsMenuOpen(false);
+    setScreen('home');
+  }
 
   function resetSharedUrl() {
     if (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') === '/results') {
@@ -493,7 +453,6 @@ function MainApp() {
         import('./utils/shareCard')
       ]);
       const {
-        SHARE_COLORS,
         SHARE_HEIGHT,
         SHARE_WIDTH,
         buildShareCard,
@@ -501,7 +460,7 @@ function MainApp() {
         prepareImagesForExport
       } = shareCard;
 
-      const { stage: builtStage, target } = buildShareCard(result, exportQuiz);
+      const { stage: builtStage, target, backgroundColor } = buildShareCard(result, exportQuiz);
       stage = builtStage;
       document.body.appendChild(stage);
       await prepareImagesForExport(target);
@@ -509,7 +468,7 @@ function MainApp() {
       let dataUrl = await toPng(target, {
         width: SHARE_WIDTH,
         height: SHARE_HEIGHT,
-        backgroundColor: SHARE_COLORS.soft,
+        backgroundColor,
         pixelRatio: 1,
         cacheBust: false,
         skipFonts: true
@@ -559,364 +518,76 @@ function MainApp() {
   }
 
   return (
-    <main className="app-shell" data-screen={screen}>
+    <div className="app-shell" data-screen={screen}>
       <a className="skip-link" href="#conteudo-principal">
         {t.skipToContent}
       </a>
-      <header className="site-header">
-        <button className="brand-lockup" type="button" onClick={() => setScreen('home')} aria-label={t.backToStartAria}>
-          <span className="brand-num">12</span>
-          <span className="brand-word">axes</span>
-        </button>
-        {screen === 'home' && (
-          <nav className="home-nav" aria-label={t.mainNavAria}>
-            <a href="#como-funciona">{t.navHow}</a>
-            <a href="#guia-eixos">{t.navAxes}</a>
-            <a href="#espectro-politico">{t.navSpectrum}</a>
-            <a href="#faq">{t.navFaq}</a>
-            <a className="nav-support-link" href="#apoie">{t.navSupport}</a>
-            <button
-              className="lang-toggle"
-              type="button"
-              onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
-              aria-label={t.langToggleAria}
-            >
-              {t.langToggleLabel}
+      <header className="ed e-nav">
+        <div className="e-wrap">
+          <Logo onClick={goHome} />
+          {screen === 'home' && (
+            <>
+              <nav
+                className={isMenuOpen ? 'e-nav-links e-open' : 'e-nav-links'}
+                aria-label={t.mainNavAria}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <a href="#como-funciona">{t.navHow}</a>
+                <a href="#guia-eixos">{t.navAxes}</a>
+                <a href="#espectro-politico">{t.navSpectrum}</a>
+                <a href="#faq">{t.navFaq}</a>
+                <a href="#apoie">{t.navSupport}</a>
+                <button
+                  className="e-lang"
+                  type="button"
+                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
+                  aria-label={t.langToggleAria}
+                >
+                  {t.langToggleLabel}
+                </button>
+              </nav>
+              <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
+                {t.navStart} <ArrowIcon />
+              </button>
+              <button
+                className="e-menu-btn"
+                type="button"
+                aria-label={t.menuAria}
+                aria-expanded={isMenuOpen}
+                onClick={() => setIsMenuOpen((open) => !open)}
+              >
+                <span />
+                <span />
+                <span />
+              </button>
+            </>
+          )}
+          {screen === 'variant' && (
+            <button className="e-back" type="button" onClick={goHome}>
+              <ArrowIcon />
+              {t.backToStart}
             </button>
-          </nav>
-        )}
-        {(screen === 'quiz' || screen === 'extend' || screen === 'results') && (
-          <button className="primary-button header-cta" type="button" onClick={() => void startQuiz(selectedVariant)}>
-            {screen === 'results' ? t.redoQuiz : t.restartQuiz}
-            <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14" />
-              <path d="m13 6 6 6-6 6" />
-            </svg>
-          </button>
-        )}
+          )}
+          {(screen === 'quiz' || screen === 'extend' || screen === 'results') && (
+            <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={() => void startQuiz(selectedVariant)}>
+              {screen === 'results' ? t.redoQuiz : t.restartQuiz} <ArrowIcon />
+            </button>
+          )}
+        </div>
       </header>
       <span id="conteudo-principal" className="skip-target" tabIndex={-1} />
 
       {screen === 'home' && (
-        <section className="home-layout" id="inicio">
-          <div className="home-grid">
-            <div className="intro-panel">
-              <span className="intro-eyebrow fade-up d-1">
-                <strong>{t.heroEyebrow}</strong>
-              </span>
-              <h1 className="fade-up d-2">
-                {t.h1Pre}<em>{t.h1Em}</em>{t.h1Post}
-              </h1>
-              <p className="intro-lead fade-up d-3">
-                {t.introLead}
-              </p>
-              <div className="intro-actions fade-up d-4">
-                <button className="primary-button hero-cta" type="button" onClick={openVariantChooser}>
-                  {t.startQuiz}
-                  <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14" />
-                    <path d="m13 6 6 6-6 6" />
-                  </svg>
-                </button>
-                <a className="secondary-button" href="#guia-eixos">
-                  {t.seeAxes}
-                </a>
-              </div>
-              <div className="intro-meta fade-up d-5">
-                {HERO_LABELS.map((label) => (
-                  <span className="intro-meta-item" key={label}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12l5 5L20 7" />
-                    </svg>
-                    {label}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="canvas-panel hero-result-teaser fade-up d-3" id="eixos">
-              {currentExample && (
-              <div className="hero-teaser-fade">
-                <div className="hero-teaser-card">
-                  <div className="hero-teaser-card-head">
-                    <div className="hero-teaser-tag">
-                      <span />
-                      {t.heroTeaserTag}
-                    </div>
-                    <span className="hero-teaser-category">{currentExample.ideology.category}</span>
-                  </div>
-                  <div className="hero-teaser-top">
-                    <div
-                      className="compatibility-ring hero-teaser-ring"
-                      style={{ ['--pct' as string]: currentExample.ideology.compatibility }}
-                    >
-                      <span>
-                        {currentExample.ideology.compatibility}%<small>{t.heroTeaserLabel}</small>
-                      </span>
-                    </div>
-                    <div className="hero-teaser-text">
-                      <strong>{currentExample.ideology.name}</strong>
-                      <p>{currentExample.ideology.description}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="hero-teaser-thumbs">
-                  <div className="hero-teaser-thumb">
-                    <div className="hero-teaser-thumb-frame">
-                      <img
-                        src={resolveCountryFlagSrc(currentExample.country.flagPath)}
-                        alt={currentExample.country.name}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="hero-teaser-thumb-body">
-                      <div className="hero-teaser-thumb-head">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <circle cx="12" cy="12" r="9" />
-                          <path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z" />
-                        </svg>
-                        {t.countryKicker}
-                      </div>
-                      <strong>{currentExample.country.name}</strong>
-                      <p>{currentExample.country.description}</p>
-                      <div className="hero-teaser-thumb-meter">
-                        <div className="hero-teaser-thumb-meter-track">
-                          <div
-                            className="hero-teaser-thumb-meter-fill"
-                            style={{ width: `${currentExample.country.compatibility}%` }}
-                          />
-                        </div>
-                        <strong>{currentExample.country.compatibility}%</strong>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="hero-teaser-thumb">
-                    <div className="hero-teaser-thumb-frame is-portrait">
-                      <img
-                        src={resolvePersonalityImageSrc(currentExample.personality.imagePath)}
-                        alt={currentExample.personality.name}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="hero-teaser-thumb-body">
-                      <div className="hero-teaser-thumb-head">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <circle cx="12" cy="8" r="4" />
-                          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                        </svg>
-                        {t.personalityKicker}
-                      </div>
-                      <strong>{currentExample.personality.name}</strong>
-                      <p>{currentExample.personality.description}</p>
-                      <div className="hero-teaser-thumb-meter">
-                        <div className="hero-teaser-thumb-meter-track">
-                          <div
-                            className="hero-teaser-thumb-meter-fill"
-                            style={{ width: `${currentExample.personality.compatibility}%` }}
-                          />
-                        </div>
-                        <strong>{currentExample.personality.compatibility}%</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              )}
-            </div>
-          </div>
-
-          {isHomeSeoReady && (
-          <div className="home-seo">
-            <section className="seo-block" data-reveal aria-labelledby="descubra">
-              <div className="section-heading">
-                <span className="eyebrow">{t.discoveryEyebrow}</span>
-                <h2 id="descubra">{t.discoveryTitle}</h2>
-                <p>{t.discoveryLead}</p>
-              </div>
-              <div className="discovery-grid">
-                {t.discoveryItems.map((item) => (
-                  <article className="discovery-card" key={item.title}>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="seo-block example-result" data-reveal aria-labelledby="exemplo-resultado">
-              <div className="section-heading">
-                <span className="eyebrow">{t.exampleEyebrow}</span>
-                <h2 id="exemplo-resultado">{t.exampleTitle}</h2>
-                <p>{t.exampleCaption}</p>
-              </div>
-              {currentExample && (
-              <Suspense fallback={null}>
-                <div className="example-result-fade">
-                  <IdeologyMatchCard match={currentExample.ideology} featured />
-                  <div className="axis-rows example-axis-rows">
-                    {currentExample.axes.map((axisResult) => {
-                      const axis = homeAxes.find((candidate) => candidate.id === axisResult.axisId);
-                      return axis ? <AxisResultBar key={axisResult.axisId} axis={axis} result={axisResult} /> : null;
-                    })}
-                  </div>
-                  <CountryMatchCard match={currentExample.country} />
-                  <PersonalityMatchCard match={currentExample.personality} />
-                </div>
-              </Suspense>
-              )}
-              <div className="example-result-cta">
-                <button className="primary-button" type="button" onClick={openVariantChooser}>
-                  {t.exampleCta}
-                  <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14" />
-                    <path d="m13 6 6 6-6 6" />
-                  </svg>
-                </button>
-              </div>
-            </section>
-
-            <section className="seo-block" data-reveal aria-labelledby="como-funciona">
-              <div className="section-heading">
-                <span className="eyebrow">{t.howEyebrow}</span>
-                <h2 id="como-funciona">{t.howTitle}</h2>
-                <p>{t.howLead}</p>
-              </div>
-              <div className="step-grid">
-                {t.steps.map((step, index) => (
-                  <article className="step-card" key={step.title}>
-                    <span className="step-num">{index + 1}</span>
-                    <h3>{step.title}</h3>
-                    <p>{step.text}</p>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="seo-block" data-reveal aria-labelledby="guia-eixos">
-              <div className="section-heading">
-                <span className="eyebrow">{t.axesGuideEyebrow}</span>
-                <h2 id="guia-eixos">{t.axesGuideTitle}</h2>
-                <p>{t.axesGuideLead}</p>
-              </div>
-              <div className="axis-guide-grid">
-                {homeAxes.map((axis, index) => (
-                  <article
-                    key={axis.id}
-                    className={`axis-guide-card${TONE_RED_AXES.has(axis.id) ? ' tone-red' : ''}`}
-                  >
-                    <span className="axis-guide-index">{String(index + 1).padStart(2, '0')}</span>
-                    <span className="axis-guide-icon" aria-hidden="true">
-                      <AxisIcon id={axis.id} />
-                    </span>
-                    <div className="axis-guide-copy">
-                      <h3>{axis.label}: {axis.leftPole} × {axis.rightPole}</h3>
-                      <p>{AXIS_EXPLANATIONS[axis.id]}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="seo-block" data-reveal aria-labelledby="espectro-politico">
-              <div className="section-heading">
-                <span className="eyebrow">{t.spectrumEyebrow}</span>
-                <h2 id="espectro-politico">{t.spectrumTitle}</h2>
-                <p>{t.spectrumLead}</p>
-              </div>
-              <div className="spectrum-grid">
-                {SPECTRUM_ITEMS.map((item) => (
-                  <article className={`spectrum-card tone-${item.tone}`} key={item.id}>
-                    <span className="spectrum-dot" aria-hidden="true" />
-                    <h3>{item.label}</h3>
-                    <p>{item.description}</p>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="seo-block" data-reveal aria-labelledby="faq">
-              <div className="section-heading">
-                <span className="eyebrow">{t.navFaq}</span>
-                <h2 id="faq">{t.faqTitle}</h2>
-              </div>
-              <div className="faq-list">
-                {FAQ_ITEMS.map((item) => (
-                  <details className="faq-item" key={item.question}>
-                    <summary>{item.question}</summary>
-                    <p>{item.answer}</p>
-                  </details>
-                ))}
-              </div>
-            </section>
-
-            <section className="seo-block final-cta" data-reveal aria-labelledby="versoes-teste">
-              <div className="section-heading">
-                <span className="eyebrow">{t.versionsEyebrow}</span>
-                <h2 id="versoes-teste">{t.versionsTitle}</h2>
-                <p>{t.versionsLead}</p>
-              </div>
-              <div className="home-format-grid">
-                {QUIZ_FORMATS.map((format) => (
-                  <article className="home-format-card" key={format.variant}>
-                    <span>{format.label}</span>
-                    <h3>{format.questionCount}</h3>
-                    <p>{format.description}</p>
-                    <strong>{format.duration}</strong>
-                    <button
-                      className="primary-button"
-                      type="button"
-                      onClick={() => void startQuiz(format.variant)}
-                    >
-                      {format.action}
-                      <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M5 12h14" />
-                        <path d="m13 6 6 6-6 6" />
-                      </svg>
-                    </button>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <SupportSection />
-          </div>
-          )}
-        </section>
+        <HomeScreen
+          example={currentExample}
+          axes={homeAxes}
+          showBelowFold={isHomeSeoReady}
+          onOpenChooser={openVariantChooser}
+          onStart={(variant) => void startQuiz(variant)}
+        />
       )}
 
-      {screen === 'variant' && (
-        <section className="variant-layout" aria-labelledby="variant-title">
-          <div className="variant-heading fade-up d-1">
-            <span className="eyebrow">{t.variantEyebrow}</span>
-            <h1 id="variant-title">{t.variantTitle}</h1>
-            <p>{t.variantLead}</p>
-          </div>
-
-          <div className="variant-grid">
-            {QUIZ_FORMATS.map((format, index) => (
-              <button
-                key={format.variant}
-                className={`variant-card fade-up d-${index + 2}${format.featured ? ' featured' : ''}`}
-                type="button"
-                onClick={() => void startQuiz(format.variant)}
-              >
-                <span className="variant-card-kicker">{format.label}</span>
-                <span className="variant-card-title">{format.questionCount}</span>
-                <span className="variant-card-description">{format.description}</span>
-                <span className="variant-card-meta">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v5l3 2" />
-                  </svg>
-                  {format.duration}
-                </span>
-                <span className="variant-card-action">{format.action}</span>
-              </button>
-            ))}
-          </div>
-          {error && <p className="inline-error" role="alert">{error}</p>}
-        </section>
-      )}
+      {screen === 'variant' && <VariantScreen error={error} onStart={(variant) => void startQuiz(variant)} />}
 
       {screen === 'quiz' && quiz && currentQuestion && (
         <Suspense
@@ -1051,129 +722,20 @@ function MainApp() {
       )}
 
       {screen === 'results' && result && (quiz || isSharedView) && (
-        <Suspense
-          fallback={(
-            <section className="results-layout">
-              <QuizSkeleton message={t.loadingResult} />
-            </section>
-          )}
-        >
-        <section className="results-layout" id="resultados">
-          <header className="results-hero" data-orchestrate="true">
-            <div className="results-hero-text">
-              <span className="results-eyebrow">{t.resultsEyebrow}</span>
-              <h1>
-                {t.resultsH1Pre}<em>{t.resultsH1Em}</em>
-              </h1>
-              <p>{quiz ? t.resultsLead(quiz.questions.length) : t.resultsLeadShared}</p>
-            </div>
-            <aside className="results-meta-card" aria-label={t.resultsSummaryAria}>
-              {quiz && (
-                <div className="results-meta-row">
-                  <span>{t.metaAnswered}</span>
-                  <strong>{quiz.questions.length}</strong>
-                </div>
-              )}
-              <div className="results-meta-row">
-                <span>{t.metaAxes}</span>
-                <strong>12</strong>
-              </div>
-              <div className="results-meta-row">
-                <span>{t.metaTop}</span>
-                <strong><CountUpValue value={result.topMatch.compatibility} delayMs={420} /></strong>
-              </div>
-            </aside>
-          </header>
-
-          <div className="results-layout-with-nav">
-            <div className="results-main">
-              <IdeologyMatchCard match={result.topMatch} featured />
-
-              <div data-reveal>
-                <PhraseSection match={result.topMatch} />
-              </div>
-
-              <section className="results-section results-section-axes" id="eixos-resultado" data-reveal>
-                <div className="section-heading">
-                  <span className="eyebrow">{t.axesSectionEyebrow}</span>
-                  <h2>{t.axesSectionTitle}</h2>
-                </div>
-                <div className="axis-rows">
-                  {(quiz?.axes ?? homeAxes).map((axis) => {
-                    const axisResult = resultByAxis.get(axis.id);
-                    return axisResult ? <AxisResultBar key={axis.id} axis={axis} result={axisResult} /> : null;
-                  })}
-                </div>
-              </section>
-
-              <div data-reveal>
-                <SignatureSection
-                  unusual={result.mostUnusualAxis}
-                  common={result.mostCommonAxis}
-                  tension={result.axisTension}
-                />
-              </div>
-
-              <div data-reveal>
-                <CountriesSection
-                  current={result.topCountryMatch}
-                  historical={result.topHistoricalCountryMatch}
-                  dimensions={result.countryDimensionMatches}
-                  distant={result.bottomCountryMatches}
-                />
-              </div>
-
-              <div data-reveal>
-                <PersonalitiesSection
-                  top={result.topPersonalityMatch}
-                  dimensions={result.dimensionMatches}
-                  distant={result.bottomPersonalityMatches}
-                />
-              </div>
-
-              <div data-reveal>
-                <AreasSection
-                  generalMatches={result.personalityMatches}
-                  areaMatches={result.categoryBestMatches}
-                />
-              </div>
-
-              <div data-reveal>
-                <IdeologiesSection
-                  others={result.matches.slice(1, 4)}
-                  distant={result.bottomIdeologyMatch}
-                />
-              </div>
-
-            </div>
-
-            <ResultsNav />
-          </div>
-
-          <div className="results-cta" data-export-hidden="true">
-            <button className="primary-button" type="button" onClick={() => void startQuiz(selectedVariant)}>
-              {t.redoAnalysis}
-              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 12a9 9 0 1 1-3-6.7" />
-                <path d="M21 4v5h-5" />
-              </svg>
-            </button>
-            <button className="secondary-button" type="button" onClick={() => void downloadResultsPng()} disabled={isSharing}>
-              {isSharing ? t.generatingPng : t.share}
-              <svg className="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3v12" />
-                <path d="m7 10 5 5 5-5" />
-                <path d="M5 21h14" />
-              </svg>
-            </button>
-            {error && <p className="inline-error" role="alert">{error}</p>}
-          </div>
-
-          <SupportSection />
-        </section>
-        </Suspense>
+        <ResultsScreen
+          result={result}
+          quiz={quiz}
+          axes={homeAxes}
+          axisResults={resultByAxis}
+          isSharing={isSharing}
+          error={error}
+          onRedo={() => void startQuiz(selectedVariant)}
+          onShare={() => void downloadResultsPng()}
+        />
       )}
-    </main>
+
+      {screen !== 'quiz' && screen !== 'extend' && <SiteFooter />}
+    </div>
   );
 }
 

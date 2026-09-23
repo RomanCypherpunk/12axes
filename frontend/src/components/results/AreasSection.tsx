@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { CategoryPersonalityCard } from './CategoryPersonalityCard';
 import { t } from '../../i18n';
 import type { PersonalityMatch } from '../../types/quiz';
+import { CountUpValue } from './CountUpValue';
+import { Portrait } from './PersonalitiesSection';
+import { Tabs } from './parts';
 
 interface AreasSectionProps {
   generalMatches: PersonalityMatch[];
@@ -17,25 +19,32 @@ export function AreasSection({ generalMatches, areaMatches }: AreasSectionProps)
   }
 
   return (
-    <section className="results-section" id="areas">
-      <div className="section-heading">
-        <h2>{tab === 'general' ? t.areasGeneralTitle : t.areasSectionTitle}</h2>
-      </div>
-
-      <div className="results-tabs" role="tablist" aria-label={t.areasTabsAria}>
-        <button type="button" role="tab" aria-selected={tab === 'general'} onClick={() => setTab('general')}>
-          {t.areasGeneralTab}
-        </button>
-        <button type="button" role="tab" aria-selected={tab === 'area'} onClick={() => setTab('area')}>
-          {t.areasByAreaTab}
-        </button>
-      </div>
-
-      <div className="category-grid">
+    <section className="e-panel" id="areas" data-reveal>
+      <h2>{tab === 'general' ? t.areasGeneralTitle : t.areasSectionTitle}</h2>
+      <Tabs
+        label={t.areasTabsAria}
+        value={tab}
+        onChange={setTab}
+        options={[
+          { value: 'general', label: t.areasGeneralTab },
+          { value: 'area', label: t.areasByAreaTab }
+        ]}
+      />
+      <ul className="e-near-grid">
         {matches.map((match) => (
-          <CategoryPersonalityCard key={match.personalityId} match={match} />
+          <li className="e-near" key={match.personalityId}>
+            <Portrait match={match} className="" />
+            <div>
+              <span className="e-tag e-tag-neutral">{t.personalityCategories[match.category]}</span>
+              <strong>{match.name}</strong>
+              <small>{match.role}</small>
+              <span className="e-pctc">
+                <CountUpValue value={match.compatibility} decimals={0} />
+              </span>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

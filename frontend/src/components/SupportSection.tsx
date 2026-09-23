@@ -1,35 +1,23 @@
 import { useState } from 'react';
 import { t } from '../i18n';
 import { copyToClipboard } from '../utils/clipboard';
-import { BitcoinIcon, EthereumIcon, LightningIcon, MoneroIcon } from './CryptoIcons';
 
-const COIN_ICONS: Record<string, () => JSX.Element> = {
-  btc: BitcoinIcon,
-  lightning: LightningIcon,
-  eth: EthereumIcon,
-  xmr: MoneroIcon
+const COIN_SYMBOLS: Record<string, string> = {
+  btc: '₿',
+  lightning: '⚡',
+  eth: 'Ξ',
+  xmr: 'ɱ'
 };
 
-const ADDRESS_HEAD = 8;
-const ADDRESS_TAIL = 6;
-const EMAIL_MAX = 22;
-
-function truncateAddress(address: string) {
-  if (address.includes('@')) {
-    return address.length > EMAIL_MAX ? `${address.slice(0, EMAIL_MAX)}…` : address;
-  }
-  if (address.length <= ADDRESS_HEAD + ADDRESS_TAIL + 1) {
-    return address;
-  }
-  return `${address.slice(0, ADDRESS_HEAD)}…${address.slice(-ADDRESS_TAIL)}`;
+interface SupportSectionProps {
+  variant: 'home' | 'panel';
 }
 
-export function SupportSection() {
+export function SupportSection({ variant }: SupportSectionProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   async function handleCopy(id: string, address: string) {
-    const ok = await copyToClipboard(address);
-    if (!ok) {
+    if (!(await copyToClipboard(address))) {
       return;
     }
     setCopiedId(id);
@@ -38,64 +26,64 @@ export function SupportSection() {
     }, 1800);
   }
 
-  return (
-    <section className="support-section" id="apoie" aria-labelledby="apoie-titulo">
-      <div className="support-heading">
-        <span className="eyebrow">{t.supportEyebrow}</span>
+  const box = (
+    <>
+      <div>
+        <p className="e-eyebrow">{t.supportEyebrow}</p>
         <h2 id="apoie-titulo">
           {t.supportTitle}
-          <em>{t.supportTitleEm}</em>
+          <span className="e-accent">{t.supportTitleEm}</span>
         </h2>
-        <p>{t.supportLead}</p>
-        <div className="support-privacy-note">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="5" y="11" width="14" height="9" rx="2" />
-            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+        <p className="e-lead">{t.supportLead}</p>
+        <p className="e-privacy">
+          <svg className="e-ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 5 6v5c0 4.2 2.7 7.9 7 10 4.3-2.1 7-5.8 7-10V6l-7-3Z" />
+            <path d="m9 12 2 2 4-5" />
           </svg>
           {t.supportPrivacyNote}
-        </div>
+        </p>
       </div>
-
-      <ul className="support-list">
+      <ul className="e-coins">
         {t.supportCoins.map((coin) => {
-          const Icon = COIN_ICONS[coin.id];
-          const isCopied = copiedId === coin.id;
+          const copied = copiedId === coin.id;
           return (
-            <li className="support-row" key={coin.id}>
-              <span className="support-row-icon" aria-hidden="true">
-                <Icon />
-              </span>
-              <div className="support-row-name">
+            <li className="e-coin" key={coin.id}>
+              <span className="e-coin-sym" aria-hidden="true">{COIN_SYMBOLS[coin.id]}</span>
+              <div className="e-coin-name">
                 <strong>{coin.name}</strong>
                 <span>{coin.network}</span>
               </div>
+              <code>{coin.address}</code>
               <button
-                className="support-row-address"
+                className={copied ? 'e-copy e-ok' : 'e-copy'}
                 type="button"
                 onClick={() => void handleCopy(coin.id, coin.address)}
                 aria-label={t.supportCopyAria(`${coin.name} (${coin.network})`)}
               >
-                <span className="support-row-address-text">{truncateAddress(coin.address)}</span>
-                <span className="support-row-copy-icon" data-copied={isCopied} aria-hidden="true">
-                  {isCopied ? (
-                    <svg viewBox="0 0 24 24">
-                      <path d="m5 12 5 5L20 7" />
-                    </svg>
-                  ) : (
-                    <svg viewBox="0 0 24 24">
-                      <rect x="9" y="9" width="12" height="12" rx="2" />
-                      <path d="M5 15V5a2 2 0 0 1 2-2h10" />
-                    </svg>
-                  )}
-                </span>
+                <svg className="e-ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="11" height="11" rx="2" />
+                  <path d="M5 15V5a1 1 0 0 1 1-1h10" />
+                </svg>
+                <span>{copied ? t.supportCopied : t.supportCopy}</span>
               </button>
-              <span className="support-row-feedback" data-visible={isCopied} role="status">
-                {t.supportCopied}
-              </span>
             </li>
           );
         })}
       </ul>
+    </>
+  );
+
+  if (variant === 'panel') {
+    return (
+      <section className="e-panel e-support-panel" id="apoie" aria-labelledby="apoie-titulo">
+        <div className="e-support-box">{box}</div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="e-sec" id="apoie" aria-labelledby="apoie-titulo">
+      <div className="e-wrap e-support-box">{box}</div>
     </section>
   );
 }

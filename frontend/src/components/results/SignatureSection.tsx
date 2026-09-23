@@ -1,7 +1,5 @@
-import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { AxisOutlier, AxisTension } from '../../types/quiz';
-import { CountUpValue } from './CountUpValue';
 
 interface SignatureSectionProps {
   unusual: AxisOutlier;
@@ -13,29 +11,25 @@ interface SignatureSectionProps {
 // A regua mostra a distancia — que e o proprio dado — em vez de so citar o numero.
 export function SignatureSection({ unusual, common, tension }: SignatureSectionProps) {
   return (
-    <section className="results-section" id="assinatura">
-      <div className="section-heading">
-        <h2>{t.signatureTitle}</h2>
-      </div>
-
-      <div className="signature-grid">
+    <section className="e-panel" id="assinatura" data-reveal>
+      <h2>{t.signatureTitle}</h2>
+      <div className="e-dist">
         <SignatureCard
           outlier={unusual}
-          variant="unusual"
+          strong
           label={t.signatureUnusualLabel}
           lead={unusualLead(unusual)}
           note={t.signatureUnusualNote(unusual.label)}
         />
         <SignatureCard
           outlier={common}
-          variant="common"
+          strong={false}
           label={t.signatureCommonLabel}
           lead={t.signatureCommonLead(common.label)}
           note={commonNote(common)}
         />
+        {tension && <TensionCard tension={tension} />}
       </div>
-
-      {tension && <TensionCard tension={tension} />}
     </section>
   );
 }
@@ -44,22 +38,22 @@ export function SignatureSection({ unusual, common, tension }: SignatureSectionP
 // uma: centristas e moderados nao pendem o bastante para contrariar nada.
 function TensionCard({ tension }: { tension: AxisTension }) {
   const unique = tension.matchingIdeologies === 0;
+  const details = [
+    tension.examples.length > 0 ? t.tensionExamples(tension.examples.join(', ')) : '',
+    t.tensionNote(tension.firstAxisLabel, tension.secondAxisLabel)
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
-    <article className="tension-card">
-      <span className="tension-label">{t.tensionLabel}</span>
-      <h3>{t.tensionCombo(tension.firstPole, tension.secondPole)}</h3>
-
-      <p className="tension-rare">
-        {unique ? t.tensionUnique : t.tensionRare(tension.matchingIdeologies, tension.catalogSize)}
-      </p>
-
-      {tension.examples.length > 0 && (
-        <p className="tension-examples">{t.tensionExamples(tension.examples.join(', '))}</p>
-      )}
-
-      <p className="tension-note">
-        {t.tensionNote(tension.firstAxisLabel, tension.secondAxisLabel)}
+    <article className="e-tension">
+      <div>
+        <span className="e-tag e-tag-white">{t.tensionLabel}</span>
+        <h3>{t.tensionCombo(tension.firstPole, tension.secondPole)}</h3>
+      </div>
+      <p>
+        <b>{unique ? t.tensionUnique : t.tensionRare(tension.matchingIdeologies, tension.catalogSize)}</b>
+        {details}
       </p>
     </article>
   );
@@ -89,40 +83,34 @@ function commonNote(outlier: AxisOutlier): string {
 
 interface SignatureCardProps {
   outlier: AxisOutlier;
-  variant: 'unusual' | 'common';
+  strong: boolean;
   label: string;
   lead: string;
   note: string;
 }
 
-function SignatureCard({ outlier, variant, label, lead, note }: SignatureCardProps) {
+function SignatureCard({ outlier, strong, label, lead, note }: SignatureCardProps) {
   // A regua usa a escala real do eixo (0-100), entao a distancia entre os dois
   // marcadores e visualmente proporcional a diferenca de posicao.
-  const style = {
-    ['--you']: `${clamp(outlier.userPercent)}%`,
-    ['--median']: `${clamp(outlier.catalogMedian)}%`,
-  } as CSSProperties;
-
   return (
-    <article className="signature-card" data-variant={variant}>
-      <span className="signature-label">{label}</span>
+    <article className={strong ? 'e-dcard e-strong' : 'e-dcard'}>
+      <span className={strong ? 'e-tag e-tag-cat' : 'e-tag e-tag-neutral'}>{label}</span>
       <h3>{outlier.label}</h3>
-      <p className="signature-lead">{lead}</p>
-
-      <div className="signature-track" style={style} aria-hidden="true">
-        <span className="signature-median" />
-        <span className="signature-you" />
+      <p>{lead}</p>
+      <div className="e-mbar" aria-hidden="true">
+        <span className="e-mtrack" />
+        <span className="e-mmed" style={{ left: `${clamp(outlier.catalogMedian)}%` }} />
+        <span className={strong ? 'e-myou e-strong' : 'e-myou'} style={{ left: `${clamp(outlier.userPercent)}%` }} />
       </div>
-      <div className="signature-legend" aria-hidden="true">
-        <span className="signature-legend-median">
+      <div className="e-mlab">
+        <span>
           {t.signatureMedian} {outlier.catalogMedian.toFixed(0)}
         </span>
-        <span className="signature-legend-you">
-          {t.signatureYou} <CountUpValue value={outlier.userPercent} decimals={0} suffix="" />
-        </span>
+        <b>
+          {t.signatureYou} {outlier.userPercent.toFixed(0)}
+        </b>
       </div>
-
-      <p className="signature-note">{note}</p>
+      <p>{note}</p>
     </article>
   );
 }
