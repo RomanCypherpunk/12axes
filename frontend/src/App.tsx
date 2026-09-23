@@ -460,28 +460,13 @@ function MainApp() {
         import('html-to-image'),
         import('./utils/shareCard')
       ]);
-      const {
-        SHARE_HEIGHT,
-        SHARE_WIDTH,
-        buildShareCard,
-        drawShareImagesOnPng,
-        prepareImagesForExport
-      } = shareCard;
+      const { buildShareCard, renderSharePng } = shareCard;
 
-      const { stage: builtStage, target, backgroundColor } = buildShareCard(result, exportQuiz);
+      const { stage: builtStage, target } = buildShareCard(result, exportQuiz);
       stage = builtStage;
       document.body.appendChild(stage);
-      await prepareImagesForExport(target);
 
-      let dataUrl = await toPng(target, {
-        width: SHARE_WIDTH,
-        height: SHARE_HEIGHT,
-        backgroundColor,
-        pixelRatio: 1,
-        cacheBust: false,
-        skipFonts: false
-      });
-      dataUrl = await drawShareImagesOnPng(dataUrl, target);
+      const dataUrl = await renderSharePng(target, toPng);
 
       downloadDataUrl(
         dataUrl,

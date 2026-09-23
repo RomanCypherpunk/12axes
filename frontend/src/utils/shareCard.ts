@@ -149,7 +149,9 @@ export function buildShareCard(
     height: `${SHARE_HEIGHT}px`,
     padding: '64px',
     boxSizing: 'border-box',
-    background: `radial-gradient(circle at 100% 0%, ${mixHex(color.base, SHARE_COLORS.papel, 0.9)} 0, ${mixHex(color.base, SHARE_COLORS.papel, 0.9)} 400px, ${color.base} 401px)`,
+    // Fundo transparente: o fundo e as fotos são desenhados direto no canvas
+    // (ver renderSharePng), o html-to-image só renderiza texto e caixas.
+    background: 'transparent',
     fontFamily: SHARE_FONT_BODY,
     color: SHARE_COLORS.papel,
     display: 'flex',
@@ -175,6 +177,8 @@ export function buildShareCard(
   );
 
   target.append(content);
+  target.dataset.shareBase = color.base;
+  target.dataset.shareCircle = mixHex(color.base, SHARE_COLORS.papel, 0.9);
   stage.append(target);
   return { stage, target, backgroundColor: color.base };
 }
@@ -270,42 +274,12 @@ function buildSharePersonalityPortrait(
     flex: '0 0 390px',
     height: '920px',
     borderRadius: '36px',
-    overflow: 'hidden',
-    background: mixHex(color.base, '#000000', 0.7)
+    overflow: 'hidden'
   });
 
-  const portraitSrc = resolvePersonalityImageSrc(person.imagePath);
-  frame.dataset.exportImageKind = 'portrait';
-  frame.dataset.exportImageSrc = portraitSrc;
-  const img = el('img', {
-    position: 'absolute',
-    inset: '0',
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    objectPosition: '50% 15%',
-    filter: 'contrast(1.1) brightness(.92)'
-  }) as HTMLImageElement;
-  img.src = portraitSrc;
-  img.alt = person.name;
-  img.dataset.kind = 'portrait';
-  img.dataset.initials = personalityInitials(person.name);
-  frame.append(img);
-
-  // Véu da cor da categoria (multiply) + degradê até a base na parte de baixo.
-  const veil = el('div', {
-    position: 'absolute',
-    inset: '0',
-    background: color.base,
-    opacity: '0.5'
-  });
-  veil.style.mixBlendMode = 'multiply';
-  frame.append(veil);
-  frame.append(el('div', {
-    position: 'absolute',
-    inset: '0',
-    background: `linear-gradient(180deg, ${rgba(color.base, 0)} 30%, ${rgba(color.base, 0.6)} 58%, ${rgba(color.base, 0.97)} 86%)`
-  }));
+  // A foto, o véu e o degradê são compostos no canvas, embaixo deste texto.
+  frame.dataset.shareImage = 'portrait';
+  frame.dataset.shareSrc = resolvePersonalityImageSrc(person.imagePath);
 
   const text = el('div', {
     position: 'absolute',
@@ -571,22 +545,16 @@ function buildShareListBox(
       overflow: 'hidden',
       background: mixHex(color.base, '#000000', 0.6),
       display: 'grid',
-      placeItems: 'center'
-    });
-    avatarFrame.dataset.exportImageKind = kind;
-    avatarFrame.dataset.exportImageSrc = item.avatar;
-    const avatarImg = el('img', {
-      width: '100%',
-      height: '100%',
-      objectFit: kind === 'avatar' ? 'cover' : 'contain',
-      objectPosition: kind === 'avatar' ? 'center top' : 'center',
-      filter: kind === 'avatar' ? 'grayscale(1)' : 'none'
-    }) as HTMLImageElement;
-    avatarImg.src = item.avatar;
-    avatarImg.alt = item.alt;
-    avatarImg.dataset.kind = kind;
-    avatarImg.dataset.initials = item.initials;
-    avatarFrame.append(avatarImg);
+      placeItems: 'center',
+      fontFamily: SHARE_FONT_DISPLAY,
+      fontWeight: '700',
+      fontSize: '22px',
+      color: rgba(SHARE_COLORS.papel, 0.7)
+    }, item.initials);
+    // A imagem é desenhada no canvas por cima destas iniciais (que só ficam
+    // visíveis se a imagem não carregar).
+    avatarFrame.dataset.shareImage = kind;
+    avatarFrame.dataset.shareSrc = item.avatar;
 
     line.append(
       avatarFrame,
@@ -646,407 +614,259 @@ function buildShareFooter(): HTMLElement {
   return footer;
 }
 
-export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
-  const images = Array.from(root.querySelectorAll<HTMLImageElement>('img[data-kind]'));
-  await Promise.all(images.map((image) => inlineImageForExport(image)));
-  root.querySelectorAll<HTMLElement>('[data-export-image-kind]').forEach((frame) => {
-    delete frame.dataset.exportImageKind;
-    delete frame.dataset.exportImageSrc;
-  });
-  await waitForExportPaint();
-}
 
-/**
- * Converte cada imagem para um data: URI ANTES da rasterização, para que o
- * html-to-image não precise refazer nenhum fetch de rede durante o export.
+/*
+ * Exportação em camadas.
  *
- * O fetch interno do html-to-image (com cacheBust) pode falhar em produção
- * por cache/CORS/quirks de navegador e, quando falha, ele deixa a moldura
- * totalmente em branco — sem nem cair no fallback. Aqui usamos a imagem que
- * já foi carregada na tela (via canvas, sem rede) para gerar o data: URI;
- * se isso não for possível, tentamos um fetch e, em último caso, mostramos o
- * fallback (bandeira indisponível / iniciais).
+ * O html-to-image desenha o DOM dentro de um SVG <foreignObject>. No Safari
+ * (e em alguns Androids) esse SVG pode "terminar de carregar" antes das
+ * imagens internas serem decodificadas, e o PNG sai sem as fotos — de forma
+ * intermitente. Por isso as imagens nunca passam pelo html-to-image: ele só
+ * renderiza texto, caixas e ícones sobre fundo transparente, e o resto é
+ * desenhado aqui no canvas, esperando cada imagem carregar de verdade.
+ *
+ * Ordem das camadas: fundo → retrato composto → DOM → avatares e bandeiras
+ * (estes por último porque ficam dentro de caixas translúcidas).
  */
-async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
-  const src = image.getAttribute('src') ?? '';
-  const kind = image.dataset.kind;
-  const rasterOptions = kind === 'portrait'
-    ? { width: 390, height: 920, fit: 'cover-top' as const }
-    : undefined;
-  if (!src) {
-    replaceBrokenExportImage(image);
-    return;
-  }
-  if (src.startsWith('data:')) {
-    return;
-  }
 
-  try {
-    const dataUrl = kind === 'portrait'
-      ? await fetchAsPngDataUrl(src, rasterOptions)
-      : await fetchAsOriginalDataUrl(src);
-    await applyImageDataUrl(image, dataUrl);
-    return;
-  } catch {
-    // Se o fetch direto falhar, ainda podemos aproveitar uma imagem já carregada.
-  }
+type ToPng = (node: HTMLElement, options?: Record<string, unknown>) => Promise<string>;
+type ShareImageKind = 'portrait' | 'avatar' | 'flag';
 
-  await waitForImage(image);
-
-  if (image.complete && image.naturalWidth > 0) {
-    const dataUrl = canvasDataUrl(image, rasterOptions);
-    if (dataUrl) {
-      await applyImageDataUrl(image, dataUrl);
-      return;
-    }
-  }
-
-  replaceBrokenExportImage(image);
+interface ShareImageSlot {
+  kind: ShareImageKind;
+  src: string;
+  rect: CanvasRect;
 }
 
-type RasterOptions = {
-  width: number;
-  height: number;
-  fit: 'cover-top';
-};
+type CanvasRect = { x: number; y: number; width: number; height: number };
 
-/** Desenha a imagem já carregada num canvas e retorna o data: URI (sem rede). */
-function canvasDataUrl(image: HTMLImageElement, options?: RasterOptions): string | null {
-  try {
-    const sourceWidth = image.naturalWidth;
-    const sourceHeight = image.naturalHeight;
-    if (!sourceWidth || !sourceHeight) {
-      return null;
-    }
-    const width = options?.width ?? sourceWidth;
-    const height = options?.height ?? sourceHeight;
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      return null;
-    }
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
-    if (options?.fit === 'cover-top') {
-      const scale = Math.max(width / sourceWidth, height / sourceHeight);
-      const drawWidth = sourceWidth * scale;
-      const drawHeight = sourceHeight * scale;
-      ctx.drawImage(image, (width - drawWidth) / 2, 0, drawWidth, drawHeight);
-    } else {
-      ctx.drawImage(image, 0, 0, width, height);
-    }
-    return canvas.toDataURL('image/png');
-  } catch {
-    // canvas "tainted" (imagem cross-origin sem CORS) — deixa o fetch tentar.
-    return null;
-  }
-}
+const IMAGE_TIMEOUT_MS = 8000;
 
-function fetchAsPngDataUrl(url: string, options?: RasterOptions): Promise<string> {
-  const href = new URL(url, window.location.href).href;
-  return fetch(href, { cache: 'force-cache', credentials: 'same-origin' })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
-      }
-      return res.blob();
-    })
-    .then((blob) => blobToPngDataUrl(blob, options));
-}
+export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise<string> {
+  const slots = collectImageSlots(target);
+  // Carrega as imagens em paralelo com o render do DOM.
+  const imagesPromise = Promise.all(slots.map((slot) => loadImage(slot.src).catch(() => null)));
 
-function fetchAsOriginalDataUrl(url: string): Promise<string> {
-  const href = new URL(url, window.location.href).href;
-  return fetch(href, { cache: 'force-cache', credentials: 'same-origin' })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
-      }
-      return res.blob();
-    })
-    .then(readBlobAsDataUrl);
-}
-
-function readBlobAsDataUrl(blob: Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = () => reject(reader.error);
-    reader.onload = () => resolve(reader.result as string);
-    reader.readAsDataURL(blob);
+  const domDataUrl = await toPng(target, {
+    width: SHARE_WIDTH,
+    height: SHARE_HEIGHT,
+    pixelRatio: 1,
+    cacheBust: false,
+    skipFonts: false
   });
-}
+  const [domLayer, images] = await Promise.all([loadImage(domDataUrl), imagesPromise]);
 
-function blobToPngDataUrl(blob: Blob, options?: RasterOptions): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const objectUrl = URL.createObjectURL(blob);
-    const loadedImage = new Image();
-    const cleanup = () => URL.revokeObjectURL(objectUrl);
-
-    loadedImage.onload = () => {
-      const dataUrl = canvasDataUrl(loadedImage, options);
-      cleanup();
-      if (dataUrl) {
-        resolve(dataUrl);
-      } else {
-        reject(new Error('Could not convert image to PNG'));
-      }
-    };
-    loadedImage.onerror = () => {
-      cleanup();
-      reject(new Error('Could not decode image'));
-    };
-    loadedImage.src = objectUrl;
-  });
-}
-
-function applyImageDataUrl(image: HTMLImageElement, dataUrl: string): Promise<void> {
-  if (image.dataset.kind === 'portrait') {
-    replaceImageWithExportBackground(image, dataUrl);
-    return Promise.resolve();
-  }
-
-  return applyImageElementSrc(image, dataUrl);
-}
-
-function applyImageElementSrc(image: HTMLImageElement, dataUrl: string): Promise<void> {
-  return new Promise((resolve) => {
-    const timeout = window.setTimeout(resolve, 1000);
-    const finish = () => {
-      window.clearTimeout(timeout);
-      resolve();
-    };
-
-    image.addEventListener('load', finish, { once: true });
-    image.addEventListener(
-      'error',
-      () => {
-        replaceBrokenExportImage(image);
-        finish();
-      },
-      { once: true }
-    );
-    image.src = dataUrl;
-  });
-}
-
-function replaceImageWithExportBackground(image: HTMLImageElement, dataUrl: string) {
-  const isPortrait = image.dataset.kind === 'portrait';
-  const replacement = el('div', {
-    width: '100%',
-    height: '100%',
-    backgroundImage: `url(${dataUrl})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: isPortrait ? 'center top' : 'center',
-    backgroundSize: isPortrait ? 'cover' : 'contain',
-    filter: image.style.filter || undefined
-  });
-  replacement.setAttribute('role', 'img');
-  replacement.setAttribute('aria-label', image.alt || '');
-  image.replaceWith(replacement);
-}
-
-function waitForImage(image: HTMLImageElement): Promise<void> {
-  if (image.complete && image.naturalWidth > 0) {
-    return Promise.resolve();
-  }
-
-  return new Promise<void>((resolve) => {
-    const timeout = window.setTimeout(resolve, 2500);
-    const finish = () => {
-      window.clearTimeout(timeout);
-      resolve();
-    };
-
-    image.addEventListener('load', finish, { once: true });
-    image.addEventListener('error', finish, { once: true });
-  });
-}
-
-function waitForExportPaint(): Promise<void> {
-  return new Promise((resolve) => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => resolve());
-    });
-  });
-}
-
-function replaceBrokenExportImage(image: HTMLImageElement) {
-  const isPortrait = image.dataset.kind === 'portrait';
-  const fallback = el('div', {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'rgba(0, 0, 0, 0.3)'
-  });
-  fallback.setAttribute('role', 'img');
-  fallback.setAttribute('aria-label', image.alt || '');
-  fallback.append(el('span', {
-    fontFamily: SHARE_FONT_DISPLAY,
-    fontWeight: '800',
-    fontSize: isPortrait ? '48px' : '13px',
-    color: SHARE_COLORS.papel
-  }, image.dataset.initials || '?'));
-  image.replaceWith(fallback);
-}
-
-export async function drawShareImagesOnPng(dataUrl: string, root: HTMLElement): Promise<string> {
-  const overlays = collectCanvasOverlays(root);
-  if (overlays.length === 0) {
-    return dataUrl;
-  }
-
-  const base = await loadCanvasImage(dataUrl);
   const canvas = document.createElement('canvas');
-  canvas.width = base.naturalWidth || SHARE_WIDTH;
-  canvas.height = base.naturalHeight || SHARE_HEIGHT;
+  canvas.width = SHARE_WIDTH;
+  canvas.height = SHARE_HEIGHT;
   const ctx = canvas.getContext('2d');
   if (!ctx) {
-    return dataUrl;
+    throw new Error('Canvas indisponível');
   }
 
-  ctx.drawImage(base, 0, 0, canvas.width, canvas.height);
-  const scaleX = canvas.width / SHARE_WIDTH;
-  const scaleY = canvas.height / SHARE_HEIGHT;
+  const base = target.dataset.shareBase ?? '#101010';
+  drawBackground(ctx, base, target.dataset.shareCircle ?? base);
 
-  for (const overlay of overlays) {
-    try {
-      const image = await loadCanvasAsset(overlay.src);
-      const rect = {
-        x: overlay.x * scaleX,
-        y: overlay.y * scaleY,
-        width: overlay.width * scaleX,
-        height: overlay.height * scaleY
-      };
-      if (overlay.kind === 'portrait') {
-        ctx.save();
-        ctx.filter = 'grayscale(1)';
-        drawCanvasCover(ctx, image, rect);
-        ctx.restore();
-      } else if (overlay.kind === 'avatar') {
-        ctx.save();
-        ctx.filter = 'grayscale(1)';
-        drawCanvasCoverCircular(ctx, image, rect);
-        ctx.restore();
-      } else {
-        drawCanvasContainRect(ctx, image, rect);
-      }
-    } catch {
-      // Se o navegador nao decodificar o asset, mantemos o fallback gerado pelo DOM.
+  slots.forEach((slot, index) => {
+    if (slot.kind === 'portrait') {
+      drawPortrait(ctx, images[index], slot.rect, base);
     }
-  }
+  });
+
+  ctx.drawImage(domLayer, 0, 0, SHARE_WIDTH, SHARE_HEIGHT);
+
+  slots.forEach((slot, index) => {
+    const image = images[index];
+    if (!image || slot.kind === 'portrait') {
+      return;
+    }
+    ctx.save();
+    if (slot.kind === 'avatar') {
+      ctx.beginPath();
+      ctx.ellipse(
+        slot.rect.x + slot.rect.width / 2,
+        slot.rect.y + slot.rect.height / 2,
+        slot.rect.width / 2,
+        slot.rect.height / 2,
+        0,
+        0,
+        Math.PI * 2
+      );
+      ctx.clip();
+      drawCover(ctx, image, slot.rect, 0.2);
+    } else {
+      roundedRectPath(ctx, slot.rect, 10);
+      ctx.clip();
+      drawCover(ctx, image, slot.rect, 0.5);
+    }
+    ctx.restore();
+  });
 
   return canvas.toDataURL('image/png');
 }
 
-type CanvasOverlayKind = 'flag' | 'portrait' | 'avatar';
-type CanvasOverlay = {
-  kind: CanvasOverlayKind;
-  src: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-};
-type CanvasRect = {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-};
-
-function collectCanvasOverlays(root: HTMLElement): CanvasOverlay[] {
+function collectImageSlots(root: HTMLElement): ShareImageSlot[] {
   const rootRect = root.getBoundingClientRect();
-  return Array.from(root.querySelectorAll<HTMLElement>('[data-export-image-kind][data-export-image-src]'))
+  return Array.from(root.querySelectorAll<HTMLElement>('[data-share-image][data-share-src]'))
     .map((frame) => {
-      const kind = frame.dataset.exportImageKind;
-      const src = frame.dataset.exportImageSrc ?? '';
+      const kind = frame.dataset.shareImage as ShareImageKind;
+      const src = frame.dataset.shareSrc ?? '';
       const rect = frame.getBoundingClientRect();
-      if ((kind !== 'flag' && kind !== 'portrait' && kind !== 'avatar') || !src || rect.width <= 0 || rect.height <= 0) {
+      if (!src || rect.width <= 0 || rect.height <= 0) {
         return null;
       }
       return {
         kind,
         src,
-        x: rect.left - rootRect.left,
-        y: rect.top - rootRect.top,
-        width: rect.width,
-        height: rect.height
+        rect: {
+          x: rect.left - rootRect.left,
+          y: rect.top - rootRect.top,
+          width: rect.width,
+          height: rect.height
+        }
       };
     })
-    .filter((item): item is CanvasOverlay => item !== null);
+    .filter((slot): slot is ShareImageSlot => slot !== null);
 }
 
-async function loadCanvasAsset(src: string): Promise<HTMLImageElement> {
-  const href = new URL(src, window.location.href).href;
-  const response = await fetch(href, { cache: 'force-cache', credentials: 'same-origin' });
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
+// Carrega via fetch → blob → objectURL para não depender de cabeçalhos CORS e
+// garante que a imagem está decodificada antes de ir para o canvas.
+async function loadImage(src: string): Promise<HTMLImageElement> {
+  let objectUrl: string | null = null;
+  let url = src;
+  if (!src.startsWith('data:')) {
+    const response = await withTimeout(
+      fetch(new URL(src, window.location.href).href, { cache: 'force-cache', credentials: 'same-origin' }),
+      IMAGE_TIMEOUT_MS
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    objectUrl = URL.createObjectURL(await response.blob());
+    url = objectUrl;
   }
-  const blob = await response.blob();
-  const objectUrl = URL.createObjectURL(blob);
   try {
-    return await loadCanvasImage(objectUrl);
+    const image = new Image();
+    await withTimeout(
+      new Promise<void>((resolve, reject) => {
+        image.onload = () => resolve();
+        image.onerror = () => reject(new Error('Could not decode image'));
+        image.src = url;
+      }),
+      IMAGE_TIMEOUT_MS
+    );
+    if (typeof image.decode === 'function') {
+      await image.decode().catch(() => undefined);
+    }
+    return image;
   } finally {
-    URL.revokeObjectURL(objectUrl);
+    if (objectUrl) {
+      const toRevoke = objectUrl;
+      // Revoga depois do desenho: alguns Safaris ainda leem o blob no drawImage.
+      window.setTimeout(() => URL.revokeObjectURL(toRevoke), 30000);
+    }
   }
 }
 
-function loadCanvasImage(src: string): Promise<HTMLImageElement> {
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = () => reject(new Error('Could not decode image'));
-    image.src = src;
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = window.setTimeout(() => reject(new Error('timeout')), ms);
+    promise.then(
+      (value) => {
+        window.clearTimeout(timer);
+        resolve(value);
+      },
+      (error) => {
+        window.clearTimeout(timer);
+        reject(error);
+      }
+    );
   });
 }
 
-function drawCanvasContainRect(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: CanvasRect) {
-  const scale = Math.min(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
+// Fundo da cor da categoria com o círculo claro no canto superior direito.
+function drawBackground(ctx: CanvasRenderingContext2D, base: string, circle: string) {
+  ctx.fillStyle = base;
+  ctx.fillRect(0, 0, SHARE_WIDTH, SHARE_HEIGHT);
+  ctx.fillStyle = circle;
+  ctx.beginPath();
+  ctx.arc(SHARE_WIDTH, 0, 400, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// Retrato: foto com leve contraste, véu da categoria (multiply) e degradê até
+// a cor base na parte de baixo, recortado com cantos arredondados.
+function drawPortrait(ctx: CanvasRenderingContext2D, image: HTMLImageElement | null, rect: CanvasRect, base: string) {
+  const layer = document.createElement('canvas');
+  layer.width = Math.round(rect.width);
+  layer.height = Math.round(rect.height);
+  const lctx = layer.getContext('2d');
+  if (!lctx) {
+    return;
+  }
+  const local = { x: 0, y: 0, width: layer.width, height: layer.height };
+
+  lctx.fillStyle = mixHex(base, '#000000', 0.7);
+  lctx.fillRect(0, 0, layer.width, layer.height);
+  if (image) {
+    drawCover(lctx, image, local, 0.15);
+    adjustContrastBrightness(lctx, layer.width, layer.height, 1.1, 0.92);
+    lctx.save();
+    lctx.globalCompositeOperation = 'multiply';
+    lctx.globalAlpha = 0.5;
+    lctx.fillStyle = base;
+    lctx.fillRect(0, 0, layer.width, layer.height);
+    lctx.restore();
+  }
+  const gradient = lctx.createLinearGradient(0, 0, 0, layer.height);
+  gradient.addColorStop(0.3, rgba(base, 0));
+  gradient.addColorStop(0.58, rgba(base, 0.6));
+  gradient.addColorStop(0.86, rgba(base, 0.97));
+  gradient.addColorStop(1, rgba(base, 0.97));
+  lctx.fillStyle = gradient;
+  lctx.fillRect(0, 0, layer.width, layer.height);
+
+  ctx.save();
+  roundedRectPath(ctx, rect, 36);
+  ctx.clip();
+  ctx.drawImage(layer, rect.x, rect.y, rect.width, rect.height);
+  ctx.restore();
+}
+
+// Equivalente ao filter: contrast() brightness() do CSS, feito em pixels
+// porque ctx.filter não existe em Safaris mais antigos.
+function adjustContrastBrightness(ctx: CanvasRenderingContext2D, width: number, height: number, contrast: number, brightness: number) {
+  try {
+    const data = ctx.getImageData(0, 0, width, height);
+    const px = data.data;
+    for (let i = 0; i < px.length; i += 4) {
+      for (let c = 0; c < 3; c += 1) {
+        const v = ((px[i + c] / 255 - 0.5) * contrast + 0.5) * brightness * 255;
+        px[i + c] = v < 0 ? 0 : v > 255 ? 255 : v;
+      }
+    }
+    ctx.putImageData(data, 0, 0);
+  } catch {
+    // Canvas contaminado: segue sem o ajuste, a foto ainda aparece.
+  }
+}
+
+// object-fit: cover, com o ponto vertical de foco em `focusY` (0 = topo).
+function drawCover(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect, focusY: number) {
+  const scale = Math.max(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
   const width = image.naturalWidth * scale;
   const height = image.naturalHeight * scale;
   ctx.drawImage(
     image,
-    frame.x + (frame.width - width) / 2,
-    frame.y + (frame.height - height) / 2,
+    rect.x + (rect.width - width) / 2,
+    rect.y + (rect.height - height) * focusY,
     width,
     height
   );
 }
 
-function drawCanvasCover(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: CanvasRect) {
-  const scale = Math.max(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
-  const width = image.naturalWidth * scale;
-  const height = image.naturalHeight * scale;
-  ctx.save();
-  canvasRoundedRectPath(ctx, frame.x, frame.y, frame.width, frame.height, 36);
-  ctx.clip();
-  ctx.drawImage(image, frame.x + (frame.width - width) / 2, frame.y, width, height);
-  ctx.restore();
-}
-
-function drawCanvasCoverCircular(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: CanvasRect) {
-  const scale = Math.max(frame.width / image.naturalWidth, frame.height / image.naturalHeight);
-  const width = image.naturalWidth * scale;
-  const height = image.naturalHeight * scale;
-  ctx.save();
-  ctx.beginPath();
-  ctx.ellipse(frame.x + frame.width / 2, frame.y + frame.height / 2, frame.width / 2, frame.height / 2, 0, 0, Math.PI * 2);
-  ctx.clip();
-  ctx.drawImage(image, frame.x + (frame.width - width) / 2, frame.y + (frame.height - height) / 2, width, height);
-  ctx.restore();
-}
-
-function canvasRoundedRectPath(
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  radius: number
-) {
+function roundedRectPath(ctx: CanvasRenderingContext2D, rect: CanvasRect, radius: number) {
+  const { x, y, width, height } = rect;
   const r = Math.min(radius, width / 2, height / 2);
   ctx.beginPath();
   ctx.moveTo(x + r, y);
