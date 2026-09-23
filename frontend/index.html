@@ -60,31 +60,6 @@
       *{box-sizing:border-box}html,body,#root{min-height:100dvh}body{margin:0;background:var(--canvas);color:var(--ink-900);font-family:var(--font-body);line-height:1.55;overflow-x:clip}#root{position:relative;z-index:1}
     </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script>
-      window.addEventListener('load', function () {
-        var loadFonts = function () {
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400..800&display=swap';
-          document.head.appendChild(link);
-        };
-
-        if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(loadFonts, { timeout: 2200 });
-        } else {
-          window.setTimeout(loadFonts, 1200);
-        }
-      });
-    </script>
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400..800&display=swap"
-      />
-    </noscript>
-
     <!-- Structured data: WebApplication + FAQ -->
     <script type="application/ld+json">
       {

@@ -45,7 +45,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             <div className="e-top-head">
               <div>
                 <span className="e-tag e-tag-solid">{top.category}</span>
-                <h2>{top.name}</h2>
+                <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
               </div>
               <Ring pct={top.compatibility} size={120} stroke={10} />
             </div>

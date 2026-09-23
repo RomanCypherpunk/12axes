@@ -445,6 +445,14 @@ function MainApp() {
     let stage: HTMLDivElement | null = null;
     try {
       if (document.fonts) {
+        await Promise.allSettled([
+          document.fonts.load('400 30px "Poppins"'),
+          document.fonts.load('500 30px "Poppins"'),
+          document.fonts.load('600 30px "Poppins"'),
+          document.fonts.load('600 30px "Sora"'),
+          document.fonts.load('700 30px "Sora"'),
+          document.fonts.load('800 30px "Sora"')
+        ]);
         await document.fonts.ready;
       }
 
@@ -471,7 +479,7 @@ function MainApp() {
         backgroundColor,
         pixelRatio: 1,
         cacheBust: false,
-        skipFonts: true
+        skipFonts: false
       });
       dataUrl = await drawShareImagesOnPng(dataUrl, target);
 
@@ -734,7 +742,7 @@ function MainApp() {
         />
       )}
 
-      {screen !== 'quiz' && screen !== 'extend' && <SiteFooter />}
+      {(screen === 'home' || screen === 'results') && <SiteFooter />}
     </div>
   );
 }

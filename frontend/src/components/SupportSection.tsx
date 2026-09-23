@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { t } from '../i18n';
 import { copyToClipboard } from '../utils/clipboard';
+import { BitcoinIcon, EthereumIcon, LightningIcon, MoneroIcon } from './CryptoIcons';
 
-const COIN_SYMBOLS: Record<string, string> = {
-  btc: '₿',
-  lightning: '⚡',
-  eth: 'Ξ',
-  xmr: 'ɱ'
-};
+const COIN_ICONS = {
+  btc: BitcoinIcon,
+  lightning: LightningIcon,
+  eth: EthereumIcon,
+  xmr: MoneroIcon
+} as const;
 
 interface SupportSectionProps {
   variant: 'home' | 'panel';
@@ -46,9 +47,10 @@ export function SupportSection({ variant }: SupportSectionProps) {
       <ul className="e-coins">
         {t.supportCoins.map((coin) => {
           const copied = copiedId === coin.id;
+          const CoinIcon = COIN_ICONS[coin.id as keyof typeof COIN_ICONS];
           return (
             <li className="e-coin" key={coin.id}>
-              <span className="e-coin-sym" aria-hidden="true">{COIN_SYMBOLS[coin.id]}</span>
+              <span className="e-coin-sym" aria-hidden="true">{CoinIcon && <CoinIcon />}</span>
               <div className="e-coin-name">
                 <strong>{coin.name}</strong>
                 <span>{coin.network}</span>

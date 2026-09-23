@@ -2,7 +2,6 @@ import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { IdeologyMatch } from '../../types/quiz';
 import { localCatStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
-import { Ring } from '../editorial/primitives';
 
 interface IdeologiesSectionProps {
   others: IdeologyMatch[];
@@ -23,9 +22,8 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
             <div className="e-ocard-head">
               <div className="e-ocard-top">
                 <span className="e-tag e-osolid">{match.category}</span>
-                <Ring pct={match.compatibility} size={76} stroke={6} />
               </div>
-              <h3>{match.name}</h3>
+              <h3 className={match.name.length >= 18 ? 'e-long-name' : undefined}>{match.name}</h3>
             </div>
             <p>{match.description}</p>
           </li>

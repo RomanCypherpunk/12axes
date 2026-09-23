@@ -14,8 +14,8 @@ import { resolveIdeologyColor } from './ideologyColors';
 export const SHARE_WIDTH = 1080;
 export const SHARE_HEIGHT = 1920;
 
-const SHARE_FONT_DISPLAY = '"Sora", ui-sans-serif, system-ui, -apple-system, sans-serif';
-const SHARE_FONT_BODY = '"Poppins", ui-sans-serif, system-ui, -apple-system, sans-serif';
+const SHARE_FONT_DISPLAY = '"Sora"';
+const SHARE_FONT_BODY = '"Poppins"';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 export const SHARE_COLORS = {
@@ -61,6 +61,12 @@ function mixHex(a: string, b: string, ratioA: number): string {
 function rgba(hex: string, alpha: number): string {
   const [r, g, b] = hexToRgb(hex);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+function readableInk(hex: string): string {
+  const [r, g, b] = hexToRgb(hex);
+  const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+  return luminance > 0.48 ? SHARE_COLORS.tinta : SHARE_COLORS.papel;
 }
 
 function svgEl(tag: string, attrs: Record<string, string | number>): SVGElement {
@@ -124,7 +130,7 @@ const sharePoleIconPaths: Record<string, Record<PoleSide, string[]>> = {
 
 export function buildShareCard(
   result: QuizResult,
-  _quiz: QuizPayload
+  quiz: QuizPayload
 ): { stage: HTMLDivElement; target: HTMLDivElement; backgroundColor: string } {
   const color = resolveIdeologyColor(result.topMatch.category);
   const stage = el('div', {
@@ -143,7 +149,7 @@ export function buildShareCard(
     height: `${SHARE_HEIGHT}px`,
     padding: '64px',
     boxSizing: 'border-box',
-    background: color.base,
+    background: `radial-gradient(circle at 100% 0%, ${mixHex(color.base, SHARE_COLORS.papel, 0.9)} 0, ${mixHex(color.base, SHARE_COLORS.papel, 0.9)} 400px, ${color.base} 401px)`,
     fontFamily: SHARE_FONT_BODY,
     color: SHARE_COLORS.papel,
     display: 'flex',
@@ -151,31 +157,19 @@ export function buildShareCard(
     overflow: 'hidden'
   }) as HTMLDivElement;
 
-  // Círculo decorativo: base misturada com 10% de Papel, canto superior direito.
-  target.append(el('div', {
-    position: 'absolute',
-    top: '-120px',
-    right: '-120px',
-    width: '360px',
-    height: '360px',
-    borderRadius: '50%',
-    background: mixHex(color.base, SHARE_COLORS.papel, 0.9),
-    pointerEvents: 'none'
-  }));
-
   const content = el('div', {
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     flex: '1 1 auto',
     minHeight: '0',
-    gap: '30px'
+    gap: '24px'
   });
 
   content.append(
     buildShareHeader(),
     buildShareIdentity(result, color.bg),
-    buildShareTwoColumns(result, color),
+    buildShareTwoColumns(result, quiz, color),
     buildShareLists(result, color),
     buildShareFooter()
   );
@@ -190,25 +184,26 @@ function buildShareHeader(): HTMLElement {
   const header = el('div', {
     display: 'flex',
     alignItems: 'center',
-    gap: '18px'
+    gap: '28px'
   });
   header.append(
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '800',
-      fontSize: '30px',
+      fontSize: '58px',
       letterSpacing: '-0.03em',
       color: P,
       display: 'inline-flex',
       alignItems: 'baseline',
-      gap: '4px'
+      gap: '9px'
     }),
-    el('div', { flex: '1 1 auto', height: '1px', background: rgba(P, 0.35) }),
+    el('div', { flex: '1 1 auto', height: '3px', background: rgba(P, 0.35) }),
     el('div', {
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
-      fontSize: '14px',
+      fontSize: '30px',
       letterSpacing: '0.16em',
+      textTransform: 'uppercase',
       color: rgba(P, 0.82)
     }, t.shareResultLabel)
   );
@@ -222,23 +217,24 @@ function buildShareHeader(): HTMLElement {
 
 function buildShareIdentity(result: QuizResult, bgColor: string): HTMLElement {
   const P = SHARE_COLORS.papel;
-  const wrap = el('div', { display: 'flex', flexDirection: 'column', gap: '6px' });
+  const wrap = el('div', { display: 'flex', flexDirection: 'column', gap: '0', marginTop: '18px' });
   wrap.append(
     el('div', {
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
-      fontSize: '20px',
-      letterSpacing: '0.08em',
+      fontSize: '34px',
+      letterSpacing: '0.18em',
       textTransform: 'uppercase',
       color: bgColor
     }, result.topMatch.category),
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '600',
-      fontSize: '52px',
+      fontSize: '76px',
       lineHeight: '1.05',
       letterSpacing: '-0.02em',
-      color: P
+      color: P,
+      marginTop: '-8px'
     }, result.topMatch.name)
   );
   return wrap;
@@ -246,17 +242,20 @@ function buildShareIdentity(result: QuizResult, bgColor: string): HTMLElement {
 
 function buildShareTwoColumns(
   result: QuizResult,
+  quiz: QuizPayload,
   color: { base: string; bg: string }
 ): HTMLElement {
   const row = el('div', {
     display: 'flex',
     gap: '24px',
-    flex: '1 1 auto',
-    minHeight: '0'
+    flex: '0 0 920px',
+    height: '920px',
+    minHeight: '920px',
+    marginTop: '8px'
   });
   row.append(
     buildSharePersonalityPortrait(result.topPersonalityMatch, color),
-    buildShareAxesColumn(result, color)
+    buildShareAxesColumn(result, quiz, color)
   );
   return row;
 }
@@ -268,8 +267,8 @@ function buildSharePersonalityPortrait(
   const P = SHARE_COLORS.papel;
   const frame = el('div', {
     position: 'relative',
-    flex: '0 0 370px',
-    height: '746px',
+    flex: '0 0 390px',
+    height: '920px',
     borderRadius: '36px',
     overflow: 'hidden',
     background: mixHex(color.base, '#000000', 0.7)
@@ -284,8 +283,8 @@ function buildSharePersonalityPortrait(
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    objectPosition: 'center top',
-    filter: 'grayscale(1)'
+    objectPosition: '50% 15%',
+    filter: 'contrast(1.1) brightness(.92)'
   }) as HTMLImageElement;
   img.src = portraitSrc;
   img.alt = person.name;
@@ -298,21 +297,21 @@ function buildSharePersonalityPortrait(
     position: 'absolute',
     inset: '0',
     background: color.base,
-    opacity: '0.55'
+    opacity: '0.5'
   });
   veil.style.mixBlendMode = 'multiply';
   frame.append(veil);
   frame.append(el('div', {
     position: 'absolute',
     inset: '0',
-    background: `linear-gradient(180deg, transparent 38%, ${color.base} 96%)`
+    background: `linear-gradient(180deg, ${rgba(color.base, 0)} 30%, ${rgba(color.base, 0.6)} 58%, ${rgba(color.base, 0.97)} 86%)`
   }));
 
   const text = el('div', {
     position: 'absolute',
-    left: '28px',
-    right: '28px',
-    bottom: '28px',
+    left: '32px',
+    right: '32px',
+    bottom: '32px',
     display: 'flex',
     flexDirection: 'column',
     gap: '4px'
@@ -322,28 +321,31 @@ function buildSharePersonalityPortrait(
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '700',
-      fontSize: '46px',
+      fontSize: '84px',
       lineHeight: '1',
+      letterSpacing: '-3px',
       color: color.bg
     }, `${Math.round(pct)}%`),
     el('div', {
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
-      fontSize: '13px',
-      letterSpacing: '0.1em',
-      color: rgba(P, 0.88)
+      fontSize: '26px',
+      letterSpacing: '4px',
+      textTransform: 'uppercase',
+      color: color.bg
     }, t.shareMostCompatible),
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '600',
-      fontSize: '25px',
+      fontSize: '48px',
       lineHeight: '1.15',
+      letterSpacing: '-1px',
       color: P,
       marginTop: '6px'
     }, person.name),
     el('div', {
       fontFamily: SHARE_FONT_BODY,
-      fontSize: '14px',
+      fontSize: '30px',
       color: rgba(P, 0.82)
     }, person.role)
   );
@@ -354,6 +356,7 @@ function buildSharePersonalityPortrait(
 
 function buildShareAxesColumn(
   result: QuizResult,
+  quiz: QuizPayload,
   color: { base: string; bg: string }
 ): HTMLElement {
   const P = SHARE_COLORS.papel;
@@ -362,30 +365,37 @@ function buildShareAxesColumn(
     minWidth: '0',
     display: 'flex',
     flexDirection: 'column',
-    gap: '14px'
+    gap: '10px',
+    padding: '30px 30px 26px',
+    borderRadius: '36px',
+    background: 'rgba(0, 0, 0, 0.22)',
+    border: `2px solid ${rgba(P, 0.14)}`
   });
   col.append(el('div', {
     fontFamily: SHARE_FONT_BODY,
     fontWeight: '600',
-    fontSize: '14px',
-    letterSpacing: '0.1em',
-    color: rgba(P, 0.72)
+    fontSize: '26px',
+    letterSpacing: '4px',
+    textTransform: 'uppercase',
+    color: color.bg
   }, t.shareYourAxes));
 
   const list = el('div', {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2px',
+    gap: '0',
     flex: '1 1 auto',
     justifyContent: 'space-between'
   });
-  result.axes.forEach((axis) => list.append(buildShareAxisLine(axis, color)));
+  const axesById = new Map(quiz.axes.map((axis) => [axis.id, axis]));
+  result.axes.forEach((axis) => list.append(buildShareAxisLine(axis, axesById.get(axis.axisId), color)));
   col.append(list);
   return col;
 }
 
 function buildShareAxisLine(
   axis: QuizResult['axes'][number],
+  definition: QuizPayload['axes'][number] | undefined,
   color: { base: string; bg: string }
 ): HTMLElement {
   const P = SHARE_COLORS.papel;
@@ -394,24 +404,46 @@ function buildShareAxisLine(
   const winningPole = isBalanced ? axis.rightPole : leaningRight ? axis.rightPole : axis.leftPole;
   const winningPct = isBalanced ? 50 : leaningRight ? axis.rightPercent : axis.leftPercent;
   const side: PoleSide = leaningRight ? 'right' : 'left';
+  const accent = isBalanced
+    ? color.bg
+    : leaningRight
+      ? definition?.rightColor ?? color.bg
+      : definition?.leftColor ?? color.bg;
 
   const row = el('div', {
     display: 'flex',
     alignItems: 'center',
-    gap: '12px',
-    padding: '8px 0',
-    borderBottom: `1px solid ${rgba(P, 0.14)}`
+    gap: '13px',
+    height: '58px'
   });
 
   const icon = el('span', {
     flex: '0 0 auto',
-    width: '26px',
-    height: '26px',
+    width: '46px',
+    height: '46px',
+    borderRadius: '13px',
     display: 'grid',
     placeItems: 'center',
-    color: color.bg
+    color: readableInk(accent),
+    background: accent
   });
   icon.append(buildPoleGlyph(axis.axisId, side));
+
+  const mini = el('span', {
+    flex: '0 0 76px',
+    width: '76px',
+    height: '10px',
+    borderRadius: '10px',
+    overflow: 'hidden',
+    background: rgba(P, 0.16)
+  });
+  mini.append(el('i', {
+    display: 'block',
+    width: `${clamp(winningPct)}%`,
+    height: '100%',
+    borderRadius: '10px',
+    background: accent
+  }));
 
   row.append(
     icon,
@@ -420,18 +452,21 @@ function buildShareAxisLine(
       minWidth: '0',
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '500',
-      fontSize: '17px',
+      fontSize: '28px',
       color: rgba(P, 0.92),
       overflow: 'hidden',
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap'
-    }, `${axis.label} ${winningPole}`),
+    }, winningPole),
+    mini,
     el('span', {
-      flex: '0 0 auto',
+      flex: '0 0 70px',
+      width: '70px',
+      textAlign: 'right',
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '700',
-      fontSize: '18px',
-      color: color.bg
+      fontSize: '32px',
+      color: accent
     }, `${Math.round(winningPct)}%`)
   );
 
@@ -441,11 +476,11 @@ function buildShareAxisLine(
 function buildPoleGlyph(axisId: string, side: PoleSide): SVGElement {
   const svg = svgEl('svg', {
     viewBox: '0 0 24 24',
-    width: 18,
-    height: 18,
+    width: 26,
+    height: 26,
     fill: 'none',
     stroke: 'currentColor',
-    'stroke-width': 1.9,
+    'stroke-width': 2.2,
     'stroke-linecap': 'round',
     'stroke-linejoin': 'round'
   });
@@ -460,7 +495,7 @@ function buildShareLists(
 ): HTMLElement {
   const row = el('div', {
     display: 'flex',
-    gap: '20px'
+    gap: '24px'
   });
   row.append(
     buildShareListBox(
@@ -473,7 +508,7 @@ function buildShareLists(
         initials: personalityInitials(person.name)
       })),
       color,
-      'portrait'
+      'avatar'
     ),
     buildShareListBox(
       t.shareNearbyCountries,
@@ -503,7 +538,7 @@ function buildShareListBox(
   title: string,
   items: ShareListItem[],
   color: { base: string; bg: string },
-  kind: 'portrait' | 'flag'
+  kind: 'avatar' | 'flag'
 ): HTMLElement {
   const P = SHARE_COLORS.papel;
   const box = el('div', {
@@ -511,27 +546,28 @@ function buildShareListBox(
     minWidth: '0',
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px',
-    padding: '20px',
-    borderRadius: '28px',
-    background: 'rgba(0, 0, 0, 0.2)',
-    border: `1px solid ${rgba(P, 0.16)}`
+    gap: '20px',
+    padding: '28px 30px',
+    borderRadius: '36px',
+    background: 'rgba(0, 0, 0, 0.22)',
+    border: `2px solid ${rgba(P, 0.14)}`
   });
   box.append(el('div', {
     fontFamily: SHARE_FONT_BODY,
     fontWeight: '600',
-    fontSize: '13px',
-    letterSpacing: '0.1em',
-    color: rgba(P, 0.72)
+    fontSize: '26px',
+    letterSpacing: '4px',
+    textTransform: 'uppercase',
+    color: color.bg
   }, title));
 
   items.forEach((item) => {
-    const line = el('div', { display: 'flex', alignItems: 'center', gap: '10px' });
+    const line = el('div', { display: 'flex', alignItems: 'center', gap: '18px' });
     const avatarFrame = el('div', {
       flex: '0 0 auto',
-      width: '34px',
-      height: '34px',
-      borderRadius: kind === 'portrait' ? '50%' : '6px',
+      width: '76px',
+      height: kind === 'avatar' ? '76px' : '52px',
+      borderRadius: kind === 'avatar' ? '50%' : '10px',
       overflow: 'hidden',
       background: mixHex(color.base, '#000000', 0.6),
       display: 'grid',
@@ -542,8 +578,9 @@ function buildShareListBox(
     const avatarImg = el('img', {
       width: '100%',
       height: '100%',
-      objectFit: kind === 'portrait' ? 'cover' : 'contain',
-      filter: kind === 'portrait' ? 'grayscale(1)' : 'none'
+      objectFit: kind === 'avatar' ? 'cover' : 'contain',
+      objectPosition: kind === 'avatar' ? 'center top' : 'center',
+      filter: kind === 'avatar' ? 'grayscale(1)' : 'none'
     }) as HTMLImageElement;
     avatarImg.src = item.avatar;
     avatarImg.alt = item.alt;
@@ -558,17 +595,18 @@ function buildShareListBox(
         minWidth: '0',
         fontFamily: SHARE_FONT_BODY,
         fontWeight: '500',
-        fontSize: '15px',
+        fontSize: kind === 'flag' && item.label.length > 22 ? '25px' : '30px',
+        lineHeight: kind === 'flag' ? '1.08' : '1.2',
         color: rgba(P, 0.92),
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'normal',
+        wordBreak: 'normal',
+        overflowWrap: 'break-word'
       }, item.label),
       el('span', {
         flex: '0 0 auto',
         fontFamily: SHARE_FONT_DISPLAY,
         fontWeight: '700',
-        fontSize: '14px',
+        fontSize: '30px',
         color: color.bg
       }, `${Math.round(clamp(item.pct))}%`)
     );
@@ -584,22 +622,24 @@ function buildShareFooter(): HTMLElement {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: '22px',
-    borderTop: `1px solid ${rgba(P, 0.24)}`
+    paddingTop: '30px',
+    borderTop: `2px solid ${rgba(P, 0.25)}`
   });
   footer.append(
     el('span', {
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
-      fontSize: '14px',
-      letterSpacing: '0.08em',
+      fontSize: '30px',
+      letterSpacing: '0.16em',
+      textTransform: 'uppercase',
       color: rgba(P, 0.9)
     }, t.shareFooterCta),
     el('span', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '700',
-      fontSize: '14px',
-      letterSpacing: '0.04em',
+      fontSize: '30px',
+      letterSpacing: '0.1em',
+      textTransform: 'uppercase',
       color: P
     }, t.shareFooterUrl)
   );
@@ -607,8 +647,11 @@ function buildShareFooter(): HTMLElement {
 }
 
 export async function prepareImagesForExport(root: HTMLElement): Promise<void> {
-  root.querySelectorAll<HTMLImageElement>('img[data-kind]').forEach((image) => {
-    image.style.opacity = '0';
+  const images = Array.from(root.querySelectorAll<HTMLImageElement>('img[data-kind]'));
+  await Promise.all(images.map((image) => inlineImageForExport(image)));
+  root.querySelectorAll<HTMLElement>('[data-export-image-kind]').forEach((frame) => {
+    delete frame.dataset.exportImageKind;
+    delete frame.dataset.exportImageSrc;
   });
   await waitForExportPaint();
 }
@@ -628,7 +671,7 @@ async function inlineImageForExport(image: HTMLImageElement): Promise<void> {
   const src = image.getAttribute('src') ?? '';
   const kind = image.dataset.kind;
   const rasterOptions = kind === 'portrait'
-    ? { width: 370, height: 746, fit: 'cover-top' as const }
+    ? { width: 390, height: 920, fit: 'cover-top' as const }
     : undefined;
   if (!src) {
     replaceBrokenExportImage(image);
