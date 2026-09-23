@@ -32,7 +32,7 @@
   {
     "id": "comunismo-trotskista",
     "name": "Comunismo Trotskista",
-    "category": "Esquerda",
+    "category": "Esquerda Radical",
     "description": "Corrente marxista de Trótski que defende a revolução permanente e o internacionalismo, opondo-se à burocratização stalinista e ao socialismo em um só país, com foco na democracia operária e na expansão mundial da revolução.",
     "phrase": "Quero uma sociedade em revolução permanente e internacionalista, com democracia operária, sem burocracia stalinista nem fronteiras.",
     "vector": null,
@@ -92,7 +92,7 @@
   {
     "id": "socialismo-de-estado",
     "name": "Socialismo de Estado",
-    "category": "Esquerda",
+    "category": "Esquerda Radical",
     "description": "Sistema em que o Estado controla os meios de produção e dirige a economia por planejamento central, promovendo industrialização e bem-estar sob autoridade política forte e limitada participação democrática popular.",
     "phrase": "Quero uma sociedade em que o Estado controle os meios de produção e planeje a economia, com autoridade política forte e pouco debate eleitoral.",
     "vector": null,
@@ -152,7 +152,7 @@
   {
     "id": "fascismo",
     "name": "Fascismo",
-    "category": "Extrema Direita",
+    "category": "Terceira Posição",
     "description": "Ideologia totalitária de ultranacionalismo que exalta o Estado forte, o culto ao líder, o militarismo e a mobilização de massas, suprimindo oposição e subordinando a economia corporativa aos objetivos nacionais.",
     "phrase": "Quero uma nação exaltada sob Estado forte e líder único, com militarismo, mobilização de massas e corporações a serviço da pátria.",
     "vector": null,
@@ -212,7 +212,7 @@
   {
     "id": "capitalismo-nacional",
     "name": "Capitalismo Nacional",
-    "category": "Direita",
+    "category": "Extrema Direita",
     "description": "Sistema que une livre iniciativa a forte protecionismo e direcionamento estatal, priorizando indústria, empregos e soberania nacional sobre o livre comércio global e o capital estrangeiro sem controle.",
     "phrase": "Quero uma indústria nacional protegida por tarifas e planejamento estatal, com livre iniciativa a serviço da soberania e dos empregos do país.",
     "vector": null,
@@ -522,7 +522,7 @@
   {
     "id": "liberalismo-classico",
     "name": "Liberalismo Clássico",
-    "category": "Direita",
+    "category": "Libertário",
     "description": "Vertente original do liberalismo que defende direitos naturais, propriedade, livre mercado e Estado mínimo, vendo a liberdade individual e a limitação rígida do poder como fundamentos da sociedade justa.",
     "phrase": "Quero uma sociedade de direitos naturais e propriedade sagrada, com Estado mínimo e mercado livre como base da vida justa.",
     "vector": null,
@@ -592,7 +592,7 @@
   {
     "id": "liberalismo-de-estado",
     "name": "Liberalismo de Estado",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Corrente liberal que aceita um papel ativo do Estado na economia e na garantia de direitos, combinando liberdades individuais e mercado com regulação e políticas públicas voltadas ao bem coletivo e à igualdade.",
     "phrase": "Quero uma sociedade de mercado com Estado atuante, regulando a economia e ampliando direitos para garantir bem-estar coletivo.",
     "vector": null,
@@ -662,7 +662,7 @@
   {
     "id": "conservadorismo-socialista",
     "name": "Conservadorismo Socialista",
-    "category": "Esquerda",
+    "category": "Terceira Posição",
     "description": "Vertente que une economia socialista e valores tradicionais, defendendo proteção social e forte papel do Estado ao lado de família, ordem e costumes, distante do progressismo cultural das esquerdas liberais.",
     "phrase": "Quero um Estado forte que garanta proteção social e indústria pública, mas guarde família, ordem e costumes contra o progressismo cultural.",
     "vector": null,
@@ -712,7 +712,7 @@
   {
     "id": "socialismo-libertario",
     "name": "Socialismo Libertário",
-    "category": "Esquerda",
+    "category": "Anarquismo",
     "description": "Corrente que busca o socialismo sem Estado autoritário, unindo propriedade coletiva e autogestão a ampla liberdade individual, com organização de baixo para cima por comunidades e trabalhadores livres.",
     "phrase": "Quero socialismo sem Estado autoritário, com propriedade coletiva e autogestão organizadas de baixo para cima por comunidades e trabalhadores livres.",
     "vector": null,
@@ -782,7 +782,7 @@
   {
     "id": "trabalhismo-cristao",
     "name": "Trabalhismo Cristão",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Vertente que combina defesa dos trabalhadores e justiça social com valores cristãos, promovendo direitos laborais, solidariedade e proteção social dentro da democracia, inspirada na doutrina social da Igreja.",
     "phrase": "Quero direitos trabalhistas e proteção social dentro da democracia, inspirados na doutrina social da Igreja e na solidariedade cristã.",
     "vector": null,
@@ -932,7 +932,7 @@
   {
     "id": "anarcocapitalismo",
     "name": "Anarcocapitalismo",
-    "category": "Anarquismo",
+    "category": "Libertário",
     "description": "Corrente que propõe abolir o Estado e organizar toda a sociedade por contratos e mercados livres, com segurança, justiça e serviços fornecidos por empresas privadas em concorrência, sob propriedade absoluta.",
     "phrase": "Quero abolir o Estado e organizar tudo por contratos e mercados livres, com segurança e justiça vendidas por empresas privadas.",
     "vector": null,
@@ -1012,7 +1012,7 @@
   {
     "id": "econacionalismo",
     "name": "Econacionalismo",
-    "category": "Esquerda",
+    "category": "Centro",
     "description": "Corrente que liga defesa do meio ambiente à soberania nacional, priorizando a proteção dos recursos naturais e da terra do próprio país e o desenvolvimento sustentável dentro das fronteiras nacionais.",
     "phrase": "Quero proteger os recursos naturais e a terra da minha nação, com planejamento estatal e fronteiras econômicas que garantam soberania e sustentabilidade.",
     "vector": null,
@@ -1022,7 +1022,7 @@
   {
     "id": "criptoanarquismo",
     "name": "Criptoanarquismo",
-    "category": "Anarquismo",
+    "category": "Libertário",
     "description": "Corrente que usa criptografia e tecnologias digitais para garantir privacidade, liberdade e transações fora do controle do Estado, buscando enfraquecer a vigilância e a autoridade por meios tecnológicos.",
     "phrase": "Quero uma vida protegida por criptografia, sem vigilância nem fronteiras que travem transações, dissolvendo a autoridade do Estado pela tecnologia.",
     "vector": null,
@@ -1092,7 +1092,7 @@
   {
     "id": "anarcoconservadorismo",
     "name": "Anarcoconservadorismo",
-    "category": "Anarquismo",
+    "category": "Libertário",
     "description": "Corrente que rejeita o Estado mas preserva tradição, religião e valores comunitários, defendendo uma ordem social espontânea baseada em costumes, família e autoridade natural em vez do poder político central.",
     "phrase": "Quero abolir o poder político central e viver sob costumes, família e autoridade natural, numa ordem espontânea que preserva tradição e fé.",
     "vector": null,
@@ -1132,7 +1132,7 @@
   {
     "id": "positivismo",
     "name": "Positivismo",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Corrente inspirada em Auguste Comte que confia na ciência e na razão para organizar a sociedade, defendendo ordem, progresso e administração técnica guiada pelo conhecimento em lugar da metafísica e da tradição.",
     "phrase": "Quero uma sociedade regida pela ordem e o progresso, administrada por técnicos que substituem a tradição e a metafísica pela ciência.",
     "vector": null,
@@ -1162,7 +1162,7 @@
   {
     "id": "autoritarismo-modernizador",
     "name": "Autoritarismo Modernizador",
-    "category": "Esquerda",
+    "category": "Direita",
     "description": "Modelo em que um regime forte impõe de cima a modernização econômica e social, promovendo industrialização, educação e reformas rápidas enquanto restringe liberdades políticas em nome do progresso nacional.",
     "phrase": "Quero um regime forte que imponha industrialização e reformas de cima, restringindo liberdades políticas em nome do progresso nacional.",
     "vector": null,
@@ -1192,7 +1192,7 @@
   {
     "id": "tecno-monarquismo",
     "name": "Tecno-Monarquismo",
-    "category": "Extrema Direita",
+    "category": "Direita",
     "description": "Corrente que une a monarquia à tecnologia e à gestão eficiente, propondo um soberano que governa como um executivo, apoiado em dados e inovação, para dar estabilidade e direção de longo prazo ao Estado.",
     "phrase": "Quero uma monarquia que governe como executivo, apoiada em dados e inovação, dando estabilidade e direção de longo prazo ao Estado.",
     "vector": null,
@@ -1510,7 +1510,7 @@
   {
     "id": "aceleracionismo-de-esquerda",
     "name": "Aceleracionismo de Esquerda",
-    "category": "Esquerda Radical",
+    "category": "Esquerda",
     "description": "Corrente formulada por Srnicek e Williams que quer acelerar a automação e reivindicar a tecnologia para a esquerda, defendendo o fim do trabalho, renda básica universal e redução da jornada rumo a um pós-capitalismo de abundância.",
     "phrase": "Quero acelerar a automação e tomar a tecnologia para a esquerda, abolindo o trabalho com renda básica universal rumo à abundância pós-capitalista.",
     "vector": null,
@@ -1550,7 +1550,7 @@
   {
     "id": "teocracia-progressista",
     "name": "Teocracia Progressista",
-    "category": "Terceira Posição",
+    "category": "Esquerda Radical",
     "description": "Teocracia dirigida por autoridade clerical sem soberania popular, que impõe de cima uma moral progressista como mandamento divino: igualdade de gênero, libertação sexual, ecologia sagrada e ruptura com o costume herdado, tratado como superstição a ser reformada.",
     "phrase": "Quero um clero que imponha de cima, como mandamento divino, igualdade de gênero e libertação sexual, rompendo o costume herdado como superstição.",
     "vector": null,
@@ -1580,7 +1580,7 @@
   {
     "id": "imperialismo-pluralista",
     "name": "Imperialismo Pluralista",
-    "category": "Extrema Direita",
+    "category": "Direita",
     "description": "Ordem imperial autocrática e militarizada que expande território por conquista, mas governa os povos conquistados por autonomia comunitária, tolerância religiosa administrada e tributo, sem exigir assimilação cultural dos súditos.",
     "phrase": "Quero um império que conquiste por autocracia militar, mas governe os povos súditos com autonomia comunitária e tolerância religiosa administrada.",
     "vector": null,
@@ -1600,7 +1600,7 @@
   {
     "id": "aristotelismo",
     "name": "Aristotelismo",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Filosofia política de Aristóteles, que defende uma constituição mista de elementos monárquicos, aristocráticos e populares para evitar tanto a tirania quanto a democracia radical, reservando a cidadania plena a quem tem virtude, propriedade e formação para deliberar.",
     "phrase": "Quero uma constituição mista de monarquia, aristocracia e povo, com cidadania plena reservada a quem tem virtude e propriedade.",
     "vector": null,
@@ -1710,7 +1710,7 @@
   {
     "id": "aristocratismo",
     "name": "Aristocratismo",
-    "category": "Direita",
+    "category": "Extrema Direita",
     "description": "Doutrina do governo dos melhores, que confia o poder a uma minoria qualificada por virtude, educação ou nascimento, rejeitando a igualdade política e o governo da maioria como entrega da cidade à incompetência.",
     "phrase": "Quero o governo confiado a uma minoria qualificada por virtude e nascimento, recusando a igualdade política como entrega à incompetência.",
     "vector": null,
@@ -1730,7 +1730,7 @@
   {
     "id": "catolicismo",
     "name": "Catolicismo",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Doutrina social da Igreja Católica, que combina moral tradicionalista e defesa da vida com preocupação pela justiça social, subsidiariedade e dignidade do trabalhador, sob a autoridade hierárquica do papado e do direito canônico.",
     "phrase": "Quero uma sociedade de moral tradicional e defesa da vida, com justiça social e subsidiariedade sob a autoridade do papado.",
     "vector": null,
@@ -1800,7 +1800,7 @@
   {
     "id": "democracia-ateniense",
     "name": "Democracia Ateniense",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Ideologia da pólis clássica, que defende soberania popular direta por assembleia e sorteio de cargos entre cidadãos iguais, mas reserva a cidadania a uma minoria de sangue, excluindo mulheres, estrangeiros e escravos.",
     "phrase": "Quero uma pólis de assembleia soberana e cargos por sorteio entre cidadãos livres, reservando a cidadania de sangue aos homens da cidade.",
     "vector": null,
@@ -1840,7 +1840,7 @@
   {
     "id": "trabalhismo-de-direita",
     "name": "Trabalhismo de Direita",
-    "category": "Direita",
+    "category": "Terceira Posição",
     "description": "Corrente que defende direitos trabalhistas, sindicatos fortes e proteção social dentro de um projeto nacionalista, anticomunista e de ordem, aliando o operariado organizado a valores tradicionais e à autoridade do Estado.",
     "phrase": "Quero o operário organizado em sindicatos fortes, com salário digno e indústria nacional protegida, sob líder firme, fé e família.",
     "vector": null,
@@ -1880,7 +1880,7 @@
   {
     "id": "socialismo-utopico",
     "name": "Socialismo Utópico",
-    "category": "Centro-Esquerda",
+    "category": "Esquerda",
     "description": "Corrente do início do século XIX que imaginava uma sociedade industrial reorganizada por planejamento racional, sob direção de cientistas, engenheiros e produtores, substituindo políticos e aristocratas sem apelar à luta de classes ou à revolução.",
     "phrase": "Quero uma sociedade industrial dirigida por cientistas e produtores, planejada racionalmente, superando políticos e aristocratas sem revolução.",
     "vector": null,
@@ -1890,7 +1890,7 @@
   {
     "id": "tecno-comercialismo",
     "name": "Tecno-Comercialismo",
-    "category": "Extrema Direita",
+    "category": "Libertário",
     "description": "Vertente neorreacionária que rejeita a democracia em favor de microestados administrados como empresas. Defende competição entre jurisdições, livre mercado, direito de saída e inovação tecnológica como critérios de governo.",
     "phrase": "Quero cidades-empresa concorrentes, governadas por acionistas e abertas à saída, onde mercados e tecnologia premiem eficiência.",
     "vector": null,

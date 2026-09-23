@@ -23,7 +23,7 @@
   {
     "id": "comunismo-trotskista",
     "name": "Trotskyist Communism",
-    "category": "Left",
+    "category": "Radical Left",
     "description": "Marxist current of Trotsky that advocates permanent revolution and internationalism, opposing Stalinist bureaucratization and socialism in one country, with a focus on workers' democracy and the worldwide spread of the revolution.",
     "phrase": "I want a society in permanent, internationalist revolution, with workers' democracy, free of Stalinist bureaucracy and borders."
   },
@@ -65,7 +65,7 @@
   {
     "id": "socialismo-de-estado",
     "name": "State Socialism",
-    "category": "Left",
+    "category": "Radical Left",
     "description": "System in which the state controls the means of production and directs the economy through central planning, promoting industrialization and welfare under strong political authority and limited popular democratic participation.",
     "phrase": "I want a society where the state controls the means of production and plans the economy, with strong political authority and little electoral debate."
   },
@@ -107,7 +107,7 @@
   {
     "id": "fascismo",
     "name": "Fascism",
-    "category": "Far-Right",
+    "category": "Third Position",
     "description": "Totalitarian ideology of ultranationalism that exalts the strong state, the cult of the leader, militarism, and mass mobilization, suppressing opposition and subordinating the corporatist economy to national goals.",
     "phrase": "I want a nation exalted under a strong state and a single leader, with militarism, mass mobilization and corporations serving the fatherland."
   },
@@ -149,7 +149,7 @@
   {
     "id": "capitalismo-nacional",
     "name": "National Capitalism",
-    "category": "Right",
+    "category": "Far-Right",
     "description": "System that unites free enterprise with strong protectionism and state direction, prioritizing industry, jobs, and national sovereignty over global free trade and unchecked foreign capital.",
     "phrase": "I want national industry protected by tariffs and state planning, with free enterprise serving the sovereignty and jobs of the country."
   },
@@ -366,7 +366,7 @@
   {
     "id": "liberalismo-classico",
     "name": "Classical Liberalism",
-    "category": "Right",
+    "category": "Libertarian",
     "description": "Original branch of liberalism that defends natural rights, property, free markets, and a minimal state, seeing individual freedom and the strict limitation of power as the foundations of a just society.",
     "phrase": "I want a society of natural rights and sacred property, with a minimal state and free market as the foundations of a just life."
   },
@@ -415,7 +415,7 @@
   {
     "id": "liberalismo-de-estado",
     "name": "State Liberalism",
-    "category": "Center",
+    "category": "Left",
     "description": "Liberal current that accepts an active role for the state in the economy and in guaranteeing rights, combining individual freedoms and markets with regulation and public policies aimed at the collective good and equality.",
     "phrase": "I want a market society with an active state, regulating the economy and expanding rights to guarantee collective well-being."
   },
@@ -464,7 +464,7 @@
   {
     "id": "conservadorismo-socialista",
     "name": "Socialist Conservatism",
-    "category": "Left",
+    "category": "Third Position",
     "description": "Current that unites a socialist economy with traditional values, defending social protection and a strong state role alongside family, order, and customs, far from the cultural progressivism of liberal lefts.",
     "phrase": "I want a strong state that guarantees social protection and public industry, but guards family, order and customs against cultural progressivism."
   },
@@ -499,7 +499,7 @@
   {
     "id": "socialismo-libertario",
     "name": "Libertarian Socialism",
-    "category": "Left",
+    "category": "Anarchist",
     "description": "Current that pursues socialism without an authoritarian state, uniting collective ownership and self-management with broad individual freedom, organized from the bottom up by free communities and workers.",
     "phrase": "I want socialism without an authoritarian state, with collective property and self-management organized from the bottom up by free communities and workers."
   },
@@ -548,7 +548,7 @@
   {
     "id": "trabalhismo-cristao",
     "name": "Christian Labourism",
-    "category": "Center",
+    "category": "Left",
     "description": "Branch that combines the defense of workers and social justice with Christian values, promoting labor rights, solidarity, and social protection within democracy, inspired by the social doctrine of the Church.",
     "phrase": "I want labor rights and social protection within democracy, inspired by the Church's social doctrine and Christian solidarity."
   },
@@ -653,7 +653,7 @@
   {
     "id": "anarcocapitalismo",
     "name": "Anarcho-Capitalism",
-    "category": "Anarchist",
+    "category": "Libertarian",
     "description": "Current that proposes abolishing the state and organizing all of society through contracts and free markets, with security, justice, and services provided by competing private companies under absolute property rights.",
     "phrase": "I want to abolish the state and organize everything through contracts and free markets, with security and justice sold by private companies."
   },
@@ -709,14 +709,14 @@
   {
     "id": "econacionalismo",
     "name": "Eco-Nationalism",
-    "category": "Left",
+    "category": "Center",
     "description": "Current that links environmental protection to national sovereignty, prioritizing the protection of the country's own natural resources and land and sustainable development within national borders.",
     "phrase": "I want to protect my nation's natural resources and land, with state planning and economic borders that guarantee sovereignty and sustainability."
   },
   {
     "id": "criptoanarquismo",
     "name": "Crypto-Anarchism",
-    "category": "Anarchist",
+    "category": "Libertarian",
     "description": "Current that uses cryptography and digital technologies to guarantee privacy, freedom, and transactions beyond state control, seeking to weaken surveillance and authority through technological means.",
     "phrase": "I want a life protected by cryptography, free of surveillance and borders that block transactions, dissolving the state's authority through technology."
   },
@@ -765,7 +765,7 @@
   {
     "id": "anarcoconservadorismo",
     "name": "Anarcho-Conservatism",
-    "category": "Anarchist",
+    "category": "Libertarian",
     "description": "Current that rejects the state but preserves tradition, religion, and community values, defending a spontaneous social order based on customs, family, and natural authority instead of central political power.",
     "phrase": "I want to abolish central political power and live under custom, family and natural authority, in a spontaneous order that preserves tradition and faith."
   },
@@ -793,7 +793,7 @@
   {
     "id": "positivismo",
     "name": "Positivism",
-    "category": "Center",
+    "category": "Right",
     "description": "Current inspired by Auguste Comte that trusts science and reason to organize society, defending order, progress, and technical administration guided by knowledge in place of metaphysics and tradition.",
     "phrase": "I want a society ruled by order and progress, run by technicians who replace tradition and metaphysics with science."
   },
@@ -814,7 +814,7 @@
   {
     "id": "autoritarismo-modernizador",
     "name": "Modernizing Authoritarianism",
-    "category": "Left",
+    "category": "Right",
     "description": "Model in which a strong regime imposes economic and social modernization from above, promoting industrialization, education, and rapid reforms while restricting political freedoms in the name of national progress.",
     "phrase": "I want a strong regime that imposes industrialization and reforms from above, restricting political freedoms in the name of national progress."
   },
@@ -835,7 +835,7 @@
   {
     "id": "tecno-monarquismo",
     "name": "Techno-Monarchism",
-    "category": "Far-Right",
+    "category": "Right",
     "description": "Current that unites monarchy with technology and efficient management, proposing a sovereign who governs like an executive, supported by data and innovation, to give the state stability and long-term direction.",
     "phrase": "I want a monarchy that governs like an executive, backed by data and innovation, giving the state stability and long-term direction."
   },
@@ -1059,7 +1059,7 @@
   {
     "id": "aceleracionismo-de-esquerda",
     "name": "Left Accelerationism",
-    "category": "Radical Left",
+    "category": "Left",
     "description": "Current formulated by Srnicek and Williams that seeks to accelerate automation and reclaim technology for the left, advocating the end of work, universal basic income and shorter working hours toward a post-capitalism of abundance.",
     "phrase": "I want to accelerate automation and reclaim technology for the left, abolishing work with universal basic income toward post-capitalist abundance."
   },
@@ -1087,7 +1087,7 @@
   {
     "id": "teocracia-progressista",
     "name": "Progressive Theocracy",
-    "category": "Third Position",
+    "category": "Radical Left",
     "description": "Theocracy led by clerical authority without popular sovereignty, imposing a progressive morality from above as divine commandment: gender equality, sexual liberation, sacred ecology and a break with inherited custom, treated as superstition to be reformed.",
     "phrase": "I want a clergy that imposes gender equality and sexual liberation from above, as divine commandment, breaking with inherited custom as superstition."
   },
@@ -1108,7 +1108,7 @@
   {
     "id": "imperialismo-pluralista",
     "name": "Pluralist Imperialism",
-    "category": "Far Right",
+    "category": "Right",
     "description": "Autocratic, militarized imperial order that expands territory by conquest yet governs conquered peoples through communal autonomy, administered religious tolerance and tribute, without demanding cultural assimilation from its subjects.",
     "phrase": "I want an empire that conquers by military autocracy, but governs subject peoples with communal autonomy and administered religious tolerance."
   },
@@ -1122,7 +1122,7 @@
   {
     "id": "aristotelismo",
     "name": "Aristotelianism",
-    "category": "Center",
+    "category": "Right",
     "description": "Aristotle's political philosophy, defending a mixed constitution of monarchical, aristocratic and popular elements to avoid both tyranny and radical democracy, reserving full citizenship for those with virtue, property and the education to deliberate.",
     "phrase": "I want a mixed constitution of monarchy, aristocracy and the people, with full citizenship reserved for those with virtue and property."
   },
@@ -1199,7 +1199,7 @@
   {
     "id": "aristocratismo",
     "name": "Aristocratism",
-    "category": "Right",
+    "category": "Far-Right",
     "description": "Doctrine of the rule of the best, entrusting power to a minority qualified by virtue, education or birth, rejecting political equality and majority rule as surrendering the city to incompetence.",
     "phrase": "I want government entrusted to a minority qualified by virtue and birth, rejecting political equality as surrendering the city to incompetence."
   },
@@ -1213,7 +1213,7 @@
   {
     "id": "catolicismo",
     "name": "Catholicism",
-    "category": "Centre",
+    "category": "Right",
     "description": "Social doctrine of the Catholic Church, combining traditionalist morality and defense of life with concern for social justice, subsidiarity and worker dignity, under the hierarchical authority of the papacy and canon law.",
     "phrase": "I want a society of traditional morality and defense of life, with social justice and subsidiarity under the authority of the papacy."
   },
@@ -1262,7 +1262,7 @@
   {
     "id": "democracia-ateniense",
     "name": "Athenian Democracy",
-    "category": "Center",
+    "category": "Right",
     "description": "Ideology of the classical polis, advocating direct popular sovereignty through assembly and sortition among equal citizens, while reserving citizenship to a hereditary minority, excluding women, foreigners and slaves.",
     "phrase": "I want a polis of sovereign assembly and offices by lottery among free citizens, reserving citizenship by blood to the city's men."
   },
@@ -1290,7 +1290,7 @@
   {
     "id": "trabalhismo-de-direita",
     "name": "Right-Wing Laborism",
-    "category": "Right",
+    "category": "Third Position",
     "description": "Current that defends labor rights, strong unions and social protection within a nationalist, anti-communist project of order, allying organized workers with traditional values and state authority.",
     "phrase": "I want organized workers in strong unions, with decent wages and protected national industry, under firm leadership, faith and family."
   },
@@ -1318,14 +1318,14 @@
   {
     "id": "socialismo-utopico",
     "name": "Utopian Socialism",
-    "category": "Center-Left",
+    "category": "Left",
     "description": "Early 19th-century current that envisioned an industrial society reorganized by rational planning, led by scientists, engineers and producers, replacing politicians and aristocrats without appealing to class struggle or revolution.",
     "phrase": "I want an industrial society run by scientists and producers, rationally planned, superseding politicians and aristocrats without revolution."
   },
   {
     "id": "tecno-comercialismo",
     "name": "Techno-Commercialism",
-    "category": "Far Right",
+    "category": "Libertarian",
     "description": "A neoreactionary current that rejects democracy in favor of microstates run like firms. It favors competition among jurisdictions, free markets, the right of exit, and technological innovation as principles of government.",
     "phrase": "I want competing corporate cities run by shareholders, with freedom to exit and markets and technology rewarding efficiency."
   },
