@@ -1362,18 +1362,18 @@
   {
     "ideologyId": "socialismo",
     "vector": {
-      "estrutura": 37.5,
-      "representacao": 76.2,
-      "poder": 35.0,
-      "imigracao": 21.2,
-      "diplomacia": 23.8,
-      "intervencao": 70.0,
-      "economia": 86.2,
-      "controle": 87.5,
-      "comercio": 71.2,
-      "religiao": 73.8,
-      "moral": 72.5,
-      "tecnologia": 48.8
+      "estrutura": 27.5,
+      "representacao": 62.5,
+      "poder": 38.8,
+      "imigracao": 17.5,
+      "diplomacia": 25.0,
+      "intervencao": 76.2,
+      "economia": 87.5,
+      "controle": 86.2,
+      "comercio": 67.5,
+      "religiao": 85.0,
+      "moral": 73.8,
+      "tecnologia": 68.8
     }
   },
   {
@@ -1889,18 +1889,18 @@
   {
     "ideologyId": "trabalhismo",
     "vector": {
-      "estrutura": 35,
-      "representacao": 85,
-      "poder": 36.2,
-      "imigracao": 31.2,
-      "diplomacia": 21.2,
-      "intervencao": 65,
-      "economia": 83.8,
-      "controle": 78.8,
-      "comercio": 65,
-      "religiao": 77.5,
-      "moral": 78.8,
-      "tecnologia": 52.5
+      "estrutura": 48.8,
+      "representacao": 80.0,
+      "poder": 43.8,
+      "imigracao": 50.0,
+      "diplomacia": 37.5,
+      "intervencao": 52.5,
+      "economia": 71.2,
+      "controle": 76.2,
+      "comercio": 77.5,
+      "religiao": 36.2,
+      "moral": 42.5,
+      "tecnologia": 61.3
     }
   },
   {
@@ -3261,6 +3261,57 @@
       "religiao": 11.2,
       "moral": 21.2,
       "tecnologia": 28.7
+    }
+  },
+  {
+    "ideologyId": "paleoconservadorismo",
+    "vector": {
+      "estrutura": 78.8,
+      "representacao": 60.0,
+      "poder": 40.0,
+      "imigracao": 86.2,
+      "diplomacia": 51.2,
+      "intervencao": 70.0,
+      "economia": 30.0,
+      "controle": 48.8,
+      "comercio": 87.5,
+      "religiao": 13.8,
+      "moral": 6.2,
+      "tecnologia": 25.0
+    }
+  },
+  {
+    "ideologyId": "terceira-via",
+    "vector": {
+      "estrutura": 25.0,
+      "representacao": 75.0,
+      "poder": 62.5,
+      "imigracao": 42.5,
+      "diplomacia": 56.2,
+      "intervencao": 36.2,
+      "economia": 48.8,
+      "controle": 38.8,
+      "comercio": 27.5,
+      "religiao": 66.2,
+      "moral": 71.2,
+      "tecnologia": 67.5
+    }
+  },
+  {
+    "ideologyId": "socialismo-democratico",
+    "vector": {
+      "estrutura": 40.0,
+      "representacao": 87.5,
+      "poder": 25.0,
+      "imigracao": 21.2,
+      "diplomacia": 15.0,
+      "intervencao": 71.2,
+      "economia": 85.0,
+      "controle": 85.0,
+      "comercio": 68.8,
+      "religiao": 78.8,
+      "moral": 85.0,
+      "tecnologia": 43.8
     }
   }
 ]

@@ -8,7 +8,20 @@ Compare `ideologies.json` (descrição, frase, `personalityId` e `countryId`) co
 
 `Esquerda Radical`, `Esquerda`, `Centro`, `Direita`, `Extrema Direita`, `Terceira Posição`, `Libertário` e `Anarquismo`.
 
-Na tradução inglesa, use o equivalente direto da categoria em português. Uma categoria fora dessa lista é um erro de catálogo: proponha a substituição, mas só a escreva se o pedido autorizar a mudança.
+Na tradução inglesa, use o equivalente direto da categoria em português, com esta grafia exata (é a que `frontend/src/utils/ideologyColors.ts` reconhece para colorir resultado e card; `IdeologyCategoryTest` falha se divergir):
+
+| PT | EN |
+|---|---|
+| `Esquerda Radical` | `Radical Left` |
+| `Esquerda` | `Left` |
+| `Centro` | `Center` |
+| `Direita` | `Right` |
+| `Extrema Direita` | `Far-Right` |
+| `Terceira Posição` | `Third Position` |
+| `Libertário` | `Libertarian` |
+| `Anarquismo` | `Anarchist` |
+
+Uma categoria fora dessa lista é um erro de catálogo: proponha a substituição, mas só a escreva se o pedido autorizar a mudança.
 
 Os polos reais da implementação são: valores altos significam federalismo (`estrutura`), democracia (`representacao`), ordem/vigilância (`poder`), assimilação (`imigracao`), militarismo (`diplomacia`), não intervencionismo (`intervencao`), propriedade pública (`economia`), planejamento (`controle`), protecionismo (`comercio`), secularismo (`religiao`), progressismo (`moral`) e tecnofilia (`tecnologia`). Não use a redação desatualizada de `axes-explained.md` para inverter `religiao` ou `imigracao`.
 

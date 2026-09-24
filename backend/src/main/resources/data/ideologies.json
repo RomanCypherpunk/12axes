@@ -237,7 +237,7 @@
     "phrase": "Quero preservar a identidade cultural do meu povo contra a imigração descontrolada e o politicamente correto, sem recorrer ao supremacismo racial.",
     "vector": null,
     "countryId": "estados-unidos",
-    "personalityId": "steve-bannon"
+    "personalityId": "gk-chesterton"
   },
   {
     "id": "aceleracionismo-de-direita",
@@ -813,7 +813,7 @@
     "id": "socialismo",
     "name": "Socialismo",
     "category": "Esquerda",
-    "description": "Doutrina que defende a propriedade social ou coletiva dos meios de produção e a distribuição mais igualitária da riqueza, buscando superar a exploração do capitalismo por cooperação e planejamento econômico.",
+    "description": "Doutrina ampla que defende a propriedade social ou coletiva dos meios de produção e o planejamento econômico para superar a exploração capitalista, admitindo tanto a via revolucionária quanto a reformista para chegar lá.",
     "phrase": "Quero uma sociedade sem exploração, com meios de produção coletivos e planejamento econômico substituindo o mercado capitalista.",
     "vector": null,
     "countryId": "suecia",
@@ -1916,5 +1916,35 @@
     "vector": null,
     "countryId": "russia",
     "personalityId": "aleksandr-dugin"
+  },
+  {
+    "id": "socialismo-democratico",
+    "name": "Socialismo Democrático",
+    "category": "Esquerda",
+    "description": "Corrente que busca superar o capitalismo pela via eleitoral, com propriedade social das grandes empresas, cooperativas e democracia no local de trabalho, rejeitando tanto o partido de vanguarda quanto a mera gestão social-democrata do mercado.",
+    "phrase": "Quero superar o capitalismo pelo voto, com grandes empresas sob propriedade social, cooperativas e democracia no local de trabalho, sem partido único.",
+    "vector": null,
+    "countryId": "chile-de-allende",
+    "personalityId": "bernie-sanders"
+  },
+  {
+    "id": "terceira-via",
+    "name": "Terceira Via",
+    "category": "Centro",
+    "description": "Renovação da centro-esquerda nos anos 1990, com Blair, Clinton e Giddens, que aceita o mercado globalizado e a disciplina fiscal, troca assistência por ativação para o trabalho, é dura com o crime e apoia intervenções liberais.",
+    "phrase": "Quero um mercado globalizado com um Estado que invista em educação, troque assistência por trabalho e seja duro com o crime e suas causas.",
+    "vector": null,
+    "countryId": "reino-unido",
+    "personalityId": "bill-clinton"
+  },
+  {
+    "id": "paleoconservadorismo",
+    "name": "Paleoconservadorismo",
+    "category": "Direita",
+    "description": "Direita tradicionalista americana, de Buchanan e Kirk, que defende herança cristã, localismo e direitos dos estados, restrição imigratória, protecionismo e não intervencionismo, contra neoconservadores e o Estado gerencial.",
+    "phrase": "Quero uma república cristã de comunidades locais e estados soberanos, fronteiras fechadas, indústria nacional protegida e nenhuma guerra por império.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "gk-chesterton"
   }
 ]

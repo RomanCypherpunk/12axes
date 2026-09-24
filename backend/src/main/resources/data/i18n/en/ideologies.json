@@ -570,7 +570,7 @@
     "id": "socialismo",
     "name": "Socialism",
     "category": "Left",
-    "description": "Doctrine that advocates social or collective ownership of the means of production and a more egalitarian distribution of wealth, seeking to overcome capitalist exploitation through cooperation and economic planning.",
+    "description": "Broad doctrine that advocates social or collective ownership of the means of production and economic planning to overcome capitalist exploitation, accepting both the revolutionary and the reformist road to get there.",
     "phrase": "I want a society without exploitation, with collective means of production and economic planning replacing the capitalist market."
   },
   {
@@ -954,7 +954,7 @@
   {
     "id": "populismo-de-direita",
     "name": "Right-Wing Populism",
-    "category": "Far-Right",
+    "category": "Right",
     "description": "Current that mobilizes the people against political and cultural elites, combining nationalism, immigration restriction, traditional values, public religion, strong security, and anti-establishment economic pragmatism around personalist leaders.",
     "phrase": "I want a people united against corrupt elites, with closed borders, traditional values and a leader who restores order to the nation."
   },
@@ -1164,14 +1164,14 @@
   {
     "id": "zapatismo",
     "name": "Zapatismo",
-    "category": "Anarchism",
+    "category": "Anarchist",
     "description": "Neo-Zapatista movement that emerged in 1994 in southern Mexico, combining indigenous autonomy, direct democracy through assemblies and caracoles, cooperative subsistence economy, and refusal to seize state power, summed up as 'lead by obeying'.",
     "phrase": "I want autonomous indigenous communities deciding in assemblies and caracoles, subsistence cooperatives, leading by obeying the people."
   },
   {
     "id": "sindicalismo-revolucionario",
     "name": "Revolutionary Syndicalism",
-    "category": "Radical Left",
+    "category": "Third Position",
     "description": "Current that rejects the parliamentary and reformist path, betting on the general strike and the mobilising myth: direct union action and proletarian violence should destroy the state and the decadent bourgeoisie.",
     "phrase": "I want the general strike and direct union action to destroy the state and the bourgeoisie, without parliament or reformism."
   },
@@ -1192,7 +1192,7 @@
   {
     "id": "liberal-desenvolvimentismo",
     "name": "Liberal Developmentalism",
-    "category": "Centre",
+    "category": "Center",
     "description": "The East Asian Tiger model (Singapore, South Korea, Taiwan, Hong Kong): champions free markets, foreign trade and private enterprise as engines of growth, paired with an active technocratic state that plans infrastructure, education and strategic industrialization, stopping short of closed protectionism or hard authoritarian control.",
     "phrase": "I want free markets and foreign trade as engines of growth, guided by a technocratic state that plans infrastructure and education."
   },
@@ -1227,21 +1227,21 @@
   {
     "id": "mutualismo-proudhoniano",
     "name": "Proudhonian Mutualism",
-    "category": "Anarchism",
+    "category": "Anarchist",
     "description": "Proudhon's original doctrine, denouncing property as theft and advocating free mutual credit, federalism of autonomous communities and possession by use, with strong moral reservations about progress and customs.",
     "phrase": "I want to abolish property as theft, with free mutual credit and a federation of autonomous communes where possession comes from use."
   },
   {
     "id": "republicanismo-kantiano",
     "name": "Kantian Republicanism",
-    "category": "Centre",
+    "category": "Center",
     "description": "Kant's political philosophy, grounding the state's legitimacy in the autonomy of reason and the rule of law, defending a moderate representative republicanism and a federation of free states as the path to perpetual peace.",
     "phrase": "I want a republic founded on the autonomy of reason and the rule of law, with free states united in a federation for perpetual peace."
   },
   {
     "id": "socratismo",
     "name": "Socratism",
-    "category": "Centre",
+    "category": "Center",
     "description": "Socrates' dialectical method, examining beliefs through rational questioning and the pursuit of virtue, distrustful of mass politics and the rhetoric of demagogues, yet respectful of the city's rule of law.",
     "phrase": "I want a city that examines its beliefs through rational dialogue and seeks virtue, wary of demagogues but obedient to the polis's laws."
   },
@@ -1255,7 +1255,7 @@
   {
     "id": "platonismo",
     "name": "Platonism",
-    "category": "Far Right",
+    "category": "Far-Right",
     "description": "Plato's political philosophy, entrusting the city's government to a philosophical elite formed by virtue and knowledge, with strong control over education, property and customs in the name of justice and social harmony.",
     "phrase": "I want a city governed by philosopher-kings, with guardians educated in virtue and strict control over property and customs."
   },
@@ -1283,7 +1283,7 @@
   {
     "id": "tecnocracia-liberal",
     "name": "Liberal Technocracy",
-    "category": "Center",
+    "category": "Right",
     "description": "Synthesis of the Asian Tigers: entrusts government to a merit-recruited technical elite insulated from the vote and guided by results rather than doctrine, combining free trade, open markets and low taxation with strict public order and state planning where it proves effective.",
     "phrase": "I want a government of a merit-recruited technical elite, insulated from the popular vote, guiding free trade and public order by results, not doctrine."
   },
@@ -1332,7 +1332,7 @@
   {
     "id": "neotomismo",
     "name": "Neo-Thomism",
-    "category": "Far Right",
+    "category": "Far-Right",
     "description": "A neoreactionary current combining the thought of Thomas Aquinas with criticism of liberal democracy, egalitarianism, and progressivism. It grounds a hierarchical, traditional political order in natural law, objective morality, reason, and the common good, allowing for sovereign monarchical or centralized authority.",
     "phrase": "I want a hierarchical political order based on natural law, tradition, and the common good, under sovereign authority independent of majority will."
   },
@@ -1342,5 +1342,26 @@
     "category": "Third Position",
     "description": "Russian geopolitical current that sees Eurasia as a distinct civilization and proposes a Moscow-led continental bloc, with regional autonomy and shared strategic command, against Atlanticism and US hegemony.",
     "phrase": "I want Eurasian peoples autonomous in their traditions, united under Moscow's strategic direction, with economic sovereignty and planned essential industries."
+  },
+  {
+    "id": "socialismo-democratico",
+    "name": "Democratic Socialism",
+    "category": "Left",
+    "description": "Current that seeks to move beyond capitalism through elections, with social ownership of large firms, cooperatives and workplace democracy, rejecting both the vanguard party and mere social democratic management of the market.",
+    "phrase": "I want to move beyond capitalism through the ballot, with large firms under social ownership, cooperatives and workplace democracy, never one-party rule."
+  },
+  {
+    "id": "terceira-via",
+    "name": "Third Way",
+    "category": "Center",
+    "description": "1990s renewal of the center-left under Blair, Clinton and Giddens that accepts globalized markets and fiscal discipline, replaces welfare with work activation, is tough on crime and backs liberal interventions.",
+    "phrase": "I want a globalized market with a state that invests in education, trades welfare for work, and is tough on crime and its causes."
+  },
+  {
+    "id": "paleoconservadorismo",
+    "name": "Paleoconservatism",
+    "category": "Right",
+    "description": "American traditionalist right, of Buchanan and Kirk, defending Christian heritage, localism and states' rights, immigration restriction, protectionism and non-interventionism, against neoconservatives and the managerial state.",
+    "phrase": "I want a Christian republic of local communities and sovereign states, closed borders, protected national industry and no wars for empire."
   }
 ]
