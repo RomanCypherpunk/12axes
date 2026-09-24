@@ -7,6 +7,6 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: FRONTEND_ORIGINS
-        value: http://localhost:5173,https://12axes.vercel.app
+        value: https://12axes.vercel.app,https://12axes.enzoxavier.com.br
       - key: API_ORIGIN_ENFORCEMENT
         value: "true"
