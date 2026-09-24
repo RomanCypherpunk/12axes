@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>12 Axes — brag</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/audio-data.js"></script>
+    <style>
+      @font-face { font-family: "Sora"; font-weight: 600; src: url("assets/fonts/sora-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Sora"; font-weight: 700; src: url("assets/fonts/sora-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Sora"; font-weight: 800; src: url("assets/fonts/sora-latin-800-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Poppins"; font-weight: 400; src: url("assets/fonts/poppins-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Poppins"; font-weight: 500; src: url("assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Poppins"; font-weight: 600; src: url("assets/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+
+      :root {
+        --papel: #F4F1E8;
+        --superficie: #FBF9F3;
+        --borda: #E2DDCF;
+        --floresta: #102E24;
+        --floresta-600: #0C231B;
+        --floresta-800: #071A14;
+        --floresta-50: #E9EFEC;
+        --carmim: #880912;
+        --carmim-400: #A83039;
+        --carmim-600: #6E070E;
+        --carmim-50: #F7E7E8;
+        --tinta: #101010;
+        --suave: #5B5A55;
+        --neutro: #ECE8DC;
+        --cat: #946201;
+        --cat-deep: #6E4A00;
+        --cat-bg: #F0E4C8;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--papel); color: var(--tinta); font-family: "Poppins", sans-serif; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--papel); }
+      .mesh {
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(42% 38% at 8% 2%, rgba(16, 46, 36, 0.07), transparent 70%),
+          radial-gradient(40% 36% at 96% 0%, rgba(148, 98, 1, 0.06), transparent 72%),
+          radial-gradient(52% 46% at 90% 98%, rgba(16, 46, 36, 0.05), transparent 74%);
+      }
+      .clip { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+      .wrap { width: 1440px; }
+      .eyebrow { font-family: "Poppins"; font-weight: 600; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--carmim); margin: 0 0 14px; }
+      .h2 { font-family: "Sora"; font-weight: 800; font-size: 62px; letter-spacing: -0.035em; line-height: 1.05; margin: 0 0 30px; }
+      .card { background: var(--superficie); border: 1.5px solid var(--borda); border-radius: 22px; box-shadow: 0 26px 52px -28px rgba(16, 16, 16, 0.28); }
+      .tag { display: inline-block; font-weight: 600; font-size: 20px; letter-spacing: 0.02em; padding: 6px 16px; border-radius: 999px; white-space: nowrap; }
+      .tag-solid { background: var(--cat); color: #fff; }
+      .tag-soft { background: var(--cat-bg); color: var(--cat-deep); }
+      .tag-neutral { background: var(--neutro); color: var(--tinta); }
+
+      /* ── Scene 1: hook ── */
+      #s1 .inner { align-items: flex-start; padding: 0 200px; }
+      #s1 .eyebrow { font-size: 24px; margin-bottom: 28px; }
+      #s1 h1 { font-family: "Sora"; font-weight: 800; font-size: 118px; line-height: 1.04; letter-spacing: -0.035em; margin: 0; max-width: 1500px; }
+      #s1 h1 .w { display: inline-block; margin-right: 0.22em; }
+      #s1 .accent { position: relative; display: inline-block; }
+      #s1 .accent-line { position: absolute; left: 0; right: 0.22em; bottom: 4px; height: 8px; background: var(--carmim); transform-origin: left center; }
+
+      /* ── Scene 2: question ── */
+      .q-wrap { width: 1380px; }
+      .q-top { display: flex; justify-content: space-between; align-items: baseline; font-size: 26px; font-weight: 500; color: var(--suave); margin-bottom: 16px; }
+      .q-top b { font-family: "Sora"; font-weight: 700; color: var(--tinta); }
+      .q-track { height: 10px; border-radius: 999px; background: var(--borda); overflow: hidden; margin-bottom: 40px; }
+      .q-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--floresta-800), var(--floresta)); transform-origin: left center; }
+      .q-card { padding: 56px 60px 52px; }
+      .q-axis { font-weight: 600; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--carmim); margin: 0 0 18px; }
+      .q-card h2 { font-family: "Sora"; font-weight: 700; font-size: 58px; line-height: 1.16; letter-spacing: -0.02em; margin: 0 0 48px; }
+      .answers { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+      .ans { display: flex; align-items: center; gap: 14px; height: 92px; padding: 0 20px; border-radius: 14px; border: 1.5px solid; font-weight: 600; font-size: 22px; line-height: 1.15; }
+      .ans .ico { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 2px solid currentColor; background: #fff; }
+      .ans .ico svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .a-sa { background: linear-gradient(135deg, var(--floresta-600), var(--floresta)); color: #fff; border-color: var(--floresta-600); }
+      .a-sa .ico, .a-sd .ico { background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.75); }
+      .a-a { background: var(--floresta-50); color: var(--floresta-800); border-color: rgba(16, 46, 36, 0.32); }
+      .a-a .ico { color: var(--floresta); }
+      .a-n { background: var(--neutro); color: #4a4944; border-color: rgba(74, 82, 99, 0.22); }
+      .a-d { background: var(--carmim-50); color: var(--carmim-600); border-color: rgba(136, 9, 18, 0.28); }
+      .a-d .ico { color: var(--carmim); }
+      .a-sd { background: linear-gradient(135deg, var(--carmim), var(--carmim-400)); color: #fff; border-color: var(--carmim); }
+      .a-a-sel { position: absolute; inset: -1.5px; border-radius: 14px; background: linear-gradient(135deg, #09241B, #102E24 55%, #3E5A4F); color: #fff; display: flex; align-items: center; gap: 14px; padding: 0 20px; font-weight: 600; font-size: 22px; box-shadow: 0 14px 34px -14px rgba(16, 46, 36, 0.5); }
+      .a-a-sel .ico { background: rgba(255, 255, 255, 0.2); border-color: #fff; color: #fff; }
+      .ans-slot { position: relative; }
+      .cursor { position: absolute; left: 0; top: 0; width: 44px; height: 44px; z-index: 5; }
+
+      /* ── Scene 3: ideology + phrase ── */
+      .res-h1 { font-family: "Sora"; font-weight: 800; font-size: 76px; letter-spacing: -0.04em; line-height: 1; margin: 0 0 30px; }
+      .res-h1 span { color: var(--cat); }
+      .top-card { overflow: hidden; }
+      .top-head { display: flex; justify-content: space-between; align-items: center; background: var(--cat-bg); padding: 34px 52px; }
+      .roulette { height: 104px; overflow: hidden; margin-top: 10px; width: 1080px; }
+      .roulette-list { display: flex; flex-direction: column; }
+      .roulette-list span { display: block; height: 104px; line-height: 104px; font-family: "Sora"; font-weight: 800; font-size: 80px; letter-spacing: -0.035em; white-space: nowrap; color: var(--cat-deep); }
+      .ring { position: relative; width: 190px; height: 190px; flex: none; background: var(--superficie); border-radius: 50%; }
+      .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+      .ring .num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .ring strong { font-family: "Sora"; font-weight: 800; font-size: 50px; letter-spacing: -0.03em; line-height: 1; color: var(--cat-deep); }
+      .ring small { font-size: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--suave); margin-top: 6px; }
+      .phrase { position: relative; margin-top: 26px; background: var(--cat-bg); border-radius: 22px; padding: 38px 60px 40px 150px; }
+      .phrase .q { position: absolute; left: 52px; top: 20px; font-family: "Sora"; font-weight: 800; font-size: 150px; line-height: 1; color: var(--cat); }
+      .phrase .eyebrow { color: var(--cat-deep); font-size: 18px; margin-bottom: 12px; }
+      .phrase p.txt { font-family: "Sora"; font-weight: 700; font-size: 44px; line-height: 1.2; letter-spacing: -0.02em; color: var(--cat-deep); margin: 0; }
+
+      /* ── Scene 4: 12 axes ── */
+      .axes-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; row-gap: 22px; padding: 38px 52px 42px; }
+      .ax-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+      .ax-name { font-family: "Sora"; font-weight: 700; font-size: 27px; letter-spacing: -0.01em; }
+      .ax-val { font-size: 23px; font-weight: 600; color: var(--suave); }
+      .ax-val b { font-family: "Sora"; font-weight: 800; color: var(--tinta); margin-left: 6px; }
+      .ax-track { position: relative; height: 12px; border-radius: 999px; background: var(--neutro); }
+      .ax-mid { position: absolute; left: 50%; top: -5px; width: 3px; height: 22px; margin-left: -1.5px; background: var(--tinta); border-radius: 2px; }
+      .ax-fill { position: absolute; top: 0; height: 12px; border-radius: 999px; }
+      .ax-fill.l { right: 50%; transform-origin: right center; }
+      .ax-fill.r { left: 50%; transform-origin: left center; }
+      .ax-dot { position: absolute; top: -7px; width: 26px; height: 26px; margin-left: -13px; border-radius: 50%; background: var(--superficie); border: 5px solid; }
+
+      /* ── Scenes 5 & 6: countries / personalities ── */
+      .main-card { position: relative; display: flex; gap: 44px; align-items: center; padding: 34px 44px; border-top: 6px solid var(--cat); }
+      .main-card .media { flex: none; width: 300px; height: 200px; border-radius: 14px; object-fit: cover; border: 1.5px solid var(--borda); }
+      .main-card .media.portrait { width: 220px; height: 250px; filter: grayscale(1); }
+      .main-card h3 { font-family: "Sora"; font-weight: 800; font-size: 64px; letter-spacing: -0.035em; line-height: 1.02; margin: 14px 0 14px; }
+      .main-card .tags { display: flex; gap: 10px; }
+      .sub { font-family: "Sora"; font-weight: 700; font-size: 26px; margin: 30px 0 16px; }
+      .dims { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .dim { text-align: center; padding: 24px 20px 22px; background: #F5F0E4; border: 1.5px solid var(--borda); border-radius: 18px; }
+      .dim img { display: block; margin: 0 auto 14px; width: 132px; height: 88px; object-fit: cover; border-radius: 8px; border: 1.5px solid var(--borda); }
+      .dim img.round { width: 100px; height: 100px; border-radius: 50%; filter: grayscale(1); }
+      .dim .k { font-size: 17px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cat-deep); }
+      .dim .n { font-family: "Sora"; font-weight: 700; font-size: 30px; letter-spacing: -0.015em; margin: 6px 0 2px; }
+      .dim .s { font-size: 19px; color: var(--suave); }
+      .dim .p { font-family: "Sora"; font-weight: 800; font-size: 44px; color: var(--cat-deep); margin-top: 8px; line-height: 1; }
+      .dim.hi { border-color: var(--cat); box-shadow: 0 0 0 3px rgba(148, 98, 1, 0.25); }
+
+      /* ── Scene 7: share card ── */
+      #s7 .inner { flex-direction: row; justify-content: space-between; padding: 0 210px 0 230px; }
+      #s7 .h2 { font-size: 88px; max-width: 820px; margin-bottom: 26px; }
+      #s7 .lead { font-size: 30px; color: var(--suave); max-width: 700px; margin: 0; line-height: 1.4; }
+      .story { flex: none; width: 486px; height: 864px; }
+      .story img { display: block; width: 100%; height: 100%; border-radius: 26px; box-shadow: 0 40px 80px -30px rgba(16, 16, 16, 0.45); }
+
+      /* ── Scene 8: outro ── */
+      #s8 .inner { text-align: center; }
+      .logo { display: flex; align-items: baseline; gap: 0.16em; font-size: 250px; line-height: 1; }
+      .logo b { font-family: "Sora"; font-weight: 800; letter-spacing: -0.04em; color: var(--floresta); display: inline-block; }
+      .logo span { font-family: "Poppins"; font-weight: 400; letter-spacing: -0.01em; display: inline-block; }
+      .o-labels { margin: 40px 0 0; font-size: 38px; font-weight: 500; color: var(--suave); }
+      .o-url { margin: 22px 0 0; font-family: "Sora"; font-weight: 700; font-size: 48px; color: var(--carmim); letter-spacing: -0.01em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="28.5">
+      <div class="mesh"></div>
+
+      <!-- Scene 1 — Hook -->
+      <section id="s1" class="clip" data-start="0" data-duration="3.9" data-track-index="1">
+        <div class="inner" id="s1-inner">
+          <p class="eyebrow" id="s1-eyebrow">— Descoberta política</p>
+          <h1 id="s1-h1">
+            <span class="w">Você</span><span class="w">sabe</span><span class="w">mesmo</span><span class="w">qual</span><span class="w">é</span><span class="w">a</span><span class="w">sua</span><span class="w accent" id="s1-accent">ideologia política?<i class="accent-line" id="s1-line"></i></span>
+          </h1>
+        </div>
+      </section>
+
+      <!-- Scene 2 — Question -->
+      <section id="s2" class="clip" data-start="3.7" data-duration="3.3" data-track-index="2">
+        <div class="inner" id="s2-inner">
+          <div class="q-wrap">
+            <div class="q-top">
+              <span>Pergunta <b id="s2-count">1</b> de 240</span>
+              <span>Versão extrema</span>
+            </div>
+            <div class="q-track"><div class="q-fill" id="s2-fill"></div></div>
+            <article class="card q-card">
+              <p class="q-axis">Economia</p>
+              <h2>Com concorrência, empresas privadas prestam serviços melhores do que o Estado.</h2>
+              <div class="answers">
+                <div class="ans-slot"><div class="ans a-sa" id="ans1"><span class="ico"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" /></svg></span>Concordo totalmente</div></div>
+                <div class="ans-slot"><div class="ans a-a" id="ans2" data-layout-allow-overlap data-layout-allow-occlusion><span class="ico"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" /></svg></span>Concordo</div><div class="a-a-sel" id="ans2-sel" data-layout-allow-overlap data-layout-allow-occlusion><span class="ico"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" /></svg></span>Concordo</div></div>
+                <div class="ans-slot"><div class="ans a-n" id="ans3"><span class="ico"><svg viewBox="0 0 24 24"><path d="M6 12h12" /></svg></span>Neutro ou Depende</div></div>
+                <div class="ans-slot"><div class="ans a-d" id="ans4"><span class="ico"><svg viewBox="0 0 24 24"><path d="m7 7 10 10" /><path d="m17 7-10 10" /></svg></span>Discordo</div></div>
+                <div class="ans-slot"><div class="ans a-sd" id="ans5"><span class="ico"><svg viewBox="0 0 24 24"><path d="m7 7 10 10" /><path d="m17 7-10 10" /></svg></span>Discordo totalmente</div></div>
+                <svg class="cursor" id="s2-cursor" viewBox="0 0 24 24"><path d="M4 2.5 19.5 11l-6.6 1.7 3.9 7.3-2.6 1.4-3.9-7.3L5.5 19Z" fill="#101010" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" /></svg>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 3 — Ideology + phrase -->
+      <section id="s3" class="clip" data-start="6.86" data-duration="5.44" data-track-index="3">
+        <div class="inner" id="s3-inner">
+          <div class="wrap">
+            <p class="eyebrow" id="s3-eyebrow">— Análise concluída</p>
+            <h2 class="res-h1" id="s3-title">Seu perfil <span>ideológico</span></h2>
+            <article class="card top-card" id="s3-panel">
+              <div class="top-head">
+                <div>
+                  <span class="tag tag-solid" id="s3-tag">Libertário</span>
+                  <div class="roulette">
+                    <div class="roulette-list" id="s3-list" data-layout-allow-overflow>
+                      <span>Eurasianismo</span><span>Tecno-Monarquismo</span><span>Distributismo</span><span>Neotomismo</span><span>Positivismo</span><span>Estoicismo</span><span>Zapatismo</span><span>Confucionismo</span><span>Arqueofuturismo</span><span>Mutualismo</span><span>Federalismo</span><span>Liberalismo Clássico</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ring" id="s3-ring">
+                  <svg viewBox="0 0 190 190">
+                    <circle cx="95" cy="95" r="84" fill="none" stroke="#E2DDCF" stroke-width="14" />
+                    <circle id="s3-arc" cx="95" cy="95" r="84" fill="none" stroke="#946201" stroke-width="14" stroke-linecap="round" stroke-dasharray="527.8 527.8" stroke-dashoffset="527.8" />
+                  </svg>
+                  <div class="num"><strong><span id="s3-pct">0</span>%</strong><small>match</small></div>
+                </div>
+              </div>
+            </article>
+            <div class="phrase" id="s3-phrase">
+              <span class="q">“</span>
+              <p class="eyebrow">— Uma frase que te descreve</p>
+              <p class="txt">Quero uma sociedade de direitos naturais e propriedade sagrada, com Estado mínimo e mercado livre como base da vida justa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 4 — 12 axes -->
+      <section id="s4" class="clip" data-start="12.12" data-duration="3.33" data-track-index="4">
+        <div class="inner" id="s4-inner">
+          <div class="wrap">
+            <p class="eyebrow" id="s4-eyebrow">— Eixos políticos</p>
+            <h2 class="h2" id="s4-title">Seu resultado em cada um dos 12 eixos</h2>
+            <article class="card axes-grid" id="s4-grid"></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 5 — Countries -->
+      <section id="s5" class="clip" data-start="15.28" data-duration="3.82" data-track-index="5">
+        <div class="inner" id="s5-inner">
+          <div class="wrap">
+            <p class="eyebrow" id="s5-eyebrow">— Países</p>
+            <h2 class="h2" id="s5-title">O país que mais pensa como você</h2>
+            <article class="card main-card" id="s5-main">
+              <img class="media" src="assets/img/eua-new-hampshire.png" alt="Bandeira de New Hampshire" />
+              <div>
+                <div class="tags"><span class="tag tag-soft">País mais compatível</span><span class="tag tag-solid">93% match</span></div>
+                <h3>New Hampshire (Estados Unidos)</h3>
+                <span class="tag tag-neutral">Região libertária-fiscal</span>
+              </div>
+            </article>
+            <p class="sub" id="s5-sub">Também próximos, por dimensão do seu perfil</p>
+            <div class="dims">
+              <div class="dim" id="s5-d1"><img src="assets/img/argentina.png" alt="Bandeira da Argentina" /><div class="k">Politicamente</div><div class="n">Argentina</div><div class="s">República liberal-ajustista</div><div class="p">92%</div></div>
+              <div class="dim" id="s5-d2"><img src="assets/img/suica-zug.png" alt="Bandeira de Zug" /><div class="k">Socialmente</div><div class="n">Zug (Suíça)</div><div class="s">Região cripto-fiscal</div><div class="p">90%</div></div>
+              <div class="dim" id="s5-d3"><img src="assets/img/chile-de-pinochet.png" alt="Bandeira do Chile" /><div class="k">Economicamente</div><div class="n">Chile de Pinochet</div><div class="s">1973–1990</div><div class="p">99%</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 6 — Personalities -->
+      <section id="s6" class="clip" data-start="18.96" data-duration="3.84" data-track-index="6">
+        <div class="inner" id="s6-inner">
+          <div class="wrap">
+            <p class="eyebrow" id="s6-eyebrow">— Personalidades</p>
+            <h2 class="h2" id="s6-title">A figura histórica mais parecida com você</h2>
+            <article class="card main-card" id="s6-main">
+              <img class="media portrait" src="assets/img/mises.jpg" alt="Retrato de Ludwig von Mises" />
+              <div>
+                <div class="tags"><span class="tag tag-soft">Personalidade mais compatível</span><span class="tag tag-solid">98% match</span></div>
+                <h3>Ludwig von Mises</h3>
+                <div class="tags"><span class="tag tag-neutral">Economista</span><span class="tag tag-neutral">1881–1973</span></div>
+              </div>
+            </article>
+            <p class="sub" id="s6-sub">Também próximos, por dimensão do seu perfil</p>
+            <div class="dims">
+              <div class="dim" id="s6-d1"><img class="round" src="assets/img/robert-nozick.jpg" alt="Robert Nozick" /><div class="k">Politicamente</div><div class="n">Robert Nozick</div><div class="s">Filósofo</div><div class="p">97%</div></div>
+              <div class="dim" id="s6-d2"><img class="round" src="assets/img/gustave-de-molinari.jpg" alt="Gustave de Molinari" /><div class="k">Socialmente</div><div class="n">Gustave de Molinari</div><div class="s">Economista político</div><div class="p">98%</div></div>
+              <div class="dim" id="s6-d3"><img class="round" src="assets/img/hayek.jpg" alt="Friedrich Hayek" /><div class="k">Economicamente</div><div class="n">Friedrich Hayek</div><div class="s">Economista</div><div class="p">100%</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 7 — Share card -->
+      <section id="s7" class="clip" data-start="22.65" data-duration="2.8" data-track-index="7">
+        <div class="inner" id="s7-inner">
+          <div>
+            <p class="eyebrow" id="s7-eyebrow">— Salvar ou compartilhar</p>
+            <h2 class="h2" id="s7-title">Um card pronto para o seu story</h2>
+            <p class="lead" id="s7-lead">Seu resultado em uma imagem, e um link direto para quem quiser ver.</p>
+          </div>
+          <div class="story" id="s7-story"><img src="assets/img/share-card.jpg" alt="Card de resultado para story" /></div>
+        </div>
+      </section>
+
+      <!-- Scene 8 — Outro -->
+      <section id="s8" class="clip" data-start="25.28" data-duration="3.22" data-track-index="8">
+        <div class="inner" id="s8-inner">
+          <div class="logo"><b id="s8-12">12</b><span id="s8-axes">axes</span></div>
+          <p class="o-labels" id="s8-labels">Gratuito · Anônimo · Resultado imediato</p>
+          <p class="o-url" id="s8-url">12axes.vercel.app</p>
+        </div>
+      </section>
+
+      <!-- Audio -->
+      <audio id="music" src="assets/music/happy-beats-business-moves-vol-11-by-ende-dot-app.mp3" data-start="0" data-duration="28.5" data-track-index="10" data-volume="0.85"
+        data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0.55},{"t":0.5,"v":0.85},{"t":27.3,"v":0.85},{"t":28.5,"v":0}]}]}'></audio>
+      <audio id="sfx-click" src="assets/sfx/interface/click_003.ogg" data-start="5.8" data-duration="0.01" data-track-index="11" data-volume="0.9"></audio>
+      <audio id="sfx-tick1" src="assets/sfx/interface/click_002.ogg" data-start="6.2" data-duration="0.01" data-track-index="12" data-volume="0.35"></audio>
+      <audio id="sfx-tick2" src="assets/sfx/interface/click_002.ogg" data-start="6.5" data-duration="0.01" data-track-index="13" data-volume="0.4"></audio>
+      <audio id="sfx-lock" src="assets/sfx/impact/impactSoft_medium_001.ogg" data-start="7.91" data-duration="0.19" data-track-index="14" data-volume="0.9"></audio>
+      <audio id="sfx-phrase" src="assets/sfx/casino/card-slide-1.ogg" data-start="8.92" data-duration="0.6" data-track-index="15" data-volume="0.5"></audio>
+      <audio id="sfx-country" src="assets/sfx/casino/card-slide-1.ogg" data-start="15.3" data-duration="0.6" data-track-index="16" data-volume="0.5"></audio>
+      <audio id="sfx-hi" src="assets/sfx/impact/impactSoft_medium_004.ogg" data-start="17.91" data-duration="0.15" data-track-index="17" data-volume="0.6"></audio>
+      <audio id="sfx-person" src="assets/sfx/casino/card-slide-1.ogg" data-start="18.96" data-duration="0.6" data-track-index="18" data-volume="0.5"></audio>
+      <audio id="sfx-story" src="assets/sfx/casino/card-place-1.ogg" data-start="23.05" data-duration="0.3" data-track-index="19" data-volume="0.45"></audio>
+      <audio id="sfx-bell" src="assets/sfx/impact/impactBell_heavy_000.ogg" data-start="25.28" data-duration="1.48" data-track-index="20" data-volume="0.5"></audio>
+    </div>
+
+    <script>
+      // ── Build the 12 axis rows once at setup (shared result: est=90 rep=84 pod=5 imi=23 dip=23 int=65 eco=15 con=15 com=15.3 rel=61.3 mor=50 tec=62.5) ──
+      const AXES = [
+        ["Estrutura", "Federal", "Unitário", 90, "#2f80ed", "#f2994a"],
+        ["Representação", "Democracia", "Autocracia", 84, "#00a896", "#ff6b6b"],
+        ["Poder", "Segurança", "Liberdade", 5, "#4c6ef5", "#ffd43b"],
+        ["Imigração", "Assimilação", "Multicultura", 23, "#f06595", "#5c7cfa"],
+        ["Diplomacia", "Militarista", "Pacifista", 23, "#82c91e", "#f783ac"],
+        ["Intervenção", "Não intervencionista", "Nacionalista", 65, "#ffe066", "#c15f00"],
+        ["Economia", "Público", "Privado", 15, "#ff3b30", "#ffd166"],
+        ["Controle", "Planejamento", "Livre mercado", 15, "#bf2600", "#00897b"],
+        ["Comércio", "Protecionismo", "Globalismo", 15.3, "#9c27b0", "#03a9f4"],
+        ["Religião", "Irreligioso", "Religioso", 61.3, "#ff9800", "#00a6d6"],
+        ["Moral", "Progressista", "Tradicionalista", 50, "#9c27b0", "#8bc34a"],
+        ["Tecnologia", "Tecnologia", "Biologia", 62.5, "#6aa6b0", "#f6ad55"]
+      ];
+      (function buildAxes() {
+        const grid = document.getElementById("s4-grid");
+        AXES.forEach(([name, lp, rp, left, lc, rc], i) => {
+          const leftWins = left >= 50;
+          const dom = left === 50 ? "Equilibrado" : leftWins ? lp : rp;
+          const val = Math.round(left === 50 ? 50 : leftWins ? left : 100 - left);
+          const color = left === 50 ? "#9C988C" : leftWins ? lc : rc;
+          const half = Math.abs(left - 50) * 2; // % of the half-track
+          const row = document.createElement("div");
+          row.className = "ax-row";
+          row.id = "ax" + i;
+          row.innerHTML =
+            '<div class="ax-head"><span class="ax-name">' + name + '</span><span class="ax-val">' + dom + (left === 50 ? "" : "<b>" + val + "%</b>") + "</span></div>" +
+            '<div class="ax-track"><i class="ax-fill ' + (leftWins ? "l" : "r") + '" style="width:' + (half / 2) + "%;background:" + color + '"></i><i class="ax-mid"></i>' +
+            '<i class="ax-dot" style="left:' + (leftWins ? 50 - half / 2 : 50 + half / 2) + "%;border-color:" + color + '"></i></div>';
+          grid.appendChild(row);
+        });
+      })();
+
+      const tl = gsap.timeline({ paused: true });
+      const AD = window.AUDIO_DATA;
+
+      // ── Scene 1 — Hook (0 → 3.9) ──
+      tl.fromTo("#s1-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.1);
+      tl.fromTo("#s1-h1 .w", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out", stagger: 0.05 }, 0.2);
+      tl.fromTo("#s1-accent", { color: "#101010" }, { color: "#880912", duration: 0.3, ease: "power2.out" }, 1.6); // beat-locked: 1.60s
+      tl.fromTo("#s1-line", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 1.6);
+      tl.to("#s1-inner", { opacity: 0, y: -40, duration: 0.3, ease: "power2.in" }, 3.5);
+
+      // ── Scene 2 — Question (3.7 → 7.0) ──
+      tl.fromTo("#s2-inner", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.72);
+      tl.fromTo("#s2-fill", { scaleX: 1 / 240 }, { scaleX: 1 / 240, duration: 0.01 }, 3.7);
+      // beat-grid: answers on half-beats 3.95 → 4.55 (short labels, the set holds afterwards)
+      [3.95, 4.1, 4.25, 4.4, 4.55].forEach((t, i) => {
+        tl.fromTo("#ans" + (i + 1), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, t);
+      });
+      tl.fromTo("#ans2-sel", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 3.7);
+      tl.fromTo("#s2-cursor", { x: 1180, y: 190, opacity: 0 }, { x: 1080, y: 150, opacity: 1, duration: 0.25, ease: "power1.out" }, 4.7);
+      tl.to("#s2-cursor", { x: 365, y: 38, duration: 0.7, ease: "power3.inOut" }, 4.97);
+      tl.to("#s2-cursor", { scale: 0.82, duration: 0.08, ease: "power2.in" }, 5.72);
+      tl.to("#s2-cursor", { scale: 1, duration: 0.14, ease: "power2.out" }, 5.8); // beat-locked: 5.80s click
+      tl.to("#ans2-sel", { opacity: 1, duration: 0.18, ease: "power2.out" }, 5.8);
+      tl.to("#ans2", { opacity: 0, duration: 0.18 }, 5.8);
+      tl.to("#s2-cursor", { opacity: 0, duration: 0.25 }, 6.1);
+      tl.to("#s2-count", { innerText: 240, snap: { innerText: 1 }, duration: 0.75, ease: "power2.in" }, 6.0);
+      tl.to("#s2-fill", { scaleX: 1, duration: 0.75, ease: "power2.in" }, 6.0);
+      tl.to("#s2-inner", { opacity: 0, x: -80, duration: 0.25, ease: "power2.in" }, 6.65);
+
+      // ── Scene 3 — Ideology + phrase (6.86 → 12.3) ──
+      tl.fromTo("#s3-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 6.9);
+      tl.fromTo("#s3-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 6.95);
+      tl.fromTo("#s3-panel", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 7.0);
+      tl.fromTo("#s3-list", { y: 0 }, { y: -104 * 11, duration: 0.9, ease: "power4.out" }, 7.0);
+      tl.to("#s3-list span:not(:last-child)", { opacity: 0, duration: 0.05 }, 7.93);
+      tl.fromTo("#s3-tag", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 7.91); // beat: 7.91 lock
+      tl.fromTo("#s3-arc", { strokeDashoffset: 527.8 }, { strokeDashoffset: 527.8 * 0.03, duration: 1.0, ease: "power3.out" }, 7.95);
+      tl.to("#s3-pct", { innerText: 97, snap: { innerText: 1 }, duration: 1.0, ease: "power3.out" }, 7.95);
+      tl.fromTo("#s3-phrase", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 8.96); // beat-locked: 8.96s
+      for (let f = Math.round(9.0 * AD.fps); f < Math.round(12.1 * AD.fps); f++) {
+        tl.set("#s3-ring", { scale: 1 + 0.04 * AD.frames[f][1] }, f / AD.fps); // audio-reactive: ring breathes on bass
+      }
+      tl.to("#s3-inner", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 11.9);
+
+      // ── Scene 4 — 12 axes (12.12 → 15.45) ──
+      tl.fromTo("#s4-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 12.14);
+      tl.fromTo("#s4-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 12.18);
+      tl.fromTo("#s4-grid", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 12.25);
+      // beat-locked: bars start filling on the 12.65s strong cue, row pairs staggered
+      tl.fromTo(".ax-fill", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out", stagger: 0.06 }, 12.65);
+      tl.fromTo(".ax-dot", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2)", stagger: 0.06 }, 13.0);
+      tl.to("#s4-inner", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 15.05);
+
+      // ── Scene 5 — Countries (15.28 → 19.1) ──
+      tl.fromTo("#s5-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 15.3);
+      tl.fromTo("#s5-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 15.33);
+      tl.fromTo("#s5-main", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 15.4);
+      tl.fromTo("#s5-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 16.2);
+      // beat-grid: 16.34 / 16.86 / 17.39
+      [16.34, 16.86, 17.39].forEach((t, i) => {
+        tl.fromTo("#s5-d" + (i + 1), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.5)" }, t);
+      });
+      tl.fromTo("#s5-d3", { scale: 1 }, { scale: 1.05, duration: 0.18, ease: "power2.out", immediateRender: false }, 17.91); // beat-locked: 17.91s
+      tl.to("#s5-d3", { scale: 1, duration: 0.35, ease: "power2.inOut" }, 18.09);
+      tl.to("#s5-d3", { borderColor: "#946201", boxShadow: "0 0 0 4px rgba(148, 98, 1, 0.28)", duration: 0.2 }, 17.91);
+      tl.to("#s5-inner", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 18.72);
+
+      // ── Scene 6 — Personalities (18.96 → 22.8) ──
+      tl.fromTo("#s6-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 18.98);
+      tl.fromTo("#s6-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 19.0);
+      tl.fromTo("#s6-main", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 19.05);
+      tl.fromTo("#s6-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 19.85);
+      // beat-grid: 20.02 / 20.54 / 21.07
+      [20.02, 20.54, 21.07].forEach((t, i) => {
+        tl.fromTo("#s6-d" + (i + 1), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.5)" }, t);
+      });
+      tl.to("#s6-inner", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 22.4);
+
+      // ── Scene 7 — Share card (22.65 → 25.45) ──
+      tl.fromTo("#s7-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 22.67);
+      tl.fromTo("#s7-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 22.7);
+      tl.fromTo("#s7-lead", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 23.1);
+      tl.fromTo("#s7-story", { y: 900, rotation: 10 }, { y: 0, rotation: -4, duration: 0.55, ease: "power3.out" }, 22.65); // beat-locked: 22.65s
+      for (let f = Math.round(23.3 * AD.fps); f < Math.round(25.2 * AD.fps); f++) {
+        tl.set("#s7-story img", { scale: 1 + 0.02 * AD.frames[f][1] }, f / AD.fps); // audio-reactive: subtle presence
+      }
+      tl.to("#s7-inner", { opacity: 0, duration: 0.25, ease: "power2.in" }, 25.05);
+
+      // ── Scene 8 — Outro (25.28 → 28.5) ──
+      tl.fromTo("#s8-12", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 25.28); // beat: 25.28s
+      tl.fromTo("#s8-axes", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 25.45);
+      tl.fromTo("#s8-labels", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 25.95);
+      tl.fromTo("#s8-url", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 26.4);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
