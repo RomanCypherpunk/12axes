@@ -246,7 +246,8 @@ Acesse `http://localhost:5173`. Em desenvolvimento, o Vite proxia `/api` para `h
 | Variável | Lado | Padrão | Uso |
 |----------|------|--------|-----|
 | `PORT` | Backend | `8080` | Porta HTTP |
-| `FRONTEND_ORIGINS` | Backend | localhost + Vercel | Origens CORS |
+| `FRONTEND_ORIGINS` | Backend | localhost + Vercel | Origens CORS e allowlist do bloqueio de `/api/**` |
+| `API_ORIGIN_ENFORCEMENT` | Backend | `true` | Liga o bloqueio de `/api/**` por `Origin`. `false` desliga |
 | `VITE_API_PROXY_TARGET` | Frontend dev | `http://localhost:8080` | Proxy local |
 | `VITE_API_URL` | Frontend prod | vazio | URL base da API |
 
@@ -311,11 +312,17 @@ Variáveis usadas em produção:
 
 ```env
 # Render
-FRONTEND_ORIGINS=https://12axes.vercel.app
+FRONTEND_ORIGINS=https://12axes.vercel.app,https://12axes.enzoxavier.com.br
+API_ORIGIN_ENFORCEMENT=true
 
 # Vercel
 VITE_API_URL=https://one2axes-backend.onrender.com
 ```
+
+`/api/**` só responde a requisições cujo `Origin` (ou `Referer`) esteja em
+`FRONTEND_ORIGINS`; qualquer outra recebe `403`, registrado no log como
+`API_ORIGIN_BLOCKED`. `/api/health` fica sempre liberado para o health check do
+Render, e `API_ORIGIN_ENFORCEMENT=false` desliga a checagem.
 
 O Render usa `/api/health` como health check.
 
@@ -324,6 +331,19 @@ O Render usa `/api/health` como health check.
 ## Nota Metodológica
 
 O 12 Axes é uma ferramenta de exploração política. A compatibilidade indica proximidade entre respostas e perfis cadastrados, não filiação, recomendação de voto ou avaliação moral. Os perfis e descrições são modelos simplificados para comparação entre correntes, regimes, experiências históricas e figuras públicas.
+
+---
+
+## Licença
+
+© 2026 Enzo Xavier Santos. Todos os direitos reservados.
+
+O código, as perguntas, os perfis, os vetores de eixos e as descrições deste
+repositório são proprietários. Não é permitido reproduzir, redistribuir, traduzir
+nem usar comercialmente qualquer parte do projeto sem autorização por escrito, e
+a API pública é de uso exclusivo dos clientes operados pelo autor. Os termos
+completos estão em [LICENSE](LICENSE); pedidos de autorização podem ser enviados
+para enzo.xs@hotmail.com.
 
 ---
 
