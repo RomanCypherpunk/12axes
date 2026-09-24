@@ -8,3 +8,5 @@ services:
     envVars:
       - key: FRONTEND_ORIGINS
         value: http://localhost:5173,https://12axes.vercel.app
+      - key: API_ORIGIN_ENFORCEMENT
+        value: "true"
