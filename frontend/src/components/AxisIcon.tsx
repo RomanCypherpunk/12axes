@@ -1,3 +1,5 @@
+import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
+
 type AxisIconProps = {
   id: string;
   className?: string;
@@ -255,6 +257,16 @@ export function AxisIcon({ id, className = 'axis-symbol' }: AxisIconProps) {
 }
 
 export function PoleIcon({ axisId, side, className = 'axis-symbol' }: PoleIconProps) {
+  const filled = FILLED_POLE_ICONS[axisId]?.[side];
+  if (filled) {
+    return (
+      <svg className={className} viewBox={filled.viewBox} aria-hidden="true" style={{ fill: 'currentColor', stroke: 'none' }}>
+        {filled.paths.map((d) => (
+          <path key={d} d={d} fillRule={filled.fillRule ?? 'evenodd'} clipRule={filled.fillRule ?? 'evenodd'} />
+        ))}
+      </svg>
+    );
+  }
   return (
     <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
       {(poleIcons[axisId] ?? poleIcons.estrutura)[side]}

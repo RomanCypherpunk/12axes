@@ -3,6 +3,7 @@ import type { PersonalityMatch, QuizPayload, QuizResult } from '../types/quiz';
 import { resolveCountryFlagSrc } from './countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from './personalityImage';
 import { resolveIdeologyColor } from './ideologyColors';
+import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
 
 /**
  * Cartão de compartilhamento social — formato stories 1080x1920.
@@ -448,6 +449,12 @@ function buildShareAxisLine(
 }
 
 function buildPoleGlyph(axisId: string, side: PoleSide): SVGElement {
+  const filled = FILLED_POLE_ICONS[axisId]?.[side];
+  if (filled) {
+    const filledSvg = svgEl('svg', { viewBox: filled.viewBox, width: 26, height: 26, fill: 'currentColor', stroke: 'none' });
+    filled.paths.forEach((d) => filledSvg.append(svgEl('path', { d, 'fill-rule': filled.fillRule ?? 'evenodd', 'clip-rule': filled.fillRule ?? 'evenodd' })));
+    return filledSvg;
+  }
   const svg = svgEl('svg', {
     viewBox: '0 0 24 24',
     width: 26,
