@@ -3330,5 +3330,73 @@
       "moral": 23.8,
       "tecnologia": 73.8
     }
+  },
+  {
+    "ideologyId": "quilombismo",
+    "vector": {
+      "estrutura": 85,
+      "representacao": 62.5,
+      "poder": 31.2,
+      "imigracao": 25,
+      "diplomacia": 72.5,
+      "intervencao": 45,
+      "economia": 76.2,
+      "controle": 65,
+      "comercio": 65,
+      "religiao": 36.2,
+      "moral": 47.5,
+      "tecnologia": 38.8
+    }
+  },
+  {
+    "ideologyId": "democracia-intervencionista",
+    "vector": {
+      "estrutura": 47.5,
+      "representacao": 76.2,
+      "poder": 77.5,
+      "imigracao": 47.5,
+      "diplomacia": 95.0,
+      "intervencao": 10.0,
+      "economia": 20.0,
+      "controle": 22.5,
+      "comercio": 25.0,
+      "religiao": 25.0,
+      "moral": 30.0,
+      "tecnologia": 65.0
+    }
+  },
+  {
+    "ideologyId": "ambientalismo-malthusiano",
+    "vector": {
+      "estrutura": 47.5,
+      "representacao": 50.0,
+      "poder": 70.0,
+      "imigracao": 87.5,
+      "diplomacia": 30.0,
+      "intervencao": 55.0,
+      "economia": 35.0,
+      "controle": 60.0,
+      "comercio": 75.0,
+      "religiao": 80.0,
+      "moral": 67.5,
+      "tecnologia": 25.0
+    }
+  },
+  {
+    "ideologyId": "conservadorismo-reaganista",
+    "vector": {
+      "estrutura": 82.5,
+      "representacao": 77.5,
+      "poder": 45.0,
+      "imigracao": 60.0,
+      "diplomacia": 70.0,
+      "intervencao": 25.0,
+      "economia": 15.0,
+      "controle": 18.8,
+      "comercio": 30.0,
+      "religiao": 15.0,
+      "moral": 20.0,
+      "tecnologia": 72.5
+    }
   }
 ]

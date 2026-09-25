@@ -1370,5 +1370,33 @@
     "category": "Right",
     "description": "Caesarist current that legitimises a charismatic leader by plebiscite above parties, combining personal authority, bureaucratic centralisation, military mobilisation and state-led modernising reforms.",
     "phrase": "I want a nation mobilised by a plebiscitary leader above parties, modernising the state and directing strategic sectors with authority."
+  },
+  {
+    "id": "quilombismo",
+    "name": "Quilombism",
+    "category": "Left",
+    "description": "Political project developed by Abdias Nascimento from the history of Brazil's quilombos. It advocates racial equality, Afro-Brazilian self-determination, participatory democracy, a cooperative economy and land held for collective use.",
+    "phrase": "I want a quilombist state with racial equality and popular participation, collective land and production organised through cooperatives."
+  },
+  {
+    "id": "democracia-intervencionista",
+    "name": "Interventionist Democracy",
+    "category": "Right",
+    "description": "Foreign policy doctrine associated with the 2002 US strategy. It favours military force and preemptive action against threats, alongside the international promotion of democracy, open markets and US-led alliances.",
+    "phrase": "I want democracies and open markets protected by strong alliances, with preemptive military action against security threats."
+  },
+  {
+    "id": "ambientalismo-malthusiano",
+    "name": "Malthusian Environmentalism",
+    "category": "Right",
+    "description": "Environmental current inspired by Garrett Hardin that links population pressure to the depletion of common resources. It favours collectively enforced limits on resource use and policies to curb population growth.",
+    "phrase": "I want to preserve limited resources through firm rules for the commons and limits on population growth."
+  },
+  {
+    "id": "conservadorismo-reaganista",
+    "name": "Reaganite Conservatism",
+    "category": "Right",
+    "description": "American conservative current associated with Ronald Reagan. It combines lower taxes and a smaller federal economic role with free enterprise, traditional religious values, anticommunism and military strength.",
+    "phrase": "I want free families and communities under a smaller federal government, low taxes, strong businesses and firm defence against foreign adversaries."
   }
 ]

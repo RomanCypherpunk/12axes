@@ -1955,5 +1955,45 @@
     "phrase": "Quero uma nação mobilizada por um líder plebiscitário acima dos partidos, modernizando o Estado e dirigindo setores estratégicos com autoridade.",
     "countryId": "imperio-napoleonico",
     "personalityId": "napoleao-bonaparte"
+  },
+  {
+    "id": "quilombismo",
+    "name": "Quilombismo",
+    "category": "Esquerda",
+    "description": "Projeto político formulado por Abdias Nascimento a partir da experiência dos quilombos. Defende igualdade racial, autodeterminação afro-brasileira, democracia participativa e economia comunitária e cooperativa, com terra de uso coletivo.",
+    "phrase": "Quero um Estado quilombista de igualdade racial e participação popular, com terra coletiva e produção organizada em cooperativas.",
+    "vector": null,
+    "countryId": "brasil",
+    "personalityId": "zumbi-dos-palmares"
+  },
+  {
+    "id": "democracia-intervencionista",
+    "name": "Democracia Intervencionista",
+    "category": "Direita",
+    "description": "Doutrina de política externa associada à estratégia dos EUA de 2002. Defende força militar e ação preventiva contra ameaças, além da promoção internacional da democracia, de mercados abertos e de alianças lideradas por Washington.",
+    "phrase": "Quero democracias e mercados abertos protegidos por alianças fortes, com ação militar preventiva contra ameaças à segurança.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "george-w-bush"
+  },
+  {
+    "id": "ambientalismo-malthusiano",
+    "name": "Ambientalismo Malthusiano",
+    "category": "Direita",
+    "description": "Vertente ambiental inspirada em Garrett Hardin que relaciona pressão populacional e esgotamento dos recursos comuns. Defende limites coletivamente impostos ao uso desses recursos e políticas restritivas de crescimento demográfico.",
+    "phrase": "Quero preservar recursos limitados com regras firmes para os bens comuns e limites ao crescimento populacional.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "garrett-hardin"
+  },
+  {
+    "id": "conservadorismo-reaganista",
+    "name": "Conservadorismo Reaganista",
+    "category": "Direita",
+    "description": "Corrente conservadora americana ligada a Ronald Reagan. Combina redução de impostos e do poder econômico federal, defesa da livre iniciativa e dos valores religiosos tradicionais com anticomunismo e fortalecimento militar.",
+    "phrase": "Quero famílias e comunidades livres sob um governo federal menor, impostos baixos, empresas fortes e defesa firme contra adversários externos.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "ronald-reagan"
   }
 ]
