@@ -4063,12 +4063,14 @@
 }
 
 /* ════════════════════════════════════════════════════════
-   Quiz — fit-to-viewport (no scroll to reach the actions)
+   Quiz — compact layout that can still scroll vertically
    ════════════════════════════════════════════════════════ */
 .app-shell[data-screen="quiz"] {
-  height: 100dvh;
-  max-height: 100dvh;
-  overflow: hidden;
+  min-height: 100dvh;
+  height: auto;
+  max-height: none;
+  overflow-x: clip;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
