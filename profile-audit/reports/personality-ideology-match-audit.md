@@ -511,7 +511,6 @@ Ordenada alfabeticamente por id. `sim` = ja auditada pergunta-a-pergunta; `legad
 | Sam Altman | 1985– | sim | Ordoliberalismo | 96.1 | Meritocracia | 94.9 |  |
 | Samora Machel | 1933–1986 | sim | Socialismo de Estado | 99.0 | Marxismo-Leninismo | 97.0 |  |
 | Satoshi Nakamoto | s.d.– | sim | Criptoanarquismo | 98.4 | Libertarianismo Progressista | 98.3 |  |
-| Sayyid Qutb | 1906–1966 | sim | Teocratismo Cristão | 98.6 | Integralismo Brasileiro | 98.6 |  |
 | Roger Scruton | 1944–2020 | sim | Conservadorismo | 94.8 | Conservadorismo Americano | 92.4 |  |
 | Sidney Webb | 1859–1947 | sim | Populismo de Esquerda | 95.5 | Tecnocracia de Esquerda | 95.2 |  |
 | Simón Bolívar | 1783–1830 | sim | Nacionalismo | 91.9 | Mercantilismo | 91.3 |  |

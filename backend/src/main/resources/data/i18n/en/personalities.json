@@ -852,12 +852,6 @@
     "description": "An American activist, Malcolm X was a radical voice of the Black struggle in the United States, defending pride, self-defense, and African-American emancipation, evolving toward a more universalist vision before his assassination."
   },
   {
-    "id": "sayyid-qutb",
-    "name": "Sayyid Qutb",
-    "role": "Islamist theorist",
-    "description": "An Egyptian theorist, Qutb was one of the main ideologues of modern Islamism, advocating a return to Islamic law and the rejection of Western influence, becoming a reference for fundamentalist movements."
-  },
-  {
     "id": "carl-schmitt",
     "name": "Carl Schmitt",
     "role": "Jurist",
@@ -2114,5 +2108,12 @@
     "role": "Byzantine general",
     "lifespan": "c. 500–565",
     "description": "Byzantium's most successful general under Justinian I, he reconquered Vandal North Africa and Ostrogothic Italy, and crushed the Nika riots (532) with a massacre at the Hippodrome. Loyal to the emperor even under suspicion and humiliation, he ran a rigidly disciplined army."
+  },
+  {
+    "id": "robert-oppenheimer",
+    "name": "J. Robert Oppenheimer",
+    "role": "Theoretical physicist",
+    "lifespan": "1904–1967",
+    "description": "American theoretical physicist who directed the Manhattan Project at Los Alamos, widely regarded as the father of the atomic bomb. After Hiroshima and Nagasaki, he advocated for civilian and international control of nuclear weapons and had his security clearance revoked during McCarthyism (1954)."
   }
 ]
