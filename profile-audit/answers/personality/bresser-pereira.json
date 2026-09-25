@@ -1,6 +1,6 @@
 {
   "estrutura": {
-    "personaBrief": "Bresser-Pereira pensou o Estado brasileiro nacionalmente, defendendo uma reforma gerencial do aparelho federal e políticas industriais coordenadas em escala nacional, sem bandeira municipalista ou federalista forte.",
+    "personaBrief": "Bresser-Pereira reformou o aparelho do Estado federal (Plano Diretor de 1995) com foco em capacidade administrativa nacional, não em descentralização per se; é republicano unitário moderado, aceitando municipalização de serviços quando eficiente.",
     "answers": {
       "estrutura_06": "C",
       "estrutura_01": "D",
@@ -8,7 +8,7 @@
       "estrutura_16": "C",
       "estrutura_04": "C",
       "estrutura_13": "D",
-      "estrutura_20": "D",
+      "estrutura_20": "DT",
       "estrutura_15": "DT",
       "estrutura_18": "C",
       "estrutura_17": "D",
@@ -16,7 +16,7 @@
       "estrutura_12": "C",
       "estrutura_09": "DT",
       "estrutura_02": "C",
-      "estrutura_08": "C",
+      "estrutura_08": "D",
       "estrutura_07": "D",
       "estrutura_11": "N",
       "estrutura_14": "C",
@@ -25,21 +25,21 @@
     }
   },
   "representacao": {
-    "personaBrief": "Como ex-ministro em governo eleito e crítico declarado de autoritarismos (de direita e de esquerda), Bresser-Pereira sempre defendeu que o desenvolvimentismo deve caminhar junto com a democracia, nunca substituí-la.",
+    "personaBrief": "Economista republicano e social-democrata, sempre operou dentro de governos eleitos (Sarney, FHC) e defendeu a democracia representativa e a res publica contra o patrimonialismo; tem viés meritocrático-tecnocrático mas rejeita qualquer atalho autoritário.",
     "answers": {
       "representacao_01": "CT",
       "representacao_05": "C",
       "representacao_20": "DT",
       "representacao_11": "N",
-      "representacao_04": "N",
+      "representacao_04": "D",
       "representacao_03": "CT",
-      "representacao_08": "D",
+      "representacao_08": "DT",
       "representacao_12": "D",
       "representacao_17": "DT",
       "representacao_14": "D",
       "representacao_13": "DT",
-      "representacao_09": "N",
-      "representacao_02": "D",
+      "representacao_09": "D",
+      "representacao_02": "DT",
       "representacao_15": "CT",
       "representacao_19": "CT",
       "representacao_06": "D",
@@ -50,9 +50,9 @@
     }
   },
   "poder": {
-    "personaBrief": "Economista de formação liberal-democrata, Bresser-Pereira defendia um Estado forte na economia mas contido no plano das liberdades civis, coerente com sua trajetória em governos democráticos pós-1985.",
+    "personaBrief": "Não é um teórico da segurança pública; como social-democrata liberal-republicano brasileiro urbano, tende a posições civis-libertárias moderadas em direitos individuais, sem pauta punitivista.",
     "answers": {
-      "poder_03": "C",
+      "poder_03": "N",
       "poder_15": "DT",
       "poder_13": "C",
       "poder_02": "C",
@@ -65,20 +65,20 @@
       "poder_11": "D",
       "poder_06": "C",
       "poder_01": "N",
-      "poder_19": "D",
+      "poder_19": "DT",
       "poder_04": "C",
       "poder_10": "D",
       "poder_05": "N",
-      "poder_07": "D",
+      "poder_07": "DT",
       "poder_09": "C",
-      "poder_08": "N"
+      "poder_08": "D"
     }
   },
   "imigracao": {
-    "personaBrief": "Bresser-Pereira via a formação da nação brasileira como um processo de mistura cultural que ele valorizava, ao mesmo tempo em que defendia uma identidade nacional forte como base do projeto desenvolvimentista.",
+    "personaBrief": "Sua obra é sobre nação e identidade nacional como base do desenvolvimento (Estado-nação forte), o que o torna atento à identidade nacional, mas sem xenofobia; é um nacionalista econômico, não cultural.",
     "answers": {
       "imigracao_09": "N",
-      "imigracao_10": "CT",
+      "imigracao_10": "C",
       "imigracao_06": "C",
       "imigracao_19": "DT",
       "imigracao_04": "C",
@@ -100,35 +100,35 @@
     }
   },
   "diplomacia": {
-    "personaBrief": "Novo-desenvolvimentista preocupado com soberania nacional, Bresser-Pereira apoiava Forças Armadas capazes de garantir a autodeterminação do país, mas sempre subordinou a força à diplomacia e à negociação.",
+    "personaBrief": "Não é um teórico militar; sua ênfase é soberania econômica e nacional, não força armada — apoia capacidade de defesa mínima ligada à soberania, mas prioriza diplomacia e desenvolvimento sobre armamentismo.",
     "answers": {
-      "diplomacia_02": "CT",
+      "diplomacia_02": "C",
       "diplomacia_08": "C",
       "diplomacia_15": "N",
-      "diplomacia_19": "N",
-      "diplomacia_11": "C",
+      "diplomacia_19": "D",
+      "diplomacia_11": "N",
       "diplomacia_05": "D",
       "diplomacia_12": "C",
       "diplomacia_10": "C",
-      "diplomacia_17": "D",
+      "diplomacia_17": "DT",
       "diplomacia_03": "D",
-      "diplomacia_07": "D",
-      "diplomacia_06": "CT",
+      "diplomacia_07": "DT",
+      "diplomacia_06": "C",
       "diplomacia_14": "C",
       "diplomacia_20": "C",
       "diplomacia_16": "C",
-      "diplomacia_01": "C",
+      "diplomacia_01": "N",
       "diplomacia_04": "C",
       "diplomacia_13": "N",
       "diplomacia_09": "D",
-      "diplomacia_18": "D"
+      "diplomacia_18": "N"
     }
   },
   "intervencao": {
-    "personaBrief": "Sua defesa da soberania nacional e da autonomia econômica frente às pressões do capital internacional se traduz em política externa em não-alinhamento automático e recusa de submissão a potências, sem, no entanto, pregar aventuras militares.",
+    "personaBrief": "Bresser-Pereira defende soberania nacional e autonomia da política econômica brasileira frente a potências e organismos financeiros internacionais (FMI), mas não advoga intervencionismo militar regional; é nacionalista defensivo, não expansionista.",
     "answers": {
       "intervencao_01": "C",
-      "intervencao_14": "D",
+      "intervencao_14": "DT",
       "intervencao_20": "C",
       "intervencao_19": "C",
       "intervencao_08": "N",
@@ -139,20 +139,20 @@
       "intervencao_11": "C",
       "intervencao_05": "D",
       "intervencao_02": "D",
-      "intervencao_10": "D",
+      "intervencao_10": "C",
       "intervencao_09": "C",
-      "intervencao_16": "N",
+      "intervencao_16": "D",
       "intervencao_06": "C",
       "intervencao_03": "C",
-      "intervencao_07": "N",
+      "intervencao_07": "D",
       "intervencao_17": "C",
       "intervencao_15": "C"
     }
   },
   "economia": {
-    "personaBrief": "Bresser-Pereira foi o formulador do novo desenvolvimentismo: economia de mercado com Estado regulador forte, empresas estratégicas sob controle público, mas sem estatização generalizada nem coletivização da propriedade.",
+    "personaBrief": "Economista de mercado heterodoxo: teórico da 'revolução capitalista' e da burguesia industrial nacional como agente do desenvolvimento, não um socialista; defende estatais estratégicas (Petrobras) mas não estatização geral, e foi arquiteto da reforma gerencial que reduziu a estabilidade absoluta do funcionalismo e permitiu privatizações de setores não-estratégicos.",
     "answers": {
-      "economia_05": "D",
+      "economia_05": "DT",
       "economia_06": "DT",
       "economia_07": "C",
       "economia_13": "C",
@@ -169,19 +169,19 @@
       "economia_20": "D",
       "economia_01": "DT",
       "economia_10": "DT",
-      "economia_09": "C",
+      "economia_09": "D",
       "economia_02": "C",
-      "economia_08": "D"
+      "economia_08": "C"
     }
   },
   "controle": {
-    "personaBrief": "O núcleo da tese de Bresser-Pereira é que o Estado deve planejar câmbio, indústria e macroeconomia ativamente para viabilizar o desenvolvimento, rejeitando tanto o laissez-faire ortodoxo quanto o dirigismo estatal total.",
+    "personaBrief": "Sua bandeira central é o câmbio competitivo e a crítica ao rentismo financeiro e à âncora cambial apreciada ('doença holandesa'); é intervencionista em câmbio, juros e política industrial, mas não em planejamento geral da economia — Banco Central deve responder ao interesse nacional de desenvolvimento, não ser refém de rentistas nem totalmente independente.",
     "answers": {
       "controle_05": "C",
       "controle_20": "D",
       "controle_19": "C",
       "controle_14": "D",
-      "controle_07": "CT",
+      "controle_07": "C",
       "controle_04": "D",
       "controle_02": "D",
       "controle_17": "C",
@@ -194,16 +194,16 @@
       "controle_11": "C",
       "controle_03": "C",
       "controle_15": "C",
-      "controle_12": "N",
+      "controle_12": "D",
       "controle_18": "DT",
-      "controle_09": "N"
+      "controle_09": "D"
     }
   },
   "comercio": {
-    "personaBrief": "Defensor histórico do câmbio competitivo e da indústria nacional, Bresser-Pereira via o livre-comércio irrestrito e o câmbio sobrevalorizado como causas da desindustrialização brasileira, defendendo proteção seletiva de setores estratégicos.",
+    "personaBrief": "Novo-desenvolvimentista explicitamente contraposto ao velho desenvolvimentismo estatizante: defende câmbio competitivo e proteção seletiva de indústria estratégica contra a doença holandesa, não protecionismo generalizado nem autarquia; aceita comércio internacional como motor de crescimento desde que o câmbio não esteja apreciado.",
     "answers": {
       "comercio_13": "C",
-      "comercio_06": "D",
+      "comercio_06": "N",
       "comercio_12": "C",
       "comercio_20": "C",
       "comercio_15": "C",
@@ -216,25 +216,25 @@
       "comercio_10": "C",
       "comercio_16": "N",
       "comercio_09": "D",
-      "comercio_05": "D",
-      "comercio_11": "C",
-      "comercio_01": "C",
+      "comercio_05": "DT",
+      "comercio_11": "D",
+      "comercio_01": "D",
       "comercio_18": "C",
       "comercio_08": "D",
       "comercio_14": "C"
     }
   },
   "religiao": {
-    "personaBrief": "Intelectual secular formado na tradição da ciência social e econômica, Bresser-Pereira sempre situou seu pensamento fora de qualquer referência religiosa, defendendo um Estado laico.",
+    "personaBrief": "Católico de formação, mas secular na vida pública e na teoria econômica; como social-democrata republicano brasileiro urbano e cosmopolita, defende um Estado laico sem hostilidade militante à religião.",
     "answers": {
       "religiao_02": "D",
-      "religiao_11": "N",
-      "religiao_19": "CT",
-      "religiao_03": "CT",
+      "religiao_11": "D",
+      "religiao_19": "C",
+      "religiao_03": "C",
       "religiao_10": "N",
-      "religiao_13": "N",
+      "religiao_13": "D",
       "religiao_12": "D",
-      "religiao_15": "C",
+      "religiao_15": "D",
       "religiao_18": "DT",
       "religiao_05": "C",
       "religiao_01": "C",
@@ -242,29 +242,29 @@
       "religiao_06": "N",
       "religiao_16": "D",
       "religiao_08": "DT",
-      "religiao_07": "C",
+      "religiao_07": "D",
       "religiao_09": "C",
-      "religiao_17": "N",
+      "religiao_17": "D",
       "religiao_20": "D",
       "religiao_04": "DT"
     }
   },
   "moral": {
-    "personaBrief": "Intelectual social-democrata ligado à esquerda democrática brasileira, Bresser-Pereira acompanhou pautas progressistas de direitos individuais como extensão natural de sua defesa da democracia e da justiça social.",
+    "personaBrief": "Não é um militante de costumes, mas como social-democrata urbano e republicano brasileiro do final do século XX/XXI, tende a posições liberais progressistas moderadas em direitos civis, sem pautar sua carreira por isso.",
     "answers": {
       "moral_07": "C",
-      "moral_04": "N",
+      "moral_04": "C",
       "moral_15": "N",
       "moral_12": "D",
       "moral_03": "C",
       "moral_01": "C",
       "moral_09": "C",
       "moral_06": "D",
-      "moral_19": "N",
+      "moral_19": "C",
       "moral_02": "D",
       "moral_05": "C",
       "moral_17": "N",
-      "moral_13": "N",
+      "moral_13": "C",
       "moral_11": "C",
       "moral_10": "D",
       "moral_18": "DT",
@@ -275,28 +275,28 @@
     }
   },
   "tecnologia": {
-    "personaBrief": "Como economista do desenvolvimento, Bresser-Pereira via ciência, indústria e tecnologia como motores do progresso nacional, defendendo modernização produtiva sem romantismo antitecnológico, mas atento a limites ambientais.",
+    "personaBrief": "Economista do desenvolvimento e da industrialização, vê tecnologia e inovação como motores do capitalismo nacional; não é um pensador ambiental ou bioético, mas seu compromisso desenvolvimentista favorece adoção tecnológica e industrial.",
     "answers": {
       "tecnologia_01": "C",
       "tecnologia_13": "C",
       "tecnologia_19": "C",
-      "tecnologia_12": "N",
+      "tecnologia_12": "D",
       "tecnologia_18": "D",
       "tecnologia_10": "C",
       "tecnologia_05": "C",
       "tecnologia_04": "D",
-      "tecnologia_16": "D",
+      "tecnologia_16": "C",
       "tecnologia_07": "C",
-      "tecnologia_08": "N",
+      "tecnologia_08": "D",
       "tecnologia_03": "C",
-      "tecnologia_15": "N",
+      "tecnologia_15": "C",
       "tecnologia_20": "D",
-      "tecnologia_06": "N",
+      "tecnologia_06": "D",
       "tecnologia_09": "N",
       "tecnologia_17": "C",
-      "tecnologia_02": "D",
-      "tecnologia_14": "N",
-      "tecnologia_11": "C"
+      "tecnologia_02": "DT",
+      "tecnologia_14": "C",
+      "tecnologia_11": "N"
     }
   }
 }
