@@ -1,5 +1,7 @@
+import type { CSSProperties } from 'react';
 import { t } from '../i18n';
-import type { AnswerOption, AnswerValue, Question } from '../types/quiz';
+import type { AnswerOption, AnswerValue, Axis, Question } from '../types/quiz';
+import { PoleIcon } from './AxisIcon';
 
 const answerClassById: Record<AnswerValue, string> = {
   STRONGLY_AGREE: 'answer-button answer-strong-agree',
@@ -12,17 +14,36 @@ const answerClassById: Record<AnswerValue, string> = {
 interface QuestionCardProps {
   question: Question;
   axisLabel?: string;
+  /** Eixo da pergunta: icone e cor do polo de concordancia no selo. */
+  axis?: Axis;
+  /** Numero da pergunta exibido no canto superior direito. */
+  number?: number;
   options: AnswerOption[];
   selected?: AnswerValue;
   disabled?: boolean;
   onSelect: (answer: AnswerValue) => void;
 }
 
-export function QuestionCard({ question, axisLabel, options, selected, disabled = false, onSelect }: QuestionCardProps) {
+export function QuestionCard({ question, axisLabel, axis, number, options, selected, disabled = false, onSelect }: QuestionCardProps) {
   return (
     <article className="question-card" aria-labelledby="question-title">
+      {number !== undefined && (
+        <span className="question-number" aria-hidden="true">{String(number).padStart(2, '0')}</span>
+      )}
       <header className="question-card-header">
-        <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
+        {axis ? (
+          <p
+            className="question-axis-tag"
+            style={{ '--pole': question.agreePole === 'LEFT' ? axis.leftColor : axis.rightColor } as CSSProperties}
+          >
+            <i aria-hidden="true">
+              <PoleIcon axisId={axis.id} side={question.agreePole === 'LEFT' ? 'left' : 'right'} className="question-axis-tag-ico" />
+            </i>
+            <span>{axis.label}</span>
+          </p>
+        ) : (
+          <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
+        )}
         <h2 id="question-title">{question.text}</h2>
       </header>
       <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>

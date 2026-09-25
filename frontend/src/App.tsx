@@ -111,6 +111,8 @@ function MainApp() {
   const [isSharedView, setIsSharedView] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
+  // Toggle do desktop; no mobile fica escondido e sempre ligado.
+  const [autoAdvance, setAutoAdvance] = useState(true);
   // 'forward' | 'back': define de que lado a proxima pergunta entra.
   const [navDirection, setNavDirection] = useState<'forward' | 'back'>('forward');
   const [isSharing, setIsSharing] = useState(false);
@@ -313,6 +315,10 @@ function MainApp() {
     const nextAnswers = { ...answers, [currentQuestion.id]: answer };
     setAnswers(nextAnswers);
     setError(null);
+
+    if (!autoAdvance) {
+      return;
+    }
 
     if (questionIndex === quiz.questions.length - 1) {
       handleQuizEnd(nextAnswers);
@@ -607,6 +613,8 @@ function MainApp() {
             key={currentQuestion.id}
             question={currentQuestion}
             axisLabel={quiz.axes.find((axis) => axis.id === currentQuestion.axisId)?.label}
+            axis={quiz.axes.find((axis) => axis.id === currentQuestion.axisId)}
+            number={currentIndex + 1}
             options={quiz.answerOptions}
             selected={answers[currentQuestion.id]}
             disabled={isAdvancing || isSubmitting}
@@ -626,6 +634,16 @@ function MainApp() {
                 <path d="m13 6 6 6-6 6" />
               </svg>
               {t.back}
+            </button>
+            <button
+              className="auto-advance-toggle"
+              type="button"
+              role="switch"
+              aria-checked={autoAdvance}
+              onClick={() => setAutoAdvance((value) => !value)}
+            >
+              <span className="auto-advance-switch" aria-hidden="true" />
+              {t.autoAdvance}
             </button>
             {currentIndex < quiz.questions.length - 1 ? (
               <button

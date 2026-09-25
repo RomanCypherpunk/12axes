@@ -373,6 +373,8 @@ export default function ElectionApp() {
             key={question.id}
             question={question}
             axisLabel={quiz.axes.find((a) => a.id === question.axisId)?.label}
+            axis={quiz.axes.find((a) => a.id === question.axisId)}
+            number={index + 1}
             options={quiz.answerOptions}
             selected={answers[question.id]}
             disabled={isAdvancing}

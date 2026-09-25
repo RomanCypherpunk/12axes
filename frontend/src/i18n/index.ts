@@ -129,6 +129,7 @@ interface Strings {
   formatNotes: string[];
   variantLead: string;
   quizNavAria: string;
+  autoAdvance: string;
   back: string;
   next: string;
   calculating: string;
@@ -507,6 +508,7 @@ const pt: Strings = {
   variantLead:
     'A versão curta revela o resultado de forma rápida. A completa aumenta a precisão para aproximar melhor seu resultado dos perfis ideológicos.',
   quizNavAria: 'Navegação do quiz',
+  autoAdvance: 'Avançar ao responder',
   back: 'Voltar',
   next: 'Avançar',
   calculating: 'Calculando…',
@@ -937,6 +939,7 @@ const en: Strings = {
   variantLead:
     'The short version reveals the result quickly. The full version increases precision to bring your result closer to the ideological profiles.',
   quizNavAria: 'Quiz navigation',
+  autoAdvance: 'Advance on answer',
   back: 'Back',
   next: 'Next',
   calculating: 'Calculating…',
