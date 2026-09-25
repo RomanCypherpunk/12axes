@@ -79,8 +79,8 @@ ainda reflete a posição mais recente da pessoa; se não refletir, atualize `pe
 | `country` | `id`, `name`, `category`, `description`, `flagPath`, `historical`, `period`, `vector` (sempre `null` no arquivo de metadados) | `period` só é preenchido (e `historical: true`) se o perfil representa um país num momento histórico específico (ex.: "Alemanha Nazista — Terceiro Reich") |
 
 **Nota sobre `ideology.countryId` / `ideology.personalityId`**: toda ideologia do catálogo aponta
-para um país e uma personalidade **já existentes** que a exemplificam bem (ex.: `tecno-cristianismo`
-→ `countryId: "russia"`, `personalityId: "..."`). Escolha o país/personalidade mais representativo
+para um país e uma personalidade **já existentes** que a exemplificam bem (ex.: `aceleracionismo-cristao`
+→ `countryId: "eua-texas"`, `personalityId: "peter-thiel"`). Escolha o país/personalidade mais representativo
 já presente no catálogo. Isso é validado por `IdeologyPersonalityMappingTest` e
 `IdeologyCountryMappingTest` — se apontar para um id inexistente, o build quebra.
 

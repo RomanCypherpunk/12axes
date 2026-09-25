@@ -44,7 +44,7 @@ Melhores resultados abaixo de 80%: **0**.
 | Conservadorismo Libertário (`conservadorismo-libertario`) | Ron Paul (`ron-paul`) | politico | 94.0% |
 | Confucionismo (`confucionismo`) | Confúcio (`confucio`) | religioso | 94.1% |
 | Sindicalismo Revolucionário (`sindicalismo-revolucionario`) | Georges Sorel (`sorel`) | teorico | 94.1% |
-| Tecno-Cristianismo (`tecno-cristianismo`) | José Bonifácio (`jose-bonifacio`) | intelectual | 94.1% |
+| Aceleracionismo Cristão (`aceleracionismo-cristao`) | José Bonifácio (`jose-bonifacio`) | intelectual | 94.1% |
 | Anarcoconservadorismo (`anarcoconservadorismo`) | Ron Paul (`ron-paul`) | politico | 94.2% |
 | Pragmatismo (`pragmatismo`) | Adrian Wooldridge (`adrian-wooldridge`) | intelectual | 94.2% |
 | Conservadorismo Secular (`conservadorismo-secular`) | Henry Kissinger (`kissinger`) | politico | 94.4% |
