@@ -3324,7 +3324,7 @@
       "diplomacia": 82.5,
       "intervencao": 22.5,
       "economia": 45.0,
-      "controle":69.0,
+      "controle": 69.0,
       "comercio": 72.0,
       "religiao": 36.2,
       "moral": 23.8,
@@ -3414,6 +3414,23 @@
       "religiao": 50.0,
       "moral": 50.0,
       "tecnologia": 50.0
+    }
+  },
+  {
+    "ideologyId": "budismo-politico",
+    "vector": {
+      "estrutura": 70.0,
+      "representacao": 72.5,
+      "poder": 43.8,
+      "imigracao": 26.2,
+      "diplomacia": 5.0,
+      "intervencao": 72.5,
+      "economia": 72.5,
+      "controle": 63.7,
+      "comercio": 72.5,
+      "religiao": 30.0,
+      "moral": 50.0,
+      "tecnologia": 26.2
     }
   }
 ]

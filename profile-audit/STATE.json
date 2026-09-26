@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-09-26T01:18:23Z",
+  "lastUpdated": "2026-09-26T01:37:51Z",
   "personality": {
-    "totalProfiles": 356,
+    "totalProfiles": 357,
     "pending": [],
     "done": [
       "lenin",
@@ -360,11 +360,12 @@
       "thomas-edison",
       "franz-kafka",
       "galileu-galilei",
-      "thomas-muntzer"
+      "thomas-muntzer",
+      "jesus-cristo"
     ]
   },
   "ideology": {
-    "totalProfiles": 201,
+    "totalProfiles": 202,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -568,7 +569,8 @@
       "terceira-via",
       "socialismo-democratico",
       "bonapartismo",
-      "centrismo-radical"
+      "centrismo-radical",
+      "budismo-politico"
     ]
   },
   "country": {

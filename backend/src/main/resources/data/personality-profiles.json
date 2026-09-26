@@ -3572,18 +3572,18 @@
   {
     "personalityId": "dalai-lama",
     "vector": {
-      "estrutura": 78.8,
-      "representacao": 87.5,
-      "poder": 42.5,
-      "imigracao": 17.5,
-      "diplomacia": 8.8,
-      "intervencao": 85,
-      "economia": 77.5,
-      "controle": 63.7,
-      "comercio": 35,
-      "religiao": 30,
-      "moral": 43.8,
-      "tecnologia": 31.2
+      "estrutura": 73.8,
+      "representacao": 77.5,
+      "poder": 43.8,
+      "imigracao": 35.0,
+      "diplomacia": 2.5,
+      "intervencao": 71.2,
+      "economia": 72.5,
+      "controle": 67.5,
+      "comercio": 33.8,
+      "religiao": 43.8,
+      "moral": 47.5,
+      "tecnologia": 33.8
     }
   },
   {
@@ -6049,6 +6049,23 @@
       "religiao": 8.8,
       "moral": 17.5,
       "tecnologia": 18.8
+    }
+  },
+  {
+    "personalityId": "jesus-cristo",
+    "vector": {
+      "estrutura": 73.8,
+      "representacao": 71.2,
+      "poder": 31.2,
+      "imigracao": 17.5,
+      "diplomacia": 6.2,
+      "intervencao": 77.5,
+      "economia": 75.0,
+      "controle": 61.3,
+      "comercio": 35.0,
+      "religiao": 20.0,
+      "moral": 33.8,
+      "tecnologia": 25.0
     }
   }
 ]
