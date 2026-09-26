@@ -534,3 +534,43 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 @media (max-width:720px) and (max-height:660px){
   .app-shell[data-screen="variant"] .e-fmt-desc{display:none}
 }
+
+/* resultado por eixo: botão "?" e aba de explicação */
+.e-axis-title{display:flex;align-items:center;gap:6px;min-width:0}
+.e-axis-info{display:inline-grid;place-items:center;width:28px;height:28px;margin:-4px 0;padding:0;border:0;border-radius:50%;background:none;color:var(--texto-suave);cursor:pointer;flex:none;transition:color .15s ease,background .15s ease}
+.e-axis-info svg{width:18px;height:18px}
+.e-axis-info:hover{color:var(--tinta);background:var(--borda)}
+.e-axis-info:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-axis-sheet-backdrop{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:rgba(16,16,16,.42);animation:e-sheet-fade .2s ease}
+.e-axis-sheet{position:relative;width:min(460px,100%);background:var(--superficie);border:1px solid var(--borda);border-radius:24px;padding:28px 28px 26px;box-shadow:0 24px 60px -24px rgba(16,16,16,.45);animation:e-sheet-pop .22s cubic-bezier(.2,.8,.2,1)}
+.e-axis-sheet-handle{display:none}
+.e-axis-sheet-close{position:absolute;top:14px;right:14px;width:36px;height:36px;display:grid;place-items:center;padding:0;border:1px solid var(--borda);border-radius:50%;background:var(--superficie);color:var(--tinta);cursor:pointer}
+.e-axis-sheet-close svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.e-axis-sheet-close:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-axis-sheet-label{margin:0 44px 4px 0;font-size:14px;color:var(--texto-suave)}
+.e-axis-sheet h3{margin:0 44px 12px 0;font-size:24px;line-height:1.2}
+.e-axis-sheet h3 span{color:var(--ac)}
+.e-axis-sheet-text{margin:0;font-size:15.5px;line-height:1.6;color:var(--tinta)}
+@keyframes e-sheet-fade{from{opacity:0}}
+@keyframes e-sheet-pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
+@keyframes e-sheet-up{from{transform:translateY(100%)}}
+@media (max-width:760px){
+  .e-axis-sheet-backdrop{place-items:end stretch;padding:0}
+  .e-axis-sheet{width:100%;border-radius:24px 24px 0 0;border-bottom:0;padding:14px 20px calc(24px + env(safe-area-inset-bottom));animation:e-sheet-up .28s cubic-bezier(.2,.8,.2,1)}
+  .e-axis-sheet-handle{display:block;width:40px;height:4px;margin:0 auto 14px;border-radius:4px;background:var(--borda)}
+  .e-axis-sheet-close{top:22px;right:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .e-axis-sheet-backdrop,.e-axis-sheet{animation:none}
+  .e-axis-info{transition:none}
+}
+.e-dim-row,.e-near{position:relative}
+.e-card-info{position:absolute;top:8px;right:8px;margin:0}
+.e-person-sheet-head{display:flex;align-items:center;gap:16px;margin:0 44px 14px 0}
+.e-person-sheet-head .e-avatar{width:72px;height:72px;flex:none;border-radius:50%;object-fit:cover}
+.e-person-sheet-head>div{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
+.e-person-sheet-head h3{margin:2px 0 0;font-size:22px;line-height:1.2}
+.e-person-sheet-head .e-axis-sheet-label{margin:0}
+.e-person-sheet-pct{margin:0 0 10px;font-size:14px;color:var(--texto-suave)}
+.e-person-sheet-pct strong{font-family:var(--font-display);font-size:20px;color:var(--tinta)}
+.e-person-sheet-head .e-flagimg{flex:none}

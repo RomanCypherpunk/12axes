@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { t } from '../../i18n';
 import { CountUpValue } from './CountUpValue';
+import { InfoButton } from './InfoSheet';
 
 interface MatchHeroProps {
   visual: ReactNode;
@@ -46,6 +47,8 @@ export interface DimItem {
   name: string;
   caption: string;
   compatibility: number;
+  infoLabel?: string;
+  onInfo?: () => void;
 }
 
 export function DimList({ items }: { items: DimItem[] }) {
@@ -58,6 +61,9 @@ export function DimList({ items }: { items: DimItem[] }) {
       <ul className="e-dims">
         {items.map((item) => (
           <li className="e-dim-row" key={item.key}>
+            {item.onInfo && item.infoLabel && (
+              <InfoButton className="e-axis-info e-card-info" label={item.infoLabel} onClick={item.onInfo} />
+            )}
             {item.visual}
             <div>
               <span className="e-dim">{item.label}</span>

@@ -71,6 +71,9 @@ interface Strings {
   navAxes: string;
   navSpectrum: string;
   navFaq: string;
+  navIdeologies: string;
+  navPersonalities: string;
+  navCountries: string;
   navSupport: string;
   langToggleLabel: string;
   langToggleAria: string;
@@ -88,6 +91,9 @@ interface Strings {
   heroTeaserTag: string;
   formats: { short: QuizFormatStrings; extended: QuizFormatStrings; extreme: QuizFormatStrings };
   axisExplanations: Record<string, string>;
+  axisInfoAria: (label: string) => string;
+  closeLabel: string;
+  personalityInfoAria: (name: string) => string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
@@ -268,6 +274,9 @@ const pt: Strings = {
   navAxes: '12 Eixos',
   navSpectrum: 'Espectro',
   navFaq: 'FAQ',
+  navIdeologies: 'Ideologias',
+  navPersonalities: 'Personalidades',
+  navCountries: 'Países',
   navSupport: 'Apoie',
   langToggleLabel: 'EN',
   langToggleAria: 'Switch to English',
@@ -307,6 +316,9 @@ const pt: Strings = {
       action: 'Começar versão extrema'
     }
   },
+  axisInfoAria: (label) => `O que significa o eixo ${label}?`,
+  closeLabel: 'Fechar',
+  personalityInfoAria: (name) => `Ver detalhes de ${name}`,
   axisExplanations: {
     estrutura:
       'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
@@ -686,6 +698,9 @@ const en: Strings = {
   navAxes: '12 Axes',
   navSpectrum: 'Spectrum',
   navFaq: 'FAQ',
+  navIdeologies: 'Ideologies',
+  navPersonalities: 'Personalities',
+  navCountries: 'Countries',
   navSupport: 'Support',
   langToggleLabel: 'PT',
   langToggleAria: 'Mudar para português',
@@ -725,6 +740,9 @@ const en: Strings = {
       action: 'Start extreme version'
     }
   },
+  axisInfoAria: (label) => `What does the ${label} axis mean?`,
+  closeLabel: 'Close',
+  personalityInfoAria: (name) => `See details about ${name}`,
   axisExplanations: {
     estrutura:
       'Measures whether you prefer power distributed among states, cities, and local communities or a unitary national state with more uniform laws and command.',

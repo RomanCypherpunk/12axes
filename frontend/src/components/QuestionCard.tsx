@@ -39,7 +39,7 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
             <i aria-hidden="true">
               <PoleIcon axisId={axis.id} side={question.agreePole === 'LEFT' ? 'left' : 'right'} className="question-axis-tag-ico" />
             </i>
-            <span>{axis.label}</span>
+            <span>{question.agreePole === 'LEFT' ? axis.leftPole : axis.rightPole}</span>
           </p>
         ) : (
           <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
