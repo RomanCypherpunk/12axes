@@ -33,8 +33,8 @@
     "id": "comunismo-trotskista",
     "name": "Comunismo Trotskista",
     "category": "Esquerda Radical",
-    "description": "Corrente marxista de Trótski que defende a revolução permanente e o internacionalismo, opondo-se à burocratização stalinista e ao socialismo em um só país, com foco na democracia operária e na expansão mundial da revolução.",
-    "phrase": "Quero uma sociedade em revolução permanente e internacionalista, com democracia operária, sem burocracia stalinista nem fronteiras.",
+    "description": "Corrente de Trótski, cofundador do Estado soviético e do Exército Vermelho, que defende revolução permanente, partido de vanguarda e ditadura do proletariado, criticando a burocracia stalinista sem renunciar ao partido único.",
+    "phrase": "Quero a revolução permanente e mundial dirigida por um partido de vanguarda, com ditadura do proletariado, economia planificada e nenhuma burocracia stalinista.",
     "vector": null,
     "countryId": "uniao-sovietica-urss",
     "personalityId": "trotsky"
@@ -2055,5 +2055,15 @@
     "vector": null,
     "countryId": "reino-unido",
     "personalityId": "keynes"
+  },
+  {
+    "id": "social-democracia-brasileira",
+    "name": "Social-Democracia Brasileira",
+    "category": "Centro",
+    "description": "Corrente do PSDB fundado em 1988 por Covas, Montoro e FHC, que une economia de mercado, Estado social, reforma do Estado e responsabilidade fiscal a parlamentarismo e moderação nos costumes.",
+    "phrase": "Quero uma democracia parlamentar com moeda estável, contas em ordem, privatizações reguladas e um Estado enxuto que cuide de saúde e educação.",
+    "vector": null,
+    "countryId": "brasil",
+    "personalityId": "mario-covas"
   }
 ]
