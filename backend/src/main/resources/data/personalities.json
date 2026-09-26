@@ -4162,5 +4162,113 @@
     "imageSourceName": "Wikimedia Commons / Wikipédia",
     "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Richard_Rasmussen_em_Agosto_de_2019_(cropped).jpg",
     "imageNote": "Retrato de Richard Rasmussen via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "machado-de-assis",
+    "name": "Machado de Assis",
+    "role": "Escritor",
+    "category": "intelectual",
+    "lifespan": "1839–1908",
+    "description": "Maior escritor brasileiro e fundador da Academia Brasileira de Letras, retratou com ironia a elite do Segundo Reinado. Funcionário público, era liberal moderado, abolicionista discreto e cético diante da religião e do cientificismo.",
+    "imagePath": "/personalities/portraits/machado-de-assis.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez.jpg",
+    "imageNote": "Retrato de Machado de Assis via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "santos-dumont",
+    "name": "Santos Dumont",
+    "role": "Inventor e aviador",
+    "category": "intelectual",
+    "lifespan": "1873–1932",
+    "description": "Pioneiro da aviação, voou o 14-bis em Paris em 1906 e deixou suas invenções em domínio público. Angustiado com o uso militar do avião, pediu à Liga das Nações que proibisse aeronaves na guerra.",
+    "imagePath": "/personalities/portraits/santos-dumont.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Alberto_Santos-Dumont_portrait.jpg",
+    "imageNote": "Retrato de Santos Dumont via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "tiradentes",
+    "name": "Tiradentes",
+    "role": "Líder da Inconfidência Mineira",
+    "category": "ativista",
+    "lifespan": "1746–1792",
+    "description": "Alferes e dentista, liderou a Inconfidência Mineira contra a derrama e o domínio português. Inspirado na independência americana, a conspiração previa uma república com universidade e manufaturas; foi enforcado em 1792.",
+    "imagePath": "/personalities/portraits/tiradentes.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Alferes_Tiradentes_01.jpg",
+    "imageNote": "Retrato de Tiradentes via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "john-d-rockefeller",
+    "name": "John D. Rockefeller",
+    "role": "Industrial e filantropo",
+    "category": "empresario",
+    "lifespan": "1839–1937",
+    "description": "Fundador da Standard Oil, criou o maior monopólio industrial da história americana até sua dissolução pela Suprema Corte em 1911. Batista devoto e abstêmio, tornou-se o maior filantropo de sua era, fundando a Universidade de Chicago e a Fundação Rockefeller.",
+    "imagePath": "/personalities/portraits/john-d-rockefeller.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_49-year-old_John_D._Rockefeller.jpg",
+    "imageNote": "Retrato de John D. Rockefeller via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "dostoievski",
+    "name": "Fiódor Dostoiévski",
+    "role": "Escritor",
+    "category": "intelectual",
+    "lifespan": "1821–1881",
+    "description": "Romancista russo, preso e condenado a trabalhos forçados na Sibéria por atividade socialista, converteu-se a um cristianismo ortodoxo eslavófilo e monarquista. Em Os Demônios e Os Irmãos Karamázov atacou o niilismo, o ateísmo e o racionalismo ocidental.",
+    "imagePath": "/personalities/portraits/dostoievski.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Dostoevsky.jpg",
+    "imageNote": "Retrato de Fiódor Dostoiévski via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "thomas-edison",
+    "name": "Thomas Edison",
+    "role": "Inventor e empresário",
+    "category": "intelectual",
+    "lifespan": "1847–1931",
+    "description": "Inventor e empresário americano com mais de mil patentes, criou o fonógrafo, a lâmpada comercial e o primeiro laboratório industrial de pesquisa. Na \"guerra das correntes\" contra Tesla defendeu a corrente contínua; era livre-pensador deísta e crítico da religião organizada.",
+    "imagePath": "/personalities/portraits/thomas-edison.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Edison2.jpg",
+    "imageNote": "Retrato de Thomas Edison via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "franz-kafka",
+    "name": "Franz Kafka",
+    "role": "Escritor",
+    "category": "intelectual",
+    "lifespan": "1883–1924",
+    "description": "Escritor judeu de Praga em língua alemã, retratou em O Processo e O Castelo o indivíduo esmagado por burocracias opacas e autoridades arbitrárias. Funcionário de seguros operários, simpatizava com anarquistas tchecos e com o sionismo cultural.",
+    "imagePath": "/personalities/portraits/franz-kafka.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Franz_Kafka,_1923.jpg",
+    "imageNote": "Retrato de Franz Kafka via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "galileu-galilei",
+    "name": "Galileu Galilei",
+    "role": "Físico e astrônomo",
+    "category": "intelectual",
+    "lifespan": "1564–1642",
+    "description": "Físico e astrônomo toscano, pai do método científico experimental, aperfeiçoou o telescópio e defendeu o heliocentrismo copernicano. Católico, foi condenado pela Inquisição em 1633 e passou o fim da vida em prisão domiciliar, sob patronato dos Médici.",
+    "imagePath": "/personalities/portraits/galileu-galilei.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Galileo_Galilei,_1636.jpg",
+    "imageNote": "Retrato de Galileu Galilei por Justus Sustermans (1636) via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "thomas-muntzer",
+    "name": "Thomas Müntzer",
+    "role": "Teólogo e líder revolucionário",
+    "category": "religioso",
+    "lifespan": "c. 1489–1525",
+    "description": "Teólogo e pregador radical da Reforma, rompeu com Lutero e liderou camponeses e mineiros na Guerra dos Camponeses de 1525. Pregava uma teocracia apocalíptica dos eleitos, com bens em comum e destruição dos príncipes ímpios; foi decapitado após Frankenhausen.",
+    "imagePath": "/personalities/portraits/thomas-muntzer.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Muentzer.jpg",
+    "imageNote": "Retrato de Thomas Müntzer via Wikipédia/Wikimedia Commons."
   }
 ]
