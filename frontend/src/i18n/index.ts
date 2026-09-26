@@ -608,7 +608,7 @@ const pt: Strings = {
   },
   redoAnalysis: 'Refazer análise',
   share: 'Compartilhar',
-  saveOrShare: 'Salvar ou Compartilhar',
+  saveOrShare: 'Compartilhar resultado',
   generatingPng: 'Gerando PNG...',
   shareFilePrefix: '12axes-perfil',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
@@ -1045,7 +1045,7 @@ const en: Strings = {
   },
   redoAnalysis: 'Retake analysis',
   share: 'Share',
-  saveOrShare: 'Save or Share',
+  saveOrShare: 'Share result',
   generatingPng: 'Generating PNG...',
   shareFilePrefix: '12axes-profile',
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>

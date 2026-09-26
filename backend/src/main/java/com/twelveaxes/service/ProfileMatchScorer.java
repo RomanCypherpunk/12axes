@@ -34,6 +34,8 @@ public class ProfileMatchScorer {
     private static final double OPPOSITE_SIDE_SPREAD = 25.0;
     static final double OUTLIER_FULL_SPREAD = 100.0;
     static final double OUTLIER_EXPONENT = 2.5;
+    // Raio RMS (pontos por eixo) abaixo do qual a direção pesa menos que o termo constante.
+    static final double DIRECTION_AUGMENT_RADIUS = 8.0;
 
     public Map<String, Double> userVectorFor(List<AxisResult> axisResults) {
         return axisResults.stream()
@@ -108,10 +110,13 @@ public class ProfileMatchScorer {
             targetNormSquared += centeredTargetValue * centeredTargetValue;
         }
 
-        if (userNormSquared == 0.0 || targetNormSquared == 0.0) {
-            return CENTER;
-        }
-        double cosine = dotProduct / (Math.sqrt(userNormSquared) * Math.sqrt(targetNormSquared));
+        // Cosseno aumentado: soma uma componente constante aos dois vetores antes
+        // do cosseno. Perto do centro a direção é ruído de resposta, e o termo
+        // constante domina (centro x centro = 100); longe do centro converge ao
+        // cosseno puro. Mesma fórmula para todo alvo, sem limiar nem caso especial.
+        double augment = axisIds.size() * DIRECTION_AUGMENT_RADIUS * DIRECTION_AUGMENT_RADIUS;
+        double cosine = (dotProduct + augment)
+                / Math.sqrt((userNormSquared + augment) * (targetNormSquared + augment));
         return CENTER + CENTER * cosine;
     }
 

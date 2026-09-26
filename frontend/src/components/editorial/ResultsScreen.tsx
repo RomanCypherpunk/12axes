@@ -12,7 +12,7 @@ import { PersonalitiesSection } from '../results/PersonalitiesSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
 import { SignatureSection } from '../results/SignatureSection';
-import { DownloadIcon, RefreshIcon, Ring } from './primitives';
+import { DownloadIcon, RefreshIcon, Ring, ShareImageIcon } from './primitives';
 
 interface ResultsScreenProps {
   result: QuizResult;
@@ -58,7 +58,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <div className="e-actions">
             <button className="e-btn e-btn-ghost" type="button" onClick={onShare} disabled={isSharing}>
-              {isSharing ? t.generatingPng : t.saveOrShare} <DownloadIcon />
+              {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
             </button>
           </div>
 

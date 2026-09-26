@@ -2025,5 +2025,35 @@
     "vector": null,
     "countryId": "eua-massachusetts",
     "personalityId": "max-stirner"
+  },
+  {
+    "id": "social-desenvolvimentismo",
+    "name": "Social-Desenvolvimentismo",
+    "category": "Esquerda",
+    "description": "Modelo associado aos governos Lula e Dilma que busca crescimento com inclusão social, combinando salário mínimo valorizado, crédito popular, transferência de renda e bancos públicos, sem romper com o mercado.",
+    "phrase": "Quero crescer distribuindo renda, com salário mínimo valorizado, crédito e bancos públicos, alianças amplas e o mercado preservado.",
+    "vector": null,
+    "countryId": "brasil",
+    "personalityId": "lula-da-silva"
+  },
+  {
+    "id": "liberalismo-new-deal",
+    "name": "Liberalismo New Deal",
+    "category": "Centro",
+    "description": "Corrente do Partido Democrata nascida com Franklin Roosevelt que une regulação financeira, seguridade social, obras públicas e sindicatos fortes a patriotismo cívico, capitalismo preservado e liderança internacional.",
+    "phrase": "Quero uma nação patriota e de fé, com governo federal forte regulando bancos, sindicatos protegidos, seguridade social e liderança no mundo.",
+    "vector": null,
+    "countryId": "eua-nova-york",
+    "personalityId": "franklin-roosevelt"
+  },
+  {
+    "id": "liberalismo-keynesiano",
+    "name": "Liberalismo Keynesiano",
+    "category": "Esquerda",
+    "description": "Corrente inspirada em John Maynard Keynes que aceita mercado e democracia liberal, mas atribui ao Estado a gestão da demanda, com gasto público contracíclico, pleno emprego como meta e economia mista.",
+    "phrase": "Quero uma democracia liberal de economia mista, em que o Estado gaste contra as crises e busque o pleno emprego sem estatizar a produção.",
+    "vector": null,
+    "countryId": "reino-unido",
+    "personalityId": "keynes"
   }
 ]

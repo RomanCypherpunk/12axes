@@ -128,7 +128,7 @@ O resultado vira um vetor de 12 valores, de `0` a `100`, que representa o percen
 O score (`ProfileMatchScorer`) combina quatro componentes:
 
 - **Eixo a eixo** (peso `0.42`): curva quadrática `max(0, 1 - (diff / 50)^2)` por eixo, com penalidade contínua quando usuário e alvo estão em lados opostos do centro: `1 - 0.45 * tanh(abs(userValue - 50) / 25) * tanh(abs(targetValue - 50) / 25)`.
-- **Direção** (peso `0.33`): similaridade de cosseno entre os vetores centralizados em `50`: `50 + 50 * cosine(user - 50, target - 50)`. Se um vetor estiver exatamente no centro, esse componente fica neutro em `50`.
+- **Direção** (peso `0.33`): cosseno aumentado entre os vetores centralizados em `50`: `50 + 50 * (dot + k) / sqrt((|user|² + k) * (|target|² + k))`, com `k = 12 * 8²`. O termo `k` funciona como uma componente constante somada aos dois vetores: perto do centro, onde a direção é só ruído de resposta, ele domina, e dois perfis no centro exato têm direção `100`; longe do centro, o resultado converge para o cosseno puro. É a mesma fórmula para todo alvo, sem limiar nem caso especial.
 - **Magnitude** (peso `0.18`): compara a intensidade média das respostas (`avg(abs(valor - 50))`) do usuário com a do perfil: `100 - 2 * abs(userIntensity - targetIntensity)`. Evita que um usuário moderado tenha compatibilidade quase perfeita com um perfil extremo só porque a direção bate.
 - **Outlier** (peso `0.07`): penaliza perfis com um único eixo muito discrepante, mesmo com média geral boa: `100 * max(0, 1 - (maxDiff / 100)^2.5)`, onde `maxDiff` é a maior diferença absoluta entre um eixo do usuário e o do alvo.
 

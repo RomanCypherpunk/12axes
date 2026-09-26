@@ -30,7 +30,8 @@ Antes de codar, releia estes arquivos (podem ter mudado desde a última vez que 
   compatibilidade (`compatibility()`). Hoje é uma soma ponderada de 4 componentes:
   - `axisSimilarity` (42%): por eixo, `1 - ((diff/50)^2)`, com penalidade extra via `tanh` quando
     usuário e alvo estão em lados opostos do centro (50) num mesmo eixo.
-  - `directionSimilarity` (33%): cosseno entre os vetores centrados em 50.
+  - `directionSimilarity` (33%): cosseno aumentado entre os vetores centrados em 50,
+    `(dot + k) / sqrt((|u|² + k)(|t|² + k))` com `k = 12 * 8²` (centro x centro = 100).
   - `magnitudeSimilarity` (18%): compara a "intensidade" média (distância média do centro) dos dois
     vetores.
   - `outlierSimilarity` (7%): penaliza com base no eixo de maior diferença (`maxDiff/100`, expoente

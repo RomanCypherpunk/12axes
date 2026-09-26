@@ -29,6 +29,7 @@ OPPOSITE_SIDE_MAX_PENALTY = 0.45
 OPPOSITE_SIDE_SPREAD = 25.0
 OUTLIER_FULL_SPREAD = 100.0
 OUTLIER_EXPONENT = 2.5
+DIRECTION_AUGMENT_RADIUS = 8.0
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "backend", "src", "main", "resources", "data")
 
@@ -69,9 +70,9 @@ def direction_similarity(uv, tv):
         dot += cu * ct
         un += cu * cu
         tn += ct * ct
-    if un == 0.0 or tn == 0.0:
-        return CENTER
-    cosine = dot / (math.sqrt(un) * math.sqrt(tn))
+    # Cosseno aumentado (espelho de ProfileMatchScorer.directionSimilarity).
+    augment = len(AXIS_IDS) * DIRECTION_AUGMENT_RADIUS * DIRECTION_AUGMENT_RADIUS
+    cosine = (dot + augment) / math.sqrt((un + augment) * (tn + augment))
     return CENTER + CENTER * cosine
 
 

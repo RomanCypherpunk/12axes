@@ -7,7 +7,6 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 class ProfileMatchScorerTest {
-    private static final double DIRECTION_NEUTRAL_SCORE = 50.0;
     private static final double MAGNITUDE_PERFECT_SCORE = 100.0;
     private static final double OUTLIER_PERFECT_SCORE = 100.0;
 
@@ -65,15 +64,15 @@ class ProfileMatchScorerTest {
     }
 
     @Test
-    void neutralVectorScoresByFormulaAgainstItselfBecauseDirectionIsUndefined() {
+    void neutralVectorScoresPerfectlyAgainstItself() {
         Map<String, Double> neutral = scorer.neutralVector();
 
-        assertThat(scorer.compatibility(neutral, neutral))
-                .isEqualTo(expectedScore(100.0, DIRECTION_NEUTRAL_SCORE, MAGNITUDE_PERFECT_SCORE, OUTLIER_PERFECT_SCORE));
+        // Cosseno aumentado: centro x centro tem direção 100, então o total é 100.
+        assertThat(scorer.compatibility(neutral, neutral)).isEqualTo(100.0);
     }
 
     @Test
-    void neutralUserOrTargetKeepsDirectionComponentNeutral() {
+    void neutralUserOrTargetUsesAugmentedDirection() {
         Map<String, Double> neutral = scorer.neutralVector();
         Map<String, Double> target = vector(Map.of(
                 "estrutura", 100.0,
@@ -81,11 +80,25 @@ class ProfileMatchScorerTest {
                 "poder", 100.0
         ));
 
+        double augment = 12 * ProfileMatchScorer.DIRECTION_AUGMENT_RADIUS * ProfileMatchScorer.DIRECTION_AUGMENT_RADIUS;
+        double targetNormSquared = 3 * 50.0 * 50.0;
+        double direction = 50.0 + 50.0 * augment / Math.sqrt(augment * (targetNormSquared + augment));
         double outlierScore = 100.0 * (1.0 - Math.pow(
                 50.0 / ProfileMatchScorer.OUTLIER_FULL_SPREAD, ProfileMatchScorer.OUTLIER_EXPONENT));
-        double expected = expectedScore(75.0, DIRECTION_NEUTRAL_SCORE, 75.0, outlierScore);
+        double expected = expectedScore(75.0, direction, 75.0, outlierScore);
         assertThat(scorer.compatibility(neutral, target)).isEqualTo(expected);
         assertThat(scorer.compatibility(target, neutral)).isEqualTo(expected);
+    }
+
+    @Test
+    void augmentedDirectionConvergesToPlainCosineFarFromCenter() {
+        Map<String, Double> user = vector(Map.of("economia", 95.0, "controle", 95.0, "religiao", 5.0));
+        Map<String, Double> sameDirection = vector(Map.of("economia", 90.0, "controle", 90.0, "religiao", 10.0));
+        Map<String, Double> nearCenter = vector(Map.of("economia", 53.0, "controle", 53.0, "religiao", 47.0));
+
+        // Longe do centro a direção quase não muda; o perfil alinhado e intenso segue vencendo.
+        assertThat(scorer.compatibility(user, sameDirection))
+                .isGreaterThan(scorer.compatibility(user, nearCenter));
     }
 
     @Test

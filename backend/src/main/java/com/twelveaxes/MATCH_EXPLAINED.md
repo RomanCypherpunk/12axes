@@ -196,20 +196,28 @@ O scorer centraliza os valores em torno de `50`:
 centered = value - 50
 ```
 
-Depois calcula o cosseno entre vetor do usuario e vetor do alvo:
+Depois calcula o **cosseno aumentado** entre vetor do usuario e vetor do alvo:
 
 ```text
-cosine = dot(user, target) / (norm(user) * norm(target))
-directionSimilarity = 50 + 50 * cosine
+k = 12 * DIRECTION_AUGMENT_RADIUS^2        (DIRECTION_AUGMENT_RADIUS = 8)
+cosAug = (dot(user, target) + k) / sqrt((norm(user)^2 + k) * (norm(target)^2 + k))
+directionSimilarity = 50 + 50 * cosAug
 ```
+
+O termo `k` equivale a somar a mesma componente constante aos dois vetores antes do cosseno. Efeitos:
+
+- Longe do centro (`norm^2` muito maior que `k`), converge para o cosseno puro: nada muda para perfis com lado definido.
+- Perto do centro, onde a direcao e so ruido de resposta, o termo constante domina e o componente tende a `100` entre perfis parecidos.
+- Centro x centro da `100` (antes dava `50`, porque a direcao era indefinida).
+- E a mesma formula para todo alvo, continua e sem limiar.
 
 Interpretacao:
 
-- `100`: mesma direcao.
-- `50`: direcao indefinida ou ortogonal.
+- `100`: mesma direcao (ou os dois perto do centro).
+- `50`: direcoes ortogonais com intensidade alta.
 - `0`: direcao oposta.
 
-Se um dos vetores e perfeitamente neutro, a direcao e indefinida e o componente volta `50`.
+`DIRECTION_AUGMENT_RADIUS = 8` e o raio RMS, em pontos por eixo, abaixo do qual a direcao pesa menos que o termo constante.
 
 ### 3. `magnitudeSimilarity`
 
@@ -269,18 +277,18 @@ Esse componente tem peso baixo (`0.07`) de proposito: ele deve desempatar e suav
 
 ## Caso neutro
 
-Neutro contra neutro nao e `75` na formula atual. Agora e:
+Neutro contra neutro da `100`:
 
 ```text
-0.42 * 100 + 0.33 * 50 + 0.18 * 100 + 0.07 * 100 = 84.5
+0.42 * 100 + 0.33 * 100 + 0.18 * 100 + 0.07 * 100 = 100
 ```
 
-Motivo:
-
 - `axisSimilarity = 100`: os eixos sao identicos.
-- `directionSimilarity = 50`: direcao indefinida.
+- `directionSimilarity = 100`: com o cosseno aumentado, centro x centro tem direcao `100`.
 - `magnitudeSimilarity = 100`: os dois têm intensidade zero.
 - `outlierSimilarity = 100`: maior diferenca entre eixos e zero.
+
+Antes do cosseno aumentado (ate 2026-09-26) a direcao entre dois vetores neutros era `50`, e o total ficava travado em `83.5`: um usuario com 50 em tudo nunca passava de 83,5% com o Centrismo Radical, que e 50 em todos os eixos.
 
 ## Percentil
 
@@ -361,8 +369,9 @@ Protege:
 - vetor identico = `100`.
 - mesma direcao bate direcao oposta a distancia comparavel.
 - penalidade de lado oposto muda continuamente.
-- neutro usa formula derivada das constantes.
-- usuario/alvo neutro mantem direcao como `50`.
+- neutro contra neutro = `100`.
+- usuario/alvo neutro usa a direcao aumentada, derivada das constantes.
+- longe do centro, o cosseno aumentado preserva a preferencia pelo perfil alinhado e intenso.
 - usuario morno prefere perfil moderado a perfil extremo perfeitamente alinhado.
 - um outlier extremo em 1 eixo isolado reduz a nota mesmo com os outros 11 eixos identicos.
 - pesos somam `1.0`.
@@ -379,7 +388,24 @@ Benchmark intra-catalogo. Mede:
 - discriminacao entre primeiro e segundo.
 - controle de inflacao de extremidade para usuarios mornos.
 
-Ultima rodada apos o patch de outlier (4o componente), medida sobre o catalogo atual:
+Rodada de 2026-09-26, antes e depois do cosseno aumentado, sobre o catalogo atual (206 ideologias):
+
+```text
+                antes   depois
+recovery10      77.7%   77.5%
+recovery15      51.9%   51.7%
+opposite        92.7%   89.9%
+center          91.8%   93.0%
+stability       97.8%   97.2%
+discrimination  4.32%   4.22%
+extremity       91.7%   96.4%
+```
+
+Trade-off: `opposite` cai 2,8 pontos (vetores opostos de baixa intensidade ficam um pouco menos separados, porque o termo constante aproxima tudo que esta perto do centro). Em troca, `extremity` sobe 4,7 pontos (usuarios mornos deixam de receber perfis extremos) e `center` sobe 1,2. O resto fica praticamente igual.
+
+Simulacao que motivou a mudanca (2026-09-26, fora dos testes): em 12 mil vetores uniformes de 0 a 100, so 2,3% trocam de ideologia principal, e sao quase empates (mediana de 0,10 ponto entre o 1o e o 2o lugar no calculo antigo). Em arquetipos simulados respondendo o quiz, extremistas, libertario e anarquista mudam menos de 3%; o Centrismo Radical passa de 1-2% para 23-73% de acerto, sem atrair usuarios do Centrismo nem da centro-direita.
+
+Rodada anterior, apos o patch de outlier (4o componente):
 
 ```text
 recovery10=72.6%
@@ -425,6 +451,16 @@ Hoje a API de ideologias retorna ranking bruto. Se no futuro voltar a existir um
 Foi cogitado (e simulado, nao implementado) um corte binario: remover do ranking qualquer perfil com `diff > 60` (ou `70`) em algum eixo. Simulacoes mostraram que isso descarta entre 45% e 100% do catalogo dependendo do perfil do usuario, e o pior caso e justamente o usuario coerente e extremo (respostas fortes mas nao contraditorias): o corte remove o melhor candidato objetivo (ex.: Coreia do Norte para um usuario extremo-estatista) e o substitui por um candidato com compatibilidade agregada menor, so porque ele nao tem nenhum eixo isolado acima do limiar. Um corte binario sempre cria um penhasco artificial perto do limiar escolhido, qualquer que seja o valor.
 
 O componente `outlierSimilarity` foi escolhido no lugar do corte porque penaliza o outlier de forma continua, sem nunca zerar um candidato — ele pode cair no ranking, mas nao desaparece, e ainda vence quando e genuinamente o melhor candidato disponivel.
+
+### Direcao indefinida perto do centro
+
+O cosseno puro mede so o angulo. Perto do centro, uma inclinacao de 3 pontos pesa o mesmo que uma de 40, entao a direcao virava ruido de resposta com peso de 33% da nota. Efeitos medidos: centristas recebiam ideologias de lado definido por acaso, e dois vetores no centro exato tinham direcao `50` (total travado em `83.5`).
+
+Alternativas descartadas em simulacao:
+
+- Multiplicar o cosseno por uma "confianca" so do usuario (`conf = I / (I + 8)`): nao resolve centro x centro (continua `83.5`) e, como `conf` nunca chega a 1, tira de 3 a 4 pontos da compatibilidade de todo mundo.
+- Trocar a direcao pela `axisSimilarity` quando os vetores estao perto do centro: cria um bonus estrutural so para os alvos centrais (as duas medidas estao em escalas diferentes) e transforma o Centrismo Radical num ralo que absorve centristas e centro-direita.
+- Usar so a distancia por eixo: aumenta o acerto nos extremos, mas troca de 20% a 50% dos resultados de ideologia, personalidade e pais.
 
 ## Como alterar a formula com seguranca
 
