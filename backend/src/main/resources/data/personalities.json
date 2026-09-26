@@ -4082,7 +4082,7 @@
   {
     "id": "alan-turing",
     "name": "Alan Turing",
-    "role": "Matemático e cientista da computação",
+    "role": "Cientista da computação",
     "category": "intelectual",
     "lifespan": "1912–1954",
     "description": "Matemático e lógico britânico, decifrou o Enigma nazista em Bletchley Park e lançou as bases da computação (Máquina de Turing, Teste de Turing). Perseguido pelo Estado por homossexualidade em 1952, sofreu castração química e morreu em 1954; perdoado postumamente em 2013.",
@@ -4154,7 +4154,7 @@
   {
     "id": "richard-rasmussen",
     "name": "Richard Rasmussen",
-    "role": "Biólogo e apresentador de TV",
+    "role": "Biólogo e apresentador",
     "category": "intelectual",
     "lifespan": "1970–",
     "description": "Biólogo e apresentador de TV, foi embaixador do turismo de Bolsonaro e em 2026 disputou vaga de deputado pelo MDB. Defende criadores de fauna silvestre, produtores rurais da Amazônia e o \"boi bombeiro\", criticando a fiscalização ambiental e ONGs.",
@@ -4414,5 +4414,29 @@
     "imageSourceName": "Wikimedia Commons / Wikipédia",
     "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Emperor_Naruhito_201905_(cropped).jpg",
     "imageNote": "Retrato de Naruhito via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "jerome-powell",
+    "name": "Jerome Powell",
+    "role": "Presidente do Federal Reserve",
+    "category": "economista",
+    "lifespan": "1953–",
+    "description": "Advogado e ex-executivo financeiro republicano, Powell presidiu o Federal Reserve de 2018 a 2026, enfrentou a pandemia e a inflação com juros altos e defendeu a independência do banco central contra a pressão de Trump.",
+    "imagePath": "/personalities/portraits/jerome-powell.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/Jerome_Powell",
+    "imageNote": "Retrato de Jerome Powell via Wikipédia/Wikimedia Commons."
+  },
+  {
+    "id": "augusto-cury",
+    "name": "Augusto Cury",
+    "role": "Psiquiatra e escritor",
+    "category": "intelectual",
+    "lifespan": "1958–",
+    "description": "Psiquiatra e autor de best-sellers de autoajuda, Cury é candidato à Presidência em 2026 pelo Avante com discurso antipolarização, semipresidencialismo, equilíbrio fiscal, empreendedorismo e saúde mental.",
+    "imagePath": "/personalities/portraits/augusto-cury.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://pt.wikipedia.org/wiki/Augusto_Cury",
+    "imageNote": "Retrato de Augusto Cury via Wikipédia/Wikimedia Commons."
   }
 ]
