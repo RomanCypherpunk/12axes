@@ -32,6 +32,6 @@ public record ArchetypeQuestion(
     }
 
     private static String localized(Map<String, String> values, String lang) {
-        return values.getOrDefault(lang, values.get("pt"));
+        return com.twelveaxes.service.QuizDataService.localized(values, lang);
     }
 }

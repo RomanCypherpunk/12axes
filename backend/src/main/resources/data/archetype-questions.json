@@ -3,18 +3,21 @@
     "id": "sociedade",
     "label": {
       "pt": "Sociedade",
-      "en": "Society"
+      "en": "Society",
+      "ru": "Общество"
     },
     "text": {
       "pt": "A sociedade deve se apoiar em quê?",
-      "en": "What should society rest on?"
+      "en": "What should society rest on?",
+      "ru": "На чём должно держаться общество?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Fé, família e tradição da nação",
-          "en": "Faith, family and national tradition"
+          "en": "Faith, family and national tradition",
+          "ru": "Вера, семья и национальные традиции"
         },
         "effects": {
           "moral": 12,
@@ -26,7 +29,8 @@
         "id": "B",
         "text": {
           "pt": "Costumes e fé, mudando devagar",
-          "en": "Custom and faith, changing slowly"
+          "en": "Custom and faith, changing slowly",
+          "ru": "Обычаи и вера, перемены не спеша"
         },
         "effects": {
           "moral": 32,
@@ -38,7 +42,8 @@
         "id": "C",
         "text": {
           "pt": "Cada um vive como quiser",
-          "en": "Live and let live"
+          "en": "Live and let live",
+          "ru": "Живи и дай жить другим"
         },
         "effects": {
           "moral": 55,
@@ -50,7 +55,8 @@
         "id": "D",
         "text": {
           "pt": "Igualdade, diversidade e direitos civis",
-          "en": "Equality, diversity and civil rights"
+          "en": "Equality, diversity and civil rights",
+          "ru": "Равенство, разнообразие и гражданские права"
         },
         "effects": {
           "moral": 80,
@@ -62,7 +68,8 @@
         "id": "E",
         "text": {
           "pt": "Tradição e ordem, sem religião",
-          "en": "Tradition and order, without religion"
+          "en": "Tradition and order, without religion",
+          "ru": "Традиция и порядок без религии"
         },
         "effects": {
           "moral": 25,
@@ -74,7 +81,8 @@
         "id": "F",
         "text": {
           "pt": "Fé a serviço da justiça social",
-          "en": "Faith in service of social justice"
+          "en": "Faith in service of social justice",
+          "ru": "Вера на службе социальной справедливости"
         },
         "effects": {
           "moral": 72,
@@ -88,18 +96,21 @@
     "id": "poder",
     "label": {
       "pt": "Poder",
-      "en": "Power"
+      "en": "Power",
+      "ru": "Власть"
     },
     "text": {
       "pt": "Como o poder deve ser organizado?",
-      "en": "How should power be organized?"
+      "en": "How should power be organized?",
+      "ru": "Как должна быть устроена власть?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Líder ou partido único, centralizado",
-          "en": "A single leader or party, centralized"
+          "en": "A single leader or party, centralized",
+          "ru": "Единый лидер или партия, централизованная власть"
         },
         "effects": {
           "representacao": 15,
@@ -111,7 +122,8 @@
         "id": "B",
         "text": {
           "pt": "Elites decidem, com voto limitado",
-          "en": "Elites decide, with limited voting"
+          "en": "Elites decide, with limited voting",
+          "ru": "Решают элиты, голосование ограничено"
         },
         "effects": {
           "representacao": 40,
@@ -123,7 +135,8 @@
         "id": "C",
         "text": {
           "pt": "Democracia com freios e contrapesos",
-          "en": "Democracy with checks and balances"
+          "en": "Democracy with checks and balances",
+          "ru": "Демократия со сдержками и противовесами"
         },
         "effects": {
           "representacao": 85,
@@ -135,7 +148,8 @@
         "id": "D",
         "text": {
           "pt": "Estado mínimo ou nenhum",
-          "en": "Little or no state"
+          "en": "Little or no state",
+          "ru": "Минимальное государство или полное его отсутствие"
         },
         "effects": {
           "representacao": 70,
@@ -147,7 +161,8 @@
         "id": "E",
         "text": {
           "pt": "Sem Estado, conselhos ou contratos",
-          "en": "No state, councils or contracts"
+          "en": "No state, councils or contracts",
+          "ru": "Без государства — советы и договоры"
         },
         "effects": {
           "representacao": 90,
@@ -161,18 +176,21 @@
     "id": "economia",
     "label": {
       "pt": "Economia",
-      "en": "Economy"
+      "en": "Economy",
+      "ru": "Экономика"
     },
     "text": {
       "pt": "Quem deve controlar a produção?",
-      "en": "Who should control production?"
+      "en": "Who should control production?",
+      "ru": "Кто должен контролировать производство?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Produção coletiva e planejada, sem patrões",
-          "en": "Collective, planned production, no bosses"
+          "en": "Collective, planned production, no bosses",
+          "ru": "Коллективное плановое производство без начальников"
         },
         "effects": {
           "economia": 92,
@@ -184,7 +202,8 @@
         "id": "B",
         "text": {
           "pt": "Cooperativas, Estado social e regulação",
-          "en": "Co-ops, welfare state and regulation"
+          "en": "Co-ops, welfare state and regulation",
+          "ru": "Кооперативы, социальное государство и регулирование"
         },
         "effects": {
           "economia": 76,
@@ -196,7 +215,8 @@
         "id": "C",
         "text": {
           "pt": "Mercado com regras e rede de proteção",
-          "en": "Markets with rules and a safety net"
+          "en": "Markets with rules and a safety net",
+          "ru": "Рынок с правилами и системой социальной защиты"
         },
         "effects": {
           "economia": 42,
@@ -208,7 +228,8 @@
         "id": "D",
         "text": {
           "pt": "Patrões e sindicatos unidos pelo Estado",
-          "en": "Bosses and unions united by the state"
+          "en": "Bosses and unions united by the state",
+          "ru": "Работодатели и профсоюзы, объединённые государством"
         },
         "effects": {
           "economia": 65,
@@ -220,7 +241,8 @@
         "id": "E",
         "text": {
           "pt": "Empresas nacionais protegidas pelo Estado",
-          "en": "National firms shielded by the state"
+          "en": "National firms shielded by the state",
+          "ru": "Национальные компании под защитой государства"
         },
         "effects": {
           "economia": 38,
@@ -232,7 +254,8 @@
         "id": "F",
         "text": {
           "pt": "Livre comércio e impostos mínimos",
-          "en": "Free trade and minimal taxes"
+          "en": "Free trade and minimal taxes",
+          "ru": "Свободная торговля и минимальные налоги"
         },
         "effects": {
           "economia": 12,
@@ -246,18 +269,21 @@
     "id": "mundo",
     "label": {
       "pt": "Mundo",
-      "en": "World"
+      "en": "World",
+      "ru": "Мир"
     },
     "text": {
       "pt": "Como o país deve agir no mundo?",
-      "en": "How should the country act abroad?"
+      "en": "How should the country act abroad?",
+      "ru": "Как страна должна действовать на международной арене?"
     },
     "options": [
       {
         "id": "A",
         "text": {
           "pt": "Potência militar influente",
-          "en": "An influential military power"
+          "en": "An influential military power",
+          "ru": "Влиятельная военная держава"
         },
         "effects": {
           "diplomacia": 85,
@@ -268,7 +294,8 @@
         "id": "B",
         "text": {
           "pt": "Defesa forte e aliados próximos",
-          "en": "Strong defense and close allies"
+          "en": "Strong defense and close allies",
+          "ru": "Сильная оборона и надёжные союзники"
         },
         "effects": {
           "diplomacia": 60,
@@ -279,7 +306,8 @@
         "id": "C",
         "text": {
           "pt": "Diplomacia antes da força",
-          "en": "Diplomacy before force"
+          "en": "Diplomacy before force",
+          "ru": "Дипломатия прежде силы"
         },
         "effects": {
           "diplomacia": 30,
@@ -290,7 +318,8 @@
         "id": "D",
         "text": {
           "pt": "Armado, mas fora de guerras alheias",
-          "en": "Armed, but out of others' wars"
+          "en": "Armed, but out of others' wars",
+          "ru": "Вооружённый нейтралитет, вне чужих войн"
         },
         "effects": {
           "diplomacia": 70,
@@ -301,7 +330,8 @@
         "id": "E",
         "text": {
           "pt": "Paz e não intervenção, sempre",
-          "en": "Peace and non-intervention, always"
+          "en": "Peace and non-intervention, always",
+          "ru": "Мир и невмешательство всегда"
         },
         "effects": {
           "diplomacia": 8,

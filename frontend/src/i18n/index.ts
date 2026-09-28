@@ -1,9 +1,15 @@
-// Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
+// Dicionário de UI PT/EN/RU. O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en';
+export type Lang = 'pt' | 'en' | 'ru';
+
+const LANGS: readonly Lang[] = ['pt', 'en', 'ru'];
+
+function isLang(value: string | null): value is Lang {
+  return LANGS.includes(value as Lang);
+}
 
 const STORAGE_KEY = '12axes-lang';
 
@@ -13,6 +19,7 @@ function langForcedByPath(pathname: string): Lang | null {
   const path = (pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
   if (path === '/en') return 'en';
   if (path === '/br') return 'pt';
+  if (path === '/ru') return 'ru';
   return null;
 }
 
@@ -25,18 +32,26 @@ export function resolveLang(): Lang {
     return forced;
   }
   const fromUrl = new URLSearchParams(window.location.search).get('lang');
-  if (fromUrl === 'pt' || fromUrl === 'en') {
+  if (isLang(fromUrl)) {
     window.localStorage.setItem(STORAGE_KEY, fromUrl);
     return fromUrl;
   }
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'pt' || stored === 'en') {
+  if (isLang(stored)) {
     return stored;
   }
-  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+  const browserLang = navigator.language?.toLowerCase() ?? '';
+  if (browserLang.startsWith('pt')) return 'pt';
+  if (browserLang.startsWith('ru')) return 'ru';
+  return 'en';
 }
 
 export const LANG: Lang = resolveLang();
+
+// O botão de idioma alterna em ciclo: PT → EN → RU → PT.
+export function nextLang(lang: Lang): Lang {
+  return LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length];
+}
 
 export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
@@ -44,7 +59,7 @@ export function setLang(lang: Lang) {
   url.searchParams.delete('lang');
   // Em /en ou /br a URL é o que define o idioma, então o toggle troca de rota.
   if (langForcedByPath(url.pathname)) {
-    url.pathname = lang === 'en' ? '/en' : '/br';
+    url.pathname = lang === 'pt' ? '/br' : `/${lang}`;
   }
   window.location.href = url.toString();
 }
@@ -747,8 +762,8 @@ const en: Strings = {
   navPersonalities: 'Personalities',
   navCountries: 'Countries',
   navSupport: 'Support',
-  langToggleLabel: 'PT',
-  langToggleAria: 'Mudar para português',
+  langToggleLabel: 'RU',
+  langToggleAria: 'Переключить на русский',
   redoQuiz: 'Retake quiz',
   restartQuiz: 'Restart quiz',
   heroEyebrow: 'Political discovery',
@@ -1194,4 +1209,469 @@ const en: Strings = {
   ]
 };
 
-export const t: Strings = LANG === 'en' ? en : pt;
+const ru: Strings = {
+  htmlLang: 'ru',
+  docTitle: '12 Axes — политический тест на идеологию по 12 осям',
+  loadingAnalysis: 'Загружаем политический анализ...',
+  loadingQuiz: 'Загружаем тест...',
+  loadingResult: 'Загружаем результаты...',
+  tryAgain: 'Попробовать снова',
+  skipToContent: 'Перейти к содержанию',
+  backToStartAria: 'Вернуться в начало',
+  mainNavAria: 'Основная навигация',
+  navHow: 'Как это работает',
+  navAxes: '12 осей',
+  navSpectrum: 'Спектр',
+  navFaq: 'Вопросы',
+  navIdeologies: 'Идеологии',
+  navPersonalities: 'Личности',
+  navCountries: 'Страны',
+  navSupport: 'Поддержать',
+  langToggleLabel: 'PT',
+  langToggleAria: 'Mudar para português',
+  redoQuiz: 'Пройти заново',
+  restartQuiz: 'Начать тест заново',
+  heroEyebrow: 'Политическое самопознание',
+  h1Pre: 'Вы действительно знаете свою ',
+  h1Em: 'политическую идеологию',
+  h1Post: '?',
+  introLead:
+    'Возможно, вы причисляете себя не к тому лагерю. За несколько минут узнайте свою настоящую идеологию, страну, которая думает так же, как вы, и политического лидера, чьи взгляды ближе всего к вашим.',
+  startQuiz: 'Узнать свой профиль',
+  seeAxes: 'Смотреть 12 осей',
+  heroLabels: ['Бесплатно', 'Анонимно', 'Быстро', 'Мгновенный результат'],
+  heroTeaserLabel: 'совпадение',
+  heroTeaserTag: 'Пример результата',
+  formats: {
+    short: {
+      label: 'Короткий',
+      questionCount: '36 вопросов',
+      description: 'Быстрый результат — идеально для первого знакомства со своим профилем',
+      duration: 'Около 5 мин',
+      action: 'Начать короткую версию'
+    },
+    extended: {
+      label: 'Полный',
+      questionCount: '60 вопросов',
+      description: 'Больше точности, чтобы результат точнее совпал с идеологическими профилями.',
+      duration: 'Около 9 мин',
+      action: 'Начать полную версию'
+    },
+    extreme: {
+      label: 'Экстремальный',
+      questionCount: '240 вопросов',
+      description: 'Точный синтез вашего мировоззрения со 100% точностью.',
+      duration: 'Около 30 мин',
+      action: 'Начать экстремальную версию'
+    }
+  },
+  axisInfoAria: (label) => `Что означает ось «${label}»?`,
+  closeLabel: 'Закрыть',
+  personalityInfoAria: (name) => `Подробнее: ${name}`,
+  closenessTitle: 'Что вас сближает',
+  closenessYou: 'Вы',
+  axisExplanations: {
+    estrutura:
+      'Показывает, предпочитаете ли вы власть, распределённую между регионами, городами и местными сообществами, или унитарное национальное государство с более единообразными законами и управлением.',
+    representacao:
+      'Сравнивает доверие к выборам, оппозиции и демократическим институтам с предпочтением сильного лидерства, технократии, монархии или авторитарных режимов.',
+    poder:
+      'Оценивает баланс между порядком, слежкой, наказанием и государственным контролем, с одной стороны, и приватностью, личной свободой и гражданской автономией — с другой.',
+    imigracao:
+      'Показывает, что для вас важнее: культурная ассимиляция, язык и национальная идентичность или мультикультурализм, открытая миграция и многообразие обычаев.',
+    diplomacia:
+      'Анализирует ваше отношение к вооружённым силам, оружию, сдерживанию и военному вмешательству в сравнении с переговорами, пацифизмом и международными организациями.',
+    intervencao:
+      'Показывает склонность к внешнему невмешательству или к более напористому национальному суверенитету, геополитическому национализму и активной защите национальных интересов.',
+    economia:
+      'Сравнивает предпочтение общественной собственности, государственных компаний и коллективных услуг с частной собственностью, приватизацией и ведущей ролью бизнеса.',
+    controle:
+      'Оценивает государственное планирование, регулирование и активную экономическую политику в противовес свободному рынку, минимальному вмешательству, денежной автономии и конкуренции.',
+    comercio:
+      'Показывает отношение к протекционизму, производственному суверенитету и защите отечественной промышленности в противовес глобализму, свободной торговле и международной экономической интеграции.',
+    religiao:
+      'Сравнивает светскость, отделение религии от государства и критику религиозных привилегий с общественным влиянием веры и религиозных ценностей.',
+    moral:
+      'Оценивает культурный прогрессизм, гражданские права и социальные перемены в сравнении с традицией, семьёй, обычаями и моральным консерватизмом.',
+    tecnologia:
+      'Показывает энтузиазм по отношению к технологиям, ИИ, генной инженерии и техническому развитию в противовес биологической, экологической и охранительной осторожности.'
+  },
+  homeAxes: {
+    estrutura: { label: 'Устройство', leftPole: 'Федерализм', rightPole: 'Унитаризм' },
+    representacao: { label: 'Представительство', leftPole: 'Демократия', rightPole: 'Автократия' },
+    poder: { label: 'Власть', leftPole: 'Безопасность', rightPole: 'Свобода' },
+    imigracao: { label: 'Иммиграция', leftPole: 'Ассимиляция', rightPole: 'Мультикультурализм' },
+    diplomacia: { label: 'Дипломатия', leftPole: 'Милитаризм', rightPole: 'Пацифизм' },
+    intervencao: { label: 'Вмешательство', leftPole: 'Невмешательство', rightPole: 'Национализм' },
+    economia: { label: 'Экономика', leftPole: 'Государственная', rightPole: 'Частная' },
+    controle: { label: 'Регулирование', leftPole: 'Планирование', rightPole: 'Свободный рынок' },
+    comercio: { label: 'Торговля', leftPole: 'Протекционизм', rightPole: 'Глобализм' },
+    religiao: { label: 'Религия', leftPole: 'Нерелигиозность', rightPole: 'Религиозность' },
+    moral: { label: 'Мораль', leftPole: 'Прогрессизм', rightPole: 'Традиционализм' },
+    tecnologia: { label: 'Технологии', leftPole: 'Технологии', rightPole: 'Биология' }
+  },
+  spectrumItems: [
+    {
+      id: 'left-radical',
+      label: 'Радикальные левые',
+      tone: 'darkred',
+      description:
+        'Революционный или тоталитарный однопартийный коммунизм с плановой экономикой, сильной централизацией и сосредоточенной государственной властью.'
+    },
+    {
+      id: 'left',
+      label: 'Левые',
+      tone: 'green',
+      description:
+        'Выступают за социал-демократию, прогрессизм и более активное участие государства в экономике в рамках либеральной демократии.'
+    },
+    {
+      id: 'center',
+      label: 'Центр',
+      tone: 'gray',
+      description:
+        'Ищет баланс между левыми и правыми, рынком и государством, реформами и стабильностью; умеренная или прагматичная позиция.'
+    },
+    {
+      id: 'right',
+      label: 'Правые',
+      tone: 'blue',
+      description:
+        'Выступают за консерватизм, экономический либерализм и умеренный национализм в рамках либеральной демократии.'
+    },
+    {
+      id: 'right-extreme',
+      label: 'Ультраправые',
+      tone: 'navy',
+      description:
+        'Фашизм, расовый национализм и репрессивные теократии с открытым отрицанием демократии и авторитарной концентрацией власти.'
+    },
+    {
+      id: 'third-position',
+      label: 'Третий путь',
+      tone: 'purple',
+      description:
+        'Националистический корпоративистский синтез, отвергающий и либеральный капитализм, и марксизм, — вне традиционной оси «левые — правые».'
+    },
+    {
+      id: 'libertarian',
+      label: 'Либертарианцы',
+      tone: 'amber',
+      description:
+        'Выступают за минимальное государство, свободный рынок, частную собственность и личные свободы, не предлагая полностью упразднить государство.'
+    },
+    {
+      id: 'anarchist',
+      label: 'Анархисты',
+      tone: 'charcoal',
+      description:
+        'Отвергают государство и любую принудительную власть, выступая за свободную, добровольную и самоуправляемую организацию общества — слева или справа.'
+    }
+  ],
+  faqItems: [
+    {
+      question: 'Можно ли доверять тесту?',
+      answer:
+        'Политический тест 12 Axes надёжен как инструмент для осмысления и сравнения политических позиций. Вопросы распределены по 12 осям, чтобы снизить перекос в сторону одной темы, но тест не заменяет изучения, дискуссий и академического анализа.'
+    },
+    {
+      question: 'Сколько времени это займёт?',
+      answer:
+        'Короткая версия занимает около 5 минут, полная — примерно 9 минут. Экстремальная версия из 240 вопросов может занять около 30 минут.'
+    },
+    {
+      question: 'Можно пройти тест ещё раз?',
+      answer:
+        'Да. Проходите политический тест сколько угодно раз — в том числе выбирая другую глубину, чтобы сравнить, меняется ли результат.'
+    },
+    {
+      question: 'Есть ли правильный ответ?',
+      answer:
+        'Правильного ответа нет. Тест на идеологию измеряет ваши предпочтения в вопросах демократии, монархии, федерализма, иммиграции, роли религии в политике, экономической политики, международной торговли, либерализма, консерватизма, прогрессизма и других тем.'
+    },
+    {
+      question: 'Как алгоритм считает результат?',
+      answer:
+        'Каждый ответ добавляет баллы определённому полюсу. Алгоритм рассчитывает проценты по каждой оси, сравнивает ваш идеологический вектор с профилями политических течений, стран и личностей и выдаёт наибольшие совпадения.'
+    },
+    {
+      question: 'Может ли результат измениться?',
+      answer:
+        'Может — если изменятся ваши взгляды, если вы ответите с большим количеством нюансов или пройдёте более длинную версию. Экстремальная версия за счёт большего числа вопросов обычно даёт меньше колебаний.'
+    },
+    {
+      question: 'Это научный тест?',
+      answer:
+        '12 Axes — не клинически валидированный научный инструмент. Это образовательный политический тест, вдохновлённый моделями политического спектра и тестами на идеологию; он полезен для размышлений и сравнения.'
+    },
+    {
+      question: 'Можно поделиться результатом?',
+      answer:
+        'Да. В конце вы можете поделиться результатом, чтобы обсудить с другими политическую идеологию, политический спектр, левых, правых, центр и 12 осей.'
+    },
+    {
+      question: 'Тест собирает данные?',
+      answer:
+        'Тест анонимный и не требует регистрации. Ответы используются только для расчёта результата во время прохождения — без имени, электронной почты или других личных данных.'
+    },
+    {
+      question: 'Можно пройти тест с телефона?',
+      answer:
+        'Да. Интерфейс рассчитан и на мобильные устройства, и на компьютеры, так что тест можно пройти в браузере смартфона.'
+    }
+  ],
+  howEyebrow: 'Как это работает',
+  howTitle: 'Как устроен политический тест 12 Axes',
+  howLead:
+    'Простой и наглядный тест на политическую идеологию: вы отвечаете на утверждения, 12 Axes рассчитывает проценты и показывает, где вы находитесь на политическом спектре по каждому измерению.',
+  steps: [
+    {
+      title: 'Ответьте на вопросы',
+      text: 'Соглашайтесь или не соглашайтесь с утверждениями об экономике, государстве, гражданских свободах, ценностях, религии, внешней политике и технологиях.'
+    },
+    {
+      title: 'Анализ по 12 осям',
+      text: 'Каждый ответ определяет ваше положение на 12 независимых идеологических осях — от свободного рынка до планирования, от национализма до глобализма.'
+    },
+    {
+      title: 'Узнайте свой профиль',
+      text: 'Получите свой идеологический профиль, самые совместимые идеологии, ближайшую страну, близкую вам личность и результаты по каждой оси.'
+    }
+  ],
+  axesGuideEyebrow: '12 осей',
+  axesGuideTitle: 'Что означает каждая ось?',
+  axesGuideLead:
+    'Тест на идеологию 12 Axes по отдельности анализирует федерализм, политическое представительство, демократию, выборы, иммиграцию, международную торговлю, роль религии в политике, экономическую политику, мораль и технологии.',
+  discoveryEyebrow: 'Что вы узнаете',
+  discoveryTitle: 'Полный портрет ваших политических убеждений',
+  discoveryLead:
+    'Больше, чем «левый или правый»: результат показывает, с кем, где и насколько сильно на самом деле совпадают ваши взгляды.',
+  discoveryItems: [
+    { icon: 'ideology', title: 'Ваша идеология', text: 'Какое политическое течение вам подходит' },
+    { icon: 'country', title: 'Ваша страна', text: 'Какая страна думает так же, как вы' },
+    { icon: 'personality', title: 'Ваш политический лидер', text: 'Какая историческая фигура ближе всего к вам идеологически' },
+    { icon: 'spectrum', title: 'Ваш спектр', text: 'Где вы находитесь между левыми и правыми' },
+    { icon: 'profile', title: 'Ваш профиль', text: 'Полный портрет ваших убеждений' },
+    { icon: 'compatibility', title: 'Совместимость', text: 'Насколько вы на самом деле согласны со своей идеологией' }
+  ],
+  exampleEyebrow: 'Реальный пример',
+  exampleTitle: 'Так выглядит ваш результат',
+  exampleCaption: 'Иллюстративный пример на реальных данных из каталога 12 Axes.',
+  exampleCta: 'Хочу увидеть свой результат',
+  spectrumEyebrow: 'Политический спектр',
+  spectrumTitle: 'Узнайте своё место на политическом спектре',
+  spectrumLead:
+    'Результат помогает увидеть вашу политическую позицию между левыми, правыми и центром, а также выявляет более радикальные, авторитарные или либертарианские формы, лежащие вне этой оси: ультраправых, радикальных левых, третий путь, либертарианство и анархизм.',
+  faqTitle: 'Частые вопросы',
+  faqLead: 'Всё, о чём обычно спрашивают перед прохождением теста.',
+  navStart: 'Начать',
+  menuAria: 'Открыть меню',
+  roseAria: 'Роза 12 осей',
+  spectrumBarAria: 'Шкала политического спектра с восемью категориями',
+  footerTagline: 'Независимый политический тест · 12axes.vercel.app',
+  versionsEyebrow: 'Версии',
+  versionsTitle: 'Выберите глубину',
+  versionsLead:
+    'Начните с быстрого теста или погрузитесь глубже, чтобы получить более точный портрет своего идеологического профиля. Все версии используют те же 12 осей и сразу показывают результат.',
+  variantEyebrow: 'Выберите формат',
+  variantTitlePre: 'Вам важнее скорость или ',
+  variantTitleEm: 'точность?',
+  backToStart: 'Вернуться в начало',
+  depthLabel: 'Глубина',
+  depthAria: (level) => `Глубина ${level} из 3`,
+  recommended: 'Рекомендуем',
+  formatNotes: ['Все версии используют те же 12 осей', 'Анонимно, без регистрации', 'Мгновенный результат'],
+  variantLead:
+    'Короткая версия быстро покажет результат. Полная версия точнее и лучше сопоставляет ваш результат с идеологическими профилями.',
+  quizNavAria: 'Навигация по тесту',
+  autoAdvance: 'Переходить дальше после ответа',
+  back: 'Назад',
+  next: 'Далее',
+  calculating: 'Считаем…',
+  seeResult: 'Смотреть результат',
+  archetypeSkip: 'Пропустить',
+  errMissingAnswer: 'Чтобы увидеть результат, сначала ответьте на этот вопрос.',
+  errLoadQuiz: 'Не удалось загрузить тест.',
+  errCalc: 'Не удалось рассчитать результат.',
+  errImage: 'Не удалось создать изображение результата.',
+  errHttp: (status) => `Ошибка HTTP ${status}`,
+  resultsEyebrow: 'Анализ завершён',
+  resultsH1Pre: 'Ваш идеологический ',
+  resultsH1Em: 'профиль',
+  resultsLead: (count) =>
+    `Анализ основан на ${count} ${count % 10 === 1 && count % 100 !== 11 ? 'ответе' : 'ответах'}, распределённых по 12 ключевым измерениям политической идеологии. Посмотрите свою позицию на каждой оси и идеологические совпадения.`,
+  resultsLeadShared:
+    'Результат, которым поделились: позиция на каждой из 12 политических осей и рассчитанные по ней идеологические совпадения. Пройдите тест, чтобы узнать свой.',
+  resultsSummaryAria: 'Сводка анализа',
+  metaAnswered: 'Отвечено вопросов',
+  metaAxes: 'Проанализировано осей',
+  metaTop: 'Лучшее совпадение',
+  axesSectionEyebrow: 'Политические оси',
+  axesSectionTitle: 'Результат по осям в процентах',
+  proximityEyebrow: 'Идеологическая близость',
+  otherMatches: 'Другие совпадения',
+  navOnThisPage: 'На этой странице',
+  resultsNavAxes: '12 осей',
+  resultsNavSignature: 'Чем вы выделяетесь',
+  resultsNavCountries: 'Страны',
+  resultsNavPersonalities: 'Личности',
+  resultsNavAreas: 'Сферы',
+  resultsNavBooks: 'Что почитать',
+  resultsNavIdeologies: 'Другие идеологии',
+  countriesSectionTitle: 'Самые близкие вам страны',
+  countryCurrentTab: 'Современные',
+  countryHistoricalTab: 'Исторические',
+  countriesDistantTitle: 'Самые далёкие от вас',
+  personalitiesSectionTitle: 'Самые близкие вам личности',
+  personalitiesByAreaTitle: 'Также близки вам — по сферам',
+  dimensionsTitle: 'Также близки вам — по измерениям профиля',
+  dimensionLabels: {
+    political: 'Политически',
+    social: 'Социально',
+    economic: 'Экономически',
+  },
+  booksEyebrow: 'Идите дальше',
+  booksTitle: 'Что почитать',
+  booksTopLabel: 'Ближе всего к вам',
+  booksAuthorLabel: 'Автор',
+  booksLead: 'По одной книге от каждой из личностей, наиболее близких к вашим результатам.',
+  booksWhy: (pct) => `Совместимость ${pct}%`,
+  booksYearBc: (year) => `${year} г. до н. э.`,
+  booksCta: 'Смотреть на Amazon',
+  areasGeneralTitle: 'Самые близкие к вашим результатам личности',
+  areasSectionTitle: 'Самые близкие личности по сферам',
+  areasTabsAria: 'Как сгруппированы личности',
+  areasGeneralTab: 'Общая совместимость',
+  areasByAreaTab: 'Сфера',
+  personalitiesDistantTitle: 'Самые далёкие от вас',
+  ideologyDistantTitle: 'Самая далёкая от вас идеология',
+  phraseTitle: 'Фраза, которая вас описывает',
+  phraseNote: (ideology) => `Так сторонник идеологии «${ideology}» описал бы общество, к которому стремится.`,
+  signatureTitle: 'Чем вы выделяетесь',
+  signatureUnusualLabel: 'Ваша самая необычная позиция',
+  signatureCommonLabel: 'Ваша самая типичная позиция',
+  signatureUnusualLead: (pole, percent) => `Вы ближе к полюсу «${pole}», чем ${Math.round(percent)}% идеологий каталога.`,
+  signatureUnusualLeadMax: (pole) => `Ни одна идеология каталога не склоняется к полюсу «${pole}» так сильно, как вы.`,
+  signatureUnusualLeadBalanced: (axis, pole, percent) =>
+    `По оси «${axis}» вы занимаете срединную позицию. Но даже так вы ближе к полюсу «${pole}», чем ${Math.round(percent)}% идеологий каталога.`,
+  signatureUnusualNote: (axis) => `Из всех 12 осей именно по оси «${axis}» вы сильнее всего отличаетесь от остальных. Это ваша отличительная черта.`,
+  signatureCommonLead: (axis) => `Ваша позиция по оси «${axis}» почти точно совпадает с медианой каталога.`,
+  signatureCommonNote: (pole) => `Это общая территория: вы не склоняетесь ни к полюсу «${pole}», ни к противоположному.`,
+  signatureCommonNoteBalanced: (axis) => `По оси «${axis}» вы в центре — как и каталог. Здесь ваш профиль выделяется меньше всего.`,
+  tensionLabel: 'Ваше внутреннее противоречие',
+  tensionCombo: (firstPole, secondPole) => `${firstPole} и ${secondPole} одновременно`,
+  tensionRare: (count, total) => `Только ${count} из ${total} идеологий каталога сочетают обе эти позиции.`,
+  tensionUnique: 'Ни одна идеология каталога не сочетает обе эти позиции.',
+  tensionExamples: (names) => `Ближайшие совпадения: ${names}.`,
+  tensionNote: (firstAxis, secondAxis) => `В каталоге оси «${firstAxis}» и «${secondAxis}» обычно меняются вместе. У вас эта закономерность обратная.`,
+  signatureMedian: 'Медиана идеологий',
+  signatureYou: 'Вы',
+  personalityCategories: {
+    politico: 'Политика',
+    religioso: 'Религия',
+    economista: 'Экономика',
+    filosofo: 'Философия',
+    teorico: 'Политическая теория',
+    empresario: 'Бизнес',
+    intelectual: 'Интеллектуальная жизнь',
+    ativista: 'Активизм',
+  },
+  redoAnalysis: 'Пройти анализ заново',
+  share: 'Поделиться',
+  saveOrShare: 'Поделиться результатом',
+  generatingPng: 'Создаём PNG...',
+  shareFilePrefix: '12axes-profile',
+  shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
+    `Я узнал(а) свой идеологический профиль в политическом тесте 12 Axes!\n\n` +
+    `💡 Самая совместимая идеология:\n` +
+    `${ideology} — совместимость ${ideologyPct}%\n\n` +
+    `🌎 Самая совместимая страна:\n` +
+    `${country} — совместимость ${countryPct}%\n\n` +
+    `👤 Самая совместимая личность:\n` +
+    `${personality} — совместимость ${personalityPct}%\n\n` +
+    `👉 Пройдите тест и поделитесь своим результатом:\nhttps://12axes.vercel.app/ru`,
+  progress: (current, total) => `Вопрос ${current} из ${total}`,
+  progressDone: (percent) => `Пройдено ${percent}%`,
+  archetypeHeader: 'Определяем ваш архетип',
+  archetypeStep: (current, total) => `${current} из ${total}`,
+  progressAria: (percent) => `Прогресс теста: ${percent}%`,
+  answersAria: 'Варианты ответа',
+  countryKicker: 'Самая совместимая страна',
+  flagLabel: 'Флаг',
+  flagHistoricLabel: 'Флаг / исторический символ',
+  flagAlt: (label, name) => `${label}: ${name}`,
+  flagUnavailable: 'Флаг недоступен',
+  flagUnavailableAria: (name) => `Флаг недоступен: ${name}`,
+  personalityKicker: 'Самая совместимая личность',
+  portraitAlt: (name) => `Портрет: ${name}`,
+  portraitUnavailableAria: (name) => `Портрет недоступен: ${name}`,
+  compatibilityAria: (pct) => `Совместимость: ${pct}%`,
+  matchWord: 'совпадение',
+  shareTitle: 'Мой идеологический профиль | 12axes.vercel.app',
+  shareTopMatch: 'Лучшее совпадение',
+  shareCountry: 'Самая совместимая страна',
+  sharePersonality: 'Личность',
+  shareResultLabel: 'МОЙ РЕЗУЛЬТАТ',
+  shareMostCompatible: 'САМОЕ СОВМЕСТИМОЕ',
+  shareYourAxes: 'ВАШИ 12 ОСЕЙ',
+  shareOtherPersonalities: 'ДРУГИЕ ЛИЧНОСТИ',
+  shareNearbyCountries: 'БЛИЗКИЕ СТРАНЫ',
+  shareFooterCta: 'УЗНАЙТЕ СВОЙ ПРОФИЛЬ',
+  shareFooterUrl: '12AXES.VERCEL.APP',
+  supportEyebrow: 'Поддержите проект',
+  supportTitle: '',
+  ossEyebrow: 'Открытый код',
+  ossTitle: 'Независимый и прозрачный проект',
+  ossLead: 'Не нужно верить нам на слово. Код 12 Axes открыт: вы можете посмотреть, как оценивается каждый ответ, как рассчитывается совместимость и откуда берутся профили.',
+  ossCards: [
+    { title: 'Независимость', text: 'Никаких связей с партиями, правительствами или кампаниями. Никто не платит за место в вашем результате.' },
+    { title: 'Проверяемость', text: 'Оценка ответов и расчёт совместимости находятся в коде — никакого «чёрного ящика».' },
+    { title: 'Прозрачность', text: 'Вопросы, идеологии, страны и личности хранятся в версионируемых файлах с публичной историей.' },
+    { title: 'Совместная работа', text: 'Нашли предвзятый вопрос или неточный профиль? Откройте issue или отправьте pull request.' }
+  ],
+  ossBarText: 'Читайте код, проверяйте данные и участвуйте в разработке на GitHub.',
+  ossGithubCta: 'Открыть на GitHub',
+  ossIssueCta: 'Предложить улучшение',
+  supportTitleEm: 'Поддержать',
+  supportLead:
+    '12 Axes — независимый и бесплатный проект. Если тест помог вам лучше понять свою политическую идеологию, поддержите его работу пожертвованием через Pix или в криптовалюте.',
+  supportPrivacyNote: 'Мы не собираем данные. Чтобы сделать пожертвование анонимно, используйте криптовалюту.',
+  supportCopy: 'Копировать',
+  supportCopied: 'Скопировано!',
+  supportCopyAria: (label) => `Скопировать адрес ${label}`,
+  supportCoins: [
+    {
+      id: 'pix',
+      name: 'Pix',
+      network: 'Случайный ключ',
+      address: 'bf3e8e0b-27fe-4845-b5e2-358ca0281847'
+    },
+    {
+      id: 'btc',
+      name: 'Bitcoin',
+      network: 'On-chain',
+      address: 'bc1qsuy8r8gvl39apjykqzlgh7hku79ecarezhz2zj'
+    },
+    {
+      id: 'lightning',
+      name: 'Bitcoin',
+      network: 'Lightning',
+      address: 'lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhk2ctnw3jhymnsv96kcwfsa0gczg'
+    },
+    {
+      id: 'eth',
+      name: 'Ethereum',
+      network: 'ERC-20',
+      address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
+    },
+    {
+      id: 'xmr',
+      name: 'Monero',
+      network: 'XMR',
+      address:
+        '85Du1EuRPkybMVXTVptC6z31dsGPpTthsiMKM3yjY7YE24BUCkyNMd9Q82kwe5CvE7BegtDTNxaG8VwYdVvTgbjDU6DpuN1'
+    }
+  ]
+};
+
+export const t: Strings = { pt, en, ru }[LANG];

@@ -136,7 +136,9 @@ public class IdeologyMatcherService {
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
-        description.append(en
+        description.append(QuizDataService.LANG_RU.equals(lang)
+                ? " Совместимость показывает, насколько ваши ответы близки к этому профилю."
+                : en
                 ? " Compatibility indicates how close your answers are to this profile."
                 : " A compatibilidade indica proximidade entre suas respostas e esse perfil.");
         if (!parts.isEmpty()) {

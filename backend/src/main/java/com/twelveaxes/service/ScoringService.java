@@ -136,16 +136,17 @@ public class ScoringService {
 
     private String intensityFor(double distanceFromCenter, String lang) {
         boolean en = QuizDataService.LANG_EN.equals(lang);
+        boolean ru = QuizDataService.LANG_RU.equals(lang);
         if (distanceFromCenter < 7.5) {
-            return en ? "Balanced" : "Equilibrado";
+            return ru ? "Сбалансированно" : en ? "Balanced" : "Equilibrado";
         }
         if (distanceFromCenter < 22.5) {
-            return en ? "Leaning" : "Inclinado";
+            return ru ? "Умеренно" : en ? "Leaning" : "Inclinado";
         }
         if (distanceFromCenter < 37.5) {
-            return en ? "Strong" : "Forte";
+            return ru ? "Сильно" : en ? "Strong" : "Forte";
         }
-        return en ? "Very strong" : "Muito forte";
+        return ru ? "Очень сильно" : en ? "Very strong" : "Muito forte";
     }
 
     private double round(double value) {
