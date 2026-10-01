@@ -48,6 +48,20 @@ class QuizLocalizationTest {
     }
 
     @Test
+    void quizInGermanReturnsTranslatedAxesQuestionsAndOptions() throws Exception {
+        String body = mockMvc.perform(get("/api/quiz").param("lang", "de"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
+        QuizPayload quiz = objectMapper.readValue(body, QuizPayload.class);
+
+        assertThat(quiz.description()).contains("12 politischen Achsen");
+        assertThat(quiz.axes()).anySatisfy(axis -> assertThat(axis.label()).isEqualTo("Struktur"));
+        assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("Stimme zu"));
+        assertThat(quiz.questions()).noneMatch(question -> question.text().contains("Brasil"));
+        assertThat(quiz.questions()).noneMatch(question -> question.text().contains("STF"));
+    }
+
+    @Test
     void quizInPortugueseKeepsBrazilianReferences() throws Exception {
         String body = mockMvc.perform(get("/api/quiz"))
                 .andExpect(status().isOk())

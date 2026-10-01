@@ -1,0 +1,2622 @@
+[
+  {
+    "id": "lenin",
+    "name": "Wladimir Lenin",
+    "role": "Revolutionär",
+    "description": "Als Führer der Russischen Revolution von 1917 und Gründer der Sowjetunion theoretisierte Lenin die Avantgardepartei, die Diktatur des Proletariats und den Imperialismus als die Endstufe des Kapitalismus, die den Kommunismus des 20. Jahrhunderts prägte."
+  },
+  {
+    "id": "stalin",
+    "name": "Josef Stalin",
+    "role": "Diktator",
+    "description": "An der Spitze der Sowjetunion setzte Stalin Zwangsindustrialisierung, Agrarkollektivierung und Zentralplanung durch und festigte ein Einparteienregime, das von Säuberungen, Terror und Massenrepression geprägt war."
+  },
+  {
+    "id": "mao-zedong",
+    "name": "Mao Zedong",
+    "role": "Revolutionär",
+    "description": "Als Führer der Chinesischen Revolution und Gründer der Volksrepublik passte Mao den Marxismus durch Volkskrieg, Kollektivierung und die permanente Mobilisierung der Massen in Kampagnen radikaler Transformation an die Bauernschaft an."
+  },
+  {
+    "id": "trotsky",
+    "name": "Leo Trotzki",
+    "role": "Revolutionär",
+    "description": "Trotzki, Organisator der Roten Armee, setzte sich für die permanente Revolution und den Internationalismus ein und wurde zum wichtigsten linken Gegner der stalinistischen Bürokratisierung, bis er in Mexiko ins Exil geschickt und ermordet wurde."
+  },
+  {
+    "id": "anton-pannekoek",
+    "name": "Anton Pannekoek",
+    "role": "Marxistischer Theoretiker",
+    "description": "Als niederländischer Astronom und Marxist trat Pannekoek für Arbeiterräte und die Selbstorganisation der Massen ein und kritisierte sowohl den reformistischen Parlamentarismus als auch den Zentralismus der kommunistischen Avantgardeparteien."
+  },
+  {
+    "id": "kim-il-sung",
+    "name": "Kim Il-sung",
+    "role": "Diktator",
+    "description": "Der Gründer Nordkoreas, Kim Il-sung, schuf die Juche-Doktrin der nationalen Eigenständigkeit und etablierte ein Einparteienregime mit einem Führerkult, der Kommunismus, Nationalismus und erbliche dynastische Macht miteinander verbindet."
+  },
+  {
+    "id": "pol-pot",
+    "name": "Pol Pot",
+    "role": "Diktator",
+    "description": "Der Anführer der Roten Khmer in Kambodscha, Pol Pot, führte den radikalen Agrarkommunismus ein, der die Städte leerte und das Eigentum abschaffte, was im Namen einer bäuerlichen Utopie einen der größten Völkermorde des 20. Jahrhunderts auslöste."
+  },
+  {
+    "id": "deng-xiaoping",
+    "name": "Deng Xiaoping",
+    "role": "Staatsmann",
+    "description": "Deng, der Führer, der China nach Mao neu ausrichtete, förderte Marktreformen und wirtschaftliche Öffnung unter der Kontrolle der Kommunistischen Partei und schuf so das Modell des Sozialismus chinesischer Prägung und das schnelle Wachstum des Landes."
+  },
+  {
+    "id": "ferdinand-lassalle",
+    "name": "Ferdinand Lassalle",
+    "role": "Sozialistischer Theoretiker",
+    "description": "Als Pionier des Staatssozialismus setzte sich Lassalle für das allgemeine Wahlrecht und staatlich finanzierte Genossenschaften ein, gründete die erste große deutsche Arbeiterpartei und beeinflusste die europäische Sozialdemokratie."
+  },
+  {
+    "id": "ataturk",
+    "name": "Mustafa Kemal Atatürk",
+    "role": "Staatsmann",
+    "description": "Atatürk, der Gründer der modernen Türkei, erzwang eine radikale Modernisierung von oben, mit Säkularisierung, einem neuen Alphabet, Bürgerrechten für Frauen und entwicklungsorientiertem Nationalismus, und brach damit mit dem osmanischen und religiösen Erbe."
+  },
+  {
+    "id": "garrett-hardin",
+    "name": "Garrett Hardin",
+    "role": "Ökologe",
+    "description": "Hardin, ein amerikanischer Ökologe, machte die Tragödie der Commons populär und argumentierte, dass geteilte Ressourcen ohne Kontrolle verfallen, eine These, die die Debatten über Umwelt, Eigentum und Bevölkerungskontrolle beeinflusste."
+  },
+  {
+    "id": "otto-neurath",
+    "name": "Otto Neurath",
+    "role": "Philosoph und Ökonom",
+    "description": "Neurath, ein österreichischer Philosoph und Ökonom, setzte sich für eine Planwirtschaft und die technische Verwaltung der Produktion ein, lehnte den Markt ab und schuf auch die visuelle Sprache der Daten, die als Isotyp bekannt ist."
+  },
+  {
+    "id": "eduard-bernstein",
+    "name": "Eduard Bernstein",
+    "role": "Sozialistischer Theoretiker",
+    "description": "Bernstein, der Vater des marxistischen Revisionismus, setzte sich für einen schrittweisen, demokratischen Übergang zum Sozialismus durch Reformen ein, lehnte die Unvermeidlichkeit des kapitalistischen Zusammenbruchs ab und beeinflusste die moderne Sozialdemokratie."
+  },
+  {
+    "id": "ernst-niekisch",
+    "name": "Ernst Niekisch",
+    "role": "Politischer Theoretiker",
+    "description": "Niekisch, die führende Persönlichkeit des deutschen Nationalbolschewismus, vereinte radikalen Nationalismus und sozialistische Revolution gegen Liberalismus und westlichen Einfluss und versuchte, Deutschland dem Osten und Russland näher zu bringen."
+  },
+  {
+    "id": "gregor-strasser",
+    "name": "Gregor Strasser",
+    "role": "Politiker",
+    "description": "Als Anführer des antikapitalistischen Flügels des Nationalsozialismus setzte sich Strasser für einen nationalistischen Massensozialismus mit Verstaatlichungen und Sozialreformen ein, bevor er 1934 in der Nacht der langen Messer von Hitler eliminiert wurde."
+  },
+  {
+    "id": "mussolini",
+    "name": "Benito Mussolini",
+    "role": "Diktator",
+    "description": "Mussolini, der Schöpfer des Faschismus, regierte Italien als totalitäre Diktatur, die auf einem Führerkult und einem korporatistischen Staat basierte. In seiner Jugend war er Atheist und Antikleriker und machte die Kirche durch die Lateranverträge von 1929 eher aus Zweckmäßigkeit als aus Glauben zu einem politischen Verbündeten."
+  },
+  {
+    "id": "hitler",
+    "name": "Adolf Hitler",
+    "role": "Diktator",
+    "description": "Als Führer des Nationalsozialismus und des Dritten Reiches führte Hitler ein totalitäres, rassistisches und expansives Regime ein, das für die Auslösung des Zweiten Weltkriegs und die Begehung des als Holocaust bekannten Völkermords verantwortlich war."
+  },
+  {
+    "id": "engelbert-dollfuss",
+    "name": "Engelbert Dollfuß",
+    "role": "Diktator",
+    "description": "Dollfuß, ein österreichischer Kanzler, gründete den Austrofaschismus, einen autoritären korporatistischen Staat mit katholischer Basis, der das Parlament auflöste und Sozialisten und Nazis unterdrückte, bis er von Nazi-Agenten ermordet wurde."
+  },
+  {
+    "id": "jose-antonio-primo-de-rivera",
+    "name": "José Antonio Primo de Rivera",
+    "role": "Politiker",
+    "description": "Der Gründer der spanischen Falange, Primo de Rivera, schuf den nationalen Syndikalismus, befürwortete einen korporatistischen, nationalistischen, katholischen Staat gegen Liberalismus und Marxismus und wurde zum Märtyrer der Franco-Rechten."
+  },
+  {
+    "id": "plinio-salgado",
+    "name": "Plínio Salgado",
+    "role": "Politiker",
+    "description": "Plínio Salgado, der Führer des brasilianischen Integralismus, schuf eine autoritäre nationalistische Bewegung christlich inspirierter Natur mit dem Motto „Gott, Vaterland und Familie“ und einer Massenästhetik, die von den europäischen Faschismen der 1930er Jahre inspiriert war."
+  },
+  {
+    "id": "lee-kuan-yew",
+    "name": "Lee Kuan Yew",
+    "role": "Staatsmann",
+    "description": "Der Gründer Singapurs, Lee Kuan Yew, verwandelte den Stadtstaat in ein Modell des autoritären Kapitalismus, das offene Märkte, technokratische Leistungsgesellschaft, strenge Ordnung und stark eingeschränkte politische Freiheiten vereinte."
+  },
+  {
+    "id": "putin",
+    "name": "Wladimir Putin",
+    "role": "Staatsmann",
+    "description": "Putin, seit mehr als 25 Jahren der Führer Russlands, hat jede echte Opposition zerschlagen, strategische Sektoren im Rahmen des patrimonialen Staatskapitalismus verstaatlicht, Gesetze gegen LGBT und traditionelle Werte mit der orthodoxen Kirche vorangetrieben, die zentralasiatische Einwanderung eingeschränkt, Krieg gegen die Ukraine geführt und das Internet mithilfe von KI im Namen der digitalen Souveränität zensiert."
+  },
+  {
+    "id": "richard-spencer",
+    "name": "Richard Spencer",
+    "role": "Aktivist",
+    "description": "Spencer, ein amerikanischer Aktivist, hat den Begriff Alt-Right populär gemacht und befürwortet einen identitären weißen Nationalismus und einen ethnisch homogenen Staat, supremacistische Positionen, die innerhalb und außerhalb der Vereinigten Staaten weithin abgelehnt werden."
+  },
+  {
+    "id": "steve-bannon",
+    "name": "Steve Bannon",
+    "role": "Politischer Stratege",
+    "description": "Bannon, ein amerikanischer politischer Stratege, artikulierte den rechten Nationalpopulismus und stellte globalistische Eliten gegen einen wirtschaftlichen, kulturellen und souveränistischen Nationalismus, der populistische Kampagnen auf der ganzen Welt beeinflusste."
+  },
+  {
+    "id": "nick-land",
+    "name": "Nick Land",
+    "role": "Philosoph",
+    "description": "Land, ein britischer Philosoph, begründete den Akzelerationismus und die sogenannte Dunkle Aufklärung, indem er die Beschleunigung des Kapitalismus und der Technologie befürwortete und die egalitäre Demokratie zugunsten neuer Hierarchien kritisierte."
+  },
+  {
+    "id": "hendrik-verwoerd",
+    "name": "Hendrik Verwoerd",
+    "role": "Politiker",
+    "description": "Verwoerd, bekannt als Architekt der Apartheid, systematisierte die institutionelle Rassentrennung in Südafrika und begründete den Rassennationalismus mit der rechtlichen und territorialen Trennung, die der schwarzen Mehrheit des Landes auferlegt wurde."
+  },
+  {
+    "id": "irving-kristol",
+    "name": "Irving Kristol",
+    "role": "Intellektuell",
+    "description": "Kristol, der als Pate des Neokonservatismus gilt, vereinte freie Märkte, traditionelle Werte und eine interventionistische Außenpolitik und prägte so das amerikanische intellektuelle Recht der zweiten Hälfte des 20. Jahrhunderts."
+  },
+  {
+    "id": "louis-xiv",
+    "name": "Ludwig XIV",
+    "role": "Monarch",
+    "description": "Frankreichs Sonnenkönig Ludwig XIV. verkörperte den monarchischen Absolutismus durch göttliches Recht, zentralisierte die Macht, unterwarf den Adel dem Hof von Versailles und steigerte das kulturelle und militärische Ansehen des französischen Königreichs."
+  },
+  {
+    "id": "salazar",
+    "name": "António de Oliveira Salazar",
+    "role": "Diktator",
+    "description": "Salazar, der Führer des portugiesischen Estado Novo, leitete eine konservative, korporatistische Diktatur, die Ordnung, katholischen Nationalismus und politische Kontrolle ohne Massenmobilisierung vereinte und das Land jahrzehntelang isoliert hielt."
+  },
+  {
+    "id": "viktor-orban",
+    "name": "Viktor Orbán",
+    "role": "Staatsmann",
+    "description": "Orbán war von 2010 bis 2026 Ungarns Ministerpräsident und baute die sogenannte illiberale Demokratie auf, die Nationalismus, christlichen Konservatismus, Souveränität gegenüber der EU und Kontrolle über Medien und Gerichte vereinte; Nach seiner Niederlage im Jahr 2026 führt er Fidesz in der Opposition an."
+  },
+  {
+    "id": "benjamin-disraeli",
+    "name": "Benjamin Disraeli",
+    "role": "Staatsmann",
+    "description": "Als britischer Staatsmann formulierte Disraeli den paternalistischen Konservatismus einer Nation, der Tradition, Monarchie und soziale Reformen in Einklang brachte, um die Arbeiterklasse zu integrieren und den Zusammenhalt des Landes zu stärken."
+  },
+  {
+    "id": "khomeini",
+    "name": "Ruhollah Khomeini",
+    "role": "Religiöser Führer",
+    "description": "Khomeini, der Anführer der Iranischen Revolution von 1979, gründete die Islamische Republik und führte die Herrschaft des Religionsjuristen ein, indem er Theokratie und Staat verschmolz und den Iran in eine revolutionäre Macht des schiitischen Islam verwandelte."
+  },
+  {
+    "id": "jabotinsky",
+    "name": "Ze'ev Jabotinsky",
+    "role": "Politiker",
+    "description": "Jabotinsky, der Führer des revisionistischen Zionismus, setzte sich für einen selbstbewussten jüdischen Nationalismus, eine unabhängige Militärmacht und einen Staat mit jüdischer Mehrheit ein und wurde zu einer Inspiration für die zeitgenössische israelische Rechte."
+  },
+  {
+    "id": "ahad-haam",
+    "name": "Ahad Ha'am",
+    "role": "Denker",
+    "description": "Ahad Ha'am, ein zionistischer Denker, formulierte den kulturellen Zionismus und schlug vor, dass die jüdische nationale Erneuerung zuerst durch Kultur, Sprache und Ethik und nicht durch unmittelbare politische und territoriale Souveränität erfolgen sollte."
+  },
+  {
+    "id": "curtis-yarvin",
+    "name": "Curtis Yarvin",
+    "role": "Politischer Theoretiker",
+    "description": "Yarvin, ein politischer Theoretiker namens Mencius Moldbug, formulierte die Neoreaktion und schlug vor, die Demokratie durch einen Staat zu ersetzen, der wie ein Unternehmen von einer souveränen Exekutive nach dem Modell des Neokameralismus geführt wird."
+  },
+  {
+    "id": "frederico-ii-da-prussia",
+    "name": "Friedrich der Große",
+    "role": "Monarch",
+    "description": "König von Preußen, Friedrich der Große, machte das Königreich zu einer Militär- und Verwaltungsmacht, die aufgeklärten Despotismus und den kameralistischen Staat der disziplinierten Bürokratie, der zentralisierten Finanzen und der Toleranz verkörperte."
+  },
+  {
+    "id": "joseph-de-maistre",
+    "name": "Joseph de Maistre",
+    "role": "Philosoph",
+    "description": "Der führende reaktionäre Theoretiker Maistre widersetzte sich der Französischen Revolution, indem er die Monarchie und die Autorität von Tradition und Religion gegen den Rationalismus der Aufklärung verteidigte und so das konservative Denken Europas beeinflusste."
+  },
+  {
+    "id": "aleksandr-dugin",
+    "name": "Alexander Dugin",
+    "role": "Philosoph",
+    "description": "Dugin, ein russischer Philosoph, formulierte die Vierte Politische Theorie und den Eurasismus und schlug eine multipolare Welt vor, die auf Zivilisationen und Traditionen basiert, gegen Liberalismus und Globalismus und beeinflusste die nationalistische Rechte."
+  },
+  {
+    "id": "roman-dmowski",
+    "name": "Roman Dmowski",
+    "role": "Politiker",
+    "description": "Als Begründer der polnischen Nationaldemokratie vereinte Dmowski ethnischen Nationalismus, Katholizismus und Souveränität in einem Projekt eines homogenen Nationalstaats und wurde zu einer zentralen Figur des modernen polnischen Nationalismus."
+  },
+  {
+    "id": "leon-kass",
+    "name": "Leon Kass",
+    "role": "Bioethiker",
+    "description": "Als amerikanischer Bioethiker ist Kass die führende Stimme des Biokonservatismus und warnt vor genetischer Manipulation und menschlicher Verbesserung im Namen der Würde, der menschlichen Natur und der ethischen Grenzen der Wissenschaft."
+  },
+  {
+    "id": "konrad-adenauer",
+    "name": "Konrad Adenauer",
+    "role": "Staatsmann",
+    "description": "Als erster Bundeskanzler der Bundesrepublik Deutschland festigte Adenauer die christliche Demokratie, die soziale Marktwirtschaft und die Integration des Landes in den Westen, baute die Nation nach dem Krieg wieder auf und verankerte sie in Europa."
+  },
+  {
+    "id": "william-f-buckley",
+    "name": "William F. Buckley Jr.",
+    "role": "Intellektuell",
+    "description": "Buckley, ein amerikanischer Intellektueller, artikulierte den modernen Konservatismus in den Vereinigten Staaten und vereinte freie Märkte, Antikommunismus und traditionelle christliche Werte zu einer kohärenten, einflussreichen politischen und kulturellen Kraft."
+  },
+  {
+    "id": "cicero",
+    "name": "Cicero",
+    "role": "Staatsmann und Philosoph",
+    "description": "Cicero, ein römischer Staatsmann und Philosoph, verteidigte die Republik, die gemischte Regierung und die Rechtsstaatlichkeit und hinterließ die Tradition des bürgerlichen Republikanismus und des Naturrechts, die das politische Denken des Westens beeinflusste."
+  },
+  {
+    "id": "montesquieu",
+    "name": "Montesquieu",
+    "role": "Philosoph",
+    "description": "Montesquieu, ein französischer Aufklärungsphilosoph, formulierte die Gewaltenteilung und institutionelle Mäßigung und verteidigte die konstitutionelle Monarchie und die durch Gesetze begrenzte Regierung als Abwehr gegen Despotismus."
+  },
+  {
+    "id": "milton-friedman",
+    "name": "Milton Friedman",
+    "role": "Ökonom",
+    "description": "Friedman, ein amerikanischer Ökonom, führte den Neoliberalismus und Monetarismus an und verteidigte freie Märkte, Währungsstabilität und einen kleineren Staat als wesentliche Voraussetzungen für Freiheit und Wohlstand."
+  },
+  {
+    "id": "ludwig-erhard",
+    "name": "Ludwig Erhard",
+    "role": "Ökonom und Staatsmann",
+    "description": "Erhard, der Vater des deutschen Wirtschaftswunders, führte die ordoliberale soziale Marktwirtschaft ein, die regulierten freien Wettbewerb, Währungsstabilität und Wohlfahrt vereinte, und regierte später als deutscher Bundeskanzler."
+  },
+  {
+    "id": "gk-chesterton",
+    "name": "G. K. Chesterton",
+    "role": "Schriftsteller",
+    "description": "Chesterton, ein britischer Schriftsteller, machte den Distributismus populär, indem er mit starker christlicher Inspiration die weite Verteilung von Eigentum und Kleinproduktion gegen Monopolkapitalismus und Staatssozialismus verteidigte."
+  },
+  {
+    "id": "henri-de-saint-simon",
+    "name": "Henri de Saint-Simon",
+    "role": "Denker",
+    "description": "Als Vorläufer der Technokratie schlug Saint-Simon eine Industriegesellschaft vor, die von Wissenschaftlern, Ingenieuren und Produzenten anstelle von Politikern und Aristokraten regiert werden sollte, was den späteren Sozialismus und Positivismus beeinflusste."
+  },
+  {
+    "id": "michael-sandel",
+    "name": "Michael Sandel",
+    "role": "Politischer Philosoph",
+    "description": "Sandel, ein amerikanischer politischer Philosoph, ist einer der führenden Vertreter des Kommunitarismus. Er kritisiert den Verfahrensliberalismus und vertritt die Auffassung, dass Gerechtigkeit, Tugend und das Gemeinwohl aus gemeinschaftlichen Bindungen entstehen."
+  },
+  {
+    "id": "adrian-wooldridge",
+    "name": "Adrian Wooldridge",
+    "role": "Journalist und Essayist",
+    "description": "Wooldridge, ein britischer Journalist und Essayist, ist einer der führenden Verfechter der Leistungsgesellschaft und argumentiert, dass die Auswahl nach Verdienst und Fähigkeiten die moderne Welt vorangetrieben hat und in unserer Zeit erneuert werden muss."
+  },
+  {
+    "id": "john-stuart-mill",
+    "name": "John Stuart Mill",
+    "role": "Philosoph",
+    "description": "Als britischer liberaler Philosoph vertrat Mill die Freiheit des Einzelnen, Toleranz, Utilitarismus und das Schadensprinzip und wurde damit zu einer Grundfigur des modernen Liberalismus."
+  },
+  {
+    "id": "john-locke",
+    "name": "John Locke",
+    "role": "Philosoph",
+    "description": "Locke, der Vater des klassischen Liberalismus, begründete die natürlichen Rechte auf Leben, Freiheit, Eigentum und Regierung, die durch Konsens und Gewaltenteilung begrenzt wurden, und inspirierte die modernen liberalen Revolutionen."
+  },
+  {
+    "id": "robert-nozick",
+    "name": "Robert Nozick",
+    "role": "Philosoph",
+    "description": "Nozick, ein amerikanischer Philosoph, verteidigte den Libertarismus und den Minimalstaat in „Anarchy, State, and Utopia“ und argumentierte, dass nur der Schutz individueller Rechte die Existenz staatlicher Macht rechtfertige."
+  },
+  {
+    "id": "al-gore",
+    "name": "Al Gore",
+    "role": "Politiker",
+    "description": "Als ehemaliger US-Vizepräsident wurde Al Gore zu einer Referenz des liberalen Umweltschutzes, der sich für globale Klimaschutzmaßnahmen und Marktlösungen für die Umweltkrise einsetzte, was ihm den Friedensnobelpreis einbrachte."
+  },
+  {
+    "id": "beveridge",
+    "name": "William Beveridge",
+    "role": "Ökonom",
+    "description": "Beveridge, ein britischer Ökonom, entwarf den Wohlfahrtsstaat des Vereinigten Königreichs und schlug eine universelle soziale Sicherheit gegen Armut, Krankheit und Arbeitslosigkeit als Grundlage für den Sozialliberalismus vor."
+  },
+  {
+    "id": "thomas-paine",
+    "name": "Thomas Paine",
+    "role": "Denker",
+    "description": "Als Pamphletist der amerikanischen und französischen Revolution verteidigte Paine in populärer Sprache die Menschenrechte, die Republik und radikale soziale Reformen und verbreitete demokratische Ideale unter den Massen seiner Zeit."
+  },
+  {
+    "id": "edmund-burke",
+    "name": "Edmund Burke",
+    "role": "Staatsmann und Philosoph",
+    "description": "Burke, der Vater des modernen Konservatismus, verteidigte umsichtige Reformen, Traditionen und Institutionen gegen abstrakten Rationalismus und revolutionäre Brüche und kritisierte scharf die Exzesse der Französischen Revolution."
+  },
+  {
+    "id": "hayek",
+    "name": "Friedrich Hayek",
+    "role": "Ökonom",
+    "description": "Hayek, ein österreichischer Ökonom, setzte sich für den freien Markt und die spontane Ordnung ein und warnte davor, dass zentrale Planung zu Leibeigenschaft führe und verstreutes Wissen unterdrücke, und wurde so zu einem Bezugspunkt für den Liberalismus des 20. Jahrhunderts."
+  },
+  {
+    "id": "gustave-de-molinari",
+    "name": "Gustave de Molinari",
+    "role": "Politischer Ökonom",
+    "description": "Molinari, ein belgischer Ökonom, leistete Pionierarbeit bei der wettbewerbsorientierten Regierung und schlug den freien Wettbewerb in Sicherheit und Regierungsführung als intellektuelle Wurzel des Anarchokapitalismus und der freiwilligen Gerichtsbarkeit vor."
+  },
+  {
+    "id": "henry-george",
+    "name": "Heinrich Georg",
+    "role": "Ökonom",
+    "description": "Ein amerikanischer Ökonom, Henry George, schlug die einheitliche Steuer auf den Bodenwert vor und argumentierte, dass die Landrente die Gesellschaft finanzieren und Ungleichheit verringern sollte, anstatt Arbeit oder Kapital zu belasten."
+  },
+  {
+    "id": "charles-fourier",
+    "name": "Charles Fourier",
+    "role": "Sozialistischer Philosoph",
+    "description": "Fourier, ein französischer utopischer Sozialist, verband sozialen Fortschritt mit der Emanzipation der Frau, kritisierte die patriarchale Familie, moralische Unterdrückung und soziale Hierarchien und stellte sich ideale kooperative Gemeinschaften vor."
+  },
+  {
+    "id": "nicolas-de-condorcet",
+    "name": "Nicolas de Condorcet",
+    "role": "Philosoph der Aufklärung",
+    "description": "Condorcet, ein französischer Aufklärungsphilosoph, setzte sich für Bürgerrechte, Rechtsgleichheit und das Frauenwahlrecht ein und verband politischen Liberalismus mit universalistischen Reformen und Vertrauen in den Fortschritt der menschlichen Vernunft."
+  },
+  {
+    "id": "john-rawls",
+    "name": "John Rawls",
+    "role": "Philosoph",
+    "description": "Rawls, ein amerikanischer Philosoph, formulierte den Liberalismus mit der Idee von Gerechtigkeit als Fairness neu und verteidigte gleiche Freiheiten und Ungleichheiten, die nur dann akzeptabel sind, wenn sie den Schwächsten in der Gesellschaft zugute kommen."
+  },
+  {
+    "id": "aldo-leopold",
+    "name": "Aldo Leopold",
+    "role": "Naturschützer",
+    "description": "Leopold, ein amerikanischer Naturschützer, formulierte die Landethik und verteidigte eine verantwortungsvolle Beziehung zwischen menschlichen Gemeinschaften und Böden, Gewässern und Ökosystemen, was den modernen Umweltschutz inspirierte."
+  },
+  {
+    "id": "theodore-roosevelt",
+    "name": "Theodore Roosevelt",
+    "role": "Staatsmann",
+    "description": "Theodore Roosevelt, ein US-Präsident, führte die Progressive Ära an, indem er Monopole bekämpfte, den Markt regulierte und Richtlinien zur Erhaltung der Umwelt und zum Schutz von Verbrauchern und Arbeitnehmern entwickelte."
+  },
+  {
+    "id": "srnicek",
+    "name": "Nick Srnicek",
+    "role": "Politischer Theoretiker",
+    "description": "Srnicek, ein kanadischer Politiktheoretiker, befürwortet den linken Akzelerationismus und schlägt vor, Technologie, Automatisierung und Grundeinkommen zu nutzen, um über die Arbeit hinauszugehen und eine postkapitalistische Zukunft des gemeinsamen Wohlstands aufzubauen."
+  },
+  {
+    "id": "ray-kurzweil",
+    "name": "Ray Kurzweil",
+    "role": "Erfinder und Futurist",
+    "description": "Kurzweil, ein amerikanischer Erfinder und Futurist, machte den Transhumanismus und die Singularität populär, indem er die Verschmelzung von Menschen und Maschinen und die radikale Erweiterung der menschlichen Fähigkeiten durch Technologie vorhersagte."
+  },
+  {
+    "id": "getulio-vargas",
+    "name": "Getúlio Vargas",
+    "role": "Staatsmann",
+    "description": "Als brasilianischer Staatsmann prägte Vargas das moderne Brasilien mit entwicklungsorientiertem Nationalismus, staatlich gelenkter Industrialisierung und Arbeitsgesetzgebung, begründete den brasilianischen Arbeiterismus und prägte Jahrzehnte der nationalen Politik."
+  },
+  {
+    "id": "ernest-renan",
+    "name": "Ernest Renan",
+    "role": "Philosoph",
+    "description": "Renan, ein französischer Philosoph, definierte die Nation als eine tägliche Volksabstimmung, die auf dem Willen zum Zusammenleben und der gemeinsamen Erinnerung beruht und die intellektuelle Grundlage des bürgerlichen Nationalismus im Gegensatz zum ethnischen Nationalismus bietet."
+  },
+  {
+    "id": "evo-morales",
+    "name": "Evo Morales",
+    "role": "Staatsmann",
+    "description": "Boliviens erster indigener Präsident, Evo Morales, führte den Indigenismus und den plurinationalen Staat an, indem er Ressourcen verstaatlichte und die Rechte der indigenen Völker im Rahmen eines linken Projekts erweiterte."
+  },
+  {
+    "id": "bismarck",
+    "name": "Otto von Bismarck",
+    "role": "Staatsmann",
+    "description": "Als Einiger Deutschlands schuf Bismarck den ersten modernen Wohlfahrtsstaat, nutzte konservative Sozialreformen, um den Sozialismus einzudämmen und die Ordnung zu stärken, und steuerte jahrzehntelang die europäische Diplomatie."
+  },
+  {
+    "id": "bakunin",
+    "name": "Michail Bakunin",
+    "role": "Revolutionär",
+    "description": "Als russischer Revolutionär war Bakunin der große Theoretiker des kollektivistischen Anarchismus, der sich gegen den Staat und den autoritären Marxismus wandte und die spontane soziale Revolution und die freie Föderation von Gemeinschaften und Arbeitern verteidigte."
+  },
+  {
+    "id": "kropotkin",
+    "name": "Peter Kropotkin",
+    "role": "Anarchistischer Theoretiker",
+    "description": "Kropotkin, ein russischer anarchistischer Theoretiker, entwickelte den Anarchokommunismus und die Idee der gegenseitigen Hilfe als Faktor der Evolution und verteidigte eine staatenlose Gesellschaft, die auf Zusammenarbeit, Wissenschaft und freier Vereinigung basiert."
+  },
+  {
+    "id": "durruti",
+    "name": "Buenaventura Durruti",
+    "role": "Revolutionär",
+    "description": "Durruti, ein spanischer anarchosyndikalistischer Revolutionär, war eine zentrale Figur der spanischen Revolution, leitete Arbeitermilizen und die Kollektivierung während des Bürgerkriegs und wurde zum Symbol des militanten Anarchismus."
+  },
+  {
+    "id": "sorel",
+    "name": "Georges Sorel",
+    "role": "Theoretiker",
+    "description": "Als französischer Theoretiker entwickelte Sorel den revolutionären Syndikalismus und den Mythos des Generalstreiks, indem er direkte Aktion und proletarische Gewalt mit Einfluss auf linke und faschistische Bewegungen verherrlichte."
+  },
+  {
+    "id": "chomsky",
+    "name": "Noam Chomsky",
+    "role": "Sprachwissenschaftler und Denker",
+    "description": "Chomsky, ein amerikanischer Linguist und Denker, revolutionierte die Linguistik und wurde zu einer einflussreichen Stimme des libertären Sozialismus, der die Macht der Konzerne, die Medien und den US-Imperialismus in der Welt kritisierte."
+  },
+  {
+    "id": "gramsci",
+    "name": "Antonio Gramsci",
+    "role": "Marxistischer Theoretiker",
+    "description": "Gramsci, ein italienischer marxistischer Theoretiker, entwickelte das Konzept der kulturellen Hegemonie, zeigte, wie herrschende Klassen durch Konsens regieren, und vertrat den kulturellen Kampf als Weg zur sozialen Transformation."
+  },
+  {
+    "id": "tito",
+    "name": "Josip Broz Tito",
+    "role": "Staatsmann",
+    "description": "Tito, der Führer des sozialistischen Jugoslawien, vereinte verschiedene Völker unter einer einzigen Partei, führte die Arbeiterselbstverwaltung ein, brach mit Moskau und führte die Blockfreie Bewegung während des Kalten Krieges an."
+  },
+  {
+    "id": "oskar-lange",
+    "name": "Oskar Lange",
+    "role": "Ökonom",
+    "description": "Lange, ein polnischer Ökonom, vertrat in der berühmten sozialistischen Kalkulationsdebatte den Marktsozialismus und argumentierte, dass Planung Preise simulieren und Ressourcen effizient verteilen könne."
+  },
+  {
+    "id": "proudhon",
+    "name": "Pierre-Joseph Proudhon",
+    "role": "Philosoph",
+    "description": "Proudhon, ein französischer Philosoph, erklärte sich als erster zum Anarchisten und formulierte den Mutualismus, indem er fairen Tausch, freien Kredit und nutzungsbasiertes Eigentum verteidigte, mit dem berühmten Satz, dass Eigentum Diebstahl sei."
+  },
+  {
+    "id": "ocalan",
+    "name": "Abdullah Öcalan",
+    "role": "Politischer Führer",
+    "description": "Öcalan, ein kurdischer politischer Führer, gab den revolutionären Marxismus auf und formulierte den demokratischen Konföderalismus, der das autonome Experiment von Rojava inspirierte, das auf Selbstverwaltung, Ökologie und Geschlechtergleichheit basiert."
+  },
+  {
+    "id": "benjamin-tucker",
+    "name": "Benjamin Tucker",
+    "role": "Anarchist",
+    "description": "Als amerikanischer individualistischer Anarchist trat Tucker für einen freien Markt ohne Staat oder Monopole ein, der radikale individuelle Freiheit und Gegenseitigkeit vereinte, und übersetzte die großen libertären Denker seiner Zeit."
+  },
+  {
+    "id": "bookchin",
+    "name": "Murray Bookchin",
+    "role": "Denker",
+    "description": "Bookchin, ein amerikanischer Denker, schuf die soziale Ökologie und den Kommunalismus, verteidigte autonome Gemeinden, direkte Demokratie und Harmonie mit der Natur und beeinflusste den radikalen Umweltschutz und das Rojava-Experiment."
+  },
+  {
+    "id": "keir-hardie",
+    "name": "Keir Hardie",
+    "role": "Politiker",
+    "description": "Keir Hardie, ein schottischer Politiker, war einer der Gründer der britischen Labour Party, der sich für Arbeitnehmerrechte, das Wahlrecht und soziale Reformen innerhalb der Demokratie einsetzte und damit die Geburtsstunde des modernen Labourismus markierte."
+  },
+  {
+    "id": "maritain",
+    "name": "Jacques Maritain",
+    "role": "Philosoph",
+    "description": "Als französischer katholischer Philosoph erneuerte Maritain das christliche Denken und beeinflusste die christliche Demokratie, indem er die Menschenrechte, den ganzheitlichen Humanismus und die Vereinbarkeit von Glauben, Vernunft und demokratischer Freiheit verteidigte."
+  },
+  {
+    "id": "buber",
+    "name": "Martin Buber",
+    "role": "Philosoph",
+    "description": "Buber, ein österreichischer jüdischer Philosoph, entwickelte die Philosophie des Dialogs, zusammengefasst in der Ich-Du-Beziehung, und trat für einen kommunitären, humanistischen Sozialismus ein, der das religiöse Denken und den kulturellen Zionismus beeinflusste."
+  },
+  {
+    "id": "olof-palme",
+    "name": "Olof Palme",
+    "role": "Staatsmann",
+    "description": "Olof Palme, ein schwedischer Staatsmann, war einer der größten Namen der Sozialdemokratie, der den Wohlfahrtsstaat ausbaute und sich für Abrüstung, internationale Solidarität und die Rechte ärmerer Länder einsetzte."
+  },
+  {
+    "id": "karl-marx",
+    "name": "Karl Marx",
+    "role": "Philosoph und Ökonom",
+    "description": "Als deutscher Philosoph und Ökonom schuf Marx den historischen Materialismus und die Kapitalismuskritik, indem er den Klassenkampf und die Ausbeutung der Arbeitskraft analysierte, und wurde zum bedeutendsten Bezugspunkt des Sozialismus und Kommunismus."
+  },
+  {
+    "id": "rosselli",
+    "name": "Carlo Rosselli",
+    "role": "Denker",
+    "description": "Rosselli, ein italienischer antifaschistischer Denker, formulierte den liberalen Sozialismus und versuchte, die Freiheitsideale des Liberalismus mit der sozialen Gerechtigkeit des Sozialismus zu vereinen, und organisierte den Widerstand gegen Mussolinis Regime."
+  },
+  {
+    "id": "orwell",
+    "name": "George Orwell",
+    "role": "Schriftsteller",
+    "description": "Orwell, ein britischer Schriftsteller, war ein demokratischer Sozialist und scharfer Kritiker des Totalitarismus, der in Werken wie „1984“ und „Farm der Tiere“ den Autoritarismus, die Manipulation der Wahrheit und die Unterdrückung der Macht anprangerte."
+  },
+  {
+    "id": "andre-gorz",
+    "name": "André Gorz",
+    "role": "Philosoph",
+    "description": "Gorz, ein österreichisch-französischer Philosoph, war ein Pionier der politischen Ökologie und des Postmarxismus. Er kritisierte Produktivismus und Lohnarbeit und verteidigte kürzere Arbeitszeiten und ein Grundeinkommen in einer freieren Gesellschaft."
+  },
+  {
+    "id": "arne-naess",
+    "name": "Arne Næss",
+    "role": "Philosoph",
+    "description": "Næss, ein norwegischer Philosoph, begründete die Tiefenökologie und verteidigte den inneren Wert allen Lebens sowie einen radikalen Wertewandel, um den menschlichen Einfluss zu verringern und die Harmonie zwischen Mensch und Natur wiederherzustellen."
+  },
+  {
+    "id": "zapata",
+    "name": "Emiliano Zapata",
+    "role": "Revolutionär",
+    "description": "Als mexikanischer Revolutionär führte Zapata die Bauern in der mexikanischen Revolution unter dem Motto „Land und Freiheit“ an und verteidigte die Agrarreform und die Autonomie ländlicher Gemeinden gegenüber Großgrundbesitzern und dem Staat."
+  },
+  {
+    "id": "emile-armand",
+    "name": "Émile Armand",
+    "role": "Individualistischer Anarchist",
+    "description": "Émile Armand, ein französischer individualistischer Anarchist, vertrat die absolute Souveränität des Einzelnen, ein Leben frei von moralischen und staatlichen Zwängen und freien Vereinigungen und beeinflusste den egoistischen Anarchismus und die Gegenkultur."
+  },
+  {
+    "id": "daniel-guerin",
+    "name": "Daniel Guérin",
+    "role": "Libertärer Sozialist",
+    "description": "Als französischer libertärer Sozialist versuchte Guérin, Marxismus und Anarchismus zu vereinen, indem er die Selbstverwaltung der Arbeiter und die sexuelle Befreiung verteidigte, und war ein wichtiger Historiker der Revolutionen und der Arbeiterbewegung."
+  },
+  {
+    "id": "tolstoy",
+    "name": "Leo Tolstoi",
+    "role": "Schriftsteller",
+    "description": "Tolstoi, ein russischer Schriftsteller, verband sein literarisches Werk mit dem pazifistischen christlichen Anarchismus und predigte Gewaltlosigkeit, Einfachheit und Verweigerung des Staates auf eine Weise, die Gandhi und spätere Bewegungen beeinflusste."
+  },
+  {
+    "id": "thoreau",
+    "name": "Henry David Thoreau",
+    "role": "Schriftsteller",
+    "description": "Thoreau, ein amerikanischer Schriftsteller, setzte sich für zivilen Ungehorsam, ein einfaches Leben im Kontakt mit der Natur und das Recht, sich ungerechten Gesetzen zu widersetzen, ein und beeinflusste Pazifisten und Umweltschützer."
+  },
+  {
+    "id": "john-zerzan",
+    "name": "John Zerzan",
+    "role": "Philosoph",
+    "description": "Als amerikanischer Philosoph ist Zerzan eine der führenden Stimmen des Anarcho-Primitivismus, der Zivilisation, Technologie und Domestikation als Quellen der Unterdrückung kritisiert und eine Rückkehr zu den Lebensweisen der Vorfahren verteidigt."
+  },
+  {
+    "id": "max-stirner",
+    "name": "Max Stirner",
+    "role": "Philosoph",
+    "description": "Stirner, ein deutscher Philosoph, ist die große Referenz des egoistischen Anarchismus, der Staat, Moral und Institutionen als unterdrückende Abstraktionen ablehnt und das souveräne Individuum und seine Interessen in den Mittelpunkt von allem stellt."
+  },
+  {
+    "id": "rothbard",
+    "name": "Murray Rothbard",
+    "role": "Ökonom",
+    "description": "Als amerikanischer Ökonom war Rothbard der Hauptformulierer des Anarchokapitalismus und verteidigte die Abschaffung des Staates, absolutes Privateigentum und die Gewährleistung von Sicherheit und Gerechtigkeit durch den freien Markt."
+  },
+  {
+    "id": "bastiat",
+    "name": "Frédéric Bastiat",
+    "role": "Ökonom",
+    "description": "Bastiat, ein französischer Ökonom, verteidigte den Freihandel und die begrenzte Regierung mit Klarheit und Ironie, verurteilte Protektionismus und alles, was in der Wirtschaftspolitik nicht gesehen wird, und wurde zu einem Klassiker des liberalen Denkens."
+  },
+  {
+    "id": "mises",
+    "name": "Ludwig von Mises",
+    "role": "Ökonom",
+    "description": "Mises, ein österreichischer Ökonom, war ein großer Verfechter des freien Marktes und demonstrierte die Unmöglichkeit rationaler wirtschaftlicher Berechnungen im Sozialismus. Er wurde zu einer Säule der Österreichischen Schule und zu einer Inspiration für den modernen Libertarismus."
+  },
+  {
+    "id": "ron-paul",
+    "name": "Ron Paul",
+    "role": "Politiker",
+    "description": "Ron Paul, ein amerikanischer Politiker, machte den Libertarismus in den Vereinigten Staaten populär, indem er den Minimalstaat, die individuelle Freiheit, solides Geld und eine nichtinterventionistische Außenpolitik gegen das Establishment verteidigte."
+  },
+  {
+    "id": "hoppe",
+    "name": "Hans-Hermann Hoppe",
+    "role": "Ökonom",
+    "description": "Hoppe, ein deutscher Ökonom, radikalisierte den Anarchokapitalismus, verteidigte das absolute Privateigentum und kritisierte die Demokratie als ein System, das die Freiheit untergräbt und soziale Ordnungen auf der Grundlage freiwilliger Verträge vorschlägt."
+  },
+  {
+    "id": "adam-smith",
+    "name": "Adam Smith",
+    "role": "Ökonom",
+    "description": "Adam Smith, ein schottischer Ökonom, begründete in „The Wealth of Nations“ die moderne Ökonomie und zeigte, wie der Markt und die Arbeitsteilung Wohlstand schaffen und wie die unsichtbare Hand individuelle Interessen koordiniert."
+  },
+  {
+    "id": "leonard-peikoff",
+    "name": "Leonard Peikoff",
+    "role": "Objektivistischer Philosoph",
+    "description": "Peikoff, ein objektivistischer Philosoph, war Ayn Rands wichtigster intellektueller Erbe, der den Objektivismus systematisierte und Vernunft, Individualismus und Laissez-faire-Kapitalismus als Grundlagen des Lebens und der Moral verteidigte."
+  },
+  {
+    "id": "elon-musk",
+    "name": "Elon Musk",
+    "role": "Unternehmer",
+    "description": "Als Unternehmer und Milliardär leitet Musk Technologieunternehmen wie Tesla und SpaceX und setzt sich für technologische Beschleunigung, die Kolonisierung des Mars und libertäre Ideen ein und beeinflusst damit die globale öffentliche Debatte."
+  },
+  {
+    "id": "scruton",
+    "name": "Roger Scruton",
+    "role": "Philosoph",
+    "description": "Scruton, ein britischer Philosoph, war einer der großen zeitgenössischen konservativen Denker, der Tradition, Schönheit, Nation und Institutionen als Quellen von Bedeutung und Ordnung gegen Relativismus und Progressivismus verteidigte."
+  },
+  {
+    "id": "friedrich-list",
+    "name": "Friedrich List",
+    "role": "Ökonom",
+    "description": "List, ein deutscher Ökonom, vertrat den Wirtschaftsnationalismus und den Schutz der jungen Industrie und argumentierte, dass rückständige Länder Zölle und einen starken Staat benötigen, um sich zu entwickeln und zu reichen Nationen aufzuschließen."
+  },
+  {
+    "id": "konkin",
+    "name": "Samuel Edward Konkin III",
+    "role": "Libertärer Theoretiker",
+    "description": "Konkin, ein amerikanischer libertärer Theoretiker, schuf den Agorismus und befürwortete die Ersetzung des Staates durch freie, parallele Märkte und Gegenwirtschaft, wobei er informelle Aktivitäten nutzte, um die Staatsmacht zu untergraben."
+  },
+  {
+    "id": "phil-zimmermann",
+    "name": "Phil Zimmermann",
+    "role": "Kryptograph",
+    "description": "Zimmermann, ein amerikanischer Kryptograf, schuf PGP, machte starke Kryptographie für jedermann zugänglich und verteidigte die digitale Privatsphäre als Recht, wodurch er zu einer Referenz für Krypto-Anarchismus und bürgerliche Freiheiten wurde."
+  },
+  {
+    "id": "max-more",
+    "name": "Max Mehr",
+    "role": "Philosoph",
+    "description": "Max More, ein britischer Philosoph, ist einer der Begründer des modernen Transhumanismus und Extropismus und verteidigt den Einsatz von Technologie zur Überwindung menschlicher Grenzen, zur Verlängerung des Lebens und zur Erweiterung der individuellen Freiheit."
+  },
+  {
+    "id": "javier-milei",
+    "name": "Javier Milei",
+    "role": "Staatsmann und Ökonom",
+    "description": "Milei, ein argentinischer Staatsmann und Ökonom, vertritt den Anarchokapitalismus und den radikalen Liberalismus und schlägt vor, den Staat drastisch zu kürzen, die Wirtschaft zu Dollar zu machen und die Inflation zu bekämpfen, was ihm die Präsidentschaft Argentiniens einbrachte."
+  },
+  {
+    "id": "otto-von-habsburg",
+    "name": "Otto von Habsburg",
+    "role": "Politiker",
+    "description": "Als österreichischer Politiker und Erbe der Habsburger war Otto ein Verfechter der konstitutionellen Monarchie, des europäischen Föderalismus und der kontinentalen Integration und fungierte jahrzehntelang als europäischer Parlamentarier und Kritiker des Totalitarismus."
+  },
+  {
+    "id": "goldwater",
+    "name": "Barry Goldwater",
+    "role": "Politiker",
+    "description": "Als amerikanischer Politiker war Goldwater eine entscheidende Figur der modernen Rechten in den Vereinigten Staaten, die freie Märkte, Antikommunismus und eine begrenzte Regierung verteidigte und den Weg für den Reagan-Konservatismus ebnete."
+  },
+  {
+    "id": "ezra-heywood",
+    "name": "Ezra Heywood",
+    "role": "Individualistischer Anarchist",
+    "description": "Heywood, ein amerikanischer individualistischer Anarchist, setzte sich für einen freien Markt ohne Monopole, die Abschaffung des Staates und die Emanzipation der Frauen ein und verband radikale wirtschaftliche Freiheit mit dem Kampf für sexuelle und bürgerliche Freiheit."
+  },
+  {
+    "id": "randolph-bourne",
+    "name": "Randolph Bourne",
+    "role": "Essayist",
+    "description": "Als amerikanischer Essayist kritisierte Bourne scharf Militarismus und Nationalismus, prägte die Idee, dass Krieg die Gesundheit des Staates sei, und trat für einen kulturellen Kosmopolitismus ein, der für Vielfalt und Freiheit offen ist."
+  },
+  {
+    "id": "peter-maurin",
+    "name": "Peter Maurin",
+    "role": "Christlicher Aktivist",
+    "description": "Als französischer christlicher Aktivist war Maurin Mitbegründer der Katholischen Arbeiterbewegung, die sich für soziale Gerechtigkeit, freiwillige Armut sowie Arbeitsgemeinschaften und gegenseitige Hilfe einsetzt, die von der Soziallehre der Kirche inspiriert sind."
+  },
+  {
+    "id": "lysander-spooner",
+    "name": "Lysander Spooner",
+    "role": "Jurist",
+    "description": "Als amerikanischer Jurist und Anarchist setzte sich Spooner für das Naturrecht und den freien Markt ein, stellte die Legitimität der Verfassung und des Staates in Frage und stellte öffentliche Monopole in Frage, was Einfluss auf den Libertarismus hatte."
+  },
+  {
+    "id": "macron",
+    "name": "Emmanuel Macron",
+    "role": "Staatsmann",
+    "description": "Als französischer Staatsmann erreichte Macron die Präsidentschaft Frankreichs als zentristischer, liberaler Reformer, der sich für Märkte, die europäische Integration und Wirtschaftsreformen einsetzte und versuchte, die traditionelle Kluft zwischen links und rechts zu überwinden."
+  },
+  {
+    "id": "comte",
+    "name": "Auguste Comte",
+    "role": "Philosoph",
+    "description": "Comte, ein französischer Philosoph, begründete den Positivismus und die Soziologie und vertrat die Auffassung, dass die Wissenschaft die Gesellschaft in Richtung Ordnung und Fortschritt organisieren sollte, mit starkem Einfluss auf das republikanische und technokratische Denken."
+  },
+  {
+    "id": "masaryk",
+    "name": "Tomáš Garrigue Masaryk",
+    "role": "Staatsmann und Philosoph",
+    "description": "Masaryk, ein tschechischer Staatsmann und Philosoph, war Gründer und erster Präsident der Tschechoslowakei und verteidigte die humanistische Demokratie, Minderheitenrechte und ethische Werte als Grundlage des nationalen politischen Lebens."
+  },
+  {
+    "id": "leonardo-boff",
+    "name": "Leonardo Boff",
+    "role": "Theologe",
+    "description": "Als brasilianischer Theologe ist Boff einer der führenden Namen der Befreiungstheologie, der den christlichen Glauben mit dem Kampf für soziale Gerechtigkeit und dem Schutz der Armen und der Umwelt verbindet, mit starker Kritik an Kapitalismus und Ungleichheit."
+  },
+  {
+    "id": "park-chung-hee",
+    "name": "Park Chung-hee",
+    "role": "Diktator",
+    "description": "Park Chung-hee, ein südkoreanischer Diktator, führte ein autoritäres Entwicklungsregime an, das Südkorea durch staatliche Planung und Disziplin rasch industrialisierte und das Land zu einer Wirtschaftsmacht machte."
+  },
+  {
+    "id": "kissinger",
+    "name": "Henry Kissinger",
+    "role": "Diplomat",
+    "description": "Kissinger, ein amerikanischer Diplomat, war ein Meister der Realpolitik und prägte die US-Außenpolitik im Kalten Krieg mit Entspannung, Öffnung gegenüber China und kontroversen Interventionen im Namen nationaler Interessen."
+  },
+  {
+    "id": "paul-romer",
+    "name": "Paul Romer",
+    "role": "Ökonom",
+    "description": "Romer, ein amerikanischer Ökonom, gilt als Referenz der Theorie des endogenen Wachstums. Er zeigt, wie Ideen, Innovation und Wissen die Entwicklung vorantreiben, und schlägt Charterstädte als institutionelle Reform vor."
+  },
+  {
+    "id": "peter-thiel",
+    "name": "Peter Thiel",
+    "role": "Unternehmer",
+    "description": "Als amerikanischer Unternehmer und Investor ist Thiel eine einflussreiche Persönlichkeit des Technologiekapitalismus und Verfechter libertärer und neoreaktionärer Ideen, skeptisch gegenüber der Demokratie und begeistert von disruptiven Innovationen."
+  },
+  {
+    "id": "allende",
+    "name": "Salvador Allende",
+    "role": "Staatsmann",
+    "description": "Allende, ein chilenischer Staatsmann, war der erste demokratisch gewählte marxistische Präsident Lateinamerikas, der den Sozialismus mit friedlichen Mitteln aufbauen wollte, bis er 1973 durch Pinochets Militärputsch gestürzt wurde."
+  },
+  {
+    "id": "marinetti",
+    "name": "Filippo Tommaso Marinetti",
+    "role": "Dichter",
+    "description": "Marinetti, ein italienischer Dichter, begründete den Futurismus, verherrlichte die Geschwindigkeit, die Maschine, den Krieg und den Bruch mit der Vergangenheit und näherte sich dem Faschismus, indem er künstlerische Avantgarde und revolutionären Nationalismus vereinte."
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "role": "Politiker",
+    "description": "Als Unternehmer und US-Präsident führt Trump den nationalistischen Populismus der MAGA-Bewegung mit Zollprotektionismus, restriktiver Einwanderungspolitik und Anti-Establishment-Rhetorik an, die die Rechte neu definiert."
+  },
+  {
+    "id": "xi-jinping",
+    "name": "Xi Jinping",
+    "role": "Staatsmann",
+    "description": "Chinas Führer Xi Jinping konzentrierte die Macht wie kein Nachfolger Maos und stärkte die Kontrolle der Kommunistischen Partei, den Nationalismus und die globale Projektion des Landes durch Technologie und wirtschaftlichen Einfluss."
+  },
+  {
+    "id": "lula-da-silva",
+    "name": "Lula da Silva",
+    "role": "Staatsmann",
+    "description": "Als brasilianischer Staatsmann stieg Lula vom Gewerkschaftsaktivisten zur brasilianischen Präsidentschaft auf und führte die Linke mit Sozialprogrammen, Maßnahmen zur Armutsbekämpfung und einem Entwicklungsprojekt mit starker staatlicher Präsenz an."
+  },
+  {
+    "id": "nayib-bukele",
+    "name": "Nayib Bukele",
+    "role": "Staatsmann",
+    "description": "Der Präsident von El Salvador, Bukele, erlangte Bekanntheit durch seine strenge Sicherheitspolitik gegen Banden und die Einführung von Bitcoin, die starke Unterstützung in der Bevölkerung, digitale Kommunikation und wachsende Machtkonzentration vereinte."
+  },
+  {
+    "id": "volodymyr-zelensky",
+    "name": "Wolodymyr Selenskyj",
+    "role": "Staatsmann",
+    "description": "Der ukrainische Präsident Selenskyj entwickelte sich vom Schauspieler zum Staatsmann und wurde zum Symbol des nationalen Widerstands gegen die russische Invasion, der die Demokratie, die Souveränität und die Annäherung seines Landes an den Westen verteidigte."
+  },
+  {
+    "id": "bernie-sanders",
+    "name": "Bernie Sanders",
+    "role": "Politiker",
+    "description": "Bernie Sanders, ein amerikanischer Politiker, ist die führende Stimme des demokratischen Sozialismus in den Vereinigten Staaten. Er verteidigt die allgemeine öffentliche Gesundheitsversorgung, Arbeitsrechte und den Kampf gegen Ungleichheit und die Macht großer Unternehmen."
+  },
+  {
+    "id": "mohammed-bin-salman",
+    "name": "Mohammed bin Salman",
+    "role": "Staatsmann",
+    "description": "Saudi-Arabiens Kronprinz Mohammed bin Salman konzentriert die Macht und führt eine kontrollierte wirtschaftliche und soziale Modernisierung durch, indem er die Ölwirtschaft diversifiziert und gleichzeitig starke politische Unterdrückung aufrechterhält."
+  },
+  {
+    "id": "mahatma-gandhi",
+    "name": "Mahatma Gandhi",
+    "role": "Politischer Führer",
+    "description": "Als Anführer der Unabhängigkeit Indiens entwickelte Gandhi gewaltlosen Widerstand und zivilen Ungehorsam gegen die britische Herrschaft und wurde zum weltweiten Symbol des friedlichen Kampfes für Freiheit und soziale Gerechtigkeit."
+  },
+  {
+    "id": "br-ambedkar",
+    "name": "B. R. Ambedkar",
+    "role": "Jurist und Reformer",
+    "description": "Ambedkar, ein indischer Jurist und Reformer, war der Hauptarchitekt der indischen Verfassung und Anführer der Dalits. Er kämpfte gegen das Kastensystem und verteidigte Rechte, Gleichheit und soziale Gerechtigkeit für die Unterdrückten."
+  },
+  {
+    "id": "frantz-fanon",
+    "name": "Frantz Fanon",
+    "role": "Psychiater und Theoretiker",
+    "description": "Fanon, ein martinischer Psychiater und Theoretiker, war ein großer antikolonialer Denker, der die psychologischen Auswirkungen von Rassismus und Kolonialisierung analysierte und die Befreiung unterdrückter Völker von der imperialen Herrschaft verteidigte."
+  },
+  {
+    "id": "thomas-sankara",
+    "name": "Thomas Sankara",
+    "role": "Revolutionär",
+    "description": "Sankara, eine Revolutionärin aus Burkina Faso, leitete eine marxistische, panafrikanische Regierung, die Selbstversorgung, Frauenrechte und radikale soziale Reformen förderte, und wurde zu einer antiimperialistischen Ikone Afrikas."
+  },
+  {
+    "id": "nelson-mandela",
+    "name": "Nelson Mandela",
+    "role": "Staatsmann",
+    "description": "Als südafrikanischer Staatsmann führte Mandela den Kampf gegen die Apartheid an, verbrachte Jahrzehnte im Gefängnis und wurde der erste schwarze Präsident des Landes, ein weltweites Symbol für Versöhnung, Demokratie und Menschenrechte."
+  },
+  {
+    "id": "malcolm-x",
+    "name": "Malcolm X",
+    "role": "Aktivist",
+    "description": "Malcolm"
+  },
+  {
+    "id": "carl-schmitt",
+    "name": "Carl Schmitt",
+    "role": "Jurist",
+    "description": "Als deutscher Jurist war Schmitt ein einflussreicher und kontroverser Machttheoretiker, der Politik anhand der Freund-Feind-Unterscheidung definierte und Souveränität und Ausnahmezustand verteidigte."
+  },
+  {
+    "id": "confucio",
+    "name": "Konfuzius",
+    "role": "Philosoph",
+    "description": "Konfuzius, ein alter chinesischer Philosoph, schuf eine Ethik, die auf Tugend, sozialer Harmonie und Respekt vor Hierarchien und Traditionen basierte, und prägte über Jahrtausende die chinesische Kultur, Moral und Politik."
+  },
+  {
+    "id": "sun-yat-sen",
+    "name": "Sun Yat-sen",
+    "role": "Staatsmann",
+    "description": "Sun Yat-sen, ein chinesischer Staatsmann, führte die Revolution an, die das Kaiserreich stürzte und die Republik China gründete. Er formulierte die drei Prinzipien des Volkes, die Nationalismus, Demokratie und das Wohl des Volkes vereinten."
+  },
+  {
+    "id": "theodor-herzl",
+    "name": "Theodor Herzl",
+    "role": "Journalist",
+    "description": "Herzl, ein österreichisch-ungarischer Journalist, war der Begründer des modernen politischen Zionismus und befürwortete die Schaffung eines jüdischen Nationalstaates als Reaktion auf den Antisemitismus. Er wurde zu einer zentralen Figur in der Geschichte Israels."
+  },
+  {
+    "id": "hugo-chavez",
+    "name": "Hugo Chávez",
+    "role": "Staatsmann",
+    "description": "Als venezolanischer Staatsmann führte Chávez den Sozialismus des 21. Jahrhunderts an, indem er Sektoren verstaatlichte, Sozialprogramme mit Öl finanzierte und die Macht in einem bolivarischen Projekt mit starker nationalistischer Anziehungskraft konzentrierte."
+  },
+  {
+    "id": "simon-bolivar",
+    "name": "Simon Bolívar",
+    "role": "Militärführer",
+    "description": "Bolívar, ein südamerikanischer Militärführer, war der große Befreier, der die Unabhängigkeit mehrerer Länder Spanisch-Amerikas anführte und davon träumte, den Kontinent unter starken, zentralisierten Republiken zu vereinen."
+  },
+  {
+    "id": "julius-evola",
+    "name": "Julius Evola",
+    "role": "Philosoph",
+    "description": "Als italienischer Philosoph war Evola ein Traditionalist und Theoretiker der radikalen Rechten, der Hierarchie, Spiritualität und die Ablehnung der modernen Welt verteidigte und zu einer Referenz für das reaktionäre und esoterische Denken des 20. Jahrhunderts wurde."
+  },
+  {
+    "id": "slavoj-zizek",
+    "name": "Slavoj Žižek",
+    "role": "Philosoph",
+    "description": "Als slowenischer Philosoph vereint Žižek Marxismus, Psychoanalyse und Kulturkritik, um Ideologie und zeitgenössischen Kapitalismus zu analysieren, und wird so zu einem der beliebtesten und provokativsten linken Denker unserer Zeit."
+  },
+  {
+    "id": "isaiah-berlin",
+    "name": "Jesaja Berlin",
+    "role": "Philosoph",
+    "description": "Als britischer Philosoph unterschied Berlin zwischen negativer und positiver Freiheit und trat für Wertepluralismus ein, warnte vor totalitären Utopien und wurde zu einer Referenz des liberalen Denkens des 20. Jahrhunderts."
+  },
+  {
+    "id": "karl-liebknecht",
+    "name": "Karl Liebknecht",
+    "role": "Revolutionär",
+    "description": "Liebknecht, ein deutscher Revolutionär, war ein sozialistischer Führer und Mitbegründer des Spartakusbundes, der sich gegen den Ersten Weltkrieg aussprach und den gescheiterten Aufstand von 1919 anführte. Er wurde zusammen mit Rosa Luxemburg ermordet."
+  },
+  {
+    "id": "nathaniel-branden",
+    "name": "Nathaniel Branden",
+    "role": "Objektivistischer Psychologe",
+    "description": "Als objektivistischer Psychologe war Branden ein Mitarbeiter von Ayn Rand und ein Pionier der Psychologie des Selbstwertgefühls, der Objektivismus mit der Wertschätzung von Vernunft, Individualismus und persönlicher Verantwortung im geistigen Leben verband."
+  },
+  {
+    "id": "jean-paul-sartre",
+    "name": "Jean-Paul Sartre",
+    "role": "Philosoph",
+    "description": "Sartre, ein französischer Philosoph, war der große Name des Existentialismus, der die radikale Freiheit und Verantwortung des Einzelnen verteidigte. Er stand dem Marxismus nahe und engagierte sich für die großen politischen Anliegen seiner Zeit."
+  },
+  {
+    "id": "jose-bove",
+    "name": "José Bové",
+    "role": "Aktivist",
+    "description": "José Bové, ein französischer Aktivist, wurde zum Symbol der Antiglobalisierungsbewegung und der bäuerlichen Landwirtschaft und verteidigte Ernährungssouveränität, Ökologie und Widerstand gegen multinationale Konzerne und gentechnisch veränderte Lebensmittel."
+  },
+  {
+    "id": "matteo-salvini",
+    "name": "Matteo Salvini",
+    "role": "Politiker",
+    "description": "Salvini, ein italienischer Politiker, führt die nationalistische Rechte Italiens an und setzt sich für den Kampf gegen Einwanderung, nationale Souveränität und Skepsis gegenüber der Europäischen Union ein, mit starkem populistischen und identitären Reiz."
+  },
+  {
+    "id": "jeremy-corbyn",
+    "name": "Jeremy Corbyn",
+    "role": "Politiker",
+    "description": "Corbyn, ein britischer Politiker, leitete den sozialistischen Flügel der Labour Party und verteidigte die Verstaatlichung von Dienstleistungen, den Wohlfahrtsstaat, den Antiimperialismus und eine Politik der starken Einkommensumverteilung."
+  },
+  {
+    "id": "ciro-gomes",
+    "name": "Ciro Gomes",
+    "role": "Politiker",
+    "description": "Ciro Gomes, ein brasilianischer Politiker, vertritt ein nationales Entwicklungsprojekt mit einer starken Rolle des Staates in Wirtschaft, Industrialisierung und nationaler Souveränität und positioniert sich als Stimme des Mitte-Links-Arbeitertums."
+  },
+  {
+    "id": "jair-bolsonaro",
+    "name": "Jair Bolsonaro",
+    "role": "Politiker",
+    "description": "Bolsonaro, ein brasilianischer Politiker, erreichte die Präsidentschaft als Anführer der nationalistischen, konservativen Rechten mit den Themen Sicherheit, traditionelle Werte und Wirtschaftsliberalismus; Obwohl er wegen eines Putschversuchs verurteilt und aus dem Amt ausgeschlossen wurde, ist er nach wie vor einflussreich."
+  },
+  {
+    "id": "michel-temer",
+    "name": "Michel Temer",
+    "role": "Staatsmann",
+    "description": "Temer, ein brasilianischer Staatsmann, übernahm nach Dilmas Amtsenthebung die Präsidentschaft Brasiliens und führte mit Unterstützung der politischen Mitte und der Geschäftswelt eine liberale Agenda für Wirtschaftsreformen und Haushaltsanpassungen durch."
+  },
+  {
+    "id": "fernando-henrique-cardoso",
+    "name": "Fernando Henrique Cardoso",
+    "role": "Soziologe und Staatsmann",
+    "description": "Fernando Henrique, ein brasilianischer Soziologe und Staatsmann, stabilisierte die Wirtschaft mit dem Realplan und führte als Präsident liberale Reformen, Privatisierungen und die Modernisierung des Staates im Rahmen der Sozialdemokratie durch."
+  },
+  {
+    "id": "emilio-medici",
+    "name": "Emílio Garrastazu Médici",
+    "role": "Diktator",
+    "description": "Médici, ein brasilianischer General und Diktator, regierte während der repressivsten Zeit der Militärdiktatur, die schwere Zensur und politische Verfolgung mit dem sogenannten Wirtschaftswunder beschleunigten Wachstums und kolossalen öffentlichen Arbeiten verband."
+  },
+  {
+    "id": "castelo-branco",
+    "name": "Humberto Castelo Branco",
+    "role": "Militäroffizier und Staatsmann",
+    "description": "Castelo Branco, ein brasilianischer Militäroffizier und Staatsmann, war der erste Präsident der 1964 begonnenen Militärdiktatur und führte die ersten Repressionen und Wirtschaftsreformen mit liberaler Ausrichtung und Angleichung an die Vereinigten Staaten durch."
+  },
+  {
+    "id": "joao-goulart",
+    "name": "João Goulart",
+    "role": "Staatsmann",
+    "description": "João Goulart, ein brasilianischer Staatsmann, war ein reformistischer linker Präsident, ein Verfechter von Basisreformen und Arbeitnehmerrechten, der durch den Militärputsch von 1964, der die Diktatur in Brasilien begann, abgesetzt wurde."
+  },
+  {
+    "id": "leonel-brizola",
+    "name": "Leonel Brizola",
+    "role": "Politiker",
+    "description": "Brizola, ein brasilianischer Politiker, war einer der großen Namen der Arbeiterbewegung und verteidigte Nationalismus, soziale Reformen, öffentliche Bildung und Arbeitnehmerrechte. Er war vor und nach der Diktatur stark aktiv."
+  },
+  {
+    "id": "francisco-franco",
+    "name": "Francisco Franco",
+    "role": "Diktator",
+    "description": "Franco, ein spanischer General und Diktator, gewann den Bürgerkrieg und herrschte jahrzehntelang über ein nationalistisches, katholisches, autoritäres Regime, unterdrückte Gegner und wahrte bis zu seinem Tod eine korporatistische Ordnung."
+  },
+  {
+    "id": "barack-obama",
+    "name": "Barack Obama",
+    "role": "Staatsmann",
+    "description": "Als amerikanischer Staatsmann symbolisierte Obama einen gemäßigten progressiven Liberalismus, den Ausbau der öffentlichen Gesundheitsversorgung, der Bürgerrechte und der multilateralen Diplomatie innerhalb einer institutionellen Marktwirtschaft."
+  },
+  {
+    "id": "benjamin-netanyahu",
+    "name": "Benjamin Netanjahu",
+    "role": "Politiker",
+    "description": "Als israelischer Politiker wurde Netanjahu zu einer zentralen Figur der nationalistischen, sicherheitsorientierten Rechten Israels, die Wirtschaftsliberalismus, konservativen Zionismus und eine harte Linie gegenüber regionalen Gegnern vereinte."
+  },
+  {
+    "id": "augusto-pinochet",
+    "name": "Augusto Pinochet",
+    "role": "Diktator",
+    "description": "Pinochet, ein chilenischer General und Diktator, stürzte Allende und errichtete ein antikommunistisches Militärregime, das politische Unterdrückung, autoritären Konservatismus und neoliberale Reformen kombinierte."
+  },
+  {
+    "id": "fidel-castro",
+    "name": "Fidel Castro",
+    "role": "Revolutionär",
+    "description": "Fidel Castro, ein kubanischer Revolutionär, führte die Revolution von 1959 an und baute einen sozialistischen Einparteienstaat auf, antiimperialistisch und nationalistisch, mit einer staatlichen Wirtschaft und starker Unterdrückung."
+  },
+  {
+    "id": "jose-mujica",
+    "name": "José Mujica",
+    "role": "Staatsmann",
+    "description": "Als ehemaliger Guerillakämpfer und uruguayischer Staatsmann verkörperte Mujica eine demokratische Linke mit strengen und libertären Bräuchen, die eine gemäßigte Umverteilung, Bürgerrechte und eine Kritik des Konsumismus verteidigte."
+  },
+  {
+    "id": "recep-tayyip-erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "Staatsmann",
+    "description": "Als türkischer Staatsmann führte Erdoğan die Türkei in Richtung eines islamischen, nationalistischen Konservatismus, indem er die Zentralisierung des Präsidenten, eine durchsetzungsfähige Außenpolitik und die Aushöhlung demokratischer Kontrollen verband."
+  },
+  {
+    "id": "bashar-al-assad",
+    "name": "Bashar al-Assad",
+    "role": "Diktator",
+    "description": "Bashar al-Assad war von 2000 bis 2024 Präsident Syriens und bewahrte das Baath-Regime seiner Familie durch Unterdrückung, eine klientelistische Wirtschaft und russisch-iranische Unterstützung im Bürgerkrieg. er wurde gestürzt und lebt im russischen Exil."
+  },
+  {
+    "id": "john-f-kennedy",
+    "name": "John F. Kennedy",
+    "role": "Staatsmann",
+    "description": "Kennedy, ein amerikanischer Staatsmann, vereinte reformistischen Liberalismus, Antikommunismus des Kalten Krieges, Bürgerrechte und technologische Modernisierung und symbolisierte damit die New Frontier-Agenda."
+  },
+  {
+    "id": "ronald-reagan",
+    "name": "Ronald Reagan",
+    "role": "Staatsmann",
+    "description": "Als amerikanischer Staatsmann führte Reagan die moderne konservative Rechte an und setzte sich für Steuersenkungen, freie Märkte, traditionelle Werte, entschiedenen Antikommunismus und eine Ausweitung der militärischen Macht ein."
+  },
+  {
+    "id": "george-w-bush",
+    "name": "George W. Bush",
+    "role": "Staatsmann",
+    "description": "George W. Bush, ein amerikanischer Staatsmann, vereinte religiösen Konservatismus, Steuersenkungen und eine neokonservative Außenpolitik, die vom Krieg gegen den Terror und den Invasionen in Afghanistan und im Irak geprägt war."
+  },
+  {
+    "id": "joe-biden",
+    "name": "Joe Biden",
+    "role": "Staatsmann",
+    "description": "Als amerikanischer Staatsmann repräsentiert Biden die liberale demokratische Mitte, die einen gemäßigten Wohlfahrtsstaat, internationale Allianzen, institutionelle Verteidigung und schrittweise progressive Fortschritte vereint."
+  },
+  {
+    "id": "john-mcafee",
+    "name": "John McAfee",
+    "role": "Unternehmer und Aktivist",
+    "description": "Als Programmierer und Unternehmer wurde McAfee zu einer radikalen libertären Stimme, die Privatsphäre, Kryptowährungen, individuelle Freiheit und tiefes Misstrauen gegenüber dem Staat, Steuern und staatlicher Überwachung verteidigte."
+  },
+  {
+    "id": "hal-finney",
+    "name": "Hal Finney",
+    "role": "Kryptograph",
+    "description": "Als Kryptograph und Cypherpunk-Pionier schuf Finney wiederverwendbare Proof-of-Work, erhielt die erste Bitcoin-Transaktion und setzte sich für digitale Privatsphäre, Dezentralisierung und technische Freiheit ein."
+  },
+  {
+    "id": "kim-jong-un",
+    "name": "Kim Jong Un",
+    "role": "Diktator",
+    "description": "Der nordkoreanische Diktator Kim Jong Un bewahrte das dynastische Juche-Regime mit Einparteienherrschaft, Führerkult, nuklearer Militarisierung, Staatswirtschaft und strenger Isolation von der Außenwelt."
+  },
+  {
+    "id": "george-washington",
+    "name": "George Washington",
+    "role": "Staatsmann und Heerführer",
+    "description": "Als Gründer und erster Präsident der Vereinigten Staaten vereinte Washington militärische Führung, konstitutionellen Republikanismus, Föderalismus und diplomatische Besonnenheit und verteidigte eine starke Republik ohne dauerhafte Verstrickung in ausländische Allianzen."
+  },
+  {
+    "id": "benjamin-franklin",
+    "name": "Benjamin Franklin",
+    "role": "Staatsmann und Wissenschaftler",
+    "description": "Als Universalgelehrter, Diplomat und Gründer der Vereinigten Staaten vereinte Franklin Republikanismus, freies Denken, Handel, Wissenschaft, Innovation und institutionellen Pragmatismus und symbolisierte damit einen liberalen, kosmopolitischen, aufklärerischen Zweig moderner Politik."
+  },
+  {
+    "id": "abraham-lincoln",
+    "name": "Abraham Lincoln",
+    "role": "Staatsmann",
+    "description": "Während des Bürgerkriegs war Lincoln Präsident der Vereinigten Staaten und bewahrte die Union, stärkte die Bundesregierung und leitete die Abschaffung der Sklaverei, indem er bürgerlichen Nationalismus, demokratischen Republikanismus und fortschrittliche moralische Reformen kombinierte."
+  },
+  {
+    "id": "alex-karp",
+    "name": "Alex Karp",
+    "role": "Unternehmer",
+    "description": "Karp, ein amerikanischer Unternehmer, leitet Palantir und symbolisiert eine sicherheitsorientierte Technokratie, die Staat, Verteidigung, Daten und künstliche Intelligenz vereint und strategische Technologie im Dienste westlicher Demokratien verteidigt."
+  },
+  {
+    "id": "james-madison",
+    "name": "James Madison",
+    "role": "Staatsmann",
+    "description": "Als Gründer der Vereinigten Staaten und Hauptarchitekt der Verfassung setzte sich Madison für Föderalismus, Gewaltenteilung und individuelle Rechte ein und versuchte, eine starke republikanische Regierung mit Kontrollen gegen Tyrannei in Einklang zu bringen."
+  },
+  {
+    "id": "alexander-hamilton",
+    "name": "Alexander Hamilton",
+    "role": "Staatsmann",
+    "description": "Als Gründer der Vereinigten Staaten setzte sich Hamilton für eine starke Bundesregierung, solide öffentliche Finanzen, eine Nationalbank und die Industrialisierung ein und verband dabei konstitutionellen Republikanismus mit modernisierendem Wirtschaftsnationalismus."
+  },
+  {
+    "id": "maximilien-robespierre",
+    "name": "Maximilien Robespierre",
+    "role": "Revolutionär",
+    "description": "Robespierre, eine zentrale Figur der Französischen Revolution, verband republikanische Tugend, Volkssouveränität und bürgerliche Gleichheit mit einer zentralisierten revolutionären Macht und wurde zum Symbol des Jakobinertums und des Terrors."
+  },
+  {
+    "id": "alexandre-o-grande",
+    "name": "Alexander der Große",
+    "role": "König und Eroberer",
+    "description": "Als König von Mazedonien und Eroberer Persiens verband Alexander nach dem Sieg über die Achämeniden militärische Monarchie, imperiale Expansion, Stadtgründung und die Integration griechischer, mazedonischer und östlicher Eliten."
+  },
+  {
+    "id": "napoleao-bonaparte",
+    "name": "Napoleon Bonaparte",
+    "role": "Kaiser",
+    "description": "Als französischer General und Kaiser festigte Napoleon die Verwaltungs- und Rechtsreformen der Revolution, konzentrierte gleichzeitig die persönliche Macht, erweiterte Frankreich militärisch und prägte den modernisierenden Autoritarismus Europas."
+  },
+  {
+    "id": "julio-cesar",
+    "name": "Julius Cäsar",
+    "role": "Militärführer",
+    "description": "Als römischer General und Staatsmann vereinte Caesar militärisches Prestige, Volksreformen und die Konzentration persönlicher Autorität, schwächte die aristokratische Republik und ebnete den Weg für die imperiale Macht in Rom."
+  },
+  {
+    "id": "cesar-augusto",
+    "name": "Cäsar Augustus",
+    "role": "Kaiser",
+    "description": "Augustus, der erste römische Kaiser, verwandelte die republikanische Krise in eine stabile kaiserliche Ordnung, indem er institutionelle Formen beibehielt und gleichzeitig militärische Führung, Verwaltung und politische Autorität zentralisierte."
+  },
+  {
+    "id": "carlos-magno",
+    "name": "Karl der Große",
+    "role": "Monarch",
+    "description": "Als Frankenkönig und Kaiser vereinte Karl der Große militärische Expansion, Christianisierung, Verwaltungsreform und kulturelle Schirmherrschaft und wurde zum Symbol der kaiserlichen christlichen Monarchie und der mittelalterlichen europäischen Ordnung."
+  },
+  {
+    "id": "eneas-carneiro",
+    "name": "Enéas Carneiro",
+    "role": "Politiker",
+    "description": "Enéas, ein brasilianischer Arzt und Politiker, setzte sich für Wirtschaftsnationalismus, technologische Souveränität, Kernenergie, starke Streitkräfte und Staatsplanung ein und wurde zu einem beliebten Symbol des nationalen Entwicklungismus."
+  },
+  {
+    "id": "jordan-peterson",
+    "name": "Jordan Peterson",
+    "role": "Psychologe und Essayist",
+    "description": "Peterson, ein kanadischer Psychologe, wurde zu einer Referenz des liberalen Kulturkonservatismus, indem er den Identitätsprogressivismus kritisierte und individuelle Verantwortung, Tradition, freie Meinungsäußerung und symbolische Ordnung verteidigte."
+  },
+  {
+    "id": "aristoteles",
+    "name": "Aristoteles",
+    "role": "Philosoph",
+    "description": "Aristoteles, ein griechischer Philosoph, formulierte eine politische Vision, die sich auf die Polis, bürgerliche Tugend und eine gemischte Regierung konzentrierte und moderates Privateigentum, natürliche Hierarchie und moralische Bildung als Grundlagen des gemeinsamen Lebens verteidigte."
+  },
+  {
+    "id": "platao",
+    "name": "Platon",
+    "role": "Philosoph",
+    "description": "Platon, ein griechischer Philosoph, kritisierte die athenische Demokratie und stellte sich eine von Philosophen regierte Stadt mit strenger Bildung, moralischer Zensur und der starken Unterordnung privater Interessen unter die Harmonie der politischen Gemeinschaft vor."
+  },
+  {
+    "id": "foucault",
+    "name": "Michel Foucault",
+    "role": "Philosoph",
+    "description": "Foucault, ein französischer Philosoph, analysierte Gefängnisse, Sexualität, Medizin und modernes Wissen als Formen disziplinarischer Macht und wurde zum Bezugspunkt für Kritiker sozialer Normalisierung, Kontrollinstitutionen und kultureller Hierarchien."
+  },
+  {
+    "id": "tocqueville",
+    "name": "Alexis de Tocqueville",
+    "role": "Philosoph und Staatsmann",
+    "description": "Tocqueville, ein französischer liberaler Denker, studierte die amerikanische Demokratie und trat für Bürgervereinigungen, Dezentralisierung und politische Freiheit als Gegenmittel zur Tyrannei der Mehrheit und der administrativen Zentralisierung des modernen Staates ein."
+  },
+  {
+    "id": "nietzsche",
+    "name": "Friedrich Nietzsche",
+    "role": "Philosoph",
+    "description": "Nietzsche, ein deutscher Philosoph, griff die egalitäre Moral, das Christentum und moderne Ressentiments an und verteidigte die aristokratische Wertschöpfung, die Bekräftigung des Lebens und die Überwindung überkommener moralischer Konventionen."
+  },
+  {
+    "id": "rousseau",
+    "name": "Jean-Jacques Rousseau",
+    "role": "Philosoph",
+    "description": "Als Philosoph der Aufklärung kritisierte Rousseau die soziale Ungleichheit und trat für die Souveränität des Volkes, den allgemeinen Willen und eine republikanische politische Gemeinschaft ein, die in der Lage ist, durch staatsbürgerliche Bildung und öffentliche Tugend freie Bürger zu bilden."
+  },
+  {
+    "id": "hobbes",
+    "name": "Thomas Hobbes",
+    "role": "Philosoph",
+    "description": "Hobbes, ein englischer Philosoph, begründete eine vertragsorientierte Theorie des souveränen Staates und verteidigte eine starke zentrale Autorität, um Bürgerkriege einzudämmen, Sicherheit zu gewährleisten und religiöse und fraktionelle Konflikte dem öffentlichen Frieden unterzuordnen."
+  },
+  {
+    "id": "maquiavel",
+    "name": "Niccolò Machiavelli",
+    "role": "Philosoph und Diplomat",
+    "description": "Als florentinischer Diplomat und Denker analysierte Machiavelli die politische Macht realistisch und schätzte virtù, die eigene militärische Stärke, die Staatsräson und republikanische Institutionen, die in der Lage waren, Freiheit und bürgerliche Größe zu bewahren."
+  },
+  {
+    "id": "keynes",
+    "name": "John Maynard Keynes",
+    "role": "Ökonom",
+    "description": "Keynes, ein britischer Ökonom, formulierte die moderne Makroökonomie und befürwortete den Einsatz von Finanzpolitik, öffentlichen Investitionen und Nachfragesteuerung zur Stabilisierung des liberalen Kapitalismus, ohne das Privateigentum abzuschaffen."
+  },
+  {
+    "id": "dom-pedro-i",
+    "name": "Pedro I. von Brasilien",
+    "role": "Kaiser",
+    "description": "Brasiliens erster Kaiser, Pedro I., führte die Unabhängigkeit an und errichtete eine zentralisierte konstitutionelle Monarchie, die dynastischen Liberalismus, persönliche Autorität, territoriale Einheit und die Verteidigung der kaiserlichen Ordnung in Einklang brachte."
+  },
+  {
+    "id": "dom-pedro-ii",
+    "name": "Pedro II. von Brasilien",
+    "role": "Kaiser",
+    "description": "Brasiliens zweiter Kaiser, Pedro II., regierte als konstitutioneller Monarch, der Wert auf Parlamentarismus, institutionelle Stabilität, Wissenschaft, Bildung und die schrittweise Abschaffung legte und die nationale Einheit unter der mäßigenden Macht bewahrte."
+  },
+  {
+    "id": "peron",
+    "name": "Juan Domingo Perón",
+    "role": "Staatsmann",
+    "description": "Als argentinischer Präsident und Begründer des Peronismus vereinte Perón Volksnationalismus, Arbeitsrechte, Korporatismus, geschützte Industrialisierung, charismatische Führung und eine dritte Position zwischen Liberalismus und Kommunismus."
+  },
+  {
+    "id": "franklin-roosevelt",
+    "name": "Franklin D. Roosevelt",
+    "role": "Staatsmann",
+    "description": "Als US-Präsident während der Weltwirtschaftskrise und des Zweiten Weltkriegs schuf Roosevelt den New Deal, der die Regulierung, die sozialen Rechte und die Intervention des Bundes ausweitete, um die liberale Demokratie und den reformierten Kapitalismus zu retten."
+  },
+  {
+    "id": "satoshi-nakamoto",
+    "name": "Satoshi Nakamoto",
+    "role": "Schöpfer von Bitcoin",
+    "description": "Das Pseudonym des Schöpfers von Bitcoin, Satoshi Nakamoto, hat eine digitale Peer-to-Peer-Währung entwickelt, die auf kryptografischen Beweisen, Dezentralisierung, programmierter Knappheit und relativer Privatsphäre basiert, ohne von Banken, Regierungen oder Vermittlern abhängig zu sein."
+  },
+  {
+    "id": "george-soros",
+    "name": "George Soros",
+    "role": "Investor und Philanthrop",
+    "description": "Als Investor und Gründer der Open Society Foundations verteidigt Soros liberale Demokratie, Menschenrechte, Zivilgesellschaft, Multikulturalismus, Reform der Drogenpolitik, Säkularismus und offene Institutionen gegen Autoritarismus und geschlossenen Nationalismus."
+  },
+  {
+    "id": "bill-gates",
+    "name": "Bill Gates",
+    "role": "Unternehmer und Philanthrop",
+    "description": "Als Mitbegründer von Microsoft und Leiter der Gates Foundation vereint Gates technologischen Kapitalismus, globale Philanthropie, öffentliche Gesundheit, Bildung, Armutsbekämpfung, Klimainnovation und Vertrauen in Wissenschaft, Metriken und technokratische Lösungen."
+  },
+  {
+    "id": "dalai-lama",
+    "name": "Dalai Lama (Tenzin Gyatso)",
+    "role": "Religiöser Führer",
+    "description": "Der 14. Dalai Lama, das spirituelle Oberhaupt des tibetischen Buddhismus, setzt sich für Gewaltlosigkeit, tibetische Autonomie durch den Mittelweg, Demokratisierung der Exilgemeinschaft und den Dialog zwischen Wissenschaft und Religion ein."
+  },
+  {
+    "id": "pentti-linkola",
+    "name": "Pentti Linkola",
+    "role": "Radikaler Ökologe",
+    "description": "Linkola, ein finnischer Fischer und Denker, befürwortete eine antidemokratische, antitechnologische Tiefenökologie mit einem starken Staat, einem Ende des Wirtschaftswachstums und einer drastischen Bevölkerungsreduzierung zur Rettung der Biosphäre und wurde zum Bezugspunkt des Öko-Autoritarismus."
+  },
+  {
+    "id": "thomas-jefferson",
+    "name": "Thomas Jefferson",
+    "role": "Staatsmann",
+    "description": "Jefferson, Autor der Unabhängigkeitserklärung und dritter US-Präsident, trat für eine Agrarrepublik mit Kleingrundbesitzern, einer begrenzten und dezentralisierten Regierung, Religionsfreiheit und Misstrauen gegenüber Banken, Armeen und Städten ein."
+  },
+  {
+    "id": "janos-kadar",
+    "name": "János Kádár",
+    "role": "Diktator",
+    "description": "Nach der sowjetischen Repression im Jahr 1956 war Kádár Ungarns Führer und festigte den pragmatischen Kommunismus, die Einparteienherrschaft, die Angleichung an Moskau und eine begrenzte wirtschaftliche Öffnung, die auf den Konsum abzielte."
+  },
+  {
+    "id": "h-l-mencken",
+    "name": "H. L. Mencken",
+    "role": "Journalist",
+    "description": "Als scharfer Kritiker der amerikanischen Demokratie verband Mencken Wirtschaftslibertärismus, Nietzsche-Elitismus und militanten Atheismus und griff in Zeitungen und Essays Puritanismus, Massenkultur und Volksglauben an."
+  },
+  {
+    "id": "marcus-garvey",
+    "name": "Marcus Garvey",
+    "role": "Aktivist",
+    "description": "Garvey, Gründer der größten schwarzen Massenbewegung der Geschichte, predigte schwarzen Nationalismus, Rassenstolz und Unternehmertum als Weg zur Emanzipation und zur Rückkehr nach Afrika und lehnte Integration zugunsten von Trennung und Eigenständigkeit ab."
+  },
+  {
+    "id": "julius-nyerere",
+    "name": "Julius Nyerere",
+    "role": "Staatsmann",
+    "description": "Nyerere, der Vater der Unabhängigkeit Tansanias, schuf Ujamaa, einen afrikanischen Sozialismus, der auf Gemeinschaftsdörfern, Eigenständigkeit und nationaler Einheit über ethnischer Zugehörigkeit basiert."
+  },
+  {
+    "id": "papa-pio-ix",
+    "name": "Papst Pius IX",
+    "role": "Papst und Monarch des Kirchenstaates",
+    "description": "Der letzte Papst-König, Pius IX., regierte den Kirchenstaat bis 1870 im längsten Pontifikat der Geschichte, definierte das Dogma der Unbefleckten Empfängnis, proklamierte im Ersten Vatikanischen Konzil die Unfehlbarkeit des Papstes und verurteilte den Liberalismus im Lehrplan der Irrtümer."
+  },
+  {
+    "id": "justiniano-i",
+    "name": "Justinian I",
+    "role": "Byzantinischer Kaiser",
+    "description": "Kaiser des Byzantinischen Reiches auf seinem Höhepunkt, Justinian I., kodifizierte das römische Recht im Corpus Juris Civilis, eroberte Italien, Nordafrika und Südspanien zurück, ordnete den Bau der Hagia Sophia an und führte die chalcedonische Orthodoxie ein."
+  },
+  {
+    "id": "filipe-ii-da-espanha",
+    "name": "Philipp II. von Spanien",
+    "role": "König von Spanien und Weltkaiser",
+    "description": "Philipp II. regierte das größte Reich seiner Zeit, verteidigte die Gegenreformation, finanzierte die Inquisition, stellte sich gegen England und zentralisierte die spanische Monarchie in El Escorial."
+  },
+  {
+    "id": "pedro-o-grande",
+    "name": "Peter der Große",
+    "role": "Zar von Russland",
+    "description": "Peter I. war von 1682 bis 1725 Zar von Russland und modernisierte gewaltsam das Russische Reich, indem er den Adel europäisierte, eine Marine schuf und die orthodoxe Kirche dem Staat unterordnete."
+  },
+  {
+    "id": "joao-calvino",
+    "name": "Johannes Calvin",
+    "role": "Protestantischer Reformator",
+    "description": "Als französischer Theologe und Hauptreformer der calvinistischen Tradition und Autor der Institute of the Christian Religion organisierte er zwischen 1541 und 1564 Genf als theokratische Republik, disziplinierte die öffentliche Moral und schuf das puritanische Modell."
+  },
+  {
+    "id": "dom-manuel-i",
+    "name": "Manuel I. von Portugal",
+    "role": "König von Portugal",
+    "description": "Manuel I. regierte auf dem Höhepunkt der maritimen Expansion Portugals, als Vasco da Gama Indien und Cabral Brasilien erreichte und den Gewürzhandel über die Casa da India zentralisierte."
+  },
+  {
+    "id": "genghis-khan",
+    "name": "Dschingis Khan",
+    "role": "Gründer des Mongolenreiches",
+    "description": "Der als Temujin geborene Dschingis Khan vereinte 1206 die mongolischen Stämme, organisierte die Steppengesellschaft in eine meritokratische Militärmaschinerie um und startete Eroberungen, die rivalisierende Reiche zerstörten, während er gleichzeitig Handels-, Austausch- und pragmatische religiöse Toleranzwege eröffnete."
+  },
+  {
+    "id": "lazaro-cardenas",
+    "name": "Lázaro Cárdenas",
+    "role": "Staatsmann",
+    "description": "Der Revolutionsgeneral und Präsident von Mexiko, Cárdenas, verstaatlichte das Öl, vergrößerte die Ejidos, integrierte Arbeiter und Bauern in den Staat und festigte den postrevolutionären säkularen Nationalpopulismus."
+  },
+  {
+    "id": "guillaume-faye",
+    "name": "Guillaume Faye",
+    "role": "Philosoph und Aktivist der Neuen Rechten",
+    "description": "Als Philosophin und Aktivistin der französischen Neuen Rechten prägte Faye das Konzept des Archäofuturismus und plädierte für eine Verschmelzung von archaischer Tradition, ethnischer Identität und hypermoderner Technologie angesichts eines bevorstehenden Zusammenbruchs der Zivilisation."
+  },
+  {
+    "id": "juscelino-kubitschek",
+    "name": "Juscelino Kubitschek",
+    "role": "Staatsmann",
+    "description": "Kubitschek, Präsident Brasiliens (1956–1961), startete den Target-Plan und den Bau von Brasília unter dem Motto „Fünfzig Jahre in fünf“ und förderte eine rasche Industrialisierung, ausländische Kreditaufnahme und entwicklungspolitischen Optimismus."
+  },
+  {
+    "id": "jose-bonifacio",
+    "name": "José Bonifácio",
+    "role": "Staatsmann und Naturforscher",
+    "description": "José Bonifácio, ein als „Patriarch der Unabhängigkeit“ bekannter Wissenschaftler und Staatsmann, war der wichtigste politische Architekt der Trennung Brasiliens von Portugal im Jahr 1822 und befürwortete einen Zentralstaat, die schrittweise Abschaffung der Sklaverei und eine geeinte Nation unter konstitutioneller Monarchie."
+  },
+  {
+    "id": "zumbi-dos-palmares",
+    "name": "Zumbi dos Palmares",
+    "role": "Kastanienbrauner Anführer",
+    "description": "Als letzter großer Anführer von Palmares, der größten Siedlung entflohener Sklaven in Amerika, widerstand Zumbi jahrzehntelang Kolonialexpeditionen, um die Freiheit Tausender versklavter Afrikaner und ihrer Nachkommen zu verteidigen, und wurde zum führenden Symbol des Widerstands gegen die Sklaverei."
+  },
+  {
+    "id": "deodoro-da-fonseca",
+    "name": "Marschall Deodoro da Fonseca",
+    "role": "Militäroffizier und Staatsmann",
+    "description": "Deodoro da Fonseca, ein Armeemarschall, der 1889 die Ausrufung der Republik anführte, wurde der erste Präsident des Landes und regierte zentralistisch und autoritär, bis er 1891 den Kongress auflöste und kurz darauf aufgrund einer institutionellen Krise zurücktrat."
+  },
+  {
+    "id": "ernesto-geisel",
+    "name": "Ernesto Geisel",
+    "role": "Militäroffizier und Staatsmann",
+    "description": "Als General und Präsident während des Militärregimes verfolgte Geisel eine Politik der „langsamen, schrittweisen und sicheren“ politischen Öffnung, die kontrollierte Liberalisierung mit selektiver Unterdrückung von Gegnern und starken staatlichen Eingriffen in die Wirtschaft verband."
+  },
+  {
+    "id": "justin-trudeau",
+    "name": "Justin Trudeau",
+    "role": "Staatsmann",
+    "description": "Trudeau, Premierminister Kanadas (2015–2025) für die Liberale Partei, förderte den Multikulturalismus, die Aufnahme von Einwanderern und Flüchtlingen, eine fortschrittliche Geschlechter- und Umweltpolitik sowie einen zentristischen Regierungsstil, der durch starke staatliche soziale Intervention unterstützt wurde."
+  },
+  {
+    "id": "muammar-gaddafi",
+    "name": "Muammar Gaddafi",
+    "role": "Revolutionär und Diktator",
+    "description": "Nach dem Putsch von 1969 war Gaddafi mehr als vier Jahrzehnte lang Führer Libyens. Er gründete eine „Jamahiriya“ der theoretischen direkten Demokratie unter de facto autoritärer Kontrolle, verstaatlichte Öl, finanzierte panafrikanische und drittweltliche Bewegungen und wurde während des Bürgerkriegs 2011 abgesetzt und getötet."
+  },
+  {
+    "id": "lee-teng-hui",
+    "name": "Lee Teng-hui",
+    "role": "Staatsmann",
+    "description": "Als Präsident von Taiwan (1988–2000) und erster direkt durch Volksabstimmung gewählter Präsident leitete Lee den Übergang von der Einparteienherrschaft der Kuomintang zu einer vollständigen Mehrparteiendemokratie und förderte eine eindeutige taiwanesische Identität und wirtschaftliche Liberalisierung."
+  },
+  {
+    "id": "chiang-kai-shek",
+    "name": "Chiang Kai-shek",
+    "role": "Militäroffizier und Staatsmann",
+    "description": "Als Führer der Kuomintang und der Republik China führte Chiang den Kampf gegen die Kommunisten und die japanische Besatzung an und errichtete nach der Niederlage von 1949 in Taiwan ein nationalistisches Einparteienregime und das Kriegsrecht, das militanten Antikommunismus mit autoritärem Developmentalismus verband."
+  },
+  {
+    "id": "hirohito",
+    "name": "Hirohito",
+    "role": "Kaiser",
+    "description": "Hirohito war von 1926 bis 1989 Kaiser Japans und regierte während der militaristischen Expansion und des Zweiten Weltkriegs als eine Figur göttlicher Autorität innerhalb des imperialen Systems. Nach der Niederlage verzichtete er auf seinen göttlichen Status und leitete als symbolischer konstitutioneller Monarch den demokratischen Wiederaufbau des Landes."
+  },
+  {
+    "id": "winston-churchill",
+    "name": "Winston Churchill",
+    "role": "Staatsmann",
+    "description": "Als britischer Premierminister, der das Vereinigte Königreich im Zweiten Weltkrieg gegen Nazi-Deutschland anführte, verband Churchill die entschiedene Verteidigung des britischen Empire und des liberalen Kapitalismus mit glühender antikommunistischer Rhetorik und war außerdem Autor kontroverser Kolonial- und Kriegsentscheidungen."
+  },
+  {
+    "id": "franz-ferdinand",
+    "name": "Franz Ferdinand",
+    "role": "Erzherzog und Thronfolger",
+    "description": "Als Thronfolger Österreich-Ungarns befürwortete Franz Ferdinand einen trialistischen Föderalismus, um den slawischen Nationalitäten des Reiches entgegenzukommen und interne Spannungen abzubauen. Seine Ermordung 1914 in Sarajevo löste den Ersten Weltkrieg aus."
+  },
+  {
+    "id": "woodrow-wilson",
+    "name": "Woodrow Wilson",
+    "role": "Staatsmann",
+    "description": "Wilson, Präsident der Vereinigten Staaten (1913–1921), verfolgte fortschrittliche innenpolitische Reformen, führte das Land im Namen der liberalen Demokratie in den Ersten Weltkrieg und setzte sich für nationale Selbstbestimmung und die Gründung des Völkerbundes ein, obwohl er im eigenen Land eine Rassentrennungspolitik aufrechterhielt."
+  },
+  {
+    "id": "nicolau-ii",
+    "name": "Nikolaus II",
+    "role": "Zar",
+    "description": "Der letzte Zar Russlands, Nikolaus II., regierte als Autokrat, der nur ungern die Macht abgab, führte das Land im Ersten Weltkrieg inmitten einer wirtschaftlichen und sozialen Krise in die Niederlage und wurde 1918 nach der Russischen Revolution von den Bolschewiki abgesetzt und hingerichtet."
+  },
+  {
+    "id": "ted-kaczynski",
+    "name": "Ted Kaczynski",
+    "role": "Terrorist und Anti-Technologie-Autor",
+    "description": "Kaczynski, ein ehemaliger Mathematikprofessor, der sich in eine abgelegene Hütte in Montana zurückzog und fast zwei Jahrzehnte lang eine landesweite Bombenkampagne gegen Wissenschaftler und Führungskräfte durchführte, argumentierte in seinem Manifest „Die Industriegesellschaft und ihre Zukunft“, dass industrielle Technologie die menschliche Freiheit zerstört und durch einen absichtlichen Zusammenbruch rückgängig gemacht werden muss."
+  },
+  {
+    "id": "bill-clinton",
+    "name": "Bill Clinton",
+    "role": "Staatsmann",
+    "description": "Als Präsidentin der Vereinigten Staaten (1993–2001) förderte Clinton einen „Dritten Weg“, der Haushaltsdisziplin und Wohlfahrtsreform mit Investitionen in Bildung und Technologie kombinierte, liberalisierte den Handel durch NAFTA und Chinas WTO-Beitritt und überwachte eine Phase starken Wirtschaftswachstums, obwohl sie wegen eines persönlichen Skandals angeklagt wurde."
+  },
+  {
+    "id": "harry-truman",
+    "name": "Harry S. Truman",
+    "role": "Staatsmann",
+    "description": "Truman, Präsident der Vereinigten Staaten (1945–1953), befahl die Atombombenabwürfe auf Hiroshima und Nagasaki, startete den Marshallplan und die Eindämmungsdoktrin zu Beginn des Kalten Krieges, integrierte die Streitkräfte rassistisch und führte die Vereinigten Staaten in den Koreakrieg."
+  },
+  {
+    "id": "dwight-eisenhower",
+    "name": "Dwight D. Eisenhower",
+    "role": "General und Staatsmann",
+    "description": "Eisenhower, Oberbefehlshaber der alliierten Streitkräfte im Zweiten Weltkrieg und später Präsident der Vereinigten Staaten (1953–1961), baute das Fernstraßensystem aus, verfolgte die Eindämmung des Kommunismus mit diplomatischen und geheimdienstlichen Mitteln und warnte in seiner Abschiedsrede vor der Macht des „militärisch-industriellen Komplexes“."
+  },
+  {
+    "id": "napoleao-iii",
+    "name": "Napoleon III",
+    "role": "Kaiser",
+    "description": "Als Neffe von Napoleon Bonaparte, gewählter Präsident der Zweiten Französischen Republik und später selbsternannter Kaiser im Jahr 1852, modernisierte Napoleon III. Paris durch Haussmanns Stadterneuerung, förderte die Industrialisierung und den Freihandel, führte Frankreich jedoch im Deutsch-Französischen Krieg von 1870 in die Katastrophe, der seine Herrschaft beendete."
+  },
+  {
+    "id": "papa-francisco",
+    "name": "Papst Franziskus",
+    "role": "Religiöser Führer",
+    "description": "Der erste Jesuit und lateinamerikanische Papst, Franziskus, setzte sich für Migranten und die Armen ein, kritisierte in seiner Enzyklika Laudato Si‘ zur Umweltkrise den unregulierten Kapitalismus und die „Wegwerfkultur“ und förderte eine stärkere pastorale Dezentralisierung und einen offenen Dialog innerhalb der katholischen Kirche."
+  },
+  {
+    "id": "papa-leao-xiv",
+    "name": "Papst Leo XIV",
+    "role": "Religiöser Führer",
+    "description": "Als erster in den Vereinigten Staaten geborener Papst, der 2025 nach jahrzehntelanger Missionsarbeit in Peru gewählt wurde, wählte Leo XIV. seinen Namen in Anlehnung an Leo"
+  },
+  {
+    "id": "tomas-de-aquino",
+    "name": "Thomas von Aquin",
+    "role": "Theologe und Philosoph",
+    "description": "Als Dominikanermönch und bedeutendster Systematiker der mittelalterlichen Scholastik verschmolz Thomas von Aquin die aristotelische Philosophie mit der christlichen Theologie in der Summa Theologica und plädierte für das Naturrecht als Grundlage der moralischen und politischen Ordnung, die Autorität der Kirche und des christlichen Monarchen sowie die Hierarchie als irdische Widerspiegelung der göttlichen Ordnung."
+  },
+  {
+    "id": "charles-darwin",
+    "name": "Charles Darwin",
+    "role": "Naturforscher",
+    "description": "Als britischer Naturforscher, der in „Über die Entstehung der Arten“ die Theorie der Evolution durch natürliche Auslese formulierte, revolutionierte Darwin das wissenschaftliche Verständnis des Lebens, trat für empirische Beobachtung und Gradualismus gegen etablierte Dogmen ein und seine Ideen wurden später (in verzerrter Form) von gesellschaftlichen Ideologien übernommen, die er selbst nicht befürwortete."
+  },
+  {
+    "id": "renan-santos",
+    "name": "Renan Santos",
+    "role": "Geschäftsmann und politischer Aktivist",
+    "description": "Als brasilianischer Geschäftsmann und politischer Aktivist gründete er 2014 die Free Brazil Movement (MBL) und ist seit 2025 Vorsitzender der Missionspartei. Er kandidiert für die brasilianische Präsidentschaft im Jahr 2026."
+  },
+  {
+    "id": "flavio-bolsonaro",
+    "name": "Flávio Bolsonaro",
+    "role": "Politiker",
+    "description": "Als Senator aus Rio de Janeiro und ältester Sohn von Jair Bolsonaro ist er der Kandidat der Liberalen Partei für die Präsidentschaft im Jahr 2026; Er machte die öffentliche Sicherheit zu seinem wichtigsten Banner im Senat und unterstützt selektive Privatisierungen und Ausgabenkürzungen."
+  },
+  {
+    "id": "anders-fogh-rasmussen",
+    "name": "Anders Fogh Rasmussen",
+    "role": "Staatsmann",
+    "description": "Rasmussen, liberaler Premierminister Dänemarks (2001–2009) und späterer Generalsekretär der NATO (2009–2014), verband Marktreformen mit dem nordischen Wohlfahrtsstaat und setzte sich für Freihandel, europäische Integration und säkulare, fortschrittliche Werte ein."
+  },
+  {
+    "id": "zohran-mamdani",
+    "name": "Zohran Mamdani",
+    "role": "Bürgermeister",
+    "description": "Mamdani, Bürgermeister von New York City und in Uganda geborener demokratischer Sozialist, setzt sich für Mietstopps, stadteigene Lebensmittelgeschäfte, kostenlose Busse und den Schutz von Einwanderern in Zufluchtsstädten ein, während er im Amt moderiert, indem er den Polizeikommissar im Amt hält."
+  },
+  {
+    "id": "jd-vance",
+    "name": "JD Vance",
+    "role": "Vizepräsident der Vereinigten Staaten",
+    "description": "Als ehemaliger US-Senator aus Ohio und Autor von „Hillbilly Elegy“, der 2019 zum Katholizismus konvertierte, setzt sich Vance für protektionistische Zölle, Massendeportationen, Kürzungen der Militärhilfe für die Ukraine und eine familienfreundliche Geburtspolitik ein."
+  },
+  {
+    "id": "marco-rubio",
+    "name": "Marco Rubio",
+    "role": "US-Außenminister",
+    "description": "Als kubanischer Amerikaner, ehemaliger US-Senator aus Florida und seit 2025 Außenminister, leitete er das Vorgehen gegen Venezuela (Eroberung von Maduro) und Kuba, befürwortete Zölle und „Gemeinwohl-Kapitalismus“ und ist ein praktizierender Katholik, der gegen Abtreibung und gleichgeschlechtliche Ehe ist."
+  },
+  {
+    "id": "nicolas-maduro",
+    "name": "Nicolás Maduro",
+    "role": "Präsident von Venezuela (2013–2026)",
+    "description": "Der Nachfolger von Hugo Chávez, Maduro, regierte Venezuela 13 Jahre lang und verschärfte den chavistischen Autoritarismus mit Wahlbetrug im Jahr 2024, Unterdrückung durch bewaffnete Colectivos und Militärbündnissen mit Russland, China und dem Iran, bis er 2026 von den USA gefangen genommen wurde."
+  },
+  {
+    "id": "pedro-sanchez",
+    "name": "Pedro Sanchez",
+    "role": "Premierminister von Spanien",
+    "description": "Sánchez, seit 2018 Generalsekretär der PSOE und Ministerpräsident Spaniens, regiert in einer Koalition mit der Linken und mit Unterstützung der katalanischen Unabhängigkeitsparteien. Er setzt sich für historische Erinnerung, Abtreibung, Euthanasie und Massenregulierung von Migranten ein und weigert sich gleichzeitig, die Militärausgaben auf das NATO-Ziel von 5 % des BIP anzuheben."
+  },
+  {
+    "id": "charles-de-gaulle",
+    "name": "Charles de Gaulle",
+    "role": "Staatsmann und Heerführer",
+    "description": "Als französischer Präsident (1959–1969) und Anführer des Widerstands im Zweiten Weltkrieg gründete de Gaulle die Fünfte Republik mit einer starken Präsidentschaft, zog Frankreich aus dem integrierten Militärkommando der NATO zurück und baute ein unabhängiges Atomwaffenarsenal auf, um strategische Autonomie ohne untergeordnete Allianzen zu sichern."
+  },
+  {
+    "id": "rudolf-rocker",
+    "name": "Rudolf Rocker",
+    "role": "Anarchosyndikalistischer Theoretiker",
+    "description": "Als deutscher Theoretiker des Anarchosyndikalismus trat Rocker für revolutionäre Gewerkschaften und freie Kommunalverbände anstelle des Staates ein und griff in „Nationalismus und Kultur“ den Nationalismus und die zentralisierte Macht als Feinde des kulturellen Schaffens an."
+  },
+  {
+    "id": "errico-malatesta",
+    "name": "Errico Malatesta",
+    "role": "Anarchistischer Kämpfer und Theoretiker",
+    "description": "Der italienische anarchistische Kommunist Malatesta verbrachte Jahrzehnte im Untergrund und im Exil, organisierte Aufstände und Arbeiterzeitungen, befürwortete die Abschaffung des Staates und des Privateigentums durch direkte Aktionen und lehnte gleichzeitig sowohl den Parlamentarismus als auch die bolschewistische Diktatur ab."
+  },
+  {
+    "id": "sidney-webb",
+    "name": "Sidney Webb",
+    "role": "Fabian Ökonom und Politiker",
+    "description": "Als Mitbegründer der Fabian Society und der London School of Economics befürwortete Webb einen schrittweisen parlamentarischen und administrativen Übergang zum Sozialismus, entwarf Klausel IV der britischen Labour Party und lobte im Alter die sowjetische Planung."
+  },
+  {
+    "id": "alberto-fujimori",
+    "name": "Alberto Fujimori",
+    "role": "Präsident von Peru",
+    "description": "Fujimori, Präsident von Peru (1990–2000), besiegte den Aufstand „Leuchtender Pfad“ und dämmte die Hyperinflation durch eine neoliberale Schocktherapie ein. Beim Selbstputsch von 1992 setzte er jedoch den Kongress außer Gefecht und wurde wegen Verbrechen gegen die Menschlichkeit und Korruption verurteilt."
+  },
+  {
+    "id": "saddam-hussein",
+    "name": "Saddam Hussein",
+    "role": "Diktator",
+    "description": "Saddam Hussein, mehr als zwei Jahrzehnte lang Diktator des Irak, führte die Baath-Partei an, kämpfte nach dem Einmarsch in Kuwait im Iran-Irak-Krieg und im Golfkrieg, unterdrückte Kurden und Schiiten gewaltsam und wurde 2003 durch die US-geführte Invasion gestürzt und 2006 hingerichtet."
+  },
+  {
+    "id": "richard-nixon",
+    "name": "Richard Nixon",
+    "role": "Präsident der Vereinigten Staaten",
+    "description": "US-Präsident (1969–1974) Nixon nahm Beziehungen zu China auf, beendete die Konvertibilität des Dollars in Gold, gründete die EPA und den Krieg gegen Drogen und trat nach dem Watergate-Skandal zurück."
+  },
+  {
+    "id": "charles-iii",
+    "name": "Karl III",
+    "role": "König des Vereinigten Königreichs",
+    "description": "Karl III., seit 2022 König des Vereinigten Königreichs, verbindet verfassungsmäßige Neutralität mit jahrzehntelangem Umweltaktivismus und Eintreten für ökologischen Landbau, traditionellen Urbanismus und interreligiösen Dialog, indem er in den „Schwarzen Spinnen-Memos“ Lobbyarbeit bei Ministern betrieben und die sklavenvergangene Vergangenheit des Imperiums anerkannt hat."
+  },
+  {
+    "id": "vitalik-buterin",
+    "name": "Vitalik Buterin",
+    "role": "Programmierer",
+    "description": "Buterin, der Schöpfer von Ethereum, formulierte d/acc – defensive, dezentrale technologische Beschleunigung –, finanziert öffentliche Güter durch quadratische Finanzierung, setzt sich für Kryptographie und Privatsphäre ein, verurteilte Russlands Invasion in der Ukraine und kritisiert sowohl die Staats- als auch die Unternehmensmonopole."
+  },
+  {
+    "id": "howard-scott",
+    "name": "Howard Scott",
+    "role": "Ingenieur",
+    "description": "Der amerikanische Ingenieur Scott gründete 1933 Technocracy Incorporated und schlug vor, das Preissystem und das Geld durch Energiezertifikate zu ersetzen und die Regierung eines kontinentalen „Technates“ Ingenieuren und Wissenschaftlern statt Politikern und Geschäftsleuten zu übertragen."
+  },
+  {
+    "id": "james-lovelock",
+    "name": "James Lovelock",
+    "role": "Wissenschaftler",
+    "description": "Der britische unabhängige Wissenschaftler Lovelock formulierte die Gaia-Hypothese, die die Erde als ein sich selbst regulierendes System sieht, warnte vor der globalen Erwärmung, brach mit dem Umweltschutz, indem er die Atomkraft verteidigte, und sagte in „Novacene“ voraus, dass Cyborgs die Nachfolge der Menschheit antreten würden."
+  },
+  {
+    "id": "benjamin-constant",
+    "name": "Benjamin Constant",
+    "role": "Politischer Philosoph",
+    "description": "Constant, der französisch-schweizerische Theoretiker des Liberalismus, unterschied die Freiheit der Antike von der der Moderne, prangerte die uneingeschränkte Volkssouveränität als Ursprung des Terrors an und verteidigte die Rechte des Einzelnen, eine freie Presse und eine konstitutionelle Monarchie mit Eigentumsrecht."
+  },
+  {
+    "id": "martin-luther-king-jr",
+    "name": "Martin Luther King Jr.",
+    "role": "Pastor und Bürgerrechtler",
+    "lifespan": "1929–1968",
+    "description": "Als baptistischer Pfarrer und Anführer der amerikanischen Bürgerrechtsbewegung leitete King den Montgomery-Busboykott und den Marsch auf Washington und trat für gewaltlosen zivilen Ungehorsam, ein Ende der Rassentrennung, wirtschaftliche Umverteilung und Widerstand gegen den Vietnamkrieg ein."
+  },
+  {
+    "id": "mannerheim",
+    "name": "Carl Gustaf Emil Mannerheim",
+    "role": "Marschall und Staatsmann",
+    "lifespan": "1867–1951",
+    "description": "Mannerheim, Befehlshaber der finnischen Streitkräfte und späterer Präsident, leitete die Verteidigung gegen die sowjetische Invasion im Winterkrieg, indem er die allgemeine Wehrpflicht und Befestigungen aufrechterhielt, sich jedoch weigerte, nach Leningrad vorzurücken und 1944 einen Separatfrieden anstrebte."
+  },
+  {
+    "id": "nick-fuentes",
+    "name": "Nick Fuentes",
+    "role": "Politischer Kommentator und Streamer",
+    "lifespan": "1998–",
+    "description": "Der amerikanische Kommentator und Streamer, Anführer der Groyper-Bewegung, Fuentes, befürwortet den weißen christlichen Nationalismus, lehnt die liberale Demokratie zugunsten einer Monarchie oder Diktatur ab, lehnt die nichtweiße Einwanderung ab und leugnet den Holocaust."
+  },
+  {
+    "id": "joseph-goebbels",
+    "name": "Joseph Goebbels",
+    "role": "Propagandaminister",
+    "lifespan": "1897–1945",
+    "description": "Der Propagandaminister des Dritten Reiches, Goebbels, baute durch Radio, Film und Massenkundgebungen die Propagandamaschinerie der Nazis auf, verbreitete radikalen Antisemitismus und rief den totalen Krieg aus, wobei er sich und seine Familie 1945 tötete."
+  },
+  {
+    "id": "martin-heidegger",
+    "name": "Martin Heidegger",
+    "role": "Philosoph",
+    "lifespan": "1889–1976",
+    "description": "Der deutsche Philosoph Heidegger stellte die Frage nach dem Sein neu und kritisierte die moderne Technologie als Entwurzelung der Menschheit; 1933 trat er der NSDAP bei und wurde Rektor von Freiburg, eine Unterstützung, die er nie öffentlich widerrief."
+  },
+  {
+    "id": "hegel",
+    "name": "Georg Wilhelm Friedrich Hegel",
+    "role": "Philosoph",
+    "lifespan": "1770–1831",
+    "description": "Der deutsche Philosoph Hegel verstand die Geschichte als die dialektische Entfaltung der Freiheit und sah im rationalen Staat, über der Zivilgesellschaft und dem isolierten Individuum, die konkrete Verwirklichung des ethischen Lebens."
+  },
+  {
+    "id": "marco-aurelio",
+    "name": "Marco Aurélio",
+    "role": "Römischer Kaiser",
+    "lifespan": "121–180",
+    "description": "Der römische Kaiser und stoische Philosoph Marcus Aurelius herrschte in ständigen Grenzkriegen und einer verheerenden Pest, schrieb die Meditationen über Pflicht und Selbstbeherrschung und verfolgte Christen, die den offiziellen Kult ablehnten."
+  },
+  {
+    "id": "agostinho-de-hipona",
+    "name": "Agostinho de Hipona",
+    "role": "Theologe und Bischof",
+    "lifespan": "354–430",
+    "description": "Augustinus, Bischof und Theologe des römischen Nordafrikas, formulierte die Lehren der Erbsünde und Gnade, verfasste die „Confessions“ und „The City of God“ und verteidigte den kaiserlichen Zwang gegen donatistische Ketzer."
+  },
+  {
+    "id": "immanuel-kant",
+    "name": "Immanuel Kant",
+    "role": "Philosoph",
+    "lifespan": "1724–1804",
+    "description": "Der deutsche Philosoph Kant begründete den transzendentalen Idealismus und die Pflichtethik und verteidigte die Autonomie der Vernunft, den Republikanismus und eine Föderation freier Staaten als Weg zum ewigen Frieden."
+  },
+  {
+    "id": "socrates",
+    "name": "Sokrates",
+    "role": "Philosoph",
+    "lifespan": "470–399 v. Chr",
+    "description": "Der athenische Philosoph Sokrates entwickelte die dialektische Methode der Befragung, um Überzeugungen zu prüfen und Tugend zu verfolgen, misstraute der Massenpolitik und der Rhetorik von Demagogen und wurde wegen Korruption der Jugend hingerichtet."
+  },
+  {
+    "id": "pericles",
+    "name": "Perikles",
+    "role": "Athener Staatsmann",
+    "lifespan": "495–429 v. Chr",
+    "description": "Der athenische Staatsmann und General Perikles führte Athen durch sein demokratisches und kulturelles goldenes Zeitalter, erweiterte die Beteiligung der Bevölkerung an Institutionen, finanzierte den Parthenon mit der Schatzkammer des Attischen Bundes und führte die Stadt in den Peloponnesischen Krieg."
+  },
+  {
+    "id": "rui-costa-pimenta",
+    "name": "Rui Costa Pimenta",
+    "role": "Politiker",
+    "lifespan": "1957–",
+    "description": "Pimenta, ein Journalist, der 1995 die brasilianische PCO-Partei gründete, befürwortet die proletarische Revolution, die Verstaatlichung von Banken und privatisierten Firmen, die Auflösung der Bereitschaftspolizei und des Waffenbesitzes der Bevölkerung und verbindet wirtschaftlichen Radikalismus mit Kritik an der Identitätspolitik der Linken."
+  },
+  {
+    "id": "che-guevara",
+    "name": "Che Guevara",
+    "role": "Revolutionär",
+    "lifespan": "1928–1967",
+    "description": "Argentinischer Revolutionär, der an der Seite von Fidel Castro den Guerillakrieg in Kuba führte und sich für bewaffneten Kampf und revolutionären Internationalismus einsetzte. Als kubanischer Minister starb er bei dem Versuch, die Revolution nach Bolivien zu exportieren, und wurde zu einer globalen Ikone der radikalen Linken."
+  },
+  {
+    "id": "samora-machel",
+    "name": "Samora Machel",
+    "role": "Guerillaführer und Staatsmann",
+    "lifespan": "1933–1986",
+    "description": "Guerillaführer und erster Präsident Mosambiks nach der Unabhängigkeit von Portugal. Machel führte FRELIMO zu einem marxistisch-leninistischen Einparteienstaat mit Agrarkollektivierung, sowjetischer Unterstützung und Widerstand gegen Kolonialismus und regionale Apartheid."
+  },
+  {
+    "id": "walter-ulbricht",
+    "name": "Walter Ulbricht",
+    "role": "Kommunistischer Führer",
+    "lifespan": "1893–1973",
+    "description": "Deutscher kommunistischer Führer, der Ostdeutschland unter strenger sowjetischer Kontrolle regierte, 1961 die Berliner Mauer baute, die Wirtschaft kollektivierte und abweichende Meinungen unter Stasi-Überwachung und Einparteienherrschaft unterdrückte."
+  },
+  {
+    "id": "ho-chi-minh",
+    "name": "Ho Chi Minh",
+    "role": "Revolutionär und Staatsmann",
+    "lifespan": "1890–1969",
+    "description": "Der Revolutionär und Gründer des kommunistischen Vietnams, Ho Chi Minh, führte den Unabhängigkeitskampf gegen Frankreich und später die Vereinigten Staaten an und vereinte antikolonialen Nationalismus und Marxismus-Leninismus für die Wiedervereinigung des Landes unter Einparteienherrschaft."
+  },
+  {
+    "id": "dominik-tarczynski",
+    "name": "Dominik Tarczyński",
+    "role": "Politiker",
+    "lifespan": "1979–",
+    "description": "Tarczyński, polnischer Europaabgeordneter der Partei „Recht und Gerechtigkeit“, setzt sich für die nationale Souveränität innerhalb der EU, strenge Kontrollen gegen illegale Einwanderung, traditionelle christliche Werte und einen entschiedenen Widerstand gegen Russland ein und dokumentiert seit 2022 russische Kriegsverbrechen in der Ukraine."
+  },
+  {
+    "id": "david-ricardo",
+    "name": "David Ricardo",
+    "role": "Ökonom",
+    "lifespan": "1772–1823",
+    "description": "Der britische Ökonom Ricardo formulierte die Theorie des komparativen Vorteils, die dem Freihandel zugrunde liegt, kämpfte gegen die Corn Laws und die Poor Laws und verteidigte die geheime Abstimmung, die katholische Emanzipation und religiöse Toleranz im Parlament."
+  },
+  {
+    "id": "joseph-schumpeter",
+    "name": "Joseph Schumpeter",
+    "role": "Ökonom",
+    "lifespan": "1883–1950",
+    "description": "Der österreichische Ökonom Schumpeter beschrieb die kreative Zerstörung, die durch den innovativen Unternehmer vorangetrieben wurde, reduzierte die Demokratie auf den Wettbewerb der Eliten um Stimmen und sagte voraus, dass der Kapitalismus durch seinen eigenen Erfolg zerstört werden würde."
+  },
+  {
+    "id": "karl-polanyi",
+    "name": "Karl Polanyi",
+    "role": "Ökonom und Wirtschaftshistoriker",
+    "lifespan": "1886–1964",
+    "description": "Der ungarische Wirtschaftshistoriker Polanyi argumentierte in „The Great Transformation“, dass Land, Arbeit und Geld fiktive Waren seien und dass der sich selbst regulierende Markt eine schützende soziale Gegenbewegung erzeuge."
+  },
+  {
+    "id": "friedrich-engels",
+    "name": "Friedrich Engels",
+    "role": "Revolutionärer Theoretiker",
+    "lifespan": "1820–1895",
+    "description": "Der deutsche Revolutionstheoretiker Engels war Mitautor des Kommunistischen Manifests und finanzierte Marx mit der Mühle seiner Familie, indem er die Unterdrückung der Frauen und den Staat an Privateigentum knüpfte und den Krieg als revolutionäre Kunst studierte."
+  },
+  {
+    "id": "carl-menger",
+    "name": "Carl Menger",
+    "role": "Ökonom",
+    "lifespan": "1840–1921",
+    "description": "Der österreichische Ökonom Menger gründete die Österreichische Schule mit der subjektiven Werttheorie, gewann den Methodenstreit gegen die deutschen Historizisten und war ein klassischer Liberaler, der immer noch den staatlichen Schutz gegen missbräuchliche Arbeitgeber akzeptierte."
+  },
+  {
+    "id": "henry-ford",
+    "name": "Henry Ford",
+    "role": "Industrieller",
+    "description": "Ford, der Gründer der Ford Motor Company, schuf das Fließband und den Fünf-Dollar-Tag und steigerte damit den Konsum der Arbeiter. er war im Ersten Weltkrieg Pazifist und verbreitete in den 1920er Jahren antisemitische Propaganda."
+  },
+  {
+    "id": "mark-zuckerberg",
+    "name": "Mark Zuckerberg",
+    "role": "Unternehmer",
+    "description": "Als Gründer von Facebook und Meta baute Zuckerberg das größte soziale Netzwerk der Welt auf, setzte sich für globale Konnektivität ein und begann nach Jahren der aktiven Moderation, die Faktenprüfung im Namen der freien Meinungsäußerung einzuschränken."
+  },
+  {
+    "id": "warren-buffett",
+    "name": "Warren Buffett",
+    "role": "Investor",
+    "description": "Der Investor hinter Berkshire Hathaway, Buffett, der Value Investing populär machte, plädiert für höhere Steuern für die Superreichen und versprach, fast sein gesamtes Vermögen zu verschenken, und kritisierte die Ungleichheit, die das System hervorruft."
+  },
+  {
+    "id": "jeff-bezos",
+    "name": "Jeff Bezos",
+    "role": "Unternehmer",
+    "description": "Als Gründer von Amazon und Blue Origin hat Bezos den globalen Einzelhandel durch Logistik und Cloud Computing neu gestaltet, sich in seinen Lagern gegen die Gewerkschaftsbildung gewehrt und auf die industrielle Expansion der Menschheit in den Weltraum gesetzt."
+  },
+  {
+    "id": "jensen-huang",
+    "name": "Jensen Huang",
+    "role": "Unternehmer",
+    "description": "Huang, Mitbegründer und Vorstandsvorsitzender von NVIDIA, hat den Grafikprozessor zum Motor der künstlichen Intelligenz gemacht, verteidigt globale Halbleiterlieferketten und kritisiert Exportkontrollen, die den Technologiemarkt fragmentieren."
+  },
+  {
+    "id": "sam-altman",
+    "name": "Sam Altman",
+    "role": "Unternehmer",
+    "description": "Altman, CEO von OpenAI, leitete die Mainstreamung der generativen künstlichen Intelligenz, plädiert für eine internationale Regulierung des Bereichs und finanziert Experimente zum universellen Grundeinkommen als Antwort auf die Automatisierung."
+  },
+  {
+    "id": "olavo-de-carvalho",
+    "name": "Olavo de Carvalho",
+    "role": "Schriftsteller und Polemiker",
+    "description": "Als brasilianischer Schriftsteller und Polemiker prägte Olavo eine Generation der neuen Rechten, indem er das angriff, was er als Kulturmarxismus bezeichnete, indem er christliche Traditionen, moralischen Konservatismus und tiefes Misstrauen gegenüber akademischen Institutionen verteidigte."
+  },
+  {
+    "id": "jose-dirceu",
+    "name": "José Dirceu",
+    "role": "Politiker und Aktivist",
+    "description": "Dirceu, ein Guerillakämpfer gegen die Diktatur und Gründer der Arbeiterpartei, war Lulas Stabschef, wurde im Mensalão-Skandal verurteilt, seine Lava-Jato-Strafen wurden aufgehoben und er kandidiert 2026 für den Kongress."
+  },
+  {
+    "id": "charlie-kirk",
+    "name": "Charlie Kirk",
+    "role": "Konservativer Aktivist",
+    "description": "Kirk, Gründer von Turning Point USA, organisierte konservativen Aktivismus an amerikanischen Universitäten zur Verteidigung freier Märkte, des Christentums und der Einwanderungskontrolle, bis er 2025 bei einer Veranstaltung in Utah ermordet wurde."
+  },
+  {
+    "id": "nikolas-ferreira",
+    "name": "Nikolas Ferreira",
+    "role": "Kongressabgeordneter und digitaler Aktivist",
+    "description": "Nikolas, Brasiliens meistgewählter Bundesabgeordneter im Jahr 2022 und Kandidat für eine Wiederwahl im Jahr 2026, baute seinen Einfluss online aus, indem er konservative Moral, das Christentum, Waffenrechte und die Opposition gegen die Linke verteidigte."
+  },
+  {
+    "id": "celso-furtado",
+    "name": "Celso Furtado",
+    "role": "Ökonom",
+    "description": "Furtado, ein brasilianischer Ökonom der ECLAC-Schule, erklärte Unterentwicklung als historisches Ergebnis der internationalen Arbeitsteilung und verteidigte die geplante Industrialisierung, die Landreform und einen Entwicklungsstaat."
+  },
+  {
+    "id": "martinho-lutero",
+    "name": "Martin Luther",
+    "role": "Protestantischer Reformator",
+    "description": "Luther, der deutsche Mönch, der mit der Anfechtung des Ablasshandels die protestantische Reformation einleitete, verteidigte die Erlösung durch den Glauben und die Bibel im Volksmund, unterstützte jedoch die Fürsten gegen den Bauernaufstand von 1525."
+  },
+  {
+    "id": "paulo-de-tarso",
+    "name": "Heiliger Paulus (Paulus von Tarsus)",
+    "role": "Apostel und Theologe",
+    "description": "Paulus, der Apostel, der das Christentum in die griechisch-römische Welt trug, etablierte die Erlösung durch Gnade anstelle des mosaischen Gesetzes, verzichtete auf die Beschneidung für Nichtjuden und predigte die Unterwerfung unter die etablierte Autorität."
+  },
+  {
+    "id": "roberto-campos",
+    "name": "Roberto Campos",
+    "role": "Ökonom und Diplomat",
+    "description": "Campos, ein brasilianischer Ökonom und Diplomat, fungierte unter dem Militärregime als Planungsminister, gründete die Zentralbank und die Wohnungsbaubank und wurde zum einflussreichsten Verfechter des Wirtschaftsliberalismus und der Privatisierung des Landes."
+  },
+  {
+    "id": "bresser-pereira",
+    "name": "Luiz Carlos Bresser-Pereira",
+    "role": "Ökonom",
+    "description": "Bresser-Pereira, ein brasilianischer Ökonom und ehemaliger Finanzminister, formulierte den neuen Entwicklungalismus und verteidigte einen wettbewerbsfähigen Wechselkurs, eine nationale Industrie und einen reformierten Staat, der das Wachstum vorantreibt, ohne die Demokratie aufzugeben."
+  },
+  {
+    "id": "jack-ma",
+    "name": "Jack Ma",
+    "role": "Unternehmer",
+    "description": "Ma, der Gründer von Alibaba und Mitglied der Kommunistischen Partei Chinas, förderte Unternehmertum, globalen Handel und Technologie, verteidigte die Arbeitskultur von 996 und kritisierte die staatliche Finanzregulierung vor dem Vorgehen der Ant Group."
+  },
+  {
+    "id": "rong-yiren",
+    "name": "Rong Yiren",
+    "role": "Industrieller und Staatsbeamter",
+    "description": "Rong, ein chinesischer Industrieller, bekannt als „Roter Kapitalist“, kooperierte nach 1949 mit dem Regime, gründete die staatliche CITIC, um ausländisches Kapital anzuziehen, und wurde während der Marktreformen Chinas Vizepräsident."
+  },
+  {
+    "id": "domenico-losurdo",
+    "name": "Domenico Losurdo",
+    "role": "Marxistischer Historiker und Philosoph",
+    "description": "Losurdo, ein italienischer marxistisch-leninistischer Historiker und Philosoph, kritisierte Liberalismus, Kolonialismus und Antikommunismus, bewertete Stalin neu und verteidigte das Post-Mao-China als nationalen Weg des sozialistischen Übergangs."
+  },
+  {
+    "id": "espinosa",
+    "name": "Baruch Spinoza",
+    "role": "Philosoph",
+    "description": "Spinoza, ein niederländischer rationalistischer Philosoph portugiesisch-jüdischer Abstammung, identifizierte Gott mit der Natur, lehnte Dogmen und freien Willen ab und plädierte in der Ethik und der theologisch-politischen Abhandlung für Toleranz, Gedankenfreiheit und Demokratie als das rationalste Regime."
+  },
+  {
+    "id": "mikhail-gorbachev",
+    "name": "Michail Gorbatschow",
+    "role": "Staatsmann",
+    "description": "Der letzte Führer der Sowjetunion, Gorbatschow, startete Perestroika und Glasnost, liberalisierte die Wirtschaft und die Presse, reduzierte das Atomwaffenarsenal des Westens und ließ den Fall der Berliner Mauer zu, was den Zusammenbruch des kommunistischen Blocks beschleunigte."
+  },
+  {
+    "id": "arthur-schopenhauer",
+    "name": "Arthur Schopenhauer",
+    "role": "Philosoph",
+    "description": "Schopenhauer, ein deutscher Philosoph, sah im blinden Willen die irrationale Essenz der Realität, eine Quelle ewigen Leidens, und befürwortete Mitgefühl, Kunst und asketischen Verzicht als einzige Erleichterung, in einem Pessimismus, der jeder Aufklärung und jedem politischen Optimismus skeptisch gegenüberstand."
+  },
+  {
+    "id": "max-weber",
+    "name": "Max Weber",
+    "role": "Soziologe",
+    "description": "Als deutscher Soziologe und Begründer der modernen Soziologie analysierte Weber die rational-rechtliche Bürokratie, unterschied Arten legitimer Autorität und verband die protestantische Ethik mit dem Geist des Kapitalismus, ohne ein eigenes politisches Programm vorzugeben."
+  },
+  {
+    "id": "jiang-zemin",
+    "name": "Jiang Zemin",
+    "role": "Generalsekretär der Kommunistischen Partei Chinas",
+    "lifespan": "1926–2022",
+    "description": "Jiang war von 1989 bis 2002 Generalsekretär der Kommunistischen Partei Chinas und bewahrte das Parteimonopol nach dem Platz des Himmlischen Friedens, unterdrückte Falun Gong und förderte die Drei Repräsentanten, den WTO-Beitritt und die Reform staatlicher Unternehmen."
+  },
+  {
+    "id": "hu-jintao",
+    "name": "Hu Jintao",
+    "role": "Generalsekretär der Kommunistischen Partei Chinas",
+    "lifespan": "1942–",
+    "description": "Als Generalsekretär der Kommunistischen Partei Chinas von 2002 bis 2012 formulierte Hu die Harmonische Gesellschaft und wissenschaftliche Entwicklung, nachhaltiges Wachstum mit höheren Sozialausgaben und verschärfter digitaler Zensur und Unterdrückung in Tibet und Xinjiang."
+  },
+  {
+    "id": "tony-blair",
+    "name": "Tony Blair",
+    "role": "Staatsmann",
+    "lifespan": "1953–",
+    "description": "Blair, der von 1997 bis 2007 britische Premierminister war, führte New Labour mit Märkten, Investitionen in Bildung und strengen Strafen auf den dritten Weg, unterstützte die Invasion im Irak und setzt sich nun für digitale IDs und KI in der Regierung ein."
+  },
+  {
+    "id": "geraldo-alckmin",
+    "name": "Geraldo Alckmin",
+    "role": "Vizepräsident von Brasilien",
+    "lifespan": "1952–",
+    "description": "Als viermaliger Gouverneur von São Paulo für die Mitte-Rechts-Partei PSDB, mit Zugeständnissen, PPPs und der Isolation von Anführern von Gefängnisbanden, wechselte Alckmin zur PSB und ist Lulas Vizepräsident und Industrieminister, der die Reindustrialisierung und das Mercosur-EU-Abkommen unterstützt und Abtreibungen ablehnt."
+  },
+  {
+    "id": "jrr-tolkien",
+    "name": "J. R. R. Tolkien",
+    "role": "Schriftsteller und Philologe",
+    "lifespan": "1892–1973",
+    "description": "Der Oxford-Philologe und Autor von „Der Herr der Ringe“ Tolkien war ein gläubiger Katholik, der dem modernen Staat und der Industrialisierung misstraute, sagte, er neige zur Anarchie oder verfassungswidrigen Monarchie und idealisierte das ländliche Leben im Auenland."
+  },
+  {
+    "id": "papa-leao-xiii",
+    "name": "Papst Leo XIII",
+    "role": "Religiöser Führer",
+    "lifespan": "1810–1903",
+    "description": "Als Papst von 1878 bis 1903 begründete Leo"
+  },
+  {
+    "id": "barao-do-rio-branco",
+    "name": "Baron von Rio Branco",
+    "role": "Diplomat und Außenminister",
+    "lifespan": "1845–1912",
+    "description": "Der Baron von Rio Branco, der von 1902 bis 1912 Außenminister war, regelte die Grenzen Brasiliens durch Schiedsverfahren und Verhandlungen, wie in Acre und Misiones, rückte das Land näher an die Vereinigten Staaten heran und machte Recht und Diplomatie zur Grundlage der Außenpolitik."
+  },
+  {
+    "id": "rui-barbosa",
+    "name": "Rui Barbosa",
+    "role": "Jurist und Senator",
+    "lifespan": "1849–1923",
+    "description": "Der Jurist und Senator Rui Barbosa entwarf Brasiliens erste republikanische Verfassung, setzte sich für Föderalismus, Habeas Corpus und bürgerliche Freiheiten ein, trat in Den Haag für die Gleichheit der Nationen ein und leitete die Zivilkampagne gegen den Militarismus."
+  },
+  {
+    "id": "carlos-lacerda",
+    "name": "Carlos Lacerda",
+    "role": "Journalist und Gouverneur",
+    "lifespan": "1914–1977",
+    "description": "Lacerda, Journalistin und Vorsitzende der UDN-Partei, tauschte den jugendlichen Kommunismus gegen liberalen Antikommunismus ein, half Vargas zu stürzen und den Putsch von 1964 zu unterstützen, regierte Guanabara mit großen öffentlichen Arbeiten und Favela-Räumungen und gründete später die Broad Front."
+  },
+  {
+    "id": "luis-carlos-prestes",
+    "name": "Luís Carlos Prestes",
+    "role": "Kommunistischer Führer",
+    "lifespan": "1898–1990",
+    "description": "Prestes, Vorsitzender der Kolonne Prestes und jahrzehntelang Vorsitzender der Kommunistischen Partei Brasiliens, führte den kommunistischen Aufstand von 1935 an, wurde unter dem Estado Novo inhaftiert, 1945 zum Senator gewählt und folgte der sowjetischen Linie, bis er 1980 mit der Partei brach."
+  },
+  {
+    "id": "mario-covas",
+    "name": "Mário Covas",
+    "role": "Gouverneur von São Paulo",
+    "lifespan": "1930–2001",
+    "description": "Der von der Diktatur seines Mandats beraubte Oppositionsführer und Gründer der PSDB, Covas, rief im Wahlkampf 1989 zu einem Kapitalismusschock auf und verfolgte als Gouverneur von São Paulo Haushaltsanpassungen, Privatisierungen und Zugeständnisse mit einer sozialdemokratischen, ethischen Botschaft."
+  },
+  {
+    "id": "barao-de-maua",
+    "name": "Baron von Mauá",
+    "role": "Industrieller und Bankier",
+    "lifespan": "1813–1889",
+    "description": "Mauá, Industrieller und Bankier des brasilianischen Reiches, gründete eine Werft, eine Gießerei, Brasiliens erste Eisenbahn und Ufer auf der anderen Seite des Rio Platja; Als liberaler Kritiker der Sklaverei geriet er mit der restriktiven Kreditpolitik der Regierung in Konflikt und ging 1875 bankrott."
+  },
+  {
+    "id": "paulo-guedes",
+    "name": "Paulo Guedes",
+    "role": "Ökonom",
+    "lifespan": "1949–",
+    "description": "Als in Chicago ausgebildeter Ökonom und Bolsonaros Wirtschaftsminister führte Guedes eine Rentenreform und die Autonomie der Zentralbanken durch, predigte weitreichende Privatisierungen, die nie stattfanden, und lockerte die Bundesausgabenobergrenze."
+  },
+  {
+    "id": "guilherme-boulos",
+    "name": "Guilherme Boulos",
+    "role": "Aktivist und Minister",
+    "lifespan": "1982–",
+    "description": "Boulos, Gründer der Obdachlosenbewegung und meistgewählter Bundesabgeordneter für São Paulo im Jahr 2022, stieg aus den Kämpfen um Wohnungsbau und Stadtreform nach links auf und trat 2025 dem Präsidialkabinett bei."
+  },
+  {
+    "id": "alexandre-de-moraes",
+    "name": "Alexandre de Moraes",
+    "role": "Jurist und Richter am Obersten Gerichtshof",
+    "lifespan": "1968–",
+    "description": "Als Richter am Obersten Gerichtshof und ehemaliger Staatssicherheitsminister von São Paulo leitete Moraes die Strafverfolgung des Putschversuchs im Januar 2023 und des dafür verurteilten ehemaligen Präsidenten und wurde zum Hauptziel der Rechten."
+  },
+  {
+    "id": "tarcisio-de-freitas",
+    "name": "Tarcísio de Freitas",
+    "role": "Gouverneur und Ingenieur",
+    "lifespan": "1975–",
+    "description": "Tarcísio, ein Militäringenieur und Infrastrukturminister von Bolsonaro, regiert São Paulo seit 2023 mit Zugeständnissen, Privatisierungen und einem technokratischen Management-Pitch und stellt sich 2026 für eine Wiederwahl."
+  },
+  {
+    "id": "joao-doria",
+    "name": "João Doria",
+    "role": "Geschäftsmann und Politiker",
+    "lifespan": "1957–",
+    "description": "Als Geschäftsmann und Rundfunksprecher war Doria Bürgermeister und Gouverneur von São Paulo, leitete die Covid-Impfkampagne gegen die Bundesregierung und privatisierte staatliche Unternehmen; Jetzt ist er parteilos und unterstützt einen zentristischen Weg."
+  },
+  {
+    "id": "eduardo-leite",
+    "name": "Eduardo Leite",
+    "role": "Gouverneur",
+    "lifespan": "1985–",
+    "description": "Leite, Gouverneur von Rio Grande do Sul, privatisierte die staatlichen Wasser- und Energieversorger und reformierte sein Rentensystem; Als erster brasilianischer Gouverneur, der sich als schwul outete, wechselte er die Partei, um 2026 zu kandidieren."
+  },
+  {
+    "id": "fernando-haddad",
+    "name": "Fernando Haddad",
+    "role": "Ökonom und Politiker",
+    "lifespan": "1963–",
+    "description": "Als Wirtschaftswissenschaftler und ehemaliger Bürgermeister von São Paulo fungierte Haddad als Bildungs- und Finanzminister und verabschiedete einen neuen Steuerrahmen und eine bahnbrechende Steuerreform. Er verließ das Kabinett im Jahr 2026, um für das Amt des Gouverneurs des Bundesstaates zu kandidieren."
+  },
+  {
+    "id": "nero",
+    "name": "Nero",
+    "role": "Römischer Kaiser",
+    "lifespan": "37–68",
+    "description": "Der letzte julisch-claudische Kaiser Nero ließ seine eigene Mutter Agrippina töten, verfolgte Christen nach dem Großen Brand von Rom im Jahr 64 n. Chr. und wurde immer tyrannischer und extravaganter, bis er im Jahr 68 durch Selbstmord die Dynastie beendete."
+  },
+  {
+    "id": "cristovao-colombo",
+    "name": "Christoph Kolumbus",
+    "role": "Seefahrer und Kolonialgouverneur",
+    "lifespan": "c. 1451–1506",
+    "description": "Als genuesischer Seefahrer, der für die Katholischen Könige segelte, erreichte er 1492 Amerika auf der Suche nach einer Handelsroute nach Indien. Als Kolonialgouverneur versklavte er indigene Völker auf der Suche nach Gold und wurde wegen Machtmissbrauchs verhaftet und in Ketten nach Spanien geschickt."
+  },
+  {
+    "id": "guilherme-de-orange",
+    "name": "Wilhelm von Oranien",
+    "role": "Anführer der niederländischen Revolte",
+    "lifespan": "1533–1584",
+    "description": "Als lutherisch geborener Adliger, der zum Katholizismus und später zum Calvinismus konvertierte, führte Wilhelm den niederländischen Aufstand gegen Philipp II. von Spanien an, setzte sich für relative religiöse Toleranz ein und wurde 1584 von einem spanischen Agenten ermordet, wodurch er zum „Vater des Vaterlandes“ wurde."
+  },
+  {
+    "id": "rene-descartes",
+    "name": "René Descartes",
+    "role": "Philosoph und Mathematiker",
+    "lifespan": "1596–1650",
+    "description": "Als französischer Philosoph und Mathematiker, Vater der modernen Philosophie und Schöpfer der analytischen Geometrie formulierte Descartes den methodischen Zweifel und den Geist-Körper-Dualismus („Ich denke, also bin ich“). Er lebte in der toleranten niederländischen Republik und vermied nach Galilei Konflikte mit der Kirche."
+  },
+  {
+    "id": "isaac-newton",
+    "name": "Isaac Newton",
+    "role": "Physiker und Mathematiker",
+    "lifespan": "1642–1727",
+    "description": "Newton, ein englischer Physiker und Mathematiker, begründete in den „Principia Mathematica“ die klassische Mechanik und die Infinitesimalrechnung. Er leitete die Royal Society mit eiserner Faust und jagte als Meister der Royal Mint Fälscher bis zum Galgen. Ein geheimer Alchemist und Antitrinitarier."
+  },
+  {
+    "id": "einstein",
+    "name": "Albert Einstein",
+    "role": "Theoretischer Physiker",
+    "lifespan": "1879–1955",
+    "description": "Als deutsch-schweizerisch-amerikanischer theoretischer Physiker entwickelte er die Relativitätstheorien und gewann 1921 den Nobelpreis. Als jüdischer Flüchtling vor dem Nationalsozialismus im Jahr 1933 war er Pazifist, erklärter Sozialist in „Warum Sozialismus?“ und ein Verfechter der Weltregierung und der Bürgerrechte."
+  },
+  {
+    "id": "voltaire",
+    "name": "Voltaire",
+    "role": "Aufklärungsphilosoph und Schriftsteller",
+    "lifespan": "1694–1778",
+    "description": "Als französischer Schriftsteller und Philosoph der Aufklärung griff er den religiösen Fanatismus und die Kirche an („zerschmettere das berüchtigte Ding“), setzte sich in der Calas-Affäre für freie Meinungsäußerung und Toleranz ein, bevorzugte jedoch die aufgeklärte Monarchie gegenüber der Volksdemokratie. Deist, Autor von Candide."
+  },
+  {
+    "id": "nikola-tesla",
+    "name": "Nikola Tesla",
+    "role": "Erfinder und Elektroingenieur",
+    "lifespan": "1856–1943",
+    "description": "Als serbisch-amerikanischer Erfinder und Pionier von Wechselstrom- und Induktionsmotoren konkurrierte er mit Edison im „Krieg der Ströme“. Als Visionär, der von drahtloser Energie besessen war, betrachtete er die universelle Elektrifizierung als Befreiung des Menschen und predigte Weltfrieden durch Technologie."
+  },
+  {
+    "id": "alan-turing",
+    "name": "Alan Turing",
+    "role": "Mathematiker und Informatiker",
+    "lifespan": "1912–1954",
+    "description": "Als britischer Mathematiker und Logiker knackte er in Bletchley Park den Nazi-Enigma-Code und legte die theoretischen Grundlagen der Informatik (Turing-Maschine, Turing-Test). 1952 wegen Homosexualität angeklagt, chemisch kastriert, starb er 1954; 2013 posthum begnadigt."
+  },
+  {
+    "id": "sergio-moro",
+    "name": "Sérgio Moro",
+    "role": "Ehemaliger Richter und Politiker",
+    "lifespan": "1972–",
+    "description": "Als ehemaliger Bundesrichter leitete Moro die Operation Car Wash (Lava Jato), Brasiliens größte Korruptionsermittlung, die sich gegen den staatlichen Ölgiganten Petrobras richtete, und diente dann als Justizminister unter Bolsonaro, bevor er zurücktrat. kandidiert nun für das Amt des Gouverneurs von Paraná im Jahr 2026."
+  },
+  {
+    "id": "belisario",
+    "name": "Belisar",
+    "role": "Byzantinischer General",
+    "lifespan": "c. 500–565",
+    "description": "Als erfolgreichster Feldherr von Byzanz unter Justinian I. eroberte er das vandalische Nordafrika und das ostgotische Italien zurück und schlug die Nika-Unruhen (532) mit einem Massaker im Hippodrom nieder. Er blieb dem Kaiser auch unter Verdacht und Demütigung treu und führte eine streng disziplinierte Armee."
+  },
+  {
+    "id": "robert-oppenheimer",
+    "name": "J. Robert Oppenheimer",
+    "role": "Theoretischer Physiker",
+    "lifespan": "1904–1967",
+    "description": "Amerikanischer theoretischer Physiker, der das Manhattan-Projekt in Los Alamos leitete und weithin als Vater der Atombombe gilt. Nach Hiroshima und Nagasaki setzte er sich für die zivile und internationale Kontrolle von Atomwaffen ein und ihm wurde während der McCarthy-Ära (1954) seine Sicherheitsfreigabe entzogen."
+  },
+  {
+    "id": "kim-kataguiri",
+    "name": "Kim Kataguiri",
+    "role": "Bundesabgeordneter",
+    "lifespan": "1996–",
+    "description": "Als Bundesabgeordneter, MBL-Mitbegründer und einziger Vertreter der Mission Party im Kongress verbindet er Wirtschaftsliberalismus und Freihandel mit einer strengen Politik gegen Kriminalität, institutionellen Reformen, technologieorientierter Industriepolitik und gemäßigtem Sozialkonservatismus."
+  },
+  {
+    "id": "pablo-marcal",
+    "name": "Pablo Marçal",
+    "role": "Unternehmer und Politiker",
+    "lifespan": "1987–",
+    "description": "Evangelischer Unternehmer und Influencer, dessen Präsidentschaftsregistrierung 2026 abgelehnt wurde. Er befürwortet eine Unternehmergesellschaft, Privatisierung, digitales technokratisches Management und ein landesweites Vorgehen gegen Banden, indem er Steuersenkungen mit fortgesetzten Geldtransfers kombiniert."
+  },
+  {
+    "id": "richard-rasmussen",
+    "name": "Richard Rasmussen",
+    "role": "Biologe und Fernsehmoderator",
+    "lifespan": "1970–",
+    "description": "Als Biologe und TV-Abenteuermoderator fungierte er als Tourismusbotschafter von Bolsonaro und kandidierte 2026 für den Kongress. Er setzt sich für Wildtierzüchter, Amazonas-Kleinbauern und Viehweiden als Brandschutz ein und kritisiert Umweltschützer und NGOs."
+  },
+  {
+    "id": "machado-de-assis",
+    "name": "Machado de Assis",
+    "role": "Schriftsteller",
+    "lifespan": "1839–1908",
+    "description": "Als größter Schriftsteller Brasiliens und Gründer der Brasilianischen Akademie der Literatur porträtierte er ironischerweise die Elite des Zweiten Kaiserreichs. Als Beamter war er ein gemäßigter Liberaler, ein diskreter Abolitionist und skeptisch gegenüber Religion und Wissenschaft."
+  },
+  {
+    "id": "santos-dumont",
+    "name": "Santos Dumont",
+    "role": "Erfinder und Flieger",
+    "lifespan": "1873–1932",
+    "description": "Luftfahrtpionier, der 1906 in Paris die 14-bis flog und seine Erfindungen der Öffentlichkeit überließ. Beunruhigt über den militärischen Einsatz von Flugzeugen forderte er den Völkerbund auf, Flugzeuge aus der Kriegsführung zu verbannen."
+  },
+  {
+    "id": "tiradentes",
+    "name": "Tiradentes",
+    "role": "Anführer der Minas-Verschwörung",
+    "lifespan": "1746–1792",
+    "description": "Fähnrich und Zahnarzt, der die Minas-Verschwörung gegen die Kolonialbesteuerung und die portugiesische Herrschaft anführte. Inspiriert von der Unabhängigkeit Amerikas sah die Handlung eine Republik mit einer Universität und lokaler Produktion vor; er wurde 1792 gehängt."
+  },
+  {
+    "id": "john-d-rockefeller",
+    "name": "John D. Rockefeller",
+    "role": "Industrieller und Philanthrop",
+    "lifespan": "1839–1937",
+    "description": "Als Gründer von Standard Oil baute er das größte Industriemonopol in der amerikanischen Geschichte auf, bis es 1911 vom Obersten Gerichtshof aufgelöst wurde. Als gläubiger, abstinenter Baptist wurde er zum größten Philanthropen seiner Zeit und gründete die University of Chicago und die Rockefeller Foundation."
+  },
+  {
+    "id": "dostoievski",
+    "name": "Fjodor Dostojewski",
+    "role": "Schriftsteller",
+    "lifespan": "1821–1881",
+    "description": "Der russische Schriftsteller wurde wegen sozialistischer Aktivitäten zu Zwangsarbeit in Sibirien verurteilt und konvertierte zum slawophilen, monarchistischen orthodoxen Christentum. In „Dämonen und Die Brüder Karamasow“ griff er den Nihilismus, den Atheismus und den westlichen Rationalismus an."
+  },
+  {
+    "id": "thomas-edison",
+    "name": "Thomas Edison",
+    "role": "Erfinder und Geschäftsmann",
+    "lifespan": "1847–1931",
+    "description": "Als amerikanischer Erfinder und Geschäftsmann mit über tausend Patenten schuf er den Phonographen, die kommerzielle Glühbirne und das erste industrielle Forschungslabor. Er unterstützte Gleichstrom gegen Tesla und war ein deistischer Freidenker, der der organisierten Religion kritisch gegenüberstand."
+  },
+  {
+    "id": "franz-kafka",
+    "name": "Franz Kafka",
+    "role": "Schriftsteller",
+    "lifespan": "1883–1924",
+    "description": "Als deutschsprachiger jüdischer Schriftsteller aus Prag porträtierte er in „Der Prozess“ und „Das Schloss“ den Einzelnen, der von undurchsichtigen Bürokratien und willkürlicher Autorität niedergeschlagen wird. Als Arbeiterversicherungsbeamter sympathisierte er mit tschechischen Anarchisten und dem kulturellen Zionismus."
+  },
+  {
+    "id": "galileu-galilei",
+    "name": "Galileo Galilei",
+    "role": "Physiker und Astronom",
+    "lifespan": "1564–1642",
+    "description": "Toskanischer Physiker und Astronom, Vater der experimentellen wissenschaftlichen Methode, er verbesserte das Teleskop und verteidigte den kopernikanischen Heliozentrismus. Als Katholik wurde er 1633 von der Inquisition verurteilt und verbrachte seine letzten Jahre unter Hausarrest unter der Schirmherrschaft der Medici."
+  },
+  {
+    "id": "thomas-muntzer",
+    "name": "Thomas Müntzer",
+    "role": "Theologe und Revolutionsführer",
+    "lifespan": "c. 1489–1525",
+    "description": "Radikaler Reformationsprediger, der mit Luther brach und Bauern und Bergleute im Deutschen Bauernkrieg von 1525 anführte. Er predigte eine apokalyptische Theokratie der Auserwählten mit gemeinsamen Gütern und dem Sturz gottloser Fürsten; er wurde nach Frankenhausen enthauptet."
+  },
+  {
+    "id": "paulo-freire",
+    "name": "Paulo Freire",
+    "role": "Pädagoge und Philosoph",
+    "lifespan": "1921–1997",
+    "description": "Als brasilianischer Pädagoge und Autor von „Pädagogik der Unterdrückten“ entwickelte er eine Alphabetisierungsmethode für Erwachsene, die auf politischer Bewusstseinsbildung basiert. Durch die Diktatur von 1964 ins Exil verbannt, war er der Befreiungstheologie verbunden und leitete später die Schulen von São Paulo für die Arbeiterpartei."
+  },
+  {
+    "id": "romeu-zema",
+    "name": "Romeu Zema",
+    "role": "Gouverneur und Geschäftsmann",
+    "lifespan": "1964–",
+    "description": "Er ist Geschäftsmann und Gouverneur der Novo-Partei von Minas Gerais (2019–2026) und ein Präsidentschaftskandidat für 2026. Er schlägt vor, jedes staatliche Unternehmen zu privatisieren, die BRICS-Staaten zu verlassen, den Obersten Gerichtshof einzuschränken, das Strafmündigkeitsalter herabzusetzen und jegliche Abtreibung zu verbieten."
+  },
+  {
+    "id": "ronaldo-caiado",
+    "name": "Ronaldo Caiado",
+    "role": "Gouverneur und Arzt",
+    "lifespan": "1949–",
+    "description": "Er ist orthopädischer Chirurg, Gründer des Agrarunternehmens UDR und Gouverneur von Goiás (2019–2026). Er ist der Präsidentschaftskandidat der PSD für 2026. Er verspricht eine harte Linie gegenüber kriminellen Banden, eine weitreichende Amnestie für die Angeklagten vom 8. Januar, Ausgabenkontrolle und den Schutz ländlichen Eigentums."
+  },
+  {
+    "id": "jose-antonio-kast",
+    "name": "José Antonio Kast",
+    "role": "Präsident von Chile",
+    "lifespan": "1966–",
+    "description": "Gründer der Republikanischen Partei Chiles und Präsident seit März 2026, ein konservativer Katholik, der Pinochets Vermächtnis offen gelobt hat. Er verspricht, irreguläre Migranten auszuweisen, die Strafen zu verschärfen, die Ausgaben zu kürzen und die Unternehmenssteuern zu senken, und ist gegen Abtreibung."
+  },
+  {
+    "id": "yamandu-orsi",
+    "name": "Yamandu Orsi",
+    "role": "Präsident von Uruguay",
+    "lifespan": "1967–",
+    "description": "Geschichtslehrer, Mujicas politischer Erbe in der MPP und seit 2025 Präsident von Uruguay für die Breite Front. Als gemäßigter, konsenssuchender Linker verbindet er stärkere Sozialprogramme und Polizeiarbeit mit finanzpolitischer Umsicht und dem Verzicht auf neue Steuern und unterzeichnete ein Sterbehilfegesetz."
+  },
+  {
+    "id": "santiago-pena",
+    "name": "Santiago Peña",
+    "role": "Präsident von Paraguay",
+    "lifespan": "1978–",
+    "description": "Ehemaliger IWF-Ökonom und seit 2023 Präsident Paraguays für die Colorado Party, unterstützt von Horacio Cartes. Er hält die Steuern niedrig, pflegt Beziehungen zu Taiwan und orientiert sich an Trump und Israel und setzt sich für die Agrarindustrie und die traditionelle Familie ein."
+  },
+  {
+    "id": "gavin-newsom",
+    "name": "Gavin Newsom",
+    "role": "Gouverneur von Kalifornien",
+    "lifespan": "1967–",
+    "description": "Seit 2019 ist er demokratischer Gouverneur von Kalifornien und Präsidentschaftskandidat für 2028. Er führt den staatlichen Widerstand gegen Trump in den Bereichen Einwanderung, Klima und Umverteilung an. Als Pionier der gleichgeschlechtlichen Ehe in San Francisco reguliert er die KI, geht aber hart gegen Obdachlosenlager vor."
+  },
+  {
+    "id": "jonas-gahr-store",
+    "name": "Jonas Gahr Støre",
+    "role": "Premierminister von Norwegen",
+    "lifespan": "1960–",
+    "description": "Gewerkschaftsführer und Premierminister von Norwegen seit 2021, wiedergewählt im Jahr 2025. Als Pro-NATO-Sozialdemokrat behält er die Vermögenssteuer und die staatliche Equinor bei, verteidigt die Ölförderung und erkennt Palästina neben einer restriktiven Asylpolitik an."
+  },
+  {
+    "id": "felipe-vi",
+    "name": "Felipe VI",
+    "role": "König von Spanien",
+    "lifespan": "1968–",
+    "description": "Seit 2014 König von Spanien, ein militärisch ausgebildeter konstitutioneller Monarch. In seiner Rede vom 3. Oktober 2017 verurteilte er das katalanische Separatisten-Referendum zur Verteidigung der verfassungsmäßigen Einheit; Er verzichtet auf das Erbe seines Vaters und setzt sich für Transparenz und Europäismus ein."
+  },
+  {
+    "id": "friedrich-merz",
+    "name": "Friedrich Merz",
+    "role": "Bundeskanzler von Deutschland",
+    "lifespan": "1955–",
+    "description": "Christlich-demokratischer Bundeskanzler Deutschlands seit 2025 und ehemaliger Chef von BlackRock Deutschland. Er verschärft die Migrations- und Grenzpolitik, lockert die Schuldenbremse zur Aufrüstung des Landes und hält den Schutzwall gegen die AfD aufrecht; Als Katholik ist er sozialkonservativ."
+  },
+  {
+    "id": "naruhito",
+    "name": "Naruhito",
+    "role": "Kaiser von Japan",
+    "lifespan": "1960–",
+    "description": "Seit 2019 Kaiser von Japan, ein Symbol des Staates ohne politische Macht gemäß der pazifistischen Verfassung. Als in Oxford ausgebildeter Historiker und Wasserressourcenexperte drückt er „tiefe Reue“ über den Krieg aus und setzt sich für Frieden, Umwelt und internationale Zusammenarbeit ein."
+  },
+  {
+    "id": "jerome-powell",
+    "name": "Jerome Powell",
+    "role": "Vorsitzender der Federal Reserve (2018–2026)",
+    "lifespan": "1953–",
+    "description": "Der republikanische Anwalt und ehemalige Finanzmanager Powell war von 2018 bis 2026 Vorsitzender der Federal Reserve, bekämpfte den Pandemieschock und die Inflation mit hohen Zinssätzen und verteidigte die Unabhängigkeit der Zentralbank gegen Trumps Druck."
+  },
+  {
+    "id": "augusto-cury",
+    "name": "Augusto Cury",
+    "role": "Psychiater, Schriftsteller und Präsidentschaftskandidat (2026)",
+    "lifespan": "1958–",
+    "description": "Der Psychiater und meistverkaufte Selbsthilfeautor Cury ist ein brasilianischer Präsidentschaftskandidat für Avante im Jahr 2026, der sich für Antipolarisierung, Halbpräsidentialismus, Haushaltsgleichgewicht, Unternehmertum und psychische Gesundheit einsetzt."
+  },
+  {
+    "id": "jefferson-davis",
+    "name": "Jefferson Davis",
+    "role": "Präsident der Konföderierten Staaten",
+    "lifespan": "1808–1889",
+    "description": "Der US-Senator und Kriegsminister Davis präsidierte während des Bürgerkriegs die Konföderierten Staaten und verteidigte die Sezession, die Rechte der Staaten und die Sklaverei als Grundlage der sozialen und wirtschaftlichen Ordnung des Südens."
+  },
+  {
+    "id": "john-c-calhoun",
+    "name": "John C. Calhoun",
+    "role": "Vizepräsident und politischer Theoretiker",
+    "lifespan": "1782–1850",
+    "description": "Der US-Vizepräsident und Senator von South Carolina, Calhoun, formulierte die Doktrin der Annullierung und der gleichzeitigen Mehrheit und verteidigte die Sklaverei als positives Gut, was die Sezession des Südens inspirierte."
+  },
+  {
+    "id": "nestor-kirchner",
+    "name": "Néstor Kirchner",
+    "role": "Präsident von Argentinien",
+    "lifespan": "1950–2010",
+    "description": "Als argentinischer Präsident von 2003 bis 2007 leitete Kirchner den Aufschwung nach der Krise von 2001 mit dem Mitte-Links-Peronismus: Er verhandelte die Schulden neu, brach mit dem IWF, erhöhte die Sozialausgaben und eröffnete Diktaturprozesse erneut."
+  },
+  {
+    "id": "carlos-menem",
+    "name": "Carlos Menem",
+    "role": "Präsident von Argentinien",
+    "lifespan": "1930–2021",
+    "description": "Menem, der von 1989 bis 1999 vom Peronismus zum argentinischen Präsidenten gewählt wurde, befürwortete den Neoliberalismus: Er privatisierte Staatsunternehmen, koppelte den Peso an den Dollar, öffnete die Wirtschaft, schloss sich den USA an und begnadigte Junta-Offiziere."
+  },
+  {
+    "id": "sergio-mattarella",
+    "name": "Sergio Mattarella",
+    "role": "Präsident von Italien",
+    "lifespan": "1941–",
+    "description": "Mattarella ist seit 2015 Präsident Italiens und wird 2022 wiedergewählt. Er stammt aus der linken Christdemokratie und verteidigt die Verfassung, den Europäismus, die NATO und die Unterstützung der Ukraine gegen die Mafia, die seinen Bruder getötet hat."
+  },
+  {
+    "id": "marcelo-rebelo-de-sousa",
+    "name": "Marcelo Rebelo de Sousa",
+    "role": "Präsident von Portugal",
+    "lifespan": "1948–",
+    "description": "Marcelo, Juraprofessor, Fernsehkommentator und ehemaliger PSD-Chef, war von 2016 bis 2026 Präsident Portugals und zeichnete sich durch einen herzlichen, volksnahen Stil, gemäßigten katholischen Konservatismus, Europäismus und die Zusammenarbeit mit linken Regierungen aus."
+  },
+  {
+    "id": "balduino-iv",
+    "name": "Balduin IV",
+    "role": "König von Jerusalem",
+    "lifespan": "1161–1185",
+    "description": "Balduin IV. war von 1174 bis 1185 Kreuzfahrer und König von Jerusalem. Er regierte seit seiner Kindheit als Aussätziger, besiegte Saladin bei Montgisard, verteidigte das lateinische Königreich mit Glauben und Schwert und hielt pragmatische Waffenstillstände mit den Muslimen."
+  },
+  {
+    "id": "otto-strasser",
+    "name": "Otto Strasser",
+    "role": "Politischer Theoretiker",
+    "description": "Als Bruder von Gregor Strasser brach er 1930 mit Hitler und gründete die Schwarze Front, die sich für einen antikapitalistischen, föderalistischen und christlichen Nationalsozialismus mit Land für Bauern einsetzte; Nach seiner Verbannung kehrte er 1955 nach Deutschland zurück."
+  },
+  {
+    "id": "ahmed-al-sharaa",
+    "name": "Ahmed al-Sharaa",
+    "role": "Interimspräsident von Syrien",
+    "lifespan": "1982–",
+    "description": "Ahmed al-Sharaa, Syriens Interimspräsident seit 2025 und ehemaliger HTS-Führer, konzentriert die Macht während des Übergangs, behält den Islam als Hauptrechtsquelle bei und versucht, kurdische Gebiete wieder zu integrieren und Investitionen inmitten konfessioneller Gewalt und Bürgerrechtsbedenken anzuziehen."
+  },
+  {
+    "id": "hafez-al-assad",
+    "name": "Hafez al-Assad",
+    "role": "Präsident von Syrien",
+    "lifespan": "1930–2000",
+    "description": "Hafez al-Assad, der syrische Präsident von 1971 bis 2000, konsolidierte einen militarisierten autoritären Baath-Staat, der arabischen Sozialismus, Nationalismus, Einparteienherrschaft, Patronage und pragmatische regionale Diplomatie vereinte."
+  },
+  {
+    "id": "reza-pahlavi",
+    "name": "Reza Pahlavi",
+    "role": "Iranischer Oppositioneller im Exil",
+    "lifespan": "1960–",
+    "description": "Reza Pahlavi, Sohn des letzten iranischen Schahs und im Exil lebender Oppositioneller, befürwortet einen säkularen demokratischen Übergang, freie Wahlen und die Wahl zwischen Monarchie und Republik. Er priorisiert territoriale Integrität, individuelle Freiheiten und Marktreformen; Er hat den Iran nie regiert."
+  },
+  {
+    "id": "mohammad-reza-pahlavi",
+    "name": "Mohammad Reza Pahlavi",
+    "role": "Letzter Schah von Iran",
+    "lifespan": "1919–1980",
+    "description": "Mohammad Reza Pahlavi, Irans letzter Schah (1941–1979), festigte eine mit dem Westen verbündete autoritäre Monarchie. Die Weiße Revolution förderte Landreform, Industrialisierung und Frauenrechte, während SAVAK die Opposition unterdrückte."
+  },
+  {
+    "id": "gamal-abdel-nasser",
+    "name": "Gamal Abdel Nasser",
+    "role": "Präsident von Ägypten",
+    "lifespan": "1918–1970",
+    "description": "Nasser, von 1956 bis 1970 Präsident Ägyptens, verstaatlichte den Suezkanal und weitete das Staatseigentum und die Landreform aus. Er trat für Panarabismus und Blockfreiheit ein, konzentrierte gleichzeitig die Macht und unterdrückte die Opposition."
+  },
+  {
+    "id": "ernst-junger",
+    "name": "Ernst Jünger",
+    "role": "Deutscher Schriftsteller und Essayist",
+    "lifespan": "1895–1998",
+    "description": "Jünger, ein Veteran des Ersten Weltkriegs und konservativer Revolutionär, lobte in „The Worker“ (1932) die technologische Mobilisierung und kritisierte den bürgerlichen Liberalismus. Er weigerte sich, der NSDAP beizutreten und kritisierte später den Totalitarismus."
+  },
+  {
+    "id": "oswald-spengler",
+    "name": "Oswald Spengler",
+    "role": "Deutscher Philosoph und Historiker",
+    "lifespan": "1880–1936",
+    "description": "Spengler, ein konservativer Revolutionsphilosoph, sah in „Der Untergang des Westens“ Zivilisationen als zyklisch. Er befürwortete den autoritären, antimarxistischen preußischen Sozialismus; Später kritisierte er den Nationalsozialismus, ohne den Nationalismus aufzugeben."
+  },
+  {
+    "id": "fernando-iii-de-castela",
+    "name": "Ferdinand III. von Kastilien",
+    "role": "König von Kastilien und León",
+    "lifespan": "c. 1201–1252",
+    "description": "Er war ab 1217 König von Kastilien und ab 1230 León. Er festigte die Vereinigung der Kronen und eroberte Córdoba und Sevilla. Er regierte als mittelalterlicher katholischer Monarch und förderte die Rechts- und Verwaltungsorganisation in den eroberten Gebieten."
+  },
+  {
+    "id": "muhammad-abduh",
+    "name": "Muhammad Abduh",
+    "role": "Großmufti und islamischer Reformer",
+    "lifespan": "1849–1905",
+    "description": "Abduh, Großmufti von Ägypten und Vater der islamischen Moderne, plädierte für eine Neuinterpretation des Islam durch Vernunft (Ischtihad), reformierte die Lehre an der Al-Azhar und den Religionsgerichten und wandte sich sowohl gegen die Stagnation der Geistlichen als auch gegen die britische Herrschaft."
+  },
+  {
+    "id": "sayyid-qutb",
+    "name": "Sayyid Qutb",
+    "role": "Islamistischer Theoretiker",
+    "lifespan": "1906–1966",
+    "description": "Der Ideologe der Muslimbruderschaft, Qutb, schrieb „Meilensteine“, in denen er erklärte, moderne muslimische Gesellschaften seien in der Dschahiliyya, und forderte eine Vorhut, um Gottes Souveränität zu etablieren. Er wurde 1966 von Nassers Regierung hingerichtet."
+  },
+  {
+    "id": "averroes",
+    "name": "Averroes",
+    "role": "andalusischer Philosoph und Jurist",
+    "lifespan": "1126–1198",
+    "description": "Der aus Córdoba stammende Philosoph, Arzt und Richter Averroes äußerte sich zu Aristoteles und vertrat die Auffassung, dass philosophische Vernunft und Offenbarung des Korans nicht im Widerspruch zueinander stünden und die christliche Scholastik beeinflussten. Er diente am almohadischen Hof und wurde unter dem Druck von Theologen verbannt."
+  },
+  {
+    "id": "alwaleed-bin-talal",
+    "name": "Alwaleed bin Talal",
+    "role": "Saudischer Investor und Prinz",
+    "lifespan": "1955–",
+    "description": "Der saudische Prinz und Gründer der Kingdom Holding, Alwaleed, investierte in Citigroup, Twitter, Four Seasons und News Corp und befürwortete die wirtschaftliche Öffnung und die Beschäftigung von Frauen im Königreich. Er wurde 2017 im Rahmen der Antikorruptionskampagne von Mohammed bin Salman festgenommen."
+  },
+  {
+    "id": "muhammad-ali-jinnah",
+    "name": "Muhammad Ali Jinnah",
+    "role": "Gründer Pakistans",
+    "lifespan": "1876–1948",
+    "description": "Jinnah, Anwalt und Führer der Muslim League, leitete 1947 die Gründung Pakistans auf der Grundlage der Zwei-Nationen-Theorie und war dessen erster Generalgouverneur, der sich für einen Staat mit muslimischer Mehrheit und Religionsfreiheit für Minderheiten einsetzte."
+  },
+  {
+    "id": "saladino",
+    "name": "Saladin",
+    "role": "Sultan von Ägypten und Syrien",
+    "lifespan": "1137–1193",
+    "description": "Als Gründer der Ayyubid-Dynastie vereinte Saladin Ägypten und Syrien, besiegte die Kreuzfahrer bei Hattin und eroberte 1187 Jerusalem zurück. Er wurde zum Symbol des Dschihad gegen die Kreuzzüge und der Ritterlichkeit, die selbst von seinen Feinden anerkannt wurde."
+  },
+  {
+    "id": "david-ben-gurion",
+    "name": "David Ben-Gurion",
+    "role": "Premierminister von Israel",
+    "lifespan": "1886–1973",
+    "description": "Ben-Gurion, Führer des Arbeitszionismus und der Mapai-Partei, proklamierte 1948 die Unabhängigkeit Israels und war dessen erster Premierminister. Er baute einen säkularen, zentralisierten Staat mit einem starken öffentlichen Sektor, Kibbuzim und der Armee als Schule der Nation auf."
+  },
+  {
+    "id": "sergei-melikov",
+    "name": "Sergej Melikow",
+    "role": "Senator und ehemaliger Chef von Dagestan",
+    "lifespan": "1965–",
+    "description": "Melikov, ein General der russischen Nationalgarde und Verbündeter Putins, leitete Dagestan von 2020 bis 2026, einer Zeit, die von Kriegsmobilisierung, dem antisemitischen Flughafenpogrom und dschihadistischen Angriffen geprägt war, und wurde 2026 Senator für Brjansk."
+  },
+  {
+    "id": "imperador-jimmu",
+    "name": "Kaiser Jimmu",
+    "role": "Legendärer Kaiser von Japan",
+    "lifespan": "711–585 v. Chr",
+    "description": "Jimmu, ein Nachkomme der Sonnengöttin Amaterasu, der erste legendäre Kaiser Japans laut Kojiki und Nihon Shoki, soll Yamato mit Waffengewalt erobert und die kaiserliche Linie begründet haben, einen zentralen Mythos des Staats-Shintoismus und des japanischen Nationalismus."
+  },
+  {
+    "id": "imperador-meiji",
+    "name": "Kaiser Meiji",
+    "role": "Kaiser von Japan",
+    "lifespan": "1852–1912",
+    "description": "Kaiser, unter dessen Wiederherstellung 1868 Japan das Shogunat und die Samurai abschaffte, den Staat zentralisierte, unter dem Motto „Reiches Land, starke Armee“ industrialisierte, die Verfassung von 1889 und den Staats-Shintoismus annahm und China und Russland besiegte."
+  },
+  {
+    "id": "oda-nobunaga",
+    "name": "Oda Nobunaga",
+    "role": "Daimyo und Vereiniger Japans",
+    "lifespan": "1534–1582",
+    "description": "Nobunaga, ein Daimyō aus der Sengoku-Zeit, begann die Vereinigung Japans mit massenhaften Arkebusen, setzte das Ashikaga-Shogunat ab, massakrierte die Kriegermönche von Enryaku-ji und Ikko-ikki, schaffte Gilden und Zölle ab und tolerierte jesuitische Missionare."
+  },
+  {
+    "id": "qin-shi-huang",
+    "name": "Qin Shi Huang",
+    "role": "Erster Kaiser von China",
+    "lifespan": "259–210 v. Chr",
+    "description": "König von Qin, der China im Jahr 221 v. Chr. vereinte und sich selbst zum ersten Kaiser erklärte, regierte durch den Legalismus mit strengen Gesetzen, ersetzte den Feudalismus durch zentralisierte Kommandos, standardisierte Schrift und Münzprägung, verbrannte Bücher und begann mit dem Bau der Chinesischen Mauer."
+  },
+  {
+    "id": "carlos-v",
+    "name": "Karl V",
+    "role": "Kaiser des Heiligen Römischen Reiches und König von Spanien",
+    "lifespan": "1500–1558",
+    "description": "Als Erbe der Habsburger vereinte Karl V. Spanien, die Niederlande, das Heilige Römische Reich und die amerikanischen Eroberungen, kämpfte als Verfechter des universellen Katholizismus gegen die lutherische Reformation und die Osmanen, zerschmetterte die Comuneros und dankte 1556 ab."
+  },
+  {
+    "id": "salvador-dali",
+    "name": "Salvador Dalí",
+    "role": "Surrealistischer Maler",
+    "lifespan": "1904–1989",
+    "description": "Der katalanische surrealistische Maler Dalí wurde wegen seiner zwiespältigen Sympathien für den Faschismus aus der Gruppe der Surrealisten ausgeschlossen, unterstützte öffentlich Franco und die Monarchie und vertrat ab 1949 einen katholischen Atommystizismus, der Glaube und Wissenschaft vereinte."
+  },
+  {
+    "id": "pablo-picasso",
+    "name": "Pablo Picasso",
+    "role": "Maler",
+    "lifespan": "1881–1973",
+    "description": "Der spanische Maler und Mitbegründer des Kubismus, Picasso, malte Guernica gegen die Bombenangriffe der Franco-Regierung, trat 1944 der Kommunistischen Partei Frankreichs bei, unterstützte die von der Sowjetunion geführte Friedensbewegung und kehrte nie in Francos Spanien zurück."
+  },
+  {
+    "id": "albert-camus",
+    "name": "Albert Camus",
+    "role": "Schriftsteller und Philosoph",
+    "lifespan": "1913–1960",
+    "description": "Der französisch-algerische Schriftsteller und Nobelpreisträger von 1957, Camus, kämpfte in der Résistance, brach mit Sartre, indem er in „Der Rebell“ die sowjetischen Lager verurteilte, und verteidigte ein plurales Algerien gegen den Terrorismus auf beiden Seiten."
+  },
+  {
+    "id": "victor-gao",
+    "name": "Victor Gao",
+    "role": "Kommentator und Akademiker",
+    "lifespan": "1962–",
+    "description": "Victor Gao, ehemaliger Deng-Xiaoping-Dolmetscher und Vizepräsident der CCG-Denkfabrik, verteidigt die Einparteienherrschaft, die Vereinigung Taiwans mit allen Mitteln, Hongkongs Sicherheitsgesetz und die Behauptung, die NATO habe den Krieg in der Ukraine verursacht."
+  },
+  {
+    "id": "thubten-gyatso",
+    "name": "13. Dalai Lama (Thubten Gyatso)",
+    "role": "Religiöser Führer und Staatsoberhaupt",
+    "lifespan": "1876–1933",
+    "description": "Der 13. Dalai Lama, Oberhaupt des theokratischen Tibets, vertrieb 1913 die Chinesen und proklamierte die Unabhängigkeit, baute eine Armee, einen Posten und eine Währung auf, machte vor den Klöstern einen Rückzieher, indem er die Englischschule schloss, und warnte 1932 vor dem Kommunismus."
+  },
+  {
+    "id": "abraham-isaac-kook",
+    "name": "Abraham Isaac Kook",
+    "role": "Oberrabbiner und Theologe",
+    "lifespan": "1865–1935",
+    "description": "Kook, der erste aschkenasische Oberrabbiner des Mandatsgebietes Palästina, war der führende Theologe des religiösen Zionismus, sah in säkularen Pionieren Instrumente des göttlichen Plans und der Heiligkeit im Land Israel und gründete die Jeschiwa Mercaz HaRav."
+  },
+  {
+    "id": "auguste-blanqui",
+    "name": "Louis Auguste Blanqui",
+    "role": "Revolutionär",
+    "lifespan": "1805–1881",
+    "description": "Der französische Revolutionär und Verschwörer Blanqui argumentierte, dass eine organisierte Minderheit durch Aufstand die Macht ergreifen und eine provisorische Diktatur errichten sollte, verbrachte über dreißig Jahre im Gefängnis, wurde aus seiner Zelle in die Pariser Kommune gewählt und übernahm das Motto „Weder Gott noch Herr“."
+  },
+  {
+    "id": "swrd-bandaranaike",
+    "name": "S. W. R. D. Bandaranaike",
+    "role": "Premierminister von Ceylon",
+    "lifespan": "1899–1959",
+    "description": "Von 1956 bis 1959 war er Premierminister von Ceylon, konvertierte zum Buddhismus, gründete die Freiheitspartei, verstaatlichte Häfen und Busse, machte Singhalesisch zur Amtssprache, strebte nach Blockfreiheit und wurde von einem buddhistischen Mönch ermordet."
+  },
+  {
+    "id": "jose-ii-da-austria",
+    "name": "Joseph II. von Österreich",
+    "role": "Kaiser des Heiligen Römischen Reiches",
+    "lifespan": "1741–1790",
+    "description": "Kaiser des Heiligen Römischen Reiches und Erzherzog von Österreich, Joseph II., schaffte die persönliche Leibeigenschaft ab, verordnete religiöse Toleranz, schloss Hunderte von Klöstern, zwang die Verwaltung zur deutschen Sprache und erlebte mit seinen Reformen Aufstände in Belgien und Ungarn."
+  },
+  {
+    "id": "rei-davi",
+    "name": "König David",
+    "role": "König von Israel",
+    "lifespan": "c. 1040–970 v. Chr",
+    "description": "Der Bibel zufolge vereinte David die Stämme Israels, eroberte Jerusalem und machte es zu seiner Hauptstadt, besiegte die Philister, brachte die Bundeslade in die Stadt und baute ein zentralisiertes Königreich auf, und die Überlieferung schreibt ihm und der Linie des Messias die Psalmen zu."
+  },
+  {
+    "id": "olaf-scholz",
+    "name": "Olaf Scholz",
+    "role": "Ehemaliger deutscher Bundeskanzler",
+    "lifespan": "1958–",
+    "description": "Als Sozialdemokrat und Bundeskanzler von 2021 bis 2025 verkündete Scholz die Zeitenwende mit 100 Milliarden Euro für die Streitkräfte und Waffen für die Ukraine, erhöhte den Mindestlohn auf 12 Euro und verteidigte die Schuldenbremse bis zum Scheitern der Ampelkoalition."
+  },
+  {
+    "id": "jimmy-carter",
+    "name": "Jimmy Carter",
+    "role": "Präsident der Vereinigten Staaten",
+    "lifespan": "1924–2024",
+    "description": "Als demokratischer Präsident und gläubiger Baptist (1977–81) machte Carter die Menschenrechte zum Kern der Außenpolitik, deregulierte Fluggesellschaften und Verkehr, vermittelte Camp David, gab den Panamakanal zurück und fiel nach der Geiselnahme und Stagflation im Iran."
+  },
+  {
+    "id": "lyndon-b-johnson",
+    "name": "Lyndon B. Johnson",
+    "role": "Präsident der Vereinigten Staaten",
+    "lifespan": "1908–1973",
+    "description": "Als demokratischer Präsident von 1963 bis 1969 rief Johnson die Great Society und den Krieg gegen die Armut ins Leben, schuf Medicare und Medicaid und unterzeichnete die Civil Rights and Voting Rights Acts, doch der Vietnamkrieg eskalierte, was seine Popularität zerstörte."
+  },
+  {
+    "id": "helmut-kohl",
+    "name": "Helmut Kohl",
+    "role": "Ehemaliger deutscher Bundeskanzler",
+    "lifespan": "1930–2017",
+    "description": "Als Christdemokrat der CDU und 16 Jahre lang (1982–98) Kanzler führte Kohl die deutsche Wiedervereinigung an, vertiefte die europäische Integration durch den Vertrag von Maastricht und den Euro, führte moderate liberalisierende Reformen durch und fiel nach dem geheimen Spendenskandal."
+  },
+  {
+    "id": "mark-carney",
+    "name": "Mark Carney",
+    "role": "Premierminister von Kanada",
+    "lifespan": "1965–",
+    "description": "Als ehemaliger Gouverneur der Bank of Canada und der Bank of England ist Carney seit 2025 liberaler Premierminister: Er schaffte die CO2-Steuer für Verbraucher ab, beschleunigte Pipelines und Großprojekte, erhöhte die Verteidigungsausgaben und reagierte auf Trumps Zölle."
+  },
+  {
+    "id": "boris-johnson",
+    "name": "Boris Johnson",
+    "role": "Ehemaliger Premierminister des Vereinigten Königreichs",
+    "lifespan": "1964–",
+    "description": "Als Konservativer und Brexit-Führer, von 2019 bis 2022 Premierminister, führte Johnson das Vereinigte Königreich aus der EU, bewaffnete die Ukraine, erhöhte Steuern und Staatsausgaben, öffnete die Nicht-EU-Einwanderung und fiel nach Partygate; Heute ist er Kolumnist der Daily Mail."
+  },
+  {
+    "id": "james-cook",
+    "name": "James Cook",
+    "role": "Britischer Seefahrer und Entdecker",
+    "lifespan": "1728–1779",
+    "description": "Als Offizier und Kartograf der Royal Navy leitete Cook drei wissenschaftliche Expeditionen in den Pazifik, kartierte Neuseeland und die Ostküste Australiens, beanspruchte Ländereien im Namen der Krone, kämpfte gegen Skorbut und starb bei einem Zusammenstoß mit Hawaiianern."
+  },
+  {
+    "id": "lachlan-macquarie",
+    "name": "Lachlan Macquarie",
+    "role": "Gouverneur von New South Wales",
+    "lifespan": "1762–1824",
+    "description": "Als Kolonialgouverneur von New South Wales (1810–21) ersetzte Macquarie die Militärherrschaft durch öffentliche Arbeiten und Stadtplanung, gewährte freigelassenen Sträflingen Land und Ämter und gründete Schulen für Aborigines, ordnete jedoch das Appin-Massaker gegen Widerstandskämpfer an."
+  }
+]

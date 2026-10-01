@@ -36,6 +36,7 @@ public class QuizDataService {
 
     public static final String LANG_PT = "pt";
     public static final String LANG_EN = "en";
+    public static final String LANG_DE = "de";
 
     private final ObjectMapper objectMapper;
     private Map<String, LocaleBundle> bundles;
@@ -110,8 +111,9 @@ public class QuizDataService {
         validateArchetypeQuestions(axes);
 
         LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities);
-        LocaleBundle en = buildEnglishBundle(pt);
-        bundles = Map.of(LANG_PT, pt, LANG_EN, en);
+        LocaleBundle en = buildLocaleBundle(pt, LANG_EN);
+        LocaleBundle de = buildLocaleBundle(pt, LANG_DE);
+        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_DE, de);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
         List<String> unknownBookAuthors = bookList.stream()
@@ -130,14 +132,14 @@ public class QuizDataService {
         validatePersonalityProfiles(pt);
     }
 
-    // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
+    // Overlays em data/i18n/<lang>/*.json trazem só os campos de texto, chaveados por id.
     // Item sem tradução (ou arquivo ausente) cai no texto PT — nada quebra.
-    private LocaleBundle buildEnglishBundle(LocaleBundle pt) throws IOException {
-        Map<String, Map<String, String>> axesTr = readOverlay("data/i18n/en/axes.json");
-        Map<String, Map<String, String>> questionsTr = readOverlay("data/i18n/en/questions.json");
-        Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/en/ideologies.json");
-        Map<String, Map<String, String>> countriesTr = readOverlay("data/i18n/en/countries.json");
-        Map<String, Map<String, String>> personalitiesTr = readOverlay("data/i18n/en/personalities.json");
+    private LocaleBundle buildLocaleBundle(LocaleBundle pt, String lang) throws IOException {
+        Map<String, Map<String, String>> axesTr = readOverlay("data/i18n/" + lang + "/axes.json");
+        Map<String, Map<String, String>> questionsTr = readOverlay("data/i18n/" + lang + "/questions.json");
+        Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/" + lang + "/ideologies.json");
+        Map<String, Map<String, String>> countriesTr = readOverlay("data/i18n/" + lang + "/countries.json");
+        Map<String, Map<String, String>> personalitiesTr = readOverlay("data/i18n/" + lang + "/personalities.json");
 
         List<Axis> axes = pt.axes().stream().map(axis -> {
             Map<String, String> tr = axesTr.get(axis.id());
@@ -215,6 +217,22 @@ public class QuizDataService {
         return LocaleBundle.of(axes, questions, ideologies, countries, personalities);
     }
 
+    // Texto por idioma em mapas {"pt": ..., "en": ...}: idioma pedido → inglês → português.
+    public static String localized(Map<String, String> values, String lang) {
+        if (values == null) {
+            return null;
+        }
+        String requested = normalizeLang(lang);
+        List<String> order = LANG_PT.equals(requested) ? List.of(LANG_PT) : List.of(requested, LANG_EN, LANG_PT);
+        for (String candidate : order) {
+            String value = values.get(candidate);
+            if (value != null && !value.isBlank()) {
+                return value;
+            }
+        }
+        return null;
+    }
+
     private Map<String, Map<String, String>> readOverlay(String path) throws IOException {
         ClassPathResource resource = new ClassPathResource(path);
         if (!resource.exists()) {
@@ -233,6 +251,7 @@ public class QuizDataService {
         }
         return switch (lang.trim().toLowerCase()) {
             case LANG_EN, "en-us", "en-gb" -> LANG_EN;
+            case LANG_DE, "de-de", "de-at", "de-ch" -> LANG_DE;
             default -> LANG_PT;
         };
     }
@@ -320,9 +339,11 @@ public class QuizDataService {
         int questionCount = normalizedVariant.equals(EXTREME_VARIANT)
                 ? data.questions().size()
                 : questionsPerAxis * data.axes().size();
-        String description = normalizedLang.equals(LANG_EN)
-                ? "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes."
-                : "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        String description = switch (normalizedLang) {
+            case LANG_EN -> "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes.";
+            case LANG_DE -> "Ein Quiz mit " + questionCount + " Fragen, um Ihre Position auf den 12 politischen Achsen einzuschätzen.";
+            default -> "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        };
         return new QuizPayload(
                 "12 Axes",
                 description,
@@ -449,6 +470,15 @@ public class QuizDataService {
     }
 
     private String labelFor(AnswerValue value, String lang) {
+        if (LANG_DE.equals(lang)) {
+            return switch (value) {
+                case STRONGLY_AGREE -> "Stimme voll und ganz zu";
+                case AGREE -> "Stimme zu";
+                case NEUTRAL -> "Neutral oder kommt darauf an";
+                case DISAGREE -> "Stimme nicht zu";
+                case STRONGLY_DISAGREE -> "Stimme überhaupt nicht zu";
+            };
+        }
         if (LANG_EN.equals(lang)) {
             return switch (value) {
                 case STRONGLY_AGREE -> "Strongly agree";

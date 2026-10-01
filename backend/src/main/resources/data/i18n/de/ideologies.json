@@ -1,0 +1,1709 @@
+[
+  {
+    "id": "marxismo-leninismo",
+    "name": "Marxismus-Leninismus",
+    "category": "Radikale Linke",
+    "description": "Revolutionärer Zweig des Marxismus, der die Machtergreifung einer Avantgardepartei und die Diktatur des Proletariats mit Planwirtschaft und Kollektivierung befürwortet und als Grundlage für die kommunistischen Regime des 20. Jahrhunderts dient.",
+    "phrase": "Ich möchte eine Gesellschaft, die von einer Avantgardepartei regiert wird, mit der Diktatur des Proletariats und einer geplanten, kollektivierten Wirtschaft."
+  },
+  {
+    "id": "socialismo-stalinista",
+    "name": "Stalinistischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Von Stalin gefestigtes sowjetisches Modell, gekennzeichnet durch erzwungene Industrialisierung, landwirtschaftliche Kollektivierung, starre Zentralplanung, Führerkult und Massenrepression gegen echte oder mutmaßliche Gegner des Regimes.",
+    "phrase": "Ich möchte eine Gesellschaft unter einem starken Führer und einer einzigen Partei, mit landwirtschaftlicher Kollektivierung, Fünfjahresplänen und forcierter Industrialisierung."
+  },
+  {
+    "id": "comunismo-maoista",
+    "name": "Maoistischer Kommunismus",
+    "category": "Radikale Linke",
+    "description": "Maos chinesische Adaption des Marxismus, die sich auf die Bauernschaft als revolutionäre Kraft konzentrierte, führte zu einem langwierigen Volkskrieg, einer permanenten Massenmobilisierung und einer Kulturrevolution gegen die Parteibürokratie.",
+    "phrase": "Ich möchte eine Gesellschaft, die in einem langwierigen Volkskrieg unter der Führung der Bauernschaft mobilisiert wird und eine permanente Kulturrevolution gegen die Bürokratie durchführt."
+  },
+  {
+    "id": "comunismo-trotskista",
+    "name": "Trotzkistischer Kommunismus",
+    "category": "Radikale Linke",
+    "description": "Strömung Trotzkis, Mitbegründer des Sowjetstaates und der Roten Armee, der die permanente Revolution, eine Avantgardepartei und die Diktatur des Proletariats verteidigt und die stalinistische Bürokratie kritisiert, ohne auf die Einparteienherrschaft zu verzichten.",
+    "phrase": "Ich will eine permanente, weltweite Revolution, angeführt von einer Avantgardepartei, mit der Diktatur des Proletariats, einer Planwirtschaft und ohne stalinistische Bürokratie."
+  },
+  {
+    "id": "socialismo-luxemburguista",
+    "name": "Luxemburgistischer Sozialismus",
+    "category": "Links",
+    "description": "Von Rosa Luxemburg inspirierter demokratischer Marxismus, der Revolution und Freiheit vereint, die Spontaneität der Massen und den Generalstreik schätzt und sowohl den Reformismus als auch den autoritären Zentralismus der Avantgardeparteien kritisiert.",
+    "phrase": "Ich möchte eine Gesellschaft, die von der Spontaneität der Massen und dem Generalstreik bewegt wird, revolutionär und frei, ohne autoritäre Avantgarde oder Reformismus."
+  },
+  {
+    "id": "comunismo-nacional",
+    "name": "Nationaler Kommunismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die eine geplante sozialistische Wirtschaft mit einer starken nationalen Identität verbindet und der Souveränität und den Interessen des eigenen Landes Vorrang vor dem Internationalismus einräumt, oft unter personalistischer und zentralisierter Führung.",
+    "phrase": "Ich möchte eine sozialistische Gesellschaft, die sich der Souveränität und den Interessen der eigenen Nation widmet und unter einer starken Führung steht, nicht dem Internationalismus."
+  },
+  {
+    "id": "socialismo-juche",
+    "name": "Juche-Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Von Kim Il-sung formulierte nordkoreanische Doktrin, die Staatssozialismus, nationale Eigenständigkeit, Einparteienherrschaft, Führerkult, Militarisierung und Ablehnung externer Abhängigkeit verbindet und Wirtschaft und Gesellschaft der Souveränität des Regimes unterordnet.",
+    "phrase": "Ich möchte eine eigenständige, militarisierte Gesellschaft, die von Juche geleitet wird, unter einer einzigen Partei und einem Führerkult steht und von niemandem im Ausland abhängig ist."
+  },
+  {
+    "id": "socialismo-pol-potista",
+    "name": "Pol-Pot-Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Radikaler Agrarkommunismus der Roten Khmer, der Städte räumte, Geld und Märkte abschaffte und mit Gewalt eine egalitäre Bauerngesellschaft betrieb, was zu einem der größten Völkermorde des 20. Jahrhunderts in Kambodscha führte.",
+    "phrase": "Ich möchte eine egalitäre Bauerngesellschaft ohne Städte, Geld und Märkte, die unter dem revolutionären Angkar mit Gewalt wieder aufgebaut wird."
+  },
+  {
+    "id": "socialismo-denguista",
+    "name": "Dengistischer Sozialismus",
+    "category": "Links",
+    "description": "Von Deng Xiaoping initiierte pragmatische Reform, die Märkte, Privateigentum und wirtschaftliche Öffnung unter der absoluten Kontrolle der Kommunistischen Partei einführte und das Modell des Sozialismus chinesischer Prägung bildete.",
+    "phrase": "Ich möchte, dass ein pragmatischer Sozialismus, die Öffnung von Märkten und Privateigentum das Land unter der absoluten Kontrolle der Kommunistischen Partei bereichert."
+  },
+  {
+    "id": "socialismo-de-estado",
+    "name": "Staatssozialismus",
+    "category": "Radikale Linke",
+    "description": "System, in dem der Staat die Produktionsmittel kontrolliert und die Wirtschaft durch zentrale Planung steuert, wodurch Industrialisierung und Wohlfahrt unter starker politischer Autorität und begrenzter demokratischer Beteiligung der Bevölkerung gefördert werden.",
+    "phrase": "Ich möchte eine Gesellschaft, in der der Staat die Produktionsmittel kontrolliert und die Wirtschaft plant, mit starker politischer Autorität und wenig Wahldebatten."
+  },
+  {
+    "id": "progressismo-autoritario",
+    "name": "Autoritärer Progressivismus",
+    "category": "Radikale Linke",
+    "description": "Projekt, das progressive gesellschaftliche Veränderungen von oben aufzwingt und die Staatsmacht nutzt, um Veränderungen in Sitten und Gleichheit zu beschleunigen, selbst auf Kosten individueller Freiheiten und organisierter politischer Opposition.",
+    "phrase": "Ich möchte eine Gesellschaft, die von oben nach unten in Bezug auf Sitten und Gleichheit verändert wird und den Staat auch gegen organisierte Opposition nutzt."
+  },
+  {
+    "id": "ecoautoritarismo",
+    "name": "Öko-Autoritarismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die sich für einen starken, interventionistischen Staat zur Bewältigung der Umweltkrise einsetzt und die wirtschaftlichen und politischen Freiheiten der ökologischen Dringlichkeit und der strengen Kontrolle von Konsum und Produktion unterordnet.",
+    "phrase": "Ich möchte eine Gesellschaft, in der der Staat dem Konsum und der Produktion strenge Beschränkungen auferlegt, um die ökologische Krise zu stoppen, die über die individuellen Freiheiten hinausgehen."
+  },
+  {
+    "id": "tecnocracia-de-esquerda",
+    "name": "Linke Technokratie",
+    "category": "Links",
+    "description": "Modell, das sozialistische Planung mit wissenschaftlichem Management der Wirtschaft verbindet und Expertenausschüsse statt Wahlen oder Parteienwettbewerb mit der rationalen Organisation der Produktion und der egalitären Verteilung der Ressourcen der Gesellschaft betraut.",
+    "phrase": "Ich möchte eine Gesellschaft, die von Expertenausschüssen geleitet wird, nicht von Wahlen, die die Produktion planen und Ressourcen gleichberechtigt verteilen."
+  },
+  {
+    "id": "nacional-bolchevismo",
+    "name": "Nationaler Bolschewismus (NazBol)",
+    "category": "Dritte Position",
+    "description": "Synkretistische Ideologie, auch NazBol genannt, die revolutionären Sozialismus und radikalen Nationalismus verbindet und eine kollektivistische Wirtschaft, staatlichen Autoritarismus und die Ablehnung des Liberalismus, des Westens und des bürgerlichen Individualismus kombiniert.",
+    "phrase": "Ich möchte eine Gesellschaft, die Sowjet und Nation, Kollektivismus und Autoritarismus vereint, gegen Liberalismus, den Westen und bürgerlichen Individualismus."
+  },
+  {
+    "id": "socialismo-strasserista",
+    "name": "Strasseristischer Sozialismus",
+    "category": "Dritte Position",
+    "description": "Antikapitalistischer Flügel des Nationalsozialismus, verbunden mit Gregor Strasser, der einen nationalistischen Massensozialismus, eine Verstaatlichung und eine soziale Revolution innerhalb der Bewegung betonte, die später von Hitler niedergeschlagen wurde.",
+    "phrase": "Ich möchte eine nationalistische soziale Massenrevolution innerhalb der Bewegung, die die Wirtschaft gegen das Kapital und die alte Ordnung verstaatlicht."
+  },
+  {
+    "id": "fascismo",
+    "name": "Faschismus",
+    "category": "Dritte Position",
+    "description": "Eine ultranationalistische Doktrin der nationalen Wiedergeburt, die Liberalismus und Marxismus ablehnt, den totalitären Staat, regenerative Gewalt und den Führerkult verherrlicht und die Nation als säkulare Religion behandelt, mit Varianten, die über das italienische Regime hinausgehen, das sie benannt hat.",
+    "phrase": "Ich möchte eine Nation, die unter einem starken Staat und einem einzigen Führer steht, mit Militarismus, Massenmobilisierung und Unternehmen, die dem Vaterland dienen."
+  },
+  {
+    "id": "nacional-socialismo",
+    "name": "Nationalsozialismus",
+    "category": "Dritte Position",
+    "description": "Auf Rassismus, Antisemitismus und Expansionismus basierende deutsche Variante des Faschismus, die Totalitarismus, Hitlerkult und die Idee einer überlegenen Rasse vereinte und im Zweiten Weltkrieg und im Holocaust gipfelte.",
+    "phrase": "Ich möchte eine Gesellschaft, die auf der arischen Rasse basiert, politisch hierarchisch und autoritär ist, mit einem starken, protektionistischen Staatskapitalismus."
+  },
+  {
+    "id": "falangismo",
+    "name": "Falangismus",
+    "category": "Dritte Position",
+    "description": "Spanischer autoritärer Nationalismus katholischer und syndikalistischer Inspiration, der einen korporatistischen Staat, nationale Einheit und soziale Hierarchie befürwortet und zur ideologischen Stütze des Franco-Regimes in Spanien wird.",
+    "phrase": "Ich möchte einen katholischen korporatistischen Staat, geeint unter einem autoritären Oberhaupt, mit vertikalen Gewerkschaften, die die Arbeit organisieren und den Handel schützen."
+  },
+  {
+    "id": "nacional-sindicalismo",
+    "name": "Nationaler Syndikalismus",
+    "category": "Dritte Position",
+    "description": "Nationalistische und syndikalistische Strömung, die Liberalismus und Marxismus ablehnt und sich für nationale Einheit, korporatistische Arbeitsorganisation, autoritäre soziale Gerechtigkeit und Volksmobilisierung im ganzen Staat einsetzt.",
+    "phrase": "Ich möchte eine Nation, die rund um den Staat mobilisiert ist, mit korporatistischen Gewerkschaften, die die Arbeit organisieren und Liberalismus und Marxismus ablehnen."
+  },
+  {
+    "id": "integralismo-brasileiro",
+    "name": "Brasilianischer Integralismus",
+    "category": "Dritte Position",
+    "description": "Autoritäre nationalistische Bewegung, die im Brasilien der 1930er Jahre entstand, mit einer christlichen und korporatistischen Basis, dem Motto „Gott, Vaterland und Familie“, Massenästhetik und frontaler Opposition gegen Liberalismus und Kommunismus.",
+    "phrase": "Ich möchte ein Vaterland unter Gott, Vaterland und Familie, kommandiert von einem autoritären Häuptling und uniformierten Milizen gegen Liberale und Kommunisten."
+  },
+  {
+    "id": "capitalismo-autoritario",
+    "name": "Autoritärer Kapitalismus",
+    "category": "Richtig",
+    "description": "Modell, das Marktwirtschaft und Privateigentum mit einem geschlossenen politischen Regime verbindet, in dem der Staat Ordnung, Wachstum und Stabilität garantiert und gleichzeitig bürgerliche Freiheiten und politischen Wettbewerb einschränkt.",
+    "phrase": "Ich möchte eine Marktwirtschaft mit Privateigentum, in einem geschlossenen Staat, der Ordnung und Wachstum garantiert, indem er den politischen Wettbewerb einschränkt."
+  },
+  {
+    "id": "capitalismo-nacional",
+    "name": "Nationaler Kapitalismus",
+    "category": "Ganz rechts",
+    "description": "System, das freies Unternehmertum mit starkem Protektionismus und staatlicher Führung vereint und Industrie, Arbeitsplätzen und nationaler Souveränität Vorrang vor globalem Freihandel und unkontrolliertem ausländischem Kapital einräumt.",
+    "phrase": "Ich möchte, dass die nationale Industrie durch Zölle und staatliche Planung geschützt wird und dass das freie Unternehmertum der Souveränität und den Arbeitsplätzen des Landes dient."
+  },
+  {
+    "id": "alt-right",
+    "name": "Radikale Rechte",
+    "category": "Ganz rechts",
+    "description": "Im Internet entstandene radikale rechte Bewegung, die identitären Nationalismus, Widerstand gegen Einwanderung und Multikulturalismus sowie provokative Rhetorik vermischt, wobei Positionen häufig mit der Vorherrschaft der Weißen in Verbindung gebracht werden.",
+    "phrase": "Ich möchte eine homogene ethnische Nation, verschlossen gegenüber Einwanderung und Multikulturalismus, mit einer weißen Identität, die gegen den kommerziellen Globalismus verteidigt wird."
+  },
+  {
+    "id": "alt-lite",
+    "name": "Alt-Lite",
+    "category": "Richtig",
+    "description": "Gemäßigterer Zweig der alternativen Rechten, nationalistisch und antiglobalistisch, der ausdrücklichen Rassismus ablehnt, aber kulturelle Identität, Kritik an Einwanderung und den Kampf gegen politische Korrektheit verteidigt.",
+    "phrase": "Ich möchte die kulturelle Identität meines Volkes vor unkontrollierter Einwanderung und politischer Korrektheit bewahren, ohne auf Rassenüberlegenheit zurückzugreifen."
+  },
+  {
+    "id": "aceleracionismo-de-direita",
+    "name": "Rechter Beschleunigungismus",
+    "category": "Ganz rechts",
+    "description": "Strömung, die dafür plädiert, die Widersprüche des Systems durch Technologie und den Zusammenbruch liberaler Institutionen zu beschleunigen, und auf den Bruch der bestehenden Ordnung setzt, um eine neue soziale und politische Hierarchie zu schmieden.",
+    "phrase": "Ich möchte den Zusammenbruch liberaler Institutionen durch Technologie und staatenlose Märkte beschleunigen, damit eine neue Hierarchie aus den Ruinen entsteht."
+  },
+  {
+    "id": "neoconservadorismo",
+    "name": "Neokonservatismus",
+    "category": "Richtig",
+    "description": "Rechte Strömung, die freie Märkte, traditionelle Werte und eine interventionistische Außenpolitik vereint und sich für die Förderung von Demokratie und nationalen Interessen durch militärische Gewalt und globale Führung einsetzt.",
+    "phrase": "Ich möchte die Demokratie exportieren und die Interessen der Nation mit militärischer Gewalt verteidigen, indem ich freie Märkte mit traditionellen Werten im Inland vereine."
+  },
+  {
+    "id": "monarquismo-absoluto",
+    "name": "Absoluter Monarchismus",
+    "category": "Ganz rechts",
+    "description": "Verteidigung der Monarchie mit unbegrenzter Macht, die beim Souverän konzentriert ist und durch Tradition oder göttliches Recht legitimiert ist, ohne dass eine Verfassung oder ein Parlament die Autorität des Königs über Staat und Gesellschaft einschränkt.",
+    "phrase": "Ich möchte ein einheitliches Reich, das von einem Herrscher göttlichen Rechts regiert wird, ohne dass Parlament oder Verfassung die Autorität der Krone einschränken."
+  },
+  {
+    "id": "conservadorismo-autoritario",
+    "name": "Autoritärer Konservatismus",
+    "category": "Ganz rechts",
+    "description": "Strömung, die durch einen starken Staat Ordnung, Tradition und Hierarchie aufrechterhält und Freiheiten und politische Teilhabe im Namen sozialer Stabilität, Moral, Religion und etablierter Autorität einschränkt.",
+    "phrase": "Ich möchte eine hierarchische Ordnung, die von einem starken Staat getragen wird und Tradition, Religion und Bräuche vor moralischer Subversion schützt."
+  },
+  {
+    "id": "conservadorismo-nacional",
+    "name": "Nationaler Konservatismus",
+    "category": "Richtig",
+    "description": "Strömung, die traditionelle Werte, Familie und Religion mit starkem kulturellen Nationalismus verbindet und Souveränität, Grenzen und die Identität des Volkes innerhalb der Demokratie verteidigt, mit klarem Misstrauen gegenüber dem Globalismus.",
+    "phrase": "Ich möchte eine Demokratie, die Grenzen, Familie und Religion schützt und die Identität meines Volkes gegenüber dem kulturellen Globalismus behauptet."
+  },
+  {
+    "id": "conservadorismo-paternalista",
+    "name": "Paternalistischer Konservatismus",
+    "category": "Richtig",
+    "description": "Konservative Tradition, die soziale Reformen und Schutz für die Ärmsten akzeptiert, um den nationalen Zusammenhalt zu bewahren, und die Eliten als verantwortlich für das Wohlergehen des Volkes und für die Harmonie zwischen den Klassen ansieht.",
+    "phrase": "Ich möchte eine Nation, die von verantwortungsbewussten Eliten vereint ist, die die Ärmsten reformieren und schützen, um die Harmonie zwischen den Klassen aufrechtzuerhalten."
+  },
+  {
+    "id": "fundamentalismo-religioso",
+    "name": "Religiöser Fundamentalismus",
+    "category": "Ganz rechts",
+    "description": "Projekt, das darauf abzielt, Staat und Gesellschaft nach der strengen Auslegung einer religiösen Doktrin zu organisieren, Gesetze, Bräuche und Politik heiligen Geboten unterzuordnen und den modernen Säkularismus abzulehnen.",
+    "phrase": "Ich möchte einen Staat, der dem heiligen Gesetz unterworfen ist, in dem Bräuche und Politik der religiösen Doktrin gehorchen und den Säkularismus ablehnen."
+  },
+  {
+    "id": "nacionalismo-etnico",
+    "name": "Ethnischer Nationalismus",
+    "category": "Ganz rechts",
+    "description": "Konzeption, die die Nation durch gemeinsame Herkunft, Sprache und Abstammung definiert und einen Staat der vorherrschenden ethnischen Zugehörigkeit und die Wahrung ihrer Identität befürwortet, mit der Tendenz, Minderheiten und Einwanderer aus dem nationalen Körper auszuschließen.",
+    "phrase": "Ich möchte einen Staat meiner eigenen ethnischen Zugehörigkeit, der durch gemeinsames Blut, gemeinsame Sprache und Abstammung vereint ist und seine Identität gegenüber Minderheiten und Einwanderern bewahrt."
+  },
+  {
+    "id": "nacionalismo-cultural",
+    "name": "Kultureller Nationalismus",
+    "category": "Richtig",
+    "description": "Nationalismus, der auf einer gemeinsamen Sprache, Traditionen und einem gemeinsamen Erbe basiert und nicht auf Rasse, der die kulturelle Identität des Volkes und die Integration derjenigen schätzt, die diese Werte annehmen, und den Zusammenhalt der Nation verteidigt.",
+    "phrase": "Ich möchte eine Nation, die durch gemeinsame Sprache, Traditionen und Erbe vereint ist, offen für diejenigen, die unsere Werte übernehmen, mit einer geschützten, koordinierten Wirtschaft."
+  },
+  {
+    "id": "neorreacionarismo",
+    "name": "Neoreaktion",
+    "category": "Ganz rechts",
+    "description": "Strömung, die moderne Demokratie und Egalitarismus ablehnt und vorschlägt, sie durch hierarchische, effiziente Regierungen zu ersetzen, die wie Unternehmen von einem Souverän geführt werden und Traditionalismus und Technologie verbinden.",
+    "phrase": "Ich möchte eine Gesellschaft, die von einem hierarchischen Souverän wie einem CEO regiert wird, ohne Demokratie, die Tradition und Technologie in einem schlanken, effizienten Staat vereint."
+  },
+  {
+    "id": "cameralismo",
+    "name": "Kameralismus",
+    "category": "Richtig",
+    "description": "Verwaltungslehre des aufgeklärten Absolutismus, die den Staat durch eine disziplinierte Bürokratie und zentralisierte Finanzen organisierte und Industrie, Bevölkerung und Einnahmen als Machtquellen des Monarchen förderte.",
+    "phrase": "Ich möchte ein Reich mit disziplinierter Bürokratie und zentralisierten Finanzen, wachsender Industrie, Bevölkerung und Einnahmen für die Krone."
+  },
+  {
+    "id": "corporativismo",
+    "name": "Korporatismus",
+    "category": "Dritte Position",
+    "description": "Modell, das die Gesellschaft in in den Staat integrierten Körperschaften von Arbeitnehmern und Arbeitgebern organisiert und Harmonie zwischen den Klassen und gezielte wirtschaftliche Zusammenarbeit anstelle von Konflikten oder freiem Wettbewerb anstrebt.",
+    "phrase": "Ich möchte eine Gesellschaft, die in Körperschaften von Arbeitgebern und Arbeitnehmern organisiert ist, die in den Staat integriert sind, in gezielter Harmonie zwischen den Klassen."
+  },
+  {
+    "id": "reacionarismo",
+    "name": "Reaktionärismus",
+    "category": "Ganz rechts",
+    "description": "Haltung, die die Moderne ablehnt und versucht, die vorrevolutionäre Ordnung wiederherzustellen, indem sie Monarchie, Religion, Tradition und Hierarchie gegen den Rationalismus, den Liberalismus und die Demokratie der Aufklärung verteidigt.",
+    "phrase": "Ich möchte den Thron, den Altar und die Hierarchie von vor den Revolutionen wiederherstellen und den Rationalismus der Aufklärung und die liberale Demokratie hinwegfegen."
+  },
+  {
+    "id": "quarta-teoria-politica",
+    "name": "Vierte politische Theorie",
+    "category": "Dritte Position",
+    "description": "Theorie von Aleksandr Dugin, die Liberalismus, Kommunismus und Faschismus ablehnt und eine multipolare Welt vorschlägt, die auf Zivilisationen, Tradition und kollektiver Identität basiert und sich dem Globalismus und der westlichen Hegemonie widersetzt.",
+    "phrase": "Ich möchte eine multipolare Welt von Zivilisationen, die in Tradition und kollektiver Identität verwurzelt sind und sich gegen Globalismus und westliche Hegemonie erheben."
+  },
+  {
+    "id": "democracia-nacional",
+    "name": "Nationale Demokratie",
+    "category": "Richtig",
+    "description": "Strömung, die Volkssouveränität und demokratische Institutionen mit starkem kulturellen Nationalismus verbindet und den Interessen und der Identität der Nation Vorrang vor supranationalen Verpflichtungen und Multikulturalismus einräumt.",
+    "phrase": "Ich möchte eine souveräne Nation, die frei über ihre eigenen Gesetze entscheidet, aber die Identität und Interessen des Volkes über jede supranationale Verpflichtung stellt."
+  },
+  {
+    "id": "bioconservadorismo",
+    "name": "Biokonservatismus",
+    "category": "Mitte",
+    "description": "Position, die sich gegen genetische Manipulation und die technologische Verbesserung des menschlichen Körpers wendet und ethische Grenzen der Wissenschaft im Namen der Würde, der menschlichen Natur und der Besonnenheit gegenüber der Zukunft verteidigt.",
+    "phrase": "Ich möchte eine Gesellschaft, die der Genmanipulation und Körperverbesserung ethische Grenzen setzt und die Menschenwürde angesichts der Wissenschaft schützt."
+  },
+  {
+    "id": "tecnocracia-de-direita",
+    "name": "Rechte Technokratie",
+    "category": "Richtig",
+    "description": "Modell, das die Verwaltung von Staat und Wirtschaft Experten und technologischer Effizienz anvertraut und Märkte, Innovation und technische Entscheidungen anstelle von politischer Beratung und traditionellem Parteienwettbewerb kombiniert.",
+    "phrase": "Ich möchte eine Regierung, die auf Experten und technologische Effizienz setzt und den Parteienwettbewerb durch technische Entscheidungen und Märkte ersetzt."
+  },
+  {
+    "id": "democracia-crista",
+    "name": "Christdemokratie",
+    "category": "Mitte",
+    "description": "Eine zentristische Strömung, die christliche Werte auf demokratische Politik anwendet und die soziale Marktwirtschaft, Familie, Solidarität und das Gemeinwohl als Grundlage freier und pluralistischer Institutionen verteidigt.",
+    "phrase": "Ich möchte eine pluralistische Demokratie, die von christlichen Werten geleitet wird, mit einer sozialen Marktwirtschaft, die die Familie und das Gemeinwohl trägt."
+  },
+  {
+    "id": "conservadorismo-cristao",
+    "name": "Christlicher Konservatismus",
+    "category": "Richtig",
+    "description": "Strömung, die die Politik auf der christlichen Moral und Tradition gründet und Familie, Leben und religiöse Werte innerhalb der Demokratie verteidigt, wobei der Schwerpunkt auf der Bewahrung der Bräuche und des kulturellen Erbes des Volkes liegt.",
+    "phrase": "Ich möchte eine Gesellschaft, die der christlichen Moral und dem christlichen Glauben treu bleibt und Familie, Leben und überlieferte Bräuche vor dem Verfall der Zeit schützt."
+  },
+  {
+    "id": "republicanismo",
+    "name": "Republikanismus",
+    "category": "Mitte",
+    "description": "Politische Tradition, die die Souveränität des Volkes, bürgerliche Tugend und Rechtsstaatlichkeit schätzt und die Selbstverwaltung der Bürger, die Gewaltenteilung und den Schutz vor Tyrannei und Korruption der Macht verteidigt.",
+    "phrase": "Ich möchte eine Republik tugendhafter Bürger mit Gewaltenteilung und Rechtsstaatlichkeit, wachsam gegen Tyrannei und Korruption der Macht."
+  },
+  {
+    "id": "monarquismo-constitucional",
+    "name": "Konstitutioneller Monarchismus",
+    "category": "Mitte",
+    "description": "Verteidigung der Monarchie als Symbol der Einheit und Kontinuität, wobei der König der Verfassung und dem Parlament unterworfen ist und Tradition und institutionelle Stabilität mit repräsentativer Demokratie und Rechtsstaatlichkeit verbindet.",
+    "phrase": "Ich möchte einen der Verfassung und dem Parlament unterworfenen König, ein Symbol der Einheit und Kontinuität innerhalb einer stabilen repräsentativen Demokratie."
+  },
+  {
+    "id": "neoliberalismo",
+    "name": "Neoliberalismus",
+    "category": "Richtig",
+    "description": "Strömung, die sich für freie Märkte, Deregulierung, Privatisierung und Haushaltsdisziplin einsetzt, die wirtschaftliche Rolle des Staates reduziert und auf Wettbewerb und Währungsstabilität als Motoren des Wohlstands vertraut.",
+    "phrase": "Ich möchte einen freien, deregulierten Markt mit einem schlanken Staat, Privatisierungen und Haushaltsdisziplin als Motoren für Wohlstand und Wettbewerb."
+  },
+  {
+    "id": "ordoliberalismo",
+    "name": "Ordoliberalismus",
+    "category": "Mitte",
+    "description": "Deutsche liberale Schule, die den freien Markt innerhalb fester, vom Staat garantierter Regeln verteidigt, Monopole bekämpft und Wettbewerb und Stabilität gewährleistet und als Grundlage der sozialen Marktwirtschaft dient.",
+    "phrase": "Ich möchte einen freien Markt, der durch feste staatliche Regeln diszipliniert wird, die Monopole verhindern und die soziale Marktwirtschaft aufrechterhalten."
+  },
+  {
+    "id": "distributismo",
+    "name": "Distributismus",
+    "category": "Mitte",
+    "description": "Christlich inspirierte Doktrin, die sich für eine weite Verteilung des Eigentums und eine Kleinproduktion einsetzt und sich sowohl dem Monopolkapitalismus als auch dem Staatssozialismus zugunsten autonomer Gemeinschaften widersetzt.",
+    "phrase": "Ich möchte Gemeinschaften kleiner autonomer Eigentümer mit weit verteiltem Eigentum, die den Monopolkapitalismus und den sozialistischen Staat ablehnen."
+  },
+  {
+    "id": "tecnocracia",
+    "name": "Technokratie",
+    "category": "Mitte",
+    "description": "Regierungsmodell, bei dem Entscheidungen nach Experten und technischen, wissenschaftlichen Kriterien getroffen werden und Ingenieure, Ökonomen und Wissenschaftler mit der rationalen und effizienten Verwaltung des Staates und der Wirtschaft betraut werden.",
+    "phrase": "Ich möchte eine von Experten geführte Gesellschaft, in der technische Entscheidungen politische Verhandlungen ersetzen und eine Planwirtschaft, die sich an wissenschaftlichen Kriterien orientiert."
+  },
+  {
+    "id": "comunitarismo",
+    "name": "Kommunitarismus",
+    "category": "Mitte",
+    "description": "Strömung, die Gemeinschaftsbindungen, Traditionen und das Gemeinwohl über Individualismus stellt und der Meinung ist, dass Gerechtigkeit und Identität aus dem Leben in der Gemeinschaft und der gemeinsamen Verantwortung der Menschen entstehen.",
+    "phrase": "Ich möchte eine Gesellschaft, die aus gemeinschaftlichen Bindungen und gemeinsamen Traditionen besteht, mit partizipatorischer Demokratie und einer auf das Gemeinwohl ausgerichteten Wirtschaft."
+  },
+  {
+    "id": "meritocracia",
+    "name": "Meritokratie",
+    "category": "Mitte",
+    "description": "Prinzip, nach dem Positionen und Belohnungen nach Talent, Einsatz und Leistung und nicht nach Herkunft oder Privilegien verteilt werden sollten, um Chancengleichheit und Auswahl nach Fähigkeiten zu verteidigen.",
+    "phrase": "Ich möchte eine Gesellschaft, in der Talent und Einsatz über Positionen entscheiden, mit gleichen Chancen und Belohnungen, die sich an den Verdiensten jedes Einzelnen orientieren."
+  },
+  {
+    "id": "liberalismo",
+    "name": "Liberalismus",
+    "category": "Mitte",
+    "description": "Politische Tradition, die die individuelle Freiheit in den Mittelpunkt stellt und Rechte, Toleranz, Rechtsstaatlichkeit, Marktwirtschaft und Machtbeschränkungen verteidigt, wobei die Regierung der Zustimmung der Bürger unterliegt.",
+    "phrase": "Ich möchte eine tolerante Gesellschaft, die auf individuellen Rechten basiert, mit einer durch Rechtsstaatlichkeit begrenzten Regierung und einer freien Marktwirtschaft."
+  },
+  {
+    "id": "liberalismo-classico",
+    "name": "Klassischer Liberalismus",
+    "category": "Libertär",
+    "description": "Ursprünglicher Zweig des Liberalismus, der Naturrechte, Eigentum, freie Märkte und einen Minimalstaat verteidigt und die individuelle Freiheit und die strikte Machtbeschränkung als Grundlagen einer gerechten Gesellschaft ansieht.",
+    "phrase": "Ich möchte eine Gesellschaft mit natürlichen Rechten und heiligem Eigentum, mit einem Minimalstaat und freiem Markt als Grundlage für ein gerechtes Leben."
+  },
+  {
+    "id": "libertarianismo",
+    "name": "Libertarismus",
+    "category": "Libertär",
+    "description": "Philosophie, die maximale individuelle Freiheit und einen auf wesentliche Funktionen reduzierten Staat befürwortet, Privateigentum, freie Märkte und persönliche Autonomie schätzt und gleichzeitig staatlichen Zwang über das Leben ablehnt.",
+    "phrase": "Ich möchte eine Gesellschaft mit größtmöglicher persönlicher Autonomie, in der der Staat auf wesentliche Funktionen beschränkt ist und Privateigentum über jeglichem Zwang verfügt."
+  },
+  {
+    "id": "liberalismo-verde",
+    "name": "Grüner Liberalismus",
+    "category": "Mitte",
+    "description": "Strömung, die individuelle Freiheit, Märkte und Demokratie mit der ökologischen Agenda verbindet und Nachhaltigkeit, Rechte und Innovation verteidigt, um wirtschaftlichen Wohlstand mit wirksamem Umweltschutz in Einklang zu bringen.",
+    "phrase": "Ich möchte eine Gesellschaft, die Markt und Demokratie mit dem ökologischen Anliegen vereint und Innovationen hervorbringt, um Wohlstand und ökologische Nachhaltigkeit in Einklang zu bringen."
+  },
+  {
+    "id": "liberalismo-social",
+    "name": "Sozialliberalismus",
+    "category": "Links",
+    "description": "Zweig, der individuelle Freiheiten mit starkem staatlichen Handeln verbindet, um Wohlfahrt, Bildung und Gesundheitsfürsorge zu gewährleisten und Chancengleichheit und soziale Sicherheit in der Marktwirtschaft zu verteidigen.",
+    "phrase": "Ich möchte eine Gesellschaft der individuellen Freiheiten, die von einer starken sozialen Sicherheit getragen wird und in der der Staat Gesundheit und Bildung für alle garantiert."
+  },
+  {
+    "id": "liberalismo-conservador",
+    "name": "Konservativer Liberalismus",
+    "category": "Richtig",
+    "description": "Synthese, die freie Märkte und wirtschaftliche Freiheiten mit der Wertschätzung von Tradition, Ordnung und Institutionen verbindet und umsichtigen Wandel und soziale Stabilität im Rahmen der liberalen Demokratie verteidigt.",
+    "phrase": "Ich möchte eine Gesellschaft, die den freien Markt mit Tradition und Institutionen verbindet und sich im Rahmen der liberalen Demokratie umsichtig verändert."
+  },
+  {
+    "id": "reformismo-georgista",
+    "name": "Georgistischer Reformismus",
+    "category": "Mitte",
+    "description": "Von Henry George ins Leben gerufene Strömung, die vorschlägt, die Gesellschaft mit einer einzigen Steuer auf den Bodenwert zu finanzieren, und der Auffassung ist, dass die Grundrente jedem gehört und dass Arbeit und Kapital nicht besteuert werden sollten.",
+    "phrase": "Ich möchte eine Gesellschaft, die durch eine einzige Grundsteuer finanziert wird, da die Grundrente allen gehört und Arbeit nicht besteuert werden sollte."
+  },
+  {
+    "id": "geolibertarianismo",
+    "name": "Geolibertarismus",
+    "category": "Libertär",
+    "description": "Synthese aus Libertarismus und Georgismus, die freie Märkte und individuelle Freiheiten mit der Besteuerung des Bodenwerts verbindet, der als gemeinsame Ressource angesehen wird, um den Minimalstaat zu finanzieren, ohne die Arbeit zu bestrafen.",
+    "phrase": "Ich möchte eine Gesellschaft voller Freiheiten und freier Märkte, in der nur Land als gemeinsame Ressource besteuert wird, um einen Minimalstaat aufrechtzuerhalten."
+  },
+  {
+    "id": "liberalismo-de-estado",
+    "name": "Staatsliberalismus",
+    "category": "Links",
+    "description": "Liberale Strömung, die eine aktive Rolle des Staates in der Wirtschaft und bei der Gewährleistung von Rechten akzeptiert und individuelle Freiheiten und Märkte mit Regulierung und öffentlicher Politik verbindet, die auf das Gemeinwohl und die Gleichheit abzielt.",
+    "phrase": "Ich möchte eine Marktgesellschaft mit einem aktiven Staat, der die Wirtschaft reguliert und Rechte erweitert, um das kollektive Wohlergehen zu gewährleisten."
+  },
+  {
+    "id": "ambientalismo",
+    "name": "Umweltschutz",
+    "category": "Links",
+    "description": "Bewegung, die sich dem Schutz der Umwelt und der nachhaltigen Nutzung von Ressourcen widmet und sich für Maßnahmen gegen Umweltverschmutzung und Klimawandel sowie für die Harmonie zwischen menschlicher Entwicklung und ökologischem Gleichgewicht einsetzt.",
+    "phrase": "Ich möchte eine Gesellschaft, die das ökologische Gleichgewicht über den Konsum stellt und eine starke staatliche Politik gegen Umweltverschmutzung und Klimawandel verfolgt."
+  },
+  {
+    "id": "conservadorismo",
+    "name": "Konservatismus",
+    "category": "Richtig",
+    "description": "Politische Tradition, die Ordnung, Bräuche, Familie und gefestigte Institutionen schätzt und schrittweise und umsichtige Veränderungen dem Bruch vorzieht, basierend auf historischen Erfahrungen und Skepsis gegenüber Utopien.",
+    "phrase": "Ich möchte eine Gesellschaft, die Bräuche, Familie und Institutionen bewahrt, sich langsam verändert und Utopien und Brüchen mit Skepsis gegenübersteht."
+  },
+  {
+    "id": "progressismo",
+    "name": "Progressivismus",
+    "category": "Links",
+    "description": "Strömung, die sich für soziale Reformen und die Ausweitung von Rechten einsetzt, um Gleichheit und Gerechtigkeit zu fördern, und dabei auf Fortschritt, Wissenschaft und kollektives Handeln vertraut, um Institutionen zu transformieren und Ungleichheiten zu überwinden.",
+    "phrase": "Ich möchte eine multikulturelle Gesellschaft, die sich ständig reformiert, die Rechte erweitert und den Staat nutzt, um Ungleichheit durch Wissenschaft zu überwinden."
+  },
+  {
+    "id": "nacionalismo",
+    "name": "Nationalismus",
+    "category": "Richtig",
+    "description": "Ideologie, die die Nation zum zentralen Wert macht, ihre Souveränität, Einheit und Identität verteidigt und den Interessen des Volkes und des Nationalstaats Vorrang vor äußeren Einflüssen und Globalismus einräumt.",
+    "phrase": "Ich möchte eine Gesellschaft, die in die nationale Identität integriert ist, mit einer starken Ordnung und einer Wirtschaft, die im Namen der Volkssouveränität vor dem Ausland geschützt ist."
+  },
+  {
+    "id": "nacionalismo-civico",
+    "name": "Bürgerlicher Nationalismus",
+    "category": "Mitte",
+    "description": "Nationalismus, der auf Staatsbürgerschaft und gemeinsamen Werten statt auf ethnischer Zugehörigkeit basiert und die Nation durch die Einhaltung gemeinsamer Gesetze und Institutionen definiert und allen offen steht, die ihre demokratischen und staatsbürgerlichen Prinzipien akzeptieren.",
+    "phrase": "Ich möchte eine Nation, die durch Staatsbürgerschaft und gemeinsame Gesetze definiert ist, nicht durch ethnische Zugehörigkeit, offen für jeden, der unsere demokratischen Prinzipien akzeptiert."
+  },
+  {
+    "id": "indigenismo",
+    "name": "Indigenismus",
+    "category": "Links",
+    "description": "Eine Strömung, die indigene Völker und ihre Rechte wertschätzt und Autonomie, Territorium, Kultur und politische Teilhabe sowie Entwicklungsmodelle und einen plurinationalen Staat verteidigt, der ihre Traditionen respektiert.",
+    "phrase": "Ich möchte eine plurinationale Gesellschaft, die das Territorium, die Autonomie und die Traditionen der indigenen Völker respektiert und sie umfassend politisch einbezieht."
+  },
+  {
+    "id": "conservadorismo-socialista",
+    "name": "Sozialistischer Konservatismus",
+    "category": "Dritte Position",
+    "description": "Strömung, die eine sozialistische Wirtschaft mit traditionellen Werten vereint und neben Familie, Ordnung und Bräuchen auch sozialen Schutz und eine starke Rolle des Staates verteidigt, weit entfernt vom kulturellen Progressivismus liberaler Linker.",
+    "phrase": "Ich möchte einen starken Staat, der sozialen Schutz und öffentliche Industrie garantiert, aber Familie, Ordnung und Bräuche vor kulturellem Progressivismus schützt."
+  },
+  {
+    "id": "anarquismo",
+    "name": "Anarchismus",
+    "category": "Anarchist",
+    "description": "Philosophie, die den Staat und jede Zwangsgewalt ablehnt und die freie Organisation der Gesellschaft durch freiwillige Vereinigungen, Kooperation und Selbstverwaltung verteidigt, wobei Freiheit und Gleichheit zentrale Werte sind.",
+    "phrase": "Ich möchte eine staatenlose Gesellschaft, organisiert durch freiwillige Vereinigungen und gegenseitige Hilfe, in der Freiheit und Gleichheit alle Zwangsgewalt ersetzen."
+  },
+  {
+    "id": "anarcocomunismo",
+    "name": "Anarcho-Kommunismus",
+    "category": "Anarchist",
+    "description": "Strömung, die Anarchismus und Kommunismus vereint und eine Gesellschaft ohne Staats- oder Privateigentum vorschlägt, mit kollektiver Produktion und Verteilung nach Bedarf, basierend auf freier Vereinigung und gegenseitiger Hilfe.",
+    "phrase": "Ich möchte den Staat und das Privateigentum abschaffen, mit kollektiver Produktion und Verteilung nach Bedarf, gestützt durch freie Vereinigung und gegenseitige Hilfe."
+  },
+  {
+    "id": "anarcossindicalismo",
+    "name": "Anarchosyndikalismus",
+    "category": "Anarchist",
+    "description": "Strömung, die revolutionäre Gewerkschaften als Grundlage für den Sturz des Kapitalismus durch direkte Aktion und Generalstreik sieht und die Produktion durch die Arbeiter selbst in einer freien, staatenlosen Gesellschaft organisiert.",
+    "phrase": "Ich möchte, dass revolutionäre Gewerkschaften den Kapitalismus durch direkte Aktionen und den Generalstreik stürzen, wobei die Arbeiter die Produktion staatenlos kontrollieren."
+  },
+  {
+    "id": "sindicalismo",
+    "name": "Syndikalismus",
+    "category": "Links",
+    "description": "Bewegung, die Gewerkschaften und Arbeitnehmerorganisationen in den Mittelpunkt der Politik stellt und Tarifverhandlungen, direkte Aktionen und Arbeitskontrolle über die Produktion als Weg zur Emanzipation der Arbeiterklasse verteidigt.",
+    "phrase": "Ich möchte, dass Gewerkschaften und Tarifverhandlungen im Mittelpunkt der Politik stehen und dass die Kontrolle der Arbeiter über die Produktion der Weg zur Emanzipation der Arbeiterklasse ist."
+  },
+  {
+    "id": "socialismo-libertario",
+    "name": "Libertärer Sozialismus",
+    "category": "Anarchist",
+    "description": "Strömung, die den Sozialismus ohne autoritären Staat anstrebt und kollektives Eigentum und Selbstverwaltung mit umfassender individueller Freiheit vereint, die von unten nach oben von freien Gemeinschaften und Arbeitern organisiert wird.",
+    "phrase": "Ich möchte einen Sozialismus ohne autoritären Staat, mit kollektivem Eigentum und Selbstverwaltung, die von unten nach oben durch freie Gemeinschaften und Arbeiter organisiert wird."
+  },
+  {
+    "id": "socialismo-de-mercado",
+    "name": "Marktsozialismus",
+    "category": "Links",
+    "description": "System, in dem kollektive oder öffentliche Unternehmen auf Märkten konkurrieren und die Effizienz des Wettbewerbs mit der sozialistischen Gewinnverteilung vereinen, ohne die starre zentrale Planung staatlicher Volkswirtschaften.",
+    "phrase": "Ich möchte Kollektivunternehmen, die auf Märkten konkurrieren und die Effizienz des Wettbewerbs mit der sozialistischen Gewinnverteilung vereinen, ohne starre zentrale Planung."
+  },
+  {
+    "id": "mutualismo",
+    "name": "Gegenseitigkeit",
+    "category": "Anarchist",
+    "description": "Von Proudhon gegründete anarchistische Strömung, die sich für fairen Tausch, kostenlose Kredite und nutzungsbasiertes Eigentum einsetzt, wobei Produzenten und Genossenschaften untereinander ohne Ausbeutung, ohne Chefs oder einen Zentralstaat handeln.",
+    "phrase": "Ich möchte, dass Genossenschaften und Produzenten fair handeln, mit freiem Kredit und Besitz durch Nutzung, frei von Bossen, Ausbeutung und einem Zentralstaat."
+  },
+  {
+    "id": "minarco-mutualismo",
+    "name": "Minarcho-Mutualismus",
+    "category": "Libertär",
+    "description": "Synthese, die Gegenseitigkeit mit einem Minimalstaat verbindet und fairen Austausch, Genossenschaften und kostenlose Kredite mit einer öffentlichen Struktur verbindet, die auf die wesentlichen Funktionen des Schutzes von Rechten, Verträgen und Freiheiten reduziert ist.",
+    "phrase": "Ich möchte, dass die Genossenschaften der Gegenseitigkeitsgesellschaft und der kostenlose Kredit zu einem Minimalstaat hinzugefügt werden, der sich auf den Schutz grundlegender Rechte, Verträge und Freiheiten beschränkt."
+  },
+  {
+    "id": "socialismo-individualista",
+    "name": "Individualistischer Sozialismus",
+    "category": "Anarchist",
+    "description": "Zweig, der sozialistische Ideale mit einem starken Schwerpunkt auf persönlicher Autonomie und Freiheit in Einklang bringt und Zusammenarbeit und kollektives Eigentum verteidigt, ohne die Unabhängigkeit und Einzigartigkeit jedes Einzelnen zu opfern.",
+    "phrase": "Ich möchte Zusammenarbeit und kollektives Eigentum, die niemals die Autonomie, Freiheit und Einzigartigkeit jedes Einzelnen opfern."
+  },
+  {
+    "id": "comunalismo",
+    "name": "Kommunalismus",
+    "category": "Anarchist",
+    "description": "Von Murray Bookchin geschaffenes Modell, das auf autonomen Kommunen und föderierten Volksversammlungen mit einer Gemeinschaftswirtschaft und direkter Demokratie basiert und versucht, den Staat durch eine freie Konföderation zu ersetzen.",
+    "phrase": "Ich möchte autonome Gemeinden mit föderierten Volksversammlungen, einer Gemeinschaftswirtschaft und direkter Demokratie, die den Staat durch eine freie Konföderation ersetzen."
+  },
+  {
+    "id": "socialismo-cristao",
+    "name": "Christlicher Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Strömung von Thomas Müntzer, den Bauern von 1525 und Guerillapriestern wie Camilo Torres, die das Reich Gottes auf Erden durch Revolution, mit Gemeineigentum und der gewaltsam erzwungenen Herrschaft der Armen anstreben.",
+    "phrase": "Ich möchte Gottes Königreich auf Erden durch eine Revolution der Armen, aller Güter gemeinsam und der Mächtigen, die von den Auserwählten niedergeschlagen werden."
+  },
+  {
+    "id": "trabalhismo-cristao",
+    "name": "Christlicher Arbeiterismus",
+    "category": "Links",
+    "description": "Zweig, der die Verteidigung der Arbeitnehmer und der sozialen Gerechtigkeit mit christlichen Werten verbindet und Arbeitsrechte, Solidarität und sozialen Schutz innerhalb der Demokratie fördert, inspiriert von der Soziallehre der Kirche.",
+    "phrase": "Ich möchte Arbeitsrechte und sozialen Schutz innerhalb der Demokratie, inspiriert von der Soziallehre der Kirche und der christlichen Solidarität."
+  },
+  {
+    "id": "social-democracia-crista",
+    "name": "Christliche Sozialdemokratie",
+    "category": "Links",
+    "description": "Strömung, die das Evangelium in Reformen innerhalb der Demokratie umsetzt und einen Wohlfahrtsstaat, Arbeitsrechte, Gewerkschaften und Umverteilung verteidigt, ohne mit dem Markt oder liberalen Institutionen zu brechen.",
+    "phrase": "Ich möchte soziale Gerechtigkeit, die sich am Evangelium orientiert und an der Wahlurne gewonnen wird, mit starken Gewerkschaften, einem Wohlfahrtsstaat und Würde für arbeitende Menschen."
+  },
+  {
+    "id": "social-democracia",
+    "name": "Sozialdemokratie",
+    "category": "Links",
+    "description": "Strömung, die versucht, Kapitalismus und soziale Gerechtigkeit durch Demokratie in Einklang zu bringen, indem sie regulierte Märkte, einen starken Wohlfahrtsstaat, Arbeitsrechte und Umverteilung verteidigt, um soziale Ungleichheiten zu verringern.",
+    "phrase": "Ich möchte eine Gesellschaft mit regulierten Märkten und einem starken Wohlfahrtsstaat, mit Arbeitsrechten und Umverteilung durch demokratische Mittel."
+  },
+  {
+    "id": "socialismo",
+    "name": "Sozialismus",
+    "category": "Links",
+    "description": "Umfassende Doktrin, die sich für gesellschaftliches oder kollektives Eigentum an den Produktionsmitteln und wirtschaftliche Planung zur Überwindung der kapitalistischen Ausbeutung einsetzt und sowohl den revolutionären als auch den reformistischen Weg dorthin akzeptiert.",
+    "phrase": "Ich möchte eine Gesellschaft ohne Ausbeutung, in der kollektive Produktionsmittel und Wirtschaftsplanung den kapitalistischen Markt ersetzen."
+  },
+  {
+    "id": "socialismo-liberal",
+    "name": "Liberaler Sozialismus",
+    "category": "Links",
+    "description": "Strömung, die sozialistische Ziele der Gleichheit und sozialen Gerechtigkeit mit der Verteidigung der individuellen Freiheiten und der Demokratie verbindet und starken sozialen Schutz mit Pluralismus, Bürgerrechten und einer gemischten Wirtschaft verbindet.",
+    "phrase": "Ich möchte eine Gesellschaft, die sozialistische Gleichheit mit vollen individuellen Freiheiten, mit demokratischem Pluralismus und einer gemischten Wirtschaft vereint."
+  },
+  {
+    "id": "libertarianismo-social",
+    "name": "Sozialer Libertarismus",
+    "category": "Anarchist",
+    "description": "Linkslibertärer Zweig, der umfassende individuelle Freiheit mit kollektivem oder geteiltem Eigentum an Ressourcen verbindet und Autonomie, Zusammenarbeit und die Ablehnung sowohl des autoritären Staates als auch des Kapitals verteidigt.",
+    "phrase": "Ich möchte autonome Gemeinschaften mit gemeinsamem Eigentum, ohne Staat oder Kapital, die individuelle Freiheit und kollektive Zusammenarbeit vereinen."
+  },
+  {
+    "id": "ecossocialismo",
+    "name": "Ökosozialismus",
+    "category": "Links",
+    "description": "Strömung, die Sozialismus und Ökologie verbindet, die Umweltkrise dem Kapitalismus zuschreibt und eine kollektive, nachhaltige und demokratische Produktion verteidigt, die die Grenzen der Natur und der sozialen Bedürfnisse respektiert.",
+    "phrase": "Ich möchte eine Gesellschaft, die den Kapitalismus durch eine kollektive, nachhaltige Produktion überwindet, die innerhalb der Grenzen der Natur demokratisch geplant wird."
+  },
+  {
+    "id": "ecologia-profunda",
+    "name": "Tiefenökologie",
+    "category": "Links",
+    "description": "Strömung, die allen Leben und nicht nur den Menschen einen intrinsischen Wert beimisst und einen tiefgreifenden Wertewandel, die Reduzierung menschlicher Auswirkungen und die Achtung des Gleichgewichts der Ökosysteme des Planeten verteidigt.",
+    "phrase": "Ich möchte eine Gesellschaft, die den inneren Wert allen Lebens anerkennt und die menschlichen Auswirkungen aus Respekt vor dem Gleichgewicht der Ökosysteme reduziert."
+  },
+  {
+    "id": "anarquismo-agrario",
+    "name": "Agraranarchismus",
+    "category": "Anarchist",
+    "description": "Der anarchistische Zweig konzentrierte sich auf das Land und verteidigte autonome ländliche Gemeinschaften, kollektives Landeigentum und bäuerliche Zusammenarbeit und lehnte den Staat und die Landkonzentration zugunsten der Selbstverwaltung ab.",
+    "phrase": "Ich möchte autonome Landgemeinden mit kollektivem Land, ohne Staat oder Großgrundbesitz, organisiert durch bäuerliche Zusammenarbeit und Selbstverwaltung."
+  },
+  {
+    "id": "anarquismo-verde",
+    "name": "Grüner Anarchismus",
+    "category": "Anarchist",
+    "description": "Strömung, die Anarchismus und radikale Ökologie vereint und dezentrale, nachhaltige Gemeinschaften ohne Staat oder Ausbeutung der Natur im Einklang mit ökologischen Kreisläufen und nichtmenschlichem Leben verteidigt.",
+    "phrase": "Ich möchte dezentrale Gemeinschaften ohne Staat, die im Einklang mit ökologischen Kreisläufen leben, ohne die Natur auszubeuten."
+  },
+  {
+    "id": "anarco-progressismo",
+    "name": "Anarcho-Progressivismus",
+    "category": "Anarchist",
+    "description": "Synthese anarchistischer Strömungen, die sich auf die Befreiung von Körper und Identität konzentrieren und die Kritik am Patriarchat sowie an Geschlechter- und Sexualitätsnormen mit einer Offenheit für Technologie als Werkzeug der Emanzipation vereinen, alles unter Ablehnung des Staates, des Kapitalismus und jeder aufgezwungenen Hierarchie.",
+    "phrase": "Ich möchte eine Gesellschaft ohne Staat, Kapital oder Hierarchie, die Körper und Identität durch emanzipatorische Technologie vom Patriarchat befreit."
+  },
+  {
+    "id": "anarcopacifismo",
+    "name": "Anarchopazifismus",
+    "category": "Anarchist",
+    "description": "Anarchistischer Zweig, der den Staat und jede Gewalt ablehnt und den gesellschaftlichen Wandel durch gewaltfreie Mittel, zivilen Ungehorsam und freiwillige Zusammenarbeit als Weg zu einer freien und gerechten Gesellschaft verteidigt.",
+    "phrase": "Ich möchte eine Gesellschaft ohne Staat und Gewalt, aufgebaut durch zivilen Ungehorsam und freiwillige Zusammenarbeit freier Menschen."
+  },
+  {
+    "id": "anarquismo-cristao",
+    "name": "Christlicher Anarchismus",
+    "category": "Anarchist",
+    "description": "Strömung, die den christlichen Glauben mit dem Anarchismus verbindet und der Ansicht ist, dass das Evangelium Liebe, Gleichheit und Gewaltlosigkeit predigt, die mit dem Staat unvereinbar ist, und die freie Gemeinschaften verteidigt, die auf Gewissen und Nächstenliebe basieren.",
+    "phrase": "Ich möchte freie, vom Evangelium geleitete Gemeinschaften ohne Staat, die Liebe und Gleichheit durch Gewissen und Nächstenliebe leben."
+  },
+  {
+    "id": "anarco-naturalismo",
+    "name": "Anarcho-Naturismus",
+    "category": "Anarchist",
+    "description": "Anarchistischer Zweig, der mit dem Naturismus verbunden ist und ein einfaches Leben im Kontakt mit der Natur verteidigt, ohne Staat oder unterdrückende Konventionen, wobei die Autonomie des Einzelnen, die Gesundheit und die Harmonie mit der natürlichen Welt geschätzt werden.",
+    "phrase": "Ich möchte ohne staatliche oder unterdrückerische Konventionen leben, in einfachem Kontakt mit der Natur und mit Wertschätzung der individuellen Autonomie und Gesundheit."
+  },
+  {
+    "id": "geoanarquismo",
+    "name": "Geoanarchismus",
+    "category": "Anarchist",
+    "description": "Synthese aus Anarchismus und Georgismus, die den Staat ablehnt, aber Land und natürliche Ressourcen als Gemeingüter behandelt und dafür plädiert, dass ihre Rente von der gesamten Gemeinschaft auf freie und egalitäre Weise geteilt wird.",
+    "phrase": "Ich möchte den Staat abschaffen und Land als Gemeingut behandeln und seinen Ertrag frei an die gesamte Gemeinschaft verteilen."
+  },
+  {
+    "id": "anarcocapitalismo",
+    "name": "Anarchokapitalismus",
+    "category": "Libertär",
+    "description": "Strömung, die die Abschaffung des Staates und die Organisation der gesamten Gesellschaft durch Verträge und freie Märkte vorschlägt, mit Sicherheit, Gerechtigkeit und Dienstleistungen, die von konkurrierenden Privatunternehmen unter absoluten Eigentumsrechten bereitgestellt werden.",
+    "phrase": "Ich möchte den Staat abschaffen und alles durch Verträge und freie Märkte organisieren, wobei Sicherheit und Gerechtigkeit von privaten Unternehmen verkauft werden."
+  },
+  {
+    "id": "minarquismo",
+    "name": "Minarchismus",
+    "category": "Libertär",
+    "description": "Libertärer Zweig, der einen Minimalstaat verteidigt, der auf Polizei, Gerichte und Verteidigung beschränkt ist und alles andere dem Markt und der privaten Initiative überlässt, um die Rechte des Einzelnen zu schützen, ohne die Freiheit zu unterdrücken.",
+    "phrase": "Ich möchte einen Minimalstaat, der sich auf Polizei, Gerichte und Verteidigung beschränkt und alles andere dem freien Markt und der Privatinitiative überlässt."
+  },
+  {
+    "id": "paleolibertarianismo",
+    "name": "Paläolibertarismus",
+    "category": "Libertär",
+    "description": "Zweig, der radikale freie Märkte mit traditionellen, konservativen kulturellen Werten verbindet und wirtschaftliche Freiheit, Eigentum und autonome lokale Gemeinschaften gegen den Staat und den Progressivismus verteidigt.",
+    "phrase": "Ich möchte radikale freie Märkte, vereint mit traditionellen Werten, mit Eigentum und autonomen lokalen Gemeinschaften gegen den Staat."
+  },
+  {
+    "id": "libertarianismo-hoppeano",
+    "name": "Hoppescher Libertarismus",
+    "category": "Libertär",
+    "description": "Eine mit Hans-Hermann Hoppe verbundene Strömung, die Anarchokapitalismus, absolutes Privateigentum und Kritik an der Demokratie vereint und soziale Ordnungen verteidigt, die auf Vertrag, freiwilligem Ausschluss und privater Autorität basieren.",
+    "phrase": "Ich möchte eine Ordnung des absoluten Privateigentums, die durch Verträge und Gemeinschaften geregelt wird, die diejenigen ausschließt, die ihre Regeln ablehnen, ohne egalitäre Demokratie oder einen Staat."
+  },
+  {
+    "id": "capitalismo",
+    "name": "Kapitalismus",
+    "category": "Richtig",
+    "description": "Wirtschaftssystem, das auf Privateigentum, freien Märkten und dem Streben nach Gewinn basiert und in dem Produktion und Preise durch Wettbewerb sowie Angebot und Nachfrage reguliert werden und in dem die Eigeninitiative des Einzelnen der Motor ist.",
+    "phrase": "Ich möchte eine von individueller Initiative getragene Gesellschaft, in der der Wettbewerb und der freie Markt, nicht der Staat, über Preise, Produktion und Gewinn entscheiden."
+  },
+  {
+    "id": "objetivismo",
+    "name": "Objektivismus",
+    "category": "Libertär",
+    "description": "Von Ayn Rand geschaffene Philosophie, die Vernunft, Individualismus und rationalen Egoismus verherrlicht und den Laissez-faire-Kapitalismus und das Streben nach dem eigenen Glück als obersten moralischen Zweck im Leben eines jeden Menschen verteidigt.",
+    "phrase": "Ich möchte eine Gesellschaft des rationalen Egoismus und der Vernunft, in der jeder sein eigenes Glück anstrebt und der Laissez-faire-Kapitalismus die einzig gültige Moral ist."
+  },
+  {
+    "id": "ecocapitalismo",
+    "name": "Ökokapitalismus",
+    "category": "Richtig",
+    "description": "Strömung, die versucht, die Umweltkrise durch den Markt zu lösen, indem sie Preise, umweltfreundliche Technologien und Anreize nutzt, um den Schutz der Natur profitabel und mit Wachstum und freiem Unternehmertum vereinbar zu machen.",
+    "phrase": "Ich möchte eine grüne Marktwirtschaft, in der Preisgestaltung, Technologie und Gewinn den Schutz der Natur mit Wachstum und freiem Unternehmertum vereinbar machen."
+  },
+  {
+    "id": "ecoconservadorismo",
+    "name": "Ökokonservatismus",
+    "category": "Richtig",
+    "description": "Zweig, der Konservatismus und Umweltschutz vereint und die Erhaltung der Natur als Teil der Tradition und des Erbes verteidigt, die an künftige Generationen weitergegeben werden sollen, mit Besonnenheit gegenüber Veränderungen.",
+    "phrase": "Ich möchte die Natur als Teil der uns überlieferten Tradition und des Erbes bewahren, mit Umsicht gegenüber Veränderungen und einer gemischten, ausgewogenen Wirtschaft."
+  },
+  {
+    "id": "econacionalismo",
+    "name": "Ökonationalismus",
+    "category": "Mitte",
+    "description": "Strömung, die Umweltschutz mit nationaler Souveränität verbindet und dem Schutz der eigenen natürlichen Ressourcen und des Landes sowie der nachhaltigen Entwicklung innerhalb nationaler Grenzen Priorität einräumt.",
+    "phrase": "Ich möchte die natürlichen Ressourcen und das Land meines Landes schützen, mit staatlicher Planung und Wirtschaftsgrenzen, die Souveränität und Nachhaltigkeit garantieren."
+  },
+  {
+    "id": "criptoanarquismo",
+    "name": "Krypto-Anarchismus",
+    "category": "Libertär",
+    "description": "Eine Strömung, die Kryptographie und digitale Technologien nutzt, um Privatsphäre, Freiheit und Transaktionen außerhalb der staatlichen Kontrolle zu gewährleisten, und versucht, Überwachung und Autorität durch technologische Mittel zu schwächen.",
+    "phrase": "Ich möchte ein durch Kryptographie geschütztes Leben, frei von Überwachung und Grenzen, die Transaktionen blockieren und die staatliche Autorität durch Technologie auflösen."
+  },
+  {
+    "id": "libertarianismo-bleeding-heart",
+    "name": "Tränender Libertarismus",
+    "category": "Libertär",
+    "description": "Strömung, die freie Märkte und individuelle Freiheiten mit der Sorge um soziale Gerechtigkeit verbindet und der Auffassung ist, dass wirtschaftliche Freiheit auch konkret das Leben der Ärmsten und Schwächsten verbessern muss.",
+    "phrase": "Ich möchte wirtschaftliche und individuelle Freiheit, die auch die Ärmsten aus dem Elend befreit und den freien Markt mit Mitgefühl für soziale Gerechtigkeit verbindet."
+  },
+  {
+    "id": "libertarianismo-nacional",
+    "name": "Nationaler Libertarismus",
+    "category": "Libertär",
+    "description": "Zweig, der die Verteidigung individueller Freiheiten und freier Märkte mit der Wertschätzung der nationalen Souveränität und Identität verbindet und neben der Grenzkontrolle und der Nation auch eine begrenzte Regierung verteidigt.",
+    "phrase": "Ich möchte eine begrenzte Regierung und freie Märkte, die auch Grenzen, Souveränität und die Identität meiner Nation schützen."
+  },
+  {
+    "id": "monarquismo-libertario",
+    "name": "Libertärer Monarchismus",
+    "category": "Libertär",
+    "description": "Strömung, die die Monarchie als Garantie für Freiheit und Stabilität betrachtet und einen König mit begrenzter Macht verteidigt, der Eigentum und individuelle Rechte schützt und einen schlanken, minimal interventionistischen Staat aufrechterhält.",
+    "phrase": "Ich möchte einen König mit begrenzter Macht, der Eigentum und individuelle Rechte garantiert und den Staat schlank und aus dem Leben der Menschen heraushält."
+  },
+  {
+    "id": "monarquismo-federalista",
+    "name": "Föderalistischer Monarchismus",
+    "category": "Richtig",
+    "description": "Aktuelle Befürwortung eines Monarchen, der tatsächlich als verfassungsmäßiges Oberhaupt der Exekutive oder absoluter Souverän über einen Staatenbund oder Regionen mit weitgehender Selbstverwaltung regiert, wie im Deutschen Reich von 1871, den Vereinigten Arabischen Emiraten und Malaysia.",
+    "phrase": "Ich möchte einen Monarchen, der wirklich einen Staatenbund mit eigenen Gesetzen, Dynastien und Selbstverwaltung regiert, vereint durch die Krone und den Glauben."
+  },
+  {
+    "id": "conservadorismo-libertario",
+    "name": "Libertärer Konservatismus",
+    "category": "Libertär",
+    "description": "Eine Synthese, die freie Märkte und einen Minimalstaat mit der Verteidigung von Tradition, Familie und Ordnung vereint und dabei individuelle Freiheit und persönliche Verantwortung neben der Wahrung von Bräuchen und Institutionen wertschätzt.",
+    "phrase": "Ich möchte wirtschaftliche Freiheit und einen Minimalstaat neben Tradition, Familie und Bräuchen, die die soziale Ordnung aufrechterhalten."
+  },
+  {
+    "id": "feminismo-libertario",
+    "name": "Progressiver Libertarismus",
+    "category": "Libertär",
+    "description": "Zweig, der die Gleichstellung der Geschlechter durch individuelle Freiheit und den Markt und nicht durch den Staat anstrebt und Autonomie, Gleichberechtigung und das Ende gesetzlicher Einschränkungen der Wahlmöglichkeiten von Frauen verteidigt.",
+    "phrase": "Ich möchte, dass Frauen durch individuelle Freiheit und den Markt Gleichberechtigung erreichen, ohne dass der Staat ihren Körper und ihre Entscheidungen kontrolliert."
+  },
+  {
+    "id": "anarcoconservadorismo",
+    "name": "Anarcho-Konservatismus",
+    "category": "Libertär",
+    "description": "Strömung, die den Staat ablehnt, aber Tradition, Religion und Gemeinschaftswerte bewahrt und eine spontane Gesellschaftsordnung verteidigt, die auf Bräuchen, Familie und natürlicher Autorität statt auf zentraler politischer Macht basiert.",
+    "phrase": "Ich möchte die zentrale politische Macht abschaffen und unter Sitte, familiärer und natürlicher Autorität leben, in einer spontanen Ordnung, die Tradition und Glauben bewahrt."
+  },
+  {
+    "id": "anarcodistributismo",
+    "name": "Anarcho-Distributismus",
+    "category": "Anarchist",
+    "description": "Synthese aus Anarchismus und Distributismus, die die weite Verteilung von Eigentum und Kleinproduktion verteidigt, mit autonomen Gemeinschaften und Genossenschaften, die ohne Staat oder große Monopole organisiert sind.",
+    "phrase": "Ich möchte, dass Eigentum weiträumig unter Genossenschaften und autonomen Gemeinschaften verteilt wird und in kleinem Maßstab ohne Staat oder Monopole produziert wird."
+  },
+  {
+    "id": "centrismo",
+    "name": "Zentrismus",
+    "category": "Mitte",
+    "description": "Politische Position, die ein Gleichgewicht zwischen links und rechts anstrebt, Mäßigung, Pragmatismus und Konsens schätzt und Elemente verschiedener Strömungen kombiniert, um Extreme zu vermeiden und schrittweise Reformen zu fördern.",
+    "phrase": "Ich möchte Mäßigung und Pragmatismus zwischen links und rechts und die Kombination des Besten beider Strömungen in schrittweisen Reformen, die Extreme vermeiden."
+  },
+  {
+    "id": "trabalhismo",
+    "name": "Arbeitertum",
+    "category": "Links",
+    "description": "Strömung, die die Interessen der Arbeitnehmer innerhalb der Demokratie verteidigt und Arbeitsrechte, soziale Sicherheit, starke Gewerkschaften und Einkommensverteilung durch Reformen und den Wohlfahrtsstaat fördert.",
+    "phrase": "Ich möchte eine Gesellschaft, in der starke Gewerkschaften und der Wohlfahrtsstaat Arbeitsrechte und eine demokratische Verteilung des Einkommens garantieren."
+  },
+  {
+    "id": "positivismo",
+    "name": "Positivismus",
+    "category": "Mitte",
+    "description": "Von Auguste Comte inspirierte Strömung, die auf Wissenschaft und Vernunft vertraut, um die Gesellschaft zu organisieren, und Ordnung, Fortschritt und technische Verwaltung verteidigt, die von Wissen anstelle von Metaphysik und Tradition geleitet werden.",
+    "phrase": "Ich möchte eine Gesellschaft, in der Ordnung und Fortschritt herrschen und die von Technikern geführt wird, die Tradition und Metaphysik durch Wissenschaft ersetzen."
+  },
+  {
+    "id": "conservadorismo-secular",
+    "name": "Säkularer Konservatismus",
+    "category": "Richtig",
+    "description": "Konservativer Zweig, der Ordnung, Tradition und Institutionen verteidigt, ohne sie in der Religion zu verankern, und der kulturelle Werte und soziale Stabilität mit säkularen, historischen und pragmatischen Argumenten unterstützt.",
+    "phrase": "Ich möchte eine Gesellschaft, die Traditionen und Institutionen durch säkulare, historische Argumente bewahrt, ohne sich dafür auf die Religion zu berufen."
+  },
+  {
+    "id": "progressismo-cristao",
+    "name": "Christlicher Progressivismus",
+    "category": "Links",
+    "description": "Strömung, die den christlichen Glauben mit der Verteidigung sozialer Gerechtigkeit, Rechten und Reformen verbindet und im Evangelium einen Aufruf zur Solidarität, Gleichheit und Fürsorge für die Armen und Ausgegrenzten der Gesellschaft und der Welt sieht.",
+    "phrase": "Ich möchte eine vom Evangelium geleitete Gesellschaft als Aufruf zu sozialer Gerechtigkeit, Solidarität und Fürsorge für die Armen."
+  },
+  {
+    "id": "autoritarismo-modernizador",
+    "name": "Modernisierung des Autoritarismus",
+    "category": "Richtig",
+    "description": "Vom Regime von Park Chung-hee inspiriertes Modell, das staatlich geführte Industrialisierung, Kredite für Privatunternehmen und Planung mit antikommunistischer politischer Unterdrückung verbindet.",
+    "phrase": "Ich möchte einen Entwicklungsstaat, der die Kredit- und Privatwirtschaft lenkt und im Namen des nationalen Fortschritts eine politische Ordnung durchsetzt."
+  },
+  {
+    "id": "desenvolvimentismo-de-estado",
+    "name": "Staatlicher Entwicklungsismus",
+    "category": "Links",
+    "description": "Modell, bei dem der Staat die Industrialisierung und das Wirtschaftswachstum durch Planung, öffentliche Investitionen und Industrieschutz steuert und versucht, die Rückständigkeit und externe Abhängigkeit des Landes zu überwinden.",
+    "phrase": "Ich möchte einen Staat, der die Industrialisierung durch Pläne und öffentliche Investitionen vorantreibt und die Industrie vor externer Abhängigkeit schützt."
+  },
+  {
+    "id": "atlantismo",
+    "name": "Atlantikismus",
+    "category": "Richtig",
+    "description": "Geopolitische Doktrin des Bündnisses zwischen den USA, Kanada und Europa rund um die NATO und die EU, die die Osterweiterung des Bündnisses und den Einsatz westlicher Militärmacht zur Verbreitung liberaler Demokratie und freier Märkte gegen Russland und China unterstützt.",
+    "phrase": "Ich möchte, dass der Westen in der NATO und der EU vereint ist, das Bündnis erweitert und militärische Macht einsetzt, um liberale Demokratie und freie Märkte zu verbreiten."
+  },
+  {
+    "id": "tecno-monarquismo",
+    "name": "Techno-Monarchismus",
+    "category": "Richtig",
+    "description": "Eine Strömung, die Monarchie mit Technologie und effizientem Management vereint und einen Souverän vorschlägt, der wie eine Exekutive regiert, unterstützt durch Daten und Innovation, um dem Staat Stabilität und langfristige Ausrichtung zu geben.",
+    "phrase": "Ich möchte eine Monarchie, die wie eine Exekutive regiert, gestützt auf Daten und Innovation, die dem Staat Stabilität und langfristige Ausrichtung verleiht."
+  },
+  {
+    "id": "progressismo-de-direita",
+    "name": "Rechtsgerichteter Progressivismus",
+    "category": "Richtig",
+    "description": "Rechtsgerichteter progressiver Zweig, der den Kapitalismus und den Kult des technischen Fortschritts mit einer sozial fortschrittlichen, pragmatischen und säkularen Kultur verbindet und die Führung der Gesellschaft eher einer technischen Elite als der Massendemokratie anvertraut.",
+    "phrase": "Ich möchte eine säkulare, fortschrittliche Gesellschaft, die vom Kult des technischen Fortschritts angetrieben wird und von einer technischen Elite geleitet wird, die über der Massendemokratie steht."
+  },
+  {
+    "id": "tecno-socialismo",
+    "name": "Techno-Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die die Diktatur des Proletariats mit technologischem Akzelerationismus verbindet und eine revolutionäre Partei, datengesteuerte Planung, Automatisierung und kollektives Eigentum verteidigt, um den Übergang zum Kommunismus voranzutreiben.",
+    "phrase": "Ich möchte eine Gesellschaft unter der Diktatur des Proletariats, mit algorithmischer Planung, Automatisierung und kollektivem Eigentum, die sich dem Kommunismus nähert."
+  },
+  {
+    "id": "tecno-fascismo",
+    "name": "Technofaschismus",
+    "category": "Ganz rechts",
+    "description": "Dystopie, die den totalitären Autoritarismus des Faschismus mit digitaler Überwachung, künstlicher Intelligenz und technologischer Kontrolle der Massen verbindet und dabei Techniken einsetzt, um die gesamte Gesellschaft zu unterdrücken, zu manipulieren und zu dominieren.",
+    "phrase": "Ich möchte einen totalitären Staat, der digitale Überwachung und künstliche Intelligenz nutzt, um die gesamte Gesellschaft zu unterdrücken, zu manipulieren und zu dominieren."
+  },
+  {
+    "id": "liberalismo-autoritario",
+    "name": "Autoritärer Liberalismus",
+    "category": "Richtig",
+    "description": "Strömung, die Marktwirtschaft, Privateigentum, Handelsoffenheit und Technokratie mit geringer demokratischer Beteiligung verbindet und der Ansicht ist, dass ein starker, effizienter Staat Ordnung, Stabilität und Wachstum wahren sollte.",
+    "phrase": "Ich möchte eine marktwirtschaftliche und technokratische Wirtschaft mit geringer demokratischer Beteiligung und einem starken Staat, der Ordnung und Wachstum garantiert."
+  },
+  {
+    "id": "nacionalismo-progressista",
+    "name": "Progressiver Nationalismus",
+    "category": "Links",
+    "description": "Strömung, die nationale Souveränität, wirtschaftlichen Schutz und Integration der Bevölkerung mit fortschrittlichen sozialen Reformen verbindet und einen Staat anstrebt, der in der Lage ist, die Nation zu verteidigen und gleichzeitig Rechte, Gleichheit und Inklusion zu erweitern.",
+    "phrase": "Ich möchte eine souveräne, wirtschaftlich geschützte Nation, die Rechte und Gleichheit durch fortschrittliche Sozialreformen erweitert."
+  },
+  {
+    "id": "ecofascismo",
+    "name": "Ökofaschismus",
+    "category": "Ganz rechts",
+    "description": "Strömung, die radikale Ökologie, Autoritarismus und organischen Nationalismus miteinander verbindet und die Bevölkerungskontrolle, den erzwungenen Umweltschutz und die Unterordnung individueller Freiheiten unter das Überleben der nationalen Gemeinschaft verteidigt.",
+    "phrase": "Ich möchte eine organische nationale Gemeinschaft, die Bevölkerungskontrolle und erzwungenen Umweltschutz über individuelle Freiheiten stellt."
+  },
+  {
+    "id": "comunismo-agrario",
+    "name": "Agrarkommunismus",
+    "category": "Radikale Linke",
+    "description": "Revolutionäres Modell, das das bäuerliche Leben und die kollektive ländliche Produktion idealisiert und Städte, Märkte und Privateigentum zugunsten einer durch staatliche Mobilisierung und kommunale Disziplin erzwungenen Gleichheit ablehnt.",
+    "phrase": "Ich möchte ein kollektiviertes Bauernleben ohne Städte und Märkte, mit Gleichheit durch staatliche Mobilisierung und kommunale Disziplin."
+  },
+  {
+    "id": "socialismo-bolivariano",
+    "name": "Bolivarischer Sozialismus",
+    "category": "Links",
+    "description": "Lateinamerikanisches Projekt, das Volksnationalismus, Antiimperialismus, soziale Umverteilung und eine starke Führung des Präsidenten vereint und den Staat und strategische Ressourcen nutzt, um Souveränität und Einbeziehung der Bevölkerung zu fördern.",
+    "phrase": "Ich möchte ein souveränes Heimatland unter einer starken Führung des Präsidenten, das verstaatlichte strategische Ressourcen für Umverteilung und Einbeziehung der Bevölkerung nutzt."
+  },
+  {
+    "id": "nacional-desenvolvimentismo",
+    "name": "Nationaler Entwicklungsismus",
+    "category": "Mitte",
+    "description": "Strömung, die sich für Industrialisierung, nationale Souveränität und strategische Staatsplanung einsetzt und versucht, die Wirtschaft durch öffentliche Investitionen, Produktionsschutz und Koordination zwischen Regierung, Wissenschaft und nationalen Unternehmen zu modernisieren.",
+    "phrase": "Ich möchte eine Nation, die durch eine starke staatliche Planung industrialisiert wird, nationale Unternehmen schützt und Regierung, Wissenschaft und Industrie koordiniert."
+  },
+  {
+    "id": "populismo-libertario",
+    "name": "Libertärer Populismus",
+    "category": "Libertär",
+    "description": "Zweig, der Anti-Politik, radikale freie Märkte und direkte öffentliche Kommunikation vereint und Bürokratien, Steuern und Parteieliten im Namen der individuellen Freiheit, des Unternehmertums und der Souveränität des einfachen Bürgers angreift.",
+    "phrase": "Ich möchte eine Gesellschaft ohne Bürokratie und Steuern, in der der normale Bürger ein Unternehmen aufbaut, ohne dass Parteieliten sein Leben bestimmen."
+  },
+  {
+    "id": "teocratismo-cristao",
+    "name": "Christlicher Theokratismus",
+    "category": "Ganz rechts",
+    "description": "Christlich-theokratistische Doktrin, die die politische Macht der religiösen Autorität unterordnet und besagt, dass das göttliche Gesetz und die Kirche den Staat und die Bräuche regeln sollten, vom mittelalterlichen und päpstlichen Ultramontanismus bis hin zu modernen rekonstruierenden Projekten.",
+    "phrase": "Ich möchte eine Gesellschaft, die vom göttlichen Gesetz regiert wird, in der die Kirche über dem Staat steht und die Bräuche der religiösen Autorität untergeordnet sind."
+  },
+  {
+    "id": "socialismo-titoista",
+    "name": "Titoistischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "In Titos Jugoslawien entwickelte sich eine Variante des Sozialismus, die Einparteienherrschaft und Führerkult mit Arbeiterselbstverwaltung von Unternehmen, föderaler Dezentralisierung, Marktoffenheit und Blockfreiheit zwischen den Blöcken des Kalten Krieges verband.",
+    "phrase": "Ich möchte eine von Arbeitern selbstverwaltete Sowjetföderation mit einer einzigen Partei, Blockfreiheit und kontrollierter Marktöffnung."
+  },
+  {
+    "id": "socialismo-anticolonial",
+    "name": "Antikolonialer Sozialismus",
+    "category": "Links",
+    "description": "Sozialistische Strömung, die aus nationalen Befreiungskämpfen in Afrika, Asien und Lateinamerika hervorgegangen ist und die wirtschaftliche Souveränität, die Verstaatlichung von Ressourcen, die Blockfreiheit und die Solidarität zwischen den Völkern des globalen Südens gegen den Imperialismus verteidigt.",
+    "phrase": "Ich möchte ein vom Imperialismus befreites Volk mit verstaatlichten Ressourcen und Solidarität zwischen den Nationen des globalen Südens."
+  },
+  {
+    "id": "tecno-comunismo",
+    "name": "Technokommunismus",
+    "category": "Anarchist",
+    "description": "Strömung, die die Endphase des Kommunismus mit technologischer Beschleunigung verbindet und Automatisierung und KI nutzt, um Knappheit, notwendige Arbeitskräfte und Privateigentum zu überwinden.",
+    "phrase": "Ich möchte eine klassenlose Gesellschaft des Überflusses, in der Automatisierung und KI Knappheit, notwendige Arbeitskräfte und Privateigentum überwinden."
+  },
+  {
+    "id": "tecno-anarquismo",
+    "name": "Techno-Anarchismus",
+    "category": "Anarchist",
+    "description": "Technologischer Anarchismus, der die Abschaffung des Staates durch Automatisierung, reichlich Energie, dezentrale Netzwerke und selbstverwaltete Freiwilligengemeinschaften mit digitalen Werkzeugen und kostenloser lokaler Produktion vorschlägt.",
+    "phrase": "Ich möchte selbstverwaltete, staatenlose Gemeinschaften, befreit durch Automatisierung und reichlich Energie, die lokal in freien Netzwerken produzieren."
+  },
+  {
+    "id": "aceleracionismo-cristao",
+    "name": "Christlicher Beschleunigungismus",
+    "category": "Richtig",
+    "description": "Strömung, die traditionelles Christentum mit technologischer Beschleunigung verbindet und der Meinung ist, dass künstliche Intelligenz, Industrie und nationale Macht als zivilisatorische Mission gegen den säkularen Verfall ungehindert vorangetrieben werden sollten.",
+    "phrase": "Ich möchte Technologie und nationale Macht unter traditionellen christlichen Werten beschleunigen, ohne progressive Bremsen oder säkularen Verfall."
+  },
+  {
+    "id": "populismo-de-direita",
+    "name": "Rechtspopulismus",
+    "category": "Richtig",
+    "description": "Strömung, die das Volk gegen politische und kulturelle Eliten mobilisiert und dabei Nationalismus, Einwanderungsbeschränkungen, traditionelle Werte, öffentliche Religion, starke Sicherheit und wirtschaftlichen Pragmatismus gegen das Establishment um personalistische Führer herum verbindet.",
+    "phrase": "Ich möchte ein Volk, das gegen korrupte Eliten geeint ist, mit geschlossenen Grenzen, traditionellen Werten und einem Führer, der die Ordnung in der Nation wiederherstellt."
+  },
+  {
+    "id": "populismo-de-esquerda",
+    "name": "Linkspopulismus",
+    "category": "Links",
+    "description": "Strömung, die das Volk gegen die Wirtschaftseliten mobilisiert und in populärer Anti-Establishment-Sprache Umverteilung, öffentliche Kontrolle, nationale Souveränität, plebiszitäre Demokratie und umfassende Sozialpolitik verteidigt.",
+    "phrase": "Ich möchte, dass die Menschen gegen die Wirtschaftseliten mobilisiert werden, mit Volksabstimmungen und einer Umverteilung des Reichtums durch den Staat an die Untenstehenden."
+  },
+  {
+    "id": "centrismo-social",
+    "name": "Sozialer Zentrismus",
+    "category": "Mitte",
+    "description": "Zentralistischer Zweig, der die Marktwirtschaft akzeptiert, aber Sozialschutz, öffentliche Dienstleistungen, schrittweise Reformen und institutionellen Konsens zur Verringerung der Ungleichheit ohne politischen Bruch oder dauerhafte Polarisierung in den Vordergrund stellt.",
+    "phrase": "Ich möchte einen Markt, der durch einen starken sozialen Schutz ausgeglichen wird, mit schrittweisen Reformen und einem institutionellen Konsens, der die Ungleichheit verringert."
+  },
+  {
+    "id": "centrismo-liberal",
+    "name": "Liberaler Zentrismus",
+    "category": "Mitte",
+    "description": "Pro-marktorientierter zentristischer Zweig, der Haushaltsverantwortung, liberale Demokratie, gemäßigte internationale Offenheit und institutionelle Reformen verbindet und sowohl breiten Etatismus als auch libertären Radikalismus als politisches Programm ablehnt.",
+    "phrase": "Ich möchte eine fiskalisch verantwortliche, liberale Demokratie, die der Welt gegenüber offen ist und weit entfernt ist von starkem Etatismus und libertärem Radikalismus."
+  },
+  {
+    "id": "centrismo-ambientalista",
+    "name": "Grüner Zentrismus",
+    "category": "Mitte",
+    "description": "Ein zentristischer Zweig, der Nachhaltigkeit, schrittweise Energiewende, Umweltregulierung und technologische Umsicht in den Vordergrund stellt und versucht, Klimaschutz, Märkte und demokratische Institutionen ohne antikapitalistischen Bruch in Einklang zu bringen.",
+    "phrase": "Ich möchte eine schrittweise Energiewende im Rahmen des Marktes und der Demokratie, ohne antikapitalistischen Bruch oder Klimaleugnung."
+  },
+  {
+    "id": "centrismo-conservador",
+    "name": "Konservativer Zentrismus",
+    "category": "Mitte",
+    "description": "Ein zentristischer Zweig, der wirtschaftliche Mäßigung und institutionellen Respekt mit sozialem Konservatismus verbindet und Familie, Religion, Ordnung und allmählichen Wandel wertschätzt, ohne sich der autoritären Rechten oder dem populistischen Radikalismus anzuschließen.",
+    "phrase": "Ich möchte eine Gesellschaft, die Familie, Religion und Ordnung bewahrt und sich langsam verändert, ohne sich dem Populismus oder Autoritarismus anzuschließen."
+  },
+  {
+    "id": "nacional-liberalismo",
+    "name": "Nationalliberalismus",
+    "category": "Richtig",
+    "description": "Rechte Strömung, die freie Märkte, Freihandel und begrenzte Regierung mit starker nationaler Identität, kultureller Assimilation, traditionellen und religiösen Werten und einem robusten Militär verbindet.",
+    "phrase": "Ich möchte eine Nation mit starker Identität und freien Märkten, mit assimilierten Grenzen, religiöser Tradition und robuster militärischer Verteidigung."
+  },
+  {
+    "id": "arqueofuturismo",
+    "name": "Archäofuturismus",
+    "category": "Ganz rechts",
+    "description": "Eine von Guillaume Faye geprägte Doktrin, die archaische, hierarchische und traditionalistische Werte – ethnische Identität, Spiritualität und Kriegerethos – mit einer vorbehaltlosen Akzeptanz fortschrittlicher Technologie verbindet und argumentiert, dass ein bevorstehender Zusammenbruch der Zivilisation die Menschheit dazu zwingen wird, Stammes-Gesellschaftsordnung mit hypermoderner Wissenschaft zu verbinden.",
+    "phrase": "Ich möchte eine hierarchische Stammesordnung, die nach dem Zusammenbruch wiedergeboren wird und archaische Traditionen mit hypermoderner Wissenschaft und uneingeschränkter Technologie verbindet."
+  },
+  {
+    "id": "pragmatismo",
+    "name": "Pragmatismus",
+    "category": "Mitte",
+    "description": "Politische Haltung, die Vorschläge anhand der praktischen Ergebnisse beurteilt, die sie hervorbringen, und nicht anhand der Treue zu einem ideologischen Dogma, wobei Marktmaßnahmen, Regulierung und Sozialpolitik je nach Evidenz und dem jeweiligen Problemkontext kombiniert werden.",
+    "phrase": "Ich möchte Lösungen, die an Ergebnissen gemessen werden, nicht an Dogmen, die Markt-, Regulierungs- und Sozialpolitik je nach Problem vermischen."
+  },
+  {
+    "id": "pragmatismo-de-direita",
+    "name": "Rechter Pragmatismus",
+    "category": "Richtig",
+    "description": "Pragmatischer Zweig, der Haushaltsanpassung, wirtschaftliche Stabilität und Regierungsfähigkeit durch breite Koalitionen in den Vordergrund stellt und Marktreformen und politische Zugeständnisse im Namen kurz- und mittelfristiger Ergebnisse akzeptiert.",
+    "phrase": "Ich möchte Regierungsfähigkeit durch eine breite Koalition, wobei Haushaltsanpassungen und Marktreformen im Austausch für Stabilität und schnelle Ergebnisse akzeptiert werden."
+  },
+  {
+    "id": "pragmatismo-de-esquerda",
+    "name": "Linker Pragmatismus",
+    "category": "Links",
+    "description": "Zweig, der konkrete soziale Ergebnisse anstrebt, indem er mit dem Markt und bestehenden Institutionen verhandelt und dabei verantwortungsvollen Sparmaßnahmen, gezielter Sozialpolitik und Regierbarkeit Vorrang vor revolutionärer ideologischer Reinheit einräumt.",
+    "phrase": "Ich möchte mit dem Markt und den bestehenden Institutionen verhandeln, um eine gezielte Sozialpolitik umzusetzen, ohne an revolutionärer Reinheit festzuhalten."
+  },
+  {
+    "id": "imperialismo",
+    "name": "Imperialismus",
+    "category": "Ganz rechts",
+    "description": "Doktrin, die die territoriale, militärische und wirtschaftliche Expansion einer Nation gegenüber anderen Völkern und Territorien befürwortet und Kolonien und Einflussbereiche durch Gewalt und politische Herrschaft den Interessen der Metropole unterordnet.",
+    "phrase": "Ich möchte eine Metropole, die ihr Territorium erweitert und Kolonien mit Gewalt unterwirft und die eroberten Völker den Interessen der dominierenden Nation unterordnet."
+  },
+  {
+    "id": "liberalismo-progressista",
+    "name": "Progressiver Liberalismus",
+    "category": "Links",
+    "description": "Strömung, die Marktkapitalismus und globalisierten Handel mit einem robusten Wohlfahrtsstaat vereint und sich im nordischen Gesellschaftsmodell für fortschrittliche Moral, Säkularismus und demokratische Institutionen einsetzt.",
+    "phrase": "Ich möchte das nordische Modell: einen für den Welthandel offenen Markt mit einem robusten Wohlfahrtsstaat, säkularen und fortschrittlichen Bräuchen."
+  },
+  {
+    "id": "militarismo",
+    "name": "Militarismus",
+    "category": "Ganz rechts",
+    "description": "Das Regime konzentrierte sich auf die Streitkräfte als Kern der politischen Macht und wurde von einer Militärjunta oder Kommandohierarchie regiert. Es war durch Zentralisierung, Disziplin, einen Kult der Ordnung und Expansionismus gekennzeichnet und ordnete die zivile Politik dem militärischen Kommando unter.",
+    "phrase": "Ich möchte eine Militärjunta, die den Staat befehligt, Disziplin und einen Ordnungskult in den Kasernen, die die zivile Politik dem militärischen Kommando unterordnet."
+  },
+  {
+    "id": "federalismo",
+    "name": "Föderalismus",
+    "category": "Mitte",
+    "description": "Doktrin, die den Staat durch eine verfassungsmäßige Gewaltenteilung zwischen einer Zentralregierung und autonomen regionalen Einheiten wie Kantonen oder Staaten mit eigenen Zuständigkeiten, unabhängigen Gerichten und gegenseitiger Kontrolle gegen übermäßige Machtkonzentration organisiert.",
+    "phrase": "Ich möchte, dass die Macht per Verfassung zwischen einer Zentralregierung und autonomen Staaten aufgeteilt wird und dass unabhängige Gerichte jede übermäßige Konzentration kontrollieren."
+  },
+  {
+    "id": "aceleracionismo-de-esquerda",
+    "name": "Linker Beschleunigungismus",
+    "category": "Links",
+    "description": "Von Srnicek und Williams formulierte Strömung, die darauf abzielt, die Automatisierung zu beschleunigen und Technologie für die Linke zurückzugewinnen, und sich für das Ende der Arbeit, ein universelles Grundeinkommen und kürzere Arbeitszeiten auf dem Weg zu einem Postkapitalismus des Überflusses einsetzt.",
+    "phrase": "Ich möchte die Automatisierung beschleunigen und die Technologie für die Linke zurückgewinnen, indem ich die Arbeit mit dem universellen Grundeinkommen auf dem Weg zum postkapitalistischen Wohlstand abschafft."
+  },
+  {
+    "id": "conservadorismo-americano",
+    "name": "Amerikanischer Konservatismus",
+    "category": "Richtig",
+    "description": "Plattform der Republikanischen Partei, die Grenzsicherung und Abschiebungen, Zölle und Industrieprotektionismus, Steuersenkungen und Deregulierung, Waffenrechte, christliche Werte und die Rückkehr der Abtreibung in die Staaten vereint.",
+    "phrase": "Ich möchte eine sichere Grenze mit Abschiebungen, Zöllen zum Schutz der Industrie, Steuersenkungen, Waffenrechten und christlichen Werten als nationales Banner."
+  },
+  {
+    "id": "democracia-securitaria",
+    "name": "Sicherheitsdemokratie",
+    "category": "Mitte",
+    "description": "Militante Demokratiedoktrin, die einen demokratischen Staat ermächtigt, die Feinde der Demokratie selbst einzuschränken, indem er systemfeindliche Parteien verbietet, Extremisten überwacht und die Wehrpflicht aufrechterhält sowie die Sicherheit erhöht, um die verfassungsmäßige Ordnung zu verteidigen.",
+    "phrase": "Ich möchte eine kämpferische Demokratie, die Extremisten beobachtet, systemfeindliche Parteien verbietet und den Militärdienst zum Schutz der verfassungsmäßigen Ordnung aufrechterhält."
+  },
+  {
+    "id": "pacifismo-militar",
+    "name": "Bewaffneter Pazifismus",
+    "category": "Mitte",
+    "description": "Bewaffnete Neutralität, die Bündnisse, Interventionen und ausländische Projektionen ablehnt, jedoch robuste Streitkräfte, Pflichtdienst und vorbereitete Territorialverteidigung aufrechterhält und militärische Stärke als Garantie dafür betrachtet, nicht in Kriege anderer Nationen hineingezogen zu werden.",
+    "phrase": "Ich will bewaffnete Neutralität, ohne Bündnisse oder ausländische Interventionen, aber mit robusten Streitkräften und Pflichtdienst zur Verteidigung des Territoriums."
+  },
+  {
+    "id": "teocracia-progressista",
+    "name": "Progressive Theokratie",
+    "category": "Radikale Linke",
+    "description": "Von geistlicher Autorität geführte Theokratie ohne Volkssouveränität, die eine fortschrittliche Moral von oben als göttliches Gebot auferlegt: Gleichberechtigung der Geschlechter, sexuelle Befreiung, heilige Ökologie und ein Bruch mit überkommenen Bräuchen, die als zu reformierender Aberglaube behandelt werden.",
+    "phrase": "Ich möchte einen Klerus, der die Gleichstellung der Geschlechter und die sexuelle Befreiung von oben als göttliches Gebot auferlegt und mit überkommenen Bräuchen als Aberglauben bricht."
+  },
+  {
+    "id": "ateismo-tradicionalista",
+    "name": "Traditionalistischer Atheismus",
+    "category": "Richtig",
+    "description": "Durch und durch säkularer Konservatismus, der Glauben und Geistlichkeit ablehnt und gleichzeitig Hierarchie, Familie, Autorität, Nation und überlieferte Bräuche als zivilisatorische Güter verteidigt und traditionelle Moral eher als gesellschaftliche Notwendigkeit denn als göttliches Gebot behandelt.",
+    "phrase": "Ich möchte eine Nation ohne Glauben oder Klerus, die dennoch der Hierarchie, der Familie und den überlieferten Bräuchen als zivilisatorischen Gütern und nicht als religiöses Gebot treu bleibt."
+  },
+  {
+    "id": "mercantilismo",
+    "name": "Merkantilismus",
+    "category": "Richtig",
+    "description": "Doktrin, die freies Unternehmertum und Wettbewerb auf dem heimischen Markt mit einer externen Zollmauer, Subventionen für die junge Industrie, einer Nationalbank, öffentlicher Infrastruktur und Handelsüberschüssen als Quelle nationaler Macht verbindet.",
+    "phrase": "Ich möchte freien Wettbewerb im Inland, geschützt durch eine Außenzollmauer, mit einer Nationalbank und Subventionen für die junge Industrie, die einen Überschuss erwirtschaftet."
+  },
+  {
+    "id": "imperialismo-pluralista",
+    "name": "Pluralistischer Imperialismus",
+    "category": "Richtig",
+    "description": "Autokratische, militarisierte imperiale Ordnung, die Territorien durch Eroberung erweitert und dennoch eroberte Völker durch kommunale Autonomie regiert, religiöse Toleranz und Tribut verwaltet, ohne von ihren Untertanen kulturelle Assimilation zu fordern.",
+    "phrase": "Ich möchte ein Imperium, das durch militärische Autokratie siegt, aber unterworfene Völker mit kommunaler Autonomie und verwalteter religiöser Toleranz regiert."
+  },
+  {
+    "id": "imperialismo-federalista",
+    "name": "Föderalistischer Imperialismus",
+    "category": "Richtig",
+    "description": "Projekt eines dynastischen Reiches, das als Föderation von Nationalitäten organisiert ist, mit regionaler Autonomie, lokalen Parlamenten und anerkannten Sprachen, unter Beibehaltung einer erblichen Krone, einer einheitlichen Armee und der militärischen Behauptung der kaiserlichen Größe.",
+    "phrase": "Ich möchte eine erbliche Krone, die autonome Nationalitäten mit lokalen Parlamenten vereint, eine einheitliche Armee und Eroberungen, die die imperiale Größe bestätigen."
+  },
+  {
+    "id": "aristotelismo",
+    "name": "Aristotelismus",
+    "category": "Richtig",
+    "description": "Aristoteles‘ politische Philosophie, die eine gemischte Verfassung aus monarchischen, aristokratischen und volkstümlichen Elementen verteidigt, um sowohl Tyrannei als auch radikale Demokratie zu vermeiden, und die volle Staatsbürgerschaft denjenigen vorbehält, die über Tugend, Besitz und Bildung verfügen, um darüber nachzudenken.",
+    "phrase": "Ich möchte eine gemischte Verfassung aus Monarchie, Aristokratie und Volk, wobei die volle Staatsbürgerschaft denjenigen vorbehalten ist, die über Tugend und Besitz verfügen."
+  },
+  {
+    "id": "monarquismo-financeiro",
+    "name": "Finanzmonarchismus",
+    "category": "Richtig",
+    "description": "Dynastisches Mikrostaatsmodell, das politische Souveränität gegen Wohlstand eintauscht: ein Erbprinz mit echter Macht, minimaler Besteuerung, Geheimhaltung und Finanzdienstleistungen als Einnahmebasis, Offenheit für ausländisches Kapital und Einwohner und kein stehendes Heer.",
+    "phrase": "Ich möchte ein Erbfürstentum ohne Armee, mit minimalen Steuern und Bankgeheimnissen, das von Finanzen und ausländischem Kapital lebt."
+  },
+  {
+    "id": "liberalismo-aristocratico",
+    "name": "Aristokratischer Liberalismus",
+    "category": "Richtig",
+    "description": "Liberalismus vor Massendemokratie: Er garantiert bürgerliche Freiheit, Eigentum, eine freie Presse und einen schlanken Staat, beschränkt das Wahlrecht jedoch auf gebildete Grundbesitzer, aus Angst, dass die unbegrenzte Volkssouveränität genau die Freiheiten zerstören würde, die sie schützt.",
+    "phrase": "Ich möchte bürgerliche Freiheiten, eine freie Presse und einen schlanken Staat, aber das Wahlrecht soll auf gebildete Immobilienbesitzer beschränkt sein, die sie schützen."
+  },
+  {
+    "id": "autoritarismo-libertario",
+    "name": "Libertärer Autoritarismus",
+    "category": "Libertär",
+    "description": "Eine Doktrin, die politische Autorität von sozialer Kontrolle trennt: Sie begünstigt eine konzentrierte, nicht gewählte Exekutivgewalt, die von Volksabstimmungen isoliert ist, was im Gegenzug bürgerliche Freiheit, Privatsphäre und minimale staatliche Eingriffe in Privatleben und Moral garantiert.",
+    "phrase": "Ich möchte eine starke Exekutive, die von der Volksabstimmung isoliert ist und im Gegenzug die bürgerliche Freiheit garantiert und sich nicht in private Bräuche einmischt."
+  },
+  {
+    "id": "liberalismo-jacobino",
+    "name": "Jakobinischer Liberalismus",
+    "category": "Mitte",
+    "description": "Eine Strömung, die den einheitlichen, zentralisierten Staat als Garant der individuellen Freiheit sieht: Einheitliches Recht, Säkularismus und einheitliche Staatsbürgerschaft bauen die lokalen, kirchlichen und korporativen Privilegien ab, die den Einzelnen ohne eine starke nationale Macht unterdrücken würden.",
+    "phrase": "Ich möchte eine einheitliche Republik mit einheitlichen, säkularen Gesetzen, die im Namen des Bürgers lokale und geistliche Privilegien abbaut."
+  },
+  {
+    "id": "militarismo-libertario",
+    "name": "Libertärer Militarismus",
+    "category": "Libertär",
+    "description": "Eine Doktrin, die einen minimalen Staat in Bezug auf Besteuerung, Regulierung und Moral mit starken Streitkräften und einer bewaffneten Bürgerschaft verbindet: Die Landesverteidigung ist die einzige erweiterte Staatsfunktion, die als Bedingung der bürgerlichen Freiheit und nicht als deren Ausnahme behandelt wird.",
+    "phrase": "Ich möchte einen Staat mit minimalen Steuern und Zöllen, aber mit starken Streitkräften und einer bewaffneten Bürgerschaft als Grundlage der bürgerlichen Freiheit."
+  },
+  {
+    "id": "zapatismo",
+    "name": "Zapatismus",
+    "category": "Anarchist",
+    "description": "Neozapatistische Bewegung, die 1994 im Süden Mexikos entstand und indigene Autonomie, direkte Demokratie durch Versammlungen und Caracoles, kooperative Subsistenzwirtschaft und die Weigerung, die Staatsmacht zu ergreifen, vereint, zusammengefasst als „Führung durch Gehorsam“.",
+    "phrase": "Ich möchte, dass autonome indigene Gemeinschaften in Versammlungen und Caracoles, Kooperativen für den Lebensunterhalt, entscheiden und durch Gehorsam gegenüber dem Volk führen."
+  },
+  {
+    "id": "sindicalismo-revolucionario",
+    "name": "Revolutionärer Syndikalismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die den parlamentarischen und reformistischen Weg ablehnt und auf den Generalstreik und den Mobilisierungsmythos setzt: Direkte Gewerkschaftsaktionen und proletarische Gewalt sollten den Staat und die dekadente Bourgeoisie zerstören.",
+    "phrase": "Ich möchte, dass der Generalstreik und die direkte Gewerkschaftsaktion den Staat und die Bourgeoisie zerstören, ohne Parlament oder Reformismus."
+  },
+  {
+    "id": "confucionismo",
+    "name": "Konfuzianismus",
+    "category": "Richtig",
+    "description": "Doktrin, die die politische Ordnung auf der Tugend, der rituellen Hierarchie und der kindlichen Frömmigkeit des Herrschers begründet und bürokratische Verdienste und moralische Bildung gegenüber Zwangsgesetzen oder der Beteiligung der Bevölkerung bevorzugt.",
+    "phrase": "Ich möchte eine Ordnung, die auf der Tugend, der kindlichen Frömmigkeit und den bürokratischen Verdiensten des Herrschers basiert, nicht auf Zwangsgesetzen oder Abstimmungen."
+  },
+  {
+    "id": "socialismo-lassalliano",
+    "name": "Lassallescher Sozialismus",
+    "category": "Links",
+    "description": "Sozialistische Strömung, die die Emanzipation der Arbeiter durch den Nationalstaat selbst anstrebt, mit allgemeinem Wahlrecht, durch öffentliche Gelder finanzierten Produktionsgenossenschaften und einer ausdrücklichen Ablehnung des revolutionären Weges.",
+    "phrase": "Ich möchte den Arbeiter durch allgemeines Wahlrecht und vom Nationalstaat selbst finanzierte Genossenschaften emanzipieren, ohne den revolutionären Weg zu beschreiten."
+  },
+  {
+    "id": "liberal-desenvolvimentismo",
+    "name": "Liberaler Entwicklungalismus",
+    "category": "Mitte",
+    "description": "Das Modell des ostasiatischen Tigers (Singapur, Südkorea, Taiwan, Hongkong): setzt sich für freie Märkte, Außenhandel und Privatunternehmen als Wachstumsmotoren ein, gepaart mit einem aktiven technokratischen Staat, der Infrastruktur, Bildung und strategische Industrialisierung plant und dabei vor geschlossenem Protektionismus oder strenger autoritärer Kontrolle Halt macht.",
+    "phrase": "Ich möchte freie Märkte und Außenhandel als Wachstumsmotoren, geleitet von einem technokratischen Staat, der Infrastruktur und Bildung plant."
+  },
+  {
+    "id": "aristocratismo",
+    "name": "Aristokratismus",
+    "category": "Ganz rechts",
+    "description": "Doktrin der Herrschaft des Besten, die die Macht einer durch Tugend, Bildung oder Geburt qualifizierten Minderheit anvertraut, politische Gleichheit und Mehrheitsherrschaft ablehnt und die Stadt der Inkompetenz ausliefert.",
+    "phrase": "Ich möchte, dass die Regierung einer Minderheit anvertraut wird, die durch Tugend und Abstammung qualifiziert ist, und dass ich politische Gleichheit ablehne, weil sie die Stadt der Inkompetenz ausliefert."
+  },
+  {
+    "id": "aristocratismo-nietzschiano",
+    "name": "Nietzscheanischer Aristokratismus",
+    "category": "Richtig",
+    "description": "Nietzscheanische Strömung, die egalitäre Moral als Herdenfeindlichkeit ablehnt und eine Wertehierarchie, die aristokratische Sinnstiftung und die tragische Bekräftigung des Lebens nach dem Tod Gottes verteidigt.",
+    "phrase": "Ich möchte ein Leben jenseits der Herdenmoral bekräftigen und nach dem Tod Gottes eine aristokratische Wertehierarchie schaffen."
+  },
+  {
+    "id": "catolicismo",
+    "name": "Katholizismus",
+    "category": "Richtig",
+    "description": "Soziallehre der katholischen Kirche, die Traditionalismus und Verteidigung des Lebens mit der Sorge um soziale Gerechtigkeit, Subsidiarität und Arbeitnehmerwürde unter der hierarchischen Autorität des Papsttums und des kanonischen Rechts verbindet.",
+    "phrase": "Ich möchte eine Gesellschaft mit traditioneller Moral und Verteidigung des Lebens, mit sozialer Gerechtigkeit und Subsidiarität unter der Autorität des Papsttums."
+  },
+  {
+    "id": "monarquismo-moderador",
+    "name": "Mäßigung des Monarchismus",
+    "category": "Richtig",
+    "description": "Konstitutionelles Monarchiemodell des 19. Jahrhunderts, bei dem der Monarch eine vierte moderierende Macht über der Exekutive, der Legislative und der Judikative ausübt, Konflikte schlichtet und die Stabilität einer Agrarwirtschaft garantiert.",
+    "phrase": "Ich möchte einen Kaiser, der die mäßigende Macht über die drei Zweige ausübt und Konflikte um eine stabile Agrarwirtschaft schlichtet."
+  },
+  {
+    "id": "mutualismo-proudhoniano",
+    "name": "Proudhonscher Mutualismus",
+    "category": "Anarchist",
+    "description": "Proudhons ursprüngliche Doktrin, die Eigentum als Diebstahl anprangerte und sich für freien gegenseitigen Kredit, Föderalismus autonomer Gemeinschaften und Gebrauchsbesitz einsetzte, mit starken moralischen Vorbehalten gegenüber Fortschritt und Sitten.",
+    "phrase": "Ich möchte Eigentum als Diebstahl abschaffen, mit kostenlosem gegenseitigem Kredit und einer Föderation autonomer Gemeinden, in denen Besitz aus Gebrauch entsteht."
+  },
+  {
+    "id": "republicanismo-kantiano",
+    "name": "Kantischer Republikanismus",
+    "category": "Mitte",
+    "description": "Kants politische Philosophie, die die Legitimität des Staates auf der Autonomie der Vernunft und der Rechtsstaatlichkeit begründet und einen gemäßigten repräsentativen Republikanismus und eine Föderation freier Staaten als Weg zum ewigen Frieden verteidigt.",
+    "phrase": "Ich möchte eine Republik, die auf der Autonomie der Vernunft und der Rechtsstaatlichkeit basiert und in der freie Staaten in einer Föderation für ewigen Frieden vereint sind."
+  },
+  {
+    "id": "socratismo",
+    "name": "Sokratismus",
+    "category": "Mitte",
+    "description": "Die dialektische Methode von Sokrates, die Überzeugungen durch rationales Hinterfragen und das Streben nach Tugend untersucht, misstrauisch gegenüber der Massenpolitik und der Rhetorik von Demagogen, aber dennoch respektvoll gegenüber der Rechtsstaatlichkeit der Stadt.",
+    "phrase": "Ich möchte eine Stadt, die ihre Überzeugungen durch rationalen Dialog überprüft und nach Tugend strebt, die sich vor Demagogen in Acht nimmt, aber den Gesetzen der Polis gehorcht."
+  },
+  {
+    "id": "socialismo-marxista",
+    "name": "Marxistischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Die ursprüngliche Lehre von Marx, die die Geschichte als Klassenkampf analysiert und die Überwindung des Kapitalismus durch eine proletarische Revolution vorhersagt, mit der Abschaffung des Privateigentums an den Produktionsmitteln und einer starken Religionskritik.",
+    "phrase": "Ich will die proletarische Revolution, die Abschaffung des Privateigentums an den Produktionsmitteln und die Überwindung der Religion als Opium des Volkes."
+  },
+  {
+    "id": "platonismo",
+    "name": "Platonismus",
+    "category": "Ganz rechts",
+    "description": "Platons politische Philosophie, die die Regierung der Stadt einer philosophischen Elite anvertraute, die aus Tugend und Wissen bestand und im Namen von Gerechtigkeit und sozialer Harmonie eine starke Kontrolle über Bildung, Eigentum und Bräuche hatte.",
+    "phrase": "Ich möchte eine Stadt, die von Philosophenkönigen regiert wird, mit in Tugend erzogenen Wächtern und strenger Kontrolle über Eigentum und Bräuche."
+  },
+  {
+    "id": "democracia-ateniense",
+    "name": "Athener Demokratie",
+    "category": "Richtig",
+    "description": "Ideologie der klassischen Polis, die die direkte Volkssouveränität durch Versammlung und Losung unter gleichberechtigten Bürgern befürwortet und gleichzeitig die Staatsbürgerschaft einer erblichen Minderheit vorbehält, ausgenommen Frauen, Ausländer und Sklaven.",
+    "phrase": "Ich möchte eine Polis mit souveräner Versammlung und Ämtern durch Lotterie unter freien Bürgern, wobei die blutsbedingte Staatsbürgerschaft den Männern der Stadt vorbehalten bleibt."
+  },
+  {
+    "id": "social-democracia-nordica",
+    "name": "Nordische Sozialdemokratie",
+    "category": "Links",
+    "description": "Skandinavisches Modell, das dreigliedrige Tarifverhandlungen zwischen Gewerkschaften, Arbeitgebern und dem Staat, einen durch hohe Steuern finanzierten universalistischen Wohlfahrtsstaat und eine offene, exportorientierte Marktwirtschaft mit starkem sozialen Konsens und geringer Ungleichheit kombiniert.",
+    "phrase": "Ich möchte einen dreiseitigen Pakt zwischen Gewerkschaften, Arbeitgebern und dem Staat mit einer durch hohe Steuern finanzierten allgemeinen Wohlfahrt und einem offenen Exportmarkt."
+  },
+  {
+    "id": "comunismo",
+    "name": "Kommunismus",
+    "category": "Radikale Linke",
+    "description": "Von Marx und Engels theoretisierte Endphase: eine klassenlose, staatenlose Gesellschaft ohne Privateigentum an den Produktionsmitteln, mit kollektiver Produktion und Verteilung nach Bedarf, die den Kapitalismus und die sozialistische Übergangsphase ablöst.",
+    "phrase": "Ich möchte eine klassen- und staatenlose Gesellschaft ohne Privateigentum, in der jeder nach seinen Bedürfnissen produziert und erhält."
+  },
+  {
+    "id": "tecnocracia-liberal",
+    "name": "Liberale Technokratie",
+    "category": "Richtig",
+    "description": "Synthese der asiatischen Tigerstaaten: Die Regierung wird einer leistungsorientiert rekrutierten technischen Elite anvertraut, die von Abstimmungen isoliert ist und sich eher an Ergebnissen als an Doktrinen orientiert. Dabei werden Freihandel, offene Märkte und niedrige Steuern mit strenger öffentlicher Ordnung und staatlicher Planung kombiniert, wo sie sich als wirksam erweist.",
+    "phrase": "Ich möchte eine Regierung aus einer leistungsorientiert rekrutierten technischen Elite, die von der Volksabstimmung isoliert ist und den Freihandel und die öffentliche Ordnung durch Ergebnisse und nicht durch Doktrinen lenkt."
+  },
+  {
+    "id": "trabalhismo-de-direita",
+    "name": "Peronistischer Nationalismus",
+    "category": "Dritte Position",
+    "description": "Die justizialistische Doktrin von Juan und Eva Perón vereint politische Souveränität, wirtschaftliche Unabhängigkeit und soziale Gerechtigkeit mit CGT-Gewerkschaften, Verstaatlichungen, geschützter Industrialisierung, sozialem Katholizismus und einem charismatischen Führer über den Parteien.",
+    "phrase": "Ich möchte organisierte Arbeitnehmer in starken Gewerkschaften, mit angemessenen Löhnen und einer geschützten nationalen Industrie, unter fester Führung, Glauben und Familie."
+  },
+  {
+    "id": "fascismo-vermelho",
+    "name": "Roter Faschismus",
+    "category": "Dritte Position",
+    "description": "Regime, das die autoritäre Ästhetik und Hierarchie des Faschismus mit einem starken Führer, Ordnung und nationaler Disziplin zu einer sozialistischen Wirtschaft der Kollektivierung, verstaatlichten Unternehmen und zentraler Planung der Produktionsmittel verbindet.",
+    "phrase": "Ich möchte eine hierarchische, disziplinierte Nation unter einem starken Führer, mit Fabriken und Land, die im Rahmen einer totalen Staatsplanung kollektiviert sind."
+  },
+  {
+    "id": "estoicismo",
+    "name": "Stoizismus",
+    "category": "Mitte",
+    "description": "Griechisch-römische Philosophie, die lehrt, im Einklang mit Vernunft und Natur zu leben, mit Gelassenheit zu akzeptieren, was außerhalb der eigenen Kontrolle liegt, Pflicht, Selbstbeherrschung und Tugend über Vergnügen zu kultivieren und ein Naturgesetz anzuerkennen, das der gesamten vernünftigen Menschheit gemeinsam ist.",
+    "phrase": "Ich möchte nach Vernunft und Pflicht leben und das Schicksal mit Gelassenheit annehmen, nach einem Naturgesetz, das der gesamten vernünftigen Menschheit gemeinsam ist."
+  },
+  {
+    "id": "agrarianismo",
+    "name": "Agrarismus",
+    "category": "Richtig",
+    "description": "Republikanische Tradition, die den kleinen Landbesitzer als Grundlage bürgerlicher Tugend und Freiheit idealisiert und sich für eine umfassende Landverteilung, eine begrenzte und dezentralisierte Regierung sowie Misstrauen gegenüber Banken, Staatsschulden, Industrie und Großstädten einsetzt.",
+    "phrase": "Ich möchte eine Republik von Kleinbauern, die ihr Land besitzen, dezentral und frei von Banken und Staatsschulden, fernab von Fabriken und Städten."
+  },
+  {
+    "id": "socialismo-utopico",
+    "name": "Utopischer Sozialismus",
+    "category": "Links",
+    "description": "Strömung des frühen 19. Jahrhunderts, die sich eine durch rationale Planung neu organisierte Industriegesellschaft vorstellte, die von Wissenschaftlern, Ingenieuren und Produzenten geleitet wurde und Politiker und Aristokraten ersetzte, ohne auf Klassenkampf oder Revolution zu setzen.",
+    "phrase": "Ich möchte eine Industriegesellschaft, die von Wissenschaftlern und Produzenten geführt wird, rational geplant ist und Politiker und Aristokraten ohne Revolution ablöst."
+  },
+  {
+    "id": "tecno-comercialismo",
+    "name": "Techno-Kommerzialismus",
+    "category": "Libertär",
+    "description": "Eine neoreaktionäre Strömung, die die Demokratie zugunsten von Mikrostaaten ablehnt, die wie Firmen geführt werden. Es begünstigt den Wettbewerb zwischen Gerichtsbarkeiten, freie Märkte, das Recht auf Ausreise und technologische Innovation als Regierungsprinzipien.",
+    "phrase": "Ich möchte konkurrierende Unternehmensstädte, die von Aktionären geführt werden, mit Ausstiegsfreiheit und Märkten und Technologie, die Effizienz belohnen."
+  },
+  {
+    "id": "neotomismo",
+    "name": "Neo-Thomismus",
+    "category": "Ganz rechts",
+    "description": "Eine neoreaktionäre Strömung, die das Denken von Thomas von Aquin mit Kritik an liberaler Demokratie, Egalitarismus und Progressivismus verbindet. Es begründet eine hierarchische, traditionelle politische Ordnung auf Naturrecht, objektiver Moral, Vernunft und dem Gemeinwohl und ermöglicht souveräne monarchische oder zentralisierte Autorität.",
+    "phrase": "Ich möchte eine hierarchische politische Ordnung, die auf Naturrecht, Tradition und dem Gemeinwohl basiert und unter souveräner Autorität steht, unabhängig vom Mehrheitswillen."
+  },
+  {
+    "id": "eurasianismo",
+    "name": "Eurasianismus",
+    "category": "Dritte Position",
+    "description": "Russische geopolitische Strömung, die Eurasien als eigenständige Zivilisation betrachtet und einen von Moskau geführten Kontinentalblock mit regionaler Autonomie und gemeinsamer strategischer Führung gegen den Atlantikismus und die US-Hegemonie vorschlägt.",
+    "phrase": "Ich möchte, dass die eurasischen Völker in ihren Traditionen autonom sind, vereint unter der strategischen Führung Moskaus, mit wirtschaftlicher Souveränität und geplanten lebenswichtigen Industrien."
+  },
+  {
+    "id": "socialismo-democratico",
+    "name": "Demokratischer Sozialismus",
+    "category": "Links",
+    "description": "Strömung, die versucht, durch Wahlen über den Kapitalismus hinauszugehen, mit gesellschaftlichem Eigentum an Großunternehmen, Genossenschaften und Arbeitsplatzdemokratie, und sowohl die Avantgardepartei als auch die bloße sozialdemokratische Marktverwaltung ablehnt.",
+    "phrase": "Ich möchte durch die Abstimmung über den Kapitalismus hinausgehen, mit großen Unternehmen in gesellschaftlichem Eigentum, Genossenschaften und Demokratie am Arbeitsplatz, niemals einer Einparteienherrschaft."
+  },
+  {
+    "id": "terceira-via",
+    "name": "Dritter Weg",
+    "category": "Mitte",
+    "description": "Die Erneuerung der Mitte-Links-Partei in den 1990er Jahren unter Blair, Clinton und Giddens, die globalisierte Märkte und Haushaltsdisziplin akzeptiert, Wohlfahrt durch Arbeitsaktivierung ersetzt, hart gegen Kriminalität vorgeht und liberale Interventionen unterstützt.",
+    "phrase": "Ich möchte einen globalisierten Markt mit einem Staat, der in Bildung investiert, Sozialhilfe gegen Arbeit eintauscht und hart gegen Kriminalität und ihre Ursachen vorgeht."
+  },
+  {
+    "id": "paleoconservadorismo",
+    "name": "Paläokonservatismus",
+    "category": "Richtig",
+    "description": "Die amerikanische Traditionalist-Rechte, von Buchanan und Kirk, verteidigt das christliche Erbe, Lokalismus und die Rechte der Staaten, Einwanderungsbeschränkungen, Protektionismus und Nichtinterventionismus, gegen Neokonservative und den Verwaltungsstaat.",
+    "phrase": "Ich möchte eine christliche Republik lokaler Gemeinschaften und souveräner Staaten, geschlossener Grenzen, geschützter nationaler Industrie und keine Kriege um das Imperium."
+  },
+  {
+    "id": "bonapartismo",
+    "name": "Bonapartismus",
+    "category": "Richtig",
+    "description": "Cäsaristische Strömung, die einen charismatischen Führer durch eine Volksabstimmung über den Parteien legitimiert und persönliche Autorität, bürokratische Zentralisierung, militärische Mobilisierung und staatlich geführte Modernisierungsreformen kombiniert.",
+    "phrase": "Ich möchte eine Nation, die von einem plebiszitären Führer über den Parteien mobilisiert wird, der den Staat modernisiert und strategische Sektoren mit Autorität lenkt."
+  },
+  {
+    "id": "quilombismo",
+    "name": "Quilombismus",
+    "category": "Links",
+    "description": "Von Abdias Nascimento entwickeltes politisches Projekt aus der Geschichte der brasilianischen Quilombos. Sie befürwortet Rassengleichheit, afro-brasilianische Selbstbestimmung, partizipative Demokratie, eine kooperative Wirtschaft und Land zur kollektiven Nutzung.",
+    "phrase": "Ich möchte einen quilombistischen Staat mit Rassengleichheit und Beteiligung der Bevölkerung, kollektivem Land und Produktion, die durch Genossenschaften organisiert wird."
+  },
+  {
+    "id": "democracia-intervencionista",
+    "name": "Interventionistische Demokratie",
+    "category": "Richtig",
+    "description": "Außenpolitische Doktrin im Zusammenhang mit der US-Strategie von 2002. Sie befürwortet militärische Gewalt und Präventivmaßnahmen gegen Bedrohungen sowie die internationale Förderung der Demokratie, offene Märkte und von den USA geführte Allianzen.",
+    "phrase": "Ich möchte Demokratien und offene Märkte, die durch starke Bündnisse geschützt sind, mit präventiven militärischen Maßnahmen gegen Sicherheitsbedrohungen."
+  },
+  {
+    "id": "ambientalismo-malthusiano",
+    "name": "Malthusianischer Umweltschutz",
+    "category": "Richtig",
+    "description": "Von Garrett Hardin inspirierte Umweltströmung, die den Bevölkerungsdruck mit der Erschöpfung gemeinsamer Ressourcen verbindet. Sie befürwortet kollektiv durchgesetzte Beschränkungen der Ressourcennutzung und Maßnahmen zur Eindämmung des Bevölkerungswachstums.",
+    "phrase": "Ich möchte begrenzte Ressourcen durch feste Regeln für die Gemeingüter und Grenzen des Bevölkerungswachstums schützen."
+  },
+  {
+    "id": "conservadorismo-reaganista",
+    "name": "Reaganistischer Konservatismus",
+    "category": "Richtig",
+    "description": "Amerikanische konservative Strömung, die mit Ronald Reagan in Verbindung gebracht wird. Es kombiniert niedrigere Steuern und eine geringere wirtschaftliche Rolle des Bundes mit freiem Unternehmertum, traditionellen religiösen Werten, Antikommunismus und militärischer Stärke.",
+    "phrase": "Ich möchte freie Familien und Gemeinschaften unter einer kleineren Bundesregierung, niedrige Steuern, starke Unternehmen und eine starke Verteidigung gegen ausländische Gegner."
+  },
+  {
+    "id": "centrismo-radical",
+    "name": "Radikaler Zentrismus",
+    "category": "Mitte",
+    "description": "Der Zentrismus geht bis an seine Grenzen: Er verweigert jede prinzipielle Orientierung und strebt eine exakte Gleichdistanz zwischen allen Polen an, von der Ökonomie bis zur Moral, wobei er jede politische Achse als einen Gleichgewichtspunkt betrachtet, den es zu wahren gilt.",
+    "phrase": "Ich möchte eine Gesellschaft, die keine Partei ergreift, eine Macht, die sich niemals einem Pol zuwendet, und eine Wirtschaft, in der Staat und Markt genau die gleichen Gewichte haben."
+  },
+  {
+    "id": "budismo-politico",
+    "name": "Politischer Buddhismus",
+    "category": "Mitte",
+    "description": "Wendet den Dharma auf die Politik an: Ashokas gerechter König, Schumachers buddhistische Wirtschaftslehre, Buddhadasas dhhammischer Sozialismus und Bhutans Bruttonationalglück. Gewaltlosigkeit, maßvoller Konsum, Gemeinschaft und Harmonie mit der Natur stehen im Vordergrund.",
+    "phrase": "Ich möchte eine Gesellschaft, die vom Dharma und der Gewaltlosigkeit geleitet wird, mit rechtschaffenen Herrschern, gemäßigtem Konsum und einer Gemeinschaftswirtschaft im Einklang mit der Natur."
+  },
+  {
+    "id": "anarquismo-egoista",
+    "name": "Egoistischer Anarchismus",
+    "category": "Anarchist",
+    "description": "Von Max Stirner in „Das Ich und sein Eigen“ (1844) gegründete Strömung, die Staat, Moral, Religion und Rechte als Gespenster ablehnt und freiwillige Zusammenschlüsse von Egoisten vorschlägt, die sich nur verbinden, solange es ihnen dient.",
+    "phrase": "Ich möchte den Einzigen, frei von Gott, Moral und Staat, der sich nur mit Egoisten verbündet, während er zahlt, und nur das besitzt, was seine Macht besitzt."
+  },
+  {
+    "id": "social-desenvolvimentismo",
+    "name": "Sozialer Developmentalismus",
+    "category": "Links",
+    "description": "Modell der brasilianischen Arbeiterparteiregierungen, das Wachstum mit sozialer Integration anstrebt und steigende Mindestlöhne, Volkskredite, Bargeldtransfers und öffentliche Banken kombiniert, ohne mit dem Markt zu brechen.",
+    "phrase": "Ich möchte ein Wachstum, das das Einkommen teilt, mit steigenden Mindestlöhnen, Kredit- und öffentlichen Banken, breiten Allianzen und der Aufrechterhaltung des Marktes."
+  },
+  {
+    "id": "liberalismo-new-deal",
+    "name": "New-Deal-Liberalismus",
+    "category": "Mitte",
+    "description": "Derzeit mit Franklin Roosevelt geborene Demokratische Partei, die Finanzregulierung, soziale Sicherheit, öffentliche Arbeiten und starke Gewerkschaften mit bürgerlichem Patriotismus, bewahrtem Kapitalismus und internationaler Führung verbindet.",
+    "phrase": "Ich möchte eine patriotische Nation des Glaubens mit einer starken Bundesregierung, die die Banken unter Kontrolle bringt, geschützte Gewerkschaften, soziale Sicherheit und eine weltweite Führung."
+  },
+  {
+    "id": "liberalismo-keynesiano",
+    "name": "Keynesianischer Liberalismus",
+    "category": "Links",
+    "description": "Von John Maynard Keynes inspirierte Strömung, die Märkte und liberale Demokratie akzeptiert, aber dem Staat die Aufgabe gibt, die Nachfrage zu steuern, mit antizyklischen Staatsausgaben, Vollbeschäftigung als Ziel und einer gemischten Wirtschaft.",
+    "phrase": "Ich möchte eine liberale Demokratie mit einer gemischten Wirtschaft, in der der Staat gegen Abschwünge Geld ausgibt und Vollbeschäftigung anstrebt, ohne eine eigene Industrie zu besitzen."
+  },
+  {
+    "id": "social-democracia-brasileira",
+    "name": "Brasilianische Sozialdemokratie",
+    "category": "Mitte",
+    "description": "Strömung der brasilianischen PSDB, 1988 von Covas, Montoro und Cardoso gegründet, die Marktwirtschaft, Sozialstaat, Staatsreform und Haushaltsverantwortung mit Parlamentarismus und Mäßigung in sozialen Fragen verbindet.",
+    "phrase": "Ich möchte eine parlamentarische Demokratie mit stabiler Finanzlage, ausgeglichenen Büchern, regulierten Privatisierungen und einem schlanken Staat, der sich um Gesundheit und Bildung kümmert."
+  },
+  {
+    "id": "nacionalismo-varguista",
+    "name": "Varguistischer Nationalismus",
+    "category": "Dritte Position",
+    "description": "Die Estado-Novo-Doktrin von Getúlio Vargas verbindet Wirtschaftsnationalismus, einen zentralisierten Staat, staatsgebundene Gewerkschaften, Arbeitsrecht und staatliche Unternehmen wie Petrobras gegen die regionalen Oligarchien und den Liberalismus.",
+    "phrase": "Ich möchte eine Nation, die unter einem starken Staat geeint ist, mit Arbeitsgesetzen zum Schutz der Arbeitnehmer, der nationalen Industrie und des Öls und ohne regionale Oligarchie."
+  },
+  {
+    "id": "socialismo-cubano",
+    "name": "Kubanischen Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Revolutionäres Regime von Fidel Castro und Che Guevara, mit einer einzigen Partei, einer staatlichen Wirtschaft, allgemeiner Gesundheits- und Bildungsversorgung, dem Export bewaffneter Revolution und dem Ideal des neuen Menschen gegen den Imperialismus.",
+    "phrase": "Ich möchte eine souveräne, internationalistische Revolution mit einer einzigen Partei, einer Planwirtschaft, Gesundheit und Bildung für alle und einem neuen Menschen."
+  },
+  {
+    "id": "socialismo-africano",
+    "name": "Afrikanischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Die Strömung von Sankara, Samora Machel, Nkrumah und Nyerere verbindet Panafrikanismus, schwarzes Bewusstsein, antikolonialen Kampf, landwirtschaftliche Kollektivierung und Eigenständigkeit gegen Neokolonialismus und Rassismus.",
+    "phrase": "Ich möchte, dass die afrikanischen Völker und die Diaspora vereint und souverän sind, mit kollektiven Dörfern, eigenständiger Produktion und einer revolutionären Partei gegen den Neokolonialismus."
+  },
+  {
+    "id": "anarquismo-kropotkiniano",
+    "name": "Kropotkinscher Anarchismus",
+    "category": "Anarchist",
+    "description": "Strömung von Peter Kropotkin, die gegenseitige Hilfe als ein Naturgesetz betrachtet und föderierte Kommunen, die Integration von Landwirtschaft und Industrie, eine allen dienende Wissenschaft und eine Ethik der Solidarität ohne den Staat vorschlägt.",
+    "phrase": "Ich möchte freie Kommunen, die durch gegenseitige Hilfe vereint sind und Feld und Fabrik verbinden, in denen alles nach Bedarf geteilt wird und es überhaupt keinen Staat gibt."
+  },
+  {
+    "id": "conservadorismo-confederado",
+    "name": "Konföderierter Konservatismus",
+    "category": "Ganz rechts",
+    "description": "Ideologie des sklavenhaltenden Südens, die die Konföderation stützte, die Rechte und Abspaltungen der Staaten vereinte, Rassenhierarchie und Sklaverei, eine patriarchalische christliche Agrargesellschaft, Freihandel und Militarismus.",
+    "phrase": "Ich möchte souveräne Staaten ohne Zentralgewalt, eine christlich-patriarchalische Agrargesellschaft, freien Handel mit der Welt und die Wahrung der Rassenhierarchie."
+  },
+  {
+    "id": "socialismo-agrario",
+    "name": "Agrarsozialismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die vom Land aus den Sozialismus aufbaut, mit einer einzigen Partei, Kollektivierung in Dörfern und Genossenschaften, Selbstversorgung mit Nahrungsmitteln und Schutz von Land und Wäldern, wie in Nyereres Ujamaa.",
+    "phrase": "Ich möchte, dass der Sozialismus auf dem Land aufgebaut wird, mit Gemeinschaftsdörfern, selbst angebauten Nahrungsmitteln, geschützten Wäldern und einer Partei, die die Nation führt."
+  },
+  {
+    "id": "futurismo",
+    "name": "Futurismus",
+    "category": "Dritte Position",
+    "description": "Bewegung von Filippo Marinetti, die Geschwindigkeit, Maschinen, Industrie und Krieg als die Hygiene der Welt verherrlichte, Nationalismus, Antiklerikalismus und einen Bruch mit der Vergangenheit predigte und zur Gründung des italienischen Faschismus beitrug.",
+    "phrase": "Ich möchte eine junge, schnelle Nation, angetrieben von Maschinen und Fabriken, frei von Priestern, Königen und Museen, geschmiedet im Krieg als Hygiene der Welt."
+  },
+  {
+    "id": "cesarismo",
+    "name": "Cäsarismus",
+    "category": "Richtig",
+    "description": "Römische Kaisertradition, die von Julius Cäsar über Augustus, Nero, Marcus Aurelius und Justinian Armee, Recht und Verwaltung beim Herrscher konzentriert und gleichzeitig Institutionen, Volksversorgung und Souveränität über ein vielfältiges Reich bewahrt.",
+    "phrase": "Ich möchte ein Reich unter einem Kommando, das von der Armee, dem Gesetz und den Göttern der Stadt getragen wird, mit Brot für das Volk und geschützten Grenzen."
+  },
+  {
+    "id": "capitalismo-industrial",
+    "name": "Industrieller Kapitalismus",
+    "category": "Richtig",
+    "description": "Kapitalismus der großen Industriellen wie Henry Ford, Rockefeller und Thomas Edison, der die Fabrik, die Massenproduktion, die Erfindung und den Unternehmer verherrlicht, mit einer Arbeitsethik, einer traditionellen Familie und minimaler staatlicher Einmischung.",
+    "phrase": "Ich möchte eine Nation der Fabriken, der Erfindungen und der Arbeit, mit Privateigentum, freien Unternehmern und wenig staatlicher Einmischung."
+  },
+  {
+    "id": "neoliberalismo-autoritario",
+    "name": "Autoritärer Neoliberalismus",
+    "category": "Richtig",
+    "description": "Regime, das durch eine Militärdiktatur mit Privatisierungen, Handelsöffnungen und in Chicago ausgebildeten Ökonomen radikale freie Märkte durchsetzt und im Namen der Ordnung und des Antikommunismus Gewerkschaften, Parteien und Gegner unterdrückt.",
+    "phrase": "Ich möchte offene Märkte, Privatisierung und Haushaltsdisziplin durch eine starke Regierung, die Gewerkschaften und Opposition zerschlägt."
+  },
+  {
+    "id": "catolicismo-universalista",
+    "name": "Universalistischer Katholizismus",
+    "category": "Richtig",
+    "description": "Christliche Vision, die die universelle Kirche über Nationen, Rassen und Grenzen stellt, in der Linie von Paulus von Tarsus und Augustinus, und starken Glauben, traditionelle Moral und spirituelle Autorität mit Brüderlichkeit unter allen Völkern verbindet.",
+    "phrase": "Ich möchte ein universelles christliches Gemeinwesen, geeint durch die Kirche und das Sittengesetz, über Grenzen, Rassen und nationale Interessen hinweg."
+  },
+  {
+    "id": "republicanismo-confederal",
+    "name": "Konföderaler Republikanismus",
+    "category": "Mitte",
+    "description": "Tradition von Republiken aus souveränen Provinzen oder Kantonen wie der Niederländischen Republik und der alten Schweizerischen Eidgenossenschaft mit lokaler Selbstverwaltung, offenem Handel, bewaffneter Neutralität und tief verwurzeltem protestantischem Glauben.",
+    "phrase": "Ich möchte souveräne Provinzen, die durch einen republikanischen Pakt, offenen Handel, lokale Milizen und protestantischen Glauben vereint sind."
+  },
+  {
+    "id": "anarcoprimitivismo",
+    "name": "Anarcho-Primitivismus",
+    "category": "Anarchist",
+    "description": "Strömung von John Zerzan und Ted Kaczynski, die die industrielle Zivilisation und die Landwirtschaft selbst als Wurzel der Herrschaft betrachtet und das Ende der modernen Technologie und eine Rückkehr zu kleinen staatenlosen Jäger-Sammler-Gemeinschaften fordert.",
+    "phrase": "Ich möchte den Staat, die Industrie und die Landwirtschaft abschaffen und in kleinen autonomen Gemeinschaften leben, die frei von Technologie und Herrschaft sind."
+  },
+  {
+    "id": "socialismo-federalista",
+    "name": "Föderalistischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Modell einer Föderation sozialistischer Republiken unter einer Avantgardepartei, wie in Lenins UdSSR, die Planwirtschaft und Einparteienherrschaft mit nationaler Autonomie, lokalen Sprachen und Kulturen sowie föderierten Republiken mit einem formellen Recht auf Abspaltung verbindet.",
+    "phrase": "Es handelte sich um eine Union sozialistischer Republiken mit eigenen Sprachen und Kulturen, die die Avantgardepartei und einen gemeinsamen Wirtschaftsplan leitete.",
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "Lenin"
+  },
+  {
+    "id": "socialismo-patriotico",
+    "name": "Patriotischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Strömung, die eine staatliche sozialistische Wirtschaft und eine starke Partei mit Patriotismus, der traditionellen Familie, Religion als nationales Erbe und Ablehnung des kulturellen Progressivismus verbindet und Identitätspolitik als liberale Ablenkung vom Klassenkampf betrachtet.",
+    "phrase": "Ich will einen Sozialismus der arbeitenden Bevölkerung mit Heimat, Familie und Ahnenglauben, von der Partei geplant und frei von liberalen Modeerscheinungen.",
+    "countryId": "Weißrussland",
+    "personalityId": "Stalin"
+  },
+  {
+    "id": "socialismo-vietnamita",
+    "name": "Vietnamesischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Modell der Kommunistischen Partei Vietnams, die das Ho-Chi-Minh-Gedanken, die antikoloniale nationale Befreiung und die Đổi Mới von 1986 vereint: Einparteienherrschaft, eine sozialistisch orientierte Marktwirtschaft, ein dominanter Staatssektor und Offenheit für den Welthandel.",
+    "phrase": "Ich möchte, dass die Nation auf dem Weg von Ho Chi Minh befreit wird, angeführt von der Partei, mit einem sozialistisch orientierten Markt und offenen Türen für den Handel.",
+    "countryId": "Vietnam",
+    "personalityId": "ho-chi-minh"
+  },
+  {
+    "id": "socialismo-baathista",
+    "name": "Baathistischer Sozialismus",
+    "category": "Dritte Position",
+    "description": "Eine arabische Strömung des Staatssozialismus, die panarabischen Nationalismus, eine Avantgardepartei, Planung, Landreform und Kontrolle strategischer Sektoren vereint und sich für arabische Einheit, Säkularismus und Unabhängigkeit vom Imperialismus einsetzt.",
+    "phrase": "Ich möchte, dass die arabische Nation durch eine revolutionäre Partei vereint wird, mit Staatssozialismus, Landreform, Säkularismus und Unabhängigkeit vom Imperialismus."
+  },
+  {
+    "id": "islamismo",
+    "name": "Islamismus",
+    "category": "Richtig",
+    "description": "Politische Bewegung, die einen Staat befürwortet, der von der Scharia und der islamischen Identität regiert wird, die aus der Muslimbruderschaft von Hassan al-Banna und Sayyid Qutb hervorgegangen ist und Massenaktivismus, religiöse Sozialfürsorge und Ablehnung des westlichen Säkularismus vereint.",
+    "phrase": "Ich möchte eine islamische Gesellschaft, die von der Scharia geleitet wird, mit einer Organisation der Gläubigen in den Moscheen und einer Zakat-Wirtschaft ohne Wucher."
+  },
+  {
+    "id": "democracia-islamica",
+    "name": "Islamische Demokratie",
+    "category": "Richtig",
+    "description": "Gegenwärtig wird der Islam mit der Wahldemokratie durch konservative religiöse Parteien in Einklang gebracht, die an Wahlen teilnehmen und eine Marktwirtschaft und muslimische Werte im öffentlichen Leben unterstützen, wie die frühe AKP in der Türkei und die Ennahda in Tunesien.",
+    "phrase": "Ich möchte eine muslimische Partei, die Wahlen gewinnt, Familie und Glauben im öffentlichen Leben schützt und die Marktwirtschaft wachsen lässt."
+  },
+  {
+    "id": "socialismo-islamico",
+    "name": "Islamischer Sozialismus",
+    "category": "Dritte Position",
+    "description": "Der gegenwärtige Sozialismus basiert auf islamischen Prinzipien wie der Zakat, dem Wucherverbot und der sozialen Gerechtigkeit im Koran und verbindet Antiimperialismus mit einer staatlichen Wirtschaft, von Gaddafis dritter Universaltheorie bis zu Ali Shariatis Gedanken.",
+    "phrase": "Ich möchte koranische Gerechtigkeit: Das Land gehört Gott, die Zakat teilt den Reichtum und der Staat steuert die Wirtschaft gegen Wucher und Imperialismus."
+  },
+  {
+    "id": "pan-islamismo",
+    "name": "Panislamismus",
+    "category": "Ganz rechts",
+    "description": "Ideologie, die die politische Einheit der Muslime über nationale Grenzen hinweg, rund um die Ummah und das Ideal eines Kalifats befürwortet, von Jamal al-Din al-Afghani formuliert und vom osmanischen Sultan Abdul Hamid II. gegen den europäischen Kolonialismus übernommen.",
+    "phrase": "Ich möchte, dass die Ummah über Grenzen hinweg unter einem Kalifat vereint ist, überall islamisches Recht herrscht und die muslimische Welt frei von westlicher Herrschaft ist."
+  },
+  {
+    "id": "nacionalismo-kemalista",
+    "name": "Kemalistischer Nationalismus",
+    "category": "Dritte Position",
+    "description": "Doktrin von Mustafa Kemal Atatürk, die die moderne Türkei auf sechs Pfeilen gründete: Republikanismus, Nationalismus, Populismus, Etatismus, Laizismus und Reformismus, die eine Verwestlichung und staatliche Kontrolle der Religion von oben durchsetzte.",
+    "phrase": "Ich möchte eine säkulare, moderne türkische Republik mit einer Religion unter staatlicher Kontrolle, einer nationalen Identität und einer vom Staat aufgebauten Industrie."
+  },
+  {
+    "id": "liberalismo-islamico",
+    "name": "Islamischer Liberalismus",
+    "category": "Mitte",
+    "description": "Reformistische Strömung, die den Islam im Lichte von Vernunft, Menschenrechten und Pluralismus neu interpretiert und sich in der modernistischen Tradition von Muhammad Abduh für Demokratie, Geschlechtergleichheit, einen nicht-konfessionellen Staat und Gewissensfreiheit einsetzt.",
+    "phrase": "Ich möchte meinen islamischen Glauben mit Vernunft und Freiheit leben, in einem demokratischen, nichtkonfessionellen Staat, der die Gleichberechtigung von Männern und Frauen gewährleistet."
+  },
+  {
+    "id": "nacionalismo-budista",
+    "name": "Buddhistischer Nationalismus",
+    "category": "Richtig",
+    "description": "Eine Strömung, die ethnische Identität und Theravada-buddhistischen Glauben verbindet und die Nation als Hüterin des Dharma sieht, die von Minderheiten bedroht wird, wie im singhalesischen Nationalismus in Sri Lanka und den Ma Ba Tha- und 969-Mönchsbewegungen in Myanmar.",
+    "phrase": "Ich möchte eine buddhistische Nation, die den Dharma und die Mehrheit schützt, mit einflussreichen Mönchen, starken Führern und Minderheiten unter Beobachtung."
+  },
+  {
+    "id": "sionismo",
+    "name": "Zionismus",
+    "category": "Mitte",
+    "description": "Die 1897 von Theodor Herzl gegründete jüdische Nationalbewegung, die als Reaktion auf den Antisemitismus einen jüdischen Staat im Land Israel anstrebte und 1948 zur Gründung Israels führte, das die Nation, die hebräische Sprache und die Rückkehr in das angestammte Land vereinte.",
+    "phrase": "Ich möchte einen demokratischen jüdischen Staat im Land Israel, der jeden Juden willkommen heißt, das Hebräische wiederbelebt und den Menschen ein sicheres Zuhause bietet."
+  },
+  {
+    "id": "sionismo-trabalhista",
+    "name": "Arbeiterzionismus",
+    "category": "Links",
+    "description": "Der sozialistische Zweig des Zionismus, der den Staat Israel durch die Kibbuzim, die Histadrut-Arbeiterföderation und Ben-Gurions Mapai-Partei aufbaute und jüdischen Nationalismus, kollektive Arbeit auf dem Land und einen säkularen Wohlfahrtsstaat vereinte.",
+    "phrase": "Ich möchte die jüdische Nation mit unseren eigenen Händen aufbauen, in Kibbuzim und starken Gewerkschaften, mit öffentlichem Land und einem säkularen Wohlfahrtsstaat."
+  },
+  {
+    "id": "feudalismo",
+    "name": "Feudalismus",
+    "category": "Ganz rechts",
+    "description": "Eine mittelalterliche Ordnung, die auf persönlichen Vasallenbindungen zwischen Herrn und Vasallen beruhte, mit Land als Lehen, einem erblichen Kriegeradel, an das Land gebundenen Leibeigenen, der Kirche als moralischer Autorität und einer Machtverteilung unter den örtlichen Herren.",
+    "phrase": "Ich möchte Herren und Vasallen, die durch Treue verbunden sind, die Kirche im Mittelpunkt und jeder in seinem Besitz: diejenigen, die beten, kämpfen oder bestellen."
+  },
+  {
+    "id": "tradicionalismo-carlista",
+    "name": "Carlistischer Traditionalismus",
+    "category": "Ganz rechts",
+    "description": "Eine spanische Strömung des konterrevolutionären Traditionalismus, die in den Karlistenkriegen des 19. Jahrhunderts unter dem Motto „Gott, Vaterland, Fueros und König“ entstand und sich für eine legitimistische katholische Monarchie, religiöse Einheit, regionale Fueros und eine organische Gesellschaft gegen den Liberalismus einsetzt.",
+    "phrase": "Ich möchte ein katholisches Spanien unter dem rechtmäßigen König, mit regionalen Fueros, ständischen Cortes und Zünften, gegen Liberalismus und Zentralismus."
+  },
+  {
+    "id": "fascismo-clerical",
+    "name": "Klerikaler Faschismus",
+    "category": "Dritte Position",
+    "description": "Eine Variante des Faschismus, die Ultranationalismus, eine Massenpartei und Milizen mit der Autorität einer nationalen Kirche verbindet, mit Geistlichen an der Macht, wie im Austrofaschismus von Dollfuß, in der Slowakei von Pater Tiso, in der kroatischen Ustaše und in der Eisernen Garde Rumäniens.",
+    "phrase": "Ich möchte eine von der Kirche geweihte Nation mit Geistlichen an der Regierung, einer Partei, Glaubensmilizen und christlichen Unternehmen, die die Wirtschaft leiten."
+  },
+  {
+    "id": "teocratismo-islamico",
+    "name": "Islamischer Theokratismus",
+    "category": "Ganz rechts",
+    "description": "Eine Doktrin, die den Staat dem islamischen Klerus überlässt und die Scharia zum obersten Gesetz über der Volkssouveränität macht, wie in Khomeinis Vormundschaft über den Juristen (velayat-e faqih) im Iran und im Taliban-Emirat in Afghanistan.",
+    "phrase": "Ich möchte Gottes Souveränität über das Wahlrecht, mit dem religiösen Juristen an der Spitze, der Scharia als einzigem Gesetz und einer Wirtschaft ohne Wucher."
+  },
+  {
+    "id": "socialismo-blanquista",
+    "name": "Blanquistischer Sozialismus",
+    "category": "Radikale Linke",
+    "description": "Auguste Blanquis Doktrin, dass eine verschwörerische revolutionäre Minderheit die Macht ergreifen und durch eine provisorische Diktatur herrschen sollte, die die Bourgeoisie enteignet, mit militantem Atheismus und Misstrauen gegenüber Wahlen und spontanen Massenaktionen.",
+    "phrase": "Ich möchte eine aufständische Minderheit, die Paris stürmt, eine provisorische Diktatur gegen die Bourgeoisie und die Kirche errichtet und den Reichtum dem Volk übergibt."
+  },
+  {
+    "id": "socialismo-budista",
+    "name": "Buddhistischer Sozialismus",
+    "category": "Links",
+    "description": "Eine Strömung, die den Sozialismus in der buddhistischen Ethik begründet und Mitgefühl und das Ende der Bindung als Grundlage für Gleichheit, Gemeineigentum und Kasteablehnung sieht, von Ambedkar und dem Dalai Lama bis zum birmanischen Sozialismus von Ne Win.",
+    "phrase": "Ich möchte eine Gesellschaft des Mitgefühls ohne Kasten, mit gemeinsamem Land und gemeinsamen Ressourcen und einem Staat, der sich um alle kümmert, ohne auf Profit fixiert zu sein."
+  },
+  {
+    "id": "teocracia-budista",
+    "name": "Buddhistische Theokratie",
+    "category": "Ganz rechts",
+    "description": "Herrschaft durch eine buddhistische klösterliche Hierarchie, mit wiedergeborenen Führern und Klöstern, die Politik und Land, traditionelle Ordnung und moralische Gebote als Gesetz beherrschen, wie im Tibet des Dalai Lama vor 1950.",
+    "phrase": "Ich möchte eine Gesellschaft, die von der Sangha regiert wird, mit reinkarnierten Lamas an der Spitze, den fünf Geboten als Gesetz und der traditionellen Ordnung über Wahlen."
+  },
+  {
+    "id": "monarquismo-iluminista",
+    "name": "Aufgeklärter Monarchismus",
+    "category": "Richtig",
+    "description": "Aufgeklärter Absolutismus: ein souveräner Monarch, der mit Vernunft regiert, „alles für das Volk, nichts vom Volk“, mit einer Bürokratie aus Experten, Bildung und Reformen gegen Kirche und Adel, von Friedrich II. bis Joseph II.",
+    "phrase": "Ich möchte einen aufgeklärten Monarchen, den ersten Diener des Staates, der durch Vernunft, Weise und Toleranz reformiert: alles für das Volk, nichts durch das Volk."
+  },
+  {
+    "id": "teocracia-judaica",
+    "name": "Jüdische Theokratie",
+    "category": "Ganz rechts",
+    "description": "Von der Thora und der Halacha regierte Regierung mit rabbinischen Gerichten, Richtern oder Königen unter religiöser Autorität, Judentum als Staatsreligion und Ablehnung der Assimilation, inspiriert von den biblischen Königreichen Israel und Juda.",
+    "phrase": "Ich möchte einen Staat, der von der Thora und der Halacha regiert wird, mit rabbinischen Gerichten, Richtern oder einem König unter dem Gesetz Gottes und Familiengrundbesitz."
+  },
+  {
+    "id": "municipalismo",
+    "name": "Kommunalismus",
+    "category": "Libertär",
+    "description": "Eine Welt, die in unabhängige Stadtstaaten und Mikrostaaten unterteilt ist, die wie ein Markt konkurrieren, mit freier Sezession, Austrittsrecht und politischem Experimentieren, von den mittelalterlichen freien Städten bis zu Yarvins „Patchwork“ und Seasteading.",
+    "phrase": "Ich möchte, dass Tausende souveräner Stadtstaaten um Einwohner konkurrieren, mit freier Sezession, Ausreiserecht und jeder Stadt, die ihre eigenen Gesetze wählt."
+  }
+]

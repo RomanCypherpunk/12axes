@@ -67,17 +67,13 @@ public class BookRecommendationService {
         if (directUrl != null && !directUrl.isBlank()) {
             return directUrl;
         }
-        boolean english = QuizDataService.LANG_EN.equals(lang);
+        boolean english = !QuizDataService.LANG_PT.equals(lang);
         String query = URLEncoder.encode(title + " " + author, StandardCharsets.UTF_8);
         return "https://" + (english ? AMAZON_US_HOST : AMAZON_BR_HOST)
                 + "/s?k=" + query + "&i=stripbooks&tag=" + (english ? AMAZON_US_TAG : AMAZON_BR_TAG);
     }
 
     private static String localized(Map<String, String> values, String lang) {
-        if (values == null) {
-            return null;
-        }
-        String value = values.get(lang);
-        return value == null || value.isBlank() ? values.get(QuizDataService.LANG_PT) : value;
+        return QuizDataService.localized(values, lang);
     }
 }
