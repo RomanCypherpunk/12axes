@@ -1,3 +1,4 @@
+import fr from './exampleResult.fr';
 import { LANG } from '../i18n';
 import type { AxisResult, CountryMatch, IdeologyMatch, PersonalityMatch } from '../types/quiz';
 
@@ -1102,4 +1103,4 @@ const en: ExampleResult[] = [
   }
 ];
 
-export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'en' ? en : pt;
+export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'fr' ? fr : LANG === 'en' ? en : pt;

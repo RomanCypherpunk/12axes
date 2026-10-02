@@ -31,6 +31,9 @@ const PALETTE: Record<IdeologyColorKey, IdeologyColor> = {
 
 // Nomes de categoria vindos da API (PT e EN) e ids do espectro da home.
 const ALIASES: Record<string, IdeologyColorKey> = {
+  'gauche radicale': 'esq-radical', gauche: 'esquerda', centre: 'centro', droite: 'direita',
+  'extrême droite': 'ext-direita', 'troisième position': 'terceira', libertarien: 'libertario', anarchisme: 'anarquismo',
+
   'esquerda radical': 'esq-radical',
   'radical left': 'esq-radical',
   'left-radical': 'esq-radical',

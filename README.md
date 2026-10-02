@@ -4,7 +4,7 @@
 
 A political quiz that places you on twelve independent axes and compares your answers with +230 ideologies, +170 countries and regimes, and +390 political figures.
 
-**[12axes.vercel.app](https://12axes.vercel.app)** · Portuguese and English · no sign-up
+**[12axes.vercel.app](https://12axes.vercel.app)** · Portuguese, English, and French · no sign-up
 
 ![Java](https://img.shields.io/badge/Java-21-orange) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-6DB33F) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6) ![CI](https://github.com/RomanCypherpunk/12axes/actions/workflows/ci.yml/badge.svg)
 
@@ -121,7 +121,7 @@ There is no database. The catalogs change only through reviewed commits, so the 
 
 ### Project data
 
-All data lives in `backend/src/main/resources/data/`, with English translations in `i18n/en/`.
+All data lives in `backend/src/main/resources/data/`, with English and French overlays in `i18n/en/` and `i18n/fr/`.
 
 | File | Contents |
 |------|----------|
@@ -147,7 +147,7 @@ On startup the backend refuses to run if any catalog entry lacks a vector or a v
 │       └── service/         data loading, scoring, matchers, religion filter
 ├── frontend/                React + Vite app
 │   ├── src/components/      home, quiz, results, report
-│   ├── src/i18n/            PT/EN strings
+│   ├── src/i18n/            PT/EN/FR strings
 │   └── scripts/             static page generator, image optimizer
 ├── profile-audit/           pipeline that builds the catalog vectors
 ├── scripts/                 repository checks (i18n)
@@ -179,7 +179,7 @@ Each catalog is ranked separately. A match also reports a percentile inside its 
 | `GET` | `/api/countries[/{id}]` | Country catalog |
 | `GET` | `/api/personalities[/{id}]` | Personality catalog |
 
-Endpoints accept `lang=pt|en`, and the result endpoints accept `religion` for the filter. `/api/**` answers only requests whose `Origin` or `Referer` is in `FRONTEND_ORIGINS`, and returns `403` otherwise. `/api/health` stays open for the Render health check.
+Endpoints accept `lang=pt|en|fr` (including regional variants such as `fr-FR`), and the result endpoints accept `religion` for the filter. `/api/**` answers only requests whose `Origin` or `Referer` is in `FRONTEND_ORIGINS`, and returns `403` otherwise. `/api/health` stays open for the Render health check.
 
 <details>
 <summary>Example request</summary>
@@ -226,12 +226,12 @@ To point the local frontend at the production API instead, create `frontend/.env
 ### Tests
 
 ```bash
-cd backend && mvn test          # 129 tests
+cd backend && mvn test          # JUnit
 cd frontend && npm test         # Vitest
 cd frontend && npm run build    # type check, build, static pages
 ```
 
-The backend suite covers the question pool, the three formats, every catalog vector, links between catalogs, the religion filter, the REST endpoints, and matching regressions. The frontend suite covers question selection and translation. `RandomQuizSimulationTest` simulates users of a given leaning, for example `mvn -Dtest=RandomQuizSimulationTest "-Dquiz.mode=traditional" test`.
+The backend suite covers the question pool, the three formats, every catalog vector, links between catalogs, the religion filter, the REST endpoints, and matching regressions. The frontend suite covers question selection, locale resolution, navigation, translation, and generated catalog pages. Run `python3 scripts/check_i18n.py` from the repository root to check all three locales, archetypes, and books. `RandomQuizSimulationTest` simulates users of a given leaning, for example `mvn -Dtest=RandomQuizSimulationTest "-Dquiz.mode=traditional" test`.
 
 ### Deploy
 
@@ -239,6 +239,8 @@ The backend suite covers the question pool, the three formats, every catalog vec
 |------|----------|---------------|
 | Backend | Render | `render.yaml` and `backend/Dockerfile` |
 | Frontend | Vercel | `frontend/vercel.json`, output `dist` |
+
+When introducing a locale, deploy its API support before the frontend. French book links search Amazon.fr without an affiliate tag; French titles use verified editions where available and otherwise retain the source title. Bibliographic references are recorded in `data/i18n/fr/book-sources.json` alongside the backend catalogs.
 
 Every push and pull request runs the CI workflow in `.github/workflows/ci.yml`.
 
@@ -259,7 +261,7 @@ Catalog entries are not written by hand. Each new profile answers all 240 questi
 
 A new profile has to meet these requirements before it is merged:
 
-- Metadata in Portuguese and English, with the English version free of Brazil-specific references.
+- Metadata in Portuguese, English, and French, with international wording in English and French.
 - A full 240-answer audit, archived in `profile-audit/answers/`.
 - `python profile-audit/validate.py <catalog> <id>` passes. It blocks vectors that are near duplicates of an existing profile, too many neutral answers, and a religious vector with no religion tag.
 - Portraits and historical flags come from Wikimedia Commons, with their source recorded, and are compressed with `npm run optimize:images`.

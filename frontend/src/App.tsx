@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
-import { LANG, setLang, t } from './i18n';
+import { LANG, LANGUAGES, localeHome, localePrefix, setLang, t, type Lang } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
@@ -74,7 +74,7 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   const query = result.axes
     .map((axis, index) => `${AXIS_URL_KEYS[index] ?? `x${index}`}=${axis.leftPercent}`)
     .join('&');
-  return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
+  return `/results?${query}${religion ? `&religion=${religion}` : ''}&lang=${LANG}`;
 }
 
 // Últimas perguntas do bloco de arquétipos: religião (letras A-D + "sem religião") e, só para
@@ -359,7 +359,7 @@ function MainApp() {
 
   function resetSharedUrl() {
     if (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') === '/results') {
-      window.history.replaceState(null, '', '/');
+      window.history.replaceState(null, '', localeHome(LANG));
     }
     setIsSharedView(false);
   }
@@ -689,7 +689,7 @@ function MainApp() {
       setIsSharing(false);
       await tryNativeShare(dataUrl, result);
     } catch (err) {
-      setError(err instanceof Error ? err.message : t.errImage);
+      setError(LANG === 'fr' ? t.errImage : err instanceof Error ? err.message : t.errImage);
     } finally {
       stage?.remove();
       setIsSharing(false);
@@ -733,6 +733,14 @@ function MainApp() {
       <header className="ed e-nav">
         <div className="e-wrap">
           <Logo onClick={goHome} />
+          <select
+            className="e-lang"
+            value={LANG}
+            onChange={(event) => setLang(event.target.value as Lang)}
+            aria-label={t.languageLabel}
+          >
+            {LANGUAGES.map(({ code, label }) => <option key={code} value={code} lang={code}>{label}</option>)}
+          </select>
           {screen === 'home' && (
             <>
               <nav
@@ -745,17 +753,9 @@ function MainApp() {
                 <a href="#espectro-politico">{t.navSpectrum}</a>
                 <a href="#faq">{t.navFaq}</a>
                 <a href="#apoie">{t.navSupport}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
-                <button
-                  className="e-lang"
-                  type="button"
-                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
-                  aria-label={t.langToggleAria}
-                >
-                  {t.langToggleLabel}
-                </button>
+                <a href={`${localePrefix(LANG)}/ideologies`}>{t.navIdeologies}</a>
+                <a href={`${localePrefix(LANG)}/personalities`}>{t.navPersonalities}</a>
+                <a href={`${localePrefix(LANG)}/countries`}>{t.navCountries}</a>
               </nav>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
                 {t.navStart} <ArrowIcon />

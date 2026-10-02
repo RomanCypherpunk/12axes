@@ -23,6 +23,9 @@ def read_items(path):
 
 
 errors = []
+for required_locale in ("en", "fr"):
+    if not (ROOT / "i18n" / required_locale).is_dir():
+        errors.append(f"Missing locale: {required_locale}")
 for locale_dir in sorted((ROOT / "i18n").iterdir()):
     if not locale_dir.is_dir():
         continue
@@ -41,6 +44,26 @@ for locale_dir in sorted((ROOT / "i18n").iterdir()):
             for field in required_fields:
                 if not isinstance(overlay[profile_id].get(field), str) or not overlay[profile_id][field].strip():
                     errors.append(f"{locale_dir.name}/{overlay_name}: {profile_id} missing {field}")
+            if locale_dir.name == "fr":
+                display_field = {"countries": "period", "personalities": "lifespan"}.get(source_name)
+                if display_field and source[profile_id].get(display_field):
+                    if not overlay[profile_id].get(display_field, "").strip():
+                        errors.append(f"fr/{overlay_name}: {profile_id} missing {display_field}")
+
+for question in json.loads((ROOT / "archetype-questions.json").read_text(encoding="utf-8")):
+    texts = [("label", question["label"]), ("text", question["text"])]
+    texts += [(option["id"], option["text"]) for option in question["options"]]
+    for field, translations in texts:
+        for locale in ("pt", "en", "fr"):
+            if not isinstance(translations.get(locale), str) or not translations[locale].strip():
+                errors.append(f"archetypes/{question['id']}/{field}: missing {locale}")
+
+for book in json.loads((ROOT / "books.json").read_text(encoding="utf-8")):
+    for locale in ("pt", "en", "fr"):
+        if not isinstance(book["title"].get(locale), str) or not book["title"][locale].strip():
+            errors.append(f"books/{book['personalityId']}: missing {locale} title")
+        if locale not in book["url"] or not isinstance(book["url"][locale], str):
+            errors.append(f"books/{book['personalityId']}: missing {locale} URL setting")
 
 if errors:
     raise SystemExit("\n".join(errors))

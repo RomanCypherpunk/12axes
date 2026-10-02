@@ -1,3 +1,5 @@
+import { FR_PERSONALITY_PAGE } from './fr-catalogue.mjs';
+import { alternateLinks, languageLinks } from './locales.mjs';
 // Página /personalities/:id (e /en/...): perfil de uma personalidade com a
 // identidade nova, na mesma lógica da tela de resultados do quiz — o vetor da
 // pessoa faz o papel do "usuário" e é comparado com ideologias, outras
@@ -9,6 +11,7 @@ import { AXIS_EXPLANATIONS } from './app-strings.mjs';
 import { poleSprite, poleUse, profileReligion, religionPoleUse } from './pole-icons.mjs';
 
 const STR = {
+  fr: FR_PERSONALITY_PAGE,
   pt: {
     skip: 'Pular para o conteúdo',
     catalogNav: 'Catálogo',
@@ -162,6 +165,7 @@ export function mbarHtml(d, strong, medianLabel, youLabel, esc) {
 const INFO_ICON = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16m-1-4h2v2h-2zm0-1.992s2-.008 2 0C13 13.006 16 12 16 10c0-2.21-1.773-4-3.991-4A4 4 0 0 0 8 10h2c0-1.1.9-2 2-2s2 .9 2 2c0 .9-3 2.367-3 4.008"/></svg>';
 const BALANCED_COLOR = '#9C988C';
 const AXIS_INFO = {
+  fr: { aria: (label) => `Que signifie l’axe ${label} ?`, close: 'Fermer' },
   pt: { aria: (label) => `O que significa o eixo ${label}?`, close: 'Fechar' },
   en: { aria: (label) => `What does the ${label} axis mean?`, close: 'Close' }
 };
@@ -202,7 +206,7 @@ export function personalityPage(L, personality, ctx) {
   const esc = escapeHtml;
   const t = STR[locale];
   const prefix = L.s.prefix;
-  const home = prefix || '/';
+  const home = L.s.homePath;
   const vector = profiles.personality.get(personality.id) ?? {};
   const name = personality.name;
   const img = (src, alt, cls, who) =>
@@ -385,7 +389,7 @@ ${poleSprite(L.axes)}
 
   <aside class="panel pcta"><div><h2>${esc(t.ctaTitle)}</h2><p>${esc(t.ctaText(name))}</p></div><a class="btn btn-primary" href="${home}">${esc(t.takeTheTest)} ${ARR}</a></aside>
 </div></main>
-<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · <a href="${prefix === '' ? '/en' : ''}${basePath}">${prefix === '' ? 'English' : 'Português'}</a></p></div></footer>
+<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · ${languageLinks(locale, basePath)}</p></div></footer>
 ${axisSheetHtml(locale)}
 <script>
 ${PAGE_SCRIPT}</script>

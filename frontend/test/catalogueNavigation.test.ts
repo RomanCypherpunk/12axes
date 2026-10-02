@@ -25,8 +25,8 @@ describe('local catalogue navigation', () => {
 
   afterAll(async () => { await server?.close(); });
 
-  it.each(['ideologies', 'personalities', 'countries'])('serves %s in both languages instead of the quiz homepage', async (catalogue) => {
-    for (const prefix of ['', 'en/']) {
+  it.each(['ideologies', 'personalities', 'countries'])('serves %s in all three languages instead of the quiz homepage', async (catalogue) => {
+    for (const prefix of ['', 'en/', 'fr/']) {
       const response = await fetch(`${base}${prefix}${catalogue}`);
       const html = await response.text();
       expect(response.status).toBe(200);
@@ -37,12 +37,35 @@ describe('local catalogue navigation', () => {
   });
 
   it('serves detail pages, clean URL aliases and generated styles', async () => {
-    for (const path of ['en/personalities/donald-trump', 'personalities.html', 'en/countries/?search=test', 'profile.css']) {
+    for (const path of ['fr/personalities/stalin', 'fr/countries/franca.html', 'en/personalities/donald-trump', 'personalities.html', 'en/countries/?search=test', 'profile.css']) {
       const response = await fetch(base + path);
       expect(response.status).toBe(200);
       expect(await response.text()).not.toContain('/src/main.tsx');
     }
     expect((await fetch(base + 'profile.css')).headers.get('content-type')).toContain('text/css');
+  });
+
+  it('renders French content, language links, and ancient countries in the correct era', async () => {
+    const html = await (await fetch(base + 'fr/countries')).text();
+    expect(html).toContain('<html lang="fr">');
+    expect(html).toContain('Pays et régimes');
+    expect(html).toContain('av. J.-C.');
+    const antiquity = html.slice(html.indexOf('id="antiguidade"'), html.indexOf('id="medieval"'));
+    expect(antiquity).toContain('/fr/countries/imperio-romano');
+    for (const path of ['fr/ideologies/liberalismo', 'fr/countries/franca', 'fr/personalities/platao']) {
+      const detail = await (await fetch(base + path)).text();
+      expect(detail).toContain(`rel="canonical" href="https://12axes.vercel.app/${path}"`);
+      expect(detail).toContain('hreflang="fr"');
+      expect(detail).toContain('hreflang="en"');
+      expect(detail).toContain('hreflang="pt-BR"');
+      expect(detail).toContain('>Français</a>');
+      expect(detail).toContain('>English</a>');
+      expect(detail).toContain('>Português</a>');
+      expect(detail).toContain('Que signifie l’axe');
+    }
+    const ideologies = await (await fetch(base + 'fr/ideologies')).text();
+    expect(ideologies).toContain('Extrême droite');
+    expect(ideologies).toContain('data-cat="ext-direita"');
   });
 
   it('keeps the quiz homepage and returns 404 for missing catalogue entries', async () => {

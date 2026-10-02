@@ -1,52 +1,30 @@
-// Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
-// (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
+// Dicionário de UI PT/EN/FR. O idioma é resolvido uma vez por carga de página
+// (path → ?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en';
-
-const STORAGE_KEY = '12axes-lang';
-
-// Idioma forçado pelo caminho: /en sempre inglês, /br sempre português,
-// independente do aparelho ou da preferência salva.
-function langForcedByPath(pathname: string): Lang | null {
-  const path = (pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
-  if (path === '/en') return 'en';
-  if (path === '/br') return 'pt';
-  return null;
-}
+import { fr } from './fr';
+import { LANGUAGE_STORAGE_KEY, LOCALE, languageUrl, resolveLanguage, type Lang } from './locale';
+export { LANGUAGES, localeHome, localePrefix } from './locale';
+export type { Lang } from './locale';
 
 export function resolveLang(): Lang {
-  if (typeof window === 'undefined') {
-    return 'pt';
+  if (typeof window === 'undefined') return 'pt';
+  let saved: string | null = null;
+  try { saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY); } catch { /* Private browsing. */ }
+  const lang = resolveLanguage(window.location.pathname, window.location.search, saved, navigator.language);
+  if (new URLSearchParams(window.location.search).has('lang')) {
+    try { window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang); } catch { /* URL still selects the language. */ }
   }
-  const forced = langForcedByPath(window.location.pathname);
-  if (forced) {
-    return forced;
-  }
-  const fromUrl = new URLSearchParams(window.location.search).get('lang');
-  if (fromUrl === 'pt' || fromUrl === 'en') {
-    window.localStorage.setItem(STORAGE_KEY, fromUrl);
-    return fromUrl;
-  }
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'pt' || stored === 'en') {
-    return stored;
-  }
-  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+  return lang;
 }
 
 export const LANG: Lang = resolveLang();
+export const NUMBER_LOCALE = LOCALE[LANG];
 
 export function setLang(lang: Lang) {
-  window.localStorage.setItem(STORAGE_KEY, lang);
-  const url = new URL(window.location.href);
-  url.searchParams.delete('lang');
-  // Em /en ou /br a URL é o que define o idioma, então o toggle troca de rota.
-  if (langForcedByPath(url.pathname)) {
-    url.pathname = lang === 'en' ? '/en' : '/br';
-  }
-  window.location.href = url.toString();
+  try { window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang); } catch { /* URL still selects the language. */ }
+  window.location.href = languageUrl(window.location.href, lang);
 }
 
 interface QuizFormatStrings {
@@ -57,7 +35,7 @@ interface QuizFormatStrings {
   action: string;
 }
 
-interface Strings {
+export interface Strings {
   htmlLang: string;
   docTitle: string;
   loadingAnalysis: string;
@@ -85,8 +63,8 @@ interface Strings {
   navPersonalities: string;
   navCountries: string;
   navSupport: string;
-  langToggleLabel: string;
-  langToggleAria: string;
+  languageLabel: string;
+
   redoQuiz: string;
   religionLabel: string;
   religionQuestion: string;
@@ -369,8 +347,8 @@ const pt: Strings = {
   navPersonalities: 'Personalidades',
   navCountries: 'Países',
   navSupport: 'Apoie',
-  langToggleLabel: 'EN',
-  langToggleAria: 'Switch to English',
+  languageLabel: 'Idioma',
+
   redoQuiz: 'Refazer quiz',
   religionLabel: 'Religião',
   religionQuestion: 'Você segue alguma religião? Usamos isso só para ajustar as recomendações.',
@@ -893,8 +871,8 @@ const en: Strings = {
   navPersonalities: 'Personalities',
   navCountries: 'Countries',
   navSupport: 'Support',
-  langToggleLabel: 'PT',
-  langToggleAria: 'Mudar para português',
+  languageLabel: 'Language',
+
   redoQuiz: 'Retake quiz',
   religionLabel: 'Religion',
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',
@@ -1400,4 +1378,5 @@ const en: Strings = {
   ]
 };
 
-export const t: Strings = LANG === 'en' ? en : pt;
+export const STRINGS: Record<Lang, Strings> = { pt, en, fr };
+export const t: Strings = STRINGS[LANG];

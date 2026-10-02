@@ -128,6 +128,12 @@ public class ScoringService {
     }
 
     private String intensityFor(double distanceFromCenter, String lang) {
+        if (QuizDataService.LANG_FR.equals(lang)) {
+            if (distanceFromCenter < 7.5) return "Équilibrée";
+            if (distanceFromCenter < 22.5) return "Modérée";
+            if (distanceFromCenter < 37.5) return "Forte";
+            return "Très forte";
+        }
         boolean en = QuizDataService.LANG_EN.equals(lang);
         if (distanceFromCenter < 7.5) {
             return en ? "Balanced" : "Equilibrado";

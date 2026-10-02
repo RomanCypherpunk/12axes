@@ -1,3 +1,5 @@
+import { FR_COUNTRY_PAGE } from './fr-catalogue.mjs';
+import { alternateLinks, languageLinks } from './locales.mjs';
 // Página /countries/:id (e /en/...): perfil de um país ou regime histórico com
 // a identidade nova. Mesma lógica das páginas de personalidade e ideologia: o
 // vetor do país é comparado com ideologias, personalidades e outros países
@@ -8,6 +10,7 @@ import { poleSprite } from './pole-icons.mjs';
 import { dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 
 const STR = {
+  fr: FR_COUNTRY_PAGE,
   pt: {
     skip: 'Pular para o conteúdo',
     catalogNav: 'Catálogo',
@@ -116,7 +119,7 @@ export function countryPage(L, country, ctx) {
   const esc = escapeHtml;
   const t = STR[locale];
   const prefix = L.s.prefix;
-  const home = prefix || '/';
+  const home = L.s.homePath;
   const vector = profiles.country.get(country.id) ?? {};
   const name = country.name;
   const img = (src, alt, cls, who) =>
@@ -302,7 +305,7 @@ ${poleSprite(L.axes)}
 
   <aside class="panel pcta"><div><h2>${esc(t.ctaTitle)}</h2><p>${esc(t.ctaText(name, L.countries.length - 1))}</p></div><a class="btn btn-primary" href="${home}">${esc(t.takeTheTest)} ${ARR}</a></aside>
 </div></main>
-<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · <a href="${prefix === '' ? '/en' : ''}${basePath}">${prefix === '' ? 'English' : 'Português'}</a></p></div></footer>
+<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · ${languageLinks(locale, basePath)}</p></div></footer>
 ${axisSheetHtml(locale)}
 <script>
 ${PAGE_SCRIPT}</script>

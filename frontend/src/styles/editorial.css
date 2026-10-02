@@ -51,7 +51,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-nav-links{display:flex;align-items:center;gap:32px;font-size:15px}
 .e-nav-links a{text-decoration:none;color:var(--texto-suave)}
 .e-nav-links a:hover{color:var(--tinta)}
-.e-lang{font-weight:600;font-size:13px;border:1px solid var(--borda);border-radius:999px;padding:4px 12px}
+.e-lang{background:transparent;color:inherit;font-family:inherit;cursor:pointer;max-width:145px;font-weight:600;font-size:13px;border:1px solid var(--borda);border-radius:999px;padding:4px 12px}
 .e-menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .e-menu-btn span{display:block;width:22px;height:2px;background:var(--tinta);margin:5px auto;border-radius:2px}
 

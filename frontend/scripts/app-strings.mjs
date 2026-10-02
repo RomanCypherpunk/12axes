@@ -1,32 +1,40 @@
-// Textos do app reaproveitados pelas páginas estáticas, lidos direto de
-// src/i18n/index.ts (explicação de cada eixo, usada no helper "?" das barras),
-// para não manter uma cópia própria.
+// Parse the literal dictionaries without evaluating browser code. This handles
+// French apostrophes, either quote style, and multiline entries.
 import { readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import ts from 'typescript';
 
-// Normaliza CRLF: num checkout no Windows o arquivo vem com \r\n e os marcadores abaixo não casariam.
-const source = readFileSync(join(dirname(fileURLToPath(import.meta.url)), '../src/i18n/index.ts'), 'utf8').replace(/\r\n/g, '\n');
-
-// O arquivo declara o dicionário PT e depois o EN; cada um tem um bloco
-// `axisExplanations: { ... }` com entradas `id: 'texto'`.
-function explanationBlocks() {
-  const blocks = [];
-  const marker = 'axisExplanations: {\n';
-  let from = 0;
-  for (;;) {
-    const start = source.indexOf(marker, from);
-    if (start === -1) break;
-    const end = source.indexOf('\n  },', start);
-    const body = source.slice(start + marker.length, end);
-    const entries = {};
-    for (const m of body.matchAll(/(\w+):\s*'((?:[^'\\]|\\.)*)'/g)) entries[m[1]] = m[2].replace(/\\'/g, "'");
-    blocks.push(entries);
-    from = end;
+function dictionary(file, name) {
+  const path = new URL(file, import.meta.url);
+  const source = ts.createSourceFile(path.pathname, readFileSync(path, 'utf8'), ts.ScriptTarget.Latest, true);
+  let result;
+  function visit(node) {
+    if (ts.isVariableDeclaration(node) && node.name.getText(source) === name) result = node.initializer;
+    ts.forEachChild(node, visit);
   }
-  if (blocks.length < 2) throw new Error(`app-strings: esperava pelo menos 2 blocos axisExplanations, achei ${blocks.length}`);
-  return blocks;
+  visit(source);
+  if (!result || !ts.isObjectLiteralExpression(result)) throw new Error(`Missing dictionary ${name}`);
+  return result;
 }
 
-const [pt, en] = explanationBlocks();
-export const AXIS_EXPLANATIONS = { pt, en };
+function property(object, name) {
+  const field = object.properties.find((node) => node.name?.getText() === name);
+  if (!field) throw new Error(`Missing dictionary field ${name}`);
+  return field.initializer;
+}
+
+function literal(node) {
+  if (ts.isStringLiteral(node)) return node.text;
+  if (ts.isArrayLiteralExpression(node)) return node.elements.map(literal);
+  if (ts.isObjectLiteralExpression(node)) {
+    return Object.fromEntries(node.properties.map((field) => [field.name.getText().replace(/^['"]|['"]$/g, ''), literal(field.initializer)]));
+  }
+  throw new Error('Expected a literal translation');
+}
+
+const dictionaries = {
+  pt: dictionary('../src/i18n/index.ts', 'pt'),
+  en: dictionary('../src/i18n/index.ts', 'en'),
+  fr: dictionary('../src/i18n/fr.ts', 'fr')
+};
+export const AXIS_EXPLANATIONS = Object.fromEntries(Object.entries(dictionaries).map(([locale, value]) => [locale, literal(property(value, 'axisExplanations'))]));
+export const FRENCH_FAQ = literal(property(dictionaries.fr, 'faqItems'));

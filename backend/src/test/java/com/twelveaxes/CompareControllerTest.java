@@ -84,4 +84,24 @@ class CompareControllerTest {
         mockMvc.perform(get("/api/compare").param("type", "personality").param("id", "joe-biden").param("v", "abc"))
                 .andExpect(status().isBadRequest());
     }
+
+    @Test
+    void frenchComparisonLocalizesAllProfileTypesAndKeepsReligionFiltering() throws Exception {
+        for (String[] profile : new String[][] {
+                {"country", "franca", "France"}, {"personality", "platao", "Platon"},
+                {"ideology", "marxismo-leninismo", "Marxisme-léninisme"}
+        }) {
+            mockMvc.perform(get("/api/compare").param("type", profile[0]).param("id", profile[1])
+                            .param("v", CENTER).param("lang", "fr-FR"))
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$.item.name").value(profile[2]))
+                    .andExpect(jsonPath("$.vector.length()").value(12));
+        }
+        mockMvc.perform(get("/api/compare/catalog").param("lang", "fr"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[*].name", hasItem("Platon")))
+                .andExpect(jsonPath("$[*].id", not(hasItem("teocracia-judaica"))));
+        mockMvc.perform(get("/api/compare/catalog").param("lang", "fr").param("religion", "judaism"))
+                .andExpect(jsonPath("$[*].id", hasItem("teocracia-judaica")));
+    }
 }

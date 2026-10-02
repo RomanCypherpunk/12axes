@@ -7,7 +7,13 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   // Content-Type só quando há corpo: num GET ele transforma a chamada entre origens em uma
   // requisição "não simples", e o navegador gasta uma ida e volta extra (preflight OPTIONS).
   const headers = options?.body ? { 'Content-Type': 'application/json', ...options.headers } : options?.headers;
-  const response = await fetch(`${API_URL}${path}`, { ...options, headers });
+  let response: Response;
+  try {
+    response = await fetch(`${API_URL}${path}`, { ...options, headers });
+  } catch (error) {
+    if (LANG === 'fr') throw new Error(t.errHttp(0));
+    throw error;
+  }
 
   if (!response.ok) {
     const message = await response.text();
@@ -17,7 +23,10 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   return response.json() as Promise<T>;
 }
 
-function formatApiError(message: string, status: number): string {
+export function formatApiError(message: string, status: number): string {
+  // Provider/proxy and legacy API messages may be Portuguese. Never expose them
+  // verbatim in French; the HTTP status gives an actionable localized message.
+  if (LANG === 'fr') return t.errHttp(status);
   if (!message) {
     return t.errHttp(status);
   }

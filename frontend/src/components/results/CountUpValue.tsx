@@ -1,3 +1,4 @@
+import { NUMBER_LOCALE } from '../../i18n';
 import { useCountUp } from '../../hooks/useCountUp';
 
 interface CountUpValueProps {
@@ -14,7 +15,7 @@ export function CountUpValue({ value, decimals = 1, delayMs = 0, suffix = '%' }:
 
   return (
     <span ref={ref as React.RefObject<HTMLSpanElement>} className="count-up">
-      {text}
+      {Number(text).toLocaleString(NUMBER_LOCALE, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}
       {suffix}
     </span>
   );

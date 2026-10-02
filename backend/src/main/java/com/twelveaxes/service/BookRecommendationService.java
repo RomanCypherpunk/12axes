@@ -18,6 +18,7 @@ public class BookRecommendationService {
     // Uma conta de Associados por loja: a tag do Brasil nao rende nada na amazon.com.
     static final String AMAZON_BR_HOST = "www.amazon.com.br";
     static final String AMAZON_BR_TAG = "12axes-20";
+    static final String AMAZON_FR_HOST = "www.amazon.fr";
     static final String AMAZON_US_HOST = "www.amazon.com";
     static final String AMAZON_US_TAG = "12axes0d-20";
 
@@ -69,6 +70,9 @@ public class BookRecommendationService {
         }
         boolean english = QuizDataService.LANG_EN.equals(lang);
         String query = URLEncoder.encode(title + " " + author, StandardCharsets.UTF_8);
+        if (QuizDataService.LANG_FR.equals(lang)) {
+            return "https://" + AMAZON_FR_HOST + "/s?k=" + query + "&i=stripbooks";
+        }
         return "https://" + (english ? AMAZON_US_HOST : AMAZON_BR_HOST)
                 + "/s?k=" + query + "&i=stripbooks&tag=" + (english ? AMAZON_US_TAG : AMAZON_BR_TAG);
     }
@@ -78,6 +82,8 @@ public class BookRecommendationService {
             return null;
         }
         String value = values.get(lang);
+        // A French search must not inherit a direct link to a different storefront.
+        if (QuizDataService.LANG_FR.equals(lang)) return value;
         return value == null || value.isBlank() ? values.get(QuizDataService.LANG_PT) : value;
     }
 }

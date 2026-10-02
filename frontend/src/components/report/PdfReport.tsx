@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
-import { LANG, t } from '../../i18n';
+import { NUMBER_LOCALE, t } from '../../i18n';
 import type {
   Axis,
   AxisOutlier,
@@ -43,7 +43,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
     t.otherMatches
   ];
   const num = (title: string) => String(sections.indexOf(title) + 1).padStart(2, '0');
-  const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  const today = new Date().toLocaleDateString(NUMBER_LOCALE, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
@@ -314,7 +314,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
 }
 
 function formatPct(value: number, decimals: number): string {
-  return `${value.toLocaleString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  return `${value.toLocaleString(NUMBER_LOCALE, {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals
   })}%`;

@@ -1,0 +1,1758 @@
+[
+  {
+    "id": "marxismo-leninismo",
+    "name": "Marxisme-léninisme",
+    "category": "Gauche radicale",
+    "description": "Branche révolutionnaire du marxisme qui préconise la prise du pouvoir par un parti d’avant-garde et la dictature du prolétariat, avec une économie planifiée et la collectivisation, servant de fondement aux régimes communistes du XXe siècle.",
+    "phrase": "Je veux une société dirigée par un parti d’avant-garde, avec la dictature du prolétariat et une économie planifiée et collectivisée."
+  },
+  {
+    "id": "socialismo-stalinista",
+    "name": "Socialisme stalinien",
+    "category": "Gauche radicale",
+    "description": "Modèle soviétique consolidé par Staline, marqué par l’industrialisation forcée, la collectivisation agraire, la planification centrale rigide, un culte du leader et la répression de masse contre les opposants réels ou présumés du régime.",
+    "phrase": "Je veux une société sous un leader fort et un parti unique, avec la collectivisation agraire, les plans quinquennaux et l’industrialisation forcée."
+  },
+  {
+    "id": "comunismo-maoista",
+    "name": "Communisme maoïste",
+    "category": "Gauche radicale",
+    "description": "Adaptation chinoise du marxisme par Mao, centrée sur la paysannerie comme force révolutionnaire, la guerre populaire prolongée, la mobilisation permanente des masses et la révolution culturelle contre la bureaucratie du parti.",
+    "phrase": "Je veux une société mobilisée dans une guerre populaire prolongée menée par la paysannerie, avec une révolution culturelle permanente contre la bureaucratie."
+  },
+  {
+    "id": "comunismo-trotskista",
+    "name": "Communisme trotskiste",
+    "category": "Gauche radicale",
+    "description": "Courant de Trotsky, cofondateur de l’État soviétique et de l’Armée rouge, qui défend la révolution permanente, un parti d’avant-garde et la dictature du prolétariat, critiquant la bureaucratie stalinienne sans renoncer au pouvoir du parti.",
+    "phrase": "Je veux une révolution mondiale permanente dirigée par un parti d’avant-garde, avec la dictature du prolétariat, une économie planifiée et aucune bureaucratie stalinienne."
+  },
+  {
+    "id": "socialismo-luxemburguista",
+    "name": "Socialisme luxemburgiste",
+    "category": "Gauche",
+    "description": "Le marxisme démocratique inspiré par Rosa Luxemburg, qui unit la révolution et la liberté, valorise la spontanéité des masses et la grève générale, et critique à la fois le réformisme et le centralisme autoritaire des partis d’avant-garde.",
+    "phrase": "Je veux une société portée par la spontanéité des masses et la grève générale, révolutionnaire et libre, sans avant-garde autoritaire ou réformiste."
+  },
+  {
+    "id": "comunismo-nacional",
+    "name": "Communisme national",
+    "category": "Gauche radicale",
+    "description": "Courant qui combine une économie socialiste planifiée avec une forte identité nationale, en priorisant la souveraineté et les intérêts de son propre pays par rapport à l’internationalisme, souvent sous une direction personnalisée et centralisée.",
+    "phrase": "Je veux une société socialiste dévouée à la souveraineté et aux intérêts de sa propre nation, sous une direction forte, pas à l’internationalisme."
+  },
+  {
+    "id": "socialismo-juche",
+    "name": "Socialisme du Juche",
+    "category": "Gauche radicale",
+    "description": "Doctrine nord-coréenne formulée par Kim Il-sung qui combine le socialisme d’État, l’autonomie nationale, le régime à parti unique, le culte du leader, la militarisation et le rejet de la dépendance extérieure, subordonnant l’économie et la société à la souveraineté du régime.",
+    "phrase": "Je veux une société autonome et militarisée, guidée par le Juche sous un parti unique et le culte du dirigeant, sans dépendance envers l’étranger."
+  },
+  {
+    "id": "socialismo-pol-potista",
+    "name": "Socialisme de Pol Pot",
+    "category": "Gauche radicale",
+    "description": "Le communisme agrarien radical des Khmers rouges qui a vidé les villes, aboli l’argent et les marchés, et poursuivi une société paysanne égalitaire par la force, provoquant l’un des plus grands génocides du XXe siècle au Cambodge.",
+    "phrase": "Je veux une société paysanne égalitaire, sans villes, sans argent ou marchés, reconstruite par la force sous le régime révolutionnaire Angkar."
+  },
+  {
+    "id": "socialismo-denguista",
+    "name": "Socialisme dengiste",
+    "category": "Gauche",
+    "description": "Réforme pragmatique initiée par Deng Xiaoping qui a introduit les marchés, la propriété privée et l’ouverture économique sous le contrôle absolu du Parti communiste, formant le modèle du socialisme avec des caractéristiques chinoises.",
+    "phrase": "Je veux un socialisme pragmatique, l’ouverture des marchés et la propriété privée pour enrichir le pays, sous le contrôle absolu du Parti communiste."
+  },
+  {
+    "id": "socialismo-de-estado",
+    "name": "Socialisme d’État",
+    "category": "Gauche radicale",
+    "description": "Système dans lequel l’État contrôle les moyens de production et dirige l’économie par la planification centrale, la promotion de l’industrialisation et du bien-être sous une forte autorité politique et une participation démocratique populaire limitée.",
+    "phrase": "Je veux une société où l’État contrôle les moyens de production et planifie l’économie, avec une forte autorité politique et peu de débat électoral."
+  },
+  {
+    "id": "progressismo-autoritario",
+    "name": "Progressisme autoritaire",
+    "category": "Gauche radicale",
+    "description": "Projet qui impose des transformations sociales progressives d’en haut, en utilisant le pouvoir de l’État pour accélérer les changements dans les coutumes et l’égalité, même au détriment des libertés individuelles et de l’opposition politique organisée.",
+    "phrase": "Je veux une société transformée de haut en bas dans les coutumes et l’égalité, en utilisant l’État même contre l’opposition organisée."
+  },
+  {
+    "id": "ecoautoritarismo",
+    "name": "Écoautoritarisme",
+    "category": "Gauche radicale",
+    "description": "Courant qui préconise un État fort et interventionniste pour faire face à la crise environnementale, subordonnant les libertés économiques et politiques à l’urgence écologique et à un contrôle strict de la consommation et de la production.",
+    "phrase": "Je veux une société où l’État impose des limites strictes à la consommation et à la production pour arrêter la crise écologique, au-dessus des libertés individuelles."
+  },
+  {
+    "id": "tecnocracia-de-esquerda",
+    "name": "Technocratie de gauche",
+    "category": "Gauche",
+    "description": "Un modèle qui combine la planification socialiste avec la gestion scientifique de l’économie, confiant aux comités d’experts, plutôt qu’aux élections ou à la concurrence des partis, l’organisation rationnelle de la production et la répartition égalitaire des ressources de la société.",
+    "phrase": "Je veux une société dirigée par des comités d’experts, pas des élections, planifiant la production et distribuant les ressources avec égalité."
+  },
+  {
+    "id": "nacional-bolchevismo",
+    "name": "National-bolchevisme (NazBol)",
+    "category": "Troisième position",
+    "description": "L’idéologie syncrétique, aussi appelée NazBol, fusionne le socialisme révolutionnaire et le nationalisme radical, combinant une économie collectiviste, l’autoritarisme d’État et le rejet du libéralisme, de l’Occident et de l’individualisme bourgeois.",
+    "phrase": "Je veux une société qui fusionne le soviet et la nation, collectiviste et autoritaire, contre le libéralisme, l’Occident et l’individualisme bourgeois."
+  },
+  {
+    "id": "socialismo-strasserista",
+    "name": "Socialisme strassériste",
+    "category": "Troisième position",
+    "description": "L’aile anticapitaliste du national socialisme, liée à Gregor Strasser, qui mettait l’accent sur le socialisme nationaliste de masse, la nationalisation et la révolution sociale au sein du mouvement, plus tard écrasé par Hitler.",
+    "phrase": "Je veux une révolution sociale de masse nationaliste au sein du mouvement, nationalisant l’économie contre le capital et l’ancien ordre."
+  },
+  {
+    "id": "fascismo",
+    "name": "Fascisme",
+    "category": "Troisième position",
+    "description": "Une doctrine ultranationaliste de la renaissance nationale qui rejette le libéralisme et le marxisme, exalte l’État totalitaire, la violence régénératrice et le culte du chef, et traite la nation comme une religion laïque, avec des variantes au-delà du régime italien qui l’a nommée.",
+    "phrase": "Je veux une nation exaltée sous un État fort et un seul chef, avec le militarisme, la mobilisation de masse et les entreprises servant la patrie."
+  },
+  {
+    "id": "nacional-socialismo",
+    "name": "National-socialisme",
+    "category": "Troisième position",
+    "description": "Une variante allemande du fascisme basée sur le racisme, l’antisémitisme et l’expansionnisme, qui a uni le totalitarisme, le culte d’Hitler et l’idée d’une race supérieure, culminant dans la Seconde Guerre mondiale et l’Holocauste.",
+    "phrase": "Je veux une société basée sur la race aryenne, hiérarchique et autoritaire, avec un capitalisme d’État fort et protectionniste."
+  },
+  {
+    "id": "falangismo",
+    "name": "Phalangisme",
+    "category": "Troisième position",
+    "description": "Le nationalisme autoritaire espagnol d’inspiration catholique et syndicaliste, préconisant un État corporatiste, une unité nationale et une hiérarchie sociale, devenant le pilier idéologique du régime de Franco en Espagne.",
+    "phrase": "Je veux un État catholique et corporatiste, uni sous un dirigeant autoritaire, avec des syndicats verticaux organisant le travail et un commerce protégé."
+  },
+  {
+    "id": "nacional-sindicalismo",
+    "name": "National-syndicalisme",
+    "category": "Troisième position",
+    "description": "Courant nationaliste et syndicaliste qui rejette le libéralisme et le marxisme, préconisant l’unité nationale, l’organisation corporatiste du travail, la justice sociale autoritaire et la mobilisation populaire dans l’État.",
+    "phrase": "Je veux une nation mobilisée autour de l’État, avec des syndicats corporatistes organisant le travail et rejetant le libéralisme et le marxisme."
+  },
+  {
+    "id": "integralismo-brasileiro",
+    "name": "Intégralisme brésilien",
+    "category": "Troisième position",
+    "description": "Mouvement nationaliste autoritaire qui émergea dans les années 1930 au Brésil, avec une base chrétienne et corporatiste, la devise Dieu, Patrie et Famille, l’esthétique de masse et l’opposition frontale au libéralisme et au communisme.",
+    "phrase": "Je veux une patrie sous Dieu, la patrie et la famille, commandée par un chef autoritaire et des milices uniformées contre les libéraux et les communistes."
+  },
+  {
+    "id": "capitalismo-autoritario",
+    "name": "Capitalisme autoritaire",
+    "category": "Droite",
+    "description": "Modèle qui combine une économie de marché et la propriété privée avec un régime politique fermé, dans lequel l’État garantit l’ordre, la croissance et la stabilité tout en restreignant les libertés civiles et la concurrence politique.",
+    "phrase": "Je veux une économie de marché avec propriété privée, dans un État fermé qui garantit l’ordre et la croissance en restreignant la concurrence politique."
+  },
+  {
+    "id": "capitalismo-nacional",
+    "name": "Capitalisme national",
+    "category": "Extrême droite",
+    "description": "Un système qui unit la libre entreprise à un fort protectionnisme et à une direction de l’État, en accordant la priorité à l’industrie, aux emplois et à la souveraineté nationale par rapport au libre-échange mondial et au capital étranger non contrôlé.",
+    "phrase": "Je veux que l’industrie nationale soit protégée par des tarifs et une planification de l’État, avec la libre entreprise au service de la souveraineté et des emplois du pays."
+  },
+  {
+    "id": "alt-right",
+    "name": "Droite radicale",
+    "category": "Extrême droite",
+    "description": "Un mouvement de droite radicale né sur Internet, mélangeant le nationalisme identitaire, l’opposition à l’immigration et au multiculturalisme, et la rhétorique provocatrice, avec des positions souvent liées à la suprématie blanche.",
+    "phrase": "Je veux une nation ethnique homogène, fermée à l’immigration et au multiculturalisme, avec une identité blanche défendue contre le globalisme commercial."
+  },
+  {
+    "id": "alt-lite",
+    "name": "Alt-lite",
+    "category": "Droite",
+    "description": "Une branche plus modérée de la droite alternative, nationaliste et anti-globaliste, qui rejette le suprématisme racial explicite mais défend l’identité culturelle, la critique de l’immigration et l’opposition au politiquement correct.",
+    "phrase": "Je veux préserver l’identité culturelle de mon peuple contre l’immigration incontrôlée et le politiquement correct, sans recourir au suprématisme racial."
+  },
+  {
+    "id": "aceleracionismo-de-direita",
+    "name": "Accélérationnisme de droite",
+    "category": "Extrême droite",
+    "description": "Courant qui préconise l’accélération des contradictions du système par la technologie et l’effondrement des institutions libérales, en pariant sur la rupture de l’ordre existant pour forger une nouvelle hiérarchie sociale et politique.",
+    "phrase": "Je veux accélérer l’effondrement des institutions libérales avec la technologie et les marchés sans État, afin qu’une nouvelle hiérarchie se lève des ruines."
+  },
+  {
+    "id": "neoconservadorismo",
+    "name": "Néoconservatisme",
+    "category": "Droite",
+    "description": "Un courant de droite qui unit les marchés libres, les valeurs traditionnelles et une politique étrangère interventionniste, préconisant la promotion de la démocratie et des intérêts nationaux par la force militaire et le leadership mondial.",
+    "phrase": "Je veux exporter la démocratie et défendre les intérêts de la nation par la force militaire, en unissant les marchés libres aux valeurs traditionnelles à l’intérieur."
+  },
+  {
+    "id": "monarquismo-absoluto",
+    "name": "Monarchisme absolu",
+    "category": "Extrême droite",
+    "description": "Défense de la monarchie avec un pouvoir illimité concentré dans le souverain, légitimé par la tradition ou le droit divin, sans constitution ni parlement pour restreindre l’autorité du roi sur l’État et la société.",
+    "phrase": "Je veux un royaume unitaire gouverné par un souverain de droit divin, sans parlement ni constitution limitant l’autorité de la couronne."
+  },
+  {
+    "id": "conservadorismo-autoritario",
+    "name": "Conservatisme autoritaire",
+    "category": "Extrême droite",
+    "description": "Courant qui préserve l’ordre, la tradition et la hiérarchie à travers un État fort, restreignant les libertés et la participation politique au nom de la stabilité sociale, de la moralité, de la religion et de l’autorité établie.",
+    "phrase": "Je veux un ordre hiérarchique soutenu par un État fort, protégeant la tradition, la religion et les coutumes contre la subversion morale."
+  },
+  {
+    "id": "conservadorismo-nacional",
+    "name": "Conservatisme national",
+    "category": "Droite",
+    "description": "Courant qui unit les valeurs traditionnelles, la famille et la religion avec un fort nationalisme culturel, défendant la souveraineté, les frontières et l’identité du peuple au sein de la démocratie, avec une nette méfiance envers le mondialisme.",
+    "phrase": "Je veux une démocratie qui protège les frontières, la famille et la religion, affirmant l’identité de mon peuple contre le mondialisme culturel."
+  },
+  {
+    "id": "conservadorismo-paternalista",
+    "name": "Conservatisme paternaliste",
+    "category": "Droite",
+    "description": "Tradition conservatrice qui accepte les réformes sociales et la protection des plus pauvres pour préserver la cohésion nationale, considérant les élites comme responsables du bien-être du peuple et de l’harmonie entre les classes.",
+    "phrase": "Je veux une nation unie par des élites responsables, qui réforment et protègent les plus pauvres pour maintenir l’harmonie entre les classes."
+  },
+  {
+    "id": "fundamentalismo-religioso",
+    "name": "Fondamentalisme religieux",
+    "category": "Extrême droite",
+    "description": "Projet qui cherche à organiser l’État et la société selon l’interprétation stricte d’une doctrine religieuse, en subordonnant les lois, les coutumes et la politique aux préceptes sacrés et en rejetant le laïcisme moderne.",
+    "phrase": "Je veux un État soumis à la loi sacrée, où les coutumes et la politique obéissent à la doctrine religieuse et rejettent la laïcité."
+  },
+  {
+    "id": "nacionalismo-etnico",
+    "name": "Nationalisme ethnique",
+    "category": "Extrême droite",
+    "description": "Conception qui définit la nation par l’origine, la langue et l’ascendance communes, en préconisant un état d’ethnie dominante et la préservation de son identité, avec une tendance à exclure les minorités et les immigrants de l’organisme national.",
+    "phrase": "Je veux un État de ma propre ethnie, uni par le sang, la langue et l’ascendance communs, préservant son identité contre les minorités et les immigrants."
+  },
+  {
+    "id": "nacionalismo-cultural",
+    "name": "Nationalisme culturel",
+    "category": "Droite",
+    "description": "Le nationalisme fondé sur la langue, les traditions et l’héritage partagés plutôt que sur la race, qui valorise l’identité culturelle des gens et l’intégration de ceux qui adoptent ces valeurs, défendant la cohésion de la nation.",
+    "phrase": "Je veux une nation unie par une langue, des traditions et un héritage communs, ouverte à ceux qui adoptent nos valeurs, avec une économie protégée et coordonnée."
+  },
+  {
+    "id": "neorreacionarismo",
+    "name": "Néoréaction",
+    "category": "Extrême droite",
+    "description": "Courant qui rejette la démocratie moderne et l’égalitarisme et propose de les remplacer par des gouvernements hiérarchiques et efficaces gérés comme des entreprises par un souverain, combinant traditionalisme et technologie.",
+    "phrase": "Je veux une société gouvernée par un souverain hiérarchique comme un PDG, sans démocratie, unissant tradition et technologie dans un État réduit et efficace."
+  },
+  {
+    "id": "cameralismo",
+    "name": "Caméralisme",
+    "category": "Droite",
+    "description": "Doctrine administrative de l’absolutisme éclairé qui organisait l’État à travers une bureaucratie disciplinée et des finances centralisées, promouvant l’industrie, la population et les revenus comme sources de pouvoir du monarque.",
+    "phrase": "Je veux un royaume servi par une bureaucratie disciplinée et des finances centralisées, une industrie croissante, une population et des revenus pour la couronne."
+  },
+  {
+    "id": "corporativismo",
+    "name": "Corporatisme",
+    "category": "Troisième position",
+    "description": "Un modèle qui organise la société en corporations de travailleurs et d’employeurs intégrées à l’État, cherchant l’harmonie entre les classes et la coopération économique dirigée au lieu de conflits ou de libre concurrence.",
+    "phrase": "Je veux une société organisée en corporations d’employeurs et de travailleurs intégrées à l’État, dans une harmonie organisée entre les classes."
+  },
+  {
+    "id": "reacionarismo",
+    "name": "Réactionnisme",
+    "category": "Extrême droite",
+    "description": "Une position qui rejette la modernité et cherche à restaurer l’ordre prérévolutionnaire, en défendant la monarchie, la religion, la tradition et la hiérarchie contre le rationalisme des Lumières, le libéralisme et la démocratie.",
+    "phrase": "Je veux restaurer le trône, l’autel et la hiérarchie d’avant les révolutions, en balayant le rationalisme éclairé et la démocratie libérale."
+  },
+  {
+    "id": "quarta-teoria-politica",
+    "name": "Quatrième théorie politique",
+    "category": "Troisième position",
+    "description": "Théorie d’Alexandre Douguine qui rejette le libéralisme, le communisme et le fascisme et propose un monde multipolaire fondé sur les civilisations, la tradition et l’identité collective, en opposition au globalisme et à l’hégémonie occidentale.",
+    "phrase": "Je veux un monde multipolaire de civilisations enracinées dans la tradition et l’identité collective, élevées contre le globalisme et l’hégémonie occidentale."
+  },
+  {
+    "id": "democracia-nacional",
+    "name": "Démocratie nationale",
+    "category": "Droite",
+    "description": "Courant qui combine la souveraineté populaire et les institutions démocratiques avec un fort nationalisme culturel, en priorisant les intérêts et l’identité de la nation sur les engagements supranationaux et le multiculturalisme.",
+    "phrase": "Je veux une nation souveraine qui vote librement ses propres lois, mais qui place l’identité et les intérêts du peuple au-dessus de tout engagement supranational."
+  },
+  {
+    "id": "bioconservadorismo",
+    "name": "Bioconservatisme",
+    "category": "Centre",
+    "description": "Position opposée à la manipulation génétique et à l’amélioration technologique du corps humain, défendant les limites éthiques de la science au nom de la dignité, de la nature humaine et de la prudence pour l’avenir.",
+    "phrase": "Je veux une société qui trace des limites éthiques à la manipulation génétique et à l’amélioration du corps, protégeant la dignité humaine face à la science."
+  },
+  {
+    "id": "tecnocracia-de-direita",
+    "name": "Technocratie de droite",
+    "category": "Droite",
+    "description": "Modèle qui confie la gestion de l’État et de l’économie aux experts et à l’efficacité technologique, combinant les marchés, l’innovation et les décisions techniques au lieu de délibération politique et de compétition traditionnelle des partis.",
+    "phrase": "Je veux un gouvernement confié aux experts et à l’efficacité technologique, où les décisions techniques et les marchés remplacent la compétition partisane."
+  },
+  {
+    "id": "democracia-crista",
+    "name": "Démocratie chrétienne",
+    "category": "Centre",
+    "description": "Courant centriste qui applique les valeurs chrétiennes à la politique démocratique, défendant l’économie sociale de marché, la famille, la solidarité et le bien commun comme fondement des institutions libres et pluralistes.",
+    "phrase": "Je veux une démocratie pluraliste, guidée par les valeurs chrétiennes, avec une économie sociale de marché qui soutient la famille et le bien commun."
+  },
+  {
+    "id": "conservadorismo-cristao",
+    "name": "Conservatisme chrétien",
+    "category": "Droite",
+    "description": "Courant qui fonde la politique sur la morale et la tradition chrétiennes, la défense de la famille, de la vie et des valeurs religieuses dans la démocratie, en mettant l’accent sur la préservation des coutumes et du patrimoine culturel du peuple.",
+    "phrase": "Je veux une société fidèle à la morale et à la foi chrétiennes, protégeant la famille, la vie et les coutumes héritées contre l’érosion des temps."
+  },
+  {
+    "id": "republicanismo",
+    "name": "Républicanisme",
+    "category": "Centre",
+    "description": "Tradition politique qui valorise la souveraineté populaire, la vertu civique et l’État de droit, défend l’autonomie des citoyens, la séparation des pouvoirs et la protection contre la tyrannie et la corruption du pouvoir.",
+    "phrase": "Je veux une république de citoyens vertueux, avec la séparation des pouvoirs et l’État de droit, vigilants contre la tyrannie et la corruption du pouvoir."
+  },
+  {
+    "id": "monarquismo-constitucional",
+    "name": "Monarchisme constitutionnel",
+    "category": "Centre",
+    "description": "Défense de la monarchie comme symbole d’unité et de continuité, le roi soumis à la constitution et au parlement, unissant la tradition et la stabilité institutionnelle avec la démocratie représentative et l’État de droit.",
+    "phrase": "Je veux un roi soumis à la Constitution et au Parlement, un symbole d’unité et de continuité dans une démocratie représentative stable."
+  },
+  {
+    "id": "neoliberalismo",
+    "name": "Néolibéralisme",
+    "category": "Droite",
+    "description": "Courant qui préconise les marchés libres, la dérégulation, la privatisation et la discipline budgétaire, réduisant le rôle économique de l’État et faisant confiance à la concurrence et à la stabilité monétaire comme moteurs de la prospérité.",
+    "phrase": "Je veux un marché libre et déréglementé, avec un État réduit, des privatisations et une discipline budgétaire comme moteurs de prospérité et de concurrence."
+  },
+  {
+    "id": "ordoliberalismo",
+    "name": "Ordolibéralisme",
+    "category": "Centre",
+    "description": "L’école libérale allemande qui défend le marché libre dans le cadre de règles fermes garanties par l’État, lutte contre les monopoles et assure la concurrence et la stabilité, servant de base à l’économie sociale de marché.",
+    "phrase": "Je veux un marché libre discipliné par des règles d’État fermes, qui empêchent les monopoles et maintiennent l’économie sociale de marché."
+  },
+  {
+    "id": "distributismo",
+    "name": "Distributisme",
+    "category": "Centre",
+    "description": "Doctrine d’inspiration chrétienne qui préconise la large distribution de la propriété et de la production à petite échelle, s’opposant à la fois au capitalisme monopoliste et au socialisme d’État en faveur des communautés autonomes.",
+    "phrase": "Je veux des communautés de petits propriétaires autonomes, avec une propriété largement répartie, rejetant le capitalisme monopoliste et l’État socialiste."
+  },
+  {
+    "id": "tecnocracia",
+    "name": "Technocratie",
+    "category": "Centre",
+    "description": "Modèle de gouvernement dans lequel les décisions sont prises par des experts et des critères techniques et scientifiques, confiant aux ingénieurs, aux économistes et aux scientifiques la gestion rationnelle et efficace de l’État et de l’économie.",
+    "phrase": "Je veux une société dirigée par des experts, avec des décisions techniques qui remplacent les négociations politiques et une économie planifiée guidée par des critères scientifiques."
+  },
+  {
+    "id": "comunitarismo",
+    "name": "Communautarisme",
+    "category": "Centre",
+    "description": "Courant qui valorise les liens communautaires, les traditions et le bien commun au-dessus de l’individualisme, affirmant que la justice et l’identité découlent de la vie dans la communauté et des responsabilités que les gens partagent.",
+    "phrase": "Je veux une société tissée de liens communautaires et de traditions communes, avec une démocratie participative et une économie axée sur le bien commun."
+  },
+  {
+    "id": "meritocracia",
+    "name": "Méritocratie",
+    "category": "Centre",
+    "description": "Principe selon lequel les postes et récompenses doivent être répartis par le talent, l’effort et la performance plutôt que par l’origine ou le privilège, en défendant l’égalité des chances et la sélection par capacité.",
+    "phrase": "Je veux une société où le talent et l’effort décident des positions, avec des opportunités égales et des récompenses proportionnées au mérite de chaque personne."
+  },
+  {
+    "id": "liberalismo",
+    "name": "Libéralisme",
+    "category": "Centre",
+    "description": "Tradition politique qui place la liberté individuelle au centre, la défense des droits, la tolérance, l’État de droit, une économie de marché et des limites au pouvoir, avec le gouvernement soumis au consentement des citoyens.",
+    "phrase": "Je veux une société tolérante fondée sur les droits individuels, avec un gouvernement limité par l’État de droit et une économie de marché libre."
+  },
+  {
+    "id": "liberalismo-classico",
+    "name": "Libéralisme classique",
+    "category": "Libertarien",
+    "description": "Une branche originale du libéralisme qui défend les droits naturels, la propriété, les marchés libres et un État minimal, considérant la liberté individuelle et la restriction stricte du pouvoir comme les fondements d’une société juste.",
+    "phrase": "Je veux une société fondée sur les droits naturels et le caractère sacré de la propriété, avec un État minimal et le libre marché comme fondements d’une vie juste."
+  },
+  {
+    "id": "libertarianismo",
+    "name": "Libertarianisme",
+    "category": "Libertarien",
+    "description": "Philosophie qui préconise la liberté individuelle maximale et un État réduit aux fonctions essentielles, valorisant la propriété privée, les marchés libres et l’autonomie personnelle tout en rejetant la coercition de l’État sur la vie.",
+    "phrase": "Je veux une société de la plus grande autonomie personnelle, avec l’État réduit à des fonctions essentielles et la propriété privée au-dessus de toute coercition."
+  },
+  {
+    "id": "liberalismo-verde",
+    "name": "Libéralisme vert",
+    "category": "Centre",
+    "description": "Courant qui unit la liberté individuelle, les marchés et la démocratie avec l’agenda écologique, défendant la durabilité, les droits et l’innovation pour concilier la prospérité économique avec une protection environnementale efficace.",
+    "phrase": "Je veux une société qui unit le marché et la démocratie à la cause écologique, innovant pour concilier la prospérité avec la durabilité environnementale."
+  },
+  {
+    "id": "liberalismo-social",
+    "name": "Libéralisme social",
+    "category": "Gauche",
+    "description": "Branche qui combine les libertés individuelles avec une action étatique forte pour garantir le bien-être, l’éducation et les soins de santé, défendant l’égalité des chances et la sécurité sociale dans l’économie de marché.",
+    "phrase": "Je veux une société de libertés individuelles soutenues par une sécurité sociale forte, avec l’État garantissant la santé et l’éducation pour tous."
+  },
+  {
+    "id": "liberalismo-conservador",
+    "name": "Libéralisme conservateur",
+    "category": "Droite",
+    "description": "Synthèse qui unit les marchés libres et les libertés économiques à l’appréciation de la tradition, de l’ordre et des institutions, en défendant le changement prudent et la stabilité sociale dans le cadre de la démocratie libérale.",
+    "phrase": "Je veux une société qui unit le marché libre à la tradition et aux institutions, en changeant prudemment dans le cadre de la démocratie libérale."
+  },
+  {
+    "id": "reformismo-georgista",
+    "name": "Réformisme georgiste",
+    "category": "Centre",
+    "description": "Courant créé par Henry George qui propose de financer la société par un impôt unique sur la valeur foncière, considérant que la rente de la terre appartient à tous et que le travail et le capital ne doivent pas être taxés.",
+    "phrase": "Je veux une société financée par un impôt unique sur la terre, puisque sa rente appartient à tous et que le travail ne doit pas être imposé."
+  },
+  {
+    "id": "geolibertarianismo",
+    "name": "Géolibertarianisme",
+    "category": "Libertarien",
+    "description": "Synthèse du libertarianisme et du georgisme qui combine les marchés libres et les libertés individuelles avec l’imposition de la valeur de la terre, considérée comme une ressource commune, pour financer l’État minimal sans punir le travail.",
+    "phrase": "Je veux une société de pleines libertés et de marchés libres, taxant seulement la terre comme une ressource commune pour maintenir un État minimal."
+  },
+  {
+    "id": "liberalismo-de-estado",
+    "name": "Libéralisme d’État",
+    "category": "Gauche",
+    "description": "Un courant libéral qui accepte un rôle actif de l’État dans l’économie et dans la garantie des droits, en combinant les libertés individuelles et les marchés avec la réglementation et les politiques publiques visant le bien et l’égalité collectives.",
+    "phrase": "Je veux une société de marché avec un État actif, réglementant l’économie et élargissant les droits pour garantir le bien-être collectif."
+  },
+  {
+    "id": "ambientalismo",
+    "name": "Écologisme",
+    "category": "Gauche",
+    "description": "Mouvement dédié à la protection de l’environnement et à l’utilisation durable des ressources, en préconisant des politiques contre la pollution et le changement climatique et l’harmonie entre le développement humain et l’équilibre écologique.",
+    "phrase": "Je veux une société qui place l’équilibre écologique au-dessus de la consommation, avec des politiques étatiques strictes contre la pollution et le changement climatique."
+  },
+  {
+    "id": "conservadorismo",
+    "name": "Conservatisme",
+    "category": "Droite",
+    "description": "Tradition politique qui valorise l’ordre, les coutumes, la famille et les institutions consolidées, préférant le changement graduel et prudent à la rupture, basé sur l’expérience historique et le scepticisme envers les utopies.",
+    "phrase": "Je veux une société qui préserve les coutumes, la famille et les institutions, en changeant lentement et avec scepticisme envers les utopies et les ruptures."
+  },
+  {
+    "id": "progressismo",
+    "name": "Progressisme",
+    "category": "Gauche",
+    "description": "Courant qui préconise les réformes sociales et l’expansion des droits pour promouvoir l’égalité et la justice, en faisant confiance au progrès, à la science et à l’action collective pour transformer les institutions et surmonter les inégalités.",
+    "phrase": "Je veux une société multiculturelle en réforme constante, en étendant les droits et en utilisant l’État pour surmonter les inégalités par la science."
+  },
+  {
+    "id": "nacionalismo",
+    "name": "Nationalisme",
+    "category": "Droite",
+    "description": "Une idéologie qui place la nation comme la valeur centrale, défendant sa souveraineté, son unité et son identité, et privilégiant les intérêts du peuple et de l’État-nation par rapport aux influences extérieures et au mondialisme.",
+    "phrase": "Je veux une société assimilée à l’identité nationale, avec un ordre fort et une économie protégée de l’étranger au nom de la souveraineté du peuple."
+  },
+  {
+    "id": "nacionalismo-civico",
+    "name": "Nationalisme civique",
+    "category": "Centre",
+    "description": "Le nationalisme fondé sur la citoyenneté et les valeurs communes plutôt que sur l’ethnicité, définissant la nation par l’adhésion à des lois et institutions communes, ouverte à tous ceux qui acceptent ses principes démocratiques et civiques.",
+    "phrase": "Je veux une nation définie par la citoyenneté et les lois communes, pas l’ethnie, ouverte à quiconque accepte nos principes démocratiques."
+  },
+  {
+    "id": "indigenismo",
+    "name": "Indigénisme",
+    "category": "Gauche",
+    "description": "Courant qui valorise les peuples autochtones et leurs droits, défendant l’autonomie, le territoire, la culture et la participation politique, ainsi que les modèles de développement et un État plurinational qui respecte leurs traditions.",
+    "phrase": "Je veux une société plurinationale qui respecte le territoire, l’autonomie et les traditions des peuples autochtones, avec leur pleine participation politique."
+  },
+  {
+    "id": "conservadorismo-socialista",
+    "name": "Conservatisme socialiste",
+    "category": "Troisième position",
+    "description": "Courant qui unit une économie socialiste aux valeurs traditionnelles, défendant la protection sociale et un rôle fort de l’État aux côtés de la famille, de l’ordre et des coutumes, loin du progressisme culturel des gauches libérales.",
+    "phrase": "Je veux un État fort qui garantisse la protection sociale et l’industrie publique, mais protège la famille, l’ordre et les coutumes contre le progressisme culturel."
+  },
+  {
+    "id": "anarquismo",
+    "name": "Anarchisme",
+    "category": "Anarchisme",
+    "description": "Philosophie qui rejette l’État et toute autorité coercitive, défendant la libre organisation de la société par des associations volontaires, la coopération et l’autogestion, avec la liberté et l’égalité comme valeurs centrales.",
+    "phrase": "Je veux une société sans État, organisée par des associations volontaires et une aide mutuelle, où la liberté et l’égalité remplacent toute autorité coercitive."
+  },
+  {
+    "id": "anarcocomunismo",
+    "name": "Anarcho-communisme",
+    "category": "Anarchisme",
+    "description": "Courant qui unit l’anarchisme et le communisme, proposant une société sans État ni propriété privée, avec une production et une distribution collectives selon les besoins, basées sur la libre association et l’aide mutuelle.",
+    "phrase": "Je veux abolir l’État et la propriété privée, avec une production collective et une distribution par besoin, soutenues par la libre association et l’aide mutuelle."
+  },
+  {
+    "id": "anarcossindicalismo",
+    "name": "Anarcho-syndicalisme",
+    "category": "Anarchisme",
+    "description": "Le courant qui voit les syndicats révolutionnaires comme la base du renversement du capitalisme par l’action directe et la grève générale, organisant la production par les travailleurs eux-mêmes dans une société libre et sans État.",
+    "phrase": "Je veux que les syndicats révolutionnaires renversent le capitalisme par une action directe et une grève générale, avec des travailleurs contrôlant la production, sans État."
+  },
+  {
+    "id": "sindicalismo",
+    "name": "Syndicalisme",
+    "category": "Gauche",
+    "description": "Un mouvement qui place les syndicats et l’organisation des travailleurs au centre de la politique, défendant la négociation collective, l’action directe et le contrôle du travail sur la production comme le chemin de l’émancipation de la classe ouvrière.",
+    "phrase": "Je veux que les syndicats et les négociations collectives soient au centre de la politique, avec le contrôle des travailleurs sur la production comme chemin vers l’émancipation de la classe ouvrière."
+  },
+  {
+    "id": "socialismo-libertario",
+    "name": "Socialisme libertaire",
+    "category": "Anarchisme",
+    "description": "Le courant qui poursuit le socialisme sans État autoritaire, unit la propriété collective et l’autogestion à une grande liberté individuelle, organisée de bas en haut par des communautés libres et des travailleurs.",
+    "phrase": "Je veux un socialisme sans État autoritaire, avec la propriété collective et l’autogestion organisées de bas en haut par des communautés libres et des travailleurs."
+  },
+  {
+    "id": "socialismo-de-mercado",
+    "name": "Socialisme de marché",
+    "category": "Gauche",
+    "description": "Système dans lequel les entreprises collectives ou publiques sont en concurrence sur les marchés, en combinant l’efficacité de la concurrence avec la répartition socialiste des bénéfices, sans la planification centrale rigide des économies de l’État.",
+    "phrase": "Je veux des entreprises de propriété collective qui se font concurrence sur les marchés, qui combinent l’efficacité de la concurrence avec la répartition socialiste des bénéfices, sans planification centralisée rigide."
+  },
+  {
+    "id": "mutualismo",
+    "name": "Mutualisme",
+    "category": "Anarchisme",
+    "description": "C’est un courant anarchiste fondé par Proudhon qui préconise un échange équitable, un crédit gratuit et une propriété basée sur l’utilisation, avec des producteurs et des coopératives qui négocient entre eux sans exploitation, patrons ou un État central.",
+    "phrase": "Je veux que les coopératives et les producteurs négocient équitablement, avec un crédit gratuit et la possession par l’utilisation, sans patron, sans exploitation et sans État central."
+  },
+  {
+    "id": "minarco-mutualismo",
+    "name": "Minarcho-mutualisme",
+    "category": "Libertarien",
+    "description": "Synthèse qui unit le mutualisme avec un État minimal, combinant échange équitable, coopératives et crédit gratuit avec une structure publique réduite aux fonctions essentielles de protection des droits, des contrats et des libertés.",
+    "phrase": "Je veux que les coopératives mutualistes et le crédit gratuit soient ajoutés à un État minimal, limité à la protection des droits essentiels, des contrats et des libertés."
+  },
+  {
+    "id": "socialismo-individualista",
+    "name": "Socialisme individualiste",
+    "category": "Anarchisme",
+    "description": "Branche qui réconcilie les idéaux socialistes avec une forte emphase sur l’autonomie et la liberté personnelles, défendant la coopération et la propriété collective sans sacrifier l’indépendance et l’unicité de chaque personne.",
+    "phrase": "Je veux une coopération et une propriété collective qui ne sacrifient jamais l’autonomie, la liberté et l’unicité de chaque individu."
+  },
+  {
+    "id": "comunalismo",
+    "name": "Communalisme",
+    "category": "Anarchisme",
+    "description": "Modèle créé par Murray Bookchin basé sur des municipalités autonomes et des assemblées populaires fédérées, avec une économie communautaire et une démocratie directe, cherchant à remplacer l’État par une confédération libre.",
+    "phrase": "Je veux des municipalités autonomes avec des assemblées populaires fédérées, une économie communautaire et une démocratie directe, en remplacement de l’État par une confédération libre."
+  },
+  {
+    "id": "socialismo-cristao",
+    "name": "Socialisme chrétien",
+    "category": "Gauche radicale",
+    "description": "Courants de Thomas Müntzer, les paysans de 1525 et les prêtres de guérilla comme Camilo Torres, à la recherche du Royaume de Dieu sur terre par la révolution, avec la propriété commune et le règne des pauvres imposé par la force.",
+    "phrase": "Je veux le Royaume de Dieu sur terre grâce à une révolution des pauvres, tous les biens communs et les puissants renversés par les élus."
+  },
+  {
+    "id": "trabalhismo-cristao",
+    "name": "Travaillisme chrétien",
+    "category": "Gauche",
+    "description": "Branche qui combine la défense des travailleurs et la justice sociale avec les valeurs chrétiennes, la promotion des droits des travailleurs, la solidarité et la protection sociale au sein de la démocratie, inspirée de la doctrine sociale de l’Église.",
+    "phrase": "Je veux des droits du travail et une protection sociale dans la démocratie, inspirée par la doctrine sociale de l’Église et la solidarité chrétienne."
+  },
+  {
+    "id": "social-democracia-crista",
+    "name": "Social-démocratie chrétienne",
+    "category": "Gauche",
+    "description": "Courant qui transforme l’Évangile en réformes au sein de la démocratie, défendant un État-providence, des droits des travailleurs, des syndicats et la redistribution sans rompre avec le marché ou les institutions libérales.",
+    "phrase": "Je veux une justice sociale guidée par l’Évangile, gagnée aux urnes, avec des syndicats forts, un État-providence et la dignité des travailleurs."
+  },
+  {
+    "id": "social-democracia",
+    "name": "Social-démocratie",
+    "category": "Gauche",
+    "description": "Courant qui cherche à concilier le capitalisme et la justice sociale par la démocratie, la défense des marchés réglementés, un État-providence fort, les droits du travail et la redistribution pour réduire les inégalités sociales.",
+    "phrase": "Je veux une société de marchés réglementés et un État-providence fort, avec des droits du travail et une redistribution par des moyens démocratiques."
+  },
+  {
+    "id": "socialismo",
+    "name": "Socialisme",
+    "category": "Gauche",
+    "description": "Une doctrine large qui préconise la propriété sociale ou collective des moyens de production et la planification économique pour surmonter l’exploitation capitaliste, en acceptant à la fois la voie révolutionnaire et la voie réformiste pour y parvenir.",
+    "phrase": "Je veux une société sans exploitation, avec des moyens de production collectifs et une planification économique qui remplacent le marché capitaliste."
+  },
+  {
+    "id": "socialismo-liberal",
+    "name": "Socialisme libéral",
+    "category": "Gauche",
+    "description": "Courant qui unit les objectifs socialistes de l’égalité et de la justice sociale à la défense des libertés individuelles et de la démocratie, en combinant une forte protection sociale au pluralisme, aux droits civils et à une économie mixte.",
+    "phrase": "Je veux une société qui unit l’égalité socialiste à des libertés individuelles complètes, à un pluralisme démocratique et à une économie mixte."
+  },
+  {
+    "id": "libertarianismo-social",
+    "name": "Libertarianisme social",
+    "category": "Anarchisme",
+    "description": "Branche libertaire de gauche qui unit la liberté individuelle large avec la propriété collective ou partagée des ressources, défendant l’autonomie, la coopération et le rejet de l’État autoritaire et du capital.",
+    "phrase": "Je veux des communautés autonomes de propriété partagée, sans État ni capital, unissant la liberté individuelle et la coopération collective."
+  },
+  {
+    "id": "ecossocialismo",
+    "name": "Écosocialisme",
+    "category": "Gauche",
+    "description": "Courant qui fusionne socialisme et écologie, attribuant la crise environnementale au capitalisme et défendant la production collective, durable et démocratique qui respecte les limites de la nature et des besoins sociaux.",
+    "phrase": "Je veux une société qui surmonte le capitalisme avec une production collective et durable, planifiée démocratiquement dans les limites de la nature."
+  },
+  {
+    "id": "ecologia-profunda",
+    "name": "Écologie profonde",
+    "category": "Gauche",
+    "description": "C’est un courant qui attribue une valeur intrinsèque à toute vie et non seulement aux êtres humains, défendant un changement profond de valeurs, la réduction de l’impact humain et le respect de l’équilibre des écosystèmes de la planète.",
+    "phrase": "Je veux une société qui reconnaît la valeur intrinsèque de toute vie, réduisant l’impact humain par respect pour l’équilibre des écosystèmes."
+  },
+  {
+    "id": "anarquismo-agrario",
+    "name": "Anarchisme agraire",
+    "category": "Anarchisme",
+    "description": "La branche anarchiste se concentrait sur la campagne, défendant les communautés rurales autonomes, la propriété collective des terres et la coopération paysanne, rejetant l’État et la concentration des terres en faveur de l’autogestion.",
+    "phrase": "Je veux des communautés rurales autonomes avec des terres collectives, sans État ou grands domaines, organisées par la coopération et l’autogestion paysannes."
+  },
+  {
+    "id": "anarquismo-verde",
+    "name": "Anarchisme vert",
+    "category": "Anarchisme",
+    "description": "Courant qui unit l’anarchisme et l’écologie radicale, défendant des communautés décentralisées et durables sans État ou exploitation de la nature, en harmonie avec les cycles écologiques et la vie non humaine.",
+    "phrase": "Je veux des communautés décentralisées sans État, vivant en harmonie avec les cycles écologiques, sans exploiter la nature."
+  },
+  {
+    "id": "anarco-progressismo",
+    "name": "Anarcho-progressisme",
+    "category": "Anarchisme",
+    "description": "La synthèse des courants anarchistes centrés sur la libération du corps et de l’identité, unissant la critique du patriarcat et des normes de genre et de sexualité avec une ouverture à la technologie comme outil d’émancipation, le tout sous le rejet de l’État, du capitalisme et de chaque hiérarchie imposée.",
+    "phrase": "Je veux une société sans État, sans capital ou sans hiérarchie, libérant le corps et l’identité du patriarcat par la technologie émancipatrice."
+  },
+  {
+    "id": "anarcopacifismo",
+    "name": "Anarcho-pacifisme",
+    "category": "Anarchisme",
+    "description": "Une branche anarchiste qui rejette l’État et toute violence, défend la transformation sociale par des moyens non violents, la désobéissance civile et la coopération volontaire comme chemin vers une société libre et juste.",
+    "phrase": "Je veux une société sans État ni violence, construite à travers la désobéissance civile et la coopération volontaire entre les personnes libres."
+  },
+  {
+    "id": "anarquismo-cristao",
+    "name": "Anarchisme chrétien",
+    "category": "Anarchisme",
+    "description": "Courant qui unit la foi chrétienne à l’anarchisme, affirmant que l’Évangile prêche l’amour, l’égalité et la non-violence incompatibles avec l’État, et défendant les communautés libres basées sur la conscience et la charité.",
+    "phrase": "Je veux des communautés libres guidées par l’Évangile, sans État, vivant l’amour et l’égalité par la conscience et la charité."
+  },
+  {
+    "id": "anarco-naturalismo",
+    "name": "Anarcho-naturisme",
+    "category": "Anarchisme",
+    "description": "Une branche anarchiste liée au naturisme qui défend la vie simple en contact avec la nature, sans État ou conventions oppressives, valorisant l’autonomie individuelle, la santé et l’harmonie avec le monde naturel.",
+    "phrase": "Je veux vivre sans État ni conventions oppressives, simplement et au contact de la nature, en valorisant l’autonomie individuelle et la santé."
+  },
+  {
+    "id": "geoanarquismo",
+    "name": "Géoanarchisme",
+    "category": "Anarchisme",
+    "description": "Synthèse de l’anarchisme et du georgisme qui rejette l’État mais traite la terre et les ressources naturelles comme des biens communs, défendant que leur rente soit partagé par toute la communauté de manière libre et égalitaire.",
+    "phrase": "Je veux abolir l’État et traiter la terre comme un bien commun, en partageant librement sa rente dans toute la communauté."
+  },
+  {
+    "id": "anarcocapitalismo",
+    "name": "Anarcho-capitalisme",
+    "category": "Libertarien",
+    "description": "Courant qui propose l’abolition de l’État et l’organisation de toute la société par le biais de contrats et de marchés libres, avec la sécurité, la justice et les services fournis par des entreprises privées concurrentes sous droits de propriété absolus.",
+    "phrase": "Je veux abolir l’État et tout organiser par des contrats et des marchés libres, avec la sécurité et la justice vendues par des entreprises privées."
+  },
+  {
+    "id": "minarquismo",
+    "name": "Minarchisme",
+    "category": "Libertarien",
+    "description": "Une branche libertarienne qui défend un État minimal limité à la police, aux tribunaux et à la défense, laissant tout le reste au marché et à l’initiative privée, pour protéger les droits individuels sans opprimer la liberté.",
+    "phrase": "Je veux un État minimal, limité à la police, aux tribunaux et à la défense, laissant tout le reste au marché libre et à l’initiative privée."
+  },
+  {
+    "id": "paleolibertarianismo",
+    "name": "Paléolibertarianisme",
+    "category": "Libertarien",
+    "description": "Branche qui combine des marchés libres radicaux avec des valeurs culturelles traditionnelles et conservatrices, défendant la liberté économique, la propriété et les communautés locales autonomes contre l’État et le progressisme.",
+    "phrase": "Je veux des marchés libres radicaux unis aux valeurs traditionnelles, avec la propriété et les communautés locales autonomes contre l’État."
+  },
+  {
+    "id": "libertarianismo-hoppeano",
+    "name": "Libertarianisme hoppéen",
+    "category": "Libertarien",
+    "description": "Courant lié à Hans-Hermann Hoppe qui unit l’anarcho-capitalisme, la propriété privée absolue et la critique de la démocratie, la défense des ordres sociaux basés sur le contrat, l’exclusion volontaire et l’autorité privée.",
+    "phrase": "Je veux un ordre de propriété privée absolue, régie par des contrats et des communautés qui expulsent ceux qui rejettent leurs règles, sans démocratie égalitaire ou un État."
+  },
+  {
+    "id": "capitalismo",
+    "name": "Capitalisme",
+    "category": "Droite",
+    "description": "Système économique fondé sur la propriété privée, les marchés libres et la poursuite du profit, dans lequel la production et les prix sont régis par la concurrence et l’offre et la demande, avec l’initiative individuelle comme moteur.",
+    "phrase": "Je veux une société dirigée par l’initiative individuelle, où la concurrence et le marché libre, et non l’État, décident des prix, de la production et des bénéfices."
+  },
+  {
+    "id": "objetivismo",
+    "name": "Objectivisme",
+    "category": "Libertarien",
+    "description": "Philosophie créée par Ayn Rand qui exalte la raison, l’individualisme et l’égoïsme rationnel, défendant le capitalisme laissez-faire et la poursuite de son propre bonheur comme le but moral suprême de la vie de chaque personne.",
+    "phrase": "Je veux une société fondée sur l’égoïsme rationnel et la raison, où chacun poursuit son propre bonheur et où le capitalisme de laissez-faire constitue la seule morale valable."
+  },
+  {
+    "id": "ecocapitalismo",
+    "name": "Écocapitalisme",
+    "category": "Droite",
+    "description": "Courant qui vise à résoudre la crise environnementale par le marché, en utilisant les prix, la technologie verte et les incitations pour rendre la protection de la nature rentable et compatible avec la croissance et la libre entreprise.",
+    "phrase": "Je veux une économie de marché verte, où les prix, la technologie et les bénéfices rendent la protection de la nature compatible avec la croissance et la libre entreprise."
+  },
+  {
+    "id": "ecoconservadorismo",
+    "name": "Écoconservatisme",
+    "category": "Droite",
+    "description": "Branche qui unit le conservatisme et la protection de l’environnement, défendant la préservation de la nature dans le cadre de la tradition et du patrimoine à transmettre aux générations futures, avec prudence en ce qui concerne le changement.",
+    "phrase": "Je veux préserver la nature dans le cadre de la tradition et du patrimoine qui nous ont été transmis, avec prudence face au changement et une économie mixte et équilibrée."
+  },
+  {
+    "id": "econacionalismo",
+    "name": "Éconationalisme",
+    "category": "Centre",
+    "description": "Courant qui relie la protection de l’environnement à la souveraineté nationale, en accordant la priorité à la protection des propres ressources naturelles et foncières du pays et au développement durable au sein des frontières nationales.",
+    "phrase": "Je veux protéger les ressources naturelles et les terres de ma nation, avec une planification étatique et des frontières économiques qui garantissent la souveraineté et la durabilité."
+  },
+  {
+    "id": "criptoanarquismo",
+    "name": "Crypto-anarchisme",
+    "category": "Libertarien",
+    "description": "Courant qui utilise la cryptographie et les technologies numériques pour garantir la vie privée, la liberté et les transactions au-delà du contrôle de l’État, cherchant à affaiblir la surveillance et l’autorité par des moyens technologiques.",
+    "phrase": "Je veux une vie protégée par la cryptographie, sans surveillance et sans frontières qui bloquent les transactions, dissolvant l’autorité de l’État grâce à la technologie."
+  },
+  {
+    "id": "libertarianismo-bleeding-heart",
+    "name": "Libertarianisme à sensibilité sociale",
+    "category": "Libertarien",
+    "description": "Courant qui unit le libre marché et les libertés individuelles à la justice sociale, considérant que la liberté économique doit aussi améliorer concrètement la vie des plus pauvres et des plus vulnérables.",
+    "phrase": "Je veux une liberté économique et individuelle qui sorte aussi les plus pauvres de la misère, en unissant le libre marché à la compassion et à la justice sociale."
+  },
+  {
+    "id": "libertarianismo-nacional",
+    "name": "Libertarianisme national",
+    "category": "Libertarien",
+    "description": "Branche qui combine la défense des libertés individuelles et des marchés libres avec l’appréciation de la souveraineté et de l’identité nationales, défendant le gouvernement limité aux côtés du contrôle des frontières et de la nation.",
+    "phrase": "Je veux un gouvernement limité et des marchés libres qui protègent aussi les frontières, la souveraineté et l’identité de ma nation."
+  },
+  {
+    "id": "monarquismo-libertario",
+    "name": "Monarchisme libertarien",
+    "category": "Libertarien",
+    "description": "Courant qui voit la monarchie comme une garantie de liberté et de stabilité, défendant un roi avec un pouvoir limité qui protège la propriété et les droits individuels et maintient un État réduit, peu interventionniste.",
+    "phrase": "Je veux un roi de pouvoir limité qui garantit la propriété et les droits individuels, gardant l’État faible et hors de la vie des gens."
+  },
+  {
+    "id": "monarquismo-federalista",
+    "name": "Monarchisme fédéraliste",
+    "category": "Droite",
+    "description": "Courant qui défend un monarque exerçant réellement le pouvoir, comme chef constitutionnel de l’exécutif ou souverain absolu, à la tête d’une fédération d’États ou de régions largement autonomes, comme dans l’Empire allemand de 1871, les Émirats arabes unis et la Malaisie.",
+    "phrase": "Je veux un monarque qui gouverne vraiment une fédération d’États avec leurs propres lois, dynasties et autonomie, unis par la couronne et la foi."
+  },
+  {
+    "id": "conservadorismo-libertario",
+    "name": "Conservatisme libertarien",
+    "category": "Libertarien",
+    "description": "Synthèse qui unit les marchés libres et un État minimal avec la défense de la tradition, de la famille et de l’ordre, en valorisant la liberté individuelle et la responsabilité personnelle en plus de la préservation des coutumes et des institutions.",
+    "phrase": "Je veux la liberté économique et un État minimal aux côtés de la tradition, de la famille et des coutumes qui maintiennent l’ordre social."
+  },
+  {
+    "id": "feminismo-libertario",
+    "name": "Libertarianisme progressiste",
+    "category": "Libertarien",
+    "description": "Branche qui poursuit l’égalité des sexes par la liberté individuelle et le marché plutôt que par l’État, défendant l’autonomie, l’égalité des droits et la fin des restrictions légales sur les choix des femmes.",
+    "phrase": "Je veux que les femmes gagnent l’égalité par la liberté individuelle et le marché, sans la tutelle de l’État sur leurs corps et leurs choix."
+  },
+  {
+    "id": "anarcoconservadorismo",
+    "name": "Anarcho-conservatisme",
+    "category": "Libertarien",
+    "description": "Courant qui rejette l’État mais préserve la tradition, la religion et les valeurs communautaires, défendant un ordre social spontané basé sur les coutumes, la famille et l’autorité naturelle au lieu du pouvoir politique central.",
+    "phrase": "Je veux abolir le pouvoir politique central et vivre sous les coutumes, la famille et l’autorité naturelle, dans un ordre spontané qui préserve la tradition et la foi."
+  },
+  {
+    "id": "anarcodistributismo",
+    "name": "Anarcho-distributisme",
+    "category": "Anarchisme",
+    "description": "Synthèse de l’anarchisme et du distributisme qui défend la large distribution de la propriété et de la production à petite échelle, avec des communautés autonomes et des coopératives organisées sans État ou grands monopoles.",
+    "phrase": "Je veux que la propriété soit largement répartie entre les coopératives et les communautés autonomes, produisant à petite échelle sans l’État ni les monopoles."
+  },
+  {
+    "id": "centrismo",
+    "name": "Centrisme",
+    "category": "Centre",
+    "description": "Une position politique qui cherche à équilibrer la gauche et la droite, en valorisant la modération, le pragmatisme et le consensus, et en combinant des éléments de différents courants pour éviter les extrêmes et favoriser des réformes graduelles.",
+    "phrase": "Je veux la modération et le pragmatisme entre gauche et droite, combinant le meilleur de chaque courant dans des réformes graduelles qui évitent les extrêmes."
+  },
+  {
+    "id": "trabalhismo",
+    "name": "Travaillisme",
+    "category": "Gauche",
+    "description": "Courant qui défend les intérêts des travailleurs au sein de la démocratie, en promouvant les droits du travail, la sécurité sociale, les syndicats forts et la répartition des revenus par des réformes et l’État-providence.",
+    "phrase": "Je veux une société où les syndicats forts et l’État-providence garantissent les droits du travail et les revenus distribués par la démocratie."
+  },
+  {
+    "id": "positivismo",
+    "name": "Positivisme",
+    "category": "Centre",
+    "description": "Courant inspiré par Auguste Comte qui fait confiance à la science et à la raison pour organiser la société, défendre l’ordre, le progrès et l’administration technique guidée par la connaissance au lieu de la métaphysique et de la tradition.",
+    "phrase": "Je veux une société gouvernée par l’ordre et le progrès, dirigée par des techniciens qui remplacent la tradition et la métaphysique par la science."
+  },
+  {
+    "id": "conservadorismo-secular",
+    "name": "Conservatisme laïque",
+    "category": "Droite",
+    "description": "Une branche conservatrice qui défend l’ordre, la tradition et les institutions sans les ancrer dans la religion, soutenant les valeurs culturelles et la stabilité sociale avec des arguments laïques, historiques et pragmatiques.",
+    "phrase": "Je veux une société qui préserve la tradition et les institutions à travers des arguments historiques laïques, sans faire appel à la religion pour cela."
+  },
+  {
+    "id": "progressismo-cristao",
+    "name": "Progressisme chrétien",
+    "category": "Gauche",
+    "description": "Courant qui unit la foi chrétienne à la défense de la justice sociale, des droits et des réformes, voyant dans l’Évangile un appel à la solidarité, à l’égalité et à la prise en charge des pauvres et marginalisés de la société et du monde.",
+    "phrase": "Je veux une société guidée par l’Évangile, appel à la justice sociale, à la solidarité et au soin des pauvres."
+  },
+  {
+    "id": "autoritarismo-modernizador",
+    "name": "Autoritarisme modernisateur",
+    "category": "Droite",
+    "description": "Un modèle inspiré du régime de Park Chung-hee, combinant l’industrialisation dirigée par l’État, le crédit aux entreprises privées et la planification avec la répression politique anticommuniste.",
+    "phrase": "Je veux un État de développement qui dirige le crédit et l’industrie privée, qui impose l’ordre politique au nom du progrès national."
+  },
+  {
+    "id": "desenvolvimentismo-de-estado",
+    "name": "Développementalisme d’État",
+    "category": "Gauche",
+    "description": "Modèle dans lequel l’État dirige l’industrialisation et la croissance économique par la planification, les investissements publics et la protection industrielle, en cherchant à surmonter l’arriéré et la dépendance extérieure du pays.",
+    "phrase": "Je veux un État qui stimule l’industrialisation par des plans et des investissements publics, protégeant l’industrie contre la dépendance extérieure."
+  },
+  {
+    "id": "atlantismo",
+    "name": "Atlantisme",
+    "category": "Droite",
+    "description": "Doctrine géopolitique de l’alliance entre les États-Unis, le Canada et l’Europe autour de l’OTAN et de l’UE, qui soutient l’expansion de l’alliance vers l’est et l’utilisation du pouvoir militaire occidental pour diffuser la démocratie libérale et les marchés libres contre la Russie et la Chine.",
+    "phrase": "Je veux que l’Occident soit uni dans l’OTAN et l’UE, en élargissant l’alliance et en utilisant la puissance militaire pour répandre la démocratie libérale et les marchés libres."
+  },
+  {
+    "id": "tecno-monarquismo",
+    "name": "Techno-monarchisme",
+    "category": "Droite",
+    "description": "Une variante unitaire de la néoréaction: un PDG-monarque absolu gouverne un État centralisé par le biais de la technologie de données et de sécurité (surveillance, IA), sous le capitalisme de marché, la propriété privée et la libre entreprise, pour le bien de la stabilité et de l’efficacité.",
+    "phrase": "Je veux un monarque absolu avec une mentalité de PDG qui gouverne un État unitaire grâce à la technologie de données et de sécurité tout en laissant le marché libre."
+  },
+  {
+    "id": "progressismo-de-direita",
+    "name": "Progressisme de droite",
+    "category": "Droite",
+    "description": "Branche progressiste de droite qui unit le capitalisme et le culte du progrès technologique à une culture socialement progressiste, pragmatique et laïque, confiant la direction de la société à une élite technique plutôt qu’à la démocratie de masse.",
+    "phrase": "Je veux une société progressiste et laïque, dirigée par le culte du progrès technologique, guidée par une élite technique au-dessus de la démocratie de masse."
+  },
+  {
+    "id": "tecno-socialismo",
+    "name": "Techno-socialisme",
+    "category": "Gauche radicale",
+    "description": "Courant qui rejoint la dictature du prolétariat avec l’accélérationnisme technologique, la défense d’un parti révolutionnaire, la planification basée sur les données, l’automatisation et la propriété collective pour mener la transition vers le communisme.",
+    "phrase": "Je veux une société sous la dictature du prolétariat, avec une planification algorithmique, une automatisation et une propriété collective qui avancent vers le communisme."
+  },
+  {
+    "id": "tecno-fascismo",
+    "name": "Techno-fascisme",
+    "category": "Extrême droite",
+    "description": "Une dystopie qui combine l’autoritarisme totalitaire du fascisme avec la surveillance numérique, l’intelligence artificielle et le contrôle technologique des masses, en utilisant la technique pour réprimer, manipuler et dominer toute la société.",
+    "phrase": "Je veux un État totalitaire qui utilise la surveillance numérique et l’intelligence artificielle pour réprimer, manipuler et dominer toute la société."
+  },
+  {
+    "id": "liberalismo-autoritario",
+    "name": "Libéralisme autoritaire",
+    "category": "Droite",
+    "description": "Courant qui combine une économie de marché, la propriété privée, l’ouverture commerciale et la technocratie avec une faible participation démocratique, en tenant compte du fait qu’un État fort et efficace devrait préserver l’ordre, la stabilité et la croissance.",
+    "phrase": "Je veux une économie de marché et technocratique, avec une faible participation démocratique, dans un État fort qui garantit l’ordre et la croissance."
+  },
+  {
+    "id": "nacionalismo-progressista",
+    "name": "Nationalisme progressiste",
+    "category": "Gauche",
+    "description": "Courant qui unit la souveraineté nationale, la protection économique et l’intégration populaire avec des réformes sociales progressistes, en cherchant un État capable de défendre la nation tout en élargissant les droits, l’égalité et l’inclusion.",
+    "phrase": "Je veux une nation souveraine, économiquement protégée, qui élargisse les droits et l’égalité par des réformes sociales progressistes."
+  },
+  {
+    "id": "ecofascismo",
+    "name": "Écofascisme",
+    "category": "Extrême droite",
+    "description": "Courant qui fusionne l’écologie radicale, l’autoritarisme et le nationalisme organique, défendant le contrôle de la population, la préservation environnementale coercitive et la subordination des libertés individuelles à la survie de la communauté nationale.",
+    "phrase": "Je veux une communauté nationale organique qui impose le contrôle de la population et la préservation de l’environnement coercitive au-dessus des libertés individuelles."
+  },
+  {
+    "id": "comunismo-agrario",
+    "name": "Communisme agraire",
+    "category": "Gauche radicale",
+    "description": "Modèle révolutionnaire qui idéalise la vie des paysans et la production rurale collective, rejetant les villes, les marchés et la propriété privée en faveur d’une égalité imposée par la mobilisation de l’État et la discipline communautaire.",
+    "phrase": "Je veux une vie collectivisée de paysans, sans villes ni marchés, avec l’égalité imposée par la mobilisation de l’État et la discipline communautaire."
+  },
+  {
+    "id": "socialismo-bolivariano",
+    "name": "Socialisme bolivarien",
+    "category": "Gauche",
+    "description": "Projet latino-américain qui combine le nationalisme populaire, l’anti-impérialisme, la redistribution sociale et un leadership présidentiel fort, en utilisant l’État et les ressources stratégiques pour promouvoir la souveraineté et l’inclusion populaire.",
+    "phrase": "Je veux une patrie souveraine sous une direction présidentielle forte, utilisant des ressources stratégiques nationalisées pour la redistribution et l’inclusion populaire."
+  },
+  {
+    "id": "nacional-desenvolvimentismo",
+    "name": "National-développementalisme",
+    "category": "Centre",
+    "description": "Courant qui préconise l’industrialisation, la souveraineté nationale et la planification stratégique de l’État, cherchant à moderniser l’économie par l’investissement public, la protection productive et la coordination entre le gouvernement, la science et les entreprises nationales.",
+    "phrase": "Je veux une nation industrialisée par une forte planification de l’État, la protection des entreprises nationales et la coordination du gouvernement, de la science et de l’industrie."
+  },
+  {
+    "id": "populismo-libertario",
+    "name": "Populisme libertarien",
+    "category": "Libertarien",
+    "description": "Une branche qui unit l’anti-politique, les marchés libres radicaux et la communication populaire directe, attaquant les bureaucraties, les impôts et les élites du parti au nom de la liberté individuelle, de l’entrepreneuriat et de la souveraineté du citoyen ordinaire.",
+    "phrase": "Je veux une société sans bureaucratie ni impôts, où les citoyens ordinaires entreprennent sans que les élites des partis régissent leur vie."
+  },
+  {
+    "id": "teocratismo-cristao",
+    "name": "Théocratisme chrétien",
+    "category": "Extrême droite",
+    "description": "Doctrine théocratique chrétienne qui soumet le pouvoir politique à l’autorité religieuse, tenant que la loi divine et l’Église devraient gouverner l’État et les coutumes, de la chrétienté médiévale et l’ultramontanisme papal aux projets reconstructionnistes modernes.",
+    "phrase": "Je veux une société gouvernée par la loi divine, avec l’Église au-dessus de l’État et les coutumes subordonnées à l’autorité religieuse."
+  },
+  {
+    "id": "socialismo-titoista",
+    "name": "Socialisme titiste",
+    "category": "Gauche radicale",
+    "description": "Une variante du socialisme s’est développée en Yougoslavie de Tito, combinant une domination à parti unique et un culte du leader avec l’autogestion des entreprises par les travailleurs, la décentralisation fédérale, l’ouverture du marché et le non-alignement entre les blocs de la guerre froide.",
+    "phrase": "Je veux une fédération de soviets autogérée par les travailleurs, avec un parti unique, non-alignement et ouverture contrôlée au marché."
+  },
+  {
+    "id": "socialismo-anticolonial",
+    "name": "Socialisme anticolonial",
+    "category": "Gauche",
+    "description": "Le courant socialiste né des luttes de libération nationale en Afrique, en Asie et en Amérique latine, défendant la souveraineté économique, la nationalisation des ressources, le non-alignement et la solidarité entre les peuples du Sud mondial contre l’impérialisme.",
+    "phrase": "Je veux un peuple libéré de l’impérialisme, avec des ressources nationalisées et la solidarité entre les nations du Sud mondial."
+  },
+  {
+    "id": "tecno-comunismo",
+    "name": "Techno-communisme",
+    "category": "Anarchisme",
+    "description": "Courant qui combine la dernière étape du communisme avec l’accélération technologique, en utilisant l’automatisation et l’IA pour surmonter la rareté, le travail nécessaire et la propriété privée.",
+    "phrase": "Je veux une société d’abondance sans classes, où l’automatisation et l’IA dépassent la rareté, le travail nécessaire et la propriété privée."
+  },
+  {
+    "id": "tecno-anarquismo",
+    "name": "Techno-anarchisme",
+    "category": "Anarchisme",
+    "description": "Anarchisme technologique qui propose l’abolition de l’État par l’automatisation, l’abondance de l’énergie, les réseaux décentralisés et les communautés volontaires autogérées avec des outils numériques et une production locale gratuite.",
+    "phrase": "Je veux des communautés autogérées sans État, libérées par l’automatisation et une énergie abondante, produisant localement dans des réseaux libres."
+  },
+  {
+    "id": "aceleracionismo-cristao",
+    "name": "Accélérationnisme chrétien",
+    "category": "Droite",
+    "description": "Courant qui fusionne le christianisme traditionnel avec l’accélération technologique, affirmant que l’intelligence artificielle, l’industrie et le pouvoir national devraient être poussés vers l’avant sans contrôle comme une mission civilisationnelle contre la décadence laïque.",
+    "phrase": "Je veux accélérer la technologie et le pouvoir national selon les valeurs chrétiennes traditionnelles, sans freins progressistes ni décadence laïque."
+  },
+  {
+    "id": "populismo-de-direita",
+    "name": "Populisme de droite",
+    "category": "Droite",
+    "description": "Courant qui mobilise le peuple contre les élites politiques et culturelles, combinant le nationalisme, la restriction de l’immigration, les valeurs traditionnelles, la religion publique, la sécurité forte et le pragmatisme économique opposé au système établi autour des dirigeants personnalistes.",
+    "phrase": "Je veux un peuple uni contre les élites corrompues, avec des frontières fermées, des valeurs traditionnelles et un leader qui rétablira l’ordre dans la nation."
+  },
+  {
+    "id": "populismo-de-esquerda",
+    "name": "Populisme de gauche",
+    "category": "Gauche",
+    "description": "Courant qui mobilise le peuple contre les élites économiques, défendant la redistribution, le contrôle public, la souveraineté nationale, la démocratie plébiscitaire et une large politique sociale dans le langage populaire opposé au système établi.",
+    "phrase": "Je veux que le peuple se mobilise contre les élites économiques, avec des plébiscites populaires et l’État redistribuant la richesse aux classes populaires."
+  },
+  {
+    "id": "centrismo-social",
+    "name": "Centrisme social",
+    "category": "Centre",
+    "description": "Une branche centriste qui accepte l’économie de marché mais qui donne la priorité à la protection sociale, aux services publics, aux réformes graduelles et au consensus institutionnel pour réduire les inégalités sans rupture politique ou polarisation permanente.",
+    "phrase": "Je veux un marché équilibré par une protection sociale forte, avec des réformes graduelles et un consensus institutionnel qui réduira les inégalités."
+  },
+  {
+    "id": "centrismo-liberal",
+    "name": "Centrisme libéral",
+    "category": "Centre",
+    "description": "Une branche centriste pro-marché qui combine la responsabilité budgétaire, la démocratie libérale, l’ouverture internationale modérée et la réforme institutionnelle, rejetant à la fois l’étatisme large et le radicalisme libertarien comme programme politique.",
+    "phrase": "Je veux une démocratie libérale responsable, ouverte au monde, loin de l’étatisme lourd et du radicalisme libertarien."
+  },
+  {
+    "id": "centrismo-ambientalista",
+    "name": "Centrisme écologiste",
+    "category": "Centre",
+    "description": "Une branche centriste qui donne la priorité au développement durable, à la transition énergétique progressive, à la réglementation environnementale et à la prudence technologique, cherchant à concilier la protection climatique, les marchés et les institutions démocratiques sans rupture anticapitaliste.",
+    "phrase": "Je veux une transition énergétique progressive dans le marché et la démocratie, sans rupture anticapitaliste ou déni climatique."
+  },
+  {
+    "id": "centrismo-conservador",
+    "name": "Centrisme conservateur",
+    "category": "Centre",
+    "description": "Une branche centriste qui combine la modération économique et le respect institutionnel avec le conservatisme social, valorisant la famille, la religion, l’ordre et le changement progressif sans rejoindre la droite autoritaire ou le radicalisme populiste.",
+    "phrase": "Je veux une société qui préserve la famille, la religion et l’ordre, en changeant lentement sans se joindre au populisme ou à l’autoritarisme."
+  },
+  {
+    "id": "nacional-liberalismo",
+    "name": "National-libéralisme",
+    "category": "Droite",
+    "description": "Un courant de droite qui combine les marchés libres, le libre-échange et le gouvernement limité avec une identité nationale forte, une assimilation culturelle, des valeurs traditionnelles et religieuses, et une armée solide.",
+    "phrase": "Je veux une nation d’identité forte et de marchés libres, avec une politique d’assimilation culturelle aux frontières, des traditions religieuses et une défense militaire solide."
+  },
+  {
+    "id": "arqueofuturismo",
+    "name": "Archéofuturisme",
+    "category": "Extrême droite",
+    "description": "Doctrine forgée par Guillaume Faye qui associe des valeurs archaïques, hiérarchiques et traditionnelles — identité ethnique, spiritualité et esprit guerrier — à une adhésion sans réserve aux technologies avancées. Elle soutient qu’un effondrement civilisationnel prochain forcera l’humanité à combiner l’ordre social tribal avec une science hypermoderne.",
+    "phrase": "Je veux un ordre tribal et hiérarchique renaissant de l’effondrement, fusionnant traditions archaïques, science hypermoderne et technologie sans limites."
+  },
+  {
+    "id": "pragmatismo",
+    "name": "Pragmatisme",
+    "category": "Centre",
+    "description": "Position politique qui juge les propositions par les résultats pratiques qu’elles produisent plutôt que par la fidélité à un dogme idéologique, combinant les mesures de marché, la réglementation et la politique sociale en fonction des preuves et du contexte de chaque problème.",
+    "phrase": "Je veux que les solutions soient jugées par les résultats, et non par des dogmes, par le mélange de marché, de réglementation et de politique sociale, comme le demande chaque problème."
+  },
+  {
+    "id": "pragmatismo-de-direita",
+    "name": "Pragmatisme de droite",
+    "category": "Droite",
+    "description": "Branche pragmatique qui donne la priorité à l’ajustement budgétaire, à la stabilité économique et à la gouvernabilité par des coalitions larges, en acceptant des réformes du marché et des concessions politiques au nom des résultats à court et moyen terme.",
+    "phrase": "Je veux une gouvernabilité par une large coalition, avec des ajustements budgétaires et des réformes de marché acceptées en échange de stabilité et de résultats rapides."
+  },
+  {
+    "id": "pragmatismo-de-esquerda",
+    "name": "Pragmatisme de gauche",
+    "category": "Gauche",
+    "description": "Branche qui cherche des résultats sociaux concrets en négociant avec le marché et les institutions existantes, en donnant la priorité à l’austérité budgétaire responsable, à la politique sociale ciblée et à la gouvernabilité par rapport à la pureté idéologique révolutionnaire.",
+    "phrase": "Je veux négocier avec le marché et les institutions existantes pour mener une politique sociale ciblée, sans s’accrocher à la pureté révolutionnaire."
+  },
+  {
+    "id": "imperialismo",
+    "name": "Impérialisme",
+    "category": "Extrême droite",
+    "description": "Doctrine qui préconise l’expansion territoriale, militaire et économique d’une nation sur d’autres peuples et territoires, subordonnant les colonies et les sphères d’influence aux intérêts de la métropole par la force et la domination politique.",
+    "phrase": "Je veux une métropole qui étend son territoire et soumet les colonies par la force, subordonnant les peuples conquis aux intérêts de la nation dominante."
+  },
+  {
+    "id": "liberalismo-progressista",
+    "name": "Libéralisme progressiste",
+    "category": "Gauche",
+    "description": "Courant qui unit le capitalisme de marché et le commerce mondialisé avec un État-providence robuste, plaidant pour la moralité progressiste, la laïcité et les institutions démocratiques, dans le modèle social nordique.",
+    "phrase": "Je veux le modèle nordique: un marché ouvert au commerce mondial, soutenu par un État-providence solide, laïc et progressiste dans les mœurs."
+  },
+  {
+    "id": "militarismo",
+    "name": "Militarisme",
+    "category": "Extrême droite",
+    "description": "Le régime centré sur les forces armées comme le noyau du pouvoir politique, gouverné par une junte militaire ou une hiérarchie de commandement, marqué par la centralisation, la discipline, un culte de l’ordre et l’expansionnisme, subordonnant la politique civile au commandement militaire.",
+    "phrase": "Je veux une junte militaire commandant l’État, discipline et culte de l’ordre dans les casernes, subordonnant la politique civile au commandement militaire."
+  },
+  {
+    "id": "federalismo",
+    "name": "Fédéralisme",
+    "category": "Centre",
+    "description": "Doctrine qui organise l’État par une division constitutionnelle du pouvoir entre un gouvernement central et des unités régionales autonomes, telles que les cantons ou les États, avec leurs propres compétences, des tribunaux indépendants et des contrôles mutuels contre une concentration excessive du pouvoir.",
+    "phrase": "Je veux que le pouvoir soit partagé constitutionnellement entre un gouvernement central et des États autonomes, avec des tribunaux indépendants contrôlant toute concentration excessive."
+  },
+  {
+    "id": "aceleracionismo-de-esquerda",
+    "name": "Accélérationnisme de gauche",
+    "category": "Gauche",
+    "description": "Courant formulée par Srnicek et Williams qui cherche à accélérer l’automatisation et à récupérer la technologie pour la gauche, préconisant la fin du travail, le revenu de base universel et des heures de travail plus courtes vers un post-capitalisme d’abondance.",
+    "phrase": "Je veux accélérer l’automatisation et récupérer la technologie pour la gauche, en abolissant le travail avec revenu de base universel vers l’abondance post-capitaliste."
+  },
+  {
+    "id": "conservadorismo-americano",
+    "name": "Conservatisme américain",
+    "category": "Droite",
+    "description": "Plateforme du Parti républicain, combinant la sécurité des frontières et les expulsions, les tarifs douaniers et le protectionnisme industriel, les réductions fiscales et la dérégulation, les droit de porter des armes, les valeurs chrétiennes et le retour de l’avortement aux États.",
+    "phrase": "Je veux une frontière sécurisée avec des expulsions, des tarifs de protection de l’industrie, des réductions d’impôts, des droit de porter des armes et des valeurs chrétiennes comme drapeau national."
+  },
+  {
+    "id": "democracia-securitaria",
+    "name": "Démocratie sécuritaire",
+    "category": "Centre",
+    "description": "Doctrine de la démocratie militante, autorisant un État démocratique à restreindre les ennemis de la démocratie elle-même en interdisant les partis anti-système, en surveillant les extrémistes et en maintenant la conscription et la sécurité renforcée pour défendre l’ordre constitutionnel.",
+    "phrase": "Je veux une démocratie militante qui surveille les extrémistes, interdit les partis anti-système et garde le service militaire pour protéger l’ordre constitutionnel."
+  },
+  {
+    "id": "pacifismo-militar",
+    "name": "Pacifisme armé",
+    "category": "Centre",
+    "description": "La neutralité armée qui refuse les alliances, les interventions et les projections étrangères, mais qui maintient des forces armées robustes, le service obligatoire et la défense territoriale préparée, traitant la force militaire comme la garantie de ne pas être entraînée dans les guerres d’autres nations.",
+    "phrase": "Je veux une neutralité armée, sans alliés ni interventions étrangères, mais avec des forces armées solides et un service obligatoire pour défendre le territoire."
+  },
+  {
+    "id": "teocracia-progressista",
+    "name": "Théocratie progressiste",
+    "category": "Gauche radicale",
+    "description": "La théocratie dirigée par l’autorité du clergé sans souveraineté populaire, imposant une moralité progressiste d’en haut comme commandement divin: l’égalité des sexes, la libération sexuelle, l’écologie sacrée et la rupture avec les coutumes héritées, traitées comme une superstition à réformer.",
+    "phrase": "Je veux un clergé qui impose l’égalité des sexes et la libération sexuelle d’en haut, comme commandement divin, rompant avec les coutumes héritées comme superstition."
+  },
+  {
+    "id": "ateismo-tradicionalista",
+    "name": "Athéisme traditionaliste",
+    "category": "Droite",
+    "description": "Un conservatisme entièrement séculier qui rejette la foi et le clergé tout en défendant la hiérarchie, la famille, l’autorité, la nation et les coutumes héritées comme biens de civilisation, traitant la moralité traditionnelle comme une nécessité sociale plutôt qu’un commandement divin.",
+    "phrase": "Je veux une nation sans foi ni clergé, mais fidèle à la hiérarchie, à la famille et aux coutumes héritées comme des biens de civilisation, pas comme commandement religieux."
+  },
+  {
+    "id": "mercantilismo",
+    "name": "Mercantilisme",
+    "category": "Droite",
+    "description": "Doctrine qui combine la libre entreprise et la concurrence sur le marché intérieur avec un mur tarifaire externe, des subventions à l’industrie naissante, une banque nationale, des infrastructures publiques et un excédent commercial comme source de pouvoir national.",
+    "phrase": "Je veux une libre concurrence intérieure protégée par un mur tarifaire externe, avec une banque nationale et des subventions à l’industrie naissante générant un excédent."
+  },
+  {
+    "id": "imperialismo-pluralista",
+    "name": "Impérialisme pluraliste",
+    "category": "Droite",
+    "description": "L’ordre impérial autocratique et militarisé qui étend le territoire par conquête, mais gouverne les peuples conquis par l’autonomie communautaire, administre la tolérance religieuse et le tribut, sans exiger l’assimilation culturelle de ses sujets.",
+    "phrase": "Je veux un empire qui conquérira par l’autocratie militaire, mais qui gouvernera les peuples sujets avec une autonomie commune et une tolérance religieuse."
+  },
+  {
+    "id": "imperialismo-federalista",
+    "name": "Impérialisme fédéraliste",
+    "category": "Droite",
+    "description": "Projet d’un empire dynastique organisé comme une fédération de nationalités, avec autonomie régionale, parlements locaux et langues reconnues, tout en conservant une couronne héréditaire, une armée unifiée et une affirmation militaire de la grandeur impériale.",
+    "phrase": "Je veux une couronne héréditaire qui unit les nationalités autonomes aux parlements locaux, une armée unifiée et des conquêtes affirmant la grandeur impériale."
+  },
+  {
+    "id": "aristotelismo",
+    "name": "Aristotélisme",
+    "category": "Droite",
+    "description": "Philosophie politique d’Aristote, défendant une constitution mixte d’éléments monarchiques, aristocratiques et populaires pour éviter à la fois la tyrannie et la démocratie radicale, réservant la citoyenneté complète à ceux qui ont la vertu, la propriété et l’éducation à délibérer.",
+    "phrase": "Je veux une constitution mixte de monarchie, d’aristocratie et de peuple, avec la citoyenneté totale réservée à ceux qui ont la vertu et la propriété."
+  },
+  {
+    "id": "monarquismo-financeiro",
+    "name": "Monarchisme financier",
+    "category": "Droite",
+    "description": "Modèle dynastique de micro-État qui négocie la souveraineté politique pour la prospérité: un prince héréditaire avec un pouvoir réel, une taxation minimale, le secret et les services financiers comme base de revenus, l’ouverture au capital étranger et aux résidents, et aucune armée permanente.",
+    "phrase": "Je veux une principauté héréditaire sans armée, d’impôts minimaux et de secret bancaire, vivant de la finance et du capital étranger."
+  },
+  {
+    "id": "liberalismo-aristocratico",
+    "name": "Libéralisme aristocratique",
+    "category": "Droite",
+    "description": "Le libéralisme avant la démocratie de masse: il garantit la liberté civile, la propriété, la liberté de la presse et un État réduit, mais il limite le vote aux propriétaires éduqués, craignant que la souveraineté populaire illimitée ne détruise les libertés qu’elle protège.",
+    "phrase": "Je veux des libertés civiles, une presse libre et un État réduit, mais avec le vote limité aux propriétaires éduqués qui les protégeront."
+  },
+  {
+    "id": "autoritarismo-libertario",
+    "name": "Autoritarisme libertarien",
+    "category": "Libertarien",
+    "description": "Une doctrine qui sépare l’autorité politique du contrôle social: elle favorise un pouvoir exécutif non élu, concentré, isolé du vote populaire, qui garantit en échange la liberté civile, la vie privée et une ingérence minimale de l’État dans la vie privée et la morale.",
+    "phrase": "Je veux un pouvoir exécutif fort isolé du vote populaire qui, en échange, garantisse la liberté civile et ne s’ingère pas dans les coutumes privées."
+  },
+  {
+    "id": "liberalismo-jacobino",
+    "name": "Libéralisme jacobin",
+    "category": "Centre",
+    "description": "Un courant qui voit l’État unitaire et centralisé comme garant de la liberté individuelle: le droit uniforme, la laïcité et la citoyenneté unique démantèlent les privilèges locaux, cléricaux et corporatifs qui opprimeraient l’individu sans pouvoir national fort.",
+    "phrase": "Je veux une république unitaire de lois uniformes et laïques, qui démantèle les privilèges locaux et cléricaux au nom du citoyen."
+  },
+  {
+    "id": "militarismo-libertario",
+    "name": "Militarisme libertarien",
+    "category": "Libertarien",
+    "description": "Une doctrine qui combine un État minimal dans les taxes, la réglementation et la morale avec des forces armées fortes et une citoyenneté armée: la défense nationale est la seule fonction étendue de l’État, traitée comme la condition de la liberté civile plutôt que comme son exception.",
+    "phrase": "Je veux un État minimal en matière d’impôts et de mœurs, mais avec des forces armées fortes et une citoyenneté armée comme base de la liberté civile."
+  },
+  {
+    "id": "zapatismo",
+    "name": "Zapatisme",
+    "category": "Anarchisme",
+    "description": "Le mouvement néo-zapatisme qui a émergé en 1994 dans le sud du Mexique, combinant l’autonomie autochtone, la démocratie directe par les assemblées et les caracoles, l’économie de subsistance coopérative et le refus de saisir le pouvoir de l’État, se résume en \"diriger en obéissant\".",
+    "phrase": "Je veux que les communautés autochtones autonomes décident dans des assemblées et des caracoles, des coopératives de subsistance, qui dirigent en obéissant au peuple."
+  },
+  {
+    "id": "sindicalismo-revolucionario",
+    "name": "Syndicalisme révolutionnaire",
+    "category": "Gauche radicale",
+    "description": "Le courant qui rejette la voie parlementaire et réformiste, en s’appuyant sur la grève générale et le mythe mobilisateur: l’action syndicale directe et la violence prolétarienne devraient détruire l’État et la bourgeoisie décadente.",
+    "phrase": "Je veux que la grève générale et l’action syndicale directe détruisent l’État et la bourgeoisie, sans parlement ni réformisme."
+  },
+  {
+    "id": "confucionismo",
+    "name": "Confucianisme",
+    "category": "Droite",
+    "description": "Doctrine qui fonde l’ordre politique sur la vertu du souverain, la hiérarchie rituelle et la piété filiale, favorisant le mérite bureaucratique et l’éducation morale sur la loi coercive ou la participation populaire.",
+    "phrase": "Je veux un ordre fondé sur la vertu du souverain, la piété filiale et le mérite bureaucratique, pas sur des lois coercitives ou des votes."
+  },
+  {
+    "id": "socialismo-lassalliano",
+    "name": "Socialisme lassallien",
+    "category": "Gauche",
+    "description": "Le courant socialiste qui cherche à émanciper les travailleurs par l’État national lui-même, avec le suffrage universel, les coopératives de producteurs financées par l’argent public et un refus explicite de la voie révolutionnaire.",
+    "phrase": "Je veux émanciper le travailleur par le suffrage universel et les coopératives financées par l’État national lui-même, sans la voie révolutionnaire."
+  },
+  {
+    "id": "liberal-desenvolvimentismo",
+    "name": "Développementalisme libéral",
+    "category": "Centre",
+    "description": "Le modèle du dragon d’Asie de l’Est (Singapour, Corée du Sud, Taïwan, Hong Kong): champion des marchés libres, du commerce extérieur et de l’entreprise privée comme moteurs de croissance, associé à un État technocratique actif qui planifie l’infrastructure, l’éducation et l’industrialisation stratégique, en évitant le protectionnisme fermé ou le contrôle autoritaire dur.",
+    "phrase": "Je veux que les marchés libres et le commerce extérieur soient des moteurs de croissance, guidés par un État technocratique qui planifie les infrastructures et l’éducation."
+  },
+  {
+    "id": "aristocratismo",
+    "name": "Aristocratisme",
+    "category": "Extrême droite",
+    "description": "Doctrine de la règle des meilleurs, confiant le pouvoir à une minorité qualifiée par la vertu, l’éducation ou la naissance, rejetant l’égalité politique et la domination majoritaire comme rendant la ville à l’incompétence.",
+    "phrase": "Je veux un gouvernement confié à une minorité qualifiée par la vertu et la naissance, rejetant l’égalité politique comme livrant la ville à l’incompétence."
+  },
+  {
+    "id": "aristocratismo-nietzschiano",
+    "name": "Aristocratisme nietzschéen",
+    "category": "Droite",
+    "description": "Le courant nietzschéen qui rejette la moralité égalitaire comme un ressentiment de troupeau, défendant une hiérarchie de valeurs, la création aristocratique du sens et l’affirmation tragique de la vie après la mort de Dieu.",
+    "phrase": "Je veux affirmer la vie au-delà de la moralité du troupeau, créant une hiérarchie aristocratique de valeurs après la mort de Dieu."
+  },
+  {
+    "id": "catolicismo",
+    "name": "Catholicisme",
+    "category": "Droite",
+    "description": "Doctrine sociale de l’Église catholique, combinant la moralité traditionaliste et la défense de la vie avec la préoccupation de la justice sociale, de la subsidiarité et de la dignité des travailleurs, sous l’autorité hiérarchique de la papauté et du droit canonique.",
+    "phrase": "Je veux une société de moralité traditionnelle et de défense de la vie, avec justice sociale et subsidiarité sous l’autorité de la papauté."
+  },
+  {
+    "id": "monarquismo-moderador",
+    "name": "Monarchisme modérateur",
+    "category": "Droite",
+    "description": "Modèle de monarchie constitutionnelle du XIXe siècle dans lequel le monarque exerce un quatrième pouvoir modérateur au-dessus de l’exécutif, de la législature et du pouvoir judiciaire, arbitrant les conflits et garantissant la stabilité sur une économie agraire.",
+    "phrase": "Je veux un empereur exerçant le pouvoir modérateur au-dessus des trois branches, arbitrant les conflits sur une économie agraire stable."
+  },
+  {
+    "id": "mutualismo-proudhoniano",
+    "name": "Mutualisme proudhonien",
+    "category": "Anarchisme",
+    "description": "La doctrine originale de Proudhon, dénonçant la propriété comme vol et préconisant le crédit mutuel gratuit, le fédéralisme des communautés autonomes et la possession par l’utilisation, avec de fortes réserves morales sur le progrès et les coutumes.",
+    "phrase": "Je veux abolir la propriété comme vol, avec un crédit mutuel gratuit et une fédération de communes autonomes où la possession provient de l’utilisation."
+  },
+  {
+    "id": "republicanismo-kantiano",
+    "name": "Républicanisme kantien",
+    "category": "Centre",
+    "description": "La philosophie politique de Kant, fondant la légitimité de l’État sur l’autonomie de la raison et l’État de droit, défendant un républicanisme représentatif modéré et une fédération d’États libres comme le chemin vers la paix perpétuelle.",
+    "phrase": "Je veux une république fondée sur l’autonomie de la raison et l’État de droit, avec des États libres unis dans une fédération pour la paix éternelle."
+  },
+  {
+    "id": "socratismo",
+    "name": "Socratisme",
+    "category": "Centre",
+    "description": "Méthode dialectique de Socrate, examinant les croyances par le biais de questions rationnelles et la poursuite de la vertu, méfiant de la politique de masse et de la rhétorique des démagogues, mais respectueux de l’État de droit de la ville.",
+    "phrase": "Je veux une ville qui examine ses croyances par un dialogue rationnel et cherche la vertu, méfiante des démagogues mais obéissante aux lois de la polis."
+  },
+  {
+    "id": "socialismo-marxista",
+    "name": "Socialisme marxiste",
+    "category": "Gauche radicale",
+    "description": "Doctrine originale de Marx, qui analyse l’histoire comme une lutte des classes et prévoit le dépassement du capitalisme par la révolution prolétarienne, avec l’abolition de la propriété privée des moyens de production et une critique forte de la religion.",
+    "phrase": "Je veux la révolution prolétarienne, abolir la propriété privée des moyens de production et dépasser la religion comme opium du peuple."
+  },
+  {
+    "id": "platonismo",
+    "name": "Platonisme",
+    "category": "Extrême droite",
+    "description": "La philosophie politique de Platon, confiant le gouvernement de la ville à une élite philosophique formée par la vertu et la connaissance, avec un fort contrôle sur l’éducation, la propriété et les coutumes au nom de la justice et de l’harmonie sociale.",
+    "phrase": "Je veux une ville gouvernée par des philosophes-rois, avec des gardiens éduqués dans la vertu et un contrôle strict sur les biens et les coutumes."
+  },
+  {
+    "id": "democracia-ateniense",
+    "name": "Démocratie athénienne",
+    "category": "Droite",
+    "description": "Idéologie de la cité classique, qui défend la souveraineté populaire directe par l’assemblée et le tirage au sort entre citoyens égaux, tout en réservant la citoyenneté à une minorité héréditaire et en excluant les femmes, les étrangers et les esclaves.",
+    "phrase": "Je veux une cité dotée d’une assemblée souveraine et de fonctions attribuées par tirage au sort entre citoyens libres, avec une citoyenneté héréditaire réservée aux hommes de la cité."
+  },
+  {
+    "id": "social-democracia-nordica",
+    "name": "Social-démocratie nordique",
+    "category": "Gauche",
+    "description": "Le modèle scandinave combine la négociation collective tripartite entre syndicats, employeurs et l’État, un État social universel financé par des taxes élevées et une économie de marché ouverte axée sur l’exportation, avec un fort consensus social et une faible inégalité.",
+    "phrase": "Je veux un pacte tripartite entre les syndicats, les employeurs et l’État, avec un bien-être universel financé par des taxes élevées et un marché ouvert à l’exportation."
+  },
+  {
+    "id": "comunismo",
+    "name": "Communisme",
+    "category": "Gauche radicale",
+    "description": "La dernière étape théorisée par Marx et Engels: une société sans classes, sans État, sans propriété privée des moyens de production, avec une production collective et une distribution selon les besoins, remplaçant le capitalisme et la phase socialiste transitoire.",
+    "phrase": "Je veux une société sans classes, sans État, sans propriété privée, où chaque personne produit et reçoit selon ses besoins."
+  },
+  {
+    "id": "tecnocracia-liberal",
+    "name": "Technocratie libérale",
+    "category": "Droite",
+    "description": "Synthèse des Dragons asiatiques: confie le gouvernement à une élite technique recrutée par mérite, isolée du vote et guidée par des résultats plutôt que par la doctrine, combinant libre-échange, marchés ouverts et faibles taxes avec un ordre public strict et une planification de l’État où cela s’avère efficace.",
+    "phrase": "Je veux un gouvernement d’une élite technique recrutée par mérite, isolé du vote populaire, guidant le libre-échange et l’ordre public par des résultats, pas par la doctrine."
+  },
+  {
+    "id": "trabalhismo-de-direita",
+    "name": "Nationalisme péroniste",
+    "category": "Troisième position",
+    "description": "Doctrine justicialiste de Juan et Eva Perón unit la souveraineté politique, l’indépendance économique et la justice sociale, avec les syndicats de la CGT, les nationalisations, l’industrialisation protégée, le catholicisme social et un leader charismatique au-dessus des partis.",
+    "phrase": "Je veux des travailleurs organisés dans des syndicats forts, avec des salaires décents et une industrie nationale protégée, sous une direction ferme, la foi et la famille."
+  },
+  {
+    "id": "fascismo-vermelho",
+    "name": "Fascisme rouge",
+    "category": "Troisième position",
+    "description": "Un régime qui fusionne l’esthétique et la hiérarchie autoritaires du fascisme, avec un dirigeant fort, un ordre et une discipline nationale, à une économie socialiste de collectivisation, d’entreprise nationalisée et de planification centrale des moyens de production.",
+    "phrase": "Je veux une nation hiérarchique et disciplinée sous un chef fort, avec des usines et des terres collectivisées sous la planification totale de l’État."
+  },
+  {
+    "id": "estoicismo",
+    "name": "Stoïcisme",
+    "category": "Centre",
+    "description": "Philosophie gréco-romaine qui enseigne à vivre selon la raison et la nature, à accepter avec sérénité ce qui est au-delà de son contrôle, à cultiver le devoir, la maîtrise de soi et la vertu au-dessus du plaisir, et à reconnaître une loi naturelle commune à toute l’humanité rationnelle.",
+    "phrase": "Je veux vivre selon la raison et le devoir, acceptant le destin avec sérénité, sous une loi naturelle commune à toute l’humanité rationnelle."
+  },
+  {
+    "id": "agrarianismo",
+    "name": "Agrarisme",
+    "category": "Droite",
+    "description": "Tradition républicaine qui idéalise le petit fermier propriétaire de terres comme la base de la vertu et de la liberté civiques, préconisant une large distribution des terres, un gouvernement limité et décentralisé, et la méfiance envers les banques, la dette publique, l’industrie et les grandes villes.",
+    "phrase": "Je veux une république de petits agriculteurs qui possèdent leurs terres, décentralisée et exempte de banques et de dette publique, loin des usines et des villes."
+  },
+  {
+    "id": "socialismo-utopico",
+    "name": "Socialisme utopique",
+    "category": "Gauche",
+    "description": "Au début du XIXe siècle, le courant envisageait une société industrielle réorganisée par une planification rationnelle, dirigée par des scientifiques, des ingénieurs et des producteurs, remplaçant les politiciens et les aristocrates sans appel à la lutte de classe ou à la révolution.",
+    "phrase": "Je veux une société industrielle dirigée par des scientifiques et des producteurs, planifiée rationnellement, remplaçant les politiciens et les aristocrates sans révolution."
+  },
+  {
+    "id": "tecno-comercialismo",
+    "name": "Techno-commercialisme",
+    "category": "Libertarien",
+    "description": "Un courant néoréactionnaire qui rejette la démocratie en faveur de micro-États gérés comme des entreprises, favorisant la concurrence entre les juridictions, les marchés libres, le droit de sortie et l’innovation technologique comme principes de gouvernement.",
+    "phrase": "Je veux des villes d’entreprises concurrentes dirigées par des actionnaires, avec la liberté de sortie et des marchés et la technologie enrichissant l’efficacité."
+  },
+  {
+    "id": "neotomismo",
+    "name": "Néothomisme",
+    "category": "Droite",
+    "description": "Le renouveau de la pensée de Thomas d’Aquin à partir de 1879 (Léon XIII), avec Maritain et Gilson. Elle fonde la politique sur le droit naturel, le bien commun et la subsidiarité, favorisant le gouvernement mixte, la propriété avec une fonction sociale et la guerre juste, selon la foi catholique.",
+    "phrase": "Je veux un ordre politique guidé par la loi naturelle et le bien commun, avec un gouvernement mixte et une subsidiarité, où la foi et la raison inspirent les lois."
+  },
+  {
+    "id": "eurasianismo",
+    "name": "Eurasisme",
+    "category": "Troisième position",
+    "description": "Le courant géopolitique russe qui voit l’Eurasie comme une civilisation distincte et propose un bloc continental dirigé par Moscou, avec autonomie régionale et commandement stratégique partagé, contre l’Atlanticisme et l’hégémonie américaine.",
+    "phrase": "Je veux que les peuples eurasiens soient autonomes dans leurs traditions, unis sous la direction stratégique de Moscou, avec une souveraineté économique et des industries essentielles planifiées."
+  },
+  {
+    "id": "socialismo-democratico",
+    "name": "Socialisme démocratique",
+    "category": "Gauche",
+    "description": "Le courant qui cherche à dépasser le capitalisme par les élections, avec la propriété sociale des grandes entreprises, des coopératives et la démocratie au travail, rejetant à la fois le parti d’avant-garde et la simple gestion social démocratique du marché.",
+    "phrase": "Je veux dépasser le capitalisme par le vote, avec les grandes entreprises sous la propriété sociale, les coopératives et la démocratie au travail, jamais la domination d’un parti."
+  },
+  {
+    "id": "terceira-via",
+    "name": "Troisième voie",
+    "category": "Centre",
+    "description": "Renouveau du centre gauche des années 1990 sous Blair, Clinton et Giddens, qui accepte les marchés mondialisés et la discipline budgétaire, remplace l’assistance sociale par le retour à l’emploi, adopte une position ferme contre la criminalité et soutient les interventions libérales.",
+    "phrase": "Je veux un marché mondialisé avec un État qui investit dans l’éducation, privilégie le retour à l’emploi plutôt que l’assistance et combat fermement la criminalité et ses causes."
+  },
+  {
+    "id": "paleoconservadorismo",
+    "name": "Paléoconservatisme",
+    "category": "Droite",
+    "description": "Droite traditionnelle américaine, de Buchanan et Kirk, défendant le patrimoine chrétien, le localisme et les droits des États, la restriction de l’immigration, le protectionnisme et le non-interventionnisme, contre les néoconservateurs et l’État managérial.",
+    "phrase": "Je veux une république chrétienne de communautés locales et d’États souverains, des frontières fermées, une industrie nationale protégée et aucune guerre impériale."
+  },
+  {
+    "id": "bonapartismo",
+    "name": "Bonapartisme",
+    "category": "Droite",
+    "description": "C’est un courant de Césarisme qui légitime un leader charismatique par un plébiscite au-dessus des partis, combinant autorité personnelle, centralisation bureaucratique, mobilisation militaire et réformes modernisatrices dirigées par l’État.",
+    "phrase": "Je veux une nation mobilisée par un dirigeant plébiscitaire au-dessus des partis, modernisant l’État et dirigeant les secteurs stratégiques avec autorité."
+  },
+  {
+    "id": "quilombismo",
+    "name": "Quilombisme",
+    "category": "Gauche",
+    "description": "Projet politique développé par Abdias Nascimento à partir de l’histoire des quilombos brésiliens. Il préconise l’égalité raciale, l’autodétermination afro-brésilienne, la démocratie participative, une économie coopérative et des terres détenues pour un usage collectif.",
+    "phrase": "Je veux un État quilombiste avec l’égalité raciale et la participation populaire, des terres collectives et la production organisée par des coopératives."
+  },
+  {
+    "id": "democracia-intervencionista",
+    "name": "Démocratie interventionniste",
+    "category": "Droite",
+    "description": "Doctrine de politique étrangère associée à la stratégie américaine de 2002. Elle favorise la force militaire et l’action préventive contre les menaces, ainsi que la promotion internationale de la démocratie, des marchés ouverts et des alliances dirigées par les États-Unis.",
+    "phrase": "Je veux que les démocraties et les marchés ouverts soient protégés par des alliances fortes, avec une action militaire préventive contre les menaces de sécurité."
+  },
+  {
+    "id": "ambientalismo-malthusiano",
+    "name": "Écologisme malthusien",
+    "category": "Droite",
+    "description": "Le courant environnemental inspiré par Garrett Hardin qui lie la pression de la population à l’épuisement des ressources communes. Il privilégie des limites à l’utilisation des ressources imposées collectivement et des politiques de limitation de la croissance démographique.",
+    "phrase": "Je veux préserver des ressources limitées grâce à des règles strictes pour les biens communs et des limites à la croissance démographique."
+  },
+  {
+    "id": "conservadorismo-reaganista",
+    "name": "Conservatisme reaganien",
+    "category": "Droite",
+    "description": "Le courant conservateur américain associé à Ronald Reagan combine des taxes plus basses et un rôle économique fédéral plus petit avec la libre entreprise, les valeurs religieuses traditionnelles, l’anti-communisme et la force militaire.",
+    "phrase": "Je veux des familles et des communautés libres sous un gouvernement fédéral plus petit, des impôts bas, des entreprises fortes et une défense ferme contre les adversaires étrangers."
+  },
+  {
+    "id": "centrismo-radical",
+    "name": "Centrisme radical",
+    "category": "Centre",
+    "description": "Le centrisme est pris à sa limite: il refuse toute inclination sur le principe et cherche à une équidistance exacte entre chaque pôle, de l’économie à la morale, traitant chaque axe politique comme un point d’équilibre à préserver.",
+    "phrase": "Je veux une société qui ne prend pas de parti, un pouvoir qui ne se penche jamais vers un pôle, et une économie qui pèse l’État et le marché exactement de la même façon."
+  },
+  {
+    "id": "budismo-politico",
+    "name": "Bouddhisme politique",
+    "category": "Centre",
+    "description": "Il applique le Dharma à la politique: le roi juste d’Ashoka, l’économie bouddhiste de Schumacher, le socialisme Dhammic de Buddhadasa et le bonheur national brut du Bhoutan. Il donne la priorité à la non-violence, à une consommation modérée, à la communauté et à l’harmonie avec la nature.",
+    "phrase": "Je veux une société guidée par le Dharma et la non-violence, avec des dirigeants justes, une consommation modérée et une économie communautaire en harmonie avec la nature."
+  },
+  {
+    "id": "anarquismo-egoista",
+    "name": "Anarchisme égoïste",
+    "category": "Anarchisme",
+    "description": "Courant fondé par Max Stirner dans L’Unique et sa propriété (1844), qui rejette l’État, la morale, la religion et les droits comme des fantômes et propose des associations volontaires d’égoïstes, maintenues uniquement tant qu’elles servent leurs membres.",
+    "phrase": "Je veux l’Unique libre de Dieu, de la morale et de l’État, associé à d’autres égoïstes tant qu’il y trouve son intérêt et possédant seulement ce qu’il peut s’approprier."
+  },
+  {
+    "id": "social-desenvolvimentismo",
+    "name": "Social-développementalisme",
+    "category": "Gauche",
+    "description": "Modèle associé aux gouvernements du Parti des travailleurs du Brésil qui cherche à la croissance avec l’inclusion sociale, en combinant la hausse des salaires minimaux, le crédit populaire, les virements en espèces et les banques publiques sans rompre avec le marché.",
+    "phrase": "Je veux une croissance qui partage le revenu, avec une hausse des salaires minimaux, des crédits et des banques publiques, des alliances larges et le marché maintenu en place."
+  },
+  {
+    "id": "liberalismo-new-deal",
+    "name": "Libéralisme du New Deal",
+    "category": "Centre",
+    "description": "Courant du Parti démocrate né avec Franklin Roosevelt, qui associe la réglementation financière, la sécurité sociale, les travaux publics et les syndicats forts avec le patriotisme civique, le capitalisme préservé et le leadership international.",
+    "phrase": "Je veux une nation patriotique de foi, avec un gouvernement fédéral fort qui maîtrise les banques, protège les syndicats, la sécurité sociale et le leadership mondial."
+  },
+  {
+    "id": "liberalismo-keynesiano",
+    "name": "Libéralisme keynésien",
+    "category": "Gauche",
+    "description": "Courant inspiré par John Maynard Keynes qui accepte les marchés et la démocratie libérale mais donne à l’État la tâche de gérer la demande, avec des dépenses publiques contre-cycliques, un plein emploi comme objectif et une économie mixte.",
+    "phrase": "Je veux une démocratie libérale avec une économie mixte, où l’État dépense contre les récessions et poursuit le plein emploi sans posséder l’industrie."
+  },
+  {
+    "id": "social-democracia-brasileira",
+    "name": "Social-démocratie brésilienne",
+    "category": "Centre",
+    "description": "Courant du PSDB brésilien, fondé en 1988 par Covas, Montoro et Cardoso, associant économie de marché, État social, réforme de l’État et responsabilité budgétaire au parlementarisme et à la modération sur les questions de société.",
+    "phrase": "Je veux une démocratie parlementaire avec une monnaie stable, des comptes équilibrés, des privatisations encadrées et un État réduit qui assure la santé et l’éducation."
+  },
+  {
+    "id": "nacionalismo-varguista",
+    "name": "Nationalisme varguiste",
+    "category": "Troisième position",
+    "description": "La doctrine de Getúlio Vargas sur l’État nouveau, qui rejoint le nationalisme économique, un État centralisé, des syndicats liés à l’État, le droit du travail et des entreprises d’État comme Petrobras, contre les oligarchies régionales et le libéralisme.",
+    "phrase": "Je veux une nation unie sous un État fort, avec des lois du travail protégeant les travailleurs, l’industrie nationale et le pétrole, et aucune oligarchie régionale."
+  },
+  {
+    "id": "socialismo-cubano",
+    "name": "Socialisme cubain",
+    "category": "Gauche radicale",
+    "description": "Le régime révolutionnaire de Fidel Castro et de Che Guevara, avec un seul parti, une économie gouvernée par l’État, une santé et une éducation universelles, l’exportation de la révolution armée et l’idéal de l’homme nouveau contre l’impérialisme.",
+    "phrase": "Je veux une révolution souveraine et internationaliste, avec un seul parti, une économie planifiée, la santé et l’éducation pour tous et un nouvel homme."
+  },
+  {
+    "id": "socialismo-africano",
+    "name": "Socialisme africain",
+    "category": "Gauche radicale",
+    "description": "Le courant de Sankara, Samora Machel, Nkrumah et Nyerere rejoignant le panafricanisme, la conscience noire, la lutte anticoloniale, la collectivisation agraire et l’autonomie contre le néocolonialisme et le racisme.",
+    "phrase": "Je veux que les peuples africains et la diaspora soient unis et souverains, avec des villages collectifs, une production autonome et un parti révolutionnaire contre le néocolonialisme."
+  },
+  {
+    "id": "anarquismo-kropotkiniano",
+    "name": "Anarchisme kropotkinien",
+    "category": "Anarchisme",
+    "description": "Courant de Pierre Kropotkine qui voit l’entraide comme une loi de la nature et propose des communes fédérées, l’intégration de l’agriculture et de l’industrie, la science au service de tous et une éthique de solidarité sans l’État.",
+    "phrase": "Je veux des communes libres fédérées par l’entraide, unissant champ et usine, avec tout partagé par le besoin et aucun État du tout."
+  },
+  {
+    "id": "conservadorismo-confederado",
+    "name": "Conservatisme confédéré",
+    "category": "Extrême droite",
+    "description": "L’idéologie du Sud esclavagiste qui soutenait la Confédération, joignant les droits et la sécession des États, la hiérarchie raciale et l’esclavage, une société agricole chrétienne patriarcale, le libre-échange et le militarisme.",
+    "phrase": "Je veux des États souverains libres du pouvoir central, une société agricole patriarcale chrétienne, un libre commerce avec le monde et la hiérarchie raciale préservée."
+  },
+  {
+    "id": "socialismo-agrario",
+    "name": "Socialisme agraire",
+    "category": "Gauche radicale",
+    "description": "Courant qui construit le socialisme à partir de la campagne, avec un seul parti, la collectivisation en villages et coopératives, l’autosuffisance alimentaire et la protection des terres et des forêts, comme dans Ujamaa de Nyerere.",
+    "phrase": "Je veux que le socialisme soit construit à partir de la campagne, avec des villages collectifs, une production alimentaire autosuffisante, des forêts protégées et un parti qui guide la nation."
+  },
+  {
+    "id": "futurismo",
+    "name": "Futurisme",
+    "category": "Troisième position",
+    "description": "Mouvement de Filippo Marinetti qui exaltait la vitesse, les machines, l’industrie et la guerre comme l’hygiène du monde, prêchant le nationalisme, l’anticléricalisme et la rupture avec le passé, et qui a aidé à fonder le fascisme italien.",
+    "phrase": "Je veux une nation jeune et rapide, dirigée par des machines et des usines, sans prêtres, rois et musées, forgé dans la guerre comme l’hygiène du monde."
+  },
+  {
+    "id": "cesarismo",
+    "name": "Césarisme",
+    "category": "Droite",
+    "description": "Tradition impériale romaine qui, de Jules César à Auguste, Néron, Marc Aurèle et Justinien, concentre l’armée, la loi et l’administration dans le souverain tout en préservant les institutions, la provision populaire et la souveraineté sur un empire diversifié.",
+    "phrase": "Je veux un empire sous un seul commandement, soutenu par l’armée, la loi et les dieux de la ville, avec du pain pour le peuple et des frontières défendues."
+  },
+  {
+    "id": "capitalismo-industrial",
+    "name": "Capitalisme industriel",
+    "category": "Droite",
+    "description": "Le capitalisme des grands industriels comme Henry Ford, Rockefeller et Thomas Edison, exaltant l’usine, la production de masse, l’invention et l’entrepreneur, avec une éthique du travail, une famille traditionnelle et une ingérence minimale de l’État.",
+    "phrase": "Je veux une nation d’usines, d’invention et de travail, avec propriété privée, entrepreneurs libres et peu d’ingérence de l’État."
+  },
+  {
+    "id": "neoliberalismo-autoritario",
+    "name": "Néolibéralisme autoritaire",
+    "category": "Droite",
+    "description": "Un régime qui impose des marchés libres radicaux par une dictature militaire, avec des privatisations, des ouvertures commerciales et des économistes formés à Chicago, réprimant les syndicats, les partis et les opposants au nom de l’ordre et de l’anticommunisme.",
+    "phrase": "Je veux des marchés ouverts, des privatisations et une discipline budgétaire imposée par un gouvernement fort qui écrasera les syndicats et l’opposition."
+  },
+  {
+    "id": "catolicismo-universalista",
+    "name": "Catholicisme universaliste",
+    "category": "Droite",
+    "description": "La vision chrétienne qui place l’Église universelle au-dessus des nations, des races et des frontières, dans la ligne de Paul de Tarse et Augustin, joignant une foi intense, des valeurs morales traditionnelles et l’autorité spirituelle avec la fraternité entre tous les peuples.",
+    "phrase": "Je veux une communauté politique chrétienne universelle, uni par l’Église et la loi morale, au-dessus des frontières, des races et des intérêts nationaux."
+  },
+  {
+    "id": "republicanismo-confederal",
+    "name": "Républicanisme confédéral",
+    "category": "Centre",
+    "description": "Tradition de républiques constituées de provinces ou de cantons souverains, comme la République néerlandaise et l’ancienne Confédération suisse, avec l’autonomie locale, le commerce ouvert, la neutralité armée et la foi protestante profondément enracinée.",
+    "phrase": "Je veux des provinces souveraines unies par un pacte républicain, un commerce ouvert, des milices locales et une foi protestante."
+  },
+  {
+    "id": "anarcoprimitivismo",
+    "name": "Anarcho-primitivisme",
+    "category": "Anarchisme",
+    "description": "Le courant de John Zerzan et Ted Kaczynski qui voit la civilisation industrielle et l’agriculture elle-même comme la racine de la domination, appelant à la fin de la technologie moderne et à un retour aux petites communautés de chasseurs-cueilleurs sans État.",
+    "phrase": "Je veux abolir l’État, l’industrie et l’agriculture, vivant dans de petites communautés autonomes libres de technologie et de domination."
+  },
+  {
+    "id": "socialismo-federalista",
+    "name": "Socialisme fédéraliste",
+    "category": "Gauche radicale",
+    "description": "Modèle d’une fédération de républiques socialistes sous un parti d’avant-garde, comme dans l’URSS de Lénine, combinant une économie planifiée et une domination à parti unique avec l’autonomie nationale, les langues et les cultures locales, et les républiques fédérées avec un droit formel de sécession.",
+    "phrase": "Je veux une union de républiques socialistes avec leurs propres langues et cultures, guidée par le parti d’avant-garde et par un plan économique commun.",
+    "countryId": "uniao-sovietica-urss",
+    "personalityId": "lenin"
+  },
+  {
+    "id": "socialismo-patriotico",
+    "name": "Socialisme patriotique",
+    "category": "Gauche radicale",
+    "description": "Courant qui rejoint une économie socialiste gérée par l’État et un parti fort avec le patriotisme, la famille traditionnelle, la religion comme patrimoine national et le rejet du progressisme culturel, considérant la politique de l’identité comme une distraction libérale de la lutte de classe.",
+    "phrase": "Je veux un socialisme des travailleurs avec la patrie, la famille et la foi ancestrale, planifiée par le parti et exempte de modes libérales.",
+    "countryId": "bielorrussia",
+    "personalityId": "stalin"
+  },
+  {
+    "id": "socialismo-vietnamita",
+    "name": "Socialisme vietnamien",
+    "category": "Gauche radicale",
+    "description": "Modèle du Parti communiste du Vietnam unit la pensée de Ho Chi Minh, la libération nationale anticoloniale et le Đổi Mới de 1986: régime de parti unique, économie de marché socialiste, secteur d’État dominant et ouverture au commerce mondial.",
+    "phrase": "Je veux que la nation soit libérée sur le chemin de Ho Chi Minh, dirigée par le Parti, avec un marché socialiste et des portes ouvertes au commerce.",
+    "countryId": "vietna",
+    "personalityId": "ho-chi-minh"
+  },
+  {
+    "id": "socialismo-baathista",
+    "name": "Socialisme baasiste",
+    "category": "Troisième position",
+    "description": "Un courant arabe du socialisme d’État combinant le nationalisme panarabe, un parti d’avant-garde, la planification, la réforme foncière et le contrôle des secteurs stratégiques, préconisant l’unité arabe, la laïcité et l’indépendance de l’impérialisme.",
+    "phrase": "Je veux que la nation arabe soit unie par un parti révolutionnaire, avec le socialisme d’État, la réforme agraire, la laïcité et l’indépendance de l’impérialisme."
+  },
+  {
+    "id": "islamismo",
+    "name": "Islamisme",
+    "category": "Droite",
+    "description": "Mouvement politique préconisant un État gouverné par la charia et l’identité islamique, né avec les Frères musulmans de Hassan al-Banna et Sayyid Qutb, combinant l’activisme de masse, le bien-être social religieux et le rejet de la laïcité occidentale.",
+    "phrase": "Je veux une société islamique guidée par la charia, avec des croyants organisés à partir des mosquées et une économie de zakat libre de l’usure."
+  },
+  {
+    "id": "democracia-islamica",
+    "name": "Démocratie islamique",
+    "category": "Droite",
+    "description": "Courant qui concilie l’islam et la démocratie électorale à travers des partis religieux conservateurs participant aux élections et défendant l’économie de marché et les valeurs musulmanes dans la vie publique, comme l’AKP turc et Ennahda en Tunisie.",
+    "phrase": "Je veux un parti musulman qui gagne les élections, protège la famille et la foi dans la vie publique et fait croître l’économie de marché."
+  },
+  {
+    "id": "socialismo-islamico",
+    "name": "Socialisme islamique",
+    "category": "Troisième position",
+    "description": "Courant qui fonde le socialisme sur les principes islamiques tels que la zakat, l’interdiction de l’usure et la justice sociale coranique, combinant l’anti-impérialisme avec une économie gouvernée par l’État, de la troisième théorie universelle de Kadhafi à la pensée d’Ali Shariati.",
+    "phrase": "Je veux la justice coranique: la terre appartient à Dieu, la zakat partage la richesse et l’État dirige l’économie contre l’usure et l’impérialisme."
+  },
+  {
+    "id": "pan-islamismo",
+    "name": "Panislamisme",
+    "category": "Extrême droite",
+    "description": "Une idéologie qui préconise l’unité politique des musulmans au-dessus des frontières nationales, autour de l’oumma et l’idéal d’un califat, formulé par Jamal al-Din al-Afghani et adopté par le sultan ottoman Abdul Hamid II contre le colonialisme européen.",
+    "phrase": "Je veux que l’oumma soit unie à travers les frontières sous un califat, avec la loi islamique partout et le monde musulman libre de la domination occidentale."
+  },
+  {
+    "id": "nacionalismo-kemalista",
+    "name": "Nationalisme kémaliste",
+    "category": "Troisième position",
+    "description": "Doctrine de Mustafa Kemal Atatürk qui a fondé la Turquie moderne sur six flèches: républicanisme, nationalisme, populisme, étatisme, laïcisme et réformisme, imposant la occidentalisation et le contrôle de l’État de la religion d’en haut.",
+    "phrase": "Je veux une république turque laïque, moderne, avec la religion sous contrôle de l’État, une identité nationale et une industrie construite par l’État."
+  },
+  {
+    "id": "liberalismo-islamico",
+    "name": "Libéralisme islamique",
+    "category": "Centre",
+    "description": "Courant réformiste qui réinterprète l’islam à la lumière de la raison, des droits de l’homme et du pluralisme, plaidant pour la démocratie, l’égalité des sexes, un État non confessionnel et la liberté de conscience, dans la tradition moderniste de Muhammad Abduh.",
+    "phrase": "Je veux vivre ma foi islamique avec raison et liberté, dans un État démocratique, non confessionnel qui assure l’égalité entre les hommes et les femmes."
+  },
+  {
+    "id": "nacionalismo-budista",
+    "name": "Nationalisme bouddhiste",
+    "category": "Droite",
+    "description": "Courant qui fusionne identité ethnique et foi bouddhiste theravada, considérant la nation comme gardienne du Dharma menacé par les minorités, comme dans le nationalisme cinghalais au Sri Lanka et les mouvements monastiques Ma Ba Tha et 969 au Myanmar.",
+    "phrase": "Je veux une nation bouddhiste qui protège le Dharma et la majorité, avec des moines influents, des leaders forts et des minorités sous surveillance."
+  },
+  {
+    "id": "sionismo",
+    "name": "Sionisme",
+    "category": "Droite",
+    "description": "Un mouvement national juif fondé par Herzl en 1897 qui a conduit à Israël en 1948. Il couvre les courants ouvriers, révisionnistes et religieux et s’exprime aujourd’hui dans une démocratie parlementaire avec une armée forte, la loi du retour et le contrôle de la Cisjordanie.",
+    "phrase": "Je veux un État juif démocratique fort sur la terre d’Israël qui accueille chaque Juif, se défend avec ses propres armes et préserve l’hébreu."
+  },
+  {
+    "id": "sionismo-trabalhista",
+    "name": "Sionisme travailliste",
+    "category": "Gauche",
+    "description": "La branche socialiste du sionisme qui a construit l’État d’Israël à travers les kibboutz, la fédération ouvrière Histadrut et le parti Mapai de Ben-Gurion, unit le nationalisme juif, le travail collectif sur la terre et un État-providence laïque.",
+    "phrase": "Je veux bâtir la nation juive de nos propres mains, dans des kibboutz et des syndicats forts, avec des terres publiques et un État-providence laïque."
+  },
+  {
+    "id": "feudalismo",
+    "name": "Féodalisme",
+    "category": "Extrême droite",
+    "description": "Un ordre médiéval basé sur des liens personnels de vassalité entre seigneur et vassaux, avec des terres accordées comme fiefs, une noblesse guerrière héréditaire, des serfs liés à la terre, l’Église comme autorité morale et le pouvoir fragmenté parmi les seigneurs locaux.",
+    "phrase": "Je veux des seigneurs et des vassaux liés par la fidélité, l’Église au centre, et chacun dans son domaine: ceux qui prient, se battent ou travaillent."
+  },
+  {
+    "id": "tradicionalismo-carlista",
+    "name": "Traditionalisme carliste",
+    "category": "Extrême droite",
+    "description": "Un courant espagnol de traditionalisme contre-révolutionnaire, né dans les guerres carlistes du XIXe siècle sous le mot d’ordre Dieu, Patrie, Fueros et Roi, plaidant pour une monarchie catholique légitime, l’unité religieuse, les fueros régionaux et une société organique contre le libéralisme.",
+    "phrase": "Je veux une Espagne catholique sous le roi légitime, avec des fueros régionaux, des Cortes représentant les ordres et des corporations, contre le libéralisme et le centralisme."
+  },
+  {
+    "id": "fascismo-clerical",
+    "name": "Fascisme clérical",
+    "category": "Troisième position",
+    "description": "Une variante du fascisme qui fusionne l’ultra-nationalisme, un parti de masse et des milices avec l’autorité d’une Église nationale, avec le clergé au pouvoir, comme dans l’Austrofascisme de Dollfuss, la Slovaquie du père Tiso, les Ustaše croates et la Garde de fer de Roumanie.",
+    "phrase": "Je veux une nation consacrée par l’Église, avec un clergé au gouvernement, un parti, des milices religieuses et des corporations chrétiennes qui dirigent l’économie."
+  },
+  {
+    "id": "teocratismo-islamico",
+    "name": "Théocratisme islamique",
+    "category": "Extrême droite",
+    "description": "Une doctrine qui remet l’État au clergé islamique et rend la charia la loi suprême, au-dessus de la souveraineté populaire, comme dans la tutelle de Khomeini du juriste (velayat-e faqih) en Iran et de l’émirat taliban en Afghanistan.",
+    "phrase": "Je veux la souveraineté de Dieu au-dessus du vote, avec le juriste religieux au commandement, la charia comme seule loi et une économie libre de l’usure."
+  },
+  {
+    "id": "socialismo-blanquista",
+    "name": "Socialisme blanquiste",
+    "category": "Gauche radicale",
+    "description": "La doctrine d’Auguste Blanqui selon laquelle une minorité révolutionnaire conspiratrice devrait prendre le pouvoir et gouverner par une dictature provisoire qui expropriera la bourgeoisie, avec un athéisme militant et une méfiance envers les élections et l’action de masse spontanée.",
+    "phrase": "Je veux une minorité insurrectionnaire qui s’empare de Paris, impose une dictature provisoire contre la bourgeoisie et l’Église, et remet la richesse au peuple."
+  },
+  {
+    "id": "socialismo-budista",
+    "name": "Socialisme bouddhiste",
+    "category": "Gauche",
+    "description": "Un courant qui fonde le socialisme dans l’éthique bouddhiste, en considérant la compassion et la fin de l’attachement comme la base de l’égalité, de la propriété commune et du rejet de la caste, d’Ambedkar et du Dalaï Lama au socialisme birman de Ne Win.",
+    "phrase": "Je veux une société de compassion sans castes, avec des terres et des ressources communes et un État qui se soucie de tous sans attache au profit."
+  },
+  {
+    "id": "teocracia-budista",
+    "name": "Théocratie bouddhiste",
+    "category": "Extrême droite",
+    "description": "Gouvernement d’une hiérarchie monastique bouddhiste, où des dirigeants réincarnés et les monastères dominent la politique et la propriété foncière, avec l’ordre traditionnel et les préceptes moraux faisant loi, comme au Tibet des dalaï-lamas avant 1950.",
+    "phrase": "Je veux une société gouvernée par la sangha, avec des lamas réincarnés au commandement, les cinq préceptes comme loi et l’ordre traditionnel au-dessus des élections."
+  },
+  {
+    "id": "monarquismo-iluminista",
+    "name": "Monarchisme éclairé",
+    "category": "Droite",
+    "description": "L’absolutisme éclairé: un monarque souverain qui règne par la raison, \"tout pour le peuple, rien par le peuple\", avec une bureaucratie d’experts, d’éducation et de réformes contre l’Église et la noblesse, de Frédéric II à Joseph II.",
+    "phrase": "Je veux un monarque éclairé, premier serviteur de l’État, réformateur par la raison avec des sages et la tolérance: tout pour le peuple, rien par le peuple."
+  },
+  {
+    "id": "teocracia-judaica",
+    "name": "Théocratie juive",
+    "category": "Extrême droite",
+    "description": "Gouvernement gouverné par la Torah et la halakha, avec des tribunaux rabbiniques, des juges ou des rois sous autorité religieuse, le judaïsme comme religion d’État et le rejet de l’assimilation, inspiré par les royaumes bibliques d’Israël et de Juda.",
+    "phrase": "Je veux un État gouverné par la Torah et la halakha, avec des tribunaux rabbiniques, des juges ou un roi sous la loi de Dieu, et des terres familiales."
+  },
+  {
+    "id": "municipalismo",
+    "name": "Municipalisme",
+    "category": "Libertarien",
+    "description": "Un monde divisé en villes-États indépendantes et micro-États qui rivalisent comme un marché, avec une sécession libre, le droit de sortie et l’expérimentation politique, des villes libres médiévales au \" patchwork \" de Yarvin et le seasteading.",
+    "phrase": "Je veux des milliers de villes-États souveraines en compétition pour les résidents, avec une sécession libre, le droit de sortie et chaque ville choisissant ses propres lois."
+  },
+  {
+    "id": "comunismo-de-conselhos",
+    "name": "Communisme de conseils",
+    "category": "Gauche radicale",
+    "description": "Un courant marxiste anti-léniniste de Pannekoek, Gorter et Mattick, qui soutient que les travailleurs eux-mêmes devraient diriger la production et le pouvoir par le biais de conseils ouvriers, rejetant le parti d’avant-garde, l’État et le parlementarisme.",
+    "phrase": "Je veux des conseils ouvriers qui dirigent les usines et le pouvoir par des mandats révocables, sans parti d’avant-garde, sans État et sans travail salarié."
+  },
+  {
+    "id": "confederalismo-democratico",
+    "name": "Confédéralisme démocratique",
+    "category": "Gauche",
+    "description": "Un modèle d’autonomie de bas en haut d’Abdullah Öcalan, avec des assemblées locales fédérées en une confédération, une écologie, une égalité des sexes et une économie coopérative, sans État-nation, mis en pratique au Rojava.",
+    "phrase": "Je veux que les communes et assemblées locales soient fédérées en une confédération, avec l’égalité des sexes, l’écologie, une économie coopérative et l’autodéfense, sans État-nation."
+  },
+  {
+    "id": "tradicionalismo",
+    "name": "Traditionalisme",
+    "category": "Extrême droite",
+    "description": "Un courant de René Guénon et de Julius Evola qui voit la modernité comme la décomposition d’une tradition spirituelle universelle, défendant la hiérarchie sacrée, les castes, l’ordre initiatoire et la primauté de l’esprit sur l’économie et la politique de masse.",
+    "phrase": "Je veux un ordre hiérarchique sacré des castes et des initiés qui place l’esprit au-dessus de l’argent et de la politique de masse, contre la modernité."
+  },
+  {
+    "id": "aceleracionismo-efetivo",
+    "name": "Accélérationnisme effectif",
+    "category": "Libertarien",
+    "description": "Un mouvement né en ligne en 2022 qui défend l’accélération de l’IA, de l’énergie et de l’innovation à travers le marché et sans réglementation, traitant le progrès technologique comme un impératif moral et rejetant les défenseurs du ralentissement.",
+    "phrase": "Je veux accélérer l’IA, l’énergie et l’innovation à travers le marché libre, sans réglementation ni décroissance, en traitant le progrès technologique comme un devoir moral."
+  },
+  {
+    "id": "democracia-direta",
+    "name": "Démocratie directe",
+    "category": "Centre",
+    "description": "Un système dans lequel les citoyens décident directement des lois par le biais de référendums, d’initiatives populaires, d’assemblées et de révocations d’élus, au lieu de déléguer aux représentants, comme dans les cantons suisses et Athènes classiques.",
+    "phrase": "Je veux que les citoyens décident des lois par le biais de référendums, d’initiatives populaires et de révocation des élus, avec le pouvoir décentralisé aux municipalités et aux cantons."
+  },
+  {
+    "id": "iluminismo-sombrio",
+    "name": "Lumières obscures",
+    "category": "Extrême droite",
+    "description": "Courant intellectuel de Nick Land et Curtis Yarvin qui attaque la démocratie, l’égalitarisme et la « Cathédrale » universitaire et médiatique, défend le gouvernement autocratique et le droit de sortie, et accueille des courants de réalisme racial et d’accélérationnisme.",
+    "phrase": "Je veux remplacer la démocratie et l’égalitarisme par des souverains forts, une hiérarchie naturelle et des micro-États libres qui accélèrent la technologie, au-delà de la cathédrale."
+  },
+  {
+    "id": "neocameralismo",
+    "name": "Néocaméralisme",
+    "category": "Droite",
+    "description": "Une doctrine de Curtis Yarvin qui propose de diriger l’État comme une société par actions: actionnaires, un PDG souverain, citoyens comme clients qui peuvent partir, propriété privée garantie et politique remplacée par la direction.",
+    "phrase": "Je veux un État géré comme une société, avec des actionnaires et un PDG souverain, sans politique ni élections, où les citoyens sont des clients libres de partir."
+  }
+]

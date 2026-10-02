@@ -116,7 +116,7 @@ public class QuizController {
 
     // O resultado depende so dos 12 percentuais (o resto vem do idioma), entao eles formam a chave.
     private static String resultKey(List<AxisResult> axes, String lang, String religion) {
-        StringBuilder key = new StringBuilder(lang).append('|').append(religion).append('|');
+        StringBuilder key = new StringBuilder(QuizDataService.normalizeLang(lang)).append('|').append(religion).append('|');
         axes.forEach(axis -> key.append(axis.leftPercent()).append(','));
         return key.toString();
     }

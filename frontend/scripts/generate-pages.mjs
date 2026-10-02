@@ -1,7 +1,10 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT e EN
+import { frenchHome } from './fr-home.mjs';
+import { FR_GENERATOR } from './fr-catalogue.mjs';
+import { LOCALES } from './locales.mjs';
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN e FR
 // a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
-// Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
-// overlays em data/i18n/en/*.json (chaveados por id, com fallback para PT).
+// Fonte estrutural: backend/src/main/resources/data (PT). Textos EN/FR vêm dos
+// overlays em data/i18n/<lang>/*.json (chaveados por id, com fallback para PT).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -53,10 +56,12 @@ function overlay(base, locale, file) {
 }
 
 const STR = {
+  fr: FR_GENERATOR,
   pt: {
     htmlLang: 'pt-BR',
     ogLocale: 'pt_BR',
     prefix: '',
+    homePath: '/br',
     home: 'Início',
     navIdeologies: 'Ideologias',
     navCountries: 'Países',
@@ -92,6 +97,7 @@ const STR = {
     htmlLang: 'en',
     ogLocale: 'en_US',
     prefix: '/en',
+    homePath: '/en',
     home: 'Home',
     navIdeologies: 'Ideologies',
     navCountries: 'Countries',
@@ -124,8 +130,6 @@ const STR = {
     personalitiesIndexHeading: 'Political personalities'
   }
 };
-
-const LOCALES = ['pt', 'en'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -198,6 +202,7 @@ function buildLocaleContext(locale) {
     ideologies,
     countries,
     personalities,
+    countryPeriods: new Map(baseCountries.map((c) => [c.id, c.period])),
     countryById: new Map(countries.map((c) => [c.id, c])),
     personalityById: new Map(personalities.map((p) => [p.id, p])),
     ideologiesByCountry: groupBy(ideologies, (i) => i.countryId),
@@ -231,6 +236,7 @@ function buildHomeVariants() {
   const index = readFileSync(join(DIST, 'index.html'), 'utf8');
 
   writeFileSync(join(DIST, 'br.html'), index);
+  writeFileSync(join(DIST, 'fr.html'), frenchHome(index, SITE));
 
   // Rotas do app servidas como arquivos físicos (via cleanUrls), sem depender
   // do rewrite de SPA. results.html fica sem canonical/hreflang para que cada
@@ -258,6 +264,7 @@ function buildHomeVariants() {
     <link rel="canonical" href="https://12axes.vercel.app/en" />
     <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
     <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="fr" href="https://12axes.vercel.app/fr" />
     <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
 
     `;
@@ -399,7 +406,7 @@ writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS);
 writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS);
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', ...allPaths]
+const sitemapUrls = ['/', '/en', '/fr', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(

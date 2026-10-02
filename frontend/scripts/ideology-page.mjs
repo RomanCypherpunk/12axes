@@ -1,3 +1,5 @@
+import { FR_IDEOLOGY_PAGE } from './fr-catalogue.mjs';
+import { alternateLinks, languageLinks } from './locales.mjs';
 // Página /ideologies/:id (e /en/...): perfil de uma ideologia com a identidade
 // nova. Mesma lógica da página de personalidade — o vetor da ideologia é
 // comparado com personalidades, países e outras ideologias pela fórmula do
@@ -15,6 +17,7 @@ import { poleSprite } from './pole-icons.mjs';
 import { compatibility, dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 
 const STR = {
+  fr: FR_IDEOLOGY_PAGE,
   pt: {
     skip: 'Pular para o conteúdo',
     catalogNav: 'Catálogo',
@@ -131,7 +134,7 @@ export function ideologyPage(L, ideology, ctx) {
   const esc = escapeHtml;
   const t = STR[locale];
   const prefix = L.s.prefix;
-  const home = prefix || '/';
+  const home = L.s.homePath;
   const vector = profiles.ideology.get(ideology.id) ?? {};
   const name = ideology.name;
   const spec = spectrumOf(ideology.category);
@@ -324,7 +327,7 @@ ${poleSprite(L.axes)}
 
   <aside class="panel pcta"><div><h2>${esc(t.ctaTitle)}</h2><p>${esc(t.ctaText(L.s.subjectPrefix(name, 'ideology'), L.ideologies.length - 1))}</p></div><a class="btn btn-primary" href="${home}">${esc(t.takeTheTest)} ${ARR}</a></aside>
 </div></main>
-<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · <a href="${prefix === '' ? '/en' : ''}${basePath}">${prefix === '' ? 'English' : 'Português'}</a></p></div></footer>
+<footer class="foot"><div class="wrap"><a class="logo" href="${home}"><b>12</b><span>axes</span></a><p>${esc(t.footer)} · ${languageLinks(locale, basePath)}</p></div></footer>
 ${axisSheetHtml(locale)}
 <script>
 ${PAGE_SCRIPT}</script>

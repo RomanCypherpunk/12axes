@@ -1,3 +1,5 @@
+import { FR_COUNTRIES_INDEX } from './fr-catalogue.mjs';
+import { alternateLinks, languageLinks } from './locales.mjs';
 // Página /countries (e /en/countries): países atuais e regimes históricos
 // agrupados por época, com busca, filtro, bandeira e a faixa de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de personalidades e troca o retrato pela bandeira.
@@ -34,6 +36,7 @@ export function periodRange(period = '') {
 }
 
 const STR = {
+  fr: FR_COUNTRIES_INDEX,
   pt: {
     skip: 'Pular para a lista',
     catalogNav: 'Catálogo',
@@ -134,7 +137,7 @@ export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pro
   const current = L.countries.filter((c) => !c.historical).sort((a, b) => collator.compare(a.name, b.name));
   const historical = L.countries
     .filter((c) => c.historical)
-    .map((c) => ({ c, range: periodRange(c.period) }))
+    .map((c) => ({ c, range: periodRange(L.countryPeriods.get(c.id)) }))
     .map((h) => ({ ...h, start: h.range?.start ?? null }));
   const undated = historical.filter((h) => h.start === null);
   if (undated.length > 0) {
@@ -199,13 +202,13 @@ export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pro
 ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
 <header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
+  <a class="logo" href="${L.s.homePath}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
   <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/countries" aria-current="page">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a></nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
+  <a class="btn" href="${L.s.homePath}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
 
 <div class="wrap hero">
-  <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navCountries)}</p>
+  <p class="crumbs"><a href="${L.s.homePath}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navCountries)}</p>
   <p class="eyebrow">${escapeHtml(t.eyebrow)}</p>
   <h1>${escapeHtml(L.s.countriesIndexHeading)}</h1>
   <p class="lead">${escapeHtml(t.lead(current.length, historical.length))}</p>
@@ -226,9 +229,9 @@ ${poleSprite(L.axes)}
   <ul class="legend" aria-label="${escapeHtml(t.legendAria)}">${legend}</ul>
   ${sections}
   <div class="empty" id="empty"><h2>${escapeHtml(t.emptyTitle)}</h2><p>${escapeHtml(t.emptyText)}</p></div>
-  <aside class="cta"><div><h2>${escapeHtml(t.ctaTitle)}</h2><p>${escapeHtml(t.ctaText)}</p></div><a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a></aside>
+  <aside class="cta"><div><h2>${escapeHtml(t.ctaTitle)}</h2><p>${escapeHtml(t.ctaText)}</p></div><a class="btn" href="${L.s.homePath}">${escapeHtml(t.takeTheTest)} ${ARROW}</a></aside>
 </main>
-<footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
+<footer class="foot"><div class="wrap"><a class="logo" href="${L.s.homePath}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · ${languageLinks(locale, basePath)}</p></div></footer>
 <script>
 const S=${scriptStrings};
 const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')],cats=[...document.querySelectorAll('.cat')];

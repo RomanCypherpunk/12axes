@@ -1,3 +1,5 @@
+import { FR_IDEOLOGIES_INDEX } from './fr-catalogue.mjs';
+import { alternateLinks, languageLinks } from './locales.mjs';
 // Página /ideologies (e /en/ideologies): catálogo agrupado por espectro, com busca,
 // filtro por espectro e a "faixa" de 12 ícones de polo que resume o vetor de cada
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
@@ -18,6 +20,9 @@ export const SPECTRUM = [
 ];
 
 export const CATEGORY_KEY = {
+  'gauche radicale': 'esq-radical', gauche: 'esquerda', centre: 'centro', droite: 'direita',
+  'extrême droite': 'ext-direita', 'troisième position': 'terceira', libertarien: 'libertario', anarchisme: 'anarquismo',
+
   'esquerda radical': 'esq-radical',
   'radical left': 'esq-radical',
   esquerda: 'esquerda',
@@ -37,6 +42,7 @@ export const CATEGORY_KEY = {
 };
 
 const STR = {
+  fr: FR_IDEOLOGIES_INDEX,
   pt: {
     skip: 'Pular para a lista',
     catalogNav: 'Catálogo',
@@ -208,9 +214,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
-    <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
-    <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
-    <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
+    ${alternateLinks(site, basePath)}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -236,13 +240,13 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
 ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
 <header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
+  <a class="logo" href="${L.s.homePath}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
   <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a></nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
+  <a class="btn" href="${L.s.homePath}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
 
 <div class="wrap hero">
-  <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navIdeologies)}</p>
+  <p class="crumbs"><a href="${L.s.homePath}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navIdeologies)}</p>
   <p class="eyebrow">${escapeHtml(t.eyebrow)}</p>
   <h1>${escapeHtml(L.s.ideologiesIndexHeading)}</h1>
   <p class="lead">${escapeHtml(t.lead(n))}</p>
@@ -263,9 +267,9 @@ ${poleSprite(L.axes)}
   <ul class="legend" aria-label="${escapeHtml(t.legendAria)}">${legend}</ul>
   ${sections}
   <div class="empty" id="empty"><h2>${escapeHtml(t.emptyTitle)}</h2><p>${escapeHtml(t.emptyText)}</p></div>
-  <aside class="cta"><div><h2>${escapeHtml(t.ctaTitle)}</h2><p>${escapeHtml(t.ctaText(n))}</p></div><a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a></aside>
+  <aside class="cta"><div><h2>${escapeHtml(t.ctaTitle)}</h2><p>${escapeHtml(t.ctaText(n))}</p></div><a class="btn" href="${L.s.homePath}">${escapeHtml(t.takeTheTest)} ${ARROW}</a></aside>
 </main>
-<footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
+<footer class="foot"><div class="wrap"><a class="logo" href="${L.s.homePath}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · ${languageLinks(locale, basePath)}</p></div></footer>
 <script>
 const S=${scriptStrings};
 const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')],cats=[...document.querySelectorAll('.cat')];

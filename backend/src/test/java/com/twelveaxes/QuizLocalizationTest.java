@@ -99,8 +99,79 @@ class QuizLocalizationTest {
 
     @Test
     void unknownLangFallsBackToPortuguese() throws Exception {
-        mockMvc.perform(get("/api/quiz").param("lang", "fr"))
+        mockMvc.perform(get("/api/quiz").param("lang", "de"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.description").value(org.hamcrest.Matchers.containsString("eixos políticos")));
+    }
+
+    @Test
+    void frenchQuizIncludesAllQuestionsArchetypesAndAnswerLabels() throws Exception {
+        for (String variant : List.of("short", "extended", "extreme")) {
+            QuizPayload quiz = objectMapper.readValue(mockMvc.perform(get("/api/quiz")
+                            .param("variant", variant).param("lang", "fr-CA"))
+                    .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8), QuizPayload.class);
+            assertThat(quiz.description()).contains("axes politiques");
+            assertThat(quiz.axes()).hasSize(12).anySatisfy(axis -> assertThat(axis.label()).isEqualTo("Économie"));
+            assertThat(quiz.questions()).hasSize(240);
+            assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("Tout à fait d’accord"));
+            assertThat(quiz.archetypeQuestions()).hasSize(5);
+            assertThat(quiz.archetypeQuestions().getFirst().text()).isEqualTo("Sur quoi la société devrait-elle reposer ?");
+            assertThat(quiz.archetypeQuestions().getFirst().options().getFirst().text()).isEqualTo("La foi, la famille et les traditions nationales");
+        }
+    }
+
+    @Test
+    void frenchOverlaysKeepScoringInputsAndCatalogIds() {
+        assertThat(dataService.getQuestionsForLang("fr")).usingRecursiveComparison().ignoringFields("text")
+                .isEqualTo(dataService.getQuestionsForLang("en"));
+        assertThat(dataService.getIdeologies("fr")).extracting(com.twelveaxes.model.Ideology::id)
+                .containsExactlyElementsOf(dataService.getIdeologies().stream().map(com.twelveaxes.model.Ideology::id).toList());
+        assertThat(dataService.getCountries("fr")).extracting(com.twelveaxes.model.Country::id)
+                .containsExactlyElementsOf(dataService.getCountries().stream().map(com.twelveaxes.model.Country::id).toList());
+        assertThat(dataService.getPersonalities("fr")).extracting(com.twelveaxes.model.Personality::id)
+                .containsExactlyElementsOf(dataService.getPersonalities().stream().map(com.twelveaxes.model.Personality::id).toList());
+        assertThat(dataService.getCountryById("irlanda", "fr").name()).isEqualTo("Irlande");
+        assertThat(dataService.getCountryById("imperio-romano", "fr").period()).contains("av. J.-C.", "apr. J.-C.");
+        assertThat(dataService.getPersonalityById("platao", "fr").name()).isEqualTo("Platon");
+    }
+
+    @Test
+    void frenchResultsPreserveScoresAndTranslateExplanations() throws Exception {
+        String vector = "12,26,35,49,61,72,84,96,23,47,65,89";
+        QuizResult en = sharedResult(vector, "en");
+        QuizResult fr = sharedResult(vector, "FR-fr");
+        assertThat(fr.axes()).extracting(com.twelveaxes.model.AxisResult::leftPercent)
+                .containsExactlyElementsOf(en.axes().stream().map(com.twelveaxes.model.AxisResult::leftPercent).toList());
+        assertThat(fr.axes()).extracting(com.twelveaxes.model.AxisResult::intensity)
+                .containsOnly("Équilibrée", "Modérée", "Forte", "Très forte");
+        assertThat(fr.topMatch().longDescription()).contains("La compatibilité mesure");
+        assertThat(fr.topMatch().compatibility()).isEqualTo(en.topMatch().compatibility());
+        assertThat(fr.bookRecommendations()).isNotEmpty().allSatisfy(book -> {
+            assertThat(book.title()).isNotBlank();
+            assertThat(book.url()).startsWith("https://www.amazon.fr/s?").doesNotContain("tag=");
+        });
+        assertThat(sharedResult(vector, "fr")).isEqualTo(fr);
+    }
+
+    @Test
+    void frenchSubmissionUsesTheSameAnswerAndArchetypeScores() throws Exception {
+        List<SubmittedAnswer> answers = dataService.getQuestions().stream()
+                .collect(java.util.stream.Collectors.groupingBy(q -> q.axisId())).values().stream()
+                .flatMap(group -> group.stream().limit(3))
+                .map(question -> new SubmittedAnswer(question.id(), AnswerValue.AGREE)).toList();
+        ResultRequest request = new ResultRequest(answers, "short", java.util.Map.of("sociedade", "A"));
+        List<QuizResult> results = new java.util.ArrayList<>();
+        for (String lang : List.of("en", "fr")) {
+            results.add(objectMapper.readValue(mockMvc.perform(post("/api/results").param("lang", lang)
+                            .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(request)))
+                    .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8), QuizResult.class));
+        }
+        assertThat(results.get(1).axes()).extracting(com.twelveaxes.model.AxisResult::leftPercent)
+                .containsExactlyElementsOf(results.getFirst().axes().stream().map(com.twelveaxes.model.AxisResult::leftPercent).toList());
+    }
+
+    private QuizResult sharedResult(String vector, String lang) throws Exception {
+        return objectMapper.readValue(mockMvc.perform(get("/api/results/by-axes").param("v", vector).param("lang", lang))
+                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8), QuizResult.class);
     }
 }

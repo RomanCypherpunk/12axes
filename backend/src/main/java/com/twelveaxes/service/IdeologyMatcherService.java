@@ -151,6 +151,9 @@ public class IdeologyMatcherService {
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
+        if (QuizDataService.LANG_FR.equals(lang)) {
+            return description.append(" La compatibilité mesure la proximité entre vos réponses et ce profil.").toString();
+        }
         description.append(en
                 ? " Compatibility indicates how close your answers are to this profile."
                 : " A compatibilidade indica proximidade entre suas respostas e esse perfil.");
