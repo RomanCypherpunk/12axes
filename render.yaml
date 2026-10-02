@@ -3,7 +3,7 @@ services:
     name: 12axes-backend
     runtime: docker
     rootDir: backend
-    plan: free
+    plan: starter
     healthCheckPath: /api/health
     envVars:
       - key: FRONTEND_ORIGINS

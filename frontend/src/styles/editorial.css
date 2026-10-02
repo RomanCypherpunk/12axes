@@ -667,3 +667,37 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 @media (max-width:720px){.e-oss-bar{flex-wrap:wrap;padding:22px}.e-oss-actions{width:100%}.e-oss-actions .e-oss-btn{flex:1;justify-content:center}}
 @media (max-width:560px){.e-oss{padding:64px 0}.e-oss-cards{grid-template-columns:1fr;gap:10px}.e-oss-card{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:18px}.e-oss-card .e-oss-ico{grid-row:span 2}.e-oss-card h3{margin:0;font-size:17px}.e-oss-num{top:18px;right:18px}.e-oss-head{margin-bottom:28px}.e-oss-actions{flex-direction:column}}
 @media (prefers-reduced-motion:reduce){.e-oss-btn,.e-oss-card{transition:none}}
+
+/* retomada do quiz (home) */
+.e-resume{padding:32px 0 0;background:var(--papel)}
+.e-resume-card{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:36px 40px;border-radius:var(--r-lg)}
+.e-resume-body{flex:1 1 auto;min-width:0;max-width:560px}
+.e-resume-body .e-eyebrow{margin-bottom:10px}
+.e-resume-card h3{font-size:clamp(24px,3vw,30px);letter-spacing:-.02em;line-height:1.15}
+.e-resume-text{margin-top:10px;font-size:16px;line-height:1.55;color:var(--texto-sobre-escuro)}
+.e-resume-bar{margin-top:22px;height:6px;border-radius:999px;background:rgba(244,241,232,.16);overflow:hidden}
+.e-resume-bar span{display:block;height:100%;border-radius:inherit;background:var(--destaque-sobre-escuro)}
+.e-resume-actions{display:flex;flex:none;gap:12px}
+.e-dark .e-btn-ghost{border-color:rgba(244,241,232,.45);color:var(--papel)}
+.e-dark .e-btn-ghost:hover{border-color:var(--papel);background:rgba(244,241,232,.08)}
+.e-resume-error{flex-basis:100%;font-size:15px;color:var(--destaque-sobre-escuro)}
+@media (max-width:860px){
+  .e-resume-card{flex-direction:column;align-items:stretch;gap:28px;padding:28px 24px}
+  .e-resume-actions{flex-direction:column}
+  .e-resume-actions .e-btn{width:100%}
+}
+/* com o aviso acima, o hero deixa de ocupar a tela inteira (senão o conteúdo centraliza e abre um vão enorme) */
+.e-resume + .ed .e-hero{min-height:auto;align-items:start;padding:48px 0 56px}
+.e-resume + .ed .e-hero .e-wrap{align-items:start}
+@media (max-width:860px){.e-resume + .ed .e-hero{padding:32px 0 40px}}
+.e-foot-links{display:flex;flex-wrap:wrap;gap:10px}
+.e-foot .e-btn-ghost{border-color:rgba(244,241,232,.38);color:var(--papel)}
+.e-foot .e-btn-ghost:hover{border-color:var(--papel);background:rgba(244,241,232,.08)}
+@media (max-width:720px){
+  .e-foot{padding:28px 0}
+  .e-foot .e-wrap{flex-wrap:wrap;gap:10px 12px}
+  .e-foot .e-logo{font-size:20px}
+  .e-foot-links{flex-wrap:wrap;justify-content:flex-end;gap:4px 14px}
+  .e-foot-links .e-btn{padding:0;border:0;border-radius:0;font-size:12px;font-weight:500;text-decoration:underline;text-decoration-color:rgba(244,241,232,.4);text-underline-offset:4px;white-space:nowrap}
+  .e-foot-links .e-btn:hover{background:none;transform:none;text-decoration-color:var(--papel)}
+}

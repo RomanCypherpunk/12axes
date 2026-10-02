@@ -5,7 +5,7 @@
 import { AREA_LABELS, catalogHead, initials } from './personalities-index.mjs';
 import { PAGE_SCRIPT, axisRowsHtml, axisSheetHtml, distinctive, mbarHtml, spectrumOf } from './personality-page.mjs';
 import { poleSprite } from './pole-icons.mjs';
-import { dimensionMatches, rank } from './profile-match.mjs';
+import { dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 
 const STR = {
   pt: {
@@ -128,7 +128,8 @@ export function countryPage(L, country, ctx) {
 
   // ── ideologias ──
   const ideologyVector = (i) => profiles.ideology.get(i.id);
-  const rankedIdeologies = rank(vector, L.ideologies, ideologyVector);
+  const visible = religionVisibility(country);
+  const rankedIdeologies = rank(vector, L.ideologies.filter(visible), ideologyVector);
   const linkedIds = new Set((L.ideologiesByCountry.get(country.id) ?? []).map((i) => i.id));
   const linked = rankedIdeologies.filter((r) => linkedIds.has(r.item.id));
   const compatible = rankedIdeologies.slice(0, 3);
@@ -148,9 +149,10 @@ export function countryPage(L, country, ctx) {
 
   // ── personalidades ──
   const personVector = (p) => profiles.personality.get(p.id);
-  const rankedPeople = rank(vector, L.personalities, personVector);
+  const visiblePeople = L.personalities.filter(visible);
+  const rankedPeople = rank(vector, visiblePeople, personVector);
   const topPerson = rankedPeople[0];
-  const personDims = dimensionMatches(vector, L.personalities, personVector, [topPerson.item.id]);
+  const personDims = dimensionMatches(vector, visiblePeople, personVector, [topPerson.item.id]);
   const shownPeople = new Set([topPerson.item.id, ...personDims.map((d) => d.item.id)]);
   const nearPeople = rankedPeople.filter((r) => !shownPeople.has(r.item.id)).slice(0, 8);
   const farPeople = rankedPeople.slice(-3).reverse();
@@ -158,7 +160,7 @@ export function countryPage(L, country, ctx) {
   // ── países ──
   const countryVector = (c) => profiles.country.get(c.id);
   const countryGroups = [false, true].map((historical) => {
-    const pool = L.countries.filter((c) => Boolean(c.historical) === historical && c.id !== country.id);
+    const pool = L.countries.filter((c) => Boolean(c.historical) === historical && c.id !== country.id && visible(c));
     const ranked = rank(vector, pool, countryVector);
     return {
       historical,
@@ -272,7 +274,7 @@ ${poleSprite(L.axes)}
   </div></div>
 
   <section class="tp" id="${tabIds.axes}" role="tabpanel" aria-labelledby="t-${tabIds.axes}">
-    <div class="panel"><p class="eyebrow">${esc(t.axesEyebrow)}</p><h2>${esc(t.axesTitle)}</h2><ul class="axes-list">${axisRowsHtml(L, vector, esc, locale)}</ul></div>
+    <div class="panel"><p class="eyebrow">${esc(t.axesEyebrow)}</p><h2>${esc(t.axesTitle)}</h2><ul class="axes-list">${axisRowsHtml(L, vector, esc, locale, country.religions)}</ul></div>
     <div class="panel"><h2>${esc(t.distTitle(name))}</h2><div class="dist">
       <article class="dcard strong"><span class="tag tag-cat">${esc(t.rareTag)}</span><h3>${esc(rare.axis.label)}</h3>
         <p>${esc(t.rareText(rarePole, rarePct, rare.values.length))}</p>${mbar(rare, true)}

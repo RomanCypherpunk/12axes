@@ -15,7 +15,8 @@ import { countriesIndexPage, COUNTRIES_CSS } from './countries-index.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const DATA_DIR = resolve(ROOT, '../backend/src/main/resources/data');
-const DIST = join(ROOT, 'dist');
+const CATALOGUE_ONLY = process.argv.includes('--catalogue-only');
+const DIST = join(ROOT, CATALOGUE_ONLY ? 'node_modules/.cache/catalogue-pages' : 'dist');
 const SITE = 'https://12axes.vercel.app';
 const GOOGLE_ANALYTICS_SNIPPET = `<!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF63DF6BNM"></script>
@@ -390,7 +391,7 @@ for (const locale of LOCALES) {
   for (const page of pages) allPaths.push(writePage(L.s.prefix, page));
 }
 
-buildHomeVariants();
+if (!CATALOGUE_ONLY) buildHomeVariants();
 
 writeFileSync(join(DIST, 'ideologies.css'), IDEOLOGIES_CSS);
 writeFileSync(join(DIST, 'personalities.css'), PERSONALITIES_CSS);

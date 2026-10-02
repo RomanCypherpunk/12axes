@@ -12,7 +12,7 @@ import {
   spectrumOf
 } from './personality-page.mjs';
 import { poleSprite } from './pole-icons.mjs';
-import { compatibility, dimensionMatches, rank } from './profile-match.mjs';
+import { compatibility, dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 
 const STR = {
   pt: {
@@ -147,11 +147,13 @@ export function ideologyPage(L, ideology, ctx) {
 
   // ── personalidades ──
   const personVector = (p) => profiles.personality.get(p.id);
-  const rankedPeople = rank(vector, L.personalities, personVector);
+  const visible = religionVisibility(ideology);
+  const visiblePeople = L.personalities.filter(visible);
+  const rankedPeople = rank(vector, visiblePeople, personVector);
   const lead = refPerson
     ? { item: refPerson, score: compatibility(vector, personVector(refPerson)), kicker: t.refPerson }
     : { ...rankedPeople[0], kicker: t.mostCompatible };
-  const personDims = dimensionMatches(vector, L.personalities, personVector, [lead.item.id]);
+  const personDims = dimensionMatches(vector, visiblePeople, personVector, [lead.item.id]);
   const shownPeople = new Set([lead.item.id, ...personDims.map((d) => d.item.id)]);
   const nearPeople = rankedPeople.filter((r) => !shownPeople.has(r.item.id)).slice(0, 8);
   const farPeople = rankedPeople.slice(-3).reverse();
@@ -159,7 +161,7 @@ export function ideologyPage(L, ideology, ctx) {
   // ── países ──
   const countryVector = (c) => profiles.country.get(c.id);
   const countryGroups = [false, true].map((historical) => {
-    const pool = L.countries.filter((c) => Boolean(c.historical) === historical);
+    const pool = L.countries.filter((c) => Boolean(c.historical) === historical && visible(c));
     const ranked = rank(vector, pool, countryVector);
     return {
       historical,
@@ -172,7 +174,7 @@ export function ideologyPage(L, ideology, ctx) {
   // ── ideologias ──
   const rankedIdeologies = rank(
     vector,
-    L.ideologies.filter((i) => i.id !== ideology.id),
+    L.ideologies.filter((i) => i.id !== ideology.id && visible(i)),
     (i) => profiles.ideology.get(i.id)
   );
   const sameSpec = (i) => spectrumOf(i.category).key === spec.key;
@@ -294,7 +296,7 @@ ${poleSprite(L.axes)}
   </div></div>
 
   <section class="tp" id="${tabIds.axes}" role="tabpanel" aria-labelledby="t-${tabIds.axes}">
-    <div class="panel"><p class="eyebrow">${esc(t.axesEyebrow)}</p><h2>${esc(t.axesTitle)}</h2><ul class="axes-list">${axisRowsHtml(L, vector, esc, locale)}</ul></div>
+    <div class="panel"><p class="eyebrow">${esc(t.axesEyebrow)}</p><h2>${esc(t.axesTitle)}</h2><ul class="axes-list">${axisRowsHtml(L, vector, esc, locale, ideology.religions)}</ul></div>
     <div class="panel"><h2>${esc(t.distTitle)}</h2><div class="dist">
       <article class="dcard strong"><span class="tag tag-cat">${esc(t.rareTag)}</span><h3>${esc(rare.axis.label)}</h3>
         <p>${esc(t.rareText(rarePole, rarePct, rare.values.length))}</p>${mbar(rare, true)}

@@ -836,8 +836,8 @@
     "id": "tecno-monarquismo",
     "name": "Techno-Monarchism",
     "category": "Right",
-    "description": "Current that unites monarchy with technology and efficient management, proposing a sovereign who governs like an executive, supported by data and innovation, to give the state stability and long-term direction.",
-    "phrase": "I want a monarchy that governs like an executive, backed by data and innovation, giving the state stability and long-term direction."
+    "description": "A unitary variant of neoreaction: an absolute CEO-monarch rules a centralized state through data and security technology (surveillance, AI), under market capitalism, private property and free enterprise, for the sake of stability and efficiency.",
+    "phrase": "I want an absolute monarch with a CEO mindset ruling a unitary state through data and security technology while leaving the market free."
   },
   {
     "id": "progressismo-de-direita",
@@ -1332,9 +1332,9 @@
   {
     "id": "neotomismo",
     "name": "Neo-Thomism",
-    "category": "Far-Right",
-    "description": "A neoreactionary current combining the thought of Thomas Aquinas with criticism of liberal democracy, egalitarianism, and progressivism. It grounds a hierarchical, traditional political order in natural law, objective morality, reason, and the common good, allowing for sovereign monarchical or centralized authority.",
-    "phrase": "I want a hierarchical political order based on natural law, tradition, and the common good, under sovereign authority independent of majority will."
+    "category": "Right",
+    "description": "Revival of Thomas Aquinas's thought from 1879 (Leo XIII), with Maritain and Gilson. It grounds politics in natural law, the common good and subsidiarity, favoring mixed government, property with a social function and just war, under Catholic faith.",
+    "phrase": "I want a political order guided by natural law and the common good, with mixed government and subsidiarity, where faith and reason inspire the laws."
   },
   {
     "id": "eurasianismo",
@@ -1625,9 +1625,9 @@
   {
     "id": "sionismo",
     "name": "Zionism",
-    "category": "Center",
-    "description": "The Jewish national movement founded by Theodor Herzl in 1897, which sought a Jewish state in the Land of Israel as a response to antisemitism and led to the creation of Israel in 1948, uniting nation, the Hebrew language, and return to the ancestral land.",
-    "phrase": "I want a democratic Jewish state in the Land of Israel that welcomes every Jew, revives Hebrew, and is a safe home for the people."
+    "category": "Right",
+    "description": "A Jewish national movement founded by Herzl in 1897 that led to Israel in 1948. It spans labor, revisionist and religious currents and today is expressed in a parliamentary democracy with a strong military, the Law of Return and control of the West Bank.",
+    "phrase": "I want a strong democratic Jewish state in the land of Israel that welcomes every Jew, defends itself with its own arms and preserves Hebrew."
   },
   {
     "id": "sionismo-trabalhista",
@@ -1705,5 +1705,54 @@
     "category": "Libertarian",
     "description": "A world divided into independent city-states and microstates that compete like a market, with free secession, the right of exit and political experimentation, from the medieval free cities to Yarvin's \"patchwork\" and seasteading.",
     "phrase": "I want thousands of sovereign city-states competing for residents, with free secession, the right of exit and each city choosing its own laws."
+  },
+  {
+    "id": "comunismo-de-conselhos",
+    "name": "Council Communism",
+    "category": "Radical Left",
+    "description": "An anti-Leninist Marxist current of Pannekoek, Gorter and Mattick, which holds that workers themselves should run production and power through workers' councils, rejecting the vanguard party, the state and parliamentarism.",
+    "phrase": "I want workers' councils running factories and power through recallable mandates, with no vanguard party, no state and no wage labor."
+  },
+  {
+    "id": "confederalismo-democratico",
+    "name": "Democratic Confederalism",
+    "category": "Left",
+    "description": "A bottom-up self-government model of Abdullah Öcalan, with local assemblies federated into a confederation, ecology, gender equality and a cooperative economy, without a nation-state, put into practice in Rojava.",
+    "phrase": "I want local communes and assemblies federated into a confederation, with gender equality, ecology, a cooperative economy and self-defense, without a nation-state."
+  },
+  {
+    "id": "tradicionalismo",
+    "name": "Traditionalism",
+    "category": "Far-Right",
+    "description": "A current of René Guénon and Julius Evola that sees modernity as the decay of a universal spiritual tradition, defending sacred hierarchy, castes, initiatory order and the primacy of spirit over economics and mass politics.",
+    "phrase": "I want a sacred hierarchical order of castes and initiates that puts spirit above money and mass politics, against modernity."
+  },
+  {
+    "id": "aceleracionismo-efetivo",
+    "name": "Effective Accelerationism",
+    "category": "Libertarian",
+    "description": "A movement born online in 2022 that argues for accelerating AI, energy and innovation through the market and without regulation, treating technological progress as a moral imperative and rejecting advocates of slowing down.",
+    "phrase": "I want to accelerate AI, energy and innovation through the free market, with no regulation or degrowth, treating technological progress as a moral duty."
+  },
+  {
+    "id": "democracia-direta",
+    "name": "Direct Democracy",
+    "category": "Center",
+    "description": "A system in which citizens decide laws directly through referendums, popular initiatives, assemblies and recall of officials, instead of delegating to representatives, as in the Swiss cantons and classical Athens.",
+    "phrase": "I want citizens to decide laws through referendums, popular initiatives and recall of officials, with power decentralized to municipalities and cantons."
+  },
+  {
+    "id": "iluminismo-sombrio",
+    "name": "Dark Enlightenment",
+    "category": "Far-Right",
+    "description": "A intellectual current of Nick Land and Curtis Yarvin that attacks democracy, egalitarianism and the academic-media \"Cathedral\", defends autocratic government and exit, and harbors strands of race realism and accelerationism.",
+    "phrase": "I want to replace democracy and egalitarianism with strong sovereigns, natural hierarchy and free microstates that speed up technology, beyond the Cathedral."
+  },
+  {
+    "id": "neocameralismo",
+    "name": "Neocameralism",
+    "category": "Right",
+    "description": "A doctrine of Curtis Yarvin that proposes running the state as a joint-stock company: shareholders, a sovereign CEO, citizens as customers who can leave, guaranteed private property and politics replaced by management.",
+    "phrase": "I want a state run as a company, with shareholders and a sovereign CEO, no politics or elections, where citizens are customers free to leave."
   }
 ]

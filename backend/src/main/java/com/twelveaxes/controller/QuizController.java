@@ -10,6 +10,7 @@ import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.AxisOutlierService;
 import com.twelveaxes.service.AxisTensionService;
+import com.twelveaxes.service.BoundedCache;
 import com.twelveaxes.service.BookRecommendationService;
 import com.twelveaxes.service.DimensionMatcherService;
 import com.twelveaxes.service.CountryMatcherService;
@@ -35,6 +36,13 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 public class QuizController {
+    // Os resultados sao deterministicos: mesmo vetor, idioma e religiao geram sempre a mesma
+    // resposta. O limite mantem a memoria do plano pequeno do Render sob controle.
+    private static final int RESULT_CACHE_ENTRIES = 2_000;
+    private static final int QUIZ_CACHE_ENTRIES = 16;
+
+    private final BoundedCache<String, QuizResult> resultCache = new BoundedCache<>(RESULT_CACHE_ENTRIES);
+    private final BoundedCache<String, QuizPayload> quizCache = new BoundedCache<>(QUIZ_CACHE_ENTRIES);
     private final QuizDataService dataService;
     private final ScoringService scoringService;
     private final IdeologyMatcherService matcherService;
@@ -76,7 +84,8 @@ public class QuizController {
             @RequestParam(defaultValue = QuizDataService.SHORT_VARIANT) String variant,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
-        return dataService.getQuiz(variant, lang);
+        String key = dataService.normalizeVariant(variant) + "|" + QuizDataService.normalizeLang(lang);
+        return quizCache.get(key, () -> dataService.getQuiz(variant, lang));
     }
 
     @PostMapping("/api/results")
@@ -103,6 +112,17 @@ public class QuizController {
     }
 
     private QuizResult buildResult(List<AxisResult> axes, String lang, String religion) {
+        return resultCache.get(resultKey(axes, lang, religion), () -> computeResult(axes, lang, religion));
+    }
+
+    // O resultado depende so dos 12 percentuais (o resto vem do idioma), entao eles formam a chave.
+    private static String resultKey(List<AxisResult> axes, String lang, String religion) {
+        StringBuilder key = new StringBuilder(lang).append('|').append(religion).append('|');
+        axes.forEach(axis -> key.append(axis.leftPercent()).append(','));
+        return key.toString();
+    }
+
+    private QuizResult computeResult(List<AxisResult> axes, String lang, String religion) {
         var matches = matcherService.findMatches(axes, lang, religion);
         var personalityMatches = personalityMatcherService.findMatches(axes, lang, religion);
         var topPersonality = personalityMatches.getFirst();

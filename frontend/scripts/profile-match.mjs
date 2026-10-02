@@ -96,3 +96,28 @@ export function dimensionMatches(user, items, vectorOf, excludeIds = []) {
   }
   return out;
 }
+
+// ── Filtro de religião ──────────────────────────────────────────────────────
+// Porte de ReligionFilter.java. Na tela de resultado o usuário escolhe uma
+// religião e o ranking exclui os perfis ligados só a outras religiões; "only"
+// torna o perfil exclusivo de quem escolheu uma das religiões listadas.
+export const SELECTABLE_RELIGIONS = ['christianity', 'judaism', 'islam', 'buddhism'];
+const ONLY = 'only';
+
+export function religionAllows(religions, preference) {
+  if (!religions || religions.length === 0) return true;
+  if (religions.includes(ONLY)) return preference != null && religions.includes(preference);
+  if (preference == null) return true;
+  return religions.includes(preference) || !religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
+}
+
+// Nas páginas de perfil, a religião do próprio perfil faz o papel da escolha
+// do usuário: um perfil cristão só vê, nos rankings, perfis compatíveis com o
+// cristianismo (some o "only" de outras religiões); um perfil sem religião
+// selecionável equivale a "nenhuma" e também não vê perfis "only".
+// Com mais de uma religião, basta o item servir a uma delas.
+export function religionVisibility(subject) {
+  const prefs = (subject?.religions ?? []).filter((r) => SELECTABLE_RELIGIONS.includes(r));
+  if (prefs.length === 0) return (item) => religionAllows(item.religions, null);
+  return (item) => prefs.some((pref) => religionAllows(item.religions, pref));
+}

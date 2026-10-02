@@ -1,5 +1,6 @@
 import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
+import { NEW_ISSUE_URL } from '../../data/repo';
 
 export function Logo({ onClick }: { onClick?: () => void }) {
   const content = (
@@ -23,7 +24,14 @@ export function SiteFooter() {
     <footer className="ed e-foot">
       <div className="e-wrap">
         <Logo />
-        <p>{t.footerTagline}</p>
+        <nav className="e-foot-links" aria-label={t.feedbackTitle}>
+          <a className="e-btn e-btn-ghost e-btn-sm" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
+            {t.feedbackReport}
+          </a>
+          <a className="e-btn e-btn-ghost e-btn-sm" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
+            {t.feedbackSuggest}
+          </a>
+        </nav>
       </div>
     </footer>
   );

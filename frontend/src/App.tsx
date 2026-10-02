@@ -11,6 +11,14 @@ import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { parseReligion, RELIGIONS, type Religion } from './utils/religion';
+import {
+  answeredCount as savedAnsweredCount,
+  clearProgress,
+  loadProgress,
+  restoreQuiz,
+  saveProgress,
+  type SavedProgress
+} from './utils/quizProgress';
 import { RELIGION_ICONS, RELIGION_QUESTION_ICON } from './data/religionIcons';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'archetype' | 'results';
@@ -149,6 +157,10 @@ function MainApp() {
   const [archetypeChoices, setArchetypeChoices] = useState<Record<string, string>>({});
   const [archetypeDone, setArchetypeDone] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Quiz deixado pela metade em outra visita (ou antes de um erro/recarga).
+  const [savedProgress, setSavedProgress] = useState<SavedProgress | null>(() =>
+    SHARED_RESULT_VALUES ? null : loadProgress()
+  );
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
   // Pool completo (240 perguntas) recebido do backend, guardado para poder
@@ -178,6 +190,17 @@ function MainApp() {
     fetchQuiz(INITIAL_VARIANT)
       .then((payload) => {
         poolRef.current = payload;
+        // Quem recarrega /240questions no meio do quiz continua de onde parou.
+        const saved = loadProgress();
+        const restored = saved && saved.variant === INITIAL_VARIANT ? restoreQuiz(payload, saved) : null;
+        if (saved && restored) {
+          applyProgress(restored, saved);
+          return;
+        }
+        if (saved) {
+          clearProgress();
+          setSavedProgress(null);
+        }
         setQuiz(buildQuizForVariant(payload, INITIAL_VARIANT));
         setScreen('quiz');
       })
@@ -244,6 +267,24 @@ function MainApp() {
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
 
+  // Guarda o andamento a cada resposta: se a página recarregar ou quebrar, dá para continuar.
+  useEffect(() => {
+    if (!quiz || (screen !== 'quiz' && screen !== 'archetype')) {
+      return;
+    }
+    if (Object.keys(answers).length === 0 && Object.keys(archetypeChoices).length === 0) {
+      return;
+    }
+    saveProgress({
+      variant: quiz.variant ?? selectedVariant,
+      questionIds: quiz.questions.map((question) => question.id),
+      answers,
+      archetypeChoices,
+      stage: screen === 'archetype' ? 'archetype' : 'quiz',
+      index: screen === 'archetype' ? archetypeIndex : currentIndex
+    });
+  }, [quiz, screen, answers, archetypeChoices, currentIndex, archetypeIndex, selectedVariant]);
+
   const resultByAxis = useMemo(() => {
     if (!result) {
       return new Map<string, QuizResult['axes'][number]>();
@@ -293,6 +334,8 @@ function MainApp() {
   async function startQuiz(variant: QuizVariant = selectedVariant) {
     clearPendingAdvance();
     resetSharedUrl();
+    clearProgress();
+    setSavedProgress(null);
     setSelectedVariant(variant);
     setAnswers({});
     setResult(null);
@@ -313,6 +356,61 @@ function MainApp() {
     } finally {
       setIsLoading(false);
     }
+  }
+
+  // Põe na tela um quiz guardado: mesmas perguntas, respostas e posição.
+  function applyProgress(restored: QuizPayload, saved: SavedProgress) {
+    const lastQuestion = Math.max(0, restored.questions.length - 1);
+    const archetypeCount = (restored.archetypeQuestions?.length ?? 0) + 1;
+    setSelectedVariant(saved.variant);
+    setQuiz(restored);
+    setAnswers(saved.answers);
+    setArchetypeChoices(saved.archetypeChoices);
+    setArchetypeDone(false);
+    setResult(null);
+    setError(null);
+    if (saved.stage === 'archetype') {
+      setCurrentIndex(lastQuestion);
+      setArchetypeIndex(Math.min(saved.index, archetypeCount - 1));
+      setScreen('archetype');
+    } else {
+      setCurrentIndex(Math.min(saved.index, lastQuestion));
+      setArchetypeIndex(0);
+      setScreen('quiz');
+    }
+  }
+
+  async function resumeProgress() {
+    if (!savedProgress) {
+      return;
+    }
+    clearPendingAdvance();
+    setError(null);
+    setIsLoading(true);
+    try {
+      const payload = await fetchQuiz(savedProgress.variant);
+      const restored = restoreQuiz(payload, savedProgress);
+      if (!restored) {
+        // As perguntas mudaram depois de um deploy: não dá para continuar com segurança.
+        clearProgress();
+        setSavedProgress(null);
+        setError(t.resumeUnavailable);
+        return;
+      }
+      poolRef.current = payload;
+      resetSharedUrl();
+      applyProgress(restored, savedProgress);
+      setSavedProgress(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t.errLoadQuiz);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  function discardProgress() {
+    clearProgress();
+    setSavedProgress(null);
   }
 
   function clearPendingAdvance() {
@@ -477,6 +575,7 @@ function MainApp() {
         chosenReligion
       );
       setResult(nextResult);
+      clearProgress();
       setIsSharedView(false);
       setReligion(chosenReligion);
       // URL compartilhável: quem abrir este link vê o mesmo resultado.
@@ -641,6 +740,42 @@ function MainApp() {
         </div>
       </header>
       <span id="conteudo-principal" className="skip-target" tabIndex={-1} />
+
+      {screen === 'home' && (savedProgress || error) && (
+        <div className="ed e-resume" role="status" aria-live="polite">
+          <div className="e-wrap">
+            <div className="e-resume-card e-dark">
+              {savedProgress && (
+                <>
+                  <div className="e-resume-body">
+                    <p className="e-eyebrow">{t.resumeEyebrow}</p>
+                    <h3>{t.resumeTitle}</h3>
+                    <p className="e-resume-text">
+                      {t.resumeBody(savedAnsweredCount(savedProgress), savedProgress.questionIds.length)}
+                    </p>
+                    <div className="e-resume-bar" aria-hidden="true">
+                      <span
+                        style={{
+                          width: `${Math.max(2, Math.round((savedAnsweredCount(savedProgress) / savedProgress.questionIds.length) * 100))}%`
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="e-resume-actions">
+                    <button className="e-btn e-btn-light" type="button" onClick={() => void resumeProgress()}>
+                      {t.resumeContinue} <ArrowIcon />
+                    </button>
+                    <button className="e-btn e-btn-ghost" type="button" onClick={discardProgress}>
+                      {t.resumeDiscard}
+                    </button>
+                  </div>
+                </>
+              )}
+              {error && <p className="e-resume-error" role="alert">{error}</p>}
+            </div>
+          </div>
+        </div>
+      )}
 
       {screen === 'home' && (
         <HomeScreen

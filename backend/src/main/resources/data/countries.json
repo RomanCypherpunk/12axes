@@ -1711,7 +1711,7 @@
     "id": "armenia",
     "name": "Armênia",
     "category": "República nacional-diaspórica",
-    "description": "República semipresidencialista do Cáucaso, a Armênia combina identidade nacional cristã, memória do genocídio de 1915 e rivalidade histórica com o Azerbaijão e a Turquia, buscando equilíbrio entre Rússia, Ocidente e Irã.",
+    "description": "República semipresidencialista do Cáucaso, a Armênia combina identidade nacional cristã e rivalidade histórica com o Azerbaijão e a Turquia, buscando equilíbrio entre Rússia, Ocidente e Irã.",
     "flagPath": "/countries/flags/armenia.png",
     "historical": false,
     "period": "",
@@ -2474,7 +2474,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/Category:Kingdom_of_Israel",
     "flagNote": "Reconstrução moderna feita por usuário do Reddit, usada por solicitação do usuário; o link aponta para a categoria do Reino de Israel no Wikimedia Commons, que não hospeda esta imagem. Não há bandeira atestada do Reino de Israel, e a estrela de seis pontas como emblema é posterior ao período.",
-    "religions": ["judaism"]
+    "religions": ["judaism", "only"]
   },
   {
     "id": "inglaterra",
@@ -2490,5 +2490,227 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_England.svg",
     "flagNote": "Cruz de São Jorge, bandeira da Inglaterra, usada como referência visual da nação.",
     "religions": []
+  },
+  {
+    "id": "eua-vermont",
+    "name": "Vermont (Estados Unidos)",
+    "category": "Região progressista-comunitária",
+    "description": "Pequeno estado rural da Nova Inglaterra, Vermont combina assembleias municipais de democracia direta, política progressista de Bernie Sanders, cooperativas, laticínios e ambientalismo, com uma das populações menos religiosas do país e leis de armas permissivas.",
+    "flagPath": "/countries/flags/eua-vermont.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Vermont.svg",
+    "flagNote": "Bandeira do estado de Vermont (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "eua-utah",
+    "name": "Utah (Estados Unidos)",
+    "category": "Região conservadora-comunitária",
+    "description": "Estado do oeste dos Estados Unidos de maioria mórmon, Utah combina a influência da Igreja SUD sobre família e costumes, imposto de renda de alíquota única, orçamento equilibrado, setor de tecnologia pujante, acolhida a refugiados e controle estrito do álcool.",
+    "flagPath": "/countries/flags/eua-utah.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Utah.svg",
+    "flagNote": "Bandeira do estado de Utah (Estados Unidos) usada como referência visual da região.",
+    "religions": [
+      "christianity"
+    ]
+  },
+  {
+    "id": "eua-alasca",
+    "name": "Alasca (Estados Unidos)",
+    "category": "Região rentista-fronteiriça",
+    "description": "Maior estado dos Estados Unidos e um dos menos povoados, o Alasca vive do petróleo, paga um dividendo anual a cada residente pelo Fundo Permanente, não cobra imposto de renda estadual e tem forte cultura de armas, corporações nativas e desconfiança do governo federal.",
+    "flagPath": "/countries/flags/eua-alasca.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Alaska.svg",
+    "flagNote": "Bandeira do estado do Alasca (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "treze-colonias",
+    "name": "Treze Colônias Britânicas",
+    "category": "Colônias autogovernadas-mercantis",
+    "description": "Colônias britânicas da costa atlântica norte-americana, com assembleias de proprietários brancos, governadores nomeados pela Coroa, igrejas oficiais e dissidentes, comércio sob as Leis de Navegação, escravidão no Sul e expansão sobre terras indígenas.",
+    "flagPath": "/countries/flags/treze-colonias.png",
+    "historical": true,
+    "period": "c. 1732–1776",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1776–1777).svg",
+    "flagNote": "Grand Union Flag (Continental Colors), usada pelas colônias em 1775–1776; as colônias não tinham bandeira comum antes disso, e esta é a mais próxima do período.",
+    "religions": [
+      "christianity"
+    ]
+  },
+  {
+    "id": "eua-pensilvania",
+    "name": "Pensilvânia (Estados Unidos)",
+    "category": "Região industrial-dividida",
+    "description": "Estado industrial do nordeste dos EUA e berço da Constituição, a Pensilvânia divide-se entre Filadélfia e Pittsburgh democratas e um interior conservador, com gás de xisto, tradição sindical, cultura de caça e monopólio estatal de vinhos e destilados.",
+    "flagPath": "/countries/flags/eua-pensilvania.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Pennsylvania.svg",
+    "flagNote": "Bandeira do estado da Pensilvânia (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "eua-illinois",
+    "name": "Illinois (Estados Unidos)",
+    "category": "Região metropolitana-sindical",
+    "description": "Estado do Meio-Oeste dominado por Chicago, Illinois combina máquina política democrata e histórico de corrupção, sindicatos do setor público fortes, enorme dívida previdenciária, leis de armas rígidas, costumes liberalizados e um interior agrícola conservador.",
+    "flagPath": "/countries/flags/eua-illinois.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Illinois.svg",
+    "flagNote": "Bandeira do estado de Illinois (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "vice-reino-da-nova-espanha",
+    "name": "Vice-reino da Nova Espanha",
+    "category": "Vice-reino católico-burocrático",
+    "description": "Vice-reino espanhol que abrangia México, América Central, o sudoeste atual dos EUA e as Filipinas, governado por vice-rei e audiências sob o patronato régio, com Inquisição, sociedade de castas, haciendas, mineração de prata e comércio monopolizado pela Coroa.",
+    "flagPath": "/countries/flags/vice-reino-da-nova-espanha.png",
+    "historical": true,
+    "period": "1535–1821",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cross_of_Burgundy.svg",
+    "flagNote": "Cruz de Borgonha, estandarte militar da Coroa espanhola usado em todo o império, inclusive na Nova Espanha; o vice-reino não teve bandeira própria.",
+    "religions": [
+      "christianity"
+    ]
+  },
+  {
+    "id": "groenlandia",
+    "name": "Groenlândia (Dinamarca)",
+    "category": "Território autônomo ártico-social",
+    "description": "Território autônomo do Reino da Dinamarca, a Groenlândia tem governo e parlamento próprios, maioria inuíte, economia de pesca sustentada por subsídio dinamarquês, saúde e educação públicas, debate sobre independência e disputa ártica por minerais e bases militares.",
+    "flagPath": "/countries/flags/groenlandia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Greenland.svg",
+    "flagNote": "Bandeira da Groenlândia (Erfalasorput), território autônomo do Reino da Dinamarca.",
+    "religions": []
+  },
+  {
+    "id": "lituania",
+    "name": "Lituânia",
+    "category": "República semipresidencialista atlantista",
+    "description": "República semipresidencialista báltica, a Lituânia saiu da URSS em 1990 e integra a UE, o euro e a OTAN, com forte hostilidade à Rússia, gasto militar elevado, apoio à Ucrânia, economia aberta e sociedade de maioria católica em secularização.",
+    "flagPath": "/countries/flags/lituania.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Lithuania.svg",
+    "flagNote": "Bandeira nacional da Lituânia.",
+    "religions": []
+  },
+  {
+    "id": "letonia",
+    "name": "Letônia",
+    "category": "República parlamentarista nacional-atlantista",
+    "description": "República parlamentarista báltica, a Letônia combina UE, OTAN e economia aberta com defesa do idioma letão, cidadania negada a parte da minoria russófona, desconfiança da Rússia e uma sociedade luterana, católica e ortodoxa, muito secularizada.",
+    "flagPath": "/countries/flags/letonia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Latvia.svg",
+    "flagNote": "Bandeira nacional da Letônia.",
+    "religions": []
+  },
+  {
+    "id": "romenia",
+    "name": "Romênia",
+    "category": "República semipresidencialista ortodoxa-atlantista",
+    "description": "República semipresidencialista de maioria ortodoxa, a Romênia herda o regime de Ceaușescu e combina UE, OTAN e bases americanas com imposto único baixo, luta anticorrupção, nacionalismo crescente, Igreja influente e a anulação da eleição presidencial de 2024.",
+    "flagPath": "/countries/flags/romenia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania.svg",
+    "flagNote": "Bandeira nacional da Romênia.",
+    "religions": [
+      "christianity"
+    ]
+  },
+  {
+    "id": "bulgaria",
+    "name": "Bulgária",
+    "category": "República parlamentarista oligárquica-ortodoxa",
+    "description": "República parlamentarista de maioria ortodoxa, a Bulgária integra a UE e a OTAN, com imposto único baixo, instabilidade política crônica, oligarcas e corrupção, laços históricos com a Rússia, usina nuclear, minoria romani e leis conservadoras sobre gênero.",
+    "flagPath": "/countries/flags/bulgaria.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bulgaria.svg",
+    "flagNote": "Bandeira nacional da Bulgária.",
+    "religions": []
+  },
+  {
+    "id": "croacia",
+    "name": "Croácia",
+    "category": "República parlamentarista católico-turística",
+    "description": "República parlamentarista católica, a Croácia integra a UE, o euro, Schengen e a OTAN, com turismo adriático dominante, governos duradouros da HDZ, memória contestada da guerra de independência, minoria sérvia e Igreja influente em temas de família.",
+    "flagPath": "/countries/flags/croacia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Croatia.svg",
+    "flagNote": "Bandeira nacional da Croácia.",
+    "religions": [
+      "christianity"
+    ]
+  },
+  {
+    "id": "chipre",
+    "name": "Chipre",
+    "category": "República presidencialista dividida",
+    "description": "República presidencialista da UE, dividida desde a invasão turca de 1974, com o norte ocupado reconhecido só pela Turquia, Igreja Ortodoxa influente, economia de serviços e finanças, bases britânicas soberanas, partido comunista forte e plano de paz rejeitado em 2004.",
+    "flagPath": "/countries/flags/chipre.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cyprus.svg",
+    "flagNote": "Bandeira nacional de Chipre (a república reconhecida internacionalmente).",
+    "religions": [
+      "christianity"
+    ]
   }
 ]

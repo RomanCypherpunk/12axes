@@ -467,7 +467,7 @@ public class QuizDataService {
         };
     }
 
-    private String normalizeVariant(String variant) {
+    public String normalizeVariant(String variant) {
         if (variant == null || variant.isBlank()) {
             return SHORT_VARIANT;
         }

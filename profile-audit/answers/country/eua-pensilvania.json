@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "Estado dos EUA com constituição própria, cerca de 2.500 municípios e 500 distritos escolares, ciente de seus direitos estaduais e com forte poder local, mas berço da Constituição federal e unionista desde Gettysburg.",
+    "answers": {
+      "estrutura_06": "DT", "estrutura_01": "C", "estrutura_05": "CT", "estrutura_16": "D", "estrutura_04": "D",
+      "estrutura_13": "D", "estrutura_20": "D", "estrutura_15": "C", "estrutura_18": "C", "estrutura_17": "C",
+      "estrutura_19": "C", "estrutura_12": "N", "estrutura_09": "D", "estrutura_02": "D", "estrutura_08": "N",
+      "estrutura_07": "C", "estrutura_11": "C", "estrutura_14": "D", "estrutura_03": "CT", "estrutura_10": "D"
+    }
+  },
+  "representacao": {
+    "personaBrief": "Estado pêndulo onde as eleições se decidem voto a voto, governador com limite de dois mandatos e alternância regular entre partidos; sem iniciativa popular nem recall estaduais, mas com orgulho da tradição democrática da Filadélfia.",
+    "answers": {
+      "representacao_01": "CT", "representacao_05": "CT", "representacao_20": "DT", "representacao_11": "C", "representacao_04": "D",
+      "representacao_03": "CT", "representacao_08": "DT", "representacao_12": "DT", "representacao_17": "D", "representacao_14": "D",
+      "representacao_13": "CT", "representacao_09": "N", "representacao_02": "D", "representacao_15": "CT", "representacao_19": "CT",
+      "representacao_06": "D", "representacao_16": "DT", "representacao_18": "D", "representacao_10": "DT", "representacao_07": "CT"
+    }
+  },
+  "poder": {
+    "personaBrief": "Cultura de caça e armas muito difundidas, pena de morte ainda prevista em lei (sob moratória), maconha só medicinal mas com maioria a favor de legalizar, jogo amplamente legalizado e uma desconfiança tipicamente americana da vigilância estatal.",
+    "answers": {
+      "poder_03": "D", "poder_15": "C", "poder_13": "D", "poder_02": "C", "poder_12": "N",
+      "poder_17": "D", "poder_20": "C", "poder_18": "C", "poder_14": "C", "poder_16": "C",
+      "poder_11": "C", "poder_06": "D", "poder_01": "C", "poder_19": "D", "poder_04": "C",
+      "poder_10": "CT", "poder_05": "N", "poder_07": "D", "poder_09": "D", "poder_08": "DT"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Estado de herança imigrante (alemães da Pensilvânia, irlandeses, italianos, eslavos) com uma Filadélfia diversa e um interior que votou em Trump também por causa da imigração; espera-se o inglês e a integração, mas com orgulho das culturas de origem.",
+    "answers": {
+      "imigracao_09": "N", "imigracao_10": "C", "imigracao_06": "C", "imigracao_19": "D", "imigracao_04": "C",
+      "imigracao_15": "C", "imigracao_07": "C", "imigracao_20": "D", "imigracao_17": "N", "imigracao_13": "C",
+      "imigracao_11": "C", "imigracao_08": "C", "imigracao_02": "N", "imigracao_18": "D", "imigracao_05": "C",
+      "imigracao_03": "D", "imigracao_01": "C", "imigracao_14": "C", "imigracao_16": "C", "imigracao_12": "N"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Eleitorado de classe trabalhadora com muitos veteranos e uma indústria de defesa relevante (robótica de Pittsburgh, fábricas de munição), que apoia Forças Armadas fortes, mas prefere a diplomacia antes de novas guerras.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "D", "diplomacia_15": "C", "diplomacia_19": "C", "diplomacia_11": "CT",
+      "diplomacia_05": "N", "diplomacia_12": "C", "diplomacia_10": "N", "diplomacia_17": "N", "diplomacia_03": "C",
+      "diplomacia_07": "C", "diplomacia_06": "C", "diplomacia_14": "D", "diplomacia_20": "C", "diplomacia_16": "C",
+      "diplomacia_01": "CT", "diplomacia_04": "C", "diplomacia_13": "C", "diplomacia_09": "D", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Dividido entre o internacionalismo atlantista dos líderes estaduais (apoio à OTAN, à Ucrânia e a Israel) e o 'América Primeiro' do interior, mas unido na defesa assertiva dos interesses nacionais, sobretudo econômicos.",
+    "answers": {
+      "intervencao_01": "N", "intervencao_14": "N", "intervencao_20": "C", "intervencao_19": "D", "intervencao_08": "C",
+      "intervencao_13": "C", "intervencao_12": "C", "intervencao_04": "C", "intervencao_18": "C", "intervencao_11": "D",
+      "intervencao_05": "D", "intervencao_02": "C", "intervencao_10": "C", "intervencao_09": "N", "intervencao_16": "C",
+      "intervencao_06": "CT", "intervencao_03": "D", "intervencao_07": "D", "intervencao_17": "D", "intervencao_15": "D"
+    }
+  },
+  "economia": {
+    "personaBrief": "Economia de mercado com sindicatos fortes (mineiros, metalúrgicos, professores), monopólio estatal de vinhos e destilados que resiste a sucessivas tentativas de privatização e Medicaid expandido, mas com respeito arraigado à propriedade privada.",
+    "answers": {
+      "economia_05": "D", "economia_06": "D", "economia_07": "C", "economia_13": "C", "economia_03": "C",
+      "economia_14": "C", "economia_19": "C", "economia_16": "D", "economia_17": "C", "economia_12": "N",
+      "economia_04": "N", "economia_11": "C", "economia_18": "C", "economia_15": "D", "economia_20": "D",
+      "economia_01": "DT", "economia_10": "DT", "economia_09": "N", "economia_02": "N", "economia_08": "C"
+    }
+  },
+  "controle": {
+    "personaBrief": "Imposto de renda de alíquota única baixa e corte do imposto corporativo convivem com subsídios estaduais à indústria e ao gás de xisto, oposição bipartidária à venda da U.S. Steel e populismo econômico; salário mínimo estagnado em US$ 7,25.",
+    "answers": {
+      "controle_05": "C", "controle_20": "C", "controle_19": "C", "controle_14": "N", "controle_07": "C",
+      "controle_04": "D", "controle_02": "D", "controle_17": "D", "controle_16": "C", "controle_10": "C",
+      "controle_06": "C", "controle_08": "C", "controle_13": "D", "controle_01": "N", "controle_11": "C",
+      "controle_03": "D", "controle_15": "C", "controle_12": "N", "controle_18": "D", "controle_09": "N"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Coração do Cinturão da Ferrugem, ferido pela desindustrialização e com protecionismo bipartidário no aço e na manufatura ('Buy American', tarifas contra a China, veto à compra estrangeira da U.S. Steel), mas aberto a investimento estrangeiro que gere empregos.",
+    "answers": {
+      "comercio_13": "CT", "comercio_06": "D", "comercio_12": "C", "comercio_20": "D", "comercio_15": "CT",
+      "comercio_19": "C", "comercio_04": "N", "comercio_17": "C", "comercio_07": "C", "comercio_02": "D",
+      "comercio_03": "C", "comercio_10": "N", "comercio_16": "D", "comercio_09": "C", "comercio_05": "D",
+      "comercio_11": "C", "comercio_01": "C", "comercio_18": "C", "comercio_08": "D", "comercio_14": "D"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Fundada por quacres sob tolerância religiosa, a Pensilvânia tem uma religiosidade moderada e cultural (católicos, protestantes tradicionais, amish e menonitas no interior; cidades mais seculares) e defende a separação entre Igreja e Estado sem hostilidade à fé.",
+    "answers": {
+      "religiao_02": "N", "religiao_11": "D", "religiao_19": "N", "religiao_03": "C", "religiao_10": "C",
+      "religiao_13": "D", "religiao_12": "N", "religiao_15": "D", "religiao_18": "D", "religiao_05": "D",
+      "religiao_01": "C", "religiao_14": "D", "religiao_06": "C", "religiao_16": "C", "religiao_08": "DT",
+      "religiao_07": "N", "religiao_09": "C", "religiao_17": "D", "religiao_20": "N", "religiao_04": "D"
+    }
+  },
+  "moral": {
+    "personaBrief": "Estado dividido entre cidades liberais e interior tradicional: aceita o casamento gay e o aborto legal até 24 semanas, mas mantém valores familiares, cultura de caça e ceticismo diante de pautas identitárias mais recentes.",
+    "answers": {
+      "moral_07": "C", "moral_04": "C", "moral_15": "D", "moral_12": "C", "moral_03": "N",
+      "moral_01": "C", "moral_09": "C", "moral_06": "D", "moral_19": "D", "moral_02": "C",
+      "moral_05": "D", "moral_17": "D", "moral_13": "D", "moral_11": "N", "moral_10": "N",
+      "moral_18": "D", "moral_16": "N", "moral_14": "C", "moral_08": "C", "moral_20": "C"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Estado industrial e energético (fraturamento hidráulico do xisto de Marcellus, carvão, aço) com Pittsburgh como polo de robótica, IA e medicina, mas também com agricultura forte, caça, tradição amish e sindicatos receosos da automação.",
+    "answers": {
+      "tecnologia_01": "C", "tecnologia_13": "N", "tecnologia_19": "C", "tecnologia_12": "D", "tecnologia_18": "N",
+      "tecnologia_10": "D", "tecnologia_05": "C", "tecnologia_04": "N", "tecnologia_16": "D", "tecnologia_07": "D",
+      "tecnologia_08": "D", "tecnologia_03": "D", "tecnologia_15": "N", "tecnologia_20": "D", "tecnologia_06": "D",
+      "tecnologia_09": "C", "tecnologia_17": "D", "tecnologia_02": "D", "tecnologia_14": "C", "tecnologia_11": "C"
+    }
+  },
+  "archetype": { "sociedade": "B", "poder": "C", "economia": "C", "mundo": "B", "tecnologia": "D" }
+}

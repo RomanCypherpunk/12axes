@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-01T12:18:47Z",
+  "lastUpdated": "2026-10-02T13:18:20Z",
   "personality": {
-    "totalProfiles": 416,
+    "totalProfiles": 418,
     "pending": [],
     "done": [
       "lenin",
@@ -420,11 +420,13 @@
       "helmut-kohl",
       "mark-carney",
       "james-cook",
-      "lachlan-macquarie"
+      "lachlan-macquarie",
+      "andy-burnham",
+      "anthony-albanese"
     ]
   },
   "ideology": {
-    "totalProfiles": 243,
+    "totalProfiles": 250,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -670,11 +672,18 @@
       "teocracia-budista",
       "monarquismo-iluminista",
       "teocracia-judaica",
-      "municipalismo"
+      "municipalismo",
+      "comunismo-de-conselhos",
+      "aceleracionismo-efetivo",
+      "democracia-direta",
+      "confederalismo-democratico",
+      "tradicionalismo",
+      "iluminismo-sombrio",
+      "neocameralismo"
     ]
   },
   "country": {
-    "totalProfiles": 186,
+    "totalProfiles": 200,
     "pending": [],
     "done": [
       "brasil",
@@ -862,7 +871,21 @@
       "china-qing",
       "tibete",
       "reino-de-israel",
-      "inglaterra"
+      "inglaterra",
+      "eua-vermont",
+      "eua-utah",
+      "eua-alasca",
+      "treze-colonias",
+      "eua-pensilvania",
+      "eua-illinois",
+      "vice-reino-da-nova-espanha",
+      "groenlandia",
+      "lituania",
+      "letonia",
+      "romenia",
+      "bulgaria",
+      "croacia",
+      "chipre"
     ]
   }
 }

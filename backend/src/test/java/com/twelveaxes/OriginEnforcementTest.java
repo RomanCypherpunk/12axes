@@ -21,6 +21,8 @@ class OriginEnforcementTest {
     private static final String ALLOWED_ORIGIN = "https://12axes.vercel.app";
     private static final String CLONE_ORIGIN = "https://12axes.net";
     private static final String AXES_VECTOR = "50,50,50,50,50,50,50,50,50,50,50,50";
+    private static final String BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/140.0 Safari/537.36";
+    private static final String FETCH_SITE = "Sec-Fetch-Site";
 
     @Nested
     @SpringBootTest
@@ -32,14 +34,38 @@ class OriginEnforcementTest {
 
         @Test
         void allowsRequestFromAllowlistedOrigin() throws Exception {
-            mockMvc.perform(get("/api/quiz").param("variant", "short").header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN))
+            mockMvc.perform(get("/api/quiz").param("variant", "short")
+                            .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA)
+                            .header(FETCH_SITE, "cross-site"))
                     .andExpect(status().isOk());
         }
 
         @Test
         void allowsRefererFallbackFromAllowlistedOrigin() throws Exception {
-            mockMvc.perform(get("/api/quiz").header(HttpHeaders.REFERER, ALLOWED_ORIGIN + "/resultado"))
+            mockMvc.perform(get("/api/quiz")
+                            .header(HttpHeaders.REFERER, ALLOWED_ORIGIN + "/resultado")
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA)
+                            .header(FETCH_SITE, "cross-site"))
                     .andExpect(status().isOk());
+        }
+
+        @Test
+        void blocksAllowlistedOriginWithoutUserAgent() throws Exception {
+            mockMvc.perform(get("/api/results/by-axes")
+                            .param("v", AXES_VECTOR)
+                            .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
+                            .header(FETCH_SITE, "cross-site"))
+                    .andExpect(status().isForbidden());
+        }
+
+        @Test
+        void blocksForgedOriginWithoutFetchMetadata() throws Exception {
+            mockMvc.perform(get("/api/results/by-axes")
+                            .param("v", AXES_VECTOR)
+                            .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA))
+                    .andExpect(status().isForbidden());
         }
 
         @Test
@@ -53,7 +79,9 @@ class OriginEnforcementTest {
         void blocksRequestFromCloneOrigin() throws Exception {
             mockMvc.perform(get("/api/results/by-axes")
                             .param("v", AXES_VECTOR)
-                            .header(HttpHeaders.ORIGIN, CLONE_ORIGIN))
+                            .header(HttpHeaders.ORIGIN, CLONE_ORIGIN)
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA)
+                            .header(FETCH_SITE, "cross-site"))
                     .andExpect(status().isForbidden());
         }
 
@@ -77,6 +105,29 @@ class OriginEnforcementTest {
                             .header(HttpHeaders.ACCESS_CONTROL_REQUEST_METHOD, "POST"))
                     .andExpect(status().isOk())
                     .andExpect(header().string(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, ALLOWED_ORIGIN));
+        }
+    }
+
+    @Nested
+    @SpringBootTest
+    @AutoConfigureMockMvc
+    @TestPropertySource(properties = {"app.origin-enforcement=true", "app.require-fetch-metadata=false"})
+    class FetchMetadataOptional {
+        @Autowired
+        private MockMvc mockMvc;
+
+        @Test
+        void allowsAllowlistedOriginWithoutFetchMetadataWhenFlagIsOff() throws Exception {
+            mockMvc.perform(get("/api/quiz")
+                            .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA))
+                    .andExpect(status().isOk());
+        }
+
+        @Test
+        void stillRequiresUserAgent() throws Exception {
+            mockMvc.perform(get("/api/quiz").header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN))
+                    .andExpect(status().isForbidden());
         }
     }
 

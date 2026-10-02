@@ -1,7 +1,5 @@
 import { t } from '../i18n';
-
-const REPO = 'RomanCypherpunk/12axes';
-const REPO_URL = `https://github.com/${REPO}`;
+import { NEW_ISSUE_URL, REPO, REPO_URL } from '../data/repo';
 
 const CARD_ICONS = [
   <>
@@ -69,7 +67,7 @@ export function OpenSourceSection() {
                 <path d="M8 7h9v9" />
               </svg>
             </a>
-            <a className="e-oss-btn e-oss-ghost" href={`${REPO_URL}/issues/new`} target="_blank" rel="noopener noreferrer">
+            <a className="e-oss-btn e-oss-ghost" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
               {t.ossIssueCta}
             </a>
           </div>

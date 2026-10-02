@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "O Alasca desconfia profundamente de Washington, que controla cerca de 60% de suas terras, defende autonomia estadual sobre recursos, caça e perfuração, abriga um partido secessionista e reconhece corporações e tribos nativas com direitos próprios.",
+    "answers": {
+      "estrutura_06": "DT", "estrutura_01": "CT", "estrutura_05": "CT", "estrutura_16": "D", "estrutura_04": "DT",
+      "estrutura_13": "C", "estrutura_20": "D", "estrutura_15": "C", "estrutura_18": "D", "estrutura_17": "C",
+      "estrutura_19": "C", "estrutura_12": "D", "estrutura_09": "N", "estrutura_02": "D", "estrutura_08": "D",
+      "estrutura_07": "CT", "estrutura_11": "C", "estrutura_14": "D", "estrutura_03": "CT", "estrutura_10": "D"
+    }
+  },
+  "representacao": {
+    "personaBrief": "Estado de eleitores majoritariamente independentes, com primárias abertas e voto ranqueado (Medida 2), recall, plebiscitos frequentes e limites de mandato: uma cultura democrática participativa e desconfiada de poder concentrado.",
+    "answers": {
+      "representacao_01": "CT", "representacao_05": "C", "representacao_20": "DT", "representacao_11": "CT", "representacao_04": "DT",
+      "representacao_03": "CT", "representacao_08": "DT", "representacao_12": "DT", "representacao_17": "D", "representacao_14": "D",
+      "representacao_13": "C", "representacao_09": "CT", "representacao_02": "D", "representacao_15": "CT", "representacao_19": "C",
+      "representacao_06": "D", "representacao_16": "DT", "representacao_18": "D", "representacao_10": "DT", "representacao_07": "C"
+    }
+  },
+  "poder": {
+    "personaBrief": "Cultura de armas intensa com porte sem licença, maconha legal, direito constitucional à privacidade e sem pena de morte desde 1957: o Alasca é individualista e hostil à vigilância estatal, embora apoie policiamento firme.",
+    "answers": {
+      "poder_03": "DT", "poder_15": "D", "poder_13": "D", "poder_02": "CT", "poder_12": "N",
+      "poder_17": "D", "poder_20": "C", "poder_18": "C", "poder_14": "C", "poder_16": "CT",
+      "poder_11": "N", "poder_06": "N", "poder_01": "C", "poder_19": "D", "poder_04": "CT",
+      "poder_10": "CT", "poder_05": "D", "poder_07": "D", "poder_09": "DT", "poder_08": "D"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Estado com comunidades filipinas e latinas relevantes e 20 línguas nativas oficiais, eleitorado de inclinação republicana mas pouco nativista: espera inglês e adaptação, sem hostilidade forte à diversidade.",
+    "answers": {
+      "imigracao_09": "N", "imigracao_10": "C", "imigracao_06": "C", "imigracao_19": "D", "imigracao_04": "C",
+      "imigracao_15": "N", "imigracao_07": "N", "imigracao_20": "D", "imigracao_17": "D", "imigracao_13": "C",
+      "imigracao_11": "N", "imigracao_08": "C", "imigracao_02": "C", "imigracao_18": "D", "imigracao_05": "C",
+      "imigracao_03": "DT", "imigracao_01": "C", "imigracao_14": "C", "imigracao_16": "C", "imigracao_12": "N"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "O Alasca vive de bases militares (Anchorage, Fairbanks, defesa antimísseis em Fort Greely) e está na fronteira com a Rússia no Ártico, por isso valoriza Forças Armadas fortes e dissuasão, sem ser belicista.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "D", "diplomacia_15": "C", "diplomacia_19": "C", "diplomacia_11": "C",
+      "diplomacia_05": "C", "diplomacia_12": "D", "diplomacia_10": "D", "diplomacia_17": "N", "diplomacia_03": "C",
+      "diplomacia_07": "C", "diplomacia_06": "N", "diplomacia_14": "D", "diplomacia_20": "D", "diplomacia_16": "C",
+      "diplomacia_01": "CT", "diplomacia_04": "C", "diplomacia_13": "C", "diplomacia_09": "D", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Eleitorado e líderes (Murkowski, Sullivan) defendem interesses nacionais e a soberania no Ártico, apoiam alianças e sanções contra adversários, mas sem entusiasmo por aventuras externas.",
+    "answers": {
+      "intervencao_01": "D", "intervencao_14": "N", "intervencao_20": "C", "intervencao_19": "D", "intervencao_08": "C",
+      "intervencao_13": "N", "intervencao_12": "C", "intervencao_04": "N", "intervencao_18": "CT", "intervencao_11": "N",
+      "intervencao_05": "D", "intervencao_02": "C", "intervencao_10": "N", "intervencao_09": "D", "intervencao_16": "C",
+      "intervencao_06": "C", "intervencao_03": "D", "intervencao_07": "D", "intervencao_17": "D", "intervencao_15": "D"
+    }
+  },
+  "economia": {
+    "personaBrief": "Os recursos pertencem ao povo pela constituição e a renda do petróleo volta a cada residente pelo dividendo do Fundo Permanente; o estado tem ferrovia, ferries e agências de fomento, mas a economia é capitalista e sem imposto sobre herança.",
+    "answers": {
+      "economia_05": "D", "economia_06": "N", "economia_07": "C", "economia_13": "N", "economia_03": "C",
+      "economia_14": "D", "economia_19": "C", "economia_16": "D", "economia_17": "C", "economia_12": "C",
+      "economia_04": "C", "economia_11": "C", "economia_18": "C", "economia_15": "DT", "economia_20": "N",
+      "economia_01": "DT", "economia_10": "D", "economia_09": "N", "economia_02": "C", "economia_08": "CT"
+    }
+  },
+  "controle": {
+    "personaBrief": "Sem imposto de renda nem sobre vendas estadual e avesso a regulações, o Alasca ainda assim planeja e subsidia projetos de energia (gasoduto, AIDEA) e aprovou por plebiscito salário mínimo mais alto.",
+    "answers": {
+      "controle_05": "D", "controle_20": "C", "controle_19": "C", "controle_14": "C", "controle_07": "C",
+      "controle_04": "C", "controle_02": "C", "controle_17": "D", "controle_16": "C", "controle_10": "C",
+      "controle_06": "CT", "controle_08": "C", "controle_13": "DT", "controle_01": "C", "controle_11": "N",
+      "controle_03": "D", "controle_15": "N", "controle_12": "C", "controle_18": "D", "controle_09": "D"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Exportador de petróleo, pescado e minérios para a Ásia, o Alasca depende do comércio aberto e de investimento externo, embora proteja sua pesca contra concorrência desleal e desconfie da China em setores estratégicos.",
+    "answers": {
+      "comercio_13": "N", "comercio_06": "C", "comercio_12": "CT", "comercio_20": "C", "comercio_15": "N",
+      "comercio_19": "N", "comercio_04": "CT", "comercio_17": "N", "comercio_07": "D", "comercio_02": "C",
+      "comercio_03": "D", "comercio_10": "C", "comercio_16": "C", "comercio_09": "C", "comercio_05": "DT",
+      "comercio_11": "C", "comercio_01": "D", "comercio_18": "C", "comercio_08": "D", "comercio_14": "C"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Religiosidade baixa a média, com muitos sem religião ao lado de evangélicos e ortodoxos nativos; prevalece a ideia de que fé é assunto pessoal, sem hostilidade à religião.",
+    "answers": {
+      "religiao_02": "D", "religiao_11": "D", "religiao_19": "C", "religiao_03": "C", "religiao_10": "C",
+      "religiao_13": "N", "religiao_12": "N", "religiao_15": "D", "religiao_18": "D", "religiao_05": "D",
+      "religiao_01": "C", "religiao_14": "D", "religiao_06": "N", "religiao_16": "N", "religiao_08": "DT",
+      "religiao_07": "N", "religiao_09": "C", "religiao_17": "D", "religiao_20": "D", "religiao_04": "D"
+    }
+  },
+  "moral": {
+    "personaBrief": "Tolerante em costumes por individualismo (aborto protegido pela privacidade constitucional, maconha legal), mas com cultura rural de caça e família e resistência a pautas identitárias e cotas.",
+    "answers": {
+      "moral_07": "C", "moral_04": "C", "moral_15": "DT", "moral_12": "C", "moral_03": "N",
+      "moral_01": "C", "moral_09": "C", "moral_06": "D", "moral_19": "N", "moral_02": "C",
+      "moral_05": "D", "moral_17": "N", "moral_13": "D", "moral_11": "D", "moral_10": "N",
+      "moral_18": "D", "moral_16": "N", "moral_14": "C", "moral_08": "C", "moral_20": "CT"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Pró-extração de petróleo e minérios (ANWR) e dependente de aviação e tecnologia para conectar o Bush, mas com modo de vida de fronteira, subsistência, pesca e caça que valoriza natureza e rejeita salmão transgênico e carne de laboratório.",
+    "answers": {
+      "tecnologia_01": "C", "tecnologia_13": "DT", "tecnologia_19": "C", "tecnologia_12": "D", "tecnologia_18": "C",
+      "tecnologia_10": "D", "tecnologia_05": "N", "tecnologia_04": "N", "tecnologia_16": "D", "tecnologia_07": "C",
+      "tecnologia_08": "N", "tecnologia_03": "C", "tecnologia_15": "C", "tecnologia_20": "D", "tecnologia_06": "D",
+      "tecnologia_09": "C", "tecnologia_17": "DT", "tecnologia_02": "C", "tecnologia_14": "N", "tecnologia_11": "C"
+    }
+  },
+  "archetype": { "sociedade": "C", "poder": "C", "economia": "C", "mundo": "B", "tecnologia": "D" }
+}

@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import { catalogueDevPlugin } from './scripts/catalogue-dev';
 
 function asyncCssLinkPlugin() {
   return {
@@ -22,7 +23,7 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_API_PROXY_TARGET || 'http://localhost:8080';
 
   return {
-    plugins: [react(), asyncCssLinkPlugin()],
+    plugins: [react(), asyncCssLinkPlugin(), catalogueDevPlugin()],
     test: {
       environment: 'node',
     },

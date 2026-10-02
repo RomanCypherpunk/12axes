@@ -1312,8 +1312,8 @@
     "id": "tecno-monarquismo",
     "name": "Tecno-Monarquismo",
     "category": "Direita",
-    "description": "Corrente que une a monarquia à tecnologia e à gestão eficiente, propondo um soberano que governa como um executivo, apoiado em dados e inovação, para dar estabilidade e direção de longo prazo ao Estado.",
-    "phrase": "Quero uma monarquia que governe como executivo, apoiada em dados e inovação, dando estabilidade e direção de longo prazo ao Estado.",
+    "description": "Variante unitária do neorreacionarismo: um CEO-monarca absoluto governa um Estado centralizado com dados e tecnologia securitária (vigilância, IA), sob capitalismo de mercado, propriedade privada e livre empresa, em nome da estabilidade e da eficiência.",
+    "phrase": "Quero um monarca absoluto com mentalidade de CEO, governando um Estado unitário com dados e tecnologia de segurança e deixando o mercado livre.",
     "vector": null,
     "countryId": "emirados-arabes-unidos",
     "personalityId": "peter-thiel",
@@ -2090,9 +2090,9 @@
   {
     "id": "neotomismo",
     "name": "Neotomismo",
-    "category": "Extrema Direita",
-    "description": "Corrente neorreacionária que combina o pensamento de São Tomás de Aquino com a crítica à democracia liberal, ao igualitarismo e ao progressismo. Fundamenta uma ordem política hierárquica e tradicional na lei natural, na moral objetiva, na razão e no bem comum, admitindo autoridade soberana monárquica ou centralizada.",
-    "phrase": "Quero uma ordem política hierárquica baseada na lei natural, na tradição e no bem comum, sob autoridade soberana que não dependa da vontade da maioria.",
+    "category": "Direita",
+    "description": "Revitalização do pensamento de Tomás de Aquino a partir de 1879 (Leão XIII), com Maritain e Gilson. Funda a política na lei natural, no bem comum e na subsidiariedade, defende governo misto, propriedade com função social e guerra justa, sob a fé católica.",
+    "phrase": "Quero uma ordem política guiada pela lei natural e pelo bem comum, com governo misto e subsidiariedade, onde fé e razão inspirem as leis.",
     "vector": null,
     "countryId": "sacro-imperio-romano-germanico",
     "personalityId": "tomas-de-aquino",
@@ -2540,12 +2540,12 @@
   {
     "id": "sionismo",
     "name": "Sionismo",
-    "category": "Centro",
-    "description": "Movimento nacional judaico fundado por Theodor Herzl em 1897, que buscou um Estado judeu na Terra de Israel como resposta ao antissemitismo e levou à criação de Israel em 1948, unindo nação, língua hebraica e retorno à terra ancestral.",
-    "phrase": "Quero um Estado judeu democrático na terra de Israel, que acolha todo judeu, renove o hebraico e seja um lar seguro para o povo.",
+    "category": "Direita",
+    "description": "Movimento nacional judaico criado por Herzl em 1897 que levou ao Estado de Israel em 1948. Abrange correntes trabalhista, revisionista e religiosa e hoje se expressa numa democracia parlamentar de forte defesa militar, Lei do Retorno e controle da Cisjordânia.",
+    "phrase": "Quero um Estado judeu democrático e forte na terra de Israel, que acolha todo judeu, defenda-se com as próprias armas e preserve o hebraico.",
     "vector": null,
     "countryId": "israel",
-    "personalityId": "theodor-herzl",
+    "personalityId": "david-ben-gurion",
     "religions": ["judaism", "only"]
   },
   {
@@ -2667,6 +2667,83 @@
     "vector": null,
     "countryId": "suica-zug",
     "personalityId": "hoppe",
+    "religions": []
+  },
+  {
+    "id": "comunismo-de-conselhos",
+    "name": "Comunismo de Conselhos",
+    "category": "Esquerda Radical",
+    "description": "Corrente marxista antileninista de Pannekoek, Gorter e Mattick, que defende que os próprios trabalhadores organizem a produção e o poder em conselhos operários, rejeitando partido de vanguarda, Estado e parlamentarismo.",
+    "phrase": "Quero conselhos operários controlando fábricas e poder por mandatos revogáveis, sem partido de vanguarda, sem Estado e sem trabalho assalariado.",
+    "vector": null,
+    "countryId": "comuna-de-paris",
+    "personalityId": "anton-pannekoek",
+    "religions": []
+  },
+  {
+    "id": "confederalismo-democratico",
+    "name": "Confederalismo Democrático",
+    "category": "Esquerda",
+    "description": "Modelo de autogoverno de baixo para cima de Abdullah Öcalan, com assembleias locais federadas em confederação, ecologia, igualdade de gênero e economia cooperativa, sem Estado-nação, posto em prática em Rojava.",
+    "phrase": "Quero comunas e assembleias locais federadas em confederação, com igualdade de gênero, ecologia, economia cooperativa e autodefesa, sem Estado-nação.",
+    "vector": null,
+    "countryId": "rojava",
+    "personalityId": "ocalan",
+    "religions": []
+  },
+  {
+    "id": "tradicionalismo",
+    "name": "Tradicionalismo",
+    "category": "Extrema Direita",
+    "description": "Corrente de René Guénon e Julius Evola que vê a modernidade como decadência de uma tradição espiritual universal, defendendo hierarquia sagrada, castas, ordem iniciática e o primado do espírito sobre a economia e a política de massas.",
+    "phrase": "Quero uma ordem sagrada e hierárquica de castas e iniciados, que ponha o espírito acima do dinheiro e da política de massas, contra a modernidade.",
+    "vector": null,
+    "countryId": "sacro-imperio-romano-germanico",
+    "personalityId": "julius-evola",
+    "religions": ["other"]
+  },
+  {
+    "id": "aceleracionismo-efetivo",
+    "name": "Aceleracionismo Efetivo",
+    "category": "Libertário",
+    "description": "Movimento nascido nas redes em 2022 que defende acelerar IA, energia e inovação por meio do mercado e sem regulação, tratando o avanço tecnológico como imperativo moral e rejeitando os defensores da desaceleração.",
+    "phrase": "Quero acelerar IA, energia e inovação pelo mercado livre, sem regulação nem decrescimento, tratando o progresso tecnológico como dever moral.",
+    "vector": null,
+    "countryId": "eua-california",
+    "personalityId": "ray-kurzweil",
+    "religions": []
+  },
+  {
+    "id": "democracia-direta",
+    "name": "Democracia Direta",
+    "category": "Centro",
+    "description": "Sistema em que os cidadãos decidem diretamente as leis por referendos, iniciativas populares, assembleias e revogação de mandatos, em vez de delegar a representantes, como nos cantões suíços e na Atenas clássica.",
+    "phrase": "Quero que os cidadãos decidam as leis por referendos, iniciativas populares e revogação de mandatos, com poder descentralizado em municípios e cantões.",
+    "vector": null,
+    "countryId": "suica",
+    "personalityId": "thomas-jefferson",
+    "religions": []
+  },
+  {
+    "id": "iluminismo-sombrio",
+    "name": "Iluminismo Sombrio",
+    "category": "Extrema Direita",
+    "description": "Corrente intelectual de Nick Land e Curtis Yarvin, que ataca a democracia, o igualitarismo e a \"Catedral\" acadêmico-midiática, defende governos autocráticos e a saída (exit) e abriga vertentes de realismo racial e aceleracionismo.",
+    "phrase": "Quero trocar democracia e igualitarismo por soberanos fortes, hierarquia natural e microestados livres que acelerem a tecnologia, longe da Catedral acadêmico-midiática.",
+    "vector": null,
+    "countryId": "singapura",
+    "personalityId": "nick-land",
+    "religions": []
+  },
+  {
+    "id": "neocameralismo",
+    "name": "Neocameralismo",
+    "category": "Direita",
+    "description": "Doutrina de Curtis Yarvin que propõe governar o Estado como uma sociedade anônima: acionistas, um CEO soberano, cidadãos como clientes que podem sair, propriedade privada garantida e a política substituída por gestão.",
+    "phrase": "Quero um Estado administrado como empresa, com acionistas e um CEO soberano, sem política nem eleições, onde o cidadão é cliente livre para sair.",
+    "vector": null,
+    "countryId": "singapura",
+    "personalityId": "lee-kuan-yew",
     "religions": []
   }
 ]

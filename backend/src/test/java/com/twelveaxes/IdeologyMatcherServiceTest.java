@@ -125,6 +125,7 @@ class IdeologyMatcherServiceTest {
         assertThat(matches.get(0).ideologyId()).isIn(
                 "alt-lite",
                 "aceleracionismo-de-direita",
+                "iluminismo-sombrio",
                 "capitalismo-autoritario",
                 "alt-right",
                 "neorreacionarismo",

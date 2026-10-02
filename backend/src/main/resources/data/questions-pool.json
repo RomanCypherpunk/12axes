@@ -16,14 +16,14 @@
   {
     "id": "estrutura_03",
     "axisId": "estrutura",
-    "text": "As leis devem ser definidas e os serviços administrados o mais próximo possível da população local.",
+    "text": "As leis sobre assuntos locais devem ser definidas pelos governos municipais ou estaduais.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "estrutura_04",
     "axisId": "estrutura",
-    "text": "Um currículo escolar único para todo o país é melhor do que cada estado ensinar de um jeito.",
+    "text": "Prefiro um currículo escolar nacional único a currículos definidos por cada estado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -37,7 +37,7 @@
   {
     "id": "estrutura_06",
     "axisId": "estrutura",
-    "text": "Uma polícia única e nacional funcionaria melhor do que várias polícias estaduais autônomas.",
+    "text": "Prefiro uma polícia nacional única a várias polícias estaduais autônomas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -163,21 +163,21 @@
   {
     "id": "representacao_04",
     "axisId": "representacao",
-    "text": "Eleitores pouco informados deveriam ter menos influência na escolha dos governantes.",
+    "text": "Prefiro decisões de um pequeno grupo de líderes a poder dividido entre instituições.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "representacao_05",
     "axisId": "representacao",
-    "text": "Cortes constitucionais, como o STF, devem poder barrar leis da maioria que firam a Constituição.",
+    "text": "Cortes independentes, como o STF, devem poder anular decisões do governo.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "representacao_06",
     "axisId": "representacao",
-    "text": "Um líder competente deveria poder governar sem eleições frequentes ou alternância obrigatória de poder.",
+    "text": "Não deveria haver limite de mandatos para um bom governante.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -226,7 +226,7 @@
   {
     "id": "representacao_13",
     "axisId": "representacao",
-    "text": "Cargos públicos poderiam ser sorteados entre cidadãos comuns, como num júri, em vez de eleitos.",
+    "text": "Prefiro a alternância de poder entre partidos a um mesmo grupo governando por décadas.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -261,7 +261,7 @@
   {
     "id": "representacao_18",
     "axisId": "representacao",
-    "text": "Reformas profundas não deveriam ser interrompidas por eleições frequentes ou alternância de poder.",
+    "text": "Governar com eficiência importa mais do que garantir espaço à oposição.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -275,21 +275,21 @@
   {
     "id": "representacao_20",
     "axisId": "representacao",
-    "text": "Prefiro um regime autocrático que garanta ordem, segurança e prosperidade à democracia eleitoral.",
+    "text": "Prefiro um regime autoritário estável a uma democracia instável.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "poder_01",
     "axisId": "poder",
-    "text": "Operações policiais rigorosas são justificáveis para combater o crime em áreas dominadas por facções.",
+    "text": "Operações policiais rigorosas devem ser usadas contra o crime em áreas dominadas por facções.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "poder_02",
     "axisId": "poder",
-    "text": "O consumo de maconha por adultos deveria ser legalizado ou descriminalizado.",
+    "text": "O consumo de maconha por adultos não deveria ser crime.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -387,7 +387,7 @@
   {
     "id": "poder_16",
     "axisId": "poder",
-    "text": "Toda lei que proíbe o que adultos fazem em privado é um abuso do Estado.",
+    "text": "Condutas privadas entre adultos que consintam não deveriam ser criminalizadas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -436,7 +436,7 @@
   {
     "id": "imigracao_03",
     "axisId": "imigracao",
-    "text": "Fechar as fronteiras pode ser necessário para preservar a identidade cultural de um país.",
+    "text": "Sou a favor de fechar as fronteiras à imigração para preservar a identidade cultural do país.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -464,7 +464,7 @@
   {
     "id": "imigracao_07",
     "axisId": "imigracao",
-    "text": "Preservar as tradições nacionais importa mais do que acomodar costumes estrangeiros.",
+    "text": "Prefiro preservar tradições nacionais a acomodar costumes estrangeiros.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -478,7 +478,7 @@
   {
     "id": "imigracao_09",
     "axisId": "imigracao",
-    "text": "Países têm o direito de preferir imigrantes de culturas parecidas com a sua.",
+    "text": "O país deve dar preferência a imigrantes de culturas semelhantes à sua.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -541,7 +541,7 @@
   {
     "id": "imigracao_18",
     "axisId": "imigracao",
-    "text": "As fronteiras deveriam ser abertas: qualquer pessoa pacífica poderia viver em qualquer país.",
+    "text": "As fronteiras deveriam ser abertas para qualquer pessoa pacífica.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -555,7 +555,7 @@
   {
     "id": "imigracao_20",
     "axisId": "imigracao",
-    "text": "A ideia de identidade nacional está ultrapassada: somos todos cidadãos do mundo.",
+    "text": "Prefiro uma identidade de cidadão do mundo a uma identidade nacional.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -576,14 +576,14 @@
   {
     "id": "diplomacia_03",
     "axisId": "diplomacia",
-    "text": "Ataques preventivos são aceitáveis contra inimigos que se preparam para atacar.",
+    "text": "O país deve poder realizar ataques preventivos contra inimigos que se preparam para atacar.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_04",
     "axisId": "diplomacia",
-    "text": "Guerras quase nunca valem a pena, mesmo contra regimes hostis.",
+    "text": "Prefiro evitar uma guerra mesmo quando ela possa trazer vantagens ao país.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -597,28 +597,28 @@
   {
     "id": "diplomacia_06",
     "axisId": "diplomacia",
-    "text": "Negociações diplomáticas devem ter prioridade sobre a expansão do arsenal militar.",
+    "text": "O país deve buscar acordos diplomáticos mesmo que precise fazer concessões a adversários.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "diplomacia_07",
     "axisId": "diplomacia",
-    "text": "O Brasil deveria buscar armas nucleares para não depender da proteção de nenhuma potência.",
+    "text": "O Brasil deveria desenvolver armas nucleares.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "diplomacia_08",
     "axisId": "diplomacia",
-    "text": "Reduzir gastos militares deve ser uma prioridade para diminuir o risco de guerra.",
+    "text": "O país deve reduzir seus gastos militares.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "diplomacia_09",
     "axisId": "diplomacia",
-    "text": "O serviço militar obrigatório é necessário para preparar o país para uma guerra.",
+    "text": "O serviço militar deve ser obrigatório para preparar o país para uma guerra.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -632,7 +632,7 @@
   {
     "id": "diplomacia_11",
     "axisId": "diplomacia",
-    "text": "A capacidade de fabricar armamentos próprios é essencial à defesa nacional.",
+    "text": "O país deve priorizar a fabricação nacional de armamentos para sua defesa.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -646,7 +646,7 @@
   {
     "id": "diplomacia_13",
     "axisId": "diplomacia",
-    "text": "Espionagem e operações militares secretas são ferramentas legítimas de um Estado.",
+    "text": "O Estado deve poder realizar espionagem contra outros países.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -660,7 +660,7 @@
   {
     "id": "diplomacia_15",
     "axisId": "diplomacia",
-    "text": "Drones e armas autônomas dão vantagem decisiva, e o Brasil deveria desenvolvê-los.",
+    "text": "O Brasil deveria desenvolver armas autônomas letais.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -688,7 +688,7 @@
   {
     "id": "diplomacia_19",
     "axisId": "diplomacia",
-    "text": "A paz só existe quando o inimigo sabe que a resposta a um ataque será devastadora.",
+    "text": "O país deve ameaçar uma resposta militar devastadora para dissuadir ataques.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -709,7 +709,7 @@
   {
     "id": "intervencao_02",
     "axisId": "intervencao",
-    "text": "Pressionar outros países é legítimo quando o interesse nacional está em jogo.",
+    "text": "O Brasil deve pressionar outros países quando o interesse nacional está em jogo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -737,7 +737,7 @@
   {
     "id": "intervencao_06",
     "axisId": "intervencao",
-    "text": "O Brasil deve usar seu peso para defender empresas brasileiras no exterior.",
+    "text": "O Brasil deve exercer pressão diplomática para defender interesses brasileiros no exterior.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -772,14 +772,14 @@
   {
     "id": "intervencao_11",
     "axisId": "intervencao",
-    "text": "O Brasil deve evitar integrar blocos geopolíticos fechados.",
+    "text": "O Brasil deve evitar blocos que exijam alinhamento automático com outras potências.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "intervencao_12",
     "axisId": "intervencao",
-    "text": "Influenciar governos vizinhos é aceitável quando aumenta a segurança do Brasil.",
+    "text": "O Brasil deve influenciar governos vizinhos quando isso aumenta sua segurança.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -842,7 +842,7 @@
   {
     "id": "economia_01",
     "axisId": "economia",
-    "text": "Uma revolução pode ser necessária para tirar o poder econômico das mãos de poucos.",
+    "text": "Sou a favor de uma revolução para redistribuir o poder econômico concentrado nas mãos de poucos.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -877,7 +877,7 @@
   {
     "id": "economia_06",
     "axisId": "economia",
-    "text": "Até estradas, polícia e tribunais poderiam ser administrados por empresas privadas.",
+    "text": "Estradas e presídios deveriam poder ser administrados por empresas privadas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -905,7 +905,7 @@
   {
     "id": "economia_10",
     "axisId": "economia",
-    "text": "Cobrar impostos é, no fundo, uma forma de roubo.",
+    "text": "Os impostos deveriam ser voluntários.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -940,7 +940,7 @@
   {
     "id": "economia_15",
     "axisId": "economia",
-    "text": "A reforma agrária ainda é uma medida necessária no Brasil.",
+    "text": "O Brasil deveria redistribuir grandes propriedades rurais por meio de uma reforma agrária.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -968,7 +968,7 @@
   {
     "id": "economia_19",
     "axisId": "economia",
-    "text": "O risco de vender estatais por menos do que valem justifica mantê-las sob controle público.",
+    "text": "Prefiro manter estatais sob controle público, mesmo que possam ser vendidas pelo valor de mercado.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1031,7 +1031,7 @@
   {
     "id": "controle_08",
     "axisId": "controle",
-    "text": "O salário mínimo não deve ser alto demais, pois isso reduz os empregos disponíveis para os mais pobres.",
+    "text": "A preservação de empregos deve ter prioridade sobre aumentos do salário mínimo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1066,7 +1066,7 @@
   {
     "id": "controle_13",
     "axisId": "controle",
-    "text": "Uma economia totalmente planejada pelo Estado funcionaria melhor do que o livre mercado.",
+    "text": "Prefiro uma economia planejada pelo Estado a uma economia de livre mercado.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1087,7 +1087,7 @@
   {
     "id": "controle_16",
     "axisId": "controle",
-    "text": "Um Banco Central independente vale mais do que a vontade política do governo da vez.",
+    "text": "O Banco Central deve decidir a taxa de juros sem precisar de aprovação do governo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1108,7 +1108,7 @@
   {
     "id": "controle_19",
     "axisId": "controle",
-    "text": "O salário mínimo definido por lei protege o trabalhador mais do que a livre negociação.",
+    "text": "Prefiro um salário mínimo definido por lei à livre negociação dos salários.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1171,7 +1171,7 @@
   {
     "id": "comercio_08",
     "axisId": "comercio",
-    "text": "O mundo estaria melhor sem fronteiras econômicas, funcionando como um único mercado global.",
+    "text": "Sou a favor de um mercado global único, sem fronteiras econômicas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1213,7 +1213,7 @@
   {
     "id": "comercio_14",
     "axisId": "comercio",
-    "text": "O comércio internacional deveria ser ampliado para aumentar o desenvolvimento.",
+    "text": "O comércio com outros países deve ser ampliado, mesmo aumentando a dependência econômica.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1227,7 +1227,7 @@
   {
     "id": "comercio_16",
     "axisId": "comercio",
-    "text": "O Brasil deveria reduzir tarifas de importação que encarecem produtos ao consumidor.",
+    "text": "As tarifas de importação devem ser reduzidas, mesmo diminuindo a arrecadação do governo.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1241,14 +1241,14 @@
   {
     "id": "comercio_18",
     "axisId": "comercio",
-    "text": "As multinacionais são benéficas porque geram empregos e qualificam os trabalhadores locais.",
+    "text": "Multinacionais devem poder operar no país, mesmo competindo com empresas locais.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "comercio_19",
     "axisId": "comercio",
-    "text": "Soberania econômica vale mais do que preço baixo no supermercado.",
+    "text": "Prefiro soberania econômica a preços baixos no supermercado.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1297,7 +1297,7 @@
   {
     "id": "religiao_06",
     "axisId": "religiao",
-    "text": "A religião torna a vida em comunidade mais forte e deve ser incentivada.",
+    "text": "A prática religiosa deve ser incentivada na vida em comunidade.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1332,7 +1332,7 @@
   {
     "id": "religiao_11",
     "axisId": "religiao",
-    "text": "Uma sociedade sem religião seria preferível a uma sociedade religiosa.",
+    "text": "Prefiro uma sociedade sem religião a uma sociedade religiosa.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1346,7 +1346,7 @@
   {
     "id": "religiao_13",
     "axisId": "religiao",
-    "text": "Feriados religiosos não deveriam ser oficiais em um Estado laico.",
+    "text": "Feriados religiosos não deveriam ser feriados nacionais.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1360,14 +1360,14 @@
   {
     "id": "religiao_15",
     "axisId": "religiao",
-    "text": "A palavra 'Deus' não deveria aparecer na Constituição e em discursos políticos.",
+    "text": "A palavra 'Deus' não deveria aparecer na Constituição.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "religiao_16",
     "axisId": "religiao",
-    "text": "A fé religiosa é necessária para dar sentido à vida.",
+    "text": "Prefiro buscar na fé religiosa o sentido da minha vida.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1381,21 +1381,21 @@
   {
     "id": "religiao_18",
     "axisId": "religiao",
-    "text": "Quando a lei dos homens contraria a lei de Deus, a lei de Deus vem primeiro.",
+    "text": "Quando uma lei contraria minha fé religiosa, devo seguir minha fé.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "religiao_19",
     "axisId": "religiao",
-    "text": "A moral pública não precisa se apoiar na crença em Deus.",
+    "text": "A moral pública deve ser fundamentada em princípios que não dependam da crença em Deus.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "religiao_20",
     "axisId": "religiao",
-    "text": "A fé religiosa é parte da identidade nacional e merece proteção.",
+    "text": "O Estado deve proteger a fé religiosa como parte da identidade nacional.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1423,21 +1423,21 @@
   {
     "id": "moral_04",
     "axisId": "moral",
-    "text": "Mudanças culturais não devem ser rápidas demais, porque acabam desestruturando a sociedade.",
+    "text": "Prefiro mudanças culturais graduais a mudanças culturais rápidas.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_05",
     "axisId": "moral",
-    "text": "Cotas raciais ainda são necessárias para enfrentar desigualdades.",
+    "text": "Sou a favor de cotas raciais no acesso às universidades.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_06",
     "axisId": "moral",
-    "text": "Casamento de verdade é entre um homem e uma mulher.",
+    "text": "O casamento deve ser reconhecido apenas entre um homem e uma mulher.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1451,28 +1451,28 @@
   {
     "id": "moral_08",
     "axisId": "moral",
-    "text": "Cotas raciais deveriam ser encerradas para evitar divisões por cor.",
+    "text": "Sou contra cotas raciais no acesso a cargos públicos.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_09",
     "axisId": "moral",
-    "text": "O aborto no início da gravidez pode ser uma escolha moralmente aceitável.",
+    "text": "Considero o aborto no início da gravidez moralmente aceitável.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_10",
     "axisId": "moral",
-    "text": "O aborto é errado porque interrompe uma vida humana.",
+    "text": "Considero o aborto moralmente errado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_11",
     "axisId": "moral",
-    "text": "Adolescentes deveriam aprender sobre sexualidade e gênero sem tabus.",
+    "text": "Adolescentes deveriam receber educação sobre identidade de gênero.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1500,28 +1500,28 @@
   {
     "id": "moral_15",
     "axisId": "moral",
-    "text": "Reduzir o consumo de carne por respeito aos animais é um avanço moral.",
+    "text": "Devemos reduzir o consumo de carne por respeito aos animais.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_16",
     "axisId": "moral",
-    "text": "Consumir pornografia ou drogas é um sinal de decadência moral.",
+    "text": "Considero o consumo de pornografia moralmente errado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "moral_17",
     "axisId": "moral",
-    "text": "Relações abertas e poliamor são escolhas tão legítimas quanto o casamento tradicional.",
+    "text": "Relações abertas e poliamor devem ser tão respeitados quanto o casamento.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "moral_18",
     "axisId": "moral",
-    "text": "O papel mais importante da mulher é cuidar da família e do lar.",
+    "text": "Cuidar da família deve ser a principal prioridade na vida de uma mulher.",
     "agreePole": "RIGHT",
     "weight": 1
   },
@@ -1542,21 +1542,21 @@
   {
     "id": "tecnologia_01",
     "axisId": "tecnologia",
-    "text": "Energia nuclear, IA e engenharia genética devem ser adotadas sem medo excessivo.",
+    "text": "A sociedade deve priorizar a inovação tecnológica e a industrialização.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_02",
     "axisId": "tecnologia",
-    "text": "A humanidade viveria melhor com menos tecnologia, num modo de vida mais simples e natural.",
+    "text": "Prefiro um modo de vida simples e natural a uma vida com muita tecnologia.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_03",
     "axisId": "tecnologia",
-    "text": "IA e automação são bem-vindas, mesmo que eliminem muitas profissões atuais.",
+    "text": "Devemos ampliar o uso de IA e automação, mesmo que elimine muitas profissões.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1584,21 +1584,21 @@
   {
     "id": "tecnologia_07",
     "axisId": "tecnologia",
-    "text": "A mineração na Amazônia deveria ser permitida mesmo em áreas de floresta preservada.",
+    "text": "A mineração na Amazônia deveria ser permitida em áreas preservadas, mesmo com impacto ambiental.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_08",
     "axisId": "tecnologia",
-    "text": "Natureza preservada vale mais do que crescimento industrial acelerado.",
+    "text": "Prefiro natureza preservada a crescimento industrial acelerado.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_09",
     "axisId": "tecnologia",
-    "text": "A edição genética deve ser permitida para aumentar a inteligência e prevenir doenças.",
+    "text": "A edição genética em humanos deve ser permitida para prevenir doenças.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1619,28 +1619,28 @@
   {
     "id": "tecnologia_12",
     "axisId": "tecnologia",
-    "text": "Mesmo uma mineração limpa na Amazônia ultrapassa um limite que não deveria ser cruzado.",
+    "text": "A mineração na Amazônia deveria ser proibida, mesmo com tecnologias de baixo impacto.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_13",
     "axisId": "tecnologia",
-    "text": "A vida nas grandes cidades é preferível à vida no campo.",
+    "text": "Prefiro a vida nas grandes cidades à vida no campo.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_14",
     "axisId": "tecnologia",
-    "text": "Editar embriões para escolher inteligência ou aparência ultrapassa um limite ético.",
+    "text": "A edição genética de embriões para aumentar a inteligência deveria ser proibida.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_15",
     "axisId": "tecnologia",
-    "text": "Implantes cerebrais para ampliar as capacidades humanas são um caminho legítimo.",
+    "text": "Implantes cerebrais para ampliar capacidades mentais de pessoas saudáveis devem ser permitidos.",
     "agreePole": "LEFT",
     "weight": 1
   },
@@ -1661,21 +1661,21 @@
   {
     "id": "tecnologia_18",
     "axisId": "tecnologia",
-    "text": "A vida simples no campo é preferível à vida nas metrópoles.",
+    "text": "Prefiro a vida simples no campo à vida nas metrópoles.",
     "agreePole": "RIGHT",
     "weight": 1
   },
   {
     "id": "tecnologia_19",
     "axisId": "tecnologia",
-    "text": "Contra o aquecimento global, apostar em tecnologia faz mais sentido do que reduzir o consumo.",
+    "text": "No combate ao aquecimento global, prefiro priorizar soluções tecnológicas à redução do consumo.",
     "agreePole": "LEFT",
     "weight": 1
   },
   {
     "id": "tecnologia_20",
     "axisId": "tecnologia",
-    "text": "O corpo humano não deveria ser melhorado com chips e modificações artificiais.",
+    "text": "Sou contra implantes artificiais para ampliar as capacidades físicas de pessoas saudáveis.",
     "agreePole": "RIGHT",
     "weight": 1
   }

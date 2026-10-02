@@ -64,6 +64,16 @@ interface Strings {
   loadingQuiz: string;
   loadingResult: string;
   tryAgain: string;
+  crashTitle: string;
+  crashBody: string;
+  crashBodyWithProgress: string;
+  crashReload: string;
+  resumeEyebrow: string;
+  resumeTitle: string;
+  resumeBody: (answered: number, total: number) => string;
+  resumeContinue: string;
+  resumeDiscard: string;
+  resumeUnavailable: string;
   skipToContent: string;
   backToStartAria: string;
   mainNavAria: string;
@@ -127,7 +137,6 @@ interface Strings {
   menuAria: string;
   roseAria: string;
   spectrumBarAria: string;
-  footerTagline: string;
   versionsEyebrow: string;
   versionsTitle: string;
   versionsLead: string;
@@ -291,6 +300,9 @@ interface Strings {
   ossBarText: string;
   ossGithubCta: string;
   ossIssueCta: string;
+  feedbackTitle: string;
+  feedbackReport: string;
+  feedbackSuggest: string;
   supportTitleEm: string;
   supportLead: string;
   supportPrivacyNote: string;
@@ -312,6 +324,16 @@ const pt: Strings = {
   loadingQuiz: 'Carregando quiz...',
   loadingResult: 'Carregando resultado...',
   tryAgain: 'Tentar novamente',
+  crashTitle: 'Algo deu errado',
+  crashBody: 'A página encontrou um erro inesperado. Recarregue para tentar de novo.',
+  crashBodyWithProgress: 'A página encontrou um erro inesperado, mas suas respostas estão guardadas. Recarregue e escolha continuar de onde parou.',
+  crashReload: 'Recarregar a página',
+  resumeEyebrow: 'Quiz em andamento',
+  resumeTitle: 'Continue de onde parou',
+  resumeBody: (answered, total) => `Você já respondeu ${answered} de ${total} perguntas. Suas respostas estão guardadas neste navegador.`,
+  resumeContinue: 'Continuar',
+  resumeDiscard: 'Começar de novo',
+  resumeUnavailable: 'Não foi possível retomar o quiz anterior. Comece um novo.',
   skipToContent: 'Pular para o conteúdo',
   backToStartAria: 'Voltar para o início',
   mainNavAria: 'Navegação principal',
@@ -555,7 +577,6 @@ const pt: Strings = {
   menuAria: 'Abrir menu',
   roseAria: 'Rosa dos 12 eixos',
   spectrumBarAria: 'Barra do espectro político com as oito categorias',
-  footerTagline: 'Quiz político independente · 12axes.vercel.app',
   versionsEyebrow: 'Versões',
   versionsTitle: 'Escolha a profundidade',
   versionsLead:
@@ -743,6 +764,9 @@ const pt: Strings = {
   ossBarText: 'Leia o código, audite os dados e contribua pelo GitHub.',
   ossGithubCta: 'Ver no GitHub',
   ossIssueCta: 'Sugerir melhoria',
+  feedbackTitle: 'Encontrou um problema ou tem uma ideia?',
+  feedbackReport: 'Reportar um problema',
+  feedbackSuggest: 'Sugerir melhorias',
   supportTitleEm: 'Apoie',
   supportLead:
     'O 12 Axes é independente e gratuito. Se o teste te ajudou a entender melhor sua ideologia política, considere fazer uma doação via Pix ou criptomoedas para manter o projeto no ar.',
@@ -792,6 +816,16 @@ const en: Strings = {
   loadingQuiz: 'Loading quiz...',
   loadingResult: 'Loading results...',
   tryAgain: 'Try again',
+  crashTitle: 'Something went wrong',
+  crashBody: 'The page hit an unexpected error. Reload to try again.',
+  crashBodyWithProgress: 'The page hit an unexpected error, but your answers are saved. Reload and choose to continue where you left off.',
+  crashReload: 'Reload the page',
+  resumeEyebrow: 'Quiz in progress',
+  resumeTitle: 'Pick up where you left off',
+  resumeBody: (answered, total) => `You have answered ${answered} of ${total} questions. Your answers are saved in this browser.`,
+  resumeContinue: 'Continue',
+  resumeDiscard: 'Start over',
+  resumeUnavailable: 'The previous quiz could not be resumed. Please start a new one.',
   skipToContent: 'Skip to content',
   backToStartAria: 'Back to start',
   mainNavAria: 'Main navigation',
@@ -1048,7 +1082,6 @@ const en: Strings = {
   menuAria: 'Open menu',
   roseAria: 'Rose of the 12 axes',
   spectrumBarAria: 'Political spectrum bar with the eight categories',
-  footerTagline: 'Independent political quiz · 12axes.vercel.app',
   versionsEyebrow: 'Versions',
   versionsTitle: 'Choose the depth',
   versionsLead:
@@ -1236,6 +1269,9 @@ const en: Strings = {
   ossBarText: 'Read the code, audit the data and contribute on GitHub.',
   ossGithubCta: 'View on GitHub',
   ossIssueCta: 'Suggest an improvement',
+  feedbackTitle: 'Found a problem or have an idea?',
+  feedbackReport: 'Report a problem',
+  feedbackSuggest: 'Suggest improvements',
   supportTitleEm: 'Support',
   supportLead:
     '12 Axes is independent and free. If the quiz helped you better understand your political ideology, consider donating via Pix or crypto to help keep the project running.',

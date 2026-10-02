@@ -4,9 +4,9 @@
 // personalidades e países pela mesma fórmula do backend (profile-match.mjs).
 import { ARROW, CATEGORY_KEY, SPECTRUM } from './ideologies-index.mjs';
 import { AREA_LABELS, catalogHead, initials } from './personalities-index.mjs';
-import { dimensionMatches, rank } from './profile-match.mjs';
+import { dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 import { AXIS_EXPLANATIONS } from './app-strings.mjs';
-import { poleSprite, poleUse } from './pole-icons.mjs';
+import { poleSprite, poleUse, profileReligion, religionPoleUse } from './pole-icons.mjs';
 
 const STR = {
   pt: {
@@ -169,8 +169,9 @@ const AXIS_INFO = {
 // Barras dos 12 eixos, iguais às da tela de resultados (AxesSection.tsx):
 // ícones de polo preenchidos, cinza quando equilibrado e helper "?" que abre
 // a explicação do eixo (texto do i18n do app).
-export function axisRowsHtml(L, vector, esc, locale) {
+export function axisRowsHtml(L, vector, esc, locale, religions = []) {
   const info = AXIS_INFO[locale];
+  const religion = profileReligion(religions);
   return L.axes
     .map((axis) => {
       const left = Math.max(0, Math.min(100, vector[axis.id] ?? 50));
@@ -186,7 +187,7 @@ export function axisRowsHtml(L, vector, esc, locale) {
       const sheetTitle = balanced ? esc(level) : `<span>${pct(leftWins ? left : right)}%</span> ${esc(pole)}`;
       const fill = `<i style="width:${(dist * 2).toFixed(0)}%"></i>`;
       const helper = `<button class="axis-info" type="button" aria-label="${esc(info.aria(axis.label))}" data-label="${esc(axis.label)}" data-title="${esc(sheetTitle)}" data-text="${esc(AXIS_EXPLANATIONS[locale][axis.id] ?? '')}" data-ac="${ac}">${INFO_ICON}</button>`;
-      return `<li class="axis-row" style="--ac:${ac};--al:${axis.leftColor};--ar:${axis.rightColor}"><div class="axis-row-head"><div class="axis-title"><h3>${esc(axis.label)}</h3>${helper}</div><span class="itag"><span class="idot"></span>${esc(tag)}</span></div><div class="axis-bar"><div class="pole left${leftWins ? ' win' : ''}">${poleUse(axis.id, 'left', ' class="pico" width="18" height="18"')}<span><b>${esc(axis.leftPole)}</b><em>${pct(left)}%</em></span></div><div class="atrack" role="img" aria-label="${esc(`${axis.label}: ${axis.leftPole} ${pct(left)}%, ${axis.rightPole} ${pct(right)}%`)}"><div class="ahalf l">${leftWins ? fill : ''}</div><div class="ahalf r">${rightWins ? fill : ''}</div><span class="amid"></span><span class="adot" style="left:${right.toFixed(1)}%"></span></div><div class="pole right${rightWins ? ' win' : ''}"><span><b>${esc(axis.rightPole)}</b><em>${pct(right)}%</em></span>${poleUse(axis.id, 'right', ' class="pico" width="18" height="18"')}</div></div></li>`;
+      return `<li class="axis-row" style="--ac:${ac};--al:${axis.leftColor};--ar:${axis.rightColor}"><div class="axis-row-head"><div class="axis-title"><h3>${esc(axis.label)}</h3>${helper}</div><span class="itag"><span class="idot"></span>${esc(tag)}</span></div><div class="axis-bar"><div class="pole left${leftWins ? ' win' : ''}">${poleUse(axis.id, 'left', ' class="pico" width="18" height="18"')}<span><b>${esc(axis.leftPole)}</b><em>${pct(left)}%</em></span></div><div class="atrack" role="img" aria-label="${esc(`${axis.label}: ${axis.leftPole} ${pct(left)}%, ${axis.rightPole} ${pct(right)}%`)}"><div class="ahalf l">${leftWins ? fill : ''}</div><div class="ahalf r">${rightWins ? fill : ''}</div><span class="amid"></span><span class="adot" style="left:${right.toFixed(1)}%"></span></div><div class="pole right${rightWins ? ' win' : ''}"><span><b>${esc(axis.rightPole)}</b><em>${pct(right)}%</em></span>${axis.id === 'religiao' && religion ? religionPoleUse(religion, ' class="pico" width="18" height="18" aria-hidden="true"') : poleUse(axis.id, 'right', ' class="pico" width="18" height="18"')}</div></div></li>`;
     })
     .join('');
 }
@@ -208,7 +209,8 @@ export function personalityPage(L, personality, ctx) {
     `<img class="${cls}" src="${src}" alt="${esc(alt)}" loading="lazy" decoding="async" data-i="${esc(initials(who))}">`;
 
   // ── ideologias ──
-  const rankedIdeologies = rank(vector, L.ideologies, (i) => profiles.ideology.get(i.id));
+  const visible = religionVisibility(personality);
+  const rankedIdeologies = rank(vector, L.ideologies.filter(visible), (i) => profiles.ideology.get(i.id));
   const associated = L.ideologiesByPersonality.get(personality.id) ?? [];
   const topIdeology = rankedIdeologies[0];
   const otherIdeologies = rankedIdeologies.slice(0, 3);
@@ -216,7 +218,7 @@ export function personalityPage(L, personality, ctx) {
   const spec = spectrumOf(topIdeology.item.category);
 
   // ── personalidades ──
-  const others = L.personalities.filter((p) => p.id !== personality.id);
+  const others = L.personalities.filter((p) => p.id !== personality.id && visible(p));
   const personVector = (p) => profiles.personality.get(p.id);
   const rankedPeople = rank(vector, others, personVector);
   const topPerson = rankedPeople[0];
@@ -228,7 +230,7 @@ export function personalityPage(L, personality, ctx) {
   // ── países (atual x histórico, como na tela de resultado) ──
   const countryVector = (c) => profiles.country.get(c.id);
   const countryGroups = [false, true].map((historical) => {
-    const pool = L.countries.filter((c) => Boolean(c.historical) === historical);
+    const pool = L.countries.filter((c) => Boolean(c.historical) === historical && visible(c));
     const ranked = rank(vector, pool, countryVector);
     const top = ranked[0];
     return {
@@ -241,7 +243,7 @@ export function personalityPage(L, personality, ctx) {
 
   const { rare, common, rarePct, rarePole } = distinctive(L.axes, vector, profiles.personality);
   const mbar = (d, strong) => mbarHtml(d, strong, t.median, name, esc);
-  const axisRows = axisRowsHtml(L, vector, esc, locale);
+  const axisRows = axisRowsHtml(L, vector, esc, locale, personality.religions);
 
   const catVars = (category) => {
     const s = spectrumOf(category);
