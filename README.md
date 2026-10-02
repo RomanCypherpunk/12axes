@@ -92,7 +92,7 @@ The pool has 240 statements, 20 per axis, half phrased toward each pole so agree
 - Top ideologies, the closest current and historical countries, and matching personalities by category, plus the least compatible ideology.
 - An "axis tension" readout for pairs of positions that rarely appear together.
 - Book recommendations tied to your profile.
-- Religion filter for Christianity, Judaism, Islam, and Buddhism.
+- Religion filter for Christianity, Judaism, Islam, Buddhism, and Hinduism.
 - Share card (PNG), PDF report, and shareable result link.
 - Static, indexable pages for every ideology, country, and personality.
 

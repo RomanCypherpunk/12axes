@@ -10,7 +10,7 @@ import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
 import { useScrollReveal } from './hooks/useScrollReveal';
-import { parseReligion, RELIGIONS, type Religion } from './utils/religion';
+import { parseReligion, RELIGIONS, RELIGION_OPTION_IDS, religionForOption, type Religion } from './utils/religion';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -77,18 +77,17 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
 }
 
-// Última pergunta do bloco de arquétipos: letras A-D + "sem religião". Não vai
+// Última pergunta do bloco de arquétipos: tradições religiosas + "sem religião". Não vai
 // para o backend como arquétipo; vira o parâmetro religion do resultado.
 const RELIGION_STEP_ID = 'religiao';
-const RELIGION_OPTION_IDS = ['A', 'B', 'C', 'D', 'E'];
 function religionQuestion(): ArchetypeQuestion {
   return {
     id: RELIGION_STEP_ID,
     label: t.religionLabel,
     text: t.religionQuestion,
     icon: RELIGION_QUESTION_ICON,
-    options: [...RELIGIONS, 'none' as const].map((id, index) => ({
-      id: RELIGION_OPTION_IDS[index],
+    options: [...RELIGIONS, 'none' as const].map((id) => ({
+      id: RELIGION_OPTION_IDS[id],
       text: id === 'none' ? t.religionNone : t.religionNames[id],
       icon: RELIGION_ICONS[id]
     }))
@@ -567,7 +566,7 @@ function MainApp() {
         answer: answerMap[question.id] as AnswerValue
       }));
       const { [RELIGION_STEP_ID]: religionOption, ...archetypeOnly } = archetype;
-      const chosenReligion = RELIGIONS[RELIGION_OPTION_IDS.indexOf(religionOption ?? '')] ?? null;
+      const chosenReligion = religionForOption(religionOption);
       const nextResult = await submitResults(
         quiz.variant ?? selectedVariant,
         payload,

@@ -1,6 +1,7 @@
 // Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
+import type { Religion } from '../utils/religion';
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
 export type Lang = 'pt' | 'en';
@@ -91,7 +92,7 @@ interface Strings {
   religionLabel: string;
   religionQuestion: string;
   religionNone: string;
-  religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism', string>;
+  religionNames: Record<Religion, string>;
   restartQuiz: string;
   heroEyebrow: string;
   h1Pre: string;
@@ -351,7 +352,7 @@ const pt: Strings = {
   religionLabel: 'Religião',
   religionQuestion: 'Você segue alguma religião? Usamos isso só para ajustar as recomendações.',
   religionNone: 'Sem religião',
-  religionNames: { christianity: 'Cristianismo', judaism: 'Judaísmo', islam: 'Islamismo', buddhism: 'Budismo' },
+  religionNames: { christianity: 'Cristianismo', judaism: 'Judaísmo', islam: 'Islamismo', buddhism: 'Budismo', hinduism: 'Hinduísmo' },
   restartQuiz: 'Reiniciar quiz',
   heroEyebrow: 'Descoberta política',
   h1Pre: 'Você sabe mesmo qual é a sua ',
@@ -843,7 +844,7 @@ const en: Strings = {
   religionLabel: 'Religion',
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',
   religionNone: 'No religion',
-  religionNames: { christianity: 'Christianity', judaism: 'Judaism', islam: 'Islam', buddhism: 'Buddhism' },
+  religionNames: { christianity: 'Christianity', judaism: 'Judaism', islam: 'Islam', buddhism: 'Buddhism', hinduism: 'Hinduism' },
   restartQuiz: 'Restart quiz',
   heroEyebrow: 'Political discovery',
   h1Pre: 'Do you really know your ',

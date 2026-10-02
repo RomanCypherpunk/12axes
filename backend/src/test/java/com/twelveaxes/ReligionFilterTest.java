@@ -106,6 +106,18 @@ class ReligionFilterTest {
     }
 
     @Test
+    void hinduPreferenceIsRecognizedAndUsesTheSameFilterRules() {
+        assertThat(ReligionFilter.normalize(" Hinduism ")).isEqualTo("hinduism");
+        assertThat(ReligionFilter.allows(List.of("hinduism"), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("hinduism"), "christianity")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("christianity"), "hinduism")).isFalse();
+        assertThat(ReligionFilter.allows(List.of(), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("other"), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("hinduism", ReligionFilter.ONLY), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("hinduism", ReligionFilter.ONLY), null)).isFalse();
+    }
+
+    @Test
     void onlyMarkerShowsTheProfileSolelyToItsReligion() {
         List<String> zionism = List.of("judaism", ReligionFilter.ONLY);
         assertThat(ReligionFilter.allows(zionism, "judaism")).isTrue();

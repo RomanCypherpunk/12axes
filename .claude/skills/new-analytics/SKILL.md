@@ -119,7 +119,7 @@ Escreva um script Node (`analyze.js`) que:
    separadamente.
    **Filtro religioso:** se a URL tiver `&religion=christianity|judaism|islam|buddhism`, antes de
    pegar o top-1 tire do catálogo os perfis cujo campo `religions` (nos metadados) contém alguma das
-   quatro religiões selecionáveis mas não a escolhida. Perfis com `[]` ou só `other` ficam. Valor
+   cinco religiões selecionáveis mas não a escolhida. Perfis com `[]` ou só `other` ficam. Valor
    ausente ou desconhecido = sem filtro. Espelha `ReligionFilter.allows()` no backend.
 6. Gera um `.xlsx` com `xlsx` (SheetJS) com estas abas:
    - **Resumo**: arquivos processados, total de URLs únicas, total de resultados de quiz únicos,

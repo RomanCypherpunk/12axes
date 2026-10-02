@@ -10,7 +10,7 @@ import java.util.Set;
  * O filtro EXCLUI em vez de exigir: com "christianity" escolhido, some apenas o
  * perfil ligado a outra das religioes selecionaveis e nao ao cristianismo
  * (Arabia Saudita, Khomeini). Perfis seculares ([]) ou so com "other"
- * (hinduismo, xintoismo, religioes antigas) continuam aparecendo. A
+ * (xintoismo, religioes antigas) continuam aparecendo. A
  * compatibilidade de cada perfil nao muda; muda so quem entra no ranking.
  *
  * O marcador "only" (ex.: ["judaism", "only"]) torna o perfil exclusivo: ele so
@@ -20,13 +20,13 @@ import java.util.Set;
  */
 public final class ReligionFilter {
     /** Religioes que o usuario pode escolher. */
-    public static final List<String> SELECTABLE = List.of("christianity", "judaism", "islam", "buddhism");
+    public static final List<String> SELECTABLE = List.of("christianity", "judaism", "islam", "buddhism", "hinduism");
 
     /** Marcador de exclusividade: o perfil so aparece para quem escolheu uma das religioes listadas. */
     public static final String ONLY = "only";
 
     /** Valores aceitos no campo religions dos catalogos. */
-    public static final Set<String> ALLOWED = Set.of("christianity", "judaism", "islam", "buddhism", "other", ONLY);
+    public static final Set<String> ALLOWED = Set.of("christianity", "judaism", "islam", "buddhism", "hinduism", "other", ONLY);
 
     /** Perfis com religiao &le; este valor no polo irreligioso precisam de ao menos uma religiao. */
     public static final double RELIGIOUS_THRESHOLD = 35.0;
