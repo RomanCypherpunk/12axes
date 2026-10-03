@@ -207,6 +207,10 @@ button {
   padding: 0;
 }
 
+svg {
+  shape-rendering: geometricPrecision;
+}
+
 a {
   color: inherit;
   text-decoration: none;

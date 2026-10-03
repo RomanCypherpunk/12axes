@@ -137,7 +137,7 @@
   .e-match:hover .e-portrait,
   .e-match:hover .e-flagbig { transform: scale(1.03); }
 
-  .e-disc-item .e-ico { transition: transform 0.35s var(--m-spring); }
+  .e-disc-item .e-ico { transition: transform 0.35s var(--m-spring); filter: contrast(1.1) brightness(1.05); }
   .e-disc-item:hover .e-ico { transform: scale(1.15) rotate(-6deg); }
 
   .e-step { transition: border-color 0.3s var(--m-ease); }
