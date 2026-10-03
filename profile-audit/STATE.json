@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-02T13:18:20Z",
+  "lastUpdated": "2026-10-03T11:57:39Z",
   "personality": {
-    "totalProfiles": 418,
+    "totalProfiles": 444,
     "pending": [],
     "done": [
       "lenin",
@@ -422,11 +422,37 @@
       "james-cook",
       "lachlan-macquarie",
       "andy-burnham",
-      "anthony-albanese"
+      "anthony-albanese",
+      "gustavo-ii-adolfo",
+      "carlos-x-gustavo",
+      "henrique-viii",
+      "guilherme-ii-da-alemanha",
+      "constantino-o-grande",
+      "vladimir-o-grande",
+      "desmond-tutu",
+      "russell-kirk",
+      "nikita-khrushchev",
+      "sigmund-freud",
+      "jean-paul-marat",
+      "grigory-zinoviev",
+      "dante-alighieri",
+      "carlos-i-inglaterra",
+      "pythagoras",
+      "epicurus",
+      "heraclitus",
+      "dom-joao-iv-portugal",
+      "diogenes",
+      "seneca",
+      "epicteto",
+      "oliver-cromwell",
+      "inacio-de-loyola",
+      "linus-torvalds",
+      "democrito",
+      "francisco-i-da-austria"
     ]
   },
   "ideology": {
-    "totalProfiles": 250,
+    "totalProfiles": 253,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -679,11 +705,14 @@
       "confederalismo-democratico",
       "tradicionalismo",
       "iluminismo-sombrio",
-      "neocameralismo"
+      "neocameralismo",
+      "tridemismo",
+      "posmodernismo",
+      "socialismo-chines"
     ]
   },
   "country": {
-    "totalProfiles": 200,
+    "totalProfiles": 205,
     "pending": [],
     "done": [
       "brasil",
@@ -735,7 +764,6 @@
       "egito-de-nasser",
       "africa-do-sul-do-apartheid",
       "hong-kong",
-      "argentina",
       "liechtenstein",
       "rojava",
       "iugoslavia-socialista",
@@ -885,7 +913,13 @@
       "romenia",
       "bulgaria",
       "croacia",
-      "chipre"
+      "chipre",
+      "imperio-sueco",
+      "suecia-finlandia",
+      "shenzhen",
+      "chongqing",
+      "argentina"
+      "imperio-austriaco"
     ]
   }
 }

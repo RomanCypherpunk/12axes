@@ -75,6 +75,54 @@ class IdeologyCountryMappingTest {
     }
 
     @Test
+    void argentinaSeparatesCurrentMarketReformsFromHistoricalPeronism() {
+        var current = dataService.getCountryProfiles().get("argentina");
+        var historical = dataService.getCountryProfiles().get("argentina-peronista");
+
+        for (String axis : List.of("economia", "controle", "comercio")) {
+            assertThat(current.vector().get(axis))
+                    .as("Current Argentina should favor market reforms on %s", axis)
+                    .isLessThan(50.0);
+            assertThat(historical.vector().get(axis))
+                    .as("Historical Peronism should retain its state-led profile on %s", axis)
+                    .isGreaterThan(50.0);
+        }
+
+        for (String lang : List.of(QuizDataService.LANG_PT, QuizDataService.LANG_EN)) {
+            var currentMatch = countryMatcherService.findTopMatch(axisResults(current.vector()), lang);
+            var historicalMatch = countryMatcherService.findTopHistoricalMatch(axisResults(historical.vector()), lang);
+
+            assertThat(currentMatch.countryId()).isEqualTo("argentina");
+            assertThat(currentMatch.compatibility()).isGreaterThan(99.0);
+            assertThat(historicalMatch.countryId()).isEqualTo("argentina-peronista");
+            assertThat(historicalMatch.compatibility()).isGreaterThan(99.0);
+            assertThat(dataService.getCountries(lang))
+                    .filteredOn(country -> country.id().equals("argentina"))
+                    .singleElement()
+                    .satisfies(country -> {
+                        assertThat(country.historical()).isFalse();
+                        assertThat(country.description()).contains("Milei", "2023");
+                    });
+            assertThat(dataService.getCountries(lang))
+                    .filteredOn(country -> country.id().equals("argentina-peronista"))
+                    .singleElement()
+                    .satisfies(country -> {
+                        assertThat(country.historical()).isTrue();
+                        assertThat(country.period()).isEqualTo("1946–1955");
+                    });
+        }
+    }
+
+    @Test
+    void modernArgentinaIsNotAnExampleOfLeftWingPopulismOrProgressiveNationalism() {
+        assertThat(dataService.getIdeologies())
+                .filteredOn(ideology -> List.of("populismo-de-esquerda", "nacionalismo-progressista")
+                        .contains(ideology.id()))
+                .hasSize(2)
+                .allSatisfy(ideology -> assertThat(ideology.countryId()).isNotEqualTo("argentina"));
+    }
+
+    @Test
     void everyCountryFlagIsAValidRasterAsset() {
         assertThat(dataService.getCountries())
                 .hasSizeGreaterThan(100)

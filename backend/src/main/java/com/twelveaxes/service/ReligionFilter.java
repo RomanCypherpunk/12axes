@@ -7,9 +7,9 @@ import java.util.Set;
 /**
  * Preferencia religiosa opcional do usuario nas recomendacoes.
  *
- * O filtro EXCLUI em vez de exigir: com "christianity" escolhido, some apenas o
+ * O filtro EXCLUI em vez de exigir: com "catholic" escolhido, some apenas o
  * perfil ligado a outra das religioes selecionaveis e nao ao cristianismo
- * (Arabia Saudita, Khomeini). Perfis seculares ([]) ou so com "other"
+ * (Arabia Saudita, Khomeini, ou um protestante como Lutero). Perfis seculares ([]) ou so com "other"
  * (hinduismo, xintoismo, religioes antigas) continuam aparecendo. A
  * compatibilidade de cada perfil nao muda; muda so quem entra no ranking.
  *
@@ -19,14 +19,25 @@ import java.util.Set;
  * religiao, como o Sionismo Trabalhista.
  */
 public final class ReligionFilter {
+    /** Denominacoes cristas: o cristianismo e dividido em tres para que cada perfil e cada usuario tenha uma. */
+    public static final List<String> CHRISTIAN = List.of("catholic", "protestant", "orthodox");
+
+    /**
+     * Valor antigo (links compartilhados ate a divisao em denominacoes): vale como "qualquer
+     * denominacao crista". Nenhum perfil usa mais este valor, so a preferencia do usuario.
+     */
+    public static final String LEGACY_CHRISTIANITY = "christianity";
+
     /** Religioes que o usuario pode escolher. */
-    public static final List<String> SELECTABLE = List.of("christianity", "judaism", "islam", "buddhism");
+    public static final List<String> SELECTABLE =
+            List.of("catholic", "protestant", "orthodox", "judaism", "islam", "buddhism");
 
     /** Marcador de exclusividade: o perfil so aparece para quem escolheu uma das religioes listadas. */
     public static final String ONLY = "only";
 
     /** Valores aceitos no campo religions dos catalogos. */
-    public static final Set<String> ALLOWED = Set.of("christianity", "judaism", "islam", "buddhism", "other", ONLY);
+    public static final Set<String> ALLOWED =
+            Set.of("catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "other", ONLY);
 
     /** Perfis com religiao &le; este valor no polo irreligioso precisam de ao menos uma religiao. */
     public static final double RELIGIOUS_THRESHOLD = 35.0;
@@ -40,6 +51,9 @@ public final class ReligionFilter {
             return null;
         }
         String value = raw.trim().toLowerCase(Locale.ROOT);
+        if (LEGACY_CHRISTIANITY.equals(value)) {
+            return LEGACY_CHRISTIANITY;
+        }
         return SELECTABLE.contains(value) ? value : null;
     }
 
@@ -47,12 +61,24 @@ public final class ReligionFilter {
         if (religions == null || religions.isEmpty()) {
             return true;
         }
+        List<String> preferred = preferredReligions(preference);
+        boolean matches = religions.stream().anyMatch(preferred::contains);
         if (religions.contains(ONLY)) {
-            return preference != null && religions.contains(preference);
+            // ["other", "only"] (ex.: xintoismo): ninguem escolhe "other", entao o perfil fica so para
+            // quem nao escolheu religiao e some para quem e de qualquer uma das religioes selecionaveis.
+            boolean hasSelectable = religions.stream().anyMatch(SELECTABLE::contains);
+            return hasSelectable ? matches : preference == null;
         }
         if (preference == null) {
             return true;
         }
-        return religions.contains(preference) || religions.stream().noneMatch(SELECTABLE::contains);
+        return matches || religions.stream().noneMatch(SELECTABLE::contains);
+    }
+
+    private static List<String> preferredReligions(String preference) {
+        if (preference == null) {
+            return List.of();
+        }
+        return LEGACY_CHRISTIANITY.equals(preference) ? CHRISTIAN : List.of(preference);
     }
 }

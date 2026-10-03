@@ -92,6 +92,9 @@ interface Strings {
   religionQuestion: string;
   religionNone: string;
   religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism', string>;
+  denominationLabel: string;
+  denominationQuestion: string;
+  denominationNames: Record<'catholic' | 'protestant' | 'orthodox', string>;
   restartQuiz: string;
   heroEyebrow: string;
   h1Pre: string;
@@ -110,6 +113,27 @@ interface Strings {
   personalityInfoAria: (name: string) => string;
   closenessTitle: string;
   closenessYou: string;
+  compareEyebrow: string;
+  compareTitle: string;
+  compareLead: string;
+  compareSearchLabel: string;
+  compareSearchPlaceholder: string;
+  compareView: string;
+  compareAxesTitle: string;
+  compareNoResults: string;
+  compareLoading: string;
+  compareLoadError: string;
+  compareTypeLabels: Record<'personality' | 'country' | 'ideology', string>;
+  compareAxisAdverbs: Partial<Record<string, string>>;
+  compareClosestLine: (adverb: string, name: string) => string;
+  compareFarthestLine: (adverb: string, name: string) => string;
+  compareClosestFallback: (axis: string, name: string) => string;
+  compareFarthestFallback: (axis: string, name: string) => string;
+  compareIdentical: (name: string) => string;
+  compareNearestLine: (axis: string, name: string) => string;
+  compareNoFarLine: (name: string) => string;
+  compareValues: (pole: string, you: number, them: number, name: string) => string;
+  compareOptionAria: (name: string, type: string) => string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
@@ -352,6 +376,9 @@ const pt: Strings = {
   religionQuestion: 'Você segue alguma religião? Usamos isso só para ajustar as recomendações.',
   religionNone: 'Sem religião',
   religionNames: { christianity: 'Cristianismo', judaism: 'Judaísmo', islam: 'Islamismo', buddhism: 'Budismo' },
+  denominationLabel: 'Vertente cristã',
+  denominationQuestion: 'Qual é a sua vertente cristã? Usamos isso só para ajustar as recomendações.',
+  denominationNames: { catholic: 'Católica', protestant: 'Protestante', orthodox: 'Ortodoxa' },
   restartQuiz: 'Reiniciar quiz',
   heroEyebrow: 'Descoberta política',
   h1Pre: 'Você sabe mesmo qual é a sua ',
@@ -392,6 +419,35 @@ const pt: Strings = {
   personalityInfoAria: (name) => `Ver detalhes de ${name}`,
   closenessTitle: 'O que te aproxima',
   closenessYou: 'Você',
+  compareEyebrow: 'Análise comparativa',
+  compareTitle: 'Compare-se com qualquer perfil',
+  compareLead: 'Escolha uma personalidade, país ou ideologia e veja, eixo por eixo, onde você se aproxima ou se afasta.',
+  compareSearchLabel: 'Buscar perfil para comparar',
+  compareSearchPlaceholder: 'Busque uma personalidade, país ou ideologia',
+  compareView: 'Visualizar',
+  compareAxesTitle: 'Seus 12 eixos',
+  compareNoResults: 'Nenhum perfil encontrado.',
+  compareLoading: 'Comparando…',
+  compareLoadError: 'Não foi possível carregar a comparação. Tente de novo.',
+  compareTypeLabels: { personality: 'Personalidade', country: 'País', ideology: 'Ideologia' },
+  compareAxisAdverbs: {
+    estrutura: 'estruturalmente',
+    economia: 'economicamente',
+    comercio: 'comercialmente',
+    religiao: 'religiosamente',
+    moral: 'moralmente',
+    tecnologia: 'tecnologicamente',
+    diplomacia: 'diplomaticamente'
+  },
+  compareClosestLine: (adverb, name) => `Você é ${adverb} compatível com ${name}.`,
+  compareFarthestLine: (adverb, name) => `Você é ${adverb} distante de ${name}.`,
+  compareClosestFallback: (axis, name) => `Em ${axis}, você é compatível com ${name}.`,
+  compareFarthestFallback: (axis, name) => `Em ${axis}, você é distante de ${name}.`,
+  compareIdentical: (name) => `Você e ${name} têm posições praticamente idênticas em todos os eixos.`,
+  compareNearestLine: (axis, name) => `Seu eixo mais próximo de ${name} é ${axis}.`,
+  compareNoFarLine: (name) => `Nenhum eixo está muito distante de ${name}.`,
+  compareValues: (pole, you, them, name) => `${pole}: você ${you}% · ${name} ${them}%.`,
+  compareOptionAria: (name, type) => `${name}, ${type}`,
   axisExplanations: {
     estrutura:
       'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
@@ -844,6 +900,9 @@ const en: Strings = {
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',
   religionNone: 'No religion',
   religionNames: { christianity: 'Christianity', judaism: 'Judaism', islam: 'Islam', buddhism: 'Buddhism' },
+  denominationLabel: 'Christian tradition',
+  denominationQuestion: 'Which Christian tradition do you follow?',
+  denominationNames: { catholic: 'Catholic', protestant: 'Protestant', orthodox: 'Orthodox' },
   restartQuiz: 'Restart quiz',
   heroEyebrow: 'Political discovery',
   h1Pre: 'Do you really know your ',
@@ -884,6 +943,33 @@ const en: Strings = {
   personalityInfoAria: (name) => `See details about ${name}`,
   closenessTitle: 'What brings you closer',
   closenessYou: 'You',
+  compareEyebrow: 'Comparative analysis',
+  compareTitle: 'Compare yourself with any profile',
+  compareLead: 'Pick a personality, country or ideology and see, axis by axis, where you are close or far apart.',
+  compareSearchLabel: 'Search a profile to compare',
+  compareSearchPlaceholder: 'Search a personality, country or ideology',
+  compareView: 'View',
+  compareAxesTitle: 'Your 12 axes',
+  compareNoResults: 'No profiles found.',
+  compareLoading: 'Comparing…',
+  compareLoadError: 'Could not load the comparison. Please try again.',
+  compareTypeLabels: { personality: 'Personality', country: 'Country', ideology: 'Ideology' },
+  compareAxisAdverbs: {
+    estrutura: 'structurally',
+    economia: 'economically',
+    moral: 'morally',
+    tecnologia: 'technologically',
+    diplomacia: 'diplomatically'
+  },
+  compareClosestLine: (adverb, name) => `You are ${adverb} compatible with ${name}.`,
+  compareFarthestLine: (adverb, name) => `You are ${adverb} distant from ${name}.`,
+  compareClosestFallback: (axis, name) => `In ${axis}, you are compatible with ${name}.`,
+  compareFarthestFallback: (axis, name) => `In ${axis}, you are distant from ${name}.`,
+  compareIdentical: (name) => `You and ${name} have practically identical positions on every axis.`,
+  compareNearestLine: (axis, name) => `Your closest axis to ${name} is ${axis}.`,
+  compareNoFarLine: (name) => `No axis is far from ${name}.`,
+  compareValues: (pole, you, them, name) => `${pole}: you ${you}% · ${name} ${them}%.`,
+  compareOptionAria: (name, type) => `${name}, ${type}`,
   axisExplanations: {
     estrutura:
       'Measures whether you prefer power distributed among states, cities, and local communities or a unitary national state with more uniform laws and command.',

@@ -117,7 +117,7 @@ Escreva um script Node (`analyze.js`) que:
 5. Porta a função `compatibility()` do Java para JS **exatamente** (mesmas constantes/pesos/fórmulas
    do Passo 0) e usa para achar o top-1 de cada catálogo (ideologia, personalidade, país)
    separadamente.
-   **Filtro religioso:** se a URL tiver `&religion=christianity|judaism|islam|buddhism`, antes de
+   **Filtro religioso:** se a URL tiver `&religion=catholic|protestant|orthodox|judaism|islam|buddhism`, antes de
    pegar o top-1 tire do catálogo os perfis cujo campo `religions` (nos metadados) contém alguma das
    quatro religiões selecionáveis mas não a escolhida. Perfis com `[]` ou só `other` ficam. Valor
    ausente ou desconhecido = sem filtro. Espelha `ReligionFilter.allows()` no backend.

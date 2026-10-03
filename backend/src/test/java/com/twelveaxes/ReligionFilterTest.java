@@ -78,8 +78,8 @@ class ReligionFilterTest {
         catalogReligions().forEach((id, religions) -> {
             if (religions.contains(ReligionFilter.ONLY)) {
                 assertThat(religions)
-                        .as("%s usa 'only' sem uma religiao selecionavel", id)
-                        .anyMatch(ReligionFilter.SELECTABLE::contains);
+                        .as("%s usa 'only' sem uma religiao selecionavel (ou 'other', para xintoismo e afins)", id)
+                        .anyMatch(r -> ReligionFilter.SELECTABLE.contains(r) || r.equals("other"));
             }
         });
     }
@@ -97,10 +97,11 @@ class ReligionFilterTest {
 
     @Test
     void filterExcludesOnlyOtherSelectableReligions() {
-        assertThat(ReligionFilter.allows(List.of("islam"), "christianity")).isFalse();
-        assertThat(ReligionFilter.allows(List.of("islam", "other"), "christianity")).isFalse();
-        assertThat(ReligionFilter.allows(List.of("christianity", "judaism"), "judaism")).isTrue();
-        assertThat(ReligionFilter.allows(List.of(), "christianity")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("islam"), "catholic")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("islam", "other"), "catholic")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("catholic", "judaism"), "judaism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of(), "catholic")).isTrue();
+        // "other" sozinho (Aristoteles, Confucio...) continua aparecendo para qualquer religiao.
         assertThat(ReligionFilter.allows(List.of("other"), "islam")).isTrue();
         assertThat(ReligionFilter.allows(List.of("islam"), null)).isTrue();
     }
@@ -109,14 +110,14 @@ class ReligionFilterTest {
     void onlyMarkerShowsTheProfileSolelyToItsReligion() {
         List<String> zionism = List.of("judaism", ReligionFilter.ONLY);
         assertThat(ReligionFilter.allows(zionism, "judaism")).isTrue();
-        assertThat(ReligionFilter.allows(zionism, "christianity")).isFalse();
+        assertThat(ReligionFilter.allows(zionism, "catholic")).isFalse();
         assertThat(ReligionFilter.allows(zionism, "islam")).isFalse();
         // "nenhuma" e sem escolha: o perfil exclusivo some.
         assertThat(ReligionFilter.allows(zionism, null)).isFalse();
         // Varias religioes listadas: aparece para qualquer uma delas.
-        List<String> shared = List.of("christianity", "judaism", ReligionFilter.ONLY);
+        List<String> shared = List.of("catholic", "judaism", ReligionFilter.ONLY);
         assertThat(ReligionFilter.allows(shared, "judaism")).isTrue();
-        assertThat(ReligionFilter.allows(shared, "christianity")).isTrue();
+        assertThat(ReligionFilter.allows(shared, "catholic")).isTrue();
         assertThat(ReligionFilter.allows(shared, "islam")).isFalse();
         assertThat(ReligionFilter.allows(shared, null)).isFalse();
     }
@@ -126,7 +127,50 @@ class ReligionFilterTest {
         assertThat(ReligionFilter.normalize(null)).isNull();
         assertThat(ReligionFilter.normalize("xyz")).isNull();
         assertThat(ReligionFilter.normalize("other")).isNull();
+        assertThat(ReligionFilter.normalize(" Catholic ")).isEqualTo("catholic");
+        // Links antigos com religion=christianity continuam valendo (qualquer denominacao crista).
         assertThat(ReligionFilter.normalize(" Christianity ")).isEqualTo("christianity");
+    }
+
+    @Test
+    void denominationFilterSeparatesCatholicProtestantAndOrthodox() {
+        List<String> luther = List.of("protestant");
+        List<String> aquinas = List.of("catholic");
+        List<String> dostoevsky = List.of("orthodox");
+        List<String> anglican = List.of("protestant", "catholic");
+
+        assertThat(ReligionFilter.allows(luther, "catholic")).isFalse();
+        assertThat(ReligionFilter.allows(luther, "protestant")).isTrue();
+        assertThat(ReligionFilter.allows(aquinas, "protestant")).isFalse();
+        assertThat(ReligionFilter.allows(aquinas, "orthodox")).isFalse();
+        assertThat(ReligionFilter.allows(dostoevsky, "orthodox")).isTrue();
+        // Perfil ambiguo (duas denominacoes) aparece para as duas.
+        assertThat(ReligionFilter.allows(anglican, "catholic")).isTrue();
+        assertThat(ReligionFilter.allows(anglican, "protestant")).isTrue();
+        assertThat(ReligionFilter.allows(anglican, "orthodox")).isFalse();
+        // Sem religiao escolhida (ou outra religiao), nenhum perfil cristao e escondido pelas denominacoes.
+        assertThat(ReligionFilter.allows(luther, null)).isTrue();
+        assertThat(ReligionFilter.allows(luther, "islam")).isFalse();
+    }
+
+    @Test
+    void otherPlusOnlyHidesFromEveryReligionButShowsToNoReligion() {
+        List<String> shinto = List.of("other", ReligionFilter.ONLY);
+        for (String religion : ReligionFilter.SELECTABLE) {
+            assertThat(ReligionFilter.allows(shinto, religion)).as(religion).isFalse();
+        }
+        assertThat(ReligionFilter.allows(shinto, "christianity")).isFalse();
+        assertThat(ReligionFilter.allows(shinto, null)).isTrue();
+        // Sem o "only", "other" segue sendo curinga.
+        assertThat(ReligionFilter.allows(List.of("other"), "catholic")).isTrue();
+    }
+
+    @Test
+    void legacyChristianityPreferenceAcceptsAnyDenomination() {
+        assertThat(ReligionFilter.allows(List.of("protestant"), "christianity")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("orthodox"), "christianity")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("islam"), "christianity")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("judaism", ReligionFilter.ONLY), "christianity")).isFalse();
     }
 
     // ---------- endpoint ----------
@@ -172,14 +216,14 @@ class ReligionFilterTest {
     @Test
     void christianPreferenceChangesARealRanking() throws Exception {
         QuizResult general = fetch(null);
-        QuizResult christian = fetch("christianity");
+        QuizResult christian = fetch("catholic");
         Map<String, List<String>> religions = catalogReligions();
 
         boolean generalHadExcluded = Stream.concat(
                         general.personalityMatches().stream().map(m -> "personality:" + m.personalityId()),
                         Stream.concat(general.matches().stream().map(m -> "ideology:" + m.ideologyId()),
                                 general.topCountryMatches().stream().map(m -> "country:" + m.countryId())))
-                .anyMatch(id -> !ReligionFilter.allows(religions.get(id), "christianity"));
+                .anyMatch(id -> !ReligionFilter.allows(religions.get(id), "catholic"));
         assertThat(generalHadExcluded)
                 .as("o vetor de teste deveria trazer ao menos um perfil nao cristao no ranking geral")
                 .isTrue();

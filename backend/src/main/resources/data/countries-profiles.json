@@ -835,18 +835,18 @@
   {
     "countryId": "argentina",
     "vector": {
-      "estrutura": 38.8,
-      "representacao": 72.5,
-      "poder": 43.8,
-      "imigracao": 32.5,
-      "diplomacia": 30.0,
-      "intervencao": 57.5,
-      "economia": 66.2,
-      "controle": 71.2,
-      "comercio": 63.7,
-      "religiao": 55.0,
-      "moral": 68.8,
-      "tecnologia": 62.5
+      "estrutura": 58.1,
+      "representacao": 72.8,
+      "poder": 49.6,
+      "imigracao": 40.0,
+      "diplomacia": 42.1,
+      "intervencao": 37.6,
+      "economia": 40.1,
+      "controle": 34.2,
+      "comercio": 17.5,
+      "religiao": 45.7,
+      "moral": 53.8,
+      "tecnologia": 67.7
     }
   },
   {
@@ -3380,6 +3380,91 @@
       "religiao": 22.2,
       "moral": 31.3,
       "tecnologia": 45.2
+    }
+  },
+  {
+    "countryId": "imperio-sueco",
+    "vector": {
+      "estrutura": 19.7,
+      "representacao": 18.6,
+      "poder": 79.3,
+      "imigracao": 74.1,
+      "diplomacia": 91.0,
+      "intervencao": 6.7,
+      "economia": 42.3,
+      "controle": 81.4,
+      "comercio": 69.3,
+      "religiao": 5.7,
+      "moral": 8.9,
+      "tecnologia": 58.2
+    }
+  },
+  {
+    "countryId": "suecia-finlandia",
+    "vector": {
+      "estrutura": 24.4,
+      "representacao": 31.7,
+      "poder": 73.3,
+      "imigracao": 74.1,
+      "diplomacia": 73.1,
+      "intervencao": 29.3,
+      "economia": 35.1,
+      "controle": 70.7,
+      "comercio": 74.0,
+      "religiao": 9.3,
+      "moral": 11.3,
+      "tecnologia": 56.0
+    }
+  },
+  {
+    "countryId": "shenzhen",
+    "vector": {
+      "estrutura": 19.9,
+      "representacao": 16.2,
+      "poder": 91.0,
+      "imigracao": 68.6,
+      "diplomacia": 51.4,
+      "intervencao": 51.8,
+      "economia": 51.8,
+      "controle": 69.5,
+      "comercio": 34.8,
+      "religiao": 94.4,
+      "moral": 39.3,
+      "tecnologia": 83.2
+    }
+  },
+  {
+    "countryId": "chongqing",
+    "vector": {
+      "estrutura": 16.3,
+      "representacao": 19.8,
+      "poder": 95.7,
+      "imigracao": 73.3,
+      "diplomacia": 61.7,
+      "intervencao": 50.2,
+      "economia": 73.2,
+      "controle": 85.0,
+      "comercio": 52.6,
+      "religiao": 92.0,
+      "moral": 28.6,
+      "tecnologia": 79.6
+    }
+  },
+  {
+    "countryId": "imperio-austriaco",
+    "vector": {
+      "estrutura": 15.1,
+      "representacao": 5.5,
+      "poder": 89.8,
+      "imigracao": 55.1,
+      "diplomacia": 70.7,
+      "intervencao": 11.4,
+      "economia": 42.3,
+      "controle": 62.4,
+      "comercio": 74.0,
+      "religiao": 5.7,
+      "moral": 8.9,
+      "tecnologia": 40.5
     }
   }
 ]

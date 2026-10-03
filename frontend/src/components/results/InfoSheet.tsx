@@ -6,13 +6,15 @@ interface InfoSheetProps {
   /** id do título dentro de `children`, para o aria-labelledby do diálogo. */
   titleId: string;
   style?: CSSProperties;
+  /** Classe extra na aba, para variações de largura e espaçamento de uma seção específica. */
+  className?: string;
   onClose: () => void;
   children: ReactNode;
 }
 
 // Aba de detalhes: sobe de baixo no mobile e vira janela central no desktop.
 // Renderiza no <body> para escapar de transforms das seções com data-reveal.
-export function InfoSheet({ titleId, style, onClose, children }: InfoSheetProps) {
+export function InfoSheet({ titleId, style, className, onClose, children }: InfoSheetProps) {
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export function InfoSheet({ titleId, style, onClose, children }: InfoSheetProps)
   return createPortal(
     <div className="e-axis-sheet-backdrop" onClick={onClose}>
       <div
-        className="e-axis-sheet"
+        className={className ? `e-axis-sheet ${className}` : 'e-axis-sheet'}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}

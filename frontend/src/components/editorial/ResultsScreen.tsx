@@ -9,6 +9,7 @@ import '../../styles/report.css';
 import { BooksSection } from '../results/BooksSection';
 import { AreasSection } from '../results/AreasSection';
 import { AxesSection } from '../results/AxesSection';
+import { CompareSection } from '../results/CompareSection';
 import { CountriesSection } from '../results/CountriesSection';
 import { CountUpValue } from '../results/CountUpValue';
 import { IdeologiesSection } from '../results/IdeologiesSection';
@@ -131,6 +132,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             </button>
           </div>
           {error && <p className="inline-error" role="alert">{error}</p>}
+
+          <CompareSection axes={axes} results={axisResults} religion={religion} userCategory={top.category} />
 
           <SupportSection variant="panel" />
         </div>

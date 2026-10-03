@@ -1,0 +1,198 @@
+{
+  "catalog": "country",
+  "id": "argentina",
+  "auditDate": "2026-10-03",
+  "scope": "Argentina sob a presidência de Javier Milei desde dezembro de 2023: instituições e políticas vigentes, não sua sociedade anarcocapitalista ideal nem um perfil pessoal de Milei.",
+  "method": "As 240 respostas foram escolhidas individualmente a partir das perguntas atuais; o vetor foi calculado depois. Briefs distinguem leis/instituições, conduta administrativa e agendas anunciadas. Questões hipotéticas sem política argentina direta usam inferência limitada dessa orientação, não alegam posições oficiais específicas.",
+  "inferenceLimits": [
+    "As perguntas que citam Brasil são aplicadas ao país auditado por analogia de política, sem presumir interesse argentino em instituições brasileiras.",
+    "Respostas a hipóteses de secessão, guerra preventiva, costumes migratórios e aprimoramento humano não equivalem a compromissos formais publicados.",
+    "As escolhas de arquétipo refletem instituições efetivas: democracia com freios e contrapesos; mercado com regras e rede de proteção; defesa forte com aliados próximos."
+  ],
+  "sources": [
+    {
+      "title": "Constitución Nacional, Ley 24.430",
+      "date": "1995-01-10",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/804/texto",
+      "axes": [
+        "estrutura",
+        "representacao",
+        "poder",
+        "imigracao",
+        "religiao"
+      ],
+      "evidenceType": "enacted institution",
+      "evidence": "A república é representativa e federal; as províncias conservam competências próprias e autonomia municipal dentro da Constituição nacional. Há eleições, competências separadas, garantias civis, invocação de Deus e apoio ao culto católico, junto de liberdade de culto e direitos civis de estrangeiros.",
+      "auditImplication": "Federalismo não equivale a secessão; presença constitucional do catolicismo não equivale a teocracia. Decretos presidenciais não anulam automaticamente os poderes do Congresso."
+    },
+    {
+      "title": "IMF concludes 2026 Article IV consultation and second EFF review",
+      "date": "2026-05-21",
+      "url": "https://www.imf.org/en/news/articles/2026/05/21/pr26165-argentina-imf-completes-2nd-rev-of-extended-arr-under-eff-concludes-2026-aiv-consultation",
+      "axes": [
+        "economia",
+        "controle",
+        "comercio"
+      ],
+      "evidenceType": "documented current policy and institutions",
+      "evidence": "O programa busca crescimento liderado pelo setor privado, disciplina fiscal, redução de subsídios, desregulação e abertura econômica. Mantém assistência social focalizada, Banco Central, instrumentos monetários/cambiais e supervisão financeira; o FMI distingue avanços adotados de novas reformas recomendadas.",
+      "auditImplication": "As respostas refletem direção liberalizante dentro de uma economia institucional mista, sem supor impostos voluntários, privatização universal ou extinção já realizada do Banco Central."
+    },
+    {
+      "title": "Decreto 366/2025, reforma migratoria",
+      "date": "2025-05-29",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-366-2025-413297/texto",
+      "axes": [
+        "imigracao",
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted executive policy",
+      "evidence": "Endurece ingresso, permanência e expulsão, altera condições de acesso de estrangeiros a saúde e educação e enfatiza segurança e capacidade de sustento. Também reconhece direitos constitucionais e menciona regularização especial de venezuelanos em 2024.",
+      "auditImplication": "A orientação mais restritiva diz respeito principalmente a legalidade, segurança e recursos; não implica eliminar a pluralidade cultural ou recusar imigrantes por sua origem."
+    },
+    {
+      "title": "Human Rights Watch World Report 2026: Argentina",
+      "date": "2026",
+      "dateMeaning": "report edition covering events of 2025",
+      "url": "https://www.hrw.org/world-report/2026/country-chapters/argentina",
+      "axes": [
+        "representacao",
+        "poder",
+        "economia",
+        "moral",
+        "intervencao"
+      ],
+      "evidenceType": "documented conduct; distinguishes rhetoric from law",
+      "evidence": "Relata repressão de protestos, cortes sociais e oposição do Executivo a políticas de gênero. Registra, contudo, Congresso revertendo vetos e rejeitando nomeações judiciais presidenciais; o aborto legal permanece vigente apesar do desfinanciamento. Também documenta expansão de algumas transferências sociais.",
+      "auditImplication": "O regime continua democrático com tensões executivas e políticas de ordem pública. Conservadorismo presidencial não deve ser codificado como revogação automática dos direitos existentes."
+    },
+    {
+      "title": "Memorándum de Entendimiento con Israel por la Democracia y la Libertad",
+      "date": "2025-06-12",
+      "url": "https://www.argentina.gob.ar/noticias/el-presidente-milei-concreto-el-memorandum-de-entendimiento-con-israel-por-la-democracia-y",
+      "axes": [
+        "diplomacia",
+        "intervencao"
+      ],
+      "evidenceType": "announced executive alignment and cooperation agenda",
+      "evidence": "O anúncio reforça vínculos estratégicos com Israel, combate ao terrorismo e cooperação de defesa e segurança. A própria notícia distingue a cerimônia e o texto do memorando de sua assinatura final ainda em consideração.",
+      "auditImplication": "Alinhamento com aliados e defesa forte são posições observáveis; não se presume obrigação automática de participar de todas as suas guerras."
+    },
+    {
+      "title": "Argentina y EE.UU. sellan un acuerdo estratégico para modernizar las Fuerzas Armadas",
+      "date": "2025-07-03",
+      "url": "https://www.argentina.gob.ar/noticias/historica-visita-de-petri-al-pentagono-argentina-y-eeuu-sellan-un-acuerdo-estrategico-para",
+      "axes": [
+        "diplomacia",
+        "intervencao",
+        "tecnologia"
+      ],
+      "evidenceType": "documented executive policy and procurement",
+      "evidence": "A cooperação militar com os Estados Unidos inclui modernização das Forças Armadas e aquisições de Stryker e F-16.",
+      "auditImplication": "Há valorização efetiva da defesa e de aliados próximos; a Argentina não representa neutralidade externa absoluta."
+    },
+    {
+      "title": "Presentación de los primeros seis F-16 argentinos",
+      "date": "2025-12-07",
+      "url": "https://www.argentina.gob.ar/noticias/milei-hoy-es-un-dia-historico-para-el-pais-los-f-16-son-los-nuevos-custodios-del-cielo",
+      "axes": [
+        "diplomacia",
+        "tecnologia"
+      ],
+      "evidenceType": "implemented military procurement",
+      "evidence": "A apresentação oficial registra a incorporação dos primeiros seis F-16 para modernização e defesa do espaço aéreo.",
+      "auditImplication": "A modernização militar já apresenta implementação concreta; não se trata apenas de uma preferência ideológica do presidente."
+    },
+    {
+      "title": "Anuncio del Plan Nuclear Argentino",
+      "date": "2024-12-20",
+      "url": "https://www.argentina.gob.ar/noticias/el-presidente-javier-milei-al-anunciar-el-plan-nuclear-argentino-la-energia-nuclear-tendra",
+      "axes": [
+        "tecnologia",
+        "controle",
+        "economia",
+        "diplomacia"
+      ],
+      "evidenceType": "announced executive development plan; existing state institutions",
+      "evidence": "O plano associa energia nuclear civil a servidores de inteligência artificial, investimento e desenvolvimento energético. Envolve organismos estatais nucleares e planejamento de reatores e urânio; a finalidade anunciada é pacífica.",
+      "auditImplication": "A administração favorece tecnologia e produtividade, mas também coordena setores estratégicos. Nuclear civil não deve ser confundido com defesa de armamento nuclear; projetos anunciados não são tratados como obras concluídas."
+    },
+    {
+      "title": "Ley 26.618, matrimonio civil igualitario",
+      "date": "2010-07-15",
+      "dateMeaning": "sanction date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26618-169608/texto",
+      "axes": [
+        "moral",
+        "religiao",
+        "poder"
+      ],
+      "evidenceType": "enacted civil rights institution",
+      "evidence": "Estabelece igualdade jurídica dos casamentos de pessoas do mesmo sexo e de sexos diferentes, inclusive disposições sobre adoção.",
+      "auditImplication": "Rhetórica conservadora do Executivo não transforma o casamento civil vigente em instituição exclusivamente heterossexual ou religiosa."
+    },
+    {
+      "title": "Ley 27.610, acceso a la interrupción voluntaria del embarazo",
+      "date": "2020-12-30",
+      "dateMeaning": "sanction date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27610-346231/texto",
+      "axes": [
+        "moral",
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted reproductive rights institution",
+      "evidence": "Reconhece acesso ao aborto até a 14ª semana e em hipóteses adicionais previstas, incluindo cobertura integral nos sistemas de saúde.",
+      "auditImplication": "O direito continua no ordenamento. As respostas do país preservam autonomia reprodutiva sem atribuir ao presidente apoio pessoal ao aborto."
+    },
+    {
+      "title": "Ley 26.743, identidad de género, texto actualizado",
+      "date": "2012-05-09",
+      "dateMeaning": "original sanction date; updated text consulted on audit date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26743-197860/actualizacion",
+      "axes": [
+        "moral",
+        "poder",
+        "tecnologia"
+      ],
+      "evidenceType": "enacted institution with subsequent amendments",
+      "evidence": "Mantém reconhecimento da identidade de gênero e retificação documental, além de acesso de adultos a intervenções e tratamentos sem autorização judicial.",
+      "auditImplication": "O reconhecimento civil de identidade de gênero não desaparece com críticas do Executivo; não se supõe que tratamentos de menores estejam sujeitos às mesmas regras dos adultos."
+    },
+    {
+      "title": "Ley 27.491, control de enfermedades prevenibles por vacunación",
+      "date": "2019-01-04",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27491-318455/texto",
+      "axes": [
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted public health institution",
+      "evidence": "As vacinas previstas no calendário e outras indicadas pela autoridade sanitária são obrigatórias e gratuitas, com instrumentos públicos para garantir cobertura.",
+      "auditImplication": "A Argentina sob Milei não equivale à defesa filosófica de voluntariedade absoluta na vacinação ou na prestação de todos os serviços."
+    }
+  ],
+  "validation": {
+    "result": "passed",
+    "neutralAnswers": 0,
+    "neutralPercent": 0,
+    "warnings": [
+      "96.1% vector proximity to madrid",
+      "94.2% vector proximity to rio-grande-do-sul",
+      "93.9% vector proximity to sao-paulo"
+    ],
+    "review": "Respostas derivadas independentemente do prompt completo salvo, sem ler respostas ou vetores anteriores. Avisos de proximidade revisados após calcular o vetor; diferenças por eixo verificadas, sem ajustes para perseguir coordenadas. Comparada a Madrid, a Argentina difere em 15,2 pontos na imigração, 15,7 na propriedade econômica, 16,0 no planejamento e 8,2 na moral; são perfis distintos."
+  },
+  "process": {
+    "prompt": "profile-audit/prompts/country/argentina.txt",
+    "promptSha256": "f31204243ca55bd52c3f7d33c5017ddd743f01dcfc58d50c2ee6868080ace0c5",
+    "output": "profile-audit/subagent-out/country/argentina.json",
+    "archive": "profile-audit/answers/country/argentina-reaudit-process-2026-10-03.json",
+    "history": "Todas as auditorias anteriores foram preservadas sem sobrescrever seus arquivos. O par temporário de exemplo foi substituído por Argentina, conforme o passo 7 do README.",
+    "religionsReview": "religiao=45.7; [] mantido por ser >35 e o país não ser definido por uma identidade religiosa."
+  }
+}

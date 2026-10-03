@@ -40,8 +40,10 @@ const RELIGION_ICONS = new Function('FILLED_POLE_ICONS', `return (${religionLite
 
 // Religião que define o ícone do perfil: a única religião selecionável marcada
 // (com duas ou mais diferentes, ou só "other"/"only", fica a cruz padrão).
+const SELECTABLE_RELIGIONS = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism'];
+
 export function profileReligion(religions) {
-  const picked = (religions ?? []).filter((r) => r in RELIGION_ICONS && r !== 'none');
+  const picked = (religions ?? []).filter((r) => SELECTABLE_RELIGIONS.includes(r));
   return picked.length === 1 ? picked[0] : null;
 }
 

@@ -272,5 +272,3 @@ A new profile has to meet these requirements before it is merged:
 ## Author
 
 **Enzo Xavier Santos** built 12 Axes as a portfolio project and a practical study of full-stack architecture with Java, React, and TypeScript.
-
-For permission requests or questions, write to enzo.xs@hotmail.com.

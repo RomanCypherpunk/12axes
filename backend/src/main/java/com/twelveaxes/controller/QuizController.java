@@ -10,6 +10,7 @@ import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.AxisOutlierService;
 import com.twelveaxes.service.AxisTensionService;
+import com.twelveaxes.service.AxisValuesParser;
 import com.twelveaxes.service.BoundedCache;
 import com.twelveaxes.service.BookRecommendationService;
 import com.twelveaxes.service.DimensionMatcherService;
@@ -21,7 +22,6 @@ import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ReligionFilter;
 import com.twelveaxes.service.ScoringService;
 import jakarta.validation.Valid;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;
@@ -32,7 +32,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 public class QuizController {
@@ -107,7 +106,7 @@ public class QuizController {
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
             @RequestParam(required = false) String religion
     ) {
-        return buildResult(scoringService.scoreFromLeftPercents(parseAxisValues(values), lang), lang,
+        return buildResult(scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang), lang,
                 ReligionFilter.normalize(religion));
     }
 
@@ -150,21 +149,6 @@ public class QuizController {
                 axisTensionService.findStrongest(axes, lang),
                 bookRecommendationService.recommend(personalityMatches, categoryBestMatches, lang)
         );
-    }
-
-    private List<Double> parseAxisValues(String values) {
-        try {
-            List<Double> parsed = Arrays.stream(values.split(","))
-                    .map(String::trim)
-                    .map(Double::parseDouble)
-                    .toList();
-            if (parsed.stream().anyMatch(value -> value.isNaN() || value < 0 || value > 100)) {
-                throw new NumberFormatException("fora do intervalo 0-100");
-            }
-            return parsed;
-        } catch (NumberFormatException exception) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Vetor de eixos inválido");
-        }
     }
 
     @GetMapping("/api/ideologies")

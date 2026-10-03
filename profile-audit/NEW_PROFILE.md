@@ -144,7 +144,7 @@ Exemplo de objeto novo em `countries.json`:
   "historical": false,
   "period": "",
   "vector": null,
-  "religions": ["christianity"]
+  "religions": ["catholic"]
 }
 ```
 
@@ -162,7 +162,7 @@ Exemplo de objeto novo em `personalities.json` (campos de imagem preenchidos no 
   "imageSourceName": "Wikimedia Commons / Wikipédia",
   "imageSourceUrl": "https://pt.wikipedia.org/wiki/Exemplo_Pessoa",
   "imageNote": "Retrato de Exemplo Pessoa via Wikipédia/Wikimedia Commons.",
-  "religions": ["christianity"]
+  "religions": ["catholic"]
 }
 ```
 
@@ -214,7 +214,7 @@ valor fora dos 8.
 
 `religions` é **obrigatório** (use `[]` quando não houver vínculo) e alimenta o filtro opcional
 "priorizar uma tradição religiosa" da página de resultados. Valores fechados:
-`christianity`, `judaism`, `islam`, `buddhism` e `other` (hinduísmo, xintoísmo, religiões
+`catholic`, `protestant`, `orthodox` (o cristianismo é dividido por denominação; perfil ambíguo ou sem denominação leva mais de uma, ou as três), `judaism`, `islam`, `buddhism` e `other` (hinduísmo, xintoísmo, religiões
 antigas/pagãs etc.). Pode haver mais de um.
 
 **Primeiro filtro: o vetor.** Só se marca religião quando ela muda a decisão de quem filtra:
@@ -234,16 +234,19 @@ marcação tira o perfil de quem escolheu outra tradição. Marque só quando is
 
 | Catálogo | Entra | Não entra |
 |---|---|---|
-| país | **só a religião majoritária** (ou a tradição dominante), mesmo em Estado laico (Arábia Saudita = `["islam"]`; Polônia = `["christianity"]`; Suécia e Albânia, laicas no vetor, = `[]`) | religiões minoritárias, por maiores que sejam; regimes cuja marca é a perseguição à religião (Coreia do Norte, Khmer Vermelho, URSS = `[]`) |
-| ideologia | doutrina com base religiosa explícita (Democracia Cristã, Islamismo, Distributismo, Baathismo) ou que defende uma religião como parte da identidade política (nacional-conservadorismos) | doutrinas seculares, mesmo com adeptos majoritariamente de uma religião |
-| personalidade | fé pública que aparece na atuação, liderança religiosa, ou apoio declarado a uma causa religiosa (Khomeini, Churchill, Martin Luther King Jr.) | origem étnica ou cultural sem papel na vida pública (Einstein, Friedman, Kafka = `[]`); fé privada de figuras seculares; apoio político a Israel, que não é causa judaica (sionismo cristão = `christianity`; judeu secular sionista como Einstein ou Isaiah Berlin = `[]`) |
+| país | **só a religião majoritária** (ou a tradição dominante), mesmo em Estado laico (Arábia Saudita = `["islam"]`; Polônia = `["catholic"]`; Suécia e Albânia, laicas no vetor, = `[]`) | religiões minoritárias, por maiores que sejam; regimes cuja marca é a perseguição à religião (Coreia do Norte, Khmer Vermelho, URSS = `[]`) |
+| ideologia | doutrina com base religiosa explícita (Democracia Cristã, Islamismo, Distributismo, Baathismo) ou que defende uma religião como parte da identidade política (Teocratismo Cristão, Fundamentalismo Religioso) | doutrinas seculares, mesmo com adeptos majoritariamente de uma religião |
+| personalidade | fé pública que aparece na atuação, liderança religiosa, ou apoio declarado a uma causa religiosa (Khomeini, Churchill, Martin Luther King Jr.) | origem étnica ou cultural sem papel na vida pública (Einstein, Friedman, Kafka = `[]`); fé privada de figuras seculares; apoio político a Israel, que não é causa judaica (sionismo cristão = a denominação da pessoa (Trump = `protestant`); judeu secular sionista como Einstein ou Isaiah Berlin = `[]`) |
 
-Aliança só diplomática/militar **não** conta. Ex.: Trump = `["christianity"]` (o sionismo
+Aliança só diplomática/militar **não** conta. Ex.: Trump = `["protestant"]` (o sionismo
 cristão é causa cristã); Arábia Saudita = `["islam"]`, apesar da aliança com os EUA.
 
 **Como o filtro trata `other`:** um perfil aparece se contém a religião escolhida **ou** se não
-tem nenhuma das quatro selecionáveis (`[]` ou só `["other"]`). Junto de outra religião,
+tem nenhuma das selecionáveis (`[]` ou só `["other"]`). Junto de outra religião,
 `other` é só informativo: `["buddhism", "other"]` some para quem escolheu cristianismo.
+**`["other", "only"]`** (xintoísmo e afins): o perfil some para quem escolheu qualquer religião
+selecionável e aparece só para quem não escolheu nenhuma (Aristóteles, só `["other"]`, continua
+aparecendo para todos).
 
 **Texto secular com vetor religioso:** se a descrição diz que o perfil é secular mas o vetor tem
 `religiao` ≤ 35, a marcação não pode sair. Registre o perfil para reauditar o vetor em vez de
@@ -253,10 +256,86 @@ apagar a religião.
 irreligioso; baixo = religioso). O valor vem de pesquisa, **nunca** do vetor: o vetor só torna o
 campo obrigatório. `religions` vive **apenas no arquivo PT**, como `category`.
 
-Como o filtro funciona: com "Cristianismo" escolhido, some só o perfil ligado a outra das quatro
-religiões selecionáveis e não ao cristianismo. Perfis `[]` ou só `other` sempre aparecem. A
+Como o filtro funciona: com uma religião escolhida (no cristianismo, uma das três vertentes), some só o
+perfil ligado a outra das religiões selecionáveis e não à escolhida. Perfis `[]` ou só `other` sempre aparecem (`["other", "only"]` é a exceção, ver acima). A
 compatibilidade não muda. `validate.py` ([RELIGIAO]) e `ReligionFilterTest` bloqueiam o merge se a
 regra for violada.
+
+### Vertente cristã (`catholic`, `protestant`, `orthodox`)
+
+O cristianismo é dividido em três vertentes. Na tela de resultado o usuário escolhe a religião e,
+se for cristianismo, a vertente; cada perfil cristão leva uma, duas ou as três marcas. O filtro
+esconde os perfis ligados só a outra vertente. Marcar a vertente errada tira o perfil de quem
+deveria vê-lo, então toda marca precisa de **base explícita**.
+
+**Regras gerais (os três catálogos)**
+- **Nunca há padrão silencioso.** Nada de "católico por omissão": o perfil sem base clara fica
+  marcado como **provisório** no resumo da auditoria, para revisão humana.
+- **Tamanho da marca:** 1 vertente (clara), 2 (ambígua ou de transição) ou 3 (pan-cristã de fato).
+  Nunca 4 ou mais marcas cristãs.
+- **Na dúvida, duas marcas em vez de uma errada.** Marcar a mais só aumenta a visibilidade;
+  marcar errado esconde o perfil de quem deveria vê-lo.
+- **Ordem do campo:** `catholic`, `protestant`, `orthodox`, depois as não cristãs, depois
+  `other`, depois `only`. Marcas não cristãs e `only` não se alteram ao auditar a vertente.
+- **Cristãos fora das três** (mórmons, Testemunhas, unitaristas): ficam com a tradição de origem
+  se for clara; senão, com as três, registrando a ressalva.
+
+**Países e regiões** (aplique na ordem; a primeira regra que servir decide)
+1. **Igreja estatal ou religião oficial** na época do perfil define a marca (Rússia =
+   `["orthodox"]`; Inglaterra vitoriana = `["protestant"]`; Espanha franquista = `["catholic"]`).
+2. **Participação:** uma vertente com **65% ou mais** dos cristãos, na época do perfil, é a marca única.
+3. **Segunda comunidade:** com **25% ou mais** dos cristãos, ou quando a divisão molda a política
+   (Suíça, Hungria, Alemanha imperial, Líbano, Irlanda do Norte), marcam-se as duas.
+4. **Perfil histórico:** vale a vertente do **período** que o perfil representa, não a de hoje
+   (Brasil Império = `catholic`; República Holandesa = `protestant`).
+5. **Antes do cisma de 1054** (Império Romano) ou perfil que o atravessa (Império Bizantino):
+   `catholic` e `orthodox`, ou as três quando o reconhecimento é pan-cristão.
+6. **Regiões** (estado, província, cantão): a vertente dominante **da região**, não a do país.
+7. **Estado laico ou que perseguiu a religião:** sem marca, salvo se o vetor (`religiao` ≤ 35)
+   exigir; aí vale a tradição cultural histórica do povo.
+
+**Personalidades** (use a evidência mais forte disponível)
+1. **Identidade religiosa pública** durante a atividade política ou intelectual (declaração,
+   filiação, culto, obra).
+2. **Pertencimento formal** (membro de igreja, ordem ou conselho).
+3. **Nascimento ou batismo**, só se não houver mudança nem sinal em contrário.
+4. **Contexto cultural**, só como último recurso, e sempre **provisório**.
+
+Casos especiais:
+- **Conversão:** vale a vertente do período de influência pública; se a carreira atravessa as duas,
+  marcam-se as duas (Blair, Vance, Lacerda).
+- **Anglicano, episcopal, presbiteriano, luterano, calvinista, metodista, batista, evangélico,
+  pentecostal, quaker:** `protestant`. O anglicano só ganha também `catholic` se a pessoa se
+  identificava como anglo-católica ou defendia doutrina católica.
+- **Ortodoxo oriental, pré-calcedoniano e velhos crentes:** `orthodox`. **Católico oriental:**
+  `catholic`.
+- **Antes de 1517 no Ocidente:** `catholic`. **Antes de 1054 no Oriente:** `orthodox`. **Pais da
+  Igreja e apóstolos** (Paulo, Agostinho), reconhecidos pelas três: as três.
+- **Heterodoxo ou excomungado** (Tolstói, Newton): a tradição de origem, mais a mais próxima se a
+  identidade cristã era assumida.
+- **Fé declarada em disputa:** as duas vertentes plausíveis. **Cristianismo só cultural:** sem
+  marca, salvo se o vetor exigir. **Pessoas vivas:** só o que é público e declarado.
+
+**Ideologias** (classifique a **doutrina**, nunca o país ou a pessoa de referência)
+1. A definição depende de uma teologia ou autoridade eclesiástica específica (magistério papal,
+   tomismo, "Deus, Pátria, Foros e Rei", fascismo clerical)? **Só essa vertente** (ou as que a
+   descrição nomeia).
+2. Exige fé cristã em geral, mas não uma vertente (Democracia, Socialismo, Anarquismo e Trabalhismo
+   Cristãos)? **As três**; mantém `only` se for exclusiva de cristãos.
+3. É doutrina política que funciona sem religião (monarquismo, federalismo, conservadorismo,
+   imperialismo, nacionalismos, militarismo)? **Neutra:** as seis religiões selecionáveis (o
+   validador exige ao menos uma marca quando `religiao` ≤ 35), mantendo `other`/`only`.
+
+Dois testes de apoio: o **teste da troca** (troque o país ou a pessoa de referência por um de outra
+religião; se a doutrina ainda faz sentido, ela é neutra) e **origem não basta** (nascer num
+ambiente católico, como o Distributismo ou o Falangismo, só conta se a **essência** da doutrina
+depende da vertente, e não só o contexto histórico).
+
+**Ao auditar,** liste no resumo, para cada perfil cristão do lote, a marca e a **base**
+(igreja estatal, participação, duas comunidades, período histórico, pré-cisma, região,
+autodeclaração, pertencimento, nascimento, definição da doutrina, cristã em geral, neutra) e
+destaque os **provisórios**.
+
 
 **Marcador `only` (perfil exclusivo).** Acrescente `"only"` ao lado de uma ou mais religiões
 selecionáveis (ex.: `["judaism", "only"]`) para que o perfil apareça **apenas** para quem escolheu

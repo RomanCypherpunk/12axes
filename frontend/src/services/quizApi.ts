@@ -1,16 +1,13 @@
 import { LANG, t } from '../i18n';
-import type { QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
+import type { CompareDetail, CompareItem, CompareType, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_URL}${path}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      ...options?.headers
-    },
-    ...options
-  });
+  // Content-Type só quando há corpo: num GET ele transforma a chamada entre origens em uma
+  // requisição "não simples", e o navegador gasta uma ida e volta extra (preflight OPTIONS).
+  const headers = options?.body ? { 'Content-Type': 'application/json', ...options.headers } : options?.headers;
+  const response = await fetch(`${API_URL}${path}`, { ...options, headers });
 
   if (!response.ok) {
     const message = await response.text();
@@ -62,3 +59,15 @@ export function fetchSharedResult(leftPercents: number[], religion: string | nul
   return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}`);
 }
 
+
+export function fetchCompareCatalog(religion: string | null = null): Promise<CompareItem[]> {
+  const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
+  return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}${religionParam}`);
+}
+
+export function fetchCompare(type: CompareType, id: string, leftPercents: number[]): Promise<CompareDetail> {
+  const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
+  return request<CompareDetail>(
+    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}`
+  );
+}

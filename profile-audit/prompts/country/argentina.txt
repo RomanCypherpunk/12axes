@@ -1,0 +1,535 @@
+Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Argentina" (catálogo: país/nação) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
+
+Dados curados deste perfil (não invente informação além disto; se precisar de contexto histórico adicional, baseie-se apenas em fatos amplamente documentados e verificáveis sobre esta entidade específica):
+id: argentina
+name: Argentina
+category: República federal com reformas de mercado
+
+historical: false; período de referência: governo atual desde dezembro de 2023
+description: República federal presidencialista, a Argentina sob Javier Milei desde 2023 promove ajuste fiscal, desregulação e privatizações, mantendo serviços públicos e alinhamento aos Estados Unidos e a Israel, em ruptura com o peronismo.
+
+METODOLOGIA (obrigatória):
+- Para CADA um dos 12 eixos: primeiro escreva um persona brief de 1-2 frases conectando especificamente a description acima ao tema daquele eixo (não repita a description inteira - extraia so a parte relevante aquele eixo).
+- Depois responda as 20 perguntas do eixo, uma a uma, com um destes codigos: DT (discordo totalmente), D (discordo), N (neutro/indiferente), C (concordo), CT (concordo totalmente).
+- Simule genuinamente como o proprio perfil / seus porta-vozes reais responderiam CADA pergunta individualmente. NAO escolha um valor-alvo para o eixo e trabalhe de tras para frente. Aceite o que resultar, mesmo que surpreendente.
+- Cada pergunta e independente. As perguntas ja vem em ordem embaralhada. Responda pelo id da pergunta.
+- Atenção de interpretação: `estrutura` mede descentralização/federalismo/secessão vs. unitarismo/centralização; `representacao` mede democracia/participação vs. autocracia/liderança forte. **Nunca use autocracia como atalho para marcar `estrutura` como unitário, nem descentralização como atalho para marcar `representacao` como democrática.**
+- Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico. Se este perfil for anti-estatista mas quiser coordenacao economica coletiva/planejada (ex.: anarquistas, comunistas libertarios), julgue pelo ESPIRITO de coordenacao coletiva vs. mercado, nao pela agencia estatal literal. Ja no eixo "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico/anti-autocratico, nao autocratico.
+
+SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
+/Users/liam/Documents/GitHub/12axes-issue-92/profile-audit/subagent-out/country/argentina.json
+
+Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; cada eixo com exatamente 20 respostas; todos os 12 eixos presentes; mais o bloco "archetype" com a letra escolhida em cada pergunta de arquétipo do fim deste prompt):
+{
+  "estrutura": { "personaBrief": "...", "answers": { "estrutura_01": "C", "estrutura_07": "DT", ... } },
+  "representacao": { "personaBrief": "...", "answers": { ... } },
+  ... (todos os 12 eixos: estrutura, representacao, poder, imigracao, diplomacia, intervencao, economia, controle, comercio, religiao, moral, tecnologia),
+  "archetype": { "sociedade": "A", "poder": "C", "economia": "B", "mundo": "C", "tecnologia": "D" }
+}
+
+Depois de gravar o arquivo, responda apenas com "OK {catalog}:argentina" e um resumo de 1 linha. Não cole o JSON inteiro na resposta.
+
+N só para indiferença genuína: conte os neutros antes de salvar. Não leia respostas anteriores nem vetores de Argentina ou outros perfis.
+
+Contexto factual adicional (distinga instituições, medidas adotadas e propostas; verifique fontes quando necessário):
+{
+  "catalog": "country",
+  "id": "argentina",
+  "auditDate": "2026-10-03",
+  "scope": "Argentina sob a presidência de Javier Milei desde dezembro de 2023: instituições e políticas vigentes, não sua sociedade anarcocapitalista ideal nem um perfil pessoal de Milei.",
+  "method": "As 240 respostas foram escolhidas individualmente a partir das perguntas atuais; o vetor foi calculado depois. Briefs distinguem leis/instituições, conduta administrativa e agendas anunciadas. Questões hipotéticas sem política argentina direta usam inferência limitada dessa orientação, não alegam posições oficiais específicas.",
+  "inferenceLimits": [
+    "As perguntas que citam Brasil são aplicadas ao país auditado por analogia de política, sem presumir interesse argentino em instituições brasileiras.",
+    "Respostas a hipóteses de secessão, guerra preventiva, costumes migratórios e aprimoramento humano não equivalem a compromissos formais publicados.",
+    "As escolhas de arquétipo refletem instituições efetivas: democracia com freios e contrapesos; mercado com regras e rede de proteção; defesa forte com aliados próximos."
+  ],
+  "sources": [
+    {
+      "title": "Constitución Nacional, Ley 24.430",
+      "date": "1995-01-10",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/804/texto",
+      "axes": [
+        "estrutura",
+        "representacao",
+        "poder",
+        "imigracao",
+        "religiao"
+      ],
+      "evidenceType": "enacted institution",
+      "evidence": "A república é representativa e federal; as províncias conservam competências próprias e autonomia municipal dentro da Constituição nacional. Há eleições, competências separadas, garantias civis, invocação de Deus e apoio ao culto católico, junto de liberdade de culto e direitos civis de estrangeiros.",
+      "auditImplication": "Federalismo não equivale a secessão; presença constitucional do catolicismo não equivale a teocracia. Decretos presidenciais não anulam automaticamente os poderes do Congresso."
+    },
+    {
+      "title": "IMF concludes 2026 Article IV consultation and second EFF review",
+      "date": "2026-05-21",
+      "url": "https://www.imf.org/en/news/articles/2026/05/21/pr26165-argentina-imf-completes-2nd-rev-of-extended-arr-under-eff-concludes-2026-aiv-consultation",
+      "axes": [
+        "economia",
+        "controle",
+        "comercio"
+      ],
+      "evidenceType": "documented current policy and institutions",
+      "evidence": "O programa busca crescimento liderado pelo setor privado, disciplina fiscal, redução de subsídios, desregulação e abertura econômica. Mantém assistência social focalizada, Banco Central, instrumentos monetários/cambiais e supervisão financeira; o FMI distingue avanços adotados de novas reformas recomendadas.",
+      "auditImplication": "As respostas refletem direção liberalizante dentro de uma economia institucional mista, sem supor impostos voluntários, privatização universal ou extinção já realizada do Banco Central."
+    },
+    {
+      "title": "Decreto 366/2025, reforma migratoria",
+      "date": "2025-05-29",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-366-2025-413297/texto",
+      "axes": [
+        "imigracao",
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted executive policy",
+      "evidence": "Endurece ingresso, permanência e expulsão, altera condições de acesso de estrangeiros a saúde e educação e enfatiza segurança e capacidade de sustento. Também reconhece direitos constitucionais e menciona regularização especial de venezuelanos em 2024.",
+      "auditImplication": "A orientação mais restritiva diz respeito principalmente a legalidade, segurança e recursos; não implica eliminar a pluralidade cultural ou recusar imigrantes por sua origem."
+    },
+    {
+      "title": "Human Rights Watch World Report 2026: Argentina",
+      "date": "2026",
+      "dateMeaning": "report edition covering events of 2025",
+      "url": "https://www.hrw.org/world-report/2026/country-chapters/argentina",
+      "axes": [
+        "representacao",
+        "poder",
+        "economia",
+        "moral",
+        "intervencao"
+      ],
+      "evidenceType": "documented conduct; distinguishes rhetoric from law",
+      "evidence": "Relata repressão de protestos, cortes sociais e oposição do Executivo a políticas de gênero. Registra, contudo, Congresso revertendo vetos e rejeitando nomeações judiciais presidenciais; o aborto legal permanece vigente apesar do desfinanciamento. Também documenta expansão de algumas transferências sociais.",
+      "auditImplication": "O regime continua democrático com tensões executivas e políticas de ordem pública. Conservadorismo presidencial não deve ser codificado como revogação automática dos direitos existentes."
+    },
+    {
+      "title": "Memorándum de Entendimiento con Israel por la Democracia y la Libertad",
+      "date": "2025-06-12",
+      "url": "https://www.argentina.gob.ar/noticias/el-presidente-milei-concreto-el-memorandum-de-entendimiento-con-israel-por-la-democracia-y",
+      "axes": [
+        "diplomacia",
+        "intervencao"
+      ],
+      "evidenceType": "announced executive alignment and cooperation agenda",
+      "evidence": "O anúncio reforça vínculos estratégicos com Israel, combate ao terrorismo e cooperação de defesa e segurança. A própria notícia distingue a cerimônia e o texto do memorando de sua assinatura final ainda em consideração.",
+      "auditImplication": "Alinhamento com aliados e defesa forte são posições observáveis; não se presume obrigação automática de participar de todas as suas guerras."
+    },
+    {
+      "title": "Argentina y EE.UU. sellan un acuerdo estratégico para modernizar las Fuerzas Armadas",
+      "date": "2025-07-03",
+      "url": "https://www.argentina.gob.ar/noticias/historica-visita-de-petri-al-pentagono-argentina-y-eeuu-sellan-un-acuerdo-estrategico-para",
+      "axes": [
+        "diplomacia",
+        "intervencao",
+        "tecnologia"
+      ],
+      "evidenceType": "documented executive policy and procurement",
+      "evidence": "A cooperação militar com os Estados Unidos inclui modernização das Forças Armadas e aquisições de Stryker e F-16.",
+      "auditImplication": "Há valorização efetiva da defesa e de aliados próximos; a Argentina não representa neutralidade externa absoluta."
+    },
+    {
+      "title": "Presentación de los primeros seis F-16 argentinos",
+      "date": "2025-12-07",
+      "url": "https://www.argentina.gob.ar/noticias/milei-hoy-es-un-dia-historico-para-el-pais-los-f-16-son-los-nuevos-custodios-del-cielo",
+      "axes": [
+        "diplomacia",
+        "tecnologia"
+      ],
+      "evidenceType": "implemented military procurement",
+      "evidence": "A apresentação oficial registra a incorporação dos primeiros seis F-16 para modernização e defesa do espaço aéreo.",
+      "auditImplication": "A modernização militar já apresenta implementação concreta; não se trata apenas de uma preferência ideológica do presidente."
+    },
+    {
+      "title": "Anuncio del Plan Nuclear Argentino",
+      "date": "2024-12-20",
+      "url": "https://www.argentina.gob.ar/noticias/el-presidente-javier-milei-al-anunciar-el-plan-nuclear-argentino-la-energia-nuclear-tendra",
+      "axes": [
+        "tecnologia",
+        "controle",
+        "economia",
+        "diplomacia"
+      ],
+      "evidenceType": "announced executive development plan; existing state institutions",
+      "evidence": "O plano associa energia nuclear civil a servidores de inteligência artificial, investimento e desenvolvimento energético. Envolve organismos estatais nucleares e planejamento de reatores e urânio; a finalidade anunciada é pacífica.",
+      "auditImplication": "A administração favorece tecnologia e produtividade, mas também coordena setores estratégicos. Nuclear civil não deve ser confundido com defesa de armamento nuclear; projetos anunciados não são tratados como obras concluídas."
+    },
+    {
+      "title": "Ley 26.618, matrimonio civil igualitario",
+      "date": "2010-07-15",
+      "dateMeaning": "sanction date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26618-169608/texto",
+      "axes": [
+        "moral",
+        "religiao",
+        "poder"
+      ],
+      "evidenceType": "enacted civil rights institution",
+      "evidence": "Estabelece igualdade jurídica dos casamentos de pessoas do mesmo sexo e de sexos diferentes, inclusive disposições sobre adoção.",
+      "auditImplication": "Rhetórica conservadora do Executivo não transforma o casamento civil vigente em instituição exclusivamente heterossexual ou religiosa."
+    },
+    {
+      "title": "Ley 27.610, acceso a la interrupción voluntaria del embarazo",
+      "date": "2020-12-30",
+      "dateMeaning": "sanction date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27610-346231/texto",
+      "axes": [
+        "moral",
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted reproductive rights institution",
+      "evidence": "Reconhece acesso ao aborto até a 14ª semana e em hipóteses adicionais previstas, incluindo cobertura integral nos sistemas de saúde.",
+      "auditImplication": "O direito continua no ordenamento. As respostas do país preservam autonomia reprodutiva sem atribuir ao presidente apoio pessoal ao aborto."
+    },
+    {
+      "title": "Ley 26.743, identidad de género, texto actualizado",
+      "date": "2012-05-09",
+      "dateMeaning": "original sanction date; updated text consulted on audit date",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-26743-197860/actualizacion",
+      "axes": [
+        "moral",
+        "poder",
+        "tecnologia"
+      ],
+      "evidenceType": "enacted institution with subsequent amendments",
+      "evidence": "Mantém reconhecimento da identidade de gênero e retificação documental, além de acesso de adultos a intervenções e tratamentos sem autorização judicial.",
+      "auditImplication": "O reconhecimento civil de identidade de gênero não desaparece com críticas do Executivo; não se supõe que tratamentos de menores estejam sujeitos às mesmas regras dos adultos."
+    },
+    {
+      "title": "Ley 27.491, control de enfermedades prevenibles por vacunación",
+      "date": "2019-01-04",
+      "dateMeaning": "official publication",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27491-318455/texto",
+      "axes": [
+        "poder",
+        "economia"
+      ],
+      "evidenceType": "enacted public health institution",
+      "evidence": "As vacinas previstas no calendário e outras indicadas pela autoridade sanitária são obrigatórias e gratuitas, com instrumentos públicos para garantir cobertura.",
+      "auditImplication": "A Argentina sob Milei não equivale à defesa filosófica de voluntariedade absoluta na vacinação ou na prestação de todos os serviços."
+    }
+  ]
+}
+
+=== PERGUNTAS POR EIXO ===
+
+### Eixo "estrutura" — grau de centralização vs. fragmentação/federalismo do poder político
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=estrutura_06] Prefiro uma polícia nacional única a várias polícias estaduais autônomas.
+2. [id=estrutura_01] Estados e municípios devem ter autonomia para decidir sobre seus próprios assuntos, sem depender do governo federal.
+3. [id=estrutura_05] Cada estado deve ter autonomia para elaborar sua própria Constituição, sem interferência do governo federal.
+4. [id=estrutura_16] O governo federal deve poder anular leis estaduais e municipais que contrariem o interesse nacional.
+5. [id=estrutura_04] Prefiro um currículo escolar nacional único a currículos definidos por cada estado.
+6. [id=estrutura_13] Cidades deveriam poder criar leis próprias, mesmo diferentes das leis nacionais.
+7. [id=estrutura_20] Governadores e prefeitos devem executar as decisões do governo central em assuntos locais.
+8. [id=estrutura_15] O Brasil deveria ser uma união de estados com ampla autonomia política.
+9. [id=estrutura_18] A separação de um estado não deve ser permitida, mesmo com apoio da população local.
+10. [id=estrutura_17] Regiões com cultura forte, como o Sul ou o Nordeste, deveriam ter mais autonomia política.
+11. [id=estrutura_19] A educação pública deve ser administrada pelas prefeituras, não pelo governo federal.
+12. [id=estrutura_12] As leis trabalhistas devem ser iguais em todos os estados, sem variações regionais.
+13. [id=estrutura_09] Estados deveriam ter o direito de se separar do país se a maioria local votar por isso.
+14. [id=estrutura_02] O país inteiro deve seguir as mesmas leis, mesmo contra as preferências de cada estado.
+15. [id=estrutura_08] A saúde pública deve seguir diretrizes nacionais unificadas, sob coordenação de uma autoridade central.
+16. [id=estrutura_07] A maior parte dos impostos deveria ficar no estado ou município onde foi arrecadada.
+17. [id=estrutura_11] Comunidades indígenas e quilombolas devem poder viver sob regras próprias dentro de seus territórios.
+18. [id=estrutura_14] Quando governador e presidente entram em conflito, a palavra final deve ser do presidente.
+19. [id=estrutura_03] As leis sobre assuntos locais devem ser definidas pelos governos municipais ou estaduais.
+20. [id=estrutura_10] Os impostos estaduais devem seguir regras nacionais para evitar conflitos fiscais entre estados.
+
+### Eixo "representacao" — grau de democracia/prestação de contas vs. autocracia/poder não eleito
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=representacao_01] Eleições livres devem ser mantidas mesmo quando elegem governos ruins.
+2. [id=representacao_05] Cortes independentes, como o STF, devem poder anular decisões do governo.
+3. [id=representacao_20] Prefiro um regime autoritário estável a uma democracia instável.
+4. [id=representacao_11] Eleitores deveriam poder cassar o mandato de um político ruim antes do fim do prazo.
+5. [id=representacao_04] Prefiro decisões de um pequeno grupo de líderes a poder dividido entre instituições.
+6. [id=representacao_03] A oposição política deve ter o direito de criticar publicamente qualquer governo.
+7. [id=representacao_08] Um governante eficiente deveria poder permanecer no poder sem precisar disputar eleições periódicas.
+8. [id=representacao_12] Eu preferiria um regime autoritário à democracia se ele acelerasse o desenvolvimento do país.
+9. [id=representacao_17] Prefiro uma sociedade governada por assembleias populares, sem depender de líderes políticos.
+10. [id=representacao_14] Especialistas escolhidos por mérito deveriam governar sem depender do voto popular.
+11. [id=representacao_13] Prefiro a alternância de poder entre partidos a um mesmo grupo governando por décadas.
+12. [id=representacao_09] O povo deveria poder derrubar leis por referendo, sem depender do Congresso.
+13. [id=representacao_02] Em crises graves, um líder forte deve poder governar sem depender do Congresso.
+14. [id=representacao_15] Quem governa deve ter o consentimento e a aprovação das pessoas afetadas por suas decisões.
+15. [id=representacao_19] Mesmo um governo eleito com enorme maioria deve respeitar todos os direitos da oposição.
+16. [id=representacao_06] Não deveria haver limite de mandatos para um bom governante.
+17. [id=representacao_16] O direito de voto deveria ser restrito, nem todo adulto deveria poder votar.
+18. [id=representacao_18] Governar com eficiência importa mais do que garantir espaço à oposição.
+19. [id=representacao_10] Governantes deveriam ser escolhidos por competência, tradição ou sucessão, em vez de eleições populares.
+20. [id=representacao_07] O voto secreto e universal é inegociável, mesmo para eleitores mal informados.
+
+### Eixo "poder" — segurança/vigilância/coerção estatal vs. liberdade individual e civil
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=poder_03] O Estado deveria poder monitorar conversas digitais para combater e prevenir crimes.
+2. [id=poder_15] A pena de morte deveria ser adotada para crimes como estupro e assassinato.
+3. [id=poder_13] A vacinação deve ser obrigatória, mesmo contra a vontade de quem se recusa.
+4. [id=poder_02] O consumo de maconha por adultos não deveria ser crime.
+5. [id=poder_12] A eutanásia voluntária deveria ser legalizada para quem sofre de doenças terminais.
+6. [id=poder_17] O governo deve poder tirar do ar perfis que espalham informações falsas.
+7. [id=poder_20] Ninguém deveria ser obrigado a desbloquear o celular para a polícia.
+8. [id=poder_18] O governo não deveria poder rastrear as compras feitas por meios de pagamento digitais.
+9. [id=poder_14] Na dúvida sobre a culpa, o Estado deve evitar a condenação mesmo que culpados fiquem livres.
+10. [id=poder_16] Condutas privadas entre adultos que consintam não deveriam ser criminalizadas.
+11. [id=poder_11] Em situações graves, o governo deveria poder impor toque de recolher à população.
+12. [id=poder_06] Condutas consensuais entre adultos, como uso de drogas, apostas e prostituição, não deveriam ser criminalizadas.
+13. [id=poder_01] Operações policiais rigorosas devem ser usadas contra o crime em áreas dominadas por facções.
+14. [id=poder_19] Suspeitos de terrorismo deveriam poder ser presos sem julgamento até a ameaça passar.
+15. [id=poder_04] A liberdade de expressão deve proteger até opiniões consideradas ofensivas.
+16. [id=poder_10] Adultos deveriam poder manter armas de fogo em casa para defesa pessoal.
+17. [id=poder_05] Câmeras com reconhecimento facial nas ruas deveriam ser ampliadas para reduzir o crime.
+18. [id=poder_07] Partidos que ameacem a ordem pública deveriam poder ser dissolvidos pelo Estado.
+19. [id=poder_09] O acesso de civis a armas de fogo deve ser severamente restringido.
+20. [id=poder_08] Todas as drogas, incluindo cocaína, deveriam ser legalizadas para adultos.
+
+### Eixo "imigracao" — assimilação cultural exigida vs. multiculturalismo celebrado
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=imigracao_09] O país deve dar preferência a imigrantes de culturas semelhantes à sua.
+2. [id=imigracao_10] As culturas trazidas por imigrantes devem ter espaço na identidade nacional.
+3. [id=imigracao_06] Imigrantes não deveriam ter que abandonar seus costumes para viver bem no país.
+4. [id=imigracao_19] Imigrantes que rejeitem os costumes locais deveriam perder o direito de permanecer no país.
+5. [id=imigracao_04] O país deve permitir que imigrantes preservem seus costumes e tradições, mesmo que sejam diferentes.
+6. [id=imigracao_15] Bairros cujos moradores imigrantes vivem isolados em sua própria cultura criam problemas para o país.
+7. [id=imigracao_07] Prefiro preservar tradições nacionais a acomodar costumes estrangeiros.
+8. [id=imigracao_20] Prefiro uma identidade de cidadão do mundo a uma identidade nacional.
+9. [id=imigracao_17] A imigração deveria ser limitada para preservar a cultura predominante do país.
+10. [id=imigracao_13] Dominar a língua predominante deve ser uma prioridade na política de imigração.
+11. [id=imigracao_11] A adaptação aos costumes locais deve ser exigida de quem imigra para um país.
+12. [id=imigracao_08] A convivência de diferentes línguas e culturas deve ser incentivada no país.
+13. [id=imigracao_02] Uma sociedade multicultural deve conviver com vários idiomas no dia a dia.
+14. [id=imigracao_18] As fronteiras deveriam ser abertas para qualquer pessoa pacífica.
+15. [id=imigracao_05] O país deveria recusar imigrantes que se recusem a respeitar os costumes locais.
+16. [id=imigracao_03] Sou a favor de fechar as fronteiras à imigração para preservar a identidade cultural do país.
+17. [id=imigracao_01] Quem imigra para um país deve aprender o idioma e adotar os costumes locais.
+18. [id=imigracao_14] Imigrantes não devem ser julgados pelos costumes atribuídos a seu país de origem.
+19. [id=imigracao_16] Filhos de imigrantes deveriam poder estudar também na língua dos pais, em escolas bilíngues.
+20. [id=imigracao_12] O Brasil deve continuar acolhendo imigrantes venezuelanos e haitianos.
+
+### Eixo "diplomacia" — militarismo/força armada vs. pacifismo/diplomacia
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=diplomacia_02] Negociação e diplomacia devem ser esgotadas antes de qualquer ação militar.
+2. [id=diplomacia_08] O país deve reduzir seus gastos militares.
+3. [id=diplomacia_15] O Brasil deveria desenvolver armas autônomas letais.
+4. [id=diplomacia_19] O país deve ameaçar uma resposta militar devastadora para dissuadir ataques.
+5. [id=diplomacia_11] O país deve priorizar a fabricação nacional de armamentos para sua defesa.
+6. [id=diplomacia_05] O país deve priorizar gastos militares mesmo quando outras áreas precisam de recursos.
+7. [id=diplomacia_12] Nenhuma causa política ou ideológica justifica começar uma guerra.
+8. [id=diplomacia_10] Acordos de desarmamento deveriam ter prioridade sobre a expansão de arsenais militares.
+9. [id=diplomacia_17] O Brasil deveria estar pronto para iniciar uma guerra se isso garantir seus interesses vitais.
+10. [id=diplomacia_03] O país deve poder realizar ataques preventivos contra inimigos que se preparam para atacar.
+11. [id=diplomacia_07] O Brasil deveria desenvolver armas nucleares.
+12. [id=diplomacia_06] O país deve buscar acordos diplomáticos mesmo que precise fazer concessões a adversários.
+13. [id=diplomacia_14] O país deve apoiar tribunais internacionais que julguem crimes de guerra, mesmo de aliados.
+14. [id=diplomacia_20] A ONU deveria poder mediar conflitos antes de qualquer ação militar.
+15. [id=diplomacia_16] O Brasil deveria dialogar até com regimes hostis antes de ameaçá-los militarmente.
+16. [id=diplomacia_01] Um país deve manter Forças Armadas fortes para ser respeitado no mundo.
+17. [id=diplomacia_04] Prefiro evitar uma guerra mesmo quando ela possa trazer vantagens ao país.
+18. [id=diplomacia_13] O Estado deve poder realizar espionagem contra outros países.
+19. [id=diplomacia_09] O serviço militar deve ser obrigatório para preparar o país para uma guerra.
+20. [id=diplomacia_18] O Brasil deveria extinguir suas Forças Armadas.
+
+### Eixo "intervencao" — não-intervencionismo vs. nacionalismo assertivo em política externa
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=intervencao_01] Nenhum país tem o direito de tentar mudar o governo de outro.
+2. [id=intervencao_14] O Brasil deveria usar até força militar para garantir seus interesses na América do Sul.
+3. [id=intervencao_20] O Brasil deve pressionar governos vizinhos que ameacem cidadãos brasileiros.
+4. [id=intervencao_19] O Brasil não deveria manter bases militares em outros países.
+5. [id=intervencao_08] O Brasil deveria poder aplicar sanções quando seus interesses forem ameaçados.
+6. [id=intervencao_13] Cada povo deve resolver seus próprios problemas, sem interferência de fora.
+7. [id=intervencao_12] O Brasil deve influenciar governos vizinhos quando isso aumenta sua segurança.
+8. [id=intervencao_04] A política externa deve priorizar a influência do país sobre seus vizinhos.
+9. [id=intervencao_18] Defender interesses nacionais deve orientar a atuação do país no exterior.
+10. [id=intervencao_11] O Brasil deve evitar blocos que exijam alinhamento automático com outras potências.
+11. [id=intervencao_05] O Brasil não deveria enviar soldados para o exterior, nem em missões de paz.
+12. [id=intervencao_02] O Brasil deve pressionar outros países quando o interesse nacional está em jogo.
+13. [id=intervencao_10] O Brasil deveria exercer liderança política sobre a América do Sul.
+14. [id=intervencao_09] Conflitos entre países devem ser resolvidos por organismos internacionais, não por potências.
+15. [id=intervencao_16] Nenhum tratado internacional deve valer mais do que o interesse nacional.
+16. [id=intervencao_06] O Brasil deve exercer pressão diplomática para defender interesses brasileiros no exterior.
+17. [id=intervencao_03] O Brasil deveria evitar alianças militares que possam envolvê-lo em conflitos externos.
+18. [id=intervencao_07] Mesmo diante de um genocídio em um país vizinho, o Brasil não deveria se envolver militarmente.
+19. [id=intervencao_17] O Brasil deve permanecer neutro em guerras, mesmo sob pressão de aliados.
+20. [id=intervencao_15] O Brasil não deveria aplicar sanções a países cujos governos desaprova.
+
+### Eixo "economia" — propriedade/produção pública-coletiva vs. privada-individual
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=economia_05] Grandes empresas deveriam pertencer a seus trabalhadores, não a donos privados.
+2. [id=economia_06] Estradas e presídios deveriam poder ser administrados por empresas privadas.
+3. [id=economia_07] Quando o mercado exclui os pobres, o Estado deve assumir o serviço diretamente.
+4. [id=economia_13] O poder das grandes empresas privadas deveria ser limitado pelo Estado.
+5. [id=economia_03] Empresas consideradas estratégicas devem permanecer sob controle público.
+6. [id=economia_14] Auxílios como o Bolsa Família deveriam ter prazo máximo de duração.
+7. [id=economia_19] Prefiro manter estatais sob controle público, mesmo que possam ser vendidas pelo valor de mercado.
+8. [id=economia_16] Trabalhadores deveriam negociar salários diretamente com os empregadores, sem sindicatos.
+9. [id=economia_17] Bancos públicos devem continuar financiando o desenvolvimento do país.
+10. [id=economia_12] A estabilidade vitalícia dos servidores públicos deveria ser reduzida ou eliminada.
+11. [id=economia_04] A saúde deveria funcionar principalmente por meio da iniciativa privada.
+12. [id=economia_11] O Estado deveria garantir uma renda básica a todos os cidadãos necessitados.
+13. [id=economia_18] A propriedade privada deve ser respeitada mesmo quando gera muita desigualdade.
+14. [id=economia_15] O Brasil deveria redistribuir grandes propriedades rurais por meio de uma reforma agrária.
+15. [id=economia_20] A gestão de serviços públicos deveria priorizar o setor privado.
+16. [id=economia_01] Sou a favor de uma revolução para redistribuir o poder econômico concentrado nas mãos de poucos.
+17. [id=economia_10] Os impostos deveriam ser voluntários.
+18. [id=economia_09] Saúde, educação e água não deveriam funcionar sob a lógica do lucro.
+19. [id=economia_02] Serviços públicos deveriam ser prestados por empresas privadas quando houver concorrência.
+20. [id=economia_08] A herança familiar deve ser protegida contra políticas de redistribuição de patrimônio.
+
+### Eixo "controle" — planejamento e direção estatal da economia vs. livre-mercado
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=controle_05] Grandes fortunas devem pagar mais impostos para financiar políticas públicas.
+2. [id=controle_20] Quem tem dinheiro deve poder mandá-lo para fora do país sem pedir licença ao governo.
+3. [id=controle_19] Prefiro um salário mínimo definido por lei à livre negociação dos salários.
+4. [id=controle_14] O Estado deveria evitar novas regulações sobre a atividade econômica.
+5. [id=controle_07] O Estado deve subsidiar indústrias nacionais estratégicas.
+6. [id=controle_04] Empresas devem definir relações de trabalho com o mínimo de interferência do governo.
+7. [id=controle_02] Preços e salários deveriam ser definidos pelo mercado, sem intervenção do governo.
+8. [id=controle_17] O governo deve poder controlar a taxa de câmbio para proteger a economia nacional.
+9. [id=controle_16] O Banco Central deve decidir a taxa de juros sem precisar de aprovação do governo.
+10. [id=controle_10] O governo não deveria congelar preços, mesmo em períodos de inflação alta.
+11. [id=controle_06] A carga tributária deveria ser reduzida para estimular o crescimento econômico.
+12. [id=controle_08] A preservação de empregos deve ter prioridade sobre aumentos do salário mínimo.
+13. [id=controle_13] Prefiro uma economia planejada pelo Estado a uma economia de livre mercado.
+14. [id=controle_01] O governo deve planejar setores estratégicos como energia, moradia e indústria.
+15. [id=controle_11] O governo deveria escolher e apoiar empresas campeãs nacionais em setores estratégicos.
+16. [id=controle_03] O Banco Central deve obedecer ao governo eleito, e não agir com independência total.
+17. [id=controle_15] Em recessão, o governo deve gastar mais para reaquecer a economia, mesmo aumentando a dívida.
+18. [id=controle_12] Criptomoedas como o Bitcoin deveriam poder competir livremente com o dinheiro do governo.
+19. [id=controle_18] O Banco Central deveria ser abolido, deixando a moeda e os juros para o mercado.
+20. [id=controle_09] Em crises graves, o governo deve poder congelar o valor dos aluguéis.
+
+### Eixo "comercio" — protecionismo vs. globalismo comercial
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=comercio_13] As compras do governo e das estatais devem priorizar empresas brasileiras.
+2. [id=comercio_06] Produtos estrangeiros deveriam entrar no país com poucas restrições econômicas.
+3. [id=comercio_12] Sou a favor de facilitar a entrada de investimentos estrangeiros no país.
+4. [id=comercio_20] A integração econômica global deveria ser aprofundada por meio de mais comércio.
+5. [id=comercio_15] Carros elétricos chineses baratos deveriam pagar tarifas para proteger as fábricas locais.
+6. [id=comercio_19] Prefiro soberania econômica a preços baixos no supermercado.
+7. [id=comercio_04] O Brasil deveria buscar acordos de livre comércio com outros países.
+8. [id=comercio_17] Cadeias estratégicas, como remédios e chips, devem ser protegidas da concorrência externa.
+9. [id=comercio_07] O governo deve limitar importações que ameacem a indústria e o emprego local.
+10. [id=comercio_02] As tarifas deveriam ser quase zeradas, mesmo que algumas indústrias nacionais quebrem.
+11. [id=comercio_03] Prefiro limitar importações para proteger empregos industriais, mesmo com preços mais altos.
+12. [id=comercio_10] O Brasil deveria aprofundar a integração comercial com outros países.
+13. [id=comercio_16] As tarifas de importação devem ser reduzidas, mesmo diminuindo a arrecadação do governo.
+14. [id=comercio_09] Empresas estrangeiras deveriam ser proibidas de comprar empresas estratégicas brasileiras.
+15. [id=comercio_05] O Brasil deveria produzir internamente tudo o que consome, mesmo pagando muito mais caro por isso.
+16. [id=comercio_11] A produção nacional de alimentos deveria ter prioridade sobre importações baratas.
+17. [id=comercio_01] A indústria nacional deve ser protegida com tarifas sempre que necessário.
+18. [id=comercio_18] Multinacionais devem poder operar no país, mesmo competindo com empresas locais.
+19. [id=comercio_08] Sou a favor de um mercado global único, sem fronteiras econômicas.
+20. [id=comercio_14] O comércio com outros países deve ser ampliado, mesmo aumentando a dependência econômica.
+
+### Eixo "religiao" — irreligiosidade/secularismo vs. religiosidade
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=religiao_02] A religião deve orientar minhas escolhas morais e políticas.
+2. [id=religiao_11] Prefiro uma sociedade sem religião a uma sociedade religiosa.
+3. [id=religiao_19] A moral pública deve ser fundamentada em princípios que não dependam da crença em Deus.
+4. [id=religiao_03] As leis devem ser neutras e não seguir os valores de nenhuma religião.
+5. [id=religiao_10] Tradições religiosas devem ser transmitidas às novas gerações.
+6. [id=religiao_13] Feriados religiosos não deveriam ser feriados nacionais.
+7. [id=religiao_12] A sociedade deveria dar mais espaço à fé em Deus.
+8. [id=religiao_15] A palavra 'Deus' não deveria aparecer na Constituição.
+9. [id=religiao_18] Quando uma lei contraria minha fé religiosa, devo seguir minha fé.
+10. [id=religiao_05] Igrejas e templos deveriam pagar impostos como qualquer outra organização.
+11. [id=religiao_01] Religião é assunto pessoal e não deve influenciar políticas públicas.
+12. [id=religiao_14] O casamento deve ser reconhecido como uma instituição religiosa.
+13. [id=religiao_06] A prática religiosa deve ser incentivada na vida em comunidade.
+14. [id=religiao_16] Prefiro buscar na fé religiosa o sentido da minha vida.
+15. [id=religiao_08] O Estado brasileiro deveria assumir oficialmente uma identidade religiosa.
+16. [id=religiao_07] Prédios públicos, como escolas e tribunais, não deveriam exibir símbolos religiosos.
+17. [id=religiao_09] As decisões políticas não devem se basear em crenças religiosas.
+18. [id=religiao_17] A religião não deveria fazer parte da educação de crianças pequenas.
+19. [id=religiao_20] O Estado deve proteger a fé religiosa como parte da identidade nacional.
+20. [id=religiao_04] As leis do país deveriam refletir os valores da religião da maioria.
+
+### Eixo "moral" — progressismo social vs. tradicionalismo
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=moral_07] Casais LGBT devem poder demonstrar afeto em público como qualquer outro casal.
+2. [id=moral_04] Prefiro mudanças culturais graduais a mudanças culturais rápidas.
+3. [id=moral_15] Devemos reduzir o consumo de carne por respeito aos animais.
+4. [id=moral_12] A educação sexual dos filhos deve seguir os valores da família, não os da escola.
+5. [id=moral_03] A identidade de gênero declarada por cada pessoa deve ser respeitada.
+6. [id=moral_01] Casais do mesmo sexo devem ter o mesmo direito de adotar crianças que outros casais.
+7. [id=moral_09] Considero o aborto no início da gravidez moralmente aceitável.
+8. [id=moral_06] O casamento deve ser reconhecido apenas entre um homem e uma mulher.
+9. [id=moral_19] A nudez no cinema, na arte e nas praias não deveria ser considerada ofensiva.
+10. [id=moral_02] A família tradicional deve servir de modelo para a sociedade.
+11. [id=moral_05] Sou a favor de cotas raciais no acesso às universidades.
+12. [id=moral_17] Relações abertas e poliamor devem ser tão respeitados quanto o casamento.
+13. [id=moral_13] A prostituição deve ser reconhecida como um trabalho legítimo.
+14. [id=moral_11] Adolescentes deveriam receber educação sobre identidade de gênero.
+15. [id=moral_10] Considero o aborto moralmente errado.
+16. [id=moral_18] Cuidar da família deve ser a principal prioridade na vida de uma mulher.
+17. [id=moral_16] Considero o consumo de pornografia moralmente errado.
+18. [id=moral_14] A linguagem neutra não deveria ser adotada em nossa sociedade.
+19. [id=moral_08] Sou contra cotas raciais no acesso a cargos públicos.
+20. [id=moral_20] Os pais devem ser a autoridade final na educação moral dos filhos.
+
+### Eixo "tecnologia" — abraçar tecnologia/biotecnologia vs. priorizar natureza/limites biológicos
+Persona brief (1-2 frases) conectando a description acima a ESTE eixo especificamente, depois responda as 20 perguntas.
+1. [id=tecnologia_01] A sociedade deve priorizar a inovação tecnológica e a industrialização.
+2. [id=tecnologia_13] Prefiro a vida nas grandes cidades à vida no campo.
+3. [id=tecnologia_19] No combate ao aquecimento global, prefiro priorizar soluções tecnológicas à redução do consumo.
+4. [id=tecnologia_12] A mineração na Amazônia deveria ser proibida, mesmo com tecnologias de baixo impacto.
+5. [id=tecnologia_18] Prefiro a vida simples no campo à vida nas metrópoles.
+6. [id=tecnologia_10] Reduzir o consumo de recursos naturais deve ter prioridade no combate ao aquecimento global.
+7. [id=tecnologia_05] O cultivo de alimentos transgênicos deve continuar sendo desenvolvido.
+8. [id=tecnologia_04] Tecnologias que mexem no corpo, na mente ou na reprodução humana devem ser limitadas.
+9. [id=tecnologia_16] Gastos com exploração espacial deveriam ter menos prioridade que a proteção ambiental na Terra.
+10. [id=tecnologia_07] A mineração na Amazônia deveria ser permitida em áreas preservadas, mesmo com impacto ambiental.
+11. [id=tecnologia_08] Prefiro natureza preservada a crescimento industrial acelerado.
+12. [id=tecnologia_03] Devemos ampliar o uso de IA e automação, mesmo que elimine muitas profissões.
+13. [id=tecnologia_15] Implantes cerebrais para ampliar capacidades mentais de pessoas saudáveis devem ser permitidos.
+14. [id=tecnologia_20] Sou contra implantes artificiais para ampliar as capacidades físicas de pessoas saudáveis.
+15. [id=tecnologia_06] O uso de agrotóxicos deveria ser reduzido, mesmo com perda de produtividade.
+16. [id=tecnologia_09] A edição genética em humanos deve ser permitida para prevenir doenças.
+17. [id=tecnologia_17] A carne cultivada em laboratório deveria substituir parte da pecuária.
+18. [id=tecnologia_02] Prefiro um modo de vida simples e natural a uma vida com muita tecnologia.
+19. [id=tecnologia_14] A edição genética de embriões para aumentar a inteligência deveria ser proibida.
+20. [id=tecnologia_11] A humanidade deveria investir na exploração de outros planetas.
+
+
+=== PERGUNTAS DE ARQUETIPO (multipla escolha) ===
+Alem das 240 perguntas acima, responda estas perguntas de multipla escolha como o proprio
+perfil responderia no quiz: escolha UMA alternativa por pergunta, a que um adepto/porta-voz
+real marcaria. Escolha pelo sentido do texto; nao existe alternativa 'neutra' nem opcao de
+pular. Grave a letra da alternativa (ex.: "A") no bloco "archetype" do JSON.
+
+[id=sociedade] A sociedade deve se apoiar em quê?
+  A) Fé, família e tradição da nação
+  B) Costumes e fé, mudando devagar
+  C) Cada um vive como quiser
+  D) Igualdade, diversidade e direitos civis
+  E) Tradição e ordem, sem religião
+  F) Fé a serviço da justiça social
+
+[id=poder] Como o poder deve ser organizado?
+  A) Líder ou partido único, centralizado
+  B) Elites decidem, com voto limitado
+  C) Democracia com freios e contrapesos
+  D) Estado mínimo ou nenhum
+  E) Sem Estado, conselhos ou contratos
+
+[id=economia] Quem deve controlar a produção?
+  A) Produção coletiva e planejada, sem patrões
+  B) Cooperativas, Estado social e regulação
+  C) Mercado com regras e rede de proteção
+  D) Patrões e sindicatos unidos pelo Estado
+  E) Empresas nacionais protegidas pelo Estado
+  F) Livre comércio e impostos mínimos
+
+[id=mundo] Como o país deve agir no mundo?
+  A) Potência militar influente
+  B) Defesa forte e aliados próximos
+  C) Diplomacia antes da força
+  D) Armado, mas fora de guerras alheias
+  E) Paz e não intervenção, sempre
+
+[id=tecnologia] Qual deve ser o papel da tecnologia?
+  A) Voltar à natureza, sem indústria
+  B) Natureza acima do progresso
+  C) Equilíbrio entre progresso e natureza
+  D) Tecnologia e indústria como motor
+  E) Acelerar a tecnologia, sem freios

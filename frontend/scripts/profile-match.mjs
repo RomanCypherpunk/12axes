@@ -101,12 +101,16 @@ export function dimensionMatches(user, items, vectorOf, excludeIds = []) {
 // Porte de ReligionFilter.java. Na tela de resultado o usuário escolhe uma
 // religião e o ranking exclui os perfis ligados só a outras religiões; "only"
 // torna o perfil exclusivo de quem escolheu uma das religiões listadas.
-export const SELECTABLE_RELIGIONS = ['christianity', 'judaism', 'islam', 'buddhism'];
+export const SELECTABLE_RELIGIONS = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism'];
 const ONLY = 'only';
 
 export function religionAllows(religions, preference) {
   if (!religions || religions.length === 0) return true;
-  if (religions.includes(ONLY)) return preference != null && religions.includes(preference);
+  if (religions.includes(ONLY)) {
+    // ["other", "only"] (xintoísmo): fica só para quem não escolheu religião.
+    const hasSelectable = religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
+    return hasSelectable ? preference != null && religions.includes(preference) : preference == null;
+  }
   if (preference == null) return true;
   return religions.includes(preference) || !religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
 }

@@ -85,7 +85,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "suica",
@@ -162,7 +162,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "russia",
@@ -173,7 +173,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["orthodox"]
   },
   {
     "id": "japao",
@@ -380,7 +380,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Roman_Empire_with_Eagle_(3-2).svg",
     "flagNote": "Reconstrução histórica usada como referência visual para o período.",
-    "religions": ["christianity", "other"]
+    "religions": ["catholic", "protestant", "orthodox", "other"]
   },
   {
     "id": "sacro-imperio-romano-germanico",
@@ -395,7 +395,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Banner_of_the_Holy_Roman_Emperor_with_haloes_(1430-1806).svg",
     "flagNote": "",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "republica-de-veneza",
@@ -440,7 +440,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg",
     "flagNote": "O Reino Unido vitoriano usava a Union Jack de 1801, ainda em uso.",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "imperio-do-brasil",
@@ -455,7 +455,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil_(1870%E2%80%931889).svg",
     "flagNote": "",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "alemanha-nazista-terceiro-reich",
@@ -485,7 +485,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy_(1861%E2%80%931946).svg",
     "flagNote": "A Itália fascista manteve a bandeira nacional do Reino da Itália.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "chile-de-pinochet",
@@ -500,7 +500,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
     "flagNote": "O regime de Pinochet manteve a bandeira chilena.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "uniao-sovietica-urss",
@@ -575,7 +575,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
     "flagNote": "O primeiro peronismo manteve a bandeira argentina.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "egito-de-nasser",
@@ -605,7 +605,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Africa_(1928%E2%80%931994,_dark_colors).svg",
     "flagNote": "",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "hong-kong",
@@ -625,8 +625,8 @@
   {
     "id": "argentina",
     "name": "Argentina",
-    "category": "República federal nacional-popular",
-    "description": "República federativa presidencialista sul-americana, a Argentina oscila entre peronismo e reformas liberais, com sindicatos fortes, universidade e saúde públicas, tradição protecionista, agroexportação, direitos civis avançados e crises inflacionárias recorrentes.",
+    "category": "República federal com reformas de mercado",
+    "description": "República federal presidencialista, a Argentina sob Javier Milei desde 2023 promove ajuste fiscal, desregulação e privatizações, mantendo serviços públicos e alinhamento aos Estados Unidos e a Israel, em ruptura com o peronismo.",
     "flagPath": "/countries/flags/argentina.png",
     "historical": false,
     "period": "",
@@ -695,7 +695,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1945%E2%80%931977).svg",
     "flagNote": "Bandeira histórica usada como referência visual para o período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "islandia-medieval",
@@ -710,7 +710,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Raven_Banner.svg",
     "flagNote": "Não havia bandeira nacional documentada; usa o estandarte nórdico do corvo (Hrafnsmerki) como referência visual do período.",
-    "religions": ["christianity", "other"]
+    "religions": ["catholic", "other"]
   },
   {
     "id": "emirados-arabes-unidos",
@@ -740,7 +740,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal.svg",
     "flagNote": "O Estado Novo manteve a bandeira nacional portuguesa de 1911; usada como referência visual do período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "prussia",
@@ -770,7 +770,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "ucrania-territorio-livre",
@@ -800,7 +800,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
     "flagNote": "Bandeira nacional brasileira (lema “Ordem e Progresso”) usada como referência visual do período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "tchequia",
@@ -845,7 +845,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg",
     "flagNote": "Bandeira do estado do Texas (Estados Unidos) usada como referência visual da região.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "eua-nova-york",
@@ -1048,7 +1048,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": []
+    "religions": ["catholic","islam"]
   },
   {
     "id": "siria",
@@ -1074,7 +1074,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "tailandia",
@@ -1118,7 +1118,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "colombia",
@@ -1170,7 +1170,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Statenvlag.svg",
     "flagNote": "Bandeira histórica usada como referência visual para o período.",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "republica-de-weimar",
@@ -1211,7 +1211,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity", "only"]
+    "religions": ["catholic", "only"]
   },
   {
     "id": "monaco",
@@ -1255,7 +1255,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "imperio-do-japao",
@@ -1285,7 +1285,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Ensign_of_Austro-Hungarian_civil_fleet_(1869-1918).svg",
     "flagNote": "Bandeira histórica usada como referência visual para o período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "butao",
@@ -1360,7 +1360,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Florence.svg",
     "flagNote": "Bandeira com o giglio de Florença usada como referência visual para o período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "roma-republicana",
@@ -1435,7 +1435,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Confederate_States_of_America_(1861-1863).svg",
     "flagNote": "Primeira bandeira nacional confederada ('Stars and Bars'), 1861–1863.",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "macau",
@@ -1465,7 +1465,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Papal_States_(1808-1870).svg",
     "flagNote": "Bandeira historica dos Estados Papais usada como referencia visual.",
-    "religions": ["christianity", "only"]
+    "religions": ["catholic", "only"]
   },
   {
     "id": "imperio-bizantino",
@@ -1480,7 +1480,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Byzantine_imperial_flag,_14th_century.svg",
     "flagNote": "Simbolo imperial bizantino tardio usado como referencia visual.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "orthodox"]
   },
   {
     "id": "espanha-habsburgos",
@@ -1495,7 +1495,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cross_of_Burgundy.svg",
     "flagNote": "Cruz de Borgonha usada como referencia visual da monarquia hispanica dos Habsburgos.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "imperio-russo-czarista",
@@ -1510,7 +1510,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia.svg",
     "flagNote": "Tricolor russo historico usado como referencia visual do Imperio Russo.",
-    "religions": ["christianity"]
+    "religions": ["orthodox"]
   },
   {
     "id": "genebra-calvinista",
@@ -1525,7 +1525,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Canton_of_Geneva.svg",
     "flagNote": "Bandeira de Genebra usada como referencia visual da cidade reformada.",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "imperio-portugues",
@@ -1540,7 +1540,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_Portugal_(1640).svg",
     "flagNote": "Bandeira historica portuguesa usada como referencia visual do imperio ultramarino.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "austria",
@@ -1570,7 +1570,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1867%E2%80%931918).svg",
     "flagNote": "Bandeira preta-branca-vermelha usada pela Confederação da Alemanha do Norte e pelo Império Alemão (1867–1918).",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "portugal",
@@ -1660,7 +1660,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
     "flagNote": "O regime manteve a bandeira nacional brasileira.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "mexico-de-cardenas",
@@ -1690,7 +1690,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Switzerland.svg",
     "flagNote": "Bandeira da cruz suíça, símbolo tradicional da Confederação desde o período medieval, usada como referência visual para o período.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "imperio-napoleonico",
@@ -1733,7 +1733,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Georgia.svg",
     "flagNote": "Bandeira da Cruz de São Jorge com quatro cruzes de Bolnisi, readotada pela Geórgia em 2004.",
-    "religions": ["christianity"]
+    "religions": ["orthodox"]
   },
   {
     "id": "belgica",
@@ -1793,7 +1793,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Paraguay.svg",
     "flagNote": "Bandeira nacional do Paraguai.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "eslovenia",
@@ -1823,7 +1823,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Slovakia.svg",
     "flagNote": "Bandeira nacional da Eslováquia.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "rodesia",
@@ -1838,7 +1838,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhodesia_(1968%E2%80%931979).svg",
     "flagNote": "Bandeira da Rodésia usada entre 1968 e 1979.",
-    "religions": ["christianity"]
+    "religions": ["protestant"]
   },
   {
     "id": "suica-zug",
@@ -1883,7 +1883,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(lozengy).svg",
     "flagNote": "Bandeira losangeada da Baviera (Alemanha) usada como referência visual da região.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "porto-rico",
@@ -1942,7 +1942,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Palestine.svg",
     "flagNote": "Bandeira oficial da Palestina usada como referência visual.",
-    "religions": []
+    "religions": ["islam"]
   },
   {
     "id": "escocia",
@@ -2002,7 +2002,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Santa_Catarina.svg",
     "flagNote": "Bandeira do estado de Santa Catarina (Brasil) usada como referência visual da região.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "parana",
@@ -2017,7 +2017,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Paran%C3%A1.svg",
     "flagNote": "Bandeira do estado do Paraná (Brasil) usada como referência visual da região.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "rio-grande-do-sul",
@@ -2062,7 +2062,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kingdom_of_Jerusalem.svg",
     "flagNote": "Estandarte com a cruz de Jerusalém em ouro sobre prata.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "siria-de-assad",
@@ -2137,7 +2137,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Standard_of_the_King_of_France.svg",
     "flagNote": "Estandarte real usado aproximadamente de 1638 a 1790; representa apenas a fase final do reino.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "reino-de-castela",
@@ -2152,7 +2152,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Corona_de_Castilla.svg",
     "flagNote": "Estandarte histórico da Coroa de Castela; representa uma fase do longo período.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "coroa-de-aragao",
@@ -2167,7 +2167,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kingdom_of_Aragon.svg",
     "flagNote": "Senyera histórica associada à Coroa de Aragão; não representa uniformemente todos os seus territórios.",
-    "religions": ["christianity"]
+    "religions": ["catholic"]
   },
   {
     "id": "reino-da-hungria",
@@ -2182,7 +2182,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary_(1896-1915).svg",
     "flagNote": "Bandeira de 1896–1915; representa a fase final de um reino muito mais antigo.",
-    "religions": ["christianity"]
+    "religions": ["catholic", "protestant"]
   },
   {
     "id": "antigo-egito",
@@ -2422,7 +2422,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["orthodox"]
   },
   {
     "id": "servia",
@@ -2433,7 +2433,7 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["christianity"]
+    "religions": ["orthodox"]
   },
   {
     "id": "equador",
@@ -2519,9 +2519,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Utah.svg",
     "flagNote": "Bandeira do estado de Utah (Estados Unidos) usada como referência visual da região.",
-    "religions": [
-      "christianity"
-    ]
+    "religions": ["catholic", "protestant", "orthodox"]
   },
   {
     "id": "eua-alasca",
@@ -2551,9 +2549,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1776–1777).svg",
     "flagNote": "Grand Union Flag (Continental Colors), usada pelas colônias em 1775–1776; as colônias não tinham bandeira comum antes disso, e esta é a mais próxima do período.",
-    "religions": [
-      "christianity"
-    ]
+    "religions": ["protestant"]
   },
   {
     "id": "eua-pensilvania",
@@ -2598,9 +2594,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cross_of_Burgundy.svg",
     "flagNote": "Cruz de Borgonha, estandarte militar da Coroa espanhola usado em todo o império, inclusive na Nova Espanha; o vice-reino não teve bandeira própria.",
-    "religions": [
-      "christianity"
-    ]
+    "religions": ["catholic"]
   },
   {
     "id": "groenlandia",
@@ -2660,9 +2654,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania.svg",
     "flagNote": "Bandeira nacional da Romênia.",
-    "religions": [
-      "christianity"
-    ]
+    "religions": ["orthodox"]
   },
   {
     "id": "bulgaria",
@@ -2692,9 +2684,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Croatia.svg",
     "flagNote": "Bandeira nacional da Croácia.",
-    "religions": [
-      "christianity"
-    ]
+    "religions": ["catholic"]
   },
   {
     "id": "chipre",
@@ -2709,8 +2699,83 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cyprus.svg",
     "flagNote": "Bandeira nacional de Chipre (a república reconhecida internacionalmente).",
+    "religions": ["orthodox"]
+  },
+  {
+    "id": "imperio-sueco",
+    "name": "Império Sueco",
+    "category": "Monarquia fiscal-militar luterana",
+    "description": "Potência luterana do Báltico na Guerra dos Trinta Anos e nas guerras de Carlos X e Carlos XII, o Império Sueco sustentou-se num Estado fiscal-militar, na monarquia com os quatro estamentos e na Igreja luterana, até Poltava e Nystad.",
+    "flagPath": "/countries/flags/imperio-sueco.png",
+    "historical": true,
+    "period": "1611–1721",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Swedish_Empire.svg",
+    "flagNote": "Bandeira do Império Sueco (cruz dourada em campo azul, com cauda de andorinha) usada como referência visual para o período.",
+    "religions": ["protestant"]
+  },
+  {
+    "id": "suecia-finlandia",
+    "name": "Suécia-Finlândia",
+    "category": "Monarquia estamental e esclarecida",
+    "description": "Reino da Suécia-Finlândia após a perda do império: Era da Liberdade com o Riksdag dos quatro estamentos, liberdade de imprensa pioneira (1766), golpe absolutista de Gustavo III em 1772 e perda da Finlândia para a Rússia em 1809.",
+    "flagPath": "/countries/flags/suecia-finlandia.png",
+    "historical": true,
+    "period": "1721–1809",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Naval_Ensign_of_Sweden.svg",
+    "flagNote": "Bandeira de Estado sueca com cauda de andorinha, a mesma cruz dourada sobre azul do período, usada como referência visual.",
+    "religions": ["protestant"]
+  },
+  {
+    "id": "shenzhen",
+    "name": "Shenzhen (China)",
+    "category": "Zona econômica especial tecnológica-exportadora",
+    "description": "Primeira Zona Econômica Especial da China, criada por Deng Xiaoping em 1980, Shenzhen saiu de vila de pesca para polo global de tecnologia e manufatura (Huawei, Tencent, DJI), com mercado dinâmico sob tutela do Partido Comunista.",
+    "flagPath": "/countries/flags/shenzhen.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Republic_of_China.svg",
+    "flagNote": "Shenzhen não tem bandeira municipal oficial; usa a bandeira nacional da China como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "chongqing",
+    "name": "Chongqing (China)",
+    "category": "Município industrial-dirigista",
+    "description": "Maior município sob administração direta da China, Chongqing une indústria pesada, polo automotivo e trens de carga para a Europa ao \"modelo Chongqing\" de Bo Xilai (habitação pública, campanha anticrime, \"canções vermelhas\"), encerrado em 2012.",
+    "flagPath": "/countries/flags/chongqing.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Republic_of_China.svg",
+    "flagNote": "Chongqing não tem bandeira municipal oficial; usa a bandeira nacional da China como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "imperio-austriaco",
+    "name": "Império Austríaco (Habsburgos)",
+    "category": "Monarquia multinacional centralizada",
+    "description": "Fundado pelos Habsburgos em 1804, o Império Austríaco foi uma monarquia multinacional da Europa Central até o Compromisso de 1867. Sob Francisco I e Metternich, combinou administração centralizada, primazia católica e repressão liberal.",
+    "flagPath": "/countries/flags/imperio-austriaco.png",
+    "historical": true,
+    "period": "1804–1867",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Habsburg_Monarchy.svg",
+    "flagNote": "Bandeira preta e dourada da Monarquia dos Habsburgos, usada pelo Império Austríaco; via Wikimedia Commons.",
     "religions": [
-      "christianity"
+      "catholic"
     ]
   }
 ]

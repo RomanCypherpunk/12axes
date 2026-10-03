@@ -22,6 +22,8 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedOrigins(allowedOrigins)
                 .allowedMethods("GET", "POST", "OPTIONS")
-                .allowedHeaders("*");
+                .allowedHeaders("*")
+                // O navegador reaproveita a resposta do preflight por 1 hora (POST /api/results).
+                .maxAge(3600);
     }
 }

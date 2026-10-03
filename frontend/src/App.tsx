@@ -10,7 +10,7 @@ import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
 import { useScrollReveal } from './hooks/useScrollReveal';
-import { parseReligion, RELIGIONS, type Religion } from './utils/religion';
+import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -77,22 +77,65 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
 }
 
-// Última pergunta do bloco de arquétipos: letras A-D + "sem religião". Não vai
-// para o backend como arquétipo; vira o parâmetro religion do resultado.
+// Últimas perguntas do bloco de arquétipos: religião (letras A-D + "sem religião") e, só para
+// quem escolhe cristianismo, a vertente (católica, protestante ou ortodoxa). Nenhuma das duas vai
+// para o backend como arquétipo; viram o parâmetro religion do resultado.
 const RELIGION_STEP_ID = 'religiao';
 const RELIGION_OPTION_IDS = ['A', 'B', 'C', 'D', 'E'];
+const DENOMINATION_STEP_ID = 'denominacao';
+const DENOMINATION_OPTION_IDS = ['A', 'B', 'C'];
+
 function religionQuestion(): ArchetypeQuestion {
   return {
     id: RELIGION_STEP_ID,
     label: t.religionLabel,
     text: t.religionQuestion,
     icon: RELIGION_QUESTION_ICON,
-    options: [...RELIGIONS, 'none' as const].map((id, index) => ({
+    options: [...RELIGION_CHOICES, 'none' as const].map((id, index) => ({
       id: RELIGION_OPTION_IDS[index],
       text: id === 'none' ? t.religionNone : t.religionNames[id],
       icon: RELIGION_ICONS[id]
     }))
   };
+}
+
+function denominationQuestion(): ArchetypeQuestion {
+  return {
+    id: DENOMINATION_STEP_ID,
+    label: t.denominationLabel,
+    text: t.denominationQuestion,
+    icon: RELIGION_QUESTION_ICON,
+    options: CHRISTIAN_DENOMINATIONS.map((id, index) => ({
+      id: DENOMINATION_OPTION_IDS[index],
+      text: t.denominationNames[id],
+      icon: RELIGION_ICONS[id]
+    }))
+  };
+}
+
+// Escolheu cristianismo na pergunta de religião? Então vem a pergunta da vertente.
+function chosenChristianity(choices: Record<string, string>): boolean {
+  return choices[RELIGION_STEP_ID] === RELIGION_OPTION_IDS[RELIGION_CHOICES.indexOf('christianity')];
+}
+
+function buildArchetypeSteps(
+  archetypes: ArchetypeQuestion[] | undefined,
+  choices: Record<string, string>
+): ArchetypeQuestion[] {
+  return [
+    ...(archetypes ?? []),
+    religionQuestion(),
+    ...(chosenChristianity(choices) ? [denominationQuestion()] : [])
+  ];
+}
+
+// Religião usada no filtro do resultado: a vertente cristã escolhida ou a outra religião.
+function resolveReligion(choices: Record<string, string>): Religion | null {
+  if (chosenChristianity(choices)) {
+    return CHRISTIAN_DENOMINATIONS[DENOMINATION_OPTION_IDS.indexOf(choices[DENOMINATION_STEP_ID] ?? '')] ?? null;
+  }
+  const choice = RELIGION_CHOICES[RELIGION_OPTION_IDS.indexOf(choices[RELIGION_STEP_ID] ?? '')];
+  return choice && choice !== 'christianity' ? choice : null;
 }
 
 function LoadingPanel({ message }: { message: string }) {
@@ -168,7 +211,10 @@ function MainApp() {
   const poolRef = useRef<QuizPayload | null>(null);
 
   // Perguntas de arquétipo do backend + a de religião, no mesmo bloco e na mesma barra.
-  const archetypeSteps = useMemo(() => [...(quiz?.archetypeQuestions ?? []), religionQuestion()], [quiz]);
+  const archetypeSteps = useMemo(
+    () => buildArchetypeSteps(quiz?.archetypeQuestions, archetypeChoices),
+    [quiz, archetypeChoices]
+  );
 
   useEffect(() => {
     if (SHARED_RESULT_VALUES) {
@@ -515,7 +561,8 @@ function MainApp() {
   }
 
   function advanceArchetype(choices: Record<string, string>, withPause: boolean) {
-    if (archetypeIndex >= archetypeSteps.length - 1) {
+    // A vertente cristã só entra na lista depois de escolher cristianismo, então conta com as novas escolhas.
+    if (archetypeIndex >= buildArchetypeSteps(quiz?.archetypeQuestions, choices).length - 1) {
       setArchetypeDone(true);
       void submitQuiz(answers, choices);
       return;
@@ -566,8 +613,8 @@ function MainApp() {
         questionId: question.id,
         answer: answerMap[question.id] as AnswerValue
       }));
-      const { [RELIGION_STEP_ID]: religionOption, ...archetypeOnly } = archetype;
-      const chosenReligion = RELIGIONS[RELIGION_OPTION_IDS.indexOf(religionOption ?? '')] ?? null;
+      const { [RELIGION_STEP_ID]: _religion, [DENOMINATION_STEP_ID]: _denomination, ...archetypeOnly } = archetype;
+      const chosenReligion = resolveReligion(archetype);
       const nextResult = await submitResults(
         quiz.variant ?? selectedVariant,
         payload,

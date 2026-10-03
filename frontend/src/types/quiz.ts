@@ -199,3 +199,25 @@ export interface QuizResult {
   bookRecommendations?: BookRecommendation[];
 }
 
+
+export type CompareType = 'personality' | 'country' | 'ideology';
+
+/** Perfil pesquisável na seção de comparação (já filtrado pela religião do usuário). */
+export interface CompareItem {
+  type: CompareType;
+  id: string;
+  name: string;
+  caption: string;
+  /** Retrato (personalidade) ou bandeira (país); ausente nas ideologias. */
+  imagePath?: string | null;
+  category: string;
+  historical: boolean;
+}
+
+export interface CompareDetail {
+  item: CompareItem;
+  description: string;
+  compatibility: number;
+  /** Vetor de 12 eixos (leftPercent) do perfil comparado. */
+  vector: Record<string, number>;
+}
