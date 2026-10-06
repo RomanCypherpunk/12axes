@@ -1,0 +1,542 @@
+[
+  {
+    "id": "constituicao",
+    "term": "Constituição",
+    "definition": "A lei mais importante de um lugar. Todas as outras leis precisam respeitá-la."
+  },
+  {
+    "id": "stf",
+    "term": "STF",
+    "definition": "Supremo Tribunal Federal: o tribunal mais alto do Brasil. Decide se leis e atos do governo respeitam a Constituição."
+  },
+  {
+    "id": "anular",
+    "term": "Anular",
+    "definition": "Cancelar uma decisão, como se ela nunca tivesse valido."
+  },
+  {
+    "id": "reconhecimento_facial",
+    "term": "Reconhecimento facial",
+    "definition": "Tecnologia que identifica uma pessoa comparando o rosto filmado por uma câmera com fotos guardadas num banco de dados."
+  },
+  {
+    "id": "multicultural",
+    "term": "Multicultural",
+    "definition": "Lugar onde convivem pessoas de várias culturas, idiomas e religiões, cada uma mantendo suas tradições."
+  },
+  {
+    "id": "ataque_preventivo",
+    "term": "Ataque preventivo",
+    "definition": "Atacar um inimigo primeiro, por acreditar que ele está se preparando para atacar."
+  },
+  {
+    "id": "alianca_militar",
+    "term": "Aliança militar",
+    "definition": "Acordo entre países para se defenderem juntos: se um for atacado, os outros ajudam."
+  },
+  {
+    "id": "empresa_estrategica",
+    "term": "Empresa estratégica",
+    "definition": "Empresa de um setor essencial para o país funcionar, como energia, petróleo ou água."
+  },
+  {
+    "id": "banco_central",
+    "term": "Banco Central",
+    "definition": "Instituição pública que cuida da moeda do país e define a taxa básica de juros."
+  },
+  {
+    "id": "independencia_banco_central",
+    "term": "Independência do Banco Central",
+    "definition": "Quando o Banco Central decide sozinho, sem receber ordens do presidente ou de ministros."
+  },
+  {
+    "id": "tarifa",
+    "term": "Tarifa de importação",
+    "definition": "Imposto cobrado sobre produtos que vêm de outro país. Deixa o produto importado mais caro."
+  },
+  {
+    "id": "industria_nacional",
+    "term": "Indústria nacional",
+    "definition": "Fábricas e empresas que produzem dentro do próprio país."
+  },
+  {
+    "id": "leis_neutras",
+    "term": "Leis neutras",
+    "definition": "Leis que não favorecem nem prejudicam nenhuma religião, nem quem não tem religião."
+  },
+  {
+    "id": "cotas_raciais",
+    "term": "Cotas raciais",
+    "definition": "Reserva de parte das vagas para pessoas de determinados grupos raciais."
+  },
+  {
+    "id": "transgenico",
+    "term": "Transgênico",
+    "definition": "Planta ou animal que teve o DNA modificado em laboratório, por exemplo, para resistir a pragas."
+  },
+  {
+    "id": "curriculo",
+    "term": "Currículo escolar",
+    "definition": "A lista do que os alunos precisam aprender em cada série."
+  },
+  {
+    "id": "secessao",
+    "term": "Separação (secessão)",
+    "definition": "Quando uma região deixa o país e passa a ser um país independente."
+  },
+  {
+    "id": "quilombola",
+    "term": "Quilombola",
+    "definition": "Comunidade formada por descendentes de pessoas escravizadas que fugiram e criaram seus próprios povoados."
+  },
+  {
+    "id": "autonomia",
+    "term": "Autonomia política",
+    "definition": "Poder de uma região para tomar as próprias decisões, sem pedir permissão ao governo do país."
+  },
+  {
+    "id": "legislativo",
+    "term": "Congresso",
+    "definition": "Grupo de representantes eleitos que cria as leis e fiscaliza o governo."
+  },
+  {
+    "id": "limite_mandatos",
+    "term": "Limite de mandatos",
+    "definition": "Regra que impede a mesma pessoa de governar por mais de certo número de vezes ou anos."
+  },
+  {
+    "id": "sufragio",
+    "term": "Voto secreto e universal",
+    "definition": "Todo adulto pode votar, e ninguém pode saber em quem cada um votou."
+  },
+  {
+    "id": "referendo",
+    "term": "Referendo",
+    "definition": "Votação em que a própria população decide diretamente se aprova ou não uma lei."
+  },
+  {
+    "id": "revogacao",
+    "term": "Cassar o mandato",
+    "definition": "Tirar um político do cargo antes de terminar o tempo para o qual foi eleito."
+  },
+  {
+    "id": "regime_autoritario",
+    "term": "Regime autoritário",
+    "definition": "Governo em que o poder fica concentrado em poucas pessoas, sem eleições livres nem oposição de verdade."
+  },
+  {
+    "id": "alternancia",
+    "term": "Alternância de poder",
+    "definition": "Quando partidos ou grupos diferentes se revezam no governo ao longo do tempo."
+  },
+  {
+    "id": "assembleia_popular",
+    "term": "Assembleia popular",
+    "definition": "Reunião aberta em que os próprios moradores discutem e votam as decisões."
+  },
+  {
+    "id": "faccao",
+    "term": "Facção criminosa",
+    "definition": "Grupo organizado que controla o crime em uma região, muitas vezes com armas."
+  },
+  {
+    "id": "toque_recolher",
+    "term": "Toque de recolher",
+    "definition": "Ordem que proíbe as pessoas de ficarem na rua em certos horários."
+  },
+  {
+    "id": "eutanasia",
+    "term": "Eutanásia",
+    "definition": "Quando um médico ajuda uma pessoa muito doente a morrer, a pedido dela, para acabar com o sofrimento."
+  },
+  {
+    "id": "diplomacia",
+    "term": "Diplomacia",
+    "definition": "Resolver problemas entre países conversando e negociando, em vez de usar armas."
+  },
+  {
+    "id": "concessao",
+    "term": "Concessão",
+    "definition": "Abrir mão de algo que você queria para conseguir chegar a um acordo."
+  },
+  {
+    "id": "armas_nucleares",
+    "term": "Armas nucleares",
+    "definition": "As bombas mais destrutivas que existem: uma só pode destruir uma cidade inteira."
+  },
+  {
+    "id": "desarmamento",
+    "term": "Desarmamento",
+    "definition": "Acordo entre países para diminuir ou destruir parte das suas armas."
+  },
+  {
+    "id": "espionagem",
+    "term": "Espionagem",
+    "definition": "Obter em segredo informações de outro país, como planos militares ou de governo."
+  },
+  {
+    "id": "crimes_guerra",
+    "term": "Crimes de guerra",
+    "definition": "Atos proibidos mesmo durante uma guerra, como atacar civis de propósito ou torturar prisioneiros."
+  },
+  {
+    "id": "armas_autonomas",
+    "term": "Armas autônomas letais",
+    "definition": "Armas, como drones, que escolhem e atacam alvos sozinhas, sem uma pessoa decidir na hora."
+  },
+  {
+    "id": "dissuasao",
+    "term": "Dissuadir",
+    "definition": "Convencer o outro a não atacar mostrando que a resposta seria muito pior para ele."
+  },
+  {
+    "id": "onu",
+    "term": "ONU",
+    "definition": "Organização das Nações Unidas: reúne quase todos os países do mundo para tentar manter a paz."
+  },
+  {
+    "id": "missao_paz",
+    "term": "Missão de paz",
+    "definition": "Soldados de vários países enviados para ajudar a manter a calma depois de um conflito."
+  },
+  {
+    "id": "genocidio",
+    "term": "Genocídio",
+    "definition": "Tentar destruir de propósito um povo inteiro por sua origem, etnia ou religião."
+  },
+  {
+    "id": "sancoes",
+    "term": "Sanções",
+    "definition": "Punições econômicas contra um país, como proibir o comércio ou congelar seu dinheiro."
+  },
+  {
+    "id": "organismos_internacionais",
+    "term": "Organismos internacionais",
+    "definition": "Organizações formadas por vários países, como a ONU, para resolver problemas em conjunto."
+  },
+  {
+    "id": "potencias",
+    "term": "Potências",
+    "definition": "Países muito fortes em economia e poder militar, que influenciam o resto do mundo."
+  },
+  {
+    "id": "alinhamento",
+    "term": "Alinhamento automático",
+    "definition": "Ter que apoiar sempre as decisões de outro país, mesmo sem concordar."
+  },
+  {
+    "id": "tratado",
+    "term": "Tratado internacional",
+    "definition": "Acordo escrito e assinado entre países, que eles se comprometem a cumprir."
+  },
+  {
+    "id": "neutralidade",
+    "term": "Neutralidade",
+    "definition": "Não tomar o lado de ninguém numa guerra."
+  },
+  {
+    "id": "bases_militares",
+    "term": "Base militar no exterior",
+    "definition": "Lugar em outro país onde um país mantém soldados, aviões ou navios."
+  },
+  {
+    "id": "escola_bilingue",
+    "term": "Escola bilíngue",
+    "definition": "Escola que ensina em duas línguas ao mesmo tempo."
+  },
+  {
+    "id": "cidadao_mundo",
+    "term": "Cidadão do mundo",
+    "definition": "Quem se sente parte da humanidade inteira mais do que de um país específico."
+  },
+  {
+    "id": "redistribuicao",
+    "term": "Redistribuir",
+    "definition": "Tirar parte da riqueza de quem tem muito e passar para quem tem pouco."
+  },
+  {
+    "id": "concorrencia",
+    "term": "Concorrência",
+    "definition": "Quando várias empresas disputam os mesmos clientes, o que tende a baixar preços."
+  },
+  {
+    "id": "iniciativa_privada",
+    "term": "Iniciativa privada",
+    "definition": "Empresas e negócios que têm donos particulares, e não o governo."
+  },
+  {
+    "id": "heranca",
+    "term": "Herança",
+    "definition": "Bens e dinheiro que uma pessoa deixa para a família quando morre."
+  },
+  {
+    "id": "logica_lucro",
+    "term": "Lógica do lucro",
+    "definition": "Funcionar buscando ganhar dinheiro, como uma empresa comum."
+  },
+  {
+    "id": "renda_basica",
+    "term": "Renda básica",
+    "definition": "Um valor em dinheiro pago todo mês pelo governo para garantir o mínimo para viver."
+  },
+  {
+    "id": "estabilidade",
+    "term": "Estabilidade do servidor",
+    "definition": "Regra que impede que funcionários públicos sejam demitidos, salvo em casos graves."
+  },
+  {
+    "id": "auxilio",
+    "term": "Bolsa Família",
+    "definition": "Programa do governo que paga um valor mensal a famílias pobres, com algumas condições."
+  },
+  {
+    "id": "reforma_agraria",
+    "term": "Reforma agrária",
+    "definition": "Dividir grandes fazendas e distribuir a terra para famílias que não têm onde plantar."
+  },
+  {
+    "id": "sindicato",
+    "term": "Sindicato",
+    "definition": "Associação de trabalhadores que negocia salários e direitos em nome de todos."
+  },
+  {
+    "id": "banco_publico",
+    "term": "Banco público",
+    "definition": "Banco que pertence ao governo e empresta dinheiro para obras, empresas e moradia."
+  },
+  {
+    "id": "estatal",
+    "term": "Estatal",
+    "definition": "Empresa que pertence ao governo."
+  },
+  {
+    "id": "planejamento",
+    "term": "Planejamento econômico",
+    "definition": "Quando o governo decide o que, quanto e onde produzir, em vez de deixar para o mercado."
+  },
+  {
+    "id": "politicas_publicas",
+    "term": "Políticas públicas",
+    "definition": "Programas e ações do governo, como saúde, escolas e auxílios."
+  },
+  {
+    "id": "carga_tributaria",
+    "term": "Carga tributária",
+    "definition": "Quanto do dinheiro do país vai para o governo em forma de impostos."
+  },
+  {
+    "id": "subsidio",
+    "term": "Subsidiar",
+    "definition": "Quando o governo paga parte dos custos de uma empresa ou setor para ajudá-lo."
+  },
+  {
+    "id": "salario_minimo",
+    "term": "Salário mínimo",
+    "definition": "O menor salário que a lei permite pagar a um trabalhador."
+  },
+  {
+    "id": "congelar",
+    "term": "Congelar preços",
+    "definition": "Proibir por lei que um preço suba durante um tempo."
+  },
+  {
+    "id": "inflacao",
+    "term": "Inflação",
+    "definition": "Quando os preços sobem de forma geral e o dinheiro passa a comprar menos."
+  },
+  {
+    "id": "campeas_nacionais",
+    "term": "Campeãs nacionais",
+    "definition": "Grandes empresas do país que o governo escolhe apoiar para competirem no mundo."
+  },
+  {
+    "id": "cripto",
+    "term": "Criptomoeda",
+    "definition": "Dinheiro digital que não é emitido por nenhum governo, como o Bitcoin."
+  },
+  {
+    "id": "economia_planejada",
+    "term": "Economia planejada",
+    "definition": "Sistema em que o governo decide a produção e os preços no lugar das empresas."
+  },
+  {
+    "id": "livre_mercado",
+    "term": "Livre mercado",
+    "definition": "Sistema em que preços e produção são decididos pela compra e venda livre entre pessoas e empresas."
+  },
+  {
+    "id": "regulacao",
+    "term": "Regulação",
+    "definition": "Regras do governo sobre como empresas podem funcionar."
+  },
+  {
+    "id": "recessao",
+    "term": "Recessão",
+    "definition": "Período em que a economia encolhe, empresas vendem menos e o desemprego sobe."
+  },
+  {
+    "id": "juros",
+    "term": "Juros",
+    "definition": "O preço de pegar dinheiro emprestado. Juros altos encarecem empréstimos e freiam o consumo."
+  },
+  {
+    "id": "cambio",
+    "term": "Taxa de câmbio",
+    "definition": "Quanto vale a moeda do país em comparação com outras, como o dólar."
+  },
+  {
+    "id": "importacao",
+    "term": "Importação",
+    "definition": "Comprar produtos feitos em outro país."
+  },
+  {
+    "id": "livre_comercio",
+    "term": "Livre comércio",
+    "definition": "Comprar e vender entre países sem impostos ou barreiras extras."
+  },
+  {
+    "id": "mercado_global",
+    "term": "Mercado global único",
+    "definition": "O mundo inteiro funcionando como um só mercado, sem barreiras entre países."
+  },
+  {
+    "id": "integracao",
+    "term": "Integração econômica",
+    "definition": "Quando as economias de vários países ficam ligadas por muito comércio e investimento."
+  },
+  {
+    "id": "investimento_estrangeiro",
+    "term": "Investimento estrangeiro",
+    "definition": "Dinheiro de empresas ou pessoas de fora aplicado em negócios dentro do país."
+  },
+  {
+    "id": "cadeia_estrategica",
+    "term": "Cadeia estratégica",
+    "definition": "Todo o caminho de produção de algo essencial, da matéria-prima ao produto final."
+  },
+  {
+    "id": "multinacional",
+    "term": "Multinacional",
+    "definition": "Empresa que funciona em muitos países ao mesmo tempo."
+  },
+  {
+    "id": "soberania_economica",
+    "term": "Soberania econômica",
+    "definition": "Quando o país depende pouco de outros para produzir o que precisa."
+  },
+  {
+    "id": "simbolos_religiosos",
+    "term": "Símbolos religiosos",
+    "definition": "Objetos ou imagens ligados a uma religião, como cruzes, estátuas de santos ou versículos."
+  },
+  {
+    "id": "estado_confessional",
+    "term": "Identidade religiosa oficial",
+    "definition": "Quando um país declara uma religião como a oficial do Estado."
+  },
+  {
+    "id": "moral_publica",
+    "term": "Moral pública",
+    "definition": "As ideias de certo e errado que guiam as leis e a vida em sociedade."
+  },
+  {
+    "id": "familia_tradicional",
+    "term": "Família tradicional",
+    "definition": "Família formada por pai, mãe e filhos, geralmente unidos pelo casamento."
+  },
+  {
+    "id": "identidade_genero",
+    "term": "Identidade de gênero",
+    "definition": "Como a pessoa se reconhece: homem, mulher ou outra forma, que pode ou não coincidir com o sexo de nascimento."
+  },
+  {
+    "id": "lgbt",
+    "term": "LGBT",
+    "definition": "Sigla para lésbicas, gays, bissexuais e pessoas trans."
+  },
+  {
+    "id": "aborto",
+    "term": "Aborto",
+    "definition": "Interromper uma gravidez antes que o bebê possa nascer."
+  },
+  {
+    "id": "trabalho_sexual",
+    "term": "Prostituição",
+    "definition": "Oferecer relações sexuais em troca de dinheiro."
+  },
+  {
+    "id": "linguagem_neutra",
+    "term": "Linguagem neutra",
+    "definition": "Formas de falar e escrever que evitam marcar masculino ou feminino, como \"todes\"."
+  },
+  {
+    "id": "poliamor",
+    "term": "Poliamor",
+    "definition": "Ter mais de um relacionamento amoroso ao mesmo tempo, com o conhecimento e acordo de todos."
+  },
+  {
+    "id": "industrializacao",
+    "term": "Industrialização",
+    "definition": "Quando um país passa a produzir muito em fábricas, com máquinas."
+  },
+  {
+    "id": "ia",
+    "term": "IA (inteligência artificial)",
+    "definition": "Programas de computador que fazem tarefas que antes exigiam uma pessoa pensando, como escrever ou reconhecer imagens."
+  },
+  {
+    "id": "automacao",
+    "term": "Automação",
+    "definition": "Usar máquinas e programas para fazer trabalhos que antes eram feitos por pessoas."
+  },
+  {
+    "id": "agrotoxico",
+    "term": "Agrotóxico",
+    "definition": "Produto químico usado na lavoura para matar pragas, fungos ou ervas daninhas."
+  },
+  {
+    "id": "mineracao",
+    "term": "Mineração",
+    "definition": "Retirar minérios, como ouro ou ferro, de dentro da terra."
+  },
+  {
+    "id": "area_preservada",
+    "term": "Área preservada",
+    "definition": "Pedaço de natureza protegido por lei, onde quase nada pode ser construído ou explorado."
+  },
+  {
+    "id": "edicao_genetica",
+    "term": "Edição genética",
+    "definition": "Mudar partes do DNA, o \"manual de instruções\" do corpo, para corrigir ou alterar características."
+  },
+  {
+    "id": "embriao",
+    "term": "Embrião",
+    "definition": "O começo de um ser humano, nas primeiras semanas depois da fecundação."
+  },
+  {
+    "id": "aquecimento_global",
+    "term": "Aquecimento global",
+    "definition": "O aumento da temperatura média do planeta, ligado à poluição dos gases de efeito estufa."
+  },
+  {
+    "id": "implante_cerebral",
+    "term": "Implante cerebral",
+    "definition": "Pequeno aparelho colocado no cérebro que se conecta a computadores."
+  },
+  {
+    "id": "implante",
+    "term": "Implante artificial",
+    "definition": "Peça ou aparelho colocado dentro do corpo para mudar ou ampliar o que ele faz."
+  },
+  {
+    "id": "carne_cultivada",
+    "term": "Carne cultivada",
+    "definition": "Carne produzida em laboratório a partir de células animais, sem abater o animal."
+  },
+  {
+    "id": "pecuaria",
+    "term": "Pecuária",
+    "definition": "Criação de animais, como bois e porcos, para carne, leite e couro."
+  }
+]

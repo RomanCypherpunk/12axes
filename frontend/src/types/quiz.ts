@@ -18,12 +18,29 @@ export interface Axis {
   rightColor: string;
 }
 
+export interface QuestionTerm {
+  /** Trecho do texto da pergunta a sublinhar (sem diferenciar maiúsculas). */
+  match: string;
+  term: string;
+  definition: string;
+}
+
+export interface QuestionHelp {
+  /** A pergunta em linguagem simples. */
+  simple: string;
+  /** Cenários do dia a dia, sempre com os dois lados; null quando não há exemplo. */
+  example: { agree: string; disagree: string } | null;
+  terms: QuestionTerm[];
+}
+
 export interface Question {
   id: string;
   axisId: string;
   text: string;
   agreePole: Pole;
   weight: number;
+  /** Ajuda de leitura; null ou ausente enquanto não foi escrita para a pergunta. */
+  help?: QuestionHelp | null;
 }
 
 export interface AnswerOption {

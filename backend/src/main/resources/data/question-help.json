@@ -1,0 +1,2811 @@
+[
+  {
+    "id": "estrutura_01",
+    "simple": "Cada estado e cidade deveria decidir suas próprias coisas, sem esperar o governo do país?",
+    "example": {
+      "agree": "Uma cidade decide sozinha o horário dos ônibus e o tamanho das calçadas.",
+      "disagree": "O governo do país define regras iguais de transporte para todas as cidades."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_02",
+    "simple": "As leis deveriam ser iguais no país inteiro, mesmo que algum estado prefira outra coisa?",
+    "example": {
+      "agree": "A idade para tirar carteira de motorista é a mesma em todos os estados.",
+      "disagree": "Cada estado escolhe a idade mínima para dirigir."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_03",
+    "simple": "As regras sobre assuntos da cidade deveriam ser feitas pela própria cidade ou estado?",
+    "example": {
+      "agree": "A prefeitura decide onde pode ter bar aberto até tarde.",
+      "disagree": "Uma lei nacional define o horário de bares em todas as cidades."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_04",
+    "simple": "Todas as escolas do país deveriam ensinar o mesmo conteúdo, em vez de cada estado escolher?",
+    "example": {
+      "agree": "Um aluno que se muda de estado continua a matéria exatamente de onde parou.",
+      "disagree": "Cada estado inclui na escola a história e a cultura da sua região."
+    },
+    "terms": [
+      {
+        "termId": "curriculo",
+        "match": "currículo escolar"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_05",
+    "simple": "Cada estado deveria poder escrever suas próprias regras principais, do seu jeito, sem o governo do país inteiro decidir por ele?",
+    "example": {
+      "agree": "Um estado decide, na sua própria Constituição, que as aulas começam mais tarde, e o governo federal não pode mudar isso.",
+      "disagree": "As regras principais são iguais em todo o país, então quem se muda de estado continua com exatamente os mesmos direitos."
+    },
+    "terms": [
+      {
+        "termId": "constituicao",
+        "match": "Constituição"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_06",
+    "simple": "É melhor ter uma polícia só para o país inteiro do que uma polícia diferente em cada estado?",
+    "example": {
+      "agree": "Uma única polícia segue o criminoso de um estado para outro sem precisar pedir ajuda.",
+      "disagree": "Cada estado comanda sua polícia e decide como atuar nos seus problemas."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_07",
+    "simple": "O dinheiro dos impostos deveria ficar principalmente na cidade ou estado onde foi pago?",
+    "example": {
+      "agree": "Os impostos pagos na sua cidade consertam as ruas da sua própria cidade.",
+      "disagree": "O governo do país junta os impostos e manda mais dinheiro para as regiões mais pobres."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_08",
+    "simple": "Os hospitais públicos do país inteiro deveriam seguir as mesmas regras, com um comando central?",
+    "example": {
+      "agree": "Numa epidemia, um único órgão decide as regras para todos os hospitais.",
+      "disagree": "Cada estado organiza seus hospitais do jeito que funciona melhor para ele."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_09",
+    "simple": "Se a maioria das pessoas de um estado votar para sair do país, ele deveria poder virar um país novo?",
+    "example": {
+      "agree": "Um estado faz uma votação, a maioria escolhe sair, e ele vira um país independente.",
+      "disagree": "Mesmo com a votação, o estado continua fazendo parte do país."
+    },
+    "terms": [
+      {
+        "termId": "secessao",
+        "match": "se separar"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_10",
+    "simple": "Os impostos dos estados deveriam seguir regras do país para os estados não brigarem entre si?",
+    "example": {
+      "agree": "Todos os estados cobram impostos parecidos, então nenhum rouba empresas do outro.",
+      "disagree": "Um estado baixa seus impostos para atrair fábricas que estavam em outro estado."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_11",
+    "simple": "Povos indígenas e comunidades tradicionais deveriam poder viver com suas próprias regras nas suas terras?",
+    "example": {
+      "agree": "Uma aldeia resolve seus conflitos internos com seus próprios costumes.",
+      "disagree": "As mesmas leis do resto do país valem dentro da aldeia."
+    },
+    "terms": [
+      {
+        "termId": "quilombola",
+        "match": "quilombolas"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_12",
+    "simple": "As regras de trabalho, como férias e jornada, deveriam ser iguais em todos os estados?",
+    "example": {
+      "agree": "Um trabalhador tem os mesmos direitos em qualquer lugar do país.",
+      "disagree": "Cada estado ajusta as regras de trabalho à sua economia local."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_13",
+    "simple": "Uma cidade deveria poder criar suas próprias leis, mesmo que sejam diferentes das leis do país?",
+    "example": {
+      "agree": "Uma cidade proíbe sacolas plásticas, embora o resto do país permita.",
+      "disagree": "As cidades só podem seguir e aplicar as leis feitas pelo país."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_14",
+    "simple": "Quando o governador e o presidente discordam, quem deveria dar a palavra final é o presidente?",
+    "example": {
+      "agree": "O presidente manda reabrir as escolas, e o estado precisa obedecer.",
+      "disagree": "O governador mantém as escolas do seu estado fechadas, mesmo com o presidente contra."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_15",
+    "simple": "O país deveria ser como um time de estados, cada um com muito poder para decidir sozinho?",
+    "example": {
+      "agree": "Cada estado tem seu próprio parlamento forte e decide quase tudo sobre si mesmo.",
+      "disagree": "O governo do país decide a maior parte das coisas, e os estados cuidam só de detalhes."
+    },
+    "terms": [
+      {
+        "termId": "autonomia",
+        "match": "autonomia política"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_16",
+    "simple": "O governo do país deveria poder cancelar leis de estados e cidades que prejudiquem o país?",
+    "example": {
+      "agree": "Uma cidade aprova uma lei que atrapalha uma estrada nacional, e o governo do país a cancela.",
+      "disagree": "A lei da cidade vale, porque quem mora lá foi quem escolheu."
+    },
+    "terms": [
+      {
+        "termId": "anular",
+        "match": "anular"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_17",
+    "simple": "Regiões com uma cultura bem própria deveriam ter mais poder para decidir suas coisas?",
+    "example": {
+      "agree": "Uma região com idioma e tradições próprias controla suas escolas e sua televisão pública.",
+      "disagree": "Todas as regiões têm o mesmo poder, não importa o quanto sua cultura seja diferente."
+    },
+    "terms": [
+      {
+        "termId": "autonomia",
+        "match": "autonomia política"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_18",
+    "simple": "Um estado deveria ser proibido de sair do país, mesmo que a maioria de lá queira?",
+    "example": {
+      "agree": "Uma região vota para sair, mas o país não aceita e ela continua fazendo parte dele.",
+      "disagree": "Se a maioria da região quiser sair, o país deixa ela se tornar independente."
+    },
+    "terms": [
+      {
+        "termId": "secessao",
+        "match": "separação"
+      }
+    ]
+  },
+  {
+    "id": "estrutura_19",
+    "simple": "As escolas públicas deveriam ser cuidadas pela prefeitura, e não pelo governo do país?",
+    "example": {
+      "agree": "A prefeitura escolhe os diretores e decide o calendário das escolas da cidade.",
+      "disagree": "O governo do país administra as escolas para que todas funcionem do mesmo jeito."
+    },
+    "terms": []
+  },
+  {
+    "id": "estrutura_20",
+    "simple": "Governadores e prefeitos deveriam cumprir o que o governo do país decidir, mesmo em assuntos locais?",
+    "example": {
+      "agree": "O governo do país define o plano de vacinação, e os prefeitos só o colocam em prática.",
+      "disagree": "Cada prefeito decide como e quando vacinar na sua cidade."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_01",
+    "simple": "Deveríamos continuar tendo eleições livres, mesmo quando as pessoas escolhem governos ruins?",
+    "example": {
+      "agree": "Um governo ruim é eleito, e a solução é esperar a próxima eleição para trocá-lo.",
+      "disagree": "Quando um governo eleito faz muito mal, as eleições são suspensas para corrigir o rumo."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_02",
+    "simple": "Numa crise muito grave, um líder forte deveria poder mandar sem precisar do Congresso?",
+    "example": {
+      "agree": "Numa catástrofe, o presidente decide tudo sozinho para agir mais rápido.",
+      "disagree": "Mesmo na crise, cada medida importante precisa passar pelo Congresso."
+    },
+    "terms": [
+      {
+        "termId": "legislativo",
+        "match": "Congresso"
+      }
+    ]
+  },
+  {
+    "id": "representacao_03",
+    "simple": "Quem é contra o governo deveria poder criticá-lo em público, qualquer que seja o governo?",
+    "example": {
+      "agree": "Um partido de oposição faz campanha na TV dizendo que o governo está errado.",
+      "disagree": "Críticas que atrapalham o governo num momento difícil são proibidas."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_04",
+    "simple": "É melhor um pequeno grupo de líderes decidir do que dividir o poder entre várias instituições?",
+    "example": {
+      "agree": "Um conselho de cinco pessoas decide rápido, sem passar por Congresso e tribunais.",
+      "disagree": "Uma decisão precisa ser aprovada pelo Congresso e pode ser revista pela Justiça."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_05",
+    "simple": "Se o governo tomar uma decisão, juízes que não foram eleitos devem poder cancelá-la?",
+    "example": {
+      "agree": "O governo cria uma regra que os juízes consideram contra a Constituição, e eles a cancelam.",
+      "disagree": "O governo eleito toma uma decisão, e ela vale mesmo que alguns juízes não concordem."
+    },
+    "terms": [
+      {
+        "termId": "stf",
+        "match": "STF"
+      },
+      {
+        "termId": "anular",
+        "match": "anular"
+      }
+    ]
+  },
+  {
+    "id": "representacao_06",
+    "simple": "Um bom governante deveria poder ser reeleito quantas vezes quiser?",
+    "example": {
+      "agree": "Um presidente bem avaliado se candidata pela quarta vez seguida e vence.",
+      "disagree": "Depois de dois mandatos, o presidente precisa sair, mesmo sendo popular."
+    },
+    "terms": [
+      {
+        "termId": "limite_mandatos",
+        "match": "limite de mandatos"
+      }
+    ]
+  },
+  {
+    "id": "representacao_07",
+    "simple": "Todo adulto deveria poder votar em segredo, mesmo quem não acompanha a política?",
+    "example": {
+      "agree": "Uma pessoa que nunca lê notícias vota, e seu voto vale igual ao de qualquer outra.",
+      "disagree": "Só vota quem passa numa prova simples sobre como o país funciona."
+    },
+    "terms": [
+      {
+        "termId": "sufragio",
+        "match": "voto secreto e universal"
+      }
+    ]
+  },
+  {
+    "id": "representacao_08",
+    "simple": "Um governante que trabalha bem deveria poder ficar no poder sem precisar disputar eleições?",
+    "example": {
+      "agree": "Um líder que melhorou a economia continua governando sem novas eleições.",
+      "disagree": "Mesmo indo bem, o líder precisa ganhar uma nova eleição a cada poucos anos."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_09",
+    "simple": "A população deveria poder derrubar uma lei votando diretamente, sem depender do Congresso?",
+    "example": {
+      "agree": "As pessoas juntam assinaturas, fazem uma votação e cancelam uma lei de que não gostam.",
+      "disagree": "Só o Congresso pode mudar ou cancelar leis já aprovadas."
+    },
+    "terms": [
+      {
+        "termId": "referendo",
+        "match": "referendo"
+      }
+    ]
+  },
+  {
+    "id": "representacao_10",
+    "simple": "Os governantes deveriam ser escolhidos pela competência, tradição ou herança, e não pelo voto?",
+    "example": {
+      "agree": "Um rei passa o trono para o filho, que foi preparado a vida toda para governar.",
+      "disagree": "Qualquer cidadão pode se candidatar, e a população escolhe pelo voto."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_11",
+    "simple": "Os eleitores deveriam poder tirar um político ruim do cargo antes do fim do mandato?",
+    "example": {
+      "agree": "Um prefeito quebra promessas, os moradores fazem uma votação e ele perde o cargo.",
+      "disagree": "O prefeito fica até o fim do mandato, e os eleitores o julgam na próxima eleição."
+    },
+    "terms": [
+      {
+        "termId": "revogacao",
+        "match": "cassar o mandato"
+      }
+    ]
+  },
+  {
+    "id": "representacao_12",
+    "simple": "Você aceitaria um governo sem eleições livres se ele fizesse o país crescer mais rápido?",
+    "example": {
+      "agree": "Um governo sem oposição constrói estradas e fábricas muito rápido, e o país enriquece.",
+      "disagree": "O país cresce mais devagar, mas as pessoas continuam escolhendo quem governa."
+    },
+    "terms": [
+      {
+        "termId": "regime_autoritario",
+        "match": "regime autoritário"
+      }
+    ]
+  },
+  {
+    "id": "representacao_13",
+    "simple": "É melhor que partidos diferentes se revezem no governo do que o mesmo grupo mandar por décadas?",
+    "example": {
+      "agree": "Depois de alguns anos, outro partido ganha a eleição e assume o governo.",
+      "disagree": "O mesmo partido governa por 30 anos e consegue fazer planos de longo prazo."
+    },
+    "terms": [
+      {
+        "termId": "alternancia",
+        "match": "alternância de poder"
+      }
+    ]
+  },
+  {
+    "id": "representacao_14",
+    "simple": "Especialistas escolhidos pelo conhecimento deveriam governar, mesmo sem ganhar eleições?",
+    "example": {
+      "agree": "Um grupo de economistas e engenheiros comanda o país com base em estudos.",
+      "disagree": "Quem governa é eleito, e pode chamar especialistas para ajudar."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_15",
+    "simple": "Quem governa deveria precisar da aprovação das pessoas afetadas pelas suas decisões?",
+    "example": {
+      "agree": "Antes de construir uma represa, o governo consulta e ouve os moradores da região.",
+      "disagree": "O governo decide o que é melhor para o país, mesmo que os moradores sejam contra."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_16",
+    "simple": "Só algumas pessoas deveriam ter o direito de votar, e não todos os adultos?",
+    "example": {
+      "agree": "Só pode votar quem tem certo nível de estudo ou passa numa prova.",
+      "disagree": "Todo adulto vota, não importa quanto estudou."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_17",
+    "simple": "Seria melhor se os próprios moradores decidissem tudo em reuniões abertas, sem políticos?",
+    "example": {
+      "agree": "O bairro se reúne na praça e vota onde gastar o dinheiro público.",
+      "disagree": "Os moradores elegem representantes, que decidem em nome deles."
+    },
+    "terms": [
+      {
+        "termId": "assembleia_popular",
+        "match": "assembleias populares"
+      }
+    ]
+  },
+  {
+    "id": "representacao_18",
+    "simple": "Governar de forma eficiente é mais importante do que deixar espaço para a oposição?",
+    "example": {
+      "agree": "O governo aprova suas leis rapidamente, sem longos debates com a oposição.",
+      "disagree": "As leis demoram mais porque a oposição tem tempo de debater e propor mudanças."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_19",
+    "simple": "Mesmo um governo eleito com muitos votos deveria respeitar todos os direitos da oposição?",
+    "example": {
+      "agree": "Um governo com 80% dos votos ainda deixa a oposição falar, protestar e concorrer.",
+      "disagree": "Com uma vitória tão grande, o governo pode limitar quem atrapalha seus planos."
+    },
+    "terms": []
+  },
+  {
+    "id": "representacao_20",
+    "simple": "É melhor um governo sem eleições livres, mas estável, do que uma democracia cheia de crises?",
+    "example": {
+      "agree": "O mesmo governo fica por décadas, sem eleições livres, e o país vive em calma.",
+      "disagree": "O país troca de governo várias vezes e passa por crises, mas as pessoas continuam votando."
+    },
+    "terms": [
+      {
+        "termId": "regime_autoritario",
+        "match": "regime autoritário"
+      }
+    ]
+  },
+  {
+    "id": "poder_01",
+    "simple": "A polícia deveria fazer operações duras em lugares dominados pelo crime organizado?",
+    "example": {
+      "agree": "A polícia entra com força num bairro controlado por criminosos para retomar o lugar.",
+      "disagree": "O governo investe em investigação e serviços no bairro, evitando confrontos armados."
+    },
+    "terms": [
+      {
+        "termId": "faccao",
+        "match": "facções"
+      }
+    ]
+  },
+  {
+    "id": "poder_02",
+    "simple": "Adultos que usam maconha deveriam deixar de ser tratados como criminosos?",
+    "example": {
+      "agree": "Um adulto fuma maconha em casa e não pode ser preso por isso.",
+      "disagree": "Quem é pego usando maconha pode ser punido pela lei."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_03",
+    "simple": "O governo deveria poder ler conversas de celular e internet para combater o crime?",
+    "example": {
+      "agree": "A polícia vigia mensagens e descobre um assalto antes que aconteça.",
+      "disagree": "Suas mensagens são privadas, e a polícia só as vê com ordem de um juiz num caso específico."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_04",
+    "simple": "As pessoas deveriam poder dizer até coisas que ofendem os outros?",
+    "example": {
+      "agree": "Alguém faz uma piada ofensiva, recebe críticas, mas não é punido pela lei.",
+      "disagree": "Quem diz algo muito ofensivo em público pode ser multado."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_05",
+    "simple": "Deveria haver mais câmeras nas ruas que reconhecem quem você é pelo rosto, para ajudar a pegar criminosos?",
+    "example": {
+      "agree": "Uma câmera identifica na rua uma pessoa procurada por roubo, e a polícia a encontra no mesmo dia.",
+      "disagree": "Você vai a um protesto ou a uma consulta médica e prefere que nenhum sistema registre que esteve lá."
+    },
+    "terms": [
+      {
+        "termId": "reconhecimento_facial",
+        "match": "reconhecimento facial"
+      }
+    ]
+  },
+  {
+    "id": "poder_06",
+    "simple": "Coisas que adultos fazem por vontade própria, como usar drogas ou apostar, deveriam deixar de ser crime?",
+    "example": {
+      "agree": "Um adulto aposta dinheiro num cassino ou usa drogas, e a polícia não interfere.",
+      "disagree": "A lei proíbe essas atividades para proteger as pessoas e suas famílias."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_07",
+    "simple": "O governo deveria poder fechar partidos políticos que ameacem a ordem?",
+    "example": {
+      "agree": "Um partido que incentiva a violência é proibido de participar das eleições.",
+      "disagree": "Todo partido pode existir; quem decide se ele ganha ou perde é o eleitor."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_08",
+    "simple": "Todas as drogas, até as mais fortes, deveriam ser liberadas para adultos?",
+    "example": {
+      "agree": "A cocaína é vendida em lojas controladas, com rótulo e imposto, como o álcool.",
+      "disagree": "Drogas pesadas continuam proibidas e quem vende pode ser preso."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_09",
+    "simple": "Deveria ser muito difícil uma pessoa comum conseguir uma arma de fogo?",
+    "example": {
+      "agree": "Para ter uma arma, é preciso um motivo forte, exames e meses de espera.",
+      "disagree": "Qualquer adulto sem antecedentes compra uma arma de forma simples."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_10",
+    "simple": "Adultos deveriam poder ter uma arma em casa para se defender?",
+    "example": {
+      "agree": "Uma família guarda uma arma em casa para se proteger de invasores.",
+      "disagree": "Só a polícia anda armada, e as famílias contam com ela para se proteger."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_11",
+    "simple": "Numa situação grave, o governo deveria poder proibir as pessoas de sair à noite?",
+    "example": {
+      "agree": "Durante uma onda de violência, ninguém pode ficar na rua depois das 22h.",
+      "disagree": "Mesmo na crise, cada pessoa decide quando sair de casa."
+    },
+    "terms": [
+      {
+        "termId": "toque_recolher",
+        "match": "toque de recolher"
+      }
+    ]
+  },
+  {
+    "id": "poder_12",
+    "simple": "Uma pessoa com doença sem cura deveria poder pedir ajuda médica para morrer?",
+    "example": {
+      "agree": "Um paciente terminal, com muita dor, pede e recebe ajuda de um médico para morrer.",
+      "disagree": "Os médicos cuidam da dor até o fim, mas não podem ajudar o paciente a morrer."
+    },
+    "terms": [
+      {
+        "termId": "eutanasia",
+        "match": "eutanásia"
+      }
+    ]
+  },
+  {
+    "id": "poder_13",
+    "simple": "Tomar vacina deveria ser obrigatório, mesmo para quem não quer?",
+    "example": {
+      "agree": "Uma criança só pode se matricular na escola com a vacinação em dia.",
+      "disagree": "Cada família decide se vacina ou não, mesmo que a maioria se vacine."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_14",
+    "simple": "Se não há certeza de que alguém é culpado, ele deveria ser solto, mesmo que talvez seja culpado?",
+    "example": {
+      "agree": "Faltam provas, o suspeito é solto, mesmo que muitos achem que foi ele.",
+      "disagree": "Com fortes suspeitas, o acusado fica preso para não arriscar a segurança de todos."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_15",
+    "simple": "Quem comete crimes muito graves, como estupro e assassinato, deveria poder ser condenado à morte?",
+    "example": {
+      "agree": "Um assassino condenado recebe a pena de morte.",
+      "disagree": "A pena mais dura é a prisão, mesmo para os piores crimes."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_16",
+    "simple": "O que adultos fazem em particular, com consentimento de todos, deveria ficar fora da lei penal?",
+    "example": {
+      "agree": "Dois adultos vivem como quiserem dentro de casa, e o Estado não se mete.",
+      "disagree": "Algumas condutas privadas continuam proibidas por proteger a moral da sociedade."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_17",
+    "simple": "O governo deveria poder apagar perfis de redes sociais que espalham mentiras?",
+    "example": {
+      "agree": "Um perfil que espalha boatos falsos sobre vacinas é tirado do ar.",
+      "disagree": "O perfil continua no ar, e as pessoas decidem em quem acreditar."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_18",
+    "simple": "O governo deveria ser proibido de ver o que você compra com cartão ou celular?",
+    "example": {
+      "agree": "Suas compras com cartão ficam entre você e o banco, sem acesso do governo.",
+      "disagree": "O governo acompanha os pagamentos para encontrar sonegação e lavagem de dinheiro."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_19",
+    "simple": "Pessoas suspeitas de terrorismo deveriam poder ficar presas sem julgamento até o perigo passar?",
+    "example": {
+      "agree": "Um suspeito de planejar um atentado fica preso por meses, sem julgamento, por segurança.",
+      "disagree": "Mesmo suspeito de terrorismo, a pessoa tem direito a ser julgada logo."
+    },
+    "terms": []
+  },
+  {
+    "id": "poder_20",
+    "simple": "Ninguém deveria ser obrigado a desbloquear o celular para a polícia?",
+    "example": {
+      "agree": "A polícia pede seu celular, você se recusa a dar a senha, e não é punido.",
+      "disagree": "Se a polícia tiver uma ordem, você é obrigado a desbloquear o celular."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_01",
+    "simple": "Quem vem morar no país deveria aprender a língua e viver do jeito daqui?",
+    "example": {
+      "agree": "Um imigrante faz curso da língua local e passa a celebrar as festas do país.",
+      "disagree": "Um imigrante mantém sua língua e seus costumes, e o país se adapta a ele também."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_02",
+    "simple": "É bom que, no mesmo país, as pessoas usem várias línguas no dia a dia, e não só a língua oficial?",
+    "example": {
+      "agree": "Placas, escolas e atendimento público também funcionam nas línguas faladas por quem mora na cidade.",
+      "disagree": "Tudo funciona na língua oficial, e quem chega aprende essa língua para participar."
+    },
+    "terms": [
+      {
+        "termId": "multicultural",
+        "match": "multicultural"
+      }
+    ]
+  },
+  {
+    "id": "imigracao_03",
+    "simple": "O país deveria fechar a porta para imigrantes para manter sua cultura como é?",
+    "example": {
+      "agree": "O país para de aceitar novos imigrantes para que suas tradições não mudem.",
+      "disagree": "O país continua recebendo imigrantes, e a cultura vai mudando com o tempo."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_04",
+    "simple": "Imigrantes deveriam poder manter seus costumes, mesmo que sejam bem diferentes dos daqui?",
+    "example": {
+      "agree": "Uma família imigrante continua usando suas roupas tradicionais e celebrando suas festas.",
+      "disagree": "Espera-se que a família deixe de lado costumes que chocam com os do país."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_05",
+    "simple": "O país deveria recusar imigrantes que não aceitam respeitar os costumes daqui?",
+    "example": {
+      "agree": "Um pedido de visto é negado porque a pessoa diz que não vai seguir as regras sociais do país.",
+      "disagree": "O país aceita a pessoa e cobra apenas que ela cumpra as leis."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_06",
+    "simple": "Imigrantes deveriam poder viver bem aqui sem ter que largar seus costumes?",
+    "example": {
+      "agree": "Um imigrante consegue emprego e respeito mantendo sua religião e seu jeito de se vestir.",
+      "disagree": "Para se dar bem, o imigrante precisa se adaptar ao jeito de viver do país."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_07",
+    "simple": "É mais importante manter as tradições do país do que abrir espaço para costumes de fora?",
+    "example": {
+      "agree": "A cidade mantém só as festas tradicionais do país no calendário oficial.",
+      "disagree": "A cidade inclui no calendário festas trazidas por imigrantes."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_08",
+    "simple": "O país deveria incentivar pessoas de línguas e culturas diferentes a viverem juntas?",
+    "example": {
+      "agree": "O governo apoia festivais e escolas que juntam culturas diferentes.",
+      "disagree": "O governo foca em uma língua e uma cultura comuns para todos."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_09",
+    "simple": "O país deveria preferir imigrantes de culturas parecidas com a nossa?",
+    "example": {
+      "agree": "Quem vem de um país com língua e costumes parecidos recebe o visto mais rápido.",
+      "disagree": "Todos os imigrantes são avaliados do mesmo jeito, não importa a cultura de origem."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_10",
+    "simple": "Os costumes que os imigrantes trazem deveriam virar parte da identidade do país?",
+    "example": {
+      "agree": "Uma comida trazida por imigrantes vira prato típico e orgulho nacional.",
+      "disagree": "A identidade do país fica ligada às tradições de quem já vivia aqui."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_11",
+    "simple": "Quem imigra deveria ser obrigado a se adaptar aos costumes daqui?",
+    "example": {
+      "agree": "Para continuar no país, o imigrante precisa fazer cursos sobre a cultura e as regras locais.",
+      "disagree": "O imigrante só precisa cumprir as leis; adaptar-se aos costumes é escolha dele."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_12",
+    "simple": "O Brasil deveria continuar recebendo pessoas que fogem de crises graves em outros países?",
+    "example": {
+      "agree": "Famílias que fugiram da fome e da violência recebem abrigo e documentos para trabalhar.",
+      "disagree": "O país limita a entrada para cuidar primeiro dos problemas de quem já mora aqui."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_13",
+    "simple": "Falar bem a língua do país deveria ser uma das principais exigências para imigrar?",
+    "example": {
+      "agree": "Para conseguir o visto, a pessoa precisa passar numa prova da língua local.",
+      "disagree": "A pessoa pode chegar sem falar a língua e aprender depois, com o tempo."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_14",
+    "simple": "Imigrantes deveriam ser vistos como indivíduos, e não pela fama do país de onde vieram?",
+    "example": {
+      "agree": "Um imigrante é avaliado só pelo que ele faz, não pelo que se diz sobre seu país.",
+      "disagree": "É razoável levar em conta os costumes comuns no país de origem de quem chega."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_15",
+    "simple": "Bairros onde imigrantes vivem isolados, só entre eles, causam problemas para o país?",
+    "example": {
+      "agree": "Num bairro, quase ninguém fala a língua local, e isso dificulta a convivência com o resto da cidade.",
+      "disagree": "Imigrantes morarem perto uns dos outros é natural e ajuda quem acabou de chegar."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_16",
+    "simple": "Filhos de imigrantes deveriam poder estudar também na língua dos pais?",
+    "example": {
+      "agree": "Uma criança aprende matemática na língua local e também na língua da família.",
+      "disagree": "Na escola pública, todas as aulas são só na língua do país."
+    },
+    "terms": [
+      {
+        "termId": "escola_bilingue",
+        "match": "escolas bilíngues"
+      }
+    ]
+  },
+  {
+    "id": "imigracao_17",
+    "simple": "O país deveria limitar a entrada de imigrantes para que sua cultura principal não mude?",
+    "example": {
+      "agree": "O país define um número máximo de imigrantes por ano para preservar seus costumes.",
+      "disagree": "O país recebe quem quiser vir, mesmo que a cultura mude com isso."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_18",
+    "simple": "Qualquer pessoa pacífica deveria poder entrar e morar no país?",
+    "example": {
+      "agree": "Alguém de outro continente chega, mostra que não tem antecedentes e já pode ficar.",
+      "disagree": "Para morar no país, é preciso um visto, e o país decide quantos aceita."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_19",
+    "simple": "Imigrantes que rejeitam os costumes daqui deveriam perder o direito de ficar no país?",
+    "example": {
+      "agree": "Um imigrante que se recusa a seguir normas sociais básicas perde a autorização de residência.",
+      "disagree": "Enquanto cumprir a lei, o imigrante fica, mesmo que não siga os costumes locais."
+    },
+    "terms": []
+  },
+  {
+    "id": "imigracao_20",
+    "simple": "Você se sente mais cidadão do mundo do que de um país específico?",
+    "example": {
+      "agree": "Você se importa tanto com um problema do outro lado do mundo quanto com um do seu país.",
+      "disagree": "Você sente um laço especial com seu país, sua história e sua gente."
+    },
+    "terms": [
+      {
+        "termId": "cidadao_mundo",
+        "match": "cidadão do mundo"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_01",
+    "simple": "Um país deveria ter um exército forte para ser respeitado pelos outros?",
+    "example": {
+      "agree": "O país investe em aviões e navios modernos, e os vizinhos pensam duas vezes antes de provocá-lo.",
+      "disagree": "O país mantém um exército pequeno e ganha respeito pela diplomacia e pelo comércio."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_02",
+    "simple": "Antes de qualquer ataque, o país deveria tentar todas as conversas e negociações possíveis?",
+    "example": {
+      "agree": "Mesmo depois de uma provocação, o país passa meses negociando antes de pensar em armas.",
+      "disagree": "Se a ameaça for clara, o país age logo, sem esperar negociações longas."
+    },
+    "terms": [
+      {
+        "termId": "diplomacia",
+        "match": "diplomacia"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_03",
+    "simple": "Se um país inimigo parece estar se preparando para atacar, o nosso país pode atacar primeiro?",
+    "example": {
+      "agree": "Imagens de satélite mostram mísseis sendo levados até a fronteira, e o país os destrói antes que sejam lançados.",
+      "disagree": "Mesmo com sinais de ameaça, o país espera e só reage se for atacado de fato, porque os sinais podem estar errados."
+    },
+    "terms": [
+      {
+        "termId": "ataque_preventivo",
+        "match": "ataques preventivos"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_04",
+    "simple": "Você prefere evitar uma guerra mesmo quando ela poderia trazer vantagens ao país?",
+    "example": {
+      "agree": "O país poderia ganhar território numa guerra, mas escolhe a paz.",
+      "disagree": "Se a guerra garantir ganhos importantes, o país aceita lutar."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_05",
+    "simple": "O país deveria gastar com o exército em primeiro lugar, mesmo faltando dinheiro em outras áreas?",
+    "example": {
+      "agree": "O governo compra novos tanques, mesmo com hospitais pedindo mais verba.",
+      "disagree": "O dinheiro vai primeiro para saúde e escolas, e o exército recebe o que sobra."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_06",
+    "simple": "O país deveria fazer acordos com rivais, mesmo tendo que ceder em algumas coisas?",
+    "example": {
+      "agree": "Para acabar com uma disputa de fronteira, o país aceita dividir uma área com o vizinho.",
+      "disagree": "O país não cede nada, mesmo que a disputa continue por anos."
+    },
+    "terms": [
+      {
+        "termId": "concessao",
+        "match": "concessões"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_07",
+    "simple": "O Brasil deveria ter bombas nucleares?",
+    "example": {
+      "agree": "Com bombas nucleares, nenhum país se atreve a atacar o Brasil.",
+      "disagree": "O Brasil fica sem essas armas e defende que ninguém no mundo as tenha."
+    },
+    "terms": [
+      {
+        "termId": "armas_nucleares",
+        "match": "armas nucleares"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_08",
+    "simple": "O país deveria gastar menos com o exército?",
+    "example": {
+      "agree": "O dinheiro economizado com o exército vai para escolas e hospitais.",
+      "disagree": "O país mantém o gasto militar para estar pronto se for ameaçado."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_09",
+    "simple": "Todo jovem deveria ser obrigado a servir no exército para o país estar pronto para uma guerra?",
+    "example": {
+      "agree": "Aos 18 anos, todos passam um ano treinando no exército.",
+      "disagree": "Só serve no exército quem quer, como uma profissão."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_10",
+    "simple": "É mais importante fazer acordos para diminuir armas do que aumentar o arsenal do país?",
+    "example": {
+      "agree": "Dois países rivais assinam um acordo e destroem metade dos seus mísseis.",
+      "disagree": "O país continua comprando armas, porque não confia que os rivais vão cumprir acordos."
+    },
+    "terms": [
+      {
+        "termId": "desarmamento",
+        "match": "desarmamento"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_11",
+    "simple": "O país deveria fabricar suas próprias armas, em vez de comprá-las de fora?",
+    "example": {
+      "agree": "O país constrói seus próprios aviões de combate, mesmo custando mais.",
+      "disagree": "O país compra aviões prontos de outro país, mais baratos e mais rápidos de conseguir."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_12",
+    "simple": "Nenhuma ideia ou causa política justifica começar uma guerra?",
+    "example": {
+      "agree": "Mesmo para espalhar um sistema que considera melhor, o país não ataca ninguém.",
+      "disagree": "Algumas causas, como libertar um povo oprimido, podem justificar começar uma guerra."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_13",
+    "simple": "O governo deveria poder espionar outros países?",
+    "example": {
+      "agree": "Espiões descobrem os planos de um país rival antes que ele aja.",
+      "disagree": "O país não espiona ninguém e confia em acordos abertos."
+    },
+    "terms": [
+      {
+        "termId": "espionagem",
+        "match": "espionagem"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_14",
+    "simple": "O país deveria apoiar tribunais internacionais que julgam crimes de guerra, mesmo quando o réu é um aliado?",
+    "example": {
+      "agree": "Um general de um país amigo é levado a julgamento internacional, e o país apoia.",
+      "disagree": "O país protege seus aliados e prefere que cada nação julgue os seus."
+    },
+    "terms": [
+      {
+        "termId": "crimes_guerra",
+        "match": "crimes de guerra"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_15",
+    "simple": "O Brasil deveria criar armas que escolhem e atacam alvos sozinhas, sem uma pessoa decidir?",
+    "example": {
+      "agree": "Drones inteligentes defendem a fronteira e reagem mais rápido que qualquer soldado.",
+      "disagree": "Toda decisão de atacar fica nas mãos de uma pessoa, nunca de uma máquina."
+    },
+    "terms": [
+      {
+        "termId": "armas_autonomas",
+        "match": "armas autônomas letais"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_16",
+    "simple": "O Brasil deveria conversar até com governos inimigos antes de ameaçá-los com armas?",
+    "example": {
+      "agree": "Mesmo com um governo hostil, o país manda diplomatas para negociar primeiro.",
+      "disagree": "Com governos hostis, o país mostra força logo de cara, sem conversa."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_17",
+    "simple": "O Brasil deveria estar pronto para começar uma guerra se isso garantir coisas essenciais para o país?",
+    "example": {
+      "agree": "Um vizinho ameaça cortar a água de um rio vital, e o país está disposto a atacar.",
+      "disagree": "O país só luta se for atacado, nunca começa uma guerra."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_18",
+    "simple": "O Brasil deveria acabar com suas Forças Armadas?",
+    "example": {
+      "agree": "O país fecha o exército e usa o dinheiro em escolas, como alguns países pequenos fizeram.",
+      "disagree": "O país mantém um exército para se defender caso seja atacado."
+    },
+    "terms": []
+  },
+  {
+    "id": "diplomacia_19",
+    "simple": "O país deveria avisar que responderia a um ataque com muita força, para ninguém se atrever a atacar?",
+    "example": {
+      "agree": "O governo deixa claro que qualquer ataque terá uma resposta enorme, e os rivais recuam.",
+      "disagree": "O país evita ameaças, porque elas podem aumentar a tensão e levar a uma guerra."
+    },
+    "terms": [
+      {
+        "termId": "dissuasao",
+        "match": "dissuadir"
+      }
+    ]
+  },
+  {
+    "id": "diplomacia_20",
+    "simple": "A ONU deveria tentar resolver os conflitos antes de qualquer ataque militar?",
+    "example": {
+      "agree": "Antes de uma guerra, representantes da ONU reúnem os dois lados para negociar.",
+      "disagree": "Cada país decide sozinho quando agir, sem esperar a ONU."
+    },
+    "terms": [
+      {
+        "termId": "onu",
+        "match": "ONU"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_01",
+    "simple": "Um país nunca deveria tentar trocar o governo de outro país?",
+    "example": {
+      "agree": "Um país discorda do governo vizinho, mas deixa que o povo de lá resolva.",
+      "disagree": "Um país apoia a oposição de um vizinho para derrubar um governo cruel."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_02",
+    "simple": "O Brasil deveria pressionar outros países quando os interesses do país estão em jogo?",
+    "example": {
+      "agree": "O Brasil ameaça cortar um acordo se o vizinho não liberar a venda de um produto brasileiro.",
+      "disagree": "O Brasil respeita as decisões dos outros países, mesmo quando sai perdendo."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_03",
+    "simple": "O Brasil deveria ficar fora de acordos que podem obrigá-lo a lutar quando um país amigo entra em guerra?",
+    "example": {
+      "agree": "Um país amigo entra em guerra do outro lado do mundo, e o Brasil não precisa mandar soldados.",
+      "disagree": "O Brasil faz parte de um grupo de defesa, então, se alguém atacá-lo, vários países vêm ajudar."
+    },
+    "terms": [
+      {
+        "termId": "alianca_militar",
+        "match": "alianças militares"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_04",
+    "simple": "A política com outros países deveria buscar aumentar a influência do Brasil sobre os vizinhos?",
+    "example": {
+      "agree": "O Brasil financia obras nos países vizinhos para ganhar peso nas decisões da região.",
+      "disagree": "O Brasil trata os vizinhos como iguais, sem tentar liderá-los."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_05",
+    "simple": "O Brasil não deveria mandar soldados para fora, nem para ajudar a manter a paz?",
+    "example": {
+      "agree": "Outros países pedem tropas para acalmar um conflito, e o Brasil manda só ajuda humanitária.",
+      "disagree": "O Brasil envia soldados para uma missão de paz da ONU em outro continente."
+    },
+    "terms": [
+      {
+        "termId": "missao_paz",
+        "match": "missões de paz"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_06",
+    "simple": "O Brasil deveria usar conversas e pressão política para defender seus interesses lá fora?",
+    "example": {
+      "agree": "Diplomatas brasileiros negociam duro para proteger empresas do país no exterior.",
+      "disagree": "O Brasil evita pressionar outros governos, mesmo quando algo o prejudica."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_07",
+    "simple": "Mesmo se um vizinho estiver matando parte do seu próprio povo, o Brasil deveria ficar fora militarmente?",
+    "example": {
+      "agree": "Um massacre acontece no país vizinho, e o Brasil ajuda refugiados, mas não envia tropas.",
+      "disagree": "O Brasil manda soldados para impedir que o massacre continue."
+    },
+    "terms": [
+      {
+        "termId": "genocidio",
+        "match": "genocídio"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_08",
+    "simple": "O Brasil deveria poder punir economicamente países que ameacem seus interesses?",
+    "example": {
+      "agree": "Um país prejudica o Brasil, e o Brasil para de comprar produtos dele.",
+      "disagree": "O Brasil resolve as disputas conversando, sem castigos econômicos."
+    },
+    "terms": [
+      {
+        "termId": "sancoes",
+        "match": "sanções"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_09",
+    "simple": "Brigas entre países deveriam ser resolvidas por organizações internacionais, e não pelos países mais fortes?",
+    "example": {
+      "agree": "Uma disputa de fronteira vai para um tribunal internacional, que decide quem tem razão.",
+      "disagree": "Os países mais poderosos se reúnem e decidem como resolver o conflito."
+    },
+    "terms": [
+      {
+        "termId": "organismos_internacionais",
+        "match": "organismos internacionais"
+      },
+      {
+        "termId": "potencias",
+        "match": "potências"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_10",
+    "simple": "O Brasil deveria ser o líder político da América do Sul?",
+    "example": {
+      "agree": "Os vizinhos seguem a posição do Brasil nas grandes decisões da região.",
+      "disagree": "Cada país sul-americano decide por si, sem um líder regional."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_11",
+    "simple": "O Brasil deveria evitar entrar em grupos de países que o obriguem a seguir sempre uma potência?",
+    "example": {
+      "agree": "O Brasil fica fora de uma aliança para poder negociar com todos os lados.",
+      "disagree": "O Brasil entra num bloco forte e apoia suas decisões em troca de proteção."
+    },
+    "terms": [
+      {
+        "termId": "alinhamento",
+        "match": "alinhamento automático"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_12",
+    "simple": "O Brasil deveria influenciar os governos vizinhos quando isso deixa o país mais seguro?",
+    "example": {
+      "agree": "O Brasil apoia um candidato no país vizinho que promete combater o tráfico na fronteira.",
+      "disagree": "O Brasil não se mete na política dos vizinhos, mesmo que isso o deixe menos seguro."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_13",
+    "simple": "Cada povo deveria resolver seus próprios problemas, sem outros países se metendo?",
+    "example": {
+      "agree": "Um país em crise resolve sozinho, sem receber ordens nem tropas de fora.",
+      "disagree": "Outros países ajudam a resolver a crise, mesmo que o governo local não peça."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_14",
+    "simple": "O Brasil deveria usar até o exército para garantir seus interesses na América do Sul?",
+    "example": {
+      "agree": "Um vizinho ameaça uma usina que abastece o Brasil, e o país envia tropas para protegê-la.",
+      "disagree": "O Brasil defende seus interesses na região só com diplomacia e comércio."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_15",
+    "simple": "O Brasil deveria evitar punir economicamente países só porque não gosta do governo deles?",
+    "example": {
+      "agree": "O Brasil continua fazendo comércio com um país, mesmo discordando do seu governo.",
+      "disagree": "O Brasil corta o comércio com um governo que viola direitos humanos."
+    },
+    "terms": [
+      {
+        "termId": "sancoes",
+        "match": "sanções"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_16",
+    "simple": "Nenhum acordo com outros países deveria valer mais do que o interesse do Brasil?",
+    "example": {
+      "agree": "O Brasil sai de um acordo internacional quando ele começa a prejudicar o país.",
+      "disagree": "O Brasil cumpre o que assinou, mesmo quando isso lhe custa caro."
+    },
+    "terms": [
+      {
+        "termId": "tratado",
+        "match": "tratado internacional"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_17",
+    "simple": "O Brasil deveria ficar neutro em guerras, mesmo com aliados pedindo apoio?",
+    "example": {
+      "agree": "Dois países entram em guerra, e o Brasil não apoia nenhum lado, mesmo sob pressão.",
+      "disagree": "O Brasil apoia o lado do seu aliado, como foi combinado."
+    },
+    "terms": [
+      {
+        "termId": "neutralidade",
+        "match": "neutro"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_18",
+    "simple": "O que o Brasil faz lá fora deveria ser guiado principalmente pelos interesses do próprio país?",
+    "example": {
+      "agree": "O país escolhe parceiros pelo que eles trazem de bom para a economia nacional.",
+      "disagree": "O país também leva em conta direitos humanos e o bem do mundo, mesmo perdendo vantagens."
+    },
+    "terms": []
+  },
+  {
+    "id": "intervencao_19",
+    "simple": "O Brasil deveria evitar ter bases militares em outros países?",
+    "example": {
+      "agree": "O Brasil mantém todos os seus soldados dentro do próprio território.",
+      "disagree": "O Brasil mantém uma base num país aliado para reagir rápido a ameaças."
+    },
+    "terms": [
+      {
+        "termId": "bases_militares",
+        "match": "bases militares"
+      }
+    ]
+  },
+  {
+    "id": "intervencao_20",
+    "simple": "O Brasil deveria pressionar governos vizinhos que ameacem brasileiros?",
+    "example": {
+      "agree": "Brasileiros são presos injustamente num país vizinho, e o Brasil ameaça cortar acordos.",
+      "disagree": "O Brasil ajuda os presos pela via consular, sem pressionar o governo vizinho."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_01",
+    "simple": "Você apoiaria uma mudança radical para tirar o poder econômico das mãos de poucos ricos?",
+    "example": {
+      "agree": "Os trabalhadores tomam as grandes fábricas e passam a dividir os lucros entre todos.",
+      "disagree": "A riqueza muda de mãos aos poucos, por leis e pelo mercado, sem ruptura."
+    },
+    "terms": [
+      {
+        "termId": "redistribuicao",
+        "match": "redistribuir"
+      }
+    ]
+  },
+  {
+    "id": "economia_02",
+    "simple": "Serviços públicos, como ônibus e coleta de lixo, deveriam ser feitos por empresas privadas quando há competição?",
+    "example": {
+      "agree": "Três empresas disputam a coleta de lixo da cidade, e a mais barata e eficiente ganha.",
+      "disagree": "A própria prefeitura faz a coleta, com funcionários públicos."
+    },
+    "terms": [
+      {
+        "termId": "concorrencia",
+        "match": "concorrência"
+      }
+    ]
+  },
+  {
+    "id": "economia_03",
+    "simple": "Empresas muito importantes para o país, como as de energia ou petróleo, devem continuar sendo do governo?",
+    "example": {
+      "agree": "A empresa de energia é do governo, que pode segurar o preço da conta de luz mesmo quando isso dá prejuízo.",
+      "disagree": "A empresa de energia é vendida para donos privados, que precisam competir e ser eficientes para ter lucro."
+    },
+    "terms": [
+      {
+        "termId": "empresa_estrategica",
+        "match": "estratégicas"
+      }
+    ]
+  },
+  {
+    "id": "economia_04",
+    "simple": "A saúde deveria funcionar principalmente com hospitais e planos particulares?",
+    "example": {
+      "agree": "A maioria das pessoas tem plano de saúde, e o governo ajuda só quem não pode pagar.",
+      "disagree": "Hospitais públicos atendem todo mundo de graça, como regra principal."
+    },
+    "terms": [
+      {
+        "termId": "iniciativa_privada",
+        "match": "iniciativa privada"
+      }
+    ]
+  },
+  {
+    "id": "economia_05",
+    "simple": "Grandes empresas deveriam pertencer aos seus trabalhadores, e não a donos particulares?",
+    "example": {
+      "agree": "Os funcionários de uma fábrica são os donos, votam nas decisões e dividem os lucros.",
+      "disagree": "A fábrica tem donos que investiram nela e contratam os funcionários."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_06",
+    "simple": "Empresas privadas deveriam poder cuidar de estradas e presídios?",
+    "example": {
+      "agree": "Uma empresa administra uma rodovia, cobra pedágio e mantém o asfalto em bom estado.",
+      "disagree": "O governo cuida das estradas e dos presídios diretamente."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_07",
+    "simple": "Quando um serviço fica caro demais para os pobres, o governo deveria assumir e oferecê-lo?",
+    "example": {
+      "agree": "A internet é cara num bairro pobre, e o governo instala internet pública por lá.",
+      "disagree": "O governo dá um auxílio para as famílias pagarem a empresa privada."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_08",
+    "simple": "O que os pais deixam para os filhos deveria ser protegido de impostos que dividem a riqueza?",
+    "example": {
+      "agree": "Uma família herda a casa e o negócio dos pais sem pagar quase nada de imposto.",
+      "disagree": "Heranças grandes pagam um imposto alto, que ajuda a financiar serviços públicos."
+    },
+    "terms": [
+      {
+        "termId": "heranca",
+        "match": "herança"
+      }
+    ]
+  },
+  {
+    "id": "economia_09",
+    "simple": "Saúde, escola e água deveriam funcionar sem o objetivo de dar lucro?",
+    "example": {
+      "agree": "A água é fornecida pelo governo pelo custo, sem ninguém ganhar dinheiro com ela.",
+      "disagree": "Uma empresa fornece a água e lucra, desde que siga as regras de qualidade e preço."
+    },
+    "terms": [
+      {
+        "termId": "logica_lucro",
+        "match": "lógica do lucro"
+      }
+    ]
+  },
+  {
+    "id": "economia_10",
+    "simple": "Pagar impostos deveria ser uma escolha de cada um?",
+    "example": {
+      "agree": "Cada pessoa decide se e quanto contribui para os serviços que quer apoiar.",
+      "disagree": "Todos pagam impostos obrigatórios para manter escolas, hospitais e polícia."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_11",
+    "simple": "O governo deveria garantir um dinheiro mínimo todo mês para quem precisa?",
+    "example": {
+      "agree": "Uma pessoa sem renda recebe um valor mensal do governo para comprar comida e pagar contas.",
+      "disagree": "O governo ajuda com cursos e empregos, mas não com dinheiro fixo todo mês."
+    },
+    "terms": [
+      {
+        "termId": "renda_basica",
+        "match": "renda básica"
+      }
+    ]
+  },
+  {
+    "id": "economia_12",
+    "simple": "Funcionários públicos deveriam perder a garantia de que não podem ser demitidos?",
+    "example": {
+      "agree": "Um servidor que trabalha mal pode ser demitido como em qualquer empresa.",
+      "disagree": "O servidor tem estabilidade para não ser demitido por pressão política."
+    },
+    "terms": [
+      {
+        "termId": "estabilidade",
+        "match": "estabilidade vitalícia"
+      }
+    ]
+  },
+  {
+    "id": "economia_13",
+    "simple": "O governo deveria limitar o poder das empresas muito grandes?",
+    "example": {
+      "agree": "O governo impede que uma empresa gigante compre todas as concorrentes.",
+      "disagree": "Uma empresa cresce o quanto conseguir, desde que conquiste os clientes de forma justa."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_14",
+    "simple": "Ajudas em dinheiro do governo, como o Bolsa Família, deveriam ter um prazo para acabar?",
+    "example": {
+      "agree": "A família recebe a ajuda por até dois anos, enquanto busca trabalho.",
+      "disagree": "A família recebe a ajuda enquanto continuar precisando, sem prazo."
+    },
+    "terms": [
+      {
+        "termId": "auxilio",
+        "match": "Bolsa Família"
+      }
+    ]
+  },
+  {
+    "id": "economia_15",
+    "simple": "O Brasil deveria dividir grandes fazendas e dar a terra para famílias que não têm?",
+    "example": {
+      "agree": "Uma fazenda enorme e pouco usada é dividida entre famílias sem-terra que passam a plantar.",
+      "disagree": "A fazenda continua com o dono, e o governo ajuda famílias a comprar terra de outra forma."
+    },
+    "terms": [
+      {
+        "termId": "reforma_agraria",
+        "match": "reforma agrária"
+      }
+    ]
+  },
+  {
+    "id": "economia_16",
+    "simple": "Cada trabalhador deveria negociar o próprio salário com o patrão, sem sindicato?",
+    "example": {
+      "agree": "Um funcionário conversa sozinho com a empresa e combina seu salário.",
+      "disagree": "O sindicato negocia aumentos para todos os funcionários de uma vez."
+    },
+    "terms": [
+      {
+        "termId": "sindicato",
+        "match": "sindicatos"
+      }
+    ]
+  },
+  {
+    "id": "economia_17",
+    "simple": "Bancos do governo deveriam continuar emprestando dinheiro para obras e empresas do país?",
+    "example": {
+      "agree": "Um banco público empresta com juros baixos para construir uma ferrovia.",
+      "disagree": "As obras buscam dinheiro em bancos privados, e o governo não empresta."
+    },
+    "terms": [
+      {
+        "termId": "banco_publico",
+        "match": "Bancos públicos"
+      }
+    ]
+  },
+  {
+    "id": "economia_18",
+    "simple": "O que é de cada pessoa deveria ser respeitado, mesmo que isso deixe o país muito desigual?",
+    "example": {
+      "agree": "Uma pessoa acumula muitas propriedades, e o governo não pode tirar nada dela.",
+      "disagree": "O governo pode cobrar mais ou usar parte das propriedades para reduzir a desigualdade."
+    },
+    "terms": []
+  },
+  {
+    "id": "economia_19",
+    "simple": "Empresas do governo deveriam continuar sendo do governo, mesmo podendo ser vendidas por um bom preço?",
+    "example": {
+      "agree": "O governo recebe uma ótima oferta pela empresa de correios, mas decide mantê-la.",
+      "disagree": "O governo vende a empresa e usa o dinheiro para pagar dívidas ou investir."
+    },
+    "terms": [
+      {
+        "termId": "estatal",
+        "match": "estatais"
+      }
+    ]
+  },
+  {
+    "id": "economia_20",
+    "simple": "Empresas privadas deveriam ter a preferência para cuidar dos serviços públicos?",
+    "example": {
+      "agree": "Uma empresa privada assume a gestão de um hospital público e é cobrada por resultados.",
+      "disagree": "O próprio governo administra o hospital com seus funcionários."
+    },
+    "terms": []
+  },
+  {
+    "id": "controle_01",
+    "simple": "O governo deveria planejar áreas importantes como energia, moradia e indústria?",
+    "example": {
+      "agree": "O governo decide onde construir usinas e quantas casas fazer nos próximos dez anos.",
+      "disagree": "As empresas decidem onde investir, de acordo com o que as pessoas compram."
+    },
+    "terms": [
+      {
+        "termId": "planejamento",
+        "match": "planejar"
+      }
+    ]
+  },
+  {
+    "id": "controle_02",
+    "simple": "Preços e salários deveriam ser decididos pelo mercado, sem o governo interferir?",
+    "example": {
+      "agree": "O preço do pão e o salário do padeiro sobem ou descem conforme a procura.",
+      "disagree": "O governo controla alguns preços e define regras para os salários."
+    },
+    "terms": []
+  },
+  {
+    "id": "controle_03",
+    "simple": "Existe um órgão que decide se pegar dinheiro emprestado fica mais caro ou mais barato. O presidente deveria poder mandar nele?",
+    "example": {
+      "agree": "Antes da eleição, o governo pede juros mais baixos para as pessoas comprarem mais, e o Banco Central obedece.",
+      "disagree": "O Banco Central mantém os juros altos para segurar a alta dos preços, mesmo com o governo pedindo o contrário."
+    },
+    "terms": [
+      {
+        "termId": "banco_central",
+        "match": "Banco Central"
+      },
+      {
+        "termId": "independencia_banco_central",
+        "match": "independência"
+      }
+    ]
+  },
+  {
+    "id": "controle_04",
+    "simple": "As empresas deveriam definir as regras de trabalho com o mínimo de interferência do governo?",
+    "example": {
+      "agree": "Empresa e funcionário combinam horários e férias do jeito que for melhor para os dois.",
+      "disagree": "A lei garante jornada máxima, férias e outros direitos para todos."
+    },
+    "terms": []
+  },
+  {
+    "id": "controle_05",
+    "simple": "Os muito ricos deveriam pagar mais impostos para financiar programas do governo?",
+    "example": {
+      "agree": "Quem tem fortunas enormes paga um imposto extra que financia escolas e hospitais.",
+      "disagree": "Todos pagam a mesma proporção, para não desestimular quem investe."
+    },
+    "terms": [
+      {
+        "termId": "politicas_publicas",
+        "match": "políticas públicas"
+      }
+    ]
+  },
+  {
+    "id": "controle_06",
+    "simple": "O governo deveria cobrar menos impostos para a economia crescer?",
+    "example": {
+      "agree": "Com impostos menores, uma empresa contrata mais gente e abre novas lojas.",
+      "disagree": "Os impostos ficam como estão para manter os serviços públicos funcionando."
+    },
+    "terms": [
+      {
+        "termId": "carga_tributaria",
+        "match": "carga tributária"
+      }
+    ]
+  },
+  {
+    "id": "controle_07",
+    "simple": "O governo deveria ajudar com dinheiro as indústrias mais importantes do país?",
+    "example": {
+      "agree": "O governo paga parte dos custos de uma fábrica de aviões para ela não fechar.",
+      "disagree": "Cada empresa se sustenta sozinha, sem ajuda do governo."
+    },
+    "terms": [
+      {
+        "termId": "subsidio",
+        "match": "subsidiar"
+      }
+    ]
+  },
+  {
+    "id": "controle_08",
+    "simple": "É mais importante manter empregos do que aumentar o salário mínimo?",
+    "example": {
+      "agree": "O salário mínimo sobe pouco para que pequenas lojas não precisem demitir.",
+      "disagree": "O salário mínimo sobe bastante, mesmo que algumas empresas contratem menos."
+    },
+    "terms": [
+      {
+        "termId": "salario_minimo",
+        "match": "salário mínimo"
+      }
+    ]
+  },
+  {
+    "id": "controle_09",
+    "simple": "Numa crise grave, o governo deveria poder proibir o aumento dos aluguéis?",
+    "example": {
+      "agree": "Durante a crise, nenhum dono de imóvel pode subir o aluguel.",
+      "disagree": "Os aluguéis seguem o mercado, e o governo ajuda quem não consegue pagar."
+    },
+    "terms": [
+      {
+        "termId": "congelar",
+        "match": "congelar"
+      }
+    ]
+  },
+  {
+    "id": "controle_10",
+    "simple": "O governo deveria evitar travar preços, mesmo quando tudo está ficando muito caro?",
+    "example": {
+      "agree": "Mesmo com preços subindo rápido, o governo combate a alta sem proibir aumentos.",
+      "disagree": "O governo proíbe que o preço do arroz e do feijão suba durante alguns meses."
+    },
+    "terms": [
+      {
+        "termId": "inflacao",
+        "match": "inflação"
+      }
+    ]
+  },
+  {
+    "id": "controle_11",
+    "simple": "O governo deveria escolher algumas grandes empresas do país e ajudá-las a crescer?",
+    "example": {
+      "agree": "O governo dá empréstimos baratos a uma empresa nacional para ela competir no mundo.",
+      "disagree": "O governo não escolhe favoritas; todas as empresas disputam em igualdade."
+    },
+    "terms": [
+      {
+        "termId": "campeas_nacionais",
+        "match": "campeãs nacionais"
+      }
+    ]
+  },
+  {
+    "id": "controle_12",
+    "simple": "Moedas digitais como o Bitcoin deveriam poder competir livremente com o dinheiro do governo?",
+    "example": {
+      "agree": "Uma loja aceita Bitcoin, e o cliente escolhe com que dinheiro pagar.",
+      "disagree": "Só o dinheiro oficial pode ser usado em pagamentos, e o resto é limitado."
+    },
+    "terms": [
+      {
+        "termId": "cripto",
+        "match": "Criptomoedas"
+      }
+    ]
+  },
+  {
+    "id": "controle_13",
+    "simple": "Você prefere que o governo planeje a economia do que deixar o mercado decidir?",
+    "example": {
+      "agree": "O governo decide quantos carros e quanta comida produzir e a que preço vender.",
+      "disagree": "Empresas e consumidores decidem o que produzir e comprar."
+    },
+    "terms": [
+      {
+        "termId": "economia_planejada",
+        "match": "economia planejada"
+      },
+      {
+        "termId": "livre_mercado",
+        "match": "livre mercado"
+      }
+    ]
+  },
+  {
+    "id": "controle_14",
+    "simple": "O governo deveria evitar criar novas regras para as empresas?",
+    "example": {
+      "agree": "Abrir um negócio exige poucos papéis e quase nenhuma licença.",
+      "disagree": "O governo cria regras para proteger o consumidor e o meio ambiente."
+    },
+    "terms": [
+      {
+        "termId": "regulacao",
+        "match": "regulações"
+      }
+    ]
+  },
+  {
+    "id": "controle_15",
+    "simple": "Quando a economia vai mal, o governo deveria gastar mais para reanimá-la, mesmo se endividando?",
+    "example": {
+      "agree": "Na crise, o governo pega dinheiro emprestado para construir obras e gerar empregos.",
+      "disagree": "Na crise, o governo corta gastos para não aumentar a dívida."
+    },
+    "terms": [
+      {
+        "termId": "recessao",
+        "match": "recessão"
+      }
+    ]
+  },
+  {
+    "id": "controle_16",
+    "simple": "O Banco Central deveria decidir os juros sem precisar da aprovação do governo?",
+    "example": {
+      "agree": "O Banco Central sobe os juros para segurar os preços, mesmo com o governo contra.",
+      "disagree": "O governo eleito tem a palavra final sobre os juros."
+    },
+    "terms": [
+      {
+        "termId": "banco_central",
+        "match": "Banco Central"
+      },
+      {
+        "termId": "juros",
+        "match": "taxa de juros"
+      }
+    ]
+  },
+  {
+    "id": "controle_17",
+    "simple": "O governo deveria poder controlar quanto vale a nossa moeda em relação ao dólar?",
+    "example": {
+      "agree": "O governo segura o valor da moeda para os preços de produtos importados não dispararem.",
+      "disagree": "O valor da moeda muda livremente conforme a compra e venda no mercado."
+    },
+    "terms": [
+      {
+        "termId": "cambio",
+        "match": "taxa de câmbio"
+      }
+    ]
+  },
+  {
+    "id": "controle_18",
+    "simple": "O Banco Central deveria acabar, deixando o dinheiro e os juros por conta do mercado?",
+    "example": {
+      "agree": "Bancos e pessoas decidem sozinhos qual dinheiro usar e quanto cobrar de juros.",
+      "disagree": "Um Banco Central cuida da moeda para evitar crises e preços descontrolados."
+    },
+    "terms": [
+      {
+        "termId": "banco_central",
+        "match": "Banco Central"
+      },
+      {
+        "termId": "juros",
+        "match": "juros"
+      }
+    ]
+  },
+  {
+    "id": "controle_19",
+    "simple": "Você prefere um salário mínimo definido por lei a deixar cada salário ser negociado livremente?",
+    "example": {
+      "agree": "Nenhuma empresa pode pagar menos que o valor mínimo definido pelo governo.",
+      "disagree": "Empresa e trabalhador combinam qualquer salário que os dois aceitem."
+    },
+    "terms": [
+      {
+        "termId": "salario_minimo",
+        "match": "salário mínimo"
+      }
+    ]
+  },
+  {
+    "id": "controle_20",
+    "simple": "As pessoas deveriam poder mandar seu dinheiro para fora do país sem pedir permissão?",
+    "example": {
+      "agree": "Você transfere suas economias para uma conta em outro país com um clique.",
+      "disagree": "Grandes envios para fora precisam de autorização, para evitar fuga de dinheiro numa crise."
+    },
+    "terms": []
+  },
+  {
+    "id": "comercio_01",
+    "simple": "O governo deveria cobrar uma taxa sobre produtos de fora para que os produtos feitos aqui vendam mais?",
+    "example": {
+      "agree": "Uma taxa deixa o tênis importado mais caro, a fábrica de tênis da cidade vende mais e mantém os empregos.",
+      "disagree": "Sem a taxa, o tênis importado fica mais barato para quem compra, mesmo que a fábrica local tenha que se adaptar."
+    },
+    "terms": [
+      {
+        "termId": "industria_nacional",
+        "match": "indústria nacional"
+      },
+      {
+        "termId": "tarifa",
+        "match": "tarifas"
+      }
+    ]
+  },
+  {
+    "id": "comercio_02",
+    "simple": "As taxas sobre produtos de fora deveriam quase acabar, mesmo que algumas fábricas daqui fechem?",
+    "example": {
+      "agree": "Um celular importado fica bem mais barato, mesmo que uma fábrica local feche.",
+      "disagree": "A taxa continua para manter a fábrica local e seus empregos."
+    },
+    "terms": [
+      {
+        "termId": "tarifa",
+        "match": "tarifas"
+      }
+    ]
+  },
+  {
+    "id": "comercio_03",
+    "simple": "Você prefere limitar produtos de fora para proteger empregos nas fábricas, mesmo com preços mais altos?",
+    "example": {
+      "agree": "O país compra menos roupas importadas, e as fábricas locais mantêm os empregos.",
+      "disagree": "As roupas importadas entram livremente e ficam mais baratas para todos."
+    },
+    "terms": [
+      {
+        "termId": "importacao",
+        "match": "importações"
+      }
+    ]
+  },
+  {
+    "id": "comercio_04",
+    "simple": "O Brasil deveria fazer acordos para comprar e vender com outros países sem impostos extras?",
+    "example": {
+      "agree": "O país assina um acordo, e as frutas brasileiras passam a ser vendidas sem taxa na Europa.",
+      "disagree": "O país mantém suas taxas para ter controle sobre o que entra e sai."
+    },
+    "terms": [
+      {
+        "termId": "livre_comercio",
+        "match": "livre comércio"
+      }
+    ]
+  },
+  {
+    "id": "comercio_05",
+    "simple": "O Brasil deveria produzir aqui tudo o que usa, mesmo pagando muito mais caro?",
+    "example": {
+      "agree": "O país fabrica seus próprios remédios e computadores, mesmo custando o dobro.",
+      "disagree": "O país compra de fora o que sai mais barato e foca no que faz melhor."
+    },
+    "terms": []
+  },
+  {
+    "id": "comercio_06",
+    "simple": "Produtos de fora deveriam entrar no país com poucas barreiras?",
+    "example": {
+      "agree": "Um produto importado chega à loja quase sem taxas e sem burocracia.",
+      "disagree": "Produtos importados pagam taxas e passam por limites para proteger a produção local."
+    },
+    "terms": []
+  },
+  {
+    "id": "comercio_07",
+    "simple": "O governo deveria limitar produtos de fora que ameacem fábricas e empregos daqui?",
+    "example": {
+      "agree": "Um aço importado muito barato começa a quebrar as usinas locais, e o governo limita sua entrada.",
+      "disagree": "O aço barato entra, e as empresas locais que usam aço economizam."
+    },
+    "terms": [
+      {
+        "termId": "importacao",
+        "match": "importações"
+      }
+    ]
+  },
+  {
+    "id": "comercio_08",
+    "simple": "O mundo inteiro deveria ser um só mercado, sem fronteiras para o comércio?",
+    "example": {
+      "agree": "Uma empresa vende para qualquer país como se vendesse para a cidade vizinha.",
+      "disagree": "Cada país mantém suas regras e taxas sobre o que entra e sai."
+    },
+    "terms": [
+      {
+        "termId": "mercado_global",
+        "match": "mercado global único"
+      }
+    ]
+  },
+  {
+    "id": "comercio_09",
+    "simple": "Empresas estrangeiras deveriam ser proibidas de comprar empresas muito importantes do Brasil?",
+    "example": {
+      "agree": "Uma empresa estrangeira tenta comprar a maior empresa de energia do país, e o governo proíbe.",
+      "disagree": "A venda acontece, porque o comprador oferece o melhor preço e mais investimento."
+    },
+    "terms": [
+      {
+        "termId": "empresa_estrategica",
+        "match": "estratégicas"
+      }
+    ]
+  },
+  {
+    "id": "comercio_10",
+    "simple": "O Brasil deveria fazer cada vez mais comércio com outros países?",
+    "example": {
+      "agree": "O país abre novos mercados e vende carne e aviões para dezenas de países.",
+      "disagree": "O país foca em produzir e vender dentro de casa."
+    },
+    "terms": [
+      {
+        "termId": "integracao",
+        "match": "integração comercial"
+      }
+    ]
+  },
+  {
+    "id": "comercio_11",
+    "simple": "Comida produzida no país deveria ter prioridade sobre comida importada mais barata?",
+    "example": {
+      "agree": "O governo protege os agricultores locais, mesmo que o arroz importado seja mais barato.",
+      "disagree": "O país compra o arroz mais barato, venha de onde vier."
+    },
+    "terms": []
+  },
+  {
+    "id": "comercio_12",
+    "simple": "Deveria ser mais fácil para estrangeiros investirem dinheiro em negócios no país?",
+    "example": {
+      "agree": "Uma empresa estrangeira abre uma fábrica no país com pouca burocracia e gera empregos.",
+      "disagree": "O governo coloca limites para que estrangeiros não controlem setores importantes."
+    },
+    "terms": [
+      {
+        "termId": "investimento_estrangeiro",
+        "match": "investimentos estrangeiros"
+      }
+    ]
+  },
+  {
+    "id": "comercio_13",
+    "simple": "Quando o governo compra algo, deveria dar preferência a empresas do próprio país?",
+    "example": {
+      "agree": "O governo compra uniformes de uma fábrica nacional, mesmo que uma estrangeira cobre menos.",
+      "disagree": "O governo compra de quem oferecer o melhor preço, seja daqui ou de fora."
+    },
+    "terms": [
+      {
+        "termId": "estatal",
+        "match": "estatais"
+      }
+    ]
+  },
+  {
+    "id": "comercio_14",
+    "simple": "O país deveria fazer mais comércio com outros, mesmo passando a depender mais deles?",
+    "example": {
+      "agree": "O país compra peças de fora e fica mais barato produzir, embora dependa dos fornecedores.",
+      "disagree": "O país produz peças em casa para não ficar na mão de outros."
+    },
+    "terms": []
+  },
+  {
+    "id": "comercio_15",
+    "simple": "Carros elétricos chineses baratos deveriam pagar uma taxa extra para proteger as fábricas daqui?",
+    "example": {
+      "agree": "Uma taxa deixa o carro importado mais caro, e as montadoras locais mantêm os empregos.",
+      "disagree": "O carro elétrico importado chega barato, e mais gente consegue comprar um."
+    },
+    "terms": [
+      {
+        "termId": "tarifa",
+        "match": "tarifas"
+      }
+    ]
+  },
+  {
+    "id": "comercio_16",
+    "simple": "As taxas sobre produtos importados deveriam cair, mesmo que o governo arrecade menos?",
+    "example": {
+      "agree": "O governo baixa as taxas de importação e os eletrônicos ficam mais baratos.",
+      "disagree": "As taxas continuam, porque o governo precisa desse dinheiro para os serviços públicos."
+    },
+    "terms": [
+      {
+        "termId": "tarifa",
+        "match": "tarifas de importação"
+      }
+    ]
+  },
+  {
+    "id": "comercio_17",
+    "simple": "A produção de coisas essenciais, como remédios e chips, deveria ser protegida da concorrência de fora?",
+    "example": {
+      "agree": "O governo apoia fábricas locais de remédios para não faltar nada numa crise mundial.",
+      "disagree": "O país compra remédios e chips de quem produz melhor e mais barato no mundo."
+    },
+    "terms": [
+      {
+        "termId": "cadeia_estrategica",
+        "match": "Cadeias estratégicas"
+      }
+    ]
+  },
+  {
+    "id": "comercio_18",
+    "simple": "Grandes empresas de fora deveriam poder funcionar no país, mesmo competindo com empresas daqui?",
+    "example": {
+      "agree": "Uma rede estrangeira de supermercados abre lojas e baixa os preços, mesmo afetando mercados locais.",
+      "disagree": "O governo limita empresas de fora para que os negócios locais sobrevivam."
+    },
+    "terms": [
+      {
+        "termId": "multinacional",
+        "match": "Multinacionais"
+      }
+    ]
+  },
+  {
+    "id": "comercio_19",
+    "simple": "É mais importante o país depender pouco de outros do que ter preços baixos no mercado?",
+    "example": {
+      "agree": "O país produz sua própria comida e combustível, mesmo pagando mais caro.",
+      "disagree": "O país importa o que é mais barato e as compras do mês custam menos."
+    },
+    "terms": [
+      {
+        "termId": "soberania_economica",
+        "match": "soberania econômica"
+      }
+    ]
+  },
+  {
+    "id": "comercio_20",
+    "simple": "O mundo deveria ficar cada vez mais ligado pelo comércio entre os países?",
+    "example": {
+      "agree": "Peças de um mesmo produto são feitas em dez países diferentes, e tudo fica mais barato.",
+      "disagree": "Cada país mantém mais produção em casa para não depender tanto dos outros."
+    },
+    "terms": [
+      {
+        "termId": "integracao",
+        "match": "integração econômica global"
+      }
+    ]
+  },
+  {
+    "id": "religiao_01",
+    "simple": "A religião deveria ficar na vida particular de cada um, sem influenciar as decisões do governo?",
+    "example": {
+      "agree": "Um político religioso vota as leis com base em dados e no interesse de todos, não na sua fé.",
+      "disagree": "Um político usa os valores da sua religião para decidir como votar."
+    },
+    "terms": [
+      {
+        "termId": "politicas_publicas",
+        "match": "políticas públicas"
+      }
+    ]
+  },
+  {
+    "id": "religiao_02",
+    "simple": "Sua fé deveria guiar o que você acha certo e em quem você vota?",
+    "example": {
+      "agree": "Antes de votar, você pensa no que sua religião ensina sobre o tema.",
+      "disagree": "Você decide seu voto sem levar a religião em conta."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_03",
+    "simple": "As leis deveriam valer igual para todos, sem seguir as regras de nenhuma religião?",
+    "example": {
+      "agree": "Se o comércio abre aos domingos é decidido pela economia e pelos trabalhadores, não pelo dia sagrado de uma religião.",
+      "disagree": "O comércio fecha no dia sagrado da religião da maioria, porque ela faz parte da cultura do lugar."
+    },
+    "terms": [
+      {
+        "termId": "leis_neutras",
+        "match": "neutras"
+      }
+    ]
+  },
+  {
+    "id": "religiao_04",
+    "simple": "As leis do país deveriam seguir os valores da religião que a maioria segue?",
+    "example": {
+      "agree": "Uma lei sobre família é escrita de acordo com o que a religião majoritária ensina.",
+      "disagree": "A lei é escrita para valer igual para quem tem qualquer religião ou nenhuma."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_05",
+    "simple": "Igrejas e templos deveriam pagar impostos como qualquer outra organização?",
+    "example": {
+      "agree": "Uma igreja grande paga imposto sobre o dinheiro que arrecada, como uma empresa.",
+      "disagree": "Igrejas não pagam impostos, porque fazem trabalho social e espiritual."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_06",
+    "simple": "A vida em comunidade deveria incentivar as pessoas a praticar uma religião?",
+    "example": {
+      "agree": "O bairro organiza festas religiosas e convida todos para participar.",
+      "disagree": "A comunidade organiza eventos sem ligação com religião, para todos se sentirem à vontade."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_07",
+    "simple": "Escolas, tribunais e outros prédios públicos deveriam ficar sem crucifixos e outros símbolos religiosos?",
+    "example": {
+      "agree": "A sala do tribunal não tem nenhum objeto religioso na parede.",
+      "disagree": "Um crucifixo fica na parede do tribunal como parte da tradição do país."
+    },
+    "terms": [
+      {
+        "termId": "simbolos_religiosos",
+        "match": "símbolos religiosos"
+      }
+    ]
+  },
+  {
+    "id": "religiao_08",
+    "simple": "O país deveria declarar oficialmente uma religião como a sua?",
+    "example": {
+      "agree": "A Constituição diz que o país tem uma religião oficial.",
+      "disagree": "O país não tem religião oficial e trata todas igualmente."
+    },
+    "terms": [
+      {
+        "termId": "estado_confessional",
+        "match": "identidade religiosa"
+      }
+    ]
+  },
+  {
+    "id": "religiao_09",
+    "simple": "As decisões do governo não deveriam se basear em crenças religiosas?",
+    "example": {
+      "agree": "Uma lei sobre saúde é decidida por médicos e estudos, não por ensinamentos religiosos.",
+      "disagree": "Os ensinamentos religiosos ajudam o governo a decidir o que é certo."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_10",
+    "simple": "As tradições religiosas deveriam ser passadas para as próximas gerações?",
+    "example": {
+      "agree": "Os avós ensinam aos netos as orações e as festas religiosas da família.",
+      "disagree": "Cada criança cresce e escolhe sozinha se quer seguir alguma religião."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_11",
+    "simple": "Você prefere uma sociedade sem religião a uma sociedade religiosa?",
+    "example": {
+      "agree": "Quase ninguém frequenta templos, e as pessoas buscam respostas na ciência e na filosofia.",
+      "disagree": "A maioria das pessoas tem fé e participa de uma comunidade religiosa."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_12",
+    "simple": "A sociedade deveria dar mais espaço para a fé?",
+    "example": {
+      "agree": "Escolas e eventos públicos abrem espaço para orações e celebrações religiosas.",
+      "disagree": "A fé fica na vida privada e nos templos, fora dos espaços públicos."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_13",
+    "simple": "Datas religiosas deveriam deixar de ser feriados nacionais?",
+    "example": {
+      "agree": "O dia de um santo deixa de ser feriado, e quem quiser comemorar tira folga.",
+      "disagree": "Datas religiosas importantes continuam sendo feriado para todo o país."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_14",
+    "simple": "O casamento deveria ser visto como algo religioso?",
+    "example": {
+      "agree": "O casamento é entendido como uma união abençoada por Deus, celebrada na igreja.",
+      "disagree": "O casamento é um contrato civil, e cada casal decide se quer ou não uma cerimônia religiosa."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_15",
+    "simple": "A palavra \"Deus\" deveria ficar fora da Constituição?",
+    "example": {
+      "agree": "A lei mais importante do país não menciona Deus, para incluir quem não tem religião.",
+      "disagree": "A Constituição cita Deus como parte da história e da fé do povo."
+    },
+    "terms": [
+      {
+        "termId": "constituicao",
+        "match": "Constituição"
+      }
+    ]
+  },
+  {
+    "id": "religiao_16",
+    "simple": "Você prefere encontrar o sentido da sua vida na fé?",
+    "example": {
+      "agree": "Nos momentos difíceis, você busca respostas na oração e na sua religião.",
+      "disagree": "Você encontra sentido na família, nos amigos, no trabalho ou na ciência, sem religião."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_17",
+    "simple": "Crianças pequenas não deveriam receber ensino religioso?",
+    "example": {
+      "agree": "As crianças aprendem sobre religiões só quando forem mais velhas e puderem escolher.",
+      "disagree": "Os pais ensinam sua fé aos filhos desde pequenos."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_18",
+    "simple": "Se uma lei for contra a sua fé, você deveria seguir a fé em vez da lei?",
+    "example": {
+      "agree": "Um médico se recusa a fazer um procedimento que sua religião proíbe, mesmo que a lei mande.",
+      "disagree": "O médico cumpre a lei e guarda sua fé para a vida pessoal."
+    },
+    "terms": []
+  },
+  {
+    "id": "religiao_19",
+    "simple": "As regras de certo e errado da sociedade deveriam se basear em ideias que não dependem de acreditar em Deus?",
+    "example": {
+      "agree": "Não roubar é certo porque prejudica os outros, e isso vale para crentes e não crentes.",
+      "disagree": "Não roubar é certo porque é um mandamento de Deus."
+    },
+    "terms": [
+      {
+        "termId": "moral_publica",
+        "match": "moral pública"
+      }
+    ]
+  },
+  {
+    "id": "religiao_20",
+    "simple": "O governo deveria proteger a fé como parte da identidade do país?",
+    "example": {
+      "agree": "O governo financia a restauração de igrejas históricas e apoia festas religiosas tradicionais.",
+      "disagree": "O governo trata a fé como assunto privado e não a apoia com dinheiro público."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_01",
+    "simple": "Casais do mesmo sexo deveriam poder adotar crianças com os mesmos direitos de outros casais?",
+    "example": {
+      "agree": "Dois homens casados passam pelo mesmo processo de adoção que qualquer casal e adotam uma criança.",
+      "disagree": "A lei dá preferência a casais formados por homem e mulher na adoção."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_02",
+    "simple": "A família de pai, mãe e filhos deveria servir de exemplo para a sociedade?",
+    "example": {
+      "agree": "Campanhas do governo mostram a família tradicional como modelo a seguir.",
+      "disagree": "O governo trata todos os tipos de família como igualmente válidos."
+    },
+    "terms": [
+      {
+        "termId": "familia_tradicional",
+        "match": "família tradicional"
+      }
+    ]
+  },
+  {
+    "id": "moral_03",
+    "simple": "Se uma pessoa diz que é homem ou mulher, isso deveria ser respeitado, mesmo que tenha nascido com outro sexo?",
+    "example": {
+      "agree": "Uma mulher trans muda seu nome nos documentos e é tratada como mulher.",
+      "disagree": "Os documentos e o tratamento seguem o sexo registrado no nascimento."
+    },
+    "terms": [
+      {
+        "termId": "identidade_genero",
+        "match": "identidade de gênero"
+      }
+    ]
+  },
+  {
+    "id": "moral_04",
+    "simple": "Você prefere que os costumes da sociedade mudem devagar em vez de rápido?",
+    "example": {
+      "agree": "Uma mudança social é discutida por anos antes de virar lei.",
+      "disagree": "Uma mudança social vira lei logo que a maioria passa a apoiá-la."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_05",
+    "simple": "As universidades deveriam reservar algumas vagas para estudantes de certos grupos raciais?",
+    "example": {
+      "agree": "Parte das vagas de um curso é reservada para estudantes negros e indígenas, que disputam essas vagas entre si.",
+      "disagree": "Todas as vagas são disputadas só pela nota da prova, sem levar em conta a raça de quem se inscreve."
+    },
+    "terms": [
+      {
+        "termId": "cotas_raciais",
+        "match": "cotas raciais"
+      }
+    ]
+  },
+  {
+    "id": "moral_06",
+    "simple": "O casamento deveria ser permitido só entre um homem e uma mulher?",
+    "example": {
+      "agree": "A lei reconhece como casamento apenas a união de um homem com uma mulher.",
+      "disagree": "Dois homens ou duas mulheres também podem se casar no cartório."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_07",
+    "simple": "Casais gays e lésbicos deveriam poder demonstrar carinho em público como qualquer casal?",
+    "example": {
+      "agree": "Duas mulheres andam de mãos dadas no shopping, como qualquer outro casal.",
+      "disagree": "Casais do mesmo sexo evitam demonstrar carinho em lugares públicos."
+    },
+    "terms": [
+      {
+        "termId": "lgbt",
+        "match": "LGBT"
+      }
+    ]
+  },
+  {
+    "id": "moral_08",
+    "simple": "Você é contra reservar vagas em concursos públicos para pessoas de certos grupos raciais?",
+    "example": {
+      "agree": "Todas as vagas de um concurso público são decididas só pela nota da prova.",
+      "disagree": "Parte das vagas é reservada para candidatos negros, que disputam essas vagas entre si."
+    },
+    "terms": [
+      {
+        "termId": "cotas_raciais",
+        "match": "cotas raciais"
+      }
+    ]
+  },
+  {
+    "id": "moral_09",
+    "simple": "Você acha moralmente aceitável interromper uma gravidez nas primeiras semanas?",
+    "example": {
+      "agree": "Uma mulher decide interromper a gravidez nas primeiras semanas, e você vê isso como uma escolha legítima.",
+      "disagree": "Você vê a gravidez como uma vida que deve ser protegida desde o começo."
+    },
+    "terms": [
+      {
+        "termId": "aborto",
+        "match": "aborto"
+      }
+    ]
+  },
+  {
+    "id": "moral_10",
+    "simple": "Você acha errado interromper uma gravidez?",
+    "example": {
+      "agree": "Você acredita que a vida começa na concepção e deve ser protegida desde então.",
+      "disagree": "Você acredita que a decisão é da mulher, especialmente no início da gravidez."
+    },
+    "terms": [
+      {
+        "termId": "aborto",
+        "match": "aborto"
+      }
+    ]
+  },
+  {
+    "id": "moral_11",
+    "simple": "Adolescentes deveriam aprender na escola sobre identidade de gênero?",
+    "example": {
+      "agree": "Uma aula explica o que é ser uma pessoa trans e fala sobre respeito.",
+      "disagree": "Esse assunto fica com a família, e a escola não o aborda."
+    },
+    "terms": [
+      {
+        "termId": "identidade_genero",
+        "match": "identidade de gênero"
+      }
+    ]
+  },
+  {
+    "id": "moral_12",
+    "simple": "A educação sexual das crianças deveria seguir os valores da família, e não os da escola?",
+    "example": {
+      "agree": "Os pais decidem o que e quando os filhos aprendem sobre sexo.",
+      "disagree": "A escola ensina um conteúdo padrão sobre o corpo e a saúde para todas as crianças."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_13",
+    "simple": "Oferecer sexo em troca de dinheiro deveria ser reconhecido como um trabalho legítimo?",
+    "example": {
+      "agree": "Quem faz esse trabalho paga impostos, tem direitos trabalhistas e proteção da lei.",
+      "disagree": "A atividade não é reconhecida como trabalho, e o governo busca reduzi-la."
+    },
+    "terms": [
+      {
+        "termId": "trabalho_sexual",
+        "match": "prostituição"
+      }
+    ]
+  },
+  {
+    "id": "moral_14",
+    "simple": "A sociedade deveria evitar adotar formas de falar como \"todes\", que não marcam masculino ou feminino?",
+    "example": {
+      "agree": "Escolas e governo usam as formas tradicionais da língua.",
+      "disagree": "Alguns documentos e escolas usam formas neutras para incluir todas as pessoas."
+    },
+    "terms": [
+      {
+        "termId": "linguagem_neutra",
+        "match": "linguagem neutra"
+      }
+    ]
+  },
+  {
+    "id": "moral_15",
+    "simple": "Deveríamos comer menos carne por respeito aos animais?",
+    "example": {
+      "agree": "Uma família passa a ter dias sem carne por pensar no sofrimento dos animais.",
+      "disagree": "Comer carne é natural, e a família come o quanto quiser."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_16",
+    "simple": "Você acha errado consumir pornografia?",
+    "example": {
+      "agree": "Você acredita que a pornografia faz mal às pessoas e aos relacionamentos.",
+      "disagree": "Você vê isso como uma escolha privada de cada adulto."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_17",
+    "simple": "Relacionamentos abertos ou com mais de duas pessoas deveriam ser tão respeitados quanto o casamento?",
+    "example": {
+      "agree": "Três adultos vivem juntos num relacionamento combinado entre todos, e são respeitados como família.",
+      "disagree": "O casamento entre duas pessoas continua sendo o modelo que a sociedade valoriza."
+    },
+    "terms": [
+      {
+        "termId": "poliamor",
+        "match": "poliamor"
+      }
+    ]
+  },
+  {
+    "id": "moral_18",
+    "simple": "Cuidar da família deveria ser a maior prioridade na vida de uma mulher?",
+    "example": {
+      "agree": "Uma mulher deixa a carreira em segundo plano para cuidar dos filhos e da casa.",
+      "disagree": "Uma mulher escolhe livremente suas prioridades, como qualquer homem."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_19",
+    "simple": "Ver nudez em filmes, na arte e na praia não deveria ser considerado ofensivo?",
+    "example": {
+      "agree": "Uma praia permite nudismo, e um museu expõe estátuas nuas sem polêmica.",
+      "disagree": "Cenas de nudez são limitadas, e a praia exige roupa de banho."
+    },
+    "terms": []
+  },
+  {
+    "id": "moral_20",
+    "simple": "Os pais deveriam ter a palavra final sobre o que os filhos aprendem de certo e errado?",
+    "example": {
+      "agree": "Os pais podem tirar o filho de uma aula da escola que vai contra os valores da família.",
+      "disagree": "A escola ensina valores comuns a todos, mesmo que alguns pais discordem."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_01",
+    "simple": "A sociedade deveria colocar em primeiro lugar novas tecnologias e mais fábricas?",
+    "example": {
+      "agree": "O país investe pesado em fábricas e em centros de pesquisa de tecnologia.",
+      "disagree": "O país prefere crescer devagar para cuidar da natureza e do modo de vida tradicional."
+    },
+    "terms": [
+      {
+        "termId": "industrializacao",
+        "match": "industrialização"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_02",
+    "simple": "Você prefere uma vida simples e natural a uma vida cheia de tecnologia?",
+    "example": {
+      "agree": "Você planta parte da sua comida e usa o celular o mínimo possível.",
+      "disagree": "Você aproveita aplicativos, compras online e aparelhos inteligentes em casa."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_03",
+    "simple": "Deveríamos usar mais robôs e IA, mesmo que muitas profissões desapareçam?",
+    "example": {
+      "agree": "Caixas de supermercado são substituídos por máquinas, e os preços caem.",
+      "disagree": "O governo limita a automação para proteger empregos."
+    },
+    "terms": [
+      {
+        "termId": "ia",
+        "match": "uso de IA"
+      },
+      {
+        "termId": "automacao",
+        "match": "automação"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_04",
+    "simple": "Tecnologias que mudam o corpo, a mente ou a forma de ter filhos deveriam ter limites?",
+    "example": {
+      "agree": "A lei proíbe escolher características de um bebê em laboratório.",
+      "disagree": "Cada pessoa decide quais tecnologias quer usar no próprio corpo."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_05",
+    "simple": "Cientistas deveriam continuar criando plantas com o DNA modificado em laboratório para usar na agricultura?",
+    "example": {
+      "agree": "Um milho modificado resiste a uma praga, e o agricultor perde menos da colheita.",
+      "disagree": "O agricultor planta só sementes tradicionais, mesmo que perca parte da colheita para as pragas."
+    },
+    "terms": [
+      {
+        "termId": "transgenico",
+        "match": "transgênicos"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_06",
+    "simple": "Deveríamos usar menos venenos na lavoura, mesmo que a colheita diminua?",
+    "example": {
+      "agree": "Um agricultor reduz os agrotóxicos e colhe menos, mas com menos impacto na natureza.",
+      "disagree": "O agricultor usa os produtos permitidos para colher o máximo e manter a comida barata."
+    },
+    "terms": [
+      {
+        "termId": "agrotoxico",
+        "match": "agrotóxicos"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_07",
+    "simple": "Deveria ser permitido tirar minérios de florestas protegidas, mesmo causando algum dano à natureza?",
+    "example": {
+      "agree": "Uma mina é aberta numa floresta protegida e gera empregos e dinheiro para a região.",
+      "disagree": "A floresta continua intocada, mesmo havendo ouro e ferro embaixo dela."
+    },
+    "terms": [
+      {
+        "termId": "mineracao",
+        "match": "mineração"
+      },
+      {
+        "termId": "area_preservada",
+        "match": "áreas preservadas"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_08",
+    "simple": "Você prefere a natureza preservada a um crescimento rápido das indústrias?",
+    "example": {
+      "agree": "Uma floresta é protegida, mesmo que uma fábrica deixe de ser construída ali.",
+      "disagree": "A fábrica é construída e gera empregos, mesmo derrubando parte da floresta."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_09",
+    "simple": "Deveria ser permitido mudar o DNA de pessoas para evitar doenças?",
+    "example": {
+      "agree": "Médicos corrigem o gene de uma doença grave antes de o bebê nascer.",
+      "disagree": "A lei proíbe mexer no DNA humano, mesmo para prevenir doenças."
+    },
+    "terms": [
+      {
+        "termId": "edicao_genetica",
+        "match": "edição genética"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_10",
+    "simple": "Para combater o aquecimento do planeta, o mais importante é consumir menos?",
+    "example": {
+      "agree": "As pessoas compram menos, viajam menos de avião e reaproveitam o que têm.",
+      "disagree": "As pessoas mantêm o consumo, e novas tecnologias limpas resolvem o problema."
+    },
+    "terms": [
+      {
+        "termId": "aquecimento_global",
+        "match": "aquecimento global"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_11",
+    "simple": "A humanidade deveria gastar dinheiro para explorar outros planetas?",
+    "example": {
+      "agree": "Os países financiam missões para levar pessoas a Marte.",
+      "disagree": "O dinheiro das missões espaciais vai para resolver problemas aqui na Terra."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_12",
+    "simple": "Tirar minérios de florestas protegidas deveria ser proibido, mesmo com técnicas que causam pouco dano?",
+    "example": {
+      "agree": "Uma empresa promete uma mina de baixo impacto, mas a lei não permite.",
+      "disagree": "A mina de baixo impacto é liberada, com fiscalização rigorosa."
+    },
+    "terms": [
+      {
+        "termId": "mineracao",
+        "match": "mineração"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_13",
+    "simple": "Você prefere viver numa cidade grande a viver no campo?",
+    "example": {
+      "agree": "Você gosta de ter metrô, hospitais e muitas opções de trabalho por perto.",
+      "disagree": "Você prefere a calma, o espaço e o contato com a natureza do campo."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_14",
+    "simple": "Deveria ser proibido mudar o DNA de embriões para deixar as pessoas mais inteligentes?",
+    "example": {
+      "agree": "A lei proíbe que clínicas criem bebês \"melhorados\" em laboratório.",
+      "disagree": "Os pais podem usar a técnica, se for segura, para dar mais chances aos filhos."
+    },
+    "terms": [
+      {
+        "termId": "edicao_genetica",
+        "match": "edição genética"
+      },
+      {
+        "termId": "embriao",
+        "match": "embriões"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_15",
+    "simple": "Pessoas saudáveis deveriam poder colocar aparelhos no cérebro para pensar ou lembrar melhor?",
+    "example": {
+      "agree": "Uma pessoa coloca um implante e passa a acessar informações da internet com o pensamento.",
+      "disagree": "Implantes no cérebro ficam restritos ao tratamento de doenças."
+    },
+    "terms": [
+      {
+        "termId": "implante_cerebral",
+        "match": "Implantes cerebrais"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_16",
+    "simple": "Cuidar do meio ambiente na Terra deveria vir antes de gastar com viagens espaciais?",
+    "example": {
+      "agree": "O dinheiro de um foguete é usado para replantar florestas.",
+      "disagree": "O país investe no espaço, porque isso também traz tecnologias úteis para a Terra."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_17",
+    "simple": "Carne feita em laboratório deveria substituir parte da criação de gado?",
+    "example": {
+      "agree": "Parte da carne do mercado é produzida em laboratório, sem abater animais.",
+      "disagree": "A carne continua vindo da criação tradicional de animais."
+    },
+    "terms": [
+      {
+        "termId": "carne_cultivada",
+        "match": "carne cultivada"
+      },
+      {
+        "termId": "pecuaria",
+        "match": "pecuária"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_18",
+    "simple": "Você prefere uma vida simples no campo a viver numa cidade grande?",
+    "example": {
+      "agree": "Você vive numa pequena cidade do interior, perto da natureza e dos vizinhos.",
+      "disagree": "Você vive numa cidade grande, com mais serviços, empregos e agito."
+    },
+    "terms": []
+  },
+  {
+    "id": "tecnologia_19",
+    "simple": "Para combater o aquecimento do planeta, novas tecnologias são melhores do que consumir menos?",
+    "example": {
+      "agree": "Carros elétricos e energia solar resolvem o problema sem mudar muito a vida das pessoas.",
+      "disagree": "As pessoas precisam consumir e viajar menos, porque a tecnologia sozinha não basta."
+    },
+    "terms": [
+      {
+        "termId": "aquecimento_global",
+        "match": "aquecimento global"
+      }
+    ]
+  },
+  {
+    "id": "tecnologia_20",
+    "simple": "Você é contra colocar peças artificiais no corpo de pessoas saudáveis para ficarem mais fortes ou rápidas?",
+    "example": {
+      "agree": "Um atleta saudável não pode trocar as pernas por próteses mais rápidas.",
+      "disagree": "Uma pessoa saudável pode colocar um implante para enxergar no escuro, se quiser."
+    },
+    "terms": [
+      {
+        "termId": "implante",
+        "match": "implantes artificiais"
+      }
+    ]
+  }
+]

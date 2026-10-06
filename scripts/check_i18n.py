@@ -11,6 +11,8 @@ CATALOGS = {
     "ideologies": ("ideologies", ("name", "category", "description", "phrase")),
     "countries": ("countries", ("name", "category", "description")),
     "personalities": ("personalities", ("name", "role", "description")),
+    "glossary": ("glossary", ("term", "definition")),
+    "question-help": ("question-help", ("simple",)),
 }
 
 
@@ -41,6 +43,20 @@ for locale_dir in sorted((ROOT / "i18n").iterdir()):
             for field in required_fields:
                 if not isinstance(overlay[profile_id].get(field), str) or not overlay[profile_id][field].strip():
                     errors.append(f"{locale_dir.name}/{overlay_name}: {profile_id} missing {field}")
+
+# A ajuda tem campos aninhados: o exemplo precisa existir em todos os idiomas ou em
+# nenhum. Os dois lados de cada exemplo são validados pelo backend no startup.
+for locale_dir in sorted((ROOT / "i18n").iterdir()):
+    overlay_path = locale_dir / "question-help.json"
+    if not locale_dir.is_dir() or not overlay_path.exists():
+        continue
+    source = read_items(ROOT / "question-help.json")
+    overlay = read_items(overlay_path)
+    for help_id in sorted(source.keys() & overlay.keys()):
+        where = f"{locale_dir.name}/question-help: {help_id}"
+        src_example, tr_example = source[help_id].get("example"), overlay[help_id].get("example")
+        if bool(src_example) != bool(tr_example):
+            errors.append(f"{where} example present in only one language")
 
 if errors:
     raise SystemExit("\n".join(errors))

@@ -127,6 +127,7 @@ All data lives in `backend/src/main/resources/data/`, with English translations 
 |------|----------|
 | `axes.json` | The 12 axes, their poles and labels |
 | `questions-pool.json` | 240 questions, with axis, polarity, and weight |
+| `question-help.json` / `glossary.json` | Plain-language version, agree/disagree examples, and glossary terms for each question |
 | `archetype-questions.json` | The five multiple-choice questions |
 | `ideologies.json` / `ideology-profiles.json` | Ideologies and their 12-axis vectors |
 | `countries.json` / `countries-profiles.json` | Countries, regions, and historical regimes |

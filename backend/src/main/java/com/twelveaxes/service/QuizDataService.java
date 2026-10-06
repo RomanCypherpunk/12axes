@@ -9,11 +9,13 @@ import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.Axis;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.CountryProfile;
+import com.twelveaxes.model.GlossaryEntry;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyProfile;
 import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.PersonalityProfile;
 import com.twelveaxes.model.Question;
+import com.twelveaxes.model.QuestionHelpEntry;
 import com.twelveaxes.model.QuizPayload;
 import jakarta.annotation.PostConstruct;
 import java.io.IOException;
@@ -83,7 +85,13 @@ public class QuizDataService {
     @PostConstruct
     void loadData() throws IOException {
         List<Axis> axes = readJson("data/axes.json", new TypeReference<>() {});
-        List<Question> questions = readJson("data/questions-pool.json", new TypeReference<>() {});
+        List<GlossaryEntry> glossary = readJson("data/glossary.json", new TypeReference<>() {});
+        List<Question> questions = QuestionHelpResolver.attach(
+                readJson("data/questions-pool.json", new TypeReference<>() {}),
+                readJson("data/question-help.json", new TypeReference<>() {}),
+                glossary,
+                "question-help.json"
+        );
         List<Ideology> ideologies = readJson("data/ideologies.json", new TypeReference<>() {});
         List<Country> countries = readJson("data/countries.json", new TypeReference<>() {});
         List<Personality> personalities = readJson("data/personalities.json", new TypeReference<>() {});
@@ -110,7 +118,7 @@ public class QuizDataService {
         validateArchetypeQuestions(axes);
 
         LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities);
-        LocaleBundle en = buildEnglishBundle(pt);
+        LocaleBundle en = buildEnglishBundle(pt, glossary);
         bundles = Map.of(LANG_PT, pt, LANG_EN, en);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
@@ -132,7 +140,7 @@ public class QuizDataService {
 
     // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
     // Item sem tradução (ou arquivo ausente) cai no texto PT — nada quebra.
-    private LocaleBundle buildEnglishBundle(LocaleBundle pt) throws IOException {
+    private LocaleBundle buildEnglishBundle(LocaleBundle pt, List<GlossaryEntry> ptGlossary) throws IOException {
         Map<String, Map<String, String>> axesTr = readOverlay("data/i18n/en/axes.json");
         Map<String, Map<String, String>> questionsTr = readOverlay("data/i18n/en/questions.json");
         Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/en/ideologies.json");
@@ -152,11 +160,22 @@ public class QuizDataService {
             );
         }).toList();
 
-        List<Question> questions = pt.questions().stream().map(question -> {
+        List<Question> translatedQuestions = pt.questions().stream().map(question -> {
             Map<String, String> tr = questionsTr.get(question.id());
             if (tr == null || tr.get("text") == null) return question;
-            return new Question(question.id(), question.axisId(), tr.get("text"), question.agreePole(), question.weight());
+            return question.withText(tr.get("text"));
         }).toList();
+        // attach() troca a ajuda em PT pela em EN (os trechos sublinhados são do texto
+        // traduzido); pergunta sem ajuda em EN fica sem ajuda.
+        List<Question> questions = QuestionHelpResolver.attach(
+                translatedQuestions,
+                readOptionalJson("data/i18n/en/question-help.json", new TypeReference<>() {}),
+                QuestionHelpResolver.overlayGlossary(
+                        ptGlossary,
+                        readOptionalJson("data/i18n/en/glossary.json", new TypeReference<>() {})
+                ),
+                "i18n/en/question-help.json"
+        );
 
         List<Ideology> ideologies = pt.ideologies().stream().map(ideology -> {
             Map<String, String> tr = ideologiesTr.get(ideology.id());
@@ -477,6 +496,13 @@ public class QuizDataService {
             case EXTREME_VARIANT, "extrema", "240", "240questions" -> EXTREME_VARIANT;
             default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Versão de quiz inválida");
         };
+    }
+
+    private <T> List<T> readOptionalJson(String path, TypeReference<List<T>> type) throws IOException {
+        if (!new ClassPathResource(path).exists()) {
+            return List.of();
+        }
+        return readJson(path, type);
     }
 
     private <T> T readJson(String path, TypeReference<T> type) throws IOException {

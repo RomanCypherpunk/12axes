@@ -3,6 +3,8 @@ import { t } from '../i18n';
 import type { AnswerOption, AnswerValue, Axis, Question } from '../types/quiz';
 import { PoleIcon } from './AxisIcon';
 import { InfoButton, InfoSheet } from './results/InfoSheet';
+import { QuestionHelpPanel } from './question/QuestionHelpPanel';
+import { HighlightedQuestionText } from './question/QuestionTerms';
 
 const answerClassById: Record<AnswerValue, string> = {
   STRONGLY_AGREE: 'answer-button answer-strong-agree',
@@ -27,6 +29,8 @@ interface QuestionCardProps {
 
 export function QuestionCard({ question, axisLabel, axis, number, options, selected, disabled = false, onSelect }: QuestionCardProps) {
   const [isAxisInfoOpen, setIsAxisInfoOpen] = useState(false);
+  const help = question.help ?? null;
+  const terms = help?.terms ?? [];
   const agreeColor = axis && (question.agreePole === 'LEFT' ? axis.leftColor : axis.rightColor);
 
   return (
@@ -48,7 +52,14 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
         ) : (
           <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
         )}
-        <h2 id="question-title">{question.text}</h2>
+        <h2 id="question-title">
+          {terms.length > 0 ? (
+            <HighlightedQuestionText questionId={question.id} text={question.text} terms={terms} />
+          ) : (
+            question.text
+          )}
+        </h2>
+        {help && <QuestionHelpPanel questionId={question.id} help={help} />}
       </header>
       <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>
         {options.map((option) => {

@@ -11868,3 +11868,136 @@
 .archetype-skip {
   margin-left: auto;
 }
+
+/* ── Quiz: ajuda de leitura (glossário + explicação simples + exemplos) ──
+   Termo do glossário mostra a definição num tooltip (superfície Floresta,
+   como os cards escuros). O botão usa .e-btn; os exemplos seguem a
+   linguagem dos botões de resposta.                                        */
+.question-term {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--floresta);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  cursor: help;
+  transition: background .15s ease;
+}
+.question-term:hover,
+.question-term.open { background: var(--floresta-claro); }
+.question-term:focus-visible { outline: 3px solid var(--carmim); outline-offset: 2px; }
+
+.question-term-tip {
+  position: fixed;
+  z-index: 300;
+  display: grid;
+  gap: 2px;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--floresta);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--papel);
+  animation: question-term-tip-in .14s var(--ease-settle) both;
+}
+.question-term-tip strong { font-weight: 600; color: var(--texto-sobre-escuro); }
+.question-term-tip::after {
+  content: "";
+  position: absolute;
+  left: var(--arrow-left);
+  width: 10px;
+  height: 10px;
+  background: var(--floresta);
+  transform: translateX(-50%) rotate(45deg);
+}
+.question-term-tip[data-placement="below"]::after { top: -5px; }
+.question-term-tip[data-placement="above"]::after { bottom: -5px; }
+@keyframes question-term-tip-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.question-help { margin-top: 14px; max-width: 760px; }
+.question-help-toggle { gap: 8px; }
+.question-help-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.question-help-toggle:focus-visible { outline: 3px solid var(--carmim); outline-offset: 2px; }
+
+.question-help-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  animation: question-part-settle var(--dur-enter) var(--ease-settle) both;
+}
+.question-help-simple {
+  padding: 14px 16px;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-lg);
+  background: var(--superficie);
+}
+.question-help-label {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+.question-help-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--tinta);
+}
+.question-help-examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.question-help-example {
+  --answer-color: var(--green-600);
+  --answer-soft: var(--green-50);
+  position: relative;
+  overflow: hidden;
+  padding: 12px 14px 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+.question-help-example[data-side="disagree"] {
+  --answer-color: var(--red-500);
+  --answer-soft: var(--red-50);
+}
+.question-help-example::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--answer-color);
+}
+.question-help-example .question-help-label { color: var(--answer-color); }
+@media (max-width: 760px) {
+  .question-help-examples { grid-template-columns: 1fr; }
+  .question-help-text { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .question-help-panel,
+  .question-term-tip { animation: none; }
+  .question-term { transition: none; }
+}
