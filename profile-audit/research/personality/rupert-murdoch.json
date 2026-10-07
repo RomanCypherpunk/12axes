@@ -1,0 +1,221 @@
+{
+  "id": "rupert-murdoch",
+  "researchedAt": "2026-10-03",
+  "scope": "Rupert Murdoch personally: documented career and statements through latest verified material; distinguish his views from individual outlets and from Lachlan. Gaps require explicit inference, never invented positions.",
+  "sources": [
+    {
+      "id": "lowy",
+      "date": "2013-10-31",
+      "url": "https://www.lowyinstitute.org/speeches/annual-lowy-lecture-2013-address-rupert-murdoch-ac",
+      "note": "Murdoch's own lecture: private enterprise, open trade, skilled immigration with shared civic values, independent courts and press, US alliance, biotechnology and digital innovation."
+    },
+    {
+      "id": "fox",
+      "date": "accessed 2026-10-03",
+      "url": "https://www.foxcorporation.com/rupert-murdoch-chairman-emeritus/",
+      "note": "Official biography confirms founder and current chairman emeritus of Fox and News Corp."
+    },
+    {
+      "id": "ap-succession",
+      "date": "2025-09-08",
+      "url": "https://apnews.com/article/d6c93b1c99b2daadf03dc3faa0982e09",
+      "note": "Family settlement preserves Lachlan's control and conservative direction of Fox."
+    },
+    {
+      "id": "scotland",
+      "date": "2014-09-10",
+      "url": "https://www.theguardian.com/politics/2014/sep/10/rupert-murdoch-hints-support-scottish-independence",
+      "note": "He expressed sympathy for Scottish independence, without a firm newspaper endorsement."
+    },
+    {
+      "id": "iraq",
+      "date": "2003-02-11",
+      "url": "https://www.theguardian.com/media/2003/feb/11/iraqandthemedia.news",
+      "note": "He supported the US/UK invasion of Iraq."
+    },
+    {
+      "id": "religion",
+      "date": "1999-11-29",
+      "url": "https://www.theguardian.com/media/1999/nov/29/broadcasting.mondaymediasection",
+      "note": "He described belief in a supreme being without high religiosity."
+    },
+    {
+      "id": "moral",
+      "date": "2025-02-17 / April 2025 issue",
+      "url": "https://www.theatlantic.com/magazine/archive/2025/04/rupert-murdoch-family-succession-james-murdoch/681675/",
+      "note": "James and Kathryn recollect his opposition to same-sex marriage; this is family testimony, not a public policy manifesto."
+    },
+    {
+      "id": "sopa",
+      "date": "2012-01-16",
+      "url": "https://www.rtve.es/noticias/20120116/rupert-murdoch-arremete-contra-obama-google-por-criticas-a-ley-sopa/489861.shtml",
+      "note": "His support for anti-piracy law qualifies his broad free-speech rhetoric."
+    },
+    {
+      "id": "wapping",
+      "date": "1986-03-03",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1986/mar/03/printing-dispute-wapping",
+      "note": "Parliamentary debate records mass dismissal of striking print workers and police protection; speakers' accusations are attributed views, not all adopted as findings."
+    },
+    {
+      "id": "ftc",
+      "date": "2009-12-01",
+      "url": "https://www.inpublishing.co.uk/articles/from-town-crier-to-bloggers-1683",
+      "note": "His FTC speech opposes government subsidy of failing newspapers and supports paid digital journalism."
+    },
+    {
+      "id": "retirement",
+      "date": "2023-09-21",
+      "url": "https://spectator.com/article/why-im-stepping-down/",
+      "note": "His staff letter stresses free speech and continuing participation in political debate."
+    },
+    {
+      "id": "book",
+      "date": "2008",
+      "url": "https://assets.pc.gov.au/inquiries/completed/books/submissions/sub124.pdf",
+      "note": "Publication citation: R. Murdoch, A Golden Age of Freedom, ABC Books, 2008; politics of markets and media in his Boyer Lectures."
+    },
+    {
+      "id": "guns",
+      "date": "2012-12-15",
+      "url": "https://www.washingtonpost.com/lifestyle/style/media-figures-on-left-and-right-call-for-new-gun-control-laws/2012/12/15/27af0716-46f0-11e2-9648-a2c323a991d6_story.html",
+      "note": "Murdoch called for banning automatic weapons following Sandy Hook, citing Australia."
+    },
+    {
+      "id": "ngn-apology",
+      "date": "2025-01-22",
+      "url": "https://apnews.com/article/d95878bb3517205ce2e4c567550fb9a4",
+      "note": "NGN apologized for unlawful intrusion into Prince Harry's private life. Corporate wrongdoing does not establish that Murdoch personally ordered hacking, nor a preference for state surveillance."
+    },
+    {
+      "id": "gun-licensing",
+      "date": "2012-07-21 (archived 2012-12-15)",
+      "url": "https://johnrlott.blogspot.com/2012/12/rupert-murdoch-calls-for-ban-on-machine.html",
+      "note": "Archive of Murdoch tweet allowing police-licensed hunting rifles/pistols subject to criminal and psychological screening; secondary archive, not an accessible original tweet."
+    },
+    {
+      "id": "auletta",
+      "date": "1995-11-06 / November 13 issue",
+      "url": "https://www.newyorker.com/magazine/1995/11/13/rupert-murdoch-the-pirate",
+      "note": "Interview account reports opposition to federal abortion funding rather than abortion legality; documents commercial sexual content despite personal reserve."
+    },
+    {
+      "id": "neil",
+      "date": "December 1996",
+      "url": "https://www.vanityfair.com/news/1996/12/rupert-murdoch-199612",
+      "note": "Former editor Andrew Neil recalls a strong anti-abortion stance, conflicting with Auletta's account; also reports tolerance of topless tabloid content. These older accounts cannot establish his current abortion position."
+    }
+  ],
+  "axes": {
+    "estrutura": {
+      "sources": [
+        "scotland"
+      ],
+      "evidence": "Sympathy for Scottish self-government. This is limited evidence for territorial decentralization, not proof of a comprehensive federalist doctrine."
+    },
+    "representacao": {
+      "sources": [
+        "lowy",
+        "retirement",
+        "ap-succession"
+      ],
+      "evidence": "Supports democratic institutions, independent press and courts. Preserving conservative family control concerns a corporation, not endorsement of autocratic government."
+    },
+    "poder": {
+      "sources": [
+        "sopa",
+        "wapping",
+        "retirement",
+        "guns",
+        "ngn-apology",
+        "gun-licensing"
+      ],
+      "evidence": "Supports speech freedom but also coercive copyright enforcement and legal protection of business against disruptive strikes. Do not infer universal support for mass surveillance or torture. Personally supported gun restrictions after mass shootings, unlike a blanket gun-rights position. NGN's 2025 apology is a corporate privacy controversy, not evidence of a personal programme for state surveillance."
+    },
+    "imigracao": {
+      "sources": [
+        "lowy"
+      ],
+      "evidence": "Favors immigrants and talent recruitment, with a shared civic culture requirement; economic openness coexists with assimilation expectations."
+    },
+    "diplomacia": {
+      "sources": [
+        "iraq",
+        "lowy"
+      ],
+      "evidence": "Backed Iraq invasion and US alliance; evidence for military force, not indiscriminate permanent warfare."
+    },
+    "intervencao": {
+      "sources": [
+        "iraq",
+        "lowy"
+      ],
+      "evidence": "Accepts allied intervention abroad, while favoring constructive relations with Asian trading partners."
+    },
+    "economia": {
+      "sources": [
+        "ftc",
+        "wapping",
+        "lowy"
+      ],
+      "evidence": "Private enterprise, resistance to state subsidy of newspapers, and confrontation with print unions; not a doctrine abolishing all public education or services."
+    },
+    "controle": {
+      "sources": [
+        "ftc",
+        "lowy",
+        "sopa"
+      ],
+      "evidence": "Opposes growth-inhibiting regulation and subsidies; supports selective state enforcement of private intellectual property."
+    },
+    "comercio": {
+      "sources": [
+        "lowy"
+      ],
+      "evidence": "Trade and global integration are engines of prosperity; he criticizes industrial protection. Do not transfer Trump's tariffs to him."
+    },
+    "religiao": {
+      "sources": [
+        "religion",
+        "lowy"
+      ],
+      "evidence": "Personal belief and respect for churches as civic institutions; no established programme of theocracy or religious law. Private faith alone does not require a religions tag under the repository rule."
+    },
+    "moral": {
+      "sources": [
+        "moral",
+        "ap-succession",
+        "auletta",
+        "neil"
+      ],
+      "evidence": "Conservative cultural orientation and reported opposition to same-sex marriage; personal divorces do not establish progressive political positions. Abortion positions are less well established; responses on this topic are cautious cultural inference."
+    },
+    "tecnologia": {
+      "sources": [
+        "lowy",
+        "ftc"
+      ],
+      "evidence": "Positive views of digital disruption and biotechnology; selective copyright restrictions do not imply opposition to technological development."
+    }
+  },
+  "religionsRationale": "Empty: private belief and cultural respect for churches, without faith defining his political identity. Recheck after the question audit.",
+  "book": {
+    "title": "A Golden Age of Freedom",
+    "year": 2008,
+    "reason": "Authored political/economic Boyer Lectures published by ABC Books; no verified Portuguese edition, so retain original title."
+  },
+  "auditReview": {
+    "neutralAnswers": 1,
+    "totalAnswers": 240,
+    "archetype": {
+      "sociedade": "B",
+      "poder": "C",
+      "economia": "F",
+      "mundo": "B",
+      "tecnologia": "D"
+    },
+    "validation": "Passed form, neutral and content checks. Non-blocking similarity warnings: Zema 94.7%, Kataguiri 93.6%, Bush 93.5%. Below 95% duplication threshold.",
+    "nearestProfileReview": "Compared Zema axis by axis: differences include religion (48.4 vs 25.0), representation (79.9 vs 61.3), immigration (43.3 vs 57.5), diplomacy (68.3 vs 55.0) and intervention (16.2 vs 30.0). No answers changed to engineer distance.",
+    "limits": "Territorial administration beyond Scotland, criminal-policy specifics, abortion and human enhancement include biographical inference, identified in personaBriefs. Simulated answers are not a survey personally completed by Murdoch."
+  }
+}
