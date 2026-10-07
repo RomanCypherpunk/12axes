@@ -42,6 +42,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- `mvnw compile exec:java` roda a API dentro do proprio Maven. Diferente de
+                 spring-boot:run, nao abre uma JVM filha, que quebra com acento no caminho. -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.twelveaxes.TwelveAxesApplication</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

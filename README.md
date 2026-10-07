@@ -201,18 +201,21 @@ POST /api/results?lang=en
 
 ### Running locally
 
-You need Java 21, Maven 3.9+, Node.js 20+, and npm.
+You need Java 21 and Node.js 20+. Maven is not required: the repository ships the Maven Wrapper.
 
 ```bash
 # Backend: http://localhost:8080
 cd backend
-mvn spring-boot:run
+sh mvnw compile exec:java          # macOS / Linux / Git Bash
+.\mvnw.cmd compile exec:java       # Windows PowerShell / cmd
 
 # Frontend: http://localhost:5173 (proxies /api to the backend)
 cd frontend
 npm install
 npm run dev
 ```
+
+Run only the backend line for your system.
 
 To point the local frontend at the production API instead, create `frontend/.env.local` with `VITE_API_URL=https://one2axes-backend.onrender.com`.
 
@@ -226,7 +229,7 @@ To point the local frontend at the production API instead, create `frontend/.env
 ### Tests
 
 ```bash
-cd backend && mvn test          # 129 tests
+cd backend && sh mvnw test      # 160+ tests (Windows: .\mvnw.cmd test)
 cd frontend && npm test         # Vitest
 cd frontend && npm run build    # type check, build, static pages
 ```
