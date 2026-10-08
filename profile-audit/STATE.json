@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-08T16:39:51Z",
+  "lastUpdated": "2026-10-08T17:44:22Z",
   "personality": {
     "totalProfiles": 539,
     "pending": [],
@@ -819,7 +819,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 256,
+    "totalProfiles": 270,
     "pending": [],
     "done": [
       "brasil",
@@ -1088,7 +1088,21 @@
       "reino-de-italia",
       "reino-da-dinamarca-e-noruega",
       "eleitorado-de-hanover",
-      "reino-da-grecia"
+      "reino-da-grecia",
+      "india",
+      "nepal",
+      "mauricia",
+      "bali",
+      "imperio-maurya",
+      "imperio-gupta",
+      "raj-britanico",
+      "reino-do-nepal",
+      "tamil-nadu",
+      "kerala",
+      "punjab",
+      "caxemira",
+      "bengala-ocidental",
+      "gujarat"
     ]
   },
   "totalProfiles": 1054

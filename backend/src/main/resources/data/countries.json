@@ -273,7 +273,8 @@
     "period": "",
     "vector": null,
     "religions": [
-      "islam"
+      "islam",
+      "hinduism"
     ]
   },
   {
@@ -776,7 +777,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Arab_Emirates.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "hinduism"
     ]
   },
   {
@@ -1169,7 +1171,8 @@
     "period": "",
     "vector": null,
     "religions": [
-      "islam"
+      "islam",
+      "hinduism"
     ]
   },
   {
@@ -1394,7 +1397,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bhutan.svg",
     "flagNote": "Bandeira nacional do Butão.",
     "religions": [
-      "buddhism"
+      "buddhism",
+      "hinduism"
     ]
   },
   {
@@ -2373,6 +2377,7 @@
     "vector": null,
     "religions": [
       "islam",
+      "hinduism",
       "only"
     ]
   },
@@ -2468,7 +2473,8 @@
     "period": "",
     "vector": null,
     "religions": [
-      "buddhism"
+      "buddhism",
+      "hinduism"
     ]
   },
   {
@@ -3157,6 +3163,7 @@
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
       "islam",
+      "hinduism",
       "only"
     ]
   },
@@ -3800,7 +3807,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Guyana.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "protestant"
+      "protestant",
+      "hinduism"
     ]
   },
   {
@@ -4040,5 +4048,256 @@
     "religions": [
       "orthodox"
     ]
+  },
+  {
+    "id": "india",
+    "name": "Índia",
+    "category": "República federal de maioria hindu",
+    "description": "Maior democracia do mundo, a Índia é uma república federal parlamentarista com 1,4 bilhão de habitantes, governada desde 2014 por Narendra Modi e o BJP, com nacionalismo hindu em alta, economia em rápido crescimento e política externa de autonomia estratégica.",
+    "flagPath": "/countries/flags/india.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_India.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "nepal",
+    "name": "Nepal",
+    "category": "República federal laica instável",
+    "description": "Ex-reino hindu, o Nepal é uma república federal laica desde 2008, após a guerra civil maoísta, com coalizões instáveis, economia de remessas, turismo e hidrelétricas, dependência da Índia e da China e protestos da geração Z em 2025 que derrubaram o governo.",
+    "flagPath": "/countries/flags/nepal.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "mauricia",
+    "name": "Maurícia",
+    "category": "Democracia parlamentar multiétnica insular",
+    "description": "Ilha do Índico independente desde 1968, Maurícia é uma democracia parlamentar multiétnica de maioria indo-mauriciana, com alternância de poder, economia de turismo, açúcar e finanças, forte bem-estar social e sociedade que equilibra hindus, cristãos e muçulmanos.",
+    "flagPath": "/countries/flags/mauricia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mauritius.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "bali",
+    "name": "Bali (Indonésia)",
+    "category": "Província insular de maioria hindu",
+    "description": "Província insular da Indonésia, Bali é a única de maioria hindu num país muçulmano, com uma cultura religiosa que organiza a vida, os templos e o calendário, economia de turismo e tensão entre tradição, imigração e superdesenvolvimento.",
+    "flagPath": "/countries/flags/bali.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bali.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "imperio-maurya",
+    "name": "Império Maurya",
+    "category": "Império burocrático centralizado",
+    "description": "Primeiro grande império da Índia, o Maurya unificou quase todo o subcontinente sob Chandragupta, Bindusara e Ashoka, com burocracia centralizada, espionagem, exército permanente e o Arthashastra, até Ashoka adotar o budismo e a não violência após Kalinga.",
+    "flagPath": "/countries/flags/imperio-maurya.png",
+    "historical": true,
+    "period": "c. 322–185 a.C.",
+    "vector": null,
+    "flagKind": "historical-banner",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Ashoka_Chakra.svg",
+    "flagNote": "Roda de Ashoka (Ashoka Chakra) sobre fundo açafrão, como referência visual; o império não teve bandeira nacional no sentido moderno.",
+    "religions": [
+      "hinduism",
+      "buddhism",
+      "only"
+    ]
+  },
+  {
+    "id": "imperio-gupta",
+    "name": "Império Gupta",
+    "category": "Monarquia hindu clássica",
+    "description": "Idade de ouro clássica da Índia, o Império Gupta (c. 320–550) governou o norte do subcontinente como monarquia hindu com vassalos, fomentou ciência, matemática, literatura em sânscrito e arte, restaurou ritos védicos e consolidou o sistema de castas.",
+    "flagPath": "/countries/flags/imperio-gupta.png",
+    "historical": true,
+    "period": "c. 320–550",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Gupta_Empire.png",
+    "flagNote": "Bandeira reconstituída, usada só como referência visual; o império não teve bandeira nacional no sentido moderno.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "raj-britanico",
+    "name": "Raj Britânico",
+    "category": "Império colonial britânico",
+    "description": "Domínio direto da Coroa britânica sobre a Índia entre 1858 e 1947, o Raj governava por vice-rei e serviço civil, com principados aliados, ferrovias, exportação de commodities, repressão de revoltas, fomes e a divisão final em Índia e Paquistão.",
+    "flagPath": "/countries/flags/raj-britanico.png",
+    "historical": true,
+    "period": "1858–1947",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:British_Raj_Red_Ensign.svg",
+    "flagNote": "Pavilhão vermelho (Red Ensign) com a Estrela da Índia, usado como referência visual do período.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "reino-do-nepal",
+    "name": "Reino do Nepal",
+    "category": "Monarquia hindu himalaica",
+    "description": "Monarquia hindu fundada por Prithvi Narayan Shah em 1768, o Reino do Nepal resistiu à Companhia das Índias Orientais, passou pelo domínio hereditário dos Ranas e pela monarquia absoluta até 1990 e foi abolido em 2008, no fim da guerra civil maoísta.",
+    "flagPath": "/countries/flags/reino-do-nepal.png",
+    "historical": true,
+    "period": "1768–2008",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal.svg",
+    "flagNote": "Dupla flâmula nepalesa, em uso durante o reino (até 1962 o sol e a lua tinham rostos); aqui como referência visual do período.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "tamil-nadu",
+    "name": "Tâmil Nadu (Índia)",
+    "category": "Estado indiano dravidiano e industrial",
+    "description": "Estado do extremo sul da Índia, o Tâmil Nadu é o berço do movimento dravidiano, que une orgulho da língua tâmil, rejeição ao hindi e à hegemonia brâmane, populismo de bem-estar e defesa da autonomia federal, com forte indústria e DMK e AIADMK no poder.",
+    "flagPath": "/countries/flags/tamil-nadu.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "emblem",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_Tamil_Nadu.svg",
+    "flagNote": "Brasão oficial do estado, usado como referência visual; o estado não tem bandeira oficial.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "kerala",
+    "name": "Kerala (Índia)",
+    "category": "Estado indiano social-democrata plural",
+    "description": "Estado do sudoeste da Índia, Kerala elegeu o primeiro governo comunista por voto, em 1957, e alterna esquerda e centro no poder. Tem os melhores indicadores sociais do país, economia de remessas do Golfo e uma população plural de hindus, muçulmanos e cristãos.",
+    "flagPath": "/countries/flags/kerala.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "emblem",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Government_of_Kerala_Logo.svg",
+    "flagNote": "Brasão oficial do governo do estado, usado como referência visual; o estado não tem bandeira oficial.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "gujarat",
+    "name": "Gujarat (Índia)",
+    "category": "Estado indiano mercantil e hindutva",
+    "description": "Estado do oeste da Índia e terra de Narendra Modi, Gujarat tem cultura comercial vegetariana e jainista, economia industrial e exportadora, o 'modelo Gujarat' pró-negócios, proibição do álcool e domínio do BJP, e foi laboratório do nacionalismo hindu.",
+    "flagPath": "/countries/flags/gujarat.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "emblem",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_Gujarat.svg",
+    "flagNote": "Brasão oficial do estado, usado como referência visual; o estado não tem bandeira oficial.",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "punjab",
+    "name": "Punjab (Índia)",
+    "category": "Estado indiano sikh e agrário",
+    "description": "Estado do noroeste da Índia de maioria sikh, o Punjab é o celeiro do país, símbolo da Revolução Verde, com forte tradição de serviço comunitário e militar, a memória do movimento separatista Khalistan e do massacre do Templo Dourado, e hoje governado pelo AAP.",
+    "flagPath": "/countries/flags/punjab.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "emblem",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Emblem_of_Punjab_(India)_on_a_white_background.svg",
+    "flagNote": "Brasão oficial do estado, usado como referência visual; o estado não tem bandeira oficial.",
+    "religions": [
+      "other",
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "caxemira",
+    "name": "Jammu e Caxemira (Índia)",
+    "category": "Território disputado sob administração indiana",
+    "description": "Região do Himalaia de maioria muçulmana disputada por Índia, Paquistão e China, Jammu e Caxemira perdeu a autonomia especial em 2019 e virou território da União governado por Nova Délhi, com insurgência, forte presença militar e turismo.",
+    "flagPath": "/countries/flags/caxemira.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Jammu_and_Kashmir_(1952-2019).svg",
+    "flagNote": "Bandeira estadual usada até 2019 (vermelha com três listras brancas e o arado), como referência visual.",
+    "religions": [
+      "islam",
+      "hinduism"
+    ]
+  },
+  {
+    "id": "bengala-ocidental",
+    "name": "Bengala Ocidental (Índia)",
+    "category": "Estado indiano bengali de política populista",
+    "description": "Estado do leste da Índia, a Bengala Ocidental foi governada 34 anos pela Frente de Esquerda e hoje é dominada pelo Trinamool de Mamata Banerjee, com forte identidade bengali, capital cultural em Calcutá, 27% de muçulmanos, fronteira com Bangladesh e política violenta.",
+    "flagPath": "/countries/flags/bengala-ocidental.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": "emblem",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_West_Bengal.svg",
+    "flagNote": "Brasão oficial do estado, usado como referência visual; o estado não tem bandeira oficial.",
+    "religions": ["hinduism", "only"]
   }
 ]
