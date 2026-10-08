@@ -4302,5 +4302,50 @@
       "hinduism",
       "only"
     ]
+  },
+  {
+    "id": "cuba-de-fidel-castro",
+    "name": "Cuba de Fidel Castro",
+    "category": "República socialista de partido único",
+    "description": "Governada por Fidel Castro de 1959 a 2008, Cuba tornou-se um Estado socialista de partido único, com economia estatizada, saúde e educação universais, aliança com a URSS, repressão a dissidentes, exílio em massa e confronto com os Estados Unidos, do embargo à crise dos mísseis.",
+    "flagPath": "/countries/flags/cuba-de-fidel-castro.png",
+    "historical": true,
+    "period": "1959–2008",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cuba.svg",
+    "flagNote": "Bandeira de Cuba, a mesma usada durante toda a era Castro, como referência visual do período.",
+    "religions": []
+  },
+  {
+    "id": "venezuela-de-chavez",
+    "name": "Venezuela de Chávez",
+    "category": "Petrossocialismo bolivariano",
+    "description": "Sob Hugo Chávez, de 1999 a 2013, a Venezuela viveu o 'socialismo do século XXI', com nova Constituição, programas sociais financiados pelo petróleo, estatizações, controle de câmbio e preços, forte polarização, confronto com os Estados Unidos e poder concentrado no presidente.",
+    "flagPath": "/countries/flags/venezuela-de-chavez.png",
+    "historical": true,
+    "period": "1999–2013",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg",
+    "flagNote": "Bandeira da Venezuela com oito estrelas, adotada em 2006 sob Chávez, como referência visual do período.",
+    "religions": []
+  },
+  {
+    "id": "terceira-republica-francesa",
+    "name": "Terceira República Francesa",
+    "category": "República parlamentar laica e colonial",
+    "description": "Proclamada após a queda de Napoleão III em 1870, a Terceira República Francesa foi um regime parlamentarista duradouro, com laicidade em 1905, escola pública gratuita, império colonial, o Caso Dreyfus, a vitória na Grande Guerra e o colapso diante da Alemanha em 1940.",
+    "flagPath": "/countries/flags/terceira-republica-francesa.png",
+    "historical": true,
+    "period": "1870–1940",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+    "flagNote": "Tricolor francês, usado durante toda a Terceira República, como referência visual do período.",
+    "religions": []
   }
 ]
