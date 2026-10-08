@@ -9143,13 +9143,6 @@
       "religiao": 1.0,
       "moral": 3.0,
       "tecnologia": 65.3
-    },
-    "archetype": {
-      "sociedade": "A",
-      "poder": "A",
-      "economia": "E",
-      "mundo": "C",
-      "tecnologia": "D"
     }
   },
   {
@@ -9167,13 +9160,6 @@
       "religiao": 70.6,
       "moral": 20.2,
       "tecnologia": 77.2
-    },
-    "archetype": {
-      "sociedade": "E",
-      "poder": "B",
-      "economia": "F",
-      "mundo": "B",
-      "tecnologia": "D"
     }
   },
   {
@@ -9191,13 +9177,6 @@
       "religiao": 63.1,
       "moral": 32.4,
       "tecnologia": 56.0
-    },
-    "archetype": {
-      "sociedade": "D",
-      "poder": "B",
-      "economia": "F",
-      "mundo": "C",
-      "tecnologia": "C"
     }
   },
   {
@@ -9215,13 +9194,6 @@
       "religiao": 1.0,
       "moral": 10.1,
       "tecnologia": 6.2
-    },
-    "archetype": {
-      "sociedade": "A",
-      "poder": "A",
-      "economia": "E",
-      "mundo": "D",
-      "tecnologia": "B"
     }
   },
   {
@@ -9239,13 +9211,6 @@
       "religiao": 18.7,
       "moral": 14.6,
       "tecnologia": 53.4
-    },
-    "archetype": {
-      "sociedade": "B",
-      "poder": "B",
-      "economia": "E",
-      "mundo": "C",
-      "tecnologia": "D"
     }
   },
   {
@@ -9263,13 +9228,6 @@
       "religiao": 1.0,
       "moral": 1.8,
       "tecnologia": 9.8
-    },
-    "archetype": {
-      "sociedade": "A",
-      "poder": "A",
-      "economia": "E",
-      "mundo": "B",
-      "tecnologia": "B"
     }
   },
   {
@@ -9287,13 +9245,6 @@
       "religiao": 33.1,
       "moral": 20.8,
       "tecnologia": 66.5
-    },
-    "archetype": {
-      "sociedade": "A",
-      "poder": "B",
-      "economia": "D",
-      "mundo": "A",
-      "tecnologia": "D"
     }
   },
   {
@@ -9311,13 +9262,6 @@
       "religiao": 3.3,
       "moral": 0.6,
       "tecnologia": 70.1
-    },
-    "archetype": {
-      "sociedade": "A",
-      "poder": "A",
-      "economia": "E",
-      "mundo": "A",
-      "tecnologia": "D"
     }
   },
   {
@@ -9335,13 +9279,6 @@
       "religiao": 21.0,
       "moral": 23.0,
       "tecnologia": 63.0
-    },
-    "archetype": {
-      "sociedade": "B",
-      "poder": "C",
-      "economia": "E",
-      "mundo": "B",
-      "tecnologia": "D"
     }
   },
   {
@@ -9359,13 +9296,6 @@
       "religiao": 69.5,
       "moral": 47.9,
       "tecnologia": 66.5
-    },
-    "archetype": {
-      "sociedade": "C",
-      "poder": "C",
-      "economia": "C",
-      "mundo": "B",
-      "tecnologia": "D"
     }
   },
   {
@@ -9587,6 +9517,23 @@
       "religiao": 27.0,
       "moral": 32.5,
       "tecnologia": 70.1
+    }
+  },
+  {
+    "personalityId": "ibrahim-traore",
+    "vector": {
+      "estrutura": 14.0,
+      "representacao": 26.9,
+      "poder": 83.8,
+      "imigracao": 43.2,
+      "diplomacia": 87.4,
+      "intervencao": 38.8,
+      "economia": 84.6,
+      "controle": 86.5,
+      "comercio": 89.5,
+      "religiao": 47.4,
+      "moral": 26.8,
+      "tecnologia": 60.6
     }
   }
 ]
