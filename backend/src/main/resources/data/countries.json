@@ -3156,7 +3156,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3173,7 +3174,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tunisia.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3190,7 +3192,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Uzbekistan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3239,7 +3242,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Sudan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3256,7 +3260,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Somalia.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3273,7 +3278,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Maldives.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3290,7 +3296,8 @@
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Azerbaijan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
     "religions": [
-      "islam"
+      "islam",
+      "only"
     ]
   },
   {
@@ -3628,6 +3635,237 @@
     "religions": [
       "catholic",
       "protestant"
+    ]
+  },
+  {
+    "id": "costa-do-marfim",
+    "name": "Costa do Marfim",
+    "category": "República presidencialista pós-conflito",
+    "description": "República presidencialista da África Ocidental, a Costa do Marfim é governada por Alassane Ouattara, tem economia de cacau e café, saiu das guerras civis de 2002 e 2011, convive com divisão entre norte muçulmano e sul cristão e mantém laços estreitos com a França.",
+    "flagPath": "/countries/flags/costa-do-marfim.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Côte_d'Ivoire.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "camaroes",
+    "name": "Camarões",
+    "category": "Autocracia presidencialista bilíngue",
+    "description": "República presidencialista bilíngue, os Camarões são governados por Paul Biya desde 1982, com poder centralizado, guerra separatista nas regiões anglófonas, ameaça do Boko Haram no norte e economia de petróleo e cacau.",
+    "flagPath": "/countries/flags/camaroes.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cameroon.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "turcomenistao",
+    "name": "Turcomenistão",
+    "category": "Ditadura neutra de culto à personalidade",
+    "description": "Ditadura fechada da Ásia Central, o Turcomenistão é governado pela família Berdimuhamedow, com culto à personalidade, controle total da imprensa, neutralidade permanente, economia de gás natural e dependência quase total da China como compradora.",
+    "flagPath": "/countries/flags/turcomenistao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkmenistan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": ["islam", "only"]
+  },
+  {
+    "id": "malta",
+    "name": "Malta",
+    "category": "Democracia parlamentar insular católica",
+    "description": "Pequena república insular da União Europeia, Malta tem democracia parlamentar bipartidária, forte influência católica, economia de turismo, jogos e serviços financeiros, neutralidade militar, divórcio legalizado em 2011 e aborto ainda muito restrito.",
+    "flagPath": "/countries/flags/malta.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Malta.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "moldavia",
+    "name": "Moldávia",
+    "category": "Democracia parlamentar dividida",
+    "description": "República parlamentarista entre a Romênia e a Ucrânia, a Moldávia é candidata à União Europeia, tem a Transnístria separatista apoiada pela Rússia, economia pobre dependente de remessas, divisão entre eixos pró-europeu e pró-russo e forte influência ortodoxa.",
+    "flagPath": "/countries/flags/moldavia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Moldova.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "montenegro",
+    "name": "Montenegro",
+    "category": "República parlamentar candidata à UE",
+    "description": "Pequeno país dos Balcãs independente da Sérvia desde 2006, Montenegro é membro da OTAN, candidato à União Europeia e usa o euro, saiu do longo domínio de Djukanovic e vive a disputa entre identidade montenegrina e sérvia e o papel da Igreja Ortodoxa Sérvia.",
+    "flagPath": "/countries/flags/montenegro.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "macedonia-do-norte",
+    "name": "Macedônia do Norte",
+    "category": "República parlamentar multiétnica",
+    "description": "República parlamentar dos Balcãs, a Macedônia do Norte mudou de nome em 2019 para encerrar a disputa com a Grécia, entrou na OTAN em 2020 e negocia a adesão à UE, travada pela Bulgária, com 25% de albaneses e economia de baixa renda.",
+    "flagPath": "/countries/flags/macedonia-do-norte.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Macedonia.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "reino-da-bulgaria",
+    "name": "Reino da Bulgária",
+    "category": "Monarquia constitucional autoritária",
+    "description": "Reino independente de 1908 a 1946, a Bulgária dos czares Ferdinand e Boris III lutou nas guerras balcânicas e mundiais, aliou-se ao Eixo em 1941, protegeu os judeus búlgaros da deportação e foi abolida pelo regime comunista em 1946.",
+    "flagPath": "/countries/flags/reino-da-bulgaria.png",
+    "historical": true,
+    "period": "1908–1946",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bulgaria.svg",
+    "flagNote": "Tricolor búlgaro branco-verde-vermelho, usado desde 1879 e durante o Reino da Bulgária (1908–1946); o brasão do período é diferente do atual.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "jamaica",
+    "name": "Jamaica",
+    "category": "Monarquia parlamentar da Commonwealth",
+    "description": "Democracia parlamentar da Commonwealth no Caribe, a Jamaica tem o rei britânico como chefe de Estado, alternância entre dois partidos, forte cultura religiosa e do reggae, economia de turismo e remessas e altas taxas de violência urbana.",
+    "flagPath": "/countries/flags/jamaica.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Jamaica.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "guiana",
+    "name": "Guiana",
+    "category": "República presidencialista petrolífera em ascensão",
+    "description": "República presidencialista sul-americana de língua inglesa, a Guiana vive um boom do petróleo offshore desde 2019, com crescimento entre os maiores do mundo, política dividida entre indo-guianenses e afro-guianenses e disputa por Essequibo com a Venezuela.",
+    "flagPath": "/countries/flags/guiana.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Guyana.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "suriname",
+    "name": "Suriname",
+    "category": "República parlamentar multiétnica",
+    "description": "Ex-colônia holandesa na América do Sul, o Suriname é uma república parlamentarista multiétnica de hindustanis, crioulos, javaneses e marrons, com partidos de base étnica, herança do ditador Bouterse e economia de ouro, petróleo offshore e dívida alta.",
+    "flagPath": "/countries/flags/suriname.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Suriname.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "califado-omiada",
+    "name": "Califado Omíada",
+    "category": "Califado dinástico árabe",
+    "description": "Primeiro califado dinástico do islã, com capital em Damasco, o Califado Omíada governou de 661 a 750, expandiu-se da Espanha à Índia, arabizou a administração e a moeda e privilegiou a elite árabe sobre os convertidos, até ser derrubado pelos abássidas.",
+    "flagPath": "/countries/flags/califado-omiada.png",
+    "historical": true,
+    "period": "661–750",
+    "vector": null,
+    "flagKind": "historical-banner",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Umayyad_Flag.svg",
+    "flagNote": "Estandarte branco atribuído aos omíadas; não havia bandeira nacional no sentido moderno.",
+    "religions": [
+      "islam",
+      "only"
+    ]
+  },
+  {
+    "id": "primeira-republica-francesa",
+    "name": "Primeira República Francesa",
+    "category": "República revolucionária jacobina",
+    "description": "Proclamada em 1792 após a queda da monarquia, a Primeira República Francesa executou Luís XVI, viveu o Terror jacobino sob o Comitê de Salvação Pública, descristianizou o país, travou guerras revolucionárias e terminou com o Império de Napoleão em 1804.",
+    "flagPath": "/countries/flags/primeira-republica-francesa.png",
+    "historical": true,
+    "period": "1792–1804",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_France_(1794–1815).svg",
+    "flagNote": "Tricolor francês adotado em 1794 e usado pela República e depois pelo Império.",
+    "religions": []
+  },
+  {
+    "id": "polonia-lituania",
+    "name": "Comunidade Polaco-Lituana",
+    "category": "República nobiliárquica de rei eleito",
+    "description": "União de Polônia e Lituânia de 1569 a 1795, a Comunidade Polaco-Lituana foi uma república de nobres com rei eleito, Sejm e liberum veto, tolerância religiosa incomum na época e vasto território multiétnico, até ser dividida por Rússia, Prússia e Áustria.",
+    "flagPath": "/countries/flags/polonia-lituania.png",
+    "historical": true,
+    "period": "1569–1795",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Polish-Lithuanian_Commonwealth_(2-3).svg",
+    "flagNote": "Bandeira usada como referência visual do período; a Comunidade não teve uma bandeira nacional oficial no sentido moderno.",
+    "religions": [
+      "catholic",
+      "orthodox"
     ]
   }
 ]
