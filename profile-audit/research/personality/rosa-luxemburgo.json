@@ -1,0 +1,169 @@
+{
+  "id": "rosa-luxemburgo",
+  "researchedAt": "2026-10-08",
+  "scope": "Rosa Luxemburg's own writings and documented political activity, 1893-1919 (SDKPiL, SPD, Spartacus League, KPD). Positions on modern policy questions are inferred from these texts and flagged as inference in the persona briefs; later Luxemburgist currents are not attributed to her.",
+  "sources": [
+    {
+      "id": "reform",
+      "date": "1899",
+      "url": "https://www.marxists.org/archive/luxemburg/1900/reform-revolution/",
+      "note": "Reform or Revolution: rejects Bernstein's revisionism; capitalism cannot be reformed away, the goal is socialization of production."
+    },
+    {
+      "id": "massstrike",
+      "date": "1906",
+      "url": "https://www.marxists.org/archive/luxemburg/1906/mass-strike/",
+      "note": "The Mass Strike, the Political Party and the Trade Unions: spontaneous mass action and initiative from below over party-directed tactics."
+    },
+    {
+      "id": "nationalquestion",
+      "date": "1909",
+      "url": "https://www.marxists.org/archive/luxemburg/1909/national-question/",
+      "note": "The National Question: rejects the right of nations to self-determination and federalism as bourgeois slogans; defends democratic local self-government within a centralized state."
+    },
+    {
+      "id": "churches",
+      "date": "1905",
+      "url": "https://www.marxists.org/archive/luxemburg/1905/misc/socialism-churches.htm",
+      "note": "Socialism and the Churches: the institutional Church sides with the exploiters; separation of Church and state, freedom of conscience as a private matter."
+    },
+    {
+      "id": "suffrage",
+      "date": "1912",
+      "url": "https://www.marxists.org/archive/luxemburg/1912/05/12.htm",
+      "note": "Women's Suffrage and Class Struggle: full political equality for women as part of the proletarian struggle."
+    },
+    {
+      "id": "accumulation",
+      "date": "1913",
+      "url": "https://www.marxists.org/archive/luxemburg/1913/accumulation-capital/",
+      "note": "The Accumulation of Capital: imperialism as capital's expansion into non-capitalist regions; critique of militarism and protective tariffs as instruments of accumulation."
+    },
+    {
+      "id": "junius",
+      "date": "1915",
+      "url": "https://www.marxists.org/archive/luxemburg/1915/junius/",
+      "note": "The Junius Pamphlet: opposes the First World War and national defence as imperialist; international proletarian solidarity over national interest."
+    },
+    {
+      "id": "russianrevolution",
+      "date": "1918",
+      "url": "https://www.marxists.org/archive/luxemburg/1918/russian-revolution/",
+      "note": "The Russian Revolution: criticizes the Bolsheviks' dissolution of the Constituent Assembly and suppression of freedoms; 'freedom is always freedom for the one who thinks differently'."
+    },
+    {
+      "id": "spartacus",
+      "date": "1918-12-14",
+      "url": "https://www.marxists.org/archive/luxemburg/1918/12/14.htm",
+      "note": "What Does the Spartacus League Want?: workers' and soldiers' councils, a unitary socialist republic, expropriation of banks, industry and large estates, a people's militia, abolition of the death penalty."
+    },
+    {
+      "id": "portrait",
+      "date": "c. 1911",
+      "url": "https://commons.wikimedia.org/wiki/File:Rosa_Luxemburg_(cropped).jpg",
+      "note": "Public domain photograph, unknown photographer; downloaded as a 500px Commons thumbnail and compressed with optimize:images."
+    }
+  ],
+  "axes": {
+    "estrutura": {
+      "sources": [
+        "nationalquestion",
+        "spartacus"
+      ],
+      "evidence": "Opposed federalism and national autonomy as bourgeois; the Spartacist programme called for a unitary socialist republic replacing the German states. Supported democratic local self-government, so not absolute centralism."
+    },
+    "representacao": {
+      "sources": [
+        "russianrevolution",
+        "spartacus"
+      ],
+      "evidence": "Council democracy with elections, free press and freedom of assembly; criticized Bolshevik one-party rule. Preferred councils to bourgeois parliamentarism, but not autocracy."
+    },
+    "poder": {
+      "sources": [
+        "russianrevolution",
+        "spartacus"
+      ],
+      "evidence": "Defended civil liberties, abolition of the death penalty and arming the workers instead of police. Repeatedly imprisoned by the Imperial state."
+    },
+    "imigracao": {
+      "sources": [
+        "nationalquestion",
+        "junius"
+      ],
+      "evidence": "Radical internationalist who rejected nationalism and fought forced Germanization of Poles. No direct writing on immigration policy; answers infer from internationalism."
+    },
+    "diplomacia": {
+      "sources": [
+        "junius",
+        "spartacus"
+      ],
+      "evidence": "Anti-militarist and anti-war, but advocated a people's militia and revolutionary violence, so not absolute pacifism."
+    },
+    "intervencao": {
+      "sources": [
+        "junius"
+      ],
+      "evidence": "Rejected national interest and great-power politics as imperialism; proletarian internationalism rather than isolationism."
+    },
+    "economia": {
+      "sources": [
+        "reform",
+        "spartacus"
+      ],
+      "evidence": "Socialization of the means of production and expropriation of large estates under workers' control."
+    },
+    "controle": {
+      "sources": [
+        "reform",
+        "spartacus"
+      ],
+      "evidence": "A planned socialist economy coordinated by workers' councils; rejected state support for capitalist cartels."
+    },
+    "comercio": {
+      "sources": [
+        "accumulation"
+      ],
+      "evidence": "Opposed agrarian tariffs and cartel protectionism as burdens on workers and tools of militarism, while denouncing imperialist capital export. Rejects both protectionism and liberal free-trade ideology."
+    },
+    "religiao": {
+      "sources": [
+        "churches"
+      ],
+      "evidence": "Atheist of secular Jewish background; separation of Church and state, faith left to private conscience."
+    },
+    "moral": {
+      "sources": [
+        "suffrage"
+      ],
+      "evidence": "Championed women's suffrage and emancipation and rejected the bourgeois family as a pillar of class order. Modern questions such as same-sex marriage are inferred, not documented."
+    },
+    "tecnologia": {
+      "sources": [
+        "reform",
+        "accumulation"
+      ],
+      "evidence": "Industrial development as the material basis of socialism, combined with documented interest in botany and critique of colonial destruction of non-capitalist societies."
+    }
+  },
+  "religionsRationale": "Empty: atheist with no religious affiliation in public life; Jewish origin played no role in her politics. religiao is 88.1, above the 35 threshold.",
+  "book": {
+    "title": "Reform or Revolution",
+    "year": 1899,
+    "reason": "Her best-known political work, published in Brazil as Reforma ou Revolução?."
+  },
+  "auditReview": {
+    "neutralAnswers": 11,
+    "totalAnswers": 240,
+    "archetype": {
+      "sociedade": "D",
+      "poder": "E",
+      "economia": "A",
+      "mundo": "E",
+      "tecnologia": "D"
+    },
+    "validation": "Passed form, neutral and religion checks. Content check flags duplicates: Karl Liebknecht 98.6% and Albert Einstein 97.2%, above the 97% block threshold; Alex Williams 96.8% warning.",
+    "nearestProfileReview": "Compared with Liebknecht axis by axis: largest differences are trade (33.6 vs 50.0, her opposition to tariffs), diplomacy (14.7 vs 5.0), planning (83.0 vs 90.0) and intervention (87.6 vs 82.5). The two co-led the Spartacus League, so close vectors are expected. No answers were changed to engineer distance.",
+    "limits": "Immigration, modern moral questions and technology are partly inferred from her general internationalism, feminism and Marxism, as noted in the persona briefs. Simulated answers, not a survey she completed."
+  }
+}
