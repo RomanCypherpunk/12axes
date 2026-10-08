@@ -3683,7 +3683,10 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkmenistan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": ["islam", "only"]
+    "religions": [
+      "islam",
+      "only"
+    ]
   },
   {
     "id": "malta",
@@ -3865,6 +3868,176 @@
     "flagNote": "Bandeira usada como referência visual do período; a Comunidade não teve uma bandeira nacional oficial no sentido moderno.",
     "religions": [
       "catholic",
+      "orthodox"
+    ]
+  },
+  {
+    "id": "imperio-cajar",
+    "name": "Império Cajar",
+    "category": "Monarquia absolutista-teocrática",
+    "description": "Império dinástico persa centrado na autoridade do Xá e no clero xiita, marcado por reformas defensivas, disputas tribais e crescente pressão colonial britânica e russa.",
+    "flagPath": "/countries/flags/imperio-cajar.png",
+    "historical": true,
+    "period": "1789–1925",
+    "vector": null,
+    "religions": [
+      "islam"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:State_flag_of_Persia_(1907%E2%80%931933).svg",
+    "flagNote": "Bandeira de Estado da Pérsia sob a dinastia Cajar.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-da-sardenha",
+    "name": "Reino da Sardenha",
+    "category": "Monarquia constitucional-reformista",
+    "description": "Estado piemontês liderado pela Casa de Saboia que adotou o Estatuto Albertino, modernizou a infraestrutura e a diplomacia e liderou o processo de unificação da Itália.",
+    "flagPath": "/countries/flags/reino-da-sardenha.png",
+    "historical": true,
+    "period": "1720–1861",
+    "vector": null,
+    "religions": [
+      "catholic"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Civil_Flag_and_Civil_Ensign_of_the_Kingdom_of_Sardinia_(1816-1848).svg",
+    "flagNote": "Bandeira civil e pavilhão do Reino da Sardenha.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "grao-ducado-da-toscana",
+    "name": "Grão-Ducado da Toscana",
+    "category": "Monarquia ilustrada-reformista",
+    "description": "Estado italiano sob a dinastia Habsburgo-Lorena, pioneiro na abolição da pena de morte, com administração mercantil moderada e forte tradição cultural renascentista.",
+    "flagPath": "/countries/flags/grao-ducado-da-toscana.png",
+    "historical": true,
+    "period": "1569–1859",
+    "vector": null,
+    "religions": [
+      "catholic"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Grand_Duchy_of_Tuscany_(1840).svg",
+    "flagNote": "Bandeira de Estado do Grão-Ducado da Toscana.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-da-baviera",
+    "name": "Reino da Baviera",
+    "category": "Monarquia constitucional-católica",
+    "description": "Reino do sul da Alemanha aliado à Confederação Germânica e depois integrado ao Império Alemão, caracterizado por identidade católica forte, conservadorismo e autonomia regional.",
+    "flagPath": "/countries/flags/reino-da-baviera.png",
+    "historical": true,
+    "period": "1805–1918",
+    "vector": null,
+    "religions": [
+      "catholic"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bavaria_(striped).svg",
+    "flagNote": "Bandeira listrada tradicional do Reino da Baviera.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-da-saxonia",
+    "name": "Reino da Saxônia",
+    "category": "Monarquia constitucional-industrial",
+    "description": "Estado germânico luterano de vanguarda fabril e mineira, com dinastia católica, que preservou tradições parlamentares dentro da Confederação Germânica e do Império Alemão.",
+    "flagPath": "/countries/flags/reino-da-saxonia.png",
+    "historical": true,
+    "period": "1806–1918",
+    "vector": null,
+    "religions": [
+      "protestant"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flagge_K%C3%B6nigreich_Sachsen_(1815-1918).svg",
+    "flagNote": "Bandeira civil do Reino da Saxônia.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-de-napoles",
+    "name": "Reino de Nápoles",
+    "category": "Monarquia absolutista-tradicionalista",
+    "description": "Reino borbônico do sul da Itália de base agrária e forte influência católica popular, marcado por resistência contrarrevolucionária e centralização régia pré-unificação.",
+    "flagPath": "/countries/flags/reino-de-napoles.png",
+    "historical": true,
+    "period": "1282–1816",
+    "vector": null,
+    "religions": [
+      "catholic"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kingdom_of_the_Two_Sicilies_(1860).svg",
+    "flagNote": "Bandeira histórica do Reino de Nápoles e Duas Sicílias.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-de-italia",
+    "name": "Reino de Itália",
+    "category": "Monarquia parlamentarista-unificada",
+    "description": "Estado italiano unificado pela Casa de Saboia sob o Estatuto Albertino, com centralização administrativa, parlamentarismo liberal e aspirações de grande potência mediterrânea.",
+    "flagPath": "/countries/flags/reino-de-italia.png",
+    "historical": true,
+    "period": "1861–1946",
+    "vector": null,
+    "religions": [
+      "catholic"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy_(1861%E2%80%931946).svg",
+    "flagNote": "Bandeira do Reino de Itália com o escudo da Casa de Saboia.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-da-dinamarca-e-noruega",
+    "name": "Reino da Dinamarca e Noruega",
+    "category": "Monarquia absolutista-luterana",
+    "description": "União pessoal e real nórdica com corte em Copenhague, Igreja Estatal Luterana, marinha mercante mercantilista e controle estratégico dos estreitos bálticos.",
+    "flagPath": "/countries/flags/reino-da-dinamarca-e-noruega.png",
+    "historical": true,
+    "period": "1537–1814",
+    "vector": null,
+    "religions": [
+      "protestant"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+    "flagNote": "Dannebrog, bandeira do Reino da Dinamarca e Noruega.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "eleitorado-de-hanover",
+    "name": "Eleitorado de Hanôver",
+    "category": "Monarquia dinástica-luterana",
+    "description": "Principado eleitoral do Sacro Império em união pessoal com a Coroa britânica, protestante e comercialmente ativo, influenciado pela diplomacia e pelo Iluminismo alemão.",
+    "flagPath": "/countries/flags/eleitorado-de-hanover.png",
+    "historical": true,
+    "period": "1692–1814",
+    "vector": null,
+    "religions": [
+      "protestant"
+    ],
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Hanover_(1692).svg",
+    "flagNote": "Bandeira do Eleitorado de Hanôver com o cavalo saxão.",
+    "flagKind": "historical-flag"
+  },
+  {
+    "id": "reino-da-grecia",
+    "name": "Reino da Grécia",
+    "category": "Monarquia parlamentarista-ortodoxa",
+    "description": "Estado helênico sob as dinastias Wittelsbach e Glücksburg, forjado na independência contra os otomanos, com centralismo régio, forte fé ortodoxa e expansão irredentista da Megáli Idéa.",
+    "flagPath": "/countries/flags/reino-da-grecia.png",
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:State_Flag_of_Greece_(1863-1924_and_1935-1973).svg",
+    "flagNote": "Bandeira de Estado do Reino da Grécia com a cruz branca sobre azul e a coroa real.",
+    "historical": true,
+    "period": "1832–1924, 1935–1973",
+    "vector": null,
+    "religions": [
       "orthodox"
     ]
   }
