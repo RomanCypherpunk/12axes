@@ -1,8 +1,8 @@
-# Novas personalidades n?rdicas ? 2026-10-05
+# Novas personalidades nórdicas ? 2026-10-05
 
-Cinco perfis com pesquisa hist?rica, auditoria independente das 240 perguntas e cinco escolhas de arqu?tipo. Vetores calculados por `profile_vector.py`; matches calculados por `compatibility.py`.
+Cinco perfis com pesquisa histórica, auditoria independente das 240 perguntas e cinco escolhas de arquétipo. Vetores calculados por `profile_vector.py`; matches calculados por `compatibility.py`.
 
-## Compatibilidade com Social-Democracia N?rdica
+## Compatibilidade com Social-Democracia Nórdica
 
 | Personalidade | Categoria | Compatibilidade |
 |---|---|---|
@@ -12,20 +12,20 @@ Cinco perfis com pesquisa hist?rica, auditoria independente das 240 perguntas e 
 | Gösta Rehn | economista | 93.3% |
 | Einar Gerhardsen | politico | 81.8% |
 
-Os percentuais refletem todas as posi??es estimadas no quiz, incluindo costumes, defesa e centraliza??o. A atua??o social-democrata hist?rica n?o garante que a ideologia n?rdica seja o primeiro match. Quest?es contempor?neas sem posi??o diretamente documentada foram tratadas como extrapola??es nos briefs arquivados.
+Os percentuais refletem todas as posições estimadas no quiz, incluindo costumes, defesa e centralização. A atuação social-democrata histórica não garante que a ideologia nórdica seja o primeiro match. Questões contemporâneas sem posição diretamente documentada foram tratadas como extrapolações nos briefs arquivados.
 
 ## Tage Erlander (`tage-erlander`)
 
 Primeiro-ministro sueco de 1946 a 1969, Erlander ampliou previdência, saúde e educação públicas numa economia mista. Combinou negociação sindical, modernização industrial e neutralidade internacional com defesa militar forte.
 
 - Livro: *Tage Erlander 1940–1949* (1973); EN: *Tage Erlander 1940–1949*.
-- Religi?es: `[]`; perfil pol?tico/econ?mico secular, sem causa confessional p?blica que justifique filtro religioso.
-- Arqu?tipos: sociedade=D, poder=C, economia=C, mundo=D, tecnologia=D.
+- Religiões: `[]`; perfil político/econômico secular, sem causa confessional pública que justifique filtro religioso.
+- Arquétipos: sociedade=D, poder=C, economia=C, mundo=D, tecnologia=D.
 - Retrato: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tage_Erlander_1952.jpg).
 - Vetor: estrutura=30.7; representacao=77.5; poder=53.2; imigracao=42.6; diplomacia=45.0; intervencao=63.3; economia=77.0; controle=71.1; comercio=29.4; religiao=70.2; moral=52.6; tecnologia=64.1.
 - Personalidades: Kalevi Sorsa 96.2%; William Beveridge 94.4%.
 - Ideologias: Liberalismo Keynesiano 94.4%; Social-Desenvolvimentismo 93.5%.
-- Pa?ses: Chile 93.6%; República de Weimar 92.3%.
+- Países: Chile 93.6%; República de Weimar 92.3%.
 
 ### Justificativas por eixo
 
@@ -47,13 +47,13 @@ Primeiro-ministro sueco de 1946 a 1969, Erlander ampliou previdência, saúde e 
 Primeiro-ministro sueco, Hansson promoveu o folkhemmet, ampliando proteção social e emprego por reformas parlamentares. Combinou economia mista, compromisso com agricultores e empresários e neutralidade armada durante a Segunda Guerra.
 
 - Livro: *Demokrati: tal och uppsatser* (1935); EN: *Demokrati: tal och uppsatser*.
-- Religi?es: `[]`; perfil pol?tico/econ?mico secular, sem causa confessional p?blica que justifique filtro religioso.
-- Arqu?tipos: sociedade=E, poder=C, economia=C, mundo=D, tecnologia=D.
+- Religiões: `[]`; perfil político/econômico secular, sem causa confessional pública que justifique filtro religioso.
+- Arquétipos: sociedade=E, poder=C, economia=C, mundo=D, tecnologia=D.
 - Retrato: [Wikimedia Commons / Wikipédia](https://commons.wikimedia.org/wiki/File:Per_Albin_Hansson,_statsminister,_porträttbild_1935.jpg).
 - Vetor: estrutura=33.1; representacao=74.0; poder=52.0; imigracao=59.0; diplomacia=33.1; intervencao=64.5; economia=66.3; controle=75.9; comercio=60.3; religiao=69.4; moral=29.8; tecnologia=64.1.
 - Personalidades: William Beveridge 95.6%; Einar Gerhardsen 95.5%.
 - Ideologias: Nacional-Desenvolvimentismo 93.5%; Tridemismo 93.0%.
-- Pa?ses: México de Cárdenas 92.3%; República de Weimar 92.1%.
+- Países: México de Cárdenas 92.3%; República de Weimar 92.1%.
 
 ### Justificativas por eixo
 
@@ -75,13 +75,13 @@ Primeiro-ministro sueco, Hansson promoveu o folkhemmet, ampliando proteção soc
 Primeiro-ministro social-democrata finlandês, Sorsa ampliou serviços públicos e proteção social, promoveu acordos entre governo, sindicatos e empresas e conciliou integração comercial europeia com neutralidade na Guerra Fria.
 
 - Livro: *Kansanvallan kysymyksiä* (1974); EN: *Kansanvallan kysymyksiä*.
-- Religi?es: `[]`; perfil pol?tico/econ?mico secular, sem causa confessional p?blica que justifique filtro religioso.
-- Arqu?tipos: sociedade=D, poder=C, economia=C, mundo=C, tecnologia=C.
+- Religiões: `[]`; perfil político/econômico secular, sem causa confessional pública que justifique filtro religioso.
+- Arquétipos: sociedade=D, poder=C, economia=C, mundo=C, tecnologia=C.
 - Retrato: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kalevi_Sorsa.jpg).
 - Vetor: estrutura=40.2; representacao=82.3; poder=50.8; imigracao=35.5; diplomacia=26.4; intervencao=69.6; economia=75.8; controle=68.8; comercio=47.2; religiao=70.2; moral=63.3; tecnologia=53.6.
 - Personalidades: B. R. Ambedkar 96.7%; John Rawls 96.6%.
 - Ideologias: Social-Democracia 97.9%; Social-Desenvolvimentismo 97.5%.
-- Pa?ses: Islândia 95.0%; Noruega 94.9%.
+- Países: Islândia 95.0%; Noruega 94.9%.
 
 ### Justificativas por eixo
 
@@ -103,13 +103,13 @@ Primeiro-ministro social-democrata finlandês, Sorsa ampliou serviços públicos
 Economista sueco, Rehn cocriou o modelo Rehn–Meidner, conciliando pleno emprego, salários solidários e estabilidade de preços. Defendeu qualificação profissional, proteção social e modernização produtiva numa economia mista.
 
 - Livro: *Full sysselsättning utan inflation: skrifter i urval* (1988); EN: *Full sysselsättning utan inflation: skrifter i urval*.
-- Religi?es: `[]`; perfil pol?tico/econ?mico secular, sem causa confessional p?blica que justifique filtro religioso.
-- Arqu?tipos: sociedade=D, poder=C, economia=C, mundo=C, tecnologia=D.
+- Religiões: `[]`; perfil político/econômico secular, sem causa confessional pública que justifique filtro religioso.
+- Arquétipos: sociedade=D, poder=C, economia=C, mundo=C, tecnologia=D.
 - Retrato: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gosta_rehn_(cropped).jpg).
 - Vetor: estrutura=52.1; representacao=76.3; poder=35.3; imigracao=31.9; diplomacia=25.2; intervencao=57.7; economia=73.4; controle=58.0; comercio=23.4; religiao=71.4; moral=64.5; tecnologia=66.5.
 - Personalidades: Yamandú Orsi 96.7%; Carlo Rosselli 96.3%.
 - Ideologias: Liberalismo Keynesiano 95.7%; Socialismo Liberal 95.6%.
-- Pa?ses: Islândia 96.2%; Massachusetts (Estados Unidos) 96.2%.
+- Países: Islândia 96.2%; Massachusetts (Estados Unidos) 96.2%.
 
 ### Justificativas por eixo
 
@@ -131,13 +131,13 @@ Economista sueco, Rehn cocriou o modelo Rehn–Meidner, conciliando pleno empreg
 Primeiro-ministro trabalhista norueguês, Gerhardsen reconstruiu o país com planejamento econômico, serviços públicos e negociação sindical. Consolidou a democracia parlamentar e aderiu à OTAN, rejeitando armas nucleares em solo norueguês.
 
 - Livro: *Tillitsmannen* (1931); EN: *The Representative: A Handbook for Employee Representatives*.
-- Religi?es: `[]`; perfil pol?tico/econ?mico secular, sem causa confessional p?blica que justifique filtro religioso.
-- Arqu?tipos: sociedade=D, poder=C, economia=B, mundo=B, tecnologia=D.
+- Religiões: `[]`; perfil político/econômico secular, sem causa confessional pública que justifique filtro religioso.
+- Arquétipos: sociedade=D, poder=C, economia=B, mundo=B, tecnologia=D.
 - Retrato: [Wikimedia Commons / Oslo Museum](https://commons.wikimedia.org/wiki/File:Einar_Gerhardsen_1945.jpeg).
 - Vetor: estrutura=29.5; representacao=74.0; poder=60.3; imigracao=45.0; diplomacia=41.0; intervencao=42.4; economia=82.2; controle=84.1; comercio=55.0; religiao=70.2; moral=38.3; tecnologia=65.3.
 - Personalidades: Franklin D. Roosevelt 95.8%; Per Albin Hansson 95.5%.
 - Ideologias: Nacional-Desenvolvimentismo 95.8%; Tridemismo 95.4%.
-- Pa?ses: México de Cárdenas 92.6%; França 90.7%.
+- Países: México de Cárdenas 92.6%; França 90.7%.
 
 ### Justificativas por eixo
 
@@ -154,12 +154,12 @@ Primeiro-ministro trabalhista norueguês, Gerhardsen reconstruiu o país com pla
 - **moral**: O reformismo social e a participação feminina coexistem com normas familiares e sexuais do pós-guerra, não com o conjunto completo do progressismo cultural contemporâneo. Para práticas modernas, infere-se mudança gradual e dignidade individual, evitando supor defesa histórica de poliamor, adoção LGBT ou aborto irrestrito.
 - **tecnologia**: A reconstrução industrial, energia hidrelétrica e modernização produtiva tornam a tecnologia um instrumento de progresso material. Essa confiança aceita soluções médicas e produtivas, mas não implica aperfeiçoamento humano ilimitado; preocupações ambientais coexistem com uso de recursos e crescimento.
 
-## Verifica??o e arquivos
+## Verificação e arquivos
 
 - As cinco auditorias passaram no `validate.py`; avisos de proximidade foram revisados. Nenhum par entre os cinco novos perfis atingiu 97%.
 - Retratos reais otimizados e inspecionados.
 - Metadados PT/EN, vetores e livros em `backend/src/main/resources/data/`.
 - Respostas permanentes em `profile-audit/answers/personality/{id}.json`; STATE atualizado para 454 personalidades.
 - Retratos em `frontend/public/personalities/portraits/{id}.jpg`.
-- Testes Maven: resultado registrado ap?s conclus?o.
-- Verifica??o interativa da interface indispon?vel: runtime retornou lista vazia de navegadores.
+- Testes Maven: resultado registrado após conclusão.
+- Verificação interativa da interface indisponível: runtime retornou lista vazia de navegadores.

@@ -1,4 +1,4 @@
-Voc? est? auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Filippo Brunelleschi" (cat?logo: figura hist?rica/p?blica) nos 12 eixos pol?ticos do projeto 12axes. Avalie ESTE perfil sozinho ? n?o imagine respostas dadas a outros perfis.
+Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "Filippo Brunelleschi" (catálogo: figura histórica/pública) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho ? não imagine respostas dadas a outros perfis.
 
 Dados curados deste perfil:
 id: filippo-brunelleschi
@@ -6,18 +6,18 @@ name: Filippo Brunelleschi
 role: Arquiteto, engenheiro e escultor
 category: intelectual
 lifespan: 1377?1446
-description: Arquiteto e engenheiro florentino, projetou a c?pula de Santa Maria del Fiore e o Ospedale degli Innocenti. Atuou em encomendas de guildas e institui??es c?vicas; n?o h? programa pol?tico claro nem exerc?cio conhecido de cargo estatal.
+description: Arquiteto e engenheiro florentino, projetou a cúpula de Santa Maria del Fiore e o Ospedale degli Innocenti. Atuou em encomendas de guildas e instituições cívicas; não há programa político claro nem exercício conhecido de cargo estatal.
 
-CONTEXTO E LIMITES: N?o deduza posi??es pol?ticas da identidade de seus patronos ou das comiss?es recebidas. N?o h? evid?ncia de uma doutrina pol?tica pessoal, de um programa sobre Estado ou de posi??es em pol?ticas modernas. Trate cada pergunta como contrafactual: use somente o que ? razoavelmente infer?vel da trajet?ria documentada e da perspectiva de um mestre artes?o/engenheiro florentino do s?culo XV; deixe indiferen?a genu?na quando a quest?o n?o toca suas preocupa??es conhecidas. N?o transforme aus?ncia de evid?ncia em prefer?ncia ideol?gica. N?o procure fazer o perfil parecer coerente com qualquer ideologia. Diferen?a em rela??o aos demais renascentistas propostos: Brunelleschi ? inclu?do pela engenharia, arquitetura e organiza??o pr?tica de obras c?vicas, sem base para atribuir-lhe teoria pol?tica ou programa de governo.
+CONTEXTO E LIMITES: Não deduza posições políticas da identidade de seus patronos ou das comissões recebidas. Não há evidência de uma doutrina política pessoal, de um programa sobre Estado ou de posições em políticas modernas. Trate cada pergunta como contrafactual: use somente o que ? razoavelmente inferível da trajetória documentada e da perspectiva de um mestre artesão/engenheiro florentino do século XV; deixe indiferença genuína quando a questão não toca suas preocupações conhecidas. Não transforme ausência de evidência em preferência ideológica. Não procure fazer o perfil parecer coerente com qualquer ideologia. Diferença em relação aos demais renascentistas propostos: Brunelleschi ? incluído pela engenharia, arquitetura e organização prática de obras cívicas, sem base para atribuir-lhe teoria política ou programa de governo.
 
-METODOLOGIA (obrigat?ria):
-- Para CADA eixo, escreva personaBrief de 1-2 frases ligando fatos espec?ficos acima ao eixo; registre explicitamente os limites de evid?ncia pertinentes.
-- Responda as 20 perguntas de cada eixo individualmente com DT, D, N, C ou CT. N significa indiferen?a genu?na, n?o mera falta de documenta??o. N?o force certeza onde ela n?o existe, mas responda pelo melhor ju?zo hist?rico poss?vel.
-- N?o escolha valor-alvo para nenhum eixo; cada pergunta ? independente. Responda pelo id, n?o pela ordem num?rica.
-- `estrutura` mede descentraliza??o/federalismo/secess?o vs. centraliza??o; `representacao` mede democracia vs. autocracia. N?o use um eixo como atalho para o outro.
-- Conte os N antes de gravar; evite neutros por conveni?ncia, mas n?o invente convic??es para baixar a contagem.
+METODOLOGIA (obrigatória):
+- Para CADA eixo, escreva personaBrief de 1-2 frases ligando fatos específicos acima ao eixo; registre explicitamente os limites de evidência pertinentes.
+- Responda as 20 perguntas de cada eixo individualmente com DT, D, N, C ou CT. N significa indiferença genuína, não mera falta de documentação. Não force certeza onde ela não existe, mas responda pelo melhor juízo histórico possível.
+- Não escolha valor-alvo para nenhum eixo; cada pergunta ? independente. Responda pelo id, não pela ordem numérica.
+- `estrutura` mede descentralização/federalismo/secessão vs. centralização; `representacao` mede democracia vs. autocracia. Não use um eixo como atalho para o outro.
+- Conte os N antes de gravar; evite neutros por conveniência, mas não invente convicções para baixar a contagem.
 
-SA?DA: grave JSON estrito, sem markdown, em profile-audit/subagent-out/personality/filippo-brunelleschi.json. Formato: cada um dos 12 eixos deve conter personaBrief e answers com exatamente 20 IDs; inclua archetype com uma letra por pergunta.
+SAÍDA: grave JSON estrito, sem markdown, em profile-audit/subagent-out/personality/filippo-brunelleschi.json. Formato: cada um dos 12 eixos deve conter personaBrief e answers com exatamente 20 IDs; inclua archetype com uma letra por pergunta.
 
 === PERGUNTAS POR EIXO ===
 
