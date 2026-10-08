@@ -3239,5 +3239,84 @@
     "religions": [
       "islam"
     ]
+  },
+  {
+    "id": "somalia",
+    "name": "Somália",
+    "category": "Estado federal frágil e clânico",
+    "description": "República federal frágil, a Somália tem governo central de autoridade limitada, poder repartido entre clãs e Estados federados como Puntlândia e Jubalândia, Somalilândia separatista de fato e insurgência jihadista do Al-Shabaab.",
+    "flagPath": "/countries/flags/somalia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Somalia.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "maldivas",
+    "name": "Maldivas",
+    "category": "República presidencialista islâmica insular",
+    "description": "República presidencialista insular, as Maldivas fazem do islã sunita religião de Estado e condição de cidadania, vivem de turismo de luxo e pesca e dependem de Índia e China, com dívida alta, ameaça climática e disputas políticas.",
+    "flagPath": "/countries/flags/maldivas.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Maldives.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "azerbaijao",
+    "name": "Azerbaijão",
+    "category": "República presidencialista autoritária petroestatal",
+    "description": "República presidencialista autoritária da família Aliyev no Cáucaso, o Azerbaijão tem maioria xiita, mas Estado laico, vive de petróleo e gás e retomou Nagorno-Karabakh em 2023, aliado da Turquia e equilibrado entre Rússia e Israel.",
+    "flagPath": "/countries/flags/azerbaijao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Azerbaijan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": ["islam"]
+  },
+  {
+    "id": "bosnia",
+    "name": "Bósnia e Herzegovina",
+    "category": "Federação etnoconfessional tutelada",
+    "description": "Estado pós-Dayton dividido entre a Federação croata-bosníaca e a República Srpska sérvia, a Bósnia tem presidência tripartite por etnia, alto representante internacional, política travada por vetos étnicos e candidatura à União Europeia.",
+    "flagPath": "/countries/flags/bosnia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bosnia_and_Herzegovina.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": ["islam"]
+  },
+  {
+    "id": "kosovo",
+    "name": "Kosovo",
+    "category": "República parlamentar albanesa contestada",
+    "description": "Antiga província sérvia, o Kosovo declarou independência em 2008, reconhecida por cerca de metade da ONU, mas não por Sérvia, Rússia e China. República parlamentar de maioria albanesa e laica, com minoria sérvia, tropas da OTAN e economia de remessas.",
+    "flagPath": "/countries/flags/kosovo.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kosovo.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": ["islam"]
   }
 ]
