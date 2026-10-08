@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-08T18:42:40Z",
+  "lastUpdated": "2026-10-08T19:31:00Z",
   "personality": {
     "totalProfiles": 553,
     "pending": [],
@@ -557,7 +557,8 @@
       "narendra-modi",
       "ashoka",
       "akbar",
-      "rosa-luxemburgo"
+      "rosa-luxemburgo",
+      "ibrahim-traore"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
@@ -833,7 +834,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 273,
+    "totalProfiles": 285,
     "pending": [],
     "done": [
       "brasil",
@@ -1119,7 +1120,8 @@
       "gujarat",
       "venezuela-de-chavez",
       "terceira-republica-francesa",
-      "cuba-de-fidel-castro"
+      "cuba-de-fidel-castro",
+      "burkina-faso"
     ]
   },
   "totalProfiles": 1054
