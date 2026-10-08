@@ -76,7 +76,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
               {t.resultsH1Pre}
               <span>{t.resultsH1Em}</span>
             </h1>
-            <p className="e-lead">{quiz ? t.resultsLead(quiz.questions.length) : t.resultsLeadShared}</p>
           </header>
 
           <article className="e-panel e-top">
@@ -85,12 +84,10 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
                 <span className="e-tag e-tag-solid">{top.category}</span>
                 <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
               </div>
-              <Ring pct={top.compatibility} size={120} stroke={10} />
+              <Ring pct={top.compatibility} size={120} stroke={6} />
             </div>
-            <p>{top.longDescription || top.description}</p>
+            <PhraseSection match={top} />
           </article>
-
-          <PhraseSection match={top} />
 
           <AxesSection axes={axes} results={axisResults} religion={religion} />
 
@@ -100,7 +97,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             </button>
           </div>
 
-          <SignatureSection unusual={result.mostUnusualAxis} common={result.mostCommonAxis} tension={result.axisTension} />
+          <SignatureSection unusual={result.mostUnusualAxis} common={result.mostCommonAxis} tension={result.axisTension} axes={axes} results={axisResults} />
 
           <CountriesSection
             current={result.topCountryMatch}

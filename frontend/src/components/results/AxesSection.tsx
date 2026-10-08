@@ -1,10 +1,25 @@
-import { useState, type CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { Axis, AxisResult } from '../../types/quiz';
 import { PoleIcon } from '../AxisIcon';
 import type { Religion } from '../../utils/religion';
 import { pct } from '../editorial/primitives';
-import { InfoButton, InfoSheet } from './InfoSheet';
+
+// Ordem de exibição em duas colunas (leitura por linhas): esquerda | direita.
+export const DISPLAY_ORDER = [
+  'estrutura', 'economia',
+  'representacao', 'controle',
+  'poder', 'comercio',
+  'imigracao', 'religiao',
+  'diplomacia', 'moral',
+  'intervencao', 'tecnologia'
+];
+
+// Posicao na grade de duas colunas (desktop); no mobile vale a ordem original.
+export function displayRank(axisId: string) {
+  const index = DISPLAY_ORDER.indexOf(axisId);
+  return index === -1 ? DISPLAY_ORDER.length : index;
+}
 
 const BALANCED_COLOR = '#9C988C';
 
@@ -15,25 +30,19 @@ interface AxesSectionProps {
 }
 
 export function AxesSection({ axes, results, religion }: AxesSectionProps) {
-  const [infoAxisId, setInfoAxisId] = useState<string | null>(null);
-  const infoAxis = axes.find((axis) => axis.id === infoAxisId);
-  const infoResult = infoAxisId ? results.get(infoAxisId) : undefined;
-
   return (
     <section className="e-panel" id="eixos-resultado" data-reveal>
-      <p className="e-eyebrow">{t.axesSectionEyebrow}</p>
-      <h2>{t.axesSectionTitle}</h2>
+      <h2 className="e-sec-title">
+        {t.axesSectionTitle}
+      </h2>
       <ul className="e-axes-list">
         {axes.map((axis) => {
           const result = results.get(axis.id);
           return result ? (
-            <AxisRow key={axis.id} axis={axis} result={result} religion={religion} onInfo={() => setInfoAxisId(axis.id)} />
+            <AxisRow key={axis.id} axis={axis} result={result} religion={religion} />
           ) : null;
         })}
       </ul>
-      {infoAxis && infoResult && (
-        <AxisInfoSheet axis={infoAxis} result={infoResult} onClose={() => setInfoAxisId(null)} />
-      )}
     </section>
   );
 }
@@ -50,81 +59,43 @@ export function axisLeaning(axis: Axis, result: AxisResult) {
 function AxisRow({
   axis,
   result,
-  religion,
-  onInfo
+  religion
 }: {
   axis: Axis;
   result: AxisResult;
   religion?: Religion | null;
-  onInfo: () => void;
 }) {
-  const left = pct(result.leftPercent);
-  const right = pct(result.rightPercent);
   const { balanced, rightWins, leftWins, accent } = axisLeaning(axis, result);
+  const winnerPct = pct(rightWins ? result.rightPercent : result.leftPercent);
+  const dotAt = Math.max(0, Math.min(100, result.rightPercent));
 
-  const style = { '--ac': accent, '--al': axis.leftColor, '--ar': axis.rightColor } as CSSProperties;
+  const style = { '--ac': accent, '--al': axis.leftColor, '--ar': axis.rightColor, '--rank': displayRank(axis.id) } as CSSProperties;
 
   return (
     <li className="e-axis-row" style={style}>
       <div className="e-axis-row-head">
-        <div className="e-axis-title">
-          <h3>{result.label}</h3>
-          <InfoButton label={t.axisInfoAria(result.label)} onClick={onInfo} />
-        </div>
-        <span className="e-itag">
-          <span className="e-idot" />
-          {balanced ? result.intensity : `${result.intensity} · ${result.dominantPole}`}
-        </span>
+        <h3>{result.label}</h3>
+        <span className="e-axis-value">{balanced ? result.intensity : `${winnerPct}% ${result.dominantPole}`}</span>
       </div>
-      <div className="e-axis-bar">
+      <div
+        className="e-atrack"
+        role="img"
+        aria-label={`${result.label}: ${result.leftPole} ${pct(result.leftPercent)}%, ${result.rightPole} ${pct(result.rightPercent)}%`}
+      >
+        <i className="e-afill" style={{ left: `${Math.min(dotAt, 50)}%`, width: `${Math.abs(dotAt - 50)}%` }} />
+        <span className="e-amid" />
+        <span className="e-adot" style={{ left: `${dotAt}%` }} />
+      </div>
+      <div className="e-axis-poles">
         <div className={leftWins ? 'e-pole e-left e-win' : 'e-pole e-left'}>
           <PoleIcon axisId={axis.id} side="left" className="e-ico" />
-          <span>
-            <b>{result.leftPole}</b>
-            <em>{left}%</em>
-          </span>
-        </div>
-        <div
-          className="e-atrack"
-          role="img"
-          aria-label={`${result.label}: ${result.leftPole} ${left}%, ${result.rightPole} ${right}%`}
-        >
-          <div className="e-ahalf e-l">
-            <i style={{ width: `${leftWins ? (result.leftPercent - 50) * 2 : 0}%` }} />
-          </div>
-          <div className="e-ahalf e-r">
-            <i style={{ width: `${rightWins ? (result.rightPercent - 50) * 2 : 0}%` }} />
-          </div>
-          <span className="e-amid" />
-          <span className="e-adot" style={{ left: `${Math.max(0, Math.min(100, result.rightPercent))}%` }} />
+          <b>{result.leftPole}</b>
         </div>
         <div className={rightWins ? 'e-pole e-right e-win' : 'e-pole e-right'}>
-          <span>
-            <b>{result.rightPole}</b>
-            <em>{right}%</em>
-          </span>
+          <b>{result.rightPole}</b>
           <PoleIcon axisId={axis.id} side="right" className="e-ico" religion={religion} />
         </div>
       </div>
     </li>
-  );
-}
-
-function AxisInfoSheet({ axis, result, onClose }: { axis: Axis; result: AxisResult; onClose: () => void }) {
-  const { balanced, rightWins, accent } = axisLeaning(axis, result);
-  const percent = pct(rightWins ? result.rightPercent : result.leftPercent);
-
-  return (
-    <InfoSheet titleId="e-axis-sheet-title" style={{ '--ac': accent } as CSSProperties} onClose={onClose}>
-      <p className="e-axis-sheet-label">{result.label}</p>
-      <h3 id="e-axis-sheet-title">
-        {balanced ? result.intensity : (
-          <>
-            <span>{percent}%</span> {result.dominantPole}
-          </>
-        )}
-      </h3>
-      <p className="e-axis-sheet-text">{t.axisExplanations[axis.id]}</p>
-    </InfoSheet>
   );
 }

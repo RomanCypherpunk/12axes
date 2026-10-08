@@ -16,7 +16,6 @@ export function BooksSection({ books }: { books?: BookRecommendation[] }) {
     <section className="e-panel e-read" id="livros" aria-labelledby="livros-titulo" data-reveal>
       <header className="e-read-head">
         <div>
-          <p className="e-eyebrow">{t.booksEyebrow}</p>
           <h2 id="livros-titulo">{t.booksTitle}</h2>
           <p className="e-read-lead">{t.booksLead}</p>
         </div>
@@ -60,7 +59,7 @@ export function BooksSection({ books }: { books?: BookRecommendation[] }) {
   );
 }
 
-function AmazonIcon() {
+export function AmazonIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <g fill="none">

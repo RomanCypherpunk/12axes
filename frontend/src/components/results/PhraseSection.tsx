@@ -1,27 +1,32 @@
 import { t } from '../../i18n';
 import type { IdeologyMatch } from '../../types/quiz';
 
-// A frase que a ideologia do topo diria sobre a sociedade que quer. Vem curada
-// no catalogo, uma por ideologia, na estrutura cultura / politica / economia.
+// Dentro do cartao da ideologia do topo: a frase curada (uma por ideologia) e,
+// recolhida, a descricao longa.
 export function PhraseSection({ match }: { match: IdeologyMatch }) {
-  if (!match.phrase) {
+  const about = match.longDescription || match.description;
+
+  if (!match.phrase && !about) {
     return null;
   }
 
-  const [before, after] = t.phraseNote(match.name).split(match.name);
-
   return (
-    <figure className="e-panel e-phrase" data-reveal>
-      <span className="e-q" aria-hidden="true">“</span>
-      <div>
-        <p className="e-eyebrow">{t.phraseTitle}</p>
-        <blockquote>{match.phrase}</blockquote>
-        <figcaption>
-          {before}
-          <b>{match.name}</b>
-          {after}
-        </figcaption>
-      </div>
-    </figure>
+    <div className="e-top-body">
+      {match.phrase && (
+        <figure className="e-phrase">
+          <span className="e-q" aria-hidden="true">“</span>
+          <div>
+            <p className="e-eyebrow">{t.phraseTitle}</p>
+            <blockquote>{match.phrase}</blockquote>
+          </div>
+        </figure>
+      )}
+      {about && (
+        <details className="e-about">
+          <summary>{t.aboutIdeology(match.name)}</summary>
+          <p>{about}</p>
+        </details>
+      )}
+    </div>
   );
 }

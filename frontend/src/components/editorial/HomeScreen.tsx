@@ -303,7 +303,7 @@ function ExampleGrid({ example }: { example: ExampleResult }) {
             <span className="e-tag e-tag-solid">{ideology.category}</span>
             <h3 className={ideology.name.length >= 18 ? 'e-long-name' : undefined}>{ideology.name}</h3>
           </div>
-          <Ring pct={ideology.compatibility} size={112} stroke={9} sized={false} />
+          <Ring pct={ideology.compatibility} size={112} stroke={5} sized={false} />
         </div>
         <p className="e-ex-desc">{ideology.description}</p>
         <div className="e-ex-axes">
@@ -369,7 +369,7 @@ function HeroExample({ example }: { example: ExampleResult }) {
           <span className="e-tag e-tag-solid">{ideology.category}</span>
           <h2 className={ideology.name.length >= 18 ? 'e-long-name' : undefined}>{ideology.name}</h2>
         </div>
-        <Ring pct={ideology.compatibility} size={104} stroke={9} />
+        <Ring pct={ideology.compatibility} size={104} stroke={5} />
       </div>
       <div className="e-hero-summary-detail">
         <SafeImg

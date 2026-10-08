@@ -31,7 +31,7 @@ export function SupportSection({ variant }: SupportSectionProps) {
   const box = (
     <>
       <div>
-        <p className="e-eyebrow">{t.supportEyebrow}</p>
+        {variant === 'home' && <p className="e-eyebrow">{t.supportEyebrow}</p>}
         <h2 id="apoie-titulo">
           {t.supportTitle}
           <span className="e-accent">{t.supportTitleEm}</span>

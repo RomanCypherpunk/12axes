@@ -259,6 +259,11 @@ interface Strings {
   ideologyDistantTitle: string;
   phraseTitle: string;
   phraseNote: (ideology: string) => string;
+  aboutIdeology: (ideology: string) => string;
+  knowMoreAbout: (name: string) => string;
+  showLess: string;
+  matchTopKicker: string;
+  dimensionsTitleShort: string;
   signatureTitle: string;
   signatureUnusualLabel: string;
   signatureCommonLabel: string;
@@ -277,6 +282,10 @@ interface Strings {
   tensionNote: (firstAxis: string, secondAxis: string) => string;
   signatureMedian: string;
   signatureYou: string;
+  signatureBigCap: (pole: string) => string;
+  signatureAtMedian: string;
+  signatureAtCentre: string;
+  tensionRareShort: (count: number, total: number) => string;
   personalityCategories: Record<PersonalityCategory, string>;
   redoAnalysis: string;
   share: string;
@@ -456,7 +465,7 @@ const pt: Strings = {
   closenessTitle: 'O que te aproxima',
   closenessYou: 'Você',
   compareEyebrow: 'Análise comparativa',
-  compareTitle: 'Compare-se com qualquer perfil',
+  compareTitle: 'Análise comparativa',
   compareLead: 'Escolha uma personalidade, país ou ideologia e veja, eixo por eixo, onde você se aproxima ou se afasta.',
   compareSearchLabel: 'Buscar perfil para comparar',
   compareSearchPlaceholder: 'Busque uma personalidade, país ou ideologia',
@@ -725,9 +734,9 @@ const pt: Strings = {
   resultsSummaryAria: 'Resumo da análise',
   metaTop: 'Top match',
   axesSectionEyebrow: 'Eixos políticos',
-  axesSectionTitle: 'Resultado percentual por eixo',
+  axesSectionTitle: 'Seus 12 eixos',
   proximityEyebrow: 'Proximidade ideológica',
-  otherMatches: 'Outras correspondências',
+  otherMatches: 'Outras ideologias',
   navOnThisPage: 'Nesta página',
   resultsNavAxes: 'Os 12 eixos',
   resultsNavSignature: 'O que te distingue',
@@ -803,6 +812,11 @@ const pt: Strings = {
   personalitiesDistantTitle: 'As mais distantes de você',
   ideologyDistantTitle: 'A ideologia mais distante de você',
   phraseTitle: 'Uma frase que te descreve',
+  aboutIdeology: (ideology) => `Sobre o ${ideology}`,
+  knowMoreAbout: (name) => `Saber mais sobre ${name}`,
+  showLess: 'Mostrar menos',
+  matchTopKicker: 'Mais compatível',
+  dimensionsTitleShort: 'Também próximos, por dimensão',
   phraseNote: (ideology) => `É assim que alguém do ${ideology} resumiria a sociedade que quer.`,
   signatureTitle: 'O que te distingue',
   signatureUnusualLabel: 'Sua posição mais incomum',
@@ -823,6 +837,10 @@ const pt: Strings = {
   tensionNote: (firstAxis, secondAxis) => `No catálogo, ${firstAxis} e ${secondAxis} costumam andar na mesma direção. Você inverte esse padrão.`,
   signatureMedian: 'Mediana das ideologias',
   signatureYou: 'Você',
+  signatureBigCap: (pole) => `das ideologias puxam menos que você para ${pole.toLowerCase()}.`,
+  signatureAtMedian: 'Na mediana',
+  signatureAtCentre: 'No centro',
+  tensionRareShort: (count, total) => `Só ${count} de ${total} ideologias juntam essas duas posições.`,
   personalityCategories: {
     politico: 'Política',
     religioso: 'Religião',
@@ -856,7 +874,7 @@ const pt: Strings = {
     alsoClose: 'Também próximos, por dimensão do seu perfil',
     continued: 'continuação',
     areasIntro: 'As personalidades do catálogo cujo perfil nos 12 eixos mais se parece com o seu.',
-    booksIntro: 'Uma obra de cada uma das personalidades mais próximas dos seus resultados. Links na versão online do resultado.',
+    booksIntro: 'Uma obra de cada uma das personalidades mais próximas dos seus resultados.',
     aboutTitle: 'Sobre este relatório',
     aboutText: 'O 12 Axes compara suas respostas com perfis de ideologias, países e personalidades nos mesmos 12 eixos. A compatibilidade mede proximidade entre perfis; não é diagnóstico científico nem rótulo definitivo. Suas respostas não são armazenadas.',
     ctaTitle: 'Refaça o teste ou compartilhe'
@@ -1051,7 +1069,7 @@ const en: Strings = {
   closenessTitle: 'What brings you closer',
   closenessYou: 'You',
   compareEyebrow: 'Comparative analysis',
-  compareTitle: 'Compare yourself with any profile',
+  compareTitle: 'Comparative analysis',
   compareLead: 'Pick a personality, country or ideology and see, axis by axis, where you are close or far apart.',
   compareSearchLabel: 'Search a profile to compare',
   compareSearchPlaceholder: 'Search a personality, country or ideology',
@@ -1331,9 +1349,9 @@ const en: Strings = {
   resultsSummaryAria: 'Analysis summary',
   metaTop: 'Top match',
   axesSectionEyebrow: 'Political axes',
-  axesSectionTitle: 'Percentage result per axis',
+  axesSectionTitle: 'Your 12 axes',
   proximityEyebrow: 'Ideological proximity',
-  otherMatches: 'Other matches',
+  otherMatches: 'Other ideologies',
   navOnThisPage: 'On this page',
   resultsNavAxes: 'The 12 axes',
   resultsNavSignature: 'What sets you apart',
@@ -1409,6 +1427,11 @@ const en: Strings = {
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
   phraseTitle: 'A sentence that describes you',
+  aboutIdeology: (ideology) => `About ${ideology}`,
+  knowMoreAbout: (name) => `Learn more about ${name}`,
+  showLess: 'Show less',
+  matchTopKicker: 'Most compatible',
+  dimensionsTitleShort: 'Also close, by dimension',
   phraseNote: (ideology) => `This is how someone from ${ideology} would sum up the society they want.`,
   signatureTitle: 'What sets you apart',
   signatureUnusualLabel: 'Your most unusual position',
@@ -1429,6 +1452,10 @@ const en: Strings = {
   tensionNote: (firstAxis, secondAxis) => `In the catalog, ${firstAxis} and ${secondAxis} usually move together. You reverse that pattern.`,
   signatureMedian: 'Ideology median',
   signatureYou: 'You',
+  signatureBigCap: (pole) => `of the ideologies lean less toward ${pole.toLowerCase()} than you do.`,
+  signatureAtMedian: 'At the median',
+  signatureAtCentre: 'At the centre',
+  tensionRareShort: (count, total) => `Only ${count} of ${total} ideologies hold both of these positions.`,
   personalityCategories: {
     politico: 'Politics',
     religioso: 'Religion',
@@ -1462,7 +1489,7 @@ const en: Strings = {
     alsoClose: 'Also close, by dimension of your profile',
     continued: 'continued',
     areasIntro: 'The figures in the catalog whose profile across the 12 axes most resembles yours.',
-    booksIntro: 'One work by each of the figures closest to your results. Links in the online version of the result.',
+    booksIntro: 'One work by each of the figures closest to your results.',
     aboutTitle: 'About this report',
     aboutText: '12 Axes compares your answers with profiles of ideologies, countries and figures on the same 12 axes. Compatibility measures closeness between profiles; it is not a scientific diagnosis or a definitive label. Your answers are not stored.',
     ctaTitle: 'Retake the quiz or share it'

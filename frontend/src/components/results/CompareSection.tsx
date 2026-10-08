@@ -139,7 +139,6 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
 
   return (
     <section className="e-panel" id="comparar" data-reveal>
-      <p className="e-eyebrow">{t.compareEyebrow}</p>
       <h2>{t.compareTitle}</h2>
       <p className="e-lead e-cmp-lead">{t.compareLead}</p>
 

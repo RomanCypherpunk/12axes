@@ -36,7 +36,6 @@ export function PersonalitiesSection({ top, dimensions, distant, axes, results }
 
       <MatchHero
         visual={<Portrait match={top} className="e-portrait" />}
-        kicker={t.personalityKicker}
         compatibility={top.compatibility}
         name={top.name}
         tags={[top.role, top.lifespan].filter(Boolean)}

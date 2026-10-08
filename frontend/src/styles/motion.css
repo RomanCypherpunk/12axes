@@ -143,8 +143,6 @@
   .e-step { transition: border-color 0.3s var(--m-ease); }
   .e-step:hover { border-top-color: var(--destaque-sobre-escuro); }
 
-  .e-axes-list > li { transition: background-color 0.25s ease; border-radius: 12px; }
-  .e-axes-list > li:hover { background-color: color-mix(in srgb, var(--neutro) 55%, transparent); }
 }
 
 @media (hover: none) {

@@ -53,7 +53,6 @@ export function CountriesSection({ current, historical, dimensions, distant, axe
             fallback={t.flagUnavailable}
           />
         }
-        kicker={t.countryKicker}
         compatibility={shown.compatibility}
         name={shown.name}
         tags={[shown.category, shown.historical ? shown.period : ''].filter(Boolean)}

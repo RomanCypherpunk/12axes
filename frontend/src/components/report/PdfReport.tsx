@@ -4,6 +4,7 @@ import type {
   Axis,
   AxisOutlier,
   AxisResult,
+  AxisTension,
   CountryDimensionMatch,
   CountryMatch,
   QuizResult
@@ -14,7 +15,8 @@ import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/per
 import type { Religion } from '../../utils/religion';
 import { PoleIcon } from '../AxisIcon';
 import { pct } from '../editorial/primitives';
-import { axisLeaning } from '../results/AxesSection';
+import { axisLeaning, displayRank } from '../results/AxesSection';
+import { AmazonIcon } from '../results/BooksSection';
 import { commonNote, unusualLead } from '../results/SignatureSection';
 
 interface PdfReportProps {
@@ -42,7 +44,6 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
     ...(books.length > 0 ? [t.booksTitle] : []),
     t.otherMatches
   ];
-  const num = (title: string) => String(sections.indexOf(title) + 1).padStart(2, '0');
   const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
     day: 'numeric',
     month: 'long',
@@ -64,14 +65,14 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
               <span className="tag cv-tag">{top.category}</span>
               <h1>{top.name}</h1>
             </div>
-            <Ring value={top.compatibility} size={132} stroke={11} />
+            <Ring value={top.compatibility} size={132} stroke={6} />
           </div>
           <p className="cv-desc">
             {top.longDescription || top.description}
           </p>
         </div>
         <div className="cv-body">
-          {top.phrase && <Quote phrase={top.phrase} ideology={top.name} />}
+          {top.phrase && <Quote phrase={top.phrase} />}
           <div className="kpis">
             <div>
               <small>{t.metaTop}</small>
@@ -120,68 +121,28 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
         </header>
 
         <section className="rp-sec">
-          <SectionHead n={num(t.axesSectionTitle)} eyebrow={t.axesSectionEyebrow} title={t.axesSectionTitle} />
-          <p className="intro">{t.report.axesIntro}</p>
+          <SectionHead title={t.axesSectionTitle} />
           <ul className="axes">
-            {axes.map((axis) => {
-              const axisResult = axisResults.get(axis.id);
-              return axisResult ? <AxisRow key={axis.id} axis={axis} result={axisResult} religion={religion} /> : null;
-            })}
+            {[...axes]
+              .sort((first, second) => displayRank(first.id) - displayRank(second.id))
+              .map((axis) => {
+                const axisResult = axisResults.get(axis.id);
+                return axisResult ? <AxisRow key={axis.id} axis={axis} result={axisResult} religion={religion} /> : null;
+              })}
           </ul>
-          <div className="ileg">
-            <b>{t.report.intensityLegend}</b>
-            {t.report.intensityLevels.map((label, index) => (
-              <span key={label}>
-                <i style={{ opacity: [0.3, 0.55, 0.8, 1][index] }} />
-                {label}
-              </span>
-            ))}
-          </div>
         </section>
 
         <section className="rp-sec">
-          <SectionHead n={num(t.signatureTitle)} title={t.signatureTitle} />
+          <SectionHead title={t.signatureTitle} />
           <div className="dist">
-            <SignatureCard
-              outlier={result.mostUnusualAxis}
-              strong
-              label={t.signatureUnusualLabel}
-              lead={unusualLead(result.mostUnusualAxis)}
-              note={t.signatureUnusualNote(result.mostUnusualAxis.label)}
-            />
-            <SignatureCard
-              outlier={result.mostCommonAxis}
-              strong={false}
-              label={t.signatureCommonLabel}
-              lead={t.signatureCommonLead(result.mostCommonAxis.label)}
-              note={commonNote(result.mostCommonAxis)}
-            />
-            {result.axisTension && (
-              <article className="tension">
-                <div>
-                  <span className="tag tw">{t.tensionLabel}</span>
-                  <h3>{t.tensionCombo(result.axisTension.firstPole, result.axisTension.secondPole)}</h3>
-                </div>
-                <p>
-                  <b>
-                    {result.axisTension.matchingIdeologies === 0
-                      ? t.tensionUnique
-                      : t.tensionRare(result.axisTension.matchingIdeologies, result.axisTension.catalogSize)}
-                  </b>
-                  {[
-                    result.axisTension.examples.length > 0 ? t.tensionExamples(result.axisTension.examples.join(', ')) : '',
-                    t.tensionNote(result.axisTension.firstAxisLabel, result.axisTension.secondAxisLabel)
-                  ]
-                    .filter(Boolean)
-                    .join(' ')}
-                </p>
-              </article>
-            )}
+            <SignatureCard outlier={result.mostUnusualAxis} strong label={t.signatureUnusualLabel} axisResults={axisResults} />
+            <SignatureCard outlier={result.mostCommonAxis} strong={false} label={t.signatureCommonLabel} axisResults={axisResults} />
+            {result.axisTension && <TensionBlock tension={result.axisTension} axes={axes} axisResults={axisResults} />}
           </div>
         </section>
 
         <section className="rp-sec">
-          <SectionHead n={num(t.countriesSectionTitle)} title={t.countriesSectionTitle} />
+          <SectionHead title={t.countriesSectionTitle} />
           <CountryBlock
             label={t.countryCurrentTab}
             match={result.topCountryMatch}
@@ -191,29 +152,27 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
         </section>
         <section className="rp-sec">
           <p className="cont">
-            {num(t.countriesSectionTitle)} · {t.countriesSectionTitle} ({t.report.continued})
+            {t.countriesSectionTitle} ({t.report.continued})
           </p>
           <CountryBlock label={t.countryHistoricalTab} match={result.topHistoricalCountryMatch} />
         </section>
 
         <section className="rp-sec">
-          <SectionHead n={num(t.personalitiesSectionTitle)} title={t.personalitiesSectionTitle} />
+          <SectionHead title={t.personalitiesSectionTitle} />
           <MatchCard
             visual={<Img className="av-b" src={resolvePersonalityImageSrc(result.topPersonalityMatch.imagePath)} name={result.topPersonalityMatch.name} />}
-            kicker={t.personalityKicker}
             compatibility={result.topPersonalityMatch.compatibility}
             name={result.topPersonalityMatch.name}
             tags={[result.topPersonalityMatch.role, result.topPersonalityMatch.lifespan].filter(Boolean)}
             description={result.topPersonalityMatch.description}
           />
-          <p className="lbl">{t.report.alsoClose}</p>
+          <p className="lbl">{t.dimensionsTitleShort}</p>
           <ul className="dims">
             {result.dimensionMatches.map(({ dimension, match }) => (
               <li className="dc" key={dimension}>
                 <Img className="av-s" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
                 <span className="dim">{t.dimensionLabels[dimension]}</span>
                 <b>{match.name}</b>
-                <small>{match.role}</small>
                 <strong>{Math.round(match.compatibility)}%</strong>
               </li>
             ))}
@@ -226,25 +185,29 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
 
         {result.personalityMatches.length > 0 && (
           <section className="rp-sec">
-            <SectionHead n={num(t.areasGeneralTitle)} title={t.areasGeneralTitle} />
-            <p className="intro">{t.report.areasIntro}</p>
-            <ul className="near">
-              {result.personalityMatches.map((match) => (
-                <li className="nc" key={match.personalityId}>
+            <SectionHead title={t.areasGeneralTitle} />
+            <ol className="rank">
+              {result.personalityMatches.map((match, index) => (
+                <li className="rk" key={match.personalityId}>
+                  <span className="rk-n">{String(index + 1).padStart(2, '0')}</span>
                   <Img className="av-m" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
-                  <span className="tag tn">{t.personalityCategories[match.category]}</span>
-                  <b>{match.name}</b>
-                  <small>{match.role}</small>
+                  <div className="rk-i">
+                    <b>{match.name}</b>
+                    <small>{t.personalityCategories[match.category]}</small>
+                    <div className="bar">
+                      <i style={{ width: `${Math.max(0, Math.min(100, match.compatibility))}%` }} />
+                    </div>
+                  </div>
                   <strong>{Math.round(match.compatibility)}%</strong>
                 </li>
               ))}
-            </ul>
+            </ol>
           </section>
         )}
 
         {books.length > 0 && (
           <section className="rp-sec">
-            <SectionHead n={num(t.booksTitle)} eyebrow={t.booksEyebrow} title={t.booksTitle} />
+            <SectionHead title={t.booksTitle} />
             <p className="intro">{t.report.booksIntro}</p>
             <ul className="books">
               {books.map((book, index) => (
@@ -270,6 +233,9 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
                       {book.year ? <span>{book.year < 0 ? t.booksYearBc(-book.year) : book.year}</span> : null}
                     </div>
                   </div>
+                  <a className="bk-btn" href={book.url} target="_blank" rel="sponsored noopener noreferrer">
+                    {t.booksCta} <AmazonIcon />
+                  </a>
                 </li>
               ))}
             </ul>
@@ -277,23 +243,21 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
         )}
 
         <section className="rp-sec">
-          <SectionHead n={num(t.otherMatches)} eyebrow={t.proximityEyebrow} title={t.otherMatches} />
+          <SectionHead title={t.otherMatches} />
           <ul className="others">
             {others.map((match) => (
               <li className="oc" key={match.ideologyId} style={localCatStyle(match.category) as CSSProperties}>
-                <div className="oc-h">
-                  <span className="tag osol">{match.category}</span>
-                  <h3>{match.name}</h3>
-                </div>
-                <p>{match.description}</p>
+                <span className="tag osol">{match.category}</span>
+                <h3>{match.name}</h3>
+                <p>{match.longDescription || match.description}</p>
               </li>
             ))}
           </ul>
-          <p className="lbl">{t.ideologyDistantTitle}</p>
           <div className="far-i" style={localCatStyle(result.bottomIdeologyMatch.category) as CSSProperties}>
+            <span className="lab">{t.ideologyDistantTitle}</span>
             <b>{result.bottomIdeologyMatch.name}</b>
             <span className="tag osol-l">{result.bottomIdeologyMatch.category}</span>
-            <p>{result.bottomIdeologyMatch.description}</p>
+            <p>{result.bottomIdeologyMatch.longDescription || result.bottomIdeologyMatch.description}</p>
           </div>
         </section>
 
@@ -356,32 +320,22 @@ function Ring({ value, size, stroke }: { value: number; size: number; stroke: nu
   );
 }
 
-function Quote({ phrase, ideology }: { phrase: string; ideology: string }) {
-  const [before, after] = t.phraseNote(ideology).split(ideology);
+function Quote({ phrase }: { phrase: string }) {
   return (
     <figure className="quote">
       <span className="q">“</span>
       <div>
         <p className="eb">{t.phraseTitle}</p>
         <blockquote>{phrase}</blockquote>
-        <figcaption>
-          {before}
-          <b>{ideology}</b>
-          {after}
-        </figcaption>
       </div>
     </figure>
   );
 }
 
-function SectionHead({ n, eyebrow, title }: { n: string; eyebrow?: string; title: string }) {
+function SectionHead({ title }: { title: string }) {
   return (
     <div className="sh">
-      <span className="sn">{n}</span>
-      <div>
-        {eyebrow && <p className="eb">{eyebrow}</p>}
-        <h2>{title}</h2>
-      </div>
+      <h2>{title}</h2>
     </div>
   );
 }
@@ -397,77 +351,142 @@ function Img({ className, src, name }: { className: string; src: string; name: s
 function AxisRow({ axis, result, religion }: { axis: Axis; result: AxisResult; religion?: Religion | null }) {
   const { balanced, rightWins, leftWins, accent } = axisLeaning(axis, result);
   const style = { '--ac': accent, '--al': axis.leftColor, '--ar': axis.rightColor } as CSSProperties;
+  const winnerPct = pct(rightWins ? result.rightPercent : result.leftPercent);
+  const dotAt = Math.max(0, Math.min(100, result.rightPercent));
   return (
     <li className="ax" style={style}>
-      <div className="ax-name">
+      <div className="ax-h">
         <b>{result.label}</b>
-        <span className="itag">
-          <i />
-          {balanced ? result.intensity : `${result.intensity} · ${result.dominantPole}`}
-        </span>
-      </div>
-      <div className={leftWins ? 'pl l win' : 'pl l'}>
-        <PoleIcon axisId={axis.id} side="left" className="ico" />
-        <span>
-          {result.leftPole}
-          <em>{pct(result.leftPercent)}%</em>
-        </span>
+        <span className="ax-v">{balanced ? result.intensity : `${winnerPct}% ${result.dominantPole}`}</span>
       </div>
       <div className="tr">
-        <span className="half l">
-          <i style={{ width: `${leftWins ? (result.leftPercent - 50) * 2 : 0}%` }} />
-        </span>
-        <span className="half r">
-          <i style={{ width: `${rightWins ? (result.rightPercent - 50) * 2 : 0}%` }} />
-        </span>
+        <i className="fill" style={{ left: `${Math.min(dotAt, 50)}%`, width: `${Math.abs(dotAt - 50)}%` }} />
         <span className="mid" />
-        <span className="dot" style={{ left: `${Math.max(0, Math.min(100, result.rightPercent))}%` }} />
+        <span className="dot" style={{ left: `${dotAt}%` }} />
       </div>
-      <div className={rightWins ? 'pl r win' : 'pl r'}>
-        <span>
-          {result.rightPole}
-          <em>{pct(result.rightPercent)}%</em>
-        </span>
-        <PoleIcon axisId={axis.id} side="right" className="ico" religion={religion} />
+      <div className="ax-e">
+        <div className={leftWins ? 'pl l win' : 'pl l'}>
+          <PoleIcon axisId={axis.id} side="left" className="ico" />
+          <span>{result.leftPole}</span>
+        </div>
+        <div className={rightWins ? 'pl r win' : 'pl r'}>
+          <span>{result.rightPole}</span>
+          <PoleIcon axisId={axis.id} side="right" className="ico" religion={religion} />
+        </div>
       </div>
     </li>
   );
 }
 
-function SignatureCard({ outlier, strong, label, lead, note }: {
+function SignatureCard({ outlier, strong, label, axisResults }: {
   outlier: AxisOutlier;
   strong: boolean;
   label: string;
-  lead: string;
-  note: string;
+  axisResults: Map<string, AxisResult>;
 }) {
   const clamp = (value: number) => Math.max(0, Math.min(100, value));
+  // O backend manda % do polo esquerdo; a regua tem o polo esquerdo na ponta esquerda.
+  const median = clamp(100 - outlier.catalogMedian);
+  const you = clamp(100 - outlier.userPercent);
+  const axisResult = axisResults.get(outlier.axisId);
+
+  let big = '';
+  let cap: string;
+  if (strong) {
+    big = outlier.balanced ? '' : String(outlier.abovePercent >= 99.5 ? 100 : Math.round(outlier.abovePercent));
+    cap = outlier.balanced ? unusualLead(outlier) : t.signatureBigCap(outlier.abovePole);
+  } else {
+    big = outlier.balanced ? t.signatureAtCentre : t.signatureAtMedian;
+    cap = commonNote(outlier);
+  }
+
   return (
     <article className={strong ? 'dcard s' : 'dcard'}>
-      <span className={strong ? 'tag tc' : 'tag tn'}>{label}</span>
-      <h3>{outlier.label}</h3>
-      <p>{lead}</p>
+      <div className="dc-h">
+        <span className={strong ? 'tag tw' : 'tag tc'}>{label}</span>
+        <h3>{outlier.label}</h3>
+      </div>
+      <div className="dc-b">
+        {big && (
+          <p className="big">
+            {big}
+            {strong && <small>%</small>}
+          </p>
+        )}
+        <p className="cap">{cap}</p>
+      </div>
       <div className="mbar">
-        <span className="mt" />
-        <span className="mm" style={{ left: `${clamp(outlier.catalogMedian)}%` }} />
-        <span className={strong ? 'my s' : 'my'} style={{ left: `${clamp(outlier.userPercent)}%` }} />
+        <span className="mfill" style={{ left: `${Math.min(median, you)}%`, width: `${Math.abs(you - median)}%` }} />
+        <span className="mm" style={{ left: `${median}%` }} />
+        <span className={strong ? 'my s' : 'my'} style={{ left: `${you}%` }} />
       </div>
-      <div className="ml">
+      {axisResult && (
+        <div className="ml">
+          <span>{axisResult.leftPole}</span>
+          <span>{axisResult.rightPole}</span>
+        </div>
+      )}
+      <p className="mleg">
         <span>
-          {t.signatureMedian} {outlier.catalogMedian.toFixed(0)}
+          <i className="k-m" />
+          {t.signatureMedian}
         </span>
-        <b>
-          {t.signatureYou} {outlier.userPercent.toFixed(0)}
-        </b>
-      </div>
-      <p>{note}</p>
+        <span>
+          <i className="k-y" />
+          {t.signatureYou}
+        </span>
+      </p>
     </article>
   );
 }
 
-function MatchCard({ visual, kicker, compatibility, name, tags, description }: {
+function TensionBlock({ tension, axes, axisResults }: {
+  tension: AxisTension;
+  axes: Axis[];
+  axisResults: Map<string, AxisResult>;
+}) {
+  const colorOf = (axisLabel: string, pole: string): string | undefined => {
+    const axis = axes.find((candidate) => axisResults.get(candidate.id)?.label === axisLabel);
+    const axisResult = axis ? axisResults.get(axis.id) : undefined;
+    if (!axis || !axisResult) {
+      return undefined;
+    }
+    return axisResult.rightPole === pole ? axis.rightColor : axis.leftColor;
+  };
+  const hidden = tension.matchingIdeologies - tension.examples.length;
+  return (
+    <article className="tension">
+      <div>
+        <span className="tag tw">{t.tensionLabel}</span>
+        <div className="pair">
+          <span style={{ '--c': colorOf(tension.firstAxisLabel, tension.firstPole) } as CSSProperties}>{tension.firstPole}</span>
+          <em>+</em>
+          <span style={{ '--c': colorOf(tension.secondAxisLabel, tension.secondPole) } as CSSProperties}>{tension.secondPole}</span>
+        </div>
+      </div>
+      <div>
+        <p>
+          {tension.matchingIdeologies === 0 ? (
+            t.tensionUnique
+          ) : (
+            <b>{t.tensionRareShort(tension.matchingIdeologies, tension.catalogSize)}</b>
+          )}
+        </p>
+        {tension.examples.length > 0 && (
+          <ul className="chips">
+            {tension.examples.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+            {hidden > 0 && <li>+{hidden}</li>}
+          </ul>
+        )}
+      </div>
+    </article>
+  );
+}
+
+function MatchCard({ visual, compatibility, name, tags, description }: {
   visual: ReactNode;
-  kicker: string;
   compatibility: number;
   name: string;
   tags: string[];
@@ -478,19 +497,13 @@ function MatchCard({ visual, kicker, compatibility, name, tags, description }: {
       {visual}
       <div>
         <div className="tags">
-          <span className="tag tc">{kicker}</span>
+          <span className="tag tc">{t.matchTopKicker}</span>
           <span className="tag ts">
             {Math.round(compatibility)}% {t.matchWord}
           </span>
         </div>
         <h3>{name}</h3>
-        <div className="tags">
-          {tags.map((tag) => (
-            <span className="tag tn" key={tag}>
-              {tag}
-            </span>
-          ))}
-        </div>
+        {tags.length > 0 && <p className="mc-cap">{tags.join(' · ')}</p>}
         <p>{description}</p>
       </div>
     </article>
@@ -514,7 +527,6 @@ function CountryBlock({ label, match, dimensions, distant }: {
       </div>
       <MatchCard
         visual={<Img className="fl-b" src={resolveCountryFlagSrc(match.flagPath)} name={match.name} />}
-        kicker={t.countryKicker}
         compatibility={match.compatibility}
         name={match.name}
         tags={[match.category, match.historical ? match.period : ''].filter((tag): tag is string => Boolean(tag))}
@@ -522,14 +534,13 @@ function CountryBlock({ label, match, dimensions, distant }: {
       />
       {dimensions && dimensions.length > 0 && (
         <>
-          <p className="lbl">{t.report.alsoClose}</p>
+          <p className="lbl">{t.dimensionsTitleShort}</p>
           <ul className="dims">
             {dimensions.map(({ dimension, match: item }) => (
               <li className="dc" key={dimension}>
                 <Img className="fl-s" src={resolveCountryFlagSrc(item.flagPath)} name={item.name} />
                 <span className="dim">{t.dimensionLabels[dimension]}</span>
                 <b>{item.name}</b>
-                <small>{countryCaption(item)}</small>
                 <strong>{Math.round(item.compatibility)}%</strong>
               </li>
             ))}
@@ -551,18 +562,15 @@ function FarList({ title, items }: {
   items: { key: string; name: string; caption?: string }[];
 }) {
   return (
-    <>
-      <p className="lbl">{title}</p>
+    <div className="far">
+      <span className="lab">{title}</span>
       <ul className="fars">
         {items.map((item) => (
           <li className="fr" key={item.key}>
-            <div>
-              <b>{item.name}</b>
-              {item.caption && <small>{item.caption}</small>}
-            </div>
+            {item.name}
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

@@ -34,26 +34,29 @@ export function AreasSection({ generalMatches, areaMatches, axes, results }: Are
           { value: 'area', label: t.areasByAreaTab }
         ]}
       />
-      <ul className="e-near-grid">
-        {matches.map((match) => (
-          <li className="e-near" key={match.personalityId}>
+      <ol className="e-rank">
+        {matches.map((match, index) => (
+          <li className="e-rk" key={match.personalityId}>
+            <span className="e-rk-n">{String(index + 1).padStart(2, '0')}</span>
+            <Portrait match={match} className="e-rk-av" />
+            <div className="e-rk-i">
+              <b>{match.name}</b>
+              <small>{t.personalityCategories[match.category]}</small>
+              <div className="e-bar">
+                <i style={{ width: `${Math.max(0, Math.min(100, match.compatibility))}%` }} />
+              </div>
+            </div>
+            <span className="e-pctc">
+              <CountUpValue value={match.compatibility} decimals={0} />
+            </span>
             <InfoButton
-              className="e-axis-info e-card-info"
+              className="e-axis-info"
               label={t.personalityInfoAria(match.name)}
               onClick={() => setInfo(match)}
             />
-            <Portrait match={match} className="" />
-            <div>
-              <span className="e-tag e-tag-neutral">{t.personalityCategories[match.category]}</span>
-              <strong>{match.name}</strong>
-              <small>{match.role}</small>
-              <span className="e-pctc">
-                <CountUpValue value={match.compatibility} decimals={0} />
-              </span>
-            </div>
           </li>
         ))}
-      </ul>
+      </ol>
       {info && <PersonalityInfoSheet match={info} axes={axes} results={results} onClose={() => setInfo(null)} />}
     </section>
   );
