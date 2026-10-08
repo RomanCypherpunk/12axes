@@ -2,10 +2,18 @@
 de 12 eixos e todos os perfis dos catalogos personality/ideology/country.
 
 Uso:
-    python profile-audit/compatibility.py <catalog> <id>
+    python profile-audit/compatibility.py <catalog> <id> [--religion <valor>] [--sem-filtro]
 
 Exemplo:
     python profile-audit/compatibility.py personality zohran-mamdani
+    python profile-audit/compatibility.py country quenia --religion catholic
+
+Aplica a regra do filtro de religiao (espelho de ReligionFilter.java): por padrao o ranking
+e calculado como o usuario que escolheu a(s) religiao(oes) selecionavel(is) do proprio perfil
+(`religions` no JSON de metadados), uma secao por religiao; perfil sem religiao selecionavel
+(`[]` ou so `other`) imprime o ranking sem filtro. `--religion X` forca uma preferencia
+(catholic, protestant, orthodox, judaism, islam, buddhism, christianity) e `--sem-filtro`
+volta ao ranking geral. A compatibilidade nao muda; muda so quem entra no ranking.
 
 Imprime os 2 matches de cada catalogo. Ao auditar um perfil de ideologia, imprime os 3
 vizinhos ideologicos e suas categorias cadastradas para apoiar a revisao de categoria.
@@ -39,6 +47,32 @@ CATALOGS = {
     "ideology": ("ideology-profiles.json", "ideologyId", "ideologies.json"),
     "country": ("countries-profiles.json", "countryId", "countries.json"),
 }
+
+
+# Espelho de backend/.../service/ReligionFilter.java.
+CHRISTIAN = ["catholic", "protestant", "orthodox"]
+LEGACY_CHRISTIANITY = "christianity"
+SELECTABLE = ["catholic", "protestant", "orthodox", "judaism", "islam", "buddhism"]
+ONLY = "only"
+
+
+def religion_allows(religions, preference):
+    """Mesma regra de ReligionFilter.allows: o filtro exclui, nao exige."""
+    if not religions:
+        return True
+    if preference is None:
+        preferred = []
+    elif preference == LEGACY_CHRISTIANITY:
+        preferred = CHRISTIAN
+    else:
+        preferred = [preference]
+    matches = any(r in preferred for r in religions)
+    if ONLY in religions:
+        has_selectable = any(r in SELECTABLE for r in religions)
+        return matches if has_selectable else preference is None
+    if preference is None:
+        return True
+    return matches or not any(r in SELECTABLE for r in religions)
 
 
 def opposite_side_factor(u, t):
@@ -101,14 +135,18 @@ def compatibility(uv, tv):
     return round(max(0.0, min(100.0, raw)), 1)
 
 
-def top_matches(vector, catalog, exclude_id=None, top_n=2):
+def top_matches(vector, catalog, exclude_id=None, top_n=2, religion=None):
     profiles_file, key_field, meta_file = CATALOGS[catalog]
     profiles = json.load(open(os.path.join(BASE, profiles_file), encoding="utf-8"))
-    meta = {p["id"]: p["name"] for p in json.load(open(os.path.join(BASE, meta_file), encoding="utf-8"))}
+    metadata = json.load(open(os.path.join(BASE, meta_file), encoding="utf-8"))
+    meta = {p["id"]: p["name"] for p in metadata}
+    religions = {p["id"]: p.get("religions", []) for p in metadata}
     results = []
     for p in profiles:
         pid = p[key_field]
         if pid == exclude_id:
+            continue
+        if religion is not None and not religion_allows(religions.get(pid, []), religion):
             continue
         score = compatibility(vector, p["vector"])
         results.append((score, pid, meta.get(pid, pid)))
@@ -125,11 +163,51 @@ def vector_for(catalog, pid):
     raise SystemExit(f"id '{pid}' nao encontrado em {profiles_file}")
 
 
+def own_religions(catalog, pid):
+    """Religioes selecionaveis do proprio perfil (ordem do JSON)."""
+    _, _, meta_file = CATALOGS[catalog]
+    for p in json.load(open(os.path.join(BASE, meta_file), encoding="utf-8")):
+        if p["id"] == pid:
+            return [r for r in p.get("religions", []) if r in SELECTABLE]
+    return []
+
+
+def print_rankings(catalog, pid, vector, ideology_meta, religion):
+    for target_catalog, label in [("personality", "PERSONALIDADES"), ("ideology", "IDEOLOGIAS"), ("country", "PAISES")]:
+        exclude = pid if target_catalog == catalog else None
+        top_n = 3 if catalog == "ideology" and target_catalog == "ideology" else 2
+        matches = top_matches(vector, target_catalog, exclude_id=exclude, top_n=top_n, religion=religion)
+        print(f"=== TOP {top_n} {label} ===")
+        for score, mid, name in matches:
+            if catalog == "ideology" and target_catalog == "ideology":
+                category = ideology_meta.get(mid, {}).get("category", "categoria desconhecida")
+                print(f"{score}%  {name} ({mid}) — {category}")
+            else:
+                print(f"{score}%  {name} ({mid})")
+        print()
+
+
 def main():
-    if len(sys.argv) != 3:
+    args = sys.argv[1:]
+    forced = None
+    no_filter = False
+    if "--sem-filtro" in args:
+        no_filter = True
+        args.remove("--sem-filtro")
+    if "--religion" in args:
+        i = args.index("--religion")
+        if i + 1 >= len(args):
+            print(__doc__)
+            sys.exit(1)
+        forced = args[i + 1].strip().lower()
+        del args[i:i + 2]
+        if forced not in SELECTABLE + [LEGACY_CHRISTIANITY]:
+            print(f"religiao invalida: {forced} (use {', '.join(SELECTABLE)} ou {LEGACY_CHRISTIANITY})")
+            sys.exit(1)
+    if len(args) != 2:
         print(__doc__)
         sys.exit(1)
-    catalog, pid = sys.argv[1], sys.argv[2]
+    catalog, pid = args
     if catalog not in CATALOGS:
         print(f"catalog invalido: {catalog} (use personality/ideology/country)")
         sys.exit(1)
@@ -141,18 +219,19 @@ def main():
         for item in json.load(open(os.path.join(BASE, "ideologies.json"), encoding="utf-8"))
     }
 
-    for target_catalog, label in [("personality", "PERSONALIDADES"), ("ideology", "IDEOLOGIAS"), ("country", "PAISES")]:
-        exclude = pid if target_catalog == catalog else None
-        top_n = 3 if catalog == "ideology" and target_catalog == "ideology" else 2
-        matches = top_matches(vector, target_catalog, exclude_id=exclude, top_n=top_n)
-        print(f"=== TOP {top_n} {label} ===")
-        for score, mid, name in matches:
-            if catalog == "ideology" and target_catalog == "ideology":
-                category = ideology_meta.get(mid, {}).get("category", "categoria desconhecida")
-                print(f"{score}%  {name} ({mid}) — {category}")
-            else:
-                print(f"{score}%  {name} ({mid})")
-        print()
+    if no_filter:
+        preferences = [None]
+    elif forced:
+        preferences = [forced]
+    else:
+        preferences = own_religions(catalog, pid) or [None]
+
+    for religion in preferences:
+        if religion is None:
+            print("--- SEM FILTRO DE RELIGIAO ---\n")
+        else:
+            print(f"--- FILTRO DE RELIGIAO: {religion} (usuario que escolheu {religion}) ---\n")
+        print_rankings(catalog, pid, vector, ideology_meta, religion)
 
 
 if __name__ == "__main__":

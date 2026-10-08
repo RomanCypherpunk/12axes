@@ -3189,7 +3189,9 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Uzbekistan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": []
+    "religions": [
+      "islam"
+    ]
   },
   {
     "id": "cazaquistao",
@@ -3287,7 +3289,9 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Azerbaijan.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": ["islam"]
+    "religions": [
+      "islam"
+    ]
   },
   {
     "id": "bosnia",
@@ -3302,7 +3306,9 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bosnia_and_Herzegovina.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": ["islam"]
+    "religions": [
+      "islam"
+    ]
   },
   {
     "id": "kosovo",
@@ -3317,6 +3323,311 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kosovo.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": ["islam"]
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "laos",
+    "name": "Laos",
+    "category": "Partido único comunista de mercado",
+    "description": "República comunista de partido único, o Laos é governado pelo Partido Popular Revolucionário desde 1975, com economia de mercado controlada pelo partido, forte dívida com a China, hidrelétricas no Mekong e budismo teravada tolerado.",
+    "flagPath": "/countries/flags/laos.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Laos.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "camboja",
+    "name": "Camboja",
+    "category": "Autocracia dinástica de partido dominante",
+    "description": "Monarquia constitucional de fachada, o Camboja é dominado há quatro décadas por Hun Sen e hoje por seu filho Hun Manet, com oposição banida, imprensa controlada, economia de têxteis e turismo e forte influência chinesa.",
+    "flagPath": "/countries/flags/camboja.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cambodia.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "buddhism"
+    ]
+  },
+  {
+    "id": "brunei",
+    "name": "Brunei",
+    "category": "Sultanato absoluto islâmico",
+    "description": "Sultanato absoluto rico em petróleo e gás, Brunei é governado pelo sultão Hassanal Bolkiah como chefe de Estado e de governo, com charia penal desde 2014, bem-estar sem impostos e a ideologia oficial da Monarquia Malaia Islâmica.",
+    "flagPath": "/countries/flags/brunei.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brunei.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "quirguistao",
+    "name": "Quirguistão",
+    "category": "República presidencialista instável",
+    "description": "República da Ásia Central de maioria muçulmana, o Quirguistão derrubou presidentes em 2005, 2010 e 2020 e hoje concentra poder em Japarov, com imprensa restringida, economia de remessas e ouro e dependência da Rússia e da China.",
+    "flagPath": "/countries/flags/quirguistao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kyrgyzstan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "tadjiquistao",
+    "name": "Tadjiquistão",
+    "category": "Ditadura dinástica laica",
+    "description": "O Tadjiquistão é governado por Emomali Rahmon desde 1992, com poder transferido aos poucos ao filho, oposição banida, repressão a islamistas e ao hijab, economia de remessas e alumínio e dependência da Rússia e da China.",
+    "flagPath": "/countries/flags/tadjiquistao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tajikistan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "timor-leste",
+    "name": "Timor-Leste",
+    "category": "Democracia semipresidencialista jovem",
+    "description": "Democracia semipresidencialista jovem, o Timor-Leste conquistou a independência da Indonésia em 2002 após 24 anos de ocupação, tem maioria católica, usa o dólar, depende do fundo soberano do petróleo e foi admitido na ASEAN em 2025.",
+    "flagPath": "/countries/flags/timor-leste.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_East_Timor.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "etiopia",
+    "name": "Etiópia",
+    "category": "Federação étnica de partido dominante",
+    "description": "Federação étnica da África Oriental e Estado nunca colonizado, a Etiópia é governada por Abiy Ahmed e o Partido da Prosperidade, saiu da guerra de Tigré, tem tensões étnicas e economia estatal em abertura, com a barragem do Renascimento.",
+    "flagPath": "/countries/flags/etiopia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ethiopia.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "rd-congo",
+    "name": "RD Congo",
+    "category": "República presidencialista frágil em guerra",
+    "description": "Segundo maior país da África, a República Democrática do Congo é governada por Tshisekedi, com Estado frágil, guerra no leste contra o M23 e outras milícias, grande riqueza em cobalto e cobre e herança do mobutismo e do domínio belga.",
+    "flagPath": "/countries/flags/rd-congo.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Democratic_Republic_of_the_Congo.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "quenia",
+    "name": "Quênia",
+    "category": "República presidencialista descentralizada",
+    "description": "República presidencialista com eleições competitivas e sociedade civil forte, o Quênia tem Constituição de 2010 descentralizada em 47 condados, economia de serviços e tecnologia como o M-Pesa, tensões étnicas e protestos recentes contra impostos.",
+    "flagPath": "/countries/flags/quenia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kenya.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant",
+      "catholic"
+    ]
+  },
+  {
+    "id": "gana",
+    "name": "Gana",
+    "category": "Democracia presidencialista estável",
+    "description": "República presidencialista estável do oeste africano, Gana tem alternância pacífica de poder desde 1992, imprensa e sociedade civil livres, economia de cacau, ouro e petróleo, maioria cristã pentecostal e reestruturação de dívida com o FMI.",
+    "flagPath": "/countries/flags/gana.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ghana.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "angola",
+    "name": "Angola",
+    "category": "Presidencialismo de partido dominante petroleiro",
+    "description": "República presidencialista governada pelo MPLA desde a independência de Portugal em 1975, Angola saiu da guerra civil em 2002, vive de petróleo e diamantes, concentra poder no presidente Lourenço e enfrenta desigualdade e protestos contra o custo de vida.",
+    "flagPath": "/countries/flags/angola.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Angola.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "mocambique",
+    "name": "Moçambique",
+    "category": "Partido dominante em conflito",
+    "description": "República presidencialista governada pela Frelimo desde a independência de Portugal em 1975, Moçambique superou a guerra civil, enfrenta insurgência jihadista em Cabo Delgado, eleições violentamente contestadas em 2024 e economia de gás, carvão e agricultura.",
+    "flagPath": "/countries/flags/mocambique.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mozambique.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "ruanda",
+    "name": "Ruanda",
+    "category": "Estado desenvolvimentista autoritário",
+    "description": "Estado desenvolvimentista autoritário sob Paul Kagame desde 2000, Ruanda se reconstruiu após o genocídio de 1994, proíbe discurso étnico, restringe a oposição, cresce com foco em tecnologia e apoia o M23 no Congo segundo a ONU.",
+    "flagPath": "/countries/flags/ruanda.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Rwanda.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "zimbabue",
+    "name": "Zimbábue",
+    "category": "Partido dominante em crise",
+    "description": "Governado pela Zanu-PF desde 1980, o Zimbábue passou da ditadura de Mugabe ao presidente Mnangagwa, com reforma agrária radical, hiperinflação histórica, sanções ocidentais, economia informal dolarizada, eleições contestadas e repressão à oposição.",
+    "flagPath": "/countries/flags/zimbabue.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Zimbabwe.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "imperio-etiope",
+    "name": "Império Etíope",
+    "category": "Monarquia imperial ortodoxa feudal",
+    "description": "Monarquia da dinastia salomônica, uma das mais antigas do mundo, o Império Etíope resistiu à colonização europeia em Adwa em 1896, teve igreja ortodoxa estatal, sistema feudal e modernização sob Hailé Selassié, até o golpe do Derg em 1974.",
+    "flagPath": "/countries/flags/imperio-etiope.png",
+    "historical": true,
+    "period": "c. 1270–1974",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ethiopia_(1897-1936;_1941-1974).svg",
+    "flagNote": "Bandeira com o Leão de Judá usada entre 1897–1936 e 1941–1974, no auge do império.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "cabo-verde",
+    "name": "Cabo Verde",
+    "category": "Democracia semipresidencialista insular",
+    "description": "Arquipélago lusófono da África Ocidental, Cabo Verde é uma das democracias mais estáveis do continente, com semipresidencialismo, alternância pacífica de poder, economia de turismo e remessas da diáspora, maioria católica e costumes relativamente liberais.",
+    "flagPath": "/countries/flags/cabo-verde.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cape_Verde.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "tanzania",
+    "name": "Tanzânia",
+    "category": "Partido dominante pós-socialista",
+    "description": "República presidencialista de partido dominante, a Tanzânia é governada pelo CCM desde a independência, herdeira do socialismo ujamaa de Nyerere, com união entre continente e Zanzibar, abertura econômica gradual e crescente repressão à oposição.",
+    "flagPath": "/countries/flags/tanzania.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant",
+      "islam"
+    ]
+  },
+  {
+    "id": "uganda",
+    "name": "Uganda",
+    "category": "Presidencialismo personalista de partido dominante",
+    "description": "Governado por Yoweri Museveni desde 1986, Uganda é uma república presidencialista de partido dominante, sem limite de mandatos nem de idade, com oposição reprimida, lei anti-LGBT dura, população muito jovem, grande acolhida de refugiados e petróleo a caminho.",
+    "flagPath": "/countries/flags/uganda.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Uganda.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
   }
 ]

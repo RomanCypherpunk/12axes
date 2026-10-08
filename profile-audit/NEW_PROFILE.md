@@ -610,6 +610,13 @@ python profile-audit/compatibility.py <catalog> <id>
 
 Exemplo: `python profile-audit/compatibility.py personality zohran-mamdani`.
 
+O script aplica a **regra do filtro de religião** (espelho de `ReligionFilter.java`): por padrão
+calcula o ranking como o usuário que escolheu a(s) religião(ões) selecionável(is) do próprio perfil
+(`religions` do JSON PT), uma seção por religião, escondendo perfis marcados só com outra tradição
+(ex.: um perfil cristão não vê "Democracia Islâmica"); perfil secular (`[]` ou só `other`) sai sem
+filtro. `--religion <valor>` força uma preferência e `--sem-filtro` devolve o ranking geral. Use no
+resumo do passo 8 a saída filtrada, que é o que o usuário real veria.
+
 O script imprime o top 2 de cada catálogo. Ao calcular compatibilidade para uma ideologia, imprime
 as **3 ideologias mais próximas com suas categorias cadastradas**, além do top 2 de personalidades e
 países. Guarde essa saída para o resumo do passo 8 — **nunca estime esses matches de cabeça**, pois
