@@ -753,22 +753,11 @@
     ]
   },
   {
-    "id": "reformismo-georgista",
-    "name": "Reformismo Georgista",
-    "category": "Centro",
-    "description": "Corrente criada por Henry George que propõe financiar a sociedade com um imposto único sobre o valor da terra, defendendo que a renda fundiária pertence a todos e que o trabalho e o capital não deveriam ser tributados.",
-    "phrase": "Quero uma sociedade financiada por imposto único sobre a terra, já que sua renda pertence a todos e o trabalho não deve ser tributado.",
-    "vector": null,
-    "countryId": "hong-kong",
-    "personalityId": "henry-george",
-    "religions": []
-  },
-  {
     "id": "geolibertarianismo",
     "name": "Geolibertarianismo",
     "category": "Libertário",
     "description": "Síntese entre libertarianismo e georgismo que combina livre mercado e liberdades individuais com a taxação do valor da terra, vista como recurso comum, para financiar o Estado mínimo sem punir o trabalho.",
-    "phrase": "Quero uma sociedade de liberdades plenas e mercado livre, taxando apenas a terra como recurso comum para sustentar um Estado mínimo.",
+    "phrase": "Quero liberdades civis plenas e livre mercado, tributando apenas a posse da terra para sustentar o Estado mínimo.",
     "vector": null,
     "countryId": "hong-kong",
     "personalityId": "henry-george",
@@ -1176,10 +1165,10 @@
     "name": "Geoanarquismo",
     "category": "Anarquismo",
     "description": "Síntese entre anarquismo e georgismo que rejeita o Estado mas trata a terra e os recursos naturais como bens comuns, defendendo que sua renda seja partilhada por toda a comunidade de forma livre e igualitária.",
-    "phrase": "Quero abolir o Estado e tratar a terra como bem comum, partilhando livremente sua renda por toda a comunidade.",
+    "phrase": "Quero abolir o Estado e tratar o solo como patrimônio comum, partilhando seus rendimentos diretamente entre livres comunas.",
     "vector": null,
     "countryId": "hong-kong",
-    "personalityId": "henry-george",
+    "personalityId": "benjamin-tucker",
     "religions": []
   },
   {
@@ -3288,5 +3277,42 @@
     "countryId": "uniao-europeia",
     "personalityId": "albert-camus",
     "religions": []
+  },
+  {
+    "id": "georgismo",
+    "name": "Georgismo",
+    "category": "Libertário",
+    "description": "Filosofia econômica formulada por Henry George que defende que a posse dos recursos naturais e da terra pertence a toda a comunidade, propondo um imposto único sobre o valor da terra (LVT) e a abolição de tributos sobre o trabalho e a produção.",
+    "phrase": "Quero financiar a sociedade com um imposto único sobre a terra, abolindo tributos sobre a produção e o trabalho.",
+    "vector": null,
+    "countryId": "hong-kong",
+    "personalityId": "henry-george",
+    "religions": []
+  },
+  {
+    "id": "geossocialismo",
+    "name": "Geossocialismo",
+    "category": "Esquerda",
+    "description": "Síntese entre georgismo e socialismo que propõe socializar a renda fundiária e os monopólios naturais por meio do imposto sobre o valor da terra e da regulação pública, financiando serviços coletivos universais e um dividendo cidadão.",
+    "phrase": "Quero socializar a renda da terra e dos monopólios naturais para financiar serviços públicos universais e um dividendo cidadão.",
+    "vector": null,
+    "countryId": "dinamarca",
+    "personalityId": "thomas-paine",
+    "religions": []
+  },
+  {
+    "id": "distributismo-georgista",
+    "name": "Distributismo Georgista",
+    "category": "Centro",
+    "description": "Fusão do distributismo com o georgismo que defende a ampla difusão da propriedade familiar produtiva aliada à captura da renda da terra via imposto fundiário, impedindo tanto o monopólio latifundiário quanto a hipertrofia coletivista do Estado.",
+    "phrase": "Quero difundir a propriedade familiar produtiva e frear a especulação com imposto sobre a terra, sem monopólios nem coletivismo estatal.",
+    "vector": null,
+    "countryId": "reino-unido",
+    "personalityId": "gk-chesterton",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox"
+    ]
   }
 ]

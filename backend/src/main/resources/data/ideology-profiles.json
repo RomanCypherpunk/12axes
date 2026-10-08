@@ -952,37 +952,20 @@
     }
   },
   {
-    "ideologyId": "reformismo-georgista",
-    "vector": {
-      "estrutura": 73.8,
-      "representacao": 81.2,
-      "poder": 20,
-      "imigracao": 27.5,
-      "diplomacia": 17.5,
-      "intervencao": 77.5,
-      "economia": 62.5,
-      "controle": 25,
-      "comercio": 25,
-      "religiao": 44,
-      "moral": 42,
-      "tecnologia": 65
-    }
-  },
-  {
     "ideologyId": "geolibertarianismo",
     "vector": {
-      "estrutura": 91.2,
-      "representacao": 86.2,
-      "poder": 6.2,
-      "imigracao": 16.2,
-      "diplomacia": 18.8,
-      "intervencao": 82.5,
-      "economia": 32.5,
-      "controle": 13.8,
-      "comercio": 6.2,
-      "religiao": 81.2,
-      "moral": 80,
-      "tecnologia": 80
+      "estrutura": 76.8,
+      "representacao": 81.9,
+      "poder": 13.7,
+      "imigracao": 10.2,
+      "diplomacia": 13.5,
+      "intervencao": 80.5,
+      "economia": 41.0,
+      "controle": 12.3,
+      "comercio": 0.6,
+      "religiao": 71.9,
+      "moral": 53.8,
+      "tecnologia": 78.4
     }
   },
   {
@@ -1549,18 +1532,18 @@
   {
     "ideologyId": "geoanarquismo",
     "vector": {
-      "estrutura": 98.8,
-      "representacao": 90,
-      "poder": 6.2,
-      "imigracao": 12.5,
-      "diplomacia": 2.5,
-      "intervencao": 91.2,
-      "economia": 72.5,
-      "controle": 20,
-      "comercio": 22.5,
-      "religiao": 88.8,
-      "moral": 86.2,
-      "tecnologia": 33.8
+      "estrutura": 99.8,
+      "representacao": 93.6,
+      "poder": 0.4,
+      "imigracao": 1.9,
+      "diplomacia": 2.8,
+      "intervencao": 97.1,
+      "economia": 80.3,
+      "controle": 14.7,
+      "comercio": 1.8,
+      "religiao": 93.3,
+      "moral": 94.3,
+      "tecnologia": 52.4
     }
   },
   {
@@ -4417,6 +4400,57 @@
       "religiao": 78.6,
       "moral": 88.3,
       "tecnologia": 38.1
+    }
+  },
+  {
+    "ideologyId": "georgismo",
+    "vector": {
+      "estrutura": 74.8,
+      "representacao": 95.4,
+      "poder": 15.1,
+      "imigracao": 10.2,
+      "diplomacia": 7.4,
+      "intervencao": 86.3,
+      "economia": 68.4,
+      "controle": 18.2,
+      "comercio": 0.6,
+      "religiao": 82.6,
+      "moral": 81.2,
+      "tecnologia": 70.2
+    }
+  },
+  {
+    "ideologyId": "geossocialismo",
+    "vector": {
+      "estrutura": 67.6,
+      "representacao": 94.2,
+      "poder": 34.1,
+      "imigracao": 10.5,
+      "diplomacia": 12.1,
+      "intervencao": 66.0,
+      "economia": 81.0,
+      "controle": 61.5,
+      "comercio": 13.3,
+      "religiao": 83.3,
+      "moral": 86.0,
+      "tecnologia": 73.8
+    }
+  },
+  {
+    "ideologyId": "distributismo-georgista",
+    "vector": {
+      "estrutura": 87.9,
+      "representacao": 94.2,
+      "poder": 35.3,
+      "imigracao": 57.4,
+      "diplomacia": 22.9,
+      "intervencao": 66.0,
+      "economia": 81.0,
+      "controle": 61.5,
+      "comercio": 69.3,
+      "religiao": 9.5,
+      "moral": 15.3,
+      "tecnologia": 11.0
     }
   }
 ]

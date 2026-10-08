@@ -399,18 +399,11 @@
     "phrase": "I want a society that unites the free market with tradition and institutions, changing prudently within the frame of liberal democracy."
   },
   {
-    "id": "reformismo-georgista",
-    "name": "Georgist Reformism",
-    "category": "Center",
-    "description": "Current created by Henry George proposing to fund society with a single tax on land value, holding that land rent belongs to everyone and that labor and capital should not be taxed.",
-    "phrase": "I want a society funded by a single tax on land, since its rent belongs to everyone and labor should not be taxed."
-  },
-  {
     "id": "geolibertarianismo",
     "name": "Geolibertarianism",
     "category": "Libertarian",
     "description": "Synthesis of libertarianism and Georgism that combines free markets and individual freedoms with the taxation of land value, seen as a common resource, to fund the minimal state without punishing labor.",
-    "phrase": "I want a society of full freedoms and free markets, taxing only land as a common resource to sustain a minimal state."
+    "phrase": "I want full civil liberties and free markets, taxing only land tenure to fund the minimal state."
   },
   {
     "id": "liberalismo-de-estado",
@@ -648,7 +641,7 @@
     "name": "Geoanarchism",
     "category": "Anarchist",
     "description": "Synthesis of anarchism and Georgism that rejects the state but treats land and natural resources as commons, defending that their rent be shared by the whole community in a free and egalitarian way.",
-    "phrase": "I want to abolish the state and treat land as a common good, freely sharing its rent across the whole community."
+    "phrase": "I want to abolish the state and treat land as a common heritage, sharing its revenues directly among free communes."
   },
   {
     "id": "anarcocapitalismo",
@@ -1824,5 +1817,26 @@
     "category": "Left",
     "description": "Doctrine proposing a democratic and federated global political order where citizens and nations deliberate jointly through multilateral representative institutions and lawful cooperation.",
     "phrase": "I want a democratic world federation, with multilateral representative assemblies, transnational popular sovereignty, and international rule of law."
+  },
+  {
+    "id": "georgismo",
+    "name": "Georgism",
+    "category": "Libertarian",
+    "description": "Economic philosophy founded by Henry George holding that natural resources and land belong to the whole community, advocating a single land value tax (LVT) and the abolition of taxes on labor and capital.",
+    "phrase": "I want to fund society through a single tax on land value, abolishing taxes on production and labor."
+  },
+  {
+    "id": "geossocialismo",
+    "name": "Geosocialism",
+    "category": "Left",
+    "description": "Synthesis of Georgism and socialism advocating the socialization of economic rent from land and natural monopolies to fund universal public services and a citizen dividend.",
+    "phrase": "I want to socialize land rent and natural monopolies to fund universal public services and a citizen dividend."
+  },
+  {
+    "id": "distributismo-georgista",
+    "name": "Georgist Distributism",
+    "category": "Center",
+    "description": "Fusion of distributism and Georgism promoting widespread family ownership of productive property combined with land value taxation to prevent monopolies and state collectivism.",
+    "phrase": "I want widespread family productive ownership and curbs on land speculation, free from monopolies and state collectivism."
   }
 ]
