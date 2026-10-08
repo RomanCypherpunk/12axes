@@ -6,7 +6,7 @@ const NOW = 1_800_000_000_000;
 
 function progress(overrides: Partial<SavedProgress> = {}): SavedProgress {
   return {
-    v: 1,
+    v: 2,
     variant: 'extreme',
     questionIds: ['estrutura_01', 'poder_02', 'moral_03'],
     answers: { estrutura_01: 'AGREE', poder_02: 'STRONGLY_DISAGREE' },
@@ -47,6 +47,32 @@ describe('parseProgress', () => {
     expect(parseProgress(null, NOW)).toBeNull();
     expect(parseProgress('{quebrado', NOW)).toBeNull();
     expect(parseProgress(JSON.stringify(progress({ v: 99 })), NOW)).toBeNull();
+    expect(parseProgress(JSON.stringify(progress({ v: 0 })), NOW)).toBeNull();
+  });
+
+  // O hinduísmo ocupou a letra E da pergunta de religião e "sem religião" passou de E para F.
+  it('migra progresso v1: "sem religião" (E) vira F e a versão sobe para 2', () => {
+    const migrated = parseProgress(
+      JSON.stringify(progress({ v: 1, archetypeChoices: { sociedade: 'A', religiao: 'E' } })),
+      NOW
+    );
+    expect(migrated?.v).toBe(2);
+    expect(migrated?.archetypeChoices).toEqual({ sociedade: 'A', religiao: 'F' });
+  });
+
+  it('migra progresso v1 sem mexer nas letras A-D da religião nem na vertente cristã', () => {
+    for (const letter of ['A', 'B', 'C', 'D']) {
+      const migrated = parseProgress(
+        JSON.stringify(progress({ v: 1, archetypeChoices: { religiao: letter, denominacao: 'B' } })),
+        NOW
+      );
+      expect(migrated?.archetypeChoices).toEqual({ religiao: letter, denominacao: 'B' });
+    }
+  });
+
+  it('progresso v2: E é o hinduísmo e continua E', () => {
+    const saved = progress({ archetypeChoices: { religiao: 'E' } });
+    expect(parseProgress(JSON.stringify(saved), NOW)?.archetypeChoices.religiao).toBe('E');
   });
 
   it('descarta progresso antigo demais', () => {

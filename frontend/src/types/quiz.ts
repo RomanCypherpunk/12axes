@@ -77,6 +77,8 @@ export interface ArchetypeQuestion {
   icon?: QuestionIcon;
   /** Com icon, a alternativa mostra o ícone no lugar da letra. */
   options: { id: string; text: string; icon?: QuestionIcon }[];
+  /** "tiles": alternativas em botões numa grade (3 colunas no desktop, 2 no mobile). Padrão: lista. */
+  layout?: 'list' | 'tiles';
 }
 
 export interface SubmittedAnswer {

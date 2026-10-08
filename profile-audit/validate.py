@@ -84,8 +84,8 @@ PERSONALITY_CATEGORIES = {
 }
 
 # Valores de "religions" nos metadados. Espelha ReligionFilter.java.
-RELIGIONS = {"catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "other", "only"}
-SELECTABLE_RELIGIONS = {"catholic", "protestant", "orthodox", "judaism", "islam", "buddhism"}
+RELIGIONS = {"catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "hinduism", "other", "only"}
+SELECTABLE_RELIGIONS = {"catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "hinduism"}
 RELIGIOUS_THRESHOLD = 35.0
 
 CATALOGS = {

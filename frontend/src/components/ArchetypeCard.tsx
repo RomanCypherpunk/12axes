@@ -56,7 +56,10 @@ export function ArchetypeCard({ question, index, selected, disabled = false, onS
     fillRule: theme.evenOdd ? 'evenodd' : 'nonzero'
   };
   return (
-    <article className="question-card archetype-card" aria-labelledby="archetype-title">
+    <article
+      className={question.layout === 'tiles' ? 'question-card archetype-card archetype-card--tiles' : 'question-card archetype-card'}
+      aria-labelledby="archetype-title"
+    >
       <span className="question-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
       <header className="question-card-header">
         <p className="question-axis-tag" style={{ '--pole': THEME_COLOR } as CSSProperties}>

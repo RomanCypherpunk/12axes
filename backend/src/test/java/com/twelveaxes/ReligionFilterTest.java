@@ -166,6 +166,34 @@ class ReligionFilterTest {
     }
 
     @Test
+    void hinduismIsASelectableReligionLikeTheOthers() {
+        assertThat(ReligionFilter.normalize("hinduism")).isEqualTo("hinduism");
+        assertThat(ReligionFilter.normalize(" Hinduism ")).isEqualTo("hinduism");
+        assertThat(ReligionFilter.SELECTABLE).contains("hinduism");
+        assertThat(ReligionFilter.ALLOWED).contains("hinduism");
+        assertThat(ReligionFilter.allows(List.of("hinduism"), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("hinduism"), "islam")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("islam"), "hinduism")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("hinduism", ReligionFilter.ONLY), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("hinduism", ReligionFilter.ONLY), null)).isFalse();
+        // Perfil sem religiao selecionavel (ou so "other") continua aparecendo para o hinduista.
+        assertThat(ReligionFilter.allows(List.of(), "hinduism")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("other"), "hinduism")).isTrue();
+    }
+
+    @Test
+    void neutralIdeologiesListEverySelectableReligion() {
+        var neutral = dataService.getIdeologies(QuizDataService.LANG_PT).stream()
+                .filter(i -> i.religions().containsAll(
+                        List.of("catholic", "protestant", "orthodox", "judaism", "islam", "buddhism")))
+                .toList();
+        assertThat(neutral).isNotEmpty();
+        assertThat(neutral).allSatisfy(i -> assertThat(i.religions())
+                .as("%s e neutra mas nao lista todas as religioes selecionaveis", i.id())
+                .containsAll(ReligionFilter.SELECTABLE));
+    }
+
+    @Test
     void legacyChristianityPreferenceAcceptsAnyDenomination() {
         assertThat(ReligionFilter.allows(List.of("protestant"), "christianity")).isTrue();
         assertThat(ReligionFilter.allows(List.of("orthodox"), "christianity")).isTrue();

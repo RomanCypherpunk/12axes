@@ -20,6 +20,15 @@ describe('religionAllows (porte de ReligionFilter.java)', () => {
     expect(religionAllows(['protestant', 'catholic'], 'catholic')).toBe(true);
   });
 
+  it('hinduísmo é uma religião selecionável: esconde perfis só de outras e aparece para quem o escolheu', () => {
+    expect(religionAllows(['hinduism'], 'hinduism')).toBe(true);
+    expect(religionAllows(['hinduism'], 'catholic')).toBe(false);
+    expect(religionAllows(['islam'], 'hinduism')).toBe(false);
+    expect(religionAllows(['hinduism', 'only'], 'hinduism')).toBe(true);
+    expect(religionAllows(['hinduism', 'only'], null)).toBe(false);
+    expect(religionAllows(['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism', 'hinduism'], 'hinduism')).toBe(true);
+  });
+
   it('mantém perfis só com "other" para qualquer preferência', () => {
     expect(religionAllows(['other'], 'catholic')).toBe(true);
     expect(religionAllows(['other'], null)).toBe(true);
@@ -70,11 +79,28 @@ describe('religionVisibility (página do perfil)', () => {
   });
 });
 
+describe('dados: hinduísmo', () => {
+  it('ideologias neutras (as seis religiões) também listam o hinduísmo', () => {
+    const six = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism'];
+    const neutral = readData('ideologies.json').filter((i) => six.every((r) => i.religions.includes(r)));
+    expect(neutral.length).toBeGreaterThan(0);
+    for (const ideology of neutral) {
+      expect(ideology.religions, ideology.id).toContain('hinduism');
+    }
+  });
+
+  it('Gandhi é marcado como hinduísta', () => {
+    const gandhi = readData('personalities.json').find((p) => p.id === 'mahatma-gandhi');
+    expect(gandhi.religions).toEqual(['hinduism']);
+  });
+});
+
 describe('profileReligion (ícone do polo Religioso na página do perfil)', () => {
   it('usa a única religião selecionável marcada', () => {
     expect(profileReligion(['islam'])).toBe('islam');
     expect(profileReligion(['orthodox'])).toBe('orthodox');
     expect(profileReligion(['judaism', 'only'])).toBe('judaism');
+    expect(profileReligion(['hinduism'])).toBe('hinduism');
   });
 
   it('mantém a cruz padrão sem religião, só com "other" ou com religiões diferentes', () => {

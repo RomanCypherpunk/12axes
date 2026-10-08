@@ -3,11 +3,12 @@
 export const CHRISTIAN_DENOMINATIONS = ['catholic', 'protestant', 'orthodox'] as const;
 export type ChristianDenomination = (typeof CHRISTIAN_DENOMINATIONS)[number];
 
-export const RELIGIONS = [...CHRISTIAN_DENOMINATIONS, 'judaism', 'islam', 'buddhism'] as const;
+export const RELIGIONS = [...CHRISTIAN_DENOMINATIONS, 'judaism', 'islam', 'buddhism', 'hinduism'] as const;
 export type Religion = (typeof RELIGIONS)[number];
 
-// Alternativas da primeira pergunta de religião (antes da escolha da denominação cristã).
-export const RELIGION_CHOICES = ['christianity', 'judaism', 'islam', 'buddhism'] as const;
+// Alternativas da primeira pergunta de religião (antes da escolha da denominação cristã), na
+// ordem em que aparecem; "Sem religião" vem depois (ver religionQuestion em App.tsx).
+export const RELIGION_CHOICES = ['christianity', 'judaism', 'islam', 'buddhism', 'hinduism'] as const;
 export type ReligionChoice = (typeof RELIGION_CHOICES)[number];
 
 // Link antigo com religion=christianity (antes das denominações) vira "sem filtro".

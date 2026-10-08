@@ -91,7 +91,7 @@ interface Strings {
   religionLabel: string;
   religionQuestion: string;
   religionNone: string;
-  religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism', string>;
+  religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism' | 'hinduism', string>;
   denominationLabel: string;
   denominationQuestion: string;
   denominationNames: Record<'catholic' | 'protestant' | 'orthodox', string>;
@@ -413,7 +413,13 @@ const pt: Strings = {
   religionLabel: 'Religião',
   religionQuestion: 'Você segue alguma religião? Usamos isso só para ajustar as recomendações.',
   religionNone: 'Sem religião',
-  religionNames: { christianity: 'Cristianismo', judaism: 'Judaísmo', islam: 'Islamismo', buddhism: 'Budismo' },
+  religionNames: {
+    christianity: 'Cristianismo',
+    judaism: 'Judaísmo',
+    islam: 'Islamismo',
+    buddhism: 'Budismo',
+    hinduism: 'Hinduísmo'
+  },
   denominationLabel: 'Vertente cristã',
   denominationQuestion: 'Qual é a sua vertente cristã? Usamos isso só para ajustar as recomendações.',
   denominationNames: { catholic: 'Católica', protestant: 'Protestante', orthodox: 'Ortodoxa' },
@@ -1017,7 +1023,13 @@ const en: Strings = {
   religionLabel: 'Religion',
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',
   religionNone: 'No religion',
-  religionNames: { christianity: 'Christianity', judaism: 'Judaism', islam: 'Islam', buddhism: 'Buddhism' },
+  religionNames: {
+    christianity: 'Christianity',
+    judaism: 'Judaism',
+    islam: 'Islam',
+    buddhism: 'Buddhism',
+    hinduism: 'Hinduism'
+  },
   denominationLabel: 'Christian tradition',
   denominationQuestion: 'Which Christian tradition do you follow?',
   denominationNames: { catholic: 'Catholic', protestant: 'Protestant', orthodox: 'Orthodox' },

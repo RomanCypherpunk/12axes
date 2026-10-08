@@ -79,11 +79,12 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
 }
 
-// Últimas perguntas do bloco de arquétipos: religião (letras A-D + "sem religião") e, só para
+// Últimas perguntas do bloco de arquétipos: religião (letras A-E + "sem religião" na F) e, só para
 // quem escolhe cristianismo, a vertente (católica, protestante ou ortodoxa). Nenhuma das duas vai
-// para o backend como arquétipo; viram o parâmetro religion do resultado.
+// para o backend como arquétipo; viram o parâmetro religion do resultado. A letra de "sem religião"
+// já foi E (antes do hinduísmo): utils/quizProgress.ts migra o progresso salvo com esse valor.
 const RELIGION_STEP_ID = 'religiao';
-const RELIGION_OPTION_IDS = ['A', 'B', 'C', 'D', 'E'];
+const RELIGION_OPTION_IDS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const DENOMINATION_STEP_ID = 'denominacao';
 const DENOMINATION_OPTION_IDS = ['A', 'B', 'C'];
 
@@ -93,6 +94,7 @@ function religionQuestion(): ArchetypeQuestion {
     label: t.religionLabel,
     text: t.religionQuestion,
     icon: RELIGION_QUESTION_ICON,
+    layout: 'tiles',
     options: [...RELIGION_CHOICES, 'none' as const].map((id, index) => ({
       id: RELIGION_OPTION_IDS[index],
       text: id === 'none' ? t.religionNone : t.religionNames[id],
@@ -107,6 +109,7 @@ function denominationQuestion(): ArchetypeQuestion {
     label: t.denominationLabel,
     text: t.denominationQuestion,
     icon: RELIGION_QUESTION_ICON,
+    layout: 'tiles',
     options: CHRISTIAN_DENOMINATIONS.map((id, index) => ({
       id: DENOMINATION_OPTION_IDS[index],
       text: t.denominationNames[id],

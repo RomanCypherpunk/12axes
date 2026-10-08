@@ -214,7 +214,7 @@ valor fora dos 8.
 
 `religions` é **obrigatório** (use `[]` quando não houver vínculo) e alimenta o filtro opcional
 "priorizar uma tradição religiosa" da página de resultados. Valores fechados:
-`catholic`, `protestant`, `orthodox` (o cristianismo é dividido por denominação; perfil ambíguo ou sem denominação leva mais de uma, ou as três), `judaism`, `islam`, `buddhism` e `other` (hinduísmo, xintoísmo, religiões
+`catholic`, `protestant`, `orthodox` (o cristianismo é dividido por denominação; perfil ambíguo ou sem denominação leva mais de uma, ou as três), `judaism`, `islam`, `buddhism`, `hinduism` e `other` (xintoísmo, sikhismo, religiões
 antigas/pagãs etc.). Pode haver mais de um.
 
 **Primeiro filtro: o vetor.** Só se marca religião quando ela muda a decisão de quem filtra:
@@ -323,7 +323,7 @@ Casos especiais:
 2. Exige fé cristã em geral, mas não uma vertente (Democracia, Socialismo, Anarquismo e Trabalhismo
    Cristãos)? **As três**; mantém `only` se for exclusiva de cristãos.
 3. É doutrina política que funciona sem religião (monarquismo, federalismo, conservadorismo,
-   imperialismo, nacionalismos, militarismo)? **Neutra:** as seis religiões selecionáveis (o
+   imperialismo, nacionalismos, militarismo)? **Neutra:** as sete religiões selecionáveis (o
    validador exige ao menos uma marca quando `religiao` ≤ 35), mantendo `other`/`only`.
 
 Dois testes de apoio: o **teste da troca** (troque o país ou a pessoa de referência por um de outra

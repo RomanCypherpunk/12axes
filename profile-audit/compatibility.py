@@ -12,7 +12,7 @@ Aplica a regra do filtro de religiao (espelho de ReligionFilter.java): por padra
 e calculado como o usuario que escolheu a(s) religiao(oes) selecionavel(is) do proprio perfil
 (`religions` no JSON de metadados), uma secao por religiao; perfil sem religiao selecionavel
 (`[]` ou so `other`) imprime o ranking sem filtro. `--religion X` forca uma preferencia
-(catholic, protestant, orthodox, judaism, islam, buddhism, christianity) e `--sem-filtro`
+(catholic, protestant, orthodox, judaism, islam, buddhism, hinduism, christianity) e `--sem-filtro`
 volta ao ranking geral. A compatibilidade nao muda; muda so quem entra no ranking.
 
 Imprime os 2 matches de cada catalogo. Ao auditar um perfil de ideologia, imprime os 3
@@ -52,7 +52,7 @@ CATALOGS = {
 # Espelho de backend/.../service/ReligionFilter.java.
 CHRISTIAN = ["catholic", "protestant", "orthodox"]
 LEGACY_CHRISTIANITY = "christianity"
-SELECTABLE = ["catholic", "protestant", "orthodox", "judaism", "islam", "buddhism"]
+SELECTABLE = ["catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "hinduism"]
 ONLY = "only"
 
 

@@ -61,7 +61,7 @@ Esse endpoint nao recalcula respostas; ele usa diretamente o vetor de eixos.
 
 ### Parametro opcional `religion` (nos dois endpoints de resultado)
 
-`&religion=catholic|protestant|orthodox|judaism|islam|buddhism` tira do ranking os perfis ligados a outra dessas
+`&religion=catholic|protestant|orthodox|judaism|islam|buddhism|hinduism` tira do ranking os perfis ligados a outra dessas
 religioes e nao a escolhida (campo `religions` dos metadados; ver `ReligionFilter`). Perfis `[]` ou
 so `other` sempre ficam (a excecao e `["other", "only"]`, que so aparece para quem nao escolheu religiao). A compatibilidade e o percentil de cada perfil nao mudam: o percentil
 continua comparando com o catalogo inteiro. Ausente ou valor desconhecido = ranking geral, entao

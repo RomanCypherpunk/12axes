@@ -3,8 +3,13 @@ import type { AnswerValue, QuizPayload, QuizVariant } from '../types/quiz';
 // Progresso do quiz guardado no navegador: se a aba recarregar, travar ou
 // quebrar no meio, a pessoa continua de onde parou em vez de recomeçar.
 const STORAGE_KEY = '12axes-progress';
-const VERSION = 1;
+// v2: o hinduísmo entrou na pergunta de religião (letra E) e "sem religião" passou de E para F.
+// Progresso v1 é migrado em parseProgress em vez de descartado.
+const VERSION = 2;
 const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const RELIGION_KEY = 'religiao';
+const LEGACY_NO_RELIGION = 'E';
+const NO_RELIGION = 'F';
 
 export type ProgressStage = 'quiz' | 'archetype';
 
@@ -47,7 +52,7 @@ export function parseProgress(raw: string | null, now = Date.now()): SavedProgre
   }
   try {
     const data = JSON.parse(raw) as Partial<SavedProgress> | null;
-    if (!data || typeof data !== 'object' || data.v !== VERSION) {
+    if (!data || typeof data !== 'object' || (data.v !== VERSION && data.v !== 1)) {
       return null;
     }
     if (typeof data.savedAt !== 'number' || now - data.savedAt > MAX_AGE_MS || data.savedAt > now + 60_000) {
@@ -70,6 +75,13 @@ export function parseProgress(raw: string | null, now = Date.now()): SavedProgre
     }
     if (!isRecordOfStrings(data.archetypeChoices)) {
       return null;
+    }
+    if (data.v === 1) {
+      const choices = { ...data.archetypeChoices };
+      if (choices[RELIGION_KEY] === LEGACY_NO_RELIGION) {
+        choices[RELIGION_KEY] = NO_RELIGION;
+      }
+      return { ...(data as SavedProgress), v: VERSION, archetypeChoices: choices };
     }
     return data as SavedProgress;
   } catch {
