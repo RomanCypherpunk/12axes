@@ -3073,5 +3073,171 @@
       "catholic",
       "protestant"
     ]
+  },
+  {
+    "id": "oma",
+    "name": "Omã",
+    "category": "Sultanato absoluto ibadita",
+    "description": "Sultanato absoluto do Golfo de maioria ibadita, Omã concentra o poder no sultão, que também chefia o governo, e vive de petróleo e gás em diversificação, com política externa neutra e de mediação regional.",
+    "flagPath": "/countries/flags/oma.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Oman.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "kuwait",
+    "name": "Kuwait",
+    "category": "Emirado constitucional rentista",
+    "description": "Emirado hereditário do Golfo governado pela família Al Sabah, o Kuwait teve parlamento eleito combativo e imprensa relativamente livre, mas o emir o suspendeu em 2024. Economia de petróleo estatal com amplo bem-estar aos cidadãos.",
+    "flagPath": "/countries/flags/kuwait.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kuwait.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "jordania",
+    "name": "Jordânia",
+    "category": "Monarquia hachemita parlamentar",
+    "description": "Monarquia hachemita com parlamento eleito, mas com o rei controlando governo, Exército e política externa, a Jordânia depende de ajuda externa e remessas, abriga muitos refugiados palestinos e tem paz com Israel desde 1994.",
+    "flagPath": "/countries/flags/jordania.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Jordan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "iraque",
+    "name": "Iraque",
+    "category": "República federal confessional",
+    "description": "República parlamentarista federal desde 2003, o Iraque divide o poder entre xiitas, sunitas e curdos por cotas informais, com Curdistão autônomo, milícias armadas ligadas ao Estado e economia dependente do petróleo estatal.",
+    "flagPath": "/countries/flags/iraque.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Iraq.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "bangladesh",
+    "name": "Bangladesh",
+    "category": "República parlamentar secular instável",
+    "description": "República parlamentarista de maioria muçulmana e Constituição secular, Bangladesh vive disputa entre partidos rivais e Exército, derrubou a primeira-ministra Hasina em 2024 e exporta sobretudo têxteis, com remessas.",
+    "flagPath": "/countries/flags/bangladesh.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunísia",
+    "category": "República presidencialista autoritária",
+    "description": "República do Norte da África, a Tunísia foi o berço da Primavera Árabe e a única democracia da região até 2021, quando o presidente Saied suspendeu o parlamento e concentrou poderes, em meio a crise econômica e sindicato UGTT forte.",
+    "flagPath": "/countries/flags/tunisia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tunisia.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "uzbequistao",
+    "name": "Uzbequistão",
+    "category": "República presidencialista autoritária laica",
+    "description": "República da Ásia Central de maioria muçulmana, o Uzbequistão é governado em regime autoritário e laico pelo presidente Mirziyoyev, com abertura econômica gradual após Karimov, forte vigilância e economia de algodão, ouro e gás.",
+    "flagPath": "/countries/flags/uzbequistao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Uzbekistan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "cazaquistao",
+    "name": "Cazaquistão",
+    "category": "República presidencialista petroestatal",
+    "description": "Maior país da Ásia Central, o Cazaquistão é uma república presidencialista de poder concentrado, herdeira do regime de Nazarbayev, com Estado laico, economia de petróleo e minerais e equilíbrio entre Rússia, China e Ocidente.",
+    "flagPath": "/countries/flags/cazaquistao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kazakhstan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": []
+  },
+  {
+    "id": "iemen",
+    "name": "Iêmen",
+    "category": "Estado fragmentado em guerra civil",
+    "description": "Dividido pela guerra civil desde 2014, o Iêmen tem governo reconhecido no sul, houthis zaiditas no norte e separatistas sulistas, com fome, intervenção saudita e iraniana, ataques no Mar Vermelho e Estado quase inexistente.",
+    "flagPath": "/countries/flags/iemen.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Yemen.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "sudao",
+    "name": "Sudão",
+    "category": "Estado militarizado em guerra civil",
+    "description": "Em guerra civil desde 2023 entre o Exército e as Forças de Apoio Rápido, após a queda de Bashir em 2019 e o golpe de 2021, o Sudão enfrenta fome, deslocamento em massa, colapso do Estado e disputas de potências regionais.",
+    "flagPath": "/countries/flags/sudao.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Sudan.svg",
+    "flagNote": "Bandeira oficial usada como referência visual.",
+    "religions": [
+      "islam"
+    ]
   }
 ]
