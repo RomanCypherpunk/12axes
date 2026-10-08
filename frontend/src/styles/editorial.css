@@ -403,7 +403,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* match card */
 .e-match{background:var(--neutro);border-radius:26px;border-top:5px solid var(--cat);padding:26px 30px}
 .e-match-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:26px}
-.e-match .e-flagbig{width:168px;height:auto;max-height:118px;object-fit:contain;border-radius:12px;background:#fff;border:1px solid var(--borda)}
+.e-match .e-flagbig{width:220px;height:146px;object-fit:cover;border-radius:12px;border:1px solid var(--borda)}
 .e-match .e-portrait{width:128px;height:128px;object-fit:cover;border-radius:24px}
 .e-match-info{min-width:0}
 .e-match-tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -423,7 +423,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-dim-row>:not(.e-card-info):not(div):not(.e-pctc){grid-area:v;align-self:center;justify-self:start}
 .e-dim-row>div{grid-area:t;min-width:0;line-height:1.3}
 .e-dim-row>.e-pctc{grid-area:p}
-.e-dim-row .e-flagimg{width:52px;height:36px;object-fit:contain;border-radius:6px;background:#fff;border:1px solid var(--borda)}
 .e-dim-row .e-avatar{width:46px;height:46px}
 .e-flagimg{width:84px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--borda)}
 .e-avatar{width:72px;height:72px;object-fit:cover;border-radius:50%}

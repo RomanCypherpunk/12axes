@@ -141,7 +141,7 @@
 .rp .dc>img,.rp .dc>.ini{grid-area:v;justify-self:start}
 .rp .dc .dim{grid-area:d}
 .rp .dc b{grid-area:n}
-.rp .fl-s{width:11mm;height:7.5mm;object-fit:contain;margin-bottom:2mm;border-radius:3px;background:#fff;border:1px solid var(--borda)}
+.rp .fl-s{width:14mm;height:9.5mm;object-fit:contain;margin-bottom:2mm}
 .rp .av-s{width:11mm;height:11mm;border-radius:50%;object-fit:cover;margin-bottom:2mm}
 .rp .dim{font-size:6.8px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cat)}
 .rp .dc b{font-size:9.5px;line-height:1.25}
