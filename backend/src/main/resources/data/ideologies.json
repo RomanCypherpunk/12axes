@@ -3366,6 +3366,19 @@
     "vector": null,
     "countryId": "reino-unido-vitoriano-imperio-britanico",
     "personalityId": "john-stuart-mill",
-    "religions": ["protestant"]
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "anarco-monarquismo",
+    "name": "Anarco-Monarquismo",
+    "category": "Libertário",
+    "description": "Doutrina sincrética que propõe a abolição do Estado mantendo um monarca tradicional sem poder coercitivo, atuando como símbolo de unidade, árbitro voluntário e guardião da ordem contra a tirania.",
+    "phrase": "Quero a abolição do Estado e uma ordem voluntária com propriedade privada e comunidades livres, sob a arbitragem moral de um rei tradicional.",
+    "vector": null,
+    "countryId": "liechtenstein",
+    "personalityId": "hoppe",
+    "religions": []
   }
 ]
