@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-09T22:37:45Z",
+  "lastUpdated": "2026-10-09T22:47:03Z",
   "personality": {
     "totalProfiles": 554,
     "pending": [],
@@ -842,7 +842,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 285,
+    "totalProfiles": 287,
     "pending": [],
     "done": [
       "brasil",
@@ -1129,7 +1129,9 @@
       "venezuela-de-chavez",
       "terceira-republica-francesa",
       "cuba-de-fidel-castro",
-      "burkina-faso"
+      "burkina-faso",
+      "eua-new-deal",
+      "eua-velho-oeste"
     ]
   },
   "totalProfiles": 1105

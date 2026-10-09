@@ -4361,5 +4361,39 @@
     "religions": [
       "islam"
     ]
+  },
+  {
+    "id": "eua-new-deal",
+    "name": "Estados Unidos do New Deal",
+    "category": "República social-intervencionista",
+    "description": "Sob Franklin Roosevelt, os Estados Unidos ampliaram o poder federal com Previdência Social, regulação bancária, obras públicas e sindicatos fortalecidos, mantendo o capitalismo, a segregação racial no Sul e a mobilização para a Segunda Guerra.",
+    "flagPath": "/countries/flags/eua-new-deal.png",
+    "historical": true,
+    "period": "1933–1945",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1912-1959).svg",
+    "flagNote": "Bandeira dos Estados Unidos com 48 estrelas, usada de 1912 a 1959.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "eua-velho-oeste",
+    "name": "Velho Oeste dos Estados Unidos",
+    "category": "Fronteira armada-expansionista",
+    "description": "Fronteira norte-americana após a Guerra Civil, com ferrovias, mineração e pecuária em expansão, guerras contra povos indígenas, justiça local e xerifes, armas amplamente portadas e pouca presença do Estado federal.",
+    "flagPath": "/countries/flags/eua-velho-oeste.png",
+    "historical": true,
+    "period": "c. 1865–1890",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1877–1890).svg",
+    "flagNote": "Bandeira dos Estados Unidos com 38 estrelas, usada de 1877 a 1890.",
+    "religions": [
+      "protestant"
+    ]
   }
 ]
