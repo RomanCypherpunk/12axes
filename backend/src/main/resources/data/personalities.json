@@ -6627,7 +6627,9 @@
     "imageSourceName": "Wikimedia Commons",
     "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:HansAdam-II.jpg",
     "imageNote": "Príncipe Hans-Adam II no feriado nacional de Liechtenstein, 2023.",
-    "religions": []
+    "religions": [
+      "catholic"
+    ]
   },
   {
     "id": "dom-bertrand",
@@ -6759,17 +6761,15 @@
   {
     "id": "gustavo-petro",
     "name": "Gustavo Petro",
-    "role": "Presidente da Colômbia",
+    "role": "Ex-presidente da Colômbia",
     "category": "politico",
     "lifespan": "1960–",
-    "description": "Economista e primeiro presidente de esquerda da Colômbia, eleito em 2022. Prioriza a transição ecológica contra os combustíveis fósseis, a política de Paz Total com guerrilhas e reformas distributivas na saúde e previdência.",
+    "description": "Economista e primeiro presidente de esquerda da Colômbia (2022-2026). Priorizou a transição ecológica contra os combustíveis fósseis, a política de Paz Total com guerrilhas e reformas distributivas na saúde e previdência.",
     "imagePath": "/personalities/portraits/gustavo-petro.jpg",
     "imageSourceName": "Wikimedia Commons / Presidencia de Colombia",
     "imageSourceUrl": "https://pt.wikipedia.org/wiki/Gustavo_Petro",
     "imageNote": "Retrato oficial de Gustavo Petro via Wikimedia Commons.",
-    "religions": [
-      "catholic"
-    ]
+    "religions": []
   },
   {
     "id": "donald-tusk",
@@ -6789,10 +6789,10 @@
   {
     "id": "andrzej-duda",
     "name": "Andrzej Duda",
-    "role": "Presidente da Polônia",
+    "role": "Ex-presidente da Polônia",
     "category": "politico",
     "lifespan": "1972–",
-    "description": "Presidente da Polônia ligado ao partido Lei e Justiça (PiS). Defende valores familiares católicos tradicionais, fortalecimento soberano das Forças Armadas polonesas, aliança firme com os Estados Unidos e a OTAN.",
+    "description": "Presidente da Polônia de 2015 a 2025, ligado ao partido Lei e Justiça (PiS). Defende valores familiares católicos tradicionais, o fortalecimento soberano das Forças Armadas polonesas e a aliança firme com os Estados Unidos e a Otan.",
     "imagePath": "/personalities/portraits/andrzej-duda.jpg",
     "imageSourceName": "Wikimedia Commons / Kancelaria Prezydenta RP",
     "imageSourceUrl": "https://pt.wikipedia.org/wiki/Andrzej_Duda",
@@ -6948,9 +6948,7 @@
     "imageSourceName": "Wikimedia Commons / Bundesarchiv",
     "imageSourceUrl": "https://pt.wikipedia.org/wiki/Gustav_Landauer",
     "imageNote": "Retrato de Gustav Landauer via Wikimedia Commons.",
-    "religions": [
-      "judaism"
-    ]
+    "religions": []
   },
   {
     "id": "guy-debord",

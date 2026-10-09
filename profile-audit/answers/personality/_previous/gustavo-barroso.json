@@ -1,0 +1,117 @@
+{
+  "estrutura": {
+    "personaBrief": "Barroso defendia um Estado nacional forte, disciplinado e centralizado, capaz de impor unidade política e coordenar a vida pública. A direção central combina com sua visão hierárquica; autonomia regional ampla e secessão seriam ameaças à unidade nacional.",
+    "answers": {
+      "estrutura_01": "DT", "estrutura_02": "CT", "estrutura_03": "DT", "estrutura_04": "CT", "estrutura_05": "DT",
+      "estrutura_06": "CT", "estrutura_07": "DT", "estrutura_08": "C", "estrutura_09": "DT", "estrutura_10": "C",
+      "estrutura_11": "DT", "estrutura_12": "C", "estrutura_13": "DT", "estrutura_14": "CT", "estrutura_15": "DT",
+      "estrutura_16": "CT", "estrutura_17": "DT", "estrutura_18": "CT", "estrutura_19": "DT", "estrutura_20": "CT"
+    }
+  },
+  "representacao": {
+    "personaBrief": "Como dirigente de uma organização hierárquica e chefe de sua milícia, Barroso privilegiava liderança disciplinada e autoridade acima do pluralismo liberal. Sua defesa de um regime nacional orgânico não aponta para sufrágio universal, alternância partidária ou controles independentes robustos.",
+    "answers": {
+      "representacao_01": "DT", "representacao_02": "CT", "representacao_03": "DT", "representacao_04": "CT", "representacao_05": "DT",
+      "representacao_06": "DT", "representacao_07": "CT", "representacao_08": "CT", "representacao_09": "D", "representacao_10": "CT",
+      "representacao_11": "DT", "representacao_12": "D", "representacao_13": "DT", "representacao_14": "DT", "representacao_15": "DT",
+      "representacao_16": "CT", "representacao_17": "CT", "representacao_18": "CT", "representacao_19": "DT", "representacao_20": "CT"
+    }
+  },
+  "poder": {
+    "personaBrief": "A chefia da milícia integralista e a defesa de ordem autoritária indicam ampla aceitação de coerção, vigilância e repressão a adversários considerados inimigos da nação. Sua moral católica também favorece restrições a condutas privadas, embora a defesa de armas civis não seja tão central quanto a força organizada do Estado.",
+    "answers": {
+      "poder_01": "CT", "poder_02": "DT", "poder_03": "CT", "poder_04": "DT", "poder_05": "CT",
+      "poder_06": "DT", "poder_07": "CT", "poder_08": "DT", "poder_09": "CT", "poder_10": "DT",
+      "poder_11": "CT", "poder_12": "DT", "poder_13": "C", "poder_14": "CT", "poder_15": "C",
+      "poder_16": "CT", "poder_17": "CT", "poder_18": "DT", "poder_19": "CT", "poder_20": "DT"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Seu nacionalismo integralista imaginava uma comunidade nacional culturalmente coesa e subordinava diferenças à identidade política dominante. O antissemitismo conspiratório de Barroso tornava sua postura especialmente excludente, embora não se deva projetar automaticamente cada uma de suas formulações sobre toda a AIB.",
+    "answers": {
+      "imigracao_01": "CT", "imigracao_02": "DT", "imigracao_03": "C", "imigracao_04": "DT", "imigracao_05": "CT",
+      "imigracao_06": "DT", "imigracao_07": "CT", "imigracao_08": "DT", "imigracao_09": "CT", "imigracao_10": "DT",
+      "imigracao_11": "CT", "imigracao_12": "DT", "imigracao_13": "CT", "imigracao_14": "DT", "imigracao_15": "CT",
+      "imigracao_16": "C", "imigracao_17": "CT", "imigracao_18": "DT", "imigracao_19": "CT", "imigracao_20": "DT"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Barroso exaltava disciplina, milícia e mobilização nacional, compatíveis com prestígio militar e disposição para a força. Isso sugere militarismo e defesa armada, sem evidência suficiente para supor apoio específico a armas nucleares ou sistemas letais autônomos contemporâneos.",
+    "answers": {
+      "diplomacia_01": "CT", "diplomacia_02": "DT", "diplomacia_03": "C", "diplomacia_04": "DT", "diplomacia_05": "CT",
+      "diplomacia_06": "DT", "diplomacia_07": "DT", "diplomacia_08": "DT", "diplomacia_09": "CT", "diplomacia_10": "DT",
+      "diplomacia_11": "N", "diplomacia_12": "DT", "diplomacia_13": "C", "diplomacia_14": "DT", "diplomacia_15": "N",
+      "diplomacia_16": "C", "diplomacia_17": "CT", "diplomacia_18": "CT", "diplomacia_19": "C", "diplomacia_20": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Seu nacionalismo autoritário subordinava relações externas à soberania e ao interesse da nação, favorecendo autonomia de ação e projeção regional. A retórica de unidade e força não basta, porém, para inferir um programa concreto de ocupação ou mudança de governos vizinhos.",
+    "answers": {
+      "intervencao_01": "D", "intervencao_02": "CT", "intervencao_03": "DT", "intervencao_04": "C", "intervencao_05": "DT",
+      "intervencao_06": "CT", "intervencao_07": "DT", "intervencao_08": "C", "intervencao_09": "DT", "intervencao_10": "C",
+      "intervencao_11": "CT", "intervencao_12": "C", "intervencao_13": "DT", "intervencao_14": "C", "intervencao_15": "DT",
+      "intervencao_16": "CT", "intervencao_17": "C", "intervencao_18": "DT", "intervencao_19": "D", "intervencao_20": "C"
+    }
+  },
+  "economia": {
+    "personaBrief": "Barroso defendia corporativismo, hierarquia social e conciliação de classes sob autoridade nacional, preservando propriedade privada e combatendo tanto liberalismo individualista quanto luta de classes. Isso favorece regulação e coordenação pública seletiva, sem implicar coletivização dos meios de produção.",
+    "answers": {
+      "economia_01": "DT", "economia_02": "C", "economia_03": "C", "economia_04": "DT", "economia_05": "DT",
+      "economia_06": "D", "economia_07": "C", "economia_08": "CT", "economia_09": "C", "economia_10": "DT",
+      "economia_11": "D", "economia_12": "C", "economia_13": "CT", "economia_14": "DT", "economia_15": "DT",
+      "economia_16": "DT", "economia_17": "C", "economia_18": "DT", "economia_19": "C", "economia_20": "DT"
+    }
+  },
+  "controle": {
+    "personaBrief": "Seu corporativismo via a economia como parte de uma ordem nacional dirigida, na qual o Estado arbitraria interesses e organizaria setores estratégicos. A coordenação e a proteção do trabalho são mais plausíveis que laissez-faire, mas não equivalem a planejamento integral de todos os preços e decisões produtivas.",
+    "answers": {
+      "controle_01": "CT", "controle_02": "DT", "controle_03": "CT", "controle_04": "DT", "controle_05": "C",
+      "controle_06": "DT", "controle_07": "CT", "controle_08": "C", "controle_09": "D", "controle_10": "DT",
+      "controle_11": "CT", "controle_12": "DT", "controle_13": "C", "controle_14": "CT", "controle_15": "C",
+      "controle_16": "CT", "controle_17": "C", "controle_18": "DT", "controle_19": "CT", "controle_20": "DT"
+    }
+  },
+  "comercio": {
+    "personaBrief": "O nacionalismo de Barroso favorecia soberania econômica, produção interna e defesa de setores nacionais contra dependência externa. O protecionismo combina com sua concepção de economia subordinada à nação, sem exigir autarquia absoluta em todos os bens.",
+    "answers": {
+      "comercio_01": "CT", "comercio_02": "DT", "comercio_03": "CT", "comercio_04": "DT", "comercio_05": "D",
+      "comercio_06": "DT", "comercio_07": "CT", "comercio_08": "CT", "comercio_09": "CT", "comercio_10": "DT",
+      "comercio_11": "CT", "comercio_12": "D", "comercio_13": "CT", "comercio_14": "DT", "comercio_15": "C",
+      "comercio_16": "CT", "comercio_17": "CT", "comercio_18": "C", "comercio_19": "CT", "comercio_20": "DT"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Barroso se apresentava dentro do integralismo católico e associava a identidade nacional a valores religiosos e tradicionais. Sua posição favorece presença pública da fé, sem que isso necessariamente signifique substituir toda instituição civil por autoridade eclesiástica.",
+    "answers": {
+      "religiao_01": "DT", "religiao_02": "CT", "religiao_03": "DT", "religiao_04": "CT", "religiao_05": "CT",
+      "religiao_06": "DT", "religiao_07": "CT", "religiao_08": "DT", "religiao_09": "DT", "religiao_10": "CT",
+      "religiao_11": "DT", "religiao_12": "C", "religiao_13": "CT", "religiao_14": "C", "religiao_15": "DT",
+      "religiao_16": "DT", "religiao_17": "DT", "religiao_18": "C", "religiao_19": "CT", "religiao_20": "CT"
+    }
+  },
+  "moral": {
+    "personaBrief": "O catolicismo, a hierarquia familiar e a oposição ao individualismo sustentam uma moral social tradicionalista. Sua política autoritária também contraria pluralismo cultural em temas de família, sexualidade e educação, sem que cada posição contemporânea possa ser atribuída com certeza literal a um autor do século XX.",
+    "answers": {
+      "moral_01": "DT", "moral_02": "CT", "moral_03": "DT", "moral_04": "C", "moral_05": "DT",
+      "moral_06": "CT", "moral_07": "DT", "moral_08": "C", "moral_09": "DT", "moral_10": "CT",
+      "moral_11": "DT", "moral_12": "CT", "moral_13": "DT", "moral_14": "CT", "moral_15": "C",
+      "moral_16": "C", "moral_17": "C", "moral_18": "CT", "moral_19": "DT", "moral_20": "CT"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Como intelectual e dirigente nacionalista, Barroso não deve ser confundido com um primitivista: a construção de poder nacional e a organização moderna do Estado admitem indústria e técnica. Ao mesmo tempo, a técnica é instrumento da nação, não um valor transumanista autônomo, e respostas sobre tecnologias biomédicas atuais são inferências limitadas.",
+    "answers": {
+      "tecnologia_01": "C", "tecnologia_02": "DT", "tecnologia_03": "C", "tecnologia_04": "C", "tecnologia_05": "C",
+      "tecnologia_06": "D", "tecnologia_07": "DT", "tecnologia_08": "C", "tecnologia_09": "C", "tecnologia_10": "D",
+      "tecnologia_11": "C", "tecnologia_12": "D", "tecnologia_13": "D", "tecnologia_14": "C", "tecnologia_15": "DT",
+      "tecnologia_16": "C", "tecnologia_17": "DT", "tecnologia_18": "D", "tecnologia_19": "C", "tecnologia_20": "C"
+    }
+  },
+  "archetype": {
+    "sociedade": "A",
+    "poder": "A",
+    "economia": "D",
+    "mundo": "A",
+    "tecnologia": "D"
+  }
+}
