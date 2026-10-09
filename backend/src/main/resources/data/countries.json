@@ -1089,7 +1089,9 @@
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": ["orthodox"]
+    "religions": [
+      "orthodox"
+    ]
   },
   {
     "id": "catar",
@@ -4352,11 +4354,13 @@
     "id": "burkina-faso",
     "name": "Burkina Faso",
     "category": "República militar soberanista e pan-africanista",
-    "description": "País do Sahel da África Ocidental liderado por um governo militar de transição patriótico, que resgatou o legado anticolonial e autossuficiente de Thomas Sankara, promoveu a saída da CEDEAO, formou a Aliança dos Estados do Sahel (AES) e reorientou parcerias internacionais em defesa da soberania nacional.",
+    "description": "País do Sahel governado por uma junta militar liderada por Ibrahim Traoré, que dissolveu os partidos em 2026, adiou eleições, nacionalizou minas de ouro, saiu da CEDEAO e formou a Aliança dos Estados do Sahel (AES), com discurso soberanista e pan-africanista herdado de Sankara.",
     "flagPath": "/countries/flags/burkina-faso.png",
     "historical": false,
     "period": "",
     "vector": null,
-    "religions": []
+    "religions": [
+      "islam"
+    ]
   }
 ]
