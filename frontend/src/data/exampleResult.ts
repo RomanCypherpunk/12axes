@@ -283,37 +283,37 @@ const pt: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'neoliberalismo-autoritario',
-      name: 'Neoliberalismo Autoritário',
-      category: 'Direita',
+      ideologyId: 'aceleracionismo-de-direita',
+      name: 'Aceleracionismo de Direita',
+      category: 'Extrema Direita',
       description:
-        'Regime que implanta o livre mercado radical sob uma ditadura militar, com privatizações, abertura comercial e economistas da Escola de Chicago, restringindo sindicatos, partidos e opositores em nome da ordem e do anticomunismo.',
+        'Corrente que defende acelerar as contradições do sistema por meio da tecnologia e do enfraquecimento das instituições liberais, apostando na ruptura da ordem vigente para dar origem a uma nova ordem social e política hierárquica.',
       longDescription:
-        'Regime que implanta o livre mercado radical sob uma ditadura militar, com privatizações, abertura comercial e economistas da Escola de Chicago, restringindo sindicatos, partidos e opositores em nome da ordem e do anticomunismo. A compatibilidade indica proximidade entre suas respostas e esse perfil.',
+        'Corrente que defende acelerar as contradições do sistema por meio da tecnologia e do enfraquecimento das instituições liberais, apostando na ruptura da ordem vigente para dar origem a uma nova ordem social e política hierárquica. A compatibilidade indica proximidade entre suas respostas e esse perfil.',
       phrase:
-        'Quero implantar mercados abertos, privatizações e disciplina fiscal sob um governo forte, com ordem política e restrições à oposição.',
-      compatibility: 98
+        'Quero acelerar, com tecnologia e mercados sem Estado, a superação das instituições liberais, para que uma nova ordem hierárquica surja.',
+      compatibility: 94
     },
     country: {
-      countryId: 'el-salvador',
-      name: 'El Salvador',
-      category: 'República securitário-digital',
+      countryId: 'hong-kong',
+      name: 'Hong Kong (China)',
+      category: 'Região tecnocrática-financeira',
       description:
-        'República presidencialista da América Central, El Salvador ganhou destaque pela dura política de segurança contra as gangues e pela adoção do bitcoin, unindo forte apoio popular e concentração de poder no Executivo.',
-      flagPath: '/countries/flags/el-salvador.png',
+        'Centro financeiro global, Hong Kong é uma região autônoma de forte capitalismo de livre mercado e gestão tecnocrática, cuja ampla autonomia foi crescentemente restringida pelo controle político da China continental.',
+      flagPath: '/countries/flags/hong-kong.png',
       historical: false,
       period: '',
-      compatibility: 90
+      compatibility: 84
     },
     personality: {
-      personalityId: 'augusto-pinochet',
-      name: 'Augusto Pinochet',
-      role: 'Ditador',
-      category: 'politico',
-      lifespan: '1915–2006',
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Teórico político',
+      category: 'teorico',
+      lifespan: '1973–',
       description:
-        'General e ditador chileno, Pinochet derrubou Allende e instaurou um regime militar anticomunista, combinando repressão política, conservadorismo autoritário e reformas neoliberais.',
-      imagePath: '/personalities/portraits/augusto-pinochet.jpg',
+        'Teórico político conhecido como Mencius Moldbug, Yarvin formulou o neorreacionarismo, propondo substituir a democracia por um Estado gerido como empresa por um soberano-executivo, no modelo do neocameralismo.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
       compatibility: 100
     },
     axes: [
@@ -322,8 +322,8 @@ const pt: ExampleResult[] = [
         label: 'Representação',
         leftPole: 'Democracia',
         rightPole: 'Autocracia',
-        leftPercent: 14,
-        rightPercent: 86,
+        leftPercent: 20,
+        rightPercent: 80,
         dominantPole: 'Autocracia',
         intensity: 'Forte'
       },
@@ -332,20 +332,20 @@ const pt: ExampleResult[] = [
         label: 'Economia',
         leftPole: 'Público',
         rightPole: 'Privado',
-        leftPercent: 12,
-        rightPercent: 88,
+        leftPercent: 22,
+        rightPercent: 78,
         dominantPole: 'Privado',
-        intensity: 'Muito forte'
+        intensity: 'Forte'
       },
       {
         axisId: 'moral',
         label: 'Moral',
         leftPole: 'Progressista',
         rightPole: 'Tradicionalista',
-        leftPercent: 11,
-        rightPercent: 89,
+        leftPercent: 49,
+        rightPercent: 51,
         dominantPole: 'Tradicionalista',
-        intensity: 'Muito forte'
+        intensity: 'Equilibrado'
       }
     ]
   },
@@ -830,37 +830,37 @@ const en: ExampleResult[] = [
   },
   {
     ideology: {
-      ideologyId: 'neoliberalismo-autoritario',
-      name: 'Authoritarian Neoliberalism',
-      category: 'Right',
+      ideologyId: 'aceleracionismo-de-direita',
+      name: 'Right-Wing Accelerationism',
+      category: 'Far-Right',
       description:
-        'Regime that introduces radical free-market policies under a military dictatorship, with privatizations, trade opening and Chicago School economists, restricting unions, parties and opponents in the name of order and anticommunism.',
+        'Current that defends accelerating the system\'s contradictions through technology and the weakening of liberal institutions, betting on a break with the existing order to give rise to a new hierarchical social and political order.',
       longDescription:
-        'Regime that introduces radical free-market policies under a military dictatorship, with privatizations, trade opening and Chicago School economists, restricting unions, parties and opponents in the name of order and anticommunism. Compatibility indicates how close your answers are to this profile.',
+        'Current that defends accelerating the system\'s contradictions through technology and the weakening of liberal institutions, betting on a break with the existing order to give rise to a new hierarchical social and political order. Compatibility indicates how close your answers are to this profile.',
       phrase:
-        'I want open markets, privatizations and fiscal discipline under a strong government, with political order and restrictions on the opposition.',
-      compatibility: 98
+        'I want to accelerate, with technology and markets without a state, the overcoming of liberal institutions, so that a new hierarchical order arises.',
+      compatibility: 94
     },
     country: {
-      countryId: 'el-salvador',
-      name: 'El Salvador',
-      category: 'Security-digital republic',
+      countryId: 'hong-kong',
+      name: 'Hong Kong (China)',
+      category: 'Technocratic-financial region',
       description:
-        'A presidential republic in Central America, El Salvador gained prominence for its tough security policy against gangs and its adoption of bitcoin, uniting strong popular support and the concentration of power in the executive.',
-      flagPath: '/countries/flags/el-salvador.png',
+        'A global financial center, Hong Kong is an autonomous region of strong free-market capitalism and technocratic management, whose broad autonomy has been increasingly restricted by mainland China\'s political control.',
+      flagPath: '/countries/flags/hong-kong.png',
       historical: false,
       period: '',
-      compatibility: 90
+      compatibility: 84
     },
     personality: {
-      personalityId: 'augusto-pinochet',
-      name: 'Augusto Pinochet',
-      role: 'Dictator',
-      category: 'politico',
-      lifespan: '1915–2006',
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Political theorist',
+      category: 'teorico',
+      lifespan: '1973–',
       description:
-        'A Chilean general and dictator, Pinochet overthrew Allende and established an anti-communist military regime, combining political repression, authoritarian conservatism, and neoliberal reforms.',
-      imagePath: '/personalities/portraits/augusto-pinochet.jpg',
+        'A political theorist known as Mencius Moldbug, Yarvin formulated neoreaction, proposing to replace democracy with a state run like a company by a sovereign-executive, on the model of neocameralism.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
       compatibility: 100
     },
     axes: [
@@ -869,8 +869,8 @@ const en: ExampleResult[] = [
         label: 'Representation',
         leftPole: 'Democracy',
         rightPole: 'Autocracy',
-        leftPercent: 14,
-        rightPercent: 86,
+        leftPercent: 20,
+        rightPercent: 80,
         dominantPole: 'Autocracy',
         intensity: 'Strong'
       },
@@ -879,20 +879,20 @@ const en: ExampleResult[] = [
         label: 'Economy',
         leftPole: 'Public',
         rightPole: 'Private',
-        leftPercent: 12,
-        rightPercent: 88,
+        leftPercent: 22,
+        rightPercent: 78,
         dominantPole: 'Private',
-        intensity: 'Very strong'
+        intensity: 'Strong'
       },
       {
         axisId: 'moral',
         label: 'Morality',
         leftPole: 'Progressive',
         rightPole: 'Traditionalist',
-        leftPercent: 11,
-        rightPercent: 89,
+        leftPercent: 49,
+        rightPercent: 51,
         dominantPole: 'Traditionalist',
-        intensity: 'Very strong'
+        intensity: 'Balanced'
       }
     ]
   },
