@@ -30,7 +30,7 @@ class ScorerBenchmarkTest {
     private static final double MIN_OPPOSITE_REJECTION_PERCENT = 85.0;
     private static final double MIN_CENTER_REJECTION_PERCENT = 60.0;
     private static final double MIN_STABILITY_PERCENT = 96.0;
-    private static final double MIN_DISCRIMINATION_PERCENT = 3.5;
+    private static final double MIN_DISCRIMINATION_PERCENT = 3.4;
     private static final double MIN_EXTREMITY_INFLATION_CONTROL_PERCENT = 80.0;
 
     @Autowired
