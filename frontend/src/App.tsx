@@ -200,6 +200,7 @@ function MainApp() {
   const [isSharing, setIsSharing] = useState(false);
   const [isHomeSeoReady, setIsHomeSeoReady] = useState(false);
   const [currentExample, setCurrentExample] = useState<ExampleResult | null>(null);
+  const [allExamples, setAllExamples] = useState<ExampleResult[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [archetypeIndex, setArchetypeIndex] = useState(0);
   const [archetypeChoices, setArchetypeChoices] = useState<Record<string, string>>({});
@@ -280,6 +281,7 @@ function MainApp() {
       }
       const index = randomExampleIndex(EXAMPLE_RESULTS.length);
       setCurrentExample(EXAMPLE_RESULTS[index] ?? null);
+      setAllExamples(EXAMPLE_RESULTS);
     });
     return () => {
       cancelled = true;
@@ -841,6 +843,7 @@ function MainApp() {
       {screen === 'home' && (
         <HomeScreen
           example={currentExample}
+          examples={allExamples}
           axes={homeAxes}
           showBelowFold={isHomeSeoReady}
           onOpenChooser={openVariantChooser}

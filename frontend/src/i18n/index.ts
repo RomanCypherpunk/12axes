@@ -106,6 +106,8 @@ interface Strings {
   heroLabels: string[];
   heroTeaserLabel: string;
   heroTeaserTag: string;
+  heroDeckDot: (position: number, total: number) => string;
+  heroDeckAlt: (ideology: string) => string;
   formats: { short: QuizFormatStrings; extended: QuizFormatStrings; extreme: QuizFormatStrings };
   axisExplanations: Record<string, string>;
   axisInfoAria: (label: string) => string;
@@ -437,6 +439,8 @@ const pt: Strings = {
   heroLabels: ['Gratuito', 'Anônimo', 'Rápido', 'Resultado imediato'],
   heroTeaserLabel: 'match',
   heroTeaserTag: 'Exemplo de resultado',
+  heroDeckDot: (position, total) => `Ver exemplo ${position} de ${total}`,
+  heroDeckAlt: (ideology) => `Exemplo do cartão de resultado compartilhável: ${ideology}`,
   formats: {
     short: {
       label: 'Curta',
@@ -1049,6 +1053,8 @@ const en: Strings = {
   heroLabels: ['Free', 'Anonymous', 'Fast', 'Instant result'],
   heroTeaserLabel: 'match',
   heroTeaserTag: 'Example result',
+  heroDeckDot: (position, total) => `Show example ${position} of ${total}`,
+  heroDeckAlt: (ideology) => `Example of the shareable result card: ${ideology}`,
   formats: {
     short: {
       label: 'Short',

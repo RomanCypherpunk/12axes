@@ -1,5 +1,5 @@
-import type { CSSProperties, ReactNode } from 'react';
-import { t } from '../../i18n';
+import { useCallback, useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { LANG, t } from '../../i18n';
 import type { ExampleResult } from '../../data/exampleResult';
 import type { Axis, AxisResult, QuizVariant } from '../../types/quiz';
 import { AxisIcon, PoleIcon } from '../AxisIcon';
@@ -13,6 +13,8 @@ import { ArrowIcon, ClockIcon, pct, Ring, SafeImg } from './primitives';
 
 interface HomeScreenProps {
   example: ExampleResult | null;
+  /** Todos os exemplos: o herói os alterna como um baralho. `example` é o que abre o baralho. */
+  examples: ExampleResult[];
   axes: Axis[];
   showBelowFold: boolean;
   onOpenChooser: () => void;
@@ -68,7 +70,7 @@ const DISCOVERY_ICONS: Record<string, ReactNode> = {
   )
 };
 
-export function HomeScreen({ example, axes, showBelowFold, onOpenChooser, onStart }: HomeScreenProps) {
+export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChooser, onStart }: HomeScreenProps) {
   const style = (example ? catStyle(example.ideology.category) : undefined) as CSSProperties | undefined;
 
   return (
@@ -103,7 +105,14 @@ export function HomeScreen({ example, axes, showBelowFold, onOpenChooser, onStar
             {example && (
               <>
                 <p className="e-hero-example-label">{t.heroTeaserTag}</p>
-                <HeroExample example={example} />
+                {examples.length > 1 ? (
+                  <HeroDeck
+                    examples={examples}
+                    startIndex={Math.max(0, examples.findIndex((item) => item.ideology.ideologyId === example.ideology.ideologyId))}
+                  />
+                ) : (
+                  <HeroExample example={example} />
+                )}
               </>
             )}
           </div>
@@ -352,6 +361,101 @@ function ExampleGrid({ example }: { example: ExampleResult }) {
             <p>{personality.description}</p>
           </div>
         </article>
+      </div>
+    </div>
+  );
+}
+
+const DECK_INTERVAL_MS = 5200;
+const DECK_LEAVE_MS = 520;
+// Quantas cartas aparecem empilhadas (a da frente e as que espiam por trás).
+const DECK_VISIBLE = 3;
+
+// Baralho de exemplos: cada carta é a imagem de compartilhamento de um resultado de exemplo
+// (public/share-examples, gerada com o próprio cartão do app). A carta da frente sai para o lado e vai para o fundo, as de trás avançam.
+// Para sozinho no hover/foco e com "reduzir movimento"; os pontos levam direto a um exemplo.
+function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIndex: number }) {
+  const count = examples.length;
+  const [active, setActive] = useState(startIndex);
+  const [leaving, setLeaving] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const busy = useRef(false);
+
+  const advance = useCallback(() => {
+    if (busy.current) {
+      return;
+    }
+    busy.current = true;
+    setLeaving(true);
+    window.setTimeout(() => {
+      setActive((current) => (current + 1) % count);
+      setLeaving(false);
+      busy.current = false;
+    }, DECK_LEAVE_MS);
+  }, [count]);
+
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (paused || reduced) {
+      return undefined;
+    }
+    const id = window.setInterval(() => {
+      if (!document.hidden) {
+        advance();
+      }
+    }, DECK_INTERVAL_MS);
+    return () => window.clearInterval(id);
+  }, [paused, advance]);
+
+  return (
+    <div
+      className="e-deck"
+      role="group"
+      aria-roledescription="carousel"
+      aria-label={t.heroTeaserTag}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      <div className="e-deck-stack">
+        {examples.map((item, index) => {
+          const offset = (index - active + count) % count;
+          const front = offset === 0;
+          // Durante a saída da carta da frente, as outras já avançam uma posição.
+          const place = leaving ? (front ? -1 : offset - 1) : offset;
+          return (
+            <div
+              key={item.ideology.ideologyId}
+              className="e-deck-card"
+              data-pos={place < 0 ? 'out' : Math.min(place, DECK_VISIBLE - 1)}
+              data-hidden={place >= DECK_VISIBLE}
+              aria-hidden={!front}
+            >
+              <img
+                className="e-deck-img"
+                src={`/share-examples/${LANG}/${item.ideology.ideologyId}.webp`}
+                alt={front ? t.heroDeckAlt(item.ideology.name) : ''}
+                width={576}
+                height={1024}
+                decoding="async"
+                draggable={false}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <div className="e-deck-dots">
+        {examples.map((item, index) => (
+          <button
+            key={item.ideology.ideologyId}
+            type="button"
+            className={index === active ? 'is-on' : undefined}
+            aria-label={t.heroDeckDot(index + 1, count)}
+            aria-current={index === active}
+            onClick={() => setActive(index)}
+          />
+        ))}
       </div>
     </div>
   );
