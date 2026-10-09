@@ -58,7 +58,7 @@
   {
     "id": "socialismo-denguista",
     "name": "Dengist Socialism",
-    "category": "Left",
+    "category": "Radical Left",
     "description": "Pragmatic reform initiated by Deng Xiaoping that introduced markets, private property, and economic opening under the absolute control of the Communist Party, forming the model of socialism with Chinese characteristics.",
     "phrase": "I want pragmatic socialism, opening markets and private property to enrich the country, under the absolute control of the Communist Party."
   },
@@ -518,13 +518,6 @@
     "phrase": "I want mutualism's cooperatives and free credit added to a minimal state, restricted to protecting essential rights, contracts and freedoms."
   },
   {
-    "id": "socialismo-individualista",
-    "name": "Individualist Socialism",
-    "category": "Anarchist",
-    "description": "Branch that reconciles socialist ideals with strong emphasis on personal autonomy and freedom, defending cooperation and collective ownership without sacrificing each person's independence and uniqueness.",
-    "phrase": "I want cooperation and collective property that never sacrifice each individual's autonomy, freedom and uniqueness."
-  },
-  {
     "id": "comunalismo",
     "name": "Communalism",
     "category": "Anarchist",
@@ -828,7 +821,7 @@
   {
     "id": "tecno-monarquismo",
     "name": "Techno-Monarchism",
-    "category": "Right",
+    "category": "Far-Right",
     "description": "A unitary variant of neoreaction: an absolute CEO-monarch rules a centralized state through data and security technology (surveillance, AI), under market capitalism, private property and free enterprise, for the sake of stability and efficiency.",
     "phrase": "I want an absolute monarch with a CEO mindset ruling a unitary state through data and security technology while leaving the market free."
   },
@@ -870,7 +863,7 @@
   {
     "id": "ecofascismo",
     "name": "Eco-Fascism",
-    "category": "Far-Right",
+    "category": "Third Position",
     "description": "Current that joins radical ecology, authoritarianism and organic nationalism, defending population control, environmental preservation imposed by the state and the subordination of individual liberties to the survival of the national community.",
     "phrase": "I want an organic national community in harmony with the land, putting environmental preservation and the survival of the people above individual liberties."
   },
@@ -891,7 +884,7 @@
   {
     "id": "nacional-desenvolvimentismo",
     "name": "National Developmentalism",
-    "category": "Center",
+    "category": "Left",
     "description": "Current that advocates industrialization, national sovereignty, and strategic state planning, seeking to modernize the economy through public investment, productive protection, and coordination between government, science, and national companies.",
     "phrase": "I want a nation industrialized by strong state planning, protecting national companies and coordinating government, science and industry."
   },
@@ -1381,7 +1374,7 @@
   {
     "id": "ambientalismo-malthusiano",
     "name": "Malthusian Environmentalism",
-    "category": "Right",
+    "category": "Center",
     "description": "Environmental current inspired by Garrett Hardin that links population pressure to the depletion of common resources. It favours collectively enforced limits on resource use and policies to curb population growth.",
     "phrase": "I want to preserve limited resources through firm rules for the commons and limits on population growth."
   },
@@ -1514,7 +1507,7 @@
   {
     "id": "catolicismo-universalista",
     "name": "Universalist Catholicism",
-    "category": "Right",
+    "category": "Center",
     "description": "Christian vision that places the universal Church above nations, races and borders, in the line of Paul of Tarsus and Augustine, joining intense faith, traditional morals and spiritual authority with brotherhood among all peoples.",
     "phrase": "I want a universal Christian commonwealth, united by the Church and moral law, above borders, races and national interests."
   },
@@ -1702,7 +1695,7 @@
   {
     "id": "comunismo-de-conselhos",
     "name": "Council Communism",
-    "category": "Radical Left",
+    "category": "Anarchist",
     "description": "An anti-Leninist Marxist current of Pannekoek, Gorter and Mattick, which holds that workers themselves should run production and power through workers' councils, rejecting the vanguard party, the state and parliamentarism.",
     "phrase": "I want workers' councils running factories and power through recallable mandates, with no vanguard party, no state and no wage labor."
   },
@@ -1786,7 +1779,7 @@
   {
     "id": "republicanismo-maquiavelico",
     "name": "Machiavellian Republicanism",
-    "category": "Right",
+    "category": "Center",
     "description": "A republican current inspired by Machiavelli’s Discourses on Livy. It defends civic liberty through laws, popular participation, and regulated conflict among social groups, allowing exceptional measures to preserve the republic.",
     "phrase": "I want to protect republican liberty through laws and popular participation, restrain elite domination, and preserve collective independence."
   },

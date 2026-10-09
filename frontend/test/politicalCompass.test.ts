@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { computeCompass, socialLevel } from '../src/utils/politicalCompass';
+import { centerSide, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -107,5 +107,44 @@ describe('socialLevel', () => {
     expect(socialLevel(80)).toBe('traditional');
     expect(socialLevel(81)).toBe('veryTraditional');
     expect(socialLevel(100)).toBe('veryTraditional');
+  });
+});
+
+describe('compassRegion', () => {
+  const at = (right: number, authoritarian: number) => compassRegion({ right, authoritarian, traditional: 50 });
+
+  it('divide a grade nas regiões do mapa de cores', () => {
+    expect(at(5, 95)).toBe('esq-radical');
+    expect(at(50, 90)).toBe('terceira');
+    expect(at(95, 95)).toBe('ext-direita');
+    expect(at(10, 50)).toBe('esquerda');
+    expect(at(50, 55)).toBe('centro');
+    expect(at(90, 50)).toBe('direita');
+    expect(at(10, 5)).toBe('anarquismo');
+    expect(at(90, 5)).toBe('libertario');
+  });
+
+  it('divide a coluna do meio da faixa de baixo pelo lado esquerda-direita', () => {
+    expect(at(48, 5)).toBe('anarquismo');
+    expect(at(52, 5)).toBe('libertario');
+  });
+
+  it('segura os extremos dentro da grade', () => {
+    expect(at(0, 100)).toBe('esq-radical');
+    expect(at(100, 0)).toBe('libertario');
+  });
+});
+
+describe('centerSide', () => {
+  it('Centro com esquerda ou direita vira centro-esquerda ou centro-direita, em qualquer ordem', () => {
+    expect(centerSide('centro', 'direita')).toBe('direita');
+    expect(centerSide('direita', 'centro')).toBe('direita');
+    expect(centerSide('esquerda', 'centro')).toBe('esquerda');
+  });
+
+  it('os demais pares, e o mesmo lado, não mudam', () => {
+    expect(centerSide('centro', 'ext-direita')).toBeNull();
+    expect(centerSide('esquerda', 'anarquismo')).toBeNull();
+    expect(centerSide('centro', 'centro')).toBeNull();
   });
 });

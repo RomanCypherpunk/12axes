@@ -90,7 +90,7 @@
   {
     "id": "socialismo-denguista",
     "name": "Socialismo Denguista",
-    "category": "Esquerda",
+    "category": "Esquerda Radical",
     "description": "Reforma pragmática iniciada por Deng Xiaoping que introduziu mercado, propriedade privada e abertura econômica sob controle absoluto do Partido Comunista, formando o modelo de socialismo com características chinesas.",
     "phrase": "Quero um socialismo pragmático, abrindo mercado e propriedade privada para enriquecer o país, sob controle absoluto do Partido Comunista.",
     "vector": null,
@@ -970,17 +970,6 @@
     "religions": []
   },
   {
-    "id": "socialismo-individualista",
-    "name": "Socialismo Individualista",
-    "category": "Anarquismo",
-    "description": "Vertente que concilia ideais socialistas com forte ênfase na autonomia e na liberdade individual, defendendo cooperação e propriedade coletiva sem sacrificar a independência e a singularidade de cada pessoa.",
-    "phrase": "Quero cooperação e propriedade coletiva que nunca sacrifiquem a autonomia, a liberdade e a singularidade de cada indivíduo.",
-    "vector": null,
-    "countryId": "eua-massachusetts",
-    "personalityId": "benjamin-tucker",
-    "religions": []
-  },
-  {
     "id": "comunalismo",
     "name": "Comunalismo",
     "category": "Anarquismo",
@@ -1534,7 +1523,7 @@
   {
     "id": "tecno-monarquismo",
     "name": "Tecno-Monarquismo",
-    "category": "Direita",
+    "category": "Extrema Direita",
     "description": "Variante unitária do neorreacionarismo: um CEO-monarca absoluto governa um Estado centralizado com dados e tecnologia securitária (vigilância, IA), sob capitalismo de mercado, propriedade privada e livre empresa, em nome da estabilidade e da eficiência.",
     "phrase": "Quero um monarca absoluto com mentalidade de CEO, governando um Estado unitário com dados e tecnologia de segurança e deixando o mercado livre.",
     "vector": null,
@@ -1600,7 +1589,7 @@
   {
     "id": "ecofascismo",
     "name": "Ecofascismo",
-    "category": "Extrema Direita",
+    "category": "Terceira Posição",
     "description": "Corrente que une ecologia radical, autoritarismo e nacionalismo orgânico, defendendo controle populacional, preservação ambiental imposta pelo Estado e subordinação das liberdades individuais à sobrevivência da comunidade nacional.",
     "phrase": "Quero uma comunidade nacional orgânica em harmonia com a terra, que ponha a preservação ambiental e a sobrevivência do povo acima das liberdades individuais.",
     "vector": null,
@@ -1633,7 +1622,7 @@
   {
     "id": "nacional-desenvolvimentismo",
     "name": "Nacional-Desenvolvimentismo",
-    "category": "Centro",
+    "category": "Esquerda",
     "description": "Corrente que defende industrialização, soberania nacional e planejamento estratégico do Estado, buscando modernizar a economia por investimento público, proteção produtiva e coordenação entre governo, ciência e empresas nacionais.",
     "phrase": "Quero uma nação industrializada por planejamento estatal forte, protegendo empresas nacionais e articulando governo, ciência e indústria.",
     "vector": null,
@@ -2529,7 +2518,7 @@
   {
     "id": "ambientalismo-malthusiano",
     "name": "Ambientalismo Malthusiano",
-    "category": "Direita",
+    "category": "Centro",
     "description": "Vertente ambiental inspirada em Garrett Hardin que relaciona pressão populacional e esgotamento dos recursos comuns. Defende limites coletivamente impostos ao uso desses recursos e políticas restritivas de crescimento demográfico.",
     "phrase": "Quero preservar recursos limitados com regras firmes para os bens comuns e limites ao crescimento populacional.",
     "vector": null,
@@ -2777,7 +2766,7 @@
   {
     "id": "catolicismo-universalista",
     "name": "Catolicismo Universalista",
-    "category": "Direita",
+    "category": "Centro",
     "description": "Visão cristã que coloca a Igreja universal acima de nações, raças e fronteiras, na linha de Paulo de Tarso e Agostinho, unindo fé intensa, moral tradicional e autoridade espiritual à fraternidade entre todos os povos.",
     "phrase": "Quero uma cristandade universal, unida pela Igreja e pela lei moral, acima de fronteiras, raças e interesses nacionais.",
     "vector": null,
@@ -3124,7 +3113,7 @@
   {
     "id": "comunismo-de-conselhos",
     "name": "Comunismo de Conselhos",
-    "category": "Esquerda Radical",
+    "category": "Anarquismo",
     "description": "Corrente marxista antileninista de Pannekoek, Gorter e Mattick, que defende que os próprios trabalhadores organizem a produção e o poder em conselhos operários, rejeitando partido de vanguarda, Estado e parlamentarismo.",
     "phrase": "Quero conselhos operários controlando fábricas e poder por mandatos revogáveis, sem partido de vanguarda, sem Estado e sem trabalho assalariado.",
     "vector": null,
@@ -3266,7 +3255,7 @@
   {
     "id": "republicanismo-maquiavelico",
     "name": "Republicanismo Maquiavélico",
-    "category": "Direita",
+    "category": "Centro",
     "description": "Corrente republicana inspirada nos Discursos sobre a Primeira Década de Tito Lívio, de Maquiavel. Defende a liberdade cívica por meio de leis, participação popular e conflito regulado entre grupos, aceitando medidas excepcionais para preservar a república.",
     "phrase": "Quero proteger a liberdade da república por leis e participação popular, conter a dominação das elites e preservar a independência coletiva.",
     "vector": null,

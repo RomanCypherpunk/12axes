@@ -221,6 +221,8 @@ interface Strings {
   compassTraditionalist: string;
   compassWith: string;
   compassSocialValues: string;
+  compassCenterLeft: string;
+  compassCenterRight: string;
   compassSpectrumLabels: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
   compassSocialLabels: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
   compassInfo: {
@@ -641,7 +643,7 @@ const pt: Strings = {
     },
     {
       question: 'O 12 Axes tem bússola política (political compass)?',
-      answer: 'Sim. No fim do resultado há uma bússola política em dois eixos, socialismo × capitalismo e autoritário × libertário, com uma barra progressista × tradicionalista. Ela resume seus 12 eixos de forma visual, mas não substitui a análise completa.'
+      answer: 'Sim. No fim do resultado há uma bússola política em dois eixos, esquerda × direita e autoritário × libertário, com uma barra progressista × tradicionalista. Ela resume seus 12 eixos de forma visual, mas não substitui a análise completa.'
     },
     {
       question: 'Como descobrir minha ideologia política compatível?',
@@ -753,10 +755,10 @@ const pt: Strings = {
   resultsNavIdeologies: 'Outras ideologias',
   resultsNavCompass: 'Bússola política',
   compassTitle: 'Bússola política',
-  compassAuthoritarian: 'Autoritário',
-  compassLibertarian: 'Libertário',
-  compassLeft: 'Socialismo',
-  compassRight: 'Capitalismo',
+  compassAuthoritarian: 'Autoritarismo',
+  compassLibertarian: 'Anarquismo',
+  compassLeft: 'Esquerda',
+  compassRight: 'Direita',
   compassProgressive: 'Progressista',
   compassTraditionalist: 'Tradicionalista',
   compassInfo: {
@@ -764,13 +766,15 @@ const pt: Strings = {
     title: 'Como a bússola é feita',
     authLead: 'O eixo autoritário × libertário',
     authText: 'mede o grau de concentração do poder político e de intervenção do Estado sobre a vida dos indivíduos. Considera três dimensões principais: liberdades individuais, representação política e estrutura do Estado.',
-    econLead: 'O eixo socialismo × capitalismo',
-    econText: 'mede como a economia é organizada, variando entre propriedade coletiva e planejamento econômico e propriedade privada e livre mercado, independentemente do grau de intervenção estatal. Considera principalmente economia, controle e comércio, com influência secundária de imigração e moral.',
+    econLead: 'O eixo esquerda × direita',
+    econText: 'mede o quanto sua posição é de esquerda ou de direita, sobretudo pela organização da economia: de propriedade coletiva, planejamento e protecionismo, de um lado, a propriedade privada, livre mercado e abertura comercial, do outro. Considera principalmente economia, controle e comércio, com influência secundária de imigração e moral.',
     socialLead: 'O eixo social',
     socialText: 'mede a orientação dos seus valores entre progressismo e tradicionalismo, refletindo sua posição em questões de costumes, cultura e valores sociais.'
   },
   compassWith: 'com valores sociais',
   compassSocialValues: '',
+  compassCenterLeft: 'Centro-esquerda',
+  compassCenterRight: 'Centro-direita',
   compassSpectrumLabels: {
     'esq-radical': 'Esquerda radical',
     esquerda: 'Esquerda',
@@ -789,7 +793,7 @@ const pt: Strings = {
     veryTraditional: 'Fortemente tradicionalistas'
   },
   compassAria: (right, authoritarian, traditional) =>
-    `Sua posição: ${right}% rumo ao capitalismo, ${authoritarian}% rumo ao autoritarismo e ${traditional}% rumo ao tradicionalismo.`,
+    `Sua posição: ${right}% rumo à direita, ${authoritarian}% rumo ao autoritarismo e ${traditional}% rumo ao tradicionalismo.`,
   countriesSectionTitle: 'Países mais próximos de você',
   countryCurrentTab: 'País atual',
   countryHistoricalTab: 'Experiência histórica',
@@ -1262,7 +1266,7 @@ const en: Strings = {
     },
     {
       question: 'Does 12 Axes have a political compass?',
-      answer: 'Yes. At the end of the result there is a two-axis political compass, socialism × capitalism and authoritarian × libertarian, with a progressive × traditionalist bar. It summarizes your 12 axes visually, but it does not replace the full analysis.'
+      answer: 'Yes. At the end of the result there is a two-axis political compass, left × right and authoritarian × libertarian, with a progressive × traditionalist bar. It summarizes your 12 axes visually, but it does not replace the full analysis.'
     },
     {
       question: 'How do I find my compatible political ideology?',
@@ -1374,10 +1378,10 @@ const en: Strings = {
   resultsNavIdeologies: 'Other ideologies',
   resultsNavCompass: 'Political compass',
   compassTitle: 'Political compass',
-  compassAuthoritarian: 'Authoritarian',
-  compassLibertarian: 'Libertarian',
-  compassLeft: 'Socialism',
-  compassRight: 'Capitalism',
+  compassAuthoritarian: 'Authoritarianism',
+  compassLibertarian: 'Anarchism',
+  compassLeft: 'Left',
+  compassRight: 'Right',
   compassProgressive: 'Progressive',
   compassTraditionalist: 'Traditionalist',
   compassInfo: {
@@ -1385,13 +1389,15 @@ const en: Strings = {
     title: 'How the compass is made',
     authLead: 'The authoritarian × libertarian axis',
     authText: 'measures the degree of concentration of political power and of state intervention in the lives of individuals. It considers three main dimensions: individual liberties, political representation and state structure.',
-    econLead: 'The socialism × capitalism axis',
-    econText: 'measures how the economy is organized, ranging from collective ownership and economic planning to private property and free markets, regardless of the degree of state intervention. It mainly considers economy, control and trade, with secondary influence from immigration and morals.',
+    econLead: 'The left × right axis',
+    econText: 'measures how far left or right you sit, mostly through how the economy is organized: from collective ownership, planning and protectionism on one side to private property, free markets and open trade on the other. It mainly considers economy, control and trade, with secondary influence from immigration and morals.',
     socialLead: 'The social axis',
     socialText: 'measures the orientation of your values between progressivism and traditionalism, reflecting your position on customs, culture and social values.'
   },
   compassWith: 'with',
   compassSocialValues: 'social values',
+  compassCenterLeft: 'Center-left',
+  compassCenterRight: 'Center-right',
   compassSpectrumLabels: {
     'esq-radical': 'Radical left',
     esquerda: 'Left',
@@ -1410,7 +1416,7 @@ const en: Strings = {
     veryTraditional: 'Strongly traditionalist'
   },
   compassAria: (right, authoritarian, traditional) =>
-    `Your position: ${right}% toward capitalism, ${authoritarian}% toward authoritarian and ${traditional}% toward traditionalist.`,
+    `Your position: ${right}% toward the right, ${authoritarian}% toward authoritarian and ${traditional}% toward traditionalist.`,
   countriesSectionTitle: 'Countries closest to you',
   countryCurrentTab: 'Present-day',
   countryHistoricalTab: 'Historical',

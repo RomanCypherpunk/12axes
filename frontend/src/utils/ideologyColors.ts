@@ -64,6 +64,11 @@ export const SPECTRUM_ORDER: IdeologyColor[] = [
   PALETTE.anarquismo
 ];
 
+/** Cor de uma categoria pela chave interna (sem passar pelos nomes vindos da API). */
+export function ideologyColorByKey(key: IdeologyColorKey): IdeologyColor {
+  return PALETTE[key];
+}
+
 export function resolveIdeologyColor(category: string): IdeologyColor {
   return PALETTE[ALIASES[category.trim().toLowerCase()] ?? 'centro'];
 }

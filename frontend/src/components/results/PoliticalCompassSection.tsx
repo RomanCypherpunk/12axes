@@ -1,17 +1,37 @@
 import { useState, type CSSProperties } from 'react';
 import { t } from '../../i18n';
-import { resolveIdeologyColor } from '../../utils/ideologyColors';
+import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
-import { socialLevel, type CompassPosition } from '../../utils/politicalCompass';
+import { centerSide, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
 import { InfoButton, InfoSheet } from './InfoSheet';
 
-// Cantos pastel da grade (rosa, azul, verde, amarelo), interpolados célula a célula; o centro fica quase branco.
-const CORNERS = {
-  topLeft: [231, 191, 196],
-  topRight: [192, 209, 236],
-  bottomLeft: [190, 227, 203],
-  bottomRight: [245, 237, 196]
-} as const;
+// A grade é um mapa de regiões: cada categoria do espectro ancora o seu pastel no centro do bloco que
+// ocupa (colunas e linhas contadas de 0) e as cores se misturam suavemente entre os blocos.
+const ANCHORS: { key: IdeologyColorKey; column: number; row: number }[] = [
+  { key: 'esq-radical', column: 1, row: 1 },
+  { key: 'terceira', column: 4, row: 1 },
+  { key: 'ext-direita', column: 7, row: 1 },
+  { key: 'esquerda', column: 1, row: 4.5 },
+  { key: 'centro', column: 4, row: 4.5 },
+  { key: 'direita', column: 7, row: 4.5 },
+  { key: 'anarquismo', column: 1.5, row: 7.5 },
+  { key: 'libertario', column: 6.5, row: 7.5 }
+];
+// Alcance da mistura, em células: quanto maior, mais suave (e menos nítido cada bloco).
+const BLEND_SPREAD = 1.7;
+// Tom de cada categoria na grade: o matiz vem da cor base da identidade; saturação e luminosidade
+// (0-100) ficam por conta de cada uma, para o resultado ser claro e saturado como a bússola clássica.
+// `hue` só aparece quando o matiz da cor base precisa de ajuste (o ocre do Libertário vira amarelo).
+const VIVID: Record<IdeologyColorKey, { saturation: number; lightness: number; hue?: number }> = {
+  'esq-radical': { saturation: 85, lightness: 74 },
+  terceira: { saturation: 65, lightness: 78 },
+  'ext-direita': { saturation: 85, lightness: 66 },
+  esquerda: { saturation: 65, lightness: 72 },
+  centro: { saturation: 10, lightness: 80 },
+  direita: { saturation: 90, lightness: 77 },
+  anarquismo: { saturation: 0, lightness: 76 },
+  libertario: { saturation: 90, lightness: 68, hue: 47 }
+};
 // Cores dos polos do eixo `moral` (rosa e marrom em axes.json); estas são só o plano B se o eixo faltar.
 const FALLBACK_PROGRESSIVE = '#D23E84';
 const FALLBACK_TRADITIONAL = '#74502C';
@@ -19,7 +39,6 @@ const WHITE = [255, 255, 255] as const;
 // Meio da barra: moderados ficam num cinza neutro, entre o rosa e o marrom.
 const NEUTRAL = [123, 127, 134] as const;
 const SIZE = 9;
-const CENTER = '#F6F7F3';
 
 function mix(a: readonly number[], b: readonly number[], amount: number): number[] {
   return a.map((value, index) => value + (b[index] - value) * amount);
@@ -40,15 +59,55 @@ function rgb(color: number[]): string {
   return `rgb(${color.map((value) => Math.round(value)).join(',')})`;
 }
 
+function hueOf([red, green, blue]: number[]): number {
+  const max = Math.max(red, green, blue);
+  const min = Math.min(red, green, blue);
+  if (max === min) return 0;
+  const delta = max - min;
+  const hue = max === red ? ((green - blue) / delta) % 6 : max === green ? (blue - red) / delta + 2 : (red - green) / delta + 4;
+  return (hue * 60 + 360) % 360;
+}
+
+function hslToRgb(hue: number, saturation: number, lightness: number): number[] {
+  const s = saturation / 100;
+  const l = lightness / 100;
+  const k = (n: number) => (n + hue / 30) % 12;
+  const a = s * Math.min(l, 1 - l);
+  const channel = (n: number) => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+  return [channel(0), channel(8), channel(4)].map((value) => value * 255);
+}
+
+/** Base do Centro misturada, meio a meio, com a base da outra categoria; undefined se não for um par com o Centro. */
+function centerMixColor(first: IdeologyColorKey, second: IdeologyColorKey): string | undefined {
+  if (first === second || (first !== 'centro' && second !== 'centro')) return undefined;
+  const other = first === 'centro' ? second : first;
+  return rgb(mix(hexToRgb(ideologyColorByKey('centro').base), hexToRgb(ideologyColorByKey(other).base), 0.5));
+}
+
+function vividColor(key: IdeologyColorKey): number[] {
+  const { saturation, lightness, hue } = VIVID[key];
+  return hslToRgb(hue ?? hueOf(hexToRgb(ideologyColorByKey(key).base)), saturation, lightness);
+}
+
+function regionColor(column: number, row: number): string {
+  let total = 0;
+  const sum = [0, 0, 0];
+  for (const anchor of ANCHORS) {
+    const distance2 = (column - anchor.column) ** 2 + (row - anchor.row) ** 2;
+    const weight = Math.exp(-distance2 / (2 * BLEND_SPREAD ** 2));
+    const color = vividColor(anchor.key);
+    total += weight;
+    color.forEach((value, index) => {
+      sum[index] += value * weight;
+    });
+  }
+  return rgb(sum.map((value) => value / total));
+}
+
 const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => {
   const column = index % SIZE;
   const row = Math.floor(index / SIZE);
-  if (column === (SIZE - 1) / 2 && row === (SIZE - 1) / 2) return CENTER;
-  const u = column / (SIZE - 1);
-  const v = row / (SIZE - 1);
-  const top = mix(CORNERS.topLeft, CORNERS.topRight, u);
-  const bottom = mix(CORNERS.bottomLeft, CORNERS.bottomRight, u);
-  return rgb(mix(top, bottom, v));
+  return regionColor(column, row);
 });
 
 // Mantém o marcador inteiro dentro da grade mesmo nos extremos.
@@ -78,6 +137,14 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const spectrum = resolveIdeologyColor(category);
+  // Só quando a ideologia mais compatível e a região da bússola são Centro e Esquerda (ou Centro e Direita) a frase
+  // mostra a posição intermediária, centro-esquerda ou centro-direita; nos demais casos vale a categoria da ideologia.
+  const compassKey = compassRegion(position);
+  const centerSideKey = centerSide(spectrum.key, compassKey);
+  const centerLabel = centerSideKey === 'esquerda' ? t.compassCenterLeft : t.compassCenterRight;
+  // "X" da grade: quando a ideologia e a região da bússola divergem e uma delas é o Centro, a cor é a mistura
+  // da base do Centro com a base da outra; nos demais casos vale a cor da categoria da página (--cat).
+  const markerColor = centerMixColor(spectrum.key, compassKey);
   const social = socialLevel(traditional);
   const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
   const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
@@ -113,7 +180,7 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
             ))}
             <i className="e-compass-axis is-x" aria-hidden="true" />
             <i className="e-compass-axis is-y" aria-hidden="true" />
-            <Marker left={right} top={100 - authoritarian} />
+            <Marker left={right} top={100 - authoritarian} color={markerColor} />
           </div>
           <span className="e-compass-lbl is-right">{t.compassRight}</span>
           <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
@@ -121,10 +188,21 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
 
         <div className="e-compass-read">
           <p className="e-compass-sentence">
-            <span className="e-compass-spectrum" style={{ color: spectrum.base }}>
-              {t.compassSpectrumLabels[spectrum.key]}
-            </span>{' '}
-            <span className="e-compass-conn">{t.compassWith}</span>{' '}
+            {centerSideKey ? (
+              <>
+                <span className="e-compass-spectrum" style={{ color: ideologyColorByKey(centerSideKey).base }}>
+                  {centerLabel}
+                </span>{' '}
+                <span className="e-compass-conn">{t.compassWith}</span>{' '}
+              </>
+            ) : (
+              <>
+                <span className="e-compass-spectrum" style={{ color: spectrum.base }}>
+                  {t.compassSpectrumLabels[spectrum.key]}
+                </span>{' '}
+                <span className="e-compass-conn">{t.compassWith}</span>{' '}
+              </>
+            )}
             <mark className="e-compass-mark" style={{ background: socialColor }}>
               {t.compassSocialLabels[social]}
             </mark>

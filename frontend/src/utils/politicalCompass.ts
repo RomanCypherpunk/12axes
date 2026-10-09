@@ -1,4 +1,5 @@
 import type { AxisResult } from '../types/quiz';
+import type { IdeologyColorKey } from './ideologyColors';
 
 /** Posição do usuário na bússola política, cada valor de 0 a 100. */
 export interface CompassPosition {
@@ -89,4 +90,42 @@ export function socialLevel(traditional: number): SocialKey {
   if (traditional <= 60) return 'moderate';
   if (traditional <= 80) return 'traditional';
   return 'veryTraditional';
+}
+
+const GRID_SIZE = 9;
+
+const toCell = (percent: number): number => Math.max(0, Math.min(GRID_SIZE - 1, Math.floor((percent / 100) * GRID_SIZE)));
+
+/**
+ * Região da grade da bússola em que a posição cai, com as mesmas fronteiras do mapa de cores
+ * (grade 9x9): linhas de cima = autoritários (Esquerda Radical, Terceira Posição, Extrema Direita),
+ * do meio = Esquerda, Centro e Direita, e de baixo = Anarquismo e Libertário. A coluna do meio da
+ * faixa de baixo é dividida pelo lado esquerda-direita.
+ */
+export function compassRegion({ right, authoritarian }: CompassPosition): IdeologyColorKey {
+  const column = toCell(right);
+  const row = toCell(100 - authoritarian);
+  if (row <= 2) {
+    return column <= 2 ? 'esq-radical' : column <= 5 ? 'terceira' : 'ext-direita';
+  }
+  if (row <= 6) {
+    return column <= 2 ? 'esquerda' : column <= 5 ? 'centro' : 'direita';
+  }
+  if (column <= 3) return 'anarquismo';
+  if (column >= 5) return 'libertario';
+  return right < 50 ? 'anarquismo' : 'libertario';
+}
+
+/**
+ * Quando a ideologia e a região da bússola são Centro e Esquerda (ou Centro e Direita), a posição
+ * intermediária se chama centro-esquerda (ou centro-direita) em vez de "entre". Qualquer outro par,
+ * ou o mesmo lado nos dois, devolve null.
+ */
+export function centerSide(first: IdeologyColorKey, second: IdeologyColorKey): 'esquerda' | 'direita' | null {
+  if (first === second) return null;
+  const keys = [first, second];
+  if (!keys.includes('centro')) return null;
+  if (keys.includes('esquerda')) return 'esquerda';
+  if (keys.includes('direita')) return 'direita';
+  return null;
 }
