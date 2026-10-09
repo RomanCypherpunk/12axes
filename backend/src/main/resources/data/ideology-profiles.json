@@ -4320,18 +4320,18 @@
   {
     "ideologyId": "eurocomunismo",
     "vector": {
-      "estrutura": 54.5,
-      "representacao": 96.6,
-      "poder": 33.0,
-      "imigracao": 42.6,
-      "diplomacia": 14.5,
-      "intervencao": 72.0,
-      "economia": 82.2,
-      "controle": 78.1,
+      "estrutura": 37.9,
+      "representacao": 87.0,
+      "poder": 37.7,
+      "imigracao": 33.1,
+      "diplomacia": 31.2,
+      "intervencao": 57.7,
+      "economia": 77.4,
+      "controle": 77.0,
       "comercio": 59.8,
-      "religiao": 73.8,
-      "moral": 70.5,
-      "tecnologia": 50.0
+      "religiao": 67.9,
+      "moral": 68.1,
+      "tecnologia": 57.1
     }
   },
   {
@@ -4405,18 +4405,18 @@
   {
     "ideologyId": "geossocialismo",
     "vector": {
-      "estrutura": 67.6,
-      "representacao": 94.2,
-      "poder": 34.1,
-      "imigracao": 10.5,
-      "diplomacia": 12.1,
+      "estrutura": 51.0,
+      "representacao": 88.2,
+      "poder": 31.8,
+      "imigracao": 14.0,
+      "diplomacia": 21.7,
       "intervencao": 66.0,
-      "economia": 81.0,
-      "controle": 61.5,
-      "comercio": 13.3,
-      "religiao": 83.3,
-      "moral": 86.0,
-      "tecnologia": 73.8
+      "economia": 72.7,
+      "controle": 59.1,
+      "comercio": 18.1,
+      "religiao": 77.4,
+      "moral": 78.8,
+      "tecnologia": 53.6
     }
   },
   {
@@ -4434,6 +4434,40 @@
       "religiao": 9.5,
       "moral": 15.3,
       "tecnologia": 11.0
+    }
+  },
+  {
+    "ideologyId": "malthusianismo",
+    "vector": {
+      "estrutura": 45.9,
+      "representacao": 56.7,
+      "poder": 61.4,
+      "imigracao": 74.3,
+      "diplomacia": 50.5,
+      "intervencao": 49.5,
+      "economia": 18.4,
+      "controle": 27.8,
+      "comercio": 56.5,
+      "religiao": 23.4,
+      "moral": 18.2,
+      "tecnologia": 38.1
+    }
+  },
+  {
+    "ideologyId": "neomalthusianismo",
+    "vector": {
+      "estrutura": 31.9,
+      "representacao": 85.9,
+      "poder": 34.1,
+      "imigracao": 24.8,
+      "diplomacia": 26.4,
+      "intervencao": 58.9,
+      "economia": 63.9,
+      "controle": 59.2,
+      "comercio": 35.3,
+      "religiao": 83.3,
+      "moral": 82.4,
+      "tecnologia": 61.9
     }
   }
 ]

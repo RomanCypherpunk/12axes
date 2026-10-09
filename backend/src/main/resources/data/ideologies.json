@@ -3343,5 +3343,29 @@
       "protestant",
       "orthodox"
     ]
+  },
+  {
+    "id": "malthusianismo",
+    "name": "Malthusianismo",
+    "category": "Direita",
+    "description": "Doutrina inspirada em Malthus que propõe conter o crescimento populacional por casamento tardio, educação e responsabilidade familiar, trocar a assistência aos pobres por incentivo ao trabalho e proteger a propriedade e a agricultura nacional.",
+    "phrase": "Quero famílias responsáveis, casamento tardio e instrução moral, trocando a assistência aos pobres por incentivo ao trabalho, com propriedade e agricultura protegidas.",
+    "vector": null,
+    "countryId": "reino-unido-vitoriano-imperio-britanico",
+    "personalityId": "thomas-malthus",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "neomalthusianismo",
+    "name": "Neomalthusianismo",
+    "category": "Centro",
+    "description": "Corrente que propõe enfrentar a pressão populacional sobre os recursos com contracepção, planejamento familiar voluntário, educação sexual e autonomia reprodutiva das mulheres, aliados a saúde pública e desenvolvimento.",
+    "phrase": "Quero planejamento familiar voluntário, contracepção e educação ao alcance de todos, com autonomia reprodutiva e desenvolvimento para sustentar os recursos.",
+    "vector": null,
+    "countryId": "reino-unido-vitoriano-imperio-britanico",
+    "personalityId": "john-stuart-mill",
+    "religions": ["protestant"]
   }
 ]
