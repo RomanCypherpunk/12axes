@@ -8757,18 +8757,18 @@
   {
     "personalityId": "hasan-piker",
     "vector": {
-      "estrutura": 49.8,
+      "estrutura": 43.8,
       "representacao": 78.7,
-      "poder": 27.0,
-      "imigracao": 1.0,
-      "diplomacia": 7.5,
-      "intervencao": 80.5,
-      "economia": 99.6,
-      "controle": 98.4,
-      "comercio": 90.7,
-      "religiao": 92.9,
-      "moral": 97.9,
-      "tecnologia": 50.0
+      "poder": 23.4,
+      "imigracao": 10.5,
+      "diplomacia": 18.2,
+      "intervencao": 74.5,
+      "economia": 88.1,
+      "controle": 82.9,
+      "comercio": 66.9,
+      "religiao": 83.3,
+      "moral": 89.5,
+      "tecnologia": 48.8
     }
   },
   {
@@ -9534,6 +9534,108 @@
       "religiao": 47.4,
       "moral": 26.8,
       "tecnologia": 60.6
+    }
+  },
+  {
+    "personalityId": "jean-luc-melenchon",
+    "vector": {
+      "estrutura": 23.6,
+      "representacao": 91.8,
+      "poder": 31.8,
+      "imigracao": 30.7,
+      "diplomacia": 36.0,
+      "intervencao": 62.5,
+      "economia": 85.8,
+      "controle": 91.2,
+      "comercio": 75.2,
+      "religiao": 83.3,
+      "moral": 81.2,
+      "tecnologia": 38.1
+    }
+  },
+  {
+    "personalityId": "jean-marie-le-pen",
+    "vector": {
+      "estrutura": 20.0,
+      "representacao": 74.0,
+      "poder": 62.7,
+      "imigracao": 93.2,
+      "diplomacia": 72.4,
+      "intervencao": 47.9,
+      "economia": 44.7,
+      "controle": 58.8,
+      "comercio": 91.9,
+      "religiao": 21.2,
+      "moral": 10.1,
+      "tecnologia": 50.0
+    }
+  },
+  {
+    "personalityId": "eric-zemmour",
+    "vector": {
+      "estrutura": 15.2,
+      "representacao": 71.6,
+      "poder": 71.0,
+      "imigracao": 96.8,
+      "diplomacia": 77.9,
+      "intervencao": 38.8,
+      "economia": 34.0,
+      "controle": 46.9,
+      "comercio": 87.1,
+      "religiao": 40.2,
+      "moral": 19.6,
+      "tecnologia": 65.3
+    }
+  },
+  {
+    "personalityId": "philippe-petain",
+    "vector": {
+      "estrutura": 18.7,
+      "representacao": 12.6,
+      "poder": 88.6,
+      "imigracao": 93.2,
+      "diplomacia": 56.9,
+      "intervencao": 47.9,
+      "economia": 57.9,
+      "controle": 75.4,
+      "comercio": 76.8,
+      "religiao": 14.0,
+      "moral": 8.9,
+      "tecnologia": 37.1
+    }
+  },
+  {
+    "personalityId": "francois-mitterrand",
+    "vector": {
+      "estrutura": 27.1,
+      "representacao": 82.3,
+      "poder": 46.0,
+      "imigracao": 51.0,
+      "diplomacia": 55.2,
+      "intervencao": 29.3,
+      "economia": 70.3,
+      "controle": 73.4,
+      "comercio": 49.0,
+      "religiao": 70.2,
+      "moral": 58.6,
+      "tecnologia": 61.8
+    }
+  },
+  {
+    "personalityId": "jacques-chirac",
+    "vector": {
+      "estrutura": 24.8,
+      "representacao": 77.5,
+      "poder": 58.0,
+      "imigracao": 61.2,
+      "diplomacia": 40.7,
+      "intervencao": 48.2,
+      "economia": 54.4,
+      "controle": 53.3,
+      "comercio": 53.2,
+      "religiao": 62.7,
+      "moral": 40.8,
+      "tecnologia": 52.4
     }
   }
 ]
