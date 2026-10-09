@@ -3540,10 +3540,7 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mozambique.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": [
-      "catholic",
-      "protestant"
-    ]
+    "religions": []
   },
   {
     "id": "ruanda",
@@ -3659,7 +3656,9 @@
     "flagSourceName": "Wikimedia Commons",
     "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Côte_d'Ivoire.svg",
     "flagNote": "Bandeira oficial usada como referência visual.",
-    "religions": []
+    "religions": [
+      "islam"
+    ]
   },
   {
     "id": "camaroes",

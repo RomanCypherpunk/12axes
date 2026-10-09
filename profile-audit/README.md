@@ -118,6 +118,7 @@ METODOLOGIA (obrigatória):
 - Cada pergunta e independente. As perguntas ja vem em ordem embaralhada. Responda pelo id da pergunta.
 - Atenção de interpretação: `estrutura` mede descentralização/federalismo/secessão vs. unitarismo/centralização; `representacao` mede democracia/participação vs. autocracia/liderança forte. **Nunca use autocracia como atalho para marcar `estrutura` como unitário, nem descentralização como atalho para marcar `representacao` como democrática.**
 - Nuance importante do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico. Se este perfil for anti-estatista mas quiser coordenacao economica coletiva/planejada (ex.: anarquistas, comunistas libertarios), julgue pelo ESPIRITO de coordenacao coletiva vs. mercado, nao pela agencia estatal literal. Ja no eixo "representacao", a ausencia de Estado formal (anarquia) conta do lado democratico/anti-autocratico, nao autocratico.
+- Só para o catálogo país/nação, responda como o REGIME: cada pergunta deve ser respondida como o governo/regime em exercício (ou, num país histórico, o regime daquele período) a responderia, pela sua prática institucional real e não pelo que a população, a oposição ou a Constituição afirmam. Em `representacao`, eleição formal, parlamento e Constituição democráticos não contam quando há fraude, oposição excluída ou perseguida, imprensa controlada, Judiciário submisso, partido/dinastia/Exército que não perde o poder ou ausência de eleições: um regime assim discorda de alternância de poder, de limite de mandatos e dos direitos da oposição, e concorda com líder forte e com estabilidade antes de eleição, ainda que a sociedade pense o contrário. Em democracias reais (alternância efetiva, imprensa e Judiciário independentes) o regime responde democraticamente. Nos demais eixos, julgue também pela política efetiva do Estado.
 
 SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
 <caminho absoluto para profile-audit/subagent-out/{catalog}/{id}.json>
@@ -365,6 +366,15 @@ O modelo puxa perfis atípicos para a caixa ideológica mais familiar. Sorel vir
 esquerda; Nietzsche virou pacifista antinacionalista. São justamente os perfis que ficam órfãos de
 ideologia — órfãos porque não cabem nas categorias usuais. Nomeie as heterodoxias no prompt.
 
-### 5. Códigos inválidos
+### 5. País respondido pelo ideal da sociedade, não pelo regime
+As perguntas de `representacao` são normativas ("eleições livres devem ser mantidas..."). Sem a regra de país
+(responda como o **regime**, pela prática institucional), o subagente responde pelo que a população ou a oposição
+defende e países autoritários ou híbridos saem em 55–90 de Democracia.
+
+> RD Congo, Quênia, Palestina, Nigéria e Tunísia saíram entre 48 e 87 em `representacao`, mesmo com contexto factual
+> no prompt. Regimes que se assumem autocráticos (Omã, Brunei, Kuwait) saíram bem. A correção é a instrução do template
+> ("responda como o REGIME") e, para regimes contestados, um parágrafo de fato público de contexto — nunca um alvo numérico.
+
+### 6. Códigos inválidos
 Um subagente já gravou `A`, `B` e `E` em vez de `DT/D/N/C/CT`, confundindo com letras de alternativa.
 O validador pega isso, mas vale reforçar no prompt que `C` significa "concordo", não "alternativa C".
