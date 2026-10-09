@@ -133,9 +133,9 @@ interface PoliticalCompassSectionProps {
   moralAxis?: Axis;
 }
 
-export function PoliticalCompassSection({ position, category, moralAxis }: PoliticalCompassSectionProps) {
-  const { right, authoritarian, traditional } = position;
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
+/** Valores derivados da bússola (cores, frase e barra), compartilhados com o relatório em PDF. */
+export function compassView(position: CompassPosition, category: string, moralAxis?: Axis) {
+  const { traditional } = position;
   const spectrum = resolveIdeologyColor(category);
   // Só quando a ideologia mais compatível e a região da bússola são Centro e Esquerda (ou Centro e Direita) a frase
   // mostra a posição intermediária, centro-esquerda ou centro-direita; nos demais casos vale a categoria da ideologia.
@@ -160,6 +160,20 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
     )
   );
   const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
+  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
+}
+
+export const COMPASS_GRID_CELLS = GRID_CELLS;
+export const compassClamp = clamp;
+
+export function PoliticalCompassSection({ position, category, moralAxis }: PoliticalCompassSectionProps) {
+  const { right, authoritarian, traditional } = position;
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor } = compassView(
+    position,
+    category,
+    moralAxis
+  );
 
   return (
     <section className="e-panel e-compass" id="bussola" data-reveal>

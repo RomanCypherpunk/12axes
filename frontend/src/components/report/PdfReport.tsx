@@ -10,14 +10,16 @@ import type {
   QuizResult
 } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
-import { catStyle, localCatStyle } from '../../utils/ideologyColors';
+import { catStyle, ideologyColorByKey, localCatStyle } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
 import { PoleIcon } from '../AxisIcon';
 import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
+import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../results/PoliticalCompassSection';
 import { commonNote, unusualLead } from '../results/SignatureSection';
+import { computeCompass, type CompassPosition } from '../../utils/politicalCompass';
 
 interface PdfReportProps {
   result: QuizResult;
@@ -35,6 +37,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
   const top = result.topMatch;
   const books = result.bookRecommendations ?? [];
   const others = result.matches.slice(1, 4);
+  const compass = computeCompass(axisResults);
   const sections = [
     t.axesSectionTitle,
     t.signatureTitle,
@@ -42,7 +45,8 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
     t.personalitiesSectionTitle,
     ...(result.personalityMatches.length > 0 ? [t.areasGeneralTitle] : []),
     ...(books.length > 0 ? [t.booksTitle] : []),
-    t.otherMatches
+    t.otherMatches,
+    ...(compass ? [t.compassTitle] : [])
   ];
   const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
     day: 'numeric',
@@ -261,6 +265,13 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
           </div>
         </section>
 
+        {compass && (
+          <section className="rp-sec">
+            <SectionHead title={t.compassTitle} />
+            <Compass position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />
+          </section>
+        )}
+
         <div className="close">
           <div>
             <p className="eb">{t.report.aboutTitle}</p>
@@ -273,6 +284,65 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
         </div>
       </div>
     </div>
+  );
+}
+
+function Compass({ position, category, moralAxis }: { position: CompassPosition; category: string; moralAxis?: Axis }) {
+  const { right, authoritarian, traditional } = position;
+  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor } = compassView(
+    position,
+    category,
+    moralAxis
+  );
+  const spectrumLabel = centerSideKey ? centerLabel : t.compassSpectrumLabels[spectrum.key];
+  const spectrumColor = centerSideKey ? ideologyColorByKey(centerSideKey).base : spectrum.base;
+  return (
+    <div className="cmp">
+      <div className="cmp-chart">
+        <span className="cmp-lbl cmp-top">{t.compassAuthoritarian}</span>
+        <span className="cmp-lbl cmp-left">{t.compassLeft}</span>
+        <div className="cmp-grid">
+          {COMPASS_GRID_CELLS.map((color, index) => (
+            <span key={index} style={{ background: color }} />
+          ))}
+          <i className="cmp-axis cmp-x" />
+          <i className="cmp-axis cmp-y" />
+          <CompassX left={right} top={100 - authoritarian} color={markerColor ?? 'var(--cat)'} />
+        </div>
+        <span className="cmp-lbl cmp-right">{t.compassRight}</span>
+        <span className="cmp-lbl cmp-bottom">{t.compassLibertarian}</span>
+      </div>
+      <div className="cmp-read">
+        <p className="cmp-sentence">
+          <span style={{ color: spectrumColor }}>{spectrumLabel}</span> <span className="cmp-conn">{t.compassWith}</span>{' '}
+          <mark style={{ background: socialColor }}>{t.compassSocialLabels[social]}</mark>
+          {t.compassSocialValues && <span className="cmp-conn"> {t.compassSocialValues}</span>}
+        </p>
+        <div className="cmp-bar-lbls">
+          <span>{t.compassProgressive}</span>
+          <span>{t.compassTraditionalist}</span>
+        </div>
+        <div className="cmp-strip">
+          {stripCells.map((color, index) => (
+            <span key={index} style={{ background: color }} />
+          ))}
+          <CompassX left={traditional} color={socialColor} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CompassX({ left, top, color }: { left: number; top?: number; color: string }) {
+  return (
+    <span
+      className="cmp-mark"
+      style={{ left: `${compassClamp(left)}%`, top: top === undefined ? '50%' : `${compassClamp(top)}%`, background: color }}
+    >
+      <svg viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </svg>
+    </span>
   );
 }
 
