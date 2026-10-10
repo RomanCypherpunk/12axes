@@ -3,12 +3,12 @@
   "id": "tecnoprogressismo",
   "auditDate": "2026-10-10",
   "scope": "This profile represents the democratic, egalitarian technoprogressive current articulated by the Institute for Ethics and Emerging Technologies (IEET), especially the 2014 Technoprogressive Declaration. It is a movement-level interpretation, not a profile of any individual author, party or national government.",
-  "method": "The 240 answers and five archetype choices are an independent question-by-question simulation of the doctrine, not statements collected from members. Every answer was checked against the current `questions-pool.json` text, and archetypes were generated from `profile_vector.py --prompt-block`. Source support is strongest for democracy, civil and bodily liberties, social provision, and technological development. Territorial administration, precise trade instruments and military policy require more interpretation. Neither cosmopolitan cooperation nor the existence of a national state implies aggressive nationalist foreign policy.",
+  "method": "The 240 answers and five archetype choices are an independent question-by-question simulation of the doctrine, not statements collected from members. Re-audited on 2026-10-10 through the standard README process after the maintainer noted that the first audit's technology score (73.7) understated the transhumanist core. The description and phrase were revised to name human enhancement, radical life extension and morphological freedom. The auditor prompt carried a context block drawn from the sources below, including the movement's counterweights (sustainability, risk governance, democracy), and did not receive the previous answers, the previous vector, neighbors or any target value. The output was merged as returned. Source support is strongest for democracy, civil and bodily liberties, enhancement, social provision and technological development. Territorial administration, precise trade instruments and military policy require more interpretation.",
   "inferenceLimits": [
-    "The audit must not be adjusted to obtain a desired vector, ranking, category, or distance from another profile. Similarity warnings are reviewed as limitations of this representation, not optimized away.\n",
-    "estrutura_09 (C) and estrutura_18 (D): no direct movement-level support for these secession positions was found in the reviewed sources. Personal or bodily self-determination does not establish territorial self-determination. The opposite unitary answers would also require evidence. These remain weakly supported inferences, not documented doctrine.",
-    "estrutura_13 (C): assess municipal lawmaking separately from secession. Hughes provides limited support for decentralized participation, but no specific shared commitment to cities making laws different from national laws. Different laws do not necessarily mean overriding national law. This answer remains a weakly supported inference.",
-    "The existing structure axis already has 6/20 neutral answers. Replacing these three answers with neutral would exceed its 30% limit. This constraint does not substantiate any answer and must not guide answer selection."
+    "The audit must not be adjusted to obtain a desired vector, ranking, category, or distance from another profile. Similarity warnings are reviewed as limitations of this representation, not optimized away.",
+    "estrutura_09 (D), estrutura_13 (D) and estrutura_18 (N): the re-audit prompt stated that the sources do not address secession or municipal lawmaking. The auditor nonetheless inferred that universal guarantees presuppose common national standards. That inference is disclosed in the persona brief but is not documented doctrine. The previous audit made the opposite inference (C, C, D), also without direct support. These answers need maintainer review and were not hand-edited.",
+    "Self-determination in the sources means bodily, reproductive and cognitive autonomy, not territorial self-determination.",
+    "73 of 240 answers changed between the two audits, including on axes not explicitly targeted by the new context (imigracao 14.0 -> 23.6; estrutura 56.9 -> 40.2). This demonstrates sensitivity across these two audits; the relative contributions of changed context and run-to-run variation cannot be determined from two runs."
   ],
   "sources": [
     {
@@ -101,11 +101,12 @@
   ],
   "territorialReview": {
     "method": "Reviewed institutional IEET and AFT-Technoprog statements and an interview with Hughes; searched these organizations for technoprogressivism with secession, federalism and subsidiarity. Negative findings concern the reviewed material, not all possible publications.",
-    "decision": "No direct evidence sufficient to replace the disputed answers was found. Retain the original archive and computed vector, disclose weak support, and keep the proposal draft for maintainer review. No new audit or hand edits to answers were performed."
+    "decision": "No direct evidence on secession or municipal legislative powers was found. The standard full re-audit was run for the technology concern, not to change these answers; its territorial answers are reported as weakly supported inferences for maintainer review."
   },
   "process": {
     "answerArchive": "profile-audit/answers/ideology/tecnoprogressismo.json",
+    "previousArchive": "profile-audit/answers/ideology/tecnoprogressismo.pre-reaudit-2026-10-10.json",
     "vectorMethod": "profile_vector.compute_vector",
-    "revisionPolicy": "Preserve the original archive; any future full independent re-audit should use a dated archive, following the Argentina research precedent, and document which archive supplies the vector."
+    "revisionPolicy": "The current archive supplies the vector. Earlier audits are kept as <id>.pre-reaudit-<date>.json, following the existing pattern in answers/country/."
   }
 }
