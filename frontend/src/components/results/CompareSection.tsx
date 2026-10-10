@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { fetchCompare, fetchCompareCatalog } from '../../services/quizApi';
-import type { Axis, AxisResult, CompareDetail, CompareItem } from '../../types/quiz';
+import type { Axis, AxisResult, CompareDetail, CompareItem, PersonalityRepresentation } from '../../types/quiz';
 import { compareAxes, summaryKinds, type CompareAxisRow } from '../../utils/compareAxes';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { resolveIdeologyColor } from '../../utils/ideologyColors';
@@ -19,6 +19,7 @@ interface CompareSectionProps {
   religion?: Religion | null;
   /** Categoria da ideologia principal do usuário; define a cor do marcador "você". */
   userCategory: string;
+  representation: PersonalityRepresentation;
 }
 
 // Sem acento e minúsculo, para a busca achar "Sao Paulo" digitando "são paulo".
@@ -64,7 +65,7 @@ function ProfileFace({ item, className }: { item: CompareItem; className: string
   return <span className={`${className} e-cmp-dot`} style={{ background: resolveIdeologyColor(item.category).base }} aria-hidden="true" />;
 }
 
-export function CompareSection({ axes, results, religion, userCategory }: CompareSectionProps) {
+export function CompareSection({ axes, results, religion, userCategory, representation }: CompareSectionProps) {
   const [catalog, setCatalog] = useState<CompareItem[] | null>(null);
   const [catalogReligion, setCatalogReligion] = useState<Religion | null | undefined>(undefined);
   const [catalogError, setCatalogError] = useState(false);
@@ -75,6 +76,15 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
   const [error, setError] = useState(false);
   const requestRef = useRef(0);
   const detailCache = useRef(new Map<string, Promise<CompareDetail>>());
+
+  useEffect(() => {
+    setCatalog(null);
+    setCatalogReligion(undefined);
+    setSelected(null);
+    setDetail(null);
+    setQuery('');
+    detailCache.current.clear();
+  }, [representation]);
 
   // O catálogo muda com a religião (perfis "only"), então recarrega se ela mudar.
   useEffect(() => {
@@ -89,7 +99,7 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
     if (catalog || catalogReligion !== undefined) return;
     setCatalogReligion(religion ?? null);
     setCatalogError(false);
-    fetchCompareCatalog(religion ?? null)
+    fetchCompareCatalog(religion ?? null, representation)
       .then(setCatalog)
       .catch(() => {
         setCatalogError(true);
@@ -103,10 +113,10 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
   // A comparação começa a carregar assim que o perfil é escolhido, enquanto o usuário
   // ainda vai até o botão; "Visualizar" só espera o que faltar (quase sempre nada).
   const detailFor = (item: CompareItem): Promise<CompareDetail> => {
-    const key = `${item.type}:${item.id}:${userPercents.join(',')}`;
+    const key = `${representation}:${item.type}:${item.id}:${userPercents.join(',')}`;
     let pending = detailCache.current.get(key);
     if (!pending) {
-      pending = fetchCompare(item.type, item.id, userPercents);
+      pending = fetchCompare(item.type, item.id, userPercents, representation);
       pending.catch(() => detailCache.current.delete(key));
       detailCache.current.set(key, pending);
     }
