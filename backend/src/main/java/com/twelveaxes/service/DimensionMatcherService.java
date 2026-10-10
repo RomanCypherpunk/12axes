@@ -13,30 +13,16 @@ import java.util.Map;
 import java.util.Set;
 import org.springframework.stereotype.Service;
 
-/**
- * Personalidade mais compativel com o usuario em cada dimensao do perfil.
- *
- * A compatibilidade geral soma os 12 eixos e responde "com quem voce mais se
- * parece". Estas tres respondem algo mais especifico: com quem voce combina
- * POLITICAMENTE, SOCIALMENTE e ECONOMICAMENTE, olhando so os eixos daquele
- * grupo. Sao perguntas diferentes, e as respostas costumam ser pessoas
- * diferentes.
- */
 @Service
 public class DimensionMatcherService {
-    /**
-     * Instituicoes, poder, politica externa, imigracao, tecnologia e orientacao
-     * comercial.
-     */
     public static final List<String> POLITICAL_AXES = List.of(
             "estrutura", "representacao", "poder", "diplomacia", "imigracao",
             "intervencao", "tecnologia", "controle", "comercio", "religiao", "economia", "moral");
 
-    /** Costumes, fe, economia, imigracao, poder e tecnologia. */
-    public static final List<String> SOCIAL_AXES = List.of("representacao", "moral", "religiao", "economia", "controle",
+    public static final List<String> SOCIAL_AXES = List.of(
+            "representacao", "moral", "religiao", "economia", "controle",
             "comercio", "imigracao", "poder", "tecnologia");
 
-    /** Propriedade, coordenacao da producao e abertura comercial. */
     public static final List<String> ECONOMIC_AXES = List.of("economia", "controle", "comercio");
 
     public static final String POLITICAL = "political";
@@ -51,28 +37,32 @@ public class DimensionMatcherService {
         this.profileMatchScorer = profileMatchScorer;
     }
 
-    /**
-     * As tres dimensoes, na ordem politica, social, economica.
-     *
-     * @param excludeId personalidade a deixar de fora, normalmente a mais
-     *                  compativel no geral: a secao se chama "tambem proximos",
-     *                  entao repetir quem ja aparece como destaque nao acrescenta
-     *                  nada ao leitor.
-     */
     public List<DimensionMatch> findAll(List<AxisResult> axisResults, String lang, String excludeId) {
-        return findAll(axisResults, lang, excludeId, null);
+        return findAll(
+                axisResults, lang, excludeId, null, PersonalityMatcherService.REPRESENTATION_MALE);
     }
 
     public List<DimensionMatch> findAll(
             List<AxisResult> axisResults, String lang, String excludeId, String religion) {
+        return findAll(
+                axisResults, lang, excludeId, religion, PersonalityMatcherService.REPRESENTATION_MALE);
+    }
+
+    public List<DimensionMatch> findAll(
+            List<AxisResult> axisResults,
+            String lang,
+            String excludeId,
+            String religion,
+            String representation) {
+        String normalizedRepresentation = PersonalityMatcherService.normalizeRepresentation(representation);
         List<DimensionMatch> matches = new ArrayList<>();
         Set<String> excludedIds = new LinkedHashSet<>();
         if (excludeId != null) {
             excludedIds.add(excludeId);
         }
-        addIfPresent(matches, excludedIds, POLITICAL, POLITICAL_AXES, axisResults, lang, religion);
-        addIfPresent(matches, excludedIds, SOCIAL, SOCIAL_AXES, axisResults, lang, religion);
-        addIfPresent(matches, excludedIds, ECONOMIC, ECONOMIC_AXES, axisResults, lang, religion);
+        addIfPresent(matches, excludedIds, POLITICAL, POLITICAL_AXES, axisResults, lang, religion, normalizedRepresentation);
+        addIfPresent(matches, excludedIds, SOCIAL, SOCIAL_AXES, axisResults, lang, religion, normalizedRepresentation);
+        addIfPresent(matches, excludedIds, ECONOMIC, ECONOMIC_AXES, axisResults, lang, religion, normalizedRepresentation);
         return List.copyOf(matches);
     }
 
@@ -87,8 +77,10 @@ public class DimensionMatcherService {
             List<String> axisIds,
             List<AxisResult> axisResults,
             String lang,
-            String religion) {
-        PersonalityMatch match = findBestFor(axisIds, axisResults, lang, religion, excludedIds);
+            String religion,
+            String representation) {
+        PersonalityMatch match = findBestFor(
+                axisIds, axisResults, lang, religion, representation, excludedIds);
         if (match != null) {
             matches.add(new DimensionMatch(dimension, match));
             excludedIds.add(match.personalityId());
@@ -100,9 +92,11 @@ public class DimensionMatcherService {
             List<AxisResult> axisResults,
             String lang,
             String religion,
+            String representation,
             Set<String> excludedIds) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
+                .filter(personality -> representation.equals(PersonalityMatcherService.representationOf(personality)))
                 .filter(personality -> !excludedIds.contains(personality.id()))
                 .filter(personality -> ReligionFilter.allows(personality.religions(), religion))
                 .toList();
@@ -120,8 +114,6 @@ public class DimensionMatcherService {
                 .sorted(byScore.thenComparing(byName))
                 .toList();
 
-        // O percentil compara a nota da dimensao com as notas da mesma dimensao,
-        // nunca com as dos 12 eixos.
         List<Double> allScores = scored.stream().map(Scored::score).toList();
         Scored best = scored.getFirst();
         return toMatch(best, profileMatchScorer.percentile(best.score(), allScores));
