@@ -5,7 +5,7 @@
       "estrutura": 16.2,
       "representacao": 22.5,
       "poder": 83.8,
-      "imigracao": 20.0,
+      "imigracao": 20,
       "diplomacia": 66.2,
       "intervencao": 26.2,
       "economia": 88.8,
@@ -19,14 +19,14 @@
   {
     "personalityId": "stalin",
     "vector": {
-      "estrutura": 0.0,
+      "estrutura": 0,
       "representacao": 7.5,
       "poder": 98.8,
-      "imigracao": 80.0,
+      "imigracao": 80,
       "diplomacia": 82.5,
       "intervencao": 18.8,
       "economia": 93.8,
-      "controle": 100.0,
+      "controle": 100,
       "comercio": 93.8,
       "religiao": 97.5,
       "moral": 26.2,
@@ -61,8 +61,8 @@
       "intervencao": 52.5,
       "economia": 93.8,
       "controle": 93.8,
-      "comercio": 70.0,
-      "religiao": 95.0,
+      "comercio": 70,
+      "religiao": 95,
       "moral": 73.8,
       "tecnologia": 86.2
     }
@@ -94,11 +94,11 @@
       "diplomacia": 81.2,
       "intervencao": 16.2,
       "economia": 83.8,
-      "controle": 80.0,
+      "controle": 80,
       "comercio": 68.8,
       "religiao": 53.8,
       "moral": 37.5,
-      "tecnologia": 60.0
+      "tecnologia": 60
     }
   },
   {
@@ -121,16 +121,16 @@
   {
     "personalityId": "deng-xiaoping",
     "vector": {
-      "estrutura": 40.0,
+      "estrutura": 40,
       "representacao": 16.2,
-      "poder": 85.0,
+      "poder": 85,
       "imigracao": 68.8,
       "diplomacia": 56.2,
       "intervencao": 42.5,
       "economia": 53.8,
       "controle": 61.3,
       "comercio": 42.5,
-      "religiao": 75.0,
+      "religiao": 75,
       "moral": 42.5,
       "tecnologia": 71.2
     }
@@ -209,14 +209,14 @@
       "estrutura": 28.7,
       "representacao": 86.2,
       "poder": 33.8,
-      "imigracao": 30.0,
+      "imigracao": 30,
       "diplomacia": 16.2,
       "intervencao": 77.5,
       "economia": 73.8,
       "controle": 72.5,
       "comercio": 38.8,
-      "religiao": 70.0,
-      "moral": 65.0,
+      "religiao": 70,
+      "moral": 65,
       "tecnologia": 61.3
     }
   },
@@ -226,14 +226,14 @@
       "estrutura": 21.1,
       "representacao": 32.9,
       "poder": 75.5,
-      "imigracao": 71.0,
+      "imigracao": 71,
       "diplomacia": 80.2,
       "intervencao": 23.3,
       "economia": 88.9,
       "controle": 92.5,
       "comercio": 82.4,
       "religiao": 77.7,
-      "moral": 31.0,
+      "moral": 31,
       "tecnologia": 33.6
     }
   },
@@ -257,14 +257,14 @@
   {
     "personalityId": "mussolini",
     "vector": {
-      "estrutura": 8.0,
+      "estrutura": 8,
       "representacao": 11.4,
       "poder": 94.5,
       "imigracao": 88.8,
-      "diplomacia": 91.0,
+      "diplomacia": 91,
       "intervencao": 4.3,
       "economia": 66.2,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 92.3,
       "religiao": 40.8,
       "moral": 22.6,
@@ -274,12 +274,12 @@
   {
     "personalityId": "hitler",
     "vector": {
-      "estrutura": 5.0,
+      "estrutura": 5,
       "representacao": 7.5,
       "poder": 91.2,
-      "imigracao": 100.0,
-      "diplomacia": 100.0,
-      "intervencao": 10.0,
+      "imigracao": 100,
+      "diplomacia": 100,
+      "intervencao": 10,
       "economia": 47.5,
       "controle": 78.8,
       "comercio": 96.2,
@@ -292,7 +292,7 @@
     "personalityId": "engelbert-dollfuss",
     "vector": {
       "estrutura": 22.3,
-      "representacao": 9.0,
+      "representacao": 9,
       "poder": 92.1,
       "imigracao": 75.3,
       "diplomacia": 57.6,
@@ -312,13 +312,13 @@
       "representacao": 21.2,
       "poder": 78.8,
       "imigracao": 81.2,
-      "diplomacia": 80.0,
+      "diplomacia": 80,
       "intervencao": 22.5,
       "economia": 42.5,
       "controle": 72.5,
       "comercio": 81.2,
       "religiao": 8.8,
-      "moral": 15.0,
+      "moral": 15,
       "tecnologia": 48.8
     }
   },
@@ -326,13 +326,13 @@
     "personalityId": "plinio-salgado",
     "vector": {
       "estrutura": 16.2,
-      "representacao": 20.0,
+      "representacao": 20,
       "poder": 83.8,
       "imigracao": 76.2,
-      "diplomacia": 80.0,
-      "intervencao": 25.0,
+      "diplomacia": 80,
+      "intervencao": 25,
       "economia": 51.2,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 82.5,
       "religiao": 7.5,
       "moral": 8.8,
@@ -343,10 +343,10 @@
     "personalityId": "lee-kuan-yew",
     "vector": {
       "estrutura": 12.5,
-      "representacao": 20.0,
-      "poder": 90.0,
-      "imigracao": 65.0,
-      "diplomacia": 65.0,
+      "representacao": 20,
+      "poder": 90,
+      "imigracao": 65,
+      "diplomacia": 65,
       "intervencao": 38.8,
       "economia": 32.5,
       "controle": 52.5,
@@ -363,20 +363,20 @@
       "representacao": 11.2,
       "poder": 91.2,
       "imigracao": 88.8,
-      "diplomacia": 85.0,
-      "intervencao": 20.0,
+      "diplomacia": 85,
+      "intervencao": 20,
       "economia": 57.5,
       "controle": 71.2,
-      "comercio": 80.0,
+      "comercio": 80,
       "religiao": 18.8,
-      "moral": 20.0,
+      "moral": 20,
       "tecnologia": 62.5
     }
   },
   {
     "personalityId": "richard-spencer",
     "vector": {
-      "estrutura": 70.0,
+      "estrutura": 70,
       "representacao": 21.2,
       "poder": 56.2,
       "imigracao": 96.2,
@@ -419,9 +419,9 @@
       "economia": 5.3,
       "controle": 13.5,
       "comercio": 5.3,
-      "religiao": 79.0,
-      "moral": 55.0,
-      "tecnologia": 96.0
+      "religiao": 79,
+      "moral": 55,
+      "tecnologia": 96
     }
   },
   {
@@ -461,18 +461,18 @@
   {
     "personalityId": "louis-xiv",
     "vector": {
-      "estrutura": 5.0,
+      "estrutura": 5,
       "representacao": 3.8,
       "poder": 88.8,
       "imigracao": 52.5,
       "diplomacia": 76.2,
       "intervencao": 12.5,
-      "economia": 50.0,
+      "economia": 50,
       "controle": 72.5,
-      "comercio": 80.0,
+      "comercio": 80,
       "religiao": 1.2,
       "moral": 8.8,
-      "tecnologia": 60.0
+      "tecnologia": 60
     }
   },
   {
@@ -495,12 +495,12 @@
   {
     "personalityId": "viktor-orban",
     "vector": {
-      "estrutura": 26.0,
+      "estrutura": 26,
       "representacao": 45.4,
       "poder": 72.2,
-      "imigracao": 86.0,
+      "imigracao": 86,
       "diplomacia": 54.5,
-      "intervencao": 49.0,
+      "intervencao": 49,
       "economia": 48.2,
       "controle": 69.5,
       "comercio": 64.5,
@@ -586,7 +586,7 @@
       "imigracao": 67.4,
       "diplomacia": 60.5,
       "intervencao": 59.8,
-      "economia": 22.0,
+      "economia": 22,
       "controle": 25.4,
       "comercio": 30.3,
       "religiao": 74.1,
@@ -614,16 +614,16 @@
   {
     "personalityId": "joseph-de-maistre",
     "vector": {
-      "estrutura": 50.0,
+      "estrutura": 50,
       "representacao": 7.5,
       "poder": 82.5,
       "imigracao": 63.7,
       "diplomacia": 73.8,
-      "intervencao": 30.0,
-      "economia": 40.0,
-      "controle": 60.0,
+      "intervencao": 30,
+      "economia": 40,
+      "controle": 60,
       "comercio": 52.5,
-      "religiao": 0.0,
+      "religiao": 0,
       "moral": 6.2,
       "tecnologia": 36.2
     }
@@ -631,15 +631,15 @@
   {
     "personalityId": "aleksandr-dugin",
     "vector": {
-      "estrutura": 15.0,
-      "representacao": 20.0,
+      "estrutura": 15,
+      "representacao": 20,
       "poder": 78.8,
       "imigracao": 88.8,
-      "diplomacia": 90.0,
+      "diplomacia": 90,
       "intervencao": 17.5,
       "economia": 66.2,
       "controle": 71.2,
-      "comercio": 85.0,
+      "comercio": 85,
       "religiao": 6.2,
       "moral": 12.5,
       "tecnologia": 33.8
@@ -701,16 +701,16 @@
     "vector": {
       "estrutura": 72.5,
       "representacao": 57.5,
-      "poder": 45.0,
+      "poder": 45,
       "imigracao": 68.8,
       "diplomacia": 76.2,
       "intervencao": 21.2,
-      "economia": 20.0,
+      "economia": 20,
       "controle": 22.5,
-      "comercio": 25.0,
+      "comercio": 25,
       "religiao": 17.5,
       "moral": 13.8,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
@@ -719,15 +719,15 @@
       "estrutura": 33.8,
       "representacao": 58.8,
       "poder": 58.8,
-      "imigracao": 70.0,
+      "imigracao": 70,
       "diplomacia": 58.8,
-      "intervencao": 30.0,
+      "intervencao": 30,
       "economia": 28.7,
-      "controle": 30.0,
-      "comercio": 55.0,
+      "controle": 30,
+      "comercio": 55,
       "religiao": 36.2,
       "moral": 21.2,
-      "tecnologia": 35.0
+      "tecnologia": 35
     }
   },
   {
@@ -802,14 +802,14 @@
     "personalityId": "henri-de-saint-simon",
     "vector": {
       "estrutura": 22.5,
-      "representacao": 35.0,
-      "poder": 70.0,
+      "representacao": 35,
+      "poder": 70,
       "imigracao": 28.7,
       "diplomacia": 23.8,
       "intervencao": 72.5,
       "economia": 71.2,
       "controle": 73.8,
-      "comercio": 35.0,
+      "comercio": 35,
       "religiao": 71.2,
       "moral": 68.8,
       "tecnologia": 73.8
@@ -871,10 +871,10 @@
     "vector": {
       "estrutura": 51.2,
       "representacao": 76.2,
-      "poder": 30.0,
+      "poder": 30,
       "imigracao": 41.2,
-      "diplomacia": 45.0,
-      "intervencao": 55.0,
+      "diplomacia": 45,
+      "intervencao": 55,
       "economia": 31.2,
       "controle": 31.2,
       "comercio": 42.5,
@@ -956,13 +956,13 @@
     "vector": {
       "estrutura": 57.5,
       "representacao": 47.5,
-      "poder": 65.0,
-      "imigracao": 70.0,
+      "poder": 65,
+      "imigracao": 70,
       "diplomacia": 76.2,
       "intervencao": 21.2,
       "economia": 22.5,
       "controle": 22.5,
-      "comercio": 50.0,
+      "comercio": 50,
       "religiao": 13.8,
       "moral": 18.8,
       "tecnologia": 43.8
@@ -1143,9 +1143,9 @@
     "vector": {
       "estrutura": 10.4,
       "representacao": 24.5,
-      "poder": 79.0,
+      "poder": 79,
       "imigracao": 75.7,
-      "diplomacia": 61.0,
+      "diplomacia": 61,
       "intervencao": 39.9,
       "economia": 67.4,
       "controle": 87.3,
@@ -1210,17 +1210,17 @@
     "personalityId": "bakunin",
     "vector": {
       "estrutura": 91.2,
-      "representacao": 80.0,
-      "poder": 5.0,
+      "representacao": 80,
+      "poder": 5,
       "imigracao": 13.8,
       "diplomacia": 17.5,
       "intervencao": 81.2,
       "economia": 81.2,
       "controle": 61.3,
-      "comercio": 45.0,
+      "comercio": 45,
       "religiao": 96.2,
       "moral": 81.2,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
@@ -1295,16 +1295,16 @@
     "personalityId": "gramsci",
     "vector": {
       "estrutura": 28.7,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 68.8,
       "imigracao": 27.5,
       "diplomacia": 37.5,
       "intervencao": 68.8,
-      "economia": 95.0,
+      "economia": 95,
       "controle": 92.5,
       "comercio": 62.5,
-      "religiao": 95.0,
-      "moral": 70.0,
+      "religiao": 95,
+      "moral": 70,
       "tecnologia": 66.2
     }
   },
@@ -1352,11 +1352,11 @@
       "diplomacia": 17.5,
       "intervencao": 81.2,
       "economia": 72.5,
-      "controle": 40.0,
-      "comercio": 70.0,
-      "religiao": 80.0,
+      "controle": 40,
+      "comercio": 70,
+      "religiao": 80,
       "moral": 17.5,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
@@ -1482,7 +1482,7 @@
     "personalityId": "karl-marx",
     "vector": {
       "estrutura": 23.8,
-      "representacao": 50.0,
+      "representacao": 50,
       "poder": 67.5,
       "imigracao": 17.5,
       "diplomacia": 41.2,
@@ -1671,15 +1671,15 @@
       "estrutura": 82.5,
       "representacao": 51.2,
       "poder": 1.2,
-      "imigracao": 30.0,
-      "diplomacia": 40.0,
-      "intervencao": 65.0,
+      "imigracao": 30,
+      "diplomacia": 40,
+      "intervencao": 65,
       "economia": 32.5,
       "controle": 22.5,
       "comercio": 32.5,
       "religiao": 92.5,
-      "moral": 75.0,
-      "tecnologia": 65.0
+      "moral": 75,
+      "tecnologia": 65
     }
   },
   {
@@ -1689,14 +1689,14 @@
       "representacao": 77.5,
       "poder": 1.2,
       "imigracao": 38.8,
-      "diplomacia": 15.0,
+      "diplomacia": 15,
       "intervencao": 83.8,
       "economia": 6.2,
-      "controle": 5.0,
+      "controle": 5,
       "comercio": 7.5,
       "religiao": 72.5,
       "moral": 53.8,
-      "tecnologia": 80.0
+      "tecnologia": 80
     }
   },
   {
@@ -1772,15 +1772,15 @@
     "vector": {
       "estrutura": 68.8,
       "representacao": 47.5,
-      "poder": 40.0,
-      "imigracao": 40.0,
+      "poder": 40,
+      "imigracao": 40,
       "diplomacia": 32.5,
       "intervencao": 66.2,
       "economia": 31.2,
-      "controle": 35.0,
+      "controle": 35,
       "comercio": 18.8,
-      "religiao": 60.0,
-      "moral": 40.0,
+      "religiao": 60,
+      "moral": 40,
       "tecnologia": 67.5
     }
   },
@@ -1821,7 +1821,7 @@
   {
     "personalityId": "scruton",
     "vector": {
-      "estrutura": 55.0,
+      "estrutura": 55,
       "representacao": 62.5,
       "poder": 56.2,
       "imigracao": 73.8,
@@ -1831,7 +1831,7 @@
       "controle": 31.2,
       "comercio": 56.2,
       "religiao": 27.5,
-      "moral": 25.0,
+      "moral": 25,
       "tecnologia": 27.5
     }
   },
@@ -1948,10 +1948,10 @@
       "intervencao": 26.2,
       "economia": 7.5,
       "controle": 13.8,
-      "comercio": 20.0,
+      "comercio": 20,
       "religiao": 68.8,
       "moral": 58.8,
-      "tecnologia": 70.0
+      "tecnologia": 70
     }
   },
   {
@@ -2149,7 +2149,7 @@
       "poder": 31.5,
       "imigracao": 60.2,
       "diplomacia": 62.4,
-      "intervencao": 40.0,
+      "intervencao": 40,
       "economia": 20.8,
       "controle": 26.6,
       "comercio": 31.5,
@@ -2522,13 +2522,13 @@
       "representacao": 13.8,
       "poder": 61.3,
       "imigracao": 83.8,
-      "diplomacia": 75.0,
+      "diplomacia": 75,
       "intervencao": 28.7,
       "economia": 46.2,
-      "controle": 60.0,
+      "controle": 60,
       "comercio": 72.5,
       "religiao": 27.5,
-      "moral": 30.0,
+      "moral": 30,
       "tecnologia": 27.5
     }
   },
@@ -2678,7 +2678,7 @@
       "diplomacia": 43.8,
       "intervencao": 51.4,
       "economia": 61.3,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 66.9,
       "religiao": 51.2,
       "moral": 53.8,
@@ -2693,10 +2693,10 @@
       "poder": 66.2,
       "imigracao": 82.5,
       "diplomacia": 73.8,
-      "intervencao": 20.0,
-      "economia": 35.0,
-      "controle": 20.0,
-      "comercio": 55.0,
+      "intervencao": 20,
+      "economia": 35,
+      "controle": 20,
+      "comercio": 55,
       "religiao": 13.8,
       "moral": 17.5,
       "tecnologia": 56.2
@@ -3047,14 +3047,14 @@
     "vector": {
       "estrutura": 7.5,
       "representacao": 6.2,
-      "poder": 95.0,
+      "poder": 95,
       "imigracao": 87.5,
       "diplomacia": 82.5,
       "intervencao": 37.5,
-      "economia": 75.0,
+      "economia": 75,
       "controle": 86.2,
       "comercio": 92.5,
-      "religiao": 85.0,
+      "religiao": 85,
       "moral": 18.8,
       "tecnologia": 83.8
     }
@@ -3114,9 +3114,9 @@
     "personalityId": "alex-karp",
     "vector": {
       "estrutura": 28.3,
-      "representacao": 74.0,
+      "representacao": 74,
       "poder": 50.8,
-      "imigracao": 51.0,
+      "imigracao": 51,
       "diplomacia": 75.5,
       "intervencao": 22.1,
       "economia": 44.9,
@@ -3124,7 +3124,7 @@
       "comercio": 48.4,
       "religiao": 64.3,
       "moral": 69.3,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
@@ -3165,15 +3165,15 @@
     "personalityId": "maximilien-robespierre",
     "vector": {
       "estrutura": 18.8,
-      "representacao": 50.0,
+      "representacao": 50,
       "poder": 71.2,
       "imigracao": 61.3,
-      "diplomacia": 70.0,
-      "intervencao": 45.0,
+      "diplomacia": 70,
+      "intervencao": 45,
       "economia": 66.2,
-      "controle": 70.0,
-      "comercio": 70.0,
-      "religiao": 55.0,
+      "controle": 70,
+      "comercio": 70,
+      "religiao": 55,
       "moral": 31.2,
       "tecnologia": 27.5
     }
@@ -3200,16 +3200,16 @@
     "vector": {
       "estrutura": 2.5,
       "representacao": 11.2,
-      "poder": 90.0,
-      "imigracao": 55.0,
+      "poder": 90,
+      "imigracao": 55,
       "diplomacia": 96.2,
       "intervencao": 3.8,
       "economia": 41.2,
       "controle": 68.8,
       "comercio": 82.5,
       "religiao": 42.5,
-      "moral": 25.0,
-      "tecnologia": 75.0
+      "moral": 25,
+      "tecnologia": 75
     }
   },
   {
@@ -3218,11 +3218,11 @@
       "estrutura": 13.8,
       "representacao": 23.8,
       "poder": 76.2,
-      "imigracao": 75.0,
+      "imigracao": 75,
       "diplomacia": 82.5,
       "intervencao": 13.8,
-      "economia": 35.0,
-      "controle": 60.0,
+      "economia": 35,
+      "controle": 60,
       "comercio": 66.2,
       "religiao": 31.2,
       "moral": 37.5,
@@ -3232,17 +3232,17 @@
   {
     "personalityId": "cesar-augusto",
     "vector": {
-      "estrutura": 20.0,
+      "estrutura": 20,
       "representacao": 3.8,
       "poder": 82.5,
       "imigracao": 27.5,
       "diplomacia": 48.8,
-      "intervencao": 30.0,
+      "intervencao": 30,
       "economia": 52.5,
-      "controle": 60.0,
+      "controle": 60,
       "comercio": 28.7,
-      "religiao": 10.0,
-      "moral": 10.0,
+      "religiao": 10,
+      "moral": 10,
       "tecnologia": 66.2
     }
   },
@@ -3250,26 +3250,26 @@
     "personalityId": "carlos-magno",
     "vector": {
       "estrutura": 57.5,
-      "representacao": 10.0,
+      "representacao": 10,
       "poder": 78.8,
       "imigracao": 68.8,
-      "diplomacia": 80.0,
-      "intervencao": 20.0,
+      "diplomacia": 80,
+      "intervencao": 20,
       "economia": 48.8,
       "controle": 57.5,
       "comercio": 81.2,
-      "religiao": 5.0,
+      "religiao": 5,
       "moral": 11.2,
-      "tecnologia": 45.0
+      "tecnologia": 45
     }
   },
   {
     "personalityId": "eneas-carneiro",
     "vector": {
       "estrutura": 27.5,
-      "representacao": 75.0,
-      "poder": 55.0,
-      "imigracao": 60.0,
+      "representacao": 75,
+      "poder": 55,
+      "imigracao": 60,
       "diplomacia": 63.7,
       "intervencao": 48.8,
       "economia": 58.8,
@@ -3372,7 +3372,7 @@
       "representacao": 16.2,
       "poder": 41.2,
       "imigracao": 28.7,
-      "diplomacia": 75.0,
+      "diplomacia": 75,
       "intervencao": 47.5,
       "economia": 33.8,
       "controle": 41.2,
@@ -3407,7 +3407,7 @@
       "poder": 76.2,
       "imigracao": 58.8,
       "diplomacia": 58.8,
-      "intervencao": 30.0,
+      "intervencao": 30,
       "economia": 53.8,
       "controle": 66.2,
       "comercio": 67.5,
@@ -3421,15 +3421,15 @@
     "vector": {
       "estrutura": 49.8,
       "representacao": 75.1,
-      "poder": 52.0,
+      "poder": 52,
       "imigracao": 72.1,
-      "diplomacia": 66.0,
+      "diplomacia": 66,
       "intervencao": 25.7,
       "economia": 49.6,
       "controle": 68.8,
-      "comercio": 71.0,
+      "comercio": 71,
       "religiao": 51.5,
-      "moral": 44.0,
+      "moral": 44,
       "tecnologia": 74.9
     }
   },
@@ -3458,13 +3458,13 @@
       "poder": 71.2,
       "imigracao": 47.5,
       "diplomacia": 72.5,
-      "intervencao": 25.0,
+      "intervencao": 25,
       "economia": 33.8,
       "controle": 57.5,
       "comercio": 28.7,
       "religiao": 22.5,
       "moral": 32.5,
-      "tecnologia": 45.0
+      "tecnologia": 45
     }
   },
   {
@@ -3575,7 +3575,7 @@
       "estrutura": 73.8,
       "representacao": 77.5,
       "poder": 43.8,
-      "imigracao": 35.0,
+      "imigracao": 35,
       "diplomacia": 2.5,
       "intervencao": 71.2,
       "economia": 72.5,
@@ -3590,13 +3590,13 @@
     "personalityId": "pentti-linkola",
     "vector": {
       "estrutura": 13.8,
-      "representacao": 5.0,
+      "representacao": 5,
       "poder": 77.5,
       "imigracao": 81.2,
       "diplomacia": 28.7,
       "intervencao": 68.8,
       "economia": 66.2,
-      "controle": 65.0,
+      "controle": 65,
       "comercio": 82.5,
       "religiao": 67.5,
       "moral": 47.5,
@@ -3630,9 +3630,9 @@
       "diplomacia": 56.2,
       "intervencao": 38.8,
       "economia": 72.5,
-      "controle": 75.0,
+      "controle": 75,
       "comercio": 66.2,
-      "religiao": 85.0,
+      "religiao": 85,
       "moral": 41.2,
       "tecnologia": 66.2
     }
@@ -3708,7 +3708,7 @@
   {
     "personalityId": "justiniano-i",
     "vector": {
-      "estrutura": 10.0,
+      "estrutura": 10,
       "representacao": 7.5,
       "poder": 82.5,
       "imigracao": 63.7,
@@ -3717,8 +3717,8 @@
       "economia": 52.5,
       "controle": 77.5,
       "comercio": 48.8,
-      "religiao": 0.0,
-      "moral": 10.0,
+      "religiao": 0,
+      "moral": 10,
       "tecnologia": 36.2
     }
   },
@@ -3734,26 +3734,26 @@
       "economia": 43.8,
       "controle": 66.2,
       "comercio": 61.3,
-      "religiao": 0.0,
-      "moral": 10.0,
-      "tecnologia": 40.0
+      "religiao": 0,
+      "moral": 10,
+      "tecnologia": 40
     }
   },
   {
     "personalityId": "pedro-o-grande",
     "vector": {
-      "estrutura": 5.0,
+      "estrutura": 5,
       "representacao": 3.8,
-      "poder": 90.0,
+      "poder": 90,
       "imigracao": 31.2,
       "diplomacia": 81.2,
       "intervencao": 21.2,
-      "economia": 55.0,
+      "economia": 55,
       "controle": 72.5,
       "comercio": 56.2,
-      "religiao": 60.0,
+      "religiao": 60,
       "moral": 47.5,
-      "tecnologia": 70.0
+      "tecnologia": 70
     }
   },
   {
@@ -3761,7 +3761,7 @@
     "vector": {
       "estrutura": 68.8,
       "representacao": 43.8,
-      "poder": 85.0,
+      "poder": 85,
       "imigracao": 51.2,
       "diplomacia": 46.2,
       "intervencao": 37.5,
@@ -3865,13 +3865,13 @@
       "representacao": 31.2,
       "poder": 72.5,
       "imigracao": 48.8,
-      "diplomacia": 55.0,
-      "intervencao": 40.0,
+      "diplomacia": 55,
+      "intervencao": 40,
       "economia": 53.8,
       "controle": 58.8,
-      "comercio": 55.0,
+      "comercio": 55,
       "religiao": 48.8,
-      "moral": 40.0,
+      "moral": 40,
       "tecnologia": 67.5
     }
   },
@@ -3999,11 +3999,11 @@
     "vector": {
       "estrutura": 21.2,
       "representacao": 41.2,
-      "poder": 70.0,
+      "poder": 70,
       "imigracao": 68.8,
-      "diplomacia": 60.0,
+      "diplomacia": 60,
       "intervencao": 28.7,
-      "economia": 50.0,
+      "economia": 50,
       "controle": 67.5,
       "comercio": 71.2,
       "religiao": 26.2,
@@ -4067,16 +4067,16 @@
     "vector": {
       "estrutura": 12.5,
       "representacao": 22.5,
-      "poder": 80.0,
+      "poder": 80,
       "imigracao": 86.2,
       "diplomacia": 68.8,
       "intervencao": 33.8,
       "economia": 28.7,
       "controle": 48.8,
-      "comercio": 65.0,
+      "comercio": 65,
       "religiao": 7.5,
-      "moral": 10.0,
-      "tecnologia": 35.0
+      "moral": 10,
+      "tecnologia": 35
     }
   },
   {
@@ -4237,11 +4237,11 @@
     "vector": {
       "estrutura": 24.8,
       "representacao": 72.8,
-      "poder": 46.0,
+      "poder": 46,
       "imigracao": 56.7,
       "diplomacia": 55.2,
       "intervencao": 36.4,
-      "economia": 22.0,
+      "economia": 22,
       "controle": 26.6,
       "comercio": 25.6,
       "religiao": 46.8,
@@ -4255,13 +4255,13 @@
       "estrutura": 27.5,
       "representacao": 61.3,
       "poder": 63.7,
-      "imigracao": 75.0,
+      "imigracao": 75,
       "diplomacia": 76.2,
       "intervencao": 28.7,
       "economia": 27.5,
-      "controle": 30.0,
-      "comercio": 65.0,
-      "religiao": 15.0,
+      "controle": 30,
+      "comercio": 65,
+      "religiao": 15,
       "moral": 18.8,
       "tecnologia": 52.5
     }
@@ -4355,9 +4355,9 @@
     "personalityId": "pedro-sanchez",
     "vector": {
       "estrutura": 46.2,
-      "representacao": 74.0,
+      "representacao": 74,
       "poder": 50.8,
-      "imigracao": 26.0,
+      "imigracao": 26,
       "diplomacia": 26.4,
       "intervencao": 51.8,
       "economia": 66.3,
@@ -4373,12 +4373,12 @@
     "vector": {
       "estrutura": 16.2,
       "representacao": 52.5,
-      "poder": 70.0,
+      "poder": 70,
       "imigracao": 73.8,
       "diplomacia": 63.7,
       "intervencao": 41.2,
       "economia": 56.2,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 67.5,
       "religiao": 32.5,
       "moral": 23.8,
@@ -4388,16 +4388,16 @@
   {
     "personalityId": "rudolf-rocker",
     "vector": {
-      "estrutura": 90.0,
+      "estrutura": 90,
       "representacao": 77.5,
-      "poder": 10.0,
+      "poder": 10,
       "imigracao": 11.2,
       "diplomacia": 11.2,
-      "intervencao": 85.0,
+      "intervencao": 85,
       "economia": 77.5,
       "controle": 61.3,
       "comercio": 37.5,
-      "religiao": 85.0,
+      "religiao": 85,
       "moral": 76.2,
       "tecnologia": 52.5
     }
@@ -4407,12 +4407,12 @@
     "vector": {
       "estrutura": 87.5,
       "representacao": 81.2,
-      "poder": 5.0,
+      "poder": 5,
       "imigracao": 11.2,
       "diplomacia": 8.8,
       "intervencao": 82.5,
-      "economia": 80.0,
-      "controle": 55.0,
+      "economia": 80,
+      "controle": 55,
       "comercio": 41.2,
       "religiao": 91.2,
       "moral": 83.8,
@@ -4423,7 +4423,7 @@
     "personalityId": "sidney-webb",
     "vector": {
       "estrutura": 23.8,
-      "representacao": 50.0,
+      "representacao": 50,
       "poder": 48.8,
       "imigracao": 36.2,
       "diplomacia": 27.5,
@@ -4432,25 +4432,25 @@
       "controle": 81.2,
       "comercio": 57.5,
       "religiao": 77.5,
-      "moral": 55.0,
+      "moral": 55,
       "tecnologia": 57.5
     }
   },
   {
     "personalityId": "alberto-fujimori",
     "vector": {
-      "estrutura": 15.0,
+      "estrutura": 15,
       "representacao": 18.8,
       "poder": 78.8,
       "imigracao": 61.3,
       "diplomacia": 68.8,
       "intervencao": 32.5,
-      "economia": 20.0,
+      "economia": 20,
       "controle": 23.8,
-      "comercio": 20.0,
+      "comercio": 20,
       "religiao": 48.8,
       "moral": 33.8,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
@@ -4463,10 +4463,10 @@
       "diplomacia": 93.3,
       "intervencao": 24.5,
       "economia": 80.4,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 81.2,
       "religiao": 33.7,
-      "moral": 19.0,
+      "moral": 19,
       "tecnologia": 74.9
     }
   },
@@ -4477,12 +4477,12 @@
       "representacao": 42.5,
       "poder": 73.8,
       "imigracao": 72.5,
-      "diplomacia": 65.0,
-      "intervencao": 25.0,
+      "diplomacia": 65,
+      "intervencao": 25,
       "economia": 36.2,
       "controle": 62.5,
       "comercio": 67.5,
-      "religiao": 35.0,
+      "religiao": 35,
       "moral": 23.8,
       "tecnologia": 67.5
     }
@@ -4492,12 +4492,12 @@
     "vector": {
       "estrutura": 51.2,
       "representacao": 58.8,
-      "poder": 45.0,
-      "imigracao": 40.0,
+      "poder": 45,
+      "imigracao": 40,
       "diplomacia": 32.5,
       "intervencao": 62.5,
       "economia": 41.2,
-      "controle": 40.0,
+      "controle": 40,
       "comercio": 41.2,
       "religiao": 31.2,
       "moral": 51.2,
@@ -4511,13 +4511,13 @@
       "representacao": 81.2,
       "poder": 12.5,
       "imigracao": 17.5,
-      "diplomacia": 25.0,
-      "intervencao": 70.0,
-      "economia": 45.0,
+      "diplomacia": 25,
+      "intervencao": 70,
+      "economia": 45,
       "controle": 21.2,
       "comercio": 23.8,
       "religiao": 77.5,
-      "moral": 70.0,
+      "moral": 70,
       "tecnologia": 72.5
     }
   },
@@ -4531,7 +4531,7 @@
       "diplomacia": 28.7,
       "intervencao": 71.2,
       "economia": 82.5,
-      "controle": 90.0,
+      "controle": 90,
       "comercio": 73.8,
       "religiao": 81.2,
       "moral": 62.5,
@@ -4546,13 +4546,13 @@
       "poder": 48.8,
       "imigracao": 43.8,
       "diplomacia": 42.5,
-      "intervencao": 55.0,
+      "intervencao": 55,
       "economia": 48.8,
       "controle": 48.8,
       "comercio": 42.5,
       "religiao": 63.7,
       "moral": 57.5,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
@@ -4561,21 +4561,21 @@
       "estrutura": 37.5,
       "representacao": 52.5,
       "poder": 22.5,
-      "imigracao": 40.0,
-      "diplomacia": 25.0,
-      "intervencao": 65.0,
-      "economia": 35.0,
+      "imigracao": 40,
+      "diplomacia": 25,
+      "intervencao": 65,
+      "economia": 35,
       "controle": 33.8,
       "comercio": 27.5,
       "religiao": 57.5,
-      "moral": 55.0,
-      "tecnologia": 60.0
+      "moral": 55,
+      "tecnologia": 60
     }
   },
   {
     "personalityId": "martin-luther-king-jr",
     "vector": {
-      "estrutura": 30.0,
+      "estrutura": 30,
       "representacao": 86.2,
       "poder": 33.8,
       "imigracao": 26.2,
@@ -4592,33 +4592,33 @@
   {
     "personalityId": "mannerheim",
     "vector": {
-      "estrutura": 25.0,
+      "estrutura": 25,
       "representacao": 53.8,
       "poder": 62.5,
-      "imigracao": 75.0,
+      "imigracao": 75,
       "diplomacia": 63.7,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 37.5,
       "controle": 52.5,
       "comercio": 57.5,
       "religiao": 42.5,
-      "moral": 35.0,
+      "moral": 35,
       "tecnologia": 52.5
     }
   },
   {
     "personalityId": "nick-fuentes",
     "vector": {
-      "estrutura": 27.0,
+      "estrutura": 27,
       "representacao": 25.7,
-      "poder": 66.0,
+      "poder": 66,
       "imigracao": 95.6,
       "diplomacia": 59.3,
       "intervencao": 51.4,
       "economia": 43.5,
       "controle": 62.4,
-      "comercio": 80.0,
-      "religiao": 1.0,
+      "comercio": 80,
+      "religiao": 1,
       "moral": 4.1,
       "tecnologia": 42.9
     }
@@ -4631,7 +4631,7 @@
       "poder": 88.8,
       "imigracao": 98.8,
       "diplomacia": 98.8,
-      "intervencao": 5.0,
+      "intervencao": 5,
       "economia": 65.2,
       "controle": 91.2,
       "comercio": 96.2,
@@ -4643,18 +4643,18 @@
   {
     "personalityId": "martin-heidegger",
     "vector": {
-      "estrutura": 35.0,
+      "estrutura": 35,
       "representacao": 17.5,
       "poder": 77.5,
       "imigracao": 86.2,
-      "diplomacia": 75.0,
+      "diplomacia": 75,
       "intervencao": 38.8,
       "economia": 56.2,
       "controle": 63.7,
       "comercio": 78.8,
       "religiao": 37.5,
       "moral": 27.5,
-      "tecnologia": 10.0
+      "tecnologia": 10
     }
   },
   {
@@ -4662,9 +4662,9 @@
     "vector": {
       "estrutura": 22.5,
       "representacao": 37.5,
-      "poder": 60.0,
-      "imigracao": 70.0,
-      "diplomacia": 75.0,
+      "poder": 60,
+      "imigracao": 70,
+      "diplomacia": 75,
       "intervencao": 32.5,
       "economia": 53.8,
       "controle": 67.5,
@@ -4677,18 +4677,18 @@
   {
     "personalityId": "marco-aurelio",
     "vector": {
-      "estrutura": 15.0,
-      "representacao": 20.0,
+      "estrutura": 15,
+      "representacao": 20,
       "poder": 71.2,
       "imigracao": 27.5,
-      "diplomacia": 55.0,
-      "intervencao": 30.0,
-      "economia": 50.0,
+      "diplomacia": 55,
+      "intervencao": 30,
+      "economia": 50,
       "controle": 63.7,
       "comercio": 38.8,
       "religiao": 33.8,
       "moral": 28.7,
-      "tecnologia": 35.0
+      "tecnologia": 35
     }
   },
   {
@@ -4698,10 +4698,10 @@
       "representacao": 26.2,
       "poder": 78.8,
       "imigracao": 37.5,
-      "diplomacia": 25.0,
-      "intervencao": 55.0,
-      "economia": 55.0,
-      "controle": 65.0,
+      "diplomacia": 25,
+      "intervencao": 55,
+      "economia": 55,
+      "controle": 65,
       "comercio": 41.2,
       "religiao": 8.8,
       "moral": 6.2,
@@ -4713,14 +4713,14 @@
     "vector": {
       "estrutura": 26.2,
       "representacao": 48.8,
-      "poder": 40.0,
+      "poder": 40,
       "imigracao": 33.8,
       "diplomacia": 23.8,
       "intervencao": 78.8,
-      "economia": 35.0,
+      "economia": 35,
       "controle": 31.2,
       "comercio": 26.2,
-      "religiao": 70.0,
+      "religiao": 70,
       "moral": 33.8,
       "tecnologia": 53.8
     }
@@ -4732,12 +4732,12 @@
       "representacao": 41.2,
       "poder": 58.8,
       "imigracao": 66.2,
-      "diplomacia": 35.0,
+      "diplomacia": 35,
       "intervencao": 63.7,
       "economia": 48.8,
-      "controle": 70.0,
-      "comercio": 70.0,
-      "religiao": 45.0,
+      "controle": 70,
+      "comercio": 70,
+      "religiao": 45,
       "moral": 31.2,
       "tecnologia": 36.2
     }
@@ -4749,13 +4749,13 @@
       "representacao": 77.5,
       "poder": 67.5,
       "imigracao": 82.5,
-      "diplomacia": 75.0,
+      "diplomacia": 75,
       "intervencao": 18.8,
       "economia": 62.5,
       "controle": 72.5,
       "comercio": 38.8,
       "religiao": 48.8,
-      "moral": 40.0,
+      "moral": 40,
       "tecnologia": 76.2
     }
   },
@@ -4763,10 +4763,10 @@
     "personalityId": "rui-costa-pimenta",
     "vector": {
       "estrutura": 28.7,
-      "representacao": 80.0,
+      "representacao": 80,
       "poder": 11.2,
-      "imigracao": 25.0,
-      "diplomacia": 25.0,
+      "imigracao": 25,
+      "diplomacia": 25,
       "intervencao": 61.3,
       "economia": 95.8,
       "controle": 86.2,
@@ -4783,20 +4783,20 @@
       "representacao": 16.2,
       "poder": 81.2,
       "imigracao": 21.2,
-      "diplomacia": 80.0,
+      "diplomacia": 80,
       "intervencao": 16.2,
       "economia": 92.5,
       "controle": 97.5,
-      "comercio": 90.0,
+      "comercio": 90,
       "religiao": 96.2,
-      "moral": 50.0,
-      "tecnologia": 70.0
+      "moral": 50,
+      "tecnologia": 70
     }
   },
   {
     "personalityId": "ho-chi-minh",
     "vector": {
-      "estrutura": 20.0,
+      "estrutura": 20,
       "representacao": 33.8,
       "poder": 72.5,
       "imigracao": 66.2,
@@ -4805,23 +4805,23 @@
       "economia": 88.8,
       "controle": 86.2,
       "comercio": 82.5,
-      "religiao": 85.0,
+      "religiao": 85,
       "moral": 58.8,
-      "tecnologia": 70.0
+      "tecnologia": 70
     }
   },
   {
     "personalityId": "dominik-tarczynski",
     "vector": {
       "estrutura": 23.8,
-      "representacao": 70.0,
+      "representacao": 70,
       "poder": 66.2,
       "imigracao": 86.2,
-      "diplomacia": 75.0,
+      "diplomacia": 75,
       "intervencao": 21.2,
       "economia": 51.2,
       "controle": 66.2,
-      "comercio": 75.0,
+      "comercio": 75,
       "religiao": 8.8,
       "moral": 7.5,
       "tecnologia": 46.2
@@ -4833,11 +4833,11 @@
       "estrutura": 13.8,
       "representacao": 18.8,
       "poder": 86.2,
-      "imigracao": 45.0,
+      "imigracao": 45,
       "diplomacia": 56.2,
       "intervencao": 32.5,
       "economia": 92.5,
-      "controle": 95.0,
+      "controle": 95,
       "comercio": 88.8,
       "religiao": 91.2,
       "moral": 62.5,
@@ -4847,7 +4847,7 @@
   {
     "personalityId": "walter-ulbricht",
     "vector": {
-      "estrutura": 0.0,
+      "estrutura": 0,
       "representacao": 8.8,
       "poder": 97.5,
       "imigracao": 71.2,
@@ -4857,14 +4857,14 @@
       "controle": 92.5,
       "comercio": 87.5,
       "religiao": 88.8,
-      "moral": 40.0,
+      "moral": 40,
       "tecnologia": 73.8
     }
   },
   {
     "personalityId": "david-ricardo",
     "vector": {
-      "estrutura": 75.0,
+      "estrutura": 75,
       "representacao": 77.5,
       "poder": 27.5,
       "imigracao": 23.8,
@@ -4874,7 +4874,7 @@
       "controle": 31.2,
       "comercio": 6.2,
       "religiao": 72.5,
-      "moral": 30.0,
+      "moral": 30,
       "tecnologia": 52.5
     }
   },
@@ -4883,12 +4883,12 @@
     "vector": {
       "estrutura": 27.5,
       "representacao": 46.2,
-      "poder": 50.0,
+      "poder": 50,
       "imigracao": 67.5,
-      "diplomacia": 25.0,
+      "diplomacia": 25,
       "intervencao": 71.2,
       "economia": 33.8,
-      "controle": 30.0,
+      "controle": 30,
       "comercio": 26.2,
       "religiao": 43.8,
       "moral": 36.2,
@@ -4902,27 +4902,27 @@
       "representacao": 87.5,
       "poder": 38.8,
       "imigracao": 23.8,
-      "diplomacia": 20.0,
+      "diplomacia": 20,
       "intervencao": 73.8,
       "economia": 83.8,
       "controle": 76.2,
       "comercio": 73.8,
       "religiao": 56.2,
-      "moral": 75.0,
+      "moral": 75,
       "tecnologia": 28.7
     }
   },
   {
     "personalityId": "friedrich-engels",
     "vector": {
-      "estrutura": 30.0,
+      "estrutura": 30,
       "representacao": 76.2,
-      "poder": 35.0,
+      "poder": 35,
       "imigracao": 23.8,
       "diplomacia": 47.5,
       "intervencao": 73.8,
-      "economia": 85.0,
-      "controle": 75.0,
+      "economia": 85,
+      "controle": 75,
       "comercio": 37.5,
       "religiao": 93.8,
       "moral": 76.2,
@@ -4937,7 +4937,7 @@
       "poder": 23.8,
       "imigracao": 32.5,
       "diplomacia": 48.8,
-      "intervencao": 40.0,
+      "intervencao": 40,
       "economia": 36.2,
       "controle": 36.2,
       "comercio": 23.8,
@@ -4950,11 +4950,11 @@
     "personalityId": "henry-ford",
     "vector": {
       "estrutura": 51.2,
-      "representacao": 50.0,
-      "poder": 70.0,
+      "representacao": 50,
+      "poder": 70,
       "imigracao": 81.2,
       "diplomacia": 22.5,
-      "intervencao": 65.0,
+      "intervencao": 65,
       "economia": 27.5,
       "controle": 33.8,
       "comercio": 73.8,
@@ -4966,8 +4966,8 @@
   {
     "personalityId": "mark-zuckerberg",
     "vector": {
-      "estrutura": 30.0,
-      "representacao": 55.0,
+      "estrutura": 30,
+      "representacao": 55,
       "poder": 36.2,
       "imigracao": 28.7,
       "diplomacia": 58.8,
@@ -4976,7 +4976,7 @@
       "controle": 31.2,
       "comercio": 26.2,
       "religiao": 63.7,
-      "moral": 60.0,
+      "moral": 60,
       "tecnologia": 78.8
     }
   },
@@ -4985,14 +4985,14 @@
     "vector": {
       "estrutura": 38.8,
       "representacao": 76.2,
-      "poder": 45.0,
+      "poder": 45,
       "imigracao": 31.2,
-      "diplomacia": 30.0,
+      "diplomacia": 30,
       "intervencao": 63.7,
       "economia": 37.5,
       "controle": 48.8,
       "comercio": 31.2,
-      "religiao": 65.0,
+      "religiao": 65,
       "moral": 62.5,
       "tecnologia": 41.2
     }
@@ -5004,13 +5004,13 @@
       "representacao": 68.8,
       "poder": 41.2,
       "imigracao": 26.2,
-      "diplomacia": 50.0,
+      "diplomacia": 50,
       "intervencao": 38.8,
-      "economia": 20.0,
+      "economia": 20,
       "controle": 28.7,
       "comercio": 22.5,
       "religiao": 77.5,
-      "moral": 75.0,
+      "moral": 75,
       "tecnologia": 78.8
     }
   },
@@ -5019,13 +5019,13 @@
     "vector": {
       "estrutura": 42.5,
       "representacao": 62.5,
-      "poder": 35.0,
+      "poder": 35,
       "imigracao": 27.5,
       "diplomacia": 36.2,
       "intervencao": 63.7,
       "economia": 32.5,
       "controle": 33.8,
-      "comercio": 25.0,
+      "comercio": 25,
       "religiao": 67.5,
       "moral": 68.8,
       "tecnologia": 78.8
@@ -5034,16 +5034,16 @@
   {
     "personalityId": "sam-altman",
     "vector": {
-      "estrutura": 35.0,
+      "estrutura": 35,
       "representacao": 73.8,
-      "poder": 35.0,
+      "poder": 35,
       "imigracao": 22.5,
       "diplomacia": 33.8,
       "intervencao": 57.5,
       "economia": 43.8,
       "controle": 37.5,
-      "comercio": 30.0,
-      "religiao": 80.0,
+      "comercio": 30,
+      "religiao": 80,
       "moral": 76.2,
       "tecnologia": 82.5
     }
@@ -5052,16 +5052,16 @@
     "personalityId": "olavo-de-carvalho",
     "vector": {
       "estrutura": 28.7,
-      "representacao": 50.0,
+      "representacao": 50,
       "poder": 41.2,
       "imigracao": 71.2,
       "diplomacia": 76.2,
       "intervencao": 28.7,
       "economia": 23.8,
-      "controle": 25.0,
+      "controle": 25,
       "comercio": 43.8,
       "religiao": 11.2,
-      "moral": 10.0,
+      "moral": 10,
       "tecnologia": 47.5
     }
   },
@@ -5073,10 +5073,10 @@
       "poder": 28.7,
       "imigracao": 28.7,
       "diplomacia": 23.8,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 88.8,
-      "controle": 75.0,
-      "comercio": 70.0,
+      "controle": 75,
+      "comercio": 70,
       "religiao": 83.8,
       "moral": 77.5,
       "tecnologia": 62.5
@@ -5090,9 +5090,9 @@
       "poder": 42.5,
       "imigracao": 77.5,
       "diplomacia": 63.7,
-      "intervencao": 45.0,
+      "intervencao": 45,
       "economia": 16.2,
-      "controle": 20.0,
+      "controle": 20,
       "comercio": 71.2,
       "religiao": 7.5,
       "moral": 8.8,
@@ -5105,15 +5105,15 @@
       "estrutura": 32.5,
       "representacao": 68.8,
       "poder": 38.8,
-      "imigracao": 70.0,
+      "imigracao": 70,
       "diplomacia": 37.5,
       "intervencao": 48.8,
       "economia": 16.2,
       "controle": 13.8,
       "comercio": 48.8,
-      "religiao": 15.0,
+      "religiao": 15,
       "moral": 11.2,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
@@ -5124,45 +5124,45 @@
       "poder": 41.2,
       "imigracao": 33.8,
       "diplomacia": 23.8,
-      "intervencao": 65.0,
+      "intervencao": 65,
       "economia": 72.5,
-      "controle": 75.0,
-      "comercio": 75.0,
+      "controle": 75,
+      "comercio": 75,
       "religiao": 63.7,
-      "moral": 70.0,
+      "moral": 70,
       "tecnologia": 62.5
     }
   },
   {
     "personalityId": "martinho-lutero",
     "vector": {
-      "estrutura": 70.0,
+      "estrutura": 70,
       "representacao": 26.2,
-      "poder": 80.0,
+      "poder": 80,
       "imigracao": 62.5,
-      "diplomacia": 30.0,
+      "diplomacia": 30,
       "intervencao": 67.5,
-      "economia": 50.0,
+      "economia": 50,
       "controle": 57.5,
       "comercio": 67.5,
       "religiao": 6.2,
       "moral": 12.5,
-      "tecnologia": 30.0
+      "tecnologia": 30
     }
   },
   {
     "personalityId": "paulo-de-tarso",
     "vector": {
       "estrutura": 22.5,
-      "representacao": 30.0,
-      "poder": 75.0,
-      "imigracao": 20.0,
-      "diplomacia": 45.0,
+      "representacao": 30,
+      "poder": 75,
+      "imigracao": 20,
+      "diplomacia": 45,
       "intervencao": 72.5,
       "economia": 56.2,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 23.8,
-      "religiao": 10.0,
+      "religiao": 10,
       "moral": 17.5,
       "tecnologia": 36.2
     }
@@ -5170,24 +5170,24 @@
   {
     "personalityId": "roberto-campos",
     "vector": {
-      "estrutura": 35.0,
+      "estrutura": 35,
       "representacao": 31.2,
       "poder": 63.7,
       "imigracao": 52.5,
-      "diplomacia": 50.0,
-      "intervencao": 30.0,
+      "diplomacia": 50,
+      "intervencao": 30,
       "economia": 21.2,
       "controle": 22.5,
       "comercio": 22.5,
-      "religiao": 55.0,
+      "religiao": 55,
       "moral": 33.8,
-      "tecnologia": 75.0
+      "tecnologia": 75
     }
   },
   {
     "personalityId": "bresser-pereira",
     "vector": {
-      "estrutura": 30.0,
+      "estrutura": 30,
       "representacao": 76.2,
       "poder": 38.8,
       "imigracao": 36.2,
@@ -5209,13 +5209,13 @@
       "poder": 72.5,
       "imigracao": 43.8,
       "diplomacia": 41.2,
-      "intervencao": 45.0,
+      "intervencao": 45,
       "economia": 41.2,
       "controle": 33.8,
       "comercio": 21.2,
       "religiao": 63.7,
       "moral": 37.5,
-      "tecnologia": 75.0
+      "tecnologia": 75
     }
   },
   {
@@ -5226,7 +5226,7 @@
       "poder": 76.2,
       "imigracao": 48.8,
       "diplomacia": 38.8,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 66.2,
       "controle": 66.2,
       "comercio": 46.2,
@@ -5240,15 +5240,15 @@
     "vector": {
       "estrutura": 21.2,
       "representacao": 16.2,
-      "poder": 85.0,
+      "poder": 85,
       "imigracao": 36.2,
       "diplomacia": 46.2,
-      "intervencao": 85.0,
+      "intervencao": 85,
       "economia": 92.5,
-      "controle": 90.0,
-      "comercio": 70.0,
+      "controle": 90,
+      "comercio": 70,
       "religiao": 91.2,
-      "moral": 65.0,
+      "moral": 65,
       "tecnologia": 66.2
     }
   },
@@ -5260,7 +5260,7 @@
       "poder": 27.5,
       "imigracao": 33.8,
       "diplomacia": 33.8,
-      "intervencao": 70.0,
+      "intervencao": 70,
       "economia": 33.8,
       "controle": 28.7,
       "comercio": 28.7,
@@ -5274,11 +5274,11 @@
     "vector": {
       "estrutura": 32.5,
       "representacao": 71.2,
-      "poder": 65.0,
+      "poder": 65,
       "imigracao": 31.2,
-      "diplomacia": 25.0,
+      "diplomacia": 25,
       "intervencao": 67.5,
-      "economia": 70.0,
+      "economia": 70,
       "controle": 67.5,
       "comercio": 41.2,
       "religiao": 61.3,
@@ -5289,9 +5289,9 @@
   {
     "personalityId": "arthur-schopenhauer",
     "vector": {
-      "estrutura": 25.0,
-      "representacao": 35.0,
-      "poder": 65.0,
+      "estrutura": 25,
+      "representacao": 35,
+      "poder": 65,
       "imigracao": 66.2,
       "diplomacia": 22.5,
       "intervencao": 72.5,
@@ -5312,9 +5312,9 @@
       "imigracao": 66.2,
       "diplomacia": 72.5,
       "intervencao": 28.7,
-      "economia": 40.0,
-      "controle": 40.0,
-      "comercio": 70.0,
+      "economia": 40,
+      "controle": 40,
+      "comercio": 70,
       "religiao": 73.8,
       "moral": 61.3,
       "tecnologia": 71.2
@@ -5330,25 +5330,25 @@
       "diplomacia": 56.2,
       "intervencao": 53.8,
       "economia": 67.5,
-      "controle": 80.0,
+      "controle": 80,
       "comercio": 48.8,
       "religiao": 87.5,
-      "moral": 35.0,
+      "moral": 35,
       "tecnologia": 78.8
     }
   },
   {
     "personalityId": "hu-jintao",
     "vector": {
-      "estrutura": 15.0,
+      "estrutura": 15,
       "representacao": 13.8,
-      "poder": 65.0,
-      "imigracao": 70.0,
+      "poder": 65,
+      "imigracao": 70,
       "diplomacia": 53.8,
       "intervencao": 57.5,
       "economia": 62.5,
       "controle": 73.8,
-      "comercio": 55.0,
+      "comercio": 55,
       "religiao": 83.8,
       "moral": 33.8,
       "tecnologia": 73.8
@@ -5360,13 +5360,13 @@
       "estrutura": 33.8,
       "representacao": 72.5,
       "poder": 73.8,
-      "imigracao": 40.0,
-      "diplomacia": 70.0,
-      "intervencao": 30.0,
+      "imigracao": 40,
+      "diplomacia": 70,
+      "intervencao": 30,
       "economia": 48.8,
-      "controle": 45.0,
-      "comercio": 20.0,
-      "religiao": 45.0,
+      "controle": 45,
+      "comercio": 20,
+      "religiao": 45,
       "moral": 63.7,
       "tecnologia": 72.5
     }
@@ -5375,17 +5375,17 @@
     "personalityId": "jrr-tolkien",
     "vector": {
       "estrutura": 87.5,
-      "representacao": 70.0,
-      "poder": 25.0,
+      "representacao": 70,
+      "poder": 25,
       "imigracao": 46.2,
-      "diplomacia": 25.0,
+      "diplomacia": 25,
       "intervencao": 71.2,
-      "economia": 40.0,
-      "controle": 25.0,
+      "economia": 40,
+      "controle": 25,
       "comercio": 71.2,
       "religiao": 17.5,
       "moral": 22.5,
-      "tecnologia": 10.0
+      "tecnologia": 10
     }
   },
   {
@@ -5396,7 +5396,7 @@
       "poder": 57.5,
       "imigracao": 43.8,
       "diplomacia": 31.2,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 48.8,
       "controle": 58.8,
       "comercio": 48.8,
@@ -5408,67 +5408,67 @@
   {
     "personalityId": "papa-leao-xiii",
     "vector": {
-      "estrutura": 45.0,
+      "estrutura": 45,
       "representacao": 32.5,
       "poder": 73.8,
       "imigracao": 62.5,
-      "diplomacia": 30.0,
-      "intervencao": 70.0,
-      "economia": 40.0,
+      "diplomacia": 30,
+      "intervencao": 70,
+      "economia": 40,
       "controle": 47.5,
-      "comercio": 70.0,
-      "religiao": 5.0,
-      "moral": 15.0,
-      "tecnologia": 45.0
+      "comercio": 70,
+      "religiao": 5,
+      "moral": 15,
+      "tecnologia": 45
     }
   },
   {
     "personalityId": "barao-do-rio-branco",
     "vector": {
       "estrutura": 23.8,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 67.5,
       "imigracao": 58.8,
       "diplomacia": 48.8,
-      "intervencao": 35.0,
+      "intervencao": 35,
       "economia": 31.2,
       "controle": 36.2,
       "comercio": 33.8,
       "religiao": 41.2,
-      "moral": 30.0,
+      "moral": 30,
       "tecnologia": 68.8
     }
   },
   {
     "personalityId": "rui-barbosa",
     "vector": {
-      "estrutura": 80.0,
-      "representacao": 75.0,
+      "estrutura": 80,
+      "representacao": 75,
       "poder": 23.8,
       "imigracao": 32.5,
       "diplomacia": 23.8,
-      "intervencao": 65.0,
+      "intervencao": 65,
       "economia": 38.8,
-      "controle": 50.0,
+      "controle": 50,
       "comercio": 61.3,
       "religiao": 57.5,
       "moral": 28.7,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
     "personalityId": "mario-covas",
     "vector": {
-      "estrutura": 45.0,
-      "representacao": 80.0,
-      "poder": 55.0,
+      "estrutura": 45,
+      "representacao": 80,
+      "poder": 55,
       "imigracao": 32.5,
       "diplomacia": 32.5,
-      "intervencao": 55.0,
+      "intervencao": 55,
       "economia": 48.8,
       "controle": 37.5,
       "comercio": 31.2,
-      "religiao": 50.0,
+      "religiao": 50,
       "moral": 46.2,
       "tecnologia": 67.5
     }
@@ -5480,14 +5480,14 @@
       "representacao": 53.8,
       "poder": 66.2,
       "imigracao": 67.5,
-      "diplomacia": 60.0,
+      "diplomacia": 60,
       "intervencao": 31.2,
       "economia": 38.8,
       "controle": 32.5,
       "comercio": 36.2,
-      "religiao": 35.0,
+      "religiao": 35,
       "moral": 31.2,
-      "tecnologia": 70.0
+      "tecnologia": 70
     }
   },
   {
@@ -5498,7 +5498,7 @@
       "poder": 72.5,
       "imigracao": 23.8,
       "diplomacia": 53.8,
-      "intervencao": 70.0,
+      "intervencao": 70,
       "economia": 87.5,
       "controle": 81.2,
       "comercio": 71.2,
@@ -5516,7 +5516,7 @@
       "imigracao": 56.2,
       "diplomacia": 62.5,
       "intervencao": 26.2,
-      "economia": 30.0,
+      "economia": 30,
       "controle": 36.2,
       "comercio": 33.8,
       "religiao": 52.5,
@@ -5547,15 +5547,15 @@
       "estrutura": 37.5,
       "representacao": 86.2,
       "poder": 22.5,
-      "imigracao": 20.0,
+      "imigracao": 20,
       "diplomacia": 17.5,
       "intervencao": 72.5,
       "economia": 77.5,
       "controle": 66.2,
-      "comercio": 45.0,
+      "comercio": 45,
       "religiao": 81.2,
       "moral": 87.5,
-      "tecnologia": 35.0
+      "tecnologia": 35
     }
   },
   {
@@ -5566,7 +5566,7 @@
       "poder": 72.5,
       "imigracao": 32.5,
       "diplomacia": 31.2,
-      "intervencao": 60.0,
+      "intervencao": 60,
       "economia": 52.5,
       "controle": 47.5,
       "comercio": 38.8,
@@ -5584,11 +5584,11 @@
       "imigracao": 58.8,
       "diplomacia": 56.2,
       "intervencao": 46.2,
-      "economia": 25.0,
+      "economia": 25,
       "controle": 27.5,
       "comercio": 36.2,
       "religiao": 21.2,
-      "moral": 25.0,
+      "moral": 25,
       "tecnologia": 71.2
     }
   },
@@ -5596,15 +5596,15 @@
     "personalityId": "joao-doria",
     "vector": {
       "estrutura": 57.5,
-      "representacao": 75.0,
+      "representacao": 75,
       "poder": 57.5,
       "imigracao": 27.5,
       "diplomacia": 27.5,
-      "intervencao": 45.0,
+      "intervencao": 45,
       "economia": 32.5,
       "controle": 36.2,
       "comercio": 27.5,
-      "religiao": 55.0,
+      "religiao": 55,
       "moral": 63.7,
       "tecnologia": 67.5
     }
@@ -5613,17 +5613,17 @@
     "personalityId": "eduardo-leite",
     "vector": {
       "estrutura": 58.8,
-      "representacao": 75.0,
+      "representacao": 75,
       "poder": 38.8,
-      "imigracao": 35.0,
-      "diplomacia": 30.0,
-      "intervencao": 65.0,
+      "imigracao": 35,
+      "diplomacia": 30,
+      "intervencao": 65,
       "economia": 28.7,
       "controle": 31.2,
       "comercio": 27.5,
       "religiao": 67.5,
-      "moral": 75.0,
-      "tecnologia": 60.0
+      "moral": 75,
+      "tecnologia": 60
     }
   },
   {
@@ -5631,7 +5631,7 @@
     "vector": {
       "estrutura": 52.1,
       "representacao": 79.9,
-      "poder": 46.0,
+      "poder": 46,
       "imigracao": 33.1,
       "diplomacia": 25.2,
       "intervencao": 44.6,
@@ -5646,7 +5646,7 @@
   {
     "personalityId": "nero",
     "vector": {
-      "estrutura": 15.0,
+      "estrutura": 15,
       "representacao": 13.8,
       "poder": 86.2,
       "imigracao": 66.2,
@@ -5654,10 +5654,10 @@
       "intervencao": 22.5,
       "economia": 58.8,
       "controle": 71.2,
-      "comercio": 65.0,
+      "comercio": 65,
       "religiao": 36.2,
       "moral": 72.5,
-      "tecnologia": 75.0
+      "tecnologia": 75
     }
   },
   {
@@ -5672,7 +5672,7 @@
       "economia": 29.2,
       "controle": 77.9,
       "comercio": 91.9,
-      "religiao": 1.0,
+      "religiao": 1,
       "moral": 5.3,
       "tecnologia": 66.5
     }
@@ -5684,14 +5684,14 @@
       "representacao": 56.2,
       "poder": 43.8,
       "imigracao": 32.5,
-      "diplomacia": 50.0,
+      "diplomacia": 50,
       "intervencao": 36.2,
       "economia": 38.8,
       "controle": 38.8,
       "comercio": 28.7,
       "religiao": 43.8,
       "moral": 33.8,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
@@ -5701,8 +5701,8 @@
       "representacao": 38.8,
       "poder": 72.5,
       "imigracao": 68.8,
-      "diplomacia": 50.0,
-      "intervencao": 35.0,
+      "diplomacia": 50,
+      "intervencao": 35,
       "economia": 31.2,
       "controle": 46.2,
       "comercio": 68.8,
@@ -5715,15 +5715,15 @@
     "personalityId": "voltaire",
     "vector": {
       "estrutura": 22.5,
-      "representacao": 25.0,
+      "representacao": 25,
       "poder": 27.5,
       "imigracao": 68.8,
       "diplomacia": 26.2,
       "intervencao": 72.5,
-      "economia": 30.0,
-      "controle": 30.0,
-      "comercio": 25.0,
-      "religiao": 80.0,
+      "economia": 30,
+      "controle": 30,
+      "comercio": 25,
+      "religiao": 80,
       "moral": 62.5,
       "tecnologia": 67.5
     }
@@ -5732,14 +5732,14 @@
     "personalityId": "rene-descartes",
     "vector": {
       "estrutura": 26.2,
-      "representacao": 50.0,
-      "poder": 40.0,
+      "representacao": 50,
+      "poder": 40,
       "imigracao": 32.5,
       "diplomacia": 31.2,
       "intervencao": 71.2,
       "economia": 38.8,
       "controle": 43.8,
-      "comercio": 35.0,
+      "comercio": 35,
       "religiao": 21.2,
       "moral": 32.5,
       "tecnologia": 36.2
@@ -5749,13 +5749,13 @@
     "personalityId": "einstein",
     "vector": {
       "estrutura": 36.2,
-      "representacao": 80.0,
+      "representacao": 80,
       "poder": 22.5,
       "imigracao": 17.5,
-      "diplomacia": 10.0,
-      "intervencao": 75.0,
+      "diplomacia": 10,
+      "intervencao": 75,
       "economia": 77.5,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 27.5,
       "religiao": 81.2,
       "moral": 76.2,
@@ -5765,16 +5765,16 @@
   {
     "personalityId": "nikola-tesla",
     "vector": {
-      "estrutura": 35.0,
+      "estrutura": 35,
       "representacao": 61.3,
       "poder": 42.5,
       "imigracao": 26.2,
       "diplomacia": 28.7,
-      "intervencao": 70.0,
-      "economia": 60.0,
+      "intervencao": 70,
+      "economia": 60,
       "controle": 48.8,
       "comercio": 23.8,
-      "religiao": 70.0,
+      "religiao": 70,
       "moral": 47.5,
       "tecnologia": 78.8
     }
@@ -5785,15 +5785,15 @@
       "estrutura": 47.5,
       "representacao": 71.2,
       "poder": 57.5,
-      "imigracao": 55.0,
+      "imigracao": 55,
       "diplomacia": 46.2,
       "intervencao": 48.8,
       "economia": 28.7,
       "controle": 31.2,
       "comercio": 38.8,
       "religiao": 47.5,
-      "moral": 40.0,
-      "tecnologia": 55.0
+      "moral": 40,
+      "tecnologia": 55
     }
   },
   {
@@ -5801,7 +5801,7 @@
     "vector": {
       "estrutura": 18.8,
       "representacao": 23.8,
-      "poder": 70.0,
+      "poder": 70,
       "imigracao": 53.8,
       "diplomacia": 73.8,
       "intervencao": 26.2,
@@ -5817,12 +5817,12 @@
     "personalityId": "alan-turing",
     "vector": {
       "estrutura": 33.8,
-      "representacao": 70.0,
+      "representacao": 70,
       "poder": 17.5,
       "imigracao": 22.5,
       "diplomacia": 37.5,
       "intervencao": 56.2,
-      "economia": 70.0,
+      "economia": 70,
       "controle": 63.7,
       "comercio": 33.8,
       "religiao": 87.5,
@@ -5841,7 +5841,7 @@
       "intervencao": 33.8,
       "economia": 52.5,
       "controle": 67.5,
-      "comercio": 25.0,
+      "comercio": 25,
       "religiao": 81.2,
       "moral": 71.2,
       "tecnologia": 68.8
@@ -5853,14 +5853,14 @@
       "estrutura": 66.2,
       "representacao": 72.5,
       "poder": 38.8,
-      "imigracao": 40.0,
+      "imigracao": 40,
       "diplomacia": 51.2,
       "intervencao": 28.7,
       "economia": 37.5,
-      "controle": 30.0,
+      "controle": 30,
       "comercio": 16.2,
-      "religiao": 40.0,
-      "moral": 45.0,
+      "religiao": 40,
+      "moral": 45,
       "tecnologia": 73.8
     }
   },
@@ -5869,7 +5869,7 @@
     "vector": {
       "estrutura": 51.2,
       "representacao": 48.8,
-      "poder": 65.0,
+      "poder": 65,
       "imigracao": 42.5,
       "diplomacia": 43.8,
       "intervencao": 41.2,
@@ -5877,19 +5877,19 @@
       "controle": 23.8,
       "comercio": 26.2,
       "religiao": 21.2,
-      "moral": 20.0,
-      "tecnologia": 70.0
+      "moral": 20,
+      "tecnologia": 70
     }
   },
   {
     "personalityId": "richard-rasmussen",
     "vector": {
       "estrutura": 61.3,
-      "representacao": 55.0,
+      "representacao": 55,
       "poder": 41.2,
       "imigracao": 52.5,
-      "diplomacia": 60.0,
-      "intervencao": 45.0,
+      "diplomacia": 60,
+      "intervencao": 45,
       "economia": 27.5,
       "controle": 27.5,
       "comercio": 41.2,
@@ -5905,12 +5905,12 @@
       "representacao": 52.5,
       "poder": 38.8,
       "imigracao": 37.5,
-      "diplomacia": 25.0,
-      "intervencao": 65.0,
-      "economia": 60.0,
+      "diplomacia": 25,
+      "intervencao": 65,
+      "economia": 60,
       "controle": 56.2,
       "comercio": 31.2,
-      "religiao": 65.0,
+      "religiao": 65,
       "moral": 43.8,
       "tecnologia": 46.2
     }
@@ -5922,11 +5922,11 @@
       "representacao": 58.8,
       "poder": 37.5,
       "imigracao": 22.5,
-      "diplomacia": 5.0,
+      "diplomacia": 5,
       "intervencao": 73.8,
       "economia": 52.5,
       "controle": 51.2,
-      "comercio": 25.0,
+      "comercio": 25,
       "religiao": 51.2,
       "moral": 61.3,
       "tecnologia": 82.5
@@ -5935,13 +5935,13 @@
   {
     "personalityId": "tiradentes",
     "vector": {
-      "estrutura": 80.0,
+      "estrutura": 80,
       "representacao": 73.8,
-      "poder": 30.0,
+      "poder": 30,
       "imigracao": 53.8,
       "diplomacia": 61.3,
       "intervencao": 51.2,
-      "economia": 50.0,
+      "economia": 50,
       "controle": 61.3,
       "comercio": 82.5,
       "religiao": 13.8,
@@ -5953,14 +5953,14 @@
     "personalityId": "john-d-rockefeller",
     "vector": {
       "estrutura": 38.8,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 67.5,
       "imigracao": 62.5,
       "diplomacia": 32.5,
-      "intervencao": 45.0,
+      "intervencao": 45,
       "economia": 11.2,
       "controle": 21.2,
-      "comercio": 30.0,
+      "comercio": 30,
       "religiao": 16.2,
       "moral": 8.8,
       "tecnologia": 71.2
@@ -5973,12 +5973,12 @@
       "representacao": 23.8,
       "poder": 52.5,
       "imigracao": 78.8,
-      "diplomacia": 80.0,
-      "intervencao": 15.0,
+      "diplomacia": 80,
+      "intervencao": 15,
       "economia": 58.8,
-      "controle": 65.0,
+      "controle": 65,
       "comercio": 73.8,
-      "religiao": 0.0,
+      "religiao": 0,
       "moral": 11.2,
       "tecnologia": 18.8
     }
@@ -5989,7 +5989,7 @@
       "estrutura": 62.5,
       "representacao": 57.5,
       "poder": 51.2,
-      "imigracao": 60.0,
+      "imigracao": 60,
       "diplomacia": 43.8,
       "intervencao": 48.8,
       "economia": 28.7,
@@ -5997,7 +5997,7 @@
       "comercio": 57.5,
       "religiao": 86.2,
       "moral": 28.7,
-      "tecnologia": 85.0
+      "tecnologia": 85
     }
   },
   {
@@ -6009,18 +6009,18 @@
       "imigracao": 21.2,
       "diplomacia": 13.8,
       "intervencao": 73.8,
-      "economia": 75.0,
-      "controle": 65.0,
-      "comercio": 45.0,
-      "religiao": 70.0,
+      "economia": 75,
+      "controle": 65,
+      "comercio": 45,
+      "religiao": 70,
       "moral": 72.5,
-      "tecnologia": 20.0
+      "tecnologia": 20
     }
   },
   {
     "personalityId": "galileu-galilei",
     "vector": {
-      "estrutura": 55.0,
+      "estrutura": 55,
       "representacao": 26.2,
       "poder": 47.5,
       "imigracao": 53.8,
@@ -6028,8 +6028,8 @@
       "intervencao": 36.2,
       "economia": 38.8,
       "controle": 52.5,
-      "comercio": 50.0,
-      "religiao": 25.0,
+      "comercio": 50,
+      "religiao": 25,
       "moral": 21.2,
       "tecnologia": 77.5
     }
@@ -6037,10 +6037,10 @@
   {
     "personalityId": "thomas-muntzer",
     "vector": {
-      "estrutura": 75.0,
-      "representacao": 50.0,
+      "estrutura": 75,
+      "representacao": 50,
       "poder": 73.8,
-      "imigracao": 55.0,
+      "imigracao": 55,
       "diplomacia": 78.8,
       "intervencao": 28.7,
       "economia": 87.5,
@@ -6058,12 +6058,12 @@
       "representacao": 61.3,
       "poder": 53.8,
       "imigracao": 57.5,
-      "diplomacia": 55.0,
-      "intervencao": 30.0,
+      "diplomacia": 55,
+      "intervencao": 30,
       "economia": 17.5,
-      "controle": 15.0,
+      "controle": 15,
       "comercio": 16.2,
-      "religiao": 25.0,
+      "religiao": 25,
       "moral": 21.2,
       "tecnologia": 68.8
     }
@@ -6074,7 +6074,7 @@
       "estrutura": 68.8,
       "representacao": 86.2,
       "poder": 33.8,
-      "imigracao": 15.0,
+      "imigracao": 15,
       "diplomacia": 12.5,
       "intervencao": 72.5,
       "economia": 87.5,
@@ -6107,7 +6107,7 @@
     "vector": {
       "estrutura": 36.2,
       "representacao": 41.2,
-      "poder": 70.0,
+      "poder": 70,
       "imigracao": 76.2,
       "diplomacia": 67.5,
       "intervencao": 23.8,
@@ -6126,20 +6126,20 @@
       "representacao": 51.2,
       "poder": 62.5,
       "imigracao": 51.2,
-      "diplomacia": 50.0,
+      "diplomacia": 50,
       "intervencao": 28.7,
       "economia": 37.5,
-      "controle": 30.0,
+      "controle": 30,
       "comercio": 22.5,
       "religiao": 27.5,
-      "moral": 15.0,
+      "moral": 15,
       "tecnologia": 61.3
     }
   },
   {
     "personalityId": "gavin-newsom",
     "vector": {
-      "estrutura": 75.0,
+      "estrutura": 75,
       "representacao": 81.2,
       "poder": 42.5,
       "imigracao": 21.2,
@@ -6150,7 +6150,7 @@
       "comercio": 28.7,
       "religiao": 62.5,
       "moral": 78.8,
-      "tecnologia": 60.0
+      "tecnologia": 60
     }
   },
   {
@@ -6158,8 +6158,8 @@
     "vector": {
       "estrutura": 41.2,
       "representacao": 78.8,
-      "poder": 40.0,
-      "imigracao": 30.0,
+      "poder": 40,
+      "imigracao": 30,
       "diplomacia": 22.5,
       "intervencao": 63.7,
       "economia": 67.5,
@@ -6177,8 +6177,8 @@
       "representacao": 71.2,
       "poder": 48.8,
       "imigracao": 38.8,
-      "diplomacia": 40.0,
-      "intervencao": 45.0,
+      "diplomacia": 40,
+      "intervencao": 45,
       "economia": 66.2,
       "controle": 57.5,
       "comercio": 36.2,
@@ -6191,7 +6191,7 @@
     "personalityId": "felipe-vi",
     "vector": {
       "estrutura": 37.5,
-      "representacao": 65.0,
+      "representacao": 65,
       "poder": 58.8,
       "imigracao": 37.5,
       "diplomacia": 43.8,
@@ -6200,8 +6200,8 @@
       "controle": 57.5,
       "comercio": 28.7,
       "religiao": 42.5,
-      "moral": 45.0,
-      "tecnologia": 60.0
+      "moral": 45,
+      "tecnologia": 60
     }
   },
   {
@@ -6210,13 +6210,13 @@
       "estrutura": 56.2,
       "representacao": 71.2,
       "poder": 63.7,
-      "imigracao": 70.0,
+      "imigracao": 70,
       "diplomacia": 61.3,
-      "intervencao": 25.0,
+      "intervencao": 25,
       "economia": 32.5,
       "controle": 31.2,
-      "comercio": 25.0,
-      "religiao": 30.0,
+      "comercio": 25,
+      "religiao": 30,
       "moral": 31.2,
       "tecnologia": 67.5
     }
@@ -6228,10 +6228,10 @@
       "representacao": 67.5,
       "poder": 48.8,
       "imigracao": 37.5,
-      "diplomacia": 20.0,
+      "diplomacia": 20,
       "intervencao": 67.5,
-      "economia": 60.0,
-      "controle": 65.0,
+      "economia": 60,
+      "controle": 65,
       "comercio": 33.8,
       "religiao": 42.5,
       "moral": 37.5,
@@ -6246,7 +6246,7 @@
       "poder": 47.5,
       "imigracao": 37.5,
       "diplomacia": 51.2,
-      "intervencao": 35.0,
+      "intervencao": 35,
       "economia": 36.2,
       "controle": 36.2,
       "comercio": 26.2,
@@ -6258,17 +6258,17 @@
   {
     "personalityId": "augusto-cury",
     "vector": {
-      "estrutura": 50.0,
+      "estrutura": 50,
       "representacao": 72.5,
       "poder": 58.8,
-      "imigracao": 35.0,
-      "diplomacia": 30.0,
-      "intervencao": 55.0,
-      "economia": 55.0,
-      "controle": 45.0,
+      "imigracao": 35,
+      "diplomacia": 30,
+      "intervencao": 55,
+      "economia": 55,
+      "controle": 45,
       "comercio": 37.5,
       "religiao": 37.5,
-      "moral": 40.0,
+      "moral": 40,
       "tecnologia": 51.2
     }
   },
@@ -6277,13 +6277,13 @@
     "vector": {
       "estrutura": 87.5,
       "representacao": 41.2,
-      "poder": 60.0,
-      "imigracao": 85.0,
-      "diplomacia": 80.0,
-      "intervencao": 25.0,
-      "economia": 25.0,
+      "poder": 60,
+      "imigracao": 85,
+      "diplomacia": 80,
+      "intervencao": 25,
+      "economia": 25,
       "controle": 26.2,
-      "comercio": 20.0,
+      "comercio": 20,
       "religiao": 17.5,
       "moral": 3.8,
       "tecnologia": 48.8
@@ -6292,35 +6292,35 @@
   {
     "personalityId": "john-c-calhoun",
     "vector": {
-      "estrutura": 90.0,
+      "estrutura": 90,
       "representacao": 43.8,
-      "poder": 50.0,
+      "poder": 50,
       "imigracao": 88.8,
       "diplomacia": 68.8,
-      "intervencao": 35.0,
+      "intervencao": 35,
       "economia": 17.5,
-      "controle": 20.0,
+      "controle": 20,
       "comercio": 16.2,
       "religiao": 32.5,
-      "moral": 5.0,
-      "tecnologia": 45.0
+      "moral": 5,
+      "tecnologia": 45
     }
   },
   {
     "personalityId": "carlos-menem",
     "vector": {
       "estrutura": 42.5,
-      "representacao": 45.0,
+      "representacao": 45,
       "poder": 71.2,
-      "imigracao": 45.0,
+      "imigracao": 45,
       "diplomacia": 32.5,
       "intervencao": 32.5,
       "economia": 23.8,
       "controle": 21.2,
       "comercio": 13.8,
       "religiao": 27.5,
-      "moral": 25.0,
-      "tecnologia": 65.0
+      "moral": 25,
+      "tecnologia": 65
     }
   },
   {
@@ -6331,13 +6331,13 @@
       "poder": 46.2,
       "imigracao": 26.2,
       "diplomacia": 18.8,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 76.2,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 76.2,
-      "religiao": 55.0,
+      "religiao": 55,
       "moral": 63.7,
-      "tecnologia": 65.0
+      "tecnologia": 65
     }
   },
   {
@@ -6346,12 +6346,12 @@
       "estrutura": 36.2,
       "representacao": 76.2,
       "poder": 58.8,
-      "imigracao": 30.0,
+      "imigracao": 30,
       "diplomacia": 31.2,
-      "intervencao": 50.0,
+      "intervencao": 50,
       "economia": 62.5,
       "controle": 53.8,
-      "comercio": 30.0,
+      "comercio": 30,
       "religiao": 43.8,
       "moral": 57.5,
       "tecnologia": 41.2
@@ -6364,12 +6364,12 @@
       "representacao": 76.2,
       "poder": 51.2,
       "imigracao": 32.5,
-      "diplomacia": 35.0,
+      "diplomacia": 35,
       "intervencao": 46.2,
       "economia": 57.5,
       "controle": 52.5,
-      "comercio": 30.0,
-      "religiao": 30.0,
+      "comercio": 30,
+      "religiao": 30,
       "moral": 36.2,
       "tecnologia": 58.8
     }
@@ -6386,7 +6386,7 @@
       "economia": 46.2,
       "controle": 73.8,
       "comercio": 42.5,
-      "religiao": 0.0,
+      "religiao": 0,
       "moral": 8.8,
       "tecnologia": 52.5
     }
@@ -6394,14 +6394,14 @@
   {
     "personalityId": "otto-strasser",
     "vector": {
-      "estrutura": 72.0,
+      "estrutura": 72,
       "representacao": 25.7,
       "poder": 68.6,
       "imigracao": 89.6,
       "diplomacia": 73.6,
       "intervencao": 44.3,
       "economia": 76.9,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 89.9,
       "religiao": 18.8,
       "moral": 10.1,
@@ -6422,7 +6422,7 @@
       "comercio": 41.3,
       "religiao": 13.9,
       "moral": 31.3,
-      "tecnologia": 57.0
+      "tecnologia": 57
     }
   },
   {
@@ -6431,7 +6431,7 @@
       "estrutura": 6.8,
       "representacao": 11.4,
       "poder": 93.3,
-      "imigracao": 59.0,
+      "imigracao": 59,
       "diplomacia": 62.4,
       "intervencao": 6.7,
       "economia": 76.8,
@@ -6448,7 +6448,7 @@
       "estrutura": 28.3,
       "representacao": 70.4,
       "poder": 43.7,
-      "imigracao": 39.0,
+      "imigracao": 39,
       "diplomacia": 62.1,
       "intervencao": 29.1,
       "economia": 47.2,
@@ -6462,15 +6462,15 @@
   {
     "personalityId": "mohammad-reza-pahlavi",
     "vector": {
-      "estrutura": 8.0,
-      "representacao": 9.0,
+      "estrutura": 8,
+      "representacao": 9,
       "poder": 95.7,
       "imigracao": 56.7,
       "diplomacia": 69.5,
       "intervencao": 24.5,
       "economia": 37.5,
       "controle": 82.6,
-      "comercio": 61.0,
+      "comercio": 61,
       "religiao": 38.4,
       "moral": 39.3,
       "tecnologia": 71.3
@@ -6497,9 +6497,9 @@
     "personalityId": "ernst-junger",
     "vector": {
       "estrutura": 25.6,
-      "representacao": 34.0,
+      "representacao": 34,
       "poder": 29.3,
-      "imigracao": 59.0,
+      "imigracao": 59,
       "diplomacia": 68.3,
       "intervencao": 32.9,
       "economia": 61.3,
@@ -6514,16 +6514,16 @@
     "personalityId": "oswald-spengler",
     "vector": {
       "estrutura": 25.6,
-      "representacao": 15.0,
+      "representacao": 15,
       "poder": 73.3,
       "imigracao": 69.8,
       "diplomacia": 86.2,
-      "intervencao": 15.0,
+      "intervencao": 15,
       "economia": 42.4,
       "controle": 75.4,
       "comercio": 74.4,
       "religiao": 64.6,
-      "moral": 25.0,
+      "moral": 25,
       "tecnologia": 35.7
     }
   },
@@ -6533,11 +6533,11 @@
       "estrutura": 56.6,
       "representacao": 23.3,
       "poder": 68.6,
-      "imigracao": 48.0,
+      "imigracao": 48,
       "diplomacia": 77.9,
       "intervencao": 24.5,
       "economia": 49.6,
-      "controle": 58.0,
+      "controle": 58,
       "comercio": 35.3,
       "religiao": 4.5,
       "moral": 11.3,
@@ -6552,11 +6552,11 @@
       "poder": 67.5,
       "imigracao": 48.1,
       "diplomacia": 41.9,
-      "intervencao": 66.0,
+      "intervencao": 66,
       "economia": 55.6,
-      "controle": 64.0,
-      "comercio": 46.0,
-      "religiao": 8.0,
+      "controle": 64,
+      "comercio": 46,
+      "religiao": 8,
       "moral": 20.6,
       "tecnologia": 58.2
     }
@@ -6567,7 +6567,7 @@
       "estrutura": 23.2,
       "representacao": 35.2,
       "poder": 72.1,
-      "imigracao": 67.0,
+      "imigracao": 67,
       "diplomacia": 81.4,
       "intervencao": 29.3,
       "economia": 66.7,
@@ -6575,30 +6575,30 @@
       "comercio": 65.7,
       "religiao": 4.5,
       "moral": 11.3,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
     "personalityId": "averroes",
     "vector": {
       "estrutura": 25.6,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 67.4,
       "imigracao": 51.7,
-      "diplomacia": 55.0,
+      "diplomacia": 55,
       "intervencao": 36.3,
       "economia": 61.5,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 42.5,
       "religiao": 12.7,
-      "moral": 23.0,
+      "moral": 23,
       "tecnologia": 53.6
     }
   },
   {
     "personalityId": "muhammad-ali-jinnah",
     "vector": {
-      "estrutura": 45.0,
+      "estrutura": 45,
       "representacao": 71.6,
       "poder": 54.4,
       "imigracao": 58.8,
@@ -6606,7 +6606,7 @@
       "intervencao": 56.5,
       "economia": 53.2,
       "controle": 49.7,
-      "comercio": 52.0,
+      "comercio": 52,
       "religiao": 47.2,
       "moral": 30.1,
       "tecnologia": 70.1
@@ -6620,8 +6620,8 @@
       "poder": 82.6,
       "imigracao": 53.9,
       "diplomacia": 86.2,
-      "intervencao": 9.0,
-      "economia": 52.0,
+      "intervencao": 9,
+      "economia": 52,
       "controle": 53.3,
       "comercio": 44.9,
       "religiao": 2.1,
@@ -6632,15 +6632,15 @@
   {
     "personalityId": "alwaleed-bin-talal",
     "vector": {
-      "estrutura": 28.0,
-      "representacao": 59.0,
-      "poder": 65.0,
+      "estrutura": 28,
+      "representacao": 59,
+      "poder": 65,
       "imigracao": 37.4,
-      "diplomacia": 36.0,
+      "diplomacia": 36,
       "intervencao": 55.3,
-      "economia": 28.0,
+      "economia": 28,
       "controle": 30.1,
-      "comercio": 16.0,
+      "comercio": 16,
       "religiao": 23.4,
       "moral": 27.7,
       "tecnologia": 66.5
@@ -6650,8 +6650,8 @@
     "personalityId": "david-ben-gurion",
     "vector": {
       "estrutura": 17.6,
-      "representacao": 68.0,
-      "poder": 71.0,
+      "representacao": 68,
+      "poder": 71,
       "imigracao": 79.3,
       "diplomacia": 82.6,
       "intervencao": 19.8,
@@ -6667,17 +6667,17 @@
     "personalityId": "sergei-melikov",
     "vector": {
       "estrutura": 16.3,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 92.1,
       "imigracao": 80.1,
       "diplomacia": 86.2,
       "intervencao": 17.4,
-      "economia": 59.0,
+      "economia": 59,
       "controle": 73.1,
       "comercio": 65.7,
       "religiao": 31.9,
-      "moral": 16.0,
-      "tecnologia": 63.0
+      "moral": 16,
+      "tecnologia": 63
     }
   },
   {
@@ -6686,10 +6686,10 @@
       "estrutura": 56.8,
       "representacao": 6.7,
       "poder": 61.2,
-      "imigracao": 67.0,
+      "imigracao": 67,
       "diplomacia": 93.3,
-      "intervencao": 15.0,
-      "economia": 59.0,
+      "intervencao": 15,
+      "economia": 59,
       "controle": 44.5,
       "comercio": 63.3,
       "religiao": 2.1,
@@ -6736,14 +6736,14 @@
     "vector": {
       "estrutura": 56.8,
       "representacao": 16.2,
-      "poder": 85.0,
-      "imigracao": 67.0,
+      "poder": 85,
+      "imigracao": 67,
       "diplomacia": 89.8,
       "intervencao": 4.3,
-      "economia": 53.0,
+      "economia": 53,
       "controle": 75.5,
       "comercio": 71.7,
-      "religiao": 1.0,
+      "religiao": 1,
       "moral": 7.7,
       "tecnologia": 54.8
     }
@@ -6751,7 +6751,7 @@
   {
     "personalityId": "qin-shi-huang",
     "vector": {
-      "estrutura": 2.0,
+      "estrutura": 2,
       "representacao": 3.1,
       "poder": 96.9,
       "imigracao": 74.5,
@@ -6769,8 +6769,8 @@
     "personalityId": "salvador-dali",
     "vector": {
       "estrutura": 30.4,
-      "representacao": 21.0,
-      "poder": 65.0,
+      "representacao": 21,
+      "poder": 65,
       "imigracao": 70.6,
       "diplomacia": 68.3,
       "intervencao": 31.7,
@@ -6788,7 +6788,7 @@
       "estrutura": 42.5,
       "representacao": 69.8,
       "poder": 39.8,
-      "imigracao": 14.0,
+      "imigracao": 14,
       "diplomacia": 22.9,
       "intervencao": 67.2,
       "economia": 78.2,
@@ -6806,7 +6806,7 @@
       "representacao": 88.2,
       "poder": 24.6,
       "imigracao": 18.8,
-      "diplomacia": 24.0,
+      "diplomacia": 24,
       "intervencao": 57.7,
       "economia": 76.2,
       "controle": 67.4,
@@ -6830,7 +6830,7 @@
       "comercio": 32.4,
       "religiao": 78.9,
       "moral": 41.7,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
@@ -6839,7 +6839,7 @@
       "estrutura": 31.8,
       "representacao": 16.2,
       "poder": 75.5,
-      "imigracao": 86.0,
+      "imigracao": 86,
       "diplomacia": 54.5,
       "intervencao": 57.4,
       "economia": 50.6,
@@ -6877,10 +6877,10 @@
       "diplomacia": 80.2,
       "intervencao": 38.8,
       "economia": 87.7,
-      "controle": 77.0,
+      "controle": 77,
       "comercio": 66.9,
       "religiao": 98.8,
-      "moral": 61.0,
+      "moral": 61,
       "tecnologia": 77.2
     }
   },
@@ -6909,11 +6909,11 @@
       "poder": 69.5,
       "imigracao": 66.9,
       "diplomacia": 73.1,
-      "intervencao": 21.0,
+      "intervencao": 21,
       "economia": 63.7,
       "controle": 73.1,
       "comercio": 81.2,
-      "religiao": 50.0,
+      "religiao": 50,
       "moral": 34.4,
       "tecnologia": 70.1
     }
@@ -6923,9 +6923,9 @@
     "vector": {
       "estrutura": 32.8,
       "representacao": 29.3,
-      "poder": 65.0,
+      "poder": 65,
       "imigracao": 62.2,
-      "diplomacia": 91.0,
+      "diplomacia": 91,
       "intervencao": 12.6,
       "economia": 43.5,
       "controle": 56.4,
@@ -6940,14 +6940,14 @@
     "vector": {
       "estrutura": 49.8,
       "representacao": 82.3,
-      "poder": 58.0,
+      "poder": 58,
       "imigracao": 42.6,
       "diplomacia": 39.5,
       "intervencao": 42.2,
       "economia": 66.3,
       "controle": 60.4,
       "comercio": 28.2,
-      "religiao": 69.0,
+      "religiao": 69,
       "moral": 77.6,
       "tecnologia": 48.8
     }
@@ -6959,14 +6959,14 @@
       "representacao": 76.3,
       "poder": 68.7,
       "imigracao": 36.7,
-      "diplomacia": 66.0,
+      "diplomacia": 66,
       "intervencao": 10.2,
       "economia": 63.9,
       "controle": 66.4,
       "comercio": 31.8,
       "religiao": 45.2,
       "moral": 38.3,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
@@ -6977,10 +6977,10 @@
       "poder": 48.4,
       "imigracao": 51.9,
       "diplomacia": 64.8,
-      "intervencao": 15.0,
+      "intervencao": 15,
       "economia": 48.4,
       "controle": 49.7,
-      "comercio": 21.0,
+      "comercio": 21,
       "religiao": 52.9,
       "moral": 62.1,
       "tecnologia": 73.7
@@ -6989,7 +6989,7 @@
   {
     "personalityId": "jimmy-carter",
     "vector": {
-      "estrutura": 64.0,
+      "estrutura": 64,
       "representacao": 81.1,
       "poder": 38.9,
       "imigracao": 37.1,
@@ -7017,23 +7017,23 @@
       "comercio": 11.5,
       "religiao": 25.8,
       "moral": 26.5,
-      "tecnologia": 63.0
+      "tecnologia": 63
     }
   },
   {
     "personalityId": "mark-carney",
     "vector": {
-      "estrutura": 45.0,
+      "estrutura": 45,
       "representacao": 79.9,
       "poder": 44.9,
-      "imigracao": 39.0,
+      "imigracao": 39,
       "diplomacia": 50.5,
       "intervencao": 36.4,
       "economia": 47.2,
       "controle": 40.2,
       "comercio": 43.7,
       "religiao": 59.5,
-      "moral": 74.0,
+      "moral": 74,
       "tecnologia": 65.5
     }
   },
@@ -7048,7 +7048,7 @@
       "intervencao": 31.7,
       "economia": 41.3,
       "controle": 36.6,
-      "comercio": 52.0,
+      "comercio": 52,
       "religiao": 47.2,
       "moral": 27.7,
       "tecnologia": 71.3
@@ -7058,13 +7058,13 @@
     "personalityId": "lachlan-macquarie",
     "vector": {
       "estrutura": 31.6,
-      "representacao": 34.0,
+      "representacao": 34,
       "poder": 68.6,
       "imigracao": 62.4,
       "diplomacia": 57.6,
       "intervencao": 29.3,
       "economia": 50.8,
-      "controle": 64.0,
+      "controle": 64,
       "comercio": 43.7,
       "religiao": 25.8,
       "moral": 30.1,
@@ -7079,9 +7079,9 @@
       "poder": 54.4,
       "imigracao": 33.1,
       "diplomacia": 44.5,
-      "intervencao": 34.0,
+      "intervencao": 34,
       "economia": 77.4,
-      "controle": 65.0,
+      "controle": 65,
       "comercio": 43.1,
       "religiao": 46.4,
       "moral": 63.3,
@@ -7102,14 +7102,14 @@
       "comercio": 35.3,
       "religiao": 61.9,
       "moral": 77.6,
-      "tecnologia": 69.0
+      "tecnologia": 69
     }
   },
   {
     "personalityId": "gustavo-ii-adolfo",
     "vector": {
       "estrutura": 20.9,
-      "representacao": 21.0,
+      "representacao": 21,
       "poder": 78.1,
       "imigracao": 69.4,
       "diplomacia": 86.2,
@@ -7130,10 +7130,10 @@
       "poder": 81.4,
       "imigracao": 74.1,
       "diplomacia": 94.5,
-      "intervencao": 9.0,
+      "intervencao": 9,
       "economia": 62.5,
       "controle": 81.4,
-      "comercio": 86.0,
+      "comercio": 86,
       "religiao": 17.6,
       "moral": 12.5,
       "tecnologia": 64.1
@@ -7143,7 +7143,7 @@
     "personalityId": "henrique-viii",
     "vector": {
       "estrutura": 10.4,
-      "representacao": 9.0,
+      "representacao": 9,
       "poder": 86.2,
       "imigracao": 75.3,
       "diplomacia": 92.1,
@@ -7160,9 +7160,9 @@
     "personalityId": "guilherme-ii-da-alemanha",
     "vector": {
       "estrutura": 19.7,
-      "representacao": 9.0,
-      "poder": 84.0,
-      "imigracao": 92.0,
+      "representacao": 9,
+      "poder": 84,
+      "imigracao": 92,
       "diplomacia": 92.1,
       "intervencao": 11.4,
       "economia": 57.8,
@@ -7176,9 +7176,9 @@
   {
     "personalityId": "constantino-o-grande",
     "vector": {
-      "estrutura": 14.0,
+      "estrutura": 14,
       "representacao": 4.3,
-      "poder": 91.0,
+      "poder": 91,
       "imigracao": 63.4,
       "diplomacia": 92.1,
       "intervencao": 5.5,
@@ -7194,28 +7194,28 @@
     "personalityId": "vladimir-o-grande",
     "vector": {
       "estrutura": 21.1,
-      "representacao": 9.0,
+      "representacao": 9,
       "poder": 71.9,
       "imigracao": 52.7,
       "diplomacia": 83.8,
       "intervencao": 12.6,
-      "economia": 59.0,
+      "economia": 59,
       "controle": 77.9,
       "comercio": 40.7,
       "religiao": 2.1,
       "moral": 20.8,
-      "tecnologia": 63.0
+      "tecnologia": 63
     }
   },
   {
     "personalityId": "desmond-tutu",
     "vector": {
       "estrutura": 42.6,
-      "representacao": 93.0,
+      "representacao": 93,
       "poder": 36.5,
-      "imigracao": 11.0,
+      "imigracao": 11,
       "diplomacia": 9.8,
-      "intervencao": 47.0,
+      "intervencao": 47,
       "economia": 82.2,
       "controle": 74.6,
       "comercio": 46.7,
@@ -7232,10 +7232,10 @@
       "poder": 49.6,
       "imigracao": 50.5,
       "diplomacia": 33.1,
-      "intervencao": 55.0,
+      "intervencao": 55,
       "economia": 37.7,
       "controle": 29.5,
-      "comercio": 58.0,
+      "comercio": 58,
       "religiao": 15.1,
       "moral": 13.4,
       "tecnologia": 22.9
@@ -7245,8 +7245,8 @@
     "personalityId": "nikita-khrushchev",
     "vector": {
       "estrutura": 37.8,
-      "representacao": 40.0,
-      "poder": 85.0,
+      "representacao": 40,
+      "poder": 85,
       "imigracao": 40.2,
       "diplomacia": 58.6,
       "intervencao": 20.8,
@@ -7284,9 +7284,9 @@
       "imigracao": 34.3,
       "diplomacia": 46.2,
       "intervencao": 56.2,
-      "economia": 71.0,
+      "economia": 71,
       "controle": 65.2,
-      "comercio": 52.0,
+      "comercio": 52,
       "religiao": 41.7,
       "moral": 32.4,
       "tecnologia": 59.4
@@ -7314,14 +7314,14 @@
     "vector": {
       "estrutura": 56.8,
       "representacao": 28.1,
-      "poder": 66.0,
+      "poder": 66,
       "imigracao": 52.9,
       "diplomacia": 39.5,
       "intervencao": 48.2,
       "economia": 49.6,
       "controle": 65.2,
       "comercio": 41.3,
-      "religiao": 21.0,
+      "religiao": 21,
       "moral": 18.2,
       "tecnologia": 42.9
     }
@@ -7348,13 +7348,13 @@
     "vector": {
       "estrutura": 69.7,
       "representacao": 42.4,
-      "poder": 59.0,
+      "poder": 59,
       "imigracao": 36.2,
       "diplomacia": 32.4,
       "intervencao": 55.3,
       "economia": 60.3,
       "controle": 61.6,
-      "comercio": 52.0,
+      "comercio": 52,
       "religiao": 18.7,
       "moral": 32.5,
       "tecnologia": 40.5
@@ -7364,7 +7364,7 @@
     "personalityId": "epicurus",
     "vector": {
       "estrutura": 68.8,
-      "representacao": 62.0,
+      "representacao": 62,
       "poder": 36.5,
       "imigracao": 25.7,
       "diplomacia": 22.9,
@@ -7381,7 +7381,7 @@
     "personalityId": "heraclitus",
     "vector": {
       "estrutura": 61.3,
-      "representacao": 34.0,
+      "representacao": 34,
       "poder": 60.2,
       "imigracao": 46.9,
       "diplomacia": 49.8,
@@ -7398,7 +7398,7 @@
     "personalityId": "dom-joao-iv-portugal",
     "vector": {
       "estrutura": 29.4,
-      "representacao": 15.0,
+      "representacao": 15,
       "poder": 75.5,
       "imigracao": 64.6,
       "diplomacia": 71.9,
@@ -7417,10 +7417,10 @@
       "estrutura": 66.4,
       "representacao": 62.6,
       "poder": 25.4,
-      "imigracao": 21.0,
+      "imigracao": 21,
       "diplomacia": 14.7,
       "intervencao": 76.9,
-      "economia": 52.0,
+      "economia": 52,
       "controle": 38.9,
       "comercio": 15.7,
       "religiao": 50.5,
@@ -7434,10 +7434,10 @@
       "estrutura": 29.2,
       "representacao": 42.4,
       "poder": 29.3,
-      "imigracao": 29.0,
+      "imigracao": 29,
       "diplomacia": 34.8,
       "intervencao": 36.3,
-      "economia": 52.0,
+      "economia": 52,
       "controle": 56.9,
       "comercio": 40.1,
       "religiao": 35.3,
@@ -7451,12 +7451,12 @@
       "estrutura": 31.9,
       "representacao": 45.4,
       "poder": 41.3,
-      "imigracao": 54.0,
+      "imigracao": 54,
       "diplomacia": 19.3,
       "intervencao": 43.4,
       "economia": 49.6,
       "controle": 49.7,
-      "comercio": 33.0,
+      "comercio": 33,
       "religiao": 43.7,
       "moral": 53.9,
       "tecnologia": 51.4
@@ -7466,7 +7466,7 @@
     "personalityId": "oliver-cromwell",
     "vector": {
       "estrutura": 48.5,
-      "representacao": 40.0,
+      "representacao": 40,
       "poder": 55.2,
       "imigracao": 53.9,
       "diplomacia": 45.7,
@@ -7482,12 +7482,12 @@
   {
     "personalityId": "inacio-de-loyola",
     "vector": {
-      "estrutura": 28.0,
+      "estrutura": 28,
       "representacao": 37.6,
       "poder": 62.6,
       "imigracao": 58.7,
       "diplomacia": 34.8,
-      "intervencao": 66.0,
+      "intervencao": 66,
       "economia": 55.6,
       "controle": 65.2,
       "comercio": 49.6,
@@ -7503,7 +7503,7 @@
       "representacao": 46.6,
       "poder": 54.4,
       "imigracao": 54.3,
-      "diplomacia": 49.0,
+      "diplomacia": 49,
       "intervencao": 45.8,
       "economia": 49.6,
       "controle": 54.5,
@@ -7526,7 +7526,7 @@
       "controle": 59.2,
       "comercio": 50.8,
       "religiao": 62.4,
-      "moral": 61.0,
+      "moral": 61,
       "tecnologia": 59.5
     }
   },
@@ -7538,7 +7538,7 @@
       "poder": 89.8,
       "imigracao": 57.5,
       "diplomacia": 68.3,
-      "intervencao": 9.0,
+      "intervencao": 9,
       "economia": 45.9,
       "controle": 69.5,
       "comercio": 78.8,
@@ -7554,7 +7554,7 @@
       "representacao": 90.6,
       "poder": 35.3,
       "imigracao": 43.6,
-      "diplomacia": 30.0,
+      "diplomacia": 30,
       "intervencao": 62.5,
       "economia": 30.6,
       "controle": 24.7,
@@ -7570,9 +7570,9 @@
       "estrutura": 27.1,
       "representacao": 84.7,
       "poder": 25.8,
-      "imigracao": 14.0,
-      "diplomacia": 30.0,
-      "intervencao": 66.0,
+      "imigracao": 14,
+      "diplomacia": 30,
+      "intervencao": 66,
       "economia": 94.1,
       "controle": 85.3,
       "comercio": 40.7,
@@ -7606,12 +7606,12 @@
       "poder": 43.7,
       "imigracao": 35.5,
       "diplomacia": 27.6,
-      "intervencao": 66.0,
-      "economia": 75.0,
+      "intervencao": 66,
+      "economia": 75,
       "controle": 74.6,
       "comercio": 51.4,
       "religiao": 66.7,
-      "moral": 61.0,
+      "moral": 61,
       "tecnologia": 48.8
     }
   },
@@ -7620,14 +7620,14 @@
     "vector": {
       "estrutura": 61.7,
       "representacao": 84.7,
-      "poder": 27.0,
+      "poder": 27,
       "imigracao": 26.7,
       "diplomacia": 18.2,
-      "intervencao": 71.0,
+      "intervencao": 71,
       "economia": 82.2,
       "controle": 75.8,
       "comercio": 72.9,
-      "religiao": 52.0,
+      "religiao": 52,
       "moral": 55.1,
       "tecnologia": 16.9
     }
@@ -7639,9 +7639,9 @@
       "representacao": 77.5,
       "poder": 53.2,
       "imigracao": 42.6,
-      "diplomacia": 45.0,
+      "diplomacia": 45,
       "intervencao": 63.3,
-      "economia": 77.0,
+      "economia": 77,
       "controle": 71.1,
       "comercio": 29.4,
       "religiao": 70.2,
@@ -7653,9 +7653,9 @@
     "personalityId": "per-albin-hansson",
     "vector": {
       "estrutura": 33.1,
-      "representacao": 74.0,
-      "poder": 52.0,
-      "imigracao": 59.0,
+      "representacao": 74,
+      "poder": 52,
+      "imigracao": 59,
       "diplomacia": 33.1,
       "intervencao": 64.5,
       "economia": 66.3,
@@ -7693,7 +7693,7 @@
       "diplomacia": 25.2,
       "intervencao": 57.7,
       "economia": 73.4,
-      "controle": 58.0,
+      "controle": 58,
       "comercio": 23.4,
       "religiao": 71.4,
       "moral": 64.5,
@@ -7704,14 +7704,14 @@
     "personalityId": "einar-gerhardsen",
     "vector": {
       "estrutura": 29.5,
-      "representacao": 74.0,
+      "representacao": 74,
       "poder": 60.3,
-      "imigracao": 45.0,
-      "diplomacia": 41.0,
+      "imigracao": 45,
+      "diplomacia": 41,
       "intervencao": 42.4,
       "economia": 82.2,
       "controle": 84.1,
-      "comercio": 55.0,
+      "comercio": 55,
       "religiao": 70.2,
       "moral": 38.3,
       "tecnologia": 65.3
@@ -7729,7 +7729,7 @@
       "economia": 80.6,
       "controle": 78.2,
       "comercio": 76.4,
-      "religiao": 73.0,
+      "religiao": 73,
       "moral": 59.5,
       "tecnologia": 73.7
     }
@@ -7748,7 +7748,7 @@
       "comercio": 64.5,
       "religiao": 76.5,
       "moral": 38.1,
-      "tecnologia": 57.0
+      "tecnologia": 57
     }
   },
   {
@@ -7756,7 +7756,7 @@
     "vector": {
       "estrutura": 24.7,
       "representacao": 25.7,
-      "poder": 79.0,
+      "poder": 79,
       "imigracao": 87.2,
       "diplomacia": 76.7,
       "intervencao": 32.9,
@@ -7771,7 +7771,7 @@
   {
     "personalityId": "oswald-mosley",
     "vector": {
-      "estrutura": 8.0,
+      "estrutura": 8,
       "representacao": 16.2,
       "poder": 77.9,
       "imigracao": 94.8,
@@ -7781,7 +7781,7 @@
       "controle": 88.5,
       "comercio": 88.7,
       "religiao": 56.3,
-      "moral": 19.0,
+      "moral": 19,
       "tecnologia": 77.2
     }
   },
@@ -7791,13 +7791,13 @@
       "estrutura": 37.9,
       "representacao": 54.9,
       "poder": 61.5,
-      "imigracao": 61.0,
+      "imigracao": 61,
       "diplomacia": 57.6,
       "intervencao": 35.2,
       "economia": 84.6,
       "controle": 85.3,
       "comercio": 77.6,
-      "religiao": 44.0,
+      "religiao": 44,
       "moral": 42.7,
       "tecnologia": 59.4
     }
@@ -7805,14 +7805,14 @@
   {
     "personalityId": "ramiro-ledesma-ramos",
     "vector": {
-      "estrutura": 14.0,
+      "estrutura": 14,
       "representacao": 24.5,
       "poder": 76.7,
       "imigracao": 74.5,
       "diplomacia": 86.2,
-      "intervencao": 15.0,
+      "intervencao": 15,
       "economia": 78.1,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 87.5,
       "religiao": 56.3,
       "moral": 33.3,
@@ -7824,11 +7824,11 @@
     "vector": {
       "estrutura": 62.9,
       "representacao": 53.7,
-      "poder": 33.0,
+      "poder": 33,
       "imigracao": 57.9,
       "diplomacia": 87.4,
       "intervencao": 13.8,
-      "economia": 71.0,
+      "economia": 71,
       "controle": 71.9,
       "comercio": 57.8,
       "religiao": 64.8,
@@ -7845,7 +7845,7 @@
       "imigracao": 60.2,
       "diplomacia": 39.5,
       "intervencao": 69.6,
-      "economia": 81.0,
+      "economia": 81,
       "controle": 72.2,
       "comercio": 81.2,
       "religiao": 52.7,
@@ -7860,10 +7860,10 @@
       "representacao": 17.4,
       "poder": 88.6,
       "imigracao": 90.8,
-      "diplomacia": 91.0,
-      "intervencao": 15.0,
+      "diplomacia": 91,
+      "intervencao": 15,
       "economia": 54.3,
-      "controle": 79.0,
+      "controle": 79,
       "comercio": 75.6,
       "religiao": 8.1,
       "moral": 11.3,
@@ -7875,11 +7875,11 @@
     "vector": {
       "estrutura": 16.3,
       "representacao": 22.1,
-      "poder": 79.0,
+      "poder": 79,
       "imigracao": 89.6,
-      "diplomacia": 79.0,
+      "diplomacia": 79,
       "intervencao": 37.6,
-      "economia": 65.0,
+      "economia": 65,
       "controle": 81.4,
       "comercio": 89.9,
       "religiao": 6.9,
@@ -7908,12 +7908,12 @@
     "personalityId": "john-maclean",
     "vector": {
       "estrutura": 54.5,
-      "representacao": 68.0,
+      "representacao": 68,
       "poder": 29.4,
       "imigracao": 23.6,
       "diplomacia": 22.4,
       "intervencao": 75.2,
-      "economia": 96.0,
+      "economia": 96,
       "controle": 93.7,
       "comercio": 63.3,
       "religiao": 90.5,
@@ -7926,7 +7926,7 @@
     "vector": {
       "estrutura": 60.5,
       "representacao": 92.4,
-      "poder": 23.0,
+      "poder": 23,
       "imigracao": 13.3,
       "diplomacia": 34.3,
       "intervencao": 52.6,
@@ -7942,15 +7942,15 @@
     "personalityId": "lorenzo-de-medici",
     "vector": {
       "estrutura": 39.9,
-      "representacao": 21.0,
+      "representacao": 21,
       "poder": 68.6,
       "imigracao": 50.5,
       "diplomacia": 45.5,
       "intervencao": 43.4,
       "economia": 35.3,
-      "controle": 45.0,
+      "controle": 45,
       "comercio": 47.2,
-      "religiao": 33.0,
+      "religiao": 33,
       "moral": 30.1,
       "tecnologia": 49.9
     }
@@ -7961,14 +7961,14 @@
       "estrutura": 52.1,
       "representacao": 66.8,
       "poder": 40.1,
-      "imigracao": 35.0,
+      "imigracao": 35,
       "diplomacia": 28.8,
       "intervencao": 69.6,
       "economia": 44.9,
       "controle": 42.6,
       "comercio": 25.8,
       "religiao": 43.7,
-      "moral": 61.0,
+      "moral": 61,
       "tecnologia": 67.7
     }
   },
@@ -7978,9 +7978,9 @@
       "estrutura": 66.1,
       "representacao": 31.7,
       "poder": 57.9,
-      "imigracao": 66.0,
+      "imigracao": 66,
       "diplomacia": 33.6,
-      "intervencao": 72.0,
+      "intervencao": 72,
       "economia": 28.2,
       "controle": 30.7,
       "comercio": 63.9,
@@ -7992,8 +7992,8 @@
   {
     "personalityId": "sandro-botticelli",
     "vector": {
-      "estrutura": 53.0,
-      "representacao": 65.0,
+      "estrutura": 53,
+      "representacao": 65,
       "poder": 48.3,
       "imigracao": 36.2,
       "diplomacia": 28.8,
@@ -8001,7 +8001,7 @@
       "economia": 49.6,
       "controle": 49.7,
       "comercio": 25.8,
-      "religiao": 33.0,
+      "religiao": 33,
       "moral": 52.7,
       "tecnologia": 70.1
     }
@@ -8014,10 +8014,10 @@
       "poder": 53.2,
       "imigracao": 46.9,
       "diplomacia": 46.7,
-      "intervencao": 53.0,
-      "economia": 46.0,
+      "intervencao": 53,
+      "economia": 46,
       "controle": 47.3,
-      "comercio": 52.0,
+      "comercio": 52,
       "religiao": 43.7,
       "moral": 53.9,
       "tecnologia": 58.2
@@ -8029,11 +8029,11 @@
       "estrutura": 45.9,
       "representacao": 56.7,
       "poder": 51.9,
-      "imigracao": 35.0,
-      "diplomacia": 36.0,
+      "imigracao": 35,
+      "diplomacia": 36,
       "intervencao": 51.8,
       "economia": 46.5,
-      "controle": 65.0,
+      "controle": 65,
       "comercio": 46.7,
       "religiao": 25.8,
       "moral": 30.1,
@@ -8044,7 +8044,7 @@
     "personalityId": "thomas-carlyle",
     "vector": {
       "estrutura": 26.8,
-      "representacao": 21.0,
+      "representacao": 21,
       "poder": 66.2,
       "imigracao": 74.1,
       "diplomacia": 69.5,
@@ -8070,7 +8070,7 @@
       "controle": 21.8,
       "comercio": 24.4,
       "religiao": 30.6,
-      "moral": 36.0,
+      "moral": 36,
       "tecnologia": 68.9
     }
   },
@@ -8081,8 +8081,8 @@
       "representacao": 69.2,
       "poder": 48.4,
       "imigracao": 69.4,
-      "diplomacia": 54.0,
-      "intervencao": 40.0,
+      "diplomacia": 54,
+      "intervencao": 40,
       "economia": 25.8,
       "controle": 30.7,
       "comercio": 43.7,
@@ -8117,10 +8117,10 @@
       "imigracao": 77.9,
       "diplomacia": 41.9,
       "intervencao": 35.1,
-      "economia": 58.0,
+      "economia": 58,
       "controle": 68.8,
       "comercio": 62.7,
-      "religiao": 71.0,
+      "religiao": 71,
       "moral": 12.2,
       "tecnologia": 65.3
     }
@@ -8132,13 +8132,13 @@
       "representacao": 88.2,
       "poder": 56.8,
       "imigracao": 40.7,
-      "diplomacia": 24.0,
+      "diplomacia": 24,
       "intervencao": 55.3,
       "economia": 78.6,
       "controle": 81.7,
       "comercio": 53.8,
       "religiao": 28.6,
-      "moral": 26.0,
+      "moral": 26,
       "tecnologia": 36.9
     }
   },
@@ -8146,8 +8146,8 @@
     "personalityId": "silvio-berlusconi",
     "vector": {
       "estrutura": 58.1,
-      "representacao": 68.0,
-      "poder": 46.0,
+      "representacao": 68,
+      "poder": 46,
       "imigracao": 83.8,
       "diplomacia": 51.7,
       "intervencao": 22.1,
@@ -8155,7 +8155,7 @@
       "controle": 19.4,
       "comercio": 25.6,
       "religiao": 24.6,
-      "moral": 23.0,
+      "moral": 23,
       "tecnologia": 66.5
     }
   },
@@ -8168,7 +8168,7 @@
       "imigracao": 24.3,
       "diplomacia": 12.3,
       "intervencao": 73.3,
-      "economia": 16.0,
+      "economia": 16,
       "controle": 13.5,
       "comercio": 11.3,
       "religiao": 31.8,
@@ -8179,7 +8179,7 @@
   {
     "personalityId": "julio-argentino-roca",
     "vector": {
-      "estrutura": 22.0,
+      "estrutura": 22,
       "representacao": 35.2,
       "poder": 63.8,
       "imigracao": 51.9,
@@ -8221,8 +8221,8 @@
       "intervencao": 60.1,
       "economia": 70.3,
       "controle": 57.9,
-      "comercio": 36.0,
-      "religiao": 69.0,
+      "comercio": 36,
+      "religiao": 69,
       "moral": 75.2,
       "tecnologia": 52.4
     }
@@ -8235,7 +8235,7 @@
       "poder": 30.6,
       "imigracao": 24.8,
       "diplomacia": 22.9,
-      "intervencao": 66.0,
+      "intervencao": 66,
       "economia": 83.4,
       "controle": 73.4,
       "comercio": 72.9,
@@ -8250,10 +8250,10 @@
       "estrutura": 35.5,
       "representacao": 84.7,
       "poder": 63.9,
-      "imigracao": 70.0,
+      "imigracao": 70,
       "diplomacia": 63.6,
       "intervencao": 28.1,
-      "economia": 46.0,
+      "economia": 46,
       "controle": 30.7,
       "comercio": 25.8,
       "religiao": 64.3,
@@ -8269,7 +8269,7 @@
       "poder": 50.8,
       "imigracao": 71.8,
       "diplomacia": 61.2,
-      "intervencao": 34.0,
+      "intervencao": 34,
       "economia": 51.8,
       "controle": 55.2,
       "comercio": 57.4,
@@ -8281,25 +8281,25 @@
   {
     "personalityId": "shigeru-ishiba",
     "vector": {
-      "estrutura": 39.0,
+      "estrutura": 39,
       "representacao": 81.1,
-      "poder": 71.0,
+      "poder": 71,
       "imigracao": 70.7,
       "diplomacia": 56.4,
       "intervencao": 26.9,
       "economia": 53.2,
       "controle": 60.4,
-      "comercio": 58.0,
+      "comercio": 58,
       "religiao": 56.8,
       "moral": 34.9,
-      "tecnologia": 44.0
+      "tecnologia": 44
     }
   },
   {
     "personalityId": "cyril-ramaphosa",
     "vector": {
       "estrutura": 29.5,
-      "representacao": 87.0,
+      "representacao": 87,
       "poder": 42.5,
       "imigracao": 34.3,
       "diplomacia": 37.1,
@@ -8315,7 +8315,7 @@
   {
     "personalityId": "miguel-diaz-canel",
     "vector": {
-      "estrutura": 14.0,
+      "estrutura": 14,
       "representacao": 43.6,
       "poder": 74.3,
       "imigracao": 34.3,
@@ -8334,11 +8334,11 @@
     "vector": {
       "estrutura": 17.5,
       "representacao": 32.9,
-      "poder": 91.0,
+      "poder": 91,
       "imigracao": 72.1,
       "diplomacia": 46.2,
       "intervencao": 68.1,
-      "economia": 53.0,
+      "economia": 53,
       "controle": 69.5,
       "comercio": 43.1,
       "religiao": 74.1,
@@ -8353,14 +8353,14 @@
       "representacao": 23.3,
       "poder": 88.8,
       "imigracao": 45.7,
-      "diplomacia": 60.0,
-      "intervencao": 21.0,
+      "diplomacia": 60,
+      "intervencao": 21,
       "economia": 29.2,
       "controle": 44.5,
       "comercio": 28.8,
       "religiao": 25.8,
       "moral": 18.2,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
@@ -8376,8 +8376,8 @@
       "controle": 53.3,
       "comercio": 43.7,
       "religiao": 76.2,
-      "moral": 74.0,
-      "tecnologia": 50.0
+      "moral": 74,
+      "tecnologia": 50
     }
   },
   {
@@ -8402,9 +8402,9 @@
     "vector": {
       "estrutura": 68.8,
       "representacao": 76.3,
-      "poder": 27.0,
+      "poder": 27,
       "imigracao": 36.4,
-      "diplomacia": 39.0,
+      "diplomacia": 39,
       "intervencao": 68.1,
       "economia": 12.5,
       "controle": 12.3,
@@ -8427,7 +8427,7 @@
       "controle": 63.9,
       "comercio": 63.3,
       "religiao": 78.6,
-      "moral": 86.0,
+      "moral": 86,
       "tecnologia": 53.6
     }
   },
@@ -8441,28 +8441,28 @@
       "diplomacia": 18.2,
       "intervencao": 81.7,
       "economia": 84.1,
-      "controle": 71.0,
+      "controle": 71,
       "comercio": 38.3,
       "religiao": 97.6,
       "moral": 72.9,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
     "personalityId": "gustav-landauer",
     "vector": {
       "estrutura": 80.7,
-      "representacao": 90.0,
+      "representacao": 90,
       "poder": 25.4,
-      "imigracao": 20.0,
+      "imigracao": 20,
       "diplomacia": 11.1,
       "intervencao": 73.3,
       "economia": 78.6,
       "controle": 69.8,
-      "comercio": 74.0,
+      "comercio": 74,
       "religiao": 65.5,
       "moral": 70.5,
-      "tecnologia": 30.0
+      "tecnologia": 30
     }
   },
   {
@@ -8471,7 +8471,7 @@
       "estrutura": 73.6,
       "representacao": 82.9,
       "poder": 15.9,
-      "imigracao": 21.0,
+      "imigracao": 21,
       "diplomacia": 18.2,
       "intervencao": 75.7,
       "economia": 80.6,
@@ -8491,12 +8491,12 @@
       "imigracao": 9.3,
       "diplomacia": 14.7,
       "intervencao": 82.9,
-      "economia": 83.0,
+      "economia": 83,
       "controle": 50.8,
       "comercio": 28.8,
       "religiao": 97.6,
       "moral": 88.3,
-      "tecnologia": 69.0
+      "tecnologia": 69
     }
   },
   {
@@ -8511,7 +8511,7 @@
       "economia": 94.9,
       "controle": 85.3,
       "comercio": 76.4,
-      "religiao": 81.0,
+      "religiao": 81,
       "moral": 70.5,
       "tecnologia": 73.7
     }
@@ -8522,11 +8522,11 @@
       "estrutura": 86.7,
       "representacao": 82.9,
       "poder": 9.9,
-      "imigracao": 21.0,
+      "imigracao": 21,
       "diplomacia": 19.4,
       "intervencao": 78.1,
       "economia": 18.4,
-      "controle": 17.0,
+      "controle": 17,
       "comercio": 23.2,
       "religiao": 81.4,
       "moral": 56.2,
@@ -8539,7 +8539,7 @@
       "estrutura": 68.5,
       "representacao": 77.1,
       "poder": 26.8,
-      "imigracao": 34.0,
+      "imigracao": 34,
       "diplomacia": 41.4,
       "intervencao": 68.1,
       "economia": 24.4,
@@ -8574,7 +8574,7 @@
       "representacao": 65.6,
       "poder": 63.9,
       "imigracao": 71.9,
-      "diplomacia": 64.0,
+      "diplomacia": 64,
       "intervencao": 41.9,
       "economia": 17.3,
       "controle": 32.6,
@@ -8592,11 +8592,11 @@
       "poder": 49.6,
       "imigracao": 38.8,
       "diplomacia": 9.8,
-      "intervencao": 66.0,
-      "economia": 22.0,
-      "controle": 17.0,
+      "intervencao": 66,
+      "economia": 22,
+      "controle": 17,
       "comercio": 55.3,
-      "religiao": 85.0,
+      "religiao": 85,
       "moral": 33.6,
       "tecnologia": 90.3
     }
@@ -8606,7 +8606,7 @@
     "vector": {
       "estrutura": 49.8,
       "representacao": 84.7,
-      "poder": 77.0,
+      "poder": 77,
       "imigracao": 67.1,
       "diplomacia": 19.3,
       "intervencao": 60.1,
@@ -8615,7 +8615,7 @@
       "comercio": 15.1,
       "religiao": 28.2,
       "moral": 25.3,
-      "tecnologia": 57.0
+      "tecnologia": 57
     }
   },
   {
@@ -8624,7 +8624,7 @@
       "estrutura": 67.6,
       "representacao": 84.7,
       "poder": 37.7,
-      "imigracao": 36.0,
+      "imigracao": 36,
       "diplomacia": 32.4,
       "intervencao": 63.7,
       "economia": 59.6,
@@ -8640,14 +8640,14 @@
     "vector": {
       "estrutura": 55.7,
       "representacao": 75.1,
-      "poder": 33.0,
+      "poder": 33,
       "imigracao": 30.7,
       "diplomacia": 22.9,
       "intervencao": 68.4,
       "economia": 67.9,
       "controle": 69.8,
       "comercio": 33.6,
-      "religiao": 81.0,
+      "religiao": 81,
       "moral": 69.3,
       "tecnologia": 66.5
     }
@@ -8655,12 +8655,12 @@
   {
     "personalityId": "aldo-rebelo",
     "vector": {
-      "estrutura": 26.0,
+      "estrutura": 26,
       "representacao": 78.7,
       "poder": 55.6,
       "imigracao": 55.5,
       "diplomacia": 55.2,
-      "intervencao": 46.0,
+      "intervencao": 46,
       "economia": 60.1,
       "controle": 74.3,
       "comercio": 68.1,
@@ -8692,10 +8692,10 @@
       "estrutura": 62.9,
       "representacao": 78.7,
       "poder": 60.3,
-      "imigracao": 26.0,
-      "diplomacia": 30.0,
+      "imigracao": 26,
+      "diplomacia": 30,
       "intervencao": 54.1,
-      "economia": 52.0,
+      "economia": 52,
       "controle": 52.1,
       "comercio": 38.9,
       "religiao": 53.6,
@@ -8713,7 +8713,7 @@
       "diplomacia": 46.2,
       "intervencao": 58.6,
       "economia": 42.5,
-      "controle": 33.0,
+      "controle": 33,
       "comercio": 43.7,
       "religiao": 62.4,
       "moral": 58.6,
@@ -8730,9 +8730,9 @@
       "diplomacia": 46.2,
       "intervencao": 59.8,
       "economia": 43.5,
-      "controle": 60.0,
+      "controle": 60,
       "comercio": 81.2,
-      "religiao": 26.0,
+      "religiao": 26,
       "moral": 17.2,
       "tecnologia": 42.9
     }
@@ -8743,7 +8743,7 @@
       "estrutura": 66.4,
       "representacao": 82.3,
       "poder": 37.7,
-      "imigracao": 66.0,
+      "imigracao": 66,
       "diplomacia": 73.1,
       "intervencao": 26.9,
       "economia": 14.9,
@@ -8777,22 +8777,22 @@
       "estrutura": 65.2,
       "representacao": 84.7,
       "poder": 13.9,
-      "imigracao": 20.0,
+      "imigracao": 20,
       "diplomacia": 21.8,
       "intervencao": 72.1,
       "economia": 67.9,
-      "controle": 46.0,
-      "comercio": 36.0,
+      "controle": 46,
+      "comercio": 36,
       "religiao": 76.2,
       "moral": 75.2,
-      "tecnologia": 56.0
+      "tecnologia": 56
     }
   },
   {
     "personalityId": "eduardo-moreira",
     "vector": {
       "estrutura": 34.3,
-      "representacao": 87.0,
+      "representacao": 87,
       "poder": 38.9,
       "imigracao": 23.6,
       "diplomacia": 31.2,
@@ -8800,25 +8800,25 @@
       "economia": 76.2,
       "controle": 72.2,
       "comercio": 66.9,
-      "religiao": 75.0,
+      "religiao": 75,
       "moral": 76.4,
-      "tecnologia": 56.0
+      "tecnologia": 56
     }
   },
   {
     "personalityId": "jones-manoel",
     "vector": {
-      "estrutura": 27.0,
+      "estrutura": 27,
       "representacao": 72.1,
-      "poder": 35.0,
+      "poder": 35,
       "imigracao": 18.8,
       "diplomacia": 47.4,
       "intervencao": 66.9,
       "economia": 97.2,
       "controle": 92.5,
-      "comercio": 74.0,
+      "comercio": 74,
       "religiao": 83.3,
-      "moral": 86.0,
+      "moral": 86,
       "tecnologia": 64.1
     }
   },
@@ -8826,7 +8826,7 @@
     "personalityId": "guilherme-freire",
     "vector": {
       "estrutura": 56.9,
-      "representacao": 74.0,
+      "representacao": 74,
       "poder": 47.2,
       "imigracao": 55.2,
       "diplomacia": 46.9,
@@ -8835,7 +8835,7 @@
       "controle": 42.6,
       "comercio": 47.2,
       "religiao": 17.5,
-      "moral": 23.0,
+      "moral": 23,
       "tecnologia": 52.4
     }
   },
@@ -8851,9 +8851,9 @@
       "economia": 20.8,
       "controle": 25.4,
       "comercio": 30.3,
-      "religiao": 20.0,
+      "religiao": 20,
       "moral": 24.4,
-      "tecnologia": 63.0
+      "tecnologia": 63
     }
   },
   {
@@ -8864,7 +8864,7 @@
       "poder": 12.3,
       "imigracao": 29.3,
       "diplomacia": 29.5,
-      "intervencao": 74.0,
+      "intervencao": 74,
       "economia": 4.1,
       "controle": 7.5,
       "comercio": 7.7,
@@ -8877,12 +8877,12 @@
     "personalityId": "joao-campos",
     "vector": {
       "estrutura": 62.9,
-      "representacao": 87.0,
+      "representacao": 87,
       "poder": 56.8,
       "imigracao": 18.8,
       "diplomacia": 21.7,
       "intervencao": 57.7,
-      "economia": 71.0,
+      "economia": 71,
       "controle": 68.8,
       "comercio": 59.1,
       "religiao": 60.7,
@@ -8896,13 +8896,13 @@
       "estrutura": 28.3,
       "representacao": 65.6,
       "poder": 74.6,
-      "imigracao": 61.0,
+      "imigracao": 61,
       "diplomacia": 76.7,
       "intervencao": 19.8,
       "economia": 19.6,
       "controle": 30.1,
-      "comercio": 16.0,
-      "religiao": 14.0,
+      "comercio": 16,
+      "religiao": 14,
       "moral": 12.5,
       "tecnologia": 49.9
     }
@@ -8910,7 +8910,7 @@
   {
     "personalityId": "shinzo-abe",
     "vector": {
-      "estrutura": 14.0,
+      "estrutura": 14,
       "representacao": 63.2,
       "poder": 84.1,
       "imigracao": 89.6,
@@ -8935,7 +8935,7 @@
       "intervencao": 63.8,
       "economia": 88.9,
       "controle": 80.6,
-      "comercio": 74.0,
+      "comercio": 74,
       "religiao": 76.2,
       "moral": 77.6,
       "tecnologia": 65.5
@@ -8955,7 +8955,7 @@
       "comercio": 70.5,
       "religiao": 59.5,
       "moral": 40.7,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
@@ -8964,13 +8964,13 @@
       "estrutura": 28.3,
       "representacao": 81.1,
       "poder": 68.7,
-      "imigracao": 41.0,
+      "imigracao": 41,
       "diplomacia": 33.6,
       "intervencao": 64.9,
-      "economia": 58.0,
+      "economia": 58,
       "controle": 61.6,
       "comercio": 53.2,
-      "religiao": 8.0,
+      "religiao": 8,
       "moral": 13.4,
       "tecnologia": 40.5
     }
@@ -8983,7 +8983,7 @@
       "poder": 75.5,
       "imigracao": 71.9,
       "diplomacia": 34.9,
-      "intervencao": 71.0,
+      "intervencao": 71,
       "economia": 65.5,
       "controle": 72.2,
       "comercio": 69.3,
@@ -9016,9 +9016,9 @@
       "representacao": 26.9,
       "poder": 74.3,
       "imigracao": 52.9,
-      "diplomacia": 36.0,
+      "diplomacia": 36,
       "intervencao": 70.8,
-      "economia": 47.0,
+      "economia": 47,
       "controle": 68.3,
       "comercio": 37.1,
       "religiao": 12.7,
@@ -9029,7 +9029,7 @@
   {
     "personalityId": "georges-danton",
     "vector": {
-      "estrutura": 26.0,
+      "estrutura": 26,
       "representacao": 69.2,
       "poder": 42.5,
       "imigracao": 43.8,
@@ -9038,7 +9038,7 @@
       "economia": 54.4,
       "controle": 65.2,
       "comercio": 66.3,
-      "religiao": 69.0,
+      "religiao": 69,
       "moral": 62.1,
       "tecnologia": 70.1
     }
@@ -9051,7 +9051,7 @@
       "poder": 66.3,
       "imigracao": 58.7,
       "diplomacia": 80.2,
-      "intervencao": 15.0,
+      "intervencao": 15,
       "economia": 37.5,
       "controle": 51.7,
       "comercio": 58.6,
@@ -9067,13 +9067,13 @@
       "representacao": 41.2,
       "poder": 73.1,
       "imigracao": 56.7,
-      "diplomacia": 85.0,
+      "diplomacia": 85,
       "intervencao": 26.9,
-      "economia": 59.0,
+      "economia": 59,
       "controle": 70.7,
       "comercio": 66.9,
       "religiao": 53.9,
-      "moral": 31.0,
+      "moral": 31,
       "tecnologia": 67.7
     }
   },
@@ -9097,12 +9097,12 @@
   {
     "personalityId": "abdullah-ii",
     "vector": {
-      "estrutura": 22.0,
-      "representacao": 40.0,
+      "estrutura": 22,
+      "representacao": 40,
       "poder": 73.3,
-      "imigracao": 54.0,
+      "imigracao": 54,
       "diplomacia": 46.9,
-      "intervencao": 46.0,
+      "intervencao": 46,
       "economia": 40.1,
       "controle": 48.5,
       "comercio": 29.4,
@@ -9134,7 +9134,7 @@
       "estrutura": 25.9,
       "representacao": 18.6,
       "poder": 71.9,
-      "imigracao": 73.0,
+      "imigracao": 73,
       "diplomacia": 48.6,
       "intervencao": 62.1,
       "economia": 32.8,
@@ -9149,12 +9149,12 @@
     "personalityId": "conde-de-cavour",
     "vector": {
       "estrutura": 20.9,
-      "representacao": 59.0,
+      "representacao": 59,
       "poder": 61.4,
-      "imigracao": 71.0,
-      "diplomacia": 66.0,
+      "imigracao": 71,
+      "diplomacia": 66,
       "intervencao": 18.6,
-      "economia": 22.0,
+      "economia": 22,
       "controle": 21.8,
       "comercio": 14.9,
       "religiao": 70.6,
@@ -9165,7 +9165,7 @@
   {
     "personalityId": "leopoldo-i-da-toscana",
     "vector": {
-      "estrutura": 53.0,
+      "estrutura": 53,
       "representacao": 38.8,
       "poder": 43.6,
       "imigracao": 24.8,
@@ -9176,7 +9176,7 @@
       "comercio": 11.3,
       "religiao": 63.1,
       "moral": 32.4,
-      "tecnologia": 56.0
+      "tecnologia": 56
     }
   },
   {
@@ -9190,7 +9190,7 @@
       "intervencao": 68.1,
       "economia": 51.8,
       "controle": 63.6,
-      "comercio": 74.0,
+      "comercio": 74,
       "religiao": 10.5,
       "moral": 25.6,
       "tecnologia": 27.6
@@ -9216,13 +9216,13 @@
   {
     "personalityId": "ferdinando-i-das-duas-sicilias",
     "vector": {
-      "estrutura": 22.0,
+      "estrutura": 22,
       "representacao": 25.7,
-      "poder": 71.0,
+      "poder": 71,
       "imigracao": 75.3,
       "diplomacia": 55.2,
-      "intervencao": 34.0,
-      "economia": 53.0,
+      "intervencao": 34,
+      "economia": 53,
       "controle": 68.3,
       "comercio": 71.7,
       "religiao": 10.5,
@@ -9233,17 +9233,17 @@
   {
     "personalityId": "vitor-emanuel-iii",
     "vector": {
-      "estrutura": 22.0,
-      "representacao": 40.0,
+      "estrutura": 22,
+      "representacao": 40,
       "poder": 75.7,
       "imigracao": 75.5,
       "diplomacia": 67.1,
       "intervencao": 25.7,
-      "economia": 40.0,
+      "economia": 40,
       "controle": 65.9,
-      "comercio": 72.0,
+      "comercio": 72,
       "religiao": 31.8,
-      "moral": 23.0,
+      "moral": 23,
       "tecnologia": 58.3
     }
   },
@@ -9252,15 +9252,15 @@
     "vector": {
       "estrutura": 29.2,
       "representacao": 28.1,
-      "poder": 71.0,
+      "poder": 71,
       "imigracao": 73.1,
       "diplomacia": 80.2,
-      "intervencao": 21.0,
+      "intervencao": 21,
       "economia": 35.1,
       "controle": 70.7,
       "comercio": 65.7,
       "religiao": 13.9,
-      "moral": 11.0,
+      "moral": 11,
       "tecnologia": 72.5
     }
   },
@@ -9269,16 +9269,16 @@
     "vector": {
       "estrutura": 66.4,
       "representacao": 53.7,
-      "poder": 71.0,
+      "poder": 71,
       "imigracao": 37.4,
       "diplomacia": 70.7,
       "intervencao": 24.5,
-      "economia": 28.0,
+      "economia": 28,
       "controle": 39.8,
       "comercio": 58.6,
-      "religiao": 21.0,
-      "moral": 23.0,
-      "tecnologia": 63.0
+      "religiao": 21,
+      "moral": 23,
+      "tecnologia": 63
     }
   },
   {
@@ -9289,9 +9289,9 @@
       "poder": 69.9,
       "imigracao": 82.9,
       "diplomacia": 46.9,
-      "intervencao": 15.0,
+      "intervencao": 15,
       "economia": 49.6,
-      "controle": 70.0,
+      "controle": 70,
       "comercio": 22.2,
       "religiao": 69.5,
       "moral": 47.9,
@@ -9304,14 +9304,14 @@
       "estrutura": 41.4,
       "representacao": 69.2,
       "poder": 44.9,
-      "imigracao": 30.0,
+      "imigracao": 30,
       "diplomacia": 31.2,
       "intervencao": 67.2,
       "economia": 70.3,
       "controle": 68.6,
-      "comercio": 55.0,
+      "comercio": 55,
       "religiao": 22.6,
-      "moral": 38.0,
+      "moral": 38,
       "tecnologia": 64.3
     }
   },
@@ -9338,8 +9338,8 @@
       "estrutura": 66.1,
       "representacao": 37.6,
       "poder": 68.6,
-      "imigracao": 73.0,
-      "diplomacia": 29.0,
+      "imigracao": 73,
+      "diplomacia": 29,
       "intervencao": 73.3,
       "economia": 41.2,
       "controle": 33.8,
@@ -9359,26 +9359,26 @@
       "diplomacia": 32.4,
       "intervencao": 58.9,
       "economia": 77.4,
-      "controle": 77.0,
+      "controle": 77,
       "comercio": 81.2,
       "religiao": 78.6,
       "moral": 69.3,
-      "tecnologia": 76.0
+      "tecnologia": 76
     }
   },
   {
     "personalityId": "chanakya",
     "vector": {
       "estrutura": 23.5,
-      "representacao": 21.0,
+      "representacao": 21,
       "poder": 87.4,
       "imigracao": 74.1,
       "diplomacia": 77.9,
       "intervencao": 11.4,
       "economia": 60.1,
-      "controle": 85.0,
+      "controle": 85,
       "comercio": 75.2,
-      "religiao": 14.0,
+      "religiao": 14,
       "moral": 23.2,
       "tecnologia": 70.1
     }
@@ -9391,8 +9391,8 @@
       "poder": 69.9,
       "imigracao": 74.3,
       "diplomacia": 73.1,
-      "intervencao": 34.0,
-      "economia": 33.0,
+      "intervencao": 34,
+      "economia": 33,
       "controle": 43.8,
       "comercio": 56.8,
       "religiao": 40.1,
@@ -9407,13 +9407,13 @@
       "representacao": 71.6,
       "poder": 60.3,
       "imigracao": 76.9,
-      "diplomacia": 85.0,
+      "diplomacia": 85,
       "intervencao": 16.2,
       "economia": 50.6,
       "controle": 73.1,
       "comercio": 76.4,
       "religiao": 62.2,
-      "moral": 31.0,
+      "moral": 31,
       "tecnologia": 74.9
     }
   },
@@ -9430,7 +9430,7 @@
       "controle": 52.1,
       "comercio": 50.8,
       "religiao": 28.2,
-      "moral": 23.0,
+      "moral": 23,
       "tecnologia": 71.3
     }
   },
@@ -9459,7 +9459,7 @@
       "poder": 34.1,
       "imigracao": 16.4,
       "diplomacia": 21.7,
-      "intervencao": 66.0,
+      "intervencao": 66,
       "economia": 68.7,
       "controle": 59.2,
       "comercio": 31.8,
@@ -9478,7 +9478,7 @@
       "diplomacia": 74.3,
       "intervencao": 43.6,
       "economia": 38.7,
-      "controle": 60.0,
+      "controle": 60,
       "comercio": 66.9,
       "religiao": 17.6,
       "moral": 36.3,
@@ -9493,7 +9493,7 @@
       "poder": 73.1,
       "imigracao": 27.9,
       "diplomacia": 39.5,
-      "intervencao": 47.0,
+      "intervencao": 47,
       "economia": 64.3,
       "controle": 75.8,
       "comercio": 56.2,
@@ -9511,10 +9511,10 @@
       "imigracao": 30.2,
       "diplomacia": 87.4,
       "intervencao": 13.8,
-      "economia": 59.0,
+      "economia": 59,
       "controle": 76.7,
       "comercio": 58.6,
-      "religiao": 27.0,
+      "religiao": 27,
       "moral": 32.5,
       "tecnologia": 70.1
     }
@@ -9522,7 +9522,7 @@
   {
     "personalityId": "ibrahim-traore",
     "vector": {
-      "estrutura": 14.0,
+      "estrutura": 14,
       "representacao": 26.9,
       "poder": 83.8,
       "imigracao": 43.2,
@@ -9543,7 +9543,7 @@
       "representacao": 91.8,
       "poder": 31.8,
       "imigracao": 30.7,
-      "diplomacia": 36.0,
+      "diplomacia": 36,
       "intervencao": 62.5,
       "economia": 85.8,
       "controle": 91.2,
@@ -9556,8 +9556,8 @@
   {
     "personalityId": "jean-marie-le-pen",
     "vector": {
-      "estrutura": 20.0,
-      "representacao": 74.0,
+      "estrutura": 20,
+      "representacao": 74,
       "poder": 62.7,
       "imigracao": 93.2,
       "diplomacia": 72.4,
@@ -9567,7 +9567,7 @@
       "comercio": 91.9,
       "religiao": 21.2,
       "moral": 10.1,
-      "tecnologia": 50.0
+      "tecnologia": 50
     }
   },
   {
@@ -9575,11 +9575,11 @@
     "vector": {
       "estrutura": 15.2,
       "representacao": 71.6,
-      "poder": 71.0,
+      "poder": 71,
       "imigracao": 96.8,
       "diplomacia": 77.9,
       "intervencao": 38.8,
-      "economia": 34.0,
+      "economia": 34,
       "controle": 46.9,
       "comercio": 87.1,
       "religiao": 40.2,
@@ -9599,7 +9599,7 @@
       "economia": 57.9,
       "controle": 75.4,
       "comercio": 76.8,
-      "religiao": 14.0,
+      "religiao": 14,
       "moral": 8.9,
       "tecnologia": 37.1
     }
@@ -9609,13 +9609,13 @@
     "vector": {
       "estrutura": 27.1,
       "representacao": 82.3,
-      "poder": 46.0,
-      "imigracao": 51.0,
+      "poder": 46,
+      "imigracao": 51,
       "diplomacia": 55.2,
       "intervencao": 29.3,
       "economia": 70.3,
       "controle": 73.4,
-      "comercio": 49.0,
+      "comercio": 49,
       "religiao": 70.2,
       "moral": 58.6,
       "tecnologia": 61.8
@@ -9626,7 +9626,7 @@
     "vector": {
       "estrutura": 24.8,
       "representacao": 77.5,
-      "poder": 58.0,
+      "poder": 58,
       "imigracao": 61.2,
       "diplomacia": 40.7,
       "intervencao": 48.2,
@@ -9642,23 +9642,23 @@
     "personalityId": "thomas-malthus",
     "vector": {
       "estrutura": 37.9,
-      "representacao": 62.0,
-      "poder": 52.0,
+      "representacao": 62,
+      "poder": 52,
       "imigracao": 62.4,
       "diplomacia": 49.3,
       "intervencao": 56.7,
       "economia": 26.8,
       "controle": 37.4,
       "comercio": 63.3,
-      "religiao": 27.0,
-      "moral": 17.0,
+      "religiao": 27,
+      "moral": 17,
       "tecnologia": 40.5
     }
   },
   {
     "personalityId": "paulo-kogos",
     "vector": {
-      "estrutura": 97.0,
+      "estrutura": 97,
       "representacao": 34.3,
       "poder": 24.4,
       "imigracao": 77.7,
@@ -9667,9 +9667,179 @@
       "economia": 0.6,
       "controle": 1.6,
       "comercio": 1.8,
-      "religiao": 1.0,
+      "religiao": 1,
       "moral": 0.6,
-      "tecnologia": 57.0
+      "tecnologia": 57
+    }
+  },
+  {
+    "personalityId": "ayn-rand",
+    "vector": {
+      "estrutura": 78,
+      "representacao": 55,
+      "poder": 6,
+      "imigracao": 45,
+      "diplomacia": 72,
+      "intervencao": 28,
+      "economia": 3,
+      "controle": 3,
+      "comercio": 6,
+      "religiao": 96,
+      "moral": 55,
+      "tecnologia": 92
+    }
+  },
+  {
+    "personalityId": "hannah-arendt",
+    "vector": {
+      "estrutura": 58,
+      "representacao": 94,
+      "poder": 18,
+      "imigracao": 30,
+      "diplomacia": 22,
+      "intervencao": 45,
+      "economia": 42,
+      "controle": 38,
+      "comercio": 45,
+      "religiao": 86,
+      "moral": 76,
+      "tecnologia": 38
+    }
+  },
+  {
+    "personalityId": "mary-wollstonecraft",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 84,
+      "poder": 20,
+      "imigracao": 25,
+      "diplomacia": 25,
+      "intervencao": 62,
+      "economia": 42,
+      "controle": 35,
+      "comercio": 35,
+      "religiao": 72,
+      "moral": 88,
+      "tecnologia": 66
+    }
+  },
+  {
+    "personalityId": "elinor-ostrom",
+    "vector": {
+      "estrutura": 94,
+      "representacao": 82,
+      "poder": 36,
+      "imigracao": 45,
+      "diplomacia": 28,
+      "intervencao": 62,
+      "economia": 46,
+      "controle": 42,
+      "comercio": 45,
+      "religiao": 74,
+      "moral": 55,
+      "tecnologia": 72
+    }
+  },
+  {
+    "personalityId": "judith-butler",
+    "vector": {
+      "estrutura": 90,
+      "representacao": 78,
+      "poder": 10,
+      "imigracao": 5,
+      "diplomacia": 5,
+      "intervencao": 92,
+      "economia": 70,
+      "controle": 55,
+      "comercio": 72,
+      "religiao": 96,
+      "moral": 99,
+      "tecnologia": 28
+    }
+  },
+  {
+    "personalityId": "bell-hooks",
+    "vector": {
+      "estrutura": 50,
+      "representacao": 92,
+      "poder": 28,
+      "imigracao": 8,
+      "diplomacia": 18,
+      "intervencao": 62,
+      "economia": 75,
+      "controle": 45,
+      "comercio": 55,
+      "religiao": 70,
+      "moral": 98,
+      "tecnologia": 75
+    }
+  },
+  {
+    "personalityId": "lelia-gonzalez",
+    "vector": {
+      "estrutura": 68,
+      "representacao": 82,
+      "poder": 36,
+      "imigracao": 5,
+      "diplomacia": 25,
+      "intervencao": 70,
+      "economia": 88,
+      "controle": 82,
+      "comercio": 72,
+      "religiao": 50,
+      "moral": 96,
+      "tecnologia": 60
+    }
+  },
+  {
+    "personalityId": "nisia-floresta",
+    "vector": {
+      "estrutura": 60,
+      "representacao": 68,
+      "poder": 35,
+      "imigracao": 25,
+      "diplomacia": 40,
+      "intervencao": 55,
+      "economia": 45,
+      "controle": 40,
+      "comercio": 35,
+      "religiao": 35,
+      "moral": 80,
+      "tecnologia": 45
+    }
+  },
+  {
+    "personalityId": "dorothy-day",
+    "vector": {
+      "estrutura": 88,
+      "representacao": 70,
+      "poder": 15,
+      "imigracao": 10,
+      "diplomacia": 0,
+      "intervencao": 96,
+      "economia": 74,
+      "controle": 64,
+      "comercio": 86,
+      "religiao": 5,
+      "moral": 40,
+      "tecnologia": 10
+    }
+  },
+  {
+    "personalityId": "condoleezza-rice",
+    "vector": {
+      "estrutura": 25,
+      "representacao": 78,
+      "poder": 66,
+      "imigracao": 55,
+      "diplomacia": 86,
+      "intervencao": 20,
+      "economia": 18,
+      "controle": 25,
+      "comercio": 15,
+      "religiao": 35,
+      "moral": 35,
+      "tecnologia": 75
     }
   }
 ]
