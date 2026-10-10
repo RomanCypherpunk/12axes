@@ -10,6 +10,7 @@ import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.service.PersonalityMatcherService;
+import com.twelveaxes.service.ProfileMatchScorer;
 import com.twelveaxes.service.QuizDataService;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -38,6 +39,9 @@ class PersonalityRepresentationTest {
     @Autowired
     private QuizDataService dataService;
 
+    @Autowired
+    private ProfileMatchScorer profileMatchScorer;
+
     @Test
     void firstFemaleBatchContainsExactlyTenProfiles() {
         List<Personality> women = dataService.getPersonalities().stream()
@@ -59,6 +63,30 @@ class PersonalityRepresentationTest {
                         "nisia-floresta",
                         "dorothy-day",
                         "condoleezza-rice");
+    }
+
+    @Test
+    void femaleBatchHasNoBlockingNearDuplicate() {
+        var women = dataService.getPersonalities().stream()
+                .filter(personality -> PersonalityMatcherService.REPRESENTATION_FEMALE.equals(
+                        PersonalityMatcherService.representationOf(personality)))
+                .toList();
+        var profiles = dataService.getPersonalityProfiles();
+
+        for (int i = 0; i < women.size(); i++) {
+            for (int j = i + 1; j < women.size(); j++) {
+                var left = women.get(i);
+                var right = women.get(j);
+                double compatibility = profileMatchScorer.compatibility(
+                        profiles.get(left.id()).vector(),
+                        profiles.get(right.id()).vector());
+
+                assertThat(compatibility)
+                        .as("%s e %s nao devem cair no limiar bloqueante de duplicata",
+                                left.id(), right.id())
+                        .isLessThan(97.0);
+            }
+        }
     }
 
     @Test
