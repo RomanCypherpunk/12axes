@@ -1,0 +1,111 @@
+{
+  "catalog": "ideology",
+  "id": "tecnoprogressismo",
+  "auditDate": "2026-10-10",
+  "scope": "This profile represents the democratic, egalitarian technoprogressive current articulated by the Institute for Ethics and Emerging Technologies (IEET), especially the 2014 Technoprogressive Declaration. It is a movement-level interpretation, not a profile of any individual author, party or national government.",
+  "method": "The 240 answers and five archetype choices are an independent question-by-question simulation of the doctrine, not statements collected from members. Every answer was checked against the current `questions-pool.json` text, and archetypes were generated from `profile_vector.py --prompt-block`. Source support is strongest for democracy, civil and bodily liberties, social provision, and technological development. Territorial administration, precise trade instruments and military policy require more interpretation. Neither cosmopolitan cooperation nor the existence of a national state implies aggressive nationalist foreign policy.",
+  "inferenceLimits": [
+    "The audit must not be adjusted to obtain a desired vector, ranking, category, or distance from another profile. Similarity warnings are reviewed as limitations of this representation, not optimized away.\n",
+    "estrutura_09 (C) and estrutura_18 (D): no direct movement-level support for these secession positions was found in the reviewed sources. Personal or bodily self-determination does not establish territorial self-determination. The opposite unitary answers would also require evidence. These remain weakly supported inferences, not documented doctrine.",
+    "estrutura_13 (C): assess municipal lawmaking separately from secession. Hughes provides limited support for decentralized participation, but no specific shared commitment to cities making laws different from national laws. Different laws do not necessarily mean overriding national law. This answer remains a weakly supported inference.",
+    "The existing structure axis already has 6/20 neutral answers. Replacing these three answers with neutral would exceed its 30% limit. This constraint does not substantiate any answer and must not guide answer selection."
+  ],
+  "sources": [
+    {
+      "title": "IEET, Philosophy",
+      "url": "https://ieet.org/philosophy/",
+      "axes": [
+        "representacao",
+        "controle",
+        "moral",
+        "tecnologia"
+      ],
+      "evidenceType": "institutional statement",
+      "evidence": "institutional statement linking technological development with democratic social change, technology access and human rights. Supports the combination of innovation and public accountability."
+    },
+    {
+      "title": "Mike Treder, Toward a Technoprogressive Manifesto (2009)",
+      "url": "https://ieet.org/archive/articles/treder20090530.html",
+      "axes": [
+        "representacao",
+        "diplomacia",
+        "moral",
+        "tecnologia"
+      ],
+      "evidenceType": "authored primary source",
+      "evidence": "connects democratic liberalism, safe and accessible enhancement, international human rights and cooperation, and environmental sustainability. Economic regulation should not be mistaken for police authoritarianism; technological enthusiasm should not be mistaken for indifference to safety."
+    },
+    {
+      "title": "James Hughes, The Technoprogressive Agenda After Fascism (2025), including the 2014 Declaration",
+      "url": "https://ieet.substack.com/p/the-technoprogressive-agenda-after",
+      "axes": [
+        "economia",
+        "controle",
+        "moral",
+        "tecnologia"
+      ],
+      "evidenceType": "authored primary source",
+      "evidence": "the declaration supports democracy, self-determination, access to enhancement, social guarantees and transnational risk reduction. The 2025 essay illustrates public research, AI governance and redistributive policy. Its specific instruments are the author's proposals, not unanimous positions of every technoprogressive."
+    },
+    {
+      "title": "James Hughes, Problems of Transhumanism: Introduction (2010)",
+      "url": "https://ieet.org/archive/articles/hughes20100105.html",
+      "axes": [
+        "representacao",
+        "economia",
+        "tecnologia"
+      ],
+      "evidenceType": "authored primary source",
+      "evidence": "situates the current in Enlightenment traditions of reason, technological progress, democracy and equality, including Condorcet as an antecedent."
+    },
+    {
+      "title": "Wikipedia, Techno-progressivism",
+      "url": "https://en.wikipedia.org/wiki/Techno-progressivism",
+      "axes": [],
+      "evidenceType": "secondary orientation",
+      "evidence": "secondary orientation and bibliographic cross-check, rather than the sole basis for assigning answers."
+    },
+    {
+      "title": "On Democratic Transhumanism — James Hughes interview",
+      "date": "2013-03-09",
+      "dateMeaning": "republication of 2009 interview",
+      "url": "https://transhumanistes.com/on-democratic-transhumanism/",
+      "axes": [
+        "estrutura",
+        "representacao"
+      ],
+      "evidenceType": "authored primary source; not a movement-wide territorial platform",
+      "evidence": "Hughes supports participatory, decentralized governance alongside accountable state institutions, civil liberties and minority rights.",
+      "auditImplication": "Compatible with local autonomy but does not specify municipal legislative powers or establish a right to secession."
+    },
+    {
+      "title": "Les valeurs du transhumanisme techno-progressiste",
+      "url": "https://transhumanistes.com/presentation/valeurs/",
+      "axes": [
+        "controle",
+        "moral",
+        "tecnologia"
+      ],
+      "evidenceType": "institutional statement of AFT-Technoprog",
+      "evidence": "Supports access to enhancement, social justice and precaution concerning technological risks.",
+      "auditImplication": "Does not resolve territorial secession or municipal legislative authority."
+    }
+  ],
+  "distinctionFromExistingEntries": [
+    "- **Technocracy / Left-Wing Technocracy:** expertise informs policy, but does not replace democratic accountability with rule by unelected technical committees.\n- **Effective Accelerationism:** innovation is paired with risk governance and equitable access rather than an unconditional commitment to market acceleration.\n- **Left Accelerationism / Techno-Socialism:** some technoprogressives support post-capitalist proposals, but abolition of all markets or revolutionary party rule is not a requirement of this profile.\n- **Social Democracy / Progressivism:** overlap is expected. The distinctive commitments concern bodily and cognitive self-determination, enhancement, longevity, automation, and access to emerging technologies. The twelve aggregate axes may capture these distinctions only imperfectly.\n"
+  ],
+  "requiredReferenceMetadata": [
+    "`personalityId: nicolas-de-condorcet` is an intellectual precursor already in the catalog. It does **not** claim that an eighteenth-century thinker belonged to this contemporary movement. The link has historical support in Hughes's account of the Enlightenment roots of transhumanist thought, but does not make Condorcet's economic or institutional positions identical to this profile.",
+    "`countryId: suecia` is a partial institutional analogy, using the existing catalog's description of a democratic welfare state with an innovative economy. It does **not** claim that Sweden officially adopts technoprogressivism or its enhancement agenda. No country in the catalog is a literal implementation of the doctrine.",
+    "These required mappings should receive explicit maintainer review. A future direct contemporary personality profile and support for qualified/optional reference links would represent this distinction better. Existing reference profiles are not modified to increase their compatibility.\n"
+  ],
+  "territorialReview": {
+    "method": "Reviewed institutional IEET and AFT-Technoprog statements and an interview with Hughes; searched these organizations for technoprogressivism with secession, federalism and subsidiarity. Negative findings concern the reviewed material, not all possible publications.",
+    "decision": "No direct evidence sufficient to replace the disputed answers was found. Retain the original archive and computed vector, disclose weak support, and keep the proposal draft for maintainer review. No new audit or hand edits to answers were performed."
+  },
+  "process": {
+    "answerArchive": "profile-audit/answers/ideology/tecnoprogressismo.json",
+    "vectorMethod": "profile_vector.compute_vector",
+    "revisionPolicy": "Preserve the original archive; any future full independent re-audit should use a dated archive, following the Argentina research precedent, and document which archive supplies the vector."
+  }
+}

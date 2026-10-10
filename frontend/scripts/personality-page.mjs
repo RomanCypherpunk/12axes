@@ -580,7 +580,7 @@ a.match:hover,a.dim-row:hover,a.near:hover,.ocard:hover,a.far-row:hover,a.distan
 /* ideologia: hero com referências e frase */
 .ihero{display:grid;grid-template-columns:1fr 320px;padding:0;overflow:hidden;border-top:6px solid var(--cat)}
 .ih-txt{padding:40px 36px}
-.ihero h1{font-size:clamp(40px,5.6vw,68px);letter-spacing:-.04em;line-height:1.02;margin:14px 0;color:var(--cat);hyphens:auto;overflow-wrap:anywhere}
+.ihero h1{font-size:clamp(40px,5.6vw,68px);letter-spacing:-.04em;line-height:1.02;margin:14px 0;color:var(--cat)}
 .ihero .lead{font-size:16.5px;max-width:620px}
 .ih-refs{background:var(--cat-bg);padding:24px;display:flex;flex-direction:column;justify-content:center;gap:12px}
 .refc{display:flex;gap:14px;align-items:center;background:var(--superficie);border-radius:16px;padding:12px;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}

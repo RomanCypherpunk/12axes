@@ -5,7 +5,7 @@
 - Três vizinhos após merge: Geossocialismo — 96,0% — Esquerda; Socialismo Liberal — 95,9% — Esquerda; Internacionalismo — 95,9% — Esquerda.
 - Proposta: mantém.
 - Confiança: alta para a família democrática e igualitária; média para a representação de uma corrente plural por um vetor único.
-- Evidências textuais e referências: a Declaração Tecnoprogressista de 2014 e os textos do IEET combinam democracia, autodeterminação, acesso universal às tecnologias e proteção social. Ver [fontes e limites](../sources/tecnoprogressismo.md).
+- Evidências textuais e referências: a Declaração Tecnoprogressista de 2014 e os textos do IEET combinam democracia, autodeterminação, acesso universal às tecnologias e proteção social. Ver [fontes e limites](../research/ideology/tecnoprogressismo.json).
 - Eixos relevantes: representação 91,8, economia 78,6, controle 69,8, moral 87,1 e tecnologia 73,7. A distribuição de benefícios e o controle democrático sustentam Esquerda; não há exigência de partido de vanguarda ou coletivização integral que justifique Esquerda Radical.
 - Sinal dos vizinhos: os três pertencem à Esquerda. A proximidade é coerente com o núcleo igualitário, mas não determina a categoria automaticamente.
 - Melhor argumento contrário: a corrente inclui versões reformistas e mecanismos de mercado, permitindo leitura de centro-esquerda ou Centro. O catálogo não oferece centro-esquerda; Esquerda preserva melhor a ênfase em acesso universal e redistribuição.
@@ -34,7 +34,7 @@ A divergência limita a **referência**, não demonstra por si só um erro em um
 
 ### Neutros e limites doutrinários
 
-40/240 respostas neutras (16,7%). Estrutura e comércio: 30% cada; intervenção, controle e religião: 25% cada. São temas sem posição única na corrente (administração territorial, instrumentos comerciais e monetários, meios de política externa e religiosidade pessoal). Os briefs explicitam as inferências. Os limites do validador foram respeitados sem converter incerteza em certeza para melhorar o vetor.
+40/240 respostas neutras (16,7%). Estrutura e comércio: 30% cada; intervenção, controle e religião: 25% cada. São temas sem posição única na corrente (administração territorial, instrumentos comerciais e monetários, meios de política externa e religiosidade pessoal). Os briefs explicitam as inferências. O cumprimento dos limites numéricos não estabelece suporte doutrinário para cada resposta.
 
 ### Arquétipos
 
@@ -46,3 +46,11 @@ Sociedade D · Poder C · Economia B · Mundo C · Tecnologia D. São incluídos
 - Países/regiões: Califórnia (Estados Unidos) 95,3%; Massachusetts (Estados Unidos) 95,0%.
 
 Esses matches expressam proximidade numérica, não adesão histórica à corrente. Não foram usados para escolher respostas nem substituir automaticamente as referências documentadas.
+
+### Limites das respostas territoriais
+
+`estrutura_09` (C) e `estrutura_18` (D) continuam com suporte fraco: as fontes consultadas não estabelecem uma posição coletiva sobre secessão. Autodeterminação corporal não implica autodeterminação territorial. Também não há base para inverter essas respostas por uma preferência unitária.
+
+`estrutura_13` (C) é uma questão distinta, sobre legislação municipal. Hughes defende participação e governança descentralizadas, mas isso não estabelece poderes legislativos municipais específicos nem uma posição compartilhada por toda a corrente. Leis diferentes não implicam necessariamente supremacia sobre a lei nacional.
+
+A pesquisa adicional não justificou substituir as respostas; o arquivo original e o vetor foram preservados. Essas três escolhas permanecem inferências de suporte fraco e exigem revisão do mantenedor. Não foram convertidas em neutras nem compensadas com alterações em outras respostas para satisfazer limites. A proposta permanece draft.
