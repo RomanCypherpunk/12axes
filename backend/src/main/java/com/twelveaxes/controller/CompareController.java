@@ -4,6 +4,7 @@ import com.twelveaxes.model.CompareDetail;
 import com.twelveaxes.model.CompareItem;
 import com.twelveaxes.service.AxisValuesParser;
 import com.twelveaxes.service.CompareService;
+import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.ProfileMatchScorer;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ReligionFilter;
@@ -29,9 +30,13 @@ public class CompareController {
     @GetMapping("/api/compare/catalog")
     public List<CompareItem> catalog(
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
-            @RequestParam(required = false) String religion
+            @RequestParam(required = false) String religion,
+            @RequestParam(defaultValue = PersonalityMatcherService.REPRESENTATION_MALE) String representation
     ) {
-        return compareService.catalog(lang, ReligionFilter.normalize(religion));
+        return compareService.catalog(
+                lang,
+                ReligionFilter.normalize(religion),
+                PersonalityMatcherService.normalizeRepresentation(representation));
     }
 
     // Compara o vetor do usuario (12 leftPercents, como em /api/results/by-axes) com um perfil.
@@ -40,9 +45,15 @@ public class CompareController {
             @RequestParam String type,
             @RequestParam String id,
             @RequestParam("v") String values,
-            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
+            @RequestParam(defaultValue = PersonalityMatcherService.REPRESENTATION_MALE) String representation
     ) {
         var axes = scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang);
-        return compareService.compare(type, id, scorer.userVectorFor(axes), lang);
+        return compareService.compare(
+                type,
+                id,
+                scorer.userVectorFor(axes),
+                lang,
+                PersonalityMatcherService.normalizeRepresentation(representation));
     }
 }
