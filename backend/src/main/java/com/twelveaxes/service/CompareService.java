@@ -37,15 +37,23 @@ public class CompareService {
 
     /** Todos os perfis pesquisaveis, ja filtrados pela religiao do usuario (mesma regra do resultado). */
     public List<CompareItem> catalog(String lang, String religion) {
-        String normalizedLang = QuizDataService.normalizeLang(lang);
-        String key = normalizedLang + "|" + religion;
-        return catalogCache.get(key, () -> buildCatalog(normalizedLang, religion));
+        return catalog(lang, religion, PersonalityMatcherService.REPRESENTATION_MALE);
     }
 
-    private List<CompareItem> buildCatalog(String lang, String religion) {
+    public List<CompareItem> catalog(String lang, String religion, String representation) {
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        String normalizedRepresentation = PersonalityMatcherService.normalizeRepresentation(representation);
+        String key = normalizedLang + "|" + religion + "|" + normalizedRepresentation;
+        return catalogCache.get(
+                key,
+                () -> buildCatalog(normalizedLang, religion, normalizedRepresentation));
+    }
+
+    private List<CompareItem> buildCatalog(String lang, String religion, String representation) {
         List<CompareItem> items = new ArrayList<>();
         for (Personality personality : dataService.getPersonalities(lang)) {
-            if (ReligionFilter.allows(personality.religions(), religion)) {
+            if (representation.equals(PersonalityMatcherService.representationOf(personality))
+                    && ReligionFilter.allows(personality.religions(), religion)) {
                 items.add(personalityItem(personality));
             }
         }
@@ -63,10 +71,19 @@ public class CompareService {
     }
 
     public CompareDetail compare(String type, String id, Map<String, Double> userVector, String lang) {
+        return compare(type, id, userVector, lang, PersonalityMatcherService.REPRESENTATION_MALE);
+    }
+
+    public CompareDetail compare(
+            String type, String id, Map<String, Double> userVector, String lang, String representation) {
         String normalizedLang = QuizDataService.normalizeLang(lang);
+        String normalizedRepresentation = PersonalityMatcherService.normalizeRepresentation(representation);
         return switch (type == null ? "" : type) {
             case PERSONALITY -> {
                 Personality personality = require(dataService.getPersonalityById(id, normalizedLang), type, id);
+                if (!normalizedRepresentation.equals(PersonalityMatcherService.representationOf(personality))) {
+                    throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Perfil não encontrado: " + type + "/" + id);
+                }
                 var profile = dataService.getPersonalityProfiles().get(id);
                 yield detail(personalityItem(personality), personality.description(), userVector,
                         profile == null ? null : profile.vector());
