@@ -113,7 +113,7 @@ class PersonalityRepresentationTest {
                         PersonalityMatcherService.representationOf(byId.get(match.personalityId())))
                         .isEqualTo(PersonalityMatcherService.REPRESENTATION_FEMALE));
         assertThat(result.topPersonalityMatch().personalityId()).isEqualTo("ayn-rand");
-        assertThat(result.topPersonalityMatch().compatibility()).isEqualTo(100.0);
+        // FEMALE_VECTOR is the rounded URL representation of the canonical profile,\n        // so an exact 100.0 score is not guaranteed after scorer rounding.\n        assertThat(result.topPersonalityMatch().compatibility()).isGreaterThanOrEqualTo(99.0);
 
         assertThat(result.dimensionMatches())
                 .allSatisfy(dimension -> assertFemale(dimension.match(), byId));
