@@ -300,8 +300,19 @@ def main():
         if alo in pvec and ahi in pvec:
             print(f"  {ax:15s} {vec[ax]:6.1f}   | {pname.get(alo,alo)}={pvec[alo][ax]:.0f} .. {pname.get(ahi,ahi)}={pvec[ahi][ax]:.0f}")
 
-    # duplicata dentro do proprio catalogo
+    # Duplicata dentro do proprio pool. Personalidades masculinas e femininas
+    # sao produtos/rankings separados enquanto o catalogo feminino esta em expansao;
+    # portanto proximidade entre os dois pools nao bloqueia uma auditoria.
     same = vectors(catalog)
+    if catalog == "personality" and entrada is not None:
+        target_representation = "female" if entrada.get("representation") == "female" else "male"
+        personality_meta = {m["id"]: m for m in load("personalities.json")}
+        same = {
+            k: v for k, v in same.items()
+            if ("female" if personality_meta.get(k, {}).get("representation") == "female" else "male")
+            == target_representation
+        }
+        print(f"\n[CONTEUDO] pool de proximidade: personality/{target_representation}")
     sim = sorted(
         ((compat.compatibility(v, vec), k) for k, v in same.items() if k != pid),
         reverse=True,

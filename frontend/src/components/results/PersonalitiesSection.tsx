@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { t } from '../../i18n';
-import type { Axis, AxisResult, DimensionMatch, PersonalityMatch } from '../../types/quiz';
+import type { Axis, AxisResult, DimensionMatch, PersonalityMatch, PersonalityRepresentation } from '../../types/quiz';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { SafeImg } from '../editorial/primitives';
 import { Closeness } from './Closeness';
@@ -14,6 +14,9 @@ interface PersonalitiesSectionProps {
   top: PersonalityMatch;
   dimensions: DimensionMatch[];
   distant: PersonalityMatch[];
+  representation: PersonalityRepresentation;
+  isSwitching: boolean;
+  onRepresentationChange: (representation: PersonalityRepresentation) => void;
 }
 
 export function Portrait({ match, className }: { match: PersonalityMatch; className: string }) {
@@ -27,12 +30,48 @@ export function Portrait({ match, className }: { match: PersonalityMatch; classN
   );
 }
 
-export function PersonalitiesSection({ top, dimensions, distant, axes, results }: PersonalitiesSectionProps) {
+export function PersonalitiesSection({
+  top,
+  dimensions,
+  distant,
+  axes,
+  results,
+  representation,
+  isSwitching,
+  onRepresentationChange
+}: PersonalitiesSectionProps) {
   const [info, setInfo] = useState<PersonalityMatch | null>(null);
 
   return (
     <section className="e-panel" id="personalidades" data-reveal>
-      <h2>{t.personalitiesSectionTitle}</h2>
+      <div className="e-personality-heading">
+        <div>
+          <h2>{t.personalitiesSectionTitle}</h2>
+          <p className="e-personality-pool-note">{t.personalityPoolNote}</p>
+        </div>
+        <div className="e-personality-pool" role="group" aria-label={t.personalityPoolLabel}>
+          <button
+            type="button"
+            className={representation === 'male' ? 'is-active' : undefined}
+            aria-pressed={representation === 'male'}
+            disabled={isSwitching}
+            onClick={() => onRepresentationChange('male')}
+          >
+            {t.personalityPoolMen}
+          </button>
+          <button
+            type="button"
+            className={representation === 'female' ? 'is-active' : undefined}
+            aria-pressed={representation === 'female'}
+            disabled={isSwitching}
+            onClick={() => onRepresentationChange('female')}
+          >
+            {isSwitching && representation !== 'female'
+              ? t.personalityPoolLoading
+              : t.personalityPoolWomen}
+          </button>
+        </div>
+      </div>
 
       <MatchHero
         visual={<Portrait match={top} className="e-portrait" />}

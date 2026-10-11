@@ -1,5 +1,5 @@
 import { LANG, t } from '../i18n';
-import type { CompareDetail, CompareItem, CompareType, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
+import type { CompareDetail, CompareItem, CompareType, PersonalityRepresentation, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
@@ -45,29 +45,48 @@ export function submitResults(
   variant: QuizVariant,
   answers: SubmittedAnswer[],
   archetype: Record<string, string> = {},
-  religion: string | null = null
+  religion: string | null = null,
+  representation: PersonalityRepresentation = 'male'
 ): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results?lang=${LANG}${religionParam}`, {
-    method: 'POST',
-    body: JSON.stringify({ variant, answers, archetype })
-  });
+  return request<QuizResult>(
+    `/api/results?lang=${LANG}${religionParam}&representation=${representation}`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ variant, answers, archetype })
+    }
+  );
 }
 
-export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
+export function fetchSharedResult(
+  leftPercents: number[],
+  religion: string | null = null,
+  representation: PersonalityRepresentation = 'male'
+): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}`);
+  return request<QuizResult>(
+    `/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}&representation=${representation}`
+  );
 }
 
-
-export function fetchCompareCatalog(religion: string | null = null): Promise<CompareItem[]> {
+export function fetchCompareCatalog(
+  religion: string | null = null,
+  representation: PersonalityRepresentation = 'male'
+): Promise<CompareItem[]> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}${religionParam}`);
+  return request<CompareItem[]>(
+    `/api/compare/catalog?lang=${LANG}${religionParam}&representation=${representation}`
+  );
 }
 
-export function fetchCompare(type: CompareType, id: string, leftPercents: number[]): Promise<CompareDetail> {
+export function fetchCompare(
+  type: CompareType,
+  id: string,
+  leftPercents: number[],
+  representation: PersonalityRepresentation = 'male'
+): Promise<CompareDetail> {
   const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
   return request<CompareDetail>(
-    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}`
+    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}&representation=${representation}`
   );
 }

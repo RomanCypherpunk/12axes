@@ -1,7 +1,7 @@
 import { useEffect, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { t } from '../../i18n';
-import type { Axis, AxisResult, QuizPayload, QuizResult } from '../../types/quiz';
+import type { Axis, AxisResult, PersonalityRepresentation, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
 import { SupportSection } from '../SupportSection';
 import { PdfReport } from '../report/PdfReport';
@@ -30,9 +30,24 @@ interface ResultsScreenProps {
   error: string | null;
   onShare: () => void;
   religion?: Religion | null;
+  personalityRepresentation: PersonalityRepresentation;
+  isPersonalityModeLoading: boolean;
+  onPersonalityRepresentationChange: (representation: PersonalityRepresentation) => void;
 }
 
-export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion }: ResultsScreenProps) {
+export function ResultsScreen({
+  result,
+  quiz,
+  axes,
+  axisResults,
+  isSharing,
+  error,
+  onShare,
+  religion,
+  personalityRepresentation,
+  isPersonalityModeLoading,
+  onPersonalityRepresentationChange
+}: ResultsScreenProps) {
   const top = result.topMatch;
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
@@ -114,6 +129,9 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             distant={result.bottomPersonalityMatches}
             axes={axes}
             results={axisResults}
+            representation={personalityRepresentation}
+            isSwitching={isPersonalityModeLoading}
+            onRepresentationChange={onPersonalityRepresentationChange}
           />
 
           <AreasSection generalMatches={result.personalityMatches} areaMatches={result.categoryBestMatches} axes={axes} results={axisResults} />
@@ -134,7 +152,13 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
           </div>
           {error && <p className="inline-error" role="alert">{error}</p>}
 
-          <CompareSection axes={axes} results={axisResults} religion={religion} userCategory={top.category} />
+          <CompareSection
+            axes={axes}
+            results={axisResults}
+            religion={religion}
+            userCategory={top.category}
+            representation={personalityRepresentation}
+          />
 
           <SupportSection variant="panel" />
         </div>

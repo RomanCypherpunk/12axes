@@ -4,7 +4,7 @@ import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
 import { LANG, setLang, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
-import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
+import type { AnswerValue, ArchetypeQuestion, PersonalityRepresentation, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
@@ -72,11 +72,22 @@ const SHARED_RELIGION: Religion | null =
     ? parseReligion(new URLSearchParams(window.location.search).get('religion'))
     : null;
 
-function sharedResultUrl(result: QuizResult, religion: Religion | null = null): string {
+const SHARED_REPRESENTATION: PersonalityRepresentation =
+  SHARED_RESULT_VALUES &&
+  typeof window !== 'undefined' &&
+  new URLSearchParams(window.location.search).get('representation') === 'female'
+    ? 'female'
+    : 'male';
+
+function sharedResultUrl(
+  result: QuizResult,
+  religion: Religion | null = null,
+  representation: PersonalityRepresentation = 'male'
+): string {
   const query = result.axes
     .map((axis, index) => `${AXIS_URL_KEYS[index] ?? `x${index}`}=${axis.leftPercent}`)
     .join('&');
-  return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
+  return `/results?${query}${religion ? `&religion=${religion}` : ''}${representation === 'female' ? '&representation=female' : ''}`;
 }
 
 // Últimas perguntas do bloco de arquétipos: religião (letras A-E + "sem religião" na F) e, só para
@@ -191,6 +202,9 @@ function MainApp() {
   const [isLoading, setIsLoading] = useState(FULL_MODE || SHARED_RESULT_VALUES !== null);
   const [isSharedView, setIsSharedView] = useState(false);
   const [religion, setReligion] = useState<Religion | null>(SHARED_RELIGION);
+  const [personalityRepresentation, setPersonalityRepresentation] =
+    useState<PersonalityRepresentation>(SHARED_REPRESENTATION);
+  const [isPersonalityModeLoading, setIsPersonalityModeLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   // Toggle do desktop; no mobile fica escondido e sempre ligado.
@@ -225,7 +239,7 @@ function MainApp() {
 
   useEffect(() => {
     if (SHARED_RESULT_VALUES) {
-      fetchSharedResult(SHARED_RESULT_VALUES, SHARED_RELIGION)
+      fetchSharedResult(SHARED_RESULT_VALUES, SHARED_RELIGION, SHARED_REPRESENTATION)
         .then((sharedResult) => {
           setResult(sharedResult);
           setIsSharedView(true);
@@ -627,19 +641,46 @@ function MainApp() {
         quiz.variant ?? selectedVariant,
         payload,
         archetypeOnly,
-        chosenReligion
+        chosenReligion,
+        personalityRepresentation
       );
       setResult(nextResult);
       clearProgress();
       setIsSharedView(false);
       setReligion(chosenReligion);
       // URL compartilhável: quem abrir este link vê o mesmo resultado.
-      window.history.replaceState(null, '', sharedResultUrl(nextResult, chosenReligion));
+      window.history.replaceState(
+        null,
+        '',
+        sharedResultUrl(nextResult, chosenReligion, personalityRepresentation)
+      );
       setScreen('results');
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errCalc);
     } finally {
       setIsSubmitting(false);
+    }
+  }
+
+  async function switchPersonalityRepresentation(next: PersonalityRepresentation) {
+    if (!result || next === personalityRepresentation || isPersonalityModeLoading) {
+      return;
+    }
+    setIsPersonalityModeLoading(true);
+    setError(null);
+    try {
+      const nextResult = await fetchSharedResult(
+        result.axes.map((axis) => axis.leftPercent),
+        religion,
+        next
+      );
+      setResult(nextResult);
+      setPersonalityRepresentation(next);
+      window.history.replaceState(null, '', sharedResultUrl(nextResult, religion, next));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t.errCalc);
+    } finally {
+      setIsPersonalityModeLoading(false);
     }
   }
 
@@ -988,6 +1029,9 @@ function MainApp() {
           error={error}
           onShare={() => void downloadResultsPng()}
           religion={religion}
+          personalityRepresentation={personalityRepresentation}
+          isPersonalityModeLoading={isPersonalityModeLoading}
+          onPersonalityRepresentationChange={(next) => void switchPersonalityRepresentation(next)}
         />
       )}
 

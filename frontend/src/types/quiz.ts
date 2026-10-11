@@ -9,6 +9,8 @@ export type Pole = 'LEFT' | 'RIGHT';
 
 export type QuizVariant = 'short' | 'extended' | 'extreme';
 
+export type PersonalityRepresentation = 'male' | 'female';
+
 export interface Axis {
   id: string;
   label: string;

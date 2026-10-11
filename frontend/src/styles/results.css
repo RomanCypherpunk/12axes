@@ -929,3 +929,62 @@
     transform: none;
   }
 }
+
+
+/* Male and female personality rankings remain separate while the female catalog grows. */
+.e-personality-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.e-personality-heading h2 {
+  margin-bottom: .25rem;
+}
+
+.e-personality-pool-note {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.e-personality-pool {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: .25rem;
+  padding: .25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.e-personality-pool button {
+  border: 0;
+  border-radius: 999px;
+  padding: .45rem .8rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.e-personality-pool button.is-active {
+  /* --ink nao existe: a escala e --ink-50..--ink-950, e o token do texto forte
+     e --text-strong. Com var(--ink) invalida, o fundo sumia e sobrava
+     color:var(--paper), branco no tema claro: o botao ativo ficava ilegivel. */
+  background: var(--text-strong);
+  color: var(--paper);
+}
+
+.e-personality-pool button:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+@media (max-width: 680px) {
+  .e-personality-heading {
+    flex-direction: column;
+  }
+}

@@ -92,9 +92,14 @@ public class QuizController {
     public QuizResult results(
             @Valid @RequestBody ResultRequest request,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
-            @RequestParam(required = false) String religion
+            @RequestParam(required = false) String religion,
+            @RequestParam(defaultValue = PersonalityMatcherService.REPRESENTATION_MALE) String representation
     ) {
-        return buildResult(scoringService.score(request, lang), lang, ReligionFilter.normalize(religion));
+        return buildResult(
+                scoringService.score(request, lang),
+                lang,
+                ReligionFilter.normalize(religion),
+                PersonalityMatcherService.normalizeRepresentation(representation));
     }
 
     // Resultado compartilhável: reconstrói matches a partir do vetor de eixos
@@ -104,28 +109,41 @@ public class QuizController {
     public QuizResult resultsByAxes(
             @RequestParam("v") String values,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
-            @RequestParam(required = false) String religion
+            @RequestParam(required = false) String religion,
+            @RequestParam(defaultValue = PersonalityMatcherService.REPRESENTATION_MALE) String representation
     ) {
-        return buildResult(scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang), lang,
-                ReligionFilter.normalize(religion));
+        return buildResult(
+                scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang),
+                lang,
+                ReligionFilter.normalize(religion),
+                PersonalityMatcherService.normalizeRepresentation(representation));
     }
 
-    private QuizResult buildResult(List<AxisResult> axes, String lang, String religion) {
-        return resultCache.get(resultKey(axes, lang, religion), () -> computeResult(axes, lang, religion));
+    private QuizResult buildResult(
+            List<AxisResult> axes, String lang, String religion, String representation) {
+        return resultCache.get(
+                resultKey(axes, lang, religion, representation),
+                () -> computeResult(axes, lang, religion, representation));
     }
 
-    // O resultado depende so dos 12 percentuais (o resto vem do idioma), entao eles formam a chave.
-    private static String resultKey(List<AxisResult> axes, String lang, String religion) {
-        StringBuilder key = new StringBuilder(lang).append('|').append(religion).append('|');
+    // O resultado depende dos 12 percentuais, idioma, religiao e pool de personalidades.
+    private static String resultKey(
+            List<AxisResult> axes, String lang, String religion, String representation) {
+        StringBuilder key = new StringBuilder(lang)
+                .append('|').append(religion)
+                .append('|').append(representation)
+                .append('|');
         axes.forEach(axis -> key.append(axis.leftPercent()).append(','));
         return key.toString();
     }
 
-    private QuizResult computeResult(List<AxisResult> axes, String lang, String religion) {
+    private QuizResult computeResult(
+            List<AxisResult> axes, String lang, String religion, String representation) {
         var matches = matcherService.findMatches(axes, lang, religion);
-        var personalityMatches = personalityMatcherService.findMatches(axes, lang, religion);
+        var personalityMatches = personalityMatcherService.findMatches(axes, lang, religion, representation);
         var topPersonality = personalityMatches.getFirst();
-        var categoryBestMatches = personalityMatcherService.findBestPerCategory(axes, lang, religion);
+        var categoryBestMatches = personalityMatcherService.findBestPerCategory(
+                axes, lang, religion, representation);
         var topCountry = countryMatcherService.findTopMatch(axes, lang, religion);
         var topHistoricalCountry = countryMatcherService.findTopHistoricalMatch(axes, lang, religion);
         return new QuizResult(
@@ -141,9 +159,10 @@ public class QuizController {
                 countryMatcherService.findBottomMatches(axes, lang, religion),
                 topPersonality,
                 personalityMatches,
-                dimensionMatcherService.findAll(axes, lang, topPersonality.personalityId(), religion),
+                dimensionMatcherService.findAll(
+                        axes, lang, topPersonality.personalityId(), religion, representation),
                 categoryBestMatches,
-                personalityMatcherService.findBottomMatches(axes, lang, religion),
+                personalityMatcherService.findBottomMatches(axes, lang, religion, representation),
                 axisOutlierService.findMostUnusual(axes, lang),
                 axisOutlierService.findMostCommon(axes, lang),
                 axisTensionService.findStrongest(axes, lang),
@@ -180,8 +199,15 @@ public class QuizController {
     }
 
     @GetMapping("/api/personalities")
-    public List<Personality> personalities(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
-        return dataService.getPersonalities(lang);
+    public List<Personality> personalities(
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
+            @RequestParam(defaultValue = PersonalityMatcherService.REPRESENTATION_MALE) String representation
+    ) {
+        String normalizedRepresentation = PersonalityMatcherService.normalizeRepresentation(representation);
+        return dataService.getPersonalities(lang).stream()
+                .filter(personality ->
+                        normalizedRepresentation.equals(PersonalityMatcherService.representationOf(personality)))
+                .toList();
     }
 
     @GetMapping("/api/personalities/{id}")
