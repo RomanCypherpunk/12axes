@@ -971,7 +971,10 @@
 }
 
 .e-personality-pool button.is-active {
-  background: var(--ink);
+  /* --ink nao existe: a escala e --ink-50..--ink-950, e o token do texto forte
+     e --text-strong. Com var(--ink) invalida, o fundo sumia e sobrava
+     color:var(--paper), branco no tema claro: o botao ativo ficava ilegivel. */
+  background: var(--text-strong);
   color: var(--paper);
 }
 
