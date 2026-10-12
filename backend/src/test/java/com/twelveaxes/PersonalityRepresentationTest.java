@@ -29,6 +29,32 @@ class PersonalityRepresentationTest {
     private static final String FEMALE_VECTOR =
             "78,55,6,45,72,28,3,3,6,96,55,92";
 
+    private static final List<String> EXPECTED_FEMALE_IDS = List.of(
+            "ayn-rand",
+            "hannah-arendt",
+            "mary-wollstonecraft",
+            "elinor-ostrom",
+            "judith-butler",
+            "bell-hooks",
+            "lelia-gonzalez",
+            "nisia-floresta",
+            "dorothy-day",
+            "condoleezza-rice");
+
+    private static final List<String> AXIS_IDS = List.of(
+            "estrutura",
+            "representacao",
+            "poder",
+            "imigracao",
+            "diplomacia",
+            "intervencao",
+            "economia",
+            "controle",
+            "comercio",
+            "religiao",
+            "moral",
+            "tecnologia");
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -51,17 +77,7 @@ class PersonalityRepresentationTest {
         assertThat(women).hasSize(10);
         assertThat(women)
                 .extracting(Personality::id)
-                .containsExactlyInAnyOrder(
-                        "ayn-rand",
-                        "hannah-arendt",
-                        "mary-wollstonecraft",
-                        "elinor-ostrom",
-                        "judith-butler",
-                        "bell-hooks",
-                        "lelia-gonzalez",
-                        "nisia-floresta",
-                        "dorothy-day",
-                        "condoleezza-rice");
+                .containsExactlyInAnyOrderElementsOf(EXPECTED_FEMALE_IDS);
     }
 
     @Test
@@ -86,6 +102,54 @@ class PersonalityRepresentationTest {
                         .isLessThan(97.0);
             }
         }
+    }
+
+    @Test
+    void firstFemaleBatchHasCompleteTwelveAxisProfiles() {
+        var profiles = dataService.getPersonalityProfiles();
+
+        for (String id : EXPECTED_FEMALE_IDS) {
+            assertThat(profiles)
+                    .as("perfil deve existir para %s", id)
+                    .containsKey(id);
+            assertThat(profiles.get(id).vector())
+                    .as("perfil de %s deve conter exatamente os 12 eixos", id)
+                    .containsOnlyKeys(AXIS_IDS);
+        }
+    }
+
+    @Test
+    void englishCatalogContainsTheSameFemaleBatch() {
+        List<Personality> women = dataService.getPersonalities(QuizDataService.LANG_EN).stream()
+                .filter(personality -> PersonalityMatcherService.REPRESENTATION_FEMALE.equals(
+                        PersonalityMatcherService.representationOf(personality)))
+                .toList();
+
+        assertThat(women)
+                .hasSize(10)
+                .extracting(Personality::id)
+                .containsExactlyInAnyOrderElementsOf(EXPECTED_FEMALE_IDS);
+    }
+
+    @Test
+    void femaleRankingPercentileIsCalculatedInsideFemalePool() throws Exception {
+        QuizResult result = resultFor(PersonalityMatcherService.REPRESENTATION_FEMALE);
+
+        assertThat(result.topPersonalityMatch().compatibilityPercentile())
+                .as("com 10 mulheres, o topo deve superar 9 de 10 perfis do pool feminino")
+                .isEqualTo(90.0);
+    }
+
+    @Test
+    void femaleBookRecommendationsNeverLeakMaleEntries() throws Exception {
+        QuizResult result = resultFor(PersonalityMatcherService.REPRESENTATION_FEMALE);
+        Map<String, Personality> byId = personalitiesById();
+
+        assertThat(result.bookRecommendations())
+                .isNotEmpty()
+                .allSatisfy(book -> assertThat(
+                        PersonalityMatcherService.representationOf(byId.get(book.personalityId())))
+                        .isEqualTo(PersonalityMatcherService.REPRESENTATION_FEMALE));
     }
 
     @Test
