@@ -6,6 +6,7 @@ import { resolveIdeologyColor } from './ideologyColors';
 import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
 import { religiousPoleIcon } from '../data/religionIcons';
 import type { Religion } from './religion';
+import { tokens } from '../styles/tokens.generated';
 
 /**
  * Cartão de compartilhamento social — formato stories 1080x1920.
@@ -22,8 +23,8 @@ const SHARE_FONT_BODY = '"Poppins"';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 export const SHARE_COLORS = {
-  papel: '#F4F1E8',
-  tinta: '#101010'
+  papel: tokens.papel,
+  tinta: tokens.tinta
 };
 
 type Style = Partial<CSSStyleDeclaration>;
@@ -679,7 +680,7 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
     throw new Error('Canvas indisponível');
   }
 
-  const base = target.dataset.shareBase ?? '#101010';
+  const base = target.dataset.shareBase ?? tokens.tinta;
   drawBackground(ctx, base, target.dataset.shareCircle ?? base);
 
   slots.forEach((slot, index) => {

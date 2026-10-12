@@ -4,12 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-tokens.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/generate-tokens.mjs",
     "build": "tsc --noEmit && vite build && node scripts/generate-pages.mjs",
     "generate:pages": "node scripts/generate-pages.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
     "preview": "vite preview",
+    "pretest": "node scripts/generate-tokens.mjs",
     "test": "vitest run",
+    "pretest:watch": "node scripts/generate-tokens.mjs",
     "test:watch": "vitest"
   },
   "dependencies": {

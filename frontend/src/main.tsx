@@ -14,6 +14,7 @@ import '@fontsource/sora/latin-700.css';
 import '@fontsource/sora/latin-800.css';
 import './styles/tokens.css';
 import './styles/app.css';
+import './styles/theme-dark.css';
 import './styles/results.css';
 import './styles/editorial.css';
 import './styles/motion.css';

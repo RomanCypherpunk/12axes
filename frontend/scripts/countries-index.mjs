@@ -268,13 +268,13 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!=
 }
 
 export const COUNTRIES_CSS = `${PERSONALITIES_CSS}
-.fl{flex:none;width:72px;height:48px;border-radius:8px;overflow:hidden;background:var(--sup);box-shadow:0 0 0 1px var(--borda);display:grid;place-items:center}
+.fl{flex:none;width:72px;height:48px;border-radius:8px;overflow:hidden;background:var(--superficie);box-shadow:0 0 0 1px var(--borda);display:grid;place-items:center}
 .fl img{width:100%;height:100%;object-fit:contain;display:block}
 .abar{grid-template-columns:1.6fr repeat(5,1fr)}
 .ab{border-top:4px solid var(--c);transition:transform .15s}
 .ab:hover{transform:translateY(-2px);border-color:var(--borda);border-top-color:var(--c)}
 .ab b{color:var(--c)}
-.ab.cur{background:var(--floresta);border-color:var(--floresta);color:var(--papel)}.ab.cur b{color:var(--papel)}.ab.cur span{color:#BFD1C6}
+.ab.cur{background:var(--floresta);border-color:var(--floresta);color:var(--papel)}.ab.cur b{color:var(--papel)}.ab.cur span{color:var(--texto-sobre-escuro)}
 .block-t{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.035em;margin:56px 0 -8px;padding-top:24px;border-top:1px solid var(--borda)}
 .block-t[hidden]{display:none}
 @media (max-width:980px){.abar{grid-template-columns:repeat(3,1fr)}}

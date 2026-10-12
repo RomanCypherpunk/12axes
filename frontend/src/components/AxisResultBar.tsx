@@ -1,13 +1,14 @@
 import type { CSSProperties } from 'react';
 import type { Axis, AxisResult } from '../types/quiz';
 import { PoleIcon } from './AxisIcon';
+import { tokens } from '../styles/tokens.generated';
 
 interface AxisResultBarProps {
   axis: Axis;
   result: AxisResult;
 }
 
-const BALANCED_COLOR = '#94A3B8';
+const BALANCED_COLOR = tokens['fixed-blue-300'];
 
 export function AxisResultBar({ axis, result }: AxisResultBarProps) {
   const leftPercent = clamp(result.leftPercent);
@@ -113,5 +114,5 @@ function readableInk(hexColor: string) {
   const green = Number.parseInt(value.slice(2, 4), 16);
   const blue = Number.parseInt(value.slice(4, 6), 16);
   const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
-  return luminance > 0.62 ? '#101010' : '#ffffff';
+  return luminance > 0.62 ? tokens['ink-950'] : tokens['fixed-paper-soft'];
 }

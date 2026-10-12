@@ -1,3 +1,5 @@
+import { tokens } from '../../styles/tokens.generated';
+
 // Grafismo-assinatura da marca: 12 raios, 3 anéis tracejados e um perfil em radar.
 const CENTER = 220;
 const MAX_RADIUS = 193.6;
@@ -16,27 +18,27 @@ export function RoseOfAxes({ label }: { label: string }) {
   return (
     <svg className="e-rose" viewBox="0 0 440 440" role="img" aria-label={label}>
       {RINGS.map((radius) => (
-        <circle key={radius} cx={CENTER} cy={CENTER} r={radius} fill="none" stroke="#3E5A4F" strokeWidth="1.5" strokeDasharray="4 8" />
+        <circle key={radius} cx={CENTER} cy={CENTER} r={radius} fill="none" stroke={tokens['green-400']} strokeWidth="1.5" strokeDasharray="4 8" />
       ))}
       {PROFILE.map((_, index) => {
         const [x, y] = point(index, MAX_RADIUS);
         return (
-          <line key={index} x1={CENTER} y1={CENTER} x2={x.toFixed(1)} y2={y.toFixed(1)} stroke="#F4F1E8" strokeOpacity=".35" strokeWidth="1.5" />
+          <line key={index} x1={CENTER} y1={CENTER} x2={x.toFixed(1)} y2={y.toFixed(1)} stroke={tokens.papel} strokeOpacity=".35" strokeWidth="1.5" />
         );
       })}
       <polygon
         className="e-rose-shape"
         points={polygon}
-        fill="#E7A9A4"
+        fill={tokens['destaque-sobre-escuro']}
         fillOpacity=".22"
-        stroke="#E7A9A4"
+        stroke={tokens['destaque-sobre-escuro']}
         strokeWidth="3"
         strokeLinejoin="round"
       />
       {vertices.map(([x, y], index) => (
-        <circle key={index} cx={x.toFixed(1)} cy={y.toFixed(1)} r="5" fill="#E7A9A4" />
+        <circle key={index} cx={x.toFixed(1)} cy={y.toFixed(1)} r="5" fill={tokens['destaque-sobre-escuro']} />
       ))}
-      <circle cx={CENTER} cy={CENTER} r="5" fill="#F4F1E8" />
+      <circle cx={CENTER} cy={CENTER} r="5" fill={tokens.papel} />
     </svg>
   );
 }

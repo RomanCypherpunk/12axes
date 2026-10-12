@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { catalogueDevPlugin } from './scripts/catalogue-dev';
+import { readColourTokens, tokensRootCss } from './scripts/generate-tokens.mjs';
 
 function asyncCssLinkPlugin() {
   return {
@@ -16,6 +17,21 @@ function asyncCssLinkPlugin() {
   };
 }
 
+function tokensHtmlPlugin() {
+  return {
+    name: 'tokens-html',
+    transformIndexHtml(html: string) {
+      const colours: Record<string, string> = readColourTokens();
+      return html
+        .replace('/*@tokens*/', tokensRootCss())
+        .replace(/\{\{token:([\w-]+)\}\}/g, (_match, name: string) => {
+          if (!colours[name]) throw new Error(`index.html usa o token inexistente --${name}`);
+          return colours[name];
+        });
+    }
+  };
+}
+
 export default defineConfig(({ mode }) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const cwd = (globalThis as { process?: { cwd: () => string } }).process?.cwd?.() ?? '.';
@@ -23,7 +39,7 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_API_PROXY_TARGET || 'http://localhost:8080';
 
   return {
-    plugins: [react(), asyncCssLinkPlugin(), catalogueDevPlugin()],
+    plugins: [react(), tokensHtmlPlugin(), asyncCssLinkPlugin(), catalogueDevPlugin()],
     test: {
       environment: 'node',
     },

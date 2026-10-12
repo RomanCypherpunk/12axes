@@ -1,12 +1,93 @@
 :root {
   color-scheme: light;
 
+  /* ── Primitivas fixas ─────────────────────────────────────────────────
+     Nunca são redefinidas pelo modo escuro (theme-dark.css): quem usa uma
+     delas tem a mesma cor nos dois temas. */
+  --fixed-green-500: #102E24;
+  --fixed-red-500: #880912;
+  --fixed-paper-soft: #FBF9F3;
+  --fixed-ink-100: #E2DDCF;
+  --fixed-ink-700: #5B5A55;
+  --fixed-ink-950: #101010;
+  --fixed-ink-50: #ECE8DC;
+  --fixed-green-300: #22C55E;
+  --fixed-green-300-a00: rgba(34, 197, 94, 0);
+  --fixed-green-300-a80: rgba(34, 197, 94, 0.8);
+  --fixed-green-300-a40: rgba(34, 197, 94, 0.4);
+  --fixed-green-550: #15803D;
+  --fixed-green-400: #16A34A;
+  --fixed-green-200: #4ADE80;
+  --fixed-paper-soft-a90: rgba(251, 249, 243, 0.9);
+  --fixed-green-500-a00: rgba(16, 46, 36, 0);
+  --fixed-green-500-a80: rgba(16, 46, 36, 0.8);
+  --fixed-green-500-a10: rgba(16, 46, 36, 0.1);
+  --fixed-paper-soft-a80: rgba(251, 249, 243, 0.8);
+  --fixed-paper-soft-a10: rgba(251, 249, 243, 0.1);
+  --fixed-paper-soft-a20: rgba(251, 249, 243, 0.2);
+  --fixed-green-200-a90: rgba(74, 222, 128, 0.9);
+  --fixed-green-500-a40: rgba(16, 46, 36, 0.4);
+  --fixed-green-500-a50: rgba(16, 46, 36, 0.5);
+  --fixed-paper-soft-a40: rgba(251, 249, 243, 0.4);
+  --fixed-blue-900: #0E1726;
+  --fixed-blue-900-a05: rgba(14, 23, 38, 0.05);
+  --fixed-blue-900-a20: rgba(14, 23, 38, 0.2);
+  --fixed-paper-soft-a30: rgba(251, 249, 243, 0.3);
+  --fixed-blue-900-a40: rgba(14, 23, 38, 0.4);
+  --fixed-blue-900-a10: rgba(14, 23, 38, 0.1);
+  --fixed-paper-soft-a70: rgba(251, 249, 243, 0.7);
+  --fixed-paper-soft-a60: rgba(251, 249, 243, 0.6);
+  --fixed-blue-900-a30: rgba(14, 23, 38, 0.3);
+  --fixed-blue-300: #94A3B8;
+  --fixed-blue-300-a20: rgba(148, 163, 184, 0.2);
+  --fixed-blue-900-a50: rgba(14, 23, 38, 0.5);
+  --fixed-paper-soft-a00: rgba(251, 249, 243, 0);
+  --fixed-blue-800: #1F2937;
+  --fixed-orange-500: #B45309;
+  --fixed-violet-600: #7C3AED;
+  --fixed-blue-500: #2563EB;
+  --fixed-amber-200: #EAB308;
+  --fixed-green-500-a20: rgba(16, 46, 36, 0.2);
+  --fixed-green-500-a30: rgba(16, 46, 36, 0.3);
+  --fixed-green-500-a70: rgba(16, 46, 36, 0.7);
+  --fixed-ink-950-a05: rgba(16, 16, 16, 0.05);
+  --fixed-red-500-a20: rgba(136, 9, 18, 0.2);
+  --fixed-ink-950-a20: rgba(16, 16, 16, 0.2);
+  --fixed-red-500-a30: rgba(136, 9, 18, 0.3);
+  --fixed-i-centro-a20: rgba(75, 80, 88, 0.2);
+  --fixed-green-500-a60: rgba(16, 46, 36, 0.6);
+  --fixed-green-500-a90: rgba(16, 46, 36, 0.9);
+  --fixed-paper-soft-a50: rgba(251, 249, 243, 0.5);
+  --fixed-blue-950: #1B2440;
+  --fixed-ink-400: #9C988C;
+  --fixed-ink-950-a50: rgba(16, 16, 16, 0.5);
+  --fixed-ink-950-a40: rgba(16, 16, 16, 0.4);
+  --fixed-ink-950-a10: rgba(16, 16, 16, 0.1);
+  --fixed-green-800: #1B4234;
+  --fixed-green-800-a10: rgba(27, 66, 52, 0.1);
+  --fixed-canvas: #F4F1E8;
+  --fixed-canvas-a40: rgba(244, 241, 232, 0.4);
+  --fixed-canvas-a10: rgba(244, 241, 232, 0.1);
+  --fixed-canvas-a50: rgba(244, 241, 232, 0.5);
+  --fixed-canvas-a20: rgba(244, 241, 232, 0.2);
+  --fixed-ink-500: #7A776E;
+  --fixed-canvas-a05: rgba(244, 241, 232, 0.05);
+  --fixed-ink-300: #C7C2B4;
+  --fixed-ink-950-a30: rgba(16, 16, 16, 0.3);
+  --fixed-gray-400: #8A887F;
+  --fixed-canvas-a90: rgba(244, 241, 232, 0.9);
+  --fixed-ink-950-a80: rgba(16, 16, 16, 0.8);
+  --fixed-ink-950-a70: rgba(16, 16, 16, 0.7);
+  --fixed-canvas-a80: rgba(244, 241, 232, 0.8);
+  --fixed-floresta-claro: #DDE7E1;
+  --fixed-ink-950-a60: rgba(16, 16, 16, 0.6);
+
   /* ── 12 axes — identidade editorial (Papel / Floresta / Carmim / Tinta) ── */
   /* Marca / "concordo" — Floresta (verde-escuro) */
   --green-50:  #E9EFEC;
   --green-100: #D4E1DA;
   --green-400: #3E5A4F;
-  --green-500: #102E24;
+  --green-500: var(--fixed-green-500);
   --green-600: #0C231B;
   --green-700: #09241B;
   --green-800: #071A14;
@@ -15,32 +96,32 @@
   --red-50:  #F7E7E8;
   --red-100: #F0D0D2;
   --red-400: #A83039;
-  --red-500: #880912;
+  --red-500: var(--fixed-red-500);
   --red-600: #6E070E;
   --red-700: #56050B;
 
   /* Neutros sobre Papel (Tinta mais clara → mais escura) */
-  --ink-950: #101010;
+  --ink-950: var(--fixed-ink-950);
   --ink-900: #1A1A18;
-  --ink-700: #5B5A55;
-  --ink-500: #7A776E;
-  --ink-400: #9C988C;
-  --ink-300: #C7C2B4;
-  --ink-100: #E2DDCF;
-  --ink-50:  #ECE8DC;
+  --ink-700: var(--fixed-ink-700);
+  --ink-500: var(--fixed-ink-500);
+  --ink-400: var(--fixed-ink-400);
+  --ink-300: var(--fixed-ink-300);
+  --ink-100: var(--fixed-ink-100);
+  --ink-50:  var(--fixed-ink-50);
 
-  --canvas: #F4F1E8;
-  --paper: #F4F1E8;
-  --paper-soft: #FBF9F3;
+  --canvas: var(--fixed-canvas);
+  --paper: var(--fixed-canvas);
+  --paper-soft: var(--fixed-paper-soft);
 
   --bg: var(--canvas);
-  --surface: #FBF9F3;
-  --surface-soft: #FBF9F3;
+  --surface: var(--fixed-paper-soft);
+  --surface-soft: var(--fixed-paper-soft);
   --text: var(--ink-900);
-  --text-strong: #101010;
-  --text-muted: #5B5A55;
-  --text-soft: #9C988C;
-  --line: #E2DDCF;
+  --text-strong: var(--fixed-ink-950);
+  --text-muted: var(--fixed-ink-700);
+  --text-soft: var(--fixed-ink-400);
+  --line: var(--fixed-ink-100);
   --line-strong: rgba(16, 16, 16, 0.16);
 
   --accent: var(--green-500);
@@ -88,18 +169,18 @@
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
 
   /* ── Identidade — tokens nomeados conforme o guia de marca ───────────── */
-  --papel: #F4F1E8;
-  --floresta: #102E24;
-  --carmim: #880912;
-  --tinta: #101010;
+  --papel: var(--fixed-canvas);
+  --floresta: var(--fixed-green-500);
+  --carmim: var(--fixed-red-500);
+  --tinta: var(--fixed-ink-950);
 
-  --superficie: #FBF9F3;
-  --borda: #E2DDCF;
-  --neutro: #ECE8DC;
-  --texto-suave: #5B5A55;
+  --superficie: var(--fixed-paper-soft);
+  --borda: var(--fixed-ink-100);
+  --neutro: var(--fixed-ink-50);
+  --texto-suave: var(--fixed-ink-700);
   --texto-sobre-escuro: #BFD1C6;
   --destaque-sobre-escuro: #E7A9A4;
-  --floresta-claro: #DDE7E1;
+  --floresta-claro: var(--fixed-floresta-claro);
 
   /* ── Cores por ideologia (base + pastel) ──────────────────────────────── */
   --i-esq-radical: #830214;

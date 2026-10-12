@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { ArchetypeQuestion, QuestionIcon } from '../types/quiz';
+import { tokens } from '../styles/tokens.generated';
 
 interface ArchetypeCardProps {
   question: ArchetypeQuestion;
@@ -11,7 +12,7 @@ interface ArchetypeCardProps {
 
 // Selo de cada tema, no mesmo formato do selo de eixo das perguntas comuns:
 // ícone preenchido sobre o verde da marca.
-const THEME_COLOR = '#102E24';
+const THEME_COLOR = tokens['green-500'];
 
 const THEME_ICONS: Record<string, { viewBox: string; d: string; evenOdd?: boolean }> = {
   sociedade: {

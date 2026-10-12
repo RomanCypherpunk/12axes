@@ -4,6 +4,7 @@ import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from 
 import type { Axis } from '../../types/quiz';
 import { centerSide, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
 import { InfoButton, InfoSheet } from './InfoSheet';
+import { COMPASS_FALLBACK_COLORS } from '../../styles/componentColors';
 
 // A grade é um mapa de regiões: cada categoria do espectro ancora o seu pastel no centro do bloco que
 // ocupa (colunas e linhas contadas de 0) e as cores se misturam suavemente entre os blocos.
@@ -32,9 +33,6 @@ const VIVID: Record<IdeologyColorKey, { saturation: number; lightness: number; h
   anarquismo: { saturation: 0, lightness: 76 },
   libertario: { saturation: 90, lightness: 68, hue: 47 }
 };
-// Cores dos polos do eixo `moral` (rosa e marrom em axes.json); estas são só o plano B se o eixo faltar.
-const FALLBACK_PROGRESSIVE = '#D23E84';
-const FALLBACK_TRADITIONAL = '#74502C';
 const WHITE = [255, 255, 255] as const;
 // Meio da barra: moderados ficam num cinza neutro, entre o rosa e o marrom.
 const NEUTRAL = [123, 127, 134] as const;
@@ -146,8 +144,8 @@ export function compassView(position: CompassPosition, category: string, moralAx
   // da base do Centro com a base da outra; nos demais casos vale a cor da categoria da página (--cat).
   const markerColor = centerMixColor(spectrum.key, compassKey);
   const social = socialLevel(traditional);
-  const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
-  const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
+  const progressive = hexToRgb(moralAxis?.leftColor ?? COMPASS_FALLBACK_COLORS.progressive);
+  const traditionalist = hexToRgb(moralAxis?.rightColor ?? COMPASS_FALLBACK_COLORS.traditional);
   // Barra em tom pastel (rosa, cinza, marrom); "X" e grifo na cor cheia da mesma escala.
   const stripCells = Array.from({ length: SIZE }, (_, index) =>
     rgb(

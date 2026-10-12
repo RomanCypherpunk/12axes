@@ -318,7 +318,7 @@ export const COUNTRY_PAGE_CSS = `
 .chero h1{font-size:clamp(40px,5.6vw,68px);letter-spacing:-.04em;line-height:1.02;margin:14px 0}
 .chero .lead{font-size:16.5px;max-width:620px}
 .ch-flag{margin:0;background:var(--cat-bg);display:grid;place-items:center;padding:32px}
-.ch-flag img{width:100%;height:auto;border-radius:12px;box-shadow:0 14px 34px rgba(16,16,16,.18)}
+.ch-flag img{width:100%;height:auto;border-radius:12px;box-shadow:0 14px 34px var(--fixed-ink-950-a20)}
 .ch-flag .ini{width:100%;aspect-ratio:3/2;border-radius:12px;font-size:48px}
 @media (max-width:860px){.chero{grid-template-columns:1fr}.ch-flag{order:-1;padding:28px 40px}.ch-flag img{max-width:320px}}
 `;

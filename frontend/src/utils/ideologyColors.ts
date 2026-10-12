@@ -1,6 +1,8 @@
+import { tokens } from '../styles/tokens.generated';
+
 /**
- * Par de cores (base + pastel) de cada categoria do espectro. Ver
- * docs/nova-identidade/12axes-identidade-visual.md §5.
+ * Par de cores (base + pastel) de cada categoria do espectro, lido de --i-<chave> e
+ * --i-<chave>-bg em src/styles/tokens.css. Ver docs/nova-identidade/12axes-identidade-visual.md §5.
  */
 export interface IdeologyColor {
   key: IdeologyColorKey;
@@ -18,15 +20,19 @@ export type IdeologyColorKey =
   | 'libertario'
   | 'anarquismo';
 
+function colorOf(key: IdeologyColorKey): IdeologyColor {
+  return { key, base: tokens[`i-${key}`], bg: tokens[`i-${key}-bg`] };
+}
+
 const PALETTE: Record<IdeologyColorKey, IdeologyColor> = {
-  'esq-radical': { key: 'esq-radical', base: '#830214', bg: '#ECD5D8' },
-  esquerda: { key: 'esquerda', base: '#035732', bg: '#D5ECE2' },
-  centro: { key: 'centro', base: '#4B5058', bg: '#DDE0E3' },
-  direita: { key: 'direita', base: '#2D4778', bg: '#D6E0F2' },
-  'ext-direita': { key: 'ext-direita', base: '#001743', bg: '#D5DAE6' },
-  terceira: { key: 'terceira', base: '#4B2A63', bg: '#E2D5EC' },
-  libertario: { key: 'libertario', base: '#946201', bg: '#F0E4C8' },
-  anarquismo: { key: 'anarquismo', base: '#2B2B2B', bg: '#E2DFD8' }
+  'esq-radical': colorOf('esq-radical'),
+  esquerda: colorOf('esquerda'),
+  centro: colorOf('centro'),
+  direita: colorOf('direita'),
+  'ext-direita': colorOf('ext-direita'),
+  terceira: colorOf('terceira'),
+  libertario: colorOf('libertario'),
+  anarquismo: colorOf('anarquismo')
 };
 
 // Nomes de categoria vindos da API (PT e EN) e ids do espectro da home.

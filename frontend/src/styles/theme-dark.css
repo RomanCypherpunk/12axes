@@ -1,0 +1,169 @@
+/* ── Tema escuro: base de cores do modo escuro do quiz ─────────────────────────────────────────────────
+   O atributo fica no <html> só enquanto o quiz está na tela (useQuizTheme), porque o painel (?)
+   e o tooltip do glossário renderizam fora do app-shell. Primeiro os tokens, depois os pontos
+   com cor fixa. */
+html[data-quiz-theme="dark"] {
+  color-scheme: dark;
+
+  --green-50: #16241E;
+  --green-100: #1E3329;
+  --green-400: #5FB08E;
+  --green-500: #348264;
+  --green-600: #2C7157;
+  --green-700: #245E48;
+  --green-800: #1B4837;
+  --red-50: #2A1618;
+  --red-100: #3A1B1F;
+  --red-400: #E0626B;
+  --red-500: #C0343F;
+  --red-600: #A82B36;
+  --red-700: #8F1F28;
+
+  --ink-950: #F4F1E8;
+  --ink-900: #ECE8DC;
+  --ink-700: #B5B3A8;
+  --ink-500: #8A887E;
+  --ink-400: #6F6E66;
+  --ink-300: #4A4D47;
+  --ink-100: #2D332F;
+  --ink-50: #232824;
+
+  --canvas: #121513;
+  --paper: #121513;
+  --paper-soft: #1A1E1B;
+  --bg: #121513;
+  --surface: #1A1E1B;
+  --surface-soft: #1A1E1B;
+  --text: #ECE8DC;
+  --text-strong: #F4F1E8;
+  --text-muted: #A9A79C;
+  --text-soft: #7E7F76;
+  --line: #2D332F;
+  --line-strong: rgba(236, 232, 220, 0.2);
+
+  --accent: #5FB08E;
+  --accent-bright: #7CC4A5;
+  --accent-deep: #348264;
+  --accent-soft: #16241E;
+  --critical: #E0626B;
+  --critical-deep: #C0343F;
+  --critical-soft: #2A1618;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 14px 30px -18px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 26px 52px -28px rgba(0, 0, 0, 0.8);
+  --glass-tint: rgba(26, 30, 27, 0.92);
+  --glass-tint-strong: rgba(26, 30, 27, 0.97);
+  --grad-mesh:
+    radial-gradient(42% 38% at 8% 2%, rgba(95, 176, 142, 0.07), transparent 70%),
+    radial-gradient(40% 36% at 96% 0%, rgba(224, 98, 107, 0.04), transparent 72%);
+
+  --papel: #121513;
+  --floresta: #348264;
+  --carmim: #E0626B;
+  --tinta: #F4F1E8;
+  --superficie: #1A1E1B;
+  --borda: #2D332F;
+  --neutro: #232824;
+  --texto-suave: #A9A79C;
+  --floresta-claro: #1E3329;
+
+  --quiz-green-50: #16241E;
+  --qp-chumbo: #B5B3A8;
+
+  --dark-ink-950-a80: rgba(16, 16, 16, 0.8);
+  --dark-ink-950-a60: rgba(16, 16, 16, 0.6);
+  --dark-paper-soft-a20: rgba(251, 249, 243, 0.2);
+  --dark-gray-500: #7B808A;
+  --dark-green-500: #2E8F65;
+  --dark-green-400-a10: rgba(95, 176, 142, 0.1);
+  --dark-canvas-a90: rgba(18, 21, 19, 0.9);
+}
+
+html[data-quiz-theme="dark"] .e-nav {
+  background: var(--dark-canvas-a90);
+}
+html[data-quiz-theme="dark"] .e-btn-primary,
+html[data-quiz-theme="dark"] .primary-button {
+  background: var(--green-500);
+  color: var(--ink-950);
+}
+html[data-quiz-theme="dark"] .e-btn-primary:hover:not(:disabled),
+html[data-quiz-theme="dark"] .primary-button:hover:not(:disabled) {
+  background: var(--dark-green-500);
+}
+html[data-quiz-theme="dark"] .primary-button:disabled {
+  background: var(--ink-100);
+  color: var(--text-soft);
+}
+
+/* Card da pergunta */
+html[data-quiz-theme="dark"] .question-card::after {
+  background: radial-gradient(ellipse at top, var(--dark-green-400-a10), transparent 70%);
+}
+html[data-quiz-theme="dark"] .question-number {
+  color: var(--ink-50);
+}
+html[data-quiz-theme="dark"] .question-axis-tag {
+  background: color-mix(in srgb, var(--pole) 22%, var(--paper-soft));
+  color: var(--ink-900);
+}
+
+/* Respostas: cada lado mantém a cor, com fundo escuro e rótulo claro quando selecionado. */
+html[data-quiz-theme="dark"] .answer-button {
+  --answer-soft: color-mix(in srgb, var(--answer-color) 14%, var(--paper-soft));
+}
+html[data-quiz-theme="dark"] .app-shell[data-screen="quiz"] .answer-button[data-answer="STRONGLY_AGREE"],
+html[data-quiz-theme="dark"] .app-shell[data-screen="quiz"] .answer-button[data-answer="AGREE"] {
+  --answer-color: var(--dark-green-500);
+  --answer-soft: color-mix(in srgb, var(--dark-green-500) 14%, var(--paper-soft));
+}
+html[data-quiz-theme="dark"] .answer-neutral {
+  --answer-color: var(--dark-gray-500);
+}
+html[data-quiz-theme="dark"] .answer-disagree,
+html[data-quiz-theme="dark"] .answer-strong-disagree {
+  --answer-color: var(--red-500);
+}
+html[data-quiz-theme="dark"] .answer-icon {
+  background: color-mix(in srgb, var(--answer-color) 18%, var(--paper-soft));
+}
+html[data-quiz-theme="dark"] .answer-button.selected .answer-icon {
+  background: var(--dark-paper-soft-a20);
+}
+html[data-quiz-theme="dark"] .archetype-option {
+  --answer-color: var(--green-400);
+  --answer-soft: color-mix(in srgb, var(--green-400) 12%, var(--paper-soft));
+}
+
+/* Progresso e rodapé do quiz */
+html[data-quiz-theme="dark"] .auto-advance-toggle[aria-checked="true"] .auto-advance-switch {
+  background: var(--green-500);
+}
+html[data-quiz-theme="dark"] .auto-advance-toggle:focus-visible {
+  outline-color: var(--red-400);
+}
+html[data-quiz-theme="dark"] .app-shell[data-screen="quiz"] .question-card::-webkit-scrollbar-thumb {
+  background: var(--ink-300);
+}
+
+/* Peças que renderizam fora do app-shell: painel (?) e tooltip do glossário. */
+html[data-quiz-theme="dark"] .e-axis-sheet-backdrop {
+  background: var(--dark-ink-950-a60);
+}
+html[data-quiz-theme="dark"] .e-question-note {
+  background: var(--green-100);
+  color: var(--fixed-floresta-claro);
+}
+html[data-quiz-theme="dark"] .e-question-note strong {
+  color: var(--fixed-paper-soft);
+}
+html[data-quiz-theme="dark"] .glossary-tooltip {
+  background: var(--ink-900);
+  color: var(--paper-soft);
+  box-shadow: 0 18px 40px -18px var(--dark-ink-950-a80);
+}
+html[data-quiz-theme="dark"] .glossary-tooltip strong {
+  color: var(--fixed-green-500);
+}

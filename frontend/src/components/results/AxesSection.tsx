@@ -4,6 +4,7 @@ import type { Axis, AxisResult } from '../../types/quiz';
 import { PoleIcon } from '../AxisIcon';
 import type { Religion } from '../../utils/religion';
 import { pct } from '../editorial/primitives';
+import { tokens } from '../../styles/tokens.generated';
 
 // Ordem de exibição em duas colunas (leitura por linhas): esquerda | direita.
 export const DISPLAY_ORDER = [
@@ -21,7 +22,7 @@ export function displayRank(axisId: string) {
   return index === -1 ? DISPLAY_ORDER.length : index;
 }
 
-const BALANCED_COLOR = '#9C988C';
+const BALANCED_COLOR = tokens['ink-400'];
 
 interface AxesSectionProps {
   axes: Axis[];

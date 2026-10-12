@@ -3,6 +3,7 @@
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
+import { readColourTokens } from './generate-tokens.mjs';
 
 // Ordem das áreas no catálogo (a mesma do mockup de docs/).
 export const AREA_ORDER = ['politico', 'teorico', 'filosofo', 'economista', 'intelectual', 'ativista', 'religioso', 'empresario'];
@@ -123,7 +124,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
   return `<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#F4F1E8" />
+    <meta name="theme-color" content="${readColourTokens().papel}" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -281,20 +282,20 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!=
 }
 
 export const PERSONALITIES_CSS = `${IDEOLOGIES_CSS}
-.cat{--c:var(--floresta);--cb:#DCE6E0}.chip{--c:var(--floresta);--cb:#DCE6E0}
+.cat{--c:var(--floresta);--cb:var(--fixed-floresta-claro)}.chip{--c:var(--floresta);--cb:var(--fixed-floresta-claro)}
 .abar{margin-top:32px;display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
-.ab{text-decoration:none;background:var(--sup);border:1px solid var(--borda);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;line-height:1.2;transition:border-color .15s}
+.ab{text-decoration:none;background:var(--superficie);border:1px solid var(--borda);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;line-height:1.2;transition:border-color .15s}
 .ab:hover{border-color:var(--floresta)}
 .ab b{font-family:var(--display);font-size:22px;letter-spacing:-.03em;color:var(--floresta)}
-.ab span{font-size:12.5px;color:var(--suave);margin-top:4px}
-.life{font-size:12.5px;color:var(--suave);font-variant-numeric:tabular-nums;margin-top:2px;display:inline-block;background:var(--neutro);padding:2px 8px;border-radius:999px;width:fit-content}
+.ab span{font-size:12.5px;color:var(--texto-suave);margin-top:4px}
+.life{font-size:12.5px;color:var(--texto-suave);font-variant-numeric:tabular-nums;margin-top:2px;display:inline-block;background:var(--neutro);padding:2px 8px;border-radius:999px;width:fit-content}
 @media (max-width:980px){.abar{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:640px){.abar{display:none}}
 @media (min-width:981px){.tools .wrap{flex-wrap:wrap}.chips{flex:1;min-width:0;flex-wrap:wrap;overflow:visible}}
 @media (max-width:980px){.chips{min-width:0;max-width:100%}}
-.pc a{height:100%;display:flex;flex-direction:column;gap:12px;text-decoration:none;background:var(--sup);border:1px solid var(--borda);border-radius:20px;padding:18px 18px 14px;position:relative;overflow:hidden;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+.pc a{height:100%;display:flex;flex-direction:column;gap:12px;text-decoration:none;background:var(--superficie);border:1px solid var(--borda);border-radius:20px;padding:18px 18px 14px;position:relative;overflow:hidden;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
 .pc a::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--c)}
-.pc a:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--c) 45%,var(--borda));box-shadow:0 12px 28px rgba(16,16,16,.07)}
+.pc a:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--c) 45%,var(--borda));box-shadow:0 12px 28px var(--fixed-ink-950-a05)}
 .pc-top{display:flex;gap:14px;align-items:center}
 .ph{flex:none;width:64px;height:64px;border-radius:18px;overflow:hidden;position:relative;background:var(--cb);box-shadow:inset 0 0 0 2px var(--c)}
 .ph::before{content:attr(data-i);position:absolute;inset:0;display:grid;place-items:center;font:700 20px var(--display);color:var(--c);letter-spacing:-.02em}
@@ -302,11 +303,11 @@ export const PERSONALITIES_CSS = `${IDEOLOGIES_CSS}
 .pc a:hover .ph img{filter:none}
 .pc-id{min-width:0;display:flex;flex-direction:column;gap:2px}
 .pc h3{font-family:var(--display);font-weight:600;font-size:17.5px;letter-spacing:-.015em;line-height:1.22}
-.meta{font-size:13px;color:var(--suave);line-height:1.35}
-.pc p{font-size:14px;color:var(--suave);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.meta{font-size:13px;color:var(--texto-suave);line-height:1.35}
+.pc p{font-size:14px;color:var(--texto-suave);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
 .pc .ic-foot{margin-top:0}
 .pc a:hover .go svg{transform:translateX(3px)}
 .pc[hidden]{display:none}
-.credit{font-size:12.5px;color:var(--suave);margin:8px 0 0}
+.credit{font-size:12.5px;color:var(--texto-suave);margin:8px 0 0}
 @media (max-width:640px){.ph{width:56px;height:56px;border-radius:16px}}
 `;
