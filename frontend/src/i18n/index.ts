@@ -174,6 +174,9 @@ interface Strings {
   countryHistoricalTab: string;
   countriesDistantTitle: string;
   personalitiesSectionTitle: string;
+  personalityRepresentationAria: string;
+  personalityRepresentationMen: string;
+  personalityRepresentationWomen: string;
   personalitiesByAreaTitle: string;
   dimensionsTitle: string;
   dimensionLabels: Record<ProfileDimension, string>;
@@ -578,6 +581,9 @@ const pt: Strings = {
   countryHistoricalTab: 'Experiência histórica',
   countriesDistantTitle: 'Os mais distantes de você',
   personalitiesSectionTitle: 'Personalidades mais próximas de você',
+  personalityRepresentationAria: 'Selecionar grupo de personalidades',
+  personalityRepresentationMen: 'Homens',
+  personalityRepresentationWomen: 'Mulheres',
   personalitiesByAreaTitle: 'Também próximos, por área de atuação',
   dimensionsTitle: 'Também próximos, por dimensão do seu perfil',
   dimensionLabels: {
@@ -1043,6 +1049,9 @@ const en: Strings = {
   countryHistoricalTab: 'Historical',
   countriesDistantTitle: 'Furthest from you',
   personalitiesSectionTitle: 'Figures closest to you',
+  personalityRepresentationAria: 'Select personality group',
+  personalityRepresentationMen: 'Men',
+  personalityRepresentationWomen: 'Women',
   personalitiesByAreaTitle: 'Also close to you, by field',
   dimensionsTitle: 'Also close to you, by dimension of your profile',
   dimensionLabels: {
