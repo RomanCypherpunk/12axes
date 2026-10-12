@@ -1,5 +1,5 @@
 import { LANG, t } from '../i18n';
-import type { Candidate, ElectionResult, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
+import type { Candidate, ElectionResult, PersonalityRepresentation, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
@@ -47,16 +47,22 @@ export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> 
 export function submitResults(
   variant: QuizVariant,
   answers: SubmittedAnswer[],
-  archetype: Record<string, string> = {}
+  archetype: Record<string, string> = {},
+  representation: PersonalityRepresentation = 'male'
 ): Promise<QuizResult> {
-  return request<QuizResult>(`/api/results?lang=${LANG}`, {
+  return request<QuizResult>(`/api/results?lang=${LANG}&representation=${representation}`, {
     method: 'POST',
     body: JSON.stringify({ variant, answers, archetype })
   });
 }
 
-export function fetchSharedResult(leftPercents: number[]): Promise<QuizResult> {
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}`);
+export function fetchSharedResult(
+  leftPercents: number[],
+  representation: PersonalityRepresentation = 'male'
+): Promise<QuizResult> {
+  return request<QuizResult>(
+    `/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}&representation=${representation}`
+  );
 }
 
 export function fetchElectionQuiz(): Promise<QuizPayload> { return request<ElectionResult extends never ? never : QuizPayload>('/api/election/quiz'); }
