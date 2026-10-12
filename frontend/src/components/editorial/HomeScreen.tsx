@@ -4,12 +4,12 @@ import type { ExampleResult } from '../../data/exampleResult';
 import type { Axis, AxisResult, QuizVariant } from '../../types/quiz';
 import { AxisIcon, PoleIcon } from '../AxisIcon';
 import { OpenSourceSection } from '../OpenSourceSection';
-import { SupportSection } from '../SupportSection';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { catStyle, localCatStyle, SPECTRUM_ORDER } from '../../utils/ideologyColors';
 import { QUIZ_FORMATS } from './formats';
-import { ArrowIcon, ClockIcon, pct, Ring, SafeImg } from './primitives';
+import { FutCard } from '../results/FutCard';
+import { ArrowIcon, ClockIcon, Football, PitchMarkings, pct, RatingBadge, Ring, SafeImg } from './primitives';
 
 interface HomeScreenProps {
   example: ExampleResult | null;
@@ -76,6 +76,8 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
   return (
     <div className="ed" style={style}>
       <section className="e-hero" id="inicio">
+        <PitchMarkings />
+        <Football className="e-hero-ball" />
         <div className="e-wrap">
           <div>
             <p className="e-eyebrow">{t.heroEyebrow}</p>
@@ -291,7 +293,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
             </div>
           </section>
 
-          <SupportSection variant="home" />
           <OpenSourceSection />
         </>
       )}
@@ -302,7 +303,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
 function ExampleGrid({ example }: { example: ExampleResult }) {
   const { ideology, country, personality } = example;
   const flagSrc = resolveCountryFlagSrc(country.flagPath);
-  const portraitSrc = resolvePersonalityImageSrc(personality.imagePath);
 
   return (
     <div className="e-ex-grid">
@@ -327,9 +327,7 @@ function ExampleGrid({ example }: { example: ExampleResult }) {
           <div>
             <div className="e-mini-top">
               <span className="e-tag e-tag-cat">{t.countryKicker}</span>
-              <span className="e-tag e-tag-solid">
-                {pct(country.compatibility)}% {t.matchWord}
-              </span>
+              <RatingBadge value={country.compatibility} />
             </div>
             <h3>{country.name}</h3>
             <p className="e-meta">
@@ -339,18 +337,11 @@ function ExampleGrid({ example }: { example: ExampleResult }) {
           </div>
         </article>
         <article className="e-card e-mini">
-          <SafeImg
-            className=""
-            src={portraitSrc}
-            alt={t.portraitAlt(personality.name)}
-            fallback={personalityInitials(personality.name)}
-          />
+          <FutCard match={personality} />
           <div>
             <div className="e-mini-top">
               <span className="e-tag e-tag-cat">{t.personalityKicker}</span>
-              <span className="e-tag e-tag-solid">
-                {pct(personality.compatibility)}% {t.matchWord}
-              </span>
+              <RatingBadge value={personality.compatibility} />
             </div>
             <h3>{personality.name}</h3>
             <p className="e-meta">

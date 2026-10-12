@@ -291,6 +291,16 @@ interface Strings {
   signatureAtCentre: string;
   tensionRareShort: (count: number, total: number) => string;
   personalityCategories: Record<PersonalityCategory, string>;
+  futPositions: Record<PersonalityCategory, string>;
+  futOpenAria: (name: string, rating: number) => string;
+  pesPrev: string;
+  pesNext: string;
+  pesStarsAria: (stars: number) => string;
+  pesPickAria: (label: string, name: string) => string;
+  similarityNote: string;
+  matchShort: string;
+  agreeTitle: string;
+  pesKeysHint: string;
   redoAnalysis: string;
   share: string;
   saveOrShare: string;
@@ -865,6 +875,25 @@ const pt: Strings = {
     intelectual: 'Vida intelectual',
     ativista: 'Ativismo',
   },
+  futPositions: {
+    politico: 'POL',
+    religioso: 'REL',
+    economista: 'ECO',
+    filosofo: 'FIL',
+    teorico: 'TEO',
+    empresario: 'EMP',
+    intelectual: 'INT',
+    ativista: 'ATV',
+  },
+  futOpenAria: (name, rating) => `${name}, ${rating} de compatibilidade: ver detalhes`,
+  pesPrev: 'País anterior',
+  pesNext: 'Próximo país',
+  pesStarsAria: (stars) => `${stars} de 5 estrelas`,
+  pesPickAria: (label, name) => `${label}: ${name}`,
+  similarityNote: 'Os números mostram o quanto vocês pensam parecido (0 a 100%), não força nem importância.',
+  matchShort: 'de afinidade',
+  agreeTitle: 'Onde vocês mais concordam',
+  pesKeysHint: 'Use ← → para trocar',
   redoAnalysis: 'Refazer análise',
   share: 'Compartilhar',
   saveOrShare: 'Compartilhar resultado',
@@ -1490,6 +1519,25 @@ const en: Strings = {
     intelectual: 'Intellectual life',
     ativista: 'Activism',
   },
+  futPositions: {
+    politico: 'POL',
+    religioso: 'REL',
+    economista: 'ECO',
+    filosofo: 'PHI',
+    teorico: 'THE',
+    empresario: 'BUS',
+    intelectual: 'INT',
+    ativista: 'ACT',
+  },
+  futOpenAria: (name, rating) => `${name}, ${rating} compatibility: see details`,
+  pesPrev: 'Previous country',
+  pesNext: 'Next country',
+  pesStarsAria: (stars) => `${stars} out of 5 stars`,
+  pesPickAria: (label, name) => `${label}: ${name}`,
+  similarityNote: 'Numbers show how alike you think (0 to 100%), not strength or importance.',
+  matchShort: 'match',
+  agreeTitle: 'Where you agree most',
+  pesKeysHint: 'Use ← → to switch',
   redoAnalysis: 'Retake analysis',
   share: 'Share',
   saveOrShare: 'Share result',

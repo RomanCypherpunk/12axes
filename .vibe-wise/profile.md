@@ -1,6 +1,6 @@
 # Learner Profile
 
-Learning mode: active (resumed for Phase 2, 2026-10-12)
+Learning mode: paused (learner asked to stop learning mode, 2026-10-12)
 Onboarding: complete
 
 ## Project

@@ -3,10 +3,8 @@ import { createPortal } from 'react-dom';
 import { t } from '../../i18n';
 import type { Axis, AxisResult, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
-import { SupportSection } from '../SupportSection';
 import { PdfReport } from '../report/PdfReport';
 import '../../styles/report.css';
-import { BooksSection } from '../results/BooksSection';
 import { AreasSection } from '../results/AreasSection';
 import { AxesSection } from '../results/AxesSection';
 import { CompareSection } from '../results/CompareSection';
@@ -118,8 +116,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <AreasSection generalMatches={result.personalityMatches} areaMatches={result.categoryBestMatches} axes={axes} results={axisResults} />
 
-          <BooksSection books={result.bookRecommendations} />
-
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
@@ -135,12 +131,10 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
           {error && <p className="inline-error" role="alert">{error}</p>}
 
           <CompareSection axes={axes} results={axisResults} religion={religion} userCategory={top.category} />
-
-          <SupportSection variant="panel" />
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} />
+          <ResultsNav hasCompass={compass !== null} />
         </aside>
       </div>
       {printingPdf &&

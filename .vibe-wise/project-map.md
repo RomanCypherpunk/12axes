@@ -32,5 +32,5 @@ Not relevant to task 1; not inspected.
 - Files: src/styles/tokens.css (source); src/styles/theme-dark.css (dark base + dark rules, imported after app.css in main.tsx); scripts/generate-tokens.mjs (+ .d.mts) -> src/styles/tokens.generated.ts (gitignored; run by predev/pretest/prebuild/pretest:watch); src/styles/componentColors.ts (crypto brand + compass fallbacks); vite.config.ts tokensHtmlPlugin fills /*@tokens*/ and {{token:name}} in index.html; static page CSS starts with tokensRootCss(); test/tokens.test.ts guards against hard-coded colours in stylesheets.
 
 ## Unknowns
-- Backend can't run locally: only a Java runtime (JRE) installed, no JDK, so quiz/results can't be viewed. Needs a JDK 21.
+- Backend runs locally via `./mvnw spring-boot:run` despite no `javac`: Maven reuses the already-compiled backend/target/classes. Editing backend Java code would need a JDK 21 to recompile.
 - Which design direction for "football-like" (pitch textures, scoreboard typography, kits, etc.) — learner's decision.

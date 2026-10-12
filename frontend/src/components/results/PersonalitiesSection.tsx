@@ -5,7 +5,9 @@ import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/per
 import { SafeImg } from '../editorial/primitives';
 import { Closeness } from './Closeness';
 import { InfoSheet } from './InfoSheet';
-import { DimList, FarList, MatchHero } from './parts';
+import { topAgreements } from '../../utils/agreement';
+import { FutCard } from './FutCard';
+import { FarList, SimilarityNote } from './parts';
 import { SheetMatch } from './SheetMatch';
 
 interface PersonalitiesSectionProps {
@@ -33,27 +35,36 @@ export function PersonalitiesSection({ top, dimensions, distant, axes, results }
   return (
     <section className="e-panel" id="personalidades" data-reveal>
       <h2>{t.personalitiesSectionTitle}</h2>
+      <SimilarityNote />
 
-      <MatchHero
-        visual={<Portrait match={top} className="e-portrait" />}
-        compatibility={top.compatibility}
-        name={top.name}
-        tags={[top.role, top.lifespan].filter(Boolean)}
-        description={top.description}
-      />
+      <div className="fut-hero">
+        <FutCard match={top} size="lg" special stats={topAgreements(top.vector, axes, results, 6)} />
+        <div className="fut-hero-info">
+          <span className="e-tag e-tag-solid">{t.matchTopKicker}</span>
+          <h3>{top.name}</h3>
+          <p>{[top.role, top.lifespan].filter(Boolean).join(' · ')}</p>
+          {top.description && (
+            <details className="e-more">
+              <summary>{t.knowMoreAbout(top.name)}</summary>
+              <p>{top.description}</p>
+            </details>
+          )}
+        </div>
+      </div>
 
-      <DimList
-        items={dimensions.map(({ dimension, match }) => ({
-          key: dimension,
-          visual: <Portrait match={match} className="e-avatar" />,
-          label: t.dimensionLabels[dimension],
-          name: match.name,
-          caption: match.role,
-          compatibility: match.compatibility,
-          infoLabel: t.personalityInfoAria(match.name),
-          onInfo: () => setInfo(match)
-        }))}
-      />
+      {dimensions.length > 0 && (
+        <>
+          <p className="e-sub">{t.dimensionsTitleShort}</p>
+          <ul className="fut-row">
+            {dimensions.map(({ dimension, match }) => (
+              <li key={dimension}>
+                <span className="fut-label">{t.dimensionLabels[dimension]}</span>
+                <FutCard match={match} stats={topAgreements(match.vector, axes, results, 6)} onOpen={() => setInfo(match)} />
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       <FarList
         title={t.personalitiesDistantTitle}

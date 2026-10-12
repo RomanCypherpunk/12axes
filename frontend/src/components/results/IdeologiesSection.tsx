@@ -2,6 +2,7 @@ import { useState, type CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { IdeologyMatch } from '../../types/quiz';
 import { localCatStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
+import { RatingBadge } from '../editorial/primitives';
 
 interface IdeologiesSectionProps {
   others: IdeologyMatch[];
@@ -29,7 +30,10 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
               style={localCatStyle(match.category) as CSSProperties}
               aria-hidden={hidden}
             >
-              <span className="e-tag e-osolid">{match.category}</span>
+              <div className="e-ocard-top">
+                <span className="e-tag e-osolid">{match.category}</span>
+                <RatingBadge value={match.compatibility} />
+              </div>
               <h3 className={match.name.length >= 18 ? 'e-long-name' : undefined}>{match.name}</h3>
               <div className="e-ocard-more">
                 <p className="e-ocard-text">{text}</p>

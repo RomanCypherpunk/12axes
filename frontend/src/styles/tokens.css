@@ -4,13 +4,13 @@
   /* ── Primitivas fixas ─────────────────────────────────────────────────
      Nunca são redefinidas pelo modo escuro (theme-dark.css): quem usa uma
      delas tem a mesma cor nos dois temas. */
-  --fixed-green-500: #102E24;
+  --fixed-green-500: #1B6B34;
   --fixed-red-500: #880912;
-  --fixed-paper-soft: #FBF9F3;
-  --fixed-ink-100: #E2DDCF;
+  --fixed-paper-soft: #FAFCF8;
+  --fixed-ink-100: #D8E3D4;
   --fixed-ink-700: #5B5A55;
   --fixed-ink-950: #101010;
-  --fixed-ink-50: #ECE8DC;
+  --fixed-ink-50: #E4ECE0;
   --fixed-green-300: #22C55E;
   --fixed-green-300-a00: rgba(34, 197, 94, 0);
   --fixed-green-300-a80: rgba(34, 197, 94, 0.8);
@@ -18,79 +18,79 @@
   --fixed-green-550: #15803D;
   --fixed-green-400: #16A34A;
   --fixed-green-200: #4ADE80;
-  --fixed-paper-soft-a90: rgba(251, 249, 243, 0.9);
-  --fixed-green-500-a00: rgba(16, 46, 36, 0);
-  --fixed-green-500-a80: rgba(16, 46, 36, 0.8);
-  --fixed-green-500-a10: rgba(16, 46, 36, 0.1);
-  --fixed-paper-soft-a80: rgba(251, 249, 243, 0.8);
-  --fixed-paper-soft-a10: rgba(251, 249, 243, 0.1);
-  --fixed-paper-soft-a20: rgba(251, 249, 243, 0.2);
+  --fixed-paper-soft-a90: rgba(250, 252, 248, 0.9);
+  --fixed-green-500-a00: rgba(27, 107, 52, 0);
+  --fixed-green-500-a80: rgba(27, 107, 52, 0.8);
+  --fixed-green-500-a10: rgba(27, 107, 52, 0.1);
+  --fixed-paper-soft-a80: rgba(250, 252, 248, 0.8);
+  --fixed-paper-soft-a10: rgba(250, 252, 248, 0.1);
+  --fixed-paper-soft-a20: rgba(250, 252, 248, 0.2);
   --fixed-green-200-a90: rgba(74, 222, 128, 0.9);
-  --fixed-green-500-a40: rgba(16, 46, 36, 0.4);
-  --fixed-green-500-a50: rgba(16, 46, 36, 0.5);
-  --fixed-paper-soft-a40: rgba(251, 249, 243, 0.4);
+  --fixed-green-500-a40: rgba(27, 107, 52, 0.4);
+  --fixed-green-500-a50: rgba(27, 107, 52, 0.5);
+  --fixed-paper-soft-a40: rgba(250, 252, 248, 0.4);
   --fixed-blue-900: #0E1726;
   --fixed-blue-900-a05: rgba(14, 23, 38, 0.05);
   --fixed-blue-900-a20: rgba(14, 23, 38, 0.2);
-  --fixed-paper-soft-a30: rgba(251, 249, 243, 0.3);
+  --fixed-paper-soft-a30: rgba(250, 252, 248, 0.3);
   --fixed-blue-900-a40: rgba(14, 23, 38, 0.4);
   --fixed-blue-900-a10: rgba(14, 23, 38, 0.1);
-  --fixed-paper-soft-a70: rgba(251, 249, 243, 0.7);
-  --fixed-paper-soft-a60: rgba(251, 249, 243, 0.6);
+  --fixed-paper-soft-a70: rgba(250, 252, 248, 0.7);
+  --fixed-paper-soft-a60: rgba(250, 252, 248, 0.6);
   --fixed-blue-900-a30: rgba(14, 23, 38, 0.3);
   --fixed-blue-300: #94A3B8;
   --fixed-blue-300-a20: rgba(148, 163, 184, 0.2);
   --fixed-blue-900-a50: rgba(14, 23, 38, 0.5);
-  --fixed-paper-soft-a00: rgba(251, 249, 243, 0);
+  --fixed-paper-soft-a00: rgba(250, 252, 248, 0);
   --fixed-blue-800: #1F2937;
   --fixed-orange-500: #B45309;
   --fixed-violet-600: #7C3AED;
   --fixed-blue-500: #2563EB;
   --fixed-amber-200: #EAB308;
-  --fixed-green-500-a20: rgba(16, 46, 36, 0.2);
-  --fixed-green-500-a30: rgba(16, 46, 36, 0.3);
-  --fixed-green-500-a70: rgba(16, 46, 36, 0.7);
+  --fixed-green-500-a20: rgba(27, 107, 52, 0.2);
+  --fixed-green-500-a30: rgba(27, 107, 52, 0.3);
+  --fixed-green-500-a70: rgba(27, 107, 52, 0.7);
   --fixed-ink-950-a05: rgba(16, 16, 16, 0.05);
   --fixed-red-500-a20: rgba(136, 9, 18, 0.2);
   --fixed-ink-950-a20: rgba(16, 16, 16, 0.2);
   --fixed-red-500-a30: rgba(136, 9, 18, 0.3);
   --fixed-i-centro-a20: rgba(75, 80, 88, 0.2);
-  --fixed-green-500-a60: rgba(16, 46, 36, 0.6);
-  --fixed-green-500-a90: rgba(16, 46, 36, 0.9);
-  --fixed-paper-soft-a50: rgba(251, 249, 243, 0.5);
+  --fixed-green-500-a60: rgba(27, 107, 52, 0.6);
+  --fixed-green-500-a90: rgba(27, 107, 52, 0.9);
+  --fixed-paper-soft-a50: rgba(250, 252, 248, 0.5);
   --fixed-blue-950: #1B2440;
   --fixed-ink-400: #9C988C;
   --fixed-ink-950-a50: rgba(16, 16, 16, 0.5);
   --fixed-ink-950-a40: rgba(16, 16, 16, 0.4);
   --fixed-ink-950-a10: rgba(16, 16, 16, 0.1);
-  --fixed-green-800: #1B4234;
-  --fixed-green-800-a10: rgba(27, 66, 52, 0.1);
-  --fixed-canvas: #F4F1E8;
-  --fixed-canvas-a40: rgba(244, 241, 232, 0.4);
-  --fixed-canvas-a10: rgba(244, 241, 232, 0.1);
-  --fixed-canvas-a50: rgba(244, 241, 232, 0.5);
-  --fixed-canvas-a20: rgba(244, 241, 232, 0.2);
+  --fixed-green-800: #0F4A22;
+  --fixed-green-800-a10: rgba(15, 74, 34, 0.1);
+  --fixed-canvas: #F1F6EE;
+  --fixed-canvas-a40: rgba(241, 246, 238, 0.4);
+  --fixed-canvas-a10: rgba(241, 246, 238, 0.1);
+  --fixed-canvas-a50: rgba(241, 246, 238, 0.5);
+  --fixed-canvas-a20: rgba(241, 246, 238, 0.2);
   --fixed-ink-500: #7A776E;
-  --fixed-canvas-a05: rgba(244, 241, 232, 0.05);
+  --fixed-canvas-a05: rgba(241, 246, 238, 0.05);
   --fixed-ink-300: #C7C2B4;
   --fixed-ink-950-a30: rgba(16, 16, 16, 0.3);
   --fixed-gray-400: #8A887F;
-  --fixed-canvas-a90: rgba(244, 241, 232, 0.9);
+  --fixed-canvas-a90: rgba(241, 246, 238, 0.9);
   --fixed-ink-950-a80: rgba(16, 16, 16, 0.8);
   --fixed-ink-950-a70: rgba(16, 16, 16, 0.7);
-  --fixed-canvas-a80: rgba(244, 241, 232, 0.8);
-  --fixed-floresta-claro: #DDE7E1;
+  --fixed-canvas-a80: rgba(241, 246, 238, 0.8);
+  --fixed-floresta-claro: #D6EAD9;
   --fixed-ink-950-a60: rgba(16, 16, 16, 0.6);
 
   /* ── 12 axes — identidade editorial (Papel / Floresta / Carmim / Tinta) ── */
   /* Marca / "concordo" — Floresta (verde-escuro) */
-  --green-50:  #E9EFEC;
-  --green-100: #D4E1DA;
-  --green-400: #3E5A4F;
+  --green-50:  #E6F2E7;
+  --green-100: #CBE5CF;
+  --green-400: #2E8B47;
   --green-500: var(--fixed-green-500);
-  --green-600: #0C231B;
-  --green-700: #09241B;
-  --green-800: #071A14;
+  --green-600: #155A2B;
+  --green-700: #11481F;
+  --green-800: #0B3517;
 
   /* "Discordo" — Carmim */
   --red-50:  #F7E7E8;
@@ -137,14 +137,14 @@
   --shadow-md:  0 14px 30px -18px rgba(16, 16, 16, 0.22);
   --shadow-lg:  0 26px 52px -28px rgba(16, 16, 16, 0.28);
 
-  --shadow-accent:    0 14px 34px -14px rgba(16, 46, 36, 0.38);
-  --shadow-accent-lg: 0 24px 54px -18px rgba(16, 46, 36, 0.46);
+  --shadow-accent:    0 14px 34px -14px rgba(27, 107, 52, 0.38);
+  --shadow-accent-lg: 0 24px 54px -18px rgba(27, 107, 52, 0.46);
   --shadow-critical:  0 14px 34px -14px rgba(136, 9, 18, 0.34);
 
-  --ring-accent: 0 0 0 4px rgba(16, 46, 36, 0.22);
+  --ring-accent: 0 0 0 4px rgba(27, 107, 52, 0.22);
 
-  --glass-tint: rgba(251, 249, 243, 0.92);
-  --glass-tint-strong: rgba(251, 249, 243, 0.97);
+  --glass-tint: rgba(250, 252, 248, 0.92);
+  --glass-tint-strong: rgba(250, 252, 248, 0.97);
   --glass-line: var(--line);
   --glass-blur: blur(14px);
 
@@ -160,9 +160,9 @@
   --grad-logo: linear-gradient(145deg, var(--green-800) 0%, var(--green-700) 38%, var(--green-500) 72%, var(--green-400) 100%);
   --grad-critical: linear-gradient(135deg, var(--red-700) 0%, var(--red-500) 100%);
   --grad-mesh:
-    radial-gradient(42% 38% at 8% 2%, rgba(16, 46, 36, 0.06), transparent 70%),
+    radial-gradient(42% 38% at 8% 2%, rgba(27, 107, 52, 0.06), transparent 70%),
     radial-gradient(40% 36% at 96% 0%, rgba(136, 9, 18, 0.04), transparent 72%),
-    radial-gradient(52% 46% at 90% 98%, rgba(16, 46, 36, 0.04), transparent 74%);
+    radial-gradient(52% 46% at 90% 98%, rgba(27, 107, 52, 0.04), transparent 74%);
 
   --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -178,9 +178,64 @@
   --borda: var(--fixed-ink-100);
   --neutro: var(--fixed-ink-50);
   --texto-suave: var(--fixed-ink-700);
-  --texto-sobre-escuro: #BFD1C6;
+  --texto-sobre-escuro: #D3EBD6;
   --destaque-sobre-escuro: #E7A9A4;
   --floresta-claro: var(--fixed-floresta-claro);
+
+  /* ── Campo — gramado listrado e linhas de cal ─────────────────────────── */
+  --pitch-stripe-a: #1F7A3A;
+  --pitch-stripe-b: #1B6B34;
+  --pitch-line: rgba(250, 252, 248, 0.42);
+  --pitch-text: #FAFCF8;
+  --pitch-text-soft: #E3F1E5;
+  --pitch-accent: #F5D547;
+  --ball-white: #FAFCF8;
+  --ball-black: #101010;
+
+  /* ── Estilo app de placar (Sofascore): fundo cinza, cartões brancos, barra sólida ── */
+  --app-bg: #EDF2EE;
+  --card-bg: #FFFFFF;
+  --card-line: #DFE7E0;
+  --card-shadow: 0 1px 3px rgba(16, 16, 16, 0.08);
+  --bar-bg: #155A2B;
+
+  /* ── Cartas Ultimate Team ─────────────────────────────────────────────── */
+  --fut-gold-a: #F6E39A;
+  --fut-gold-b: #C69A35;
+  --fut-gold-ink: #3B2F0B;
+  --fut-silver-a: #EEF1F4;
+  --fut-silver-b: #A3AAB2;
+  --fut-silver-ink: #22272C;
+  --fut-bronze-a: #EBB985;
+  --fut-bronze-b: #9C6033;
+  --fut-bronze-ink: #3A220F;
+  --fut-special-a: #0B3517;
+  --fut-special-b: #1B6B34;
+  --fut-special-ink: #F5D547;
+  --fut-shine: rgba(255, 255, 255, 0.35);
+  --fut-shadow: rgba(16, 16, 16, 0.35);
+
+  /* ── Tela de seleção de times (layout do PES 2013, cores do site) ────── */
+  --pes-bg-a: #072A12;
+  --pes-bg-b: #15602D;
+  --pes-panel: rgba(5, 30, 14, 0.6);
+  --pes-stripe: rgba(255, 255, 255, 0.035);
+  --pes-line: rgba(180, 230, 190, 0.35);
+  --pes-hi: #7CC48F;
+  --pes-sel: #F5D547;
+  --pes-text: #F4FBF5;
+  --pes-text-soft: #BFDCC5;
+  --pes-star-off: rgba(244, 251, 245, 0.25);
+  --pes-flash: rgba(255, 255, 255, 0.16);
+
+  /* ── Notas estilo Sofascore ──────────────────────────────────────────── */
+  --rate-elite: #2B59D9;
+  --rate-great: #0B8A7A;
+  --rate-good: #187A3B;
+  --rate-ok: #E2A400;
+  --rate-low: #C2471A;
+  --rate-text: #FFFFFF;
+  --rate-ok-text: #2A2200;
 
   /* ── Cores por ideologia (base + pastel) ──────────────────────────────── */
   --i-esq-radical: #830214;

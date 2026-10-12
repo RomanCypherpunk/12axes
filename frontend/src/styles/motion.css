@@ -225,8 +225,8 @@ a:hover > .e-arr { transform: translateX(4px); }
 @supports (animation-timeline: scroll()) {
   @keyframes e-m-nav-shade {
     to {
-      background: var(--fixed-canvas);
-      box-shadow: 0 10px 30px var(--fixed-ink-950-a05);
+      background: var(--bar-bg);
+      box-shadow: 0 10px 30px var(--fixed-ink-950-a20);
     }
   }
   .e-nav {
