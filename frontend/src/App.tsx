@@ -519,6 +519,9 @@ function MainApp() {
       window.clearTimeout(advanceTimerRef.current);
     }
     advanceTimerRef.current = window.setTimeout(() => {
+      if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
       setCurrentIndex((index) => (index === questionIndex ? questionIndex + 1 : index));
       isAdvancingRef.current = false;
       setIsAdvancing(false);
@@ -586,6 +589,9 @@ function MainApp() {
     isAdvancingRef.current = true;
     setIsAdvancing(true);
     advanceTimerRef.current = window.setTimeout(() => {
+      if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
       setArchetypeIndex((index) => index + 1);
       isAdvancingRef.current = false;
       setIsAdvancing(false);

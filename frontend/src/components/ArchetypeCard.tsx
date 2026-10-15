@@ -81,7 +81,10 @@ export function ArchetypeCard({ question, index, selected, disabled = false, onS
               role="radio"
               aria-checked={isSelected}
               disabled={disabled}
-              onClick={() => onSelect(option.id)}
+              onClick={(event) => {
+                event.currentTarget.blur();
+                onSelect(option.id);
+              }}
             >
               <span className="answer-icon archetype-letter" aria-hidden="true">
                 {option.icon ? <FilledSvg icon={option.icon} className="archetype-option-ico" /> : option.id}
