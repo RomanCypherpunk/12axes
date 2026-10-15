@@ -12,12 +12,14 @@ import { AxesSection } from '../results/AxesSection';
 import { CompareSection } from '../results/CompareSection';
 import { CountriesSection } from '../results/CountriesSection';
 import { IdeologiesSection } from '../results/IdeologiesSection';
+import { PartiesSection } from '../results/PartiesSection';
 import { PersonalitiesSection } from '../results/PersonalitiesSection';
 import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
 import { SignatureSection } from '../results/SignatureSection';
 import { computeCompass } from '../../utils/politicalCompass';
+import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { Religion } from '../../utils/religion';
 import { DownloadIcon, Ring, ShareImageIcon } from './primitives';
 
@@ -34,6 +36,7 @@ interface ResultsScreenProps {
 
 export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion }: ResultsScreenProps) {
   const top = result.topMatch;
+  const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
 
@@ -120,6 +123,18 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <BooksSection books={result.bookRecommendations} />
 
+          {showParties && (
+            <PartiesSection
+              current={result.topPartyMatch}
+              historical={result.topHistoricalPartyMatch}
+              top={result.topPartyMatches ?? []}
+              dimensions={result.partyDimensionMatches ?? []}
+              distant={result.bottomPartyMatches ?? []}
+              axes={axes}
+              results={axisResults}
+            />
+          )}
+
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
@@ -140,7 +155,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} />
+          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} />
         </aside>
       </div>
       {printingPdf &&

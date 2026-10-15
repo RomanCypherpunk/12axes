@@ -12,6 +12,8 @@ import { ideologyPage } from './ideology-page.mjs';
 import { countryPage, COUNTRY_PAGE_CSS } from './country-page.mjs';
 import { countriesIndexPage, COUNTRIES_CSS } from './countries-index.mjs';
 import { booksIndexPage, BOOKS_CSS } from './books-index.mjs';
+import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
+import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -34,10 +36,12 @@ const baseAxes = readJson('axes.json');
 const baseIdeologies = readJson('ideologies.json');
 const baseCountries = readJson('countries.json');
 const basePersonalities = readJson('personalities.json');
+const baseParties = readJson('parties.json');
 const baseBooks = readJson('books.json');
 const ideologyProfiles = new Map(readJson('ideology-profiles.json').map((p) => [p.ideologyId, p.vector]));
 const countryProfiles = new Map(readJson('countries-profiles.json').map((p) => [p.countryId, p.vector]));
 const personalityProfiles = new Map(readJson('personality-profiles.json').map((p) => [p.personalityId, p.vector]));
+const partyProfiles = new Map(readJson('parties-profiles.json').map((p) => [p.partyId, p.vector]));
 
 function overlay(base, locale, file) {
   if (locale === 'pt') return base;
@@ -66,6 +70,7 @@ const STR = {
     navCompare: 'Comparar',
     compareHref: '/compare',
     navPersonalities: 'Personalidades',
+    navParties: 'Partidos',
     takeTheTest: 'Fazer o teste',
     axesTitle: 'Perfil nos 12 eixos',
     ctaTitle: 'E você, onde está no espectro político?',
@@ -81,6 +86,8 @@ const STR = {
     ideologyTitle: (name) => `${name} — o que é e posição nos 12 eixos políticos | 12 Axes`,
     countryTitle: (name) => `${name} — perfil político nos 12 eixos | 12 Axes`,
     personalityTitle: (name) => `${name} — posição política nos 12 eixos | 12 Axes`,
+    partyTitle: (name) => `${name} — perfil político nos 12 eixos | 12 Axes`,
+    partyHeadline: (name) => `${name} — perfil político nos 12 eixos`,
     ideologyHeadline: (name) => `${name} — posição política nos 12 eixos`,
     countryHeadline: (name) => `${name} — perfil político nos 12 eixos`,
     ideologiesIndexTitle: (n) => `Ideologias políticas: lista completa com ${n} correntes | 12 Axes`,
@@ -92,6 +99,9 @@ const STR = {
     personalitiesIndexTitle: (n) => `${n} personalidades políticas e suas posições | 12 Axes`,
     personalitiesIndexDesc: (n) => `Veja a posição política de ${n} personalidades em 12 eixos. Descubra qual personalidade é compatível com você no teste político 12 Axes, grátis e rápido.`,
     personalitiesIndexHeading: 'Personalidades políticas',
+    partiesIndexTitle: (n) => `${n} partidos, movimentos e organizações políticas e suas posições | 12 Axes`,
+    partiesIndexDesc: (n) => `Compare o perfil de ${n} partidos, movimentos, casas dinásticas e organizações em 12 eixos, com o país associado a cada um. Descubra qual combina com você no teste político 12 Axes, grátis.`,
+    partiesIndexHeading: 'Partidos e organizações',
     booksIndexTitle: (n) => `Livros políticos e filosóficos: ${n} obras essenciais | 12 Axes`,
     booksIndexDesc: (n) => `Biblioteca com ${n} obras fundamentais de política, filosofia e economia escritas pelas personalidades mapeadas no 12 Axes, com perfil em 12 eixos.`,
     booksIndexHeading: 'Livros e autores políticos'
@@ -107,6 +117,7 @@ const STR = {
     navCompare: 'Compare',
     compareHref: '/en/compare',
     navPersonalities: 'Personalities',
+    navParties: 'Parties',
     takeTheTest: 'Take the test',
     axesTitle: 'Profile across the 12 axes',
     ctaTitle: 'Where do you stand on the political spectrum?',
@@ -122,6 +133,8 @@ const STR = {
     ideologyTitle: (name) => `${name} — what it is and its position on the 12 political axes | 12 Axes`,
     countryTitle: (name) => `${name} — political profile across the 12 axes | 12 Axes`,
     personalityTitle: (name) => `${name} — political position on the 12 axes | 12 Axes`,
+    partyTitle: (name) => `${name} — political profile across the 12 axes | 12 Axes`,
+    partyHeadline: (name) => `${name} — political profile across the 12 axes`,
     ideologyHeadline: (name) => `${name} — political position on the 12 axes`,
     countryHeadline: (name) => `${name} — political profile across the 12 axes`,
     ideologiesIndexTitle: (n) => `Political ideologies: full list of ${n} currents | 12 Axes`,
@@ -133,6 +146,9 @@ const STR = {
     personalitiesIndexTitle: (n) => `${n} political personalities and their positions | 12 Axes`,
     personalitiesIndexDesc: (n) => `See the political position of ${n} personalities across 12 axes. Find which political figure is compatible with you in the free, fast 12 Axes political test.`,
     personalitiesIndexHeading: 'Political personalities',
+    partiesIndexTitle: (n) => `${n} political parties, movements and organizations and their positions | 12 Axes`,
+    partiesIndexDesc: (n) => `Compare the profile of ${n} parties, movements, dynastic houses and organizations across 12 axes, with the country tied to each. Find which one matches you in the free 12 Axes political test.`,
+    partiesIndexHeading: 'Parties and organizations',
     booksIndexTitle: (n) => `Political and philosophical books: ${n} essential works | 12 Axes`,
     booksIndexDesc: (n) => `Library of ${n} foundational works in politics, philosophy, and economics written by figures mapped across the 12 Axes, with 12-axis profiles.`,
     booksIndexHeading: 'Political books and authors'
@@ -167,7 +183,7 @@ function truncate(text, max = 158) {
 // ── Páginas de índice ───────────────────────────────────────────────────────
 function buildIndexes(L) {
   const p = L.s.prefix;
-  const n = { i: L.ideologies.length, c: L.countries.length, p: L.personalities.length, b: L.books.length };
+  const n = { i: L.ideologies.length, c: L.countries.length, p: L.personalities.length, b: L.books.length, pa: L.parties.length };
 
   return [
     booksIndexPage(L, {
@@ -205,6 +221,15 @@ function buildIndexes(L) {
       profiles: personalityProfiles,
       title: L.s.personalitiesIndexTitle(n.p),
       description: L.s.personalitiesIndexDesc(n.p)
+    }),
+    partiesIndexPage(L, {
+      locale: L.locale,
+      site: SITE,
+      gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
+      escapeHtml,
+      profiles: partyProfiles,
+      title: L.s.partiesIndexTitle(n.pa),
+      description: L.s.partiesIndexDesc(n.pa)
     })
   ];
 }
@@ -214,6 +239,7 @@ function buildLocaleContext(locale) {
   const ideologies = overlay(baseIdeologies, locale, 'ideologies.json');
   const countries = overlay(baseCountries, locale, 'countries.json');
   const personalities = overlay(basePersonalities, locale, 'personalities.json');
+  const parties = overlay(baseParties, locale, 'parties.json');
   const books = baseBooks.map((b) => ({
     ...b,
     title: (b.title && (b.title[locale] || b.title.pt)) || '',
@@ -226,6 +252,9 @@ function buildLocaleContext(locale) {
     ideologies,
     countries,
     personalities,
+    parties,
+    // Tipo canônico (valor fechado em PT) de cada perfil: o overlay EN traduz o rótulo da categoria.
+    partyKindById: new Map(baseParties.map((p) => [p.id, p.category])),
     books,
     countryById: new Map(countries.map((c) => [c.id, c])),
     personalityById: new Map(personalities.map((p) => [p.id, p])),
@@ -436,13 +465,14 @@ for (const locale of LOCALES) {
     gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
     escapeHtml,
     truncate,
-    profiles: { ideology: ideologyProfiles, country: countryProfiles, personality: personalityProfiles }
+    profiles: { ideology: ideologyProfiles, country: countryProfiles, personality: personalityProfiles, party: partyProfiles }
   };
   const pages = [
     ...buildIndexes(L),
     ...L.ideologies.map((i) => ideologyPage(L, i, profileCtx)),
     ...L.countries.map((c) => countryPage(L, c, profileCtx)),
-    ...L.personalities.map((p) => personalityPage(L, p, profileCtx))
+    ...L.personalities.map((p) => personalityPage(L, p, profileCtx)),
+    ...L.parties.map((p) => partyPage(L, p, profileCtx))
   ];
   for (const page of pages) allPaths.push(writePage(L.s.prefix, page));
 }
@@ -451,8 +481,9 @@ if (!CATALOGUE_ONLY) buildHomeVariants();
 
 writeFileSync(join(DIST, 'ideologies.css'), IDEOLOGIES_CSS);
 writeFileSync(join(DIST, 'personalities.css'), PERSONALITIES_CSS);
-writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS);
+writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS + PARTY_PAGE_CSS);
 writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS);
+writeFileSync(join(DIST, 'parties.css'), PARTIES_CSS);
 writeFileSync(join(DIST, 'books.css'), BOOKS_CSS);
 
 const booksPtPath = join(DIST, 'books.html');
@@ -471,4 +502,4 @@ writeFileSync(
 
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`Geradas ${allPaths.length} páginas (${LOCALES.join(', ')}) + sitemap.xml + robots.txt + ideologies.css + personalities.css + profile.css + countries.css + books.css em dist/`);
+console.log(`Geradas ${allPaths.length} páginas (${LOCALES.join(', ')}) + sitemap.xml + robots.txt + ideologies.css + personalities.css + profile.css + countries.css + parties.css + books.css em dist/`);

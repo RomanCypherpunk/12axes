@@ -30,13 +30,24 @@ class CompareControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void catalogListsAllThreeTypes() throws Exception {
+    void catalogListsAllFourTypes() throws Exception {
         mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()", greaterThan(600)))
                 .andExpect(jsonPath("$[?(@.type=='personality')]").isNotEmpty())
                 .andExpect(jsonPath("$[?(@.type=='country')]").isNotEmpty())
-                .andExpect(jsonPath("$[?(@.type=='ideology')]").isNotEmpty());
+                .andExpect(jsonPath("$[?(@.type=='ideology')]").isNotEmpty())
+                .andExpect(jsonPath("$[?(@.type=='party')]").isNotEmpty());
+    }
+
+    @Test
+    void partyCaptionShowsTheAssociatedCountryAndComparisonWorks() throws Exception {
+        mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua')].caption").value("Estados Unidos"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua-new-deal')].caption")
+                        .value("Estados Unidos do New Deal · 1933–1945"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua')].imagePath")
+                        .value("/parties/logos/partido-republicano-eua.png"));
     }
 
     @Test
@@ -83,6 +94,19 @@ class CompareControllerTest {
     }
 
     @Test
+    void comparesWithAPartyAndKeepsItsCountryAndLogo() throws Exception {
+        mockMvc.perform(get("/api/compare").param("type", "party").param("id", "vox").param("v", CENTER))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.item.type").value("party"))
+                .andExpect(jsonPath("$.item.name").value("Vox"))
+                .andExpect(jsonPath("$.item.caption").value("Espanha"))
+                .andExpect(jsonPath("$.item.imagePath").value("/parties/logos/vox.png"))
+                .andExpect(jsonPath("$.vector.length()").value(12));
+        mockMvc.perform(get("/api/compare").param("type", "party").param("id", "nobody").param("v", CENTER))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
     void rejectsUnknownTypeUnknownIdAndBadVector() throws Exception {
         mockMvc.perform(get("/api/compare").param("type", "planet").param("id", "x").param("v", CENTER))
                 .andExpect(status().isBadRequest());
@@ -110,6 +134,17 @@ class CompareControllerTest {
                 .andExpect(jsonPath("$.pairs[2].first").value(1))
                 .andExpect(jsonPath("$.pairs[2].second").value(2))
                 .andExpect(jsonPath("$.pairs[*].compatibility", everyItem(allOf(greaterThanOrEqualTo(0.0), lessThanOrEqualTo(100.0)))));
+    }
+
+    @Test
+    void comparesPartiesWithOtherCatalogs() throws Exception {
+        mockMvc.perform(get("/api/compare/profiles").param("items", "party:vox,ideology:social-democracia"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.profiles[0].item.type").value("party"))
+                .andExpect(jsonPath("$.profiles[0].item.id").value("vox"))
+                .andExpect(jsonPath("$.profiles[0].vector.length()").value(12))
+                .andExpect(jsonPath("$.pairs.length()").value(1));
+        expectProfilesStatus("party:partido-inexistente,country:colombia", 404);
     }
 
     @Test

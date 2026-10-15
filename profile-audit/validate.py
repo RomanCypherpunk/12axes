@@ -92,7 +92,11 @@ CATALOGS = {
     "personality": ("personality-profiles.json", "personalityId", "personalities.json"),
     "ideology": ("ideology-profiles.json", "ideologyId", "ideologies.json"),
     "country": ("countries-profiles.json", "countryId", "countries.json"),
+    "party": ("parties-profiles.json", "partyId", "parties.json"),
 }
+
+# Espelho de Party.CATEGORIES (backend/.../model/Party.java).
+PARTY_CATEGORIES = {"Partido", "Movimento", "Casa dinástica", "Organização armada", "Organização internacional"}
 
 
 def load(name):
@@ -165,6 +169,40 @@ def main():
                     f"[CATEGORIA] {pid} usa category invalida '{category}' — validas: "
                     + ", ".join(sorted(PERSONALITY_CATEGORIES))
                 )
+
+    # ---------- [PARTIDO] ----------
+    # Partido/organizacao: categoria valida, pais existente e logo quadrado 1:1 no disco.
+    if catalog == "party":
+        entry = {m["id"]: m for m in load(CATALOGS[catalog][2])}.get(pid)
+        if entry is None:
+            errors.append(f"[PARTIDO] {pid} nao existe em parties.json")
+        else:
+            category = entry.get("category")
+            if category not in PARTY_CATEGORIES:
+                errors.append(
+                    f"[PARTIDO] {pid} usa category invalida '{category}' — validas: "
+                    + ", ".join(sorted(PARTY_CATEGORIES))
+                )
+            country_ids = {c["id"] for c in load("countries.json")}
+            if entry.get("countryId") not in country_ids:
+                errors.append(f"[PARTIDO] {pid}: countryId '{entry.get('countryId')}' nao existe em countries.json")
+            if entry.get("historical") and not (entry.get("period") or "").strip():
+                errors.append(f"[PARTIDO] {pid}: historical=true exige 'period'")
+            logo = entry.get("logoPath") or ""
+            logo_file = os.path.join(BASE, "..", "frontend", "public", logo.lstrip("/"))
+            if not logo or not os.path.exists(logo_file):
+                errors.append(f"[PARTIDO] {pid}: logo '{logo}' nao existe em frontend/public")
+            else:
+                try:
+                    import struct
+                    with open(logo_file, "rb") as lf:
+                        head = lf.read(24)
+                    if head[:8] == b"\x89PNG\r\n\x1a\n":
+                        w, h = struct.unpack(">II", head[16:24])
+                        if w != h:
+                            errors.append(f"[PARTIDO] {pid}: logo {w}x{h} nao e quadrado 1:1")
+                except OSError:
+                    pass
 
     # ---------- [TAMANHO DA DESCRICAO] ----------
     # Media/mediana medida nos tres catalogos: ~30 palavras / ~220 caracteres.

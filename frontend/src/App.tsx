@@ -759,7 +759,6 @@ function MainApp() {
               <NavLinks open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
-                <a href="#espectro-politico">{t.navSpectrum}</a>
                 <a href="#apoie">{t.navSupport}</a>
                 <CatalogLinks />
                 <LangToggle />

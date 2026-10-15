@@ -7,6 +7,7 @@ import com.twelveaxes.model.CompareProfile;
 import com.twelveaxes.model.CompareProfiles;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.Ideology;
+import com.twelveaxes.model.Party;
 import com.twelveaxes.model.Personality;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -28,6 +29,7 @@ public class CompareService {
     public static final String PERSONALITY = "personality";
     public static final String COUNTRY = "country";
     public static final String IDEOLOGY = "ideology";
+    public static final String PARTY = "party";
 
     public static final int MIN_PROFILES = 2;
     public static final int MAX_PROFILES = 3;
@@ -65,6 +67,11 @@ public class CompareService {
         for (Ideology ideology : dataService.getIdeologies(lang)) {
             if (ReligionFilter.allows(ideology.religions(), religion)) {
                 items.add(ideologyItem(ideology));
+            }
+        }
+        for (Party party : dataService.getParties(lang)) {
+            if (ReligionFilter.allows(party.religions(), religion)) {
+                items.add(partyItem(party));
             }
         }
         return List.copyOf(items);
@@ -144,6 +151,12 @@ public class CompareService {
                 yield resolved(ideologyItem(ideology), ideology.description(),
                         profile == null ? null : profile.vector());
             }
+            case PARTY -> {
+                Party party = require(dataService.getPartyById(id, lang), type, id);
+                var profile = dataService.getPartyProfiles().get(id);
+                yield resolved(partyItem(party), party.description(),
+                        profile == null ? null : profile.vector());
+            }
             default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tipo de comparação inválido");
         };
     }
@@ -173,6 +186,16 @@ public class CompareService {
                 : country.category();
         return new CompareItem(COUNTRY, country.id(), country.name(), caption, country.flagPath(),
                 country.category(), country.historical());
+    }
+
+    // Legenda: pais associado (e o periodo, quando historico), para o front mostrar "Partido, Pais".
+    private static CompareItem partyItem(Party party) {
+        String country = party.countryName() == null ? "" : party.countryName();
+        String caption = party.historical() && party.period() != null && !party.period().isBlank()
+                ? country + " · " + party.period()
+                : country;
+        return new CompareItem(PARTY, party.id(), party.name(), caption, party.logoPath(),
+                party.category(), party.historical());
     }
 
     private static CompareItem ideologyItem(Ideology ideology) {

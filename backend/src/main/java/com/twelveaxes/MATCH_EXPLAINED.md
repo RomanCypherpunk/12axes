@@ -1,6 +1,6 @@
 # 12 Axes - explicacao do matching
 
-Este documento descreve a logica atual do backend para transformar respostas do quiz em eixos politicos e, depois, em correspondencias de ideologia, personalidade e pais. Use como referencia antes de pedir alteracoes em outros chats.
+Este documento descreve a logica atual do backend para transformar respostas do quiz em eixos politicos e, depois, em correspondencias de ideologia, personalidade, pais e partido/organizacao. Use como referencia antes de pedir alteracoes em outros chats.
 
 ## Arquivos principais
 
@@ -9,13 +9,18 @@ Este documento descreve a logica atual do backend para transformar respostas do 
 - `backend/src/main/java/com/twelveaxes/service/ScoringService.java`
   - Transforma respostas em 12 `AxisResult`.
 - `backend/src/main/java/com/twelveaxes/service/ProfileMatchScorer.java`
-  - Formula central de compatibilidade, usada por ideologias, personalidades e paises.
+  - Formula central de compatibilidade, usada por ideologias, personalidades, paises e partidos.
 - `backend/src/main/java/com/twelveaxes/service/IdeologyMatcherService.java`
   - Ranking e percentil para as 4 ideologias retornadas.
 - `backend/src/main/java/com/twelveaxes/service/PersonalityMatcherService.java`
   - Ranking de personalidades; a API usa o top-1.
 - `backend/src/main/java/com/twelveaxes/service/CountryMatcherService.java`
   - Ranking de paises; a API usa o top-1.
+- `backend/src/main/java/com/twelveaxes/service/PartyMatcherService.java`
+  - Ranking de partidos, movimentos, casas dinasticas e organizacoes (catalogo `party`, atuais e
+    historicos juntos); a API devolve o top 3 (`topPartyMatches`) e os 3 mais distantes
+    (`bottomPartyMatches`). Cada perfil tem `countryId` obrigatorio e o resultado traz `countryName`
+    no idioma da resposta. Usa `parties-profiles.json`; catalogo vazio devolve listas vazias.
 - `backend/src/main/java/com/twelveaxes/service/QuizDataService.java`
   - Carrega JSONs, traducoes e perfis canonicos.
 
@@ -142,6 +147,7 @@ Fallbacks:
 - Ideologia: usa `ideology-profiles.json`; se faltar, tenta `ideology.vector`; se faltar, vetor neutro.
 - Personalidade: usa `personality-profiles.json`; se faltar, vetor neutro.
 - Pais: usa `countries-profiles.json`; se faltar, tenta `country.vector`; se faltar, vetor neutro.
+- Partido/organizacao: usa `parties-profiles.json`; se faltar, vetor neutro (o backend recusa subir sem perfil).
 
 Na pratica, os testes exigem perfis explicitos para ideologias, paises e personalidades.
 

@@ -41,7 +41,18 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.mostUnusualAxis.axisId").isNotEmpty())
                 .andExpect(jsonPath("$.mostUnusualAxis.label").isNotEmpty())
                 .andExpect(jsonPath("$.mostUnusualAxis.abovePole").isNotEmpty())
-                .andExpect(jsonPath("$.mostCommonAxis.axisId").isNotEmpty());
+                .andExpect(jsonPath("$.mostCommonAxis.axisId").isNotEmpty())
+                .andExpect(jsonPath("$.topPartyMatch.historical").value(false))
+                .andExpect(jsonPath("$.topPartyMatches.length()").value(3))
+                .andExpect(jsonPath("$.topPartyMatches[0].partyId").isNotEmpty())
+                .andExpect(jsonPath("$.topPartyMatches[0].countryName").isNotEmpty())
+                .andExpect(jsonPath("$.topPartyMatches[0].countryFlagPath").isNotEmpty())
+                .andExpect(jsonPath("$.topPartyMatches[0].logoPath").isNotEmpty())
+                .andExpect(jsonPath("$.topHistoricalPartyMatch.historical").value(true))
+                .andExpect(jsonPath("$.partyDimensionMatches.length()").value(3))
+                .andExpect(jsonPath("$.partyDimensionMatches[0].dimension").value("political"))
+                .andExpect(jsonPath("$.partyDimensionMatches[0].match.partyId").isNotEmpty())
+                .andExpect(jsonPath("$.bottomPartyMatches.length()").value(3));
     }
 
     @Test
@@ -52,6 +63,8 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.dimensionMatches[0].dimension").value("political"))
                 .andExpect(jsonPath("$.categoryBestMatches.length()").value(8))
                 .andExpect(jsonPath("$.categoryBestMatches[0].category").isNotEmpty())
-                .andExpect(jsonPath("$.topHistoricalCountryMatch.historical").value(true));
+                .andExpect(jsonPath("$.topHistoricalCountryMatch.historical").value(true))
+                .andExpect(jsonPath("$.topPartyMatches.length()").value(3))
+                .andExpect(jsonPath("$.topPartyMatches[0].category").isNotEmpty());
     }
 }

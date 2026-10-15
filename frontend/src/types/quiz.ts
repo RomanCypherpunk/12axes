@@ -97,6 +97,29 @@ export interface AxisResult {
   intensity: string;
 }
 
+/** Partido, movimento, casa dinástica ou organização, sempre com o país associado. */
+export interface PartyMatch {
+  partyId: string;
+  name: string;
+  category: string;
+  description: string;
+  /** Logo oficial quadrado 1:1 (PNG), em /parties/logos/. */
+  logoPath: string;
+  logoSourceName?: string;
+  logoSourceUrl?: string;
+  logoNote?: string;
+  countryId: string;
+  /** Nome do país associado, no idioma da resposta. */
+  countryName: string;
+  /** Bandeira do país associado (a mesma do catálogo de países). */
+  countryFlagPath: string;
+  historical: boolean;
+  period: string;
+  compatibility: number;
+  /** Vetor de 12 eixos (leftPercent) do perfil. */
+  vector?: Record<string, number>;
+}
+
 export interface IdeologyMatch {
   ideologyId: string;
   name: string;
@@ -195,6 +218,11 @@ export interface CountryDimensionMatch {
   match: CountryMatch;
 }
 
+export interface PartyDimensionMatch {
+  dimension: ProfileDimension;
+  match: PartyMatch;
+}
+
 export interface QuizResult {
   axes: AxisResult[];
   topMatch: IdeologyMatch;
@@ -216,10 +244,20 @@ export interface QuizResult {
   axisTension: AxisTension | null;
   /** Até 3 livros das personalidades mais compatíveis, com link de afiliado pronto. */
   bookRecommendations?: BookRecommendation[];
+  /** Partido atual mais compatível. */
+  topPartyMatch?: PartyMatch;
+  /** Os 3 partidos/organizações mais compatíveis (atuais e históricos); vazio com o catálogo vazio. */
+  topPartyMatches?: PartyMatch[];
+  /** Partido histórico mais compatível. */
+  topHistoricalPartyMatch?: PartyMatch;
+  /** Dimensões (política, social, econômica) dos partidos compatíveis. */
+  partyDimensionMatches?: PartyDimensionMatch[];
+  /** Os 3 mais distantes, do menos ao mais distante. */
+  bottomPartyMatches?: PartyMatch[];
 }
 
 
-export type CompareType = 'personality' | 'country' | 'ideology';
+export type CompareType = 'personality' | 'country' | 'ideology' | 'party';
 
 /** Perfil pesquisável na seção de comparação (já filtrado pela religião do usuário). */
 export interface CompareItem {
@@ -227,7 +265,7 @@ export interface CompareItem {
   id: string;
   name: string;
   caption: string;
-  /** Retrato (personalidade) ou bandeira (país); ausente nas ideologias. */
+  /** Retrato (personalidade), bandeira (país) ou logo quadrado (partido/organização); ausente nas ideologias. */
   imagePath?: string | null;
   category: string;
   historical: boolean;

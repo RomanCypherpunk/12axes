@@ -1,5 +1,5 @@
 """Calcula compatibilidade (mesmo algoritmo de ProfileMatchScorer.java) entre um vetor
-de 12 eixos e todos os perfis dos catalogos personality/ideology/country.
+de 12 eixos e todos os perfis dos catalogos personality/ideology/country/party.
 
 Uso:
     python profile-audit/compatibility.py <catalog> <id> [--religion <valor>] [--sem-filtro]
@@ -46,6 +46,7 @@ CATALOGS = {
     "personality": ("personality-profiles.json", "personalityId", "personalities.json"),
     "ideology": ("ideology-profiles.json", "ideologyId", "ideologies.json"),
     "country": ("countries-profiles.json", "countryId", "countries.json"),
+    "party": ("parties-profiles.json", "partyId", "parties.json"),
 }
 
 
@@ -173,7 +174,8 @@ def own_religions(catalog, pid):
 
 
 def print_rankings(catalog, pid, vector, ideology_meta, religion):
-    for target_catalog, label in [("personality", "PERSONALIDADES"), ("ideology", "IDEOLOGIAS"), ("country", "PAISES")]:
+    for target_catalog, label in [("personality", "PERSONALIDADES"), ("ideology", "IDEOLOGIAS"), ("country", "PAISES"),
+                                  ("party", "PARTIDOS E ORGANIZACOES")]:
         exclude = pid if target_catalog == catalog else None
         top_n = 3 if catalog == "ideology" and target_catalog == "ideology" else 2
         matches = top_matches(vector, target_catalog, exclude_id=exclude, top_n=top_n, religion=religion)
@@ -209,7 +211,7 @@ def main():
         sys.exit(1)
     catalog, pid = args
     if catalog not in CATALOGS:
-        print(f"catalog invalido: {catalog} (use personality/ideology/country)")
+        print(f"catalog invalido: {catalog} (use personality/ideology/country/party)")
         sys.exit(1)
 
     vector = vector_for(catalog, pid)

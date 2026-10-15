@@ -1,6 +1,6 @@
 ---
 name: audit-continue
-description: Continua a auditoria pergunta-a-pergunta a partir de STATE.json.pending, escolhendo automaticamente o catálogo com pendências e disparando o próximo lote de 15, sem o usuário precisar especificar personality/ideology/country.
+description: Continua a auditoria pergunta-a-pergunta a partir de STATE.json.pending, escolhendo automaticamente o catálogo com pendências e disparando o próximo lote de 15, sem o usuário precisar especificar personality/ideology/country/party.
 ---
 
 # /audit_continue
@@ -14,10 +14,11 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — contém o protoco
 ## Execução
 
 1. Leia `profile-audit/STATE.json`.
-2. Determine qual catálogo tem trabalho pendente, na ordem de prioridade `personality → ideology → country` (mesma ordem em que os catálogos são normalmente fechados um de cada vez no histórico do projeto — ver `README.md`, seção "Os três catálogos": trabalhe um catálogo por vez, não misture):
+2. Determine qual catálogo tem trabalho pendente, na ordem de prioridade `personality → ideology → country → party` (mesma ordem em que os catálogos são normalmente fechados um de cada vez no histórico do projeto — ver `README.md`, seção "Os quatro catálogos": trabalhe um catálogo por vez, não misture):
    - Se `STATE.json.personality.pending` não estiver vazio, `CATALOG = personality`.
    - Senão, se `STATE.json.ideology.pending` não estiver vazio, `CATALOG = ideology`.
    - Senão, se `STATE.json.country.pending` não estiver vazio, `CATALOG = country`.
+   - Senão, se `STATE.json.party.pending` não estiver vazio, `CATALOG = party` (siga também `.claude/skills/audit-party/SKILL.md`: regra de prática e ideias, país associado e logo 1:1).
    - Se os três estiverem vazios, informe ao usuário que a auditoria dos três catálogos está 100% concluída e pare — não há nada a fazer.
 3. Informe ao usuário qual catálogo foi escolhido e quantos perfis restam pendentes nele.
 4. Pegue os 15 primeiros IDs de `STATE.json.<CATALOG>.pending` (ou o restante, se houver menos de 15).
@@ -28,6 +29,7 @@ Leia **profile-audit/README.md inteiro** (raiz do projeto) — contém o protoco
    | `personality` | `backend/src/main/resources/data/personalities.json` | `backend/src/main/resources/data/personality-profiles.json` (`personalityId`) | `id`, `name`, `role`, `lifespan`, `description` (+ `category` obrigatória no JSON, fora do prompt) |
    | `ideology` | `backend/src/main/resources/data/ideologies.json` | `backend/src/main/resources/data/ideology-profiles.json` (`ideologyId`) | `id`, `name`, `category`, `description` |
    | `country` | `backend/src/main/resources/data/countries.json` | `backend/src/main/resources/data/countries-profiles.json` (`countryId`) | `id`, `name`, `category`, `description` (+ `period` se `historical`) |
+   | `party` | `backend/src/main/resources/data/parties.json` | `backend/src/main/resources/data/parties-profiles.json` (`partyId`) | `id`, `name`, `category`, país associado, `historical`/`period`, `description` |
 
    - Gerar `prompts/<CATALOG>/<id>.txt` para cada perfil do lote.
    - Disparar os subagentes **simultaneamente**, mesma mensagem, modelo de qualidade (nunca Haiku/rápido).

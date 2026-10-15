@@ -8,7 +8,7 @@ import { parseReligion, type Religion } from './religion';
 export const MIN_COMPARE = 2;
 export const MAX_COMPARE = 3;
 
-const TYPES: readonly CompareType[] = ['personality', 'country', 'ideology'];
+const TYPES: readonly CompareType[] = ['personality', 'country', 'ideology', 'party'];
 
 export interface CompareRef {
   type: CompareType;
