@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-15T15:00:28Z",
+  "lastUpdated": "2026-10-15T15:04:39Z",
   "personality": {
     "totalProfiles": 583,
     "pending": [],
@@ -1168,7 +1168,7 @@
   },
   "totalProfiles": 1174,
   "party": {
-    "totalProfiles": 160,
+    "totalProfiles": 164,
     "pending": [],
     "done": [
       "nsdap",
@@ -1330,6 +1330,10 @@
       "ppp-coreia",
       "partido-democratico-republicano-coreia",
       "partido-democrata-eua-new-deal",
+      "partido-nacional-africa-do-sul-apartheid",
+      "anc-africa-do-sul",
+      "inc-india",
+      "dsa-eua",
       "centro-democratico"
     ]
   }
