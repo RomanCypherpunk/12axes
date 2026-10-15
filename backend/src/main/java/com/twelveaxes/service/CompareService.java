@@ -2,12 +2,17 @@ package com.twelveaxes.service;
 
 import com.twelveaxes.model.CompareDetail;
 import com.twelveaxes.model.CompareItem;
+import com.twelveaxes.model.ComparePair;
+import com.twelveaxes.model.CompareProfile;
+import com.twelveaxes.model.CompareProfiles;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.Personality;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -23,6 +28,9 @@ public class CompareService {
     public static final String PERSONALITY = "personality";
     public static final String COUNTRY = "country";
     public static final String IDEOLOGY = "ideology";
+
+    public static final int MIN_PROFILES = 2;
+    public static final int MAX_PROFILES = 3;
 
     private static final int CATALOG_CACHE_ENTRIES = 32;
 
@@ -63,34 +71,88 @@ public class CompareService {
     }
 
     public CompareDetail compare(String type, String id, Map<String, Double> userVector, String lang) {
+        Resolved target = resolve(type, id, QuizDataService.normalizeLang(lang));
+        return new CompareDetail(target.item(), target.description(),
+                scorer.compatibility(userVector, target.vector()), target.vector());
+    }
+
+    /**
+     * Compara de 2 a 3 perfis entre si (link compartilhado, sem quiz). O filtro de religiao nao se aplica:
+     * ids explicitos sempre resolvem. Os pares seguem a ordem do pedido (i &lt; j).
+     *
+     * @param itemsParam tokens "tipo:id" separados por virgula
+     */
+    public CompareProfiles compareProfiles(String itemsParam, String lang) {
         String normalizedLang = QuizDataService.normalizeLang(lang);
+        List<String[]> refs = parseItems(itemsParam);
+        List<CompareProfile> profiles = new ArrayList<>();
+        for (String[] ref : refs) {
+            Resolved resolved = resolve(ref[0], ref[1], normalizedLang);
+            profiles.add(new CompareProfile(resolved.item(), resolved.vector()));
+        }
+        List<ComparePair> pairs = new ArrayList<>();
+        for (int i = 0; i < profiles.size(); i++) {
+            for (int j = i + 1; j < profiles.size(); j++) {
+                pairs.add(new ComparePair(i, j,
+                        scorer.compatibility(profiles.get(i).vector(), profiles.get(j).vector())));
+            }
+        }
+        return new CompareProfiles(List.copyOf(profiles), List.copyOf(pairs));
+    }
+
+    private static List<String[]> parseItems(String itemsParam) {
+        List<String[]> refs = new ArrayList<>();
+        Set<String> seen = new HashSet<>();
+        for (String token : (itemsParam == null ? "" : itemsParam).split(",", -1)) {
+            String trimmed = token.trim();
+            int colon = trimmed.indexOf(':');
+            String type = colon < 0 ? "" : trimmed.substring(0, colon).trim();
+            String id = colon < 0 ? "" : trimmed.substring(colon + 1).trim();
+            if (type.isEmpty() || id.isEmpty()) {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Item de comparação inválido: " + trimmed);
+            }
+            if (!seen.add(type + ":" + id)) {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Item de comparação repetido: " + trimmed);
+            }
+            refs.add(new String[] {type, id});
+        }
+        if (refs.size() < MIN_PROFILES || refs.size() > MAX_PROFILES) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Informe de " + MIN_PROFILES + " a " + MAX_PROFILES + " perfis para comparar");
+        }
+        return refs;
+    }
+
+    /** Item, descricao e vetor (neutro quando o perfil nao tem vetor) de um perfil do catalogo. */
+    private Resolved resolve(String type, String id, String lang) {
         return switch (type == null ? "" : type) {
             case PERSONALITY -> {
-                Personality personality = require(dataService.getPersonalityById(id, normalizedLang), type, id);
+                Personality personality = require(dataService.getPersonalityById(id, lang), type, id);
                 var profile = dataService.getPersonalityProfiles().get(id);
-                yield detail(personalityItem(personality), personality.description(), userVector,
+                yield resolved(personalityItem(personality), personality.description(),
                         profile == null ? null : profile.vector());
             }
             case COUNTRY -> {
-                Country country = require(dataService.getCountryById(id, normalizedLang), type, id);
+                Country country = require(dataService.getCountryById(id, lang), type, id);
                 var profile = dataService.getCountryProfiles().get(id);
-                yield detail(countryItem(country), country.description(), userVector,
+                yield resolved(countryItem(country), country.description(),
                         profile == null ? null : profile.vector());
             }
             case IDEOLOGY -> {
-                Ideology ideology = require(dataService.getIdeologyById(id, normalizedLang), type, id);
+                Ideology ideology = require(dataService.getIdeologyById(id, lang), type, id);
                 var profile = dataService.getIdeologyProfiles().get(id);
-                yield detail(ideologyItem(ideology), ideology.description(), userVector,
+                yield resolved(ideologyItem(ideology), ideology.description(),
                         profile == null ? null : profile.vector());
             }
             default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tipo de comparação inválido");
         };
     }
 
-    private CompareDetail detail(CompareItem item, String description, Map<String, Double> userVector,
-                                 Map<String, Double> vector) {
-        Map<String, Double> target = vector == null || vector.isEmpty() ? scorer.neutralVector() : vector;
-        return new CompareDetail(item, description, scorer.compatibility(userVector, target), target);
+    private Resolved resolved(CompareItem item, String description, Map<String, Double> vector) {
+        return new Resolved(item, description, vector == null || vector.isEmpty() ? scorer.neutralVector() : vector);
+    }
+
+    private record Resolved(CompareItem item, String description, Map<String, Double> vector) {
     }
 
     private static <T> T require(T value, String type, String id) {
