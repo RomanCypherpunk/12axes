@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-15T16:01:49Z",
+  "lastUpdated": "2026-10-15T16:32:28Z",
   "personality": {
     "totalProfiles": 586,
     "pending": [],
@@ -1171,7 +1171,7 @@
   },
   "totalProfiles": 1174,
   "party": {
-    "totalProfiles": 164,
+    "totalProfiles": 165,
     "pending": [],
     "done": [
       "nsdap",
@@ -1337,7 +1337,8 @@
       "anc-africa-do-sul",
       "inc-india",
       "dsa-eua",
-      "centro-democratico"
+      "centro-democratico",
+      "pacto-historico"
     ]
   }
 }
