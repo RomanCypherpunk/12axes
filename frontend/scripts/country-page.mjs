@@ -264,7 +264,7 @@ ${poleSprite(L.axes)}
         <div><dt>${esc(kpiIdeology[0])}</dt><dd>${esc(kpiIdeology[1])}</dd></div>
         <div><dt>${esc(t.kpiClosestPerson)}</dt><dd>${esc(tp.name)}</dd></div>
       </dl>
-      <a class="btn btn-primary btn-sm" href="${esc(`/compare?items=country:${country.id}&lang=${locale}`)}">${esc(t.compareWith)} ${ARR}</a>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=country:${country.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     <figure class="ch-flag"><img src="${country.flagPath}" alt="${esc(t.flagAlt(name))}"></figure>
   </article>

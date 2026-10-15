@@ -340,7 +340,7 @@ ${poleSprite(L.axes)}
         <div><dt>${esc(t.kpiClosestIdeology)}</dt><dd><a href="${prefix}/ideologies/${topIdeology.item.id}">${esc(topIdeology.item.name)}</a></dd></div>
         <div><dt>${esc(t.kpiClosestPerson)}</dt><dd><a href="${personHref(tp)}">${esc(tp.name)}</a></dd></div>
       </dl>
-      <a class="btn btn-primary btn-sm" href="${esc(`/compare?items=personality:${personality.id}&lang=${locale}`)}">${esc(t.compareWith)} ${ARR}</a>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=personality:${personality.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     <figure class="ph-img"><img src="${personality.imagePath}" alt="${esc(t.portraitAlt(name))}" data-i="${esc(initials(name))}">${credit}</figure>
   </article>

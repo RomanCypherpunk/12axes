@@ -84,7 +84,7 @@ export function ComparePage() {
 
   // O link sempre reflete a comparação na tela, para recarregar ou compartilhar.
   useEffect(() => {
-    window.history.replaceState(null, '', compareUrl(refs, religion));
+    window.history.replaceState(null, '', compareUrl(refs, religion, LANG));
   }, [refs, religion]);
 
   useEffect(() => {
@@ -149,7 +149,7 @@ export function ComparePage() {
             <LangToggle />
           </NavLinks>
           <a className="e-btn e-btn-primary e-btn-sm" href={home}>
-            {t.navStart} <ArrowIcon />
+            {t.navTakeTest} <ArrowIcon />
           </a>
           <MenuButton open={isMenuOpen} onToggle={() => setIsMenuOpen((open) => !open)} />
         </div>

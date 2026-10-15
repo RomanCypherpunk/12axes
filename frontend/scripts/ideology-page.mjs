@@ -285,7 +285,7 @@ ${poleSprite(L.axes)}
       <div class="match-tags"><span class="tag tag-solid">${esc(ideology.category)}</span><span class="tag tag-neutral">${esc(t.kind)}</span></div>
       <h1>${esc(name)}</h1>
       <p class="lead">${esc(ideology.description)}</p>
-      <a class="btn btn-primary btn-sm" href="${esc(`/compare?items=ideology:${ideology.id}&lang=${locale}`)}">${esc(t.compareWith)} ${ARR}</a>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=ideology:${ideology.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     ${refs.length ? `<div class="ih-refs">${refs.join('')}</div>` : ''}
   </article>

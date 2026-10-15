@@ -11,7 +11,7 @@ export function CatalogLinks({ current }: { current?: 'compare' }) {
       <a href={`${prefix}/personalities`}>{t.navPersonalities}</a>
       <a href={`${prefix}/countries`}>{t.navCountries}</a>
       {/* Na própria /compare o link fica sem destino: recarregar apagaria os perfis escolhidos. */}
-      {current === 'compare' ? <a aria-current="page">{t.navCompare}</a> : <a href={`/compare?lang=${LANG}`}>{t.navCompare}</a>}
+      {current === 'compare' ? <a aria-current="page">{t.navCompare}</a> : <a href={`${prefix}/compare`}>{t.navCompare}</a>}
     </>
   );
 }

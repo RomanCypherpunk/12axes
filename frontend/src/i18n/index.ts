@@ -8,11 +8,22 @@ export type Lang = 'pt' | 'en';
 const STORAGE_KEY = '12axes-lang';
 
 // Idioma forçado pelo caminho: /en sempre inglês, /br sempre português,
-// independente do aparelho ou da preferência salva.
-function langForcedByPath(pathname: string): Lang | null {
-  const path = (pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
-  if (path === '/en') return 'en';
-  if (path === '/br') return 'pt';
+// independente do aparelho ou da preferência salva. A comparação segue o catálogo:
+// /compare em português e /en/compare em inglês.
+const normalizePath = (pathname: string): string => pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+
+export function langForcedByPath(pathname: string): Lang | null {
+  const path = normalizePath(pathname);
+  if (path === '/en' || path === '/en/compare') return 'en';
+  if (path === '/br' || path === '/compare') return 'pt';
+  return null;
+}
+
+/** Caminho equivalente no outro idioma, para o toggle; null quando o idioma não vem do caminho. */
+export function langSwitchPath(pathname: string, lang: Lang): string | null {
+  const path = normalizePath(pathname);
+  if (path === '/compare' || path === '/en/compare') return lang === 'en' ? '/en/compare' : '/compare';
+  if (path === '/en' || path === '/br') return lang === 'en' ? '/en' : '/br';
   return null;
 }
 
@@ -42,10 +53,10 @@ export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
   url.searchParams.delete('lang');
-  // Em /en ou /br a URL é o que define o idioma, então o toggle troca de rota.
-  if (langForcedByPath(url.pathname)) {
-    url.pathname = lang === 'en' ? '/en' : '/br';
-  }
+  // Em /en, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
+  // (na comparação, mantendo os perfis escolhidos na query).
+  const switched = langSwitchPath(url.pathname, lang);
+  if (switched) url.pathname = switched;
   window.location.href = url.toString();
 }
 
@@ -187,6 +198,7 @@ interface Strings {
   faqTitle: string;
   faqLead: string;
   navStart: string;
+  navTakeTest: string;
   menuAria: string;
   roseAria: string;
   spectrumBarAria: string;
@@ -749,6 +761,7 @@ const pt: Strings = {
   faqTitle: 'Perguntas frequentes',
   faqLead: 'Tudo o que as pessoas costumam perguntar antes de fazer o teste.',
   navStart: 'Começar',
+  navTakeTest: 'Fazer o teste',
   menuAria: 'Abrir menu',
   roseAria: 'Rosa dos 12 eixos',
   spectrumBarAria: 'Barra do espectro político com as oito categorias',
@@ -1396,6 +1409,7 @@ const en: Strings = {
   faqTitle: 'Frequently asked questions',
   faqLead: 'Everything people usually ask before taking the test.',
   navStart: 'Start',
+  navTakeTest: 'Take the test',
   menuAria: 'Open menu',
   roseAria: 'Rose of the 12 axes',
   spectrumBarAria: 'Political spectrum bar with the eight categories',

@@ -42,10 +42,11 @@ const FULL_MODE =
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
 
-// /compare (comparação entre perfis do catálogo) é uma página à parte, carregada sob demanda:
-// o catálogo inteiro só é baixado por quem abre essa rota.
+// /compare e /en/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
+// demanda: o catálogo inteiro só é baixado por quem abre essa rota.
 const COMPARE_MODE =
-  typeof window !== 'undefined' && (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/') === '/compare';
+  typeof window !== 'undefined' &&
+  ['/compare', '/en/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
 
 const ComparePage = lazy(() =>
   import('./components/compare/ComparePage').then((module) => ({ default: module.ComparePage }))

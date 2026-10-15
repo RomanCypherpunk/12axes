@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { compareUrl, MAX_COMPARE, parseCompareItems, parseCompareUrl, serializeCompareItems } from './compareUrl';
+import { comparePath, compareUrl, MAX_COMPARE, parseCompareItems, parseCompareUrl, serializeCompareItems } from './compareUrl';
 
 describe('parseCompareItems', () => {
   it('lê os perfis na ordem do link', () => {
@@ -55,6 +55,13 @@ describe('serializeCompareItems e compareUrl', () => {
     const url = compareUrl(refs, 'catholic');
     const parsed = parseCompareUrl(url.slice(url.indexOf('?')));
     expect(parsed).toEqual({ refs, religion: 'catholic' });
+  });
+
+  it('em inglês o caminho leva o prefixo /en, como no catálogo', () => {
+    expect(comparePath('pt')).toBe('/compare');
+    expect(comparePath('en')).toBe('/en/compare');
+    expect(compareUrl(refs, null, 'en')).toBe('/en/compare?items=personality:alvaro-uribe,country:colombia');
+    expect(compareUrl([], null, 'en')).toBe('/en/compare');
   });
 
   it('religião desconhecida no link vira sem filtro', () => {
