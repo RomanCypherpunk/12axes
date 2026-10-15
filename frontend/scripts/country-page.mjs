@@ -13,6 +13,7 @@ const STR = {
     catalogNav: 'Catálogo',
     homeAria: '12 axes, página inicial',
     takeTheTest: 'Fazer o teste',
+    compareWith: 'Comparar com…',
     currentCountry: 'País atual',
     historicalRegime: 'Regime histórico',
     kpiSpectrum: 'Espectro predominante',
@@ -62,6 +63,7 @@ const STR = {
     catalogNav: 'Catalog',
     homeAria: '12 axes, home page',
     takeTheTest: 'Take the test',
+    compareWith: 'Compare with…',
     currentCountry: 'Modern country',
     historicalRegime: 'Historical regime',
     kpiSpectrum: 'Predominant spectrum',
@@ -262,6 +264,7 @@ ${poleSprite(L.axes)}
         <div><dt>${esc(kpiIdeology[0])}</dt><dd>${esc(kpiIdeology[1])}</dd></div>
         <div><dt>${esc(t.kpiClosestPerson)}</dt><dd>${esc(tp.name)}</dd></div>
       </dl>
+      <a class="btn btn-primary btn-sm" href="${esc(`/compare?items=country:${country.id}&lang=${locale}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     <figure class="ch-flag"><img src="${country.flagPath}" alt="${esc(t.flagAlt(name))}"></figure>
   </article>
