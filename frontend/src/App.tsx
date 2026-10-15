@@ -13,6 +13,7 @@ import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
+import { PARTIES_ENABLED } from './utils/partyLogos';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -257,7 +258,7 @@ function MainApp() {
         setQuiz(buildQuizForVariant(payload, INITIAL_VARIANT));
         setScreen('quiz');
       })
-      .catch((err: Error) => setError(err.message))
+      .catch((err: Error) => setError(err.message && err.message !== 'Failed to fetch' ? err.message : t.errLoadQuiz))
       .finally(() => setIsLoading(false));
   }, []);
 
@@ -406,7 +407,8 @@ function MainApp() {
       setQuiz(buildQuizForVariant(nextQuiz, variant));
       setScreen('quiz');
     } catch (err) {
-      setError(err instanceof Error ? err.message : t.errLoadQuiz);
+      const msg = err instanceof Error ? err.message : '';
+      setError(msg && msg !== 'Failed to fetch' ? msg : t.errLoadQuiz);
     } finally {
       setIsLoading(false);
     }
@@ -456,7 +458,8 @@ function MainApp() {
       applyProgress(restored, savedProgress);
       setSavedProgress(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : t.errLoadQuiz);
+      const msg = err instanceof Error ? err.message : '';
+      setError(msg && msg !== 'Failed to fetch' ? msg : t.errLoadQuiz);
     } finally {
       setIsLoading(false);
     }
@@ -750,12 +753,12 @@ function MainApp() {
               >
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
-                <a href="#espectro-politico">{t.navSpectrum}</a>
                 <a href="#apoie">{t.navSupport}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/books`}>{t.navBooks}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
+                {PARTIES_ENABLED && <a href={`${LANG === 'en' ? '/en' : ''}/parties`}>{t.navParties}</a>}
                 <button
                   className="e-lang"
                   type="button"

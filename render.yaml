@@ -10,3 +10,5 @@ services:
         value: https://12axes.vercel.app,https://12axes.enzoxavier.com.br
       - key: API_ORIGIN_ENFORCEMENT
         value: "true"
+      - key: API_REQUIRE_FETCH_METADATA
+        value: "false"

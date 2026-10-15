@@ -16,7 +16,7 @@ de vetor/merge/`STATE.json`/arquivamento é o mesmo; só o tamanho do lote muda 
 ## Execução
 
 1. Leia `profile-audit/STATE.json`.
-2. Se o usuário especificou um catálogo (`personality`/`ideology`/`country`), use só esse. Caso
+2. Se o usuário especificou um catálogo (`personality`/`ideology`/`country`/`party`), use só esse. Caso
    contrário, liste os três.
 3. Para cada catálogo relevante, apresente ao usuário:
    - Quantos perfis estão em `pending` e quantos em `done` (e o total).
@@ -31,6 +31,7 @@ de vetor/merge/`STATE.json`/arquivamento é o mesmo; só o tamanho do lote muda 
      | `personality` | `backend/src/main/resources/data/personalities.json` | `backend/src/main/resources/data/personality-profiles.json` (`personalityId`) | `id`, `name`, `role`, `lifespan`, `description` (+ `category` obrigatória no JSON, fora do prompt) |
      | `ideology` | `backend/src/main/resources/data/ideologies.json` | `backend/src/main/resources/data/ideology-profiles.json` (`ideologyId`) | `id`, `name`, `category`, `description` |
      | `country` | `backend/src/main/resources/data/countries.json` | `backend/src/main/resources/data/countries-profiles.json` (`countryId`) | `id`, `name`, `category`, `description` (+ `period` se `historical`) |
+     | `party` | `backend/src/main/resources/data/parties.json` | `backend/src/main/resources/data/parties-profiles.json` (`partyId`) | `id`, `name`, `category`, país associado, `historical`/`period`, `description` |
 
    - Gerar `prompts/<catalog>/<id>.txt` para cada um dos 6 perfis.
    - Disparar os **6 subagentes simultaneamente**, mesma mensagem, modelo de qualidade (nunca

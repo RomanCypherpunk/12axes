@@ -13,42 +13,24 @@ export interface CompassPosition {
 
 const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
 
-// Pesos do eixo esquerda-direita, escolhidos por busca sobre o catálogo para levar cada ideologia
-// ao seu canto (anarcocapitalismo na direita, marxismo-leninismo na esquerda, corporativismo,
-// fascismo e centrismo no meio). Os três eixos econômicos pesam: `economia` (propriedade),
-// `controle` (planejamento contra mercado) e `comercio` (protecionismo contra livre comércio),
-// este último para que um protecionista como Trump não fique no mesmo ponto de um anarcocapitalista.
-const WEIGHT_ECONOMIA = 0.2;
-const WEIGHT_CONTROLE = 0.3;
-const WEIGHT_COMERCIO = 0.2;
-const WEIGHT_IMIGRACAO = 0.25;
-const WEIGHT_MORAL = 0.05;
-
-// Ganhos do alongamento a partir do centro. A média ponderada encolhe os extremos (um
-// anarcocapitalista é ~95 em economia, controle e comércio, mas só ~40 em assimilação), então sem
-// isso ele ficaria em ~75. O lado direito se dilui mais que o esquerdo.
-const GAIN_LEFT = 1.6;
-const GAIN_RIGHT = 2.6;
-
-/**
- * Alonga a média para os cantos sem cortar: tangente hiperbólica, que se aproxima de 0 e de 100
- * sem nunca cravá-los. Um corte seco empilharia ~7% dos perfis exatamente na borda.
- */
-function stretch(average: number): number {
-  const distance = average - 50;
-  const gain = distance < 0 ? GAIN_LEFT : GAIN_RIGHT;
-  return 50 + 50 * Math.tanh((distance * gain) / 50);
-}
+// Pesos do eixo esquerda-direita: estritamente econômicos, focados nos dois pilares da
+// economia política clássica: `economia` (propriedade privada dos meios de produção, 60%) e
+// `controle` (livre mercado contra planejamento e regulação, 40%). Pautas como comércio
+// internacional (livre comércio vs tarifas), imigração e costumes não entram no cálculo
+// Pesos do eixo esquerda-direita: estritamente econômicos, focados nos dois pilares da
+// economia política clássica: `economia` (propriedade privada dos meios de produção, 60%) e
+// `controle` (livre mercado contra planejamento e regulação, 40%). Cálculo direto linear de 0 a 100,
+// proporcional aos eixos sem distorção ou afastamento não-linear.
+const WEIGHT_ECONOMIA = 0.6;
+const WEIGHT_CONTROLE = 0.4;
 
 /**
  * Compõe a bússola a partir dos eixos do quiz. `leftPercent` é o quanto o usuário pende ao polo
  * esquerdo do eixo em `axes.json` (100 = polo esquerdo inteiro), então cada eixo é invertido
  * quando o polo esquerdo não é o que a bússola chama de direita, autoritário ou tradicionalista:
  *
- * - direita, média ponderada (20% economia, 30% controle, 20% comércio, 25% imigração, 5% moral)
- *   e depois alongada: `economia` (esq. Público), `controle` (esq. Planejamento), `comercio`
- *   (esq. Protecionismo) e `moral` (esq. Progressista) entram invertidos, e `imigracao`
- *   (esq. Assimilação) entra direto;
+ * - direita: média ponderada linear (60% economia privada, 40% livre mercado):
+ *   `economia` (esq. Público) e `controle` (esq. Planejamento) entram invertidos;
  * - autoritário: `poder` (esq. Segurança, direto), `representacao` (esq. Democracia) e `estrutura`
  *   (esq. Federal), estes dois invertidos;
  * - tradicionalista (a barra): `moral` (esq. Progressista), invertido.
@@ -57,7 +39,7 @@ function stretch(average: number): number {
  */
 export function computeCompass(results: Map<string, AxisResult>): CompassPosition | null {
   const left = (axisId: string): number | null => results.get(axisId)?.leftPercent ?? null;
-  const ids = ['economia', 'controle', 'comercio', 'imigracao', 'moral', 'poder', 'representacao', 'estrutura'] as const;
+  const ids = ['economia', 'controle', 'poder', 'representacao', 'estrutura', 'moral'] as const;
   const values: Record<string, number> = {};
   for (const id of ids) {
     const value = left(id);
@@ -65,13 +47,7 @@ export function computeCompass(results: Map<string, AxisResult>): CompassPositio
     values[id] = value;
   }
   return {
-    right: stretch(
-      WEIGHT_ECONOMIA * (100 - values.economia) +
-        WEIGHT_CONTROLE * (100 - values.controle) +
-        WEIGHT_COMERCIO * (100 - values.comercio) +
-        WEIGHT_IMIGRACAO * values.imigracao +
-        WEIGHT_MORAL * (100 - values.moral)
-    ),
+    right: WEIGHT_ECONOMIA * (100 - values.economia) + WEIGHT_CONTROLE * (100 - values.controle),
     authoritarian: mean([values.poder, 100 - values.representacao, 100 - values.estrutura]),
     traditional: 100 - values.moral
   };

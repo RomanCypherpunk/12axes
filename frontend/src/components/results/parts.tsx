@@ -10,10 +10,12 @@ interface MatchHeroProps {
   name: string;
   tags: string[];
   description: string;
+  /** Miniatura opcional exibida antes da etiqueta "Mais compatível" (ex.: bandeira do país). */
+  kickerPrefix?: ReactNode;
 }
 
 // Card do item mais compatível de um catálogo (país ou personalidade).
-export function MatchHero({ visual, compatibility, name, tags, description }: MatchHeroProps) {
+export function MatchHero({ visual, compatibility, name, tags, description, kickerPrefix }: MatchHeroProps) {
   const caption = tags.join(' · ');
 
   return (
@@ -22,7 +24,7 @@ export function MatchHero({ visual, compatibility, name, tags, description }: Ma
         {visual}
         <div className="e-match-info">
           <div className="e-match-tags">
-            <span className="e-tag e-tag-solid">{t.matchTopKicker}</span>
+            {kickerPrefix}
             <span className="e-tag e-tag-cat e-match-pill">
               {Math.round(compatibility)}% {t.matchWord}
             </span>

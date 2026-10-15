@@ -1,6 +1,5 @@
 // Página /books (e /en/books): catálogo de livros e obras das personalidades,
 // agrupado por área de atuação, com busca, filtro, capa/autor, ano e a faixa de 12 ícones de polo.
-// Reaproveita a estrutura e identidade visual dos catálogos de personalidades e países.
 import { ARROW, IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { AREA_LABELS, AREA_ORDER, catalogHead, initials } from './personalities-index.mjs';
 
@@ -242,7 +241,7 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
     numberOfItems: n
   };
 
-  const scriptStrings = JSON.stringify({ found: t.found, clear: t.clear });
+  const scriptStrings = JSON.stringify({ found: t.found, clear: t.clear, count: t.count });
 
   const html = `<!doctype html>
 <html lang="${L.s.htmlLang}">
@@ -256,6 +255,7 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
     <a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a>
     <a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a>
     <a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a>
+    <a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a>
   </nav>
   <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
@@ -292,36 +292,73 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
 </main>
 <footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
 <script>
-const S=${scriptStrings};
-const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')],cats=[...document.querySelectorAll('.cat')];
-const info=document.getElementById('info'),empty=document.getElementById('empty');
-const norm=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();
-const cards=[...document.querySelectorAll('.bc')].map(li=>({li,t:norm(li.dataset.text),h:li.querySelector('.bc-title'),name:li.querySelector('.bc-title').textContent}));
-document.querySelectorAll('.ph img').forEach(im=>{if(im.complete&&!im.naturalWidth)im.remove();else im.addEventListener('error',()=>im.remove())});
-let active=null;
-function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
-function apply(){
-  const term=norm(q.value.trim());
-  let shown=0;
-  cards.forEach(c=>{
-    const cat=c.li.dataset.cat;
-    const ok=(!term||c.t.includes(term))&&(!active||cat===active);
-    c.li.hidden=!ok; if(ok)shown++;
-    const i=term&&ok?norm(c.name).indexOf(term):-1;
-    if(i>=0)c.h.innerHTML=esc(c.name.slice(0,i))+'<mark>'+esc(c.name.slice(i,i+term.length))+'</mark>'+esc(c.name.slice(i+term.length));else c.h.textContent=c.name;
-  });
-  cats.forEach(s=>{const n=s.querySelectorAll('.bc:not([hidden])').length;s.hidden=n===0;s.querySelector('.cc').textContent=n;s.querySelector('.cl').textContent=S.count[n===1?0:1]});
-  empty.classList.toggle('show',shown===0);
-  info.innerHTML=(term||active)?'<b>'+shown+'</b> '+S.found[shown===1?0:1]+'<button type="button" id="clear">'+esc(S.clear)+'</button>':'';
-  const cl=document.getElementById('clear'); if(cl) cl.onclick=()=>{q.value='';active=null;chips.forEach(c=>c.setAttribute('aria-pressed','false'));apply()};
+const S = ${scriptStrings};
+const q = document.getElementById('q'), chips = [...document.querySelectorAll('.chip')], cats = [...document.querySelectorAll('.cat')];
+const info = document.getElementById('info'), empty = document.getElementById('empty');
+const norm = s => s.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();
+const cards = [...document.querySelectorAll('.bc')].map(li => ({ li, t: norm(li.dataset.text), h: li.querySelector('.bc-title'), name: li.querySelector('.bc-title').textContent }));
+document.querySelectorAll('.ph img').forEach(im => { if (im.complete && !im.naturalWidth) im.remove(); else im.addEventListener('error', () => im.remove()); });
+let active = null;
+function esc(s) { return s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])); }
+function updateUrl() {
+  const params = new URLSearchParams();
+  const term = q.value.trim();
+  if (term) params.set('q', term);
+  if (active) params.set('cat', active);
+  const qs = params.toString();
+  const newUrl = window.location.pathname + (qs ? '?' + qs : '');
+  window.history.replaceState({}, '', newUrl);
 }
-q.addEventListener('input',apply);
-chips.forEach(ch=>ch.addEventListener('click',()=>{
-  active=active===ch.dataset.cat?null:ch.dataset.cat;
-  chips.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.cat===active)));apply();
-  if(active) document.getElementById(active).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+function apply(pushUrl = true) {
+  const term = norm(q.value.trim());
+  let shown = 0;
+  cards.forEach(c => {
+    const cat = c.li.dataset.cat;
+    const ok = (!term || c.t.includes(term)) && (!active || cat === active);
+    c.li.hidden = !ok;
+    if (ok) shown++;
+    const i = term && ok ? norm(c.name).indexOf(term) : -1;
+    if (i >= 0) c.h.innerHTML = esc(c.name.slice(0, i)) + '<mark>' + esc(c.name.slice(i, i + term.length)) + '</mark>' + esc(c.name.slice(i + term.length));
+    else c.h.textContent = c.name;
+  });
+  cats.forEach(s => {
+    const n = s.querySelectorAll('.bc:not([hidden])').length;
+    s.hidden = n === 0;
+    s.querySelector('.cc').textContent = n;
+    s.querySelector('.cl').textContent = S.count[n === 1 ? 0 : 1];
+  });
+  empty.classList.toggle('show', shown === 0);
+  info.innerHTML = (term || active) ? '<b>' + shown + '</b> ' + S.found[shown === 1 ? 0 : 1] + '<button type="button" id="clear">' + esc(S.clear) + '</button>' : '';
+  const cl = document.getElementById('clear');
+  if (cl) cl.onclick = () => {
+    q.value = '';
+    active = null;
+    chips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    apply();
+  };
+  if (pushUrl) updateUrl();
+}
+const initParams = new URLSearchParams(window.location.search);
+const initQ = initParams.get('q');
+const initCat = initParams.get('cat');
+if (initQ) q.value = initQ;
+if (initCat && chips.some(c => c.dataset.cat === initCat)) {
+  active = initCat;
+  chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.cat === active)));
+}
+if (initQ || initCat) apply(false);
+
+q.addEventListener('input', () => apply());
+chips.forEach(ch => ch.addEventListener('click', () => {
+  active = active === ch.dataset.cat ? null : ch.dataset.cat;
+  chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.cat === active)));
+  apply();
+  if (active) {
+    const target = document.getElementById(active);
+    if (target) target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
 }));
-document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}});
+document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); } });
 </script>
   </body>
 </html>`;

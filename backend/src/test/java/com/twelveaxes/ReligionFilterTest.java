@@ -57,7 +57,9 @@ class ReligionFilterTest {
                         dataService.getCountryProfiles().entrySet().stream()
                                 .collect(Collectors.toMap(e -> "country:" + e.getKey(), e -> e.getValue().vector())),
                         dataService.getIdeologyProfiles().entrySet().stream()
-                                .collect(Collectors.toMap(e -> "ideology:" + e.getKey(), e -> e.getValue().vector())))
+                                .collect(Collectors.toMap(e -> "ideology:" + e.getKey(), e -> e.getValue().vector())),
+                        dataService.getPartyProfiles().entrySet().stream()
+                                .collect(Collectors.toMap(e -> "party:" + e.getKey(), e -> e.getValue().vector())))
                 .flatMap(map -> map.entrySet().stream())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
@@ -274,6 +276,7 @@ class ReligionFilterTest {
         dataService.getPersonalities().forEach(p -> all.put("personality:" + p.id(), p.religions()));
         dataService.getCountries().forEach(c -> all.put("country:" + c.id(), c.religions()));
         dataService.getIdeologies().forEach(i -> all.put("ideology:" + i.id(), i.religions()));
+        dataService.getParties().forEach(p -> all.put("party:" + p.id(), p.religions()));
         return all;
     }
 }

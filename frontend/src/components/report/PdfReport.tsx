@@ -7,9 +7,12 @@ import type {
   AxisTension,
   CountryDimensionMatch,
   CountryMatch,
+  PartyDimensionMatch,
+  PartyMatch,
   QuizResult
 } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
+import { PARTIES_ENABLED, resolvePartyLogoSrc } from '../../utils/partyLogos';
 import { catStyle, ideologyColorByKey, localCatStyle } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
@@ -38,13 +41,17 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
   const books = result.bookRecommendations ?? [];
   const others = result.matches.slice(1, 4);
   const compass = computeCompass(axisResults);
+  const partyTop = result.topPartyMatches ?? [];
+  const showParties = PARTIES_ENABLED && partyTop.length > 0;
+  const hasBooks = books.length > 0;
   const sections = [
     t.axesSectionTitle,
     t.signatureTitle,
     t.countriesSectionTitle,
     t.personalitiesSectionTitle,
     ...(result.personalityMatches.length > 0 ? [t.areasGeneralTitle] : []),
-    ...(books.length > 0 ? [t.booksTitle] : []),
+    ...(hasBooks ? [t.booksTitle] : []),
+    ...(showParties ? [t.partiesSectionTitle] : []),
     t.otherMatches,
     ...(compass ? [t.compassTitle] : [])
   ];
@@ -119,167 +126,230 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
       </section>
 
       <div className="rp-body">
-        <header className="ph">
-          <Logo />
-          <span>{t.report.headerLabel(top.name)}</span>
-        </header>
+        {/* PÁGINA 2: Eixos e Distinção */}
+        <div className="rp-page">
+          <PageHeader topName={top.name} />
 
-        <section className="rp-sec">
-          <SectionHead title={t.axesSectionTitle} />
-          <ul className="axes">
-            {[...axes]
-              .sort((first, second) => displayRank(first.id) - displayRank(second.id))
-              .map((axis) => {
-                const axisResult = axisResults.get(axis.id);
-                return axisResult ? <AxisRow key={axis.id} axis={axis} result={axisResult} religion={religion} /> : null;
-              })}
-          </ul>
-        </section>
-
-        <section className="rp-sec">
-          <SectionHead title={t.signatureTitle} />
-          <div className="dist">
-            <SignatureCard outlier={result.mostUnusualAxis} strong label={t.signatureUnusualLabel} axisResults={axisResults} />
-            <SignatureCard outlier={result.mostCommonAxis} strong={false} label={t.signatureCommonLabel} axisResults={axisResults} />
-            {result.axisTension && <TensionBlock tension={result.axisTension} axes={axes} axisResults={axisResults} />}
-          </div>
-        </section>
-
-        <section className="rp-sec">
-          <SectionHead title={t.countriesSectionTitle} />
-          <CountryBlock
-            label={t.countryCurrentTab}
-            match={result.topCountryMatch}
-            dimensions={result.countryDimensionMatches}
-            distant={result.bottomCountryMatches}
-          />
-        </section>
-        <section className="rp-sec">
-          <p className="cont">
-            {t.countriesSectionTitle} ({t.report.continued})
-          </p>
-          <CountryBlock label={t.countryHistoricalTab} match={result.topHistoricalCountryMatch} />
-        </section>
-
-        <section className="rp-sec">
-          <SectionHead title={t.personalitiesSectionTitle} />
-          <MatchCard
-            visual={<Img className="av-b" src={resolvePersonalityImageSrc(result.topPersonalityMatch.imagePath)} name={result.topPersonalityMatch.name} />}
-            compatibility={result.topPersonalityMatch.compatibility}
-            name={result.topPersonalityMatch.name}
-            tags={[result.topPersonalityMatch.role, result.topPersonalityMatch.lifespan].filter(Boolean)}
-            description={result.topPersonalityMatch.description}
-          />
-          <p className="lbl">{t.dimensionsTitleShort}</p>
-          <ul className="dims">
-            {result.dimensionMatches.map(({ dimension, match }) => (
-              <li className="dc" key={dimension}>
-                <Img className="av-s" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
-                <span className="dim">{t.dimensionLabels[dimension]}</span>
-                <b>{match.name}</b>
-                <strong>{Math.round(match.compatibility)}%</strong>
-              </li>
-            ))}
-          </ul>
-          <FarList
-            title={t.personalitiesDistantTitle}
-            items={result.bottomPersonalityMatches.map((match) => ({ key: match.personalityId, name: match.name, caption: match.role }))}
-          />
-        </section>
-
-        {result.personalityMatches.length > 0 && (
           <section className="rp-sec">
-            <SectionHead title={t.areasGeneralTitle} />
-            <ol className="rank">
-              {result.personalityMatches.map((match, index) => (
-                <li className="rk" key={match.personalityId}>
-                  <span className="rk-n">{String(index + 1).padStart(2, '0')}</span>
-                  <Img className="av-m" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
-                  <div className="rk-i">
-                    <b>{match.name}</b>
-                    <small>{t.personalityCategories[match.category]}</small>
-                    <div className="bar">
-                      <i style={{ width: `${Math.max(0, Math.min(100, match.compatibility))}%` }} />
-                    </div>
-                  </div>
+            <SectionHead title={t.axesSectionTitle} />
+            <ul className="axes">
+              {[...axes]
+                .sort((first, second) => displayRank(first.id) - displayRank(second.id))
+                .map((axis) => {
+                  const axisResult = axisResults.get(axis.id);
+                  return axisResult ? <AxisRow key={axis.id} axis={axis} result={axisResult} religion={religion} /> : null;
+                })}
+            </ul>
+          </section>
+
+          <section className="rp-sec">
+            <SectionHead title={t.signatureTitle} />
+            <div className="dist">
+              <SignatureCard outlier={result.mostUnusualAxis} strong label={t.signatureUnusualLabel} axisResults={axisResults} />
+              <SignatureCard outlier={result.mostCommonAxis} strong={false} label={t.signatureCommonLabel} axisResults={axisResults} />
+              {result.axisTension && <TensionBlock tension={result.axisTension} axes={axes} axisResults={axisResults} />}
+            </div>
+          </section>
+        </div>
+
+        {/* PÁGINA 3: Países (Atual + Histórico juntos) */}
+        <div className="rp-page">
+          <PageHeader topName={top.name} />
+
+          <section className="rp-sec">
+            <SectionHead title={t.countriesSectionTitle} />
+            <CountryBlock
+              label={t.countryCurrentTab}
+              match={result.topCountryMatch}
+              dimensions={result.countryDimensionMatches}
+              distant={result.bottomCountryMatches}
+            />
+            {result.topHistoricalCountryMatch && (
+              <div style={{ marginTop: '5mm' }}>
+                <CountryBlock label={t.countryHistoricalTab} match={result.topHistoricalCountryMatch} />
+              </div>
+            )}
+          </section>
+        </div>
+
+        {/* PÁGINA 4: Personalidades (e Áreas se não houver livros recomendados) */}
+        <div className="rp-page">
+          <PageHeader topName={top.name} />
+
+          <section className="rp-sec">
+            <SectionHead title={t.personalitiesSectionTitle} />
+            <MatchCard
+              visual={<Img className="av-b" src={resolvePersonalityImageSrc(result.topPersonalityMatch.imagePath)} name={result.topPersonalityMatch.name} />}
+              compatibility={result.topPersonalityMatch.compatibility}
+              name={result.topPersonalityMatch.name}
+              tags={[result.topPersonalityMatch.role, result.topPersonalityMatch.lifespan].filter(Boolean)}
+              description={result.topPersonalityMatch.description}
+            />
+            <p className="lbl">{t.dimensionsTitleShort}</p>
+            <ul className="dims">
+              {result.dimensionMatches.map(({ dimension, match }) => (
+                <li className="dc" key={dimension}>
+                  <Img className="av-s" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
+                  <span className="dim">{t.dimensionLabels[dimension]}</span>
+                  <b>{match.name}</b>
                   <strong>{Math.round(match.compatibility)}%</strong>
                 </li>
               ))}
-            </ol>
+            </ul>
+            <FarList
+              title={t.personalitiesDistantTitle}
+              items={result.bottomPersonalityMatches.map((match) => ({ key: match.personalityId, name: match.name, caption: match.role }))}
+            />
           </section>
+
+          {!hasBooks && result.personalityMatches.length > 0 && (
+            <section className="rp-sec">
+              <SectionHead title={t.areasGeneralTitle} />
+              <ol className="rank">
+                {result.personalityMatches.map((match, index) => (
+                  <li className="rk" key={match.personalityId}>
+                    <span className="rk-n">{String(index + 1).padStart(2, '0')}</span>
+                    <Img className="av-m" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
+                    <div className="rk-i">
+                      <b>{match.name}</b>
+                      <small>{t.personalityCategories[match.category]}</small>
+                      <div className="bar">
+                        <i style={{ width: `${Math.max(0, Math.min(100, match.compatibility))}%` }} />
+                      </div>
+                    </div>
+                    <strong>{Math.round(match.compatibility)}%</strong>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+        </div>
+
+        {/* PÁGINA 5: Áreas de atuação + Livros recomendados (quando houver livros) */}
+        {hasBooks && (
+          <div className="rp-page">
+            <PageHeader topName={top.name} />
+
+            {result.personalityMatches.length > 0 && (
+              <section className="rp-sec">
+                <SectionHead title={t.areasGeneralTitle} />
+                <ol className="rank">
+                  {result.personalityMatches.map((match, index) => (
+                    <li className="rk" key={match.personalityId}>
+                      <span className="rk-n">{String(index + 1).padStart(2, '0')}</span>
+                      <Img className="av-m" src={resolvePersonalityImageSrc(match.imagePath)} name={match.name} />
+                      <div className="rk-i">
+                        <b>{match.name}</b>
+                        <small>{t.personalityCategories[match.category]}</small>
+                        <div className="bar">
+                          <i style={{ width: `${Math.max(0, Math.min(100, match.compatibility))}%` }} />
+                        </div>
+                      </div>
+                      <strong>{Math.round(match.compatibility)}%</strong>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
+
+            <section className="rp-sec">
+              <SectionHead title={t.booksTitle} />
+              <p className="intro">{t.report.booksIntro}</p>
+              <ul className="books">
+                {books.map((book, index) => (
+                  <li className={index === 0 ? 'bk top' : 'bk'} key={book.personalityId}>
+                    <div className="bk-top">
+                      <span className="bk-n">{String(index + 1).padStart(2, '0')}</span>
+                      <span className="tag tc">{t.booksWhy(Math.round(book.compatibility))}</span>
+                    </div>
+                    <div className="bk-a">
+                      <Img className="av-x" src={resolvePersonalityImageSrc(book.imagePath)} name={book.personalityName} />
+                      <div>
+                        <small>{index === 0 ? t.booksTopLabel : t.booksAuthorLabel}</small>
+                        <b>{book.personalityName}</b>
+                      </div>
+                    </div>
+                    <div className="bk-t">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2" />
+                        <path d="M4 19a2 2 0 0 1 2-2h13" />
+                      </svg>
+                      <div>
+                        <h4>{book.title}</h4>
+                        {book.year ? <span>{book.year < 0 ? t.booksYearBc(-book.year) : book.year}</span> : null}
+                      </div>
+                    </div>
+                    <a className="bk-btn" href={book.url} target="_blank" rel="sponsored noopener noreferrer">
+                      {t.booksCta} <AmazonIcon />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
         )}
 
-        {books.length > 0 && (
+        {/* PÁGINA 6: Partidos (Atual + Dimensões + Distantes + Histórico) */}
+        {showParties && result.topPartyMatch && (
+          <div className="rp-page">
+            <PageHeader topName={top.name} />
+
+            <section className="rp-sec">
+              <SectionHead title={t.partiesSectionTitle} />
+              <PartyBlock
+                label={t.partyCurrentTab}
+                match={result.topPartyMatch}
+                dimensions={result.partyDimensionMatches}
+                distant={result.bottomPartyMatches ?? []}
+              />
+              {result.topHistoricalPartyMatch && (
+                <div style={{ marginTop: '5mm' }}>
+                  <PartyBlock label={t.partyHistoricalTab} match={result.topHistoricalPartyMatch} />
+                </div>
+              )}
+            </section>
+          </div>
+        )}
+
+        {/* PÁGINA 7: Outras ideologias, Bússola política e Fechamento */}
+        <div className="rp-page">
+          <PageHeader topName={top.name} />
+
           <section className="rp-sec">
-            <SectionHead title={t.booksTitle} />
-            <p className="intro">{t.report.booksIntro}</p>
-            <ul className="books">
-              {books.map((book, index) => (
-                <li className={index === 0 ? 'bk top' : 'bk'} key={book.personalityId}>
-                  <div className="bk-top">
-                    <span className="bk-n">{String(index + 1).padStart(2, '0')}</span>
-                    <span className="tag tc">{t.booksWhy(Math.round(book.compatibility))}</span>
-                  </div>
-                  <div className="bk-a">
-                    <Img className="av-x" src={resolvePersonalityImageSrc(book.imagePath)} name={book.personalityName} />
-                    <div>
-                      <small>{index === 0 ? t.booksTopLabel : t.booksAuthorLabel}</small>
-                      <b>{book.personalityName}</b>
-                    </div>
-                  </div>
-                  <div className="bk-t">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2" />
-                      <path d="M4 19a2 2 0 0 1 2-2h13" />
-                    </svg>
-                    <div>
-                      <h4>{book.title}</h4>
-                      {book.year ? <span>{book.year < 0 ? t.booksYearBc(-book.year) : book.year}</span> : null}
-                    </div>
-                  </div>
-                  <a className="bk-btn" href={book.url} target="_blank" rel="sponsored noopener noreferrer">
-                    {t.booksCta} <AmazonIcon />
-                  </a>
+            <SectionHead title={t.otherMatches} />
+            <ul className="others">
+              {others.map((match) => (
+                <li className="oc" key={match.ideologyId} style={localCatStyle(match.category) as CSSProperties}>
+                  <span className="tag osol">{match.category}</span>
+                  <h3>{match.name}</h3>
+                  <p>{match.longDescription || match.description}</p>
                 </li>
               ))}
             </ul>
+            <div className="far-i" style={localCatStyle(result.bottomIdeologyMatch.category) as CSSProperties}>
+              <span className="lab">{t.ideologyDistantTitle}</span>
+              <b>{result.bottomIdeologyMatch.name}</b>
+              <span className="tag osol-l">{result.bottomIdeologyMatch.category}</span>
+              <p>{result.bottomIdeologyMatch.longDescription || result.bottomIdeologyMatch.description}</p>
+            </div>
           </section>
-        )}
 
-        <section className="rp-sec">
-          <SectionHead title={t.otherMatches} />
-          <ul className="others">
-            {others.map((match) => (
-              <li className="oc" key={match.ideologyId} style={localCatStyle(match.category) as CSSProperties}>
-                <span className="tag osol">{match.category}</span>
-                <h3>{match.name}</h3>
-                <p>{match.longDescription || match.description}</p>
-              </li>
-            ))}
-          </ul>
-          <div className="far-i" style={localCatStyle(result.bottomIdeologyMatch.category) as CSSProperties}>
-            <span className="lab">{t.ideologyDistantTitle}</span>
-            <b>{result.bottomIdeologyMatch.name}</b>
-            <span className="tag osol-l">{result.bottomIdeologyMatch.category}</span>
-            <p>{result.bottomIdeologyMatch.longDescription || result.bottomIdeologyMatch.description}</p>
-          </div>
-        </section>
+          {compass && (
+            <section className="rp-sec">
+              <SectionHead title={t.compassTitle} />
+              <Compass position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />
+            </section>
+          )}
 
-        {compass && (
-          <section className="rp-sec">
-            <SectionHead title={t.compassTitle} />
-            <Compass position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />
-          </section>
-        )}
-
-        <div className="close">
-          <div>
-            <p className="eb">{t.report.aboutTitle}</p>
-            <p>{t.report.aboutText}</p>
-          </div>
-          <div className="close-cta">
-            <b>{t.report.ctaTitle}</b>
-            <span>12axes.vercel.app</span>
+          <div className="close">
+            <div>
+              <p className="eb">{t.report.aboutTitle}</p>
+              <p>{t.report.aboutText}</p>
+            </div>
+            <div className="close-cta">
+              <b>{t.report.ctaTitle}</b>
+              <span>12axes.vercel.app</span>
+            </div>
           </div>
         </div>
       </div>
@@ -358,6 +428,15 @@ function Logo() {
     <span className="logo">
       <b>12</b> axes
     </span>
+  );
+}
+
+function PageHeader({ topName }: { topName: string }) {
+  return (
+    <header className="ph">
+      <Logo />
+      <span>{t.report.headerLabel(topName)}</span>
+    </header>
   );
 }
 
@@ -555,19 +634,20 @@ function TensionBlock({ tension, axes, axisResults }: {
   );
 }
 
-function MatchCard({ visual, compatibility, name, tags, description }: {
+function MatchCard({ visual, compatibility, name, tags, description, kickerPrefix }: {
   visual: ReactNode;
   compatibility: number;
   name: string;
   tags: string[];
   description: string;
+  kickerPrefix?: ReactNode;
 }) {
   return (
     <article className="mc">
       {visual}
       <div>
         <div className="tags">
-          <span className="tag tc">{t.matchTopKicker}</span>
+          {kickerPrefix}
           <span className="tag ts">
             {Math.round(compatibility)}% {t.matchWord}
           </span>
@@ -577,6 +657,61 @@ function MatchCard({ visual, compatibility, name, tags, description }: {
         <p>{description}</p>
       </div>
     </article>
+  );
+}
+
+function PartyBlock({ label, match, dimensions, distant }: {
+  label: string;
+  match: PartyMatch;
+  dimensions?: PartyDimensionMatch[];
+  distant?: PartyMatch[];
+}) {
+  const tag = (item: PartyMatch) =>
+    [item.category, item.historical ? item.period : '', item.countryName].filter((x): x is string => Boolean(x));
+  return (
+    <>
+      <div className="sub-h">
+        <span>{label}</span>
+      </div>
+      <MatchCard
+        visual={<Img className="lg-b" src={resolvePartyLogoSrc(match.logoPath)} name={match.name} />}
+        compatibility={match.compatibility}
+        name={match.name}
+        tags={tag(match)}
+        description={match.description}
+        kickerPrefix={
+          match.countryFlagPath ? (
+            <Img className="fl-tag" src={resolveCountryFlagSrc(match.countryFlagPath)} name={match.countryName} />
+          ) : null
+        }
+      />
+      {dimensions && dimensions.length > 0 && (
+        <>
+          <p className="lbl">{t.dimensionsTitleShort}</p>
+          <ul className="dims">
+            {dimensions.map(({ dimension, match: dimMatch }) => (
+              <li className="dc" key={dimension}>
+                <div className="v-wrap">
+                  <Img className="lg-s" src={resolvePartyLogoSrc(dimMatch.logoPath)} name={dimMatch.name} />
+                  {dimMatch.countryFlagPath && (
+                    <Img className="fl-mini" src={resolveCountryFlagSrc(dimMatch.countryFlagPath)} name={dimMatch.countryName} />
+                  )}
+                </div>
+                <span className="dim">{t.dimensionLabels[dimension]}</span>
+                <b>{dimMatch.name}</b>
+                <strong>{Math.round(dimMatch.compatibility)}%</strong>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {distant && distant.length > 0 && (
+        <FarList
+          title={t.partiesDistantTitle}
+          items={distant.map((item) => ({ key: item.partyId, name: item.name }))}
+        />
+      )}
+    </>
   );
 }
 

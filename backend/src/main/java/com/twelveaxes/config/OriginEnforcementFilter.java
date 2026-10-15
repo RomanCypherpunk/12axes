@@ -54,7 +54,7 @@ public class OriginEnforcementFilter extends OncePerRequestFilter {
     public OriginEnforcementFilter(
             @Value("${app.frontend-origins}") String origins,
             @Value("${app.origin-enforcement:true}") boolean enforcementEnabled,
-            @Value("${app.require-fetch-metadata:true}") boolean requireFetchMetadata,
+            @Value("${app.require-fetch-metadata:false}") boolean requireFetchMetadata,
             @Value("${app.access-sample-every:200}") int accessSampleEvery
     ) {
         this.allowedOrigins = Arrays.stream(origins.split(","))
@@ -78,6 +78,11 @@ public class OriginEnforcementFilter extends OncePerRequestFilter {
         }
 
         logBlocked(request, blockReason);
+        String origin = request.getHeader(HttpHeaders.ORIGIN);
+        if (origin != null && allowedOrigins.contains(normalize(origin))) {
+            response.setHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, origin);
+            response.setHeader(HttpHeaders.VARY, "Origin");
+        }
         response.setStatus(HttpStatus.FORBIDDEN.value());
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.setCharacterEncoding("UTF-8");

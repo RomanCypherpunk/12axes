@@ -8,6 +8,7 @@
     "build": "tsc --noEmit && vite build && node scripts/generate-pages.mjs",
     "generate:pages": "node scripts/generate-pages.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
+    "square:logo": "node scripts/square-logo.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

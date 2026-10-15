@@ -3,7 +3,7 @@ package com.twelveaxes.model;
 /**
  * Entrada leve do catalogo de comparacao (busca da tela de resultados).
  *
- * @param type "personality", "country" ou "ideology"
+ * @param type "personality", "country", "ideology" ou "party"
  * @param id identificador do perfil no catalogo do tipo
  * @param name nome exibido
  * @param caption linha de apoio: cargo (personalidade), periodo ou categoria (pais), categoria (ideologia)

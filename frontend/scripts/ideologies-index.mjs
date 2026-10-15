@@ -2,8 +2,8 @@
 // filtro por espectro e a "faixa" de 12 ícones de polo que resume o vetor de cada
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
 // das páginas de detalhe.
-
 import { poleSprite, poleUse } from './pole-icons.mjs';
+import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
 
 // Mesma paleta de frontend/src/utils/ideologyColors.ts, na ordem do espectro.
 export const SPECTRUM = [
@@ -176,12 +176,17 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
 
   const legend = dnaLegend(L.axes, escapeHtml);
 
+  const { drawerHtml, activeFiltersBar } = renderFilterDrawer({ axes: L.axes, locale, type: 'ideologies', escapeHtml });
+
   const sections = groups
     .map((g) => {
       const cards = g.items
         .map(
-          (i) =>
-            `<li class="ic" data-text="${escapeHtml(`${i.name} ${i.description}`.toLowerCase())}"><a href="${prefix}/ideologies/${i.id}"><h3>${escapeHtml(i.name)}</h3><p>${escapeHtml(i.description)}</p><span class="ic-foot">${dna(L.axes, profiles.get(i.id), escapeHtml)}<span class="go">${escapeHtml(t.viewProfile)} ${ARROW}</span></span></a></li>`
+          (i) => {
+            const vec = profiles.get(i.id);
+            const poles = buildCardPoles(L.axes, vec);
+            return `<li class="ic" data-text="${escapeHtml(`${i.name} ${i.description}`.toLowerCase())}" data-poles="${escapeHtml(poles)}"><a href="${prefix}/ideologies/${i.id}"><h3>${escapeHtml(i.name)}</h3><p>${escapeHtml(i.description)}</p><span class="ic-foot">${dna(L.axes, vec, escapeHtml)}<span class="go">${escapeHtml(t.viewProfile)} ${ARROW}</span></span></a></li>`;
+          }
         )
         .join('');
       return `<section class="cat" id="${g.key}" data-cat="${g.key}" style="${vars(g)}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(g.label)}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count"><b class="cc">${g.items.length}</b> ${escapeHtml(t.count)}</span></header><ul class="grid">${cards}</ul></section>`;
@@ -240,7 +245,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a></nav>
+  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a></nav>
   <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
 
@@ -257,10 +262,13 @@ ${poleSprite(L.axes)}
   <label class="search"><span class="sr">${escapeHtml(t.searchLabel)}</span>
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input id="q" type="search" placeholder="${escapeHtml(t.searchPlaceholder)}" autocomplete="off"></label>
+  ${renderFilterButton(locale)}
   <div class="chips" role="group" aria-label="${escapeHtml(t.filterAria)}">${chips}</div>
 </div></div>
+${drawerHtml}
 
 <main id="lista" class="wrap">
+  ${activeFiltersBar}
   <p class="result-info" id="info" aria-live="polite"></p>
   <p class="dna-note">${t.dnaNote}</p>
   <ul class="legend" aria-label="${escapeHtml(t.legendAria)}">${legend}</ul>
@@ -270,34 +278,8 @@ ${poleSprite(L.axes)}
 </main>
 <footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
 <script>
-const S=${scriptStrings};
-const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')],cats=[...document.querySelectorAll('.cat')];
-const info=document.getElementById('info'),empty=document.getElementById('empty');
-const norm=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();
-const cards=[...document.querySelectorAll('.ic')].map(li=>({li,t:norm(li.dataset.text),h:li.querySelector('h3'),name:li.querySelector('h3').textContent}));
-let active=null;
-function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
-function apply(){
-  const term=norm(q.value.trim());let shown=0;
-  cards.forEach(c=>{
-    const cat=c.li.closest('.cat').dataset.cat;
-    const ok=(!term||c.t.includes(term))&&(!active||cat===active);
-    c.li.hidden=!ok; if(ok)shown++;
-    const i=term&&ok?norm(c.name).indexOf(term):-1;
-    if(i>=0)c.h.innerHTML=esc(c.name.slice(0,i))+'<mark>'+esc(c.name.slice(i,i+term.length))+'</mark>'+esc(c.name.slice(i+term.length));else c.h.textContent=c.name;
-  });
-  cats.forEach(s=>{const n=s.querySelectorAll('.ic:not([hidden])').length;s.hidden=n===0;s.querySelector('.cc').textContent=n});
-  empty.classList.toggle('show',shown===0);
-  info.innerHTML=(term||active)?'<b>'+shown+'</b> '+S.found[shown===1?0:1]+'<button type="button" id="clear">'+esc(S.clear)+'</button>':'';
-  const cl=document.getElementById('clear'); if(cl) cl.onclick=()=>{q.value='';active=null;chips.forEach(c=>c.setAttribute('aria-pressed','false'));apply()};
-}
-q.addEventListener('input',apply);
-chips.forEach(ch=>ch.addEventListener('click',()=>{
-  active=active===ch.dataset.cat?null:ch.dataset.cat;
-  chips.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.cat===active)));apply();
-  if(active) document.getElementById(active).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-}));
-document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}});
+window.__SCRIPT_STRINGS__=${scriptStrings};
+${renderClientFilterScript({ cardSelector: '.ic', hasHistorical: false, locale })}
 </script>
   </body>
 </html>`;
@@ -415,4 +397,5 @@ mark{background:var(--cb);color:inherit;border-radius:3px;padding:0 1px}
   .cta{flex-direction:column;align-items:flex-start;padding:32px 24px;border-radius:24px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+${FILTERS_CSS}
 `;

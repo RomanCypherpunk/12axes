@@ -3,18 +3,27 @@ import type { CompareDetail, CompareItem, CompareType, QuizPayload, QuizResult, 
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
-async function request<T>(path: string, options?: RequestInit): Promise<T> {
+async function request<T>(path: string, options?: RequestInit, retries = 1): Promise<T> {
   // Content-Type só quando há corpo: num GET ele transforma a chamada entre origens em uma
   // requisição "não simples", e o navegador gasta uma ida e volta extra (preflight OPTIONS).
   const headers = options?.body ? { 'Content-Type': 'application/json', ...options.headers } : options?.headers;
-  const response = await fetch(`${API_URL}${path}`, { ...options, headers });
+  try {
+    const response = await fetch(`${API_URL}${path}`, { ...options, headers });
 
-  if (!response.ok) {
-    const message = await response.text();
-    throw new Error(formatApiError(message, response.status));
+    if (!response.ok) {
+      const message = await response.text();
+      throw new Error(formatApiError(message, response.status));
+    }
+
+    return response.json() as Promise<T>;
+  } catch (err) {
+    const isGet = !options?.method || options.method.toUpperCase() === 'GET';
+    if (isGet && retries > 0 && err instanceof TypeError) {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      return request<T>(path, options, retries - 1);
+    }
+    throw err;
   }
-
-  return response.json() as Promise<T>;
 }
 
 function formatApiError(message: string, status: number): string {

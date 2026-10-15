@@ -23,13 +23,24 @@ class CompareControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void catalogListsAllThreeTypes() throws Exception {
+    void catalogListsAllFourTypes() throws Exception {
         mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()", greaterThan(600)))
                 .andExpect(jsonPath("$[?(@.type=='personality')]").isNotEmpty())
                 .andExpect(jsonPath("$[?(@.type=='country')]").isNotEmpty())
-                .andExpect(jsonPath("$[?(@.type=='ideology')]").isNotEmpty());
+                .andExpect(jsonPath("$[?(@.type=='ideology')]").isNotEmpty())
+                .andExpect(jsonPath("$[?(@.type=='party')]").isNotEmpty());
+    }
+
+    @Test
+    void partyCaptionShowsTheAssociatedCountryAndComparisonWorks() throws Exception {
+        mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua')].caption").value("Estados Unidos"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua-new-deal')].caption")
+                        .value("Estados Unidos do New Deal · 1933–1945"))
+                .andExpect(jsonPath("$[?(@.id=='partido-republicano-eua')].imagePath")
+                        .value("/parties/logos/partido-republicano-eua.png"));
     }
 
     @Test
@@ -73,6 +84,19 @@ class CompareControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.item.type").value("ideology"))
                 .andExpect(jsonPath("$.vector.length()").value(12));
+    }
+
+    @Test
+    void comparesWithAPartyAndKeepsItsCountryAndLogo() throws Exception {
+        mockMvc.perform(get("/api/compare").param("type", "party").param("id", "vox").param("v", CENTER))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.item.type").value("party"))
+                .andExpect(jsonPath("$.item.name").value("Vox"))
+                .andExpect(jsonPath("$.item.caption").value("Espanha"))
+                .andExpect(jsonPath("$.item.imagePath").value("/parties/logos/vox.png"))
+                .andExpect(jsonPath("$.vector.length()").value(12));
+        mockMvc.perform(get("/api/compare").param("type", "party").param("id", "nobody").param("v", CENTER))
+                .andExpect(status().isNotFound());
     }
 
     @Test

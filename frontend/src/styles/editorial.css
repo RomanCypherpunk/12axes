@@ -406,10 +406,13 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-match .e-flagbig{width:220px;height:146px;object-fit:cover;border-radius:12px;border:1px solid var(--borda)}
 .e-match .e-portrait{width:128px;height:128px;object-fit:cover;border-radius:24px}
 .e-match-info{min-width:0}
-.e-match-tags{display:flex;flex-wrap:wrap;gap:6px}
+.e-match-tags{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:10px}
+.e-match-tags:not(:has(:not(.e-match-pill))){display:none}
+/* bandeira do país do partido: miniatura proporcional */
+.e-flagmini{width:45px;height:30px;object-fit:cover;border-radius:5px;border:1px solid var(--borda);box-sizing:border-box;flex:none}
 .e-match-pill{display:none}
 .e-match .e-tag{font-size:12px;padding:5px 12px}
-.e-match h3{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;line-height:1.08;margin:12px 0 6px;overflow-wrap:anywhere}
+.e-match h3{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;line-height:1.08;margin:0 0 6px;overflow-wrap:anywhere}
 .e-match-info p{font-size:14px;color:var(--texto-suave);margin:0}
 .ed .e-more{margin-top:20px;padding-top:18px;border-top:1px solid rgba(16,16,16,.1);border-bottom:0}
 .ed .e-more summary{display:inline-flex;justify-content:flex-start;align-items:center;gap:10px;padding:0;cursor:pointer;list-style:none;font-family:inherit;font-size:13.5px;font-weight:600;letter-spacing:0;color:var(--cat)}
@@ -420,11 +423,18 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-sub{font:600 12px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave);margin:30px 0 12px}
 .e-dims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .e-dim-row{display:grid;grid-template-columns:1fr auto;grid-template-areas:"v v" "t p";align-items:end;gap:14px 12px;border:1px solid var(--borda);border-radius:20px;padding:16px;background:var(--papel);min-width:0}
-.e-dim-row>:not(.e-card-info):not(div):not(.e-pctc){grid-area:v;align-self:center;justify-self:start}
-.e-dim-row>div{grid-area:t;min-width:0;line-height:1.3}
+.e-dim-row>.e-dim-visual,.e-dim-row>:not(.e-card-info):not(div):not(.e-pctc){grid-area:v;align-self:center;justify-self:start}
+.e-dim-row>div:not(.e-dim-visual){grid-area:t;min-width:0;line-height:1.3}
 .e-dim-row>.e-pctc{grid-area:p}
+.e-dim-visual{display:inline-flex;align-items:center;gap:8px}
+.e-dim-visual .e-flagmini{width:42px;height:28px}
 .e-dim-row .e-avatar{width:46px;height:46px}
 .e-flagimg{width:84px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--borda)}
+.e-logoimg{width:56px;height:56px;object-fit:contain;padding:4px;box-sizing:border-box;background:#fff;border-radius:12px;border:1px solid var(--borda)}
+.e-dim-row .e-logoimg{width:46px;height:46px;padding:3px;border-radius:10px}
+/* logos 1:1 de partidos/organizações: fundo claro para qualquer símbolo, sem cortar nem distorcer */
+.e-match .e-logobig{width:146px;height:146px;object-fit:contain;padding:12px;box-sizing:border-box;background:#fff;border-radius:20px;border:1px solid var(--borda)}
+
 .e-avatar{width:72px;height:72px;object-fit:cover;border-radius:50%}
 .e-dim{display:block;font-size:10.5px;font-weight:600;color:var(--cat);text-transform:uppercase;letter-spacing:.14em}
 .e-dim-row strong{display:block;font-size:14.5px;line-height:1.3;margin-top:3px;overflow-wrap:anywhere}
@@ -502,7 +512,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 @media (max-width:720px){
   .e-res{padding:32px 0 64px}.e-panel{padding:24px 18px}.e-panel.e-top{padding:0}.e-top-head{padding:22px 18px 18px}.e-top-head{flex-wrap:wrap}.e-top-head h2{font-size:30px;overflow-wrap:anywhere}.e-top-head .e-ring{width:88px!important;height:88px!important}.e-top-head .e-ring strong{font-size:20px}.e-top-head{padding:22px 18px;align-items:flex-start}
   .e-phrase{grid-template-columns:1fr;gap:4px}.e-top-body{margin:0 18px}.e-phrase .e-q{font-size:80px;line-height:.6}
-  .e-match{padding:20px 16px}.e-match-top{grid-template-columns:1fr;justify-items:center;text-align:center;gap:16px}.e-match-top>.e-ring{display:none}.e-match-pill{display:inline-block}.e-match .e-flagbig{width:100%;max-width:300px;height:auto;max-height:none;aspect-ratio:3/2;object-fit:cover}.e-match .e-portrait{width:120px;height:120px;border-radius:24px}.e-match-tags{justify-content:center}.e-match h3{font-size:24px;margin:12px 0 4px}.e-match-info p{font-size:13px}.ed .e-more{margin-top:16px;padding-top:14px}
+  .e-match .e-logobig{width:120px;height:120px;aspect-ratio:1/1;max-width:none;max-height:none}
+  .e-match{padding:20px 16px}.e-match-top{grid-template-columns:1fr;justify-items:center;text-align:center;gap:16px}.e-match-top>.e-ring{display:none}.e-match-pill{display:inline-block}.e-match .e-flagbig{width:100%;max-width:300px;height:auto;max-height:none;aspect-ratio:3/2;object-fit:cover}.e-match .e-portrait{width:120px;height:120px;border-radius:24px}.e-match-tags{display:flex;justify-content:center}.e-match h3{font-size:24px;margin:12px 0 4px}.e-match-info p{font-size:13px}.ed .e-more{margin-top:16px;padding-top:14px}
   .e-match:has(.e-portrait){display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:start;text-align:left}
   .e-match:has(.e-portrait) .e-match-top,.e-match:has(.e-portrait) .e-match-info{display:contents}
   .e-match:has(.e-portrait) .e-match-top,.e-match:has(.e-portrait) .e-match-info{text-align:left;justify-items:start}
@@ -655,6 +666,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-compat[data-level="veryHigh"],.e-compat[data-level="high"]{color:var(--floresta)}
 .e-compat[data-level="low"],.e-compat[data-level="veryLow"]{color:var(--carmim)}
 .e-person-sheet-head .e-flagimg{flex:none}
+.e-person-sheet-head .e-logoimg{width:72px;height:72px;padding:8px;box-sizing:border-box;flex:none;object-fit:contain;background:#fff;border-radius:16px;border:1px solid var(--borda)}
 /* aba de personalidade: o que te aproxima */
 .e-close{margin-top:18px;padding-top:16px;border-top:1px solid var(--borda)}
 .e-close-title{margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave)}
@@ -669,6 +681,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-close-you svg{width:16px;height:16px;fill:currentColor}
 .e-close-them{background:var(--superficie);z-index:1}
 .e-close-face{display:block;width:28px;height:28px;border-radius:50%;object-fit:cover}
+.e-logoimg.e-close-face{padding:2px;border-radius:6px;object-fit:contain}
 .e-close-poles{display:flex;justify-content:space-between;margin-top:12px;font-size:11.5px;color:var(--texto-suave)}
 /* a aba e renderizada no <body>, fora de .ed: precisa do mesmo box-sizing do tema */
 .e-axis-sheet-backdrop,.e-axis-sheet-backdrop *{box-sizing:border-box}
@@ -681,8 +694,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 @media (max-width:760px){
   .e-axis-sheet{max-height:calc(100dvh - 40px)}
   .e-person-sheet-head{gap:12px;margin-right:40px}
-  .e-person-sheet-head .e-avatar,.e-person-sheet-head .e-flagimg{width:64px;height:auto;aspect-ratio:auto}
-  .e-person-sheet-head .e-avatar{height:64px}
+  .e-person-sheet-head .e-avatar,.e-person-sheet-head .e-flagimg,.e-person-sheet-head .e-logoimg{width:64px;height:auto;aspect-ratio:auto}
+  .e-person-sheet-head .e-avatar,.e-person-sheet-head .e-logoimg{height:64px}
   .e-person-sheet-head h3{font-size:20px}
 }
 

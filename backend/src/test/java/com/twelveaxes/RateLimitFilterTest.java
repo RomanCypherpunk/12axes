@@ -35,9 +35,13 @@ class RateLimitFilterTest {
             mockMvc.perform(get("/api/results/by-axes").param("v", AXES_VECTOR).header("X-Forwarded-For", ip))
                     .andExpect(status().isOk());
         }
-        mockMvc.perform(get("/api/results/by-axes").param("v", AXES_VECTOR).header("X-Forwarded-For", ip))
+        mockMvc.perform(get("/api/results/by-axes")
+                        .param("v", AXES_VECTOR)
+                        .header("X-Forwarded-For", ip)
+                        .header(HttpHeaders.ORIGIN, "https://12axes.vercel.app"))
                 .andExpect(status().isTooManyRequests())
                 .andExpect(header().exists(HttpHeaders.RETRY_AFTER))
+                .andExpect(header().string(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "https://12axes.vercel.app"))
                 .andExpect(jsonPath("$.error").value("too_many_requests"));
     }
 

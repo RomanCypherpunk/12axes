@@ -246,7 +246,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries" aria-current="page">${esc(L.s.navCountries)}</a></nav>
+  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries" aria-current="page">${esc(L.s.navCountries)}</a><a href="${prefix}/parties">${esc(L.s.navParties)}</a></nav>
   <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
 </div></header>
 

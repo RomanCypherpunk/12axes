@@ -35,7 +35,7 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
     },
     {
-      "source": "/(ideologies|personalities|countries|profile|books).css",
+      "source": "/(ideologies|personalities|countries|parties|profile|books).css",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600, must-revalidate" }]
     },
     {
