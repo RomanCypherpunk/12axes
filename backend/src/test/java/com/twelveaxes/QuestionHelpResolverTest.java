@@ -23,7 +23,7 @@ class QuestionHelpResolverTest {
     }
 
     private static QuestionHelpEntry entry(String id, String agree, String disagree, String note) {
-        return new QuestionHelpEntry(id, agree, disagree, note);
+        return new QuestionHelpEntry(id, agree, disagree, note, null, null);
     }
 
     @Test
@@ -36,6 +36,17 @@ class QuestionHelpResolverTest {
         assertThat(result.get(0).help().note()).isEqualTo("aviso");
         assertThat(result.get(1).help().note()).isNull();
         assertThat(result.get(2).help()).isNull();
+    }
+
+    @Test
+    void keepsExamplesAndTurnsBlankOnesIntoNull() {
+        List<Question> result = QuestionHelpResolver.attach(
+                List.of(question("a")),
+                List.of(new QuestionHelpEntry("a", "sim", "não", null, "Suíça", " ")),
+                "test");
+
+        assertThat(result.get(0).help().agreeExample()).isEqualTo("Suíça");
+        assertThat(result.get(0).help().disagreeExample()).isNull();
     }
 
     @Test

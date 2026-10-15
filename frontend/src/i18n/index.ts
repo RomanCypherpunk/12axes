@@ -132,6 +132,7 @@ interface Strings {
   questionHelpAgree: string;
   questionHelpDisagree: string;
   questionHelpNote: string;
+  questionHelpExample: string;
   closeLabel: string;
   personalityInfoAria: (name: string) => string;
   closenessTitle: string;
@@ -516,6 +517,7 @@ const pt: Strings = {
   questionHelpAgree: 'Se você concorda',
   questionHelpDisagree: 'Se você discorda',
   questionHelpNote: 'Vale lembrar',
+  questionHelpExample: 'Exemplo',
   closeLabel: 'Fechar',
   personalityInfoAria: (name) => `Ver detalhes de ${name}`,
   closenessTitle: 'O que te aproxima',
@@ -1161,6 +1163,7 @@ const en: Strings = {
   questionHelpAgree: 'If you agree',
   questionHelpDisagree: 'If you disagree',
   questionHelpNote: 'Worth remembering',
+  questionHelpExample: 'Example',
   closeLabel: 'Close',
   personalityInfoAria: (name) => `See details about ${name}`,
   closenessTitle: 'What brings you closer',
