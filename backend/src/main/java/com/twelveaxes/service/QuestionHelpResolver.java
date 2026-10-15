@@ -41,9 +41,13 @@ public final class QuestionHelpResolver {
             if (entry == null) {
                 return question.withHelp(null);
             }
-            String note = isBlank(entry.note()) ? null : entry.note();
-            return question.withHelp(new QuestionHelp(entry.agree(), entry.disagree(), note));
+            return question.withHelp(new QuestionHelp(entry.agree(), entry.disagree(), orNull(entry.note()),
+                    orNull(entry.agreeExample()), orNull(entry.disagreeExample())));
         }).toList();
+    }
+
+    private static String orNull(String value) {
+        return isBlank(value) ? null : value;
     }
 
     private static boolean isBlank(String value) {

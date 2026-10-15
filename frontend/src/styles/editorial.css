@@ -823,6 +823,14 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-cmp-sheet .e-axis-sheet-handle{margin-bottom:6px}
 }
 
+/* Aba "Sobre esta pergunta" (quiz): mais larga no desktop para caber o texto sem rolagem */
+@media (min-width:761px){
+  .e-axis-sheet.e-question-sheet{width:min(720px,100%);max-height:calc(100dvh - 48px);padding:24px 28px 22px}
+}
+@media (max-width:760px){
+  .e-axis-sheet.e-question-sheet{width:100%;max-height:calc(100dvh - 72px);padding:20px 18px calc(24px + env(safe-area-inset-bottom))}
+}
+
 /* ── Bússola política (resultados) ───────────────────────────────────────── */
 .e-compass{position:relative}
 .e-compass h2{margin-bottom:22px}

@@ -31,6 +31,8 @@ export interface QuestionHelp {
   agree: string;
   disagree: string;
   note?: string | null;
+  agreeExample?: string | null;
+  disagreeExample?: string | null;
 }
 
 export interface Question {

@@ -109,11 +109,11 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
   );
 }
 
-// O que concordar e discordar significam; a nota avisa quem pensa fora do enquadramento da pergunta.
+// O que concordar e discordar significam, com um país real de cada lado quando houver; a nota avisa quem pensa fora do enquadramento da pergunta.
 function QuestionHelpContent({ help }: { help: QuestionHelp }) {
   const sides = [
-    { key: 'agree', label: t.questionHelpAgree, text: help.agree },
-    { key: 'disagree', label: t.questionHelpDisagree, text: help.disagree }
+    { key: 'agree', label: t.questionHelpAgree, text: help.agree, example: help.agreeExample },
+    { key: 'disagree', label: t.questionHelpDisagree, text: help.disagree, example: help.disagreeExample }
   ];
   return (
     <>
@@ -130,6 +130,9 @@ function QuestionHelpContent({ help }: { help: QuestionHelp }) {
               {side.label}
             </h4>
             <p>{side.text}</p>
+            {side.example && (
+              <p className="e-question-example"><strong>{t.questionHelpExample}:</strong> {side.example}</p>
+            )}
           </section>
         ))}
       </div>

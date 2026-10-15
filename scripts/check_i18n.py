@@ -65,7 +65,7 @@ for locale_dir in sorted((ROOT / "i18n").iterdir()):
         if not isinstance(match, list) or any(not isinstance(m, str) or not m.strip() for m in match):
             errors.append(f"{locale_dir.name}/glossary: {term_id} has invalid match")
 # Explicação de cada pergunta (o que concordar e discordar significam): toda pergunta precisa
-# de entrada na fonte e em cada idioma; note é opcional.
+# de entrada na fonte e em cada idioma; note é opcional, e os exemplos vêm aos pares.
 question_ids = set(read_items(ROOT / "questions-pool.json"))
 help_sources = [("question-help", ROOT / "question-help.json")] + [
     (f"{d.name}/question-help", d / "question-help.json")
@@ -84,8 +84,11 @@ for label, path in help_sources:
         for field in ("agree", "disagree"):
             if not isinstance(entry.get(field), str) or not entry[field].strip():
                 errors.append(f"{label}: {qid} missing {field}")
-        if "note" in entry and (not isinstance(entry["note"], str) or not entry["note"].strip()):
-            errors.append(f"{label}: {qid} has an empty note")
+        for field in ("note", "agreeExample", "disagreeExample"):
+            if field in entry and (not isinstance(entry[field], str) or not entry[field].strip()):
+                errors.append(f"{label}: {qid} has an empty {field}")
+        if ("agreeExample" in entry) != ("disagreeExample" in entry):
+            errors.append(f"{label}: {qid} needs both examples or neither")
 for term_id, entry in glossary.items():
     if not entry.get("match"):
         errors.append(f"glossary: {term_id} has no match in the source language")
