@@ -29,8 +29,8 @@ export function catalogueDevPlugin(): Plugin {
       server.middlewares.use(async (req, res, next) => {
         if (req.method !== 'GET' && req.method !== 'HEAD') return next();
         const path = (req.url ?? '/').split('?')[0].replace(/\/+$/, '');
-        const catalogue = /^\/(?:en\/)?(?:ideologies|personalities|countries|books|livros)(?:\/[a-z0-9-]+)?(?:\.html)?$/.test(path);
-        const stylesheet = /^\/(?:ideologies|personalities|countries|profile|books)\.css$/.test(path);
+        const catalogue = /^\/(?:en\/)?(?:ideologies|personalities|countries|parties|books|livros)(?:\/[a-z0-9-]+)?(?:\.html)?$/.test(path);
+        const stylesheet = /^\/(?:ideologies|personalities|countries|parties|profile|books)\.css$/.test(path);
         if (!catalogue && !stylesheet) return next();
 
         try {

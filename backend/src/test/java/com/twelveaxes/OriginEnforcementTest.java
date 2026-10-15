@@ -56,16 +56,17 @@ class OriginEnforcementTest {
                             .param("v", AXES_VECTOR)
                             .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
                             .header(FETCH_SITE, "cross-site"))
-                    .andExpect(status().isForbidden());
+                    .andExpect(status().isForbidden())
+                    .andExpect(header().string(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, ALLOWED_ORIGIN));
         }
 
         @Test
-        void blocksForgedOriginWithoutFetchMetadata() throws Exception {
+        void allowsAllowlistedOriginWithoutFetchMetadata() throws Exception {
             mockMvc.perform(get("/api/results/by-axes")
                             .param("v", AXES_VECTOR)
                             .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
                             .header(HttpHeaders.USER_AGENT, BROWSER_UA))
-                    .andExpect(status().isForbidden());
+                    .andExpect(status().isOk());
         }
 
         @Test
@@ -82,7 +83,8 @@ class OriginEnforcementTest {
                             .header(HttpHeaders.ORIGIN, CLONE_ORIGIN)
                             .header(HttpHeaders.USER_AGENT, BROWSER_UA)
                             .header(FETCH_SITE, "cross-site"))
-                    .andExpect(status().isForbidden());
+                    .andExpect(status().isForbidden())
+                    .andExpect(header().doesNotExist(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN));
         }
 
         @Test
@@ -111,16 +113,26 @@ class OriginEnforcementTest {
     @Nested
     @SpringBootTest
     @AutoConfigureMockMvc
-    @TestPropertySource(properties = {"app.origin-enforcement=true", "app.require-fetch-metadata=false"})
-    class FetchMetadataOptional {
+    @TestPropertySource(properties = {"app.origin-enforcement=true", "app.require-fetch-metadata=true"})
+    class FetchMetadataStrict {
         @Autowired
         private MockMvc mockMvc;
 
         @Test
-        void allowsAllowlistedOriginWithoutFetchMetadataWhenFlagIsOff() throws Exception {
-            mockMvc.perform(get("/api/quiz")
+        void blocksForgedOriginWithoutFetchMetadataWhenFlagIsOn() throws Exception {
+            mockMvc.perform(get("/api/results/by-axes")
+                            .param("v", AXES_VECTOR)
                             .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
                             .header(HttpHeaders.USER_AGENT, BROWSER_UA))
+                    .andExpect(status().isForbidden());
+        }
+
+        @Test
+        void allowsWithFetchMetadata() throws Exception {
+            mockMvc.perform(get("/api/quiz")
+                            .header(HttpHeaders.ORIGIN, ALLOWED_ORIGIN)
+                            .header(HttpHeaders.USER_AGENT, BROWSER_UA)
+                            .header(FETCH_SITE, "cross-site"))
                     .andExpect(status().isOk());
         }
 

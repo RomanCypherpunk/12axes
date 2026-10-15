@@ -15,9 +15,9 @@ por um modelo fraco) e ficaram com qualidade ruim. O processo atual reaudita cad
 de forma isolada, respondendo as 240 perguntas uma a uma com um modelo de qualidade (não use modelos
 rápidos/baratos tipo Haiku — a qualidade cai visivelmente).
 
-## Os três catálogos
+## Os quatro catálogos
 
-O mesmo processo se aplica a três catálogos independentes. Trabalhe um catálogo de cada vez (não
+O mesmo processo se aplica a quatro catálogos independentes. Trabalhe um catálogo de cada vez (não
 misture perfis de catálogos diferentes no mesmo lote).
 
 | Catálogo | Metadados (fonte) | Perfis salvos (destino) | Campos usados no prompt |
@@ -25,20 +25,28 @@ misture perfis de catálogos diferentes no mesmo lote).
 | `personality` | `backend/src/main/resources/data/personalities.json` | `backend/src/main/resources/data/personality-profiles.json` (chave `personalityId`) | `id`, `name`, `role`, `lifespan`, `description` |
 | `ideology` | `backend/src/main/resources/data/ideologies.json` | `backend/src/main/resources/data/ideology-profiles.json` (chave `ideologyId`) | `id`, `name`, `category`, `description` |
 | `country` | `backend/src/main/resources/data/countries.json` | `backend/src/main/resources/data/countries-profiles.json` (chave `countryId`) | `id`, `name`, `category`, `description` (ver nota sobre `historical`/`period` abaixo) |
+| `party` | `backend/src/main/resources/data/parties.json` | `backend/src/main/resources/data/parties-profiles.json` (chave `partyId`) | `id`, `name`, `category`, país associado (só contexto), `historical`/`period`, `description` (ver nota sobre `party` abaixo) |
 
 Nota sobre `country`: perfis com `"historical": true` representam um país em um período específico
 (ex.: "Alemanha Nazista — Terceiro Reich", `period` preenchido). Inclua isso na descrição passada ao
 subagente para que ele responda como aquele período específico, não o país atual.
 
+Nota sobre `party` (partidos, movimentos, casas dinásticas, organizações armadas e internacionais):
+cada perfil tem um `countryId` obrigatório (país atual ou histórico do catálogo) e, quando
+`historical` é `true`, um `period`. O subagente responde **como o próprio partido/grupo/organização,
+pela prática real e pelas ideias e valores programáticos**, nunca pelo país como um todo. A mesma
+organização em eras diferentes é um perfil por era (`partido-republicano-eua` e
+`partido-republicano-eua-new-deal`). Ver `NEW_PROFILE.md`, seção "Catálogo `party`".
+
 As 240 perguntas (`questions-template.txt`) e a fórmula de cálculo do vetor são **as mesmas para os
-três catálogos** — só mudam os metadados de entrada e o arquivo de saída.
+quatro catálogos** — só mudam os metadados de entrada e o arquivo de saída.
 
 ## Arquivos desta pasta
 
 | Arquivo/pasta | O que é |
 |---|---|
 | `README.md` | Este arquivo — leia primeiro. |
-| `STATE.json` | **Fonte única de verdade** do progresso, um bloco por catálogo (`personality`, `ideology`, `country`), cada um com `pending` e `done`. |
+| `STATE.json` | **Fonte única de verdade** do progresso, um bloco por catálogo (`personality`, `ideology`, `country`, `party`), cada um com `pending` e `done`. |
 | `questions-template.txt` | As 240 perguntas (12 eixos × 20), prontas para colar em qualquer prompt novo, de qualquer catálogo. Não editar sem necessidade. |
 | `profile_vector.py` | Cálculo único do vetor (240 perguntas + perguntas de arquétipo, igual ao `ScoringService.java`) e gerador do bloco de perguntas de arquétipo do prompt (`--prompt-block`). Usado pelo merge e pelo `validate.py`. |
 | `prompts/<catalog>/<id>.txt` | Prompt já montado para um perfil específico, pronto para mandar a um subagente. Fora de processamento, deve conter só **um arquivo de exemplo** por catálogo (ver passo 7), para uma IA nova entender o formato sem contexto prévio. |
@@ -69,7 +77,7 @@ Use este bloco como trava anti-confusão antes de auditar qualquer perfil. A ref
 
 ## O processo, passo a passo
 
-Escolha um catálogo (`personality`, `ideology` ou `country`) e repita este ciclo até
+Escolha um catálogo (`personality`, `ideology`, `country` ou `party`) e repita este ciclo até
 `STATE.json.<catalog>.pending` ficar vazio.
 
 ### 1. Escolher o próximo lote de 15
@@ -97,8 +105,10 @@ Para cada ID do lote:
 3. Salve em `prompts/<catalog>/<id>.txt`.
 
 **Template do cabeçalho** — adapte `{tipo de perfil}` conforme o catálogo (`"figura histórica/pública"`
-para personality, `"ideologia política"` para ideology, `"país/nação"` para country) e os campos
-disponíveis (`role`+`lifespan` só existem em personality; use `category` para ideology/country):
+para personality, `"ideologia política"` para ideology, `"país/nação"` para country,
+`"partido/organização política"` para party) e os campos
+disponíveis (`role`+`lifespan` só existem em personality; use `category` para ideology/country/party;
+em party inclua também o país associado e `historical`/`period`):
 
 ```
 Você está auditando, pergunta a pergunta e de forma totalmente independente, o perfil "{name}" (catálogo: {tipo de perfil}) nos 12 eixos políticos do projeto 12axes. Avalie ESTE perfil sozinho — você não tem (e não deve imaginar) as respostas dadas a nenhum outro perfil.
@@ -189,19 +199,20 @@ O perfil é calculado **como um usuário do quiz**: as 240 perguntas mais as per
    mais as alternativas de arquétipo que tocam o eixo), arredondada a 1 casa decimal.
 
 Script de referência (Python, execute a partir da raiz do repo — troque `CATALOG` e os nomes de
-arquivo/chave conforme a tabela da seção "Os três catálogos"):
+arquivo/chave conforme a tabela da seção "Os quatro catálogos"):
 
 ```python
 import json, sys
 sys.path.insert(0, 'profile-audit')
 from profile_vector import compute_vector, AXIS_ORDER  # 240 perguntas + arquétipo
 
-CATALOG = "personality"  # ou "ideology" / "country"
-KEY_FIELD = {"personality": "personalityId", "ideology": "ideologyId", "country": "countryId"}[CATALOG]
+CATALOG = "personality"  # ou "ideology" / "country" / "party"
+KEY_FIELD = {"personality": "personalityId", "ideology": "ideologyId", "country": "countryId", "party": "partyId"}[CATALOG]
 PROFILES_FILE = {
     "personality": "backend/src/main/resources/data/personality-profiles.json",
     "ideology": "backend/src/main/resources/data/ideology-profiles.json",
     "country": "backend/src/main/resources/data/countries-profiles.json",
+    "party": "backend/src/main/resources/data/parties-profiles.json",
 }[CATALOG]
 
 ids_neste_lote = [...]  # os 15 ids do lote
@@ -285,7 +296,7 @@ Se as perguntas de arquétipo mudarem, os vetores já mesclados continuam com as
 - **Nunca** use um modelo fraco/rápido para gerar as respostas — a qualidade cai visivelmente.
 - **Nunca** aproxime as respostas de um perfil às de outro perfil parecido — cada perfil é avaliado
   isoladamente, é essa independência que resolve o problema histórico de duplicação de sequências.
-- **Nunca** misture perfis de catálogos diferentes (personality/ideology/country) no mesmo lote.
+- **Nunca** misture perfis de catálogos diferentes (personality/ideology/country/party) no mesmo lote.
 - **Sempre** faça o merge + atualização do `STATE.json` + limpeza automaticamente ao fim de cada
   lote validado — não é preciso perguntar para isso, só para iniciar o **próximo** lote.
 - `STATE.json` é a única fonte de verdade de progresso. Não recrie arquivos `.personality-todo.json`

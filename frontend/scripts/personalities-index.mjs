@@ -3,6 +3,7 @@
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
+import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';
 
 // Ordem das áreas no catálogo (a mesma do mockup de docs/).
 export const AREA_ORDER = ['politico', 'teorico', 'filosofo', 'economista', 'intelectual', 'ativista', 'religioso', 'empresario'];
@@ -182,10 +183,14 @@ export function personalitiesIndexPage(L, { locale, site, gaSnippet, escapeHtml,
     .join('');
 
   const legend = dnaLegend(L.axes, escapeHtml);
+  const { drawerHtml, activeFiltersBar } = renderFilterDrawer({ axes: L.axes, locale, type: 'personalities', escapeHtml });
 
   const card = (p) => {
     const text = [p.name, p.role, p.lifespan, p.description].filter(Boolean).join(' ').toLowerCase();
-    return `<li class="pc" data-text="${escapeHtml(text)}"><a href="${prefix}/personalities/${p.id}"><span class="pc-top"><span class="ph" data-i="${escapeHtml(initials(p.name))}"><img src="${p.imagePath}" alt="${escapeHtml(t.portraitAlt(p.name))}" width="72" height="72" loading="lazy" decoding="async"></span><span class="pc-id"><h3>${escapeHtml(p.name)}</h3><span class="meta">${escapeHtml(p.role)}</span>${p.lifespan ? `<span class="life">${escapeHtml(p.lifespan)}</span>` : ''}</span></span><p>${escapeHtml(p.description)}</p><span class="ic-foot">${dna(L.axes, profiles.get(p.id), escapeHtml)}<span class="go">${escapeHtml(t.viewProfile)} ${ARROW}</span></span></a></li>`;
+    const vec = profiles.get(p.id);
+    const poles = buildCardPoles(L.axes, vec);
+    const rels = (p.religions || []).join(' ');
+    return `<li class="pc" data-text="${escapeHtml(text)}" data-poles="${escapeHtml(poles)}" data-religions="${escapeHtml(rels)}"><a href="${prefix}/personalities/${p.id}"><span class="pc-top"><span class="ph" data-i="${escapeHtml(initials(p.name))}"><img src="${p.imagePath}" alt="${escapeHtml(t.portraitAlt(p.name))}" width="72" height="72" loading="lazy" decoding="async"></span><span class="pc-id"><h3>${escapeHtml(p.name)}</h3><span class="meta">${escapeHtml(p.role)}</span>${p.lifespan ? `<span class="life">${escapeHtml(p.lifespan)}</span>` : ''}</span></span><p>${escapeHtml(p.description)}</p><span class="ic-foot">${dna(L.axes, vec, escapeHtml)}<span class="go">${escapeHtml(t.viewProfile)} ${ARROW}</span></span></a></li>`;
   };
 
   const sections = groups
@@ -214,7 +219,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities" aria-current="page">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a></nav>
+  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities" aria-current="page">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a></nav>
   <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
 
@@ -231,10 +236,13 @@ ${poleSprite(L.axes)}
   <label class="search"><span class="sr">${escapeHtml(t.searchLabel)}</span>
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input id="q" type="search" placeholder="${escapeHtml(t.searchPlaceholder)}" autocomplete="off"></label>
+  ${renderFilterButton(locale)}
   <div class="chips" role="group" aria-label="${escapeHtml(t.filterAria)}">${chips}</div>
 </div></div>
+${drawerHtml}
 
 <main id="lista" class="wrap">
+  ${activeFiltersBar}
   <p class="result-info" id="info" aria-live="polite"></p>
   <p class="dna-note">${t.dnaNote}</p>
   <ul class="legend" aria-label="${escapeHtml(t.legendAria)}">${legend}</ul>
@@ -246,34 +254,9 @@ ${poleSprite(L.axes)}
 <footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
 <script>
 const S=${scriptStrings};
-const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')],cats=[...document.querySelectorAll('.cat')];
-const info=document.getElementById('info'),empty=document.getElementById('empty');
-const norm=s=>s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();
-const cards=[...document.querySelectorAll('.pc')].map(li=>({li,t:norm(li.dataset.text),h:li.querySelector('h3'),name:li.querySelector('h3').textContent}));
+window.__SCRIPT_STRINGS__=S;
 document.querySelectorAll('.ph img').forEach(im=>{if(im.complete&&!im.naturalWidth)im.remove();else im.addEventListener('error',()=>im.remove())});
-let active=null;
-function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
-function apply(){
-  const term=norm(q.value.trim());let shown=0;
-  cards.forEach(c=>{
-    const cat=c.li.closest('.cat').dataset.cat;
-    const ok=(!term||c.t.includes(term))&&(!active||cat===active);
-    c.li.hidden=!ok; if(ok)shown++;
-    const i=term&&ok?norm(c.name).indexOf(term):-1;
-    if(i>=0)c.h.innerHTML=esc(c.name.slice(0,i))+'<mark>'+esc(c.name.slice(i,i+term.length))+'</mark>'+esc(c.name.slice(i+term.length));else c.h.textContent=c.name;
-  });
-  cats.forEach(s=>{const n=s.querySelectorAll('.pc:not([hidden])').length;s.hidden=n===0;s.querySelector('.cc').textContent=n;s.querySelector('.cl').textContent=S.count[n===1?0:1]});
-  empty.classList.toggle('show',shown===0);
-  info.innerHTML=(term||active)?'<b>'+shown+'</b> '+S.found[shown===1?0:1]+'<button type="button" id="clear">'+esc(S.clear)+'</button>':'';
-  const cl=document.getElementById('clear'); if(cl) cl.onclick=()=>{q.value='';active=null;chips.forEach(c=>c.setAttribute('aria-pressed','false'));apply()};
-}
-q.addEventListener('input',apply);
-chips.forEach(ch=>ch.addEventListener('click',()=>{
-  active=active===ch.dataset.cat?null:ch.dataset.cat;
-  chips.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.cat===active)));apply();
-  if(active) document.getElementById(active).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-}));
-document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}});
+${renderClientFilterScript({ cardSelector: '.pc', hasHistorical: false, locale })}
 </script>
   </body>
 </html>`;

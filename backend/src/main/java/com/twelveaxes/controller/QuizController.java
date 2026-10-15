@@ -4,6 +4,7 @@ import com.twelveaxes.exception.ResourceNotFoundException;
 import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.Ideology;
+import com.twelveaxes.model.Party;
 import com.twelveaxes.model.Personality;
 import com.twelveaxes.model.QuizPayload;
 import com.twelveaxes.model.QuizResult;
@@ -17,6 +18,8 @@ import com.twelveaxes.service.DimensionMatcherService;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.CountryDimensionMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
+import com.twelveaxes.service.PartyMatcherService;
+import com.twelveaxes.service.PartyDimensionMatcherService;
 import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ReligionFilter;
@@ -48,6 +51,8 @@ public class QuizController {
     private final CountryMatcherService countryMatcherService;
     private final CountryDimensionMatcherService countryDimensionMatcherService;
     private final PersonalityMatcherService personalityMatcherService;
+    private final PartyMatcherService partyMatcherService;
+    private final PartyDimensionMatcherService partyDimensionMatcherService;
     private final AxisOutlierService axisOutlierService;
     private final AxisTensionService axisTensionService;
     private final BookRecommendationService bookRecommendationService;
@@ -60,6 +65,8 @@ public class QuizController {
             CountryMatcherService countryMatcherService,
             CountryDimensionMatcherService countryDimensionMatcherService,
             PersonalityMatcherService personalityMatcherService,
+            PartyMatcherService partyMatcherService,
+            PartyDimensionMatcherService partyDimensionMatcherService,
             AxisOutlierService axisOutlierService,
             AxisTensionService axisTensionService,
             DimensionMatcherService dimensionMatcherService,
@@ -71,6 +78,8 @@ public class QuizController {
         this.countryMatcherService = countryMatcherService;
         this.countryDimensionMatcherService = countryDimensionMatcherService;
         this.personalityMatcherService = personalityMatcherService;
+        this.partyMatcherService = partyMatcherService;
+        this.partyDimensionMatcherService = partyDimensionMatcherService;
         this.axisOutlierService = axisOutlierService;
         this.axisTensionService = axisTensionService;
         this.dimensionMatcherService = dimensionMatcherService;
@@ -128,6 +137,17 @@ public class QuizController {
         var categoryBestMatches = personalityMatcherService.findBestPerCategory(axes, lang, religion);
         var topCountry = countryMatcherService.findTopMatch(axes, lang, religion);
         var topHistoricalCountry = countryMatcherService.findTopHistoricalMatch(axes, lang, religion);
+        var topParty = partyMatcherService.findTopMatch(axes, lang, religion);
+        var topParties = partyMatcherService.findTopMatches(axes, lang, religion);
+        var topHistoricalParty = partyMatcherService.findTopHistoricalMatch(axes, lang, religion);
+        List<String> excludedPartyIds = new java.util.ArrayList<>();
+        if (topParty != null) {
+            excludedPartyIds.add(topParty.partyId());
+        }
+        if (topHistoricalParty != null) {
+            excludedPartyIds.add(topHistoricalParty.partyId());
+        }
+        var partyDimensionMatches = partyDimensionMatcherService.findAll(axes, lang, excludedPartyIds, religion);
         return new QuizResult(
                 axes,
                 matches.getFirst(),
@@ -147,7 +167,12 @@ public class QuizController {
                 axisOutlierService.findMostUnusual(axes, lang),
                 axisOutlierService.findMostCommon(axes, lang),
                 axisTensionService.findStrongest(axes, lang),
-                bookRecommendationService.recommend(personalityMatches, categoryBestMatches, lang)
+                bookRecommendationService.recommend(personalityMatches, categoryBestMatches, lang),
+                topParty,
+                topParties,
+                topHistoricalParty,
+                partyDimensionMatches,
+                partyMatcherService.findBottomMatches(axes, lang, religion)
         );
     }
 
@@ -177,6 +202,20 @@ public class QuizController {
     ) {
         return Optional.ofNullable(dataService.getCountryById(id, lang))
                 .orElseThrow(() -> new ResourceNotFoundException("País não encontrado"));
+    }
+
+    @GetMapping("/api/parties")
+    public List<Party> parties(@RequestParam(defaultValue = QuizDataService.LANG_PT) String lang) {
+        return dataService.getParties(lang);
+    }
+
+    @GetMapping("/api/parties/{id}")
+    public Party party(
+            @PathVariable String id,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
+    ) {
+        return Optional.ofNullable(dataService.getPartyById(id, lang))
+                .orElseThrow(() -> new ResourceNotFoundException("Partido ou organização não encontrado"));
     }
 
     @GetMapping("/api/personalities")

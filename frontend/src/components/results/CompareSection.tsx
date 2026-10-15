@@ -39,7 +39,7 @@ function searchItems(items: CompareItem[], query: string): CompareItem[] {
   return [...starts, ...contains].slice(0, MAX_OPTIONS);
 }
 
-// Personalidade = retrato; país = bandeira; ideologia = bolinha na cor do espectro.
+// Personalidade = retrato; país = bandeira; partido/organização = logo 1:1; ideologia = bolinha na cor do espectro.
 function ProfileFace({ item, className }: { item: CompareItem; className: string }) {
   if (item.type === 'personality') {
     return (
@@ -58,6 +58,16 @@ function ProfileFace({ item, className }: { item: CompareItem; className: string
         src={resolveCountryFlagSrc(item.imagePath ?? '')}
         alt={t.flagAlt(item.historical ? t.flagHistoricLabel : t.flagLabel, item.name)}
         fallback={t.flagUnavailable}
+      />
+    );
+  }
+  if (item.type === 'party') {
+    return (
+      <SafeImg
+        className={className}
+        src={item.imagePath ?? ''}
+        alt={item.name}
+        fallback={personalityInitials(item.name)}
       />
     );
   }

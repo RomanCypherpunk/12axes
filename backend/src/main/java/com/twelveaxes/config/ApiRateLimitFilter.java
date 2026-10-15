@@ -49,16 +49,23 @@ public class ApiRateLimitFilter extends OncePerRequestFilter {
     private final boolean enabled;
     private final int heavyPerMinute;
     private final int generalPerMinute;
+    private final java.util.Set<String> allowedOrigins;
     private final ConcurrentHashMap<String, Window> windows = new ConcurrentHashMap<>();
 
     public ApiRateLimitFilter(
             @Value("${app.rate-limit.enabled:true}") boolean enabled,
             @Value("${app.rate-limit.heavy-per-minute:60}") int heavyPerMinute,
-            @Value("${app.rate-limit.general-per-minute:240}") int generalPerMinute
+            @Value("${app.rate-limit.general-per-minute:240}") int generalPerMinute,
+            @Value("${app.frontend-origins:http://localhost:5173,http://127.0.0.1:5173,https://12axes.vercel.app,https://12axes.enzoxavier.com.br}") String origins
     ) {
         this.enabled = enabled;
         this.heavyPerMinute = heavyPerMinute;
         this.generalPerMinute = generalPerMinute;
+        this.allowedOrigins = java.util.Arrays.stream(origins.split(","))
+                .map(String::trim)
+                .filter(origin -> !origin.isBlank())
+                .map(ApiRateLimitFilter::normalize)
+                .collect(java.util.stream.Collectors.toUnmodifiableSet());
     }
 
     @Override
@@ -81,11 +88,24 @@ public class ApiRateLimitFilter extends OncePerRequestFilter {
 
         LOG.warn("API_RATE_LIMITED path={} ip={} limit={}/min origin={}",
                 request.getRequestURI(), ClientIps.of(request), limit, request.getHeader("Origin"));
+        String origin = request.getHeader(org.springframework.http.HttpHeaders.ORIGIN);
+        if (origin != null && allowedOrigins.contains(normalize(origin))) {
+            response.setHeader(org.springframework.http.HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, origin);
+            response.setHeader(org.springframework.http.HttpHeaders.VARY, "Origin");
+        }
         response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
         response.setHeader("Retry-After", String.valueOf(Math.max(1, (retryAfterMillis + 999) / 1000)));
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(TOO_MANY_BODY);
+    }
+
+    private static String normalize(String origin) {
+        String trimmed = origin.trim();
+        while (trimmed.endsWith("/")) {
+            trimmed = trimmed.substring(0, trimmed.length() - 1);
+        }
+        return trimmed.toLowerCase();
     }
 
     /** Devolve 0 se a requisicao cabe na janela, ou quantos ms faltam para a janela virar. */

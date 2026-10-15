@@ -9,6 +9,8 @@ import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.Axis;
 import com.twelveaxes.model.Country;
 import com.twelveaxes.model.CountryProfile;
+import com.twelveaxes.model.Party;
+import com.twelveaxes.model.PartyProfile;
 import com.twelveaxes.model.GlossaryEntry;
 import com.twelveaxes.model.Ideology;
 import com.twelveaxes.model.IdeologyProfile;
@@ -43,6 +45,7 @@ public class QuizDataService {
     private Map<String, LocaleBundle> bundles;
     private Map<String, IdeologyProfile> ideologyProfiles;
     private Map<String, CountryProfile> countryProfiles;
+    private Map<String, PartyProfile> partyProfiles;
     private Map<String, PersonalityProfile> personalityProfiles;
     private Map<String, Book> books;
     private List<ArchetypeQuestion> archetypeQuestions;
@@ -56,24 +59,38 @@ public class QuizDataService {
             List<Country> countries,
             Map<String, Country> countriesById,
             List<Personality> personalities,
-            Map<String, Personality> personalitiesById
+            Map<String, Personality> personalitiesById,
+            List<Party> parties,
+            Map<String, Party> partiesById
     ) {
         static LocaleBundle of(
                 List<Axis> axes,
                 List<Question> questions,
                 List<Ideology> ideologies,
                 List<Country> countries,
-                List<Personality> personalities
+                List<Personality> personalities,
+                List<Party> parties
         ) {
+            Map<String, Country> countriesById =
+                    countries.stream().collect(Collectors.toUnmodifiableMap(Country::id, Function.identity()));
+            // O nome do pais vem do mesmo idioma do bundle, para o front mostrar "Partido, Pais".
+            List<Party> resolvedParties = parties.stream()
+                    .map(party -> {
+                        Country country = countriesById.get(party.countryId());
+                        return country == null ? party : party.withCountry(country.name(), country.flagPath());
+                    })
+                    .toList();
             return new LocaleBundle(
                     axes,
                     questions,
                     ideologies,
                     ideologies.stream().collect(Collectors.toUnmodifiableMap(Ideology::id, Function.identity())),
                     countries,
-                    countries.stream().collect(Collectors.toUnmodifiableMap(Country::id, Function.identity())),
+                    countriesById,
                     personalities,
-                    personalities.stream().collect(Collectors.toUnmodifiableMap(Personality::id, Function.identity()))
+                    personalities.stream().collect(Collectors.toUnmodifiableMap(Personality::id, Function.identity())),
+                    resolvedParties,
+                    resolvedParties.stream().collect(Collectors.toUnmodifiableMap(Party::id, Function.identity()))
             );
         }
     }
@@ -97,6 +114,7 @@ public class QuizDataService {
         List<Ideology> ideologies = readJson("data/ideologies.json", new TypeReference<>() {});
         List<Country> countries = readJson("data/countries.json", new TypeReference<>() {});
         List<Personality> personalities = readJson("data/personalities.json", new TypeReference<>() {});
+        List<Party> parties = readOptionalJson("data/parties.json", new TypeReference<List<Party>>() {});
 
         // Mapas na ordem dos JSONs: toUnmodifiableMap embaralha a iteracao a cada
         // JVM, o que mudava os exemplos da tensao entre reinicios do servidor.
@@ -116,10 +134,17 @@ public class QuizDataService {
                         Collectors.toMap(PersonalityProfile::personalityId, Function.identity(), (a, b) -> b, java.util.LinkedHashMap::new),
                         java.util.Collections::unmodifiableMap));
 
+        List<PartyProfile> partyProfileList =
+                readOptionalJson("data/parties-profiles.json", new TypeReference<List<PartyProfile>>() {});
+        partyProfiles = partyProfileList.stream()
+                .collect(Collectors.collectingAndThen(
+                        Collectors.toMap(PartyProfile::partyId, Function.identity(), (a, b) -> b, java.util.LinkedHashMap::new),
+                        java.util.Collections::unmodifiableMap));
+
         archetypeQuestions = readJson("data/archetype-questions.json", new TypeReference<>() {});
         validateArchetypeQuestions(axes);
 
-        LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities);
+        LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities, parties);
         LocaleBundle en = buildEnglishBundle(pt);
         bundles = Map.of(LANG_PT, pt, LANG_EN, en);
 
@@ -138,6 +163,7 @@ public class QuizDataService {
         validateIdeologyProfiles(pt);
         validateIdeologyPersonalityLinks(pt);
         validatePersonalityProfiles(pt);
+        validateParties(pt);
     }
 
     // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
@@ -148,6 +174,7 @@ public class QuizDataService {
         Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/en/ideologies.json");
         Map<String, Map<String, String>> countriesTr = readOverlay("data/i18n/en/countries.json");
         Map<String, Map<String, String>> personalitiesTr = readOverlay("data/i18n/en/personalities.json");
+        Map<String, Map<String, String>> partiesTr = readOverlay("data/i18n/en/parties.json");
 
         List<Axis> axes = pt.axes().stream().map(axis -> {
             Map<String, String> tr = axesTr.get(axis.id());
@@ -233,7 +260,16 @@ public class QuizDataService {
             );
         }).toList();
 
-        return LocaleBundle.of(axes, questions, ideologies, countries, personalities);
+        List<Party> parties = pt.parties().stream().map(party -> {
+            Map<String, String> tr = partiesTr.get(party.id());
+            if (tr == null) return party;
+            return party.withText(
+                    tr.getOrDefault("name", party.name()),
+                    tr.getOrDefault("category", party.category()),
+                    tr.getOrDefault("description", party.description()));
+        }).toList();
+
+        return LocaleBundle.of(axes, questions, ideologies, countries, personalities, parties);
     }
 
     private Map<String, Map<String, String>> readOverlay(String path) throws IOException {
@@ -318,6 +354,43 @@ public class QuizDataService {
             throw new IllegalStateException(
                     "Toda personalidade precisa de um perfil em personality-profiles.json. Faltando: " + missing
             );
+        }
+    }
+
+    // Todo partido precisa de perfil com vetor, de um pais existente e de uma categoria valida;
+    // erro de digitacao no JSON nao pode passar em silencio.
+    private void validateParties(LocaleBundle pt) {
+        List<String> missingProfile = pt.parties().stream()
+                .map(Party::id)
+                .filter(id -> !partyProfiles.containsKey(id))
+                .toList();
+        if (!missingProfile.isEmpty()) {
+            throw new IllegalStateException(
+                    "Todo partido precisa de um perfil em parties-profiles.json. Faltando: " + missingProfile);
+        }
+        List<String> unknownProfile = partyProfiles.keySet().stream()
+                .filter(id -> !pt.partiesById().containsKey(id))
+                .toList();
+        if (!unknownProfile.isEmpty()) {
+            throw new IllegalStateException(
+                    "parties-profiles.json aponta para partidos inexistentes: " + unknownProfile);
+        }
+        List<String> brokenCountry = pt.parties().stream()
+                .filter(party -> party.countryId() == null || !pt.countriesById().containsKey(party.countryId()))
+                .map(party -> party.id() + " -> " + party.countryId())
+                .toList();
+        if (!brokenCountry.isEmpty()) {
+            throw new IllegalStateException(
+                    "Todo partido precisa de um countryId que resolva para um pais existente. Invalidos: "
+                            + brokenCountry);
+        }
+        List<String> brokenCategory = pt.parties().stream()
+                .filter(party -> !Party.CATEGORIES.contains(party.category()))
+                .map(party -> party.id() + " -> " + party.category())
+                .toList();
+        if (!brokenCategory.isEmpty()) {
+            throw new IllegalStateException(
+                    "Categoria de partido invalida (use " + Party.CATEGORIES + "): " + brokenCategory);
         }
     }
 
@@ -456,6 +529,22 @@ public class QuizDataService {
 
     public Map<String, CountryProfile> getCountryProfiles() {
         return countryProfiles;
+    }
+
+    public List<Party> getParties() {
+        return getParties(LANG_PT);
+    }
+
+    public List<Party> getParties(String lang) {
+        return bundle(lang).parties();
+    }
+
+    public Party getPartyById(String id, String lang) {
+        return bundle(lang).partiesById().get(id);
+    }
+
+    public Map<String, PartyProfile> getPartyProfiles() {
+        return partyProfiles;
     }
 
     public Map<String, PersonalityProfile> getPersonalityProfiles() {

@@ -1,4 +1,4 @@
-# Criação de um novo perfil (país, ideologia ou personalidade)
+# Criação de um novo perfil (país, ideologia, personalidade ou partido/organização)
 
 Este arquivo descreve o processo completo para **criar um perfil totalmente novo** no projeto
 12axes — diferente de `profile-audit/README.md`, que reaudita perfis já existentes. Use este
@@ -19,11 +19,33 @@ Quando o usuário disser algo como:
 Execute os passos abaixo, na ordem, sem pular etapas. Pergunte ao usuário só o que for
 estritamente necessário e não puder ser inferido (ver passo 0).
 
+## Catálogo `party` (partidos, movimentos, casas dinásticas e organizações)
+
+O catálogo `party` cobre partidos políticos, movimentos, casas dinásticas, organizações armadas e
+organizações internacionais, **atuais e históricos** (NSDAP, Partido Republicano, PCCh, Vox, AIB,
+Al-Qaeda, Casa de Habsburgo etc.). Processo, campos e regras em `.claude/skills/new-party/SKILL.md`;
+reauditoria em `.claude/skills/audit-party/SKILL.md`. Diferenças em relação aos outros catálogos:
+
+| Tema | Regra |
+|---|---|
+| Arquivos | `parties.json` (PT), `i18n/en/parties.json` (EN: `id`, `name`, `category`, `description`), `parties-profiles.json` (chave `partyId`), logos em `frontend/public/parties/logos/{id}.png` |
+| Campos | `id`, `name`, `category`, `description`, `logoPath`, `logoSourceName`, `logoSourceUrl`, `logoNote`, `countryId`, `historical`, `period`, `religions` |
+| `category` | valor fechado em PT: `Partido`, `Movimento`, `Casa dinástica`, `Organização armada`, `Organização internacional` (o EN traduz o rótulo). Bloqueado pelo backend e pelo `validate.py` |
+| `countryId` | **obrigatório**, id de país existente do catálogo, atual ou histórico (o front mostra "Partido Republicano, Estados Unidos"). Organização sem Estado usa o país de maior associação |
+| `id` | kebab-case sem acento; se o nome colide entre países ou eras, o `id` leva o país e/ou a era (`partido-republicano-eua`, `partido-republicano-eua-new-deal`) |
+| `name` | Formato **"Nome do Partido (Sigla)"** ou só **"Nome do Partido"** (PT e EN). **Nunca** inclua o país no nome (nada de "(Sigla, País)" nem "(Hungria)"): a UI já mostra a bandeira e a descrição abaixo, então o país no nome é redundante e deixa o texto grande. Para distinguir eras ou ramos, use só o complemento ("Partido Republicano (era New Deal)", "Casa de Bourbon (ramo francês)"). |
+| Eras | `historical: true` + `period` para o perfil de um período específico; a mesma organização em duas eras são dois perfis |
+| Logo | símbolo oficial mostrado na Wikipédia (Commons), **sempre quadrado 1:1**: `npm run square:logo -- <baixado> public/parties/logos/{id}.png` (480x480 PNG transparente, sem distorcer nem cortar) |
+| Auditoria | o subagente responde **como o próprio partido/grupo/organização, pela prática e pelas ideias e valores**, não pelo país (ver `README.md`, nota sobre `party`); prompt com parágrafo "FATO PÚBLICO E CALIBRAÇÃO" |
+| Validação | `python profile-audit/validate.py party <id>` (forma, neutros, conteúdo, categoria, país, logo 1:1); duplicata ≥ 97% de outro partido bloqueia, em especial da mesma organização em outra era |
+| Testes | `PartyCatalogTest` + `ReligionFilterTest`, `QuizResultPayloadTest`, `CompareControllerTest` |
+| Matches | `python profile-audit/compatibility.py party <id>` imprime também o top 2 de partidos |
+
 ## Passo 0 — Reunir informações mínimas
 
 Antes de escrever qualquer arquivo, você precisa saber:
 
-1. **Catálogo**: `ideology`, `personality` ou `country`.
+1. **Catálogo**: `ideology`, `personality`, `country` ou `party` (ver seção "Catálogo `party`" acima).
 2. **`id`**: slug em kebab-case, minúsculo, sem acento (ex.: `social-libertarianismo`,
    `xi-jinping`, `mongolia`). Verifique que não colide com nenhum `id` já existente no arquivo de
    metadados do catálogo (`ideologies.json` / `personalities.json` / `countries.json`).
