@@ -647,7 +647,7 @@ o cálculo combina similaridade por eixo, direção, magnitude e outliers com pe
 
 Ao criar ou reauditar uma ideologia, use os três vizinhos e suas categorias como evidência na revisão
 de categoria **depois do merge** do vetor. Registre categoria atual/proposta, compatibilidades exatas,
-argumentos favoráveis e contrários em `profile-audit/category-reviews/<id>.md`, conforme
+argumentos favoráveis e contrários em `profile-audit/reports/category-reviews/<id>.md`, conforme
 [`IDEOLOGY_CATEGORY_REVIEW.md`](IDEOLOGY_CATEGORY_REVIEW.md). Os vizinhos guiam a revisão, mas não
 alteram automaticamente a categoria: se a proposta divergir da atual, peça confirmação explícita.
 

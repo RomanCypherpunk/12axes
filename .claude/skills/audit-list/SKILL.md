@@ -47,7 +47,7 @@ de vetor/merge/`STATE.json`/arquivamento é o mesmo; só o tamanho do lote muda 
    ideologias com categoria e 2 países; para `personality` ou `country`, são 2 matches em cada
    catálogo. O cálculo usa o mesmo algoritmo de `ProfileMatchScorer.java`; nunca estime matches de
    cabeça. Quando o catálogo auditado for `ideology`, use as três categorias para revisar e registrar
-   a classificação em `profile-audit/category-reviews/<id>.md` conforme
+   a classificação em `profile-audit/reports/category-reviews/<id>.md` conforme
    `IDEOLOGY_CATEGORY_REVIEW.md`; isso orienta, mas não altera a categoria automaticamente.
    - **Perguntas de arquétipo:** a auditoria responde as 240 perguntas **e** as perguntas de arquétipo, como um usuário do quiz. O prompt termina com o bloco de `python profile-audit/profile_vector.py --prompt-block`, a saída traz o bloco `archetype`, o `validate.py` reprova se faltar, e o vetor mesclado (via `profile_vector.compute_vector`) soma as alternativas escolhidas como respostas extras, igual ao `ScoringService`. Liste as escolhas no resumo final. Ver "Perguntas de arquétipo" em `profile-audit/README.md`.
 6. Ao final, apresente para cada perfil do lote um resumo com os matches calculados no passo anterior

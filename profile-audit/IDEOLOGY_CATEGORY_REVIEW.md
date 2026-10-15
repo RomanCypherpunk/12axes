@@ -35,7 +35,7 @@ Os polos reais da implementação são: valores altos significam federalismo (`e
 
 ## Resultado esperado
 
-Para cada ID criado ou reauditado, registre a análise em `profile-audit/category-reviews/<id>.md` com:
+Para cada ID criado ou reauditado, registre a análise em `profile-audit/reports/category-reviews/<id>.md` com:
 
 ```markdown
 # Revisão de categoria: <nome>

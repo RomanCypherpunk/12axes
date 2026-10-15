@@ -1016,8 +1016,10 @@
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
 
-.answer-button:hover:not(:disabled):not(.selected) .answer-icon {
-  transform: scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) .answer-icon {
+    transform: scale(1.08);
+  }
 }
 
 .answer-strong-agree {
@@ -1080,9 +1082,11 @@
   color: white;
 }
 
-.answer-button:hover:not(:disabled):not(.selected) {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
 }
 
 .answer-strong-agree.selected,
@@ -3006,9 +3010,11 @@
   border-color: color-mix(in srgb, var(--answer-color) 35%, transparent);
 }
 
-.answer-button:hover:not(:disabled):not(.selected) {
-  background: var(--answer-soft);
-  border-color: color-mix(in srgb, var(--answer-color) 35%, var(--line));
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    background: var(--answer-soft);
+    border-color: color-mix(in srgb, var(--answer-color) 35%, var(--line));
+  }
 }
 
 .answer-button.selected,
@@ -5891,8 +5897,10 @@
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
 
-.answer-button:hover:not(:disabled):not(.selected) .answer-icon {
-  transform: scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) .answer-icon {
+    transform: scale(1.08);
+  }
 }
 
 .answer-strong-agree {
@@ -5955,9 +5963,11 @@
   color: white;
 }
 
-.answer-button:hover:not(:disabled):not(.selected) {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
 }
 
 .answer-strong-agree.selected,
@@ -7881,9 +7891,11 @@
   border-color: color-mix(in srgb, var(--answer-color) 35%, transparent);
 }
 
-.answer-button:hover:not(:disabled):not(.selected) {
-  background: var(--answer-soft);
-  border-color: color-mix(in srgb, var(--answer-color) 35%, var(--line));
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    background: var(--answer-soft);
+    border-color: color-mix(in srgb, var(--answer-color) 35%, var(--line));
+  }
 }
 
 .answer-button.selected,
@@ -11317,24 +11329,45 @@
     box-shadow var(--dur-press) var(--ease-press);
 }
 
-.answer-button:hover:not(:disabled):not(.selected) {
-  transform: translateX(8px);
-  box-shadow: var(--shadow-sm);
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .answer-button::before {
+    transition:
+      opacity var(--dur-press) var(--ease-press),
+      width var(--dur-press) var(--ease-press);
+  }
+
+  .answer-button:hover:not(:disabled):not(.selected)::before {
+    opacity: 1;
+    width: 6px;
+  }
+
+  .answer-button:hover:not(:disabled):not(.selected) .answer-icon {
+    transform: scale(1.12);
+  }
 }
 
-.answer-button::before {
-  transition:
-    opacity var(--dur-press) var(--ease-press),
-    width var(--dur-press) var(--ease-press);
-}
+/* Dispositivos de toque (mobile): previne hover persistente ("sticky hover") que simula opcao pré-marcada */
+@media (hover: none), (pointer: coarse) {
+  .answer-button:hover:not(:disabled):not(.selected) {
+    transform: none;
+    box-shadow: none;
+    background: var(--paper);
+    border-color: var(--line);
+  }
 
-.answer-button:hover:not(:disabled):not(.selected)::before {
-  opacity: 1;
-  width: 6px;
-}
+  .answer-button:hover:not(:disabled):not(.selected)::before {
+    opacity: 0.35;
+    width: 3px;
+  }
 
-.answer-button:hover:not(:disabled):not(.selected) .answer-icon {
-  transform: scale(1.12);
+  .answer-button:hover:not(:disabled):not(.selected) .answer-icon {
+    transform: none;
+  }
 }
 
 .answer-button:active:not(:disabled) {
@@ -11903,8 +11936,10 @@
 .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:focus-visible {
   transform: none;
 }
-.app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:hover:not(:disabled) {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
 }
 @media (max-width: 760px) {
   .app-shell[data-screen="quiz"] .archetype-card--tiles .answer-grid {
