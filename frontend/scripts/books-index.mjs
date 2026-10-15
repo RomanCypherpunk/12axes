@@ -256,6 +256,7 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
     <a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a>
     <a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a>
     <a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a>
+    <a href="${escapeHtml(L.s.compareHref)}">${escapeHtml(L.s.navCompare)}</a>
   </nav>
   <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>

@@ -767,6 +767,7 @@ function MainApp() {
                 <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
                 <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
+                <a href={`/compare?lang=${LANG}`}>{t.navCompare}</a>
                 <button
                   className="e-lang"
                   type="button"

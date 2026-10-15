@@ -85,6 +85,7 @@ interface Strings {
   navIdeologies: string;
   navPersonalities: string;
   navCountries: string;
+  navCompare: string;
   navSupport: string;
   langToggleLabel: string;
   langToggleAria: string;
@@ -431,6 +432,7 @@ const pt: Strings = {
   navIdeologies: 'Ideologias',
   navPersonalities: 'Personalidades',
   navCountries: 'Países',
+  navCompare: 'Comparar',
   navSupport: 'Apoie',
   langToggleLabel: 'EN',
   langToggleAria: 'Switch to English',
@@ -1066,6 +1068,7 @@ const en: Strings = {
   navIdeologies: 'Ideologies',
   navPersonalities: 'Personalities',
   navCountries: 'Countries',
+  navCompare: 'Compare',
   navSupport: 'Support',
   langToggleLabel: 'PT',
   langToggleAria: 'Mudar para português',

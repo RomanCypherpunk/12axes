@@ -240,7 +240,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a></nav>
+  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${escapeHtml(L.s.compareHref)}">${escapeHtml(L.s.navCompare)}</a></nav>
   <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
 </div></header>
 
