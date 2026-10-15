@@ -2368,6 +2368,84 @@
     "religions": []
   },
   {
+    "id": "partido-democrata-eua-new-deal",
+    "name": "Partido Democrata (era New Deal)",
+    "category": "Partido",
+    "description": "Partido de Franklin Roosevelt no poder entre 1933 e 1945, ampliou o Estado com o New Deal: previdência, regulação bancária, obras públicas e sindicatos, numa coalizão com o Sul segregacionista, e conduziu os EUA na Segunda Guerra.",
+    "logoPath": "/parties/logos/partido-democrata-eua-new-deal.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:DemocraticLogo.svg",
+    "logoNote": "Símbolo oficial de Partido Democrata (era New Deal) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "eua-new-deal",
+    "historical": true,
+    "period": "1933–1945",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "partido-nacional-africa-do-sul-apartheid",
+    "name": "Partido Nacional (era do apartheid)",
+    "category": "Partido",
+    "description": "Partido do governo sul-africano de 1948 a 1994, nacionalismo africâner que instituiu o apartheid: segregação racial legal, domínio da minoria branca, anticomunismo e repressão violenta à oposição negra.",
+    "logoPath": "/parties/logos/partido-nacional-africa-do-sul-apartheid.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://en.wikipedia.org/wiki/File:National_Party_1981_logo.svg",
+    "logoNote": "Símbolo oficial de Partido Nacional (era do apartheid) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "africa-do-sul-do-apartheid",
+    "historical": true,
+    "period": "1948–1994",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "anc-africa-do-sul",
+    "name": "Congresso Nacional Africano (ANC)",
+    "category": "Partido",
+    "description": "Partido de Nelson Mandela e principal movimento contra o apartheid, governa a África do Sul desde 1994. Defende democracia não racial, redistribuição, empoderamento econômico negro e Estado desenvolvimentista, com crise de corrupção e energia.",
+    "logoPath": "/parties/logos/anc-africa-do-sul.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://en.wikipedia.org/wiki/File:African_National_Congress_logo.svg",
+    "logoNote": "Símbolo oficial de Congresso Nacional Africano (ANC) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "africa-do-sul",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "inc-india",
+    "name": "Congresso Nacional Indiano (INC)",
+    "category": "Partido",
+    "description": "Partido de Gandhi e Nehru que liderou a independência da Índia e a governou por décadas, hoje na oposição ao BJP. Defende secularismo, bem-estar social, economia mista, pluralismo e federalismo.",
+    "logoPath": "/parties/logos/inc-india.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Indian_National_Congress_hand_logo.svg",
+    "logoNote": "Símbolo oficial de Congresso Nacional Indiano (INC) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "india",
+    "historical": false,
+    "period": "",
+    "religions": [
+      "hinduism",
+      "only"
+    ]
+  },
+  {
+    "id": "dsa-eua",
+    "name": "Socialistas Democráticos da América (DSA)",
+    "category": "Partido",
+    "description": "Maior organização socialista dos EUA, com dezenas de milhares de membros e vereadores e deputados eleitos. Defende saúde pública universal, sindicatos fortes, Green New Deal e propriedade social, dentro e fora do Partido Democrata.",
+    "logoPath": "/parties/logos/dsa-eua.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Democratic_Socialists_of_America_Logo_(official)_(fit&cropped).svg",
+    "logoNote": "Símbolo oficial de Socialistas Democráticos da América (DSA) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "estados-unidos",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
     "id": "pacto-historico",
     "name": "Pacto Histórico",
     "category": "Partido",

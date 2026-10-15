@@ -253,8 +253,7 @@ ${drawerHtml}
 </main>
 <footer class="foot"><div class="wrap"><a class="logo" href="${prefix || '/'}"><b>12</b><span>axes</span></a><p>${escapeHtml(t.footer)} · <a href="${t.otherLang.href}">${escapeHtml(t.otherLang.label)}</a></p></div></footer>
 <script>
-const S=${scriptStrings};
-window.__SCRIPT_STRINGS__=S;
+window.__SCRIPT_STRINGS__=${scriptStrings};
 document.querySelectorAll('.ph img').forEach(im=>{if(im.complete&&!im.naturalWidth)im.remove();else im.addEventListener('error',()=>im.remove())});
 ${renderClientFilterScript({ cardSelector: '.pc', hasHistorical: false, locale })}
 </script>
