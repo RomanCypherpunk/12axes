@@ -12,25 +12,23 @@ function results(left: Record<string, number>): Map<string, AxisResult> {
   );
 }
 
-const ALL = { economia: 50, controle: 50, comercio: 50, imigracao: 50, poder: 50, representacao: 50, estrutura: 50, moral: 50 };
+const ALL = { economia: 50, controle: 50, poder: 50, representacao: 50, estrutura: 50, moral: 50 };
 
 describe('computeCompass', () => {
   it('centro em tudo fica no meio da bússola', () => {
     expect(computeCompass(results(ALL))).toEqual({ right: 50, authoritarian: 50, traditional: 50 });
   });
 
-  it('economia privada, livre mercado, livre comércio, assimilação e tradição levam à direita; o oposto, à esquerda', () => {
-    const right = computeCompass(results({ ...ALL, economia: 0, controle: 0, comercio: 0, imigracao: 100, moral: 0 }))?.right ?? 0;
-    const left = computeCompass(results({ ...ALL, economia: 100, controle: 100, comercio: 100, imigracao: 0, moral: 100 }))?.right ?? 100;
-    expect(right).toBeGreaterThan(95);
-    expect(left).toBeLessThan(5);
+  it('economia privada e livre mercado levam à direita; propriedade pública e planejamento, à esquerda', () => {
+    const right = computeCompass(results({ ...ALL, economia: 0, controle: 0 }))?.right ?? 0;
+    const left = computeCompass(results({ ...ALL, economia: 100, controle: 100 }))?.right ?? 100;
+    expect(right).toBe(100);
+    expect(left).toBe(0);
   });
 
-  it('nunca crava a borda: a saturação é suave, sem corte seco', () => {
-    const right = computeCompass(results({ ...ALL, economia: 0, controle: 0, comercio: 0, imigracao: 100, moral: 0 }))?.right ?? 100;
-    const left = computeCompass(results({ ...ALL, economia: 100, controle: 100, comercio: 100, imigracao: 0, moral: 100 }))?.right ?? 0;
-    expect(right).toBeLessThan(100);
-    expect(left).toBeGreaterThan(0);
+  it('é proporcional e linear: 75% público resulta em 25% na bússola', () => {
+    const pos = computeCompass(results({ ...ALL, economia: 75, controle: 75 }));
+    expect(pos?.right).toBe(25);
   });
 
   it('é monótono: mais mercado nunca leva mais à esquerda', () => {
@@ -39,19 +37,19 @@ describe('computeCompass', () => {
     expect([...xs].sort((a, b) => a - b)).toEqual(xs);
   });
 
-  it('um perfil estatista, protecionista e tradicionalista fica perto do centro (Terceira Posição)', () => {
-    // economia 66,7 pública, controle e comércio 83,3 planejado/protecionista, assimilação total, moral 0
-    const position = computeCompass(results({ ...ALL, economia: 66.7, controle: 83.3, comercio: 83.3, imigracao: 100, moral: 0 }));
-    // faixa central de 40 a 60: a Terceira Posição rejeita tanto o mercado quanto o socialismo
-    expect(position?.right).toBeGreaterThan(40);
-    expect(position?.right).toBeLessThan(60);
+  it('o perfil do nacional-socialismo fica no centro horizontal (Terceira Posição)', () => {
+    // Nacional-socialismo no catálogo: economia 47.5 (propriedade sob controle), controle 78.8 (planejamento)
+    const position = computeCompass(results({ ...ALL, economia: 47.5, controle: 78.8 }));
+    // faixa central de 33.3 a 66.7: a Terceira Posição rejeita tanto o liberalismo quanto o socialismo
+    expect(position?.right).toBeGreaterThan(33.3);
+    expect(position?.right).toBeLessThan(45);
   });
 
-  it('um protecionista de direita (Trump) não fica no mesmo ponto de um anarcocapitalista', () => {
+  it('um perfil com intervencionismo moderado (Trump) não fica no mesmo ponto de um anarcocapitalista', () => {
     // Vetores do catálogo, em percentual do polo esquerdo de cada eixo.
-    const trump = computeCompass(results({ ...ALL, economia: 25, controle: 37, comercio: 87, imigracao: 85, moral: 21 }));
-    const rothbard = computeCompass(results({ ...ALL, economia: 6, controle: 5, comercio: 8, imigracao: 39, moral: 54 }));
-    expect(trump?.right).toBeGreaterThan(55);
+    const trump = computeCompass(results({ ...ALL, economia: 25, controle: 37 }));
+    const rothbard = computeCompass(results({ ...ALL, economia: 6, controle: 5 }));
+    expect(trump?.right).toBeGreaterThan(70);
     expect((rothbard?.right ?? 0) - (trump?.right ?? 0)).toBeGreaterThan(12);
   });
 
@@ -84,8 +82,6 @@ describe('polos dos eixos usados na bússola', () => {
   it.each([
     ['economia', 'Público'],
     ['controle', 'Planejamento'],
-    ['comercio', 'Protecionismo'],
-    ['imigracao', 'Assimilação'],
     ['poder', 'Segurança'],
     ['representacao', 'Democracia'],
     ['estrutura', 'Federal'],

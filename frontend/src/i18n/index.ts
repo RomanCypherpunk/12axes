@@ -774,7 +774,7 @@ const pt: Strings = {
     authLead: 'O eixo autoritário × libertário',
     authText: 'mede o grau de concentração do poder político e de intervenção do Estado sobre a vida dos indivíduos. Considera três dimensões principais: liberdades individuais, representação política e estrutura do Estado.',
     econLead: 'O eixo esquerda × direita',
-    econText: 'mede o quanto sua posição é de esquerda ou de direita, sobretudo pela organização da economia: de propriedade coletiva, planejamento e protecionismo, de um lado, a propriedade privada, livre mercado e abertura comercial, do outro. Considera principalmente economia, controle e comércio, com influência secundária de imigração e moral.',
+    econText: 'mede o quanto sua posição é de esquerda ou de direita pela organização da economia: de propriedade coletiva e planejamento estatal, de um lado, a propriedade privada e livre mercado, do outro. Considera as dimensões fundamentais de economia (propriedade dos meios de produção) e controle (mercado contra regulação e planejamento).',
     socialLead: 'O eixo social',
     socialText: 'mede a orientação dos seus valores entre progressismo e tradicionalismo, refletindo sua posição em questões de costumes, cultura e valores sociais.'
   },
@@ -1401,7 +1401,7 @@ const en: Strings = {
     authLead: 'The authoritarian × libertarian axis',
     authText: 'measures the degree of concentration of political power and of state intervention in the lives of individuals. It considers three main dimensions: individual liberties, political representation and state structure.',
     econLead: 'The left × right axis',
-    econText: 'measures how far left or right you sit, mostly through how the economy is organized: from collective ownership, planning and protectionism on one side to private property, free markets and open trade on the other. It mainly considers economy, control and trade, with secondary influence from immigration and morals.',
+    econText: 'measures how far left or right you sit based on economic organization: from collective ownership and state planning on one side to private property and free markets on the other. It considers the fundamental dimensions of economy (ownership of the means of production) and control (market versus planning and regulation).',
     socialLead: 'The social axis',
     socialText: 'measures the orientation of your values between progressivism and traditionalism, reflecting your position on customs, culture and social values.'
   },

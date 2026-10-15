@@ -37,25 +37,15 @@ AXIS_ORDER = ["estrutura", "representacao", "poder", "imigracao", "diplomacia", 
 URL_KEYS = ["est", "rep", "pod", "imi", "dip", "int", "eco", "con", "com", "rel", "mor", "tec"]
 
 # --- espelha politicalCompass.ts -------------------------------------------------------------
-WEIGHT_ECONOMIA, WEIGHT_CONTROLE, WEIGHT_COMERCIO, WEIGHT_IMIGRACAO, WEIGHT_MORAL = 0.2, 0.3, 0.2, 0.25, 0.05
-GAIN_LEFT, GAIN_RIGHT = 1.6, 2.6
+WEIGHT_ECONOMIA, WEIGHT_CONTROLE = 0.6, 0.4
 GRID_SIZE = 9
-
-
-def stretch(average: float) -> float:
-    distance = average - 50
-    gain = GAIN_LEFT if distance < 0 else GAIN_RIGHT
-    return 50 + 50 * math.tanh(distance * gain / 50)
 
 
 def compass(v: dict) -> tuple[float, float, float]:
     """(direita, autoritario, tradicionalista), cada um de 0 a 100. `v` guarda leftPercent por eixo."""
-    right = stretch(
+    right = (
         WEIGHT_ECONOMIA * (100 - v["economia"])
         + WEIGHT_CONTROLE * (100 - v["controle"])
-        + WEIGHT_COMERCIO * (100 - v["comercio"])
-        + WEIGHT_IMIGRACAO * v["imigracao"]
-        + WEIGHT_MORAL * (100 - v["moral"])
     )
     authoritarian = (v["poder"] + (100 - v["representacao"]) + (100 - v["estrutura"])) / 3
     return right, authoritarian, 100 - v["moral"]

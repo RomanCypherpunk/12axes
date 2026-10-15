@@ -5,7 +5,7 @@ Gerado em 2026-10-08 com `profile-audit/compass_check.py` (mesma fórmula e as m
 ## Antes de ler
 
 - **O arquivo certo:** a categoria de espectro das ideologias fica em `backend/src/main/resources/data/ideologies.json` (e o espelho em `i18n/en/ideologies.json`, com a grafia EN de `IDEOLOGY_CATEGORY_REVIEW.md`). O `countries.json` guarda a categoria dos países (descritor de regime, como "República parlamentar"), que não usa as 8 categorias do espectro.
-- **A bússola não é o árbitro.** Ela resume 8 dos 12 eixos em 2 dimensões, com pesos próprios (economia 20%, controle 30%, comércio 20%, imigração 25%, moral 5% para esquerda-direita; poder, representação e estrutura para autoritarismo). Religião, tecnologia, diplomacia e intervenção não entram. A regra de decisão da revisão de categoria é *família antes do espectro* e *nunca recategorizar só por compatibilidade ou distância*, então a divergência é um sinal para olhar, não um erro.
+- **A bússola não é o árbitro.** Ela resume eixos centrais em 2 dimensões, com pesos próprios (economia 60% e controle 40% de forma linear para esquerda-direita; poder, representação e estrutura para autoritarismo). Religião, tecnologia, diplomacia, imigração, comércio e intervenção não entram no cálculo horizontal para não distorcer o resultado de centristas. A regra de decisão da revisão de categoria é *família antes do espectro* e *nunca recategorizar só por compatibilidade ou distância*, então a divergência é um sinal para olhar, não um erro.
 - **Coluna "Página mostra":** é a frase de fato exibida quando essa ideologia está no topo do resultado de alguém que respondeu exatamente como ela ("Entre X e Y", "Centro-esquerda" ou "Centro-direita").
 
 ## Alterações aplicadas
