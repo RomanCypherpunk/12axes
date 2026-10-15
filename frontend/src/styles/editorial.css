@@ -926,3 +926,30 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-deck-card[data-pos="2"]{transform:translate(-12px,-28px) rotate(-3.2deg) scale(.9)}
   .e-deck-card[data-pos="out"]{transform:translate(-60%,-6%) rotate(-12deg)}
 }
+
+/* ── /compare: 2 a 3 perfis lado a lado ── */
+/* Cada perfil leva a cor da sua posição (--pc) num anel em volta do retrato, igual nas barras, na bússola e nos pares. */
+.e-cmpp{min-height:calc(100vh - 72px)}
+.e-cmpp .e-res-main{max-width:900px;margin:0 auto}
+/* Aqui o "Começar" é um link; `.ed a{color:inherit}` apagaria o texto claro do botão. */
+.e-cmpp-nav a.e-btn-primary{color:var(--papel)}
+.e-cmpp .e-panel>h2{margin-bottom:18px}
+.e-cmpp .e-close{margin-top:0;padding-top:0;border-top:0}
+.e-cmpp-picked{margin:0 0 18px;padding:0;list-style:none}
+.e-cmpp-pairs{margin:0;padding:0;list-style:none}
+.e-cmpp-ring{display:inline-grid;border-radius:50%;box-shadow:0 0 0 3px var(--pc)}
+.e-close-pin.e-cmpp-ring{box-shadow:0 0 0 2px var(--pc)}
+.e-cmpp-faces{display:flex;gap:10px}
+.e-cmpp-picked small{display:block;font-size:12.5px;color:var(--texto-suave)}
+.e-cmpp-legend{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-weight:600;font-size:15px}
+.e-cmpp-legend li{display:flex;align-items:center;gap:12px}
+.e-cmpp-legend .e-compass-x{position:static;transform:none;flex:none;width:26px}
+@media (max-width:860px){
+  /* No celular cada perfil escolhido vira uma linha: retrato, nome e "Remover" lado a lado. */
+  .e-cmpp-picked .e-dim-row{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"v t p";align-items:center;padding:12px 14px}
+  .e-cmpp-picked .e-avatar{width:44px;height:44px}
+}
+.e-cmpp-picked .e-cmp-dot{background:var(--neutro)}
+.e-cmpp-results{display:flex;flex-direction:column;gap:24px;transition:opacity .2s ease}
+.e-cmpp-results[aria-busy="true"]{opacity:.55}
+.e-cmpp h2:focus{outline:none}

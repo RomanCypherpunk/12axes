@@ -26,7 +26,7 @@ function fold(text: string): string {
   return text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
 }
 
-function searchItems(items: CompareItem[], query: string): CompareItem[] {
+export function searchItems(items: CompareItem[], query: string): CompareItem[] {
   const needle = fold(query.trim());
   if (!needle) return [];
   const starts: CompareItem[] = [];
@@ -40,7 +40,7 @@ function searchItems(items: CompareItem[], query: string): CompareItem[] {
 }
 
 // Personalidade = retrato; país = bandeira; ideologia = bolinha na cor do espectro.
-function ProfileFace({ item, className }: { item: CompareItem; className: string }) {
+export function ProfileFace({ item, className }: { item: CompareItem; className: string }) {
   if (item.type === 'personality') {
     return (
       <SafeImg

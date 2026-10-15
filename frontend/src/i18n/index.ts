@@ -144,6 +144,24 @@ interface Strings {
   compareNoFarLine: (name: string) => string;
   compareValues: (pole: string, you: number, them: number, name: string) => string;
   compareOptionAria: (name: string, type: string) => string;
+  comparePageDocTitle: string;
+  comparePageEyebrow: string;
+  comparePageTitle: string;
+  comparePageLead: string;
+  comparePageProfilesTitle: string;
+  comparePageNeedMore: string;
+  comparePageFull: string;
+  comparePageRemove: string;
+  comparePageRemoveAria: (name: string) => string;
+  comparePageUnknown: string;
+  comparePageNotFound: string;
+  comparePageAxesTitle: string;
+  comparePageAxisAria: (axis: string, values: string) => string;
+  comparePageCompassAria: (points: string) => string;
+  comparePagePointAria: (name: string, right: number, authoritarian: number, traditional: number) => string;
+  comparePageLegendAria: string;
+  comparePagePairsTitle: string;
+  comparePagePairLabel: string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
@@ -508,6 +526,25 @@ const pt: Strings = {
   compareNoFarLine: (name) => `Nenhum eixo está muito distante de ${name}.`,
   compareValues: (pole, you, them, name) => `${pole}: você ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
+  comparePageDocTitle: 'Comparar perfis — 12 Axes',
+  comparePageEyebrow: 'Comparar perfis',
+  comparePageTitle: 'Lado a lado, nos 12 eixos',
+  comparePageLead: 'Escolha 2 ou 3 personalidades, países ou ideologias e veja onde cada um fica em cada eixo e na bússola política.',
+  comparePageProfilesTitle: 'Perfis',
+  comparePageNeedMore: 'Escolha mais um perfil para comparar.',
+  comparePageFull: 'Até 3 perfis. Remova um para escolher outro.',
+  comparePageRemove: 'Remover',
+  comparePageRemoveAria: (name) => `Remover ${name} da comparação`,
+  comparePageUnknown: 'Perfil não encontrado',
+  comparePageNotFound: 'Um dos perfis deste link não existe. Remova-o e escolha outro.',
+  comparePageAxesTitle: 'Os 12 eixos',
+  comparePageAxisAria: (axis, values) => `${axis}: ${values}`,
+  comparePageCompassAria: (points) => `Bússola política: ${points}`,
+  comparePagePointAria: (name, right, authoritarian, traditional) =>
+    `${name}, ${right}% à direita, ${authoritarian}% autoritário, ${traditional}% tradicionalista`,
+  comparePageLegendAria: 'Legenda da bússola',
+  comparePagePairsTitle: 'Compatibilidade entre eles',
+  comparePagePairLabel: 'Compatibilidade',
   axisExplanations: {
     estrutura:
       'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
@@ -1122,6 +1159,25 @@ const en: Strings = {
   compareNoFarLine: (name) => `No axis is far from ${name}.`,
   compareValues: (pole, you, them, name) => `${pole}: you ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
+  comparePageDocTitle: 'Compare profiles — 12 Axes',
+  comparePageEyebrow: 'Compare profiles',
+  comparePageTitle: 'Side by side, on the 12 axes',
+  comparePageLead: 'Pick 2 or 3 personalities, countries or ideologies and see where each one stands on every axis and on the political compass.',
+  comparePageProfilesTitle: 'Profiles',
+  comparePageNeedMore: 'Pick one more profile to compare.',
+  comparePageFull: 'Up to 3 profiles. Remove one to pick another.',
+  comparePageRemove: 'Remove',
+  comparePageRemoveAria: (name) => `Remove ${name} from the comparison`,
+  comparePageUnknown: 'Profile not found',
+  comparePageNotFound: 'One of the profiles in this link does not exist. Remove it and pick another.',
+  comparePageAxesTitle: 'The 12 axes',
+  comparePageAxisAria: (axis, values) => `${axis}: ${values}`,
+  comparePageCompassAria: (points) => `Political compass: ${points}`,
+  comparePagePointAria: (name, right, authoritarian, traditional) =>
+    `${name}, ${right}% right, ${authoritarian}% authoritarian, ${traditional}% traditionalist`,
+  comparePageLegendAria: 'Compass legend',
+  comparePagePairsTitle: 'Compatibility between them',
+  comparePagePairLabel: 'Compatibility',
   axisExplanations: {
     estrutura:
       'Measures whether you prefer power distributed among states, cities, and local communities or a unitary national state with more uniform laws and command.',

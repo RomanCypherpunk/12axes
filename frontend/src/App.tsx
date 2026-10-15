@@ -41,6 +41,15 @@ const FULL_MODE =
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
 
+// /compare (comparação entre perfis do catálogo) é uma página à parte, carregada sob demanda:
+// o catálogo inteiro só é baixado por quem abre essa rota.
+const COMPARE_MODE =
+  typeof window !== 'undefined' && (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/') === '/compare';
+
+const ComparePage = lazy(() =>
+  import('./components/compare/ComparePage').then((module) => ({ default: module.ComparePage }))
+);
+
 // URL de resultado compartilhável: /results?est=65&rep=32.5&... (uma chave por
 // eixo, valor = % do polo esquerdo, na mesma ordem de axes.json).
 const AXIS_URL_KEYS = ['est', 'rep', 'pod', 'imi', 'dip', 'int', 'eco', 'con', 'com', 'rel', 'mor', 'tec'];
@@ -999,6 +1008,13 @@ function MainApp() {
 }
 
 export default function App() {
+  if (COMPARE_MODE) {
+    return (
+      <Suspense fallback={null}>
+        <ComparePage />
+      </Suspense>
+    );
+  }
   return <MainApp />;
 }
 

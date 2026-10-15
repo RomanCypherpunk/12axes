@@ -113,7 +113,7 @@ const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => {
 // Mantém o marcador inteiro dentro da grade mesmo nos extremos.
 const clamp = (value: number): number => Math.max(4, Math.min(96, value));
 
-function Marker({ left, top, color }: { left: number; top?: number; color?: string }) {
+export function Marker({ left, top, color }: { left: number; top?: number; color?: string }) {
   const style: CSSProperties = { left: `${clamp(left)}%`, top: top === undefined ? '50%' : `${clamp(top)}%` };
   if (color) style.background = color;
   return (
@@ -148,8 +148,17 @@ export function compassView(position: CompassPosition, category: string, moralAx
   const social = socialLevel(traditional);
   const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
   const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
-  // Barra em tom pastel (rosa, cinza, marrom); "X" e grifo na cor cheia da mesma escala.
-  const stripCells = Array.from({ length: SIZE }, (_, index) =>
+  const stripCells = socialStripCells(moralAxis);
+  // "X" e grifo na cor cheia da mesma escala da barra.
+  const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
+  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
+}
+
+/** Barra progressista/tradicionalista em tom pastel (rosa, cinza, marrom), também usada em /compare. */
+export function socialStripCells(moralAxis?: Axis): string[] {
+  const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
+  const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
+  return Array.from({ length: SIZE }, (_, index) =>
     rgb(
       threeStop(
         mix(progressive, WHITE, 0.72),
@@ -159,8 +168,6 @@ export function compassView(position: CompassPosition, category: string, moralAx
       )
     )
   );
-  const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
-  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
 }
 
 export const COMPASS_GRID_CELLS = GRID_CELLS;
