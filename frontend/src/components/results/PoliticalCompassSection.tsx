@@ -173,6 +173,55 @@ export function socialStripCells(moralAxis?: Axis): string[] {
 export const COMPASS_GRID_CELLS = GRID_CELLS;
 export const compassClamp = clamp;
 
+export interface CompassMarker {
+  key: string;
+  left: number;
+  top?: number;
+  color?: string;
+}
+
+/** Grade da bússola com um "X" por marcador (o resultado do usuário ou, em /compare, cada perfil). */
+export function CompassChart({ ariaLabel, markers }: { ariaLabel: string; markers: CompassMarker[] }) {
+  return (
+    <div className="e-compass-chart" role="img" aria-label={ariaLabel}>
+      <span className="e-compass-lbl is-top">{t.compassAuthoritarian}</span>
+      <span className="e-compass-lbl is-left">{t.compassLeft}</span>
+      <div className="e-compass-grid">
+        {GRID_CELLS.map((color, index) => (
+          <span key={index} style={{ background: color }} />
+        ))}
+        <i className="e-compass-axis is-x" aria-hidden="true" />
+        <i className="e-compass-axis is-y" aria-hidden="true" />
+        {markers.map((marker) => (
+          <Marker key={marker.key} left={marker.left} top={marker.top} color={marker.color} />
+        ))}
+      </div>
+      <span className="e-compass-lbl is-right">{t.compassRight}</span>
+      <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
+    </div>
+  );
+}
+
+/** Barra progressista/tradicionalista com um "X" por marcador. */
+export function SocialStrip({ cells, markers }: { cells: string[]; markers: CompassMarker[] }) {
+  return (
+    <div className="e-compass-bar" aria-hidden="true">
+      <div className="e-compass-bar-lbls">
+        <span>{t.compassProgressive}</span>
+        <span>{t.compassTraditionalist}</span>
+      </div>
+      <div className="e-compass-strip">
+        {cells.map((color, index) => (
+          <span key={index} style={{ background: color }} />
+        ))}
+        {markers.map((marker) => (
+          <Marker key={marker.key} left={marker.left} color={marker.color} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function PoliticalCompassSection({ position, category, moralAxis }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -188,24 +237,10 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
       <h2>{t.compassTitle}</h2>
 
       <div className="e-compass-body">
-        <div
-          className="e-compass-chart"
-          role="img"
-          aria-label={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
-        >
-          <span className="e-compass-lbl is-top">{t.compassAuthoritarian}</span>
-          <span className="e-compass-lbl is-left">{t.compassLeft}</span>
-          <div className="e-compass-grid">
-            {GRID_CELLS.map((color, index) => (
-              <span key={index} style={{ background: color }} />
-            ))}
-            <i className="e-compass-axis is-x" aria-hidden="true" />
-            <i className="e-compass-axis is-y" aria-hidden="true" />
-            <Marker left={right} top={100 - authoritarian} color={markerColor} />
-          </div>
-          <span className="e-compass-lbl is-right">{t.compassRight}</span>
-          <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
-        </div>
+        <CompassChart
+          ariaLabel={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
+          markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor }]}
+        />
 
         <div className="e-compass-read">
           <p className="e-compass-sentence">
@@ -235,18 +270,7 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
             )}
           </p>
 
-          <div className="e-compass-bar" aria-hidden="true">
-            <div className="e-compass-bar-lbls">
-              <span>{t.compassProgressive}</span>
-              <span>{t.compassTraditionalist}</span>
-            </div>
-            <div className="e-compass-strip">
-              {stripCells.map((color, index) => (
-                <span key={index} style={{ background: color }} />
-              ))}
-              <Marker left={traditional} color={socialColor} />
-            </div>
-          </div>
+          <SocialStrip cells={stripCells} markers={[{ key: 'you', left: traditional, color: socialColor }]} />
         </div>
       </div>
 

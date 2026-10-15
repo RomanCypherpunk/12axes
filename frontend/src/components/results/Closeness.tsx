@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { t } from '../../i18n';
 import type { Axis, AxisResult } from '../../types/quiz';
+import { AxisTrackRow, TrackPin, YouPin } from './AxisTrack';
 
 // Eixos que mais aproximam o usuário de um perfil (personalidade ou país): menor
 // distância entre os dois valores, preferindo eixos em que o usuário tem posição definida.
@@ -39,34 +40,22 @@ export function Closeness({ vector, name, face, axes, results }: ClosenessProps)
       <p className="e-close-title">{t.closenessTitle}</p>
       <ul>
         {rows.map(({ axis, result, user, target }) => {
-          // leftPercent alto = polo esquerdo; na trilha o polo esquerdo fica à esquerda.
           const color = user >= 50 ? axis.leftColor : axis.rightColor;
           return (
-            <li key={axis.id} style={{ '--ac': color } as CSSProperties}>
-              <div className="e-close-head">
-                <b>{result.label}</b>
-                <span>{user >= 50 ? result.leftPole : result.rightPole}</span>
-              </div>
-              <div
-                className="e-close-track"
-                role="img"
-                aria-label={`${result.label}: ${t.closenessYou} ${Math.round(user)}% ${result.leftPole}, ${name} ${Math.round(target)}% ${result.leftPole}`}
-              >
-                <span className="e-close-mid" />
-                <span className="e-close-pin e-close-them" style={{ left: `${100 - target}%` }} title={name}>
-                  {face}
-                </span>
-                <span className="e-close-pin e-close-you" style={{ left: `${100 - user}%` }} title={t.closenessYou}>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" />
-                  </svg>
-                </span>
-              </div>
-              <div className="e-close-poles">
-                <span>{result.leftPole}</span>
-                <span>{result.rightPole}</span>
-              </div>
-            </li>
+            <AxisTrackRow
+              key={axis.id}
+              label={result.label}
+              aside={user >= 50 ? result.leftPole : result.rightPole}
+              leftPole={result.leftPole}
+              rightPole={result.rightPole}
+              ariaLabel={`${result.label}: ${t.closenessYou} ${Math.round(user)}% ${result.leftPole}, ${name} ${Math.round(target)}% ${result.leftPole}`}
+              style={{ '--ac': color } as CSSProperties}
+            >
+              <TrackPin leftPercent={target} title={name}>
+                {face}
+              </TrackPin>
+              <YouPin leftPercent={user} />
+            </AxisTrackRow>
           );
         })}
       </ul>

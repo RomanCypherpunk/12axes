@@ -2,13 +2,14 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
-import { LANG, setLang, t } from './i18n';
+import { t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
+import { CatalogLinks, LangToggle, MenuButton, NavLinks } from './components/editorial/SiteNav';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
@@ -754,43 +755,18 @@ function MainApp() {
           <Logo onClick={goHome} />
           {screen === 'home' && (
             <>
-              <nav
-                className={isMenuOpen ? 'e-nav-links e-open' : 'e-nav-links'}
-                aria-label={t.mainNavAria}
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <NavLinks open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
                 <a href="#espectro-politico">{t.navSpectrum}</a>
                 <a href="#apoie">{t.navSupport}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/books`}>{t.navBooks}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
-                <a href={`/compare?lang=${LANG}`}>{t.navCompare}</a>
-                <button
-                  className="e-lang"
-                  type="button"
-                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
-                  aria-label={t.langToggleAria}
-                >
-                  {t.langToggleLabel}
-                </button>
-              </nav>
+                <CatalogLinks />
+                <LangToggle />
+              </NavLinks>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
                 {t.navStart} <ArrowIcon />
               </button>
-              <button
-                className="e-menu-btn"
-                type="button"
-                aria-label={t.menuAria}
-                aria-expanded={isMenuOpen}
-                onClick={() => setIsMenuOpen((open) => !open)}
-              >
-                <span />
-                <span />
-                <span />
-              </button>
+              <MenuButton open={isMenuOpen} onToggle={() => setIsMenuOpen((open) => !open)} />
             </>
           )}
           {screen === 'variant' && (

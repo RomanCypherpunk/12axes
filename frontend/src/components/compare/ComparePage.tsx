@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { HOME_AXES } from '../../data/homeAxes';
-import { LANG, setLang, t } from '../../i18n';
+import { LANG, t } from '../../i18n';
 import { ApiError, fetchCompareCatalog, fetchCompareProfiles } from '../../services/quizApi';
 import type { CompareItem, CompareProfiles } from '../../types/quiz';
 import {
@@ -13,9 +13,13 @@ import {
   type CompareRef
 } from '../../utils/compareUrl';
 import { compassPoints } from '../../utils/politicalCompass';
-import { ArrowIcon, SiteFooter } from '../editorial/primitives';
-import { ProfileFace, searchItems } from '../results/CompareSection';
-import { COMPASS_GRID_CELLS, Marker, socialStripCells } from '../results/PoliticalCompassSection';
+import { ArrowIcon, Logo, SiteFooter } from '../editorial/primitives';
+import { CatalogLinks, LangToggle, MenuButton, NavLinks } from '../editorial/SiteNav';
+import { AxisTrackRow, TrackPin } from '../results/AxisTrack';
+import { CompareSearchField, ProfileFace, searchItems } from '../results/CompareSection';
+import { CountUpValue } from '../results/CountUpValue';
+import { DimRow } from '../results/parts';
+import { CompassChart, Marker, SocialStrip, socialStripCells } from '../results/PoliticalCompassSection';
 
 // Uma cor por posição na comparação (marcador nas barras, "X" na bússola e legenda):
 // Floresta e Carmim da identidade e o azul do eixo Estrutura, que não somem sobre os pastéis da grade.
@@ -42,6 +46,7 @@ export function ComparePage() {
   // (ou para o título, quando a busca some por já haver 3 perfis).
   const restoreFocus = useRef(false);
   const [query, setQuery] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [data, setData] = useState<{ key: string; profiles: CompareProfiles } | null>(null);
   const [status, setStatus] = useState<Status>('idle');
   const requestRef = useRef(0);
@@ -138,18 +143,15 @@ export function ComparePage() {
       </a>
       <header className="ed e-nav e-cmpp-nav">
         <div className="e-wrap">
-          <a className="e-logo" href={home} aria-label={t.backToStartAria}>
-            <b>12</b>
-            <span>axes</span>
+          <Logo href={home} />
+          <NavLinks open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
+            <CatalogLinks current="compare" />
+            <LangToggle />
+          </NavLinks>
+          <a className="e-btn e-btn-primary e-btn-sm" href={home}>
+            {t.navStart} <ArrowIcon />
           </a>
-          <div className="e-nav-actions">
-            <button className="e-lang" type="button" onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')} aria-label={t.langToggleAria}>
-              {t.langToggleLabel}
-            </button>
-            <a className="e-btn e-btn-primary e-btn-sm" href={home}>
-              {t.navStart} <ArrowIcon />
-            </a>
-          </div>
+          <MenuButton open={isMenuOpen} onToggle={() => setIsMenuOpen((open) => !open)} />
         </div>
       </header>
 
@@ -171,26 +173,26 @@ export function ComparePage() {
                   {refs.map((ref, index) => {
                     const item = itemFor(ref);
                     return (
-                      <li className="e-dim-row" key={refKey(ref)}>
-                        <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[index] } as CSSProperties}>
-                          {item ? <ProfileFace item={item} className="e-avatar" /> : <span className="e-avatar e-cmp-dot" aria-hidden="true" />}
-                        </span>
-                        <div>
-                          <span className="e-dim">{t.compareTypeLabels[ref.type]}</span>
-                          <strong>{item?.name ?? ref.id}</strong>
-                          {!item && status === 'notFound' && catalog && <small>{t.comparePageUnknown}</small>}
-                        </div>
-                        <span className="e-pctc">
-                          <button
-                            className="e-btn e-btn-ghost e-btn-sm"
-                            type="button"
-                            aria-label={t.comparePageRemoveAria(item?.name ?? ref.id)}
-                            onClick={() => remove(ref)}
-                          >
-                            {t.comparePageRemove}
-                          </button>
-                        </span>
-                      </li>
+                      <DimRow
+                        key={refKey(ref)}
+                        visual={
+                          <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[index] } as CSSProperties}>
+                            {item ? <ProfileFace item={item} className="e-avatar" /> : <span className="e-avatar e-cmp-dot" aria-hidden="true" />}
+                          </span>
+                        }
+                        label={t.compareTypeLabels[ref.type]}
+                        name={item?.name ?? ref.id}
+                        note={!item && status === 'notFound' && catalog && <small>{t.comparePageUnknown}</small>}
+                      >
+                        <button
+                          className="e-btn e-btn-ghost e-btn-sm"
+                          type="button"
+                          aria-label={t.comparePageRemoveAria(item?.name ?? ref.id)}
+                          onClick={() => remove(ref)}
+                        >
+                          {t.comparePageRemove}
+                        </button>
+                      </DimRow>
                     );
                   })}
                 </ul>
@@ -198,42 +200,19 @@ export function ComparePage() {
 
               {refs.length < MAX_COMPARE && (
                 <div className="e-cmp-bar">
-                  <div className="e-cmp-field">
-                    <input
-                      ref={inputRef}
-                      className="e-cmp-input"
-                      type="search"
-                      role="combobox"
-                      aria-label={t.compareSearchLabel}
-                      aria-expanded={options.length > 0}
-                      aria-controls="e-cmpp-options"
-                      placeholder={t.compareSearchPlaceholder}
-                      value={query}
-                      autoComplete="off"
-                      onFocus={loadCatalog}
-                      onChange={(event) => {
-                        loadCatalog();
-                        setQuery(event.target.value);
-                      }}
-                    />
-                    {options.length > 0 && (
-                      <ul className="e-cmp-options" id="e-cmpp-options" role="listbox">
-                        {options.map((item) => (
-                          <li key={refKey(item)} role="option" aria-selected={false}>
-                            <button type="button" aria-label={t.compareOptionAria(item.name, t.compareTypeLabels[item.type])} onClick={() => add(item)}>
-                              <ProfileFace item={item} className="e-cmp-face" />
-                              <span className="e-cmp-opt-text">
-                                <b>{item.name}</b>
-                                <em>{item.caption}</em>
-                              </span>
-                              <span className="e-tag e-tag-neutral">{t.compareTypeLabels[item.type]}</span>
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {catalog && query.trim().length > 0 && options.length === 0 && <p className="e-cmp-empty">{t.compareNoResults}</p>}
-                  </div>
+                  <CompareSearchField
+                    listId="e-cmpp-options"
+                    query={query}
+                    options={options}
+                    showEmpty={Boolean(catalog) && query.trim().length > 0 && options.length === 0}
+                    inputRef={inputRef}
+                    onFocus={loadCatalog}
+                    onQueryChange={(value) => {
+                      loadCatalog();
+                      setQuery(value);
+                    }}
+                    onChoose={add}
+                  />
                 </div>
               )}
               {refs.length < MIN_COMPARE && <p className="e-cmp-empty">{t.comparePageNeedMore}</p>}
@@ -281,38 +260,31 @@ function CompareResults({ profiles: { profiles, pairs }, axes }: { profiles: Com
         <div className="e-close">
           <ul>
             {axes.map((axis) => (
-              <li key={axis.id}>
-                <div className="e-close-head">
-                  <b>{axis.label}</b>
-                </div>
-                <div
-                  className="e-close-track"
-                  role="img"
-                  aria-label={t.comparePageAxisAria(
-                    axis.label,
-                    profiles.map((profile) => `${profile.item.name} ${Math.round(profile.vector[axis.id] ?? 50)}% ${axis.leftPole}`).join(', ')
-                  )}
-                >
-                  <span className="e-close-mid" />
-                  {profiles.map((profile, index) => {
-                    const value = profile.vector[axis.id] ?? 50;
-                    return (
-                      <span
-                        key={refKey(profile.item)}
-                        className="e-close-pin e-close-them e-cmpp-ring"
-                        style={{ left: `${100 - value}%`, '--pc': PROFILE_COLORS[index] } as CSSProperties}
-                        title={`${profile.item.name}: ${Math.round(value)}% ${axis.leftPole}`}
-                      >
-                        <ProfileFace item={profile.item} className="e-close-face" />
-                      </span>
-                    );
-                  })}
-                </div>
-                <div className="e-close-poles">
-                  <span>{axis.leftPole}</span>
-                  <span>{axis.rightPole}</span>
-                </div>
-              </li>
+              <AxisTrackRow
+                key={axis.id}
+                label={axis.label}
+                leftPole={axis.leftPole}
+                rightPole={axis.rightPole}
+                ariaLabel={t.comparePageAxisAria(
+                  axis.label,
+                  profiles.map((profile) => `${profile.item.name} ${Math.round(profile.vector[axis.id] ?? 50)}% ${axis.leftPole}`).join(', ')
+                )}
+              >
+                {profiles.map((profile, index) => {
+                  const value = profile.vector[axis.id] ?? 50;
+                  return (
+                    <TrackPin
+                      key={refKey(profile.item)}
+                      leftPercent={value}
+                      title={`${profile.item.name}: ${Math.round(value)}% ${axis.leftPole}`}
+                      className="e-cmpp-ring"
+                      style={{ '--pc': PROFILE_COLORS[index] } as CSSProperties}
+                    >
+                      <ProfileFace item={profile.item} className="e-close-face" />
+                    </TrackPin>
+                  );
+                })}
+              </AxisTrackRow>
             ))}
           </ul>
         </div>
@@ -322,22 +294,15 @@ function CompareResults({ profiles: { profiles, pairs }, axes }: { profiles: Com
         <section className="e-panel e-compass">
           <h2>{t.compassTitle}</h2>
           <div className="e-compass-body">
-            <div className="e-compass-chart" role="img" aria-label={compassLabel}>
-              <span className="e-compass-lbl is-top">{t.compassAuthoritarian}</span>
-              <span className="e-compass-lbl is-left">{t.compassLeft}</span>
-              <div className="e-compass-grid">
-                {COMPASS_GRID_CELLS.map((color, index) => (
-                  <span key={index} style={{ background: color }} />
-                ))}
-                <i className="e-compass-axis is-x" aria-hidden="true" />
-                <i className="e-compass-axis is-y" aria-hidden="true" />
-                {points.map((point) => (
-                  <Marker key={point.key} left={point.position.right} top={100 - point.position.authoritarian} color={point.color} />
-                ))}
-              </div>
-              <span className="e-compass-lbl is-right">{t.compassRight}</span>
-              <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
-            </div>
+            <CompassChart
+              ariaLabel={compassLabel}
+              markers={points.map((point) => ({
+                key: point.key,
+                left: point.position.right,
+                top: 100 - point.position.authoritarian,
+                color: point.color
+              }))}
+            />
 
             <div className="e-compass-read">
               <ul className="e-cmpp-legend" aria-label={t.comparePageLegendAria}>
@@ -348,20 +313,10 @@ function CompareResults({ profiles: { profiles, pairs }, axes }: { profiles: Com
                   </li>
                 ))}
               </ul>
-              <div className="e-compass-bar" aria-hidden="true">
-                <div className="e-compass-bar-lbls">
-                  <span>{t.compassProgressive}</span>
-                  <span>{t.compassTraditionalist}</span>
-                </div>
-                <div className="e-compass-strip">
-                  {socialStripCells(moralAxis).map((color, index) => (
-                    <span key={index} style={{ background: color }} />
-                  ))}
-                  {points.map((point) => (
-                    <Marker key={point.key} left={point.position.traditional} color={point.color} />
-                  ))}
-                </div>
-              </div>
+              <SocialStrip
+                cells={socialStripCells(moralAxis)}
+                markers={points.map((point) => ({ key: point.key, left: point.position.traditional, color: point.color }))}
+              />
             </div>
           </div>
         </section>
@@ -374,23 +329,23 @@ function CompareResults({ profiles: { profiles, pairs }, axes }: { profiles: Com
             const first = profiles[pair.first].item;
             const second = profiles[pair.second].item;
             return (
-              <li className="e-dim-row" key={`${pair.first}-${pair.second}`}>
-                <span className="e-cmpp-faces">
-                  <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[pair.first] } as CSSProperties}>
-                    <ProfileFace item={first} className="e-avatar" />
+              <DimRow
+                key={`${pair.first}-${pair.second}`}
+                visual={
+                  <span className="e-cmpp-faces">
+                    <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[pair.first] } as CSSProperties}>
+                      <ProfileFace item={first} className="e-avatar" />
+                    </span>
+                    <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[pair.second] } as CSSProperties}>
+                      <ProfileFace item={second} className="e-avatar" />
+                    </span>
                   </span>
-                  <span className="e-cmpp-ring" style={{ '--pc': PROFILE_COLORS[pair.second] } as CSSProperties}>
-                    <ProfileFace item={second} className="e-avatar" />
-                  </span>
-                </span>
-                <div>
-                  <span className="e-dim">{t.comparePagePairLabel}</span>
-                  <strong>
-                    {first.name} × {second.name}
-                  </strong>
-                </div>
-                <span className="e-pctc">{Math.round(pair.compatibility)}%</span>
-              </li>
+                }
+                label={t.comparePagePairLabel}
+                name={`${first.name} × ${second.name}`}
+              >
+                <CountUpValue value={pair.compatibility} decimals={0} />
+              </DimRow>
             );
           })}
         </ul>
