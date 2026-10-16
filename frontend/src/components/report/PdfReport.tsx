@@ -22,6 +22,7 @@ import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
 import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../results/PoliticalCompassSection';
 import { commonNote, unusualLead } from '../results/SignatureSection';
+import { bestTimelineEra, eraCompatibility, eraHighlights, timelineEntryInfo } from '../results/TimelineSection';
 import { computeCompass, type CompassPosition } from '../../utils/politicalCompass';
 
 interface PdfReportProps {
@@ -44,6 +45,9 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
   const partyTop = result.topPartyMatches ?? [];
   const showParties = PARTIES_ENABLED && partyTop.length > 0;
   const hasBooks = books.length > 0;
+  const timeline = (result.timeline ?? []).filter((era) => era.entries.length > 0);
+  const hasTimeline = timeline.length > 0;
+  const bestEra = bestTimelineEra(timeline);
   const sections = [
     t.axesSectionTitle,
     t.signatureTitle,
@@ -52,6 +56,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
     ...(result.personalityMatches.length > 0 ? [t.areasGeneralTitle] : []),
     ...(hasBooks ? [t.booksTitle] : []),
     ...(showParties ? [t.partiesSectionTitle] : []),
+    ...(hasTimeline ? [t.timelineSectionTitle] : []),
     t.otherMatches,
     ...(compass ? [t.compassTitle] : [])
   ];
@@ -311,7 +316,65 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
           </div>
         )}
 
-        {/* PÁGINA 7: Outras ideologias, Bússola política e Fechamento */}
+        {/* PÁGINA 7: Linha do tempo (2 perfis por era e o cartão da época mais compatível) */}
+        {hasTimeline && (
+          <div className="rp-page">
+            <PageHeader topName={top.name} />
+
+            <section className="rp-sec">
+              <SectionHead title={t.timelineSectionTitle} />
+              <ol className="tl">
+                {timeline.map((era) => (
+                  <li className="tl-era" key={era.key}>
+                    <div className="tl-head">
+                      <h3>{t.timelineEraNames[era.key]}</h3>
+                      <span>{t.timelineRange(era.fromYear, era.toYear)}</span>
+                    </div>
+                    <ul className="tl-list">
+                      {eraHighlights(era).map((entry) => {
+                        const info = timelineEntryInfo(entry);
+                        if (!info) return null;
+                        return (
+                          <li key={info.key}>
+                            <Img className={info.isLogo ? 'tl-ph tl-logo' : 'tl-ph'} src={info.imageSrc} name={info.name} />
+                            <div>
+                              <b>{info.name}</b>
+                              <small>{info.date}</small>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                ))}
+              </ol>
+              {bestEra && (
+                <article className="mc tl-best">
+                  <div className="tl-mosaic">
+                    {bestEra.entries.map((entry) => {
+                      const info = timelineEntryInfo(entry);
+                      return info ? (
+                        <Img key={info.key} className={info.isLogo ? 'tl-tile tl-tile-logo' : 'tl-tile'} src={info.imageSrc} name={info.name} />
+                      ) : null;
+                    })}
+                  </div>
+                  <div>
+                    <div className="tags">
+                      <span className="tag ts">
+                        {formatPct(eraCompatibility(bestEra), 0)} {t.matchWord}
+                      </span>
+                    </div>
+                    <span className="tl-best-lab">{t.timelineBestEra}</span>
+                    <h3>{t.timelineEraNames[bestEra.key]}</h3>
+                    <p className="mc-cap">{t.timelineRange(bestEra.fromYear, bestEra.toYear)}</p>
+                  </div>
+                </article>
+              )}
+            </section>
+          </div>
+        )}
+
+        {/* PÁGINA 8: Outras ideologias, Bússola política e Fechamento */}
         <div className="rp-page">
           <PageHeader topName={top.name} />
 

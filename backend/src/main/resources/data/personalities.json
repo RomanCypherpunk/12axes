@@ -7237,10 +7237,10 @@
   {
     "id": "guilherme-freire",
     "name": "Guilherme Freire",
-    "role": "Professor de Filosofia e Educador",
+    "role": "Filósofo e educador",
     "category": "filosofo",
-    "lifespan": "1989–presente",
-    "description": "Professor de filosofia, educador e conferencista brasileiro, criador do projeto Filosofia do Zero. Notabilizou-se pela difusão do tomismo, da tradição clássica aristotélica, das virtudes cristãs e pela crítica cultural ao relativismo moderno.",
+    "lifespan": "1991–",
+    "description": "Filósofo e educador católico, mestre pela PUC-SP e criador do Filosofia do Zero. Divulga Aristóteles e Tomás de Aquino, critica o relativismo e a centralização do Estado e vê na República de 1889 a origem da crise política brasileira.",
     "imagePath": "/personalities/portraits/guilherme-freire.jpg",
     "imageSourceName": "Canal Oficial / YouTube",
     "imageSourceUrl": "https://www.youtube.com/@guilhermefclfreire",
@@ -8316,5 +8316,403 @@
     "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Santos_in_2018.jpg",
     "imageNote": "Juan Manuel Santos em 2018; foto da Cancillería del Perú, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via Wikimedia Commons; recortada na fonte, redimensionada e recomprimida.",
     "religions": []
+  },
+  {
+    "id": "zhuangzi",
+    "name": "Zhuangzi",
+    "role": "Filósofo taoísta",
+    "category": "filosofo",
+    "lifespan": "c. 369–c. 286 a.C.",
+    "description": "Filósofo taoísta chinês dos Reinos Combatentes, autor do Zhuangzi. Defende a liberdade espontânea, o relativismo e a vida simples e natural, recusa cargos públicos e despreza a moral convencional e as ambições do Estado.",
+    "imagePath": "/personalities/portraits/zhuangzi.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:玄門十子圖_莊子.jpg",
+    "imageNote": "Recorte de pintura chinesa de Zhuangzi via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "lao-tse",
+    "name": "Lao-Tsé",
+    "role": "Sábio taoísta",
+    "category": "filosofo",
+    "lifespan": "c. 600–c. 520 a.C.",
+    "description": "Sábio chinês tradicionalmente autor do Dao De Jing e fundador do taoísmo. Defende o wu wei, um governo que quase não interfere, estados pequenos e pacíficos, vida simples e desconfiança do saber, das armas e do luxo.",
+    "imagePath": "/personalities/portraits/lao-tse.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Lao_Tzu_-_Project_Gutenberg_eText_15250.jpg",
+    "imageNote": "Ilustração de Lao-Tsé via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "mozi",
+    "name": "Mozi",
+    "role": "Filósofo e fundador do moísmo",
+    "category": "filosofo",
+    "lifespan": "c. 470–c. 391 a.C.",
+    "description": "Filósofo chinês, fundador do moísmo, prega o amor imparcial por todos, governantes escolhidos pelo mérito, a frugalidade e a guerra apenas defensiva, e vê a vontade do Céu como base da moral e da política.",
+    "imagePath": "/personalities/portraits/mozi.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Философ_Мо-Цзы.jpg",
+    "imageNote": "Retrato de Mozi via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "espartaco",
+    "name": "Espártaco",
+    "role": "Líder da revolta de escravos",
+    "category": "politico",
+    "lifespan": "c. 111–71 a.C.",
+    "description": "Gladiador trácio que liderou a maior revolta de escravos contra Roma (73–71 a.C.). Formou um exército de dezenas de milhares de escravizados, derrotou legiões romanas e dividiu o saque por igual até ser vencido por Crasso.",
+    "imagePath": "/personalities/portraits/espartaco.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Σπάρτακος_Spartacus,Espartaco_marble_statue_in_Louvre_\"Μαιδοι_clan_-Meadow\"_slave_macedon-greek.jpg",
+    "imageNote": "Recorte da estátua de Espártaco, de Denis Foyatier (Louvre), via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "tiberio-graco",
+    "name": "Tibério Graco",
+    "role": "Tribuno da plebe",
+    "category": "politico",
+    "lifespan": "162–133 a.C.",
+    "description": "Tribuno da plebe romano que propôs a lei agrária de 133 a.C., limitando as terras públicas dos ricos e distribuindo-as aos pobres. Passou por cima do Senado, apelou à assembleia popular e foi morto por senadores.",
+    "imagePath": "/personalities/portraits/tiberio-graco.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Tiberius_Gracchus.jpg",
+    "imageNote": "Gravura de Tibério Graco (Promptuarii Iconum Insigniorum) via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "caio-graco",
+    "name": "Caio Graco",
+    "role": "Tribuno da plebe",
+    "category": "politico",
+    "lifespan": "154–121 a.C.",
+    "description": "Tribuno da plebe romano, irmão de Tibério, aprovou a venda subsidiada de trigo, colônias, obras públicas e a reforma dos tribunais, e propôs cidadania aos latinos. Perseguido pelo Senado, morreu em 121 a.C.",
+    "imagePath": "/personalities/portraits/caio-graco.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Eugene_Guillaume_-_the_Gracchi.jpg",
+    "imageNote": "Recorte da escultura dos Gracos, de Eugène Guillaume, via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "mazdak",
+    "name": "Mazdak",
+    "role": "Reformador religioso e social",
+    "category": "religioso",
+    "lifespan": "séc. V–c. 524",
+    "description": "Reformador persa da era sassânida que pregou a comunhão de bens, o fim da riqueza concentrada e a não violência. Teve o apoio do rei Kavad I e abriu celeiros na fome, mas foi massacrado com seus seguidores por volta de 524.",
+    "imagePath": "/personalities/portraits/mazdak.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:The_Iranian_prophet_Mazdak_being_executed.png",
+    "imageNote": "Recorte de uma miniatura persa do Shahnameh via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "john-ball",
+    "name": "John Ball",
+    "role": "Padre e líder rebelde",
+    "category": "ativista",
+    "lifespan": "c. 1338–1381",
+    "description": "Padre inglês que pregou a igualdade (\"Quando Adão lavrava e Eva fiava, quem era o fidalgo?\") e o fim da servidão, da nobreza e da hierarquia da Igreja. Foi a voz da Revolta dos Camponeses de 1381 e foi executado.",
+    "imagePath": "/personalities/portraits/john-ball.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:John_Ball_encouraging_Wat_Tyler_rebels_from_ca_1470_MS_of_Froissart_Chronicles_in_BL.jpg",
+    "imageNote": "Recorte de uma miniatura das Crônicas de Froissart (c. 1470) via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "wat-tyler",
+    "name": "Wat Tyler",
+    "role": "Líder da Revolta dos Camponeses",
+    "category": "ativista",
+    "lifespan": "c. 1341–1381",
+    "description": "Líder da Revolta dos Camponeses inglesa de 1381. Exigiu o fim da servidão, aluguéis baixos, liberdade de comércio e confisco dos bens da Igreja, sempre leal ao rei Ricardo II; foi morto por um oficial em Smithfield.",
+    "imagePath": "/personalities/portraits/wat-tyler.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:William_Blake_Wat_Tyler.jpg",
+    "imageNote": "Estudo de William Blake para Wat Tyler via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "gerrard-winstanley",
+    "name": "Gerrard Winstanley",
+    "role": "Líder dos Diggers",
+    "category": "ativista",
+    "lifespan": "1609–1676",
+    "description": "Inglês do século XVII, líder dos Diggers e autor de A Lei da Liberdade, defendeu a terra comum, o fim da propriedade da terra e do trabalho assalariado, a república e a não violência, em chave cristã e racionalista.",
+    "imagePath": "/personalities/portraits/gerrard-winstanley.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Gerrard_Winstanley_memorial_-_geograph_6433963.jpg",
+    "imageNote": "Memorial a Gerrard Winstanley (não há retrato conhecido) via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "jean-meslier",
+    "name": "Jean Meslier",
+    "role": "Padre e filósofo ateu",
+    "category": "religioso",
+    "lifespan": "1664–1729",
+    "description": "Padre francês que, em segredo, escreveu um Testamento ateu e comunista, atacando a religião, a monarquia, a nobreza e a propriedade e defendendo comunas paroquiais igualitárias. O texto só foi publicado depois da sua morte.",
+    "imagePath": "/personalities/portraits/jean-meslier.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:J._Meslier_(gravure_1802).jpg",
+    "imageNote": "Retrato de Jean Meslier via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "etienne-de-la-boetie",
+    "name": "Étienne de La Boétie",
+    "role": "Magistrado e humanista",
+    "category": "filosofo",
+    "lifespan": "1530–1563",
+    "description": "Magistrado e humanista francês, autor do Discurso da Servidão Voluntária, em que sustenta que a tirania só dura porque o povo consente. Propõe a recusa pacífica de obedecer, e não a violência, como caminho da liberdade.",
+    "imagePath": "/personalities/portraits/etienne-de-la-boetie.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_d'Étienne_de_La_Boétie.JPG",
+    "imageNote": "Recorte da estátua de Étienne de La Boétie, em Sarlat, via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "william-godwin",
+    "name": "William Godwin",
+    "role": "Filósofo e escritor político",
+    "category": "teorico",
+    "lifespan": "1756–1836",
+    "description": "Filósofo inglês, autor de Justiça Política, considerado o pai do anarquismo filosófico. Defende a abolição do governo e da propriedade desigual, a razão como guia, a educação e a não violência, criticando também o casamento.",
+    "imagePath": "/personalities/portraits/william-godwin.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:William_Godwin_by_Henry_William_Pickersgill.jpg",
+    "imageNote": "Retrato de William Godwin via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "thomas-spence",
+    "name": "Thomas Spence",
+    "role": "Reformador agrário",
+    "category": "teorico",
+    "lifespan": "1750–1814",
+    "description": "Reformador inglês que propôs que a terra pertencesse às paróquias, com aluguéis pagos a fundos locais que financiariam serviços e uma renda a todos. Foi preso várias vezes por seus panfletos radicais e defendia a democracia.",
+    "imagePath": "/personalities/portraits/thomas-spence.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:ThomasSpence.png",
+    "imageNote": "Retrato de Thomas Spence via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "nestor-makhno",
+    "name": "Néstor Makhno",
+    "role": "Líder anarquista e comandante guerrilheiro",
+    "category": "politico",
+    "lifespan": "1888–1934",
+    "description": "Anarquista ucraniano que comandou o Exército Insurgente da Ucrânia (1918–1921) contra alemães, brancos e vermelhos. Defendeu comunas livres, sovietes e a autogestão camponesa no Território Livre, até ser esmagado pelos bolcheviques; morreu exilado em Paris.",
+    "imagePath": "/personalities/portraits/nestor-makhno.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:1921._Нестор_Махно_в_лагере_для_перемещенных_лиц_в_Румынии.jpg",
+    "imageNote": "Retrato de Néstor Makhno via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "elisee-reclus",
+    "name": "Élisée Reclus",
+    "role": "Geógrafo e anarquista",
+    "category": "teorico",
+    "lifespan": "1830–1905",
+    "description": "Geógrafo e anarquista francês, comunardo e autor da Nova Geografia Universal e de O Homem e a Terra. Defende o anarcocomunismo, a abolição do Estado e da propriedade, o vegetarianismo, a igualdade entre os povos e a harmonia com a natureza.",
+    "imagePath": "/personalities/portraits/elisee-reclus.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Élisée_Reclus,_by_Nadar,_retouched.jpg",
+    "imageNote": "Retrato de Élisée Reclus via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "gary-johnson",
+    "name": "Gary Johnson",
+    "role": "Ex-governador do Novo México",
+    "category": "politico",
+    "lifespan": "1953–",
+    "description": "Ex-governador republicano do Novo México (1995–2003) e candidato presidencial libertário em 2012 e 2016. Defende cortar gastos e impostos, legalizar a maconha, orçamento equilibrado, livre comércio, imigração mais aberta e menos intervenção militar.",
+    "imagePath": "/personalities/portraits/gary-johnson.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Gary_Johnson_(25669967777)_(cropped).jpg",
+    "imageNote": "Retrato de Gary Johnson via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "chase-oliver",
+    "name": "Chase Oliver",
+    "role": "Político libertário",
+    "category": "politico",
+    "lifespan": "1985–",
+    "description": "Político e candidato presidencial do Partido Libertário em 2024. Defende legalizar as drogas, fechar bases no exterior, sair da OTAN, cortar a ajuda militar a Israel e Ucrânia, reforma migratória aberta, direito ao aborto, impostos menores e liberdades civis.",
+    "imagePath": "/personalities/portraits/chase-oliver.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Chase_Oliver_by_Gage_Skidmore_2.jpg",
+    "imageNote": "Retrato de Chase Oliver via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "joao-amoedo",
+    "name": "João Amoêdo",
+    "role": "Banqueiro e fundador do Novo",
+    "category": "politico",
+    "lifespan": "1962–",
+    "description": "Banqueiro, fundador do Partido Novo e candidato à Presidência em 2018. Liberal na economia e conservador nos costumes: defende privatizar Petrobras e bancos públicos, enxugar o Estado e reformar a Previdência, e é a favor do porte de armas e contra drogas e aborto.",
+    "imagePath": "/personalities/portraits/joao-amoedo.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:João_Amoêdo_em_abril_de_2019_(cropped).jpg",
+    "imageNote": "Retrato de João Amoêdo via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "jackson-hinkle",
+    "name": "Jackson Hinkle",
+    "role": "Comentarista e dirigente do ACP",
+    "category": "ativista",
+    "lifespan": "1999–",
+    "description": "Comentarista americano e cofundador do American Communist Party (2024). Marxista-leninista que se diz patriota e cristão, defende a Palestina, a Rússia de Putin e o fim da intervenção dos EUA no exterior, e já se associou ao rótulo \"comunismo MAGA\".",
+    "imagePath": "/personalities/portraits/jackson-hinkle.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Hinkle_2023_2.png",
+    "imageNote": "Retrato de Jackson Hinkle via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox"
+    ]
+  },
+  {
+    "id": "zakhar-prilepin",
+    "name": "Zakhar Prilepin",
+    "role": "Escritor e político",
+    "category": "intelectual",
+    "lifespan": "1975–",
+    "description": "Escritor e político russo, ex-líder do partido Pela Verdade e coliderou a Rússia Justa até 2025. Nacionalista de esquerda de origem nazbol, apoia Putin e a guerra na Ucrânia, combateu no Donbass e defende um Estado forte, social e imperial.",
+    "imagePath": "/personalities/portraits/zakhar-prilepin.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Zahar-Prilepin_(1).jpg",
+    "imageNote": "Retrato de Zakhar Prilepin via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "jordan-bardella",
+    "name": "Jordan Bardella",
+    "role": "Presidente do Reagrupamento Nacional",
+    "category": "politico",
+    "lifespan": "1995–",
+    "description": "Presidente do Reagrupamento Nacional desde 2022 e eurodeputado. Defende reduzir a imigração, preferência nacional em benefícios, ordem e segurança, soberania contra a UE e cortes de impostos sobre energia, mas apoia o envio de armas à Ucrânia.",
+    "imagePath": "/personalities/portraits/jordan-bardella.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Jordan_Bardella_-_Strasbourg_European_Parliament_September_2022_(Cropped).jpg",
+    "imageNote": "Retrato de Jordan Bardella via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "santiago-abascal",
+    "name": "Santiago Abascal",
+    "role": "Presidente do Vox",
+    "category": "politico",
+    "lifespan": "1976–",
+    "description": "Presidente do Vox desde 2014 e deputado por Madri. Defende a unidade da Espanha e o fim das autonomias, remigração e deportações, prioridade nacional, família tradicional, contra aborto e agenda de gênero e clima, e menos impostos.",
+    "imagePath": "/personalities/portraits/santiago-abascal.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Santiago_Abascal_portrait.jpg",
+    "imageNote": "Retrato de Santiago Abascal via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "sv3rige",
+    "name": "Gatis Lagzdiņš (Sv3rige)",
+    "role": "YouTuber e ativista antivegano",
+    "category": "ativista",
+    "lifespan": "c. 1991–",
+    "description": "YouTuber letão que defende o consumo de carne crua, a teoria da Terra plana e a oposição ao veganismo, com protestos em festivais veganos, como o de Londres em 2019, que lhe rendeu multa.",
+    "imagePath": "/personalities/portraits/sv3rige.jpg",
+    "imageSourceName": "SoundCloud (arte de perfil)",
+    "imageSourceUrl": "https://soundcloud.com/",
+    "imageNote": "Foto de perfil de Sv3rige fornecida pelo usuário; sem retrato livre na Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "aajonus-vonderplanitz",
+    "name": "Aajonus Vonderplanitz",
+    "role": "Nutricionista alternativo e ativista",
+    "category": "ativista",
+    "lifespan": "1947–2013",
+    "description": "Nutricionista alternativo norte-americano, defendeu a Dieta Primal de carne, ovos e laticínios crus e fundou a Right to Choose Healthy Food pelo direito ao leite cru, em oposição à FDA, às vacinas e à medicina convencional.",
+    "imagePath": "/personalities/portraits/aajonus-vonderplanitz.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Aajonus_Vonderplanitz.jpg",
+    "imageNote": "Retrato de Aajonus Vonderplanitz via Wikipédia/Wikimedia Commons (domínio público).",
+    "religions": []
+  },
+  {
+    "id": "raphael-machado",
+    "name": "Raphael Machado",
+    "role": "Fundador da Nova Resistência",
+    "category": "ativista",
+    "lifespan": "c. 1988–",
+    "description": "Advogado formado pela UFRJ e fundador da Nova Resistência (2015), divulga no Brasil a Quarta Teoria Política de Dugin: multipolaridade, antiamericanismo, trabalhismo varguista e integração ibero-americana.",
+    "imagePath": "/personalities/portraits/raphael-machado.jpg",
+    "imageSourceName": "Nova Resistência (site oficial)",
+    "imageSourceUrl": "https://novaresistencia.org/wp-content/uploads/2024/03/machadoraphael.png",
+    "imageNote": "Foto de Raphael Machado do site da Nova Resistência, fornecida pelo usuário e recortada em quadrado; sem retrato livre na Wikimedia Commons.",
+    "religions": [
+      "other"
+    ]
+  },
+  {
+    "id": "mark-rutte",
+    "name": "Mark Rutte",
+    "role": "Secretário-geral da OTAN",
+    "category": "politico",
+    "lifespan": "1967–",
+    "description": "Secretário-geral da OTAN desde 2024 e primeiro-ministro dos Países Baixos por 14 anos (2010–2024), líder do VVD. Liberal-conservador, defende livre mercado, disciplina fiscal, asilo mais restrito, apoio à Ucrânia e 5% do PIB em defesa.",
+    "imagePath": "/personalities/portraits/mark-rutte.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Mark_Rutte_NATO_Secretary_General_2026_(cropped).jpg",
+    "imageNote": "Retrato de Mark Rutte via Wikipédia/Wikimedia Commons.",
+    "religions": []
+  },
+  {
+    "id": "johannes-kaiser",
+    "name": "Johannes Kaiser",
+    "role": "Político chileno, fundador do PNL",
+    "category": "politico",
+    "lifespan": "1976–",
+    "description": "Político, ativista e youtuber chileno, deputado de 2022 a 2026 e fundador do Partido Nacional Libertário. Paleolibertário e reacionário, defende Estado mínimo, livre mercado, controle duro da imigração, valores tradicionais e o legado de Pinochet.",
+    "imagePath": "/personalities/portraits/johannes-kaiser.jpg",
+    "imageSourceName": "El Periodista",
+    "imageSourceUrl": "https://www.elperiodista.cl/wp-content/uploads/2025/04/johannes_kaiser_0.jpg",
+    "imageNote": "Foto de Johannes Kaiser publicada pelo El Periodista, recortada em formato de retrato; não é de domínio público e a licença deve ser conferida.",
+    "religions": [
+      "other"
+    ]
   }
 ]

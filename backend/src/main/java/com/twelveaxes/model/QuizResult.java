@@ -31,6 +31,8 @@ import java.util.List;
  * @param topHistoricalPartyMatch partido historico mais compativel
  * @param partyDimensionMatches partido mais compativel em cada dimensao (politica, social, economica)
  * @param bottomPartyMatches os 3 menos compativeis, do menos ao mais distante
+ * @param timeline as seis eras, da Antiguidade ao seculo XXI, cada uma com os 4 perfis (personalidades
+ *     e paises juntos) mais compativeis
  */
 public record QuizResult(
         List<AxisResult> axes,
@@ -55,6 +57,7 @@ public record QuizResult(
         List<PartyMatch> topPartyMatches,
         PartyMatch topHistoricalPartyMatch,
         List<PartyDimensionMatch> partyDimensionMatches,
-        List<PartyMatch> bottomPartyMatches
+        List<PartyMatch> bottomPartyMatches,
+        List<TimelineEra> timeline
 ) {
 }
