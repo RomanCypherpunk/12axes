@@ -20,6 +20,7 @@ const STR = {
     catalogNav: 'Catálogo',
     homeAria: '12 axes, página inicial',
     takeTheTest: 'Fazer o teste',
+    compareWith: 'Comparar com…',
     kind: 'Ideologia',
     refPerson: 'Personalidade de referência',
     refCountry: 'País de referência',
@@ -73,6 +74,7 @@ const STR = {
     catalogNav: 'Catalog',
     homeAria: '12 axes, home page',
     takeTheTest: 'Take the test',
+    compareWith: 'Compare with…',
     kind: 'Ideology',
     refPerson: 'Key figure',
     refCountry: 'Reference country',
@@ -272,7 +274,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties">${esc(L.s.navParties)}</a></nav>
+  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties">${esc(L.s.navParties)}</a><a href="${esc(L.s.compareHref)}">${esc(L.s.navCompare)}</a></nav>
   <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
 </div></header>
 
@@ -283,6 +285,7 @@ ${poleSprite(L.axes)}
       <div class="match-tags"><span class="tag tag-solid">${esc(ideology.category)}</span><span class="tag tag-neutral">${esc(t.kind)}</span></div>
       <h1>${esc(name)}</h1>
       <p class="lead">${esc(ideology.description)}</p>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=ideology:${ideology.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     ${refs.length ? `<div class="ih-refs">${refs.join('')}</div>` : ''}
   </article>

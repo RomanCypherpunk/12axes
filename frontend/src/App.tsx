@@ -2,18 +2,18 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
-import { LANG, setLang, t } from './i18n';
+import { t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
+import { CatalogLinks, LangToggle, MenuButton, NavLinks } from './components/editorial/SiteNav';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
-import { PARTIES_ENABLED } from './utils/partyLogos';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -41,6 +41,16 @@ const FULL_MODE =
   window.location.pathname.replace(/\/+$/, '').endsWith('/240questions');
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
+
+// /compare e /en/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
+// demanda: o catálogo inteiro só é baixado por quem abre essa rota.
+const COMPARE_MODE =
+  typeof window !== 'undefined' &&
+  ['/compare', '/en/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
+
+const ComparePage = lazy(() =>
+  import('./components/compare/ComparePage').then((module) => ({ default: module.ComparePage }))
+);
 
 // URL de resultado compartilhável: /results?est=65&rep=32.5&... (uma chave por
 // eixo, valor = % do polo esquerdo, na mesma ordem de axes.json).
@@ -752,42 +762,17 @@ function MainApp() {
           <Logo onClick={goHome} />
           {screen === 'home' && (
             <>
-              <nav
-                className={isMenuOpen ? 'e-nav-links e-open' : 'e-nav-links'}
-                aria-label={t.mainNavAria}
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <NavLinks open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
                 <a href="#apoie">{t.navSupport}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/books`}>{t.navBooks}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
-                {PARTIES_ENABLED && <a href={`${LANG === 'en' ? '/en' : ''}/parties`}>{t.navParties}</a>}
-                <button
-                  className="e-lang"
-                  type="button"
-                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
-                  aria-label={t.langToggleAria}
-                >
-                  {t.langToggleLabel}
-                </button>
-              </nav>
+                <CatalogLinks />
+                <LangToggle />
+              </NavLinks>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
                 {t.navStart} <ArrowIcon />
               </button>
-              <button
-                className="e-menu-btn"
-                type="button"
-                aria-label={t.menuAria}
-                aria-expanded={isMenuOpen}
-                onClick={() => setIsMenuOpen((open) => !open)}
-              >
-                <span />
-                <span />
-                <span />
-              </button>
+              <MenuButton open={isMenuOpen} onToggle={() => setIsMenuOpen((open) => !open)} />
             </>
           )}
           {screen === 'variant' && (
@@ -1006,6 +991,13 @@ function MainApp() {
 }
 
 export default function App() {
+  if (COMPARE_MODE) {
+    return (
+      <Suspense fallback={null}>
+        <ComparePage />
+      </Suspense>
+    );
+  }
   return <MainApp />;
 }
 

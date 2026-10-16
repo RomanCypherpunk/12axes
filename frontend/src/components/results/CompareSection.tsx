@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react';
 import { t } from '../../i18n';
 import { fetchCompare, fetchCompareCatalog } from '../../services/quizApi';
 import type { Axis, AxisResult, CompareDetail, CompareItem } from '../../types/quiz';
@@ -8,6 +8,7 @@ import { resolveIdeologyColor } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
 import { SafeImg } from '../editorial/primitives';
+import { AxisTrackRow, TrackPin, YouPin } from './AxisTrack';
 import { InfoSheet } from './InfoSheet';
 import { SheetMatch } from './SheetMatch';
 
@@ -26,7 +27,7 @@ function fold(text: string): string {
   return text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
 }
 
-function searchItems(items: CompareItem[], query: string): CompareItem[] {
+export function searchItems(items: CompareItem[], query: string): CompareItem[] {
   const needle = fold(query.trim());
   if (!needle) return [];
   const starts: CompareItem[] = [];
@@ -40,7 +41,7 @@ function searchItems(items: CompareItem[], query: string): CompareItem[] {
 }
 
 // Personalidade = retrato; país = bandeira; partido/organização = logo 1:1; ideologia = bolinha na cor do espectro.
-function ProfileFace({ item, className }: { item: CompareItem; className: string }) {
+export function ProfileFace({ item, className }: { item: CompareItem; className: string }) {
   if (item.type === 'personality') {
     return (
       <SafeImg
@@ -72,6 +73,57 @@ function ProfileFace({ item, className }: { item: CompareItem; className: string
     );
   }
   return <span className={`${className} e-cmp-dot`} style={{ background: resolveIdeologyColor(item.category).base }} aria-hidden="true" />;
+}
+
+interface CompareSearchFieldProps {
+  listId: string;
+  query: string;
+  options: CompareItem[];
+  /** Mostra "nenhum resultado" (a busca já tem catálogo e texto, mas nada casou). */
+  showEmpty: boolean;
+  onFocus: () => void;
+  onQueryChange: (value: string) => void;
+  onChoose: (item: CompareItem) => void;
+  inputRef?: Ref<HTMLInputElement>;
+}
+
+/** Busca de perfis do catálogo (personalidades, países e ideologias), usada aqui e em /compare. */
+export function CompareSearchField({ listId, query, options, showEmpty, onFocus, onQueryChange, onChoose, inputRef }: CompareSearchFieldProps) {
+  return (
+    <div className="e-cmp-field">
+      <input
+        ref={inputRef}
+        className="e-cmp-input"
+        type="search"
+        role="combobox"
+        aria-label={t.compareSearchLabel}
+        aria-expanded={options.length > 0}
+        aria-controls={listId}
+        placeholder={t.compareSearchPlaceholder}
+        value={query}
+        autoComplete="off"
+        onFocus={onFocus}
+        onChange={(event) => onQueryChange(event.target.value)}
+      />
+      {options.length > 0 && (
+        <ul className="e-cmp-options" id={listId} role="listbox">
+          {options.map((item) => (
+            <li key={`${item.type}-${item.id}`} role="option" aria-selected={false}>
+              <button type="button" aria-label={t.compareOptionAria(item.name, t.compareTypeLabels[item.type])} onClick={() => onChoose(item)}>
+                <ProfileFace item={item} className="e-cmp-face" />
+                <span className="e-cmp-opt-text">
+                  <b>{item.name}</b>
+                  <em>{item.caption}</em>
+                </span>
+                <span className="e-tag e-tag-neutral">{t.compareTypeLabels[item.type]}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+      {showEmpty && <p className="e-cmp-empty">{t.compareNoResults}</p>}
+    </div>
+  );
 }
 
 export function CompareSection({ axes, results, religion, userCategory }: CompareSectionProps) {
@@ -153,42 +205,19 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
       <p className="e-lead e-cmp-lead">{t.compareLead}</p>
 
       <div className="e-cmp-bar">
-        <div className="e-cmp-field">
-          <input
-            className="e-cmp-input"
-            type="search"
-            role="combobox"
-            aria-label={t.compareSearchLabel}
-            aria-expanded={options.length > 0}
-            aria-controls="e-cmp-options"
-            placeholder={t.compareSearchPlaceholder}
-            value={query}
-            autoComplete="off"
-            onFocus={loadCatalog}
-            onChange={(event) => {
-              loadCatalog();
-              setQuery(event.target.value);
-              setSelected(null);
-            }}
-          />
-          {options.length > 0 && (
-            <ul className="e-cmp-options" id="e-cmp-options" role="listbox">
-              {options.map((item) => (
-                <li key={`${item.type}-${item.id}`} role="option" aria-selected={false}>
-                  <button type="button" aria-label={t.compareOptionAria(item.name, t.compareTypeLabels[item.type])} onClick={() => choose(item)}>
-                    <ProfileFace item={item} className="e-cmp-face" />
-                    <span className="e-cmp-opt-text">
-                      <b>{item.name}</b>
-                      <em>{item.caption}</em>
-                    </span>
-                    <span className="e-tag e-tag-neutral">{t.compareTypeLabels[item.type]}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-          {showEmpty && <p className="e-cmp-empty">{t.compareNoResults}</p>}
-        </div>
+        <CompareSearchField
+          listId="e-cmp-options"
+          query={query}
+          options={options}
+          showEmpty={showEmpty}
+          onFocus={loadCatalog}
+          onQueryChange={(value) => {
+            loadCatalog();
+            setQuery(value);
+            setSelected(null);
+          }}
+          onChoose={choose}
+        />
         <button className="e-btn e-btn-primary" type="button" disabled={!selected || loading} onClick={view}>
           {loading ? t.compareLoading : t.compareView}
         </button>
@@ -254,30 +283,19 @@ function ComparisonSheet({ detail, axes, results, userCategory, onClose }: {
           {summary.rows.map(({ axis, result, user, target }) => {
             const color = user >= 50 ? axis.leftColor : axis.rightColor;
             return (
-              <li key={axis.id} style={{ '--ac': color } as CSSProperties}>
-                <div className="e-close-head">
-                  <b>{result.label}</b>
-                </div>
-                <div
-                  className="e-close-track"
-                  role="img"
-                  aria-label={`${result.label}: ${t.closenessYou} ${Math.round(user)}% ${result.leftPole}, ${item.name} ${Math.round(target)}% ${result.leftPole}`}
-                >
-                  <span className="e-close-mid" />
-                  <span className="e-close-pin e-close-them" style={{ left: `${100 - target}%` }} title={item.name}>
-                    <ProfileFace item={item} className="e-close-face" />
-                  </span>
-                  <span className="e-close-pin e-close-you" style={{ left: `${100 - user}%` }} title={t.closenessYou}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" />
-                    </svg>
-                  </span>
-                </div>
-                <div className="e-close-poles">
-                  <span>{result.leftPole}</span>
-                  <span>{result.rightPole}</span>
-                </div>
-              </li>
+              <AxisTrackRow
+                key={axis.id}
+                label={result.label}
+                leftPole={result.leftPole}
+                rightPole={result.rightPole}
+                ariaLabel={`${result.label}: ${t.closenessYou} ${Math.round(user)}% ${result.leftPole}, ${item.name} ${Math.round(target)}% ${result.leftPole}`}
+                style={{ '--ac': color } as CSSProperties}
+              >
+                <TrackPin leftPercent={target} title={item.name}>
+                  <ProfileFace item={item} className="e-close-face" />
+                </TrackPin>
+                <YouPin leftPercent={user} />
+              </AxisTrackRow>
             );
           })}
         </ul>

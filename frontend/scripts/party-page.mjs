@@ -13,6 +13,7 @@ const STR = {
     catalogNav: 'Catálogo',
     homeAria: '12 axes, página inicial',
     takeTheTest: 'Fazer o teste',
+    compareWith: 'Comparar com…',
     currentKind: 'Atual',
     historicalKind: 'Período histórico',
     kpiSpectrum: 'Espectro predominante',
@@ -59,6 +60,7 @@ const STR = {
     catalogNav: 'Catalog',
     homeAria: '12 axes, home page',
     takeTheTest: 'Take the test',
+    compareWith: 'Compare with…',
     currentKind: 'Current',
     historicalKind: 'Historical period',
     kpiSpectrum: 'Predominant spectrum',
@@ -234,7 +236,7 @@ ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <header class="nav"><div class="wrap">
   <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties" aria-current="page">${esc(L.s.navParties)}</a></nav>
+  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties" aria-current="page">${esc(L.s.navParties)}</a><a href="${esc(L.s.compareHref)}">${esc(L.s.navCompare)}</a></nav>
   <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
 </div></header>
 
@@ -250,6 +252,7 @@ ${poleSprite(L.axes)}
         <div><dt>${esc(t.kpiClosestIdeology)}</dt><dd>${esc(specItem.name)}</dd></div>
         <div><dt>${esc(t.kpiClosestPerson)}</dt><dd>${esc(tp.name)}</dd></div>
       </dl>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=party:${party.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     <figure class="ch-flag ch-logo"><img src="${party.logoPath}" alt="${esc(t.logoAlt(name))}"></figure>
   </article>

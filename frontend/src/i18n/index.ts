@@ -8,11 +8,22 @@ export type Lang = 'pt' | 'en';
 const STORAGE_KEY = '12axes-lang';
 
 // Idioma forçado pelo caminho: /en sempre inglês, /br sempre português,
-// independente do aparelho ou da preferência salva.
-function langForcedByPath(pathname: string): Lang | null {
-  const path = (pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
-  if (path === '/en') return 'en';
-  if (path === '/br') return 'pt';
+// independente do aparelho ou da preferência salva. A comparação segue o catálogo:
+// /compare em português e /en/compare em inglês.
+const normalizePath = (pathname: string): string => pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+
+export function langForcedByPath(pathname: string): Lang | null {
+  const path = normalizePath(pathname);
+  if (path === '/en' || path === '/en/compare') return 'en';
+  if (path === '/br' || path === '/compare') return 'pt';
+  return null;
+}
+
+/** Caminho equivalente no outro idioma, para o toggle; null quando o idioma não vem do caminho. */
+export function langSwitchPath(pathname: string, lang: Lang): string | null {
+  const path = normalizePath(pathname);
+  if (path === '/compare' || path === '/en/compare') return lang === 'en' ? '/en/compare' : '/compare';
+  if (path === '/en' || path === '/br') return lang === 'en' ? '/en' : '/br';
   return null;
 }
 
@@ -42,10 +53,10 @@ export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
   url.searchParams.delete('lang');
-  // Em /en ou /br a URL é o que define o idioma, então o toggle troca de rota.
-  if (langForcedByPath(url.pathname)) {
-    url.pathname = lang === 'en' ? '/en' : '/br';
-  }
+  // Em /en, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
+  // (na comparação, mantendo os perfis escolhidos na query).
+  const switched = langSwitchPath(url.pathname, lang);
+  if (switched) url.pathname = switched;
   window.location.href = url.toString();
 }
 
@@ -86,6 +97,7 @@ interface Strings {
   navPersonalities: string;
   navCountries: string;
   navParties: string;
+  navCompare: string;
   navSupport: string;
   langToggleLabel: string;
   langToggleAria: string;
@@ -146,6 +158,24 @@ interface Strings {
   compareNoFarLine: (name: string) => string;
   compareValues: (pole: string, you: number, them: number, name: string) => string;
   compareOptionAria: (name: string, type: string) => string;
+  comparePageDocTitle: string;
+  comparePageEyebrow: string;
+  comparePageTitle: string;
+  comparePageLead: string;
+  comparePageProfilesTitle: string;
+  comparePageNeedMore: string;
+  comparePageFull: string;
+  comparePageRemove: string;
+  comparePageRemoveAria: (name: string) => string;
+  comparePageUnknown: string;
+  comparePageNotFound: string;
+  comparePageAxesTitle: string;
+  comparePageAxisAria: (axis: string, values: string) => string;
+  comparePageCompassAria: (points: string) => string;
+  comparePagePointAria: (name: string, right: number, authoritarian: number, traditional: number) => string;
+  comparePageLegendAria: string;
+  comparePagePairsTitle: string;
+  comparePagePairLabel: string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
@@ -170,6 +200,7 @@ interface Strings {
   faqTitle: string;
   faqLead: string;
   navStart: string;
+  navTakeTest: string;
   menuAria: string;
   roseAria: string;
   spectrumBarAria: string;
@@ -429,6 +460,7 @@ const pt: Strings = {
   navPersonalities: 'Personalidades',
   navCountries: 'Países',
   navParties: 'Partidos',
+  navCompare: 'Comparar',
   navSupport: 'Apoie',
   langToggleLabel: 'EN',
   langToggleAria: 'Switch to English',
@@ -525,6 +557,25 @@ const pt: Strings = {
   compareNoFarLine: (name) => `Nenhum eixo está muito distante de ${name}.`,
   compareValues: (pole, you, them, name) => `${pole}: você ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
+  comparePageDocTitle: 'Comparar perfis — 12 Axes',
+  comparePageEyebrow: 'Comparar perfis',
+  comparePageTitle: 'Lado a lado, nos 12 eixos',
+  comparePageLead: 'Escolha 2 ou 3 personalidades, países, ideologias ou partidos e veja onde cada um fica em cada eixo e na bússola política.',
+  comparePageProfilesTitle: 'Perfis',
+  comparePageNeedMore: 'Escolha mais um perfil para comparar.',
+  comparePageFull: 'Até 3 perfis. Remova um para escolher outro.',
+  comparePageRemove: 'Remover',
+  comparePageRemoveAria: (name) => `Remover ${name} da comparação`,
+  comparePageUnknown: 'Perfil não encontrado',
+  comparePageNotFound: 'Um dos perfis deste link não existe. Remova-o e escolha outro.',
+  comparePageAxesTitle: 'Os 12 eixos',
+  comparePageAxisAria: (axis, values) => `${axis}: ${values}`,
+  comparePageCompassAria: (points) => `Bússola política: ${points}`,
+  comparePagePointAria: (name, right, authoritarian, traditional) =>
+    `${name}, ${right}% à direita, ${authoritarian}% autoritário, ${traditional}% tradicionalista`,
+  comparePageLegendAria: 'Legenda da bússola',
+  comparePagePairsTitle: 'Compatibilidade entre eles',
+  comparePagePairLabel: 'Compatibilidade',
   axisExplanations: {
     estrutura:
       'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
@@ -727,6 +778,7 @@ const pt: Strings = {
   faqTitle: 'Perguntas frequentes',
   faqLead: 'Tudo o que as pessoas costumam perguntar antes de fazer o teste.',
   navStart: 'Começar',
+  navTakeTest: 'Fazer o teste',
   menuAria: 'Abrir menu',
   roseAria: 'Rosa dos 12 eixos',
   spectrumBarAria: 'Barra do espectro político com as oito categorias',
@@ -1072,6 +1124,7 @@ const en: Strings = {
   navPersonalities: 'Personalities',
   navCountries: 'Countries',
   navParties: 'Parties',
+  navCompare: 'Compare',
   navSupport: 'Support',
   langToggleLabel: 'PT',
   langToggleAria: 'Mudar para português',
@@ -1166,6 +1219,25 @@ const en: Strings = {
   compareNoFarLine: (name) => `No axis is far from ${name}.`,
   compareValues: (pole, you, them, name) => `${pole}: you ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
+  comparePageDocTitle: 'Compare profiles — 12 Axes',
+  comparePageEyebrow: 'Compare profiles',
+  comparePageTitle: 'Side by side, on the 12 axes',
+  comparePageLead: 'Pick 2 or 3 personalities, countries, ideologies or parties and see where each one stands on every axis and on the political compass.',
+  comparePageProfilesTitle: 'Profiles',
+  comparePageNeedMore: 'Pick one more profile to compare.',
+  comparePageFull: 'Up to 3 profiles. Remove one to pick another.',
+  comparePageRemove: 'Remove',
+  comparePageRemoveAria: (name) => `Remove ${name} from the comparison`,
+  comparePageUnknown: 'Profile not found',
+  comparePageNotFound: 'One of the profiles in this link does not exist. Remove it and pick another.',
+  comparePageAxesTitle: 'The 12 axes',
+  comparePageAxisAria: (axis, values) => `${axis}: ${values}`,
+  comparePageCompassAria: (points) => `Political compass: ${points}`,
+  comparePagePointAria: (name, right, authoritarian, traditional) =>
+    `${name}, ${right}% right, ${authoritarian}% authoritarian, ${traditional}% traditionalist`,
+  comparePageLegendAria: 'Compass legend',
+  comparePagePairsTitle: 'Compatibility between them',
+  comparePagePairLabel: 'Compatibility',
   axisExplanations: {
     estrutura:
       'Measures whether you prefer power distributed among states, cities, and local communities or a unitary national state with more uniform laws and command.',
@@ -1381,6 +1453,7 @@ const en: Strings = {
   faqTitle: 'Frequently asked questions',
   faqLead: 'Everything people usually ask before taking the test.',
   navStart: 'Start',
+  navTakeTest: 'Take the test',
   menuAria: 'Open menu',
   roseAria: 'Rose of the 12 axes',
   spectrumBarAria: 'Political spectrum bar with the eight categories',
