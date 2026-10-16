@@ -976,3 +976,44 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-cmpp-results{display:flex;flex-direction:column;gap:24px;transition:opacity .2s ease}
 .e-cmpp-results[aria-busy="true"]{opacity:.55}
 .e-cmpp h2:focus{outline:none}
+
+/* ── Linha do tempo: eras empilhadas no desktop, linha vertical contínua no mobile ── */
+.e-tl-eras{list-style:none;margin:22px 0 0;padding:0}
+.e-tl-era{position:relative;display:grid;grid-template-columns:170px 1fr;gap:12px 28px;padding:20px 0 20px 30px;border-top:1px solid var(--borda)}
+.e-tl-era:first-child{border-top:0;padding-top:4px}
+.e-tl-era::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:var(--borda)}
+.e-tl-era:first-child::before{top:12px}
+.e-tl-era:last-child::before{bottom:calc(100% - 34px)}
+.e-tl-era::after{content:"";position:absolute;left:0;top:24px;width:12px;height:12px;border-radius:50%;background:var(--green-500);box-shadow:0 0 0 4px var(--superficie)}
+.e-tl-era:first-child::after{top:8px}
+.e-tl-head h3{font-family:var(--font-display);font-size:19px;letter-spacing:-.015em;line-height:1.2;margin:0}
+.e-tl-head p{margin:4px 0 0;font-size:12.5px;color:var(--texto-suave);font-variant-numeric:tabular-nums}
+.e-tl-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.e-tl-list>li{min-width:0;display:flex}
+.e-tl-item{width:100%;display:flex;align-items:center;gap:12px;text-align:left;font:inherit;color:inherit;background:var(--papel);border:1px solid var(--borda);border-radius:16px;padding:10px 14px 10px 10px;cursor:pointer;transition:border-color .15s ease}
+.e-tl-item:hover{border-color:var(--green-500)}
+.e-tl-item:focus-visible{outline:2px solid var(--green-500);outline-offset:2px}
+.e-tl-photo{flex:none;width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--neutro)}
+.e-tl-logo{object-fit:contain;padding:5px;box-sizing:border-box;background:#fff;border:1px solid var(--borda)}
+.e-tl-best{margin-top:22px}
+.e-tl-best .e-dim{margin-bottom:4px}
+.e-tl-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:0;width:144px;height:144px;overflow:hidden;border-radius:16px;border:1px solid var(--borda);background:var(--superficie)}
+.e-tl-tile{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}
+.e-tl-tile-logo{object-fit:contain;padding:10px;box-sizing:border-box;background:#fff}
+.e-tl-text{min-width:0;display:flex;flex-direction:column;gap:2px}
+.e-tl-text strong{font-size:14.5px;line-height:1.25;overflow-wrap:anywhere}
+.e-tl-text small{font-size:12px;color:var(--texto-suave);line-height:1.3;font-variant-numeric:tabular-nums}
+@media (max-width:980px){.e-tl-era{grid-template-columns:140px 1fr}.e-tl-list{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .e-tl-era{grid-template-columns:1fr;padding:18px 0 18px 28px;gap:10px}
+  .e-tl-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .e-tl-head h3{font-size:18px}
+  .e-tl-head p{margin:0}
+}
+@media (max-width:720px){.e-tl-best .e-match-tags{display:flex;justify-content:center}}
+/* mobile: logo do partido e mosaico da época com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */
+@media (max-width:720px){
+  .e-match{--e-flag-h:min(200px,calc((100vw - 100px) * 2 / 3))}
+  .e-match .e-logobig{width:var(--e-flag-h);height:var(--e-flag-h)}
+  .e-tl-best .e-tl-mosaic{width:var(--e-flag-h);height:var(--e-flag-h)}
+}

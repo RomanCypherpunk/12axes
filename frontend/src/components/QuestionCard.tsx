@@ -71,6 +71,7 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
                 if (rect.width > 0 && Number.isFinite(x)) {
                   target.style.setProperty('--commit-x', `${(x / rect.width) * 100}%`);
                 }
+                target.blur();
                 onSelect(option.id);
               }}
             >

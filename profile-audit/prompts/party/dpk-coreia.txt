@@ -22,7 +22,7 @@ METODOLOGIA (obrigatória):
 - Nuance do eixo "controle": as perguntas citam "o governo/Estado/Banco Central" como agente economico; julgue pela posição real sobre coordenação estatal/corporativa/comunitária vs. mercado.
 
 SAIDA (obrigatoria): use a ferramenta Write para gravar UM arquivo JSON estrito (sem markdown, sem comentarios) exatamente neste caminho:
-c:/Users/enzox/OneDrive/Área de Trabalho/12axes/profile-audit/subagent-out/party/dpk-coreia.json
+profile-audit/subagent-out/party/dpk-coreia.json
 
 Formato exato do JSON (as chaves de "answers" devem ser os ids das perguntas; cada eixo com exatamente 20 respostas; todos os 12 eixos presentes; mais o bloco "archetype" com a letra escolhida em cada pergunta de arquétipo do fim deste prompt):
 {

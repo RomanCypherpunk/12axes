@@ -21,7 +21,7 @@ function caption(match: CountryMatch): string {
   return match.historical && match.period ? match.period : match.category;
 }
 
-function flagAlt(match: CountryMatch): string {
+export function flagAlt(match: CountryMatch): string {
   return t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.name);
 }
 
@@ -92,7 +92,7 @@ export function CountriesSection({ current, historical, dimensions, distant, axe
   );
 }
 
-function CountryInfoSheet({ match, axes, results, onClose }: {
+export function CountryInfoSheet({ match, axes, results, onClose }: {
   match: CountryMatch;
   axes: Axis[];
   results: Map<string, AxisResult>;

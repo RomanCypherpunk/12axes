@@ -46,13 +46,19 @@ quatro catálogos** — só mudam os metadados de entrada e o arquivo de saída.
 | Arquivo/pasta | O que é |
 |---|---|
 | `README.md` | Este arquivo — leia primeiro. |
+| `NEW_PROFILE.md` | Guia completo passo a passo para criação de novos perfis nos quatro catálogos. |
+| `IDEOLOGY_CATEGORY_REVIEW.md` | Metodologia e critérios para revisão de categoria e consistência teórica de ideologias. |
 | `STATE.json` | **Fonte única de verdade** do progresso, um bloco por catálogo (`personality`, `ideology`, `country`, `party`), cada um com `pending` e `done`. |
 | `questions-template.txt` | As 240 perguntas (12 eixos × 20), prontas para colar em qualquer prompt novo, de qualquer catálogo. Não editar sem necessidade. |
 | `profile_vector.py` | Cálculo único do vetor (240 perguntas + perguntas de arquétipo, igual ao `ScoringService.java`) e gerador do bloco de perguntas de arquétipo do prompt (`--prompt-block`). Usado pelo merge e pelo `validate.py`. |
+| `validate.py` | Validador rigoroso pré-merge (formato JSON, limites de neutros, integridade de campos, duplicatas e consistência de religiões). |
+| `compatibility.py` | Calculador de compatibilidade vetorial e proximidade entre perfis usando a mesma métrica do backend. |
+| `compass_check.py` | Análise de dispersão e alinhamento dimensional dos perfis. |
+| `category_coverage.py` | Verificação de cobertura e equilíbrio de categorias no catálogo. |
 | `prompts/<catalog>/<id>.txt` | Prompt já montado para um perfil específico, pronto para mandar a um subagente. Fora de processamento, deve conter só **um arquivo de exemplo** por catálogo (ver passo 7), para uma IA nova entender o formato sem contexto prévio. |
 | `subagent-out/<catalog>/<id>.json` | Saída de um subagente já rodado, aguardando merge/validação. **Temporário**: depois do merge bem-sucedido, o arquivo é apagado daqui (mas uma cópia permanece em `answers/`, ver abaixo) — exceto um exemplo mantido de propósito, ver passo 7. |
 | `answers/<catalog>/<id>.json` | **Arquivo permanente** com as 240 respostas (12 eixos × 20, com `personaBrief` de cada eixo) de todo perfil já mesclado. Nunca é apagado — é o arquivo que o usuário usa para auditar/conferir respostas pergunta a pergunta a qualquer momento, mesmo muito depois do merge. |
-| `_legacy/` | Pipeline antigo (scripts `.mjs`, logs, JSONs de estado de ~25MB), só de personalidades. **Não usar.** Mantido só para referência histórica. |
+| `reports/` | **Relatórios e análises**: subpasta para dumps de auditoria, comparações históricas (ex.: `BUSSOLA_VS_CATEGORIA.md`, `ideology-compatibility-audit.json`), cobertura e revisões individuais em `reports/category-reviews/`. |
 
 Arquivo vivo do resto do repo que todos os catálogos compartilham:
 - `backend/src/main/resources/data/questions-pool.json` — as 240 perguntas com `id`, `axisId`, `text`, `agreePole` (LEFT/RIGHT), `weight`. É a fonte da fórmula de cálculo do vetor (seção abaixo).
