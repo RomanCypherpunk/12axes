@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-16T11:03:19Z",
+  "lastUpdated": "2026-10-17T01:28:33Z",
   "personality": {
-    "totalProfiles": 613,
+    "totalProfiles": 615,
     "pending": [],
     "done": [
       "lenin",
@@ -617,14 +617,16 @@
       "sv3rige",
       "aajonus-vonderplanitz",
       "raphael-machado",
-      "mark-rutte"
+      "mark-rutte",
+      "johannes-kaiser",
+      "zayed-bin-sultan-al-nahyan"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
     "unanswered": 0
   },
   "ideology": {
-    "totalProfiles": 265,
+    "totalProfiles": 268,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -896,7 +898,10 @@
       "federalismo-rioplatense",
       "vitalismo",
       "fascismo-britanico",
-      "fascismo-social"
+      "fascismo-social",
+      "tecno-feudalismo",
+      "liberalismo-pragmatico",
+      "conservadorismo-pragmatico"
     ]
   },
   "country": {
@@ -1198,9 +1203,9 @@
       "liga-hanseatica"
     ]
   },
-  "totalProfiles": 1174,
+  "totalProfiles": 1188,
   "party": {
-    "totalProfiles": 165,
+    "totalProfiles": 190,
     "pending": [],
     "done": [
       "nsdap",
@@ -1367,7 +1372,32 @@
       "inc-india",
       "dsa-eua",
       "centro-democratico",
-      "pacto-historico"
+      "pacto-historico",
+      "ddp-weimar",
+      "partido-liberal-imperio",
+      "partido-conservador-imperio",
+      "liberais-italianos-giolitti",
+      "partido-radical-franca",
+      "spd-weimar",
+      "pnl-chile",
+      "casa-de-al-thani",
+      "casa-de-al-sabah",
+      "casa-de-alaouite",
+      "casa-de-bernadotte",
+      "reconquete",
+      "psd-portugal",
+      "partido-socialista-portugal",
+      "plaid-cymru",
+      "koalicja-obywatelska",
+      "rozwoj-plus",
+      "arbeiderpartiet",
+      "fremskrittspartiet",
+      "socialdemokraterna",
+      "moderaterna",
+      "union-por-la-patria",
+      "anr-colorado",
+      "pri",
+      "pan"
     ]
   }
 }

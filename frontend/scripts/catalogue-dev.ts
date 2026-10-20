@@ -31,16 +31,17 @@ export function catalogueDevPlugin(): Plugin {
         const path = (req.url ?? '/').split('?')[0].replace(/\/+$/, '');
         const catalogue = /^\/(?:en\/)?(?:ideologies|personalities|countries|parties|books|livros)(?:\/[a-z0-9-]+)?(?:\.html)?$/.test(path);
         const stylesheet = /^\/(?:ideologies|personalities|countries|parties|profile|books)\.css$/.test(path);
-        if (!catalogue && !stylesheet) return next();
+        const treeData = /^\/tree-data\/(?:pt|en)-(?:ideologies|personalities|countries|parties)\.json$/.test(path);
+        if (!catalogue && !stylesheet && !treeData) return next();
 
         try {
           generation ??= run(process.execPath, [join(scripts, 'generate-pages.mjs'), '--catalogue-only']);
           await generation;
-          const file = stylesheet || path.endsWith('.html') ? path : `${path}.html`;
+          const file = stylesheet || treeData || path.endsWith('.html') ? path : `${path}.html`;
           const content = await readFile(join(output, file));
-          res.setHeader('Content-Type', stylesheet ? 'text/css; charset=utf-8' : 'text/html; charset=utf-8');
+          res.setHeader('Content-Type', stylesheet ? 'text/css; charset=utf-8' : treeData ? 'application/json; charset=utf-8' : 'text/html; charset=utf-8');
           res.setHeader('Cache-Control', 'no-cache');
-          const body = stylesheet ? content : await server.transformIndexHtml(path, content.toString());
+          const body = stylesheet || treeData ? content : await server.transformIndexHtml(path, content.toString());
           res.end(req.method === 'HEAD' ? undefined : body);
         } catch (error) {
           if ((error as NodeJS.ErrnoException).code === 'ENOENT') {

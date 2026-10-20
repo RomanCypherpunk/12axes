@@ -1,0 +1,25 @@
+/* Cabeçalho único do site: mesma aparência da home (.e-nav) nas páginas do catálogo e na teia.
+   Usado por scripts/site-header.mjs (HTML gerado) e por src/tree/TreePage.tsx. Valores fixos de
+   propósito: cada página gerada tem o seu próprio conjunto de variáveis de cor. */
+.sh{position:sticky;top:0;z-index:20;background:rgba(244,241,232,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #E2DDCF;font-family:"Poppins",ui-sans-serif,system-ui,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.sh *{box-sizing:border-box}
+.sh .sh-wrap{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.sh .sh-logo{display:inline-flex;align-items:baseline;gap:.16em;text-decoration:none;font-size:26px;line-height:1;color:#101010;flex:none}
+.sh .sh-logo b{font-family:"Sora",ui-sans-serif,system-ui,sans-serif;font-weight:800;letter-spacing:-.04em;color:#102E24}
+.sh .sh-logo span{font-weight:400;letter-spacing:-.01em}
+.sh .sh-links{display:flex;align-items:center;gap:32px;font-size:15px}
+.sh .sh-links a{text-decoration:none;color:#5B5A55;white-space:nowrap}
+.sh .sh-links a:hover{color:#101010}
+.sh .sh-links a[aria-current]{color:#101010;font-weight:600}
+.sh .sh-links a.sh-lang{font-weight:600;font-size:13px;border:1px solid #E2DDCF;border-radius:999px;padding:4px 12px;color:#101010}
+.sh .sh-actions{display:flex;align-items:center;gap:10px;flex:none}
+.sh .sh-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 20px;border-radius:999px;font:inherit;font-weight:500;font-size:14px;text-decoration:none;white-space:nowrap;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.sh .sh-btn:hover{transform:translateY(-1px)}
+.sh .sh-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sh .sh-btn-primary{background:#102E24;color:#F4F1E8}
+.sh .sh-btn-primary:hover{background:#1B4234}
+.sh .sh-btn-ghost{border-color:#101010;color:#101010;background:transparent}
+.sh a:focus-visible,.sh button:focus-visible,.sh input:focus-visible{outline:3px solid #880912;outline-offset:3px}
+@media (max-width:1060px){.sh .sh-links{gap:22px}}
+@media (max-width:900px){.sh .sh-links a:not(.sh-lang):not([aria-current]){display:none}}
+@media (max-width:560px){.sh .sh-wrap{padding:0 16px;gap:12px}.sh .sh-btn-ghost{display:none}.sh .sh-links a[aria-current]{display:none}}

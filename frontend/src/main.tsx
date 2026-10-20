@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { protectTranslatedText } from './utils/translationDom';
+import type { TreeKind } from './tree/data';
 import '@fontsource/poppins/latin-300.css';
 import '@fontsource/poppins/latin-400.css';
 import '@fontsource/poppins/latin-500.css';
@@ -34,13 +35,23 @@ window.addEventListener('vite:preloadError', (event) => {
   }
 });
 
+// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/...).
+const TreePage = lazy(() => import('./tree/TreePage'));
+const TREE_ROUTE = /^\/(en\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
+
 const root = document.getElementById('root') as HTMLElement;
 protectTranslatedText(root);
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <ErrorBoundary>
-      <App />
+      {TREE_ROUTE ? (
+        <Suspense fallback={null}>
+          <TreePage kind={(TREE_ROUTE[2] as TreeKind | undefined) ?? 'ideologies'} locale={TREE_ROUTE[1] ? 'en' : 'pt'} />
+        </Suspense>
+      ) : (
+        <App />
+      )}
     </ErrorBoundary>
   </React.StrictMode>
 );
