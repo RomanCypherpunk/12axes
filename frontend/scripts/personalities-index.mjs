@@ -1,6 +1,7 @@
 // Página /personalities (e /en/personalities): catálogo agrupado por área de
 // atuação, com busca, filtro por área, retrato e a "faixa" de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
+import { siteHeader } from './site-header.mjs';
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';
@@ -217,11 +218,7 @@ export function personalitiesIndexPage(L, { locale, site, gaSnippet, escapeHtml,
   <body>
 ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities" aria-current="page">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a></nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'personalities', webView: '/tree/personalities' })}
 
 <div class="wrap hero">
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navPersonalities)}</p>

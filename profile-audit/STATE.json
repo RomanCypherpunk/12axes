@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-15T16:32:28Z",
+  "lastUpdated": "2026-10-17T01:28:33Z",
   "personality": {
-    "totalProfiles": 586,
+    "totalProfiles": 615,
     "pending": [],
     "done": [
       "lenin",
@@ -590,14 +590,43 @@
       "ferdinand-marcos",
       "bobby-fischer",
       "leonid-brezhnev",
-      "juan-manuel-santos"
+      "juan-manuel-santos",
+      "zhuangzi",
+      "lao-tse",
+      "mozi",
+      "espartaco",
+      "tiberio-graco",
+      "caio-graco",
+      "mazdak",
+      "john-ball",
+      "wat-tyler",
+      "gerrard-winstanley",
+      "jean-meslier",
+      "etienne-de-la-boetie",
+      "william-godwin",
+      "thomas-spence",
+      "nestor-makhno",
+      "elisee-reclus",
+      "gary-johnson",
+      "chase-oliver",
+      "joao-amoedo",
+      "jackson-hinkle",
+      "zakhar-prilepin",
+      "jordan-bardella",
+      "santiago-abascal",
+      "sv3rige",
+      "aajonus-vonderplanitz",
+      "raphael-machado",
+      "mark-rutte",
+      "johannes-kaiser",
+      "zayed-bin-sultan-al-nahyan"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
     "unanswered": 0
   },
   "ideology": {
-    "totalProfiles": 263,
+    "totalProfiles": 268,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -867,7 +896,12 @@
       "anarco-monarquismo",
       "tecnoprogressismo",
       "federalismo-rioplatense",
-      "vitalismo"
+      "vitalismo",
+      "fascismo-britanico",
+      "fascismo-social",
+      "tecno-feudalismo",
+      "liberalismo-pragmatico",
+      "conservadorismo-pragmatico"
     ]
   },
   "country": {
@@ -1169,9 +1203,9 @@
       "liga-hanseatica"
     ]
   },
-  "totalProfiles": 1174,
+  "totalProfiles": 1188,
   "party": {
-    "totalProfiles": 165,
+    "totalProfiles": 190,
     "pending": [],
     "done": [
       "nsdap",
@@ -1338,7 +1372,32 @@
       "inc-india",
       "dsa-eua",
       "centro-democratico",
-      "pacto-historico"
+      "pacto-historico",
+      "ddp-weimar",
+      "partido-liberal-imperio",
+      "partido-conservador-imperio",
+      "liberais-italianos-giolitti",
+      "partido-radical-franca",
+      "spd-weimar",
+      "pnl-chile",
+      "casa-de-al-thani",
+      "casa-de-al-sabah",
+      "casa-de-alaouite",
+      "casa-de-bernadotte",
+      "reconquete",
+      "psd-portugal",
+      "partido-socialista-portugal",
+      "plaid-cymru",
+      "koalicja-obywatelska",
+      "rozwoj-plus",
+      "arbeiderpartiet",
+      "fremskrittspartiet",
+      "socialdemokraterna",
+      "moderaterna",
+      "union-por-la-patria",
+      "anr-colorado",
+      "pri",
+      "pan"
     ]
   }
 }

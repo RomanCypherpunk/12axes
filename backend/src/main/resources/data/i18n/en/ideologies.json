@@ -240,7 +240,7 @@
   {
     "id": "cameralismo",
     "name": "Cameralism",
-    "category": "Right",
+    "category": "Third Position",
     "description": "Administrative doctrine of enlightened absolutism that organized the state through a disciplined bureaucracy and centralized finances, promoting industry, population, and revenue as sources of the monarch's power.",
     "phrase": "I want a realm served by a disciplined bureaucracy and centralized finances, growing industry, population and revenue for the crown."
   },
@@ -772,7 +772,7 @@
   {
     "id": "positivismo",
     "name": "Positivism",
-    "category": "Center",
+    "category": "Third Position",
     "description": "Current inspired by Auguste Comte that trusts science and reason to organize society, defending order, progress, and technical administration guided by knowledge in place of metaphysics and tradition.",
     "phrase": "I want a society ruled by order and progress, run by technicians who replace tradition and metaphysics with science."
   },
@@ -1178,7 +1178,7 @@
   {
     "id": "aristocratismo",
     "name": "Aristocratism",
-    "category": "Far-Right",
+    "category": "Right",
     "description": "Doctrine of rule by the best, which entrusts power to a minority qualified by virtue, education or birth, rejecting political equality and majority rule, which it sees as a risk to competence.",
     "phrase": "I want government entrusted to a minority qualified by virtue and birth, with limits on majority power and priority for competence."
   },
@@ -1234,7 +1234,7 @@
   {
     "id": "platonismo",
     "name": "Platonism",
-    "category": "Far-Right",
+    "category": "Right",
     "description": "Plato's political philosophy, entrusting the city's government to a philosophical elite formed by virtue and knowledge, with strong control over education, property and customs in the name of justice and social harmony.",
     "phrase": "I want a city governed by philosopher-kings, with guardians educated in virtue and strict control over property and customs."
   },
@@ -1283,7 +1283,7 @@
   {
     "id": "estoicismo",
     "name": "Stoicism",
-    "category": "Center",
+    "category": "Right",
     "description": "Greco-Roman philosophy that teaches living according to reason and nature, accepting with serenity what lies beyond one's control, cultivating duty, self-mastery and virtue above pleasure, and recognizing a natural law common to all rational humanity.",
     "phrase": "I want to live according to reason and duty, accepting fate with serenity, under a natural law common to all rational humanity."
   },
@@ -1507,7 +1507,7 @@
   {
     "id": "republicanismo-confederal",
     "name": "Confederal Republicanism",
-    "category": "Center",
+    "category": "Right",
     "description": "Tradition of republics made of sovereign provinces or cantons, such as the Dutch Republic and the old Swiss Confederacy, with local self-government, open trade, armed neutrality and deep-rooted Protestant faith.",
     "phrase": "I want sovereign provinces united by a republican pact, open commerce, local militias and Protestant faith."
   },
@@ -1793,7 +1793,7 @@
   {
     "id": "socialismo-internacionalista",
     "name": "Internationalist Socialism",
-    "category": "Radical Left",
+    "category": "Left",
     "description": "Branch of socialism advocating the global unity of working people against capitalism, rejecting bourgeois nationalism, and defending international working-class solidarity.",
     "phrase": "I want the global unity of working people against capitalism, overcoming national borders through collective ownership and cooperative planning."
   },
@@ -1866,5 +1866,40 @@
     "category": "Right",
     "description": "Current that takes life itself, Bergson's élan vital and Nietzsche's will to power, as the supreme value, exalting instinct, physical vigor, creation and heroism against decadence, sickness and egalitarianism.",
     "phrase": "I want life affirmed as the supreme value, with vigor, courage and creation by an exceptional elite, against resentment, renunciation and leveling."
+  },
+  {
+    "id": "fascismo-social",
+    "name": "Social Fascism",
+    "category": "Third Position",
+    "description": "A synthesis of fascism and social democracy: nationalism, a strong state and authoritarian leadership alongside public healthcare and pensions, labor rights and redistribution. The Comintern used the term against social democrats.",
+    "phrase": "I want a solidary nation under a strong leader and party, with state-guaranteed healthcare, pensions and unions, and a planned mixed economy."
+  },
+  {
+    "id": "fascismo-britanico",
+    "name": "British Fascism",
+    "category": "Third Position",
+    "description": "The fascism of Oswald Mosley and the British Union of Fascists: a single leader, Blackshirts and a corporate state, with an autarkic empire, British nationalism, antisemitism and opposition to liberalism and communism.",
+    "phrase": "I want a corporate state under a single leader and the Blackshirts, with a closed, self-sufficient empire, Britain first, and an end to liberal parliament."
+  },
+  {
+    "id": "tecno-feudalismo",
+    "name": "Techno-Feudalism",
+    "category": "Far-Right",
+    "description": "Current that sees in the power of platforms and big technology companies a new feudal order and defends it: a mosaic of sovereign corporate fiefs where the owner of the cloud governs vassals and users and lives off rent, not competition.",
+    "phrase": "I want a mosaic of corporate fiefs where the platform owner rules vassals and lives off rent, and exit is the only guarantee."
+  },
+  {
+    "id": "liberalismo-pragmatico",
+    "name": "Pragmatic Liberalism",
+    "category": "Center",
+    "description": "Liberalism that defends democracy, individual rights and a market economy, but tests each policy against evidence: it accepts regulation, a safety net and targeted intervention when they fix market failures, as in Clinton's Third Way.",
+    "phrase": "I want a liberal democracy with open markets and free trade, where regulation and a safety net enter only when evidence shows they work."
+  },
+  {
+    "id": "conservadorismo-pragmatico",
+    "name": "Pragmatic Conservatism",
+    "category": "Right",
+    "description": "Conservatism that protects institutions, family and order without doctrinal rigidity: it allows gradual reform and concessions in order to conserve the essential, in the line of Burke and Disraeli, rather than restoring an idealized past.",
+    "phrase": "I want to conserve family, civic faith and institutions through gradual reform, with parliament, order and a market tempered by one-nation duty."
   }
 ]

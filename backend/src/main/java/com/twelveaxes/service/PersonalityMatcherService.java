@@ -109,6 +109,11 @@ public class PersonalityMatcherService {
     // Ranking completo do catalogo, do mais ao menos compativel. Todos os
     // recortes (topo, categorias, opostos) saem desta mesma lista. O percentil
     // compara com o catalogo inteiro; a preferencia religiosa so tira perfis.
+    // Ranking completo do catalogo (respeita a preferencia religiosa), do mais ao menos compativel.
+    public List<PersonalityMatch> findAll(List<AxisResult> axisResults, String lang, String religion) {
+        return rankAll(axisResults, lang, religion);
+    }
+
     private List<PersonalityMatch> rankAll(List<AxisResult> axisResults, String lang, String religion) {
         return rankingMemo.get(List.of(QuizDataService.normalizeLang(lang), axisResults, String.valueOf(religion)),
                 () -> computeRanking(axisResults, lang, religion));

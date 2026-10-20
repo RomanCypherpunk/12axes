@@ -87,6 +87,11 @@ public class CountryMatcherService {
 
     // Ranking completo do catalogo, do mais ao menos compativel. O percentil
     // compara com o catalogo inteiro; a preferencia religiosa so tira paises.
+    // Ranking completo do catalogo (respeita a preferencia religiosa), do mais ao menos compativel.
+    public List<CountryMatch> findAll(List<AxisResult> axisResults, String lang, String religion) {
+        return rankAll(axisResults, lang, religion);
+    }
+
     private List<CountryMatch> rankAll(List<AxisResult> axisResults, String lang, String religion) {
         return rankingMemo.get(List.of(QuizDataService.normalizeLang(lang), axisResults, String.valueOf(religion)),
                 () -> computeRanking(axisResults, lang, religion));

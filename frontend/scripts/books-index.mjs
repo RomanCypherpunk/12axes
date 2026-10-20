@@ -1,5 +1,6 @@
 // Página /books (e /en/books): catálogo de livros e obras das personalidades,
 // agrupado por área de atuação, com busca, filtro, capa/autor, ano e a faixa de 12 ícones de polo.
+import { siteHeader } from './site-header.mjs';
 import { ARROW, IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { AREA_LABELS, AREA_ORDER, catalogHead, initials } from './personalities-index.mjs';
 
@@ -248,17 +249,7 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
   ${catalogHead(L, { site, basePath, title, description, ogType: 'website', ogImage: '/logo.png', css: '/books.css', jsonLd: [jsonLd], gaSnippet, escapeHtml })}
   <body>
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}">
-    <a href="${prefix}/books" aria-current="page">${escapeHtml(L.s.navBooks)}</a>
-    <a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a>
-    <a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a>
-    <a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a>
-    <a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a>
-  </nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'books' })}
 
 <div class="wrap hero">
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navBooks)}</p>

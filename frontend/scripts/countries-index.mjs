@@ -1,6 +1,7 @@
 // Página /countries (e /en/countries): países atuais e regimes históricos
 // agrupados por época, com busca, filtro, bandeira e a faixa de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de personalidades e troca o retrato pela bandeira.
+import { siteHeader } from './site-header.mjs';
 import { ARROW, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
 import { PERSONALITIES_CSS, catalogHead } from './personalities-index.mjs';
@@ -203,11 +204,7 @@ export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pro
   <body>
 ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries" aria-current="page">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a></nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'countries', webView: '/tree/countries' })}
 
 <div class="wrap hero">
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navCountries)}</p>

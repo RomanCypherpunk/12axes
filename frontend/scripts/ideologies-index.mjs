@@ -2,6 +2,7 @@
 // filtro por espectro e a "faixa" de 12 ícones de polo que resume o vetor de cada
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
 // das páginas de detalhe.
+import { siteHeader } from './site-header.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
 
@@ -243,11 +244,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
   <body>
 ${poleSprite(L.axes)}
 <a class="skip" href="#lista">${escapeHtml(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${prefix || '/'}" aria-label="${escapeHtml(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav aria-label="${escapeHtml(t.catalogNav)}"><a href="${prefix}/books">${escapeHtml(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${escapeHtml(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${escapeHtml(L.s.navPersonalities)}</a><a href="${prefix}/countries">${escapeHtml(L.s.navCountries)}</a><a href="${prefix}/parties">${escapeHtml(L.s.navParties)}</a></nav>
-  <a class="btn" href="${prefix || '/'}">${escapeHtml(t.takeTheTest)} ${ARROW}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'ideologies', webView: '/tree/ideologies' })}
 
 <div class="wrap hero">
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(L.s.navIdeologies)}</p>
@@ -306,6 +303,10 @@ svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-lin
 .nav nav a{text-decoration:none;color:var(--suave)}
 .nav nav a[aria-current]{color:var(--tinta);font-weight:600}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;background:var(--floresta);color:var(--papel);text-decoration:none;font-weight:500;font-size:14.5px;white-space:nowrap}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.btn.btn-web{background:transparent;color:var(--floresta);box-shadow:inset 0 0 0 1.5px var(--floresta)}
+.btn.btn-web:hover{background:var(--floresta);color:var(--papel)}
+@media (max-width:760px){.btn.btn-web{display:none}}
 .btn svg{width:16px;height:16px}
 .hero{padding:56px 0 28px}
 .hero.wrap{padding-left:24px;padding-right:24px}

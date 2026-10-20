@@ -474,7 +474,7 @@
   {
     "id": "cameralismo",
     "name": "Cameralismo",
-    "category": "Direita",
+    "category": "Terceira Posição",
     "description": "Doutrina administrativa do absolutismo esclarecido que organizava o Estado por uma burocracia disciplinada e finanças centralizadas, promovendo indústria, população e receita como fontes do poder do monarca.",
     "phrase": "Quero um reino servido por uma burocracia disciplinada e finanças centralizadas, que faça crescer indústria, população e receita para a coroa.",
     "vector": null,
@@ -1441,7 +1441,7 @@
   {
     "id": "positivismo",
     "name": "Positivismo",
-    "category": "Centro",
+    "category": "Terceira Posição",
     "description": "Corrente inspirada em Auguste Comte que confia na ciência e na razão para organizar a sociedade, defendendo ordem, progresso e administração técnica guiada pelo conhecimento em lugar da metafísica e da tradição.",
     "phrase": "Quero uma sociedade regida pela ordem e o progresso, administrada por técnicos que substituem a tradição e a metafísica pela ciência.",
     "vector": null,
@@ -2165,7 +2165,7 @@
   {
     "id": "aristocratismo",
     "name": "Aristocratismo",
-    "category": "Extrema Direita",
+    "category": "Direita",
     "description": "Doutrina do governo dos melhores, que confia o poder a uma minoria qualificada por virtude, educação ou nascimento, rejeitando a igualdade política e o governo da maioria, que vê como risco para a competência.",
     "phrase": "Quero o governo confiado a uma minoria qualificada por virtude e nascimento, com limites ao poder da maioria e prioridade à competência.",
     "vector": null,
@@ -2264,7 +2264,7 @@
   {
     "id": "platonismo",
     "name": "Platonismo",
-    "category": "Extrema Direita",
+    "category": "Direita",
     "description": "Filosofia política de Platão, que confia o governo da cidade a uma elite filosófica formada pela virtude e pelo conhecimento, com forte controle sobre educação, propriedade e costumes em nome da justiça e da harmonia social.",
     "phrase": "Quero uma cidade governada por filósofos-reis, com guardiões educados na virtude e controle rígido sobre propriedade e costumes.",
     "vector": null,
@@ -2353,7 +2353,7 @@
   {
     "id": "estoicismo",
     "name": "Estoicismo",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Filosofia greco-romana que ensina viver conforme a razão e a natureza, aceitando com serenidade o que não se controla, cultivando dever, autodomínio e virtude acima do prazer, e reconhecendo uma lei natural comum a toda a humanidade racional.",
     "phrase": "Quero viver conforme a razão e o dever, aceitando com serenidade o destino, sob uma lei natural comum a toda a humanidade racional.",
     "vector": null,
@@ -2769,7 +2769,7 @@
   {
     "id": "republicanismo-confederal",
     "name": "Republicanismo Confederal",
-    "category": "Centro",
+    "category": "Direita",
     "description": "Tradição de repúblicas formadas por províncias ou cantões soberanos, como a República Holandesa e a antiga Confederação Suíça, com autogoverno local, comércio aberto, neutralidade armada e fé protestante enraizada.",
     "phrase": "Quero províncias soberanas unidas por um pacto republicano, comércio aberto, milícias locais e fé protestante.",
     "vector": null,
@@ -3277,7 +3277,7 @@
   {
     "id": "socialismo-internacionalista",
     "name": "Socialismo Internacionalista",
-    "category": "Esquerda Radical",
+    "category": "Esquerda",
     "description": "Vertente do socialismo que prega a união global dos trabalhadores contra o capitalismo, rejeitando o nacionalismo burguês e defendendo a solidariedade internacional proletária.",
     "phrase": "Quero a união global dos trabalhadores contra o capitalismo, superando as fronteiras nacionais por meio da propriedade coletiva e do planejamento solidário.",
     "vector": null,
@@ -3403,5 +3403,66 @@
     "countryId": "esparta",
     "personalityId": "nietzsche",
     "religions": []
+  },
+  {
+    "id": "fascismo-social",
+    "name": "Fascismo Social",
+    "category": "Terceira Posição",
+    "description": "Síntese de fascismo e social-democracia: nacionalismo, Estado forte e liderança autoritária ao lado de saúde e previdência públicas, direitos trabalhistas e redistribuição. O Comintern usava o termo contra os social-democratas.",
+    "phrase": "Quero uma nação solidária sob líder e partido fortes, com saúde, previdência e sindicatos garantidos pelo Estado e uma economia mista dirigida pelo plano.",
+    "countryId": "italia-fascista-mussolini",
+    "personalityId": "nicola-bombacci",
+    "religions": []
+  },
+  {
+    "id": "fascismo-britanico",
+    "name": "Fascismo Britânico",
+    "category": "Terceira Posição",
+    "description": "Fascismo de Oswald Mosley e da União Britânica de Fascistas: líder único, camisas-negras e Estado corporativo, com império autárquico, nacionalismo britânico, antissemitismo e oposição ao liberalismo e ao comunismo.",
+    "phrase": "Quero um Estado corporativo sob líder único e camisas-negras, com império fechado e autárquico, a Grã-Bretanha primeiro e fim do parlamento liberal.",
+    "countryId": "reino-unido",
+    "personalityId": "oswald-mosley",
+    "religions": []
+  },
+  {
+    "id": "tecno-feudalismo",
+    "name": "Tecno-Feudalismo",
+    "category": "Extrema Direita",
+    "description": "Corrente que vê no poder das plataformas e das grandes empresas de tecnologia uma nova ordem feudal e a defende: um mosaico de feudos corporativos soberanos, onde o dono da nuvem governa vassalos e usuários e vive de renda, não de concorrência.",
+    "phrase": "Quero um mosaico de feudos corporativos, onde o dono da plataforma governa vassalos e vive de renda, e a saída é a única garantia.",
+    "vector": null,
+    "countryId": "liga-hanseatica",
+    "personalityId": "nick-land",
+    "religions": []
+  },
+  {
+    "id": "liberalismo-pragmatico",
+    "name": "Liberalismo Pragmático",
+    "category": "Centro",
+    "description": "Liberalismo que defende democracia, direitos individuais e economia de mercado, mas testa cada política pela evidência: aceita regulação, rede de proteção e intervenção pontual quando corrigem falhas de mercado, como na Terceira Via de Clinton.",
+    "phrase": "Quero uma democracia liberal com mercado aberto e livre comércio, onde regulação e rede de proteção entram só quando a evidência mostra que funcionam.",
+    "vector": null,
+    "countryId": "estados-unidos",
+    "personalityId": "bill-clinton",
+    "religions": []
+  },
+  {
+    "id": "conservadorismo-pragmatico",
+    "name": "Conservadorismo Pragmático",
+    "category": "Direita",
+    "description": "Conservadorismo que protege instituições, família e ordem sem rigidez doutrinária: admite reformas graduais e concessões para conservar o essencial, na linha de Burke e Disraeli, em vez de restaurar um passado ideal.",
+    "phrase": "Quero conservar família, fé cívica e instituições por reformas graduais, com parlamento, ordem e um mercado temperado pelo dever de uma só nação.",
+    "vector": null,
+    "countryId": "reino-unido",
+    "personalityId": "benjamin-disraeli",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism"
+    ]
   }
 ]

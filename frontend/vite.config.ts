@@ -32,6 +32,7 @@ export default defineConfig(({ mode }) => {
       // http://127.0.0.1:5173 and rejects /api requests without Origin/Referer, so
       // the dev server must stay on 5173 and the proxy must forward the browser's
       // own Origin/Referer headers untouched.
+      fs: { allow: ['..'] },
       port: 5173,
       strictPort: true,
       proxy: {

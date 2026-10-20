@@ -6,6 +6,8 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ideologiesIndexPage, IDEOLOGIES_CSS } from './ideologies-index.mjs';
+import { SITE_HEADER_CSS } from './site-header.mjs';
+import { writeTreeData } from './tree-data.mjs';
 import { personalitiesIndexPage, PERSONALITIES_CSS } from './personalities-index.mjs';
 import { personalityPage, PROFILE_CSS } from './personality-page.mjs';
 import { ideologyPage } from './ideology-page.mjs';
@@ -69,6 +71,9 @@ const STR = {
     navCountries: 'Países',
     navPersonalities: 'Personalidades',
     navParties: 'Partidos',
+    navWebView: 'Visualização em teia',
+    navStart: 'Começar',
+    navCatalog: 'Catálogo',
     takeTheTest: 'Fazer o teste',
     axesTitle: 'Perfil nos 12 eixos',
     ctaTitle: 'E você, onde está no espectro político?',
@@ -114,6 +119,9 @@ const STR = {
     navCountries: 'Countries',
     navPersonalities: 'Personalities',
     navParties: 'Parties',
+    navWebView: 'Web view',
+    navStart: 'Start',
+    navCatalog: 'Catalog',
     takeTheTest: 'Take the test',
     axesTitle: 'Profile across the 12 axes',
     ctaTitle: 'Where do you stand on the political spectrum?',
@@ -475,12 +483,15 @@ for (const locale of LOCALES) {
 
 if (!CATALOGUE_ONLY) buildHomeVariants();
 
-writeFileSync(join(DIST, 'ideologies.css'), IDEOLOGIES_CSS);
-writeFileSync(join(DIST, 'personalities.css'), PERSONALITIES_CSS);
-writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS + PARTY_PAGE_CSS);
-writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS);
-writeFileSync(join(DIST, 'parties.css'), PARTIES_CSS);
-writeFileSync(join(DIST, 'books.css'), BOOKS_CSS);
+writeFileSync(join(DIST, 'ideologies.css'), IDEOLOGIES_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'personalities.css'), PERSONALITIES_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS + PARTY_PAGE_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'parties.css'), PARTIES_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'books.css'), BOOKS_CSS + SITE_HEADER_CSS);
+
+// Dados prontos da visualização em teia (/tree/*): similaridade, layout e vizinhos calculados aqui, não no navegador.
+const treeFiles = writeTreeData(DATA_DIR, DIST);
 
 const booksPtPath = join(DIST, 'books.html');
 if (existsSync(booksPtPath)) {
@@ -498,4 +509,4 @@ writeFileSync(
 
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`Geradas ${allPaths.length} páginas (${LOCALES.join(', ')}) + sitemap.xml + robots.txt + ideologies.css + personalities.css + profile.css + countries.css + parties.css + books.css em dist/`);
+console.log(`Geradas ${allPaths.length} páginas (${LOCALES.join(', ')}) + sitemap.xml + robots.txt + ideologies.css + personalities.css + profile.css + countries.css + parties.css + books.css + ${treeFiles} arquivos de tree-data em dist/`);

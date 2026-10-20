@@ -2,6 +2,7 @@
 // organização, com o logo oficial 1:1 e o país associado. Mesma lógica das páginas de
 // país e personalidade: o vetor do perfil é comparado com ideologias, personalidades e
 // outros partidos pela fórmula do backend (profile-match.mjs).
+import { siteHeader } from './site-header.mjs';
 import { AREA_LABELS, catalogHead, initials } from './personalities-index.mjs';
 import { PAGE_SCRIPT, axisRowsHtml, axisSheetHtml, distinctive, mbarHtml, spectrumOf } from './personality-page.mjs';
 import { poleSprite } from './pole-icons.mjs';
@@ -232,11 +233,7 @@ export function partyPage(L, party, ctx) {
   <body style="--cat:${spec.c};--cat-bg:${spec.cb}">
 ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties" aria-current="page">${esc(L.s.navParties)}</a></nav>
-  <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'parties', webView: `/tree/parties?id=${party.id}` })}
 
 <main id="main" class="res"><div class="wrap">
   <p class="crumbs"><a href="${home}">${esc(L.s.home)}</a> / <a href="${prefix}/parties">${esc(L.s.navParties)}</a> / <span aria-current="page">${esc(name)}</span></p>

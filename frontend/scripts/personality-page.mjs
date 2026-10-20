@@ -2,6 +2,7 @@
 // identidade nova, na mesma lógica da tela de resultados do quiz — o vetor da
 // pessoa faz o papel do "usuário" e é comparado com ideologias, outras
 // personalidades e países pela mesma fórmula do backend (profile-match.mjs).
+import { siteHeader } from './site-header.mjs';
 import { ARROW, CATEGORY_KEY, SPECTRUM } from './ideologies-index.mjs';
 import { AREA_LABELS, catalogHead, initials } from './personalities-index.mjs';
 import { dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
@@ -320,11 +321,7 @@ export function personalityPage(L, personality, ctx) {
   <body style="--cat:${spec.c};--cat-bg:${spec.cb}">
 ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities" aria-current="page">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties">${esc(L.s.navParties)}</a></nav>
-  <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'personalities', webView: `/tree/personalities?id=${personality.id}` })}
 
 <main id="main" class="res"><div class="wrap">
   <p class="crumbs"><a href="${home}">${esc(L.s.home)}</a> / <a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a> / <span aria-current="page">${esc(name)}</span></p>

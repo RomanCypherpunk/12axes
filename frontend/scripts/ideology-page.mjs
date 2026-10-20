@@ -2,6 +2,7 @@
 // nova. Mesma lógica da página de personalidade — o vetor da ideologia é
 // comparado com personalidades, países e outras ideologias pela fórmula do
 // backend — mais o hero com as referências e a frase que a resume.
+import { siteHeader } from './site-header.mjs';
 import { catalogHead, AREA_LABELS, initials } from './personalities-index.mjs';
 import {
   PAGE_SCRIPT,
@@ -270,11 +271,7 @@ export function ideologyPage(L, ideology, ctx) {
   <body style="--cat:${spec.c};--cat-bg:${spec.cb}">
 ${poleSprite(L.axes)}
 <a class="skip" href="#main">${esc(t.skip)}</a>
-<header class="nav"><div class="wrap">
-  <a class="logo" href="${home}" aria-label="${esc(t.homeAria)}"><b>12</b><span>axes</span></a>
-  <nav class="navl" aria-label="${esc(t.catalogNav)}"><a href="${prefix}/books">${esc(L.s.navBooks)}</a><a href="${prefix}/ideologies" aria-current="page">${esc(L.s.navIdeologies)}</a><a href="${prefix}/personalities">${esc(L.s.navPersonalities)}</a><a href="${prefix}/countries">${esc(L.s.navCountries)}</a><a href="${prefix}/parties">${esc(L.s.navParties)}</a></nav>
-  <a class="btn btn-primary btn-sm" href="${home}">${esc(t.takeTheTest)} ${ARR}</a>
-</div></header>
+${siteHeader({ L, basePath, current: 'ideologies', webView: `/tree/ideologies?id=${ideology.id}` })}
 
 <main id="main" class="res"><div class="wrap">
   <p class="crumbs"><a href="${home}">${esc(L.s.home)}</a> / <a href="${prefix}/ideologies">${esc(L.s.navIdeologies)}</a> / <span aria-current="page">${esc(name)}</span></p>

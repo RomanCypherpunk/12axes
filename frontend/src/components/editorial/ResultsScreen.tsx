@@ -18,6 +18,7 @@ import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
 import { SignatureSection } from '../results/SignatureSection';
+import { TimelineSection } from '../results/TimelineSection';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { Religion } from '../../utils/religion';
@@ -37,6 +38,7 @@ interface ResultsScreenProps {
 export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion }: ResultsScreenProps) {
   const top = result.topMatch;
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
+  const hasTimeline = (result.timeline ?? []).some((era) => era.entries.length > 0);
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
 
@@ -139,6 +141,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
 
+          {hasTimeline && <TimelineSection timeline={result.timeline ?? []} axes={axes} results={axisResults} />}
+
           <div className="e-actions">
             <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
               {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
@@ -155,7 +159,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} />
+          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasTimeline={hasTimeline} />
         </aside>
       </div>
       {printingPdf &&

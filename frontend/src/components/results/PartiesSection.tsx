@@ -128,7 +128,7 @@ export function PartiesSection({
   );
 }
 
-function PartyInfoSheet({ match, axes, results, onClose }: {
+export function PartyInfoSheet({ match, axes, results, onClose }: {
   match: PartyMatch;
   axes?: Axis[];
   results?: Map<string, AxisResult>;

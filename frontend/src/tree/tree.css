@@ -1,0 +1,299 @@
+/* Teia de ideologias — mesma identidade editorial do resultado (Papel / Floresta / Carmim / Tinta).
+   A página usa as classes .ed / .e-nav / .e-panel / .e-axes-list do próprio resultado; aqui só o que é da teia. */
+.tree-page.ed {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 15px;
+}
+.tree-page .tree-search {
+  position: relative;
+  flex: 0 1 210px;
+}
+.tree-page .tree-search input {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 14px;
+}
+.tree-page .tree-search input:focus-visible {
+  outline: 3px solid var(--carmim);
+  outline-offset: 2px;
+}
+.tree-page .tree-search input::placeholder {
+  color: #8a887f;
+}
+.tree-page .tree-suggestions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  padding: 6px;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px -20px rgba(16, 16, 16, 0.35);
+  z-index: 30;
+}
+.tree-page .tree-suggestions button,
+.tree-page .tree-similar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.tree-page .tree-suggestions button:hover,
+.tree-page .tree-similar button:hover {
+  background: var(--borda);
+}
+.tree-page .tree-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tree-page .tree-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+.tree-page .tree-canvas-wrap {
+  position: absolute;
+  inset: 0;
+}
+.tree-page .tree-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+.tree-page .tree-canvas:active {
+  cursor: grabbing;
+}
+
+/* Rótulos dos extremos, como na bússola política do resultado */
+.tree-page .tree-compass {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  pointer-events: none;
+}
+.tree-page .tree-compass-top {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tree-page .tree-compass-bottom {
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tree-page .tree-compass-left {
+  left: 14px;
+  top: 50%;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}
+.tree-page .tree-compass-right {
+  right: 14px;
+  top: 50%;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+}
+
+.tree-page .tree-legend {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 7px;
+  font-size: 12.5px;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+}
+.tree-page .tree-legend li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* Painel: o mesmo cartão (.e-panel) das seções do resultado, flutuando sobre o mapa */
+.tree-page .tree-panel {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  width: min(440px, calc(100% - 32px));
+  overflow-y: auto;
+  padding: 32px 28px 28px;
+  box-shadow: 0 24px 60px -30px rgba(16, 16, 16, 0.45);
+  z-index: 20;
+  animation: tree-panel-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes tree-panel-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tree-page .tree-title {
+  font-size: clamp(26px, 3vw, 34px);
+  letter-spacing: -0.03em;
+  margin: 16px 0 10px;
+  padding-right: 36px;
+}
+.tree-page .tree-desc {
+  font-size: 15px;
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin: 0 0 26px;
+}
+.tree-page .tree-panel .e-axes-list {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-top: 0;
+}
+.tree-page .tree-panel .e-axis-row {
+  order: 0;
+}
+.tree-page .tree-eyebrow {
+  margin: 32px 0 10px;
+}
+.tree-page .tree-similar-name {
+  flex: 1;
+}
+.tree-page .tree-similar-pct {
+  color: var(--texto-suave);
+  font-size: 12.5px;
+}
+.tree-page .tree-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--tinta);
+  cursor: pointer;
+}
+.tree-page .tree-close:focus-visible {
+  outline: 3px solid var(--carmim);
+  outline-offset: 2px;
+}
+
+@media (max-width: 820px) {
+  
+  
+  .tree-page .tree-search {
+    flex: 1;
+  }
+  .tree-page .tree-legend,
+  .tree-page .tree-compass-left,
+  .tree-page .tree-compass-right {
+    display: none;
+  }
+  
+  .tree-page .tree-panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 62vh;
+    border-radius: 28px 28px 0 0;
+    animation-name: tree-sheet-in;
+  }
+  @keyframes tree-sheet-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tree-page .tree-panel {
+    animation: none;
+  }
+}
+
+
+/* Troca de catálogo (ideologias / personalidades / países / partidos) */
+.tree-page .tree-loading {
+  margin: 0;
+  padding: 40px 24px;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+/* Painel: identificação com retrato / bandeira / logo */
+.tree-page .tree-id {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tree-page .tree-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--papel);
+  border: 1px solid var(--borda);
+}
+.tree-page .tree-subtitle {
+  margin: -4px 0 10px;
+  font-size: 13.5px;
+  color: var(--texto-suave);
+}
+.tree-page .tree-profile {
+  margin: 0 0 26px;
+}
+
+@media (max-width: 1100px) {
+  
+}
+@media (max-width: 820px) {
+  
+  
+  .tree-page .tree-search {
+    margin-left: auto;
+  }
+}
