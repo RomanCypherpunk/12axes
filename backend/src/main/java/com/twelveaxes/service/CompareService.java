@@ -1,13 +1,18 @@
 package com.twelveaxes.service;
 
+import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.CompareDetail;
 import com.twelveaxes.model.CompareItem;
+import com.twelveaxes.model.CompareNearest;
 import com.twelveaxes.model.ComparePair;
 import com.twelveaxes.model.CompareProfile;
 import com.twelveaxes.model.CompareProfiles;
 import com.twelveaxes.model.Country;
+import com.twelveaxes.model.CountryMatch;
 import com.twelveaxes.model.Ideology;
+import com.twelveaxes.model.IdeologyMatch;
 import com.twelveaxes.model.Party;
+import com.twelveaxes.model.PartyMatch;
 import com.twelveaxes.model.Personality;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -31,18 +36,35 @@ public class CompareService {
     public static final String IDEOLOGY = "ideology";
     public static final String PARTY = "party";
 
-    public static final int MIN_PROFILES = 2;
+    public static final int MIN_PROFILES = 1;
     public static final int MAX_PROFILES = 3;
 
     private static final int CATALOG_CACHE_ENTRIES = 32;
 
+    private static final int NEAREST_CANDIDATES = 4;
+
     private final QuizDataService dataService;
     private final ProfileMatchScorer scorer;
+    private final ScoringService scoringService;
+    private final IdeologyMatcherService ideologyMatcher;
+    private final CountryMatcherService countryMatcher;
+    private final PartyMatcherService partyMatcher;
     private final BoundedCache<String, List<CompareItem>> catalogCache = new BoundedCache<>(CATALOG_CACHE_ENTRIES);
 
-    public CompareService(QuizDataService dataService, ProfileMatchScorer scorer) {
+    public CompareService(
+            QuizDataService dataService,
+            ProfileMatchScorer scorer,
+            ScoringService scoringService,
+            IdeologyMatcherService ideologyMatcher,
+            CountryMatcherService countryMatcher,
+            PartyMatcherService partyMatcher
+    ) {
         this.dataService = dataService;
         this.scorer = scorer;
+        this.scoringService = scoringService;
+        this.ideologyMatcher = ideologyMatcher;
+        this.countryMatcher = countryMatcher;
+        this.partyMatcher = partyMatcher;
     }
 
     /** Todos os perfis pesquisaveis, ja filtrados pela religiao do usuario (mesma regra do resultado). */
@@ -84,7 +106,7 @@ public class CompareService {
     }
 
     /**
-     * Compara de 2 a 3 perfis entre si (link compartilhado, sem quiz). O filtro de religiao nao se aplica:
+     * Compara de 1 a 3 perfis (com 1, so o perfil e seus vizinhos, sem pares; link compartilhado, sem quiz). O filtro de religiao nao se aplica:
      * ids explicitos sempre resolvem. Os pares seguem a ordem do pedido (i &lt; j).
      *
      * @param itemsParam tokens "tipo:id" separados por virgula
@@ -92,10 +114,15 @@ public class CompareService {
     public CompareProfiles compareProfiles(String itemsParam, String lang) {
         String normalizedLang = QuizDataService.normalizeLang(lang);
         List<String[]> refs = parseItems(itemsParam);
-        List<CompareProfile> profiles = new ArrayList<>();
+        List<Resolved> resolved = new ArrayList<>();
         for (String[] ref : refs) {
-            Resolved resolved = resolve(ref[0], ref[1], normalizedLang);
-            profiles.add(new CompareProfile(resolved.item(), resolved.vector()));
+            resolved.add(resolve(ref[0], ref[1], normalizedLang));
+        }
+        List<CompareProfile> profiles = new ArrayList<>();
+        for (int i = 0; i < resolved.size(); i++) {
+            Resolved current = resolved.get(i);
+            profiles.add(new CompareProfile(current.item(), current.vector(),
+                    nearest(refs.get(i), current.vector(), normalizedLang)));
         }
         List<ComparePair> pairs = new ArrayList<>();
         for (int i = 0; i < profiles.size(); i++) {
@@ -104,7 +131,53 @@ public class CompareService {
                         scorer.compatibility(profiles.get(i).vector(), profiles.get(j).vector())));
             }
         }
-        return new CompareProfiles(List.copyOf(profiles), List.copyOf(pairs));
+        return new CompareProfiles(List.copyOf(profiles), List.copyOf(pairs),
+                commonIdeology(refs, resolved, normalizedLang));
+    }
+
+    /** Ideologia, pais e partido mais proximos do vetor, sem o proprio perfil. */
+    private CompareNearest nearest(String[] self, Map<String, Double> vector, String lang) {
+        List<AxisResult> axes = axisResults(vector, lang);
+        IdeologyMatch ideology = ideologyMatcher.findMatches(axes, lang).stream()
+                .filter(match -> !isSelf(self, IDEOLOGY, match.ideologyId()))
+                .findFirst().orElse(null);
+        CountryMatch country = countryMatcher.findTopMatchesAny(axes, lang).stream()
+                .filter(match -> !isSelf(self, COUNTRY, match.countryId()))
+                .findFirst().orElse(null);
+        PartyMatch party = partyMatcher.findTopMatches(axes, lang, null).stream()
+                .filter(match -> !isSelf(self, PARTY, match.partyId()))
+                .findFirst().orElse(null);
+        return new CompareNearest(ideology, country, party);
+    }
+
+    /** A ideologia mais proxima da media dos vetores, ignorando as ideologias que ja estao na comparacao. */
+    private IdeologyMatch commonIdeology(List<String[]> refs, List<Resolved> resolved, String lang) {
+        Map<String, Double> mean = new java.util.LinkedHashMap<>();
+        for (var axis : dataService.getAxes(lang)) {
+            mean.put(axis.id(), resolved.stream()
+                    .mapToDouble(profile -> profile.vector().getOrDefault(axis.id(), 50.0))
+                    .average().orElse(50.0));
+        }
+        Set<String> inComparison = new HashSet<>();
+        for (String[] ref : refs) {
+            if (IDEOLOGY.equals(ref[0])) {
+                inComparison.add(ref[1]);
+            }
+        }
+        return ideologyMatcher.findMatches(axisResults(mean, lang), lang).stream()
+                .filter(match -> !inComparison.contains(match.ideologyId()))
+                .findFirst().orElse(null);
+    }
+
+    private List<AxisResult> axisResults(Map<String, Double> vector, String lang) {
+        List<Double> leftPercents = dataService.getAxes(lang).stream()
+                .map(axis -> vector.getOrDefault(axis.id(), 50.0))
+                .toList();
+        return scoringService.scoreFromLeftPercents(leftPercents, lang);
+    }
+
+    private static boolean isSelf(String[] self, String type, String id) {
+        return self[0].equals(type) && self[1].equals(id);
     }
 
     private static List<String[]> parseItems(String itemsParam) {

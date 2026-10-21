@@ -766,7 +766,7 @@ function MainApp() {
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
                 <a href="#apoie">{t.navSupport}</a>
-                <CatalogLinks />
+                <CatalogLinks showCompare={false} />
                 <LangToggle />
               </NavLinks>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>

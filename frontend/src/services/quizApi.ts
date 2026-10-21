@@ -107,6 +107,12 @@ export function fetchCompare(type: CompareType, id: string, leftPercents: number
   );
 }
 
+// `v` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
+// comparação ficaria com a resposta antiga (sem as ideologias, países e partidos mais próximos).
+const COMPARE_PROFILES_VERSION = 2;
+
 export function fetchCompareProfiles(refs: CompareRef[]): Promise<CompareProfiles> {
-  return request<CompareProfiles>(`/api/compare/profiles?items=${serializeCompareItems(refs)}&lang=${LANG}`);
+  return request<CompareProfiles>(
+    `/api/compare/profiles?items=${serializeCompareItems(refs)}&lang=${LANG}&v=${COMPARE_PROFILES_VERSION}`
+  );
 }

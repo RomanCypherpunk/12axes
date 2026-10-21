@@ -148,6 +148,20 @@ class CompareControllerTest {
     }
 
     @Test
+    void profilesCarryTheirNearestMatchesWithoutThemselves() throws Exception {
+        mockMvc.perform(get("/api/compare/profiles").param("items", "ideology:social-democracia,country:colombia"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.profiles[0].nearest.ideology.ideologyId").isNotEmpty())
+                .andExpect(jsonPath("$.profiles[0].nearest.ideology.ideologyId", not("social-democracia")))
+                .andExpect(jsonPath("$.profiles[1].nearest.country.countryId").isNotEmpty())
+                .andExpect(jsonPath("$.profiles[1].nearest.country.countryId", not("colombia")))
+                .andExpect(jsonPath("$.profiles[0].nearest.country.countryId").isNotEmpty())
+                .andExpect(jsonPath("$.profiles[0].nearest.party.partyId").isNotEmpty())
+                .andExpect(jsonPath("$.commonIdeology.ideologyId").isNotEmpty())
+                .andExpect(jsonPath("$.commonIdeology.ideologyId", not("social-democracia")));
+    }
+
+    @Test
     void profilePairCompatibilityIsSymmetric() throws Exception {
         String forward = mockMvc.perform(get("/api/compare/profiles")
                         .param("items", "personality:alvaro-uribe,personality:gustavo-petro"))
@@ -171,9 +185,19 @@ class CompareControllerTest {
     }
 
     @Test
-    void profilesRejectsFewerThanTwoOrMoreThanThreeItems() throws Exception {
-        expectProfilesStatus("personality:alvaro-uribe", 400);
+    void profilesRejectsNoItemsOrMoreThanThreeItems() throws Exception {
+        expectProfilesStatus("", 400);
         expectProfilesStatus(THREE + ",ideology:social-democracia", 400);
+    }
+
+    @Test
+    void singleProfileReturnsItsVectorAndNeighboursWithoutPairs() throws Exception {
+        mockMvc.perform(get("/api/compare/profiles").param("items", "personality:alvaro-uribe"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.profiles.length()").value(1))
+                .andExpect(jsonPath("$.profiles[0].vector.length()").value(12))
+                .andExpect(jsonPath("$.profiles[0].nearest.ideology.ideologyId").isNotEmpty())
+                .andExpect(jsonPath("$.pairs.length()").value(0));
     }
 
     @Test

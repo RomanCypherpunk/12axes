@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react';
+import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
@@ -113,8 +113,16 @@ const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => {
 // Mantém o marcador inteiro dentro da grade mesmo nos extremos.
 const clamp = (value: number): number => Math.max(4, Math.min(96, value));
 
-export function Marker({ left, top, color }: { left: number; top?: number; color?: string }) {
+export function Marker({ left, top, color, face, outline, title }: { left: number; top?: number; color?: string; face?: ReactNode; outline?: string; title?: string }) {
   const style: CSSProperties = { left: `${clamp(left)}%`, top: top === undefined ? '50%' : `${clamp(top)}%` };
+  if (face) {
+    // Em /compare o marcador é o retrato do perfil, contornado com a cor da região em que ele cai.
+    return (
+      <span className="e-compass-x e-compass-face" style={{ ...style, '--oc': outline } as CSSProperties} title={title} aria-hidden="true">
+        {face}
+      </span>
+    );
+  }
   if (color) style.background = color;
   return (
     <span className="e-compass-x" style={style} aria-hidden="true">
@@ -178,6 +186,19 @@ export interface CompassMarker {
   left: number;
   top?: number;
   color?: string;
+  /** Retrato, bandeira ou logo do perfil no lugar do "X" (com `outline` na borda). */
+  face?: ReactNode;
+  outline?: string;
+  title?: string;
+}
+
+/**
+ * Cores do contorno de um perfil em /compare: a da região da grade em que ele cai (a mesma base que
+ * pinta o espectro dos resultados) e a do ponto da barra progressista/tradicionalista.
+ */
+export function compassOutlines(position: CompassPosition, moralAxis?: Axis): { region: string; social: string } {
+  const { socialColor } = compassView(position, '', moralAxis);
+  return { region: ideologyColorByKey(compassRegion(position)).base, social: socialColor };
 }
 
 /** Grade da bússola com um "X" por marcador (o resultado do usuário ou, em /compare, cada perfil). */
@@ -192,8 +213,8 @@ export function CompassChart({ ariaLabel, markers }: { ariaLabel: string; marker
         ))}
         <i className="e-compass-axis is-x" aria-hidden="true" />
         <i className="e-compass-axis is-y" aria-hidden="true" />
-        {markers.map((marker) => (
-          <Marker key={marker.key} left={marker.left} top={marker.top} color={marker.color} />
+        {markers.map(({ key, ...marker }) => (
+          <Marker key={key} {...marker} />
         ))}
       </div>
       <span className="e-compass-lbl is-right">{t.compassRight}</span>
@@ -214,8 +235,8 @@ export function SocialStrip({ cells, markers }: { cells: string[]; markers: Comp
         {cells.map((color, index) => (
           <span key={index} style={{ background: color }} />
         ))}
-        {markers.map((marker) => (
-          <Marker key={marker.key} left={marker.left} color={marker.color} />
+        {markers.map(({ key, ...marker }) => (
+          <Marker key={key} {...marker} />
         ))}
       </div>
     </div>

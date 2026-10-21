@@ -47,7 +47,7 @@ public class CompareController {
         return compareService.compare(type, id, scorer.userVectorFor(axes), lang);
     }
 
-    // Compara de 2 a 3 perfis entre si (items=tipo:id,tipo:id[,tipo:id]); sem filtro de religiao.
+    // Compara de 1 a 3 perfis entre si (items=tipo:id,tipo:id[,tipo:id]); sem filtro de religiao.
     @GetMapping("/api/compare/profiles")
     public CompareProfiles compareProfiles(
             @RequestParam String items,

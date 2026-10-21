@@ -161,7 +161,6 @@ interface Strings {
   comparePageDocTitle: string;
   comparePageEyebrow: string;
   comparePageTitle: string;
-  comparePageLead: string;
   comparePageProfilesTitle: string;
   comparePageNeedMore: string;
   comparePageFull: string;
@@ -175,6 +174,28 @@ interface Strings {
   comparePagePointAria: (name: string, right: number, authoritarian: number, traditional: number) => string;
   comparePageLegendAria: string;
   comparePagePairsTitle: string;
+  comparePageSignatureTitle: string;
+  comparePageIdeologyTitle: string;
+  comparePageNavIdeologies: string;
+  comparePageNavAxes: string;
+  comparePageNavSignature: string;
+  comparePageNavCountries: string;
+  comparePageNavParties: string;
+  comparePageNavCompass: string;
+  comparePageNavCompatibility: string;
+  comparePageCommonLabel: string;
+  comparePageNearestFor: (name: string) => string;
+  comparePageCountriesTitle: string;
+  comparePagePartiesTitle: string;
+  comparePageBalanced: string;
+  comparePageUnitPoints: string;
+  comparePageDivergeCap: (high: string, low: string, points: number) => string;
+  comparePageAgreeCap: (points: number) => string;
+  comparePageOpposite: string;
+  comparePageOppositeCount: (count: number, total: number) => string;
+  comparePageNoOpposite: string;
+  comparePageDiverge: string;
+  comparePageAgree: string;
   comparePagePairLabel: string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
@@ -562,7 +583,6 @@ const pt: Strings = {
   comparePageDocTitle: 'Comparar perfis — 12 Axes',
   comparePageEyebrow: 'Comparar perfis',
   comparePageTitle: 'Lado a lado, nos 12 eixos',
-  comparePageLead: 'Escolha 2 ou 3 personalidades, países, ideologias ou partidos e veja onde cada um fica em cada eixo e na bússola política.',
   comparePageProfilesTitle: 'Perfis',
   comparePageNeedMore: 'Escolha mais um perfil para comparar.',
   comparePageFull: 'Até 3 perfis. Remova um para escolher outro.',
@@ -577,6 +597,28 @@ const pt: Strings = {
     `${name}, ${right}% à direita, ${authoritarian}% autoritário, ${traditional}% tradicionalista`,
   comparePageLegendAria: 'Legenda da bússola',
   comparePagePairsTitle: 'Compatibilidade entre eles',
+  comparePageSignatureTitle: 'O que os distingue',
+  comparePageIdeologyTitle: 'Ideologia mais próxima',
+  comparePageNavIdeologies: 'Ideologias',
+  comparePageNavAxes: '12 Eixos',
+  comparePageNavSignature: 'Distinção',
+  comparePageNavCountries: 'Países',
+  comparePageNavParties: 'Partidos',
+  comparePageNavCompass: 'Bússola',
+  comparePageNavCompatibility: 'Compatibilidade',
+  comparePageCommonLabel: 'Em comum',
+  comparePageNearestFor: (name) => `Mais perto de ${name}`,
+  comparePageCountriesTitle: 'Países mais próximos',
+  comparePagePartiesTitle: 'Partidos mais próximos',
+  comparePageBalanced: 'Equilibrado',
+  comparePageUnitPoints: 'pts',
+  comparePageDivergeCap: (high, low, points) => `${high} e ${low} ficam a ${points} pontos um do outro nesse eixo.`,
+  comparePageAgreeCap: (points) => `Aqui eles se encontram: só ${points} pontos de diferença.`,
+  comparePageOpposite: 'Lados opostos',
+  comparePageOppositeCount: (count, total) => `Em ${count} dos ${total} eixos eles ficam em lados opostos.`,
+  comparePageNoOpposite: 'Nenhum eixo coloca os perfis em lados opostos.',
+  comparePageDiverge: 'Onde mais divergem',
+  comparePageAgree: 'Onde mais concordam',
   comparePagePairLabel: 'Compatibilidade',
   axisExplanations: {
     estrutura:
@@ -1226,7 +1268,6 @@ const en: Strings = {
   comparePageDocTitle: 'Compare profiles — 12 Axes',
   comparePageEyebrow: 'Compare profiles',
   comparePageTitle: 'Side by side, on the 12 axes',
-  comparePageLead: 'Pick 2 or 3 personalities, countries, ideologies or parties and see where each one stands on every axis and on the political compass.',
   comparePageProfilesTitle: 'Profiles',
   comparePageNeedMore: 'Pick one more profile to compare.',
   comparePageFull: 'Up to 3 profiles. Remove one to pick another.',
@@ -1241,6 +1282,28 @@ const en: Strings = {
     `${name}, ${right}% right, ${authoritarian}% authoritarian, ${traditional}% traditionalist`,
   comparePageLegendAria: 'Compass legend',
   comparePagePairsTitle: 'Compatibility between them',
+  comparePageSignatureTitle: 'What sets them apart',
+  comparePageIdeologyTitle: 'Closest ideology',
+  comparePageNavIdeologies: 'Ideologies',
+  comparePageNavAxes: '12 Axes',
+  comparePageNavSignature: 'Distinction',
+  comparePageNavCountries: 'Countries',
+  comparePageNavParties: 'Parties',
+  comparePageNavCompass: 'Compass',
+  comparePageNavCompatibility: 'Compatibility',
+  comparePageCommonLabel: 'In common',
+  comparePageNearestFor: (name) => `Closest to ${name}`,
+  comparePageCountriesTitle: 'Closest countries',
+  comparePagePartiesTitle: 'Closest parties',
+  comparePageBalanced: 'Balanced',
+  comparePageUnitPoints: 'pts',
+  comparePageDivergeCap: (high, low, points) => `${high} and ${low} are ${points} points apart on this axis.`,
+  comparePageAgreeCap: (points) => `This is where they meet: only ${points} points apart.`,
+  comparePageOpposite: 'Opposite sides',
+  comparePageOppositeCount: (count, total) => `They land on opposite sides in ${count} of ${total} axes.`,
+  comparePageNoOpposite: 'No axis puts these profiles on opposite sides.',
+  comparePageDiverge: 'Where they differ most',
+  comparePageAgree: 'Where they agree most',
   comparePagePairLabel: 'Compatibility',
   axisExplanations: {
     estrutura:
