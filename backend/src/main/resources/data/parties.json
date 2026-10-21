@@ -2843,5 +2843,169 @@
     "religions": [
       "catholic"
     ]
+  },
+  {
+    "id": "psd-historico",
+    "name": "Partido Social Democrático (PSD histórico)",
+    "category": "Partido",
+    "description": "Partido de centro-direita fundado em 1945 pelos interventores de Vargas, de base rural e oligárquica, aliado ao PTB em governos de 1945 a 1964, teve Dutra e Juscelino Kubitschek e defendeu desenvolvimento, ordem constitucional e conciliação.",
+    "logoPath": "/parties/logos/psd-historico.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Brasão_Partido_Social_Democrático_(1945-1964).svg",
+    "logoNote": "Símbolo oficial de Partido Social Democrático (PSD histórico) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "brasil-era-vargas",
+    "historical": true,
+    "period": "1945–1965",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "partido-republicano-paulista",
+    "name": "Partido Republicano Paulista (PRP)",
+    "category": "Partido",
+    "description": "Partido da elite cafeeira de São Paulo fundado em 1873, dominou a política da República Velha pela aliança do café com leite, defendeu federalismo, ordem, livre comércio e exportação agrária, e perdeu o poder com a Revolução de 1930.",
+    "logoPath": "/parties/logos/partido-republicano-paulista.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Logotipo_do_Partido_Republicano_Paulista.png",
+    "logoNote": "Símbolo oficial de Partido Republicano Paulista (PRP) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "brasil-republica-velha",
+    "historical": true,
+    "period": "1873–1937",
+    "religions": []
+  },
+  {
+    "id": "dup",
+    "name": "Partido Unionista Democrático (DUP)",
+    "category": "Partido",
+    "description": "Partido unionista e conservador da Irlanda do Norte, fundado por Ian Paisley em 1971, defende a união com o Reino Unido, valores protestantes e morais tradicionais e a oposição ao protocolo do Brexit, e é o maior partido unionista da região.",
+    "logoPath": "/parties/logos/dup.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Democratic_Unionist_Party_logo.svg",
+    "logoNote": "Símbolo oficial de Partido Unionista Democrático (DUP) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "reino-unido",
+    "historical": false,
+    "period": "",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "lega-nord",
+    "name": "Liga Norte (Lega Nord)",
+    "category": "Partido",
+    "description": "Partido regionalista do norte da Itália fundado por Umberto Bossi em 1991, defendeu o federalismo, a Padânia independente, o antiestablishment e o controle da imigração, até se tornar a Lega nacional de Salvini.",
+    "logoPath": "/parties/logos/lega-nord.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Lega_Nord_logo.svg",
+    "logoNote": "Símbolo oficial de Liga Norte (Lega Nord) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "italia",
+    "historical": true,
+    "period": "1991–2018",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "avante",
+    "name": "Avante",
+    "category": "Partido",
+    "description": "Partido pragmático de centro, fundado em 1989 como PTdoB e renomeado em 2017, com ideário trabalhista difuso, apoio a governos de campos diferentes e bancada pequena baseada em lideranças estaduais e na máquina de fundo partidário.",
+    "logoPath": "/parties/logos/avante.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Avante_70_(Brasil)_logo.svg",
+    "logoNote": "Símbolo oficial de Avante via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "brasil",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "sumar",
+    "name": "Sumar",
+    "category": "Partido",
+    "description": "Plataforma de esquerda criada em 2023 por Yolanda Díaz que reúne Izquierda Unida, Comuns e outros partidos, defende redução da jornada de trabalho, salário mínimo, transição ecológica e direitos sociais, e integra o governo de Pedro Sánchez.",
+    "logoPath": "/parties/logos/sumar.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Movimiento_Sumar_logo_2025.svg",
+    "logoNote": "Símbolo oficial de Sumar via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "espanha",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "union-civica-radical",
+    "name": "União Cívica Radical (UCR)",
+    "category": "Partido",
+    "description": "Partido centenário argentino, fundado em 1891, de Yrigoyen e Alfonsín, defende a democracia republicana, a classe média, a educação pública e as instituições, hoje centrista e dividido entre liberais e social-democratas em Juntos por el Cambio.",
+    "logoPath": "/parties/logos/union-civica-radical.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Ucr_modern_logo.svg",
+    "logoNote": "Símbolo oficial de União Cívica Radical (UCR) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "argentina",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "partido-verde-reino-unido",
+    "name": "Partido Verde (Greens)",
+    "category": "Partido",
+    "description": "Partido ecologista de esquerda da Inglaterra e do País de Gales, defende transição ecológica, redistribuição de renda, serviços públicos, representação proporcional e direitos de minorias, e elegeu quatro deputados em 2024.",
+    "logoPath": "/parties/logos/partido-verde-reino-unido.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Green_Party_of_England_and_Wales_logo.svg",
+    "logoNote": "Símbolo oficial de Partido Verde (Greens) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "reino-unido",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "snp",
+    "name": "Partido Nacional Escocês (SNP)",
+    "category": "Partido",
+    "description": "Partido social-democrata e independentista escocês, dominante na política da Escócia desde 2007, defende a independência, a permanência na União Europeia, serviços públicos fortes e políticas progressistas em costumes e meio ambiente.",
+    "logoPath": "/parties/logos/snp.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Scottish_National_Party_logo_2016.svg",
+    "logoNote": "Símbolo oficial de Partido Nacional Escocês (SNP) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "escocia",
+    "historical": false,
+    "period": "",
+    "religions": []
+  },
+  {
+    "id": "csu",
+    "name": "União Social-Cristã (CSU)",
+    "category": "Partido",
+    "description": "Partido democrata-cristão da Baviera, irmão da CDU desde 1945, domina a política bávara com Franz Josef Strauß e Markus Söder, defende catolicismo, família, ordem, federalismo e economia de mercado, com linha mais conservadora que a CDU.",
+    "logoPath": "/parties/logos/csu.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:CSU_Logo_since_2016.svg",
+    "logoNote": "Símbolo oficial de União Social-Cristã (CSU) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "baviera",
+    "historical": false,
+    "period": "",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "forza-italia",
+    "name": "Forza Italia (FI)",
+    "category": "Partido",
+    "description": "Partido de centro-direita fundado por Silvio Berlusconi em 1994, defende liberalismo econômico, atlantismo, europeísmo e democracia cristã, integra o governo Meloni sob Antonio Tajani, com base empresarial e católica moderada.",
+    "logoPath": "/parties/logos/forza-italia.png",
+    "logoSourceName": "Wikimedia Commons / Wikipédia",
+    "logoSourceUrl": "https://commons.wikimedia.org/wiki/File:Forza_Italia.svg",
+    "logoNote": "Símbolo oficial de Forza Italia (FI) via Wikipédia/Wikimedia Commons, em formato quadrado 1:1.",
+    "countryId": "italia",
+    "historical": false,
+    "period": "",
+    "religions": [
+      "catholic"
+    ]
   }
 ]

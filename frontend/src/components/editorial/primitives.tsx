@@ -1,6 +1,7 @@
 import { useState, type CSSProperties, type ReactNode } from 'react';
-import { t } from '../../i18n';
-import { NEW_ISSUE_URL } from '../../data/repo';
+import { LANG, t } from '../../i18n';
+import { NEW_ISSUE_URL, REPO_URL } from '../../data/repo';
+import { PARTIES_ENABLED } from '../../utils/partyLogos';
 
 export function Logo({ onClick, href }: { onClick?: () => void; href?: string }) {
   const content = (
@@ -27,19 +28,51 @@ export function Logo({ onClick, href }: { onClick?: () => void; href?: string })
 }
 
 export function SiteFooter() {
+  const base = LANG === 'en' ? '/en' : '';
+  const project = [
+    { label: t.footerAbout, href: `${REPO_URL}#readme` },
+    { label: t.footerContribute, href: `${REPO_URL}#contributing-ov-file` },
+    { label: t.footerLicense, href: `${REPO_URL}/blob/main/LICENSE` },
+    { label: t.footerReport, href: NEW_ISSUE_URL },
+  ];
+  const explore = [
+    { label: t.navPersonalities, href: `${base}/personalities` },
+    { label: t.navIdeologies, href: `${base}/ideologies` },
+    { label: t.navBooks, href: `${base}/books` },
+    ...(PARTIES_ENABLED ? [{ label: t.navParties, href: `${base}/parties` }] : []),
+    { label: t.navCountries, href: `${base}/countries` },
+  ];
   return (
     <footer className="ed e-foot">
       <div className="e-wrap">
-        <Logo />
-        <p>{t.footerRights}</p>
-        <nav className="e-foot-links" aria-label={t.feedbackTitle}>
-          <a className="e-btn e-btn-ghost e-btn-sm" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
-            {t.feedbackReport}
-          </a>
-          <a className="e-btn e-btn-ghost e-btn-sm" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
-            {t.feedbackSuggest}
-          </a>
-        </nav>
+        <div className="e-foot-brand">
+          <Logo />
+          <p>{t.footerRights}</p>
+        </div>
+        <div className="e-foot-cols">
+          <nav className="e-foot-col" aria-label={t.footerProject}>
+            <h3>{t.footerProject}</h3>
+            <ul>
+              {project.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav className="e-foot-col" aria-label={t.footerExplore}>
+            <h3>{t.footerExplore}</h3>
+            <ul>
+              {explore.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
   );

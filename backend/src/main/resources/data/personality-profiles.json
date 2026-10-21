@@ -5664,17 +5664,17 @@
     "personalityId": "cristovao-colombo",
     "vector": {
       "estrutura": 23.5,
-      "representacao": 6.7,
-      "poder": 83.8,
-      "imigracao": 82.5,
-      "diplomacia": 93.3,
-      "intervencao": 6.7,
+      "representacao": 17.4,
+      "poder": 77.9,
+      "imigracao": 89.6,
+      "diplomacia": 81.4,
+      "intervencao": 13.8,
       "economia": 29.2,
-      "controle": 77.9,
-      "comercio": 91.9,
+      "controle": 76.7,
+      "comercio": 76.4,
       "religiao": 1.0,
-      "moral": 5.3,
-      "tecnologia": 66.5
+      "moral": 7.7,
+      "tecnologia": 68.9
     }
   },
   {
@@ -10588,6 +10588,57 @@
       "religiao": 25.8,
       "moral": 25.3,
       "tecnologia": 63.0
+    }
+  },
+  {
+    "personalityId": "graciliano-ramos",
+    "vector": {
+      "estrutura": 28.3,
+      "representacao": 77.5,
+      "poder": 30.6,
+      "imigracao": 24.8,
+      "diplomacia": 25.2,
+      "intervencao": 66.0,
+      "economia": 93.7,
+      "controle": 85.3,
+      "comercio": 74.0,
+      "religiao": 91.7,
+      "moral": 62.1,
+      "tecnologia": 67.7
+    }
+  },
+  {
+    "personalityId": "carlos-drummond-de-andrade",
+    "vector": {
+      "estrutura": 37.9,
+      "representacao": 82.3,
+      "poder": 35.3,
+      "imigracao": 26.0,
+      "diplomacia": 21.7,
+      "intervencao": 63.7,
+      "economia": 73.9,
+      "controle": 73.4,
+      "comercio": 63.3,
+      "religiao": 70.2,
+      "moral": 71.7,
+      "tecnologia": 34.5
+    }
+  },
+  {
+    "personalityId": "euclides-da-cunha",
+    "vector": {
+      "estrutura": 23.2,
+      "representacao": 49.5,
+      "poder": 49.5,
+      "imigracao": 76.9,
+      "diplomacia": 52.9,
+      "intervencao": 42.4,
+      "economia": 67.3,
+      "controle": 75.5,
+      "comercio": 68.1,
+      "religiao": 88.4,
+      "moral": 17.9,
+      "tecnologia": 74.9
     }
   }
 ]

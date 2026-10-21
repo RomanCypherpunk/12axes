@@ -412,11 +412,13 @@ interface Strings {
   ossCards: { title: string; text: string }[];
   ossBarText: string;
   ossGithubCta: string;
-  ossIssueCta: string;
-  feedbackTitle: string;
-  feedbackReport: string;
-  feedbackSuggest: string;
   footerRights: string;
+  footerProject: string;
+  footerExplore: string;
+  footerAbout: string;
+  footerContribute: string;
+  footerLicense: string;
+  footerReport: string;
   supportTitleEm: string;
   supportLead: string;
   supportPrivacyNote: string;
@@ -1048,11 +1050,13 @@ const pt: Strings = {
   ],
   ossBarText: 'Leia o código, audite os dados e contribua pelo GitHub.',
   ossGithubCta: 'Ver no GitHub',
-  ossIssueCta: 'Sugerir melhoria',
-  feedbackTitle: 'Encontrou um problema ou tem uma ideia?',
-  feedbackReport: 'Reportar um problema',
-  feedbackSuggest: 'Sugerir melhorias',
   footerRights: '© 2026. Todos os direitos reservados',
+  footerProject: 'Projeto',
+  footerExplore: 'Explorar',
+  footerAbout: 'Sobre',
+  footerContribute: 'Contribuições',
+  footerLicense: 'Licença',
+  footerReport: 'Reportar',
   supportTitleEm: 'Apoie',
   supportLead:
     'O 12 Axes é independente e gratuito. Se o teste te ajudou a entender melhor sua ideologia política, considere fazer uma doação via Pix ou criptomoedas para manter o projeto no ar.',
@@ -1723,11 +1727,13 @@ const en: Strings = {
   ],
   ossBarText: 'Read the code, audit the data and contribute on GitHub.',
   ossGithubCta: 'View on GitHub',
-  ossIssueCta: 'Suggest an improvement',
-  feedbackTitle: 'Found a problem or have an idea?',
-  feedbackReport: 'Report a problem',
-  feedbackSuggest: 'Suggest improvements',
   footerRights: '© 2026. All rights reserved',
+  footerProject: 'Project',
+  footerExplore: 'Explore',
+  footerAbout: 'About',
+  footerContribute: 'Contributing',
+  footerLicense: 'License',
+  footerReport: 'Report',
   supportTitleEm: 'Support',
   supportLead:
     '12 Axes is independent and free. If the quiz helped you better understand your political ideology, consider donating via Pix or crypto to help keep the project running.',

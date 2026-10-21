@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-17T01:28:33Z",
+  "lastUpdated": "2026-10-21T13:19:07Z",
   "personality": {
-    "totalProfiles": 615,
+    "totalProfiles": 618,
     "pending": [],
     "done": [
       "lenin",
@@ -619,14 +619,17 @@
       "raphael-machado",
       "mark-rutte",
       "johannes-kaiser",
-      "zayed-bin-sultan-al-nahyan"
+      "zayed-bin-sultan-al-nahyan",
+      "graciliano-ramos",
+      "carlos-drummond-de-andrade",
+      "euclides-da-cunha"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
     "unanswered": 0
   },
   "ideology": {
-    "totalProfiles": 268,
+    "totalProfiles": 269,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -901,11 +904,12 @@
       "fascismo-social",
       "tecno-feudalismo",
       "liberalismo-pragmatico",
-      "conservadorismo-pragmatico"
+      "conservadorismo-pragmatico",
+      "colonialismo"
     ]
   },
   "country": {
-    "totalProfiles": 293,
+    "totalProfiles": 304,
     "pending": [],
     "done": [
       "brasil",
@@ -1200,12 +1204,23 @@
       "brasil-republica-velha",
       "franca-de-vichy",
       "comunidade-da-inglaterra",
-      "liga-hanseatica"
+      "liga-hanseatica",
+      "eua-alabama",
+      "eua-arizona",
+      "eua-minnesota",
+      "eua-oregon",
+      "bahia",
+      "pernambuco",
+      "ceara",
+      "goias",
+      "flandres",
+      "veneto",
+      "dubai"
     ]
   },
   "totalProfiles": 1188,
   "party": {
-    "totalProfiles": 190,
+    "totalProfiles": 201,
     "pending": [],
     "done": [
       "nsdap",
@@ -1397,7 +1412,18 @@
       "union-por-la-patria",
       "anr-colorado",
       "pri",
-      "pan"
+      "pan",
+      "partido-republicano-paulista",
+      "psd-historico",
+      "dup",
+      "lega-nord",
+      "sumar",
+      "partido-verde-reino-unido",
+      "snp",
+      "union-civica-radical",
+      "csu",
+      "forza-italia",
+      "avante"
     ]
   }
 }

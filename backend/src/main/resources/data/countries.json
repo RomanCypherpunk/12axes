@@ -4492,5 +4492,184 @@
       "catholic",
       "protestant"
     ]
+  },
+  {
+    "id": "eua-alabama",
+    "name": "Alabama (Estados Unidos)",
+    "category": "Região conservadora-religiosa",
+    "description": "Estado do Sul profundo dos Estados Unidos, o Alabama combina forte religiosidade protestante, direitos dos estados, baixa tributação e indústria aeroespacial em Huntsville, com legado da segregação racial e dependência de verbas federais.",
+    "flagPath": "/countries/flags/eua-alabama.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Alabama.svg",
+    "flagNote": "Bandeira de Alabama (Estados Unidos) usada como referência visual da região.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "eua-arizona",
+    "name": "Arizona (Estados Unidos)",
+    "category": "Região fronteiriça-libertária",
+    "description": "Estado do sudoeste na fronteira com o México, o Arizona combina tradição libertária e conservadora, imigração e segurança de fronteira no centro do debate, eleitorado dividido, polo de semicondutores e crescimento acelerado.",
+    "flagPath": "/countries/flags/eua-arizona.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Arizona.svg",
+    "flagNote": "Bandeira de Arizona (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "eua-minnesota",
+    "name": "Minnesota (Estados Unidos)",
+    "category": "Região cívico-social-democrata",
+    "description": "Estado do Meio-Oeste de tradição cívica e cooperativista, Minnesota combina impostos altos, serviços públicos fortes, sindicatos e alta participação eleitoral com acolhida de refugiados e economia de saúde, indústria e finanças.",
+    "flagPath": "/countries/flags/eua-minnesota.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Minnesota.svg",
+    "flagNote": "Bandeira de Minnesota (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "eua-oregon",
+    "name": "Oregon (Estados Unidos)",
+    "category": "Região ecológica-progressista",
+    "description": "Estado da Costa Oeste, o Oregon combina voto por correio, iniciativas populares, ambientalismo e uma das populações menos religiosas do país, com leis liberais sobre drogas e morte assistida e economia de florestas, tecnologia e vinhos.",
+    "flagPath": "/countries/flags/eua-oregon.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Oregon.svg",
+    "flagNote": "Bandeira de Oregon (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "bahia",
+    "name": "Bahia (Brasil)",
+    "category": "Região afro-brasileira-nordestina",
+    "description": "Estado do Nordeste e berço da cultura afro-brasileira, a Bahia tem forte sincretismo religioso, peso eleitoral de esquerda, polo petroquímico de Camaçari e tradição de oligarquias como o carlismo.",
+    "flagPath": "/countries/flags/bahia.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Bandeira_da_Bahia.svg",
+    "flagNote": "Bandeira de Bahia (Brasil) usada como referência visual da região.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "pernambuco",
+    "name": "Pernambuco (Brasil)",
+    "category": "Região polo-nordestina",
+    "description": "Estado do Nordeste de política competitiva e tradição de esquerda, Pernambuco combina o porto de Suape, o polo digital do Recife, a cultura popular do frevo e do manguebeat e forte desigualdade regional.",
+    "flagPath": "/countries/flags/pernambuco.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Bandeira_de_Pernambuco.svg",
+    "flagNote": "Bandeira de Pernambuco (Brasil) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "ceara",
+    "name": "Ceará (Brasil)",
+    "category": "Região semiárida-educacional",
+    "description": "Estado do Nordeste de semiárido e forte religiosidade popular, o Ceará se destaca pela gestão educacional de Sobral, pela energia eólica, pelo porto do Pecém e pela política de centro-esquerda, com desafio de facções criminosas.",
+    "flagPath": "/countries/flags/ceara.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Bandeira_do_Ceará.svg",
+    "flagNote": "Bandeira de Ceará (Brasil) usada como referência visual da região.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "goias",
+    "name": "Goiás (Brasil)",
+    "category": "Região agroexportadora-conservadora",
+    "description": "Estado do Centro-Oeste, Goiás tem economia de agronegócio, mineração e agroindústria, eleitorado conservador e evangélico, a maior rede de colégios militares do país e influência de Brasília no entorno.",
+    "flagPath": "/countries/flags/goias.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Goiás.svg",
+    "flagNote": "Bandeira de Goiás (Brasil) usada como referência visual da região.",
+    "religions": [
+      "catholic",
+      "protestant"
+    ]
+  },
+  {
+    "id": "flandres",
+    "name": "Flandres (Bélgica)",
+    "category": "Região nacionalista-exportadora",
+    "description": "Região de língua holandesa da Bélgica, Flandres é a mais rica e populosa do país, com economia exportadora centrada no porto de Antuérpia, forte nacionalismo regional (N-VA, Vlaams Belang) e amplo governo próprio em educação e cultura.",
+    "flagPath": "/countries/flags/flandres.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Flanders.svg",
+    "flagNote": "Bandeira de Flandres (Bélgica) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "veneto",
+    "name": "Veneto (Itália)",
+    "category": "Região autonomista-empresarial",
+    "description": "Região do nordeste italiano, o Veneto combina pequenas empresas exportadoras, tradição católica e democrata-cristã, autonomismo da Liga e forte identidade veneta, tendo votado em 2017, por ampla maioria, por mais autonomia fiscal.",
+    "flagPath": "/countries/flags/veneto.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Veneto.svg",
+    "flagNote": "Bandeira de Veneto (Itália) usada como referência visual da região.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai (Emirados Árabes Unidos)",
+    "category": "Emirado comercial-monárquico",
+    "description": "Emirado dos Emirados Árabes Unidos governado pela família Al Maktoum, Dubai é uma cidade-Estado de comércio, finanças, turismo e zonas francas, com maioria de residentes estrangeiros sem direitos políticos e sem eleições locais.",
+    "flagPath": "/countries/flags/dubai.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Dubai.svg",
+    "flagNote": "Bandeira de Dubai (Emirados Árabes Unidos) usada como referência visual da região.",
+    "religions": [
+      "islam"
+    ]
   }
 ]

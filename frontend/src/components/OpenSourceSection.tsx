@@ -1,5 +1,5 @@
 import { t } from '../i18n';
-import { NEW_ISSUE_URL, REPO, REPO_URL } from '../data/repo';
+import { REPO, REPO_URL } from '../data/repo';
 
 const CARD_ICONS = [
   <>
@@ -66,9 +66,6 @@ export function OpenSourceSection() {
                 <path d="M7 17 17 7" />
                 <path d="M8 7h9v9" />
               </svg>
-            </a>
-            <a className="e-oss-btn e-oss-ghost" href={NEW_ISSUE_URL} target="_blank" rel="noopener noreferrer">
-              {t.ossIssueCta}
             </a>
           </div>
         </div>
