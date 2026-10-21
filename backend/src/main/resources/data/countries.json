@@ -4671,5 +4671,69 @@
     "religions": [
       "islam"
     ]
+  },
+  {
+    "id": "brasil-de-juscelino-kubitschek",
+    "name": "Brasil de Juscelino Kubitschek",
+    "category": "Democracia desenvolvimentista",
+    "description": "Sob Juscelino Kubitschek, o Brasil viveu uma democracia desenvolvimentista que, pelo Plano de Metas, industrializou o país com planejamento estatal, infraestrutura e capital estrangeiro, construiu Brasília e aceitou inflação e dívida em nome do crescimento.",
+    "flagPath": "/countries/flags/brasil.gif",
+    "historical": true,
+    "period": "1956–1961",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
+    "flagNote": "O governo Kubitschek manteve a bandeira nacional brasileira.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "japao-do-alto-crescimento",
+    "name": "Japão do Alto Crescimento",
+    "category": "Democracia de partido dominante desenvolvimentista",
+    "description": "Entre 1955 e 1973, o Japão cresceu muito acima da média mundial com um Estado coordenador (MITI e bancos), grandes conglomerados, proteção à indústria e forte exportação, sob uma democracia dominada pelo Partido Liberal Democrata.",
+    "flagPath": "/countries/flags/japao.gif",
+    "historical": true,
+    "period": "1955–1973",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg",
+    "flagNote": "O Japão do pós-guerra manteve a mesma bandeira nacional (Hinomaru).",
+    "religions": []
+  },
+  {
+    "id": "taiwan-do-kuomintang",
+    "name": "Taiwan do Kuomintang",
+    "category": "Ditadura desenvolvimentista de partido único",
+    "description": "Sob o Kuomintang, Taiwan viveu a lei marcial e o partido único de Chiang Kai-shek e Chiang Ching-kuo, com reforma agrária, industrialização exportadora, empresas estatais e apoio dos EUA, base de um crescimento acelerado.",
+    "flagPath": "/countries/flags/taiwan.png",
+    "historical": true,
+    "period": "1949–1987",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republic_of_China.svg",
+    "flagNote": "A República da China em Taiwan manteve a bandeira nacional.",
+    "religions": []
+  },
+  {
+    "id": "indonesia-de-suharto",
+    "name": "Indonésia de Suharto",
+    "category": "Ditadura militar-tecnocrática",
+    "description": "Sob Suharto, a Indonésia combinou regime militar autoritário, anticomunismo, partido oficial (Golkar) e tecnocratas liberais, atraindo capital estrangeiro e crescendo rápido, com corrupção e repressão no país e em Timor-Leste.",
+    "flagPath": "/countries/flags/indonesia.gif",
+    "historical": true,
+    "period": "1966–1998",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg",
+    "flagNote": "A Nova Ordem manteve a bandeira nacional indonésia.",
+    "religions": [
+      "islam"
+    ]
   }
 ]

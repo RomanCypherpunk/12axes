@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-21T19:22:11Z",
+  "lastUpdated": "2026-10-21T19:50:51Z",
   "personality": {
-    "totalProfiles": 620,
+    "totalProfiles": 621,
     "pending": [],
     "done": [
       "lenin",
@@ -624,7 +624,8 @@
       "carlos-drummond-de-andrade",
       "euclides-da-cunha",
       "necmettin-erbakan",
-      "peter-magyar"
+      "peter-magyar",
+      "suharto"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
@@ -912,7 +913,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 304,
+    "totalProfiles": 308,
     "pending": [],
     "done": [
       "brasil",
@@ -1218,7 +1219,11 @@
       "goias",
       "flandres",
       "veneto",
-      "dubai"
+      "dubai",
+      "brasil-de-juscelino-kubitschek",
+      "japao-do-alto-crescimento",
+      "indonesia-de-suharto",
+      "taiwan-do-kuomintang"
     ]
   },
   "totalProfiles": 1188,
