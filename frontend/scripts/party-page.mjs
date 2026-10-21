@@ -14,6 +14,7 @@ const STR = {
     catalogNav: 'Catálogo',
     homeAria: '12 axes, página inicial',
     takeTheTest: 'Fazer o teste',
+    compareWith: 'Comparar com…',
     currentKind: 'Atual',
     historicalKind: 'Período histórico',
     kpiSpectrum: 'Espectro predominante',
@@ -60,6 +61,7 @@ const STR = {
     catalogNav: 'Catalog',
     homeAria: '12 axes, home page',
     takeTheTest: 'Take the test',
+    compareWith: 'Compare with…',
     currentKind: 'Current',
     historicalKind: 'Historical period',
     kpiSpectrum: 'Predominant spectrum',
@@ -247,6 +249,7 @@ ${siteHeader({ L, basePath, current: 'parties', webView: `/tree/parties?id=${par
         <div><dt>${esc(t.kpiClosestIdeology)}</dt><dd>${esc(specItem.name)}</dd></div>
         <div><dt>${esc(t.kpiClosestPerson)}</dt><dd>${esc(tp.name)}</dd></div>
       </dl>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=party:${party.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     <figure class="ch-flag ch-logo"><img src="${party.logoPath}" alt="${esc(t.logoAlt(name))}"></figure>
   </article>

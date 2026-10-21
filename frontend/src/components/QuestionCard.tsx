@@ -24,14 +24,16 @@ interface QuestionCardProps {
   selected?: AnswerValue;
   disabled?: boolean;
   onSelect: (answer: AnswerValue) => void;
+  /** id do título; precisa ser único quando várias perguntas aparecem juntas (edição das respostas). */
+  titleId?: string;
 }
 
-export function QuestionCard({ question, axisLabel, axis, number, options, selected, disabled = false, onSelect }: QuestionCardProps) {
+export function QuestionCard({ question, axisLabel, axis, number, options, selected, disabled = false, onSelect, titleId = 'question-title' }: QuestionCardProps) {
   const [isAxisInfoOpen, setIsAxisInfoOpen] = useState(false);
   const agreeColor = axis && (question.agreePole === 'LEFT' ? axis.leftColor : axis.rightColor);
 
   return (
-    <article className="question-card" aria-labelledby="question-title">
+    <article className="question-card" aria-labelledby={titleId}>
       {number !== undefined && (
         <span className="question-number" aria-hidden="true">{String(number).padStart(2, '0')}</span>
       )}
@@ -49,7 +51,7 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
         ) : (
           <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
         )}
-        <h2 id="question-title"><GlossaryText text={question.text} terms={question.terms} /></h2>
+        <h2 id={titleId}><GlossaryText text={question.text} terms={question.terms} /></h2>
       </header>
       <div className="answer-grid" role="radiogroup" aria-label={t.answersAria}>
         {options.map((option) => {

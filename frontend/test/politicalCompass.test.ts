@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { centerSide, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
+import { centerSide, compassFromVector, compassPoints, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -142,5 +142,40 @@ describe('centerSide', () => {
     expect(centerSide('centro', 'ext-direita')).toBeNull();
     expect(centerSide('esquerda', 'anarquismo')).toBeNull();
     expect(centerSide('centro', 'centro')).toBeNull();
+  });
+});
+
+describe('bússola com vários perfis', () => {
+  const left = { ...ALL, economia: 80, controle: 70, poder: 30, representacao: 60, estrutura: 40, moral: 75 };
+  const right = { ...ALL, economia: 20, controle: 10, poder: 80, representacao: 30, estrutura: 50, moral: 20 };
+
+  it('o vetor de um perfil cai no mesmo ponto que um resultado com os mesmos leftPercents', () => {
+    expect(compassFromVector(left)).toEqual(computeCompass(results(left)));
+    expect(compassFromVector(right)).toEqual(computeCompass(results(right)));
+  });
+
+  it('um ponto por perfil, na ordem recebida, com rótulo e cor', () => {
+    const points = compassPoints([
+      { key: 'personality:a', label: 'A', color: '#111111', vector: left },
+      { key: 'personality:b', label: 'B', color: '#222222', vector: right },
+      { key: 'country:c', label: 'C', color: '#333333', vector: ALL }
+    ]);
+    expect(points.map((point) => [point.key, point.label, point.color])).toEqual([
+      ['personality:a', 'A', '#111111'],
+      ['personality:b', 'B', '#222222'],
+      ['country:c', 'C', '#333333']
+    ]);
+    expect(points[0].position.right).toBeLessThan(50);
+    expect(points[1].position.right).toBeGreaterThan(50);
+    expect(points[1].position.authoritarian).toBeGreaterThan(points[0].position.authoritarian);
+    expect(points[2].position).toEqual({ right: 50, authoritarian: 50, traditional: 50 });
+  });
+
+  it('perfil sem os eixos da bússola fica de fora sem tirar os outros', () => {
+    const points = compassPoints([
+      { key: 'a', label: 'A', color: '#111', vector: left },
+      { key: 'b', label: 'B', color: '#222', vector: { economia: 50 } }
+    ]);
+    expect(points.map((point) => point.key)).toEqual(['a']);
   });
 });

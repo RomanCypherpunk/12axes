@@ -2,29 +2,38 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
-import { LANG, setLang, t } from './i18n';
+import { t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
+import { CatalogLinks, LangToggle, MenuButton, NavLinks } from './components/editorial/SiteNav';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
+import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
+import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
-import { PARTIES_ENABLED } from './utils/partyLogos';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
   loadProgress,
   restoreQuiz,
   saveProgress,
+  type SavedAnswers,
   type SavedProgress
 } from './utils/quizProgress';
+import { InfoSheet } from './components/results/InfoSheet';
 import { RELIGION_ICONS, RELIGION_QUESTION_ICON } from './data/religionIcons';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'archetype' | 'results';
+
+// A edição das respostas só carrega quando alguém clica em "Editar respostas".
+const EditAnswersSheet = lazy(() =>
+  import('./components/results/EditAnswersSheet').then((module) => ({ default: module.EditAnswersSheet }))
+);
 
 const ProgressHeader = lazy(() =>
   import('./components/ProgressHeader').then((module) => ({ default: module.ProgressHeader }))
@@ -41,6 +50,16 @@ const FULL_MODE =
   window.location.pathname.replace(/\/+$/, '').endsWith('/240questions');
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
+
+// /compare e /en/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
+// demanda: o catálogo inteiro só é baixado por quem abre essa rota.
+const COMPARE_MODE =
+  typeof window !== 'undefined' &&
+  ['/compare', '/en/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
+
+const ComparePage = lazy(() =>
+  import('./components/compare/ComparePage').then((module) => ({ default: module.ComparePage }))
+);
 
 // URL de resultado compartilhável: /results?est=65&rep=32.5&... (uma chave por
 // eixo, valor = % do polo esquerdo, na mesma ordem de axes.json).
@@ -212,6 +231,15 @@ function MainApp() {
   const [savedProgress, setSavedProgress] = useState<SavedProgress | null>(() =>
     SHARED_RESULT_VALUES ? null : loadProgress()
   );
+  // Último resultado concluído neste navegador: a home avisa que o teste já foi feito e, ao ver esse mesmo
+  // resultado (inclusive por recarga ou pelo link), "Editar respostas" usa as respostas guardadas.
+  const [lastResult, setLastResult] = useState<LastResult | null>(() => loadLastResult());
+  // Edição das respostas do quiz já feito: o quiz reconstruído (null enquanto carrega) e o estado do salvamento.
+  const [editOpen, setEditOpen] = useState(false);
+  const [editQuiz, setEditQuiz] = useState<QuizPayload | null>(null);
+  const [editLoadError, setEditLoadError] = useState(false);
+  const [isSavingEdit, setIsSavingEdit] = useState(false);
+  const [editError, setEditError] = useState<string | null>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
   // Pool completo (240 perguntas) recebido do backend, guardado para poder
@@ -612,6 +640,86 @@ function MainApp() {
     }
   }
 
+  // Mostra um resultado recém-calculado (fim do quiz ou edição das respostas) e guarda, só neste navegador,
+  // o link, o nome e as respostas, para a home avisar que o teste foi feito e a edição reabrir tudo preenchido.
+  function showFinishedResult(nextResult: QuizResult, chosenReligion: Religion | null, saved: SavedAnswers) {
+    setResult(nextResult);
+    // Sem quiz em memória (página recarregada ou aberta pelo link), a tela de resultados só existe como visão
+    // compartilhada: desligar isso aqui a faria sumir.
+    setIsSharedView(quiz === null);
+    setReligion(chosenReligion);
+    // URL compartilhável: quem abrir este link vê o mesmo resultado.
+    const resultUrl = sharedResultUrl(nextResult, chosenReligion);
+    window.history.replaceState(null, '', resultUrl);
+    saveLastResult({ url: resultUrl, name: nextResult.topMatch.name, answers: saved });
+    setLastResult(loadLastResult());
+  }
+
+  // O botão "Editar respostas" só existe para quem fez o teste neste navegador e está vendo o próprio resultado.
+  const editableAnswers =
+    result && lastResult?.answers && sharedResultUrl(result, religion) === lastResult.url ? lastResult.answers : null;
+
+  async function openEditAnswers() {
+    if (!editableAnswers) {
+      return;
+    }
+    setEditOpen(true);
+    setEditError(null);
+    setEditLoadError(false);
+    if (editQuiz) {
+      return;
+    }
+    try {
+      const payload = poolRef.current ?? (await fetchQuiz(editableAnswers.variant));
+      poolRef.current = payload;
+      const restored = restoreQuiz(payload, editableAnswers);
+      if (!restored) {
+        // As perguntas mudaram depois de um deploy: as respostas guardadas não servem mais.
+        setEditLoadError(true);
+        return;
+      }
+      setEditQuiz(restored);
+    } catch {
+      setEditLoadError(true);
+    }
+  }
+
+  function closeEditAnswers() {
+    setEditOpen(false);
+    setEditQuiz(null);
+    setEditLoadError(false);
+    setEditError(null);
+  }
+
+  async function saveEditedAnswers(edited: AnswerSet) {
+    if (!editQuiz || !editableAnswers || isSavingEdit) {
+      return;
+    }
+    setIsSavingEdit(true);
+    setEditError(null);
+    try {
+      const payload = editQuiz.questions.map((question) => ({
+        questionId: question.id,
+        answer: edited.answers[question.id] as AnswerValue
+      }));
+      const { [RELIGION_STEP_ID]: _religion, [DENOMINATION_STEP_ID]: _denomination, ...archetypeOnly } = edited.archetypeChoices;
+      const chosenReligion = resolveReligion(edited.archetypeChoices);
+      const nextResult = await submitResults(editableAnswers.variant, payload, archetypeOnly, chosenReligion);
+      showFinishedResult(nextResult, chosenReligion, {
+        variant: editableAnswers.variant,
+        questionIds: editableAnswers.questionIds,
+        answers: edited.answers,
+        archetypeChoices: edited.archetypeChoices
+      });
+      closeEditAnswers();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      setEditError(err instanceof Error ? err.message : t.errCalc);
+    } finally {
+      setIsSavingEdit(false);
+    }
+  }
+
   async function submitQuiz(answerMap = answers, archetype = archetypeChoices) {
     if (!quiz || isSubmitting) {
       return;
@@ -638,12 +746,13 @@ function MainApp() {
         archetypeOnly,
         chosenReligion
       );
-      setResult(nextResult);
       clearProgress();
-      setIsSharedView(false);
-      setReligion(chosenReligion);
-      // URL compartilhável: quem abrir este link vê o mesmo resultado.
-      window.history.replaceState(null, '', sharedResultUrl(nextResult, chosenReligion));
+      showFinishedResult(nextResult, chosenReligion, {
+        variant: quiz.variant ?? selectedVariant,
+        questionIds: quiz.questions.map((question) => question.id),
+        answers: answerMap,
+        archetypeChoices: archetype
+      });
       setScreen('results');
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errCalc);
@@ -752,42 +861,17 @@ function MainApp() {
           <Logo onClick={goHome} />
           {screen === 'home' && (
             <>
-              <nav
-                className={isMenuOpen ? 'e-nav-links e-open' : 'e-nav-links'}
-                aria-label={t.mainNavAria}
-                onClick={() => setIsMenuOpen(false)}
-              >
+              <NavLinks open={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                 <a href="#como-funciona">{t.navHow}</a>
                 <a href="#guia-eixos">{t.navAxes}</a>
                 <a href="#apoie">{t.navSupport}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/books`}>{t.navBooks}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/ideologies`}>{t.navIdeologies}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/personalities`}>{t.navPersonalities}</a>
-                <a href={`${LANG === 'en' ? '/en' : ''}/countries`}>{t.navCountries}</a>
-                {PARTIES_ENABLED && <a href={`${LANG === 'en' ? '/en' : ''}/parties`}>{t.navParties}</a>}
-                <button
-                  className="e-lang"
-                  type="button"
-                  onClick={() => setLang(LANG === 'pt' ? 'en' : 'pt')}
-                  aria-label={t.langToggleAria}
-                >
-                  {t.langToggleLabel}
-                </button>
-              </nav>
+                <CatalogLinks showCompare={false} />
+                <LangToggle />
+              </NavLinks>
               <button className="e-btn e-btn-primary e-btn-sm" type="button" onClick={openVariantChooser}>
                 {t.navStart} <ArrowIcon />
               </button>
-              <button
-                className="e-menu-btn"
-                type="button"
-                aria-label={t.menuAria}
-                aria-expanded={isMenuOpen}
-                onClick={() => setIsMenuOpen((open) => !open)}
-              >
-                <span />
-                <span />
-                <span />
-              </button>
+              <MenuButton open={isMenuOpen} onToggle={() => setIsMenuOpen((open) => !open)} />
             </>
           )}
           {screen === 'variant' && (
@@ -813,7 +897,7 @@ function MainApp() {
       </header>
       <span id="conteudo-principal" className="skip-target" tabIndex={-1} />
 
-      {screen === 'home' && (savedProgress || error) && (
+      {screen === 'home' && (savedProgress || lastResult || error) && (
         <div className="ed e-resume" role="status" aria-live="polite">
           <div className="e-wrap">
             <div className="e-resume-card e-dark">
@@ -839,6 +923,26 @@ function MainApp() {
                     </button>
                     <button className="e-btn e-btn-ghost" type="button" onClick={discardProgress}>
                       {t.resumeDiscard}
+                    </button>
+                  </div>
+                </>
+              )}
+              {!savedProgress && lastResult && (
+                <>
+                  <div className="e-resume-body">
+                    <p className="e-eyebrow">{t.doneEyebrow}</p>
+                    <h3>{t.doneTitle}</h3>
+                    <p className="e-resume-text">{t.doneBody(lastResult.name)}</p>
+                    <div className="e-resume-bar" aria-hidden="true">
+                      <span style={{ width: '100%' }} />
+                    </div>
+                  </div>
+                  <div className="e-resume-actions">
+                    <a className="e-btn e-btn-light" href={lastResult.url}>
+                      {t.doneView} <ArrowIcon />
+                    </a>
+                    <button className="e-btn e-btn-ghost" type="button" onClick={openVariantChooser}>
+                      {t.doneRetake}
                     </button>
                   </div>
                 </>
@@ -997,7 +1101,39 @@ function MainApp() {
           error={error}
           onShare={() => void downloadResultsPng()}
           religion={religion}
+          onEditAnswers={editableAnswers ? () => void openEditAnswers() : undefined}
         />
+      )}
+
+      {editOpen && screen === 'results' && (
+        <Suspense fallback={null}>
+          {editQuiz && editableAnswers ? (
+            <EditAnswersSheet
+              quiz={editQuiz}
+              axes={homeAxes}
+              axisResults={resultByAxis}
+              religion={religion}
+              initial={{ answers: editableAnswers.answers, archetypeChoices: editableAnswers.archetypeChoices }}
+              buildSteps={(choices) => buildArchetypeSteps(editQuiz.archetypeQuestions, choices)}
+              normalizeChoices={(choices) => {
+                if (chosenChristianity(choices)) return choices;
+                const { [DENOMINATION_STEP_ID]: _denomination, ...rest } = choices;
+                return rest;
+              }}
+              isSaving={isSavingEdit}
+              error={editError}
+              onSave={(edited) => void saveEditedAnswers(edited)}
+              onClose={closeEditAnswers}
+            />
+          ) : (
+            <InfoSheet titleId="e-edit-title" className="e-edit-sheet" onClose={closeEditAnswers}>
+              <h3 id="e-edit-title">{t.editAnswersTitle}</h3>
+              <p className="e-edit-lead" role="status">
+                {editLoadError ? t.editAnswersUnavailable : t.editAnswersLoading}
+              </p>
+            </InfoSheet>
+          )}
+        </Suspense>
       )}
 
       {(screen === 'home' || screen === 'variant' || screen === 'results') && <SiteFooter />}
@@ -1006,6 +1142,13 @@ function MainApp() {
 }
 
 export default function App() {
+  if (COMPARE_MODE) {
+    return (
+      <Suspense fallback={null}>
+        <ComparePage />
+      </Suspense>
+    );
+  }
   return <MainApp />;
 }
 

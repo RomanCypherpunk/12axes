@@ -26,7 +26,7 @@ export function siteHeader({ L, basePath, current, webView }) {
     ['parties', L.s.navParties]
   ]
     .map(([key, label]) => `<a href="${prefix}/${key}"${key === current ? ' aria-current="page"' : ''}>${esc(label)}</a>`)
-    .join('');
+    .join('') + `<a href="${esc(L.s.compareHref)}">${esc(L.s.navCompare)}</a>`;
   const langHref = prefix ? basePath : `/en${basePath}`;
   const langLabel = prefix ? 'PT' : 'EN';
   const web = webView ? `<a class="sh-btn sh-btn-ghost" href="${prefix}${webView}">${esc(L.s.navWebView)}</a>` : '';

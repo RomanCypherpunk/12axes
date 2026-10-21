@@ -38,12 +38,20 @@ const WEIGHT_CONTROLE = 0.4;
  * Devolve null se algum desses eixos faltar no resultado (ex.: resultado compartilhado antigo).
  */
 export function computeCompass(results: Map<string, AxisResult>): CompassPosition | null {
-  const left = (axisId: string): number | null => results.get(axisId)?.leftPercent ?? null;
+  return compassFromLeftPercents((axisId) => results.get(axisId)?.leftPercent);
+}
+
+/** Mesma conta para o vetor de um perfil do catálogo (leftPercent por eixo, a mesma escala do usuário). */
+export function compassFromVector(vector: Record<string, number>): CompassPosition | null {
+  return compassFromLeftPercents((axisId) => vector[axisId]);
+}
+
+function compassFromLeftPercents(left: (axisId: string) => number | undefined): CompassPosition | null {
   const ids = ['economia', 'controle', 'poder', 'representacao', 'estrutura', 'moral'] as const;
   const values: Record<string, number> = {};
   for (const id of ids) {
     const value = left(id);
-    if (value === null) return null;
+    if (value === undefined || value === null) return null;
     values[id] = value;
   }
   return {
@@ -51,6 +59,23 @@ export function computeCompass(results: Map<string, AxisResult>): CompassPositio
     authoritarian: mean([values.poder, 100 - values.representacao, 100 - values.estrutura]),
     traditional: 100 - values.moral
   };
+}
+
+export interface CompassPoint {
+  key: string;
+  label: string;
+  color: string;
+  position: CompassPosition;
+}
+
+/** Um ponto por perfil (na ordem recebida); perfis sem os eixos da bússola ficam de fora. */
+export function compassPoints(
+  profiles: { key: string; label: string; color: string; vector: Record<string, number> }[]
+): CompassPoint[] {
+  return profiles.flatMap(({ key, label, color, vector }) => {
+    const position = compassFromVector(vector);
+    return position ? [{ key, label, color, position }] : [];
+  });
 }
 
 export type SocialKey = 'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional';

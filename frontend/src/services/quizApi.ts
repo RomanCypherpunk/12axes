@@ -1,8 +1,28 @@
 import { LANG, t } from '../i18n';
-import type { CompareDetail, CompareItem, CompareType, QuizPayload, QuizResult, QuizVariant, SubmittedAnswer } from '../types/quiz';
+import type {
+  CompareDetail,
+  CompareItem,
+  CompareProfiles,
+  CompareType,
+  QuizPayload,
+  QuizResult,
+  QuizVariant,
+  SubmittedAnswer
+} from '../types/quiz';
+import { serializeCompareItems, type CompareRef } from '../utils/compareUrl';
 import { PARTIES_ENABLED } from '../utils/partyLogos';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
+
+/** Erro HTTP do backend; o status deixa a tela distinguir, por exemplo, um perfil inexistente (404). */
+export class ApiError extends Error {
+  readonly status: number;
+
+  constructor(message: string, status: number) {
+    super(message);
+    this.status = status;
+  }
+}
 
 async function request<T>(path: string, options?: RequestInit, retries = 1): Promise<T> {
   // Content-Type só quando há corpo: num GET ele transforma a chamada entre origens em uma
@@ -13,7 +33,7 @@ async function request<T>(path: string, options?: RequestInit, retries = 1): Pro
 
     if (!response.ok) {
       const message = await response.text();
-      throw new Error(formatApiError(message, response.status));
+      throw new ApiError(formatApiError(message, response.status), response.status);
     }
 
     return response.json() as Promise<T>;
@@ -84,5 +104,15 @@ export function fetchCompare(type: CompareType, id: string, leftPercents: number
   const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
   return request<CompareDetail>(
     `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}`
+  );
+}
+
+// `v` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
+// comparação ficaria com a resposta antiga (sem as ideologias, países e partidos mais próximos).
+const COMPARE_PROFILES_VERSION = 2;
+
+export function fetchCompareProfiles(refs: CompareRef[]): Promise<CompareProfiles> {
+  return request<CompareProfiles>(
+    `/api/compare/profiles?items=${serializeCompareItems(refs)}&lang=${LANG}&v=${COMPARE_PROFILES_VERSION}`
   );
 }

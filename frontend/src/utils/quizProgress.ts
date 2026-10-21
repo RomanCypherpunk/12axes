@@ -89,6 +89,36 @@ export function parseProgress(raw: string | null, now = Date.now()): SavedProgre
   }
 }
 
+/** Respostas de um quiz concluído: o que "Editar respostas" precisa para reabrir tudo preenchido. */
+export interface SavedAnswers {
+  variant: QuizVariant;
+  /** Ordem das perguntas deste quiz, para reconstruir a mesma sequência. */
+  questionIds: string[];
+  answers: Record<string, AnswerValue>;
+  archetypeChoices: Record<string, string>;
+}
+
+// Valida o que veio do disco: dado antigo, editado à mão ou de outra versão é descartado.
+export function parseSavedAnswers(data: unknown): SavedAnswers | null {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    return null;
+  }
+  const value = data as Partial<SavedAnswers>;
+  if (typeof value.variant !== 'string' || !VARIANTS.has(value.variant)) {
+    return null;
+  }
+  if (!Array.isArray(value.questionIds) || value.questionIds.length === 0 || !value.questionIds.every((id) => typeof id === 'string')) {
+    return null;
+  }
+  if (!isRecordOfStrings(value.answers) || !Object.values(value.answers).every((answer) => ANSWER_VALUES.has(answer))) {
+    return null;
+  }
+  if (!isRecordOfStrings(value.archetypeChoices)) {
+    return null;
+  }
+  return value as SavedAnswers;
+}
+
 export function loadProgress(): SavedProgress | null {
   try {
     return parseProgress(window.localStorage.getItem(STORAGE_KEY));
@@ -121,7 +151,7 @@ export function answeredCount(progress: SavedProgress): number {
 // Remonta o quiz com as mesmas perguntas, na mesma ordem. Se alguma pergunta não
 // existe mais (conteúdo mudou depois de um deploy), não dá para retomar com
 // segurança e devolve null.
-export function restoreQuiz(payload: QuizPayload, progress: SavedProgress): QuizPayload | null {
+export function restoreQuiz(payload: QuizPayload, progress: Pick<SavedProgress, 'variant' | 'questionIds'>): QuizPayload | null {
   const byId = new Map(payload.questions.map((question) => [question.id, question]));
   const questions = progress.questionIds.map((id) => byId.get(id));
   if (questions.some((question) => !question)) {

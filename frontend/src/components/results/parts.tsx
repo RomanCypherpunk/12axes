@@ -55,6 +55,33 @@ export interface DimItem {
   onInfo?: () => void;
 }
 
+interface DimRowProps {
+  info?: ReactNode;
+  visual: ReactNode;
+  label: string;
+  name: string;
+  /** Linha extra abaixo do nome. */
+  note?: ReactNode;
+  /** Coluna da direita (a porcentagem ou uma ação). */
+  children: ReactNode;
+}
+
+/** Linha de perfil (miniatura, tipo, nome e valor à direita), também usada em /compare. */
+export function DimRow({ info, visual, label, name, note, children }: DimRowProps) {
+  return (
+    <li className="e-dim-row">
+      {info}
+      {visual}
+      <div>
+        <span className="e-dim">{label}</span>
+        <strong>{name}</strong>
+        {note}
+      </div>
+      <span className="e-pctc">{children}</span>
+    </li>
+  );
+}
+
 export function DimList({ items }: { items: DimItem[] }) {
   if (items.length === 0) {
     return null;
@@ -64,19 +91,15 @@ export function DimList({ items }: { items: DimItem[] }) {
       <p className="e-sub">{t.dimensionsTitleShort}</p>
       <ul className="e-dims">
         {items.map((item) => (
-          <li className="e-dim-row" key={item.key}>
-            {item.onInfo && item.infoLabel && (
-              <InfoButton className="e-axis-info e-card-info" label={item.infoLabel} onClick={item.onInfo} />
-            )}
-            {item.visual}
-            <div>
-              <span className="e-dim">{item.label}</span>
-              <strong>{item.name}</strong>
-            </div>
-            <span className="e-pctc">
-              <CountUpValue value={item.compatibility} decimals={0} />
-            </span>
-          </li>
+          <DimRow
+            key={item.key}
+            info={item.onInfo && item.infoLabel && <InfoButton className="e-axis-info e-card-info" label={item.infoLabel} onClick={item.onInfo} />}
+            visual={item.visual}
+            label={item.label}
+            name={item.name}
+          >
+            <CountUpValue value={item.compatibility} decimals={0} />
+          </DimRow>
         ))}
       </ul>
     </>

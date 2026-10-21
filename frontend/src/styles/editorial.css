@@ -52,6 +52,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-nav-links{display:flex;align-items:center;gap:32px;font-size:15px}
 .e-nav-links a{text-decoration:none;color:var(--texto-suave)}
 .e-nav-links a:hover{color:var(--tinta)}
+.e-nav-links a[aria-current]{color:var(--tinta);font-weight:600}
+@media (max-width:1320px){.e-nav-links{gap:20px}}
 .e-lang{font-weight:600;font-size:13px;border:1px solid var(--borda);border-radius:999px;padding:4px 12px}
 .e-menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .e-menu-btn span{display:block;width:22px;height:2px;background:var(--tinta);margin:5px auto;border-radius:2px}
@@ -212,10 +214,17 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-copy.e-ok{background:var(--floresta);border-color:var(--floresta);color:var(--papel)}
 
 /* footer */
-.e-foot{background:var(--tinta);color:var(--papel);padding:40px 0}
-.e-foot .e-wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:14px}
+.e-foot{background:var(--tinta);color:var(--papel);padding:72px 0 80px;border-top:1px solid rgba(244,241,232,.08)}
+.e-foot .e-wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:48px}
+.e-foot .e-logo{font-size:30px}
 .e-foot .e-logo b{color:var(--papel)}
-.e-foot p{color:#9A968C}
+.e-foot-brand{display:flex;flex-direction:column;gap:14px}
+.e-foot-brand p{font-size:13.5px;color:#9A968C}
+.e-foot-cols{display:flex;gap:clamp(48px,8vw,120px);text-align:right}
+.e-foot-col h3{font:600 11.5px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#9A968C;margin:0 0 18px}
+.e-foot-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.e-foot-col a{font-size:15px;color:var(--papel);text-decoration:none;opacity:.88;transition:opacity .15s}
+.e-foot-col a:hover,.e-foot-col a:focus-visible{opacity:1;text-decoration:underline;text-underline-offset:4px}
 
 /* responsive */
 @media (max-width:980px){
@@ -723,8 +732,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-oss-btn:hover{transform:translateY(-2px)}
 .e-oss-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .e-oss a.e-oss-primary{background:var(--papel);color:var(--tinta)}
-.e-oss a.e-oss-ghost{border:1.5px solid rgba(244,241,232,.4);color:var(--papel)}
-.e-oss-ghost:hover{background:rgba(244,241,232,.1)}
 .e-oss-btn:focus-visible{outline:3px solid var(--papel);outline-offset:3px}
 @media (max-width:1024px){.e-oss-cards{grid-template-columns:1fr 1fr}.e-oss-head{grid-template-columns:1fr;gap:14px}}
 @media (max-width:720px){.e-oss-bar{flex-wrap:wrap;padding:22px}.e-oss-actions{width:100%}.e-oss-actions .e-oss-btn{flex:1;justify-content:center}}
@@ -741,6 +748,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-resume-bar{margin-top:22px;height:6px;border-radius:999px;background:rgba(244,241,232,.16);overflow:hidden}
 .e-resume-bar span{display:block;height:100%;border-radius:inherit;background:var(--destaque-sobre-escuro)}
 .e-resume-actions{display:flex;flex:none;gap:12px}
+/* Aqui o "Ver resultados" é um link; `.ed a{color:inherit}` apagaria o texto do botão claro. */
+.e-resume-actions a.e-btn-light{color:var(--floresta)}
 .e-dark .e-btn-ghost{border-color:rgba(244,241,232,.45);color:var(--papel)}
 .e-dark .e-btn-ghost:hover{border-color:var(--papel);background:rgba(244,241,232,.08)}
 .e-resume-error{flex-basis:100%;font-size:15px;color:var(--destaque-sobre-escuro)}
@@ -753,17 +762,12 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-resume + .ed .e-hero{min-height:auto;align-items:start;padding:48px 0 56px}
 .e-resume + .ed .e-hero .e-wrap{align-items:start}
 @media (max-width:860px){.e-resume + .ed .e-hero{padding:32px 0 40px}}
-.e-foot-links{display:flex;flex-wrap:wrap;gap:10px}
-.e-foot .e-btn-ghost{border-color:rgba(244,241,232,.38);color:var(--papel)}
-.e-foot .e-btn-ghost:hover{border-color:var(--papel);background:rgba(244,241,232,.08)}
 @media (max-width:720px){
-  .e-foot{padding:28px 0}
-  .e-foot .e-wrap{flex-wrap:wrap;gap:10px 12px}
-  .e-foot .e-logo{font-size:20px}
-  .e-foot p{order:3;width:100%;font-size:12.5px}
-  .e-foot-links{flex-wrap:wrap;justify-content:flex-end;gap:4px 14px}
-  .e-foot-links .e-btn{padding:0;border:0;border-radius:0;font-size:12px;font-weight:500;text-decoration:underline;text-decoration-color:rgba(244,241,232,.4);text-underline-offset:4px;white-space:nowrap}
-  .e-foot-links .e-btn:hover{background:none;transform:none;text-decoration-color:var(--papel)}
+  .e-foot{padding:48px 0 56px}
+  .e-foot .e-wrap{flex-direction:column;align-items:stretch;gap:36px}
+  .e-foot .e-logo{font-size:26px}
+  .e-foot-cols{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:32px;text-align:left}
+  .e-foot-col h3{margin-bottom:14px}
 }
 
 /* Análise comparativa: busca de perfil + aba com os 12 eixos lado a lado */
@@ -946,6 +950,191 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-deck-card[data-pos="1"]{transform:translate(12px,-14px) rotate(2.6deg) scale(.95)}
   .e-deck-card[data-pos="2"]{transform:translate(-12px,-28px) rotate(-3.2deg) scale(.9)}
   .e-deck-card[data-pos="out"]{transform:translate(-60%,-6%) rotate(-12deg)}
+}
+
+/* ── /compare: 2 a 3 perfis lado a lado ── */
+/* Cada perfil leva a cor da sua posição (--pc) num anel em volta do retrato, igual nas barras, na bússola e nos pares. */
+.e-cmpp{min-height:calc(100vh - 72px)}
+.e-cmpp{--cat:var(--floresta);--cat-bg:#E1EBE5}
+.e-cmpp .e-panel{scroll-margin-top:88px}
+/* Perfis escolhidos: um cartão por perfil, com a cor da posição no topo e o retrato em destaque. */
+.e-cp-cards{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.e-cp-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:30px 16px 22px;border:1px solid var(--borda);border-radius:24px;background:var(--papel);overflow:hidden}
+.e-cp-card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--pc)}
+.e-cp-face .e-avatar{width:88px;height:88px}
+.e-cp-text{display:grid;gap:4px;min-width:0}
+.e-cp-type{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pc)}
+.e-cp-text strong{font-family:var(--font-display);font-size:20px;line-height:1.2;letter-spacing:-.025em;overflow-wrap:anywhere}
+.e-cp-text small{font-size:12.5px;color:var(--texto-suave)}
+.e-cp-remove{position:absolute;top:14px;right:12px;display:grid;place-items:center;width:30px;height:30px;padding:0;border:1px solid var(--borda);border-radius:50%;background:var(--superficie);color:var(--texto-suave);cursor:pointer;transition:color .15s,border-color .15s}
+.e-cp-remove:hover,.e-cp-remove:focus-visible{color:var(--tinta);border-color:var(--tinta)}
+.e-cp-remove svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+/* "Lados opostos": cabeçalho com a etiqueta e os perfis, depois a frase e os eixos, em uma coluna só. */
+.e-tension.e-cp-tension{display:flex;flex-direction:column;align-items:stretch;gap:14px;padding:22px 26px}
+.e-cp-tension-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px}
+.e-cp-tension .e-pair{margin:0;gap:8px}
+.e-cp-tension .e-pair span{font-size:13.5px;padding:4px 12px;border-width:2px}
+.e-cp-tension>p{font-size:16px;line-height:1.35}
+.e-cp-tension .e-chips{margin:0;gap:8px}
+.e-cp-tension .e-chips li{font-size:13px;padding:5px 14px}
+/* Legenda: quem é cada marcador (rosto na cor da sua posição). */
+.e-cp-legend{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.e-cp-legend li{display:inline-flex;align-items:center;gap:10px;padding:5px 14px 5px 6px;border:1px solid var(--borda);border-radius:999px;background:var(--papel);font-size:13.5px;font-weight:600}
+.e-cp-legend .e-close-face{width:24px;height:24px}
+.e-cp-duo{display:flex;flex:none}
+.e-cp-duo .e-cmpp-ring+.e-cmpp-ring{margin-left:-14px}
+/* 12 eixos: uma trilha por eixo, nas cores dos polos, com um rosto por perfil e a porcentagem ao passar o mouse. */
+.e-cp-axes{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+.e-cp-axis{min-width:0}
+.e-cp-track{position:relative;height:10px;border-radius:10px;margin:22px 14px 14px;background:linear-gradient(90deg,color-mix(in srgb,var(--al) 60%,var(--borda)),var(--borda) 50%,color-mix(in srgb,var(--ar) 60%,var(--borda)))}
+.e-cp-pin{position:absolute;top:50%;display:grid;place-items:center;width:34px;height:34px;transform:translate(-50%,-50%);border-radius:50%;background:var(--superficie);box-shadow:0 0 0 3px var(--pc),0 3px 8px rgba(16,16,16,.25);cursor:default;transition:transform .15s}
+.e-cp-pin .e-close-face{width:34px;height:34px}
+.e-cp-pin:hover,.e-cp-pin:focus-visible{z-index:20!important;transform:translate(-50%,-50%) scale(1.14)}
+.e-cp-pin::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);padding:7px 12px;border-radius:10px;background:var(--tinta);color:var(--papel);font-size:12.5px;font-weight:600;line-height:1.3;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s}
+.e-cp-pin:hover::after,.e-cp-pin:focus-visible::after{opacity:1}
+.e-cp-pin:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+@media (max-width:720px){.e-cp-pin::after{white-space:normal;width:max-content;max-width:210px;text-align:center}}
+/* Ideologia, países e partidos mais próximos: uma coluna por perfil, lado a lado. */
+.e-cp-near{list-style:none;margin:22px 0 0;padding:0;display:grid;align-items:start;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:14px}
+.e-cp-near-col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.e-cp-near-who{display:flex;align-items:center;gap:10px;min-height:36px;margin:0;font-size:13px;font-weight:600;color:var(--texto-suave)}
+.e-cp-near-who .e-cmpp-ring{flex:none}
+.e-cp-near-who .e-close-face{width:28px;height:28px}
+.e-cp-near .e-ocard{max-height:none;min-height:156px}
+.e-cp-ideology h3{margin:auto 0 0}
+.e-cp-common{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 30px;border-radius:26px;background:var(--cb);color:var(--c)}
+.e-cp-common-text{min-width:0}
+.e-cp-common h3{font-size:clamp(26px,3vw,36px);letter-spacing:-.04em;line-height:1.08;color:var(--c);margin:12px 0 6px;overflow-wrap:anywhere}
+.e-cp-common-text>p{margin:0;font-size:14px;color:var(--c);opacity:.85}
+.e-cp-common .e-more{margin-top:14px;padding-top:12px;border-top:1px solid color-mix(in srgb,var(--c) 22%,transparent)}
+.e-cp-common .e-more p{font-size:14px;line-height:1.55;color:var(--tinta);max-width:62ch}
+.e-cp-common .e-ring{flex:none}
+.e-cp-near.is-even{align-items:stretch}
+.e-cp-card-near{display:flex;flex-direction:column;align-items:center;gap:12px;height:100%;padding:18px 18px 20px;text-align:center;border-radius:24px;background:var(--neutro);border-top:5px solid var(--cat)}
+.e-cp-flag{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;border:1px solid var(--borda)}
+.e-cp-logo-row{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;aspect-ratio:3/2}
+.e-cp-logo{width:min(100%,132px);aspect-ratio:1;object-fit:contain;padding:12px;box-sizing:border-box;background:#fff;border-radius:20px;border:1px solid var(--borda)}
+.e-cp-card-near h3{font-size:20px;line-height:1.15;letter-spacing:-.03em;margin:4px 0 0;overflow-wrap:anywhere}
+.e-cp-card-near p{margin:-6px 0 0;font-size:12.5px;color:var(--texto-suave)}
+.e-cp-card-near .e-cp-pill{margin-top:auto;font-size:13px;padding:6px 14px}
+/* Bússola: o marcador é o rosto do perfil, contornado com a cor da região em que ele cai. */
+.e-compass-x.e-compass-face{background:var(--superficie);border:3px solid var(--oc,var(--tinta));overflow:hidden;box-shadow:0 6px 14px -6px rgba(16,16,16,.55)}
+.e-compass-x.e-compass-face .e-compass-img{display:block;width:100%;height:100%;object-fit:cover;border-radius:0}
+.e-compass-strip .e-compass-x.e-compass-face{aspect-ratio:1;height:26px;width:26px;border-radius:6px;border-width:2.5px}
+.e-cmpp-legend .e-compass-x.e-compass-face{position:static;transform:none;flex:none;width:30px;height:30px;border-radius:7px}
+.e-cmpp-legend .e-compass-x.e-compass-face.is-static{aspect-ratio:1}
+/* Compatibilidade entre os pares: uma linha baixa por par, com a barra no degradê das duas cores. */
+.e-cp-pairs{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.e-cp-pair{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px 20px;padding:14px 22px 14px 18px;border:1px solid var(--borda);border-radius:22px;background:var(--papel)}
+.e-cp-pair .e-avatar{width:48px;height:48px}
+.e-cp-pair-main{display:grid;gap:10px;min-width:0}
+.e-cp-pair-main strong{font-family:var(--font-display);font-size:16px;line-height:1.25;letter-spacing:-.02em;overflow-wrap:anywhere}
+.e-cp-meter{display:block;height:8px;border-radius:8px;background:var(--borda);overflow:hidden}
+.e-cp-meter i{display:block;height:100%;border-radius:8px}
+.e-cp-pair-pct{margin:0;font-family:var(--font-display);font-weight:600;font-size:32px;line-height:1;letter-spacing:-.05em;color:var(--tinta);white-space:nowrap}
+.e-cp-pair-pct small{font-size:18px;letter-spacing:0;margin-left:1px}
+@media (max-width:980px){.e-cp-near{grid-template-columns:1fr}.e-cp-common{flex-direction:column;align-items:flex-start}}
+@media (max-width:720px){
+  .e-cp-cards{grid-template-columns:1fr}
+  .e-cp-card{flex-direction:row;text-align:left;gap:16px;padding:22px 52px 18px 18px}
+  .e-cp-face .e-avatar{width:64px;height:64px}
+  .e-cp-remove{top:50%;right:14px;transform:translateY(-50%)}
+  .e-cp-pair{grid-template-columns:auto minmax(0,1fr);padding:14px 16px}
+  .e-cp-pair-pct{grid-column:2;font-size:26px}
+}
+/* Aqui o "Começar" é um link; `.ed a{color:inherit}` apagaria o texto claro do botão. */
+.e-cmpp-nav a.e-btn-primary{color:var(--papel)}
+.e-cmpp .e-panel>h2{margin-bottom:18px}
+.e-cmpp .e-close{margin-top:0;padding-top:0;border-top:0}
+.e-cmpp-ring{display:inline-grid;border-radius:50%;box-shadow:0 0 0 3px var(--pc)}
+.e-close-pin.e-cmpp-ring{box-shadow:0 0 0 2px var(--pc)}
+.e-cmpp-legend{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-weight:600;font-size:15px}
+.e-cmpp-legend li{display:flex;align-items:center;gap:12px}
+.e-cmpp-legend .e-compass-x{position:static;transform:none;flex:none;width:26px}
+.e-cmpp-results{display:flex;flex-direction:column;gap:24px;transition:opacity .2s ease}
+.e-cmpp-results[aria-busy="true"]{opacity:.55}
+.e-cmpp h2:focus{outline:none}
+
+/* ── Editar respostas: os 12 eixos à esquerda, as perguntas do eixo como um baralho à direita ── */
+.e-axes-edit{display:flex;justify-content:flex-end;margin-top:20px}
+/* Lápis e texto, sem contorno de botão. */
+.e-axes-edit-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:0;border-radius:10px;background:none;color:#4A5565;font:400 14px var(--font-body);cursor:pointer;transition:color .15s,background .15s}
+.e-axes-edit-btn svg{flex:none;width:22px;height:22px}
+.e-axes-edit-btn:hover{color:var(--tinta);background:color-mix(in srgb,var(--tinta) 6%,transparent)}
+.e-axes-edit-btn:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-axis-sheet.e-edit-sheet{width:min(1020px,100%);display:flex;flex-direction:column;height:min(760px,calc(100dvh - 48px));padding:22px 26px 20px}
+.e-edit-head{flex:none;display:flex;align-items:center;gap:14px;margin:0 44px 16px 0}
+.e-axis-sheet .e-edit-head h3{margin:0;font-size:24px}
+.e-edit-count{margin-left:auto;font-size:13.5px;color:var(--texto-suave)}
+.e-edit-save{flex:none}
+.e-edit-layout{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:26px}
+/* Duas colunas de 6 linhas, preenchidas de cima para baixo; "Arquétipo e religião" ocupa a linha de baixo. */
+.e-edit-axes{align-self:start;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,auto);grid-auto-flow:column;gap:8px}
+.e-edit-axis{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;text-align:left;padding:11px 11px;border:1.5px solid var(--borda);border-radius:14px;background:#fff;font:600 12.5px var(--font-body);color:var(--tinta);text-align:left;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.e-edit-axis[data-extra="archetype"]{grid-column:1;grid-row:7}
+.e-edit-axis[data-extra="religion"]{grid-column:2;grid-row:7}
+.e-edit-axis>span:not(.e-edit-badge){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.e-edit-axis-ico{flex:none;width:18px;height:18px;color:var(--texto-suave)}
+.e-edit-axis:hover{border-color:var(--tinta)}
+.e-edit-axis.e-on,.e-edit-axis.e-on[style*="--gc"]{background:var(--gc,var(--floresta));border-color:var(--gc,var(--floresta));color:#fff}
+.e-edit-axis.e-on .e-edit-axis-ico{color:#fff}
+.e-edit-axis:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-edit-badge{display:grid;place-items:center;flex:none;min-width:18px;height:18px;margin-left:auto;padding:0 5px;border-radius:9px;background:var(--carmim);color:#fff;font-size:11px;line-height:1}
+.e-edit-stage{min-width:0;min-height:0;display:flex;flex-direction:column;gap:12px}
+/* O baralho: a carta da frente, duas por trás e a que acabou de passar saindo pela esquerda. */
+.e-deck-edit{position:relative;flex:1;min-height:300px}
+.e-edit-card{position:absolute;inset:0 0 30px 0;overflow-y:auto;overscroll-behavior:contain;border-radius:24px;transform-origin:50% 100%;transition:transform .55s cubic-bezier(.16,.84,.28,1),opacity .4s ease}
+.e-edit-card[data-pos="0"]{z-index:10;transform:none}
+.e-edit-card[data-pos="1"]{z-index:9;transform:translate(14px,18px) rotate(1.8deg) scale(.97);pointer-events:none}
+.e-edit-card[data-pos="2"]{z-index:8;transform:translate(-12px,32px) rotate(-2deg) scale(.94);opacity:.85;pointer-events:none}
+.e-edit-card[data-pos="out"]{z-index:11;transform:translate(-70%,-4%) rotate(-12deg);opacity:0;pointer-events:none}
+.e-edit-card .question-card>*{transition:opacity .4s ease .1s}
+.e-edit-card:not([data-pos="0"]) .question-card>*{opacity:0;transition-delay:0s}
+.e-edit-card .question-card{margin:0;width:100%;max-width:none;min-height:100%;gap:14px;padding:20px 22px;box-shadow:var(--shadow-md)}
+.e-edit-card .question-card h2{max-width:none;font-size:clamp(1.1rem,.5vw + 1rem,1.35rem);line-height:1.3}
+.e-edit-card .answer-grid{gap:6px}
+.e-edit-card .answer-button{min-height:44px;padding:6px 14px}
+.e-edit-card .question-number{font-size:clamp(38px,5vw,52px)}
+.e-edit-card.is-changed .question-card{border-color:var(--floresta);box-shadow:0 0 0 2px color-mix(in srgb,var(--floresta) 28%,transparent)}
+.e-edit-foot{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.e-edit-counter{font-size:13.5px;color:var(--texto-suave);text-align:center}
+.e-edit-sheet .inline-error{margin:0}
+@media (prefers-reduced-motion:reduce){.e-edit-card{transition:none}}
+/* Janelas baixas (notebooks, zoom 100%): tudo se compacta para o modal caber sem rolar, com folga em cima e embaixo. */
+@media (max-height:760px) and (min-width:861px){
+  .e-axis-sheet.e-edit-sheet{padding:18px 22px 16px}
+  .e-edit-head{margin-bottom:12px}
+  .e-edit-axes{gap:6px}
+  .e-edit-axis{padding:8px 11px}
+  .e-edit-card .question-card{gap:10px;padding:14px 20px 16px}
+  .e-edit-card .question-card-header{gap:8px}
+  .e-edit-card .question-card h2{font-size:1.1rem}
+  .e-edit-card .answer-grid{gap:5px}
+  .e-edit-card .answer-button{min-height:38px}
+  .e-edit-card .question-number{font-size:38px}
+}
+@media (max-height:640px) and (min-width:861px){
+  .e-edit-axis{padding:6px 10px}
+  .e-edit-card .question-card h2{font-size:1.02rem;line-height:1.25}
+  .e-edit-card .answer-button{min-height:34px;padding:4px 12px}
+  .e-edit-card .answer-grid{gap:4px}
+}
+@media (max-width:860px){
+  .e-edit-layout{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);gap:10px}
+  .e-edit-card .question-card{gap:10px;padding:14px 18px 16px}
+  .e-edit-card .question-card-header{gap:8px}
+  .e-edit-card .question-card h2{font-size:1.1rem}
+  .e-edit-card .answer-grid{gap:5px}
+  .e-edit-card .answer-button{min-height:38px}
+  .e-edit-card .question-number{font-size:38px}
+  .e-edit-axes{display:flex;overflow-x:auto;gap:8px;padding:2px 2px 10px;margin:0 -2px;scrollbar-width:thin}
+  .e-edit-axis,.e-edit-axis[data-extra]{flex:none;grid-column:auto;grid-row:auto;white-space:nowrap}
+}
+@media (max-width:720px){
+  .e-axis-sheet.e-edit-sheet{padding:22px 16px 16px}
+  .e-edit-count{display:none}
+  .e-edit-save{margin-left:auto}
+  .e-deck-edit{min-height:420px}
 }
 
 /* ── Linha do tempo: eras empilhadas no desktop, linha vertical contínua no mobile ── */

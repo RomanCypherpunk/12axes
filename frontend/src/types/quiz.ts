@@ -305,3 +305,31 @@ export interface CompareDetail {
   /** Vetor de 12 eixos (leftPercent) do perfil comparado. */
   vector: Record<string, number>;
 }
+
+/** Um perfil da página /compare: dados do catálogo e vetor de 12 eixos (leftPercent). */
+export interface CompareProfile {
+  item: CompareItem;
+  vector: Record<string, number>;
+  nearest: CompareNearest;
+}
+
+/** Ideologia, país e partido mais próximos de um perfil da comparação (o próprio perfil fica de fora). */
+export interface CompareNearest {
+  ideology: IdeologyMatch | null;
+  country: CountryMatch | null;
+  party: PartyMatch | null;
+}
+
+/** Compatibilidade entre dois perfis da comparação (índices em CompareProfiles.profiles). */
+export interface ComparePair {
+  first: number;
+  second: number;
+  compatibility: number;
+}
+
+export interface CompareProfiles {
+  profiles: CompareProfile[];
+  pairs: ComparePair[];
+  /** Ideologia mais próxima da média dos perfis. */
+  commonIdeology: IdeologyMatch | null;
+}

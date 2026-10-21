@@ -21,6 +21,7 @@ const STR = {
     catalogNav: 'Catálogo',
     homeAria: '12 axes, página inicial',
     takeTheTest: 'Fazer o teste',
+    compareWith: 'Comparar com…',
     kind: 'Ideologia',
     refPerson: 'Personalidade de referência',
     refCountry: 'País de referência',
@@ -74,6 +75,7 @@ const STR = {
     catalogNav: 'Catalog',
     homeAria: '12 axes, home page',
     takeTheTest: 'Take the test',
+    compareWith: 'Compare with…',
     kind: 'Ideology',
     refPerson: 'Key figure',
     refCountry: 'Reference country',
@@ -280,6 +282,7 @@ ${siteHeader({ L, basePath, current: 'ideologies', webView: `/tree/ideologies?id
       <div class="match-tags"><span class="tag tag-solid">${esc(ideology.category)}</span><span class="tag tag-neutral">${esc(t.kind)}</span></div>
       <h1>${esc(name)}</h1>
       <p class="lead">${esc(ideology.description)}</p>
+      <a class="btn btn-primary btn-sm" href="${esc(`${prefix}/compare?items=ideology:${ideology.id}`)}">${esc(t.compareWith)} ${ARR}</a>
     </div>
     ${refs.length ? `<div class="ih-refs">${refs.join('')}</div>` : ''}
   </article>

@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react';
+import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
@@ -113,8 +113,16 @@ const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => {
 // Mantém o marcador inteiro dentro da grade mesmo nos extremos.
 const clamp = (value: number): number => Math.max(4, Math.min(96, value));
 
-function Marker({ left, top, color }: { left: number; top?: number; color?: string }) {
+export function Marker({ left, top, color, face, outline, title }: { left: number; top?: number; color?: string; face?: ReactNode; outline?: string; title?: string }) {
   const style: CSSProperties = { left: `${clamp(left)}%`, top: top === undefined ? '50%' : `${clamp(top)}%` };
+  if (face) {
+    // Em /compare o marcador é o retrato do perfil, contornado com a cor da região em que ele cai.
+    return (
+      <span className="e-compass-x e-compass-face" style={{ ...style, '--oc': outline } as CSSProperties} title={title} aria-hidden="true">
+        {face}
+      </span>
+    );
+  }
   if (color) style.background = color;
   return (
     <span className="e-compass-x" style={style} aria-hidden="true">
@@ -148,8 +156,17 @@ export function compassView(position: CompassPosition, category: string, moralAx
   const social = socialLevel(traditional);
   const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
   const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
-  // Barra em tom pastel (rosa, cinza, marrom); "X" e grifo na cor cheia da mesma escala.
-  const stripCells = Array.from({ length: SIZE }, (_, index) =>
+  const stripCells = socialStripCells(moralAxis);
+  // "X" e grifo na cor cheia da mesma escala da barra.
+  const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
+  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
+}
+
+/** Barra progressista/tradicionalista em tom pastel (rosa, cinza, marrom), também usada em /compare. */
+export function socialStripCells(moralAxis?: Axis): string[] {
+  const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
+  const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
+  return Array.from({ length: SIZE }, (_, index) =>
     rgb(
       threeStop(
         mix(progressive, WHITE, 0.72),
@@ -159,12 +176,72 @@ export function compassView(position: CompassPosition, category: string, moralAx
       )
     )
   );
-  const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
-  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
 }
 
 export const COMPASS_GRID_CELLS = GRID_CELLS;
 export const compassClamp = clamp;
+
+export interface CompassMarker {
+  key: string;
+  left: number;
+  top?: number;
+  color?: string;
+  /** Retrato, bandeira ou logo do perfil no lugar do "X" (com `outline` na borda). */
+  face?: ReactNode;
+  outline?: string;
+  title?: string;
+}
+
+/**
+ * Cores do contorno de um perfil em /compare: a da região da grade em que ele cai (a mesma base que
+ * pinta o espectro dos resultados) e a do ponto da barra progressista/tradicionalista.
+ */
+export function compassOutlines(position: CompassPosition, moralAxis?: Axis): { region: string; social: string } {
+  const { socialColor } = compassView(position, '', moralAxis);
+  return { region: ideologyColorByKey(compassRegion(position)).base, social: socialColor };
+}
+
+/** Grade da bússola com um "X" por marcador (o resultado do usuário ou, em /compare, cada perfil). */
+export function CompassChart({ ariaLabel, markers }: { ariaLabel: string; markers: CompassMarker[] }) {
+  return (
+    <div className="e-compass-chart" role="img" aria-label={ariaLabel}>
+      <span className="e-compass-lbl is-top">{t.compassAuthoritarian}</span>
+      <span className="e-compass-lbl is-left">{t.compassLeft}</span>
+      <div className="e-compass-grid">
+        {GRID_CELLS.map((color, index) => (
+          <span key={index} style={{ background: color }} />
+        ))}
+        <i className="e-compass-axis is-x" aria-hidden="true" />
+        <i className="e-compass-axis is-y" aria-hidden="true" />
+        {markers.map(({ key, ...marker }) => (
+          <Marker key={key} {...marker} />
+        ))}
+      </div>
+      <span className="e-compass-lbl is-right">{t.compassRight}</span>
+      <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
+    </div>
+  );
+}
+
+/** Barra progressista/tradicionalista com um "X" por marcador. */
+export function SocialStrip({ cells, markers }: { cells: string[]; markers: CompassMarker[] }) {
+  return (
+    <div className="e-compass-bar" aria-hidden="true">
+      <div className="e-compass-bar-lbls">
+        <span>{t.compassProgressive}</span>
+        <span>{t.compassTraditionalist}</span>
+      </div>
+      <div className="e-compass-strip">
+        {cells.map((color, index) => (
+          <span key={index} style={{ background: color }} />
+        ))}
+        {markers.map(({ key, ...marker }) => (
+          <Marker key={key} {...marker} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function PoliticalCompassSection({ position, category, moralAxis }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
@@ -181,24 +258,10 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
       <h2>{t.compassTitle}</h2>
 
       <div className="e-compass-body">
-        <div
-          className="e-compass-chart"
-          role="img"
-          aria-label={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
-        >
-          <span className="e-compass-lbl is-top">{t.compassAuthoritarian}</span>
-          <span className="e-compass-lbl is-left">{t.compassLeft}</span>
-          <div className="e-compass-grid">
-            {GRID_CELLS.map((color, index) => (
-              <span key={index} style={{ background: color }} />
-            ))}
-            <i className="e-compass-axis is-x" aria-hidden="true" />
-            <i className="e-compass-axis is-y" aria-hidden="true" />
-            <Marker left={right} top={100 - authoritarian} color={markerColor} />
-          </div>
-          <span className="e-compass-lbl is-right">{t.compassRight}</span>
-          <span className="e-compass-lbl is-bottom">{t.compassLibertarian}</span>
-        </div>
+        <CompassChart
+          ariaLabel={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
+          markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor }]}
+        />
 
         <div className="e-compass-read">
           <p className="e-compass-sentence">
@@ -228,18 +291,7 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
             )}
           </p>
 
-          <div className="e-compass-bar" aria-hidden="true">
-            <div className="e-compass-bar-lbls">
-              <span>{t.compassProgressive}</span>
-              <span>{t.compassTraditionalist}</span>
-            </div>
-            <div className="e-compass-strip">
-              {stripCells.map((color, index) => (
-                <span key={index} style={{ background: color }} />
-              ))}
-              <Marker left={traditional} color={socialColor} />
-            </div>
-          </div>
+          <SocialStrip cells={stripCells} markers={[{ key: 'you', left: traditional, color: socialColor }]} />
         </div>
       </div>
 

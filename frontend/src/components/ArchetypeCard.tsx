@@ -7,6 +7,8 @@ interface ArchetypeCardProps {
   selected?: string;
   disabled?: boolean;
   onSelect: (optionId: string) => void;
+  /** id do título; precisa ser único quando várias perguntas aparecem juntas (edição das respostas). */
+  titleId?: string;
 }
 
 // Selo de cada tema, no mesmo formato do selo de eixo das perguntas comuns:
@@ -48,7 +50,7 @@ function FilledSvg({ icon, className }: { icon: QuestionIcon; className?: string
 }
 
 /** Pergunta de arquétipo do quiz: alternativas com letra (ou ícone), uma escolha. */
-export function ArchetypeCard({ question, index, selected, disabled = false, onSelect }: ArchetypeCardProps) {
+export function ArchetypeCard({ question, index, selected, disabled = false, onSelect, titleId = 'archetype-title' }: ArchetypeCardProps) {
   const theme = THEME_ICONS[question.id] ?? THEME_ICONS.sociedade;
   const icon: QuestionIcon = question.icon ?? {
     viewBox: theme.viewBox,
@@ -58,7 +60,7 @@ export function ArchetypeCard({ question, index, selected, disabled = false, onS
   return (
     <article
       className={question.layout === 'tiles' ? 'question-card archetype-card archetype-card--tiles' : 'question-card archetype-card'}
-      aria-labelledby="archetype-title"
+      aria-labelledby={titleId}
     >
       <span className="question-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
       <header className="question-card-header">
@@ -68,7 +70,7 @@ export function ArchetypeCard({ question, index, selected, disabled = false, onS
           </i>
           <span>{question.label}</span>
         </p>
-        <h2 id="archetype-title">{question.text}</h2>
+        <h2 id={titleId}>{question.text}</h2>
       </header>
       <div className="answer-grid" role="radiogroup" aria-label={question.text}>
         {question.options.map((option) => {
