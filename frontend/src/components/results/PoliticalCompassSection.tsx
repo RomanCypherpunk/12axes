@@ -5,20 +5,6 @@ import type { Axis } from '../../types/quiz';
 import { centerSide, compassNoteHint, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
 import { InfoButton, InfoSheet } from './InfoSheet';
 
-// A grade é um mapa de regiões: cada categoria do espectro ancora o seu pastel no centro do bloco que
-// ocupa (colunas e linhas contadas de 0) e as cores se misturam suavemente entre os blocos.
-const ANCHORS: { key: IdeologyColorKey; column: number; row: number }[] = [
-  { key: 'esq-radical', column: 1, row: 1 },
-  { key: 'terceira', column: 4, row: 1 },
-  { key: 'ext-direita', column: 7, row: 1 },
-  { key: 'esquerda', column: 1, row: 4.5 },
-  { key: 'centro', column: 4, row: 4.5 },
-  { key: 'direita', column: 7, row: 4.5 },
-  { key: 'anarquismo', column: 1.5, row: 7.5 },
-  { key: 'libertario', column: 6.5, row: 7.5 }
-];
-// Alcance da mistura, em células: quanto maior, mais suave (e menos nítido cada bloco).
-const BLEND_SPREAD = 1.7;
 // Tom de cada categoria na grade: o matiz vem da cor base da identidade; saturação e luminosidade
 // (0-100) ficam por conta de cada uma, para o resultado ser claro e saturado como a bússola clássica.
 // `hue` só aparece quando o matiz da cor base precisa de ajuste (o ocre do Libertário vira amarelo).
@@ -29,7 +15,7 @@ const VIVID: Record<IdeologyColorKey, { saturation: number; lightness: number; h
   esquerda: { saturation: 65, lightness: 72 },
   centro: { saturation: 10, lightness: 80 },
   direita: { saturation: 90, lightness: 77 },
-  anarquismo: { saturation: 0, lightness: 76 },
+  anarquismo: { saturation: 0, lightness: 72 },
   libertario: { saturation: 90, lightness: 68, hue: 47 }
 };
 // Cores dos polos do eixo `moral` (rosa e marrom em axes.json); estas são só o plano B se o eixo faltar.
@@ -89,26 +75,50 @@ function vividColor(key: IdeologyColorKey): number[] {
   return hslToRgb(hue ?? hueOf(hexToRgb(ideologyColorByKey(key).base)), saturation, lightness);
 }
 
-function regionColor(column: number, row: number): string {
+// A grade é um mapa de blocos: cada região ocupa o retângulo de células que `compassRegion` lhe dá (em unidades de
+// célula, de 0 a 9). A cor de um quadrado mistura a cor dos blocos que estão perto do centro dele: dentro de um bloco
+// só vale a cor do próprio bloco, e só o anel de um quadrado em volta de cada divisa leva um pouco da cor vizinha.
+// Quadrado a quadrado, sem degradê dentro da célula, para os blocos continuarem fáceis de distinguir.
+const REGION_BLOCKS: { key: IdeologyColorKey; x: [number, number]; y: [number, number] }[] = [
+  { key: 'esq-radical', x: [0, 3], y: [0, 3] },
+  { key: 'terceira', x: [3, 6], y: [0, 3] },
+  { key: 'ext-direita', x: [6, 9], y: [0, 3] },
+  { key: 'esquerda', x: [0, 3], y: [3, 7] },
+  { key: 'centro', x: [3, 6], y: [3, 7] },
+  { key: 'direita', x: [6, 9], y: [3, 7] },
+  { key: 'anarquismo', x: [0, 4.5], y: [7, 9] },
+  { key: 'libertario', x: [4.5, 9], y: [7, 9] }
+];
+// Alcance da mistura, em células: quanto maior, mais a cor vizinha invade. Com 0,45 o quadrado da divisa fica
+// com cerca de dois terços da própria cor e um terço da vizinha, e o miolo do bloco continua puro.
+const BLEND_SPREAD = 0.45;
+// Pesos abaixo disso valem zero, para o miolo de cada bloco ter exatamente a mesma cor.
+const MIN_WEIGHT = 0.03;
+
+function regionWeight(block: (typeof REGION_BLOCKS)[number], x: number, y: number): number {
+  const dx = Math.max(block.x[0] - x, 0, x - block.x[1]);
+  const dy = Math.max(block.y[0] - y, 0, y - block.y[1]);
+  const weight = Math.exp(-(dx * dx + dy * dy) / (2 * BLEND_SPREAD ** 2));
+  return weight < MIN_WEIGHT ? 0 : weight;
+}
+
+function cellColor(column: number, row: number): string {
+  const x = column + 0.5;
+  const y = row + 0.5;
   let total = 0;
   const sum = [0, 0, 0];
-  for (const anchor of ANCHORS) {
-    const distance2 = (column - anchor.column) ** 2 + (row - anchor.row) ** 2;
-    const weight = Math.exp(-distance2 / (2 * BLEND_SPREAD ** 2));
-    const color = vividColor(anchor.key);
+  for (const block of REGION_BLOCKS) {
+    const weight = regionWeight(block, x, y);
+    if (weight === 0) continue;
     total += weight;
-    color.forEach((value, index) => {
+    vividColor(block.key).forEach((value, index) => {
       sum[index] += value * weight;
     });
   }
   return rgb(sum.map((value) => value / total));
 }
 
-const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => {
-  const column = index % SIZE;
-  const row = Math.floor(index / SIZE);
-  return regionColor(column, row);
-});
+const GRID_CELLS: string[] = Array.from({ length: SIZE * SIZE }, (_, index) => cellColor(index % SIZE, Math.floor(index / SIZE)));
 
 // Mantém o marcador inteiro dentro da grade mesmo nos extremos.
 const clamp = (value: number): number => Math.max(4, Math.min(96, value));
