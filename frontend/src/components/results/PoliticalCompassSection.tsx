@@ -2,7 +2,7 @@ import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
-import { centerSide, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
+import { centerSide, compassNoteHint, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
 import { InfoButton, InfoSheet } from './InfoSheet';
 
 // A grade é um mapa de regiões: cada categoria do espectro ancora o seu pastel no centro do bloco que
@@ -159,7 +159,10 @@ export function compassView(position: CompassPosition, category: string, moralAx
   const stripCells = socialStripCells(moralAxis);
   // "X" e grifo na cor cheia da mesma escala da barra.
   const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
-  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor };
+  // Nota sob a bússola: só quando a categoria da ideologia e a região da grade divergem sem ser centro-esquerda/direita.
+  const noteHint = compassNoteHint(spectrum.key, compassKey);
+  const region = ideologyColorByKey(compassKey);
+  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor, noteHint, region };
 }
 
 /** Barra progressista/tradicionalista em tom pastel (rosa, cinza, marrom), também usada em /compare. */
@@ -246,7 +249,7 @@ export function SocialStrip({ cells, markers }: { cells: string[]; markers: Comp
 export function PoliticalCompassSection({ position, category, moralAxis }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor } = compassView(
+  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor, noteHint, region } = compassView(
     position,
     category,
     moralAxis
@@ -294,6 +297,20 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
           <SocialStrip cells={stripCells} markers={[{ key: 'you', left: traditional, color: socialColor }]} />
         </div>
       </div>
+
+      {noteHint && (
+        <aside
+          className="e-compass-note"
+          role="note"
+          style={{ '--note-bg': spectrum.bg, '--note-ink': spectrum.base, '--dot': region.base } as CSSProperties}
+        >
+          <strong>
+            <i aria-hidden="true" />
+            {t.compassNote.label} {t.compassSpectrumLabels[region.key]}
+          </strong>
+          <span>{t.compassNote.hints[noteHint]}</span>
+        </aside>
+      )}
 
       {isInfoOpen && (
         <InfoSheet titleId="compass-info-title" className="e-compass-sheet" onClose={() => setIsInfoOpen(false)}>

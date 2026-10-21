@@ -868,6 +868,10 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-compass-strip{position:relative;display:grid;grid-template-columns:repeat(9,1fr);gap:2px}
 .e-compass-strip>span:not(.e-compass-x){height:30px;border-radius:2px}
 .e-compass-strip .e-compass-x{aspect-ratio:auto;height:100%;width:calc(100%/9 - 2px)}
+.e-compass-note{margin-top:28px;padding:16px 22px;border-radius:16px;background:var(--note-bg);color:var(--note-ink);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;font-size:14.5px;line-height:1.5}
+.e-compass-note strong{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:15px;font-weight:700;letter-spacing:-.01em}
+.e-compass-note i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--dot);box-shadow:0 0 0 2px var(--note-bg),0 0 0 3px rgba(16,16,16,.18)}
+.e-compass-note span{opacity:.82}
 @media (max-width:720px){
   .e-compass-body{grid-template-columns:minmax(0,1fr);justify-items:center}
   .e-compass-chart{width:100%;max-width:340px}

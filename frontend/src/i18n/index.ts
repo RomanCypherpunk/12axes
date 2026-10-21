@@ -316,6 +316,10 @@ interface Strings {
     socialLead: string;
     socialText: string;
   };
+  compassNote: {
+    label: string;
+    hints: Record<'terceira' | 'ext-direita' | 'esq-radical' | 'libertarian' | 'generic', string>;
+  };
   compassAria: (right: number, authoritarian: number, traditional: number) => string;
   countriesSectionTitle: string;
   countryCurrentTab: string;
@@ -964,6 +968,16 @@ const pt: Strings = {
     moderate: 'Moderados',
     traditional: 'Tradicionalistas',
     veryTraditional: 'Fortemente tradicionalistas'
+  },
+  compassNote: {
+    label: 'Na bússola:',
+    hints: {
+      terceira: 'A Terceira posição une Estado forte a nação e tradição. A bússola mede economia e poder; nação, moral e religião ficam de fora.',
+      'ext-direita': 'A Extrema direita se define por hierarquia e identidade. A bússola mede economia e poder; moral, religião e nação ficam de fora.',
+      'esq-radical': 'A Esquerda radical se define por revolução e coletivização. A bússola mede economia e poder; o projeto revolucionário fica de fora.',
+      libertarian: 'Sua ideologia fica na divisa entre duas regiões. A bússola mede economia e poder, e uma diferença pequena em um deles decide o lado.',
+      generic: 'A bússola mede 5 dos 12 eixos; os outros 7 ficam de fora.'
+    }
   },
   compassAria: (right, authoritarian, traditional) =>
     `Sua posição: ${right}% rumo à direita, ${authoritarian}% rumo ao autoritarismo e ${traditional}% rumo ao tradicionalismo.`,
@@ -1679,6 +1693,16 @@ const en: Strings = {
     moderate: 'Moderate',
     traditional: 'Traditionalist',
     veryTraditional: 'Strongly traditionalist'
+  },
+  compassNote: {
+    label: 'On the compass:',
+    hints: {
+      terceira: 'The Third Position joins a strong state to nation and tradition. The compass measures economy and power; nation, morals and religion are left out.',
+      'ext-direita': 'The far right is defined by hierarchy and identity. The compass measures economy and power; morals, religion and nation are left out.',
+      'esq-radical': 'The radical left is defined by revolution and collectivization. The compass measures economy and power; the revolutionary project is left out.',
+      libertarian: 'Your ideology sits on the border between two regions. The compass measures economy and power, and a small difference in either decides the side.',
+      generic: 'The compass measures 5 of the 12 axes; the other 7 are left out.'
+    }
   },
   compassAria: (right, authoritarian, traditional) =>
     `Your position: ${right}% toward the right, ${authoritarian}% toward authoritarian and ${traditional}% toward traditionalist.`,

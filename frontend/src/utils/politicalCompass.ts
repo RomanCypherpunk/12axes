@@ -130,3 +130,21 @@ export function centerSide(first: IdeologyColorKey, second: IdeologyColorKey): '
   if (keys.includes('direita')) return 'direita';
   return null;
 }
+
+/** Tema da nota sob a bússola: o que explica a diferença entre a categoria da ideologia e a região da grade. */
+export type CompassNoteHint = 'terceira' | 'ext-direita' | 'esq-radical' | 'libertarian' | 'generic';
+
+/**
+ * Quando a categoria da ideologia e a região da bússola divergem (e não é o caso centro-esquerda/centro-direita,
+ * que a própria frase já mostra), devolve o tema da explicação; caso contrário, null. A Terceira posição vem
+ * primeiro porque mistura economia estatal com nação e tradição, o par que mais confunde.
+ */
+export function compassNoteHint(category: IdeologyColorKey, region: IdeologyColorKey): CompassNoteHint | null {
+  if (category === region || centerSide(category, region)) return null;
+  const keys = [category, region];
+  if (keys.includes('terceira')) return 'terceira';
+  if (keys.includes('ext-direita')) return 'ext-direita';
+  if (keys.includes('esq-radical')) return 'esq-radical';
+  if (keys.includes('anarquismo') || keys.includes('libertario')) return 'libertarian';
+  return 'generic';
+}

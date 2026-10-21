@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { centerSide, compassFromVector, compassPoints, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
+import { centerSide, compassFromVector, compassNoteHint, compassPoints, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -177,5 +177,34 @@ describe('bússola com vários perfis', () => {
       { key: 'b', label: 'B', color: '#222', vector: { economia: 50 } }
     ]);
     expect(points.map((point) => point.key)).toEqual(['a']);
+  });
+});
+
+describe('compassNoteHint', () => {
+  it('sem nota quando categoria e região coincidem', () => {
+    expect(compassNoteHint('direita', 'direita')).toBeNull();
+  });
+
+  it('sem nota em centro-esquerda e centro-direita, que a própria frase já mostra', () => {
+    expect(compassNoteHint('esquerda', 'centro')).toBeNull();
+    expect(compassNoteHint('centro', 'direita')).toBeNull();
+  });
+
+  it('Terceira posição em qualquer lado do par leva a explicação própria', () => {
+    expect(compassNoteHint('terceira', 'ext-direita')).toBe('terceira');
+    expect(compassNoteHint('ext-direita', 'terceira')).toBe('terceira');
+    expect(compassNoteHint('terceira', 'esquerda')).toBe('terceira');
+  });
+
+  it('Extrema direita e Esquerda radical têm a sua, e anarquismo/libertário a deles', () => {
+    expect(compassNoteHint('ext-direita', 'esq-radical')).toBe('ext-direita');
+    expect(compassNoteHint('esq-radical', 'anarquismo')).toBe('esq-radical');
+    expect(compassNoteHint('libertario', 'direita')).toBe('libertarian');
+    expect(compassNoteHint('anarquismo', 'libertario')).toBe('libertarian');
+  });
+
+  it('centro contra um extremo ou libertário cai na nota genérica ou na do extremo', () => {
+    expect(compassNoteHint('centro', 'ext-direita')).toBe('ext-direita');
+    expect(compassNoteHint('esquerda', 'direita')).toBe('generic');
   });
 });
