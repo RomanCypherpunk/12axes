@@ -33,9 +33,11 @@ interface ResultsScreenProps {
   error: string | null;
   onShare: () => void;
   religion?: Religion | null;
+  /** Abre a edição das respostas; só vem quando este navegador guardou as respostas deste resultado. */
+  onEditAnswers?: () => void;
 }
 
-export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion }: ResultsScreenProps) {
+export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion, onEditAnswers }: ResultsScreenProps) {
   const top = result.topMatch;
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const hasTimeline = (result.timeline ?? []).some((era) => era.entries.length > 0);
@@ -94,7 +96,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             <PhraseSection match={top} />
           </article>
 
-          <AxesSection axes={axes} results={axisResults} religion={religion} />
+          <AxesSection axes={axes} results={axisResults} religion={religion} onEditAnswers={onEditAnswers} />
 
           <div className="e-actions">
             <button className="e-btn e-btn-ghost" type="button" onClick={onShare} disabled={isSharing}>

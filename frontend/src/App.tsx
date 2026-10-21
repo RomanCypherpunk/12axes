@@ -14,6 +14,7 @@ import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
+import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
 import {
   answeredCount as savedAnsweredCount,
@@ -21,11 +22,18 @@ import {
   loadProgress,
   restoreQuiz,
   saveProgress,
+  type SavedAnswers,
   type SavedProgress
 } from './utils/quizProgress';
+import { InfoSheet } from './components/results/InfoSheet';
 import { RELIGION_ICONS, RELIGION_QUESTION_ICON } from './data/religionIcons';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'archetype' | 'results';
+
+// A edição das respostas só carrega quando alguém clica em "Editar respostas".
+const EditAnswersSheet = lazy(() =>
+  import('./components/results/EditAnswersSheet').then((module) => ({ default: module.EditAnswersSheet }))
+);
 
 const ProgressHeader = lazy(() =>
   import('./components/ProgressHeader').then((module) => ({ default: module.ProgressHeader }))
@@ -223,8 +231,15 @@ function MainApp() {
   const [savedProgress, setSavedProgress] = useState<SavedProgress | null>(() =>
     SHARED_RESULT_VALUES ? null : loadProgress()
   );
-  // Último resultado concluído neste navegador: a home avisa que o teste já foi feito.
-  const [lastResult, setLastResult] = useState<LastResult | null>(() => (SHARED_RESULT_VALUES ? null : loadLastResult()));
+  // Último resultado concluído neste navegador: a home avisa que o teste já foi feito e, ao ver esse mesmo
+  // resultado (inclusive por recarga ou pelo link), "Editar respostas" usa as respostas guardadas.
+  const [lastResult, setLastResult] = useState<LastResult | null>(() => loadLastResult());
+  // Edição das respostas do quiz já feito: o quiz reconstruído (null enquanto carrega) e o estado do salvamento.
+  const [editOpen, setEditOpen] = useState(false);
+  const [editQuiz, setEditQuiz] = useState<QuizPayload | null>(null);
+  const [editLoadError, setEditLoadError] = useState(false);
+  const [isSavingEdit, setIsSavingEdit] = useState(false);
+  const [editError, setEditError] = useState<string | null>(null);
   const advanceTimerRef = useRef<number | null>(null);
   const isAdvancingRef = useRef(false);
   // Pool completo (240 perguntas) recebido do backend, guardado para poder
@@ -625,6 +640,86 @@ function MainApp() {
     }
   }
 
+  // Mostra um resultado recém-calculado (fim do quiz ou edição das respostas) e guarda, só neste navegador,
+  // o link, o nome e as respostas, para a home avisar que o teste foi feito e a edição reabrir tudo preenchido.
+  function showFinishedResult(nextResult: QuizResult, chosenReligion: Religion | null, saved: SavedAnswers) {
+    setResult(nextResult);
+    // Sem quiz em memória (página recarregada ou aberta pelo link), a tela de resultados só existe como visão
+    // compartilhada: desligar isso aqui a faria sumir.
+    setIsSharedView(quiz === null);
+    setReligion(chosenReligion);
+    // URL compartilhável: quem abrir este link vê o mesmo resultado.
+    const resultUrl = sharedResultUrl(nextResult, chosenReligion);
+    window.history.replaceState(null, '', resultUrl);
+    saveLastResult({ url: resultUrl, name: nextResult.topMatch.name, answers: saved });
+    setLastResult(loadLastResult());
+  }
+
+  // O botão "Editar respostas" só existe para quem fez o teste neste navegador e está vendo o próprio resultado.
+  const editableAnswers =
+    result && lastResult?.answers && sharedResultUrl(result, religion) === lastResult.url ? lastResult.answers : null;
+
+  async function openEditAnswers() {
+    if (!editableAnswers) {
+      return;
+    }
+    setEditOpen(true);
+    setEditError(null);
+    setEditLoadError(false);
+    if (editQuiz) {
+      return;
+    }
+    try {
+      const payload = poolRef.current ?? (await fetchQuiz(editableAnswers.variant));
+      poolRef.current = payload;
+      const restored = restoreQuiz(payload, editableAnswers);
+      if (!restored) {
+        // As perguntas mudaram depois de um deploy: as respostas guardadas não servem mais.
+        setEditLoadError(true);
+        return;
+      }
+      setEditQuiz(restored);
+    } catch {
+      setEditLoadError(true);
+    }
+  }
+
+  function closeEditAnswers() {
+    setEditOpen(false);
+    setEditQuiz(null);
+    setEditLoadError(false);
+    setEditError(null);
+  }
+
+  async function saveEditedAnswers(edited: AnswerSet) {
+    if (!editQuiz || !editableAnswers || isSavingEdit) {
+      return;
+    }
+    setIsSavingEdit(true);
+    setEditError(null);
+    try {
+      const payload = editQuiz.questions.map((question) => ({
+        questionId: question.id,
+        answer: edited.answers[question.id] as AnswerValue
+      }));
+      const { [RELIGION_STEP_ID]: _religion, [DENOMINATION_STEP_ID]: _denomination, ...archetypeOnly } = edited.archetypeChoices;
+      const chosenReligion = resolveReligion(edited.archetypeChoices);
+      const nextResult = await submitResults(editableAnswers.variant, payload, archetypeOnly, chosenReligion);
+      showFinishedResult(nextResult, chosenReligion, {
+        variant: editableAnswers.variant,
+        questionIds: editableAnswers.questionIds,
+        answers: edited.answers,
+        archetypeChoices: edited.archetypeChoices
+      });
+      closeEditAnswers();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      setEditError(err instanceof Error ? err.message : t.errCalc);
+    } finally {
+      setIsSavingEdit(false);
+    }
+  }
+
   async function submitQuiz(answerMap = answers, archetype = archetypeChoices) {
     if (!quiz || isSubmitting) {
       return;
@@ -651,16 +746,13 @@ function MainApp() {
         archetypeOnly,
         chosenReligion
       );
-      setResult(nextResult);
       clearProgress();
-      setIsSharedView(false);
-      setReligion(chosenReligion);
-      // URL compartilhável: quem abrir este link vê o mesmo resultado.
-      const resultUrl = sharedResultUrl(nextResult, chosenReligion);
-      window.history.replaceState(null, '', resultUrl);
-      // Guarda o resultado para a home avisar, numa próxima visita, que o teste já foi feito.
-      saveLastResult({ url: resultUrl, name: nextResult.topMatch.name });
-      setLastResult(loadLastResult());
+      showFinishedResult(nextResult, chosenReligion, {
+        variant: quiz.variant ?? selectedVariant,
+        questionIds: quiz.questions.map((question) => question.id),
+        answers: answerMap,
+        archetypeChoices: archetype
+      });
       setScreen('results');
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errCalc);
@@ -1009,7 +1101,39 @@ function MainApp() {
           error={error}
           onShare={() => void downloadResultsPng()}
           religion={religion}
+          onEditAnswers={editableAnswers ? () => void openEditAnswers() : undefined}
         />
+      )}
+
+      {editOpen && screen === 'results' && (
+        <Suspense fallback={null}>
+          {editQuiz && editableAnswers ? (
+            <EditAnswersSheet
+              quiz={editQuiz}
+              axes={homeAxes}
+              axisResults={resultByAxis}
+              religion={religion}
+              initial={{ answers: editableAnswers.answers, archetypeChoices: editableAnswers.archetypeChoices }}
+              buildSteps={(choices) => buildArchetypeSteps(editQuiz.archetypeQuestions, choices)}
+              normalizeChoices={(choices) => {
+                if (chosenChristianity(choices)) return choices;
+                const { [DENOMINATION_STEP_ID]: _denomination, ...rest } = choices;
+                return rest;
+              }}
+              isSaving={isSavingEdit}
+              error={editError}
+              onSave={(edited) => void saveEditedAnswers(edited)}
+              onClose={closeEditAnswers}
+            />
+          ) : (
+            <InfoSheet titleId="e-edit-title" className="e-edit-sheet" onClose={closeEditAnswers}>
+              <h3 id="e-edit-title">{t.editAnswersTitle}</h3>
+              <p className="e-edit-lead" role="status">
+                {editLoadError ? t.editAnswersUnavailable : t.editAnswersLoading}
+              </p>
+            </InfoSheet>
+          )}
+        </Suspense>
       )}
 
       {(screen === 'home' || screen === 'variant' || screen === 'results') && <SiteFooter />}

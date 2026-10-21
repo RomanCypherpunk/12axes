@@ -1055,6 +1055,88 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-cmpp-results[aria-busy="true"]{opacity:.55}
 .e-cmpp h2:focus{outline:none}
 
+/* ── Editar respostas: os 12 eixos à esquerda, as perguntas do eixo como um baralho à direita ── */
+.e-axes-edit{display:flex;justify-content:flex-end;margin-top:20px}
+/* Lápis e texto, sem contorno de botão. */
+.e-axes-edit-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:0;border-radius:10px;background:none;color:#4A5565;font:400 14px var(--font-body);cursor:pointer;transition:color .15s,background .15s}
+.e-axes-edit-btn svg{flex:none;width:22px;height:22px}
+.e-axes-edit-btn:hover{color:var(--tinta);background:color-mix(in srgb,var(--tinta) 6%,transparent)}
+.e-axes-edit-btn:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-axis-sheet.e-edit-sheet{width:min(1020px,100%);display:flex;flex-direction:column;height:min(760px,calc(100dvh - 48px));padding:22px 26px 20px}
+.e-edit-head{flex:none;display:flex;align-items:center;gap:14px;margin:0 44px 16px 0}
+.e-axis-sheet .e-edit-head h3{margin:0;font-size:24px}
+.e-edit-count{margin-left:auto;font-size:13.5px;color:var(--texto-suave)}
+.e-edit-save{flex:none}
+.e-edit-layout{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:26px}
+/* Duas colunas de 6 linhas, preenchidas de cima para baixo; "Arquétipo e religião" ocupa a linha de baixo. */
+.e-edit-axes{align-self:start;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,auto);grid-auto-flow:column;gap:8px}
+.e-edit-axis{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-width:0;text-align:left;padding:11px 11px;border:1.5px solid var(--borda);border-radius:14px;background:#fff;font:600 12.5px var(--font-body);color:var(--tinta);text-align:left;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.e-edit-axis[data-extra="archetype"]{grid-column:1;grid-row:7}
+.e-edit-axis[data-extra="religion"]{grid-column:2;grid-row:7}
+.e-edit-axis>span:not(.e-edit-badge){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.e-edit-axis-ico{flex:none;width:18px;height:18px;color:var(--texto-suave)}
+.e-edit-axis:hover{border-color:var(--tinta)}
+.e-edit-axis.e-on,.e-edit-axis.e-on[style*="--gc"]{background:var(--gc,var(--floresta));border-color:var(--gc,var(--floresta));color:#fff}
+.e-edit-axis.e-on .e-edit-axis-ico{color:#fff}
+.e-edit-axis:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-edit-badge{display:grid;place-items:center;flex:none;min-width:18px;height:18px;margin-left:auto;padding:0 5px;border-radius:9px;background:var(--carmim);color:#fff;font-size:11px;line-height:1}
+.e-edit-stage{min-width:0;min-height:0;display:flex;flex-direction:column;gap:12px}
+/* O baralho: a carta da frente, duas por trás e a que acabou de passar saindo pela esquerda. */
+.e-deck-edit{position:relative;flex:1;min-height:300px}
+.e-edit-card{position:absolute;inset:0 0 30px 0;overflow-y:auto;overscroll-behavior:contain;border-radius:24px;transform-origin:50% 100%;transition:transform .55s cubic-bezier(.16,.84,.28,1),opacity .4s ease}
+.e-edit-card[data-pos="0"]{z-index:10;transform:none}
+.e-edit-card[data-pos="1"]{z-index:9;transform:translate(14px,18px) rotate(1.8deg) scale(.97);pointer-events:none}
+.e-edit-card[data-pos="2"]{z-index:8;transform:translate(-12px,32px) rotate(-2deg) scale(.94);opacity:.85;pointer-events:none}
+.e-edit-card[data-pos="out"]{z-index:11;transform:translate(-70%,-4%) rotate(-12deg);opacity:0;pointer-events:none}
+.e-edit-card .question-card>*{transition:opacity .4s ease .1s}
+.e-edit-card:not([data-pos="0"]) .question-card>*{opacity:0;transition-delay:0s}
+.e-edit-card .question-card{margin:0;width:100%;max-width:none;min-height:100%;gap:14px;padding:20px 22px;box-shadow:var(--shadow-md)}
+.e-edit-card .question-card h2{max-width:none;font-size:clamp(1.1rem,.5vw + 1rem,1.35rem);line-height:1.3}
+.e-edit-card .answer-grid{gap:6px}
+.e-edit-card .answer-button{min-height:44px;padding:6px 14px}
+.e-edit-card .question-number{font-size:clamp(38px,5vw,52px)}
+.e-edit-card.is-changed .question-card{border-color:var(--floresta);box-shadow:0 0 0 2px color-mix(in srgb,var(--floresta) 28%,transparent)}
+.e-edit-foot{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.e-edit-counter{font-size:13.5px;color:var(--texto-suave);text-align:center}
+.e-edit-sheet .inline-error{margin:0}
+@media (prefers-reduced-motion:reduce){.e-edit-card{transition:none}}
+/* Janelas baixas (notebooks, zoom 100%): tudo se compacta para o modal caber sem rolar, com folga em cima e embaixo. */
+@media (max-height:760px) and (min-width:861px){
+  .e-axis-sheet.e-edit-sheet{padding:18px 22px 16px}
+  .e-edit-head{margin-bottom:12px}
+  .e-edit-axes{gap:6px}
+  .e-edit-axis{padding:8px 11px}
+  .e-edit-card .question-card{gap:10px;padding:14px 20px 16px}
+  .e-edit-card .question-card-header{gap:8px}
+  .e-edit-card .question-card h2{font-size:1.1rem}
+  .e-edit-card .answer-grid{gap:5px}
+  .e-edit-card .answer-button{min-height:38px}
+  .e-edit-card .question-number{font-size:38px}
+}
+@media (max-height:640px) and (min-width:861px){
+  .e-edit-axis{padding:6px 10px}
+  .e-edit-card .question-card h2{font-size:1.02rem;line-height:1.25}
+  .e-edit-card .answer-button{min-height:34px;padding:4px 12px}
+  .e-edit-card .answer-grid{gap:4px}
+}
+@media (max-width:860px){
+  .e-edit-layout{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);gap:10px}
+  .e-edit-card .question-card{gap:10px;padding:14px 18px 16px}
+  .e-edit-card .question-card-header{gap:8px}
+  .e-edit-card .question-card h2{font-size:1.1rem}
+  .e-edit-card .answer-grid{gap:5px}
+  .e-edit-card .answer-button{min-height:38px}
+  .e-edit-card .question-number{font-size:38px}
+  .e-edit-axes{display:flex;overflow-x:auto;gap:8px;padding:2px 2px 10px;margin:0 -2px;scrollbar-width:thin}
+  .e-edit-axis,.e-edit-axis[data-extra]{flex:none;grid-column:auto;grid-row:auto;white-space:nowrap}
+}
+@media (max-width:720px){
+  .e-axis-sheet.e-edit-sheet{padding:22px 16px 16px}
+  .e-edit-count{display:none}
+  .e-edit-save{margin-left:auto}
+  .e-deck-edit{min-height:420px}
+}
+
 /* ── Linha do tempo: eras empilhadas no desktop, linha vertical contínua no mobile ── */
 .e-tl-eras{list-style:none;margin:22px 0 0;padding:0}
 .e-tl-era{position:relative;display:grid;grid-template-columns:170px 1fr;gap:12px 28px;padding:20px 0 20px 30px;border-top:1px solid var(--borda)}

@@ -27,9 +27,11 @@ interface AxesSectionProps {
   axes: Axis[];
   results: Map<string, AxisResult>;
   religion?: Religion | null;
+  /** Quando a pessoa tem as respostas guardadas neste navegador, abre a edição delas. */
+  onEditAnswers?: () => void;
 }
 
-export function AxesSection({ axes, results, religion }: AxesSectionProps) {
+export function AxesSection({ axes, results, religion, onEditAnswers }: AxesSectionProps) {
   return (
     <section className="e-panel" id="eixos-resultado" data-reveal>
       <h2 className="e-sec-title">
@@ -43,6 +45,23 @@ export function AxesSection({ axes, results, religion }: AxesSectionProps) {
           ) : null;
         })}
       </ul>
+      {onEditAnswers && (
+        <div className="e-axes-edit">
+          <button className="e-axes-edit-btn" type="button" onClick={onEditAnswers}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8"
+              />
+            </svg>
+            {t.editAnswersButton}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

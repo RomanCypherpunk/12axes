@@ -90,6 +90,18 @@ interface Strings {
   doneBody: (name: string) => string;
   doneView: string;
   doneRetake: string;
+  editAnswersButton: string;
+  editAnswersTitle: string;
+  editAnswersGroupsAria: string;
+  editAnswersArchetype: string;
+  editAnswersReligion: string;
+  editAnswersChanged: (count: number) => string;
+  editAnswersCancel: string;
+  editAnswersSave: string;
+  editAnswersSaving: string;
+  editAnswersDiscard: string;
+  editAnswersLoading: string;
+  editAnswersUnavailable: string;
   skipToContent: string;
   backToStartAria: string;
   mainNavAria: string;
@@ -481,6 +493,18 @@ const pt: Strings = {
   doneBody: (name) => `Seu resultado foi ${name}. Ele está guardado neste navegador, é só abrir de novo.`,
   doneView: 'Ver resultados',
   doneRetake: 'Refazer o teste',
+  editAnswersButton: 'Editar respostas',
+  editAnswersTitle: 'Editar respostas',
+  editAnswersGroupsAria: 'Eixos',
+  editAnswersArchetype: 'Arquétipo',
+  editAnswersReligion: 'Sua religião',
+  editAnswersChanged: (count) => (count === 0 ? 'Nenhuma alteração' : count === 1 ? '1 resposta alterada' : `${count} respostas alteradas`),
+  editAnswersCancel: 'Cancelar',
+  editAnswersSave: 'Gravar respostas',
+  editAnswersSaving: 'Recalculando…',
+  editAnswersDiscard: 'Descartar as alterações que você ainda não salvou?',
+  editAnswersLoading: 'Carregando suas respostas…',
+  editAnswersUnavailable: 'Não foi possível abrir suas respostas: as perguntas mudaram depois que você fez o teste.',
   skipToContent: 'Pular para o conteúdo',
   backToStartAria: 'Voltar para o início',
   mainNavAria: 'Navegação principal',
@@ -1173,6 +1197,18 @@ const en: Strings = {
   doneBody: (name) => `Your result was ${name}. It is saved in this browser, just open it again.`,
   doneView: 'View results',
   doneRetake: 'Retake the test',
+  editAnswersButton: 'Edit answers',
+  editAnswersTitle: 'Edit answers',
+  editAnswersGroupsAria: 'Axes',
+  editAnswersArchetype: 'Archetype',
+  editAnswersReligion: 'Your religion',
+  editAnswersChanged: (count) => (count === 0 ? 'No changes' : count === 1 ? '1 answer changed' : `${count} answers changed`),
+  editAnswersCancel: 'Cancel',
+  editAnswersSave: 'Save answers',
+  editAnswersSaving: 'Recalculating…',
+  editAnswersDiscard: 'Discard the changes you have not saved?',
+  editAnswersLoading: 'Loading your answers…',
+  editAnswersUnavailable: 'Your answers could not be opened: the questions changed after you took the test.',
   skipToContent: 'Skip to content',
   backToStartAria: 'Back to start',
   mainNavAria: 'Main navigation',
