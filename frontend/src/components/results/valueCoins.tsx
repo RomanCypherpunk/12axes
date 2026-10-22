@@ -335,5 +335,7 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   // Política externa (valores novos). Não intervencionismo reaproveita o ícone do Pacifismo.
   'nao-alinhamento': { viewBox: '0 0 24 24', glyph: path(FLAG_OFF) },
   'nao-intervencionismo': { viewBox: '0 0 640 640', glyph: path(DOVE_DIVIDED) },
-  militarismo: { viewBox: '0 0 15 15', glyph: path(STAR_BANNER) }
+  militarismo: { viewBox: '0 0 15 15', glyph: path(STAR_BANNER) },
+  // Política: Democracia direta reaproveita o ícone da Democracia.
+  'democracia-direta': { viewBox: '0 0 48 48', glyph: path(BALLOT_HAND, true) }
 };

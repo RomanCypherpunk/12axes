@@ -279,6 +279,13 @@ class PoliticalValuesServiceTest {
     }
 
     @Test
+    void politicsDirectDemocracyIsDistinctFromFederalism() {
+        // Democracia direta (plebiscitos e referendos): descentralizada, muito democratica, pouco securitaria.
+        assertThat(politics(Map.of("estrutura", 78.0, "representacao", 91.0, "poder", 33.0)).valueId()).isEqualTo("democracia-direta");
+        assertThat(politics(Map.of("estrutura", 80.0, "representacao", 79.0, "poder", 25.0)).valueId()).isEqualTo("federalismo");
+    }
+
+    @Test
     void extremesAlwaysResolveOnePerCategory() throws Exception {
         int categories = readCategories().size();
 
