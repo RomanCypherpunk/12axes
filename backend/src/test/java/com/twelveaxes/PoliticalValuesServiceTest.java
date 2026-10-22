@@ -60,7 +60,8 @@ class PoliticalValuesServiceTest {
         PoliticalValue value = economic(axes(Map.of("comercio", 95.0), 50), "pt");
 
         assertThat(value.neutral()).isFalse();
-        assertThat(value.valueId()).isEqualTo("protecionismo");
+        // Economia e controle em 50 com comercio protecionista: o mais proximo e o mercantilismo.
+        assertThat(value.valueId()).isEqualTo("mercantilismo");
     }
 
     @Test
@@ -107,11 +108,11 @@ class PoliticalValuesServiceTest {
     }
 
     @Test
-    void societyHasFourteenValuesInBothLanguages() throws Exception {
+    void societyHasSeventeenValuesInBothLanguages() throws Exception {
         Map<String, Object> society = readCategories().stream()
                 .filter(category -> category.get("id").equals("sociedade")).findFirst().orElseThrow();
 
-        assertThat(values(society)).hasSize(14);
+        assertThat(values(society)).hasSize(17);
         assertThat(pick(service.resolve(axes(Map.of("moral", 8.0, "religiao", 10.0), 50), "en"), "sociedade").categoryLabel())
                 .isEqualTo("Society");
     }
@@ -135,13 +136,34 @@ class PoliticalValuesServiceTest {
         Map<String, Double> authoritarian = Map.of("estrutura", 17.0, "representacao", 28.0, "poder", 75.0);
         // Ditadura do proletariado exige economia publica: o autoritario capitalista fica com autocracia.
         assertThat(politics(with(authoritarian, "economia", 94.0)).valueId()).isEqualTo("ditadura-do-proletariado");
-        assertThat(politics(with(authoritarian, "economia", 8.0)).valueId()).isEqualTo("autocracia");
+        // O autoritario capitalista nunca vira ditadura do proletariado (hoje cai em "governo forte", o valor mais proximo).
+        assertThat(politics(with(authoritarian, "economia", 8.0)).valueId()).isNotEqualTo("ditadura-do-proletariado");
 
         // Socialista autoritario progressista nao vira monarquia absoluta nem aristocracia: elas exigem moral tradicionalista.
         Map<String, Double> absolutist = Map.of("estrutura", 1.0, "representacao", 6.0, "poder", 82.0);
         assertThat(politics(with(with(absolutist, "economia", 90.0), "moral", 70.0)).valueId())
                 .isNotIn("monarquismo-absoluto", "aristocracia");
         assertThat(politics(with(absolutist, "moral", 8.0)).valueId()).isEqualTo("monarquismo-absoluto");
+    }
+
+    @Test
+    void politicsFillsTheClusterGapsFoundInTheCatalog() {
+        assertThat(politics(Map.of("estrutura", 72.0, "representacao", 28.0, "poder", 74.0)).valueId()).isEqualTo("federalismo-autoritario");
+        assertThat(politics(Map.of("estrutura", 40.0, "representacao", 68.0, "poder", 55.0)).valueId()).isEqualTo("democracia-moderada");
+        assertThat(politics(Map.of("estrutura", 24.0, "representacao", 42.0, "poder", 72.0)).valueId()).isEqualTo("governo-forte");
+        assertThat(politics(Map.of("estrutura", 32.0, "representacao", 85.0, "poder", 24.0)).valueId()).isEqualTo("democracia-central");
+    }
+
+    @Test
+    void politicsLibertariansAreMinarchistsAndNotAnarchists() {
+        // Estado minimo com economia privada: minarquismo. Anarcocomunista (economia publica): continua anarquismo.
+        Map<String, Double> libertarian = Map.of("estrutura", 88.0, "representacao", 84.0, "poder", 4.0, "economia", 8.0);
+        Map<String, Double> classicalLiberal = Map.of("estrutura", 82.0, "representacao", 84.0, "poder", 6.0, "economia", 18.0);
+        Map<String, Double> anarchoCommunist = Map.of("estrutura", 92.0, "representacao", 89.0, "poder", 8.0, "economia", 90.0);
+
+        assertThat(politics(libertarian).valueId()).isEqualTo("minarquismo");
+        assertThat(politics(classicalLiberal).valueId()).isEqualTo("minarquismo");
+        assertThat(politics(anarchoCommunist).valueId()).isEqualTo("anarquismo");
     }
 
     @Test
@@ -222,6 +244,38 @@ class PoliticalValuesServiceTest {
             assertThat(value.valueId()).as("imigracao %s", row[0]).isEqualTo(row[1]);
         }
         assertThat(pick(service.resolve(axes(Map.of("imigracao", 54.0), 50), "pt"), "imigracao").neutral()).isTrue();
+    }
+
+    @Test
+    void economicsFillsTheClusterGapsFoundInTheCatalog() {
+        // Economia, Controle, Comercio em % do polo esquerdo (100 = publico, planejamento, protecionismo).
+        assertThat(economic(axes(Map.of("economia", 86.0, "controle", 82.0, "comercio", 35.0), 50), "pt").valueId())
+                .isEqualTo("socialismo-internacionalista");
+        assertThat(economic(axes(Map.of("economia", 28.0, "controle", 35.0, "comercio", 74.0), 50), "pt").valueId())
+                .isEqualTo("capitalismo-protecionista");
+        assertThat(economic(axes(Map.of("economia", 40.0, "controle", 66.0, "comercio", 72.0), 50), "pt").valueId())
+                .isEqualTo("dirigismo");
+        // Protecionismo: comercio muito protecionista com economia e controle altos (fascismo, falangismo, varguismo)
+        assertThat(economic(axes(Map.of("economia", 73.0, "controle", 87.0, "comercio", 97.0), 50), "pt").valueId())
+                .isEqualTo("protecionismo");
+        assertThat(economic(axes(Map.of("economia", 72.0, "controle", 85.0, "comercio", 95.0), 50), "pt").valueId())
+                .isEqualTo("protecionismo");
+    }
+
+    @Test
+    void societyFillsTheClusterGapsFoundInTheCatalog() {
+        // Religiao como heranca cultural (nem fe forte nem secular), progressista moderado sem religiao, moderado secular.
+        assertThat(society(Map.of("moral", 18.0, "religiao", 40.0)).valueId()).isEqualTo("tradicionalismo-cultural");
+        assertThat(society(Map.of("moral", 68.0, "religiao", 90.0)).valueId()).isEqualTo("progressismo-moderado-irreligioso");
+        assertThat(society(Map.of("moral", 50.0, "religiao", 72.0)).valueId()).isEqualTo("moderado-secular");
+    }
+
+    @Test
+    void foreignPolicyFillsTheClusterGapsFoundInTheCatalog() {
+        // Diplomacia: 100 = militarista. Intervencao: 100 = nao intervencionista.
+        assertThat(foreign(Map.of("diplomacia", 48.0, "intervencao", 74.0)).valueId()).isEqualTo("nao-alinhamento");
+        assertThat(foreign(Map.of("diplomacia", 20.0, "intervencao", 80.0)).valueId()).isEqualTo("nao-intervencionismo");
+        assertThat(foreign(Map.of("diplomacia", 77.0, "intervencao", 45.0)).valueId()).isEqualTo("militarismo");
     }
 
     @Test

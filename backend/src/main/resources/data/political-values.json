@@ -33,10 +33,10 @@
         "name": "Minarquismo",
         "description": "Poder público reduzido ao mínimo: segurança, justiça e defesa, e mais nada.",
         "profile": {
-          "estrutura": 92,
-          "representacao": 76,
-          "poder": 5,
-          "economia": 11
+          "estrutura": 90,
+          "representacao": 83,
+          "poder": 6,
+          "economia": 10
         }
       },
       {
@@ -222,6 +222,46 @@
           "economia": 22,
           "tecnologia": 87
         }
+      },
+      {
+        "id": "federalismo-autoritario",
+        "name": "Federalismo autoritário",
+        "description": "Poder dividido entre regiões, mas com autoridade forte e pouca liberdade individual em cada nível de governo.",
+        "profile": {
+          "estrutura": 72,
+          "representacao": 28,
+          "poder": 74
+        }
+      },
+      {
+        "id": "democracia-moderada",
+        "name": "Democracia moderada",
+        "description": "Governo escolhido em eleições, com participação limitada e atenção à ordem e à estabilidade.",
+        "profile": {
+          "estrutura": 40,
+          "representacao": 68,
+          "poder": 55
+        }
+      },
+      {
+        "id": "governo-forte",
+        "name": "Governo forte",
+        "description": "Um governo central forte, com representação limitada e ênfase em segurança e ordem.",
+        "profile": {
+          "estrutura": 24,
+          "representacao": 42,
+          "poder": 72
+        }
+      },
+      {
+        "id": "democracia-central",
+        "name": "Democracia central",
+        "description": "Eleições livres e amplas liberdades, com as decisões concentradas em um governo central.",
+        "profile": {
+          "estrutura": 32,
+          "representacao": 85,
+          "poder": 24
+        }
       }
     ]
   },
@@ -325,6 +365,33 @@
         "profile": {
           "diplomacia": 30,
           "intervencao": 28
+        }
+      },
+      {
+        "id": "nao-alinhamento",
+        "name": "Não alinhamento",
+        "description": "Não se aliar a blocos de poder, mantendo uma política externa independente e relações com vários países.",
+        "profile": {
+          "diplomacia": 48,
+          "intervencao": 74
+        }
+      },
+      {
+        "id": "nao-intervencionismo",
+        "name": "Não intervencionismo",
+        "description": "Não interferir em assuntos de outros países, evitando guerras e envolvimentos fora das próprias fronteiras.",
+        "profile": {
+          "diplomacia": 20,
+          "intervencao": 80
+        }
+      },
+      {
+        "id": "militarismo",
+        "name": "Militarismo",
+        "description": "Forças armadas fortes e prioridade ao poder militar na política externa, sem buscar necessariamente expansão.",
+        "profile": {
+          "diplomacia": 77,
+          "intervencao": 45
         }
       }
     ]
@@ -484,8 +551,8 @@
         "name": "Protecionismo",
         "description": "Proteção da produção nacional contra a concorrência externa, por meio de tarifas, cotas e preferência a produtos do país.",
         "profile": {
-          "economia": 45,
-          "controle": 55,
+          "economia": 72,
+          "controle": 85,
           "comercio": 95
         }
       },
@@ -547,6 +614,36 @@
           "economia": 55,
           "controle": 23,
           "comercio": 36
+        }
+      },
+      {
+        "id": "socialismo-internacionalista",
+        "name": "Socialismo internacionalista",
+        "description": "Propriedade coletiva e planejamento da economia, com cooperação e comércio abertos entre os povos.",
+        "profile": {
+          "economia": 86,
+          "controle": 82,
+          "comercio": 35
+        }
+      },
+      {
+        "id": "capitalismo-protecionista",
+        "name": "Capitalismo protecionista",
+        "description": "Propriedade privada e mercado livre dentro do país, com a produção nacional protegida da concorrência externa.",
+        "profile": {
+          "economia": 28,
+          "controle": 35,
+          "comercio": 74
+        }
+      },
+      {
+        "id": "dirigismo",
+        "name": "Dirigismo",
+        "description": "Mistura de propriedade privada e coordenação central da economia, com planos nacionais e proteção da produção do país.",
+        "profile": {
+          "economia": 40,
+          "controle": 66,
+          "comercio": 72
         }
       }
     ]
@@ -766,6 +863,33 @@
         "profile": {
           "moral": 88,
           "religiao": 92
+        }
+      },
+      {
+        "id": "tradicionalismo-cultural",
+        "name": "Tradicionalismo cultural",
+        "description": "Defende preservar tradições e costumes herdados, vendo a religião mais como herança cultural do que como fé.",
+        "profile": {
+          "moral": 18,
+          "religiao": 40
+        }
+      },
+      {
+        "id": "progressismo-moderado-irreligioso",
+        "name": "Progressismo moderado irreligioso",
+        "description": "Apoia mudanças graduais nos costumes e nos direitos individuais, e não vê a religião como base moral.",
+        "profile": {
+          "moral": 68,
+          "religiao": 90
+        }
+      },
+      {
+        "id": "moderado-secular",
+        "name": "Moderado secular",
+        "description": "Sem inclinação firme entre tradição e mudança nos costumes, com a religião fora da vida pública.",
+        "profile": {
+          "moral": 50,
+          "religiao": 72
         }
       }
     ]

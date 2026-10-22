@@ -442,5 +442,70 @@
     "id": "nacionalismo-etnico",
     "name": "Ethnic Nationalism",
     "description": "The nation is defined by common origin and ancestry, and immigration should be tightly restricted."
+  },
+  {
+    "id": "federalismo-autoritario",
+    "name": "Authoritarian Federalism",
+    "description": "Power divided among regions, but with strong authority and little individual freedom at every level of government."
+  },
+  {
+    "id": "democracia-moderada",
+    "name": "Moderate Democracy",
+    "description": "Government chosen in elections, with limited participation and attention to order and stability."
+  },
+  {
+    "id": "governo-forte",
+    "name": "Strong Government",
+    "description": "A strong central government, with limited representation and an emphasis on security and order."
+  },
+  {
+    "id": "democracia-central",
+    "name": "Central Democracy",
+    "description": "Free elections and broad freedoms, with decisions concentrated in a central government."
+  },
+  {
+    "id": "socialismo-internacionalista",
+    "name": "Internationalist Socialism",
+    "description": "Collective ownership and economic planning, with cooperation and open trade among peoples."
+  },
+  {
+    "id": "capitalismo-protecionista",
+    "name": "Protectionist Capitalism",
+    "description": "Private ownership and free markets at home, with national production shielded from foreign competition."
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigisme",
+    "description": "A mix of private ownership and central coordination of the economy, with national plans and protection of domestic production."
+  },
+  {
+    "id": "tradicionalismo-cultural",
+    "name": "Cultural Traditionalism",
+    "description": "Defends preserving inherited traditions and customs, seeing religion more as cultural heritage than as faith."
+  },
+  {
+    "id": "progressismo-moderado-irreligioso",
+    "name": "Irreligious Moderate Progressivism",
+    "description": "Supports gradual change in customs and individual rights, and does not see religion as a moral foundation."
+  },
+  {
+    "id": "moderado-secular",
+    "name": "Secular Moderate",
+    "description": "No firm lean between tradition and change in customs, keeping religion out of public life."
+  },
+  {
+    "id": "nao-alinhamento",
+    "name": "Non-Alignment",
+    "description": "Staying out of power blocs, keeping an independent foreign policy and relations with many countries."
+  },
+  {
+    "id": "nao-intervencionismo",
+    "name": "Non-Interventionism",
+    "description": "Not interfering in other countries' affairs, avoiding wars and involvements beyond one's own borders."
+  },
+  {
+    "id": "militarismo",
+    "name": "Militarism",
+    "description": "Strong armed forces and priority to military power in foreign policy, without necessarily seeking expansion."
   }
 ]
