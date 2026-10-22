@@ -1144,7 +1144,10 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* ── Seus valores: cartões no padrão dos perfis (moeda, categoria, nome e botão de informação), 3x2 no desktop e 2x3 no mobile ── */
 .e-dims.e-values-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:22px}
 .e-values-grid .e-dim-row>.e-pctc{display:none}
-.e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:14px}
+/* mesmo acabamento dos cartões de "Outras ideologias": fundo pastel da ideologia, sem borda */
+.e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:18px;border:0;border-radius:24px;padding:22px;background:var(--cat-bg)}
+.e-values-grid .e-dim-row strong{color:var(--cat)}
+.e-values-grid .e-card-info{top:14px;right:14px;color:var(--cat)}
 .e-vcoin{display:block}
 .e-value-sheet{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:8px 4px 4px}
 .e-value-sheet .e-dim{margin-top:4px}
@@ -1157,3 +1160,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-match{--e-flag-h:min(200px,calc((100vw - 100px) * 2 / 3))}
   .e-match .e-logobig{width:var(--e-flag-h);height:var(--e-flag-h)}
 }
+
+/* Página de resultados: cartões sem borda, no acabamento dos cartões de "Outras ideologias" (os livros ficam como estavam).
+   Limitado a .e-res para não alterar a página de comparação, que reaproveita estes componentes. */
+.e-res .e-dim-row,.e-res .e-dcard,.e-res .e-far-row{border:0}
