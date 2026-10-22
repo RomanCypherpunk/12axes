@@ -108,11 +108,11 @@ class PoliticalValuesServiceTest {
     }
 
     @Test
-    void societyHasSeventeenValuesInBothLanguages() throws Exception {
+    void societyHasNineteenValuesInBothLanguages() throws Exception {
         Map<String, Object> society = readCategories().stream()
                 .filter(category -> category.get("id").equals("sociedade")).findFirst().orElseThrow();
 
-        assertThat(values(society)).hasSize(17);
+        assertThat(values(society)).hasSize(19);
         assertThat(pick(service.resolve(axes(Map.of("moral", 8.0, "religiao", 10.0), 50), "en"), "sociedade").categoryLabel())
                 .isEqualTo("Society");
     }
@@ -283,6 +283,46 @@ class PoliticalValuesServiceTest {
         // Democracia direta (plebiscitos e referendos): descentralizada, muito democratica, pouco securitaria.
         assertThat(politics(Map.of("estrutura", 78.0, "representacao", 91.0, "poder", 33.0)).valueId()).isEqualTo("democracia-direta");
         assertThat(politics(Map.of("estrutura", 80.0, "representacao", 79.0, "poder", 25.0)).valueId()).isEqualTo("federalismo");
+    }
+
+    @Test
+    void economicsFreeMarketWithMixedOwnershipAndNeutralTradeIsNotMutualism() {
+        // Perfil real que caia em Mutualismo: economia 39,5 / controle 13,8 / comercio 43,7.
+        assertThat(economic(axes(Map.of("economia", 39.5, "controle", 13.8, "comercio", 43.7), 50), "pt").valueId())
+                .isEqualTo("livre-mercado-moderado");
+        assertThat(economic(axes(Map.of("economia", 40.0, "controle", 20.0, "comercio", 45.0), 50), "pt").valueId())
+                .isEqualTo("livre-mercado-moderado");
+        // Mutualismo (propriedade cooperativa) continua no seu proprio perfil.
+        assertThat(economic(axes(Map.of("economia", 55.0, "controle", 23.0, "comercio", 36.0), 50), "pt").valueId())
+                .isEqualTo("mutualismo");
+    }
+
+    @Test
+    void economicsCoversTheRadiusGapsFoundBySimulation() {
+        // Valores adicionados para nenhuma ideologia ficar longe demais de um valor economico.
+        assertThat(economic(axes(Map.of("economia", 80.0, "controle", 54.0, "comercio", 42.0), 50), "pt").valueId()).isEqualTo("coletivismo");
+        assertThat(economic(axes(Map.of("economia", 31.0, "controle", 39.0, "comercio", 52.0), 50), "pt").valueId()).isEqualTo("liberalismo-pragmatico");
+        assertThat(economic(axes(Map.of("economia", 43.0, "controle", 11.0, "comercio", 5.0), 50), "pt").valueId()).isEqualTo("libertarianismo-social");
+        assertThat(economic(axes(Map.of("economia", 14.0, "controle", 13.0, "comercio", 41.0), 50), "pt").valueId()).isEqualTo("liberalismo-nacional");
+    }
+
+    @Test
+    void radiusCoverageValuesResolveToTheirOwnProfiles() {
+        // Valores adicionados para nenhuma ideologia ficar a mais de ~11 pontos de um valor.
+        assertThat(foreign(Map.of("diplomacia", 29.0, "intervencao", 59.0)).valueId()).isEqualTo("diplomacia-moderada");
+        assertThat(foreign(Map.of("diplomacia", 66.0, "intervencao", 60.0)).valueId()).isEqualTo("militarismo-defensivo");
+        assertThat(society(Map.of("moral", 43.0, "religiao", 28.0)).valueId()).isEqualTo("conservadorismo-moderado-religioso");
+        assertThat(society(Map.of("moral", 69.0, "religiao", 71.0)).valueId()).isEqualTo("progressismo-moderado-secular");
+        assertThat(politics(Map.of("estrutura", 28.0, "representacao", 63.0, "poder", 34.0)).valueId()).isEqualTo("democracia-social");
+        assertThat(politics(Map.of("estrutura", 49.0, "representacao", 16.0, "poder", 82.0)).valueId()).isEqualTo("autoritarismo-misto");
+    }
+
+    @Test
+    void developmentalistAuthoritarianismRequiresAPlannedEconomy() {
+        Map<String, Double> unitaryAuthoritarian = Map.of("estrutura", 10.0, "representacao", 26.0, "poder", 82.0);
+        // Com controle alto (economia planejada) e o valor desenvolvimentista; com mercado livre, nao.
+        assertThat(politics(with(unitaryAuthoritarian, "controle", 80.0)).valueId()).isEqualTo("autoritarismo-desenvolvimentista");
+        assertThat(politics(with(unitaryAuthoritarian, "controle", 20.0)).valueId()).isNotEqualTo("autoritarismo-desenvolvimentista");
     }
 
     @Test

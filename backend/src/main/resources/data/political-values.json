@@ -272,6 +272,37 @@
           "representacao": 91,
           "poder": 33
         }
+      },
+      {
+        "id": "autoritarismo-desenvolvimentista",
+        "name": "Autoritarismo desenvolvimentista",
+        "description": "Poder centralizado e fechado à disputa política, usado para dirigir a economia e a modernização do país.",
+        "profile": {
+          "estrutura": 10,
+          "representacao": 26,
+          "poder": 82,
+          "controle": 80
+        }
+      },
+      {
+        "id": "democracia-social",
+        "name": "Democracia social",
+        "description": "Eleições livres com atenção aos direitos sociais e à redução das desigualdades, com um governo central mais atuante.",
+        "profile": {
+          "estrutura": 28,
+          "representacao": 63,
+          "poder": 34
+        }
+      },
+      {
+        "id": "autoritarismo-misto",
+        "name": "Autoritarismo misto",
+        "description": "Autoridade forte e pouca competição política, com o poder dividido entre o centro e as regiões.",
+        "profile": {
+          "estrutura": 49,
+          "representacao": 16,
+          "poder": 82
+        }
       }
     ]
   },
@@ -402,6 +433,24 @@
         "profile": {
           "diplomacia": 77,
           "intervencao": 45
+        }
+      },
+      {
+        "id": "diplomacia-moderada",
+        "name": "Diplomacia moderada",
+        "description": "Prefere a cooperação entre países, aceitando agir no exterior de forma limitada e negociada.",
+        "profile": {
+          "diplomacia": 29,
+          "intervencao": 59
+        }
+      },
+      {
+        "id": "militarismo-defensivo",
+        "name": "Militarismo defensivo",
+        "description": "Mantém forças armadas fortes para defender o próprio território e os próprios interesses, sem buscar expansão.",
+        "profile": {
+          "diplomacia": 66,
+          "intervencao": 60
         }
       }
     ]
@@ -655,6 +704,56 @@
           "controle": 66,
           "comercio": 72
         }
+      },
+      {
+        "id": "livre-mercado-moderado",
+        "name": "Livre mercado moderado",
+        "description": "Preços e concorrência definidos pelo mercado, com propriedade mista e abertura moderada ao comércio exterior.",
+        "profile": {
+          "economia": 40,
+          "controle": 20,
+          "comercio": 45
+        }
+      },
+      {
+        "id": "coletivismo",
+        "name": "Coletivismo",
+        "description": "Propriedade e decisões econômicas nas mãos da coletividade, com planejamento moderado e comércio aberto.",
+        "profile": {
+          "economia": 80,
+          "controle": 54,
+          "comercio": 42
+        }
+      },
+      {
+        "id": "liberalismo-pragmatico",
+        "name": "Liberalismo pragmático",
+        "description": "Mercado como base da economia, com regras e ajustes práticos conforme a situação e abertura comercial moderada.",
+        "profile": {
+          "economia": 31,
+          "controle": 39,
+          "comercio": 52
+        }
+      },
+      {
+        "id": "libertarianismo-social",
+        "name": "Libertarianismo social",
+        "description": "Preços livres e comércio muito aberto, com propriedade mista e preocupação com a justiça social.",
+        "profile": {
+          "economia": 43,
+          "controle": 11,
+          "comercio": 5
+        }
+      },
+      {
+        "id": "liberalismo-nacional",
+        "name": "Liberalismo nacional",
+        "description": "Mercado livre e propriedade privada, com abertura comercial moderada e prioridade aos interesses da própria nação.",
+        "profile": {
+          "economia": 14,
+          "controle": 13,
+          "comercio": 41
+        }
       }
     ]
   },
@@ -900,6 +999,24 @@
         "profile": {
           "moral": 50,
           "religiao": 72
+        }
+      },
+      {
+        "id": "conservadorismo-moderado-religioso",
+        "name": "Conservadorismo moderado religioso",
+        "description": "Valoriza a tradição e a fé como base dos costumes, mas aceita mudanças graduais.",
+        "profile": {
+          "moral": 43,
+          "religiao": 28
+        }
+      },
+      {
+        "id": "progressismo-moderado-secular",
+        "name": "Progressismo moderado secular",
+        "description": "Apoia mudanças graduais nos costumes e nos direitos individuais, com a religião separada da vida pública.",
+        "profile": {
+          "moral": 69,
+          "religiao": 71
         }
       }
     ]
