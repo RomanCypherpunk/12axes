@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react';
+import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
@@ -15,8 +15,36 @@ interface PoliticalValuesSectionProps {
   religion?: Religion | null;
 }
 
+const MIN_NAME_FONT = 9;
+
+// O nome do valor nunca quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
+// a fonte diminui (em passos de 0,5px, até um mínimo) em vez de a palavra ser cortada.
+function fitNames(list: HTMLElement) {
+  list.querySelectorAll<HTMLElement>('.e-dim-row strong').forEach((name) => {
+    name.style.fontSize = '';
+    let size = parseFloat(getComputedStyle(name).fontSize);
+    while (name.scrollWidth > name.clientWidth + 0.5 && size > MIN_NAME_FONT) {
+      size -= 0.5;
+      name.style.fontSize = `${size}px`;
+    }
+  });
+}
+
 export function PoliticalValuesSection({ values, category, religion }: PoliticalValuesSectionProps) {
   const [selected, setSelected] = useState<PoliticalValue | null>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+
+  useLayoutEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const fit = () => fitNames(list);
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(list);
+    // a fonte do site pode terminar de carregar depois da primeira medição
+    void document.fonts?.ready.then(fit);
+    return () => observer.disconnect();
+  }, [values]);
 
   if (values.length === 0) {
     return null;
@@ -26,7 +54,7 @@ export function PoliticalValuesSection({ values, category, religion }: Political
     <section className="e-panel e-values" id="valores" data-reveal>
       <h2>{t.valuesSectionTitle}</h2>
 
-      <ul className="e-dims e-values-grid">
+      <ul ref={listRef} className="e-dims e-values-grid">
         {values.map((value) => (
           <DimRow
             key={value.categoryId}

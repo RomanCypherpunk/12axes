@@ -1146,7 +1146,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-values-grid .e-dim-row>.e-pctc{display:none}
 /* mesmo acabamento dos cartões de "Outras ideologias": fundo pastel da ideologia, sem borda */
 .e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:18px;border:0;border-radius:24px;padding:22px;background:var(--cat-bg)}
-.e-values-grid .e-dim-row strong{color:var(--cat)}
+.e-values-grid .e-dim-row strong{color:var(--cat);overflow-wrap:normal;word-break:normal;hyphens:manual}
+@media (max-width:720px){.e-values-grid .e-dim-row{padding:16px;gap:14px}}
 .e-values-grid .e-card-info{top:14px;right:14px;color:var(--cat)}
 .e-vcoin{display:block}
 .e-value-sheet{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:8px 4px 4px}
