@@ -10,7 +10,6 @@ import type {
   SubmittedAnswer
 } from '../types/quiz';
 import { serializeCompareItems, type CompareRef } from '../utils/compareUrl';
-import { PARTIES_ENABLED } from '../utils/partyLogos';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
@@ -67,11 +66,6 @@ function formatApiError(message: string, status: number): string {
   return message;
 }
 
-// Com os partidos escondidos (VITE_SHOW_PARTIES=false), a linha do tempo não pode trazê-los.
-function partiesParam(): string {
-  return PARTIES_ENABLED ? '' : '&parties=false';
-}
-
 export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> {
   return request<QuizPayload>(`/api/quiz?variant=${variant}&lang=${LANG}`);
 }
@@ -83,7 +77,7 @@ export function submitResults(
   religion: string | null = null
 ): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results?lang=${LANG}${religionParam}${partiesParam()}`, {
+  return request<QuizResult>(`/api/results?lang=${LANG}${religionParam}`, {
     method: 'POST',
     body: JSON.stringify({ variant, answers, archetype })
   });
@@ -91,7 +85,7 @@ export function submitResults(
 
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}${partiesParam()}`);
+  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}`);
 }
 
 

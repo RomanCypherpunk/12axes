@@ -18,7 +18,7 @@ import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
 import { SignatureSection } from '../results/SignatureSection';
-import { TimelineSection } from '../results/TimelineSection';
+import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { Religion } from '../../utils/religion';
@@ -40,7 +40,7 @@ interface ResultsScreenProps {
 export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion, onEditAnswers }: ResultsScreenProps) {
   const top = result.topMatch;
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
-  const hasTimeline = (result.timeline ?? []).some((era) => era.entries.length > 0);
+  const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
 
@@ -139,11 +139,11 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             />
           )}
 
+          <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} />
+
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
-
-          {hasTimeline && <TimelineSection timeline={result.timeline ?? []} axes={axes} results={axisResults} />}
 
           <div className="e-actions">
             <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
@@ -161,7 +161,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasTimeline={hasTimeline} />
+          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
         </aside>
       </div>
       {printingPdf &&

@@ -1,0 +1,863 @@
+[
+  {
+    "id": "politicos",
+    "label": "Política",
+    "axes": [
+      "estrutura",
+      "representacao",
+      "poder"
+    ],
+    "values": [
+      {
+        "id": "autocracia",
+        "name": "Autocracia",
+        "description": "Poder concentrado em uma pessoa ou grupo, sem eleições livres nem limites institucionais.",
+        "profile": {
+          "estrutura": 10,
+          "representacao": 8,
+          "poder": 85
+        }
+      },
+      {
+        "id": "anarquismo",
+        "name": "Anarquismo",
+        "description": "Sociedade organizada sem governo central, por acordos voluntários e autogestão.",
+        "profile": {
+          "estrutura": 92,
+          "representacao": 85,
+          "poder": 6
+        }
+      },
+      {
+        "id": "minarquismo",
+        "name": "Minarquismo",
+        "description": "Poder público reduzido ao mínimo: segurança, justiça e defesa, e mais nada.",
+        "profile": {
+          "estrutura": 92,
+          "representacao": 76,
+          "poder": 5,
+          "economia": 11
+        }
+      },
+      {
+        "id": "democracia",
+        "name": "Democracia",
+        "description": "Governo escolhido por eleições livres, com direitos garantidos e limites ao poder.",
+        "profile": {
+          "estrutura": 50,
+          "representacao": 85,
+          "poder": 40
+        }
+      },
+      {
+        "id": "conselhos",
+        "name": "Conselhos",
+        "description": "Decisões tomadas por conselhos de trabalhadores e comunidades, eleitos de baixo para cima.",
+        "profile": {
+          "estrutura": 72,
+          "representacao": 90,
+          "poder": 18,
+          "economia": 85
+        }
+      },
+      {
+        "id": "monarquismo-absoluto",
+        "name": "Monarquismo Absoluto",
+        "description": "Um monarca com poder total, herdado e sem limites constitucionais.",
+        "profile": {
+          "estrutura": 1,
+          "representacao": 6,
+          "poder": 82,
+          "moral": 8
+        }
+      },
+      {
+        "id": "monarquismo-constitucional",
+        "name": "Monarquismo Constitucional",
+        "description": "Um monarca com papel simbólico ou limitado, dentro de uma constituição e de um parlamento.",
+        "profile": {
+          "estrutura": 31,
+          "representacao": 66,
+          "poder": 45,
+          "moral": 38
+        }
+      },
+      {
+        "id": "tecnocracia",
+        "name": "Tecnocracia",
+        "description": "Decisões conduzidas por especialistas e pelo conhecimento técnico, mais do que por disputas políticas.",
+        "profile": {
+          "estrutura": 28,
+          "representacao": 38,
+          "poder": 48,
+          "tecnologia": 70
+        }
+      },
+      {
+        "id": "federalismo",
+        "name": "Federalismo",
+        "description": "Poder dividido entre um governo central e regiões com autonomia própria.",
+        "profile": {
+          "estrutura": 80,
+          "representacao": 79,
+          "poder": 25
+        }
+      },
+      {
+        "id": "confederalismo",
+        "name": "Confederalismo",
+        "description": "Regiões ou povos soberanos que se unem por um pacto, com um centro fraco.",
+        "profile": {
+          "estrutura": 88,
+          "representacao": 65,
+          "poder": 40
+        }
+      },
+      {
+        "id": "municipalismo",
+        "name": "Municipalismo",
+        "description": "As decisões políticas mais importantes ficam nas cidades e nas comunidades locais.",
+        "profile": {
+          "estrutura": 97,
+          "representacao": 75,
+          "poder": 29
+        }
+      },
+      {
+        "id": "neocameralismo",
+        "name": "Neocameralismo",
+        "description": "O território administrado como uma empresa, com uma direção que responde a acionistas.",
+        "profile": {
+          "estrutura": 42,
+          "representacao": 5,
+          "poder": 66,
+          "economia": 16
+        }
+      },
+      {
+        "id": "aristocracia",
+        "name": "Aristocracia",
+        "description": "Governo de uma elite escolhida por nascimento, tradição ou mérito reconhecido.",
+        "profile": {
+          "estrutura": 21,
+          "representacao": 19,
+          "poder": 76,
+          "moral": 16
+        }
+      },
+      {
+        "id": "ditadura-do-proletariado",
+        "name": "Ditadura do Proletariado",
+        "description": "Poder político exercido de forma centralizada pela classe trabalhadora, para transformar a economia.",
+        "profile": {
+          "estrutura": 17,
+          "representacao": 28,
+          "poder": 75,
+          "economia": 94
+        }
+      },
+      {
+        "id": "comunismo",
+        "name": "Comunismo",
+        "description": "Sociedade sem classes e com propriedade coletiva, conduzida por um partido ou movimento.",
+        "profile": {
+          "estrutura": 30,
+          "representacao": 43,
+          "poder": 66,
+          "economia": 91
+        }
+      },
+      {
+        "id": "neutralidade-politica",
+        "name": "Neutralidade política",
+        "description": "Posições variadas, sem um padrão político dominante entre estrutura, representação e poder.",
+        "neutral": true,
+        "profile": {
+          "estrutura": 50,
+          "representacao": 50,
+          "poder": 50
+        }
+      },
+      {
+        "id": "teocracia",
+        "name": "Teocracia",
+        "description": "Governo conduzido por líderes religiosos ou por leis religiosas.",
+        "profile": {
+          "estrutura": 11,
+          "representacao": 16,
+          "poder": 85,
+          "religiao": 4
+        }
+      },
+      {
+        "id": "democracia-securitaria",
+        "name": "Democracia Securitária",
+        "description": "Eleições livres combinadas com um poder central forte e ênfase em ordem e segurança.",
+        "profile": {
+          "estrutura": 30,
+          "representacao": 79,
+          "poder": 75
+        }
+      },
+      {
+        "id": "monarquismo-libertario",
+        "name": "Monarquismo Libertário",
+        "description": "Defende um monarca ou uma ordem hereditária, com propriedade privada forte e poder público mínimo.",
+        "profile": {
+          "estrutura": 91,
+          "representacao": 44,
+          "poder": 9,
+          "economia": 8,
+          "moral": 22
+        }
+      },
+      {
+        "id": "corporacao-governamental",
+        "name": "Corporação Governamental",
+        "description": "Pequenos territórios governados como empresas de tecnologia, com um executivo forte e sem eleições, competindo por moradores.",
+        "profile": {
+          "estrutura": 77,
+          "representacao": 17,
+          "poder": 46,
+          "economia": 22,
+          "tecnologia": 87
+        }
+      }
+    ]
+  },
+  {
+    "id": "externa",
+    "label": "Política externa",
+    "axes": [
+      "diplomacia",
+      "intervencao"
+    ],
+    "values": [
+      {
+        "id": "imperialismo",
+        "name": "Imperialismo",
+        "description": "Expandir a influência ou o controle do país sobre outros territórios e povos, pela força e pela política.",
+        "profile": {
+          "diplomacia": 91,
+          "intervencao": 9
+        }
+      },
+      {
+        "id": "expansionismo",
+        "name": "Expansionismo",
+        "description": "Ampliar o território ou a esfera de influência do país, com forte uso do poder militar.",
+        "profile": {
+          "diplomacia": 85,
+          "intervencao": 18
+        }
+      },
+      {
+        "id": "nacionalismo",
+        "name": "Nacionalismo",
+        "description": "Prioridade aos interesses e à soberania da própria nação, inclusive no comércio com o exterior.",
+        "profile": {
+          "diplomacia": 71,
+          "intervencao": 30,
+          "comercio": 77
+        }
+      },
+      {
+        "id": "realismo-politico",
+        "name": "Realismo Político",
+        "description": "As relações entre países são guiadas por interesse e poder, não por ideais.",
+        "profile": {
+          "diplomacia": 60,
+          "intervencao": 42
+        }
+      },
+      {
+        "id": "neutralidade-armada",
+        "name": "Neutralidade armada",
+        "description": "Ficar fora das guerras alheias, mantendo forças armadas fortes para defender o próprio território.",
+        "profile": {
+          "diplomacia": 70,
+          "intervencao": 85
+        }
+      },
+      {
+        "id": "neutralidade",
+        "name": "Neutralidade",
+        "description": "Sem inclinação firme entre força e diplomacia, nem entre atuar no exterior ou ficar de fora.",
+        "neutral": true,
+        "profile": {
+          "diplomacia": 50,
+          "intervencao": 50
+        }
+      },
+      {
+        "id": "pacifismo",
+        "name": "Pacifismo",
+        "description": "Recusa a guerra e a força militar como meio, priorizando a paz e a negociação.",
+        "profile": {
+          "diplomacia": 5,
+          "intervencao": 92
+        }
+      },
+      {
+        "id": "internacionalismo",
+        "name": "Internacionalismo",
+        "description": "Cooperação entre países por meio de organismos e acordos comuns, com comércio aberto.",
+        "profile": {
+          "diplomacia": 15,
+          "intervencao": 56,
+          "comercio": 21
+        }
+      },
+      {
+        "id": "isolacionismo",
+        "name": "Isolacionismo",
+        "description": "Manter o país afastado de alianças e conflitos externos, e protegido no comércio.",
+        "profile": {
+          "diplomacia": 40,
+          "intervencao": 88,
+          "comercio": 80
+        }
+      },
+      {
+        "id": "intervencionismo-humanitario",
+        "name": "Intervencionismo Humanitário",
+        "description": "Atuar no exterior, inclusive com força, para impedir abusos graves e proteger populações.",
+        "profile": {
+          "diplomacia": 30,
+          "intervencao": 28
+        }
+      }
+    ]
+  },
+  {
+    "id": "economicos",
+    "label": "Economia",
+    "axes": [
+      "economia",
+      "controle",
+      "comercio"
+    ],
+    "values": [
+      {
+        "id": "socialismo-planificado",
+        "name": "Socialismo Planificado",
+        "description": "Meios de produção públicos ou coletivos, com a economia planejada de forma centralizada.",
+        "profile": {
+          "economia": 94,
+          "controle": 96,
+          "comercio": 80
+        }
+      },
+      {
+        "id": "socialismo-de-mercado",
+        "name": "Socialismo de Mercado",
+        "description": "Empresas de propriedade pública ou coletiva competindo em um mercado, com planejamento geral e preços em boa parte livres.",
+        "profile": {
+          "economia": 78,
+          "controle": 70,
+          "comercio": 61
+        }
+      },
+      {
+        "id": "desenvolvimentismo",
+        "name": "Desenvolvimentismo",
+        "description": "Investimento e planejamento públicos para industrializar o país, protegendo a indústria nacional enquanto ela cresce.",
+        "profile": {
+          "economia": 66,
+          "controle": 80,
+          "comercio": 67
+        }
+      },
+      {
+        "id": "geosocialismo",
+        "name": "Geosocialismo",
+        "description": "A terra e os recursos naturais pertencem a todos, com a renda deles distribuída à coletividade e o comércio aberto.",
+        "profile": {
+          "economia": 73,
+          "controle": 59,
+          "comercio": 18
+        }
+      },
+      {
+        "id": "liberalismo-social",
+        "name": "Liberalismo Social",
+        "description": "Mercado como base da economia, com serviços essenciais garantidos a todos e regras para reduzir desigualdades.",
+        "profile": {
+          "economia": 60,
+          "controle": 56,
+          "comercio": 40
+        }
+      },
+      {
+        "id": "pragmatismo",
+        "name": "Pragmatismo",
+        "description": "Sem preferência firme entre propriedade pública e privada, planejamento e mercado, proteção e abertura: avalia caso a caso.",
+        "neutral": true,
+        "profile": {
+          "economia": 50,
+          "controle": 50,
+          "comercio": 50
+        }
+      },
+      {
+        "id": "sindicalismo",
+        "name": "Sindicalismo",
+        "description": "A economia organizada por sindicatos e organizações de trabalhadores, que gerem a produção e negociam em nome de cada setor.",
+        "profile": {
+          "economia": 93,
+          "controle": 83,
+          "comercio": 66
+        }
+      },
+      {
+        "id": "trabalhismo",
+        "name": "Trabalhismo",
+        "description": "Defesa dos direitos dos trabalhadores e de uma economia nacional coordenada para garantir emprego e renda.",
+        "profile": {
+          "economia": 71,
+          "controle": 76,
+          "comercio": 78
+        }
+      },
+      {
+        "id": "social-democracia",
+        "name": "Social-democracia",
+        "description": "Economia de mercado com forte rede de proteção social, serviços públicos amplos e redistribuição de renda.",
+        "profile": {
+          "economia": 65,
+          "controle": 70,
+          "comercio": 51
+        }
+      },
+      {
+        "id": "distributismo",
+        "name": "Distributismo",
+        "description": "Propriedade amplamente distribuída entre famílias e pequenos produtores, em vez de concentrada em grandes empresas ou em um centro único.",
+        "profile": {
+          "economia": 60,
+          "controle": 51,
+          "comercio": 73
+        }
+      },
+      {
+        "id": "liberalismo",
+        "name": "Liberalismo",
+        "description": "Propriedade privada e livre concorrência como base da economia, com regras claras e intervenção limitada.",
+        "profile": {
+          "economia": 29,
+          "controle": 25,
+          "comercio": 21
+        }
+      },
+      {
+        "id": "ordoliberalismo",
+        "name": "Ordoliberalismo",
+        "description": "Mercado livre dentro de regras firmes que garantem a concorrência e impedem monopólios.",
+        "profile": {
+          "economia": 41,
+          "controle": 40,
+          "comercio": 28
+        }
+      },
+      {
+        "id": "neoliberalismo",
+        "name": "Neoliberalismo",
+        "description": "Mercados abertos, privatizações, desregulamentação e disciplina fiscal como caminho para o crescimento.",
+        "profile": {
+          "economia": 23,
+          "controle": 14,
+          "comercio": 14
+        }
+      },
+      {
+        "id": "liberal-desenvolvimentismo",
+        "name": "Liberal-desenvolvimentismo",
+        "description": "Mercado e iniciativa privada como motor do crescimento, com apoio pontual do poder público à indústria e à infraestrutura.",
+        "profile": {
+          "economia": 31,
+          "controle": 50,
+          "comercio": 28
+        }
+      },
+      {
+        "id": "protecionismo",
+        "name": "Protecionismo",
+        "description": "Proteção da produção nacional contra a concorrência externa, por meio de tarifas, cotas e preferência a produtos do país.",
+        "profile": {
+          "economia": 45,
+          "controle": 55,
+          "comercio": 95
+        }
+      },
+      {
+        "id": "capitalismo",
+        "name": "Capitalismo",
+        "description": "Propriedade privada dos meios de produção, busca de lucro e preços definidos pela oferta e pela demanda.",
+        "profile": {
+          "economia": 19,
+          "controle": 19,
+          "comercio": 19
+        }
+      },
+      {
+        "id": "corporativismo",
+        "name": "Corporativismo",
+        "description": "Setores econômicos organizados em corporações de patrões e trabalhadores que negociam e coordenam a produção nacional.",
+        "profile": {
+          "economia": 61,
+          "controle": 73,
+          "comercio": 78
+        }
+      },
+      {
+        "id": "liberalismo-austriaco",
+        "name": "Liberalismo Austríaco",
+        "description": "Preços e escolhas individuais livres, com propriedade privada forte e o mínimo de interferência na economia.",
+        "profile": {
+          "economia": 5,
+          "controle": 5,
+          "comercio": 8
+        }
+      },
+      {
+        "id": "georgismo",
+        "name": "Georgismo",
+        "description": "Propriedade privada do que se produz, mas a renda da terra e dos recursos naturais é cobrada em benefício de todos.",
+        "profile": {
+          "economia": 56,
+          "controle": 31,
+          "comercio": 18
+        }
+      },
+      {
+        "id": "mercantilismo",
+        "name": "Mercantilismo",
+        "description": "Riqueza nacional acumulada por exportações, reservas e proteção da produção do país.",
+        "profile": {
+          "economia": 39,
+          "controle": 49,
+          "comercio": 79
+        }
+      },
+      {
+        "id": "mutualismo",
+        "name": "Mutualismo",
+        "description": "Troca justa entre produtores, com cooperativas, crédito mútuo e propriedade ligada ao uso e ao trabalho.",
+        "profile": {
+          "economia": 55,
+          "controle": 23,
+          "comercio": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "imigracao",
+    "label": "Imigração",
+    "axes": [
+      "imigracao"
+    ],
+    "values": [
+      {
+        "id": "cosmopolitismo",
+        "name": "Cosmopolitismo",
+        "description": "Vê a humanidade como uma só comunidade, com fronteiras abertas e livre circulação de pessoas.",
+        "profile": {
+          "imigracao": 5
+        }
+      },
+      {
+        "id": "multiculturalismo",
+        "name": "Multiculturalismo",
+        "description": "Valoriza a convivência de várias culturas no mesmo país, cada uma mantendo suas tradições.",
+        "profile": {
+          "imigracao": 18
+        }
+      },
+      {
+        "id": "pluralismo",
+        "name": "Pluralismo",
+        "description": "Aceita a diversidade cultural dentro de regras e valores comuns a todos.",
+        "profile": {
+          "imigracao": 30
+        }
+      },
+      {
+        "id": "integracao-civica",
+        "name": "Integração cívica",
+        "description": "Quem chega se integra pelas leis, pela língua e pela cidadania, mantendo seus costumes na vida privada.",
+        "profile": {
+          "imigracao": 40
+        }
+      },
+      {
+        "id": "equilibrio-migratorio",
+        "name": "Equilíbrio",
+        "description": "Sem inclinação firme entre preservar a cultura nacional e acolher a diversidade.",
+        "neutral": true,
+        "profile": {
+          "imigracao": 50
+        }
+      },
+      {
+        "id": "integracao-cultural",
+        "name": "Integração cultural",
+        "description": "Quem chega deve adotar em boa parte a cultura, a língua e os costumes do país.",
+        "profile": {
+          "imigracao": 62
+        }
+      },
+      {
+        "id": "assimilacionismo",
+        "name": "Assimilacionismo",
+        "description": "Quem chega deve se assimilar por completo à cultura nacional, deixando de lado a de origem.",
+        "profile": {
+          "imigracao": 75
+        }
+      },
+      {
+        "id": "preservacionismo-cultural",
+        "name": "Preservacionismo cultural",
+        "description": "Prioriza preservar a cultura nacional existente, com limites firmes à imigração.",
+        "profile": {
+          "imigracao": 86
+        }
+      },
+      {
+        "id": "nacionalismo-etnico",
+        "name": "Nacionalismo Étnico",
+        "description": "A nação é definida por origem e ascendência comuns, e a imigração deve ser fortemente restrita.",
+        "profile": {
+          "imigracao": 95
+        }
+      }
+    ]
+  },
+  {
+    "id": "sociedade",
+    "label": "Sociedade",
+    "axes": [
+      "moral",
+      "religiao"
+    ],
+    "values": [
+      {
+        "id": "tradicionalismo-religioso",
+        "name": "Tradicionalismo religioso",
+        "description": "Defende que a fé e as tradições herdadas sustentam a sociedade e devem orientar costumes e leis.",
+        "profile": {
+          "moral": 8,
+          "religiao": 10
+        }
+      },
+      {
+        "id": "tradicionalismo-secular",
+        "name": "Tradicionalismo secular",
+        "description": "Defende preservar costumes e instituições herdados pelo valor que têm para a sociedade, sem depender da religião.",
+        "profile": {
+          "moral": 8,
+          "religiao": 58
+        }
+      },
+      {
+        "id": "tradicionalismo-irreligioso",
+        "name": "Tradicionalismo irreligioso",
+        "description": "Defende preservar costumes e tradições herdados, e não vê a religião como base moral.",
+        "profile": {
+          "moral": 8,
+          "religiao": 90
+        }
+      },
+      {
+        "id": "conservadorismo-religioso",
+        "name": "Conservadorismo religioso",
+        "description": "Prefere mudanças graduais e cautelosas nos costumes, com a fé como base moral.",
+        "profile": {
+          "moral": 25,
+          "religiao": 20
+        }
+      },
+      {
+        "id": "conservadorismo-secular",
+        "name": "Conservadorismo secular",
+        "description": "Prefere mudanças graduais e cautelosas nos costumes, sem apoio na religião.",
+        "profile": {
+          "moral": 25,
+          "religiao": 58
+        }
+      },
+      {
+        "id": "conservadorismo-irreligioso",
+        "name": "Conservadorismo irreligioso",
+        "description": "Prefere mudanças graduais e cautelosas nos costumes, e não atribui papel à religião.",
+        "profile": {
+          "moral": 25,
+          "religiao": 88
+        }
+      },
+      {
+        "id": "conservadorismo-moderado",
+        "name": "Conservadorismo moderado",
+        "description": "Valoriza costumes e instituições estabelecidos, mas aceita mudanças quando há motivo claro.",
+        "profile": {
+          "moral": 38,
+          "religiao": 50
+        }
+      },
+      {
+        "id": "moderado",
+        "name": "Moderado",
+        "description": "Sem inclinação firme entre tradição e mudança nos costumes, nem entre religião e secularismo.",
+        "neutral": true,
+        "profile": {
+          "moral": 50,
+          "religiao": 50
+        }
+      },
+      {
+        "id": "moderado-religioso",
+        "name": "Moderado religioso",
+        "description": "Sem inclinação firme entre tradição e mudança nos costumes, com a fé como parte importante da vida.",
+        "profile": {
+          "moral": 50,
+          "religiao": 12
+        }
+      },
+      {
+        "id": "moderado-irreligioso",
+        "name": "Moderado irreligioso",
+        "description": "Sem inclinação firme entre tradição e mudança nos costumes, e não vê a religião como base moral.",
+        "profile": {
+          "moral": 50,
+          "religiao": 90
+        }
+      },
+      {
+        "id": "progressismo-moderado",
+        "name": "Progressismo moderado",
+        "description": "Apoia mudanças nos costumes e nos direitos individuais de forma gradual e equilibrada.",
+        "profile": {
+          "moral": 62,
+          "religiao": 55
+        }
+      },
+      {
+        "id": "progressismo-religioso",
+        "name": "Progressismo religioso",
+        "description": "Apoia mudanças nos costumes e nos direitos individuais, com a fé como parte da vida e dos valores.",
+        "profile": {
+          "moral": 75,
+          "religiao": 15
+        }
+      },
+      {
+        "id": "progressismo",
+        "name": "Progressismo",
+        "description": "Apoia mudanças nos costumes e a ampliação dos direitos individuais, com religião e vida pública separadas.",
+        "profile": {
+          "moral": 85,
+          "religiao": 68
+        }
+      },
+      {
+        "id": "progressismo-irreligioso",
+        "name": "Progressismo irreligioso",
+        "description": "Apoia mudanças nos costumes e a ampliação dos direitos individuais, e não vê a religião como base moral.",
+        "profile": {
+          "moral": 88,
+          "religiao": 92
+        }
+      }
+    ]
+  },
+  {
+    "id": "tecnologicos",
+    "label": "Tecnologia",
+    "axes": [
+      "tecnologia"
+    ],
+    "values": [
+      {
+        "id": "primitivismo",
+        "name": "Primitivismo",
+        "description": "Rejeita a tecnologia industrial e moderna, defendendo uma vida próxima da natureza e em pequena escala.",
+        "profile": {
+          "tecnologia": 3
+        }
+      },
+      {
+        "id": "naturalismo",
+        "name": "Naturalismo",
+        "description": "Prefere soluções naturais e uma vida em harmonia com a natureza, usando tecnologia só quando necessária.",
+        "profile": {
+          "tecnologia": 15
+        }
+      },
+      {
+        "id": "ambientalismo",
+        "name": "Ambientalismo",
+        "description": "Aceita a tecnologia desde que limitada pela proteção do meio ambiente.",
+        "profile": {
+          "tecnologia": 28
+        }
+      },
+      {
+        "id": "cautela-tecnologica",
+        "name": "Cautela tecnológica",
+        "description": "Aceita novas tecnologias, mas com cautela, regras e atenção aos riscos.",
+        "profile": {
+          "tecnologia": 38
+        }
+      },
+      {
+        "id": "equilibrio-tecnologico",
+        "name": "Equilíbrio tecnológico",
+        "description": "Sem inclinação firme entre confiar mais na tecnologia ou mais na natureza.",
+        "neutral": true,
+        "profile": {
+          "tecnologia": 50
+        }
+      },
+      {
+        "id": "modernismo-tecnologico",
+        "name": "Modernismo tecnológico",
+        "description": "A tecnologia é o caminho para melhorar a vida e resolver problemas coletivos.",
+        "profile": {
+          "tecnologia": 68
+        }
+      },
+      {
+        "id": "industrialismo",
+        "name": "Industrialismo",
+        "description": "Valoriza a indústria e a produção em larga escala como base do progresso.",
+        "profile": {
+          "tecnologia": 77
+        }
+      },
+      {
+        "id": "otimismo-tecnologico",
+        "name": "Otimismo tecnológico",
+        "description": "Confia que a tecnologia resolverá a maior parte dos problemas humanos e ambientais.",
+        "profile": {
+          "tecnologia": 83
+        }
+      },
+      {
+        "id": "futurismo",
+        "name": "Futurismo",
+        "description": "Orienta a sociedade ao futuro, priorizando inovação e mudança tecnológica rápida.",
+        "profile": {
+          "tecnologia": 91
+        }
+      },
+      {
+        "id": "aceleracionismo",
+        "name": "Aceleracionismo",
+        "description": "Defende acelerar o avanço tecnológico ao máximo, mesmo que transforme a sociedade profundamente.",
+        "profile": {
+          "tecnologia": 97
+        }
+      }
+    ]
+  }
+]

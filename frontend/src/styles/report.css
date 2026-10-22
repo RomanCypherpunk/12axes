@@ -230,25 +230,7 @@
 .rp .cmp-strip>span:not(.cmp-mark){height:8mm;border-radius:1px}
 .rp .cmp-strip .cmp-mark{aspect-ratio:auto;height:100%}
 
-/* linha do tempo: uma faixa por era, com foto/bandeira redonda, nome e data */
-.rp .tl{display:flex;flex-direction:column}
-.rp .tl-era{display:grid;grid-template-columns:34mm 1fr;gap:4mm;padding:4mm 0 4mm 5mm;border-top:1px solid var(--borda);position:relative}
-.rp .tl-era:first-child{border-top:0;padding-top:1mm}
-.rp .tl-era::before{content:"";position:absolute;left:0;top:5.2mm;width:7px;height:7px;border-radius:50%;background:var(--floresta)}
-.rp .tl-era:first-child::before{top:2.2mm}
-.rp .tl-head h3{font-size:12.5px;line-height:1.2}
-.rp .tl-head span{display:block;margin-top:1px;font-size:8.5px;color:var(--suave)}
-.rp .tl-list{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 4mm}
-.rp .tl-list li{display:flex;align-items:center;gap:2.5mm;background:var(--sup);border:1px solid var(--borda);border-radius:3mm;padding:1.8mm 2.5mm 1.8mm 1.8mm;min-width:0}
-.rp .tl-list b{display:block;font-family:var(--display);font-weight:600;font-size:9.5px;line-height:1.25}
-.rp .tl-list small{display:block;font-size:8px;color:var(--suave);margin-top:1px}
-.rp .tl-best{margin-top:5mm;align-items:center;break-inside:avoid;page-break-inside:avoid}
-.rp .tl-best-lab{display:block;margin-top:1.5mm;font-size:8px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--suave)}
-.rp .tl-best h3{margin-top:.5mm}
-.rp .tl-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));width:26mm;height:26mm;overflow:hidden;border-radius:6px;border:1px solid var(--borda);background:var(--sup);flex:none}
-.rp .tl-tile{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}
-.rp .tl-tile-logo{object-fit:contain;padding:1.5mm;background:#fff}
-.rp .tl-tile.ini{font-size:8px}
-.rp img.tl-ph,.rp .tl-ph.ini{flex:none;width:9mm;height:9mm;border-radius:50%;object-fit:cover}
-.rp img.tl-logo{object-fit:contain;padding:1.2mm;background:#fff;border:1px solid var(--borda)}
-.rp .tl-ph.ini{display:grid;place-items:center;background:var(--neutro);font-size:8px;font-weight:600;color:var(--suave)}
+/* seus valores: usa os cartões .dims/.dc dos perfis (3x2); só a moeda precisa de margem */
+.rp .dc .v-wrap svg{display:block}
+/* a regra geral ".rp svg" põe contorno escuro em todo SVG; nas moedas o ícone é só preenchimento */
+.rp .e-vcoin svg{stroke:none}

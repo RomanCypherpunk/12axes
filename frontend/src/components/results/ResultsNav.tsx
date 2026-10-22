@@ -9,14 +9,14 @@ const SECTIONS = [
   { id: 'areas', label: () => t.resultsNavAreas },
   { id: 'livros', label: () => t.resultsNavBooks },
   { id: 'partidos', label: () => t.resultsNavParties },
+  { id: 'valores', label: () => t.resultsNavValues },
   { id: 'ideologias', label: () => t.resultsNavIdeologies },
   { id: 'bussola', label: () => t.resultsNavCompass },
-  { id: 'linha-do-tempo', label: () => t.resultsNavTimeline },
 ];
 
 // Sem livros recomendados, sem partidos ou sem os eixos da bússola, a seção não é renderizada: o item some e a numeração se ajusta.
-export function ResultsNav({ hasBooks = true, hasCompass = true, hasParties = true, hasTimeline = true }: { hasBooks?: boolean; hasCompass?: boolean; hasParties?: boolean; hasTimeline?: boolean }) {
-  const sections = SECTIONS.filter(({ id }) => (id !== 'livros' || hasBooks) && (id !== 'bussola' || hasCompass) && (id !== 'partidos' || hasParties) && (id !== 'linha-do-tempo' || hasTimeline));
+export function ResultsNav({ hasBooks = true, hasCompass = true, hasParties = true, hasValues = true }: { hasBooks?: boolean; hasCompass?: boolean; hasParties?: boolean; hasValues?: boolean }) {
+  const sections = SECTIONS.filter(({ id }) => (id !== 'livros' || hasBooks) && (id !== 'bussola' || hasCompass) && (id !== 'partidos' || hasParties) && (id !== 'valores' || hasValues));
   const [active, setActive] = useState(SECTIONS[0].id);
 
   useEffect(() => {

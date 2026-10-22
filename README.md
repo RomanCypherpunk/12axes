@@ -91,6 +91,7 @@ The pool has 240 statements, 20 per axis, half phrased toward each pole so agree
 - Results by axis, with intensity and the rarest and most common positions in your profile.
 - Top ideologies, the closest current and historical countries, and matching personalities by category, plus the least compatible ideology.
 - An "axis tension" readout for pairs of positions that rarely appear together.
+- Six named political values (economic, political, society, technology, foreign policy and immigration), read from your axes with no extra questions.
 - Book recommendations tied to your profile.
 - Religion filter for Christianity, Judaism, Islam, and Buddhism.
 - Share card (PNG), PDF report, and shareable result link.
@@ -132,6 +133,7 @@ All data lives in `backend/src/main/resources/data/`, with English translations 
 | `countries.json` / `countries-profiles.json` | Countries, regions, and historical regimes |
 | `personalities.json` / `personality-profiles.json` | Political figures and intellectuals |
 | `books.json` | Book recommendations |
+| `political-values.json` | The named values of six categories, each with its profile on the axes |
 
 On startup the backend refuses to run if any catalog entry lacks a vector or a vector does not have exactly the 12 known axes.
 
