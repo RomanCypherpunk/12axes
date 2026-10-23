@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { t } from '../../i18n';
 import type { Axis, AxisResult, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
-import { SupportSection } from '../SupportSection';
 import { PdfReport } from '../report/PdfReport';
 import '../../styles/report.css';
 import { BooksSection } from '../results/BooksSection';
@@ -156,8 +155,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
           {error && <p className="inline-error" role="alert">{error}</p>}
 
           <CompareSection axes={axes} results={axisResults} religion={religion} userCategory={top.category} />
-
-          <SupportSection variant="panel" />
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
