@@ -122,7 +122,7 @@ interface Strings {
   religionLabel: string;
   religionQuestion: string;
   religionNone: string;
-  religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism' | 'hinduism', string>;
+  religionNames: Record<'christianity' | 'judaism' | 'islam' | 'buddhism' | 'hinduism' | 'other', string>;
   denominationLabel: string;
   denominationQuestion: string;
   denominationNames: Record<'catholic' | 'protestant' | 'orthodox', string>;
@@ -526,13 +526,14 @@ const pt: Strings = {
   redoQuiz: 'Refazer quiz',
   religionLabel: 'Religião',
   religionQuestion: 'Você segue alguma religião? Usamos isso só para ajustar as recomendações.',
-  religionNone: 'Sem religião',
+  religionNone: 'Sem religião, agnóstico ou ateu',
   religionNames: {
     christianity: 'Cristianismo',
     judaism: 'Judaísmo',
     islam: 'Islamismo',
     buddhism: 'Budismo',
-    hinduism: 'Hinduísmo'
+    hinduism: 'Hinduísmo',
+    other: 'Outra religião'
   },
   denominationLabel: 'Vertente cristã',
   denominationQuestion: 'Qual é a sua vertente cristã? Usamos isso só para ajustar as recomendações.',
@@ -1226,13 +1227,14 @@ const en: Strings = {
   redoQuiz: 'Retake quiz',
   religionLabel: 'Religion',
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',
-  religionNone: 'No religion',
+  religionNone: 'No religion, agnostic or atheist',
   religionNames: {
     christianity: 'Christianity',
     judaism: 'Judaism',
     islam: 'Islam',
     buddhism: 'Buddhism',
-    hinduism: 'Hinduism'
+    hinduism: 'Hinduism',
+    other: 'Other religion'
   },
   denominationLabel: 'Christian tradition',
   denominationQuestion: 'Which Christian tradition do you follow?',

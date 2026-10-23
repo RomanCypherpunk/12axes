@@ -268,7 +268,9 @@ tem nenhuma das selecionáveis (`[]` ou só `["other"]`). Junto de outra religi�
 `other` é só informativo: `["buddhism", "other"]` some para quem escolheu cristianismo.
 **`["other", "only"]`** (xintoísmo e afins): o perfil some para quem escolheu qualquer religião
 selecionável e aparece só para quem não escolheu nenhuma (Aristóteles, só `["other"]`, continua
-aparecendo para todos).
+aparecendo para todos). O usuário também pode escolher **"Outra religião"** (`religion=other`):
+nesse caso some todo perfil ligado a uma religião selecionável (inclusive `["buddhism", "other"]`
+e `["judaism", "only"]`) e ficam os só com `other` (inclusive `["other", "only"]`) e os seculares (`[]`).
 
 **Texto secular com vetor religioso:** se a descrição diz que o perfil é secular mas o vetor tem
 `religiao` ≤ 35, a marcação não pode sair. Registre o perfil para reauditar o vetor em vez de

@@ -15,7 +15,7 @@ import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
 import type { AnswerSet } from './utils/editAnswers';
-import { CHRISTIAN_DENOMINATIONS, parseReligion, RELIGION_CHOICES, type Religion } from './utils/religion';
+import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -99,12 +99,21 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
 }
 
-// Últimas perguntas do bloco de arquétipos: religião (letras A-E + "sem religião" na F) e, só para
-// quem escolhe cristianismo, a vertente (católica, protestante ou ortodoxa). Nenhuma das duas vai
-// para o backend como arquétipo; viram o parâmetro religion do resultado. A letra de "sem religião"
-// já foi E (antes do hinduísmo): utils/quizProgress.ts migra o progresso salvo com esse valor.
+// Últimas perguntas do bloco de arquétipos: religião e, só para quem escolhe cristianismo, a vertente
+// (católica, protestante ou ortodoxa). Nenhuma das duas vai para o backend como arquétipo; viram o
+// parâmetro religion do resultado. As letras são fixas para não invalidar progresso salvo: "sem
+// religião" já foi E (antes do hinduísmo; utils/quizProgress.ts migra esse valor) e ficou F, e
+// "outra religião" entrou depois como G, mas aparece antes de "sem religião" na tela.
 const RELIGION_STEP_ID = 'religiao';
-const RELIGION_OPTION_IDS = ['A', 'B', 'C', 'D', 'E', 'F'];
+const RELIGION_OPTIONS = [
+  { choice: 'christianity', id: 'A' },
+  { choice: 'judaism', id: 'B' },
+  { choice: 'islam', id: 'C' },
+  { choice: 'buddhism', id: 'D' },
+  { choice: 'hinduism', id: 'E' },
+  { choice: 'other', id: 'G' },
+  { choice: 'none', id: 'F' }
+] as const;
 const DENOMINATION_STEP_ID = 'denominacao';
 const DENOMINATION_OPTION_IDS = ['A', 'B', 'C'];
 
@@ -115,10 +124,12 @@ function religionQuestion(): ArchetypeQuestion {
     text: t.religionQuestion,
     icon: RELIGION_QUESTION_ICON,
     layout: 'tiles',
-    options: [...RELIGION_CHOICES, 'none' as const].map((id, index) => ({
-      id: RELIGION_OPTION_IDS[index],
-      text: id === 'none' ? t.religionNone : t.religionNames[id],
-      icon: RELIGION_ICONS[id]
+    options: RELIGION_OPTIONS.map(({ choice, id }) => ({
+      id,
+      text: choice === 'none' ? t.religionNone : t.religionNames[choice],
+      icon: RELIGION_ICONS[choice],
+      // "Sem religião" fica numa faixa própria, separada das religiões da grade.
+      wide: choice === 'none'
     }))
   };
 }
@@ -140,7 +151,7 @@ function denominationQuestion(): ArchetypeQuestion {
 
 // Escolheu cristianismo na pergunta de religião? Então vem a pergunta da vertente.
 function chosenChristianity(choices: Record<string, string>): boolean {
-  return choices[RELIGION_STEP_ID] === RELIGION_OPTION_IDS[RELIGION_CHOICES.indexOf('christianity')];
+  return choices[RELIGION_STEP_ID] === RELIGION_OPTIONS.find((option) => option.choice === 'christianity')?.id;
 }
 
 function buildArchetypeSteps(
@@ -159,8 +170,8 @@ function resolveReligion(choices: Record<string, string>): Religion | null {
   if (chosenChristianity(choices)) {
     return CHRISTIAN_DENOMINATIONS[DENOMINATION_OPTION_IDS.indexOf(choices[DENOMINATION_STEP_ID] ?? '')] ?? null;
   }
-  const choice = RELIGION_CHOICES[RELIGION_OPTION_IDS.indexOf(choices[RELIGION_STEP_ID] ?? '')];
-  return choice && choice !== 'christianity' ? choice : null;
+  const choice = RELIGION_OPTIONS.find((option) => option.id === choices[RELIGION_STEP_ID])?.choice;
+  return choice && choice !== 'christianity' && choice !== 'none' ? choice : null;
 }
 
 function LoadingPanel({ message }: { message: string }) {

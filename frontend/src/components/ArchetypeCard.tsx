@@ -78,7 +78,11 @@ export function ArchetypeCard({ question, index, selected, disabled = false, onS
           return (
             <button
               key={option.id}
-              className={isSelected ? 'answer-button archetype-option selected' : 'answer-button archetype-option'}
+              className={[
+                'answer-button archetype-option',
+                option.wide ? 'archetype-option--wide' : '',
+                isSelected ? 'selected' : ''
+              ].filter(Boolean).join(' ')}
               type="button"
               role="radio"
               aria-checked={isSelected}

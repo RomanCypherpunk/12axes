@@ -78,7 +78,8 @@ export interface ArchetypeQuestion {
   /** Selo do cabeçalho; sem ele, usa o ícone do tema pelo id. */
   icon?: QuestionIcon;
   /** Com icon, a alternativa mostra o ícone no lugar da letra. */
-  options: { id: string; text: string; icon?: QuestionIcon }[];
+  /** wide: em layout tiles, a alternativa ocupa a linha inteira, em formato de faixa (ex.: "Sem religião"). */
+  options: { id: string; text: string; icon?: QuestionIcon; wide?: boolean }[];
   /** "tiles": alternativas em botões numa grade (3 colunas no desktop, 2 no mobile). Padrão: lista. */
   layout?: 'list' | 'tiles';
 }

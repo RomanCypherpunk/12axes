@@ -13,6 +13,10 @@ import java.util.Set;
  * (xintoismo, sikhismo, religioes antigas) continuam aparecendo. A
  * compatibilidade de cada perfil nao muda; muda so quem entra no ranking.
  *
+ * "other" tambem pode ser escolhido pelo usuario ("outra religiao"): some todo perfil ligado a
+ * uma das religioes selecionaveis e ficam os perfis so com "other" (xintoismo, sikhismo, religioes
+ * antigas) e os seculares ([]).
+ *
  * O marcador "only" (ex.: ["judaism", "only"]) torna o perfil exclusivo: ele so
  * aparece para quem escolheu uma das religioes listadas. Quem escolheu "nenhuma"
  * (ou nao escolheu) tambem nao o ve. Serve para perfis cuja identidade e a propria
@@ -31,6 +35,12 @@ public final class ReligionFilter {
     /** Religioes que o usuario pode escolher. */
     public static final List<String> SELECTABLE =
             List.of("catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "hinduism");
+
+    /**
+     * "Outra religiao": preferencia do usuario fora das selecionaveis acima. Oculta os perfis ligados
+     * a uma religiao especifica e mantem os so com "other" e os seculares.
+     */
+    public static final String OTHER = "other";
 
     /** Marcador de exclusividade: o perfil so aparece para quem escolheu uma das religioes listadas. */
     public static final String ONLY = "only";
@@ -54,25 +64,29 @@ public final class ReligionFilter {
         if (LEGACY_CHRISTIANITY.equals(value)) {
             return LEGACY_CHRISTIANITY;
         }
-        return SELECTABLE.contains(value) ? value : null;
+        return SELECTABLE.contains(value) || OTHER.equals(value) ? value : null;
     }
 
     public static boolean allows(List<String> religions, String preference) {
         if (religions == null || religions.isEmpty()) {
             return true;
         }
+        boolean hasSelectable = religions.stream().anyMatch(SELECTABLE::contains);
+        if (OTHER.equals(preference)) {
+            // "Outra religiao": so entra quem nao esta ligado a nenhuma religiao selecionavel.
+            return !hasSelectable;
+        }
         List<String> preferred = preferredReligions(preference);
         boolean matches = religions.stream().anyMatch(preferred::contains);
         if (religions.contains(ONLY)) {
-            // ["other", "only"] (ex.: xintoismo): ninguem escolhe "other", entao o perfil fica so para
-            // quem nao escolheu religiao e some para quem e de qualquer uma das religioes selecionaveis.
-            boolean hasSelectable = religions.stream().anyMatch(SELECTABLE::contains);
+            // ["other", "only"] (ex.: xintoismo): o perfil fica so para quem nao escolheu religiao (ou
+            // escolheu "outra religiao", tratado acima) e some para qualquer religiao selecionavel.
             return hasSelectable ? matches : preference == null;
         }
         if (preference == null) {
             return true;
         }
-        return matches || religions.stream().noneMatch(SELECTABLE::contains);
+        return matches || !hasSelectable;
     }
 
     private static List<String> preferredReligions(String preference) {

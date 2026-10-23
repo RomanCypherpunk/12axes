@@ -128,7 +128,7 @@ class ReligionFilterTest {
     void unknownOrMissingPreferenceMeansNoFilter() {
         assertThat(ReligionFilter.normalize(null)).isNull();
         assertThat(ReligionFilter.normalize("xyz")).isNull();
-        assertThat(ReligionFilter.normalize("other")).isNull();
+        assertThat(ReligionFilter.normalize("other")).isEqualTo("other");
         assertThat(ReligionFilter.normalize(" Catholic ")).isEqualTo("catholic");
         // Links antigos com religion=christianity continuam valendo (qualquer denominacao crista).
         assertThat(ReligionFilter.normalize(" Christianity ")).isEqualTo("christianity");
@@ -165,6 +165,20 @@ class ReligionFilterTest {
         assertThat(ReligionFilter.allows(shinto, null)).isTrue();
         // Sem o "only", "other" segue sendo curinga.
         assertThat(ReligionFilter.allows(List.of("other"), "catholic")).isTrue();
+    }
+
+    // "Outra religiao": some quem e ligado a uma religiao selecionavel, ficam so "other" e os seculares.
+    @Test
+    void otherReligionKeepsOnlyOtherAndSecularProfiles() {
+        assertThat(ReligionFilter.allows(List.of("other"), "other")).isTrue();
+        assertThat(ReligionFilter.allows(List.of(), "other")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("other", ReligionFilter.ONLY), "other")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("catholic"), "other")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("islam", "other"), "other")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("judaism", ReligionFilter.ONLY), "other")).isFalse();
+        // As demais preferencias seguem como antes.
+        assertThat(ReligionFilter.allows(List.of("other"), "catholic")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("other", ReligionFilter.ONLY), "catholic")).isFalse();
     }
 
     @Test

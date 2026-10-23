@@ -61,6 +61,12 @@ export const RELIGION_ICONS: Record<Religion | ReligionChoice | 'none', FilledIc
       'M6 2s1.598 2.82 4 .5c.331.5 1 1.5 1 1.5S7.557 6.356 6 2M1 4c.289.609.66 1.357 1 2c.504-1 2-1 2-1c1 0 1.734.392 1.734 1.027S5 7 4 7v1.5c1.31-.249 2.003.79 1.682 1.507C5.075 11.367 1.504 11.527 0 9c0 3.988 3.441 4 4 4c2 0 3-2 3-4c.52.543 1.355.546 2 0c.905-.765 1.259-2.01 2.5-2c1.514.012 1.5 3 .5 4s-3.394.645-4-1c0 1 0 3.001 3 3s3.608-3.384 2.5-6c-.685-1.617-1.967-2.05-3.35-1.622C9.082 5.71 9.13 6.183 8.5 7C8.17 7.396 8 8 7 8c-.347 0-.772-.274-1-.5C7.238 6.615 7.056 4.913 6 4c-1.388-1.2-3.84-.955-5 0m6-2l1-1l1 1l-1 1z'
     ]
   },
+  // Outra religião: brilho de quatro pontas (qualquer fé fora das listadas).
+  other: {
+    viewBox: '0 0 24 24',
+    fillRule: 'nonzero',
+    paths: ['M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z']
+  },
   // Mesmo ícone do polo "Irreligioso" do eixo religião.
   none: FILLED_POLE_ICONS.religiao.left!
 };

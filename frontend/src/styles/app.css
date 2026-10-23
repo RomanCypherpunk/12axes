@@ -11936,6 +11936,20 @@
 .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:focus-visible {
   transform: none;
 }
+/* Alternativa em faixa (ex.: "Sem religião"): linha inteira, ícone ao lado do nome, um pouco afastada
+   da grade para ler como "nenhuma das opções acima". */
+.app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 18px;
+  margin-top: 6px;
+}
+.app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option--wide .answer-icon {
+  width: 34px;
+  height: 34px;
+}
 @media (hover: hover) and (pointer: fine) {
   .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:hover:not(:disabled) {
     transform: translateY(-2px);
@@ -11953,6 +11967,11 @@
   /* Número ímpar de alternativas (ex.: 3 vertentes cristãs): a última ocupa a largura toda. */
   .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:nth-child(odd):last-child {
     grid-column: 1 / -1;
+  }
+  .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option--wide {
+    min-height: 56px;
+    padding: 10px 14px;
+    margin-top: 2px;
   }
 }
 

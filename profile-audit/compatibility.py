@@ -55,12 +55,17 @@ CHRISTIAN = ["catholic", "protestant", "orthodox"]
 LEGACY_CHRISTIANITY = "christianity"
 SELECTABLE = ["catholic", "protestant", "orthodox", "judaism", "islam", "buddhism", "hinduism"]
 ONLY = "only"
+OTHER = "other"  # "outra religiao": preferencia do usuario fora das selecionaveis
 
 
 def religion_allows(religions, preference):
     """Mesma regra de ReligionFilter.allows: o filtro exclui, nao exige."""
     if not religions:
         return True
+    has_selectable = any(r in SELECTABLE for r in religions)
+    if preference == OTHER:
+        # So entra quem nao esta ligado a nenhuma religiao selecionavel.
+        return not has_selectable
     if preference is None:
         preferred = []
     elif preference == LEGACY_CHRISTIANITY:
@@ -69,11 +74,10 @@ def religion_allows(religions, preference):
         preferred = [preference]
     matches = any(r in preferred for r in religions)
     if ONLY in religions:
-        has_selectable = any(r in SELECTABLE for r in religions)
         return matches if has_selectable else preference is None
     if preference is None:
         return True
-    return matches or not any(r in SELECTABLE for r in religions)
+    return matches or not has_selectable
 
 
 def opposite_side_factor(u, t):
