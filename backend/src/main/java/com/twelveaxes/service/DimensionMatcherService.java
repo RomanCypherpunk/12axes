@@ -19,10 +19,10 @@ import org.springframework.stereotype.Service;
  * A compatibilidade geral responde "com quem voce mais se parece". Estas tres
  * respondem "quem, entre os politicos e teoricos, entre os pensadores e
  * ativistas e entre os economistas e empresarios, mais se parece com voce".
- * Politica e social usam a compatibilidade dos 12 eixos; a economica usa so os
- * tres eixos economicos ({@link #ECONOMIC_AXES}). Alem disso, cada area compara
- * apenas o grupo de pessoas dela: um filosofo nao entra na disputa economica,
- * nem um economista na politica.
+ * As tres usam a compatibilidade dos 12 eixos; o que muda e o grupo de pessoas
+ * comparado em cada area: um filosofo nao entra na disputa economica, nem um
+ * economista na politica. Quem ja apareceu como destaque, na area politica ou
+ * na social nao se repete nas seguintes.
  *
  * Os grupos de eixos de {@link #POLITICAL_AXES}, {@link #SOCIAL_AXES} e
  * {@link #ECONOMIC_AXES} seguem valendo para paises e partidos.
@@ -58,7 +58,7 @@ public class DimensionMatcherService {
 
     /**
      * Quem atua na economia: economistas, empresarios e politicos (quem governa
-     * decide politica economica, e a nota so olha os tres eixos economicos).
+     * decide politica economica).
      */
     public static final Set<String> ECONOMIC_CATEGORIES = Set.of("politico", "economista", "empresario");
 
@@ -141,7 +141,7 @@ public class DimensionMatcherService {
         List<Scored> scored = personalities.stream()
                 .map(personality -> new Scored(
                         personality,
-                        scoreFor(dimension, userVector, targetVectorFor(personality))))
+                        profileMatchScorer.compatibility(userVector, targetVectorFor(personality))))
                 .sorted(byScore.thenComparing(byName))
                 .toList();
 
@@ -149,14 +149,6 @@ public class DimensionMatcherService {
         List<Double> allScores = scored.stream().map(Scored::score).toList();
         Scored best = scored.getFirst();
         return toMatch(best, profileMatchScorer.percentile(best.score(), allScores));
-    }
-
-    // Politica e social usam os 12 eixos; a economica olha so os eixos economicos.
-    private double scoreFor(String dimension, Map<String, Double> userVector, Map<String, Double> targetVector) {
-        if (ECONOMIC.equals(dimension)) {
-            return profileMatchScorer.compatibility(userVector, targetVector, ECONOMIC_AXES);
-        }
-        return profileMatchScorer.compatibility(userVector, targetVector);
     }
 
     private PersonalityMatch toMatch(Scored scored, double percentile) {

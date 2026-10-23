@@ -125,21 +125,27 @@ class DimensionMatcherServiceTest {
         });
     }
 
-    // A economica olha so economia, controle e comercio.
+    // A economica mostra o mais compativel (12 eixos) entre economistas, politicos e
+    // empresarios, sem repetir quem ja apareceu como destaque, na politica ou no social.
     @Test
-    void economicDimensionUsesOnlyTheEconomicAxes() {
+    void economicDimensionPicksTheMostCompatibleNotAlreadyShown() {
         var axes = perfilDeTeste();
         var userVector = profileMatchScorer.userVectorFor(axes);
+        var top = personalityMatcherService.findTopMatch(axes, QuizDataService.LANG_PT);
+        var dimensoes = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT, top.personalityId());
+        var jaMostrados = new java.util.HashSet<String>();
+        jaMostrados.add(top.personalityId());
+        dimensoes.stream()
+                .filter(dimensao -> !dimensao.dimension().equals(DimensionMatcherService.ECONOMIC))
+                .forEach(dimensao -> jaMostrados.add(dimensao.match().personalityId()));
+
         var esperado = dataService.getPersonalities().stream()
                 .filter(p -> DimensionMatcherService.ECONOMIC_CATEGORIES.contains(p.category()))
-                .max(java.util.Comparator.comparingDouble(p -> {
-                    var alvo = dataService.getPersonalityProfiles().get(p.id()).vector();
-                    return profileMatchScorer.compatibility(
-                            userVector, alvo, DimensionMatcherService.ECONOMIC_AXES);
-                }))
+                .filter(p -> !jaMostrados.contains(p.id()))
+                .max(java.util.Comparator.comparingDouble(p -> profileMatchScorer.compatibility(
+                        userVector, dataService.getPersonalityProfiles().get(p.id()).vector())))
                 .orElseThrow();
-
-        var economica = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT).stream()
+        var economica = dimensoes.stream()
                 .filter(dimensao -> dimensao.dimension().equals(DimensionMatcherService.ECONOMIC))
                 .findFirst().orElseThrow();
 
