@@ -38,13 +38,16 @@ const religionLiteral = religionSource
   .replace('FILLED_POLE_ICONS.religiao.left!', 'FILLED_POLE_ICONS.religiao.left');
 const RELIGION_ICONS = new Function('FILLED_POLE_ICONS', `return (${religionLiteral});`)(FILLED);
 
-// Religião que define o ícone do perfil: a única religião selecionável marcada
-// (com duas ou mais diferentes, ou só "other"/"only", fica a cruz padrão).
+// Religião que define o ícone do perfil: a única religião selecionável marcada; sem nenhuma
+// selecionável, mas marcado "other" (espiritismo, siquismo, xintoísmo...), vale o ícone de
+// "outra religião" (a mesma regra do resultado). Com duas ou mais religiões diferentes, ou
+// sem marcação, fica a cruz padrão.
 const SELECTABLE_RELIGIONS = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism', 'hinduism'];
 
 export function profileReligion(religions) {
   const picked = (religions ?? []).filter((r) => SELECTABLE_RELIGIONS.includes(r));
-  return picked.length === 1 ? picked[0] : null;
+  if (picked.length === 1) return picked[0];
+  return picked.length === 0 && (religions ?? []).includes('other') ? 'other' : null;
 }
 
 export function religionPoleUse(religion, attrs = '') {

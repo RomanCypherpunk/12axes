@@ -34,6 +34,15 @@ describe('religionAllows (porte de ReligionFilter.java)', () => {
     expect(religionAllows(['other'], null)).toBe(true);
   });
 
+  it('"outra religião" some quem é ligado a uma religião específica e mantém só "other" e os seculares', () => {
+    expect(religionAllows(['other'], 'other')).toBe(true);
+    expect(religionAllows([], 'other')).toBe(true);
+    expect(religionAllows(['other', 'only'], 'other')).toBe(true);
+    expect(religionAllows(['catholic'], 'other')).toBe(false);
+    expect(religionAllows(['islam', 'other'], 'other')).toBe(false);
+    expect(religionAllows(['judaism', 'only'], 'other')).toBe(false);
+  });
+
   it('"only" aparece só para quem escolheu uma das religiões listadas', () => {
     expect(religionAllows(['judaism', 'only'], 'judaism')).toBe(true);
     expect(religionAllows(['judaism', 'only'], 'catholic')).toBe(false);
@@ -61,6 +70,15 @@ describe('religionVisibility (página do perfil)', () => {
     const visible = religionVisibility({ religions: [] });
     expect(visible({ religions: ['judaism', 'only'] })).toBe(false);
     expect(visible({ religions: ['islam'] })).toBe(true);
+  });
+
+  it('perfil só com "other" vê o ranking como quem escolheu "outra religião"', () => {
+    const visible = religionVisibility({ religions: ['other'] });
+    expect(visible({ religions: ['catholic'] })).toBe(false);
+    expect(visible({ religions: ['islam', 'other'] })).toBe(false);
+    expect(visible({ religions: ['other'] })).toBe(true);
+    expect(visible({ religions: ['other', 'only'] })).toBe(true);
+    expect(visible({ religions: [] })).toBe(true);
   });
 
   it('com mais de uma religião basta servir a uma delas', () => {
@@ -103,10 +121,15 @@ describe('profileReligion (ícone do polo Religioso na página do perfil)', () =
     expect(profileReligion(['hinduism'])).toBe('hinduism');
   });
 
-  it('mantém a cruz padrão sem religião, só com "other" ou com religiões diferentes', () => {
+  it('só com "other" usa o ícone de outra religião', () => {
+    expect(profileReligion(['other'])).toBe('other');
+    expect(profileReligion(['other', 'only'])).toBe('other');
+    expect(profileReligion(['buddhism', 'other'])).toBe('buddhism');
+  });
+
+  it('mantém a cruz padrão sem religião ou com religiões diferentes', () => {
     expect(profileReligion([])).toBeNull();
     expect(profileReligion(undefined)).toBeNull();
-    expect(profileReligion(['other'])).toBeNull();
     expect(profileReligion(['catholic', 'islam'])).toBeNull();
     expect(profileReligion(['catholic', 'protestant'])).toBeNull();
   });

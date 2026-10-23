@@ -101,27 +101,36 @@ export function dimensionMatches(user, items, vectorOf, excludeIds = []) {
 // Porte de ReligionFilter.java. Na tela de resultado o usuário escolhe uma
 // religião e o ranking exclui os perfis ligados só a outras religiões; "only"
 // torna o perfil exclusivo de quem escolheu uma das religiões listadas.
+// "other" ("outra religião") também pode ser a preferência: some todo perfil
+// ligado a uma religião selecionável e ficam os só com "other" e os seculares.
 export const SELECTABLE_RELIGIONS = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism', 'hinduism'];
+export const OTHER_RELIGION = 'other';
 const ONLY = 'only';
 
 export function religionAllows(religions, preference) {
   if (!religions || religions.length === 0) return true;
+  const hasSelectable = religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
+  if (preference === OTHER_RELIGION) return !hasSelectable;
   if (religions.includes(ONLY)) {
-    // ["other", "only"] (xintoísmo): fica só para quem não escolheu religião.
-    const hasSelectable = religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
+    // ["other", "only"] (xintoísmo): fica só para quem não escolheu religião (ou escolheu "outra").
     return hasSelectable ? preference != null && religions.includes(preference) : preference == null;
   }
   if (preference == null) return true;
-  return religions.includes(preference) || !religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
+  return religions.includes(preference) || !hasSelectable;
 }
 
 // Nas páginas de perfil, a religião do próprio perfil faz o papel da escolha
 // do usuário: um perfil cristão só vê, nos rankings, perfis compatíveis com o
-// cristianismo (some o "only" de outras religiões); um perfil sem religião
-// selecionável equivale a "nenhuma" e também não vê perfis "only".
+// cristianismo (some o "only" de outras religiões); um perfil só com "other"
+// equivale a "outra religião" (some quem é ligado a uma religião específica);
+// um perfil sem religião equivale a "nenhuma" e também não vê perfis "only".
 // Com mais de uma religião, basta o item servir a uma delas.
 export function religionVisibility(subject) {
-  const prefs = (subject?.religions ?? []).filter((r) => SELECTABLE_RELIGIONS.includes(r));
-  if (prefs.length === 0) return (item) => religionAllows(item.religions, null);
+  const religions = subject?.religions ?? [];
+  const prefs = religions.filter((r) => SELECTABLE_RELIGIONS.includes(r));
+  if (prefs.length === 0) {
+    const preference = religions.includes(OTHER_RELIGION) ? OTHER_RELIGION : null;
+    return (item) => religionAllows(item.religions, preference);
+  }
   return (item) => prefs.some((pref) => religionAllows(item.religions, pref));
 }

@@ -30,6 +30,7 @@ export const FILTER_STR = {
       islam: 'Islã',
       buddhism: 'Budismo',
       hinduism: 'Hinduísmo',
+      other: 'Outra religião',
       secular: 'Laico / Sem religião'
     },
     eras: {
@@ -66,6 +67,7 @@ export const FILTER_STR = {
       islam: 'Islam',
       buddhism: 'Buddhism',
       hinduism: 'Hinduism',
+      other: 'Other religion',
       secular: 'Secular / Non-religious'
     },
     eras: {
@@ -130,7 +132,7 @@ export function renderFilterDrawer({ axes, locale, type = 'generic', escapeHtml 
   // Seção de religião (para países e personalidades)
   let religionSection = '';
   if (type === 'countries' || type === 'personalities') {
-    const relKeys = ['catholic', 'protestant', 'orthodox', 'islam', 'judaism', 'buddhism', 'hinduism', 'secular'];
+    const relKeys = ['catholic', 'protestant', 'orthodox', 'islam', 'judaism', 'buddhism', 'hinduism', 'other', 'secular'];
     const relBtns = relKeys
       .map(
         (key) => `
