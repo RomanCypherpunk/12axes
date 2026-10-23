@@ -8975,5 +8975,33 @@
     "religions": [
       "catholic"
     ]
+  },
+  {
+    "id": "john-adams",
+    "name": "John Adams",
+    "role": "Estadista",
+    "category": "politico",
+    "lifespan": "1735–1826",
+    "description": "Fundador e segundo presidente dos Estados Unidos, Adams liderou os federalistas, defendeu um governo misto com Executivo forte e Senado de elite, evitou a guerra com a França e assinou as Leis de Estrangeiros e Sedição.",
+    "imagePath": "/personalities/portraits/john-adams.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/John_Adams",
+    "imageNote": "Retrato de John Adams via Wikipédia/Wikimedia Commons.",
+    "religions": [
+      "protestant"
+    ]
+  },
+  {
+    "id": "james-monroe",
+    "name": "James Monroe",
+    "role": "Estadista",
+    "category": "politico",
+    "lifespan": "1758–1831",
+    "description": "Quinto presidente dos Estados Unidos, Monroe presidiu a Era dos Bons Sentimentos, proclamou a Doutrina Monroe contra a recolonização europeia das Américas, comprou a Flórida e sancionou o Compromisso do Missouri, mantendo a escravidão.",
+    "imagePath": "/personalities/portraits/james-monroe.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://en.wikipedia.org/wiki/James_Monroe",
+    "imageNote": "Retrato de James Monroe via Wikipédia/Wikimedia Commons.",
+    "religions": []
   }
 ]

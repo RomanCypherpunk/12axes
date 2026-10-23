@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-23T15:17:23Z",
+  "lastUpdated": "2026-10-23T15:55:40Z",
   "personality": {
-    "totalProfiles": 633,
+    "totalProfiles": 635,
     "pending": [],
     "done": [
       "lenin",
@@ -637,7 +637,9 @@
       "itamar-franco",
       "fernando-collor",
       "julio-prestes",
-      "joao-figueiredo"
+      "joao-figueiredo",
+      "john-adams",
+      "james-monroe"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
@@ -1241,7 +1243,7 @@
   },
   "totalProfiles": 1188,
   "party": {
-    "totalProfiles": 202,
+    "totalProfiles": 203,
     "pending": [],
     "done": [
       "nsdap",
@@ -1445,7 +1447,8 @@
       "csu",
       "forza-italia",
       "avante",
-      "refah-partisi"
+      "refah-partisi",
+      "partido-federalista-eua"
     ]
   }
 }
