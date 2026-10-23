@@ -11958,20 +11958,37 @@
 @media (max-width: 760px) {
   .app-shell[data-screen="quiz"] .archetype-card--tiles .answer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
+  /* No celular as alternativas viram cards baixos, com o ícone ao lado do nome: a pergunta inteira
+     (seis religiões, "sem religião" e os botões) cabe na primeira dobra, sem rolar. */
   .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option {
-    min-height: 104px;
-    padding: 14px 8px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 54px;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option .answer-icon {
+    flex: none;
+    width: 32px;
+    height: 32px;
+  }
+  .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-letter .archetype-option-ico {
+    width: 17px;
+    height: 17px;
   }
   /* Número ímpar de alternativas (ex.: 3 vertentes cristãs): a última ocupa a largura toda. */
   .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option:nth-child(odd):last-child {
     grid-column: 1 / -1;
   }
   .app-shell[data-screen="quiz"] .archetype-card--tiles .archetype-option--wide {
-    min-height: 56px;
-    padding: 10px 14px;
-    margin-top: 2px;
+    min-height: 54px;
+    padding: 8px 12px;
+    margin-top: 0;
   }
 }
 
