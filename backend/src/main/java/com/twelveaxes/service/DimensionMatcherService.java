@@ -14,13 +14,18 @@ import java.util.Set;
 import org.springframework.stereotype.Service;
 
 /**
- * Personalidade mais compativel com o usuario em cada dimensao do perfil.
+ * Personalidade mais compativel com o usuario em cada area de atuacao.
  *
- * A compatibilidade geral soma os 12 eixos e responde "com quem voce mais se
- * parece". Estas tres respondem algo mais especifico: com quem voce combina
- * POLITICAMENTE, SOCIALMENTE e ECONOMICAMENTE, olhando so os eixos daquele
- * grupo. Sao perguntas diferentes, e as respostas costumam ser pessoas
- * diferentes.
+ * A compatibilidade geral responde "com quem voce mais se parece". Estas tres
+ * respondem "quem, entre os politicos e teoricos, entre os pensadores e
+ * ativistas e entre os economistas e empresarios, mais se parece com voce".
+ * Politica e social usam a compatibilidade dos 12 eixos; a economica usa so os
+ * tres eixos economicos ({@link #ECONOMIC_AXES}). Alem disso, cada area compara
+ * apenas o grupo de pessoas dela: um filosofo nao entra na disputa economica,
+ * nem um economista na politica.
+ *
+ * Os grupos de eixos de {@link #POLITICAL_AXES}, {@link #SOCIAL_AXES} e
+ * {@link #ECONOMIC_AXES} seguem valendo para paises e partidos.
  */
 @Service
 public class DimensionMatcherService {
@@ -38,6 +43,24 @@ public class DimensionMatcherService {
 
     /** Propriedade, coordenacao da producao e abertura comercial. */
     public static final List<String> ECONOMIC_AXES = List.of("economia", "controle", "comercio");
+
+    /**
+     * Quem atua na politica: governantes, estadistas, formuladores de doutrina e
+     * militantes. {@code ativista} tambem esta em {@link #SOCIAL_CATEGORIES}: boa
+     * parte (revolucionarios, lideres de movimento) e ator politico, o resto
+     * (direitos civis, cultura) e social. Como a dimensao politica e calculada
+     * primeiro, a pessoa fica com a que mais combina.
+     */
+    public static final Set<String> POLITICAL_CATEGORIES = Set.of("politico", "teorico", "ativista");
+
+    /** Quem molda costumes, fe e ideias: filosofos, religiosos, intelectuais e ativistas. */
+    public static final Set<String> SOCIAL_CATEGORIES = Set.of("filosofo", "religioso", "intelectual", "ativista");
+
+    /**
+     * Quem atua na economia: economistas, empresarios e politicos (quem governa
+     * decide politica economica, e a nota so olha os tres eixos economicos).
+     */
+    public static final Set<String> ECONOMIC_CATEGORIES = Set.of("politico", "economista", "empresario");
 
     public static final String POLITICAL = "political";
     public static final String SOCIAL = "social";
@@ -70,9 +93,9 @@ public class DimensionMatcherService {
         if (excludeId != null) {
             excludedIds.add(excludeId);
         }
-        addIfPresent(matches, excludedIds, POLITICAL, POLITICAL_AXES, axisResults, lang, religion);
-        addIfPresent(matches, excludedIds, SOCIAL, SOCIAL_AXES, axisResults, lang, religion);
-        addIfPresent(matches, excludedIds, ECONOMIC, ECONOMIC_AXES, axisResults, lang, religion);
+        addIfPresent(matches, excludedIds, POLITICAL, POLITICAL_CATEGORIES, axisResults, lang, religion);
+        addIfPresent(matches, excludedIds, SOCIAL, SOCIAL_CATEGORIES, axisResults, lang, religion);
+        addIfPresent(matches, excludedIds, ECONOMIC, ECONOMIC_CATEGORIES, axisResults, lang, religion);
         return List.copyOf(matches);
     }
 
@@ -84,11 +107,11 @@ public class DimensionMatcherService {
             List<DimensionMatch> matches,
             Set<String> excludedIds,
             String dimension,
-            List<String> axisIds,
+            Set<String> categories,
             List<AxisResult> axisResults,
             String lang,
             String religion) {
-        PersonalityMatch match = findBestFor(axisIds, axisResults, lang, religion, excludedIds);
+        PersonalityMatch match = findBestFor(dimension, categories, axisResults, lang, religion, excludedIds);
         if (match != null) {
             matches.add(new DimensionMatch(dimension, match));
             excludedIds.add(match.personalityId());
@@ -96,7 +119,8 @@ public class DimensionMatcherService {
     }
 
     private PersonalityMatch findBestFor(
-            List<String> axisIds,
+            String dimension,
+            Set<String> categories,
             List<AxisResult> axisResults,
             String lang,
             String religion,
@@ -104,6 +128,7 @@ public class DimensionMatcherService {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         List<Personality> personalities = dataService.getPersonalities(QuizDataService.normalizeLang(lang)).stream()
                 .filter(personality -> !excludedIds.contains(personality.id()))
+                .filter(personality -> categories.contains(personality.category()))
                 .filter(personality -> ReligionFilter.allows(personality.religions(), religion))
                 .toList();
         if (personalities.isEmpty()) {
@@ -116,15 +141,22 @@ public class DimensionMatcherService {
         List<Scored> scored = personalities.stream()
                 .map(personality -> new Scored(
                         personality,
-                        profileMatchScorer.compatibility(userVector, targetVectorFor(personality), axisIds)))
+                        scoreFor(dimension, userVector, targetVectorFor(personality))))
                 .sorted(byScore.thenComparing(byName))
                 .toList();
 
-        // O percentil compara a nota da dimensao com as notas da mesma dimensao,
-        // nunca com as dos 12 eixos.
+        // O percentil compara a nota com as dos demais da mesma area de atuacao.
         List<Double> allScores = scored.stream().map(Scored::score).toList();
         Scored best = scored.getFirst();
         return toMatch(best, profileMatchScorer.percentile(best.score(), allScores));
+    }
+
+    // Politica e social usam os 12 eixos; a economica olha so os eixos economicos.
+    private double scoreFor(String dimension, Map<String, Double> userVector, Map<String, Double> targetVector) {
+        if (ECONOMIC.equals(dimension)) {
+            return profileMatchScorer.compatibility(userVector, targetVector, ECONOMIC_AXES);
+        }
+        return profileMatchScorer.compatibility(userVector, targetVector);
     }
 
     private PersonalityMatch toMatch(Scored scored, double percentile) {

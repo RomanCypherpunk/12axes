@@ -23,6 +23,9 @@ class DimensionMatcherServiceTest {
     @Autowired
     private PersonalityMatcherService personalityMatcherService;
 
+    @Autowired
+    private com.twelveaxes.service.ProfileMatchScorer profileMatchScorer;
+
     private List<AxisResult> axesCom(List<Double> valores) {
         var axes = dataService.getAxes();
         return java.util.stream.IntStream.range(0, axes.size())
@@ -68,18 +71,79 @@ class DimensionMatcherServiceTest {
         });
     }
 
-    // A pergunta "com quem combino economicamente" e diferente de "com quem
-    // combino no geral": restringir os eixos tem de poder mudar a resposta.
+    // Cada dimensao so sugere personalidades da area de atuacao correspondente.
     @Test
-    void dimensionScoresDifferFromTheOverallScore() {
-        var axes = perfilDeTeste();
-        var geral = personalityMatcherService.findTopMatch(axes, QuizDataService.LANG_PT);
-        var dimensoes = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT);
+    void eachDimensionOnlySuggestsPersonalitiesFromItsCategories() {
+        var dimensoes = dimensionMatcherService.findAll(perfilDeTeste(), QuizDataService.LANG_PT);
 
-        assertThat(dimensoes)
-                .as("ao menos uma dimensao deve dar nota diferente da geral")
-                .anySatisfy(dimensao -> assertThat(dimensao.match().compatibility())
-                        .isNotEqualTo(geral.compatibility()));
+        assertThat(dimensoes).allSatisfy(dimensao -> {
+            var categorias = switch (dimensao.dimension()) {
+                case DimensionMatcherService.POLITICAL -> DimensionMatcherService.POLITICAL_CATEGORIES;
+                case DimensionMatcherService.SOCIAL -> DimensionMatcherService.SOCIAL_CATEGORIES;
+                default -> DimensionMatcherService.ECONOMIC_CATEGORIES;
+            };
+            assertThat(categorias).contains(dimensao.match().category());
+        });
+    }
+
+    // Toda categoria do catalogo pertence a alguma dimensao; politico e ativista estao em duas.
+    @Test
+    void everyPersonalityCategoryBelongsToSomeDimension() {
+        var todas = new java.util.ArrayList<String>();
+        todas.addAll(DimensionMatcherService.POLITICAL_CATEGORIES);
+        todas.addAll(DimensionMatcherService.SOCIAL_CATEGORIES);
+        todas.addAll(DimensionMatcherService.ECONOMIC_CATEGORIES);
+
+        assertThat(todas).containsOnlyOnce(
+                "teorico", "filosofo", "religioso", "intelectual", "economista", "empresario");
+        assertThat(todas.stream().filter("ativista"::equals)).hasSize(2);
+        assertThat(todas.stream().filter("politico"::equals)).hasSize(2);
+        assertThat(dataService.getPersonalities().stream().map(p -> p.category()).distinct().toList())
+                .allMatch(todas::contains);
+    }
+
+    // Politica e social mostram quem tem a maior compatibilidade geral (12 eixos)
+    // entre as categorias delas.
+    @Test
+    void politicalAndSocialPickTheHighestOverallCompatibilityInTheirCategories() {
+        var axes = perfilDeTeste();
+        var dimensoes = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT);
+        var melhorPorCategoria = personalityMatcherService.findBestPerCategory(axes, QuizDataService.LANG_PT);
+
+        assertThat(dimensoes).filteredOn(dimensao -> !dimensao.dimension().equals(DimensionMatcherService.ECONOMIC))
+                .allSatisfy(dimensao -> {
+            var categorias = switch (dimensao.dimension()) {
+                case DimensionMatcherService.POLITICAL -> DimensionMatcherService.POLITICAL_CATEGORIES;
+                default -> DimensionMatcherService.SOCIAL_CATEGORIES;
+            };
+            double maiorNota = melhorPorCategoria.stream()
+                    .filter(match -> categorias.contains(match.category()))
+                    .mapToDouble(match -> match.compatibility())
+                    .max()
+                    .orElseThrow();
+            assertThat(dimensao.match().compatibility()).isEqualTo(maiorNota);
+        });
+    }
+
+    // A economica olha so economia, controle e comercio.
+    @Test
+    void economicDimensionUsesOnlyTheEconomicAxes() {
+        var axes = perfilDeTeste();
+        var userVector = profileMatchScorer.userVectorFor(axes);
+        var esperado = dataService.getPersonalities().stream()
+                .filter(p -> DimensionMatcherService.ECONOMIC_CATEGORIES.contains(p.category()))
+                .max(java.util.Comparator.comparingDouble(p -> {
+                    var alvo = dataService.getPersonalityProfiles().get(p.id()).vector();
+                    return profileMatchScorer.compatibility(
+                            userVector, alvo, DimensionMatcherService.ECONOMIC_AXES);
+                }))
+                .orElseThrow();
+
+        var economica = dimensionMatcherService.findAll(axes, QuizDataService.LANG_PT).stream()
+                .filter(dimensao -> dimensao.dimension().equals(DimensionMatcherService.ECONOMIC))
+                .findFirst().orElseThrow();
+
+        assertThat(economica.match().personalityId()).isEqualTo(esperado.id());
     }
 
     // A secao se chama "tambem proximos": repetir quem ja aparece como destaque
