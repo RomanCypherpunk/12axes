@@ -212,6 +212,7 @@ function buildShareHeader(): HTMLElement {
       fontSize: '30px',
       letterSpacing: '0.16em',
       textTransform: 'uppercase',
+      whiteSpace: 'nowrap',
       color: rgba(P, 0.82)
     }, t.shareResultLabel)
   );
@@ -238,14 +239,40 @@ function buildShareIdentity(result: QuizResult, bgColor: string): HTMLElement {
     el('div', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '600',
-      fontSize: '76px',
+      fontSize: `${fitTitleFontSize(result.topMatch.name)}px`,
       lineHeight: '1.05',
       letterSpacing: '-0.02em',
+      // Uma linha só: a faixa do título é fixa e uma segunda linha sobrepõe o retrato e os eixos.
+      whiteSpace: 'nowrap',
+      // Altura fixa (a do tamanho máximo): título menor não puxa o resto do card para cima.
+      height: `${Math.round(TITLE_MAX_PX * 1.05)}px`,
+      display: 'flex',
+      alignItems: 'center',
       color: P,
       marginTop: '-8px'
     }, result.topMatch.name)
   );
   return wrap;
+}
+
+const TITLE_MAX_PX = 76;
+const TITLE_MIN_PX = 40;
+// Largura útil do título (card menos o padding de 64px de cada lado) com folga: a fonte do
+// aparelho pode renderizar um pouco mais larga que a medida aqui e o título não pode quebrar.
+const TITLE_MAX_WIDTH = (SHARE_WIDTH - 128) * 0.88;
+
+/** Maior tamanho (até 76px) em que o nome da ideologia cabe numa linha. */
+function fitTitleFontSize(text: string): number {
+  const ctx = document.createElement('canvas').getContext('2d');
+  if (!ctx) {
+    return TITLE_MAX_PX;
+  }
+  ctx.font = `600 ${TITLE_MAX_PX}px ${SHARE_FONT_DISPLAY}, sans-serif`;
+  const width = ctx.measureText(text).width;
+  if (!width || width <= TITLE_MAX_WIDTH) {
+    return TITLE_MAX_PX;
+  }
+  return Math.max(TITLE_MIN_PX, Math.floor((TITLE_MAX_PX * TITLE_MAX_WIDTH) / width));
 }
 
 function buildShareTwoColumns(

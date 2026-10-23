@@ -176,7 +176,7 @@ Exemplo de objeto novo em `personalities.json` (campos de imagem preenchidos no 
 {
   "id": "exemplo-pessoa",
   "name": "Exemplo Pessoa",
-  "role": "Estadista",
+  "role": "Fundador do Partido Exemplo",
   "category": "politico",
   "lifespan": "1900–1980",
   "description": "Descrição factual de 1-3 frases sobre a trajetória e ideias da pessoa.",
@@ -204,9 +204,40 @@ atuação" da página de resultados. São **8 valores fechados** — nunca inven
 | `intelectual` | escritores, jornalistas, juristas, cientistas, militares, historiadores |
 | `ativista` | militantes de movimentos sociais e de direitos civis |
 
-**`role` e `category` são coisas diferentes.** `role` continua em texto livre e descreve
-("Ditador", "Criptógrafo", "Teórico marxista"); `category` agrupa. Stálin é `role: "Ditador"`
-com `category: "politico"`.
+**`role` e `category` são coisas diferentes.** `role` é um texto curto que responde **"quem é
+essa pessoa e por que ela é conhecida?"** (ver a subseção abaixo); `category` agrupa. Stálin
+é `role: "Líder da União Soviética"` com `category: "politico"`.
+
+### O campo `role` (só personalidades)
+
+O `role` aparece no card da personalidade, nos resultados e no **card de compartilhamento
+(imagem)**, onde texto grande quebra feio. Ele diz por que a pessoa é conhecida, não apenas a
+ocupação. Vale para o PT (`personalities.json`) e para o EN (`i18n/en/personalities.json`), que
+dizem a mesma coisa.
+
+1. **Tamanho:** no máximo **30 caracteres e 5 palavras** (meta: 4 ou menos), em PT **e** EN.
+2. **Diga por que é conhecida**, com o fato que mais a define:
+   - fundador, líder ou pai de algo: "Pai da psicanálise", "Fundador da Kyocera", "Cofundador da
+     Microsoft", "Fundador do epicurismo", "Líder do Levante de Páscoa";
+   - obra que a define: "Autor de Os Sertões", "Autor de Bronze Age Mindset";
+   - marca de identidade: "Unabomber", "Último Kaiser alemão", "Médico dos Pobres";
+   - **cargo com ordinal** quando o cargo é o motivo da fama: "37º Presidente dos EUA", "4º
+     Presidente do Brasil", "50º Vice-presidente dos EUA". O ordinal precisa estar **correto**;
+     sem certeza, use o cargo sem ordinal ou outra forma específica, nunca um número chutado;
+   - monarcas: "Rei de X", "Imperador de Y"; pensadores: a corrente, não só "Filósofo" ("Filósofo
+     estoico romano", "Teórico situacionista", "Pioneiro do anarquismo").
+3. **Evite o rótulo genérico sozinho** ("Estadista", "Político", "Filósofo", "Economista",
+   "Ditador", "Revolucionário", "Escritor", "Empresário") quando existe um fato específico que
+   define a pessoa; mantenha o genérico só quando nada a define melhor.
+4. **Sem listas de profissões** ("Inventor, Fabricante e Filósofo"): escolha o que mais a define.
+5. **Capitalização:** só a inicial maiúscula ("Fundador dos jesuítas"), mantendo nomes próprios e a
+   maiúscula depois do ordinal ("4º Presidente do Brasil", "4th President of Brazil"). Sem ponto
+   final; período entre parênteses só se indispensável ("Líder da China (1989–2002)").
+6. **EN:** tradução natural, não literal, com as mesmas regras; generalize referências
+   brasileiras que um estrangeiro não entenderia (STF → "Supreme Court justice"; nomes próprios
+   de obras e partidos ficam).
+7. **Precisão factual:** não invente fatos, datas nem ordinais. Pessoa viva: o cargo ou fama
+   atual; "Ex-" quando já deixou o cargo que a define.
 
 **O que entra em `religioso`.** A categoria não mede a fé da pessoa, e sim **o tema da obra
 dela**: entram tanto quem construiu uma tradição religiosa quanto quem a atacou ou tentou
