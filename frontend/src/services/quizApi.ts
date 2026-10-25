@@ -83,9 +83,13 @@ export function submitResults(
   });
 }
 
+// O endpoint é cacheado pelo navegador por uma hora; `rv` acompanha o formato da resposta para quem já abriu
+// o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo).
+const SHARED_RESULT_VERSION = 2;
+
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}`);
+  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}&rv=${SHARED_RESULT_VERSION}`);
 }
 
 

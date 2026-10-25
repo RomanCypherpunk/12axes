@@ -1,5 +1,5 @@
 import type { CompareProfile } from '../../types/quiz';
-import { ideologyColorByKey } from '../../utils/ideologyColors';
+import { ideologyColorByKey, resolveIdeologyColor } from '../../utils/ideologyColors';
 import { compassFromVector, compassRegion } from '../../utils/politicalCompass';
 
 // Cor de reserva por posição, para quando o perfil ainda não tem vetor (a resposta da API não chegou):
@@ -16,5 +16,8 @@ export function spectrumColor(vector: Record<string, number> | undefined, fallba
 }
 
 export function colorOf(profile: CompareProfile, index: number): string {
+  // Uma pessoa (na comparação entre pessoas, com iniciais) vale a cor da sua ideologia mais próxima, a mesma
+  // das iniciais; a da região da bússola só serve para os perfis do catálogo.
+  if (profile.item.initials) return resolveIdeologyColor(profile.item.category).base;
   return spectrumColor(profile.vector, PROFILE_COLORS[index]);
 }

@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { t } from '../../i18n';
-import type { Axis, AxisResult, PartyDimensionMatch, PartyMatch } from '../../types/quiz';
+import type { Axis, AxisResult, PartyDimensionMatch, PartyMatch, ProfileDimension } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { resolvePartyLogoSrc } from '../../utils/partyLogos';
 import { SafeImg } from '../editorial/primitives';
 import { Closeness } from './Closeness';
 import { InfoSheet } from './InfoSheet';
-import { DimList, FarList, MatchHero, Tabs } from './parts';
+import { DimList, FarList, MatchHero, Tabs, type DimItem, type FarItem } from './parts';
 import { SheetMatch } from './SheetMatch';
 
 interface PartiesSectionProps {
@@ -17,6 +17,10 @@ interface PartiesSectionProps {
   distant: PartyMatch[];
   axes?: Axis[];
   results?: Map<string, AxisResult>;
+  /** Para reusar a seção fora dos resultados (página de comparação entre pessoas). */
+  title?: string;
+  id?: string;
+  header?: ReactNode;
 }
 
 // Tipo · período (se histórico) · país associado, abaixo do nome.
@@ -36,6 +40,58 @@ function Logo({ match, className }: { match: PartyMatch; className: string }) {
   );
 }
 
+/** Card do partido mais compatível (aba atual ou histórica). */
+export function PartyHero({ match }: { match: PartyMatch }) {
+  return (
+    <MatchHero
+      visual={<Logo match={match} className="e-logobig" />}
+      compatibility={match.compatibility}
+      name={match.name}
+      tags={tags(match)}
+      description={match.description}
+      kickerPrefix={
+        match.countryFlagPath ? (
+          <SafeImg
+            className="e-flagmini"
+            src={resolveCountryFlagSrc(match.countryFlagPath)}
+            alt={t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.countryName)}
+            fallback=""
+          />
+        ) : null
+      }
+    />
+  );
+}
+
+export function partyDimItems(dimensions: PartyDimensionMatch[], onInfo?: (match: PartyMatch, dimension: ProfileDimension) => void): DimItem[] {
+  return dimensions.map(({ dimension, match }) => ({
+    key: dimension,
+    visual: (
+      <div className="e-dim-visual">
+        <Logo match={match} className="e-logoimg" />
+        {match.countryFlagPath && (
+          <SafeImg
+            className="e-flagmini"
+            src={resolveCountryFlagSrc(match.countryFlagPath)}
+            alt={t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.countryName)}
+            fallback=""
+          />
+        )}
+      </div>
+    ),
+    label: t.dimensionLabels[dimension],
+    name: match.name,
+    caption: tags(match).join(' · '),
+    compatibility: match.compatibility,
+    infoLabel: t.personalityInfoAria(match.name),
+    onInfo: onInfo && (() => onInfo(match, dimension))
+  }));
+}
+
+export function partyFarItems(distant: PartyMatch[]): FarItem[] {
+  return distant.map((match) => ({ key: match.partyId, name: match.name, caption: tags(match).join(' · ') }));
+}
+
 export function PartiesSection({
   current,
   historical,
@@ -43,7 +99,10 @@ export function PartiesSection({
   dimensions = [],
   distant,
   axes,
-  results
+  results,
+  title,
+  id,
+  header
 }: PartiesSectionProps) {
   const currentMatch = current ?? top.find((m) => !m.historical) ?? top[0] ?? null;
   const historicalMatch = historical ?? top.find((m) => m.historical) ?? null;
@@ -56,12 +115,13 @@ export function PartiesSection({
   }
 
   return (
-    <section className="e-panel" id="partidos" data-reveal>
-      <h2>{t.partiesSectionTitle}</h2>
+    <section className="e-panel" id={id ?? 'partidos'} data-reveal>
+      <h2>{title ?? t.partiesSectionTitle}</h2>
+      {header}
 
       {currentMatch && historicalMatch && (
         <Tabs
-          label={t.partiesSectionTitle}
+          label={title ?? t.partiesSectionTitle}
           value={tab}
           onChange={setTab}
           options={[
@@ -71,58 +131,11 @@ export function PartiesSection({
         />
       )}
 
-      <MatchHero
-        key={shown.partyId}
-        visual={<Logo match={shown} className="e-logobig" />}
-        compatibility={shown.compatibility}
-        name={shown.name}
-        tags={tags(shown)}
-        description={shown.description}
-        kickerPrefix={
-          shown.countryFlagPath ? (
-            <SafeImg
-              className="e-flagmini"
-              src={resolveCountryFlagSrc(shown.countryFlagPath)}
-              alt={t.flagAlt(shown.historical ? t.flagHistoricLabel : t.flagLabel, shown.countryName)}
-              fallback=""
-            />
-          ) : null
-        }
-      />
+      <PartyHero key={shown.partyId} match={shown} />
 
-      <DimList
-        items={dimensions.map(({ dimension, match }) => ({
-          key: dimension,
-          visual: (
-            <div className="e-dim-visual">
-              <Logo match={match} className="e-logoimg" />
-              {match.countryFlagPath && (
-                <SafeImg
-                  className="e-flagmini"
-                  src={resolveCountryFlagSrc(match.countryFlagPath)}
-                  alt={t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.countryName)}
-                  fallback=""
-                />
-              )}
-            </div>
-          ),
-          label: t.dimensionLabels[dimension],
-          name: match.name,
-          caption: tags(match).join(' · '),
-          compatibility: match.compatibility,
-          infoLabel: t.personalityInfoAria(match.name),
-          onInfo: () => setInfo(match)
-        }))}
-      />
+      <DimList items={partyDimItems(dimensions, setInfo)} />
 
-      <FarList
-        title={t.partiesDistantTitle}
-        items={distant.map((match) => ({
-          key: match.partyId,
-          name: match.name,
-          caption: tags(match).join(' · ')
-        }))}
-      />
+      <FarList title={t.partiesDistantTitle} items={partyFarItems(distant)} />
       {info && <PartyInfoSheet match={info} axes={axes} results={results} onClose={() => setInfo(null)} />}
     </section>
   );

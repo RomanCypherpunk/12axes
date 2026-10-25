@@ -16,6 +16,7 @@ import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
 import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
+import { PEOPLE_COMPARE_PATH, RESULT_URL_KEYS } from './utils/peopleCompare';
 import {
   answeredCount as savedAnsweredCount,
   clearProgress,
@@ -57,13 +58,22 @@ const COMPARE_MODE =
   typeof window !== 'undefined' &&
   ['/compare', '/en/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
 
+// /compare/people: duas pessoas pelo link do resultado de cada uma (vetores na própria URL).
+const COMPARE_PEOPLE_MODE =
+  typeof window !== 'undefined' &&
+  (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/') === PEOPLE_COMPARE_PATH;
+
+const ComparePeoplePage = lazy(() =>
+  import('./components/compare/ComparePeoplePage').then((module) => ({ default: module.ComparePeoplePage }))
+);
+
 const ComparePage = lazy(() =>
   import('./components/compare/ComparePage').then((module) => ({ default: module.ComparePage }))
 );
 
 // URL de resultado compartilhável: /results?est=65&rep=32.5&... (uma chave por
 // eixo, valor = % do polo esquerdo, na mesma ordem de axes.json).
-const AXIS_URL_KEYS = ['est', 'rep', 'pod', 'imi', 'dip', 'int', 'eco', 'con', 'com', 'rel', 'mor', 'tec'];
+const AXIS_URL_KEYS = RESULT_URL_KEYS;
 
 function parseSharedResultUrl(): number[] | null {
   if (typeof window === 'undefined') {
@@ -1153,6 +1163,13 @@ function MainApp() {
 }
 
 export default function App() {
+  if (COMPARE_PEOPLE_MODE) {
+    return (
+      <Suspense fallback={null}>
+        <ComparePeoplePage />
+      </Suspense>
+    );
+  }
   if (COMPARE_MODE) {
     return (
       <Suspense fallback={null}>

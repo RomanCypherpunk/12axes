@@ -206,6 +206,7 @@ interface Strings {
   comparePagePartiesTitle: string;
   comparePageBalanced: string;
   comparePageUnitPoints: string;
+  comparePageUnitPoint: string;
   comparePageDivergeCap: (high: string, low: string, points: number) => string;
   comparePageAgreeCap: (points: number) => string;
   comparePageOpposite: string;
@@ -214,6 +215,46 @@ interface Strings {
   comparePageDiverge: string;
   comparePageAgree: string;
   comparePagePairLabel: string;
+  peopleTitle: string;
+  peopleLead: string;
+  peopleNameLabel: string;
+  peopleNameCaption: string;
+  peopleUrlCaption: string;
+  peopleNamePlaceholder: string;
+  peopleUrlLabel: string;
+  peopleUrlPlaceholder: string;
+  peoplePaste: string;
+  peoplePasteBlocked: string;
+  peopleCompare: string;
+  peopleNameRequired: string;
+  peopleLinkMissing: (keys: string) => string;
+  peopleLinkInvalid: (keys: string) => string;
+  peopleYou: string;
+  peopleOther: string;
+  peopleBoth: string;
+  peopleSignatureTitle: string;
+  peopleDiverge: string;
+  peopleAgree: string;
+  peopleAgreeCap: (points: number) => string;
+  peopleOppositeCount: (count: number, total: number) => string;
+  peopleNoOpposite: string;
+  peopleBlocked: string;
+  peopleRename: (name: string) => string;
+  peopleNameInputLabel: string;
+  peopleOpenLink: string;
+  peoplePersonalitiesTitle: string;
+  peopleValuesTitle: string;
+  peopleSharedValuesTitle: string;
+  peoplePairsTitle: string;
+  peopleNavPersonalities: string;
+  peopleNavValues: string;
+  peopleNavSharedValues: string;
+  peoplePageDocTitle: string;
+  peoplePageTitle: string;
+  peoplePagePeopleTitle: string;
+  peoplePageBadLink: string;
+  peoplePageLoadError: string;
+  peoplePageLoading: string;
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
@@ -649,14 +690,55 @@ const pt: Strings = {
   comparePagePartiesTitle: 'Partidos mais próximos',
   comparePageBalanced: 'Equilibrado',
   comparePageUnitPoints: 'pts',
-  comparePageDivergeCap: (high, low, points) => `${high} e ${low} ficam a ${points} pontos um do outro nesse eixo.`,
-  comparePageAgreeCap: (points) => `Aqui eles se encontram: só ${points} pontos de diferença.`,
+  comparePageUnitPoint: 'pt',
+  comparePageDivergeCap: (high, low, points) => `${high} e ${low} ficam a ${points} ${points === 1 ? 'ponto' : 'pontos'} um do outro nesse eixo.`,
+  comparePageAgreeCap: (points) => `Aqui eles se encontram: só ${points} ${points === 1 ? 'ponto' : 'pontos'} de diferença.`,
   comparePageOpposite: 'Lados opostos',
   comparePageOppositeCount: (count, total) => `Em ${count} dos ${total} eixos eles ficam em lados opostos.`,
   comparePageNoOpposite: 'Nenhum eixo coloca os perfis em lados opostos.',
   comparePageDiverge: 'Onde mais divergem',
   comparePageAgree: 'Onde mais concordam',
   comparePagePairLabel: 'Compatibilidade',
+  peopleTitle: 'Compare com outra pessoa',
+  peopleLead: 'Cole o link do resultado de outra pessoa e veja, eixo por eixo, onde vocês se aproximam ou se afastam.',
+  peopleNameLabel: 'Nome da outra pessoa',
+  peopleNameCaption: 'Nome',
+  peopleUrlCaption: 'Link do resultado',
+  peopleNamePlaceholder: 'Ex.: João',
+  peopleUrlLabel: 'Link do resultado da outra pessoa',
+  peopleUrlPlaceholder: 'Cole o link aqui',
+  peoplePaste: 'Colar',
+  peoplePasteBlocked: 'O navegador não deixou ler a área de transferência. Cole o link no campo com Ctrl+V.',
+  peopleCompare: 'Comparar',
+  peopleNameRequired: 'Escreva o nome da outra pessoa.',
+  peopleLinkMissing: (keys) => `Este link não tem todos os eixos (faltam: ${keys}). Cole o link completo do resultado.`,
+  peopleLinkInvalid: (keys) => `Valor inválido no link (${keys}). Cada eixo vai de 0 a 100.`,
+  peopleYou: 'Você',
+  peopleOther: 'Outra pessoa',
+  peopleBoth: 'Vocês',
+  peopleSignatureTitle: 'O que distingue vocês',
+  peopleDiverge: 'Onde mais divergem',
+  peopleAgree: 'Onde mais concordam',
+  peopleAgreeCap: (points) => `Aqui vocês se encontram: só ${points} ${points === 1 ? 'ponto' : 'pontos'} de diferença.`,
+  peopleOppositeCount: (count, total) => `Em ${count} dos ${total} eixos vocês ficam em lados opostos.`,
+  peopleNoOpposite: 'Nenhum eixo coloca vocês em lados opostos.',
+  peopleBlocked: 'O navegador bloqueou a nova aba.',
+  peopleRename: (name) => `Editar o nome de ${name}`,
+  peopleNameInputLabel: 'Nome',
+  peopleOpenLink: 'Abrir a comparação',
+  peoplePersonalitiesTitle: 'Personalidades mais próximas',
+  peopleValuesTitle: 'Valores',
+  peopleSharedValuesTitle: 'Valores em comum',
+  peoplePairsTitle: 'Compatibilidade entre vocês',
+  peopleNavPersonalities: 'Personalidades',
+  peopleNavValues: 'Valores',
+  peopleNavSharedValues: 'Em comum',
+  peoplePageDocTitle: 'Comparar com outra pessoa — 12 Axes',
+  peoplePageTitle: 'Vocês dois, nos 12 eixos',
+  peoplePagePeopleTitle: 'Pessoas',
+  peoplePageBadLink: 'Este link de comparação está incompleto. Abra o seu resultado e use "Compare com outra pessoa".',
+  peoplePageLoadError: 'Não foi possível carregar a comparação. Tente de novo.',
+  peoplePageLoading: 'Comparando…',
   axisExplanations: {
     estrutura:
       'Mede se você prefere poder distribuído entre estados, municípios e comunidades locais ou um Estado nacional unitário com leis e comando mais uniformes.',
@@ -1348,14 +1430,55 @@ const en: Strings = {
   comparePagePartiesTitle: 'Closest parties',
   comparePageBalanced: 'Balanced',
   comparePageUnitPoints: 'pts',
-  comparePageDivergeCap: (high, low, points) => `${high} and ${low} are ${points} points apart on this axis.`,
-  comparePageAgreeCap: (points) => `This is where they meet: only ${points} points apart.`,
+  comparePageUnitPoint: 'pt',
+  comparePageDivergeCap: (high, low, points) => `${high} and ${low} are ${points} ${points === 1 ? 'point' : 'points'} apart on this axis.`,
+  comparePageAgreeCap: (points) => `This is where they meet: only ${points} ${points === 1 ? 'point' : 'points'} apart.`,
   comparePageOpposite: 'Opposite sides',
   comparePageOppositeCount: (count, total) => `They land on opposite sides in ${count} of ${total} axes.`,
   comparePageNoOpposite: 'No axis puts these profiles on opposite sides.',
   comparePageDiverge: 'Where they differ most',
   comparePageAgree: 'Where they agree most',
   comparePagePairLabel: 'Compatibility',
+  peopleTitle: 'Compare with someone else',
+  peopleLead: "Paste another person's result link and see, axis by axis, where you are close or far apart.",
+  peopleNameLabel: "Other person's name",
+  peopleNameCaption: 'Name',
+  peopleUrlCaption: 'Result link',
+  peopleNamePlaceholder: 'e.g. John',
+  peopleUrlLabel: "Other person's result link",
+  peopleUrlPlaceholder: 'Paste the link here',
+  peoplePaste: 'Paste',
+  peoplePasteBlocked: 'The browser did not allow reading the clipboard. Paste the link into the field with Ctrl+V.',
+  peopleCompare: 'Compare',
+  peopleNameRequired: "Enter the other person's name.",
+  peopleLinkMissing: (keys) => `This link does not have every axis (missing: ${keys}). Paste the full result link.`,
+  peopleLinkInvalid: (keys) => `Invalid value in the link (${keys}). Each axis goes from 0 to 100.`,
+  peopleYou: 'You',
+  peopleOther: 'Someone else',
+  peopleBoth: 'You two',
+  peopleSignatureTitle: 'What sets you apart',
+  peopleDiverge: 'Where you differ most',
+  peopleAgree: 'Where you agree most',
+  peopleAgreeCap: (points) => `This is where you meet: only ${points} ${points === 1 ? 'point' : 'points'} apart.`,
+  peopleOppositeCount: (count, total) => `You land on opposite sides in ${count} of ${total} axes.`,
+  peopleNoOpposite: 'No axis puts you on opposite sides.',
+  peopleBlocked: 'The browser blocked the new tab.',
+  peopleRename: (name) => `Edit ${name}'s name`,
+  peopleNameInputLabel: 'Name',
+  peopleOpenLink: 'Open the comparison',
+  peoplePersonalitiesTitle: 'Closest personalities',
+  peopleValuesTitle: 'Values',
+  peopleSharedValuesTitle: 'Shared values',
+  peoplePairsTitle: 'Compatibility between you',
+  peopleNavPersonalities: 'Personalities',
+  peopleNavValues: 'Values',
+  peopleNavSharedValues: 'In common',
+  peoplePageDocTitle: 'Compare with someone else — 12 Axes',
+  peoplePageTitle: 'The two of you, on the 12 axes',
+  peoplePagePeopleTitle: 'People',
+  peoplePageBadLink: 'This comparison link is incomplete. Open your result and use "Compare with someone else".',
+  peoplePageLoadError: 'Could not load the comparison. Please try again.',
+  peoplePageLoading: 'Comparing…',
   axisExplanations: {
     estrutura:
       'Measures whether you prefer power distributed among states, cities, and local communities or a unitary national state with more uniform laws and command.',

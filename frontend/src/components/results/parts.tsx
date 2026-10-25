@@ -82,13 +82,13 @@ export function DimRow({ info, visual, label, name, note, children }: DimRowProp
   );
 }
 
-export function DimList({ items }: { items: DimItem[] }) {
+export function DimList({ items, hideTitle = false, hideValue = false }: { items: DimItem[]; hideTitle?: boolean; hideValue?: boolean }) {
   if (items.length === 0) {
     return null;
   }
   return (
     <>
-      <p className="e-sub">{t.dimensionsTitleShort}</p>
+      {!hideTitle && <p className="e-sub">{t.dimensionsTitleShort}</p>}
       <ul className="e-dims">
         {items.map((item) => (
           <DimRow
@@ -98,7 +98,7 @@ export function DimList({ items }: { items: DimItem[] }) {
             label={item.label}
             name={item.name}
           >
-            <CountUpValue value={item.compatibility} decimals={0} />
+            {hideValue ? null : <CountUpValue value={item.compatibility} decimals={0} />}
           </DimRow>
         ))}
       </ul>

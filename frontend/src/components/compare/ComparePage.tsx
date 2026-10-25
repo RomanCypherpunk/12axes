@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { HOME_AXES } from '../../data/homeAxes';
 import { LANG, t } from '../../i18n';
 import { ApiError, fetchCompareCatalog, fetchCompareProfiles } from '../../services/quizApi';
@@ -242,10 +242,10 @@ export function ComparePage() {
   );
 }
 
-type NavSection = { id: string; label: () => string };
+export type NavSection = { id: string; label: () => string };
 
 /** Índice lateral da página, no mesmo molde do índice dos resultados (com a seção em foco destacada). */
-function CompareNav({ data }: { data: CompareProfiles | null }) {
+export function CompareNav({ data, middle }: { data: CompareProfiles | null; middle?: NavSection[] }) {
   const sections: NavSection[] = [];
   if (data) {
     sections.push(
@@ -253,11 +253,16 @@ function CompareNav({ data }: { data: CompareProfiles | null }) {
       { id: 'cmp-eixos', label: () => t.comparePageNavAxes },
       { id: 'cmp-assinatura', label: () => t.comparePageNavSignature }
     );
-    if (data.profiles.some((profile) => profile.nearest?.country)) {
-      sections.push({ id: 'cmp-paises', label: () => t.comparePageNavCountries });
-    }
-    if (PARTIES_ENABLED && data.profiles.some((profile) => profile.nearest?.party)) {
-      sections.push({ id: 'cmp-partidos', label: () => t.comparePageNavParties });
+    if (middle) {
+      // Comparação entre pessoas: as seções de países, personalidades, partidos e valores vêm de fora.
+      sections.push(...middle);
+    } else {
+      if (data.profiles.some((profile) => profile.nearest?.country)) {
+        sections.push({ id: 'cmp-paises', label: () => t.comparePageNavCountries });
+      }
+      if (PARTIES_ENABLED && data.profiles.some((profile) => profile.nearest?.party)) {
+        sections.push({ id: 'cmp-partidos', label: () => t.comparePageNavParties });
+      }
     }
     sections.push({ id: 'cmp-bussola', label: () => t.comparePageNavCompass }, { id: 'cmp-pares', label: () => t.comparePageNavCompatibility });
   }
@@ -295,7 +300,7 @@ function CompareNav({ data }: { data: CompareProfiles | null }) {
   );
 }
 
-function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, axes }: { profiles: CompareProfiles; axes: typeof HOME_AXES }) {
+export function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, axes, nearby, pairsTitle, people = false }: { profiles: CompareProfiles; axes: typeof HOME_AXES; nearby?: ReactNode; pairsTitle?: string; people?: boolean }) {
   const moralAxis = axes.find((axis) => axis.id === 'moral');
   const itemByKey = new Map(profiles.map((profile) => [refKey(profile.item), profile.item]));
   const points = compassPoints(
@@ -318,10 +323,14 @@ function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, 
   return (
     <>
       <CompareIdeologies profiles={profiles} common={commonIdeology} />
-      <CompareAxes axes={axes} profiles={profiles} />
-      <CompareSignature axes={axes} profiles={profiles} />
-      <CompareCountries profiles={profiles} />
-      {PARTIES_ENABLED && <CompareParties profiles={profiles} />}
+      <CompareAxes axes={axes} profiles={profiles} tags={people} />
+      <CompareSignature axes={axes} profiles={profiles} people={people} />
+      {nearby ?? (
+        <>
+          <CompareCountries profiles={profiles} />
+          {PARTIES_ENABLED && <CompareParties profiles={profiles} />}
+        </>
+      )}
 
       {points.length > 0 && (
         <section className="e-panel e-compass" id="cmp-bussola">
@@ -366,7 +375,7 @@ function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, 
       )}
 
       <section className="e-panel" id="cmp-pares">
-        <h2>{t.comparePagePairsTitle}</h2>
+        <h2>{pairsTitle ?? t.comparePagePairsTitle}</h2>
         <ul className="e-cp-pairs">
           {pairs.map((pair) => {
             const first = profiles[pair.first].item;

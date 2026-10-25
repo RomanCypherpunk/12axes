@@ -4,7 +4,9 @@ import type { Axis, CompareProfile } from '../../types/quiz';
 import { valueOf } from './CompareAxes';
 import { colorOf } from './profileColors';
 
-const BALANCED_DISTANCE = 7.5;
+// Dois perfis ficam em lados opostos de um eixo quando cada um passa do centro (50%) por pelo menos esta folga,
+// cada um para um polo. Ficar perto do centro mas já do outro lado conta: o ponto na trilha cruza a linha do meio.
+const SIDE_MARGIN = 2;
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
 
 interface AxisSpread {
@@ -18,7 +20,7 @@ interface AxisSpread {
  * O que distingue os perfis, no molde de "O que te distingue" dos resultados: o eixo em que mais se afastam,
  * o eixo em que mais se encontram e os eixos em que ficam em lados opostos.
  */
-export function CompareSignature({ axes, profiles }: { axes: Axis[]; profiles: CompareProfile[] }) {
+export function CompareSignature({ axes, profiles, people = false }: { axes: Axis[]; profiles: CompareProfile[]; people?: boolean }) {
   const spreads: AxisSpread[] = axes.map((axis) => {
     const values = profiles.map((profile) => valueOf(profile, axis.id));
     const low = values.indexOf(Math.min(...values));
@@ -30,14 +32,14 @@ export function CompareSignature({ axes, profiles }: { axes: Axis[]; profiles: C
   const opposite = spreads.filter(
     ({ axis, spread }) =>
       spread > 0 &&
-      profiles.some((profile) => valueOf(profile, axis.id) - 50 >= BALANCED_DISTANCE) &&
-      profiles.some((profile) => 50 - valueOf(profile, axis.id) >= BALANCED_DISTANCE)
+      profiles.some((profile) => valueOf(profile, axis.id) - 50 >= SIDE_MARGIN) &&
+      profiles.some((profile) => 50 - valueOf(profile, axis.id) >= SIDE_MARGIN)
   );
 
   return (
     <section className="e-panel" id="cmp-assinatura">
       <div className="e-sec-head">
-        <h2 className="e-sec-title">{t.comparePageSignatureTitle}</h2>
+        <h2 className="e-sec-title">{people ? t.peopleSignatureTitle : t.comparePageSignatureTitle}</h2>
         <p className="e-mleg" aria-hidden="true">
           {profiles.map((profile, index) => (
             <span key={`${profile.item.type}:${profile.item.id}`}>
@@ -48,8 +50,8 @@ export function CompareSignature({ axes, profiles }: { axes: Axis[]; profiles: C
         </p>
       </div>
       <div className="e-dist">
-        <SpreadCard entry={widest} strong label={t.comparePageDiverge} profiles={profiles} />
-        <SpreadCard entry={narrowest} strong={false} label={t.comparePageAgree} profiles={profiles} />
+        <SpreadCard entry={widest} strong label={people ? t.peopleDiverge : t.comparePageDiverge} profiles={profiles} people={people} />
+        <SpreadCard entry={narrowest} strong={false} label={people ? t.peopleAgree : t.comparePageAgree} profiles={profiles} people={people} />
         <article className="e-tension e-cp-tension">
           <div className="e-cp-tension-head">
             <span className="e-tag e-tag-white">{t.comparePageOpposite}</span>
@@ -62,7 +64,11 @@ export function CompareSignature({ axes, profiles }: { axes: Axis[]; profiles: C
             </div>
           </div>
           <p>
-            <b>{opposite.length > 0 ? t.comparePageOppositeCount(opposite.length, axes.length) : t.comparePageNoOpposite}</b>
+            <b>{opposite.length > 0
+              ? (people ? t.peopleOppositeCount : t.comparePageOppositeCount)(opposite.length, axes.length)
+              : people
+                ? t.peopleNoOpposite
+                : t.comparePageNoOpposite}</b>
           </p>
           {opposite.length > 0 && (
             <ul className="e-chips">
@@ -77,7 +83,7 @@ export function CompareSignature({ axes, profiles }: { axes: Axis[]; profiles: C
   );
 }
 
-function SpreadCard({ entry, strong, label, profiles }: { entry: AxisSpread; strong: boolean; label: string; profiles: CompareProfile[] }) {
+function SpreadCard({ entry, strong, label, profiles, people }: { entry: AxisSpread; strong: boolean; label: string; profiles: CompareProfile[]; people: boolean }) {
   const { axis, spread, low, high } = entry;
   // Na régua o polo esquerdo fica à esquerda; o vetor guarda a % do polo esquerdo, então a posição é o complemento.
   const positions = profiles.map((profile) => clamp(100 - valueOf(profile, axis.id)));
@@ -86,7 +92,7 @@ function SpreadCard({ entry, strong, label, profiles }: { entry: AxisSpread; str
   const points = Math.round(spread);
   const cap = strong
     ? t.comparePageDivergeCap(profiles[high].item.name, profiles[low].item.name, points)
-    : t.comparePageAgreeCap(points);
+    : (people ? t.peopleAgreeCap : t.comparePageAgreeCap)(points);
 
   return (
     <article className={strong ? 'e-dcard e-strong' : 'e-dcard'}>
@@ -97,7 +103,7 @@ function SpreadCard({ entry, strong, label, profiles }: { entry: AxisSpread; str
       <div className="e-dcard-body">
         <p className="e-big">
           {points}
-          <small>{t.comparePageUnitPoints}</small>
+          <small>{points === 1 ? t.comparePageUnitPoint : t.comparePageUnitPoints}</small>
         </p>
         <p className="e-cap">{cap}</p>
       </div>

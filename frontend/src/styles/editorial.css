@@ -793,7 +793,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-axis-sheet .e-cmp-sum-item h3{margin-bottom:6px;font-size:20px;line-height:1.3}
 @media (max-width:640px){
   .e-cmp-bar .e-btn{width:100%;justify-content:center}
-}
+  }
+
 
 /* Barras de rolagem no padrão da identidade: finas, arredondadas, verde-floresta. */
 ::-webkit-scrollbar{width:12px;height:12px}
@@ -1165,3 +1166,133 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* Página de resultados: cartões sem borda, no acabamento dos cartões de "Outras ideologias" (os livros ficam como estavam).
    Limitado a .e-res para não alterar a página de comparação, que reaproveita estes componentes. */
 .e-res .e-dim-row,.e-res .e-dcard,.e-res .e-far-row{border:0}
+
+/* Comparação entre pessoas: iniciais do nome no lugar do retrato, na cor da ideologia mais próxima. */
+.e-cmp-initials{display:grid;place-items:center;overflow:hidden;color:#fff;line-height:1;container-type:size}
+.e-cmp-initials b{font-size:38cqmin;font-weight:700;letter-spacing:-.02em}
+
+/* Bússola e trilhas: a inicial centrada no quadradinho (a regra do rosto da bússola força display:block). */
+.e-compass-x.e-compass-face .e-compass-img.e-cmp-initials{display:grid;place-items:center;border-radius:0}
+
+/* Comparação entre pessoas: o mais próximo de cada uma lado a lado, e o por dimensão em uma linha por pessoa. */
+.e-ppl-who{display:flex;align-items:center;gap:10px;margin:0 0 10px;font:600 13px var(--font-body);color:var(--texto-suave)}
+.e-ppl-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.e-ppl-pair>.e-ppl-col{min-width:0}
+.e-ppl-row{margin-top:14px}
+.e-ppl-pair .e-match{padding:20px 16px}
+.e-ppl-pair .e-match-top{grid-template-columns:1fr;justify-items:center;text-align:center;gap:16px}
+.e-ppl-pair .e-match-top>.e-ring{display:none}
+.e-ppl-pair .e-match-pill{display:inline-block}
+.e-ppl-pair .e-match .e-flagbig{width:100%;max-width:300px;height:auto;aspect-ratio:3/2}
+/* Logo do partido com a mesma altura da bandeira (3:2 de até 300px de largura = até 200px de altura). */
+.e-ppl-pair .e-match .e-logobig{width:min(200px,66.667%);height:auto;max-width:none;max-height:none;aspect-ratio:1/1;padding:16px}
+.e-ppl-pair .e-match-tags{display:flex;justify-content:center}
+.e-ppl-pair .e-match h3{font-size:24px;margin:12px 0 4px}
+.e-ppl-pair .e-match-info p{font-size:13px}
+@media (max-width:640px){.e-ppl-pair{grid-template-columns:1fr}}
+
+/* Nome editável no cartão da pessoa. */
+.e-ppl-nameline{display:inline-flex;align-items:center;gap:4px;justify-content:center}
+.e-ppl-edit{display:inline-grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:8px;background:none;color:#4A5565;cursor:pointer;transition:color .15s,background .15s}
+.e-ppl-edit svg{width:18px;height:18px}
+.e-ppl-edit:hover{color:var(--tinta);background:color-mix(in srgb,var(--tinta) 6%,transparent)}
+.e-ppl-edit:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-ppl-rename{margin:0}
+.e-ppl-rename-input{width:100%;max-width:200px;padding:4px 10px;border:1.5px solid var(--floresta);border-radius:10px;background:var(--superficie);font:inherit;font-weight:700;font-size:16px;text-align:center;color:var(--tinta)}
+.e-ppl-rename-input:focus{outline:none;box-shadow:0 0 0 3px rgba(27,66,52,.14)}
+
+/* Valores de cada pessoa, por categoria: um cartão por categoria com uma linha por pessoa. */
+.e-pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 0;padding:0;list-style:none}
+.e-pv-card{display:grid;gap:8px;align-content:start;min-width:0;padding:16px;border:1px solid var(--borda);border-radius:22px;background:var(--papel)}
+.e-pv-cat{font:600 12px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave)}
+.e-pv-row{display:flex;align-items:center;gap:12px;min-width:0;padding:10px 12px;border:0;border-radius:16px;background:var(--cat-bg);font:inherit;text-align:left;cursor:pointer}
+.e-pv-row:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-pv-row .e-vcoin{flex:none}
+.e-pv-row b{display:block;font-size:11.5px;font-weight:600;color:var(--texto-suave)}
+.e-pv-row strong{display:block;color:var(--cat);font-size:15px;line-height:1.25}
+@media (max-width:640px){.e-pv-grid{grid-template-columns:1fr}}
+
+/* Os dois cards do mais compatível têm sempre a mesma altura; o de personalidade segue o layout compacto dos
+   resultados no celular: retrato à esquerda, nome e dados à direita. */
+.e-ppl-pair>.e-ppl-col{display:flex;flex-direction:column}
+.e-ppl-pair>.e-ppl-col>.e-match{flex:1}
+.e-ppl-pair .e-match:has(.e-portrait){display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-content:start;align-items:start;text-align:left}
+.e-ppl-pair .e-match:has(.e-portrait) .e-match-top,.e-ppl-pair .e-match:has(.e-portrait) .e-match-info{display:contents;text-align:left;justify-items:start}
+.e-ppl-pair .e-match:has(.e-portrait) .e-portrait{grid-row:1/span 4;width:96px;height:171px;border-radius:16px}
+.e-ppl-pair .e-match:has(.e-portrait) .e-match-tags{justify-content:flex-start}
+.e-ppl-pair .e-match:has(.e-portrait) h3{margin:10px 0 4px}
+.e-ppl-pair .e-match:has(.e-portrait) .e-more{margin-top:12px;padding-top:0;border-top:0}
+.e-ppl-pair .e-match:has(.e-portrait) .e-more[open]{grid-column:1/-1;margin-top:14px;padding-top:14px;border-top:1px solid rgba(16,16,16,.1)}
+
+/* Iniciais no rosto das pessoas: Sora 700, a mesma dos nomes (Poppins 700 não é carregada e viraria negrito falso). */
+.e-cmp-initials b{font-family:var(--font-display)}
+
+/* Etiqueta com o primeiro nome na trilha dos eixos; "Vocês" quando as duas pessoas ficam juntas. */
+.e-cp-pin.e-cp-tag{width:auto;height:auto;padding:3px 12px;border-radius:999px;background:var(--pc);color:#fff;font:700 12.5px/1.4 var(--font-display);white-space:nowrap;box-shadow:0 0 0 2px var(--superficie),0 3px 8px rgba(16,16,16,.25)}
+.e-cp-pin.e-cp-tag.is-both{background:var(--tinta)}
+
+/* Compare com outra pessoa: texto à esquerda e, à direita, um cartão com nome, link (com colar) e o botão. */
+.e-ppl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:22px 40px;align-items:center}
+.e-ppl-intro .e-cmp-lead{margin-bottom:0}
+.e-ppl-duo{display:inline-flex;margin-bottom:16px}
+.e-ppl-duo i{width:36px;height:36px;border-radius:50%;border:3px solid var(--superficie);background:var(--floresta)}
+.e-ppl-duo i+i{margin-left:-12px;background:var(--carmim)}
+.e-ppl-side{display:grid;gap:12px;padding:22px;border:1px solid var(--borda);border-radius:26px;background:var(--papel)}
+.e-ppl-form{display:grid;gap:16px}
+.e-ppl-field{display:grid;gap:7px;min-width:0}
+.e-ppl-cap{padding-left:4px;font:600 12px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave)}
+.e-ppl-control{display:flex;align-items:center;gap:10px;min-width:0;height:56px;padding:0 8px 0 18px;border:1.5px solid var(--borda);border-radius:18px;background:var(--superficie);transition:border-color .15s,box-shadow .15s}
+.e-ppl-control:focus-within{border-color:var(--floresta);box-shadow:0 0 0 3px rgba(27,66,52,.14)}
+.e-ppl-control[data-invalid]{border-color:var(--carmim)}
+.e-ppl-control>svg{flex:none;width:20px;height:20px;color:var(--texto-suave)}
+.e-ppl-control input{flex:1;min-width:0;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:15.5px;color:var(--tinta);outline:none}
+.e-ppl-control input::placeholder{color:var(--texto-suave)}
+.e-ppl-paste{flex:none;display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 14px;border:1.5px solid var(--borda);border-radius:13px;background:var(--papel);font:600 14px var(--font-body);color:var(--floresta);cursor:pointer;transition:border-color .15s,background .15s}
+.e-ppl-paste svg{width:18px;height:18px}
+.e-ppl-paste:hover,.e-ppl-paste:focus-visible{border-color:var(--floresta);background:var(--superficie)}
+.e-ppl-submit{width:100%;justify-content:center;margin-top:2px}
+.e-ppl-note{margin:2px 4px 0}
+@media (max-width:860px){.e-ppl{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .e-ppl-side{padding:16px;border-radius:22px}
+  .e-ppl-control{height:54px;padding-left:14px}
+  .e-ppl-paste{padding:0 12px}
+}
+
+/* Por dimensão: um cartão por dimensão, uma linha por pessoa (mesmo desenho dos valores). */
+.e-ppl-dims{grid-template-columns:1fr;margin-top:0}
+.e-ppl-dims .e-pv-card{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}
+.e-ppl-dims .e-pv-cat{grid-column:1/-1}
+@media (max-width:640px){.e-ppl-dims .e-pv-card{grid-template-columns:1fr}}
+.e-ppl-dimrow{background:color-mix(in srgb,var(--pc) 9%,var(--superficie));cursor:default}
+.e-ppl-dimrow strong{color:var(--tinta)}
+.e-ppl-dimrow>span{min-width:0}
+.e-ppl-dimrow .e-avatar{width:46px;height:46px;flex:none}
+.e-ppl-dimrow .e-flagimg{width:66px;height:44px;flex:none}
+.e-ppl-dimrow .e-logoimg{width:46px;height:46px;padding:3px;border-radius:10px;flex:none}
+/* Logo do partido com a bandeira como selo no canto: ocupa só uma imagem de largura e deixa o texto respirar. */
+.e-ppl-dimrow .e-dim-visual{position:relative;display:block;flex:none;width:46px;height:46px;margin-right:6px}
+.e-ppl-dimrow .e-dim-visual .e-flagmini{position:absolute;right:-9px;bottom:-6px;width:27px;height:18px;border:2px solid var(--superficie);border-radius:4px;box-shadow:0 1px 4px rgba(16,16,16,.25)}
+button.e-ppl-dimrow{cursor:pointer;transition:filter .15s}
+button.e-ppl-dimrow:hover{filter:brightness(.97)}
+
+/* Imagens grandes do popup de um país, personalidade ou partido. */
+.e-ppl-flag-lg{width:168px;height:112px;object-fit:cover;border-radius:12px;border:1px solid var(--borda)}
+.e-ppl-portrait-lg{width:120px;height:120px;object-fit:cover;border-radius:50%}
+.e-ppl-logo-lg{width:120px;height:120px;object-fit:contain;padding:10px;box-sizing:border-box;background:#fff;border-radius:22px;border:1px solid var(--borda)}
+.e-value-sheet .e-dim-visual{justify-content:center}
+.e-ppl-intro h2{font-size:clamp(26px,3vw,34px)}
+.e-ppl-intro .e-cmp-lead{margin-top:10px}
+
+/* Partido nos resultados: a bandeira vira um selo no canto do logo (como na comparação entre pessoas). */
+.e-dim-row .e-dim-visual{position:relative;display:block;width:46px;height:46px}
+.e-dim-row .e-dim-visual .e-flagmini{position:absolute;right:-9px;bottom:-6px;width:27px;height:18px;border:2px solid var(--superficie);border-radius:4px;box-shadow:0 1px 4px rgba(16,16,16,.25)}
+.e-values-pick{cursor:pointer;transition:filter .15s}
+.e-values-pick:hover{filter:brightness(.97)}
+.e-values-pick:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+
+/* O anel de foco fica no campo inteiro (borda verde). O foco global (tokens.css: sombra e raio; editorial.css: contorno)
+   desenharia uma caixa extra em volta do texto, por dentro do campo. */
+.e-ppl-control input:focus-visible{outline:none;box-shadow:none;border-radius:0}
+.e-ppl-rename .e-ppl-rename-input:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(27,66,52,.14);border-radius:10px}
+.e-ppl-paste:focus-visible{border-radius:13px}

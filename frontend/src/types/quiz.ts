@@ -285,6 +285,8 @@ export interface CompareItem {
   imagePath?: string | null;
   category: string;
   historical: boolean;
+  /** Só na comparação entre pessoas: iniciais do nome, no lugar da bolinha colorida da ideologia. */
+  initials?: string;
 }
 
 export interface CompareDetail {

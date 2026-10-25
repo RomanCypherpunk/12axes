@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
+import { useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
@@ -13,6 +13,10 @@ interface PoliticalValuesSectionProps {
   category: string;
   /** Religião escolhida pelo usuário, para o ícone dos valores religiosos. */
   religion?: Religion | null;
+  /** Para reusar a seção fora dos resultados (página de comparação entre pessoas). */
+  title?: string;
+  id?: string;
+  header?: ReactNode;
 }
 
 const MIN_NAME_FONT = 9;
@@ -30,7 +34,7 @@ function fitNames(list: HTMLElement) {
   });
 }
 
-export function PoliticalValuesSection({ values, category, religion }: PoliticalValuesSectionProps) {
+export function PoliticalValuesSection({ values, category, religion, title, id, header }: PoliticalValuesSectionProps) {
   const [selected, setSelected] = useState<PoliticalValue | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -51,8 +55,9 @@ export function PoliticalValuesSection({ values, category, religion }: Political
   }
 
   return (
-    <section className="e-panel e-values" id="valores" data-reveal>
-      <h2>{t.valuesSectionTitle}</h2>
+    <section className="e-panel e-values" id={id ?? 'valores'} data-reveal>
+      <h2>{title ?? t.valuesSectionTitle}</h2>
+      {header}
 
       <ul ref={listRef} className="e-dims e-values-grid">
         {values.map((value) => (

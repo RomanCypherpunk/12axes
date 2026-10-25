@@ -72,7 +72,15 @@ export function ProfileFace({ item, className }: { item: CompareItem; className:
       />
     );
   }
-  return <span className={`${className} e-cmp-dot`} style={{ background: resolveIdeologyColor(item.category).base }} aria-hidden="true" />;
+  const background = resolveIdeologyColor(item.category).base;
+  if (item.initials) {
+    return (
+      <span className={`${className} e-cmp-dot e-cmp-initials`} style={{ background }} role="img" aria-label={item.name}>
+        <b aria-hidden="true">{item.initials}</b>
+      </span>
+    );
+  }
+  return <span className={`${className} e-cmp-dot`} style={{ background }} aria-hidden="true" />;
 }
 
 interface CompareSearchFieldProps {
