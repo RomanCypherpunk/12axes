@@ -232,6 +232,11 @@ interface Strings {
   peopleYou: string;
   peopleOther: string;
   peopleBoth: string;
+  peopleShare: string;
+  shareCompareLabel: string;
+  shareCompareFilePrefix: string;
+  shareCompareTitle: (percent: number) => string;
+  shareCompareMessage: (other: string, percent: number, mine: string, theirs: string, url: string) => string;
   peopleSignatureTitle: string;
   peopleDiverge: string;
   peopleAgree: string;
@@ -716,6 +721,16 @@ const pt: Strings = {
   peopleYou: 'Você',
   peopleOther: 'Outra pessoa',
   peopleBoth: 'Vocês',
+  peopleShare: 'Compartilhar comparação',
+  shareCompareLabel: 'COMPARAÇÃO',
+  shareCompareFilePrefix: '12axes-comparacao',
+  shareCompareTitle: (percent) => `Nossa compatibilidade política: ${percent}% | 12axes.vercel.app`,
+  shareCompareMessage: (other, percent, mine, theirs, url) =>
+    `Comparei meu perfil político com o de ${other} no Quiz Político 12 Axes!\n\n` +
+    `🤝 Compatibilidade entre nós: ${percent}%\n\n` +
+    `💡 Minha ideologia:\n${mine}\n\n` +
+    `💡 Ideologia de ${other}:\n${theirs}\n\n` +
+    `👉 Veja a comparação e faça o teste:\n${url}`,
   peopleSignatureTitle: 'O que distingue vocês',
   peopleDiverge: 'Onde mais divergem',
   peopleAgree: 'Onde mais concordam',
@@ -1456,6 +1471,16 @@ const en: Strings = {
   peopleYou: 'You',
   peopleOther: 'Someone else',
   peopleBoth: 'You two',
+  peopleShare: 'Share comparison',
+  shareCompareLabel: 'COMPARISON',
+  shareCompareFilePrefix: '12axes-comparison',
+  shareCompareTitle: (percent) => `Our political compatibility: ${percent}% | 12axes.vercel.app`,
+  shareCompareMessage: (other, percent, mine, theirs, url) =>
+    `I compared my political profile with ${other}'s on the 12 Axes Political Quiz!\n\n` +
+    `🤝 Compatibility between us: ${percent}%\n\n` +
+    `💡 My ideology:\n${mine}\n\n` +
+    `💡 ${other}'s ideology:\n${theirs}\n\n` +
+    `👉 See the comparison and take the quiz:\n${url}`,
   peopleSignatureTitle: 'What sets you apart',
   peopleDiverge: 'Where you differ most',
   peopleAgree: 'Where you agree most',

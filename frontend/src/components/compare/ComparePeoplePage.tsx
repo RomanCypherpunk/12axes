@@ -15,7 +15,7 @@ import {
   type PersonResult
 } from '../../utils/peopleCompare';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
-import { ArrowIcon, Logo, SiteFooter } from '../editorial/primitives';
+import { ArrowIcon, Logo, ShareImageIcon, SiteFooter } from '../editorial/primitives';
 import { ProfileFace } from '../results/CompareSection';
 import { profileColor } from './CompareAxes';
 import { CompareNav, CompareResults, type NavSection } from './ComparePage';
@@ -83,6 +83,8 @@ export function ComparePeoplePage() {
   const [editing, setEditing] = useState<0 | 1 | null>(null);
   const [draft, setDraft] = useState('');
   const nameInput = useRef<HTMLInputElement>(null);
+  const [isSharing, setIsSharing] = useState(false);
+  const [shareError, setShareError] = useState<string | null>(null);
   useScrollReveal(true, [loaded]);
 
   useEffect(() => {
@@ -142,6 +144,44 @@ export function ComparePeoplePage() {
     window.history.replaceState(null, '', peopleCompareUrl({ names: next, people: LINK.people }));
   };
 
+  // Imagem 1080x1920 da comparação (o módulo do cartão e o html-to-image só carregam neste clique).
+  const share = async () => {
+    if (!loaded || !profiles || !LINK) return;
+    setIsSharing(true);
+    setShareError(null);
+    try {
+      const { exportCompareShare } = await import('../../utils/compareShareCard');
+      await exportCompareShare({
+        names,
+        results: loaded.results,
+        values: [LINK.people[0].values, LINK.people[1].values],
+        axes,
+        religions: [LINK.people[0].religion, LINK.people[1].religion],
+        compatibility: profiles.pairs[0].compatibility
+      });
+    } catch (err) {
+      setShareError(err instanceof Error ? err.message : t.errImage);
+    } finally {
+      setIsSharing(false);
+    }
+  };
+
+  // O mesmo botão no topo e no fim da página; o erro, se houver, aparece junto de cada um.
+  const shareActions = (className: string) => (
+    <>
+      <div className={className}>
+        <button className="e-btn e-btn-primary" type="button" onClick={share} disabled={isSharing}>
+          {isSharing ? t.generatingPng : t.peopleShare} <ShareImageIcon />
+        </button>
+      </div>
+      {shareError && (
+        <p className="inline-error" role="alert">
+          {shareError}
+        </p>
+      )}
+    </>
+  );
+
   const home = LANG === 'en' ? '/en' : '/';
   const detail = loaded && profiles && LINK ? buildDetail(loaded, profiles, names, LINK.people, axes) : null;
 
@@ -164,6 +204,7 @@ export function ComparePeoplePage() {
           <div className="e-res-main">
             <header className="e-res-head">
               <h1>{t.peoplePageTitle}</h1>
+              {profiles && shareActions('e-actions e-ppl-share')}
             </header>
 
             {!LINK && (
@@ -233,6 +274,8 @@ export function ComparePeoplePage() {
                 <CompareResults profiles={profiles} axes={axes} nearby={detail?.nearby} pairsTitle={t.peoplePairsTitle} people />
               </div>
             )}
+
+            {profiles && shareActions('e-actions')}
           </div>
 
           <aside className="e-side" aria-label={t.navOnThisPage}>

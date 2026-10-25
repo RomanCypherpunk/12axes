@@ -10,6 +10,10 @@ export const RESULT_URL_KEYS = ['est', 'rep', 'pod', 'imi', 'dip', 'int', 'eco',
 
 export const MAX_NAME_LENGTH = 40;
 
+// Dois perfis ficam em lados opostos de um eixo quando cada um passa do centro (50%) por pelo menos esta folga,
+// cada um para um polo. Ficar perto do centro mas já do outro lado conta: o ponto na trilha cruza a linha do meio.
+export const OPPOSITE_SIDE_MARGIN = 2;
+
 export interface PersonResult {
   values: number[];
   religion: Religion | null;

@@ -1,12 +1,10 @@
 import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { Axis, CompareProfile } from '../../types/quiz';
+import { OPPOSITE_SIDE_MARGIN } from '../../utils/peopleCompare';
 import { valueOf } from './CompareAxes';
 import { colorOf } from './profileColors';
 
-// Dois perfis ficam em lados opostos de um eixo quando cada um passa do centro (50%) por pelo menos esta folga,
-// cada um para um polo. Ficar perto do centro mas já do outro lado conta: o ponto na trilha cruza a linha do meio.
-const SIDE_MARGIN = 2;
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
 
 interface AxisSpread {
@@ -32,8 +30,8 @@ export function CompareSignature({ axes, profiles, people = false }: { axes: Axi
   const opposite = spreads.filter(
     ({ axis, spread }) =>
       spread > 0 &&
-      profiles.some((profile) => valueOf(profile, axis.id) - 50 >= SIDE_MARGIN) &&
-      profiles.some((profile) => 50 - valueOf(profile, axis.id) >= SIDE_MARGIN)
+      profiles.some((profile) => valueOf(profile, axis.id) - 50 >= OPPOSITE_SIDE_MARGIN) &&
+      profiles.some((profile) => 50 - valueOf(profile, axis.id) >= OPPOSITE_SIDE_MARGIN)
   );
 
   return (

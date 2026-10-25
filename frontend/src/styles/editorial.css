@@ -1296,3 +1296,6 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-ppl-control input:focus-visible{outline:none;box-shadow:none;border-radius:0}
 .e-ppl-rename .e-ppl-rename-input:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(27,66,52,.14);border-radius:10px}
 .e-ppl-paste:focus-visible{border-radius:13px}
+
+
+.e-ppl-share{justify-content:flex-start;margin-top:18px}

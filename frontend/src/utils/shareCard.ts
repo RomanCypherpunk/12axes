@@ -17,8 +17,8 @@ import type { Religion } from './religion';
 export const SHARE_WIDTH = 1080;
 export const SHARE_HEIGHT = 1920;
 
-const SHARE_FONT_DISPLAY = '"Sora"';
-const SHARE_FONT_BODY = '"Poppins"';
+export const SHARE_FONT_DISPLAY = '"Sora"';
+export const SHARE_FONT_BODY = '"Poppins"';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 export const SHARE_COLORS = {
@@ -27,9 +27,9 @@ export const SHARE_COLORS = {
 };
 
 type Style = Partial<CSSStyleDeclaration>;
-type PoleSide = 'left' | 'right';
+export type PoleSide = 'left' | 'right';
 
-function el(tag: string, style: Style, text?: string): HTMLElement {
+export function el(tag: string, style: Style, text?: string): HTMLElement {
   const node = document.createElement(tag);
   node.style.boxSizing = 'border-box';
   Object.assign(node.style, style);
@@ -39,7 +39,7 @@ function el(tag: string, style: Style, text?: string): HTMLElement {
   return node;
 }
 
-function clamp(value: number): number {
+export function clamp(value: number): number {
   return Math.max(0, Math.min(100, value));
 }
 
@@ -52,7 +52,7 @@ function hexToRgb(hex: string): [number, number, number] {
 }
 
 /** Mistura `a` e `b` com `ratioA` peso de `a` (equivalente a color-mix). */
-function mixHex(a: string, b: string, ratioA: number): string {
+export function mixHex(a: string, b: string, ratioA: number): string {
   const [ar, ag, ab] = hexToRgb(a);
   const [br, bg, bb] = hexToRgb(b);
   const r = Math.round(ar * ratioA + br * (1 - ratioA));
@@ -61,12 +61,12 @@ function mixHex(a: string, b: string, ratioA: number): string {
   return `rgb(${r}, ${g}, ${bl})`;
 }
 
-function rgba(hex: string, alpha: number): string {
+export function rgba(hex: string, alpha: number): string {
   const [r, g, b] = hexToRgb(hex);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-function readableInk(hex: string): string {
+export function readableInk(hex: string): string {
   const [r, g, b] = hexToRgb(hex);
   const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
   return luminance > 0.48 ? SHARE_COLORS.tinta : SHARE_COLORS.papel;
@@ -187,7 +187,7 @@ export function buildShareCard(
   return { stage, target, backgroundColor: color.base };
 }
 
-function buildShareHeader(): HTMLElement {
+export function buildShareHeader(label: string = t.shareResultLabel): HTMLElement {
   const P = SHARE_COLORS.papel;
   const header = el('div', {
     display: 'flex',
@@ -214,7 +214,7 @@ function buildShareHeader(): HTMLElement {
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
       color: rgba(P, 0.82)
-    }, t.shareResultLabel)
+    }, label)
   );
   const brand = header.firstChild as HTMLElement;
   brand.append(
@@ -482,7 +482,7 @@ function buildShareAxisLine(
   return row;
 }
 
-function buildPoleGlyph(axisId: string, side: PoleSide, religion: Religion | null): SVGElement {
+export function buildPoleGlyph(axisId: string, side: PoleSide, religion: Religion | null): SVGElement {
   // Polo "Religioso" mostra a religião escolhida; sem escolha, a cruz.
   const filled = (axisId === 'religiao' && side === 'right' && religiousPoleIcon(religion)) || FILLED_POLE_ICONS[axisId]?.[side];
   if (filled) {
@@ -626,7 +626,7 @@ function buildShareListBox(
   return box;
 }
 
-function buildShareFooter(): HTMLElement {
+export function buildShareFooter(cta: string = t.shareFooterCta): HTMLElement {
   const P = SHARE_COLORS.papel;
   const footer = el('div', {
     display: 'flex',
@@ -643,7 +643,7 @@ function buildShareFooter(): HTMLElement {
       letterSpacing: '0.16em',
       textTransform: 'uppercase',
       color: rgba(P, 0.9)
-    }, t.shareFooterCta),
+    }, cta),
     el('span', {
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '700',
@@ -672,12 +672,14 @@ function buildShareFooter(): HTMLElement {
  */
 
 type ToPng = (node: HTMLElement, options?: Record<string, unknown>) => Promise<string>;
-type ShareImageKind = 'portrait' | 'avatar' | 'flag';
+type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'photo' | 'tint';
 
 interface ShareImageSlot {
   kind: ShareImageKind;
   src: string;
   rect: CanvasRect;
+  /** Só em 'tint': a cor do cartão (a da ideologia), que vira um degradê claro → escuro. */
+  tint?: string;
 }
 
 type CanvasRect = { x: number; y: number; width: number; height: number };
@@ -687,7 +689,7 @@ const IMAGE_TIMEOUT_MS = 8000;
 export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise<string> {
   const slots = collectImageSlots(target);
   // Carrega as imagens em paralelo com o render do DOM.
-  const imagesPromise = Promise.all(slots.map((slot) => loadImage(slot.src).catch(() => null)));
+  const imagesPromise = Promise.all(slots.map((slot) => (slot.kind === 'tint' ? Promise.resolve(null) : loadImage(slot.src).catch(() => null))));
 
   const domDataUrl = await toPng(target, {
     width: SHARE_WIDTH,
@@ -707,11 +709,14 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
   }
 
   const base = target.dataset.shareBase ?? '#101010';
-  drawBackground(ctx, base, target.dataset.shareCircle ?? base);
+  drawBackground(ctx, base, target.dataset.shareCircle ?? base, target.dataset.shareGradient);
 
   slots.forEach((slot, index) => {
     if (slot.kind === 'portrait') {
       drawPortrait(ctx, images[index], slot.rect, base);
+    } else if (slot.kind === 'tint') {
+      // Fica embaixo do DOM: o texto do cartão é desenhado por cima do degradê.
+      drawTintCard(ctx, slot.rect, slot.tint ?? base);
     }
   });
 
@@ -719,11 +724,17 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
 
   slots.forEach((slot, index) => {
     const image = images[index];
-    if (!image || slot.kind === 'portrait') {
+    if (!image || slot.kind === 'portrait' || slot.kind === 'tint') {
       return;
     }
     ctx.save();
-    if (slot.kind === 'avatar') {
+    if (slot.kind === 'photo') {
+      roundedRectPath(ctx, slot.rect, 22);
+      ctx.clip();
+      drawCover(ctx, image, slot.rect, 0.2);
+    } else if (slot.kind === 'flagfit') {
+      drawFlagFit(ctx, image, slot.rect);
+    } else if (slot.kind === 'avatar') {
       ctx.beginPath();
       ctx.ellipse(
         slot.rect.x + slot.rect.width / 2,
@@ -749,17 +760,18 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
 
 function collectImageSlots(root: HTMLElement): ShareImageSlot[] {
   const rootRect = root.getBoundingClientRect();
-  return Array.from(root.querySelectorAll<HTMLElement>('[data-share-image][data-share-src]'))
-    .map((frame) => {
+  return Array.from(root.querySelectorAll<HTMLElement>('[data-share-image]'))
+    .map((frame): ShareImageSlot | null => {
       const kind = frame.dataset.shareImage as ShareImageKind;
       const src = frame.dataset.shareSrc ?? '';
       const rect = frame.getBoundingClientRect();
-      if (!src || rect.width <= 0 || rect.height <= 0) {
+      if ((!src && kind !== 'tint') || rect.width <= 0 || rect.height <= 0) {
         return null;
       }
       return {
         kind,
         src,
+        tint: frame.dataset.shareTint,
         rect: {
           x: rect.left - rootRect.left,
           y: rect.top - rootRect.top,
@@ -827,13 +839,77 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 }
 
 // Fundo da cor da categoria com o círculo claro no canto superior direito.
-function drawBackground(ctx: CanvasRenderingContext2D, base: string, circle: string) {
+function drawBackground(ctx: CanvasRenderingContext2D, base: string, circle: string, gradient?: string) {
+  if (gradient) {
+    // "cor1;cor2[;...]": degradê a 160° (cartão de comparação: de uma cor para a da outra pessoa) e círculo translúcido
+    // no canto, como no desenho. Em CSS, 160° vai quase para baixo e um pouco para a direita; a linha do degradê
+    // atravessa o centro com o comprimento que cobre o cartão inteiro.
+    const stops = gradient.split(';');
+    const angle = (160 * Math.PI) / 180;
+    const dx = Math.sin(angle);
+    const dy = -Math.cos(angle);
+    const half = (Math.abs(SHARE_WIDTH * dx) + Math.abs(SHARE_HEIGHT * dy)) / 2;
+    const cx = SHARE_WIDTH / 2;
+    const cy = SHARE_HEIGHT / 2;
+    const fill = ctx.createLinearGradient(cx - dx * half, cy - dy * half, cx + dx * half, cy + dy * half);
+    stops.forEach((stop, index) => fill.addColorStop(stops.length === 1 ? 0 : index / (stops.length - 1), stop));
+    ctx.fillStyle = fill;
+    ctx.fillRect(0, 0, SHARE_WIDTH, SHARE_HEIGHT);
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.07)';
+    ctx.beginPath();
+    ctx.arc(SHARE_WIDTH - 90, 40, 340, 0, Math.PI * 2);
+    ctx.fill();
+    return;
+  }
   ctx.fillStyle = base;
   ctx.fillRect(0, 0, SHARE_WIDTH, SHARE_HEIGHT);
   ctx.fillStyle = circle;
   ctx.beginPath();
   ctx.arc(SHARE_WIDTH, 0, 400, 0, Math.PI * 2);
   ctx.fill();
+}
+
+// Cartão de país da comparação: degradê a 150° da cor da ideologia (clareada em 22%) até a cor cheia aos 70%,
+// com cantos de 28px. A bandeira (drawFlagFit) e o texto vêm por cima.
+function drawTintCard(ctx: CanvasRenderingContext2D, rect: CanvasRect, tint: string) {
+  ctx.save();
+  roundedRectPath(ctx, rect, 28);
+  ctx.clip();
+  const angle = (150 * Math.PI) / 180;
+  const dx = Math.sin(angle);
+  const dy = -Math.cos(angle);
+  const half = (Math.abs(rect.width * dx) + Math.abs(rect.height * dy)) / 2;
+  const cx = rect.x + rect.width / 2;
+  const cy = rect.y + rect.height / 2;
+  const gradient = ctx.createLinearGradient(cx - dx * half, cy - dy * half, cx + dx * half, cy + dy * half);
+  gradient.addColorStop(0, mixHex(tint, '#FFFFFF', 0.78));
+  gradient.addColorStop(0.7, tint);
+  gradient.addColorStop(1, tint);
+  ctx.fillStyle = gradient;
+  ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+  ctx.restore();
+}
+
+// Bandeira inteira, sem corte nem zoom: cabe na caixa na proporção dela (3:2, 2:1, quadrada...), centralizada,
+// com cantos de 16px e sombra.
+function drawFlagFit(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect) {
+  const scale = Math.min(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  const fit = { x: rect.x + (rect.width - width) / 2, y: rect.y + (rect.height - height) / 2, width, height };
+  ctx.save();
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
+  ctx.shadowBlur = 18;
+  ctx.shadowOffsetY = 6;
+  roundedRectPath(ctx, fit, 16);
+  ctx.fillStyle = '#000000';
+  ctx.fill();
+  ctx.restore();
+  ctx.save();
+  roundedRectPath(ctx, fit, 16);
+  ctx.clip();
+  ctx.drawImage(image, fit.x, fit.y, fit.width, fit.height);
+  ctx.restore();
 }
 
 // Retrato: foto com leve contraste, véu da categoria (multiply) e degradê até
