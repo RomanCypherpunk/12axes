@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "Treze ex-colônias soberanas unidas por um Congresso sem Executivo, sem poder de tributar e com um voto por estado: o poder real está nas legislaturas estaduais e nas assembleias de cidades, que redigem as próprias constituições.",
+    "answers": {
+      "estrutura_06": "DT", "estrutura_01": "CT", "estrutura_05": "CT", "estrutura_16": "DT", "estrutura_04": "DT",
+      "estrutura_13": "C", "estrutura_20": "DT", "estrutura_15": "CT", "estrutura_18": "D", "estrutura_17": "C",
+      "estrutura_19": "C", "estrutura_12": "DT", "estrutura_09": "C", "estrutura_02": "DT", "estrutura_08": "DT",
+      "estrutura_07": "CT", "estrutura_11": "N", "estrutura_14": "DT", "estrutura_03": "CT", "estrutura_10": "DT"
+    }
+  },
+  "representacao": {
+    "personaBrief": "Proclama consentimento dos governados e soberania popular, com assembleias eleitas e rotatividade de cargos, mas na prática o voto é restrito a homens livres proprietários ou contribuintes, e legalistas e escravizados ficam fora ou são reprimidos.",
+    "answers": {
+      "representacao_01": "C", "representacao_05": "N", "representacao_20": "DT", "representacao_11": "C", "representacao_04": "DT",
+      "representacao_03": "C", "representacao_08": "DT", "representacao_12": "DT", "representacao_17": "N", "representacao_14": "DT",
+      "representacao_13": "C", "representacao_09": "D", "representacao_02": "DT", "representacao_15": "CT", "representacao_19": "C",
+      "representacao_06": "D", "representacao_16": "C", "representacao_18": "D", "representacao_10": "DT", "representacao_07": "DT"
+    }
+  },
+  "poder": {
+    "personaBrief": "Regime nascido contra a tirania, com direitos de devido processo e porte de armas, mas que em guerra impôs juramentos, comitês de segurança, confisco, censura a jornais legalistas e leis estaduais de costumes e pena de morte.",
+    "answers": {
+      "poder_03": "D", "poder_15": "C", "poder_13": "C", "poder_02": "N", "poder_12": "DT",
+      "poder_17": "C", "poder_20": "C", "poder_18": "C", "poder_14": "C", "poder_16": "D",
+      "poder_11": "C", "poder_06": "DT", "poder_01": "C", "poder_19": "C", "poder_04": "N",
+      "poder_10": "CT", "poder_05": "D", "poder_07": "C", "poder_09": "DT", "poder_08": "DT"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "A naturalização é decidida pelos estados e aberta a europeus brancos, sobretudo protestantes; alemães e outros mantêm língua e igrejas, mas a identidade anglo-protestante é o padrão e legalistas são expulsos por rejeitar a nova ordem.",
+    "answers": {
+      "imigracao_09": "C", "imigracao_10": "D", "imigracao_06": "N", "imigracao_19": "C", "imigracao_04": "C",
+      "imigracao_15": "C", "imigracao_07": "C", "imigracao_20": "D", "imigracao_17": "D", "imigracao_13": "C",
+      "imigracao_11": "C", "imigracao_08": "N", "imigracao_02": "D", "imigracao_18": "D", "imigracao_05": "C",
+      "imigracao_03": "DT", "imigracao_01": "C", "imigracao_14": "D", "imigracao_16": "N", "imigracao_12": "D"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Em guerra de independência, o regime depende de exército e milícia, de espionagem e de alianças, mas desconfia de exércitos permanentes e desmobiliza no pós-guerra; o Congresso busca negociação e acordos de paz.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "C", "diplomacia_15": "N", "diplomacia_19": "C", "diplomacia_11": "CT",
+      "diplomacia_05": "C", "diplomacia_12": "D", "diplomacia_10": "D", "diplomacia_17": "D", "diplomacia_03": "C",
+      "diplomacia_07": "N", "diplomacia_06": "C", "diplomacia_14": "N", "diplomacia_20": "C", "diplomacia_16": "C",
+      "diplomacia_01": "C", "diplomacia_04": "C", "diplomacia_13": "CT", "diplomacia_09": "C", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "O Plano de Tratados de 1776 buscava comércio sem alianças permanentes, mas o regime invadiu o Canadá, expandiu-se para o Oeste contra povos indígenas e usou boicotes como arma, defendendo o interesse próprio acima de tratados.",
+    "answers": {
+      "intervencao_01": "D", "intervencao_14": "C", "intervencao_20": "C", "intervencao_19": "C", "intervencao_08": "CT",
+      "intervencao_13": "N", "intervencao_12": "C", "intervencao_04": "C", "intervencao_18": "CT", "intervencao_11": "CT",
+      "intervencao_05": "D", "intervencao_02": "C", "intervencao_10": "C", "intervencao_09": "D", "intervencao_16": "C",
+      "intervencao_06": "C", "intervencao_03": "C", "intervencao_07": "C", "intervencao_17": "C", "intervencao_15": "D"
+    }
+  },
+  "economia": {
+    "personaBrief": "Sociedade agrária de pequenos proprietários e comerciantes que trata a propriedade como direito natural; o Estado pouco possui, estradas e pontes são concessões privadas, embora bens de legalistas tenham sido confiscados e revendidos.",
+    "answers": {
+      "economia_05": "DT", "economia_06": "C", "economia_07": "D", "economia_13": "C", "economia_03": "N",
+      "economia_14": "C", "economia_19": "D", "economia_16": "C", "economia_17": "C", "economia_12": "C",
+      "economia_04": "C", "economia_11": "D", "economia_18": "C", "economia_15": "N", "economia_20": "C",
+      "economia_01": "D", "economia_10": "D", "economia_09": "D", "economia_02": "C", "economia_08": "C"
+    }
+  },
+  "controle": {
+    "personaBrief": "O Congresso sem poder de tributar e os estados fortes praticam em guerra controle de preços, papel-moeda de curso forçado, subsídios a pólvora e requisições, mas sem planejamento estrutural nem banco central; a ordem é de propriedade privada.",
+    "answers": {
+      "controle_05": "C", "controle_20": "D", "controle_19": "D", "controle_14": "D", "controle_07": "C",
+      "controle_04": "D", "controle_02": "D", "controle_17": "C", "controle_16": "N", "controle_10": "DT",
+      "controle_06": "C", "controle_08": "C", "controle_13": "D", "controle_01": "D", "controle_11": "D",
+      "controle_03": "C", "controle_15": "C", "controle_12": "D", "controle_18": "N", "controle_09": "C"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Rejeita as Leis de Navegação e busca comércio livre com as nações por tratados, mas na prática os estados cobram tarifas entre si, restringem estrangeiros e o regime protege suprimentos e armas de guerra.",
+    "answers": {
+      "comercio_13": "C", "comercio_06": "C", "comercio_12": "C", "comercio_20": "C", "comercio_15": "C",
+      "comercio_19": "C", "comercio_04": "C", "comercio_17": "C", "comercio_07": "C", "comercio_02": "D",
+      "comercio_03": "N", "comercio_10": "C", "comercio_16": "D", "comercio_09": "C", "comercio_05": "D",
+      "comercio_11": "C", "comercio_01": "C", "comercio_18": "C", "comercio_08": "D", "comercio_14": "C"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Elites deístas convivem com população protestante do Grande Despertar; Virgínia separou Igreja e Estado, mas Massachusetts e Connecticut mantêm igrejas oficiais e testes religiosos, e o Congresso proclama dias de oração e jejum.",
+    "answers": {
+      "religiao_02": "C", "religiao_11": "DT", "religiao_19": "D", "religiao_03": "D", "religiao_10": "C",
+      "religiao_13": "DT", "religiao_12": "C", "religiao_15": "DT", "religiao_18": "C", "religiao_05": "DT",
+      "religiao_01": "D", "religiao_14": "C", "religiao_06": "C", "religiao_16": "C", "religiao_08": "N",
+      "religiao_07": "DT", "religiao_09": "D", "religiao_17": "DT", "religiao_20": "C", "religiao_04": "C"
+    }
+  },
+  "moral": {
+    "personaBrief": "Moral republicana e protestante: família patriarcal, virtude pública e leis estaduais de costumes contra fornicação, blasfêmia e vícios; escravidão e hierarquia racial persistem e nenhuma ideia de direitos sexuais ou de gênero.",
+    "answers": {
+      "moral_07": "DT", "moral_04": "C", "moral_15": "DT", "moral_12": "C", "moral_03": "DT",
+      "moral_01": "DT", "moral_09": "D", "moral_06": "CT", "moral_19": "D", "moral_02": "CT",
+      "moral_05": "DT", "moral_17": "DT", "moral_13": "DT", "moral_11": "DT", "moral_10": "C",
+      "moral_18": "C", "moral_16": "C", "moral_14": "C", "moral_08": "C", "moral_20": "C"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Sociedade 90% rural cujo ideal é a pequena propriedade agrária, com curiosidade iluminista (Franklin, Rittenhouse) e desenvolvimento de recursos e fronteira, mas sem industrialização nem consciência ambiental moderna.",
+    "answers": {
+      "tecnologia_01": "N", "tecnologia_13": "D", "tecnologia_19": "N", "tecnologia_12": "DT", "tecnologia_18": "C",
+      "tecnologia_10": "D", "tecnologia_05": "C", "tecnologia_04": "C", "tecnologia_16": "N", "tecnologia_07": "C",
+      "tecnologia_08": "D", "tecnologia_03": "C", "tecnologia_15": "D", "tecnologia_20": "C", "tecnologia_06": "D",
+      "tecnologia_09": "C", "tecnologia_17": "D", "tecnologia_02": "C", "tecnologia_14": "C", "tecnologia_11": "D"
+    }
+  },
+  "archetype": { "sociedade": "B", "poder": "C", "economia": "F", "mundo": "D", "tecnologia": "C" }
+}
