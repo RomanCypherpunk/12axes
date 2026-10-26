@@ -4769,5 +4769,86 @@
     "religions": [
       "protestant"
     ]
+  },
+  {
+    "id": "franca-de-gaulle",
+    "name": "França de De Gaulle",
+    "category": "República presidencialista-dirigista",
+    "description": "Quinta República sob De Gaulle: presidencialismo forte, plebiscitos, planejamento dirigista, independência nuclear e saída do comando da OTAN, fim da guerra da Argélia e crise de maio de 1968.",
+    "flagPath": "/countries/flags/franca.gif",
+    "historical": true,
+    "period": "1958–1969",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+    "flagNote": "Bandeira tricolor da França, a mesma da Quinta República.",
+    "religions": []
+  },
+  {
+    "id": "africa-do-sul-de-mandela",
+    "name": "África do Sul de Mandela",
+    "category": "Democracia multirracial-reconciliatória",
+    "description": "Transição pós-apartheid sob Nelson Mandela: primeiras eleições multirraciais, governo de unidade nacional, Constituição de 1996, Comissão da Verdade e Reconciliação e política econômica liberal moderada.",
+    "flagPath": "/countries/flags/africa-do-sul.gif",
+    "historical": true,
+    "period": "1994–1999",
+    "vector": null,
+    "flagKind": "national-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Africa.svg",
+    "flagNote": "Bandeira adotada em 1994, a mesma da África do Sul atual.",
+    "religions": []
+  },
+  {
+    "id": "romenia-legionaria",
+    "name": "Romênia Legionária",
+    "category": "Estado nacional-legionário",
+    "description": "Estado Nacional Legionário de setembro de 1940 a janeiro de 1941, governo da Guarda de Ferro com Antonescu: nacionalismo ortodoxo místico, partido único, antissemitismo, expropriações e violência política, até a rebelião legionária.",
+    "flagPath": "/countries/flags/romenia-legionaria.png",
+    "historical": true,
+    "period": "1940–1941",
+    "vector": null,
+    "flagKind": "movement-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Iron_Guard_(Legion_of_the_Archangel_Michael_or_Legionary_Movement).svg",
+    "flagNote": "Bandeira da Guarda de Ferro (Legião do Arcanjo Miguel), usada como referência visual do regime.",
+    "religions": [
+      "orthodox"
+    ]
+  },
+  {
+    "id": "austria-corporativista",
+    "name": "Áustria Corporativista",
+    "category": "Estado corporativo-católico",
+    "description": "Ständestaat de Dollfuss e Schuschnigg: guerra civil de 1934, partidos dissolvidos, Frente Pátria, corporações profissionais, catolicismo político, antinazismo e antissocialismo, até o Anschluss de 1938.",
+    "flagPath": "/countries/flags/austria-corporativista.png",
+    "historical": true,
+    "period": "1934–1938",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:State_flag_of_Austria_(1934%E2%80%931938).svg",
+    "flagNote": "Bandeira de Estado da Áustria Federal usada de 1934 a 1938.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "espanha-primo-de-rivera",
+    "name": "Espanha de Primo de Rivera",
+    "category": "Ditadura militar-regeneracionista",
+    "description": "Ditadura de Primo de Rivera sob Afonso XIII: golpe de 1923, Constituição suspensa, partido oficial União Patriótica, censura, obras públicas, corporativismo trabalhista, repressão a catalães e fim da guerra do Rife.",
+    "flagPath": "/countries/flags/espanha-primo-de-rivera.png",
+    "historical": true,
+    "period": "1923–1930",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1785%E2%80%931873,_1875%E2%80%931931).svg",
+    "flagNote": "Bandeira da Espanha monárquica usada até 1931.",
+    "religions": [
+      "catholic"
+    ]
   }
 ]
