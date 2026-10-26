@@ -143,6 +143,7 @@ interface Strings {
   axisExplanations: Record<string, string>;
   axisInfoAria: (label: string) => string;
   questionHelpAria: string;
+  questionHelpLabel: string;
   themeToDarkAria: string;
   themeToLightAria: string;
   questionHelpTitle: string;
@@ -623,6 +624,7 @@ const pt: Strings = {
   },
   axisInfoAria: (label) => `O que significa o eixo ${label}?`,
   questionHelpAria: 'Entender esta pergunta',
+  questionHelpLabel: 'Entenda',
   themeToDarkAria: 'Ativar modo escuro',
   themeToLightAria: 'Ativar modo claro',
   questionHelpTitle: 'Sobre esta pergunta',
@@ -1375,6 +1377,7 @@ const en: Strings = {
   },
   axisInfoAria: (label) => `What does the ${label} axis mean?`,
   questionHelpAria: 'Understand this question',
+  questionHelpLabel: 'Understand',
   themeToDarkAria: 'Switch to dark mode',
   themeToLightAria: 'Switch to light mode',
   questionHelpTitle: 'About this question',

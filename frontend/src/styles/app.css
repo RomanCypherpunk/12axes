@@ -12289,6 +12289,13 @@ html[data-quiz-theme="dark"] .question-axis-tag {
   background: color-mix(in srgb, var(--pole) 22%, #1A1E1B);
   color: #ECE8DC;
 }
+html[data-quiz-theme="dark"] .question-help-btn {
+  background: #262B27;
+  color: #ECE8DC;
+}
+html[data-quiz-theme="dark"] .question-help-btn:hover {
+  background: #2F352F;
+}
 
 /* Respostas: cada lado mantém a cor, com fundo escuro e rótulo claro quando selecionado. */
 html[data-quiz-theme="dark"] .answer-button {
@@ -12346,4 +12353,75 @@ html[data-quiz-theme="dark"] .glossary-tooltip {
 }
 html[data-quiz-theme="dark"] .glossary-tooltip strong {
   color: #09241B;
+}
+
+/* Botão de ajuda da pergunta: mesmo fundo, altura e texto em maiúsculas do selo da categoria, com o
+   ícone de ajuda vazado (sem o círculo preenchido), para ler como um segundo selo clicável. */
+.question-help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: clamp(4px, .7vh, 7px) 16px clamp(4px, .7vh, 7px) 8px;
+  border: 0;
+  border-radius: 999px;
+  background: #ece8dc;
+  /* Cinza quente, menos escuro que o texto da pergunta e do selo, para o botão não competir com eles. */
+  color: #625f54;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: normal;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s ease;
+}
+.question-help-btn i {
+  width: clamp(24px, 3.4vh, 30px);
+  height: clamp(24px, 3.4vh, 30px);
+  display: grid;
+  place-items: center;
+  /* Ícone vazado (o "?" em contorno), da mesma cor do texto, sem o círculo preenchido do selo. */
+  color: inherit;
+  flex: none;
+}
+.question-help-btn svg {
+  width: 78%;
+  height: 78%;
+}
+.question-help-btn:hover {
+  background: #e4dfd0;
+}
+.question-help-btn:focus-visible {
+  outline: 3px solid var(--accent, #102E24);
+  outline-offset: 2px;
+}
+/* Celular: selo da categoria e botão "Entenda" mais compactos, para não competir com a pergunta. */
+@media (max-width: 760px) {
+  .question-axis-help { gap: 6px; flex-wrap: wrap; }
+  .question-axis-help .question-axis-tag,
+  .question-axis-help .question-help-btn {
+    gap: 6px;
+    padding: 3px 11px 3px 4px;
+    font-size: 10.5px;
+    letter-spacing: .08em;
+  }
+  .question-axis-help .question-axis-tag i,
+  .question-axis-help .question-help-btn i {
+    width: 22px;
+    height: 22px;
+  }
+  .question-axis-help .question-axis-tag .question-axis-tag-ico {
+    width: 12px;
+    height: 12px;
+  }
+  .question-help-btn svg {
+    width: 72%;
+    height: 72%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .question-help-btn { transition: none; }
 }

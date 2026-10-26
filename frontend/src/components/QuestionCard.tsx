@@ -3,7 +3,7 @@ import { t } from '../i18n';
 import type { AnswerOption, AnswerValue, Axis, Question, QuestionHelp } from '../types/quiz';
 import { PoleIcon } from './AxisIcon';
 import { GlossaryText } from './GlossaryText';
-import { InfoButton, InfoSheet } from './results/InfoSheet';
+import { InfoSheet } from './results/InfoSheet';
 
 const answerClassById: Record<AnswerValue, string> = {
   STRONGLY_AGREE: 'answer-button answer-strong-agree',
@@ -39,14 +39,30 @@ export function QuestionCard({ question, axisLabel, axis, number, options, selec
       )}
       <header className="question-card-header">
         {axis ? (
-          <div className="question-axis-help">
+          <div className="question-axis-help" style={{ '--pole': agreeColor } as CSSProperties}>
             <p className="question-axis-tag" style={{ '--pole': agreeColor } as CSSProperties}>
               <i aria-hidden="true">
                 <PoleIcon axisId={axis.id} side={question.agreePole === 'LEFT' ? 'left' : 'right'} className="question-axis-tag-ico" />
               </i>
               <span>{question.agreePole === 'LEFT' ? axis.leftPole : axis.rightPole}</span>
             </p>
-            <InfoButton label={question.help ? t.questionHelpAria : t.axisInfoAria(axis.label)} onClick={() => setIsAxisInfoOpen(true)} />
+            <button
+              className="question-help-btn"
+              type="button"
+              aria-label={question.help ? t.questionHelpAria : t.axisInfoAria(axis.label)}
+              onClick={() => setIsAxisInfoOpen(true)}
+            >
+              <i aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    fillRule="evenodd"
+                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16m-1-4h2v2h-2zm0-1.992s2-.008 2 0C13 13.006 16 12 16 10c0-2.21-1.773-4-3.991-4A4 4 0 0 0 8 10h2c0-1.1.9-2 2-2s2 .9 2 2c0 .9-3 2.367-3 4.008"
+                  />
+                </svg>
+              </i>
+              <span>{t.questionHelpLabel}</span>
+            </button>
           </div>
         ) : (
           <p className="question-axis">{axisLabel ?? question.axisId.replace('-', ' ')}</p>
