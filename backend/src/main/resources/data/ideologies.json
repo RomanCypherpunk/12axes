@@ -2838,7 +2838,10 @@
     "vector": null,
     "countryId": "siria-de-assad",
     "personalityId": "hafez-al-assad",
-    "religions": ["islam", "only"]
+    "religions": [
+      "islam",
+      "only"
+    ]
   },
   {
     "id": "islamismo",
@@ -3492,6 +3495,16 @@
     "phrase": "Quero industrializar a nação por planos e obras públicas, aliando Estado, capital nacional e estrangeiro, com a indústria nascente protegida.",
     "countryId": "brasil-de-juscelino-kubitschek",
     "personalityId": "juscelino-kubitschek",
+    "religions": []
+  },
+  {
+    "id": "social-democracia-conservadora",
+    "name": "Social-Democracia Conservadora",
+    "category": "Centro",
+    "description": "Corrente que mantém o Estado de bem-estar, os sindicatos e a economia mista, mas defende família, nação, ordem pública e restrição à imigração, como na social-democracia dinamarquesa de Mette Frederiksen.",
+    "phrase": "Quero uma nação coesa, de família, trabalho e fronteiras firmes, com democracia parlamentar, sindicatos fortes e bem-estar universal numa economia mista.",
+    "countryId": "franca",
+    "personalityId": "jacques-chirac",
     "religions": []
   }
 ]
