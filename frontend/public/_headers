@@ -1,0 +1,21 @@
+# Cabeçalhos do Cloudflare Pages (na Vercel este arquivo é ignorado). Os arquivos de /assets são pedidos de outro
+# domínio (o site na Vercel), então precisam de CORS: scripts de módulo e fontes falham sem ele.
+/assets/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
+
+/personalities/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=2592000
+
+/countries/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=2592000
+
+/parties/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=2592000
+
+/share-examples/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=2592000

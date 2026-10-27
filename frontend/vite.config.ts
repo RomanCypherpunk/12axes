@@ -16,6 +16,38 @@ function asyncCssLinkPlugin() {
   };
 }
 
+// Com VITE_ASSETS_CDN, o HTML pede o script e o CSS principais à CDN e, se o pedido falhar (CDN fora do ar, ou deploy
+// da CDN e da hospedagem ainda fora de sincronia), repete o pedido no próprio site, que também publica /assets.
+// window.__ASSET_BASE diz de onde vêm os arquivos carregados depois (telas sob demanda): a CDN, ou '' após uma falha.
+function assetFallbackPlugin(cdn: string) {
+  return {
+    name: 'asset-cdn-fallback',
+    apply: 'build' as const,
+    enforce: 'post' as const,
+    transformIndexHtml(html: string) {
+      if (!cdn) return html;
+      const base = cdn.replace(/\/+$/, '');
+      const escaped = base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const script = new RegExp(`<script type="module" crossorigin src="${escaped}(/assets/[^"]+)"`, 'g');
+      const style = new RegExp(`(<link rel="stylesheet" crossorigin href="${escaped}(/assets/[^"]+)"[^>]*?)>`, 'g');
+      return html
+        .replace(
+          `<head>`,
+          `<head>
+    <script>window.__ASSET_BASE=${JSON.stringify(base)}</script>`
+        )
+        .replace(
+          script,
+          (_match, path) =>
+            `<script type="module" crossorigin src="${base}${path}" onerror="window.__ASSET_BASE='';var s=document.createElement('script');s.type='module';s.src='${path}';document.head.appendChild(s)"`
+        )
+        .replace(style, (match, tag, path) =>
+          match.includes('<noscript>') ? match : `${tag} onerror="this.onerror=null;this.href='${path}'">`
+        );
+    }
+  };
+}
+
 export default defineConfig(({ mode }) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const cwd = (globalThis as { process?: { cwd: () => string } }).process?.cwd?.() ?? '.';
@@ -23,7 +55,20 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_API_PROXY_TARGET || 'http://localhost:8080';
 
   return {
-    plugins: [react(), asyncCssLinkPlugin(), catalogueDevPlugin()],
+    plugins: [react(), asyncCssLinkPlugin(), assetFallbackPlugin((env.VITE_ASSETS_CDN || '').replace(/\/+$/, '')), catalogueDevPlugin()],
+    experimental: {
+      // Com VITE_ASSETS_CDN, os arquivos de /assets (JS, CSS e fontes com hash) são pedidos a essa CDN e a hospedagem
+      // do site entrega só o HTML. Os arquivos de public/ (favicon etc.) continuam no próprio site.
+      renderBuiltUrl(filename, { type, hostType }) {
+        const cdn = (env.VITE_ASSETS_CDN || '').replace(/\/+$/, '');
+        if (!cdn || type !== 'asset') return undefined;
+        // HTML: direto na CDN (com fallback, ver assetFallbackPlugin). CSS: relativo, as fontes acompanham o CSS que carregou.
+        // JS (telas sob demanda): a base é decidida na hora, em window.__ASSET_BASE.
+        if (hostType === 'html') return `${cdn}/${filename}`;
+        if (hostType === 'css') return { relative: true };
+        return { runtime: `(window.__ASSET_BASE||"")+${JSON.stringify(`/${filename}`)}` };
+      }
+    },
     // es2022: o dicionário de idioma é carregado com await no topo do módulo (src/i18n).
     build: { target: 'es2022' },
     test: {
