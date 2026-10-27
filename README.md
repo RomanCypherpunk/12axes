@@ -116,7 +116,7 @@ The share card sums up a result: the main ideology and its family, the most comp
 | Data | Versioned JSON, loaded into memory at startup |
 | Tests | JUnit 5, MockMvc, AssertJ, Vitest |
 | CI | GitHub Actions (backend tests, i18n check, frontend tests and build) |
-| Deploy | Backend on Render (Docker), frontend on Vercel |
+| Deploy | Backend on Render (Docker), pages on Vercel, assets on Cloudflare Pages, images on jsDelivr |
 
 There is no database. The catalogs change only through reviewed commits, so the backend reads the JSON once at startup, validates it, and scores every request in memory.
 
@@ -227,6 +227,8 @@ To point the local frontend at the production API instead, create `frontend/.env
 | `FRONTEND_ORIGINS` | Backend | localhost + Vercel | Allowed origins for CORS and the API |
 | `API_ORIGIN_ENFORCEMENT` | Backend | `true` | Set to `false` to turn off the origin check |
 | `VITE_API_URL` | Frontend | empty | API base URL in production |
+| `VITE_ASSETS_CDN` | Frontend (build) | empty | Origin that serves the built JS, CSS and fonts (`/assets`). Empty: the site serves them itself |
+| `VITE_ASSET_BASE` | Frontend (build) | empty; set in `frontend/.env.production` | Root of `frontend/public/` on the CDN that serves catalog images. Empty: images come from the site |
 
 ### Tests
 
@@ -243,9 +245,11 @@ The backend suite covers the question pool, the three formats, every catalog vec
 | Part | Platform | Configuration |
 |------|----------|---------------|
 | Backend | Render | `render.yaml` and `backend/Dockerfile` |
-| Frontend | Vercel | `frontend/vercel.json`, output `dist` |
+| HTML | Vercel | `frontend/vercel.json`, output `dist` |
+| JS, CSS and fonts | Cloudflare Pages | Git-connected, root `frontend`, build `npm run build`, output `dist` |
+| Catalog images | jsDelivr | Served from this repository, set in `frontend/.env.production` |
 
-Every push and pull request runs the CI workflow in `.github/workflows/ci.yml`.
+Every push and pull request runs the CI workflow in `.github/workflows/ci.yml`, and a push to `main` deploys each platform on its own.
 
 ## Contributing
 
