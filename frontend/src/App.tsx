@@ -7,14 +7,12 @@ import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi'
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
-import { ResultsScreen } from './components/editorial/ResultsScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
 import { CatalogLinks, LangToggle, MenuButton, NavLinks } from './components/editorial/SiteNav';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
-import { createSharePng, exportQuizFor } from './utils/shareImage';
 import { parseShortResult, SHORT_RESULT_PATH } from './utils/shortLinks';
 import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
@@ -32,6 +30,12 @@ import { InfoSheet } from './components/results/InfoSheet';
 import { RELIGION_ICONS, RELIGION_QUESTION_ICON } from './data/religionIcons';
 
 type Screen = 'home' | 'variant' | 'quiz' | 'archetype' | 'results';
+
+// A tela de resultados (com todas as seções) só carrega quando há um resultado para mostrar: quem só abre a home
+// não baixa esse código.
+const ResultsScreen = lazy(() =>
+  import('./components/editorial/ResultsScreen').then((module) => ({ default: module.ResultsScreen }))
+);
 
 // A edição das respostas só carrega quando alguém clica em "Editar respostas".
 const EditAnswersSheet = lazy(() =>
@@ -796,6 +800,8 @@ function MainApp() {
     setIsSharing(true);
     setError(null);
     try {
+      // O módulo do cartão (e o html-to-image) só carrega neste clique.
+      const { createSharePng, exportQuizFor } = await import('./utils/shareImage');
       const dataUrl = await createSharePng(result, exportQuizFor(quiz, homeAxes, selectedVariant), religion);
 
       downloadDataUrl(
@@ -1083,17 +1089,19 @@ function MainApp() {
       )}
 
       {screen === 'results' && result && (quiz || isSharedView) && (
-        <ResultsScreen
-          result={result}
-          quiz={quiz}
-          axes={homeAxes}
-          axisResults={resultByAxis}
-          isSharing={isSharing}
-          error={error}
-          onShare={() => void downloadResultsPng()}
-          religion={religion}
-          onEditAnswers={editableAnswers ? () => void openEditAnswers() : undefined}
-        />
+        <Suspense fallback={<QuizSkeleton message={t.loadingAnalysis} />}>
+          <ResultsScreen
+            result={result}
+            quiz={quiz}
+            axes={homeAxes}
+            axisResults={resultByAxis}
+            isSharing={isSharing}
+            error={error}
+            onShare={() => void downloadResultsPng()}
+            religion={religion}
+            onEditAnswers={editableAnswers ? () => void openEditAnswers() : undefined}
+          />
+        </Suspense>
       )}
 
       {editOpen && screen === 'results' && (

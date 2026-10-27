@@ -376,6 +376,9 @@ function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIn
   const [leaving, setLeaving] = useState(false);
   const [paused, setPaused] = useState(false);
   const busy = useRef(false);
+  // Só as cartas que aparecem (as da frente e a próxima) baixam a imagem; as demais esperam a vez e, depois de
+  // baixadas, ficam. Evita puxar todas as cartas em cada visita à home.
+  const seen = useRef(new Set<number>());
 
   const advance = useCallback(() => {
     if (busy.current) {
@@ -420,6 +423,9 @@ function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIn
           const front = offset === 0;
           // Durante a saída da carta da frente, as outras já avançam uma posição.
           const place = leaving ? (front ? -1 : offset - 1) : offset;
+          if (offset <= DECK_VISIBLE) {
+            seen.current.add(index);
+          }
           return (
             <div
               key={item.ideology.ideologyId}
@@ -430,10 +436,10 @@ function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIn
             >
               <img
                 className="e-deck-img"
-                src={`/share-examples/${LANG}/${item.ideology.ideologyId}.webp`}
+                src={seen.current.has(index) ? `/share-examples/${LANG}/${item.ideology.ideologyId}.webp` : undefined}
                 alt={front ? t.heroDeckAlt(item.ideology.name) : ''}
-                width={576}
-                height={1024}
+                width={480}
+                height={853}
                 decoding="async"
                 draggable={false}
               />

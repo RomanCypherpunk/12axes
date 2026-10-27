@@ -24,6 +24,8 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), asyncCssLinkPlugin(), catalogueDevPlugin()],
+    // es2022: o dicionário de idioma é carregado com await no topo do módulo (src/i18n).
+    build: { target: 'es2022' },
     test: {
       environment: 'node',
     },

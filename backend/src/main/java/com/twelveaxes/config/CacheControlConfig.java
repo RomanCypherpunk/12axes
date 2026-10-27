@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class CacheControlConfig implements WebMvcConfigurer {
-    private static final String CACHE_ONE_HOUR = "public, max-age=3600";
+    private static final String CACHE_ONE_DAY = "public, max-age=86400";
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -21,7 +21,7 @@ public class CacheControlConfig implements WebMvcConfigurer {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
                 if ("GET".equals(request.getMethod())) {
-                    response.setHeader("Cache-Control", CACHE_ONE_HOUR);
+                    response.setHeader("Cache-Control", CACHE_ONE_DAY);
                 }
                 return true;
             }
