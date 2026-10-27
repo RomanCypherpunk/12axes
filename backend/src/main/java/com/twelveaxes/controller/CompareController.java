@@ -32,7 +32,9 @@ public class CompareController {
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
             @RequestParam(required = false) String religion
     ) {
-        return compareService.catalog(lang, ReligionFilter.normalize(religion));
+        // A busca lista todo o catalogo: o filtro de religiao e dos rankings, nao de quem digita o nome de um perfil.
+        // O parametro segue aceito por compatibilidade com clientes antigos e e ignorado.
+        return compareService.catalog(lang);
     }
 
     // Compara o vetor do usuario (12 leftPercents, como em /api/results/by-axes) com um perfil.

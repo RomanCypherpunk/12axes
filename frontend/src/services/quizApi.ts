@@ -93,9 +93,12 @@ export function fetchSharedResult(leftPercents: number[], religion: string | nul
 }
 
 
-export function fetchCompareCatalog(religion: string | null = null): Promise<CompareItem[]> {
-  const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}${religionParam}`);
+// A busca de perfis acha qualquer um do catálogo: o filtro de religião dos rankings não vale aqui, porque quem digita o nome
+// de um perfil (Distributismo, que é só para cristãos nos rankings) quer encontrá-lo. `rv` troca a URL em cache de uma hora.
+const COMPARE_CATALOG_VERSION = 2;
+
+export function fetchCompareCatalog(_religion: string | null = null): Promise<CompareItem[]> {
+  return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}&rv=${COMPARE_CATALOG_VERSION}`);
 }
 
 // `rv` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma

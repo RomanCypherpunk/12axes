@@ -10,11 +10,10 @@ import { cleanName, peopleCompareUrl } from '../../utils/peopleCompare';
 import { profileReligions, type Religion } from '../../utils/religion';
 import { ArrowIcon, SafeImg } from '../editorial/primitives';
 import { AxisTagList } from '../compare/axisTags';
+import { searchItems } from '../../utils/compareSearch';
 import { InfoSheet } from './InfoSheet';
 import { Portrait } from './PersonalitiesSection';
 import { SheetMatch } from './SheetMatch';
-
-const MAX_OPTIONS = 8;
 
 interface CompareSectionProps {
   axes: Axis[];
@@ -27,23 +26,8 @@ interface CompareSectionProps {
   farthest?: PersonalityMatch | null;
 }
 
-// Sem acento e minúsculo, para a busca achar "Sao Paulo" digitando "são paulo".
-function fold(text: string): string {
-  return text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
-}
-
-export function searchItems(items: CompareItem[], query: string): CompareItem[] {
-  const needle = fold(query.trim());
-  if (!needle) return [];
-  const starts: CompareItem[] = [];
-  const contains: CompareItem[] = [];
-  for (const item of items) {
-    const name = fold(item.name);
-    if (name.startsWith(needle)) starts.push(item);
-    else if (name.includes(needle)) contains.push(item);
-  }
-  return [...starts, ...contains].slice(0, MAX_OPTIONS);
-}
+// A busca (nome exato, começo do nome, palavras, sem acento, hífen nem espaço) vive em utils/compareSearch.ts.
+export { searchItems } from '../../utils/compareSearch';
 
 // Personalidade = retrato; país = bandeira; partido/organização = logo 1:1; ideologia = bolinha na cor do espectro.
 export function ProfileFace({ item, className }: { item: CompareItem; className: string }) {

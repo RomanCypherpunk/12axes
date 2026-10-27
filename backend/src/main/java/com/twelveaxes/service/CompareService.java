@@ -68,34 +68,21 @@ public class CompareService {
     }
 
     /** Todos os perfis pesquisaveis, ja filtrados pela religiao do usuario (mesma regra do resultado). */
-    public List<CompareItem> catalog(String lang, String religion) {
+    /**
+     * Todos os perfis do catalogo, para a busca: o filtro de religiao dos rankings nao vale aqui, porque quem digita o
+     * nome de um perfil (Distributismo, so para cristaos nos rankings) quer encontra-lo.
+     */
+    public List<CompareItem> catalog(String lang) {
         String normalizedLang = QuizDataService.normalizeLang(lang);
-        String key = normalizedLang + "|" + religion;
-        return catalogCache.get(key, () -> buildCatalog(normalizedLang, religion));
+        return catalogCache.get(normalizedLang, () -> buildCatalog(normalizedLang));
     }
 
-    private List<CompareItem> buildCatalog(String lang, String religion) {
+    private List<CompareItem> buildCatalog(String lang) {
         List<CompareItem> items = new ArrayList<>();
-        for (Personality personality : dataService.getPersonalities(lang)) {
-            if (ReligionFilter.allows(personality.religions(), religion)) {
-                items.add(personalityItem(personality));
-            }
-        }
-        for (Country country : dataService.getCountries(lang)) {
-            if (ReligionFilter.allows(country.religions(), religion)) {
-                items.add(countryItem(country));
-            }
-        }
-        for (Ideology ideology : dataService.getIdeologies(lang)) {
-            if (ReligionFilter.allows(ideology.religions(), religion)) {
-                items.add(ideologyItem(ideology));
-            }
-        }
-        for (Party party : dataService.getParties(lang)) {
-            if (ReligionFilter.allows(party.religions(), religion)) {
-                items.add(partyItem(party));
-            }
-        }
+        dataService.getPersonalities(lang).forEach(personality -> items.add(personalityItem(personality)));
+        dataService.getCountries(lang).forEach(country -> items.add(countryItem(country)));
+        dataService.getIdeologies(lang).forEach(ideology -> items.add(ideologyItem(ideology)));
+        dataService.getParties(lang).forEach(party -> items.add(partyItem(party)));
         return List.copyOf(items);
     }
 

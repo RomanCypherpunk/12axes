@@ -65,14 +65,18 @@ class CompareControllerTest {
     }
 
     @Test
-    void catalogAppliesTheReligionFilterLikeTheResults() throws Exception {
-        // Sem religiao escolhida, perfis "only" ficam escondidos; com a religiao listada, aparecem.
-        mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))
-                .andExpect(jsonPath("$[*].id", not(hasItem("teocracia-judaica"))));
-        mockMvc.perform(get("/api/compare/catalog").param("lang", "pt").param("religion", "judaism"))
-                .andExpect(jsonPath("$[*].id", hasItem("teocracia-judaica")));
-        mockMvc.perform(get("/api/compare/catalog").param("lang", "pt").param("religion", "christianity"))
-                .andExpect(jsonPath("$[*].id", not(hasItem("teocracia-judaica"))));
+    void catalogListsEveryProfileRegardlessOfReligion() throws Exception {
+        // Perfis "only" (so para uma religiao nos rankings) continuam achaveis na busca, com ou sem religiao no pedido.
+        for (String religion : new String[] {null, "judaism", "christianity", "islam"}) {
+            var request = get("/api/compare/catalog").param("lang", "pt");
+            if (religion != null) {
+                request = request.param("religion", religion);
+            }
+            mockMvc.perform(request)
+                    .andExpect(jsonPath("$[*].id", hasItem("teocracia-judaica")))
+                    .andExpect(jsonPath("$[*].id", hasItem("distributismo")))
+                    .andExpect(jsonPath("$[*].id", hasItem("anarcodistributismo")));
+        }
     }
 
     @Test
