@@ -1,9 +1,10 @@
-import { t } from '../i18n';
+import { LANG, t } from '../i18n';
 import type { Axis, QuizResult } from '../types/quiz';
 import { resolveCountryFlagSrc } from './countryFlags';
 import { resolveIdeologyColor } from './ideologyColors';
 import { resolvePersonalityImageSrc } from './personalityImage';
 import type { Religion } from './religion';
+import { compactCompareUrl } from './shortLinks';
 import {
   SHARE_COLORS,
   SHARE_FONT_BODY,
@@ -183,7 +184,10 @@ export function buildCompareShareCard(data: CompareShareData): { stage: HTMLDivE
   const header = buildShareHeader(t.shareCompareLabel);
   // Altura do desenho (64px): a do cabeçalho padrão é maior e empurraria os eixos para cima do rodapé.
   header.style.height = '64px';
-  const footer = buildShareFooter();
+  const footer = buildShareFooter(
+    t.shareFooterCta,
+    compactCompareUrl(data.names, data.values, data.religions, LANG)
+  );
   footer.style.marginTop = 'auto';
   content.append(
     header,
@@ -458,7 +462,8 @@ function pill(text: string, background: string, x: number): Pill {
 const keepInside = (item: Pill): number => Math.max(item.half, Math.min(TRACK_WIDTH - item.half, item.x));
 
 function axisRow(axis: Axis, a: Side, b: Side, valueA: number, valueB: number, religion: Religion | null): HTMLElement {
-  const row = el('div', { display: 'flex', alignItems: 'center', gap: '10px', height: '58px' });
+  // 52px (eram 58): o rodapé com QR code é mais alto e as 12 linhas cedem o espaço.
+  const row = el('div', { display: 'flex', alignItems: 'center', gap: '10px', height: '52px' });
 
   const track = el('div', {
     position: 'relative',

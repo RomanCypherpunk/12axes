@@ -306,6 +306,8 @@ function buildHomeVariants() {
     .replace(/^\s*<link rel="canonical"[^\n]*\n/m, '')
     .replace(/^\s*<link rel="alternate" hreflang=[^\n]*\n/gm, '');
   writeFileSync(join(DIST, 'results.html'), results);
+  // /r é o link curto de resultado (QR code do cartão): mesma página, também sem canonical.
+  writeFileSync(join(DIST, 'r.html'), results);
 
   const enSeoBlock = `<!-- Primary SEO -->
     <title>12 Axes — Free Political Test, Quiz & Compass Across 12 Axes</title>

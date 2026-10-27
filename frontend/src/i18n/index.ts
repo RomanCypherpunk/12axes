@@ -35,7 +35,9 @@ export function resolveLang(): Lang {
   if (forced) {
     return forced;
   }
-  const fromUrl = new URLSearchParams(window.location.search).get('lang');
+  // No link curto de resultado (/r, do QR code) o idioma vai como "l" para o link ficar menor.
+  const query = new URLSearchParams(window.location.search);
+  const fromUrl = query.get('lang') ?? (normalizePath(window.location.pathname) === '/r' ? query.get('l') : null);
   if (fromUrl === 'pt' || fromUrl === 'en') {
     window.localStorage.setItem(STORAGE_KEY, fromUrl);
     return fromUrl;

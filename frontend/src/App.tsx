@@ -15,6 +15,7 @@ import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
 import { createSharePng, exportQuizFor } from './utils/shareImage';
+import { parseShortResult, SHORT_RESULT_PATH } from './utils/shortLinks';
 import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
 import { PEOPLE_COMPARE_PATH, RESULT_URL_KEYS } from './utils/peopleCompare';
@@ -81,6 +82,10 @@ function parseSharedResultUrl(): number[] | null {
     return null;
   }
   const path = window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+  if (path === SHORT_RESULT_PATH) {
+    // Link curto do QR code do cartão: /r?v=70-80-20-… (ver utils/shortLinks.ts).
+    return parseShortResult(window.location.search)?.values ?? null;
+  }
   if (path !== '/results') {
     return null;
   }
@@ -100,7 +105,7 @@ const SHARED_RESULT_VALUES = parseSharedResultUrl();
 // Link sem religion (ou com valor desconhecido) = ranking geral, sem filtro.
 const SHARED_RELIGION: Religion | null =
   SHARED_RESULT_VALUES && typeof window !== 'undefined'
-    ? parseReligion(new URLSearchParams(window.location.search).get('religion'))
+    ? parseReligion(new URLSearchParams(window.location.search).get('religion') ?? new URLSearchParams(window.location.search).get('r'))
     : null;
 
 function sharedResultUrl(result: QuizResult, religion: Religion | null = null): string {
@@ -417,7 +422,8 @@ function MainApp() {
   }
 
   function resetSharedUrl() {
-    if (window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') === '/results') {
+    const sharedPath = window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '');
+    if (sharedPath === '/results' || sharedPath === SHORT_RESULT_PATH) {
       window.history.replaceState(null, '', '/');
     }
     setIsSharedView(false);

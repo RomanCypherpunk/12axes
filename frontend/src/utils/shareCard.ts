@@ -1,11 +1,13 @@
-import { t } from '../i18n';
+import { LANG, t } from '../i18n';
 import type { PersonalityMatch, QuizPayload, QuizResult } from '../types/quiz';
 import { resolveCountryFlagSrc } from './countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from './personalityImage';
 import { resolveIdeologyColor } from './ideologyColors';
 import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
 import { religiousPoleIcon } from '../data/religionIcons';
+import { qrModules } from './qrMatrix';
 import type { Religion } from './religion';
+import { shortResultUrl } from './shortLinks';
 
 /**
  * Cartão de compartilhamento social — formato stories 1080x1920.
@@ -177,7 +179,15 @@ export function buildShareCard(
     buildShareIdentity(result, color.bg),
     buildShareTwoColumns(result, quiz, color, religion),
     buildShareLists(result, color),
-    buildShareFooter()
+    buildShareFooter(
+      t.shareFooterCta,
+      // Inteiros (meio ponto a menos de precisão): link mais curto, QR 33x33 e não 37x37.
+      shortResultUrl(
+        result.axes.map((axis) => Math.round(axis.leftPercent)),
+        religion,
+        LANG
+      )
+    )
   );
 
   target.append(content);
@@ -284,9 +294,9 @@ function buildShareTwoColumns(
   const row = el('div', {
     display: 'flex',
     gap: '24px',
-    flex: '0 0 920px',
-    height: '920px',
-    minHeight: '920px',
+    flex: `0 0 ${COLUMNS_HEIGHT}px`,
+    height: `${COLUMNS_HEIGHT}px`,
+    minHeight: `${COLUMNS_HEIGHT}px`,
     marginTop: '8px'
   });
   row.append(
@@ -304,7 +314,7 @@ function buildSharePersonalityPortrait(
   const frame = el('div', {
     position: 'relative',
     flex: '0 0 390px',
-    height: '920px',
+    height: `${COLUMNS_HEIGHT}px`,
     borderRadius: '36px',
     overflow: 'hidden'
   });
@@ -626,33 +636,72 @@ function buildShareListBox(
   return box;
 }
 
-export function buildShareFooter(cta: string = t.shareFooterCta): HTMLElement {
+/** Lado do QR code no rodapé, em px (o quadrado branco inteiro, com a margem de silêncio). */
+export const SHARE_QR_SIZE = 150;
+
+// O rodapé com QR é mais alto que o de uma linha (26 + QR contra ~70): as duas colunas do meio cedem essa diferença.
+const COLUMNS_HEIGHT = 920 - (26 + SHARE_QR_SIZE - 70);
+
+/**
+ * Rodapé do cartão: a frase em cima e o site embaixo, à esquerda, e o QR code (link do resultado) no canto direito.
+ * Sem `qrUrl` volta ao rodapé simples de uma linha. O QR é desenhado no canvas (ver drawQr); aqui fica só a caixa.
+ */
+export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string, qrSize: number = SHARE_QR_SIZE): HTMLElement {
   const P = SHARE_COLORS.papel;
   const footer = el('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: '30px',
+    paddingTop: qrUrl ? '26px' : '30px',
     borderTop: `2px solid ${rgba(P, 0.25)}`
   });
-  footer.append(
-    el('span', {
-      fontFamily: SHARE_FONT_BODY,
-      fontWeight: '600',
-      fontSize: '30px',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: rgba(P, 0.9)
-    }, cta),
-    el('span', {
-      fontFamily: SHARE_FONT_DISPLAY,
-      fontWeight: '700',
-      fontSize: '30px',
-      letterSpacing: '0.1em',
-      textTransform: 'uppercase',
-      color: P
-    }, t.shareFooterUrl)
-  );
+  const ctaText = el('span', {
+    fontFamily: SHARE_FONT_BODY,
+    fontWeight: '600',
+    fontSize: '30px',
+    letterSpacing: '0.16em',
+    textTransform: 'uppercase',
+    lineHeight: '1',
+    color: rgba(P, 0.9)
+  }, cta);
+  const urlText = el('span', {
+    fontFamily: SHARE_FONT_DISPLAY,
+    fontWeight: '700',
+    fontSize: '30px',
+    letterSpacing: '0.1em',
+    textTransform: 'uppercase',
+    lineHeight: '1',
+    color: P
+  }, t.shareFooterUrl);
+  // Seta de "abrir" ao lado do endereço.
+  const arrow = svgEl('svg', { viewBox: '0 0 24 24', width: 36, height: 36, fill: 'currentColor', 'aria-hidden': 'true' });
+  arrow.append(svgEl('path', { d: 'M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z' }));
+  arrow.style.display = 'block';
+  arrow.style.flex = 'none';
+  arrow.style.color = P;
+  const urlRow = el('span', { display: 'inline-flex', alignItems: 'center', gap: '8px' });
+  urlRow.append(urlText, arrow);
+
+  if (!qrUrl) {
+    footer.append(ctaText, urlRow);
+    return footer;
+  }
+
+  // A caixa do QR tem exatamente o tamanho dos seus módulos (inteiros de pixels), para o texto centralizar com ele de verdade.
+  const modules = qrModules(qrUrl, 'L').length;
+  const side = Math.floor(qrSize / modules) * modules;
+  const qr = el('div', { width: `${side}px`, height: `${side}px`, flex: 'none' });
+  qr.dataset.shareImage = 'qr';
+  qr.dataset.shareSrc = qrUrl;
+  const text = el('div', {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    gap: '26px'
+  });
+  text.append(ctaText, urlRow);
+  footer.append(text, qr);
   return footer;
 }
 
@@ -672,12 +721,13 @@ export function buildShareFooter(cta: string = t.shareFooterCta): HTMLElement {
  */
 
 type ToPng = (node: HTMLElement, options?: Record<string, unknown>) => Promise<string>;
-type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'photo' | 'tint';
+type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'photo' | 'tint' | 'qr';
 
 interface ShareImageSlot {
   kind: ShareImageKind;
   src: string;
   rect: CanvasRect;
+  /** Em 'qr' o `src` é o texto codificado (o link), não uma imagem. */
   /** Só em 'tint': a cor do cartão (a da ideologia), que vira um degradê claro → escuro. */
   tint?: string;
 }
@@ -689,7 +739,7 @@ const IMAGE_TIMEOUT_MS = 8000;
 export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise<string> {
   const slots = collectImageSlots(target);
   // Carrega as imagens em paralelo com o render do DOM.
-  const imagesPromise = Promise.all(slots.map((slot) => (slot.kind === 'tint' ? Promise.resolve(null) : loadImage(slot.src).catch(() => null))));
+  const imagesPromise = Promise.all(slots.map((slot) => (slot.kind === 'tint' || slot.kind === 'qr' ? Promise.resolve(null) : loadImage(slot.src).catch(() => null))));
 
   const domDataUrl = await toPng(target, {
     width: SHARE_WIDTH,
@@ -723,6 +773,10 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
   ctx.drawImage(domLayer, 0, 0, SHARE_WIDTH, SHARE_HEIGHT);
 
   slots.forEach((slot, index) => {
+    if (slot.kind === 'qr') {
+      drawQr(ctx, slot.src, slot.rect);
+      return;
+    }
     const image = images[index];
     if (!image || slot.kind === 'portrait' || slot.kind === 'tint') {
       return;
@@ -756,6 +810,28 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
   });
 
   return canvas.toDataURL('image/png');
+}
+
+// QR code: módulos claros (a cor do papel do cartão) direto sobre o fundo, sem quadro, desenhados no canvas
+// (nítidos e sem passar pelo html-to-image). O fundo escuro do cartão faz a margem de silêncio; o leitor lê o código invertido.
+function drawQr(ctx: CanvasRenderingContext2D, text: string, rect: CanvasRect) {
+  // Nível L: menos redundância, menos módulos e cada um maior; o cartão é uma imagem limpa, sem risco de sujeira.
+  const modules = qrModules(text, 'L');
+  const count = modules.length;
+  const cell = Math.floor(rect.width / count);
+  // A caixa já tem o tamanho exato dos módulos; centraliza por segurança se vier maior.
+  const offset = rect.x + (rect.width - cell * count) / 2;
+  const top = rect.y + (rect.height - cell * count) / 2;
+  ctx.save();
+  ctx.fillStyle = SHARE_COLORS.papel;
+  modules.forEach((row, y) =>
+    row.forEach((dark, x) => {
+      if (dark) {
+        ctx.fillRect(offset + x * cell, top + y * cell, cell, cell);
+      }
+    })
+  );
+  ctx.restore();
 }
 
 function collectImageSlots(root: HTMLElement): ShareImageSlot[] {
