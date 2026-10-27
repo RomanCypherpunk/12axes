@@ -6,8 +6,11 @@ import {
   parseResultLink,
   personInitials,
   peopleCompareUrl,
-  RESULT_URL_KEYS
+  religionPreference,
+  RESULT_URL_KEYS,
+  type PersonResult
 } from './peopleCompare';
+import { parseReligionList } from './religion';
 
 const QUERY = 'est=65&rep=32.5&pod=10&imi=90&dip=50&int=0&eco=100&con=44&com=12&rel=70&mor=33&tec=51';
 const VALUES = [65, 32.5, 10, 90, 50, 0, 100, 44, 12, 70, 33, 51];
@@ -113,5 +116,28 @@ describe('personInitials', () => {
     expect(personInitials('  maria  da   silva ')).toBe('MD');
     expect(personInitials('élio')).toBe('É');
     expect(personInitials('   ')).toBe('?');
+  });
+});
+
+describe('religiões na comparação entre pessoas', () => {
+  const people = [
+    { values: VALUES, religion: null },
+    { values: VALUES, religion: 'catholic' as const, religionFilter: 'catholic,protestant' }
+  ] as [PersonResult, PersonResult];
+
+  it('o link leva todas as religiões do perfil e a leitura devolve a primeira e a lista', () => {
+    const url = peopleCompareUrl({ names: ['Você', 'Jair'], people });
+    expect(new URLSearchParams(url.split('?')[1]).get('rb')).toBe('catholic,protestant');
+    const parsed = parsePeopleCompareUrl(url.split('?')[1], ['Você', 'Outra']);
+    expect(parsed?.people[1]).toMatchObject({ religion: 'catholic', religionFilter: 'catholic,protestant' });
+    expect(parsed?.people[0]).toEqual({ values: VALUES, religion: null });
+  });
+
+  it('uma só religião vai sem lista, e valores inválidos são ignorados', () => {
+    const one = peopleCompareUrl({ names: ['Você', 'José'], people: [people[0], { values: VALUES, religion: 'catholic' }] });
+    expect(new URLSearchParams(one.split('?')[1]).get('rb')).toBe('catholic');
+    expect(parseReligionList('protestant, xyz,catholic,catholic')).toEqual(['catholic', 'protestant']);
+    expect(religionPreference(people[1])).toBe('catholic,protestant');
+    expect(religionPreference(people[0])).toBeNull();
   });
 });

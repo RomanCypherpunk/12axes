@@ -51,6 +51,20 @@ class CompareControllerTest {
     }
 
     @Test
+    void detailCarriesTheProfilesReligionsWithoutTheOnlyMarker() throws Exception {
+        mockMvc.perform(get("/api/compare").param("type", "personality").param("id", "jose-antonio-primo-de-rivera")
+                        .param("v", CENTER).param("lang", "pt"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.religions[0]").value("catholic"));
+        // "teocracia-judaica" so aparece com "only" no catalogo: o marcador nao sai na comparacao.
+        mockMvc.perform(get("/api/compare").param("type", "ideology").param("id", "teocracia-judaica")
+                        .param("v", CENTER).param("lang", "pt"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.religions", not(hasItem("only"))))
+                .andExpect(jsonPath("$.religions", hasItem("judaism")));
+    }
+
+    @Test
     void catalogAppliesTheReligionFilterLikeTheResults() throws Exception {
         // Sem religiao escolhida, perfis "only" ficam escondidos; com a religiao listada, aparecem.
         mockMvc.perform(get("/api/compare/catalog").param("lang", "pt"))

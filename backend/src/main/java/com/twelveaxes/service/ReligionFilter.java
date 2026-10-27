@@ -1,5 +1,7 @@
 package com.twelveaxes.service;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -55,16 +57,30 @@ public final class ReligionFilter {
     private ReligionFilter() {
     }
 
-    /** Valor valido da URL, ou null (sem filtro) para ausente/desconhecido. */
+    /**
+     * Valor valido da URL, ou null (sem filtro) para ausente/desconhecido. Aceita uma ou varias religioes
+     * separadas por virgula ("catholic,protestant"): o filtro mostra quem combina com qualquer uma. Devolve a
+     * lista sem repeticao e na ordem das selecionaveis, para o mesmo conjunto sempre dar o mesmo texto.
+     */
     public static String normalize(String raw) {
         if (raw == null) {
             return null;
         }
-        String value = raw.trim().toLowerCase(Locale.ROOT);
-        if (LEGACY_CHRISTIANITY.equals(value)) {
-            return LEGACY_CHRISTIANITY;
+        List<String> order = new ArrayList<>(SELECTABLE);
+        order.add(OTHER);
+        order.add(LEGACY_CHRISTIANITY);
+        List<String> kept = new ArrayList<>();
+        for (String part : raw.split(",")) {
+            String value = part.trim().toLowerCase(Locale.ROOT);
+            if (order.contains(value) && !kept.contains(value)) {
+                kept.add(value);
+            }
         }
-        return SELECTABLE.contains(value) || OTHER.equals(value) ? value : null;
+        if (kept.isEmpty()) {
+            return null;
+        }
+        kept.sort(Comparator.comparingInt(order::indexOf));
+        return String.join(",", kept);
     }
 
     public static boolean allows(List<String> religions, String preference) {
@@ -72,11 +88,17 @@ public final class ReligionFilter {
             return true;
         }
         boolean hasSelectable = religions.stream().anyMatch(SELECTABLE::contains);
-        if (OTHER.equals(preference)) {
-            // "Outra religiao": so entra quem nao esta ligado a nenhuma religiao selecionavel.
-            return !hasSelectable;
-        }
         List<String> preferred = preferredReligions(preference);
+        if (preferred.contains(OTHER)) {
+            // "Outra religiao": quem nao esta ligado a nenhuma religiao selecionavel entra; quem esta so entra
+            // se tambem combinar com uma das outras religioes escolhidas junto.
+            if (!hasSelectable) {
+                return true;
+            }
+            if (preferred.stream().allMatch(OTHER::equals)) {
+                return false;
+            }
+        }
         boolean matches = religions.stream().anyMatch(preferred::contains);
         if (religions.contains(ONLY)) {
             // ["other", "only"] (ex.: xintoismo): o perfil fica so para quem nao escolheu religiao (ou
@@ -89,10 +111,20 @@ public final class ReligionFilter {
         return matches || !hasSelectable;
     }
 
+    /** As religioes da preferencia (uma ou varias, separadas por virgula), com o valor antigo expandido nas denominacoes. */
     private static List<String> preferredReligions(String preference) {
         if (preference == null) {
             return List.of();
         }
-        return LEGACY_CHRISTIANITY.equals(preference) ? CHRISTIAN : List.of(preference);
+        List<String> result = new ArrayList<>();
+        for (String part : preference.split(",")) {
+            String value = part.trim();
+            if (LEGACY_CHRISTIANITY.equals(value)) {
+                CHRISTIAN.stream().filter(denomination -> !result.contains(denomination)).forEach(result::add);
+            } else if (!value.isEmpty() && !result.contains(value)) {
+                result.add(value);
+            }
+        }
+        return result;
     }
 }

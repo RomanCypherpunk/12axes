@@ -20,3 +20,19 @@ export function parseReligion(raw: string | null | undefined): Religion | null {
   const value = raw?.trim().toLowerCase();
   return (RELIGIONS as readonly string[]).includes(value ?? '') ? (value as Religion) : null;
 }
+
+/** Religiões do perfil de catálogo (sem o marcador "only"), na ordem de RELIGIONS e sem repetição. */
+export function profileReligions(religions: readonly string[] | null | undefined): Religion[] {
+  const values = (religions ?? []).map((value) => value.trim().toLowerCase());
+  return RELIGIONS.filter((religion) => values.includes(religion));
+}
+
+/** Lista de religiões num parâmetro de link ("catholic,protestant"): só as válidas, sem repetição. */
+export function parseReligionList(raw: string | null | undefined): Religion[] {
+  const seen: Religion[] = [];
+  for (const part of (raw ?? '').split(',')) {
+    const religion = parseReligion(part);
+    if (religion && !seen.includes(religion)) seen.push(religion);
+  }
+  return RELIGIONS.filter((religion) => seen.includes(religion));
+}

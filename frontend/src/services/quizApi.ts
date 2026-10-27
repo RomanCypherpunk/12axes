@@ -98,10 +98,14 @@ export function fetchCompareCatalog(religion: string | null = null): Promise<Com
   return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}${religionParam}`);
 }
 
+// `rv` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
+// comparação ficaria com a resposta antiga (sem `religions`).
+const COMPARE_DETAIL_VERSION = 2;
+
 export function fetchCompare(type: CompareType, id: string, leftPercents: number[]): Promise<CompareDetail> {
   const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
   return request<CompareDetail>(
-    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}`
+    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}&rv=${COMPARE_DETAIL_VERSION}`
   );
 }
 

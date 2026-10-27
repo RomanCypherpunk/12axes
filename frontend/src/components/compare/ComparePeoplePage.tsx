@@ -12,7 +12,8 @@ import {
   parsePeopleCompareUrl,
   peopleCompareUrl,
   personInitials,
-  type PersonResult
+  type PersonResult,
+  religionPreference
 } from '../../utils/peopleCompare';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import { ArrowIcon, Logo, ShareImageIcon, SiteFooter } from '../editorial/primitives';
@@ -100,8 +101,8 @@ export function ComparePeoplePage() {
     const [first, second] = LINK.people;
     let cancelled = false;
     Promise.all([
-      fetchSharedResult(first.values, first.religion),
-      fetchSharedResult(second.values, second.religion),
+      fetchSharedResult(first.values, religionPreference(first)),
+      fetchSharedResult(second.values, religionPreference(second)),
       fetchSharedResult(midpoint(first.values, second.values), null)
     ])
       .then(([firstResult, secondResult, commonResult]) => {

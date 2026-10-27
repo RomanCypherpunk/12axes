@@ -295,6 +295,8 @@ export interface CompareDetail {
   compatibility: number;
   /** Vetor de 12 eixos (leftPercent) do perfil comparado. */
   vector: Record<string, number>;
+  /** Religiões do perfil no catálogo (vazia quando não há vínculo). */
+  religions?: string[];
 }
 
 /** Um perfil da página /compare: dados do catálogo e vetor de 12 eixos (leftPercent). */

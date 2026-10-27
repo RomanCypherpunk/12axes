@@ -102,7 +102,7 @@ public class CompareService {
     public CompareDetail compare(String type, String id, Map<String, Double> userVector, String lang) {
         Resolved target = resolve(type, id, QuizDataService.normalizeLang(lang));
         return new CompareDetail(target.item(), target.description(),
-                scorer.compatibility(userVector, target.vector()), target.vector());
+                scorer.compatibility(userVector, target.vector()), target.vector(), target.religions());
     }
 
     /**
@@ -210,35 +210,36 @@ public class CompareService {
                 Personality personality = require(dataService.getPersonalityById(id, lang), type, id);
                 var profile = dataService.getPersonalityProfiles().get(id);
                 yield resolved(personalityItem(personality), personality.description(),
-                        profile == null ? null : profile.vector());
+                        profile == null ? null : profile.vector(), personality.religions());
             }
             case COUNTRY -> {
                 Country country = require(dataService.getCountryById(id, lang), type, id);
                 var profile = dataService.getCountryProfiles().get(id);
                 yield resolved(countryItem(country), country.description(),
-                        profile == null ? null : profile.vector());
+                        profile == null ? null : profile.vector(), country.religions());
             }
             case IDEOLOGY -> {
                 Ideology ideology = require(dataService.getIdeologyById(id, lang), type, id);
                 var profile = dataService.getIdeologyProfiles().get(id);
                 yield resolved(ideologyItem(ideology), ideology.description(),
-                        profile == null ? null : profile.vector());
+                        profile == null ? null : profile.vector(), ideology.religions());
             }
             case PARTY -> {
                 Party party = require(dataService.getPartyById(id, lang), type, id);
                 var profile = dataService.getPartyProfiles().get(id);
                 yield resolved(partyItem(party), party.description(),
-                        profile == null ? null : profile.vector());
+                        profile == null ? null : profile.vector(), party.religions());
             }
             default -> throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tipo de comparação inválido");
         };
     }
 
-    private Resolved resolved(CompareItem item, String description, Map<String, Double> vector) {
-        return new Resolved(item, description, vector == null || vector.isEmpty() ? scorer.neutralVector() : vector);
+    private Resolved resolved(CompareItem item, String description, Map<String, Double> vector, List<String> religions) {
+        return new Resolved(item, description, vector == null || vector.isEmpty() ? scorer.neutralVector() : vector,
+                religions == null ? List.of() : religions.stream().filter(value -> !"only".equals(value)).toList());
     }
 
-    private record Resolved(CompareItem item, String description, Map<String, Double> vector) {
+    private record Resolved(CompareItem item, String description, Map<String, Double> vector, List<String> religions) {
     }
 
     private static <T> T require(T value, String type, String id) {

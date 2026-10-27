@@ -1,5 +1,6 @@
 package com.twelveaxes.model;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,6 +12,8 @@ public record CompareDetail(
         String description,
         double compatibility,
         // Vetor de 12 eixos (leftPercent) do perfil comparado.
-        Map<String, Double> vector
+        Map<String, Double> vector,
+        // Religioes do perfil no catalogo (so os valores do JSON, sem o marcador "only"); vazia quando nao ha vinculo.
+        List<String> religions
 ) {
 }

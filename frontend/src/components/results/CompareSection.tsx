@@ -1,14 +1,15 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react';
 import { t } from '../../i18n';
 import { fetchCompare, fetchCompareCatalog } from '../../services/quizApi';
-import type { Axis, AxisResult, CompareDetail, CompareItem, PersonalityMatch } from '../../types/quiz';
+import type { Axis, AxisResult, CompareDetail, CompareItem, CompareProfile, PersonalityMatch } from '../../types/quiz';
 import { compareAxes, summaryKinds, type CompareAxisRow } from '../../utils/compareAxes';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { resolveIdeologyColor } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
-import type { Religion } from '../../utils/religion';
+import { cleanName, peopleCompareUrl } from '../../utils/peopleCompare';
+import { profileReligions, type Religion } from '../../utils/religion';
 import { ArrowIcon, SafeImg } from '../editorial/primitives';
-import { AxisTrackRow, TrackPin, YouPin } from './AxisTrack';
+import { AxisTagList } from '../compare/axisTags';
 import { InfoSheet } from './InfoSheet';
 import { Portrait } from './PersonalitiesSection';
 import { SheetMatch } from './SheetMatch';
@@ -265,7 +266,7 @@ export function CompareSection({ axes, results, religion, userCategory, closest,
       </div>
 
       {detail && (
-        <ComparisonSheet detail={detail} axes={axes} results={results} userCategory={userCategory} onClose={() => setDetail(null)} />
+        <ComparisonSheet detail={detail} axes={axes} results={results} userCategory={userCategory} religion={religion} onClose={() => setDetail(null)} />
       )}
     </section>
   );
@@ -292,17 +293,39 @@ function sentenceFor(kind: 'closest' | 'farthest', row: CompareAxisRow, name: st
   return adverb ? t.compareFarthestLine(adverb, name) : t.compareFarthestFallback(axisName, name);
 }
 
-function ComparisonSheet({ detail, axes, results, userCategory, onClose }: {
+function ComparisonSheet({ detail, axes, results, userCategory, religion, onClose }: {
   detail: CompareDetail;
   axes: Axis[];
   results: Map<string, AxisResult>;
   userCategory: string;
+  religion?: Religion | null;
   onClose: () => void;
 }) {
   const { item } = detail;
   const summary = compareAxes(axes, results, detail.vector);
   const kinds = summaryKinds(summary);
-  const userColor = resolveIdeologyColor(userCategory).base;
+  // O usuário e o perfil comparado, como "perfis" para o desenho dos eixos (o do usuário vale a cor da sua ideologia).
+  const axisProfiles: CompareProfile[] = [
+    {
+      item: { type: 'personality', id: 'you', name: t.peopleYou, caption: '', category: userCategory, historical: false, initials: t.peopleYou.slice(0, 1) },
+      vector: Object.fromEntries(axes.map((axis) => [axis.id, results.get(axis.id)?.leftPercent ?? 50])),
+      nearest: { ideology: null, country: null, party: null }
+    },
+    { item, vector: detail.vector, nearest: { ideology: null, country: null, party: null } }
+  ];
+  // A comparação completa é a página /compare/people (Você x o perfil), aberta em outra aba porque o resultado fica só na memória desta.
+  const itemReligions = profileReligions(detail.religions);
+  const fullUrl = peopleCompareUrl({
+    names: [t.peopleYou, cleanName(item.name, t.peopleOther)],
+    people: [
+      { values: axes.map((axis) => results.get(axis.id)?.leftPercent ?? 50), religion: religion ?? null },
+      {
+        values: axes.map((axis) => detail.vector[axis.id] ?? 50),
+        religion: itemReligions[0] ?? null,
+        religionFilter: itemReligions.length > 1 ? itemReligions.join(',') : null
+      }
+    ]
+  });
 
   return (
     <InfoSheet titleId="e-cmp-sheet-title" className="e-cmp-sheet" onClose={onClose}>
@@ -317,28 +340,9 @@ function ComparisonSheet({ detail, axes, results, userCategory, onClose }: {
       <SheetMatch compatibility={detail.compatibility} />
       <p className="e-axis-sheet-text">{detail.description}</p>
 
-      <div className="e-close e-cmp-close" style={{ '--you': userColor } as CSSProperties}>
+      <div className="e-cmp-axes">
         <p className="e-close-title">{t.compareAxesTitle}</p>
-        <ul>
-          {summary.rows.map(({ axis, result, user, target }) => {
-            const color = user >= 50 ? axis.leftColor : axis.rightColor;
-            return (
-              <AxisTrackRow
-                key={axis.id}
-                label={result.label}
-                leftPole={result.leftPole}
-                rightPole={result.rightPole}
-                ariaLabel={`${result.label}: ${t.closenessYou} ${Math.round(user)}% ${result.leftPole}, ${item.name} ${Math.round(target)}% ${result.leftPole}`}
-                style={{ '--ac': color } as CSSProperties}
-              >
-                <TrackPin leftPercent={target} title={item.name}>
-                  <ProfileFace item={item} className="e-close-face" />
-                </TrackPin>
-                <YouPin leftPercent={user} />
-              </AxisTrackRow>
-            );
-          })}
-        </ul>
+        <AxisTagList axes={axes} profiles={axisProfiles} />
       </div>
 
       <div className="e-cmp-summary">
@@ -366,6 +370,12 @@ function ComparisonSheet({ detail, axes, results, userCategory, onClose }: {
             )}
           </>
         )}
+      </div>
+
+      <div className="e-cmp-full">
+        <a className="e-btn e-btn-primary" href={fullUrl} target="_blank" rel="noopener">
+          {t.compareFullView} <ArrowIcon />
+        </a>
       </div>
     </InfoSheet>
   );

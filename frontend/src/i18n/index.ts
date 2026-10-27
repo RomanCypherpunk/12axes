@@ -162,6 +162,7 @@ interface Strings {
   compareSearchPlaceholder: string;
   compareView: string;
   compareFieldCaption: string;
+  compareFullView: string;
   compareExamplePlaceholder: string;
   compareAxesTitle: string;
   compareNoResults: string;
@@ -651,6 +652,7 @@ const pt: Strings = {
   compareSearchPlaceholder: 'Busque uma personalidade, país ou ideologia',
   compareView: 'Visualizar',
   compareFieldCaption: 'Personalidade, país ou ideologia',
+  compareFullView: 'Ver comparação completa',
   compareExamplePlaceholder: 'Ex.: Getúlio Vargas',
   compareAxesTitle: 'Seus 12 eixos',
   compareNoResults: 'Nenhum perfil encontrado.',
@@ -1418,6 +1420,7 @@ const en: Strings = {
   compareSearchPlaceholder: 'Search a personality, country or ideology',
   compareView: 'View',
   compareFieldCaption: 'Personality, country or ideology',
+  compareFullView: 'See full comparison',
   compareExamplePlaceholder: 'Ex.: Donald Trump',
   compareAxesTitle: 'Your 12 axes',
   compareNoResults: 'No profiles found.',

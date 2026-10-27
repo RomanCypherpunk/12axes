@@ -1,4 +1,4 @@
-import { parseReligion, type Religion } from './religion';
+import { parseReligion, parseReligionList, type Religion } from './religion';
 
 // Comparação entre duas pessoas: /compare/people?an=Você&a=65,32,...&bn=Julia&b=40,51,...
 // (a e b = % do polo esquerdo dos 12 eixos, na ordem de RESULT_URL_KEYS; ra e rb = religião, opcional).
@@ -16,7 +16,20 @@ export const OPPOSITE_SIDE_MARGIN = 2;
 
 export interface PersonResult {
   values: number[];
+  /** A religião (a primeira, quando há várias): usada nos ícones e nos valores. */
   religion: Religion | null;
+  /** Todas as religiões, separadas por vírgula ("catholic,protestant"), quando o perfil tem mais de uma; o filtro usa todas. */
+  religionFilter?: string | null;
+}
+
+/** O que vai para a API como preferência religiosa: todas as religiões da pessoa, ou a única. */
+export function religionPreference(person: PersonResult): string | null {
+  return person.religionFilter ?? person.religion;
+}
+
+function personReligion(raw: string | null): Pick<PersonResult, 'religion' | 'religionFilter'> {
+  const list = parseReligionList(raw);
+  return list.length > 1 ? { religion: list[0], religionFilter: list.join(',') } : { religion: list[0] ?? null };
 }
 
 export type ResultLinkProblem = { kind: 'empty' } | { kind: 'missing'; keys: string[] } | { kind: 'invalid'; keys: string[] };
@@ -79,10 +92,10 @@ export function peopleCompareUrl({ names, people }: PeopleCompareLink): string {
   const params = new URLSearchParams();
   params.set('an', names[0]);
   params.set('a', people[0].values.map(round1).join(','));
-  if (people[0].religion) params.set('ra', people[0].religion);
+  if (religionPreference(people[0])) params.set('ra', religionPreference(people[0]) as string);
   params.set('bn', names[1]);
   params.set('b', people[1].values.map(round1).join(','));
-  if (people[1].religion) params.set('rb', people[1].religion);
+  if (religionPreference(people[1])) params.set('rb', religionPreference(people[1]) as string);
   return `${PEOPLE_COMPARE_PATH}?${params.toString()}`;
 }
 
@@ -95,8 +108,8 @@ export function parsePeopleCompareUrl(search: string, fallbackNames: [string, st
   return {
     names: [cleanName(params.get('an'), fallbackNames[0]), cleanName(params.get('bn'), fallbackNames[1])],
     people: [
-      { values: first, religion: parseReligion(params.get('ra')) },
-      { values: second, religion: parseReligion(params.get('rb')) }
+      { values: first, ...personReligion(params.get('ra')) },
+      { values: second, ...personReligion(params.get('rb')) }
     ]
   };
 }

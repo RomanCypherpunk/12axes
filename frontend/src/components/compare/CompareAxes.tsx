@@ -2,31 +2,11 @@ import type { CSSProperties } from 'react';
 import { t } from '../../i18n';
 import type { Axis, CompareProfile } from '../../types/quiz';
 import { PoleIcon } from '../AxisIcon';
+import { AxisTags, profileColor, reading, valueOf } from './axisTags';
 import { ProfileFace } from '../results/CompareSection';
-import { resolveIdeologyColor } from '../../utils/ideologyColors';
-import { firstName } from '../../utils/peopleCompare';
 import { colorOf } from './profileColors';
 
-// Mesma regra do resultado: perto do centro o eixo é equilibrado e não pende para polo nenhum.
-const BALANCED_DISTANCE = 7.5;
-
-// Na comparação entre duas pessoas as etiquetas mais próximas que isto (em pontos do eixo) viram uma só: "Vocês".
-const MERGE_DISTANCE = 12;
-// A etiqueta é larga: perto das pontas ela encosta na borda em vez de sair da trilha.
-const clampTag = (percent: number): number => Math.max(5, Math.min(95, percent));
-
-/** Valor de um perfil no eixo (% do polo esquerdo); 50 quando o vetor não traz o eixo. */
-export const valueOf = (profile: CompareProfile, axisId: string): number => profile.vector[axisId] ?? 50;
-
-/** "62% Federal" para quem pende a um polo; "Equilibrado" perto do centro. */
-function reading(axis: Axis, value: number): string {
-  if (Math.abs(value - 50) < BALANCED_DISTANCE) return `${t.comparePageBalanced} (${Math.round(value)}% ${axis.leftPole})`;
-  return value > 50 ? `${Math.round(value)}% ${axis.leftPole}` : `${Math.round(100 - value)}% ${axis.rightPole}`;
-}
-
-export function profileColor(color: string): CSSProperties {
-  return { '--pc': color } as CSSProperties;
-}
+export { profileColor, valueOf };
 
 /** Legenda: um chip com o rosto de cada perfil na cor da sua posição. */
 export function ProfileLegend({ profiles }: { profiles: CompareProfile[] }) {
@@ -41,39 +21,6 @@ export function ProfileLegend({ profiles }: { profiles: CompareProfile[] }) {
         </li>
       ))}
     </ul>
-  );
-}
-
-/**
- * Etiquetas com o primeiro nome (ou "Vocês" quando as duas ficam juntas), no lugar dos rostos, para pessoas sem retrato.
- * A cor é a da ideologia mais próxima da pessoa, a mesma das iniciais no cartão dela.
- */
-function AxisTags({ axis, profiles }: { axis: Axis; profiles: CompareProfile[] }) {
-  const values = profiles.map((profile) => valueOf(profile, axis.id));
-  const percent = (value: number): number => Math.round(Math.max(value, 100 - value));
-  if (profiles.length === 2 && Math.abs(values[0] - values[1]) < MERGE_DISTANCE) {
-    const middle = (values[0] + values[1]) / 2;
-    const tip = profiles.map((profile, index) => `${profile.item.name} · ${percent(values[index])}%`).join(' / ');
-    return (
-      <span className="e-cp-pin e-cp-tag is-both" tabIndex={0} data-tip={tip} style={{ left: `${clampTag(100 - middle)}%`, zIndex: 1 }}>
-        {t.peopleBoth}
-      </span>
-    );
-  }
-  return (
-    <>
-      {profiles.map((profile, index) => (
-        <span
-          key={`${profile.item.type}:${profile.item.id}`}
-          className="e-cp-pin e-cp-tag"
-          tabIndex={0}
-          data-tip={`${profile.item.name} · ${percent(values[index])}%`}
-          style={{ ...profileColor(resolveIdeologyColor(profile.item.category).base), left: `${clampTag(100 - values[index])}%`, zIndex: index + 1 }}
-        >
-          {firstName(profile.item.name)}
-        </span>
-      ))}
-    </>
   );
 }
 

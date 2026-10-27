@@ -210,6 +210,29 @@ class ReligionFilterTest {
     }
 
     @Test
+    void severalReligionsShowAnyProfileThatMatchesOneOfThem() {
+        assertThat(ReligionFilter.normalize("protestant, Catholic,catholic,xyz")).isEqualTo("catholic,protestant");
+        assertThat(ReligionFilter.normalize("xyz,")).isNull();
+
+        String both = ReligionFilter.normalize("catholic,protestant");
+        assertThat(ReligionFilter.allows(List.of("catholic"), both)).isTrue();
+        assertThat(ReligionFilter.allows(List.of("protestant"), both)).isTrue();
+        assertThat(ReligionFilter.allows(List.of("catholic", "protestant"), both)).isTrue();
+        // Outra religiao selecionavel some; laico e "other" continuam.
+        assertThat(ReligionFilter.allows(List.of("islam"), both)).isFalse();
+        assertThat(ReligionFilter.allows(List.of(), both)).isTrue();
+        assertThat(ReligionFilter.allows(List.of("other"), both)).isTrue();
+        // Marcador "only": aparece para quem escolheu uma das religioes listadas.
+        assertThat(ReligionFilter.allows(List.of("protestant", "only"), both)).isTrue();
+        assertThat(ReligionFilter.allows(List.of("judaism", "only"), both)).isFalse();
+        // "Outra religiao" junto de uma religiao: mantem os seculares e quem combina com a religiao.
+        String mixed = ReligionFilter.normalize("buddhism,other");
+        assertThat(ReligionFilter.allows(List.of("buddhism"), mixed)).isTrue();
+        assertThat(ReligionFilter.allows(List.of("islam"), mixed)).isFalse();
+        assertThat(ReligionFilter.allows(List.of("other"), mixed)).isTrue();
+    }
+
+    @Test
     void legacyChristianityPreferenceAcceptsAnyDenomination() {
         assertThat(ReligionFilter.allows(List.of("protestant"), "christianity")).isTrue();
         assertThat(ReligionFilter.allows(List.of("orthodox"), "christianity")).isTrue();
