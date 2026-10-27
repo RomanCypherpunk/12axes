@@ -4,6 +4,7 @@ import { fetchCompare, fetchCompareCatalog } from '../../services/quizApi';
 import type { Axis, AxisResult, CompareDetail, CompareItem, CompareProfile, PersonalityMatch } from '../../types/quiz';
 import { compareAxes, summaryKinds, type CompareAxisRow } from '../../utils/compareAxes';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
+import { resolvePartyLogoSrc } from '../../utils/partyLogos';
 import { resolveIdeologyColor } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { cleanName, peopleCompareUrl } from '../../utils/peopleCompare';
@@ -55,7 +56,7 @@ export function ProfileFace({ item, className }: { item: CompareItem; className:
     return (
       <SafeImg
         className={className}
-        src={item.imagePath ?? ''}
+        src={resolvePartyLogoSrc(item.imagePath ?? '')}
         alt={item.name}
         fallback={personalityInitials(item.name)}
       />

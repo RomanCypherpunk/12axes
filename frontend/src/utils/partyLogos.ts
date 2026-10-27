@@ -1,3 +1,5 @@
+import { assetUrl } from './assetUrl';
+
 const PARTY_LOGOS_PATH = 'parties/logos/';
 
 /**
@@ -19,5 +21,5 @@ export function resolvePartyLogoSrc(logoPath?: string): string {
   const relative = normalized.startsWith(PARTY_LOGOS_PATH) ? normalized : `${PARTY_LOGOS_PATH}${normalized}`;
   const baseUrl = import.meta.env.BASE_URL || '/';
   const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  return `${base}${relative}`;
+  return assetUrl(`${base}${relative}`);
 }

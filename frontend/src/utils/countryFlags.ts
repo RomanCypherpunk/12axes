@@ -1,3 +1,5 @@
+import { assetUrl } from './assetUrl';
+
 const COUNTRY_FLAGS_PATH = 'countries/flags/';
 
 export function resolveCountryFlagSrc(flagPath?: string): string {
@@ -33,5 +35,5 @@ export function flagFileName(flagPath?: string): string {
 function withBasePath(path: string): string {
   const baseUrl = import.meta.env.BASE_URL || '/';
   const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  return `${normalizedBase}${path.replace(/^\/+/, '')}`;
+  return assetUrl(`${normalizedBase}${path.replace(/^\/+/, '')}`);
 }

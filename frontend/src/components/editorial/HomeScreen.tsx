@@ -8,6 +8,7 @@ import { SupportSection } from '../SupportSection';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { catStyle, localCatStyle, SPECTRUM_ORDER } from '../../utils/ideologyColors';
+import { assetUrl, retryLocalAsset } from '../../utils/assetUrl';
 import { QUIZ_FORMATS } from './formats';
 import { ArrowIcon, ClockIcon, pct, Ring, SafeImg } from './primitives';
 
@@ -440,7 +441,8 @@ function HeroDeck({ examples: all }: { examples: ExampleResult[] }) {
             >
               <img
                 className="e-deck-img"
-                src={`/share-examples/${LANG}/${item.ideology.ideologyId}.webp`}
+                src={assetUrl(`/share-examples/${LANG}/${item.ideology.ideologyId}.webp`)}
+                onError={retryLocalAsset}
                 alt={front ? t.heroDeckAlt(item.ideology.name) : ''}
                 width={480}
                 height={853}

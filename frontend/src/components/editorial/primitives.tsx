@@ -2,6 +2,7 @@ import { useState, type CSSProperties, type ReactNode } from 'react';
 import { LANG, t } from '../../i18n';
 import { NEW_ISSUE_URL, REPO_URL } from '../../data/repo';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
+import { localAssetUrl, retryLocalAsset } from '../../utils/assetUrl';
 
 export function Logo({ onClick, href }: { onClick?: () => void; href?: string }) {
   const content = (
@@ -183,7 +184,22 @@ export function SafeImg({ src, alt, className, fallback }: SafeImgProps) {
       </div>
     );
   }
-  return <img className={className} src={src} alt={alt} loading="lazy" onError={() => setFailedSrc(src)} />;
+  // Se a imagem da CDN falhar, tenta a cópia local; só se ela também falhar aparece o texto reserva.
+  return (
+    <img
+      className={className}
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={(event) => {
+        if (localAssetUrl(src) !== src && event.currentTarget.getAttribute('src') === src) {
+          retryLocalAsset(event);
+        } else {
+          setFailedSrc(src);
+        }
+      }}
+    />
+  );
 }
 
 export function pct(value: number): number {

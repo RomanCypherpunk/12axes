@@ -1,3 +1,5 @@
+import { assetUrl } from './assetUrl';
+
 export function resolvePersonalityImageSrc(imagePath?: string): string {
   const path = imagePath?.trim();
   if (!path) {
@@ -14,7 +16,7 @@ export function resolvePersonalityImageSrc(imagePath?: string): string {
 
   const baseUrl = import.meta.env.BASE_URL || '/';
   const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  return `${normalizedBase}${normalizedPath}`;
+  return assetUrl(`${normalizedBase}${normalizedPath}`);
 }
 
 export function personalityInitials(name?: string): string {
