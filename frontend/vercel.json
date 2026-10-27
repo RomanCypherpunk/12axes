@@ -4,7 +4,7 @@
   "framework": "vite",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [{ "source": "/((?!assets/).*)", "destination": "/" }],
+  "rewrites": [{ "source": "/((?!assets/)[^.]*)", "destination": "/" }],
   "headers": [
     {
       "source": "/tree-data/(.*)",

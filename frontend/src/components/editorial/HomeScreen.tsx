@@ -102,10 +102,7 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
               <>
                 <p className="e-hero-example-label">{t.heroTeaserTag}</p>
                 {examples.length > 1 ? (
-                  <HeroDeck
-                    examples={examples}
-                    startIndex={Math.max(0, examples.findIndex((item) => item.ideology.ideologyId === example.ideology.ideologyId))}
-                  />
+                  <HeroDeck examples={examples} />
                 ) : (
                   <HeroExample example={example} />
                 )}
@@ -366,19 +363,29 @@ const DECK_INTERVAL_MS = 5200;
 const DECK_LEAVE_MS = 520;
 // Quantas cartas aparecem empilhadas (a da frente e as que espiam por trás).
 const DECK_VISIBLE = 3;
+// O baralho de cada visita tem só estas cartas, sorteadas entre todos os exemplos: cada carta é uma imagem
+// de ~30 KB, e a banda da home é o que mais pesa na conta de hospedagem.
+const DECK_SIZE = 3;
+
+function pickDeck<T>(items: T[], size: number): T[] {
+  const pool = [...items];
+  for (let i = pool.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, size);
+}
 
 // Baralho de exemplos: cada carta é a imagem de compartilhamento de um resultado de exemplo
 // (public/share-examples, gerada com o próprio cartão do app). A carta da frente sai para o lado e vai para o fundo, as de trás avançam.
 // Para sozinho no hover/foco e com "reduzir movimento"; os pontos levam direto a um exemplo.
-function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIndex: number }) {
+function HeroDeck({ examples: all }: { examples: ExampleResult[] }) {
+  const [examples] = useState(() => pickDeck(all, DECK_SIZE));
   const count = examples.length;
-  const [active, setActive] = useState(startIndex);
+  const [active, setActive] = useState(0);
   const [leaving, setLeaving] = useState(false);
   const [paused, setPaused] = useState(false);
   const busy = useRef(false);
-  // Só as cartas que aparecem (as da frente e a próxima) baixam a imagem; as demais esperam a vez e, depois de
-  // baixadas, ficam. Evita puxar todas as cartas em cada visita à home.
-  const seen = useRef(new Set<number>());
 
   const advance = useCallback(() => {
     if (busy.current) {
@@ -423,9 +430,6 @@ function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIn
           const front = offset === 0;
           // Durante a saída da carta da frente, as outras já avançam uma posição.
           const place = leaving ? (front ? -1 : offset - 1) : offset;
-          if (offset <= DECK_VISIBLE) {
-            seen.current.add(index);
-          }
           return (
             <div
               key={item.ideology.ideologyId}
@@ -436,7 +440,7 @@ function HeroDeck({ examples, startIndex }: { examples: ExampleResult[]; startIn
             >
               <img
                 className="e-deck-img"
-                src={seen.current.has(index) ? `/share-examples/${LANG}/${item.ideology.ideologyId}.webp` : undefined}
+                src={`/share-examples/${LANG}/${item.ideology.ideologyId}.webp`}
                 alt={front ? t.heroDeckAlt(item.ideology.name) : ''}
                 width={480}
                 height={853}
