@@ -240,6 +240,7 @@ interface Strings {
   peopleYou: string;
   peopleOther: string;
   peopleBoth: string;
+  compareBoth: string;
   peopleShare: string;
   shareCompareLabel: string;
   shareCompareFilePrefix: string;
@@ -739,6 +740,7 @@ const pt: Strings = {
   peopleYou: 'Você',
   peopleOther: 'Outra pessoa',
   peopleBoth: 'Vocês',
+  compareBoth: 'Os dois',
   peopleShare: 'Compartilhar comparação',
   shareCompareLabel: 'COMPARAÇÃO',
   shareCompareFilePrefix: '12axes-comparacao',
@@ -1505,6 +1507,7 @@ const en: Strings = {
   peopleYou: 'You',
   peopleOther: 'Someone else',
   peopleBoth: 'You two',
+  compareBoth: 'Both',
   peopleShare: 'Share comparison',
   shareCompareLabel: 'COMPARISON',
   shareCompareFilePrefix: '12axes-comparison',

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { HOME_AXES } from '../../data/homeAxes';
 import { LANG, t } from '../../i18n';
 import { ApiError, fetchCompareCatalog, fetchCompareProfiles } from '../../services/quizApi';
@@ -21,6 +22,9 @@ import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import { CompareAxes, profileColor } from './CompareAxes';
 import { CompareCountries, CompareIdeologies, CompareParties } from './CompareNearby';
 import { CompareSignature } from './CompareSignature';
+import { buildDetail, usePairResults, usePairShare } from './PairDetail';
+import { SharePhoneStage } from '../results/SharePhoneStage';
+import type { PersonResult } from '../../utils/peopleCompare';
 import { colorOf, PROFILE_COLORS, spectrumColor } from './profileColors';
 
 const INITIAL = typeof window === 'undefined' ? { refs: [], religion: null } : parseCompareUrl(window.location.search);
@@ -126,6 +130,28 @@ export function ComparePage() {
   // Enquanto a nova comparação carrega, a anterior continua na tela (esmaecida) em vez de sumir.
   const shown = refs.length >= MIN_COMPARE && data && (status === 'ready' || status === 'loading') ? data.profiles : null;
 
+  // Com dois perfis a página é a da comparação entre pessoas: o mesmo endpoint dos resultados traz países,
+  // personalidades, partidos e valores de cada um. Com três, ficam as seções do catálogo.
+  const pair = shown && shown.profiles.length === 2 ? shown : null;
+  const pairPeople = useMemo<[PersonResult, PersonResult] | null>(
+    () =>
+      pair
+        ? ([pair.profiles[0], pair.profiles[1]].map((profile) => ({
+            values: axes.map((axis) => profile.vector[axis.id] ?? 50),
+            religion: null
+          })) as [PersonResult, PersonResult])
+        : null,
+    [pair, axes]
+  );
+  const pairLoaded = usePairResults(pairPeople);
+  useScrollReveal(true, [pairLoaded.loaded, shown]);
+  const firstName = pair?.profiles[0].item.name ?? '';
+  const secondName = pair?.profiles[1].item.name ?? '';
+  // Estável entre renders: o cartão de compartilhamento só é refeito quando os dados mudam de verdade.
+  const pairNames = useMemo<[string, string]>(() => [firstName, secondName], [firstName, secondName]);
+  const { actions: shareActions, stage } = usePairShare(pairLoaded.loaded, pair, pairNames, pairPeople, axes);
+  const detail = pair && pairPeople && pairLoaded.loaded ? buildDetail(pairLoaded.loaded, pair, pairNames, pairPeople) : null;
+
   const add = (item: CompareItem) => {
     restoreFocus.current = true;
     setRefs((current) => (current.length >= MAX_COMPARE ? current : [...current, { type: item.type, id: item.id }]));
@@ -163,6 +189,7 @@ export function ComparePage() {
             <header className="e-res-head">
               <p className="e-eyebrow">{t.comparePageEyebrow}</p>
               <h1>{t.comparePageTitle}</h1>
+              {detail && shareActions('e-actions e-ppl-share')}
             </header>
 
             <section className="e-panel" id="cmp-perfis">
@@ -227,13 +254,17 @@ export function ComparePage() {
 
             {shown && (
               <div className="e-cmpp-results" aria-busy={status === 'loading'}>
-                <CompareResults profiles={shown} axes={axes} />
+                <CompareResults profiles={shown} axes={axes} nearby={detail?.nearby} tags={Boolean(pair)} />
               </div>
             )}
+
+            {detail && stage && <SharePhoneStage id="cmp-cartao" title={t.sharePreviewCompareTitle} {...stage} />}
+
+            {detail && shareActions('e-actions')}
           </div>
 
           <aside className="e-side" aria-label={t.navOnThisPage}>
-            <CompareNav data={shown} />
+            <CompareNav data={shown} middle={detail?.nav} />
           </aside>
         </div>
       </main>
@@ -300,7 +331,7 @@ export function CompareNav({ data, middle }: { data: CompareProfiles | null; mid
   );
 }
 
-export function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, axes, nearby, pairsTitle, people = false }: { profiles: CompareProfiles; axes: typeof HOME_AXES; nearby?: ReactNode; pairsTitle?: string; people?: boolean }) {
+export function CompareResults({ profiles: { profiles, pairs, commonIdeology = null }, axes, nearby, pairsTitle, people = false, tags = people }: { profiles: CompareProfiles; axes: typeof HOME_AXES; nearby?: ReactNode; pairsTitle?: string; people?: boolean; tags?: boolean }) {
   const moralAxis = axes.find((axis) => axis.id === 'moral');
   const itemByKey = new Map(profiles.map((profile) => [refKey(profile.item), profile.item]));
   const points = compassPoints(
@@ -323,7 +354,7 @@ export function CompareResults({ profiles: { profiles, pairs, commonIdeology = n
   return (
     <>
       <CompareIdeologies profiles={profiles} common={commonIdeology} />
-      <CompareAxes axes={axes} profiles={profiles} tags={people} />
+      <CompareAxes axes={axes} profiles={profiles} tags={tags} />
       <CompareSignature axes={axes} profiles={profiles} people={people} />
       {nearby ?? (
         <>

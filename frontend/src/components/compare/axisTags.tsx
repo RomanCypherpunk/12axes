@@ -46,7 +46,7 @@ export function AxisTags({ axis, profiles }: { axis: Axis; profiles: CompareProf
     const tip = profiles.map((profile, index) => `${profile.item.name} · ${percent(values[index])}%`).join(' / ');
     return (
       <span className="e-cp-pin e-cp-tag is-both" tabIndex={0} data-tip={tip} style={{ left: `${clampTag(100 - middle)}%`, zIndex: 1 }}>
-        {t.peopleBoth}
+        {profiles.every((profile) => profile.item.initials) ? t.peopleBoth : t.compareBoth}
       </span>
     );
   }
