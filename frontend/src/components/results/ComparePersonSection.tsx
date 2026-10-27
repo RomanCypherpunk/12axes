@@ -96,15 +96,27 @@ export function ComparePersonSection({ axes, results, religion }: ComparePersonS
     open(link, name);
   };
 
+  // Ler a área de transferência pode falhar no celular (permissão negada, navegador embutido de app, pedido ignorado):
+  // aí o foco vai para o campo e a mensagem ensina o jeito de colar de cada aparelho.
   const paste = async () => {
+    const touch = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
     let text: string;
     try {
-      text = await navigator.clipboard.readText();
+      text = await Promise.race([
+        navigator.clipboard.readText(),
+        new Promise<string>((_, reject) => window.setTimeout(() => reject(new Error('timeout')), 5000))
+      ]);
     } catch {
-      setError(t.peoplePasteBlocked);
+      setError(touch ? t.peoplePasteBlockedTouch : t.peoplePasteBlocked);
       linkRef.current?.focus();
       return;
     }
+    if (!text.trim()) {
+      setError(t.peoplePasteEmpty);
+      linkRef.current?.focus();
+      return;
+    }
+    setError(null);
     setLink(text.trim());
     open(text, name, true);
   };

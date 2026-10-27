@@ -1299,3 +1299,88 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 
 
 .e-ppl-share{justify-content:flex-start;margin-top:18px}
+
+/* Prévia do cartão de compartilhamento: iPhone 3D sobre um degradê da cor do espectro */
+.e-share-stage{position:relative;display:flex;flex-direction:column;padding:36px 36px 84px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(165deg,var(--stage-from) 0%,var(--stage-mid) 48%,var(--stage-to) 100%)}
+.e-share-stage>h2{position:relative;z-index:3;margin:0 0 4px;font-size:clamp(26px,3vw,34px)}
+.e-share-pair{position:relative;display:flex;align-items:center;justify-content:center;perspective:1500px;padding-top:44px}
+@media (max-width:720px){.e-share-stage{padding:24px 18px 72px}.e-share-pair{padding-top:32px}}
+.e-share-stage::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 70% at 50% 30%,rgba(255,255,255,.55),rgba(255,255,255,0) 70%);pointer-events:none}
+.e-share-stage::after{content:"";position:absolute;left:50%;bottom:26px;width:56%;height:34px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.34),rgba(0,0,0,0));filter:blur(6px);pointer-events:none}
+.e-phone{--pw:min(236px,42vw);flex:none;position:relative;display:block;width:var(--pw);padding:0;margin:0;border:0;background:none;cursor:pointer;transform-style:preserve-3d;transform:rotateY(-17deg) rotateX(5deg) rotateZ(1.2deg);transition:transform .6s var(--m-ease,cubic-bezier(.16,.84,.28,1))}
+.e-phone:disabled{cursor:default}
+.e-phone:not(:disabled):hover,.e-phone:focus-visible{transform:rotateY(-6deg) rotateX(2deg) rotateZ(0deg) translateY(-6px)}
+.e-phone:focus-visible{outline:3px solid #fff;outline-offset:10px}
+.e-phone-body{position:relative;display:block;transform-style:preserve-3d;padding:calc(var(--pw) * .028);border-radius:calc(var(--pw) * .17);background:linear-gradient(135deg,#8f8f96 0%,#3a3a40 22%,#17171a 50%,#34343a 78%,#6d6d74 100%);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35),inset 0 0 0 calc(var(--pw) * .02) #08080a}
+.e-phone-edge{position:absolute;inset:0;border-radius:calc(var(--pw) * .17);pointer-events:none}
+.e-phone-edge:nth-of-type(1){transform:translateZ(-5px);background:#76767d}
+.e-phone-edge:nth-of-type(2){transform:translateZ(-10px);background:#505057}
+.e-phone-edge:nth-of-type(3){transform:translateZ(-15px);background:#34343a}
+.e-phone-edge:nth-of-type(4){transform:translateZ(-20px);background:#1a1a1d;box-shadow:0 0 0 1px rgba(0,0,0,.3)}
+.e-phone-btn{position:absolute;width:3px;border-radius:2px;background:linear-gradient(180deg,#8a8a91,#3b3b41)}
+.e-phone-btn.is-action{left:-3px;top:13%;height:4.5%}
+.e-phone-btn.is-vol-up{left:-3px;top:20%;height:8%}
+.e-phone-btn.is-vol-down{left:-3px;top:30%;height:8%}
+.e-phone-btn.is-power{right:-3px;top:25%;height:13%}
+.e-phone-screen{position:relative;display:grid;place-items:center;aspect-ratio:9/19.5;overflow:hidden;border-radius:calc(var(--pw) * .142);background:var(--stage-screen);transform:translateZ(1px)}
+.e-phone-screen img{display:block;width:100%;height:auto;max-width:none;aspect-ratio:9/16}
+.e-phone-island{position:absolute;top:1.7%;left:50%;width:28%;height:3.1%;transform:translateX(-50%);border-radius:99px;background:#050506;z-index:2}
+.e-phone-glare{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 100%)}
+.e-share-skeleton{position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.04) 30%,rgba(255,255,255,.22) 50%,rgba(255,255,255,.04) 70%);background-size:200% 100%;animation:e-share-shimmer 1.4s linear infinite}
+@keyframes e-share-shimmer{to{background-position-x:-200%}}
+@media (prefers-reduced-motion:reduce){.e-share-skeleton{animation:none}.e-phone{transition:none}}
+
+/* O cartão inteiro (sem o iPhone) em destaque, à frente do celular */
+.e-share-flat{position:relative;z-index:2;flex:none;width:calc(min(236px,42vw) * 1.12);margin:0 0 0 calc(min(236px,42vw) * -.3);padding:0;border:0;background:none;cursor:pointer;border-radius:calc(min(236px,42vw) * .09);aspect-ratio:9/16;overflow:hidden;transform:translateY(26px);box-shadow:0 30px 50px rgba(0,0,0,.34),0 6px 14px rgba(0,0,0,.24);background:var(--stage-screen);transition:transform .45s var(--m-ease,cubic-bezier(.16,.84,.28,1))}
+.e-share-flat img{display:block;width:100%;height:100%;max-width:none}
+.e-share-flat:disabled{cursor:default}
+.e-share-flat:not(:disabled):hover,.e-share-flat:focus-visible{transform:translateY(18px)}
+.e-share-flat:focus-visible{outline:3px solid #fff;outline-offset:6px}
+@media (prefers-reduced-motion:reduce){.e-share-flat{transition:none}}
+
+/* Análise comparativa no mesmo formato de "Compare com outra pessoa": ícone com os retratos, e a busca num cartão ao lado */
+.e-ppl-faces .e-ppl-face{display:block;width:48px;height:48px;object-fit:cover;border-radius:50%;border:3px solid var(--superficie);box-sizing:border-box;background:var(--neutro)}
+.e-ppl-faces .e-ppl-face+.e-ppl-face{margin-left:-14px}
+.e-cmpa-search{position:relative}
+.e-cmpa-icon{position:absolute;z-index:1;left:18px;top:28px;width:20px;height:20px;transform:translateY(-50%);color:var(--texto-suave);pointer-events:none}
+.e-cmpa .e-cmp-field{flex:none;width:100%}
+.e-cmpa .e-cmp-input{height:56px;padding:0 18px 0 48px;border-radius:18px;background:var(--superficie);font-size:15.5px}
+.e-cmpa .e-ppl-submit:disabled{opacity:.55;cursor:not-allowed}
+@media (max-width:640px){.e-cmpa .e-cmp-input{height:54px}.e-cmpa-icon{top:27px}}
+
+/* Apoie (resultados): texto em cima e um cartão por moeda embaixo */
+.e-ppl-coins i{display:block;width:40px;height:40px;border-radius:50%;border:3px solid var(--superficie);background:var(--superficie);box-sizing:border-box;overflow:hidden}
+.e-ppl-coins i+i{margin-left:-12px}
+.e-ppl-coins svg{display:block;width:100%;height:100%}
+.e-support-panel .e-support-intro{max-width:640px}
+.e-support-panel .e-support-intro h2{font-size:clamp(26px,3vw,34px)}
+.e-support-panel .e-accent{color:inherit}
+.e-support-panel .e-support-intro .e-lead{margin:10px 0 0;font-size:16px;color:var(--texto-suave)}
+.e-support-panel .e-support-intro .e-privacy{margin-top:18px}
+.e-support-panel .e-coins{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.e-support-panel .e-coin{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:20px;border-radius:22px;border:0;background:var(--coin,#188c55);color:#fff}
+.e-support-panel .e-coin-sym{flex:none;display:grid;place-items:center;width:44px;height:44px;background:transparent;color:#fff}
+.e-support-panel .e-coin-sym svg{width:40px;height:40px}
+.e-support-panel .e-coin-name{display:flex;flex-direction:column;gap:3px;min-width:0;width:100%}
+.e-support-panel .e-coin-name strong{font-size:19px;line-height:1.15;color:#fff}
+.e-support-panel .e-coin-name span{font-size:13px;color:rgba(255,255,255,.82)}
+.e-support-panel .e-coin-field{display:flex;align-items:center;gap:8px;width:100%;min-width:0;height:44px;margin-top:auto;padding:0 5px 0 12px;border-radius:14px;background:rgba(255,255,255,.18)}
+.e-support-panel .e-coin-field code{order:0;grid-column:auto;flex:1;min-width:0;font-size:12px;color:#fff}
+.e-support-panel .e-coin-field .e-copy{order:1}
+.e-support-panel .e-coin-field .e-copy{flex:none;width:34px;height:34px;padding:0;justify-content:center;border:0;border-radius:10px;background:rgba(255,255,255,.22);color:#fff}
+.e-support-panel .e-coin-field .e-copy:hover{background:rgba(255,255,255,.34)}
+.e-support-panel .e-coin-field .e-copy span{display:none}
+.e-support-panel .e-coin-field .e-copy.e-ok{background:#fff;color:var(--coin)}
+.e-support-panel .e-coin-field[data-copied] code{font-weight:700}
+@media (max-width:900px){.e-support-panel .e-coins{grid-template-columns:repeat(2,minmax(0,1fr))}.e-support-panel .e-coins .e-coin:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:520px){
+  .e-support-panel .e-coins{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+  .e-support-panel .e-coin{gap:12px;padding:14px;border-radius:20px}
+  .e-support-panel .e-coin-sym{width:36px;height:36px}
+  .e-support-panel .e-coin-sym svg{width:32px;height:32px}
+  .e-support-panel .e-coin-name strong{font-size:15.5px}
+  .e-support-panel .e-coin-name span{font-size:12px}
+  .e-support-panel .e-coin-field{height:38px;padding:0 4px 0 10px;border-radius:12px;gap:6px}
+  .e-support-panel .e-coin-field code{font-size:11px}
+  .e-support-panel .e-coin-field .e-copy{width:28px;height:28px;border-radius:8px}
+}

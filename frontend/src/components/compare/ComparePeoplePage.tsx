@@ -17,6 +17,9 @@ import {
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import { ArrowIcon, Logo, ShareImageIcon, SiteFooter } from '../editorial/primitives';
 import { ProfileFace } from '../results/CompareSection';
+import { SharePhoneStage, stageColors, useSharePreview } from '../results/SharePhoneStage';
+import { resolveIdeologyColor } from '../../utils/ideologyColors';
+import type { CompareShareData } from '../../utils/compareShareCard';
 import { profileColor } from './CompareAxes';
 import { CompareNav, CompareResults, type NavSection } from './ComparePage';
 import { CountriesPair, PartiesPair, PersonalitiesPair, type NearbyPeople } from './ComparePeopleNearby';
@@ -129,6 +132,25 @@ export function ComparePeoplePage() {
     };
   }, [loaded, names]);
 
+  // Dados do cartão de compartilhamento (o mesmo para a prévia e para o botão).
+  const shareData = useMemo<CompareShareData | null>(() => {
+    if (!LINK || !loaded || !profiles) return null;
+    return {
+      names,
+      results: loaded.results,
+      values: [LINK.people[0].values, LINK.people[1].values],
+      axes,
+      religions: [LINK.people[0].religion, LINK.people[1].religion],
+      compatibility: profiles.pairs[0].compatibility
+    };
+  }, [loaded, profiles, names]);
+
+  const sharePreview = useSharePreview(async () => {
+    if (!shareData) throw new Error('sem dados');
+    const { createCompareSharePng } = await import('../../utils/compareShareCard');
+    return createCompareSharePng(shareData);
+  }, [shareData]);
+
   const startEdit = (index: 0 | 1) => {
     setDraft(names[index]);
     setEditing(index);
@@ -146,19 +168,12 @@ export function ComparePeoplePage() {
 
   // Imagem 1080x1920 da comparação (o módulo do cartão e o html-to-image só carregam neste clique).
   const share = async () => {
-    if (!loaded || !profiles || !LINK) return;
+    if (!shareData) return;
     setIsSharing(true);
     setShareError(null);
     try {
       const { exportCompareShare } = await import('../../utils/compareShareCard');
-      await exportCompareShare({
-        names,
-        results: loaded.results,
-        values: [LINK.people[0].values, LINK.people[1].values],
-        axes,
-        religions: [LINK.people[0].religion, LINK.people[1].religion],
-        compatibility: profiles.pairs[0].compatibility
-      });
+      await exportCompareShare(shareData);
     } catch (err) {
       setShareError(err instanceof Error ? err.message : t.errImage);
     } finally {
@@ -273,6 +288,18 @@ export function ComparePeoplePage() {
               <div className="e-cmpp-results">
                 <CompareResults profiles={profiles} axes={axes} nearby={detail?.nearby} pairsTitle={t.peoplePairsTitle} people />
               </div>
+            )}
+
+            {profiles && shareData && sharePreview.status !== 'error' && (
+              <SharePhoneStage
+                id="cmp-cartao"
+                title={t.sharePreviewCompareTitle}
+                colors={stageColors(resolveIdeologyColor(loaded!.results[0].topMatch.category), resolveIdeologyColor(loaded!.results[1].topMatch.category))}
+                src={sharePreview.src}
+                isSharing={isSharing}
+                onShare={share}
+                sectionRef={sharePreview.ref}
+              />
             )}
 
             {profiles && shareActions('e-actions')}

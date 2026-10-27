@@ -18,6 +18,7 @@ import { PersonalitiesSection } from '../results/PersonalitiesSection';
 import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
+import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
 import { computeCompass } from '../../utils/politicalCompass';
@@ -146,6 +147,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
 
+          <SharePreviewSection result={result} quiz={quiz} axes={axes} religion={religion} isSharing={isSharing} onShare={onShare} />
+
           <div className="e-actions">
             <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
               {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
@@ -158,7 +161,14 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           <ComparePersonSection axes={axes} results={axisResults} religion={religion} />
 
-          <CompareSection axes={axes} results={axisResults} religion={religion} userCategory={top.category} />
+          <CompareSection
+            axes={axes}
+            results={axisResults}
+            religion={religion}
+            userCategory={top.category}
+            closest={result.topPersonalityMatch}
+            farthest={result.bottomPersonalityMatches?.[0] ?? null}
+          />
 
           <SupportSection variant="panel" />
         </div>

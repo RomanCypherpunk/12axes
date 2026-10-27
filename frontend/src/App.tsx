@@ -14,6 +14,7 @@ import { useScrollReveal } from './hooks/useScrollReveal';
 import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
+import { createSharePng, exportQuizFor } from './utils/shareImage';
 import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
 import { PEOPLE_COMPARE_PATH, RESULT_URL_KEYS } from './utils/peopleCompare';
@@ -788,42 +789,8 @@ function MainApp() {
     }
     setIsSharing(true);
     setError(null);
-    const exportQuiz: QuizPayload = quiz ?? {
-      title: '',
-      description: '',
-      variant: selectedVariant,
-      questionCount: 0,
-      questionsPerAxis: 0,
-      axes: homeAxes,
-      questions: [],
-      answerOptions: []
-    };
-
-    let stage: HTMLDivElement | null = null;
     try {
-      if (document.fonts) {
-        await Promise.allSettled([
-          document.fonts.load('400 30px "Poppins"'),
-          document.fonts.load('500 30px "Poppins"'),
-          document.fonts.load('600 30px "Poppins"'),
-          document.fonts.load('600 30px "Sora"'),
-          document.fonts.load('700 30px "Sora"'),
-          document.fonts.load('800 30px "Sora"')
-        ]);
-        await document.fonts.ready;
-      }
-
-      const [{ toPng }, shareCard] = await Promise.all([
-        import('html-to-image'),
-        import('./utils/shareCard')
-      ]);
-      const { buildShareCard, renderSharePng } = shareCard;
-
-      const { stage: builtStage, target } = buildShareCard(result, exportQuiz, religion);
-      stage = builtStage;
-      document.body.appendChild(stage);
-
-      const dataUrl = await renderSharePng(target, toPng);
+      const dataUrl = await createSharePng(result, exportQuizFor(quiz, homeAxes, selectedVariant), religion);
 
       downloadDataUrl(
         dataUrl,
@@ -831,14 +798,11 @@ function MainApp() {
       );
       // Libera o botão antes da folha de compartilhamento: se ela ficar aberta ou
       // nunca resolver, o botão não pode ficar preso em "gerando".
-      stage.remove();
-      stage = null;
       setIsSharing(false);
       await tryNativeShare(dataUrl, result);
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errImage);
     } finally {
-      stage?.remove();
       setIsSharing(false);
     }
   }

@@ -161,6 +161,8 @@ interface Strings {
   compareSearchLabel: string;
   compareSearchPlaceholder: string;
   compareView: string;
+  compareFieldCaption: string;
+  compareExamplePlaceholder: string;
   compareAxesTitle: string;
   compareNoResults: string;
   compareLoading: string;
@@ -226,6 +228,8 @@ interface Strings {
   peopleUrlPlaceholder: string;
   peoplePaste: string;
   peoplePasteBlocked: string;
+  peoplePasteBlockedTouch: string;
+  peoplePasteEmpty: string;
   peopleCompare: string;
   peopleNameRequired: string;
   peopleLinkMissing: (keys: string) => string;
@@ -429,6 +433,10 @@ interface Strings {
   share: string;
   saveOrShare: string;
   generatingPng: string;
+  sharePreviewTitle: string;
+  sharePreviewCompareTitle: string;
+  sharePreviewAlt: string;
+  sharePreviewLoading: string;
   downloadPdf: string;
   generatingPdf: string;
   report: {
@@ -642,6 +650,8 @@ const pt: Strings = {
   compareSearchLabel: 'Buscar perfil para comparar',
   compareSearchPlaceholder: 'Busque uma personalidade, país ou ideologia',
   compareView: 'Visualizar',
+  compareFieldCaption: 'Personalidade, país ou ideologia',
+  compareExamplePlaceholder: 'Ex.: Getúlio Vargas',
   compareAxesTitle: 'Seus 12 eixos',
   compareNoResults: 'Nenhum perfil encontrado.',
   compareLoading: 'Comparando…',
@@ -716,6 +726,8 @@ const pt: Strings = {
   peopleUrlPlaceholder: 'Cole o link aqui',
   peoplePaste: 'Colar',
   peoplePasteBlocked: 'O navegador não deixou ler a área de transferência. Cole o link no campo com Ctrl+V.',
+  peoplePasteBlockedTouch: 'Não consegui ler a área de transferência. Toque e segure no campo do link e escolha Colar.',
+  peoplePasteEmpty: 'Não há nada copiado. Copie o link do resultado e toque em Colar.',
   peopleCompare: 'Comparar',
   peopleNameRequired: 'Escreva o nome da outra pessoa.',
   peopleLinkMissing: (keys) => `Este link não tem todos os eixos (faltam: ${keys}). Cole o link completo do resultado.`,
@@ -1142,6 +1154,10 @@ const pt: Strings = {
   share: 'Compartilhar',
   saveOrShare: 'Compartilhar resultado',
   generatingPng: 'Gerando PNG...',
+  sharePreviewTitle: 'Seu cartão de resultado',
+  sharePreviewCompareTitle: 'Cartão da comparação',
+  sharePreviewAlt: 'Prévia do seu cartão de resultado para compartilhar',
+  sharePreviewLoading: 'Gerando a prévia do seu cartão',
   generatingPdf: 'Gerando PDF...',
   downloadPdf: 'Download PDF',
   report: {
@@ -1261,6 +1277,12 @@ const pt: Strings = {
       id: 'eth',
       name: 'Ethereum',
       network: 'ERC-20',
+      address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
+    },
+    {
+      id: 'usdt',
+      name: 'Dólar Tether (USDT)',
+      network: 'Ethereum',
       address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
     },
     {
@@ -1395,6 +1417,8 @@ const en: Strings = {
   compareSearchLabel: 'Search a profile to compare',
   compareSearchPlaceholder: 'Search a personality, country or ideology',
   compareView: 'View',
+  compareFieldCaption: 'Personality, country or ideology',
+  compareExamplePlaceholder: 'Ex.: Donald Trump',
   compareAxesTitle: 'Your 12 axes',
   compareNoResults: 'No profiles found.',
   compareLoading: 'Comparing…',
@@ -1467,6 +1491,8 @@ const en: Strings = {
   peopleUrlPlaceholder: 'Paste the link here',
   peoplePaste: 'Paste',
   peoplePasteBlocked: 'The browser did not allow reading the clipboard. Paste the link into the field with Ctrl+V.',
+  peoplePasteBlockedTouch: 'Could not read the clipboard. Tap and hold the link field and choose Paste.',
+  peoplePasteEmpty: 'Nothing copied yet. Copy the result link and tap Paste.',
   peopleCompare: 'Compare',
   peopleNameRequired: "Enter the other person's name.",
   peopleLinkMissing: (keys) => `This link does not have every axis (missing: ${keys}). Paste the full result link.`,
@@ -1906,6 +1932,10 @@ const en: Strings = {
   share: 'Share',
   saveOrShare: 'Share result',
   generatingPng: 'Generating PNG...',
+  sharePreviewTitle: 'Your result card',
+  sharePreviewCompareTitle: 'Comparison card',
+  sharePreviewAlt: 'Preview of your shareable result card',
+  sharePreviewLoading: 'Generating your card preview',
   generatingPdf: 'Generating PDF...',
   downloadPdf: 'Download PDF',
   report: {
@@ -2025,6 +2055,12 @@ const en: Strings = {
       id: 'eth',
       name: 'Ethereum',
       network: 'ERC-20',
+      address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
+    },
+    {
+      id: 'usdt',
+      name: 'Tether (USDT)',
+      network: 'Ethereum',
       address: '0xDe821e55D6101AA42D05DBf2C07ad0BB866C23a5'
     },
     {

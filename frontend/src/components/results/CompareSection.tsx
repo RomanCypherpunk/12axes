@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react';
 import { t } from '../../i18n';
 import { fetchCompare, fetchCompareCatalog } from '../../services/quizApi';
-import type { Axis, AxisResult, CompareDetail, CompareItem } from '../../types/quiz';
+import type { Axis, AxisResult, CompareDetail, CompareItem, PersonalityMatch } from '../../types/quiz';
 import { compareAxes, summaryKinds, type CompareAxisRow } from '../../utils/compareAxes';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { resolveIdeologyColor } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
-import { SafeImg } from '../editorial/primitives';
+import { ArrowIcon, SafeImg } from '../editorial/primitives';
 import { AxisTrackRow, TrackPin, YouPin } from './AxisTrack';
 import { InfoSheet } from './InfoSheet';
+import { Portrait } from './PersonalitiesSection';
 import { SheetMatch } from './SheetMatch';
 
 const MAX_OPTIONS = 8;
@@ -20,6 +21,9 @@ interface CompareSectionProps {
   religion?: Religion | null;
   /** Categoria da ideologia principal do usuário; define a cor do marcador "você". */
   userCategory: string;
+  /** Personalidade mais compatível e a mais distante do usuário: os dois retratos do ícone da seção. */
+  closest?: PersonalityMatch | null;
+  farthest?: PersonalityMatch | null;
 }
 
 // Sem acento e minúsculo, para a busca achar "Sao Paulo" digitando "são paulo".
@@ -93,10 +97,12 @@ interface CompareSearchFieldProps {
   onQueryChange: (value: string) => void;
   onChoose: (item: CompareItem) => void;
   inputRef?: Ref<HTMLInputElement>;
+  /** Texto do campo vazio; sem ele vale o padrão da busca. */
+  placeholder?: string;
 }
 
 /** Busca de perfis do catálogo (personalidades, países e ideologias), usada aqui e em /compare. */
-export function CompareSearchField({ listId, query, options, showEmpty, onFocus, onQueryChange, onChoose, inputRef }: CompareSearchFieldProps) {
+export function CompareSearchField({ listId, query, options, showEmpty, onFocus, onQueryChange, onChoose, inputRef, placeholder }: CompareSearchFieldProps) {
   return (
     <div className="e-cmp-field">
       <input
@@ -107,7 +113,7 @@ export function CompareSearchField({ listId, query, options, showEmpty, onFocus,
         aria-label={t.compareSearchLabel}
         aria-expanded={options.length > 0}
         aria-controls={listId}
-        placeholder={t.compareSearchPlaceholder}
+        placeholder={placeholder ?? t.compareSearchPlaceholder}
         value={query}
         autoComplete="off"
         onFocus={onFocus}
@@ -134,7 +140,16 @@ export function CompareSearchField({ listId, query, options, showEmpty, onFocus,
   );
 }
 
-export function CompareSection({ axes, results, religion, userCategory }: CompareSectionProps) {
+function SearchIcon() {
+  return (
+    <svg className="e-cmpa-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="m16 16 4.5 4.5" />
+    </svg>
+  );
+}
+
+export function CompareSection({ axes, results, religion, userCategory, closest, farthest }: CompareSectionProps) {
   const [catalog, setCatalog] = useState<CompareItem[] | null>(null);
   const [catalogReligion, setCatalogReligion] = useState<Religion | null | undefined>(undefined);
   const [catalogError, setCatalogError] = useState(false);
@@ -208,29 +223,46 @@ export function CompareSection({ axes, results, religion, userCategory }: Compar
   const showEmpty = Boolean(catalog) && !selected && query.trim().length > 0 && options.length === 0;
 
   return (
-    <section className="e-panel" id="comparar" data-reveal>
-      <h2>{t.compareTitle}</h2>
-      <p className="e-lead e-cmp-lead">{t.compareLead}</p>
-
-      <div className="e-cmp-bar">
-        <CompareSearchField
-          listId="e-cmp-options"
-          query={query}
-          options={options}
-          showEmpty={showEmpty}
-          onFocus={loadCatalog}
-          onQueryChange={(value) => {
-            loadCatalog();
-            setQuery(value);
-            setSelected(null);
-          }}
-          onChoose={choose}
-        />
-        <button className="e-btn e-btn-primary" type="button" disabled={!selected || loading} onClick={view}>
-          {loading ? t.compareLoading : t.compareView}
-        </button>
+    <section className="e-panel e-ppl e-cmpa" id="comparar" data-reveal>
+      <div className="e-ppl-intro">
+        {(closest || farthest) && (
+          <span className="e-ppl-duo e-ppl-faces" aria-hidden="true">
+            {closest && <Portrait match={closest} className="e-ppl-face" />}
+            {farthest && <Portrait match={farthest} className="e-ppl-face" />}
+          </span>
+        )}
+        <h2>{t.compareTitle}</h2>
+        <p className="e-lead e-cmp-lead">{t.compareLead}</p>
       </div>
-      {(error || catalogError) && <p className="inline-error" role="alert">{t.compareLoadError}</p>}
+
+      <div className="e-ppl-side">
+        <div className="e-ppl-form">
+          <div className="e-ppl-field">
+            <span className="e-ppl-cap">{t.compareFieldCaption}</span>
+            <div className="e-cmpa-search">
+              <SearchIcon />
+              <CompareSearchField
+                listId="e-cmp-options"
+                query={query}
+                options={options}
+                showEmpty={showEmpty}
+                onFocus={loadCatalog}
+                onQueryChange={(value) => {
+                  loadCatalog();
+                  setQuery(value);
+                  setSelected(null);
+                }}
+                onChoose={choose}
+                placeholder={t.compareExamplePlaceholder}
+              />
+            </div>
+          </div>
+          <button className="e-btn e-btn-primary e-ppl-submit" type="button" disabled={!selected || loading} onClick={view}>
+            {loading ? t.compareLoading : t.compareView} {!loading && <ArrowIcon />}
+          </button>
+        </div>
+        {(error || catalogError) && <p className="inline-error e-ppl-note" role="alert">{t.compareLoadError}</p>}
+      </div>
 
       {detail && (
         <ComparisonSheet detail={detail} axes={axes} results={results} userCategory={userCategory} onClose={() => setDetail(null)} />

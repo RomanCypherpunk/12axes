@@ -1,15 +1,40 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { t } from '../i18n';
 import { copyToClipboard } from '../utils/clipboard';
-import { BitcoinIcon, EthereumIcon, LightningIcon, MoneroIcon, PixIcon } from './CryptoIcons';
+import {
+  BitcoinGlyph,
+  BitcoinIcon,
+  EthereumGlyph,
+  EthereumIcon,
+  LightningGlyph,
+  LightningIcon,
+  MoneroGlyph,
+  MoneroIcon,
+  PixGlyph,
+  PixIcon,
+  UsdtGlyph,
+  UsdtIcon
+} from './CryptoIcons';
 
 const COIN_ICONS = {
   pix: PixIcon,
   btc: BitcoinIcon,
   lightning: LightningIcon,
   eth: EthereumIcon,
+  usdt: UsdtIcon,
   xmr: MoneroIcon
 } as const;
+
+// Cartões coloridos da seção Apoie dos resultados: glifo branco sobre a cor de cada moeda, nesta ordem (em linhas de três).
+const PANEL_COINS = {
+  pix: { Glyph: PixGlyph, color: '#188c55' },
+  usdt: { Glyph: UsdtGlyph, color: '#289f7b' },
+  eth: { Glyph: EthereumGlyph, color: '#5075a4' },
+  btc: { Glyph: BitcoinGlyph, color: '#c75f0a' },
+  lightning: { Glyph: LightningGlyph, color: '#6a47b5' },
+  xmr: { Glyph: MoneroGlyph, color: '#d43a26' }
+} as const;
+const PANEL_ORDER = Object.keys(PANEL_COINS);
 
 interface SupportSectionProps {
   variant: 'home' | 'panel';
@@ -28,15 +53,15 @@ export function SupportSection({ variant }: SupportSectionProps) {
     }, 1800);
   }
 
-  const box = (
-    <>
-      <div>
-        {variant === 'home' && <p className="e-eyebrow">{t.supportEyebrow}</p>}
-        <h2 id="apoie-titulo">
-          {t.supportTitle}
-          <span className="e-accent">{t.supportTitleEm}</span>
-        </h2>
-        <p className="e-lead">{t.supportLead}</p>
+  const head = (
+    <div>
+      {variant === 'home' && <p className="e-eyebrow">{t.supportEyebrow}</p>}
+      <h2 id="apoie-titulo">
+        {t.supportTitle}
+        <span className="e-accent">{t.supportTitleEm}</span>
+      </h2>
+      <p className="e-lead">{t.supportLead}</p>
+      {variant === 'home' && (
         <p className="e-privacy">
           <svg className="e-ico" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 3 5 6v5c0 4.2 2.7 7.9 7 10 4.3-2.1 7-5.8 7-10V6l-7-3Z" />
@@ -44,49 +69,81 @@ export function SupportSection({ variant }: SupportSectionProps) {
           </svg>
           {t.supportPrivacyNote}
         </p>
-      </div>
-      <ul className="e-coins">
-        {t.supportCoins.map((coin) => {
-          const copied = copiedId === coin.id;
-          const CoinIcon = COIN_ICONS[coin.id as keyof typeof COIN_ICONS];
-          return (
-            <li className="e-coin" key={coin.id}>
-              <span className="e-coin-sym" aria-hidden="true">{CoinIcon && <CoinIcon />}</span>
-              <div className="e-coin-name">
-                <strong>{coin.name}</strong>
-                <span>{coin.network}</span>
+      )}
+    </div>
+  );
+
+  const coins =
+    variant === 'panel'
+      ? [...t.supportCoins]
+          .filter((coin) => coin.address)
+          .sort((a, b) => PANEL_ORDER.indexOf(a.id) - PANEL_ORDER.indexOf(b.id))
+      : t.supportCoins;
+
+  const list = (
+    <ul className="e-coins">
+      {coins.map((coin) => {
+        const copied = copiedId === coin.id;
+        const CoinIcon = COIN_ICONS[coin.id as keyof typeof COIN_ICONS];
+        const panelCoin = PANEL_COINS[coin.id as keyof typeof PANEL_COINS];
+        const copyButton = (
+          <button
+            className={copied ? 'e-copy e-ok' : 'e-copy'}
+            type="button"
+            onClick={() => void handleCopy(coin.id, coin.address)}
+            aria-label={t.supportCopyAria(`${coin.name} (${coin.network})`)}
+          >
+            <svg className="e-ico" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="9" y="9" width="11" height="11" rx="2" />
+              <path d="M5 15V5a1 1 0 0 1 1-1h10" />
+            </svg>
+            <span>{copied ? t.supportCopied : t.supportCopy}</span>
+          </button>
+        );
+        return (
+          <li className="e-coin" key={coin.id} style={variant === 'panel' && panelCoin ? ({ '--coin': panelCoin.color } as CSSProperties) : undefined}>
+            <span className="e-coin-sym" aria-hidden="true">
+              {variant === 'panel' && panelCoin ? <panelCoin.Glyph /> : CoinIcon && <CoinIcon />}
+            </span>
+            <div className="e-coin-name">
+              <strong>{coin.name}</strong>
+              <span>{coin.network}</span>
+            </div>
+            {variant === 'panel' ? (
+              <div className="e-coin-field" data-copied={copied ? '' : undefined}>
+                <code>{copied ? t.supportCopied : coin.address}</code>
+                {copyButton}
               </div>
-              <code>{coin.address}</code>
-              <button
-                className={copied ? 'e-copy e-ok' : 'e-copy'}
-                type="button"
-                onClick={() => void handleCopy(coin.id, coin.address)}
-                aria-label={t.supportCopyAria(`${coin.name} (${coin.network})`)}
-              >
-                <svg className="e-ico" viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="9" y="9" width="11" height="11" rx="2" />
-                  <path d="M5 15V5a1 1 0 0 1 1-1h10" />
-                </svg>
-                <span>{copied ? t.supportCopied : t.supportCopy}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+            ) : (
+              <>
+                <code>{coin.address}</code>
+                {copyButton}
+              </>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 
   if (variant === 'panel') {
+    // Texto em cima e, embaixo, um cartão por moeda (ícone, nome e o campo do endereço com o botão de copiar).
     return (
       <section className="e-panel e-support-panel" id="apoie" aria-labelledby="apoie-titulo">
-        <div className="e-support-box">{box}</div>
+        <div className="e-support-intro">
+          {head}
+        </div>
+        {list}
       </section>
     );
   }
 
   return (
     <section className="e-sec" id="apoie" aria-labelledby="apoie-titulo">
-      <div className="e-wrap e-support-box">{box}</div>
+      <div className="e-wrap e-support-box">
+        {head}
+        {list}
+      </div>
     </section>
   );
 }

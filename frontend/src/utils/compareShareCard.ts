@@ -524,30 +524,39 @@ function downloadDataUrl(dataUrl: string, fileName: string) {
   anchor.remove();
 }
 
-/** Gera o PNG da comparação, baixa e abre a folha de compartilhamento do aparelho (quando existe). */
-export async function exportCompareShare(data: CompareShareData): Promise<void> {
-  if (document.fonts) {
-    await Promise.allSettled([
-      document.fonts.load('400 30px "Poppins"'),
-      document.fonts.load('500 30px "Poppins"'),
-      document.fonts.load('600 30px "Poppins"'),
-      document.fonts.load('700 18px "Poppins"'),
-      document.fonts.load('600 22px "Poppins"'),
-      document.fonts.load('600 30px "Sora"'),
-      document.fonts.load('700 30px "Sora"'),
-      document.fonts.load('800 30px "Sora"')
-    ]);
-    await document.fonts.ready;
+async function loadCompareFonts(): Promise<void> {
+  if (!document.fonts) {
+    return;
   }
+  await Promise.allSettled([
+    document.fonts.load('400 30px "Poppins"'),
+    document.fonts.load('500 30px "Poppins"'),
+    document.fonts.load('600 30px "Poppins"'),
+    document.fonts.load('700 18px "Poppins"'),
+    document.fonts.load('600 22px "Poppins"'),
+    document.fonts.load('600 30px "Sora"'),
+    document.fonts.load('700 30px "Sora"'),
+    document.fonts.load('800 30px "Sora"')
+  ]);
+  await document.fonts.ready;
+}
+
+/** Gera o PNG 1080x1920 da comparação (data URL), sem baixar nem compartilhar. */
+export async function createCompareSharePng(data: CompareShareData): Promise<string> {
+  await loadCompareFonts();
   const { toPng } = await import('html-to-image');
   const { stage, target } = buildCompareShareCard(data);
   document.body.appendChild(stage);
-  let dataUrl: string;
   try {
-    dataUrl = await renderSharePng(target, toPng);
+    return await renderSharePng(target, toPng);
   } finally {
     stage.remove();
   }
+}
+
+/** Gera o PNG da comparação, baixa e abre a folha de compartilhamento do aparelho (quando existe). */
+export async function exportCompareShare(data: CompareShareData): Promise<void> {
+  const dataUrl = await createCompareSharePng(data);
   downloadDataUrl(dataUrl, `${t.shareCompareFilePrefix}-${new Date().toISOString().slice(0, 10)}.png`);
   await shareImage(dataUrl, t.shareCompareMessage(data.names[1], Math.round(data.compatibility), data.results[0].topMatch.name, data.results[1].topMatch.name, window.location.href), Math.round(data.compatibility));
 }
