@@ -50,6 +50,20 @@ public class IdeologyMatcherService {
         return toMatch(ranking.getLast(), normalizedLang);
     }
 
+    // Ranking completo do catalogo (respeita a preferencia religiosa), do mais ao menos compativel.
+    public List<IdeologyMatch> findAll(List<AxisResult> axisResults, String lang, String religion) {
+        Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        return rankCandidates(userVector, normalizedLang, religion).stream()
+                .map(candidate -> toMatch(candidate, normalizedLang))
+                .toList();
+    }
+
+    // Vetor de 12 eixos (leftPercent) de uma ideologia, o mesmo que entra no matching.
+    public Map<String, Double> targetVectorOf(String ideologyId, String lang) {
+        return targetVectorFor(dataService.getIdeologyById(ideologyId, QuizDataService.normalizeLang(lang)));
+    }
+
     List<IdeologyMatch> findRankedMatches(List<AxisResult> axisResults, String lang) {
         return findRankedMatches(axisResults, lang, null);
     }

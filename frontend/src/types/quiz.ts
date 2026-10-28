@@ -250,7 +250,6 @@ export interface QuizResult {
   topPersonalityMatch: PersonalityMatch;
   personalityMatches: PersonalityMatch[];
   dimensionMatches: DimensionMatch[];
-  categoryBestMatches: PersonalityMatch[];
   bottomPersonalityMatches: PersonalityMatch[];
   mostUnusualAxis: AxisOutlier;
   mostCommonAxis: AxisOutlier;
@@ -325,4 +324,101 @@ export interface CompareProfiles {
   pairs: ComparePair[];
   /** Ideologia mais próxima da média dos perfis. */
   commonIdeology: IdeologyMatch | null;
+}
+
+// Relatório Completo (pago): só chega do endpoint protegido, nunca da API livre.
+
+/** Quanto uma resposta puxou um eixo, em pontos de leftPercent (positivo = polo esquerdo). */
+export interface AnswerImpact {
+  questionId: string;
+  question: string;
+  answer: AnswerValue;
+  impact: number;
+}
+
+export interface AxisAnalysis {
+  axisId: string;
+  label: string;
+  userLeftPercent: number;
+  side: 'left' | 'right' | 'balanced';
+  /** equilibrado, inclinado, forte ou muito_forte */
+  level: 'equilibrado' | 'inclinado' | 'forte' | 'muito_forte';
+  /** Texto fixo daquela inclinação; nulo enquanto não houver texto. */
+  text: string | null;
+  impacts: AnswerImpact[];
+  ideologyLeftPercent: number | null;
+  personalityLeftPercent: number | null;
+  countryLeftPercent: number | null;
+}
+
+export interface AxisDivergence {
+  axisId: string;
+  label: string;
+  userLeftPercent: number;
+  profileLeftPercent: number;
+  /** Usuário menos perfil: positivo = o usuário está mais para o polo esquerdo. */
+  difference: number;
+}
+
+export interface Disagreement {
+  kind: 'ideology' | 'personality' | 'country';
+  profileId: string;
+  profileName: string;
+  /** Categoria (espectro político) da ideologia mais próxima deste perfil: a cor dele na tela. */
+  ideologyCategory: string;
+  axes: AxisDivergence[];
+}
+
+export interface GovernmentSeat {
+  seatKey: 'lider' | 'vice' | 'economia' | 'educacao' | 'estrategia' | 'filosofia' | 'social' | 'industria' | 'cultura';
+  category: string;
+  holder: PersonalityMatch;
+}
+
+export interface RankingRow {
+  id: string;
+  name: string;
+  category: string;
+  historical: boolean;
+  compatibility: number;
+}
+
+export interface PremiumRanking {
+  ideologies: RankingRow[];
+  personalities: RankingRow[];
+  countries: RankingRow[];
+  parties: RankingRow[];
+}
+
+/** Um perfil da linha do tempo: personalidade, país ou partido (os outros campos são nulos). */
+export interface TimelineEntry {
+  type: 'personality' | 'country' | 'party';
+  personality: PersonalityMatch | null;
+  country: CountryMatch | null;
+  party: PartyMatch | null;
+}
+
+/** Uma era da linha do tempo, com os perfis da lista e do cartão da época mais compatível. */
+export interface TimelineEra {
+  key: 'antiguidade' | 'medieval' | 'moderna' | 'xix' | 'xx' | 'xxi';
+  /** Ano em que a era começa (nulo na Antiguidade). */
+  fromYear: number | null;
+  /** Ano em que a era termina, exclusivo (nulo na era aberta, o século XXI). */
+  toYear: number | null;
+  /** Média da compatibilidade dos 10 perfis mais compatíveis da era (personalidades, países e partidos). */
+  compatibility: number;
+  /** Os 4 perfis mais compatíveis (até 3 personalidades, 3 países e 1 partido): cartão da época mais compatível. */
+  entries: TimelineEntry[];
+  /** Os 2 perfis da lista da linha do tempo (até 2 personalidades, 1 país e 1 partido). */
+  highlights: TimelineEntry[];
+}
+
+export interface PremiumReport {
+  axisAnalysis: AxisAnalysis[];
+  topCountries: CountryMatch[];
+  personalitiesByArea: PersonalityMatch[];
+  disagreements: Disagreement[];
+  idealGovernment: GovernmentSeat[];
+  timeline: TimelineEra[];
+  ranking: PremiumRanking;
 }

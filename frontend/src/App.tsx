@@ -1100,6 +1100,7 @@ function MainApp() {
             onShare={() => void downloadResultsPng()}
             religion={religion}
             onEditAnswers={editableAnswers ? () => void openEditAnswers() : undefined}
+            premiumAnswers={editableAnswers}
           />
         </Suspense>
       )}

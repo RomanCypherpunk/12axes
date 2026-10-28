@@ -447,7 +447,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-avatar{width:72px;height:72px;object-fit:cover;border-radius:50%}
 .e-dim{display:block;font-size:10.5px;font-weight:600;color:var(--cat);text-transform:uppercase;letter-spacing:.14em}
 .e-dim-row strong{display:block;font-size:14.5px;line-height:1.3;margin-top:3px;overflow-wrap:anywhere}
-.e-pctc{font-family:var(--font-display);font-weight:600;font-size:24px;line-height:1;color:var(--tinta);letter-spacing:-.02em}
+.e-pctc{font-family:var(--font-display);font-weight:600;font-size:18px;line-height:1;color:var(--cat);letter-spacing:-.02em}
 .e-far{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px}
 .e-far .e-sub{margin:0 6px 0 0}
 .e-fars{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
@@ -635,10 +635,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 
 /* resultado por eixo: botão "?" e aba de explicação */
 .e-axis-title{display:flex;align-items:center;gap:6px;min-width:0}
-.e-axis-info{display:inline-grid;place-items:center;width:28px;height:28px;margin:-4px 0;padding:0;border:0;border-radius:50%;background:none;color:var(--texto-suave);cursor:pointer;flex:none;transition:color .15s ease,background .15s ease}
-.e-axis-info svg{width:18px;height:18px}
-.e-axis-info:hover{color:var(--tinta);background:var(--borda)}
-.e-axis-info:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
 .e-axis-sheet-backdrop{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:rgba(16,16,16,.42);animation:e-sheet-fade .2s ease}
 .e-axis-sheet{position:relative;width:min(460px,100%);background:var(--superficie);border:1px solid var(--borda);border-radius:24px;padding:28px 28px 26px;box-shadow:0 24px 60px -24px rgba(16,16,16,.45);animation:e-sheet-pop .22s cubic-bezier(.2,.8,.2,1)}
 .e-axis-sheet-handle{display:none}
@@ -660,10 +656,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 }
 @media (prefers-reduced-motion:reduce){
   .e-axis-sheet-backdrop,.e-axis-sheet{animation:none}
-  .e-axis-info{transition:none}
 }
 .e-dim-row,.e-near{position:relative}
-.e-card-info{position:absolute;top:8px;right:8px;margin:0}
 .e-person-sheet-head{display:flex;align-items:center;gap:16px;margin:0 44px 14px 0}
 .e-person-sheet-head .e-avatar{width:72px;height:72px;flex:none;border-radius:50%;object-fit:cover}
 .e-person-sheet-head>div{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
@@ -839,8 +833,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* ── Bússola política (resultados) ───────────────────────────────────────── */
 .e-compass{position:relative}
 .e-compass h2{margin-bottom:22px}
-.e-compass .e-card-info{top:16px;right:16px;width:32px;height:32px}
-.e-compass .e-card-info svg{width:20px;height:20px}
 .e-compass-sheet{width:min(640px,100%)}
 .e-compass-how{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
 .e-compass-how li{padding:14px 18px;border-radius:14px;background:var(--neutro);font-size:14.5px;line-height:1.6;color:var(--texto-suave)}
@@ -918,18 +910,20 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 
 /* mais proximos: ranking geral e cards por area */
 .e-rank{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;margin:26px 0 0;padding:0;list-style:none}
-.e-rk{display:grid;grid-template-columns:26px 46px 1fr auto 28px;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--borda)}
+.e-rk{display:grid;grid-template-columns:26px 46px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--borda)}
 .e-rk-n{font:600 12px var(--font-body);color:#A9A497;letter-spacing:.06em}
 .e-rk-av{width:46px;height:46px;border-radius:50%;object-fit:cover}
+/* nomes de países são longos ("Flórida (Estados Unidos)"): quebram em duas linhas em vez de cortar */
+#premium-paises .e-rk-i b{white-space:normal;overflow:visible;line-height:1.25}
+.e-rk-flag{width:46px;height:32px;border-radius:6px;object-fit:cover;box-shadow:0 0 0 1px var(--borda)}
 .e-rk-i{min-width:0}
 .e-rk-i b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .e-rk-i small{display:block;font-size:12px;color:var(--texto-suave);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .e-bar{height:5px;border-radius:5px;background:var(--borda);margin-top:7px;overflow:hidden}
 .e-bar i{display:block;height:100%;background:var(--cat);border-radius:5px}
-.e-rk .e-pctc{text-align:right;min-width:48px;color:var(--tinta);font-weight:600}
-.e-rk .e-axis-info{margin:0}
+.e-rk .e-pctc{text-align:right;min-width:48px;color:var(--cat);font-weight:600}
 @media (max-width:860px){.e-rank{grid-template-columns:1fr;gap:0}}
-@media (max-width:720px){.e-rk{grid-template-columns:22px 44px 1fr auto 28px;gap:10px}}
+@media (max-width:720px){.e-rk{grid-template-columns:22px 44px 1fr auto;gap:10px}}
 
 @media (prefers-reduced-motion:reduce){.e-others,.e-ocard,.e-ocard-more{transition:none}}
 
@@ -1149,7 +1143,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:18px;border:0;border-radius:24px;padding:22px;background:var(--cat-bg)}
 .e-values-grid .e-dim-row strong{color:var(--cat);overflow-wrap:normal;word-break:normal;hyphens:manual}
 @media (max-width:720px){.e-values-grid .e-dim-row{padding:16px;gap:14px}}
-.e-values-grid .e-card-info{top:14px;right:14px;color:var(--cat)}
 .e-vcoin{display:block}
 .e-value-sheet{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:8px 4px 4px}
 .e-value-sheet .e-dim{margin-top:4px}
@@ -1393,3 +1386,245 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-cmp-axes{margin-top:26px;padding-top:22px;border-top:1px solid var(--borda)}
 .e-cmp-axes .e-close-title{margin:0 0 18px}
 .e-cmp-axes .e-cp-axes{gap:24px}
+
+/* Relatório Completo (pago): seções carregadas sob demanda */
+.e-prem h2{margin-bottom:6px}
+.e-prem-intro{color:var(--texto-suave);font-size:15px;max-width:640px;margin:0 0 22px}
+.e-prem-dev{font-size:12.5px;font-weight:600;color:var(--carmim);background:var(--papel);border:1px dashed var(--carmim);border-radius:12px;padding:8px 14px;margin:0 0 -8px}
+.e-prem-axes{list-style:none;display:grid;gap:0;margin:18px 0 0;padding:0}
+.e-prem-axis{border:0;border-top:1px solid var(--borda);border-radius:0;padding:26px 0 28px;background:none;min-width:0}
+.e-prem-axis:first-child{border-top:0;padding-top:6px}
+.e-prem-axis:last-child{padding-bottom:0}
+.e-prem-axis-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.e-prem-axis h3{font-size:20px;letter-spacing:-.02em;color:var(--tinta)}
+.e-prem-level{font-size:13px;font-weight:600;color:var(--texto-suave)}
+.e-prem-track{margin-top:26px}
+/* A metade da trilha do polo que não é o seu fica apagada, como o chip e o ícone dele. */
+.e-prem-track.is-fade-right::before,.e-prem-track.is-fade-left::before{content:"";position:absolute;top:0;bottom:0;width:50%;background:color-mix(in srgb,var(--superficie) 68%,transparent);z-index:1;pointer-events:none}
+.e-prem-track.is-fade-right::before{right:0;border-radius:0 10px 10px 0}
+.e-prem-track.is-fade-left::before{left:0;border-radius:10px 0 0 10px}
+.e-prem-axis .e-axis-poles{margin-top:4px}
+.e-prem-axis .e-phrase{margin-top:16px}
+.e-prem-axis .e-phrase{grid-template-columns:1fr}
+.e-prem-axis .e-phrase blockquote{font-size:15.5px;line-height:1.6;letter-spacing:-.01em;color:var(--texto-suave)}
+.e-prem-impacts{margin-top:14px;border-top:1px solid var(--borda);padding-top:12px}
+.e-prem-impacts summary{cursor:pointer;font-size:13.5px;font-weight:600}
+.e-prem-impacts ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.e-prem-impacts li{display:flex;flex-direction:column;gap:2px;font-size:14px}
+.e-prem-impacts small{color:var(--texto-suave);font-size:12.5px}
+/* Governo ideal: cena de 1000 x 680 que escala com o painel (mesa redonda, cadeiras e rostos em volta) */
+.e-gov{position:relative;container-type:inline-size;aspect-ratio:1000/680;margin-top:10px;color:var(--cat)}
+.e-gov-scene{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.e-gov-table-edge{fill:color-mix(in srgb,var(--cat) 38%,var(--cat-bg));filter:drop-shadow(0 14px 18px color-mix(in srgb,var(--cat) 28%,transparent))}
+.e-gov-table-top{fill:var(--cat-bg)}
+.e-gov-table-ring{fill:none;stroke:color-mix(in srgb,var(--cat) 22%,transparent);stroke-width:2}
+.e-gov-chair-seat{fill:color-mix(in srgb,var(--cat) 72%,var(--cat-bg))}
+.e-gov-chair-back{fill:var(--cat)}
+.e-gov-seat{position:absolute;left:calc(var(--x) * .1%);top:calc(var(--y) * .14706%);width:7.4cqw;height:7.4cqw;transform:translate(-50%,-50%);padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer}
+.e-gov-face{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--cat-bg);box-shadow:0 0 0 2px var(--cat);transition:transform .18s,box-shadow .18s}
+.e-gov-seat:hover .e-gov-face,.e-gov-seat:focus-visible .e-gov-face{transform:scale(1.1);box-shadow:0 0 0 3px var(--cat),0 10px 22px -8px var(--cat)}
+.e-gov-seat:focus-visible{outline:none}
+/* o cargo e o nome ocupam o mesmo lugar, por fora do rosto: o nome entra quando se passa o mouse ou toca */
+/* o nome (em caixa-alta) fica sempre por cima do cargo, por fora do rosto */
+.e-gov-label{position:absolute;display:flex;flex-direction:column;gap:3px;width:21cqw}
+.e-gov-top .e-gov-label{bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);align-items:center;text-align:center}
+.e-gov-left .e-gov-label{right:calc(100% + 14px);top:50%;transform:translateY(-50%);align-items:flex-end;text-align:right}
+.e-gov-right .e-gov-label{left:calc(100% + 14px);top:50%;transform:translateY(-50%);align-items:flex-start;text-align:left}
+.e-gov-name{font-size:max(11px,1.3cqw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.25;color:var(--cat);text-wrap:balance}
+.e-gov-role{font-size:max(13px,1.6cqw);font-weight:500;line-height:1.3;color:var(--tinta);text-wrap:balance}
+@media (max-width:640px){
+  .e-gov{margin-top:0}
+  .e-gov-seat{width:11cqw;height:11cqw}
+  .e-gov-face{border-width:2px;box-shadow:0 0 0 1.5px var(--cat)}
+  .e-gov-label{display:none}
+}
+/* Onde você mais discorda: uma linha por perfil, duas colunas (quem é o perfil | a maior diferença) */
+.e-prem-gap-group{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;gap:12px;margin-top:14px;align-items:stretch}
+.e-prem-gap-group:first-of-type{margin-top:20px}
+.e-prem-gap-who{position:relative;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:14px;min-height:230px;border-radius:22px;padding:20px;background:var(--cat-bg);color:var(--cat);overflow:hidden}
+.e-prem-gap-who .e-tag{position:relative;z-index:2;font-size:12px;padding:5px 13px}
+.e-prem-gap-name{position:relative;z-index:2;display:flex;flex-direction:column;gap:4px}
+.e-prem-gap-name strong{font-family:var(--font-display);font-weight:600;font-size:clamp(21px,2.3vw,28px);line-height:1.12;letter-spacing:-.03em;overflow-wrap:normal;word-break:normal;hyphens:manual}
+/* Foto cobrindo o cartão inteiro, com o nome sobre um degradê escuro no rodapé */
+.e-prem-gap-who.has-photo{color:#fff;background:var(--cat)}
+.e-prem-gap-who .e-prem-gap-photo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:0;display:block}
+.e-prem-gap-who.has-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,0) 32%,rgba(0,0,0,.2) 55%,rgba(0,0,0,.82) 100%);pointer-events:none}
+.e-prem-gap-who.has-photo .e-prem-gap-name strong{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.e-prem-gap-card{display:flex;flex-direction:column;justify-content:center}
+@media (max-width:860px){.e-prem-gap-group{grid-template-columns:1fr}.e-prem-gap-who{min-height:210px}}
+
+/* Aba "Área de atuação" sem acesso: convite ao Relatório completo no lugar da lista */
+
+/* Linha do tempo (relatório completo) */
+.e-tl-eras{list-style:none;margin:22px 0 0;padding:0}
+.e-tl-era{position:relative;display:grid;grid-template-columns:170px 1fr;gap:12px 28px;padding:20px 0 20px 30px;border-top:1px solid var(--borda)}
+.e-tl-era:first-child{border-top:0;padding-top:4px}
+.e-tl-era::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:var(--borda)}
+.e-tl-era:first-child::before{top:12px}
+.e-tl-era:last-child::before{bottom:calc(100% - 34px)}
+.e-tl-era::after{content:"";position:absolute;left:0;top:24px;width:12px;height:12px;border-radius:50%;background:var(--green-500);box-shadow:0 0 0 4px var(--superficie)}
+.e-tl-era:first-child::after{top:8px}
+.e-tl-head h3{font-family:var(--font-display);font-size:19px;letter-spacing:-.015em;line-height:1.2;margin:0}
+.e-tl-head p{margin:4px 0 0;font-size:12.5px;color:var(--texto-suave);font-variant-numeric:tabular-nums}
+.e-tl-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.e-tl-list>li{min-width:0;display:flex}
+.e-tl-item{width:100%;display:flex;align-items:center;gap:12px;text-align:left;font:inherit;color:inherit;background:var(--papel);border:1px solid var(--borda);border-radius:16px;padding:10px 14px 10px 10px;cursor:pointer;transition:border-color .15s ease}
+.e-tl-item:hover{border-color:var(--green-500)}
+.e-tl-item:focus-visible{outline:2px solid var(--green-500);outline-offset:2px}
+.e-tl-photo{flex:none;width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--neutro)}
+.e-tl-logo{object-fit:contain;padding:5px;box-sizing:border-box;background:#fff;border:1px solid var(--borda)}
+.e-tl-best{margin-top:22px}
+.e-tl-best .e-dim{margin-bottom:4px}
+.e-tl-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:0;width:144px;height:144px;overflow:hidden;border-radius:16px;border:1px solid var(--borda);background:var(--superficie)}
+.e-tl-tile{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}
+.e-tl-tile-logo{object-fit:contain;padding:10px;box-sizing:border-box;background:#fff}
+.e-tl-text{min-width:0;display:flex;flex-direction:column;gap:2px}
+.e-tl-text strong{font-size:14.5px;line-height:1.25;overflow-wrap:anywhere}
+.e-tl-text small{font-size:12px;color:var(--texto-suave);line-height:1.3;font-variant-numeric:tabular-nums}
+@media (max-width:980px){.e-tl-era{grid-template-columns:140px 1fr}.e-tl-list{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .e-tl-era{grid-template-columns:1fr;padding:18px 0 18px 28px;gap:10px}
+  .e-tl-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .e-tl-head h3{font-size:18px}
+  .e-tl-head p{margin:0}
+}
+@media (max-width:720px){.e-tl-best .e-match-tags{display:flex;justify-content:center}}
+/* mobile: logo do partido e mosaico da época com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */
+@media (max-width:720px){
+  .e-match{--e-flag-h:min(200px,calc((100vw - 100px) * 2 / 3))}
+  .e-match .e-logobig{width:var(--e-flag-h);height:var(--e-flag-h)}
+  .e-tl-best .e-tl-mosaic{width:var(--e-flag-h);height:var(--e-flag-h)}
+}
+
+/* Cartões que abrem os detalhes ao clique (no lugar do antigo botão "?") */
+.e-clickable{cursor:pointer}
+.e-clickable:focus-visible{outline:3px solid var(--carmim);outline-offset:3px}
+.e-rk.e-clickable{border-radius:14px;transition:background .15s ease}
+.e-rk.e-clickable:hover{background:var(--papel)}
+
+/* Ficha de perfil: retrato redondo, bandeira ou logo grandes, centralizados, com o anel na cor de acento */
+.e-sheet-face{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--superficie);box-shadow:0 0 0 2px var(--cat,var(--tinta))}
+.e-sheet-flag{display:block;width:168px;height:112px;border-radius:12px;object-fit:cover;box-shadow:0 0 0 1px var(--borda),0 10px 24px -14px rgba(16,16,16,.45)}
+.e-sheet-logo{display:block;width:112px;height:112px;border-radius:22px;object-fit:contain;padding:10px;box-sizing:border-box;background:#fff;box-shadow:0 0 0 1px var(--borda),0 10px 24px -14px rgba(16,16,16,.35)}
+
+/* Convite ao Relatório completo (sem acesso): o relatório desfocado ao fundo e o cartão da compra no centro */
+.e-paywall{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--borda);background:var(--superficie);padding:34px 34px 40px}
+.e-paywall-bg{display:grid;gap:34px;pointer-events:none;user-select:none}
+.e-pw-block{display:grid;gap:16px}
+.e-pw-bar{display:block;border-radius:8px;background:color-mix(in srgb,var(--cat,var(--tinta)) 22%,transparent)}
+.e-pw-title{width:46%;height:26px}
+.e-pw-line{height:12px;width:78%}
+.e-pw-short{width:42%}
+.e-pw-axis{display:grid;gap:10px;padding-top:6px;border-top:1px solid var(--borda)}
+.e-pw-track{display:block;height:10px;border-radius:10px;background:var(--cat-bg,var(--neutro))}
+.e-pw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.e-pw-card{display:grid;gap:10px;padding:18px;border-radius:20px;background:var(--cat-bg,var(--neutro))}
+.e-pw-dot{display:block;width:46px;height:46px;border-radius:50%;background:color-mix(in srgb,var(--cat,var(--tinta)) 35%,transparent)}
+.e-pw-small{width:34px;height:34px}
+.e-pw-row{display:grid;grid-template-columns:34px 1fr 90px;align-items:center;gap:14px}
+.e-paywall-card{position:absolute;top:57%;left:50%;transform:translate(-50%,-50%);z-index:1;width:min(520px,100%);display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:44px 32px 28px;border-radius:20px;border-top:4px solid var(--cat,var(--floresta));background:var(--superficie);box-shadow:0 24px 60px -18px rgba(16,16,16,.35)}
+.e-paywall-lock{position:absolute;top:-26px;left:50%;transform:translateX(-50%);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--cat,var(--floresta));color:#fff;box-shadow:0 0 0 6px var(--superficie)}
+.e-paywall-lock svg{width:22px;height:22px}
+.e-paywall-card h2{margin:0;font-size:24px}
+.e-paywall-lead{margin:0;color:var(--texto-suave);font-size:15.5px;line-height:1.55}
+.e-paywall-price{margin:4px 0 2px;display:flex;flex-direction:column;gap:2px}
+.e-paywall-price strong{font-family:var(--font-display);font-size:36px;letter-spacing:-.03em;line-height:1.05;color:var(--cat,var(--tinta))}
+.e-paywall-price small{font-size:13px;color:var(--texto-suave)}
+.e-paywall-note{margin:0;font-size:13px;color:var(--texto-suave)}
+.e-paywall-card .inline-error{margin:4px 0 0}
+.e-paywall-checking{min-height:0}
+@media (max-width:640px){.e-paywall{padding:26px 16px 30px}.e-paywall-bg{padding:24px 18px 0}.e-pw-cards{grid-template-columns:repeat(2,1fr)}.e-paywall-card{padding:40px 20px 22px}}
+
+/* Interruptor de pré-visualização grátis/pago (só em desenvolvimento) */
+.e-dev-switch{position:fixed;left:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:6px;padding:6px 8px 6px 14px;border-radius:999px;background:var(--tinta);color:#fff;font-size:12px;box-shadow:0 8px 24px rgba(16,16,16,.3)}
+.e-dev-switch span{opacity:.7;margin-right:2px}
+.e-dev-switch button{border:0;border-radius:999px;padding:6px 14px;font:inherit;font-weight:600;background:transparent;color:#fff;cursor:pointer}
+.e-dev-switch button.is-on{background:#fff;color:var(--tinta)}
+
+/* Aba "Área de atuação" sem acesso: a lista desfocada ao fundo e o cartão do convite no centro */
+.e-locked{position:relative;margin-top:26px;display:flex;align-items:center;justify-content:center}
+.e-locked-bg{--bleed:36px;margin:0 calc(-1 * var(--bleed));padding:0 var(--bleed);list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;align-content:start;width:calc(100% + 2 * var(--bleed));filter:blur(8px);opacity:.75;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 10%,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent 0,#000 10%,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%);mask-composite:intersect}
+.e-locked-bg li{min-height:81px;box-sizing:border-box;display:grid;grid-template-columns:26px 46px 1fr 48px;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--borda)}
+.e-locked-bg .e-pw-dot{width:46px;height:46px}
+.e-locked-lines{display:grid;gap:8px}
+.e-pw-num{width:18px;height:10px}
+.e-pw-pct{width:44px;height:16px}
+.e-locked-card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(460px,100%);padding:40px 28px 26px}
+.e-locked-card h3{margin:0;font-size:21px}
+@media (max-width:860px){.e-locked-bg{grid-template-columns:1fr}}
+@media (max-width:720px){.e-locked-bg{--bleed:18px}.e-locked-bg li{min-height:75.6px}}
+/* o desfoque vaza até a borda do painel, que o recorta nos cantos arredondados */
+.e-panel:has(.e-locked){overflow:hidden}
+
+/* Modal do Relatório completo: o que vem no relatório, o preço e o botão do checkout */
+.e-axis-sheet.e-paywall-modal{width:min(1060px,100%);min-height:min(640px,calc(100dvh - 48px));padding:0;display:grid;grid-template-columns:1fr 1fr;max-height:calc(100dvh - 48px);overflow:auto}
+.e-pm-main{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:56px 52px 48px;background:var(--cat-bg,var(--neutro))}
+.e-pm-main h2{margin:6px 0 0;font-size:34px;line-height:1.12;letter-spacing:-.02em}
+.e-pm-lead{margin:0;color:var(--texto-suave);font-size:16px;line-height:1.55}
+.e-pm-main .e-paywall-price{margin:6px 0 2px}
+.e-pm-main .e-btn{width:100%;max-width:340px}
+.e-pm-list{display:flex;flex-direction:column;justify-content:center;padding:56px 52px 48px}
+.e-pm-list-title{margin:0 0 20px;font-size:16px;font-weight:600}
+.e-pm-list ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.e-pm-list li{position:relative;padding-left:30px;font-size:15.5px;line-height:1.5;color:var(--texto-suave)}
+.e-pm-list li strong{color:var(--tinta)}
+.e-pm-list li::before{content:"";position:absolute;left:3px;top:.4em;width:12px;height:7px;border-left:2px solid var(--cat,var(--floresta));border-bottom:2px solid var(--cat,var(--floresta));transform:rotate(-45deg)}
+@media (max-width:760px){.e-axis-sheet.e-paywall-modal{grid-template-columns:1fr;border-radius:24px 24px 0 0;min-height:0}.e-pm-main,.e-pm-list{padding:30px 20px 24px}.e-pm-main h2{font-size:25px}}
+
+.e-pm-main .e-tag{background:var(--cat,var(--tinta));color:#fff;padding:5px 13px}
+
+/* Formas de pagamento: marcas em cinza, discretas, no lugar do texto */
+.e-pay-icons{list-style:none;margin:10px 0 0;padding:0;display:flex;align-items:center;justify-content:center;gap:20px;color:#7d8590}
+.e-pay-icons li{display:grid;place-items:center;height:22px}
+.e-pay-icons svg{display:block;height:100%;width:auto}
+.e-pay-icons .e-pay-wide{height:20px}
+.e-pay-icons .e-pay-gpay{height:46px;margin:0 -6px}
+.e-pm-guarantee{margin:2px 0 0;font-size:13.5px;color:var(--texto-suave)}
+/* O modal segue o tema do espectro do resultado: botão e destaques na cor da categoria */
+.e-paywall-modal .e-btn-primary{background:var(--cat,var(--floresta));border-color:var(--cat,var(--floresta));color:#fff}
+.e-paywall-modal .e-btn-primary:hover{filter:brightness(1.12)}
+
+/* O título de cada seção fica nítido; só o corpo é desfocado */
+.e-pw-head{margin:0;font-family:var(--font-display);font-size:24px;letter-spacing:-.02em;line-height:1.15}
+.e-pw-body{margin-top:16px;display:grid;gap:14px;filter:blur(8px);opacity:.78}
+.e-pw-block .e-pw-axis:first-child{border-top:0;padding-top:0}
+.e-pw-split{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:stretch}
+.e-pw-photo{display:block;min-height:170px;border-radius:22px;background:color-mix(in srgb,var(--cat,var(--tinta)) 26%,transparent)}
+.e-pw-card{display:grid;align-content:center;gap:12px;padding:22px;border-radius:22px;background:var(--cat-bg,var(--neutro))}
+.e-pw-big{width:34%;height:34px}
+.e-pw-round{position:relative;height:330px;display:block}
+.e-pw-table{position:absolute;left:50%;top:50%;width:150px;height:150px;transform:translate(-50%,-50%);border-radius:50%;background:var(--cat-bg,var(--neutro))}
+.e-pw-seat{position:absolute;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:color-mix(in srgb,var(--cat,var(--tinta)) 32%,transparent)}
+.e-pw-list{grid-template-columns:1fr 1fr;column-gap:40px}
+@media (max-width:640px){.e-pw-split,.e-pw-list{grid-template-columns:1fr}.e-pw-head{font-size:21px}.e-pw-round{height:280px}.e-pw-photo{min-height:120px}}
+/* o botão do convite também segue a cor do espectro do resultado */
+.e-paywall-card .e-btn-primary{background:var(--cat,var(--floresta));border-color:var(--cat,var(--floresta));color:#fff}
+.e-paywall-card .e-btn-primary:hover{filter:brightness(1.12)}
+
+/* "Análise completa" sem acesso: apagada, com um cadeado */
+.e-toc a.e-toc-locked{opacity:.5}
+.e-toc a.e-toc-locked:hover,.e-toc a.e-toc-locked.e-on{opacity:.85}
+.e-toc-lock{width:13px;height:13px;margin-left:6px;vertical-align:-2px;flex:none}
+
+/* Governo ideal no celular: lista com cargo e nome embaixo da mesa */
+.e-gov-mlist{display:none;list-style:none;margin:16px 0 0;padding:0;gap:8px}
+.e-gov-mlist button{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;border-radius:16px;background:var(--cat-bg);color:var(--cat);font:inherit;text-align:left;cursor:pointer}
+.e-gov-mface{width:42px;height:42px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--superficie)}
+.e-gov-mlist small{display:block;font-size:11px;font-weight:600;letter-spacing:.04em;opacity:.85}
+.e-gov-mlist b{display:block;font-size:14.5px;line-height:1.25}
+@media (max-width:640px){.e-gov-mlist{display:grid}}
+/* Onde você mais discorda no celular: a ideologia não tem foto, então o cartão dela não precisa ser alto */
+@media (max-width:860px){.e-prem-gap-who:not(.has-photo){min-height:112px}}
+
+
+/* Modal de compra: o topo da folha segue o tema do espectro (só a lista de benefícios fica clara) */
+.e-axis-sheet.e-paywall-modal{background:var(--cat-bg,var(--neutro))}
+.e-pm-list{background:var(--superficie)}
+.e-paywall-modal .e-axis-sheet-handle{background:color-mix(in srgb,var(--cat,var(--tinta)) 35%,transparent)}
+/* Convite desfocado no celular: curto, só com as duas primeiras seções (o cartão não precisa de tanta rolagem) */
+@media (max-width:640px){
+  .e-paywall-bg .e-pw-block:nth-child(n+3){display:none}
+  .e-paywall-bg{gap:26px}
+  .e-paywall{padding-bottom:30px}
+  .e-paywall > .e-paywall-card{top:80%}
+}

@@ -19,7 +19,6 @@ import java.util.List;
  * @param topPersonalityMatch personalidade mais compativel, de qualquer categoria
  * @param personalityMatches personalidades mais compativeis, sem filtro por categoria
  * @param dimensionMatches personalidade mais compativel em cada dimensao (politica, social, economica)
- * @param categoryBestMatches personalidade mais compativel de cada area de atuacao
  * @param bottomPersonalityMatches personalidades mais distantes do catalogo
  * @param mostUnusualAxis eixo em que o usuario mais destoa do catalogo de ideologias
  * @param mostCommonAxis eixo em que o usuario mais se aproxima do catalogo
@@ -46,7 +45,6 @@ public record QuizResult(
         PersonalityMatch topPersonalityMatch,
         List<PersonalityMatch> personalityMatches,
         List<DimensionMatch> dimensionMatches,
-        List<PersonalityMatch> categoryBestMatches,
         List<PersonalityMatch> bottomPersonalityMatches,
         AxisOutlier mostUnusualAxis,
         AxisOutlier mostCommonAxis,

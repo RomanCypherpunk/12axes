@@ -65,6 +65,29 @@ class ScoringServiceTest {
     }
 
     @Test
+    void answerImpactsOfAnAxisSumToItsDistanceFromTheCenter() {
+        ResultRequest request = TestAnswers.mixed(dataService);
+
+        var impacts = scoringService.answerImpacts(request, "pt");
+
+        scoringService.score(request, "pt").forEach(axis -> {
+            double sum = impacts.getOrDefault(axis.axisId(), List.of()).stream().mapToDouble(impact -> impact.impact()).sum();
+            assertThat(sum).as("eixo %s", axis.axisId()).isCloseTo(axis.leftPercent() - 50.0, org.assertj.core.api.Assertions.within(0.1));
+        });
+    }
+
+    @Test
+    void neutralAnswersHaveZeroImpact() {
+        List<SubmittedAnswer> answers = dataService.getQuestions().stream()
+                .map(question -> new SubmittedAnswer(question.id(), AnswerValue.NEUTRAL))
+                .toList();
+
+        var impacts = scoringService.answerImpacts(new ResultRequest(answers), "pt");
+
+        assertThat(impacts.values().stream().flatMap(List::stream)).allSatisfy(impact -> assertThat(impact.impact()).isZero());
+    }
+
+    @Test
     void shortQuizPayloadHasCorrectQuestionsPerAxis() {
         var payload = dataService.getQuiz(QuizDataService.SHORT_VARIANT);
         assertThat(payload.questionsPerAxis()).isEqualTo(3);

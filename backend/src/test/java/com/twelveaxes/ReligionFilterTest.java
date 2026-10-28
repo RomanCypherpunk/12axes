@@ -261,7 +261,6 @@ class ReligionFilterTest {
 
             Stream.of(
                             filtered.personalityMatches().stream().map(m -> "personality:" + m.personalityId()),
-                            filtered.categoryBestMatches().stream().map(m -> "personality:" + m.personalityId()),
                             filtered.matches().stream().map(m -> "ideology:" + m.ideologyId()),
                             filtered.topCountryMatches().stream().map(m -> "country:" + m.countryId()),
                             Stream.of("country:" + filtered.topCountryMatch().countryId(),

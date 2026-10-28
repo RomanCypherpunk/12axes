@@ -5,11 +5,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.BookRecommendation;
 import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.model.QuizResult;
+import com.twelveaxes.service.PersonalityMatcherService;
 import com.twelveaxes.service.QuizDataService;
+import com.twelveaxes.service.ScoringService;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -33,6 +37,12 @@ class BookRecommendationTest {
     @Autowired
     private QuizDataService dataService;
 
+    @Autowired
+    private ScoringService scoringService;
+
+    @Autowired
+    private PersonalityMatcherService personalityMatcherService;
+
     private QuizResult result(String lang) throws Exception {
         String body = mockMvc.perform(get("/api/results/by-axes").param("v", LEFT_LIBERTARIAN_VECTOR).param("lang", lang))
                 .andExpect(status().isOk())
@@ -43,7 +53,10 @@ class BookRecommendationTest {
     @Test
     void recommendsUpToThreeBooksFromTopPersonalitiesSortedByCompatibility() throws Exception {
         QuizResult result = result("pt");
-        Set<String> pool = Stream.concat(result.personalityMatches().stream(), result.categoryBestMatches().stream())
+        // O resultado nao traz mais a melhor personalidade de cada area (e do Relatorio Completo), mas os livros ainda saem do conjunto das duas.
+        List<AxisResult> axes = scoringService.scoreFromLeftPercents(
+                Stream.of(LEFT_LIBERTARIAN_VECTOR.split(",")).map(Double::valueOf).toList(), "pt");
+        Set<String> pool = Stream.concat(result.personalityMatches().stream(), personalityMatcherService.findBestPerCategory(axes, "pt").stream())
                 .map(PersonalityMatch::personalityId)
                 .collect(Collectors.toSet());
 

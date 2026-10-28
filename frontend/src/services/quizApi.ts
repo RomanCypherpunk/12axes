@@ -23,7 +23,7 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, options?: RequestInit, retries = 1): Promise<T> {
+export async function request<T>(path: string, options?: RequestInit, retries = 1): Promise<T> {
   // Content-Type só quando há corpo: num GET ele transforma a chamada entre origens em uma
   // requisição "não simples", e o navegador gasta uma ida e volta extra (preflight OPTIONS).
   const headers = options?.body ? { 'Content-Type': 'application/json', ...options.headers } : options?.headers;
@@ -84,8 +84,9 @@ export function submitResults(
 }
 
 // O endpoint é cacheado pelo navegador por uma hora; `rv` acompanha o formato da resposta para quem já abriu
-// o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo).
-const SHARED_RESULT_VERSION = 2;
+// o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo). 3: saiu a lista de áreas de atuação,
+// que agora é do Relatório completo.
+const SHARED_RESULT_VERSION = 3;
 
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';

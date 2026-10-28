@@ -3,7 +3,7 @@ import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
 import { centerSide, compassNoteHint, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
-import { InfoButton, InfoSheet } from './InfoSheet';
+import { clickableProps, InfoSheet } from './InfoSheet';
 
 // Tom de cada categoria na grade: o matiz vem da cor base da identidade; saturação e luminosidade
 // (0-100) ficam por conta de cada uma, para o resultado ser claro e saturado como a bússola clássica.
@@ -266,8 +266,11 @@ export function PoliticalCompassSection({ position, category, moralAxis }: Polit
   );
 
   return (
-    <section className="e-panel e-compass" id="bussola" data-reveal>
-      <InfoButton className="e-axis-info e-card-info" label={t.compassInfo.aria} onClick={() => setIsInfoOpen(true)} />
+    <section
+      {...{ ...clickableProps(t.compassInfo.aria, () => setIsInfoOpen(true)), className: 'e-panel e-compass e-clickable' }}
+      id="bussola"
+      data-reveal
+    >
       <h2>{t.compassTitle}</h2>
 
       <div className="e-compass-body">

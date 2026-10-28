@@ -4,10 +4,8 @@ import type { Axis, AxisResult, PartyDimensionMatch, PartyMatch, ProfileDimensio
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { resolvePartyLogoSrc } from '../../utils/partyLogos';
 import { SafeImg } from '../editorial/primitives';
-import { Closeness } from './Closeness';
-import { InfoSheet } from './InfoSheet';
+import { ProfileSheet } from './ProfileSheet';
 import { DimList, FarList, MatchHero, Tabs, type DimItem, type FarItem } from './parts';
-import { SheetMatch } from './SheetMatch';
 
 interface PartiesSectionProps {
   current?: PartyMatch | null;
@@ -136,48 +134,22 @@ export function PartiesSection({
       <DimList items={partyDimItems(dimensions, setInfo)} />
 
       <FarList title={t.partiesDistantTitle} items={partyFarItems(distant)} />
-      {info && <PartyInfoSheet match={info} axes={axes} results={results} onClose={() => setInfo(null)} />}
+      {info && <PartyInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );
 }
 
-export function PartyInfoSheet({ match, axes, results, onClose }: {
-  match: PartyMatch;
-  axes?: Axis[];
-  results?: Map<string, AxisResult>;
-  onClose: () => void;
-}) {
+/** Ficha de um partido ou organização: o que é, em poucas linhas. */
+export function PartyInfoSheet({ match, onClose }: { match: PartyMatch; onClose: () => void }) {
   return (
-    <InfoSheet titleId="e-party-sheet-title" onClose={onClose}>
-      <div className="e-person-sheet-head">
-        <Logo match={match} className="e-logoimg" />
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-            {match.countryFlagPath && (
-              <SafeImg
-                className="e-flagmini"
-                src={resolveCountryFlagSrc(match.countryFlagPath)}
-                alt={t.flagAlt(match.historical ? t.flagHistoricLabel : t.flagLabel, match.countryName)}
-                fallback=""
-              />
-            )}
-            <span className="e-tag e-tag-neutral">{match.category}</span>
-          </div>
-          <h3 id="e-party-sheet-title">{match.name}</h3>
-          <p className="e-axis-sheet-label">{tags(match).join(' · ')}</p>
-        </div>
-      </div>
-      <SheetMatch compatibility={match.compatibility} />
-      <p className="e-axis-sheet-text">{match.description}</p>
-      {axes && results && (
-        <Closeness
-          vector={match.vector}
-          name={match.name}
-          face={<Logo match={match} className="e-logoimg e-close-face" />}
-          axes={axes}
-          results={results}
-        />
-      )}
-    </InfoSheet>
+    <ProfileSheet
+      titleId="e-party-sheet-title"
+      visual={<Logo match={match} className="e-sheet-logo" />}
+      label={match.category}
+      name={match.name}
+      caption={tags(match).join(' · ')}
+      description={match.description}
+      onClose={onClose}
+    />
   );
 }

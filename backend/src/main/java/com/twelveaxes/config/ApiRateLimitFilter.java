@@ -140,6 +140,7 @@ public class ApiRateLimitFilter extends OncePerRequestFilter {
     }
 
     private static boolean isHeavy(String path) {
-        return path.equals(RESULTS_PATH) || path.startsWith(RESULTS_PATH + "/");
+        return path.equals(RESULTS_PATH) || path.startsWith(RESULTS_PATH + "/") || path.startsWith("/api/premium/")
+                || path.equals("/api/checkout") || path.equals("/api/unlock");
     }
 }
