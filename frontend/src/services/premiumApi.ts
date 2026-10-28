@@ -39,10 +39,10 @@ export async function startCheckout(vector: number[], returnUrl: string): Promis
  * Troca um pagamento feito (sessão da volta do checkout, ou código do link do recibo) pelo token deste resultado.
  * 402 = ainda não confirmado (Pix pendente); 403 = o pagamento é de outro resultado ou foi reembolsado.
  */
-export async function unlockPayment(input: { vector: number[]; sessionId?: string; pay?: string }): Promise<string> {
+export async function unlockPayment(input: { vector: number[]; sessionId?: string; pay?: string; gift?: string }): Promise<string> {
   const { token } = await request<{ token: string }>('/api/unlock', {
     method: 'POST',
-    body: JSON.stringify({ v: input.vector.join(','), sessionId: input.sessionId, pay: input.pay })
+    body: JSON.stringify({ v: input.vector.join(','), sessionId: input.sessionId, pay: input.pay, gift: input.gift })
   });
   return token;
 }

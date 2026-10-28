@@ -27,14 +27,17 @@ const POLL_MS = 3000;
 const MAX_ATTEMPTS = 20;
 
 // A volta do pagamento traz ?unlock=<sessão> (retorno do checkout) ou ?pay=<código> (link do recibo).
-const PAYMENT_PARAMS = ['unlock', 'pay'] as const;
+// ?gift=<senha> é o link de cortesia (GIFT_KEY no servidor): libera sem pagamento.
+const PAYMENT_PARAMS = ['unlock', 'pay', 'gift'] as const;
 
-function paymentFromUrl(): { sessionId?: string; pay?: string } | null {
+function paymentFromUrl(): { sessionId?: string; pay?: string; gift?: string } | null {
   const params = new URLSearchParams(window.location.search);
   const sessionId = params.get('unlock');
   const pay = params.get('pay');
+  const gift = params.get('gift');
   if (sessionId) return { sessionId };
   if (pay) return { pay };
+  if (gift) return { gift };
   return null;
 }
 

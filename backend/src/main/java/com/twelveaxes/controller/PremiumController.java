@@ -113,7 +113,8 @@ public class PremiumController {
         String vectorHash = EntitlementToken.hashOf(values);
         EntitlementToken.Claims claims = entitlementToken.verify(token, vectorHash)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.FORBIDDEN, "Acesso ao relatorio nao liberado para este resultado"));
-        if (Duration.between(claims.issuedAt(), Instant.now(clock)).compareTo(REFUND_WINDOW) < 0 && wasRefunded(claims.paymentRef())) {
+        boolean gift = PaymentController.GIFT_REF.equals(claims.paymentRef());
+        if (!gift && Duration.between(claims.issuedAt(), Instant.now(clock)).compareTo(REFUND_WINDOW) < 0 && wasRefunded(claims.paymentRef())) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Pagamento reembolsado");
         }
     }

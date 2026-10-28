@@ -35,7 +35,8 @@ import org.springframework.test.web.servlet.MockMvc;
         "app.payments.enabled=true",
         "app.payments.entitlement-secret=0123456789abcdef0123456789abcdef",
         "app.payments.price-id-brl=price_brl_test",
-        "app.payments.price-id-usd="
+        "app.payments.price-id-usd=",
+        "app.payments.gift-key=gift-test-key"
 })
 @Import(PaymentControllerTest.GatewayConfig.class)
 class PaymentControllerTest {
@@ -263,6 +264,32 @@ class PaymentControllerTest {
         unlock(VECTOR, "not-a-session", null).andExpect(status().isBadRequest());
         // o nonce vai para uma busca da Stripe: aspas e espacos nunca passam
         unlock(VECTOR, null, "x' OR metadata['a']:'b").andExpect(status().isBadRequest());
+    }
+
+    private org.springframework.test.web.servlet.ResultActions unlockGift(String vector, String gift, String pay) throws Exception {
+        Map<String, Object> body = new java.util.LinkedHashMap<>();
+        body.put("v", vector);
+        body.put("gift", gift);
+        if (pay != null) {
+            body.put("pay", pay);
+        }
+        return mockMvc.perform(post("/api/unlock").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(body)));
+    }
+
+    @Test
+    void giftKeyIssuesTokenForThatVectorWithoutCallingStripe() throws Exception {
+        String body = unlockGift(VECTOR, "gift-test-key", null).andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        String token = objectMapper.readTree(body).get("token").asText();
+        assertThat(entitlementToken.verify(token, hashOf(VECTOR))).get().extracting(EntitlementToken.Claims::paymentRef).isEqualTo("gift");
+        assertThat(entitlementToken.isValidFor(token, hashOf(OTHER_VECTOR))).isFalse();
+    }
+
+    @Test
+    void wrongOrMixedGiftIsRefused() throws Exception {
+        unlockGift(VECTOR, "outra-senha", null).andExpect(status().isForbidden());
+        unlockGift(VECTOR, "gift-test-key", NONCE).andExpect(status().isBadRequest());
     }
 
     @Test

@@ -11,6 +11,10 @@ describe('resultUrlWithoutPaymentParams', () => {
     );
   });
 
+  it('tira também a senha de cortesia', () => {
+    expect(resultUrlWithoutPaymentParams('https://12axes.vercel.app/results?est=92.3&gift=abc')).toBe('https://12axes.vercel.app/results?est=92.3');
+  });
+
   it('um endereço sem parâmetros de pagamento fica como está', () => {
     expect(resultUrlWithoutPaymentParams('http://localhost:5173/results?est=1')).toBe('http://localhost:5173/results?est=1');
   });

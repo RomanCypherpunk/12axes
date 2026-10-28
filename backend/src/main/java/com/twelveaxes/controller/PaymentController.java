@@ -12,6 +12,8 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.Arrays;
@@ -41,6 +43,8 @@ import org.springframework.web.server.ResponseStatusException;
 @RestController
 public class PaymentController {
     private static final Logger LOG = LoggerFactory.getLogger(PaymentController.class);
+    /** Referencia de pagamento dos tokens de cortesia: nao existe na Stripe, entao nunca se confere reembolso. */
+    public static final String GIFT_REF = "gift";
     private static final SecureRandom RANDOM = new SecureRandom();
     private static final Pattern SESSION_ID = Pattern.compile("cs_(test|live)_[A-Za-z0-9]{8,200}");
     // O nonce vai para uma consulta de busca da Stripe: so letras, numeros, '-' e '_'.
@@ -52,7 +56,7 @@ public class PaymentController {
     public record CheckoutResponse(String url) {
     }
 
-    public record UnlockRequest(@NotBlank String v, String sessionId, String pay) {
+    public record UnlockRequest(@NotBlank String v, String sessionId, String pay, String gift) {
     }
 
     public record UnlockResponse(String token) {
@@ -66,6 +70,7 @@ public class PaymentController {
     private final String priceIdUsd;
     private final Duration tokenValidity;
     private final Set<String> allowedOrigins;
+    private final byte[] giftKey;
 
     public PaymentController(
             ObjectProvider<StripeGateway> gatewayProvider,
@@ -75,8 +80,10 @@ public class PaymentController {
             @Value("${app.payments.price-id-brl:}") String priceIdBrl,
             @Value("${app.payments.price-id-usd:}") String priceIdUsd,
             @Value("${app.payments.token-valid-days:365}") long tokenValidDays,
-            @Value("${app.frontend-origins}") String origins
+            @Value("${app.frontend-origins}") String origins,
+            @Value("${app.payments.gift-key:}") String giftKey
     ) {
+        this.giftKey = giftKey == null ? new byte[0] : giftKey.trim().getBytes(StandardCharsets.UTF_8);
         this.gatewayProvider = gatewayProvider;
         this.entitlementToken = entitlementToken;
         this.refundChecker = refundChecker;
@@ -116,6 +123,9 @@ public class PaymentController {
     public UnlockResponse unlock(@Valid @RequestBody UnlockRequest request) {
         requireEnabled();
         String vectorHash = EntitlementToken.hashOf(AxisValuesParser.parse(request.v()));
+        if (request.gift() != null && !request.gift().isBlank()) {
+            return unlockByGift(request, vectorHash);
+        }
         boolean hasSession = request.sessionId() != null && !request.sessionId().isBlank();
         boolean hasNonce = request.pay() != null && !request.pay().isBlank();
         if (hasSession == hasNonce) {
@@ -143,6 +153,19 @@ public class PaymentController {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Pagamento reembolsado");
         }
         return new UnlockResponse(entitlementToken.issue(vectorHash, payment.paymentRef(), tokenValidity));
+    }
+
+    /** Cortesia: a senha {@code gift} (variavel GIFT_KEY) libera o resultado sem pagamento. Sem GIFT_KEY, nao existe. */
+    private UnlockResponse unlockByGift(UnlockRequest request, String vectorHash) {
+        boolean other = (request.sessionId() != null && !request.sessionId().isBlank()) || (request.pay() != null && !request.pay().isBlank());
+        if (other) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Informe so gift, sessionId ou pay");
+        }
+        boolean valid = giftKey.length > 0 && MessageDigest.isEqual(giftKey, request.gift().trim().getBytes(StandardCharsets.UTF_8));
+        if (!valid) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Codigo de cortesia invalido");
+        }
+        return new UnlockResponse(entitlementToken.issue(vectorHash, GIFT_REF, tokenValidity));
     }
 
     /** Stripe fora do ar ou recusando: nunca libera por engano; o front mostra "tente de novo". */
