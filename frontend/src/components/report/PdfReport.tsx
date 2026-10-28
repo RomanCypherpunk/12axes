@@ -9,6 +9,7 @@ import type {
   CountryMatch,
   PartyDimensionMatch,
   PartyMatch,
+  PremiumReport,
   QuizResult
 } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
@@ -17,6 +18,9 @@ import { catStyle, ideologyColorByKey, localCatStyle } from '../../utils/ideolog
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
 import { PoleIcon } from '../AxisIcon';
+import { P } from '../results/premium/premiumText';
+import { Img, Logo, PageHeader, Ring, SectionHead } from './pdfParts';
+import { PremiumPdfPages } from './PremiumPdfPages';
 import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
@@ -31,13 +35,15 @@ interface PdfReportProps {
   axisResults: Map<string, AxisResult>;
   answeredCount: number | null;
   religion?: Religion | null;
+  /** O Relatório completo, só para quem tem acesso: entra no PDF depois das seções grátis. */
+  premium?: PremiumReport | null;
 }
 
 /**
  * Relatório completo para impressão/PDF (design em docs/nova-identidade/12axes-relatorio.html).
  * Só aparece em @media print; a paginação fica a cargo do navegador, com a capa numa página própria.
  */
-export function PdfReport({ result, axes, axisResults, answeredCount, religion }: PdfReportProps) {
+export function PdfReport({ result, axes, axisResults, answeredCount, religion, premium = null }: PdfReportProps) {
   const top = result.topMatch;
   const books = result.bookRecommendations ?? [];
   const others = result.matches.slice(1, 4);
@@ -57,13 +63,27 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
     ...(showParties ? [t.partiesSectionTitle] : []),
     ...(hasValues ? [t.valuesSectionTitle] : []),
     t.otherMatches,
-    ...(compass ? [t.compassTitle] : [])
+    ...(compass ? [t.compassTitle] : []),
+    ...(premium ? [P.axisTitle, P.disagreeTitle, P.governmentTitle, P.timelineTitle, P.countriesTitle] : [])
   ];
   const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
+
+  const closing = (
+    <div className="close">
+      <div>
+        <p className="eb">{t.report.aboutTitle}</p>
+        <p>{t.report.aboutText}</p>
+      </div>
+      <div className="close-cta">
+        <b>{t.report.ctaTitle}</b>
+        <span>12axes.vercel.app</span>
+      </div>
+    </div>
+  );
 
   return (
     <div className="rp" style={catStyle(top.category) as CSSProperties}>
@@ -110,7 +130,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
               {answeredCount ? <span>{t.report.kpiAnswered(answeredCount)}</span> : null}
             </div>
           </div>
-          <div className="toc">
+          <div className={sections.length > 12 ? "toc toc-2" : "toc"}>
             <p className="eb">{t.report.tocTitle}</p>
             <ol>
               {sections.map((title, index) => (
@@ -367,17 +387,11 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion }
             </section>
           )}
 
-          <div className="close">
-            <div>
-              <p className="eb">{t.report.aboutTitle}</p>
-              <p>{t.report.aboutText}</p>
-            </div>
-            <div className="close-cta">
-              <b>{t.report.ctaTitle}</b>
-              <span>12axes.vercel.app</span>
-            </div>
-          </div>
+          {!premium && closing}
         </div>
+
+        {/* O Relatório completo: uma página por seção, no mesmo padrão das anteriores, e o fechamento na última. */}
+        {premium && <PremiumPdfPages premium={premium} axes={axes} axisResults={axisResults} topName={top.name} closing={closing} />}
       </div>
     </div>
   );
@@ -449,52 +463,6 @@ function formatPct(value: number, decimals: number): string {
   })}%`;
 }
 
-function Logo() {
-  return (
-    <span className="logo">
-      <b>12</b> axes
-    </span>
-  );
-}
-
-function PageHeader({ topName }: { topName: string }) {
-  return (
-    <header className="ph">
-      <Logo />
-      <span>{t.report.headerLabel(topName)}</span>
-    </header>
-  );
-}
-
-function Ring({ value, size, stroke }: { value: number; size: number; stroke: number }) {
-  const center = size / 2;
-  const radius = center - stroke / 2 - 0.5;
-  const circumference = 2 * Math.PI * radius;
-  const arc = (Math.max(0, Math.min(100, value)) / 100) * circumference;
-  return (
-    <div className="ring" style={{ width: size, height: size }}>
-      <svg viewBox={`0 0 ${size} ${size}`}>
-        <circle cx={center} cy={center} r={radius} fill="none" stroke="var(--ring-bg)" strokeWidth={stroke} />
-        <circle
-          cx={center}
-          cy={center}
-          r={radius}
-          fill="none"
-          stroke="var(--ring)"
-          strokeWidth={stroke}
-          strokeLinecap="round"
-          strokeDasharray={`${arc} ${circumference}`}
-          transform={`rotate(-90 ${center} ${center})`}
-        />
-      </svg>
-      <div>
-        <b>{Math.round(value)}%</b>
-        <small>{t.matchWord}</small>
-      </div>
-    </div>
-  );
-}
-
 function Quote({ phrase }: { phrase: string }) {
   return (
     <figure className="quote">
@@ -505,22 +473,6 @@ function Quote({ phrase }: { phrase: string }) {
       </div>
     </figure>
   );
-}
-
-function SectionHead({ title }: { title: string }) {
-  return (
-    <div className="sh">
-      <h2>{title}</h2>
-    </div>
-  );
-}
-
-// Retrato/bandeira com iniciais no lugar quando a imagem não existe.
-function Img({ className, src, name }: { className: string; src: string; name: string }) {
-  if (!src) {
-    return <div className={`${className} ini`}>{personalityInitials(name)}</div>;
-  }
-  return <img className={className} src={src} alt="" />;
 }
 
 function AxisRow({ axis, result, religion }: { axis: Axis; result: AxisResult; religion?: Religion | null }) {

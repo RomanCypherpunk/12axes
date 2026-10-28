@@ -48,7 +48,7 @@
 
 /* capa */
 .rp-cover{height:297mm;display:flex;flex-direction:column;background:var(--papel);break-after:page;page-break-after:always;overflow:hidden}
-.rp .cv-top{background:var(--cat);color:var(--papel);padding:12mm 15mm 11mm;position:relative;overflow:hidden}
+.rp .cv-top{flex:none;background:var(--cat);color:var(--papel);padding:12mm 15mm 11mm;position:relative;overflow:hidden}
 .rp .cv-top::after{content:"";position:absolute;right:-40mm;top:-45mm;width:120mm;height:120mm;border-radius:50%;background:rgba(244,241,232,.07)}
 .rp .cv-bar{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
 .rp .cv-bar .logo{color:var(--papel);font-size:20px}.rp .cv-bar .logo b{color:var(--papel)}
@@ -234,3 +234,179 @@
 .rp .dc .v-wrap svg{display:block}
 /* a regra geral ".rp svg" põe contorno escuro em todo SVG; nas moedas o ícone é só preenchimento */
 .rp .e-vcoin svg{stroke:none}
+
+/* sumário em duas colunas quando há muitas seções (a capa tem altura fixa) */
+.rp .toc-2 ol{columns:2;column-gap:9mm}
+
+/* Relatório completo no PDF (Premium): uma página por seção, no padrão do restante do relatório */
+.rp .rx-sec .intro{margin:-2mm 0 3.5mm}
+.rp .rx-axes{display:grid;grid-template-columns:1fr 1fr;gap:6.5mm 9mm}
+.rp .rx-ax{min-width:0;padding-top:3.5mm;border-top:1px solid var(--borda)}
+.rp .rx-ax-h{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
+.rp .rx-ax-h b{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:-.02em}
+.rp .rx-ax-h span{font-size:8.5px;font-weight:600;white-space:nowrap}
+.rp .rx-track{position:relative;height:1.7mm;margin:8mm 5mm 4.5mm;border-radius:2mm;background:var(--borda)}
+.rp .rx-mid{position:absolute;left:50%;top:-1mm;width:1px;height:3.7mm;background:#A9A497}
+.rp .rx-pin{position:absolute;top:50%;transform:translate(-50%,-50%);width:7mm;height:7mm;border-radius:50%;border:.7mm solid var(--pc);background:#fff;overflow:hidden;display:block}
+.rp .rx-pin .rx-pin-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.rp .rx-pin .ini{display:grid;place-items:center;font-size:7px;font-weight:700}
+.rp .rx-you{width:auto;height:auto;border-radius:99px;padding:.9mm 2.8mm;border:0;background:var(--pc);color:#fff;font-size:8px;font-weight:600;z-index:5;overflow:visible}
+.rp .rx-poles{display:flex;justify-content:space-between;gap:3mm;font-size:8px;color:#A9A497}
+.rp .rx-poles .on{color:var(--tinta);font-weight:600}
+.rp .rx-t{margin-top:2.2mm;font-size:9.6px;line-height:1.55;color:#3f3e3a}
+
+.rp .rx-dis{display:grid;gap:5mm}
+.rp .rx-dis-card{border-radius:16px;padding:5mm 6mm 5.5mm;background:var(--cat-bg);color:var(--cat)}
+.rp .rx-dis-card header{display:flex;align-items:center;gap:4.5mm;margin-bottom:4mm}
+.rp .rx-dis-card header .ts{background:var(--cat);color:var(--papel)}
+.rp .rx-dis-card h3{font-size:17px;line-height:1.15;margin-top:1.6mm}
+.rp .rx-dis-photo{width:19mm;height:19mm;border-radius:50%;object-fit:cover;flex:none;border:.8mm solid var(--papel)}
+.rp .rx-dis-flag{width:28mm;height:19mm;border-radius:8px;object-fit:cover;flex:none;border:.8mm solid var(--papel)}
+.rp .rx-dis-card ul{display:grid;grid-template-columns:repeat(3,1fr);gap:0 5mm}
+.rp .rx-dis-card li{min-width:0;border-top:1px solid rgba(0,0,0,.12);padding-top:3mm}
+.rp .rx-rank{display:block;font-size:7px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.rp .rx-axis-name{display:block;font-family:var(--display);font-size:11px;margin-top:.8mm}
+.rp .rx-big{font-family:var(--display);font-weight:600;font-size:25px;line-height:1.05;letter-spacing:-.03em;margin:1.5mm 0 1mm}
+.rp .rx-big small{font-size:9px;margin-left:1mm;font-weight:600}
+.rp .rx-mbar{position:relative;height:1.5mm;margin:3.2mm 2mm 1.8mm;border-radius:2mm;background:rgba(255,255,255,.6)}
+.rp .rx-mfill{position:absolute;top:0;bottom:0;background:var(--cat);opacity:.35;border-radius:2mm}
+.rp .rx-mdot{position:absolute;top:50%;width:3.2mm;height:3.2mm;margin:-1.6mm 0 0 -1.6mm;border-radius:50%;border:.6mm solid var(--papel)}
+.rp .rx-mprofile{background:#fff;border-color:var(--cat)}
+.rp .rx-myou{background:var(--cat)}
+.rp .rx-dis-card .rx-poles{color:var(--cat);opacity:.7}
+.rp .rx-cap{margin-top:1.8mm;font-size:8.4px;line-height:1.45;opacity:.9}
+
+.rp .rx-gov{position:relative;width:100%;aspect-ratio:1000/680;margin:1mm 0 4mm}
+.rp .rx-gov svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke:none}
+.rp .rx-table-edge{fill:color-mix(in srgb,var(--cat) 38%,var(--cat-bg))}
+.rp .rx-table-top{fill:var(--cat-bg)}
+.rp .rx-table-ring{fill:none;stroke:color-mix(in srgb,var(--cat) 22%,transparent);stroke-width:2}
+.rp .rx-chair-seat{fill:color-mix(in srgb,var(--cat) 72%,var(--cat-bg))}
+.rp .rx-chair-back{fill:var(--cat)}
+.rp .rx-seat{position:absolute;width:0;height:0}
+.rp .rx-face{position:absolute;left:-7mm;top:-7mm;width:14mm;height:14mm;border-radius:50%;object-fit:cover;border:.8mm solid var(--cat-bg);box-shadow:0 0 0 .5mm var(--cat)}
+.rp .rx-face.ini{display:grid;place-items:center;background:#fff;font-size:10px;font-weight:700}
+.rp .rx-lab{position:absolute;display:flex;flex-direction:column;gap:.4mm;width:40mm}
+.rp .rx-lab b{font-size:8.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--cat);line-height:1.25}
+.rp .rx-lab span{font-size:9.5px;line-height:1.3;color:var(--tinta)}
+.rp .rx-seat-top .rx-lab{left:-20mm;bottom:9mm;align-items:center;text-align:center}
+.rp .rx-seat-left .rx-lab{right:9mm;top:-5mm;align-items:flex-end;text-align:right}
+.rp .rx-seat-right .rx-lab{left:9mm;top:-5mm;align-items:flex-start;text-align:left}
+.rp .rx-gov-list{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.rp .rx-gov-list li{display:flex;align-items:center;gap:3mm;border:1px solid var(--borda);border-radius:12px;padding:3mm;background:var(--sup)}
+.rp .rx-gov-list small{display:block;font-size:7px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--suave)}
+.rp .rx-gov-list b{display:block;font-size:9.5px;line-height:1.25;margin-top:.4mm}
+.rp .rx-gov-list span{display:block;font-size:7.6px;line-height:1.35;color:var(--suave);margin-top:.4mm}
+
+.rp .rx-eras{position:relative;display:grid;gap:0}
+.rp .rx-era{position:relative;display:grid;grid-template-columns:38mm 1fr;gap:5mm;padding:4mm 0 4mm 7mm;border-top:1px solid var(--borda)}
+.rp .rx-era:first-child{border-top:0}
+.rp .rx-era::before{content:"";position:absolute;left:1mm;top:0;bottom:0;width:.5mm;background:var(--borda)}
+.rp .rx-era:first-child::before{top:7mm}
+.rp .rx-era:last-child::before{bottom:calc(100% - 9mm)}
+.rp .rx-era::after{content:"";position:absolute;left:-.4mm;top:6.4mm;width:3.2mm;height:3.2mm;border-radius:50%;background:var(--cat)}
+.rp .rx-era-h b{display:block;font-family:var(--display);font-size:13px;letter-spacing:-.02em}
+.rp .rx-era-h small{font-size:8.5px;color:var(--suave)}
+.rp .rx-era ul{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.rp .rx-era-card{display:flex;align-items:center;gap:3mm;border:1px solid var(--borda);border-radius:12px;padding:2.4mm 3mm;background:var(--sup)}
+.rp .rx-era-card b{display:block;font-size:9.4px;line-height:1.25}
+.rp .rx-era-card small{display:block;font-size:7.8px;color:var(--suave);margin-top:.4mm}
+.rp .rx-logo{object-fit:contain;padding:1mm;background:#fff;border:1px solid var(--borda)}
+.rp .rx-best{display:flex;align-items:center;gap:6mm;margin-top:5mm;padding:5mm 6mm;border-radius:16px;background:var(--cat-bg);color:var(--cat);border-top:1mm solid var(--cat)}
+.rp .rx-mosaic{display:grid;grid-template-columns:1fr 1fr;width:30mm;height:30mm;border-radius:10px;overflow:hidden;flex:none;background:#fff}
+.rp .rx-tile{width:100%;height:100%;object-fit:cover;display:block}
+.rp .rx-tile-logo{object-fit:contain;padding:2mm;background:#fff}
+.rp .rx-best-t{flex:1}
+.rp .rx-best-t small{font-size:7.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.rp .rx-best-t h3{font-size:22px;line-height:1.1;margin:1mm 0}
+.rp .rx-best-t span{font-size:9px;opacity:.85}
+
+.rp .rx-hero{display:flex;align-items:center;gap:6mm;padding:5mm 6mm;border-radius:16px;background:var(--cat-bg);color:var(--cat);border-top:1mm solid var(--cat);margin-bottom:5mm}
+.rp .rx-hero .tc{background:var(--cat);color:var(--papel)}
+.rp .rx-hero-flag{width:38mm;height:25mm;border-radius:10px;object-fit:cover;flex:none;border:.8mm solid var(--papel)}
+.rp .rx-hero>div{flex:1;min-width:0}
+.rp .rx-hero h3{font-size:19px;line-height:1.12;margin:1.6mm 0}
+.rp .rx-hero p{font-size:8.8px;line-height:1.5;opacity:.9;color:var(--tinta)}
+.rp .rx-rank .rk{padding:2.8mm 0}
+.rp .rx-closing{margin-top:auto;padding-top:7mm}
+.rp .av-f{width:11mm;height:7.5mm;border-radius:3px;object-fit:cover;border:1px solid var(--borda);flex:none}
+.rp .av-f.ini{display:grid;place-items:center;font-size:7px;font-weight:700;background:#fff}
+
+/* ajustes de proporção: as páginas do relatório pago ocupam a folha */
+.rp .rx-axes{grid-template-columns:1fr;gap:0}
+.rp .rx-ax{padding:5mm 0 4.5mm}
+.rp .rx-ax:first-child{border-top:0;padding-top:1mm}
+.rp .rx-ax-h b{font-size:14px}
+.rp .rx-ax-h span{font-size:10px}
+.rp .rx-track{height:2mm;margin:9mm 7mm 5mm}
+.rp .rx-pin{width:7.5mm;height:7.5mm}
+.rp .rx-you{font-size:9px;padding:1mm 3.2mm}
+.rp .rx-poles{font-size:9px}
+.rp .rx-t{font-size:11px;line-height:1.6;margin-top:3mm}
+
+.rp .rx-gov-list{gap:3.5mm}
+.rp .rx-gov-list li{align-items:flex-start;padding:3.4mm}
+.rp .rx-gov-list small{font-size:7.4px}
+.rp .rx-gov-list b{font-size:10.5px}
+.rp .rx-gov-list span{font-size:8px}
+.rp .rx-gov-list p{margin-top:1.2mm;font-size:7.8px;line-height:1.45;color:var(--suave);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+
+.rp .rx-era{padding:6.5mm 0 6.5mm 8mm;grid-template-columns:42mm 1fr}
+.rp .rx-era::after{top:9mm}
+.rp .rx-era:first-child::before{top:10mm}
+.rp .rx-era:last-child::before{bottom:calc(100% - 12mm)}
+.rp .rx-era-h b{font-size:16px}
+.rp .rx-era-h small{font-size:10px}
+.rp .rx-era-card{padding:3.4mm 3.8mm;gap:3.6mm}
+.rp .rx-era-card .av-m{width:14mm;height:14mm}
+.rp .rx-era-card b{font-size:10.8px}
+.rp .rx-era-card small{font-size:8.8px}
+.rp .rx-best{margin-top:7mm;padding:6.5mm 7.5mm}
+.rp .rx-mosaic{width:36mm;height:36mm}
+.rp .rx-best-t h3{font-size:26px}
+.rp .rx-best-t small{font-size:8.5px}
+.rp .rx-best-t span{font-size:10.5px}
+
+.rp .rx-hero>div:not(.ring){flex:1;min-width:0}
+.rp .rx-hero .ring{flex:none}
+.rp .rx-hero h3{font-size:22px}
+.rp .rx-hero p{font-size:9.6px}
+.rp .rx-rank .rk{padding:3.6mm 0;grid-template-columns:8mm 14mm 1fr auto}
+.rp .rx-rank .rk-i b{text-transform:none;letter-spacing:0;font-size:11.5px;font-weight:600;white-space:normal}
+.rp .rx-rank .rk-i small{text-transform:none;letter-spacing:0;font-size:8.5px}
+.rp .rx-rank .av-f{width:14mm;height:9.5mm}
+.rp .rx-rank .rk strong,.rp .rx-rank strong{font-size:16px}
+
+
+/* afinação final: cada página do relatório pago cabe numa folha A4 */
+.rp .rx-ax{padding:3.6mm 0 3.2mm}
+.rp .rx-ax-h b{font-size:13px}
+.rp .rx-track{margin:7.5mm 7mm 4mm}
+.rp .rx-t{font-size:10.4px;line-height:1.5;margin-top:2.4mm}
+.rp .rx-gov-list p{-webkit-line-clamp:3}
+.rp .rx-gov-list li{padding:3mm}
+.rp .rx-gov{margin:0 0 3mm}
+.rp .rx-era{padding:5mm 0 5mm 8mm}
+.rp .rx-era::after{top:7.6mm}
+.rp .rx-era:first-child::before{top:8.6mm}
+.rp .rx-era:last-child::before{bottom:calc(100% - 10.6mm)}
+.rp .rx-mosaic{width:32mm;height:32mm}
+.rp .rx-best{margin-top:6mm;padding:5.5mm 7mm}
+.rp .rx-rank .rk{padding:3.1mm 0}
+.rp .rx-pin.rx-you{width:auto;height:auto;border-radius:99px;overflow:visible;padding:1mm 3.2mm;white-space:nowrap}
+
+/* Páginas do relatório pago: exatamente uma folha A4 (sem estourar para uma página em branco) e eixos mais compactos */
+.rp .rx-page{height:296mm;overflow:hidden;break-inside:avoid;page-break-inside:avoid}
+.rp .rx-ax{padding:3mm 0 2.6mm}
+.rp .rx-track{margin:7mm 7mm 3.4mm}
+.rp .rx-t{font-size:10px;line-height:1.48;margin-top:2mm}
+.rp .rx-gov{margin:6mm 0 0}
+.rp .rx-face{left:-8mm;top:-8mm;width:16mm;height:16mm}
+.rp .rx-lab b{font-size:9.5px}
+.rp .rx-lab span{font-size:10.5px}
+.rp .rx-seat-top .rx-lab{bottom:10mm}
+.rp .rx-seat-left .rx-lab{right:10mm}
+.rp .rx-seat-right .rx-lab{left:10mm}
+
+.rp .rx-sec{display:flex;flex-direction:column;flex:1;min-height:0}
+.rp .rx-gov{margin:auto 0}
