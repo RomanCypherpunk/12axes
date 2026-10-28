@@ -249,6 +249,10 @@ The backend suite covers the question pool, the three formats, every catalog vec
 | JS, CSS and fonts | Cloudflare Pages | Git-connected, root `frontend`, build `npm run build`, output `dist` |
 | Catalog images | jsDelivr | Served from this repository, set in `frontend/.env.production` |
 
+#### Paid report (Stripe)
+
+The full report is paid per result and off by default. The backend needs `PAYMENTS_ENABLED=true`, `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID_BRL` and `ENTITLEMENT_SECRET` (see `render.yaml`; values are set in the Render dashboard, never committed). The frontend shows the purchase according to `VITE_PAYWALL_ENABLED` (`true` for everyone, `preview` for browsers opened once with `?paywall=1`, empty for nobody). For local development, `PREMIUM_DEV_OPEN=true` on the backend opens the report on your own machine only; never set it in production.
+
 Every push and pull request runs the CI workflow in `.github/workflows/ci.yml`, and a push to `main` deploys each platform on its own.
 
 ## Contributing

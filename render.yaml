@@ -12,3 +12,20 @@ services:
         value: "true"
       - key: API_REQUIRE_FETCH_METADATA
         value: "false"
+
+      # Relatório completo (pago). Nenhum valor mora no repositório: sync:false = preencher no painel do Render.
+      # Sem PAYMENTS_ENABLED (ou "false") os endpoints de compra respondem 404, mesmo com o código publicado.
+      - key: PAYMENTS_ENABLED
+        sync: false
+      # Chave secreta da Stripe. Em produção: chave RESTRITA (rk_live_) com Checkout Sessions (escrita), Payment Intents (leitura)
+      # e Charges (leitura). Em teste: rk_test_ ou sk_test_ do sandbox.
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      # ID do preço de R$ 14,99 (price_...), do mesmo ambiente (teste ou produção) da chave acima.
+      - key: STRIPE_PRICE_ID_BRL
+        sync: false
+      # Segredo que assina os tokens de acesso. O Render gera um valor aleatório na criação; trocá-lo invalida todos os acessos.
+      - key: ENTITLEMENT_SECRET
+        generateValue: true
+      # NUNCA definir PREMIUM_DEV_OPEN aqui: abre o relatório pago sem pagamento (só vale para a própria máquina, mas não tem uso em produção).
+
