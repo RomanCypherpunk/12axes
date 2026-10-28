@@ -8,6 +8,14 @@ import { request } from './quizApi';
  * opcionais e só acrescentam, por eixo, o que mais pesou. O backend só entrega o relatório com um token válido para
  * esse resultado (header X-Entitlement); em desenvolvimento local, com PREMIUM_DEV_OPEN ligado nele, abre sem token.
  */
+// As escolhas de religião ficam junto das de arquétipo no progresso salvo, mas não são perguntas de arquétipo: o
+// servidor recusa o pedido (400) se elas forem junto. O envio do resultado também as tira.
+const NON_ARCHETYPE_STEP_IDS = ['religiao', 'denominacao'];
+
+export function archetypeOnly(choices: Record<string, string>): Record<string, string> {
+  return Object.fromEntries(Object.entries(choices).filter(([id]) => !NON_ARCHETYPE_STEP_IDS.includes(id)));
+}
+
 export function fetchPremiumReport(
   vector: number[],
   saved: Pick<SavedAnswers, 'variant' | 'answers' | 'archetypeChoices'> | null,
@@ -21,7 +29,7 @@ export function fetchPremiumReport(
     body: JSON.stringify({
       v: vector.join(','),
       answers: saved ? Object.entries(saved.answers).map(([questionId, answer]) => ({ questionId, answer })) : undefined,
-      archetype: saved ? saved.archetypeChoices : undefined
+      archetype: saved ? archetypeOnly(saved.archetypeChoices) : undefined
     })
   });
 }
