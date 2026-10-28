@@ -27,7 +27,7 @@ const POLL_MS = 3000;
 const MAX_ATTEMPTS = 20;
 
 // A volta do pagamento traz ?unlock=<sessão> (retorno do checkout) ou ?pay=<código> (link do recibo).
-// ?gift=<senha> é o link de cortesia (GIFT_KEY no servidor): libera sem pagamento.
+// ?gift=<senha> é o link de cortesia (GIFT_KEY no servidor): libera sem pagamento; o token é salvo e o parâmetro permanece na URL.
 const PAYMENT_PARAMS = ['unlock', 'pay', 'gift'] as const;
 
 function paymentFromUrl(): { sessionId?: string; pay?: string; gift?: string } | null {
@@ -85,7 +85,8 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
           saveToken(hash, token);
           track('purchase_unlocked');
           // O código sai do endereço: o link copiado dali em diante é o do resultado, não o do pagamento.
-          window.history.replaceState(null, '', resultUrlWithoutPaymentParams());
+          // O link de cortesia (?gift=) é a exceção: fica, para a pessoa guardar a URL e reabrir o relatório.
+          if (!payment.gift) window.history.replaceState(null, '', resultUrlWithoutPaymentParams());
           setState({ status: 'unlocked', token });
           return;
         } catch (error) {
