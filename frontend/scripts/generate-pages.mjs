@@ -16,6 +16,7 @@ import { countriesIndexPage, COUNTRIES_CSS } from './countries-index.mjs';
 import { booksIndexPage, BOOKS_CSS } from './books-index.mjs';
 import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
 import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
+import { policyPages, POLICY_CSS } from './policy-pages.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -479,6 +480,7 @@ for (const locale of LOCALES) {
   };
   const pages = [
     ...buildIndexes(L),
+    ...policyPages(L, { site: SITE, gaSnippet: GOOGLE_ANALYTICS_SNIPPET, escapeHtml }),
     ...L.ideologies.map((i) => ideologyPage(L, i, profileCtx)),
     ...L.countries.map((c) => countryPage(L, c, profileCtx)),
     ...L.personalities.map((p) => personalityPage(L, p, profileCtx)),
@@ -495,6 +497,7 @@ writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS + PARTY_
 writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS + SITE_HEADER_CSS);
 writeFileSync(join(DIST, 'parties.css'), PARTIES_CSS + SITE_HEADER_CSS);
 writeFileSync(join(DIST, 'books.css'), BOOKS_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'policy.css'), POLICY_CSS + SITE_HEADER_CSS);
 
 // Dados prontos da visualização em teia (/tree/*): similaridade, layout e vizinhos calculados aqui, não no navegador.
 const treeFiles = writeTreeData(DATA_DIR, DIST);
