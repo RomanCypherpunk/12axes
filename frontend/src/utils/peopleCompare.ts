@@ -1,4 +1,5 @@
 import { parseReligion, parseReligionList, type Religion } from './religion';
+import { parseShortResult } from './shortLinks';
 
 // Comparação entre duas pessoas: /compare/people?an=Você&a=65,32,...&bn=Julia&b=40,51,...
 // (a e b = % do polo esquerdo dos 12 eixos, na ordem de RESULT_URL_KEYS; ra e rb = religião, opcional).
@@ -51,6 +52,12 @@ export function parseResultLink(raw: string): ResultLinkParse {
   params.forEach((value, key) => byKey.set(key.trim().toLowerCase(), value.trim()));
 
   const missing = RESULT_URL_KEYS.filter((key) => !byKey.get(key));
+  // Link curto do QR do cartão (/r?v=70-80-…&r=c): os 12 valores num só parâmetro.
+  if (missing.length === RESULT_URL_KEYS.length && byKey.has('v')) {
+    const short = parseShortResult(query);
+    if (short) return { ok: true, ...short };
+    return { ok: false, problem: { kind: 'invalid', keys: ['v'] } };
+  }
   if (missing.length > 0) return { ok: false, problem: { kind: 'missing', keys: missing } };
 
   const values = RESULT_URL_KEYS.map((key) => Number((byKey.get(key) ?? '').replace(',', '.')));

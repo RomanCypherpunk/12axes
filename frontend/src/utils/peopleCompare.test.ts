@@ -41,6 +41,16 @@ describe('parseResultLink', () => {
     expect(parseResultLink(QUERY.replace('32.5', '32,5'))).toMatchObject({ ok: true, values: VALUES });
   });
 
+  it('aceita o link curto do cartão (/r?v=...)', () => {
+    const short = 'v=65-32.5-10-90-50-0-100-44-12-70-33-51';
+    expect(parseResultLink(`https://12axes.vercel.app/r?${short}`)).toEqual({ ok: true, values: VALUES, religion: null });
+    expect(parseResultLink(`/r?${short}&r=c&l=en`)).toMatchObject({ ok: true, values: VALUES, religion: 'catholic' });
+  });
+
+  it('link curto incompleto é inválido', () => {
+    expect(parseResultLink('/r?v=65-32')).toMatchObject({ ok: false, problem: { kind: 'invalid' } });
+  });
+
   it('vazio', () => {
     expect(parseResultLink('   ')).toEqual({ ok: false, problem: { kind: 'empty' } });
   });
