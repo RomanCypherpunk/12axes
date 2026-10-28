@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { LANG, t } from '../../i18n';
 import type { Axis, AxisResult, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
-import { SupportSection } from '../SupportSection';
 import { PdfReport } from '../report/PdfReport';
 import '../../styles/report.css';
 import { BooksSection } from '../results/BooksSection';
@@ -286,8 +285,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             closest={result.topPersonalityMatch}
             farthest={result.bottomPersonalityMatches?.[0] ?? null}
           />
-
-          <SupportSection variant="panel" />
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>

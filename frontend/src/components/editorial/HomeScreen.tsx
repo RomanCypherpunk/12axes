@@ -4,7 +4,6 @@ import type { ExampleResult } from '../../data/exampleResult';
 import type { Axis, AxisResult, QuizVariant } from '../../types/quiz';
 import { AxisIcon, PoleIcon } from '../AxisIcon';
 import { OpenSourceSection } from '../OpenSourceSection';
-import { SupportSection } from '../SupportSection';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { catStyle, localCatStyle, SPECTRUM_ORDER } from '../../utils/ideologyColors';
@@ -285,7 +284,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
             </div>
           </section>
 
-          <SupportSection variant="home" />
           <OpenSourceSection />
         </>
       )}
