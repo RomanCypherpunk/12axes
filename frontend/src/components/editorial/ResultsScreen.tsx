@@ -1,7 +1,7 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
-import { t } from '../../i18n';
-import type { Axis, AxisResult, QuizPayload, QuizResult } from '../../types/quiz';
+import { LANG, t } from '../../i18n';
+import type { Axis, AxisResult, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
 import { SupportSection } from '../SupportSection';
 import { PdfReport } from '../report/PdfReport';
@@ -23,8 +23,23 @@ import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
+import type { SavedAnswers } from '../../utils/quizProgress';
 import type { Religion } from '../../utils/religion';
-import { DownloadIcon, Ring, ShareImageIcon } from './primitives';
+import { PaywallModal } from '../results/PaywallModal';
+import { PaywallSection } from '../results/PaywallSection';
+import { PreviewSwitch } from '../results/PreviewSwitch';
+import { usePremiumAccess } from '../results/usePremiumAccess';
+import { CsvIcon, DownloadIcon, Ring, ShareImageIcon } from './primitives';
+import { track } from '../../utils/analytics';
+import { pdfButtonAction } from '../../utils/pdfAccess';
+import { downloadRankingXlsx } from '../../utils/rankingXlsx';
+
+// Modo de desenvolvimento local do Relatório Completo: abre sem pagamento (o backend também precisa de PREMIUM_DEV_OPEN).
+// Fica fora do build de produção porque a variável só existe em frontend/.env.local.
+const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
+// Compra do Relatório completo (Stripe): ligada por VITE_PAYWALL_ENABLED, e só em português na v1 (preço em reais).
+const PAYWALL_ENABLED = import.meta.env.VITE_PAYWALL_ENABLED === 'true' && LANG === 'pt';
+const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
 
 interface ResultsScreenProps {
   result: QuizResult;
@@ -37,14 +52,45 @@ interface ResultsScreenProps {
   religion?: Religion | null;
   /** Abre a edição das respostas; só vem quando este navegador guardou as respostas deste resultado. */
   onEditAnswers?: () => void;
+  /** Respostas deste resultado, quando este navegador as tem: o relatório pago usa para mostrar o que mais pesou em cada eixo. */
+  premiumAnswers?: SavedAnswers | null;
 }
 
-export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion, onEditAnswers }: ResultsScreenProps) {
+export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion, onEditAnswers, premiumAnswers }: ResultsScreenProps) {
   const top = result.topMatch;
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
+  // Identidade do resultado para o relatório pago: os 12 valores, na ordem dos eixos.
+  const premiumVector = useMemo(() => result.axes.map((axis) => axis.leftPercent), [result]);
+  // O relatório pago, quando carregado: de lá vêm a aba "Área de atuação" e o ranking da planilha.
+  const [premiumReport, setPremiumReport] = useState<PremiumReport | null>(null);
+  // Só em desenvolvimento (PREMIUM_DEV_OPEN): alterna entre a página paga e a grátis (com o convite), para ajustar o layout
+  // dos dois lados sem pagar. Também aceita ?preview=free no endereço.
+  const [preview, setPreview] = useState<'paid' | 'free'>(() =>
+    new URLSearchParams(window.location.search).get('preview') === 'free' ? 'free' : 'paid'
+  );
+  const previewAsFree = PREMIUM_DEV_OPEN && preview === 'free';
+  const realAccess = usePremiumAccess(premiumVector, PAYWALL_ENABLED && (!PREMIUM_DEV_OPEN || previewAsFree));
+  // Na pré-visualização grátis o acesso é sempre "sem acesso", mesmo que haja um token guardado.
+  const access = previewAsFree ? { ...realAccess, state: { status: 'locked' as const, problem: null, busy: false } } : realAccess;
+  const [paywallOpen, setPaywallOpen] = useState(false);
+  const openPaywall = (source: 'section' | 'areas' | 'pdf') => {
+    track('paywall_view', { source });
+    setPaywallOpen(true);
+  };
+  const premiumToken = access.state.status === 'unlocked' ? access.state.token : null;
+  const hasPremium = (PREMIUM_DEV_OPEN && !previewAsFree) || premiumToken !== null;
+  const shownReport = hasPremium ? premiumReport : null;
+
+  // O PDF é do Relatório completo: sem acesso (e com a compra ligada), o botão abre o modal de compra em vez de imprimir.
+  const handlePdf = () => {
+    const action = pdfButtonAction(PAYWALL_ENABLED, hasPremium);
+    track('pdf_export_click', { locked: action === 'openModal' });
+    if (action === 'openModal') openPaywall('pdf');
+    else setPrintingPdf(true);
+  };
 
   // O relatório é montado fora da tela; quando imagens e fontes carregam, o diálogo de
   // impressão do navegador gera o PDF. O título da aba vira o nome sugerido do arquivo.
@@ -60,7 +106,15 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     };
     (async () => {
       const images = Array.from(document.querySelectorAll<HTMLImageElement>('.rp-root img'));
-      await Promise.allSettled(images.map((img) => (img.complete ? Promise.resolve() : img.decode())));
+      // O relatório fica fora da tela, e imagens "lazy" fora da tela nunca carregam: sem isto a espera abaixo não termina.
+      images.forEach((img) => {
+        img.loading = 'eager';
+      });
+      // Teto de 12 s: uma imagem que não chega não pode travar a geração do PDF.
+      await Promise.race([
+        Promise.allSettled(images.map((img) => (img.complete ? Promise.resolve() : img.decode()))),
+        new Promise((resolve) => setTimeout(resolve, 12000))
+      ]);
       await document.fonts?.ready;
       if (cancelled) {
         return;
@@ -74,6 +128,23 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       window.removeEventListener('afterprint', finish);
     };
   }, [printingPdf]);
+
+  // Compartilhar, baixar o PDF e exportar a planilha: logo depois do cartão do resultado e, com acesso, de novo no fim.
+  const actions = (
+    <div className="e-actions">
+      <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
+        {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
+      </button>
+      <button className="e-btn e-btn-ghost" type="button" onClick={handlePdf} disabled={printingPdf || (hasPremium && !shownReport)}>
+        {printingPdf ? t.generatingPdf : t.downloadPdf} <DownloadIcon />
+      </button>
+      {shownReport && (
+        <button className="e-btn e-btn-ghost" type="button" onClick={() => void downloadRankingXlsx(shownReport.ranking, LANG, top.category)}>
+          {t.exportCsv} <CsvIcon />
+        </button>
+      )}
+    </div>
+  );
 
   return (
     <main className="ed e-res" id="resultados" style={catStyle(top.category) as CSSProperties}>
@@ -125,9 +196,22 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             results={axisResults}
           />
 
-          <AreasSection generalMatches={result.personalityMatches} areaMatches={result.categoryBestMatches} axes={axes} results={axisResults} />
+          <AreasSection
+            generalMatches={result.personalityMatches}
+            areaMatches={shownReport?.personalitiesByArea ?? []}
+            axes={axes}
+            results={axisResults}
+            areaLocked={!hasPremium}
+            onUnlock={PAYWALL_ENABLED ? () => openPaywall('areas') : undefined}
+          />
 
           <BooksSection books={result.bookRecommendations} />
+
+          {/* Cartão do resultado e as ações (compartilhar, PDF, planilha): logo depois dos livros. */}
+          <SharePreviewSection result={result} quiz={quiz} axes={axes} religion={religion} isSharing={isSharing} onShare={onShare} />
+
+          {actions}
+          {error && <p className="inline-error" role="alert">{error}</p>}
 
           {showParties && (
             <PartiesSection
@@ -147,17 +231,32 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
 
-          <SharePreviewSection result={result} quiz={quiz} axes={axes} religion={religion} isSharing={isSharing} onShare={onShare} />
+          {hasPremium ? (
+            <Suspense fallback={null}>
+              <PremiumReportSection
+                vector={premiumVector}
+                answers={premiumAnswers ?? null}
+                token={premiumToken}
+                religion={religion ?? null}
+                axes={axes}
+                results={axisResults}
+                devOpen={PREMIUM_DEV_OPEN && !previewAsFree}
+                onReport={(report) => {
+                  setPremiumReport(report);
+                  if (report) track('premium_report_view');
+                }}
+                onDenied={access.revoke}
+              />
+            </Suspense>
+          ) : (
+            PAYWALL_ENABLED && <PaywallSection access={access} onOpen={() => openPaywall('section')} />
+          )}
 
-          <div className="e-actions">
-            <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
-              {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
-            </button>
-            <button className="e-btn e-btn-ghost" type="button" onClick={() => setPrintingPdf(true)} disabled={printingPdf}>
-              {printingPdf ? t.generatingPdf : t.downloadPdf} <DownloadIcon />
-            </button>
-          </div>
-          {error && <p className="inline-error" role="alert">{error}</p>}
+          {hasPremium && actions}
+
+          {paywallOpen && !hasPremium && PAYWALL_ENABLED && <PaywallModal access={access} category={top.category} onClose={() => setPaywallOpen(false)} />}
+
+          {PREMIUM_DEV_OPEN && <PreviewSwitch value={preview} onChange={setPreview} />}
 
           <ComparePersonSection axes={axes} results={axisResults} religion={religion} />
 
@@ -174,10 +273,10 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
+          <ResultsNav premiumLocked={!hasPremium} premiumTarget={hasPremium ? 'premium-eixos' : PAYWALL_ENABLED ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
         </aside>
       </div>
-      {printingPdf &&
+      {printingPdf && pdfButtonAction(PAYWALL_ENABLED, hasPremium) === 'print' &&
         createPortal(
           <div className="rp-root" aria-hidden="true">
             <PdfReport
@@ -186,6 +285,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
               axisResults={axisResults}
               answeredCount={quiz ? quiz.questions.length : null}
               religion={religion}
+              premium={hasPremium ? shownReport : null}
             />
           </div>,
           document.body

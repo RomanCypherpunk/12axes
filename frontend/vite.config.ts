@@ -69,6 +69,9 @@ export default defineConfig(({ mode }) => {
         return { runtime: `(window.__ASSET_BASE||"")+${JSON.stringify(`/${filename}`)}` };
       }
     },
+    // Bibliotecas carregadas sob demanda (cartão de compartilhar e planilha): sem isto o servidor de desenvolvimento só as
+    // descobre ao clicar, re-otimiza no meio da sessão e o navegador fica com um arquivo desatualizado (504 "Outdated Optimize Dep").
+    optimizeDeps: { include: ['html-to-image', 'exceljs'] },
     // es2022: o dicionário de idioma é carregado com await no topo do módulo (src/i18n).
     build: { target: 'es2022' },
     test: {

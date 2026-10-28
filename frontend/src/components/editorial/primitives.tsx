@@ -30,11 +30,15 @@ export function Logo({ onClick, href }: { onClick?: () => void; href?: string })
 
 export function SiteFooter() {
   const base = LANG === 'en' ? '/en' : '';
+  // Os quatro primeiros abrem o GitHub em outra aba; as políticas são páginas do próprio site.
   const project = [
-    { label: t.footerAbout, href: `${REPO_URL}#readme` },
-    { label: t.footerContribute, href: `${REPO_URL}#contributing-ov-file` },
-    { label: t.footerLicense, href: `${REPO_URL}/blob/main/LICENSE` },
-    { label: t.footerReport, href: NEW_ISSUE_URL },
+    { label: t.footerAbout, href: `${REPO_URL}#readme`, external: true },
+    { label: t.footerContribute, href: `${REPO_URL}#contributing-ov-file`, external: true },
+    { label: t.footerLicense, href: `${REPO_URL}/blob/main/LICENSE`, external: true },
+    { label: t.footerReport, href: NEW_ISSUE_URL, external: true },
+    { label: t.footerTerms, href: `${base}/terms`, external: false },
+    { label: t.footerPrivacy, href: `${base}/privacy`, external: false },
+    { label: t.footerRefund, href: `${base}/refund`, external: false },
   ];
   const explore = [
     { label: t.navPersonalities, href: `${base}/personalities` },
@@ -56,9 +60,13 @@ export function SiteFooter() {
             <ul>
               {project.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    {link.label}
-                  </a>
+                  {link.external ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a href={link.href}>{link.label}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -110,6 +118,14 @@ export function ShareImageIcon() {
   return (
     <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true" style={{ fill: 'currentColor', stroke: 'none' }}>
       <path d="M22.71 6.29a1 1 0 0 0-1.42 0L20 7.59V2a1 1 0 0 0-2 0v5.59l-1.29-1.3a1 1 0 0 0-1.42 1.42l3 3a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l3-3a1 1 0 0 0 0-1.42M19 13a1 1 0 0 0-1 1v.38l-1.48-1.48a2.79 2.79 0 0 0-3.93 0l-.7.7l-2.48-2.48a2.85 2.85 0 0 0-3.93 0L4 12.6V7a1 1 0 0 1 1-1h8a1 1 0 0 0 0-2H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5a1 1 0 0 0-1-1M5 20a1 1 0 0 1-1-1v-3.57l2.9-2.9a.79.79 0 0 1 1.09 0l3.17 3.17l4.3 4.3Zm13-1a.9.9 0 0 1-.18.53L13.31 15l.7-.7a.77.77 0 0 1 1.1 0L18 17.21Z" />
+    </svg>
+  );
+}
+
+export function CsvIcon() {
+  return (
+    <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true" style={{ fill: 'none' }}>
+      <path stroke="currentColor" strokeWidth="2" d="M14 2v6h6m-6-6h1l5 5v1m-6-6H4v20h16V8" />
     </svg>
   );
 }
