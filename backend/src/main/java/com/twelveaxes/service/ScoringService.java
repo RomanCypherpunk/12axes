@@ -1,5 +1,7 @@
 package com.twelveaxes.service;
 
+import com.twelveaxes.model.AnswerImpact;
+import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.ArchetypeQuestion;
 import com.twelveaxes.model.Axis;
 import com.twelveaxes.model.AxisResult;
@@ -30,25 +32,62 @@ public class ScoringService {
     }
 
     public List<AxisResult> score(ResultRequest request, String lang) {
-        Map<String, Question> questionById = dataService.getQuestions().stream()
-                .collect(Collectors.toMap(Question::id, Function.identity()));
-
+        Map<String, Question> questionById = questionsById();
         validateAnswers(request.answers(), questionById);
-
-        Map<String, WeightedScore> scores = new HashMap<>();
-        for (SubmittedAnswer submittedAnswer : request.answers()) {
-            Question question = questionById.get(submittedAnswer.questionId());
-            double towardAgreement = submittedAnswer.answer().scoreTowardAgreement();
-            double leftScore = question.agreePole() == Pole.LEFT ? towardAgreement : 1.0 - towardAgreement;
-            scores.computeIfAbsent(question.axisId(), ignored -> new WeightedScore())
-                    .add(leftScore, question.weight());
-        }
-        addArchetypeAnswers(request.archetype(), scores);
+        Map<String, WeightedScore> scores = accumulate(request, questionById);
 
         String normalizedLang = QuizDataService.normalizeLang(lang);
         return dataService.getAxes(normalizedLang).stream()
                 .map(axis -> toAxisResult(axis, scores.get(axis.id()), normalizedLang))
                 .toList();
+    }
+
+    /**
+     * Quanto cada resposta puxou o eixo dela, em pontos de leftPercent (positivo = polo esquerdo). E a mesma conta do
+     * {@link #score(ResultRequest, String)}: a soma dos impactos de um eixo e a distancia dele ao centro, sem o
+     * arredondamento. As perguntas de arquetipo entram no peso do eixo, mas nao aparecem na lista (nao tem texto).
+     */
+    public Map<String, List<AnswerImpact>> answerImpacts(ResultRequest request, String lang) {
+        Map<String, Question> questionById = questionsById();
+        validateAnswers(request.answers(), questionById);
+        Map<String, WeightedScore> scores = accumulate(request, questionById);
+        Map<String, String> textById = dataService.getQuestionsForLang(QuizDataService.normalizeLang(lang)).stream()
+                .collect(Collectors.toMap(Question::id, Question::text));
+
+        Map<String, List<AnswerImpact>> byAxis = new HashMap<>();
+        for (SubmittedAnswer submittedAnswer : request.answers()) {
+            Question question = questionById.get(submittedAnswer.questionId());
+            double totalWeight = scores.get(question.axisId()).weight;
+            double impact = question.weight() * (leftScore(question, submittedAnswer.answer()) - 0.5) / totalWeight * 100.0;
+            byAxis.computeIfAbsent(question.axisId(), ignored -> new java.util.ArrayList<>()).add(new AnswerImpact(
+                    question.id(),
+                    textById.getOrDefault(question.id(), question.text()),
+                    submittedAnswer.answer(),
+                    impact));
+        }
+        return byAxis;
+    }
+
+    private Map<String, Question> questionsById() {
+        return dataService.getQuestions().stream()
+                .collect(Collectors.toMap(Question::id, Function.identity()));
+    }
+
+    private Map<String, WeightedScore> accumulate(ResultRequest request, Map<String, Question> questionById) {
+        Map<String, WeightedScore> scores = new HashMap<>();
+        for (SubmittedAnswer submittedAnswer : request.answers()) {
+            Question question = questionById.get(submittedAnswer.questionId());
+            scores.computeIfAbsent(question.axisId(), ignored -> new WeightedScore())
+                    .add(leftScore(question, submittedAnswer.answer()), question.weight());
+        }
+        addArchetypeAnswers(request.archetype(), scores);
+        return scores;
+    }
+
+    // Nota da resposta no polo esquerdo (0 a 1): concordar com uma pergunta do polo direito vale o oposto.
+    private static double leftScore(Question question, AnswerValue answer) {
+        double towardAgreement = answer.scoreTowardAgreement();
+        return question.agreePole() == Pole.LEFT ? towardAgreement : 1.0 - towardAgreement;
     }
 
     // Reconstrói o resultado a partir de um vetor de leftPercent (um valor por

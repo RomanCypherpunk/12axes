@@ -138,6 +138,7 @@ public class QuizController {
         var matches = matcherService.findMatches(axes, lang, religion);
         var personalityMatches = personalityMatcherService.findMatches(axes, lang, religion);
         var topPersonality = personalityMatches.getFirst();
+        // A personalidade mais compativel de cada area e conteudo do Relatorio Completo: aqui so alimenta a escolha dos livros.
         var categoryBestMatches = personalityMatcherService.findBestPerCategory(axes, lang, religion);
         var topCountry = countryMatcherService.findTopMatch(axes, lang, religion);
         var topHistoricalCountry = countryMatcherService.findTopHistoricalMatch(axes, lang, religion);
@@ -166,7 +167,6 @@ public class QuizController {
                 topPersonality,
                 personalityMatches,
                 dimensionMatcherService.findAll(axes, lang, topPersonality.personalityId(), religion),
-                categoryBestMatches,
                 personalityMatcherService.findBottomMatches(axes, lang, religion),
                 axisOutlierService.findMostUnusual(axes, lang),
                 axisOutlierService.findMostCommon(axes, lang),

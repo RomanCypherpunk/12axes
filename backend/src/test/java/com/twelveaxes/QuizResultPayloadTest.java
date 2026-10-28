@@ -36,7 +36,6 @@ class QuizResultPayloadTest {
                 .andExpect(jsonPath("$.dimensionMatches[0].dimension").value("political"))
                 .andExpect(jsonPath("$.countryDimensionMatches.length()").value(3))
                 .andExpect(jsonPath("$.countryDimensionMatches[0].dimension").value("political"))
-                .andExpect(jsonPath("$.categoryBestMatches.length()").value(8))
                 .andExpect(jsonPath("$.bottomPersonalityMatches.length()").value(3))
                 .andExpect(jsonPath("$.mostUnusualAxis.axisId").isNotEmpty())
                 .andExpect(jsonPath("$.mostUnusualAxis.label").isNotEmpty())
@@ -61,10 +60,18 @@ class QuizResultPayloadTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.dimensionMatches.length()").value(3))
                 .andExpect(jsonPath("$.dimensionMatches[0].dimension").value("political"))
-                .andExpect(jsonPath("$.categoryBestMatches.length()").value(8))
-                .andExpect(jsonPath("$.categoryBestMatches[0].category").isNotEmpty())
                 .andExpect(jsonPath("$.topHistoricalCountryMatch.historical").value(true))
                 .andExpect(jsonPath("$.topPartyMatches.length()").value(3))
                 .andExpect(jsonPath("$.topPartyMatches[0].category").isNotEmpty());
+    }
+
+    @Test
+    void freeResultDoesNotCarryTheAreaMatchesOfTheFullReport() throws Exception {
+        for (String lang : new String[] {"pt", "en"}) {
+            mockMvc.perform(get("/api/results/by-axes").param("v", VETOR).param("lang", lang))
+                    .andExpect(status().isOk())
+                    .andExpect(jsonPath("$.categoryBestMatches").doesNotExist())
+                    .andExpect(jsonPath("$.timeline").doesNotExist());
+        }
     }
 }
