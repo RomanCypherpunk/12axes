@@ -32,13 +32,15 @@ import { usePremiumAccess } from '../results/usePremiumAccess';
 import { CsvIcon, DownloadIcon, Ring, ShareImageIcon } from './primitives';
 import { track } from '../../utils/analytics';
 import { pdfButtonAction } from '../../utils/pdfAccess';
+import { paywallEnabled, paywallMode } from '../../utils/paywallFlag';
 import { downloadRankingXlsx } from '../../utils/rankingXlsx';
 
 // Modo de desenvolvimento local do Relatório Completo: abre sem pagamento (o backend também precisa de PREMIUM_DEV_OPEN).
 // Fica fora do build de produção porque a variável só existe em frontend/.env.local.
 const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
-// Compra do Relatório completo (Stripe): ligada por VITE_PAYWALL_ENABLED, e só em português na v1 (preço em reais).
-const PAYWALL_ENABLED = import.meta.env.VITE_PAYWALL_ENABLED === 'true' && LANG === 'pt';
+// Compra do Relatório completo (Stripe): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1) ou
+// desligada (padrão). Só em português na v1 (preço em reais). Ver utils/paywallFlag.
+const PAYWALL_MODE = paywallMode(import.meta.env.VITE_PAYWALL_ENABLED);
 const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
 
 interface ResultsScreenProps {
@@ -58,6 +60,22 @@ interface ResultsScreenProps {
 
 export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, error, onShare, religion, onEditAnswers, premiumAnswers }: ResultsScreenProps) {
   const top = result.topMatch;
+  const PAYWALL_ENABLED = useMemo(
+    () =>
+      paywallEnabled({
+        mode: PAYWALL_MODE,
+        lang: LANG,
+        search: window.location.search,
+        storage: (() => {
+          try {
+            return window.localStorage;
+          } catch {
+            return null;
+          }
+        })()
+      }),
+    []
+  );
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);

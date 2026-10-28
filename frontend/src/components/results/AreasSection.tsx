@@ -22,27 +22,32 @@ interface AreasSectionProps {
 }
 
 export function AreasSection({ generalMatches, areaMatches, axes, results, areaLocked = false, onUnlock }: AreasSectionProps) {
-  const [tab, setTab] = useState<'general' | 'area'>('general');
+  const [chosenTab, setTab] = useState<'general' | 'area'>('general');
   const [info, setInfo] = useState<PersonalityMatch | null>(null);
+  // Sem acesso e sem como comprar (a compra está desligada), a aba de áreas não tem o que mostrar: some, e fica só a lista geral.
+  const showAreaTab = !areaLocked || onUnlock !== undefined;
+  const tab = showAreaTab ? chosenTab : 'general';
   const locked = tab === 'area' && areaLocked;
   const matches = tab === 'general' ? generalMatches : areaMatches;
 
-  if (generalMatches.length === 0 && areaMatches.length === 0 && !areaLocked) {
+  if (generalMatches.length === 0 && areaMatches.length === 0 && !showAreaTab) {
     return null;
   }
 
   return (
     <section className="e-panel" id="areas" data-reveal>
       <h2>{tab === 'general' ? t.areasGeneralTitle : t.areasSectionTitle}</h2>
-      <Tabs
-        label={t.areasTabsAria}
-        value={tab}
-        onChange={setTab}
-        options={[
-          { value: 'general', label: t.areasGeneralTab },
-          { value: 'area', label: t.areasByAreaTab }
-        ]}
-      />
+      {showAreaTab && (
+        <Tabs
+          label={t.areasTabsAria}
+          value={tab}
+          onChange={setTab}
+          options={[
+            { value: 'general', label: t.areasGeneralTab },
+            { value: 'area', label: t.areasByAreaTab }
+          ]}
+        />
+      )}
       {locked ? (
         <div className="e-locked">
           {/* Fundo só de enfeite: oito linhas genéricas, desfocadas, sem nenhum dado. */}
