@@ -3,10 +3,8 @@ import { t } from '../../i18n';
 import type { Axis, AxisResult, CountryDimensionMatch, CountryMatch, ProfileDimension } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { SafeImg } from '../editorial/primitives';
-import { Closeness } from './Closeness';
-import { InfoSheet } from './InfoSheet';
+import { ProfileSheet } from './ProfileSheet';
 import { DimList, FarList, MatchHero, Tabs, type DimItem, type FarItem } from './parts';
-import { SheetMatch } from './SheetMatch';
 
 interface CountriesSectionProps {
   axes: Axis[];
@@ -83,41 +81,22 @@ export function CountriesSection({ current, historical, dimensions, distant, axe
       <DimList items={countryDimItems(dimensions, setInfo)} />
 
       <FarList title={t.countriesDistantTitle} items={countryFarItems(distant)} />
-      {info && <CountryInfoSheet match={info} axes={axes} results={results} onClose={() => setInfo(null)} />}
+      {info && <CountryInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );
 }
 
-export function CountryInfoSheet({ match, axes, results, onClose }: {
-  match: CountryMatch;
-  axes: Axis[];
-  results: Map<string, AxisResult>;
-  onClose: () => void;
-}) {
+/** Ficha de um país ou regime: o que é, em poucas linhas. */
+export function CountryInfoSheet({ match, onClose }: { match: CountryMatch; onClose: () => void }) {
   return (
-    <InfoSheet titleId="e-country-sheet-title" onClose={onClose}>
-      <div className="e-person-sheet-head">
-        <SafeImg
-          className="e-flagimg"
-          src={resolveCountryFlagSrc(match.flagPath)}
-          alt={flagAlt(match)}
-          fallback={t.flagUnavailable}
-        />
-        <div>
-          <span className="e-tag e-tag-neutral">{match.category}</span>
-          <h3 id="e-country-sheet-title">{match.name}</h3>
-          {match.historical && match.period && <p className="e-axis-sheet-label">{match.period}</p>}
-        </div>
-      </div>
-      <SheetMatch compatibility={match.compatibility} />
-      <p className="e-axis-sheet-text">{match.description}</p>
-      <Closeness
-        vector={match.vector}
-        name={match.name}
-        face={<SafeImg className="e-close-face" src={resolveCountryFlagSrc(match.flagPath)} alt={flagAlt(match)} fallback="" />}
-        axes={axes}
-        results={results}
-      />
-    </InfoSheet>
+    <ProfileSheet
+      titleId="e-country-sheet-title"
+      visual={<SafeImg className="e-sheet-flag" src={resolveCountryFlagSrc(match.flagPath)} alt={flagAlt(match)} fallback={t.flagUnavailable} />}
+      label={match.category}
+      name={match.name}
+      caption={match.historical && match.period ? match.period : undefined}
+      description={match.description}
+      onClose={onClose}
+    />
   );
 }

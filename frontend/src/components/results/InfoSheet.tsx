@@ -1,4 +1,4 @@
-import { useEffect, useRef, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useRef, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { t } from '../../i18n';
 
@@ -53,22 +53,23 @@ export function InfoSheet({ titleId, style, className, onClose, children }: Info
   );
 }
 
-interface InfoButtonProps {
-  label: string;
-  onClick: () => void;
-  className?: string;
-}
-
-export function InfoButton({ label, onClick, className = 'e-axis-info' }: InfoButtonProps) {
-  return (
-    <button className={className} type="button" onClick={onClick} aria-label={label}>
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          fillRule="evenodd"
-          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16m-1-4h2v2h-2zm0-1.992s2-.008 2 0C13 13.006 16 12 16 10c0-2.21-1.773-4-3.991-4A4 4 0 0 0 8 10h2c0-1.1.9-2 2-2s2 .9 2 2c0 .9-3 2.367-3 4.008"
-        />
-      </svg>
-    </button>
-  );
+/**
+ * Torna um cartão inteiro clicável para abrir a aba de detalhes, sem botão "?": papel de botão, foco por teclado
+ * (Enter e Espaço) e a classe e-clickable (cursor e anel de foco).
+ */
+export function clickableProps(label: string, onOpen: () => void) {
+  return {
+    className: 'e-clickable',
+    role: 'button' as const,
+    tabIndex: 0,
+    'aria-haspopup': 'dialog' as const,
+    'aria-label': label,
+    onClick: onOpen,
+    onKeyDown: (event: ReactKeyboardEvent<HTMLElement>) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        onOpen();
+      }
+    }
+  };
 }

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { t } from '../../i18n';
 import { CountUpValue } from './CountUpValue';
 import { Ring } from '../editorial/primitives';
-import { InfoButton } from './InfoSheet';
+import { clickableProps } from './InfoSheet';
 
 interface MatchHeroProps {
   visual: ReactNode;
@@ -56,7 +56,8 @@ export interface DimItem {
 }
 
 interface DimRowProps {
-  info?: ReactNode;
+  /** Abre os detalhes ao clicar no cartão inteiro (aria-label incluído). */
+  open?: { label: string; onOpen: () => void };
   visual: ReactNode;
   label: string;
   name: string;
@@ -67,10 +68,9 @@ interface DimRowProps {
 }
 
 /** Linha de perfil (miniatura, tipo, nome e valor à direita), também usada em /compare. */
-export function DimRow({ info, visual, label, name, note, children }: DimRowProps) {
+export function DimRow({ open, visual, label, name, note, children }: DimRowProps) {
   return (
-    <li className="e-dim-row">
-      {info}
+    <li {...(open ? { ...clickableProps(open.label, open.onOpen), className: 'e-dim-row e-clickable' } : { className: 'e-dim-row' })}>
       {visual}
       <div>
         <span className="e-dim">{label}</span>
@@ -93,7 +93,7 @@ export function DimList({ items, hideTitle = false, hideValue = false }: { items
         {items.map((item) => (
           <DimRow
             key={item.key}
-            info={item.onInfo && item.infoLabel && <InfoButton className="e-axis-info e-card-info" label={item.infoLabel} onClick={item.onInfo} />}
+            open={item.onInfo && item.infoLabel ? { label: item.infoLabel, onOpen: item.onInfo } : undefined}
             visual={item.visual}
             label={item.label}
             name={item.name}

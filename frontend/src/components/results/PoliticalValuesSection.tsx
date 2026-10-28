@@ -3,7 +3,7 @@ import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
 import type { Religion } from '../../utils/religion';
-import { InfoButton, InfoSheet } from './InfoSheet';
+import { InfoSheet } from './InfoSheet';
 import { DimRow } from './parts';
 import { ValueCoin } from './ValueCoin';
 
@@ -63,7 +63,7 @@ export function PoliticalValuesSection({ values, category, religion, title, id, 
         {values.map((value) => (
           <DimRow
             key={value.categoryId}
-            info={<InfoButton className="e-axis-info e-card-info" label={t.valueInfoAria(value.name)} onClick={() => setSelected(value)} />}
+            open={{ label: t.valueInfoAria(value.name), onOpen: () => setSelected(value) }}
             visual={<ValueCoin valueId={value.valueId} name={value.name} size={56} religion={religion} />}
             label={value.categoryLabel}
             name={value.name}
