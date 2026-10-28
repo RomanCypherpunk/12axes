@@ -1628,3 +1628,5 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
   .e-paywall{padding-bottom:30px}
   .e-paywall > .e-paywall-card{top:80%}
 }
+.e-paywall-modal .e-btn-primary:disabled{opacity:.85;cursor:progress}
+

@@ -419,6 +419,7 @@ export interface Strings {
   paywallChecking: string;
   paywallProblems: { denied: string; unavailable: string; timeout: string };
   paywallRetry: string;
+  paywallOpening: string;
   areasLockedTitle: string;
   areasLockedText: string;
   areasLockedCta: string;

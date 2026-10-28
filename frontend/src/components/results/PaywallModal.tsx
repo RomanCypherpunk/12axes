@@ -25,7 +25,7 @@ export function PaywallModal({ access, category, onClose }: { access: PremiumAcc
           <strong>{t.paywallPrice}</strong>
         </p>
         <button className="e-btn e-btn-primary" type="button" onClick={purchase} disabled={busy}>
-          {t.paywallCta}
+          {busy ? t.paywallOpening : t.paywallCta}
           <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h14" />
             <path d="m13 6 6 6-6 6" />

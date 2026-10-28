@@ -620,6 +620,7 @@ export const pt: Strings = {
     timeout: 'O pagamento ainda não foi confirmado. Se você pagou com Pix, pode levar alguns minutos.'
   },
   paywallRetry: 'Conferir de novo',
+  paywallOpening: 'Abrindo o pagamento...',
   areasLockedTitle: 'Desbloquear agora',
   areasLockedText: 'Obtenha o relatório completo para ver a personalidade mais próxima de você em cada área de atuação.',
   areasLockedCta: 'Desbloquear o relatório completo',

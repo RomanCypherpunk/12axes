@@ -631,6 +631,7 @@ export const en: Strings = {
     timeout: 'The payment has not been confirmed yet.'
   },
   paywallRetry: 'Check again',
+  paywallOpening: 'Opening the payment...',
   areasLockedTitle: 'Available in the Full report',
   areasLockedText: 'See the figure closest to you in each field, from politics to philosophy, and much more in the full report of your result.',
   areasLockedCta: 'See the full report',
