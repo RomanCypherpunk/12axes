@@ -622,7 +622,7 @@ export const en: Strings = {
   ],
   paywallGuarantee: '7-day refund guarantee',
   paywallPayWith: 'Payment methods: Apple Pay, Google Pay and card',
-  paywallPrice: 'US$ 4.99',
+  paywallPrice: 'US$ 3.99',
   paywallCta: 'Unlock the full report',
   paywallChecking: 'Confirming your payment...',
   paywallProblems: {

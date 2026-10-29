@@ -43,8 +43,8 @@ public class StripeGatewayImpl implements StripeGateway {
                 .setClientReferenceId(nonce)
                 // A moeda segue o idioma e nunca a localizacao de quem paga (o preco tem uma opcao por moeda).
                 .setCurrency("en".equals(lang) ? "usd" : "brl")
-                // O preco ja esta fixado por moeda: nada de conversao automatica pela Stripe.
-                .setAdaptivePricing(SessionCreateParams.AdaptivePricing.builder().setEnabled(false).build())
+                // Em ingles o site mostra o preco em dolar e o checkout converte para a moeda de quem paga; em portugues o preco e sempre em reais.
+                .setAdaptivePricing(SessionCreateParams.AdaptivePricing.builder().setEnabled("en".equals(lang)).build())
                 .setLocale("en".equals(lang) ? SessionCreateParams.Locale.EN : SessionCreateParams.Locale.PT_BR)
                 .setPaymentIntentData(SessionCreateParams.PaymentIntentData.builder()
                         .putMetadata("nonce", nonce)
