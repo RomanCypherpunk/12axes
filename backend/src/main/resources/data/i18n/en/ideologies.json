@@ -122,7 +122,7 @@
     "id": "falangismo",
     "name": "Falangism",
     "category": "Third Position",
-    "description": "Spanish authoritarian nationalism of Catholic and syndicalist inspiration, advocating a corporatist state, national unity, and social hierarchy, becoming the ideological pillar of Franco's regime in Spain.",
+    "description": "Spanish authoritarian nationalism of Catholic and syndicalist inspiration, created by José Antonio Primo de Rivera on the corporatism of his father Miguel's dictatorship; it defends a corporatist state, national unity and social hierarchy, and was a pillar of Francoism.",
     "phrase": "I want a Catholic corporatist state, united under an authoritarian chief, with vertical unions organizing labor and protected trade."
   },
   {
@@ -325,7 +325,7 @@
     "id": "ordoliberalismo",
     "name": "Ordoliberalism",
     "category": "Center",
-    "description": "German liberal school that defends the free market within firm rules guaranteed by the state, fighting monopolies and ensuring competition and stability, serving as the basis of the social market economy.",
+    "description": "German liberal school of Freiburg (Eucken, Rüstow, Müller-Armack) that defends the free market within firm rules guaranteed by the state, against monopolies and central planning, with a Christian ethical basis and social policy, the origin of the social market economy.",
     "phrase": "I want a free market disciplined by firm state rules, that prevent monopolies and sustain the social market economy."
   },
   {
@@ -1915,5 +1915,12 @@
     "category": "Center",
     "description": "Current that keeps the welfare state, trade unions and mixed economy, but defends family, nation, public order and restricted immigration, as in Mette Frederiksen's Danish social democracy.",
     "phrase": "I want a cohesive nation of family, work and firm borders, with parliamentary democracy, strong unions and universal welfare in a mixed economy."
+  },
+  {
+    "id": "austrofascismo",
+    "name": "Austrofascism",
+    "category": "Third Position",
+    "description": "Authoritarian, corporatist, Catholic regime of Dollfuss and Schuschnigg (1934–1938): single party (Fatherland Front), a Ständestaat inspired by Quadragesimo Anno, repression of socialists and Nazis, and defense of a German, Christian, independent Austria.",
+    "phrase": "I want a Christian, independent Austria under a strong chancellor and a single party, with Catholic corporations replacing parliament, parties and unions."
   }
 ]

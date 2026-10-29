@@ -198,7 +198,7 @@
     "id": "falangismo",
     "name": "Falangismo",
     "category": "Terceira Posição",
-    "description": "Nacionalismo autoritário espanhol de inspiração católica e sindicalista, que defende um Estado corporativo, a unidade nacional e a hierarquia social, tornando-se o pilar ideológico do regime de Franco na Espanha.",
+    "description": "Nacionalismo autoritário espanhol de inspiração católica e sindicalista, criado por José Antonio Primo de Rivera sobre o corporativismo da ditadura de seu pai Miguel; defende Estado corporativo, unidade nacional e hierarquia social, e foi pilar do franquismo.",
     "phrase": "Quero um Estado corporativo católico, unido sob um chefe autoritário, com sindicatos verticais organizando o trabalho e o comércio protegido.",
     "vector": null,
     "countryId": "espanha-franquista",
@@ -636,7 +636,7 @@
     "id": "ordoliberalismo",
     "name": "Ordoliberalismo",
     "category": "Centro",
-    "description": "Vertente liberal alemã que defende o livre mercado dentro de regras firmes garantidas pelo Estado, combatendo monopólios e assegurando concorrência e estabilidade, servindo de base à economia social de mercado.",
+    "description": "Vertente liberal alemã da Escola de Friburgo (Eucken, Rüstow, Müller-Armack) que defende o livre mercado dentro de regras firmes garantidas pelo Estado, contra monopólios e planejamento central, com base ética cristã e política social, origem da economia social de mercado.",
     "phrase": "Quero um mercado livre disciplinado por regras firmes do Estado, que impeçam monopólios e sustentem a economia social de mercado.",
     "vector": null,
     "countryId": "alemanha",
@@ -3496,5 +3496,17 @@
     "countryId": "franca",
     "personalityId": "jacques-chirac",
     "religions": []
+  },
+  {
+    "id": "austrofascismo",
+    "name": "Austrofascismo",
+    "category": "Terceira Posição",
+    "description": "Regime autoritário, corporativo e católico de Dollfuss e Schuschnigg (1934–1938): partido único (Frente Patriótica), Estado estamental inspirado na Quadragesimo Anno, repressão a socialistas e nazistas e defesa de uma Áustria alemã, cristã e independente.",
+    "phrase": "Quero uma Áustria cristã e independente sob um chanceler forte e partido único, com corporações católicas no lugar do parlamento, dos partidos e dos sindicatos.",
+    "countryId": "austria-corporativista",
+    "personalityId": "engelbert-dollfuss",
+    "religions": [
+      "catholic"
+    ]
   }
 ]

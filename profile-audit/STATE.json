@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-10-28T20:00:00Z",
+  "lastUpdated": "2026-10-29T02:10:05Z",
   "personality": {
-    "totalProfiles": 639,
+    "totalProfiles": 647,
     "pending": [],
     "done": [
       "lenin",
@@ -643,14 +643,22 @@
       "allan-kardec",
       "bezerra-de-menezes",
       "miguel-primo-de-rivera",
-      "elias-jabbour"
+      "elias-jabbour",
+      "ted-cruz",
+      "ben-sasse",
+      "pete-hegseth",
+      "rand-paul",
+      "heinrich-himmler",
+      "alfred-muller-armack",
+      "alexander-rustow",
+      "walter-eucken"
     ],
     "lastUpdated": "2026-10-05T19:27:12Z",
     "audited": 509,
     "unanswered": 0
   },
   "ideology": {
-    "totalProfiles": 270,
+    "totalProfiles": 271,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -927,7 +935,8 @@
       "conservadorismo-pragmatico",
       "colonialismo",
       "desenvolvimentismo",
-      "social-democracia-conservadora"
+      "social-democracia-conservadora",
+      "austrofascismo"
     ]
   },
   "country": {

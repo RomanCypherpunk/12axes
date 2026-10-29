@@ -274,17 +274,17 @@
   {
     "ideologyId": "falangismo",
     "vector": {
-      "estrutura": 9.2,
-      "representacao": 16.2,
-      "poder": 88.6,
-      "imigracao": 76.5,
-      "diplomacia": 88.6,
-      "intervencao": 22.1,
-      "economia": 75.7,
-      "controle": 87.3,
-      "comercio": 89.9,
-      "religiao": 23.6,
-      "moral": 18.4,
+      "estrutura": 18.7,
+      "representacao": 26.9,
+      "poder": 77.9,
+      "imigracao": 80.1,
+      "diplomacia": 74.8,
+      "intervencao": 41.9,
+      "economia": 71.0,
+      "controle": 76.6,
+      "comercio": 80.4,
+      "religiao": 9.3,
+      "moral": 10.1,
       "tecnologia": 49.9
     }
   },
@@ -767,18 +767,18 @@
   {
     "ideologyId": "ordoliberalismo",
     "vector": {
-      "estrutura": 41.2,
-      "representacao": 76.2,
-      "poder": 37.5,
-      "imigracao": 40,
-      "diplomacia": 30,
-      "intervencao": 57.5,
-      "economia": 41.2,
-      "controle": 40,
-      "comercio": 27.5,
-      "religiao": 75,
-      "moral": 71.2,
-      "tecnologia": 62.5
+      "estrutura": 56.9,
+      "representacao": 81.1,
+      "poder": 49.6,
+      "imigracao": 60.0,
+      "diplomacia": 37.1,
+      "intervencao": 54.1,
+      "economia": 42.5,
+      "controle": 35.4,
+      "comercio": 28.2,
+      "religiao": 35.3,
+      "moral": 30.1,
+      "tecnologia": 41.7
     }
   },
   {
@@ -4638,6 +4638,23 @@
       "religiao": 54.4,
       "moral": 49.1,
       "tecnologia": 47.6
+    }
+  },
+  {
+    "ideologyId": "austrofascismo",
+    "vector": {
+      "estrutura": 23.5,
+      "representacao": 17.4,
+      "poder": 83.8,
+      "imigracao": 80.1,
+      "diplomacia": 56.4,
+      "intervencao": 50.7,
+      "economia": 56.7,
+      "controle": 71.9,
+      "comercio": 73.2,
+      "religiao": 4.5,
+      "moral": 7.7,
+      "tecnologia": 41.7
     }
   }
 ]
