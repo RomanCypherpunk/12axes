@@ -4834,5 +4834,112 @@
     "religions": [
       "catholic"
     ]
+  },
+  {
+    "id": "eua-nevada",
+    "name": "Nevada (Estados Unidos)",
+    "category": "Região libertária-turística",
+    "description": "Estado do oeste dos Estados Unidos, Nevada não cobra imposto de renda estadual e vive de cassinos, turismo e mineração, com jogo legalizado, casamento rápido e prostituição regulada em alguns condados.",
+    "flagPath": "/countries/flags/eua-nevada.png",
+    "historical": false,
+    "period": "",
+    "vector": null,
+    "flagKind": null,
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nevada.svg",
+    "flagNote": "Bandeira do estado de Nevada (Estados Unidos) usada como referência visual da região.",
+    "religions": []
+  },
+  {
+    "id": "nova-zelandia-de-roger-douglas",
+    "name": "Nova Zelândia de Roger Douglas",
+    "category": "Democracia de reformas neoliberais",
+    "description": "Sob o governo trabalhista de David Lange e o ministro Roger Douglas, a Nova Zelândia privatizou estatais, cortou subsídios agrícolas, abriu o comércio e desregulou a economia, mantendo a democracia e a política antinuclear.",
+    "flagPath": "/countries/flags/nova-zelandia.png",
+    "historical": true,
+    "period": "1984–1990",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Zealand.svg",
+    "flagNote": "O período manteve a bandeira da Nova Zelândia, a mesma de hoje.",
+    "religions": []
+  },
+  {
+    "id": "argentina-regime-militar",
+    "name": "Argentina do Regime Militar",
+    "category": "Ditadura militar repressiva e liberalizante",
+    "description": "Sob a junta do Processo de Reorganização Nacional, a Argentina fechou o Congresso, reprimiu a oposição com desaparecimentos forçados e liberalizou a economia, até a derrota nas Malvinas e a volta da democracia.",
+    "flagPath": "/countries/flags/argentina.png",
+    "historical": true,
+    "period": "1976–1983",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
+    "flagNote": "O regime manteve a bandeira argentina.",
+    "religions": [
+      "catholic"
+    ]
+  },
+  {
+    "id": "tanzania-de-nyerere",
+    "name": "Tanzânia de Nyerere",
+    "category": "Socialismo africano ujamaa",
+    "description": "Sob Julius Nyerere, a Tanzânia adotou o socialismo ujamaa, com partido único, estatização de bancos e indústrias, aldeias coletivas, alfabetização em suaíli e política externa não alinhada.",
+    "flagPath": "/countries/flags/tanzania.png",
+    "historical": true,
+    "period": "1964–1985",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg",
+    "flagNote": "A Tanzânia de Nyerere usou a bandeira adotada em 1964, a mesma de hoje.",
+    "religions": []
+  },
+  {
+    "id": "brasil-de-fernando-henrique-cardoso",
+    "name": "Brasil de Fernando Henrique Cardoso",
+    "category": "Democracia social-liberal",
+    "description": "Com Fernando Henrique Cardoso na Fazenda e depois na Presidência, o Brasil estabilizou a moeda com o Plano Real, privatizou estatais e adotou a Lei de Responsabilidade Fiscal, numa democracia que aprovou a reeleição.",
+    "flagPath": "/countries/flags/brasil.gif",
+    "historical": true,
+    "period": "1993–2002",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
+    "flagNote": "O período de Cardoso na Fazenda e na Presidência manteve a bandeira nacional brasileira.",
+    "religions": []
+  },
+  {
+    "id": "polonia-socialista",
+    "name": "Polônia Socialista",
+    "category": "Socialismo unipartidário-contestado",
+    "description": "República Popular da Polônia, Estado de partido único do Pacto de Varsóvia sob o Partido Operário Unificado, combinou economia planificada com agricultura majoritariamente privada, Igreja Católica forte e revoltas operárias, até a vitória do Solidariedade em 1989.",
+    "flagPath": "/countries/flags/polonia.png",
+    "historical": true,
+    "period": "1947–1989",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg",
+    "flagNote": "A República Popular da Polônia manteve a bandeira branca e vermelha, a mesma de hoje.",
+    "religions": []
+  },
+  {
+    "id": "mocambique-de-samora-machel",
+    "name": "Moçambique de Samora Machel",
+    "category": "Marxismo-leninismo africano",
+    "description": "Sob Samora Machel e a Frelimo, Moçambique virou Estado marxista-leninista de partido único após a independência: estatizações, aldeias comunais, alfabetização e saúde gratuita, aliança com a URSS e guerra civil contra a Renamo.",
+    "flagPath": "/countries/flags/mocambique-de-samora-machel.png",
+    "historical": true,
+    "period": "1975–1986",
+    "vector": null,
+    "flagKind": "historical-flag",
+    "flagSourceName": "Wikimedia Commons",
+    "flagSourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mozambique_(1975%E2%80%931983).svg",
+    "flagNote": "Bandeira da República Popular de Moçambique (1975–1983), usada na maior parte do período.",
+    "religions": []
   }
 ]
