@@ -129,7 +129,7 @@ describe('trocar pergunta (pickReplacement)', () => {
   const quiz = selectAndBalanceQuestions(payload).questions;
   const target = quiz[0];
 
-  it('devolve uma pergunta do mesmo eixo e do mesmo polo, que ainda não está no quiz', () => {
+  it('troca primeiro dentro do mesmo eixo e polo, sem repetir pergunta do quiz', () => {
     const replacement = pickReplacement(payload.questions, quiz, new Set(), target);
     expect(replacement).not.toBeNull();
     expect(replacement!.axisId).toBe(target.axisId);
@@ -137,20 +137,25 @@ describe('trocar pergunta (pickReplacement)', () => {
     expect(quiz.map((q) => q.id)).not.toContain(replacement!.id);
   });
 
-  it('não devolve uma pergunta já trocada e acaba quando não sobra nenhuma', () => {
+  it('esgota o polo e depois passa ao polo invertido do mesmo eixo, até acabar o eixo', () => {
     const discarded = new Set<string>();
     let current = [...quiz];
-    let swaps = 0;
-    for (;;) {
+    const poles: string[] = [];
+    for (let guard = 0; guard < 30; guard++) {
       const replacement = pickReplacement(payload.questions, current, discarded, current[0]);
       if (!replacement) break;
+      expect(replacement.axisId).toBe(target.axisId);
+      expect(discarded.has(replacement.id)).toBe(false);
+      poles.push(replacement.agreePole);
       discarded.add(current[0].id);
       current = [replacement, ...current.slice(1)];
-      swaps++;
-      expect(swaps).toBeLessThanOrEqual(10);
     }
-    // 10 perguntas do polo no pool, 1 ou 2 já usadas: sobram 8 ou 9 trocas
-    expect(swaps).toBeGreaterThanOrEqual(8);
+    // Todas as do mesmo polo vêm antes de qualquer uma do polo invertido.
+    const firstOpposite = poles.findIndex((pole) => pole !== target.agreePole);
+    expect(firstOpposite).toBeGreaterThan(0);
+    expect(poles.slice(firstOpposite).every((pole) => pole !== target.agreePole)).toBe(true);
+    // O eixo tem 20 perguntas; 3 estavam no quiz: 17 trocas possíveis, e depois acabou.
+    expect(poles).toHaveLength(17);
     expect(replacementCandidates(payload.questions, current, discarded, current[0])).toHaveLength(0);
   });
 });

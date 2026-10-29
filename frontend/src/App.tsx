@@ -382,8 +382,8 @@ function MainApp() {
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
-  // "Trocar" só existe nas versões curtas (36 e 60): a de 240 já usa todas as perguntas. O botão apaga quando
-  // acabam as perguntas do mesmo eixo e polo.
+  // "Trocar" só existe nas versões curtas (36 e 60): a de 240 já usa todas as perguntas. Troca primeiro dentro
+  // do eixo e polo e, quando acabam, dentro do eixo com o polo invertido; o botão apaga quando acaba tudo do eixo.
   const canSwapQuestions = Boolean(quiz && quiz.variant !== 'extreme' && poolRef.current);
   const swapsLeft =
     quiz && currentQuestion && canSwapQuestions && poolRef.current

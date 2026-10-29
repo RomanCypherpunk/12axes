@@ -111,8 +111,9 @@ export function interleaveByPole(questions: Question[]): Question[] {
 }
 
 /**
- * Perguntas que podem entrar no lugar de `target`: do mesmo eixo e do mesmo polo, fora do quiz atual
- * e que o usuário ainda não trocou. Trocar nunca desequilibra o resultado, porque o polo se mantém.
+ * Perguntas que podem entrar no lugar de `target`, na ordem de preferência: primeiro as do mesmo eixo e do
+ * mesmo polo (o resultado segue equilibrado); só quando acabam, as do mesmo eixo com o polo invertido. Fora
+ * do quiz atual e nunca uma que o usuário já trocou. Devolve só o primeiro grupo que tiver alguma.
  */
 export function replacementCandidates(
   pool: Question[],
@@ -121,16 +122,14 @@ export function replacementCandidates(
   target: Question
 ): Question[] {
   const used = new Set(current.map((question) => question.id));
-  return pool.filter(
-    (question) =>
-      question.axisId === target.axisId &&
-      question.agreePole === target.agreePole &&
-      !used.has(question.id) &&
-      !discardedIds.has(question.id)
+  const available = pool.filter(
+    (question) => question.axisId === target.axisId && !used.has(question.id) && !discardedIds.has(question.id)
   );
+  const samePole = available.filter((question) => question.agreePole === target.agreePole);
+  return samePole.length > 0 ? samePole : available;
 }
 
-/** Sorteia a pergunta que entra no lugar de `target`, ou null quando não sobrou nenhuma. */
+/** Sorteia a pergunta que entra no lugar de `target` (mesmo polo primeiro), ou null quando não sobrou nenhuma. */
 export function pickReplacement(
   pool: Question[],
   current: Question[],
