@@ -616,7 +616,7 @@ export const pt: Strings = {
   paywallChecking: 'Confirmando o seu pagamento...',
   paywallProblems: {
     denied: 'Este pagamento não vale para este resultado, ou foi reembolsado.',
-    unavailable: 'Não foi possível falar com o pagamento agora. Tente de novo em instantes.',
+    unavailable: 'Serviço indisponível no momento, tente novamente em alguns instantes.',
     timeout: 'O pagamento ainda não foi confirmado. Se você pagou com Pix, pode levar alguns minutos.'
   },
   paywallRetry: 'Conferir de novo',

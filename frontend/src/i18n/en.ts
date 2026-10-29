@@ -627,7 +627,7 @@ export const en: Strings = {
   paywallChecking: 'Confirming your payment...',
   paywallProblems: {
     denied: 'This payment does not apply to this result, or it was refunded.',
-    unavailable: 'Could not reach the payment service right now. Please try again shortly.',
+    unavailable: 'Service unavailable at the moment, please try again in a few moments.',
     timeout: 'The payment has not been confirmed yet.'
   },
   paywallRetry: 'Check again',
