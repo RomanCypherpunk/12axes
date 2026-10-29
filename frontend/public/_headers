@@ -19,3 +19,13 @@
 /share-examples/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=2592000
+
+# Ícones do site: a Vercel entrega o HTML e aponta para estes arquivos, que moram aqui (ver iconCdnPlugin e site-icons.mjs).
+/favicon.ico
+  Cache-Control: public, max-age=2592000
+
+/favicon-32x32.png
+  Cache-Control: public, max-age=2592000
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000

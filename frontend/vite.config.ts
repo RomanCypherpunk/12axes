@@ -48,6 +48,20 @@ function assetFallbackPlugin(cdn: string) {
   };
 }
 
+// Com VITE_ASSETS_CDN, os ícones do <head> (favicon e apple-touch-icon) também saem da CDN: cada visita pede de 3 a 4
+// deles, e na Vercel todo pedido é cobrado. A imagem de compartilhamento (og:image) continua no próprio site.
+function iconCdnPlugin(cdn: string) {
+  return {
+    name: 'icon-cdn',
+    apply: 'build' as const,
+    transformIndexHtml(html: string) {
+      if (!cdn) return html;
+      const base = cdn.replace(/\/+$/, '');
+      return html.replace(/(<link rel="(?:icon|shortcut icon|apple-touch-icon)"[^>]*? href=")(\/[^"]+)(")/g, `$1${base}$2$3`);
+    }
+  };
+}
+
 export default defineConfig(({ mode }) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const cwd = (globalThis as { process?: { cwd: () => string } }).process?.cwd?.() ?? '.';
@@ -57,7 +71,7 @@ export default defineConfig(({ mode }) => {
   const commitSha = (env.VERCEL_GIT_COMMIT_SHA || env.CF_PAGES_COMMIT_SHA || '').slice(0, 10);
 
   return {
-    plugins: [react(), asyncCssLinkPlugin(), assetFallbackPlugin((env.VITE_ASSETS_CDN || '').replace(/\/+$/, '')), catalogueDevPlugin()],
+    plugins: [react(), asyncCssLinkPlugin(), assetFallbackPlugin((env.VITE_ASSETS_CDN || '').replace(/\/+$/, '')), iconCdnPlugin((env.VITE_ASSETS_CDN || '').replace(/\/+$/, '')), catalogueDevPlugin()],
     experimental: {
       // Com VITE_ASSETS_CDN, os arquivos de /assets (JS, CSS e fontes com hash) são pedidos a essa CDN e a hospedagem
       // do site entrega só o HTML. Os arquivos de public/ (favicon etc.) continuam no próprio site.

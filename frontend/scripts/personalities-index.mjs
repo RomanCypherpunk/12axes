@@ -2,6 +2,7 @@
 // atuação, com busca, filtro por área, retrato e a "faixa" de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
 import { siteHeader } from './site-header.mjs';
+import { iconLinks } from './site-icons.mjs';
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';
@@ -134,9 +135,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    ${iconLinks()}
     <meta property="og:type" content="${ogType}" />
     <meta property="og:site_name" content="12 Axes" />
     <meta property="og:locale" content="${L.s.ogLocale}" />

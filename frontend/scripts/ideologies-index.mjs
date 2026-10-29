@@ -3,6 +3,7 @@
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
 // das páginas de detalhe.
 import { siteHeader } from './site-header.mjs';
+import { iconLinks } from './site-icons.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
 
@@ -220,9 +221,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    ${iconLinks()}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="12 Axes" />
     <meta property="og:locale" content="${L.s.ogLocale}" />
