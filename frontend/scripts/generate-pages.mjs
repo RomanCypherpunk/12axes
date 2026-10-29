@@ -17,7 +17,7 @@ import { booksIndexPage, BOOKS_CSS } from './books-index.mjs';
 import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
 import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
 import { policyPages, POLICY_CSS } from './policy-pages.mjs';
-import { cdnifyHtml } from './cdn.mjs';
+import { cdnifyHtml, cdnifyShareImage } from './cdn.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -465,7 +465,7 @@ function buildHomeVariants() {
   if (ldIndex !== enJsonLdBlocks.length) {
     throw new Error(`Esperava 3 blocos ld+json no index.html, encontrei ${ldIndex}`);
   }
-  writeFileSync(join(DIST, 'en.html'), en);
+  writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(en));
 }
 
 const allPaths = [];

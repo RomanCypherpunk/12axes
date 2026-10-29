@@ -20,6 +20,15 @@ export function iconLinks() {
 // só rodem se a cópia local também falhar.
 const IMAGE_FALLBACK = `document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&!t.getAttribute('data-f')){var s=t.getAttribute('src')||'';if(s.indexOf(${JSON.stringify(CDN)})===0){t.setAttribute('data-f','1');e.stopPropagation();t.src=s.slice(${CDN.length})}}},true)`;
 
+/**
+ * Só o logo das metatags de compartilhamento. Para as homes do app (SPA), que já tratam falha de imagem no próprio React
+ * e não podem receber o ouvinte global de cdnifyHtml (ele seguraria o evento antes do onError do React).
+ */
+export function cdnifyShareImage(html) {
+  if (!CDN) return html;
+  return html.replaceAll(`${SITE}/logo.png`, `${CDN}/logo.png`);
+}
+
 /** Reescreve o HTML de uma página gerada para buscar imagens, CSS e imagens de compartilhamento na CDN. */
 export function cdnifyHtml(html) {
   if (!CDN) return html;
