@@ -60,7 +60,20 @@ public class EntitlementToken {
 
     /** Os dados do token quando ele e valido para este vetor; vazio em qualquer outro caso. */
     public Optional<Claims> verify(String token, String vectorHash) {
-        if (token == null || vectorHash == null) {
+        if (vectorHash == null) {
+            return Optional.empty();
+        }
+        return parse(token, vectorHash);
+    }
+
+    /** Os dados do token quando a assinatura confere e ele nao expirou, de qualquer resultado (renovacao do acesso). */
+    public Optional<Claims> verifyAnyVector(String token) {
+        return parse(token, null);
+    }
+
+    // vectorHash nulo = aceita o token de qualquer resultado.
+    private Optional<Claims> parse(String token, String vectorHash) {
+        if (token == null) {
             return Optional.empty();
         }
         String[] parts = token.split("\\.", -1);
@@ -79,7 +92,7 @@ public class EntitlementToken {
             return Optional.empty();
         }
         String[] fields = new String(payloadBytes, StandardCharsets.UTF_8).split("\\|", -1);
-        if (fields.length != 5 || !VERSION.equals(fields[0]) || !vectorHash.equals(fields[1])) {
+        if (fields.length != 5 || !VERSION.equals(fields[0]) || (vectorHash != null && !vectorHash.equals(fields[1]))) {
             return Optional.empty();
         }
         try {

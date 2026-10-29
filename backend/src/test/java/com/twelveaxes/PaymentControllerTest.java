@@ -292,6 +292,61 @@ class PaymentControllerTest {
         unlockGift(VECTOR, "gift-test-key", NONCE).andExpect(status().isBadRequest());
     }
 
+    private String paidToken() throws Exception {
+        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
+        String body = unlock(VECTOR, SESSION, null).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+        return objectMapper.readTree(body).get("token").asText();
+    }
+
+    private org.springframework.test.web.servlet.ResultActions renew(String vector, String oldToken, String pay) throws Exception {
+        Map<String, Object> body = new java.util.LinkedHashMap<>();
+        body.put("v", vector);
+        body.put("renew", oldToken);
+        if (pay != null) {
+            body.put("pay", pay);
+        }
+        return mockMvc.perform(post("/api/unlock").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(body)));
+    }
+
+    @Test
+    void renewMovesAPaidAccessToTheEditedResult() throws Exception {
+        String oldToken = paidToken();
+
+        String body = renew(OTHER_VECTOR, oldToken, null).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+
+        String token = objectMapper.readTree(body).get("token").asText();
+        assertThat(entitlementToken.verify(token, hashOf(OTHER_VECTOR))).get().extracting(EntitlementToken.Claims::paymentRef).isEqualTo("pi_3Paid");
+    }
+
+    @Test
+    void renewIsRefusedAfterARefund() throws Exception {
+        String oldToken = paidToken();
+        GATEWAY.refunded.set(true);
+
+        renew(OTHER_VECTOR, oldToken, null).andExpect(status().isForbidden());
+    }
+
+    @Test
+    void renewNeedsAValidSignedToken() throws Exception {
+        renew(OTHER_VECTOR, "lixo.lixo", null).andExpect(status().isForbidden());
+        String valid = paidToken();
+        renew(OTHER_VECTOR, valid.substring(0, valid.length() - 2) + "xx", null).andExpect(status().isForbidden());
+    }
+
+    @Test
+    void renewCannotBeMixedWithAnotherProof() throws Exception {
+        renew(OTHER_VECTOR, paidToken(), NONCE).andExpect(status().isBadRequest());
+    }
+
+    @Test
+    void renewKeepsAGiftAccessWithoutCallingStripeForRefunds() throws Exception {
+        String body = unlockGift(VECTOR, "gift-test-key", null).andReturn().getResponse().getContentAsString();
+        String giftToken = objectMapper.readTree(body).get("token").asText();
+        GATEWAY.refunded.set(true);
+
+        renew(OTHER_VECTOR, giftToken, null).andExpect(status().isOk());
+    }
+
     @Test
     void paymentResponsesAreNoStore() throws Exception {
         mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)

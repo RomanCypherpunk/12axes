@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { startCheckout, unlockPayment } from '../../services/premiumApi';
 import { ApiError } from '../../services/quizApi';
 import { track } from '../../utils/analytics';
-import { loadToken, removeToken, saveToken, vectorHash } from '../../utils/entitlement';
+import { findRenewableToken, loadToken, removeToken, saveToken, vectorHash } from '../../utils/entitlement';
 
 /** Por que o acesso não abriu: outro resultado ou reembolso ("denied"), Stripe/servidor fora ("unavailable"), ou o Pix demorou ("timeout"). */
 export type AccessProblem = 'denied' | 'unavailable' | 'timeout';
@@ -73,7 +73,25 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
 
       if (!payment) {
         const stored = loadToken(hash);
-        if (!cancelled) setState(stored ? { status: 'unlocked', token: stored } : { status: 'locked', problem: null, busy: false });
+        if (stored) {
+          if (!cancelled) setState({ status: 'unlocked', token: stored });
+          return;
+        }
+        // Resultado novo (as respostas foram editadas) em um navegador que já pagou outro: renova o acesso, sem cobrar de novo.
+        const previous = findRenewableToken(hash);
+        if (previous) {
+          if (!cancelled) setState({ status: 'checking' });
+          try {
+            const renewed = await unlockPayment({ vector, renew: previous });
+            if (cancelled) return;
+            saveToken(hash, renewed);
+            setState({ status: 'unlocked', token: renewed });
+            return;
+          } catch {
+            // Pagamento reembolsado, acesso vencido ou servidor fora: segue como quem ainda não pagou.
+          }
+        }
+        if (!cancelled) setState({ status: 'locked', problem: null, busy: false });
         return;
       }
 

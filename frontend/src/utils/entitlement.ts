@@ -59,6 +59,55 @@ export function loadToken(hash: string, now: number = Date.now()): string | null
   }
 }
 
+interface KeyedStorage {
+  readonly length: number;
+  key(index: number): string | null;
+  getItem(key: string): string | null;
+}
+
+/** Quando o token foi emitido (ms), lido do próprio token; null se ele não tiver o formato esperado. */
+function tokenIssuedAt(token: string): number | null {
+  try {
+    const base64 = token.split('.')[0].replace(/-/g, '+').replace(/_/g, '/');
+    const fields = atob(base64.padEnd(Math.ceil(base64.length / 4) * 4, '=')).split('|');
+    const issued = Number(fields[3]);
+    return fields[0] === 'v2' && Number.isFinite(issued) ? issued * 1000 : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * O acesso mais recente guardado neste navegador para OUTRO resultado: quem edita as respostas ganha um resultado novo,
+ * e o backend troca esse acesso antigo (se o pagamento valer) por um para o resultado atual.
+ */
+export function findRenewableToken(exceptHash: string, storage: KeyedStorage | null = safeStorage(), now: number = Date.now()): string | null {
+  if (!storage) return null;
+  let best: { token: string; issuedAt: number } | null = null;
+  try {
+    for (let index = 0; index < storage.length; index++) {
+      const key = storage.key(index);
+      if (!key || !key.startsWith(KEY_PREFIX) || key === KEY_PREFIX + exceptHash) continue;
+      const token = storage.getItem(key);
+      const expires = token ? tokenExpiresAt(token) : null;
+      const issuedAt = token ? tokenIssuedAt(token) : null;
+      if (!token || expires === null || issuedAt === null || expires <= now) continue;
+      if (!best || issuedAt > best.issuedAt) best = { token, issuedAt };
+    }
+  } catch {
+    return null;
+  }
+  return best?.token ?? null;
+}
+
+function safeStorage(): KeyedStorage | null {
+  try {
+    return localStorage;
+  } catch {
+    return null;
+  }
+}
+
 export function removeToken(hash: string): void {
   try {
     localStorage.removeItem(KEY_PREFIX + hash);

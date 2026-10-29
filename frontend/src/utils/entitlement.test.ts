@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
+import { findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
 
 const base64url = (text: string) => btoa(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 const tokenExpiringAt = (seconds: number) => `${base64url(`v2|hash|pi_3Test|1000|${seconds}`)}.assinatura`;
@@ -70,6 +70,25 @@ describe('saveToken e loadToken', () => {
     saveToken('hash-a', tokenExpiringAt(4_000_000_000));
     removeToken('hash-a');
     expect(loadToken('hash-a', 1000)).toBeNull();
+  });
+
+  it('findRenewableToken devolve o acesso mais recente de OUTRO resultado', () => {
+    const at = (issued: number, expires: number) => `${base64url(`v2|hash|pi_3Test|${issued}|${expires}`)}.assinatura`;
+    const older = at(1000, 4_000_000_000);
+    const newer = at(2000, 4_000_000_000);
+    saveToken('hash-a', older);
+    saveToken('hash-b', newer);
+    saveToken('hash-novo', at(3000, 4_000_000_000));
+    expect(findRenewableToken('hash-novo', localStorage, 1000)).toBe(newer);
+    expect(findRenewableToken('hash-b', localStorage, 1000)).not.toBe(newer);
+  });
+
+  it('findRenewableToken ignora expirado, lixo e chaves de outro assunto', () => {
+    localStorage.setItem('outra-coisa', tokenExpiringAt(4_000_000_000));
+    saveToken('hash-a', tokenExpiringAt(2000));
+    saveToken('hash-b', 'lixo');
+    expect(findRenewableToken('hash-novo', localStorage, 3_000_000)).toBeNull();
+    expect(findRenewableToken('hash-novo', null)).toBeNull();
   });
 
   it('com o armazenamento indisponível não quebra', () => {

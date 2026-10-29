@@ -56,7 +56,7 @@ public class PaymentController {
     public record CheckoutResponse(String url) {
     }
 
-    public record UnlockRequest(@NotBlank String v, String sessionId, String pay, String gift) {
+    public record UnlockRequest(@NotBlank String v, String sessionId, String pay, String gift, String renew) {
     }
 
     public record UnlockResponse(String token) {
@@ -123,13 +123,18 @@ public class PaymentController {
     public UnlockResponse unlock(@Valid @RequestBody UnlockRequest request) {
         requireEnabled();
         String vectorHash = EntitlementToken.hashOf(AxisValuesParser.parse(request.v()));
-        if (request.gift() != null && !request.gift().isBlank()) {
-            return unlockByGift(request, vectorHash);
-        }
+        boolean hasGift = request.gift() != null && !request.gift().isBlank();
+        boolean hasRenew = request.renew() != null && !request.renew().isBlank();
         boolean hasSession = request.sessionId() != null && !request.sessionId().isBlank();
         boolean hasNonce = request.pay() != null && !request.pay().isBlank();
-        if (hasSession == hasNonce) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Informe sessionId ou pay");
+        if ((hasGift ? 1 : 0) + (hasRenew ? 1 : 0) + (hasSession ? 1 : 0) + (hasNonce ? 1 : 0) != 1) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Informe so um entre sessionId, pay, gift ou renew");
+        }
+        if (hasGift) {
+            return unlockByGift(request, vectorHash);
+        }
+        if (hasRenew) {
+            return renewAccess(request.renew(), vectorHash);
         }
         Optional<PaidPayment> found;
         if (hasSession) {
@@ -157,15 +162,24 @@ public class PaymentController {
 
     /** Cortesia: a senha {@code gift} (variavel GIFT_KEY) libera o resultado sem pagamento. Sem GIFT_KEY, nao existe. */
     private UnlockResponse unlockByGift(UnlockRequest request, String vectorHash) {
-        boolean other = (request.sessionId() != null && !request.sessionId().isBlank()) || (request.pay() != null && !request.pay().isBlank());
-        if (other) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Informe so gift, sessionId ou pay");
-        }
         boolean valid = giftKey.length > 0 && MessageDigest.isEqual(giftKey, request.gift().trim().getBytes(StandardCharsets.UTF_8));
         if (!valid) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Codigo de cortesia invalido");
         }
         return new UnlockResponse(entitlementToken.issue(vectorHash, GIFT_REF, tokenValidity));
+    }
+
+    /**
+     * Quem edita as respostas ganha outro resultado: o acesso antigo (assinado, valido e sem reembolso) vira um acesso
+     * novo para este resultado, preso ao mesmo pagamento. Sem pagamento antigo valido, 403.
+     */
+    private UnlockResponse renewAccess(String oldToken, String vectorHash) {
+        EntitlementToken.Claims claims = entitlementToken.verifyAnyVector(oldToken.trim())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.FORBIDDEN, "Acesso anterior invalido"));
+        if (!GIFT_REF.equals(claims.paymentRef()) && refundChecker.isRefunded(claims.paymentRef())) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Pagamento reembolsado");
+        }
+        return new UnlockResponse(entitlementToken.issue(vectorHash, claims.paymentRef(), tokenValidity));
     }
 
     /** Stripe fora do ar ou recusando: nunca libera por engano; o front mostra "tente de novo". */
