@@ -1,4 +1,5 @@
 import type { Axis } from '../types/quiz';
+import { assetUrl } from '../utils/assetUrl';
 import type { IdeologyColorKey } from '../utils/ideologyColors';
 import type { TreeLayout } from '../../scripts/tree-layout.mjs';
 
@@ -58,13 +59,24 @@ export function peekTreeData(kind: TreeKind, locale: TreeLocale): TreeData | nul
   return cache.get(keyOf(kind, locale)) ?? null;
 }
 
+/** O JSON da teia vem da CDN; se ela falhar (ou responder com a página inicial no lugar), usa a cópia do próprio site. */
+async function fetchTreeJson(key: string): Promise<Response> {
+  const path = `/tree-data/${key}.json`;
+  const remote = assetUrl(path);
+  if (remote !== path) {
+    const response = await fetch(remote).catch(() => null);
+    if (response?.ok && (response.headers.get('content-type') ?? '').includes('json')) return response;
+  }
+  return fetch(path);
+}
+
 export function loadTreeData(kind: TreeKind, locale: TreeLocale): Promise<TreeData> {
   const key = keyOf(kind, locale);
   const hit = cache.get(key);
   if (hit) return Promise.resolve(hit);
   let pending = inflight.get(key);
   if (!pending) {
-    pending = fetch(`/tree-data/${key}.json`)
+    pending = fetchTreeJson(key)
       .then((response) => {
         if (!response.ok) throw new Error(`tree-data ${key}: HTTP ${response.status}`);
         return response.json() as Promise<Payload>;
@@ -84,7 +96,7 @@ export function loadTreeData(kind: TreeKind, locale: TreeLocale): Promise<TreeDa
             description: node.desc,
             vector: node.vec,
             key: node.key,
-            image: node.img || undefined
+            image: node.img ? assetUrl(node.img) : undefined
           })),
           layout: {
             x: Float64Array.from(payload.x),

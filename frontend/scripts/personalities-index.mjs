@@ -2,7 +2,7 @@
 // atuação, com busca, filtro por área, retrato e a "faixa" de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
 import { siteHeader } from './site-header.mjs';
-import { iconLinks } from './site-icons.mjs';
+import { iconLinks } from './cdn.mjs';
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';

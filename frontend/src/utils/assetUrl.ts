@@ -1,8 +1,12 @@
-// As imagens do catálogo (retratos, bandeiras, logos de partido e cartas da home) podem sair de uma CDN
-// externa em vez da hospedagem do site: a hospedagem cobra por byte entregue, e são elas que mais pesam.
-// VITE_ASSET_BASE aponta para a raiz de `public/` na CDN (ver .env.production); vazio, tudo sai do próprio site,
-// como no desenvolvimento local.
-const ASSET_BASE = ((import.meta.env.VITE_ASSET_BASE as string | undefined) ?? '').replace(/\/+$/, '');
+// As imagens do catálogo (retratos, bandeiras, logos de partido e cartas da home) e os dados da teia saem da CDN
+// em vez da hospedagem do site: a hospedagem cobra por byte entregue, e são eles que mais pesam.
+// A CDN é a mesma que serve /assets (VITE_ASSETS_CDN, o Cloudflare Pages, que publica `public/` junto com o site, então
+// um perfil novo já está lá no mesmo deploy). VITE_ASSET_BASE, se definida, aponta para outra raiz de `public/`.
+// Sem nenhuma das duas, tudo sai do próprio site, como no desenvolvimento local.
+const ASSET_BASE = (
+  ((import.meta.env.VITE_ASSET_BASE as string | undefined) || (import.meta.env.VITE_ASSETS_CDN as string | undefined)) ??
+  ''
+).replace(/\/+$/, '');
 
 /** Endereço de um arquivo de `public/` ("/personalities/portraits/x.jpg"): na CDN quando configurada, senão local. */
 export function assetUrl(path: string): string {

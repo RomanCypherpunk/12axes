@@ -48,8 +48,8 @@ function assetFallbackPlugin(cdn: string) {
   };
 }
 
-// Com VITE_ASSETS_CDN, os ícones do <head> (favicon e apple-touch-icon) também saem da CDN: cada visita pede de 3 a 4
-// deles, e na Vercel todo pedido é cobrado. A imagem de compartilhamento (og:image) continua no próprio site.
+// Com VITE_ASSETS_CDN, os ícones do <head> (favicon e apple-touch-icon) e o logo das metatags de compartilhamento
+// (og:image, twitter:image, JSON-LD) também saem da CDN: cada visita pede de 3 a 4 ícones, e na Vercel todo pedido é cobrado.
 function iconCdnPlugin(cdn: string) {
   return {
     name: 'icon-cdn',
@@ -57,7 +57,9 @@ function iconCdnPlugin(cdn: string) {
     transformIndexHtml(html: string) {
       if (!cdn) return html;
       const base = cdn.replace(/\/+$/, '');
-      return html.replace(/(<link rel="(?:icon|shortcut icon|apple-touch-icon)"[^>]*? href=")(\/[^"]+)(")/g, `$1${base}$2$3`);
+      return html
+        .replace(/(<link rel="(?:icon|shortcut icon|apple-touch-icon)"[^>]*? href=")(\/[^"]+)(")/g, `$1${base}$2$3`)
+        .replace(/https:\/\/12axes\.vercel\.app\/logo\.png/g, `${base}/logo.png`);
     }
   };
 }

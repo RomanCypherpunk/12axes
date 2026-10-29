@@ -3,7 +3,7 @@
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
 // das páginas de detalhe.
 import { siteHeader } from './site-header.mjs';
-import { iconLinks } from './site-icons.mjs';
+import { iconLinks } from './cdn.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
 

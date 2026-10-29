@@ -17,6 +17,7 @@ import { booksIndexPage, BOOKS_CSS } from './books-index.mjs';
 import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
 import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
 import { policyPages, POLICY_CSS } from './policy-pages.mjs';
+import { cdnifyHtml } from './cdn.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -275,7 +276,7 @@ function buildLocaleContext(locale) {
 function writePage(prefix, { basePath, html }) {
   const file = join(DIST, `${(prefix + basePath).replace(/^\//, '')}.html`);
   mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, html);
+  writeFileSync(file, cdnifyHtml(html));
   return prefix + basePath;
 }
 

@@ -29,3 +29,28 @@
 
 /apple-touch-icon.png
   Cache-Control: public, max-age=2592000
+
+# Dados da teia (/tree): o app os busca da CDN, então precisam de CORS.
+/tree-data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+# CSS das páginas de catálogo: nomes sem hash, então cache curto para uma mudança de estilo chegar em até 1 hora.
+/ideologies.css
+  Cache-Control: public, max-age=3600
+/personalities.css
+  Cache-Control: public, max-age=3600
+/countries.css
+  Cache-Control: public, max-age=3600
+/parties.css
+  Cache-Control: public, max-age=3600
+/books.css
+  Cache-Control: public, max-age=3600
+/profile.css
+  Cache-Control: public, max-age=3600
+/policy.css
+  Cache-Control: public, max-age=3600
+
+# Logo das metatags de compartilhamento (og:image): um dia basta.
+/logo.png
+  Cache-Control: public, max-age=86400

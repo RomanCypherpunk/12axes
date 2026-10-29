@@ -116,7 +116,7 @@ The share card sums up a result: the main ideology and its family, the most comp
 | Data | Versioned JSON, loaded into memory at startup |
 | Tests | JUnit 5, MockMvc, AssertJ, Vitest |
 | CI | GitHub Actions (backend tests, i18n check, frontend tests and build) |
-| Deploy | Backend on Render (Docker), pages on Vercel, assets on Cloudflare Pages, images on jsDelivr |
+| Deploy | Backend on Render (Docker), HTML on Vercel, everything else (JS, CSS, fonts, images, icons) on Cloudflare Pages |
 
 There is no database. The catalogs change only through reviewed commits, so the backend reads the JSON once at startup, validates it, and scores every request in memory.
 
@@ -227,8 +227,8 @@ To point the local frontend at the production API instead, create `frontend/.env
 | `FRONTEND_ORIGINS` | Backend | localhost + Vercel | Allowed origins for CORS and the API |
 | `API_ORIGIN_ENFORCEMENT` | Backend | `true` | Set to `false` to turn off the origin check |
 | `VITE_API_URL` | Frontend | empty | API base URL in production |
-| `VITE_ASSETS_CDN` | Frontend (build) | empty | Origin that serves the built JS, CSS and fonts (`/assets`). Empty: the site serves them itself |
-| `VITE_ASSET_BASE` | Frontend (build) | empty; set in `frontend/.env.production` | Root of `frontend/public/` on the CDN that serves catalog images. Empty: images come from the site |
+| `VITE_ASSETS_CDN` | Frontend (build) | empty | Origin (Cloudflare Pages) that serves everything except the HTML: `/assets`, catalog images, icons, catalog CSS and tree data. Empty: the site serves them itself |
+| `VITE_ASSET_BASE` | Frontend (build) | empty | Optional root of `frontend/public/` on another CDN for catalog images. Empty: uses `VITE_ASSETS_CDN` (the same origin that serves `/assets`); with neither set, images come from the site |
 
 ### Tests
 
@@ -247,7 +247,7 @@ The backend suite covers the question pool, the three formats, every catalog vec
 | Backend | Render | `render.yaml` and `backend/Dockerfile` |
 | HTML | Vercel | `frontend/vercel.json`, output `dist` |
 | JS, CSS and fonts | Cloudflare Pages | Git-connected, root `frontend`, build `npm run build`, output `dist` |
-| Catalog images | jsDelivr | Served from this repository, set in `frontend/.env.production` |
+| Images, icons, catalog CSS, tree data | Cloudflare Pages | Same deploy as `/assets`; the HTML points to it through `VITE_ASSETS_CDN` |
 
 #### Paid report (Stripe)
 
