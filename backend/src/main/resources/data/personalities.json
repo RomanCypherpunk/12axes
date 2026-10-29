@@ -9285,5 +9285,35 @@
     "imageSourceUrl": "https://en.wikipedia.org/wiki/Roger_Douglas",
     "imageNote": "Retrato de Roger Douglas via Wikipédia/Wikimedia Commons.",
     "religions": []
+  },
+  {
+    "id": "fethullah-gulen",
+    "name": "Fethullah Gülen",
+    "role": "Líder do movimento Hizmet",
+    "category": "religioso",
+    "lifespan": "1941–2024",
+    "description": "Pregador e teólogo turco, líder do movimento Hizmet: defendeu educação, ciência, diálogo inter-religioso e o islã na vida pública, condenando a politização da religião. Exilado nos EUA desde 1999, foi acusado por Ancara de ordenar o golpe de 2016, o que negou.",
+    "imagePath": "/personalities/portraits/fethullah-gulen.jpg",
+    "imageSourceName": "fgulen.com (site oficial)",
+    "imageSourceUrl": "https://fgulen.com",
+    "imageNote": "Retrato de Fethullah Gülen, do site oficial fgulen.com.",
+    "religions": [
+      "islam"
+    ]
+  },
+  {
+    "id": "osama-bin-laden",
+    "name": "Osama bin Laden",
+    "role": "Fundador da Al-Qaeda",
+    "category": "politico",
+    "lifespan": "1957–2011",
+    "description": "Saudita fundador da Al-Qaeda: financiou a jihad contra os soviéticos no Afeganistão, declarou guerra aos EUA em 1996 pela presença militar em solo saudita e defendeu um califado sob a sharia. Planejou o 11 de setembro de 2001; foi morto no Paquistão em 2011.",
+    "imagePath": "/personalities/portraits/osama-bin-laden.jpg",
+    "imageSourceName": "Wikimedia Commons / Wikipédia",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Osama_bin_Laden_portrait.jpg",
+    "imageNote": "Retrato de Osama bin Laden, de Hamid Mir, via Wikimedia Commons (CC BY-SA 3.0).",
+    "religions": [
+      "islam"
+    ]
   }
 ]
