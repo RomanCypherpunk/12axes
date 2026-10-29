@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './quizSelection';
+import { pickReplacement, replacementCandidates, selectAllQuestionsBalanced, selectAndBalanceQuestions } from './quizSelection';
 import type { QuizPayload } from '../types/quiz';
 
 const AXIS_IDS = [
@@ -121,5 +121,36 @@ describe('selectAndBalanceQuestions — quiz completo (5 por eixo)', () => {
         `questões ${i - 1} e ${i} têm mesmo polo`
       ).not.toBe(result.questions[i - 1].agreePole);
     }
+  });
+});
+
+describe('trocar pergunta (pickReplacement)', () => {
+  const payload = makePool(20, 3);
+  const quiz = selectAndBalanceQuestions(payload).questions;
+  const target = quiz[0];
+
+  it('devolve uma pergunta do mesmo eixo e do mesmo polo, que ainda não está no quiz', () => {
+    const replacement = pickReplacement(payload.questions, quiz, new Set(), target);
+    expect(replacement).not.toBeNull();
+    expect(replacement!.axisId).toBe(target.axisId);
+    expect(replacement!.agreePole).toBe(target.agreePole);
+    expect(quiz.map((q) => q.id)).not.toContain(replacement!.id);
+  });
+
+  it('não devolve uma pergunta já trocada e acaba quando não sobra nenhuma', () => {
+    const discarded = new Set<string>();
+    let current = [...quiz];
+    let swaps = 0;
+    for (;;) {
+      const replacement = pickReplacement(payload.questions, current, discarded, current[0]);
+      if (!replacement) break;
+      discarded.add(current[0].id);
+      current = [replacement, ...current.slice(1)];
+      swaps++;
+      expect(swaps).toBeLessThanOrEqual(10);
+    }
+    // 10 perguntas do polo no pool, 1 ou 2 já usadas: sobram 8 ou 9 trocas
+    expect(swaps).toBeGreaterThanOrEqual(8);
+    expect(replacementCandidates(payload.questions, current, discarded, current[0])).toHaveLength(0);
   });
 });

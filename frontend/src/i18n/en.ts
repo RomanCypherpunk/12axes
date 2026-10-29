@@ -477,6 +477,8 @@ export const en: Strings = {
     'The short version reveals the result quickly. The full version increases precision to bring your result closer to the ideological profiles.',
   quizNavAria: 'Quiz navigation',
   autoAdvance: 'Advance on answer',
+  swapQuestion: 'Swap',
+  swapQuestionAria: 'Swap this question for another on the same topic',
   back: 'Back',
   next: 'Next',
   calculating: 'Calculating…',

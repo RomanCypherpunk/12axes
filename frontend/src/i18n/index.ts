@@ -311,6 +311,8 @@ export interface Strings {
   variantLead: string;
   quizNavAria: string;
   autoAdvance: string;
+  swapQuestion: string;
+  swapQuestionAria: string;
   back: string;
   next: string;
   calculating: string;

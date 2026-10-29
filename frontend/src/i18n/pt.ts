@@ -466,6 +466,8 @@ export const pt: Strings = {
     'A versão curta revela o resultado de forma rápida. A completa aumenta a precisão para aproximar melhor seu resultado dos perfis ideológicos.',
   quizNavAria: 'Navegação do quiz',
   autoAdvance: 'Avançar ao responder',
+  swapQuestion: 'Trocar',
+  swapQuestionAria: 'Trocar esta pergunta por outra do mesmo tema',
   back: 'Voltar',
   next: 'Avançar',
   calculating: 'Calculando…',

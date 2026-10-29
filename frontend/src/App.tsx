@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
+import { pickReplacement, replacementCandidates, selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
 import { t } from './i18n';
@@ -246,6 +246,8 @@ function MainApp() {
   const [isAdvancing, setIsAdvancing] = useState(false);
   // Toggle do desktop; no mobile fica escondido e sempre ligado.
   const [autoAdvance, setAutoAdvance] = useState(true);
+  // Perguntas que o usuário trocou por outras: não voltam a ser sorteadas neste quiz.
+  const [swappedIds, setSwappedIds] = useState<ReadonlySet<string>>(() => new Set());
   // 'forward' | 'back': define de que lado a proxima pergunta entra.
   const [navDirection, setNavDirection] = useState<'forward' | 'back'>('forward');
   const [isSharing, setIsSharing] = useState(false);
@@ -380,6 +382,13 @@ function MainApp() {
   const currentQuestion = quiz?.questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const canFinish = Boolean(quiz && answeredCount === quiz.questions.length);
+  // "Trocar" só existe nas versões curtas (36 e 60): a de 240 já usa todas as perguntas. O botão apaga quando
+  // acabam as perguntas do mesmo eixo e polo.
+  const canSwapQuestions = Boolean(quiz && quiz.variant !== 'extreme' && poolRef.current);
+  const swapsLeft =
+    quiz && currentQuestion && canSwapQuestions && poolRef.current
+      ? replacementCandidates(poolRef.current.questions, quiz.questions, swappedIds, currentQuestion).length
+      : 0;
 
   // Guarda o andamento a cada resposta: se a página recarregar ou quebrar, dá para continuar.
   useEffect(() => {
@@ -451,6 +460,7 @@ function MainApp() {
     resetSharedUrl();
     clearProgress();
     setSavedProgress(null);
+    setSwappedIds(new Set());
     setSelectedVariant(variant);
     setAnswers({});
     setResult(null);
@@ -479,6 +489,7 @@ function MainApp() {
     const lastQuestion = Math.max(0, restored.questions.length - 1);
     const archetypeCount = (restored.archetypeQuestions?.length ?? 0) + 1;
     setSelectedVariant(saved.variant);
+    setSwappedIds(new Set());
     setQuiz(restored);
     setAnswers(saved.answers);
     setArchetypeChoices(saved.archetypeChoices);
@@ -552,6 +563,25 @@ function MainApp() {
     clearPendingAdvance();
     setNavDirection('forward');
     setCurrentIndex((index) => Math.min((quiz?.questions.length ?? 1) - 1, index + 1));
+  }
+
+  // Troca a pergunta atual por outra do mesmo eixo e polo; a trocada sai do quiz e a resposta dela se perde.
+  function swapQuestion() {
+    if (!quiz || !currentQuestion || !poolRef.current || isSubmitting || isAdvancingRef.current) {
+      return;
+    }
+    const replacement = pickReplacement(poolRef.current.questions, quiz.questions, swappedIds, currentQuestion);
+    if (!replacement) {
+      return;
+    }
+    clearPendingAdvance();
+    const removedId = currentQuestion.id;
+    setSwappedIds((ids) => new Set(ids).add(removedId));
+    setAnswers((current) => {
+      const { [removedId]: _removed, ...rest } = current;
+      return rest;
+    });
+    setQuiz({ ...quiz, questions: quiz.questions.map((question, index) => (index === currentIndex ? replacement : question)) });
   }
 
   function selectAnswer(answer: AnswerValue) {
@@ -1026,6 +1056,24 @@ function MainApp() {
                   <span className="auto-advance-switch" aria-hidden="true" />
                   {t.autoAdvance}
                 </button>
+                {canSwapQuestions && (
+                  <button
+                    className="secondary-button swap-button"
+                    type="button"
+                    onClick={swapQuestion}
+                    disabled={swapsLeft === 0 || isAdvancing || isSubmitting}
+                    aria-label={t.swapQuestionAria}
+                    title={t.swapQuestionAria}
+                  >
+                    <svg className="swap-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path
+                        fill="currentColor"
+                        d="M14.293 2.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L16.586 8H5a1 1 0 0 1 0-2h11.586l-2.293-2.293a1 1 0 0 1 0-1.414m-4.586 10a1 1 0 0 1 0 1.414L7.414 16H19a1 1 0 1 1 0 2H7.414l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0"
+                      />
+                    </svg>
+                    {t.swapQuestion}
+                  </button>
+                )}
                 {currentIndex < quiz.questions.length - 1 ? (
                   <button
                     className="primary-button"

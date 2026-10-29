@@ -11877,6 +11877,13 @@
   .auto-advance-switch, .auto-advance-switch::after { transition: none; }
 }
 
+/* ── Quiz: botão "Trocar" (troca a pergunta por outra do mesmo eixo e polo) ─────────────────  */
+.swap-button { gap: 8px; }
+.swap-icon { width: 16px; height: 16px; flex: none; }
+.swap-button:hover:not(:disabled) .swap-icon { transform: rotate(180deg); }
+.swap-icon { transition: transform var(--dur-base, .2s) var(--ease-out, ease-out); }
+@media (prefers-reduced-motion: reduce) { .swap-icon { transition: none; } }
+
 /* ── Perguntas de arquétipo (fim do quiz) ─────────────────────────────────
    Mesma casca das perguntas comuns; as alternativas levam a letra no ícone e
    o verde da marca, porque não são concordo/discordo. */
