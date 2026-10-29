@@ -53,6 +53,8 @@ export default defineConfig(({ mode }) => {
   const cwd = (globalThis as { process?: { cwd: () => string } }).process?.cwd?.() ?? '.';
   const env = loadEnv(mode, cwd, '');
   const proxyTarget = env.VITE_API_PROXY_TARGET || 'http://localhost:8080';
+  // Commit em build: VERCEL_GIT_COMMIT_SHA na Vercel, CF_PAGES_COMMIT_SHA no Cloudflare Pages.
+  const commitSha = (env.VERCEL_GIT_COMMIT_SHA || env.CF_PAGES_COMMIT_SHA || '').slice(0, 10);
 
   return {
     plugins: [react(), asyncCssLinkPlugin(), assetFallbackPlugin((env.VITE_ASSETS_CDN || '').replace(/\/+$/, '')), catalogueDevPlugin()],
@@ -73,7 +75,22 @@ export default defineConfig(({ mode }) => {
     // descobre ao clicar, re-otimiza no meio da sessão e o navegador fica com um arquivo desatualizado (504 "Outdated Optimize Dep").
     optimizeDeps: { include: ['html-to-image', 'exceljs'] },
     // es2022: o dicionário de idioma é carregado com await no topo do módulo (src/i18n).
-    build: { target: 'es2022' },
+    build: {
+      target: 'es2022',
+      // A Vercel (HTML) e o Cloudflare Pages (/assets) fazem builds separados do mesmo commit, e o hash de conteúdo do Vite
+      // sai diferente em cada um: o HTML da Vercel pedia à CDN arquivos que só existiam na própria Vercel, o pedido falhava
+      // e todo o JS voltava a ser servido (e cobrado) pela Vercel. Com o SHA do commit no nome, JS e CSS têm o mesmo nome
+      // nos dois lugares. Sem SHA (build local), vale o hash de sempre.
+      rollupOptions: commitSha
+        ? {
+            output: {
+              entryFileNames: `assets/[name]-${commitSha}.js`,
+              chunkFileNames: `assets/[name]-${commitSha}.js`,
+              assetFileNames: (info) => (info.name?.endsWith('.css') ? `assets/[name]-${commitSha}[extname]` : 'assets/[name]-[hash][extname]')
+            }
+          }
+        : {}
+    },
     test: {
       environment: 'node',
     },
