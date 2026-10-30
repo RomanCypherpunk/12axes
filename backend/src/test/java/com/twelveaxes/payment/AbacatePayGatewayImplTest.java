@@ -86,7 +86,7 @@ class AbacatePayGatewayImplTest {
         PaymentGateway.CheckoutSession session = gateway.create("14.99", "BRL", NONCE, HASH, "https://12axes.vercel.app/results?est=1", "pt");
 
         assertThat(session.id()).isEqualTo(BILL);
-        assertThat(session.url()).isEqualTo("https://app.abacatepay.com/pay/" + BILL);
+        assertThat(session.url()).isEqualTo("https://app.abacatepay.com/pay/" + BILL + "?skip_customer=true&skip_address=true");
         assertThat(authHeaders.getFirst()).isEqualTo("Bearer " + KEY);
         JsonNode body = JSON.readTree(bodies.getFirst());
         assertThat(body.at("/items/0/id").asText()).isEqualTo(PRODUCT);

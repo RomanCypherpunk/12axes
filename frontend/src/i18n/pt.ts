@@ -612,7 +612,7 @@ export const pt: Strings = {
     { lead: 'Ranking completo e planilha:', text: 'a sua compatibilidade com todo o catálogo, para exportar em Excel.' }
   ],
   paywallGuarantee: 'Garantia de reembolso de 7 dias',
-  paywallPayWith: 'Formas de pagamento: Pix, Apple Pay, Google Pay e cartão',
+  paywallPayWith: 'Formas de pagamento: Pix e cartão',
   paywallPrice: 'R$ 14,99',
   paywallCta: 'Desbloquear o relatório completo',
   paywallChecking: 'Confirmando o seu pagamento...',

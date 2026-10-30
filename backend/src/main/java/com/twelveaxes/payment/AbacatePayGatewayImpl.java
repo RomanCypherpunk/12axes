@@ -79,7 +79,9 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         if (id.isBlank() || url.isBlank()) {
             throw new PaymentGatewayException("Resposta da AbacatePay sem endereco de pagamento", new IllegalStateException(data.toString()));
         }
-        return new CheckoutSession(id, url);
+        // Sem as etapas de dados pessoais e de endereco (o relatorio e digital): o Pix usa o nome e o CPF que vem do banco, e o
+        // cartao ainda pede so o CPF do titular. Apple Pay, Google Pay e boleto somem do checkout com essa opcao.
+        return new CheckoutSession(id, withParam(withParam(url, "skip_customer", "true"), "skip_address", "true"));
     }
 
     /** A AbacatePay volta por {@code ?pay=}, nao por sessao. */
