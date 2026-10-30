@@ -1,15 +1,21 @@
+import { LANG } from '../../i18n';
+
 // Formas de pagamento aceitas no checkout, só como marcas (cinza, discretas) no modal de compra.
+// O Pix só existe no checkout em reais (português); em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
 export function PaymentIcons({ label }: { label: string }) {
+  const card = LANG === 'en' ? 'Card' : 'Cartão';
   return (
     <ul className="e-pay-icons" aria-label={label}>
-      <li title="Pix">
-        <svg viewBox="0 0 24 24" role="img" aria-label="Pix">
-          <path
-            fill="currentColor"
-            d="M5.283 18.36a3.5 3.5 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.5 3.5 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.5 3.5 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.5 3.5 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422L3.79 6.699h1.492a2.48 2.48 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.48 2.48 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.48 2.48 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.48 2.48 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"
-          />
-        </svg>
-      </li>
+      {LANG !== 'en' && (
+        <li title="Pix">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Pix">
+            <path
+              fill="currentColor"
+              d="M5.283 18.36a3.5 3.5 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.5 3.5 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.5 3.5 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.5 3.5 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422L3.79 6.699h1.492a2.48 2.48 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.48 2.48 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.48 2.48 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.48 2.48 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"
+            />
+          </svg>
+        </li>
+      )}
       <li title="Apple Pay" className="e-pay-wide">
         <svg viewBox="0 0 512 211" role="img" aria-label="Apple Pay">
           <path
@@ -28,8 +34,8 @@ export function PaymentIcons({ label }: { label: string }) {
           />
         </svg>
       </li>
-      <li title="Cartão">
-        <svg viewBox="0 0 432 384" role="img" aria-label="Cartão">
+      <li title={card}>
+        <svg viewBox="0 0 432 384" role="img" aria-label={card}>
           <path
             fill="currentColor"
             d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21zm0 299V192H43v128zm0-213V64H43v43z"
