@@ -1,5 +1,5 @@
 // Páginas de política (/terms, /privacy, /refund e /en/...): termos do relatório pago, privacidade e reembolso.
-// Aparecem no rodapé do site e são o endereço das políticas da loja que o checkout do Mercado Pago pode pedir.
+// Aparecem no rodapé do site e são o endereço das políticas da loja que o checkout da AbacatePay pode pedir.
 // SUPPORT_EMAIL (variável de ambiente do build; padrão: o e-mail do projeto) é o contato publicado nas páginas; vazio, a página
 // manda o pedido pela página de contato do projeto no GitHub, que é pública: não é canal para dados de pagamento.
 import { siteHeader } from './site-header.mjs';
@@ -41,7 +41,7 @@ const PAGES = {
         ]],
         ['Preço', ['R$ 14,99, em pagamento único por resultado. Sem assinatura e sem renovação automática.']],
         ['Como você recebe', ['O acesso é liberado no próprio site assim que o pagamento é confirmado, sem conta nem senha. Ele vale para o resultado comprado.']],
-        ['Pagamento', ['O pagamento é feito por Pix ou cartão, processado pelo Mercado Pago. O 12 Axes não recebe nem guarda dados de cartão.']],
+        ['Pagamento', ['O pagamento é feito por Pix ou cartão, processado pela AbacatePay. O 12 Axes não recebe nem guarda dados de cartão.']],
         ['Reembolso', ['Reembolso integral em até 7 dias. Veja a <a href="/refund">política de reembolso</a> e os <a href="/terms">termos de uso</a>.']],
         ['Dúvidas', [`Fale conosco ${c}.`]]
       ]
@@ -56,7 +56,7 @@ const PAGES = {
           'Inclui análises e rankings completos do resultado e exportação em CSV e PDF. O que está incluído é mostrado antes do pagamento.',
           'O acesso é liberado no site assim que o pagamento é confirmado, e não depende de conta ou senha.'
         ]],
-        ['Preço e pagamento', ['O preço é mostrado antes do pagamento. O pagamento é processado pelo Mercado Pago, por Pix ou cartão, e o 12 Axes não recebe nem guarda dados de cartão.']],
+        ['Preço e pagamento', ['O preço é mostrado antes do pagamento. O pagamento é processado pela AbacatePay, por Pix ou cartão, e o 12 Axes não recebe nem guarda dados de cartão.']],
         ['Guardar o acesso', ['O acesso fica salvo no navegador usado na compra. Se você trocar de aparelho ou apagar os dados do navegador, peça a recuperação do acesso por e-mail, informando o e-mail usado no pagamento e o link do seu resultado.']],
         ['Reembolso', ['Você pode pedir o reembolso integral em até 7 dias da compra. Veja a política de reembolso.']],
         ['Mudanças', ['Estes termos podem mudar; a versão em vigor é a publicada nesta página, com a data de atualização.']],
@@ -70,8 +70,8 @@ const PAGES = {
       sections: [
         ['Respostas do quiz', ['As respostas são usadas só para calcular o resultado no momento em que você as envia. O 12 Axes não guarda respostas em banco de dados nem associa resultados a pessoas: o resultado fica codificado no endereço (link) da página.']],
         ['Pagamentos', [
-          'O pagamento é feito no Mercado Pago, que trata os dados do pagamento (nome, e-mail, documento, forma de pagamento) sob a política de privacidade dele. O 12 Axes não recebe nem guarda dados de cartão.',
-          'Para liberar o relatório, o site consulta o Mercado Pago para confirmar o pagamento e usa uma referência a ele, sem guardá-los em banco de dados.'
+          'O pagamento é feito na AbacatePay, que trata os dados do pagamento (nome, e-mail, documento, forma de pagamento) sob a política de privacidade dela. O 12 Axes não recebe nem guarda dados de cartão.',
+          'Para liberar o relatório, o site consulta a AbacatePay para confirmar o pagamento e usa uma referência a ele, sem guardá-los em banco de dados.'
         ]],
         ['Armazenamento no seu navegador', ['O site guarda no seu navegador preferências (como idioma e tema), o último resultado e, quando há compra, o código de acesso ao relatório. Você pode apagar esses dados nas configurações do navegador.']],
         ['Análise de acesso', ['Usamos ferramentas de análise de tráfego, como o Google Analytics, para medir visitas e melhorar o site. Elas podem usar cookies e identificadores.']],
@@ -86,7 +86,7 @@ const PAGES = {
         ['Quem pode pedir', ['Qualquer comprador do Relatório Completo, no Brasil ou em outro país, por qualquer forma de pagamento (Pix ou cartão).']],
         ['Prazo', ['Até 7 dias corridos depois da compra. O reembolso é integral, sem perguntas.']],
         ['Como pedir', [`Peça ${c}, informando o e-mail usado no pagamento e, se tiver, a data da compra. Não envie número de cartão.`]],
-        ['Como é devolvido', ['O valor volta pela mesma forma de pagamento, pelo Mercado Pago. O prazo para aparecer na fatura ou no banco depende da operadora do cartão ou do banco.']],
+        ['Como é devolvido', ['O valor volta pela mesma forma de pagamento, pela AbacatePay. O prazo para aparecer na fatura ou no banco depende da operadora do cartão ou do banco.']],
         ['O que acontece com o acesso', ['Depois do reembolso, o acesso ao relatório daquele resultado deixa de funcionar.']]
       ]
     })

@@ -50,6 +50,17 @@ public class PaymentConfig {
         return new MercadoPagoGatewayImpl(accessToken, pictureUrl, clock);
     }
 
+    /** A AbacatePay real (reais, Pix), so com os pagamentos ligados, a chave de API e o ID do produto definidos (teste ou producao). */
+    @Bean
+    @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
+    @ConditionalOnExpression("!'${app.payments.abacatepay-api-key:}'.isBlank() && !'${app.payments.abacatepay-product-id:}'.isBlank()")
+    AbacatePayGatewayImpl abacatePayGateway(
+            @Value("${app.payments.abacatepay-api-key}") String apiKey,
+            @Value("${app.payments.abacatepay-product-id}") String productId,
+            Clock clock) {
+        return new AbacatePayGatewayImpl(apiKey, productId, clock);
+    }
+
     /** A Paddle real (dolar), so com os pagamentos ligados, a chave de API e o ID do preco definidos (sandbox ou producao). */
     @Bean
     @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
@@ -69,9 +80,17 @@ public class PaymentConfig {
     @Bean
     @Primary
     @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
-    @ConditionalOnExpression("!'${app.payments.mercadopago-access-token:}'.isBlank() || (!'${app.payments.paddle-api-key:}'.isBlank() && !'${app.payments.paddle-price-id:}'.isBlank())")
-    PaymentGateway paymentGateway(ObjectProvider<MercadoPagoGatewayImpl> brazil, ObjectProvider<PaddleGatewayImpl> paddle) {
-        return new RoutingPaymentGateway(brazil.getIfAvailable(), paddle.getIfAvailable());
+    @ConditionalOnExpression("!'${app.payments.mercadopago-access-token:}'.isBlank() || (!'${app.payments.abacatepay-api-key:}'.isBlank() && !'${app.payments.abacatepay-product-id:}'.isBlank()) || (!'${app.payments.paddle-api-key:}'.isBlank() && !'${app.payments.paddle-price-id:}'.isBlank())")
+    PaymentGateway paymentGateway(
+            ObjectProvider<AbacatePayGatewayImpl> abacatePay,
+            ObjectProvider<MercadoPagoGatewayImpl> mercadoPago,
+            ObjectProvider<PaddleGatewayImpl> paddle) {
+        // Os reais vao para um so gateway: a AbacatePay, se configurada, senao o Mercado Pago.
+        PaymentGateway brazil = abacatePay.getIfAvailable();
+        if (brazil == null) {
+            brazil = mercadoPago.getIfAvailable();
+        }
+        return new RoutingPaymentGateway(brazil, paddle.getIfAvailable());
     }
 
     /** Sem o gateway ligado, nenhum pagamento consta como reembolsado. */
