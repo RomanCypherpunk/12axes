@@ -75,6 +75,8 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         item.put("id", productId);
         item.put("quantity", 1);
         body.put("frequency", "ONE_TIME");
+        // So Pix: a loja ainda nao tem cartao liberado na AbacatePay (sem isso ela recusa o checkout: "CARD is not available").
+        body.putArray("methods").add("PIX");
         body.put("externalId", nonce);
         body.putObject("metadata").put("vector_hash", vectorHash).put("nonce", nonce);
         body.put("returnUrl", returnUrl);

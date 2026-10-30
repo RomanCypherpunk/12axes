@@ -1,12 +1,12 @@
-import { LANG } from "../../i18n";
+import { LANG } from '../../i18n';
 
 // Formas de pagamento aceitas no checkout, só como marcas (cinza, discretas) no modal de compra.
-// Em português (AbacatePay, sem as etapas de dados) há só Pix e cartão; em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
+// Em português (AbacatePay) há só Pix, a única forma liberada na loja; em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
 export function PaymentIcons({ label }: { label: string }) {
-  const card = LANG === "en" ? "Card" : "Cartão";
+  const card = 'Card';
   return (
     <ul className="e-pay-icons" aria-label={label}>
-      {LANG !== "en" && (
+      {LANG !== 'en' && (
         <li title="Pix">
           <svg viewBox="0 0 24 24" role="img" aria-label="Pix">
             <path
@@ -16,7 +16,7 @@ export function PaymentIcons({ label }: { label: string }) {
           </svg>
         </li>
       )}
-      {LANG === "en" && (
+      {LANG === 'en' && (
         <>
           <li title="Apple Pay" className="e-pay-wide">
             <svg viewBox="0 0 512 211" role="img" aria-label="Apple Pay">
@@ -38,14 +38,16 @@ export function PaymentIcons({ label }: { label: string }) {
           </li>
         </>
       )}
-      <li title={card}>
-        <svg viewBox="0 0 432 384" role="img" aria-label={card}>
-          <path
-            fill="currentColor"
-            d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21zm0 299V192H43v128zm0-213V64H43v43z"
-          />
-        </svg>
-      </li>
+      {LANG === 'en' && (
+        <li title={card}>
+          <svg viewBox="0 0 432 384" role="img" aria-label={card}>
+            <path
+              fill="currentColor"
+              d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21zm0 299V192H43v128zm0-213V64H43v43z"
+            />
+          </svg>
+        </li>
+      )}
     </ul>
   );
 }

@@ -91,6 +91,8 @@ class AbacatePayGatewayImplTest {
         JsonNode body = JSON.readTree(bodies.getFirst());
         assertThat(body.at("/items/0/id").asText()).isEqualTo(PRODUCT);
         assertThat(body.at("/items/0/quantity").asInt()).isEqualTo(1);
+        assertThat(body.at("/methods/0").asText()).isEqualTo("PIX");
+        assertThat(body.at("/methods").size()).isEqualTo(1);
         assertThat(body.at("/externalId").asText()).isEqualTo(NONCE);
         assertThat(body.at("/metadata/vector_hash").asText()).isEqualTo(HASH);
         assertThat(body.at("/metadata/nonce").asText()).isEqualTo(NONCE);
