@@ -41,7 +41,7 @@ const PAGES = {
         ]],
         ['Preço', ['R$ 14,99, em pagamento único por resultado. Sem assinatura e sem renovação automática.']],
         ['Como você recebe', ['O acesso é liberado no próprio site assim que o pagamento é confirmado, sem conta nem senha. Ele vale para o resultado comprado.']],
-        ['Pagamento', ['O pagamento é feito por Pix ou cartão, processado pela AbacatePay. O 12 Axes não recebe nem guarda dados de cartão.']],
+        ['Pagamento', ['O pagamento é feito por Pix, processado pela AbacatePay. O 12 Axes não recebe nem guarda dados de cartão.']],
         ['Reembolso', ['Reembolso integral em até 7 dias. Veja a <a href="/refund">política de reembolso</a> e os <a href="/terms">termos de uso</a>.']],
         ['Dúvidas', [`Fale conosco ${c}.`]]
       ]
@@ -56,7 +56,7 @@ const PAGES = {
           'Inclui análises e rankings completos do resultado e exportação em CSV e PDF. O que está incluído é mostrado antes do pagamento.',
           'O acesso é liberado no site assim que o pagamento é confirmado, e não depende de conta ou senha.'
         ]],
-        ['Preço e pagamento', ['O preço é mostrado antes do pagamento. O pagamento é processado pela AbacatePay, por Pix ou cartão, e o 12 Axes não recebe nem guarda dados de cartão.']],
+        ['Preço e pagamento', ['O preço é mostrado antes do pagamento. O pagamento é processado pela AbacatePay, por Pix, e o 12 Axes não recebe nem guarda dados de pagamento.']],
         ['Guardar o acesso', ['O acesso fica salvo no navegador usado na compra. Se você trocar de aparelho ou apagar os dados do navegador, peça a recuperação do acesso por e-mail, informando o e-mail usado no pagamento e o link do seu resultado.']],
         ['Reembolso', ['Você pode pedir o reembolso integral em até 7 dias da compra. Veja a política de reembolso.']],
         ['Mudanças', ['Estes termos podem mudar; a versão em vigor é a publicada nesta página, com a data de atualização.']],
