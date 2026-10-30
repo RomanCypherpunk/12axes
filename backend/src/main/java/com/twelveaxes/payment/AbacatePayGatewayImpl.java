@@ -4,9 +4,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
+import java.net.http.HttpConnectTimeoutException;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
@@ -16,6 +20,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * AbacatePay (API v2, reais, Pix e cartao). O produto (nome, foto e preco) mora no painel da AbacatePay; o servidor abre
@@ -24,6 +30,7 @@ import java.util.regex.Pattern;
  * codigo. Nada fica guardado aqui: a AbacatePay e a fonte da verdade.
  */
 public class AbacatePayGatewayImpl implements PaymentGateway {
+    private static final Logger LOG = LoggerFactory.getLogger(AbacatePayGatewayImpl.class);
     public static final String DEFAULT_BASE_URL = "https://api.abacatepay.com/v2";
     /** Quanto tempo uma resposta de "foi reembolsado?" vale: o relatorio e pedido varias vezes por visita. */
     private static final Duration REFUND_CACHE = Duration.ofMinutes(5);
@@ -153,7 +160,14 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
 
     private JsonNode send(HttpRequest request) {
         try {
-            HttpResponse<String> response = http.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+            HttpResponse<String> response;
+            try {
+                response = http.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+            } catch (HttpConnectTimeoutException e) {
+                // A conexao nao abriu a tempo: registra qual endereco responde e tenta mais uma vez.
+                logReachability(request.uri().getHost());
+                response = http.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+            }
             int status = response.statusCode();
             if (status < 200 || status >= 300) {
                 throw new PaymentGatewayException("A AbacatePay respondeu HTTP " + status, new IOException(response.body()));
@@ -164,6 +178,25 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new PaymentGatewayException("Conexao com a AbacatePay interrompida", e);
+        }
+    }
+
+    /** Diagnostico de rede: para cada endereco do servidor, se a porta 443 abre (so roda depois de uma falha de conexao). */
+    private static void logReachability(String host) {
+        try {
+            for (InetAddress address : InetAddress.getAllByName(host)) {
+                long start = System.nanoTime();
+                String result;
+                try (Socket socket = new Socket()) {
+                    socket.connect(new InetSocketAddress(address, 443), 4000);
+                    result = "abre";
+                } catch (IOException e) {
+                    result = "falha: " + e.getClass().getSimpleName() + " " + e.getMessage();
+                }
+                LOG.warn("Diagnostico {} {}: {} ({} ms)", host, address.getHostAddress(), result, (System.nanoTime() - start) / 1_000_000);
+            }
+        } catch (IOException e) {
+            LOG.warn("Diagnostico {}: nome nao resolvido ({})", host, e.getMessage());
         }
     }
 
