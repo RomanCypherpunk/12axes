@@ -4,6 +4,8 @@
  * o relatório por um pedido de recuperação (por e-mail).
  */
 
+import { RESULT_URL_KEYS } from './peopleCompare';
+
 const KEY_PREFIX = '12axes:entitlement:';
 
 /**
@@ -132,4 +134,23 @@ export function accessLink(resultUrl: string, token: string): string {
 export function accessTokenFromHash(hash: string): string | null {
   const value = new URLSearchParams(hash.replace(/^#/, '')).get(ACCESS_HASH_KEY);
   return value && value.length > 0 ? value : null;
+}
+
+/**
+ * O endereço "de sempre" do resultado, para o link que a pessoa guarda: os 12 valores na ordem padrão (est, rep, pod, ...),
+ * depois a religião e, em inglês, o idioma. Fica de fora o que é ruído do caminho até aqui (marca de teste, volta do pagamento,
+ * âncora, parâmetros que a Paddle reordena). Sem os 12 valores (link curto, por exemplo) devolve o endereço como veio.
+ */
+export function canonicalResultLink(resultUrl: string, lang: string): string {
+  const source = new URL(resultUrl);
+  const query = new URLSearchParams();
+  for (const key of RESULT_URL_KEYS) {
+    const value = source.searchParams.get(key);
+    if (value === null) return resultUrl;
+    query.set(key, value);
+  }
+  const religion = source.searchParams.get('religion');
+  if (religion) query.set('religion', religion);
+  if (lang === 'en') query.set('lang', 'en');
+  return `${source.origin}${source.pathname}?${query.toString()}`;
 }

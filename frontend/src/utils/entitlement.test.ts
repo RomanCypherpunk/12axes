@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { accessLink, accessTokenFromHash, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
+import { accessLink, accessTokenFromHash, canonicalResultLink, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
 
 const base64url = (text: string) => btoa(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 const tokenExpiringAt = (seconds: number) => `${base64url(`v2|hash|pi_3Test|1000|${seconds}`)}.assinatura`;
@@ -127,5 +127,41 @@ describe('link de acesso guardado', () => {
     expect(accessTokenFromHash('')).toBeNull();
     expect(accessTokenFromHash('#bussola')).toBeNull();
     expect(accessTokenFromHash('#access=')).toBeNull();
+  });
+});
+
+describe('canonicalResultLink', () => {
+  const sorted = 'https://12axes.vercel.app/results?com=70&con=48&dip=71.3&eco=73&est=54.5&imi=45.5&int=28.7&lang=en&mor=53&paywall=1&pod=71.3&rel=30&religion=catholic&rep=28.7&tec=27';
+
+  it('devolve os 12 valores na ordem de sempre, depois a religião, sem a marca de teste', () => {
+    expect(canonicalResultLink(sorted, 'pt')).toBe(
+      'https://12axes.vercel.app/results?est=54.5&rep=28.7&pod=71.3&imi=45.5&dip=71.3&int=28.7&eco=73&con=48&com=70&rel=30&mor=53&tec=27&religion=catholic'
+    );
+  });
+
+  it('em inglês acrescenta o idioma no fim', () => {
+    expect(canonicalResultLink(sorted, 'en').endsWith('&religion=catholic&lang=en')).toBe(true);
+  });
+
+  it('sem religião no endereço, não inventa uma', () => {
+    const noReligion = 'https://12axes.vercel.app/results?tec=27&mor=53&rel=30&com=70&con=48&eco=73&int=28.7&dip=71.3&imi=45.5&pod=71.3&rep=28.7&est=54.5';
+    expect(canonicalResultLink(noReligion, 'pt')).toBe(
+      'https://12axes.vercel.app/results?est=54.5&rep=28.7&pod=71.3&imi=45.5&dip=71.3&int=28.7&eco=73&con=48&com=70&rel=30&mor=53&tec=27'
+    );
+  });
+
+  it('descarta a volta do pagamento e a âncora', () => {
+    const back = `${sorted}&_ptxn=txn_01m66hdb2rreyh7xd6mjvm40yr&pay=txn_01m66hdb2rreyh7xd6mjvm40yr#premium-eixos`;
+    expect(canonicalResultLink(back, 'pt')).not.toMatch(/_ptxn|pay=|premium|paywall/);
+  });
+
+  it('sem os 12 valores (link curto, por exemplo), devolve o endereço como veio', () => {
+    expect(canonicalResultLink('https://12axes.vercel.app/r?s=abc', 'pt')).toBe('https://12axes.vercel.app/r?s=abc');
+  });
+
+  it('com o acesso no fim, o link fica "o endereço de sempre" seguido do token', () => {
+    const link = accessLink(canonicalResultLink(sorted, 'pt'), 'TOKEN');
+    expect(link.endsWith('&religion=catholic#access=TOKEN')).toBe(true);
+    expect(link.indexOf('est=')).toBeLessThan(link.indexOf('rep='));
   });
 });

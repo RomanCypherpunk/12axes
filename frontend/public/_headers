@@ -30,6 +30,10 @@
 /apple-touch-icon.png
   Cache-Control: public, max-age=2592000
 
+# Foto oficial do produto nas paginas de pagamento (Mercado Pago e Paddle): quadrado de 1080 px.
+/icon.png
+  Cache-Control: public, max-age=2592000
+
 # Dados da teia (/tree): o app os busca da CDN, então precisam de CORS.
 /tree-data/*
   Access-Control-Allow-Origin: *

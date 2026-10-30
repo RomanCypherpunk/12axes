@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { accessLink } from '../../../utils/entitlement';
+import { LANG } from '../../../i18n';
+import { accessLink, canonicalResultLink } from '../../../utils/entitlement';
 import { copyToClipboard } from '../../../utils/clipboard';
 import { resultUrlWithoutPaymentParams } from '../usePremiumAccess';
 import { P } from './premiumText';
@@ -11,7 +12,7 @@ import { P } from './premiumText';
 export function SaveAccessLink({ token }: { token: string }) {
   const [copied, setCopied] = useState(false);
   const timer = useRef<number | null>(null);
-  const link = accessLink(resultUrlWithoutPaymentParams(), token);
+  const link = accessLink(canonicalResultLink(resultUrlWithoutPaymentParams(), LANG), token);
 
   useEffect(() => () => {
     if (timer.current !== null) window.clearTimeout(timer.current);
