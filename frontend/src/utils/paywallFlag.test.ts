@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { paywallEnabled, paywallMode } from './paywallFlag';
+import { paywallEnabled, paywallMode, salesOpen } from './paywallFlag';
 
 function memory(initial: Record<string, string> = {}) {
   const data = new Map(Object.entries(initial));
@@ -11,9 +11,10 @@ function memory(initial: Record<string, string> = {}) {
 }
 
 describe('paywallMode', () => {
-  it('só "true" e "preview" ligam alguma coisa', () => {
+  it('só "true", "preview" e "paused" ligam alguma coisa', () => {
     expect(paywallMode('true')).toBe('on');
     expect(paywallMode('preview')).toBe('preview');
+    expect(paywallMode('paused')).toBe('paused');
     expect(paywallMode('false')).toBe('off');
     expect(paywallMode('1')).toBe('off');
     expect(paywallMode(undefined)).toBe('off');
@@ -69,5 +70,19 @@ describe('paywallEnabled', () => {
     };
     expect(paywallEnabled({ mode: 'preview', lang: 'pt', search: '?paywall=1', storage: broken })).toBe(true);
     expect(paywallEnabled({ mode: 'preview', lang: 'pt', search: '', storage: broken })).toBe(false);
+  });
+});
+
+describe('vendas pausadas (paused)', () => {
+  it('o relatório segue ligado em português, para quem já pagou, e desligado em inglês', () => {
+    expect(paywallEnabled({ mode: 'paused', lang: 'pt', search: '', storage: memory() })).toBe(true);
+    expect(paywallEnabled({ mode: 'paused', lang: 'en', search: '', storage: memory() })).toBe(false);
+  });
+
+  it('a compra só aparece com as vendas abertas', () => {
+    expect(salesOpen('paused', true)).toBe(false);
+    expect(salesOpen('on', true)).toBe(true);
+    expect(salesOpen('preview', true)).toBe(true);
+    expect(salesOpen('on', false)).toBe(false);
   });
 });

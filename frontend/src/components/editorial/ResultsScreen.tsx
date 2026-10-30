@@ -31,13 +31,14 @@ import { usePremiumAccess } from '../results/usePremiumAccess';
 import { CsvIcon, DownloadIcon, Ring, ShareImageIcon } from './primitives';
 import { track } from '../../utils/analytics';
 import { pdfButtonAction } from '../../utils/pdfAccess';
-import { paywallEnabled, paywallMode } from '../../utils/paywallFlag';
+import { paywallEnabled, paywallMode, salesOpen } from '../../utils/paywallFlag';
 import { downloadRankingXlsx } from '../../utils/rankingXlsx';
 
 // Modo de desenvolvimento local do Relatório Completo: abre sem pagamento (o backend também precisa de PREMIUM_DEV_OPEN).
 // Fica fora do build de produção porque a variável só existe em frontend/.env.local.
 const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
-// Compra do Relatório completo (Stripe): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1) ou
+// Compra do Relatório completo (Stripe): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1),
+// paused (vendas pausadas: só quem já pagou vê o relatório) ou
 // desligada (padrão). Só em português na v1 (preço em reais). Ver utils/paywallFlag.
 const PAYWALL_MODE = paywallMode(import.meta.env.VITE_PAYWALL_ENABLED);
 const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
@@ -75,6 +76,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       }),
     []
   );
+  // Com as vendas pausadas o relatório segue aberto a quem pagou (PAYWALL_ENABLED), mas ninguém vê a compra (SALES_OPEN).
+  const SALES_OPEN = salesOpen(PAYWALL_MODE, PAYWALL_ENABLED);
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);
@@ -103,7 +106,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
   // O PDF é do Relatório completo: sem acesso (e com a compra ligada), o botão abre o modal de compra em vez de imprimir.
   const handlePdf = () => {
-    const action = pdfButtonAction(PAYWALL_ENABLED, hasPremium);
+    const action = pdfButtonAction(SALES_OPEN, hasPremium);
     track('pdf_export_click', { locked: action === 'openModal' });
     if (action === 'openModal') openPaywall('pdf');
     else setPrintingPdf(true);
@@ -219,7 +222,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             axes={axes}
             results={axisResults}
             areaLocked={!hasPremium}
-            onUnlock={PAYWALL_ENABLED ? () => openPaywall('areas') : undefined}
+            onUnlock={SALES_OPEN ? () => openPaywall('areas') : undefined}
           />
 
           <BooksSection books={result.bookRecommendations} />
@@ -266,12 +269,12 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
               />
             </Suspense>
           ) : (
-            PAYWALL_ENABLED && <PaywallSection access={access} onOpen={() => openPaywall('section')} />
+            SALES_OPEN && <PaywallSection access={access} onOpen={() => openPaywall('section')} />
           )}
 
           {hasPremium && actions}
 
-          {paywallOpen && !hasPremium && PAYWALL_ENABLED && <PaywallModal access={access} category={top.category} onClose={() => setPaywallOpen(false)} />}
+          {paywallOpen && !hasPremium && SALES_OPEN && <PaywallModal access={access} category={top.category} onClose={() => setPaywallOpen(false)} />}
 
           {PREMIUM_DEV_OPEN && <PreviewSwitch value={preview} onChange={setPreview} />}
 
@@ -288,10 +291,10 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav premiumLocked={!hasPremium} premiumTarget={hasPremium ? 'premium-eixos' : PAYWALL_ENABLED ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
+          <ResultsNav premiumLocked={!hasPremium} premiumTarget={hasPremium ? 'premium-eixos' : SALES_OPEN ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
         </aside>
       </div>
-      {printingPdf && pdfButtonAction(PAYWALL_ENABLED, hasPremium) === 'print' &&
+      {printingPdf && pdfButtonAction(SALES_OPEN, hasPremium) === 'print' &&
         createPortal(
           <div className="rp-root" aria-hidden="true">
             <PdfReport
