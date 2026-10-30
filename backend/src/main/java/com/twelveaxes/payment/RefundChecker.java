@@ -1,6 +1,6 @@
 package com.twelveaxes.payment;
 
-/** Pergunta a Stripe se um pagamento foi reembolsado. A implementacao real chega junto com o checkout. */
+/** Pergunta ao gateway de pagamento se um pagamento foi reembolsado. */
 @FunctionalInterface
 public interface RefundChecker {
     boolean isRefunded(String paymentRef);

@@ -5,12 +5,14 @@ import java.time.Clock;
 import java.util.HexFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class PaymentConfig {
@@ -37,18 +39,42 @@ public class PaymentConfig {
         return new EntitlementToken(secret, clock);
     }
 
-    /**
-     * A Stripe real, so com os pagamentos ligados e a chave definida (sk_test_ em teste, sk_live_ no go-live). Esta
-     * definicao vem antes do RefundChecker abaixo para ele ja encontrar o gateway (que tambem e um RefundChecker).
-     */
+    /** O Mercado Pago real (reais), so com os pagamentos ligados e o Access Token definido (de teste ou de producao). */
     @Bean
     @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
-    @ConditionalOnExpression("!'${app.payments.stripe-secret-key:}'.isBlank()")
-    StripeGateway stripeGateway(@Value("${app.payments.stripe-secret-key}") String secretKey, Clock clock) {
-        return new StripeGatewayImpl(secretKey, clock);
+    @ConditionalOnExpression("!'${app.payments.mercadopago-access-token:}'.isBlank()")
+    MercadoPagoGatewayImpl mercadoPagoGateway(
+            @Value("${app.payments.mercadopago-access-token}") String accessToken,
+            @Value("${app.payments.item-picture-url:}") String pictureUrl,
+            Clock clock) {
+        return new MercadoPagoGatewayImpl(accessToken, pictureUrl, clock);
     }
 
-    /** Sem a Stripe ligada, nenhum pagamento consta como reembolsado. */
+    /** A Paddle real (dolar), so com os pagamentos ligados, a chave de API e o ID do preco definidos (sandbox ou producao). */
+    @Bean
+    @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
+    @ConditionalOnExpression("!'${app.payments.paddle-api-key:}'.isBlank() && !'${app.payments.paddle-price-id:}'.isBlank()")
+    PaddleGatewayImpl paddleGateway(
+            @Value("${app.payments.paddle-api-key}") String apiKey,
+            @Value("${app.payments.paddle-price-id}") String priceId,
+            Clock clock) {
+        return new PaddleGatewayImpl(apiKey, priceId, clock);
+    }
+
+    /**
+     * O gateway que o resto do backend enxerga: roteia por moeda e por formato de referencia. Existe se ao menos um dos
+     * dois estiver configurado. Esta definicao vem antes do RefundChecker abaixo para ele ja encontrar o gateway (que
+     * tambem e um RefundChecker).
+     */
+    @Bean
+    @Primary
+    @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")
+    @ConditionalOnExpression("!'${app.payments.mercadopago-access-token:}'.isBlank() || (!'${app.payments.paddle-api-key:}'.isBlank() && !'${app.payments.paddle-price-id:}'.isBlank())")
+    PaymentGateway paymentGateway(ObjectProvider<MercadoPagoGatewayImpl> brazil, ObjectProvider<PaddleGatewayImpl> paddle) {
+        return new RoutingPaymentGateway(brazil.getIfAvailable(), paddle.getIfAvailable());
+    }
+
+    /** Sem o gateway ligado, nenhum pagamento consta como reembolsado. */
     @Bean
     @ConditionalOnMissingBean(RefundChecker.class)
     RefundChecker noRefundChecker() {

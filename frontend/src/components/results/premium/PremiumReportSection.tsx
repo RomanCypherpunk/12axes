@@ -4,6 +4,7 @@ import { ApiError } from '../../../services/quizApi';
 import type { Axis, AxisResult, PremiumReport } from '../../../types/quiz';
 import type { SavedAnswers } from '../../../utils/quizProgress';
 import { premiumPanels } from './PremiumPanels';
+import { SaveAccessLink } from './SaveAccessLink';
 import { P } from './premiumText';
 
 interface Props {
@@ -82,6 +83,8 @@ export default function PremiumReportSection({ vector, answers, token, religion,
       {premiumPanels(report, axes, results).map(({ id, node }) => (
         <Fragment key={id}>{node}</Fragment>
       ))}
+      {/* Só na página: o PDF usa premiumPanels sem esta seção. Sem token (modo de desenvolvimento) não há o que guardar. */}
+      {token && <SaveAccessLink token={token} />}
     </>
   );
 }

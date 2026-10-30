@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
+import { accessLink, accessTokenFromHash, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
 
 const base64url = (text: string) => btoa(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 const tokenExpiringAt = (seconds: number) => `${base64url(`v2|hash|pi_3Test|1000|${seconds}`)}.assinatura`;
@@ -98,5 +98,34 @@ describe('saveToken e loadToken', () => {
     vi.stubGlobal('localStorage', memoryStorage({ getItem: blocked, setItem: blocked, removeItem: blocked }));
     expect(loadToken('hash-a')).toBeNull();
     expect(() => saveToken('hash-a', 'x')).not.toThrow();
+  });
+});
+
+describe('link de acesso guardado', () => {
+  const token = `${base64url('v2|hash|123456|1000|4000000000')}.assinatura+/=`;
+
+  it('põe o acesso no fragmento do endereço e o lê de volta', () => {
+    const link = accessLink('https://12axes.vercel.app/results?est=92.3&rep=25.7', token);
+    const url = new URL(link);
+    expect(url.search).toBe('?est=92.3&rep=25.7');
+    expect(url.hash.startsWith('#access=')).toBe(true);
+    expect(accessTokenFromHash(url.hash)).toBe(token);
+  });
+
+  it('o acesso não vai para a parte do endereço que os servidores recebem', () => {
+    const link = accessLink('https://12axes.vercel.app/results?est=1', token);
+    expect(link.split('#')[0]).not.toContain(token);
+  });
+
+  it('substitui uma âncora que já existia', () => {
+    const link = accessLink('https://12axes.vercel.app/results?est=1#bussola', token);
+    expect(accessTokenFromHash(new URL(link).hash)).toBe(token);
+    expect(link).not.toContain('#bussola');
+  });
+
+  it('sem acesso no fragmento, devolve null', () => {
+    expect(accessTokenFromHash('')).toBeNull();
+    expect(accessTokenFromHash('#bussola')).toBeNull();
+    expect(accessTokenFromHash('#access=')).toBeNull();
   });
 });

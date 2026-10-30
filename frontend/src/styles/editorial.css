@@ -1394,6 +1394,11 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 /* Relatório Completo (pago): seções carregadas sob demanda */
 .e-prem h2{margin-bottom:6px}
 .e-prem-intro{color:var(--texto-suave);font-size:15px;max-width:640px;margin:0 0 22px}
+.e-prem-save-row{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.e-prem-save-field{flex:1 1 280px;min-width:0;font:inherit;font-size:13.5px;color:var(--texto-suave);background:var(--papel);border:1px solid var(--borda);border-radius:999px;padding:11px 18px;text-overflow:ellipsis}
+.e-prem-save-field:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-prem-save-row .e-btn{flex:none}
+@media (max-width:560px){.e-prem-save-row{flex-direction:column}.e-prem-save-row .e-btn{width:100%}}
 .e-prem-dev{font-size:12.5px;font-weight:600;color:var(--carmim);background:var(--papel);border:1px dashed var(--carmim);border-radius:12px;padding:8px 14px;margin:0 0 -8px}
 .e-prem-axes{list-style:none;display:grid;gap:0;margin:18px 0 0;padding:0}
 .e-prem-axis{border:0;border-top:1px solid var(--borda);border-radius:0;padding:26px 0 28px;background:none;min-width:0}

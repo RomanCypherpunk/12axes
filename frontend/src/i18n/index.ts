@@ -542,6 +542,7 @@ export interface Strings {
   footerContribute: string;
   footerLicense: string;
   footerReport: string;
+  footerFullReport: string;
   footerTerms: string;
   footerPrivacy: string;
   footerRefund: string;

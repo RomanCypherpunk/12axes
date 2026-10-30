@@ -28,6 +28,11 @@ interface PremiumText {
   timelineBestEra: string;
   seats: Record<GovernmentSeat['seatKey'], string>;
   countriesTitle: string;
+  saveTitle: string;
+  saveIntro: string;
+  saveField: string;
+  saveCopy: string;
+  saveCopied: string;
 }
 
 const pt: PremiumText = {
@@ -85,6 +90,11 @@ const pt: PremiumText = {
     cultura: 'Conselheiro de Cultura'
   },
   countriesTitle: '10 países ou regiões para viver',
+  saveTitle: 'Guarde o seu acesso',
+  saveIntro: 'Para abrir este relatório em outro aparelho, ou depois de limpar o navegador, salve o link abaixo. Quem tiver o link abre o relatório deste resultado, então guarde-o com cuidado.',
+  saveField: 'Link de acesso ao relatório',
+  saveCopy: 'Copiar link',
+  saveCopied: 'Link copiado',
 };
 
 const en: PremiumText = {
@@ -142,6 +152,11 @@ const en: PremiumText = {
     cultura: 'Cultural Adviser'
   },
   countriesTitle: '10 countries or regions to live in',
+  saveTitle: 'Keep your access',
+  saveIntro: 'To open this report on another device, or after clearing your browser, save the link below. Anyone with the link opens the report for this result, so keep it safe.',
+  saveField: 'Report access link',
+  saveCopy: 'Copy link',
+  saveCopied: 'Link copied',
 };
 
 export const P: PremiumText = LANG === 'en' ? en : pt;

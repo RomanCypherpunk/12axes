@@ -9,7 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twelveaxes.payment.EntitlementToken;
 import com.twelveaxes.payment.PaymentGatewayException;
-import com.twelveaxes.payment.StripeGateway;
+import com.twelveaxes.payment.PaymentGateway;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -34,8 +34,8 @@ import org.springframework.test.web.servlet.MockMvc;
 @TestPropertySource(properties = {
         "app.payments.enabled=true",
         "app.payments.entitlement-secret=0123456789abcdef0123456789abcdef",
-        "app.payments.price-id-brl=price_brl_test",
-        "app.payments.price-id-usd=",
+        "app.payments.price-brl=14.99",
+        "app.payments.price-usd=",
         "app.payments.gift-key=gift-test-key"
 })
 @Import(PaymentControllerTest.GatewayConfig.class)
@@ -46,9 +46,9 @@ class PaymentControllerTest {
     private static final String SESSION = "cs_test_a1B2c3D4e5F6";
     private static final String NONCE = "AbCdEfGhIjKlMnOpQrSt";
 
-    /** Duble da Stripe: guarda o que recebeu e devolve o que o teste preparar. */
-    static class FakeGateway implements StripeGateway {
-        record Call(String priceId, String nonce, String vectorHash, String returnUrl, String lang) {
+    /** Duble do gateway de pagamento: guarda o que recebeu e devolve o que o teste preparar. */
+    static class FakeGateway implements PaymentGateway {
+        record Call(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang) {
         }
 
         final List<Call> creates = new ArrayList<>();
@@ -67,15 +67,15 @@ class PaymentControllerTest {
 
         private void failIfDown() {
             if (down.get()) {
-                throw new PaymentGatewayException("Stripe fora do ar", new RuntimeException("boom"));
+                throw new PaymentGatewayException("Gateway fora do ar", new RuntimeException("boom"));
             }
         }
 
         @Override
-        public CheckoutSession create(String priceId, String nonce, String vectorHash, String returnUrl, String lang) {
+        public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang) {
             failIfDown();
-            creates.add(new Call(priceId, nonce, vectorHash, returnUrl, lang));
-            return new CheckoutSession(SESSION, "https://checkout.stripe.com/c/pay/" + SESSION);
+            creates.add(new Call(amount, currency, nonce, vectorHash, returnUrl, lang));
+            return new CheckoutSession(SESSION, "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=" + SESSION);
         }
 
         @Override
@@ -102,7 +102,7 @@ class PaymentControllerTest {
     static class GatewayConfig {
         @Bean
         @Primary
-        StripeGateway fakeGateway() {
+        PaymentGateway fakeGateway() {
             return GATEWAY;
         }
     }
@@ -146,11 +146,11 @@ class PaymentControllerTest {
     }
 
     @Test
-    void checkoutReturnsStripeUrlAndBindsNonceToVectorHash() throws Exception {
+    void checkoutReturnsGatewayUrlAndBindsNonceToVectorHash() throws Exception {
         mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
                         .content(checkoutBody(VECTOR, "pt", RETURN_URL, Map.of())))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.url").value("https://checkout.stripe.com/c/pay/" + SESSION));
+                .andExpect(jsonPath("$.url").value("https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=" + SESSION));
 
         assertThat(GATEWAY.creates).hasSize(1);
         FakeGateway.Call call = GATEWAY.creates.getFirst();
@@ -183,15 +183,16 @@ class PaymentControllerTest {
     @Test
     void checkoutUsesBrlPriceForPtAndIgnoresPriceFromClient() throws Exception {
         mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
-                        .content(checkoutBody(VECTOR, "pt", RETURN_URL, Map.of("priceId", "price_cheap", "amount", 1))))
+                        .content(checkoutBody(VECTOR, "pt", RETURN_URL, Map.of("priceId", "price_cheap", "amount", 1, "price", "0.01"))))
                 .andExpect(status().isOk());
 
-        assertThat(GATEWAY.creates.getFirst().priceId()).isEqualTo("price_brl_test");
+        assertThat(GATEWAY.creates.getFirst().amount()).isEqualTo("14.99");
+        assertThat(GATEWAY.creates.getFirst().currency()).isEqualTo("BRL");
     }
 
     @Test
     void checkoutInACurrencyWithoutPriceIs404() throws Exception {
-        // USD nao esta liberado (sem Price ID): a moeda simplesmente nao e vendida.
+        // USD nao esta liberado (sem preco): a moeda simplesmente nao e vendida.
         mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
                         .content(checkoutBody(VECTOR, "en", RETURN_URL, Map.of())))
                 .andExpect(status().isNotFound());
@@ -201,7 +202,7 @@ class PaymentControllerTest {
     @Test
     void unlockBySessionIssuesTokenForThatVector() throws Exception {
         String vectorHash = hashOf(VECTOR);
-        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Paid", vectorHash, false));
+        GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Paid", vectorHash, false));
 
         String body = unlock(VECTOR, SESSION, null).andExpect(status().isOk())
                 .andExpect(jsonPath("$.token").isNotEmpty())
@@ -214,21 +215,21 @@ class PaymentControllerTest {
 
     @Test
     void unlockByNonceIssuesToken() throws Exception {
-        GATEWAY.byNonce.put(NONCE, new StripeGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
+        GATEWAY.byNonce.put(NONCE, new PaymentGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
 
         unlock(VECTOR, null, NONCE).andExpect(status().isOk()).andExpect(jsonPath("$.token").isNotEmpty());
     }
 
     @Test
     void unlockRejectsPaymentBoundToOtherVector() throws Exception {
-        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
+        GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
 
         unlock(OTHER_VECTOR, SESSION, null).andExpect(status().isForbidden());
     }
 
     @Test
     void unlockPendingPixReturns402() throws Exception {
-        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Pix", hashOf(VECTOR), true));
+        GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Pix", hashOf(VECTOR), true));
 
         unlock(VECTOR, SESSION, null).andExpect(status().isPaymentRequired());
     }
@@ -240,7 +241,7 @@ class PaymentControllerTest {
     }
 
     @Test
-    void unlockReturns503WhenStripeFails() throws Exception {
+    void unlockReturns503WhenGatewayFails() throws Exception {
         GATEWAY.down.set(true);
 
         unlock(VECTOR, SESSION, null).andExpect(status().isServiceUnavailable());
@@ -251,7 +252,7 @@ class PaymentControllerTest {
 
     @Test
     void unlockDoesNotIssueTokenForARefundedPayment() throws Exception {
-        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
+        GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
         GATEWAY.refunded.set(true);
 
         unlock(VECTOR, SESSION, null).andExpect(status().isForbidden());
@@ -262,7 +263,7 @@ class PaymentControllerTest {
         unlock(VECTOR, null, null).andExpect(status().isBadRequest());
         unlock(VECTOR, SESSION, NONCE).andExpect(status().isBadRequest());
         unlock(VECTOR, "not-a-session", null).andExpect(status().isBadRequest());
-        // o nonce vai para uma busca da Stripe: aspas e espacos nunca passam
+        // o nonce vai para uma busca do gateway: aspas e espacos nunca passam
         unlock(VECTOR, null, "x' OR metadata['a']:'b").andExpect(status().isBadRequest());
     }
 
@@ -277,7 +278,7 @@ class PaymentControllerTest {
     }
 
     @Test
-    void giftKeyIssuesTokenForThatVectorWithoutCallingStripe() throws Exception {
+    void giftKeyIssuesTokenForThatVectorWithoutCallingGateway() throws Exception {
         String body = unlockGift(VECTOR, "gift-test-key", null).andExpect(status().isOk())
                 .andReturn().getResponse().getContentAsString();
 
@@ -293,7 +294,7 @@ class PaymentControllerTest {
     }
 
     private String paidToken() throws Exception {
-        GATEWAY.bySession.put(SESSION, new StripeGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
+        GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Paid", hashOf(VECTOR), false));
         String body = unlock(VECTOR, SESSION, null).andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         return objectMapper.readTree(body).get("token").asText();
     }
@@ -339,7 +340,7 @@ class PaymentControllerTest {
     }
 
     @Test
-    void renewKeepsAGiftAccessWithoutCallingStripeForRefunds() throws Exception {
+    void renewKeepsAGiftAccessWithoutCallingGatewayForRefunds() throws Exception {
         String body = unlockGift(VECTOR, "gift-test-key", null).andReturn().getResponse().getContentAsString();
         String giftToken = objectMapper.readTree(body).get("token").asText();
         GATEWAY.refunded.set(true);

@@ -1,7 +1,7 @@
 /**
  * Acesso ao Relatório Completo: o token que o backend emite depois do pagamento fica neste navegador, preso ao
  * resultado (os 12 valores dos eixos) que foi pago. Sem conta e sem banco: quem limpar os dados do navegador reabre
- * o relatório pelo link do recibo da Stripe.
+ * o relatório por um pedido de recuperação (por e-mail).
  */
 
 const KEY_PREFIX = '12axes:entitlement:';
@@ -114,4 +114,22 @@ export function removeToken(hash: string): void {
   } catch {
     // nada a remover
   }
+}
+
+const ACCESS_HASH_KEY = 'access';
+
+/**
+ * O link para guardar: o endereço do resultado com o acesso no fragmento (#access=...). O fragmento não é enviado a
+ * servidores nem entra nas estatísticas de acesso, ao contrário de um parâmetro de busca.
+ */
+export function accessLink(resultUrl: string, token: string): string {
+  const url = new URL(resultUrl);
+  url.hash = `${ACCESS_HASH_KEY}=${encodeURIComponent(token)}`;
+  return url.toString();
+}
+
+/** O acesso que veio no fragmento do endereço (#access=...), ou null. */
+export function accessTokenFromHash(hash: string): string | null {
+  const value = new URLSearchParams(hash.replace(/^#/, '')).get(ACCESS_HASH_KEY);
+  return value && value.length > 0 ? value : null;
 }

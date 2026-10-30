@@ -764,6 +764,7 @@ export const pt: Strings = {
   footerAbout: 'Sobre',
   footerContribute: 'Contribuições',
   footerLicense: 'Licença',
+  footerFullReport: 'Relatório Completo',
   footerTerms: 'Termos de uso',
   footerPrivacy: 'Privacidade',
   footerRefund: 'Reembolso',

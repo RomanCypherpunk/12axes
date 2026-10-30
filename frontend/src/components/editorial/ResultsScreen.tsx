@@ -37,10 +37,11 @@ import { downloadRankingXlsx } from '../../utils/rankingXlsx';
 // Modo de desenvolvimento local do Relatório Completo: abre sem pagamento (o backend também precisa de PREMIUM_DEV_OPEN).
 // Fica fora do build de produção porque a variável só existe em frontend/.env.local.
 const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
-// Compra do Relatório completo (Stripe): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1),
+// Compra do Relatório completo (Mercado Pago): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1),
 // paused (vendas pausadas: só quem já pagou vê o relatório) ou
-// desligada (padrão). Só em português na v1 (preço em reais). Ver utils/paywallFlag.
-const PAYWALL_MODE = paywallMode(import.meta.env.VITE_PAYWALL_ENABLED);
+// desligada (padrão). Ver utils/paywallFlag.
+// Cada idioma tem o seu interruptor: VITE_PAYWALL_ENABLED (português, reais) e VITE_PAYWALL_EN_ENABLED (inglês, dólar, pela Paddle).
+const PAYWALL_MODE = paywallMode(LANG === 'en' ? import.meta.env.VITE_PAYWALL_EN_ENABLED : import.meta.env.VITE_PAYWALL_ENABLED);
 const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
 
 interface ResultsScreenProps {
@@ -64,7 +65,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     () =>
       paywallEnabled({
         mode: PAYWALL_MODE,
-        lang: LANG,
         search: window.location.search,
         storage: (() => {
           try {
@@ -77,7 +77,22 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     []
   );
   // Com as vendas pausadas o relatório segue aberto a quem pagou (PAYWALL_ENABLED), mas ninguém vê a compra (SALES_OPEN).
-  const SALES_OPEN = salesOpen(PAYWALL_MODE, PAYWALL_ENABLED);
+  const SALES_OPEN = useMemo(
+    () =>
+      salesOpen({
+        mode: PAYWALL_MODE,
+        enabled: PAYWALL_ENABLED,
+        search: window.location.search,
+        storage: (() => {
+          try {
+            return window.localStorage;
+          } catch {
+            return null;
+          }
+        })()
+      }),
+    [PAYWALL_ENABLED]
+  );
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);

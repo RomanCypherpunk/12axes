@@ -34,7 +34,7 @@ export function fetchPremiumReport(
   });
 }
 
-/** Abre o pagamento deste resultado e devolve o endereço da página da Stripe. O preço é decidido pelo servidor. */
+/** Abre o pagamento deste resultado e devolve o endereço da página de pagamento (Mercado Pago). O preço é decidido pelo servidor. */
 export async function startCheckout(vector: number[], returnUrl: string): Promise<string> {
   const { url } = await request<{ url: string }>('/api/checkout', {
     method: 'POST',

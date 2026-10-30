@@ -6,8 +6,8 @@ import { PaymentIcons } from './PaymentIcons';
 import type { PremiumAccess } from './usePremiumAccess';
 
 /**
- * Última parada antes do pagamento: tudo o que o Relatório completo traz, o preço e o botão que leva ao checkout da
- * Stripe. Abre ao clicar em qualquer convite ("Desbloquear o relatório completo"). Usa a cor da categoria do resultado
+ * Última parada antes do pagamento: tudo o que o Relatório completo traz, o preço e o botão que leva ao checkout do
+ * Mercado Pago. Abre ao clicar em qualquer convite ("Desbloquear o relatório completo"). Usa a cor da categoria do resultado
  * (o modal vive fora da página, por isso recebe a cor por aqui).
  */
 export function PaywallModal({ access, category, onClose }: { access: PremiumAccess; category: string; onClose: () => void }) {

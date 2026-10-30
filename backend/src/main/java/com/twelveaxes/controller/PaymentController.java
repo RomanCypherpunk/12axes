@@ -3,9 +3,9 @@ package com.twelveaxes.controller;
 import com.twelveaxes.payment.EntitlementToken;
 import com.twelveaxes.payment.PaymentGatewayException;
 import com.twelveaxes.payment.RefundChecker;
-import com.twelveaxes.payment.StripeGateway;
-import com.twelveaxes.payment.StripeGateway.CheckoutSession;
-import com.twelveaxes.payment.StripeGateway.PaidPayment;
+import com.twelveaxes.payment.PaymentGateway;
+import com.twelveaxes.payment.PaymentGateway.CheckoutSession;
+import com.twelveaxes.payment.PaymentGateway.PaidPayment;
 import com.twelveaxes.service.AxisValuesParser;
 import com.twelveaxes.service.QuizDataService;
 import jakarta.validation.Valid;
@@ -37,17 +37,17 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 /**
- * Compra do Relatorio Completo: abre o pagamento na Stripe e, depois de pago, troca o pagamento por um token de acesso
- * preso ao resultado. Nao guarda nada: a Stripe e a fonte da verdade. Com os pagamentos desligados, 404.
+ * Compra do Relatorio Completo: abre o pagamento no gateway (Mercado Pago) e, depois de pago, troca o pagamento por um
+ * token de acesso preso ao resultado. Nao guarda nada: o gateway e a fonte da verdade. Com os pagamentos desligados, 404.
  */
 @RestController
 public class PaymentController {
     private static final Logger LOG = LoggerFactory.getLogger(PaymentController.class);
-    /** Referencia de pagamento dos tokens de cortesia: nao existe na Stripe, entao nunca se confere reembolso. */
+    /** Referencia de pagamento dos tokens de cortesia: nao existe no gateway, entao nunca se confere reembolso. */
     public static final String GIFT_REF = "gift";
     private static final SecureRandom RANDOM = new SecureRandom();
     private static final Pattern SESSION_ID = Pattern.compile("cs_(test|live)_[A-Za-z0-9]{8,200}");
-    // O nonce vai para uma consulta de busca da Stripe: so letras, numeros, '-' e '_'.
+    // O nonce vai para uma consulta de busca do gateway: so letras, numeros, '-' e '_'.
     private static final Pattern NONCE = Pattern.compile("[A-Za-z0-9_-]{16,64}");
 
     public record CheckoutRequest(@NotBlank String v, String lang, @NotBlank String returnUrl) {
@@ -62,23 +62,23 @@ public class PaymentController {
     public record UnlockResponse(String token) {
     }
 
-    private final ObjectProvider<StripeGateway> gatewayProvider;
+    private final ObjectProvider<PaymentGateway> gatewayProvider;
     private final EntitlementToken entitlementToken;
     private final RefundChecker refundChecker;
     private final boolean paymentsEnabled;
-    private final String priceIdBrl;
-    private final String priceIdUsd;
+    private final String priceBrl;
+    private final String priceUsd;
     private final Duration tokenValidity;
     private final Set<String> allowedOrigins;
     private final byte[] giftKey;
 
     public PaymentController(
-            ObjectProvider<StripeGateway> gatewayProvider,
+            ObjectProvider<PaymentGateway> gatewayProvider,
             EntitlementToken entitlementToken,
             RefundChecker refundChecker,
             @Value("${app.payments.enabled:false}") boolean paymentsEnabled,
-            @Value("${app.payments.price-id-brl:}") String priceIdBrl,
-            @Value("${app.payments.price-id-usd:}") String priceIdUsd,
+            @Value("${app.payments.price-brl:}") String priceBrl,
+            @Value("${app.payments.price-usd:}") String priceUsd,
             @Value("${app.payments.token-valid-days:365}") long tokenValidDays,
             @Value("${app.frontend-origins}") String origins,
             @Value("${app.payments.gift-key:}") String giftKey
@@ -88,8 +88,8 @@ public class PaymentController {
         this.entitlementToken = entitlementToken;
         this.refundChecker = refundChecker;
         this.paymentsEnabled = paymentsEnabled;
-        this.priceIdBrl = priceIdBrl;
-        this.priceIdUsd = priceIdUsd;
+        this.priceBrl = priceBrl;
+        this.priceUsd = priceUsd;
         this.tokenValidity = Duration.ofDays(tokenValidDays);
         this.allowedOrigins = Arrays.stream(origins.split(","))
                 .map(String::trim)
@@ -103,15 +103,16 @@ public class PaymentController {
     public CheckoutResponse checkout(@Valid @RequestBody CheckoutRequest request) {
         requireEnabled();
         String lang = QuizDataService.LANG_EN.equals(request.lang()) ? QuizDataService.LANG_EN : QuizDataService.LANG_PT;
-        String priceId = QuizDataService.LANG_EN.equals(lang) ? priceIdUsd : priceIdBrl;
-        if (priceId == null || priceId.isBlank()) {
+        boolean english = QuizDataService.LANG_EN.equals(lang);
+        String amount = english ? priceUsd : priceBrl;
+        if (amount == null || amount.isBlank()) {
             // Moeda ainda nao liberada para venda.
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         String returnUrl = validReturnUrl(request.returnUrl());
         String vectorHash = EntitlementToken.hashOf(AxisValuesParser.parse(request.v()));
         String nonce = newNonce();
-        CheckoutSession session = gateway().create(priceId, nonce, vectorHash, returnUrl, lang);
+        CheckoutSession session = gateway().create(amount.trim(), english ? "USD" : "BRL", nonce, vectorHash, returnUrl, lang);
         return new CheckoutResponse(session.url());
     }
 
@@ -182,10 +183,10 @@ public class PaymentController {
         return new UnlockResponse(entitlementToken.issue(vectorHash, claims.paymentRef(), tokenValidity));
     }
 
-    /** Stripe fora do ar ou recusando: nunca libera por engano; o front mostra "tente de novo". */
+    /** Gateway fora do ar ou recusando: nunca libera por engano; o front mostra "tente de novo". */
     @ExceptionHandler(PaymentGatewayException.class)
     public ResponseEntity<Map<String, String>> gatewayFailed(PaymentGatewayException e) {
-        LOG.warn("Falha ao falar com a Stripe: {}", e.getMessage(), e);
+        LOG.warn("Falha ao falar com o gateway de pagamento: {}", e.getMessage(), e);
         return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
                 .body(Map.of("error", "payment_unavailable", "message", "Pagamento indisponivel no momento"));
     }
@@ -196,10 +197,10 @@ public class PaymentController {
         }
     }
 
-    private StripeGateway gateway() {
-        StripeGateway gateway = gatewayProvider.getIfAvailable();
+    private PaymentGateway gateway() {
+        PaymentGateway gateway = gatewayProvider.getIfAvailable();
         if (gateway == null) {
-            // Pagamentos ligados mas sem STRIPE_SECRET_KEY: configuracao incompleta, nunca libera.
+            // Pagamentos ligados mas sem MERCADOPAGO_ACCESS_TOKEN: configuracao incompleta, nunca libera.
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "Pagamento nao configurado");
         }
         return gateway;

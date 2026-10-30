@@ -623,7 +623,7 @@ export const en: Strings = {
     { lead: 'Full ranking and spreadsheet:', text: 'your compatibility with the whole catalog, to export to Excel.' }
   ],
   paywallGuarantee: '7-day refund guarantee',
-  paywallPayWith: 'Payment methods: Apple Pay, Google Pay and card',
+  paywallPayWith: 'Payment methods: cards, PayPal, Apple Pay, Google Pay and more, depending on your country',
   paywallPrice: 'US$ 3.99',
   paywallCta: 'Unlock the full report',
   paywallChecking: 'Confirming your payment...',
@@ -775,6 +775,7 @@ export const en: Strings = {
   footerAbout: 'About',
   footerContribute: 'Contributing',
   footerLicense: 'License',
+  footerFullReport: 'Full Report',
   footerTerms: 'Terms of use',
   footerPrivacy: 'Privacy',
   footerRefund: 'Refund',

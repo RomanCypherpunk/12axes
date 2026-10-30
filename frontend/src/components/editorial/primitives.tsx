@@ -36,6 +36,7 @@ export function SiteFooter() {
     { label: t.footerContribute, href: `${REPO_URL}#contributing-ov-file`, external: true },
     { label: t.footerLicense, href: `${REPO_URL}/blob/main/LICENSE`, external: true },
     { label: t.footerReport, href: NEW_ISSUE_URL, external: true },
+    { label: t.footerFullReport, href: `${base}/report`, external: false },
     { label: t.footerTerms, href: `${base}/terms`, external: false },
     { label: t.footerPrivacy, href: `${base}/privacy`, external: false },
     { label: t.footerRefund, href: `${base}/refund`, external: false },

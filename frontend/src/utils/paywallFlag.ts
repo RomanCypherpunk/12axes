@@ -1,8 +1,10 @@
 /**
- * Quem vê a compra do Relatório completo. `VITE_PAYWALL_ENABLED` (decidido na publicação do site):
- * - `true`: todo mundo (só em português, que é onde o preço em reais vale);
+ * Quem vê a compra do Relatório completo. `VITE_PAYWALL_ENABLED` (português, em reais) e `VITE_PAYWALL_EN_ENABLED` (inglês, em
+ * dólar, pela Paddle), cada um com estes valores (decididos na publicação do site):
+ * - `true`: todo mundo;
  * - `preview`: só os navegadores marcados. Abrir o site com `?paywall=1` marca o navegador (fica guardado), `?paywall=0` desmarca;
- * - `paused`: vendas pausadas. Ninguém vê a compra, mas quem já pagou continua com o relatório (o acesso guardado segue valendo);
+ * - `paused`: vendas pausadas. Ninguém vê a compra, mas quem já pagou continua com o relatório (o acesso guardado segue valendo).
+ *   Só o navegador marcado com `?paywall=1` vê a compra: é como o dono testa no ar sem abrir a venda e sem tirar o acesso de quem pagou;
  * - qualquer outro valor, ou vazio: ninguém. É o padrão: sem a variável, a compra não existe.
  */
 export type PaywallMode = 'on' | 'preview' | 'paused' | 'off';
@@ -24,7 +26,6 @@ interface MinimalStorage {
 
 interface PaywallInput {
   mode: PaywallMode;
-  lang: 'pt' | 'en';
   /** `window.location.search` da página. */
   search: string;
   storage: MinimalStorage | null;
@@ -48,13 +49,17 @@ function markedBrowser(search: string, storage: MinimalStorage | null): boolean 
  * O Relatório completo existe para esta pessoa, neste navegador? Vale para o acesso de quem já pagou (o token guardado
  * só é lido com isto ligado) e, fora das vendas pausadas, também para a compra.
  */
-export function paywallEnabled({ mode, lang, search, storage }: PaywallInput): boolean {
-  if (lang !== 'pt' || mode === 'off') return false;
+export function paywallEnabled({ mode, search, storage }: PaywallInput): boolean {
+  if (mode === 'off') return false;
   if (mode === 'on' || mode === 'paused') return true;
   return markedBrowser(search, storage);
 }
 
-/** A compra (convite, botão e modal) deve aparecer? Pausada, o relatório segue aberto só para quem já pagou. */
-export function salesOpen(mode: PaywallMode, enabled: boolean): boolean {
-  return enabled && mode !== 'paused';
+/**
+ * A compra (convite, botão e modal) deve aparecer? Pausada, o relatório segue aberto só para quem já pagou, e a compra só
+ * aparece no navegador marcado (?paywall=1), para o dono testar no ar.
+ */
+export function salesOpen({ mode, enabled, search, storage }: { mode: PaywallMode; enabled: boolean } & Pick<PaywallInput, 'search' | 'storage'>): boolean {
+  if (!enabled) return false;
+  return mode !== 'paused' || markedBrowser(search, storage);
 }
