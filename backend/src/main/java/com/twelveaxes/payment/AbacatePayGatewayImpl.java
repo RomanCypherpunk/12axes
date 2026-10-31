@@ -87,7 +87,12 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         // So Pix: a loja ainda nao tem cartao liberado na AbacatePay (sem isso ela recusa o checkout: "CARD is not available").
         body.putArray("methods").add("PIX");
         body.put("externalId", nonce);
-        body.putObject("metadata").put("vector_hash", vectorHash).put("nonce", nonce);
+        // O e-mail e o endereco do resultado ficam no pagamento: o webhook de "pago" os le daqui para mandar o acesso por e-mail
+        // sem depender do navegador (o evento nao traz o metadata, entao o checkout e consultado de novo pela API).
+        ObjectNode metadata = body.putObject("metadata").put("vector_hash", vectorHash).put("nonce", nonce).put("return_url", returnUrl);
+        if (email != null && !email.isBlank()) {
+            metadata.put("email", email.trim());
+        }
         if (email != null && !email.isBlank()) {
             body.put("customerId", customerIdFor(email.trim()));
         }
@@ -130,12 +135,12 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         JsonNode checkouts = send(get("/checkouts/list?limit=20&externalId=" + URLEncoder.encode(nonce, StandardCharsets.UTF_8))).path("data");
         for (JsonNode checkout : checkouts) {
             if (SETTLED.contains(checkout.path("status").asText())) {
-                return Optional.of(new PaidPayment(checkout.path("id").asText(), vectorHashOf(checkout), false));
+                return Optional.of(paymentOf(checkout, false));
             }
         }
         for (JsonNode checkout : checkouts) {
             if (PENDING.equals(checkout.path("status").asText())) {
-                return Optional.of(new PaidPayment(checkout.path("id").asText(), vectorHashOf(checkout), true));
+                return Optional.of(paymentOf(checkout, true));
             }
         }
         return Optional.empty();
@@ -161,8 +166,15 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         return refunded;
     }
 
-    private static String vectorHashOf(JsonNode checkout) {
-        return checkout.path("metadata").path("vector_hash").asText("");
+    private static PaidPayment paymentOf(JsonNode checkout, boolean pending) {
+        JsonNode metadata = checkout.path("metadata");
+        return new PaidPayment(checkout.path("id").asText(), metadata.path("vector_hash").asText(""), pending,
+                textOrNull(metadata.path("email")), textOrNull(metadata.path("return_url")));
+    }
+
+    private static String textOrNull(JsonNode node) {
+        String text = node.asText("");
+        return text.isBlank() ? null : text;
     }
 
     private HttpRequest.Builder request(String path) {

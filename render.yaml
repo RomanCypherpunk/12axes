@@ -7,7 +7,7 @@ services:
     healthCheckPath: /api/health
     envVars:
       - key: FRONTEND_ORIGINS
-        value: https://12axes.vercel.app,https://12axes.enzoxavier.com.br
+        value: https://12axes.vercel.app,https://12axes.com.br,https://12axes.enzoxavier.com.br
       - key: API_ORIGIN_ENFORCEMENT
         value: "true"
       - key: API_REQUIRE_FETCH_METADATA
@@ -23,6 +23,17 @@ services:
         sync: false
       # ID do preço de R$ 14,99 (price_...), do mesmo ambiente (teste ou produção) da chave acima.
       - key: STRIPE_PRICE_ID_BRL
+        sync: false
+      # E-mail com o acesso ao relatório, enviado quando a AbacatePay avisa o pagamento (webhook). Nenhum valor mora no repositório.
+      # Resend: chave de API e remetente de um domínio verificado ("12 Axes <relatorio@seudominio>"); MAIL_REPLY_TO é opcional.
+      - key: RESEND_API_KEY
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: MAIL_REPLY_TO
+        sync: false
+      # Segredo do webhook: o mesmo valor que vai no endereço cadastrado no painel da AbacatePay (?webhookSecret=...).
+      - key: ABACATEPAY_WEBHOOK_SECRET
         sync: false
       # Segredo que assina os tokens de acesso. O Render gera um valor aleatório na criação; trocá-lo invalida todos os acessos.
       - key: ENTITLEMENT_SECRET

@@ -41,6 +41,8 @@ public class OriginEnforcementFilter extends OncePerRequestFilter {
     private static final Logger LOG = LoggerFactory.getLogger(OriginEnforcementFilter.class);
     private static final String HEALTH_PATH = "/api/health";
     private static final String API_PREFIX = "/api/";
+    // Webhooks de servidores (AbacatePay): nao vem de navegador, entao nao tem Origin. Quem os autentica e o segredo do endereco.
+    private static final String WEBHOOK_PREFIX = "/api/webhooks/";
     private static final String FETCH_SITE_HEADER = "Sec-Fetch-Site";
     private static final String FORBIDDEN_BODY =
             "{\"error\":\"forbidden\",\"message\":\"API de uso exclusivo de 12axes.vercel.app\"}";
@@ -95,7 +97,7 @@ public class OriginEnforcementFilter extends OncePerRequestFilter {
             return null;
         }
         String path = request.getRequestURI();
-        if (!path.startsWith(API_PREFIX) || HEALTH_PATH.equals(path)) {
+        if (!path.startsWith(API_PREFIX) || HEALTH_PATH.equals(path) || path.startsWith(WEBHOOK_PREFIX)) {
             return null;
         }
         // Preflight CORS chega sem credenciais e é respondido pelo próprio Spring.

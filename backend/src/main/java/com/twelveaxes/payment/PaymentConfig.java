@@ -61,6 +61,16 @@ public class PaymentConfig {
         return new AbacatePayGatewayImpl(apiKey, productId, clock);
     }
 
+    /** O Resend real, so com a chave de API e o remetente definidos (o remetente precisa ser de um dominio verificado no Resend). */
+    @Bean
+    @ConditionalOnExpression("!'${app.mail.resend-api-key:}'.isBlank() && !'${app.mail.from:}'.isBlank()")
+    ResendMailSender resendMailSender(
+            @Value("${app.mail.resend-api-key}") String apiKey,
+            @Value("${app.mail.from}") String from,
+            @Value("${app.mail.reply-to:}") String replyTo) {
+        return new ResendMailSender(apiKey, from, replyTo);
+    }
+
     /** A Paddle real (dolar), so com os pagamentos ligados, a chave de API e o ID do preco definidos (sandbox ou producao). */
     @Bean
     @ConditionalOnProperty(name = "app.payments.enabled", havingValue = "true")

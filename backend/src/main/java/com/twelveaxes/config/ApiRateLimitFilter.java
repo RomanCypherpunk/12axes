@@ -56,7 +56,7 @@ public class ApiRateLimitFilter extends OncePerRequestFilter {
             @Value("${app.rate-limit.enabled:true}") boolean enabled,
             @Value("${app.rate-limit.heavy-per-minute:60}") int heavyPerMinute,
             @Value("${app.rate-limit.general-per-minute:240}") int generalPerMinute,
-            @Value("${app.frontend-origins:http://localhost:5173,http://127.0.0.1:5173,https://12axes.vercel.app,https://12axes.enzoxavier.com.br}") String origins
+            @Value("${app.frontend-origins:http://localhost:5173,http://127.0.0.1:5173,https://12axes.vercel.app,https://12axes.com.br,https://12axes.enzoxavier.com.br}") String origins
     ) {
         this.enabled = enabled;
         this.heavyPerMinute = heavyPerMinute;

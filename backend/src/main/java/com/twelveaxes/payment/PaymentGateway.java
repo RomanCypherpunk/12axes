@@ -14,9 +14,13 @@ public interface PaymentGateway extends RefundChecker {
 
     /**
      * Um pagamento encontrado. {@code pending} e verdadeiro enquanto o dinheiro ainda nao entrou (Pix aguardando);
-     * so um pagamento que nao esta pendente libera o relatorio.
+     * so um pagamento que nao esta pendente libera o relatorio. {@code email} e {@code returnUrl} (o endereco do resultado
+     * pago) so existem nos gateways que os gravam no pagamento (AbacatePay) e so servem ao e-mail de acesso; podem ser nulos.
      */
-    record PaidPayment(String paymentRef, String vectorHash, boolean pending) {
+    record PaidPayment(String paymentRef, String vectorHash, boolean pending, String email, String returnUrl) {
+        public PaidPayment(String paymentRef, String vectorHash, boolean pending) {
+            this(paymentRef, vectorHash, pending, null, null);
+        }
     }
 
     /**
