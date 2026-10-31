@@ -34,11 +34,11 @@ export function fetchPremiumReport(
   });
 }
 
-/** Abre o pagamento deste resultado e devolve o endereço da página de pagamento (Mercado Pago). O preço é decidido pelo servidor. */
-export async function startCheckout(vector: number[], returnUrl: string): Promise<string> {
+/** Abre o pagamento deste resultado e devolve o endereço da página de pagamento. O preço é decidido pelo servidor; o e-mail (só em reais) vai para a AbacatePay. */
+export async function startCheckout(vector: number[], returnUrl: string, email?: string): Promise<string> {
   const { url } = await request<{ url: string }>('/api/checkout', {
     method: 'POST',
-    body: JSON.stringify({ v: vector.join(','), lang: LANG, returnUrl })
+    body: JSON.stringify({ v: vector.join(','), lang: LANG, returnUrl, email: email || undefined })
   });
   return url;
 }

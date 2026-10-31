@@ -422,6 +422,15 @@ export interface Strings {
   paywallProblems: { denied: string; unavailable: string; timeout: string };
   paywallRetry: string;
   paywallOpening: string;
+  paywallEmailLabel: string;
+  paywallEmailPlaceholder: string;
+  paywallEmailInvalid: string;
+  unlockedTag: string;
+  unlockedTitle: string;
+  unlockedLead: string;
+  unlockedCta: string;
+  unlockedCopy: string;
+  unlockedCopied: string;
   areasLockedTitle: string;
   areasLockedText: string;
   areasLockedCta: string;

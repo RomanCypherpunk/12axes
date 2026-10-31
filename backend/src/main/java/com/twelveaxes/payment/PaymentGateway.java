@@ -25,6 +25,14 @@ public interface PaymentGateway extends RefundChecker {
      */
     CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang);
 
+    /**
+     * Igual a {@link #create(String, String, String, String, String, String)}, com o e-mail que o comprador informou no site
+     * (pode ser nulo). Gateways que pedem o e-mail na propria pagina de pagamento ignoram.
+     */
+    default CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang, String email) {
+        return create(amount, currency, nonce, vectorHash, returnUrl, lang);
+    }
+
     /** O pagamento de uma sessao devolvida pelo gateway, ou vazio. Gateways que voltam por {@code ?pay=} nao usam. */
     Optional<PaidPayment> findBySession(String sessionId);
 

@@ -25,6 +25,7 @@ import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
 import type { Religion } from '../../utils/religion';
 import { PaywallModal } from '../results/PaywallModal';
+import { UnlockCelebration } from '../results/UnlockCelebration';
 import { PaywallSection } from '../results/PaywallSection';
 import { PreviewSwitch } from '../results/PreviewSwitch';
 import { usePremiumAccess } from '../results/usePremiumAccess';
@@ -109,8 +110,15 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   const previewAsFree = PREMIUM_DEV_OPEN && preview === 'free';
   const realAccess = usePremiumAccess(premiumVector, PAYWALL_ENABLED && (!PREMIUM_DEV_OPEN || previewAsFree));
   // Na pré-visualização grátis o acesso é sempre "sem acesso", mesmo que haja um token guardado.
-  const access = previewAsFree ? { ...realAccess, state: { status: 'locked' as const, problem: null, busy: false } } : realAccess;
+  // Mas o estado de "sem acesso" real (compra em andamento, erro do pagamento) continua valendo, para o convite mostrar o que aconteceu.
+  const access = previewAsFree
+    ? { ...realAccess, state: realAccess.state.status === 'locked' ? realAccess.state : { status: 'locked' as const, problem: null, busy: false } }
+    : realAccess;
   const [paywallOpen, setPaywallOpen] = useState(false);
+  // Comemoração na volta do pagamento. Para ver sem pagar: em desenvolvimento (npm run dev, ou o backend com PREMIUM_DEV_OPEN), abrir o resultado com ?celebrate=1.
+  const [celebrationClosed, setCelebrationClosed] = useState(false);
+  const devCelebrate = (import.meta.env.DEV || PREMIUM_DEV_OPEN) && new URLSearchParams(window.location.search).get('celebrate') === '1';
+  const celebrating = (access.justPaid || devCelebrate) && !celebrationClosed;
   const openPaywall = (source: 'section' | 'areas' | 'pdf') => {
     track('paywall_view', { source });
     setPaywallOpen(true);
@@ -288,6 +296,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
           )}
 
           {hasPremium && actions}
+
+          {celebrating && <UnlockCelebration name={top.name} category={top.category} token={premiumToken ?? (devCelebrate ? 'token-de-teste' : null)} onClose={() => setCelebrationClosed(true)} />}
 
           {paywallOpen && !hasPremium && SALES_OPEN && <PaywallModal access={access} category={top.category} onClose={() => setPaywallOpen(false)} />}
 

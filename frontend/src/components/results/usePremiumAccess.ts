@@ -16,8 +16,10 @@ export type AccessState =
 
 export interface PremiumAccess {
   state: AccessState;
-  /** Abre o pagamento (leva o navegador à página de pagamento do Mercado Pago). */
-  purchase: () => void;
+  /** Abre o pagamento (leva o navegador à página de pagamento); `email` é o do comprador, pedido no site em reais. */
+  purchase: (email?: string) => void;
+  /** O acesso acabou de abrir porque o pagamento foi confirmado nesta visita (não é o acesso guardado nem a cortesia): hora de comemorar. */
+  justPaid: boolean;
   /** O relatório recusou o token (reembolso, por exemplo): esquece o acesso guardado e volta ao convite. */
   revoke: () => void;
   /** Tenta de novo confirmar o pagamento depois de uma falha. */
@@ -78,6 +80,7 @@ const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAccess {
   const [state, setState] = useState<AccessState>(enabled ? { status: 'checking' } : { status: 'off' });
   const [attempt, setAttempt] = useState(0);
+  const [justPaid, setJustPaid] = useState(false);
   const key = vector.join(',');
 
   // Volta do servidor com ?_ptxn= (pagamento em dólar): inicia o Paddle.js, que abre o pagamento por cima da página. Pago, o site
@@ -158,6 +161,7 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
           if (cancelled) return;
           saveToken(hash, token);
           track('purchase_unlocked');
+          if (!payment.gift) setJustPaid(true);
           // O código sai do endereço: o link copiado dali em diante é o do resultado, não o do pagamento.
           // O link de cortesia (?gift=) é a exceção: fica, para a pessoa guardar a URL e reabrir o relatório.
           if (!payment.gift) window.history.replaceState(null, '', resultUrlWithoutPaymentParams());
@@ -184,10 +188,10 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [enabled, key, attempt]);
 
-  const purchase = useCallback(() => {
+  const purchase = useCallback((email?: string) => {
     track('checkout_start');
     setState((current) => (current.status === 'locked' ? { ...current, busy: true } : current));
-    startCheckout(vector, resultUrlWithoutPaymentParams())
+    startCheckout(vector, resultUrlWithoutPaymentParams(), email)
       .then((url) => window.location.assign(url))
       .catch(() => setState({ status: 'locked', problem: 'unavailable', busy: false }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -203,5 +207,5 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
 
   const retry = useCallback(() => setAttempt((value) => value + 1), []);
 
-  return { state, purchase, revoke, retry };
+  return { state, purchase, justPaid, revoke, retry };
 }

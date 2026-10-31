@@ -191,6 +191,18 @@ class PaymentControllerTest {
     }
 
     @Test
+    void checkoutAcceptsAWellFormedEmailAndRefusesAMalformedOne() throws Exception {
+        mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
+                        .content(checkoutBody(VECTOR, "pt", RETURN_URL, Map.of("email", "ana@exemplo.com.br"))))
+                .andExpect(status().isOk());
+        for (String email : new String[] {"sem-arroba", "a@b", "a b@c.com", "a@@c.com"}) {
+            mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
+                            .content(checkoutBody(VECTOR, "pt", RETURN_URL, Map.of("email", email))))
+                    .andExpect(status().isBadRequest());
+        }
+    }
+
+    @Test
     void checkoutInACurrencyWithoutPriceIs404() throws Exception {
         // USD nao esta liberado (sem preco): a moeda simplesmente nao e vendida.
         mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)

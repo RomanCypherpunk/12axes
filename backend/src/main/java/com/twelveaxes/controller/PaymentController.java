@@ -48,9 +48,10 @@ public class PaymentController {
     private static final SecureRandom RANDOM = new SecureRandom();
     private static final Pattern SESSION_ID = Pattern.compile("cs_(test|live)_[A-Za-z0-9]{8,200}");
     // O nonce vai para uma consulta de busca do gateway: so letras, numeros, '-' e '_'.
+    private static final Pattern EMAIL = Pattern.compile("[^@\\s]{1,64}@[^@\\s]{1,255}\\.[^@\\s.]{2,}");
     private static final Pattern NONCE = Pattern.compile("[A-Za-z0-9_-]{16,64}");
 
-    public record CheckoutRequest(@NotBlank String v, String lang, @NotBlank String returnUrl) {
+    public record CheckoutRequest(@NotBlank String v, String lang, @NotBlank String returnUrl, String email) {
     }
 
     public record CheckoutResponse(String url) {
@@ -111,8 +112,9 @@ public class PaymentController {
         }
         String returnUrl = validReturnUrl(request.returnUrl());
         String vectorHash = EntitlementToken.hashOf(AxisValuesParser.parse(request.v()));
+        String email = validEmail(request.email());
         String nonce = newNonce();
-        CheckoutSession session = gateway().create(amount.trim(), english ? "USD" : "BRL", nonce, vectorHash, returnUrl, lang);
+        CheckoutSession session = gateway().create(amount.trim(), english ? "USD" : "BRL", nonce, vectorHash, returnUrl, lang, email);
         return new CheckoutResponse(session.url());
     }
 
@@ -204,6 +206,18 @@ public class PaymentController {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "Pagamento nao configurado");
         }
         return gateway;
+    }
+
+    /** O e-mail e opcional (a Paddle pede o dela na propria pagina); informado e malformado, 400. */
+    private static String validEmail(String email) {
+        if (email == null || email.isBlank()) {
+            return null;
+        }
+        String trimmed = email.trim();
+        if (trimmed.length() > 254 || !EMAIL.matcher(trimmed).matches()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "email invalido");
+        }
+        return trimmed;
     }
 
     private static String newNonce() {

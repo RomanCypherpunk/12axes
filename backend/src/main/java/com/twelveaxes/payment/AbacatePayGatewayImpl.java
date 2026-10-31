@@ -67,6 +67,15 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
     /** O preco e o do produto no painel: {@code amount} so existe para a interface (o controlador o exige preenchido). */
     @Override
     public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang) {
+        return create(amount, currency, nonce, vectorHash, returnUrl, lang, null);
+    }
+
+    /**
+     * Com {@code email}, o comprador e cadastrado na AbacatePay so com o e-mail (o unico campo obrigatorio) e o checkout sai
+     * ja ligado a ele: a pagina de pagamento nao pergunta nome, telefone nem CPF, e o e-mail fica no painel para achar a compra.
+     */
+    @Override
+    public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang, String email) {
         if (!BRL.equals(currency)) {
             throw new PaymentGatewayException("A AbacatePay so vende em reais", new IllegalArgumentException(currency));
         }
@@ -79,6 +88,9 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         body.putArray("methods").add("PIX");
         body.put("externalId", nonce);
         body.putObject("metadata").put("vector_hash", vectorHash).put("nonce", nonce);
+        if (email != null && !email.isBlank()) {
+            body.put("customerId", customerIdFor(email.trim()));
+        }
         body.put("returnUrl", returnUrl);
         body.put("completionUrl", withParam(returnUrl, "pay", nonce));
 
@@ -91,6 +103,17 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         // Sem as etapas de dados pessoais e de endereco (o relatorio e digital): o Pix usa o nome e o CPF que vem do banco, e o
         // cartao ainda pede so o CPF do titular. Apple Pay, Google Pay e boleto somem do checkout com essa opcao.
         return new CheckoutSession(id, withParam(withParam(url, "skip_customer", "true"), "skip_address", "true"));
+    }
+
+    /** Cadastra (ou recupera) o comprador pelo e-mail; so ele e enviado. */
+    private String customerIdFor(String email) {
+        ObjectNode body = json.createObjectNode();
+        body.put("email", email);
+        String id = send(post("/customers/create", body.toString())).path("data").path("id").asText("");
+        if (id.isBlank()) {
+            throw new PaymentGatewayException("Resposta da AbacatePay sem o id do cliente", new IllegalStateException(email));
+        }
+        return id;
     }
 
     /** A AbacatePay volta por {@code ?pay=}, nao por sessao. */

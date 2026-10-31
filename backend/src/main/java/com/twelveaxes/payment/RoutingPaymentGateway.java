@@ -21,11 +21,16 @@ public class RoutingPaymentGateway implements PaymentGateway {
 
     @Override
     public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang) {
+        return create(amount, currency, nonce, vectorHash, returnUrl, lang, null);
+    }
+
+    @Override
+    public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang, String email) {
         PaymentGateway gateway = "USD".equals(currency) ? paddle : brazil;
         if (gateway == null) {
             throw new PaymentGatewayException("Nenhum gateway configurado para " + currency, new IllegalStateException(currency));
         }
-        return gateway.create(amount, currency, nonce, vectorHash, returnUrl, lang);
+        return gateway.create(amount, currency, nonce, vectorHash, returnUrl, lang, email);
     }
 
     @Override

@@ -101,6 +101,38 @@ class AbacatePayGatewayImplTest {
     }
 
     @Test
+    void createWithAnEmailRegistersTheBuyerWithOnlyTheEmailAndLinksTheCheckoutToThem() throws Exception {
+        routes.put("POST /customers/create", "{\"data\":{\"id\":\"cust_abc123\",\"email\":\"a@b.com\"},\"success\":true,\"error\":null}");
+        routes.put("POST /checkouts/create", "{\"data\":{\"id\":\"" + BILL + "\",\"url\":\"https://app.abacatepay.com/pay/" + BILL + "\"},\"success\":true}");
+
+        gateway.create("14.99", "BRL", NONCE, HASH, "https://12axes.vercel.app/results", "pt", " a@b.com ");
+
+        assertThat(requestLines).containsExactly("POST /customers/create", "POST /checkouts/create");
+        JsonNode customer = JSON.readTree(bodies.get(0));
+        assertThat(customer.fieldNames()).toIterable().containsExactly("email");
+        assertThat(customer.at("/email").asText()).isEqualTo("a@b.com");
+        assertThat(JSON.readTree(bodies.get(1)).at("/customerId").asText()).isEqualTo("cust_abc123");
+    }
+
+    @Test
+    void createWithoutAnEmailDoesNotRegisterAnyBuyer() throws Exception {
+        routes.put("POST /checkouts/create", "{\"data\":{\"id\":\"" + BILL + "\",\"url\":\"https://app.abacatepay.com/pay/" + BILL + "\"},\"success\":true}");
+
+        gateway.create("14.99", "BRL", NONCE, HASH, "https://12axes.vercel.app/results", "pt", null);
+
+        assertThat(requestLines).containsExactly("POST /checkouts/create");
+        assertThat(JSON.readTree(bodies.getFirst()).has("customerId")).isFalse();
+    }
+
+    @Test
+    void createFailsWhenTheBuyerRegistrationReturnsNoId() {
+        routes.put("POST /customers/create", "{\"data\":{},\"success\":true}");
+        assertThatThrownBy(() -> gateway.create("14.99", "BRL", NONCE, HASH, "https://12axes.vercel.app/results", "pt", "a@b.com"))
+                .isInstanceOf(PaymentGatewayException.class);
+        assertThat(requestLines).containsExactly("POST /customers/create");
+    }
+
+    @Test
     void createRefusesAnyCurrencyButBrl() {
         assertThatThrownBy(() -> gateway.create("3.99", "USD", NONCE, HASH, "https://12axes.vercel.app/results", "en"))
                 .isInstanceOf(PaymentGatewayException.class);

@@ -1,5 +1,6 @@
-import type { CSSProperties } from 'react';
-import { t } from '../../i18n';
+import { useState, type CSSProperties, type FormEvent } from 'react';
+import { LANG, t } from '../../i18n';
+import { isValidEmail, loadBuyerEmail, saveBuyerEmail } from '../../utils/buyerEmail';
 import { catStyle } from '../../utils/ideologyColors';
 import { InfoSheet } from './InfoSheet';
 import { PaymentIcons } from './PaymentIcons';
@@ -14,6 +15,18 @@ export function PaywallModal({ access, category, onClose }: { access: PremiumAcc
   const { state, purchase } = access;
   const busy = state.status === 'locked' && state.busy;
   const problem = state.status === 'locked' ? state.problem : null;
+  // Em reais o pagamento é da AbacatePay, que só recebe o e-mail do comprador (pedido aqui); em dólar a Paddle pede o dela.
+  const needsEmail = LANG === 'pt';
+  const [email, setEmail] = useState(loadBuyerEmail);
+  const [emailInvalid, setEmailInvalid] = useState(false);
+
+  const submit = (event: FormEvent) => {
+    event.preventDefault();
+    if (!needsEmail) return purchase();
+    if (!isValidEmail(email)) return setEmailInvalid(true);
+    saveBuyerEmail(email);
+    purchase(email.trim());
+  };
 
   return (
     <InfoSheet titleId="paywall-modal-title" className="e-paywall-modal" style={catStyle(category) as CSSProperties} onClose={onClose}>
@@ -24,13 +37,38 @@ export function PaywallModal({ access, category, onClose }: { access: PremiumAcc
         <p className="e-paywall-price">
           <strong>{t.paywallPrice}</strong>
         </p>
-        <button className="e-btn e-btn-primary" type="button" onClick={purchase} disabled={busy}>
-          {busy ? t.paywallOpening : t.paywallCta}
-          <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5 12h14" />
-            <path d="m13 6 6 6-6 6" />
-          </svg>
-        </button>
+        <form className="e-pm-form" onSubmit={submit} noValidate>
+          {needsEmail && (
+            <label className="e-pm-email">
+              <span>{t.paywallEmailLabel}</span>
+              <input
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                placeholder={t.paywallEmailPlaceholder}
+                value={email}
+                aria-invalid={emailInvalid}
+                aria-describedby={emailInvalid ? 'paywall-email-note' : undefined}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                  setEmailInvalid(false);
+                }}
+              />
+              {emailInvalid && (
+                <small id="paywall-email-note" className="e-pm-email-error" role="alert">
+                  {t.paywallEmailInvalid}
+                </small>
+              )}
+            </label>
+          )}
+          <button className="e-btn e-btn-primary" type="submit" disabled={busy}>
+            {busy ? t.paywallOpening : t.paywallCta}
+            <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </button>
+        </form>
         <p className="e-pm-guarantee">{t.paywallGuarantee}</p>
         <PaymentIcons label={t.paywallPayWith} />
         {problem && (
