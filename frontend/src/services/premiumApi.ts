@@ -1,4 +1,4 @@
-import { apiLang } from '../i18n';
+import { apiLang, paymentLang } from '../i18n';
 import type { PremiumReport } from '../types/quiz';
 import type { SavedAnswers } from '../utils/quizProgress';
 import { request } from './quizApi';
@@ -38,7 +38,7 @@ export function fetchPremiumReport(
 export async function startCheckout(vector: number[], returnUrl: string, email?: string): Promise<string> {
   const { url } = await request<{ url: string }>('/api/checkout', {
     method: 'POST',
-    body: JSON.stringify({ v: vector.join(','), lang: apiLang(), returnUrl, email: email || undefined })
+    body: JSON.stringify({ v: vector.join(','), lang: paymentLang(), returnUrl, email: email || undefined })
   });
   return url;
 }

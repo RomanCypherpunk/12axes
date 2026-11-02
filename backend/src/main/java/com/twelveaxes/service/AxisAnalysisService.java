@@ -41,7 +41,10 @@ public class AxisAnalysisService {
             List<Disagreement> disagreements,
             String lang
     ) {
-        Map<String, String> texts = QuizDataService.LANG_EN.equals(QuizDataService.normalizeLang(lang)) ? englishTexts : portugueseTexts;
+        String normalized = QuizDataService.normalizeLang(lang);
+        // FR axis-analysis overlay is still an English placeholder.
+        boolean useEnglish = QuizDataService.LANG_EN.equals(normalized) || QuizDataService.LANG_FR.equals(normalized);
+        Map<String, String> texts = useEnglish ? englishTexts : portugueseTexts;
         return axes.stream()
                 .map(axis -> {
                     AxisLevel level = AxisLevel.of(axis.leftPercent());

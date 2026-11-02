@@ -40,6 +40,7 @@ public class QuizDataService {
 
     public static final String LANG_PT = "pt";
     public static final String LANG_EN = "en";
+    public static final String LANG_FR = "fr";
 
     private final ObjectMapper objectMapper;
     private Map<String, LocaleBundle> bundles;
@@ -145,8 +146,9 @@ public class QuizDataService {
         validateArchetypeQuestions(axes);
 
         LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities, parties);
-        LocaleBundle en = buildEnglishBundle(pt);
-        bundles = Map.of(LANG_PT, pt, LANG_EN, en);
+        LocaleBundle en = buildOverlayBundle(pt, LANG_EN);
+        LocaleBundle fr = buildOverlayBundle(pt, LANG_FR);
+        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_FR, fr);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
         List<String> unknownBookAuthors = bookList.stream()
@@ -166,15 +168,16 @@ public class QuizDataService {
         validateParties(pt);
     }
 
-    // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
+    // Overlays em data/i18n/{locale}/*.json trazem só os campos de texto, chaveados por id.
     // Item sem tradução (ou arquivo ausente) cai no texto PT — nada quebra.
-    private LocaleBundle buildEnglishBundle(LocaleBundle pt) throws IOException {
-        Map<String, Map<String, String>> axesTr = readOverlay("data/i18n/en/axes.json");
-        Map<String, Map<String, String>> questionsTr = readOverlay("data/i18n/en/questions.json");
-        Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/en/ideologies.json");
-        Map<String, Map<String, String>> countriesTr = readOverlay("data/i18n/en/countries.json");
-        Map<String, Map<String, String>> personalitiesTr = readOverlay("data/i18n/en/personalities.json");
-        Map<String, Map<String, String>> partiesTr = readOverlay("data/i18n/en/parties.json");
+    private LocaleBundle buildOverlayBundle(LocaleBundle pt, String locale) throws IOException {
+        String prefix = "data/i18n/" + locale + "/";
+        Map<String, Map<String, String>> axesTr = readOverlay(prefix + "axes.json");
+        Map<String, Map<String, String>> questionsTr = readOverlay(prefix + "questions.json");
+        Map<String, Map<String, String>> ideologiesTr = readOverlay(prefix + "ideologies.json");
+        Map<String, Map<String, String>> countriesTr = readOverlay(prefix + "countries.json");
+        Map<String, Map<String, String>> personalitiesTr = readOverlay(prefix + "personalities.json");
+        Map<String, Map<String, String>> partiesTr = readOverlay(prefix + "parties.json");
 
         List<Axis> axes = pt.axes().stream().map(axis -> {
             Map<String, String> tr = axesTr.get(axis.id());
@@ -194,16 +197,16 @@ public class QuizDataService {
             if (tr == null || tr.get("text") == null) return question;
             return question.withText(tr.get("text"));
         }).toList();
-        // Os termos são procurados no texto traduzido; sem overlay EN do glossário, não há tooltip.
-        // Idem para a explicação das perguntas: pergunta sem entrada EN fica sem ela, nunca em PT.
+        // Os termos são procurados no texto traduzido; sem overlay do glossário, não há tooltip.
+        // Idem para a explicação das perguntas: pergunta sem entrada no locale fica sem ela, nunca em PT.
         List<Question> questions = QuestionHelpResolver.attach(
                 GlossaryResolver.attach(
                         translatedQuestions,
-                        readOptionalJson("data/i18n/en/glossary.json", new TypeReference<List<GlossaryEntry>>() {}),
-                        "i18n/en/glossary.json"
+                        readOptionalJson(prefix + "glossary.json", new TypeReference<List<GlossaryEntry>>() {}),
+                        "i18n/" + locale + "/glossary.json"
                 ),
-                readOptionalJson("data/i18n/en/question-help.json", new TypeReference<List<QuestionHelpEntry>>() {}),
-                "i18n/en/question-help.json"
+                readOptionalJson(prefix + "question-help.json", new TypeReference<List<QuestionHelpEntry>>() {}),
+                "i18n/" + locale + "/question-help.json"
         );
 
         List<Ideology> ideologies = pt.ideologies().stream().map(ideology -> {
@@ -290,6 +293,7 @@ public class QuizDataService {
         }
         return switch (lang.trim().toLowerCase()) {
             case LANG_EN, "en-us", "en-gb" -> LANG_EN;
+            case LANG_FR, "fr-fr", "fr-ca" -> LANG_FR;
             default -> LANG_PT;
         };
     }
@@ -414,9 +418,11 @@ public class QuizDataService {
         int questionCount = normalizedVariant.equals(EXTREME_VARIANT)
                 ? data.questions().size()
                 : questionsPerAxis * data.axes().size();
-        String description = normalizedLang.equals(LANG_EN)
-                ? "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes."
-                : "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        String description = switch (normalizedLang) {
+            case LANG_EN -> "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes.";
+            case LANG_FR -> "Un quiz de " + questionCount + " questions pour estimer votre position sur les 12 axes politiques.";
+            default -> "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        };
         return new QuizPayload(
                 "12 Axes",
                 description,
@@ -566,6 +572,15 @@ public class QuizDataService {
                 case NEUTRAL -> "Neutral or It depends";
                 case DISAGREE -> "Disagree";
                 case STRONGLY_DISAGREE -> "Strongly disagree";
+            };
+        }
+        if (LANG_FR.equals(lang)) {
+            return switch (value) {
+                case STRONGLY_AGREE -> "Tout à fait d'accord";
+                case AGREE -> "D'accord";
+                case NEUTRAL -> "Neutre ou Cela dépend";
+                case DISAGREE -> "Pas d'accord";
+                case STRONGLY_DISAGREE -> "Pas du tout d'accord";
             };
         }
         return switch (value) {

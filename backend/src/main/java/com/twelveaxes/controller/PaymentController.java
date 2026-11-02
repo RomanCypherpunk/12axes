@@ -103,7 +103,10 @@ public class PaymentController {
     @PostMapping("/api/checkout")
     public CheckoutResponse checkout(@Valid @RequestBody CheckoutRequest request) {
         requireEnabled();
-        String lang = QuizDataService.LANG_EN.equals(request.lang()) ? QuizDataService.LANG_EN : QuizDataService.LANG_PT;
+        // FR uses the same international USD checkout path as EN.
+        String lang = QuizDataService.LANG_PT.equals(QuizDataService.normalizeLang(request.lang()))
+                ? QuizDataService.LANG_PT
+                : QuizDataService.LANG_EN;
         boolean english = QuizDataService.LANG_EN.equals(lang);
         String amount = english ? priceUsd : priceBrl;
         if (amount == null || amount.isBlank()) {

@@ -99,8 +99,28 @@ class QuizLocalizationTest {
 
     @Test
     void unknownLangFallsBackToPortuguese() throws Exception {
-        mockMvc.perform(get("/api/quiz").param("lang", "fr"))
+        mockMvc.perform(get("/api/quiz").param("lang", "de"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.description").value(org.hamcrest.Matchers.containsString("eixos políticos")));
+    }
+
+    @Test
+    void quizInFrenchReturnsTranslatedQuestionsAndOptions() throws Exception {
+        String body = mockMvc.perform(get("/api/quiz").param("lang", "fr"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
+        QuizPayload quiz = objectMapper.readValue(body, QuizPayload.class);
+
+        assertThat(quiz.description()).contains("axes politiques");
+        assertThat(quiz.axes()).anySatisfy(axis -> assertThat(axis.label()).isEqualTo("Structure"));
+        assertThat(quiz.axes()).anySatisfy(axis -> assertThat(axis.leftPole()).isEqualTo("Fédéral"));
+        assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("Tout à fait d'accord"));
+        assertThat(dataService.getQuestionsForLang("fr")).hasSize(240);
+        assertThat(dataService.getQuestionsForLang("fr"))
+                .noneMatch(question -> question.text() == null || question.text().isBlank());
+        assertThat(dataService.getQuestionsForLang("fr"))
+                .filteredOn(question -> "estrutura_01".equals(question.id()))
+                .singleElement()
+                .satisfies(question -> assertThat(question.text()).contains("gouvernement"));
     }
 }

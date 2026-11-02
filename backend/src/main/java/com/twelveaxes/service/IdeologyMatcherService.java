@@ -159,7 +159,8 @@ public class IdeologyMatcherService {
     }
 
     private String longDescription(String rawDescription, String lang) {
-        boolean en = QuizDataService.LANG_EN.equals(lang);
+        // FR ideology overlays are still English placeholders, so use the EN boilerplate.
+        boolean en = QuizDataService.LANG_EN.equals(lang) || QuizDataService.LANG_FR.equals(lang);
         DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
         StringBuilder description = new StringBuilder(parts.summary());
         if (!parts.summary().endsWith(".")) {

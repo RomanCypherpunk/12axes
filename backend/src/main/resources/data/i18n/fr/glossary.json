@@ -1,0 +1,666 @@
+[
+  {
+    "id": "autonomia",
+    "term": "Autonomy",
+    "definition": "The power to decide your own affairs without asking permission from a higher government.",
+    "match": [
+      "autonomy",
+      "autonomous"
+    ]
+  },
+  {
+    "id": "constituicao",
+    "term": "Constitution",
+    "definition": "The most important law of a country or state. All other laws must respect it.",
+    "match": [
+      "constitution"
+    ]
+  },
+  {
+    "id": "secessao",
+    "term": "Secession",
+    "definition": "When a region breaks away from a country to become independent.",
+    "match": [
+      "secede"
+    ]
+  },
+  {
+    "id": "quilombolas",
+    "term": "Quilombolas",
+    "definition": "Descendants of enslaved people who formed their own communities, called quilombos, and keep their lands and traditions.",
+    "match": []
+  },
+  {
+    "id": "anular",
+    "term": "Annul / overturn",
+    "definition": "To cancel a law or decision and remove its effect.",
+    "match": [
+      "annul",
+      "overturn"
+    ]
+  },
+  {
+    "id": "stf",
+    "term": "Supreme court",
+    "definition": "The highest court of a country. It rules on whether laws and government acts respect the constitution.",
+    "match": []
+  },
+  {
+    "id": "referendo",
+    "term": "Referendum",
+    "definition": "A vote in which the public directly approves or rejects a law.",
+    "match": [
+      "referendum"
+    ]
+  },
+  {
+    "id": "cassacao",
+    "term": "Recall",
+    "definition": "Removing a politician from office before their term ends.",
+    "match": [
+      "recall"
+    ]
+  },
+  {
+    "id": "limite_mandatos",
+    "term": "Term limits",
+    "definition": "A rule that stops someone from holding the same office for more than a set number of terms.",
+    "match": [
+      "term limits"
+    ]
+  },
+  {
+    "id": "voto_universal",
+    "term": "Universal suffrage",
+    "definition": "Every adult can vote, with no exclusion by income, education, sex or race.",
+    "match": [
+      "suffrage"
+    ]
+  },
+  {
+    "id": "autoritario",
+    "term": "Authoritarian regime",
+    "definition": "A government where power is concentrated in a few hands and there is little or no freedom to oppose it.",
+    "match": [
+      "authoritarian"
+    ]
+  },
+  {
+    "id": "toque_recolher",
+    "term": "Curfew",
+    "definition": "A government ban on being out in public during certain hours.",
+    "match": [
+      "curfew"
+    ]
+  },
+  {
+    "id": "eutanasia",
+    "term": "Euthanasia",
+    "definition": "Helping a person with an incurable illness end their life, at their request, to avoid suffering.",
+    "match": [
+      "euthanasia"
+    ]
+  },
+  {
+    "id": "reconhecimento_facial",
+    "term": "Facial recognition",
+    "definition": "Technology that identifies people by comparing a face filmed by a camera with photos stored in a database.",
+    "match": [
+      "facial recognition"
+    ]
+  },
+  {
+    "id": "faccoes",
+    "term": "Criminal groups",
+    "definition": "Organized crime groups that often control territory and illegal activities.",
+    "match": [
+      "criminal groups"
+    ]
+  },
+  {
+    "id": "poliamor",
+    "term": "Polyamory",
+    "definition": "Romantic relationships with more than one person at the same time, with everyone's knowledge and consent.",
+    "match": [
+      "polyamory"
+    ]
+  },
+  {
+    "id": "relacao_aberta",
+    "term": "Open relationship",
+    "definition": "A relationship in which the partners agree that each may have other partners.",
+    "match": [
+      "open relationships"
+    ]
+  },
+  {
+    "id": "linguagem_neutra",
+    "term": "Gender-neutral language",
+    "definition": "Ways of speaking and writing that avoid marking masculine or feminine, such as \"they\" instead of \"he or she\".",
+    "match": [
+      "gender-neutral language"
+    ]
+  },
+  {
+    "id": "identidade_genero",
+    "term": "Gender identity",
+    "definition": "How a person sees themself: a man, a woman, both or neither, regardless of the sex they were born with.",
+    "match": [
+      "gender identity"
+    ]
+  },
+  {
+    "id": "lgbt",
+    "term": "LGBT",
+    "definition": "Acronym for lesbian, gay, bisexual and transgender people.",
+    "match": [
+      "LGBT"
+    ]
+  },
+  {
+    "id": "cotas_raciais",
+    "term": "Race-based quotas",
+    "definition": "Setting aside a share of university places or jobs for people from certain racial groups.",
+    "match": [
+      "race-based quotas"
+    ]
+  },
+  {
+    "id": "multicultural",
+    "term": "Multicultural",
+    "definition": "A place where people of many cultures, languages and religions live together, each keeping their traditions.",
+    "match": [
+      "multicultural"
+    ]
+  },
+  {
+    "id": "ataque_preventivo",
+    "term": "Preemptive strike",
+    "definition": "Attacking an enemy first because you believe it is preparing to attack you.",
+    "match": [
+      "preemptive strikes"
+    ]
+  },
+  {
+    "id": "desarmamento",
+    "term": "Disarmament",
+    "definition": "An agreement between countries to reduce or eliminate certain kinds of weapons.",
+    "match": [
+      "disarmament"
+    ]
+  },
+  {
+    "id": "armas_autonomas",
+    "term": "Lethal autonomous weapons",
+    "definition": "Weapons that pick and attack targets on their own, with a computer deciding instead of a person.",
+    "match": [
+      "lethal autonomous weapons"
+    ]
+  },
+  {
+    "id": "dissuadir",
+    "term": "Deter",
+    "definition": "To convince someone not to attack by showing that the response would be severe.",
+    "match": [
+      "deter"
+    ]
+  },
+  {
+    "id": "crimes_guerra",
+    "term": "War crimes",
+    "definition": "Serious violations of the rules of war, such as attacking civilians or mistreating prisoners.",
+    "match": [
+      "war-crimes",
+      "war crimes"
+    ]
+  },
+  {
+    "id": "onu",
+    "term": "United Nations",
+    "definition": "An organization that brings together nearly all countries to work on peace, human rights and cooperation.",
+    "match": [
+      "United Nations"
+    ]
+  },
+  {
+    "id": "genocidio",
+    "term": "Genocide",
+    "definition": "Systematically killing or persecuting a people, ethnic group or religion with the intent to destroy it.",
+    "match": [
+      "genocide"
+    ]
+  },
+  {
+    "id": "missoes_paz",
+    "term": "Peacekeeping",
+    "definition": "Troops sent abroad, under international coordination, to keep order in conflict zones.",
+    "match": [
+      "peacekeeping"
+    ]
+  },
+  {
+    "id": "sancoes",
+    "term": "Sanctions",
+    "definition": "Economic punishments against a country, such as blocking trade or freezing money abroad.",
+    "match": [
+      "sanctions"
+    ]
+  },
+  {
+    "id": "aliancas_militares",
+    "term": "Military alliances",
+    "definition": "Agreements between countries to defend each other: if one is attacked, the others help.",
+    "match": [
+      "military alliances"
+    ]
+  },
+  {
+    "id": "alinhamento_automatico",
+    "term": "Automatic alignment",
+    "definition": "Always following another country's or bloc's position instead of deciding case by case.",
+    "match": [
+      "automatic alignment"
+    ]
+  },
+  {
+    "id": "tratado_internacional",
+    "term": "International treaty",
+    "definition": "A formal agreement between countries, with rules both sides promise to follow.",
+    "match": [
+      "international treaty"
+    ]
+  },
+  {
+    "id": "potencias",
+    "term": "Great powers",
+    "definition": "Countries with very large military, economic or political power.",
+    "match": [
+      "great powers"
+    ]
+  },
+  {
+    "id": "redistribuir",
+    "term": "Redistribute",
+    "definition": "To take from those who have more and give to those who have less, through taxes, laws or public programs.",
+    "match": [
+      "redistribute",
+      "redistribution"
+    ]
+  },
+  {
+    "id": "estrategico",
+    "term": "Strategic",
+    "definition": "A sector or company essential for a country to function or defend itself, such as energy, oil, water or technology.",
+    "match": [
+      "strategically important",
+      "strategic"
+    ]
+  },
+  {
+    "id": "estatais",
+    "term": "State-owned companies",
+    "definition": "Companies controlled by the government.",
+    "match": [
+      "state-owned"
+    ]
+  },
+  {
+    "id": "reforma_agraria",
+    "term": "Land reform",
+    "definition": "Breaking up large rural estates to give land to people who want to farm it.",
+    "match": [
+      "land reform"
+    ]
+  },
+  {
+    "id": "sindicatos",
+    "term": "Unions",
+    "definition": "Workers' organizations that negotiate pay and working conditions on behalf of the group.",
+    "match": [
+      "unions"
+    ]
+  },
+  {
+    "id": "renda_basica",
+    "term": "Minimum income",
+    "definition": "Money the state pays regularly to people in need, to guarantee a basic standard of living.",
+    "match": [
+      "minimum income"
+    ]
+  },
+  {
+    "id": "bolsa_familia",
+    "term": "Bolsa Família",
+    "definition": "A Brazilian federal program that pays a monthly amount to low-income families.",
+    "match": []
+  },
+  {
+    "id": "estabilidade_servidores",
+    "term": "Lifetime job security",
+    "definition": "A rule that makes it very hard to fire permanent government employees.",
+    "match": [
+      "lifetime job security"
+    ]
+  },
+  {
+    "id": "subsidiar",
+    "term": "Subsidize",
+    "definition": "To support an activity with public money so it costs less or is more profitable.",
+    "match": [
+      "subsidize"
+    ]
+  },
+  {
+    "id": "banco_central",
+    "term": "Central bank",
+    "definition": "The public institution that manages a country's currency and sets its basic interest rate.",
+    "match": [
+      "central bank"
+    ]
+  },
+  {
+    "id": "taxa_juros",
+    "term": "Interest rate",
+    "definition": "The price of borrowed money. High rates make credit more expensive and tend to slow prices; low rates do the opposite.",
+    "match": [
+      "interest rates",
+      "interest rate"
+    ]
+  },
+  {
+    "id": "inflacao",
+    "term": "Inflation",
+    "definition": "A general, continuing rise in prices that makes money buy less. Its causes are debated: money creation, demand, costs.",
+    "match": [
+      "inflation"
+    ]
+  },
+  {
+    "id": "carga_tributaria",
+    "term": "Tax burden",
+    "definition": "The total taxes that people and companies pay, relative to the size of the economy.",
+    "match": []
+  },
+  {
+    "id": "arrecadacao",
+    "term": "Tax revenue",
+    "definition": "The money the government collects from taxes.",
+    "match": [
+      "tax revenue",
+      "revenue"
+    ]
+  },
+  {
+    "id": "recessao",
+    "term": "Recession",
+    "definition": "A period when the economy shrinks: output falls and unemployment tends to rise.",
+    "match": [
+      "recession"
+    ]
+  },
+  {
+    "id": "cambio",
+    "term": "Exchange rate",
+    "definition": "The price of a country's currency compared with other currencies, such as the dollar.",
+    "match": [
+      "exchange rate"
+    ]
+  },
+  {
+    "id": "criptomoedas",
+    "term": "Cryptocurrencies",
+    "definition": "Digital money, such as Bitcoin, that is not issued by any government or central bank.",
+    "match": [
+      "cryptocurrencies"
+    ]
+  },
+  {
+    "id": "economia_planejada",
+    "term": "Planned economy",
+    "definition": "A system in which the government decides what is produced, how much, and at what price.",
+    "match": [
+      "state-planned economy"
+    ]
+  },
+  {
+    "id": "livre_mercado",
+    "term": "Free market",
+    "definition": "A system in which prices and production come from free exchange between buyers and sellers, with little government interference.",
+    "match": [
+      "free-market"
+    ]
+  },
+  {
+    "id": "campeas_nacionais",
+    "term": "National champions",
+    "definition": "Large domestic companies that the government chooses to back so they can grow and compete worldwide.",
+    "match": [
+      "leading domestic companies"
+    ]
+  },
+  {
+    "id": "regulacao",
+    "term": "Regulation",
+    "definition": "Government rules that set how an economic activity may operate.",
+    "match": [
+      "regulations"
+    ]
+  },
+  {
+    "id": "tarifas",
+    "term": "Tariffs",
+    "definition": "A tax charged on imported goods that makes them more expensive.",
+    "match": [
+      "tariffs"
+    ]
+  },
+  {
+    "id": "livre_comercio",
+    "term": "Free trade",
+    "definition": "Trade between countries with few or no tariffs or barriers.",
+    "match": [
+      "free trade"
+    ]
+  },
+  {
+    "id": "soberania_economica",
+    "term": "Economic sovereignty",
+    "definition": "A country's ability to make its own economic decisions without depending on other countries.",
+    "match": [
+      "economic sovereignty"
+    ]
+  },
+  {
+    "id": "multinacionais",
+    "term": "Multinationals",
+    "definition": "Companies that operate in several countries at once.",
+    "match": [
+      "multinationals"
+    ]
+  },
+  {
+    "id": "integracao_economica",
+    "term": "Economic integration",
+    "definition": "Bringing countries' economies closer through trade, investment and shared rules.",
+    "match": [
+      "economic integration"
+    ]
+  },
+  {
+    "id": "cadeias_suprimento",
+    "term": "Supply chains",
+    "definition": "All the steps needed to make something, from raw materials to the finished product.",
+    "match": [
+      "supply chains"
+    ]
+  },
+  {
+    "id": "transgenicos",
+    "term": "Genetically modified crops",
+    "definition": "Crops whose genes were altered in a lab, for example to resist pests.",
+    "match": [
+      "genetically modified"
+    ]
+  },
+  {
+    "id": "agrotoxicos",
+    "term": "Pesticides",
+    "definition": "Chemicals used on crops to fight pests and plant diseases.",
+    "match": [
+      "pesticide"
+    ]
+  },
+  {
+    "id": "edicao_genetica",
+    "term": "Gene editing",
+    "definition": "Altering the DNA of a living being to correct or change its traits.",
+    "match": [
+      "gene editing"
+    ]
+  },
+  {
+    "id": "embrioes",
+    "term": "Embryos",
+    "definition": "The earliest stage of human development, in the first weeks after fertilization.",
+    "match": [
+      "embryos"
+    ]
+  },
+  {
+    "id": "implantes_cerebrais",
+    "term": "Brain implants",
+    "definition": "Devices placed in the brain to read its signals or stimulate mental activity.",
+    "match": [
+      "brain implants"
+    ]
+  },
+  {
+    "id": "ia",
+    "term": "Artificial intelligence",
+    "definition": "Computer programs able to do tasks that normally need human intelligence, such as understanding text or recognizing images.",
+    "match": [
+      "AI"
+    ]
+  },
+  {
+    "id": "automacao",
+    "term": "Automation",
+    "definition": "Using machines and software to do work that people used to do.",
+    "match": [
+      "automation"
+    ]
+  },
+  {
+    "id": "carne_cultivada",
+    "term": "Lab-grown meat",
+    "definition": "Meat made in a lab from animal cells, without raising or slaughtering a whole animal.",
+    "match": [
+      "lab-grown meat"
+    ]
+  },
+  {
+    "id": "espionagem",
+    "term": "Espionage",
+    "definition": "Secretly obtaining information from another country, company or person.",
+    "match": [
+      "espionage"
+    ]
+  },
+  {
+    "id": "arsenais",
+    "term": "Arsenals",
+    "definition": "The collection of weapons a country holds.",
+    "match": [
+      "arsenals"
+    ]
+  },
+  {
+    "id": "interesse_nacional",
+    "term": "National interest",
+    "definition": "What a government considers good for the country as a whole, such as security, economy and influence in the world.",
+    "match": [
+      "national interest",
+      "national interests"
+    ]
+  },
+  {
+    "id": "organismos_internacionais",
+    "term": "International organizations",
+    "definition": "Institutions formed by several countries to handle shared issues, such as the UN or the WTO.",
+    "match": [
+      "international organizations"
+    ]
+  },
+  {
+    "id": "cidadao_mundo",
+    "term": "Citizen of the world",
+    "definition": "A person who feels part of all humanity before feeling part of a nation.",
+    "match": [
+      "citizen of the world"
+    ]
+  },
+  {
+    "id": "congresso",
+    "term": "Legislature",
+    "definition": "The elected body that makes a country's laws.",
+    "match": [
+      "legislature"
+    ]
+  },
+  {
+    "id": "alternancia_poder",
+    "term": "Alternation of power",
+    "definition": "When different parties take turns governing as elections pass.",
+    "match": [
+      "power alternating"
+    ]
+  },
+  {
+    "id": "assembleia_popular",
+    "term": "Popular assembly",
+    "definition": "An open meeting where people decide together instead of electing representatives.",
+    "match": [
+      "popular assemblies"
+    ]
+  },
+  {
+    "id": "criminalizar",
+    "term": "Criminalize",
+    "definition": "To make an act a crime, with a punishment set by law.",
+    "match": [
+      "criminalized"
+    ]
+  },
+  {
+    "id": "legalizar",
+    "term": "Legalize",
+    "definition": "To make something allowed by law that used to be forbidden.",
+    "match": [
+      "legalized"
+    ]
+  },
+  {
+    "id": "industrializacao",
+    "term": "Industrialization",
+    "definition": "Transforming an economy to produce more in factories and with machines.",
+    "match": [
+      "industrialization"
+    ]
+  },
+  {
+    "id": "mineracao",
+    "term": "Mining",
+    "definition": "Extracting minerals from the ground, such as gold, iron and niobium.",
+    "match": [
+      "mining"
+    ]
+  },
+  {
+    "id": "pecuaria",
+    "term": "Livestock farming",
+    "definition": "Raising animals such as cattle for meat, milk and other products.",
+    "match": [
+      "livestock farming"
+    ]
+  }
+]

@@ -64,7 +64,9 @@ public class PoliticalValuesService {
 
     /** Um valor por categoria, na ordem do JSON. */
     public List<PoliticalValue> resolve(List<AxisResult> axes, String lang) {
-        boolean english = QuizDataService.LANG_EN.equals(QuizDataService.normalizeLang(lang));
+        String normalized = QuizDataService.normalizeLang(lang);
+        // FR catalog overlays are still English placeholders for political values.
+        boolean english = QuizDataService.LANG_EN.equals(normalized) || QuizDataService.LANG_FR.equals(normalized);
         Map<String, Double> user = new LinkedHashMap<>();
         axes.forEach(axis -> user.put(axis.axisId(), axis.leftPercent()));
 

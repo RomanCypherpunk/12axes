@@ -5,8 +5,11 @@ import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
 export type Lang = 'pt' | 'en' | 'fr';
 
-/** Idioma enviado à API de catálogos: o francês ainda não tem overlays, então cai no inglês. */
-export type ApiLang = 'pt' | 'en';
+/** Idioma enviado à API de quiz/catálogos. */
+export type ApiLang = 'pt' | 'en' | 'fr';
+
+/** Idioma de pagamento: FR segue o fluxo internacional (USD), como o inglês. */
+export type PaymentLang = 'pt' | 'en';
 
 const STORAGE_KEY = '12axes-lang';
 
@@ -84,9 +87,14 @@ export function resolveLang(): Lang {
 
 export const LANG: Lang = resolveLang();
 
-/** Idioma dos catálogos/quiz na API (FR → EN até haver overlays franceses). */
+/** Idioma dos catálogos/quiz na API. */
 export function apiLang(lang: Lang = LANG): ApiLang {
-  return lang === 'pt' ? 'pt' : 'en';
+  return lang
+}
+
+/** Idioma enviado ao checkout: FR usa o mesmo caminho USD que EN. */
+export function paymentLang(lang: Lang = LANG): PaymentLang {
+  return lang === 'pt' ? 'pt' : 'en'
 }
 
 export function setLang(lang: Lang) {
