@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { langForcedByPath, langSwitchPath } from './index';
+import { catalogPathPrefix, langForcedByPath, langSwitchPath } from './index';
 
 describe('idioma pelo caminho', () => {
+  it('o prefixo do catálogo segue o idioma da UI', () => {
+    expect(catalogPathPrefix('pt')).toBe('');
+    expect(catalogPathPrefix('en')).toBe('/en');
+    expect(catalogPathPrefix('fr')).toBe('/fr');
+  });
+
   it('a comparação segue o catálogo: /compare em português, /en/compare em inglês e /fr/compare em francês', () => {
     expect(langForcedByPath('/compare')).toBe('pt');
     expect(langForcedByPath('/en/compare')).toBe('en');

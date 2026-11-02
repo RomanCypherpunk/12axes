@@ -60,8 +60,59 @@ const STRINGS = {
       anarquismo: 'Anarchism'
     } as Record<IdeologyColorKey, string>,
     intensity: ['Balanced', 'Leaning', 'Strong', 'Very strong']
+  },
+  fr: {
+    kinds: { ideologies: 'Idéologies', personalities: 'Personnalités', countries: 'Pays', parties: 'Partis' },
+    title: 'Toile',
+    search: { ideologies: 'Rechercher une idéologie…', personalities: 'Rechercher une personnalité…', countries: 'Rechercher un pays…', parties: 'Rechercher un parti…' },
+    books: 'Livres',
+    start: 'Commencer',
+    closest: 'Les plus proches',
+    viewProfile: 'Voir le profil complet',
+    listView: 'Vue en liste',
+    close: 'Fermer',
+    loading: 'Construction de la toile…',
+    top: 'Autoritarisme',
+    bottom: 'Anarchisme',
+    left: 'Gauche',
+    right: 'Droite',
+    regions: {
+      'esq-radical': 'Gauche radicale',
+      esquerda: 'Gauche',
+      centro: 'Centre',
+      direita: 'Droite',
+      'ext-direita': 'Extrême droite',
+      terceira: 'Troisième position',
+      libertario: 'Libertarien',
+      anarquismo: 'Anarchisme'
+    } as Record<IdeologyColorKey, string>,
+    intensity: ['Équilibré', 'Incliné', 'Fort', 'Très fort']
   }
 };
+
+function treePrefix(locale: TreeLocale): string {
+  if (locale === 'en') return '/en';
+  if (locale === 'fr') return '/fr';
+  return '';
+}
+
+function treeHtmlLang(locale: TreeLocale): string {
+  if (locale === 'en') return 'en';
+  if (locale === 'fr') return 'fr';
+  return 'pt-BR';
+}
+
+function treeNextLocale(locale: TreeLocale): TreeLocale {
+  if (locale === 'pt') return 'en';
+  if (locale === 'en') return 'fr';
+  return 'pt';
+}
+
+function treeLangAria(locale: TreeLocale): string {
+  if (locale === 'pt') return 'Switch to English';
+  if (locale === 'en') return 'Passer en français';
+  return 'Passer en portugais';
+}
 
 /** Mesma faixa de intensidade do backend (ScoringService.intensityFor). */
 function intensityIndex(distanceFromCenter: number): number {
@@ -114,7 +165,7 @@ export default function TreePage({ kind: initialKind, locale }: { kind: TreeKind
   const [data, setData] = useState<TreeData | null>(() => peekTreeData(initialKind, locale));
   const [failed, setFailed] = useState(false);
   const s = STRINGS[locale];
-  const prefix = locale === 'en' ? '/en' : '';
+  const prefix = treePrefix(locale);
 
   useEffect(() => {
     let alive = true;
@@ -166,7 +217,7 @@ export default function TreePage({ kind: initialKind, locale }: { kind: TreeKind
     const previousTitle = document.title;
     const previousLang = document.documentElement.lang;
     document.title = `${s.title} · ${s.kinds[kind]} — 12 Axes`;
-    document.documentElement.lang = locale === 'en' ? 'en' : 'pt-BR';
+    document.documentElement.lang = treeHtmlLang(locale);
     let meta = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
     const previousRobots = meta?.content ?? null;
     if (!meta) {
@@ -213,8 +264,10 @@ interface HeaderProps {
 
 function TreeHeader({ kind, locale, onNavigate, search }: HeaderProps) {
   const s = STRINGS[locale];
-  const prefix = locale === 'en' ? '/en' : '';
-  const other = locale === 'en' ? '' : '/en';
+  const prefix = treePrefix(locale);
+  const next = treeNextLocale(locale);
+  const nextPrefix = treePrefix(next);
+  const langAria = treeLangAria(locale);
   return (
     <header className="sh tree-sh">
       <div className="sh-wrap">
@@ -239,11 +292,11 @@ function TreeHeader({ kind, locale, onNavigate, search }: HeaderProps) {
             </a>
           ))}
           <a
-            className={locale === 'en' ? 'sh-lang sh-lang-en' : 'sh-lang'}
-            href={`${other}/tree/${kind}`}
-            hrefLang={locale === 'en' ? 'pt-BR' : 'en'}
-            aria-label={locale === 'en' ? 'Mudar para português' : 'Switch to English'}
-            title={locale === 'en' ? 'Mudar para português' : 'Switch to English'}
+            className={locale === 'pt' ? 'sh-lang' : locale === 'en' ? 'sh-lang sh-lang-en' : 'sh-lang sh-lang-fr'}
+            href={`${nextPrefix}/tree/${kind}`}
+            hrefLang={treeHtmlLang(next)}
+            aria-label={langAria}
+            title={langAria}
           >
             <svg className="sh-flag sh-flag-br" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
               <path fill="#699635" d="M61.5 26.8C59.1 12.7 46.8 2 32 2S4.9 12.7 2.5 26.8L32 12zm-59 10.4C4.9 51.3 17.2 62 32 62s27.1-10.7 29.5-24.8L32 52z"/><path fill="#ffe62e" d="M32 12L2.5 26.8C2.2 28.5 2 30.2 2 32s.2 3.5.5 5.2L32 52l29.5-14.8c.3-1.7.5-3.4.5-5.2s-.2-3.5-.5-5.2z"/><g fill="#428bc1"><path d="M26 28.4c-3.2 0-6.2.7-8.9 1.9c-.1.6-.1 1.1-.1 1.7c0 8.3 6.7 15 15 15c5.6 0 10.5-3.1 13.1-7.6c-3.7-6.5-10.9-11-19.1-11"/><path d="M46.8 34.4c.1-.8.2-1.6.2-2.4c0-8.3-6.7-15-15-15c-5.9 0-11 3.4-13.5 8.4c2.4-.7 4.9-1.1 7.5-1.1c8.5 0 16 4 20.8 10.1"/></g><g fill="#fff"><path d="M26 24.3c-2.6 0-5.1.4-7.5 1.1c-.7 1.5-1.2 3.1-1.4 4.9c2.7-1.2 5.7-1.9 8.9-1.9c8.2 0 15.4 4.4 19.1 10.9c.9-1.5 1.4-3.2 1.7-4.9C42 28.3 34.5 24.3 26 24.3"/><circle cx="22" cy="32" r="1"/><circle cx="26" cy="38" r="1"/><circle cx="32" cy="38" r="1"/><circle cx="32" cy="42" r="1"/><circle cx="40" cy="38" r="1"/><circle cx="40" cy="42" r="1"/><circle cx="36" cy="40" r="1"/><circle cx="22" cy="36" r="1"/></g>
@@ -306,7 +359,7 @@ function TreeView({
   onNavigate: (kind: TreeKind) => void;
 }) {
   const s = STRINGS[locale];
-  const prefix = locale === 'en' ? '/en' : '';
+  const prefix = treePrefix(locale);
 
   const { nodes, axes, layout, worldX, worldY, scale } = data;
   const n = nodes.length;

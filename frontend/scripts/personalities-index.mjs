@@ -30,6 +30,16 @@ export const AREA_LABELS = {
     empresario: 'Business',
     intelectual: 'Intellectual life',
     ativista: 'Activism'
+  },
+  fr: {
+    politico: 'Politique',
+    religioso: 'Religion',
+    economista: 'Économie',
+    filosofo: 'Philosophie',
+    teorico: 'Théorie politique',
+    empresario: 'Entreprise',
+    intelectual: 'Vie intellectuelle',
+    ativista: 'Militantisme'
   }
 };
 
@@ -109,6 +119,44 @@ const STR = {
       religioso: 'Religious leaders and thinkers with direct influence on political and moral life.',
       empresario: 'Entrepreneurs and executives with a relevant role or influence in politics.'
     }
+  },
+  fr: {
+    skip: 'Aller à la liste',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    eyebrow: 'Catalogue',
+    lead: (n) => `${n} dirigeants, penseurs, économistes et militants cartographiés par 12 Axes, classés par domaine. Chacun a une photo, une courte biographie et un profil complet sur les 12 axes.`,
+    stats: ['personnalités', 'domaines', 'axes par profil'],
+    areasAria: 'Domaines',
+    searchLabel: 'Rechercher une personnalité',
+    searchPlaceholder: 'Rechercher un nom, une fonction ou une époque',
+    filterAria: 'Filtrer par domaine',
+    count: ['personnalité', 'personnalités'],
+    viewProfile: 'Voir le profil',
+    dnaNote:
+      '<b>Comment lire la bande de 12 icônes :</b> chaque icône est un axe et montre le pôle vers lequel penche la personne. Plus l’icône est forte, plus la position est intense. Survolez pour voir les valeurs.',
+    legendAria: 'Pôles de chaque axe, dans l’ordre de la bande',
+    emptyTitle: 'Aucune personnalité trouvée',
+    emptyText: 'Essayez un autre terme ou effacez les filtres.',
+    found: ['personnalité trouvée', 'personnalités trouvées'],
+    clear: 'Effacer les filtres',
+    credit: 'Portraits : Wikimedia Commons / Wikipédia, selon la source indiquée sur chaque profil.',
+    portraitAlt: (name) => `Portrait de ${name}`,
+    ctaTitle: 'À qui ressemblez-vous le plus ?',
+    ctaText: (n) => `Répondez au quiz et découvrez lesquelles de ces ${n} personnalités pensent le plus comme vous.`,
+    takeTheTest: 'Faire le test',
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés',
+    otherLang: { label: 'Português', href: '/personalities' },
+    descriptions: {
+      politico: 'Chefs d’État, parlementaires, révolutionnaires et dirigeants de partis qui ont exercé le pouvoir ou l’ont disputé.',
+      teorico: 'Auteurs qui ont formulé les doctrines, programmes et concepts qui guident mouvements et gouvernements.',
+      filosofo: 'Penseurs qui ont débattu de la justice, de la liberté, de l’autorité et de la nature de l’État.',
+      economista: 'Économistes dont les idées ont façonné les politiques monétaires et budgétaires et le débat entre marché et État.',
+      intelectual: 'Écrivains, historiens, journalistes et universitaires qui ont influencé le débat public.',
+      ativista: 'Militants et responsables de mouvements sociaux, de droits civiques, syndicaux et de causes spécifiques.',
+      religioso: 'Chefs et penseurs religieux ayant une influence directe sur la vie politique et morale.',
+      empresario: 'Entrepreneurs et dirigeants ayant un rôle ou une influence notable en politique.'
+    }
   }
 };
 
@@ -129,11 +177,12 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${L.s.htmlLang === 'pt-BR' ? '© 2026 12 Axes. Todos os direitos reservados' : '© 2026 12 Axes. All rights reserved'}" />
+    <meta name="copyright" content="${{ 'pt-BR': '© 2026 12 Axes. Todos os direitos reservados', fr: '© 2026 12 Axes. Tous droits réservés' }[L.s.htmlLang] ?? '© 2026 12 Axes. All rights reserved'}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
+    <link rel="alternate" hreflang="fr" href="${site}/fr${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="${ogType}" />

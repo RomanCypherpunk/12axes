@@ -78,6 +78,43 @@ export const FILTER_STR = {
       xx: '20th century',
       xxi: '21st century'
     }
+  },
+  fr: {
+    filterBtn: 'Filtres',
+    filterTitle: 'Filtres avancés',
+    filterDesc: 'Filtrez par inclinaison sur les 12 axes politiques, intensité et autres caractéristiques.',
+    axesHeading: 'Position sur les 12 axes politiques',
+    axesSubtitle: 'Sélectionnez le pôle souhaité sur chaque axe pour trouver les profils correspondants :',
+    intensityLabel: 'Intensité :',
+    intensityAny: 'Toute inclinaison',
+    intensityStrong: 'Position forte (≥ 60 %)',
+    religionsHeading: 'Tradition religieuse / spirituelle',
+    erasHeading: 'Époque historique',
+    clearAll: 'Tout effacer',
+    applyBtn: 'Voir les résultats',
+    activeFiltersLabel: 'Filtres actifs :',
+    close: 'Fermer le panneau',
+    foundCount: (n) => `${n} ${n === 1 ? 'profil trouvé' : 'profils trouvés'}`,
+    allPoles: 'Les deux pôles',
+    religions: {
+      catholic: 'Catholique',
+      protestant: 'Protestante',
+      orthodox: 'Orthodoxe',
+      judaism: 'Judaïsme',
+      islam: 'Islam',
+      buddhism: 'Bouddhisme',
+      hinduism: 'Hindouisme',
+      other: 'Autre religion',
+      secular: 'Laïque / Sans religion'
+    },
+    eras: {
+      antiguidade: 'Antiquité',
+      medieval: 'Moyen Âge',
+      moderna: 'Époque moderne',
+      xix: 'XIXe siècle',
+      xx: 'XXe siècle',
+      xxi: 'XXIe siècle'
+    }
   }
 };
 

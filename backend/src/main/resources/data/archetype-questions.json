@@ -9,7 +9,7 @@
     "text": {
       "pt": "A sociedade deve se apoiar em quê?",
       "en": "What should society rest on?",
-      "fr": "La société doit s'appuyer sur quoi ?"
+      "fr": "Sur quoi la société devrait-elle reposer ?"
     },
     "options": [
       {
@@ -30,7 +30,7 @@
         "text": {
           "pt": "Costumes e fé, mudando devagar",
           "en": "Custom and faith, changing slowly",
-          "fr": "Coutumes et foi, en changeant lentement"
+          "fr": "Coutumes et foi, avec une évolution lente"
         },
         "effects": {
           "moral": 32,
@@ -43,7 +43,7 @@
         "text": {
           "pt": "Cada um vive como quiser",
           "en": "Live and let live",
-          "fr": "Que chacun vive comme il veut"
+          "fr": "Vivre et laisser vivre"
         },
         "effects": {
           "moral": 55,
@@ -110,7 +110,7 @@
         "text": {
           "pt": "Líder ou partido único, centralizado",
           "en": "A single leader or party, centralized",
-          "fr": "Leader ou parti unique, centralisé"
+          "fr": "Un chef ou un parti unique, centralisé"
         },
         "effects": {
           "representacao": 15,
@@ -149,7 +149,7 @@
         "text": {
           "pt": "Estado mínimo ou nenhum",
           "en": "Little or no state",
-          "fr": "État minimal ou aucun"
+          "fr": "Peu d'État, voire aucun"
         },
         "effects": {
           "representacao": 70,
@@ -162,7 +162,7 @@
         "text": {
           "pt": "Sem Estado, conselhos ou contratos",
           "en": "No state, councils or contracts",
-          "fr": "Pas d'État, conseils ou contrats"
+          "fr": "Pas d'État : conseils ou contrats"
         },
         "effects": {
           "representacao": 90,
@@ -203,7 +203,7 @@
         "text": {
           "pt": "Cooperativas, Estado social e regulação",
           "en": "Co-ops, welfare state and regulation",
-          "fr": "Coopératives, État social et régulation"
+          "fr": "Coopératives, État-providence et régulation"
         },
         "effects": {
           "economia": 76,
@@ -216,7 +216,7 @@
         "text": {
           "pt": "Mercado com regras e rede de proteção",
           "en": "Markets with rules and a safety net",
-          "fr": "Marché avec règles et filet de sécurité"
+          "fr": "Marché régulé, avec un filet de sécurité"
         },
         "effects": {
           "economia": 42,
@@ -229,7 +229,7 @@
         "text": {
           "pt": "Patrões e sindicatos unidos pelo Estado",
           "en": "Bosses and unions united by the state",
-          "fr": "Patrons et syndicats unis par l'État"
+          "fr": "Patrons et syndicats unis sous l'égide de l'État"
         },
         "effects": {
           "economia": 65,
@@ -255,7 +255,7 @@
         "text": {
           "pt": "Livre comércio e impostos mínimos",
           "en": "Free trade and minimal taxes",
-          "fr": "Libre-échange et impôts minimaux"
+          "fr": "Libre-échange et impôts minimes"
         },
         "effects": {
           "economia": 12,
@@ -275,7 +275,7 @@
     "text": {
       "pt": "Como o país deve agir no mundo?",
       "en": "How should the country act abroad?",
-      "fr": "Comment le pays doit-il agir dans le monde ?"
+      "fr": "Comment le pays doit-il agir à l'étranger ?"
     },
     "options": [
       {
@@ -295,7 +295,7 @@
         "text": {
           "pt": "Defesa forte e aliados próximos",
           "en": "Strong defense and close allies",
-          "fr": "Défense forte et alliés proches"
+          "fr": "Défense solide et alliés proches"
         },
         "effects": {
           "diplomacia": 60,
@@ -319,7 +319,7 @@
         "text": {
           "pt": "Armado, mas fora de guerras alheias",
           "en": "Armed, but out of others' wars",
-          "fr": "Armé, mais hors des guerres des autres"
+          "fr": "Armé, mais à l'écart des guerres des autres"
         },
         "effects": {
           "diplomacia": 70,
@@ -331,7 +331,7 @@
         "text": {
           "pt": "Paz e não intervenção, sempre",
           "en": "Peace and non-intervention, always",
-          "fr": "Paix et non-intervention, toujours"
+          "fr": "Toujours la paix et la non-intervention"
         },
         "effects": {
           "diplomacia": 8,
@@ -380,7 +380,7 @@
         "text": {
           "pt": "Equilíbrio entre progresso e natureza",
           "en": "Balance progress and nature",
-          "fr": "Équilibre entre progrès et nature"
+          "fr": "Concilier progrès et nature"
         },
         "effects": {
           "tecnologia": 50
@@ -391,7 +391,7 @@
         "text": {
           "pt": "Tecnologia e indústria como motor",
           "en": "Technology and industry as the engine",
-          "fr": "Technologie et industrie comme moteur"
+          "fr": "La technologie et l'industrie comme moteur"
         },
         "effects": {
           "tecnologia": 72

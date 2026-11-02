@@ -35,9 +35,9 @@ window.addEventListener('vite:preloadError', (event) => {
   }
 });
 
-// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/...).
+// Visualização em teia dos catálogos: /tree/... (PT), /en/tree/... e /fr/tree/...
 const TreePage = lazy(() => import('./tree/TreePage'));
-const TREE_ROUTE = /^\/(en\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
+const TREE_ROUTE = /^\/((?:en|fr)\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
 
 const root = document.getElementById('root') as HTMLElement;
 protectTranslatedText(root);
@@ -47,7 +47,10 @@ ReactDOM.createRoot(root).render(
     <ErrorBoundary>
       {TREE_ROUTE ? (
         <Suspense fallback={null}>
-          <TreePage kind={(TREE_ROUTE[2] as TreeKind | undefined) ?? 'ideologies'} locale={TREE_ROUTE[1] ? 'en' : 'pt'} />
+          <TreePage
+            kind={(TREE_ROUTE[2] as TreeKind | undefined) ?? 'ideologies'}
+            locale={TREE_ROUTE[1] === 'fr/' ? 'fr' : TREE_ROUTE[1] === 'en/' ? 'en' : 'pt'}
+          />
         </Suspense>
       ) : (
         <App />

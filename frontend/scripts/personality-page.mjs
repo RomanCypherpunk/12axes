@@ -101,6 +101,52 @@ const STR = {
     ctaTitle: 'And you, who do you resemble?',
     ctaText: (name) => `Take the quiz and see your compatibility with ${name}, ideologies, countries and other personalities across the 12 axes.`,
     footer: 'Independent political quiz · 12axes.vercel.app · © 2026. All rights reserved'
+  },
+  fr: {
+    skip: 'Aller au contenu',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    takeTheTest: 'Faire le test',
+    compareWith: 'Comparer avec…',
+    kpiSpectrum: 'Spectre le plus proche',
+    kpiClosestIdeology: 'Idéologie la plus proche',
+    kpiClosestPerson: 'Personnalité la plus proche',
+    portraitAlt: (name) => `Portrait de ${name}`,
+    flagAlt: (name) => `Drapeau : ${name}`,
+    tabsAria: 'Sections du profil',
+    tabs: { axes: 'Axes', ideologies: 'Idéologies', personalities: 'Personnalités', countries: 'Pays' },
+    ids: { axes: 'axes', ideologies: 'ideologies', personalities: 'personalities', countries: 'countries' },
+    axesEyebrow: 'Axes politiques',
+    axesTitle: 'Profil sur les 12 axes',
+    distTitle: (name) => `Ce qui distingue ${name}`,
+    rareTag: 'Position la plus inhabituelle',
+    commonTag: 'Position la plus courante',
+    rareText: (name, pole, pct, n) => `${name} penche davantage vers ${pole.toLowerCase()} que ${pct} % des ${n} personnalités du catalogue.`,
+    rareNote: (axis, name) => `De tous les axes, ${axis} est celui où ${name} s’écarte le plus des autres.`,
+    commonText: (axis, name, exact) =>
+      exact ? `Sur ${axis}, ${name} se situe pratiquement à la médiane du catalogue.` : `Sur ${axis}, ${name} se situe près de la médiane du catalogue.`,
+    commonNote: 'Ici, la personne partage un terrain commun avec la plupart des personnalités.',
+    median: 'Médiane des personnalités',
+    ideologyEyebrow: 'Proximité idéologique',
+    ideologyTitle: (name) => `Les idéologies de ${name}`,
+    closestIdeologies: (n) => `Les plus proches parmi les ${n} idéologies`,
+    distantIdeology: 'L’idéologie la plus éloignée',
+    matchWord: 'de compatibilité',
+    personalitiesTitle: 'Personnalités les plus proches',
+    mostCompatible: 'La plus compatible',
+    alsoByDimension: 'Également proches, par dimension',
+    dimensionLabels: { political: 'Politiquement', social: 'Socialement', economic: 'Économiquement' },
+    nearSub: 'Autres profils similaires',
+    farSub: (name) => `Les plus éloignés de ${name}`,
+    countriesTitle: 'Pays les plus proches',
+    countryTabsAria: 'Type de pays',
+    currentTab: 'Pays actuel',
+    historicalTab: 'Expérience historique',
+    currentKicker: 'Pays le plus compatible',
+    historicalKicker: 'Expérience historique la plus compatible',
+    ctaTitle: 'Et vous, à qui ressemblez-vous ?',
+    ctaText: (name) => `Répondez au quiz et découvrez votre compatibilité avec ${name}, des idéologies, des pays et d’autres personnalités sur les 12 axes.`,
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés'
   }
 };
 
@@ -164,7 +210,8 @@ const INFO_ICON = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="
 const BALANCED_COLOR = '#9C988C';
 const AXIS_INFO = {
   pt: { aria: (label) => `O que significa o eixo ${label}?`, close: 'Fechar' },
-  en: { aria: (label) => `What does the ${label} axis mean?`, close: 'Close' }
+  en: { aria: (label) => `What does the ${label} axis mean?`, close: 'Close' },
+  fr: { aria: (label) => `Que signifie l’axe ${label} ?`, close: 'Fermer' }
 };
 
 // Barras dos 12 eixos, iguais às da tela de resultados (AxesSection.tsx):

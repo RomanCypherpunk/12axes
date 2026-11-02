@@ -210,8 +210,8 @@ const fr: PremiumText = {
   seats: {
     lider: 'Dirigeant politique',
     vice: 'Vice-dirigeant politique',
-    economia: 'Responsable de l’Économie',
-    educacao: 'Responsable de l’Éducation',
+    economia: 'Responsable de l’économie',
+    educacao: 'Responsable de l’éducation',
     estrategia: 'Chef de la stratégie politique',
     filosofia: 'Conseiller philosophique',
     social: 'Coordinateur des affaires sociales',
@@ -221,7 +221,7 @@ const fr: PremiumText = {
   countriesTitle: '10 pays ou régions où vivre',
   saveTitle: 'Conservez votre accès',
   saveIntro:
-    'Pour ouvrir ce rapport sur un autre appareil, ou après avoir effacé le navigateur, enregistrez le lien ci-dessous. Quiconque dispose du lien ouvre le rapport de ce résultat, alors gardez-le en sécurité.',
+    'Pour ouvrir ce rapport sur un autre appareil, ou après avoir vidé les données de votre navigateur, enregistrez le lien ci-dessous. Toute personne disposant du lien peut ouvrir le rapport de ce résultat : conservez-le en lieu sûr.',
   saveField: 'Lien d’accès au rapport',
   saveCopy: 'Copier le lien',
   saveCopied: 'Lien copié'

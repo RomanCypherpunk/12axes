@@ -98,6 +98,47 @@ const STR = {
       'Organização armada': 'Armed and insurgent groups, with their declared doctrine and practice.',
       'Organização internacional': 'Organizations and blocs acting above states.'
     }
+  },
+  fr: {
+    skip: 'Aller à la liste',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    eyebrow: 'Catalogue',
+    lead: (n, cur, hist) => `${n} partis, mouvements, maisons dynastiques et organisations, ${cur} actuels et ${hist} historiques, avec un profil complet sur les 12 axes et le pays associé à chacun.`,
+    stats: ['profils', 'actuels', 'historiques'],
+    kindsAria: 'Types',
+    searchLabel: 'Rechercher un parti ou une organisation',
+    searchPlaceholder: 'Rechercher un parti, une organisation ou un pays',
+    filterAria: 'Filtrer par type',
+    count: { Partido: ['parti', 'partis'], Movimento: ['mouvement', 'mouvements'], 'Casa dinástica': ['maison', 'maisons'], 'Organização armada': ['organisation', 'organisations'], 'Organização internacional': ['organisation', 'organisations'] },
+    viewProfile: 'Voir le profil',
+    dnaNote:
+      '<b>Comment lire la bande de 12 icônes :</b> chaque icône est un axe et montre le pôle vers lequel penche le parti ou l’organisation. Plus l’icône est forte, plus la position est intense. Survolez pour voir les valeurs.',
+    legendAria: 'Pôles de chaque axe, dans l’ordre de la bande',
+    emptyTitle: 'Aucun profil trouvé',
+    emptyText: 'Essayez un autre terme ou effacez les filtres.',
+    found: ['profil trouvé', 'profils trouvés'],
+    clear: 'Effacer les filtres',
+    logoAlt: (name) => `Symbole de ${name}`,
+    ctaTitle: 'Quel parti vous correspond ?',
+    ctaText: 'Répondez au quiz et découvrez quels partis, mouvements et organisations vous correspondent le mieux.',
+    takeTheTest: 'Faire le test',
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés',
+    otherLang: { label: 'Português', href: '/parties' },
+    labels: {
+      Partido: 'Partis',
+      Movimento: 'Mouvements',
+      'Casa dinástica': 'Maisons dynastiques',
+      'Organização armada': 'Organisations armées',
+      'Organização internacional': 'Organisations internationales'
+    },
+    descriptions: {
+      Partido: 'Partis politiques, actuels et historiques, avec la pratique et les idées de chacun.',
+      Movimento: 'Mouvements politiques et sociaux, de masse ou d’avant-garde.',
+      'Casa dinástica': 'Dynasties et maisons royales et impériales, au pouvoir ou prétendantes.',
+      'Organização armada': 'Groupes armés et insurgés, avec leur doctrine et leur pratique déclarées.',
+      'Organização internacional': 'Organisations et blocs agissant au-dessus des États.'
+    }
   }
 };
 

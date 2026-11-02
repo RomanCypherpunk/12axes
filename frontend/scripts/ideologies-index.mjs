@@ -114,6 +114,43 @@ const STR = {
       libertario: 'Minimal state, free market, private property and individual liberties, without abolishing the state.',
       anarquismo: 'Rejection of the state and of all coercive authority, with free and voluntary social organization.'
     }
+  },
+  fr: {
+    skip: 'Aller à la liste',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    eyebrow: 'Catalogue',
+    lead: (n) => `Les ${n} courants politiques cartographiés par 12 Axes, classés par spectre. Chacun a une description et un profil complet sur les 12 axes.`,
+    stats: ['courants', 'spectres', 'axes par profil'],
+    distribution: 'Répartition sur le spectre',
+    distributionAria: (label, n) => `${label} : ${n} idéologies`,
+    searchLabel: 'Rechercher une idéologie',
+    searchPlaceholder: 'Rechercher une idéologie…  ( / )',
+    filterAria: 'Filtrer par spectre',
+    count: 'courants',
+    viewProfile: 'Voir le profil',
+    dnaNote:
+      '<b>Comment lire la bande de 12 icônes :</b> chaque icône est un axe et montre le pôle vers lequel penche l’idéologie. Plus l’icône est forte, plus la position est intense. Survolez pour voir les valeurs.',
+    legendAria: 'Pôles de chaque axe, dans l’ordre de la bande',
+    emptyTitle: 'Aucune idéologie trouvée',
+    emptyText: 'Essayez un autre terme ou effacez les filtres.',
+    found: ['idéologie trouvée', 'idéologies trouvées'],
+    clear: 'Effacer les filtres',
+    ctaTitle: 'Et vous, où vous situez-vous ?',
+    ctaText: (n) => `Répondez au quiz et voyez avec lesquelles de ces ${n} idéologies vous êtes le plus compatible.`,
+    takeTheTest: 'Faire le test',
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés',
+    otherLang: { label: 'Português', href: '/ideologies' },
+    descriptions: {
+      'esq-radical': 'Communisme révolutionnaire ou à parti unique, avec économie planifiée et forte concentration du pouvoir de l’État.',
+      esquerda: 'Social-démocratie, progressisme et plus grande intervention de l’État dans l’économie au sein de la démocratie libérale.',
+      centro: 'Équilibre entre marché et État, réformes et stabilité, avec une posture modérée ou pragmatique.',
+      direita: 'Conservatisme, libéralisme économique et nationalisme modéré au sein de la démocratie libérale.',
+      'ext-direita': 'Rejet explicite de la démocratie libérale, nationalisme radical et concentration autoritaire du pouvoir.',
+      terceira: 'Synthèse nationaliste et corporatiste qui rejette à la fois le capitalisme libéral et le marxisme.',
+      libertario: 'État minimal, libre marché, propriété privée et libertés individuelles, sans abolir l’État.',
+      anarquismo: 'Rejet de l’État et de toute autorité coercitive, avec une organisation sociale libre et volontaire.'
+    }
   }
 };
 
@@ -215,11 +252,12 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${L.s.htmlLang === 'pt-BR' ? '© 2026 12 Axes. Todos os direitos reservados' : '© 2026 12 Axes. All rights reserved'}" />
+    <meta name="copyright" content="${{ 'pt-BR': '© 2026 12 Axes. Todos os direitos reservados', fr: '© 2026 12 Axes. Tous droits réservés' }[L.s.htmlLang] ?? '© 2026 12 Axes. All rights reserved'}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
+    <link rel="alternate" hreflang="fr" href="${site}/fr${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="website" />

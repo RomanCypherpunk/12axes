@@ -125,6 +125,51 @@ const STR = {
       xix: 'Empires, newly unified nations and revolutionary experiments of the 19th century.',
       xx: 'Regimes of the 20th and 21st centuries: totalitarianisms, dictatorships, revolutions and democratic experiments.'
     }
+  },
+  fr: {
+    skip: 'Aller à la liste',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    eyebrow: 'Catalogue',
+    lead: (cur, hist) => `${cur} pays actuels et ${hist} régimes historiques avec un profil complet sur les 12 axes. De l’Antiquité à la politique d’aujourd’hui, découvrez où se situe chacun.`,
+    stats: ['profils', 'pays actuels', 'régimes historiques', 'ans d’histoire'],
+    erasAria: 'Époques',
+    searchLabel: 'Rechercher un pays ou un régime',
+    searchPlaceholder: 'Rechercher un pays, un régime ou une époque',
+    filterAria: 'Filtrer par époque',
+    historicalBlock: 'Régimes historiques',
+    countCurrent: ['pays', 'pays'],
+    countHistorical: ['régime', 'régimes'],
+    viewProfile: 'Voir le profil',
+    dnaNote:
+      '<b>Comment lire la bande de 12 icônes :</b> chaque icône est un axe et montre le pôle vers lequel penche le pays ou le régime. Plus l’icône est forte, plus la position est intense. Survolez pour voir les valeurs.',
+    legendAria: 'Pôles de chaque axe, dans l’ordre de la bande',
+    emptyTitle: 'Aucun pays trouvé',
+    emptyText: 'Essayez un autre terme ou effacez les filtres.',
+    found: ['profil trouvé', 'profils trouvés'],
+    clear: 'Effacer les filtres',
+    flagAlt: (name) => `Drapeau : ${name}`,
+    ctaTitle: 'Dans quel pays vous reconnaîtriez-vous ?',
+    ctaText: 'Répondez au quiz et découvrez quels pays et régimes historiques vous correspondent le mieux.',
+    takeTheTest: 'Faire le test',
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés',
+    otherLang: { label: 'Português', href: '/countries' },
+    labels: {
+      atuais: 'Pays actuels',
+      antiguidade: 'Antiquité',
+      medieval: 'Moyen Âge',
+      moderna: 'Époque moderne',
+      xix: 'XIXe siècle',
+      xx: 'XXe et XXIe siècles'
+    },
+    descriptions: {
+      atuais: 'États et régions autonomes d’aujourd’hui, chacun avec son régime politique et son profil sur les 12 axes.',
+      antiguidade: 'Cités-États, républiques et empires du monde antique.',
+      medieval: 'Empires, républiques marchandes et communautés médiévales.',
+      moderna: 'Monarchies, empires coloniaux et républiques de l’époque moderne.',
+      xix: 'Empires, nations récemment unifiées et expériences révolutionnaires du XIXe siècle.',
+      xx: 'Régimes des XXe et XXIe siècles : totalitarismes, dictatures, révolutions et expériences démocratiques.'
+    }
   }
 };
 

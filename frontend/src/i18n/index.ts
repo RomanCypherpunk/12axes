@@ -34,11 +34,11 @@ export function homePath(lang: Lang): string {
   return '/';
 }
 
-/**
- * Prefixo dos catálogos estáticos. Só existem páginas PT e EN; a UI francesa usa o catálogo EN.
- */
+/** Prefixo dos catálogos estáticos: PT sem prefixo, EN em /en, FR em /fr. */
 export function catalogPathPrefix(lang: Lang): string {
-  return lang === 'pt' ? '' : '/en';
+  if (lang === 'en') return '/en';
+  if (lang === 'fr') return '/fr';
+  return '';
 }
 
 /** Próximo idioma no ciclo do toggle: pt → en → fr → pt. */

@@ -439,7 +439,7 @@ function HeroDeck({ examples: all }: { examples: ExampleResult[] }) {
             >
               <img
                 className="e-deck-img"
-                src={assetUrl(`/share-examples/${LANG === 'pt' ? 'pt' : 'en'}/${item.ideology.ideologyId}.webp`)}
+                src={assetUrl(`/share-examples/${LANG === 'pt' || LANG === 'fr' ? LANG : 'en'}/${item.ideology.ideologyId}.webp`)}
                 onError={retryLocalAsset}
                 alt={front ? t.heroDeckAlt(item.ideology.name) : ''}
                 width={480}

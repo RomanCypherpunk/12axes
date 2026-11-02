@@ -1,666 +1,687 @@
 [
   {
     "id": "autonomia",
-    "term": "Autonomy",
-    "definition": "The power to decide your own affairs without asking permission from a higher government.",
+    "term": "Autonomie",
+    "definition": "Le pouvoir de décider de ses propres affaires sans demander la permission à un gouvernement supérieur.",
     "match": [
-      "autonomy",
-      "autonomous"
+      "autonomie",
+      "autonomes",
+      "autonome"
     ]
   },
   {
     "id": "constituicao",
     "term": "Constitution",
-    "definition": "The most important law of a country or state. All other laws must respect it.",
+    "definition": "La loi la plus importante d'un pays ou d'un État. Toutes les autres lois doivent la respecter.",
     "match": [
       "constitution"
     ]
   },
   {
     "id": "secessao",
-    "term": "Secession",
-    "definition": "When a region breaks away from a country to become independent.",
+    "term": "Sécession",
+    "definition": "Lorsqu'une région se détache d'un pays pour devenir indépendante.",
     "match": [
-      "secede"
+      "sécession"
     ]
   },
   {
     "id": "quilombolas",
     "term": "Quilombolas",
-    "definition": "Descendants of enslaved people who formed their own communities, called quilombos, and keep their lands and traditions.",
+    "definition": "Descendants de personnes réduites en esclavage qui ont formé leurs propres communautés, appelées quilombos, et qui conservent leurs terres et leurs traditions.",
     "match": []
   },
   {
     "id": "anular",
-    "term": "Annul / overturn",
-    "definition": "To cancel a law or decision and remove its effect.",
+    "term": "Annuler / invalider",
+    "definition": "Supprimer une loi ou une décision et lui retirer tout effet.",
     "match": [
-      "annul",
-      "overturn"
+      "annuler",
+      "abroger",
+      "invalider"
     ]
   },
   {
     "id": "stf",
-    "term": "Supreme court",
-    "definition": "The highest court of a country. It rules on whether laws and government acts respect the constitution.",
+    "term": "Cour suprême",
+    "definition": "La plus haute juridiction d'un pays. Elle juge si les lois et les actes du gouvernement respectent la constitution.",
     "match": []
   },
   {
     "id": "referendo",
-    "term": "Referendum",
-    "definition": "A vote in which the public directly approves or rejects a law.",
+    "term": "Référendum",
+    "definition": "Un vote par lequel la population approuve ou rejette directement une loi.",
     "match": [
-      "referendum"
+      "référendum"
     ]
   },
   {
     "id": "cassacao",
-    "term": "Recall",
-    "definition": "Removing a politician from office before their term ends.",
+    "term": "Révocation",
+    "definition": "Retirer un responsable politique de sa fonction avant la fin de son mandat.",
     "match": [
-      "recall"
+      "révoquer",
+      "révocation"
     ]
   },
   {
     "id": "limite_mandatos",
-    "term": "Term limits",
-    "definition": "A rule that stops someone from holding the same office for more than a set number of terms.",
+    "term": "Limitation des mandats",
+    "definition": "Une règle qui empêche une personne d'occuper la même fonction pendant plus d'un certain nombre de mandats.",
     "match": [
-      "term limits"
+      "limitation du nombre de mandats",
+      "limitation des mandats"
     ]
   },
   {
     "id": "voto_universal",
-    "term": "Universal suffrage",
-    "definition": "Every adult can vote, with no exclusion by income, education, sex or race.",
+    "term": "Suffrage universel",
+    "definition": "Tous les adultes peuvent voter, sans exclusion selon le revenu, l'instruction, le sexe ou la race.",
     "match": [
       "suffrage"
     ]
   },
   {
     "id": "autoritario",
-    "term": "Authoritarian regime",
-    "definition": "A government where power is concentrated in a few hands and there is little or no freedom to oppose it.",
+    "term": "Régime autoritaire",
+    "definition": "Un gouvernement où le pouvoir est concentré entre quelques mains et où la liberté de s'y opposer est faible ou inexistante.",
     "match": [
-      "authoritarian"
+      "autoritaire"
     ]
   },
   {
     "id": "toque_recolher",
-    "term": "Curfew",
-    "definition": "A government ban on being out in public during certain hours.",
+    "term": "Couvre-feu",
+    "definition": "Une interdiction décrétée par le gouvernement de se trouver dans l'espace public à certaines heures.",
     "match": [
-      "curfew"
+      "couvre-feu"
     ]
   },
   {
     "id": "eutanasia",
-    "term": "Euthanasia",
-    "definition": "Helping a person with an incurable illness end their life, at their request, to avoid suffering.",
+    "term": "Euthanasie",
+    "definition": "Aider une personne atteinte d'une maladie incurable à mettre fin à sa vie, à sa demande, pour éviter la souffrance.",
     "match": [
-      "euthanasia"
+      "euthanasie"
     ]
   },
   {
     "id": "reconhecimento_facial",
-    "term": "Facial recognition",
-    "definition": "Technology that identifies people by comparing a face filmed by a camera with photos stored in a database.",
+    "term": "Reconnaissance faciale",
+    "definition": "Technologie qui identifie les personnes en comparant un visage filmé par une caméra avec des photos stockées dans une base de données.",
     "match": [
-      "facial recognition"
+      "reconnaissance faciale"
     ]
   },
   {
     "id": "faccoes",
-    "term": "Criminal groups",
-    "definition": "Organized crime groups that often control territory and illegal activities.",
+    "term": "Groupes criminels",
+    "definition": "Groupes du crime organisé qui contrôlent souvent un territoire et des activités illégales.",
     "match": [
-      "criminal groups"
+      "groupes criminels"
     ]
   },
   {
     "id": "poliamor",
-    "term": "Polyamory",
-    "definition": "Romantic relationships with more than one person at the same time, with everyone's knowledge and consent.",
+    "term": "Polyamour",
+    "definition": "Relations amoureuses avec plusieurs personnes en même temps, au su et avec le consentement de tous.",
     "match": [
-      "polyamory"
+      "polyamour"
     ]
   },
   {
     "id": "relacao_aberta",
-    "term": "Open relationship",
-    "definition": "A relationship in which the partners agree that each may have other partners.",
+    "term": "Relation ouverte",
+    "definition": "Une relation dans laquelle les partenaires conviennent que chacun peut avoir d'autres partenaires.",
     "match": [
-      "open relationships"
+      "relations ouvertes",
+      "relation ouverte"
     ]
   },
   {
     "id": "linguagem_neutra",
-    "term": "Gender-neutral language",
-    "definition": "Ways of speaking and writing that avoid marking masculine or feminine, such as \"they\" instead of \"he or she\".",
+    "term": "Langage neutre (épicène)",
+    "definition": "Façons de parler et d'écrire qui évitent de marquer le masculin ou le féminin, comme « iel » au lieu de « il ou elle ».",
     "match": [
-      "gender-neutral language"
+      "langage neutre du point de vue du genre",
+      "langage neutre",
+      "langage épicène"
     ]
   },
   {
     "id": "identidade_genero",
-    "term": "Gender identity",
-    "definition": "How a person sees themself: a man, a woman, both or neither, regardless of the sex they were born with.",
+    "term": "Identité de genre",
+    "definition": "La façon dont une personne se perçoit : homme, femme, les deux ou aucun des deux, indépendamment du sexe qui lui a été assigné à la naissance.",
     "match": [
-      "gender identity"
+      "identité de genre"
     ]
   },
   {
     "id": "lgbt",
     "term": "LGBT",
-    "definition": "Acronym for lesbian, gay, bisexual and transgender people.",
+    "definition": "Sigle désignant les personnes lesbiennes, gays, bisexuelles et transgenres.",
     "match": [
       "LGBT"
     ]
   },
   {
     "id": "cotas_raciais",
-    "term": "Race-based quotas",
-    "definition": "Setting aside a share of university places or jobs for people from certain racial groups.",
+    "term": "Quotas raciaux",
+    "definition": "Réserver une part des places à l'université ou des emplois à des personnes issues de certains groupes raciaux.",
     "match": [
-      "race-based quotas"
+      "quotas fondés sur la race",
+      "quotas raciaux"
     ]
   },
   {
     "id": "multicultural",
-    "term": "Multicultural",
-    "definition": "A place where people of many cultures, languages and religions live together, each keeping their traditions.",
+    "term": "Multiculturel",
+    "definition": "Un lieu où vivent ensemble des personnes de nombreuses cultures, langues et religions, chacune conservant ses traditions.",
     "match": [
-      "multicultural"
+      "multiculturelle",
+      "multiculturel"
     ]
   },
   {
     "id": "ataque_preventivo",
-    "term": "Preemptive strike",
-    "definition": "Attacking an enemy first because you believe it is preparing to attack you.",
+    "term": "Frappe préventive",
+    "definition": "Attaquer un ennemi en premier parce que l'on pense qu'il se prépare à nous attaquer.",
     "match": [
-      "preemptive strikes"
+      "frappes préventives",
+      "frappe préventive"
     ]
   },
   {
     "id": "desarmamento",
-    "term": "Disarmament",
-    "definition": "An agreement between countries to reduce or eliminate certain kinds of weapons.",
+    "term": "Désarmement",
+    "definition": "Un accord entre pays visant à réduire ou à éliminer certains types d'armes.",
     "match": [
-      "disarmament"
+      "désarmement"
     ]
   },
   {
     "id": "armas_autonomas",
-    "term": "Lethal autonomous weapons",
-    "definition": "Weapons that pick and attack targets on their own, with a computer deciding instead of a person.",
+    "term": "Armes autonomes létales",
+    "definition": "Armes qui choisissent et attaquent des cibles seules, un ordinateur décidant à la place d'une personne.",
     "match": [
-      "lethal autonomous weapons"
+      "armes autonomes létales"
     ]
   },
   {
     "id": "dissuadir",
-    "term": "Deter",
-    "definition": "To convince someone not to attack by showing that the response would be severe.",
+    "term": "Dissuader",
+    "definition": "Convaincre quelqu'un de ne pas attaquer en montrant que la riposte serait sévère.",
     "match": [
-      "deter"
+      "dissuader"
     ]
   },
   {
     "id": "crimes_guerra",
-    "term": "War crimes",
-    "definition": "Serious violations of the rules of war, such as attacking civilians or mistreating prisoners.",
+    "term": "Crimes de guerre",
+    "definition": "Violations graves des règles de la guerre, comme attaquer des civils ou maltraiter des prisonniers.",
     "match": [
-      "war-crimes",
-      "war crimes"
+      "crimes de guerre"
     ]
   },
   {
     "id": "onu",
-    "term": "United Nations",
-    "definition": "An organization that brings together nearly all countries to work on peace, human rights and cooperation.",
+    "term": "Nations Unies",
+    "definition": "Une organisation qui réunit presque tous les pays pour travailler à la paix, aux droits humains et à la coopération.",
     "match": [
-      "United Nations"
+      "Nations Unies"
     ]
   },
   {
     "id": "genocidio",
-    "term": "Genocide",
-    "definition": "Systematically killing or persecuting a people, ethnic group or religion with the intent to destroy it.",
+    "term": "Génocide",
+    "definition": "Tuer ou persécuter systématiquement un peuple, un groupe ethnique ou une religion dans l'intention de le détruire.",
     "match": [
-      "genocide"
+      "génocide"
     ]
   },
   {
     "id": "missoes_paz",
-    "term": "Peacekeeping",
-    "definition": "Troops sent abroad, under international coordination, to keep order in conflict zones.",
+    "term": "Maintien de la paix",
+    "definition": "Troupes envoyées à l'étranger, sous coordination internationale, pour maintenir l'ordre dans les zones de conflit.",
     "match": [
-      "peacekeeping"
+      "maintien de la paix"
     ]
   },
   {
     "id": "sancoes",
     "term": "Sanctions",
-    "definition": "Economic punishments against a country, such as blocking trade or freezing money abroad.",
+    "definition": "Punitions économiques contre un pays, comme le blocage des échanges commerciaux ou le gel d'avoirs à l'étranger.",
     "match": [
       "sanctions"
     ]
   },
   {
     "id": "aliancas_militares",
-    "term": "Military alliances",
-    "definition": "Agreements between countries to defend each other: if one is attacked, the others help.",
+    "term": "Alliances militaires",
+    "definition": "Accords entre pays pour se défendre mutuellement : si l'un est attaqué, les autres l'aident.",
     "match": [
-      "military alliances"
+      "alliances militaires"
     ]
   },
   {
     "id": "alinhamento_automatico",
-    "term": "Automatic alignment",
-    "definition": "Always following another country's or bloc's position instead of deciding case by case.",
+    "term": "Alignement automatique",
+    "definition": "Suivre toujours la position d'un autre pays ou d'un bloc au lieu de décider au cas par cas.",
     "match": [
-      "automatic alignment"
+      "alignement automatique"
     ]
   },
   {
     "id": "tratado_internacional",
-    "term": "International treaty",
-    "definition": "A formal agreement between countries, with rules both sides promise to follow.",
+    "term": "Traité international",
+    "definition": "Un accord formel entre pays, avec des règles que les parties promettent de respecter.",
     "match": [
-      "international treaty"
+      "traité international"
     ]
   },
   {
     "id": "potencias",
-    "term": "Great powers",
-    "definition": "Countries with very large military, economic or political power.",
+    "term": "Grandes puissances",
+    "definition": "Pays dotés d'un pouvoir militaire, économique ou politique très important.",
     "match": [
-      "great powers"
+      "grandes puissances"
     ]
   },
   {
     "id": "redistribuir",
-    "term": "Redistribute",
-    "definition": "To take from those who have more and give to those who have less, through taxes, laws or public programs.",
+    "term": "Redistribuer",
+    "definition": "Prendre à ceux qui ont davantage pour donner à ceux qui ont moins, par les impôts, les lois ou les programmes publics.",
     "match": [
-      "redistribute",
+      "redistribuer",
+      "redistribuent",
       "redistribution"
     ]
   },
   {
     "id": "estrategico",
-    "term": "Strategic",
-    "definition": "A sector or company essential for a country to function or defend itself, such as energy, oil, water or technology.",
+    "term": "Stratégique",
+    "definition": "Un secteur ou une entreprise essentiel au fonctionnement ou à la défense d'un pays, comme l'énergie, le pétrole, l'eau ou la technologie.",
     "match": [
-      "strategically important",
-      "strategic"
+      "stratégiquement importantes",
+      "stratégiques",
+      "stratégique"
     ]
   },
   {
     "id": "estatais",
-    "term": "State-owned companies",
-    "definition": "Companies controlled by the government.",
+    "term": "Entreprises d'État",
+    "definition": "Entreprises contrôlées par le gouvernement.",
     "match": [
-      "state-owned"
+      "entreprises d'État"
     ]
   },
   {
     "id": "reforma_agraria",
-    "term": "Land reform",
-    "definition": "Breaking up large rural estates to give land to people who want to farm it.",
+    "term": "Réforme agraire",
+    "definition": "Diviser de grands domaines ruraux pour donner des terres à ceux qui veulent les cultiver.",
     "match": [
-      "land reform"
+      "réforme agraire"
     ]
   },
   {
     "id": "sindicatos",
-    "term": "Unions",
-    "definition": "Workers' organizations that negotiate pay and working conditions on behalf of the group.",
+    "term": "Syndicats",
+    "definition": "Organisations de travailleurs qui négocient les salaires et les conditions de travail au nom du groupe.",
     "match": [
-      "unions"
+      "syndicats"
     ]
   },
   {
     "id": "renda_basica",
-    "term": "Minimum income",
-    "definition": "Money the state pays regularly to people in need, to guarantee a basic standard of living.",
+    "term": "Revenu minimum",
+    "definition": "Somme que l'État verse régulièrement aux personnes dans le besoin pour garantir un niveau de vie de base.",
     "match": [
-      "minimum income"
+      "revenu minimum"
     ]
   },
   {
     "id": "bolsa_familia",
     "term": "Bolsa Família",
-    "definition": "A Brazilian federal program that pays a monthly amount to low-income families.",
+    "definition": "Un programme fédéral brésilien qui verse une allocation mensuelle aux familles à faible revenu.",
     "match": []
   },
   {
     "id": "estabilidade_servidores",
-    "term": "Lifetime job security",
-    "definition": "A rule that makes it very hard to fire permanent government employees.",
+    "term": "Sécurité de l'emploi à vie",
+    "definition": "Une règle qui rend très difficile le licenciement des fonctionnaires titulaires.",
     "match": [
-      "lifetime job security"
+      "sécurité de l'emploi à vie",
+      "sécurité d'emploi à vie"
     ]
   },
   {
     "id": "subsidiar",
-    "term": "Subsidize",
-    "definition": "To support an activity with public money so it costs less or is more profitable.",
+    "term": "Subventionner",
+    "definition": "Soutenir une activité avec de l'argent public pour qu'elle coûte moins cher ou soit plus rentable.",
     "match": [
-      "subsidize"
+      "subventionner"
     ]
   },
   {
     "id": "banco_central",
-    "term": "Central bank",
-    "definition": "The public institution that manages a country's currency and sets its basic interest rate.",
+    "term": "Banque centrale",
+    "definition": "L'institution publique qui gère la monnaie d'un pays et fixe son taux d'intérêt de base.",
     "match": [
-      "central bank"
+      "banque centrale"
     ]
   },
   {
     "id": "taxa_juros",
-    "term": "Interest rate",
-    "definition": "The price of borrowed money. High rates make credit more expensive and tend to slow prices; low rates do the opposite.",
+    "term": "Taux d'intérêt",
+    "definition": "Le prix de l'argent emprunté. Des taux élevés renchérissent le crédit et tendent à ralentir les prix ; des taux bas font l'inverse.",
     "match": [
-      "interest rates",
-      "interest rate"
+      "taux d'intérêt"
     ]
   },
   {
     "id": "inflacao",
     "term": "Inflation",
-    "definition": "A general, continuing rise in prices that makes money buy less. Its causes are debated: money creation, demand, costs.",
+    "definition": "Une hausse générale et durable des prix qui réduit le pouvoir d'achat de la monnaie. Ses causes sont débattues : création monétaire, demande, coûts.",
     "match": [
       "inflation"
     ]
   },
   {
     "id": "carga_tributaria",
-    "term": "Tax burden",
-    "definition": "The total taxes that people and companies pay, relative to the size of the economy.",
+    "term": "Pression fiscale",
+    "definition": "L'ensemble des impôts que paient les personnes et les entreprises, rapporté à la taille de l'économie.",
     "match": []
   },
   {
     "id": "arrecadacao",
-    "term": "Tax revenue",
-    "definition": "The money the government collects from taxes.",
+    "term": "Recettes fiscales",
+    "definition": "L'argent que le gouvernement perçoit grâce aux impôts.",
     "match": [
-      "tax revenue",
-      "revenue"
+      "recettes fiscales",
+      "recettes de l'État"
     ]
   },
   {
     "id": "recessao",
-    "term": "Recession",
-    "definition": "A period when the economy shrinks: output falls and unemployment tends to rise.",
+    "term": "Récession",
+    "definition": "Une période où l'économie se contracte : la production baisse et le chômage tend à augmenter.",
     "match": [
-      "recession"
+      "récession"
     ]
   },
   {
     "id": "cambio",
-    "term": "Exchange rate",
-    "definition": "The price of a country's currency compared with other currencies, such as the dollar.",
+    "term": "Taux de change",
+    "definition": "Le prix de la monnaie d'un pays par rapport aux autres monnaies, comme le dollar.",
     "match": [
-      "exchange rate"
+      "taux de change"
     ]
   },
   {
     "id": "criptomoedas",
-    "term": "Cryptocurrencies",
-    "definition": "Digital money, such as Bitcoin, that is not issued by any government or central bank.",
+    "term": "Cryptomonnaies",
+    "definition": "Monnaie numérique, comme le Bitcoin, qui n'est émise par aucun gouvernement ni banque centrale.",
     "match": [
-      "cryptocurrencies"
+      "cryptomonnaies"
     ]
   },
   {
     "id": "economia_planejada",
-    "term": "Planned economy",
-    "definition": "A system in which the government decides what is produced, how much, and at what price.",
+    "term": "Économie planifiée",
+    "definition": "Un système dans lequel le gouvernement décide de ce qui est produit, en quelle quantité et à quel prix.",
     "match": [
-      "state-planned economy"
+      "économie planifiée par l'État",
+      "économie planifiée"
     ]
   },
   {
     "id": "livre_mercado",
-    "term": "Free market",
-    "definition": "A system in which prices and production come from free exchange between buyers and sellers, with little government interference.",
+    "term": "Libre marché",
+    "definition": "Un système dans lequel les prix et la production résultent d'échanges libres entre acheteurs et vendeurs, avec peu d'intervention du gouvernement.",
     "match": [
-      "free-market"
+      "libre marché"
     ]
   },
   {
     "id": "campeas_nacionais",
-    "term": "National champions",
-    "definition": "Large domestic companies that the government chooses to back so they can grow and compete worldwide.",
+    "term": "Champions nationaux",
+    "definition": "Grandes entreprises nationales que le gouvernement choisit de soutenir pour qu'elles se développent et concurrencent au niveau mondial.",
     "match": [
-      "leading domestic companies"
+      "principales entreprises nationales"
     ]
   },
   {
     "id": "regulacao",
-    "term": "Regulation",
-    "definition": "Government rules that set how an economic activity may operate.",
+    "term": "Réglementation",
+    "definition": "Règles du gouvernement qui définissent la façon dont une activité économique peut s'exercer.",
     "match": [
-      "regulations"
+      "réglementations",
+      "réglementation"
     ]
   },
   {
     "id": "tarifas",
-    "term": "Tariffs",
-    "definition": "A tax charged on imported goods that makes them more expensive.",
+    "term": "Droits de douane",
+    "definition": "Une taxe prélevée sur les produits importés qui les rend plus chers.",
     "match": [
-      "tariffs"
+      "droits de douane"
     ]
   },
   {
     "id": "livre_comercio",
-    "term": "Free trade",
-    "definition": "Trade between countries with few or no tariffs or barriers.",
+    "term": "Libre-échange",
+    "definition": "Commerce entre pays avec peu ou pas de droits de douane ni d'autres barrières.",
     "match": [
-      "free trade"
+      "libre-échange"
     ]
   },
   {
     "id": "soberania_economica",
-    "term": "Economic sovereignty",
-    "definition": "A country's ability to make its own economic decisions without depending on other countries.",
+    "term": "Souveraineté économique",
+    "definition": "La capacité d'un pays à prendre ses propres décisions économiques sans dépendre d'autres pays.",
     "match": [
-      "economic sovereignty"
+      "souveraineté économique"
     ]
   },
   {
     "id": "multinacionais",
-    "term": "Multinationals",
-    "definition": "Companies that operate in several countries at once.",
+    "term": "Multinationales",
+    "definition": "Entreprises qui exercent leurs activités dans plusieurs pays à la fois.",
     "match": [
-      "multinationals"
+      "multinationales"
     ]
   },
   {
     "id": "integracao_economica",
-    "term": "Economic integration",
-    "definition": "Bringing countries' economies closer through trade, investment and shared rules.",
+    "term": "Intégration économique",
+    "definition": "Rapprocher les économies des pays par le commerce, l'investissement et des règles communes.",
     "match": [
-      "economic integration"
+      "intégration économique"
     ]
   },
   {
     "id": "cadeias_suprimento",
-    "term": "Supply chains",
-    "definition": "All the steps needed to make something, from raw materials to the finished product.",
+    "term": "Chaînes d'approvisionnement",
+    "definition": "Toutes les étapes nécessaires pour fabriquer un produit, des matières premières au produit fini.",
     "match": [
-      "supply chains"
+      "chaînes d'approvisionnement"
     ]
   },
   {
     "id": "transgenicos",
-    "term": "Genetically modified crops",
-    "definition": "Crops whose genes were altered in a lab, for example to resist pests.",
+    "term": "Cultures génétiquement modifiées",
+    "definition": "Cultures dont les gènes ont été modifiés en laboratoire, par exemple pour résister aux ravageurs.",
     "match": [
-      "genetically modified"
+      "génétiquement modifiées"
     ]
   },
   {
     "id": "agrotoxicos",
     "term": "Pesticides",
-    "definition": "Chemicals used on crops to fight pests and plant diseases.",
+    "definition": "Produits chimiques utilisés sur les cultures pour lutter contre les ravageurs et les maladies des plantes.",
     "match": [
-      "pesticide"
+      "pesticides"
     ]
   },
   {
     "id": "edicao_genetica",
-    "term": "Gene editing",
-    "definition": "Altering the DNA of a living being to correct or change its traits.",
+    "term": "Édition génique",
+    "definition": "Modifier l'ADN d'un être vivant pour corriger ou changer ses caractéristiques.",
     "match": [
-      "gene editing"
+      "édition génique"
     ]
   },
   {
     "id": "embrioes",
-    "term": "Embryos",
-    "definition": "The earliest stage of human development, in the first weeks after fertilization.",
+    "term": "Embryons",
+    "definition": "Le tout premier stade du développement humain, durant les premières semaines après la fécondation.",
     "match": [
-      "embryos"
+      "embryons"
     ]
   },
   {
     "id": "implantes_cerebrais",
-    "term": "Brain implants",
-    "definition": "Devices placed in the brain to read its signals or stimulate mental activity.",
+    "term": "Implants cérébraux",
+    "definition": "Dispositifs placés dans le cerveau pour lire ses signaux ou stimuler l'activité mentale.",
     "match": [
-      "brain implants"
+      "implants cérébraux"
     ]
   },
   {
     "id": "ia",
-    "term": "Artificial intelligence",
-    "definition": "Computer programs able to do tasks that normally need human intelligence, such as understanding text or recognizing images.",
+    "term": "Intelligence artificielle",
+    "definition": "Programmes informatiques capables d'accomplir des tâches qui exigent normalement l'intelligence humaine, comme comprendre un texte ou reconnaître des images.",
     "match": [
-      "AI"
+      "IA"
     ]
   },
   {
     "id": "automacao",
-    "term": "Automation",
-    "definition": "Using machines and software to do work that people used to do.",
+    "term": "Automatisation",
+    "definition": "Utiliser des machines et des logiciels pour effectuer un travail que des personnes faisaient auparavant.",
     "match": [
-      "automation"
+      "automatisation"
     ]
   },
   {
     "id": "carne_cultivada",
-    "term": "Lab-grown meat",
-    "definition": "Meat made in a lab from animal cells, without raising or slaughtering a whole animal.",
+    "term": "Viande cultivée",
+    "definition": "Viande produite en laboratoire à partir de cellules animales, sans élever ni abattre un animal entier.",
     "match": [
-      "lab-grown meat"
+      "viande cultivée en laboratoire"
     ]
   },
   {
     "id": "espionagem",
-    "term": "Espionage",
-    "definition": "Secretly obtaining information from another country, company or person.",
+    "term": "Espionnage",
+    "definition": "Obtenir secrètement des informations auprès d'un autre pays, d'une entreprise ou d'une personne.",
     "match": [
-      "espionage"
+      "espionnage"
     ]
   },
   {
     "id": "arsenais",
-    "term": "Arsenals",
-    "definition": "The collection of weapons a country holds.",
+    "term": "Arsenaux",
+    "definition": "L'ensemble des armes que détient un pays.",
     "match": [
-      "arsenals"
+      "arsenaux"
     ]
   },
   {
     "id": "interesse_nacional",
-    "term": "National interest",
-    "definition": "What a government considers good for the country as a whole, such as security, economy and influence in the world.",
+    "term": "Intérêt national",
+    "definition": "Ce que le gouvernement considère comme bon pour le pays dans son ensemble, comme la sécurité, l'économie et l'influence dans le monde.",
     "match": [
-      "national interest",
-      "national interests"
+      "intérêt national",
+      "intérêts nationaux"
     ]
   },
   {
     "id": "organismos_internacionais",
-    "term": "International organizations",
-    "definition": "Institutions formed by several countries to handle shared issues, such as the UN or the WTO.",
+    "term": "Organisations internationales",
+    "definition": "Institutions formées par plusieurs pays pour traiter des questions communes, comme l'ONU ou l'OMC.",
     "match": [
-      "international organizations"
+      "organisations internationales"
     ]
   },
   {
     "id": "cidadao_mundo",
-    "term": "Citizen of the world",
-    "definition": "A person who feels part of all humanity before feeling part of a nation.",
+    "term": "Citoyen du monde",
+    "definition": "Une personne qui se sent d'abord membre de l'humanité entière avant de se sentir membre d'une nation.",
     "match": [
-      "citizen of the world"
+      "citoyen du monde"
     ]
   },
   {
     "id": "congresso",
-    "term": "Legislature",
-    "definition": "The elected body that makes a country's laws.",
+    "term": "Pouvoir législatif",
+    "definition": "L'organe élu qui fait les lois d'un pays.",
     "match": [
-      "legislature"
+      "législatif"
     ]
   },
   {
     "id": "alternancia_poder",
-    "term": "Alternation of power",
-    "definition": "When different parties take turns governing as elections pass.",
+    "term": "Alternance du pouvoir",
+    "definition": "Lorsque différents partis se relaient au gouvernement au fil des élections.",
     "match": [
-      "power alternating"
+      "alternance du pouvoir"
     ]
   },
   {
     "id": "assembleia_popular",
-    "term": "Popular assembly",
-    "definition": "An open meeting where people decide together instead of electing representatives.",
+    "term": "Assemblée populaire",
+    "definition": "Une réunion ouverte où les gens décident ensemble au lieu d'élire des représentants.",
     "match": [
-      "popular assemblies"
+      "assemblées populaires"
     ]
   },
   {
     "id": "criminalizar",
-    "term": "Criminalize",
-    "definition": "To make an act a crime, with a punishment set by law.",
+    "term": "Criminaliser",
+    "definition": "Ériger un acte en infraction, avec une peine fixée par la loi.",
     "match": [
-      "criminalized"
+      "criminalisées",
+      "criminalisée",
+      "criminalisés",
+      "criminalisé",
+      "criminaliser"
     ]
   },
   {
     "id": "legalizar",
-    "term": "Legalize",
-    "definition": "To make something allowed by law that used to be forbidden.",
+    "term": "Légaliser",
+    "definition": "Rendre légal ce qui était auparavant interdit par la loi.",
     "match": [
-      "legalized"
+      "légalisées",
+      "légalisée",
+      "légalisés",
+      "légalisé",
+      "légaliser"
     ]
   },
   {
     "id": "industrializacao",
-    "term": "Industrialization",
-    "definition": "Transforming an economy to produce more in factories and with machines.",
+    "term": "Industrialisation",
+    "definition": "Transformer une économie pour produire davantage dans des usines et avec des machines.",
     "match": [
-      "industrialization"
+      "industrialisation"
     ]
   },
   {
     "id": "mineracao",
-    "term": "Mining",
-    "definition": "Extracting minerals from the ground, such as gold, iron and niobium.",
+    "term": "Exploitation minière",
+    "definition": "Extraire des minerais du sol, comme l'or, le fer et le niobium.",
     "match": [
-      "mining"
+      "exploitation minière"
     ]
   },
   {
     "id": "pecuaria",
-    "term": "Livestock farming",
-    "definition": "Raising animals such as cattle for meat, milk and other products.",
+    "term": "Élevage",
+    "definition": "Élever des animaux, comme les bovins, pour la viande, le lait et d'autres produits.",
     "match": [
-      "livestock farming"
+      "élevage"
     ]
   }
 ]

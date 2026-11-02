@@ -13,9 +13,9 @@ export function amazonAffiliateUrl(directUrl, title, authorName, locale) {
   if (directUrl && String(directUrl).trim().length > 0) {
     return directUrl;
   }
-  const isEn = locale === 'en';
-  const host = isEn ? AMAZON_US_HOST : AMAZON_BR_HOST;
-  const tag = isEn ? AMAZON_US_TAG : AMAZON_BR_TAG;
+  const isNonPt = locale !== 'pt';
+  const host = isNonPt ? AMAZON_US_HOST : AMAZON_BR_HOST;
+  const tag = isNonPt ? AMAZON_US_TAG : AMAZON_BR_TAG;
   const query = encodeURIComponent(`${title} ${authorName}`);
   return `https://${host}/s?k=${query}&i=stripbooks&tag=${tag}`;
 }
@@ -105,6 +105,47 @@ const STR = {
       ativista: 'Letters, manifestos, and books by civil rights, labor, and grassroots movement leaders.',
       religioso: 'Theological treatises, encyclicals, and spiritual-ethical texts with direct political impact.',
       empresario: 'Books and treatises on business, strategy, and innovation with strong political resonance.'
+    }
+  },
+  fr: {
+    skip: 'Aller à la liste',
+    catalogNav: 'Catalogue',
+    homeAria: '12 axes, page d’accueil',
+    eyebrow: 'Bibliothèque politique',
+    lead: (n, cats, years) => `Une bibliothèque de ${n} œuvres politiques, économiques et philosophiques fondamentales écrites par les figures cartographiées sur les 12 Axes. Parcourez par domaine, explorez les idées sur ~${years} ans et trouvez où lire chaque œuvre.`,
+    stats: ['œuvres cataloguées', 'domaines de pensée', 'ans d’histoire'],
+    areasAria: 'Domaines',
+    searchLabel: 'Rechercher un livre ou un auteur',
+    searchPlaceholder: 'Rechercher un livre, un auteur, une année ou un courant…  ( / )',
+    filterAria: 'Filtrer par domaine',
+    count: ['livre', 'livres'],
+    viewAuthor: 'Voir l’auteur',
+    viewOnAmazon: 'Voir sur Amazon',
+    authorLabel: 'Auteur',
+    yearBc: (y) => `${y} av. J.-C.`,
+    dnaNote:
+      '<b>Comment lire la bande de 12 icônes :</b> chaque icône montre l’inclinaison idéologique de l’auteur sur les 12 axes. Plus l’icône est forte, plus la position est nette. Survolez pour voir les valeurs exactes.',
+    legendAria: 'Pôles de chaque axe, dans l’ordre de la bande',
+    emptyTitle: 'Aucun livre trouvé',
+    emptyText: 'Essayez un autre terme de recherche ou effacez les filtres.',
+    found: ['livre trouvé', 'livres trouvés'],
+    clear: 'Effacer les filtres',
+    credit: 'Œuvres originales écrites par des figures historiques et contemporaines du catalogue 12 Axes.',
+    portraitAlt: (name) => `Portrait de ${name}`,
+    ctaTitle: 'Quel livre correspond à vos idées ?',
+    ctaText: 'Répondez au quiz sur 12 axes et recevez une liste personnalisée de livres écrits par les figures politiques les plus proches de votre résultat.',
+    takeTheTest: 'Faire le test',
+    footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés',
+    otherLang: { label: 'Português', href: '/books' },
+    descriptions: {
+      filosofo: 'Traités et dialogues classiques sur la justice, la liberté, la nature humaine, l’éthique et les fondements de l’État.',
+      teorico: 'Manifestes, programmes doctrinaux et thèses qui ont structuré de grands mouvements et systèmes politiques.',
+      economista: 'Œuvres fondatrices sur la valeur, les marchés, la monnaie, le commerce, la fiscalité et l’intervention de l’État.',
+      politico: 'Discours, mémoires et écrits de chefs d’État, de gouvernants et de dirigeants qui ont exercé le pouvoir.',
+      intelectual: 'Essais et analyses historiques, sociologiques et journalistiques qui ont façonné le débat public.',
+      ativista: 'Lettres, manifestes et livres de responsables des droits civiques, des luttes syndicales et des mouvements populaires.',
+      religioso: 'Traités théologiques, encycliques et textes éthico-spirituels ayant un impact politique direct.',
+      empresario: 'Livres et traités sur les affaires, la stratégie et l’innovation avec une forte résonance politique.'
     }
   }
 };

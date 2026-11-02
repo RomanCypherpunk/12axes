@@ -1,4 +1,4 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT e EN
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN e FR
 // a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
 // Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
 // overlays em data/i18n/en/*.json (chaveados por id, com fallback para PT).
@@ -162,10 +162,60 @@ const STR = {
     booksIndexTitle: (n) => `Political and philosophical books: ${n} essential works | 12 Axes`,
     booksIndexDesc: (n) => `Library of ${n} foundational works in politics, philosophy, and economics written by figures mapped across the 12 Axes, with 12-axis profiles.`,
     booksIndexHeading: 'Political books and authors'
+  },
+  fr: {
+    htmlLang: 'fr',
+    ogLocale: 'fr_FR',
+    prefix: '/fr',
+    home: 'Accueil',
+    navBooks: 'Livres',
+    navIdeologies: 'Idéologies',
+    navCountries: 'Pays',
+    navCompare: 'Comparer',
+    compareHref: '/fr/compare',
+    navPersonalities: 'Personnalités',
+    navParties: 'Partis',
+    navWebView: 'Vue en toile',
+    navStart: 'Commencer',
+    navCatalog: 'Catalogue',
+    takeTheTest: 'Faire le test',
+    axesTitle: 'Profil sur les 12 axes',
+    ctaTitle: 'Et vous, où vous situez-vous sur le spectre politique ?',
+    ctaText: 'Répondez au quiz et découvrez votre compatibilité avec des idéologies, des pays et des personnalités sur les 12 axes.',
+    currentCountry: 'Pays actuel',
+    historicalRegime: (period) => `Régime historique${period ? ` · ${period}` : ''}`,
+    flagAlt: (name) => `Drapeau : ${name}`,
+    imageSource: 'Source de l’image',
+    homeAria: '12 Axes — page d’accueil',
+    balanced: 'Équilibré',
+    intensity: ['Équilibré', 'Incliné', 'Fort', 'Très fort'],
+    subjectPrefix: (name) => name,
+    ideologyTitle: (name) => `${name} — ce que c’est et sa position sur les 12 axes politiques | 12 Axes`,
+    countryTitle: (name) => `${name} — profil politique sur les 12 axes | 12 Axes`,
+    personalityTitle: (name) => `${name} — position politique sur les 12 axes | 12 Axes`,
+    partyTitle: (name) => `${name} — profil politique sur les 12 axes | 12 Axes`,
+    partyHeadline: (name) => `${name} — profil politique sur les 12 axes`,
+    ideologyHeadline: (name) => `${name} — position politique sur les 12 axes`,
+    countryHeadline: (name) => `${name} — profil politique sur les 12 axes`,
+    ideologiesIndexTitle: (n) => `Idéologies politiques : liste complète de ${n} courants | 12 Axes`,
+    ideologiesIndexDesc: (n) => `Liste complète de ${n} idéologies politiques, du communisme au libertarianisme, avec leur position sur 12 axes. Découvrez la vôtre avec le test politique 12 Axes, gratuit et rapide.`,
+    ideologiesIndexHeading: 'Idéologies politiques',
+    countriesIndexTitle: (n) => `Profils politiques de ${n} pays et régimes historiques | 12 Axes`,
+    countriesIndexDesc: (n) => `Comparez le profil politique de ${n} pays et régimes historiques sur 12 axes. Découvrez quel pays vous correspond avec le test politique 12 Axes, gratuit.`,
+    countriesIndexHeading: 'Pays et régimes',
+    personalitiesIndexTitle: (n) => `${n} personnalités politiques et leurs positions | 12 Axes`,
+    personalitiesIndexDesc: (n) => `Découvrez la position politique de ${n} personnalités sur 12 axes. Trouvez la figure politique qui vous correspond avec le test politique 12 Axes, gratuit et rapide.`,
+    personalitiesIndexHeading: 'Personnalités politiques',
+    partiesIndexTitle: (n) => `${n} partis, mouvements et organisations politiques et leurs positions | 12 Axes`,
+    partiesIndexDesc: (n) => `Comparez le profil de ${n} partis, mouvements, maisons dynastiques et organisations sur 12 axes, avec le pays associé à chacun. Découvrez lequel vous correspond avec le test politique 12 Axes, gratuit.`,
+    partiesIndexHeading: 'Partis et organisations',
+    booksIndexTitle: (n) => `Livres politiques et philosophiques : ${n} œuvres essentielles | 12 Axes`,
+    booksIndexDesc: (n) => `Bibliothèque de ${n} œuvres fondatrices de politique, de philosophie et d’économie écrites par les figures cartographiées sur les 12 Axes, avec profil sur 12 axes.`,
+    booksIndexHeading: 'Livres et auteurs politiques'
   }
 };
 
-const LOCALES = ['pt', 'en'];
+const LOCALES = ['pt', 'en', 'fr'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -252,8 +302,9 @@ function buildLocaleContext(locale) {
   const parties = overlay(baseParties, locale, 'parties.json');
   const books = baseBooks.map((b) => ({
     ...b,
-    title: (b.title && (b.title[locale] || b.title.pt)) || '',
-    url: (b.url && (b.url[locale] || b.url.pt)) || ''
+    // Sem título/URL no idioma (ex.: fr), usa o EN (conteúdo do catálogo segue em inglês) antes do PT.
+    title: (b.title && (b.title[locale] || b.title.en || b.title.pt)) || '',
+    url: (b.url && (b.url[locale] || b.url.en || b.url.pt)) || ''
   }));
   return {
     locale,
@@ -329,6 +380,7 @@ function buildHomeVariants() {
     <link rel="canonical" href="https://12axes.vercel.app/en" />
     <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
     <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="fr" href="https://12axes.vercel.app/fr" />
     <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
 
     `;
@@ -445,7 +497,7 @@ function buildHomeVariants() {
     name: '12 Axes',
     alternateName: ['12 Eixos', '12axes', '12 Axes Political Test'],
     url: 'https://12axes.vercel.app/en',
-    inLanguage: ['en', 'pt-BR']
+    inLanguage: ['en', 'pt-BR', 'fr']
   };
 
   const enJsonLdBlocks = [JSON.stringify(enWebApp), JSON.stringify(enFaq), JSON.stringify(enWebSite)];
@@ -466,6 +518,134 @@ function buildHomeVariants() {
     throw new Error(`Esperava 3 blocos ld+json no index.html, encontrei ${ldIndex}`);
   }
   writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(en));
+
+  // dist/fr.html: mesmo esquema do en.html, com SEO em francês (conteúdo do app segue o idioma resolvido pelo caminho).
+  const frTitle = '12 Axes — Test politique gratuit, quiz et boussole sur 12 axes';
+  const frDescription = 'Le test politique 12 Axes, gratuit, rapide et précis. Trouvez votre idéologie, votre pays et votre figure politique compatibles sur 12 axes, avec une boussole politique.';
+  const frKeywords = 'test politique, test politique gratuit, quiz politique, test idéologique, idéologie politique, trouver son idéologie, boussole politique, spectre politique, 12 axes, test politique 12 axes, 12axes, gauche, droite, centre, libéralisme, conservatisme, progressisme, libertarianisme, socialisme, capitalisme';
+
+  const frSeoBlock = `<!-- Primary SEO -->
+    <title>${frTitle}</title>
+    <meta name="description" content="${frDescription}" />
+    <meta name="keywords" content="${frKeywords}" />
+    <meta name="author" content="12 Axes" />
+    <meta name="copyright" content="© 2026 12 Axes. Tous droits réservés" />
+    <meta name="application-name" content="12 Axes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="French" />
+    <link rel="canonical" href="https://12axes.vercel.app/fr" />
+    <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="fr" href="https://12axes.vercel.app/fr" />
+    <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
+
+    `;
+
+  const frOgBlock = `<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="12 Axes" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://12axes.vercel.app/fr" />
+    <meta property="og:title" content="${frTitle}" />
+    <meta property="og:description" content="${frDescription}" />
+    <meta property="og:image" content="https://12axes.vercel.app/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Logo 12 Axes — un test politique sur 12 axes" />
+
+    `;
+
+  const frTwitterBlock = `<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${frTitle}" />
+    <meta name="twitter:description" content="${frDescription}" />
+    <meta name="twitter:image" content="https://12axes.vercel.app/logo.png" />
+
+    `;
+
+  const frWebApp = {
+    ...enWebApp,
+    url: 'https://12axes.vercel.app/fr',
+    alternateName: ['12 Axes Quiz politique', '12 Axes Test politique', '12 Axes Boussole politique'],
+    description:
+      'Un test politique et un quiz idéologique gratuits, rapides et complets qui situent votre position sur 12 axes et montrent votre idéologie, votre pays et votre figure politique compatibles, avec une boussole et un spectre politiques.',
+    inLanguage: 'fr',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    keywords: frKeywords,
+    featureList: [
+      'Test politique gratuit de 36, 60 ou 240 questions',
+      'Résultat sur 12 axes politiques',
+      'Idéologie politique compatible',
+      'Pays et régime historique compatibles',
+      'Figure politique compatible',
+      'Boussole politique socialisme × capitalisme et autoritaire × libertaire',
+      'Anonyme, sans inscription'
+    ],
+    about: [
+      'Structure politique',
+      'Représentation démocratique',
+      'Élections',
+      'Monarchie',
+      'Libertés civiles',
+      'Immigration',
+      'Diplomatie',
+      'Intervention',
+      'Politique économique',
+      'Capitalisme',
+      'Socialisme',
+      'Libre marché',
+      'Commerce international',
+      'Religion et politique',
+      'Morale',
+      'Technologie',
+      'Libéralisme',
+      'Conservatisme',
+      'Progressisme',
+      'Libertarianisme'
+    ]
+  };
+
+  const frFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      ['Le test est-il fiable ?', 'Le test politique 12 Axes est fiable comme outil de lecture et de comparaison des positions politiques. Il répartit ses questions sur 12 axes pour réduire le biais d’un seul sujet, mais ne remplace ni l’étude, ni le débat, ni l’analyse académique.'],
+      ['Combien de temps cela prend-il ?', 'La version courte prend environ 5 minutes. La version complète prend environ 9 minutes. La version extrême, avec 240 questions, peut prendre environ 30 minutes.'],
+      ['Y a-t-il une bonne réponse ?', 'Il n’y a pas de bonne réponse. Le test mesure des préférences sur la démocratie, la monarchie, le fédéralisme, l’immigration, la religion en politique, la politique économique, le commerce international et d’autres sujets.'],
+      ['Le test collecte-t-il des données ?', 'Le test est anonyme et ne demande aucune inscription. Les réponses servent à calculer le résultat au moment du quiz, sans demander votre nom, votre e-mail ni aucune identification personnelle.'],
+      ['Qu’est-ce que 12 Axes ?', '12 Axes est un test politique gratuit qui mesure votre position sur 12 axes (structure de l’État, représentation, libertés, immigration, diplomatie, intervention, économie, contrôle économique, commerce, religion, morale et technologie) et montre votre idéologie, votre pays et votre figure politique compatibles.']
+    ].map(([question, answer]) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer }
+    }))
+  };
+
+  const frWebSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '12 Axes',
+    alternateName: ['12 Eixos', '12axes', '12 Axes Test politique'],
+    url: 'https://12axes.vercel.app/fr',
+    inLanguage: ['fr', 'en', 'pt-BR']
+  };
+
+  const frJsonLdBlocks = [JSON.stringify(frWebApp), JSON.stringify(frFaq), JSON.stringify(frWebSite)];
+
+  let fr = index.replace('<html lang="pt-BR">', '<html lang="fr">');
+  fr = replaceBetween(fr, '<!-- Primary SEO -->', '<!-- Icons -->', frSeoBlock);
+  fr = replaceBetween(fr, '<!-- Open Graph -->', '<!-- Twitter -->', frOgBlock);
+  fr = replaceBetween(fr, '<!-- Twitter -->', '<style>', frTwitterBlock);
+  let frLdIndex = 0;
+  fr = fr.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (block) =>
+    frLdIndex < frJsonLdBlocks.length
+      ? `<script type="application/ld+json">${frJsonLdBlocks[frLdIndex++]}</script>`
+      : block
+  );
+  if (frLdIndex !== frJsonLdBlocks.length) {
+    throw new Error(`Esperava 3 blocos ld+json no index.html, encontrei ${frLdIndex}`);
+  }
+  writeFileSync(join(DIST, 'fr.html'), cdnifyShareImage(fr));
 }
 
 const allPaths = [];
@@ -509,7 +689,7 @@ if (existsSync(booksPtPath)) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', ...allPaths]
+const sitemapUrls = ['/', '/en', '/fr', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(

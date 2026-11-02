@@ -1,4 +1,4 @@
-// Páginas de política (/terms, /privacy, /refund e /en/...): termos do relatório pago, privacidade e reembolso.
+// Páginas de política (/terms, /privacy, /refund e /en/..., /fr/...): termos do relatório pago, privacidade e reembolso.
 // Aparecem no rodapé do site e são o endereço das políticas da loja que o checkout da AbacatePay pode pedir.
 // SUPPORT_EMAIL (variável de ambiente do build; padrão: o e-mail do projeto) é o contato publicado nas páginas; vazio, a página
 // manda o pedido pela página de contato do projeto no GitHub, que é pública: não é canal para dados de pagamento.
@@ -8,20 +8,28 @@ import { catalogHead } from './personalities-index.mjs';
 
 const SUPPORT_EMAIL = (process.env.SUPPORT_EMAIL ?? '12axes.quiz@gmail.com').trim();
 const ISSUES_URL = 'https://github.com/RomanCypherpunk/12axes/issues/new';
-const UPDATED = { pt: '30 de outubro de 2026', en: 'October 30, 2026' };
+const UPDATED = { pt: '30 de outubro de 2026', en: 'October 30, 2026', fr: '30 octobre 2026' };
 // Quem vende (identificação do fornecedor): aparece só na página de termos de uso. Dados públicos do MEI.
 const SELLER = '69.892.973 ENZO XAVIER SANTOS (MEI), CNPJ 69.892.973/0001-89';
 
 export const POLICY_SLUGS = ['report', 'terms', 'privacy', 'refund'];
 
-const contact = (isEn) =>
-  SUPPORT_EMAIL
-    ? isEn
-      ? `by e-mail at <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`
-      : `por e-mail em <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`
-    : isEn
-      ? `through the <a href="${ISSUES_URL}">project contact page on GitHub</a> (do not post payment details there)`
-      : `pela <a href="${ISSUES_URL}">página de contato do projeto no GitHub</a> (não publique dados de pagamento ali)`;
+const CONTACT = {
+  pt: {
+    email: (email) => `por e-mail em <a href="mailto:${email}">${email}</a>`,
+    issues: `pela <a href="${ISSUES_URL}">página de contato do projeto no GitHub</a> (não publique dados de pagamento ali)`
+  },
+  en: {
+    email: (email) => `by e-mail at <a href="mailto:${email}">${email}</a>`,
+    issues: `through the <a href="${ISSUES_URL}">project contact page on GitHub</a> (do not post payment details there)`
+  },
+  fr: {
+    email: (email) => `par e-mail à <a href="mailto:${email}">${email}</a>`,
+    issues: `via la <a href="${ISSUES_URL}">page de contact du projet sur GitHub</a> (n’y publiez pas de données de paiement)`
+  }
+};
+
+const contact = (locale) => (SUPPORT_EMAIL ? CONTACT[locale].email(SUPPORT_EMAIL) : CONTACT[locale].issues);
 
 // Cada página: título, resumo, e uma lista de seções [título, [parágrafos ou itens]]. Itens começando com "- " viram lista.
 const PAGES = {
@@ -156,12 +164,79 @@ const PAGES = {
         ['What happens to your access', ['After the refund, access to the report for that result stops working.']]
       ]
     })
+  },
+  fr: {
+    report: (c) => ({
+      title: 'Rapport complet',
+      lead: 'Une analyse approfondie de votre résultat politique, en achat unique, sans abonnement.',
+      sections: [
+        ['Ce qui est inclus', [
+          '- <strong>Analyse des 12 axes, un par un :</strong> ce que signifie votre position sur chaque axe et ce qui a le plus pesé dans vos réponses.',
+          '- <strong>Là où vous êtes le plus en désaccord :</strong> avec l’idéologie, la figure et le pays les plus proches, axe par axe.',
+          '- <strong>Votre gouvernement idéal :</strong> neuf postes occupés par les figures les plus compatibles avec vous.',
+          '- <strong>Votre frise idéologique :</strong> les profils les plus proches de chaque époque, de l’Antiquité au XXIe siècle.',
+          '- <strong>Dans quel pays déménager :</strong> les 10 pays actuels les plus proches de vos idéaux politiques.',
+          '- <strong>Figures par domaine :</strong> la plus compatible avec vous en politique, philosophie, économie et dans les autres domaines.',
+          '- <strong>Classement complet, tableur et PDF :</strong> votre compatibilité avec tout le catalogue, à exporter vers Excel, et le rapport en PDF.'
+        ]],
+        ['Prix', ['3,99 $ US, en paiement unique par résultat. Sans abonnement et sans renouvellement automatique. Les taxes locales, le cas échéant, sont calculées au moment du paiement.']],
+        ['Comment vous le recevez', ['L’accès est débloqué sur ce site dès que le paiement est confirmé, sans compte ni mot de passe. Il couvre le résultat acheté.']],
+        ['Paiement', ['Les commandes sont traitées par Paddle.com Market Limited (« Paddle »), notre Merchant of Record, qui accepte les cartes et d’autres moyens de paiement selon votre pays. 12 Axes ne reçoit ni ne conserve les données de carte.']],
+        ['Remboursement', ['Remboursement intégral sous 7 jours. Consultez la <a href="/fr/refund">politique de remboursement</a> et les <a href="/fr/terms">conditions d’utilisation</a>.']],
+        ['Questions', [`Contactez-nous ${c}.`]]
+      ]
+    }),
+    terms: (c) => ({
+      title: 'Conditions d’utilisation',
+      lead: 'Règles d’utilisation de 12 Axes et du Rapport complet.',
+      sections: [
+        ['Ce qu’est 12 Axes', ['Un quiz politique indépendant et gratuit qui vous situe sur 12 axes et vous compare à des idéologies, des figures, des pays et des partis. C’est un contenu informatif et éducatif : les résultats sont des approximations et ne représentent ni la position de l’auteur ni un conseil de quelque nature que ce soit.']],
+        ['Le Rapport complet', [
+          'Contenu numérique supplémentaire sur un résultat précis, vendu en achat unique par résultat : l’accès couvre le résultat acheté (ses 12 valeurs d’axes), et un autre résultat nécessite un autre achat.',
+          'Il comprend des analyses approfondies et des classements complets du résultat, ainsi qu’une exportation CSV et PDF. Ce qui est inclus est affiché avant le paiement.',
+          'L’accès est débloqué sur le site dès que le paiement est confirmé et ne dépend ni d’un compte ni d’un mot de passe.'
+        ]],
+        ['Prix et paiement', ['Le prix est affiché avant le paiement. Les commandes sont traitées par Paddle.com Market Limited (« Paddle »), notre Merchant of Record : Paddle vous vend le rapport, perçoit les taxes applicables et gère le paiement, les factures et les remboursements. 12 Axes ne reçoit ni ne conserve les données de carte.']],
+        ['Conserver votre accès', ['L’accès est enregistré dans le navigateur utilisé pour l’achat. Si vous changez d’appareil ou effacez les données de votre navigateur, demandez la récupération de votre accès par e-mail, en indiquant l’e-mail utilisé pour le paiement et le lien de votre résultat.']],
+        ['Remboursement', ['Vous pouvez demander un remboursement intégral dans les 7 jours suivant l’achat. Consultez la politique de remboursement.']],
+        ['Modifications', ['Ces conditions peuvent changer ; la version en vigueur est celle publiée sur cette page, avec sa date de mise à jour.']],
+        ['Qui vend', [`Le Rapport complet vous est vendu par Paddle, notre Merchant of Record, et fourni par ${SELLER}.`]],
+        ['Contact', [`Pour toute question, contactez-nous ${c}.`]]
+      ]
+    }),
+    privacy: (c) => ({
+      title: 'Politique de confidentialité',
+      lead: 'Quelles données 12 Axes traite et pourquoi.',
+      sections: [
+        ['Réponses au quiz', ['Les réponses servent uniquement à calculer votre résultat au moment où vous les envoyez. 12 Axes ne conserve pas les réponses dans une base de données et n’associe pas les résultats à des personnes : le résultat est encodé dans l’adresse (lien) de la page.']],
+        ['Paiements', [
+          'Le paiement s’effectue sur Paddle, notre Merchant of Record, qui traite les données de paiement (nom, e-mail, adresse, moyen de paiement) selon sa propre politique de confidentialité. 12 Axes ne reçoit ni ne conserve les données de carte.',
+          'Pour débloquer le rapport, le site interroge Paddle afin de confirmer le paiement et utilise une référence à celui-ci, sans conserver ces informations dans une base de données.'
+        ]],
+        ['Stockage dans votre navigateur', ['Le site conserve dans votre navigateur vos préférences (comme la langue et le thème), votre dernier résultat et, après un achat, le code d’accès au rapport. Vous pouvez les supprimer dans les paramètres de votre navigateur.']],
+        ['Analyse d’audience', ['Nous utilisons des outils d’analyse de trafic, comme Google Analytics, pour mesurer les visites et améliorer le site. Ils peuvent utiliser des cookies et des identifiants.']],
+        ['Hébergement', ['Le site et l’API utilisent des fournisseurs d’infrastructure (comme Vercel, Cloudflare et Render) qui traitent les requêtes pour diffuser le contenu.']],
+        ['Vos droits', [`Vous pouvez demander des informations sur les données personnelles traitées, leur rectification ou leur suppression, en vertu de la loi générale brésilienne sur la protection des données (LGPD) et de lois similaires là où vous vivez. Faites votre demande ${c}.`]]
+      ]
+    }),
+    refund: (c) => ({
+      title: 'Politique de remboursement',
+      lead: 'Remboursement intégral sous 7 jours, au Brésil comme à l’étranger.',
+      sections: [
+        ['Qui peut demander', ['Tout acheteur du Rapport complet, au Brésil ou dans un autre pays, quel que soit le moyen de paiement (Pix ou carte).']],
+        ['Délai', ['Dans les 7 jours calendaires suivant l’achat. Le remboursement est intégral, sans justification.']],
+        ['Comment demander', [`Faites votre demande ${c}, en indiquant l’e-mail utilisé pour le paiement et, si vous l’avez, la date d’achat. N’envoyez pas de numéro de carte.`]],
+        ['Comment c’est remboursé', ['Le montant est restitué par le même moyen de paiement, via Paddle, notre Merchant of Record. Le délai pour apparaître sur votre relevé ou votre banque dépend de l’émetteur de votre carte ou de votre banque.']],
+        ['Ce qu’il advient de votre accès', ['Après le remboursement, l’accès au rapport de ce résultat cesse de fonctionner.']]
+      ]
+    })
   }
 };
 
 const LABELS = {
   pt: { report: 'Relatório Completo', terms: 'Termos de uso', privacy: 'Privacidade', refund: 'Reembolso', updated: 'Atualizado em', skip: 'Pular para o conteúdo', footer: 'Quiz político independente · 12axes.vercel.app · © 2026. Todos os direitos reservados' },
-  en: { report: 'Full Report', terms: 'Terms of use', privacy: 'Privacy', refund: 'Refund', updated: 'Updated', skip: 'Skip to content', footer: 'Independent political quiz · 12axes.vercel.app · © 2026. All rights reserved' }
+  en: { report: 'Full Report', terms: 'Terms of use', privacy: 'Privacy', refund: 'Refund', updated: 'Updated', skip: 'Skip to content', footer: 'Independent political quiz · 12axes.vercel.app · © 2026. All rights reserved' },
+  fr: { report: 'Rapport complet', terms: 'Conditions d’utilisation', privacy: 'Confidentialité', refund: 'Remboursement', updated: 'Dernière mise à jour', skip: 'Aller au contenu', footer: 'Quiz politique indépendant · 12axes.vercel.app · © 2026. Tous droits réservés' }
 };
 
 function body(paragraphs, escapeHtml) {
@@ -188,13 +263,13 @@ function body(paragraphs, escapeHtml) {
 
 /** Três páginas de política do idioma de L: /terms, /privacy e /refund (com o prefixo do idioma). */
 export function policyPages(L, { site, gaSnippet, escapeHtml }) {
-  const isEn = L.locale === 'en';
-  const labels = LABELS[isEn ? 'en' : 'pt'];
+  const locale = L.locale;
+  const labels = LABELS[locale];
   const prefix = L.s.prefix;
 
   return POLICY_SLUGS.map((slug) => {
     const basePath = `/${slug}`;
-    const page = PAGES[isEn ? 'en' : 'pt'][slug](contact(isEn));
+    const page = PAGES[locale][slug](contact(locale));
     const title = `${page.title} | 12 Axes`;
     const sections = page.sections
       .map(([heading, paragraphs]) => `<section><h2>${escapeHtml(heading)}</h2>${body(paragraphs, escapeHtml)}</section>`)
@@ -221,7 +296,7 @@ ${siteHeader({ L, basePath })}
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(page.title)}</p>
   <h1>${escapeHtml(page.title)}</h1>
   <p class="lead">${escapeHtml(page.lead)}</p>
-  <p class="updated">${escapeHtml(labels.updated)}: ${isEn ? UPDATED.en : UPDATED.pt}</p>
+  <p class="updated">${escapeHtml(labels.updated)}: ${UPDATED[locale]}</p>
 </div>
 
 <main id="conteudo" class="wrap prose">

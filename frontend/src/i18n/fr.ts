@@ -2,6 +2,11 @@
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 import type { Strings } from './index';
 
+// "de" + nom propre, avec élision devant une voyelle : « de Paris », « d’Allemagne ».
+function de(name: string): string {
+  return /^[AEIOUYÀÂÄÉÈÊËÎÏÔÖÙÛÜŒ]/i.test(name.trim()) ? `d’${name}` : `de ${name}`;
+}
+
 export const fr: Strings = {
   htmlLang: 'fr',
   docTitle: '12 Axes — Test politique gratuit, quiz et boussole sur 12 axes',
@@ -12,10 +17,10 @@ export const fr: Strings = {
   crashTitle: "Une erreur s'est produite",
   crashBody: 'La page a rencontré une erreur inattendue. Rechargez pour réessayer.',
   crashBodyWithProgress:
-    'La page a rencontré une erreur inattendue, mais vos réponses sont enregistrées. Rechargez et choisissez de reprendre où vous vous êtes arrêté.',
+    'La page a rencontré une erreur inattendue, mais vos réponses sont enregistrées. Rechargez la page et choisissez de reprendre là où vous en étiez.',
   crashReload: 'Recharger la page',
   resumeEyebrow: 'Quiz en cours',
-  resumeTitle: 'Reprendre où vous vous êtes arrêté',
+  resumeTitle: 'Reprenez là où vous en étiez',
   resumeBody: (answered, total) =>
     `Vous avez répondu à ${answered} questions sur ${total}. Vos réponses sont enregistrées dans ce navigateur.`,
   resumeContinue: 'Continuer',
@@ -76,7 +81,7 @@ export const fr: Strings = {
   heroEyebrow: 'Découverte politique',
   h1Pre: 'Connaissez-vous vraiment votre ',
   h1Em: 'idéologie politique',
-  h1Post: ' ?',
+  h1Post: '\u00A0?',
   introLead:
     "Vous vous trompez peut-être d'étiquette. En quelques minutes, découvrez votre véritable idéologie, le pays qui pense le plus comme vous, et le dirigeant politique le plus proche de vos idées.",
   startQuiz: 'Découvrir mon profil',
@@ -104,7 +109,7 @@ export const fr: Strings = {
     extreme: {
       label: 'Extrême',
       questionCount: '240 questions',
-      description: 'Obtenez la synthèse exacte de votre pensée avec une précision maximale.',
+      description: 'Découvrez la synthèse exacte de votre pensée avec une précision de 100%.',
       duration: 'Environ 30 min',
       action: 'Commencer la version extrême'
     }
@@ -135,7 +140,7 @@ export const fr: Strings = {
   compareExamplePlaceholder: 'Ex. : Donald Trump',
   compareAxesTitle: 'Vos 12 axes',
   compareNoResults: 'Aucun profil trouvé.',
-  compareLoading: 'Comparaison…',
+  compareLoading: 'Comparaison en cours…',
   compareLoadError: 'Impossible de charger la comparaison. Réessayez.',
   compareTypeLabels: {
     personality: 'Personnalité',
@@ -151,13 +156,13 @@ export const fr: Strings = {
     diplomacia: 'diplomatiquement'
   },
   compareClosestLine: (adverb, name) => `Vous êtes ${adverb} compatible avec ${name}.`,
-  compareFarthestLine: (adverb, name) => `Vous êtes ${adverb} éloigné de ${name}.`,
+  compareFarthestLine: (adverb, name) => `Vous êtes ${adverb} éloigné ${de(name)}.`,
   compareClosestFallback: (axis, name) => `Sur ${axis}, vous êtes compatible avec ${name}.`,
-  compareFarthestFallback: (axis, name) => `Sur ${axis}, vous êtes éloigné de ${name}.`,
+  compareFarthestFallback: (axis, name) => `Sur ${axis}, vous êtes éloigné ${de(name)}.`,
   compareIdentical: (name) =>
     `Vous et ${name} avez des positions pratiquement identiques sur chaque axe.`,
-  compareNearestLine: (axis, name) => `Votre axe le plus proche de ${name} est ${axis}.`,
-  compareNoFarLine: (name) => `Aucun axe n'est loin de ${name}.`,
+  compareNearestLine: (axis, name) => `L’axe où vous êtes le plus proche ${de(name)} est ${axis}.`,
+  compareNoFarLine: (name) => `Aucun axe ne vous éloigne ${de(name)}.`,
   compareValues: (pole, you, them, name) => `${pole} : vous ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
   comparePageDocTitle: 'Comparer des profils — 12 Axes',
@@ -175,20 +180,20 @@ export const fr: Strings = {
   comparePageAxisAria: (axis, values) => `${axis} : ${values}`,
   comparePageCompassAria: (points) => `Boussole politique : ${points}`,
   comparePagePointAria: (name, right, authoritarian, traditional) =>
-    `${name}, ${right}% droite, ${authoritarian}% autoritaire, ${traditional}% traditionaliste`,
+    `${name}, ${right}% à droite, ${authoritarian}% autoritaire, ${traditional}% traditionaliste`,
   comparePageLegendAria: 'Légende de la boussole',
   comparePagePairsTitle: 'Compatibilité entre eux',
   comparePageSignatureTitle: 'Ce qui les distingue',
   comparePageIdeologyTitle: 'Idéologie la plus proche',
   comparePageNavIdeologies: 'Idéologies',
   comparePageNavAxes: '12 Axes',
-  comparePageNavSignature: 'Distinction',
+  comparePageNavSignature: 'Singularité',
   comparePageNavCountries: 'Pays',
   comparePageNavParties: 'Partis',
   comparePageNavCompass: 'Boussole',
   comparePageNavCompatibility: 'Compatibilité',
   comparePageCommonLabel: 'En commun',
-  comparePageNearestFor: (name) => `Le plus proche de ${name}`,
+  comparePageNearestFor: (name) => `Le plus proche ${de(name)}`,
   comparePageCountriesTitle: 'Pays les plus proches',
   comparePagePartiesTitle: 'Partis les plus proches',
   comparePageBalanced: 'Équilibré',
@@ -198,10 +203,10 @@ export const fr: Strings = {
     `${high} et ${low} sont à ${points} ${points === 1 ? 'point' : 'points'} d'écart sur cet axe.`,
   comparePageAgreeCap: (points) =>
     `C'est là qu'ils se rejoignent : seulement ${points} ${points === 1 ? 'point' : 'points'} d'écart.`,
-  comparePageOpposite: 'Côtés opposés',
+  comparePageOpposite: 'Camps opposés',
   comparePageOppositeCount: (count, total) =>
-    `Ils se trouvent de côtés opposés sur ${count} axes sur ${total}.`,
-  comparePageNoOpposite: 'Aucun axe ne place ces profils de côtés opposés.',
+    `Ils se trouvent dans des camps opposés sur ${count} des ${total} axes.`,
+  comparePageNoOpposite: 'Aucun axe ne place ces profils dans des camps opposés.',
   comparePageDiverge: 'Là où ils divergent le plus',
   comparePageAgree: "Là où ils s'accordent le plus",
   comparePagePairLabel: 'Compatibilité',
@@ -235,10 +240,10 @@ export const fr: Strings = {
   shareCompareFilePrefix: '12axes-comparaison',
   shareCompareTitle: (percent) => `Notre compatibilité politique : ${percent}% | 12axes.vercel.app`,
   shareCompareMessage: (other, percent, mine, theirs, url) =>
-    `J'ai comparé mon profil politique avec celui de ${other} sur le quiz politique 12 Axes !\n\n` +
+    `J'ai comparé mon profil politique avec celui ${de(other)} sur le quiz politique 12 Axes !\n\n` +
     `🤝 Compatibilité entre nous : ${percent}%\n\n` +
     `💡 Mon idéologie :\n${mine}\n\n` +
-    `💡 Idéologie de ${other} :\n${theirs}\n\n` +
+    `💡 Idéologie ${de(other)} :\n${theirs}\n\n` +
     `👉 Voir la comparaison et passer le quiz :\n${url}`,
   peopleSignatureTitle: 'Ce qui vous distingue',
   peopleDiverge: 'Là où vous divergez le plus',
@@ -246,10 +251,10 @@ export const fr: Strings = {
   peopleAgreeCap: (points) =>
     `C'est là que vous vous rejoignez : seulement ${points} ${points === 1 ? 'point' : 'points'} d'écart.`,
   peopleOppositeCount: (count, total) =>
-    `Vous êtes de côtés opposés sur ${count} axes sur ${total}.`,
-  peopleNoOpposite: 'Aucun axe ne vous place de côtés opposés.',
+    `Vous êtes dans des camps opposés sur ${count} des ${total} axes.`,
+  peopleNoOpposite: 'Aucun axe ne vous place dans des camps opposés.',
   peopleBlocked: 'Le navigateur a bloqué le nouvel onglet.',
-  peopleRename: (name) => `Modifier le nom de ${name}`,
+  peopleRename: (name) => `Modifier le nom ${de(name)}`,
   peopleNameInputLabel: 'Nom',
   peopleOpenLink: 'Ouvrir la comparaison',
   peoplePersonalitiesTitle: 'Personnalités les plus proches',
@@ -265,7 +270,7 @@ export const fr: Strings = {
   peoplePageBadLink:
     "Ce lien de comparaison est incomplet. Ouvrez votre résultat et utilisez « Comparer avec quelqu'un d'autre ».",
   peoplePageLoadError: 'Impossible de charger la comparaison. Réessayez.',
-  peoplePageLoading: 'Comparaison…',
+  peoplePageLoading: 'Comparaison en cours…',
   axisExplanations: {
     estrutura:
       'Mesure si vous préférez un pouvoir réparti entre États, villes et communautés locales ou un État national unitaire avec des lois et un commandement plus uniformes.',
@@ -278,11 +283,11 @@ export const fr: Strings = {
     diplomacia:
       'Analyse votre position sur les forces armées, les armes, la dissuasion et l’intervention militaire face à la négociation, au pacifisme et aux organisations internationales.',
     intervencao:
-      'Mesure le penchant entre non-interventionnisme extérieur et souveraineté nationale plus assertive, nationalisme géopolitique et défense active des intérêts nationaux.',
+      'Mesure l’inclination entre le non-interventionnisme extérieur et une souveraineté nationale plus affirmée, le nationalisme géopolitique et la défense active des intérêts nationaux.',
     economia:
-      'Compare une préférence pour la propriété publique, les entreprises d’État et les services collectifs avec la propriété privée, la privatisation et le leadership entrepreneurial.',
+      'Compare une préférence pour la propriété publique, les entreprises d’État et les services collectifs avec la propriété privée, la privatisation et le rôle moteur des entrepreneurs.',
     controle:
-      'Évalue la planification étatique, la régulation et une politique économique active face aux marchés libres, à une faible intervention, à l’autonomie monétaire et à la concurrence.',
+      'Évalue la planification étatique, la régulation et une politique économique active face aux marchés libres, à une faible ingérence de l’État, à l’autonomie monétaire et à la concurrence.',
     comercio:
       'Mesure le protectionnisme, la souveraineté productive et la défense de l’industrie nationale face au mondialisme, au libre-échange et à l’intégration économique internationale.',
     religiao:
@@ -290,7 +295,7 @@ export const fr: Strings = {
     moral:
       'Évalue le progressisme culturel, les droits civils et le changement social face à la tradition, à la famille, aux coutumes et au conservatisme moral.',
     tecnologia:
-      'Mesure l’enthousiasme pour la technologie, l’IA, l’ingénierie génétique et le développement technique face à une prudence biologique, environnementale et conservationniste.'
+      'Mesure l’enthousiasme pour la technologie, l’IA, l’ingénierie génétique et le développement technique face à une prudence biologique, environnementale et préservationniste.'
   },
   homeAxes: {
     estrutura: { label: 'Structure', leftPole: 'Fédéral', rightPole: 'Unitaire' },
@@ -344,7 +349,7 @@ export const fr: Strings = {
     },
     {
       id: 'third-position',
-      label: 'Troisième voie',
+      label: 'Troisième position',
       tone: 'purple',
       description:
         'Synthèse nationaliste et corporatiste qui rejette à la fois le capitalisme libéral et le marxisme, hors de l’axe gauche-droite traditionnel.'
@@ -482,7 +487,7 @@ export const fr: Strings = {
   spectrumEyebrow: 'Spectre politique',
   spectrumTitle: 'Découvrez votre spectre politique',
   spectrumLead:
-    'Le résultat vous aide à visualiser votre position politique entre gauche, droite et centre, et identifie aussi des formes plus radicales, autoritaires ou libertaires hors de cet axe, comme l’extrême droite, la gauche radicale, la troisième voie, le libertarianisme et l’anarchisme.',
+    'Le résultat vous aide à visualiser votre position politique entre gauche, droite et centre, et identifie aussi des formes plus radicales, autoritaires ou libertaires hors de cet axe, comme l’extrême droite, la gauche radicale, la troisième position, le libertarianisme et l’anarchisme.',
   faqTitle: 'Questions fréquentes',
   faqLead: 'Tout ce que les gens demandent d’habitude avant de passer le test.',
   navStart: 'Début',
@@ -495,8 +500,8 @@ export const fr: Strings = {
   versionsLead:
     'Commencez par le quiz rapide ou allez plus loin pour un portrait plus précis de votre profil idéologique. Toutes les versions utilisent les mêmes 12 axes et renvoient le résultat immédiatement.',
   variantEyebrow: 'Choisissez le format',
-  variantTitlePre: 'Vous voulez de la vitesse ou de la ',
-  variantTitleEm: 'précision ?',
+  variantTitlePre: 'Préférez-vous la rapidité ou la ',
+  variantTitleEm: 'précision\u00A0?',
   backToStart: 'Retour au début',
   depthLabel: 'Profondeur',
   depthAria: (level) => `Profondeur ${level} sur 3`,
@@ -505,9 +510,9 @@ export const fr: Strings = {
   variantLead:
     'La version courte révèle le résultat rapidement. La version complète augmente la précision pour rapprocher votre résultat des profils idéologiques.',
   quizNavAria: 'Navigation du quiz',
-  autoAdvance: 'Avancer à la réponse',
-  swapQuestion: 'Échanger',
-  swapQuestionAria: 'Échanger cette question contre une autre sur le même thème',
+  autoAdvance: 'Avancer après chaque réponse',
+  swapQuestion: 'Changer',
+  swapQuestionAria: 'Remplacer cette question par une autre sur le même thème',
   back: 'Retour',
   next: 'Suivant',
   calculating: 'Calcul…',
@@ -534,7 +539,7 @@ export const fr: Strings = {
   navOnThisPage: 'Sur cette page',
   resultsNavReport: 'Analyse complète',
   resultsNavAxes: '12 axes',
-  resultsNavSignature: 'Distinction',
+  resultsNavSignature: 'Singularité',
   resultsNavCountries: 'Pays',
   resultsNavPersonalities: 'Personnalités',
   resultsNavAreas: 'Domaines',
@@ -558,13 +563,13 @@ export const fr: Strings = {
     title: 'Comment la boussole est construite',
     authLead: "L'axe autoritaire × libertaire",
     authText:
-      'mesure le degré de concentration du pouvoir politique et d’intervention de l’État dans la vie des individus. Il considère trois dimensions principales : libertés individuelles, représentation politique et structure de l’État.',
+      'mesure le degré de concentration du pouvoir politique et d’intervention de l’État dans la vie des individus. Il prend en compte trois dimensions principales : libertés individuelles, représentation politique et structure de l’État.',
     econLead: "L'axe gauche × droite",
     econText:
-      'mesure à quel point vous êtes à gauche ou à droite selon l’organisation économique : de la propriété collective et de la planification étatique d’un côté à la propriété privée et aux marchés libres de l’autre. Il considère les dimensions fondamentales de l’économie (propriété des moyens de production) et du contrôle (marché versus planification et régulation).',
+      'mesure à quel point vous êtes à gauche ou à droite selon l’organisation économique : de la propriété collective et de la planification étatique d’un côté à la propriété privée et aux marchés libres de l’autre. Il prend en compte les dimensions fondamentales de l’économie (propriété des moyens de production) et du contrôle (marché contre planification et régulation).',
     socialLead: "L'axe social",
     socialText:
-      'mesure l’orientation de vos valeurs entre progressisme et traditionalisme, en reflétant votre position sur les coutumes, la culture et les valeurs sociales.'
+      'mesure l’orientation de vos valeurs entre progressisme et traditionalisme, et reflète votre position sur les coutumes, la culture et les valeurs sociales.'
   },
   compassWith: 'avec',
   compassSocialValues: 'valeurs sociales',
@@ -576,7 +581,7 @@ export const fr: Strings = {
     centro: 'Centriste',
     direita: 'Droite',
     'ext-direita': 'Extrême droite',
-    terceira: 'Troisième voie',
+    terceira: 'Troisième position',
     libertario: 'Libertarien',
     anarquismo: 'Anarchiste'
   },
@@ -591,11 +596,11 @@ export const fr: Strings = {
     label: 'Sur la boussole :',
     hints: {
       terceira:
-        'La troisième voie unit un État fort à la nation et à la tradition. La boussole mesure l’économie et le pouvoir ; la nation, la morale et la religion restent hors champ.',
+        'La troisième position unit un État fort à la nation et à la tradition. La boussole mesure l’économie et le pouvoir ; la nation, la morale et la religion n’y figurent pas.',
       'ext-direita':
-        'L’extrême droite se définit par la hiérarchie et l’identité. La boussole mesure l’économie et le pouvoir ; la morale, la religion et la nation restent hors champ.',
+        'L’extrême droite se définit par la hiérarchie et l’identité. La boussole mesure l’économie et le pouvoir ; la morale, la religion et la nation n’y figurent pas.',
       'esq-radical':
-        'La gauche radicale se définit par la révolution et la collectivisation. La boussole mesure l’économie et le pouvoir ; le projet révolutionnaire reste hors champ.',
+        'La gauche radicale se définit par la révolution et la collectivisation. La boussole mesure l’économie et le pouvoir ; le projet révolutionnaire n’y figure pas.',
       libertarian:
         'Votre idéologie se situe à la frontière de deux régions. La boussole mesure l’économie et le pouvoir, et une petite différence de part et d’autre décide du côté.',
       generic: 'La boussole mesure 5 des 12 axes ; les 7 autres restent hors champ.'
@@ -611,7 +616,7 @@ export const fr: Strings = {
   partyCurrentTab: 'Parti actif',
   partyHistoricalTab: 'Parti historique',
   partiesDistantTitle: 'Les plus éloignés de vous',
-  partyLogoAlt: (name) => `Symbole de ${name}`,
+  partyLogoAlt: (name) => `Symbole ${de(name)}`,
   partyLogoUnavailable: 'Symbole indisponible',
   personalitiesSectionTitle: 'Figures les plus proches de vous',
   personalitiesByAreaTitle: 'Aussi proches de vous, par domaine',
@@ -657,7 +662,7 @@ export const fr: Strings = {
     },
     {
       lead: 'Là où vous êtes le plus en désaccord :',
-      text: 'avec votre idéologie, figure et pays les plus proches, axe par axe.'
+      text: 'avec l’idéologie, la figure et le pays les plus proches de vous, axe par axe.'
     },
     {
       lead: 'Votre gouvernement idéal :',
@@ -673,17 +678,17 @@ export const fr: Strings = {
     },
     {
       lead: 'Figures par domaine :',
-      text: 'celle la plus compatible avec vous en politique, philosophie, économie et les autres domaines.'
+      text: 'la figure la plus compatible avec vous en politique, en philosophie, en économie et dans les autres domaines.'
     },
     {
       lead: 'Classement complet et tableur :',
-      text: 'votre compatibilité avec tout le catalogue, à exporter vers Excel.'
+      text: 'votre compatibilité avec tout le catalogue, à exporter dans Excel.'
     }
   ],
-  paywallGuarantee: 'Garantie de remboursement de 7 jours',
+  paywallGuarantee: 'Remboursement garanti pendant 7 jours',
   paywallPayWith:
     'Moyens de paiement : cartes, PayPal, Apple Pay, Google Pay et plus, selon votre pays',
-  paywallPrice: 'US$ 3.99',
+  paywallPrice: '3,99 US$',
   paywallCta: 'Débloquer le rapport complet',
   paywallChecking: 'Confirmation de votre paiement...',
   paywallProblems: {
@@ -710,7 +715,7 @@ export const fr: Strings = {
   personalitiesDistantTitle: 'Les plus éloignées de vous',
   ideologyDistantTitle: 'L’idéologie la plus éloignée de vous',
   phraseTitle: 'Une phrase qui vous décrit',
-  aboutIdeology: (ideology) => `À propos de ${ideology}`,
+  aboutIdeology: (ideology) => `À propos ${de(ideology)}`,
   knowMoreAbout: (name) => `En savoir plus sur ${name}`,
   showLess: 'Afficher moins',
   matchTopKicker: 'La plus compatible',
@@ -725,9 +730,9 @@ export const fr: Strings = {
   signatureUnusualLeadMax: (pole) =>
     `Aucune idéologie du catalogue ne penche autant vers ${pole.toLowerCase()} que vous.`,
   signatureUnusualLeadBalanced: (axis, pole, percent) =>
-    `Votre position sur ${axis} est au milieu du chemin. Même ainsi, cela vous place davantage vers ${pole.toLowerCase()} que ${Math.round(percent)}% des idéologies du catalogue.`,
+    `Votre position sur ${axis} est plutôt centrale. Elle vous place malgré tout davantage vers ${pole.toLowerCase()} que ${Math.round(percent)}% des idéologies du catalogue.`,
   signatureUnusualNote: (axis) =>
-    `Sur les 12 axes, ${axis} est celui où vous vous éloignez le plus du champ. C’est le trait qui vous distingue.`,
+    `Sur les 12 axes, ${axis} est celui où vous vous écartez le plus des autres idéologies du catalogue. C’est ce qui vous distingue.`,
   signatureCommonLead: (axis) =>
     `Votre position sur ${axis} se situe presque exactement à la médiane du catalogue.`,
   signatureCommonNote: (pole) =>
@@ -737,8 +742,8 @@ export const fr: Strings = {
   tensionLabel: 'Votre tension interne',
   tensionCombo: (firstPole, secondPole) => `${firstPole} et ${secondPole} en même temps`,
   tensionRare: (count, total) =>
-    `Seules ${count} des ${total} idéologies du catalogue tiennent ces deux positions.`,
-  tensionUnique: 'Aucune idéologie du catalogue ne tient ces deux positions.',
+    `Seules ${count} des ${total} idéologies du catalogue combinent ces deux positions.`,
+  tensionUnique: 'Aucune idéologie du catalogue ne combine ces deux positions.',
   tensionExamples: (names) => `Correspondances les plus proches : ${names}.`,
   tensionNote: (firstAxis, secondAxis) =>
     `Dans le catalogue, ${firstAxis} et ${secondAxis} évoluent en général ensemble. Vous inversez ce schéma.`,
@@ -749,7 +754,7 @@ export const fr: Strings = {
   signatureAtMedian: 'À la médiane',
   signatureAtCentre: 'Au centre',
   tensionRareShort: (count, total) =>
-    `Seules ${count} idéologies sur ${total} tiennent ces deux positions.`,
+    `Seules ${count} idéologies sur ${total} combinent ces deux positions.`,
   personalityCategories: {
     politico: 'Politique',
     religioso: 'Religion',
@@ -782,7 +787,7 @@ export const fr: Strings = {
     tocTitle: 'Dans ce rapport',
     generatedOn: (date) => `Généré le ${date}`,
     axesIntro:
-      'Votre position sur chacun des 12 axes. La barre part du centre (50%) et s’étend vers le pôle vers lequel vous penchez ; le badge montre l’intensité.',
+      'Votre position sur chacun des 12 axes. La barre part du centre (50%) et s’étend du côté où vous penchez ; le badge indique l’intensité.',
     intensityLegend: 'Intensité',
     intensityLevels: [
       'Équilibré · jusqu’à 57%',
@@ -818,11 +823,11 @@ export const fr: Strings = {
   countryKicker: 'Pays le plus compatible',
   flagLabel: 'Drapeau',
   flagHistoricLabel: 'Drapeau / symbole historique',
-  flagAlt: (label, name) => `${label} de ${name}`,
+  flagAlt: (label, name) => `${label} ${de(name)}`,
   flagUnavailable: 'Drapeau indisponible',
   flagUnavailableAria: (name) => `Drapeau indisponible pour ${name}`,
   personalityKicker: 'Personnalité la plus compatible',
-  portraitAlt: (name) => `Portrait de ${name}`,
+  portraitAlt: (name) => `Portrait ${de(name)}`,
   portraitUnavailableAria: (name) => `Portrait indisponible pour ${name}`,
   compatibilityAria: (pct) => `Compatibilité : ${pct} pour cent`,
   matchWord: 'affinité',
@@ -880,7 +885,7 @@ export const fr: Strings = {
   footerTerms: "Conditions d'utilisation",
   footerPrivacy: 'Confidentialité',
   footerRefund: 'Remboursement',
-  footerReport: 'Signaler',
+  footerReport: 'Signaler un problème',
   supportTitleEm: 'Soutenir',
   supportLead:
     '12 Axes est indépendant et gratuit. Si le quiz vous a aidé à mieux comprendre votre idéologie politique, envisagez un don via Pix ou crypto pour aider à faire vivre le projet.',

@@ -2,7 +2,7 @@ import type { Lang } from '../i18n';
 import type { PremiumRanking, RankingRow } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
 
-type SheetLang = 'pt' | 'en';
+type SheetLang = 'pt' | 'en' | 'fr';
 type Kind = keyof PremiumRanking;
 
 interface SheetText {
@@ -16,7 +16,8 @@ interface SheetText {
 const KINDS: Kind[] = ['ideologies', 'personalities', 'countries', 'parties'];
 
 function sheetLang(lang: Lang): SheetLang {
-  return lang === 'pt' ? 'pt' : 'en';
+  if (lang === 'pt' || lang === 'fr') return lang;
+  return 'en';
 }
 
 const TEXT: Record<SheetLang, Record<Kind, SheetText>> = {
@@ -31,12 +32,19 @@ const TEXT: Record<SheetLang, Record<Kind, SheetText>> = {
     personalities: { name: 'Figures', subject: 'Figure', hasHistorical: false },
     countries: { name: 'Countries', subject: 'Country', hasHistorical: true },
     parties: { name: 'Parties', subject: 'Party', hasHistorical: true }
+  },
+  fr: {
+    ideologies: { name: 'Idéologies', subject: 'Idéologie', hasHistorical: false },
+    personalities: { name: 'Personnalités', subject: 'Personnalité', hasHistorical: false },
+    countries: { name: 'Pays', subject: 'Pays', hasHistorical: true },
+    parties: { name: 'Partis', subject: 'Parti', hasHistorical: true }
   }
 };
 
 const COLUMNS: Record<SheetLang, { position: string; category: string; historical: string; compatibility: string; yes: string; no: string }> = {
   pt: { position: 'Posição', category: 'Categoria', historical: 'Histórico', compatibility: 'Compatibilidade', yes: 'Sim', no: 'Não' },
-  en: { position: 'Position', category: 'Category', historical: 'Historical', compatibility: 'Compatibility', yes: 'Yes', no: 'No' }
+  en: { position: 'Position', category: 'Category', historical: 'Historical', compatibility: 'Compatibility', yes: 'Yes', no: 'No' },
+  fr: { position: 'Position', category: 'Catégorie', historical: 'Historique', compatibility: 'Compatibilité', yes: 'Oui', no: 'Non' }
 };
 
 export interface RankingSheet {
