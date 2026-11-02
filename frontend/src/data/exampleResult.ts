@@ -1102,4 +1102,5 @@ const en: ExampleResult[] = [
   }
 ];
 
-export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'en' ? en : pt;
+// French UI still uses English example payloads until FR catalog overlays exist.
+export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'pt' ? pt : en;

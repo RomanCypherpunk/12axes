@@ -162,7 +162,7 @@ export function ComparePage() {
     setRefs((current) => current.filter((other) => refKey(other) !== refKey(ref)));
   };
 
-  const home = LANG === 'en' ? '/en' : '/';
+  const home = LANG === 'en' ? '/en' : LANG === 'fr' ? '/fr' : '/';
 
   return (
     <div className="app-shell" data-screen="compare">

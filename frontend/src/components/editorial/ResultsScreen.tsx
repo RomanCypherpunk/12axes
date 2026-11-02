@@ -42,7 +42,7 @@ const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
 // paused (vendas pausadas: só quem já pagou vê o relatório) ou
 // desligada (padrão). Ver utils/paywallFlag.
 // Cada idioma tem o seu interruptor: VITE_PAYWALL_ENABLED (português, reais) e VITE_PAYWALL_EN_ENABLED (inglês, dólar, pela Paddle).
-const PAYWALL_MODE = paywallMode(LANG === 'en' ? import.meta.env.VITE_PAYWALL_EN_ENABLED : import.meta.env.VITE_PAYWALL_ENABLED);
+const PAYWALL_MODE = paywallMode(LANG === 'pt' ? import.meta.env.VITE_PAYWALL_ENABLED : import.meta.env.VITE_PAYWALL_EN_ENABLED);
 const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
 
 interface ResultsScreenProps {

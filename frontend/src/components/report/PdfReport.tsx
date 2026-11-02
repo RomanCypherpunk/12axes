@@ -66,7 +66,8 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
     ...(compass ? [t.compassTitle] : []),
     ...(premium ? [P.axisTitle, P.disagreeTitle, P.governmentTitle, P.timelineTitle, P.countriesTitle] : [])
   ];
-  const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  const dateLocale = LANG === 'pt' ? 'pt-BR' : LANG === 'fr' ? 'fr-FR' : 'en-US';
+  const today = new Date().toLocaleDateString(dateLocale, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
@@ -457,7 +458,7 @@ function CompassX({ left, top, color }: { left: number; top?: number; color: str
 }
 
 function formatPct(value: number, decimals: number): string {
-  return `${value.toLocaleString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  return `${value.toLocaleString(LANG === 'pt' ? 'pt-BR' : LANG === 'fr' ? 'fr-FR' : 'en-US', {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals
   })}%`;

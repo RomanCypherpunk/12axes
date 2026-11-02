@@ -29,7 +29,7 @@ export function Logo({ onClick, href }: { onClick?: () => void; href?: string })
 }
 
 export function SiteFooter() {
-  const base = LANG === 'en' ? '/en' : '';
+  const base = LANG === 'pt' ? '' : '/en';
   // Os quatro primeiros abrem o GitHub em outra aba; as políticas são páginas do próprio site.
   const project = [
     { label: t.footerAbout, href: `${REPO_URL}#readme`, external: true },

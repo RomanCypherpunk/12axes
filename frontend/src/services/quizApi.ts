@@ -1,4 +1,4 @@
-import { LANG, t } from '../i18n';
+import { apiLang, t } from '../i18n';
 import type {
   CompareDetail,
   CompareItem,
@@ -67,7 +67,7 @@ function formatApiError(message: string, status: number): string {
 }
 
 export function fetchQuiz(variant: QuizVariant = 'short'): Promise<QuizPayload> {
-  return request<QuizPayload>(`/api/quiz?variant=${variant}&lang=${LANG}`);
+  return request<QuizPayload>(`/api/quiz?variant=${variant}&lang=${apiLang()}`);
 }
 
 export function submitResults(
@@ -77,7 +77,7 @@ export function submitResults(
   religion: string | null = null
 ): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results?lang=${LANG}${religionParam}`, {
+  return request<QuizResult>(`/api/results?lang=${apiLang()}${religionParam}`, {
     method: 'POST',
     body: JSON.stringify({ variant, answers, archetype })
   });
@@ -90,7 +90,7 @@ const SHARED_RESULT_VERSION = 3;
 
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}&rv=${SHARED_RESULT_VERSION}`);
+  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${apiLang()}${religionParam}&rv=${SHARED_RESULT_VERSION}`);
 }
 
 
@@ -99,7 +99,7 @@ export function fetchSharedResult(leftPercents: number[], religion: string | nul
 const COMPARE_CATALOG_VERSION = 2;
 
 export function fetchCompareCatalog(_religion: string | null = null): Promise<CompareItem[]> {
-  return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}&rv=${COMPARE_CATALOG_VERSION}`);
+  return request<CompareItem[]>(`/api/compare/catalog?lang=${apiLang()}&rv=${COMPARE_CATALOG_VERSION}`);
 }
 
 // `rv` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
@@ -109,7 +109,7 @@ const COMPARE_DETAIL_VERSION = 2;
 export function fetchCompare(type: CompareType, id: string, leftPercents: number[]): Promise<CompareDetail> {
   const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
   return request<CompareDetail>(
-    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${LANG}&rv=${COMPARE_DETAIL_VERSION}`
+    `/api/compare?type=${type}&id=${encodeURIComponent(id)}&v=${values}&lang=${apiLang()}&rv=${COMPARE_DETAIL_VERSION}`
   );
 }
 
@@ -119,6 +119,6 @@ const COMPARE_PROFILES_VERSION = 2;
 
 export function fetchCompareProfiles(refs: CompareRef[]): Promise<CompareProfiles> {
   return request<CompareProfiles>(
-    `/api/compare/profiles?items=${serializeCompareItems(refs)}&lang=${LANG}&v=${COMPARE_PROFILES_VERSION}`
+    `/api/compare/profiles?items=${serializeCompareItems(refs)}&lang=${apiLang()}&v=${COMPARE_PROFILES_VERSION}`
   );
 }

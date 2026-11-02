@@ -1,4 +1,4 @@
-import { LANG } from '../i18n';
+import { apiLang } from '../i18n';
 import type { PremiumReport } from '../types/quiz';
 import type { SavedAnswers } from '../utils/quizProgress';
 import { request } from './quizApi';
@@ -23,7 +23,7 @@ export function fetchPremiumReport(
   religion: string | null
 ): Promise<PremiumReport> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<PremiumReport>(`/api/premium/report?lang=${LANG}${religionParam}`, {
+  return request<PremiumReport>(`/api/premium/report?lang=${apiLang()}${religionParam}`, {
     method: 'POST',
     headers: token ? { 'X-Entitlement': token } : undefined,
     body: JSON.stringify({
@@ -38,7 +38,7 @@ export function fetchPremiumReport(
 export async function startCheckout(vector: number[], returnUrl: string, email?: string): Promise<string> {
   const { url } = await request<{ url: string }>('/api/checkout', {
     method: 'POST',
-    body: JSON.stringify({ v: vector.join(','), lang: LANG, returnUrl, email: email || undefined })
+    body: JSON.stringify({ v: vector.join(','), lang: apiLang(), returnUrl, email: email || undefined })
   });
   return url;
 }

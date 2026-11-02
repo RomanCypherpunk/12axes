@@ -47,7 +47,9 @@ export function serializeCompareItems(refs: CompareRef[]): string {
 }
 
 export function comparePath(lang: Lang): string {
-  return lang === 'en' ? '/en/compare' : '/compare';
+  if (lang === 'en') return '/en/compare';
+  if (lang === 'fr') return '/fr/compare';
+  return '/compare';
 }
 
 /** Link da comparação; a religião só entra quando há uma (ela filtra o seletor, não os perfis do link). */

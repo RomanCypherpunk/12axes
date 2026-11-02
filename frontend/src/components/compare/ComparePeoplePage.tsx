@@ -110,7 +110,7 @@ export function ComparePeoplePage() {
     window.history.replaceState(null, '', peopleCompareUrl({ names: next, people: LINK.people }));
   };
 
-  const home = LANG === 'en' ? '/en' : '/';
+  const home = LANG === 'en' ? '/en' : LANG === 'fr' ? '/fr' : '/';
   const detail = loaded && profiles && LINK ? buildDetail(loaded, profiles, names, LINK.people) : null;
 
   return (

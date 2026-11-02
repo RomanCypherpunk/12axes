@@ -16,7 +16,7 @@ export function PaymentIcons({ label }: { label: string }) {
           </svg>
         </li>
       )}
-      {LANG === 'en' && (
+      {LANG !== 'pt' && (
         <>
           <li title="Apple Pay" className="e-pay-wide">
             <svg viewBox="0 0 512 211" role="img" aria-label="Apple Pay">
@@ -38,7 +38,7 @@ export function PaymentIcons({ label }: { label: string }) {
           </li>
         </>
       )}
-      {LANG === 'en' && (
+      {LANG !== 'pt' && (
         <li title={card}>
           <svg viewBox="0 0 432 384" role="img" aria-label={card}>
             <path

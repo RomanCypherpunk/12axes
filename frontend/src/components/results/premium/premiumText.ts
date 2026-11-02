@@ -159,4 +159,72 @@ const en: PremiumText = {
   saveCopied: 'Link copied',
 };
 
-export const P: PremiumText = LANG === 'en' ? en : pt;
+const fr: PremiumText = {
+  title: 'Rapport complet',
+  devBadge: 'Mode développement : ouvert sans paiement, uniquement sur cette machine.',
+  loading: 'Préparation de votre rapport complet...',
+  error: 'Impossible de charger le rapport. Réessayez dans un instant.',
+  retry: 'Réessayer',
+  historical: 'historique',
+  axisTitle: 'Analyse complète, axe par axe',
+  impactsTitle: 'Ce qui a le plus pesé dans vos réponses',
+  positions: { you: 'Vous', ideology: 'Idéologie', personality: 'Figure', country: 'Pays' },
+  answerLabels: {
+    STRONGLY_AGREE: "Tout à fait d'accord",
+    AGREE: "D'accord",
+    NEUTRAL: 'Neutre',
+    DISAGREE: 'Pas d’accord',
+    STRONGLY_DISAGREE: 'Pas du tout d’accord'
+  },
+  levelLabels: { equilibrado: 'Équilibré', inclinado: 'Incliné', forte: 'Fort', muito_forte: 'Très fort' },
+  points: (value) => `${value > 0 ? '+' : ''}${value.toFixed(1).replace('.', ',')} pts`,
+  disagreeTitle: 'Là où vous êtes le plus en désaccord',
+  disagreeKinds: {
+    ideology: 'avec votre idéologie',
+    personality: 'avec votre figure',
+    country: 'avec votre pays'
+  },
+  disagreeLegendProfile: 'Profil',
+  gapRank: (position) =>
+    position === 1 ? 'Plus grand écart' : position === 2 ? '2e plus grand écart' : '3e plus grand écart',
+  disagreeCaption: (userPct, userPole, profileName, profilePct, profilePole) =>
+    `Vous êtes à ${Math.round(userPct)}% ${userPole} ; ${profileName}, à ${Math.round(profilePct)}% ${profilePole}.`,
+  governmentTitle: 'Votre gouvernement idéal',
+  timelineTitle: 'Votre frise idéologique',
+  timelineEraNames: {
+    antiguidade: 'Antiquité',
+    medieval: 'Moyen Âge',
+    moderna: 'Époque moderne',
+    xix: 'XIXe siècle',
+    xx: 'XXe siècle',
+    xxi: 'XXIe siècle'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} av. J.-C.` : String(value));
+    if (from === null && to !== null) return `Jusqu’à ${year(to)}`;
+    if (to === null && from !== null) return `Depuis ${year(from)}`;
+    return `${year(from ?? 0)} à ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Actuel',
+  timelineBestEra: 'Époque la plus compatible :',
+  seats: {
+    lider: 'Dirigeant politique',
+    vice: 'Vice-dirigeant politique',
+    economia: 'Responsable de l’Économie',
+    educacao: 'Responsable de l’Éducation',
+    estrategia: 'Chef de la stratégie politique',
+    filosofia: 'Conseiller philosophique',
+    social: 'Coordinateur des affaires sociales',
+    industria: 'Coordinateur de l’industrie et de l’innovation',
+    cultura: 'Conseiller culturel'
+  },
+  countriesTitle: '10 pays ou régions où vivre',
+  saveTitle: 'Conservez votre accès',
+  saveIntro:
+    'Pour ouvrir ce rapport sur un autre appareil, ou après avoir effacé le navigateur, enregistrez le lien ci-dessous. Quiconque dispose du lien ouvre le rapport de ce résultat, alors gardez-le en sécurité.',
+  saveField: 'Lien d’accès au rapport',
+  saveCopy: 'Copier le lien',
+  saveCopied: 'Lien copié'
+};
+
+export const P: PremiumText = LANG === 'en' ? en : LANG === 'fr' ? fr : pt;

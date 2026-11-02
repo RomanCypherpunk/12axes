@@ -1,29 +1,59 @@
-// Dicionário de UI PT/EN. O idioma é resolvido uma vez por carga de página
+// Dicionário de UI PT/EN/FR. O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en';
+export type Lang = 'pt' | 'en' | 'fr';
+
+/** Idioma enviado à API de catálogos: o francês ainda não tem overlays, então cai no inglês. */
+export type ApiLang = 'pt' | 'en';
 
 const STORAGE_KEY = '12axes-lang';
 
-// Idioma forçado pelo caminho: /en sempre inglês, /br sempre português,
-// independente do aparelho ou da preferência salva. A comparação segue o catálogo:
-// /compare em português e /en/compare em inglês.
+const isLang = (value: string | null): value is Lang => value === 'pt' || value === 'en' || value === 'fr';
+
+// Idioma forçado pelo caminho: /en inglês, /fr francês, /br português,
+// independente do aparelho ou da preferência salva. A comparação segue o mesmo padrão.
 const normalizePath = (pathname: string): string => pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
 
 export function langForcedByPath(pathname: string): Lang | null {
   const path = normalizePath(pathname);
   if (path === '/en' || path === '/en/compare') return 'en';
+  if (path === '/fr' || path === '/fr/compare') return 'fr';
   if (path === '/br' || path === '/compare') return 'pt';
   return null;
 }
 
-/** Caminho equivalente no outro idioma, para o toggle; null quando o idioma não vem do caminho. */
+/** Home path for the given UI language. */
+export function homePath(lang: Lang): string {
+  if (lang === 'en') return '/en';
+  if (lang === 'fr') return '/fr';
+  return '/';
+}
+
+/**
+ * Prefixo dos catálogos estáticos. Só existem páginas PT e EN; a UI francesa usa o catálogo EN.
+ */
+export function catalogPathPrefix(lang: Lang): string {
+  return lang === 'pt' ? '' : '/en';
+}
+
+/** Próximo idioma no ciclo do toggle: pt → en → fr → pt. */
+export function nextLang(lang: Lang): Lang {
+  if (lang === 'pt') return 'en';
+  if (lang === 'en') return 'fr';
+  return 'pt';
+}
+
+/** Caminho equivalente noutro idioma, para o toggle; null quando o idioma não vem do caminho. */
 export function langSwitchPath(pathname: string, lang: Lang): string | null {
   const path = normalizePath(pathname);
-  if (path === '/compare' || path === '/en/compare') return lang === 'en' ? '/en/compare' : '/compare';
-  if (path === '/en' || path === '/br') return lang === 'en' ? '/en' : '/br';
+  if (path === '/compare' || path === '/en/compare' || path === '/fr/compare') {
+    if (lang === 'en') return '/en/compare';
+    if (lang === 'fr') return '/fr/compare';
+    return '/compare';
+  }
+  if (path === '/en' || path === '/br' || path === '/fr') return homePath(lang) === '/' ? '/br' : homePath(lang);
   return null;
 }
 
@@ -38,24 +68,32 @@ export function resolveLang(): Lang {
   // No link curto de resultado (/r, do QR code) o idioma vai como "l" para o link ficar menor.
   const query = new URLSearchParams(window.location.search);
   const fromUrl = query.get('lang') ?? (normalizePath(window.location.pathname) === '/r' ? query.get('l') : null);
-  if (fromUrl === 'pt' || fromUrl === 'en') {
+  if (isLang(fromUrl)) {
     window.localStorage.setItem(STORAGE_KEY, fromUrl);
     return fromUrl;
   }
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'pt' || stored === 'en') {
+  if (isLang(stored)) {
     return stored;
   }
-  return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en';
+  const browser = navigator.language?.toLowerCase() ?? '';
+  if (browser.startsWith('pt')) return 'pt';
+  if (browser.startsWith('fr')) return 'fr';
+  return 'en';
 }
 
 export const LANG: Lang = resolveLang();
+
+/** Idioma dos catálogos/quiz na API (FR → EN até haver overlays franceses). */
+export function apiLang(lang: Lang = LANG): ApiLang {
+  return lang === 'pt' ? 'pt' : 'en';
+}
 
 export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
   url.searchParams.delete('lang');
-  // Em /en, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
+  // Em /en, /br, /fr e na comparação a URL é o que define o idioma, então o toggle troca de rota
   // (na comparação, mantendo os perfis escolhidos na query).
   const switched = langSwitchPath(url.pathname, lang);
   if (switched) url.pathname = switched;
@@ -571,4 +609,9 @@ export interface Strings {
 
 // Só o dicionário do idioma da página é baixado (trocar de idioma recarrega a página, então o outro vem nessa hora).
 // O await no topo do módulo garante que `t` já exista para quem o importa, inclusive no escopo de módulo.
-export const t: Strings = LANG === 'en' ? (await import('./en')).en : (await import('./pt')).pt;
+export const t: Strings =
+  LANG === 'en'
+    ? (await import('./en')).en
+    : LANG === 'fr'
+      ? (await import('./fr')).fr
+      : (await import('./pt')).pt;

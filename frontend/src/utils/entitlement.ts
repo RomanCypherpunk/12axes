@@ -151,6 +151,6 @@ export function canonicalResultLink(resultUrl: string, lang: string): string {
   }
   const religion = source.searchParams.get('religion');
   if (religion) query.set('religion', religion);
-  if (lang === 'en') query.set('lang', 'en');
+  if (lang === 'en' || lang === 'fr') query.set('lang', lang);
   return `${source.origin}${source.pathname}?${query.toString()}`;
 }

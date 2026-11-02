@@ -1,7 +1,8 @@
+import type { Lang } from '../i18n';
 import type { PremiumRanking, RankingRow } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
 
-type Lang = 'pt' | 'en';
+type SheetLang = 'pt' | 'en';
 type Kind = keyof PremiumRanking;
 
 interface SheetText {
@@ -14,7 +15,11 @@ interface SheetText {
 
 const KINDS: Kind[] = ['ideologies', 'personalities', 'countries', 'parties'];
 
-const TEXT: Record<Lang, Record<Kind, SheetText>> = {
+function sheetLang(lang: Lang): SheetLang {
+  return lang === 'pt' ? 'pt' : 'en';
+}
+
+const TEXT: Record<SheetLang, Record<Kind, SheetText>> = {
   pt: {
     ideologies: { name: 'Ideologias', subject: 'Ideologia', hasHistorical: false },
     personalities: { name: 'Personalidades', subject: 'Personalidade', hasHistorical: false },
@@ -29,7 +34,7 @@ const TEXT: Record<Lang, Record<Kind, SheetText>> = {
   }
 };
 
-const COLUMNS: Record<Lang, { position: string; category: string; historical: string; compatibility: string; yes: string; no: string }> = {
+const COLUMNS: Record<SheetLang, { position: string; category: string; historical: string; compatibility: string; yes: string; no: string }> = {
   pt: { position: 'Posição', category: 'Categoria', historical: 'Histórico', compatibility: 'Compatibilidade', yes: 'Sim', no: 'Não' },
   en: { position: 'Position', category: 'Category', historical: 'Historical', compatibility: 'Compatibility', yes: 'Yes', no: 'No' }
 };
@@ -48,9 +53,10 @@ export interface RankingSheet {
 
 /** Uma planilha por tipo de perfil: posição, nome, categoria, histórico (só países e partidos) e compatibilidade. */
 export function rankingSheets(ranking: PremiumRanking, lang: Lang): RankingSheet[] {
-  const columns = COLUMNS[lang];
+  const locale = sheetLang(lang);
+  const columns = COLUMNS[locale];
   return KINDS.map((kind) => {
-    const text = TEXT[lang][kind];
+    const text = TEXT[locale][kind];
     const headers = [columns.position, text.subject, columns.category, ...(text.hasHistorical ? [columns.historical] : []), columns.compatibility];
     const rows = ranking[kind].map((row: RankingRow, index) => ({
       category: row.category,
