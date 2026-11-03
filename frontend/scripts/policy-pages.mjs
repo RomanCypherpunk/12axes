@@ -108,7 +108,7 @@ const PAGES = {
         ['Price', ['US$ 3.99, as a one-time payment per result. No subscription and no automatic renewal. Local taxes, where applicable, are calculated at checkout.']],
         ['How you receive it', ['Access is unlocked on this site as soon as payment is confirmed, with no account or password. It covers the result you bought.']],
         ['Payment', ['Orders are processed by Paddle.com Market Limited (“Paddle”), our Merchant of Record, which accepts cards and other payment methods depending on your country. 12 Axes does not receive or store card details.']],
-        ['Refund', ['Full refund within 7 days. See the <a href="/en/refund">refund policy</a> and the <a href="/en/terms">terms of use</a>.']],
+        ['Refund', ['Full refund within 14 days. See the <a href="/en/refund">refund policy</a> and the <a href="/en/terms">terms of use</a>.']],
         ['Questions', [`Contact us ${c}.`]]
       ]
     }),
@@ -124,7 +124,7 @@ const PAGES = {
         ]],
         ['Price and payment', ['The price is shown before payment. Orders are processed by Paddle.com Market Limited (“Paddle”), our Merchant of Record: Paddle sells the report to you, collects applicable taxes and handles payment, invoices and refunds. 12 Axes does not receive or store card details.']],
         ['Keeping your access', ['Access is saved in the browser used for the purchase. If you switch devices or clear your browser data, ask for your access to be restored by e-mail, giving the e-mail used for the payment and the link to your result.']],
-        ['Refund', ['You can ask for a full refund within 7 days of purchase. See the refund policy.']],
+        ['Refund', ['You can ask for a full refund within 14 days of purchase. See the refund policy.']],
         ['Changes', ['These terms may change; the version in force is the one published on this page, with its update date.']],
         ['Who sells', [`The Full Report is sold to you by Paddle, our Merchant of Record, and provided by ${SELLER}.`]],
         ['Contact', [`Questions ${c}.`]]
@@ -147,10 +147,10 @@ const PAGES = {
     }),
     refund: (c) => ({
       title: 'Refund policy',
-      lead: 'Full refund within 7 days, in Brazil and abroad.',
+      lead: 'Full refund within 14 days, in Brazil and abroad.',
       sections: [
         ['Who can ask', ['Any buyer of the Full Report, in Brazil or any other country, by any payment method (Pix or card).']],
-        ['Deadline', ['Within 7 calendar days of purchase. The refund is in full, no questions asked.']],
+        ['Deadline', ['Within 14 calendar days of purchase. The refund is in full, no questions asked.']],
         ['How to ask', [`Ask ${c}, giving the e-mail used for the payment and, if you have it, the purchase date. Do not send a card number.`]],
         ['How it is returned', ['The amount goes back through the same payment method, issued by Paddle, our Merchant of Record. How long it takes to show on your statement or bank depends on your card issuer or bank.']],
         ['What happens to your access', ['After the refund, access to the report for that result stops working.']]

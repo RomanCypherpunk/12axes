@@ -211,7 +211,7 @@ class PremiumControllerTest {
     }
 
     @Test
-    void rejectsARefundedPaymentWithinSevenDays() throws Exception {
+    void rejectsARefundedPaymentWithinFourteenDays() throws Exception {
         REFUNDED.set(true);
         String token = entitlementToken.issue(hashOf(mixed()), PAYMENT, Duration.ofDays(365));
 
@@ -219,11 +219,11 @@ class PremiumControllerTest {
     }
 
     @Test
-    void doesNotAskStripeAfterEightDays() throws Exception {
+    void doesNotAskStripeAfterFifteenDays() throws Exception {
         REFUNDED.set(true);
-        EntitlementToken nineDaysAgo = new EntitlementToken(SECRET,
-                Clock.fixed(Instant.now().minus(Duration.ofDays(9)), ZoneOffset.UTC));
-        String old = nineDaysAgo.issue(hashOf(mixed()), PAYMENT, Duration.ofDays(365));
+        EntitlementToken sixteenDaysAgo = new EntitlementToken(SECRET,
+                Clock.fixed(Instant.now().minus(Duration.ofDays(16)), ZoneOffset.UTC));
+        String old = sixteenDaysAgo.issue(hashOf(mixed()), PAYMENT, Duration.ofDays(365));
 
         report(mixed(), old).andExpect(status().isOk());
 

@@ -39,8 +39,8 @@ import org.springframework.web.server.ResponseStatusException;
 public class PremiumController {
     private static final Logger LOG = LoggerFactory.getLogger(PremiumController.class);
 
-    /** Reembolso vale por 7 dias; um dia de folga para fuso e atraso. Depois disso a Stripe nao e mais consultada. */
-    private static final Duration REFUND_WINDOW = Duration.ofDays(8);
+    /** Reembolso vale por 14 dias (o maior prazo, o da Paddle); um dia de folga para fuso e atraso. Depois disso o gateway nao e mais consultado. */
+    private static final Duration REFUND_WINDOW = Duration.ofDays(15);
 
     private final PremiumReportService premiumReportService;
     private final ScoringService scoringService;

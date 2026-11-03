@@ -622,7 +622,7 @@ export const en: Strings = {
     { lead: 'Figures by field:', text: 'the one most compatible with you in politics, philosophy, economics and the other fields.' },
     { lead: 'Full ranking and spreadsheet:', text: 'your compatibility with the whole catalog, to export to Excel.' }
   ],
-  paywallGuarantee: '7-day refund guarantee',
+  paywallGuarantee: '14-day refund guarantee',
   paywallPayWith: 'Payment methods: cards, PayPal, Apple Pay, Google Pay and more, depending on your country',
   paywallPrice: 'US$ 3.99',
   paywallCta: 'Unlock the full report',
