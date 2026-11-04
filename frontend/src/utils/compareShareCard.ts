@@ -104,7 +104,7 @@ function sidesOf(data: CompareShareData): [Side, Side] {
 
 let measureContext: CanvasRenderingContext2D | null = null;
 
-function textWidth(text: string, weight: number, size: number, family: string): number {
+export function textWidth(text: string, weight: number, size: number, family: string): number {
   measureContext ??= document.createElement('canvas').getContext('2d');
   if (!measureContext) return text.length * size * 0.6;
   measureContext.font = `${weight} ${size}px ${family}`;
@@ -115,7 +115,7 @@ function textWidth(text: string, weight: number, size: number, family: string): 
  * Maior tamanho (entre max e min) em que o texto cabe em `maxLines` linhas de `width`, sem nenhuma palavra maior que a
  * largura: o texto nunca quebra o layout, a fonte é que diminui (como no título do cartão do resultado).
  */
-function fitFontSize(text: string, weight: number, family: string, width: number, maxLines: number, max: number, min: number, tracking: number): number {
+export function fitFontSize(text: string, weight: number, family: string, width: number, maxLines: number, max: number, min: number, tracking: number): number {
   for (let size = max; size >= min; size -= 1) {
     const words = text.split(/\s+/);
     let lines = 1;
@@ -138,7 +138,7 @@ function fitFontSize(text: string, weight: number, family: string, width: number
 }
 
 /** Nome longo demais (o campo aceita até 40 caracteres) vira "Maximiliano Alexandre…" para caber no título. */
-const shorten = (text: string, max: number): string => (Array.from(text).length > max ? `${Array.from(text).slice(0, max - 1).join('')}…` : text);
+export const shorten = (text: string, max: number): string => (Array.from(text).length > max ? `${Array.from(text).slice(0, max - 1).join('')}…` : text);
 
 const firstLetter = (name: string): string => (Array.from(name.trim())[0] ?? '?').toUpperCase();
 const firstName = (name: string): string => {

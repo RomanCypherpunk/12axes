@@ -29,6 +29,25 @@ export const SHARE_COLORS = {
 };
 
 type Style = Partial<CSSStyleDeclaration>;
+
+/**
+ * Cores do cabeçalho, da identidade e do rodapé. O padrão é o do cartão escuro (texto em papel sobre a cor da ideologia); os cartões
+ * claros (papel com texto escuro) passam as suas. Tudo opcional: o que faltar usa o padrão.
+ */
+export interface ShareTheme {
+  /** O texto principal (a marca, o título e o site). */
+  ink?: string;
+  /** A etiqueta do canto do cabeçalho. */
+  label?: string;
+  /** A linha do cabeçalho. */
+  rule?: string;
+  /** A frase do rodapé. */
+  cta?: string;
+  /** A linha em cima do rodapé. */
+  footerRule?: string;
+  /** Os módulos do QR code. */
+  qr?: string;
+}
 export type PoleSide = 'left' | 'right';
 
 export function el(tag: string, style: Style, text?: string): HTMLElement {
@@ -197,8 +216,8 @@ export function buildShareCard(
   return { stage, target, backgroundColor: color.base };
 }
 
-export function buildShareHeader(label: string = t.shareResultLabel): HTMLElement {
-  const P = SHARE_COLORS.papel;
+export function buildShareHeader(label: string = t.shareResultLabel, theme: ShareTheme = {}): HTMLElement {
+  const P = theme.ink ?? SHARE_COLORS.papel;
   const header = el('div', {
     display: 'flex',
     alignItems: 'center',
@@ -215,7 +234,7 @@ export function buildShareHeader(label: string = t.shareResultLabel): HTMLElemen
       alignItems: 'baseline',
       gap: '9px'
     }),
-    el('div', { flex: '1 1 auto', height: '3px', background: rgba(P, 0.35) }),
+    el('div', { flex: '1 1 auto', height: '3px', background: theme.rule ?? rgba(P, 0.35) }),
     el('div', {
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
@@ -223,7 +242,7 @@ export function buildShareHeader(label: string = t.shareResultLabel): HTMLElemen
       letterSpacing: '0.16em',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
-      color: rgba(P, 0.82)
+      color: theme.label ?? rgba(P, 0.82)
     }, label)
   );
   const brand = header.firstChild as HTMLElement;
@@ -234,8 +253,8 @@ export function buildShareHeader(label: string = t.shareResultLabel): HTMLElemen
   return header;
 }
 
-function buildShareIdentity(result: QuizResult, bgColor: string): HTMLElement {
-  const P = SHARE_COLORS.papel;
+export function buildShareIdentity(result: QuizResult, bgColor: string, ink: string = SHARE_COLORS.papel): HTMLElement {
+  const P = ink;
   const wrap = el('div', { display: 'flex', flexDirection: 'column', gap: '0', marginTop: '18px' });
   wrap.append(
     el('div', {
@@ -646,14 +665,14 @@ const COLUMNS_HEIGHT = 920 - (26 + SHARE_QR_SIZE - 70);
  * Rodapé do cartão: a frase em cima e o site embaixo, à esquerda, e o QR code (link do resultado) no canto direito.
  * Sem `qrUrl` volta ao rodapé simples de uma linha. O QR é desenhado no canvas (ver drawQr); aqui fica só a caixa.
  */
-export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string, qrSize: number = SHARE_QR_SIZE): HTMLElement {
-  const P = SHARE_COLORS.papel;
+export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string, qrSize: number = SHARE_QR_SIZE, theme: ShareTheme = {}): HTMLElement {
+  const P = theme.ink ?? SHARE_COLORS.papel;
   const footer = el('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: qrUrl ? '26px' : '30px',
-    borderTop: `2px solid ${rgba(P, 0.25)}`
+    borderTop: `2px solid ${theme.footerRule ?? rgba(P, 0.25)}`
   });
   const ctaText = el('span', {
     fontFamily: SHARE_FONT_BODY,
@@ -662,7 +681,7 @@ export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string,
     letterSpacing: '0.16em',
     textTransform: 'uppercase',
     lineHeight: '1',
-    color: rgba(P, 0.9)
+    color: theme.cta ?? rgba(P, 0.9)
   }, cta);
   const urlText = el('span', {
     fontFamily: SHARE_FONT_DISPLAY,
@@ -693,6 +712,8 @@ export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string,
   const qr = el('div', { width: `${side}px`, height: `${side}px`, flex: 'none' });
   qr.dataset.shareImage = 'qr';
   qr.dataset.shareSrc = qrUrl;
+  // A cor dos módulos (o papel, nos cartões escuros).
+  if (theme.qr) qr.dataset.shareTint = theme.qr;
   const text = el('div', {
     display: 'flex',
     flexDirection: 'column',
@@ -721,7 +742,7 @@ export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string,
  */
 
 type ToPng = (node: HTMLElement, options?: Record<string, unknown>) => Promise<string>;
-type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'photo' | 'tint' | 'qr';
+type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'flagcover' | 'logo' | 'logosmall' | 'badge' | 'badgesmall' | 'photo' | 'tint' | 'qr';
 
 interface ShareImageSlot {
   kind: ShareImageKind;
@@ -774,7 +795,7 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
 
   slots.forEach((slot, index) => {
     if (slot.kind === 'qr') {
-      drawQr(ctx, slot.src, slot.rect);
+      drawQr(ctx, slot.src, slot.rect, slot.tint ?? SHARE_COLORS.papel);
       return;
     }
     const image = images[index];
@@ -788,6 +809,16 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
       drawCover(ctx, image, slot.rect, 0.2);
     } else if (slot.kind === 'flagfit') {
       drawFlagFit(ctx, image, slot.rect);
+    } else if (slot.kind === 'flagcover') {
+      drawFlagCover(ctx, image, slot.rect);
+    } else if (slot.kind === 'logo') {
+      drawLogo(ctx, image, slot.rect, 36, 18, true);
+    } else if (slot.kind === 'logosmall') {
+      drawLogo(ctx, image, slot.rect, 20, 8, false);
+    } else if (slot.kind === 'badge') {
+      drawBadge(ctx, image, slot.rect, 10, 4, true);
+    } else if (slot.kind === 'badgesmall') {
+      drawBadge(ctx, image, slot.rect, 6, 2, false);
     } else if (slot.kind === 'avatar') {
       ctx.beginPath();
       ctx.ellipse(
@@ -814,7 +845,7 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
 
 // QR code: módulos claros (a cor do papel do cartão) direto sobre o fundo, sem quadro, desenhados no canvas
 // (nítidos e sem passar pelo html-to-image). O fundo escuro do cartão faz a margem de silêncio; o leitor lê o código invertido.
-function drawQr(ctx: CanvasRenderingContext2D, text: string, rect: CanvasRect) {
+function drawQr(ctx: CanvasRenderingContext2D, text: string, rect: CanvasRect, color: string) {
   // Nível L: menos redundância, menos módulos e cada um maior; o cartão é uma imagem limpa, sem risco de sujeira.
   const modules = qrModules(text, 'L');
   const count = modules.length;
@@ -823,7 +854,7 @@ function drawQr(ctx: CanvasRenderingContext2D, text: string, rect: CanvasRect) {
   const offset = rect.x + (rect.width - cell * count) / 2;
   const top = rect.y + (rect.height - cell * count) / 2;
   ctx.save();
-  ctx.fillStyle = SHARE_COLORS.papel;
+  ctx.fillStyle = color;
   modules.forEach((row, y) =>
     row.forEach((dark, x) => {
       if (dark) {
@@ -985,6 +1016,67 @@ function drawFlagFit(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rec
   roundedRectPath(ctx, fit, 16);
   ctx.clip();
   ctx.drawImage(image, fit.x, fit.y, fit.width, fit.height);
+  ctx.restore();
+}
+
+// Bandeira cortada para preencher a moldura (3:2, como na página de resultado), com cantos de 16px e a mesma sombra da bandeira
+// inteira: bandeiras de proporções diferentes ficam todas do mesmo tamanho.
+function drawFlagCover(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect) {
+  ctx.save();
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
+  ctx.shadowBlur = 18;
+  ctx.shadowOffsetY = 6;
+  roundedRectPath(ctx, rect, 16);
+  ctx.fillStyle = '#000000';
+  ctx.fill();
+  ctx.restore();
+  ctx.save();
+  roundedRectPath(ctx, rect, 16);
+  ctx.clip();
+  drawCover(ctx, image, rect, 0.5);
+  ctx.restore();
+}
+
+// Logo de partido: caixa branca de cantos arredondados com o logo inteiro (sem corte), dentro de uma margem. A versão grande leva sombra.
+function drawLogo(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect, radius: number, pad: number, shadow: boolean) {
+  ctx.save();
+  if (shadow) {
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
+    ctx.shadowBlur = 18;
+    ctx.shadowOffsetY = 6;
+  }
+  roundedRectPath(ctx, rect, radius);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.restore();
+  const inner = { x: rect.x + pad, y: rect.y + pad, width: rect.width - pad * 2, height: rect.height - pad * 2 };
+  const scale = Math.min(inner.width / image.naturalWidth, inner.height / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  ctx.save();
+  roundedRectPath(ctx, rect, radius);
+  ctx.clip();
+  ctx.drawImage(image, inner.x + (inner.width - width) / 2, inner.y + (inner.height - height) / 2, width, height);
+  ctx.restore();
+}
+
+// Bandeira do país do partido, em selo: moldura branca de `border` px, bandeira cortada para preencher o resto.
+function drawBadge(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect, radius: number, border: number, shadow: boolean) {
+  ctx.save();
+  if (shadow) {
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetY = 4;
+  }
+  roundedRectPath(ctx, rect, radius);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.restore();
+  const inner = { x: rect.x + border, y: rect.y + border, width: rect.width - border * 2, height: rect.height - border * 2 };
+  ctx.save();
+  roundedRectPath(ctx, inner, Math.max(0, radius - border));
+  ctx.clip();
+  drawCover(ctx, image, inner, 0.5);
   ctx.restore();
 }
 

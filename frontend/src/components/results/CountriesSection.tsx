@@ -17,6 +17,8 @@ interface CountriesSectionProps {
   title?: string;
   id?: string;
   header?: ReactNode;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão dela); sem ele a seção fica como era (página de comparação entre pessoas). */
+  footer?: ReactNode;
 }
 
 function caption(match: CountryMatch): string {
@@ -57,7 +59,7 @@ export function countryFarItems(distant: CountryMatch[]): FarItem[] {
   return distant.map((match) => ({ key: match.countryId, name: match.name, caption: caption(match) }));
 }
 
-export function CountriesSection({ current, historical, dimensions, distant, axes, results, title, id, header }: CountriesSectionProps) {
+export function CountriesSection({ current, historical, dimensions, distant, axes, results, title, id, header, footer }: CountriesSectionProps) {
   const [tab, setTab] = useState<'current' | 'historical'>('current');
   const shown = tab === 'current' ? current : historical;
   const [info, setInfo] = useState<CountryMatch | null>(null);
@@ -81,6 +83,7 @@ export function CountriesSection({ current, historical, dimensions, distant, axe
       <DimList items={countryDimItems(dimensions, setInfo)} />
 
       <FarList title={t.countriesDistantTitle} items={countryFarItems(distant)} />
+      {footer}
       {info && <CountryInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );

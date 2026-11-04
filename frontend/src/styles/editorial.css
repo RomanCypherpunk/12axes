@@ -1763,3 +1763,10 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 
 /* No celular o texto longo do botão quebra em duas linhas, centralizado, em vez de passar da borda do contorno */
 @media (max-width:640px){.e-pw-unlock{width:max-content;max-width:calc(100% - 32px);white-space:normal;text-align:center;line-height:1.25;padding:10px 20px}}
+
+
+/* Botão de compartilhar o cartão da seção: embaixo dela, centralizado */
+.e-sec-share-foot{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:20px}
+.e-sec-share-foot .e-btn{padding:10px 18px;font-size:14px}
+.e-sec-share-foot .inline-error{margin:0;text-align:center}
+@media (max-width:640px){.e-sec-share-foot{align-items:stretch}.e-sec-share-foot .e-btn{width:100%}}

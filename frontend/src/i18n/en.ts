@@ -740,6 +740,40 @@ export const en: Strings = {
     ctaTitle: 'Retake the quiz or share it'
   },
   shareFilePrefix: '12axes-profile',
+  shareCountriesFilePrefix: '12axes-countries',
+  shareCountriesTitle: 'The countries closest to my profile | 12axes.vercel.app',
+  shareCountriesMessage: (country, percent) =>
+    `See the countries closest to my political profile on the 12 Axes Political Quiz!\n\n` +
+    `🌎 Most compatible present-day country:\n` +
+    `${country} - ${percent}% compatibility\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
+  shareCountriesCta: 'Share nearby countries',
+  sharePersonalitiesCta: 'Share nearby personalities',
+  sharePartiesCta: 'Share nearby parties',
+  shareCompassCta: 'Share values and compass',
+  shareNearbyPersonalities: 'NEARBY PERSONALITIES',
+  shareNearbyParties: 'NEARBY PARTIES',
+  shareValuesCompass: 'VALUES AND COMPASS',
+  sharePersonalitiesFilePrefix: '12axes-personalities',
+  sharePersonalitiesTitle: 'The personalities closest to my profile | 12axes.vercel.app',
+  sharePersonalitiesMessage: (name, percent) =>
+    `See the personalities closest to my political profile on the 12 Axes Political Quiz!\n\n` +
+    `👤 Most compatible personality:\n` +
+    `${name} - ${percent}% compatibility\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
+  sharePartiesFilePrefix: '12axes-parties',
+  sharePartiesTitle: 'The parties closest to my profile | 12axes.vercel.app',
+  sharePartiesMessage: (name, percent) =>
+    `See the parties closest to my political profile on the 12 Axes Political Quiz!\n\n` +
+    `🏛️ Most compatible present-day party:\n` +
+    `${name} - ${percent}% compatibility\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
+  shareCompassFilePrefix: '12axes-compass',
+  shareCompassTitle: 'My values and my political compass | 12axes.vercel.app',
+  shareCompassMessage: (ideology) =>
+    `See my values and my political compass on the 12 Axes Political Quiz!\n\n` +
+    `💡 My ideology:\n${ideology}\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
     `I discovered my ideological profile on the 12 Axes Political Quiz!\n\n` +
     `💡 Most compatible ideology:\n` +

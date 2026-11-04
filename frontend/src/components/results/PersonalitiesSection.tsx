@@ -16,6 +16,8 @@ interface PersonalitiesSectionProps {
   title?: string;
   id?: string;
   header?: ReactNode;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão dela). */
+  footer?: ReactNode;
 }
 
 export function Portrait({ match, className }: { match: PersonalityMatch; className: string }) {
@@ -59,7 +61,7 @@ export function personalityFarItems(distant: PersonalityMatch[]): FarItem[] {
   return distant.map((match) => ({ key: match.personalityId, name: match.name, caption: match.role }));
 }
 
-export function PersonalitiesSection({ top, dimensions, distant, axes, results, title, id, header }: PersonalitiesSectionProps) {
+export function PersonalitiesSection({ top, dimensions, distant, axes, results, title, id, header, footer }: PersonalitiesSectionProps) {
   const [info, setInfo] = useState<PersonalityMatch | null>(null);
 
   return (
@@ -72,6 +74,7 @@ export function PersonalitiesSection({ top, dimensions, distant, axes, results, 
       <DimList items={personalityDimItems(dimensions, setInfo)} />
 
       <FarList title={t.personalitiesDistantTitle} items={personalityFarItems(distant)} />
+      {footer}
       {info && <PersonalityInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );

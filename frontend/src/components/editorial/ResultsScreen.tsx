@@ -30,6 +30,7 @@ import { PaywallSection } from '../results/PaywallSection';
 import { PreviewSwitch } from '../results/PreviewSwitch';
 import { usePremiumAccess } from '../results/usePremiumAccess';
 import { LockIcon } from '../results/LockIcon';
+import { SectionShareButton, type ShareKind } from '../results/SectionShareButton';
 import { CsvIcon, DownloadIcon, Ring, ShareImageIcon } from './primitives';
 import { track } from '../../utils/analytics';
 import { pdfButtonAction } from '../../utils/pdfAccess';
@@ -99,6 +100,35 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   const politicalValues = result.politicalValues ?? [];
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
+  // Cartão de compartilhamento de uma seção (países, personalidades, partidos ou valores e bússola). O módulo do cartão (e o
+  // html-to-image) só carrega no clique.
+  const [sharingKind, setSharingKind] = useState<ShareKind | null>(null);
+  const [shareError, setShareError] = useState<{ kind: ShareKind; message: string } | null>(null);
+  const shareSection = async (kind: ShareKind) => {
+    if (sharingKind) return;
+    setSharingKind(kind);
+    setShareError(null);
+    track('share_section', { section: kind });
+    try {
+      const sharedReligion = religion ?? null;
+      if (kind === 'countries') await (await import('../../utils/countriesShareCard')).exportCountriesShare(result, sharedReligion);
+      else if (kind === 'personalities') await (await import('../../utils/personalitiesShareCard')).exportPersonalitiesShare(result, sharedReligion);
+      else if (kind === 'parties') await (await import('../../utils/partiesShareCard')).exportPartiesShare(result, sharedReligion);
+      else await (await import('../../utils/compassShareCard')).exportCompassShare(result, axes, sharedReligion);
+    } catch {
+      setShareError({ kind, message: t.errImage });
+    } finally {
+      setSharingKind(null);
+    }
+  };
+  const shareButton = (kind: ShareKind) => (
+    <SectionShareButton
+      kind={kind}
+      sharing={sharingKind === kind}
+      error={shareError?.kind === kind ? shareError.message : null}
+      onShare={() => void shareSection(kind)}
+    />
+  );
   // Identidade do resultado para o relatório pago: os 12 valores, na ordem dos eixos.
   const premiumVector = useMemo(() => result.axes.map((axis) => axis.leftPercent), [result]);
   // Resultado visto: uma vez por resultado (quem fez o teste agora ou abriu um link). Junto com quiz_start e quiz_complete mostra
@@ -246,9 +276,11 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             distant={result.bottomCountryMatches}
             axes={axes}
             results={axisResults}
+            footer={shareButton('countries')}
           />
 
           <PersonalitiesSection
+            footer={shareButton('personalities')}
             top={result.topPersonalityMatch}
             dimensions={result.dimensionMatches}
             distant={result.bottomPersonalityMatches}
@@ -275,6 +307,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
 
           {showParties && (
             <PartiesSection
+              footer={shareButton('parties')}
               current={result.topPartyMatch}
               historical={result.topHistoricalPartyMatch}
               top={result.topPartyMatches ?? []}
@@ -285,11 +318,18 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             />
           )}
 
-          <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} />
+          <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} footer={shareButton('compass')} />
 
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
-          {compass && <PoliticalCompassSection position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />}
+          {compass && (
+            <PoliticalCompassSection
+              position={compass}
+              category={top.category}
+              moralAxis={axes.find((axis) => axis.id === 'moral')}
+              footer={shareButton('compass')}
+            />
+          )}
 
           {hasPremium ? (
             <Suspense fallback={null}>

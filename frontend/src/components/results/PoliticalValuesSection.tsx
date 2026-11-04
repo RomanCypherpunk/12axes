@@ -17,6 +17,8 @@ interface PoliticalValuesSectionProps {
   title?: string;
   id?: string;
   header?: ReactNode;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão de valores e bússola). */
+  footer?: ReactNode;
 }
 
 const MIN_NAME_FONT = 9;
@@ -34,7 +36,7 @@ function fitNames(list: HTMLElement) {
   });
 }
 
-export function PoliticalValuesSection({ values, category, religion, title, id, header }: PoliticalValuesSectionProps) {
+export function PoliticalValuesSection({ values, category, religion, title, id, header, footer }: PoliticalValuesSectionProps) {
   const [selected, setSelected] = useState<PoliticalValue | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -72,6 +74,7 @@ export function PoliticalValuesSection({ values, category, religion, title, id, 
           </DimRow>
         ))}
       </ul>
+      {footer}
 
       {selected && (
         <InfoSheet titleId="value-sheet-title" style={catStyle(category) as CSSProperties} onClose={() => setSelected(null)}>

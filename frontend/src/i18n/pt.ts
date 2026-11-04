@@ -729,6 +729,40 @@ export const pt: Strings = {
     ctaTitle: 'Refaça o teste ou compartilhe'
   },
   shareFilePrefix: '12axes-perfil',
+  shareCountriesFilePrefix: '12axes-paises',
+  shareCountriesTitle: 'Os países mais próximos do meu perfil | 12axes.vercel.app',
+  shareCountriesMessage: (country, percent) =>
+    `Veja os países mais próximos do meu perfil político no Quiz Político 12 Axes!\n\n` +
+    `🌎 País atual mais compatível:\n` +
+    `${country} - ${percent}% de compatibilidade\n\n` +
+    `👉 Faça o teste e descubra os seus:\nhttps://12axes.vercel.app/`,
+  shareCountriesCta: 'Compartilhar países próximos',
+  sharePersonalitiesCta: 'Compartilhar personalidades próximas',
+  sharePartiesCta: 'Compartilhar partidos próximos',
+  shareCompassCta: 'Compartilhar valores e bússola',
+  shareNearbyPersonalities: 'PERSONALIDADES PRÓXIMAS',
+  shareNearbyParties: 'PARTIDOS PRÓXIMOS',
+  shareValuesCompass: 'VALORES E BÚSSOLA',
+  sharePersonalitiesFilePrefix: '12axes-personalidades',
+  sharePersonalitiesTitle: 'As personalidades mais próximas do meu perfil | 12axes.vercel.app',
+  sharePersonalitiesMessage: (name, percent) =>
+    `Veja as personalidades mais próximas do meu perfil político no Quiz Político 12 Axes!\n\n` +
+    `👤 Personalidade mais compatível:\n` +
+    `${name} - ${percent}% de compatibilidade\n\n` +
+    `👉 Faça o teste e descubra as suas:\nhttps://12axes.vercel.app/`,
+  sharePartiesFilePrefix: '12axes-partidos',
+  sharePartiesTitle: 'Os partidos mais próximos do meu perfil | 12axes.vercel.app',
+  sharePartiesMessage: (name, percent) =>
+    `Veja os partidos mais próximos do meu perfil político no Quiz Político 12 Axes!\n\n` +
+    `🏛️ Partido atual mais compatível:\n` +
+    `${name} - ${percent}% de compatibilidade\n\n` +
+    `👉 Faça o teste e descubra os seus:\nhttps://12axes.vercel.app/`,
+  shareCompassFilePrefix: '12axes-bussola',
+  shareCompassTitle: 'Meus valores e minha bússola política | 12axes.vercel.app',
+  shareCompassMessage: (ideology) =>
+    `Veja meus valores e minha bússola política no Quiz Político 12 Axes!\n\n` +
+    `💡 Minha ideologia:\n${ideology}\n\n` +
+    `👉 Faça o teste e descubra os seus:\nhttps://12axes.vercel.app/`,
   shareMessage: (ideology, ideologyPct, country, countryPct, personality, personalityPct) =>
     `Descobri meu perfil ideológico no Quiz Político 12 Axes!\n\n` +
     `💡 Ideologia mais compatível:\n` +

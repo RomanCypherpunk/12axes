@@ -19,6 +19,8 @@ interface PartiesSectionProps {
   title?: string;
   id?: string;
   header?: ReactNode;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão dela). */
+  footer?: ReactNode;
 }
 
 // Tipo · período (se histórico) · país associado, abaixo do nome.
@@ -100,7 +102,8 @@ export function PartiesSection({
   results,
   title,
   id,
-  header
+  header,
+  footer
 }: PartiesSectionProps) {
   const currentMatch = current ?? top.find((m) => !m.historical) ?? top[0] ?? null;
   const historicalMatch = historical ?? top.find((m) => m.historical) ?? null;
@@ -134,6 +137,7 @@ export function PartiesSection({
       <DimList items={partyDimItems(dimensions, setInfo)} />
 
       <FarList title={t.partiesDistantTitle} items={partyFarItems(distant)} />
+      {footer}
       {info && <PartyInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );

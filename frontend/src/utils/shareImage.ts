@@ -17,7 +17,7 @@ export function exportQuizFor(quiz: QuizPayload | null, axes: Axis[], variant: Q
   );
 }
 
-async function loadShareFonts(): Promise<void> {
+export async function loadShareFonts(): Promise<void> {
   if (!document.fonts) {
     return;
   }

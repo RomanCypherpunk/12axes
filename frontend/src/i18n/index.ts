@@ -513,6 +513,25 @@ export interface Strings {
     ctaTitle: string;
   };
   shareFilePrefix: string;
+  shareCountriesFilePrefix: string;
+  shareCountriesTitle: string;
+  shareCountriesMessage: (country: string, percent: number) => string;
+  shareCountriesCta: string;
+  sharePersonalitiesCta: string;
+  sharePartiesCta: string;
+  shareCompassCta: string;
+  shareNearbyPersonalities: string;
+  shareNearbyParties: string;
+  shareValuesCompass: string;
+  sharePersonalitiesFilePrefix: string;
+  sharePersonalitiesTitle: string;
+  sharePersonalitiesMessage: (name: string, percent: number) => string;
+  sharePartiesFilePrefix: string;
+  sharePartiesTitle: string;
+  sharePartiesMessage: (name: string, percent: number) => string;
+  shareCompassFilePrefix: string;
+  shareCompassTitle: string;
+  shareCompassMessage: (ideology: string) => string;
   shareMessage: (
     ideology: string,
     ideologyPct: number,
