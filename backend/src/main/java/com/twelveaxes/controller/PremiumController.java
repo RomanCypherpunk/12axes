@@ -3,6 +3,7 @@ package com.twelveaxes.controller;
 import com.twelveaxes.model.AxisResult;
 import com.twelveaxes.model.PremiumReport;
 import com.twelveaxes.model.PremiumRequest;
+import com.twelveaxes.model.ReportPreview;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.payment.EntitlementToken;
 import com.twelveaxes.payment.RefundChecker;
@@ -107,6 +108,24 @@ public class PremiumController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "As respostas nao correspondem ao resultado informado");
         }
         return premiumReportService.report(answers, lang, normalizedReligion);
+    }
+
+    /**
+     * O comecinho do relatorio para o convite da compra (sem token): o eixo mais forte com so o inicio do texto, o lider e o vice do
+     * governo ideal e a primeira era da linha do tempo. Existe junto com o relatorio, so com a venda ligada; o que e pago (texto
+     * inteiro, respostas, as outras secoes) so sai em {@link #report}.
+     */
+    @PostMapping("/api/premium/preview")
+    public ReportPreview preview(
+            @Valid @RequestBody PremiumRequest request,
+            @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
+            @RequestParam(required = false) String religion
+    ) {
+        if (!paymentsEnabled) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        List<AxisResult> axes = scoringService.scoreFromLeftPercents(AxisValuesParser.parse(request.v()), lang);
+        return premiumReportService.preview(axes, lang, ReligionFilter.normalize(religion));
     }
 
     private void authorize(List<Double> values, String token) {

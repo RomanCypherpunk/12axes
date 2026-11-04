@@ -369,6 +369,18 @@ export interface Disagreement {
   axes: AxisDivergence[];
 }
 
+/** O comecinho do relatório pago, para o convite da compra: só o que o convite mostra; o resto fica atrás do token. */
+export interface ReportPreview {
+  /** O eixo mais forte, só com o início do texto e sem as respostas. */
+  analysis: AxisAnalysis;
+  /** Ideologia, personalidade e país mais compatíveis (só nome e cor; `axes` vem vazio). */
+  profiles: Disagreement[];
+  /** Só o líder e o vice-líder do governo ideal. */
+  government: GovernmentSeat[];
+  /** Só a primeira era (Antiguidade), com os perfis da lista (`entries` vazio e `compatibility` 0). */
+  timeline: TimelineEra[];
+}
+
 export interface GovernmentSeat {
   seatKey: 'lider' | 'vice' | 'economia' | 'educacao' | 'estrategia' | 'filosofia' | 'social' | 'industria' | 'cultura';
   category: string;

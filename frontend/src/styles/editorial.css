@@ -1619,7 +1619,7 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 
 /* Governo ideal no celular: lista com cargo e nome embaixo da mesa */
 .e-gov-mlist{display:none;list-style:none;margin:16px 0 0;padding:0;gap:8px}
-.e-gov-mlist button{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;border-radius:16px;background:var(--cat-bg);color:var(--cat);font:inherit;text-align:left;cursor:pointer}
+.e-gov-mlist li>button:not(.e-pw-unlock){display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;border-radius:16px;background:var(--cat-bg);color:var(--cat);font:inherit;text-align:left;cursor:pointer}
 .e-gov-mface{width:42px;height:42px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--superficie)}
 .e-gov-mlist small{display:block;font-size:11px;font-weight:600;letter-spacing:.04em;opacity:.85}
 .e-gov-mlist b{display:block;font-size:14.5px;line-height:1.25}
@@ -1674,3 +1674,92 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 @keyframes e-unlock-pop{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:none}}
 @media (max-width:760px){.e-unlock{padding:16px}.e-unlock-card{padding:30px 22px 24px}.e-unlock-card h2{font-size:24px}}
 @media (prefers-reduced-motion:reduce){.e-balloon{display:none}.e-unlock-card{animation:none}}
+
+/* Convites do Relatório completo: botão de PDF com o texto longo, selo da garantia e as linhas de confiança do modal */
+.e-btn-wrap{white-space:normal;text-align:center;line-height:1.3}
+.e-btn-lock{width:16px;height:16px;flex:none}
+.e-pm-guarantee{max-width:340px;font-weight:600;color:var(--tinta)}
+.e-pm-instant{margin:0;max-width:340px;font-size:13.5px;line-height:1.45;color:var(--texto-suave)}
+.e-pm-main .e-paywall-price small{font-size:13px}
+
+/* Convites do Relatório completo, uma seção de cada vez: teaser nítido (dados gratuitos do resultado) e o resto desfocado com cadeado */
+.e-pw-stack{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.e-pw-stack>*{min-width:0}
+.e-pw-sec h2{margin:0}
+.e-pw-tease{margin-top:18px}
+.e-pw-rest{position:relative;margin-top:14px;min-height:150px}
+.e-pw-rest .e-pw-body{margin-top:0;pointer-events:none;user-select:none}
+.e-pw-unlock{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:0;border-radius:999px;background:var(--cat,var(--floresta));color:#fff;font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .15s ease,filter .15s ease}
+.e-pw-unlock:hover{filter:brightness(1.12);transform:translate(-50%,calc(-50% - 1px))}
+.e-pw-unlock svg{width:16px;height:16px}
+.e-pw-blur{filter:blur(6px);opacity:.8}
+.e-pw-tag{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cat,var(--floresta))}
+.e-pw-axis-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.e-pw-axis-head h3{margin:0;font-size:19px}
+.e-pw-axis-head span{font-size:14px;font-weight:600;color:var(--texto-suave)}
+.e-pw-ruler{position:relative;height:10px;margin:14px 0 8px;border-radius:10px;background:linear-gradient(90deg,var(--al,var(--cat-bg)),var(--ar,var(--cat-bg)))}
+.e-pw-ruler i{position:absolute;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--superficie);border:3px solid var(--tinta)}
+.e-pw-poles{display:flex;justify-content:space-between;font-size:12.5px;color:var(--texto-suave)}
+.e-pw-who{display:flex;align-items:center;gap:16px}
+.e-pw-face{flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover}
+.e-pw-who b{display:block;font-size:17px}
+.e-pw-who p{margin:4px 0 0;font-size:14.5px;line-height:1.45;color:var(--texto-suave)}
+.e-pw-seats{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.e-pw-seats li{display:grid;grid-template-columns:46px 1fr;align-items:center;gap:14px}
+.e-pw-seats small{display:block;margin-bottom:6px;font-size:13.5px;font-weight:600}
+.e-pw-rank{display:block;margin:0}
+.e-pw-rank .e-rk{border-bottom:0;padding:0}
+.e-pw-final{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:44px 32px 32px;border-radius:24px;border-top:4px solid var(--cat,var(--floresta));background:var(--superficie);box-shadow:0 10px 30px rgba(0,0,0,.08);position:relative;margin-top:14px}
+.e-pw-final h2{margin:0;font-size:24px}
+.e-pw-final .e-btn-primary{background:var(--cat,var(--floresta));border-color:var(--cat,var(--floresta));color:#fff}
+.e-pw-final .e-btn-primary:hover{filter:brightness(1.12)}
+@media (max-width:640px){.e-pw-final{padding:40px 20px 26px}.e-pw-rest{min-height:130px}}
+
+/* Convite do eixo mais forte: a linha da página paga, com só o começo do texto e o resto num desfoque diagonal (esquerda para a direita) */
+.e-pw-axis-preview{margin:0}
+.e-pw-axis-preview .e-prem-axis{padding:6px 0 0}
+.e-pw-fade{position:relative;margin-top:16px;min-height:92px}
+.e-pw-fade-start{position:relative;z-index:1;margin:0;font-size:15.5px;line-height:1.6;letter-spacing:-.01em;color:var(--texto-suave);-webkit-mask-image:linear-gradient(112deg,#000 0,#000 30%,transparent 62%);mask-image:linear-gradient(112deg,#000 0,#000 30%,transparent 62%)}
+.e-pw-fade-lines{position:absolute;inset:0;display:grid;align-content:start;gap:15px;padding-top:6px;filter:blur(4px);-webkit-mask-image:linear-gradient(112deg,transparent 14%,#000 52%);mask-image:linear-gradient(112deg,transparent 14%,#000 52%)}
+.e-pw-fade-lines span{display:block;height:11px;border-radius:8px;background:color-mix(in srgb,var(--texto-suave) 34%,transparent)}
+.e-pw-fade-lines span:nth-child(2){width:94%}
+.e-pw-fade-lines span:nth-child(3){width:58%}
+
+/* Botões "Desbloquear meu relatório completo": o cadeado aberto vai antes do texto, na cor dele */
+.e-unlock-ico{width:18px;height:18px;flex:none}
+.e-pw-unlock{white-space:nowrap;max-width:calc(100% - 24px);font-size:14px;z-index:4}
+/* Peças do convite que repetem o layout da página paga: o que é desfocado e o botão por cima */
+.e-pw-lockbox{position:relative;display:flex;min-width:0}
+.e-pw-lockbox>.e-pw-blurred{flex:1}
+.e-pw-blurred{filter:blur(6px);opacity:.85;pointer-events:none;user-select:none}
+.e-pw-blurface{display:block;border-radius:50%;background:color-mix(in srgb,var(--cat,var(--tinta)) 30%,var(--cat-bg,var(--neutro)));filter:blur(4px)}
+.e-pw-blurred .e-pw-blurface{filter:none}
+.e-pw-blurred .e-gov-label{width:14cqw}
+.e-pw-gov-btn{top:50%}
+.e-pw-tl-era .e-tl-head,.e-pw-tl-era .e-tl-list{filter:blur(var(--b,6px));opacity:var(--o,.8);pointer-events:none;user-select:none}
+.e-pw-tl-era .e-pw-unlock{top:50%}
+@media (max-width:640px){.e-pw-gov-btn{display:none}}
+
+/* Cartão final do convite: título e texto numa coluna estreita e centralizada, alinhada com o botão, em vez de esticados na largura toda */
+.e-pw-final h2{max-width:520px;text-wrap:balance}
+.e-pw-final .e-paywall-lead{max-width:420px;text-wrap:balance}
+
+/* Governo ideal no celular: o mesmo estilo da lista de personalidades (foto redonda, nome em negrito, cargo pequeno embaixo, linha entre as
+   linhas), em duas colunas: o líder sozinho no topo e depois em pares (vice e economia, educação e estratégia, filosofia e social, indústria e cultura) */
+@media (max-width:640px){
+  .e-gov-mlist{grid-template-columns:1fr 1fr;gap:0 18px;margin-top:8px;position:relative}
+  .e-gov-mlist>li{min-width:0;border-bottom:1px solid var(--borda)}
+  .e-gov-mlist>li:first-child{grid-column:1/-1}
+  .e-gov-mlist li>button:not(.e-pw-unlock),.e-gov-mlist>li.e-pw-blurred{display:flex;align-items:center;gap:12px;width:100%;padding:12px 0;border:0;border-radius:0;background:none;color:inherit;text-align:left;box-sizing:border-box}
+  .e-gov-mlist>li.e-pw-blurred{width:auto}
+  .e-gov-mface{width:46px;height:46px;border:0;box-shadow:0 0 0 1.5px var(--cat)}
+  .e-gov-mlist li>button:not(.e-pw-unlock)>span,.e-gov-mlist>li.e-pw-blurred>span:last-child{min-width:0;display:flex;flex-direction:column;gap:2px}
+  .e-gov-mlist b{font-size:14.5px;font-weight:600;line-height:1.25;color:var(--tinta);overflow-wrap:anywhere}
+  .e-gov-mlist small{font-size:12px;font-weight:500;letter-spacing:0;line-height:1.3;color:var(--texto-suave);opacity:1}
+  .e-gov-mlist .e-pw-gov-mbtn{top:66%}
+}
+.e-pw-gov-mbtnli{display:contents}
+@media (min-width:641px){.e-pw-gov-mbtn{display:none}}
+
+/* No celular o texto longo do botão quebra em duas linhas, centralizado, em vez de passar da borda do contorno */
+@media (max-width:640px){.e-pw-unlock{width:max-content;max-width:calc(100% - 32px);white-space:normal;text-align:center;line-height:1.25;padding:10px 20px}}

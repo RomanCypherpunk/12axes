@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { t } from '../../i18n';
-import { LockIcon } from './LockIcon';
+import { LockIcon, UnlockIcon } from './LockIcon';
 import type { Axis, AxisResult, PersonalityMatch } from '../../types/quiz';
 import { CountUpValue } from './CountUpValue';
 import { clickableProps } from './InfoSheet';
@@ -71,7 +71,8 @@ export function AreasSection({ generalMatches, areaMatches, axes, results, areaL
             <h3>{t.areasLockedTitle}</h3>
             <p className="e-paywall-lead">{t.areasLockedText}</p>
             {onUnlock && (
-              <button type="button" className="e-btn e-btn-primary" onClick={onUnlock}>
+              <button type="button" className="e-btn e-btn-primary e-btn-wrap" onClick={onUnlock}>
+                <UnlockIcon />
                 {t.areasLockedCta}
               </button>
             )}

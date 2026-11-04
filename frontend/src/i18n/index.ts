@@ -412,6 +412,19 @@ export interface Strings {
   paywallModalTag: string;
   paywallModalTitle: string;
   paywallModalLead: string;
+  paywallPdfTitle: string;
+  paywallPdfLead: string;
+  paywallOnce: string;
+  /** O texto do botão por cima de cada parte desfocada: um por seção do convite. */
+  paywallBlockCta: { axes: string; disagree: string; government: string; timeline: string; countries: string };
+  paywallTeaser: {
+    axisTag: string;
+    disagreeWith: (name: string) => string;
+    seats: string[];
+    eras: string[];
+    topCountry: string;
+  };
+  paywallInstant: string;
   paywallIncludesTitle: string;
   paywallIncludes: { lead: string; text: string }[];
   paywallPayWith: string;
@@ -475,6 +488,7 @@ export interface Strings {
   sharePreviewAlt: string;
   sharePreviewLoading: string;
   downloadPdf: string;
+  downloadPdfFull: string;
   generatingPdf: string;
   report: {
     fileName: string;

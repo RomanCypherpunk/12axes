@@ -1,11 +1,11 @@
-import { useState, type CSSProperties } from 'react';
+import { useState, type CSSProperties, type ReactNode } from 'react';
 import { Portrait } from '../PersonalitiesSection';
 import type { GovernmentSeat } from '../../../types/quiz';
 import { catStyle } from '../../../utils/ideologyColors';
 import { ProfileSheet } from '../ProfileSheet';
 import { P } from './premiumText';
 
-type SeatKey = GovernmentSeat['seatKey'];
+export type SeatKey = GovernmentSeat['seatKey'];
 
 // Em volta da mesa, no sentido horário a partir do topo: o líder na cabeceira e o vice logo à direita dele.
 export const ORDER: SeatKey[] = ['lider', 'vice', 'economia', 'educacao', 'estrategia', 'filosofia', 'social', 'industria', 'cultura'];
@@ -40,6 +40,42 @@ function Chair({ x, y, degrees }: { x: number; y: number; degrees: number }) {
   );
 }
 
+/** Onde cada rosto fica em volta da mesa, como as variáveis de posição do CSS (`--x`, `--y`). */
+export const seatPosition = (face: { x: number; y: number }): CSSProperties => ({ '--x': face.x.toFixed(1), '--y': face.y.toFixed(1) }) as CSSProperties;
+
+/**
+ * A mesa redonda com as nove cadeiras. Cada cadeira recebe o rosto de `seat` (ou nada), e `children` entra por cima da cena (o
+ * convite da compra põe ali o botão que abre o pagamento). Compartilhada pelo relatório e pelo convite, para os dois terem o mesmo desenho.
+ */
+export function GovernmentScene({
+  category,
+  seat,
+  children
+}: {
+  category: string;
+  seat: (key: SeatKey, face: { x: number; y: number }, side: string) => ReactNode;
+  children?: ReactNode;
+}) {
+  return (
+    <div className="e-gov" style={catStyle(category) as CSSProperties}>
+      <svg className="e-gov-scene" viewBox="0 0 1000 680" aria-hidden="true">
+        <circle className="e-gov-table-edge" cx={CENTER.x} cy={CENTER.y} r={TABLE_R} />
+        <circle className="e-gov-table-top" cx={CENTER.x} cy={CENTER.y} r={TABLE_R - 7} />
+        <circle className="e-gov-table-ring" cx={CENTER.x} cy={CENTER.y} r={TABLE_R - 44} />
+        {ORDER.map((key, index) => {
+          const { chair, degrees } = place(index);
+          return <Chair key={key} x={chair.x} y={chair.y} degrees={degrees} />;
+        })}
+      </svg>
+      {ORDER.map((key, index) => {
+        const { face, side } = place(index);
+        return seat(key, face, side);
+      })}
+      {children}
+    </div>
+  );
+}
+
 /** O governo ideal numa mesa redonda: o rosto de cada um ao lado da sua cadeira, com o nome e o cargo por fora; clicar no rosto abre a ficha de quem é. */
 export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; category: string }) {
   const [open, setOpen] = useState<SeatKey | null>(null);
@@ -49,26 +85,17 @@ export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; 
   return (
     <section className="e-panel e-prem" id="premium-governo" data-reveal>
       <h2>{P.governmentTitle}</h2>
-      <div className="e-gov" style={catStyle(category) as CSSProperties}>
-        <svg className="e-gov-scene" viewBox="0 0 1000 680" aria-hidden="true">
-          <circle className="e-gov-table-edge" cx={CENTER.x} cy={CENTER.y} r={TABLE_R} />
-          <circle className="e-gov-table-top" cx={CENTER.x} cy={CENTER.y} r={TABLE_R - 7} />
-          <circle className="e-gov-table-ring" cx={CENTER.x} cy={CENTER.y} r={TABLE_R - 44} />
-          {ORDER.map((key, index) => {
-            const { chair, degrees } = place(index);
-            return <Chair key={key} x={chair.x} y={chair.y} degrees={degrees} />;
-          })}
-        </svg>
-        {ORDER.map((key, index) => {
+      <GovernmentScene
+        category={category}
+        seat={(key, face, side) => {
           const seat = byKey.get(key);
           if (!seat) return null;
-          const { face, side } = place(index);
           return (
             <button
               key={key}
               type="button"
               className={`e-gov-seat e-gov-${side}`}
-              style={{ '--x': face.x.toFixed(1), '--y': face.y.toFixed(1) } as CSSProperties}
+              style={seatPosition(face)}
               aria-haspopup="dialog"
               onClick={() => setOpen(key)}
             >
@@ -79,8 +106,8 @@ export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; 
               </span>
             </button>
           );
-        })}
-      </div>
+        }}
+      />
 
       {/* No celular os nomes não cabem em volta da mesa: lista com o cargo e o nome. */}
       <ul className="e-gov-mlist">
@@ -92,8 +119,8 @@ export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; 
               <button type="button" aria-haspopup="dialog" onClick={() => setOpen(key)}>
                 <Portrait match={seat.holder} className="e-gov-mface" />
                 <span>
-                  <small>{P.seats[key]}</small>
                   <b>{seat.holder.name}</b>
+                  <small>{P.seats[key]}</small>
                 </span>
               </button>
             </li>

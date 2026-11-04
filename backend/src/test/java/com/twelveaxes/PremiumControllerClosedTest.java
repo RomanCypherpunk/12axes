@@ -52,4 +52,12 @@ class PremiumControllerClosedTest {
                         .content(body()))
                 .andExpect(status().isNotFound());
     }
+
+    @Test
+    void previewIsNotFoundWhenPaymentsAreOff() throws Exception {
+        mockMvc.perform(post("/api/premium/preview")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body()))
+                .andExpect(status().isNotFound());
+    }
 }

@@ -2,13 +2,17 @@ package com.twelveaxes;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.twelveaxes.model.AxisAnalysis;
 import com.twelveaxes.model.CountryMatch;
+import com.twelveaxes.model.Disagreement;
 import com.twelveaxes.model.PersonalityMatch;
 import com.twelveaxes.model.PremiumReport;
+import com.twelveaxes.model.ReportPreview;
 import com.twelveaxes.model.QuizResult;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.service.PremiumReportService;
 import com.twelveaxes.service.QuizDataService;
+import com.twelveaxes.service.ScoringService;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,6 +27,9 @@ class PremiumReportServiceTest {
 
     @Autowired
     private QuizDataService dataService;
+
+    @Autowired
+    private ScoringService scoringService;
 
     @Test
     void topCountriesAreTheTenMostCompatibleCurrentCountriesSorted() {
@@ -80,5 +87,38 @@ class PremiumReportServiceTest {
                 .containsExactlyElementsOf(pt.topCountries().stream().map(CountryMatch::compatibility).toList());
         assertThat(en.idealGovernment()).extracting(seat -> seat.seatKey())
                 .containsExactlyElementsOf(pt.idealGovernment().stream().map(seat -> seat.seatKey()).toList());
+    }
+
+    @Test
+    void previewHasTheStrongestAxisStartTheLeaderAndViceAndTheFirstEraOnly() {
+        ResultRequest request = TestAnswers.mixed(dataService);
+        PremiumReport report = premiumReportService.report(request, "pt", null);
+
+        ReportPreview preview = premiumReportService.preview(scoringService.score(request, "pt"), "pt", null);
+
+        AxisAnalysis strongest = report.axisAnalysis().stream()
+                .max(Comparator.comparingDouble((AxisAnalysis analysis) -> Math.abs(analysis.userLeftPercent() - 50.0)))
+                .orElseThrow();
+        assertThat(preview.analysis().axisId()).isEqualTo(strongest.axisId());
+        assertThat(preview.analysis().level()).isEqualTo(strongest.level());
+        // as respostas que mais pesaram nunca saem no convite, e do texto sai so o comeco
+        assertThat(preview.analysis().impacts()).isEmpty();
+        if (strongest.text() != null) {
+            String start = preview.analysis().text();
+            assertThat(start).isNotNull().isNotBlank();
+            assertThat(strongest.text()).startsWith(start);
+            assertThat(start.length()).isLessThanOrEqualTo(strongest.text().length() / 2);
+        }
+        assertThat(preview.profiles()).extracting(Disagreement::kind).containsExactly("ideology", "personality", "country");
+        assertThat(preview.profiles()).allSatisfy(profile -> assertThat(profile.axes()).isEmpty());
+        // do governo so o lider e o vice, e quem os ocupa e o mesmo do relatorio
+        assertThat(preview.government()).extracting(seat -> seat.seatKey()).containsExactlyInAnyOrder("lider", "vice");
+        assertThat(preview.government()).allSatisfy(seat -> assertThat(report.idealGovernment()).contains(seat));
+        // da linha do tempo so a primeira era, sem a compatibilidade nem o cartao da epoca
+        assertThat(preview.timeline()).hasSize(1);
+        assertThat(preview.timeline().getFirst().key()).isEqualTo(report.timeline().getFirst().key());
+        assertThat(preview.timeline().getFirst().highlights()).isEqualTo(report.timeline().getFirst().highlights());
+        assertThat(preview.timeline().getFirst().entries()).isEmpty();
+        assertThat(preview.timeline().getFirst().compatibility()).isZero();
     }
 }

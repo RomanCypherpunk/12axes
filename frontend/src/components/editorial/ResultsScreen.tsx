@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { LANG, t } from '../../i18n';
 import type { Axis, AxisResult, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
@@ -24,11 +24,12 @@ import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
 import type { Religion } from '../../utils/religion';
-import { PaywallModal } from '../results/PaywallModal';
+import { PaywallModal, type PaywallSource } from '../results/PaywallModal';
 import { UnlockCelebration } from '../results/UnlockCelebration';
 import { PaywallSection } from '../results/PaywallSection';
 import { PreviewSwitch } from '../results/PreviewSwitch';
 import { usePremiumAccess } from '../results/usePremiumAccess';
+import { LockIcon } from '../results/LockIcon';
 import { CsvIcon, DownloadIcon, Ring, ShareImageIcon } from './primitives';
 import { track } from '../../utils/analytics';
 import { pdfButtonAction } from '../../utils/pdfAccess';
@@ -100,6 +101,13 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   const [printingPdf, setPrintingPdf] = useState(false);
   // Identidade do resultado para o relatório pago: os 12 valores, na ordem dos eixos.
   const premiumVector = useMemo(() => result.axes.map((axis) => axis.leftPercent), [result]);
+  // Resultado visto: uma vez por resultado (quem fez o teste agora ou abriu um link). Junto com quiz_start e quiz_complete mostra
+  // onde o funil perde gente antes do convite.
+  const vectorKey = premiumVector.join(',');
+  useEffect(() => {
+    track('result_view', { entry: quiz ? 'quiz' : 'link', category: top.category });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [vectorKey]);
   // O relatório pago, quando carregado: de lá vêm a aba "Área de atuação" e o ranking da planilha.
   const [premiumReport, setPremiumReport] = useState<PremiumReport | null>(null);
   // Só em desenvolvimento (PREMIUM_DEV_OPEN): alterna entre a página paga e a grátis (com o convite), para ajustar o layout
@@ -115,13 +123,21 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     ? { ...realAccess, state: realAccess.state.status === 'locked' ? realAccess.state : { status: 'locked' as const, problem: null, busy: false } }
     : realAccess;
   const [paywallOpen, setPaywallOpen] = useState(false);
+  // De onde veio a abertura do modal e quando, para o modal_close dizer a origem e quanto tempo a pessoa ficou.
+  const paywallOpened = useRef<{ source: PaywallSource; at: number }>({ source: 'section_final', at: 0 });
   // Comemoração na volta do pagamento. Para ver sem pagar: em desenvolvimento (npm run dev, ou o backend com PREMIUM_DEV_OPEN), abrir o resultado com ?celebrate=1.
   const [celebrationClosed, setCelebrationClosed] = useState(false);
   const devCelebrate = (import.meta.env.DEV || PREMIUM_DEV_OPEN) && new URLSearchParams(window.location.search).get('celebrate') === '1';
   const celebrating = (access.justPaid || devCelebrate) && !celebrationClosed;
-  const openPaywall = (source: 'section' | 'areas' | 'pdf') => {
+  const openPaywall = (source: PaywallSource) => {
     track('paywall_view', { source });
+    paywallOpened.current = { source, at: Date.now() };
     setPaywallOpen(true);
+  };
+  const closePaywall = () => {
+    const { source, at } = paywallOpened.current;
+    track('modal_close', { source, seconds_open: Math.round((Date.now() - at) / 1000) });
+    setPaywallOpen(false);
   };
   const premiumToken = access.state.status === 'unlocked' ? access.state.token : null;
   const hasPremium = (PREMIUM_DEV_OPEN && !previewAsFree) || premiumToken !== null;
@@ -178,8 +194,9 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       <button className="e-btn e-btn-primary" type="button" onClick={onShare} disabled={isSharing}>
         {isSharing ? t.generatingPng : t.saveOrShare} <ShareImageIcon />
       </button>
-      <button className="e-btn e-btn-ghost" type="button" onClick={handlePdf} disabled={printingPdf || (hasPremium && !shownReport)}>
-        {printingPdf ? t.generatingPdf : t.downloadPdf} <DownloadIcon />
+      <button className="e-btn e-btn-ghost e-btn-wrap" type="button" onClick={handlePdf} disabled={printingPdf || (hasPremium && !shownReport)}>
+        {printingPdf ? t.generatingPdf : SALES_OPEN || hasPremium ? t.downloadPdfFull : t.downloadPdf}{' '}
+        {SALES_OPEN && !hasPremium ? <LockIcon className="e-btn-lock" /> : <DownloadIcon />}
       </button>
       {shownReport && (
         <button className="e-btn e-btn-ghost" type="button" onClick={() => void downloadRankingXlsx(shownReport.ranking, LANG, top.category)}>
@@ -292,14 +309,21 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
               />
             </Suspense>
           ) : (
-            SALES_OPEN && <PaywallSection access={access} onOpen={() => openPaywall('section')} />
+            SALES_OPEN && <PaywallSection access={access} onOpen={openPaywall} result={result} axes={axes} results={axisResults} religion={religion ?? null} />
           )}
 
           {hasPremium && actions}
 
           {celebrating && <UnlockCelebration name={top.name} category={top.category} token={premiumToken ?? (devCelebrate ? 'token-de-teste' : null)} onClose={() => setCelebrationClosed(true)} />}
 
-          {paywallOpen && !hasPremium && SALES_OPEN && <PaywallModal access={access} category={top.category} onClose={() => setPaywallOpen(false)} />}
+          {paywallOpen && !hasPremium && SALES_OPEN && (
+            <PaywallModal
+              access={access}
+              category={top.category}
+              source={paywallOpened.current.source}
+              onClose={closePaywall}
+            />
+          )}
 
           {PREMIUM_DEV_OPEN && <PreviewSwitch value={preview} onChange={setPreview} />}
 

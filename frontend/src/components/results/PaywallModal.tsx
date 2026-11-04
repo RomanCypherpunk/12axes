@@ -3,6 +3,7 @@ import { LANG, t } from '../../i18n';
 import { isValidEmail, loadBuyerEmail, saveBuyerEmail } from '../../utils/buyerEmail';
 import { catStyle } from '../../utils/ideologyColors';
 import { InfoSheet } from './InfoSheet';
+import { UnlockIcon } from './LockIcon';
 import { PaymentIcons } from './PaymentIcons';
 import type { PremiumAccess } from './usePremiumAccess';
 
@@ -11,7 +12,18 @@ import type { PremiumAccess } from './usePremiumAccess';
  * Mercado Pago. Abre ao clicar em qualquer convite ("Desbloquear o relatório completo"). Usa a cor da categoria do resultado
  * (o modal vive fora da página, por isso recebe a cor por aqui).
  */
-export function PaywallModal({ access, category, onClose }: { access: PremiumAccess; category: string; onClose: () => void }) {
+export type PaywallBlock = 'axes' | 'disagree' | 'government' | 'timeline' | 'countries' | 'final';
+export type PaywallSource = 'areas' | 'pdf' | `section_${PaywallBlock}`;
+
+interface PaywallModalProps {
+  access: PremiumAccess;
+  category: string;
+  /** O convite que abriu o modal: quem vem do botão de PDF lê um título sobre o PDF. */
+  source: PaywallSource;
+  onClose: () => void;
+}
+
+export function PaywallModal({ access, category, source, onClose }: PaywallModalProps) {
   const { state, purchase } = access;
   const busy = state.status === 'locked' && state.busy;
   const problem = state.status === 'locked' ? state.problem : null;
@@ -32,10 +44,11 @@ export function PaywallModal({ access, category, onClose }: { access: PremiumAcc
     <InfoSheet titleId="paywall-modal-title" className="e-paywall-modal" style={catStyle(category) as CSSProperties} onClose={onClose}>
       <div className="e-pm-main">
         <span className="e-tag e-tag-cat">{t.paywallModalTag}</span>
-        <h2 id="paywall-modal-title">{t.paywallModalTitle}</h2>
-        <p className="e-pm-lead">{t.paywallModalLead}</p>
+        <h2 id="paywall-modal-title">{source === 'pdf' ? t.paywallPdfTitle : t.paywallModalTitle}</h2>
+        <p className="e-pm-lead">{source === 'pdf' ? t.paywallPdfLead : t.paywallModalLead}</p>
         <p className="e-paywall-price">
           <strong>{t.paywallPrice}</strong>
+          <small>{t.paywallOnce}</small>
         </p>
         <form className="e-pm-form" onSubmit={submit} noValidate>
           {needsEmail && (
@@ -61,15 +74,19 @@ export function PaywallModal({ access, category, onClose }: { access: PremiumAcc
               )}
             </label>
           )}
-          <button className="e-btn e-btn-primary" type="submit" disabled={busy}>
-            {busy ? t.paywallOpening : t.paywallCta}
-            <svg className="e-arr" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14" />
-              <path d="m13 6 6 6-6 6" />
-            </svg>
+          <button className="e-btn e-btn-primary e-btn-wrap" type="submit" disabled={busy}>
+            {busy ? (
+              t.paywallOpening
+            ) : (
+              <>
+                <UnlockIcon />
+                {t.paywallCta}
+              </>
+            )}
           </button>
         </form>
         <p className="e-pm-guarantee">{t.paywallGuarantee}</p>
+        <p className="e-pm-instant">{t.paywallInstant}</p>
         <PaymentIcons label={t.paywallPayWith} />
         {problem && (
           <p className="inline-error" role="alert">

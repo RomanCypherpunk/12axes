@@ -21,7 +21,7 @@ type Selected =
   | { type: 'country'; match: CountryMatch }
   | { type: 'party'; match: PartyMatch };
 
-interface EntryView {
+export interface EntryView {
   key: string;
   name: string;
   /** Data: vida da personalidade ou período do país (países atuais, "Atual"). */
@@ -76,7 +76,7 @@ export function timelineEntryInfo(entry: TimelineEntry): TimelineEntryInfo | nul
   return null;
 }
 
-function viewOf(entry: TimelineEntry): EntryView | null {
+export function viewOf(entry: TimelineEntry): EntryView | null {
   const info = timelineEntryInfo(entry);
   if (!info) return null;
   if (entry.type === 'personality' && entry.personality) {

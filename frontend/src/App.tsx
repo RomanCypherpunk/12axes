@@ -14,6 +14,7 @@ import { useQuizTheme } from './hooks/useQuizTheme';
 import { QuizThemeToggle } from './components/QuizThemeToggle';
 import { loadLastResult, saveLastResult, type LastResult } from './utils/lastResult';
 import { parseShortResult, SHORT_RESULT_PATH } from './utils/shortLinks';
+import { track } from './utils/analytics';
 import type { AnswerSet } from './utils/editAnswers';
 import { CHRISTIAN_DENOMINATIONS, parseReligion, type Religion } from './utils/religion';
 import { PEOPLE_COMPARE_PATH, RESULT_URL_KEYS } from './utils/peopleCompare';
@@ -476,6 +477,7 @@ function MainApp() {
       poolRef.current = nextQuiz;
       setQuiz(buildQuizForVariant(nextQuiz, variant));
       setScreen('quiz');
+      track('quiz_start', { variant });
     } catch (err) {
       const msg = err instanceof Error ? err.message : '';
       setError(msg && msg !== 'Failed to fetch' ? msg : t.errLoadQuiz);
@@ -816,6 +818,7 @@ function MainApp() {
         archetypeChoices: archetype
       });
       setScreen('results');
+      track('quiz_complete', { variant: quiz.variant ?? selectedVariant });
     } catch (err) {
       setError(err instanceof Error ? err.message : t.errCalc);
     } finally {

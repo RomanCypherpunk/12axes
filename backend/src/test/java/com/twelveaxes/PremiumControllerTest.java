@@ -250,4 +250,32 @@ class PremiumControllerTest {
                 .andExpect(jsonPath("$.ranking").doesNotExist())
                 .andExpect(jsonPath("$.personalitiesByArea").doesNotExist());
     }
+
+    @Test
+    void previewNeedsNoTokenAndGivesOnlyTheStartOfTheReport() throws Exception {
+        String json = body(mixed(), true);
+
+        mockMvc.perform(post("/api/premium/preview").contentType(MediaType.APPLICATION_JSON).content(json))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.analysis.axisId").isNotEmpty())
+                .andExpect(jsonPath("$.analysis.impacts").isEmpty())
+                .andExpect(jsonPath("$.profiles.length()").value(3))
+                .andExpect(jsonPath("$.profiles[0].axes").isEmpty())
+                .andExpect(jsonPath("$.government.length()").value(2))
+                .andExpect(jsonPath("$.timeline.length()").value(1))
+                .andExpect(jsonPath("$.timeline[0].entries").isEmpty())
+                // o resto do relatorio pago nao vai junto
+                .andExpect(jsonPath("$.idealGovernment").doesNotExist())
+                .andExpect(jsonPath("$.topCountries").doesNotExist())
+                .andExpect(jsonPath("$.disagreements").doesNotExist())
+                .andExpect(jsonPath("$.ranking").doesNotExist());
+    }
+
+    @Test
+    void previewRejectsAMalformedVector() throws Exception {
+        mockMvc.perform(post("/api/premium/preview")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"v\":\"1,2,3\"}"))
+                .andExpect(status().isBadRequest());
+    }
 }

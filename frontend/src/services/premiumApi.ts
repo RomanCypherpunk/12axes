@@ -1,5 +1,5 @@
 import { LANG } from '../i18n';
-import type { PremiumReport } from '../types/quiz';
+import type { PremiumReport, ReportPreview } from '../types/quiz';
 import type { SavedAnswers } from '../utils/quizProgress';
 import { request } from './quizApi';
 
@@ -31,6 +31,15 @@ export function fetchPremiumReport(
       answers: saved ? Object.entries(saved.answers).map(([questionId, answer]) => ({ questionId, answer })) : undefined,
       archetype: saved ? archetypeOnly(saved.archetypeChoices) : undefined
     })
+  });
+}
+
+/** O comecinho do relatório (o eixo mais forte, o líder e o vice do governo e a primeira era) para o convite da compra: não pede acesso. */
+export function fetchReportPreview(vector: number[], religion: string | null): Promise<ReportPreview> {
+  const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
+  return request<ReportPreview>(`/api/premium/preview?lang=${LANG}${religionParam}`, {
+    method: 'POST',
+    body: JSON.stringify({ v: vector.join(',') })
   });
 }
 
