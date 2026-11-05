@@ -77,7 +77,7 @@ export function GovernmentScene({
 }
 
 /** O governo ideal numa mesa redonda: o rosto de cada um ao lado da sua cadeira, com o nome e o cargo por fora; clicar no rosto abre a ficha de quem é. */
-export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; category: string }) {
+export function GovernmentPanel({ seats, category, footer }: { seats: GovernmentSeat[]; category: string; footer?: ReactNode }) {
   const [open, setOpen] = useState<SeatKey | null>(null);
   const byKey = new Map(seats.map((seat) => [seat.seatKey, seat]));
   const openSeat = open ? byKey.get(open) : undefined;
@@ -127,6 +127,8 @@ export function GovernmentPanel({ seats, category }: { seats: GovernmentSeat[]; 
           );
         })}
       </ul>
+
+      {footer}
 
       {open && openSeat && (
         <ProfileSheet

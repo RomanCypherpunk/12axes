@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { t } from '../../../i18n';
 import type { Axis, AxisResult, CountryMatch } from '../../../types/quiz';
 import { resolveCountryFlagSrc } from '../../../utils/countryFlags';
@@ -12,10 +12,12 @@ interface TopCountriesProps {
   countries: CountryMatch[];
   axes: Axis[];
   results: Map<string, AxisResult>;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão dela). */
+  footer?: ReactNode;
 }
 
 /** Mesma lista dos mais próximos de "Personalidades": posição, bandeira, nome, barra, porcentagem e o botão de detalhes. */
-export function TopCountriesPanel({ countries, axes, results }: TopCountriesProps) {
+export function TopCountriesPanel({ countries, axes, results, footer }: TopCountriesProps) {
   const [info, setInfo] = useState<CountryMatch | null>(null);
   return (
     <section className="e-panel e-prem" id="premium-paises" data-reveal>
@@ -38,6 +40,7 @@ export function TopCountriesPanel({ countries, axes, results }: TopCountriesProp
           </li>
         ))}
       </ol>
+      {footer}
       {info && <CountryInfoSheet match={info} onClose={() => setInfo(null)} />}
     </section>
   );

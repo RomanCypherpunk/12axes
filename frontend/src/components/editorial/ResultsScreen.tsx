@@ -114,7 +114,13 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       if (kind === 'countries') await (await import('../../utils/countriesShareCard')).exportCountriesShare(result, sharedReligion);
       else if (kind === 'personalities') await (await import('../../utils/personalitiesShareCard')).exportPersonalitiesShare(result, sharedReligion);
       else if (kind === 'parties') await (await import('../../utils/partiesShareCard')).exportPartiesShare(result, sharedReligion);
-      else await (await import('../../utils/compassShareCard')).exportCompassShare(result, axes, sharedReligion);
+      else if (kind === 'compass') await (await import('../../utils/compassShareCard')).exportCompassShare(result, axes, sharedReligion);
+      else if (premiumReport) {
+        // As seções do relatório pago usam o relatório que já está carregado na página.
+        if (kind === 'government') await (await import('../../utils/governmentShareCard')).exportGovernmentShare(result, premiumReport, sharedReligion);
+        else if (kind === 'timeline') await (await import('../../utils/timelineShareCard')).exportTimelineShare(result, premiumReport, sharedReligion);
+        else await (await import('../../utils/livingShareCard')).exportLivingShare(result, premiumReport, sharedReligion);
+      }
     } catch {
       setShareError({ kind, message: t.errImage });
     } finally {
@@ -346,6 +352,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
                   if (report) track('premium_report_view');
                 }}
                 onDenied={access.revoke}
+                shareButton={shareButton}
               />
             </Suspense>
           ) : (

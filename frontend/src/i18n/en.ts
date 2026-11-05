@@ -751,6 +751,31 @@ export const en: Strings = {
   sharePersonalitiesCta: 'Share nearby personalities',
   sharePartiesCta: 'Share nearby parties',
   shareCompassCta: 'Share values and compass',
+  shareGovernmentCta: 'Share ideal government',
+  shareTimelineCta: 'Share timeline',
+  shareLivingCta: 'Share countries to live in',
+  shareIdealGovernment: 'IDEAL GOVERNMENT',
+  shareTimeline: 'TIMELINE',
+  shareLiving: 'COUNTRIES TO LIVE IN',
+  shareBestEra: 'MOST COMPATIBLE ERA',
+  shareGovernmentFilePrefix: '12axes-ideal-government',
+  shareGovernmentTitle: 'My ideal government | 12axes.vercel.app',
+  shareGovernmentMessage: (leader) =>
+    `See my ideal government on the 12 Axes Political Quiz!\n\n` +
+    `🏛️ Political leader:\n${leader}\n\n` +
+    `👉 Take the test and build yours:\nhttps://12axes.vercel.app/en`,
+  shareTimelineFilePrefix: '12axes-timeline',
+  shareTimelineTitle: 'My ideological timeline | 12axes.vercel.app',
+  shareTimelineMessage: (era) =>
+    `See my ideological timeline on the 12 Axes Political Quiz!\n\n` +
+    `⏳ Most compatible era:\n${era}\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
+  shareLivingFilePrefix: '12axes-countries-to-live-in',
+  shareLivingTitle: 'The countries where I would live | 12axes.vercel.app',
+  shareLivingMessage: (country, percent) =>
+    `See the countries where I would feel at home, according to the 12 Axes Political Quiz!\n\n` +
+    `🌎 Most compatible:\n${country} - ${percent}% compatibility\n\n` +
+    `👉 Take the test and find yours:\nhttps://12axes.vercel.app/en`,
   shareNearbyPersonalities: 'NEARBY PERSONALITIES',
   shareNearbyParties: 'NEARBY PARTIES',
   shareValuesCompass: 'VALUES AND COMPASS',

@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState, type ReactNode } from 'react';
 import { fetchPremiumReport } from '../../../services/premiumApi';
 import { ApiError } from '../../../services/quizApi';
 import type { Axis, AxisResult, PremiumReport } from '../../../types/quiz';
@@ -22,12 +22,14 @@ interface Props {
   onReport?: (report: PremiumReport | null) => void;
   /** O servidor recusou o token (pagamento reembolsado, por exemplo): quem chamou volta ao convite. */
   onDenied?: () => void;
+  /** O botão de compartilhar o cartão de cada seção que tem um (governo, linha do tempo e países para viver). */
+  shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode;
 }
 
 type State = { status: 'loading' } | { status: 'error' } | { status: 'ready'; report: PremiumReport };
 
 /** Conteúdo do Relatório Completo: carrega do endpoint protegido e mostra as seções pagas. */
-export default function PremiumReportSection({ vector, answers, token, religion, axes, results, devOpen = false, onReport, onDenied }: Props) {
+export default function PremiumReportSection({ vector, answers, token, religion, axes, results, devOpen = false, onReport, onDenied, shareButton }: Props) {
   const [state, setState] = useState<State>({ status: 'loading' });
   const [attempt, setAttempt] = useState(0);
 
@@ -80,7 +82,7 @@ export default function PremiumReportSection({ vector, answers, token, religion,
   return (
     <>
       {devOpen && <p className="e-prem-dev">{P.devBadge}</p>}
-      {premiumPanels(report, axes, results).map(({ id, node }) => (
+      {premiumPanels(report, axes, results, shareButton).map(({ id, node }) => (
         <Fragment key={id}>{node}</Fragment>
       ))}
       {/* Só na página: o PDF usa premiumPanels sem esta seção. Sem token (modo de desenvolvimento) não há o que guardar. */}

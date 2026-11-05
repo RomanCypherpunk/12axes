@@ -740,6 +740,31 @@ export const pt: Strings = {
   sharePersonalitiesCta: 'Compartilhar personalidades próximas',
   sharePartiesCta: 'Compartilhar partidos próximos',
   shareCompassCta: 'Compartilhar valores e bússola',
+  shareGovernmentCta: 'Compartilhar governo ideal',
+  shareTimelineCta: 'Compartilhar linha do tempo',
+  shareLivingCta: 'Compartilhar países para viver',
+  shareIdealGovernment: 'GOVERNO IDEAL',
+  shareTimeline: 'LINHA DO TEMPO',
+  shareLiving: 'PAÍSES PARA VIVER',
+  shareBestEra: 'ÉPOCA MAIS COMPATÍVEL',
+  shareGovernmentFilePrefix: '12axes-governo-ideal',
+  shareGovernmentTitle: 'Meu governo ideal | 12axes.vercel.app',
+  shareGovernmentMessage: (leader) =>
+    `Veja o meu governo ideal no Quiz Político 12 Axes!\n\n` +
+    `🏛️ Líder político:\n${leader}\n\n` +
+    `👉 Faça o teste e monte o seu:\nhttps://12axes.vercel.app/`,
+  shareTimelineFilePrefix: '12axes-linha-do-tempo',
+  shareTimelineTitle: 'Minha linha do tempo ideológica | 12axes.vercel.app',
+  shareTimelineMessage: (era) =>
+    `Veja a minha linha do tempo ideológica no Quiz Político 12 Axes!\n\n` +
+    `⏳ Época mais compatível:\n${era}\n\n` +
+    `👉 Faça o teste e descubra a sua:\nhttps://12axes.vercel.app/`,
+  shareLivingFilePrefix: '12axes-paises-para-viver',
+  shareLivingTitle: 'Os países onde eu viveria | 12axes.vercel.app',
+  shareLivingMessage: (country, percent) =>
+    `Veja os países onde eu me sentiria em casa, segundo o Quiz Político 12 Axes!\n\n` +
+    `🌎 Mais compatível:\n${country} - ${percent}% de compatibilidade\n\n` +
+    `👉 Faça o teste e descubra os seus:\nhttps://12axes.vercel.app/`,
   shareNearbyPersonalities: 'PERSONALIDADES PRÓXIMAS',
   shareNearbyParties: 'PARTIDOS PRÓXIMOS',
   shareValuesCompass: 'VALORES E BÚSSOLA',

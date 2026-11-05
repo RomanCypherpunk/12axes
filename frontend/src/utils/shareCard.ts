@@ -742,7 +742,8 @@ export function buildShareFooter(cta: string = t.shareFooterCta, qrUrl?: string,
  */
 
 type ToPng = (node: HTMLElement, options?: Record<string, unknown>) => Promise<string>;
-type ShareImageKind = 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'flagcover' | 'logo' | 'logosmall' | 'badge' | 'badgesmall' | 'photo' | 'tint' | 'qr';
+type ShareImageKind =
+  | 'portrait' | 'avatar' | 'flag' | 'flagfit' | 'flagcover' | 'flaground' | 'logo' | 'logosmall' | 'logoround' | 'badge' | 'badgesmall' | 'mosaic' | 'photo' | 'tint' | 'qr';
 
 interface ShareImageSlot {
   kind: ShareImageKind;
@@ -760,7 +761,11 @@ const IMAGE_TIMEOUT_MS = 8000;
 export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise<string> {
   const slots = collectImageSlots(target);
   // Carrega as imagens em paralelo com o render do DOM.
-  const imagesPromise = Promise.all(slots.map((slot) => (slot.kind === 'tint' || slot.kind === 'qr' ? Promise.resolve(null) : loadImage(slot.src).catch(() => null))));
+  const imagesPromise = Promise.all(
+    slots.map((slot) => (slot.kind === 'tint' || slot.kind === 'qr' || slot.kind === 'mosaic' ? Promise.resolve(null) : loadImage(slot.src).catch(() => null)))
+  );
+  // O mosaico da época mais compatível tem 4 imagens: o `src` dele é uma lista JSON de { src, fit }.
+  const mosaicsPromise = Promise.all(slots.map((slot) => (slot.kind === 'mosaic' ? loadMosaic(slot.src) : Promise.resolve(null))));
 
   const domDataUrl = await toPng(target, {
     width: SHARE_WIDTH,
@@ -769,7 +774,7 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
     cacheBust: false,
     skipFonts: false
   });
-  const [domLayer, images] = await Promise.all([loadImage(domDataUrl), imagesPromise]);
+  const [domLayer, images, mosaics] = await Promise.all([loadImage(domDataUrl), imagesPromise, mosaicsPromise]);
 
   const canvas = document.createElement('canvas');
   canvas.width = SHARE_WIDTH;
@@ -798,6 +803,11 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
       drawQr(ctx, slot.src, slot.rect, slot.tint ?? SHARE_COLORS.papel);
       return;
     }
+    if (slot.kind === 'mosaic') {
+      const mosaic = mosaics[index];
+      if (mosaic) drawMosaic(ctx, mosaic, slot.rect);
+      return;
+    }
     const image = images[index];
     if (!image || slot.kind === 'portrait' || slot.kind === 'tint') {
       return;
@@ -819,6 +829,14 @@ export async function renderSharePng(target: HTMLElement, toPng: ToPng): Promise
       drawBadge(ctx, image, slot.rect, 10, 4, true);
     } else if (slot.kind === 'badgesmall') {
       drawBadge(ctx, image, slot.rect, 6, 2, false);
+    } else if (slot.kind === 'flaground') {
+      // Bandeira num círculo: cortada do centro, sem o ajuste para o alto que os retratos têm.
+      ctx.beginPath();
+      ctx.ellipse(slot.rect.x + slot.rect.width / 2, slot.rect.y + slot.rect.height / 2, slot.rect.width / 2, slot.rect.height / 2, 0, 0, Math.PI * 2);
+      ctx.clip();
+      drawCover(ctx, image, slot.rect, 0.5);
+    } else if (slot.kind === 'logoround') {
+      drawLogoRound(ctx, image, slot.rect);
     } else if (slot.kind === 'avatar') {
       ctx.beginPath();
       ctx.ellipse(
@@ -1077,6 +1095,63 @@ function drawBadge(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect:
   roundedRectPath(ctx, inner, Math.max(0, radius - border));
   ctx.clip();
   drawCover(ctx, image, inner, 0.5);
+  ctx.restore();
+}
+
+// Logo de partido num círculo branco, inteiro (sem corte), com uma pequena margem.
+function drawLogoRound(ctx: CanvasRenderingContext2D, image: HTMLImageElement, rect: CanvasRect) {
+  ctx.beginPath();
+  ctx.ellipse(rect.x + rect.width / 2, rect.y + rect.height / 2, rect.width / 2, rect.height / 2, 0, 0, Math.PI * 2);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.clip();
+  const pad = rect.width * 0.14;
+  const scale = Math.min((rect.width - pad * 2) / image.naturalWidth, (rect.height - pad * 2) / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  ctx.drawImage(image, rect.x + (rect.width - width) / 2, rect.y + (rect.height - height) / 2, width, height);
+}
+
+interface MosaicCell {
+  src: string;
+  /** 'cover' preenche a célula (retratos e bandeiras); 'contain' mostra o logo inteiro sobre branco. */
+  fit: 'cover' | 'contain';
+}
+
+async function loadMosaic(json: string): Promise<{ cell: MosaicCell; image: HTMLImageElement | null }[]> {
+  const cells = JSON.parse(json) as MosaicCell[];
+  return Promise.all(cells.map(async (cell) => ({ cell, image: await loadImage(cell.src).catch(() => null) })));
+}
+
+// Quadrado 2x2 da época mais compatível: até 4 imagens, recortado com cantos de 26px.
+function drawMosaic(ctx: CanvasRenderingContext2D, items: { cell: MosaicCell; image: HTMLImageElement | null }[], rect: CanvasRect) {
+  ctx.save();
+  roundedRectPath(ctx, rect, 26);
+  ctx.clip();
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+  ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+  const width = rect.width / 2;
+  const height = rect.height / 2;
+  items.slice(0, 4).forEach(({ cell, image }, index) => {
+    if (!image) return;
+    const slot = { x: rect.x + (index % 2) * width, y: rect.y + Math.floor(index / 2) * height, width, height };
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(slot.x, slot.y, slot.width, slot.height);
+    ctx.clip();
+    if (cell.fit === 'contain') {
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(slot.x, slot.y, slot.width, slot.height);
+      const pad = 10;
+      const scale = Math.min((slot.width - pad * 2) / image.naturalWidth, (slot.height - pad * 2) / image.naturalHeight);
+      const w = image.naturalWidth * scale;
+      const h = image.naturalHeight * scale;
+      ctx.drawImage(image, slot.x + (slot.width - w) / 2, slot.y + (slot.height - h) / 2, w, h);
+    } else {
+      drawCover(ctx, image, slot, 0.25);
+    }
+    ctx.restore();
+  });
   ctx.restore();
 }
 

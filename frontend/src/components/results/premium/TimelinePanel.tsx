@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { t } from '../../../i18n';
 import type { Axis, AxisResult, CountryMatch, PartyMatch, PersonalityMatch, TimelineEntry, TimelineEra } from '../../../types/quiz';
 import { resolveCountryFlagSrc } from '../../../utils/countryFlags';
@@ -14,6 +14,8 @@ interface TimelinePanelProps {
   timeline: TimelineEra[];
   axes: Axis[];
   results: Map<string, AxisResult>;
+  /** O que aparece embaixo da seção (o botão de compartilhar o cartão dela). */
+  footer?: ReactNode;
 }
 
 type Selected =
@@ -142,7 +144,7 @@ export function eraHighlights(era: TimelineEra): TimelineEntry[] {
   return era.highlights;
 }
 
-export function TimelinePanel({ timeline, axes, results }: TimelinePanelProps) {
+export function TimelinePanel({ timeline, axes, results, footer }: TimelinePanelProps) {
   const [info, setInfo] = useState<Selected | null>(null);
   const best = bestTimelineEra(timeline);
   const bestCompatibility = best ? eraCompatibility(best) : 0;
@@ -215,6 +217,8 @@ export function TimelinePanel({ timeline, axes, results }: TimelinePanelProps) {
           </div>
         </article>
       )}
+
+      {footer}
 
       {info?.type === 'personality' && (
         <PersonalityInfoSheet match={info.match} onClose={() => setInfo(null)} />
