@@ -41,14 +41,16 @@ const SCENE_WIDTH = 952;
 const SCENE_HEIGHT = 1130;
 const CENTER_X = SCENE_WIDTH / 2;
 // O líder, no topo, leva o texto em cima do rosto e por isso a cena tem mais espaço acima da mesa do que abaixo.
-const CENTER_Y = 600;
+const CENTER_Y = 620;
 // A mesa é pequena porque o texto precisa de espaço ao lado de cada rosto: com 952px de largura, o texto (190px) e o rosto ocupam
 // o que sobra dos dois lados. Os rostos ficam numa elipse um pouco mais alta que larga e as cadeiras num círculo junto da mesa.
-const TABLE_RADIUS = 134;
-const FACE_RX = 232;
-const FACE_RY = 440;
-const CHAIR_RADIUS = 168;
-const CHAIR_SCALE = 0.92;
+const TABLE_RADIUS = 112;
+// Os rostos ficam em duas colunas alinhadas (uma de cada lado da mesa), em quatro linhas fixas, e o líder no topo.
+const FACE_RX = 228;
+const ROW_OFFSETS = [-330, -110, 110, 330];
+const LEADER_Y = 150;
+const CHAIR_RADIUS = 142;
+const CHAIR_SCALE = 0.85;
 const FACE = 112;
 const LABEL_WIDTH = 176;
 const LABEL_GAP = 16;
@@ -90,7 +92,7 @@ function table(color: Palette): SVGElement {
     defs,
     svgNode('ellipse', { cx: CENTER_X, cy: CENTER_Y, rx: TABLE_RADIUS + 8, ry: TABLE_RADIUS + 8, fill: mixHex(color.bg, color.base, 0.6), filter: 'url(#gov-shadow)' }),
     svgNode('ellipse', { cx: CENTER_X, cy: CENTER_Y, rx: TABLE_RADIUS, ry: TABLE_RADIUS, fill: color.bg }),
-    svgNode('ellipse', { cx: CENTER_X, cy: CENTER_Y, rx: TABLE_RADIUS - 38, ry: TABLE_RADIUS - 38, fill: 'none', stroke: mixHex(color.bg, color.base, 0.75), 'stroke-width': 2 })
+    svgNode('ellipse', { cx: CENTER_X, cy: CENTER_Y, rx: TABLE_RADIUS - 32, ry: TABLE_RADIUS - 32, fill: 'none', stroke: mixHex(color.bg, color.base, 0.75), 'stroke-width': 2 })
   );
   ORDER.forEach((_, index) => {
     const angle = angleOf(index);
@@ -106,10 +108,11 @@ function table(color: Palette): SVGElement {
   return svg;
 }
 
-/** Onde fica o centro do rosto de um cargo: numa elipse em volta da mesa, o líder no topo. */
+/** Onde fica o centro do rosto de um cargo: o líder no topo; à direita, de cima para baixo, o vice e os três seguintes; à esquerda, de baixo para cima, os quatro últimos. */
 function facePosition(index: number): { x: number; y: number } {
-  const angle = angleOf(index);
-  return { x: CENTER_X + FACE_RX * Math.sin(radians(angle)), y: CENTER_Y - FACE_RY * Math.cos(radians(angle)) };
+  if (index === 0) return { x: CENTER_X, y: LEADER_Y };
+  if (index <= 4) return { x: CENTER_X + FACE_RX, y: CENTER_Y + ROW_OFFSETS[index - 1] };
+  return { x: CENTER_X - FACE_RX, y: CENTER_Y + ROW_OFFSETS[8 - index] };
 }
 
 /** O nome (caixa-alta, até 2 linhas) e o cargo (até 3 linhas), com a fonte que couber, alinhados para o lado do rosto. */
