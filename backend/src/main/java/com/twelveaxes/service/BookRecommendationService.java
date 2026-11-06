@@ -64,7 +64,7 @@ public class BookRecommendationService {
                 match.imagePath(),
                 title,
                 book.year(),
-                affiliateUrl(localized(book.url(), lang), title, storeAuthor, lang),
+                affiliateUrl(localized(book.url(), lang), searchTitle(book, lang, title), storeAuthor, lang),
                 match.compatibility()
         );
     }
@@ -78,6 +78,15 @@ public class BookRecommendationService {
         String query = URLEncoder.encode(title + " " + author, StandardCharsets.UTF_8);
         return "https://" + (english ? AMAZON_US_HOST : AMAZON_BR_HOST)
                 + "/s?k=" + query + "&i=stripbooks&tag=" + (english ? AMAZON_US_TAG : AMAZON_BR_TAG);
+    }
+
+    /** Na Amazon americana a busca usa o título em inglês: edições em espanhol raramente estão lá. */
+    private static String searchTitle(Book book, String lang, String shownTitle) {
+        if (QuizDataService.LANG_PT.equals(lang)) {
+            return shownTitle;
+        }
+        String english = book.title() == null ? null : book.title().get(QuizDataService.LANG_EN);
+        return english == null || english.isBlank() ? shownTitle : english;
     }
 
     private static String localized(Map<String, String> values, String lang) {

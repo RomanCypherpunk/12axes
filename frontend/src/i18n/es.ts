@@ -77,7 +77,7 @@ export const es: DeepPartial<Strings> = {
   startQuiz: 'Descubrir mi perfil',
   seeAxes: 'Ver los 12 ejes',
   heroLabels: ['Gratis', 'Anónimo', 'Rápido', 'Resultado al instante'],
-  heroTeaserLabel: 'compatibilidad',
+  heroTeaserLabel: 'match',
   heroTeaserTag: 'Resultado de ejemplo',
   heroDeckDot: (position, total) => `Mostrar ejemplo ${position} de ${total}`,
   heroDeckAlt: (ideology) => `Ejemplo de la tarjeta de resultado para compartir: ${ideology}`,
@@ -485,7 +485,7 @@ export const es: DeepPartial<Strings> = {
   resultsLeadShared:
     'Resultado compartido: la posición en cada uno de los 12 ejes políticos y las afinidades ideológicas calculadas a partir de ella. Haz el test para descubrir las tuyas.',
   resultsSummaryAria: 'Resumen del análisis',
-  metaTop: 'Mayor compatibilidad',
+  metaTop: 'Top match',
   axesSectionEyebrow: 'Ejes políticos',
   axesSectionTitle: 'Tus 12 ejes',
   proximityEyebrow: 'Proximidad ideológica',
@@ -812,7 +812,7 @@ export const es: DeepPartial<Strings> = {
   portraitAlt: (name) => `Retrato de ${name}`,
   portraitUnavailableAria: (name) => `Retrato no disponible para ${name}`,
   compatibilityAria: (pct) => `Compatibilidad: ${pct} por ciento`,
-  matchWord: 'compatibilidad',
+  matchWord: 'match',
   compatibilityLevels: {
     veryHigh: 'Compatibilidad muy alta',
     high: 'Compatibilidad alta',
@@ -821,7 +821,7 @@ export const es: DeepPartial<Strings> = {
     veryLow: 'Compatibilidad muy baja'
   },
   shareTitle: 'Mi perfil ideológico | 12axes.vercel.app',
-  shareTopMatch: 'Mayor compatibilidad',
+  shareTopMatch: 'Top match',
   shareCountry: 'País más compatible',
   sharePersonality: 'Personalidad',
   shareResultLabel: 'MI RESULTADO',

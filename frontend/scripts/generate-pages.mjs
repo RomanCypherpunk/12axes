@@ -257,6 +257,7 @@ function buildLocaleContext(locale) {
   const books = baseBooks.map((b) => ({
     ...b,
     title: (b.title && (b.title[locale] || b.title.en || b.title.pt)) || '',
+    searchTitle: (b.title && (locale === 'pt' ? b.title.pt : b.title.en || b.title.pt)) || '',
     url: (b.url && (b.url[locale] || b.url.en || b.url.pt)) || ''
   }));
   // A busca de livros fora do português é na Amazon americana, com o autor em inglês.

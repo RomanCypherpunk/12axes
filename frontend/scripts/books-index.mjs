@@ -181,7 +181,8 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
       labels[b.category] ?? ''
     ].filter(Boolean).join(' ').toLowerCase();
 
-    const amzUrl = amazonAffiliateUrl(b.url, b.title, L.storeAuthorName(author), locale);
+    // A busca na Amazon americana usa o título em inglês: edições em espanhol raramente estão lá.
+    const amzUrl = amazonAffiliateUrl(b.url, b.searchTitle, L.storeAuthorName(author), locale);
 
     return `<li class="bc" data-text="${escapeHtml(textParts)}" data-cat="${b.category}">
       <article class="e-read-card bc-card">
