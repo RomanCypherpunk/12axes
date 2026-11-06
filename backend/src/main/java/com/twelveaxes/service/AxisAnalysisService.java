@@ -63,12 +63,19 @@ public class AxisAnalysisService {
                             level.side(),
                             level.level(),
                             texts.get(level.textKey(axis.axisId())),
+                            judgement(texts, axis.axisId(), level, "pros"),
+                            judgement(texts, axis.axisId(), level, "cons"),
                             topImpacts(impactsByAxis.getOrDefault(axis.axisId(), List.of())),
                             positionOf(disagreements, "ideology", axis.axisId()),
                             positionOf(disagreements, "personality", axis.axisId()),
                             positionOf(disagreements, "country", axis.axisId()));
                 })
                 .toList();
+    }
+
+    /** Por que a posicao e elogiada ("pros") ou criticada ("cons"); texto por polo, sem versao para o equilibrado. */
+    private static String judgement(Map<String, String> texts, String axisId, AxisLevel level, String kind) {
+        return "balanced".equals(level.side()) ? null : texts.get(axisId + "." + level.side() + "." + kind);
     }
 
     // As respostas de maior efeito no eixo. Neutras (impacto 0) nao puxam nada e ficam de fora.

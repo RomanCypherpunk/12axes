@@ -1,0 +1,137 @@
+{
+  "lider": {
+    "intro": "{name} conduz o governo como um todo, define as prioridades centrais e responde pelas grandes decisões que afetam o país inteiro.",
+    "axes": {
+      "representacao": {
+        "left": "{name} governaria sob o controle de eleições livres, tribunais independentes e oposição atuante, abrindo espaço para referendos e para a revogação de mandatos.",
+        "right": "{name} concentraria as decisões num núcleo pequeno e estável, sem limites rígidos de mandato, escolhendo quadros por competência ou sucessão em vez de depender do voto.",
+        "balanced": "{name} manteria eleições e instituições de controle, mas aceitaria dar mais margem ao governo em crises, pesando estabilidade e participação caso a caso."
+      },
+      "economia": {
+        "left": "{name} conduziria o governo com empresas estratégicas e bancos públicos no centro do desenvolvimento, limitando o poder dos grandes grupos privados e ampliando a reforma agrária.",
+        "right": "{name} reduziria o peso do setor público, abrindo serviços, estradas e estatais à iniciativa privada e protegendo a propriedade e a herança contra a redistribuição.",
+        "balanced": "{name} equilibraria público e privado, mantendo sob gestão do governo o que considera essencial e entregando à iniciativa privada o que ela fizer melhor."
+      }
+    }
+  },
+  "vice": {
+    "intro": "{name} apoia o líder no dia a dia e representa o país lá fora, cuidando de alianças, negociações e relações com outros governos.",
+    "axes": {
+      "estrutura": {
+        "left": "{name} faria a ponte entre o governo central e os governos locais, defendendo a autonomia de estados e cidades e abrindo espaço para que firmem acordos próprios com o exterior.",
+        "right": "{name} garantiria que estados e cidades sigam a linha do governo central, falando com uma só voz lá fora e evitando que regiões adotem acordos ou políticas paralelas.",
+        "balanced": "{name} coordenaria o diálogo com governadores e prefeitos, respeitando a autonomia local nos temas regionais, mas mantendo uma posição única do país nas relações externas."
+      },
+      "diplomacia": {
+        "left": "{name} trataria a força militar como base da posição externa, com Forças Armadas fortes, indústria de defesa própria e dissuasão crível diante de qualquer ameaça.",
+        "right": "{name} esgotaria o diálogo antes de qualquer uso da força e apoiaria acordos de desarmamento, mediação da ONU e tribunais internacionais, mesmo à custa de concessões.",
+        "balanced": "{name} combinaria defesa preparada com diplomacia ativa, negociando sempre que possível, mas sem abrir mão de capacidade militar para dissuadir ataques."
+      }
+    }
+  },
+  "economia": {
+    "intro": "{name} cuida das contas públicas, dos impostos e do rumo da economia, decidindo como o país produz, gasta e distribui a renda.",
+    "axes": {
+      "economia": {
+        "left": "{name} priorizaria serviços e empresas públicas fortes, com bancos públicos financiando o desenvolvimento, renda básica a quem precisa e redistribuição de patrimônio.",
+        "right": "{name} transferiria a gestão de serviços e infraestrutura ao setor privado, protegeria a propriedade e a herança e daria prazo máximo aos auxílios sociais.",
+        "balanced": "{name} manteria áreas essenciais sob gestão pública e abriria outras à iniciativa privada, escolhendo caso a caso o que funciona melhor em cada serviço."
+      },
+      "controle": {
+        "left": "{name} planejaria setores estratégicos, usaria subsídios, câmbio e gasto público para orientar a economia e manteria o Banco Central alinhado ao governo eleito.",
+        "right": "{name} deixaria preços, salários e juros ao mercado, cortaria impostos e regulações, defenderia um Banco Central independente e evitaria congelamentos.",
+        "balanced": "{name} deixaria o mercado operar no dia a dia, mas interviria em crises ou setores estratégicos, combinando regras estáveis com estímulos pontuais."
+      }
+    }
+  },
+  "educacao": {
+    "intro": "{name} define o que escolas e universidades ensinam e como formam as novas gerações, do currículo ao acesso ao ensino superior.",
+    "axes": {
+      "moral": {
+        "left": "{name} incluiria educação sexual e sobre identidade de gênero, adotaria cotas raciais no acesso às universidades e trataria a diversidade familiar como conteúdo escolar.",
+        "right": "{name} deixaria a educação moral e sexual a cargo das famílias, valorizaria o modelo de família tradicional e preferiria mudanças graduais no currículo.",
+        "balanced": "{name} trataria temas morais com cautela, ouvindo escolas e famílias e incluindo conteúdos sensíveis só quando houvesse consenso razoável sobre a abordagem."
+      },
+      "religiao": {
+        "left": "{name} manteria o ensino laico, sem símbolos religiosos nas escolas, sem religião na educação infantil e com valores ensinados sem depender da crença em Deus.",
+        "right": "{name} abriria espaço para a fé na formação dos alunos, valorizando a transmissão das tradições religiosas e o papel das comunidades de fé na educação.",
+        "balanced": "{name} trataria a religião como tema de cultura e história, respeitando a fé das famílias sem transformar a escola em espaço de catequese nem de combate à crença."
+      }
+    }
+  },
+  "estrategia": {
+    "intro": "{name} monta maiorias, desenha as regras do jogo político e pensa a posição do país no mundo a médio e longo prazo.",
+    "axes": {
+      "diplomacia": {
+        "left": "{name} pensaria a posição do país a partir do poder militar, com indústria de defesa própria, prioridade aos gastos com armamento e dissuasão como base de qualquer negociação.",
+        "right": "{name} apostaria em acordos, mediação da ONU e desarmamento para firmar a posição do país, aceitando concessões e reduzindo gastos militares para evitar qualquer guerra.",
+        "balanced": "{name} montaria uma estratégia que combine capacidade de defesa e diplomacia, mantendo a força como recurso de dissuasão e a negociação como caminho preferencial."
+      },
+      "intervencao": {
+        "left": "{name} posicionaria o país como neutro, fora de blocos que exijam alinhamento automático, sem bases militares no exterior e apostando em mediação internacional.",
+        "right": "{name} trataria a influência regional como objetivo estratégico, usando alianças, sanções e liderança entre os vizinhos para ampliar o peso do país.",
+        "balanced": "{name} buscaria uma posição pragmática, firmando alianças de ocasião e defendendo interesses próprios sem se prender a blocos nem a intervenções longas."
+      }
+    }
+  },
+  "filosofia": {
+    "intro": "{name} ajuda o governo a ligar princípios a decisões concretas, apontando quais valores estão em jogo em cada escolha difícil.",
+    "axes": {
+      "poder": {
+        "left": "{name} lembraria que a liberdade depende de proteção, defendendo que a comunidade aceite certas restrições para conter o crime, a desinformação e ameaças graves.",
+        "right": "{name} defenderia que cada adulto é dono da própria vida, do corpo e das escolhas privadas, e que vigilância e punição precisam de justificativa muito forte.",
+        "balanced": "{name} pesaria em cada caso o custo de restringir liberdades contra o risco de não agir, rejeitando tanto a vigilância ampla quanto a omissão diante do perigo."
+      },
+      "moral": {
+        "left": "{name} defenderia igualdade de direitos para pessoas LGBT, autonomia reprodutiva e respeito a novos modelos de família, vendo a moral como algo que evolui.",
+        "right": "{name} trataria a família, o casamento e os costumes herdados como bases da vida em comum, preferindo mudanças lentas e desconfiando de rupturas morais.",
+        "balanced": "{name} valorizaria as tradições sem fechá-las a revisões, procurando acolher mudanças sociais quando elas não ameaçam a coesão da comunidade."
+      }
+    }
+  },
+  "social": {
+    "intro": "{name} coordena as políticas que tocam a vida cotidiana das pessoas, como família, proteção social, inclusão e convivência entre grupos.",
+    "axes": {
+      "imigracao": {
+        "left": "{name} trataria a integração como prioridade, com cursos de idioma obrigatórios e exigência de adaptação aos costumes, evitando bairros isolados culturalmente.",
+        "right": "{name} defenderia que imigrantes vivam bem sem abandonar seus costumes, com escolas bilíngues, serviços em várias línguas e combate a estereótipos de origem.",
+        "balanced": "{name} incentivaria o aprendizado da língua local e a convivência entre grupos, sem obrigar ninguém a renunciar às próprias tradições."
+      },
+      "representacao": {
+        "left": "{name} elaboraria as políticas sociais com consulta direta à população, assembleias e conselhos comunitários, garantindo voz às minorias e espaço para as críticas da oposição.",
+        "right": "{name} decidiria os programas sociais a partir de um núcleo técnico enxuto, priorizando resultados rápidos e estabilidade em vez de consultas populares e debates longos.",
+        "balanced": "{name} ouviria a população e os conselhos sociais nas decisões importantes, mas daria às equipes técnicas margem para agir rápido quando a urgência exigisse."
+      }
+    }
+  },
+  "industria": {
+    "intro": "{name} cuida da produção, da pesquisa e da inovação, decidindo como o país desenvolve sua indústria, sua energia e novas tecnologias.",
+    "axes": {
+      "tecnologia": {
+        "left": "{name} aceleraria a automação, a inteligência artificial, a biotecnologia e a exploração espacial, aceitando impactos ambientais em troca de crescimento industrial.",
+        "right": "{name} daria prioridade à preservação ambiental, a menos agrotóxicos e à produção de menor impacto, mesmo com perda de produtividade ou crescimento mais lento.",
+        "balanced": "{name} apoiaria a inovação dentro de limites ambientais, buscando tecnologias que aumentem a produção sem destruir áreas preservadas."
+      },
+      "comercio": {
+        "left": "{name} protegeria a indústria nacional com tarifas e compras públicas, impediria a venda de empresas estratégicas a estrangeiros e buscaria produzir chips e remédios no país.",
+        "right": "{name} integraria a indústria às cadeias globais, atraindo multinacionais e investimento externo e aceitando a concorrência estrangeira para ganhar eficiência.",
+        "balanced": "{name} atrairia investimento externo sem abrir mão de proteger alguns setores-chave, avaliando cada cadeia produtiva pelo seu peso estratégico."
+      }
+    }
+  },
+  "cultura": {
+    "intro": "{name} cuida dos valores, símbolos, tradições e da memória comum, cultivando aquilo que faz as pessoas se reconhecerem como um povo.",
+    "axes": {
+      "religiao": {
+        "left": "{name} manteria os espaços e símbolos públicos laicos, sem feriados ou referências religiosas oficiais, e apoiaria a cultura com base em valores seculares.",
+        "right": "{name} protegeria a fé como parte da identidade nacional, apoiando festas, templos e tradições religiosas e sua transmissão às novas gerações.",
+        "balanced": "{name} trataria festas e símbolos religiosos como patrimônio cultural, sem impor nenhuma fé e sem apagá-los da memória comum do país."
+      },
+      "imigracao": {
+        "left": "{name} reforçaria a língua e as tradições nacionais como base comum, esperando que quem chega adote os costumes locais e se integre à cultura predominante.",
+        "right": "{name} incorporaria à identidade nacional as culturas trazidas por imigrantes, incentivando a convivência de línguas e até uma identidade de cidadão do mundo.",
+        "balanced": "{name} cultivaria uma identidade nacional comum que reserve espaço para as contribuições de imigrantes, sem diluir as tradições locais."
+      }
+    }
+  }
+}

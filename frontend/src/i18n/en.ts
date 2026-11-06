@@ -118,6 +118,34 @@ export const en: Strings = {
   personalityInfoAria: (name) => `See details about ${name}`,
   closenessTitle: 'What brings you closer',
   closenessYou: 'You',
+  insight: {
+    closeTitle: (name) => `What brings you closer to ${name}`,
+    closeNone: (name) => `You and ${name} do not clearly share a position on any axis.`,
+    closeAxis: (axis, phrase, youPct, otherPct, name, gap) =>
+      `In ${axis}, you both show ${phrase}. You sit at ${youPct}% on that side and ${name} at ${otherPct}%${gap < 8 ? ', practically the same spot' : gap < 15 ? ', very close' : ', with different intensity'}.`,
+    apartTitle: 'Where you part ways',
+    apartNone: (name) => `You and ${name} are not far apart on any axis.`,
+    apartAxis: (axis, you, other, name, gap) => `In ${axis}, you part ways: you show ${you}, while ${name} shows ${other}. The distance between you on this axis is ${gap} ${gap === 1 ? 'point' : 'points'}.`,
+    apartTiny: (axis, name, gap) =>
+      `On ${axis}, the biggest difference between you and ${name} is only ${gap} ${gap === 1 ? 'point' : 'points'}: you are practically in the same spot.`,
+    apartSame: (axis, phrase, youPct, otherPct, name, gap) =>
+      `On ${axis}, you lean the same way but with different intensity: you both show ${phrase}, you at ${youPct}% and ${name} at ${otherPct}%. The distance between you on this axis is ${gap} ${gap === 1 ? 'point' : 'points'}.`,
+    balanced: 'a balanced position',
+    poles: {
+      estrutura: { left: 'a preference for more autonomy for states and regions', right: 'a preference for a stronger central government' },
+      representacao: { left: 'support for democracy and free elections', right: 'support for power concentrated in a leader or group' },
+      poder: { left: 'a priority on security and order', right: 'a priority on individual liberties' },
+      imigracao: { left: 'a preference for assimilation into the national culture', right: 'support for several cultures living side by side' },
+      diplomacia: { left: 'trust in military strength', right: 'a preference for peace and negotiation' },
+      intervencao: { left: 'a preference for staying out of foreign disputes', right: 'an emphasis on defending the national interest' },
+      economia: { left: 'an emphasis on public ownership and services', right: 'an emphasis on private property and enterprise' },
+      controle: { left: 'a preference for a planned, regulated economy', right: 'a preference for free markets and light regulation' },
+      comercio: { left: 'support for protecting national industry', right: 'support for opening up to international trade' },
+      religiao: { left: 'a preference for separating religion from politics', right: 'support for more religion in public life' },
+      moral: { left: 'progressive social values', right: 'traditional social values' },
+      tecnologia: { left: 'trust in technology and industry', right: 'a preference for more natural, biological solutions' }
+    }
+  },
   compareEyebrow: 'Comparative analysis',
   compareTitle: 'Comparative analysis',
   compareLead: 'Pick a personality, country or ideology and see, axis by axis, where you are close or far apart.',
@@ -504,6 +532,12 @@ export const en: Strings = {
   otherMatches: 'Other ideologies',
   navOnThisPage: 'On this page',
   resultsNavReport: 'Full analysis',
+  resultsNavPremiumGroup: 'Full report',
+  resultsNavAxisByAxis: 'Axis by axis',
+  resultsNavDisagree: 'Disagreements',
+  resultsNavGovernment: 'Ideal government',
+  resultsNavTimeline: 'Timeline',
+  resultsNavLiving: 'Where to live',
   resultsNavAxes: '12 axes',
   resultsNavSignature: 'Distinction',
   resultsNavCountries: 'Countries',
@@ -619,7 +653,7 @@ export const en: Strings = {
     { lead: 'Your ideal government:', text: 'nine posts filled by people who think like you.' },
     { lead: 'Which country to move to:', text: 'the 10 countries closest to your ideals.' },
     { lead: 'Where you disagree most:', text: 'with the ideology, figure and country closest to you.' },
-    { lead: 'All 12 axes, one by one:', text: 'what each of your positions reveals and what weighed most in your answers.' },
+    { lead: 'All 12 axes, one by one:', text: 'what each of your positions reveals, why it is praised and why it is criticized.' },
     { lead: 'Your timeline:', text: 'who thought like you, from Antiquity to the 21st century.' },
     { lead: 'Your ideal leader by field:', text: 'politics, economics, philosophy and more.' },
     { lead: 'Full ranking and PDF:', text: 'the whole catalog in a spreadsheet, and the report to keep.' }

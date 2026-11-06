@@ -118,6 +118,34 @@ export const es: DeepPartial<Strings> = {
   personalityInfoAria: (name) => `Ver detalles sobre ${name}`,
   closenessTitle: 'Lo que más te acerca',
   closenessYou: 'Tú',
+  insight: {
+    closeTitle: (name) => `Lo que te acerca a ${name}`,
+    closeNone: (name) => `Tú y ${name} no comparten claramente una posición en ningún eje.`,
+    closeAxis: (axis, phrase, youPct, otherPct, name, gap) =>
+      `En ${axis}, los dos muestran ${phrase}. Tú estás en ${youPct}% de ese lado y ${name} en ${otherPct}%${gap < 8 ? ', prácticamente en el mismo punto' : gap < 15 ? ', muy cerca' : ', con distinta intensidad'}.`,
+    apartTitle: 'Dónde se separan',
+    apartNone: (name) => `Tú y ${name} no quedan muy lejos en ningún eje.`,
+    apartAxis: (axis, you, other, name, gap) => `En ${axis} sus caminos se separan: tú muestras ${you}, y ${name} muestra ${other}. La distancia entre ustedes en este eje es de ${gap} ${gap === 1 ? 'punto' : 'puntos'}.`,
+    apartTiny: (axis, name, gap) =>
+      `En ${axis}, la mayor diferencia entre tú y ${name} es de solo ${gap} ${gap === 1 ? 'punto' : 'puntos'}: están prácticamente en el mismo punto.`,
+    apartSame: (axis, phrase, youPct, otherPct, name, gap) =>
+      `En ${axis} se inclinan hacia el mismo lado, pero con distinta intensidad: los dos muestran ${phrase}, tú en ${youPct}% y ${name} en ${otherPct}%. La distancia entre ustedes en este eje es de ${gap} ${gap === 1 ? 'punto' : 'puntos'}.`,
+    balanced: 'una posición equilibrada',
+    poles: {
+      estrutura: { left: 'preferencia por más autonomía para estados y regiones', right: 'preferencia por un gobierno central más fuerte' },
+      representacao: { left: 'defensa de la democracia y de las elecciones libres', right: 'defensa de un poder concentrado en un líder o grupo' },
+      poder: { left: 'prioridad a la seguridad y el orden', right: 'prioridad a las libertades individuales' },
+      imigracao: { left: 'preferencia por la asimilación a la cultura del país', right: 'defensa de la convivencia entre varias culturas' },
+      diplomacia: { left: 'confianza en la fuerza militar', right: 'preferencia por la paz y la negociación' },
+      intervencao: { left: 'preferencia por mantenerse al margen de disputas externas', right: 'énfasis en defender el interés nacional' },
+      economia: { left: 'énfasis en la propiedad y los servicios públicos', right: 'énfasis en la propiedad y la iniciativa privada' },
+      controle: { left: 'preferencia por una economía planificada y regulada', right: 'preferencia por el libre mercado y poca regulación' },
+      comercio: { left: 'defensa de proteger la industria nacional', right: 'defensa de abrirse al comercio internacional' },
+      religiao: { left: 'preferencia por separar religión y política', right: 'defensa de más religión en la vida pública' },
+      moral: { left: 'valores sociales progresistas', right: 'valores sociales tradicionales' },
+      tecnologia: { left: 'confianza en la tecnología y la industria', right: 'preferencia por soluciones más naturales y biológicas' }
+    }
+  },
   compareEyebrow: 'Análisis comparativo',
   compareTitle: 'Análisis comparativo',
   compareLead: 'Elige una personalidad, un país o una ideología y mira, eje por eje, dónde estás cerca o lejos.',
@@ -492,6 +520,12 @@ export const es: DeepPartial<Strings> = {
   otherMatches: 'Otras ideologías',
   navOnThisPage: 'En esta página',
   resultsNavReport: 'Análisis completo',
+  resultsNavPremiumGroup: 'Informe completo',
+  resultsNavAxisByAxis: 'Eje por eje',
+  resultsNavDisagree: 'Discrepancias',
+  resultsNavGovernment: 'Gobierno ideal',
+  resultsNavTimeline: 'Línea del tiempo',
+  resultsNavLiving: 'Para vivir',
   resultsNavAxes: '12 ejes',
   resultsNavSignature: 'Distinción',
   resultsNavCountries: 'Países',
@@ -607,7 +641,7 @@ export const es: DeepPartial<Strings> = {
     { lead: 'Tu gobierno ideal:', text: 'nueve cargos ocupados por personas que piensan como tú.' },
     { lead: 'A qué país mudarte:', text: 'los 10 países más cercanos a tus ideales.' },
     { lead: 'Donde más discrepas:', text: 'con la ideología, la figura y el país más cercanos a ti.' },
-    { lead: 'Los 12 ejes, uno por uno:', text: 'qué revela cada una de tus posiciones y qué pesó más en tus respuestas.' },
+    { lead: 'Los 12 ejes, uno por uno:', text: 'qué revela cada una de tus posiciones, por qué se elogia y por qué se critica.' },
     { lead: 'Tu línea del tiempo:', text: 'quién pensaba como tú, de la Antigüedad al siglo XXI.' },
     { lead: 'Tu líder ideal por ámbito:', text: 'política, economía, filosofía y más.' },
     { lead: 'Ranking completo y PDF:', text: 'todo el catálogo en una hoja de cálculo y el informe para guardar.' }

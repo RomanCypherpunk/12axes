@@ -99,6 +99,7 @@ export function CountryInfoSheet({ match, onClose }: { match: CountryMatch; onCl
       name={match.name}
       caption={match.historical && match.period ? match.period : undefined}
       description={match.description}
+      vector={match.vector}
       onClose={onClose}
     />
   );

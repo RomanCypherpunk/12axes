@@ -93,7 +93,7 @@ public class PremiumReportService {
                 .orElseThrow();
         AxisAnalysis teaser = new AxisAnalysis(
                 strongest.axisId(), strongest.label(), strongest.userLeftPercent(), strongest.side(), strongest.level(),
-                startOf(strongest.text()), List.of(),
+                startOf(strongest.text()), null, null, List.of(),
                 strongest.ideologyLeftPercent(), strongest.personalityLeftPercent(), strongest.countryLeftPercent());
         List<Disagreement> profiles = disagreements.stream()
                 .map(item -> new Disagreement(item.kind(), item.profileId(), item.profileName(), item.ideologyCategory(), List.of()))

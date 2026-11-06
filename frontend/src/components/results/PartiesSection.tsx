@@ -153,6 +153,7 @@ export function PartyInfoSheet({ match, onClose }: { match: PartyMatch; onClose:
       name={match.name}
       caption={tags(match).join(' · ')}
       description={match.description}
+      vector={match.vector}
       onClose={onClose}
     />
   );

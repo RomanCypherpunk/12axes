@@ -170,6 +170,21 @@ export interface Strings {
   personalityInfoAria: (name: string) => string;
   closenessTitle: string;
   closenessYou: string;
+  /** O que aproxima e afasta o usuário de uma personalidade, país ou partido (só no relatório pago). */
+  insight: {
+    closeTitle: (name: string) => string;
+    closeNone: (name: string) => string;
+    closeAxis: (axis: string, phrase: string, youPct: number, otherPct: number, name: string, gap: number) => string;
+    apartTitle: string;
+    apartNone: (name: string) => string;
+    apartAxis: (axis: string, you: string, other: string, name: string, gap: number) => string;
+    /** A maior diferença entre os dois é pequena: não é um afastamento de verdade. */
+    apartTiny: (axis: string, name: string, gap: number) => string;
+    /** Mesmo lado, intensidades diferentes: só aparece onde a maior diferença não troca de lado. */
+    apartSame: (axis: string, phrase: string, youPct: number, otherPct: number, name: string, gap: number) => string;
+    balanced: string;
+    poles: Record<string, { left: string; right: string }>;
+  };
   compareEyebrow: string;
   compareTitle: string;
   compareLead: string;
@@ -349,6 +364,12 @@ export interface Strings {
   otherMatches: string;
   navOnThisPage: string;
   resultsNavReport: string;
+  resultsNavPremiumGroup: string;
+  resultsNavAxisByAxis: string;
+  resultsNavDisagree: string;
+  resultsNavGovernment: string;
+  resultsNavTimeline: string;
+  resultsNavLiving: string;
   resultsNavAxes: string;
   resultsNavSignature: string;
   resultsNavCountries: string;

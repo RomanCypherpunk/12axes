@@ -1,11 +1,36 @@
-import { useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
+import { LANG, t } from '../../../i18n';
 import { Portrait } from '../PersonalitiesSection';
 import type { GovernmentSeat } from '../../../types/quiz';
+import { buildSeatRole, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
+import { useUserAxes } from '../MatchInsight';
 import { ProfileSheet } from '../ProfileSheet';
 import { P } from './premiumText';
 
 export type SeatKey = GovernmentSeat['seatKey'];
+
+// O texto de cada cargo em cada espectro (72 por idioma) vem de um arquivo à parte, baixado só por quem abre o governo ideal.
+const ROLE_FILES: Record<string, () => Promise<{ default: RoleTexts }>> = {
+  pt: () => import('./governmentRoles.pt.json'),
+  en: () => import('./governmentRoles.en.json'),
+  es: () => import('./governmentRoles.es.json')
+};
+
+export function useRoleTexts(): RoleTexts | null {
+  const [texts, setTexts] = useState<RoleTexts | null>(null);
+  useEffect(() => {
+    let alive = true;
+    ROLE_FILES[LANG]().then(
+      (module) => alive && setTexts(module.default),
+      () => alive && setTexts(null)
+    );
+    return () => {
+      alive = false;
+    };
+  }, []);
+  return texts;
+}
 
 // Em volta da mesa, no sentido horário a partir do topo: o líder na cabeceira e o vice logo à direita dele.
 export const ORDER: SeatKey[] = ['lider', 'vice', 'economia', 'educacao', 'estrategia', 'filosofia', 'social', 'industria', 'cultura'];
@@ -81,6 +106,8 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
   const [open, setOpen] = useState<SeatKey | null>(null);
   const byKey = new Map(seats.map((seat) => [seat.seatKey, seat]));
   const openSeat = open ? byKey.get(open) : undefined;
+  const roles = useRoleTexts();
+  const user = useUserAxes();
 
   return (
     <section className="e-panel e-prem" id="premium-governo" data-reveal>
@@ -128,6 +155,39 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
         })}
       </ul>
 
+      {roles && user && (
+        <div className="e-gov-roles">
+          <h3>{P.governmentRolesTitle}</h3>
+          <p className="e-gov-roles-lead">{P.governmentRolesLead}</p>
+          <ol>
+            {ORDER.map((key) => {
+              const seat = byKey.get(key);
+              const role = seat && buildSeatRole(roles[key], user.axes, user.results, seat.holder.name, P.roleSubject);
+              if (!seat || !role) return null;
+              return (
+                <li key={key}>
+                  <Portrait match={seat.holder} className="e-gov-rface" />
+                  <div>
+                    <p className="e-gov-rhead">
+                      <strong>{P.seats[key]}</strong> · {seat.holder.name}
+                    </p>
+                    <p>{role.intro}</p>
+                    {role.lines.map((line) => (
+                      <p key={line.axisId} className="e-gov-rline">
+                        {P.roleAxis[line.axisId]} {line.text}
+                      </p>
+                    ))}
+                    <p className="e-gov-rwhy">
+                      {P.governmentWhy(t.personalityCategories[seat.category as keyof typeof t.personalityCategories] ?? seat.category, Math.round(seat.holder.compatibility))}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      )}
+
       {footer}
 
       {open && openSeat && (
@@ -138,6 +198,7 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
           name={openSeat.holder.name}
           caption={[openSeat.holder.role, openSeat.holder.lifespan].filter(Boolean).join(' · ')}
           description={openSeat.holder.description}
+          vector={openSeat.holder.vector}
           style={catStyle(category) as CSSProperties}
           onClose={() => setOpen(null)}
         />

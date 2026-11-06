@@ -1,0 +1,137 @@
+{
+  "lider": {
+    "intro": "{name} runs the government as a whole, sets the central priorities and answers for the major decisions that affect the entire country.",
+    "axes": {
+      "representacao": {
+        "left": "{name} would govern under the check of free elections, independent courts and an active opposition, making room for referendums and the recall of elected officials.",
+        "right": "{name} would concentrate decisions in a small, stable core, with no strict term limits, picking cadres by competence or succession instead of relying on the vote.",
+        "balanced": "{name} would keep elections and oversight institutions, but accept giving the government more leeway in crises, weighing stability and participation case by case."
+      },
+      "economia": {
+        "left": "{name} would steer the government with strategic companies and public banks at the core of development, curbing the power of large private groups and expanding land reform.",
+        "right": "{name} would shrink the public sector's role, opening services, roads and state-owned companies to private enterprise and shielding property and inheritance from redistribution.",
+        "balanced": "{name} would balance public and private, keeping what it sees as essential under government management and handing to private enterprise what it does better."
+      }
+    }
+  },
+  "vice": {
+    "intro": "{name} supports the leader day to day and represents the country abroad, handling alliances, negotiations and relations with other governments.",
+    "axes": {
+      "estrutura": {
+        "left": "{name} would bridge the central and local governments, defending the autonomy of states and cities and making room for them to strike their own agreements abroad.",
+        "right": "{name} would make sure states and cities follow the central government's line, speaking with one voice abroad and keeping regions from pursuing parallel deals or policies.",
+        "balanced": "{name} would coordinate dialogue with governors and mayors, respecting local autonomy on regional matters while keeping a single national position in foreign relations."
+      },
+      "diplomacia": {
+        "left": "{name} would treat military strength as the foundation of foreign policy, with strong armed forces, a domestic defense industry and credible deterrence against any threat.",
+        "right": "{name} would exhaust dialogue before any use of force and back disarmament agreements, UN mediation and international courts, even at the cost of concessions.",
+        "balanced": "{name} would combine a well-prepared defense with active diplomacy, negotiating whenever possible but never giving up the military capacity needed to deter attacks."
+      }
+    }
+  },
+  "economia": {
+    "intro": "{name} manages public finances, taxes and the direction of the economy, deciding how the country produces, spends and distributes income.",
+    "axes": {
+      "economia": {
+        "left": "{name} would prioritize strong public services and state-owned companies, with public banks financing development, a basic income for those in need and wealth redistribution.",
+        "right": "{name} would hand the management of services and infrastructure to the private sector, protect property and inheritance and set a maximum duration for welfare benefits.",
+        "balanced": "{name} would keep essential areas under public management and open others to private initiative, choosing case by case what works best for each service."
+      },
+      "controle": {
+        "left": "{name} would plan strategic sectors, use subsidies, exchange rates and public spending to steer the economy and keep the central bank aligned with the elected government.",
+        "right": "{name} would leave prices, wages and interest rates to the market, cut taxes and regulations, defend an independent central bank and avoid price freezes.",
+        "balanced": "{name} would let the market run day to day but step in during crises or in strategic sectors, combining stable rules with targeted stimulus."
+      }
+    }
+  },
+  "educacao": {
+    "intro": "{name} defines what schools and universities teach and how they shape new generations, from the curriculum to access to higher education.",
+    "axes": {
+      "moral": {
+        "left": "{name} would include sex education and education on gender identity, adopt racial quotas for university admission and treat family diversity as school content.",
+        "right": "{name} would leave moral and sex education to families, value the traditional family model and prefer gradual changes to the curriculum.",
+        "balanced": "{name} would handle moral topics with caution, listening to schools and families and including sensitive content only when there is reasonable consensus on the approach."
+      },
+      "religiao": {
+        "left": "{name} would keep education secular, with no religious symbols in schools, no religion in early childhood education and values taught without relying on belief in God.",
+        "right": "{name} would make room for faith in students' upbringing, valuing the passing on of religious traditions and the role of faith communities in education.",
+        "balanced": "{name} would treat religion as a subject of culture and history, respecting families' faith without turning school into a place of preaching or of attacking belief."
+      }
+    }
+  },
+  "estrategia": {
+    "intro": "{name} builds majorities, designs the rules of the political game and plans the country's place in the world over the medium and long term.",
+    "axes": {
+      "diplomacia": {
+        "left": "{name} would frame the country's position around military power, with a domestic defense industry, priority for arms spending and deterrence as the basis of any negotiation.",
+        "right": "{name} would rely on agreements, UN mediation and disarmament to secure the country's position, accepting concessions and cutting military spending to avoid any war.",
+        "balanced": "{name} would build a strategy that combines defense capacity and diplomacy, keeping force as a deterrent and negotiation as the preferred path."
+      },
+      "intervencao": {
+        "left": "{name} would position the country as neutral, outside blocs that demand automatic alignment, with no military bases abroad and a bet on international mediation.",
+        "right": "{name} would treat regional influence as a strategic goal, using alliances, sanctions and leadership among neighbors to increase the country's weight.",
+        "balanced": "{name} would seek a pragmatic stance, forming alliances of convenience and defending the country's own interests without being tied to blocs or long interventions."
+      }
+    }
+  },
+  "filosofia": {
+    "intro": "{name} helps the government connect principles to concrete decisions, pointing out which values are at stake in each hard choice.",
+    "axes": {
+      "poder": {
+        "left": "{name} would remind everyone that freedom depends on protection, arguing that the community should accept certain restrictions to contain crime, disinformation and serious threats.",
+        "right": "{name} would argue that every adult owns their own life, body and private choices, and that surveillance and punishment require very strong justification.",
+        "balanced": "{name} would weigh in each case the cost of restricting liberties against the risk of inaction, rejecting both broad surveillance and passivity in the face of danger."
+      },
+      "moral": {
+        "left": "{name} would defend equal rights for LGBT people, reproductive autonomy and respect for new family models, seeing morality as something that evolves.",
+        "right": "{name} would treat family, marriage and inherited customs as the foundations of shared life, preferring slow change and distrusting moral ruptures.",
+        "balanced": "{name} would value traditions without closing them to revision, seeking to embrace social change when it does not threaten the cohesion of the community."
+      }
+    }
+  },
+  "social": {
+    "intro": "{name} coordinates the policies that touch people's everyday lives, such as family, social protection, inclusion and coexistence between groups.",
+    "axes": {
+      "imigracao": {
+        "left": "{name} would make integration a priority, with mandatory language courses and an expectation of adapting to local customs, avoiding culturally isolated neighborhoods.",
+        "right": "{name} would argue that immigrants should live well without giving up their customs, with bilingual schools, services in several languages and a fight against origin-based stereotypes.",
+        "balanced": "{name} would encourage learning the local language and coexistence between groups, without forcing anyone to give up their own traditions."
+      },
+      "representacao": {
+        "left": "{name} would shape social policy through direct public consultation, assemblies and community councils, giving minorities a voice and leaving room for the opposition's criticism.",
+        "right": "{name} would decide social programs from a lean technical core, prioritizing quick results and stability over popular consultations and lengthy debates.",
+        "balanced": "{name} would listen to the public and social councils on major decisions, but give technical teams leeway to act quickly when urgency demands it."
+      }
+    }
+  },
+  "industria": {
+    "intro": "{name} oversees production, research and innovation, deciding how the country develops its industry, its energy and new technologies.",
+    "axes": {
+      "tecnologia": {
+        "left": "{name} would speed up automation, artificial intelligence, biotechnology and space exploration, accepting environmental impacts in exchange for industrial growth.",
+        "right": "{name} would give priority to environmental preservation, fewer pesticides and lower-impact production, even at the cost of lost productivity or slower growth.",
+        "balanced": "{name} would support innovation within environmental limits, seeking technologies that increase output without destroying protected areas."
+      },
+      "comercio": {
+        "left": "{name} would protect domestic industry with tariffs and public procurement, block the sale of strategic companies to foreigners and aim to make chips and medicines in the country.",
+        "right": "{name} would integrate industry into global supply chains, attracting multinationals and foreign investment and accepting foreign competition in order to gain efficiency.",
+        "balanced": "{name} would attract foreign investment without giving up on protecting a few key sectors, judging each production chain by its strategic weight."
+      }
+    }
+  },
+  "cultura": {
+    "intro": "{name} looks after values, symbols, traditions and shared memory, nurturing what makes people recognize themselves as one people.",
+    "axes": {
+      "religiao": {
+        "left": "{name} would keep public spaces and symbols secular, with no official religious holidays or references, and support culture grounded in secular values.",
+        "right": "{name} would protect faith as part of the national identity, supporting religious festivals, temples and traditions and their transmission to new generations.",
+        "balanced": "{name} would treat religious festivals and symbols as cultural heritage, imposing no faith and not erasing them from the country's shared memory."
+      },
+      "imigracao": {
+        "left": "{name} would reinforce the national language and traditions as a common base, expecting newcomers to adopt local customs and integrate into the prevailing culture.",
+        "right": "{name} would fold the cultures that immigrants bring into the national identity, encouraging the coexistence of languages and even an identity as a citizen of the world.",
+        "balanced": "{name} would cultivate a shared national identity that leaves room for immigrants' contributions, without diluting local traditions."
+      }
+    }
+  }
+}

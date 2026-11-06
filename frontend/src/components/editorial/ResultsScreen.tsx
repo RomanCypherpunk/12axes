@@ -24,6 +24,7 @@ import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
 import type { Religion } from '../../utils/religion';
+import { MatchInsightProvider } from '../results/MatchInsight';
 import { PaywallModal, type PaywallSource } from '../results/PaywallModal';
 import { UnlockCelebration } from '../results/UnlockCelebration';
 import { PaywallSection } from '../results/PaywallSection';
@@ -242,7 +243,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     </div>
   );
 
-  return (
+  const screen = (
     <main className="ed e-res" id="resultados" style={catStyle(top.category) as CSSProperties}>
       <div className="e-wrap e-res-grid">
         <div className="e-res-main">
@@ -387,7 +388,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav premiumLocked={!hasPremium} premiumTarget={hasPremium ? 'premium-eixos' : SALES_OPEN ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
+          <ResultsNav premium={hasPremium} premiumTarget={SALES_OPEN ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
         </aside>
       </div>
       {printingPdf && pdfButtonAction(SALES_OPEN, hasPremium) === 'print' &&
@@ -405,5 +406,14 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
           document.body
         )}
     </main>
+  );
+
+  // No relatório pago, as fichas de personalidades, países e partidos mostram o que aproxima e afasta o usuário de cada um.
+  return hasPremium ? (
+    <MatchInsightProvider axes={axes} results={axisResults}>
+      {screen}
+    </MatchInsightProvider>
+  ) : (
+    screen
   );
 }

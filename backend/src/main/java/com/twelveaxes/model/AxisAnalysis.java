@@ -11,6 +11,8 @@ import java.util.List;
  * @param side "left", "right" ou "balanced"
  * @param level "equilibrado", "inclinado", "forte" ou "muito_forte"
  * @param text texto fixo daquela inclinacao, ou nulo enquanto ainda nao foi escrito
+ * @param pros por que quem tem essa tendencia costuma ser elogiado (texto do polo); nulo no equilibrado
+ * @param cons por que quem tem essa tendencia costuma ser criticado (texto do polo); nulo no equilibrado
  * @param impacts as respostas que mais puxaram o eixo (ate 5), da que mais pesou para a que menos pesou
  * @param ideologyLeftPercent posicao da ideologia mais compativel neste eixo
  * @param personalityLeftPercent posicao da personalidade mais compativel neste eixo
@@ -23,6 +25,8 @@ public record AxisAnalysis(
         String side,
         String level,
         String text,
+        String pros,
+        String cons,
         List<AnswerImpact> impacts,
         Double ideologyLeftPercent,
         Double personalityLeftPercent,

@@ -5,6 +5,7 @@ import { resolveCountryFlagSrc } from '../../../utils/countryFlags';
 import { catStyle } from '../../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../../utils/personalityImage';
 import { SafeImg } from '../../editorial/primitives';
+import { divergenceText } from '../MatchInsight';
 import { P } from './premiumText';
 
 const clamp = (value: number): number => Math.max(0, Math.min(100, value));
@@ -20,12 +21,6 @@ interface Props {
 
 // A trilha tem o polo esquerdo na ponta esquerda; o valor vem como % do polo ESQUERDO, então a posição visual é o complemento.
 const at = (leftPercent: number): number => clamp(100 - leftPercent);
-
-// Porcentagem e nome do polo em que um valor (% do polo esquerdo) cai.
-function sideOf(leftPercent: number, result: AxisResult | undefined): { pct: number; pole: string } {
-  const left = leftPercent >= 50;
-  return { pct: Math.max(leftPercent, 100 - leftPercent), pole: result ? (left ? result.leftPole : result.rightPole) : '' };
-}
 
 /**
  * Onde você mais discorda da ideologia, da personalidade e do país mais compatíveis. Cada perfil é uma linha de duas
@@ -70,48 +65,52 @@ export function DisagreementPanel({ disagreements, results, countries, personali
 
       {disagreements.map((item) => {
         const photo = photoOf(item);
-        const axis = item.axes[0];
-        const result = results.get(axis.axisId);
-        const you = at(axis.userLeftPercent);
-        const profile = at(axis.profileLeftPercent);
-        const youSide = sideOf(axis.userLeftPercent, result);
-        const profileSide = sideOf(axis.profileLeftPercent, result);
+        const axes = item.axes.slice(0, 1);
         return (
-        <div key={item.kind} className="e-prem-gap-group" style={catStyle(item.ideologyCategory) as CSSProperties}>
-          <aside className={photo ? 'e-prem-gap-who has-photo' : 'e-prem-gap-who'}>
-            {photo}
-            <span className="e-tag e-tag-white">{P.disagreeKinds[item.kind]}</span>
-            <div className="e-prem-gap-name">
-              <strong>{item.profileName}</strong>
-            </div>
-          </aside>
-
-          <article className="e-dcard e-strong e-prem-gap-card">
-            <div className="e-dcard-head">
-              <span className="e-tag e-tag-white">{P.gapRank(1)}</span>
-              <h3>{axis.label}</h3>
-            </div>
-            <div className="e-dcard-body">
-              <p className="e-big">
-                {Math.round(Math.abs(axis.difference))}
-                <small>pts</small>
-              </p>
-              <p className="e-cap">{P.disagreeCaption(youSide.pct, youSide.pole, item.profileName, profileSide.pct, profileSide.pole)}</p>
-            </div>
-            <div className="e-mbar" aria-hidden="true">
-              <span className="e-mtrack" />
-              <span className="e-mfill" style={{ left: `${Math.min(profile, you)}%`, width: `${Math.abs(you - profile)}%` }} />
-              <span className="e-mmed" style={{ left: `${profile}%` }} />
-              <span className="e-myou e-strong" style={{ left: `${you}%` }} />
-            </div>
-            {result && (
-              <div className="e-mlab">
-                <span>{result.leftPole}</span>
-                <span>{result.rightPole}</span>
+          <div key={item.kind} className="e-prem-gap-group" style={catStyle(item.ideologyCategory) as CSSProperties}>
+            <aside className={photo ? 'e-prem-gap-who has-photo' : 'e-prem-gap-who'}>
+              {photo}
+              <span className="e-tag e-tag-white">{P.disagreeKinds[item.kind]}</span>
+              <div className="e-prem-gap-name">
+                <strong>{item.profileName}</strong>
               </div>
-            )}
-          </article>
-        </div>
+            </aside>
+
+            <div className="e-prem-gap-cards">
+              {axes.map((axis, index) => {
+                const result = results.get(axis.axisId);
+                const you = at(axis.userLeftPercent);
+                const profile = at(axis.profileLeftPercent);
+                return (
+                  <article key={axis.axisId} className="e-dcard e-strong e-prem-gap-card">
+                    <div className="e-dcard-head">
+                      <span className="e-tag e-tag-white">{P.gapRank(index + 1)}</span>
+                      <h3>{axis.label}</h3>
+                    </div>
+                    <div className="e-dcard-body">
+                      <p className="e-big">
+                        {Math.round(Math.abs(axis.difference))}
+                        <small>pts</small>
+                      </p>
+                      <p className="e-cap">{divergenceText(axis.axisId, axis.label, axis.userLeftPercent, axis.profileLeftPercent, item.profileName)}</p>
+                    </div>
+                    <div className="e-mbar" aria-hidden="true">
+                      <span className="e-mtrack" />
+                      <span className="e-mfill" style={{ left: `${Math.min(profile, you)}%`, width: `${Math.abs(you - profile)}%` }} />
+                      <span className="e-mmed" style={{ left: `${profile}%` }} />
+                      <span className="e-myou e-strong" style={{ left: `${you}%` }} />
+                    </div>
+                    {result && (
+                      <div className="e-mlab">
+                        <span>{result.leftPole}</span>
+                        <span>{result.rightPole}</span>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
+          </div>
         );
       })}
     </section>

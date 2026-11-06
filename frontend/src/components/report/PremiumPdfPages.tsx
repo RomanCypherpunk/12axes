@@ -3,7 +3,9 @@ import type { Axis, AxisResult, PremiumReport } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { catStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
 import { resolvePersonalityImageSrc } from '../../utils/personalityImage';
-import { CENTER, ORDER, place, TABLE_R } from '../results/premium/GovernmentPanel';
+import { divergenceText } from '../results/MatchInsight';
+import { buildSeatRole } from '../../utils/governmentRoleText';
+import { CENTER, ORDER, place, TABLE_R, useRoleTexts } from '../results/premium/GovernmentPanel';
 import { P } from '../results/premium/premiumText';
 import { bestTimelineEra, eraCompatibility, eraHighlights, timelineEntryInfo } from '../results/premium/TimelinePanel';
 import { Img, PageHeader, Ring, SectionHead } from './pdfParts';
@@ -21,11 +23,6 @@ const colorOf = (category: string | undefined): string => resolveIdeologyColor(c
 
 // Posição na trilha: o polo esquerdo fica à esquerda e quanto maior o % do polo esquerdo, mais perto dele.
 const at = (leftPercent: number): string => `${Math.max(0, Math.min(100, 100 - leftPercent))}%`;
-
-function sideOf(leftPercent: number, result: AxisResult | undefined): { pct: number; pole: string } {
-  const left = leftPercent >= 50;
-  return { pct: Math.max(leftPercent, 100 - leftPercent), pole: result ? (left ? result.leftPole : result.rightPole) : '' };
-}
 
 function Page({ topName, title, sub, children }: { topName: string; title: string; sub?: string; children: ReactNode }) {
   return (
@@ -46,6 +43,7 @@ function Page({ topName, title, sub, children }: { topName: string; title: strin
  */
 export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }: PremiumPdfPagesProps) {
   const ideology = premium.disagreements.find((item) => item.kind === 'ideology');
+  const roles = useRoleTexts();
   const personality = premium.disagreements.find((item) => item.kind === 'personality');
   const country = premium.disagreements.find((item) => item.kind === 'country');
   const youColor = colorOf(ideology?.ideologyCategory);
@@ -93,6 +91,8 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
                 </div>
               )}
               {item.text && <p className="rx-t">{item.text}</p>}
+              {item.pros && <p className="rx-t">{item.pros}</p>}
+              {item.cons && <p className="rx-t">{item.cons}</p>}
             </li>
           );
         })}
@@ -126,8 +126,6 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
                 <ul>
                   {item.axes.slice(0, 3).map((axis, index) => {
                     const result = axisResults.get(axis.axisId);
-                    const you = sideOf(axis.userLeftPercent, result);
-                    const profile = sideOf(axis.profileLeftPercent, result);
                     return (
                       <li key={axis.axisId}>
                         <span className="rx-rank">{P.gapRank(index + 1)}</span>
@@ -147,7 +145,7 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
                             <span>{result.rightPole}</span>
                           </div>
                         )}
-                        <p className="rx-cap">{P.disagreeCaption(you.pct, you.pole, item.profileName, profile.pct, profile.pole)}</p>
+                        <p className="rx-cap">{divergenceText(axis.axisId, axis.label, axis.userLeftPercent, axis.profileLeftPercent, item.profileName)}</p>
                       </li>
                     );
                   })}
@@ -190,6 +188,31 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
           })}
         </div>
       </Page>
+
+      {roles && (
+        <Page topName={topName} title={P.governmentRolesTitle} sub={P.governmentRolesLead}>
+          <ol className="rx-roles">
+            {ORDER.map((key) => {
+              const seat = premium.idealGovernment.find((candidate) => candidate.seatKey === key);
+              const role = seat && buildSeatRole(roles[key], axes, axisResults, seat.holder.name, P.roleSubject);
+              if (!seat || !role) return null;
+              return (
+                <li key={key}>
+                  <p className="rx-roles-h">
+                    <strong>{P.seats[key]}</strong> · {seat.holder.name}
+                  </p>
+                  <p>{role.intro}</p>
+                  {role.lines.map((line) => (
+                    <p key={line.axisId}>
+                      {P.roleAxis[line.axisId]} {line.text}
+                    </p>
+                  ))}
+                </li>
+              );
+            })}
+          </ol>
+        </Page>
+      )}
 
       <Page topName={topName} title={P.timelineTitle}>
         <ol className="rx-eras">

@@ -90,6 +90,7 @@ export function PersonalityInfoSheet({ match, onClose }: { match: PersonalityMat
       name={match.name}
       caption={[match.role, match.lifespan].filter(Boolean).join(' · ')}
       description={match.description}
+      vector={match.vector}
       onClose={onClose}
     />
   );

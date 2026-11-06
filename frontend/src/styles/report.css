@@ -254,6 +254,10 @@
 .rp .rx-poles{display:flex;justify-content:space-between;gap:3mm;font-size:8px;color:#A9A497}
 .rp .rx-poles .on{color:var(--tinta);font-weight:600}
 .rp .rx-t{margin-top:2.2mm;font-size:9.6px;line-height:1.55;color:#3f3e3a}
+.rp .rx-roles{list-style:none;margin:0;padding:0;display:grid;gap:3.2mm}
+.rp .rx-roles li{break-inside:avoid}
+.rp .rx-roles p{margin:0 0 1mm;font-size:9.6px;line-height:1.5;color:#3f3e3a}
+.rp .rx-roles .rx-roles-h{font-size:10.4px;color:#1b1b19}
 
 .rp .rx-dis{display:grid;gap:5mm}
 .rp .rx-dis-card{border-radius:16px;padding:5mm 6mm 5.5mm;background:var(--cat-bg);color:var(--cat)}

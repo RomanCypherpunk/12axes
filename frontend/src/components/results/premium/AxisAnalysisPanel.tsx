@@ -170,20 +170,16 @@ export function AxisAnalysisPanel({ analysis, axes, results, disagreements, coun
                 </figure>
               )}
 
-              {item.impacts.length > 0 && (
-                <details className="e-prem-impacts">
-                  <summary>{P.impactsTitle}</summary>
-                  <ul>
-                    {item.impacts.map((impact) => (
-                      <li key={impact.questionId}>
-                        <span>{impact.question}</span>
-                        <small>
-                          {P.answerLabels[impact.answer]} · {P.points(impact.impact)}
-                        </small>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+              {item.pros && (
+                <figure className="e-phrase">
+                  <blockquote>{item.pros}</blockquote>
+                </figure>
+              )}
+
+              {item.cons && (
+                <figure className="e-phrase">
+                  <blockquote>{item.cons}</blockquote>
+                </figure>
               )}
             </AxisRowView>
           );

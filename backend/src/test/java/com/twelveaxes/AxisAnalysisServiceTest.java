@@ -13,6 +13,7 @@ import com.twelveaxes.model.PremiumReport;
 import com.twelveaxes.model.RankingRow;
 import com.twelveaxes.model.ResultRequest;
 import com.twelveaxes.model.SubmittedAnswer;
+import com.twelveaxes.service.AxisAnalysisService;
 import com.twelveaxes.service.PremiumReportService;
 import com.twelveaxes.service.QuizDataService;
 import com.twelveaxes.service.ReligionFilter;
@@ -35,6 +36,9 @@ class AxisAnalysisServiceTest {
 
     @Autowired
     private PremiumReportService premiumReportService;
+
+    @Autowired
+    private AxisAnalysisService axisAnalysisService;
 
     @Autowired
     private ScoringService scoringService;
@@ -140,8 +144,45 @@ class AxisAnalysisServiceTest {
                 assertThat(en).containsKey(axis.id() + "." + levelKey);
             }
         }
-        assertThat(pt).hasSize(84);
-        assertThat(en).hasSize(84);
+        // 12 eixos x (7 inclinacoes + elogio e critica de cada um dos 2 polos).
+        assertThat(pt).hasSize(132);
+        assertThat(en).hasSize(132);
+    }
+
+    @Test
+    void everyPoleHasPraiseAndCriticismInPortugueseAndEnglish() throws Exception {
+        Map<String, String> pt = texts("/data/axis-analysis.json");
+        Map<String, String> en = texts("/data/i18n/en/axis-analysis.json");
+
+        for (var axis : dataService.getAxes("pt")) {
+            for (String side : List.of("left", "right")) {
+                for (String kind : List.of("pros", "cons")) {
+                    String key = axis.id() + "." + side + "." + kind;
+                    assertThat(pt.get(key)).as("PT %s", key).isNotBlank().hasSizeBetween(180, 400);
+                    assertThat(en.get(key)).as("EN %s", key).isNotBlank().hasSizeBetween(180, 400);
+                }
+            }
+        }
+    }
+
+    @Test
+    void praiseAndCriticismFollowTheSideAndAreAbsentWhenBalanced() {
+        List<AxisAnalysis> strong = analysisFor(90, "pt");
+        assertThat(strong).allSatisfy(item -> {
+            assertThat(item.side()).isEqualTo("left");
+            assertThat(item.pros()).isNotBlank();
+            assertThat(item.cons()).isNotBlank();
+        });
+        assertThat(analysisFor(10, "pt")).allSatisfy(item -> assertThat(item.pros()).isNotEqualTo(strong.get(0).pros()));
+        assertThat(analysisFor(50, "pt")).allSatisfy(item -> {
+            assertThat(item.pros()).isNull();
+            assertThat(item.cons()).isNull();
+        });
+    }
+
+    private List<AxisAnalysis> analysisFor(double leftPercent, String lang) {
+        List<AxisResult> axes = scoringService.scoreFromLeftPercents(java.util.Collections.nCopies(12, leftPercent), lang);
+        return axisAnalysisService.analyze(axes, Map.of(), List.of(), lang);
     }
 
     @Test

@@ -1,5 +1,5 @@
 import { LANG } from '../../../i18n';
-import type { AnswerValue, AxisAnalysis, Disagreement, GovernmentSeat } from '../../../types/quiz';
+import type { AxisAnalysis, Disagreement, GovernmentSeat } from '../../../types/quiz';
 
 // Textos do Relatório Completo. Ficam junto das seções (que carregam sob demanda) para quem não compra não baixar nada disto.
 interface PremiumText {
@@ -10,17 +10,20 @@ interface PremiumText {
   retry: string;
   historical: string;
   axisTitle: string;
-  impactsTitle: string;
   positions: { you: string; ideology: string; personality: string; country: string };
-  answerLabels: Record<AnswerValue, string>;
   levelLabels: Record<AxisAnalysis['level'], string>;
-  points: (value: number) => string;
   disagreeTitle: string;
   disagreeKinds: Record<Disagreement['kind'], string>;
   disagreeLegendProfile: string;
   gapRank: (position: number) => string;
-  disagreeCaption: (userPct: number, userPole: string, profileName: string, profilePct: number, profilePole: string) => string;
   governmentTitle: string;
+  governmentRolesTitle: string;
+  governmentRolesLead: string;
+  /** Como cada parágrafo do cargo abre, por eixo ("Politicamente,", "No poder,"...). */
+  roleAxis: Record<string, string>;
+  /** Sujeito dos parágrafos seguintes ao primeiro, no lugar do nome; nulo quando o idioma o omite. */
+  roleSubject: string | null;
+  governmentWhy: (area: string, pct: number) => string;
   timelineTitle: string;
   timelineEraNames: Record<'antiguidade' | 'medieval' | 'moderna' | 'xix' | 'xx' | 'xxi', string>;
   timelineRange: (from: number | null, to: number | null) => string;
@@ -43,24 +46,31 @@ const pt: PremiumText = {
   retry: 'Tentar de novo',
   historical: 'histórico',
   axisTitle: 'Análise completa, eixo a eixo',
-  impactsTitle: 'O que mais pesou nas suas respostas',
   positions: { you: 'Você', ideology: 'Ideologia', personality: 'Personalidade', country: 'País' },
-  answerLabels: {
-    STRONGLY_AGREE: 'Concordou totalmente',
-    AGREE: 'Concordou',
-    NEUTRAL: 'Neutro',
-    DISAGREE: 'Discordou',
-    STRONGLY_DISAGREE: 'Discordou totalmente'
-  },
   levelLabels: { equilibrado: 'Equilibrado', inclinado: 'Inclinado', forte: 'Forte', muito_forte: 'Muito forte' },
-  points: (value) => `${value > 0 ? '+' : ''}${value.toFixed(1).replace('.', ',')} pts`,
   disagreeTitle: 'Onde você mais discorda',
   disagreeKinds: { ideology: 'da sua ideologia', personality: 'da sua personalidade', country: 'do seu país' },
   disagreeLegendProfile: 'Perfil',
   gapRank: (position) => (position === 1 ? 'Maior diferença' : `${position}ª maior diferença`),
-  disagreeCaption: (userPct, userPole, profileName, profilePct, profilePole) =>
-    `Você fica em ${Math.round(userPct)}% ${userPole}; ${profileName}, em ${Math.round(profilePct)}% ${profilePole}.`,
   governmentTitle: 'Seu governo ideal',
+  governmentRolesTitle: 'O papel de cada um no seu governo',
+  governmentRolesLead: 'Cada cargo é descrito a partir das suas posições nos eixos que mais pesam nele, para você ver por que o resultado saiu assim.',
+  roleAxis: {
+    estrutura: 'Na estrutura,',
+    representacao: 'Politicamente,',
+    poder: 'No poder,',
+    imigracao: 'Na imigração,',
+    diplomacia: 'Na diplomacia,',
+    intervencao: 'Na intervenção,',
+    economia: 'Na economia,',
+    controle: 'No controle,',
+    comercio: 'No comércio,',
+    religiao: 'Na religião,',
+    moral: 'Na moral,',
+    tecnologia: 'Na tecnologia,'
+  },
+  roleSubject: null,
+  governmentWhy: (area, pct) => `Ocupa o cargo por ser a figura mais próxima de você na categoria ${area}: ${pct}% de compatibilidade.`,
   timelineTitle: 'Sua linha do tempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antiguidade',
@@ -105,24 +115,31 @@ const en: PremiumText = {
   retry: 'Try again',
   historical: 'historical',
   axisTitle: 'Full analysis, axis by axis',
-  impactsTitle: 'What weighed most in your answers',
   positions: { you: 'You', ideology: 'Ideology', personality: 'Figure', country: 'Country' },
-  answerLabels: {
-    STRONGLY_AGREE: 'Strongly agreed',
-    AGREE: 'Agreed',
-    NEUTRAL: 'Neutral',
-    DISAGREE: 'Disagreed',
-    STRONGLY_DISAGREE: 'Strongly disagreed'
-  },
   levelLabels: { equilibrado: 'Balanced', inclinado: 'Leaning', forte: 'Strong', muito_forte: 'Very strong' },
-  points: (value) => `${value > 0 ? '+' : ''}${value.toFixed(1)} pts`,
   disagreeTitle: 'Where you disagree most',
   disagreeKinds: { ideology: 'with your ideology', personality: 'with your figure', country: 'with your country' },
   disagreeLegendProfile: 'Profile',
   gapRank: (position) => (position === 1 ? 'Biggest gap' : position === 2 ? '2nd biggest gap' : '3rd biggest gap'),
-  disagreeCaption: (userPct, userPole, profileName, profilePct, profilePole) =>
-    `You sit at ${Math.round(userPct)}% ${userPole}; ${profileName}, at ${Math.round(profilePct)}% ${profilePole}.`,
   governmentTitle: 'Your ideal government',
+  governmentRolesTitle: 'Each member’s role in your government',
+  governmentRolesLead: 'Each seat is described from your positions on the axes that weigh most in it, so you can see why the result came out this way.',
+  roleAxis: {
+    estrutura: 'On structure,',
+    representacao: 'Politically,',
+    poder: 'On power,',
+    imigracao: 'On immigration,',
+    diplomacia: 'On diplomacy,',
+    intervencao: 'On intervention,',
+    economia: 'On the economy,',
+    controle: 'On control,',
+    comercio: 'On trade,',
+    religiao: 'On religion,',
+    moral: 'On morals,',
+    tecnologia: 'On technology,'
+  },
+  roleSubject: 'they',
+  governmentWhy: (area, pct) => `Holds the seat as the figure closest to you in the ${area} category: ${pct}% compatibility.`,
   timelineTitle: 'Your ideological timeline',
   timelineEraNames: {
     antiguidade: 'Antiquity',
@@ -167,24 +184,31 @@ const es: PremiumText = {
   retry: 'Intentar de nuevo',
   historical: 'histórico',
   axisTitle: 'Análisis completo, eje por eje',
-  impactsTitle: 'Lo que más pesó en tus respuestas',
   positions: { you: 'Tú', ideology: 'Ideología', personality: 'Personalidad', country: 'País' },
-  answerLabels: {
-    STRONGLY_AGREE: 'Totalmente de acuerdo',
-    AGREE: 'De acuerdo',
-    NEUTRAL: 'Neutral',
-    DISAGREE: 'En desacuerdo',
-    STRONGLY_DISAGREE: 'Totalmente en desacuerdo'
-  },
   levelLabels: { equilibrado: 'Equilibrado', inclinado: 'Inclinado', forte: 'Fuerte', muito_forte: 'Muy fuerte' },
-  points: (value) => `${value > 0 ? '+' : ''}${value.toFixed(1).replace('.', ',')} pts`,
   disagreeTitle: 'Donde más discrepas',
   disagreeKinds: { ideology: 'de tu ideología', personality: 'de tu personalidad', country: 'de tu país' },
   disagreeLegendProfile: 'Perfil',
   gapRank: (position) => (position === 1 ? 'Mayor diferencia' : position === 2 ? '2.ª mayor diferencia' : '3.ª mayor diferencia'),
-  disagreeCaption: (userPct, userPole, profileName, profilePct, profilePole) =>
-    `Tú estás en ${Math.round(userPct)}% ${userPole}; ${profileName}, en ${Math.round(profilePct)}% ${profilePole}.`,
   governmentTitle: 'Tu gobierno ideal',
+  governmentRolesTitle: 'El papel de cada uno en tu gobierno',
+  governmentRolesLead: 'Cada cargo se describe a partir de tus posiciones en los ejes que más pesan en él, para que veas por qué el resultado salió así.',
+  roleAxis: {
+    estrutura: 'En la estructura,',
+    representacao: 'En lo político,',
+    poder: 'En el poder,',
+    imigracao: 'En la inmigración,',
+    diplomacia: 'En la diplomacia,',
+    intervencao: 'En la intervención,',
+    economia: 'En la economía,',
+    controle: 'En el control,',
+    comercio: 'En el comercio,',
+    religiao: 'En la religión,',
+    moral: 'En la moral,',
+    tecnologia: 'En la tecnología,'
+  },
+  roleSubject: null,
+  governmentWhy: (area, pct) => `Ocupa el cargo por ser la figura más cercana a ti en la categoría ${area}: ${pct}% de compatibilidad.`,
   timelineTitle: 'Tu línea del tiempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antigüedad',

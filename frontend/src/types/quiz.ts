@@ -345,6 +345,9 @@ export interface AxisAnalysis {
   level: 'equilibrado' | 'inclinado' | 'forte' | 'muito_forte';
   /** Texto fixo daquela inclinação; nulo enquanto não houver texto. */
   text: string | null;
+  /** Por que quem tem essa tendência costuma ser elogiado e criticado; nulo no equilibrado. */
+  pros: string | null;
+  cons: string | null;
   impacts: AnswerImpact[];
   ideologyLeftPercent: number | null;
   personalityLeftPercent: number | null;

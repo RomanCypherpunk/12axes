@@ -118,6 +118,34 @@ export const pt: Strings = {
   personalityInfoAria: (name) => `Ver detalhes de ${name}`,
   closenessTitle: 'O que te aproxima',
   closenessYou: 'Você',
+  insight: {
+    closeTitle: (name) => `O que te aproxima de ${name}`,
+    closeNone: (name) => `Em nenhum eixo você e ${name} têm uma posição claramente igual.`,
+    closeAxis: (axis, phrase, youPct, otherPct, name, gap) =>
+      `Em ${axis}, os dois têm ${phrase}. Você está em ${youPct}% desse lado e ${name} em ${otherPct}%${gap < 8 ? ', praticamente no mesmo ponto' : gap < 15 ? ', bem próximos' : ', com intensidades diferentes'}.`,
+    apartTitle: 'Onde vocês se afastam',
+    apartNone: (name) => `Você e ${name} não ficam muito longe em nenhum eixo.`,
+    apartAxis: (axis, you, other, name, gap) => `Em ${axis}, vocês se afastam: você tem ${you}, enquanto ${name} tem ${other}. A distância entre os dois nesse eixo é de ${gap} ${gap === 1 ? 'ponto' : 'pontos'}.`,
+    apartTiny: (axis, name, gap) =>
+      `Em ${axis}, a maior diferença entre você e ${name} é de apenas ${gap} ${gap === 1 ? 'ponto' : 'pontos'}: vocês ficam praticamente no mesmo ponto.`,
+    apartSame: (axis, phrase, youPct, otherPct, name, gap) =>
+      `Em ${axis}, vocês pendem para o mesmo lado, mas com intensidades diferentes: os dois têm ${phrase}, você a ${youPct}% e ${name} a ${otherPct}%. A distância entre os dois nesse eixo é de ${gap} ${gap === 1 ? 'ponto' : 'pontos'}.`,
+    balanced: 'uma posição equilibrada',
+    poles: {
+      estrutura: { left: 'preferência por mais autonomia para estados e regiões', right: 'preferência por um governo central mais forte' },
+      representacao: { left: 'defesa da democracia e das eleições livres', right: 'defesa de um poder concentrado em um líder ou grupo' },
+      poder: { left: 'prioridade para a segurança e a ordem', right: 'prioridade para as liberdades individuais' },
+      imigracao: { left: 'preferência pela assimilação à cultura do país', right: 'defesa da convivência entre várias culturas' },
+      diplomacia: { left: 'confiança na força militar', right: 'preferência pela paz e pela negociação' },
+      intervencao: { left: 'preferência por ficar fora de disputas externas', right: 'ênfase na defesa do interesse nacional' },
+      economia: { left: 'ênfase na propriedade e nos serviços públicos', right: 'ênfase na propriedade e na iniciativa privada' },
+      controle: { left: 'preferência por uma economia planejada e regulada', right: 'preferência pelo livre mercado e por pouca regulação' },
+      comercio: { left: 'defesa da proteção à indústria nacional', right: 'defesa da abertura ao comércio internacional' },
+      religiao: { left: 'preferência por separar religião e política', right: 'defesa de mais religião na vida pública' },
+      moral: { left: 'valores sociais progressistas', right: 'valores sociais tradicionais' },
+      tecnologia: { left: 'confiança na tecnologia e na indústria', right: 'preferência por soluções mais naturais e biológicas' }
+    }
+  },
   compareEyebrow: 'Análise comparativa',
   compareTitle: 'Análise comparativa',
   compareLead: 'Escolha uma personalidade, país ou ideologia e veja, eixo por eixo, onde você se aproxima ou se afasta.',
@@ -493,6 +521,12 @@ export const pt: Strings = {
   otherMatches: 'Outras ideologias',
   navOnThisPage: 'Nesta página',
   resultsNavReport: 'Análise completa',
+  resultsNavPremiumGroup: 'Relatório completo',
+  resultsNavAxisByAxis: 'Eixo a eixo',
+  resultsNavDisagree: 'Discordâncias',
+  resultsNavGovernment: 'Governo ideal',
+  resultsNavTimeline: 'Linha do tempo',
+  resultsNavLiving: 'Para viver',
   resultsNavAxes: '12 eixos',
   resultsNavSignature: 'Distinção',
   resultsNavCountries: 'Países',
@@ -608,7 +642,7 @@ export const pt: Strings = {
     { lead: 'Seu governo ideal:', text: 'nove cargos ocupados por quem pensa como você.' },
     { lead: 'Para qual país se mudar:', text: 'os 10 países mais próximos dos seus ideais.' },
     { lead: 'Onde você mais discorda:', text: 'da ideologia, da figura e do país mais parecidos com você.' },
-    { lead: 'Os 12 eixos, um por um:', text: 'o que cada posição sua revela e o que mais pesou nas respostas.' },
+    { lead: 'Os 12 eixos, um por um:', text: 'o que cada posição sua revela, por que ela é elogiada e por que é criticada.' },
     { lead: 'Sua linha do tempo:', text: 'quem pensava como você, da Antiguidade ao século XXI.' },
     { lead: 'Seu líder ideal por área:', text: 'política, economia, filosofia e mais.' },
     { lead: 'Ranking completo e PDF:', text: 'todo o catálogo em planilha, e o relatório para guardar.' }
