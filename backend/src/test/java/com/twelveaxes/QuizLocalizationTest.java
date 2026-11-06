@@ -34,6 +34,27 @@ class QuizLocalizationTest {
     private QuizDataService dataService;
 
     @Test
+    void quizInSpanishHasSpanishLabelsAndNeverFallsBackToPortuguese() throws Exception {
+        String body = mockMvc.perform(get("/api/quiz").param("lang", "es").param("variant", "extreme"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
+        QuizPayload quiz = objectMapper.readValue(body, QuizPayload.class);
+        QuizPayload portuguese = dataService.getQuiz("extreme", "pt");
+
+        assertThat(quiz.description()).contains("ejes políticos");
+        assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("De acuerdo"));
+        var portugueseTexts = portuguese.questions().stream().map(question -> question.text()).toList();
+        assertThat(quiz.questions()).noneMatch(question -> portugueseTexts.contains(question.text()));
+        assertThat(quiz.questions()).allMatch(question -> question.help() != null);
+    }
+
+    @Test
+    void spanishVariantsNormalizeToSpanish() {
+        assertThat(QuizDataService.normalizeLang("es")).isEqualTo("es");
+        assertThat(QuizDataService.normalizeLang("es-AR")).isEqualTo("es");
+    }
+
+    @Test
     void quizInEnglishReturnsTranslatedAxesQuestionsAndOptions() throws Exception {
         String body = mockMvc.perform(get("/api/quiz").param("lang", "en"))
                 .andExpect(status().isOk())

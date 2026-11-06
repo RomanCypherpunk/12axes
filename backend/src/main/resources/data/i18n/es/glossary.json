@@ -1,0 +1,664 @@
+[
+  {
+    "id": "autonomia",
+    "term": "Autonomía",
+    "definition": "El poder de decidir tus propios asuntos sin pedir permiso a un gobierno superior.",
+    "match": [
+      "autonomía",
+      "autónomas"
+    ]
+  },
+  {
+    "id": "constituicao",
+    "term": "Constitución",
+    "definition": "La ley más importante de un país o estado. Todas las demás leyes deben respetarla.",
+    "match": [
+      "constitución"
+    ]
+  },
+  {
+    "id": "secessao",
+    "term": "Secesión",
+    "definition": "Cuando una región se separa de un país para volverse independiente.",
+    "match": [
+      "secesión"
+    ]
+  },
+  {
+    "id": "quilombolas",
+    "term": "Quilombolas",
+    "definition": "Descendientes de personas esclavizadas que formaron sus propias comunidades, llamadas quilombos, y conservan sus tierras y tradiciones.",
+    "match": []
+  },
+  {
+    "id": "anular",
+    "term": "Anular",
+    "definition": "Cancelar una ley o decisión y dejarla sin efecto.",
+    "match": [
+      "anular"
+    ]
+  },
+  {
+    "id": "stf",
+    "term": "Corte suprema",
+    "definition": "El tribunal más alto de un país. Decide si las leyes y los actos del gobierno respetan la constitución.",
+    "match": []
+  },
+  {
+    "id": "referendo",
+    "term": "Referéndum",
+    "definition": "Una votación en la que el público aprueba o rechaza directamente una ley.",
+    "match": [
+      "referéndum"
+    ]
+  },
+  {
+    "id": "cassacao",
+    "term": "Revocación de mandato",
+    "definition": "Destituir a un político de su cargo antes de que termine su mandato.",
+    "match": [
+      "revocar el mandato"
+    ]
+  },
+  {
+    "id": "limite_mandatos",
+    "term": "Límites de mandatos",
+    "definition": "Una norma que impide a alguien ocupar el mismo cargo durante más de un número determinado de mandatos.",
+    "match": [
+      "límites de mandatos"
+    ]
+  },
+  {
+    "id": "voto_universal",
+    "term": "Sufragio universal",
+    "definition": "Todos los adultos pueden votar, sin exclusión por ingresos, educación, sexo o raza.",
+    "match": [
+      "sufragio"
+    ]
+  },
+  {
+    "id": "autoritario",
+    "term": "Régimen autoritario",
+    "definition": "Un gobierno en el que el poder se concentra en pocas manos y hay poca o ninguna libertad para oponerse a él.",
+    "match": [
+      "autoritario"
+    ]
+  },
+  {
+    "id": "toque_recolher",
+    "term": "Toque de queda",
+    "definition": "Una prohibición del gobierno de estar en espacios públicos durante ciertas horas.",
+    "match": [
+      "toque de queda"
+    ]
+  },
+  {
+    "id": "eutanasia",
+    "term": "Eutanasia",
+    "definition": "Ayudar a una persona con una enfermedad incurable a poner fin a su vida, a petición suya, para evitar el sufrimiento.",
+    "match": [
+      "eutanasia"
+    ]
+  },
+  {
+    "id": "reconhecimento_facial",
+    "term": "Reconocimiento facial",
+    "definition": "Tecnología que identifica a las personas comparando un rostro filmado por una cámara con fotos guardadas en una base de datos.",
+    "match": [
+      "reconocimiento facial"
+    ]
+  },
+  {
+    "id": "faccoes",
+    "term": "Grupos criminales",
+    "definition": "Grupos de crimen organizado que suelen controlar territorios y actividades ilegales.",
+    "match": [
+      "grupos criminales"
+    ]
+  },
+  {
+    "id": "poliamor",
+    "term": "Poliamor",
+    "definition": "Relaciones románticas con más de una persona al mismo tiempo, con el conocimiento y el consentimiento de todos.",
+    "match": [
+      "poliamor"
+    ]
+  },
+  {
+    "id": "relacao_aberta",
+    "term": "Relación abierta",
+    "definition": "Una relación en la que las partes acuerdan que cada una puede tener otras parejas.",
+    "match": [
+      "relaciones abiertas"
+    ]
+  },
+  {
+    "id": "linguagem_neutra",
+    "term": "Lenguaje de género neutro",
+    "definition": "Formas de hablar y escribir que evitan marcar masculino o femenino, como \"elle\" en lugar de \"él o ella\".",
+    "match": [
+      "lenguaje de género neutro"
+    ]
+  },
+  {
+    "id": "identidade_genero",
+    "term": "Identidad de género",
+    "definition": "Cómo se ve a sí misma una persona: hombre, mujer, ambos o ninguno, sin importar el sexo con el que nació.",
+    "match": [
+      "identidad de género"
+    ]
+  },
+  {
+    "id": "lgbt",
+    "term": "LGBT",
+    "definition": "Sigla de personas lesbianas, gais, bisexuales y transgénero.",
+    "match": [
+      "LGBT"
+    ]
+  },
+  {
+    "id": "cotas_raciais",
+    "term": "Cuotas raciales",
+    "definition": "Reservar una parte de las plazas universitarias o de los empleos para personas de ciertos grupos raciales.",
+    "match": [
+      "cuotas raciales"
+    ]
+  },
+  {
+    "id": "multicultural",
+    "term": "Multicultural",
+    "definition": "Un lugar donde conviven personas de muchas culturas, idiomas y religiones, y cada una conserva sus tradiciones.",
+    "match": [
+      "multicultural"
+    ]
+  },
+  {
+    "id": "ataque_preventivo",
+    "term": "Ataque preventivo",
+    "definition": "Atacar primero a un enemigo porque crees que se está preparando para atacarte.",
+    "match": [
+      "ataques preventivos"
+    ]
+  },
+  {
+    "id": "desarmamento",
+    "term": "Desarme",
+    "definition": "Un acuerdo entre países para reducir o eliminar ciertos tipos de armas.",
+    "match": [
+      "desarme"
+    ]
+  },
+  {
+    "id": "armas_autonomas",
+    "term": "Armas autónomas letales",
+    "definition": "Armas que eligen y atacan objetivos por sí solas, con una computadora que decide en lugar de una persona.",
+    "match": [
+      "armas autónomas letales"
+    ]
+  },
+  {
+    "id": "dissuadir",
+    "term": "Disuadir",
+    "definition": "Convencer a alguien de no atacar mostrando que la respuesta sería severa.",
+    "match": [
+      "disuadir"
+    ]
+  },
+  {
+    "id": "crimes_guerra",
+    "term": "Crímenes de guerra",
+    "definition": "Violaciones graves de las reglas de la guerra, como atacar a civiles o maltratar a prisioneros.",
+    "match": [
+      "crímenes de guerra"
+    ]
+  },
+  {
+    "id": "onu",
+    "term": "Naciones Unidas",
+    "definition": "Una organización que reúne a casi todos los países para trabajar por la paz, los derechos humanos y la cooperación.",
+    "match": [
+      "Naciones Unidas"
+    ]
+  },
+  {
+    "id": "genocidio",
+    "term": "Genocidio",
+    "definition": "Matar o perseguir sistemáticamente a un pueblo, grupo étnico o religión con la intención de destruirlo.",
+    "match": [
+      "genocidio"
+    ]
+  },
+  {
+    "id": "missoes_paz",
+    "term": "Misiones de paz",
+    "definition": "Tropas enviadas al exterior, bajo coordinación internacional, para mantener el orden en zonas de conflicto.",
+    "match": [
+      "misiones de paz"
+    ]
+  },
+  {
+    "id": "sancoes",
+    "term": "Sanciones",
+    "definition": "Castigos económicos contra un país, como bloquear el comercio o congelar dinero en el exterior.",
+    "match": [
+      "sanciones"
+    ]
+  },
+  {
+    "id": "aliancas_militares",
+    "term": "Alianzas militares",
+    "definition": "Acuerdos entre países para defenderse mutuamente: si uno es atacado, los demás lo ayudan.",
+    "match": [
+      "alianzas militares"
+    ]
+  },
+  {
+    "id": "alinhamento_automatico",
+    "term": "Alineamiento automático",
+    "definition": "Seguir siempre la posición de otro país o bloque en lugar de decidir caso por caso.",
+    "match": [
+      "alineamiento automático"
+    ]
+  },
+  {
+    "id": "tratado_internacional",
+    "term": "Tratado internacional",
+    "definition": "Un acuerdo formal entre países, con normas que ambas partes prometen cumplir.",
+    "match": [
+      "tratado internacional"
+    ]
+  },
+  {
+    "id": "potencias",
+    "term": "Grandes potencias",
+    "definition": "Países con un poder militar, económico o político muy grande.",
+    "match": [
+      "grandes potencias"
+    ]
+  },
+  {
+    "id": "redistribuir",
+    "term": "Redistribuir",
+    "definition": "Quitar a quienes tienen más y dar a quienes tienen menos, mediante impuestos, leyes o programas públicos.",
+    "match": [
+      "redistribuir",
+      "redistribuyen"
+    ]
+  },
+  {
+    "id": "estrategico",
+    "term": "Estratégico",
+    "definition": "Un sector o empresa esencial para que un país funcione o se defienda, como la energía, el petróleo, el agua o la tecnología.",
+    "match": [
+      "importancia estratégica",
+      "estratégicos",
+      "estratégicas"
+    ]
+  },
+  {
+    "id": "estatais",
+    "term": "Empresas estatales",
+    "definition": "Empresas controladas por el gobierno.",
+    "match": [
+      "empresas estatales"
+    ]
+  },
+  {
+    "id": "reforma_agraria",
+    "term": "Reforma agraria",
+    "definition": "Dividir grandes propiedades rurales para dar tierra a quienes quieren cultivarla.",
+    "match": [
+      "reforma agraria"
+    ]
+  },
+  {
+    "id": "sindicatos",
+    "term": "Sindicatos",
+    "definition": "Organizaciones de trabajadores que negocian salarios y condiciones laborales en nombre del grupo.",
+    "match": [
+      "sindicatos"
+    ]
+  },
+  {
+    "id": "renda_basica",
+    "term": "Ingreso mínimo",
+    "definition": "Dinero que el Estado paga regularmente a personas necesitadas para garantizar un nivel de vida básico.",
+    "match": [
+      "ingreso mínimo"
+    ]
+  },
+  {
+    "id": "bolsa_familia",
+    "term": "Bolsa Família",
+    "definition": "Un programa federal brasileño que paga un monto mensual a familias de bajos ingresos.",
+    "match": []
+  },
+  {
+    "id": "estabilidade_servidores",
+    "term": "Estabilidad laboral vitalicia",
+    "definition": "Una norma que hace muy difícil despedir a los empleados permanentes del gobierno.",
+    "match": [
+      "estabilidad laboral vitalicia"
+    ]
+  },
+  {
+    "id": "subsidiar",
+    "term": "Subsidiar",
+    "definition": "Apoyar una actividad con dinero público para que cueste menos o sea más rentable.",
+    "match": [
+      "subsidiar"
+    ]
+  },
+  {
+    "id": "banco_central",
+    "term": "Banco central",
+    "definition": "La institución pública que administra la moneda de un país y fija su tasa de interés básica.",
+    "match": [
+      "banco central"
+    ]
+  },
+  {
+    "id": "taxa_juros",
+    "term": "Tasa de interés",
+    "definition": "El precio del dinero prestado. Las tasas altas encarecen el crédito y tienden a frenar los precios; las bajas hacen lo contrario.",
+    "match": [
+      "tasas de interés"
+    ]
+  },
+  {
+    "id": "inflacao",
+    "term": "Inflación",
+    "definition": "Un aumento general y continuo de los precios que hace que el dinero compre menos. Sus causas se debaten: creación de dinero, demanda, costos.",
+    "match": [
+      "inflación"
+    ]
+  },
+  {
+    "id": "carga_tributaria",
+    "term": "Carga tributaria",
+    "definition": "El total de impuestos que pagan las personas y las empresas en relación con el tamaño de la economía.",
+    "match": []
+  },
+  {
+    "id": "arrecadacao",
+    "term": "Recaudación tributaria",
+    "definition": "El dinero que el gobierno recauda con los impuestos.",
+    "match": [
+      "recaudación tributaria",
+      "recaudación"
+    ]
+  },
+  {
+    "id": "recessao",
+    "term": "Recesión",
+    "definition": "Un período en el que la economía se contrae: la producción cae y el desempleo tiende a subir.",
+    "match": [
+      "recesión"
+    ]
+  },
+  {
+    "id": "cambio",
+    "term": "Tipo de cambio",
+    "definition": "El precio de la moneda de un país en comparación con otras monedas, como el dólar.",
+    "match": [
+      "tipo de cambio"
+    ]
+  },
+  {
+    "id": "criptomoedas",
+    "term": "Criptomonedas",
+    "definition": "Dinero digital, como Bitcoin, que no emite ningún gobierno ni banco central.",
+    "match": [
+      "criptomonedas"
+    ]
+  },
+  {
+    "id": "economia_planejada",
+    "term": "Economía planificada",
+    "definition": "Un sistema en el que el gobierno decide qué se produce, cuánto y a qué precio.",
+    "match": [
+      "economía planificada"
+    ]
+  },
+  {
+    "id": "livre_mercado",
+    "term": "Libre mercado",
+    "definition": "Un sistema en el que los precios y la producción surgen del libre intercambio entre compradores y vendedores, con poca interferencia del gobierno.",
+    "match": [
+      "libre mercado"
+    ]
+  },
+  {
+    "id": "campeas_nacionais",
+    "term": "Campeones nacionales",
+    "definition": "Grandes empresas nacionales que el gobierno elige apoyar para que crezcan y compitan en todo el mundo.",
+    "match": [
+      "empresas nacionales líderes"
+    ]
+  },
+  {
+    "id": "regulacao",
+    "term": "Regulación",
+    "definition": "Normas del gobierno que establecen cómo puede funcionar una actividad económica.",
+    "match": [
+      "regulaciones"
+    ]
+  },
+  {
+    "id": "tarifas",
+    "term": "Aranceles",
+    "definition": "Un impuesto que se cobra a los bienes importados y los encarece.",
+    "match": [
+      "aranceles"
+    ]
+  },
+  {
+    "id": "livre_comercio",
+    "term": "Libre comercio",
+    "definition": "Comercio entre países con pocos o ningún arancel o barrera.",
+    "match": [
+      "libre comercio"
+    ]
+  },
+  {
+    "id": "soberania_economica",
+    "term": "Soberanía económica",
+    "definition": "La capacidad de un país de tomar sus propias decisiones económicas sin depender de otros países.",
+    "match": [
+      "soberanía económica"
+    ]
+  },
+  {
+    "id": "multinacionais",
+    "term": "Multinacionales",
+    "definition": "Empresas que operan en varios países a la vez.",
+    "match": [
+      "multinacionales"
+    ]
+  },
+  {
+    "id": "integracao_economica",
+    "term": "Integración económica",
+    "definition": "Acercar las economías de los países mediante el comercio, la inversión y normas compartidas.",
+    "match": [
+      "integración económica"
+    ]
+  },
+  {
+    "id": "cadeias_suprimento",
+    "term": "Cadenas de suministro",
+    "definition": "Todos los pasos necesarios para fabricar algo, desde las materias primas hasta el producto terminado.",
+    "match": [
+      "cadenas de suministro"
+    ]
+  },
+  {
+    "id": "transgenicos",
+    "term": "Cultivos genéticamente modificados",
+    "definition": "Cultivos cuyos genes fueron alterados en un laboratorio, por ejemplo para resistir plagas.",
+    "match": [
+      "genéticamente modificados"
+    ]
+  },
+  {
+    "id": "agrotoxicos",
+    "term": "Pesticidas",
+    "definition": "Productos químicos que se usan en los cultivos para combatir plagas y enfermedades de las plantas.",
+    "match": [
+      "pesticidas"
+    ]
+  },
+  {
+    "id": "edicao_genetica",
+    "term": "Edición genética",
+    "definition": "Alterar el ADN de un ser vivo para corregir o cambiar sus rasgos.",
+    "match": [
+      "edición genética"
+    ]
+  },
+  {
+    "id": "embrioes",
+    "term": "Embriones",
+    "definition": "La primera etapa del desarrollo humano, en las primeras semanas después de la fecundación.",
+    "match": [
+      "embriones"
+    ]
+  },
+  {
+    "id": "implantes_cerebrais",
+    "term": "Implantes cerebrales",
+    "definition": "Dispositivos colocados en el cerebro para leer sus señales o estimular la actividad mental.",
+    "match": [
+      "implantes cerebrales"
+    ]
+  },
+  {
+    "id": "ia",
+    "term": "Inteligencia artificial",
+    "definition": "Programas informáticos capaces de realizar tareas que normalmente requieren inteligencia humana, como entender textos o reconocer imágenes.",
+    "match": [
+      "IA"
+    ]
+  },
+  {
+    "id": "automacao",
+    "term": "Automatización",
+    "definition": "Usar máquinas y software para hacer trabajo que antes hacían las personas.",
+    "match": [
+      "automatización"
+    ]
+  },
+  {
+    "id": "carne_cultivada",
+    "term": "Carne cultivada en laboratorio",
+    "definition": "Carne producida en un laboratorio a partir de células animales, sin criar ni sacrificar un animal entero.",
+    "match": [
+      "carne cultivada en laboratorio"
+    ]
+  },
+  {
+    "id": "espionagem",
+    "term": "Espionaje",
+    "definition": "Obtener en secreto información de otro país, empresa o persona.",
+    "match": [
+      "espionaje"
+    ]
+  },
+  {
+    "id": "arsenais",
+    "term": "Arsenales",
+    "definition": "El conjunto de armas que posee un país.",
+    "match": [
+      "arsenales"
+    ]
+  },
+  {
+    "id": "interesse_nacional",
+    "term": "Interés nacional",
+    "definition": "Lo que un gobierno considera bueno para el país en su conjunto, como la seguridad, la economía y la influencia en el mundo.",
+    "match": [
+      "interés nacional",
+      "intereses nacionales"
+    ]
+  },
+  {
+    "id": "organismos_internacionais",
+    "term": "Organismos internacionales",
+    "definition": "Instituciones formadas por varios países para tratar asuntos comunes, como la ONU o la OMC.",
+    "match": [
+      "organismos internacionales"
+    ]
+  },
+  {
+    "id": "cidadao_mundo",
+    "term": "Ciudadano del mundo",
+    "definition": "Una persona que se siente parte de toda la humanidad antes que de una nación.",
+    "match": [
+      "ciudadano del mundo"
+    ]
+  },
+  {
+    "id": "congresso",
+    "term": "Poder legislativo",
+    "definition": "El órgano elegido que hace las leyes de un país.",
+    "match": [
+      "poder legislativo"
+    ]
+  },
+  {
+    "id": "alternancia_poder",
+    "term": "Alternancia del poder",
+    "definition": "Cuando distintos partidos se turnan para gobernar a medida que pasan las elecciones.",
+    "match": [
+      "alternancia del poder"
+    ]
+  },
+  {
+    "id": "assembleia_popular",
+    "term": "Asamblea popular",
+    "definition": "Una reunión abierta en la que las personas deciden juntas en lugar de elegir representantes.",
+    "match": [
+      "asambleas populares"
+    ]
+  },
+  {
+    "id": "criminalizar",
+    "term": "Criminalizar",
+    "definition": "Convertir un acto en delito, con una pena fijada por ley.",
+    "match": [
+      "criminalizarse"
+    ]
+  },
+  {
+    "id": "legalizar",
+    "term": "Legalizar",
+    "definition": "Permitir por ley algo que antes estaba prohibido.",
+    "match": [
+      "legalizarse"
+    ]
+  },
+  {
+    "id": "industrializacao",
+    "term": "Industrialización",
+    "definition": "Transformar una economía para producir más en fábricas y con máquinas.",
+    "match": [
+      "industrialización"
+    ]
+  },
+  {
+    "id": "mineracao",
+    "term": "Minería",
+    "definition": "Extraer minerales del suelo, como oro, hierro y niobio.",
+    "match": [
+      "minería"
+    ]
+  },
+  {
+    "id": "pecuaria",
+    "term": "Ganadería",
+    "definition": "Criar animales como el ganado vacuno para obtener carne, leche y otros productos.",
+    "match": [
+      "ganadería"
+    ]
+  }
+]

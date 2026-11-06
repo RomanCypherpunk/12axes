@@ -22,4 +22,5 @@ function explanationBlock(file) {
   return entries;
 }
 
-export const AXIS_EXPLANATIONS = { pt: explanationBlock('pt.ts'), en: explanationBlock('en.ts') };
+const en = explanationBlock('en.ts');
+export const AXIS_EXPLANATIONS = { pt: explanationBlock('pt.ts'), en, es: { ...en, ...explanationBlock('es.ts') } };

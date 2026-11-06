@@ -43,8 +43,8 @@ const PREMIUM_DEV_OPEN = import.meta.env.VITE_PREMIUM_DEV_OPEN === 'true';
 // Compra do Relatório completo (Mercado Pago): VITE_PAYWALL_ENABLED = true (todos), preview (só navegadores marcados com ?paywall=1),
 // paused (vendas pausadas: só quem já pagou vê o relatório) ou
 // desligada (padrão). Ver utils/paywallFlag.
-// Cada idioma tem o seu interruptor: VITE_PAYWALL_ENABLED (português, reais) e VITE_PAYWALL_EN_ENABLED (inglês, dólar, pela Paddle).
-const PAYWALL_MODE = paywallMode(LANG === 'en' ? import.meta.env.VITE_PAYWALL_EN_ENABLED : import.meta.env.VITE_PAYWALL_ENABLED);
+// Dois interruptores: VITE_PAYWALL_ENABLED (português, reais) e VITE_PAYWALL_EN_ENABLED (qualquer outro idioma, dólar, pela Paddle).
+const PAYWALL_MODE = paywallMode(LANG === 'pt' ? import.meta.env.VITE_PAYWALL_ENABLED : import.meta.env.VITE_PAYWALL_EN_ENABLED);
 const PremiumReportSection = lazy(() => import('../results/premium/PremiumReportSection'));
 
 interface ResultsScreenProps {

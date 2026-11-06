@@ -1,8 +1,21 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { accessLink, accessTokenFromHash, canonicalResultLink, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
+import { accessLink, accessTokenFromHash, canonicalResultLink, returnUrlWithLang, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
 
 const base64url = (text: string) => btoa(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 const tokenExpiringAt = (seconds: number) => `${base64url(`v2|hash|pi_3Test|1000|${seconds}`)}.assinatura`;
+
+describe('returnUrlWithLang', () => {
+  const url = 'https://12axes.vercel.app/results?est=50&rep=60';
+
+  it('fora do português, o idioma vai no endereço de volta', () => {
+    expect(returnUrlWithLang(url, 'es')).toBe(`${url}&lang=es`);
+    expect(returnUrlWithLang(`${url}&lang=en`, 'es')).toBe(`${url}&lang=es`);
+  });
+
+  it('em português o endereço fica como está', () => {
+    expect(returnUrlWithLang(url, 'pt')).toBe(url);
+  });
+});
 
 // O ambiente dos testes é o Node, sem localStorage: um armazenamento em memória no lugar dele.
 function memoryStorage(overrides: Partial<Storage> = {}): Storage {

@@ -1,7 +1,7 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT e EN
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN e ES
 // a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
 // Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
-// overlays em data/i18n/en/*.json (chaveados por id, com fallback para PT).
+// overlays em data/i18n/<lang>/*.json (chaveados por id; fallback: EN usa PT, ES usa EN).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,6 +18,7 @@ import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
 import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
 import { policyPages, POLICY_CSS } from './policy-pages.mjs';
 import { cdnifyHtml, cdnifyShareImage } from './cdn.mjs';
+import { ES } from './locales/es.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -49,15 +50,16 @@ const partyProfiles = new Map(readJson('parties-profiles.json').map((p) => [p.pa
 
 function overlay(base, locale, file) {
   if (locale === 'pt') return base;
+  const source = locale === 'en' ? base : overlay(base, 'en', file);
   const path = join(DATA_DIR, 'i18n', locale, file);
   if (!existsSync(path)) {
-    console.warn(`[i18n] overlay ausente: ${locale}/${file} — usando PT`);
-    return base;
+    console.warn(`[i18n] overlay ausente: ${locale}/${file} — usando ${locale === 'en' ? 'PT' : 'EN'}`);
+    return source;
   }
   const byId = new Map(JSON.parse(readFileSync(path, 'utf8')).map((item) => [item.id, item]));
-  return base.map((item) => {
+  return source.map((item) => {
     const tr = byId.get(item.id);
-    if (!tr) console.warn(`[i18n] sem tradução ${locale}: ${file} → ${item.id} (fallback PT)`);
+    if (!tr && locale === 'en') console.warn(`[i18n] sem tradução ${locale}: ${file} → ${item.id} (fallback PT)`);
     return tr ? { ...item, ...tr } : item;
   });
 }
@@ -165,7 +167,9 @@ const STR = {
   }
 };
 
-const LOCALES = ['pt', 'en'];
+STR.es = { ...STR.en, ...ES.site };
+
+const LOCALES = ['pt', 'en', 'es'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -252,12 +256,15 @@ function buildLocaleContext(locale) {
   const parties = overlay(baseParties, locale, 'parties.json');
   const books = baseBooks.map((b) => ({
     ...b,
-    title: (b.title && (b.title[locale] || b.title.pt)) || '',
-    url: (b.url && (b.url[locale] || b.url.pt)) || ''
+    title: (b.title && (b.title[locale] || b.title.en || b.title.pt)) || '',
+    url: (b.url && (b.url[locale] || b.url.en || b.url.pt)) || ''
   }));
+  // A busca de livros fora do português é na Amazon americana, com o autor em inglês.
+  const englishNames = new Map(overlay(basePersonalities, 'en', 'personalities.json').map((p) => [p.id, p.name]));
   return {
     locale,
     s: STR[locale],
+    storeAuthorName: (author) => (locale === 'es' ? englishNames.get(author.id) ?? author.name : author.name),
     axes: overlay(baseAxes, locale, 'axes.json'),
     ideologies,
     countries,
@@ -280,7 +287,7 @@ function writePage(prefix, { basePath, html }) {
   return prefix + basePath;
 }
 
-// ── Homes /en e /br ─────────────────────────────────────────────────────────
+// ── Homes /en, /es e /br ─────────────────────────────────────────────────────────
 // dist/en.html: cópia do index compilado com todo o SEO trocado para inglês
 // (título, description, OG, JSON-LD) e canonical próprio — é o que o Google
 // mostra para quem busca em inglês. dist/br.html: cópia fiel do index (o
@@ -295,92 +302,19 @@ function replaceBetween(html, startMarker, endMarker, replacement) {
   return html.slice(0, start) + replacement + html.slice(end);
 }
 
-function buildHomeVariants() {
-  const index = readFileSync(join(DIST, 'index.html'), 'utf8');
-
-  writeFileSync(join(DIST, 'br.html'), index);
-
-  // Rotas do app servidas como arquivos físicos (via cleanUrls), sem depender
-  // do rewrite de SPA. results.html fica sem canonical/hreflang para que cada
-  // URL de resultado compartilhado possa ser indexada individualmente.
-  writeFileSync(join(DIST, '240questions.html'), index);
-  const results = index
-    .replace(/^\s*<link rel="canonical"[^\n]*\n/m, '')
-    .replace(/^\s*<link rel="alternate" hreflang=[^\n]*\n/gm, '');
-  writeFileSync(join(DIST, 'results.html'), results);
-  // /r é o link curto de resultado (QR code do cartão): mesma página, também sem canonical.
-  writeFileSync(join(DIST, 'r.html'), results);
-
-  const enSeoBlock = `<!-- Primary SEO -->
-    <title>12 Axes — Free Political Test, Quiz & Compass Across 12 Axes</title>
-    <meta
-      name="description"
-      content="The free, fast and accurate 12 Axes political test. Find your ideology, country and political figure match across 12 axes, with a political compass."
-    />
-    <meta
-      name="keywords"
-      content="political test, free political test, political quiz, ideology test, political ideology, find your ideology, find your compatible ideology, find your compatible country, find your compatible political figure, political spectrum, political compass, political coordinates, political compass test, 12 axes, 12 axes political test, 12axes, 12 axes quiz, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism"
-    />
-    <meta name="author" content="12 Axes" />
-    <meta name="copyright" content="© 2026 12 Axes. All rights reserved" />
-    <meta name="application-name" content="12 Axes" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="language" content="English" />
-    <link rel="canonical" href="https://12axes.vercel.app/en" />
-    <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
-    <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
-    <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
-
-    `;
-
-  const enOgBlock = `<!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="12 Axes" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://12axes.vercel.app/en" />
-    <meta property="og:title" content="12 Axes — Free Political Test, Quiz & Compass Across 12 Axes" />
-    <meta
-      property="og:description"
-      content="A complete, free political quiz: find your political ideology, compatible country and political figure across 12 axes, with a political compass and full spectrum."
-    />
-    <meta property="og:image" content="https://12axes.vercel.app/logo.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="12 Axes logo — a 12-axis political test" />
-
-    `;
-
-  const enTwitterBlock = `<!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="12 Axes — Free Political Test, Quiz & Compass Across 12 Axes" />
-    <meta
-      name="twitter:description"
-      content="A free, fast political test: find your ideology, country and political figure match across 12 axes, with a political compass."
-    />
-    <meta name="twitter:image" content="https://12axes.vercel.app/logo.png" />
-
-    `;
-
-  const enWebApp = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: '12 Axes',
-    alternateName: ['12 Axes Political Quiz', '12 Axes Ideology Test', '12 Axes Political Test', '12 Axes Political Compass', '12 Axes Quiz'],
-    url: 'https://12axes.vercel.app/en',
-    description:
-      'A free, fast and complete political test and ideology quiz that maps your position across 12 axes and shows your compatible ideology, country and political figure, with a political compass and spectrum.',
-    applicationCategory: 'EducationApplication',
-    operatingSystem: 'Web',
-    inLanguage: 'en',
-    isAccessibleForFree: true,
-    copyrightYear: 2026,
-    copyrightHolder: { '@type': 'Organization', name: '12 Axes', url: 'https://12axes.vercel.app/' },
-    license: 'https://github.com/RomanCypherpunk/12axes/blob/main/LICENSE',
-    image: 'https://12axes.vercel.app/logo.png',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    keywords:
-      'political test, free political test, political quiz, ideology test, political ideology, find your ideology, find your compatible ideology, find your compatible country, find your compatible political figure, political spectrum, political compass, political coordinates, political compass test, 12 axes, 12 axes political test, 12axes, 12 axes quiz, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism',
-    featureList: [
+const HOME_EN = {
+  copyright: '© 2026 12 Axes. All rights reserved',
+  title: '12 Axes — Free Political Test, Quiz & Compass Across 12 Axes',
+  description: 'The free, fast and accurate 12 Axes political test. Find your ideology, country and political figure match across 12 axes, with a political compass.',
+  keywords: 'political test, free political test, political quiz, ideology test, political ideology, find your ideology, find your compatible ideology, find your compatible country, find your compatible political figure, political spectrum, political compass, political coordinates, political compass test, 12 axes, 12 axes political test, 12axes, 12 axes quiz, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism',
+  languageName: 'English',
+  ogLocale: 'en_US',
+  ogDescription: 'A complete, free political quiz: find your political ideology, compatible country and political figure across 12 axes, with a political compass and full spectrum.',
+  twitterDescription: 'A free, fast political test: find your ideology, country and political figure match across 12 axes, with a political compass.',
+  ogImageAlt: '12 Axes logo — a 12-axis political test',
+  alternateName: ['12 Axes Political Quiz', '12 Axes Ideology Test', '12 Axes Political Test', '12 Axes Political Compass', '12 Axes Quiz'],
+  appDescription: 'A free, fast and complete political test and ideology quiz that maps your position across 12 axes and shows your compatible ideology, country and political figure, with a political compass and spectrum.',
+  featureList: [
       'Free political test with 36, 60 or 240 questions',
       'Result across 12 political axes',
       'Compatible political ideology',
@@ -388,8 +322,8 @@ function buildHomeVariants() {
       'Compatible political figure',
       'Political compass with socialism × capitalism and authoritarian × libertarian',
       'Anonymous, no sign-up'
-    ],
-    about: [
+  ],
+  about: [
       'Political structure',
       'Democratic representation',
       'Elections',
@@ -410,13 +344,8 @@ function buildHomeVariants() {
       'Conservatism',
       'Progressivism',
       'Libertarianism'
-    ]
-  };
-
-  const enFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
+  ],
+  faq: [
       ['Is the test reliable?', 'The 12 Axes political test is reliable as a tool for reading and comparing political positions. It uses questions spread across 12 axes to reduce single-topic bias, but it does not replace study, debate, or academic analysis.'],
       ['How long does it take?', 'The short version takes about 5 minutes. The full version takes roughly 9 minutes. The extreme version, with 240 questions, can take about 30 minutes.'],
       ['Can I retake it?', 'Yes. You can retake the political quiz as many times as you like, including choosing another depth to compare whether your result changes.'],
@@ -432,40 +361,142 @@ function buildHomeVariants() {
       ['How do I find my compatible political ideology?', 'Take the political quiz, with 36, 60 or 240 questions. The result shows the ideologies most compatible with your answers, with the compatibility percentage and the position of each one across the 12 axes.'],
       ['Can I find out which country or political figure matches me?', 'Yes. Besides ideology, the result compares your profile with current countries, historical regimes and political figures, showing the most compatible and the furthest from you.'],
       ['How many questions does the political quiz have?', 'There are three versions: quick, with 36 questions, full, with 60, and extreme, with 240. All cover the same 12 axes; the more questions, the more precise the result tends to be.']
-    ].map(([question, answer]) => ({
+  ]
+};
+
+// Cópia do index compilado com todo o SEO trocado para o idioma (título, description, OG, JSON-LD) e canonical próprio.
+function homeVariant(index, locale, c) {
+  const url = `https://12axes.vercel.app/${locale}`;
+  const attr = (text) => String(text).replaceAll('&', '&amp;').replaceAll('"', '&quot;');
+  const seoBlock = `<!-- Primary SEO -->
+    <title>${c.title}</title>
+    <meta
+      name="description"
+      content="${attr(c.description)}"
+    />
+    <meta
+      name="keywords"
+      content="${attr(c.keywords)}"
+    />
+    <meta name="author" content="12 Axes" />
+    <meta name="copyright" content="${attr(c.copyright)}" />
+    <meta name="application-name" content="12 Axes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="language" content="${c.languageName}" />
+    <link rel="canonical" href="${url}" />
+    <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
+    <link rel="alternate" hreflang="es" href="https://12axes.vercel.app/es" />
+    <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
+
+    `;
+
+  const ogBlock = `<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="12 Axes" />
+    <meta property="og:locale" content="${c.ogLocale}" />
+    <meta property="og:url" content="${url}" />
+    <meta property="og:title" content="${attr(c.title)}" />
+    <meta
+      property="og:description"
+      content="${attr(c.ogDescription)}"
+    />
+    <meta property="og:image" content="https://12axes.vercel.app/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="${attr(c.ogImageAlt)}" />
+
+    `;
+
+  const twitterBlock = `<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${attr(c.title)}" />
+    <meta
+      name="twitter:description"
+      content="${attr(c.twitterDescription)}"
+    />
+    <meta name="twitter:image" content="https://12axes.vercel.app/logo.png" />
+
+    `;
+
+  const webApp = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '12 Axes',
+    alternateName: c.alternateName,
+    url,
+    description: c.appDescription,
+    applicationCategory: 'EducationApplication',
+    operatingSystem: 'Web',
+    inLanguage: locale,
+    isAccessibleForFree: true,
+    copyrightYear: 2026,
+    copyrightHolder: { '@type': 'Organization', name: '12 Axes', url: 'https://12axes.vercel.app/' },
+    license: 'https://github.com/RomanCypherpunk/12axes/blob/main/LICENSE',
+    image: 'https://12axes.vercel.app/logo.png',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    keywords: c.keywords,
+    featureList: c.featureList,
+    about: c.about
+  };
+
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: c.faq.map(([question, answer]) => ({
       '@type': 'Question',
       name: question,
       acceptedAnswer: { '@type': 'Answer', text: answer }
     }))
   };
 
-  const enWebSite = {
+  const webSite = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: '12 Axes',
     alternateName: ['12 Eixos', '12axes', '12 Axes Political Test'],
-    url: 'https://12axes.vercel.app/en',
-    inLanguage: ['en', 'pt-BR']
+    url,
+    inLanguage: [locale, ...['pt-BR', 'en', 'es'].filter((l) => l !== locale)]
   };
 
-  const enJsonLdBlocks = [JSON.stringify(enWebApp), JSON.stringify(enFaq), JSON.stringify(enWebSite)];
+  const jsonLdBlocks = [JSON.stringify(webApp), JSON.stringify(faqLd), JSON.stringify(webSite)];
 
-  let en = index.replace('<html lang="pt-BR">', '<html lang="en">');
-  en = replaceBetween(en, '<!-- Primary SEO -->', '<!-- Icons -->', enSeoBlock);
-  en = replaceBetween(en, '<!-- Open Graph -->', '<!-- Twitter -->', enOgBlock);
-  en = replaceBetween(en, '<!-- Twitter -->', '<style>', enTwitterBlock);
+  let html = index.replace('<html lang="pt-BR">', `<html lang="${locale}">`);
+  html = replaceBetween(html, '<!-- Primary SEO -->', '<!-- Icons -->', seoBlock);
+  html = replaceBetween(html, '<!-- Open Graph -->', '<!-- Twitter -->', ogBlock);
+  html = replaceBetween(html, '<!-- Twitter -->', '<style>', twitterBlock);
   // Troca apenas o conteúdo dos três blocos ld+json (WebApplication, FAQ e WebSite),
   // preservando os scripts do app que o Vite injeta no <head>.
   let ldIndex = 0;
-  en = en.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (block) =>
-    ldIndex < enJsonLdBlocks.length
-      ? `<script type="application/ld+json">${enJsonLdBlocks[ldIndex++]}</script>`
+  html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (block) =>
+    ldIndex < jsonLdBlocks.length
+      ? `<script type="application/ld+json">${jsonLdBlocks[ldIndex++]}</script>`
       : block
   );
-  if (ldIndex !== enJsonLdBlocks.length) {
+  if (ldIndex !== jsonLdBlocks.length) {
     throw new Error(`Esperava 3 blocos ld+json no index.html, encontrei ${ldIndex}`);
   }
-  writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(en));
+  return html;
+}
+
+function buildHomeVariants() {
+  const index = readFileSync(join(DIST, 'index.html'), 'utf8');
+
+  writeFileSync(join(DIST, 'br.html'), index);
+
+  // Rotas do app servidas como arquivos físicos (via cleanUrls), sem depender
+  // do rewrite de SPA. results.html fica sem canonical/hreflang para que cada
+  // URL de resultado compartilhado possa ser indexada individualmente.
+  writeFileSync(join(DIST, '240questions.html'), index);
+  const results = index
+    .replace(/^\s*<link rel="canonical"[^\n]*\n/m, '')
+    .replace(/^\s*<link rel="alternate" hreflang=[^\n]*\n/gm, '');
+  writeFileSync(join(DIST, 'results.html'), results);
+  // /r é o link curto de resultado (QR code do cartão): mesma página, também sem canonical.
+  writeFileSync(join(DIST, 'r.html'), results);
+
+  writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(homeVariant(index, 'en', HOME_EN)));
+  writeFileSync(join(DIST, 'es.html'), cdnifyShareImage(homeVariant(index, 'es', ES.home)));
 }
 
 const allPaths = [];
@@ -509,7 +540,7 @@ if (existsSync(booksPtPath)) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', ...allPaths]
+const sitemapUrls = ['/', '/en', '/es', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(

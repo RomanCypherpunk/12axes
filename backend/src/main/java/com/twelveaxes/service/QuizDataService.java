@@ -25,6 +25,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import org.springframework.core.io.ClassPathResource;
@@ -40,6 +41,7 @@ public class QuizDataService {
 
     public static final String LANG_PT = "pt";
     public static final String LANG_EN = "en";
+    public static final String LANG_ES = "es";
 
     private final ObjectMapper objectMapper;
     private Map<String, LocaleBundle> bundles;
@@ -145,8 +147,9 @@ public class QuizDataService {
         validateArchetypeQuestions(axes);
 
         LocaleBundle pt = LocaleBundle.of(axes, questions, ideologies, countries, personalities, parties);
-        LocaleBundle en = buildEnglishBundle(pt);
-        bundles = Map.of(LANG_PT, pt, LANG_EN, en);
+        LocaleBundle en = buildLocaleBundle(pt, LANG_EN);
+        LocaleBundle es = buildLocaleBundle(en, LANG_ES);
+        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_ES, es);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
         List<String> unknownBookAuthors = bookList.stream()
@@ -166,17 +169,18 @@ public class QuizDataService {
         validateParties(pt);
     }
 
-    // Overlays em data/i18n/en/*.json trazem só os campos de texto, chaveados por id.
-    // Item sem tradução (ou arquivo ausente) cai no texto PT — nada quebra.
-    private LocaleBundle buildEnglishBundle(LocaleBundle pt) throws IOException {
-        Map<String, Map<String, String>> axesTr = readOverlay("data/i18n/en/axes.json");
-        Map<String, Map<String, String>> questionsTr = readOverlay("data/i18n/en/questions.json");
-        Map<String, Map<String, String>> ideologiesTr = readOverlay("data/i18n/en/ideologies.json");
-        Map<String, Map<String, String>> countriesTr = readOverlay("data/i18n/en/countries.json");
-        Map<String, Map<String, String>> personalitiesTr = readOverlay("data/i18n/en/personalities.json");
-        Map<String, Map<String, String>> partiesTr = readOverlay("data/i18n/en/parties.json");
+    // Overlays em data/i18n/<lang>/*.json trazem só os campos de texto, chaveados por id.
+    // Item sem tradução (ou arquivo ausente) cai no idioma base: PT para o inglês, inglês para os demais. Nada quebra.
+    private LocaleBundle buildLocaleBundle(LocaleBundle base, String lang) throws IOException {
+        String dir = "data/i18n/" + lang + "/";
+        Map<String, Map<String, String>> axesTr = readOverlay(dir + "axes.json");
+        Map<String, Map<String, String>> questionsTr = readOverlay(dir + "questions.json");
+        Map<String, Map<String, String>> ideologiesTr = readOverlay(dir + "ideologies.json");
+        Map<String, Map<String, String>> countriesTr = readOverlay(dir + "countries.json");
+        Map<String, Map<String, String>> personalitiesTr = readOverlay(dir + "personalities.json");
+        Map<String, Map<String, String>> partiesTr = readOverlay(dir + "parties.json");
 
-        List<Axis> axes = pt.axes().stream().map(axis -> {
+        List<Axis> axes = base.axes().stream().map(axis -> {
             Map<String, String> tr = axesTr.get(axis.id());
             if (tr == null) return axis;
             return new Axis(
@@ -189,24 +193,27 @@ public class QuizDataService {
             );
         }).toList();
 
-        List<Question> translatedQuestions = pt.questions().stream().map(question -> {
+        List<Question> translatedQuestions = base.questions().stream().map(question -> {
             Map<String, String> tr = questionsTr.get(question.id());
             if (tr == null || tr.get("text") == null) return question;
             return question.withText(tr.get("text"));
         }).toList();
-        // Os termos são procurados no texto traduzido; sem overlay EN do glossário, não há tooltip.
-        // Idem para a explicação das perguntas: pergunta sem entrada EN fica sem ela, nunca em PT.
+        // Os termos são procurados no texto traduzido: sem overlay do glossário no idioma, não há tooltip.
+        // Pergunta sem explicação no idioma: o inglês fica sem ela (nunca em PT); os demais usam a do inglês.
         List<Question> questions = QuestionHelpResolver.attach(
                 GlossaryResolver.attach(
                         translatedQuestions,
-                        readOptionalJson("data/i18n/en/glossary.json", new TypeReference<List<GlossaryEntry>>() {}),
-                        "i18n/en/glossary.json"
+                        readOptionalJson(dir + "glossary.json", new TypeReference<List<GlossaryEntry>>() {}),
+                        dir + "glossary.json"
                 ),
-                readOptionalJson("data/i18n/en/question-help.json", new TypeReference<List<QuestionHelpEntry>>() {}),
-                "i18n/en/question-help.json"
+                helpForLocale(lang, dir + "question-help.json", translatedQuestions),
+                dir + "question-help.json"
         );
+        if (!LANG_EN.equals(lang)) {
+            questions = keepBaseHelpWhenMissing(questions, base.questions());
+        }
 
-        List<Ideology> ideologies = pt.ideologies().stream().map(ideology -> {
+        List<Ideology> ideologies = base.ideologies().stream().map(ideology -> {
             Map<String, String> tr = ideologiesTr.get(ideology.id());
             if (tr == null) return ideology;
             return new Ideology(
@@ -222,7 +229,7 @@ public class QuizDataService {
             );
         }).toList();
 
-        List<Country> countries = pt.countries().stream().map(country -> {
+        List<Country> countries = base.countries().stream().map(country -> {
             Map<String, String> tr = countriesTr.get(country.id());
             if (tr == null) return country;
             return new Country(
@@ -242,7 +249,7 @@ public class QuizDataService {
             );
         }).toList();
 
-        List<Personality> personalities = pt.personalities().stream().map(personality -> {
+        List<Personality> personalities = base.personalities().stream().map(personality -> {
             Map<String, String> tr = personalitiesTr.get(personality.id());
             if (tr == null) return personality;
             return new Personality(
@@ -260,7 +267,7 @@ public class QuizDataService {
             );
         }).toList();
 
-        List<Party> parties = pt.parties().stream().map(party -> {
+        List<Party> parties = base.parties().stream().map(party -> {
             Map<String, String> tr = partiesTr.get(party.id());
             if (tr == null) return party;
             return party.withText(
@@ -270,6 +277,24 @@ public class QuizDataService {
         }).toList();
 
         return LocaleBundle.of(axes, questions, ideologies, countries, personalities, parties);
+    }
+
+    // O inglês é mantido à mão e erro nele derruba o startup. Nos idiomas gerados, a ajuda de uma pergunta
+    // que já saiu do catálogo é ignorada até a próxima sincronização.
+    private List<QuestionHelpEntry> helpForLocale(String lang, String path, List<Question> questions) throws IOException {
+        List<QuestionHelpEntry> entries = readOptionalJson(path, new TypeReference<List<QuestionHelpEntry>>() {});
+        if (LANG_EN.equals(lang)) {
+            return entries;
+        }
+        Set<String> ids = questions.stream().map(Question::id).collect(Collectors.toSet());
+        return entries.stream().filter(entry -> ids.contains(entry.id())).toList();
+    }
+
+    private static List<Question> keepBaseHelpWhenMissing(List<Question> translated, List<Question> base) {
+        Map<String, Question> baseById = base.stream().collect(Collectors.toMap(Question::id, Function.identity()));
+        return translated.stream()
+                .map(question -> question.help() != null ? question : question.withHelp(baseById.get(question.id()).help()))
+                .toList();
     }
 
     private Map<String, Map<String, String>> readOverlay(String path) throws IOException {
@@ -288,7 +313,11 @@ public class QuizDataService {
         if (lang == null) {
             return LANG_PT;
         }
-        return switch (lang.trim().toLowerCase()) {
+        String normalized = lang.trim().toLowerCase();
+        if (normalized.equals(LANG_ES) || normalized.startsWith("es-")) {
+            return LANG_ES;
+        }
+        return switch (normalized) {
             case LANG_EN, "en-us", "en-gb" -> LANG_EN;
             default -> LANG_PT;
         };
@@ -414,9 +443,11 @@ public class QuizDataService {
         int questionCount = normalizedVariant.equals(EXTREME_VARIANT)
                 ? data.questions().size()
                 : questionsPerAxis * data.axes().size();
-        String description = normalizedLang.equals(LANG_EN)
-                ? "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes."
-                : "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        String description = switch (normalizedLang) {
+            case LANG_EN -> "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes.";
+            case LANG_ES -> "Un cuestionario de " + questionCount + " preguntas para estimar tu posición en los 12 ejes políticos.";
+            default -> "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
+        };
         return new QuizPayload(
                 "12 Axes",
                 description,
@@ -559,6 +590,15 @@ public class QuizDataService {
     }
 
     private String labelFor(AnswerValue value, String lang) {
+        if (LANG_ES.equals(lang)) {
+            return switch (value) {
+                case STRONGLY_AGREE -> "Totalmente de acuerdo";
+                case AGREE -> "De acuerdo";
+                case NEUTRAL -> "Neutral o Depende";
+                case DISAGREE -> "En desacuerdo";
+                case STRONGLY_DISAGREE -> "Totalmente en desacuerdo";
+            };
+        }
         if (LANG_EN.equals(lang)) {
             return switch (value) {
                 case STRONGLY_AGREE -> "Strongly agree";

@@ -1,6 +1,6 @@
 /**
- * Quem vê a compra do Relatório completo. `VITE_PAYWALL_ENABLED` (português, em reais) e `VITE_PAYWALL_EN_ENABLED` (inglês, em
- * dólar, pela Paddle), cada um com estes valores (decididos na publicação do site):
+ * Quem vê a compra do Relatório completo. `VITE_PAYWALL_ENABLED` (português, em reais) e `VITE_PAYWALL_EN_ENABLED` (qualquer outro
+ * idioma, em dólar, pela Paddle), cada um com estes valores (decididos na publicação do site):
  * - `true`: todo mundo;
  * - `preview`: só os navegadores marcados. Abrir o site com `?paywall=1` marca o navegador (fica guardado), `?paywall=0` desmarca;
  * - `paused`: vendas pausadas. Ninguém vê a compra, mas quem já pagou continua com o relatório (o acesso guardado segue valendo).

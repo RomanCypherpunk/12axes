@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { pickReplacement, replacementCandidates, selectAllQuestionsBalanced, selectAndBalanceQuestions } from './utils/quizSelection';
 import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
-import { t } from './i18n';
+import { LANG, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
 import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
@@ -59,11 +59,11 @@ const FULL_MODE =
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
 
-// /compare e /en/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
+// /compare, /en/compare e /es/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
 // demanda: o catálogo inteiro só é baixado por quem abre essa rota.
 const COMPARE_MODE =
   typeof window !== 'undefined' &&
-  ['/compare', '/en/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
+  ['/compare', '/en/compare', '/es/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
 
 // /compare/people: duas pessoas pelo link do resultado de cada uma (vetores na própria URL).
 const COMPARE_PEOPLE_MODE =
@@ -117,7 +117,8 @@ function sharedResultUrl(result: QuizResult, religion: Religion | null = null): 
   const query = result.axes
     .map((axis, index) => `${AXIS_URL_KEYS[index] ?? `x${index}`}=${axis.leftPercent}`)
     .join('&');
-  return `/results?${query}${religion ? `&religion=${religion}` : ''}`;
+  // O idioma vai na URL: um reload ou a volta do pagamento não dependem do que está salvo no navegador.
+  return `/results?${query}${religion ? `&religion=${religion}` : ''}${LANG === 'pt' ? '' : `&lang=${LANG}`}`;
 }
 
 // Últimas perguntas do bloco de arquétipos: religião e, só para quem escolhe cristianismo, a vertente
@@ -721,7 +722,7 @@ function MainApp() {
 
   // O botão "Editar respostas" só existe para quem fez o teste neste navegador e está vendo o próprio resultado.
   const editableAnswers =
-    result && lastResult?.answers && sharedResultUrl(result, religion) === lastResult.url ? lastResult.answers : null;
+    result && lastResult?.answers && sharedResultUrl(result, religion).replace(/&lang=\w+$/, '') === lastResult.url.replace(/&lang=\w+$/, '') ? lastResult.answers : null;
 
   async function openEditAnswers() {
     if (!editableAnswers) {

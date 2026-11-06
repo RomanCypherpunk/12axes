@@ -136,9 +136,17 @@ export function accessTokenFromHash(hash: string): string | null {
   return value && value.length > 0 ? value : null;
 }
 
+/** Endereço de volta do pagamento, sempre com o idioma atual: quem chegou por /es ou /en não pode voltar em outro idioma. */
+export function returnUrlWithLang(url: string, lang: string): string {
+  if (lang === 'pt') return url;
+  const parsed = new URL(url);
+  parsed.searchParams.set('lang', lang);
+  return parsed.toString();
+}
+
 /**
  * O endereço "de sempre" do resultado, para o link que a pessoa guarda: os 12 valores na ordem padrão (est, rep, pod, ...),
- * depois a religião e, em inglês, o idioma. Fica de fora o que é ruído do caminho até aqui (marca de teste, volta do pagamento,
+ * depois a religião e, fora do português, o idioma. Fica de fora o que é ruído do caminho até aqui (marca de teste, volta do pagamento,
  * âncora, parâmetros que a Paddle reordena). Sem os 12 valores (link curto, por exemplo) devolve o endereço como veio.
  */
 export function canonicalResultLink(resultUrl: string, lang: string): string {
@@ -151,6 +159,6 @@ export function canonicalResultLink(resultUrl: string, lang: string): string {
   }
   const religion = source.searchParams.get('religion');
   if (religion) query.set('religion', religion);
-  if (lang === 'en') query.set('lang', 'en');
+  if (lang !== 'pt') query.set('lang', lang);
   return `${source.origin}${source.pathname}?${query.toString()}`;
 }

@@ -4,7 +4,7 @@ import { parseReligion, type Religion } from './religion';
 
 // Comparação entre perfis do catálogo: /compare?items=personality:alvaro-uribe,country:colombia
 // (mesmo formato "tipo:id" que GET /api/compare/profiles recebe). A página aceita de 2 a 3.
-// Como no catálogo, o idioma está no caminho: /compare em português e /en/compare em inglês.
+// Como no catálogo, o idioma está no caminho: /compare em português, /en/compare em inglês e /es/compare em espanhol.
 export const MIN_COMPARE = 2;
 export const MAX_COMPARE = 3;
 
@@ -47,7 +47,7 @@ export function serializeCompareItems(refs: CompareRef[]): string {
 }
 
 export function comparePath(lang: Lang): string {
-  return lang === 'en' ? '/en/compare' : '/compare';
+  return lang === 'pt' ? '/compare' : `/${lang}/compare`;
 }
 
 /** Link da comparação; a religião só entra quando há uma (ela filtra o seletor, não os perfis do link). */

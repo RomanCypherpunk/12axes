@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
+import { LANG } from '../../i18n';
 import { startCheckout, unlockPayment } from '../../services/premiumApi';
 import { ApiError } from '../../services/quizApi';
 import { track } from '../../utils/analytics';
 import { openPaddleCheckout, PADDLE_CLIENT_TOKEN, paddleTransactionFromSearch } from '../../utils/paddle';
-import { accessTokenFromHash, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from '../../utils/entitlement';
+import { accessTokenFromHash, findRenewableToken, returnUrlWithLang, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from '../../utils/entitlement';
 
 /** Por que o acesso não abriu: outro resultado ou reembolso ("denied"), gateway/servidor fora ("unavailable"), ou o Pix demorou ("timeout"). */
 export type AccessProblem = 'denied' | 'unavailable' | 'timeout';
@@ -191,7 +192,7 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
   const purchase = useCallback((email?: string) => {
     track('checkout_start');
     setState((current) => (current.status === 'locked' ? { ...current, busy: true } : current));
-    startCheckout(vector, resultUrlWithoutPaymentParams(), email)
+    startCheckout(vector, returnUrlWithLang(resultUrlWithoutPaymentParams(), LANG), email)
       .then((url) => window.location.assign(url))
       .catch(() => setState({ status: 'locked', problem: 'unavailable', busy: false }));
     // eslint-disable-next-line react-hooks/exhaustive-deps

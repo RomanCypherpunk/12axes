@@ -32,6 +32,11 @@ public record ArchetypeQuestion(
     }
 
     private static String localized(Map<String, String> values, String lang) {
-        return values.getOrDefault(lang, values.get("pt"));
+        String value = values.get(lang);
+        if (value != null) {
+            return value;
+        }
+        // Idioma sem tradução usa o inglês; o inglês sem tradução usa o português.
+        return "pt".equals(lang) ? values.get("pt") : values.getOrDefault("en", values.get("pt"));
     }
 }

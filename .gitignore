@@ -40,3 +40,6 @@ docs/
 
 # Artefatos de screenshots do Playwright MCP
 .playwright-mcp/
+
+# Lotes temporários da tradução (i18n-tools/sync.py)
+i18n-tools/work/

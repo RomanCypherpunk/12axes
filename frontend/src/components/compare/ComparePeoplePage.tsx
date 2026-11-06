@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { HOME_AXES } from '../../data/homeAxes';
-import { LANG, t } from '../../i18n';
+import { LANG, langPrefix, t } from '../../i18n';
 import type { CompareProfile, CompareProfiles, QuizResult } from '../../types/quiz';
 import {
   cleanName,
@@ -110,7 +110,7 @@ export function ComparePeoplePage() {
     window.history.replaceState(null, '', peopleCompareUrl({ names: next, people: LINK.people }));
   };
 
-  const home = LANG === 'en' ? '/en' : '/';
+  const home = langPrefix(LANG) || '/';
   const detail = loaded && profiles && LINK ? buildDetail(loaded, profiles, names, LINK.people) : null;
 
   return (

@@ -1102,4 +1102,551 @@ const en: ExampleResult[] = [
   }
 ];
 
-export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'en' ? en : pt;
+const es: ExampleResult[] = [
+  {
+    ideology: {
+      ideologyId: 'marxismo-leninismo',
+      name: 'Marxismo–Leninismo',
+      category: 'Izquierda radical',
+      description:
+        'Rama revolucionaria del marxismo que defiende la toma del poder por un partido de vanguardia y la dictadura del proletariado, con economía planificada y colectivización, base de los regímenes comunistas de...',
+      longDescription:
+        'Rama revolucionaria del marxismo que defiende la toma del poder por un partido de vanguardia y la dictadura del proletariado, con economía planificada y colectivización, base de los regímenes comunistas del siglo XX. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero una sociedad dirigida por un partido de vanguardia, con dictadura del proletariado y una economía planificada y colectivizada.',
+      compatibility: 99
+    },
+    country: {
+      countryId: 'cuba',
+      name: 'Cuba',
+      category: 'Socialismo igualitario de partido único',
+      description:
+        'Estado socialista de partido único en el Caribe, Cuba mantiene una economía planificada, fuerte control estatal y servicios públicos universales, con el poder centralizado desde la revolución liderada por Fidel Castro en 1959.',
+      flagPath: '/countries/flags/cuba.gif',
+      historical: false,
+      period: '',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'lenin',
+      name: 'Vladimir Lenin',
+      role: 'Revolucionario',
+      category: 'politico',
+      lifespan: '1870–1924',
+      description:
+        'Líder de la Revolución rusa de 1917 y fundador de la Unión Soviética, Lenin teorizó el partido de vanguardia, la dictadura del proletariado y el imperialismo como fase superior del capitalismo, y marcó el comunismo del siglo XX.',
+      imagePath: '/personalities/portraits/lenin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 25,
+        rightPercent: 75,
+        dominantPole: 'Autocracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 89,
+        rightPercent: 11,
+        dominantPole: 'Pública',
+        intensity: 'Muy fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 54,
+        rightPercent: 46,
+        dominantPole: 'Progresista',
+        intensity: 'Equilibrado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'liberalismo-social',
+      name: 'Liberalismo social',
+      category: 'Izquierda',
+      description:
+        'Rama que combina las libertades individuales con una fuerte acción del Estado para garantizar bienestar, educación y salud, defendiendo la igualdad de oportunidades y la seguridad social dentro de la economía de mercado.',
+      longDescription:
+        'Rama que combina las libertades individuales con una fuerte acción del Estado para garantizar bienestar, educación y salud, defendiendo la igualdad de oportunidades y la seguridad social dentro de la economía de mercado. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero una sociedad de libertades individuales sostenida por una fuerte seguridad social, con el Estado garantizando salud y educación para todos.',
+      compatibility: 98
+    },
+    country: {
+      countryId: 'eua-nova-york',
+      name: 'Nueva York (Estados Unidos)',
+      category: 'Región financiera y cosmopolita',
+      description:
+        'Centro financiero y cultural de Estados Unidos, Nueva York combina una política liberal y progresista, una enorme diversidad de inmigrantes, una economía globalizada de servicios y un gran peso simbólico en el mundo.',
+      flagPath: '/countries/flags/eua-nova-york.png',
+      historical: false,
+      period: '',
+      compatibility: 98
+    },
+    personality: {
+      personalityId: 'justin-trudeau',
+      name: 'Justin Trudeau',
+      role: 'Estadista',
+      category: 'politico',
+      lifespan: '1971–',
+      description:
+        'Primer ministro de Canadá (2015–2025) por el Partido Liberal, Trudeau promovió el multiculturalismo, la acogida de inmigrantes y refugiados, políticas progresistas de género y medioambiente, y un estilo de gobierno centrista con fuerte intervención social del Estado.',
+      imagePath: '/personalities/portraits/justin-trudeau.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Democracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 64,
+        rightPercent: 36,
+        dominantPole: 'Pública',
+        intensity: 'Inclinado'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 79,
+        rightPercent: 21,
+        dominantPole: 'Progresista',
+        intensity: 'Fuerte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'terceira-via',
+      name: 'Tercera vía',
+      category: 'Centro',
+      description:
+        'Renovación de la centroizquierda en los años 90 con Blair, Clinton y Giddens, que acepta los mercados globalizados y la disciplina fiscal, cambia asistencialismo por activación laboral, es dura con el crimen y apoya intervenciones liberales.',
+      longDescription:
+        'Renovación de la centroizquierda en los años 90 con Blair, Clinton y Giddens, que acepta los mercados globalizados y la disciplina fiscal, cambia asistencialismo por activación laboral, es dura con el crimen y apoya intervenciones liberales. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero un mercado globalizado con un Estado que invierta en educación, cambie asistencialismo por trabajo y sea duro con el crimen y sus causas.',
+      compatibility: 94
+    },
+    country: {
+      countryId: 'inglaterra',
+      name: 'Inglaterra (Reino Unido)',
+      category: 'País constituyente liberal-conservador',
+      description:
+        'Mayor país constituyente del Reino Unido, Inglaterra es gobernada directamente por Westminster sin parlamento propio, con Iglesia de Inglaterra establecida, servicio público de salud (NHS), centro financiero en Londres, mayoría pro-Brexit y creciente voto populista.',
+      flagPath: '/countries/flags/inglaterra.png',
+      historical: false,
+      period: '',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'macron',
+      name: 'Emmanuel Macron',
+      role: 'Estadista',
+      category: 'politico',
+      lifespan: '1977–',
+      description:
+        'Estadista francés, Macron llegó a la presidencia de Francia como reformista centrista y liberal, defendiendo los mercados, la integración europea y las reformas económicas, y buscando superar la división tradicional entre izquierda y derecha.',
+      imagePath: '/personalities/portraits/macron.jpg',
+      compatibility: 98
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Democracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 44,
+        rightPercent: 56,
+        dominantPole: 'Privada',
+        intensity: 'Equilibrado'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 68,
+        rightPercent: 32,
+        dominantPole: 'Progresista',
+        intensity: 'Inclinado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'alt-lite',
+      name: 'Alt-Lite',
+      category: 'Derecha',
+      description:
+        'Rama de la derecha radical nacionalista y antiglobalista, que enfatiza la identidad cultural, la crítica a la inmigración y la oposición a la corrección política, sin adoptar posturas basadas en la raza.',
+      longDescription:
+        'Rama de la derecha radical nacionalista y antiglobalista, que enfatiza la identidad cultural, la crítica a la inmigración y la oposición a la corrección política, sin adoptar posturas basadas en la raza. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero preservar la identidad cultural de mi pueblo, con control de la inmigración y libertad de expresión frente a la corrección política.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'hungria',
+      name: 'Hungría',
+      category: 'República nacional e iliberal',
+      description:
+        'República parlamentaria de Europa del Este, Hungría se gobierna bajo la llamada democracia iliberal, que une nacionalismo, conservadurismo cristiano, soberanía frente a la Unión Europea y fuerte control de los medios y las instituciones.',
+      flagPath: '/countries/flags/hungria.gif',
+      historical: false,
+      period: '',
+      compatibility: 89
+    },
+    personality: {
+      personalityId: 'donald-trump',
+      name: 'Donald Trump',
+      role: 'Político',
+      category: 'politico',
+      lifespan: '1946–',
+      description:
+        'Empresario y presidente de Estados Unidos, Trump lidera el populismo nacionalista del movimiento MAGA, con proteccionismo arancelario, política migratoria restrictiva y un discurso antisistema que redefinió la derecha.',
+      imagePath: '/personalities/portraits/donald-trump.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 39,
+        rightPercent: 61,
+        dominantPole: 'Autocracia',
+        intensity: 'Inclinado'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 25,
+        rightPercent: 75,
+        dominantPole: 'Privada',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 21,
+        rightPercent: 79,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Fuerte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'aceleracionismo-de-direita',
+      name: 'Aceleracionismo de derecha',
+      category: 'Extrema derecha',
+      description:
+        'Corriente que defiende acelerar las contradicciones del sistema mediante la tecnología y el debilitamiento de las instituciones liberales, apostando por una ruptura con el orden existente para dar lugar a un nuevo orden social y político jerárquico.',
+      longDescription:
+        'Corriente que defiende acelerar las contradicciones del sistema mediante la tecnología y el debilitamiento de las instituciones liberales, apostando por una ruptura con el orden existente para dar lugar a un nuevo orden social y político jerárquico. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero acelerar, con tecnología y mercados sin Estado, la superación de las instituciones liberales para que surja un nuevo orden jerárquico.',
+      compatibility: 94
+    },
+    country: {
+      countryId: 'hong-kong',
+      name: 'Hong Kong (China)',
+      category: 'Región tecnocrática y financiera',
+      description:
+        'Centro financiero global, Hong Kong es una región autónoma de fuerte capitalismo de libre mercado y gestión tecnocrática, cuya amplia autonomía ha sido cada vez más restringida por el control político de China continental.',
+      flagPath: '/countries/flags/hong-kong.png',
+      historical: false,
+      period: '',
+      compatibility: 84
+    },
+    personality: {
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Teórico político',
+      category: 'teorico',
+      lifespan: '1973–',
+      description:
+        'Teórico político conocido como Mencius Moldbug, Yarvin formuló la neorreacción, que propone reemplazar la democracia por un Estado dirigido como una empresa por un soberano-ejecutivo, según el modelo del neocameralismo.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 20,
+        rightPercent: 80,
+        dominantPole: 'Autocracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 22,
+        rightPercent: 78,
+        dominantPole: 'Privada',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 49,
+        rightPercent: 51,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Equilibrado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'corporativismo',
+      name: 'Corporativismo',
+      category: 'Tercera posición',
+      description:
+        'Modelo que organiza la sociedad en corporaciones de trabajadores y empleadores integradas al Estado, buscando la armonía entre clases y una cooperación económica dirigida en lugar del conflicto o la libre competencia.',
+      longDescription:
+        'Modelo que organiza la sociedad en corporaciones de trabajadores y empleadores integradas al Estado, buscando la armonía entre clases y una cooperación económica dirigida en lugar del conflicto o la libre competencia. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero una sociedad organizada en corporaciones de empleadores y trabajadores integradas al Estado, en armonía dirigida entre las clases.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'burkina-faso',
+      name: 'Burkina Faso',
+      category: 'República militar panafricana y soberanista',
+      description:
+        'Nación saheliana de África Occidental, gobernada por un gobierno militar patriótico de transición que revivió el legado anticolonial y de autosuficiencia de Thomas Sankara, salió de la CEDEAO, creó la Alianza de Estados del Sahel (AES) y reorientó sus alianzas para afirmar la soberanía nacional.',
+      flagPath: '/countries/flags/burkina-faso.png',
+      historical: false,
+      period: '',
+      compatibility: 90
+    },
+    personality: {
+      personalityId: 'plinio-salgado',
+      name: 'Plínio Salgado',
+      role: 'Político',
+      category: 'politico',
+      lifespan: '1895–1975',
+      description:
+        'Líder del Integralismo brasileño, Plínio Salgado creó un movimiento nacionalista autoritario de inspiración cristiana, con el lema Dios, Patria y Familia y una estética de masas inspirada en los fascismos europeos de la década de 1930.',
+      imagePath: '/personalities/portraits/plinio-salgado.jpg',
+      compatibility: 96
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 28,
+        rightPercent: 72,
+        dominantPole: 'Autocracia',
+        intensity: 'Inclinado'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 76,
+        rightPercent: 24,
+        dominantPole: 'Pública',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 8,
+        rightPercent: 92,
+        dominantPole: 'Tradicionalista',
+        intensity: 'Muy fuerte'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'liberalismo-classico',
+      name: 'Liberalismo clásico',
+      category: 'Libertario',
+      description:
+        'Rama original del liberalismo que defiende los derechos naturales, la propiedad, el libre mercado y un Estado mínimo, y ve la libertad individual y la estricta limitación del poder como los cimientos de una sociedad justa.',
+      longDescription:
+        'Rama original del liberalismo que defiende los derechos naturales, la propiedad, el libre mercado y un Estado mínimo, y ve la libertad individual y la estricta limitación del poder como los cimientos de una sociedad justa. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero una sociedad de derechos naturales y propiedad sagrada, con Estado mínimo y libre mercado como cimientos de una vida justa.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'eua-new-hampshire',
+      name: 'Nuevo Hampshire (Estados Unidos)',
+      category: 'Región libertaria y fiscal',
+      description:
+        'Pequeño estado del noreste de Estados Unidos, Nuevo Hampshire es conocido por su fuerte cultura libertaria, sus bajos impuestos, la ausencia de impuesto estatal sobre la renta y un lema que exalta la libertad por encima de todo.',
+      flagPath: '/countries/flags/eua-new-hampshire.png',
+      historical: false,
+      period: '',
+      compatibility: 94
+    },
+    personality: {
+      personalityId: 'mises',
+      name: 'Ludwig von Mises',
+      role: 'Economista',
+      category: 'economista',
+      lifespan: '1881–1973',
+      description:
+        'Economista austríaco, Mises fue un gran defensor del libre mercado y demostró la imposibilidad del cálculo económico racional bajo el socialismo, convirtiéndose en pilar de la Escuela Austríaca e inspiración del libertarismo moderno.',
+      imagePath: '/personalities/portraits/mises.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Democracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Privada',
+        intensity: 'Muy fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 52,
+        rightPercent: 48,
+        dominantPole: 'Progresista',
+        intensity: 'Equilibrado'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'anarquismo-kropotkiniano',
+      name: 'Anarquismo kropotkiniano',
+      category: 'Anarquista',
+      description:
+        'Corriente de Piotr Kropotkin que ve la ayuda mutua como ley de la naturaleza y propone comunas federadas, integración de agricultura e industria, ciencia al servicio de todos y una ética de solidaridad sin Estado.',
+      longDescription:
+        'Corriente de Piotr Kropotkin que ve la ayuda mutua como ley de la naturaleza y propone comunas federadas, integración de agricultura e industria, ciencia al servicio de todos y una ética de solidaridad sin Estado. La compatibilidad indica cuán cerca están tus respuestas de este perfil.',
+      phrase:
+        'Quiero comunas libres federadas por la ayuda mutua, que unan campo y fábrica, con todo compartido según la necesidad y sin ningún Estado.',
+      compatibility: 98
+    },
+    country: {
+      countryId: 'rojava',
+      name: 'Rojava (Siria del Norte y del Este)',
+      category: 'Confederalismo democrático e igualitario',
+      description:
+        'Región autónoma del norte de Siria, Rojava se organiza mediante el confederalismo democrático, con autogestión local, igualdad de género, pluralismo étnico y ecología, inspirada en las ideas libertarias de Abdullah Öcalan.',
+      flagPath: '/countries/flags/rojava.png',
+      historical: false,
+      period: '2012–presente',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'bakunin',
+      name: 'Mikhail Bakunin',
+      role: 'Revolucionario',
+      category: 'teorico',
+      lifespan: '1814–1876',
+      description:
+        'Revolucionario ruso, Bakunin fue el gran teórico del anarquismo colectivista, opositor del Estado y del marxismo autoritario, y defensor de la revolución social espontánea y de la libre federación de comunidades y trabajadores.',
+      imagePath: '/personalities/portraits/bakunin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Representación',
+        leftPole: 'Democracia',
+        rightPole: 'Autocracia',
+        leftPercent: 80,
+        rightPercent: 20,
+        dominantPole: 'Democracia',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'economia',
+        label: 'Economía',
+        leftPole: 'Pública',
+        rightPole: 'Privada',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Pública',
+        intensity: 'Fuerte'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progresista',
+        rightPole: 'Tradicionalista',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Progresista',
+        intensity: 'Fuerte'
+      }
+    ]
+  }
+];
+
+export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'pt' ? pt : LANG === 'es' ? es : en;

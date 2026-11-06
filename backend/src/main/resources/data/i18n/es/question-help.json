@@ -1,0 +1,1849 @@
+[
+  {
+    "id": "estrutura_01",
+    "agree": "Los estados y las ciudades deciden por su cuenta el transporte local, el uso del suelo y la policía, sin pedir aprobación al gobierno nacional.",
+    "disagree": "El gobierno nacional puede intervenir y tiene la última palabra en los asuntos locales.",
+    "agreeExample": "Suiza, donde los cantones fijan sus propios impuestos, escuelas y policía.",
+    "disagreeExample": "Francia, donde un prefecto designado por el gobierno central representa al Estado en cada departamento.",
+    "note": "Esto mide cuánto poder se queda en los gobiernos locales. Quienes quieren un Estado mínimo, o ninguno, también están de acuerdo: lo que importa es quitarle poder al centro."
+  },
+  {
+    "id": "estrutura_02",
+    "agree": "Una ley nacional se aplica igual en todas partes, y ninguna región puede adoptar una regla distinta solo porque lo prefiere.",
+    "disagree": "Cada región puede adoptar reglas distintas de las demás, según lo que prefiera su población local.",
+    "agreeExample": "Brasil, donde el derecho penal y el civil son federales y iguales en todos los estados.",
+    "disagreeExample": "Estados Unidos, donde cada estado redacta su propio código penal.",
+    "note": "La pregunta mide quién decide: todo el país o cada región. Si quieres pocas leyes pero iguales en todas partes, piensa solo en quién hace las reglas."
+  },
+  {
+    "id": "estrutura_03",
+    "agree": "Los asuntos locales, como los residuos, el tráfico urbano y el uso del suelo, los regulan los gobiernos municipales y regionales, no el gobierno nacional.",
+    "disagree": "El gobierno nacional también puede aprobar leyes sobre estos asuntos locales.",
+    "agreeExample": "Canadá, donde las provincias hacen sus propias leyes sobre salud, educación y propiedad.",
+    "disagreeExample": "Reino Unido, donde el Parlamento de Londres hace las leyes de Inglaterra, que no tiene parlamento propio.",
+    "note": "Esto mide qué nivel de gobierno hace la ley. Quienes quieren pocas leyes, o ninguna, pueden estar de acuerdo si el poder local prevalece sobre el central."
+  },
+  {
+    "id": "estrutura_04",
+    "agree": "Todas las escuelas del país enseñan los mismos contenidos básicos, definidos a nivel nacional.",
+    "disagree": "Cada región, o incluso cada ciudad, define el currículo de sus escuelas.",
+    "agreeExample": "Japón, donde el ministerio de educación fija las directrices curriculares de todas las escuelas.",
+    "disagreeExample": "Estados Unidos, donde cada estado fija sus propios estándares escolares.",
+    "note": "La pregunta trata de quién define el currículo. Quienes quieren educación libre, privada o en casa, sin currículo impuesto, están del lado del desacuerdo."
+  },
+  {
+    "id": "estrutura_05",
+    "agree": "Cada estado redacta su propia constitución, y el gobierno nacional no puede vetar lo que dice.",
+    "disagree": "El gobierno nacional fija límites que las normas fundamentales de cada estado deben respetar.",
+    "agreeExample": "Estados Unidos, donde cada estado tiene su propia constitución.",
+    "disagreeExample": "España, donde el estatuto de autonomía de cada región debe ser aprobado por el parlamento nacional."
+  },
+  {
+    "id": "estrutura_06",
+    "agree": "Una sola fuerza policial, bajo mando nacional, opera en todo el país.",
+    "disagree": "Cada región mantiene y dirige su propia policía, independiente del gobierno nacional.",
+    "agreeExample": "Irlanda, cuya Garda Síochána es la única fuerza policial de todo el país.",
+    "disagreeExample": "Alemania, donde cada uno de los 16 estados maneja su propia policía.",
+    "note": "Esto mide si el mando de la policía es nacional o regional. Quienes quieren policía privada, policía comunitaria o ninguna policía están del lado del desacuerdo."
+  },
+  {
+    "id": "estrutura_07",
+    "agree": "La mayor parte del impuesto que pagas se queda en la región o el municipio donde se recaudó, para gastarse allí.",
+    "disagree": "Una gran parte de los impuestos va al gobierno central, que la redistribuye entre las regiones, incluso de las más ricas a las más pobres.",
+    "agreeExample": "País Vasco, que recauda sus propios impuestos y paga a Madrid una cuota fija, el cupo.",
+    "disagreeExample": "Brasil, donde el gobierno federal transfiere parte de su recaudación a los estados más pobres mediante el Fondo de Participación de los Estados."
+  },
+  {
+    "id": "estrutura_08",
+    "agree": "Una autoridad central coordina la salud pública, con las mismas reglas y protocolos en todas las regiones.",
+    "disagree": "Las regiones y los municipios organizan la salud pública a su manera, con sus propias reglas y prioridades.",
+    "agreeExample": "Nueva Zelanda, que fusionó sus 20 juntas distritales de salud en un servicio nacional único en 2022.",
+    "disagreeExample": "España, donde cada una de las 17 regiones gestiona su propio servicio de salud.",
+    "note": "La pregunta mide quién coordina la salud, no si debe ser pública. Quienes prefieren salud privada o comunitaria, sin mando central, están del lado del desacuerdo."
+  },
+  {
+    "id": "estrutura_09",
+    "agree": "Si la mayoría de una región vota por la independencia, puede separarse del país.",
+    "disagree": "Ninguna región puede separarse solo por su propio voto, aunque haya una mayoría local a favor.",
+    "agreeExample": "Reino Unido, que permitió a Escocia celebrar un referéndum de independencia en 2014.",
+    "disagreeExample": "España, cuyo Tribunal Constitucional declaró ilegal el referéndum catalán de 2017.",
+    "note": "Esto mide el derecho de una región a separarse. Quienes defienden la secesión por cualquier motivo, incluso hasta el nivel de ciudades o individuos, están de acuerdo."
+  },
+  {
+    "id": "estrutura_10",
+    "agree": "Todas las regiones siguen las mismas reglas tributarias nacionales, para evitar guerras fiscales entre ellas.",
+    "disagree": "Cada región fija libremente sus propios impuestos, aunque eso genere competencia entre regiones.",
+    "agreeExample": "Brasil, cuya reforma tributaria de 2023 reemplaza los impuestos estatales y municipales sobre las ventas por un solo impuesto bajo una única ley nacional.",
+    "disagreeExample": "Suiza, donde cada cantón fija sus propias tasas del impuesto a la renta.",
+    "note": "Esto mide quién fija las reglas tributarias, no qué tan altos son los impuestos. Quienes quieren recortar o abolir los impuestos deben pensar solo en quién tiene el poder de decidir."
+  },
+  {
+    "id": "estrutura_11",
+    "agree": "Los pueblos indígenas y tradicionales se gobiernan por sus propias reglas dentro de sus territorios.",
+    "disagree": "Las mismas leyes nacionales se aplican en todo el país, incluso en esos territorios.",
+    "agreeExample": "Bolivia, cuya Constitución de 2009 permite a los pueblos indígenas gobernar sus propios territorios.",
+    "disagreeExample": "Japón, que reconoció a los ainu como pueblo indígena en 2019 sin concederles autogobierno.",
+    "note": "La pregunta mide quién hace las reglas: el territorio o el país. No mide lo que piensas de estos pueblos."
+  },
+  {
+    "id": "estrutura_12",
+    "agree": "El derecho laboral es el mismo en todas las regiones.",
+    "disagree": "Cada región puede tener reglas laborales distintas, como la jornada, el salario mínimo o las vacaciones.",
+    "agreeExample": "México, cuya Ley Federal del Trabajo se aplica en todos los estados.",
+    "disagreeExample": "Estados Unidos, donde los estados fijan salarios mínimos propios por encima del federal.",
+    "note": "Esto mide si la regla es única o varía según la región. Quienes quieren poca regulación laboral o ninguna, dejando todo al contrato libre, están del lado del desacuerdo."
+  },
+  {
+    "id": "estrutura_13",
+    "agree": "Una ciudad puede aprobar leyes que contradigan las nacionales, como sus propias reglas sobre drogas, armas o comercio.",
+    "disagree": "Ninguna ley municipal puede contradecir la ley nacional.",
+    "agreeExample": "Denver, que votó en 2019 hacer del uso de psilocibina su prioridad de aplicación más baja, aunque seguía siendo ilegal según la ley federal.",
+    "disagreeExample": "Brasil, donde las ciudades no pueden hacer sus propias leyes sobre drogas o armas, que son federales."
+  },
+  {
+    "id": "estrutura_14",
+    "agree": "El presidente decide en los conflictos con los gobernadores, y los estados deben acatar.",
+    "disagree": "Los gobernadores tienen su propia autonomía, y el presidente no tiene poder para resolver el conflicto a su favor.",
+    "agreeExample": "Reino Unido, que suspendió el gobierno descentralizado de Irlanda del Norte de 2002 a 2007.",
+    "disagreeExample": "Estados Unidos, donde los gobernadores son elegidos y el presidente no puede destituirlos.",
+    "note": "La pregunta mide el poder del centro sobre las regiones, no si el presidente es bueno o elegido. Quienes rechazan cualquier gobernante fuerte deben pensar solo en esa relación."
+  },
+  {
+    "id": "estrutura_15",
+    "agree": "El país es una unión de estados fuertes con poderes políticos propios, como Estados Unidos o Alemania.",
+    "disagree": "El país se gobierna de forma más centralizada, con estados que dependen del gobierno central, como Francia.",
+    "agreeExample": "Bélgica, dividida en tres regiones con parlamentos y gobiernos propios.",
+    "disagreeExample": "Portugal, que no tiene gobiernos regionales en la parte continental."
+  },
+  {
+    "id": "estrutura_16",
+    "agree": "El gobierno nacional puede anular las leyes aprobadas por estados y ciudades que considere contrarias al interés nacional.",
+    "disagree": "Las leyes de estados y ciudades siguen vigentes, incluso cuando el gobierno nacional no está de acuerdo.",
+    "agreeExample": "España, donde el gobierno central puede suspender una ley regional al impugnarla ante el Tribunal Constitucional.",
+    "disagreeExample": "Estados Unidos, donde Washington no puede vetar leyes estatales y solo los tribunales pueden anularlas.",
+    "note": "La pregunta trata de anular leyes locales por interés nacional. Si anularías una ley local solo para proteger derechos individuales, piensa únicamente en el criterio del interés nacional."
+  },
+  {
+    "id": "estrutura_17",
+    "agree": "Las regiones con una fuerte identidad cultural, como el Sur o el Nordeste, tienen más autonomía política que otras.",
+    "disagree": "Todas las regiones tienen el mismo grado de autonomía, sin importar la cultura.",
+    "agreeExample": "Italia, que da autonomía especial a cinco regiones, incluido el bilingüe Valle de Aosta.",
+    "disagreeExample": "Alemania, donde los 16 estados tienen los mismos poderes.",
+    "note": "Esto mide si la autonomía debe variar de una región a otra, no el valor de ninguna cultura en particular. Quienes quieren autonomía amplia e igual para todos están en desacuerdo, ya que la afirmación trata de dar más a algunos."
+  },
+  {
+    "id": "estrutura_18",
+    "agree": "Ninguna región puede separarse, aunque la mayoría de su población local lo quiera.",
+    "disagree": "Una región puede separarse si la población local lo apoya.",
+    "agreeExample": "Estados Unidos, cuya Corte Suprema dictaminó en Texas v. White (1869) que los estados no pueden abandonar la Unión.",
+    "disagreeExample": "Canadá, cuya Corte Suprema dictaminó en 1998 que un voto claro por la secesión obligaría a negociar.",
+    "note": "Aquí, estar de acuerdo es el lado unitario, lo opuesto a la pregunta sobre el derecho a la secesión. Quienes defienden la secesión deben estar en desacuerdo."
+  },
+  {
+    "id": "estrutura_19",
+    "agree": "La educación pública la administran los gobiernos municipales, con escuelas y redes escolares municipales.",
+    "disagree": "La educación pública la administra el gobierno nacional o el regional, no los gobiernos municipales.",
+    "agreeExample": "Suecia, donde los municipios administran las escuelas desde 1991.",
+    "disagreeExample": "Francia, donde el ministerio nacional contrata y paga a los docentes.",
+    "note": "Esto mide qué nivel de gobierno la administra, no si las escuelas deben ser públicas. Quienes prefieren escuelas privadas o comunitarias, sin Estado central, también están de acuerdo."
+  },
+  {
+    "id": "estrutura_20",
+    "agree": "Los gobernadores y alcaldes son ejecutores de las decisiones del gobierno central en los asuntos locales.",
+    "disagree": "Los gobernadores y alcaldes deciden por su cuenta los asuntos locales.",
+    "agreeExample": "Países Bajos, donde los alcaldes son designados por el gobierno nacional, no elegidos.",
+    "disagreeExample": "Alemania, donde los municipios tienen autogobierno garantizado por la Ley Fundamental y eligen a sus alcaldes."
+  },
+  {
+    "id": "representacao_01",
+    "agree": "El resultado de una elección libre debe respetarse, incluso cuando los votantes eligen un gobierno que consideras malo.",
+    "disagree": "Cuando una elección produce un mal gobierno, es aceptable limitar o anular el resultado.",
+    "agreeExample": "Estados Unidos, donde Al Gore reconoció la derrota en la elección de 2000 después de que la Corte Suprema detuvo el recuento en Florida.",
+    "disagreeExample": "Rumania, cuyo Tribunal Constitucional anuló la primera vuelta de la elección presidencial de 2024.",
+    "note": "Esto mide si el pueblo tiene la última palabra, incluso cuando se equivoca. Quienes rechazan las elecciones porque rechazan el Estado deben pensar solo en si debe decidir el pueblo, y no una élite o un tribunal."
+  },
+  {
+    "id": "representacao_02",
+    "agree": "En una crisis grave, como una guerra o un colapso económico, el líder puede gobernar por decreto sin esperar al legislativo.",
+    "disagree": "Incluso en una crisis grave, el líder sigue necesitando la aprobación del legislativo.",
+    "agreeExample": "Francia, cuyo artículo 16 permite al presidente asumir poderes de emergencia, usado una sola vez, en 1961.",
+    "disagreeExample": "Alemania, donde incluso en tiempo de guerra las leyes pasan por el parlamento o por una comisión conjunta de sus dos cámaras."
+  },
+  {
+    "id": "representacao_03",
+    "agree": "Cualquier persona o partido de oposición puede criticar públicamente al gobierno sin ser castigado.",
+    "disagree": "El gobierno puede prohibir o castigar ciertos tipos de crítica, por ejemplo en nombre del orden o la seguridad.",
+    "agreeExample": "Estados Unidos, donde la Corte Suprema dictaminó en 1964 que los funcionarios deben probar malicia real para ganar un caso de difamación.",
+    "disagreeExample": "Alemania, donde desde 2021 insultar públicamente a un político puede acarrear hasta tres años de prisión.",
+    "note": "Esto mide la libertad de la oposición para criticar al poder. Quienes apoyan un gobierno revolucionario o de partido único y creen que la crítica debe limitarse están en desacuerdo."
+  },
+  {
+    "id": "representacao_04",
+    "agree": "Un grupo pequeño de líderes toma decisiones con rapidez, sin necesitar la aprobación de varios poderes.",
+    "disagree": "El poder se divide entre instituciones que se limitan entre sí, como el legislativo, los tribunales y el presidente.",
+    "agreeExample": "Reino Unido, donde un gabinete con mayoría en los Comunes puede aprobar casi cualquier ley.",
+    "disagreeExample": "Estados Unidos, donde el Congreso, el presidente y los tribunales se controlan mutuamente."
+  },
+  {
+    "id": "representacao_05",
+    "agree": "Los tribunales independientes pueden anular decisiones del gobierno electo.",
+    "disagree": "Las decisiones del gobierno electo no pueden ser anuladas por jueces no electos.",
+    "agreeExample": "Alemania, cuyo Tribunal Constitucional anuló en 2023 una transferencia presupuestaria de 60 mil millones de euros.",
+    "disagreeExample": "Países Bajos, cuya Constitución impide a los jueces revisar si las leyes son constitucionales.",
+    "note": "La pregunta trata a los jueces independientes como un control sobre el gobierno. Quienes ponen la voluntad de la mayoría por encima de los tribunales y quienes confían en los jueces para limitar el poder responden en lados opuestos."
+  },
+  {
+    "id": "representacao_06",
+    "agree": "Si un gobernante es bueno, puede ser reelegido sin límite de mandatos.",
+    "disagree": "Hay un límite de mandatos para cualquier gobernante, por bueno que sea.",
+    "agreeExample": "Alemania, donde los cancilleres no tienen límite de mandatos y Helmut Kohl gobernó 16 años.",
+    "disagreeExample": "Estados Unidos, cuya Enmienda 22 limita a los presidentes a dos mandatos.",
+    "note": "La pregunta mide los límites de mandatos, no si existen elecciones. Quienes aceptan elecciones periódicas pero apoyan a un líder popular por mucho tiempo pueden estar de acuerdo. Quienes desconfían de cualquier poder prolongado, como muchos libertarios, tienden a estar en desacuerdo."
+  },
+  {
+    "id": "representacao_07",
+    "agree": "Todo adulto tiene derecho al voto secreto, incluso los poco informados.",
+    "disagree": "El voto puede restringirse a ciertos grupos o dejar de ser secreto.",
+    "agreeExample": "Australia, donde el voto secreto se introdujo en 1856 y aún se llama voto australiano.",
+    "disagreeExample": "Suiza, donde el cantón de Appenzell Rodas Interiores aún vota a mano alzada en una asamblea al aire libre.",
+    "note": "Si te niegas a votar por principio, porque no reconoces al Estado, piensa solo en cómo deberían tomarse las decisiones si hubiera una votación."
+  },
+  {
+    "id": "representacao_08",
+    "agree": "Si un gobernante es eficiente, puede mantenerse en el poder sin nuevas elecciones.",
+    "disagree": "Todo gobernante debe enfrentar elecciones periódicas, por eficiente que sea.",
+    "agreeExample": "Emiratos Árabes Unidos, cuyo presidente es elegido por los siete emires hereditarios.",
+    "disagreeExample": "Finlandia, donde el presidente es elegido directamente desde 1994.",
+    "note": "Esto mide si el poder depende de elecciones periódicas. Quienes rechazan a cualquier gobernante, no solo a uno eficiente, deben pensar solo en si el poder debe renovarse por voto."
+  },
+  {
+    "id": "representacao_09",
+    "agree": "El público puede anular una ley mediante voto directo en un referéndum, sin pasar por el legislativo.",
+    "disagree": "Las leyes solo cambian por decisión de los representantes electos, no por voto directo sobre cada ley.",
+    "agreeExample": "Suiza, donde 50.000 firmas obligan a una votación nacional sobre cualquier ley nueva.",
+    "disagreeExample": "Alemania, cuya Ley Fundamental no permite referéndums nacionales sobre leyes ordinarias.",
+    "note": "Estar en desacuerdo aquí no significa oponerse a la participación ciudadana, sino solo a los votos directos sobre leyes específicas."
+  },
+  {
+    "id": "representacao_10",
+    "agree": "Los gobernantes deben elegirse por competencia, tradición o herencia, no por voto popular.",
+    "disagree": "Los gobernantes deben elegirse por voto popular.",
+    "agreeExample": "Liechtenstein, cuyo príncipe hereditario puede vetar leyes.",
+    "disagreeExample": "Islandia, cuyo presidente es elegido por voto directo.",
+    "note": "Quienes rechazan a cualquier gobernante, o quieren líderes elegidos por un partido o consejo, no están en ningún lado: Neutral es una respuesta posible."
+  },
+  {
+    "id": "representacao_11",
+    "agree": "Los votantes pueden destituir a un político antes del fin de su mandato, por ejemplo mediante un referéndum revocatorio.",
+    "disagree": "El político cumple el mandato completo, aunque esté mal evaluado, y solo se va al final.",
+    "agreeExample": "California, que revocó por voto popular al gobernador Gray Davis en 2003.",
+    "disagreeExample": "Brasil, donde los votantes no tienen forma de revocar a un cargo electo antes de que termine su mandato."
+  },
+  {
+    "id": "representacao_12",
+    "agree": "Si acelerara el desarrollo de mi país, un régimen autoritario sería mejor que la democracia.",
+    "disagree": "La democracia debe mantenerse, aunque el desarrollo sea más lento.",
+    "agreeExample": "Corea del Sur bajo Park Chung-hee, de 1961 a 1979, un gobierno dirigido por militares que industrializó el país con rapidez.",
+    "disagreeExample": "Corea del Sur desde 1987, que se convirtió en una economía de ingreso alto como democracia.",
+    "note": "Quienes rechazan tanto el gobierno autoritario como la democracia representativa, por ejemplo al preferir una sociedad sin Estado, pueden responder Neutral."
+  },
+  {
+    "id": "representacao_13",
+    "agree": "Es mejor que distintos partidos se turnen en el poder a que el mismo grupo gobierne por décadas.",
+    "disagree": "El mismo grupo puede gobernar por décadas, mientras los votantes sigan eligiéndolo.",
+    "agreeExample": "Reino Unido, donde el poder ha alternado entre laboristas y conservadores desde 1945.",
+    "disagreeExample": "Japón, donde el Partido Liberal Democrático gobernó sin interrupción de 1955 a 1993.",
+    "note": "Esto mide una preferencia por la alternancia, no la legitimidad de la elección. Quienes rechazan los partidos y la política en general deben pensar solo en si el poder debería cambiar de manos."
+  },
+  {
+    "id": "representacao_14",
+    "agree": "Quienes gobiernan son expertos elegidos por mérito, como en una tecnocracia, sin necesidad de voto popular.",
+    "disagree": "Quienes gobiernan deben haber sido elegidos por el público.",
+    "agreeExample": "Italia, donde el gabinete de Mario Monti de 2011 estaba formado íntegramente por expertos no electos.",
+    "disagreeExample": "Irlanda, donde el primer ministro y casi todos los ministros deben ser miembros electos del parlamento."
+  },
+  {
+    "id": "representacao_15",
+    "agree": "Quienes gobiernan solo tienen autoridad con el consentimiento de las personas afectadas por sus decisiones.",
+    "disagree": "Quienes gobiernan pueden decidir sin depender de la aprobación de las personas afectadas.",
+    "agreeExample": "Estados Unidos, cuya Declaración de Independencia dice que los gobiernos derivan sus poderes del consentimiento de los gobernados.",
+    "disagreeExample": "Ciudad del Vaticano, donde el papa tiene todo el poder legislativo, ejecutivo y judicial.",
+    "note": "Quienes rechazan cualquier gobierno (como los anarquistas) deben pensar solo en lo que sigue: si alguien decide, ¿es necesaria la aprobación de los afectados?"
+  },
+  {
+    "id": "representacao_16",
+    "agree": "No todo adulto debería votar; el voto podría exigir, por ejemplo, educación, ingresos o edad.",
+    "disagree": "Todo adulto tiene derecho a votar, sin requisitos.",
+    "agreeExample": "Reino Unido, donde los graduados universitarios tuvieron un segundo voto hasta 1950.",
+    "disagreeExample": "Brasil, donde los ciudadanos que no saben leer pueden votar desde 1985.",
+    "note": "Esto mide si el sufragio es universal. Quienes prefieren decisiones tomadas en asambleas o de forma voluntaria, sin voto estatal, deben pensar solo en quién debería poder participar en las decisiones."
+  },
+  {
+    "id": "representacao_17",
+    "agree": "La sociedad se gobierna a sí misma mediante asambleas populares abiertas, sin presidentes, partidos ni representantes electos.",
+    "disagree": "La sociedad tiene líderes políticos o representantes electos.",
+    "agreeExample": "La antigua Atenas, donde los ciudadanos votaban las leyes en la Asamblea y la mayoría de los funcionarios se elegía por sorteo.",
+    "disagreeExample": "Reino Unido, donde los votantes eligen a los miembros del parlamento, que escogen al gobierno.",
+    "note": "Quienes prefieren un gobierno mínimo o ninguno pueden estar de acuerdo aquí, si lo que cuenta son las decisiones tomadas en asambleas."
+  },
+  {
+    "id": "representacao_18",
+    "agree": "Gobernar con eficiencia importa más que garantizar espacio y voz a la oposición.",
+    "disagree": "Garantizar espacio a la oposición importa más que la eficiencia de quienes gobiernan.",
+    "agreeExample": "Singapur, donde el mismo partido ha ganado todas las elecciones desde 1959.",
+    "disagreeExample": "Reino Unido, donde el Líder de la Oposición recibe un salario del Estado."
+  },
+  {
+    "id": "representacao_19",
+    "agree": "Incluso con una mayoría enorme, el gobierno no puede quitarle a la oposición sus derechos, como hablar, organizarse y presentarse a elecciones.",
+    "disagree": "Un gobierno con una mayoría enorme puede limitar los derechos de la oposición.",
+    "agreeExample": "Alemania, cuya Ley Fundamental impide que cualquier mayoría modifique la dignidad humana o la democracia misma.",
+    "disagreeExample": "Nueva Zelanda, donde los tribunales no pueden anular una ley que infrinja la Ley de Derechos.",
+    "note": "La afirmación protege a la oposición frente a la mayoría, no al gobierno. Quienes creen que la voluntad de una mayoría revolucionaria justifica reprimir a los opositores están en desacuerdo."
+  },
+  {
+    "id": "representacao_20",
+    "agree": "Un régimen autoritario estable es mejor que una democracia inestable.",
+    "disagree": "Una democracia inestable es mejor que un régimen autoritario estable.",
+    "agreeExample": "Brunéi, gobernado por el mismo sultán desde 1967.",
+    "disagreeExample": "Italia, que ha tenido 68 gobiernos desde 1946.",
+    "note": "Quienes rechazan tanto el gobierno autoritario como la democracia representativa, por ejemplo al preferir una sociedad sin Estado, pueden responder Neutral."
+  },
+  {
+    "id": "poder_01",
+    "agree": "La policía usa la fuerza y operaciones duras, como redadas armadas, para recuperar zonas controladas por grupos criminales.",
+    "disagree": "La acción policial en esas zonas es más moderada, con más inteligencia y prevención que confrontación.",
+    "agreeExample": "El Salvador, bajo un régimen de excepción desde marzo de 2022 que suspende algunas garantías legales para combatir a las pandillas.",
+    "disagreeExample": "Escocia, cuya policía creó en 2005 una unidad que trata la violencia como un problema de salud pública.",
+    "note": "La pregunta mide qué tan duro es el Estado contra el crimen. Quienes quieren abolir la policía estatal, o reemplazarla por policía comunitaria o privada, están del lado del desacuerdo."
+  },
+  {
+    "id": "poder_02",
+    "agree": "Un adulto puede consumir cannabis sin ser tratado como criminal.",
+    "disagree": "Consumir cannabis sigue siendo un delito, incluso para adultos.",
+    "agreeExample": "Alemania, que legalizó en 2024 la posesión de hasta 25 gramos de cannabis.",
+    "disagreeExample": "Japón, que convirtió el consumo mismo de cannabis en delito en diciembre de 2024, con hasta siete años de prisión.",
+    "note": "La pregunta trata de si es un delito. Quienes apoyan despenalizar pero mantener reglas, o tratarlo como un tema de salud, están en el medio: Neutral o la opción más cercana."
+  },
+  {
+    "id": "poder_03",
+    "agree": "El Estado puede leer y monitorear conversaciones digitales, como mensajes y llamadas, para prevenir o investigar delitos.",
+    "disagree": "El Estado no puede monitorear conversaciones digitales, ni siquiera para combatir el crimen.",
+    "agreeExample": "Reino Unido, cuya Ley de Poderes de Investigación de 2016 permite a las agencias interceptar comunicaciones de forma masiva con una orden.",
+    "disagreeExample": "Unión Europea, cuyo máximo tribunal anuló en 2014 la directiva de conservación generalizada de datos.",
+    "note": "Esto mide el acceso del Estado a las comunicaciones privadas. Quienes ven el cifrado y la privacidad como un derecho, ya sean libertarios o anarquistas, están en desacuerdo."
+  },
+  {
+    "id": "poder_04",
+    "agree": "Nadie es castigado por el Estado por expresar una opinión, aunque se considere ofensiva.",
+    "disagree": "El Estado puede limitar o castigar ciertas opiniones ofensivas, como el discurso de odio.",
+    "agreeExample": "Estados Unidos, donde el discurso de odio está protegido salvo que incite a una acción ilegal inminente, según se dictaminó en 1969.",
+    "disagreeExample": "Canadá, donde promover deliberadamente el odio contra un grupo identificable es un delito.",
+    "note": "Esto mide si el Estado puede castigar opiniones. Quienes aceptan que empresas o comunidades moderen contenido, pero no que el Estado lo castigue, están de acuerdo."
+  },
+  {
+    "id": "poder_05",
+    "agree": "Las cámaras de reconocimiento facial se extienden por las calles para identificar sospechosos, aun a costa de la privacidad.",
+    "disagree": "Las cámaras de reconocimiento facial no se amplían, para proteger la privacidad de las personas en la calle.",
+    "agreeExample": "Reino Unido, donde la policía de Londres usa cámaras de reconocimiento facial en vivo en la calle.",
+    "disagreeExample": "San Francisco, que prohibió en 2019 a las agencias municipales usar reconocimiento facial.",
+    "note": "La pregunta mide la vigilancia estatal frente a la privacidad. Quienes aceptan cámaras solo de empresas o de la comunidad, no del gobierno, están en desacuerdo."
+  },
+  {
+    "id": "poder_06",
+    "agree": "Los adultos que consienten pueden consumir drogas, apostar o ejercer el trabajo sexual sin que sea un delito.",
+    "disagree": "Al menos algunas de estas conductas siguen siendo delito, incluso entre adultos que consienten.",
+    "agreeExample": "Nueva Zelanda, que despenalizó el trabajo sexual en 2003.",
+    "disagreeExample": "Suecia, donde comprar sexo es un delito desde 1999."
+  },
+  {
+    "id": "poder_07",
+    "agree": "El Estado puede disolver partidos que amenacen el orden público, como partidos golpistas o extremistas.",
+    "disagree": "El Estado no puede disolver partidos, aunque amenacen el orden público.",
+    "agreeExample": "Alemania, cuyo Tribunal Constitucional puede prohibir partidos que buscan acabar con la democracia, como hizo en 1952 y 1956.",
+    "disagreeExample": "Australia, cuyo Tribunal Superior anuló una ley de 1950 que prohibía el Partido Comunista, y cuyos votantes rechazaron ese poder en un referéndum de 1951.",
+    "note": "Esto mide el poder del Estado sobre la organización política. Quienes creen que el Estado no debe prohibir ningún partido, ni siquiera los que odian, están en desacuerdo."
+  },
+  {
+    "id": "poder_08",
+    "agree": "Todas las drogas, incluidas la cocaína y la heroína, pueden legalizarse para adultos.",
+    "disagree": "Al menos las drogas más duras siguen prohibidas, incluso para adultos.",
+    "agreeExample": "Portugal, que en 2001 convirtió la posesión de pequeñas cantidades de cualquier droga en una infracción administrativa, no un delito.",
+    "disagreeExample": "Suecia, que convirtió el consumo mismo de drogas en delito en 1988.",
+    "note": "La pregunta trata de si es un delito. Quienes apoyan despenalizar pero mantener reglas, o tratarlo como un tema de salud, están en el medio: Neutral o la opción más cercana."
+  },
+  {
+    "id": "poder_09",
+    "agree": "La ley restringe estrictamente quién puede tener un arma de fuego, con pocos civiles autorizados.",
+    "disagree": "Los civiles tienen un acceso más amplio a las armas de fuego, con menos restricciones del Estado.",
+    "agreeExample": "Reino Unido, que prohibió en 1997 la propiedad privada de la mayoría de las armas cortas.",
+    "disagreeExample": "Estados Unidos, cuya Corte Suprema dictaminó en 2008 que la Segunda Enmienda protege tener un arma corta en casa.",
+    "note": "La pregunta mide cuánto limita el Estado el acceso, no si las armas son buenas o malas. Los progresistas que se oponen al control estatal de la tenencia de armas, como parte de la izquierda libertaria, están en desacuerdo."
+  },
+  {
+    "id": "poder_10",
+    "agree": "Un adulto puede tener un arma de fuego en casa para defenderse, sin necesitar un permiso estatal difícil de obtener.",
+    "disagree": "Tener un arma de fuego en casa está prohibido o muy restringido.",
+    "agreeExample": "República Checa, que añadió en 2021 el derecho a defenderse con un arma a su Carta de Derechos Fundamentales.",
+    "disagreeExample": "Australia, donde la defensa propia no se acepta como motivo para una licencia de armas.",
+    "note": "La pregunta mide cuánto limita el Estado el acceso, no si las armas son buenas o malas."
+  },
+  {
+    "id": "poder_11",
+    "agree": "En situaciones graves, como una guerra o disturbios, el gobierno puede prohibir que la gente salga de noche.",
+    "disagree": "El gobierno no puede imponer un toque de queda, ni siquiera en situaciones graves.",
+    "agreeExample": "Francia, que impuso un toque de queda nocturno durante el Covid de octubre de 2020 a junio de 2021.",
+    "disagreeExample": "Suecia, que no impuso ningún toque de queda durante el Covid, ya que su constitución no prevé un estado de emergencia en tiempos de paz."
+  },
+  {
+    "id": "poder_12",
+    "agree": "Una persona con una enfermedad terminal puede elegir legalmente poner fin a su vida, con ayuda médica.",
+    "disagree": "La eutanasia sigue prohibida, incluso para personas con una enfermedad terminal.",
+    "agreeExample": "Países Bajos, que legalizó la eutanasia en 2002.",
+    "disagreeExample": "Polonia, donde la eutanasia es un delito castigado con hasta cinco años de prisión.",
+    "note": "La pregunta mide si una persona puede decidir sobre su propia vida, no el valor moral de la eutanasia. Quienes están en contra por motivos religiosos o morales pero creen que el Estado no debería prohibirla deben pensar solo en si la ley debería prohibirla."
+  },
+  {
+    "id": "poder_13",
+    "agree": "La vacunación es obligatoria por ley, y el Estado puede castigar o restringir a quien se niegue.",
+    "disagree": "Vacunarse o no es decisión de cada persona, sin obligación estatal.",
+    "agreeExample": "Italia, que desde 2017 exige diez vacunas a los niños para asistir a la guardería.",
+    "disagreeExample": "Suecia, donde todas las vacunas infantiles son voluntarias.",
+    "note": "La pregunta mide si el Estado puede obligar, no si crees que las vacunas funcionan. Quienes apoyan las vacunas pero se oponen a la obligación están en desacuerdo."
+  },
+  {
+    "id": "poder_14",
+    "agree": "Cuando la culpa es incierta, el Estado absuelve, aunque algunos culpables queden libres.",
+    "disagree": "Cuando la culpa es incierta, el Estado puede condenar, para evitar que los culpables queden libres.",
+    "agreeExample": "Estados Unidos, cuya Corte Suprema dictaminó en 2020 que un jurado debe ser unánime para condenar por un delito grave.",
+    "disagreeExample": "Inglaterra, donde un jurado puede condenar por mayoría de 10 a 2."
+  },
+  {
+    "id": "poder_15",
+    "agree": "El Estado puede ejecutar a quienes cometen delitos como violación y asesinato.",
+    "disagree": "El Estado no aplica la pena de muerte.",
+    "agreeExample": "Japón, donde el asesinato puede castigarse con la horca.",
+    "disagreeExample": "Alemania, cuya Ley Fundamental abolió la pena de muerte en 1949.",
+    "note": "Quienes son duros con el crimen pero desconfían del poder del Estado de matar, como muchos libertarios, deben pensar en ese poder y tienden a estar en desacuerdo."
+  },
+  {
+    "id": "poder_16",
+    "agree": "Los adultos que consienten pueden hacer lo que quieran entre ellos en privado sin que sea un delito.",
+    "disagree": "Algunas conductas privadas entre adultos que consienten siguen siendo delito.",
+    "agreeExample": "Francia, donde el incesto entre adultos que consienten no es delito desde 1791.",
+    "disagreeExample": "Alemania, donde el incesto entre hermanos adultos es un delito, una prohibición que su Tribunal Constitucional confirmó en 2008."
+  },
+  {
+    "id": "poder_17",
+    "agree": "El gobierno puede ordenar la eliminación de cuentas que difunden información falsa.",
+    "disagree": "El gobierno no puede eliminar cuentas por lo que publican.",
+    "agreeExample": "Brasil, donde el tribunal electoral puede ordenar a las plataformas retirar en horas contenido electoral falso.",
+    "disagreeExample": "Estados Unidos, cuya Corte Suprema dictaminó en 2012 que las declaraciones falsas no quedan automáticamente fuera de la protección de la libertad de expresión.",
+    "note": "La pregunta trata de que el gobierno elimine cuentas. Quienes aceptan la moderación de empresas privadas, pero no la del gobierno, deben estar en desacuerdo."
+  },
+  {
+    "id": "poder_18",
+    "agree": "El gobierno no puede rastrear lo que cada persona compra mediante pagos instantáneos, tarjetas u otros medios digitales.",
+    "disagree": "El gobierno puede rastrear las compras hechas con pagos digitales, por ejemplo para combatir el fraude y la evasión fiscal.",
+    "agreeExample": "Brasil, que revocó en enero de 2025 una norma que obligaba a las empresas de pago a informar a la autoridad tributaria los totales de Pix.",
+    "disagreeExample": "Portugal, donde la autoridad tributaria recibe cada factura electrónicamente, vinculada al número fiscal del comprador cuando se indica.",
+    "note": "Esto mide la privacidad financiera frente a la vigilancia estatal. Quienes prefieren el efectivo o las criptomonedas no rastreables están de acuerdo."
+  },
+  {
+    "id": "poder_19",
+    "agree": "Los sospechosos de terrorismo pueden ser detenidos sin juicio hasta que pase la amenaza.",
+    "disagree": "Los sospechosos de terrorismo solo pueden ser encarcelados después de un juicio.",
+    "agreeExample": "Estados Unidos, que ha mantenido a algunos detenidos de Guantánamo durante más de 20 años sin juicio.",
+    "disagreeExample": "Reino Unido, cuya Cámara de los Lores dictaminó en 2004 que mantener indefinidamente sin juicio a sospechosos extranjeros de terrorismo era ilegal."
+  },
+  {
+    "id": "poder_20",
+    "agree": "La policía no puede obligar a nadie a desbloquear su propio celular, ni siquiera cuando se sospecha un delito.",
+    "disagree": "La policía puede obligar a alguien a desbloquear su celular, por ejemplo con una orden judicial.",
+    "agreeExample": "Pensilvania, cuya Corte Suprema dictaminó en 2019 que obligar a un sospechoso a revelar su código de acceso viola el derecho a guardar silencio.",
+    "disagreeExample": "Reino Unido, donde negarse a revelar una contraseña ante un requerimiento legal es un delito."
+  },
+  {
+    "id": "imigracao_01",
+    "agree": "Quien inmigra debería aprender el idioma local y adoptar las costumbres del país, como forma de integrarse.",
+    "disagree": "Quien inmigra puede mantener su idioma y sus costumbres, sin tener que adoptar las locales.",
+    "agreeExample": "Países Bajos, donde los recién llegados deben aprobar un examen de integración cívica para quedarse.",
+    "disagreeExample": "Canadá, con una política oficial de multiculturalismo desde 1971.",
+    "note": "La pregunta mide lo que se espera de quienes ya viven en el país, no cuántos deberían entrar. Quien apoya las fronteras abiertas pero espera que los inmigrantes se integren por su cuenta está de acuerdo."
+  },
+  {
+    "id": "imigracao_02",
+    "agree": "Varios idiomas conviven en la vida cotidiana, en las escuelas, en los servicios públicos y en la calle.",
+    "disagree": "Predomina un idioma común en la vida cotidiana, y los demás quedan limitados al uso privado.",
+    "agreeExample": "Sudáfrica, con 12 idiomas oficiales.",
+    "disagreeExample": "Francia, cuya Constitución establece el francés como idioma de la República.",
+    "note": "Esto mide el pluralismo lingüístico, no la inmigración en sí. Quien apoya las fronteras abiertas pero un idioma común está en desacuerdo."
+  },
+  {
+    "id": "imigracao_03",
+    "agree": "Cerrar las fronteras a la inmigración se justifica para preservar la identidad cultural del país.",
+    "disagree": "Las fronteras permanecen abiertas a la inmigración, y la identidad cultural no es motivo para cerrarlas.",
+    "agreeExample": "El Japón de los Tokugawa, cerrado a casi todos los extranjeros de 1639 a 1853.",
+    "disagreeExample": "Alemania en 2015, que mantuvo sus fronteras abiertas durante la crisis de refugiados.",
+    "note": "Quien quiere limitar la inmigración por razones económicas o de seguridad, y no culturales, debe pensar solo en el argumento cultural de esta pregunta."
+  },
+  {
+    "id": "imigracao_04",
+    "agree": "Los inmigrantes pueden conservar sus tradiciones, su religión y sus costumbres, incluso cuando difieren mucho de las locales.",
+    "disagree": "Se espera que los inmigrantes dejen de lado las costumbres que difieren mucho de las locales.",
+    "agreeExample": "Canadá, donde los agentes sijs de la policía federal usan turbante desde 1990.",
+    "disagreeExample": "Francia, que prohibió en 2010 los velos que cubren el rostro en público.",
+    "note": "La pregunta mide lo que se espera de quienes ya viven en el país, no cuántos deberían entrar."
+  },
+  {
+    "id": "imigracao_05",
+    "agree": "El país puede negar la entrada a quienes se niegan a respetar las costumbres locales.",
+    "disagree": "El país acepta inmigrantes aunque no adopten las costumbres locales.",
+    "agreeExample": "Australia, donde quienes solicitan una visa deben firmar una declaración de aceptación de los valores australianos.",
+    "disagreeExample": "Brasil, cuya Ley de Migración de 2017 no fija ninguna condición cultural para la entrada."
+  },
+  {
+    "id": "imigracao_06",
+    "agree": "Los inmigrantes pueden vivir bien en el país sin renunciar a sus costumbres.",
+    "disagree": "Para vivir bien en el país, los inmigrantes necesitan renunciar a parte de sus costumbres.",
+    "agreeExample": "Reino Unido, donde los sijs con turbante están exentos del casco de motocicleta desde 1976.",
+    "disagreeExample": "Dinamarca, donde los niños de barrios designados deben asistir a la guardería desde el primer año para aprender danés y los valores daneses.",
+    "note": "La pregunta mide lo que se espera de quienes ya viven en el país, no cuántos deberían entrar."
+  },
+  {
+    "id": "imigracao_07",
+    "agree": "Cuando hay un conflicto, proteger las tradiciones nacionales importa más que ceder ante las costumbres extranjeras.",
+    "disagree": "Cuando hay un conflicto, acomodar las costumbres extranjeras importa más que insistir en las tradiciones nacionales.",
+    "agreeExample": "Suiza, que prohibió por referéndum nuevos minaretes en 2009.",
+    "disagreeExample": "Alemania, que aprobó una ley en 2012 para mantener legal la circuncisión religiosa."
+  },
+  {
+    "id": "imigracao_08",
+    "agree": "El país promueve activamente la convivencia entre distintos idiomas y culturas.",
+    "disagree": "El país no tiene como objetivo la convivencia de distintos idiomas y culturas.",
+    "agreeExample": "Singapur, donde las escuelas enseñan inglés más una lengua materna.",
+    "disagreeExample": "Francia, que firmó la Carta Europea de las Lenguas Regionales o Minoritarias en 1999 pero nunca la ratificó.",
+    "note": "Esto mide si el Estado debería promover el pluralismo. Quien piensa que las comunidades deben convivir por su cuenta, sin ningún programa del gobierno, está más cerca de estar en desacuerdo."
+  },
+  {
+    "id": "imigracao_09",
+    "agree": "Al seleccionar inmigrantes, el país prefiere a personas de culturas parecidas a la suya.",
+    "disagree": "El país trata por igual en la selección a los inmigrantes de cualquier cultura.",
+    "agreeExample": "España, que concede la ciudadanía a los latinoamericanos tras 2 años de residencia.",
+    "disagreeExample": "Estados Unidos, cuya ley de inmigración de 1965 puso fin a las cuotas por origen nacional."
+  },
+  {
+    "id": "imigracao_10",
+    "agree": "Las culturas que traen los inmigrantes pasan a formar parte de lo que es la identidad nacional.",
+    "disagree": "La identidad nacional la define la cultura que ya existía en el país.",
+    "agreeExample": "Brasil, cuya Constitución protege las culturas de los grupos que formaron la nación.",
+    "disagreeExample": "Dinamarca, que publicó un canon cultural oficial en 2006."
+  },
+  {
+    "id": "imigracao_11",
+    "agree": "Quien inmigra está obligado a adaptarse a las costumbres locales.",
+    "disagree": "Quien inmigra no está obligado a adaptarse a las costumbres locales.",
+    "agreeExample": "Dinamarca, que exige un apretón de manos en la ceremonia de ciudadanía.",
+    "disagreeExample": "Unión Europea, donde los ciudadanos de un Estado miembro pueden establecerse en otro sin ningún examen de integración.",
+    "note": "La pregunta mide lo que se espera de quienes ya viven en el país, no cuántos deberían entrar. Quien espera adaptación pero piensa que el Estado no debe obligar a nadie debe pensar en la expectativa, no en la obligación legal."
+  },
+  {
+    "id": "imigracao_12",
+    "agree": "El país sigue acogiendo a inmigrantes de países en crisis y acepta convivir con sus culturas.",
+    "disagree": "El país reduce o deja de acoger a esos inmigrantes.",
+    "agreeExample": "Uganda, que da tierras y derecho a trabajar a los refugiados.",
+    "disagreeExample": "Japón, que reconoció a 303 refugiados en 2023 de unas 13.800 solicitudes.",
+    "note": "La pregunta vincula la acogida de inmigrantes con la convivencia entre culturas, y no mide el costo económico ni la seguridad."
+  },
+  {
+    "id": "imigracao_13",
+    "agree": "Hablar bien el idioma del país debería ser una condición importante para entrar y quedarse.",
+    "disagree": "Hablar el idioma del país no necesita ser una prioridad en la política migratoria.",
+    "agreeExample": "Letonia, donde los ciudadanos rusos debieron aprobar un examen de letón en 2023 para conservar la residencia permanente.",
+    "disagreeExample": "Estados Unidos, que no pide inglés para la green card, solo para la ciudadanía."
+  },
+  {
+    "id": "imigracao_14",
+    "agree": "Los inmigrantes son juzgados como individuos, no por estereotipos sobre las costumbres de su país de origen.",
+    "disagree": "Es legítimo juzgar a los inmigrantes por las costumbres asociadas a su país de origen.",
+    "agreeExample": "Unión Europea, cuya directiva de 2000 prohíbe la discriminación por origen étnico.",
+    "disagreeExample": "Baden-Württemberg, que desde 2006 aplicó una entrevista sobre valores a quienes solicitaban la naturalización procedentes de países musulmanes."
+  },
+  {
+    "id": "imigracao_15",
+    "agree": "Los barrios donde los inmigrantes viven aislados en su propia cultura perjudican la integración y crean problemas para el país.",
+    "disagree": "Los barrios donde los inmigrantes viven en su propia cultura son normales y no crean problemas para el país.",
+    "agreeExample": "Singapur, que fija cuotas étnicas en cada bloque de vivienda pública.",
+    "disagreeExample": "São Paulo, que celebra Liberdade, su barrio japonés."
+  },
+  {
+    "id": "imigracao_16",
+    "agree": "Los hijos de inmigrantes también pueden estudiar en el idioma de sus padres, en escuelas bilingües.",
+    "disagree": "Los hijos de inmigrantes estudian solo en el idioma predominante del país.",
+    "agreeExample": "Suecia, donde las escuelas deben ofrecer clases de lengua materna.",
+    "disagreeExample": "California, cuyos votantes limitaron las clases bilingües de 1998 a 2016.",
+    "note": "Esto mide la enseñanza en el idioma de los padres. Quien quiere escuelas libres, sin currículo estatal, debe pensar solo en si debería existir la enseñanza bilingüe."
+  },
+  {
+    "id": "imigracao_17",
+    "agree": "Es válido limitar la inmigración para proteger la cultura predominante del país.",
+    "disagree": "No se debería limitar la inmigración para proteger la cultura predominante.",
+    "agreeExample": "Quebec, que selecciona a sus propios inmigrantes económicos y favorece a los francófonos.",
+    "disagreeExample": "Canadá, cuyo sistema de puntos de 1967 dejó de seleccionar por origen.",
+    "note": "Quien quiere limitar la inmigración por razones económicas o de seguridad, y no culturales, debe pensar solo en el argumento cultural de esta pregunta."
+  },
+  {
+    "id": "imigracao_18",
+    "agree": "Cualquier persona pacífica puede entrar y vivir en el país, sin filtros ni cuotas.",
+    "disagree": "El país controla y selecciona a quién puede entrar.",
+    "agreeExample": "Gran parte de Europa y de América antes de 1914, cuando cruzar una frontera no requería pasaporte.",
+    "disagreeExample": "Australia, donde todo no ciudadano necesita visa.",
+    "note": "Quien acepta la inmigración pero con reglas y selección está más cerca de estar en desacuerdo. Los libertarios y los anarquistas, que rechazan las fronteras controladas por el Estado, tienden a estar de acuerdo."
+  },
+  {
+    "id": "imigracao_19",
+    "agree": "Los inmigrantes que rechazan las costumbres locales pueden perder el derecho a permanecer en el país.",
+    "disagree": "Los inmigrantes conservan el derecho a permanecer, aunque rechacen las costumbres locales.",
+    "agreeExample": "Suiza, donde un permiso C puede rebajarse cuando su titular no respeta valores constitucionales como la igualdad de género.",
+    "disagreeExample": "Canadá, donde los residentes permanentes pierden su estatus solo por delitos graves, fraude o una ausencia prolongada."
+  },
+  {
+    "id": "imigracao_20",
+    "agree": "Una identidad de ciudadano del mundo importa más que una identidad nacional.",
+    "disagree": "Una identidad nacional importa más que una identidad de ciudadano del mundo.",
+    "agreeExample": "Unión Europea, que da a los ciudadanos de todos los Estados miembros una ciudadanía europea común.",
+    "disagreeExample": "Japón, que no permite a los adultos conservar una segunda ciudadanía.",
+    "note": "La pregunta compara la pertenencia nacional con la global. Quien tiene una fuerte identidad local o de clase, pero no nacional, no está en ninguno de los dos lados: Neutral es posible."
+  },
+  {
+    "id": "diplomacia_01",
+    "agree": "El país invierte en fuerzas armadas fuertes, porque el poder militar es lo que gana respeto en el escenario mundial.",
+    "disagree": "El país gana respeto con la diplomacia, su economía y su cultura, sin depender de fuerzas armadas fuertes.",
+    "agreeExample": "Polonia, que gastó el 4,3 % del PIB en defensa en 2025, la proporción más alta de la OTAN.",
+    "disagreeExample": "Irlanda, neutral y con un gasto de alrededor del 0,2 % del PIB en defensa en 2025, el más bajo de la UE.",
+    "note": "La pregunta mide el valor del poder militar. Quien quiere un Estado pequeño por principio, y no por pacifismo, debe pensar solo en si la fuerza militar es lo que gana respeto a un país."
+  },
+  {
+    "id": "diplomacia_02",
+    "agree": "Antes de usar la fuerza, el país agota la negociación y la diplomacia, aunque tarde mucho tiempo.",
+    "disagree": "El país puede actuar militarmente sin agotar antes la negociación, si lo considera necesario.",
+    "agreeExample": "Argentina y Chile, que aceptaron la mediación papal por el Canal Beagle en 1978 y firmaron un tratado en 1984.",
+    "disagreeExample": "India, que atacó objetivos en Pakistán en mayo de 2025, dos semanas después del atentado de Pahalgam."
+  },
+  {
+    "id": "diplomacia_03",
+    "agree": "El país puede atacar primero cuando un enemigo se prepara para atacarlo, sin esperar a ser golpeado.",
+    "disagree": "El país solo usa la fuerza después de ser atacado.",
+    "agreeExample": "Israel, que atacó primero a la fuerza aérea de Egipto al comienzo de la Guerra de los Seis Días de 1967.",
+    "disagreeExample": "Japón, cuyas fuerzas solo pueden usar la fuerza cuando Japón o un socio cercano es atacado.",
+    "note": "Esto mide el ataque preventivo. Quien acepta la guerra defensiva pero rechaza atacar primero debe estar en desacuerdo."
+  },
+  {
+    "id": "diplomacia_04",
+    "agree": "El país evita la guerra incluso cuando traería ventajas, como territorio o recursos.",
+    "disagree": "El país acepta ir a la guerra cuando trae ventajas claras.",
+    "agreeExample": "Suecia, que no libra una guerra desde 1814.",
+    "disagreeExample": "Suecia en 1814, que forzó a Noruega a una unión tras una breve guerra.",
+    "note": "Esto mide si las ventajas justifican una guerra. Quien solo acepta la guerra defensiva está de acuerdo, aunque sea duro en defensa."
+  },
+  {
+    "id": "diplomacia_05",
+    "agree": "El país prioriza el gasto militar por encima de la salud, la educación y otras áreas, incluso cuando los recursos escasean.",
+    "disagree": "La salud, la educación y otras áreas van antes que el gasto militar.",
+    "agreeExample": "Estados Unidos, que gasta más en su ejército que los seis países siguientes juntos.",
+    "disagreeExample": "Japón, que mantuvo el gasto en defensa en torno al 1 % del PIB de 1976 a 2022.",
+    "note": "La pregunta compara el gasto militar con otras áreas. Quien quiere recortar el gasto en todas las áreas, incluida la militar, debe pensar solo en cuál va primero."
+  },
+  {
+    "id": "diplomacia_06",
+    "agree": "El país hace acuerdos con sus adversarios y acepta ceder en algunos puntos para evitar el conflicto.",
+    "disagree": "El país no cede ante sus adversarios solo para cerrar un acuerdo.",
+    "agreeExample": "Colombia, que dio a las FARC diez escaños en el Congreso en el acuerdo de paz de 2016.",
+    "disagreeExample": "Estados Unidos, cuya política oficial es no hacer concesiones a quienes toman rehenes."
+  },
+  {
+    "id": "diplomacia_07",
+    "agree": "El país desarrolla armas nucleares, como elemento de disuasión y fuente de poder.",
+    "disagree": "El país no desarrolla armas nucleares.",
+    "agreeExample": "Francia, que construyó su propia disuasión nuclear y probó su primera bomba en 1960.",
+    "disagreeExample": "Brasil, cuya Constitución permite la actividad nuclear solo con fines pacíficos.",
+    "note": "Quien se opone por desconfianza hacia el poder del Estado, y no por pacifismo, como muchos libertarios, también está en desacuerdo."
+  },
+  {
+    "id": "diplomacia_08",
+    "agree": "El país recorta el gasto militar y usa ese dinero en otras áreas o lo devuelve en forma de menos impuestos.",
+    "disagree": "El país mantiene o aumenta el gasto militar.",
+    "agreeExample": "Alemania, cuyo gasto en defensa cayó a cerca del 1,2 % del PIB a mediados de la década de 2010.",
+    "disagreeExample": "Alemania, que creó en 2022 un fondo especial de 100.000 millones de euros para sus fuerzas armadas.",
+    "note": "Quien quiere recortar el gasto militar para reducir el Estado, y no por pacifismo, también está de acuerdo."
+  },
+  {
+    "id": "diplomacia_09",
+    "agree": "Todo joven pasa por el servicio militar obligatorio, para que el país esté preparado para la guerra.",
+    "disagree": "El servicio militar no es obligatorio.",
+    "agreeExample": "Finlandia, donde el servicio militar o civil es obligatorio para los hombres.",
+    "disagreeExample": "Reino Unido, que llamó a filas a sus últimos conscriptos en 1960.",
+    "note": "La pregunta trata de la obligatoriedad. Quien apoya unas fuerzas armadas fuertes formadas solo por voluntarios está en desacuerdo."
+  },
+  {
+    "id": "diplomacia_10",
+    "agree": "El país prefiere firmar acuerdos de desarme antes que ampliar su arsenal.",
+    "disagree": "El país prefiere ampliar su arsenal antes que confiar en acuerdos de desarme.",
+    "agreeExample": "Sudáfrica, que desmanteló sus armas nucleares a principios de los años noventa.",
+    "disagreeExample": "Reino Unido, que elevó el límite de sus ojivas nucleares de 180 a 260 en 2021."
+  },
+  {
+    "id": "diplomacia_11",
+    "agree": "El país prioriza fabricar sus propias armas para la defensa, aunque cueste más.",
+    "disagree": "El país puede comprar armas de otros países para la defensa.",
+    "agreeExample": "Suecia, que fabrica sus propios cazas Gripen.",
+    "disagreeExample": "Australia, que compra sus cazas F-35 a Estados Unidos.",
+    "note": "La pregunta mide la prioridad que se da a la producción nacional de armas. Quien prefiere comprar a quien venda más barato, por convicción de libre mercado y no por pacifismo, debe pensar solo en esa prioridad."
+  },
+  {
+    "id": "diplomacia_12",
+    "agree": "Ninguna causa, sea religiosa, política o ideológica, justifica iniciar una guerra.",
+    "disagree": "Algunas causas políticas o ideológicas justifican iniciar una guerra.",
+    "agreeExample": "Japón, cuya Constitución renuncia a la guerra como derecho soberano.",
+    "disagreeExample": "Naciones Unidas, cuyos miembros acordaron en 2005 que se puede usar la fuerza, como último recurso, para proteger a las personas del genocidio.",
+    "note": "La pregunta trata de iniciar una guerra, no de defenderse de un ataque. Quien respalda una guerra revolucionaria para liberar a un pueblo oprimido debe estar en desacuerdo."
+  },
+  {
+    "id": "diplomacia_13",
+    "agree": "El Estado puede espiar a otros países, incluidos sus aliados, para proteger el interés nacional.",
+    "disagree": "El Estado no espía a otros países.",
+    "agreeExample": "Estados Unidos, cuya agencia de inteligencia vigiló el teléfono de la canciller alemana, según se reveló en 2013.",
+    "disagreeExample": "Los países de Five Eyes, que por una convención de larga data no se espían entre sí.",
+    "note": "Quien rechaza el espionaje por desconfianza hacia cualquier vigilancia estatal, como muchos libertarios, también está en desacuerdo."
+  },
+  {
+    "id": "diplomacia_14",
+    "agree": "El país apoya los tribunales internacionales que juzgan crímenes de guerra, incluso cuando juzgan a sus aliados.",
+    "disagree": "El país no apoya los tribunales internacionales que podrían juzgar a sus aliados o a él mismo.",
+    "agreeExample": "Reino Unido, que acepta que la Corte Penal Internacional pueda juzgar a soldados británicos.",
+    "disagreeExample": "Estados Unidos, cuya ley de 2002 autoriza el uso de la fuerza para liberar a estadounidenses detenidos por la Corte Penal Internacional.",
+    "note": "Quien rechaza los tribunales internacionales en defensa de la soberanía nacional, y no por apoyar la guerra, debe pensar solo en si se debe apoyar esos tribunales."
+  },
+  {
+    "id": "diplomacia_15",
+    "agree": "El país desarrolla armas autónomas letales, como drones que eligen objetivos con inteligencia artificial.",
+    "disagree": "El país no desarrolla armas autónomas letales.",
+    "agreeExample": "Estados Unidos, cuya política de 2023 permite las armas autónomas tras una revisión de alto nivel.",
+    "disagreeExample": "Austria, que ha liderado los esfuerzos en la ONU por un tratado que prohíba las armas autónomas."
+  },
+  {
+    "id": "diplomacia_16",
+    "agree": "El país dialoga incluso con gobiernos hostiles antes de amenazarlos militarmente.",
+    "disagree": "El país puede amenazar a un gobierno hostil sin intentar antes dialogar.",
+    "agreeExample": "Estados Unidos, cuyo presidente se reunió con el líder de Corea del Norte en cumbres en 2018 y 2019.",
+    "disagreeExample": "Estados Unidos, cuyo presidente calificó a Irán, Irak y Corea del Norte de eje del mal en 2002."
+  },
+  {
+    "id": "diplomacia_17",
+    "agree": "El país está dispuesto a iniciar una guerra si es necesario para asegurar sus intereses vitales.",
+    "disagree": "El país no inicia guerras, ni siquiera para asegurar sus intereses vitales.",
+    "agreeExample": "Reino Unido y Francia, que atacaron Egipto en 1956 por el control del Canal de Suez.",
+    "disagreeExample": "Alemania, cuya Ley Fundamental prohíbe preparar una guerra de agresión."
+  },
+  {
+    "id": "diplomacia_18",
+    "agree": "El país abole sus fuerzas armadas y deja de tener ejército.",
+    "disagree": "El país mantiene sus fuerzas armadas.",
+    "agreeExample": "Costa Rica, que abolió su ejército en 1948.",
+    "disagreeExample": "Suiza, cuyos votantes rechazaron abolir el ejército en 1989 y 2001.",
+    "note": "La pregunta mide si el país debería tener fuerzas armadas, no cómo las usa. Quien quiere un ejército pequeño, solo defensivo, está en desacuerdo."
+  },
+  {
+    "id": "diplomacia_19",
+    "agree": "El país amenaza con una respuesta devastadora a quien lo ataque, como forma de disuasión.",
+    "disagree": "El país no usa la amenaza de una respuesta devastadora para disuadir ataques.",
+    "agreeExample": "Francia, cuya doctrina nuclear amenaza con daños inaceptables a cualquier Estado que ataque sus intereses vitales.",
+    "disagreeExample": "Nueva Zelanda, que prohíbe las armas nucleares en su territorio desde 1987."
+  },
+  {
+    "id": "diplomacia_20",
+    "agree": "La ONU intenta mediar en un conflicto antes de cualquier acción militar.",
+    "disagree": "Una acción militar no necesita esperar la mediación de la ONU.",
+    "agreeExample": "Brasil, cuya Constitución establece la solución pacífica de los conflictos como principio de su política exterior.",
+    "disagreeExample": "La OTAN, que bombardeó Yugoslavia en 1999 sin la aprobación del Consejo de Seguridad de la ONU.",
+    "note": "Quien prefiere que el país no dependa de la ONU, en defensa de la soberanía nacional, debe pensar solo en si la ONU debería mediar en los conflictos."
+  },
+  {
+    "id": "intervencao_01",
+    "agree": "Ningún país puede intentar derrocar o reemplazar el gobierno de otro, ya sea mediante sanciones, financiando a la oposición o con un golpe.",
+    "disagree": "En ciertos casos, como las dictaduras brutales, un país puede intentar cambiar el gobierno de otro.",
+    "agreeExample": "México, cuya Doctrina Estrada de 1930 se niega a juzgar a los gobiernos de otros países.",
+    "disagreeExample": "Tanzania, que invadió Uganda en 1979 y derrocó a Idi Amin.",
+    "note": "La pregunta mide el derecho a interferir en otro país. Quien apoya derrocar un gobierno por razones ideológicas o de interés debe estar en desacuerdo, aunque lo considere legítimo."
+  },
+  {
+    "id": "intervencao_02",
+    "agree": "El país usa presión política, económica o diplomática sobre otros países para defender el interés nacional.",
+    "disagree": "El país no presiona a otros países, ni siquiera para defender su interés nacional.",
+    "agreeExample": "China, que restringió en 2020 las importaciones de cebada, vino y carbón de Australia durante una disputa política.",
+    "disagreeExample": "Australia, que respondió a esas restricciones con demandas ante la OMC y no con medidas propias.",
+    "note": "La pregunta vincula la presión sobre otros países con el interés nacional. Quien apoya la presión por razones humanitarias debe pensar solo en el interés nacional."
+  },
+  {
+    "id": "intervencao_03",
+    "agree": "El país evita las alianzas militares, como la OTAN, que podrían arrastrarlo a guerras de otros países.",
+    "disagree": "El país se une a alianzas militares, aun sabiendo que podrían involucrarlo en guerras ajenas.",
+    "agreeExample": "Austria, que permanece fuera de la OTAN por su ley de neutralidad de 1955.",
+    "disagreeExample": "Finlandia, que ingresó en la OTAN en 2023."
+  },
+  {
+    "id": "intervencao_04",
+    "agree": "La política exterior tiene como objetivo central aumentar la influencia del país sobre sus vecinos.",
+    "disagree": "La política exterior trata a los vecinos como socios, sin buscar influencia sobre ellos.",
+    "agreeExample": "Estados Unidos, cuya Doctrina Monroe de 1823 advirtió a las potencias europeas que se mantuvieran fuera de América.",
+    "disagreeExample": "Los países nórdicos, que comparten desde la década de 1950 una unión de pasaportes y un mercado laboral como socios iguales."
+  },
+  {
+    "id": "intervencao_05",
+    "agree": "El país no envía soldados al exterior, ni siquiera en misiones de paz de la ONU.",
+    "disagree": "El país puede enviar soldados al exterior, por ejemplo en misiones de paz.",
+    "agreeExample": "Japón, cuyas fuerzas no participaron en misiones de paz de la ONU hasta que una ley de 1992 lo permitió.",
+    "disagreeExample": "Brasil, que comandó la parte militar de la misión de la ONU en Haití de 2004 a 2017.",
+    "note": "La pregunta incluye las misiones de paz. Quien acepta solo las misiones de paz con mandato internacional, pero no otras acciones en el exterior, puede responder Neutral."
+  },
+  {
+    "id": "intervencao_06",
+    "agree": "El país usa la diplomacia, incluida la presión, para defender los intereses de sus ciudadanos y empresas en el exterior.",
+    "disagree": "El país no usa la presión diplomática para defender sus intereses en el exterior.",
+    "agreeExample": "España, que presionó a Argentina por la expropiación en 2012 de la participación de Repsol en YPF hasta que Argentina pagó 5.000 millones de dólares en 2014.",
+    "disagreeExample": "Brasil, que aceptó sin represalias la nacionalización de los campos de gas de Bolivia en 2006, incluidos los activos de Petrobras."
+  },
+  {
+    "id": "intervencao_07",
+    "agree": "Incluso ante un genocidio en un país vecino, el país no envía tropas.",
+    "disagree": "Ante un genocidio en un país vecino, el país puede enviar tropas para detenerlo.",
+    "agreeExample": "Los miembros de la ASEAN, que, según su principio de no injerencia, no enviaron tropas a Myanmar durante la crisis rohinyá de 2017.",
+    "disagreeExample": "India, que envió tropas a Pakistán Oriental en 1971 durante las matanzas masivas allí.",
+    "note": "La pregunta mide si el país debería usar la fuerza más allá de sus fronteras, no la gravedad del genocidio. Quien se opone a todo genocidio pero está en contra de la intervención armada está de acuerdo."
+  },
+  {
+    "id": "intervencao_08",
+    "agree": "El país puede imponer sanciones económicas a otro cuando sus intereses están amenazados.",
+    "disagree": "El país no impone sanciones, ni siquiera cuando sus intereses están amenazados.",
+    "agreeExample": "Estados Unidos, que incluyó a Huawei en una lista negra comercial en 2019 por seguridad nacional.",
+    "disagreeExample": "India, cuya política declarada es seguir solo las sanciones de la ONU.",
+    "note": "La pregunta vincula las sanciones con el interés propio del país, no con razones humanitarias. Quien rechaza las sanciones en defensa del libre comercio está en desacuerdo."
+  },
+  {
+    "id": "intervencao_09",
+    "agree": "Los conflictos entre países los resuelven organismos internacionales, como la ONU, no las grandes potencias.",
+    "disagree": "Las grandes potencias pueden resolver los conflictos entre países sin pasar por organismos internacionales.",
+    "agreeExample": "Costa Rica y Nicaragua, que llevaron sus disputas fronterizas a la Corte Internacional de Justicia.",
+    "disagreeExample": "Estados Unidos, Reino Unido y la Unión Soviética, que fijaron las fronteras de posguerra de Europa en Yalta en 1945.",
+    "note": "La pregunta compara los organismos internacionales con las grandes potencias. Quien rechaza ambos y prefiere que cada país resuelva las cosas por su cuenta puede responder Neutral."
+  },
+  {
+    "id": "intervencao_10",
+    "agree": "El país busca ser el líder político de su región.",
+    "disagree": "El país no busca liderar políticamente su región.",
+    "agreeExample": "Nigeria, que lideró la fuerza regional de mantenimiento de la paz de África Occidental en la década de 1990.",
+    "disagreeExample": "Japón, cuya Doctrina Fukuda de 1977 se comprometió a tratar a las naciones del Sudeste Asiático como socios iguales y no como una potencia militar."
+  },
+  {
+    "id": "intervencao_11",
+    "agree": "El país evita los bloques que lo obligan a seguir automáticamente la posición de una gran potencia.",
+    "disagree": "El país se une a bloques, aunque eso lo obligue a alinearse con otras potencias.",
+    "agreeExample": "India, miembro fundador del Movimiento de Países No Alineados en 1961.",
+    "disagreeExample": "Polonia, que ingresó en la OTAN en 1999 y en la UE en 2004."
+  },
+  {
+    "id": "intervencao_12",
+    "agree": "El país influye en los gobiernos vecinos, por ejemplo mediante presión o apoyo a aliados, cuando eso aumenta su seguridad.",
+    "disagree": "El país no influye en los gobiernos vecinos, ni siquiera para aumentar su seguridad.",
+    "agreeExample": "India, que envió tropas a las Maldivas en 1988, a petición de su gobierno, para detener un golpe.",
+    "disagreeExample": "Brasil, cuya Constitución establece la no intervención como principio de sus relaciones exteriores."
+  },
+  {
+    "id": "intervencao_13",
+    "agree": "Cada pueblo resuelve sus propios problemas, y los demás países no deberían interferir, ni siquiera para ayudar.",
+    "disagree": "Otros países pueden interferir para ayudar a resolver los problemas de un pueblo.",
+    "agreeExample": "India, que rechazó la ayuda de socorro extranjera tras el tsunami de 2004.",
+    "disagreeExample": "Indonesia, que aceptó la ayuda de decenas de países tras el mismo tsunami.",
+    "note": "Esto mide la no injerencia. Quien apoya la ayuda humanitaria voluntaria pero se opone a la injerencia gubernamental está de acuerdo."
+  },
+  {
+    "id": "intervencao_14",
+    "agree": "El país está dispuesto a usar la fuerza militar para asegurar sus intereses en la región.",
+    "disagree": "El país no usa la fuerza militar para asegurar sus intereses en la región.",
+    "agreeExample": "Australia, que lideró la fuerza internacional en Timor Oriental en 1999.",
+    "disagreeExample": "Brasil, que no libra una guerra con sus vecinos desde 1870."
+  },
+  {
+    "id": "intervencao_15",
+    "agree": "El país no impone sanciones a otros países solo porque desaprueba a sus gobiernos.",
+    "disagree": "El país puede imponer sanciones a países cuyos gobiernos desaprueba, por ejemplo por violaciones de derechos humanos.",
+    "agreeExample": "Brasil, que aplica sanciones solo cuando las decide el Consejo de Seguridad de la ONU.",
+    "disagreeExample": "Unión Europea, que sanciona a funcionarios por abusos de derechos humanos mediante un régimen global creado en 2020.",
+    "note": "Quien apoya sancionar a las dictaduras por razones humanitarias está en desacuerdo. Quien rechaza las sanciones en defensa del libre comercio está de acuerdo."
+  },
+  {
+    "id": "intervencao_16",
+    "agree": "Ningún tratado internacional puede estar por encima del interés nacional, y el país puede ignorarlo si hace falta.",
+    "disagree": "Un tratado internacional puede pesar más que el interés nacional del momento.",
+    "agreeExample": "Estados Unidos, que se retiró del Acuerdo de París sobre el clima en 2017, alegando su economía.",
+    "disagreeExample": "Países Bajos, cuya Constitución permite que los tratados prevalezcan sobre las leyes neerlandesas que los contradigan.",
+    "note": "Quien desconfía tanto de los tratados como de los intereses del Estado, y pone los derechos individuales por encima de ambos, está entre los dos lados: Neutral es posible."
+  },
+  {
+    "id": "intervencao_17",
+    "agree": "El país se mantiene neutral en las guerras de otros países, incluso cuando sus aliados le piden tomar partido.",
+    "disagree": "El país toma partido en las guerras cuando sus aliados se lo piden.",
+    "agreeExample": "Suiza, que se negó a permitir que Alemania reexportara a Ucrania munición fabricada en Suiza.",
+    "disagreeExample": "Suecia, que puso fin a dos siglos de no alineamiento militar al unirse a la OTAN en 2024."
+  },
+  {
+    "id": "intervencao_18",
+    "agree": "Defender los intereses nacionales es lo que guía las acciones del país en el exterior, por encima de otras consideraciones.",
+    "disagree": "El país actúa en el exterior guiado por otros valores, como los derechos humanos o la cooperación, y no solo por el interés nacional.",
+    "agreeExample": "Reino Unido, donde Lord Palmerston dijo en 1848 que las naciones no tienen aliados permanentes, solo intereses permanentes.",
+    "disagreeExample": "Suecia, que adoptó una política exterior feminista en 2014."
+  },
+  {
+    "id": "intervencao_19",
+    "agree": "El país no mantiene bases militares en otros países.",
+    "disagree": "El país puede mantener bases militares en otros países.",
+    "agreeExample": "Nueva Zelanda, que retiró en 1989 su batallón de su base en Singapur.",
+    "disagreeExample": "Francia, que mantiene bases en Yibuti y en los Emiratos Árabes Unidos."
+  },
+  {
+    "id": "intervencao_20",
+    "agree": "El país presiona a los gobiernos vecinos que amenazan a sus ciudadanos que viven allí.",
+    "disagree": "El país no presiona a los gobiernos vecinos, aunque amenacen a sus ciudadanos.",
+    "agreeExample": "Hungría, que bloqueó desde 2017 las reuniones de la Comisión OTAN-Ucrania por una ley ucraniana sobre el idioma que afecta a la minoría húngara.",
+    "disagreeExample": "México, cuya Constitución prohíbe intervenir en los asuntos de otros países.",
+    "note": "La pregunta trata de presionar para proteger a los propios ciudadanos del país. Quien protege los derechos de cualquier persona, y no solo de los compatriotas, debe pensar solo en el caso de los ciudadanos del país."
+  },
+  {
+    "id": "economia_01",
+    "agree": "Una ruptura revolucionaria es aceptable para quitar el poder económico a unos pocos y redistribuirlo.",
+    "disagree": "El poder económico no debería redistribuirse mediante una revolución, ya sea porque se prefieren las reformas legales o porque no se quiere la redistribución.",
+    "agreeExample": "México, cuya revolución de 1910 llevó a la reforma agraria incluida en su Constitución de 1917.",
+    "disagreeExample": "Brasil, que redistribuye ingresos mediante Bolsa Família, creado por ley en 2004.",
+    "note": "La pregunta combina redistribución y revolución. Quien quiere redistribuir por vías legales debe pensar solo en la redistribución."
+  },
+  {
+    "id": "economia_02",
+    "agree": "Donde hay competencia, como en el transporte o las telecomunicaciones, las empresas privadas prestan el servicio en lugar del Estado.",
+    "disagree": "Estos servicios permanecen en manos del Estado, incluso cuando las empresas podrían competir.",
+    "agreeExample": "Reino Unido, que privatizó British Telecom en 1984 y British Gas en 1986.",
+    "disagreeExample": "Uruguay, donde la estatal Antel aún tiene el monopolio de la telefonía fija.",
+    "note": "La pregunta compara al Estado con las empresas privadas. Quien quiere que la comunidad o los propios trabajadores administren el servicio, sin Estado ni empresa, puede responder Neutral."
+  },
+  {
+    "id": "economia_03",
+    "agree": "Las empresas de sectores vitales, como el petróleo, la energía y las telecomunicaciones, permanecen bajo control del Estado.",
+    "disagree": "Las empresas de esos sectores pueden ser privadas, como cualquier otra.",
+    "agreeExample": "Noruega, cuyo Estado es dueño de cerca de dos tercios de la petrolera Equinor.",
+    "disagreeExample": "Reino Unido, que vendió sus últimas acciones de BP en 1987.",
+    "note": "Esto mide el control público de las empresas estratégicas. Quien quiere control de los trabajadores o de la comunidad, y no del Estado, debe pensar solo en si deben quedar fuera de manos de dueños privados."
+  },
+  {
+    "id": "economia_04",
+    "agree": "Los hospitales y aseguradoras privados prestan la mayor parte de la atención, sin que el Estado intervenga en la prestación.",
+    "disagree": "La mayor parte de la atención de salud la presta el Estado, como en un servicio nacional de salud.",
+    "agreeExample": "Estados Unidos, donde la mayoría de las personas obtiene su seguro de salud a través de empleadores privados.",
+    "disagreeExample": "Reino Unido, cuyo Servicio Nacional de Salud presta la mayor parte de la atención de forma gratuita en el punto de uso.",
+    "note": "La pregunta compara al Estado con las empresas privadas. Quien quiere que la comunidad o los propios trabajadores administren el servicio, sin Estado ni empresa, puede responder Neutral."
+  },
+  {
+    "id": "economia_05",
+    "agree": "Las grandes empresas pertenecen a sus propios trabajadores, no a accionistas ni a dueños privados.",
+    "disagree": "Las grandes empresas siguen perteneciendo a dueños privados y accionistas.",
+    "agreeExample": "País Vasco, sede de Mondragón, una federación de cooperativas de propiedad de sus trabajadores.",
+    "disagreeExample": "Alemania, donde los trabajadores tienen asiento en los consejos de las grandes empresas pero los accionistas son sus dueños.",
+    "note": "Aquí el dueño es el trabajador, ni el Estado ni el empresario. La pregunta lo trata como una alternativa a la propiedad privada tradicional."
+  },
+  {
+    "id": "economia_06",
+    "agree": "Las empresas privadas pueden administrar carreteras, peajes y cárceles en lugar del Estado.",
+    "disagree": "Las carreteras y las cárceles las administra solo el Estado.",
+    "agreeExample": "Chile, que entrega sus principales autopistas a concesionarios privados desde la década de 1990.",
+    "disagreeExample": "Alemania, donde las autopistas las administra la empresa estatal Autobahn.",
+    "note": "La pregunta compara al Estado con las empresas privadas. Quien quiere que la comunidad o los propios trabajadores administren el servicio, sin Estado ni empresa, puede responder Neutral."
+  },
+  {
+    "id": "economia_07",
+    "agree": "Si el mercado no atiende a los pobres, el Estado asume el servicio directamente, en lugar de limitarse a subsidiar a las empresas.",
+    "disagree": "Aunque el mercado deje fuera a los pobres, el servicio permanece en manos de empresas privadas.",
+    "agreeExample": "Bolivia, que recuperó en 2000 el servicio de agua de Cochabamba de una concesión privada.",
+    "disagreeExample": "Chile, donde empresas privadas suministran el agua urbana y el Estado subsidia las cuentas de los hogares pobres.",
+    "note": "La pregunta compara al Estado con las empresas privadas. Quien quiere que la comunidad o los propios trabajadores administren el servicio, sin Estado ni empresa, puede responder Neutral."
+  },
+  {
+    "id": "economia_08",
+    "agree": "La riqueza transmitida por herencia está protegida, y el Estado no puede redistribuirla ni gravarla con fuerza.",
+    "disagree": "La herencia puede estar sujeta a impuestos altos o a la redistribución de la riqueza.",
+    "agreeExample": "Suecia, que abolió su impuesto a la herencia en 2004.",
+    "disagreeExample": "Japón, cuya tasa máxima del impuesto a la herencia es del 55 %."
+  },
+  {
+    "id": "economia_09",
+    "agree": "La salud, la educación y el agua son derechos básicos y no deberían administrarse como negocios con fines de lucro.",
+    "disagree": "La salud, la educación y el agua pueden ser ofrecidas por empresas que buscan lucro.",
+    "agreeExample": "Uruguay, cuya Constitución dice desde un referéndum de 2004 que solo el Estado puede suministrar agua.",
+    "disagreeExample": "Brasil, donde grupos con fines de lucro que cotizan en bolsa administran muchas universidades privadas.",
+    "note": "Esto mide si estos servicios pueden generar lucro. Quien quiere que los ofrezcan cooperativas o comunidades sin fines de lucro, incluso sin el Estado, está de acuerdo."
+  },
+  {
+    "id": "economia_10",
+    "agree": "Cada persona decide si paga impuestos, y el Estado vive solo de contribuciones voluntarias.",
+    "disagree": "Los impuestos son obligatorios, cobrados por el Estado a todos.",
+    "agreeExample": "Estados Unidos bajo los Artículos de la Confederación, de 1781 a 1789, cuando el Congreso solo podía pedir dinero a los estados.",
+    "disagreeExample": "Estados Unidos desde 1789, cuya Constitución dio al Congreso el poder de cobrar impuestos.",
+    "note": "Esto mide si los impuestos son obligatorios. Quien quiere un Estado mínimo financiado aun así con impuestos está en desacuerdo."
+  },
+  {
+    "id": "economia_11",
+    "agree": "El Estado garantiza un ingreso mínimo a todo ciudadano necesitado, por ejemplo mediante una renta básica.",
+    "disagree": "El Estado no garantiza un ingreso mínimo a quienes lo necesitan.",
+    "agreeExample": "Francia, cuyo RSA garantiza un ingreso mínimo a las personas mayores de 25 años con ingresos escasos o nulos.",
+    "disagreeExample": "Estados Unidos, donde los adultos en edad de trabajar sin hijos ni discapacidad no reciben ayuda federal en efectivo.",
+    "note": "Incluso quien quiere un Estado pequeño puede estar de acuerdo, por ejemplo como reemplazo de otros programas. La pregunta mide si el Estado garantiza un ingreso."
+  },
+  {
+    "id": "economia_12",
+    "agree": "Los empleados públicos pierden la estabilidad vitalicia en el empleo, o esta se reduce, y pueden ser despedidos por mal desempeño.",
+    "disagree": "Se mantiene la estabilidad vitalicia en el empleo de los empleados públicos.",
+    "agreeExample": "Suiza, que puso fin a la titularidad vitalicia de los empleados federales en 2002.",
+    "disagreeExample": "Alemania, donde los funcionarios son nombrados de por vida."
+  },
+  {
+    "id": "economia_13",
+    "agree": "El Estado crea reglas y límites para impedir que las grandes empresas dominen el mercado.",
+    "disagree": "El Estado no limita el poder de las grandes empresas privadas.",
+    "agreeExample": "Estados Unidos, que desmembró Standard Oil en 1911.",
+    "disagreeExample": "Hong Kong, que no tuvo una ley general de competencia hasta 2015.",
+    "note": "Quien quiere limitar a las grandes empresas eliminando los privilegios que les da el Estado, y no creando reglas, debe pensar solo en si el Estado debería limitar su poder."
+  },
+  {
+    "id": "economia_14",
+    "agree": "Los programas de ayuda en efectivo tienen una duración máxima, tras la cual la persona deja de recibirlos.",
+    "disagree": "Los programas de ayuda en efectivo no tienen duración máxima y continúan mientras dure la necesidad.",
+    "agreeExample": "Estados Unidos, donde la asistencia federal en efectivo se limita a cinco años en la vida.",
+    "disagreeExample": "Alemania, donde el apoyo básico de ingresos no tiene duración máxima."
+  },
+  {
+    "id": "economia_15",
+    "agree": "Los grandes latifundios rurales se dividen y se entregan a familias sin tierra mediante una reforma agraria.",
+    "disagree": "Los grandes latifundios rurales no se redistribuyen mediante una reforma agraria.",
+    "agreeExample": "Japón, que compró tierras a los terratenientes y se las vendió a sus arrendatarios desde 1946.",
+    "disagreeExample": "Argentina, que nunca llevó a cabo una reforma agraria redistributiva."
+  },
+  {
+    "id": "economia_16",
+    "agree": "Cada trabajador negocia su salario directamente con el empleador, y ningún sindicato habla en su nombre.",
+    "disagree": "Los sindicatos negocian los salarios en nombre de los trabajadores.",
+    "agreeExample": "Nueva Zelanda, cuya Ley de Contratos de Empleo de 1991 puso fin a la afiliación sindical obligatoria y favoreció los contratos individuales.",
+    "disagreeExample": "Suecia, donde los convenios colectivos cubren a cerca del 90 % de los trabajadores.",
+    "note": "La pregunta compara la negociación individual con la colectiva. Quien apoya sindicatos libres y voluntarios, sin ninguna ley que los imponga, debe pensar solo en si los sindicatos negocian por los trabajadores."
+  },
+  {
+    "id": "economia_17",
+    "agree": "Los bancos públicos siguen financiando el desarrollo del país.",
+    "disagree": "La financiación del desarrollo queda en manos de los bancos privados, sin bancos públicos.",
+    "agreeExample": "Alemania, cuyo KfW estatal financia vivienda, energía y pequeñas empresas.",
+    "disagreeExample": "Estados Unidos, que no tiene un banco nacional de desarrollo para la inversión interna."
+  },
+  {
+    "id": "economia_18",
+    "agree": "La propiedad privada debe respetarse, aunque genere una gran desigualdad de riqueza.",
+    "disagree": "La propiedad privada puede limitarse cuando genera mucha desigualdad.",
+    "agreeExample": "Estados Unidos, cuya Quinta Enmienda exige una compensación justa cuando el Estado toma una propiedad.",
+    "disagreeExample": "Brasil, cuya Constitución dice que la propiedad debe cumplir su función social."
+  },
+  {
+    "id": "economia_19",
+    "agree": "Las empresas estatales permanecen bajo control público, aunque pudieran venderse a buen precio.",
+    "disagree": "Las empresas estatales pueden venderse a valor de mercado.",
+    "agreeExample": "Uruguay, cuyos votantes rechazaron la venta de empresas estatales en un referéndum de 1992.",
+    "disagreeExample": "Brasil, que vendió Embraer en 1994 y Vale en 1997.",
+    "note": "Esto mide si las empresas públicas deberían salir del control público. Quien quiere que pasen a los trabajadores, y no a dueños privados, puede responder Neutral."
+  },
+  {
+    "id": "economia_20",
+    "agree": "En la gestión de los servicios públicos, la prioridad es entregarlos a empresas privadas, no al Estado.",
+    "disagree": "En la gestión de los servicios públicos, la prioridad es mantenerlos en manos del Estado.",
+    "agreeExample": "Chile, cuyas reformas de 1981 entregaron las pensiones y buena parte del seguro de salud a empresas privadas.",
+    "disagreeExample": "Noruega, donde los hospitales son propiedad de fideicomisos estatales de salud desde 2002.",
+    "note": "La pregunta compara al Estado con las empresas privadas. Quien quiere que la comunidad o los propios trabajadores administren el servicio, sin Estado ni empresa, puede responder Neutral."
+  },
+  {
+    "id": "controle_01",
+    "agree": "El gobierno elabora el plan para sectores como la energía, la vivienda y la industria, fijando metas e inversiones.",
+    "disagree": "El mercado organiza estos sectores por sí solo, sin un plan del gobierno.",
+    "agreeExample": "Francia, que fijó planes nacionales quinquenales mediante una comisión de planificación creada en 1946.",
+    "disagreeExample": "Hong Kong, cuyo gobierno llamó a su política \"no intervencionismo positivo\" desde la década de 1970.",
+    "note": "La pregunta compara la planificación del gobierno con el mercado. Quien rechaza ambos, por ejemplo al preferir la coordinación voluntaria sin Estado ni mercado, puede responder Neutral."
+  },
+  {
+    "id": "controle_02",
+    "agree": "El mercado fija libremente los precios y los salarios, y el gobierno no puede topar ni fijar valores.",
+    "disagree": "El gobierno puede intervenir en los precios y los salarios, por ejemplo con topes de precios o un salario mínimo.",
+    "agreeExample": "Dinamarca, que no tiene salario mínimo legal.",
+    "disagreeExample": "Alemania, que introdujo un salario mínimo nacional en 2015.",
+    "note": "La pregunta compara el mercado con la decisión del gobierno. Quien rechaza ambos, por ejemplo al preferir la coordinación voluntaria sin Estado ni mercado, puede responder Neutral."
+  },
+  {
+    "id": "controle_03",
+    "agree": "El gobierno elegido manda sobre el banco central y puede dirigir la política de tasas de interés y de cambio.",
+    "disagree": "El banco central actúa con total independencia, sin recibir órdenes del gobierno.",
+    "agreeExample": "Reino Unido antes de 1997, cuando el Tesoro fijaba las tasas de interés.",
+    "disagreeExample": "Reino Unido desde 1997, donde el Banco de Inglaterra fija las tasas por sí solo.",
+    "note": "La pregunta mide si el gobierno elegido manda sobre el banco central. Quien quiere abolirlo para dejar el dinero al mercado (anarcocapitalistas) debe pensar solo en quién lo manda mientras exista, y está en desacuerdo. Quien quiere abolirlo porque rechaza tanto al Estado como al mercado, como los anarquistas, puede responder Neutral."
+  },
+  {
+    "id": "controle_04",
+    "agree": "Las empresas y los trabajadores fijan las condiciones de trabajo entre ellos, y el gobierno interfiere lo menos posible.",
+    "disagree": "El gobierno establece reglas para las relaciones laborales, como la jornada y los derechos.",
+    "agreeExample": "Estados Unidos, donde la mayoría de los empleos son de libre despido.",
+    "disagreeExample": "Francia, cuyo código laboral fija una semana laboral legal de 35 horas.",
+    "note": "La pregunta compara al gobierno con el mercado. Quien rechaza ambos, por ejemplo al preferir la coordinación voluntaria entre los propios trabajadores, puede responder Neutral."
+  },
+  {
+    "id": "controle_05",
+    "agree": "Las personas con grandes fortunas pagan proporcionalmente más impuestos, para financiar programas públicos.",
+    "disagree": "Las grandes fortunas no pagan proporcionalmente más impuestos que el resto.",
+    "agreeExample": "Noruega, que cobra un impuesto anual sobre el patrimonio neto.",
+    "disagreeExample": "Suecia, que abolió su impuesto al patrimonio en 2007."
+  },
+  {
+    "id": "controle_06",
+    "agree": "Se recortan los impuestos para estimular el crecimiento económico, aunque el Estado recaude menos.",
+    "disagree": "Los impuestos se mantienen o suben, aunque el crecimiento sea menor.",
+    "agreeExample": "Irlanda, que redujo su impuesto de sociedades al 12,5 % en 2003.",
+    "disagreeExample": "Dinamarca, cuya recaudación tributaria es de las más altas de la OCDE, por encima del 40 % del PIB."
+  },
+  {
+    "id": "controle_07",
+    "agree": "El Estado usa dinero público para apoyar sectores industriales considerados estratégicos, como los semiconductores o la defensa.",
+    "disagree": "El Estado no subsidia industrias, sean estratégicas o no.",
+    "agreeExample": "Estados Unidos, cuya Ley CHIPS de 2022 destinó unos 52.000 millones de dólares a la fabricación de chips.",
+    "disagreeExample": "Nueva Zelanda, que eliminó la mayoría de los subsidios agrícolas en 1984.",
+    "note": "Esto mide la política industrial. Quien rechaza los subsidios a cualquier empresa, en defensa del libre mercado, está en desacuerdo."
+  },
+  {
+    "id": "controle_08",
+    "agree": "Cuando entran en conflicto, proteger los empleos va antes que subir el salario mínimo.",
+    "disagree": "Cuando entran en conflicto, subir el salario mínimo va antes que proteger los empleos.",
+    "agreeExample": "Suiza, cuyos votantes rechazaron un salario mínimo nacional en 2014.",
+    "disagreeExample": "Alemania, que subió su salario mínimo a 12 euros por hora en 2022.",
+    "note": "Esto mide la prioridad en un conflicto, no si debería existir un salario mínimo. Quien piensa que no hay conflicto puede responder Neutral."
+  },
+  {
+    "id": "controle_09",
+    "agree": "En crisis graves, el gobierno puede congelar los alquileres para proteger a los inquilinos.",
+    "disagree": "El gobierno no congela los alquileres, ni siquiera en crisis graves.",
+    "agreeExample": "España, que limitó al 2 % los aumentos anuales de alquiler en 2022, durante el repunte de la inflación.",
+    "disagreeExample": "Alemania, cuyo Tribunal Constitucional anuló el congelamiento de alquileres de Berlín en 2021."
+  },
+  {
+    "id": "controle_10",
+    "agree": "El gobierno no congela los precios, ni siquiera cuando la inflación es muy alta.",
+    "disagree": "El gobierno puede congelar los precios para contener una inflación alta.",
+    "agreeExample": "Alemania Occidental, cuya reforma monetaria de 1948 eliminó la mayoría de los controles de precios.",
+    "disagreeExample": "Estados Unidos, cuyo presidente congeló salarios y precios durante 90 días en 1971."
+  },
+  {
+    "id": "controle_11",
+    "agree": "El gobierno elige empresas nacionales para que crezcan y las respalda con crédito e incentivos en sectores estratégicos.",
+    "disagree": "El gobierno no elige empresas a las que apoyar.",
+    "agreeExample": "Japón, cuyo ministerio de comercio respaldó industrias elegidas en las décadas de 1950 y 1960.",
+    "disagreeExample": "Unión Europea, cuyo tratado prohíbe las ayudas estatales que favorecen a determinadas empresas, con excepciones.",
+    "note": "Esto mide si el gobierno debería elegir ganadores. Quien rechaza tanto el favoritismo como el mercado, y quiere control de los trabajadores, puede responder Neutral."
+  },
+  {
+    "id": "controle_12",
+    "agree": "Las criptomonedas como Bitcoin pueden circular y competir libremente con la moneda del gobierno.",
+    "disagree": "La moneda del gobierno es la única reconocida.",
+    "agreeExample": "El Salvador, que hizo del bitcoin moneda de curso legal en 2021.",
+    "disagreeExample": "Turquía, cuyo banco central prohibió en 2021 pagar bienes con criptomonedas.",
+    "note": "La pregunta mide si el gobierno debería tener el monopolio del dinero, no si piensas que las criptomonedas tienen valor."
+  },
+  {
+    "id": "controle_13",
+    "agree": "Una economía en la que el Estado planifica la producción y los precios es mejor que una de libre mercado.",
+    "disagree": "Una economía de libre mercado es mejor que una planificada por el Estado.",
+    "agreeExample": "India, cuya Comisión de Planificación fijó planes quinquenales desde 1951.",
+    "disagreeExample": "India, que eliminó la mayor parte de las licencias industriales en 1991.",
+    "note": "La pregunta compara el mercado con la decisión del gobierno. Quien rechaza ambos, por ejemplo al preferir la coordinación voluntaria sin Estado ni mercado, puede responder Neutral."
+  },
+  {
+    "id": "controle_14",
+    "agree": "El Estado evita crear nuevas reglas sobre la actividad económica, incluso cuando se pide regulación.",
+    "disagree": "El Estado puede crear nuevas reglas sobre la actividad económica cuando lo considera necesario.",
+    "agreeExample": "Estados Unidos, cuya orden ejecutiva de 2017 exigía derogar dos reglas por cada nueva.",
+    "disagreeExample": "Unión Europea, que adoptó la Ley de IA en 2024."
+  },
+  {
+    "id": "controle_15",
+    "agree": "En una recesión, el gobierno gasta más para reactivar la economía, aunque suba la deuda pública.",
+    "disagree": "En una recesión, el gobierno evita gastar más, para no aumentar la deuda.",
+    "agreeExample": "Estados Unidos, que aprobó un estímulo de 787.000 millones de dólares en 2009.",
+    "disagreeExample": "Reino Unido, que recortó el gasto público desde 2010, tras la crisis financiera."
+  },
+  {
+    "id": "controle_16",
+    "agree": "El banco central fija la tasa de interés por sí solo, sin necesitar la aprobación del gobierno.",
+    "disagree": "El gobierno participa en la tasa de interés, o tiene la última palabra sobre ella.",
+    "agreeExample": "Banco Central Europeo, que por tratado no recibe instrucciones de los gobiernos.",
+    "disagreeExample": "Nueva Zelanda antes de 1989, cuando el gobierno dirigía la política monetaria.",
+    "note": "La pregunta compara dos modelos de banco central: independiente o subordinado al gobierno. Quien quiere abolirlo para dejar el dinero al mercado (anarcocapitalistas) rechaza el control gubernamental de las tasas de interés y está de acuerdo. Quien quiere abolirlo porque rechaza tanto al Estado como al mercado, como los anarquistas, puede responder Neutral."
+  },
+  {
+    "id": "controle_17",
+    "agree": "El gobierno controla el tipo de cambio, por ejemplo comprando o vendiendo divisas, para proteger la economía nacional.",
+    "disagree": "El mercado fija el tipo de cambio, sin control del gobierno.",
+    "agreeExample": "Singapur, cuyo banco central gestiona la moneda frente a una canasta de otras.",
+    "disagreeExample": "Australia, que deja flotar su dólar desde 1983."
+  },
+  {
+    "id": "controle_18",
+    "agree": "El banco central se abole, y el dinero y las tasas de interés los fija el mercado.",
+    "disagree": "El banco central sigue existiendo.",
+    "agreeExample": "Panamá, que no tiene banco central y usa el dólar estadounidense.",
+    "disagreeExample": "Suecia, cuyo Riksbank, fundado en 1668, es el banco central más antiguo aún en funcionamiento.",
+    "note": "Estar en desacuerdo aquí significa aceptar que el banco central exista, no, por sí solo, querer que el gobierno controle las tasas de interés. Estar de acuerdo es la posición de quienes quieren el dinero y las tasas de interés en manos del mercado (anarcocapitalistas). Quien quiere abolirlo porque rechaza tanto al Estado como al mercado, como los anarquistas, no acepta entregarlo todo al mercado y puede responder Neutral."
+  },
+  {
+    "id": "controle_19",
+    "agree": "Un salario mínimo fijado por ley se aplica a todos, en lugar de que cada persona negocie libremente.",
+    "disagree": "Los salarios se negocian libremente, sin mínimo legal.",
+    "agreeExample": "Reino Unido, que introdujo un salario mínimo nacional en 1999.",
+    "disagreeExample": "Suecia, que no tiene salario mínimo legal y deja el pago a sindicatos y empleadores.",
+    "note": "Esto mide si existe un piso legal. Quienes quieren que los propios trabajadores impongan un mínimo mediante sindicatos o huelgas, sin una ley, están más cerca de estar en desacuerdo."
+  },
+  {
+    "id": "controle_20",
+    "agree": "Las personas con dinero pueden enviarlo al extranjero sin pedir permiso al gobierno.",
+    "disagree": "El gobierno puede exigir un permiso o limitar la salida de dinero del país.",
+    "agreeExample": "Reino Unido, que abolió los controles de cambio en 1979.",
+    "disagreeExample": "Islandia, que mantuvo controles de capital de 2008 a 2017."
+  },
+  {
+    "id": "comercio_01",
+    "agree": "El gobierno cobra aranceles a los bienes importados para proteger la industria nacional cuando sea necesario.",
+    "disagree": "La industria nacional no se protege con aranceles y el comercio se mantiene abierto.",
+    "agreeExample": "Estados Unidos, que impuso aranceles del 25% a las importaciones de acero en 2018.",
+    "disagreeExample": "Singapur, que casi no cobra aranceles de importación.",
+    "note": "Esto mide el uso de aranceles para proteger la industria. Quienes defienden el libre comercio unilateral, sin acuerdos ni aranceles, están en desacuerdo."
+  },
+  {
+    "id": "comercio_02",
+    "agree": "Los aranceles de importación bajan a casi cero, aunque cierren algunas fábricas nacionales.",
+    "disagree": "Se mantienen los aranceles para evitar que quiebren las fábricas nacionales.",
+    "agreeExample": "Australia, que redujo los aranceles a los autos importados del 57,5% en 1988 al 5% en 2010.",
+    "disagreeExample": "Brasil, que cobra un arancel del 35% a los autos importados."
+  },
+  {
+    "id": "comercio_03",
+    "agree": "El país limita las importaciones para proteger los empleos industriales, aunque los productos se encarezcan.",
+    "disagree": "Las importaciones no se limitan, aunque se pierdan algunos empleos industriales.",
+    "agreeExample": "Estados Unidos, que logró que Japón limitara sus exportaciones de autos desde 1981.",
+    "disagreeExample": "Nueva Zelanda, que eliminó gradualmente las licencias de importación entre 1984 y 1992."
+  },
+  {
+    "id": "comercio_04",
+    "agree": "El país busca acuerdos de libre comercio con otros países para reducir los aranceles entre ellos.",
+    "disagree": "El país no busca acuerdos de libre comercio.",
+    "agreeExample": "Chile, que tiene acuerdos comerciales con más de 60 economías.",
+    "disagreeExample": "India, que abandonó las negociaciones comerciales del RCEP en 2019.",
+    "note": "La pregunta mide la apertura del comercio entre países. Quienes apoyan la cooperación internacional pero se oponen al libre mercado global deben pensar solo en la apertura comercial. Quienes prefieren abrir el comercio por su cuenta, sin tratados, están de acuerdo."
+  },
+  {
+    "id": "comercio_05",
+    "agree": "El país produce internamente todo lo que consume, aunque eso cueste mucho más.",
+    "disagree": "El país compra en el exterior lo que es más barato que producir en casa.",
+    "agreeExample": "Japón de 1639 a 1853, cerrado a casi todo el comercio exterior.",
+    "disagreeExample": "Japón hoy, que importa más del 60% de las calorías de su alimentación."
+  },
+  {
+    "id": "comercio_06",
+    "agree": "Los productos extranjeros entran al país con pocas barreras, como aranceles y cuotas.",
+    "disagree": "Los productos extranjeros enfrentan barreras económicas para entrar al país.",
+    "agreeExample": "Hong Kong, un puerto libre sin aranceles a las importaciones.",
+    "disagreeExample": "India, cuyo arancel promedio aplicado supera el 15%."
+  },
+  {
+    "id": "comercio_07",
+    "agree": "El gobierno restringe los bienes importados que amenazan la industria y los empleos locales.",
+    "disagree": "El gobierno no limita las importaciones, aunque amenacen la industria y los empleos locales.",
+    "agreeExample": "Estados Unidos, que impuso aranceles de salvaguardia a las lavadoras y los paneles solares importados en 2018.",
+    "disagreeExample": "Chile, que cobra el mismo arancel del 6% a casi todas las importaciones."
+  },
+  {
+    "id": "comercio_08",
+    "agree": "Existe un único mercado global, en el que los bienes y el capital circulan sin fronteras económicas.",
+    "disagree": "Las fronteras económicas entre países siguen existiendo.",
+    "agreeExample": "Unión Europea, cuyo mercado único permite la libre circulación de bienes, servicios, capital y personas entre sus miembros.",
+    "disagreeExample": "Reino Unido, que salió del mercado único de la UE en 2021.",
+    "note": "La pregunta mide la integración económica entre países, no la inmigración. Quienes apoyan la cooperación internacional pero se oponen al libre mercado global deben pensar solo en la apertura comercial."
+  },
+  {
+    "id": "comercio_09",
+    "agree": "Las empresas extranjeras no pueden comprar empresas consideradas estratégicas para el país, como las de energía, defensa o telecomunicaciones.",
+    "disagree": "Las empresas extranjeras pueden comprar las empresas estratégicas del país, como cualquier otra.",
+    "agreeExample": "Canadá, que bloqueó la venta de la constructora Aecon a una empresa estatal china en 2018.",
+    "disagreeExample": "Reino Unido, que permitió que la estatal francesa EDF comprara las centrales nucleares de British Energy en 2009."
+  },
+  {
+    "id": "comercio_10",
+    "agree": "El país amplía sus lazos comerciales, con más acuerdos y alianzas con otros países.",
+    "disagree": "El país no profundiza la integración comercial con otros países.",
+    "agreeExample": "Vietnam, que tiene acuerdos comerciales con la UE y con los miembros del CPTPP.",
+    "disagreeExample": "Estados Unidos, que se retiró del TPP en 2017."
+  },
+  {
+    "id": "comercio_11",
+    "agree": "La producción nacional de alimentos tiene prioridad sobre las importaciones más baratas, para asegurar el abastecimiento.",
+    "disagree": "Los alimentos importados más baratos tienen prioridad sobre la producción nacional.",
+    "agreeExample": "Suiza, cuyos votantes incorporaron la seguridad alimentaria a la Constitución en 2017.",
+    "disagreeExample": "Singapur, que importa más del 90% de sus alimentos."
+  },
+  {
+    "id": "comercio_12",
+    "agree": "El país facilita la entrada de inversión extranjera, con pocas reglas y restricciones.",
+    "disagree": "El país restringe o no facilita la entrada de inversión extranjera.",
+    "agreeExample": "Irlanda, cuya agencia IDA atrae empresas extranjeras desde 1949.",
+    "disagreeExample": "Canadá, que revisa las grandes adquisiciones extranjeras para comprobar su \"beneficio neto\" para el país.",
+    "note": "La pregunta mide la apertura al capital externo. Quienes apoyan la cooperación internacional pero desconfían del capital extranjero deben pensar solo en esa apertura."
+  },
+  {
+    "id": "comercio_13",
+    "agree": "Cuando los gobiernos y las empresas estatales compran bienes y servicios, prefieren a las empresas nacionales.",
+    "disagree": "Los gobiernos y las empresas estatales compran a quien ofrezca el mejor precio o la mejor calidad, sin preferencia por las empresas nacionales.",
+    "agreeExample": "Estados Unidos, cuya Buy American Act de 1933 favorece los productos estadounidenses en las compras federales.",
+    "disagreeExample": "Unión Europea, cuyas normas abren las licitaciones públicas a oferentes de cualquier Estado miembro."
+  },
+  {
+    "id": "comercio_14",
+    "agree": "El país amplía el comercio con otros, aunque eso aumente su dependencia económica de ellos.",
+    "disagree": "El país no amplía el comercio si eso aumenta su dependencia económica.",
+    "agreeExample": "Australia, que envía cerca de un tercio de sus exportaciones de bienes a China.",
+    "disagreeExample": "Japón, que en 2020 pagó a empresas para sacar su producción de China."
+  },
+  {
+    "id": "comercio_15",
+    "agree": "Los autos eléctricos baratos importados pagan aranceles adicionales, para proteger las fábricas del país.",
+    "disagree": "Los autos eléctricos baratos importados no pagan aranceles adicionales.",
+    "agreeExample": "Unión Europea, que impuso aranceles adicionales de hasta el 35,3% a los autos eléctricos chinos en 2024.",
+    "disagreeExample": "Noruega, que no les cobra aranceles.",
+    "note": "La pregunta mide si los aranceles deben proteger la industria local, no lo que piensas de ningún país en particular."
+  },
+  {
+    "id": "comercio_16",
+    "agree": "Se reducen los aranceles de importación, aunque el gobierno recaude menos.",
+    "disagree": "Se mantienen los aranceles de importación para que el gobierno siga recaudando.",
+    "agreeExample": "Canadá, que eliminó los aranceles a 1.541 artículos de maquinaria e insumos manufactureros en 2010.",
+    "disagreeExample": "Bahamas, que no tiene impuesto sobre la renta y obtiene gran parte de sus ingresos de los derechos de importación.",
+    "note": "Quienes quieren reducir los aranceles para achicar el Estado están de acuerdo. Quienes quieren aranceles altos para proteger la industria están en desacuerdo."
+  },
+  {
+    "id": "comercio_17",
+    "agree": "Los sectores esenciales, como los medicamentos y los chips, se protegen de la competencia extranjera mediante normas o subsidios.",
+    "disagree": "Sectores como los medicamentos y los chips enfrentan la competencia extranjera, como cualquier otro.",
+    "agreeExample": "India, que lanzó subsidios en 2020 para fabricar los insumos de medicamentos que compraba a China.",
+    "disagreeExample": "India antes de 2020, que compraba a China cerca del 70% de sus insumos de medicamentos."
+  },
+  {
+    "id": "comercio_18",
+    "agree": "Las multinacionales operan libremente en el país, aunque superen a las empresas locales.",
+    "disagree": "Las multinacionales enfrentan restricciones para operar en el país, para proteger a las empresas locales.",
+    "agreeExample": "México, donde la filial local de Walmart es la mayor cadena minorista.",
+    "disagreeExample": "India, que limita al 51% la participación extranjera en las cadenas de supermercados y exige que el 30% de los productos provenga de pequeñas empresas indias.",
+    "note": "La pregunta mide la apertura del comercio entre países. Quienes apoyan la cooperación internacional pero se oponen al libre mercado global deben pensar solo en la apertura comercial."
+  },
+  {
+    "id": "comercio_19",
+    "agree": "Mantener la soberanía económica del país es mejor que tener precios bajos en los supermercados.",
+    "disagree": "Tener precios bajos en los supermercados es mejor que mantener la soberanía económica.",
+    "agreeExample": "Japón, que mantiene aranceles altos al arroz importado para proteger a sus agricultores.",
+    "disagreeExample": "Reino Unido, que derogó las Leyes del Grano en 1846 para abaratar el pan."
+  },
+  {
+    "id": "comercio_20",
+    "agree": "La economía global se integra más, mediante más comercio entre países.",
+    "disagree": "No se profundiza la integración económica global.",
+    "agreeExample": "Los miembros del RCEP, el mayor bloque comercial, en vigor desde 2022.",
+    "disagreeExample": "Estados Unidos, que subió los aranceles a la mayoría de sus socios comerciales en 2025.",
+    "note": "La pregunta mide la apertura del comercio entre países. Quienes apoyan la cooperación internacional pero se oponen al libre mercado global deben pensar solo en la apertura comercial."
+  },
+  {
+    "id": "religiao_01",
+    "agree": "La fe es un asunto personal y no debería influir en las leyes ni en las políticas públicas.",
+    "disagree": "La religión puede influir en las leyes y en las políticas públicas.",
+    "agreeExample": "Francia, cuya ley de 1905 separa las iglesias del Estado.",
+    "disagreeExample": "Reino Unido, donde 26 obispos de la Iglesia de Inglaterra tienen escaño en la Cámara de los Lores.",
+    "note": "La pregunta mide el papel de la religión en las políticas públicas, no si tienes fe. Una persona religiosa que quiere un Estado neutral está de acuerdo."
+  },
+  {
+    "id": "religiao_02",
+    "agree": "Mis creencias religiosas guían mis decisiones morales y políticas.",
+    "disagree": "Mis decisiones morales y políticas no se guían por la religión.",
+    "agreeExample": "Indonesia, donde el 96% dice que creer en Dios es necesario para ser moral (Pew, 2019).",
+    "disagreeExample": "Francia, donde lo dice el 15%."
+  },
+  {
+    "id": "religiao_03",
+    "agree": "Las leyes son neutrales y no siguen los valores de ninguna religión.",
+    "disagree": "Las leyes pueden seguir valores religiosos.",
+    "agreeExample": "Estados Unidos, cuya Primera Enmienda prohíbe toda ley que establezca una religión.",
+    "disagreeExample": "Costa Rica, cuya Constitución establece el catolicismo como religión del Estado.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_04",
+    "agree": "Las leyes del país reflejan los valores de la religión mayoritaria, como en los feriados, las costumbres y las normas morales.",
+    "disagree": "Las leyes del país no reflejan los valores de la religión mayoritaria.",
+    "agreeExample": "Malta, cuya Constitución da a la Iglesia católica el deber y el derecho de enseñar qué principios son correctos e incorrectos.",
+    "disagreeExample": "India, cuya Constitución la declara un Estado laico.",
+    "note": "Incluso quienes no tienen fe pueden estar de acuerdo, si ven la religión como parte de la tradición y la identidad del país."
+  },
+  {
+    "id": "religiao_05",
+    "agree": "Las iglesias y los templos pagan impuestos como cualquier otra organización, sin exención especial.",
+    "disagree": "Las iglesias y los templos reciben un trato tributario diferente, como la exención de impuestos.",
+    "agreeExample": "Italia, que desde 2012 cobra el impuesto a la propiedad a los edificios de iglesias usados con fines comerciales.",
+    "disagreeExample": "Brasil, cuya Constitución exime de impuestos a los lugares de culto.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal. Quienes piensan que nadie debería pagar ciertos impuestos, sean iglesias o no, deben pensar solo en si las iglesias reciben un trato especial."
+  },
+  {
+    "id": "religiao_06",
+    "agree": "La práctica religiosa debería fomentarse en la vida comunitaria, por ejemplo mediante cultos, fiestas y obras sociales.",
+    "disagree": "La práctica religiosa no es algo que la comunidad deba fomentar.",
+    "agreeExample": "Estados Unidos, que creó en 2001 una oficina en la Casa Blanca para trabajar con organizaciones benéficas de base religiosa.",
+    "disagreeExample": "Japón, cuya Constitución prohíbe al Estado toda actividad religiosa.",
+    "note": "Incluso quienes no tienen fe pueden estar de acuerdo, si ven la religión como parte de la tradición y la identidad del país."
+  },
+  {
+    "id": "religiao_07",
+    "agree": "Las escuelas, los tribunales y otros edificios públicos no exhiben símbolos religiosos, como los crucifijos.",
+    "disagree": "Los edificios públicos pueden exhibir símbolos religiosos.",
+    "agreeExample": "Alemania, cuyo Tribunal Constitucional dictaminó en 1995 que Baviera no podía exigir crucifijos en las aulas.",
+    "disagreeExample": "Italia, donde el Tribunal Europeo de Derechos Humanos permitió los crucifijos en las aulas en 2011.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_08",
+    "agree": "El Estado se declara oficialmente vinculado a una religión, como en una religión de Estado.",
+    "disagree": "El Estado no adopta oficialmente ninguna religión.",
+    "agreeExample": "Dinamarca, cuya Constitución establece a la Iglesia evangélica luterana como iglesia nacional.",
+    "disagreeExample": "Suecia, cuya iglesia dejó de ser iglesia estatal en 2000.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar en desacuerdo."
+  },
+  {
+    "id": "religiao_09",
+    "agree": "Las decisiones políticas y las leyes se toman con argumentos que no dependen de creencias religiosas.",
+    "disagree": "Las decisiones políticas pueden basarse en creencias religiosas.",
+    "agreeExample": "India, cuya Corte Suprema dictaminó en 1994 que el laicismo forma parte de la estructura básica de la Constitución.",
+    "disagreeExample": "Zambia, cuya Constitución la declara una nación cristiana.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_10",
+    "agree": "La comunidad transmite las tradiciones religiosas a las nuevas generaciones, en la familia, en la escuela y en los ritos.",
+    "disagree": "No es necesario transmitir las tradiciones religiosas a las nuevas generaciones.",
+    "agreeExample": "Irlanda, donde la Iglesia católica gestiona el 88% de las escuelas primarias.",
+    "disagreeExample": "Estados Unidos, donde las escuelas públicas no pueden dirigir oraciones (Corte Suprema, 1962).",
+    "note": "Incluso quienes no tienen fe pueden estar de acuerdo, si ven la religión como parte de la tradición y la identidad del país."
+  },
+  {
+    "id": "religiao_11",
+    "agree": "Una sociedad sin religión sería mejor que una sociedad religiosa.",
+    "disagree": "Una sociedad religiosa sería mejor que una sociedad sin religión.",
+    "agreeExample": "República Checa, donde el 47,8% declaró no tener religión en el censo de 2021.",
+    "disagreeExample": "Polonia, donde el 71,3% se declaró católico en el censo de 2021.",
+    "note": "La pregunta mide qué tipo de sociedad prefieres, no tu creencia personal. Quienes son religiosos pero piensan que cada uno debe elegir pueden responder Neutral."
+  },
+  {
+    "id": "religiao_12",
+    "agree": "La sociedad debería dar más espacio a la fe en Dios, en la vida pública y privada.",
+    "disagree": "La sociedad no necesita dar más espacio a la fe en Dios.",
+    "agreeExample": "Hungría, cuya Constitución de 2011 reconoce el papel del cristianismo en la preservación de la nación.",
+    "disagreeExample": "México, cuya Constitución prohíbe al clero ocupar cargos públicos.",
+    "note": "Incluso quienes no tienen fe pueden estar de acuerdo, si ven la religión como parte de la tradición y la identidad del país."
+  },
+  {
+    "id": "religiao_13",
+    "agree": "Las fiestas religiosas, como la Navidad y la Pascua, no deberían ser feriados nacionales.",
+    "disagree": "Las fiestas religiosas pueden ser feriados nacionales.",
+    "agreeExample": "Uruguay, cuya ley de 1919 rebautizó la Navidad como \"Día de la Familia\" y la Semana Santa como \"Semana de Turismo\".",
+    "disagreeExample": "Brasil, donde el 12 de octubre, día de Nossa Senhora Aparecida, es feriado nacional.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_14",
+    "agree": "El matrimonio se reconoce como una institución religiosa, y el reconocimiento del Estado proviene de la religión.",
+    "disagree": "El matrimonio es un contrato civil, sin carácter religioso.",
+    "agreeExample": "Israel, donde los matrimonios solo los celebran autoridades religiosas.",
+    "disagreeExample": "Países Bajos, donde una boda religiosa no puede preceder a la civil.",
+    "note": "Quienes quieren al Estado fuera del matrimonio, dejándolo a las religiones o a contratos privados, pueden estar de acuerdo."
+  },
+  {
+    "id": "religiao_15",
+    "agree": "La palabra 'Dios' no aparece en la constitución.",
+    "disagree": "La palabra 'Dios' puede aparecer en la constitución.",
+    "agreeExample": "Portugal, cuya Constitución de 1976 no menciona a Dios.",
+    "disagreeExample": "Brasil, cuya Constitución de 1988 invoca la protección de Dios en su preámbulo.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_16",
+    "agree": "Busco el sentido de mi vida en la fe religiosa.",
+    "disagree": "Busco el sentido de mi vida fuera de la fe religiosa.",
+    "agreeExample": "Estados Unidos, donde el 15% nombró la fe o a Dios como lo que da sentido a la vida (Pew, 2021).",
+    "disagreeExample": "Japón, donde lo hizo el 1% o menos.",
+    "note": "Esta es una pregunta personal: mide cuánto es la fe tu fuente de sentido."
+  },
+  {
+    "id": "religiao_17",
+    "agree": "Los niños pequeños no reciben instrucción religiosa, ni en la escuela ni en actividades públicas.",
+    "disagree": "La religión puede formar parte de la educación de los niños pequeños.",
+    "agreeExample": "Francia, cuyas escuelas públicas no imparten instrucción religiosa, salvo en Alsacia-Mosela.",
+    "disagreeExample": "Austria, donde las escuelas públicas enseñan religión a los alumnos de confesiones reconocidas, salvo que los padres la rechacen.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal. Quienes piensan que la religión es asunto de la familia y no de la escuela pueden estar de acuerdo."
+  },
+  {
+    "id": "religiao_18",
+    "agree": "Cuando una ley entra en conflicto con mi fe, sigo mi fe.",
+    "disagree": "Cuando una ley entra en conflicto con mi fe, sigo la ley.",
+    "agreeExample": "Brasil, cuya Constitución permite a los ciudadanos negarse a cumplir un deber legal por motivos de creencia si realizan un servicio alternativo.",
+    "disagreeExample": "Estados Unidos, cuya Corte Suprema dictaminó en 1990 que la creencia religiosa no justifica incumplir una ley general.",
+    "note": "Esto mide a quién obedeces en un conflicto. Quienes desobedecen la ley por razones no religiosas, como la convicción o la conciencia, deben pensar solo en la fe."
+  },
+  {
+    "id": "religiao_19",
+    "agree": "La moral pública se apoya en principios que valen para todos, crean o no en Dios.",
+    "disagree": "La moral pública puede apoyarse en la creencia en Dios.",
+    "agreeExample": "Suecia, donde el 9% dice que creer en Dios es necesario para ser moral (Pew, 2019).",
+    "disagreeExample": "India, donde lo dice el 79%.",
+    "note": "La pregunta trata del papel del Estado, no de tu fe personal: una persona religiosa que defiende un Estado neutral puede estar de acuerdo."
+  },
+  {
+    "id": "religiao_20",
+    "agree": "El Estado protege la fe religiosa como parte de la identidad nacional, por ejemplo en la ley, la enseñanza o los símbolos.",
+    "disagree": "El Estado no protege la fe religiosa como parte de la identidad nacional.",
+    "agreeExample": "Polonia, cuya ley de radiodifusión exige que los programas respeten el \"sistema de valores cristiano\".",
+    "disagreeExample": "Australia, cuya Constitución prohíbe al gobierno federal establecer una religión.",
+    "note": "Incluso quienes no tienen fe pueden estar de acuerdo, si ven la religión como parte de la tradición y la identidad del país."
+  },
+  {
+    "id": "moral_01",
+    "agree": "Las parejas del mismo sexo tienen el mismo derecho a adoptar que las parejas de hombre y mujer, con los mismos criterios.",
+    "disagree": "Las parejas del mismo sexo no tienen el mismo derecho a adoptar que las demás parejas.",
+    "agreeExample": "España, que permitió la adopción conjunta a las parejas del mismo sexo en 2005.",
+    "disagreeExample": "Italia, donde las parejas del mismo sexo no pueden adoptar conjuntamente.",
+    "note": "Esto mide si el derecho es igual ante la ley. Quienes piensan que el Estado no debería regular la adopción para nadie, pero no quieren privilegios para un tipo de pareja, están de acuerdo."
+  },
+  {
+    "id": "moral_02",
+    "agree": "La familia tradicional, con padre, madre e hijos, es el modelo ideal que la sociedad debería valorar.",
+    "disagree": "La familia tradicional es un modelo entre otros, y la sociedad valora varios tipos de arreglos familiares.",
+    "agreeExample": "Irlanda, cuyos votantes en 2024 mantuvieron la familia de la Constitución basada en el matrimonio y rechazaron una definición más amplia.",
+    "disagreeExample": "Francia, que creó en 1999 las uniones civiles (PACS), abiertas a cualquier pareja.",
+    "note": "La pregunta trata del ideal social, no de prohibir otros modelos. Quienes prefieren la familia tradicional para sí mismos pero respetan otros arreglos deben pensar en qué modelo presenta la sociedad como referencia."
+  },
+  {
+    "id": "moral_03",
+    "agree": "La identidad de género que una persona declara debería ser reconocida y respetada por los demás.",
+    "disagree": "La identidad de género declarada no es el único criterio, y el sexo biológico también cuenta.",
+    "agreeExample": "Argentina, cuya ley de 2012 permite cambiar el género legal por declaración.",
+    "disagreeExample": "Reino Unido, cuya Corte Suprema dictaminó en 2025 que \"mujer\" en la Ley de Igualdad significa sexo biológico.",
+    "note": "La pregunta trata de respetar la identidad declarada. Quienes respetan a la persona pero piensan que el Estado no debería obligar a nadie a adoptar ese lenguaje deben pensar solo en el respeto."
+  },
+  {
+    "id": "moral_04",
+    "agree": "Los cambios en los valores y las costumbres deberían darse de forma gradual, dando tiempo a la sociedad para adaptarse.",
+    "disagree": "El cambio cultural rápido es aceptable o deseable, aunque cause conmoción.",
+    "agreeExample": "Inglaterra y Gales, que despenalizaron la homosexualidad en 1967 y permitieron el matrimonio entre personas del mismo sexo en 2014.",
+    "disagreeExample": "Turquía, que adoptó el alfabeto latino en cuestión de meses en 1928.",
+    "note": "La pregunta mide el ritmo del cambio, no su dirección. Quienes quieren un cambio radical pero gradual están de acuerdo; quienes quieren volver al pasado de golpe están en desacuerdo."
+  },
+  {
+    "id": "moral_05",
+    "agree": "Parte de las plazas universitarias se reserva por raza, como forma de reparar desigualdades históricas.",
+    "disagree": "Las plazas universitarias no se reservan por raza.",
+    "agreeExample": "Brasil, cuya ley de cuotas de 2012 reserva plazas en las universidades federales para estudiantes negros, pardos e indígenas.",
+    "disagreeExample": "Estados Unidos, cuya Corte Suprema puso fin en 2023 a las admisiones que tienen en cuenta la raza.",
+    "note": "La pregunta se refiere a las cuotas raciales. Quienes apoyan cuotas basadas solo en el ingreso deben pensar solo en el criterio racial. Quienes rechazan las cuotas porque el Estado no debería dar un trato según el grupo están en desacuerdo."
+  },
+  {
+    "id": "moral_06",
+    "agree": "El Estado reconoce como matrimonio solo la unión de un hombre y una mujer.",
+    "disagree": "El Estado también reconoce el matrimonio entre personas del mismo sexo.",
+    "agreeExample": "Japón, cuya ley reconoce solo el matrimonio entre un hombre y una mujer.",
+    "disagreeExample": "Taiwán, que en 2019 se convirtió en el primero de Asia en permitir el matrimonio entre personas del mismo sexo.",
+    "note": "La pregunta trata de lo que reconoce el Estado. Quienes quieren que el Estado no reconozca ningún matrimonio deben pensar solo en el reconocimiento oficial."
+  },
+  {
+    "id": "moral_07",
+    "agree": "Las parejas LGBT pueden mostrar afecto en público, como tomarse de la mano o besarse, igual que cualquier otra pareja.",
+    "disagree": "Las parejas LGBT deberían ser más discretas en público que las demás parejas.",
+    "agreeExample": "Suecia, donde el 94% dice que la homosexualidad debería ser aceptada (Pew, 2019).",
+    "disagreeExample": "Polonia, donde lo dice el 47%."
+  },
+  {
+    "id": "moral_08",
+    "agree": "Estoy en contra de reservar empleos del sector público por raza.",
+    "disagree": "Estoy a favor de reservar empleos del sector público por raza.",
+    "agreeExample": "Francia, cuya Constitución exige igualdad ante la ley sin distinción de origen, raza o religión.",
+    "disagreeExample": "Brasil, cuya ley de 2025 reserva el 30% de las plazas de los concursos del servicio público para candidatos negros, pardos, indígenas y quilombolas.",
+    "note": "La pregunta se refiere a las cuotas raciales. Quienes apoyan cuotas basadas solo en el ingreso deben pensar solo en el criterio racial."
+  },
+  {
+    "id": "moral_09",
+    "agree": "Para mí, interrumpir un embarazo de forma temprana, en las primeras semanas, es moralmente aceptable.",
+    "disagree": "Para mí, interrumpir un embarazo de forma temprana no es moralmente aceptable.",
+    "agreeExample": "Francia, que incluyó la libertad de abortar en su Constitución en 2024.",
+    "disagreeExample": "Polonia, que permite el aborto solo tras una violación o incesto, o para proteger la vida o la salud de la mujer.",
+    "note": "La pregunta mide lo que consideras moralmente correcto, no lo que la ley debería permitir. Quienes están moralmente en contra pero piensan que el Estado no debería prohibirlo responden según la moral."
+  },
+  {
+    "id": "moral_10",
+    "agree": "Para mí, el aborto es moralmente incorrecto.",
+    "disagree": "Para mí, el aborto no es moralmente incorrecto.",
+    "agreeExample": "Malta, que permite el aborto solo cuando la vida de la mujer corre peligro.",
+    "disagreeExample": "Canadá, que no tiene ninguna ley penal sobre el aborto desde 1988.",
+    "note": "La pregunta mide lo que consideras moralmente correcto, no lo que la ley debería permitir. Quienes están moralmente en contra pero piensan que el Estado no debería prohibirlo responden según la moral."
+  },
+  {
+    "id": "moral_11",
+    "agree": "Los adolescentes aprenden sobre la identidad de género en programas educativos, por ejemplo en la escuela.",
+    "disagree": "Los adolescentes no reciben educación sobre la identidad de género en la escuela.",
+    "agreeExample": "Escocia, cuyas escuelas imparten clases inclusivas con las personas LGBT desde 2021.",
+    "disagreeExample": "Florida, cuya ley de 2022 prohíbe la instrucción en el aula sobre identidad de género hasta tercer grado.",
+    "note": "Esto mide si el tema entra en la educación. Quienes piensan que es un asunto de la familia y no de la escuela están en desacuerdo."
+  },
+  {
+    "id": "moral_12",
+    "agree": "Los padres deciden cómo y qué aprenden sus hijos sobre sexualidad, y la escuela sigue esos valores.",
+    "disagree": "La escuela define el contenido de la educación sexual, con base en criterios científicos y en el currículo.",
+    "agreeExample": "Inglaterra, donde los padres pueden retirar a sus hijos de la educación sexual hasta tres trimestres antes de que cumplan 16 años.",
+    "disagreeExample": "Países Bajos, donde la educación sexual es obligatoria en las escuelas primarias desde 2012.",
+    "note": "La pregunta mide quién tiene la última palabra: la familia o la escuela. Quienes defienden escuelas privadas libres, sin currículo estatal, también están de acuerdo."
+  },
+  {
+    "id": "moral_13",
+    "agree": "El trabajo sexual se reconoce como trabajo legítimo, con derechos y protecciones laborales.",
+    "disagree": "El trabajo sexual no se reconoce como trabajo legítimo.",
+    "agreeExample": "Alemania, que en 2002 convirtió el trabajo sexual en un empleo legal con seguro social.",
+    "disagreeExample": "Francia, que en 2016 tipificó como delito comprar sexo.",
+    "note": "La pregunta mide el reconocimiento como trabajo, no la aprobación moral de la actividad. Quienes piensan que el Estado no debería ni criminalizarla ni regularla, pero desaprueban la actividad, pueden estar de acuerdo."
+  },
+  {
+    "id": "moral_14",
+    "agree": "La sociedad no adopta el lenguaje neutro en cuanto al género en la vida cotidiana.",
+    "disagree": "La sociedad puede adoptar el lenguaje neutro en cuanto al género en la vida cotidiana.",
+    "agreeExample": "Francia, cuyo ministro de Educación prohibió la escritura inclusiva en las escuelas en 2021.",
+    "disagreeExample": "Suecia, que añadió el pronombre neutro \"hen\" a su diccionario oficial en 2015.",
+    "note": "La pregunta trata de que la sociedad adopte el lenguaje neutro en cuanto al género, no de que el Estado lo imponga. Quienes piensan que cada uno debería hablar como quiera pueden responder Neutral."
+  },
+  {
+    "id": "moral_15",
+    "agree": "Deberíamos comer menos carne por respeto a los animales, por el sufrimiento que causa la cría.",
+    "disagree": "No necesitamos reducir el consumo de carne por respeto a los animales.",
+    "agreeExample": "India, donde el 39% de los adultos se dice vegetariano (Pew, 2021).",
+    "disagreeExample": "Argentina, cuyo consumo de carne vacuna por persona es de los más altos del mundo.",
+    "note": "La pregunta toma el respeto a los animales como motivo. Las razones de salud o ambientales no cuentan aquí."
+  },
+  {
+    "id": "moral_16",
+    "agree": "Para mí, consumir pornografía es moralmente incorrecto.",
+    "disagree": "Para mí, consumir pornografía no es moralmente incorrecto.",
+    "agreeExample": "Indonesia, cuya ley de 2008 prohíbe la pornografía.",
+    "disagreeExample": "Japón, donde producir y vender pornografía para adultos es legal.",
+    "note": "La pregunta mide lo que consideras moralmente correcto, no si debería prohibirse por ley."
+  },
+  {
+    "id": "moral_17",
+    "agree": "Las relaciones abiertas y el poliamor merecen el mismo respeto social que el matrimonio.",
+    "disagree": "Las relaciones abiertas y el poliamor no merecen el mismo respeto social que el matrimonio.",
+    "agreeExample": "Somerville, Massachusetts, que en 2020 reconoció las uniones domésticas de más de dos personas.",
+    "disagreeExample": "Canadá, cuyo Código Penal tipifica la poligamia como delito.",
+    "note": "La pregunta trata del respeto social, no de lo que la ley debería reconocer."
+  },
+  {
+    "id": "moral_18",
+    "agree": "Cuidar de la familia debería ser la principal prioridad en la vida de una mujer, por encima de la carrera y de otros proyectos.",
+    "disagree": "Cuidar de la familia no es, por sí solo, la principal prioridad en la vida de una mujer; ella decide sus propias prioridades.",
+    "agreeExample": "Irlanda, cuya Constitución dice que la vida de la mujer en el hogar sustenta el bien común.",
+    "disagreeExample": "Suecia, que reserva tres meses de licencia parental para cada progenitor.",
+    "note": "La pregunta mide si cuidar de la familia es una prioridad de la mujer, no si la familia importa."
+  },
+  {
+    "id": "moral_19",
+    "agree": "La desnudez en el cine, en el arte y en las playas no debería verse como ofensiva.",
+    "disagree": "La desnudez en el cine, en el arte y en las playas puede considerarse ofensiva.",
+    "agreeExample": "Alemania, con su cultura del cuerpo libre (FKK) y sus playas nudistas.",
+    "disagreeExample": "Estados Unidos, donde la FCC puede multar a las emisoras por contenido indecente emitido antes de las 10 p. m."
+  },
+  {
+    "id": "moral_20",
+    "agree": "Los padres tienen la última palabra sobre la educación moral de sus hijos, por encima de la escuela y del Estado.",
+    "disagree": "La educación moral de los niños es también papel de la escuela y del Estado, no solo de los padres.",
+    "agreeExample": "Estados Unidos, cuya Corte Suprema permitió a los padres amish sacar a sus hijos de la escuela después del octavo grado (1972).",
+    "disagreeExample": "Alemania, donde la educación en casa está prohibida y la asistencia escolar es obligatoria.",
+    "note": "La pregunta mide quién tiene la última palabra: los padres, o también la escuela y el Estado."
+  },
+  {
+    "id": "tecnologia_01",
+    "agree": "La sociedad pone la tecnología y la industria por delante de preservar la naturaleza y los modos de vida tradicionales.",
+    "disagree": "La sociedad pone la naturaleza y los modos de vida tradicionales por delante del progreso tecnológico e industrial.",
+    "agreeExample": "El Ruhr alemán, que construyó su economía sobre el carbón y el acero desde el siglo XIX.",
+    "disagreeExample": "Nueva Zelanda, que concedió personalidad jurídica al río Whanganui en 2017.",
+    "note": "La pregunta enfrenta la tecnología y la industria con la naturaleza y la vida tradicional (el eje Tecnología × Biología). No compara con otras áreas, como la defensa o la salud. Quienes rechazan la planificación estatal pero quieren innovación impulsada por el mercado están de acuerdo."
+  },
+  {
+    "id": "tecnologia_02",
+    "agree": "Prefiero una vida sencilla, cercana a la naturaleza y con poca tecnología, a una vida rodeada de tecnología.",
+    "disagree": "Prefiero una vida con mucha tecnología, como automatización, aplicaciones y dispositivos, a una vida sencilla y natural.",
+    "agreeExample": "Las comunidades amish de Estados Unidos, que limitan los autos y el internet en casa.",
+    "disagreeExample": "Estonia, donde casi todos los servicios públicos están en línea.",
+    "note": "Esta es una pregunta personal sobre el estilo de vida, no sobre lo que el Estado debería hacer."
+  },
+  {
+    "id": "tecnologia_03",
+    "agree": "La IA y la automatización deberían ampliarse, aunque desaparezcan muchas profesiones.",
+    "disagree": "La IA y la automatización deberían limitarse para proteger los empleos y las profesiones.",
+    "agreeExample": "Emiratos Árabes Unidos, que nombró un ministro de inteligencia artificial en 2017.",
+    "disagreeExample": "India, cuyo ministro de Transporte dijo en 2017 que no se permitirían los autos sin conductor, para proteger los empleos de los conductores.",
+    "note": "Esto mide si el avance tecnológico debería frenarse para proteger los empleos. Quienes quieren automatización, pero con un ingreso garantizado para quienes pierdan su trabajo, están de acuerdo."
+  },
+  {
+    "id": "tecnologia_04",
+    "agree": "Las tecnologías que alteran el cuerpo, la mente o la reproducción humanos, como la clonación o la modificación genética, deberían tener límites legales.",
+    "disagree": "Estas tecnologías no deberían tener límites legales; cada persona decide si usarlas.",
+    "agreeExample": "Australia, que prohíbe por ley la clonación humana desde 2002.",
+    "disagreeExample": "Estados Unidos, que no tiene ninguna ley federal que prohíba la clonación humana.",
+    "note": "La pregunta trata de limitar por ley. Quienes rechazan estas tecnologías por convicción personal pero piensan que el Estado no debería prohibirlas están en desacuerdo."
+  },
+  {
+    "id": "tecnologia_05",
+    "agree": "El cultivo de plantas modificadas genéticamente debería seguir desarrollándose y utilizándose.",
+    "disagree": "Los cultivos modificados genéticamente deberían dejar de desarrollarse, por precaución con la salud o el medio ambiente.",
+    "agreeExample": "Brasil, donde la mayor parte de la soya que se cultiva es modificada genéticamente.",
+    "disagreeExample": "Francia, que prohibió el cultivo de maíz transgénico en 2014."
+  },
+  {
+    "id": "tecnologia_06",
+    "agree": "El uso de plaguicidas debería reducirse, aunque baje la producción agrícola.",
+    "disagree": "El uso de plaguicidas se mantiene para preservar la productividad.",
+    "agreeExample": "Dinamarca, que desde 2013 grava los plaguicidas según su nivel de peligrosidad.",
+    "disagreeExample": "Unión Europea, cuyo Parlamento rechazó en 2023 un plan para reducir a la mitad el uso de plaguicidas.",
+    "note": "La pregunta mide si el uso de plaguicidas debería reducirse. Quienes quieren que decida el mercado, sin regla estatal, pueden responder Neutral."
+  },
+  {
+    "id": "tecnologia_07",
+    "agree": "Se puede permitir la minería en áreas protegidas de la Amazonia, aunque tenga algún impacto ambiental.",
+    "disagree": "No se puede permitir la minería en áreas protegidas de la Amazonia, por el impacto ambiental.",
+    "agreeExample": "Brasil, que abrió a la minería privada en 2017 la reserva mineral de Renca, en la Amazonia.",
+    "disagreeExample": "Brasil, que revocó ese decreto al mes siguiente tras las protestas.",
+    "note": "La pregunta mide si el desarrollo económico puede afectar a la naturaleza. Quien apoya la minería solo con propiedad privada y responsabilidad por los daños puede estar de acuerdo."
+  },
+  {
+    "id": "tecnologia_08",
+    "agree": "Prefiero la naturaleza preservada al crecimiento industrial acelerado.",
+    "disagree": "Prefiero el crecimiento industrial acelerado a mantener la naturaleza preservada.",
+    "agreeExample": "Bután, cuya Constitución exige que al menos el 60 % de su territorio permanezca forestado.",
+    "disagreeExample": "Corea del Sur, que construyó astilleros, acerías y plantas químicas en la década de 1970."
+  },
+  {
+    "id": "tecnologia_09",
+    "agree": "Debería permitirse editar los genes de las personas para prevenir enfermedades hereditarias.",
+    "disagree": "No debería permitirse editar los genes de las personas, ni siquiera para prevenir enfermedades.",
+    "agreeExample": "Reino Unido, que permitió en 2015 la donación mitocondrial para prevenir enfermedades hereditarias.",
+    "disagreeExample": "Alemania, cuya Ley de Protección de Embriones de 1990 prohíbe alterar los genes de las células germinales humanas.",
+    "note": "Esto mide solo la prevención de enfermedades, no la mejora de capacidades. Quien acepta la terapia génica pero rechaza la mejora está de acuerdo."
+  },
+  {
+    "id": "tecnologia_10",
+    "agree": "En la lucha contra el calentamiento global, la prioridad es consumir menos recursos naturales, en lugar de confiar en nuevas tecnologías.",
+    "disagree": "En la lucha contra el calentamiento global, reducir el consumo de recursos no es la prioridad; primero van la tecnología y la energía limpia.",
+    "agreeExample": "Ámsterdam, que adoptó el modelo de la economía de la rosquilla en 2020.",
+    "disagreeExample": "Estados Unidos, cuya Ley de Reducción de la Inflación de 2022 financia la energía limpia con créditos fiscales.",
+    "note": "La pregunta trata de cómo combatir el calentamiento global, no de si existe. Quien rechaza esa premisa puede responder Neutral."
+  },
+  {
+    "id": "tecnologia_11",
+    "agree": "La humanidad debería invertir en explorar otros planetas, como Marte.",
+    "disagree": "La humanidad no debería invertir en explorar otros planetas.",
+    "agreeExample": "Estados Unidos en 1966, cuando la NASA recibía cerca del 4 % del presupuesto federal.",
+    "disagreeExample": "Estados Unidos hoy, donde la NASA recibe menos del 0,5 % del gasto federal."
+  },
+  {
+    "id": "tecnologia_12",
+    "agree": "La minería en la Amazonia debería prohibirse, aunque use tecnología de bajo impacto.",
+    "disagree": "La minería en la Amazonia puede permitirse si usa tecnología de bajo impacto.",
+    "agreeExample": "Costa Rica, que prohibió en 2010 la nueva minería metálica a cielo abierto.",
+    "disagreeExample": "Brasil, cuya Constitución permite la minería en tierras indígenas si el Congreso la autoriza.",
+    "note": "Esto mide si la prohibición es absoluta o depende de la tecnología usada. Quien acepta la minería bajo reglas estrictas está en desacuerdo."
+  },
+  {
+    "id": "tecnologia_13",
+    "agree": "Prefiero vivir en una gran ciudad, con más servicios, tecnología y oportunidades.",
+    "disagree": "Prefiero vivir en el campo, más cerca de la naturaleza y lejos del bullicio de las ciudades.",
+    "agreeExample": "Corea del Sur, donde cerca de la mitad de la población vive en el área capitalina de Seúl.",
+    "disagreeExample": "Japón, que paga a las familias hasta 1 millón de yenes por hijo para que se vayan de Tokio.",
+    "note": "Esta es una pregunta personal sobre dónde prefieres vivir, no sobre política pública."
+  },
+  {
+    "id": "tecnologia_14",
+    "agree": "Debería prohibirse editar los genes de los embriones para aumentar la inteligencia.",
+    "disagree": "Debería permitirse editar los genes de los embriones para aumentar la inteligencia.",
+    "agreeExample": "Francia, cuyo Código Civil prohíbe modificar rasgos genéticos con el fin de alterar la descendencia de una persona.",
+    "disagreeExample": "Estados Unidos, que no tiene una prohibición federal de editar embriones, aunque el Congreso impide a la FDA revisar tales solicitudes.",
+    "note": "La pregunta trata de prohibir por ley. Quien está en contra por convicción personal pero piensa que el Estado no debería prohibirlo está en desacuerdo."
+  },
+  {
+    "id": "tecnologia_15",
+    "agree": "Las personas sanas pueden recibir implantes cerebrales para aumentar su memoria o su capacidad de razonamiento.",
+    "disagree": "No deberían permitirse los implantes cerebrales para aumentar la capacidad mental de personas sanas.",
+    "agreeExample": "Estados Unidos, donde el 13 % dijo que los chips cerebrales generalizados que permiten procesar información más rápido serían buenos para la sociedad (Pew, 2022).",
+    "disagreeExample": "Estados Unidos, donde el 56 % dijo que serían malos para la sociedad.",
+    "note": "Esto mide solo la mejora de personas sanas, no el uso médico. Quien acepta los implantes solo para tratar enfermedades está en desacuerdo."
+  },
+  {
+    "id": "tecnologia_16",
+    "agree": "El gasto en exploración espacial debería ir por debajo de la protección del medio ambiente en la Tierra.",
+    "disagree": "El gasto en exploración espacial debería estar al mismo nivel o por encima de la protección ambiental.",
+    "agreeExample": "Ecuador, cuya Constitución de 2008 dio derechos legales propios a la naturaleza.",
+    "disagreeExample": "Emiratos Árabes Unidos, cuya sonda Hope orbita Marte desde 2021.",
+    "note": "La pregunta compara el espacio con el medio ambiente. Quien quiere recortar ambos gastos públicos debe pensar solo en cuál va primero."
+  },
+  {
+    "id": "tecnologia_17",
+    "agree": "La carne cultivada en laboratorio puede reemplazar parte de la ganadería.",
+    "disagree": "La carne cultivada en laboratorio no debería reemplazar a la ganadería.",
+    "agreeExample": "Singapur, que en 2020 fue el primer país en aprobar la venta de carne cultivada en laboratorio.",
+    "disagreeExample": "Italia, que prohibió la carne cultivada en laboratorio en 2023.",
+    "note": "Esto mide si la tecnología debería reemplazar la cría de animales. Quien está en contra porque considera artificial la carne de laboratorio, aunque defienda el libre mercado, está en desacuerdo."
+  },
+  {
+    "id": "tecnologia_18",
+    "agree": "Prefiero una vida sencilla en el campo a la vida en las grandes ciudades.",
+    "disagree": "Prefiero la vida en las grandes ciudades a una vida sencilla en el campo.",
+    "agreeExample": "Italia, donde algunos pueblos venden casas por un euro para atraer residentes.",
+    "disagreeExample": "China, donde la proporción urbana de la población pasó de menos del 20 % en 1978 a más del 60 % en 2020.",
+    "note": "Esta es una pregunta personal sobre dónde prefieres vivir, no sobre política pública."
+  },
+  {
+    "id": "tecnologia_19",
+    "agree": "En la lucha contra el calentamiento global, es mejor apostar por nuevas tecnologías, como la energía limpia, que por consumir menos.",
+    "disagree": "En la lucha contra el calentamiento global, es mejor consumir menos que apostar por nuevas tecnologías.",
+    "agreeExample": "Noruega, donde casi 9 de cada 10 autos nuevos vendidos en 2024 eran eléctricos.",
+    "disagreeExample": "Francia, que en 2023 prohibió los vuelos nacionales cortos donde un tren tarda menos de 2,5 horas.",
+    "note": "La pregunta trata de cómo combatir el calentamiento global, no de si existe. Quien rechaza esa premisa puede responder Neutral."
+  },
+  {
+    "id": "tecnologia_20",
+    "agree": "Estoy en contra de los implantes artificiales, como prótesis o exoesqueletos, que dan a personas sanas capacidades físicas por encima de lo normal.",
+    "disagree": "Estoy a favor de los implantes artificiales que dan a personas sanas capacidades físicas por encima de lo normal.",
+    "agreeExample": "Estados Unidos, donde el 24 % dijo que los exoesqueletos generalizados que dan fuerza extra a los trabajadores serían malos para la sociedad (Pew, 2022).",
+    "disagreeExample": "Estados Unidos, donde el 33 % dijo que serían buenos para la sociedad.",
+    "note": "Esto mide solo la mejora de personas sanas, no el uso médico. Quien acepta los implantes solo para tratar una discapacidad o una enfermedad está de acuerdo con 'Estoy en contra'."
+  }
+]

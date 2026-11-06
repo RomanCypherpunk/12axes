@@ -52,13 +52,19 @@ public class BookRecommendationService {
 
     private BookRecommendation toRecommendation(PersonalityMatch match, Book book, String lang) {
         String title = localized(book.title(), lang);
+        // Fora do português a busca é na Amazon americana, com o autor em inglês.
+        String storeAuthor = match.name();
+        if (!QuizDataService.LANG_PT.equals(lang)) {
+            var english = dataService.getPersonalityById(match.personalityId(), QuizDataService.LANG_EN);
+            storeAuthor = english == null ? match.name() : english.name();
+        }
         return new BookRecommendation(
                 match.personalityId(),
                 match.name(),
                 match.imagePath(),
                 title,
                 book.year(),
-                affiliateUrl(localized(book.url(), lang), title, match.name(), lang),
+                affiliateUrl(localized(book.url(), lang), title, storeAuthor, lang),
                 match.compatibility()
         );
     }
@@ -67,7 +73,8 @@ public class BookRecommendationService {
         if (directUrl != null && !directUrl.isBlank()) {
             return directUrl;
         }
-        boolean english = QuizDataService.LANG_EN.equals(lang);
+        // Só o português compra na Amazon do Brasil.
+        boolean english = !QuizDataService.LANG_PT.equals(lang);
         String query = URLEncoder.encode(title + " " + author, StandardCharsets.UTF_8);
         return "https://" + (english ? AMAZON_US_HOST : AMAZON_BR_HOST)
                 + "/s?k=" + query + "&i=stripbooks&tag=" + (english ? AMAZON_US_TAG : AMAZON_BR_TAG);
@@ -78,6 +85,12 @@ public class BookRecommendationService {
             return null;
         }
         String value = values.get(lang);
-        return value == null || value.isBlank() ? values.get(QuizDataService.LANG_PT) : value;
+        if (value != null && !value.isBlank()) {
+            return value;
+        }
+        String english = values.get(QuizDataService.LANG_EN);
+        return QuizDataService.LANG_PT.equals(lang) || english == null || english.isBlank()
+                ? values.get(QuizDataService.LANG_PT)
+                : english;
     }
 }

@@ -6,6 +6,7 @@ import { siteHeader } from './site-header.mjs';
 import { iconLinks } from './cdn.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
+import { ES } from './locales/es.mjs';
 
 // Mesma paleta de frontend/src/utils/ideologyColors.ts, na ordem do espectro.
 export const SPECTRUM = [
@@ -22,6 +23,13 @@ export const SPECTRUM = [
 export const CATEGORY_KEY = {
   'esquerda radical': 'esq-radical',
   'radical left': 'esq-radical',
+  'izquierda radical': 'esq-radical',
+  izquierda: 'esquerda',
+  derecha: 'direita',
+  'extrema derecha': 'ext-direita',
+  'tercera posición': 'terceira',
+  libertario: 'libertario',
+  anarquista: 'anarquismo',
   esquerda: 'esquerda',
   left: 'esquerda',
   'esquerda tecnossocialista pós-capitalista': 'esquerda',
@@ -116,6 +124,7 @@ const STR = {
     }
   }
 };
+STR.es = { ...STR.en, ...ES.ideologiesIndex };
 
 export const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 
@@ -215,11 +224,12 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${L.s.htmlLang === 'pt-BR' ? '© 2026 12 Axes. Todos os direitos reservados' : '© 2026 12 Axes. All rights reserved'}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
+    <link rel="alternate" hreflang="es" href="${site}/es${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="website" />

@@ -167,17 +167,12 @@ public class ScoringService {
     }
 
     private String intensityFor(double distanceFromCenter, String lang) {
-        boolean en = QuizDataService.LANG_EN.equals(lang);
-        if (distanceFromCenter < 7.5) {
-            return en ? "Balanced" : "Equilibrado";
-        }
-        if (distanceFromCenter < 22.5) {
-            return en ? "Leaning" : "Inclinado";
-        }
-        if (distanceFromCenter < 37.5) {
-            return en ? "Strong" : "Forte";
-        }
-        return en ? "Very strong" : "Muito forte";
+        int level = distanceFromCenter < 7.5 ? 0 : distanceFromCenter < 22.5 ? 1 : distanceFromCenter < 37.5 ? 2 : 3;
+        return switch (QuizDataService.normalizeLang(lang)) {
+            case QuizDataService.LANG_EN -> List.of("Balanced", "Leaning", "Strong", "Very strong").get(level);
+            case QuizDataService.LANG_ES -> List.of("Equilibrado", "Inclinado", "Fuerte", "Muy fuerte").get(level);
+            default -> List.of("Equilibrado", "Inclinado", "Forte", "Muito forte").get(level);
+        };
     }
 
     private double round(double value) {

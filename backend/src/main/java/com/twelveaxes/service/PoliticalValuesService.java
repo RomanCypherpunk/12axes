@@ -42,21 +42,24 @@ public class PoliticalValuesService {
 
     private final List<Category> categories;
     private final Map<String, Map<String, String>> englishText;
+    private final Map<String, Map<String, String>> spanishText;
 
     @Autowired
     public PoliticalValuesService(ObjectMapper objectMapper) throws IOException {
-        this(parse(objectMapper, read("data/political-values.json"), read("data/i18n/en/political-values.json")));
+        this(parse(objectMapper, read("data/political-values.json"), read("data/i18n/en/political-values.json"),
+                readOptional("data/i18n/es/political-values.json")));
     }
 
     private PoliticalValuesService(Loaded loaded) {
         this.categories = loaded.categories();
         this.englishText = loaded.englishText();
+        this.spanishText = loaded.spanishText();
     }
 
     /** Monta o servico a partir de JSON ja lido; usado nos testes de dados invalidos. */
     public static PoliticalValuesService fromJson(ObjectMapper objectMapper, String ptJson, String enJson) {
         try {
-            return new PoliticalValuesService(parse(objectMapper, ptJson, enJson));
+            return new PoliticalValuesService(parse(objectMapper, ptJson, enJson, "[]"));
         } catch (IOException exception) {
             throw new IllegalStateException("Valores politicos: JSON ilegivel", exception);
         }
@@ -64,7 +67,10 @@ public class PoliticalValuesService {
 
     /** Um valor por categoria, na ordem do JSON. */
     public List<PoliticalValue> resolve(List<AxisResult> axes, String lang) {
-        boolean english = QuizDataService.LANG_EN.equals(QuizDataService.normalizeLang(lang));
+        String normalizedLang = QuizDataService.normalizeLang(lang);
+        boolean translated = !QuizDataService.LANG_PT.equals(normalizedLang);
+        // Espanhol: campo sem tradução usa o inglês.
+        Map<String, Map<String, String>> primary = QuizDataService.LANG_ES.equals(normalizedLang) ? spanishText : englishText;
         Map<String, Double> user = new LinkedHashMap<>();
         axes.forEach(axis -> user.put(axis.axisId(), axis.leftPercent()));
 
@@ -74,14 +80,20 @@ public class PoliticalValuesService {
             String label = category.label();
             String name = chosen.name();
             String description = chosen.description();
-            if (english) {
-                label = englishText.get(category.id()).get("label");
-                name = englishText.get(chosen.id()).get("name");
-                description = englishText.get(chosen.id()).get("description");
+            if (translated) {
+                label = text(primary, category.id(), "label");
+                name = text(primary, chosen.id(), "name");
+                description = text(primary, chosen.id(), "description");
             }
             result.add(new PoliticalValue(category.id(), label, chosen.id(), name, description, chosen.neutral()));
         }
         return result;
+    }
+
+    private String text(Map<String, Map<String, String>> primary, String id, String field) {
+        Map<String, String> entry = primary.get(id);
+        String value = entry == null ? null : entry.get(field);
+        return isBlank(value) ? englishText.get(id).get(field) : value;
     }
 
     private static Value choose(Category category, Map<String, Double> user) {
@@ -113,7 +125,11 @@ public class PoliticalValuesService {
         }
     }
 
-    private static Loaded parse(ObjectMapper objectMapper, String ptJson, String enJson) throws IOException {
+    private static String readOptional(String path) throws IOException {
+        return new ClassPathResource(path).exists() ? read(path) : "[]";
+    }
+
+    private static Loaded parse(ObjectMapper objectMapper, String ptJson, String enJson, String esJson) throws IOException {
         List<Category> categories = objectMapper.readValue(ptJson, new TypeReference<>() {});
         List<Map<String, String>> overlay = objectMapper.readValue(enJson, new TypeReference<>() {});
         Map<String, Map<String, String>> english = new LinkedHashMap<>();
@@ -126,7 +142,10 @@ public class PoliticalValuesService {
         for (Category category : categories) {
             validate(category, knownAxes, english);
         }
-        return new Loaded(List.copyOf(categories), Map.copyOf(english));
+        List<Map<String, String>> esOverlay = objectMapper.readValue(esJson, new TypeReference<>() {});
+        Map<String, Map<String, String>> spanish = new LinkedHashMap<>();
+        esOverlay.forEach(item -> spanish.put(item.get("id"), item));
+        return new Loaded(List.copyOf(categories), Map.copyOf(english), Map.copyOf(spanish));
     }
 
     private static void validate(Category category, Set<String> knownAxes, Map<String, Map<String, String>> english) {
@@ -159,7 +178,7 @@ public class PoliticalValuesService {
         return text == null || text.isBlank();
     }
 
-    private record Loaded(List<Category> categories, Map<String, Map<String, String>> englishText) {
+    private record Loaded(List<Category> categories, Map<String, Map<String, String>> englishText, Map<String, Map<String, String>> spanishText) {
     }
 
     private record Category(String id, String label, List<String> axes, List<Value> values) {

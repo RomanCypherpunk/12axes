@@ -159,13 +159,16 @@ public class IdeologyMatcherService {
     }
 
     private String longDescription(String rawDescription, String lang) {
-        boolean en = QuizDataService.LANG_EN.equals(lang);
+        boolean en = !QuizDataService.LANG_PT.equals(lang);
+        boolean es = QuizDataService.LANG_ES.equals(lang);
         DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
         StringBuilder description = new StringBuilder(parts.summary());
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
-        description.append(en
+        description.append(es
+                ? " La compatibilidad indica cuán cerca están tus respuestas de este perfil."
+                : en
                 ? " Compatibility indicates how close your answers are to this profile."
                 : " A compatibilidade indica proximidade entre suas respostas e esse perfil.");
         if (!parts.isEmpty()) {

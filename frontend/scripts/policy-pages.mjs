@@ -5,23 +5,30 @@
 import { siteHeader } from './site-header.mjs';
 import { IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { catalogHead } from './personalities-index.mjs';
+import { ES } from './locales/es.mjs';
+import { SELLER } from './seller.mjs';
 
 const SUPPORT_EMAIL = (process.env.SUPPORT_EMAIL ?? '12axes.quiz@gmail.com').trim();
 const ISSUES_URL = 'https://github.com/RomanCypherpunk/12axes/issues/new';
 const UPDATED = { pt: '30 de outubro de 2026', en: 'October 30, 2026' };
-// Quem vende (identificação do fornecedor): aparece só na página de termos de uso. Dados públicos do MEI.
-const SELLER = '69.892.973 ENZO XAVIER SANTOS (MEI), CNPJ 69.892.973/0001-89';
 
 export const POLICY_SLUGS = ['report', 'terms', 'privacy', 'refund'];
 
-const contact = (isEn) =>
-  SUPPORT_EMAIL
-    ? isEn
-      ? `by e-mail at <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`
-      : `por e-mail em <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`
-    : isEn
-      ? `through the <a href="${ISSUES_URL}">project contact page on GitHub</a> (do not post payment details there)`
-      : `pela <a href="${ISSUES_URL}">página de contato do projeto no GitHub</a> (não publique dados de pagamento ali)`;
+const CONTACT = {
+  pt: {
+    email: `por e-mail em <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
+    page: `pela <a href="${ISSUES_URL}">página de contato do projeto no GitHub</a> (não publique dados de pagamento ali)`
+  },
+  en: {
+    email: `by e-mail at <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
+    page: `through the <a href="${ISSUES_URL}">project contact page on GitHub</a> (do not post payment details there)`
+  },
+  es: {
+    email: `por correo electrónico en <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
+    page: `a través de la <a href="${ISSUES_URL}">página de contacto del proyecto en GitHub</a> (no publiques allí datos de pago)`
+  }
+};
+const contact = (locale) => (SUPPORT_EMAIL ? CONTACT[locale].email : CONTACT[locale].page);
 
 // Cada página: título, resumo, e uma lista de seções [título, [parágrafos ou itens]]. Itens começando com "- " viram lista.
 const PAGES = {
@@ -163,6 +170,9 @@ const LABELS = {
   pt: { report: 'Relatório Completo', terms: 'Termos de uso', privacy: 'Privacidade', refund: 'Reembolso', updated: 'Atualizado em', skip: 'Pular para o conteúdo', footer: 'Quiz político independente · 12axes.vercel.app · © 2026. Todos os direitos reservados' },
   en: { report: 'Full Report', terms: 'Terms of use', privacy: 'Privacy', refund: 'Refund', updated: 'Updated', skip: 'Skip to content', footer: 'Independent political quiz · 12axes.vercel.app · © 2026. All rights reserved' }
 };
+LABELS.es = { ...LABELS.en, ...ES.policyLabels };
+PAGES.es = ES.policyPages;
+UPDATED.es = ES.policyUpdated;
 
 function body(paragraphs, escapeHtml) {
   const html = [];
@@ -188,13 +198,12 @@ function body(paragraphs, escapeHtml) {
 
 /** Três páginas de política do idioma de L: /terms, /privacy e /refund (com o prefixo do idioma). */
 export function policyPages(L, { site, gaSnippet, escapeHtml }) {
-  const isEn = L.locale === 'en';
-  const labels = LABELS[isEn ? 'en' : 'pt'];
+  const labels = LABELS[L.locale];
   const prefix = L.s.prefix;
 
   return POLICY_SLUGS.map((slug) => {
     const basePath = `/${slug}`;
-    const page = PAGES[isEn ? 'en' : 'pt'][slug](contact(isEn));
+    const page = PAGES[L.locale][slug](contact(L.locale));
     const title = `${page.title} | 12 Axes`;
     const sections = page.sections
       .map(([heading, paragraphs]) => `<section><h2>${escapeHtml(heading)}</h2>${body(paragraphs, escapeHtml)}</section>`)
@@ -221,7 +230,7 @@ ${siteHeader({ L, basePath })}
   <p class="crumbs"><a href="${prefix || '/'}">${escapeHtml(L.s.home)}</a> / ${escapeHtml(page.title)}</p>
   <h1>${escapeHtml(page.title)}</h1>
   <p class="lead">${escapeHtml(page.lead)}</p>
-  <p class="updated">${escapeHtml(labels.updated)}: ${isEn ? UPDATED.en : UPDATED.pt}</p>
+  <p class="updated">${escapeHtml(labels.updated)}: ${UPDATED[L.locale]}</p>
 </div>
 
 <main id="conteudo" class="wrap prose">

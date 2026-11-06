@@ -51,7 +51,7 @@ export const en: Strings = {
   navCompare: 'Compare',
   navSupport: 'Support',
   langToggleLabel: 'PT',
-  langToggleAria: 'Mudar para português',
+  langToggleAria: 'Language',
   redoQuiz: 'Retake quiz',
   religionLabel: 'Religion',
   religionQuestion: 'Do you follow a religion? We only use this to tailor your recommendations.',

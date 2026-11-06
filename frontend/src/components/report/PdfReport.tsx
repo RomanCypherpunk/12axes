@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
-import { LANG, t } from '../../i18n';
+import { INTL_LOCALE, LANG, t } from '../../i18n';
 import type {
   Axis,
   AxisOutlier,
@@ -66,7 +66,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
     ...(compass ? [t.compassTitle] : []),
     ...(premium ? [P.axisTitle, P.disagreeTitle, P.governmentTitle, P.timelineTitle, P.countriesTitle] : [])
   ];
-  const today = new Date().toLocaleDateString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  const today = new Date().toLocaleDateString(INTL_LOCALE[LANG], {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
@@ -457,7 +457,7 @@ function CompassX({ left, top, color }: { left: number; top?: number; color: str
 }
 
 function formatPct(value: number, decimals: number): string {
-  return `${value.toLocaleString(LANG === 'pt' ? 'pt-BR' : 'en-US', {
+  return `${value.toLocaleString(INTL_LOCALE[LANG], {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals
   })}%`;

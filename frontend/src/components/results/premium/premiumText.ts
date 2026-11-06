@@ -159,4 +159,66 @@ const en: PremiumText = {
   saveCopied: 'Link copied',
 };
 
-export const P: PremiumText = LANG === 'en' ? en : pt;
+const es: PremiumText = {
+  title: 'Informe completo',
+  devBadge: 'Modo de desarrollo: abierto sin pago, solo en esta máquina.',
+  loading: 'Preparando tu informe completo...',
+  error: 'No se pudo cargar el informe. Inténtalo de nuevo en unos instantes.',
+  retry: 'Intentar de nuevo',
+  historical: 'histórico',
+  axisTitle: 'Análisis completo, eje por eje',
+  impactsTitle: 'Lo que más pesó en tus respuestas',
+  positions: { you: 'Tú', ideology: 'Ideología', personality: 'Personalidad', country: 'País' },
+  answerLabels: {
+    STRONGLY_AGREE: 'Totalmente de acuerdo',
+    AGREE: 'De acuerdo',
+    NEUTRAL: 'Neutral',
+    DISAGREE: 'En desacuerdo',
+    STRONGLY_DISAGREE: 'Totalmente en desacuerdo'
+  },
+  levelLabels: { equilibrado: 'Equilibrado', inclinado: 'Inclinado', forte: 'Fuerte', muito_forte: 'Muy fuerte' },
+  points: (value) => `${value > 0 ? '+' : ''}${value.toFixed(1).replace('.', ',')} pts`,
+  disagreeTitle: 'Donde más discrepas',
+  disagreeKinds: { ideology: 'de tu ideología', personality: 'de tu personalidad', country: 'de tu país' },
+  disagreeLegendProfile: 'Perfil',
+  gapRank: (position) => (position === 1 ? 'Mayor diferencia' : position === 2 ? '2.ª mayor diferencia' : '3.ª mayor diferencia'),
+  disagreeCaption: (userPct, userPole, profileName, profilePct, profilePole) =>
+    `Tú estás en ${Math.round(userPct)}% ${userPole}; ${profileName}, en ${Math.round(profilePct)}% ${profilePole}.`,
+  governmentTitle: 'Tu gobierno ideal',
+  timelineTitle: 'Tu línea del tiempo ideológica',
+  timelineEraNames: {
+    antiguidade: 'Antigüedad',
+    medieval: 'Edad Media',
+    moderna: 'Edad Moderna',
+    xix: 'Siglo XIX',
+    xx: 'Siglo XX',
+    xxi: 'Siglo XXI'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} a. C.` : String(value));
+    if (from === null && to !== null) return `Hasta ${year(to)}`;
+    if (to === null && from !== null) return `Desde ${year(from)}`;
+    return `${year(from ?? 0)} a ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Actual',
+  timelineBestEra: 'Época más compatible:',
+  seats: {
+    lider: 'Líder político',
+    vice: 'Vicelíder político',
+    economia: 'Responsable de Economía',
+    educacao: 'Responsable de Educación',
+    estrategia: 'Jefe de Estrategia Política',
+    filosofia: 'Consejero Filosófico',
+    social: 'Coordinador de Asuntos Sociales',
+    industria: 'Coordinador de Industria e Innovación',
+    cultura: 'Consejero de Cultura'
+  },
+  countriesTitle: '10 países o regiones para vivir',
+  saveTitle: 'Guarda tu acceso',
+  saveIntro: 'Para abrir este informe en otro dispositivo, o después de borrar los datos del navegador, guarda el enlace de abajo. Quien tenga el enlace abre el informe de este resultado, así que guárdalo con cuidado.',
+  saveField: 'Enlace de acceso al informe',
+  saveCopy: 'Copiar enlace',
+  saveCopied: 'Enlace copiado',
+};
+
+export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : en;

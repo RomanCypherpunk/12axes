@@ -3,10 +3,10 @@ import { LANG } from '../../i18n';
 // Formas de pagamento aceitas no checkout, só como marcas (cinza, discretas) no modal de compra.
 // Em português (AbacatePay) há só Pix, a única forma liberada na loja; em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
 export function PaymentIcons({ label }: { label: string }) {
-  const card = 'Card';
+  const card = LANG === 'es' ? 'Tarjeta' : 'Card';
   return (
     <ul className="e-pay-icons" aria-label={label}>
-      {LANG !== 'en' && (
+      {LANG === 'pt' && (
         <li title="Pix">
           <svg viewBox="0 0 24 24" role="img" aria-label="Pix">
             <path
@@ -16,7 +16,7 @@ export function PaymentIcons({ label }: { label: string }) {
           </svg>
         </li>
       )}
-      {LANG === 'en' && (
+      {LANG !== 'pt' && (
         <>
           <li title="Apple Pay" className="e-pay-wide">
             <svg viewBox="0 0 512 211" role="img" aria-label="Apple Pay">
@@ -38,7 +38,7 @@ export function PaymentIcons({ label }: { label: string }) {
           </li>
         </>
       )}
-      {LANG === 'en' && (
+      {LANG !== 'pt' && (
         <li title={card}>
           <svg viewBox="0 0 432 384" role="img" aria-label={card}>
             <path

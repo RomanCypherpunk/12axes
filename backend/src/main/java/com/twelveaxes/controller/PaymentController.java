@@ -103,8 +103,10 @@ public class PaymentController {
     @PostMapping("/api/checkout")
     public CheckoutResponse checkout(@Valid @RequestBody CheckoutRequest request) {
         requireEnabled();
-        String lang = QuizDataService.LANG_EN.equals(request.lang()) ? QuizDataService.LANG_EN : QuizDataService.LANG_PT;
-        boolean english = QuizDataService.LANG_EN.equals(lang);
+        // Só o português paga em reais; qualquer outro idioma vai para a Paddle, em inglês e em dólar.
+        String requested = request.lang() == null ? "" : request.lang().trim().toLowerCase();
+        boolean english = !requested.isEmpty() && !requested.equals(QuizDataService.LANG_PT) && !requested.startsWith("pt-");
+        String lang = english ? QuizDataService.LANG_EN : QuizDataService.LANG_PT;
         String amount = english ? priceUsd : priceBrl;
         if (amount == null || amount.isBlank()) {
             // Moeda ainda nao liberada para venda.

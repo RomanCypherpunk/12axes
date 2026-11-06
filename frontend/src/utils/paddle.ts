@@ -8,7 +8,7 @@ interface PaddleEvent {
 
 interface PaddleJs {
   Environment: { set(environment: 'sandbox' | 'production'): void };
-  Initialize(options: { token: string; eventCallback?: (event: PaddleEvent) => void }): void;
+  Initialize(options: { token: string; checkout?: { settings?: { locale?: string } }; eventCallback?: (event: PaddleEvent) => void }): void;
 }
 
 declare global {
@@ -57,6 +57,8 @@ export async function openPaddleCheckout(token: string, onCompleted: () => void)
   paddle.Environment.set(paddleEnvironment(token));
   paddle.Initialize({
     token,
+    // A Paddle atende todo idioma que não seja português (espanhol inclusive), sempre em inglês.
+    checkout: { settings: { locale: 'en' } },
     eventCallback: (event) => {
       if (event?.name === 'checkout.completed') onCompleted();
     }

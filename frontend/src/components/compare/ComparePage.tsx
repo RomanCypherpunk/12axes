@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { HOME_AXES } from '../../data/homeAxes';
-import { LANG, t } from '../../i18n';
+import { LANG, langPrefix, t } from '../../i18n';
 import { ApiError, fetchCompareCatalog, fetchCompareProfiles } from '../../services/quizApi';
 import type { CompareItem, CompareProfiles } from '../../types/quiz';
 import {
@@ -162,7 +162,7 @@ export function ComparePage() {
     setRefs((current) => current.filter((other) => refKey(other) !== refKey(ref)));
   };
 
-  const home = LANG === 'en' ? '/en' : '/';
+  const home = langPrefix(LANG) || '/';
 
   return (
     <div className="app-shell" data-screen="compare">

@@ -124,6 +124,8 @@ There is no database. The catalogs change only through reviewed commits, so the 
 
 All data lives in `backend/src/main/resources/data/`, with English translations in `i18n/en/`.
 
+English is kept by hand. Other languages (`i18n/es/`) are generated from it with `i18n-tools/sync.py`, which only retranslates what changed; anything missing falls back to English.
+
 | File | Contents |
 |------|----------|
 | `axes.json` | The 12 axes, their poles and labels |
@@ -149,9 +151,10 @@ On startup the backend refuses to run if any catalog entry lacks a vector or a v
 │       └── service/         data loading, scoring, matchers, religion filter
 ├── frontend/                React + Vite app
 │   ├── src/components/      home, quiz, results, report
-│   ├── src/i18n/            PT/EN strings
+│   ├── src/i18n/            PT/EN/ES strings
 │   └── scripts/             static page generator, image optimizer
 ├── profile-audit/           pipeline that builds the catalog vectors
+├── i18n-tools/              incremental translation of the catalog
 ├── scripts/                 repository checks (i18n)
 └── .claude/skills/          Claude Code skills for adding profiles
 ```

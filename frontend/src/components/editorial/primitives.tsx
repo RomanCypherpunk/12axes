@@ -1,5 +1,5 @@
 import { useState, type CSSProperties, type ReactNode } from 'react';
-import { LANG, t } from '../../i18n';
+import { LANG, langPrefix, t } from '../../i18n';
 import { NEW_ISSUE_URL, REPO_URL } from '../../data/repo';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import { localAssetUrl, retryLocalAsset } from '../../utils/assetUrl';
@@ -29,7 +29,7 @@ export function Logo({ onClick, href }: { onClick?: () => void; href?: string })
 }
 
 export function SiteFooter() {
-  const base = LANG === 'en' ? '/en' : '';
+  const base = langPrefix(LANG);
   // Os quatro primeiros abrem o GitHub em outra aba; as políticas são páginas do próprio site.
   const project = [
     { label: t.footerAbout, href: `${REPO_URL}#readme`, external: true },

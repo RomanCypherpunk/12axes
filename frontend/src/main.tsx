@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { protectTranslatedText } from './utils/translationDom';
-import type { TreeKind } from './tree/data';
+import type { TreeKind, TreeLocale } from './tree/data';
 import '@fontsource/poppins/latin-300.css';
 import '@fontsource/poppins/latin-400.css';
 import '@fontsource/poppins/latin-500.css';
@@ -35,9 +35,9 @@ window.addEventListener('vite:preloadError', (event) => {
   }
 });
 
-// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/...).
+// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/..., /es/tree/...).
 const TreePage = lazy(() => import('./tree/TreePage'));
-const TREE_ROUTE = /^\/(en\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
+const TREE_ROUTE = /^\/(en\/|es\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
 
 const root = document.getElementById('root') as HTMLElement;
 protectTranslatedText(root);
@@ -47,7 +47,7 @@ ReactDOM.createRoot(root).render(
     <ErrorBoundary>
       {TREE_ROUTE ? (
         <Suspense fallback={null}>
-          <TreePage kind={(TREE_ROUTE[2] as TreeKind | undefined) ?? 'ideologies'} locale={TREE_ROUTE[1] ? 'en' : 'pt'} />
+          <TreePage kind={(TREE_ROUTE[2] as TreeKind | undefined) ?? 'ideologies'} locale={TREE_ROUTE[1] ? (TREE_ROUTE[1].slice(0, 2) as TreeLocale) : 'pt'} />
         </Suspense>
       ) : (
         <App />

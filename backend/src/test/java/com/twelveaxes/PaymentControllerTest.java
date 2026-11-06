@@ -212,6 +212,28 @@ class PaymentControllerTest {
     }
 
     @Test
+    void anyLanguageOtherThanPortugueseIsChargedInDollars() throws Exception {
+        // USD sem preco neste teste: 404 prova que "es" e idiomas futuros nao caem em reais.
+        for (String lang : List.of("es", "fr")) {
+            mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
+                            .content(checkoutBody(VECTOR, lang, RETURN_URL, Map.of())))
+                    .andExpect(status().isNotFound());
+        }
+        assertThat(GATEWAY.creates).isEmpty();
+    }
+
+    @Test
+    void portugueseVariantsAndMissingLanguageAreChargedInReais() throws Exception {
+        for (String lang : List.of("pt", "pt-BR", "PT", "")) {
+            GATEWAY.reset();
+            mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
+                            .content(checkoutBody(VECTOR, lang, RETURN_URL, Map.of())))
+                    .andExpect(status().isOk());
+            assertThat(GATEWAY.creates.getFirst().currency()).isEqualTo("BRL");
+        }
+    }
+
+    @Test
     void unlockBySessionIssuesTokenForThatVector() throws Exception {
         String vectorHash = hashOf(VECTOR);
         GATEWAY.bySession.put(SESSION, new PaymentGateway.PaidPayment("pi_3Paid", vectorHash, false));
