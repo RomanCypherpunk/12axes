@@ -30,7 +30,7 @@ interface Props {
   governmentSwaps?: GovernmentSwaps;
   /** Quem o usuário achou na busca, para o cargo trocado por alguém fora das sugestões. */
   governmentPicks?: GovernmentPicks;
-  onGovernmentSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void;
+  onGovernmentSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch, others?: Record<string, string>) => void;
 }
 
 type State = { status: 'loading' } | { status: 'error' } | { status: 'ready'; report: PremiumReport };

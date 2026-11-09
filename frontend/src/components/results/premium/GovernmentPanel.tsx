@@ -5,7 +5,7 @@ import type { GovernmentSeat, PersonalityMatch } from '../../../types/quiz';
 import { buildSeatRole, holderPositions, selectRoleAxes, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
 import { useUserAxes } from '../MatchInsight';
-import { swapOptions } from '../../../utils/governmentSwaps';
+import { displacedSwap, swapOptions } from '../../../utils/governmentSwaps';
 import { ProfileSheet } from '../ProfileSheet';
 import { GovernmentSwapSheet } from './GovernmentSwapSheet';
 import { SeatIcon } from './SeatIcon';
@@ -133,7 +133,7 @@ export function GovernmentPanel({
   /** Cargos que o usuário trocou (cargo -> id da escolhida). */
   swaps?: Record<string, string>;
   /** Troca quem ocupa um cargo; `null` volta à sugestão. Sem isto o governo não é trocável (o convite e o PDF). */
-  onSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void;
+  onSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch, others?: Record<string, string>) => void;
 }) {
   const [swapping, setSwapping] = useState<SeatKey | null>(null);
   const [open, setOpen] = useState<SeatKey | null>(null);
@@ -260,10 +260,11 @@ export function GovernmentPanel({
           options={swapOptions(seats, swapping)}
           swapped={Boolean(swaps[swapping])}
           category={category}
-          takenIds={seats.map((item) => item.holder.personalityId)}
+          heldBy={Object.fromEntries(seats.map((item) => [item.holder.personalityId, { seatKey: item.seatKey, holder: item.holder }]))}
           userPercents={user ? user.axes.map((axis) => user.results.get(axis.id)?.leftPercent ?? 50) : null}
           onPick={(id, found) => {
-            onSwap(swapping, id, found);
+            // Quem já ocupa outra cadeira muda de lugar, e a cadeira que ele deixa passa à próxima figura mais compatível.
+            onSwap(swapping, id, found, displacedSwap(seats, swapping, id));
             setSwapping(null);
           }}
           onClose={() => setSwapping(null)}

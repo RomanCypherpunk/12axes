@@ -23,6 +23,20 @@ export function swapOptions(seats: readonly GovernmentSeat[], seatKey: string): 
 }
 
 /**
+ * Quem já ocupa outra cadeira também pode ser escolhido: ele muda de lugar e a cadeira que ele deixa fica com a próxima
+ * figura mais compatível da categoria dela (que não esteja em nenhuma cadeira depois da mudança). Devolve a troca dessa
+ * cadeira ({ cargo: id }) ou nada quando a pessoa não ocupa outra cadeira ou não sobra ninguém para ocupá-la.
+ */
+export function displacedSwap(seats: readonly GovernmentSeat[], targetSeatKey: string, personalityId: string): GovernmentSwaps | undefined {
+  const left = seats.find((seat) => seat.seatKey !== targetSeatKey && seat.holder.personalityId === personalityId);
+  if (!left) return undefined;
+  const taken = new Set(seats.filter((seat) => seat.seatKey !== targetSeatKey && seat.seatKey !== left.seatKey).map((seat) => seat.holder.personalityId));
+  taken.add(personalityId);
+  const replacement = left.candidates.find((candidate) => !taken.has(candidate.personalityId));
+  return replacement ? { [left.seatKey]: replacement.personalityId } : undefined;
+}
+
+/**
  * Aplica as trocas do usuário ao governo ideal do relatório. Cada cargo fica com a escolha do usuário (quando ela é uma
  * das opções dele) ou com o titular sugerido. Se a mesma pessoa cairia em duas cadeiras, a troca é desfeita e o cargo
  * volta ao sugerido. O resultado não depende da ordem dos cargos: dois cargos podem trocar de pessoas entre si.

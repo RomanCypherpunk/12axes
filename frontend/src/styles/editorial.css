@@ -1832,6 +1832,7 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-gov-swap-search input{width:100%;box-sizing:border-box;padding:11px 14px;border:1px solid var(--borda);border-radius:14px;background:var(--superficie);color:var(--tinta);font:inherit;font-size:15px}
 .e-gov-swap-search input:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
 .e-gov-swap-search button:disabled{opacity:.6;cursor:wait}
+.e-gov-swap-search .e-gov-swap-held{color:var(--cat);font-weight:600}
 
 /* Governo ideal pago no celular: o líder sozinho no topo e depois em pares (vice e economia, educação e estratégia, filosofia e social, indústria e cultura), cada um com o ícone do cargo, o cargo, o rosto e o nome; a mesa só aparece no computador */
 .e-gov-grid{display:none;list-style:none;margin:14px 0 0;padding:0}

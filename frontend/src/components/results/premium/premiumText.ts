@@ -26,6 +26,8 @@ interface PremiumText {
     none: string;
     swapped: string;
     searchLabel: string;
+    /** Quem já ocupa outro cargo: a busca avisa que ele troca de lugar. */
+    holdsNow: (seat: string) => string;
     searchPlaceholder: string;
     searchNone: string;
     searchError: string;
@@ -77,6 +79,7 @@ const pt: PremiumText = {
     none: 'Não há outras figuras desta categoria para trocar.',
     swapped: 'Trocado por você',
     searchLabel: 'Ou busque qualquer outra figura',
+    holdsNow: (seat) => `Hoje: ${seat}. Troca de lugar.`,
     searchPlaceholder: 'Digite um nome',
     searchNone: 'Ninguém encontrado com esse nome.',
     searchError: 'Não foi possível buscar agora. Tente de novo em instantes.',
@@ -99,7 +102,7 @@ const pt: PremiumText = {
   },
   roleSubject: null,
   governmentWhy: (area, pct) => `Ocupa o cargo por ser a figura mais próxima de você na categoria ${area}: ${pct}% de compatibilidade.`,
-  governmentWhySwapped: (pct) => `Escolhido por você para o cargo: ${pct}% de compatibilidade com o seu resultado.`,
+  governmentWhySwapped: (pct) => `Entrou no cargo pela sua troca: ${pct}% de compatibilidade com o seu resultado.`,
   timelineTitle: 'Sua linha do tempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antiguidade',
@@ -160,6 +163,7 @@ const en: PremiumText = {
     none: 'There are no other figures in this category to swap in.',
     swapped: 'Swapped by you',
     searchLabel: 'Or search for any other figure',
+    holdsNow: (seat) => `Now: ${seat}. Swaps places.`,
     searchPlaceholder: 'Type a name',
     searchNone: 'Nobody found with that name.',
     searchError: 'Could not search right now. Please try again in a moment.',
@@ -182,7 +186,7 @@ const en: PremiumText = {
   },
   roleSubject: 'they',
   governmentWhy: (area, pct) => `Holds the seat as the figure closest to you in the ${area} category: ${pct}% compatibility.`,
-  governmentWhySwapped: (pct) => `Picked by you for the seat: ${pct}% compatibility with your result.`,
+  governmentWhySwapped: (pct) => `Took the seat through your swap: ${pct}% compatibility with your result.`,
   timelineTitle: 'Your ideological timeline',
   timelineEraNames: {
     antiguidade: 'Antiquity',
@@ -243,6 +247,7 @@ const es: PremiumText = {
     none: 'No hay otras figuras de esta categoría para cambiar.',
     swapped: 'Cambiado por ti',
     searchLabel: 'O busca cualquier otra figura',
+    holdsNow: (seat) => `Hoy: ${seat}. Cambia de lugar.`,
     searchPlaceholder: 'Escribe un nombre',
     searchNone: 'No se encontró a nadie con ese nombre.',
     searchError: 'No se pudo buscar ahora. Inténtalo de nuevo en un momento.',
@@ -265,7 +270,7 @@ const es: PremiumText = {
   },
   roleSubject: null,
   governmentWhy: (area, pct) => `Ocupa el cargo por ser la figura más cercana a ti en la categoría ${area}: ${pct}% de compatibilidad.`,
-  governmentWhySwapped: (pct) => `Elegido por ti para el cargo: ${pct}% de compatibilidad con tu resultado.`,
+  governmentWhySwapped: (pct) => `Llegó al cargo por tu cambio: ${pct}% de compatibilidad con tu resultado.`,
   timelineTitle: 'Tu línea del tiempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antigüedad',

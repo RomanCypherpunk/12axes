@@ -156,7 +156,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
     setGovernmentPicks(loadGovernmentPicks(vectorKey));
   }, [vectorKey]);
   const swapGovernmentSeat = useCallback(
-    (seatKey: string, personalityId: string | null, found?: PersonalityMatch) => {
+    (seatKey: string, personalityId: string | null, found?: PersonalityMatch, others?: GovernmentSwaps) => {
       if (personalityId && found) {
         setGovernmentPicks((current) => {
           const next = { ...current, [personalityId]: found };
@@ -165,7 +165,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         });
       }
       setGovernmentSwaps((current) => {
-        const next = { ...current };
+        const next = { ...current, ...others };
         if (personalityId) next[seatKey] = personalityId;
         else delete next[seatKey];
         saveGovernmentSwaps(vectorKey, next);

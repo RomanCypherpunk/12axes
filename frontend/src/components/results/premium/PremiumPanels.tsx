@@ -17,7 +17,7 @@ export function premiumPanels(
   /** O botão de compartilhar o cartão de cada seção que tem um (só na página; o PDF não passa nada). */
   shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode,
   /** Troca de quem ocupa cada cargo do governo ideal (só na página; o PDF não passa nada). */
-  government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void }
+  government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch, others?: Record<string, string>) => void }
 ): { id: string; node: ReactNode }[] {
   return [
     {

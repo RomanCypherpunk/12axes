@@ -17,8 +17,8 @@ interface Props {
   /** O cargo está ocupado por uma escolha do usuário, não pela sugestão. */
   swapped: boolean;
   category: string;
-  /** Quem já ocupa alguma cadeira (a busca não oferece essas pessoas de novo). */
-  takenIds: string[];
+  /** Quem ocupa cada cadeira hoje (id -> cargo e pessoa): a busca mostra esses também, e escolhê-los troca de lugar. */
+  heldBy: Record<string, { seatKey: GovernmentSeat['seatKey']; holder: PersonalityMatch }>;
   /** Posição do usuário em cada eixo, na ordem dos eixos, para pedir a compatibilidade de quem ele buscar; sem ela não há busca. */
   userPercents: number[] | null;
   /** `found` só vem quando a pessoa foi achada na busca (as sugestões já têm todos os dados no relatório). */
@@ -29,7 +29,7 @@ interface Props {
 const pct = (match: PersonalityMatch) => Math.round(match.compatibility);
 
 /** Escolher outra figura da mesma categoria para um cargo do governo ideal. */
-export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds, userPercents, onPick, onClose }: Props) {
+export function GovernmentSwapSheet({ seat, options, swapped, category, heldBy, userPercents, onPick, onClose }: Props) {
   const seatName = P.seats[seat.seatKey];
   const categoryName = t.personalityCategories[seat.category as keyof typeof t.personalityCategories] ?? seat.category;
   const [query, setQuery] = useState('');
@@ -61,16 +61,22 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
   }, [canSearch]);
   const found = useMemo(() => {
     if (!Array.isArray(catalog) || !query.trim()) return [];
-    const taken = new Set(takenIds);
+    // Só a pessoa que já ocupa este cargo fica de fora; as que ocupam outro aparecem e trocam de lugar.
     return searchItems(
-      catalog.filter((item) => !taken.has(item.id)),
+      catalog.filter((item) => item.id !== seat.holder.personalityId),
       query,
       6
     );
-  }, [catalog, query, takenIds]);
+  }, [catalog, query, seat.holder.personalityId]);
 
   const pickFound = (item: CompareItem) => {
     if (!userPercents || busyId) return;
+    const held = heldBy[item.id];
+    if (held) {
+      // Já está no relatório com todos os dados: não precisa consultar.
+      onPick(item.id, held.holder);
+      return;
+    }
     setBusyId(item.id);
     setFailed(false);
     fetchCompare('personality', item.id, userPercents)
@@ -165,6 +171,7 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
                       <span>
                         <b>{item.name}</b>
                         <small>{item.caption}</small>
+                        {heldBy[item.id] && <small className="e-gov-swap-held">{P.governmentSwap.holdsNow(P.seats[heldBy[item.id].seatKey])}</small>}
                       </span>
                       {busyId === item.id && <em>{P.governmentSwap.searching}</em>}
                     </button>

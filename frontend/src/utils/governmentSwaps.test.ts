@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { GovernmentSeat, PersonalityMatch, PremiumReport } from '../types/quiz';
-import { applyGovernmentSwaps, SWAP_OPTIONS, swapOptions } from './governmentSwaps';
+import { applyGovernmentSwaps, displacedSwap, SWAP_OPTIONS, swapOptions } from './governmentSwaps';
 
 const person = (id: string, category = 'politico'): PersonalityMatch => ({ personalityId: id, name: id.toUpperCase(), category, compatibility: 90 }) as PersonalityMatch;
 const seat = (seatKey: GovernmentSeat['seatKey'], holder: string, candidates: string[], category = 'politico'): GovernmentSeat => ({
@@ -75,3 +75,27 @@ describe('applyGovernmentSwaps', () => {
     expect(next.idealGovernment.map((item) => item.holder.personalityId)).toEqual(['c', 'a', 'x']);
   });
 });
+
+describe('displacedSwap', () => {
+  it('a cadeira que a pessoa deixa passa à próxima mais compatível da categoria, fora de quem já ocupa cadeira', () => {
+    // x (economia) vai para o líder: o economista seguinte livre é y
+    expect(displacedSwap(seats, 'lider', 'x')).toEqual({ economia: 'y' });
+  });
+
+  it('líder e vice trocam de lugar: o vice passa a ser o antigo líder', () => {
+    expect(displacedSwap(seats, 'lider', 'b')).toEqual({ vice: 'a' });
+  });
+
+  it('pessoa que não ocupa outra cadeira, ou ninguém sobrando, não gera troca', () => {
+    expect(displacedSwap(seats, 'lider', 'zzz')).toBeUndefined();
+    const cramped = [seat('lider', 'a', ['a']), seat('economia', 'x', ['x'], 'economista')];
+    expect(displacedSwap(cramped, 'lider', 'x')).toBeUndefined();
+  });
+
+  it('as duas trocas juntas montam o governo certo', () => {
+    const picks = { x: seats[2].holder };
+    const next = applyGovernmentSwaps(report, { lider: 'x', economia: 'y' }, picks);
+    expect(next.idealGovernment.map((item) => item.holder.personalityId)).toEqual(['x', 'b', 'y']);
+  });
+});
+
