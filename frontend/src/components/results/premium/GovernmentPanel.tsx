@@ -71,9 +71,9 @@ export const place = (index: number) => {
 };
 
 /** A cadeira olha para a mesa: o encosto (y negativo) aponta para fora, na direção do assento. */
-function Chair({ x, y, degrees }: { x: number; y: number; degrees: number }) {
+function Chair({ x, y, degrees, style }: { x: number; y: number; degrees: number; style?: CSSProperties }) {
   return (
-    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${degrees + 90})`}>
+    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${degrees + 90})`} style={style}>
       <rect className="e-gov-chair-back" x="-19" y="-25" width="38" height="9" rx="4.5" />
       <rect className="e-gov-chair-seat" x="-18" y="-14" width="36" height="28" rx="9" />
     </g>
@@ -90,10 +90,13 @@ export const seatPosition = (face: { x: number; y: number }): CSSProperties => (
 export function GovernmentScene({
   category,
   seat,
+  chairStyle,
   children
 }: {
   category: string;
   seat: (key: SeatKey, face: { x: number; y: number }, side: string) => ReactNode;
+  /** Cor própria de cada cadeira (as variáveis `--cat`); sem isto todas seguem a cor da mesa. */
+  chairStyle?: (key: SeatKey) => CSSProperties | undefined;
   children?: ReactNode;
 }) {
   return (
@@ -104,7 +107,7 @@ export function GovernmentScene({
         <circle className="e-gov-table-ring" cx={CENTER.x} cy={CENTER.y} r={TABLE_R - 44} />
         {ORDER.map((key, index) => {
           const { chair, degrees } = place(index);
-          return <Chair key={key} x={chair.x} y={chair.y} degrees={degrees} />;
+          return <Chair key={key} x={chair.x} y={chair.y} degrees={degrees} style={chairStyle?.(key)} />;
         })}
       </svg>
       {ORDER.map((key, index) => {
@@ -138,6 +141,11 @@ export function GovernmentPanel({
   const openSeat = open ? byKey.get(open) : undefined;
   const roles = useRoleTexts();
   const user = useUserAxes();
+  // Cada cadeira, rosto e botão leva a cor do espectro de quem a ocupa (a mesa segue o do usuário).
+  const spectrumStyle = (key: SeatKey): CSSProperties | undefined => {
+    const spectrum = byKey.get(key)?.holder.spectrum;
+    return spectrum ? (catStyle(spectrum) as CSSProperties) : undefined;
+  };
   const roleAxes = roles && user ? selectRoleAxes(seats.map((seat) => ({ seatKey: seat.seatKey, vector: seat.holder.vector })), roles, user.results) : null;
 
   return (
@@ -147,12 +155,13 @@ export function GovernmentPanel({
       <div className="e-gov-desktop">
         <GovernmentScene
           category={category}
+          chairStyle={spectrumStyle}
           seat={(key, face, side) => {
             const seat = byKey.get(key);
             if (!seat) return null;
             return (
               <Fragment key={key}>
-                <button type="button" className={`e-gov-seat e-gov-${side}`} style={seatPosition(face)} aria-haspopup="dialog" onClick={() => setOpen(key)}>
+                <button type="button" className={`e-gov-seat e-gov-${side}`} style={{ ...seatPosition(face), ...spectrumStyle(key) }} aria-haspopup="dialog" onClick={() => setOpen(key)}>
                   <Portrait match={seat.holder} className="e-gov-face" />
                   <span className="e-gov-label">
                     <span className="e-gov-name">{seat.holder.name}</span>
@@ -163,7 +172,7 @@ export function GovernmentPanel({
                   <button
                     type="button"
                     className={swaps[key] ? 'e-gov-swap is-swapped' : 'e-gov-swap'}
-                    style={seatPosition(face)}
+                    style={{ ...seatPosition(face), ...spectrumStyle(key) }}
                     aria-haspopup="dialog"
                     aria-label={P.governmentSwap.aria(P.seats[key])}
                     title={P.governmentSwap.aria(P.seats[key])}
@@ -184,7 +193,7 @@ export function GovernmentPanel({
           const seat = byKey.get(key);
           if (!seat) return null;
           return (
-            <li key={key}>
+            <li key={key} style={spectrumStyle(key)}>
               <button type="button" className="e-gov-gcell" aria-haspopup="dialog" onClick={() => setOpen(key)}>
                 <SeatIcon seatKey={key} />
                 <small>{P.seats[key]}</small>

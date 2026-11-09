@@ -46,6 +46,7 @@ public class CompareService {
     private final QuizDataService dataService;
     private final ProfileMatchScorer scorer;
     private final ScoringService scoringService;
+    private final ProfileSpectrumService profileSpectrumService;
     private final IdeologyMatcherService ideologyMatcher;
     private final CountryMatcherService countryMatcher;
     private final PartyMatcherService partyMatcher;
@@ -57,7 +58,8 @@ public class CompareService {
             ScoringService scoringService,
             IdeologyMatcherService ideologyMatcher,
             CountryMatcherService countryMatcher,
-            PartyMatcherService partyMatcher
+            PartyMatcherService partyMatcher,
+            ProfileSpectrumService profileSpectrumService
     ) {
         this.dataService = dataService;
         this.scorer = scorer;
@@ -65,6 +67,7 @@ public class CompareService {
         this.ideologyMatcher = ideologyMatcher;
         this.countryMatcher = countryMatcher;
         this.partyMatcher = partyMatcher;
+        this.profileSpectrumService = profileSpectrumService;
     }
 
     /** Todos os perfis pesquisaveis, ja filtrados pela religiao do usuario (mesma regra do resultado). */
@@ -89,7 +92,8 @@ public class CompareService {
     public CompareDetail compare(String type, String id, Map<String, Double> userVector, String lang) {
         Resolved target = resolve(type, id, QuizDataService.normalizeLang(lang));
         return new CompareDetail(target.item(), target.description(),
-                scorer.compatibility(userVector, target.vector()), target.vector(), target.religions());
+                scorer.compatibility(userVector, target.vector()), target.vector(), target.religions(),
+                profileSpectrumService.categoryOf(target.vector(), lang));
     }
 
     /**

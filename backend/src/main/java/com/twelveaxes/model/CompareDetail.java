@@ -14,6 +14,8 @@ public record CompareDetail(
         // Vetor de 12 eixos (leftPercent) do perfil comparado.
         Map<String, Double> vector,
         // Religioes do perfil no catalogo (so os valores do JSON, sem o marcador "only"); vazia quando nao ha vinculo.
-        List<String> religions
+        List<String> religions,
+        // Espectro do perfil (categoria da ideologia mais proxima do vetor dele): a cor dele na tela.
+        String spectrum
 ) {
 }

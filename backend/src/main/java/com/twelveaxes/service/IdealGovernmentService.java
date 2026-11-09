@@ -38,9 +38,11 @@ public class IdealGovernmentService {
     public static final int CANDIDATES_PER_SEAT = 6;
 
     private final PersonalityMatcherService personalityMatcherService;
+    private final ProfileSpectrumService profileSpectrumService;
 
-    public IdealGovernmentService(PersonalityMatcherService personalityMatcherService) {
+    public IdealGovernmentService(PersonalityMatcherService personalityMatcherService, ProfileSpectrumService profileSpectrumService) {
         this.personalityMatcherService = personalityMatcherService;
+        this.profileSpectrumService = profileSpectrumService;
     }
 
     public List<GovernmentSeat> build(List<AxisResult> axes, String lang, String religion) {
@@ -56,9 +58,14 @@ public class IdealGovernmentService {
             List<PersonalityMatch> candidates = ranking.stream()
                     .filter(match -> seat.category().equals(match.category()))
                     .limit(CANDIDATES_PER_SEAT)
+                    .map(match -> withSpectrum(match, lang))
                     .toList();
-            seats.add(new GovernmentSeat(seat.key(), seat.category(), holder, candidates));
+            seats.add(new GovernmentSeat(seat.key(), seat.category(), withSpectrum(holder, lang), candidates));
         }
         return List.copyOf(seats);
+    }
+
+    private PersonalityMatch withSpectrum(PersonalityMatch match, String lang) {
+        return match.vector() == null || match.vector().isEmpty() ? match : match.withSpectrum(profileSpectrumService.categoryOf(match.vector(), lang));
     }
 }

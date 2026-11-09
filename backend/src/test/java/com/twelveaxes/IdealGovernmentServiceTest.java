@@ -65,6 +65,19 @@ class IdealGovernmentServiceTest {
     }
 
     @Test
+    void everyHolderAndCandidateCarriesItsOwnSpectrum() {
+        for (GovernmentSeat seat : idealGovernmentService.build(axes(), "pt", null)) {
+            assertThat(seat.holder().spectrum()).as(seat.seatKey() + " titular").isNotBlank();
+            assertThat(seat.candidates()).as(seat.seatKey()).extracting(PersonalityMatch::spectrum).doesNotContainNull();
+            // O espectro depende so do vetor da pessoa: o titular tem o mesmo da sua entrada na lista de candidatos.
+            PersonalityMatch same = seat.candidates().stream()
+                    .filter(candidate -> candidate.personalityId().equals(seat.holder().personalityId()))
+                    .findFirst().orElseThrow();
+            assertThat(same.spectrum()).isEqualTo(seat.holder().spectrum());
+        }
+    }
+
+    @Test
     void holderIsTheMostCompatibleOfThatCategory() {
         List<AxisResult> axes = axes();
         List<PersonalityMatch> ranking = personalityMatcherService.findAll(axes, "pt", null);

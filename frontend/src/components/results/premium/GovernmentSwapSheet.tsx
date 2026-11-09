@@ -85,7 +85,8 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
           description: detail.description,
           imagePath: item.imagePath ?? '',
           compatibility: detail.compatibility,
-          vector: detail.vector
+          vector: detail.vector,
+          spectrum: detail.spectrum ?? null
         });
       })
       .catch(() => {

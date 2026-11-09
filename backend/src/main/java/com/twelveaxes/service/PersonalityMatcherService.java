@@ -167,7 +167,8 @@ public class PersonalityMatcherService {
                 personality.imageNote(),
                 candidate.compatibility(),
                 candidate.compatibilityPercentile(),
-                targetVectorFor(personality)
+                targetVectorFor(personality),
+                null
         );
     }
 

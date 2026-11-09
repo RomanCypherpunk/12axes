@@ -17,6 +17,14 @@ public record PersonalityMatch(
         double compatibilityPercentile,
         // Vetor de 12 eixos (leftPercent) da personalidade, usado pelo front para
         // mostrar os eixos que aproximam o usuario dela.
-        Map<String, Double> vector
+        Map<String, Double> vector,
+        // Espectro (categoria da ideologia mais proxima do vetor dele): define a cor dele na tela. So o governo ideal
+        // preenche; nas demais listas fica nulo.
+        String spectrum
 ) {
+
+    public PersonalityMatch withSpectrum(String value) {
+        return new PersonalityMatch(personalityId, name, role, category, lifespan, description, imagePath,
+                imageSourceName, imageSourceUrl, imageNote, compatibility, compatibilityPercentile, vector, value);
+    }
 }
