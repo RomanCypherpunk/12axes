@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useState, type ReactNode } from 'react';
 import { fetchPremiumReport } from '../../../services/premiumApi';
 import { ApiError } from '../../../services/quizApi';
-import type { Axis, AxisResult, PremiumReport } from '../../../types/quiz';
+import type { Axis, AxisResult, PersonalityMatch, PremiumReport } from '../../../types/quiz';
 import type { SavedAnswers } from '../../../utils/quizProgress';
-import { applyGovernmentSwaps, type GovernmentSwaps } from '../../../utils/governmentSwaps';
+import { applyGovernmentSwaps, type GovernmentPicks, type GovernmentSwaps } from '../../../utils/governmentSwaps';
 import type { SeatKey } from './GovernmentPanel';
 import { premiumPanels } from './PremiumPanels';
 import { SaveAccessLink } from './SaveAccessLink';
@@ -28,13 +28,15 @@ interface Props {
   shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode;
   /** As trocas do governo ideal feitas pelo usuário e como trocar (ou voltar à sugestão, com null). */
   governmentSwaps?: GovernmentSwaps;
-  onGovernmentSwap?: (seatKey: SeatKey, personalityId: string | null) => void;
+  /** Quem o usuário achou na busca, para o cargo trocado por alguém fora das sugestões. */
+  governmentPicks?: GovernmentPicks;
+  onGovernmentSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void;
 }
 
 type State = { status: 'loading' } | { status: 'error' } | { status: 'ready'; report: PremiumReport };
 
 /** Conteúdo do Relatório Completo: carrega do endpoint protegido e mostra as seções pagas. */
-export default function PremiumReportSection({ vector, answers, token, religion, axes, results, devOpen = false, onReport, onDenied, shareButton, governmentSwaps, onGovernmentSwap }: Props) {
+export default function PremiumReportSection({ vector, answers, token, religion, axes, results, devOpen = false, onReport, onDenied, shareButton, governmentSwaps, governmentPicks, onGovernmentSwap }: Props) {
   const [state, setState] = useState<State>({ status: 'loading' });
   const [attempt, setAttempt] = useState(0);
 
@@ -88,7 +90,7 @@ export default function PremiumReportSection({ vector, answers, token, religion,
     <>
       {devOpen && <p className="e-prem-dev">{P.devBadge}</p>}
       {premiumPanels(
-        governmentSwaps ? applyGovernmentSwaps(report, governmentSwaps) : report,
+        governmentSwaps ? applyGovernmentSwaps(report, governmentSwaps, governmentPicks) : report,
         axes,
         results,
         shareButton,

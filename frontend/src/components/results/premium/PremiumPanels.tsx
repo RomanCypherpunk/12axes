@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { Axis, AxisResult, PremiumReport } from '../../../types/quiz';
+import type { Axis, AxisResult, PersonalityMatch, PremiumReport } from '../../../types/quiz';
 import { AxisAnalysisPanel } from './AxisAnalysisPanel';
 import { DisagreementPanel } from './DisagreementPanel';
 import { GovernmentPanel, type SeatKey } from './GovernmentPanel';
@@ -17,7 +17,7 @@ export function premiumPanels(
   /** O botão de compartilhar o cartão de cada seção que tem um (só na página; o PDF não passa nada). */
   shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode,
   /** Troca de quem ocupa cada cargo do governo ideal (só na página; o PDF não passa nada). */
-  government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null) => void }
+  government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void }
 ): { id: string; node: ReactNode }[] {
   return [
     {

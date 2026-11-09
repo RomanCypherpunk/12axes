@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSProperties, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { LANG, t } from '../../i18n';
-import type { Axis, AxisResult, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
+import type { Axis, AxisResult, PersonalityMatch, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
 import { PdfReport } from '../report/PdfReport';
 import '../../styles/report.css';
@@ -17,7 +17,7 @@ import { PersonalitiesSection } from '../results/PersonalitiesSection';
 import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
-import { applyGovernmentSwaps, loadGovernmentSwaps, saveGovernmentSwaps, type GovernmentSwaps } from '../../utils/governmentSwaps';
+import { applyGovernmentSwaps, loadGovernmentPicks, loadGovernmentSwaps, saveGovernmentPicks, saveGovernmentSwaps, type GovernmentPicks, type GovernmentSwaps } from '../../utils/governmentSwaps';
 import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
@@ -150,11 +150,20 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   const [premiumReport, setPremiumReport] = useState<PremiumReport | null>(null);
   // Quem o usuário pôs no lugar da sugestão em cada cargo do governo ideal: vale para a página, o PDF e o cartão, e fica guardado.
   const [governmentSwaps, setGovernmentSwaps] = useState<GovernmentSwaps>(() => loadGovernmentSwaps(vectorKey));
+  const [governmentPicks, setGovernmentPicks] = useState<GovernmentPicks>(() => loadGovernmentPicks(vectorKey));
   useEffect(() => {
     setGovernmentSwaps(loadGovernmentSwaps(vectorKey));
+    setGovernmentPicks(loadGovernmentPicks(vectorKey));
   }, [vectorKey]);
   const swapGovernmentSeat = useCallback(
-    (seatKey: string, personalityId: string | null) => {
+    (seatKey: string, personalityId: string | null, found?: PersonalityMatch) => {
+      if (personalityId && found) {
+        setGovernmentPicks((current) => {
+          const next = { ...current, [personalityId]: found };
+          saveGovernmentPicks(vectorKey, next);
+          return next;
+        });
+      }
       setGovernmentSwaps((current) => {
         const next = { ...current };
         if (personalityId) next[seatKey] = personalityId;
@@ -198,8 +207,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   const premiumToken = access.state.status === 'unlocked' ? access.state.token : null;
   const hasPremium = (PREMIUM_DEV_OPEN && !previewAsFree) || premiumToken !== null;
   const shownReport = useMemo(
-    () => (hasPremium && premiumReport ? applyGovernmentSwaps(premiumReport, governmentSwaps) : null),
-    [hasPremium, premiumReport, governmentSwaps]
+    () => (hasPremium && premiumReport ? applyGovernmentSwaps(premiumReport, governmentSwaps, governmentPicks) : null),
+    [hasPremium, premiumReport, governmentSwaps, governmentPicks]
   );
 
   // O PDF é do Relatório completo: sem acesso (e com a compra ligada), o botão abre o modal de compra em vez de imprimir.
@@ -377,6 +386,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
                 onDenied={access.revoke}
                 shareButton={shareButton}
                 governmentSwaps={governmentSwaps}
+                governmentPicks={governmentPicks}
                 onGovernmentSwap={swapGovernmentSeat}
               />
             </Suspense>

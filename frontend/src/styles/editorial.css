@@ -1827,4 +1827,8 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-gov-swap-list small{font-size:12.5px;line-height:1.3;color:var(--texto-suave)}
 .e-gov-swap-list em{color:var(--cat);flex:none}
 .e-gov-swap-none{margin:0;font-size:14.5px;color:var(--texto-suave)}
-.e-gov-swap-reset{justify-self:start}
+.e-gov-swap-search{display:grid;gap:8px;padding-top:4px}
+.e-gov-swap-search label{font-size:13px;font-weight:700;color:var(--texto-suave)}
+.e-gov-swap-search input{width:100%;box-sizing:border-box;padding:11px 14px;border:1px solid var(--borda);border-radius:14px;background:var(--superficie);color:var(--tinta);font:inherit;font-size:15px}
+.e-gov-swap-search input:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-gov-swap-search button:disabled{opacity:.6;cursor:wait}

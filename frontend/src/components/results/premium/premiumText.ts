@@ -24,8 +24,12 @@ interface PremiumText {
     lead: (category: string) => string;
     current: string;
     none: string;
-    reset: string;
     swapped: string;
+    searchLabel: (category: string) => string;
+    searchPlaceholder: string;
+    searchNone: string;
+    searchError: string;
+    searching: string;
   };
   governmentRolesLead: string;
   /** Como cada parágrafo do cargo abre, por eixo ("Politicamente,", "No poder,"...). */
@@ -33,6 +37,8 @@ interface PremiumText {
   /** Sujeito dos parágrafos seguintes ao primeiro, no lugar do nome; nulo quando o idioma o omite. */
   roleSubject: string | null;
   governmentWhy: (area: string, pct: number) => string;
+  /** Cargo ocupado por uma escolha do usuário: não dá para dizer que é a figura mais próxima. */
+  governmentWhySwapped: (pct: number) => string;
   timelineTitle: string;
   timelineEraNames: Record<'antiguidade' | 'medieval' | 'moderna' | 'xix' | 'xx' | 'xxi', string>;
   timelineRange: (from: number | null, to: number | null) => string;
@@ -69,8 +75,12 @@ const pt: PremiumText = {
     lead: (category) => `As figuras de ${category} mais compatíveis com você depois da atual. Escolha uma para montar o seu governo ideal.`,
     current: 'Atual',
     none: 'Não há outras figuras desta categoria para trocar.',
-    reset: 'Voltar à sugestão',
-    swapped: 'Trocado por você'
+    swapped: 'Trocado por você',
+    searchLabel: (category) => `Ou busque outra figura de ${category}`,
+    searchPlaceholder: 'Digite um nome',
+    searchNone: 'Ninguém com esse nome nesta categoria.',
+    searchError: 'Não foi possível buscar agora. Tente de novo em instantes.',
+    searching: 'Buscando…'
   },
   governmentRolesLead: 'Cada cargo é descrito a partir das suas posições nos eixos que mais pesam nele, para você ver por que o resultado saiu assim.',
   roleAxis: {
@@ -89,6 +99,7 @@ const pt: PremiumText = {
   },
   roleSubject: null,
   governmentWhy: (area, pct) => `Ocupa o cargo por ser a figura mais próxima de você na categoria ${area}: ${pct}% de compatibilidade.`,
+  governmentWhySwapped: (pct) => `Escolhido por você para o cargo: ${pct}% de compatibilidade com o seu resultado.`,
   timelineTitle: 'Sua linha do tempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antiguidade',
@@ -147,8 +158,12 @@ const en: PremiumText = {
     lead: (category) => `The ${category} figures closest to you after the current one. Pick one to build your ideal government.`,
     current: 'Current',
     none: 'There are no other figures in this category to swap in.',
-    reset: 'Back to the suggestion',
-    swapped: 'Swapped by you'
+    swapped: 'Swapped by you',
+    searchLabel: (category) => `Or search for another ${category} figure`,
+    searchPlaceholder: 'Type a name',
+    searchNone: 'Nobody with that name in this category.',
+    searchError: 'Could not search right now. Please try again in a moment.',
+    searching: 'Searching…'
   },
   governmentRolesLead: 'Each seat is described from your positions on the axes that weigh most in it, so you can see why the result came out this way.',
   roleAxis: {
@@ -167,6 +182,7 @@ const en: PremiumText = {
   },
   roleSubject: 'they',
   governmentWhy: (area, pct) => `Holds the seat as the figure closest to you in the ${area} category: ${pct}% compatibility.`,
+  governmentWhySwapped: (pct) => `Picked by you for the seat: ${pct}% compatibility with your result.`,
   timelineTitle: 'Your ideological timeline',
   timelineEraNames: {
     antiguidade: 'Antiquity',
@@ -225,8 +241,12 @@ const es: PremiumText = {
     lead: (category) => `Las figuras de ${category} más cercanas a ti después de la actual. Elige una para armar tu gobierno ideal.`,
     current: 'Actual',
     none: 'No hay otras figuras de esta categoría para cambiar.',
-    reset: 'Volver a la sugerencia',
-    swapped: 'Cambiado por ti'
+    swapped: 'Cambiado por ti',
+    searchLabel: (category) => `O busca otra figura de ${category}`,
+    searchPlaceholder: 'Escribe un nombre',
+    searchNone: 'Nadie con ese nombre en esta categoría.',
+    searchError: 'No se pudo buscar ahora. Inténtalo de nuevo en un momento.',
+    searching: 'Buscando…'
   },
   governmentRolesLead: 'Cada cargo se describe a partir de tus posiciones en los ejes que más pesan en él, para que veas por qué el resultado salió así.',
   roleAxis: {
@@ -245,6 +265,7 @@ const es: PremiumText = {
   },
   roleSubject: null,
   governmentWhy: (area, pct) => `Ocupa el cargo por ser la figura más cercana a ti en la categoría ${area}: ${pct}% de compatibilidad.`,
+  governmentWhySwapped: (pct) => `Elegido por ti para el cargo: ${pct}% de compatibilidad con tu resultado.`,
   timelineTitle: 'Tu línea del tiempo ideológica',
   timelineEraNames: {
     antiguidade: 'Antigüedad',

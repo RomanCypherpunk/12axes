@@ -57,6 +57,20 @@ describe('applyGovernmentSwaps', () => {
     expect(swappedAround.idealGovernment.map((item) => item.holder.personalityId)).toEqual(['b', 'a', 'x']);
   });
 
+  it('aceita quem veio da busca, só no cargo da própria categoria', () => {
+    const picks = { q: person('q'), p: person('p', 'economista') };
+    expect(applyGovernmentSwaps(report, { lider: 'q' }, picks).idealGovernment.map((item) => item.holder.personalityId)).toEqual(['q', 'b', 'x']);
+    // p é economista: não pode ocupar o cargo de líder (politico), mas pode o de economia
+    expect(applyGovernmentSwaps(report, { lider: 'p' }, picks).idealGovernment[0].holder.personalityId).toBe('a');
+    expect(applyGovernmentSwaps(report, { economia: 'p' }, picks).idealGovernment[2].holder.personalityId).toBe('p');
+  });
+
+  it('quem veio da busca e já ocupa outra cadeira não duplica', () => {
+    const picks = { q: person('q') };
+    const next = applyGovernmentSwaps(report, { lider: 'q', vice: 'q' }, picks);
+    expect(next.idealGovernment.map((item) => item.holder.personalityId)).toEqual(['q', 'b', 'x']);
+  });
+
   it('quem sai de uma cadeira pode entrar em outra', () => {
     const next = applyGovernmentSwaps(report, { lider: 'c', vice: 'a' });
     expect(next.idealGovernment.map((item) => item.holder.personalityId)).toEqual(['c', 'a', 'x']);

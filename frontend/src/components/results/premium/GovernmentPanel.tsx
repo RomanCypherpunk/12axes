@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import { LANG, t } from '../../../i18n';
 import { Portrait } from '../PersonalitiesSection';
-import type { GovernmentSeat } from '../../../types/quiz';
+import type { GovernmentSeat, PersonalityMatch } from '../../../types/quiz';
 import { buildSeatRole, holderPositions, selectRoleAxes, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
 import { useUserAxes } from '../MatchInsight';
@@ -129,7 +129,7 @@ export function GovernmentPanel({
   /** Cargos que o usuário trocou (cargo -> id da escolhida). */
   swaps?: Record<string, string>;
   /** Troca quem ocupa um cargo; `null` volta à sugestão. Sem isto o governo não é trocável (o convite e o PDF). */
-  onSwap?: (seatKey: SeatKey, personalityId: string | null) => void;
+  onSwap?: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch) => void;
 }) {
   const [swapping, setSwapping] = useState<SeatKey | null>(null);
   const [open, setOpen] = useState<SeatKey | null>(null);
@@ -228,7 +228,9 @@ export function GovernmentPanel({
                       </p>
                     ))}
                     <p className="e-gov-rwhy">
-                      {P.governmentWhy(t.personalityCategories[seat.category as keyof typeof t.personalityCategories] ?? seat.category, Math.round(seat.holder.compatibility))}
+                      {swaps[key]
+                        ? P.governmentWhySwapped(Math.round(seat.holder.compatibility))
+                        : P.governmentWhy(t.personalityCategories[seat.category as keyof typeof t.personalityCategories] ?? seat.category, Math.round(seat.holder.compatibility))}
                     </p>
                   </div>
                 </li>
@@ -246,12 +248,10 @@ export function GovernmentPanel({
           options={swapOptions(seats, swapping)}
           swapped={Boolean(swaps[swapping])}
           category={category}
-          onPick={(id) => {
-            onSwap(swapping, id);
-            setSwapping(null);
-          }}
-          onReset={() => {
-            onSwap(swapping, null);
+          takenIds={seats.map((item) => item.holder.personalityId)}
+          userPercents={user ? user.axes.map((axis) => user.results.get(axis.id)?.leftPercent ?? 50) : null}
+          onPick={(id, found) => {
+            onSwap(swapping, id, found);
             setSwapping(null);
           }}
           onClose={() => setSwapping(null)}

@@ -6,6 +6,9 @@ export const SWAP_OPTIONS = 3;
 /** Cargo (seatKey) -> id da personalidade escolhida no lugar da sugerida. */
 export type GovernmentSwaps = Record<string, string>;
 
+/** Quem o usuário achou na busca (fora das sugestões do cargo): id -> dados, para montar o governo sem nova consulta. */
+export type GovernmentPicks = Record<string, PersonalityMatch>;
+
 /**
  * As figuras da categoria do cargo, da mais para a menos compatível, para trocar quem o ocupa: sem a atual e sem quem já
  * ocupa outra cadeira (o vice sai da mesma categoria do líder e não pode repetir).
@@ -24,14 +27,16 @@ export function swapOptions(seats: readonly GovernmentSeat[], seatKey: string): 
  * das opções dele) ou com o titular sugerido. Se a mesma pessoa cairia em duas cadeiras, a troca é desfeita e o cargo
  * volta ao sugerido. O resultado não depende da ordem dos cargos: dois cargos podem trocar de pessoas entre si.
  */
-export function applyGovernmentSwaps(report: PremiumReport, swaps: GovernmentSwaps): PremiumReport {
+export function applyGovernmentSwaps(report: PremiumReport, swaps: GovernmentSwaps, picks: GovernmentPicks = {}): PremiumReport {
   if (Object.keys(swaps).length === 0) return report;
   const seats = report.idealGovernment;
   const wanted = new Map<string, PersonalityMatch>();
   const swapped = new Set<string>();
   for (const seat of seats) {
     const choice = swaps[seat.seatKey];
-    const picked = choice ? seat.candidates.find((candidate) => candidate.personalityId === choice) : undefined;
+    const found = choice ? picks[choice] : undefined;
+    // Quem veio da busca só vale no cargo da própria categoria.
+    const picked = choice ? (seat.candidates.find((candidate) => candidate.personalityId === choice) ?? (found?.category === seat.category ? found : undefined)) : undefined;
     wanted.set(seat.seatKey, picked ?? seat.holder);
     if (picked) swapped.add(seat.seatKey);
   }
@@ -58,17 +63,38 @@ export function applyGovernmentSwaps(report: PremiumReport, swaps: GovernmentSwa
 }
 
 const STORAGE_KEY = '12axes-government-swaps';
+const PICKS_KEY = '12axes-government-picks';
 const MAX_SAVED = 20;
+const MAX_PICKS = 18;
 
 type Saved = Record<string, GovernmentSwaps>;
 
-function readAll(): Saved {
+function readAll(storageKey: string = STORAGE_KEY): Saved {
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(storageKey);
     const parsed: unknown = raw ? JSON.parse(raw) : null;
     return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? (parsed as Saved) : {};
   } catch {
     return {};
+  }
+}
+
+/** As pessoas achadas na busca neste resultado; sem armazenamento, nenhuma. */
+export function loadGovernmentPicks(resultKey: string): GovernmentPicks {
+  const saved = (readAll(PICKS_KEY) as unknown as Record<string, GovernmentPicks>)[resultKey];
+  if (!saved || typeof saved !== 'object') return {};
+  return Object.fromEntries(Object.entries(saved).filter(([id, match]) => match && typeof match === 'object' && match.personalityId === id));
+}
+
+/** Guarda as pessoas achadas na busca (as últimas 18 por resultado e os últimos vinte resultados). */
+export function saveGovernmentPicks(resultKey: string, picks: GovernmentPicks): void {
+  try {
+    const all = readAll(PICKS_KEY) as unknown as Record<string, GovernmentPicks>;
+    delete all[resultKey];
+    if (Object.keys(picks).length > 0) all[resultKey] = Object.fromEntries(Object.entries(picks).slice(-MAX_PICKS));
+    window.localStorage.setItem(PICKS_KEY, JSON.stringify(Object.fromEntries(Object.entries(all).slice(-MAX_SAVED))));
+  } catch {
+    // Sem armazenamento: a escolha vale só até recarregar.
   }
 }
 
