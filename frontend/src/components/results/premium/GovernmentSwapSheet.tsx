@@ -43,14 +43,14 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
       alive.current = false;
     };
   }, []);
-  // O catálogo é o mesmo da comparação (cacheado): só as personalidades desta categoria, e a busca roda no navegador.
+  // O catálogo é o mesmo da comparação (cacheado): todas as personalidades, de qualquer categoria, e a busca roda no navegador.
   const canSearch = userPercents !== null;
   useEffect(() => {
     if (!canSearch) return;
     let cancelled = false;
     fetchCompareCatalog()
       .then((items) => {
-        if (!cancelled) setCatalog(items.filter((item) => item.type === 'personality' && item.category === seat.category));
+        if (!cancelled) setCatalog(items.filter((item) => item.type === 'personality'));
       })
       .catch(() => {
         if (!cancelled) setCatalog('error');
@@ -58,7 +58,7 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
     return () => {
       cancelled = true;
     };
-  }, [seat.category, canSearch]);
+  }, [canSearch]);
   const found = useMemo(() => {
     if (!Array.isArray(catalog) || !query.trim()) return [];
     const taken = new Set(takenIds);
@@ -134,7 +134,7 @@ export function GovernmentSwapSheet({ seat, options, swapped, category, takenIds
 
         {canSearch && (
           <div className="e-gov-swap-search">
-            <label htmlFor="government-swap-search">{P.governmentSwap.searchLabel(categoryName)}</label>
+            <label htmlFor="government-swap-search">{P.governmentSwap.searchLabel}</label>
             <input
               id="government-swap-search"
               type="search"

@@ -25,7 +25,7 @@ interface PremiumText {
     current: string;
     none: string;
     swapped: string;
-    searchLabel: (category: string) => string;
+    searchLabel: string;
     searchPlaceholder: string;
     searchNone: string;
     searchError: string;
@@ -76,9 +76,9 @@ const pt: PremiumText = {
     current: 'Atual',
     none: 'Não há outras figuras desta categoria para trocar.',
     swapped: 'Trocado por você',
-    searchLabel: (category) => `Ou busque outra figura de ${category}`,
+    searchLabel: 'Ou busque qualquer outra figura',
     searchPlaceholder: 'Digite um nome',
-    searchNone: 'Ninguém com esse nome nesta categoria.',
+    searchNone: 'Ninguém encontrado com esse nome.',
     searchError: 'Não foi possível buscar agora. Tente de novo em instantes.',
     searching: 'Buscando…'
   },
@@ -159,9 +159,9 @@ const en: PremiumText = {
     current: 'Current',
     none: 'There are no other figures in this category to swap in.',
     swapped: 'Swapped by you',
-    searchLabel: (category) => `Or search for another ${category} figure`,
+    searchLabel: 'Or search for any other figure',
     searchPlaceholder: 'Type a name',
-    searchNone: 'Nobody with that name in this category.',
+    searchNone: 'Nobody found with that name.',
     searchError: 'Could not search right now. Please try again in a moment.',
     searching: 'Searching…'
   },
@@ -242,9 +242,9 @@ const es: PremiumText = {
     current: 'Actual',
     none: 'No hay otras figuras de esta categoría para cambiar.',
     swapped: 'Cambiado por ti',
-    searchLabel: (category) => `O busca otra figura de ${category}`,
+    searchLabel: 'O busca cualquier otra figura',
     searchPlaceholder: 'Escribe un nombre',
-    searchNone: 'Nadie con ese nombre en esta categoría.',
+    searchNone: 'No se encontró a nadie con ese nombre.',
     searchError: 'No se pudo buscar ahora. Inténtalo de nuevo en un momento.',
     searching: 'Buscando…'
   },

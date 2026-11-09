@@ -34,9 +34,8 @@ export function applyGovernmentSwaps(report: PremiumReport, swaps: GovernmentSwa
   const swapped = new Set<string>();
   for (const seat of seats) {
     const choice = swaps[seat.seatKey];
-    const found = choice ? picks[choice] : undefined;
-    // Quem veio da busca só vale no cargo da própria categoria.
-    const picked = choice ? (seat.candidates.find((candidate) => candidate.personalityId === choice) ?? (found?.category === seat.category ? found : undefined)) : undefined;
+    // Quem veio da busca pode ser de qualquer categoria: o cargo só fala dos eixos dele.
+    const picked = choice ? (seat.candidates.find((candidate) => candidate.personalityId === choice) ?? picks[choice]) : undefined;
     wanted.set(seat.seatKey, picked ?? seat.holder);
     if (picked) swapped.add(seat.seatKey);
   }

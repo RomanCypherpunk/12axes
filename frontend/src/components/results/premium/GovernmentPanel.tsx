@@ -8,6 +8,7 @@ import { useUserAxes } from '../MatchInsight';
 import { swapOptions } from '../../../utils/governmentSwaps';
 import { ProfileSheet } from '../ProfileSheet';
 import { GovernmentSwapSheet } from './GovernmentSwapSheet';
+import { SeatIcon } from './SeatIcon';
 import { P } from './premiumText';
 
 export type SeatKey = GovernmentSeat['seatKey'];
@@ -142,56 +143,58 @@ export function GovernmentPanel({
   return (
     <section className="e-panel e-prem" id="premium-governo" data-reveal>
       <h2>{P.governmentTitle}</h2>
-      <GovernmentScene
-        category={category}
-        seat={(key, face, side) => {
-          const seat = byKey.get(key);
-          if (!seat) return null;
-          return (
-            <Fragment key={key}>
-              <button type="button" className={`e-gov-seat e-gov-${side}`} style={seatPosition(face)} aria-haspopup="dialog" onClick={() => setOpen(key)}>
-                <Portrait match={seat.holder} className="e-gov-face" />
-                <span className="e-gov-label">
-                  <span className="e-gov-name">{seat.holder.name}</span>
-                  <span className="e-gov-role">{P.seats[key]}</span>
-                </span>
-              </button>
-              {onSwap && seat.candidates.length > 1 && (
-                <button
-                  type="button"
-                  className={swaps[key] ? 'e-gov-swap is-swapped' : 'e-gov-swap'}
-                  style={seatPosition(face)}
-                  aria-haspopup="dialog"
-                  aria-label={P.governmentSwap.aria(P.seats[key])}
-                  title={P.governmentSwap.aria(P.seats[key])}
-                  onClick={() => setSwapping(key)}
-                >
-                  <SwapIcon />
+      {/* A mesa só no computador; no celular a grade abaixo ocupa o lugar dela. */}
+      <div className="e-gov-desktop">
+        <GovernmentScene
+          category={category}
+          seat={(key, face, side) => {
+            const seat = byKey.get(key);
+            if (!seat) return null;
+            return (
+              <Fragment key={key}>
+                <button type="button" className={`e-gov-seat e-gov-${side}`} style={seatPosition(face)} aria-haspopup="dialog" onClick={() => setOpen(key)}>
+                  <Portrait match={seat.holder} className="e-gov-face" />
+                  <span className="e-gov-label">
+                    <span className="e-gov-name">{seat.holder.name}</span>
+                    <span className="e-gov-role">{P.seats[key]}</span>
+                  </span>
                 </button>
-              )}
-            </Fragment>
-          );
-        }}
-      />
+                {onSwap && seat.candidates.length > 1 && (
+                  <button
+                    type="button"
+                    className={swaps[key] ? 'e-gov-swap is-swapped' : 'e-gov-swap'}
+                    style={seatPosition(face)}
+                    aria-haspopup="dialog"
+                    aria-label={P.governmentSwap.aria(P.seats[key])}
+                    title={P.governmentSwap.aria(P.seats[key])}
+                    onClick={() => setSwapping(key)}
+                  >
+                    <SwapIcon />
+                  </button>
+                )}
+              </Fragment>
+            );
+          }}
+        />
+      </div>
 
-      {/* No celular os nomes não cabem em volta da mesa: lista com o cargo e o nome. */}
-      <ul className="e-gov-mlist">
+      {/* No celular, uma grade de 3 por 3 (a mesma do cartão de compartilhamento): o ícone do cargo, o cargo, o rosto e o nome. */}
+      <ul className="e-gov-grid" style={catStyle(category) as CSSProperties}>
         {ORDER.map((key) => {
           const seat = byKey.get(key);
           if (!seat) return null;
           return (
-            <li key={key} className="e-gov-mrow">
-              <button type="button" aria-haspopup="dialog" onClick={() => setOpen(key)}>
-                <Portrait match={seat.holder} className="e-gov-mface" />
-                <span>
-                  <b>{seat.holder.name}</b>
-                  <small>{P.seats[key]}</small>
-                </span>
+            <li key={key}>
+              <button type="button" className="e-gov-gcell" aria-haspopup="dialog" onClick={() => setOpen(key)}>
+                <SeatIcon seatKey={key} />
+                <small>{P.seats[key]}</small>
+                <Portrait match={seat.holder} className="e-gov-gface" />
+                <b>{seat.holder.name}</b>
               </button>
               {onSwap && seat.candidates.length > 1 && (
                 <button
                   type="button"
-                  className={swaps[key] ? 'e-gov-mswap is-swapped' : 'e-gov-mswap'}
+                  className={swaps[key] ? 'e-gov-gswap is-swapped' : 'e-gov-gswap'}
                   aria-haspopup="dialog"
                   aria-label={P.governmentSwap.aria(P.seats[key])}
                   title={P.governmentSwap.aria(P.seats[key])}
