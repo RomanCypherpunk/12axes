@@ -100,6 +100,7 @@ public class PremiumReportService {
                 .toList();
         List<GovernmentSeat> government = idealGovernmentService.build(axes, lang, religion).stream()
                 .filter(seat -> PREVIEW_SEATS.contains(seat.seatKey()))
+                .map(seat -> new GovernmentSeat(seat.seatKey(), seat.category(), seat.holder(), List.of()))
                 .toList();
         // Da primeira era so a lista (os 2 perfis): a compatibilidade e o cartao da epoca mais compativel ficam no relatorio.
         List<TimelineEra> timeline = timelineService.build(axes, lang, religion, true).stream()

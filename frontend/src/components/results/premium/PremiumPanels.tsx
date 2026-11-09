@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import type { Axis, AxisResult, PremiumReport } from '../../../types/quiz';
 import { AxisAnalysisPanel } from './AxisAnalysisPanel';
 import { DisagreementPanel } from './DisagreementPanel';
-import { GovernmentPanel } from './GovernmentPanel';
+import { GovernmentPanel, type SeatKey } from './GovernmentPanel';
 import { TimelinePanel } from './TimelinePanel';
 import { TopCountriesPanel } from './TopListsPanel';
 
@@ -15,7 +15,9 @@ export function premiumPanels(
   axes: Axis[],
   results: Map<string, AxisResult>,
   /** O botão de compartilhar o cartão de cada seção que tem um (só na página; o PDF não passa nada). */
-  shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode
+  shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode,
+  /** Troca de quem ocupa cada cargo do governo ideal (só na página; o PDF não passa nada). */
+  government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null) => void }
 ): { id: string; node: ReactNode }[] {
   return [
     {
@@ -49,6 +51,8 @@ export function premiumPanels(
           seats={report.idealGovernment}
           category={report.disagreements.find((item) => item.kind === 'ideology')?.ideologyCategory ?? ''}
           footer={shareButton?.('government')}
+          swaps={government?.swaps}
+          onSwap={government?.onSwap}
         />
       )
     },

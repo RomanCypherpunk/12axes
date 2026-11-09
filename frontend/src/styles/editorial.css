@@ -1795,3 +1795,36 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-gov-roles li .e-gov-rhead{color:var(--tinta);font-size:15px}
 .e-gov-roles li .e-gov-rwhy{font-size:13.5px;opacity:.85}
 @media (max-width:560px){.e-gov-roles li{grid-template-columns:44px minmax(0,1fr);gap:12px}.e-gov-roles .e-gov-rface{width:44px;height:44px}}
+/* Governo ideal: trocar quem ocupa o cargo. O botão fica na borda do retrato, no mesmo ponto da mesa. */
+.e-gov-swap{position:absolute;left:calc(var(--x) * .1% + 2.6cqw);top:calc(var(--y) * .14706% + 2.6cqw);transform:translate(-50%,-50%);z-index:3;display:grid;place-items:center;width:clamp(26px,4.2cqw,34px);height:clamp(26px,4.2cqw,34px);padding:0;border:2px solid var(--superficie);border-radius:50%;background:var(--cat);color:#fff;cursor:pointer;box-shadow:0 2px 8px -2px rgba(16,16,16,.35);transition:transform .18s,box-shadow .18s}
+.e-gov-swap svg,.e-gov-mswap svg{width:58%;height:58%;transition:transform .2s ease-out}
+.e-gov-swap:hover,.e-gov-swap:focus-visible{transform:translate(-50%,-50%) scale(1.12)}
+.e-gov-swap:hover svg,.e-gov-swap:focus-visible svg,.e-gov-mswap:hover svg{transform:rotate(180deg)}
+.e-gov-swap:focus-visible,.e-gov-mswap:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-gov-swap.is-swapped,.e-gov-mswap.is-swapped{background:var(--superficie);color:var(--cat);border-color:var(--cat)}
+.e-gov-mlist .e-gov-mrow{position:relative}
+.e-gov-mlist li.e-gov-mrow>button:first-child:not(.e-pw-unlock){padding-right:48px}
+.e-gov-mlist li.e-gov-mrow>button.e-gov-mswap:not(.e-pw-unlock){position:absolute;right:6px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:34px;height:34px;min-width:0;padding:0;border:0;border-radius:50%;background:var(--cat);color:#fff;cursor:pointer}
+.e-gov-mlist li.e-gov-mrow>button.e-gov-mswap.is-swapped:not(.e-pw-unlock){background:var(--superficie);color:var(--cat);box-shadow:inset 0 0 0 2px var(--cat)}
+@media (prefers-reduced-motion:reduce){.e-gov-swap,.e-gov-swap svg,.e-gov-mswap svg{transition:none}}
+/* Modal de troca */
+.e-axis-sheet.e-gov-swap-sheet{width:min(520px,100%)}
+.e-gov-swap-body{display:grid;gap:14px}
+.e-gov-swap-body h3{margin:0 44px 0 0;font-size:22px}
+.e-gov-swap-lead{margin:0;font-size:14.5px;line-height:1.5;color:var(--texto-suave)}
+.e-gov-swap-current{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:16px;background:var(--cat-bg);color:var(--cat)}
+.e-gov-swap-face{width:52px;height:52px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--superficie);box-shadow:0 0 0 1.5px var(--cat)}
+.e-gov-swap-current>span{display:flex;flex-direction:column;gap:1px;min-width:0}
+.e-gov-swap-current small{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.e-gov-swap-current b{font-size:16px;line-height:1.25}
+.e-gov-swap-current em,.e-gov-swap-list em{font-style:normal;font-size:12.5px;font-weight:600}
+.e-gov-swap-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.e-gov-swap-list button{display:flex;align-items:center;gap:14px;width:100%;padding:10px 12px;border:1px solid var(--borda);border-radius:16px;background:var(--superficie);color:var(--tinta);font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.e-gov-swap-list button:hover{border-color:var(--cat);background:var(--cat-bg)}
+.e-gov-swap-list button:focus-visible{outline:3px solid var(--carmim);outline-offset:2px}
+.e-gov-swap-list button>span{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.e-gov-swap-list b{font-size:15px;line-height:1.25}
+.e-gov-swap-list small{font-size:12.5px;line-height:1.3;color:var(--texto-suave)}
+.e-gov-swap-list em{color:var(--cat);flex:none}
+.e-gov-swap-none{margin:0;font-size:14.5px;color:var(--texto-suave)}
+.e-gov-swap-reset{justify-self:start}

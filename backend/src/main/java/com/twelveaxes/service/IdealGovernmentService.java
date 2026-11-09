@@ -31,6 +31,12 @@ public class IdealGovernmentService {
             new Seat("cultura", "religioso")
     );
 
+    /**
+     * Quantas figuras de cada categoria seguem para o usuario trocar quem ocupa o cargo: sobram 3 opcoes mesmo quando as
+     * outras cadeiras ja levaram algumas (o vice sai da mesma categoria do lider).
+     */
+    public static final int CANDIDATES_PER_SEAT = 6;
+
     private final PersonalityMatcherService personalityMatcherService;
 
     public IdealGovernmentService(PersonalityMatcherService personalityMatcherService) {
@@ -47,7 +53,11 @@ public class IdealGovernmentService {
                     .findFirst()
                     .orElseThrow(() -> new IllegalStateException("Nenhuma personalidade da categoria " + seat.category()));
             used.add(holder.personalityId());
-            seats.add(new GovernmentSeat(seat.key(), seat.category(), holder));
+            List<PersonalityMatch> candidates = ranking.stream()
+                    .filter(match -> seat.category().equals(match.category()))
+                    .limit(CANDIDATES_PER_SEAT)
+                    .toList();
+            seats.add(new GovernmentSeat(seat.key(), seat.category(), holder, candidates));
         }
         return List.copyOf(seats);
     }

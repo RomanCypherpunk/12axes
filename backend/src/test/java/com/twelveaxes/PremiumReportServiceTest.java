@@ -113,7 +113,14 @@ class PremiumReportServiceTest {
         assertThat(preview.profiles()).allSatisfy(profile -> assertThat(profile.axes()).isEmpty());
         // do governo so o lider e o vice, e quem os ocupa e o mesmo do relatorio
         assertThat(preview.government()).extracting(seat -> seat.seatKey()).containsExactlyInAnyOrder("lider", "vice");
-        assertThat(preview.government()).allSatisfy(seat -> assertThat(report.idealGovernment()).contains(seat));
+        assertThat(preview.government()).allSatisfy(seat -> {
+            assertThat(report.idealGovernment()).anySatisfy(full -> {
+                assertThat(full.seatKey()).isEqualTo(seat.seatKey());
+                assertThat(full.holder()).isEqualTo(seat.holder());
+            });
+            // as opcoes de troca so vao no relatorio pago
+            assertThat(seat.candidates()).isEmpty();
+        });
         // da linha do tempo so a primeira era, sem a compatibilidade nem o cartao da epoca
         assertThat(preview.timeline()).hasSize(1);
         assertThat(preview.timeline().getFirst().key()).isEqualTo(report.timeline().getFirst().key());

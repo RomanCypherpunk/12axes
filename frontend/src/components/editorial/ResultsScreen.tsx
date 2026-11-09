@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSProperties, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { LANG, t } from '../../i18n';
 import type { Axis, AxisResult, PremiumReport, QuizPayload, QuizResult } from '../../types/quiz';
@@ -17,6 +17,7 @@ import { PersonalitiesSection } from '../results/PersonalitiesSection';
 import { PoliticalCompassSection } from '../results/PoliticalCompassSection';
 import { PhraseSection } from '../results/PhraseSection';
 import { ResultsNav } from '../results/ResultsNav';
+import { applyGovernmentSwaps, loadGovernmentSwaps, saveGovernmentSwaps, type GovernmentSwaps } from '../../utils/governmentSwaps';
 import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
@@ -116,11 +117,11 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       else if (kind === 'personalities') await (await import('../../utils/personalitiesShareCard')).exportPersonalitiesShare(result, sharedReligion);
       else if (kind === 'parties') await (await import('../../utils/partiesShareCard')).exportPartiesShare(result, sharedReligion);
       else if (kind === 'compass') await (await import('../../utils/compassShareCard')).exportCompassShare(result, axes, sharedReligion);
-      else if (premiumReport) {
-        // As seções do relatório pago usam o relatório que já está carregado na página.
-        if (kind === 'government') await (await import('../../utils/governmentShareCard')).exportGovernmentShare(result, premiumReport, sharedReligion);
-        else if (kind === 'timeline') await (await import('../../utils/timelineShareCard')).exportTimelineShare(result, premiumReport, sharedReligion);
-        else await (await import('../../utils/livingShareCard')).exportLivingShare(result, premiumReport, sharedReligion);
+      else if (shownReport) {
+        // As seções do relatório pago usam o relatório que já está carregado na página, com as trocas do governo ideal que o usuário fez.
+        if (kind === 'government') await (await import('../../utils/governmentShareCard')).exportGovernmentShare(result, shownReport, sharedReligion);
+        else if (kind === 'timeline') await (await import('../../utils/timelineShareCard')).exportTimelineShare(result, shownReport, sharedReligion);
+        else await (await import('../../utils/livingShareCard')).exportLivingShare(result, shownReport, sharedReligion);
       }
     } catch {
       setShareError({ kind, message: t.errImage });
@@ -147,6 +148,24 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   }, [vectorKey]);
   // O relatório pago, quando carregado: de lá vêm a aba "Área de atuação" e o ranking da planilha.
   const [premiumReport, setPremiumReport] = useState<PremiumReport | null>(null);
+  // Quem o usuário pôs no lugar da sugestão em cada cargo do governo ideal: vale para a página, o PDF e o cartão, e fica guardado.
+  const [governmentSwaps, setGovernmentSwaps] = useState<GovernmentSwaps>(() => loadGovernmentSwaps(vectorKey));
+  useEffect(() => {
+    setGovernmentSwaps(loadGovernmentSwaps(vectorKey));
+  }, [vectorKey]);
+  const swapGovernmentSeat = useCallback(
+    (seatKey: string, personalityId: string | null) => {
+      setGovernmentSwaps((current) => {
+        const next = { ...current };
+        if (personalityId) next[seatKey] = personalityId;
+        else delete next[seatKey];
+        saveGovernmentSwaps(vectorKey, next);
+        return next;
+      });
+      track(personalityId ? 'government_swap' : 'government_swap_reset', { seat: seatKey });
+    },
+    [vectorKey]
+  );
   // Só em desenvolvimento (PREMIUM_DEV_OPEN): alterna entre a página paga e a grátis (com o convite), para ajustar o layout
   // dos dois lados sem pagar. Também aceita ?preview=free no endereço.
   const [preview, setPreview] = useState<'paid' | 'free'>(() =>
@@ -178,7 +197,10 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   };
   const premiumToken = access.state.status === 'unlocked' ? access.state.token : null;
   const hasPremium = (PREMIUM_DEV_OPEN && !previewAsFree) || premiumToken !== null;
-  const shownReport = hasPremium ? premiumReport : null;
+  const shownReport = useMemo(
+    () => (hasPremium && premiumReport ? applyGovernmentSwaps(premiumReport, governmentSwaps) : null),
+    [hasPremium, premiumReport, governmentSwaps]
+  );
 
   // O PDF é do Relatório completo: sem acesso (e com a compra ligada), o botão abre o modal de compra em vez de imprimir.
   const handlePdf = () => {
@@ -354,6 +376,8 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
                 }}
                 onDenied={access.revoke}
                 shareButton={shareButton}
+                governmentSwaps={governmentSwaps}
+                onGovernmentSwap={swapGovernmentSeat}
               />
             </Suspense>
           ) : (

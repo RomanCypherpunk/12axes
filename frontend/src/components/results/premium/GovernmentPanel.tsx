@@ -1,14 +1,28 @@
-import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
+import { Fragment, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import { LANG, t } from '../../../i18n';
 import { Portrait } from '../PersonalitiesSection';
 import type { GovernmentSeat } from '../../../types/quiz';
 import { buildSeatRole, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
 import { useUserAxes } from '../MatchInsight';
+import { swapOptions } from '../../../utils/governmentSwaps';
 import { ProfileSheet } from '../ProfileSheet';
+import { GovernmentSwapSheet } from './GovernmentSwapSheet';
 import { P } from './premiumText';
 
 export type SeatKey = GovernmentSeat['seatKey'];
+
+// O mesmo desenho do botão "Trocar" do quiz: duas setas opostas.
+function SwapIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M14.293 2.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L16.586 8H5a1 1 0 0 1 0-2h11.586l-2.293-2.293a1 1 0 0 1 0-1.414m-4.586 10a1 1 0 0 1 0 1.414L7.414 16H19a1 1 0 1 1 0 2H7.414l2.293 2.293a1 1 0 0 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0"
+      />
+    </svg>
+  );
+}
 
 // O texto de cada cargo em cada espectro (72 por idioma) vem de um arquivo à parte, baixado só por quem abre o governo ideal.
 const ROLE_FILES: Record<string, () => Promise<{ default: RoleTexts }>> = {
@@ -102,7 +116,22 @@ export function GovernmentScene({
 }
 
 /** O governo ideal numa mesa redonda: o rosto de cada um ao lado da sua cadeira, com o nome e o cargo por fora; clicar no rosto abre a ficha de quem é. */
-export function GovernmentPanel({ seats, category, footer }: { seats: GovernmentSeat[]; category: string; footer?: ReactNode }) {
+export function GovernmentPanel({
+  seats,
+  category,
+  footer,
+  swaps = {},
+  onSwap
+}: {
+  seats: GovernmentSeat[];
+  category: string;
+  footer?: ReactNode;
+  /** Cargos que o usuário trocou (cargo -> id da escolhida). */
+  swaps?: Record<string, string>;
+  /** Troca quem ocupa um cargo; `null` volta à sugestão. Sem isto o governo não é trocável (o convite e o PDF). */
+  onSwap?: (seatKey: SeatKey, personalityId: string | null) => void;
+}) {
+  const [swapping, setSwapping] = useState<SeatKey | null>(null);
   const [open, setOpen] = useState<SeatKey | null>(null);
   const byKey = new Map(seats.map((seat) => [seat.seatKey, seat]));
   const openSeat = open ? byKey.get(open) : undefined;
@@ -118,20 +147,28 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
           const seat = byKey.get(key);
           if (!seat) return null;
           return (
-            <button
-              key={key}
-              type="button"
-              className={`e-gov-seat e-gov-${side}`}
-              style={seatPosition(face)}
-              aria-haspopup="dialog"
-              onClick={() => setOpen(key)}
-            >
-              <Portrait match={seat.holder} className="e-gov-face" />
-              <span className="e-gov-label">
-                <span className="e-gov-name">{seat.holder.name}</span>
-                <span className="e-gov-role">{P.seats[key]}</span>
-              </span>
-            </button>
+            <Fragment key={key}>
+              <button type="button" className={`e-gov-seat e-gov-${side}`} style={seatPosition(face)} aria-haspopup="dialog" onClick={() => setOpen(key)}>
+                <Portrait match={seat.holder} className="e-gov-face" />
+                <span className="e-gov-label">
+                  <span className="e-gov-name">{seat.holder.name}</span>
+                  <span className="e-gov-role">{P.seats[key]}</span>
+                </span>
+              </button>
+              {onSwap && seat.candidates.length > 1 && (
+                <button
+                  type="button"
+                  className={swaps[key] ? 'e-gov-swap is-swapped' : 'e-gov-swap'}
+                  style={seatPosition(face)}
+                  aria-haspopup="dialog"
+                  aria-label={P.governmentSwap.aria(P.seats[key])}
+                  title={P.governmentSwap.aria(P.seats[key])}
+                  onClick={() => setSwapping(key)}
+                >
+                  <SwapIcon />
+                </button>
+              )}
+            </Fragment>
           );
         }}
       />
@@ -142,7 +179,7 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
           const seat = byKey.get(key);
           if (!seat) return null;
           return (
-            <li key={key}>
+            <li key={key} className="e-gov-mrow">
               <button type="button" aria-haspopup="dialog" onClick={() => setOpen(key)}>
                 <Portrait match={seat.holder} className="e-gov-mface" />
                 <span>
@@ -150,6 +187,18 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
                   <small>{P.seats[key]}</small>
                 </span>
               </button>
+              {onSwap && seat.candidates.length > 1 && (
+                <button
+                  type="button"
+                  className={swaps[key] ? 'e-gov-mswap is-swapped' : 'e-gov-mswap'}
+                  aria-haspopup="dialog"
+                  aria-label={P.governmentSwap.aria(P.seats[key])}
+                  title={P.governmentSwap.aria(P.seats[key])}
+                  onClick={() => setSwapping(key)}
+                >
+                  <SwapIcon />
+                </button>
+              )}
             </li>
           );
         })}
@@ -189,6 +238,24 @@ export function GovernmentPanel({ seats, category, footer }: { seats: Government
       )}
 
       {footer}
+
+      {swapping && byKey.get(swapping) && onSwap && (
+        <GovernmentSwapSheet
+          seat={byKey.get(swapping) as GovernmentSeat}
+          options={swapOptions(seats, swapping)}
+          swapped={Boolean(swaps[swapping])}
+          category={category}
+          onPick={(id) => {
+            onSwap(swapping, id);
+            setSwapping(null);
+          }}
+          onReset={() => {
+            onSwap(swapping, null);
+            setSwapping(null);
+          }}
+          onClose={() => setSwapping(null)}
+        />
+      )}
 
       {open && openSeat && (
         <ProfileSheet

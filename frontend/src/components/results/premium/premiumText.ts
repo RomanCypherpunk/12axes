@@ -18,6 +18,15 @@ interface PremiumText {
   gapRank: (position: number) => string;
   governmentTitle: string;
   governmentRolesTitle: string;
+  governmentSwap: {
+    aria: (seat: string) => string;
+    title: (seat: string) => string;
+    lead: (category: string) => string;
+    current: string;
+    none: string;
+    reset: string;
+    swapped: string;
+  };
   governmentRolesLead: string;
   /** Como cada parágrafo do cargo abre, por eixo ("Politicamente,", "No poder,"...). */
   roleAxis: Record<string, string>;
@@ -54,6 +63,15 @@ const pt: PremiumText = {
   gapRank: (position) => (position === 1 ? 'Maior diferença' : `${position}ª maior diferença`),
   governmentTitle: 'Seu governo ideal',
   governmentRolesTitle: 'O papel de cada um no seu governo',
+  governmentSwap: {
+    aria: (seat) => `Trocar quem ocupa o cargo de ${seat}`,
+    title: (seat) => `Trocar: ${seat}`,
+    lead: (category) => `As figuras de ${category} mais compatíveis com você depois da atual. Escolha uma para montar o seu governo ideal.`,
+    current: 'Atual',
+    none: 'Não há outras figuras desta categoria para trocar.',
+    reset: 'Voltar à sugestão',
+    swapped: 'Trocado por você'
+  },
   governmentRolesLead: 'Cada cargo é descrito a partir das suas posições nos eixos que mais pesam nele, para você ver por que o resultado saiu assim.',
   roleAxis: {
     estrutura: 'Na estrutura,',
@@ -123,6 +141,15 @@ const en: PremiumText = {
   gapRank: (position) => (position === 1 ? 'Biggest gap' : position === 2 ? '2nd biggest gap' : '3rd biggest gap'),
   governmentTitle: 'Your ideal government',
   governmentRolesTitle: 'Each member’s role in your government',
+  governmentSwap: {
+    aria: (seat) => `Swap who holds the ${seat} seat`,
+    title: (seat) => `Swap: ${seat}`,
+    lead: (category) => `The ${category} figures closest to you after the current one. Pick one to build your ideal government.`,
+    current: 'Current',
+    none: 'There are no other figures in this category to swap in.',
+    reset: 'Back to the suggestion',
+    swapped: 'Swapped by you'
+  },
   governmentRolesLead: 'Each seat is described from your positions on the axes that weigh most in it, so you can see why the result came out this way.',
   roleAxis: {
     estrutura: 'On structure,',
@@ -192,6 +219,15 @@ const es: PremiumText = {
   gapRank: (position) => (position === 1 ? 'Mayor diferencia' : position === 2 ? '2.ª mayor diferencia' : '3.ª mayor diferencia'),
   governmentTitle: 'Tu gobierno ideal',
   governmentRolesTitle: 'El papel de cada uno en tu gobierno',
+  governmentSwap: {
+    aria: (seat) => `Cambiar quién ocupa el cargo de ${seat}`,
+    title: (seat) => `Cambiar: ${seat}`,
+    lead: (category) => `Las figuras de ${category} más cercanas a ti después de la actual. Elige una para armar tu gobierno ideal.`,
+    current: 'Actual',
+    none: 'No hay otras figuras de esta categoría para cambiar.',
+    reset: 'Volver a la sugerencia',
+    swapped: 'Cambiado por ti'
+  },
   governmentRolesLead: 'Cada cargo se describe a partir de tus posiciones en los ejes que más pesan en él, para que veas por qué el resultado salió así.',
   roleAxis: {
     estrutura: 'En la estructura,',

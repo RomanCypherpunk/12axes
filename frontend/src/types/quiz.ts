@@ -388,6 +388,8 @@ export interface GovernmentSeat {
   seatKey: 'lider' | 'vice' | 'economia' | 'educacao' | 'estrategia' | 'filosofia' | 'social' | 'industria' | 'cultura';
   category: string;
   holder: PersonalityMatch;
+  /** As figuras mais compatíveis da categoria (a titular inclusive), para o usuário trocar quem ocupa o cargo; vazia na prévia. */
+  candidates: PersonalityMatch[];
 }
 
 export interface RankingRow {
