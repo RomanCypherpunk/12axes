@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Axis, AxisResult } from '../types/quiz';
-import { buildSeatRole, type SeatRoleTexts } from './governmentRoleText';
+import { buildSeatRole, holderPositions, type SeatRoleTexts } from './governmentRoleText';
 
 const axis = (id: string, label: string): Axis => ({ id, label, leftPole: 'L', rightPole: 'R', leftColor: '#000', rightColor: '#fff' });
 const axes = [axis('economia', 'Economia'), axis('controle', 'Controle'), axis('comercio', 'Comércio')];
@@ -30,6 +30,15 @@ describe('buildSeatRole', () => {
   it('idioma que não omite o sujeito usa o pronome dado nos parágrafos seguintes', () => {
     const role = buildSeatRole(texts, axes, new Map([result('economia', 80), result('controle', 15)]), 'Ana', 'they');
     expect(role?.lines.map((line) => line.text)).toEqual(['Ana prioriza o setor público', 'they liberaliza']);
+  });
+
+  it('holderPositions usa o vetor da personalidade e, sem ele, as posições do usuário', () => {
+    const user = new Map([result('economia', 80)].map(([id, value]) => [id, { leftPercent: value.leftPercent }] as const));
+    expect(holderPositions({ economia: 10 }, user).get('economia')?.leftPercent).toBe(10);
+    expect(holderPositions(undefined, user)).toBe(user);
+    expect(holderPositions({}, user)).toBe(user);
+    const role = buildSeatRole(texts, axes, holderPositions({ economia: 10 }, user), 'Ana');
+    expect(role?.lines[0].text).toBe('Ana prioriza o setor privado');
   });
 
   it('eixo sem resultado fica de fora e cargo sem texto devolve null', () => {

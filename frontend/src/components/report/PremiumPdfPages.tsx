@@ -4,7 +4,7 @@ import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { catStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
 import { resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { divergenceText } from '../results/MatchInsight';
-import { buildSeatRole } from '../../utils/governmentRoleText';
+import { buildSeatRole, holderPositions } from '../../utils/governmentRoleText';
 import { CENTER, ORDER, place, TABLE_R, useRoleTexts } from '../results/premium/GovernmentPanel';
 import { P } from '../results/premium/premiumText';
 import { bestTimelineEra, eraCompatibility, eraHighlights, timelineEntryInfo } from '../results/premium/TimelinePanel';
@@ -194,7 +194,7 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
           <ol className="rx-roles">
             {ORDER.map((key) => {
               const seat = premium.idealGovernment.find((candidate) => candidate.seatKey === key);
-              const role = seat && buildSeatRole(roles[key], axes, axisResults, seat.holder.name, P.roleSubject);
+              const role = seat && buildSeatRole(roles[key], axes, holderPositions(seat.holder.vector, axisResults), seat.holder.name, P.roleSubject);
               if (!seat || !role) return null;
               return (
                 <li key={key}>

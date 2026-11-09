@@ -23,15 +23,26 @@ export interface SeatRole {
 
 const fill = (text: string, name: string): string => text.split('{name}').join(name);
 
+type AxisPosition = Pick<AxisResult, 'leftPercent'>;
+
 /**
- * Monta o papel de um cargo a partir da posição do próprio usuário nos eixos daquele cargo (não do espectro dele):
- * eixo sem texto ou sem resultado simplesmente fica de fora. O nome aparece no primeiro parágrafo; nos outros o texto
- * segue sem repeti-lo (`subject` entra no lugar dele nos idiomas que não omitem o sujeito, como "they").
+ * As posições de quem ocupa o cargo, a partir do vetor da personalidade; sem vetor, as do usuário (`fallback`), para o
+ * texto nunca ficar vazio.
+ */
+export function holderPositions(vector: Record<string, number> | undefined, fallback: ReadonlyMap<string, AxisPosition>): ReadonlyMap<string, AxisPosition> {
+  const entries = Object.entries(vector ?? {}).filter(([, value]) => Number.isFinite(value));
+  return entries.length > 0 ? new Map(entries.map(([id, leftPercent]) => [id, { leftPercent }])) : fallback;
+}
+
+/**
+ * Monta o papel de um cargo a partir da posição de quem o ocupa nos eixos daquele cargo (e não a do usuário, nem o
+ * espectro dele): eixo sem texto ou sem posição simplesmente fica de fora. O nome aparece no primeiro parágrafo; nos
+ * outros o texto segue sem repeti-lo (`subject` entra no lugar dele nos idiomas que não omitem o sujeito, como "they").
  */
 export function buildSeatRole(
   texts: SeatRoleTexts | undefined,
   axes: Axis[],
-  results: ReadonlyMap<string, AxisResult>,
+  results: ReadonlyMap<string, AxisPosition>,
   name: string,
   subject: string | null = null
 ): SeatRole | null {

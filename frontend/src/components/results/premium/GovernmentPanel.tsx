@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState, type CSSProperties, type ReactNode } fro
 import { LANG, t } from '../../../i18n';
 import { Portrait } from '../PersonalitiesSection';
 import type { GovernmentSeat } from '../../../types/quiz';
-import { buildSeatRole, type RoleTexts } from '../../../utils/governmentRoleText';
+import { buildSeatRole, holderPositions, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
 import { useUserAxes } from '../MatchInsight';
 import { swapOptions } from '../../../utils/governmentSwaps';
@@ -211,7 +211,7 @@ export function GovernmentPanel({
           <ol>
             {ORDER.map((key) => {
               const seat = byKey.get(key);
-              const role = seat && buildSeatRole(roles[key], user.axes, user.results, seat.holder.name, P.roleSubject);
+              const role = seat && buildSeatRole(roles[key], user.axes, holderPositions(seat.holder.vector, user.results), seat.holder.name, P.roleSubject);
               if (!seat || !role) return null;
               return (
                 <li key={key}>
