@@ -11,6 +11,16 @@
         "left": "{name} would steer the government with strategic companies and public banks at the core of development, curbing the power of large private groups and expanding land reform.",
         "right": "{name} would shrink the public sector's role, opening services, roads and state-owned companies to private enterprise and shielding property and inheritance from redistribution.",
         "balanced": "{name} would balance public and private, keeping what it sees as essential under government management and handing to private enterprise what it does better."
+      },
+      "poder": {
+        "left": "{name} would govern with a firm hand on security, accepting more surveillance, policing and limits on some freedoms to protect the population from crime and threats.",
+        "right": "{name} would limit the state's own power over private life, with surveillance only under a court order and respect for individual choices, even uncomfortable ones.",
+        "balanced": "{name} would protect the population without sacrificing civil liberties, accepting targeted, temporary restrictions when the risk is concrete."
+      },
+      "estrutura": {
+        "left": "{name} would share power with governors and mayors, giving states and cities the autonomy to decide what is theirs and distributing resources in a decentralized way.",
+        "right": "{name} would keep the central decisions in the national government's hands, with the same rules across the territory and little room for regions to go their own way.",
+        "balanced": "{name} would concentrate the big decisions in the national government but leave local matters to states and cities, adjusting the balance as needed."
       }
     }
   },
@@ -26,6 +36,16 @@
         "left": "{name} would treat military strength as the foundation of foreign policy, with strong armed forces, a domestic defense industry and credible deterrence against any threat.",
         "right": "{name} would exhaust dialogue before any use of force and back disarmament agreements, UN mediation and international courts, even at the cost of concessions.",
         "balanced": "{name} would combine a well-prepared defense with active diplomacy, negotiating whenever possible but never giving up the military capacity needed to deter attacks."
+      },
+      "representacao": {
+        "left": "{name} would bring the demands of the opposition, movements and councils to the government, working as an open channel between the population and those who decide.",
+        "right": "{name} would act as the leader's trusted right hand, carrying out the decisions of the government's core with discipline and little room for outside debate.",
+        "balanced": "{name} would bridge government and society, listening to the opposition and movements but respecting the chain of command once a decision is made."
+      },
+      "controle": {
+        "left": "{name} would coordinate the economic plan across ministries, helping to steer investment, prices and strategic sectors with long-term goals.",
+        "right": "{name} would work to keep the government out of the economy, helping to simplify rules and taxes and leave prices and wages to the market.",
+        "balanced": "{name} would help coordinate economic policy with stable rules, letting the market work and keeping intervention for crises and strategic sectors."
       }
     }
   },
@@ -41,6 +61,16 @@
         "left": "{name} would plan strategic sectors, use subsidies, exchange rates and public spending to steer the economy and keep the central bank aligned with the elected government.",
         "right": "{name} would leave prices, wages and interest rates to the market, cut taxes and regulations, defend an independent central bank and avoid price freezes.",
         "balanced": "{name} would let the market run day to day but step in during crises or in strategic sectors, combining stable rules with targeted stimulus."
+      },
+      "comercio": {
+        "left": "{name} would protect national production with tariffs and incentives, limit imports in sensitive sectors and keep strategic companies out of foreign hands.",
+        "right": "{name} would cut tariffs and barriers, sign free-trade agreements and accept foreign competition to lower prices and attract investment.",
+        "balanced": "{name} would open up trade gradually, cutting tariffs where the gain is clear and keeping temporary protection for sectors that cannot yet compete."
+      },
+      "tecnologia": {
+        "left": "{name} would bet on fast growth, encouraging innovation, automation and large-scale production, accepting environmental costs in exchange for income and jobs.",
+        "right": "{name} would use taxes and incentives to favor sustainable practices, taxing what pollutes and accepting slower growth in the name of preservation.",
+        "balanced": "{name} would combine incentives for innovation with clear environmental rules, aiming to grow without depleting the country's natural resources."
       }
     }
   },
@@ -56,6 +86,16 @@
         "left": "{name} would keep education secular, with no religious symbols in schools, no religion in early childhood education and values taught without relying on belief in God.",
         "right": "{name} would make room for faith in students' upbringing, valuing the passing on of religious traditions and the role of faith communities in education.",
         "balanced": "{name} would treat religion as a subject of culture and history, respecting families' faith without turning school into a place of preaching or of attacking belief."
+      },
+      "tecnologia": {
+        "left": "{name} would put science, programming, artificial intelligence and research at the center of the curriculum, preparing students for an increasingly automated economy.",
+        "right": "{name} would include environmental education and sustainable living in the curriculum, teaching the link between development and preservation and valuing knowledge tied to the land.",
+        "balanced": "{name} would strengthen science and technology teaching without neglecting environmental education, shaping students who can innovate responsibly."
+      },
+      "poder": {
+        "left": "{name} would keep school a protected space, with clear discipline rules, action against violence and disinformation, and limits on what circulates among students.",
+        "right": "{name} would give students, teachers and families freedom in teaching choices, with little surveillance and discipline and plenty of room for independent thinking.",
+        "balanced": "{name} would combine discipline and freedom, with clear rules for coexistence but without stifling debate or teachers' autonomy."
       }
     }
   },
@@ -71,6 +111,16 @@
         "left": "{name} would position the country as neutral, outside blocs that demand automatic alignment, with no military bases abroad and a bet on international mediation.",
         "right": "{name} would treat regional influence as a strategic goal, using alliances, sanctions and leadership among neighbors to increase the country's weight.",
         "balanced": "{name} would seek a pragmatic stance, forming alliances of convenience and defending the country's own interests without being tied to blocs or long interventions."
+      },
+      "poder": {
+        "left": "{name} would make the security of the state a long-term priority, with stronger intelligence and surveillance to anticipate internal and external threats.",
+        "right": "{name} would build the country's strategy around civil liberties, with limited surveillance and oversight of the intelligence services so they do not threaten citizens.",
+        "balanced": "{name} would pursue a security strategy with clear controls, strengthening intelligence without giving up oversight by the courts and Congress."
+      },
+      "comercio": {
+        "left": "{name} would treat productive self-reliance as a national security matter, shielding sectors such as defense, energy and food from foreign dependence.",
+        "right": "{name} would use trade as an instrument of influence, weaving agreements and global supply chains that raise the country's weight and make war costly for everyone.",
+        "balanced": "{name} would open up trade to gain influence but keep national control over sectors that affect the country's security."
       }
     }
   },
@@ -86,6 +136,16 @@
         "left": "{name} would defend equal rights for LGBT people, reproductive autonomy and respect for new family models, seeing morality as something that evolves.",
         "right": "{name} would treat family, marriage and inherited customs as the foundations of shared life, preferring slow change and distrusting moral ruptures.",
         "balanced": "{name} would value traditions without closing them to revision, seeking to embrace social change when it does not threaten the cohesion of the community."
+      },
+      "religiao": {
+        "left": "{name} would argue that values and the meaning of life can be thought through without God, defending reason and secular ethics as the basis of public decisions.",
+        "right": "{name} would remind the government that faith is a source of meaning and values, arguing that the religious dimension be taken seriously in public decisions.",
+        "balanced": "{name} would treat faith and reason as complementary paths, respecting beliefs without making them the only basis for government decisions."
+      },
+      "controle": {
+        "left": "{name} would argue that the market also needs a common purpose, with the government planning and correcting the economy in the name of justice.",
+        "right": "{name} would hold that no one knows more than millions of people trading freely, and that planning the economy from above limits freedom and knowledge.",
+        "balanced": "{name} would recognize the value of free markets and also the need to correct them, weighing freedom and justice case by case."
       }
     }
   },
@@ -101,6 +161,16 @@
         "left": "{name} would shape social policy through direct public consultation, assemblies and community councils, giving minorities a voice and leaving room for the opposition's criticism.",
         "right": "{name} would decide social programs from a lean technical core, prioritizing quick results and stability over popular consultations and lengthy debates.",
         "balanced": "{name} would listen to the public and social councils on major decisions, but give technical teams leeway to act quickly when urgency demands it."
+      },
+      "moral": {
+        "left": "{name} would back equality policies for women, LGBT people and racial minorities, recognize new forms of family and expand reproductive rights.",
+        "right": "{name} would back the traditional family as the basis of social protection, with benefits and programs aimed at it and legal changes made slowly and gradually.",
+        "balanced": "{name} would protect the family without excluding new arrangements, expanding rights step by step and seeking consensus on the most sensitive changes."
+      },
+      "economia": {
+        "left": "{name} would expand public social protection, with a basic income, free health care and housing, and redistribution of income and wealth.",
+        "right": "{name} would shrink the government's role in welfare, with temporary benefits, more individual responsibility and social services delivered by private organizations.",
+        "balanced": "{name} would keep a public safety net for those in need, with essential services guaranteed, and encourage people to enter the job market."
       }
     }
   },
@@ -116,6 +186,16 @@
         "left": "{name} would protect domestic industry with tariffs and public procurement, block the sale of strategic companies to foreigners and aim to make chips and medicines in the country.",
         "right": "{name} would integrate industry into global supply chains, attracting multinationals and foreign investment and accepting foreign competition in order to gain efficiency.",
         "balanced": "{name} would attract foreign investment without giving up on protecting a few key sectors, judging each production chain by its strategic weight."
+      },
+      "economia": {
+        "left": "{name} would keep state-owned companies and public banks at the center of industrialization, steering investment in energy, oil and infrastructure.",
+        "right": "{name} would leave industry in private hands, with privatizations, lower taxes and property protection to attract investment.",
+        "balanced": "{name} would combine public companies in strategic sectors with private competition elsewhere, choosing the most efficient model case by case."
+      },
+      "intervencao": {
+        "left": "{name} would prioritize production for the home market, without using industry as a tool of pressure on other countries or getting involved in sanctions or foreign disputes.",
+        "right": "{name} would use industry and energy as instruments of influence, financing projects and exporting technology to allied countries to raise the country's weight.",
+        "balanced": "{name} would use industry to gain influence through selected partnerships, without committing to foreign projects that stray from the national interest."
       }
     }
   },
@@ -131,6 +211,16 @@
         "left": "{name} would reinforce the national language and traditions as a common base, expecting newcomers to adopt local customs and integrate into the prevailing culture.",
         "right": "{name} would fold the cultures that immigrants bring into the national identity, encouraging the coexistence of languages and even an identity as a citizen of the world.",
         "balanced": "{name} would cultivate a shared national identity that leaves room for immigrants' contributions, without diluting local traditions."
+      },
+      "moral": {
+        "left": "{name} would support a culture open to new expressions, valuing the diversity of identities, customs and family forms as part of the shared memory.",
+        "right": "{name} would preserve customs, the traditional family and inherited values as the core of the people's identity, accepting change only slowly.",
+        "balanced": "{name} would cultivate tradition without closing itself off to renewal, letting new customs enter the shared memory gradually and without rupture."
+      },
+      "tecnologia": {
+        "left": "{name} would embrace technology as part of culture, supporting digital art, science and innovation as new forms of the country's expression.",
+        "right": "{name} would value the relationship with nature and the land as part of identity, protecting landscapes, traditional knowledge and lower-impact ways of life.",
+        "balanced": "{name} would support cultural innovation without losing the link to nature and tradition, helping the new and the old coexist."
       }
     }
   }

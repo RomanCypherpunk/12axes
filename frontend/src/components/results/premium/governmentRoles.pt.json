@@ -11,6 +11,16 @@
         "left": "{name} conduziria o governo com empresas estratégicas e bancos públicos no centro do desenvolvimento, limitando o poder dos grandes grupos privados e ampliando a reforma agrária.",
         "right": "{name} reduziria o peso do setor público, abrindo serviços, estradas e estatais à iniciativa privada e protegendo a propriedade e a herança contra a redistribuição.",
         "balanced": "{name} equilibraria público e privado, mantendo sob gestão do governo o que considera essencial e entregando à iniciativa privada o que ela fizer melhor."
+      },
+      "poder": {
+        "left": "{name} governaria com mão firme na segurança, aceitando mais vigilância, policiamento e limites a certas liberdades para proteger a população de crimes e ameaças.",
+        "right": "{name} governaria limitando o próprio poder do Estado sobre a vida privada, com vigilância só sob ordem judicial e respeito às escolhas individuais, mesmo quando incomodam.",
+        "balanced": "{name} buscaria proteger a população sem sacrificar as liberdades civis, aceitando restrições pontuais e temporárias quando o risco for concreto."
+      },
+      "estrutura": {
+        "left": "{name} dividiria o poder com governadores e prefeitos, dando a estados e cidades autonomia para decidir o que lhes cabe e distribuindo recursos de forma descentralizada.",
+        "right": "{name} manteria as decisões centrais nas mãos do governo nacional, com regras iguais para todo o território e pouca margem para que regiões sigam caminho próprio.",
+        "balanced": "{name} concentraria as grandes decisões no governo nacional, mas delegaria a estados e cidades os assuntos locais, ajustando o equilíbrio conforme a necessidade."
       }
     }
   },
@@ -26,6 +36,16 @@
         "left": "{name} trataria a força militar como base da posição externa, com Forças Armadas fortes, indústria de defesa própria e dissuasão crível diante de qualquer ameaça.",
         "right": "{name} esgotaria o diálogo antes de qualquer uso da força e apoiaria acordos de desarmamento, mediação da ONU e tribunais internacionais, mesmo à custa de concessões.",
         "balanced": "{name} combinaria defesa preparada com diplomacia ativa, negociando sempre que possível, mas sem abrir mão de capacidade militar para dissuadir ataques."
+      },
+      "representacao": {
+        "left": "{name} levaria ao governo as demandas da oposição, dos movimentos e dos conselhos, funcionando como canal aberto entre a população e quem decide.",
+        "right": "{name} atuaria como braço de confiança do líder, executando as decisões do núcleo do governo com disciplina e sem abrir muito espaço a debates externos.",
+        "balanced": "{name} faria a ponte entre o governo e a sociedade, ouvindo oposição e movimentos, mas respeitando a linha de comando quando a decisão já estiver tomada."
+      },
+      "controle": {
+        "left": "{name} coordenaria o plano econômico entre os ministérios, ajudando a orientar investimentos, preços e setores estratégicos com metas de longo prazo.",
+        "right": "{name} trabalharia para que o governo interfira pouco na economia, ajudando a simplificar regras e impostos e a deixar preços e salários ao mercado.",
+        "balanced": "{name} ajudaria a coordenar a política econômica com regras estáveis, deixando o mercado funcionar e reservando a intervenção para crises e setores estratégicos."
       }
     }
   },
@@ -41,6 +61,16 @@
         "left": "{name} planejaria setores estratégicos, usaria subsídios, câmbio e gasto público para orientar a economia e manteria o Banco Central alinhado ao governo eleito.",
         "right": "{name} deixaria preços, salários e juros ao mercado, cortaria impostos e regulações, defenderia um Banco Central independente e evitaria congelamentos.",
         "balanced": "{name} deixaria o mercado operar no dia a dia, mas interviria em crises ou setores estratégicos, combinando regras estáveis com estímulos pontuais."
+      },
+      "comercio": {
+        "left": "{name} protegeria a produção nacional com tarifas e incentivos, limitaria importações em setores sensíveis e evitaria que empresas estratégicas passem a mãos estrangeiras.",
+        "right": "{name} reduziria tarifas e barreiras, fecharia acordos de livre comércio e aceitaria a concorrência estrangeira para baratear produtos e atrair investimentos.",
+        "balanced": "{name} abriria o comércio de forma gradual, reduzindo tarifas onde há ganho claro e mantendo proteção temporária a setores que ainda não conseguem competir."
+      },
+      "tecnologia": {
+        "left": "{name} apostaria em crescimento acelerado, com incentivo à inovação, à automação e à produção em larga escala, aceitando custos ambientais em troca de renda e empregos.",
+        "right": "{name} usaria impostos e incentivos para favorecer práticas sustentáveis, taxando o que polui e aceitando um crescimento mais lento em nome da preservação.",
+        "balanced": "{name} combinaria incentivos à inovação com regras ambientais claras, buscando crescer sem comprometer os recursos naturais do país."
       }
     }
   },
@@ -56,6 +86,16 @@
         "left": "{name} manteria o ensino laico, sem símbolos religiosos nas escolas, sem religião na educação infantil e com valores ensinados sem depender da crença em Deus.",
         "right": "{name} abriria espaço para a fé na formação dos alunos, valorizando a transmissão das tradições religiosas e o papel das comunidades de fé na educação.",
         "balanced": "{name} trataria a religião como tema de cultura e história, respeitando a fé das famílias sem transformar a escola em espaço de catequese nem de combate à crença."
+      },
+      "tecnologia": {
+        "left": "{name} colocaria ciência, programação, inteligência artificial e pesquisa no centro do currículo, preparando os alunos para uma economia cada vez mais automatizada.",
+        "right": "{name} incluiria educação ambiental e vida sustentável no currículo, ensinando a ligação entre desenvolvimento e preservação e valorizando saberes ligados à terra.",
+        "balanced": "{name} reforçaria o ensino de ciência e tecnologia sem deixar de lado a educação ambiental, formando alunos capazes de inovar com responsabilidade."
+      },
+      "poder": {
+        "left": "{name} manteria a escola como espaço protegido, com regras de disciplina claras, combate à violência e à desinformação e limites ao que circula entre os alunos.",
+        "right": "{name} daria liberdade a alunos, professores e famílias nas escolhas pedagógicas, com pouca vigilância e disciplina e muito espaço para o pensamento próprio.",
+        "balanced": "{name} combinaria disciplina e liberdade, com regras de convivência claras, mas sem engessar o debate nem a autonomia dos professores."
       }
     }
   },
@@ -71,6 +111,16 @@
         "left": "{name} posicionaria o país como neutro, fora de blocos que exijam alinhamento automático, sem bases militares no exterior e apostando em mediação internacional.",
         "right": "{name} trataria a influência regional como objetivo estratégico, usando alianças, sanções e liderança entre os vizinhos para ampliar o peso do país.",
         "balanced": "{name} buscaria uma posição pragmática, firmando alianças de ocasião e defendendo interesses próprios sem se prender a blocos nem a intervenções longas."
+      },
+      "poder": {
+        "left": "{name} faria da segurança do Estado uma prioridade de longo prazo, com inteligência e vigilância reforçadas para antecipar ameaças internas e externas.",
+        "right": "{name} desenharia a estratégia do país em torno das liberdades civis, com vigilância limitada e controle sobre os serviços de inteligência para que não ameacem os cidadãos.",
+        "balanced": "{name} buscaria uma estratégia de segurança com controles claros, reforçando a inteligência sem abrir mão da supervisão da justiça e do Congresso."
+      },
+      "comercio": {
+        "left": "{name} trataria a autonomia produtiva como questão de segurança nacional, protegendo setores como defesa, energia e alimentos da dependência externa.",
+        "right": "{name} usaria o comércio como instrumento de influência, tecendo acordos e cadeias globais que ampliem o peso do país e tornem a guerra custosa para todos.",
+        "balanced": "{name} abriria o comércio para ganhar influência, mas preservaria o controle nacional sobre setores que afetam a segurança do país."
       }
     }
   },
@@ -86,6 +136,16 @@
         "left": "{name} defenderia igualdade de direitos para pessoas LGBT, autonomia reprodutiva e respeito a novos modelos de família, vendo a moral como algo que evolui.",
         "right": "{name} trataria a família, o casamento e os costumes herdados como bases da vida em comum, preferindo mudanças lentas e desconfiando de rupturas morais.",
         "balanced": "{name} valorizaria as tradições sem fechá-las a revisões, procurando acolher mudanças sociais quando elas não ameaçam a coesão da comunidade."
+      },
+      "religiao": {
+        "left": "{name} sustentaria que valores e sentido de vida podem ser pensados sem recorrer a Deus, defendendo a razão e a ética secular como base das decisões públicas.",
+        "right": "{name} lembraria que a fé é uma fonte de sentido e de valores, defendendo que a dimensão religiosa seja levada a sério nas decisões públicas.",
+        "balanced": "{name} trataria a fé e a razão como caminhos que se complementam, respeitando as crenças sem fazer delas a única base das decisões do governo."
+      },
+      "controle": {
+        "left": "{name} defenderia que o mercado também precisa de um propósito comum, com o governo planejando e corrigindo a economia em nome da justiça.",
+        "right": "{name} sustentaria que ninguém sabe mais do que milhões de pessoas negociando livremente, e que planejar a economia de cima limita a liberdade e o conhecimento.",
+        "balanced": "{name} reconheceria o valor dos mercados livres e também a necessidade de corrigi-los, pesando liberdade e justiça caso a caso."
       }
     }
   },
@@ -101,6 +161,16 @@
         "left": "{name} elaboraria as políticas sociais com consulta direta à população, assembleias e conselhos comunitários, garantindo voz às minorias e espaço para as críticas da oposição.",
         "right": "{name} decidiria os programas sociais a partir de um núcleo técnico enxuto, priorizando resultados rápidos e estabilidade em vez de consultas populares e debates longos.",
         "balanced": "{name} ouviria a população e os conselhos sociais nas decisões importantes, mas daria às equipes técnicas margem para agir rápido quando a urgência exigisse."
+      },
+      "moral": {
+        "left": "{name} apoiaria políticas de igualdade para mulheres, pessoas LGBT e minorias raciais, reconheceria novas formas de família e ampliaria os direitos reprodutivos.",
+        "right": "{name} apoiaria a família tradicional como base da proteção social, com benefícios e programas voltados a ela e mudanças legais feitas de forma lenta e gradual.",
+        "balanced": "{name} protegeria a família sem excluir novos arranjos, ampliando direitos aos poucos e buscando consenso para as mudanças mais sensíveis."
+      },
+      "economia": {
+        "left": "{name} ampliaria a proteção social pública, com renda básica, serviços gratuitos de saúde e moradia e redistribuição de renda e patrimônio.",
+        "right": "{name} reduziria o papel do governo na assistência social, com auxílios temporários, mais responsabilidade individual e serviços sociais entregues por entidades privadas.",
+        "balanced": "{name} manteria uma rede pública de proteção para quem precisa, com serviços essenciais garantidos, e estimularia a entrada das pessoas no mercado de trabalho."
       }
     }
   },
@@ -116,6 +186,16 @@
         "left": "{name} protegeria a indústria nacional com tarifas e compras públicas, impediria a venda de empresas estratégicas a estrangeiros e buscaria produzir chips e remédios no país.",
         "right": "{name} integraria a indústria às cadeias globais, atraindo multinacionais e investimento externo e aceitando a concorrência estrangeira para ganhar eficiência.",
         "balanced": "{name} atrairia investimento externo sem abrir mão de proteger alguns setores-chave, avaliando cada cadeia produtiva pelo seu peso estratégico."
+      },
+      "economia": {
+        "left": "{name} manteria empresas estatais e bancos públicos no centro da industrialização, orientando o investimento em energia, petróleo e infraestrutura.",
+        "right": "{name} deixaria a indústria nas mãos do setor privado, com privatizações, menos impostos e proteção à propriedade para atrair investimento.",
+        "balanced": "{name} combinaria empresas públicas em setores estratégicos com concorrência privada nos demais, escolhendo caso a caso o modelo mais eficiente."
+      },
+      "intervencao": {
+        "left": "{name} priorizaria a produção voltada para dentro, sem usar a indústria como instrumento de pressão sobre outros países nem se envolver em sanções ou disputas externas.",
+        "right": "{name} usaria a indústria e a energia como instrumentos de influência, financiando projetos e exportando tecnologia a países aliados para ampliar o peso do país.",
+        "balanced": "{name} usaria a indústria para ganhar influência em parcerias selecionadas, sem se comprometer com projetos externos que fujam do interesse nacional."
       }
     }
   },
@@ -131,6 +211,16 @@
         "left": "{name} reforçaria a língua e as tradições nacionais como base comum, esperando que quem chega adote os costumes locais e se integre à cultura predominante.",
         "right": "{name} incorporaria à identidade nacional as culturas trazidas por imigrantes, incentivando a convivência de línguas e até uma identidade de cidadão do mundo.",
         "balanced": "{name} cultivaria uma identidade nacional comum que reserve espaço para as contribuições de imigrantes, sem diluir as tradições locais."
+      },
+      "moral": {
+        "left": "{name} apoiaria uma cultura aberta a novas expressões, valorizando a diversidade de identidades, costumes e formas de família como parte da memória comum.",
+        "right": "{name} preservaria os costumes, a família tradicional e os valores herdados como núcleo da identidade do povo, aceitando mudanças só de forma lenta.",
+        "balanced": "{name} cultivaria a tradição sem se fechar à renovação, deixando que costumes novos entrem na memória comum aos poucos, sem ruptura."
+      },
+      "tecnologia": {
+        "left": "{name} abraçaria a tecnologia como parte da cultura, apoiando arte digital, ciência e inovação como novas formas de expressão do país.",
+        "right": "{name} valorizaria a relação com a natureza e o território como parte da identidade, protegendo paisagens, saberes tradicionais e modos de vida de menor impacto.",
+        "balanced": "{name} apoiaria a inovação cultural sem perder a ligação com a natureza e as tradições, procurando que o novo e o antigo convivam."
       }
     }
   }

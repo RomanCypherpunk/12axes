@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState, type CSSProperties, type ReactNode } fro
 import { LANG, t } from '../../../i18n';
 import { Portrait } from '../PersonalitiesSection';
 import type { GovernmentSeat } from '../../../types/quiz';
-import { buildSeatRole, holderPositions, type RoleTexts } from '../../../utils/governmentRoleText';
+import { buildSeatRole, holderPositions, selectRoleAxes, type RoleTexts } from '../../../utils/governmentRoleText';
 import { catStyle } from '../../../utils/ideologyColors';
 import { useUserAxes } from '../MatchInsight';
 import { swapOptions } from '../../../utils/governmentSwaps';
@@ -137,6 +137,7 @@ export function GovernmentPanel({
   const openSeat = open ? byKey.get(open) : undefined;
   const roles = useRoleTexts();
   const user = useUserAxes();
+  const roleAxes = roles && user ? selectRoleAxes(seats.map((seat) => ({ seatKey: seat.seatKey, vector: seat.holder.vector })), roles, user.results) : null;
 
   return (
     <section className="e-panel e-prem" id="premium-governo" data-reveal>
@@ -211,7 +212,7 @@ export function GovernmentPanel({
           <ol>
             {ORDER.map((key) => {
               const seat = byKey.get(key);
-              const role = seat && buildSeatRole(roles[key], user.axes, holderPositions(seat.holder.vector, user.results), seat.holder.name, P.roleSubject);
+              const role = seat && buildSeatRole(roles[key], user.axes, holderPositions(seat.holder.vector, user.results), seat.holder.name, P.roleSubject, roleAxes?.get(key));
               if (!seat || !role) return null;
               return (
                 <li key={key}>

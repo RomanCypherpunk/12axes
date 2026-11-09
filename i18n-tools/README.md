@@ -69,5 +69,5 @@ Copie `translate-guide.es.md` para `translate-guide.<lang>.md` e adapte (tom, te
 procedimento acima com `<lang>`. O backend cai no inglês sozinho para o que faltar; o idioma ainda precisa ser
 registrado no código (resolução de idioma, rota e dicionário de interface), o que está fora desta ferramenta.
 Também precisa de três arquivos de texto do relatório pago, que não passam pelo `sync.py`: o dicionário de interface
-(`frontend/src/i18n/<lang>.ts`, que inclui os textos de "o que te aproxima"), os 72 papéis do governo ideal
+(`frontend/src/i18n/<lang>.ts`, que inclui os textos de "o que te aproxima"), os papéis do governo ideal (4 eixos possíveis por cargo, 3 textos cada)
 (`frontend/src/components/results/premium/governmentRoles.<lang>.json`) e a tradução de `books.json` (`title.<lang>`).

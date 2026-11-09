@@ -4,7 +4,7 @@ import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { catStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
 import { resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import { divergenceText } from '../results/MatchInsight';
-import { buildSeatRole, holderPositions } from '../../utils/governmentRoleText';
+import { buildSeatRole, holderPositions, selectRoleAxes } from '../../utils/governmentRoleText';
 import { CENTER, ORDER, place, TABLE_R, useRoleTexts } from '../results/premium/GovernmentPanel';
 import { P } from '../results/premium/premiumText';
 import { bestTimelineEra, eraCompatibility, eraHighlights, timelineEntryInfo } from '../results/premium/TimelinePanel';
@@ -44,6 +44,7 @@ function Page({ topName, title, sub, children }: { topName: string; title: strin
 export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }: PremiumPdfPagesProps) {
   const ideology = premium.disagreements.find((item) => item.kind === 'ideology');
   const roles = useRoleTexts();
+  const roleAxes = roles ? selectRoleAxes(premium.idealGovernment.map((seat) => ({ seatKey: seat.seatKey, vector: seat.holder.vector })), roles, axisResults) : null;
   const personality = premium.disagreements.find((item) => item.kind === 'personality');
   const country = premium.disagreements.find((item) => item.kind === 'country');
   const youColor = colorOf(ideology?.ideologyCategory);
@@ -194,7 +195,7 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
           <ol className="rx-roles">
             {ORDER.map((key) => {
               const seat = premium.idealGovernment.find((candidate) => candidate.seatKey === key);
-              const role = seat && buildSeatRole(roles[key], axes, holderPositions(seat.holder.vector, axisResults), seat.holder.name, P.roleSubject);
+              const role = seat && buildSeatRole(roles[key], axes, holderPositions(seat.holder.vector, axisResults), seat.holder.name, P.roleSubject, roleAxes?.get(key));
               if (!seat || !role) return null;
               return (
                 <li key={key}>
