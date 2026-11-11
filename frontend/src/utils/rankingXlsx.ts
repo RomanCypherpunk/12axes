@@ -1,7 +1,7 @@
 import type { PremiumRanking, RankingRow } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
 
-type Lang = 'pt' | 'en' | 'es';
+type Lang = 'pt' | 'en' | 'es' | 'de';
 type Kind = keyof PremiumRanking;
 
 interface SheetText {
@@ -32,13 +32,20 @@ const TEXT: Record<Lang, Record<Kind, SheetText>> = {
     personalities: { name: 'Personalidades', subject: 'Personalidad', hasHistorical: false },
     countries: { name: 'Países', subject: 'País', hasHistorical: true },
     parties: { name: 'Partidos', subject: 'Partido', hasHistorical: true }
+  },
+  de: {
+    ideologies: { name: 'Ideologien', subject: 'Ideologie', hasHistorical: false },
+    personalities: { name: 'Persönlichkeiten', subject: 'Persönlichkeit', hasHistorical: false },
+    countries: { name: 'Länder', subject: 'Land', hasHistorical: true },
+    parties: { name: 'Parteien', subject: 'Partei', hasHistorical: true }
   }
 };
 
 const COLUMNS: Record<Lang, { position: string; category: string; historical: string; compatibility: string; yes: string; no: string }> = {
   pt: { position: 'Posição', category: 'Categoria', historical: 'Histórico', compatibility: 'Compatibilidade', yes: 'Sim', no: 'Não' },
   en: { position: 'Position', category: 'Category', historical: 'Historical', compatibility: 'Compatibility', yes: 'Yes', no: 'No' },
-  es: { position: 'Posición', category: 'Categoría', historical: 'Histórico', compatibility: 'Compatibilidad', yes: 'Sí', no: 'No' }
+  es: { position: 'Posición', category: 'Categoría', historical: 'Histórico', compatibility: 'Compatibilidad', yes: 'Sí', no: 'No' },
+  de: { position: 'Platz', category: 'Kategorie', historical: 'Historisch', compatibility: 'Übereinstimmung', yes: 'Ja', no: 'Nein' }
 };
 
 export interface RankingSheet {

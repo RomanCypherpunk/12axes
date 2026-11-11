@@ -106,6 +106,22 @@ class BookRecommendationTest {
     }
 
     @Test
+    void germanShowsTheGermanTitleButSearchesTheUsStoreWithTheEnglishTitle() throws Exception {
+        var recommendations = result("de").bookRecommendations();
+        assertThat(recommendations).isNotEmpty().allSatisfy(book -> {
+            var stored = dataService.getBooks().get(book.personalityId());
+            assertThat(book.title()).isEqualTo(stored.title().get("de"));
+            assertThat(book.url()).startsWith("https://www.amazon.com/").contains("tag=12axes0d-20");
+        });
+    }
+
+    @Test
+    void everyBookHasAGermanTitle() {
+        assertThat(dataService.getBooks().values())
+                .allSatisfy(book -> assertThat(book.title().get("de")).as(book.personalityId()).isNotBlank());
+    }
+
+    @Test
     void everyBookPointsToAnExistingPersonality() {
         assertThat(dataService.getBooks()).isNotEmpty();
         assertThat(dataService.getBooks().keySet())

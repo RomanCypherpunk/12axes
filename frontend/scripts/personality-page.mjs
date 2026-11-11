@@ -9,6 +9,7 @@ import { dimensionMatches, rank, religionVisibility } from './profile-match.mjs'
 import { AXIS_EXPLANATIONS } from './app-strings.mjs';
 import { poleSprite, poleUse, profileReligion, religionPoleUse } from './pole-icons.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 const STR = {
   pt: {
@@ -105,6 +106,7 @@ const STR = {
   }
 };
 STR.es = { ...STR.en, ...ES.personalityPage };
+STR.de = { ...STR.en, ...DE.personalityPage };
 
 const ARR = '<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 const pct = (x) => Math.round(x);
@@ -169,6 +171,7 @@ const AXIS_INFO = {
   en: { aria: (label) => `What does the ${label} axis mean?`, close: 'Close' }
 };
 AXIS_INFO.es = { ...AXIS_INFO.en, ...ES.axisInfo };
+AXIS_INFO.de = { ...AXIS_INFO.en, ...DE.axisInfo };
 
 // Barras dos 12 eixos, iguais às da tela de resultados (AxesSection.tsx):
 // ícones de polo preenchidos, cinza quando equilibrado e helper "?" que abre

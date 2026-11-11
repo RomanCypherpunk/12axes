@@ -1649,4 +1649,551 @@ const es: ExampleResult[] = [
   }
 ];
 
-export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'pt' ? pt : LANG === 'es' ? es : en;
+const de: ExampleResult[] = [
+  {
+    ideology: {
+      ideologyId: 'marxismo-leninismo',
+      name: 'Marxismus-Leninismus',
+      category: 'Radikale Linke',
+      description:
+        'Revolutionärer Zweig des Marxismus, der die Machtergreifung durch eine Avantgardepartei und die Diktatur des Proletariats fordert, mit Planwirtschaft und Kollektivierung, und der als Grundlage der kommunistischen Regime des 20. Jahrhunderts diente...',
+      longDescription:
+        'Revolutionärer Zweig des Marxismus, der die Machtergreifung durch eine Avantgardepartei und die Diktatur des Proletariats fordert, mit Planwirtschaft und Kollektivierung, und der als Grundlage der kommunistischen Regime des 20. Jahrhunderts diente. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will eine Gesellschaft, die von einer Avantgardepartei geführt wird, mit der Diktatur des Proletariats und einer geplanten, kollektivierten Wirtschaft.',
+      compatibility: 99
+    },
+    country: {
+      countryId: 'cuba',
+      name: 'Kuba',
+      category: 'Egalitärer Einparteien-Sozialismus',
+      description:
+        'Als sozialistischer Einparteienstaat in der Karibik hat Kuba eine Planwirtschaft, starke staatliche Kontrolle und allgemeine öffentliche Dienste, mit zentralisierter Macht seit der von Fidel Castro 1959 angeführten Revolution.',
+      flagPath: '/countries/flags/cuba.gif',
+      historical: false,
+      period: '',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'lenin',
+      name: 'Wladimir Lenin',
+      role: 'Revolutionär',
+      category: 'politico',
+      lifespan: '1870–1924',
+      description:
+        'Lenin, Anführer der Russischen Revolution von 1917 und Gründer der Sowjetunion, entwickelte die Theorie der Avantgardepartei, der Diktatur des Proletariats und des Imperialismus als höchstes Stadium des Kapitalismus und prägte den Kommunismus des 20. Jahrhunderts.',
+      imagePath: '/personalities/portraits/lenin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 25,
+        rightPercent: 75,
+        dominantPole: 'Autokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 89,
+        rightPercent: 11,
+        dominantPole: 'Öffentlich',
+        intensity: 'Sehr stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 54,
+        rightPercent: 46,
+        dominantPole: 'Progressiv',
+        intensity: 'Ausgeglichen'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'liberalismo-social',
+      name: 'Sozialliberalismus',
+      category: 'Links',
+      description:
+        'Richtung, die individuelle Freiheiten mit starkem staatlichem Handeln verbindet, um Wohlfahrt, Bildung und Gesundheitsversorgung zu sichern, und die Chancengleichheit und soziale Sicherheit innerhalb der Marktwirtschaft verteidigt.',
+      longDescription:
+        'Richtung, die individuelle Freiheiten mit starkem staatlichem Handeln verbindet, um Wohlfahrt, Bildung und Gesundheitsversorgung zu sichern, und die Chancengleichheit und soziale Sicherheit innerhalb der Marktwirtschaft verteidigt. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will eine Gesellschaft individueller Freiheiten, getragen von starker sozialer Sicherheit, in der der Staat Gesundheit und Bildung für alle garantiert.',
+      compatibility: 98
+    },
+    country: {
+      countryId: 'eua-nova-york',
+      name: 'New York (Vereinigte Staaten)',
+      category: 'Finanzstarke kosmopolitische Region',
+      description:
+        'Als Finanz- und Kulturzentrum der Vereinigten Staaten verbindet New York eine liberale, progressive Politik, enorme Vielfalt durch Einwanderung, eine globalisierte Dienstleistungswirtschaft und großes symbolisches Gewicht in der Welt.',
+      flagPath: '/countries/flags/eua-nova-york.png',
+      historical: false,
+      period: '',
+      compatibility: 98
+    },
+    personality: {
+      personalityId: 'justin-trudeau',
+      name: 'Justin Trudeau',
+      role: 'Staatsmann',
+      category: 'politico',
+      lifespan: '1971–',
+      description:
+        'Als Premierminister Kanadas (2015–2025) für die Liberale Partei förderte Trudeau Multikulturalismus, die Aufnahme von Einwanderern und Flüchtlingen, eine progressive Geschlechter- und Umweltpolitik und einen Regierungsstil der Mitte, gestützt auf starke soziale Eingriffe des Staates.',
+      imagePath: '/personalities/portraits/justin-trudeau.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Demokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 64,
+        rightPercent: 36,
+        dominantPole: 'Öffentlich',
+        intensity: 'Tendenz'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 79,
+        rightPercent: 21,
+        dominantPole: 'Progressiv',
+        intensity: 'Stark'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'terceira-via',
+      name: 'Dritter Weg',
+      category: 'Mitte',
+      description:
+        'Erneuerung der Mitte-links-Parteien in den 1990er Jahren unter Blair, Clinton und Giddens, die globalisierte Märkte und Haushaltsdisziplin akzeptiert, Sozialleistungen durch Arbeitsaktivierung ersetzt, hart gegen Kriminalität vorgeht und liberale Interventionen unterstützt.',
+      longDescription:
+        'Erneuerung der Mitte-links-Parteien in den 1990er Jahren unter Blair, Clinton und Giddens, die globalisierte Märkte und Haushaltsdisziplin akzeptiert, Sozialleistungen durch Arbeitsaktivierung ersetzt, hart gegen Kriminalität vorgeht und liberale Interventionen unterstützt. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will einen globalisierten Markt mit einem Staat, der in Bildung investiert, Sozialleistungen gegen Arbeit eintauscht und hart gegen Kriminalität und ihre Ursachen vorgeht.',
+      compatibility: 94
+    },
+    country: {
+      countryId: 'inglaterra',
+      name: 'England (Vereinigtes Königreich)',
+      category: 'Liberal-konservativer Landesteil',
+      description:
+        'Als größter Landesteil des Vereinigten Königreichs wird England ohne eigenes Parlament direkt von Westminster regiert, mit einer Staatskirche (Church of England), einem öffentlichen Gesundheitsdienst (NHS), einem Finanzzentrum in London, einer Brexit-Mehrheit und einem wachsenden populistischen Wähleranteil.',
+      flagPath: '/countries/flags/inglaterra.png',
+      historical: false,
+      period: '',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'macron',
+      name: 'Emmanuel Macron',
+      role: 'Staatsmann',
+      category: 'politico',
+      lifespan: '1977–',
+      description:
+        'Der französische Staatsmann Macron gelangte als zentristischer, liberaler Reformer an die Spitze Frankreichs, verteidigte Märkte, die europäische Integration und Wirtschaftsreformen und wollte die traditionelle Trennung zwischen Links und Rechts überwinden.',
+      imagePath: '/personalities/portraits/macron.jpg',
+      compatibility: 98
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Demokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 44,
+        rightPercent: 56,
+        dominantPole: 'Privat',
+        intensity: 'Ausgeglichen'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 68,
+        rightPercent: 32,
+        dominantPole: 'Progressiv',
+        intensity: 'Tendenz'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'alt-lite',
+      name: 'Alt-Lite',
+      category: 'Rechts',
+      description:
+        'Zweig der radikalen Rechten, der nationalistisch und antiglobalistisch ist, kulturelle Identität betont, Einwanderung kritisiert und sich gegen politische Korrektheit stellt, ohne rassenbasierte Positionen zu übernehmen.',
+      longDescription:
+        'Zweig der radikalen Rechten, der nationalistisch und antiglobalistisch ist, kulturelle Identität betont, Einwanderung kritisiert und sich gegen politische Korrektheit stellt, ohne rassenbasierte Positionen zu übernehmen. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will die kulturelle Identität meines Volkes bewahren, mit Einwanderungskontrolle und Meinungsfreiheit gegen politische Korrektheit.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'hungria',
+      name: 'Ungarn',
+      category: 'Nationale illiberale Republik',
+      description:
+        'Als parlamentarische Republik in Osteuropa wird Ungarn unter einer sogenannten illiberalen Demokratie regiert, die Nationalismus, christlichen Konservatismus, Souveränität gegenüber der Europäischen Union und eine starke Kontrolle von Medien und Institutionen vereint.',
+      flagPath: '/countries/flags/hungria.gif',
+      historical: false,
+      period: '',
+      compatibility: 89
+    },
+    personality: {
+      personalityId: 'donald-trump',
+      name: 'Donald Trump',
+      role: 'Politiker',
+      category: 'politico',
+      lifespan: '1946–',
+      description:
+        'Der Unternehmer und US-Präsident Trump führt den nationalistischen Populismus der MAGA-Bewegung an, mit Zollprotektionismus, restriktiver Einwanderungspolitik und einer Anti-Establishment-Rhetorik, die die Rechte neu definiert hat.',
+      imagePath: '/personalities/portraits/donald-trump.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 39,
+        rightPercent: 61,
+        dominantPole: 'Autokratie',
+        intensity: 'Tendenz'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 25,
+        rightPercent: 75,
+        dominantPole: 'Privat',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 21,
+        rightPercent: 79,
+        dominantPole: 'Traditionalistisch',
+        intensity: 'Stark'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'aceleracionismo-de-direita',
+      name: 'Rechter Akzelerationismus',
+      category: 'Extreme Rechte',
+      description:
+        'Strömung, die die Beschleunigung der Widersprüche des Systems durch Technologie und die Schwächung liberaler Institutionen fordert und auf einen Bruch mit der bestehenden Ordnung setzt, damit eine neue hierarchische gesellschaftliche und politische Ordnung entsteht.',
+      longDescription:
+        'Strömung, die die Beschleunigung der Widersprüche des Systems durch Technologie und die Schwächung liberaler Institutionen fordert und auf einen Bruch mit der bestehenden Ordnung setzt, damit eine neue hierarchische gesellschaftliche und politische Ordnung entsteht. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will mit Technologie und Märkten ohne Staat die Überwindung der liberalen Institutionen beschleunigen, damit eine neue hierarchische Ordnung entsteht.',
+      compatibility: 94
+    },
+    country: {
+      countryId: 'hong-kong',
+      name: 'Hongkong (China)',
+      category: 'Technokratisch-finanzstarke Region',
+      description:
+        'Als globales Finanzzentrum ist Hongkong eine autonome Region mit stark marktwirtschaftlichem Kapitalismus und technokratischer Verwaltung, deren weitreichende Autonomie durch die politische Kontrolle des chinesischen Festlands zunehmend eingeschränkt wird.',
+      flagPath: '/countries/flags/hong-kong.png',
+      historical: false,
+      period: '',
+      compatibility: 84
+    },
+    personality: {
+      personalityId: 'curtis-yarvin',
+      name: 'Curtis Yarvin',
+      role: 'Politischer Theoretiker',
+      category: 'teorico',
+      lifespan: '1973–',
+      description:
+        'Der als Mencius Moldbug bekannte politische Theoretiker Yarvin formulierte die Neoreaktion und schlug vor, die Demokratie durch einen wie ein Unternehmen geführten Staat unter einem souveränen Geschäftsführer zu ersetzen, nach dem Vorbild des Neokameralismus.',
+      imagePath: '/personalities/portraits/curtis-yarvin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 20,
+        rightPercent: 80,
+        dominantPole: 'Autokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 22,
+        rightPercent: 78,
+        dominantPole: 'Privat',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 49,
+        rightPercent: 51,
+        dominantPole: 'Traditionalistisch',
+        intensity: 'Ausgeglichen'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'corporativismo',
+      name: 'Korporatismus',
+      category: 'Dritte Position',
+      description:
+        'Modell, das die Gesellschaft in Korporationen von Arbeitnehmern und Arbeitgebern gliedert, die in den Staat eingebunden sind, und statt Konflikt oder freiem Wettbewerb Harmonie zwischen den Klassen und gelenkte wirtschaftliche Zusammenarbeit anstrebt.',
+      longDescription:
+        'Modell, das die Gesellschaft in Korporationen von Arbeitnehmern und Arbeitgebern gliedert, die in den Staat eingebunden sind, und statt Konflikt oder freiem Wettbewerb Harmonie zwischen den Klassen und gelenkte wirtschaftliche Zusammenarbeit anstrebt. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will eine Gesellschaft, die in Korporationen von Arbeitgebern und Arbeitnehmern gegliedert und in den Staat eingebunden ist, in gelenkter Harmonie zwischen den Klassen.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'burkina-faso',
+      name: 'Burkina Faso',
+      category: 'Souveränistische panafrikanische Militärrepublik',
+      description:
+        'Westafrikanischer Sahelstaat, der von einer patriotischen Übergangs-Militärregierung geführt wird, die das antikoloniale und auf Selbstversorgung ausgerichtete Erbe Thomas Sankaras wiederbelebt hat, aus der ECOWAS ausgetreten ist, die Allianz der Sahelstaaten (AES) gegründet und die auswärtigen Partnerschaften neu ausgerichtet hat, um die nationale Souveränität zu behaupten.',
+      flagPath: '/countries/flags/burkina-faso.png',
+      historical: false,
+      period: '',
+      compatibility: 90
+    },
+    personality: {
+      personalityId: 'plinio-salgado',
+      name: 'Plínio Salgado',
+      role: 'Politiker',
+      category: 'politico',
+      lifespan: '1895–1975',
+      description:
+        'Als Anführer des brasilianischen Integralismus schuf Plínio Salgado eine autoritäre nationalistische Bewegung christlicher Prägung mit dem Leitspruch Gott, Vaterland und Familie und einer Massenästhetik nach dem Vorbild der europäischen Faschismen der 1930er Jahre.',
+      imagePath: '/personalities/portraits/plinio-salgado.jpg',
+      compatibility: 96
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 28,
+        rightPercent: 72,
+        dominantPole: 'Autokratie',
+        intensity: 'Tendenz'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 76,
+        rightPercent: 24,
+        dominantPole: 'Öffentlich',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 8,
+        rightPercent: 92,
+        dominantPole: 'Traditionalistisch',
+        intensity: 'Sehr stark'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'liberalismo-classico',
+      name: 'Klassischer Liberalismus',
+      category: 'Libertär',
+      description:
+        'Ursprünglicher Zweig des Liberalismus, der Naturrechte, Eigentum, freie Märkte und einen minimalen Staat verteidigt und individuelle Freiheit sowie die strikte Begrenzung der Macht als Grundlagen einer gerechten Gesellschaft sieht.',
+      longDescription:
+        'Ursprünglicher Zweig des Liberalismus, der Naturrechte, Eigentum, freie Märkte und einen minimalen Staat verteidigt und individuelle Freiheit sowie die strikte Begrenzung der Macht als Grundlagen einer gerechten Gesellschaft sieht. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will eine Gesellschaft der Naturrechte und des unantastbaren Eigentums, mit einem minimalen Staat und freiem Markt als Grundlage eines gerechten Lebens.',
+      compatibility: 97
+    },
+    country: {
+      countryId: 'eua-new-hampshire',
+      name: 'New Hampshire (Vereinigte Staaten)',
+      category: 'Libertär-fiskalische Region',
+      description:
+        'New Hampshire, ein kleiner Bundesstaat im Nordosten der Vereinigten Staaten, ist bekannt für seine starke libertäre Kultur, niedrige Steuern, den Verzicht auf eine staatliche Einkommensteuer und ein Motto, das die Freiheit über alles stellt.',
+      flagPath: '/countries/flags/eua-new-hampshire.png',
+      historical: false,
+      period: '',
+      compatibility: 94
+    },
+    personality: {
+      personalityId: 'mises',
+      name: 'Ludwig von Mises',
+      role: 'Ökonom',
+      category: 'economista',
+      lifespan: '1881–1973',
+      description:
+        'Der österreichische Ökonom Mises war ein großer Verteidiger des freien Marktes und wies die Unmöglichkeit rationaler Wirtschaftsrechnung im Sozialismus nach; er wurde zu einer Säule der Österreichischen Schule und zu einer Inspiration des modernen Libertarismus.',
+      imagePath: '/personalities/portraits/mises.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 74,
+        rightPercent: 26,
+        dominantPole: 'Demokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 10,
+        rightPercent: 90,
+        dominantPole: 'Privat',
+        intensity: 'Sehr stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 52,
+        rightPercent: 48,
+        dominantPole: 'Progressiv',
+        intensity: 'Ausgeglichen'
+      }
+    ]
+  },
+  {
+    ideology: {
+      ideologyId: 'anarquismo-kropotkiniano',
+      name: 'Kropotkinscher Anarchismus',
+      category: 'Anarchistisch',
+      description:
+        'Strömung Peter Kropotkins, die gegenseitige Hilfe als Naturgesetz sieht und föderierte Kommunen, die Verbindung von Landwirtschaft und Industrie, eine Wissenschaft im Dienst aller und eine Ethik der Solidarität ohne Staat vorschlägt.',
+      longDescription:
+        'Strömung Peter Kropotkins, die gegenseitige Hilfe als Naturgesetz sieht und föderierte Kommunen, die Verbindung von Landwirtschaft und Industrie, eine Wissenschaft im Dienst aller und eine Ethik der Solidarität ohne Staat vorschlägt. Die Übereinstimmung zeigt, wie nah deine Antworten an diesem Profil liegen.',
+      phrase:
+        'Ich will freie Kommunen, die durch gegenseitige Hilfe föderiert sind und Land und Fabrik verbinden, in denen alles nach Bedarf geteilt wird und es überhaupt keinen Staat gibt.',
+      compatibility: 98
+    },
+    country: {
+      countryId: 'rojava',
+      name: 'Rojava (Nord- und Ostsyrien)',
+      category: 'Demokratisch-egalitärer Konföderalismus',
+      description:
+        'Rojava, eine autonome Region im Norden Syriens, organisiert sich durch demokratischen Konföderalismus, mit lokaler Selbstverwaltung, Geschlechtergleichheit, ethnischem Pluralismus und Ökologie, inspiriert von den libertären Ideen Abdullah Öcalans.',
+      flagPath: '/countries/flags/rojava.png',
+      historical: false,
+      period: '2012–heute',
+      compatibility: 93
+    },
+    personality: {
+      personalityId: 'bakunin',
+      name: 'Michail Bakunin',
+      role: 'Revolutionär',
+      category: 'teorico',
+      lifespan: '1814–1876',
+      description:
+        'Der russische Revolutionär Bakunin war der große Theoretiker des kollektivistischen Anarchismus, stellte sich gegen den Staat und den autoritären Marxismus und verteidigte die spontane soziale Revolution und die freie Föderation von Gemeinschaften und Arbeitern.',
+      imagePath: '/personalities/portraits/bakunin.jpg',
+      compatibility: 100
+    },
+    axes: [
+      {
+        axisId: 'representacao',
+        label: 'Repräsentation',
+        leftPole: 'Demokratie',
+        rightPole: 'Autokratie',
+        leftPercent: 80,
+        rightPercent: 20,
+        dominantPole: 'Demokratie',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'economia',
+        label: 'Wirtschaft',
+        leftPole: 'Öffentlich',
+        rightPole: 'Privat',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Öffentlich',
+        intensity: 'Stark'
+      },
+      {
+        axisId: 'moral',
+        label: 'Moral',
+        leftPole: 'Progressiv',
+        rightPole: 'Traditionalistisch',
+        leftPercent: 81,
+        rightPercent: 19,
+        dominantPole: 'Progressiv',
+        intensity: 'Stark'
+      }
+    ]
+  }
+];
+
+export const EXAMPLE_RESULTS: ExampleResult[] = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : en;

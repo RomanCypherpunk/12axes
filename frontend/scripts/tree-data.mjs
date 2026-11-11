@@ -8,7 +8,7 @@ import { buildTreeLayout } from './tree-layout.mjs';
 import { CATEGORY_KEY } from './ideologies-index.mjs';
 
 export const TREE_KINDS = ['ideologies', 'personalities', 'countries', 'parties'];
-const LOCALES = ['pt', 'en', 'es'];
+const LOCALES = ['pt', 'en', 'es', 'de'];
 
 // Centro de cada região da bússola política (direita, autoritário), em 0–100.
 const REGION_CENTERS = {
@@ -67,17 +67,20 @@ export function buildTreeData(dataDir) {
 
   const axesPt = read('axes.json');
   const axisIds = axesPt.map((axis) => axis.id);
+  // Idiomas gerados (ES, DE): o inglês por baixo e a tradução por cima.
+  const generatedAxes = (locale) => {
+    const en = readOverlay('en', 'axes.json');
+    const tr = readOverlay(locale, 'axes.json');
+    return axesPt.map((axis) => ({ ...axis, ...(en.get(axis.id) ?? {}), ...(tr.get(axis.id) ?? {}) }));
+  };
   const axesByLocale = {
     pt: axesPt,
     en: (() => {
       const tr = readOverlay('en', 'axes.json');
       return axesPt.map((axis) => ({ ...axis, ...(tr.get(axis.id) ?? {}) }));
     })(),
-    es: (() => {
-      const en = readOverlay('en', 'axes.json');
-      const tr = readOverlay('es', 'axes.json');
-      return axesPt.map((axis) => ({ ...axis, ...(en.get(axis.id) ?? {}), ...(tr.get(axis.id) ?? {}) }));
-    })()
+    es: generatedAxes('es'),
+    de: generatedAxes('de')
   };
 
   // Referências do espectro: categoria de cada ideologia, para etiquetar os demais catálogos como o quiz faz.
@@ -157,11 +160,11 @@ export function buildTreeData(dataDir) {
     );
 
     for (const locale of LOCALES) {
-      // PT usa o arquivo base; ES usa o inglês no que faltar.
+      // PT usa o arquivo base; ES e DE usam o inglês no que faltar.
       const trEn = readOverlay('en', files.meta);
-      const trEs = locale === 'es' ? readOverlay('es', files.meta) : new Map();
+      const trLocale = locale === 'pt' || locale === 'en' ? new Map() : readOverlay(locale, files.meta);
       const nodes = items.map((meta, i) => {
-        const t = locale === 'pt' ? undefined : { ...trEn.get(meta.id), ...trEs.get(meta.id) };
+        const t = locale === 'pt' ? undefined : { ...trEn.get(meta.id), ...trLocale.get(meta.id) };
         const category = t?.category ?? meta.category ?? '';
         const period = meta.historical && meta.period ? ` · ${meta.period}` : '';
         const sub = kind === 'personalities' ? (t?.role ?? meta.role ?? '') : kind === 'ideologies' ? '' : `${category}${period}`;

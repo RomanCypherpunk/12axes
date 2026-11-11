@@ -214,7 +214,7 @@ class PaymentControllerTest {
     @Test
     void anyLanguageOtherThanPortugueseIsChargedInDollars() throws Exception {
         // USD sem preco neste teste: 404 prova que "es" e idiomas futuros nao caem em reais.
-        for (String lang : List.of("es", "fr")) {
+        for (String lang : List.of("es", "de", "fr")) {
             mockMvc.perform(post("/api/checkout").contentType(MediaType.APPLICATION_JSON)
                             .content(checkoutBody(VECTOR, lang, RETURN_URL, Map.of())))
                     .andExpect(status().isNotFound());

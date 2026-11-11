@@ -6,6 +6,7 @@ import { siteHeader } from './site-header.mjs';
 import { IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { catalogHead } from './personalities-index.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 import { SELLER } from './seller.mjs';
 
 const SUPPORT_EMAIL = (process.env.SUPPORT_EMAIL ?? '12axes.quiz@gmail.com').trim();
@@ -26,6 +27,10 @@ const CONTACT = {
   es: {
     email: `por correo electrónico en <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
     page: `a través de la <a href="${ISSUES_URL}">página de contacto del proyecto en GitHub</a> (no publiques allí datos de pago)`
+  },
+  de: {
+    email: `per E-Mail an <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
+    page: `über die <a href="${ISSUES_URL}">Kontaktseite des Projekts auf GitHub</a> (poste dort keine Zahlungsdaten)`
   }
 };
 const contact = (locale) => (SUPPORT_EMAIL ? CONTACT[locale].email : CONTACT[locale].page);
@@ -171,8 +176,11 @@ const LABELS = {
   en: { report: 'Full Report', terms: 'Terms of use', privacy: 'Privacy', refund: 'Refund', updated: 'Updated', skip: 'Skip to content', footer: 'Independent political quiz · 12axes.vercel.app · © 2026. All rights reserved' }
 };
 LABELS.es = { ...LABELS.en, ...ES.policyLabels };
+LABELS.de = { ...LABELS.en, ...DE.policyLabels };
 PAGES.es = ES.policyPages;
+PAGES.de = DE.policyPages;
 UPDATED.es = ES.policyUpdated;
+UPDATED.de = DE.policyUpdated;
 
 function body(paragraphs, escapeHtml) {
   const html = [];

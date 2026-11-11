@@ -7,6 +7,7 @@ import { poleSprite } from './pole-icons.mjs';
 import { PERSONALITIES_CSS, catalogHead } from './personalities-index.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 // Épocas, na ordem do catálogo. Cada regime entra na época do ano de início;
 // `until` é o ano (exclusivo) que fecha a época. A Antiguidade fecha em 300
@@ -129,6 +130,7 @@ const STR = {
   }
 };
 STR.es = { ...STR.en, ...ES.countriesIndex };
+STR.de = { ...STR.en, ...DE.countriesIndex };
 
 export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];

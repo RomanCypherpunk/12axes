@@ -4,7 +4,7 @@ import type { Strings } from './index';
 
 export const en: Strings = {
   htmlLang: 'en',
-  docTitle: '12 Axes — Free Political Test, Quiz & Compass Across 12 Axes',
+  docTitle: "Free Political Test: What's Your Political Ideology? | 12 Axes",
   loadingAnalysis: 'Loading political analysis...',
   loadingQuiz: 'Loading quiz...',
   loadingResult: 'Loading results...',

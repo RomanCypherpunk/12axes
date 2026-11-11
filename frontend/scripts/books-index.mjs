@@ -4,6 +4,7 @@ import { siteHeader } from './site-header.mjs';
 import { ARROW, IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { AREA_LABELS, AREA_ORDER, catalogHead, initials } from './personalities-index.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 export const AMAZON_BR_HOST = 'www.amazon.com.br';
 export const AMAZON_BR_TAG = '12axes-20';
@@ -110,6 +111,7 @@ const STR = {
   }
 };
 STR.es = { ...STR.en, ...ES.booksIndex };
+STR.de = { ...STR.en, ...DE.booksIndex };
 
 function formatYear(year, t) {
   if (year === null || year === undefined) return '';

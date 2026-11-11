@@ -28,17 +28,22 @@ public class AxisAnalysisService {
 
     private final Map<String, String> portugueseTexts;
     private final Map<String, String> englishTexts;
-    private final Map<String, String> spanishTexts;
+    /** Idiomas gerados (espanhol, alemão...): chave sem tradução usa o inglês. */
+    private final Map<String, Map<String, String>> generatedTexts;
 
     public AxisAnalysisService(ObjectMapper objectMapper) {
         this.portugueseTexts = load(objectMapper, "/data/axis-analysis.json");
         this.englishTexts = load(objectMapper, "/data/i18n/en/axis-analysis.json");
-        // Chave sem tradução em espanhol usa o inglês.
-        Map<String, String> spanish = new java.util.HashMap<>(englishTexts);
-        if (AxisAnalysisService.class.getResource("/data/i18n/es/axis-analysis.json") != null) {
-            spanish.putAll(load(objectMapper, "/data/i18n/es/axis-analysis.json"));
+        Map<String, Map<String, String>> generated = new java.util.HashMap<>();
+        for (String lang : QuizDataService.GENERATED_LANGS) {
+            Map<String, String> texts = new java.util.HashMap<>(englishTexts);
+            String path = "/data/i18n/" + lang + "/axis-analysis.json";
+            if (AxisAnalysisService.class.getResource(path) != null) {
+                texts.putAll(load(objectMapper, path));
+            }
+            generated.put(lang, Map.copyOf(texts));
         }
-        this.spanishTexts = Map.copyOf(spanish);
+        this.generatedTexts = Map.copyOf(generated);
     }
 
     /** disagreements traz a posicao da ideologia, da personalidade e do pais mais compativeis em cada eixo. */
@@ -48,11 +53,10 @@ public class AxisAnalysisService {
             List<Disagreement> disagreements,
             String lang
     ) {
-        Map<String, String> texts = switch (QuizDataService.normalizeLang(lang)) {
-            case QuizDataService.LANG_EN -> englishTexts;
-            case QuizDataService.LANG_ES -> spanishTexts;
-            default -> portugueseTexts;
-        };
+        String normalized = QuizDataService.normalizeLang(lang);
+        Map<String, String> texts = QuizDataService.LANG_PT.equals(normalized) ? portugueseTexts
+                : QuizDataService.LANG_EN.equals(normalized) ? englishTexts
+                : generatedTexts.getOrDefault(normalized, englishTexts);
         return axes.stream()
                 .map(axis -> {
                     AxisLevel level = AxisLevel.of(axis.leftPercent());

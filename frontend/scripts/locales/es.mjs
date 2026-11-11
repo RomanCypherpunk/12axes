@@ -57,9 +57,9 @@ export const ES = {
   home: {
 
     copyright: '© 2026 12 Axes. Todos los derechos reservados',
-    title: '12 Axes — Test político gratis, quiz y brújula política en 12 ejes',
+    title: 'Test político gratis: ¿qué ideología política eres? | 12 Axes',
     description: 'El test político gratis, rápido y preciso de 12 Axes. Descubre tu ideología, tu país y tu figura política compatibles en 12 ejes, con una brújula política.',
-    keywords: 'test político, test político gratis, test de ideología política, test de ideología, ideología política, descubre tu ideología, descubre tu ideología compatible, descubre tu país compatible, descubre tu figura política compatible, espectro político, brújula política, coordenadas políticas, test de la brújula política, test de brújula política, 12 ejes, test político de 12 ejes, 12 axes, 12axes, quiz político, izquierda, derecha, centro, liberalismo, conservadurismo, progresismo, libertarismo, socialismo, capitalismo',
+    keywords: 'test político, test político gratis, qué ideología política soy, cuál es mi ideología política, test de ideología política online, test de ideología política, test de ideología, ideología política, descubre tu ideología, descubre tu ideología compatible, descubre tu país compatible, descubre tu figura política compatible, espectro político, brújula política, coordenadas políticas, test de la brújula política, test de brújula política, 12 ejes, test político de 12 ejes, 12 axes, 12axes, quiz político, izquierda, derecha, centro, liberalismo, conservadurismo, progresismo, libertarismo, socialismo, capitalismo',
     languageName: 'Spanish',
     ogLocale: 'es_ES',
     ogDescription: 'Un quiz político completo y gratis: descubre tu ideología política, tu país y tu figura política compatibles en 12 ejes, con brújula política y espectro completo.',

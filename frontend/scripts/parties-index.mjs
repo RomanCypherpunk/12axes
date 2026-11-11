@@ -7,6 +7,7 @@ import { poleSprite } from './pole-icons.mjs';
 import { PERSONALITIES_CSS, catalogHead } from './personalities-index.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript } from './catalogue-filters.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 // Tipos (campo `category` em PT, valor fechado do backend), na ordem de exibição.
 const KINDS = [
@@ -102,6 +103,7 @@ const STR = {
   }
 };
 STR.es = { ...STR.en, ...ES.partiesIndex };
+STR.de = { ...STR.en, ...DE.partiesIndex };
 
 export function partiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];

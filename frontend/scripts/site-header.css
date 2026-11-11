@@ -12,13 +12,17 @@
 .sh .sh-links a:hover{color:#101010}
 .sh .sh-links a[aria-current]{color:#101010;font-weight:600}
 /* Seletor de idioma: a bolinha fica sobre a bandeira atual (igual ao da home, .e-lang). */
-.sh .sh-links .sh-lang{position:relative;display:inline-flex;align-items:center;justify-content:space-between;width:94px;height:34px;padding:4px;border:1px solid #E2DDCF;border-radius:999px}
-.sh .sh-lang .sh-flag{width:24px;height:24px;border-radius:50%;stroke:none}
-.sh .sh-lang .sh-knob{position:absolute;top:2px;left:2px;width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);transition:transform .2s ease;pointer-events:none}
-.sh .sh-links a.sh-lang-opt{display:inline-flex;position:relative;z-index:1;width:24px;height:24px;border-radius:50%}
-.sh .sh-lang.sh-lang-en .sh-knob{transform:translateX(30px)}
-.sh .sh-lang.sh-lang-es .sh-knob{transform:translateX(60px)}
-@media (prefers-reduced-motion:reduce){.sh .sh-lang .sh-knob{transition:none}}
+.sh .sh-lang{position:relative}
+.sh .sh-lang>summary{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 10px 0 6px;border:1px solid #E2DDCF;border-radius:999px;cursor:pointer;list-style:none;font-size:13px;font-weight:600;color:#101010;user-select:none}
+.sh .sh-lang>summary::-webkit-details-marker{display:none}
+.sh .sh-lang .sh-flag{width:22px;height:22px;flex:none;border-radius:50%;stroke:none}
+.sh .sh-caret{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.sh .sh-lang[open] .sh-caret{transform:rotate(180deg)}
+.sh .sh-lang-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:60;min-width:168px;margin:0;padding:6px;list-style:none;border:1px solid #E2DDCF;border-radius:14px;background:#FFFDF8;box-shadow:0 12px 32px -12px rgba(0,0,0,.28)}
+.sh .sh-links .sh-lang-menu a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;font-size:14px;color:#101010;white-space:nowrap}
+.sh .sh-links .sh-lang-menu a:hover{background:#F1EDE3}
+.sh .sh-links .sh-lang-menu a[aria-current]{font-weight:700}
+@media (prefers-reduced-motion:reduce){.sh .sh-caret{transition:none}}
 .sh .sh-actions{display:flex;align-items:center;gap:10px;flex:none}
 .sh .sh-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 20px;border-radius:999px;font:inherit;font-weight:500;font-size:14px;text-decoration:none;white-space:nowrap;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
 .sh .sh-btn:hover{transform:translateY(-1px)}
@@ -28,6 +32,6 @@
 .sh .sh-btn-ghost{border-color:#101010;color:#101010;background:transparent}
 .sh a:focus-visible,.sh button:focus-visible,.sh input:focus-visible{outline:3px solid #880912;outline-offset:3px}
 @media (max-width:1060px){.sh .sh-links{gap:22px}}
-@media (max-width:900px){.sh .sh-links a:not(.sh-lang-opt):not([aria-current]){display:none}}
-@media (max-width:560px){.sh .sh-wrap{padding:0 16px;gap:12px}.sh .sh-btn-ghost{display:none}.sh .sh-links a[aria-current]{display:none}}
+@media (max-width:900px){.sh .sh-links>a:not([aria-current]){display:none}}
+@media (max-width:560px){.sh .sh-wrap{padding:0 16px;gap:12px}.sh .sh-btn-ghost{display:none}.sh .sh-links>a[aria-current]{display:none}}
 @media (max-width:400px){.sh .sh-wrap{gap:8px}.sh .sh-btn{padding:10px 14px}.sh .sh-btn svg{display:none}}

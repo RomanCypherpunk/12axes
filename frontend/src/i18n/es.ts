@@ -4,7 +4,7 @@ import type { DeepPartial } from './mergeStrings';
 
 export const es: DeepPartial<Strings> = {
   htmlLang: 'es',
-  docTitle: '12 Axes — Test político gratuito, quiz y brújula en 12 ejes',
+  docTitle: 'Test político gratis: ¿qué ideología política eres? | 12 Axes',
   loadingAnalysis: 'Cargando el análisis político...',
   loadingQuiz: 'Cargando el test...',
   loadingResult: 'Cargando los resultados...',

@@ -4,7 +4,7 @@ import type { Strings } from './index';
 
 export const pt: Strings = {
   htmlLang: 'pt-BR',
-  docTitle: '12 Axes — Teste Político Grátis e Quiz de Ideologia em 12 Eixos',
+  docTitle: 'Teste Político Grátis: qual é a sua ideologia política? | 12 Axes',
   loadingAnalysis: 'Carregando análise política...',
   loadingQuiz: 'Carregando quiz...',
   loadingResult: 'Carregando resultado...',

@@ -1,0 +1,669 @@
+[
+  {
+    "id": "autonomia",
+    "term": "Autonomie",
+    "definition": "Die Befugnis, die eigenen Angelegenheiten zu regeln, ohne eine übergeordnete Regierung um Erlaubnis zu fragen.",
+    "match": [
+      "Autonomie",
+      "autonomen"
+    ]
+  },
+  {
+    "id": "constituicao",
+    "term": "Verfassung",
+    "definition": "Das wichtigste Gesetz eines Landes oder Bundesstaats. Alle anderen Gesetze müssen es respektieren.",
+    "match": [
+      "Verfassung"
+    ]
+  },
+  {
+    "id": "secessao",
+    "term": "Sezession",
+    "definition": "Wenn sich eine Region von einem Land abspaltet, um unabhängig zu werden.",
+    "match": [
+      "abzuspalten",
+      "abspalten"
+    ]
+  },
+  {
+    "id": "quilombolas",
+    "term": "Quilombolas",
+    "definition": "Nachfahren versklavter Menschen, die eigene Gemeinschaften, sogenannte Quilombos, gründeten und ihr Land und ihre Traditionen bewahren.",
+    "match": []
+  },
+  {
+    "id": "anular",
+    "term": "Aufheben",
+    "definition": "Ein Gesetz oder eine Entscheidung für ungültig erklären und ihre Wirkung beseitigen.",
+    "match": [
+      "aufheben"
+    ]
+  },
+  {
+    "id": "stf",
+    "term": "Oberstes Gericht",
+    "definition": "Das höchste Gericht eines Landes. Es entscheidet, ob Gesetze und Regierungshandeln die Verfassung respektieren.",
+    "match": []
+  },
+  {
+    "id": "referendo",
+    "term": "Referendum",
+    "definition": "Eine Abstimmung, bei der die Bevölkerung ein Gesetz direkt annimmt oder ablehnt.",
+    "match": [
+      "Referendum"
+    ]
+  },
+  {
+    "id": "cassacao",
+    "term": "Abwahl",
+    "definition": "Die Entfernung eines Politikers aus dem Amt vor dem Ende seiner Amtszeit.",
+    "match": [
+      "abwählen"
+    ]
+  },
+  {
+    "id": "limite_mandatos",
+    "term": "Amtszeitbegrenzung",
+    "definition": "Eine Regel, die verhindert, dass jemand dasselbe Amt länger als eine festgelegte Zahl von Amtszeiten innehat.",
+    "match": [
+      "Amtszeitbegrenzung"
+    ]
+  },
+  {
+    "id": "voto_universal",
+    "term": "Allgemeines Wahlrecht",
+    "definition": "Alle Erwachsenen dürfen wählen, ohne Ausschluss nach Einkommen, Bildung, Geschlecht oder ethnischer Herkunft.",
+    "match": [
+      "allgemeine Wahlrecht"
+    ]
+  },
+  {
+    "id": "autoritario",
+    "term": "Autoritäres Regime",
+    "definition": "Eine Regierung, bei der die Macht in wenigen Händen konzentriert ist und es kaum oder keine Freiheit gibt, sich ihr zu widersetzen.",
+    "match": [
+      "autoritäres"
+    ]
+  },
+  {
+    "id": "toque_recolher",
+    "term": "Ausgangssperre",
+    "definition": "Ein staatliches Verbot, sich zu bestimmten Zeiten in der Öffentlichkeit aufzuhalten.",
+    "match": [
+      "Ausgangssperre"
+    ]
+  },
+  {
+    "id": "eutanasia",
+    "term": "Sterbehilfe",
+    "definition": "Einem Menschen mit einer unheilbaren Krankheit auf eigenen Wunsch helfen, sein Leben zu beenden, um Leiden zu vermeiden.",
+    "match": [
+      "Sterbehilfe"
+    ]
+  },
+  {
+    "id": "reconhecimento_facial",
+    "term": "Gesichtserkennung",
+    "definition": "Technologie, die Menschen identifiziert, indem sie ein von einer Kamera gefilmtes Gesicht mit Fotos aus einer Datenbank vergleicht.",
+    "match": [
+      "Gesichtserkennung"
+    ]
+  },
+  {
+    "id": "faccoes",
+    "term": "Kriminelle Gruppen",
+    "definition": "Gruppen der organisierten Kriminalität, die oft Gebiete und illegale Aktivitäten kontrollieren.",
+    "match": [
+      "kriminellen Gruppen"
+    ]
+  },
+  {
+    "id": "poliamor",
+    "term": "Polyamorie",
+    "definition": "Liebesbeziehungen mit mehr als einer Person gleichzeitig, mit Wissen und Einverständnis aller.",
+    "match": [
+      "Polyamorie"
+    ]
+  },
+  {
+    "id": "relacao_aberta",
+    "term": "Offene Beziehung",
+    "definition": "Eine Beziehung, in der die Partner vereinbaren, dass jeder auch andere Partner haben darf.",
+    "match": [
+      "Offene Beziehungen"
+    ]
+  },
+  {
+    "id": "linguagem_neutra",
+    "term": "Geschlechtsneutrale Sprache",
+    "definition": "Sprech- und Schreibweisen, die nicht zwischen männlich und weiblich unterscheiden, etwa „Lehrende“ statt „Lehrer und Lehrerinnen“.",
+    "match": [
+      "Geschlechtsneutrale Sprache"
+    ]
+  },
+  {
+    "id": "identidade_genero",
+    "term": "Geschlechtsidentität",
+    "definition": "Wie sich eine Person selbst sieht: als Mann, als Frau, als beides oder keins davon, unabhängig vom Geschlecht bei der Geburt.",
+    "match": [
+      "Geschlechtsidentität"
+    ]
+  },
+  {
+    "id": "lgbt",
+    "term": "LGBT",
+    "definition": "Abkürzung für lesbische, schwule, bisexuelle und transgeschlechtliche Menschen.",
+    "match": [
+      "LGBT"
+    ]
+  },
+  {
+    "id": "cotas_raciais",
+    "term": "Ethnische Quoten",
+    "definition": "Die Reservierung eines Teils der Studienplätze oder Stellen für Menschen bestimmter ethnischer Gruppen.",
+    "match": [
+      "ethnische Quoten"
+    ]
+  },
+  {
+    "id": "multicultural",
+    "term": "Multikulturell",
+    "definition": "Ein Ort, an dem Menschen vieler Kulturen, Sprachen und Religionen zusammenleben und jeweils ihre Traditionen bewahren.",
+    "match": [
+      "multikulturelle"
+    ]
+  },
+  {
+    "id": "ataque_preventivo",
+    "term": "Präventivschlag",
+    "definition": "Einen Feind zuerst angreifen, weil man glaubt, dass er einen Angriff auf einen selbst vorbereitet.",
+    "match": [
+      "Präventivschläge"
+    ]
+  },
+  {
+    "id": "desarmamento",
+    "term": "Abrüstung",
+    "definition": "Ein Abkommen zwischen Ländern, bestimmte Arten von Waffen zu reduzieren oder abzuschaffen.",
+    "match": [
+      "Abrüstung"
+    ]
+  },
+  {
+    "id": "armas_autonomas",
+    "term": "Tödliche autonome Waffen",
+    "definition": "Waffen, die Ziele selbstständig auswählen und angreifen, wobei ein Computer statt eines Menschen entscheidet.",
+    "match": [
+      "tödliche autonome Waffen"
+    ]
+  },
+  {
+    "id": "dissuadir",
+    "term": "Abschrecken",
+    "definition": "Jemanden von einem Angriff abhalten, indem man zeigt, dass die Antwort hart ausfallen würde.",
+    "match": [
+      "abzuschrecken"
+    ]
+  },
+  {
+    "id": "crimes_guerra",
+    "term": "Kriegsverbrechen",
+    "definition": "Schwere Verstöße gegen die Regeln des Krieges, etwa Angriffe auf Zivilisten oder die Misshandlung von Gefangenen.",
+    "match": [
+      "Kriegsverbrechen"
+    ]
+  },
+  {
+    "id": "onu",
+    "term": "Vereinte Nationen",
+    "definition": "Eine Organisation, in der fast alle Länder für Frieden, Menschenrechte und Zusammenarbeit zusammenkommen.",
+    "match": [
+      "Vereinten Nationen"
+    ]
+  },
+  {
+    "id": "genocidio",
+    "term": "Völkermord",
+    "definition": "Die systematische Tötung oder Verfolgung eines Volkes, einer ethnischen Gruppe oder einer Religion mit der Absicht, sie zu vernichten.",
+    "match": [
+      "Völkermord"
+    ]
+  },
+  {
+    "id": "missoes_paz",
+    "term": "Friedensmissionen",
+    "definition": "Truppen, die unter internationaler Koordination ins Ausland geschickt werden, um in Konfliktgebieten für Ordnung zu sorgen.",
+    "match": [
+      "Friedensmissionen"
+    ]
+  },
+  {
+    "id": "sancoes",
+    "term": "Sanktionen",
+    "definition": "Wirtschaftliche Strafen gegen ein Land, etwa die Blockade des Handels oder das Einfrieren von Geldern im Ausland.",
+    "match": [
+      "Sanktionen"
+    ]
+  },
+  {
+    "id": "aliancas_militares",
+    "term": "Militärbündnisse",
+    "definition": "Abkommen zwischen Ländern, sich gegenseitig zu verteidigen: Wird eines angegriffen, helfen die anderen.",
+    "match": [
+      "Militärbündnisse"
+    ]
+  },
+  {
+    "id": "alinhamento_automatico",
+    "term": "Automatische Ausrichtung",
+    "definition": "Immer der Position eines anderen Landes oder Blocks folgen, statt von Fall zu Fall zu entscheiden.",
+    "match": [
+      "automatische Ausrichtung"
+    ]
+  },
+  {
+    "id": "tratado_internacional",
+    "term": "Internationaler Vertrag",
+    "definition": "Ein förmliches Abkommen zwischen Ländern mit Regeln, deren Einhaltung beide Seiten versprechen.",
+    "match": [
+      "internationaler Vertrag"
+    ]
+  },
+  {
+    "id": "potencias",
+    "term": "Großmächte",
+    "definition": "Länder mit sehr großer militärischer, wirtschaftlicher oder politischer Macht.",
+    "match": [
+      "Großmächten"
+    ]
+  },
+  {
+    "id": "redistribuir",
+    "term": "Umverteilen",
+    "definition": "Denen, die mehr haben, etwas nehmen und es denen geben, die weniger haben, durch Steuern, Gesetze oder öffentliche Programme.",
+    "match": [
+      "umzuverteilen",
+      "umverteilt",
+      "umverteilen"
+    ]
+  },
+  {
+    "id": "estrategico",
+    "term": "Strategisch",
+    "definition": "Ein Sektor oder Unternehmen, das für das Funktionieren oder die Verteidigung eines Landes unverzichtbar ist, etwa Energie, Öl, Wasser oder Technologie.",
+    "match": [
+      "strategisch wichtige",
+      "strategisch wichtig",
+      "strategischen",
+      "strategische"
+    ]
+  },
+  {
+    "id": "estatais",
+    "term": "Staatsunternehmen",
+    "definition": "Unternehmen, die vom Staat kontrolliert werden.",
+    "match": [
+      "Staatsunternehmen"
+    ]
+  },
+  {
+    "id": "reforma_agraria",
+    "term": "Landreform",
+    "definition": "Die Aufteilung großer Landgüter, um Menschen Land zu geben, die es bewirtschaften wollen.",
+    "match": [
+      "Landreform"
+    ]
+  },
+  {
+    "id": "sindicatos",
+    "term": "Gewerkschaften",
+    "definition": "Organisationen von Arbeitnehmern, die im Namen der Gruppe über Löhne und Arbeitsbedingungen verhandeln.",
+    "match": [
+      "Gewerkschaften"
+    ]
+  },
+  {
+    "id": "renda_basica",
+    "term": "Mindesteinkommen",
+    "definition": "Geld, das der Staat regelmäßig an Bedürftige zahlt, um einen grundlegenden Lebensstandard zu sichern.",
+    "match": [
+      "Mindesteinkommen"
+    ]
+  },
+  {
+    "id": "bolsa_familia",
+    "term": "Bolsa Família",
+    "definition": "Ein brasilianisches Bundesprogramm, das Familien mit niedrigem Einkommen einen monatlichen Betrag zahlt.",
+    "match": []
+  },
+  {
+    "id": "estabilidade_servidores",
+    "term": "Unkündbarkeit",
+    "definition": "Eine Regel, die es sehr schwer macht, fest angestellte Staatsbedienstete zu entlassen.",
+    "match": [
+      "Unkündbarkeit"
+    ]
+  },
+  {
+    "id": "subsidiar",
+    "term": "Subventionieren",
+    "definition": "Eine Tätigkeit mit öffentlichen Geldern unterstützen, damit sie weniger kostet oder rentabler ist.",
+    "match": [
+      "subventionieren"
+    ]
+  },
+  {
+    "id": "banco_central",
+    "term": "Zentralbank",
+    "definition": "Die öffentliche Institution, die die Währung eines Landes verwaltet und seinen Leitzins festlegt.",
+    "match": [
+      "Zentralbank"
+    ]
+  },
+  {
+    "id": "taxa_juros",
+    "term": "Zinssatz",
+    "definition": "Der Preis für geliehenes Geld. Hohe Zinsen verteuern Kredite und dämpfen tendenziell die Preise; niedrige bewirken das Gegenteil.",
+    "match": [
+      "Zinsen"
+    ]
+  },
+  {
+    "id": "inflacao",
+    "term": "Inflation",
+    "definition": "Ein allgemeiner, anhaltender Anstieg der Preise, durch den man mit Geld weniger kaufen kann. Die Ursachen sind umstritten: Geldschöpfung, Nachfrage, Kosten.",
+    "match": [
+      "Inflation"
+    ]
+  },
+  {
+    "id": "carga_tributaria",
+    "term": "Steuerlast",
+    "definition": "Die gesamten Steuern, die Menschen und Unternehmen zahlen, im Verhältnis zur Größe der Wirtschaft.",
+    "match": []
+  },
+  {
+    "id": "arrecadacao",
+    "term": "Steuereinnahmen",
+    "definition": "Das Geld, das der Staat durch Steuern einnimmt.",
+    "match": [
+      "Steuereinnahmen",
+      "Staatseinnahmen"
+    ]
+  },
+  {
+    "id": "recessao",
+    "term": "Rezession",
+    "definition": "Eine Phase, in der die Wirtschaft schrumpft: Die Produktion sinkt und die Arbeitslosigkeit steigt tendenziell.",
+    "match": [
+      "Rezession"
+    ]
+  },
+  {
+    "id": "cambio",
+    "term": "Wechselkurs",
+    "definition": "Der Preis der Währung eines Landes im Vergleich zu anderen Währungen, etwa dem Dollar.",
+    "match": [
+      "Wechselkurs"
+    ]
+  },
+  {
+    "id": "criptomoedas",
+    "term": "Kryptowährungen",
+    "definition": "Digitales Geld wie Bitcoin, das von keiner Regierung und keiner Zentralbank ausgegeben wird.",
+    "match": [
+      "Kryptowährungen"
+    ]
+  },
+  {
+    "id": "economia_planejada",
+    "term": "Planwirtschaft",
+    "definition": "Ein System, in dem die Regierung entscheidet, was produziert wird, wie viel und zu welchem Preis.",
+    "match": [
+      "staatlich geplante Wirtschaft"
+    ]
+  },
+  {
+    "id": "livre_mercado",
+    "term": "Freier Markt",
+    "definition": "Ein System, in dem Preise und Produktion aus dem freien Austausch zwischen Käufern und Verkäufern entstehen, mit wenig staatlicher Einmischung.",
+    "match": [
+      "freien Marktwirtschaft"
+    ]
+  },
+  {
+    "id": "campeas_nacionais",
+    "term": "Nationale Champions",
+    "definition": "Große heimische Unternehmen, die die Regierung gezielt fördert, damit sie wachsen und weltweit konkurrieren können.",
+    "match": [
+      "führende heimische Unternehmen"
+    ]
+  },
+  {
+    "id": "regulacao",
+    "term": "Regulierung",
+    "definition": "Staatliche Regeln, die festlegen, wie eine wirtschaftliche Tätigkeit ablaufen darf.",
+    "match": [
+      "Regulierungen"
+    ]
+  },
+  {
+    "id": "tarifas",
+    "term": "Zölle",
+    "definition": "Eine Steuer auf importierte Waren, die sie teurer macht.",
+    "match": [
+      "Zölle",
+      "Einfuhrzölle"
+    ]
+  },
+  {
+    "id": "livre_comercio",
+    "term": "Freihandel",
+    "definition": "Handel zwischen Ländern mit wenigen oder gar keinen Zöllen oder Hindernissen.",
+    "match": [
+      "Freihandelsabkommen"
+    ]
+  },
+  {
+    "id": "soberania_economica",
+    "term": "Wirtschaftliche Souveränität",
+    "definition": "Die Fähigkeit eines Landes, eigene wirtschaftliche Entscheidungen zu treffen, ohne von anderen Ländern abhängig zu sein.",
+    "match": [
+      "wirtschaftliche Souveränität"
+    ]
+  },
+  {
+    "id": "multinacionais",
+    "term": "Multinationale Konzerne",
+    "definition": "Unternehmen, die gleichzeitig in mehreren Ländern tätig sind.",
+    "match": [
+      "Multinationale Konzerne"
+    ]
+  },
+  {
+    "id": "integracao_economica",
+    "term": "Wirtschaftliche Integration",
+    "definition": "Die Annäherung der Volkswirtschaften verschiedener Länder durch Handel, Investitionen und gemeinsame Regeln.",
+    "match": [
+      "wirtschaftliche Integration"
+    ]
+  },
+  {
+    "id": "cadeias_suprimento",
+    "term": "Lieferketten",
+    "definition": "Alle Schritte, die nötig sind, um etwas herzustellen, vom Rohstoff bis zum fertigen Produkt.",
+    "match": [
+      "Lieferketten"
+    ]
+  },
+  {
+    "id": "transgenicos",
+    "term": "Gentechnisch veränderte Nutzpflanzen",
+    "definition": "Nutzpflanzen, deren Gene im Labor verändert wurden, zum Beispiel damit sie Schädlingen widerstehen.",
+    "match": [
+      "gentechnisch veränderte"
+    ]
+  },
+  {
+    "id": "agrotoxicos",
+    "term": "Pestizide",
+    "definition": "Chemikalien, die auf Feldern gegen Schädlinge und Pflanzenkrankheiten eingesetzt werden.",
+    "match": [
+      "Pestiziden"
+    ]
+  },
+  {
+    "id": "edicao_genetica",
+    "term": "Genomeditierung",
+    "definition": "Die Veränderung der DNA eines Lebewesens, um seine Merkmale zu korrigieren oder zu verändern.",
+    "match": [
+      "Genomeditierung"
+    ]
+  },
+  {
+    "id": "embrioes",
+    "term": "Embryonen",
+    "definition": "Das früheste Stadium der menschlichen Entwicklung, in den ersten Wochen nach der Befruchtung.",
+    "match": [
+      "Embryonen"
+    ]
+  },
+  {
+    "id": "implantes_cerebrais",
+    "term": "Hirnimplantate",
+    "definition": "Geräte, die ins Gehirn eingesetzt werden, um seine Signale auszulesen oder die geistige Aktivität anzuregen.",
+    "match": [
+      "Hirnimplantate"
+    ]
+  },
+  {
+    "id": "ia",
+    "term": "Künstliche Intelligenz",
+    "definition": "Computerprogramme, die Aufgaben erledigen können, für die normalerweise menschliche Intelligenz nötig ist, etwa Texte verstehen oder Bilder erkennen.",
+    "match": [
+      "KI"
+    ]
+  },
+  {
+    "id": "automacao",
+    "term": "Automatisierung",
+    "definition": "Der Einsatz von Maschinen und Software für Arbeiten, die früher Menschen erledigt haben.",
+    "match": [
+      "Automatisierung"
+    ]
+  },
+  {
+    "id": "carne_cultivada",
+    "term": "Laborfleisch",
+    "definition": "Fleisch, das im Labor aus tierischen Zellen hergestellt wird, ohne ein ganzes Tier aufzuziehen oder zu schlachten.",
+    "match": [
+      "im Labor gezüchtetes Fleisch"
+    ]
+  },
+  {
+    "id": "espionagem",
+    "term": "Spionage",
+    "definition": "Das heimliche Beschaffen von Informationen über ein anderes Land, ein Unternehmen oder eine Person.",
+    "match": [
+      "Spionage"
+    ]
+  },
+  {
+    "id": "arsenais",
+    "term": "Arsenale",
+    "definition": "Die Gesamtheit der Waffen, über die ein Land verfügt.",
+    "match": [
+      "Arsenale"
+    ]
+  },
+  {
+    "id": "interesse_nacional",
+    "term": "Nationales Interesse",
+    "definition": "Was eine Regierung für das Land als Ganzes für gut hält, etwa Sicherheit, Wirtschaft und Einfluss in der Welt.",
+    "match": [
+      "nationale Interesse",
+      "nationalen Interesse",
+      "nationaler Interessen"
+    ]
+  },
+  {
+    "id": "organismos_internacionais",
+    "term": "Internationale Organisationen",
+    "definition": "Institutionen, die mehrere Länder gebildet haben, um gemeinsame Fragen zu behandeln, etwa die UNO oder die WTO.",
+    "match": [
+      "internationalen Organisationen"
+    ]
+  },
+  {
+    "id": "cidadao_mundo",
+    "term": "Weltbürger",
+    "definition": "Ein Mensch, der sich eher als Teil der ganzen Menschheit fühlt als als Teil einer Nation.",
+    "match": [
+      "Weltbürger"
+    ]
+  },
+  {
+    "id": "congresso",
+    "term": "Parlament",
+    "definition": "Das gewählte Organ, das die Gesetze eines Landes beschließt.",
+    "match": [
+      "Parlament"
+    ]
+  },
+  {
+    "id": "alternancia_poder",
+    "term": "Machtwechsel",
+    "definition": "Wenn sich verschiedene Parteien von Wahl zu Wahl beim Regieren abwechseln.",
+    "match": [
+      "Machtwechsel"
+    ]
+  },
+  {
+    "id": "assembleia_popular",
+    "term": "Volksversammlung",
+    "definition": "Eine offene Versammlung, bei der die Menschen gemeinsam entscheiden, statt Vertreter zu wählen.",
+    "match": [
+      "Volksversammlungen"
+    ]
+  },
+  {
+    "id": "criminalizar",
+    "term": "Kriminalisieren",
+    "definition": "Eine Handlung zur Straftat machen, mit einer gesetzlich festgelegten Strafe.",
+    "match": [
+      "kriminalisiert"
+    ]
+  },
+  {
+    "id": "legalizar",
+    "term": "Legalisieren",
+    "definition": "Etwas gesetzlich erlauben, das vorher verboten war.",
+    "match": [
+      "legalisiert"
+    ]
+  },
+  {
+    "id": "industrializacao",
+    "term": "Industrialisierung",
+    "definition": "Der Umbau einer Wirtschaft, damit mehr in Fabriken und mit Maschinen produziert wird.",
+    "match": [
+      "Industrialisierung"
+    ]
+  },
+  {
+    "id": "mineracao",
+    "term": "Bergbau",
+    "definition": "Der Abbau von Bodenschätzen wie Gold, Eisen und Niob.",
+    "match": [
+      "Bergbau"
+    ]
+  },
+  {
+    "id": "pecuaria",
+    "term": "Viehzucht",
+    "definition": "Die Haltung von Tieren wie Rindern für Fleisch, Milch und andere Produkte.",
+    "match": [
+      "Viehzucht"
+    ]
+  }
+]

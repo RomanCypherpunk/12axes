@@ -4,12 +4,14 @@
     "label": {
       "pt": "Sociedade",
       "en": "Society",
-      "es": "Sociedad"
+      "es": "Sociedad",
+      "de": "Gesellschaft"
     },
     "text": {
       "pt": "A sociedade deve se apoiar em quê?",
       "en": "What should society rest on?",
-      "es": "¿En qué debe apoyarse la sociedad?"
+      "es": "¿En qué debe apoyarse la sociedad?",
+      "de": "Worauf sollte die Gesellschaft beruhen?"
     },
     "options": [
       {
@@ -17,7 +19,8 @@
         "text": {
           "pt": "Fé, família e tradição da nação",
           "en": "Faith, family and national tradition",
-          "es": "Fe, familia y tradición nacional"
+          "es": "Fe, familia y tradición nacional",
+          "de": "Glaube, Familie und nationale Tradition"
         },
         "effects": {
           "moral": 12,
@@ -30,7 +33,8 @@
         "text": {
           "pt": "Costumes e fé, mudando devagar",
           "en": "Custom and faith, changing slowly",
-          "es": "Costumbres y fe, con cambios lentos"
+          "es": "Costumbres y fe, con cambios lentos",
+          "de": "Brauch und Glaube, mit langsamem Wandel"
         },
         "effects": {
           "moral": 32,
@@ -43,7 +47,8 @@
         "text": {
           "pt": "Cada um vive como quiser",
           "en": "Live and let live",
-          "es": "Vive y deja vivir"
+          "es": "Vive y deja vivir",
+          "de": "Leben und leben lassen"
         },
         "effects": {
           "moral": 55,
@@ -56,7 +61,8 @@
         "text": {
           "pt": "Igualdade, diversidade e direitos civis",
           "en": "Equality, diversity and civil rights",
-          "es": "Igualdad, diversidad y derechos civiles"
+          "es": "Igualdad, diversidad y derechos civiles",
+          "de": "Gleichheit, Vielfalt und Bürgerrechte"
         },
         "effects": {
           "moral": 80,
@@ -69,7 +75,8 @@
         "text": {
           "pt": "Tradição e ordem, sem religião",
           "en": "Tradition and order, without religion",
-          "es": "Tradición y orden, sin religión"
+          "es": "Tradición y orden, sin religión",
+          "de": "Tradition und Ordnung, ohne Religion"
         },
         "effects": {
           "moral": 25,
@@ -82,7 +89,8 @@
         "text": {
           "pt": "Fé a serviço da justiça social",
           "en": "Faith in service of social justice",
-          "es": "Fe al servicio de la justicia social"
+          "es": "Fe al servicio de la justicia social",
+          "de": "Glaube im Dienst sozialer Gerechtigkeit"
         },
         "effects": {
           "moral": 72,
@@ -97,12 +105,14 @@
     "label": {
       "pt": "Poder",
       "en": "Power",
-      "es": "Poder"
+      "es": "Poder",
+      "de": "Macht"
     },
     "text": {
       "pt": "Como o poder deve ser organizado?",
       "en": "How should power be organized?",
-      "es": "¿Cómo debe organizarse el poder?"
+      "es": "¿Cómo debe organizarse el poder?",
+      "de": "Wie sollte die Macht organisiert sein?"
     },
     "options": [
       {
@@ -110,7 +120,8 @@
         "text": {
           "pt": "Líder ou partido único, centralizado",
           "en": "A single leader or party, centralized",
-          "es": "Un solo líder o partido, centralizado"
+          "es": "Un solo líder o partido, centralizado",
+          "de": "Ein Anführer oder eine Partei, zentralisiert"
         },
         "effects": {
           "representacao": 15,
@@ -123,7 +134,8 @@
         "text": {
           "pt": "Elites decidem, com voto limitado",
           "en": "Elites decide, with limited voting",
-          "es": "Deciden las élites, con voto limitado"
+          "es": "Deciden las élites, con voto limitado",
+          "de": "Eliten entscheiden, mit begrenztem Wahlrecht"
         },
         "effects": {
           "representacao": 40,
@@ -136,7 +148,8 @@
         "text": {
           "pt": "Democracia com freios e contrapesos",
           "en": "Democracy with checks and balances",
-          "es": "Democracia con contrapesos"
+          "es": "Democracia con contrapesos",
+          "de": "Demokratie mit Gewaltenteilung"
         },
         "effects": {
           "representacao": 78,
@@ -149,7 +162,8 @@
         "text": {
           "pt": "Estado mínimo ou nenhum",
           "en": "Little or no state",
-          "es": "Poco o ningún Estado"
+          "es": "Poco o ningún Estado",
+          "de": "Wenig oder kein Staat"
         },
         "effects": {
           "representacao": 70,
@@ -162,7 +176,8 @@
         "text": {
           "pt": "Sem Estado, conselhos ou contratos",
           "en": "No state, councils or contracts",
-          "es": "Sin Estado, con consejos o contratos"
+          "es": "Sin Estado, con consejos o contratos",
+          "de": "Kein Staat, Räte oder Verträge"
         },
         "effects": {
           "representacao": 90,
@@ -177,12 +192,14 @@
     "label": {
       "pt": "Economia",
       "en": "Economy",
-      "es": "Economía"
+      "es": "Economía",
+      "de": "Wirtschaft"
     },
     "text": {
       "pt": "Quem deve controlar a produção?",
       "en": "Who should control production?",
-      "es": "¿Quién debe controlar la producción?"
+      "es": "¿Quién debe controlar la producción?",
+      "de": "Wer sollte die Produktion kontrollieren?"
     },
     "options": [
       {
@@ -190,7 +207,8 @@
         "text": {
           "pt": "Produção coletiva e planejada, sem patrões",
           "en": "Collective, planned production, no bosses",
-          "es": "Producción colectiva y planificada, sin patrones"
+          "es": "Producción colectiva y planificada, sin patrones",
+          "de": "Kollektive Planwirtschaft, ohne Chefs"
         },
         "effects": {
           "economia": 92,
@@ -203,7 +221,8 @@
         "text": {
           "pt": "Cooperativas, Estado social e regulação",
           "en": "Co-ops, welfare state and regulation",
-          "es": "Cooperativas, Estado de bienestar y regulación"
+          "es": "Cooperativas, Estado de bienestar y regulación",
+          "de": "Genossenschaften, Sozialstaat und Regulierung"
         },
         "effects": {
           "economia": 76,
@@ -216,7 +235,8 @@
         "text": {
           "pt": "Mercado com regras e rede de proteção",
           "en": "Markets with rules and a safety net",
-          "es": "Mercados con reglas y una red de protección"
+          "es": "Mercados con reglas y una red de protección",
+          "de": "Märkte mit Regeln und sozialem Netz"
         },
         "effects": {
           "economia": 42,
@@ -229,7 +249,8 @@
         "text": {
           "pt": "Patrões e sindicatos unidos pelo Estado",
           "en": "Bosses and unions united by the state",
-          "es": "Patrones y sindicatos unidos por el Estado"
+          "es": "Patrones y sindicatos unidos por el Estado",
+          "de": "Unternehmer und Gewerkschaften, vom Staat vereint"
         },
         "effects": {
           "economia": 65,
@@ -242,7 +263,8 @@
         "text": {
           "pt": "Empresas nacionais protegidas pelo Estado",
           "en": "National firms shielded by the state",
-          "es": "Empresas nacionales protegidas por el Estado"
+          "es": "Empresas nacionales protegidas por el Estado",
+          "de": "Heimische Firmen, vom Staat geschützt"
         },
         "effects": {
           "economia": 38,
@@ -255,7 +277,8 @@
         "text": {
           "pt": "Livre comércio e impostos mínimos",
           "en": "Free trade and minimal taxes",
-          "es": "Libre comercio e impuestos mínimos"
+          "es": "Libre comercio e impuestos mínimos",
+          "de": "Freihandel und minimale Steuern"
         },
         "effects": {
           "economia": 12,
@@ -270,12 +293,14 @@
     "label": {
       "pt": "Mundo",
       "en": "World",
-      "es": "Mundo"
+      "es": "Mundo",
+      "de": "Welt"
     },
     "text": {
       "pt": "Como o país deve agir no mundo?",
       "en": "How should the country act abroad?",
-      "es": "¿Cómo debe actuar el país en el exterior?"
+      "es": "¿Cómo debe actuar el país en el exterior?",
+      "de": "Wie sollte das Land im Ausland auftreten?"
     },
     "options": [
       {
@@ -283,7 +308,8 @@
         "text": {
           "pt": "Potência militar influente",
           "en": "An influential military power",
-          "es": "Una potencia militar influyente"
+          "es": "Una potencia militar influyente",
+          "de": "Als einflussreiche Militärmacht"
         },
         "effects": {
           "diplomacia": 85,
@@ -295,7 +321,8 @@
         "text": {
           "pt": "Defesa forte e aliados próximos",
           "en": "Strong defense and close allies",
-          "es": "Defensa fuerte y aliados cercanos"
+          "es": "Defensa fuerte y aliados cercanos",
+          "de": "Starke Verteidigung und enge Verbündete"
         },
         "effects": {
           "diplomacia": 60,
@@ -307,7 +334,8 @@
         "text": {
           "pt": "Diplomacia antes da força",
           "en": "Diplomacy before force",
-          "es": "Diplomacia antes que fuerza"
+          "es": "Diplomacia antes que fuerza",
+          "de": "Diplomatie vor Gewalt"
         },
         "effects": {
           "diplomacia": 30,
@@ -319,7 +347,8 @@
         "text": {
           "pt": "Armado, mas fora de guerras alheias",
           "en": "Armed, but out of others' wars",
-          "es": "Armado, pero fuera de guerras ajenas"
+          "es": "Armado, pero fuera de guerras ajenas",
+          "de": "Bewaffnet, aber raus aus fremden Kriegen"
         },
         "effects": {
           "diplomacia": 70,
@@ -331,7 +360,8 @@
         "text": {
           "pt": "Paz e não intervenção, sempre",
           "en": "Peace and non-intervention, always",
-          "es": "Paz y no intervención, siempre"
+          "es": "Paz y no intervención, siempre",
+          "de": "Frieden und Nichteinmischung, immer"
         },
         "effects": {
           "diplomacia": 8,
@@ -345,12 +375,14 @@
     "label": {
       "pt": "Tecnologia",
       "en": "Technology",
-      "es": "Tecnología"
+      "es": "Tecnología",
+      "de": "Technologie"
     },
     "text": {
       "pt": "Qual deve ser o papel da tecnologia?",
       "en": "What role should technology play?",
-      "es": "¿Qué papel debe tener la tecnología?"
+      "es": "¿Qué papel debe tener la tecnología?",
+      "de": "Welche Rolle sollte Technologie spielen?"
     },
     "options": [
       {
@@ -358,7 +390,8 @@
         "text": {
           "pt": "Voltar à natureza, sem indústria",
           "en": "Back to nature, no industry",
-          "es": "Volver a la naturaleza, sin industria"
+          "es": "Volver a la naturaleza, sin industria",
+          "de": "Zurück zur Natur, ohne Industrie"
         },
         "effects": {
           "tecnologia": 8
@@ -369,7 +402,8 @@
         "text": {
           "pt": "Natureza acima do progresso",
           "en": "Nature before progress",
-          "es": "La naturaleza antes que el progreso"
+          "es": "La naturaleza antes que el progreso",
+          "de": "Natur vor Fortschritt"
         },
         "effects": {
           "tecnologia": 30
@@ -380,7 +414,8 @@
         "text": {
           "pt": "Equilíbrio entre progresso e natureza",
           "en": "Balance progress and nature",
-          "es": "Equilibrar progreso y naturaleza"
+          "es": "Equilibrar progreso y naturaleza",
+          "de": "Fortschritt und Natur im Gleichgewicht"
         },
         "effects": {
           "tecnologia": 50
@@ -391,7 +426,8 @@
         "text": {
           "pt": "Tecnologia e indústria como motor",
           "en": "Technology and industry as the engine",
-          "es": "Tecnología e industria como motor"
+          "es": "Tecnología e industria como motor",
+          "de": "Technologie und Industrie als Motor"
         },
         "effects": {
           "tecnologia": 72
@@ -402,7 +438,8 @@
         "text": {
           "pt": "Acelerar a tecnologia, sem freios",
           "en": "Accelerate technology, no brakes",
-          "es": "Acelerar la tecnología, sin frenos"
+          "es": "Acelerar la tecnología, sin frenos",
+          "de": "Technologie beschleunigen, ohne Bremse"
         },
         "effects": {
           "tecnologia": 92

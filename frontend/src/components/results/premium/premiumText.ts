@@ -307,4 +307,89 @@ const es: PremiumText = {
   saveCopied: 'Enlace copiado',
 };
 
-export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : en;
+const de: PremiumText = {
+  title: 'Vollständiger Bericht',
+  devBadge: 'Entwicklungsmodus: ohne Zahlung geöffnet, nur auf diesem Rechner.',
+  loading: 'Dein vollständiger Bericht wird erstellt...',
+  error: 'Der Bericht konnte nicht geladen werden. Versuche es gleich noch einmal.',
+  retry: 'Erneut versuchen',
+  historical: 'historisch',
+  axisTitle: 'Vollständige Analyse, Achse für Achse',
+  positions: { you: 'Du', ideology: 'Ideologie', personality: 'Persönlichkeit', country: 'Land' },
+  levelLabels: { equilibrado: 'Ausgeglichen', inclinado: 'Tendenz', forte: 'Stark', muito_forte: 'Sehr stark' },
+  disagreeTitle: 'Wo du am meisten abweichst',
+  disagreeKinds: { ideology: 'von deiner Ideologie', personality: 'von deiner Persönlichkeit', country: 'von deinem Land' },
+  disagreeLegendProfile: 'Profil',
+  gapRank: (position) => (position === 1 ? 'Größte Abweichung' : position === 2 ? '2. größte Abweichung' : '3. größte Abweichung'),
+  governmentTitle: 'Deine ideale Regierung',
+  governmentRolesTitle: 'Die Rolle jedes Mitglieds in deiner Regierung',
+  governmentSwap: {
+    aria: (seat) => `Besetzung ändern: ${seat}`,
+    title: (seat) => `Tauschen: ${seat}`,
+    lead: (category) => `Die Persönlichkeiten der Kategorie ${category} mit der höchsten Übereinstimmung mit dir nach der aktuellen. Wähle eine aus, um deine ideale Regierung zusammenzustellen.`,
+    current: 'Aktuell',
+    none: 'Es gibt keine weiteren Persönlichkeiten in dieser Kategorie zum Tauschen.',
+    swapped: 'Von dir getauscht',
+    searchLabel: 'Oder suche eine beliebige andere Persönlichkeit',
+    holdsNow: (seat) => `Aktuell: ${seat}. Tauscht den Platz.`,
+    searchPlaceholder: 'Name eingeben',
+    searchNone: 'Niemand mit diesem Namen gefunden.',
+    searchError: 'Die Suche ist gerade nicht möglich. Versuche es gleich noch einmal.',
+    searching: 'Suche läuft…'
+  },
+  governmentRolesLead: 'Jedes Amt wird anhand deiner Positionen auf den Achsen beschrieben, die dafür am meisten zählen, damit du siehst, warum das Ergebnis so ausgefallen ist.',
+  // Die Absätze nach dem ersten beginnen mit "diese Person würde ...": nach dem Doppelpunkt ein vollständiger Hauptsatz.
+  roleAxis: {
+    estrutura: 'Bei der Struktur:',
+    representacao: 'Politisch:',
+    poder: 'Bei der Macht:',
+    imigracao: 'Bei der Einwanderung:',
+    diplomacia: 'In der Diplomatie:',
+    intervencao: 'Bei der Intervention:',
+    economia: 'In der Wirtschaft:',
+    controle: 'Bei der Steuerung:',
+    comercio: 'Im Handel:',
+    religiao: 'In der Religion:',
+    moral: 'In der Moral:',
+    tecnologia: 'In der Technologie:'
+  },
+  roleSubject: 'diese Person',
+  governmentWhy: (area, pct) => `Hat das Amt inne, weil diese Persönlichkeit in der Kategorie ${area} am besten zu dir passt: ${pct} % Übereinstimmung.`,
+  governmentWhySwapped: (pct) => `Ist durch deinen Tausch ins Amt gekommen: ${pct} % Übereinstimmung mit deinem Ergebnis.`,
+  timelineTitle: 'Deine ideologische Zeitleiste',
+  timelineEraNames: {
+    antiguidade: 'Antike',
+    medieval: 'Mittelalter',
+    moderna: 'Frühe Neuzeit',
+    xix: '19. Jahrhundert',
+    xx: '20. Jahrhundert',
+    xxi: '21. Jahrhundert'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} v. Chr.` : String(value));
+    if (from === null && to !== null) return `Bis ${year(to)}`;
+    if (to === null && from !== null) return `Seit ${year(from)}`;
+    return `${year(from ?? 0)} bis ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Aktuell',
+  timelineBestEra: 'Epoche mit der höchsten Übereinstimmung:',
+  seats: {
+    lider: 'Politische Führung',
+    vice: 'Stellvertretende politische Führung',
+    economia: 'Verantwortlich für Wirtschaft',
+    educacao: 'Verantwortlich für Bildung',
+    estrategia: 'Leitung Politische Strategie',
+    filosofia: 'Philosophischer Berater',
+    social: 'Koordination Soziales',
+    industria: 'Koordination Industrie und Innovation',
+    cultura: 'Berater für Kultur'
+  },
+  countriesTitle: '10 Länder oder Regionen zum Leben',
+  saveTitle: 'Bewahre deinen Zugang auf',
+  saveIntro: 'Um diesen Bericht auf einem anderen Gerät oder nach dem Löschen des Browserspeichers zu öffnen, speichere den Link unten. Wer den Link hat, kann den Bericht zu diesem Ergebnis öffnen, also bewahre ihn sorgfältig auf.',
+  saveField: 'Zugangslink zum Bericht',
+  saveCopy: 'Link kopieren',
+  saveCopied: 'Link kopiert',
+};
+
+export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : en;

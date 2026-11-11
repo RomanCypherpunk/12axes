@@ -1,0 +1,576 @@
+[
+  {
+    "id": "economicos",
+    "label": "Wirtschaft"
+  },
+  {
+    "id": "socialismo-planificado",
+    "name": "Planwirtschaftlicher Sozialismus",
+    "description": "Produktionsmittel in öffentlichem oder kollektivem Eigentum, mit zentral geplanter Wirtschaft."
+  },
+  {
+    "id": "socialismo-de-mercado",
+    "name": "Marktsozialismus",
+    "description": "Unternehmen in öffentlichem oder kollektivem Eigentum, die auf einem Markt konkurrieren, mit übergeordneter Planung und weitgehend freien Preisen."
+  },
+  {
+    "id": "desenvolvimentismo",
+    "name": "Developmentalismus",
+    "description": "Öffentliche Investitionen und Planung, um das Land zu industrialisieren, mit Schutz der heimischen Industrie, solange sie wächst."
+  },
+  {
+    "id": "geosocialismo",
+    "name": "Geosozialismus",
+    "description": "Boden und natürliche Ressourcen gehören allen, ihre Rente wird von der Gemeinschaft geteilt und der Handel bleibt offen."
+  },
+  {
+    "id": "liberalismo-social",
+    "name": "Sozialliberalismus",
+    "description": "Eine marktbasierte Wirtschaft mit für alle garantierten Grundleistungen und Regeln, die Ungleichheit verringern."
+  },
+  {
+    "id": "pragmatismo",
+    "name": "Pragmatismus",
+    "description": "Keine feste Präferenz zwischen öffentlichem und privatem Eigentum, Planung und Markt, Schutz und Öffnung: entscheidet von Fall zu Fall."
+  },
+  {
+    "id": "sindicalismo",
+    "name": "Syndikalismus",
+    "description": "Eine von Gewerkschaften und Arbeiterorganisationen organisierte Wirtschaft, die die Produktion leiten und für jeden Sektor verhandeln."
+  },
+  {
+    "id": "trabalhismo",
+    "name": "Laborismus",
+    "description": "Verteidigung der Arbeitnehmerrechte und eine koordinierte nationale Wirtschaft, die Arbeitsplätze und Einkommen sichert."
+  },
+  {
+    "id": "social-democracia",
+    "name": "Sozialdemokratie",
+    "description": "Eine Marktwirtschaft mit starkem sozialem Netz, umfassenden öffentlichen Leistungen und Einkommensumverteilung."
+  },
+  {
+    "id": "distributismo",
+    "name": "Distributismus",
+    "description": "Eigentum breit verteilt auf Familien und kleine Produzenten, statt konzentriert in Großunternehmen oder einem einzigen Zentrum."
+  },
+  {
+    "id": "liberalismo",
+    "name": "Liberalismus",
+    "description": "Privateigentum und freier Wettbewerb als Grundlage der Wirtschaft, mit klaren Regeln und begrenzten Eingriffen."
+  },
+  {
+    "id": "ordoliberalismo",
+    "name": "Ordoliberalismus",
+    "description": "Ein freier Markt innerhalb fester Regeln, die den Wettbewerb schützen und Monopole verhindern."
+  },
+  {
+    "id": "neoliberalismo",
+    "name": "Neoliberalismus",
+    "description": "Offene Märkte, Privatisierung, Deregulierung und Haushaltsdisziplin als Weg zum Wachstum."
+  },
+  {
+    "id": "liberal-desenvolvimentismo",
+    "name": "Liberaler Developmentalismus",
+    "description": "Märkte und private Initiative treiben das Wachstum, mit gezielter öffentlicher Förderung von Industrie und Infrastruktur."
+  },
+  {
+    "id": "protecionismo",
+    "name": "Protektionismus",
+    "description": "Schutz der heimischen Produktion vor ausländischer Konkurrenz durch Zölle, Quoten und Bevorzugung nationaler Waren."
+  },
+  {
+    "id": "capitalismo",
+    "name": "Kapitalismus",
+    "description": "Privateigentum an den Produktionsmitteln, Gewinnstreben und durch Angebot und Nachfrage bestimmte Preise."
+  },
+  {
+    "id": "corporativismo",
+    "name": "Korporatismus",
+    "description": "Wirtschaftssektoren, organisiert in Korporationen aus Arbeitgebern und Beschäftigten, die die nationale Produktion aushandeln und koordinieren."
+  },
+  {
+    "id": "liberalismo-austriaco",
+    "name": "Österreichischer Liberalismus",
+    "description": "Freie Preise und individuelle Entscheidung, mit starkem Privateigentum und minimalen Eingriffen in die Wirtschaft."
+  },
+  {
+    "id": "georgismo",
+    "name": "Georgismus",
+    "description": "Privateigentum an dem, was Menschen produzieren, während die Rente aus Boden und natürlichen Ressourcen zum Nutzen aller erhoben wird."
+  },
+  {
+    "id": "mercantilismo",
+    "name": "Merkantilismus",
+    "description": "Nationaler Wohlstand durch Exporte, Reserven und Schutz der heimischen Produktion."
+  },
+  {
+    "id": "mutualismo",
+    "name": "Mutualismus",
+    "description": "Gerechter Tausch zwischen Produzenten, mit Genossenschaften, gegenseitigem Kredit und an Nutzung und Arbeit gebundenem Eigentum."
+  },
+  {
+    "id": "sociedade",
+    "label": "Gesellschaft"
+  },
+  {
+    "id": "tradicionalismo-religioso",
+    "name": "Religiöser Traditionalismus",
+    "description": "Sieht Glauben und überlieferte Traditionen als Zusammenhalt der Gesellschaft, die Sitten und Gesetze leiten sollten."
+  },
+  {
+    "id": "tradicionalismo-secular",
+    "name": "Säkularer Traditionalismus",
+    "description": "Verteidigt den Erhalt überlieferter Sitten und Institutionen wegen ihres Werts für die Gesellschaft, ohne sich auf Religion zu stützen."
+  },
+  {
+    "id": "tradicionalismo-irreligioso",
+    "name": "Irreligiöser Traditionalismus",
+    "description": "Verteidigt den Erhalt überlieferter Sitten und Traditionen und sieht Religion nicht als moralische Grundlage."
+  },
+  {
+    "id": "conservadorismo-religioso",
+    "name": "Religiöser Konservatismus",
+    "description": "Bevorzugt schrittweisen, vorsichtigen Wandel der Sitten, mit dem Glauben als moralischer Grundlage."
+  },
+  {
+    "id": "conservadorismo-secular",
+    "name": "Säkularer Konservatismus",
+    "description": "Bevorzugt schrittweisen, vorsichtigen Wandel der Sitten, ohne sich auf Religion zu stützen."
+  },
+  {
+    "id": "conservadorismo-irreligioso",
+    "name": "Irreligiöser Konservatismus",
+    "description": "Bevorzugt schrittweisen, vorsichtigen Wandel der Sitten und gibt Religion keine Rolle."
+  },
+  {
+    "id": "conservadorismo-moderado",
+    "name": "Gemäßigter Konservatismus",
+    "description": "Schätzt etablierte Sitten und Institutionen, akzeptiert aber Wandel, wenn es einen klaren Grund gibt."
+  },
+  {
+    "id": "moderado",
+    "name": "Gemäßigt",
+    "description": "Keine feste Neigung zwischen Tradition und Wandel der Sitten, noch zwischen Religion und Säkularismus."
+  },
+  {
+    "id": "progressismo-moderado",
+    "name": "Gemäßigter Progressivismus",
+    "description": "Unterstützt Wandel der Sitten und individuelle Rechte, schrittweise und ausgewogen."
+  },
+  {
+    "id": "progressismo-religioso",
+    "name": "Religiöser Progressivismus",
+    "description": "Unterstützt Wandel der Sitten und individuelle Rechte, mit dem Glauben als Teil von Leben und Werten."
+  },
+  {
+    "id": "progressismo",
+    "name": "Progressivismus",
+    "description": "Unterstützt Wandel der Sitten und erweiterte individuelle Rechte, mit Trennung von Religion und öffentlichem Leben."
+  },
+  {
+    "id": "progressismo-irreligioso",
+    "name": "Irreligiöser Progressivismus",
+    "description": "Unterstützt Wandel der Sitten und erweiterte individuelle Rechte und sieht Religion nicht als moralische Grundlage."
+  },
+  {
+    "id": "moderado-religioso",
+    "name": "Religiös Gemäßigt",
+    "description": "Keine feste Neigung zwischen Tradition und Wandel der Sitten, mit dem Glauben als wichtigem Teil des Lebens."
+  },
+  {
+    "id": "moderado-irreligioso",
+    "name": "Irreligiös Gemäßigt",
+    "description": "Keine feste Neigung zwischen Tradition und Wandel der Sitten, und sieht Religion nicht als moralische Grundlage."
+  },
+  {
+    "id": "politicos",
+    "label": "Politik"
+  },
+  {
+    "id": "autocracia",
+    "name": "Autokratie",
+    "description": "Macht konzentriert in einer Person oder Gruppe, ohne freie Wahlen oder institutionelle Grenzen."
+  },
+  {
+    "id": "anarquismo",
+    "name": "Anarchismus",
+    "description": "Eine Gesellschaft ohne Zentralregierung, organisiert durch freiwillige Vereinbarungen und Selbstverwaltung."
+  },
+  {
+    "id": "minarquismo",
+    "name": "Minarchismus",
+    "description": "Öffentliche Gewalt auf das Minimum reduziert: Sicherheit, Justiz und Verteidigung, sonst nichts."
+  },
+  {
+    "id": "democracia",
+    "name": "Demokratie",
+    "description": "Regierung durch freie Wahlen bestimmt, mit garantierten Rechten und Grenzen der Macht."
+  },
+  {
+    "id": "conselhos",
+    "name": "Räte",
+    "description": "Entscheidungen durch Räte von Arbeitern und Gemeinschaften, von unten nach oben gewählt."
+  },
+  {
+    "id": "monarquismo-absoluto",
+    "name": "Absoluter Monarchismus",
+    "description": "Ein Monarch mit uneingeschränkter, vererbter Macht und ohne verfassungsmäßige Grenzen."
+  },
+  {
+    "id": "monarquismo-constitucional",
+    "name": "Konstitutioneller Monarchismus",
+    "description": "Ein Monarch mit symbolischer oder begrenzter Rolle, im Rahmen einer Verfassung und eines Parlaments."
+  },
+  {
+    "id": "tecnocracia",
+    "name": "Technokratie",
+    "description": "Entscheidungen geleitet von Experten und Fachwissen statt von politischem Wettstreit."
+  },
+  {
+    "id": "federalismo",
+    "name": "Föderalismus",
+    "description": "Macht geteilt zwischen einer Zentralregierung und sich selbst regierenden Regionen."
+  },
+  {
+    "id": "confederalismo",
+    "name": "Konföderalismus",
+    "description": "Souveräne Regionen oder Völker, durch einen Pakt verbunden, mit schwachem Zentrum."
+  },
+  {
+    "id": "municipalismo",
+    "name": "Munizipalismus",
+    "description": "Die wichtigsten politischen Entscheidungen liegen bei Städten und lokalen Gemeinschaften."
+  },
+  {
+    "id": "neocameralismo",
+    "name": "Neokameralismus",
+    "description": "Ein Territorium, geführt wie ein Unternehmen, mit einem Vorstand, der den Anteilseignern verantwortlich ist."
+  },
+  {
+    "id": "aristocracia",
+    "name": "Aristokratie",
+    "description": "Herrschaft einer Elite, ausgewählt nach Geburt, Tradition oder anerkanntem Verdienst."
+  },
+  {
+    "id": "ditadura-do-proletariado",
+    "name": "Diktatur des Proletariats",
+    "description": "Politische Macht, zentralisiert von der Arbeiterklasse ausgeübt, um die Wirtschaft umzugestalten."
+  },
+  {
+    "id": "comunismo",
+    "name": "Kommunismus",
+    "description": "Eine klassenlose Gesellschaft mit kollektivem Eigentum, geführt von einer Partei oder Bewegung."
+  },
+  {
+    "id": "neutralidade-politica",
+    "name": "Politische Neutralität",
+    "description": "Gemischte Positionen, ohne vorherrschendes politisches Muster bei Struktur, Repräsentation und Macht."
+  },
+  {
+    "id": "teocracia",
+    "name": "Theokratie",
+    "description": "Regierung durch religiöse Führer oder nach religiösem Recht."
+  },
+  {
+    "id": "democracia-securitaria",
+    "name": "Sicherheitsdemokratie",
+    "description": "Freie Wahlen, verbunden mit einer starken Zentralmacht und einem Schwerpunkt auf Ordnung und Sicherheit."
+  },
+  {
+    "id": "monarquismo-libertario",
+    "name": "Libertärer Monarchismus",
+    "description": "Befürwortet einen Monarchen oder eine Erbordnung, mit starkem Privateigentum und minimaler öffentlicher Gewalt."
+  },
+  {
+    "id": "corporacao-governamental",
+    "name": "Regierungskonzern",
+    "description": "Kleine Territorien, geführt wie Technologieunternehmen, mit starker Exekutive und ohne Wahlen, die um Einwohner konkurrieren."
+  },
+  {
+    "id": "externa",
+    "label": "Außenpolitik"
+  },
+  {
+    "id": "imperialismo",
+    "name": "Imperialismus",
+    "description": "Ausweitung des Einflusses oder der Kontrolle des Landes über andere Gebiete und Völker, mit Gewalt und mit Politik."
+  },
+  {
+    "id": "expansionismo",
+    "name": "Expansionismus",
+    "description": "Ausweitung des Staatsgebiets oder der Einflusssphäre des Landes, unter starkem Einsatz militärischer Macht."
+  },
+  {
+    "id": "nacionalismo",
+    "name": "Nationalismus",
+    "description": "Vorrang für die Interessen und die Souveränität der eigenen Nation, auch im Handel mit anderen Ländern."
+  },
+  {
+    "id": "realismo-politico",
+    "name": "Politischer Realismus",
+    "description": "Beziehungen zwischen Ländern werden von Interessen und Macht geleitet, nicht von Idealen."
+  },
+  {
+    "id": "neutralidade-armada",
+    "name": "Bewaffnete Neutralität",
+    "description": "Sich aus fremden Kriegen heraushalten und dennoch starke Streitkräfte zur Verteidigung des eigenen Gebiets unterhalten."
+  },
+  {
+    "id": "neutralidade",
+    "name": "Neutralität",
+    "description": "Keine feste Neigung zwischen Gewalt und Diplomatie, noch zwischen Handeln im Ausland und Heraushalten."
+  },
+  {
+    "id": "pacifismo",
+    "name": "Pazifismus",
+    "description": "Lehnt Krieg und militärische Gewalt als Mittel ab und stellt Frieden und Verhandlung an erste Stelle."
+  },
+  {
+    "id": "internacionalismo",
+    "name": "Internationalismus",
+    "description": "Zusammenarbeit zwischen Ländern durch gemeinsame Institutionen und Abkommen, mit offenem Handel."
+  },
+  {
+    "id": "isolacionismo",
+    "name": "Isolationismus",
+    "description": "Das Land aus ausländischen Bündnissen und Konflikten heraushalten und im Handel schützen."
+  },
+  {
+    "id": "intervencionismo-humanitario",
+    "name": "Humanitärer Interventionismus",
+    "description": "Handeln im Ausland, auch mit Gewalt, um schwere Missstände zu beenden und Bevölkerungen zu schützen."
+  },
+  {
+    "id": "tecnologicos",
+    "label": "Technologie"
+  },
+  {
+    "id": "primitivismo",
+    "name": "Primitivismus",
+    "description": "Lehnt industrielle und moderne Technik ab und bevorzugt ein naturnahes Leben in kleinem Maßstab."
+  },
+  {
+    "id": "naturalismo",
+    "name": "Naturalismus",
+    "description": "Bevorzugt natürliche Lösungen und ein Leben im Einklang mit der Natur und nutzt Technik nur, wenn nötig."
+  },
+  {
+    "id": "ambientalismo",
+    "name": "Umweltschutzbewegung",
+    "description": "Akzeptiert Technik, solange sie durch den Umweltschutz begrenzt wird."
+  },
+  {
+    "id": "cautela-tecnologica",
+    "name": "Technologische Vorsicht",
+    "description": "Akzeptiert neue Technologien, aber mit Vorsicht, Regeln und Blick auf die Risiken."
+  },
+  {
+    "id": "equilibrio-tecnologico",
+    "name": "Technologisches Gleichgewicht",
+    "description": "Keine feste Neigung, eher der Technik oder eher der Natur zu vertrauen."
+  },
+  {
+    "id": "modernismo-tecnologico",
+    "name": "Technologischer Modernismus",
+    "description": "Technik ist der Weg, das Leben zu verbessern und gemeinsame Probleme zu lösen."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialismus",
+    "description": "Schätzt Industrie und Großproduktion als Grundlage des Fortschritts."
+  },
+  {
+    "id": "otimismo-tecnologico",
+    "name": "Technologischer Optimismus",
+    "description": "Vertraut darauf, dass Technik die meisten menschlichen und ökologischen Probleme lösen wird."
+  },
+  {
+    "id": "futurismo",
+    "name": "Futurismus",
+    "description": "Richtet die Gesellschaft auf die Zukunft aus und gibt Innovation und schnellem technischem Wandel Vorrang."
+  },
+  {
+    "id": "aceleracionismo",
+    "name": "Akzelerationismus",
+    "description": "Will den technologischen Fortschritt so stark wie möglich beschleunigen, auch wenn er die Gesellschaft tiefgreifend verändert."
+  },
+  {
+    "id": "imigracao",
+    "label": "Einwanderung"
+  },
+  {
+    "id": "cosmopolitismo",
+    "name": "Kosmopolitismus",
+    "description": "Sieht die Menschheit als eine Gemeinschaft, mit offenen Grenzen und freier Bewegung von Menschen."
+  },
+  {
+    "id": "multiculturalismo",
+    "name": "Multikulturalismus",
+    "description": "Schätzt es, wenn mehrere Kulturen im selben Land leben und jede ihre eigenen Traditionen bewahrt."
+  },
+  {
+    "id": "pluralismo",
+    "name": "Pluralismus",
+    "description": "Akzeptiert kulturelle Vielfalt innerhalb von Regeln und Werten, die für alle gelten."
+  },
+  {
+    "id": "integracao-civica",
+    "name": "Bürgerliche Integration",
+    "description": "Neuankömmlinge integrieren sich über Gesetz, Sprache und Staatsbürgerschaft und behalten ihre Bräuche im Privatleben."
+  },
+  {
+    "id": "equilibrio-migratorio",
+    "name": "Ausgewogenheit",
+    "description": "Keine klare Neigung zwischen dem Bewahren der nationalen Kultur und dem Willkommenheißen von Vielfalt."
+  },
+  {
+    "id": "integracao-cultural",
+    "name": "Kulturelle Integration",
+    "description": "Neuankömmlinge sollen die Kultur, Sprache und Bräuche des Landes weitgehend übernehmen."
+  },
+  {
+    "id": "assimilacionismo",
+    "name": "Assimilationismus",
+    "description": "Neuankömmlinge sollen sich vollständig in die nationale Kultur assimilieren und ihre ursprüngliche hinter sich lassen."
+  },
+  {
+    "id": "preservacionismo-cultural",
+    "name": "Kultureller Bewahrungsgedanke",
+    "description": "Stellt den Erhalt der bestehenden nationalen Kultur in den Vordergrund, mit klaren Grenzen für die Einwanderung."
+  },
+  {
+    "id": "nacionalismo-etnico",
+    "name": "Ethnischer Nationalismus",
+    "description": "Die Nation wird durch gemeinsame Herkunft und Abstammung bestimmt, und die Einwanderung soll streng begrenzt werden."
+  },
+  {
+    "id": "federalismo-autoritario",
+    "name": "Autoritärer Föderalismus",
+    "description": "Die Macht ist auf Regionen verteilt, aber auf jeder Regierungsebene gibt es starke Autorität und wenig individuelle Freiheit."
+  },
+  {
+    "id": "democracia-moderada",
+    "name": "Gemäßigte Demokratie",
+    "description": "Eine in Wahlen bestimmte Regierung, mit begrenzter Beteiligung und Augenmerk auf Ordnung und Stabilität."
+  },
+  {
+    "id": "governo-forte",
+    "name": "Starke Regierung",
+    "description": "Eine starke Zentralregierung, mit begrenzter Repräsentation und Schwerpunkt auf Sicherheit und Ordnung."
+  },
+  {
+    "id": "democracia-central",
+    "name": "Zentrale Demokratie",
+    "description": "Freie Wahlen und weitreichende Freiheiten, mit Entscheidungen, die in einer Zentralregierung gebündelt sind."
+  },
+  {
+    "id": "socialismo-internacionalista",
+    "name": "Internationalistischer Sozialismus",
+    "description": "Gemeinschaftseigentum und Wirtschaftsplanung, mit Zusammenarbeit und offenem Handel zwischen den Völkern."
+  },
+  {
+    "id": "capitalismo-protecionista",
+    "name": "Protektionistischer Kapitalismus",
+    "description": "Privateigentum und freie Märkte im Inland, mit einer nationalen Produktion, die vor ausländischer Konkurrenz geschützt wird."
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigismus",
+    "description": "Eine Mischung aus Privateigentum und zentraler Koordination der Wirtschaft, mit nationalen Plänen und Schutz der heimischen Produktion."
+  },
+  {
+    "id": "tradicionalismo-cultural",
+    "name": "Kultureller Traditionalismus",
+    "description": "Verteidigt den Erhalt überlieferter Traditionen und Bräuche und sieht Religion eher als kulturelles Erbe denn als Glauben."
+  },
+  {
+    "id": "progressismo-moderado-irreligioso",
+    "name": "Religionsferner gemäßigter Progressivismus",
+    "description": "Unterstützt einen schrittweisen Wandel bei Sitten und individuellen Rechten und sieht Religion nicht als moralische Grundlage."
+  },
+  {
+    "id": "moderado-secular",
+    "name": "Säkularer Moderater",
+    "description": "Keine klare Neigung zwischen Tradition und Wandel bei den Sitten, mit Religion außerhalb des öffentlichen Lebens."
+  },
+  {
+    "id": "nao-alinhamento",
+    "name": "Blockfreiheit",
+    "description": "Sich aus Machtblöcken heraushalten, eine unabhängige Außenpolitik führen und Beziehungen zu vielen Ländern pflegen."
+  },
+  {
+    "id": "nao-intervencionismo",
+    "name": "Nichtinterventionismus",
+    "description": "Sich nicht in die Angelegenheiten anderer Länder einmischen und Kriege sowie Verwicklungen jenseits der eigenen Grenzen vermeiden."
+  },
+  {
+    "id": "militarismo",
+    "name": "Militarismus",
+    "description": "Starke Streitkräfte und Vorrang der Militärmacht in der Außenpolitik, ohne zwingend Expansion anzustreben."
+  },
+  {
+    "id": "democracia-direta",
+    "name": "Direkte Demokratie",
+    "description": "Wichtige Entscheidungen treffen die Bürger direkt per Plebiszit und Volksabstimmung, bei dezentralisierter Macht."
+  },
+  {
+    "id": "livre-mercado-moderado",
+    "name": "Gemäßigte freie Marktwirtschaft",
+    "description": "Preise und Wettbewerb werden vom Markt bestimmt, bei gemischten Eigentumsformen und mäßiger Offenheit für den Außenhandel."
+  },
+  {
+    "id": "coletivismo",
+    "name": "Kollektivismus",
+    "description": "Wirtschaftliches Eigentum und Entscheidungen liegen in den Händen der Gemeinschaft, mit mäßiger Planung und offenem Handel."
+  },
+  {
+    "id": "liberalismo-pragmatico",
+    "name": "Pragmatischer Liberalismus",
+    "description": "Der Markt als Grundlage der Wirtschaft, mit praktischen Regeln und Anpassungen je nach Umständen sowie mäßiger Handelsoffenheit."
+  },
+  {
+    "id": "libertarianismo-social",
+    "name": "Sozialer Libertarismus",
+    "description": "Freie Preise und sehr offener Handel, mit gemischten Eigentumsformen und Sorge um soziale Gerechtigkeit."
+  },
+  {
+    "id": "liberalismo-nacional",
+    "name": "Nationalliberalismus",
+    "description": "Freie Märkte und Privateigentum, mit mäßiger Handelsoffenheit und Vorrang für die eigenen Interessen der Nation."
+  },
+  {
+    "id": "diplomacia-moderada",
+    "name": "Gemäßigte Diplomatie",
+    "description": "Bevorzugt die Zusammenarbeit zwischen Ländern und akzeptiert begrenztes, ausgehandeltes Handeln im Ausland."
+  },
+  {
+    "id": "militarismo-defensivo",
+    "name": "Defensiver Militarismus",
+    "description": "Unterhält starke Streitkräfte zur Verteidigung des eigenen Territoriums und der eigenen Interessen, ohne Expansion anzustreben."
+  },
+  {
+    "id": "conservadorismo-moderado-religioso",
+    "name": "Religiöser gemäßigter Konservatismus",
+    "description": "Schätzt Tradition und Glauben als Grundlage der Sitten, akzeptiert aber schrittweisen Wandel."
+  },
+  {
+    "id": "progressismo-moderado-secular",
+    "name": "Säkularer gemäßigter Progressivismus",
+    "description": "Unterstützt einen schrittweisen Wandel bei Sitten und individuellen Rechten, mit einer vom öffentlichen Leben getrennten Religion."
+  },
+  {
+    "id": "autoritarismo-desenvolvimentista",
+    "name": "Entwicklungsorientierter Autoritarismus",
+    "description": "Zentralisierte Macht ohne politischen Wettbewerb, die genutzt wird, um die Wirtschaft und die Modernisierung des Landes zu lenken."
+  },
+  {
+    "id": "democracia-social",
+    "name": "Sozialdemokratie",
+    "description": "Freie Wahlen mit Augenmerk auf soziale Rechte und den Abbau von Ungleichheit, mit einer aktiveren Zentralregierung."
+  },
+  {
+    "id": "autoritarismo-misto",
+    "name": "Gemischter Autoritarismus",
+    "description": "Starke Autorität und wenig politischer Wettbewerb, mit einer Machtteilung zwischen Zentrum und Regionen."
+  }
+]

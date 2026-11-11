@@ -1,7 +1,7 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN e ES
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN, ES e DE
 // a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
 // Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
-// overlays em data/i18n/<lang>/*.json (chaveados por id; fallback: EN usa PT, ES usa EN).
+// overlays em data/i18n/<lang>/*.json (chaveados por id; fallback: EN usa PT, ES e DE usam EN).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,7 +18,9 @@ import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
 import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
 import { policyPages, POLICY_CSS } from './policy-pages.mjs';
 import { cdnifyHtml, cdnifyShareImage } from './cdn.mjs';
+import { APP_DICTIONARY } from './app-strings.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -168,8 +170,9 @@ const STR = {
 };
 
 STR.es = { ...STR.en, ...ES.site };
+STR.de = { ...STR.en, ...DE.site };
 
-const LOCALES = ['pt', 'en', 'es'];
+const LOCALES = ['pt', 'en', 'es', 'de'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -265,7 +268,7 @@ function buildLocaleContext(locale) {
   return {
     locale,
     s: STR[locale],
-    storeAuthorName: (author) => (locale === 'es' ? englishNames.get(author.id) ?? author.name : author.name),
+    storeAuthorName: (author) => (locale !== 'pt' && locale !== 'en' ? englishNames.get(author.id) ?? author.name : author.name),
     axes: overlay(baseAxes, locale, 'axes.json'),
     ideologies,
     countries,
@@ -288,7 +291,7 @@ function writePage(prefix, { basePath, html }) {
   return prefix + basePath;
 }
 
-// ── Homes /en, /es e /br ─────────────────────────────────────────────────────────
+// ── Homes /en, /es, /de e /br ─────────────────────────────────────────────────────────
 // dist/en.html: cópia do index compilado com todo o SEO trocado para inglês
 // (título, description, OG, JSON-LD) e canonical próprio — é o que o Google
 // mostra para quem busca em inglês. dist/br.html: cópia fiel do index (o
@@ -305,9 +308,9 @@ function replaceBetween(html, startMarker, endMarker, replacement) {
 
 const HOME_EN = {
   copyright: '© 2026 12 Axes. All rights reserved',
-  title: '12 Axes — Free Political Test, Quiz & Compass Across 12 Axes',
+  title: "Free Political Test: What's Your Political Ideology? | 12 Axes",
   description: 'The free, fast and accurate 12 Axes political test. Find your ideology, country and political figure match across 12 axes, with a political compass.',
-  keywords: 'political test, free political test, political quiz, ideology test, political ideology, find your ideology, find your compatible ideology, find your compatible country, find your compatible political figure, political spectrum, political compass, political coordinates, political compass test, 12 axes, 12 axes political test, 12axes, 12 axes quiz, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism',
+  keywords: 'political test, free political test, what is my political ideology, which political ideology am I, political ideology quiz, political quiz, ideology test, political ideology, find your ideology, find your compatible ideology, find your compatible country, find your compatible political figure, political spectrum, political compass, political coordinates, political compass test, 12 axes, 12 axes political test, 12axes, 12 axes quiz, left, right, center, liberalism, conservatism, progressivism, libertarianism, socialism, capitalism',
   languageName: 'English',
   ogLocale: 'en_US',
   ogDescription: 'A complete, free political quiz: find your political ideology, compatible country and political figure across 12 axes, with a political compass and full spectrum.',
@@ -388,6 +391,7 @@ function homeVariant(index, locale, c) {
     <link rel="alternate" hreflang="pt-BR" href="https://12axes.vercel.app/" />
     <link rel="alternate" hreflang="en" href="https://12axes.vercel.app/en" />
     <link rel="alternate" hreflang="es" href="https://12axes.vercel.app/es" />
+    <link rel="alternate" hreflang="de" href="https://12axes.vercel.app/de" />
     <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
 
     `;
@@ -457,7 +461,7 @@ function homeVariant(index, locale, c) {
     name: '12 Axes',
     alternateName: ['12 Eixos', '12axes', '12 Axes Political Test'],
     url,
-    inLanguage: [locale, ...['pt-BR', 'en', 'es'].filter((l) => l !== locale)]
+    inLanguage: [locale, ...['pt-BR', 'en', 'es', 'de'].filter((l) => l !== locale)]
   };
 
   const jsonLdBlocks = [JSON.stringify(webApp), JSON.stringify(faqLd), JSON.stringify(webSite)];
@@ -480,10 +484,66 @@ function homeVariant(index, locale, c) {
   return html;
 }
 
-function buildHomeVariants() {
-  const index = readFileSync(join(DIST, 'index.html'), 'utf8');
+// ── Conteúdo da home no HTML ─────────────────────────────────────────────────────
+// A home é desenhada pelo app, então o HTML chegava ao Google com `#root` vazio. Aqui o mesmo texto da home (título, resumo,
+// como funciona, os 12 eixos, o que você descobre e as perguntas frequentes) entra dentro de `#root`, no idioma da página.
+// O app o substitui ao carregar, então quem usa o site não vê diferença; quem lê só o HTML (buscadores) tem o texto.
+const SEO_HOME_START = '<!--seo-home-->';
+const SEO_HOME_END = '<!--/seo-home-->';
+const SEO_HOME_CSS =
+  '.seo-home{max-width:760px;margin:0 auto;padding:32px 20px 64px;font-family:Poppins,system-ui,sans-serif;color:#101010;line-height:1.6}' +
+  '.seo-home h1{font-size:2.2rem;line-height:1.15;margin:.3em 0}.seo-home h2{font-size:1.4rem;margin:1.8em 0 .4em}.seo-home h3{font-size:1.05rem;margin:1.2em 0 .2em}' +
+  '.seo-home nav a{margin-right:14px;color:#5B5A55}.seo-home p,.seo-home li{margin:.4em 0}';
 
-  writeFileSync(join(DIST, 'br.html'), index);
+function seoHomeContent(locale) {
+  const d = APP_DICTIONARY[locale];
+  const L = STR[locale];
+  const e = escapeHtml;
+  const prefix = L.prefix;
+  const nav = [
+    ['books', L.navBooks],
+    ['ideologies', L.navIdeologies],
+    ['personalities', L.navPersonalities],
+    ['countries', L.navCountries],
+    ['parties', L.navParties]
+  ]
+    .map(([key, label]) => `<a href="${prefix}/${key}">${e(label)}</a>`)
+    .join('') + `<a href="${e(L.compareHref)}">${e(L.navCompare)}</a>`;
+  const axes = Object.values(d.homeAxes)
+    .map((axis) => `<li><strong>${e(axis.label)}</strong>: ${e(axis.leftPole)} · ${e(axis.rightPole)}</li>`)
+    .join('');
+  const steps = d.steps.map((step) => `<li><strong>${e(step.title)}.</strong> ${e(step.text)}</li>`).join('');
+  const discovery = d.discoveryItems.map((item) => `<li><strong>${e(item.title)}</strong>: ${e(item.text)}</li>`).join('');
+  const faq = d.faqItems.map((item) => `<h3>${e(item.question)}</h3><p>${e(item.answer)}</p>`).join('');
+  return `${SEO_HOME_START}<style>${SEO_HOME_CSS}</style><main class="seo-home">
+<nav aria-label="${e(L.navCatalog)}">${nav}</nav>
+<p>${e(d.heroEyebrow)}</p>
+<h1>${e(d.h1Pre)}${e(d.h1Em)}${e(d.h1Post)}</h1>
+<p>${e(d.introLead)}</p>
+<h2>${e(d.discoveryTitle)}</h2><p>${e(d.discoveryLead)}</p><ul>${discovery}</ul>
+<h2>${e(d.howTitle)}</h2><p>${e(d.howLead)}</p><ol>${steps}</ol>
+<h2>${e(d.axesGuideTitle)}</h2><p>${e(d.axesGuideLead)}</p><ul>${axes}</ul>
+<h2>${e(d.faqTitle)}</h2><p>${e(d.faqLead)}</p>${faq}
+</main>${SEO_HOME_END}`;
+}
+
+/** Coloca o conteúdo da home dentro de `#root` (trocando o que já estiver entre os marcadores, se rodar de novo). */
+function withSeoHome(html, locale) {
+  const clean = stripSeoHome(html);
+  if (!clean.includes('<div id="root"></div>')) throw new Error('index.html sem <div id="root"></div>');
+  return clean.replace('<div id="root"></div>', `<div id="root">${seoHomeContent(locale)}</div>`);
+}
+
+function stripSeoHome(html) {
+  return html.replace(new RegExp(`${SEO_HOME_START}[\\s\\S]*?${SEO_HOME_END}`), '');
+}
+
+function buildHomeVariants() {
+  // O index que o Vite gerou, sem o conteúdo da home (os outros arquivos derivam dele); a home em português entra por último.
+  const index = stripSeoHome(readFileSync(join(DIST, 'index.html'), 'utf8'));
+  const portugueseHome = withSeoHome(index, 'pt');
+  writeFileSync(join(DIST, 'index.html'), portugueseHome);
+  writeFileSync(join(DIST, 'br.html'), portugueseHome);
 
   // Rotas do app servidas como arquivos físicos (via cleanUrls), sem depender
   // do rewrite de SPA. results.html fica sem canonical/hreflang para que cada
@@ -496,8 +556,9 @@ function buildHomeVariants() {
   // /r é o link curto de resultado (QR code do cartão): mesma página, também sem canonical.
   writeFileSync(join(DIST, 'r.html'), results);
 
-  writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(homeVariant(index, 'en', HOME_EN)));
-  writeFileSync(join(DIST, 'es.html'), cdnifyShareImage(homeVariant(index, 'es', ES.home)));
+  writeFileSync(join(DIST, 'en.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'en', HOME_EN), 'en')));
+  writeFileSync(join(DIST, 'es.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'es', ES.home), 'es')));
+  writeFileSync(join(DIST, 'de.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'de', DE.home), 'de')));
 }
 
 const allPaths = [];
@@ -541,7 +602,7 @@ if (existsSync(booksPtPath)) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', '/es', ...allPaths]
+const sitemapUrls = ['/', '/en', '/es', '/de', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(

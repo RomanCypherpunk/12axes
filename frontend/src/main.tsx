@@ -35,9 +35,9 @@ window.addEventListener('vite:preloadError', (event) => {
   }
 });
 
-// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/..., /es/tree/...).
+// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/..., /es/tree/..., /de/tree/...).
 const TreePage = lazy(() => import('./tree/TreePage'));
-const TREE_ROUTE = /^\/(en\/|es\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
+const TREE_ROUTE = /^\/(en\/|es\/|de\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
 
 const root = document.getElementById('root') as HTMLElement;
 protectTranslatedText(root);

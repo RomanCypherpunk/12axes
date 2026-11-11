@@ -1,31 +1,35 @@
-// Dicionário de UI (PT, EN e ES; o que faltar em ES usa o EN). O idioma é resolvido uma vez por carga de página
+// Dicionário de UI (PT, EN, ES e DE; o que faltar em ES ou DE usa o EN). O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en' | 'es';
+export type Lang = 'pt' | 'en' | 'es' | 'de';
 
-/** Prefixo das rotas do idioma: vazio em português, /en e /es nos demais. */
+/** Prefixo das rotas do idioma: vazio em português, /en, /es e /de nos demais. */
 export function langPrefix(lang: Lang): string {
   return lang === 'pt' ? '' : `/${lang}`;
 }
 
 /** Locale de datas e números (Intl). */
-export const INTL_LOCALE: Record<Lang, string> = { pt: 'pt-BR', en: 'en-US', es: 'es' };
+export const INTL_LOCALE: Record<Lang, string> = { pt: 'pt-BR', en: 'en-US', es: 'es', de: 'de-DE' };
 
-const isLang = (value: string | null): value is Lang => value === 'pt' || value === 'en' || value === 'es';
+/** Idiomas com rota própria (/en, /es, /de); o português fica na raiz. */
+export const PREFIXED_LANGS: Lang[] = ['en', 'es', 'de'];
+
+const isLang = (value: string | null): value is Lang => value === 'pt' || value === 'en' || value === 'es' || value === 'de';
 
 const STORAGE_KEY = '12axes-lang';
 
-// Idioma forçado pelo caminho: /en sempre inglês, /es sempre espanhol, /br sempre português,
+// Idioma forçado pelo caminho: /en sempre inglês, /es sempre espanhol, /de sempre alemão, /br sempre português,
 // independente do aparelho ou da preferência salva. A comparação segue o catálogo:
-// /compare em português, /en/compare em inglês e /es/compare em espanhol.
+// /compare em português e /en/compare, /es/compare ou /de/compare nos demais.
 const normalizePath = (pathname: string): string => pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
 
 export function langForcedByPath(pathname: string): Lang | null {
   const path = normalizePath(pathname);
-  if (path === '/en' || path === '/en/compare') return 'en';
-  if (path === '/es' || path === '/es/compare') return 'es';
+  for (const lang of PREFIXED_LANGS) {
+    if (path === `/${lang}` || path === `/${lang}/compare`) return lang;
+  }
   if (path === '/br' || path === '/compare') return 'pt';
   return null;
 }
@@ -33,8 +37,8 @@ export function langForcedByPath(pathname: string): Lang | null {
 /** Caminho equivalente no outro idioma, para o toggle; null quando o idioma não vem do caminho. */
 export function langSwitchPath(pathname: string, lang: Lang): string | null {
   const path = normalizePath(pathname);
-  if (path === '/compare' || path === '/en/compare' || path === '/es/compare') return `${langPrefix(lang)}/compare`;
-  if (path === '/en' || path === '/es' || path === '/br') return lang === 'pt' ? '/br' : `/${lang}`;
+  if (path === '/compare' || PREFIXED_LANGS.some((code) => path === `/${code}/compare`)) return `${langPrefix(lang)}/compare`;
+  if (path === '/br' || PREFIXED_LANGS.some((code) => path === `/${code}`)) return lang === 'pt' ? '/br' : `/${lang}`;
   return null;
 }
 
@@ -59,7 +63,8 @@ export function resolveLang(): Lang {
   }
   const browser = navigator.language?.toLowerCase() ?? '';
   if (browser.startsWith('pt')) return 'pt';
-  return browser.startsWith('es') ? 'es' : 'en';
+  if (browser.startsWith('es')) return 'es';
+  return browser.startsWith('de') ? 'de' : 'en';
 }
 
 export const LANG: Lang = resolveLang();
@@ -68,7 +73,7 @@ export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
   url.searchParams.delete('lang');
-  // Em /en, /es, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
+  // Em /en, /es, /de, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
   // (na comparação, mantendo os perfis escolhidos na query).
   const switched = langSwitchPath(url.pathname, lang);
   if (switched) url.pathname = switched;
@@ -658,9 +663,12 @@ async function loadStrings(): Promise<Strings> {
   if (LANG === 'pt') return (await import('./pt')).pt;
   const { en } = await import('./en');
   if (LANG === 'en') return en;
-  // Chave nova ainda sem tradução em espanhol aparece em inglês: nada quebra.
-  const [{ es }, { mergeStrings }] = await Promise.all([import('./es'), import('./mergeStrings')]);
-  return mergeStrings<Strings>(en, es);
+  // Chave nova ainda sem tradução no idioma aparece em inglês: nada quebra.
+  const [partial, { mergeStrings }] = await Promise.all([
+    LANG === 'de' ? import('./de').then((module) => module.de) : import('./es').then((module) => module.es),
+    import('./mergeStrings')
+  ]);
+  return mergeStrings<Strings>(en, partial);
 }
 
 export const t: Strings = await loadStrings();

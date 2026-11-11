@@ -4,6 +4,7 @@
 
 import { poleUse } from './pole-icons.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 export const FILTER_STR = {
   pt: {
@@ -82,6 +83,7 @@ export const FILTER_STR = {
   }
 };
 FILTER_STR.es = { ...FILTER_STR.en, ...ES.filters };
+FILTER_STR.de = { ...FILTER_STR.en, ...DE.filters };
 
 // Gera a string compacta de polos para busca instantânea no client-side.
 // Formato: "estrutura:l representacao:r:s poder:r ..." onde :s indica posição forte (>= 60 ou <= 40).

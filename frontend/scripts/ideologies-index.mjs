@@ -7,6 +7,7 @@ import { iconLinks } from './cdn.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
 import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFilterScript, FILTERS_CSS } from './catalogue-filters.mjs';
 import { ES } from './locales/es.mjs';
+import { DE } from './locales/de.mjs';
 
 // Mesma paleta de frontend/src/utils/ideologyColors.ts, na ordem do espectro.
 export const SPECTRUM = [
@@ -28,6 +29,14 @@ export const CATEGORY_KEY = {
   derecha: 'direita',
   'extrema derecha': 'ext-direita',
   'tercera posición': 'terceira',
+  'radikale linke': 'esq-radical',
+  linke: 'esquerda',
+  mitte: 'centro',
+  rechte: 'direita',
+  'extreme rechte': 'ext-direita',
+  'dritte position': 'terceira',
+  libertär: 'libertario',
+  anarchistisch: 'anarquismo',
   libertario: 'libertario',
   anarquista: 'anarquismo',
   esquerda: 'esquerda',
@@ -125,6 +134,7 @@ const STR = {
   }
 };
 STR.es = { ...STR.en, ...ES.ideologiesIndex };
+STR.de = { ...STR.en, ...DE.ideologiesIndex };
 
 export const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 
@@ -224,12 +234,13 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados' }[L.locale]}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
     <link rel="alternate" hreflang="en" href="${site}/en${basePath}" />
     <link rel="alternate" hreflang="es" href="${site}/es${basePath}" />
+    <link rel="alternate" hreflang="de" href="${site}/de${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="website" />
