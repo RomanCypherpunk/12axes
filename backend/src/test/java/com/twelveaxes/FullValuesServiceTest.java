@@ -208,6 +208,40 @@ class FullValuesServiceTest {
         return 1 + deepest;
     }
 
+    /** Partocracia e UM partido dominando o Estado (nao varios partidos competindo): autoritaria e fora do ramo representativo. */
+    @Test
+    void partocracyIsOnePartyRuleNotAMultiPartyDemocracy() throws IOException {
+        JsonNode politica = null;
+        for (JsonNode category : MAPPER.readTree(resource("data/full-values.json"))) {
+            if (category.get("id").asText().equals("politica")) {
+                politica = category;
+            }
+        }
+        assertThat(politica).isNotNull();
+        JsonNode partocracia = null;
+        for (JsonNode value : politica.get("values")) {
+            if (value.get("id").asText().equals("partocracia")) {
+                partocracia = value;
+            }
+        }
+        assertThat(partocracia).isNotNull();
+        // efeitos autoritarios: pouca representacao democratica, muito poder concentrado (e nada de economia presumida)
+        assertThat(partocracia.get("effects").get("representacao").asDouble()).isLessThanOrEqualTo(20);
+        assertThat(partocracia.get("effects").get("poder").asDouble()).isGreaterThanOrEqualTo(70);
+        assertThat(partocracia.get("effects").has("economia")).isFalse();
+        assertThat(partocracia.get("description").asText().toLowerCase()).contains("único partido");
+        // o caminho ate ela passa por "forca", nunca por "elegendo representantes"
+        String parentNode = null;
+        for (JsonNode node : politica.get("nodes")) {
+            for (JsonNode option : node.get("options")) {
+                if (option.has("value") && option.get("value").asText().equals("partocracia")) {
+                    parentNode = node.get("id").asText();
+                }
+            }
+        }
+        assertThat(parentNode).isEqualTo("politica_forca");
+    }
+
     @Test
     void theRealPoliticaCategoryFollowsTheContentRules() throws IOException {
         String pt = resource("data/full-values.json");

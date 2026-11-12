@@ -19,7 +19,7 @@
         "id": "politica_cidadaos",
         "text": "Como os cidadãos devem exercer esse direito?",
         "options": [
-          {"text": "Elegendo representantes e partidos", "next": "politica_representantes"},
+          {"text": "Elegendo representantes", "next": "politica_representantes"},
           {"text": "Decidindo eles mesmos, diretamente", "next": "politica_direta"},
           {"text": "Organizados por trabalho e comunidade, sem classes", "next": "politica_coletivo"}
         ]
@@ -29,7 +29,6 @@
         "text": "Que tipo de sistema representativo?",
         "options": [
           {"text": "Representantes eleitos sob uma constituição, com direitos garantidos", "value": "democracia_representativa"},
-          {"text": "Partidos que controlam o Estado e a escolha dos cargos", "value": "partocracia"},
           {"text": "Um monarca simbólico, com governo eleito", "value": "monarquia_constitucional"}
         ]
       },
@@ -37,17 +36,17 @@
         "id": "politica_direta",
         "text": "Como decidir diretamente?",
         "options": [
-          {"text": "Em assembleias e referendos presenciais", "value": "democracia_direta"},
+          {"text": "Votando em referendos sobre leis, iniciativas e mudanças da constituição", "value": "democracia_direta"},
           {"text": "Por votação online e plataformas digitais", "value": "democracia_digital"},
-          {"text": "Em comunidades locais autogovernadas, unidas em confederação", "value": "comunalismo"}
+          {"text": "Em assembleias presenciais de bairro e município, unidas em confederação", "value": "comunalismo"}
         ]
       },
       {
         "id": "politica_coletivo",
         "text": "Qual forma de organização coletiva?",
         "options": [
-          {"text": "Conselhos de trabalhadores, eleitos de baixo para cima", "value": "conselhos"},
-          {"text": "Propriedade comum e fim das classes sociais", "value": "comunismo"}
+          {"text": "Conselhos de trabalhadores e camponeses, eleitos de baixo para cima", "value": "conselhos"},
+          {"text": "Fim do Estado, do dinheiro e das classes, com tudo em propriedade comum", "value": "comunismo"}
         ]
       },
       {
@@ -65,7 +64,8 @@
         "text": "Quem deve exercer essa força?",
         "options": [
           {"text": "As forças armadas, com a hierarquia militar", "value": "estratocracia"},
-          {"text": "Uma só pessoa no comando, sem limites que a controlem", "value": "autocracia"}
+          {"text": "Uma só pessoa no comando, sem limites que a controlem", "value": "autocracia"},
+          {"text": "Um único partido, que domina o Estado e a escolha dos cargos", "value": "partocracia"}
         ]
       },
       {
@@ -75,39 +75,39 @@
           {"text": "Um monarca com poder total", "value": "monarquia_absoluta"},
           {"text": "Famílias nobres ou uma elite tradicional", "value": "aristocracia"},
           {"text": "A religião, com líderes religiosos e lei sagrada", "value": "teocracia"},
-          {"text": "Um monarca escolhido e mantido por contrato voluntário, sem Estado obrigatório", "value": "anarco_monarquismo"}
+          {"text": "Um monarca só simbólico, que existe para impedir que um Estado se forme", "value": "anarco_monarquismo"}
         ]
       },
       {
         "id": "politica_minimo",
         "text": "Qual destas frases se aproxima mais do que você pensa?",
         "options": [
-          {"text": "Sem governo nenhum, só acordos voluntários entre as pessoas", "value": "anarquismo"},
+          {"text": "Nenhum governo obrigatório: cada pessoa escolhe a quais regras e comunidades pertencer", "value": "anarquismo"},
           {"text": "Um Estado mínimo: só segurança, justiça e defesa", "value": "minarquismo"},
           {"text": "Não tenho uma preferência clara sobre quem deve governar", "value": "politica_equilibrada"}
         ]
       }
     ],
     "values": [
-      {"id": "teocracia", "name": "Teocracia", "description": "O governo se apoia na autoridade de uma religião: líderes religiosos ou a lei sagrada têm a palavra final.", "neutral": false, "effects": {"representacao": 10, "poder": 80, "moral": 6}, "icon": null},
-      {"id": "monarquia_absoluta", "name": "Monarquia absolutista", "description": "Um monarca hereditário governa com poder total, acima das leis e dos parlamentos.", "neutral": false, "effects": {"representacao": 6, "poder": 82, "moral": 12}, "icon": null},
-      {"id": "autocracia", "name": "Autocracia", "description": "Poder concentrado em uma só pessoa, sem eleições livres nem limites que a controlem.", "neutral": false, "effects": {"representacao": 5, "poder": 90}, "icon": null},
-      {"id": "anarquismo", "name": "Anarquismo", "description": "Sociedade sem governo central, organizada por acordos voluntários e pelo autogoverno das comunidades.", "neutral": false, "effects": {"representacao": 78, "poder": 5, "estrutura": 92}, "icon": null},
-      {"id": "partocracia", "name": "Partocracia", "description": "Os partidos controlam o Estado e decidem quem ocupa os cargos; o poder circula entre as máquinas partidárias.", "neutral": false, "effects": {"representacao": 40, "poder": 62}, "icon": null},
+      {"id": "teocracia", "name": "Teocracia", "description": "Uma divindade ou uma lei sagrada é a autoridade suprema, e líderes religiosos orientam e administram o governo no dia a dia.", "neutral": false, "effects": {"representacao": 10, "poder": 80, "moral": 6}, "icon": null},
+      {"id": "monarquia_absoluta", "name": "Monarquia absolutista", "description": "O monarca tem autoridade suprema, que nenhuma lei escrita, constituição ou costume limita.", "neutral": false, "effects": {"representacao": 6, "poder": 82, "moral": 12}, "icon": null},
+      {"id": "autocracia", "name": "Autocracia", "description": "Governo de uma só pessoa com poder absoluto, cujas decisões não têm limite legal externo nem controle popular regular.", "neutral": false, "effects": {"representacao": 5, "poder": 90}, "icon": null},
+      {"id": "anarquismo", "name": "Anarquismo", "description": "Nenhum governo é obrigatório: cada pessoa escolhe a quais comunidades, regras ou serviços de proteção quer pertencer, e tudo se organiza por acordos voluntários.", "neutral": false, "effects": {"representacao": 78, "poder": 5, "estrutura": 92}, "icon": null},
+      {"id": "partocracia", "name": "Partocracia", "description": "Um único partido domina o Estado e decide quem ocupa os cargos, no lugar dos cidadãos ou de representantes individuais.", "neutral": false, "effects": {"representacao": 8, "poder": 82}, "icon": null},
       {"id": "democracia_representativa", "name": "Democracia representativa", "description": "Os cidadãos elegem representantes que governam por tempo limitado, sob uma constituição que protege direitos.", "neutral": false, "effects": {"representacao": 88, "poder": 42}, "icon": null},
-      {"id": "democracia_direta", "name": "Democracia direta", "description": "Os próprios cidadãos decidem as leis e as questões importantes, em assembleias, plebiscitos e referendos.", "neutral": false, "effects": {"representacao": 96, "estrutura": 72}, "icon": null},
-      {"id": "conselhos", "name": "Conselhos", "description": "O poder vem de conselhos de trabalhadores e comunidades, formados de baixo para cima, com mandatos que podem ser revogados.", "neutral": false, "effects": {"representacao": 90, "estrutura": 80, "economia": 85}, "icon": null},
-      {"id": "comunalismo", "name": "Comunalismo", "description": "A sociedade se organiza em comunidades locais autogovernadas, que decidem em assembleia e se unem em confederação.", "neutral": false, "effects": {"estrutura": 90, "representacao": 85, "economia": 80}, "icon": null},
-      {"id": "democracia_digital", "name": "Democracia digital", "description": "Os cidadãos votam e propõem leis por plataformas digitais, com participação direta e contínua pela internet.", "neutral": false, "effects": {"representacao": 92, "poder": 40}, "icon": null},
-      {"id": "monarquia_constitucional", "name": "Monarquia constitucional", "description": "Um monarca é chefe de Estado, mas o governo funciona dentro de uma constituição e por representantes eleitos.", "neutral": false, "effects": {"representacao": 68, "poder": 40, "moral": 32}, "icon": null},
-      {"id": "minarquismo", "name": "Minarquismo", "description": "O Estado se limita ao mínimo: segurança, justiça e defesa, e mais nada.", "neutral": false, "effects": {"representacao": 70, "poder": 8, "economia": 10}, "icon": null},
+      {"id": "democracia_direta", "name": "Democracia direta", "description": "Os cidadãos votam diretamente em iniciativas, leis e mudanças da constituição, por referendos obrigatórios ou populares, como no modelo suíço.", "neutral": false, "effects": {"representacao": 96, "estrutura": 72}, "icon": null},
+      {"id": "conselhos", "name": "Conselhos", "description": "O poder fica com conselhos de trabalhadores e camponeses, eleitos diretamente de baixo para cima, com mandatos que podem ser revogados.", "neutral": false, "effects": {"representacao": 90, "estrutura": 80, "economia": 85}, "icon": null},
+      {"id": "comunalismo", "name": "Comunalismo", "description": "Os cidadãos se governam em assembleias presenciais de bairro e município, que se unem em confederação regional.", "neutral": false, "effects": {"estrutura": 90, "representacao": 85, "economia": 80}, "icon": null},
+      {"id": "democracia_digital", "name": "Democracia digital", "description": "Redes abertas, votação criptografada e plataformas digitais permitem participação contínua, consultas diretas e a elaboração aberta de políticas.", "neutral": false, "effects": {"representacao": 92, "poder": 40}, "icon": null},
+      {"id": "monarquia_constitucional", "name": "Monarquia constitucional", "description": "O monarca é chefe de Estado, mas seus poderes são limitados por uma constituição, e muitas vezes ele é só um símbolo de estabilidade.", "neutral": false, "effects": {"representacao": 68, "poder": 40, "moral": 32}, "icon": null},
+      {"id": "minarquismo", "name": "Minarquismo", "description": "O Estado \"vigia noturno\": só protege contra agressão, roubo e quebra de contratos, e mais nada.", "neutral": false, "effects": {"representacao": 70, "poder": 8, "economia": 10}, "icon": null},
       {"id": "meritocracia", "name": "Meritocracia", "description": "Os cargos de comando vão para quem mais se destaca em provas, resultados e carreira, e não por voto ou herança.", "neutral": false, "effects": {"representacao": 42, "poder": 58}, "icon": null},
-      {"id": "tecnocracia", "name": "Tecnocracia", "description": "O Estado é conduzido por especialistas técnicos, que decidem com base em dados e competência.", "neutral": false, "effects": {"representacao": 30, "poder": 65}, "icon": null},
-      {"id": "estratocracia", "name": "Estratocracia", "description": "O poder fica com as forças armadas, e a disciplina e a hierarquia militar organizam o Estado.", "neutral": false, "effects": {"representacao": 8, "poder": 92}, "icon": null},
-      {"id": "aristocracia", "name": "Aristocracia", "description": "O poder fica com uma classe de famílias nobres ou tradicionais, que governa por berço, honra e dever.", "neutral": false, "effects": {"representacao": 14, "poder": 68, "moral": 15}, "icon": null},
-      {"id": "anarco_monarquismo", "name": "Anarco-monarquismo", "description": "Um monarca escolhido e mantido voluntariamente, por contrato, sem um Estado obrigatório.", "neutral": false, "effects": {"representacao": 35, "poder": 15, "economia": 10}, "icon": null},
-      {"id": "neocameralismo", "name": "Neocameralismo", "description": "O Estado é administrado como uma empresa soberana, por gestores que prestam contas a quem o sustenta e a quem escolhe viver nele.", "neutral": false, "effects": {"representacao": 20, "economia": 12}, "icon": null},
-      {"id": "comunismo", "name": "Comunismo", "description": "Sociedade sem classes, com os meios de produção em mãos comuns e as decisões tomadas coletivamente.", "neutral": false, "effects": {"economia": 94, "representacao": 70}, "icon": null},
+      {"id": "tecnocracia", "name": "Tecnocracia", "description": "Quem decide é escolhido pelo conhecimento que tem da área, em especial o conhecimento científico e técnico.", "neutral": false, "effects": {"representacao": 30, "poder": 65}, "icon": null},
+      {"id": "estratocracia", "name": "Estratocracia", "description": "O governo é chefiado por comandantes militares, e o Estado e as forças armadas são, na prática, a mesma coisa.", "neutral": false, "effects": {"representacao": 8, "poder": 92}, "icon": null},
+      {"id": "aristocracia", "name": "Aristocracia", "description": "O poder fica com uma classe distinta, que governa com base em status herdado, educação e terras mantidas por gerações.", "neutral": false, "effects": {"representacao": 14, "poder": 68, "moral": 15}, "icon": null},
+      {"id": "anarco_monarquismo", "name": "Anarco-monarquismo", "description": "Um monarca que existe só para impedir que um Estado se forme, como protetor simbólico de uma sociedade de liberdade individual e cooperação voluntária.", "neutral": false, "effects": {"representacao": 35, "poder": 15, "economia": 10}, "icon": null},
+      {"id": "neocameralismo", "name": "Neocameralismo", "description": "O Estado funciona como uma empresa de capital aberto, dirigida por um executivo profissional e pertencente a acionistas, em busca de eficiência e ordem.", "neutral": false, "effects": {"representacao": 20, "economia": 12}, "icon": null},
+      {"id": "comunismo", "name": "Comunismo", "description": "Sociedade sem classes nem Estado, com os meios de produção em mãos comuns e as decisões tomadas coletivamente.", "neutral": false, "effects": {"economia": 94, "representacao": 70, "poder": 15}, "icon": null},
       {"id": "politica_equilibrada", "name": "Equilibrado", "description": "Sem uma posição definida sobre quem deve ter a palavra final nos rumos do país.", "neutral": true, "effects": {}, "icon": null}
     ]
   },
