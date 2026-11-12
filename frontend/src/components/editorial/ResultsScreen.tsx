@@ -21,6 +21,7 @@ import { applyGovernmentSwaps, loadGovernmentPicks, loadGovernmentSwaps, saveGov
 import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
+import { FullValuesSection } from '../results/FullValuesSection';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
@@ -100,6 +101,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   );
   const showParties = PARTIES_ENABLED && (result.topPartyMatches?.length ?? 0) > 0;
   const politicalValues = result.politicalValues ?? [];
+  const fullValues = result.fullValues ?? [];
   const compass = computeCompass(axisResults);
   const [printingPdf, setPrintingPdf] = useState(false);
   // Cartão de compartilhamento de uma seção (países, personalidades, partidos ou valores e bússola). O módulo do cartão (e o
@@ -356,7 +358,13 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             />
           )}
 
-          <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} footer={shareButton('compass')} />
+          {/* Quiz de 240 com valores declarados: mostra os que a pessoa escolheu; senão, os derivados dos eixos. O cartão de
+              compartilhamento ainda usa os derivados (muda só no fim do trabalho), então esta seção não leva o botão. */}
+          {fullValues.length > 0 ? (
+            <FullValuesSection values={fullValues} category={top.category} religion={religion} />
+          ) : (
+            <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} footer={shareButton('compass')} />
+          )}
 
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
@@ -422,7 +430,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
         </div>
 
         <aside className="e-side" aria-label={t.resultsSummaryAria}>
-          <ResultsNav premium={hasPremium} premiumTarget={SALES_OPEN ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0} />
+          <ResultsNav premium={hasPremium} premiumTarget={SALES_OPEN ? 'relatorio-completo' : null} hasBooks={(result.bookRecommendations?.length ?? 0) > 0} hasCompass={compass !== null} hasParties={showParties} hasValues={politicalValues.length > 0 || fullValues.length > 0} />
         </aside>
       </div>
       {printingPdf && pdfButtonAction(SALES_OPEN, hasPremium) === 'print' &&

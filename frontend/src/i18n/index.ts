@@ -388,6 +388,10 @@ export interface Strings {
   valuesSectionTitle: string;
   valuesNeutralTag: string;
   valueInfoAria: (name: string) => string;
+  valuesSourceButton: string;
+  valuesSourceAuthor: string;
+  valuesSourceLicense: string;
+  valuesSourceModified: string;
   compassTitle: string;
   compassAuthoritarian: string;
   compassLibertarian: string;

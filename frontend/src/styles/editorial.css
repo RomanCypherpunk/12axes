@@ -1169,6 +1169,10 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-value-sheet .e-dim{margin-top:4px}
 .e-value-sheet h3{margin:0}
 .e-value-sheet p{margin:6px 0 0;font-size:15px;line-height:1.55}
+/* Valores completos (quiz de 240): a imagem do valor como veio da fonte, recortada no círculo, com o anel da cor da ideologia. */
+.e-vcoin-img{display:inline-flex;flex:none;border-radius:50%;overflow:hidden;background:#fff;box-sizing:border-box;border:2.5px solid color-mix(in srgb,var(--cat,#4B5058) 55%,#000)}
+.e-vcoin-img img{display:block;width:100%;height:100%;object-fit:cover}
+.e-value-source{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:12px;font-size:13px;line-height:1.5;opacity:.8}
 @media (max-width:860px){.e-dims.e-values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:720px){.e-dims.e-values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* mobile: logo do partido com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */

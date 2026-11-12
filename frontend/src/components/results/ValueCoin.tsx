@@ -2,6 +2,7 @@ import { FILLED_POLE_ICONS } from '../../data/filledPoleIcons';
 import { religiousPoleIcon } from '../../data/religionIcons';
 import type { Religion } from '../../utils/religion';
 import { valueCoinMonogram } from '../../utils/politicalValues';
+import { FULL_VALUE_COINS } from './fullValueCoins';
 import { VALUE_COINS } from './valueCoins';
 
 interface ValueCoinProps {
@@ -20,7 +21,8 @@ const INK = 'var(--cat-bg, #DDE0E3)';
 
 // Moeda redonda de um valor: cor da ideologia do usuário, borda fina e ícone preenchido. Sem ícone, mostra o monograma.
 export function ValueCoin({ valueId, name, size = 112, religion }: ValueCoinProps) {
-  const coin = VALUE_COINS[valueId];
+  // Valores completos do quiz de 240 chegam com o prefixo "fv:" e têm as próprias moedas (fullValueCoins.tsx).
+  const coin = valueId.startsWith('fv:') ? FULL_VALUE_COINS[valueId.slice(3)] : VALUE_COINS[valueId];
   const faith = coin?.religious ? (religiousPoleIcon(religion) ?? FILLED_POLE_ICONS.religiao.right) : null;
   const icon = faith ? (
     <svg x="19" y="19" width="34" height="34" viewBox={faith.viewBox} style={{ fill: INK }}>

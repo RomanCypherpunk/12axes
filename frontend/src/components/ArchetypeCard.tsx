@@ -51,7 +51,7 @@ function FilledSvg({ icon, className }: { icon: QuestionIcon; className?: string
 
 /** Pergunta de arquétipo do quiz: alternativas com letra (ou ícone), uma escolha. */
 export function ArchetypeCard({ question, index, selected, disabled = false, onSelect, titleId = 'archetype-title' }: ArchetypeCardProps) {
-  const theme = THEME_ICONS[question.id] ?? THEME_ICONS.sociedade;
+  const theme = THEME_ICONS[question.theme ?? question.id] ?? THEME_ICONS.sociedade;
   const icon: QuestionIcon = question.icon ?? {
     viewBox: theme.viewBox,
     paths: [theme.d],

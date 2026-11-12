@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { answeredCount, parseProgress, restoreQuiz, type SavedProgress } from './quizProgress';
+import { answeredCount, parseProgress, parseSavedAnswers, restoreQuiz, type SavedProgress } from './quizProgress';
 import type { QuizPayload } from '../types/quiz';
 
 const NOW = 1_800_000_000_000;
@@ -105,5 +105,27 @@ describe('restoreQuiz', () => {
 describe('answeredCount', () => {
   it('conta só respostas de perguntas desta sequência', () => {
     expect(answeredCount(progress({ answers: { estrutura_01: 'AGREE', fora_01: 'AGREE' } }))).toBe(1);
+  });
+});
+
+describe('parseSavedAnswers e os valores completos', () => {
+  const saved = {
+    variant: 'extreme',
+    questionIds: ['estrutura_01'],
+    answers: { estrutura_01: 'AGREE' },
+    archetypeChoices: { 'fv:p1': '1' }
+  };
+
+  it('mantém os valores declarados quando vêm como categoria → valor', () => {
+    expect(parseSavedAnswers({ ...saved, values: { politica: 'tecnocracia' } })?.values).toEqual({ politica: 'tecnocracia' });
+  });
+
+  it('aceita respostas salvas antes dos valores (sem o campo)', () => {
+    expect(parseSavedAnswers(saved)?.values).toBeUndefined();
+  });
+
+  it('descarta respostas com valores que não são texto', () => {
+    expect(parseSavedAnswers({ ...saved, values: { politica: 1 } })).toBeNull();
+    expect(parseSavedAnswers({ ...saved, values: ['politica'] })).toBeNull();
   });
 });

@@ -10,6 +10,7 @@ import type {
   SubmittedAnswer
 } from '../types/quiz';
 import { serializeCompareItems, type CompareRef } from '../utils/compareUrl';
+import { fullValuesParam } from '../utils/sharedResultUrl';
 
 const API_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
@@ -74,23 +75,31 @@ export function submitResults(
   variant: QuizVariant,
   answers: SubmittedAnswer[],
   archetype: Record<string, string> = {},
-  religion: string | null = null
+  religion: string | null = null,
+  // Valores completos do quiz de 240 (categoria -> valor); vazio nos outros quizzes.
+  values: Record<string, string> = {}
 ): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
   return request<QuizResult>(`/api/results?lang=${LANG}${religionParam}`, {
     method: 'POST',
-    body: JSON.stringify({ variant, answers, archetype })
+    body: JSON.stringify({ variant, answers, archetype, values })
   });
 }
 
 // O endpoint é cacheado pelo navegador por uma hora; `rv` acompanha o formato da resposta para quem já abriu
 // o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo). 3: saiu a lista de áreas de atuação,
-// que agora é do Relatório completo.
-const SHARED_RESULT_VERSION = 3;
+// que agora é do Relatório completo. 4: entraram os valores completos (fullValues) e a chave f.
+const SHARED_RESULT_VERSION = 4;
 
-export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
+export function fetchSharedResult(
+  leftPercents: number[],
+  religion: string | null = null,
+  fullValuesKey: string | null = null
+): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
-  return request<QuizResult>(`/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}&rv=${SHARED_RESULT_VERSION}`);
+  return request<QuizResult>(
+    `/api/results/by-axes?v=${leftPercents.join(',')}&lang=${LANG}${religionParam}${fullValuesParam(fullValuesKey)}&rv=${SHARED_RESULT_VERSION}`
+  );
 }
 
 

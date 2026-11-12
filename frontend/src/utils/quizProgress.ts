@@ -96,6 +96,8 @@ export interface SavedAnswers {
   questionIds: string[];
   answers: Record<string, AnswerValue>;
   archetypeChoices: Record<string, string>;
+  /** Valores completos enviados com este resultado (categoria → valor), só no quiz de 240 com a árvore de valores. */
+  values?: Record<string, string>;
 }
 
 // Valida o que veio do disco: dado antigo, editado à mão ou de outra versão é descartado.
@@ -114,6 +116,9 @@ export function parseSavedAnswers(data: unknown): SavedAnswers | null {
     return null;
   }
   if (!isRecordOfStrings(value.archetypeChoices)) {
+    return null;
+  }
+  if (value.values !== undefined && !isRecordOfStrings(value.values)) {
     return null;
   }
   return value as SavedAnswers;

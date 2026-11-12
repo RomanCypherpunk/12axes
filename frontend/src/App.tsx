@@ -4,7 +4,10 @@ import { HOME_AXES } from './data/homeAxes';
 import type { ExampleResult } from './data/exampleResult';
 import { LANG, t } from './i18n';
 import { fetchQuiz, fetchSharedResult, submitResults } from './services/quizApi';
-import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant } from './types/quiz';
+import { archetypeOnly as serverArchetype } from './services/premiumApi';
+import { fullValuesParam, readFullValuesKey } from './utils/sharedResultUrl';
+import { chooseValueNode, fullValuesSteps, isValueStep, normalizeArchetypeChoices, valueChoiceFlagEnabled, valuesFromChoices } from './utils/valueTrees';
+import type { AnswerValue, ArchetypeQuestion, QuizPayload, QuizResult, QuizVariant, ValueTree } from './types/quiz';
 import { HomeScreen } from './components/editorial/HomeScreen';
 import { VariantScreen } from './components/editorial/VariantScreen';
 import { ArrowIcon, Logo, SiteFooter } from './components/editorial/primitives';
@@ -113,12 +116,17 @@ const SHARED_RELIGION: Religion | null =
     ? parseReligion(new URLSearchParams(window.location.search).get('religion') ?? new URLSearchParams(window.location.search).get('r'))
     : null;
 
+// Chave dos valores completos do link (f=), para a visão compartilhada mostrar os valores que a pessoa escolheu.
+const SHARED_FULL_KEY: string | null =
+  SHARED_RESULT_VALUES && typeof window !== 'undefined' ? readFullValuesKey(window.location.search) : null;
+
 function sharedResultUrl(result: QuizResult, religion: Religion | null = null): string {
   const query = result.axes
     .map((axis, index) => `${AXIS_URL_KEYS[index] ?? `x${index}`}=${axis.leftPercent}`)
     .join('&');
   // O idioma vai na URL: um reload ou a volta do pagamento não dependem do que está salvo no navegador.
-  return `/results?${query}${religion ? `&religion=${religion}` : ''}${LANG === 'pt' ? '' : `&lang=${LANG}`}`;
+  // O idioma fica por último (a comparação com o link guardado o tira do fim).
+  return `/results?${query}${religion ? `&religion=${religion}` : ''}${fullValuesParam(result.fullValuesKey)}${LANG === 'pt' ? '' : `&lang=${LANG}`}`;
 }
 
 // Últimas perguntas do bloco de arquétipos: religião e, só para quem escolhe cristianismo, a vertente
@@ -176,12 +184,23 @@ function chosenChristianity(choices: Record<string, string>): boolean {
   return choices[RELIGION_STEP_ID] === RELIGION_OPTIONS.find((option) => option.choice === 'christianity')?.id;
 }
 
+// Árvores dos valores completos: só no quiz de 240 e com a flag ligada. Sem elas, o bloco de arquétipos é o de sempre.
+function valueTreesOf(payload: QuizPayload | null | undefined): ValueTree[] {
+  return valueChoiceFlagEnabled() && payload?.variant === 'extreme' ? payload.valueTrees ?? [] : [];
+}
+
+// Escolhas que não servem ao jeito de responder em uso (arquétipo simples com a árvore ativa e vice-versa): ver normalizeArchetypeChoices.
+function normalizeForPayload(payload: QuizPayload | null | undefined, choices: Record<string, string>): Record<string, string> {
+  return normalizeArchetypeChoices(choices, (payload?.archetypeQuestions ?? []).map((question) => question.id), valueTreesOf(payload).length > 0);
+}
+
 function buildArchetypeSteps(
-  archetypes: ArchetypeQuestion[] | undefined,
+  payload: QuizPayload | null | undefined,
   choices: Record<string, string>
 ): ArchetypeQuestion[] {
+  const trees = valueTreesOf(payload);
   return [
-    ...(archetypes ?? []),
+    ...(trees.length > 0 ? fullValuesSteps(trees, choices) : payload?.archetypeQuestions ?? []),
     religionQuestion(),
     ...(chosenChristianity(choices) ? [denominationQuestion()] : [])
   ];
@@ -283,13 +302,13 @@ function MainApp() {
 
   // Perguntas de arquétipo do backend + a de religião, no mesmo bloco e na mesma barra.
   const archetypeSteps = useMemo(
-    () => buildArchetypeSteps(quiz?.archetypeQuestions, archetypeChoices),
+    () => buildArchetypeSteps(quiz, archetypeChoices),
     [quiz, archetypeChoices]
   );
 
   useEffect(() => {
     if (SHARED_RESULT_VALUES) {
-      fetchSharedResult(SHARED_RESULT_VALUES, SHARED_RELIGION)
+      fetchSharedResult(SHARED_RESULT_VALUES, SHARED_RELIGION, SHARED_FULL_KEY)
         .then((sharedResult) => {
           setResult(sharedResult);
           setIsSharedView(true);
@@ -490,12 +509,13 @@ function MainApp() {
   // Põe na tela um quiz guardado: mesmas perguntas, respostas e posição.
   function applyProgress(restored: QuizPayload, saved: SavedProgress) {
     const lastQuestion = Math.max(0, restored.questions.length - 1);
-    const archetypeCount = (restored.archetypeQuestions?.length ?? 0) + 1;
+    const savedChoices = normalizeForPayload(restored, saved.archetypeChoices);
+    const archetypeCount = buildArchetypeSteps(restored, savedChoices).length;
     setSelectedVariant(saved.variant);
     setSwappedIds(new Set());
     setQuiz(restored);
     setAnswers(saved.answers);
-    setArchetypeChoices(saved.archetypeChoices);
+    setArchetypeChoices(savedChoices);
     setArchetypeDone(false);
     setResult(null);
     setError(null);
@@ -651,7 +671,10 @@ function MainApp() {
     if (!quiz || !question || isSubmitting || isAdvancingRef.current) {
       return;
     }
-    const nextChoices = { ...archetypeChoices, [question.id]: optionId };
+    // Escolha numa árvore de valores: mudar uma resposta antiga descarta o que vinha depois dela.
+    const nextChoices = isValueStep(question.id)
+      ? chooseValueNode(valueTreesOf(quiz), archetypeChoices, question.id, optionId)
+      : { ...archetypeChoices, [question.id]: optionId };
     setArchetypeChoices(nextChoices);
     advanceArchetype(nextChoices, true);
   }
@@ -661,15 +684,20 @@ function MainApp() {
     if (!question || isSubmitting || isAdvancingRef.current) {
       return;
     }
-    const nextChoices = { ...archetypeChoices };
-    delete nextChoices[question.id];
+    let nextChoices: Record<string, string>;
+    if (isValueStep(question.id)) {
+      nextChoices = chooseValueNode(valueTreesOf(quiz), archetypeChoices, question.id, null);
+    } else {
+      nextChoices = { ...archetypeChoices };
+      delete nextChoices[question.id];
+    }
     setArchetypeChoices(nextChoices);
     advanceArchetype(nextChoices, false);
   }
 
   function advanceArchetype(choices: Record<string, string>, withPause: boolean) {
     // A vertente cristã só entra na lista depois de escolher cristianismo, então conta com as novas escolhas.
-    if (archetypeIndex >= buildArchetypeSteps(quiz?.archetypeQuestions, choices).length - 1) {
+    if (archetypeIndex >= buildArchetypeSteps(quiz, choices).length - 1) {
       setArchetypeDone(true);
       void submitQuiz(answers, choices);
       return;
@@ -756,10 +784,11 @@ function MainApp() {
     setEditError(null);
   }
 
-  async function saveEditedAnswers(edited: AnswerSet) {
+  async function saveEditedAnswers(rawEdited: AnswerSet) {
     if (!editQuiz || !editableAnswers || isSavingEdit) {
       return;
     }
+    const edited: AnswerSet = { ...rawEdited, archetypeChoices: normalizeForPayload(editQuiz, rawEdited.archetypeChoices) };
     setIsSavingEdit(true);
     setEditError(null);
     try {
@@ -767,14 +796,15 @@ function MainApp() {
         questionId: question.id,
         answer: edited.answers[question.id] as AnswerValue
       }));
-      const { [RELIGION_STEP_ID]: _religion, [DENOMINATION_STEP_ID]: _denomination, ...archetypeOnly } = edited.archetypeChoices;
       const chosenReligion = resolveReligion(edited.archetypeChoices);
-      const nextResult = await submitResults(editableAnswers.variant, payload, archetypeOnly, chosenReligion);
+      const values = valuesFromChoices(valueTreesOf(editQuiz), edited.archetypeChoices);
+      const nextResult = await submitResults(editableAnswers.variant, payload, serverArchetype(edited.archetypeChoices), chosenReligion, values);
       showFinishedResult(nextResult, chosenReligion, {
         variant: editableAnswers.variant,
         questionIds: editableAnswers.questionIds,
         answers: edited.answers,
-        archetypeChoices: edited.archetypeChoices
+        archetypeChoices: edited.archetypeChoices,
+        ...(Object.keys(values).length > 0 ? { values } : {})
       });
       closeEditAnswers();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -785,10 +815,11 @@ function MainApp() {
     }
   }
 
-  async function submitQuiz(answerMap = answers, archetype = archetypeChoices) {
+  async function submitQuiz(answerMap = answers, rawArchetype = archetypeChoices) {
     if (!quiz || isSubmitting) {
       return;
     }
+    const archetype = normalizeForPayload(quiz, rawArchetype);
     const firstMissingIndex = quiz.questions.findIndex((question) => !answerMap[question.id]);
     if (firstMissingIndex !== -1) {
       setCurrentIndex(firstMissingIndex);
@@ -803,20 +834,22 @@ function MainApp() {
         questionId: question.id,
         answer: answerMap[question.id] as AnswerValue
       }));
-      const { [RELIGION_STEP_ID]: _religion, [DENOMINATION_STEP_ID]: _denomination, ...archetypeOnly } = archetype;
       const chosenReligion = resolveReligion(archetype);
+      const values = valuesFromChoices(valueTreesOf(quiz), archetype);
       const nextResult = await submitResults(
         quiz.variant ?? selectedVariant,
         payload,
-        archetypeOnly,
-        chosenReligion
+        serverArchetype(archetype),
+        chosenReligion,
+        values
       );
       clearProgress();
       showFinishedResult(nextResult, chosenReligion, {
         variant: quiz.variant ?? selectedVariant,
         questionIds: quiz.questions.map((question) => question.id),
         answers: answerMap,
-        archetypeChoices: archetype
+        archetypeChoices: archetype,
+        ...(Object.keys(values).length > 0 ? { values } : {})
       });
       setScreen('results');
       track('quiz_complete', { variant: quiz.variant ?? selectedVariant });
@@ -1164,9 +1197,11 @@ function MainApp() {
               axes={homeAxes}
               axisResults={resultByAxis}
               religion={religion}
-              initial={{ answers: editableAnswers.answers, archetypeChoices: editableAnswers.archetypeChoices }}
-              buildSteps={(choices) => buildArchetypeSteps(editQuiz.archetypeQuestions, choices)}
-              normalizeChoices={(choices) => {
+              initial={{ answers: editableAnswers.answers, archetypeChoices: normalizeForPayload(editQuiz, editableAnswers.archetypeChoices) }}
+              buildSteps={(choices) => buildArchetypeSteps(editQuiz, choices)}
+              chooseStep={(choices, stepId, optionId) => (isValueStep(stepId) ? chooseValueNode(valueTreesOf(editQuiz), choices, stepId, optionId) : { ...choices, [stepId]: optionId })}
+              normalizeChoices={(rawChoices) => {
+                const choices = normalizeForPayload(editQuiz, rawChoices);
                 if (chosenChristianity(choices)) return choices;
                 const { [DENOMINATION_STEP_ID]: _denomination, ...rest } = choices;
                 return rest;

@@ -1,6 +1,7 @@
 import { LANG } from '../i18n';
 import type { PremiumReport, ReportPreview } from '../types/quiz';
 import type { SavedAnswers } from '../utils/quizProgress';
+import { isValueStep } from '../utils/valueTrees';
 import { request } from './quizApi';
 
 /**
@@ -12,13 +13,14 @@ import { request } from './quizApi';
 // servidor recusa o pedido (400) se elas forem junto. O envio do resultado também as tira.
 const NON_ARCHETYPE_STEP_IDS = ['religiao', 'denominacao'];
 
+// Os passos da árvore de valores (prefixo "fv:") também ficam em archetypeChoices, mas viram `values`, não arquétipo.
 export function archetypeOnly(choices: Record<string, string>): Record<string, string> {
-  return Object.fromEntries(Object.entries(choices).filter(([id]) => !NON_ARCHETYPE_STEP_IDS.includes(id)));
+  return Object.fromEntries(Object.entries(choices).filter(([id]) => !NON_ARCHETYPE_STEP_IDS.includes(id) && !isValueStep(id)));
 }
 
 export function fetchPremiumReport(
   vector: number[],
-  saved: Pick<SavedAnswers, 'variant' | 'answers' | 'archetypeChoices'> | null,
+  saved: Pick<SavedAnswers, 'variant' | 'answers' | 'archetypeChoices' | 'values'> | null,
   token: string | null,
   religion: string | null
 ): Promise<PremiumReport> {
@@ -29,7 +31,9 @@ export function fetchPremiumReport(
     body: JSON.stringify({
       v: vector.join(','),
       answers: saved ? Object.entries(saved.answers).map(([questionId, answer]) => ({ questionId, answer })) : undefined,
-      archetype: saved ? archetypeOnly(saved.archetypeChoices) : undefined
+      archetype: saved ? archetypeOnly(saved.archetypeChoices) : undefined,
+      // Com respostas, os valores completos têm de ir junto: sem eles as respostas não reproduzem o vetor (400).
+      values: saved?.values && Object.keys(saved.values).length > 0 ? saved.values : undefined
     })
   });
 }

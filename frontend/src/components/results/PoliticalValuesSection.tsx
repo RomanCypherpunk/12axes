@@ -25,7 +25,7 @@ const MIN_NAME_FONT = 9;
 
 // O nome do valor nunca quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
 // a fonte diminui (em passos de 0,5px, até um mínimo) em vez de a palavra ser cortada.
-function fitNames(list: HTMLElement) {
+export function fitNames(list: HTMLElement) {
   list.querySelectorAll<HTMLElement>('.e-dim-row strong').forEach((name) => {
     name.style.fontSize = '';
     let size = parseFloat(getComputedStyle(name).fontSize);

@@ -62,6 +62,8 @@ export interface QuizPayload {
   answerOptions: AnswerOption[];
   /** Perguntas de arquétipo exibidas ao fim do quiz (cada alternativa pontua em vários eixos). */
   archetypeQuestions?: ArchetypeQuestion[];
+  /** Árvores dos valores completos (só no quiz de 240 perguntas). */
+  valueTrees?: ValueTree[];
 }
 
 /** Ícone preenchido (mesmo formato de data/filledPoleIcons.ts). */
@@ -75,6 +77,8 @@ export interface ArchetypeQuestion {
   id: string;
   label: string;
   text: string;
+  /** Tema do ícone do cabeçalho (chave de THEME_ICONS no ArchetypeCard); sem ele vale o id da pergunta. */
+  theme?: string;
   /** Selo do cabeçalho; sem ele, usa o ícone do tema pelo id. */
   icon?: QuestionIcon;
   /** Com icon, a alternativa mostra o ícone no lugar da letra. */
@@ -148,6 +152,51 @@ export interface CountryMatch {
   compatibility: number;
   /** Vetor de 12 eixos (leftPercent) do país. */
   vector?: Record<string, number>;
+}
+
+/** Opção de um nó da árvore de valores: leva a outro nó (next) ou a um valor final (value), nunca aos dois. */
+export interface ValueTreeOption {
+  /** Posição da opção no nó, em texto ("0", "1", ...). */
+  id: string;
+  text: string;
+  next: string | null;
+  value: string | null;
+}
+
+export interface ValueTreeNode {
+  id: string;
+  text: string;
+  options: ValueTreeOption[];
+}
+
+/** Árvore de decisão de uma categoria dos valores completos (quiz de 240 perguntas). */
+export interface ValueTree {
+  categoryId: string;
+  label: string;
+  root: string;
+  nodes: ValueTreeNode[];
+}
+
+/** Imagem de um valor completo e a fonte dela. */
+export interface FullValueIcon {
+  /** Arquivo em /values/<categoria>/. */
+  file: string;
+  sourceUrl: string;
+  author: string;
+  license: string;
+  modified: boolean;
+}
+
+/** Valor que o usuário declarou numa categoria (um por categoria, sem intensidade). */
+export interface FullValue {
+  categoryId: string;
+  categoryLabel: string;
+  valueId: string;
+  name: string;
+  description: string;
+  neutral: boolean;
+  /** Nulo enquanto o valor não tem imagem livre. */
+  icon: FullValueIcon | null;
 }
 
 /** Valor político do usuário em uma categoria (econômicos, ...), derivado dos eixos. */
@@ -271,6 +320,10 @@ export interface QuizResult {
   bottomPartyMatches?: PartyMatch[];
   /** Um valor político nomeado por categoria, derivado só dos eixos. */
   politicalValues?: PoliticalValue[];
+  /** Valores que o usuário declarou na árvore do quiz de 240 perguntas; ausente/nulo nos outros casos (aí vale politicalValues). */
+  fullValues?: FullValue[] | null;
+  /** Chave curta dos valores declarados para o link (`f=`). */
+  fullValuesKey?: string | null;
 }
 
 

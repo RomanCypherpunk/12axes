@@ -29,6 +29,8 @@ interface EditAnswersSheetProps {
   initial: AnswerSet;
   /** Perguntas de arquétipo e religião (a da vertente cristã só existe se a religião for o cristianismo). */
   buildSteps: (choices: Record<string, string>) => ArchetypeQuestion[];
+  /** Como uma escolha entra nas outras: por padrão só grava; nas árvores de valores também descarta o que vinha depois. */
+  chooseStep?: (choices: Record<string, string>, stepId: string, optionId: string) => Record<string, string>;
   /** Tira escolhas que deixaram de valer (a vertente cristã, se a religião mudou). */
   normalizeChoices: (choices: Record<string, string>) => Record<string, string>;
   isSaving: boolean;
@@ -48,7 +50,7 @@ const arrow = (flip = false) => (
  * Edita as respostas de um quiz já feito. À esquerda ficam os 12 eixos (mais arquétipo e religião); à direita, as
  * perguntas do eixo escolhido como um baralho de cartas, que passam com Voltar e Avançar. "Gravar" recalcula o resultado.
  */
-export function EditAnswersSheet({ quiz, axes, axisResults, religion, initial, buildSteps, normalizeChoices, isSaving, error, onSave, onClose }: EditAnswersSheetProps) {
+export function EditAnswersSheet({ quiz, axes, axisResults, religion, initial, buildSteps, chooseStep, normalizeChoices, isSaving, error, onSave, onClose }: EditAnswersSheetProps) {
   const [answers, setAnswers] = useState(initial.answers);
   const [choices, setChoices] = useState(initial.archetypeChoices);
   const [position, setPosition] = useState(0);
@@ -185,7 +187,7 @@ export function EditAnswersSheet({ quiz, axes, axisResults, religion, initial, b
                       selected={choices[id]}
                       disabled={isSaving}
                       titleId={`edit-title-${id}`}
-                      onSelect={(optionId) => setChoices((state) => ({ ...state, [id]: optionId }))}
+                      onSelect={(optionId) => setChoices((state) => (chooseStep ? chooseStep(state, id, optionId) : { ...state, [id]: optionId }))}
                     />
                   )}
                 </div>
