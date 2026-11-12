@@ -7,84 +7,84 @@
     "nodes": [
       {
         "id": "politica_raiz",
-        "text": "De onde deve vir o direito de mandar?",
+        "text": "De onde vem a autoridade?",
         "options": [
           {"text": "Da vontade dos cidadãos", "next": "politica_cidadaos"},
-          {"text": "Da competência ou da força de quem governa", "next": "politica_competencia"},
-          {"text": "De uma ordem tradicional, religiosa ou hereditária", "next": "politica_tradicao"},
-          {"text": "De lugar nenhum: o mínimo de mando possível, ou não sei", "next": "politica_minimo"}
+          {"text": "Da competência ou da força", "next": "politica_competencia"},
+          {"text": "Tradição, religião ou herança", "next": "politica_tradicao"},
+          {"text": "Do mínimo de mando, ou não sei", "next": "politica_minimo"}
         ]
       },
       {
         "id": "politica_cidadaos",
-        "text": "Como os cidadãos devem exercer esse direito?",
+        "text": "Como os cidadãos decidem?",
         "options": [
           {"text": "Elegendo representantes", "next": "politica_representantes"},
-          {"text": "Decidindo eles mesmos, diretamente", "next": "politica_direta"},
-          {"text": "Organizados por trabalho e comunidade, sem classes", "next": "politica_coletivo"}
+          {"text": "Votando eles mesmos", "next": "politica_direta"},
+          {"text": "Em conselhos e comunidades, sem classes", "next": "politica_coletivo"}
         ]
       },
       {
         "id": "politica_representantes",
-        "text": "Que tipo de sistema representativo?",
+        "text": "Que tipo de sistema?",
         "options": [
-          {"text": "Representantes eleitos sob uma constituição, com direitos garantidos", "value": "democracia_representativa"},
-          {"text": "Um monarca simbólico, com governo eleito", "value": "monarquia_constitucional"}
+          {"text": "Constituição e direitos garantidos", "value": "democracia_representativa"},
+          {"text": "Um monarca simbólico e governo eleito", "value": "monarquia_constitucional"}
         ]
       },
       {
         "id": "politica_direta",
-        "text": "Como decidir diretamente?",
+        "text": "Como votar diretamente?",
         "options": [
-          {"text": "Votando em referendos sobre leis, iniciativas e mudanças da constituição", "value": "democracia_direta"},
-          {"text": "Por votação online e plataformas digitais", "value": "democracia_digital"},
-          {"text": "Em assembleias presenciais de bairro e município, unidas em confederação", "value": "comunalismo"}
+          {"text": "Em referendos sobre as leis", "value": "democracia_direta"},
+          {"text": "Online, em plataformas digitais", "value": "democracia_digital"},
+          {"text": "Em assembleias de bairro e município", "value": "comunalismo"}
         ]
       },
       {
         "id": "politica_coletivo",
-        "text": "Qual forma de organização coletiva?",
+        "text": "Qual organização coletiva?",
         "options": [
-          {"text": "Conselhos de trabalhadores e camponeses, eleitos de baixo para cima", "value": "conselhos"},
-          {"text": "Fim do Estado, do dinheiro e das classes, com tudo em propriedade comum", "value": "comunismo"}
+          {"text": "Conselhos de trabalhadores eleitos", "value": "conselhos"},
+          {"text": "Sem Estado, classes nem dinheiro", "value": "comunismo"}
         ]
       },
       {
         "id": "politica_competencia",
-        "text": "O que dá o direito de governar?",
+        "text": "O que dá direito de governar?",
         "options": [
-          {"text": "Conhecimento técnico, aplicado com dados", "value": "tecnocracia"},
-          {"text": "Mérito comprovado em provas, resultados e carreira", "value": "meritocracia"},
-          {"text": "Gestão como numa empresa, prestando contas a quem sustenta o Estado", "value": "neocameralismo"},
+          {"text": "Conhecimento técnico", "value": "tecnocracia"},
+          {"text": "Mérito em provas e carreira", "value": "meritocracia"},
+          {"text": "Gestão de empresa, com acionistas", "value": "neocameralismo"},
           {"text": "A força e a disciplina", "next": "politica_forca"}
         ]
       },
       {
         "id": "politica_forca",
-        "text": "Quem deve exercer essa força?",
+        "text": "Quem exerce essa força?",
         "options": [
-          {"text": "As forças armadas, com a hierarquia militar", "value": "estratocracia"},
-          {"text": "Uma só pessoa no comando, sem limites que a controlem", "value": "autocracia"},
-          {"text": "Um único partido, que domina o Estado e a escolha dos cargos", "value": "partocracia"}
+          {"text": "As forças armadas", "value": "estratocracia"},
+          {"text": "Uma só pessoa, sem limites", "value": "autocracia"},
+          {"text": "Um único partido no Estado", "value": "partocracia"}
         ]
       },
       {
         "id": "politica_tradicao",
         "text": "Qual ordem tradicional?",
         "options": [
-          {"text": "Um monarca com poder total", "value": "monarquia_absoluta"},
-          {"text": "Famílias nobres ou uma elite tradicional", "value": "aristocracia"},
-          {"text": "A religião, com líderes religiosos e lei sagrada", "value": "teocracia"},
-          {"text": "Um monarca só simbólico, que existe para impedir que um Estado se forme", "value": "anarco_monarquismo"}
+          {"text": "Monarca com poder total", "value": "monarquia_absoluta"},
+          {"text": "Famílias nobres ou elite tradicional", "value": "aristocracia"},
+          {"text": "Líderes religiosos e lei sagrada", "value": "teocracia"},
+          {"text": "Monarca só simbólico, sem Estado", "value": "anarco_monarquismo"}
         ]
       },
       {
         "id": "politica_minimo",
-        "text": "Qual destas frases se aproxima mais do que você pensa?",
+        "text": "Qual frase combina mais com você?",
         "options": [
-          {"text": "Nenhum governo obrigatório: cada pessoa escolhe a quais regras e comunidades pertencer", "value": "anarquismo"},
-          {"text": "Um Estado mínimo: só segurança, justiça e defesa", "value": "minarquismo"},
-          {"text": "Não tenho uma preferência clara sobre quem deve governar", "value": "politica_equilibrada"}
+          {"text": "Nenhum governo obrigatório", "value": "anarquismo"},
+          {"text": "Estado mínimo: só segurança e justiça", "value": "minarquismo"},
+          {"text": "Sem preferência clara", "value": "politica_equilibrada"}
         ]
       }
     ],

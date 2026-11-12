@@ -242,6 +242,31 @@ class FullValuesServiceTest {
         assertThat(parentNode).isEqualTo("politica_forca");
     }
 
+    /** No celular o texto quebra o botao: mesmo limite de tamanho das perguntas de arquetipo (perguntas ate 36, alternativas ate 42). */
+    @Test
+    void treeTextsStayAsShortAsTheArchetypeQuestions() throws IOException {
+        int maxQuestion = 38;
+        int maxOption = 42;
+        JsonNode politica = null;
+        for (JsonNode category : MAPPER.readTree(resource("data/full-values.json"))) {
+            if (category.get("id").asText().equals("politica")) {
+                politica = category;
+            }
+        }
+        assertThat(politica).isNotNull();
+        Map<String, JsonNode> english = new java.util.HashMap<>();
+        MAPPER.readTree(resource("data/i18n/en/full-values.json")).forEach(item -> english.put(item.get("id").asText(), item));
+        for (JsonNode node : politica.get("nodes")) {
+            String id = node.get("id").asText();
+            assertThat(node.get("text").asText().length()).as("pergunta pt %s", id).isLessThanOrEqualTo(maxQuestion);
+            assertThat(english.get(id).get("text").asText().length()).as("pergunta en %s", id).isLessThanOrEqualTo(maxQuestion);
+            for (int i = 0; i < node.get("options").size(); i++) {
+                assertThat(node.get("options").get(i).get("text").asText().length()).as("alternativa pt %s.%d", id, i).isLessThanOrEqualTo(maxOption);
+                assertThat(english.get(id + "." + i).get("text").asText().length()).as("alternativa en %s.%d", id, i).isLessThanOrEqualTo(maxOption);
+            }
+        }
+    }
+
     @Test
     void theRealPoliticaCategoryFollowsTheContentRules() throws IOException {
         String pt = resource("data/full-values.json");
