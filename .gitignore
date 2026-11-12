@@ -31,15 +31,32 @@ __pycache__/
 *.pyc
 
 # Superpowers (specs/plans gerados pelo plugin)
-docs/superpowers/
+docs/superpowers/*
 .claude/skills/superpowers*/
 .codex-run
 
 # Materiais de referência visual
-docs/
+docs/*
 
 # Artefatos de screenshots do Playwright MCP
 .playwright-mcp/
 
 # Lotes temporários da tradução (i18n-tools/sync.py)
 i18n-tools/work/
+
+# TEMPORÁRIO (branch feat/full-values): versiona o documento de design para continuar em outro PC.
+# Remover estas linhas e o arquivo antes de levar a branch para a main.
+!docs/superpowers/
+docs/superpowers/*
+!docs/superpowers/specs/
+docs/superpowers/specs/*
+!docs/superpowers/specs/2026-11-11-full-values-design.md
+!docs/superpowers/plans/
+docs/superpowers/plans/*
+!docs/superpowers/plans/2026-11-11-full-values-engine-politica.md
+
+# Scratch do executing-plans (ledger local)
+.superpowers/
+
+# TEMPORÁRIO (branch feat/full-values): prévia HTML dos valores servida pelo Vite em /docs/. Remover com o resto antes da main.
+frontend/public/docs/
