@@ -465,7 +465,9 @@ public class QuizDataService {
                 data.axes(),
                 data.questions(),
                 answerOptions(normalizedLang),
-                archetypeQuestions.stream().map(question -> question.view(normalizedLang)).toList()
+                archetypeQuestions.stream().map(question -> question.view(normalizedLang)).toList(),
+                // As arvores dos valores completos entram no quiz de 240 pelo QuizController.
+                List.of()
         );
     }
 

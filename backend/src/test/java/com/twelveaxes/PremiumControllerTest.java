@@ -1,5 +1,6 @@
 package com.twelveaxes;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -78,6 +79,9 @@ class PremiumControllerTest {
 
     @Autowired
     private EntitlementToken entitlementToken;
+
+    @Autowired
+    private com.twelveaxes.service.FullValuesService fullValuesService;
 
     @BeforeEach
     void resetRefund() {
@@ -174,6 +178,33 @@ class PremiumControllerTest {
                 .andExpect(jsonPath("$.axisAnalysis.length()").value(12))
                 .andExpect(jsonPath("$.axisAnalysis[0].impacts.length()").value(0))
                 .andExpect(jsonPath("$.axisAnalysis[0].text").isNotEmpty());
+    }
+
+    @Test
+    void answersSentWithTheirFullValuesStillReproduceTheVector() throws Exception {
+        // Um valor completo com efeito muda o vetor (peso 2); o relatorio so confere as respostas se tambem receber os valores.
+        String leaf = fullValuesService.trees("pt").stream().filter(tree -> tree.categoryId().equals("politica"))
+                .flatMap(tree -> tree.nodes().stream()).flatMap(node -> node.options().stream())
+                .map(com.twelveaxes.model.ValueTree.OptionView::value)
+                .filter(value -> value != null && !fullValuesService.value("politica", value).neutral())
+                .findFirst().orElseThrow();
+        java.util.Map<String, String> values = java.util.Map.of("politica", leaf);
+        ResultRequest withValues = new ResultRequest(mixed().answers(), "short", null, values);
+        assertNotEquals(hashOf(mixed()), hashOf(withValues));
+        String token = entitlementToken.issue(hashOf(withValues), PAYMENT, Duration.ofDays(365));
+        String vector = scoringService.score(withValues, "pt").stream().map(axis -> String.valueOf(axis.leftPercent()))
+                .collect(java.util.stream.Collectors.joining(","));
+
+        java.util.Map<String, Object> complete = new java.util.LinkedHashMap<>();
+        complete.put("v", vector);
+        complete.put("answers", withValues.answers());
+        complete.put("values", values);
+        reportWith(objectMapper.writeValueAsString(complete), token)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.axisAnalysis[0].impacts.length()").isNotEmpty());
+
+        complete.remove("values");
+        reportWith(objectMapper.writeValueAsString(complete), token).andExpect(status().isBadRequest());
     }
 
     @Test

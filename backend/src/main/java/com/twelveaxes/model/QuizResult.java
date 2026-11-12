@@ -31,6 +31,9 @@ import java.util.List;
  * @param partyDimensionMatches partido mais compativel em cada dimensao (politica, social, economica)
  * @param bottomPartyMatches os 3 menos compativeis, do menos ao mais distante
  * @param politicalValues um valor politico nomeado por categoria, derivado so dos eixos
+ * @param fullValues valores que o usuario declarou na arvore do quiz de 240 perguntas (um por categoria);
+ *     nulo quando nao ha (outros quizzes, links antigos ou chave invalida)
+ * @param fullValuesKey chave curta ({@code f=}) desses valores para o link; nula quando nao ha valores
  */
 public record QuizResult(
         List<AxisResult> axes,
@@ -55,6 +58,16 @@ public record QuizResult(
         PartyMatch topHistoricalPartyMatch,
         List<PartyDimensionMatch> partyDimensionMatches,
         List<PartyMatch> bottomPartyMatches,
-        List<PoliticalValue> politicalValues
+        List<PoliticalValue> politicalValues,
+        List<FullValue> fullValues,
+        String fullValuesKey
 ) {
+    /** Copia com os valores declarados; o resultado em cache (so por vetor) nunca e alterado. */
+    public QuizResult withFullValues(List<FullValue> values, String key) {
+        return new QuizResult(axes, topMatch, matches, bottomIdeologyMatch, topCountryMatch, topCountryMatches,
+                topHistoricalCountryMatch, countryDimensionMatches, bottomCountryMatches, topPersonalityMatch,
+                personalityMatches, dimensionMatches, bottomPersonalityMatches, mostUnusualAxis, mostCommonAxis,
+                axisTension, bookRecommendations, topPartyMatch, topPartyMatches, topHistoricalPartyMatch,
+                partyDimensionMatches, bottomPartyMatches, politicalValues, values, key);
+    }
 }

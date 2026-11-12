@@ -21,10 +21,15 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class ScoringService {
-    private final QuizDataService dataService;
+    /** Cada efeito de um valor completo entra com este peso (as respostas e o arquétipo simples valem 1). */
+    static final double FULL_VALUE_WEIGHT = 2.0;
 
-    public ScoringService(QuizDataService dataService) {
+    private final QuizDataService dataService;
+    private final FullValuesService fullValuesService;
+
+    public ScoringService(QuizDataService dataService, FullValuesService fullValuesService) {
         this.dataService = dataService;
+        this.fullValuesService = fullValuesService;
     }
 
     public List<AxisResult> score(ResultRequest request) {
@@ -81,7 +86,25 @@ public class ScoringService {
                     .add(leftScore(question, submittedAnswer.answer()), question.weight());
         }
         addArchetypeAnswers(request.archetype(), scores);
+        addFullValues(request.values(), scores);
         return scores;
+    }
+
+    // Cada valor completo escolhido soma o efeito dele em cada eixo que toca, com peso 2. O valor neutro
+    // nao tem efeito. Categoria ou valor desconhecido (ou categoria ainda sem conteudo) e 400.
+    private void addFullValues(Map<String, String> chosen, Map<String, WeightedScore> scores) {
+        if (chosen == null || chosen.isEmpty()) {
+            return;
+        }
+        chosen.forEach((categoryId, valueId) -> {
+            Map<String, Double> effects = fullValuesService.value(categoryId, valueId).effects();
+            if (effects == null) {
+                return;
+            }
+            effects.forEach((axisId, leftPercent) ->
+                    scores.computeIfAbsent(axisId, ignored -> new WeightedScore())
+                            .add(leftPercent / 100.0, FULL_VALUE_WEIGHT));
+        });
     }
 
     // Nota da resposta no polo esquerdo (0 a 1): concordar com uma pergunta do polo direito vale o oposto.

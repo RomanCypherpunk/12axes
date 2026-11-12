@@ -15,6 +15,7 @@ import com.twelveaxes.service.AxisValuesParser;
 import com.twelveaxes.service.BoundedCache;
 import com.twelveaxes.service.BookRecommendationService;
 import com.twelveaxes.service.DimensionMatcherService;
+import com.twelveaxes.service.FullValuesService;
 import com.twelveaxes.service.CountryMatcherService;
 import com.twelveaxes.service.CountryDimensionMatcherService;
 import com.twelveaxes.service.IdeologyMatcherService;
@@ -27,6 +28,7 @@ import com.twelveaxes.service.ReligionFilter;
 import com.twelveaxes.service.ScoringService;
 import jakarta.validation.Valid;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,6 +61,7 @@ public class QuizController {
     private final BookRecommendationService bookRecommendationService;
     private final DimensionMatcherService dimensionMatcherService;
     private final PoliticalValuesService politicalValuesService;
+    private final FullValuesService fullValuesService;
 
     public QuizController(
             QuizDataService dataService,
@@ -73,7 +76,8 @@ public class QuizController {
             AxisTensionService axisTensionService,
             DimensionMatcherService dimensionMatcherService,
             BookRecommendationService bookRecommendationService,
-            PoliticalValuesService politicalValuesService
+            PoliticalValuesService politicalValuesService,
+            FullValuesService fullValuesService
     ) {
         this.dataService = dataService;
         this.scoringService = scoringService;
@@ -88,6 +92,7 @@ public class QuizController {
         this.dimensionMatcherService = dimensionMatcherService;
         this.bookRecommendationService = bookRecommendationService;
         this.politicalValuesService = politicalValuesService;
+        this.fullValuesService = fullValuesService;
     }
 
 
@@ -97,7 +102,13 @@ public class QuizController {
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang
     ) {
         String key = dataService.normalizeVariant(variant) + "|" + QuizDataService.normalizeLang(lang);
-        return quizCache.get(key, () -> dataService.getQuiz(variant, lang));
+        return quizCache.get(key, () -> {
+            QuizPayload payload = dataService.getQuiz(variant, lang);
+            // As arvores dos valores completos so existem no quiz de 240 perguntas.
+            return QuizDataService.EXTREME_VARIANT.equals(payload.variant())
+                    ? payload.withValueTrees(fullValuesService.trees(lang))
+                    : payload;
+        });
     }
 
     @PostMapping("/api/results")
@@ -107,7 +118,17 @@ public class QuizController {
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
             @RequestParam(required = false) String religion
     ) {
-        return buildResult(scoringService.score(request, lang), lang, ReligionFilter.normalize(religion));
+        QuizResult result = buildResult(scoringService.score(request, lang), lang, ReligionFilter.normalize(religion));
+        return withDeclaredValues(result, request.values(), lang);
+    }
+
+    // Anexa os valores declarados (e a chave do link) a uma COPIA do resultado: o cache e so por vetor, e o mesmo
+    // vetor pode vir com valores diferentes.
+    private QuizResult withDeclaredValues(QuizResult result, Map<String, String> chosen, String lang) {
+        if (chosen == null || chosen.isEmpty()) {
+            return result;
+        }
+        return result.withFullValues(fullValuesService.resolve(chosen, lang), fullValuesService.encodeKey(chosen).orElse(null));
     }
 
     // Resultado compartilhável: reconstrói matches a partir do vetor de eixos
@@ -117,10 +138,15 @@ public class QuizController {
     public QuizResult resultsByAxes(
             @RequestParam("v") String values,
             @RequestParam(defaultValue = QuizDataService.LANG_PT) String lang,
-            @RequestParam(required = false) String religion
+            @RequestParam(required = false) String religion,
+            // Chave curta dos valores completos (ver FullValuesKey). Invalida ou ausente = valores derivados, sem erro.
+            @RequestParam(name = "f", required = false) String fullValuesKey
     ) {
-        return buildResult(scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang), lang,
+        QuizResult result = buildResult(scoringService.scoreFromLeftPercents(AxisValuesParser.parse(values), lang), lang,
                 ReligionFilter.normalize(religion));
+        return fullValuesService.decodeKey(fullValuesKey)
+                .map(chosen -> withDeclaredValues(result, chosen, lang))
+                .orElse(result);
     }
 
     private QuizResult buildResult(List<AxisResult> axes, String lang, String religion) {
@@ -177,7 +203,10 @@ public class QuizController {
                 topHistoricalParty,
                 partyDimensionMatches,
                 partyMatcherService.findBottomMatches(axes, lang, religion),
-                politicalValuesService.resolve(axes, lang)
+                politicalValuesService.resolve(axes, lang),
+                // Os valores declarados nao entram no cache (que e so por vetor): ver withDeclaredValues.
+                null,
+                null
         );
     }
 
