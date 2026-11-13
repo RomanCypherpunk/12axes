@@ -1,6 +1,7 @@
 // Página /countries (e /en/countries): países atuais e regimes históricos
 // agrupados por época, com busca, filtro, bandeira e a faixa de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de personalidades e troca o retrato pela bandeira.
+import { pluralIndex } from './plural.mjs';
 import { siteHeader } from './site-header.mjs';
 import { ARROW, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
@@ -9,6 +10,7 @@ import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFil
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 // Épocas, na ordem do catálogo. Cada regime entra na época do ano de início;
 // `until` é o ano (exclusivo) que fecha a época. A Antiguidade fecha em 300
@@ -133,6 +135,7 @@ const STR = {
 STR.es = { ...STR.en, ...ES.countriesIndex };
 STR.de = { ...STR.en, ...DE.countriesIndex };
 STR.it = { ...STR.en, ...IT.countriesIndex };
+STR.ru = { ...STR.en, ...RU.countriesIndex };
 
 export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];
@@ -184,7 +187,7 @@ export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pro
   };
 
   const section = (g) =>
-    `<section class="cat" id="${g.key}" data-cat="${g.key}" style="${vars(g)}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(t.labels[g.key])}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count" data-one="${escapeHtml(g.count[0])}" data-many="${escapeHtml(g.count[1])}"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(g.count[g.items.length === 1 ? 0 : 1])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`;
+    `<section class="cat" id="${g.key}" data-cat="${g.key}" style="${vars(g)}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(t.labels[g.key])}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count" data-one="${escapeHtml(g.count[0])}" ${g.count.length > 2 ? `data-few="${escapeHtml(g.count[1])}" ` : ''}data-many="${escapeHtml(g.count[g.count.length - 1])}"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(g.count[pluralIndex(g.items.length, g.count.length)])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`;
 
   const currentGroup = groups.filter((g) => g.key === CURRENT.key);
   const eraGroups = groups.filter((g) => g.key !== CURRENT.key);

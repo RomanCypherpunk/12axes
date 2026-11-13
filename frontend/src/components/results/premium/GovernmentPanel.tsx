@@ -31,7 +31,8 @@ const ROLE_FILES: Record<string, () => Promise<{ default: RoleTexts }>> = {
   en: () => import('./governmentRoles.en.json'),
   es: () => import('./governmentRoles.es.json'),
   de: () => import('./governmentRoles.de.json'),
-  it: () => import('./governmentRoles.it.json')
+  it: () => import('./governmentRoles.it.json'),
+  ru: () => import('./governmentRoles.ru.json')
 };
 
 export function useRoleTexts(): RoleTexts | null {

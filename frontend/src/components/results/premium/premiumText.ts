@@ -476,4 +476,88 @@ const it: PremiumText = {
   saveCopied: 'Link copiato',
 };
 
-export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : LANG === 'it' ? it : en;
+const ru: PremiumText = {
+  title: 'Полный отчет',
+  devBadge: 'Режим разработки: открыто без оплаты, только на этом компьютере.',
+  loading: 'Готовим ваш полный отчет...',
+  error: 'Не удалось загрузить отчет. Попробуйте снова через несколько мгновений.',
+  retry: 'Попробовать снова',
+  historical: 'историческая',
+  axisTitle: 'Полный анализ, ось за осью',
+  positions: { you: 'Вы', ideology: 'Идеология', personality: 'Фигура', country: 'Страна' },
+  levelLabels: { equilibrado: 'Сбалансированно', inclinado: 'Умеренно', forte: 'Сильно', muito_forte: 'Очень сильно' },
+  disagreeTitle: 'Где вы расходитесь сильнее всего',
+  disagreeKinds: { ideology: 'с вашей идеологией', personality: 'с вашей фигурой', country: 'с вашей страной' },
+  disagreeLegendProfile: 'Профиль',
+  gapRank: (position) => (position === 1 ? 'Наибольшее расхождение' : position === 2 ? '2-е по величине расхождение' : '3-е по величине расхождение'),
+  governmentTitle: 'Ваше идеальное правительство',
+  governmentRolesTitle: 'Роль каждого в вашем правительстве',
+  governmentSwap: {
+    aria: (seat) => `Заменить того, кто занимает пост: ${seat}`,
+    title: (seat) => `Заменить: ${seat}`,
+    lead: (category) => `Фигуры из категории «${category}», наиболее совместимые с вами после нынешней. Выберите одну, чтобы составить свое идеальное правительство.`,
+    current: 'Нынешняя',
+    none: 'В этой категории нет других фигур для замены.',
+    swapped: 'Заменено вами',
+    searchLabel: 'Или найдите любую другую фигуру',
+    holdsNow: (seat) => `Сейчас: ${seat}. Меняется местами.`,
+    searchPlaceholder: 'Введите имя',
+    searchNone: 'По этому имени никого не найдено.',
+    searchError: 'Сейчас не удалось выполнить поиск. Попробуйте снова через несколько мгновений.',
+    searching: 'Ищем…'
+  },
+  governmentRolesLead: 'Каждый пост описан исходя из ваших позиций по осям, которые весят в нем больше всего, чтобы вы видели, почему результат получился именно таким.',
+  roleAxis: {
+    estrutura: 'По устройству государства',
+    representacao: 'Политически',
+    poder: 'В вопросах власти',
+    imigracao: 'В иммиграции',
+    diplomacia: 'В дипломатии',
+    intervencao: 'В вопросах вмешательства',
+    economia: 'В экономике',
+    controle: 'В вопросах контроля',
+    comercio: 'В торговле',
+    religiao: 'В религии',
+    moral: 'В морали',
+    tecnologia: 'В технологиях'
+  },
+  roleSubject: 'этот человек',
+  governmentWhy: (area, pct) => `Занимает пост как ближайшая к вам фигура в категории «${area}»: совместимость ${pct}%.`,
+  governmentWhySwapped: (pct) => `Занимает пост по вашей замене: совместимость ${pct}% с вашим результатом.`,
+  timelineTitle: 'Ваша идеологическая хронология',
+  timelineEraNames: {
+    antiguidade: 'Античность',
+    medieval: 'Средние века',
+    moderna: 'Новое время',
+    xix: 'XIX век',
+    xx: 'XX век',
+    xxi: 'XXI век'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} г. до н. э.` : String(value));
+    if (from === null && to !== null) return `До ${year(to)}`;
+    if (to === null && from !== null) return `С ${year(from)}`;
+    return `${year(from ?? 0)} — ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Нынешняя',
+  timelineBestEra: 'Наиболее совместимая эпоха:',
+  seats: {
+    lider: 'Политический лидер',
+    vice: 'Заместитель политического лидера',
+    economia: 'Глава экономики',
+    educacao: 'Глава образования',
+    estrategia: 'Глава политической стратегии',
+    filosofia: 'Философский советник',
+    social: 'Координатор по социальным вопросам',
+    industria: 'Координатор промышленности и инноваций',
+    cultura: 'Советник по культуре'
+  },
+  countriesTitle: '10 стран или регионов для жизни',
+  saveTitle: 'Сохраните свой доступ',
+  saveIntro: 'Чтобы открыть этот отчет на другом устройстве или после очистки браузера, сохраните ссылку ниже. Любой, у кого есть ссылка, откроет отчет по этому результату, поэтому храните ее бережно.',
+  saveField: 'Ссылка для доступа к отчету',
+  saveCopy: 'Копировать ссылку',
+  saveCopied: 'Ссылка скопирована',
+};
+
+export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : LANG === 'it' ? it : LANG === 'ru' ? ru : en;

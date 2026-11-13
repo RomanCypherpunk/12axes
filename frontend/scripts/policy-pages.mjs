@@ -8,6 +8,7 @@ import { catalogHead } from './personalities-index.mjs';
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 import { SELLER } from './seller.mjs';
 
 const SUPPORT_EMAIL = (process.env.SUPPORT_EMAIL ?? '12axes.quiz@gmail.com').trim();
@@ -36,6 +37,10 @@ const CONTACT = {
   it: {
     email: `via e-mail a <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
     page: `tramite la <a href="${ISSUES_URL}">pagina di contatto del progetto su GitHub</a> (non pubblicare lì dati di pagamento)`
+  },
+  ru: {
+    email: `по электронной почте <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>`,
+    page: `через <a href="${ISSUES_URL}">страницу контактов проекта на GitHub</a> (не публикуйте там платёжные данные)`
   }
 };
 const contact = (locale) => (SUPPORT_EMAIL ? CONTACT[locale].email : CONTACT[locale].page);
@@ -183,12 +188,15 @@ const LABELS = {
 LABELS.es = { ...LABELS.en, ...ES.policyLabels };
 LABELS.de = { ...LABELS.en, ...DE.policyLabels };
 LABELS.it = { ...LABELS.en, ...IT.policyLabels };
+LABELS.ru = { ...LABELS.en, ...RU.policyLabels };
 PAGES.es = ES.policyPages;
 PAGES.de = DE.policyPages;
 PAGES.it = IT.policyPages;
+PAGES.ru = RU.policyPages;
 UPDATED.es = ES.policyUpdated;
 UPDATED.de = DE.policyUpdated;
 UPDATED.it = IT.policyUpdated;
+UPDATED.ru = RU.policyUpdated;
 
 function body(paragraphs, escapeHtml) {
   const html = [];

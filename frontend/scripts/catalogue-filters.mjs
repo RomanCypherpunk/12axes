@@ -6,6 +6,7 @@ import { poleUse } from './pole-icons.mjs';
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 export const FILTER_STR = {
   pt: {
@@ -86,6 +87,7 @@ export const FILTER_STR = {
 FILTER_STR.es = { ...FILTER_STR.en, ...ES.filters };
 FILTER_STR.de = { ...FILTER_STR.en, ...DE.filters };
 FILTER_STR.it = { ...FILTER_STR.en, ...IT.filters };
+FILTER_STR.ru = { ...FILTER_STR.en, ...RU.filters };
 
 // Gera a string compacta de polos para busca instantânea no client-side.
 // Formato: "estrutura:l representacao:r:s poder:r ..." onde :s indica posição forte (>= 60 ou <= 40).
@@ -395,7 +397,7 @@ function applyFilters() {
       if (bEl) bEl.textContent = n;
       const clEl = cc.querySelector('.cl');
       if (clEl && cc.dataset.one && cc.dataset.many) {
-        clEl.textContent = n === 1 ? cc.dataset.one : cc.dataset.many;
+        clEl.textContent = cc.dataset.few ? [cc.dataset.one, cc.dataset.few, cc.dataset.many][(n % 10 === 1 && n % 100 !== 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2)] : (n === 1 ? cc.dataset.one : cc.dataset.many);
       }
     }
     if (s.dataset.cat !== 'atuais') histShown += n;
@@ -406,7 +408,7 @@ function applyFilters() {
 
   // Contagem no drawer
   if (fdMatchCount) {
-    fdMatchCount.innerHTML = '<b>' + shown + '</b> ' + (shown === 1 ? S.found[0] : S.found[1]);
+    fdMatchCount.innerHTML = '<b>' + shown + '</b> ' + S.found[S.found.length > 2 ? (shown % 10 === 1 && shown % 100 !== 11 ? 0 : shown % 10 >= 2 && shown % 10 <= 4 && (shown % 100 < 12 || shown % 100 > 14) ? 1 : 2) : (shown === 1 ? 0 : 1)];
   }
 
   // Badge do botão de filtros
@@ -475,7 +477,7 @@ function applyFilters() {
   // Texto info superior
   if (info) {
     const isFiltered = term || filterCount > 0;
-    info.innerHTML = isFiltered ? '<b>' + shown + '</b> ' + S.found[shown === 1 ? 0 : 1] + '<button type="button" id="clear">' + esc(S.clear) + '</button>' : '';
+    info.innerHTML = isFiltered ? '<b>' + shown + '</b> ' + S.found[S.found.length > 2 ? (shown % 10 === 1 && shown % 100 !== 11 ? 0 : shown % 10 >= 2 && shown % 10 <= 4 && (shown % 100 < 12 || shown % 100 > 14) ? 1 : 2) : (shown === 1 ? 0 : 1)] + '<button type="button" id="clear">' + esc(S.clear) + '</button>' : '';
     const cl = document.getElementById('clear');
     if (cl) cl.onclick = clearAllFilters;
   }

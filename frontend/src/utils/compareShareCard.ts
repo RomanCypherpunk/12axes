@@ -534,6 +534,11 @@ async function loadCompareFonts(): Promise<void> {
     return;
   }
   await Promise.allSettled([
+    document.fonts.load('600 30px "Manrope"', 'Абвгдежзийклмнопрстуфхцчшщыэюя'),
+    document.fonts.load('700 30px "Manrope"', 'Абвгдежзийклмнопрстуфхцчшщыэюя'),
+    document.fonts.load('800 30px "Manrope"', 'Абвгдежзийклмнопрстуфхцчшщыэюя'),
+    document.fonts.load('400 30px "Montserrat"', 'Абвгдежзийклмнопрстуфхцчшщыэюя'),
+    document.fonts.load('600 30px "Montserrat"', 'Абвгдежзийклмнопрстуфхцчшщыэюя'),
     document.fonts.load('400 30px "Poppins"'),
     document.fonts.load('500 30px "Poppins"'),
     document.fonts.load('600 30px "Poppins"'),

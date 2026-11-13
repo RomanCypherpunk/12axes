@@ -171,6 +171,7 @@ public class ScoringService {
         return switch (QuizDataService.normalizeLang(lang)) {
             case QuizDataService.LANG_EN -> List.of("Balanced", "Leaning", "Strong", "Very strong").get(level);
             case QuizDataService.LANG_ES -> List.of("Equilibrado", "Inclinado", "Fuerte", "Muy fuerte").get(level);
+            case QuizDataService.LANG_RU -> List.of("Сбалансированно", "Умеренно", "Сильно", "Очень сильно").get(level);
             case QuizDataService.LANG_IT -> List.of("Equilibrato", "Tendente", "Forte", "Molto forte").get(level);
             case QuizDataService.LANG_DE -> List.of("Ausgeglichen", "Tendenz", "Stark", "Sehr stark").get(level);
             default -> List.of("Equilibrado", "Inclinado", "Forte", "Muito forte").get(level);

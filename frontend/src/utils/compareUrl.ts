@@ -4,7 +4,7 @@ import { parseReligion, type Religion } from './religion';
 
 // Comparação entre perfis do catálogo: /compare?items=personality:alvaro-uribe,country:colombia
 // (mesmo formato "tipo:id" que GET /api/compare/profiles recebe). A página aceita de 2 a 3.
-// Como no catálogo, o idioma está no caminho: /compare em português e /en/compare, /es/compare, /de/compare ou /it/compare nos demais.
+// Como no catálogo, o idioma está no caminho: /compare em português e /en/compare, /es/compare, /de/compare, /it/compare ou /ru/compare nos demais.
 export const MIN_COMPARE = 2;
 export const MAX_COMPARE = 3;
 

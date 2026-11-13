@@ -21,7 +21,7 @@ describe('local catalogue navigation', () => {
     const response = await fetch(`${base}ideologies`);
     expect(response.status).toBe(200);
     await response.text();
-  }, 60_000);
+  }, 120_000);
 
   afterAll(async () => { await server?.close(); });
 

@@ -8,7 +8,7 @@ import { buildTreeLayout } from './tree-layout.mjs';
 import { CATEGORY_KEY } from './ideologies-index.mjs';
 
 export const TREE_KINDS = ['ideologies', 'personalities', 'countries', 'parties'];
-const LOCALES = ['pt', 'en', 'es', 'de', 'it'];
+const LOCALES = ['pt', 'en', 'es', 'de', 'it', 'ru'];
 
 // Centro de cada região da bússola política (direita, autoritário), em 0–100.
 const REGION_CENTERS = {
@@ -81,7 +81,8 @@ export function buildTreeData(dataDir) {
     })(),
     es: generatedAxes('es'),
     de: generatedAxes('de'),
-    it: generatedAxes('it')
+    it: generatedAxes('it'),
+    ru: generatedAxes('ru')
   };
 
   // Referências do espectro: categoria de cada ideologia, para etiquetar os demais catálogos como o quiz faz.

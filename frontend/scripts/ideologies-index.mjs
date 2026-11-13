@@ -2,6 +2,7 @@
 // filtro por espectro e a "faixa" de 12 ícones de polo que resume o vetor de cada
 // ideologia. Tem layout e CSS próprios (ideologies.css), separados do pages.css
 // das páginas de detalhe.
+import { pluralIndex } from './plural.mjs';
 import { siteHeader } from './site-header.mjs';
 import { iconLinks } from './cdn.mjs';
 import { poleSprite, poleUse } from './pole-icons.mjs';
@@ -9,6 +10,7 @@ import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFil
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 // Mesma paleta de frontend/src/utils/ideologyColors.ts, na ordem do espectro.
 export const SPECTRUM = [
@@ -41,6 +43,14 @@ export const CATEGORY_KEY = {
   destra: 'direita',
   'estrema destra': 'ext-direita',
   'terza posizione': 'terceira',
+  'радикальные левые': 'esq-radical',
+  левые: 'esquerda',
+  центр: 'centro',
+  правые: 'direita',
+  'крайне правые': 'ext-direita',
+  'третья позиция': 'terceira',
+  либертарианцы: 'libertario',
+  анархисты: 'anarquismo',
   anarchico: 'anarquismo',
   libertär: 'libertario',
   anarchistisch: 'anarquismo',
@@ -143,6 +153,7 @@ const STR = {
 STR.es = { ...STR.en, ...ES.ideologiesIndex };
 STR.de = { ...STR.en, ...DE.ideologiesIndex };
 STR.it = { ...STR.en, ...IT.ideologiesIndex };
+STR.ru = { ...STR.en, ...RU.ideologiesIndex };
 
 export const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 
@@ -218,7 +229,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
           }
         )
         .join('');
-      return `<section class="cat" id="${g.key}" data-cat="${g.key}" style="${vars(g)}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(g.label)}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count"><b class="cc">${g.items.length}</b> ${escapeHtml(t.count)}</span></header><ul class="grid">${cards}</ul></section>`;
+      return `<section class="cat" id="${g.key}" data-cat="${g.key}" style="${vars(g)}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(g.label)}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div>${Array.isArray(t.count) ? `<span class="cat-count" data-one="${escapeHtml(t.count[0])}" data-few="${escapeHtml(t.count[1])}" data-many="${escapeHtml(t.count[2])}"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[pluralIndex(g.items.length, t.count.length)])}</span></span>` : `<span class="cat-count"><b class="cc">${g.items.length}</b> ${escapeHtml(t.count)}</span>`}</header><ul class="grid">${cards}</ul></section>`;
     })
     .join('');
 
@@ -242,7 +253,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati' }[L.locale]}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
@@ -250,6 +261,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <link rel="alternate" hreflang="es" href="${site}/es${basePath}" />
     <link rel="alternate" hreflang="de" href="${site}/de${basePath}" />
     <link rel="alternate" hreflang="it" href="${site}/it${basePath}" />
+    <link rel="alternate" hreflang="ru" href="${site}/ru${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="website" />

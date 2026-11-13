@@ -1,11 +1,13 @@
 // Página /books (e /en/books): catálogo de livros e obras das personalidades,
 // agrupado por área de atuação, com busca, filtro, capa/autor, ano e a faixa de 12 ícones de polo.
+import { pluralIndex } from './plural.mjs';
 import { siteHeader } from './site-header.mjs';
 import { ARROW, IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { AREA_LABELS, AREA_ORDER, catalogHead, initials } from './personalities-index.mjs';
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 export const AMAZON_BR_HOST = 'www.amazon.com.br';
 export const AMAZON_BR_TAG = '12axes-20';
@@ -114,6 +116,7 @@ const STR = {
 STR.es = { ...STR.en, ...ES.booksIndex };
 STR.de = { ...STR.en, ...DE.booksIndex };
 STR.it = { ...STR.en, ...IT.booksIndex };
+STR.ru = { ...STR.en, ...RU.booksIndex };
 
 function formatYear(year, t) {
   if (year === null || year === undefined) return '';
@@ -230,7 +233,7 @@ export function booksIndexPage(L, { locale, site, gaSnippet, escapeHtml, profile
                 <p>${escapeHtml(t.descriptions[g.key])}</p>
               </div>
             </div>
-            <span class="cat-count"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[g.items.length === 1 ? 0 : 1])}</span></span>
+            <span class="cat-count"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[pluralIndex(g.items.length, t.count.length)])}</span></span>
           </header>
           <ul class="grid">${g.items.map(card).join('')}</ul>
         </section>`
@@ -323,10 +326,10 @@ function apply(pushUrl = true) {
     const n = s.querySelectorAll('.bc:not([hidden])').length;
     s.hidden = n === 0;
     s.querySelector('.cc').textContent = n;
-    s.querySelector('.cl').textContent = S.count[n === 1 ? 0 : 1];
+    s.querySelector('.cl').textContent = S.count[S.count.length > 2 ? (n % 10 === 1 && n % 100 !== 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2) : (n === 1 ? 0 : 1)];
   });
   empty.classList.toggle('show', shown === 0);
-  info.innerHTML = (term || active) ? '<b>' + shown + '</b> ' + S.found[shown === 1 ? 0 : 1] + '<button type="button" id="clear">' + esc(S.clear) + '</button>' : '';
+  info.innerHTML = (term || active) ? '<b>' + shown + '</b> ' + S.found[S.found.length > 2 ? (shown % 10 === 1 && shown % 100 !== 11 ? 0 : shown % 10 >= 2 && shown % 10 <= 4 && (shown % 100 < 12 || shown % 100 > 14) ? 1 : 2) : (shown === 1 ? 0 : 1)] + '<button type="button" id="clear">' + esc(S.clear) + '</button>' : '';
   const cl = document.getElementById('clear');
   if (cl) cl.onclick = () => {
     q.value = '';

@@ -1,6 +1,7 @@
 // Página /personalities (e /en/personalities): catálogo agrupado por área de
 // atuação, com busca, filtro por área, retrato e a "faixa" de 12 ícones de polo.
 // Reaproveita o CSS do catálogo de ideologias e soma os estilos do card com foto.
+import { pluralIndex } from './plural.mjs';
 import { siteHeader } from './site-header.mjs';
 import { iconLinks } from './cdn.mjs';
 import { ARROW, IDEOLOGIES_CSS, dna, dnaLegend } from './ideologies-index.mjs';
@@ -9,6 +10,7 @@ import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFil
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 // Ordem das áreas no catálogo (a mesma do mockup de docs/).
 export const AREA_ORDER = ['politico', 'teorico', 'filosofo', 'economista', 'intelectual', 'ativista', 'religioso', 'empresario'];
@@ -38,6 +40,7 @@ export const AREA_LABELS = {
 AREA_LABELS.es = { ...AREA_LABELS.en, ...ES.areaLabels };
 AREA_LABELS.de = { ...AREA_LABELS.en, ...DE.areaLabels };
 AREA_LABELS.it = { ...AREA_LABELS.en, ...IT.areaLabels };
+AREA_LABELS.ru = { ...AREA_LABELS.en, ...RU.areaLabels };
 
 const STR = {
   pt: {
@@ -120,6 +123,7 @@ const STR = {
 STR.es = { ...STR.en, ...ES.personalitiesIndex };
 STR.de = { ...STR.en, ...DE.personalitiesIndex };
 STR.it = { ...STR.en, ...IT.personalitiesIndex };
+STR.ru = { ...STR.en, ...RU.personalitiesIndex };
 
 export function initials(name) {
   const words = name.replace(/[.,]/g, '').split(/\s+/).filter((w) => /^\p{Lu}/u.test(w));
@@ -138,7 +142,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati' }[L.locale]}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
@@ -146,6 +150,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <link rel="alternate" hreflang="es" href="${site}/es${basePath}" />
     <link rel="alternate" hreflang="de" href="${site}/de${basePath}" />
     <link rel="alternate" hreflang="it" href="${site}/it${basePath}" />
+    <link rel="alternate" hreflang="ru" href="${site}/ru${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="${ogType}" />
@@ -208,7 +213,7 @@ export function personalitiesIndexPage(L, { locale, site, gaSnippet, escapeHtml,
   const sections = groups
     .map(
       (g) =>
-        `<section class="cat" id="${g.key}" data-cat="${g.key}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(g.label)}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[g.items.length === 1 ? 0 : 1])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`
+        `<section class="cat" id="${g.key}" data-cat="${g.key}" aria-labelledby="h-${g.key}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.key}">${escapeHtml(g.label)}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count"${t.count.length > 2 ? ` data-one="${escapeHtml(t.count[0])}" data-few="${escapeHtml(t.count[1])}" data-many="${escapeHtml(t.count[2])}"` : ''}><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[pluralIndex(g.items.length, t.count.length)])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`
     )
     .join('');
 

@@ -1,6 +1,7 @@
 // Página /parties (e /en/parties): partidos, movimentos, casas dinásticas e organizações
 // agrupados por tipo, com busca, filtro, logo 1:1, país associado e a faixa de 12 ícones
 // de polo. Reaproveita o CSS do catálogo de personalidades e troca o retrato pelo logo.
+import { pluralIndex } from './plural.mjs';
 import { siteHeader } from './site-header.mjs';
 import { ARROW, dna, dnaLegend } from './ideologies-index.mjs';
 import { poleSprite } from './pole-icons.mjs';
@@ -9,6 +10,7 @@ import { buildCardPoles, renderFilterButton, renderFilterDrawer, renderClientFil
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
+import { RU } from './locales/ru.mjs';
 
 // Tipos (campo `category` em PT, valor fechado do backend), na ordem de exibição.
 const KINDS = [
@@ -106,6 +108,7 @@ const STR = {
 STR.es = { ...STR.en, ...ES.partiesIndex };
 STR.de = { ...STR.en, ...DE.partiesIndex };
 STR.it = { ...STR.en, ...IT.partiesIndex };
+STR.ru = { ...STR.en, ...RU.partiesIndex };
 
 export function partiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];
@@ -143,7 +146,7 @@ export function partiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profi
   };
 
   const section = (g) =>
-    `<section class="cat" id="${g.slug}" data-cat="${g.slug}" style="${vars(g)}" aria-labelledby="h-${g.slug}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.slug}">${escapeHtml(t.labels[g.key])}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count" data-one="${escapeHtml(t.count[g.key][0])}" data-many="${escapeHtml(t.count[g.key][1])}"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[g.key][g.items.length === 1 ? 0 : 1])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`;
+    `<section class="cat" id="${g.slug}" data-cat="${g.slug}" style="${vars(g)}" aria-labelledby="h-${g.slug}"><header class="cat-head"><div class="cat-title"><span class="cat-mark" aria-hidden="true"></span><div><h2 id="h-${g.slug}">${escapeHtml(t.labels[g.key])}</h2><p>${escapeHtml(t.descriptions[g.key])}</p></div></div><span class="cat-count" data-one="${escapeHtml(t.count[g.key][0])}" ${t.count[g.key].length > 2 ? `data-few="${escapeHtml(t.count[g.key][1])}" ` : ''}data-many="${escapeHtml(t.count[g.key][t.count[g.key].length - 1])}"><b class="cc">${g.items.length}</b> <span class="cl">${escapeHtml(t.count[g.key][pluralIndex(g.items.length, t.count[g.key].length)])}</span></span></header><ul class="grid">${g.items.map(card).join('')}</ul></section>`;
 
   const basePath = '/parties';
   const jsonLd = {

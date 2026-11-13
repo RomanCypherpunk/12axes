@@ -13,6 +13,15 @@ import '@fontsource/sora/latin-500.css';
 import '@fontsource/sora/latin-600.css';
 import '@fontsource/sora/latin-700.css';
 import '@fontsource/sora/latin-800.css';
+// Sora e Poppins não têm cirílico: Manrope e Montserrat (subconjunto cirílico, baixado só quando há letras cirílicas) cobrem o russo.
+import '@fontsource/manrope/cyrillic-500.css';
+import '@fontsource/manrope/cyrillic-600.css';
+import '@fontsource/manrope/cyrillic-700.css';
+import '@fontsource/manrope/cyrillic-800.css';
+import '@fontsource/montserrat/cyrillic-300.css';
+import '@fontsource/montserrat/cyrillic-400.css';
+import '@fontsource/montserrat/cyrillic-500.css';
+import '@fontsource/montserrat/cyrillic-600.css';
 import './styles/tokens.css';
 import './styles/app.css';
 import './styles/results.css';
@@ -35,9 +44,9 @@ window.addEventListener('vite:preloadError', (event) => {
   }
 });
 
-// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/..., /es/tree/..., /de/tree/..., /it/tree/...).
+// Visualização em teia dos catálogos: /tree/{ideologies|personalities|countries|parties} (e /en/tree/..., /es/tree/..., /de/tree/..., /it/tree/..., /ru/tree/...).
 const TreePage = lazy(() => import('./tree/TreePage'));
-const TREE_ROUTE = /^\/(en\/|es\/|de\/|it\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
+const TREE_ROUTE = /^\/(en\/|es\/|de\/|it\/|ru\/)?tree(?:\/(ideologies|personalities|countries|parties))?\/?$/.exec(window.location.pathname);
 
 const root = document.getElementById('root') as HTMLElement;
 protectTranslatedText(root);

@@ -91,6 +91,30 @@ class QuizLocalizationTest {
     }
 
     @Test
+    void quizInRussianHasRussianLabelsAndNeverFallsBackToPortuguese() throws Exception {
+        String body = mockMvc.perform(get("/api/quiz").param("lang", "ru").param("variant", "extreme"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
+        QuizPayload quiz = objectMapper.readValue(body, QuizPayload.class);
+        QuizPayload portuguese = dataService.getQuiz("extreme", "pt");
+        QuizPayload english = dataService.getQuiz("extreme", "en");
+
+        assertThat(quiz.description()).contains("политическим осям");
+        assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("Согласен(-на)"));
+        var portugueseTexts = portuguese.questions().stream().map(question -> question.text()).toList();
+        var englishTexts = english.questions().stream().map(question -> question.text()).toList();
+        assertThat(quiz.questions()).noneMatch(question -> portugueseTexts.contains(question.text()));
+        assertThat(quiz.questions()).noneMatch(question -> englishTexts.contains(question.text()));
+        assertThat(quiz.questions()).allMatch(question -> question.help() != null);
+    }
+
+    @Test
+    void russianVariantsNormalizeToRussian() {
+        assertThat(QuizDataService.normalizeLang("ru")).isEqualTo("ru");
+        assertThat(QuizDataService.normalizeLang("ru-RU")).isEqualTo("ru");
+    }
+
+    @Test
     void italianVariantsNormalizeToItalian() {
         assertThat(QuizDataService.normalizeLang("it")).isEqualTo("it");
         assertThat(QuizDataService.normalizeLang("it-CH")).isEqualTo("it");

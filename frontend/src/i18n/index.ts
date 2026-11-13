@@ -1,28 +1,28 @@
-// Dicionário de UI (PT, EN, ES, DE e IT; o que faltar nos idiomas gerados usa o EN). O idioma é resolvido uma vez por carga de página
+// Dicionário de UI (PT, EN, ES, DE, IT e RU; o que faltar nos idiomas gerados usa o EN). O idioma é resolvido uma vez por carga de página
 // (?lang → localStorage → navigator) e trocar de idioma recarrega a página,
 // para que quiz e resultados sejam rebuscados já no idioma novo.
 import type { PersonalityCategory, ProfileDimension } from '../types/quiz';
 
-export type Lang = 'pt' | 'en' | 'es' | 'de' | 'it';
+export type Lang = 'pt' | 'en' | 'es' | 'de' | 'it' | 'ru';
 
-/** Prefixo das rotas do idioma: vazio em português, /en, /es, /de e /it nos demais. */
+/** Prefixo das rotas do idioma: vazio em português, /en, /es, /de, /it e /ru nos demais. */
 export function langPrefix(lang: Lang): string {
   return lang === 'pt' ? '' : `/${lang}`;
 }
 
 /** Locale de datas e números (Intl). */
-export const INTL_LOCALE: Record<Lang, string> = { pt: 'pt-BR', en: 'en-US', es: 'es', de: 'de-DE', it: 'it-IT' };
+export const INTL_LOCALE: Record<Lang, string> = { pt: 'pt-BR', en: 'en-US', es: 'es', de: 'de-DE', it: 'it-IT', ru: 'ru-RU' };
 
-/** Idiomas com rota própria (/en, /es, /de, /it); o português fica na raiz. */
-export const PREFIXED_LANGS: Lang[] = ['en', 'es', 'de', 'it'];
+/** Idiomas com rota própria (/en, /es, /de, /it, /ru); o português fica na raiz. */
+export const PREFIXED_LANGS: Lang[] = ['en', 'es', 'de', 'it', 'ru'];
 
-const isLang = (value: string | null): value is Lang => value === 'pt' || value === 'en' || value === 'es' || value === 'de' || value === 'it';
+const isLang = (value: string | null): value is Lang => value === 'pt' || value === 'en' || value === 'es' || value === 'de' || value === 'it' || value === 'ru';
 
 const STORAGE_KEY = '12axes-lang';
 
-// Idioma forçado pelo caminho: /en sempre inglês, /es sempre espanhol, /de sempre alemão, /it sempre italiano, /br sempre português,
+// Idioma forçado pelo caminho: /en sempre inglês, /es sempre espanhol, /de sempre alemão, /it sempre italiano, /ru sempre russo, /br sempre português,
 // independente do aparelho ou da preferência salva. A comparação segue o catálogo:
-// /compare em português e /en/compare, /es/compare, /de/compare ou /it/compare nos demais.
+// /compare em português e /en/compare, /es/compare, /de/compare, /it/compare ou /ru/compare nos demais.
 const normalizePath = (pathname: string): string => pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/';
 
 export function langForcedByPath(pathname: string): Lang | null {
@@ -65,7 +65,8 @@ export function resolveLang(): Lang {
   if (browser.startsWith('pt')) return 'pt';
   if (browser.startsWith('es')) return 'es';
   if (browser.startsWith('de')) return 'de';
-  return browser.startsWith('it') ? 'it' : 'en';
+  if (browser.startsWith('it')) return 'it';
+  return browser.startsWith('ru') ? 'ru' : 'en';
 }
 
 export const LANG: Lang = resolveLang();
@@ -74,7 +75,7 @@ export function setLang(lang: Lang) {
   window.localStorage.setItem(STORAGE_KEY, lang);
   const url = new URL(window.location.href);
   url.searchParams.delete('lang');
-  // Em /en, /es, /de, /it, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
+  // Em /en, /es, /de, /it, /ru, /br e na comparação a URL é o que define o idioma, então o toggle troca de rota
   // (na comparação, mantendo os perfis escolhidos na query).
   const switched = langSwitchPath(url.pathname, lang);
   if (switched) url.pathname = switched;
@@ -668,7 +669,8 @@ async function loadStrings(): Promise<Strings> {
   const partialLoaders = {
     es: () => import('./es').then((module) => module.es),
     de: () => import('./de').then((module) => module.de),
-    it: () => import('./it').then((module) => module.it)
+    it: () => import('./it').then((module) => module.it),
+    ru: () => import('./ru').then((module) => module.ru)
   };
   const [partial, { mergeStrings }] = await Promise.all([partialLoaders[LANG](), import('./mergeStrings')]);
   return mergeStrings<Strings>(en, partial);
