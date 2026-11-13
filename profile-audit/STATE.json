@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-11-13T21:46:15Z",
+  "lastUpdated": "2026-11-13T21:47:55Z",
   "personality": {
     "totalProfiles": 741,
     "pending": [],
@@ -1364,7 +1364,7 @@
   },
   "totalProfiles": 1196,
   "party": {
-    "totalProfiles": 204,
+    "totalProfiles": 205,
     "pending": [],
     "done": [
       "nsdap",
@@ -1570,7 +1570,8 @@
       "avante",
       "refah-partisi",
       "partido-federalista-eua",
-      "yabloko"
+      "yabloko",
+      "ldpr"
     ]
   }
 }
