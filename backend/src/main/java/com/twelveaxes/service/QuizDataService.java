@@ -43,8 +43,9 @@ public class QuizDataService {
     public static final String LANG_EN = "en";
     public static final String LANG_ES = "es";
     public static final String LANG_DE = "de";
+    public static final String LANG_IT = "it";
     /** Idiomas gerados por i18n-tools/sync.py a partir do inglês: o que faltar neles usa o inglês. */
-    public static final java.util.List<String> GENERATED_LANGS = java.util.List.of(LANG_ES, LANG_DE);
+    public static final java.util.List<String> GENERATED_LANGS = java.util.List.of(LANG_ES, LANG_DE, LANG_IT);
 
     private final ObjectMapper objectMapper;
     private Map<String, LocaleBundle> bundles;
@@ -153,7 +154,8 @@ public class QuizDataService {
         LocaleBundle en = buildLocaleBundle(pt, LANG_EN);
         LocaleBundle es = buildLocaleBundle(en, LANG_ES);
         LocaleBundle de = buildLocaleBundle(en, LANG_DE);
-        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_ES, es, LANG_DE, de);
+        LocaleBundle it = buildLocaleBundle(en, LANG_IT);
+        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_ES, es, LANG_DE, de, LANG_IT, it);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
         List<String> unknownBookAuthors = bookList.stream()
@@ -324,6 +326,9 @@ public class QuizDataService {
         if (normalized.equals(LANG_DE) || normalized.startsWith("de-")) {
             return LANG_DE;
         }
+        if (normalized.equals(LANG_IT) || normalized.startsWith("it-")) {
+            return LANG_IT;
+        }
         return switch (normalized) {
             case LANG_EN, "en-us", "en-gb" -> LANG_EN;
             default -> LANG_PT;
@@ -453,6 +458,7 @@ public class QuizDataService {
         String description = switch (normalizedLang) {
             case LANG_EN -> "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes.";
             case LANG_ES -> "Un cuestionario de " + questionCount + " preguntas para estimar tu posición en los 12 ejes políticos.";
+            case LANG_IT -> "Un test di " + questionCount + " domande per stimare la tua posizione sui 12 assi politici.";
             case LANG_DE -> "Ein Test mit " + questionCount + " Fragen, um deine Position auf den 12 politischen Achsen zu bestimmen.";
             default -> "Um quiz de " + questionCount + " perguntas para estimar sua posição nos 12 eixos políticos.";
         };
@@ -598,6 +604,15 @@ public class QuizDataService {
     }
 
     private String labelFor(AnswerValue value, String lang) {
+        if (LANG_IT.equals(lang)) {
+            return switch (value) {
+                case STRONGLY_AGREE -> "Completamente d'accordo";
+                case AGREE -> "D'accordo";
+                case NEUTRAL -> "Neutrale o dipende";
+                case DISAGREE -> "In disaccordo";
+                case STRONGLY_DISAGREE -> "Completamente in disaccordo";
+            };
+        }
         if (LANG_DE.equals(lang)) {
             return switch (value) {
                 case STRONGLY_AGREE -> "Stimme voll zu";

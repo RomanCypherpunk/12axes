@@ -1,14 +1,14 @@
-# Tradução automática do catálogo (espanhol e próximos idiomas)
+# Tradução automática do catálogo (espanhol, alemão, italiano e próximos idiomas)
 
 O inglês (`backend/src/main/resources/data/i18n/en/`) é mantido à mão. Os demais idiomas ficam em `i18n/<lang>/`,
-são **gerados** por `sync.py` e nunca editados à mão: uma mudança no inglês sobrescreve o campo. Hoje: `es` e `de`.
+são **gerados** por `sync.py` e nunca editados à mão: uma mudança no inglês sobrescreve o campo. Hoje: `es`, `de` e `it`.
 Sem tradução, o item aparece em inglês (nunca em português), então nada quebra enquanto isso não roda.
 
 Reauditar um perfil muda só o vetor e **não** gera tradução. Só texto novo ou alterado em inglês entra na fila.
 
 ## Procedimento (use em toda criação de perfil, depois que o inglês estiver mesclado)
 
-Rode para cada idioma gerado (hoje `es` e `de`; o guia de cada um está em `translate-guide.<lang>.md`).
+Rode para cada idioma gerado (hoje `es`, `de` e `it`; o guia de cada um está em `translate-guide.<lang>.md`).
 
 1. **Ver o que falta**
    ```

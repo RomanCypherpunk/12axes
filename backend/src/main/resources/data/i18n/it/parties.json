@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "nsdap",
+    "name": "Partito nazista (NSDAP)",
+    "description": "Il partito di Adolf Hitler, fondato nel 1920, che nel 1933 divenne l'unico partito della Germania e impose una dittatura totalitaria, razzismo biologico e antisemitismo, riarmo ed espansione militare fino alla sconfitta nel 1945.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-republicano-eua",
+    "name": "Partito Repubblicano",
+    "description": "Uno dei due maggiori partiti USA, di destra e oggi guidato da Donald Trump, sostiene tasse basse, deregolamentazione, controllo dell'immigrazione, dazi, valori cristiani tradizionali e il diritto di portare armi.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-republicano-eua-new-deal",
+    "name": "Partito Repubblicano (era del New Deal)",
+    "description": "All'opposizione a Franklin Roosevelt dal 1933 al 1945, difendeva bilanci in pareggio, meno potere federale e libera impresa, con ali isolazioniste e internazionaliste, contro il New Deal e i sindacati forti.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-democrata-eua",
+    "name": "Partito Democratico",
+    "description": "L'altro grande partito USA, di centrosinistra, sostiene l'estensione della sanità pubblica, i diritti civili e riproduttivi, i sindacati, la regolamentazione ambientale e le alleanze internazionali, con una base tra minoranze, giovani e grandi città.",
+    "category": "Partito"
+  },
+  {
+    "id": "vox",
+    "name": "Vox",
+    "description": "Partito di destra radicale spagnolo fondato nel 2013, difende l'unità nazionale contro il separatismo, la restrizione dell'immigrazione, la famiglia tradizionale e i valori cattolici, tagli alle tasse e la critica a UE e femminismo.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-da-china",
+    "name": "Partito Comunista Cinese",
+    "description": "Unico partito di governo dal 1949, combina leninismo e controllo statale di politica, media e internet con un'economia di mercato diretta dallo Stato, pianificazione industriale, nazionalismo e modernizzazione tecnologica.",
+    "category": "Partito"
+  },
+  {
+    "id": "al-qaeda",
+    "name": "Al-Qaeda",
+    "description": "Organizzazione jihadista salafita fondata da Osama bin Laden nel 1988, sostiene un califfato globale, la guerra contro l'Occidente e i regimi considerati apostati e una rigida legge islamica, con attentati come quello dell'11 settembre 2001.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "acao-integralista-brasileira",
+    "name": "Azione Integralista Brasiliana (AIB)",
+    "description": "Movimento fondato da Plínio Salgado nel 1932, con il motto «Dio, Patria e Famiglia», sosteneva uno Stato integrale corporativo, nazionalismo, anticomunismo e morale cattolica, con una milizia di camicie verdi, fino alla messa al bando nel 1937.",
+    "category": "Movimento"
+  },
+  {
+    "id": "casa-de-habsburgo",
+    "name": "Casa d'Asburgo",
+    "description": "Dinastia cattolica che governò l'Austria-Ungheria, difendeva la monarchia ereditaria multinazionale, l'autorità dell'imperatore, l'alleanza con la Chiesa e l'unità dell'impero, fino all'abdicazione di Carlo I nel 1918.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-orleans-e-braganca",
+    "name": "Casa d'Orléans-Braganza",
+    "description": "Ramo della dinastia imperiale brasiliana discendente da Pedro II, mantiene pretendenti al trono e sostiene la monarchia parlamentare in Brasile, con una tradizione di legami con la Chiesa cattolica.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "movimento-democratico-brasileiro",
+    "name": "Movimento Democratico Brasiliano (MDB)",
+    "description": "Erede dell'MDB che si oppose al regime militare, partito centrista pragmatico con forti macchine statali, alleato di governi di ogni colore e sostenitore di riforme liberali come il tetto di spesa.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-dos-trabalhadores",
+    "name": "Partito dei Lavoratori (PT)",
+    "description": "Partito di sinistra fondato nel 1980 da dirigenti sindacali e movimenti sociali, al potere con Lula dal 2023, difende uno Stato sviluppista, programmi sociali come Bolsa Família, sindacati forti e una politica estera multilaterale.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-da-social-democracia-brasileira",
+    "name": "Partito della Socialdemocrazia Brasiliana (PSDB)",
+    "description": "Fondato nel 1988 da dissidenti dell'MDB, ha governato con Fernando Henrique Cardoso (Plano Real, privatizzazioni e responsabilità fiscale) ed è oggi un partito centrista in declino favorevole a riforme e apertura commerciale.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-democratico-trabalhista",
+    "name": "Partito Democratico Laburista (PDT)",
+    "description": "Partito laburista fondato da Leonel Brizola nel 1979, erede dell'eredità di Getúlio Vargas, difende il nazionalismo economico, la scuola pubblica a tempo pieno e i diritti dei lavoratori e oggi è vicino al governo Lula.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-liberal-brasil",
+    "name": "Partito Liberale (PL)",
+    "description": "Maggior gruppo della Camera e partito di Jair Bolsonaro dal 2021, combina destra conservatrice e liberalismo economico, con un'agenda di sicurezza pubblica, possesso civile di armi, valori cristiani, una base evangelica e critiche alla Corte suprema.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-do-brasil",
+    "name": "Partito Comunista del Brasile (PCdoB)",
+    "description": "Partito marxista-leninista nato dalla scissione del 1962 dal PCB, legato alla guerriglia dell'Araguaia, oggi federato con il PT, sostiene i governi Lula e difende la pianificazione statale, la sovranità nazionale e legami più stretti con la Cina.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-socialismo-e-liberdade",
+    "name": "Partito Socialismo e Libertà (PSOL)",
+    "description": "Fondato nel 2004 da dissidenti del PT, partito di sinistra socialista democratico con agende ecologiste, femministe, antirazziste e LGBT, federato con Rede, sostiene il governo Lula con un atteggiamento critico.",
+    "category": "Partito"
+  },
+  {
+    "id": "democracia-crista-brasil",
+    "name": "Democrazia Cristiana (DC)",
+    "description": "Piccolo partito democristiano incentrato sulla famiglia, sulla difesa della vita dal concepimento e sulla fede cristiana nella vita pubblica, con un'economia moderata e protezione sociale, noto per le candidature presidenziali di Eymael.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-novo",
+    "name": "Partito Nuovo (NOVO)",
+    "description": "Partito liberale fondato nel 2011 che difende uno Stato minimo, privatizzazioni, tasse più basse e meritocrazia, rifiuta il fondo pubblico dei partiti e ha come principale leader il governatore del Minas Gerais Romeu Zema.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-missao",
+    "name": "Partito Missione (MISSÃO)",
+    "description": "Partito fondato dal MBL e presieduto da Renan Santos, che combina aggiustamento fiscale con uno Stato forte sulla sicurezza (Diritto penale del nemico), la reindustrializzazione (ZES, terre rare) e il consolidamento municipale. Ha eletto un deputato federale nel 2026.",
+    "category": "Partito"
+  },
+  {
+    "id": "unidade-popular",
+    "name": "Unità Popolare (UP)",
+    "description": "Partito di estrema sinistra fondato nel 2016 che difende il socialismo, la nazionalizzazione di banche e settori strategici, la sospensione del debito pubblico e una riforma agraria e urbana popolare, legato ai movimenti per la casa.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-socialista-dos-trabalhadores-unificado",
+    "name": "Partito Socialista dei Lavoratori Unificato (PSTU)",
+    "description": "Partito trotskista fondato nel 1994 che difende la rivoluzione socialista e l'indipendenza di classe, rompe con i governi del PT, opera nel sindacalismo combattivo della CSP-Conlutas e vede nel capitalismo la radice dell'oppressione.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-da-causa-operaria",
+    "name": "Partito della Causa Operaia (PCO)",
+    "description": "Partito di estrema sinistra di tradizione trotskista guidato da Rui Costa Pimenta, difende la nazionalizzazione del sistema finanziario, il ripudio del debito pubblico e la sovranità nazionale e critica le politiche identitarie e il PT.",
+    "category": "Partito"
+  },
+  {
+    "id": "movimento-dos-trabalhadores-rurais-sem-terra",
+    "name": "Movimento dei Lavoratori Rurali Senza Terra (MST)",
+    "description": "Il maggior movimento sociale rurale, nato nel 1984 con il sostegno della Chiesa cattolica, occupa terre improduttive per chiedere la riforma agraria, difende l'agroecologia e la sovranità alimentare ed è alleato dei governi di sinistra.",
+    "category": "Movimento"
+  },
+  {
+    "id": "partido-comunista-brasileiro-era-vargas",
+    "name": "Partito Comunista Brasiliano (PCB, era Vargas)",
+    "description": "Partito di Luís Carlos Prestes legato all'Internazionale Comunista, guidò l'Alleanza Nazionale Liberatrice e l'insurrezione del 1935, fu messo fuori legge e perseguitato dall'Estado Novo e appoggiò gli Alleati nella Seconda guerra mondiale.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-trabalhista-brasileiro-era-vargas",
+    "name": "Partito Laburista Brasiliano (PTB, era Vargas)",
+    "description": "Creato nel 1945 da Getúlio Vargas a partire dal sindacalismo ufficiale del Ministero del Lavoro, difendeva il codice del lavoro, il salario minimo, il nazionalismo economico e la Petrobras, ed era la base del ritorno di Vargas al potere nel 1951.",
+    "category": "Partito"
+  },
+  {
+    "id": "alianca-renovadora-nacional",
+    "name": "Alleanza Rinnovatrice Nazionale (ARENA)",
+    "description": "Partito che sorresse il regime militare tra il 1965 e il 1979, appoggiò i generali-presidenti al Congresso con anticomunismo, sicurezza nazionale, ordine e sviluppismo autoritario, contro l'opposizione tollerata dell'MDB.",
+    "category": "Partito"
+  },
+  {
+    "id": "uniao-democratica-nacional",
+    "name": "Unione Democratica Nazionale (UDN)",
+    "description": "Opposizione liberal-conservatrice a Vargas e alla politica laburista tra il 1945 e il 1965, difendeva la libera impresa, l'anticomunismo e la lotta alla corruzione, ebbe in Carlos Lacerda la voce più forte e appoggiò il colpo di Stato del 1964.",
+    "category": "Partito"
+  },
+  {
+    "id": "la-libertad-avanza",
+    "name": "La Libertad Avanza (LLA)",
+    "description": "Partito di Javier Milei, presidente dell'Argentina dal 2023, con libertarismo economico, la motosega sulla spesa pubblica, deregolamentazione e apertura commerciale, una guerra culturale contro la casta politica e il peronismo e l'allineamento con Trump e Israele.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-justicialista",
+    "name": "Partito Giustizialista",
+    "description": "Partito fondato da Juan Perón nel 1946 e nucleo del peronismo, con giustizia sociale, sindacati forti, nazionalismo economico e Stato sociale, ma eterogeneo, con ali kirchneriste, menemiste liberali e conservatrici, e che si alterna al potere.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-republicano-de-chile",
+    "name": "Partito Repubblicano del Cile",
+    "description": "Partito di destra radicale fondato da José Antonio Kast nel 2019, difende ordine, sicurezza, controllo dell'immigrazione, valori cristiani e famiglia, libero mercato e tasse più basse, con radici in parte della destra pinochetista.",
+    "category": "Partito"
+  },
+  {
+    "id": "frente-amplio-chile",
+    "name": "Fronte Ampio",
+    "description": "Coalizione di sinistra nata dalle proteste studentesche del 2011 e del presidente Gabriel Boric, difende femminismo, ecologia, diritti sociali ampliati e la fine dell'eredità neoliberista e della Costituzione di Pinochet.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-socialista-unido-da-venezuela",
+    "name": "Partito Socialista Unito del Venezuela (PSUV)",
+    "description": "Partito del chavismo e di Nicolás Maduro, al potere dal 1999 con nomi diversi, combina socialismo bolivariano, nazionalismo petrolifero, controllo statale e un forte apparato militare, in un regime accusato di autoritarismo.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-libertario-eua",
+    "name": "Partito Libertario",
+    "description": "Terzo partito USA per dimensioni, fondato nel 1971, difende il governo minimo, il libero mercato, il non interventismo militare, la fine della guerra alla droga e ampie libertà civili e individuali, diviso tra ali moderate e conservatrici.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-verde-eua",
+    "name": "Partito Verde",
+    "description": "Partito ecologista di sinistra fondato nel 1991, di Ralph Nader e Jill Stein, difende un Green New Deal, la sanità pubblica universale, la giustizia sociale, la democrazia dal basso, la nonviolenza e la fine del duopolio democratico-repubblicano.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-dos-eua",
+    "name": "Partito Comunista degli USA (CPUSA)",
+    "description": "Fondato nel 1919 e storicamente legato a Mosca, organizzò sindacati e lotte per i diritti civili, fu perseguitato durante il maccartismo e oggi sostiene i Democratici contro la destra, difendendo socialismo, sindacati e Stato sociale.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-liberal-do-canada",
+    "name": "Partito Liberale del Canada",
+    "description": "Partito centrista che ha governato per gran parte della storia canadese, di Pearson, dei Trudeau e di Mark Carney, difende il liberalismo sociale, il multiculturalismo, la sanità pubblica, i diritti delle minoranze e un mercato regolamentato.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-conservador-do-canada",
+    "name": "Partito Conservatore del Canada",
+    "description": "Partito di centrodestra creato nel 2003, di Stephen Harper e oggi di Pierre Poilievre, difende tasse più basse, sicurezza pubblica, produzione energetica e l'Ovest, con un tono populista e un conservatorismo sociale moderato.",
+    "category": "Partito"
+  },
+  {
+    "id": "morena",
+    "name": "Morena (Movimento di Rigenerazione Nazionale)",
+    "description": "Partito di sinistra di López Obrador, che governa il Messico con Claudia Sheinbaum, difende uno Stato promotore di benessere, pensioni e programmi sociali, sovranità energetica, lotta alla corruzione e austerità, con un nazionalismo popolare.",
+    "category": "Partito"
+  },
+  {
+    "id": "ezln",
+    "name": "EZLN (Esercito Zapatista di Liberazione Nazionale)",
+    "description": "Movimento indigeno insorto in Chiapas nel 1994, rivendica terra, autonomia e diritti indigeni, governa le comunità tramite giunte di buon governo e caracoles, contro il neoliberismo e i partiti, con il motto «comandare obbedendo».",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "partido-comunista-de-cuba",
+    "name": "Partito Comunista di Cuba (PCC)",
+    "description": "Unico partito di Cuba, definito dalla Costituzione come forza dirigente della società, dirige l'economia statale pianificata, la sanità e l'istruzione universali, l'antimperialismo e l'opposizione all'embargo, senza pluralismo di partiti.",
+    "category": "Partito"
+  },
+  {
+    "id": "nuevas-ideas",
+    "name": "Nuevas Ideas",
+    "description": "Partito di Nayib Bukele, presidente di El Salvador, fondato nel 2017, domina lo Stato con uno stato di eccezione contro le gang, populismo, retorica antisistema, bitcoin e una forte concentrazione di potere nell'Esecutivo.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-americano",
+    "name": "Partito Comunista Americano (ACP)",
+    "description": "Partito marxista-leninista creato nel 2024 da dissidenti del CPUSA, di Jackson Hinkle, ammira Cina, Corea del Nord, Iran e Russia, difende il socialismo di Stato e mescola comunismo e conservatorismo sociale, il cosiddetto comunismo MAGA.",
+    "category": "Partito"
+  },
+  {
+    "id": "america-first-fuentes",
+    "name": "America First (Nick Fuentes)",
+    "description": "Movimento nazionalista bianco di Nick Fuentes e dei suoi seguaci, i groypers, difende un'America cristiana e bianca, zero immigrazione, antisemitismo, il rifiuto di Israele e dell'élite repubblicana e la fine delle guerre all'estero.",
+    "category": "Movimento"
+  },
+  {
+    "id": "psoe",
+    "name": "Partito Socialista Operaio Spagnolo (PSOE)",
+    "description": "Partito socialdemocratico di Pedro Sánchez, governa la Spagna in coalizione, difendendo lo Stato sociale, i diritti civili, l'aborto e il matrimonio tra persone dello stesso sesso, la transizione ecologica e l'Europa, e negoziando con i partiti regionali.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-popular-espanha",
+    "name": "Partito Popolare (PP)",
+    "description": "Principale partito di centrodestra della Spagna, di Aznar, Rajoy e Feijóo, difende un'economia di mercato, l'unità spagnola contro il separatismo, la monarchia e l'Europa, con un conservatorismo sociale moderato.",
+    "category": "Partito"
+  },
+  {
+    "id": "podemos",
+    "name": "Podemos",
+    "description": "Partito populista di sinistra nato dal movimento 15-M nel 2014, di Pablo Iglesias e Ione Belarra, difende la tassazione dei ricchi, la casa, i servizi pubblici, i diritti femministi e si oppone alla casta politica, in coalizione con il PSOE.",
+    "category": "Partito"
+  },
+  {
+    "id": "cdu-csu",
+    "name": "Unione Cristiano-Democratica (CDU/CSU)",
+    "description": "Partito democristiano tedesco di Adenauer, Kohl, Merkel e Friedrich Merz, difende l'economia sociale di mercato, l'Europa, la NATO, l'ordine e la famiglia, con un'ala conservatrice, e guida il governo tedesco dal 2025.",
+    "category": "Partito"
+  },
+  {
+    "id": "spd",
+    "name": "Partito Socialdemocratico di Germania (SPD)",
+    "description": "Il più antico partito tedesco, di Brandt, Schmidt, Schröder e Scholz, difende lo Stato sociale, i sindacati, la cogestione e l'Europa, con un'inclinazione al mercato dall'Agenda 2010, e ha perso elettori a favore di AfD e Verdi.",
+    "category": "Partito"
+  },
+  {
+    "id": "afd",
+    "name": "Alternativa per la Germania (AfD)",
+    "description": "Partito di destra radicale fondato nel 2013, anti-immigrazione, euroscettico e nazionalista, difende confini chiusi, il ritiro delle politiche climatiche e legami più stretti con la Russia, ed è sorvegliato per estremismo dai servizi di intelligence.",
+    "category": "Partito"
+  },
+  {
+    "id": "die-linke",
+    "name": "La Sinistra (Die Linke)",
+    "description": "Partito di sinistra tedesco erede del PDS della Germania Est, difende un salario minimo più alto, il blocco degli affitti, la tassazione dei grandi patrimoni, l'uscita dalla NATO e la pace, ed è risorto nel 2025 con Heidi Reichinnek.",
+    "category": "Partito"
+  },
+  {
+    "id": "verdes-alemanha",
+    "name": "Alleanza 90/I Verdi",
+    "description": "Partito ecologista tedesco nato dal movimento per la pace, difende la transizione energetica, il clima, i diritti delle minoranze e dei migranti e l'Europa, e ha sostenuto l'Ucraina con armi mentre governava con SPD e FDP.",
+    "category": "Partito"
+  },
+  {
+    "id": "fdp",
+    "name": "Partito Liberale Democratico (FDP)",
+    "description": "Partito liberale tedesco di Christian Lindner, difende il libero mercato, le tasse basse, la disciplina fiscale, la digitalizzazione e le libertà individuali, ebbe un ruolo nel governo semaforo e ha perso il Bundestag nel 2025.",
+    "category": "Partito"
+  },
+  {
+    "id": "rassemblement-national",
+    "name": "Rassemblement National (RN)",
+    "description": "Partito di destra radicale francese di Marine Le Pen e Jordan Bardella, difende la preferenza nazionale, zero immigrazione, la sovranità contro l'Unione Europea, sicurezza e identità, con una politica sociale protezionista.",
+    "category": "Partito"
+  },
+  {
+    "id": "la-france-insoumise",
+    "name": "La France Insoumise (LFI)",
+    "description": "Partito di sinistra radicale di Jean-Luc Mélenchon, difende una sesta Repubblica, la pianificazione ecologica, la tassazione dei ricchi, l'uscita dalla NATO, la rottura con i trattati UE e la solidarietà con la Palestina, in uno stile populista.",
+    "category": "Partito"
+  },
+  {
+    "id": "renaissance-franca",
+    "name": "Renaissance",
+    "description": "Partito centrista di Emmanuel Macron, difende il liberalismo economico con riforme, scommette su Europa, innovazione e industria, NATO e sostegno all'Ucraina, e tiene il centro tra sinistra e destra.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-democratico-italia",
+    "name": "Partito Democratico (PD)",
+    "description": "Principale partito di centrosinistra italiano, di Elly Schlein, difende la socialdemocrazia, i diritti civili, i migranti, l'Europa e la transizione verde, con radici comuniste e democristiane, ed è all'opposizione di Meloni.",
+    "category": "Partito"
+  },
+  {
+    "id": "movimento-5-estrelas",
+    "name": "Movimento 5 Stelle (M5S)",
+    "description": "Movimento populista italiano fondato da Beppe Grillo nel 2009 e oggi di Giuseppe Conte, difende la democrazia diretta, il reddito di cittadinanza, l'ecologia e si oppone alla casta, con una posizione pacifista critica verso le armi all'Ucraina.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-trabalhista-reino-unido",
+    "name": "Partito Laburista",
+    "description": "Partito di centrosinistra di Keir Starmer, al governo del Regno Unito dal 2024, difende l'NHS, i sindacati, gli investimenti pubblici e i diritti sociali, con disciplina fiscale e una posizione filo-NATO e filoeuropea.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-conservador-reino-unido",
+    "name": "Partito Conservatore (Tory)",
+    "description": "Partito di destra britannico di Thatcher, Cameron e Johnson, ha governato dal 2010 al 2024, difendendo il mercato, la Brexit, la monarchia, la sicurezza e il controllo dell'immigrazione, con Kemi Badenoch all'opposizione.",
+    "category": "Partito"
+  },
+  {
+    "id": "reform-uk",
+    "name": "Reform UK",
+    "description": "Partito populista di destra di Nigel Farage, difende la fine dell'immigrazione illegale, tasse più basse, meno regolamentazione e l'abbandono degli obiettivi sul carbonio, con sovranità nazionale e critica dell'establishment, ed è cresciuto molto dal 2024.",
+    "category": "Partito"
+  },
+  {
+    "id": "liberais-democratas-reino-unido",
+    "name": "Liberal Democratici",
+    "description": "Partito liberale centrista di Ed Davey, difende le libertà civili, l'Europa e un rapporto più stretto con l'UE, sanità e assistenza sociale, l'ambiente e la riforma elettorale, e ha governato in coalizione con i Conservatori dal 2010 al 2015.",
+    "category": "Partito"
+  },
+  {
+    "id": "lei-e-justica",
+    "name": "Diritto e Giustizia (PiS)",
+    "description": "Partito nazional-conservatore polacco di Jarosław Kaczyński, al governo dal 2015 al 2023, difende il cattolicesimo, la famiglia, il welfare sociale, la sovranità contro Bruxelles e l'influenza sul potere giudiziario, sostiene l'Ucraina e si oppone all'immigrazione.",
+    "category": "Partito"
+  },
+  {
+    "id": "fidesz",
+    "name": "Fidesz",
+    "description": "Partito di Viktor Orbán, al potere dal 2010, difende la democrazia illiberale, il nazionalismo cristiano, il controllo di media e magistratura, l'opposizione all'immigrazione e a Bruxelles e stretti legami con Russia e Cina.",
+    "category": "Partito"
+  },
+  {
+    "id": "chega",
+    "name": "Chega",
+    "description": "Partito di destra radicale portoghese di André Ventura, fondato nel 2019 e seconda forza in Parlamento, difende l'immigrazione limitata, la sicurezza, tasse più basse e la critica alla corruzione, con un discorso populista.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-da-russia",
+    "name": "Partito Comunista della Federazione Russa (KPRF)",
+    "description": "Seconda forza della Duma, di Gennadij Zjuganov ed erede del PCUS, difende la nazionalizzazione, lo statalismo, la memoria sovietica e il nazionalismo russo, sostenendo il governo di Putin sulla guerra senza essere una vera opposizione.",
+    "category": "Partito"
+  },
+  {
+    "id": "democratas-da-suecia",
+    "name": "Democratici Svedesi (SD)",
+    "description": "Partito nazionalista svedese di Jimmie Åkesson, secondo per dimensioni in parlamento, con radici moderate dagli anni Novanta, difende la restrizione dell'immigrazione, legge e ordine, welfare per gli svedesi ed è euroscettico.",
+    "category": "Partito"
+  },
+  {
+    "id": "pvv",
+    "name": "Partito per la Libertà (PVV)",
+    "description": "Partito di Geert Wilders, vincitore delle elezioni olandesi del 2023, difende la fine di immigrazione e asilo, si oppone all'Islam, è euroscettico e populista, con welfare per gli olandesi e un forte sostegno a Israele.",
+    "category": "Partito"
+  },
+  {
+    "id": "fpo",
+    "name": "Partito della Libertà Austriaco (FPÖ)",
+    "description": "Partito di destra radicale austriaco di Herbert Kickl, vincitore delle elezioni del 2024, difende l'immigrazione limitata, la neutralità, l'euroscetticismo e l'identità austriaca, con legami con Orbán e la Russia.",
+    "category": "Partito"
+  },
+  {
+    "id": "sinn-fein",
+    "name": "Sinn Féin",
+    "description": "Partito repubblicano irlandese di sinistra, ex braccio politico dell'IRA, di Mary Lou McDonald, difende l'unificazione irlandese, l'edilizia pubblica, la sanità, la tassazione e i diritti sociali ed è la maggiore forza del Parlamento irlandese.",
+    "category": "Partito"
+  },
+  {
+    "id": "syriza",
+    "name": "Syriza",
+    "description": "Coalizione di sinistra greca di Alexis Tsipras, al governo dal 2015 al 2019 e che cedette all'austerità della troika, difende lo Stato sociale, i diritti civili e l'Europa e ha perso terreno a favore di Nea Dimokratia.",
+    "category": "Partito"
+  },
+  {
+    "id": "fratelli-ditalia",
+    "name": "Fratelli d'Italia",
+    "description": "Partito di destra nazional-conservatore di Giorgia Meloni, presidente del Consiglio dal 2022, difende nazione, famiglia tradizionale, controllo dell'immigrazione e sicurezza, con atlantismo, sostegno all'Ucraina e l'eredità postfascista dell'MSI.",
+    "category": "Partito"
+  },
+  {
+    "id": "russia-unida",
+    "name": "Russia Unita",
+    "description": "Il partito del potere di Vladimir Putin, domina la Duma e i governi regionali dal 2001, difendendo uno Stato forte, il patriottismo, l'ortodossia e i valori tradizionali, la guerra in Ucraina e la sovranità contro l'Occidente.",
+    "category": "Partito"
+  },
+  {
+    "id": "akp",
+    "name": "Partito della Giustizia e dello Sviluppo (AKP)",
+    "description": "Partito islamico-conservatore di Recep Tayyip Erdoğan, al potere in Turchia dal 2002, combina nazionalismo, valori religiosi, grandi opere pubbliche e uno Stato forte, con presidenzialismo, controllo di media e magistratura e una politica estera assertiva.",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-imperial-do-japao",
+    "name": "Casa imperiale del Giappone",
+    "description": "La più antica monarchia ereditaria continua del mondo, la linea del Crisantemo regna in Giappone da oltre millecinquecento anni, oggi come simbolo dello Stato e dell'unità del popolo, senza potere politico, legata allo shintoismo.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "dinastia-qing",
+    "name": "Dinastia Qing (Manciù)",
+    "description": "Ultima dinastia imperiale della Cina (1644–1912), di origine manciù, estese l'impero a Xinjiang, Tibet e Mongolia, governò con una burocrazia confuciana, fu sconfitta nelle Guerre dell'oppio e rovesciata dalla Rivoluzione del 1911.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-saud",
+    "name": "Casa di Saud",
+    "description": "Dinastia che governa l'Arabia Saudita dal 1932, monarchia assoluta alleata del wahhabismo, con potere sul petrolio, custode delle città sante della Mecca e di Medina e alleato strategico degli Stati Uniti, oggi sotto il principe ereditario Mohammed bin Salman.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-al-nahyan",
+    "name": "Casa di Al Nahyan",
+    "description": "Famiglia reale di Abu Dhabi, al potere dal XVIII secolo, presiede gli Emirati Arabi Uniti dal 1971 e governa una monarchia federale ricca di petrolio, con forte modernizzazione e stabilità, tolleranza controllata e un'alleanza militare con l'Occidente.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-bourbon-franca",
+    "name": "Casa di Borbone (ramo francese)",
+    "description": "Dinastia che regnò in Francia dal 1589 al 1792 e dal 1814 al 1830, da Enrico IV a Luigi XIV, il Re Sole, fece della monarchia assoluta di diritto divino il modello europeo e fu rovesciata dalla Rivoluzione francese.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-hohenzollern",
+    "name": "Casa di Hohenzollern",
+    "description": "Dinastia tedesca che governò Brandeburgo, Prussia e Impero tedesco, da Federico il Grande a Guglielmo II, costruì uno Stato militare e burocratico di tradizione protestante e unificò la Germania con Bismarck fino al 1918.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-braganca",
+    "name": "Casa di Braganza",
+    "description": "Dinastia che regnò in Portogallo dal 1640 al 1910 e in Brasile, restaurò l'indipendenza dalla Spagna, gestì l'impero coloniale e passò dall'assolutismo alla monarchia costituzionale, cadendo con la Repubblica nel 1910.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-hanover",
+    "name": "Casa di Hannover",
+    "description": "Dinastia tedesca che regnò nel Regno Unito dal 1714 al 1901, da Giorgio I alla regina Vittoria, consolidò la monarchia costituzionale, il Parlamento, la rivoluzione industriale e l'Impero britannico, di tradizione protestante anglicana.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-tudor",
+    "name": "Casa dei Tudor",
+    "description": "Dinastia inglese dal 1485 al 1603, da Enrico VII a Elisabetta I, centralizzò il potere regio, ruppe con Roma nella Riforma di Enrico VIII, creò la Chiesa d'Inghilterra e fece del paese una potenza navale e commerciale.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-stuart",
+    "name": "Casa degli Stuart",
+    "description": "Dinastia scozzese che regnò in Scozia e, dal 1603 al 1714, in Inghilterra, difese il diritto divino dei re contro il Parlamento, fu rovesciata dalla Guerra civile e dalla Gloriosa Rivoluzione e lasciò unito il Regno Unito.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-bonaparte",
+    "name": "Casa Bonaparte",
+    "description": "Dinastia creata da Napoleone, che governò la Francia come imperatore dal 1804 al 1815 e, con Napoleone III, dal 1852 al 1870, impose il Codice civile, la centralizzazione, l'autoritarismo plebiscitario e guerre che ridisegnarono l'Europa.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-medici",
+    "name": "Casa de' Medici",
+    "description": "Dinastia di banchieri e governanti di Firenze, da Cosimo a Lorenzo il Magnifico e poi granduchi di Toscana, finanziò il Rinascimento e le arti, raggiunse il papato e il trono di Francia e dominò la politica italiana dal 1434 al 1737.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-windsor",
+    "name": "Casa di Windsor",
+    "description": "Famiglia reale britannica dal 1917, da Giorgio V a Carlo III, regna come monarchia costituzionale senza potere politico, capo di Stato di quindici reami e del Commonwealth, simbolo di continuità, della Chiesa d'Inghilterra e del dovere pubblico.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-orange-nassau",
+    "name": "Casa d'Orange-Nassau",
+    "description": "Famiglia reale dei Paesi Bassi dai tempi di Guglielmo d'Orange, capo della rivolta contro la Spagna nel Cinquecento, oggi monarchia costituzionale guidata da Guglielmo Alessandro, simbolo dell'unità nazionale, del calvinismo storico e della tolleranza.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-bourbon-espanha",
+    "name": "Casa di Borbone (ramo spagnolo)",
+    "description": "Dinastia che regna in Spagna dal 1700, da Filippo V a Felipe VI, passò dall'assolutismo al costituzionalismo, fu restaurata da Franco nel 1975 e Juan Carlos I guidò la transizione alla democrazia nel 1978 come monarchia parlamentare.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "nucleo-nacional",
+    "name": "Núcleo Nacional",
+    "description": "Gruppo spagnolo di estrema destra neonazista emerso dalle proteste contro l'amnistia del 2023–24 a Madrid. Ultranazionalista e anti-immigrazione, ha una struttura gerarchica e un attivismo di strada ed è indagato dalla Guardia Civil per incitamento all'odio.",
+    "category": "Movimento"
+  },
+  {
+    "id": "falange-espanola",
+    "name": "Falange Española",
+    "description": "Movimento fascista spagnolo fondato da José Antonio Primo de Rivera nel 1933 e fuso da Franco nel 1937 nel partito unico (FET y de las JONS). Nazionalismo imperiale, sindacalismo verticale, Stato totalitario e cattolicesimo.",
+    "category": "Movimento"
+  },
+  {
+    "id": "comunion-tradicionalista-carlista",
+    "name": "Comunione Tradizionalista Carlista (CTC)",
+    "description": "Partito carlista tradizionalista spagnolo, erede del movimento carlista dell'Ottocento. Difende la monarchia legittimista, il cattolicesimo integrale, i fueros regionali e il motto «Dio, Patria, Fueros, Re», contro il liberalismo e la democrazia parlamentare.",
+    "category": "Partito"
+  },
+  {
+    "id": "les-identitaires",
+    "name": "Les Identitaires",
+    "description": "Movimento identitario francese di estrema destra, fondato nel 2002 come Bloc Identitaire e presieduto da Fabrice Robert. Sostiene la remigrazione, si oppone a immigrazione e Islam e promuove un'Europa delle identità etniche; la sua ala giovanile è stata sciolta nel 2021.",
+    "category": "Movimento"
+  },
+  {
+    "id": "action-francaise",
+    "name": "Action Française",
+    "description": "Movimento nazionalista francese fondato nel 1899 e guidato intellettualmente da Charles Maurras. Sosteneva il «nazionalismo integrale», la monarchia ereditaria antiparlamentare, il decentramento, l'antisemitismo e l'ordine cattolico, benché agnostico in dottrina.",
+    "category": "Movimento"
+  },
+  {
+    "id": "nova-resistencia",
+    "name": "Nuova Resistenza (NR)",
+    "description": "Organizzazione politica brasiliana fondata nel 2015 da Raphael Machado, ispirata alla Quarta teoria politica di Aleksandr Dugin. Nazional-rivoluzionaria, antiliberale, antiamericana ed eurasiatista, i ricercatori la descrivono come neofascista.",
+    "category": "Movimento"
+  },
+  {
+    "id": "batalhao-azov",
+    "name": "Battaglione Azov",
+    "description": "Unità militare ucraina formata nel 2014 da volontari nazionalisti, poi integrata nella Guardia Nazionale e nell'Esercito. Combina disciplina militare, nazionalismo ucraino e difesa contro la Russia, con una storia e simboli controversi di estrema destra.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "partido-de-acao-popular",
+    "name": "Partito d'Azione del Popolo (PAP)",
+    "description": "Partito dominante di Singapore, al potere dal 1959 e fondato da Lee Kuan Yew. Combina capitalismo di Stato, meritocrazia tecnocratica, rigoroso ordine sociale, multiculturalismo ufficiale e democrazia elettorale a partito dominante.",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-de-liechtenstein",
+    "name": "Casa del Liechtenstein",
+    "description": "Dinastia regnante del Principato del Liechtenstein dal 1719, oggi guidata dal principe Hans-Adam II con il figlio Alois come reggente. Monarchia costituzionale con ampi poteri di veto, cattolica, neutrale e centro finanziario a bassa tassazione.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "ordem-teutonica",
+    "name": "Ordine teutonico",
+    "description": "Ordine militare e religioso crociato fondato nel 1190 ad Acri, che conquistò e cristianizzò la Prussia e il Baltico, costruì uno Stato monastico e combatté contro Polonia-Lituania fino alla sconfitta di Grunwald (1410) e alla secolarizzazione nel 1525.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "ordem-dos-templarios",
+    "name": "Cavalieri templari",
+    "description": "Ordine militare cristiano fondato nel 1119 per proteggere i pellegrini a Gerusalemme, esente da re e vescovi e responsabile davanti al papa. Costruì una rete bancaria europea e fu distrutto da Filippo IV e Clemente V (1312).",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "xogunato-tokugawa",
+    "name": "Shogunato Tokugawa",
+    "description": "Governo militare ereditario del clan Tokugawa in Giappone, dal 1603 al 1868. Impose pace interna, una gerarchia di caste, il controllo dei daimyō, il neoconfucianesimo e l'isolamento (sakoku), vietando il cristianesimo, fino alla Restaurazione Meiji.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "dinastia-cajar",
+    "name": "Dinastia qajar",
+    "description": "Dinastia turcica che governò la Persia dal 1789 al 1925. Monarchia sciita debole e tribale, perse territori a favore della Russia, concesse monopoli a stranieri, affrontò la Rivoluzione costituzionale (1906) e fu deposta da Reza Shah.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "partido-liberal-vitoriano",
+    "name": "Partito Liberale (era vittoriana)",
+    "description": "Partito di Gladstone e Palmerston che dominò la politica vittoriana, difendendo il libero scambio, il risparmio, la riforma elettorale, la libertà religiosa, «Pace, Riduzione della spesa e Riforma» e l'Home Rule irlandese, che lo spaccò nel 1886.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-conservador-vitoriano",
+    "name": "Partito Conservatore (era vittoriana)",
+    "description": "Partito dei Tory di Peel, Disraeli e Salisbury, difensore della Corona, della Chiesa d'Inghilterra, dell'aristocrazia terriera e dell'impero. Con la «One Nation» di Disraeli unì riforma sociale paternalista, suffragio ampliato e imperialismo.",
+    "category": "Partito"
+  },
+  {
+    "id": "jacobinos",
+    "name": "Giacobini",
+    "description": "Club politico radicale della Rivoluzione francese guidato da Robespierre. Difendeva una repubblica unitaria, la sovranità popolare, la virtù civica e il Terrore, con economia gestita, scristianizzazione e centralizzazione, fino alla caduta a Termidoro (1794).",
+    "category": "Movimento"
+  },
+  {
+    "id": "partido-nacional-fascista",
+    "name": "Partito Nazionale Fascista (PNF)",
+    "description": "Partito di Benito Mussolini, al potere in Italia dal 1922 al 1943 e partito unico dopo il 1926. Impose dittatura totalitaria, corporativismo, culto del Duce, espansione coloniale, alleanza con Hitler e leggi razziali (1938).",
+    "category": "Partito"
+  },
+  {
+    "id": "optimates-roma",
+    "name": "Optimates",
+    "description": "Fazione aristocratica conservatrice della Repubblica romana, difendeva l'autorità del Senato, la tradizione ancestrale (mos maiorum) e i grandi latifondi. Combatté le riforme agrarie dei Gracchi e dei populares, con Silla e Catone Uticense.",
+    "category": "Movimento"
+  },
+  {
+    "id": "populares-roma",
+    "name": "Populares",
+    "description": "Fazione della Repubblica romana che legiferava tramite tribuni e assemblee contro il Senato, difendendo la riforma agraria, la distribuzione di grano, la remissione dei debiti e i diritti per gli alleati italici, da Tiberio Gracco a Mario e Cesare.",
+    "category": "Movimento"
+  },
+  {
+    "id": "pcus",
+    "name": "Partito Comunista dell'Unione Sovietica (PCUS)",
+    "description": "Partito unico da Lenin a Gorbačëv che governò l'URSS con monopolio del potere, centralismo democratico ed economia pianificata. Impose collettivizzazione, terrore staliniano, ateismo di Stato e la Guerra fredda fino alla messa al bando nel 1991.",
+    "category": "Partito"
+  },
+  {
+    "id": "exercito-vermelho",
+    "name": "Armata Rossa",
+    "description": "Forze armate sovietiche create nel 1918 da Trockij, sotto i commissari del Partito. Vinsero la guerra civile russa e sconfissero la Germania nazista, occuparono l'Europa orientale e servirono da strumento di repressione e di purghe fino al 1946.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "exercito-branco",
+    "name": "Armata Bianca (movimento bianco)",
+    "description": "Coalizione antibolscevica di monarchici, liberali e cosacchi che combatté la guerra civile russa (Denikin, Kolčak, Wrangel). Sosteneva la «Russia una e indivisibile», l'ordine e la Chiesa, senza un chiaro programma politico, e fu sconfitta dall'Armata Rossa.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "partido-socialista-operario-hungaro",
+    "name": "Partito Socialista Operaio Ungherese (MSZMP)",
+    "description": "Partito unico dell'Ungheria sotto János Kádár, creato dopo la rivoluzione del 1956 repressa dai sovietici. Combinò dittatura di partito e Patto di Varsavia con il «comunismo al gulasch», riforme di mercato parziali e una repressione attenuata.",
+    "category": "Partito"
+  },
+  {
+    "id": "uniao-nacional-portugal",
+    "name": "Unione Nazionale",
+    "description": "Partito unico dell'Estado Novo portoghese, creato da Salazar nel 1930. Sostenne una dittatura corporativa, un cattolicesimo sociale, il colonialismo («Dio, Patria, Famiglia»), la censura e la polizia politica (PIDE), senza elezioni libere, fino alla Rivoluzione dei garofani.",
+    "category": "Partito"
+  },
+  {
+    "id": "chp-kemalista",
+    "name": "Partito Repubblicano del Popolo (CHP, era kemalista)",
+    "description": "Partito unico fondato da Atatürk che governò la Turchia dal 1923 al 1938 secondo i sei principi (repubblicanesimo, nazionalismo, populismo, statalismo, laicismo e riformismo). Impose secolarizzazione forzata, statalismo e turchizzazione.",
+    "category": "Partito"
+  },
+  {
+    "id": "uniao-socialista-arabe",
+    "name": "Unione Socialista Araba",
+    "description": "Partito unico creato da Nasser nel 1962 come veicolo del socialismo arabo. Nazionalizzò l'economia, realizzò la riforma agraria, difese il panarabismo e il non allineamento e represse islamisti e comunisti fino all'apertura di Sadat.",
+    "category": "Partito"
+  },
+  {
+    "id": "baath-iraquiano",
+    "name": "Partito Baath iracheno",
+    "description": "Ramo iracheno del Partito Baath, al potere dal 1968 al 2003 con al-Bakr e Saddam Hussein. Dittatura a partito unico con culto del capo, nazionalismo arabo, un'economia petrolifera controllata dallo Stato, guerre contro Iran e Kuwait e repressione di curdi e sciiti.",
+    "category": "Partito"
+  },
+  {
+    "id": "baath-siriano",
+    "name": "Partito Baath siriano",
+    "description": "Ramo siriano del Partito Baath, al potere dal 1963 al 2024, soprattutto con Hafez e Bashar al-Assad. Partito di governo di uno Stato autoritario laico con nazionalismo arabo, economia statale, alleanza con Iran e Russia e repressione (Hama, guerra civile).",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-pahlavi",
+    "name": "Casa Pahlavi",
+    "description": "Dinastia imperiale dell'Iran dal 1925 al 1979, da Reza Shah a Mohammad Reza Pahlavi. Impose una modernizzazione autoritaria, nazionalismo persiano, secolarizzazione e un'alleanza con l'Occidente, con una polizia politica (SAVAK), fino alla Rivoluzione islamica.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "partido-rastakhiz",
+    "name": "Partito Rastakhiz",
+    "description": "Partito unico creato dallo Scià in Iran nel 1975, con iscrizione obbligatoria e lo slogan «Rivoluzione dello Scià e del Popolo». Servì da macchina di mobilitazione e propaganda della monarchia, colpì mercanti e clero e fu sciolto nel 1978.",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-de-romanov",
+    "name": "Casa Romanov",
+    "description": "Dinastia imperiale della Russia dal 1613 al 1917, da Michele I a Nicola II. Difese l'autocrazia, la Chiesa ortodossa e l'espansione territoriale, abolì la servitù della gleba nel 1861, concesse una Duma limitata nel 1906 e cadde nella Rivoluzione del 1917.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "republicanos",
+    "name": "Republicanos",
+    "description": "Partito legato alla Chiesa Universale del Regno di Dio, fondato nel 2005 come PRB, con una base evangelica e un profilo da centrão. Difende valori conservatori, un'economia di mercato moderata e la sicurezza, ed è entrato sia nei governi Lula sia in quelli Bolsonaro.",
+    "category": "Partito"
+  },
+  {
+    "id": "progressistas",
+    "name": "Progressisti (PP)",
+    "description": "Partito di centrodestra e nucleo del centrão, erede di Arena e del PDS, oggi guidato da Ciro Nogueira e Arthur Lira. Difende un'economia di mercato, l'agribusiness e il conservatorismo morale, con un forte appoggio agli emendamenti di bilancio e l'abitudine di entrare in qualsiasi governo.",
+    "category": "Partito"
+  },
+  {
+    "id": "psd",
+    "name": "Partito Social Democratico (PSD)",
+    "description": "Partito di centro fondato da Gilberto Kassab nel 2011, pragmatico e senza un'ideologia definita, che entra nei governi di qualsiasi schieramento. Difende un'economia di mercato, la stabilità istituzionale e il federalismo, con leader come Ratinho Jr. ed Eduardo Paes.",
+    "category": "Partito"
+  },
+  {
+    "id": "mdb-regime-militar",
+    "name": "MDB",
+    "description": "Partito di opposizione tollerata al regime militare, creato nel 1966 sotto il bipartitismo e guidato da Ulysses Guimarães. Riunì liberali, socialisti e cattolici in difesa della democrazia, dell'amnistia e della fine della tortura, sotto purghe e censura.",
+    "category": "Partito"
+  },
+  {
+    "id": "psb",
+    "name": "Partito Socialista Brasiliano (PSB)",
+    "description": "Partito di centrosinistra fondato nel 1947 e rifondato nel 1985, di socialdemocrazia e socialismo democratico, alleato di Lula. Difende lo Stato sociale, lo sviluppo regionale e i diritti civili, con Geraldo Alckmin come vicepresidente e una forte base in Pernambuco.",
+    "category": "Partito"
+  },
+  {
+    "id": "likud",
+    "name": "Likud",
+    "description": "Partito nazionalista di destra fondato nel 1973 e guidato da Benjamin Netanyahu, erede del sionismo revisionista di Jabotinsky. Difende una sicurezza ferma, gli insediamenti, la sovranità su Giudea e Samaria, un'economia di mercato e coalizioni con la destra religiosa.",
+    "category": "Partito"
+  },
+  {
+    "id": "shas",
+    "name": "Shas",
+    "description": "Partito ultraortodosso sefardita fondato nel 1984 dal rabbino Ovadia Yosef e oggi guidato da Aryeh Deri. Difende la Torah e la halakhah, le scuole religiose, l'assistenza sociale ai mizrahì poveri e l'esenzione dal servizio militare, con pragmatismo di coalizione.",
+    "category": "Partito"
+  },
+  {
+    "id": "bjp",
+    "name": "Bharatiya Janata Party (BJP)",
+    "description": "Partito nazionalista indù di Narendra Modi, al potere in India dal 2014 e braccio politico dell'RSS. Combina Hindutva, centralizzazione del potere e liberalizzazione economica con welfare, e ha revocato l'autonomia del Kashmir nel 2019.",
+    "category": "Partito"
+  },
+  {
+    "id": "rss",
+    "name": "Rashtriya Swayamsevak Sangh (RSS)",
+    "description": "Organizzazione paramilitare indù di volontari fondata nel 1925 da Hedgewar, matrice ideologica del BJP e dell'Hindutva. Gestisce migliaia di shakha di disciplina e dottrina, lavoro sociale e una rete di affiliate, ed è stata messa al bando dopo l'assassinio di Gandhi.",
+    "category": "Movimento"
+  },
+  {
+    "id": "cnt-fai",
+    "name": "CNT-FAI",
+    "description": "Alleanza del sindacato anarco-sindacalista CNT con la Federazione Anarchica Iberica, che realizzò la rivoluzione sociale spagnola del 1936. Collettivizzò fabbriche e terre in Catalogna e Aragona, formò milizie, entrò nel governo repubblicano e fu schiacciata nel maggio 1937.",
+    "category": "Movimento"
+  },
+  {
+    "id": "makhnovistas",
+    "name": "Machnovisti (Esercito Insurrezionale Rivoluzionario d'Ucraina)",
+    "description": "Esercito contadino anarchico di Nestor Machno, che controllò l'Ucraina meridionale tra il 1918 e il 1921 sotto una bandiera nera. Combatté tedeschi, bianchi e rossi, difese soviet liberi, l'autogestione contadina e il comunismo libertario, e fu schiacciato dai bolscevichi.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "hezbollah",
+    "name": "Hezbollah",
+    "description": "Organizzazione sciita libanese fondata nel 1982, con un'ala armata e un seggio in Parlamento, ispirata alla rivoluzione iraniana. Combatte Israele, gestisce una rete di servizi sociali nel Libano meridionale e nella Valle della Bekaa ed è sostenuta dall'Iran.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "hamas",
+    "name": "Hamas",
+    "description": "Organizzazione islamista palestinese fondata nel 1987 come ramo dei Fratelli Musulmani, che governa Gaza dal 2007. Combina servizi sociali, politica e le Brigate al-Qassam, difende la resistenza armata contro Israele e ha compiuto l'attacco del 7 ottobre 2023.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "taliba",
+    "name": "Talebani",
+    "description": "Movimento islamista pashtun deobandi fondato nel 1994, che governò l'Afghanistan nel 1996–2001 e tornò al potere nel 2021. Impone una rigida sharia, limita istruzione e lavoro delle donne, rifiuta partiti ed elezioni ed è guidato dall'emiro Hibatullah Akhundzada.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "guarda-de-ferro",
+    "name": "Guardia di Ferro (Movimento Legionario)",
+    "description": "Movimento fascista rumeno fondato nel 1927 da Corneliu Codreanu come Legione dell'Arcangelo Michele. Combinava nazionalismo ortodosso mistico, antisemitismo, culto del martirio e violenza politica, e fu schiacciato dopo la rivolta del 1941.",
+    "category": "Movimento"
+  },
+  {
+    "id": "uniao-britanica-de-fascistas",
+    "name": "Unione Britannica dei Fascisti (BUF)",
+    "description": "Movimento fascista britannico fondato nel 1932 da Oswald Mosley, con una milizia di camicie nere. Difendeva corporativismo, protezionismo imperiale, nazionalismo e, dal 1934, antisemitismo, fino alla messa al bando nel 1940.",
+    "category": "Movimento"
+  },
+  {
+    "id": "ss",
+    "name": "Schutzstaffel (SS)",
+    "description": "Organizzazione paramilitare d'élite del Partito nazista, comandata da Heinrich Himmler. Controllava la polizia politica e i campi di concentramento, formò le Waffen-SS, attuò l'Olocausto e l'occupazione dell'Est, con un'ideologia razziale e fedeltà personale a Hitler.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "les-republicains",
+    "name": "Les Républicains (LR)",
+    "description": "Partito di centrodestra francese, erede del gollismo e di Sarkozy, con Bruno Retailleau come leader dal 2025. Difende un'economia di mercato, il controllo dell'immigrazione, l'ordine, i valori familiari e un'UE intergovernativa, e ha perso l'Eliseo nel 2012.",
+    "category": "Partito"
+  },
+  {
+    "id": "pld-japao",
+    "name": "Partito Liberal Democratico (LDP)",
+    "description": "Partito conservatore che governa il Giappone quasi senza interruzioni dal 1955. Difende l'alleanza con gli USA, lo sviluppo guidato dalle imprese, un nazionalismo culturale moderato e la revisione della Costituzione pacifista, con fazioni interne e legami con il mondo degli affari.",
+    "category": "Partito"
+  },
+  {
+    "id": "kuomintang",
+    "name": "Kuomintang (KMT)",
+    "description": "Partito nazionalista cinese fondato nel 1912, che governò Taiwan sotto legge marziale fino al 1987 ed è oggi la principale opposizione. Difende il «Consenso del 1992», legami economici più stretti con la Cina, un'economia di mercato e i Tre principi del popolo di Sun Yat-sen.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-comunista-do-vietna",
+    "name": "Partito Comunista del Vietnam (PCV)",
+    "description": "Partito unico del Vietnam, fondato nel 1930 da Ho Chi Minh, al potere dalla riunificazione del 1975. Combina leninismo e controllo politico con l'apertura al mercato del Đổi Mới, una campagna anticorruzione e una diplomazia equilibrata tra Cina, USA e Russia.",
+    "category": "Partito"
+  },
+  {
+    "id": "bolcheviques",
+    "name": "Bolscevichi",
+    "description": "Ala maggioritaria del Partito Operaio Socialdemocratico Russo, guidata da Lenin dal 1903. Difendeva un partito di rivoluzionari di professione, la rivoluzione proletaria, la pace immediata e la presa del potere nell'ottobre 1917, fondando la dittatura sovietica.",
+    "category": "Movimento"
+  },
+  {
+    "id": "mencheviques",
+    "name": "Menscevichi",
+    "description": "Ala minoritaria del Partito Operaio Socialdemocratico Russo, di Martov e Plechanov. Difendeva un partito aperto, una rivoluzione borghese prima di una socialista, la democrazia e l'alleanza con i liberali, partecipò al Governo provvisorio e fu represso dai bolscevichi.",
+    "category": "Partito"
+  },
+  {
+    "id": "pcch-maoista",
+    "name": "Partito Comunista Cinese (era maoista)",
+    "description": "Partito unico della Cina sotto Mao Zedong, dal 1949 al 1976. Impose collettivizzazione, Grande balzo in avanti, Rivoluzione culturale, lotta di classe permanente e culto del capo, con ateismo di Stato, rottura con l'URSS e la bomba atomica.",
+    "category": "Partito"
+  },
+  {
+    "id": "rhodesian-front",
+    "name": "Rhodesian Front",
+    "description": "Partito della minoranza bianca della Rhodesia, guidato da Ian Smith, che proclamò l'indipendenza unilaterale nel 1965. Difendeva la segregazione razziale, l'anticomunismo e la difesa della «civiltà cristiana occidentale» contro il nazionalismo africano, fino alla guerra civile e alla fine del regime nel 1980.",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-de-habsburgo-espanha",
+    "name": "Casa d'Asburgo (ramo spagnolo)",
+    "description": "Ramo spagnolo della dinastia, da Carlo I a Carlo II. Sostenne la monarchia cattolica universale, la Controriforma, l'Inquisizione e un impero mondiale finanziato dall'argento americano, con guerre europee, bancarotte e centralismo castigliano fino all'estinzione nel 1700.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-orange",
+    "name": "Casa d'Orange",
+    "description": "Linea di statolder della Repubblica olandese, da Guglielmo il Taciturno a Guglielmo V. Guidò la rivolta contro la Spagna e l'esercito della Repubblica, difese il calvinismo e la difesa nazionale e contese il potere al patriziato mercantile degli Stati.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-osman",
+    "name": "Casa di Osman",
+    "description": "Dinastia imperiale ottomana dal 1299 al 1922, da Osman I a Mehmed VI. Governò come sultani e califfi, espanse l'impero in Anatolia, nei Balcani e nel mondo arabo, amministrò le minoranze con il sistema dei millet e tentò riforme (Tanzimat) fino all'abolizione nel 1922.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "estado-islamico",
+    "name": "Stato Islamico (ISIS)",
+    "description": "Organizzazione jihadista salafita che proclamò un califfato nel 2014 su parti di Iraq e Siria sotto Abu Bakr al-Baghdadi. Impose una sharia estrema, rese schiavi gli yazidi, compì esecuzioni pubbliche e attentati globali e perse il proprio territorio nel 2019.",
+    "category": "Organizzazione armata"
+  },
+  {
+    "id": "dpp-taiwan",
+    "name": "Partito Democratico Progressista (DPP)",
+    "description": "Partito taiwanese fondato nel 1986 contro la legge marziale del KMT, oggi al potere con Lai Ching-te. Difende l'identità taiwanese, la sovranità de facto e l'allineamento con gli USA, i diritti civili (matrimonio egualitario nel 2019) e la transizione energetica.",
+    "category": "Partito"
+  },
+  {
+    "id": "taisei-yokusankai",
+    "name": "Associazione di Assistenza al Governo Imperiale (Taisei Yokusankai)",
+    "description": "Organizzazione politica creata nel 1940 dal principe Konoe, che sciolse i partiti e mobilitò il Giappone imperiale per la guerra. Riunì associazioni di quartiere, sindacati e burocrati sotto il culto dell'imperatore, il militarismo e un'economia di guerra.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-pirata-alemanha",
+    "name": "Partito dei Pirati Germania (PIRATEN)",
+    "description": "Partito tedesco fondato nel 2006, ispirato a quello svedese, che difende privacy, trasparenza, diritti digitali, riforma del diritto d'autore e democrazia diretta tramite piattaforme online. Entrò nel parlamento di Berlino nel 2011 e perse terreno dopo il 2013.",
+    "category": "Partito"
+  },
+  {
+    "id": "liga-dos-comunistas-da-iugoslavia",
+    "name": "Lega dei Comunisti di Jugoslavia (SKJ)",
+    "description": "Partito unico della Jugoslavia di Tito, dal 1945 al 1990. Combinò dittatura di partito con autogestione operaia, non allineamento, federalismo tra le repubbliche e «fratellanza e unità», e ruppe con Stalin nel 1948.",
+    "category": "Partito"
+  },
+  {
+    "id": "uniao-brasil",
+    "name": "Unione Brasile (UNIÃO)",
+    "description": "Partito di centrodestra creato nel 2022 dalla fusione di DEM e PSL, nucleo del centrão e oggi in federazione con il PP. Difende un'economia di mercato, l'agribusiness e un moderato conservatorismo morale, con ministri nel governo Lula e legami con il Congresso.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-dos-trabalhadores-da-coreia",
+    "name": "Partito dei Lavoratori di Corea (WPK)",
+    "description": "Partito unico della Corea del Nord, al potere dal 1948 sotto la dinastia Kim. Governa con l'ideologia Juche e la politica Songun (prima i militari), con culto della personalità, economia pianificata, un programma nucleare e controllo totale della società.",
+    "category": "Partito"
+  },
+  {
+    "id": "dpk-coreia",
+    "name": "Partito Democratico di Corea (DPK)",
+    "description": "Partito liberale di centrosinistra sudcoreano, di Moon Jae-in e del presidente Lee Jae-myung, eletto nel 2025. Difende il welfare sociale, la riforma dei chaebol, i diritti dei lavoratori, le libertà civili e il dialogo con la Corea del Nord mantenendo l'alleanza con gli USA.",
+    "category": "Partito"
+  },
+  {
+    "id": "ppp-coreia",
+    "name": "Partito del Potere Popolare (PPP)",
+    "description": "Partito conservatore sudcoreano, erede di Saenuri, del presidente Yoon Suk Yeol (2022–2025). Difende un'economia di mercato e le imprese, l'alleanza con USA e Giappone, la linea dura verso la Corea del Nord e i valori tradizionali, e si è spaccato sulla legge marziale di Yoon del 2024.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-democratico-republicano-coreia",
+    "name": "Partito Democratico Repubblicano (DRP)",
+    "description": "Partito di Park Chung-hee, al potere in Corea del Sud dal 1963 al 1980. Sostenne una dittatura sviluppista, con piani quinquennali, industrializzazione trainata dalle esportazioni, chaebol, anticomunismo, una polizia politica (KCIA) e la Costituzione Yushin del 1972.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-democrata-eua-new-deal",
+    "name": "Partito Democratico (era del New Deal)",
+    "description": "Partito di Franklin Roosevelt al potere dal 1933 al 1945, ampliò lo Stato con il New Deal: previdenza sociale, regolamentazione bancaria, opere pubbliche e sindacati, in coalizione con il Sud segregazionista, e guidò gli USA nella Seconda guerra mondiale.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-nacional-africa-do-sul-apartheid",
+    "name": "Partito Nazionale (era dell'apartheid)",
+    "description": "Partito di governo del Sudafrica dal 1948 al 1994, un nazionalismo afrikaner che istituì l'apartheid: segregazione razziale legale, governo della minoranza bianca, anticomunismo e violenta repressione dell'opposizione nera.",
+    "category": "Partito"
+  },
+  {
+    "id": "anc-africa-do-sul",
+    "name": "Congresso Nazionale Africano (ANC)",
+    "description": "Partito di Nelson Mandela e principale movimento contro l'apartheid, al governo in Sudafrica dal 1994. Difende la democrazia non razziale, la redistribuzione, il potenziamento economico dei neri e uno Stato sviluppista, tra corruzione e crisi energetiche.",
+    "category": "Partito"
+  },
+  {
+    "id": "inc-india",
+    "name": "Congresso Nazionale Indiano (INC)",
+    "description": "Partito di Gandhi e Nehru che guidò l'indipendenza dell'India e la governò per decenni, ora all'opposizione al BJP. Difende il laicismo, il welfare sociale, un'economia mista, il pluralismo e il federalismo.",
+    "category": "Partito"
+  },
+  {
+    "id": "dsa-eua",
+    "name": "Socialisti Democratici d'America (DSA)",
+    "description": "La maggiore organizzazione socialista degli USA, con decine di migliaia di iscritti e consiglieri e legislatori eletti. Difende la sanità pubblica universale, sindacati forti, un Green New Deal e la proprietà sociale, dentro e fuori il Partito Democratico.",
+    "category": "Partito"
+  },
+  {
+    "id": "centro-democratico",
+    "name": "Centro Democrático (CD)",
+    "description": "Partito di destra fondato nel 2013 da Álvaro Uribe, il suo leader, che rivendica l'eredità della sua politica di Sicurezza Democratica. Ha governato con Iván Duque (2018–2022), ha guidato il «No» all'accordo di pace del 2016, difende il libero mercato e i valori tradizionali e sostiene De la Espriella.",
+    "category": "Partito"
+  },
+  {
+    "id": "pacto-historico",
+    "name": "Patto Storico (PH)",
+    "description": "Partito di sinistra di Gustavo Petro, che lo creò come coalizione nel 2021 e oggi lo guida. Base del suo governo, nel 2025 si è fuso con il Polo Democratico, l'Unione Patriottica e il Partito Comunista, e si oppone a De la Espriella.",
+    "category": "Partito"
+  },
+  {
+    "id": "ddp-weimar",
+    "name": "Partito Democratico Tedesco (DDP)",
+    "description": "Partito liberale di sinistra della Repubblica di Weimar, con Hugo Preuss, Theodor Wolff e Walther Rathenau. Difendeva la Costituzione del 1919, la democrazia parlamentare, un'economia di mercato con responsabilità sociale, i diritti civili e la riconciliazione europea, fino alla scomparsa nel 1933.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-liberal-imperio",
+    "name": "Partito Liberale dell'Impero (Luzias)",
+    "description": "Partito dell'Impero del Brasile noto come i Luzias. Difendeva l'autonomia provinciale, limiti al Potere Moderatore, il parlamentarismo, il libero scambio e la libertà di stampa, l'immigrazione europea e l'abolizione graduale, con suffragio censitario.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-conservador-imperio",
+    "name": "Partito Conservatore dell'Impero (Saquaremas)",
+    "description": "Partito dell'Impero del Brasile noto come i Saquaremas, delle grandi piantagioni e dell'élite schiavista. Difendeva uno Stato centralizzato, un Potere Moderatore forte, il Consiglio di Stato, l'ordine pubblico e la schiavitù, e guidò la politica imperiale nel Río de la Plata.",
+    "category": "Partito"
+  },
+  {
+    "id": "liberais-italianos-giolitti",
+    "name": "Liberali italiani (Giolitti)",
+    "description": "Liberali del Regno d'Italia guidati da Giovanni Giolitti, che governò cinque volte. Difendevano il parlamentarismo e il suffragio maschile del 1912, la neutralità dello Stato nelle controversie di lavoro, la nazionalizzazione di ferrovie e assicurazioni, il protezionismo industriale e la conquista della Libia.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-radical-franca",
+    "name": "Partito Radicale (Terza Repubblica)",
+    "description": "Partito Repubblicano, Radicale e Radical-Socialista, asse della Terza Repubblica francese. Difendeva la laicità (la legge del 1905), la scuola pubblica, la piccola proprietà, l'imposta sul reddito, il parlamentarismo e l'assimilazione repubblicana, e partecipò al Fronte Popolare e ai governi Herriot e Daladier.",
+    "category": "Partito"
+  },
+  {
+    "id": "spd-weimar",
+    "name": "Partito Socialdemocratico di Germania (era di Weimar)",
+    "description": "Il maggior partito della Repubblica di Weimar, con Friedrich Ebert e Otto Wels. Difendeva la democrazia parlamentare, la giornata di 8 ore, l'assicurazione contro la disoccupazione e lo Stato sociale, schiacciò gli spartachisti e fu l'unico partito a votare contro la Legge dei pieni poteri di Hitler nel 1933.",
+    "category": "Partito"
+  },
+  {
+    "id": "pnl-chile",
+    "name": "Partito Nazionale Libertario (PNL)",
+    "description": "Partito cileno fondato nel 2024 da Johannes Kaiser, di destra radicale, paleolibertario e pinochetista. Difende il libero mercato e uno Stato minimo, la proprietà privata, ordine e sicurezza, un duro controllo dell'immigrazione e il rifiuto di progressismo e globalismo.",
+    "category": "Partito"
+  },
+  {
+    "id": "casa-de-al-thani",
+    "name": "Casa di Al Thani",
+    "description": "Famiglia reale del Qatar, al potere dall'Ottocento; l'emiro governa una monarchia ereditaria costruita su gas naturale, fondi sovrani, soft power (Al Jazeera, i Mondiali del 2022), una base USA, mediazione regionale e Islam conservatore.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-al-sabah",
+    "name": "Casa di Al Sabah",
+    "description": "Famiglia reale del Kuwait, al potere dal 1752; l'emiro governa un emirato con una costituzione e un'assemblea eletta che può sciogliere. Stato sociale petrolifero, neutrale e alleato degli USA.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-alaouite",
+    "name": "Casa alawita",
+    "description": "Dinastia regnante del Marocco dal 1666; il re è capo di Stato, Comandante dei Credenti e dell'esercito. Monarchia esecutiva, Islam sunnita moderato, apertura economica, alleanza con l'Occidente e Israele e controllo del Sahara.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "casa-de-bernadotte",
+    "name": "Casa Bernadotte",
+    "description": "Famiglia reale svedese dal 1818, di origine francese. Monarchia senza potere politico dal 1974, simbolo dello Stato sociale nordico, della neutralità storica e di una società laica, aperta ed egualitaria.",
+    "category": "Casa dinastica"
+  },
+  {
+    "id": "reconquete",
+    "name": "Reconquête",
+    "description": "Partito di estrema destra francese fondato nel 2021 da Éric Zemmour. Difende zero immigrazione e remigrazione, identità cristiana e nazionale, sovranità contro l'UE, autorità dello Stato, famiglia e natalità, reindustrializzazione e tasse più basse.",
+    "category": "Partito"
+  },
+  {
+    "id": "psd-portugal",
+    "name": "Partito Social Democratico (PSD)",
+    "description": "Principale partito di centrodestra del Portogallo, fondato nel 1974 come PPD. Liberal-conservatore nonostante il nome, guida l'Alleanza Democratica e difende tasse più basse, la riforma dello Stato, UE e NATO, con un controllo migratorio più fermo.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-socialista-portugal",
+    "name": "Partito Socialista (PS)",
+    "description": "Partito socialdemocratico portoghese fondato nel 1973 da Mário Soares, pilastro del regime democratico. Difende lo Stato sociale, la sanità e la scuola pubbliche, i bilanci in equilibrio, UE e NATO, i diritti civili e un'accoglienza regolata degli immigrati.",
+    "category": "Partito"
+  },
+  {
+    "id": "plaid-cymru",
+    "name": "Plaid Cymru",
+    "description": "Partito nazionalista gallese di centrosinistra fondato nel 1925. Difende l'indipendenza del Galles, la lingua gallese, i servizi pubblici, le energie rinnovabili comunitarie e l'appartenenza all'UE, e collabora al governo nel Senedd.",
+    "category": "Partito"
+  },
+  {
+    "id": "koalicja-obywatelska",
+    "name": "Coalizione Civica (KO)",
+    "description": "Coalizione liberale e filoeuropea di Donald Tusk, al governo in Polonia dal 2023. Difende lo Stato di diritto, UE e NATO, un forte sostegno all'Ucraina, alte spese militari, il controllo dei confini con la Bielorussia e un'economia di mercato con protezione sociale.",
+    "category": "Partito"
+  },
+  {
+    "id": "rozwoj-plus",
+    "name": "Rozwój Plus",
+    "description": "Associazione politica creata nel 2026 dall'ex primo ministro Mateusz Morawiecki dopo la rottura con Diritto e Giustizia (PiS). Conservatrice e sovranista, difende lo sviluppo economico, confini chiusi e una forte difesa, con un proprio gruppo parlamentare.",
+    "category": "Movimento"
+  },
+  {
+    "id": "arbeiderpartiet",
+    "name": "Partito Laburista (Ap)",
+    "description": "Partito socialdemocratico norvegese fondato nel 1887, al governo con Jonas Gahr Støre. Difende il modello di welfare nordico, sindacati forti, il controllo pubblico del petrolio e del fondo sovrano, la NATO e un'immigrazione regolata con integrazione.",
+    "category": "Partito"
+  },
+  {
+    "id": "fremskrittspartiet",
+    "name": "Partito del Progresso (FrP)",
+    "description": "Partito populista di destra norvegese fondato nel 1973, liberal-conservatore. Difende tasse basse, uno Stato più piccolo, lo sfruttamento del petrolio, immigrazione e asilo limitati, pene più dure e scetticismo verso l'agenda climatica e l'UE.",
+    "category": "Partito"
+  },
+  {
+    "id": "socialdemokraterna",
+    "name": "Socialdemocratici (S)",
+    "description": "Partito Socialdemocratico dei Lavoratori di Svezia, fondato nel 1889 e artefice del modello di welfare svedese. Difende tasse alte, sindacati forti, UE e NATO, una società laica ed egualitaria e, oggi, un controllo migratorio più severo.",
+    "category": "Partito"
+  },
+  {
+    "id": "moderaterna",
+    "name": "Partito Moderato (M)",
+    "description": "Partito liberal-conservatore svedese fondato nel 1904 e guidato da Ulf Kristersson nel governo Tidö. Difende tasse basse, riforme di mercato, UE e NATO, più polizia contro le gang e una politica restrittiva su asilo e immigrazione.",
+    "category": "Partito"
+  },
+  {
+    "id": "union-por-la-patria",
+    "name": "Unione per la Patria (UP)",
+    "description": "Coalizione peronista di centrosinistra argentina formata nel 2023 attorno al Partito Giustizialista e al kirchnerismo. Difende lo Stato sociale, l'industria nazionale, il controllo dell'economia, la sovranità, i diritti umani e i diritti civili.",
+    "category": "Partito"
+  },
+  {
+    "id": "anr-colorado",
+    "name": "Partito Colorado (ANR)",
+    "description": "Partito paraguaiano conservatore e populista fondato nel 1887, egemone per decenni, anche sotto la dittatura di Stroessner. Oggi governa con Santiago Peña, difendendo il libero mercato, il cattolicesimo, l'ordine, la sovranità su Itaipú e l'alleanza con Taiwan.",
+    "category": "Partito"
+  },
+  {
+    "id": "pri",
+    "name": "Partito Rivoluzionario Istituzionale (PRI)",
+    "description": "Partito messicano fondato nel 1929, egemone per 71 anni e oggi centrista. Eredita il nazionalismo rivoluzionario e il corporativismo, ma ha abbracciato il libero scambio e l'apertura economica, ed è laico e pragmatico.",
+    "category": "Partito"
+  },
+  {
+    "id": "pan",
+    "name": "Partito di Azione Nazionale (PAN)",
+    "description": "Partito messicano di centrodestra fondato nel 1939, con radici democristiane. Difende la democrazia elettorale, il federalismo, il libero mercato, l'apertura commerciale e i valori familiari, e ha eletto i presidenti Fox e Calderón.",
+    "category": "Partito"
+  },
+  {
+    "id": "psd-historico",
+    "name": "Partito Social Democratico (PSD storico)",
+    "description": "Partito di centrodestra fondato nel 1945 dai governatori nominati da Vargas, con una base rurale e oligarchica, alleato del PTB nei governi dal 1945 al 1964, ebbe Dutra e Juscelino Kubitschek e difendeva sviluppo, ordine costituzionale e conciliazione.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-republicano-paulista",
+    "name": "Partito Repubblicano Paulista (PRP)",
+    "description": "Partito dell'élite del caffè di San Paolo fondato nel 1873, dominò la politica della Vecchia Repubblica tramite l'alleanza del caffè e latte, difese federalismo, ordine, libero scambio ed esportazioni agrarie e perse il potere con la Rivoluzione del 1930.",
+    "category": "Partito"
+  },
+  {
+    "id": "dup",
+    "name": "Partito Unionista Democratico (DUP)",
+    "description": "Partito unionista e conservatore dell'Irlanda del Nord, fondato da Ian Paisley nel 1971, difende l'unione con il Regno Unito, i valori morali protestanti e tradizionali e si oppone al protocollo sulla Brexit, ed è il maggior partito unionista della regione.",
+    "category": "Partito"
+  },
+  {
+    "id": "lega-nord",
+    "name": "Lega Nord",
+    "description": "Partito regionalista dell'Italia settentrionale fondato da Umberto Bossi nel 1991, difendeva il federalismo, una Padania indipendente, la politica antisistema e il controllo dell'immigrazione, fino a diventare la Lega nazionale di Salvini.",
+    "category": "Partito"
+  },
+  {
+    "id": "avante",
+    "name": "Avante",
+    "description": "Partito centrista pragmatico fondato nel 1989 come PTdoB e rinominato nel 2017, con una piattaforma diffusa di orientamento laburista, sostegno a governi di diversi schieramenti e un piccolo gruppo basato su leadership statali e macchina del fondo partitico.",
+    "category": "Partito"
+  },
+  {
+    "id": "sumar",
+    "name": "Sumar",
+    "description": "Piattaforma di sinistra creata nel 2023 da Yolanda Díaz che riunisce Izquierda Unida, Comuns e altri partiti, difende una settimana lavorativa più corta, un salario minimo più alto, la transizione ecologica e i diritti sociali ed è parte del governo di Pedro Sánchez.",
+    "category": "Partito"
+  },
+  {
+    "id": "union-civica-radical",
+    "name": "Unione Civica Radicale (UCR)",
+    "description": "Partito argentino centenario fondato nel 1891, di Yrigoyen e Alfonsín, difende la democrazia repubblicana, la classe media, l'istruzione pubblica e le istituzioni, ed è oggi centrista e diviso tra liberali e socialdemocratici dentro Juntos por el Cambio.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-verde-reino-unido",
+    "name": "Partito Verde (Greens)",
+    "description": "Partito ecologista di sinistra di Inghilterra e Galles, difende la transizione ecologica, la redistribuzione del reddito, i servizi pubblici, la rappresentanza proporzionale e i diritti delle minoranze, e ha eletto quattro deputati nel 2024.",
+    "category": "Partito"
+  },
+  {
+    "id": "snp",
+    "name": "Partito Nazionale Scozzese (SNP)",
+    "description": "Partito scozzese socialdemocratico e indipendentista, dominante nella politica scozzese dal 2007, difende l'indipendenza, il rientro nell'Unione Europea, servizi pubblici forti e politiche progressiste su temi sociali e ambiente.",
+    "category": "Partito"
+  },
+  {
+    "id": "csu",
+    "name": "Unione Cristiano-Sociale (CSU)",
+    "description": "Partito democristiano della Baviera, sorella della CDU dal 1945, ha dominato la politica bavarese con Franz Josef Strauß e Markus Söder, difende il cattolicesimo, la famiglia, l'ordine, il federalismo e un'economia di mercato, con una linea più conservatrice della CDU.",
+    "category": "Partito"
+  },
+  {
+    "id": "forza-italia",
+    "name": "Forza Italia (FI)",
+    "description": "Partito di centrodestra fondato da Silvio Berlusconi nel 1994, difende liberalismo economico, atlantismo, europeismo e democrazia cristiana, fa parte del governo Meloni con Antonio Tajani, con una base imprenditoriale e cattolica moderata.",
+    "category": "Partito"
+  },
+  {
+    "id": "refah-partisi",
+    "name": "Partito del Benessere (Refah)",
+    "description": "Partito islamista turco di Erbakan che vinse le elezioni del 1995 e guidò il governo di coalizione (1996–97). Sosteneva un'economia senza interessi, legami con il mondo musulmano e più spazio per l'Islam nella vita pubblica, fino allo scioglimento nel 1998 per violazione della laicità.",
+    "category": "Partito"
+  },
+  {
+    "id": "partido-federalista-eua",
+    "name": "Partito Federalista",
+    "description": "Il partito di Alexander Hamilton e John Adams, dominò il governo USA fino al 1801: difendeva uno Stato centrale forte, una banca nazionale, commercio e industria, la vicinanza alla Gran Bretagna e gli Alien and Sedition Acts, contro Jefferson.",
+    "category": "Partito"
+  }
+]

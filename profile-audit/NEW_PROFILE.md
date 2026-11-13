@@ -483,8 +483,8 @@ Regras de tradução (confirmadas comparando os pares PT/EN já existentes nesse
   literalmente — a versão EN é para público internacional. Veja `[[en-content-internationalized]]`
   se essa memória existir; caso não exista mais, aplique o mesmo princípio por bom senso.
 
-Os demais idiomas (`i18n/es/` e `i18n/de/`) são gerados a partir do inglês, nunca à mão: rode
-`python i18n-tools/sync.py status es` (e `status de`) depois de mesclar para ver o que falta, e `extract` e `apply`
+Os demais idiomas (`i18n/es/`, `i18n/de/` e `i18n/it/`) são gerados a partir do inglês, nunca à mão: rode
+`python i18n-tools/sync.py status es` (e `status de`, `status it`) depois de mesclar para ver o que falta, e `extract` e `apply`
 para traduzir só o novo (detalhes no topo de `i18n-tools/sync.py`). Até lá, o perfil aparece em
 inglês nesses idiomas e nada quebra. Reauditar um perfil existente não gera tradução nenhuma.
 

@@ -124,7 +124,7 @@ There is no database. The catalogs change only through reviewed commits, so the 
 
 All data lives in `backend/src/main/resources/data/`, with English translations in `i18n/en/`.
 
-English is kept by hand. Other languages (`i18n/es/`, `i18n/de/`) are generated from it with `i18n-tools/sync.py`, which only retranslates what changed; anything missing falls back to English.
+English is kept by hand. Other languages (`i18n/es/`, `i18n/de/`, `i18n/it/`) are generated from it with `i18n-tools/sync.py`, which only retranslates what changed; anything missing falls back to English.
 
 | File | Contents |
 |------|----------|

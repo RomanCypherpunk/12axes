@@ -16,6 +16,7 @@ import { poleSprite } from './pole-icons.mjs';
 import { compatibility, dimensionMatches, rank, religionVisibility } from './profile-match.mjs';
 import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
+import { IT } from './locales/it.mjs';
 
 const STR = {
   pt: {
@@ -129,6 +130,7 @@ const STR = {
 };
 STR.es = { ...STR.en, ...ES.ideologyPage };
 STR.de = { ...STR.en, ...DE.ideologyPage };
+STR.it = { ...STR.en, ...IT.ideologyPage };
 
 const ARR = '<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 const pct = (x) => Math.round(x);

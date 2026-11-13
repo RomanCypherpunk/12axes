@@ -392,4 +392,88 @@ const de: PremiumText = {
   saveCopied: 'Link kopiert',
 };
 
-export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : en;
+const it: PremiumText = {
+  title: 'Rapporto completo',
+  devBadge: 'Modalità di sviluppo: aperto senza pagamento, solo su questa macchina.',
+  loading: 'Preparazione del tuo rapporto completo...',
+  error: 'Non è stato possibile caricare il rapporto. Riprova tra un attimo.',
+  retry: 'Riprova',
+  historical: 'storico',
+  axisTitle: 'Analisi completa, asse per asse',
+  positions: { you: 'Tu', ideology: 'Ideologia', personality: 'Figura', country: 'Paese' },
+  levelLabels: { equilibrado: 'Equilibrato', inclinado: 'Tendente', forte: 'Forte', muito_forte: 'Molto forte' },
+  disagreeTitle: 'Dove sei più in disaccordo',
+  disagreeKinds: { ideology: 'con la tua ideologia', personality: 'con la tua figura', country: 'con il tuo paese' },
+  disagreeLegendProfile: 'Profilo',
+  gapRank: (position) => (position === 1 ? 'Divario maggiore' : position === 2 ? '2° divario maggiore' : '3° divario maggiore'),
+  governmentTitle: 'Il tuo governo ideale',
+  governmentRolesTitle: 'Il ruolo di ogni membro nel tuo governo',
+  governmentSwap: {
+    aria: (seat) => `Cambia chi ricopre l'incarico di ${seat}`,
+    title: (seat) => `Scambia: ${seat}`,
+    lead: (category) => `Le figure della categoria ${category} più vicine a te dopo quella attuale. Scegline una per costruire il tuo governo ideale.`,
+    current: 'Attuale',
+    none: 'Non ci sono altre figure in questa categoria da inserire.',
+    swapped: 'Scambiata da te',
+    searchLabel: 'Oppure cerca qualsiasi altra figura',
+    holdsNow: (seat) => `Ora: ${seat}. Scambia gli incarichi.`,
+    searchPlaceholder: 'Scrivi un nome',
+    searchNone: 'Nessuno trovato con questo nome.',
+    searchError: 'Non è stato possibile cercare in questo momento. Riprova tra un attimo.',
+    searching: 'Ricerca in corso…'
+  },
+  governmentRolesLead: 'Ogni incarico è descritto a partire dalle tue posizioni sugli assi che pesano di più in esso, così puoi vedere perché il risultato è questo.',
+  roleAxis: {
+    estrutura: 'Sulla struttura,',
+    representacao: 'Politicamente,',
+    poder: 'Sul potere,',
+    imigracao: "Sull'immigrazione,",
+    diplomacia: 'Sulla diplomazia,',
+    intervencao: "Sull'intervento,",
+    economia: "Sull'economia,",
+    controle: 'Sul controllo,',
+    comercio: 'Sul commercio,',
+    religiao: 'Sulla religione,',
+    moral: 'Sulla morale,',
+    tecnologia: 'Sulla tecnologia,'
+  },
+  roleSubject: 'questa persona',
+  governmentWhy: (area, pct) => `Ricopre l'incarico come la figura più vicina a te nella categoria ${area}: ${pct}% di compatibilità.`,
+  governmentWhySwapped: (pct) => `Ha preso l'incarico con il tuo scambio: ${pct}% di compatibilità con il tuo risultato.`,
+  timelineTitle: 'La tua linea del tempo ideologica',
+  timelineEraNames: {
+    antiguidade: 'Antichità',
+    medieval: 'Medioevo',
+    moderna: 'Età moderna',
+    xix: 'XIX secolo',
+    xx: 'XX secolo',
+    xxi: 'XXI secolo'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} a.C.` : String(value));
+    if (from === null && to !== null) return `Fino al ${year(to)}`;
+    if (to === null && from !== null) return `Dal ${year(from)}`;
+    return `Dal ${year(from ?? 0)} al ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Attuale',
+  timelineBestEra: 'Epoca più compatibile:',
+  seats: {
+    lider: 'Leader politico',
+    vice: 'Vice leader politico',
+    economia: "Capo dell'economia",
+    educacao: "Capo dell'istruzione",
+    estrategia: 'Capo della strategia politica',
+    filosofia: 'Consigliere filosofico',
+    social: 'Coordinatore degli affari sociali',
+    industria: 'Coordinatore di industria e innovazione',
+    cultura: 'Consigliere culturale'
+  },
+  countriesTitle: '10 paesi o regioni in cui vivere',
+  saveTitle: 'Conserva il tuo accesso',
+  saveIntro: "Per aprire questo rapporto su un altro dispositivo, o dopo aver cancellato i dati del browser, salva il link qui sotto. Chiunque abbia il link apre il rapporto di questo risultato, quindi conservalo con cura.",
+  saveField: 'Link di accesso al rapporto',
+  saveCopy: 'Copia il link',
+  saveCopied: 'Link copiato',
+};
+
+export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : LANG === 'it' ? it : en;

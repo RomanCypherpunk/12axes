@@ -4,7 +4,7 @@ import type { IdeologyColorKey } from '../utils/ideologyColors';
 import type { TreeLayout } from '../../scripts/tree-layout.mjs';
 
 export type TreeKind = 'ideologies' | 'personalities' | 'countries' | 'parties';
-export type TreeLocale = 'pt' | 'en' | 'es' | 'de';
+export type TreeLocale = 'pt' | 'en' | 'es' | 'de' | 'it';
 
 export const TREE_KINDS: TreeKind[] = ['ideologies', 'personalities', 'countries', 'parties'];
 

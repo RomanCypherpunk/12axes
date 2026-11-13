@@ -1,0 +1,227 @@
+{
+  "lider": {
+    "intro": "{name} guida il governo nel suo insieme, fissa le priorità centrali e risponde delle grandi decisioni che riguardano l'intero paese.",
+    "axes": {
+      "representacao": {
+        "left": "{name} governerebbe sotto il controllo di elezioni libere, tribunali indipendenti e un'opposizione attiva, lasciando spazio a referendum e alla revoca dei funzionari eletti.",
+        "right": "{name} concentrerebbe le decisioni in un nucleo ristretto e stabile, senza rigidi limiti di mandato, scegliendo i quadri per competenza o successione anziché affidarsi al voto.",
+        "balanced": "{name} manterrebbe elezioni e istituzioni di controllo, ma accetterebbe di dare più margine al governo nelle crisi, valutando caso per caso stabilità e partecipazione."
+      },
+      "economia": {
+        "left": "{name} guiderebbe il governo con imprese strategiche e banche pubbliche al centro dello sviluppo, frenando il potere dei grandi gruppi privati e ampliando la riforma agraria.",
+        "right": "{name} ridurrebbe il ruolo del settore pubblico, aprendo servizi, strade e imprese statali all'iniziativa privata e proteggendo proprietà ed eredità dalla redistribuzione.",
+        "balanced": "{name} bilancerebbe pubblico e privato, mantenendo sotto gestione governativa ciò che ritiene essenziale e lasciando all'iniziativa privata ciò che fa meglio."
+      },
+      "poder": {
+        "left": "{name} governerebbe con mano ferma sulla sicurezza, accettando più sorveglianza, polizia e limiti ad alcune libertà per proteggere la popolazione da criminalità e minacce.",
+        "right": "{name} limiterebbe il potere dello Stato sulla vita privata, con sorveglianza solo su ordine di un giudice e rispetto delle scelte individuali, anche quelle scomode.",
+        "balanced": "{name} proteggerebbe la popolazione senza sacrificare le libertà civili, accettando restrizioni mirate e temporanee quando il rischio è concreto."
+      },
+      "estrutura": {
+        "left": "{name} condividerebbe il potere con governatori e sindaci, dando a Stati e città l'autonomia di decidere ciò che è loro e distribuendo le risorse in modo decentrato.",
+        "right": "{name} manterrebbe le decisioni centrali nelle mani del governo nazionale, con le stesse regole su tutto il territorio e poco spazio perché le regioni vadano per conto proprio.",
+        "balanced": "{name} concentrerebbe le grandi decisioni nel governo nazionale ma lascerebbe le questioni locali a Stati e città, aggiustando l'equilibrio quando serve."
+      }
+    }
+  },
+  "vice": {
+    "intro": "{name} sostiene il leader giorno per giorno e rappresenta il paese all'estero, occupandosi di alleanze, negoziati e rapporti con altri governi.",
+    "axes": {
+      "estrutura": {
+        "left": "{name} farebbe da ponte tra governo centrale e locali, difendendo l'autonomia di Stati e città e lasciando loro spazio per stringere propri accordi all'estero.",
+        "right": "{name} farebbe in modo che Stati e città seguano la linea del governo centrale, parlando con una sola voce all'estero e impedendo alle regioni di perseguire accordi o politiche parallele.",
+        "balanced": "{name} coordinerebbe il dialogo con governatori e sindaci, rispettando l'autonomia locale sulle questioni regionali e mantenendo una sola posizione nazionale nelle relazioni estere."
+      },
+      "diplomacia": {
+        "left": "{name} tratterebbe la forza militare come fondamento della politica estera, con forze armate forti, un'industria della difesa nazionale e una deterrenza credibile contro ogni minaccia.",
+        "right": "{name} esaurirebbe il dialogo prima di ogni uso della forza e sosterrebbe accordi di disarmo, la mediazione dell'ONU e i tribunali internazionali, anche a costo di concessioni.",
+        "balanced": "{name} unirebbe una difesa ben preparata a una diplomazia attiva, negoziando quando possibile ma senza mai rinunciare alla capacità militare necessaria a scoraggiare gli attacchi."
+      },
+      "representacao": {
+        "left": "{name} porterebbe al governo le richieste di opposizione, movimenti e consigli, funzionando come canale aperto tra la popolazione e chi decide.",
+        "right": "{name} agirebbe da braccio destro di fiducia del leader, eseguendo le decisioni del nucleo di governo con disciplina e poco spazio per il dibattito esterno.",
+        "balanced": "{name} farebbe da ponte tra governo e società, ascoltando opposizione e movimenti ma rispettando la catena di comando una volta presa una decisione."
+      },
+      "controle": {
+        "left": "{name} coordinerebbe il piano economico tra i ministeri, contribuendo a guidare investimenti, prezzi e settori strategici con obiettivi di lungo periodo.",
+        "right": "{name} lavorerebbe per tenere il governo fuori dall'economia, contribuendo a semplificare regole e tasse e lasciando prezzi e salari al mercato.",
+        "balanced": "{name} contribuirebbe a coordinare la politica economica con regole stabili, lasciando lavorare il mercato e riservando l'intervento a crisi e settori strategici."
+      }
+    }
+  },
+  "economia": {
+    "intro": "{name} gestisce le finanze pubbliche, le tasse e la direzione dell'economia, decidendo come il paese produce, spende e distribuisce il reddito.",
+    "axes": {
+      "economia": {
+        "left": "{name} darebbe priorità a servizi pubblici forti e imprese statali, con banche pubbliche che finanziano lo sviluppo, un reddito di base per chi ha bisogno e la redistribuzione della ricchezza.",
+        "right": "{name} affiderebbe la gestione di servizi e infrastrutture al settore privato, proteggerebbe proprietà ed eredità e fisserebbe una durata massima per le prestazioni assistenziali.",
+        "balanced": "{name} manterrebbe le aree essenziali sotto gestione pubblica e aprirebbe le altre all'iniziativa privata, scegliendo caso per caso ciò che funziona meglio per ogni servizio."
+      },
+      "controle": {
+        "left": "{name} pianificherebbe i settori strategici, userebbe sussidi, tassi di cambio e spesa pubblica per guidare l'economia e terrebbe la banca centrale allineata al governo eletto.",
+        "right": "{name} lascerebbe prezzi, salari e tassi d'interesse al mercato, taglierebbe tasse e regolamenti, difenderebbe una banca centrale indipendente ed eviterebbe il blocco dei prezzi.",
+        "balanced": "{name} lascerebbe che il mercato funzioni nella quotidianità ma interverrebbe nelle crisi o nei settori strategici, unendo regole stabili a stimoli mirati."
+      },
+      "comercio": {
+        "left": "{name} proteggerebbe la produzione nazionale con dazi e incentivi, limiterebbe le importazioni nei settori sensibili e terrebbe le imprese strategiche fuori da mani straniere.",
+        "right": "{name} taglierebbe dazi e barriere, firmerebbe accordi di libero scambio e accetterebbe la concorrenza straniera per abbassare i prezzi e attrarre investimenti.",
+        "balanced": "{name} aprirebbe gradualmente il commercio, tagliando i dazi dove il guadagno è chiaro e mantenendo una protezione temporanea per i settori che non possono ancora competere."
+      },
+      "tecnologia": {
+        "left": "{name} punterebbe sulla crescita rapida, incoraggiando innovazione, automazione e produzione su larga scala, accettando costi ambientali in cambio di reddito e posti di lavoro.",
+        "right": "{name} userebbe tasse e incentivi per favorire pratiche sostenibili, tassando ciò che inquina e accettando una crescita più lenta in nome della tutela dell'ambiente.",
+        "balanced": "{name} combinerebbe incentivi all'innovazione e regole ambientali chiare, puntando a crescere senza esaurire le risorse naturali del paese."
+      }
+    }
+  },
+  "educacao": {
+    "intro": "{name} definisce che cosa insegnano scuole e università e come formano le nuove generazioni, dai programmi all'accesso all'istruzione superiore.",
+    "axes": {
+      "moral": {
+        "left": "{name} includerebbe l'educazione sessuale e quella sull'identità di genere, adotterebbe quote razziali per l'accesso all'università e tratterebbe la diversità familiare come contenuto scolastico.",
+        "right": "{name} lascerebbe l'educazione morale e sessuale alle famiglie, darebbe valore al modello di famiglia tradizionale e preferirebbe cambiamenti graduali ai programmi.",
+        "balanced": "{name} tratterebbe i temi morali con cautela, ascoltando scuole e famiglie e includendo contenuti sensibili solo quando c'è un consenso ragionevole sull'approccio."
+      },
+      "religiao": {
+        "left": "{name} manterrebbe l'istruzione laica, senza simboli religiosi nelle scuole, senza religione nell'infanzia e con i valori insegnati senza appoggiarsi alla fede in Dio.",
+        "right": "{name} farebbe spazio alla fede nella formazione degli studenti, valorizzando la trasmissione delle tradizioni religiose e il ruolo delle comunità di fede nell'istruzione.",
+        "balanced": "{name} tratterebbe la religione come materia di cultura e storia, rispettando la fede delle famiglie senza trasformare la scuola in un luogo di predicazione o di attacco alla fede."
+      },
+      "tecnologia": {
+        "left": "{name} metterebbe scienza, programmazione, intelligenza artificiale e ricerca al centro del programma, preparando gli studenti a un'economia sempre più automatizzata.",
+        "right": "{name} includerebbe nei programmi l'educazione ambientale e la vita sostenibile, insegnando il legame tra sviluppo e tutela e valorizzando le conoscenze legate alla terra.",
+        "balanced": "{name} rafforzerebbe l'insegnamento di scienza e tecnologia senza trascurare l'educazione ambientale, formando studenti in grado di innovare con responsabilità."
+      },
+      "poder": {
+        "left": "{name} manterrebbe la scuola uno spazio protetto, con regole chiare di disciplina, azione contro violenza e disinformazione e limiti a ciò che circola tra gli studenti.",
+        "right": "{name} darebbe a studenti, insegnanti e famiglie libertà nelle scelte didattiche, con poca sorveglianza e disciplina e molto spazio per il pensiero indipendente.",
+        "balanced": "{name} unirebbe disciplina e libertà, con regole chiare di convivenza ma senza soffocare il dibattito né l'autonomia degli insegnanti."
+      }
+    }
+  },
+  "estrategia": {
+    "intro": "{name} costruisce maggioranze, disegna le regole del gioco politico e pianifica il posto del paese nel mondo nel medio e lungo periodo.",
+    "axes": {
+      "diplomacia": {
+        "left": "{name} imposterebbe la posizione del paese sulla potenza militare, con un'industria della difesa nazionale, priorità alla spesa per le armi e deterrenza come base di ogni negoziato.",
+        "right": "{name} si affiderebbe ad accordi, mediazione dell'ONU e disarmo per garantire la posizione del paese, accettando concessioni e tagliando la spesa militare per evitare ogni guerra.",
+        "balanced": "{name} costruirebbe una strategia che unisce capacità di difesa e diplomazia, tenendo la forza come deterrente e la negoziazione come strada preferita."
+      },
+      "intervencao": {
+        "left": "{name} collocherebbe il paese in una posizione neutrale, fuori dai blocchi che esigono un allineamento automatico, senza basi militari all'estero e puntando sulla mediazione internazionale.",
+        "right": "{name} tratterebbe l'influenza regionale come obiettivo strategico, usando alleanze, sanzioni e leadership tra i vicini per aumentare il peso del paese.",
+        "balanced": "{name} cercherebbe una postura pragmatica, formando alleanze di convenienza e difendendo gli interessi del paese senza legarsi a blocchi o a lunghi interventi."
+      },
+      "poder": {
+        "left": "{name} farebbe della sicurezza dello Stato una priorità di lungo periodo, con intelligence e sorveglianza più forti per anticipare le minacce interne ed esterne.",
+        "right": "{name} costruirebbe la strategia del paese attorno alle libertà civili, con sorveglianza limitata e controllo sui servizi di intelligence perché non minaccino i cittadini.",
+        "balanced": "{name} perseguirebbe una strategia di sicurezza con controlli chiari, rafforzando l'intelligence senza rinunciare alla supervisione di tribunali e Parlamento."
+      },
+      "comercio": {
+        "left": "{name} tratterebbe l'autosufficienza produttiva come una questione di sicurezza nazionale, proteggendo settori come difesa, energia e alimentazione dalla dipendenza dall'estero.",
+        "right": "{name} userebbe il commercio come strumento di influenza, tessendo accordi e catene di approvvigionamento globali che aumentano il peso del paese e rendono la guerra costosa per tutti.",
+        "balanced": "{name} aprirebbe il commercio per guadagnare influenza ma manterrebbe il controllo nazionale sui settori che incidono sulla sicurezza del paese."
+      }
+    }
+  },
+  "filosofia": {
+    "intro": "{name} aiuta il governo a collegare i principi alle decisioni concrete, indicando quali valori sono in gioco in ogni scelta difficile.",
+    "axes": {
+      "poder": {
+        "left": "{name} ricorderebbe a tutti che la libertà dipende dalla protezione, sostenendo che la comunità debba accettare certe restrizioni per contenere criminalità, disinformazione e minacce gravi.",
+        "right": "{name} sosterrebbe che ogni adulto è padrone della propria vita, del proprio corpo e delle proprie scelte private, e che sorveglianza e punizione richiedono una giustificazione fortissima.",
+        "balanced": "{name} peserebbe caso per caso il costo di limitare le libertà rispetto al rischio dell'inazione, rifiutando sia la sorveglianza estesa sia la passività di fronte al pericolo."
+      },
+      "moral": {
+        "left": "{name} difenderebbe pari diritti per le persone LGBT, l'autonomia riproduttiva e il rispetto dei nuovi modelli familiari, vedendo la morale come qualcosa che evolve.",
+        "right": "{name} tratterebbe famiglia, matrimonio e costumi ereditati come fondamenti della vita comune, preferendo cambiamenti lenti e diffidando delle rotture morali.",
+        "balanced": "{name} darebbe valore alle tradizioni senza chiuderle alla revisione, cercando di accogliere il cambiamento sociale quando non minaccia la coesione della comunità."
+      },
+      "religiao": {
+        "left": "{name} sosterrebbe che valori e senso della vita si possono pensare senza Dio, difendendo ragione ed etica laica come base delle decisioni pubbliche.",
+        "right": "{name} ricorderebbe al governo che la fede è fonte di senso e di valori, sostenendo che la dimensione religiosa vada presa sul serio nelle decisioni pubbliche.",
+        "balanced": "{name} tratterebbe fede e ragione come vie complementari, rispettando le credenze senza farne l'unica base delle decisioni di governo."
+      },
+      "controle": {
+        "left": "{name} sosterrebbe che anche il mercato ha bisogno di uno scopo comune, con il governo che pianifica e corregge l'economia in nome della giustizia.",
+        "right": "{name} riterrebbe che nessuno sappia più di milioni di persone che scambiano liberamente e che pianificare l'economia dall'alto limiti libertà e conoscenza.",
+        "balanced": "{name} riconoscerebbe il valore del libero mercato e anche la necessità di correggerlo, pesando caso per caso libertà e giustizia."
+      }
+    }
+  },
+  "social": {
+    "intro": "{name} coordina le politiche che toccano la vita quotidiana delle persone, come famiglia, protezione sociale, inclusione e convivenza tra gruppi.",
+    "axes": {
+      "imigracao": {
+        "left": "{name} farebbe dell'integrazione una priorità, con corsi di lingua obbligatori e l'aspettativa di adattarsi ai costumi locali, evitando quartieri culturalmente isolati.",
+        "right": "{name} sosterrebbe che gli immigrati devono poter vivere bene senza rinunciare ai propri costumi, con scuole bilingui, servizi in più lingue e la lotta agli stereotipi sull'origine.",
+        "balanced": "{name} incoraggerebbe l'apprendimento della lingua locale e la convivenza tra gruppi, senza costringere nessuno a rinunciare alle proprie tradizioni."
+      },
+      "representacao": {
+        "left": "{name} definirebbe la politica sociale con consultazioni pubbliche dirette, assemblee e consigli comunitari, dando voce alle minoranze e lasciando spazio alle critiche dell'opposizione.",
+        "right": "{name} deciderebbe i programmi sociali da un nucleo tecnico snello, privilegiando risultati rapidi e stabilità rispetto a consultazioni popolari e lunghi dibattiti.",
+        "balanced": "{name} ascolterebbe il pubblico e i consigli sociali sulle grandi decisioni, ma darebbe ai team tecnici margine per agire in fretta quando l'urgenza lo richiede."
+      },
+      "moral": {
+        "left": "{name} sosterrebbe politiche di uguaglianza per donne, persone LGBT e minoranze razziali, riconoscerebbe nuove forme di famiglia e amplierebbe i diritti riproduttivi.",
+        "right": "{name} sosterrebbe la famiglia tradizionale come base della protezione sociale, con benefici e programmi rivolti ad essa e modifiche legali attuate lentamente e gradualmente.",
+        "balanced": "{name} proteggerebbe la famiglia senza escludere i nuovi assetti, ampliando i diritti passo dopo passo e cercando il consenso sui cambiamenti più delicati."
+      },
+      "economia": {
+        "left": "{name} amplierebbe la protezione sociale pubblica, con un reddito di base, sanità e alloggi gratuiti e la redistribuzione di reddito e ricchezza.",
+        "right": "{name} ridurrebbe il ruolo del governo nel welfare, con prestazioni temporanee, più responsabilità individuale e servizi sociali erogati da organizzazioni private.",
+        "balanced": "{name} manterrebbe una rete di sicurezza pubblica per chi ne ha bisogno, con servizi essenziali garantiti, e incoraggerebbe le persone a entrare nel mercato del lavoro."
+      }
+    }
+  },
+  "industria": {
+    "intro": "{name} sovrintende a produzione, ricerca e innovazione, decidendo come il paese sviluppa la propria industria, la propria energia e le nuove tecnologie.",
+    "axes": {
+      "tecnologia": {
+        "left": "{name} accelererebbe automazione, intelligenza artificiale, biotecnologie ed esplorazione spaziale, accettando impatti ambientali in cambio della crescita industriale.",
+        "right": "{name} darebbe priorità alla tutela ambientale, a meno pesticidi e a una produzione a minore impatto, anche a costo di produttività persa o crescita più lenta.",
+        "balanced": "{name} sosterrebbe l'innovazione entro i limiti ambientali, cercando tecnologie che aumentino la produzione senza distruggere le aree protette."
+      },
+      "comercio": {
+        "left": "{name} proteggerebbe l'industria nazionale con dazi e appalti pubblici, bloccherebbe la vendita di imprese strategiche a stranieri e punterebbe a produrre in patria chip e medicinali.",
+        "right": "{name} integrerebbe l'industria nelle catene di approvvigionamento globali, attirando multinazionali e investimenti esteri e accettando la concorrenza straniera per guadagnare efficienza.",
+        "balanced": "{name} attirerebbe investimenti esteri senza rinunciare a proteggere alcuni settori chiave, valutando ogni filiera produttiva in base al suo peso strategico."
+      },
+      "economia": {
+        "left": "{name} manterrebbe imprese statali e banche pubbliche al centro dell'industrializzazione, guidando gli investimenti in energia, petrolio e infrastrutture.",
+        "right": "{name} lascerebbe l'industria in mani private, con privatizzazioni, tasse più basse e tutela della proprietà per attrarre investimenti.",
+        "balanced": "{name} combinerebbe imprese pubbliche nei settori strategici e concorrenza privata altrove, scegliendo caso per caso il modello più efficiente."
+      },
+      "intervencao": {
+        "left": "{name} darebbe priorità alla produzione per il mercato interno, senza usare l'industria come strumento di pressione su altri paesi né farsi coinvolgere in sanzioni o dispute straniere.",
+        "right": "{name} userebbe industria ed energia come strumenti di influenza, finanziando progetti ed esportando tecnologia verso paesi alleati per aumentare il peso del paese.",
+        "balanced": "{name} userebbe l'industria per guadagnare influenza attraverso partnership selezionate, senza impegnarsi in progetti esteri che si allontanano dall'interesse nazionale."
+      }
+    }
+  },
+  "cultura": {
+    "intro": "{name} si prende cura di valori, simboli, tradizioni e memoria condivisa, alimentando ciò che fa riconoscere le persone come un unico popolo.",
+    "axes": {
+      "religiao": {
+        "left": "{name} manterrebbe laici spazi e simboli pubblici, senza festività o riferimenti religiosi ufficiali, e sosterrebbe una cultura fondata su valori laici.",
+        "right": "{name} proteggerebbe la fede come parte dell'identità nazionale, sostenendo feste religiose, templi e tradizioni e la loro trasmissione alle nuove generazioni.",
+        "balanced": "{name} tratterebbe feste e simboli religiosi come patrimonio culturale, senza imporre alcuna fede e senza cancellarli dalla memoria condivisa del paese."
+      },
+      "imigracao": {
+        "left": "{name} rafforzerebbe lingua e tradizioni nazionali come base comune, aspettandosi che i nuovi arrivati adottino i costumi locali e si integrino nella cultura prevalente.",
+        "right": "{name} integrerebbe nell'identità nazionale le culture portate dagli immigrati, incoraggiando la convivenza di lingue e perfino un'identità da cittadino del mondo.",
+        "balanced": "{name} coltiverebbe un'identità nazionale condivisa che lascia spazio ai contributi degli immigrati, senza diluire le tradizioni locali."
+      },
+      "moral": {
+        "left": "{name} sosterrebbe una cultura aperta a nuove espressioni, valorizzando la diversità di identità, costumi e forme familiari come parte della memoria condivisa.",
+        "right": "{name} preserverebbe costumi, famiglia tradizionale e valori ereditati come nucleo dell'identità del popolo, accettando il cambiamento solo lentamente.",
+        "balanced": "{name} coltiverebbe la tradizione senza chiudersi al rinnovamento, lasciando entrare i nuovi costumi nella memoria condivisa gradualmente e senza rotture."
+      },
+      "tecnologia": {
+        "left": "{name} abbraccerebbe la tecnologia come parte della cultura, sostenendo arte digitale, scienza e innovazione come nuove forme di espressione del paese.",
+        "right": "{name} darebbe valore al rapporto con la natura e la terra come parte dell'identità, proteggendo paesaggi, saperi tradizionali e stili di vita a minore impatto.",
+        "balanced": "{name} sosterrebbe l'innovazione culturale senza perdere il legame con natura e tradizione, aiutando il nuovo e l'antico a convivere."
+      }
+    }
+  }
+}

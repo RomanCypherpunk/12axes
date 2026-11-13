@@ -59,11 +59,11 @@ const FULL_MODE =
 
 const INITIAL_VARIANT: QuizVariant = FULL_MODE ? 'extreme' : 'short';
 
-// /compare, /en/compare, /es/compare e /de/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
+// /compare, /en/compare, /es/compare, /de/compare e /it/compare (comparação entre perfis do catálogo) são uma página à parte, carregada sob
 // demanda: o catálogo inteiro só é baixado por quem abre essa rota.
 const COMPARE_MODE =
   typeof window !== 'undefined' &&
-  ['/compare', '/en/compare', '/es/compare', '/de/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
+  ['/compare', '/en/compare', '/es/compare', '/de/compare', '/it/compare'].includes(window.location.pathname.replace(/\.html$/, '').replace(/\/+$/, '') || '/');
 
 // /compare/people: duas pessoas pelo link do resultado de cada uma (vetores na própria URL).
 const COMPARE_PEOPLE_MODE =
