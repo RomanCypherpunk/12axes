@@ -3518,5 +3518,23 @@
     "countryId": "franca",
     "personalityId": "voltaire",
     "religions": []
+  },
+  {
+    "id": "neoliberalismo-conservador",
+    "name": "Neoliberalismo Conservador",
+    "category": "Direita",
+    "description": "Síntese de livre mercado, privatizações e disciplina fiscal com valores tradicionais, lei e ordem e orgulho nacional, sob democracia parlamentar. Associada a Thatcher e Aznar, enfrenta sindicatos e o Estado de bem-estar.",
+    "phrase": "Quero mercado livre, privatizações e impostos baixos, com sindicatos enfraquecidos, lei e ordem, família e orgulho nacional sob um Parlamento soberano.",
+    "countryId": "reino-unido",
+    "personalityId": "jose-maria-aznar",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism"
+    ]
   }
 ]
