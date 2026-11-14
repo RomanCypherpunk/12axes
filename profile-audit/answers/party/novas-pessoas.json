@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "Novas Pessoas defende regionalismo e autogoverno local (mais receitas para regiões e municípios, eleição direta de prefeitos e chefes de polícia locais), mas dentro da federação russa e sem contestar a integridade territorial nem a palavra final do Kremlin.",
+    "answers": {
+      "estrutura_06": "D", "estrutura_01": "C", "estrutura_05": "C", "estrutura_16": "N", "estrutura_04": "D",
+      "estrutura_13": "D", "estrutura_20": "D", "estrutura_15": "C", "estrutura_18": "CT", "estrutura_17": "N",
+      "estrutura_19": "C", "estrutura_12": "C", "estrutura_09": "DT", "estrutura_02": "D", "estrutura_08": "C",
+      "estrutura_07": "CT", "estrutura_11": "N", "estrutura_14": "C", "estrutura_03": "C", "estrutura_10": "C"
+    }
+  },
+  "representacao": {
+    "personaBrief": "O programa fala em eleições de prefeitos, rotatividade de funcionários, orçamento participativo e voto eletrônico, mas como oposição sistêmica aceita a ordem do regime e não disputa o poder de Putin, o que modera seu discurso democrático.",
+    "answers": {
+      "representacao_01": "C", "representacao_05": "C", "representacao_20": "D", "representacao_11": "C", "representacao_04": "D",
+      "representacao_03": "C", "representacao_08": "D", "representacao_12": "D", "representacao_17": "D", "representacao_14": "D",
+      "representacao_13": "C", "representacao_09": "C", "representacao_02": "N", "representacao_15": "C", "representacao_19": "C",
+      "representacao_06": "D", "representacao_16": "D", "representacao_18": "N", "representacao_10": "D", "representacao_07": "C"
+    }
+  },
+  "poder": {
+    "personaBrief": "O partido prega abolir leis de 'extremismo' e 'ofensa a autoridades', rejeita o projeto anti-VPN e pede desbloqueio de redes, mas votou boa parte das leis repressivas, apoia linha dura contra crime de migrantes e não tem pauta de liberalização de drogas.",
+    "answers": {
+      "poder_03": "D", "poder_15": "D", "poder_13": "D", "poder_02": "D", "poder_12": "N",
+      "poder_17": "D", "poder_20": "C", "poder_18": "C", "poder_14": "C", "poder_16": "N",
+      "poder_11": "C", "poder_06": "D", "poder_01": "C", "poder_19": "D", "poder_04": "C",
+      "poder_10": "D", "poder_05": "N", "poder_07": "D", "poder_09": "C", "poder_08": "DT"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Em migração o partido tem linha restritiva e assimilacionista: exame de russo para filhos de migrantes, deportação de condenados, patentes de trabalho mais caras e proibição de vestes que cobrem o rosto, preferindo modernizar a produção a importar mão de obra barata.",
+    "answers": {
+      "imigracao_09": "C", "imigracao_10": "D", "imigracao_06": "D", "imigracao_19": "C", "imigracao_04": "N",
+      "imigracao_15": "C", "imigracao_07": "C", "imigracao_20": "D", "imigracao_17": "C", "imigracao_13": "CT",
+      "imigracao_11": "C", "imigracao_08": "D", "imigracao_02": "D", "imigracao_18": "DT", "imigracao_05": "C",
+      "imigracao_03": "D", "imigracao_01": "CT", "imigracao_14": "C", "imigracao_16": "D", "imigracao_12": "D"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Novas Pessoas apoiou a 'operação militar especial' e a anexação, mas sem militarismo ideológico próprio, com o lema de Davankov de 'paz e negociações, mas nos nossos termos'.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "D", "diplomacia_15": "C", "diplomacia_19": "C", "diplomacia_11": "C",
+      "diplomacia_05": "N", "diplomacia_12": "N", "diplomacia_10": "D", "diplomacia_17": "C", "diplomacia_03": "C",
+      "diplomacia_07": "C", "diplomacia_06": "D", "diplomacia_14": "D", "diplomacia_20": "C", "diplomacia_16": "C",
+      "diplomacia_01": "C", "diplomacia_04": "C", "diplomacia_13": "C", "diplomacia_09": "N", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Ao apoiar a guerra e a anexação, o partido aceita a política externa assertiva do Kremlin no 'exterior próximo', com retórica soberanista contra interferência ocidental e sanções.",
+    "answers": {
+      "intervencao_01": "C", "intervencao_14": "C", "intervencao_20": "C", "intervencao_19": "D", "intervencao_08": "C",
+      "intervencao_13": "N", "intervencao_12": "C", "intervencao_04": "C", "intervencao_18": "CT", "intervencao_11": "C",
+      "intervencao_05": "D", "intervencao_02": "C", "intervencao_10": "C", "intervencao_09": "D", "intervencao_16": "C",
+      "intervencao_06": "C", "intervencao_03": "N", "intervencao_07": "D", "intervencao_17": "D", "intervencao_15": "C"
+    }
+  },
+  "economia": {
+    "personaBrief": "O 'capitalismo popular' do partido, fundado pelo dono da Faberlic, defende autônomos e pequenas empresas, menor peso do Estado e das estatais e menos fiscalizações, sem abandonar uma rede de proteção social direcionada.",
+    "answers": {
+      "economia_05": "D", "economia_06": "C", "economia_07": "N", "economia_13": "C", "economia_03": "N",
+      "economia_14": "C", "economia_19": "D", "economia_16": "N", "economia_17": "D", "economia_12": "C",
+      "economia_04": "D", "economia_11": "C", "economia_18": "C", "economia_15": "D", "economia_20": "C",
+      "economia_01": "DT", "economia_10": "D", "economia_09": "D", "economia_02": "C", "economia_08": "C"
+    }
+  },
+  "controle": {
+    "personaBrief": "Com imposto único de 5% sobre o faturamento para pequenos negócios, menos regulação e menos estatais, o partido é pró-mercado, embora critique juros altos e aceite instrumentos como o salário mínimo legal.",
+    "answers": {
+      "controle_05": "D", "controle_20": "C", "controle_19": "C", "controle_14": "CT", "controle_07": "N",
+      "controle_04": "C", "controle_02": "C", "controle_17": "D", "controle_16": "N", "controle_10": "C",
+      "controle_06": "CT", "controle_08": "C", "controle_13": "DT", "controle_01": "D", "controle_11": "D",
+      "controle_03": "D", "controle_15": "N", "controle_12": "C", "controle_18": "D", "controle_09": "D"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Liberal na economia e voltado ao consumidor urbano, o partido prefere abertura e investimento estrangeiro, mas convive com o contexto de sanções e de substituição de importações e quer favorecer pequenas empresas nacionais.",
+    "answers": {
+      "comercio_13": "C", "comercio_06": "C", "comercio_12": "C", "comercio_20": "C", "comercio_15": "D",
+      "comercio_19": "N", "comercio_04": "C", "comercio_17": "C", "comercio_07": "D", "comercio_02": "D",
+      "comercio_03": "D", "comercio_10": "C", "comercio_16": "C", "comercio_09": "C", "comercio_05": "D",
+      "comercio_11": "C", "comercio_01": "N", "comercio_18": "C", "comercio_08": "D", "comercio_14": "N"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Partido secular, sem retórica ortodoxa, que trata a religião como assunto privado e só a aborda pela ótica da ordem pública e da imigração, sem confrontar a posição oficial da Igreja.",
+    "answers": {
+      "religiao_02": "D", "religiao_11": "D", "religiao_19": "C", "religiao_03": "C", "religiao_10": "N",
+      "religiao_13": "D", "religiao_12": "D", "religiao_15": "N", "religiao_18": "D", "religiao_05": "D",
+      "religiao_01": "C", "religiao_14": "D", "religiao_06": "D", "religiao_16": "D", "religiao_08": "D",
+      "religiao_07": "C", "religiao_09": "C", "religiao_17": "D", "religiao_20": "D", "religiao_04": "D"
+    }
+  },
+  "moral": {
+    "personaBrief": "Apesar do público jovem e urbano, o partido não tem pauta progressista e acompanha nas votações a linha oficial de 'valores tradicionais', incluindo a coautoria da proibição da transição de gênero.",
+    "answers": {
+      "moral_07": "D", "moral_04": "C", "moral_15": "D", "moral_12": "C", "moral_03": "D",
+      "moral_01": "D", "moral_09": "C", "moral_06": "C", "moral_19": "N", "moral_02": "C",
+      "moral_05": "D", "moral_17": "D", "moral_13": "D", "moral_11": "DT", "moral_10": "D",
+      "moral_18": "D", "moral_16": "N", "moral_14": "C", "moral_08": "C", "moral_20": "C"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "O partido aposta em digitalização do Estado, voto eletrônico, ciência e TI e em modernização produtiva, com base urbana e pouca ênfase ambientalista.",
+    "answers": {
+      "tecnologia_01": "CT", "tecnologia_13": "C", "tecnologia_19": "C", "tecnologia_12": "D", "tecnologia_18": "D",
+      "tecnologia_10": "D", "tecnologia_05": "N", "tecnologia_04": "N", "tecnologia_16": "D", "tecnologia_07": "D",
+      "tecnologia_08": "D", "tecnologia_03": "C", "tecnologia_15": "N", "tecnologia_20": "D", "tecnologia_06": "D",
+      "tecnologia_09": "C", "tecnologia_17": "C", "tecnologia_02": "D", "tecnologia_14": "C", "tecnologia_11": "C"
+    }
+  },
+  "archetype": { "sociedade": "E", "poder": "C", "economia": "C", "mundo": "B", "tecnologia": "D" }
+}
