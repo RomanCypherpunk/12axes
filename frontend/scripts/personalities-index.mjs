@@ -11,6 +11,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 // Ordem das áreas no catálogo (a mesma do mockup de docs/).
 export const AREA_ORDER = ['politico', 'teorico', 'filosofo', 'economista', 'intelectual', 'ativista', 'religioso', 'empresario'];
@@ -41,6 +42,7 @@ AREA_LABELS.es = { ...AREA_LABELS.en, ...ES.areaLabels };
 AREA_LABELS.de = { ...AREA_LABELS.en, ...DE.areaLabels };
 AREA_LABELS.it = { ...AREA_LABELS.en, ...IT.areaLabels };
 AREA_LABELS.ru = { ...AREA_LABELS.en, ...RU.areaLabels };
+AREA_LABELS.fr = { ...AREA_LABELS.en, ...FR.areaLabels };
 
 const STR = {
   pt: {
@@ -124,6 +126,7 @@ STR.es = { ...STR.en, ...ES.personalitiesIndex };
 STR.de = { ...STR.en, ...DE.personalitiesIndex };
 STR.it = { ...STR.en, ...IT.personalitiesIndex };
 STR.ru = { ...STR.en, ...RU.personalitiesIndex };
+STR.fr = { ...STR.en, ...FR.personalitiesIndex };
 
 export function initials(name) {
   const words = name.replace(/[.,]/g, '').split(/\s+/).filter((w) => /^\p{Lu}/u.test(w));
@@ -142,7 +145,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены' }[L.locale]}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены', fr: '© 2026 12 Axes. Tous droits réservés' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
@@ -151,6 +154,7 @@ export function catalogHead(L, { site, basePath, title, description, ogType, ogI
     <link rel="alternate" hreflang="de" href="${site}/de${basePath}" />
     <link rel="alternate" hreflang="it" href="${site}/it${basePath}" />
     <link rel="alternate" hreflang="ru" href="${site}/ru${basePath}" />
+    <link rel="alternate" hreflang="fr" href="${site}/fr${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="${ogType}" />

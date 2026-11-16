@@ -60,6 +60,17 @@ describe('idioma pelo caminho', () => {
     expect(langForcedByPath('/russo')).toBeNull();
   });
 
+  it('francês: /fr e /fr/compare forçam o idioma e o seletor troca as rotas', () => {
+    expect(langForcedByPath('/fr')).toBe('fr');
+    expect(langForcedByPath('/fr/compare/')).toBe('fr');
+    expect(langSwitchPath('/fr/compare', 'pt')).toBe('/compare');
+    expect(langSwitchPath('/compare', 'fr')).toBe('/fr/compare');
+    expect(langSwitchPath('/ru/compare', 'fr')).toBe('/fr/compare');
+    expect(langSwitchPath('/fr', 'de')).toBe('/de');
+    expect(langSwitchPath('/fr', 'pt')).toBe('/br');
+    expect(langForcedByPath('/francais')).toBeNull();
+  });
+
   it('o toggle troca entre /compare e /en/compare', () => {
     expect(langSwitchPath('/compare', 'en')).toBe('/en/compare');
     expect(langSwitchPath('/en/compare/', 'pt')).toBe('/compare');

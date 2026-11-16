@@ -8,6 +8,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 export const AMAZON_BR_HOST = 'www.amazon.com.br';
 export const AMAZON_BR_TAG = '12axes-20';
@@ -117,6 +118,7 @@ STR.es = { ...STR.en, ...ES.booksIndex };
 STR.de = { ...STR.en, ...DE.booksIndex };
 STR.it = { ...STR.en, ...IT.booksIndex };
 STR.ru = { ...STR.en, ...RU.booksIndex };
+STR.fr = { ...STR.en, ...FR.booksIndex };
 
 function formatYear(year, t) {
   if (year === null || year === undefined) return '';

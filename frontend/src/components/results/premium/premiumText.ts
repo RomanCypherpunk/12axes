@@ -560,4 +560,88 @@ const ru: PremiumText = {
   saveCopied: 'Ссылка скопирована',
 };
 
-export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : LANG === 'it' ? it : LANG === 'ru' ? ru : en;
+const fr: PremiumText = {
+  title: 'Rapport complet',
+  devBadge: 'Mode développement : ouvert sans paiement, uniquement sur cette machine.',
+  loading: 'Préparation de votre rapport complet…',
+  error: 'Impossible de charger le rapport. Veuillez réessayer dans un instant.',
+  retry: 'Réessayer',
+  historical: 'historique',
+  axisTitle: 'Analyse complète, axe par axe',
+  positions: { you: 'Vous', ideology: 'Idéologie', personality: 'Figure', country: 'Pays' },
+  levelLabels: { equilibrado: 'Équilibré', inclinado: 'Tendance', forte: 'Fort', muito_forte: 'Très fort' },
+  disagreeTitle: 'Là où vous êtes le plus en désaccord',
+  disagreeKinds: { ideology: 'avec votre idéologie', personality: 'avec votre figure', country: 'avec votre pays' },
+  disagreeLegendProfile: 'Profil',
+  gapRank: (position) => (position === 1 ? 'Plus grand écart' : `${position}e plus grand écart`),
+  governmentTitle: 'Votre gouvernement idéal',
+  governmentRolesTitle: 'Le rôle de chacun dans votre gouvernement',
+  governmentSwap: {
+    aria: (seat) => `Changer qui occupe le poste de ${seat}`,
+    title: (seat) => `Changer : ${seat}`,
+    lead: (category) => `Les figures de la catégorie ${category} les plus proches de vous après l’actuelle. Choisissez-en une pour construire votre gouvernement idéal.`,
+    current: 'Actuel',
+    none: 'Il n’y a pas d’autres figures de cette catégorie à échanger.',
+    swapped: 'Changé par vous',
+    searchLabel: 'Ou cherchez n’importe quelle autre figure',
+    holdsNow: (seat) => `Aujourd’hui : ${seat}. Échange de place.`,
+    searchPlaceholder: 'Saisissez un nom',
+    searchNone: 'Aucune personne trouvée avec ce nom.',
+    searchError: 'Impossible de lancer la recherche pour le moment. Veuillez réessayer dans un instant.',
+    searching: 'Recherche en cours…'
+  },
+  governmentRolesLead: 'Chaque poste est décrit à partir de vos positions sur les axes qui y pèsent le plus, pour que vous voyiez pourquoi le résultat est ainsi.',
+  roleAxis: {
+    estrutura: 'Sur la structure,',
+    representacao: 'Politiquement,',
+    poder: 'Sur le pouvoir,',
+    imigracao: 'Sur l’immigration,',
+    diplomacia: 'Sur la diplomatie,',
+    intervencao: 'Sur l’intervention,',
+    economia: 'Sur l’économie,',
+    controle: 'Sur le contrôle,',
+    comercio: 'Sur le commerce,',
+    religiao: 'Sur la religion,',
+    moral: 'Sur la morale,',
+    tecnologia: 'Sur la technologie,'
+  },
+  roleSubject: 'cette personne',
+  governmentWhy: (area, pct) => `Occupe le poste en tant que figure la plus proche de vous dans la catégorie ${area} : ${pct} % de compatibilité.`,
+  governmentWhySwapped: (pct) => `A obtenu le poste grâce à votre changement : ${pct} % de compatibilité avec votre résultat.`,
+  timelineTitle: 'Votre chronologie idéologique',
+  timelineEraNames: {
+    antiguidade: 'Antiquité',
+    medieval: 'Moyen Âge',
+    moderna: 'Époque moderne',
+    xix: 'XIXe siècle',
+    xx: 'XXe siècle',
+    xxi: 'XXIe siècle'
+  },
+  timelineRange: (from, to) => {
+    const year = (value: number) => (value < 0 ? `${-value} av. J.-C.` : String(value));
+    if (from === null && to !== null) return `Jusqu’en ${year(to)}`;
+    if (to === null && from !== null) return `Depuis ${year(from)}`;
+    return `De ${year(from ?? 0)} à ${year(to ?? 0)}`;
+  },
+  timelineCurrent: 'Actuel',
+  timelineBestEra: 'Époque la plus compatible :',
+  seats: {
+    lider: 'Chef politique',
+    vice: 'Chef politique adjoint',
+    economia: 'Responsable de l’économie',
+    educacao: 'Responsable de l’éducation',
+    estrategia: 'Chef de la stratégie politique',
+    filosofia: 'Conseiller philosophique',
+    social: 'Coordinateur des affaires sociales',
+    industria: 'Coordinateur de l’industrie et de l’innovation',
+    cultura: 'Conseiller culturel'
+  },
+  countriesTitle: '10 pays ou régions où vivre',
+  saveTitle: 'Conservez votre accès',
+  saveIntro: 'Pour ouvrir ce rapport sur un autre appareil, ou après avoir vidé votre navigateur, enregistrez le lien ci-dessous. Quiconque possède le lien ouvre le rapport de ce résultat : conservez-le donc avec soin.',
+  saveField: 'Lien d’accès au rapport',
+  saveCopy: 'Copier le lien',
+  saveCopied: 'Lien copié',
+};
+
+export const P: PremiumText = LANG === 'pt' ? pt : LANG === 'es' ? es : LANG === 'de' ? de : LANG === 'it' ? it : LANG === 'ru' ? ru : LANG === 'fr' ? fr : en;

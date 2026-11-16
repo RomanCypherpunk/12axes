@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "brasil",
+    "name": "Brésil",
+    "description": "Le plus grand pays d’Amérique latine, le Brésil est une république fédérale présidentielle démocratique à économie mixte, dotée de vastes politiques sociales et d’une forte diversité régionale, culturelle et politique qui façonne ses joutes électorales.",
+    "category": "République sociale et développementiste"
+  },
+  {
+    "id": "estados-unidos",
+    "name": "États-Unis",
+    "description": "Puissance mondiale et république fédérale présidentielle, les États-Unis combinent une forte tradition libérale, une économie de marché dynamique, l’innovation technologique et un système bipartite qui polarise la vie politique nationale.",
+    "category": "République libérale et fédérale"
+  },
+  {
+    "id": "mexico",
+    "name": "Mexique",
+    "description": "République fédérale présidentielle d’Amérique du Nord, le Mexique allie démocratie électorale, économie de marché intégrée à celle des États-Unis et défis persistants d’inégalités, de corruption et de violence liée à la drogue.",
+    "category": "République populaire et intégrationniste"
+  },
+  {
+    "id": "chile",
+    "name": "Chili",
+    "description": "République présidentielle d’Amérique du Sud, le Chili combine démocratie stable, économie de marché ouverte et programme social et progressiste marqué, héritage de la redémocratisation après la dictature militaire de Pinochet.",
+    "category": "République progressiste et libérale"
+  },
+  {
+    "id": "bolivia",
+    "name": "Bolivie",
+    "description": "République présidentielle andine, la Bolivie est marquée par un leadership autochtone, la défense des ressources naturelles et un projet d’État plurinational qui unit nationalisme économique et large participation populaire.",
+    "category": "République plurinationale et populaire"
+  },
+  {
+    "id": "venezuela",
+    "name": "Venezuela",
+    "description": "République présidentielle d’Amérique du Sud, le Venezuela vit sous un régime autoritaire d’orientation socialiste et nationaliste, marqué par la concentration du pouvoir, une longue crise économique et une forte émigration de sa population.",
+    "category": "Autoritarisme étatiste et socialiste"
+  },
+  {
+    "id": "cuba",
+    "name": "Cuba",
+    "description": "État socialiste à parti unique des Caraïbes, Cuba maintient une économie planifiée, un fort contrôle de l’État et des services publics universels, avec un pouvoir centralisé depuis la révolution dirigée par Fidel Castro en 1959.",
+    "category": "Socialisme égalitaire à parti unique"
+  },
+  {
+    "id": "costa-rica",
+    "name": "Costa Rica",
+    "description": "République présidentielle d’Amérique centrale, le Costa Rica se distingue par l’abolition de ses forces armées, sa démocratie consolidée, son engagement environnemental et une tradition de stabilité politique et de paix dans la région.",
+    "category": "République libérale et pacifiste"
+  },
+  {
+    "id": "suica",
+    "name": "Suisse",
+    "description": "Confédération fédérale européenne, la Suisse est connue pour sa démocratie directe, sa forte autonomie cantonale, sa neutralité historique et une économie prospère fondée sur la finance, l’industrie de précision et la stabilité institutionnelle.",
+    "category": "Démocratie directe libérale"
+  },
+  {
+    "id": "suecia",
+    "name": "Suède",
+    "description": "Monarchie parlementaire nordique, la Suède est une référence de la social-démocratie, avec un vaste État-providence, de lourds impôts, une forte égalité sociale et une économie de marché ouverte et innovante alliée à des valeurs progressistes.",
+    "category": "Monarchie social-démocrate"
+  },
+  {
+    "id": "alemanha",
+    "name": "Allemagne",
+    "description": "République fédérale parlementaire, l’Allemagne est la première économie d’Europe, avec une économie sociale de marché, une puissante industrie d’exportation et un rôle central dans l’Union européenne, unissant stabilité démocratique et poids géopolitique.",
+    "category": "République sociale et exportatrice"
+  },
+  {
+    "id": "franca",
+    "name": "France",
+    "description": "République semi-présidentielle européenne, la France combine une forte tradition républicaine et laïque, un État-providence robuste, une économie mixte et un rôle diplomatique, culturel et militaire de premier plan dans l’Union européenne et dans le monde.",
+    "category": "République sociale et républicaine"
+  },
+  {
+    "id": "uniao-europeia",
+    "name": "Union européenne",
+    "description": "Union politique et économique supranationale, l’Union européenne intègre des États démocratiques par des institutions communes, un marché commun, une réglementation coordonnée, la libre circulation et un fort attachement aux droits, à la laïcité et à la coopération internationale.",
+    "category": "Union supranationale de régulation"
+  },
+  {
+    "id": "reino-unido",
+    "name": "Royaume-Uni",
+    "description": "Monarchie parlementaire, le Royaume-Uni a une longue tradition libérale et démocratique, une économie de marché et un puissant secteur financier, et conserve une influence mondiale après sa sortie de l’Union européenne, le processus connu sous le nom de Brexit.",
+    "category": "Monarchie libérale et financière"
+  },
+  {
+    "id": "hungria",
+    "name": "Hongrie",
+    "description": "République parlementaire d’Europe de l’Est, la Hongrie est gouvernée selon ce qu’on appelle une démocratie illibérale, unissant nationalisme, conservatisme chrétien, souveraineté face à l’Union européenne et fort contrôle des médias et des institutions.",
+    "category": "République nationale et illibérale"
+  },
+  {
+    "id": "russia",
+    "name": "Russie",
+    "description": "République présidentielle eurasienne, la Russie concentre le pouvoir dans un régime autoritaire et nationaliste, avec une économie dépendante des ressources naturelles, un puissant appareil militaire et une politique étrangère de confrontation avec l’Occident.",
+    "category": "Autoritarisme étatiste et rentier"
+  },
+  {
+    "id": "japao",
+    "name": "Japon",
+    "description": "Monarchie parlementaire asiatique, le Japon unit tradition et haute technologie, avec une économie de marché avancée, une société vieillissante et une politique conservatrice stable, maintenant un pacifisme constitutionnel et un fort poids économique mondial.",
+    "category": "Monarchie conservatrice et technologique"
+  },
+  {
+    "id": "coreia-do-sul",
+    "name": "Corée du Sud",
+    "description": "République présidentielle asiatique, la Corée du Sud combine une démocratie vigoureuse, une économie de marché tournée vers l’exportation et un leadership technologique, fruit d’un développement rapide sous une forte impulsion de l’État.",
+    "category": "République technologique et sécuritaire"
+  },
+  {
+    "id": "coreia-do-sul-de-park-chung-hee",
+    "name": "Corée du Sud de Park Chung-hee",
+    "description": "Sous Park Chung-hee, la Corée du Sud a combiné pouvoir militaire autoritaire, anticommunisme rigide, discipline sociale et planification d’État visant une industrialisation tournée vers l’exportation, bâtissant les grands chaebols et préparant l’essor technologique du pays.",
+    "category": "Dictature développementiste et exportatrice"
+  },
+  {
+    "id": "china",
+    "name": "Chine",
+    "description": "État socialiste à parti unique, la Chine unit le contrôle politique absolu du Parti communiste à une économie de marché dirigée par l’État, devenant une puissance industrielle, technologique et géopolitique mondiale.",
+    "category": "Socialisme industriel à parti unique"
+  },
+  {
+    "id": "coreia-do-norte",
+    "name": "Corée du Nord",
+    "description": "État totalitaire à parti unique, la Corée du Nord maintient une économie planifiée, l’isolement international et un culte de la dynastie Kim, unissant communisme, nationalisme et la doctrine d’autosuffisance connue sous le nom de Djoutché.",
+    "category": "Totalitarisme dynastique et autarcique"
+  },
+  {
+    "id": "singapura",
+    "name": "Singapour",
+    "description": "Cité-État asiatique, Singapour est une république parlementaire dominée par un seul parti, combinant capitalisme ouvert, gestion technocratique efficace, ordre strict et libertés politiques limitées au nom du progrès.",
+    "category": "Technocratie libérale à parti unique"
+  },
+  {
+    "id": "vietna",
+    "name": "Viêt Nam",
+    "description": "État socialiste à parti unique, le Viêt Nam maintient le contrôle politique du Parti communiste tout en menant des réformes de marché qui ont ouvert l’économie, favorisant une croissance industrielle rapide et l’intégration au commerce mondial.",
+    "category": "Socialisme réformiste à parti unique"
+  },
+  {
+    "id": "indonesia",
+    "name": "Indonésie",
+    "description": "Premier pays musulman du monde, l’Indonésie est une république archipélagique présidentielle démocratique, avec une économie de marché en expansion, une grande diversité ethnique et religieuse et un poids régional croissant en Asie du Sud-Est.",
+    "category": "République développementiste et plurielle"
+  },
+  {
+    "id": "turquia",
+    "name": "Turquie",
+    "description": "République présidentielle entre l’Europe et l’Asie, la Turquie combine démocratie électorale, forte concentration du pouvoir, nationalisme, conservatisme religieux et politique étrangère affirmée au Moyen-Orient et en Méditerranée.",
+    "category": "Autoritarisme national-religieux"
+  },
+  {
+    "id": "ira",
+    "name": "Iran",
+    "description": "République islamique théocratique, l’Iran combine des institutions élues avec l’autorité suprême des clercs, sous la tutelle du juriste religieux, une économie contrôlée par l’État et une forte projection régionale au Moyen-Orient.",
+    "category": "Théocratie cléricale et étatiste"
+  },
+  {
+    "id": "arabia-saudita",
+    "name": "Arabie saoudite",
+    "description": "Monarchie absolue du Golfe, l’Arabie saoudite unit pouvoir concentré dans la famille royale, application stricte de l’islam et économie dépendante du pétrole, poursuivant une modernisation contrôlée sous la direction du prince héritier.",
+    "category": "Monarchie rentière et religieuse"
+  },
+  {
+    "id": "israel",
+    "name": "Israël",
+    "description": "République parlementaire du Moyen-Orient, Israël combine une démocratie vigoureuse, une forte identité nationale juive, une économie de technologie avancée et un conflit prolongé avec les Palestiniens qui domine sa politique et sa sécurité.",
+    "category": "République nationale et technologique"
+  },
+  {
+    "id": "africa-do-sul",
+    "name": "Afrique du Sud",
+    "description": "République parlementaire, l’Afrique du Sud est la première économie industrielle du continent et une démocratie multiraciale née de la fin de l’apartheid, marquée par la diversité culturelle et de profondes inégalités sociales.",
+    "category": "République industrielle inégalitaire"
+  },
+  {
+    "id": "atenas-democratica",
+    "name": "Athènes démocratique",
+    "description": "Cité-État de la Grèce antique, Athènes fut le berceau de la démocratie directe, les citoyens décidant en assemblée de la marche de la cité, bien que la participation excluât de la vie politique les femmes, les étrangers et les esclaves.",
+    "category": "Démocratie civique d’exclusion"
+  },
+  {
+    "id": "esparta",
+    "name": "Sparte",
+    "description": "Cité-État militariste de la Grèce antique, Sparte organisa toute sa société autour de la guerre, avec un régime mixte de rois et de conseil, une discipline rigide, l’austérité et la domination sur une vaste population assujettie.",
+    "category": "Oligarchie militaire disciplinaire"
+  },
+  {
+    "id": "imperio-macedonico",
+    "name": "Empire macédonien",
+    "description": "Empire né des conquêtes de Philippe II et d’Alexandre le Grand, combinant monarchie militaire macédonienne, administration perse, fondation de cités grecques et fusion culturelle hellénistique sur des territoires divers.",
+    "category": "Monarchie militaire conquérante"
+  },
+  {
+    "id": "imperio-romano",
+    "name": "Empire romain",
+    "description": "Vaste empire de l’Antiquité, Rome unit puissance militaire, droit et administration centralisée sous l’empereur, s’étendant sur trois continents et léguant langue, lois et institutions qui ont façonné la civilisation occidentale.",
+    "category": "Empire militaire centralisé"
+  },
+  {
+    "id": "sacro-imperio-romano-germanico",
+    "name": "Saint-Empire romain germanique (Ier Reich)",
+    "description": "Fédération de territoires d’Europe centrale, le Saint-Empire romain germanique rassembla principautés et villes sous un empereur élu et une forte influence de l’Église, marqué par un pouvoir fragmenté et l’autonomie de ses membres.",
+    "category": "Monarchie élective décentralisée"
+  },
+  {
+    "id": "republica-de-veneza",
+    "name": "République de Venise",
+    "description": "Puissante république marchande médiévale, Venise fut gouvernée par une oligarchie commerçante qui domina le commerce méditerranéen, unissant des institutions stables, une marine puissante et une immense puissance économique pendant des siècles.",
+    "category": "République oligarchique et marchande"
+  },
+  {
+    "id": "imperio-otomano",
+    "name": "Empire ottoman",
+    "description": "Vaste empire musulman, les Ottomans régnèrent pendant des siècles sur des terres s’étendant sur l’Europe, l’Asie et l’Afrique sous le pouvoir du sultan et calife, unissant autorité religieuse et politique à une grande diversité de peuples et de confessions.",
+    "category": "Monarchie absolutiste religieuse"
+  },
+  {
+    "id": "reino-unido-vitoriano-imperio-britanico",
+    "name": "Empire britannique",
+    "description": "À son apogée victorienne, l’Empire britannique fut le plus grand de l’histoire, unissant monarchie parlementaire, révolution industrielle et domination coloniale mondiale, avec une forte expansion commerciale, navale et culturelle à travers le monde.",
+    "category": "Monarchie coloniale et industrielle"
+  },
+  {
+    "id": "imperio-do-brasil",
+    "name": "Empire du Brésil",
+    "description": "Seul empire durable des Amériques, le Brésil impérial fut une monarchie parlementaire sous Pierre Ier et Pierre II, marquée par la stabilité politique, une économie agraire fondée sur l’esclavage et une forte centralisation de l’État.",
+    "category": "Monarchie agraire esclavagiste"
+  },
+  {
+    "id": "alemanha-nazista-terceiro-reich",
+    "name": "Allemagne nazie (IIIe Reich)",
+    "description": "Régime totalitaire dirigé par Hitler, le IIIe Reich imposa une dictature raciste et expansionniste, un culte du chef et un État policier, et fut responsable de la Seconde Guerre mondiale et du génocide de la Shoah.",
+    "category": "Totalitarisme racial et expansionniste"
+  },
+  {
+    "id": "italia-fascista-mussolini",
+    "name": "Italie fasciste (Mussolini)",
+    "description": "Berceau du fascisme, l’Italie de Mussolini fut une dictature totalitaire qui fondit nationalisme, culte du chef, État corporatiste et militarisme, supprimant l’opposition et cherchant l’expansion impériale par la force.",
+    "category": "Dictature corporatiste et nationaliste"
+  },
+  {
+    "id": "chile-de-pinochet",
+    "name": "Chili de Pinochet",
+    "description": "Dictature militaire née du coup d’État de 1973, le Chili de Pinochet unit une sévère répression politique à l’adoption pionnière de réformes néolibérales de libre marché, marquant profondément l’économie et la mémoire du pays.",
+    "category": "Dictature militaire néolibérale"
+  },
+  {
+    "id": "uniao-sovietica-urss",
+    "name": "Union soviétique (URSS)",
+    "description": "Premier État socialiste du monde, l’URSS fut une fédération à parti unique dotée d’une économie planifiée et d’un pouvoir centralisé, devenant une superpuissance mondiale et le pôle du communisme pendant la guerre froide.",
+    "category": "Socialisme planifié à parti unique"
+  },
+  {
+    "id": "china-maoista",
+    "name": "Chine maoïste",
+    "description": "Sous Mao, la Chine révolutionnaire fut un État communiste à parti unique, avec une économie collectivisée et une mobilisation permanente des masses, marquée par des campagnes comme le Grand Bond en avant et la Révolution culturelle.",
+    "category": "Communisme collectiviste à parti unique"
+  },
+  {
+    "id": "camboja-do-khmer-vermelho-pol-pot",
+    "name": "Cambodge des Khmers rouges (Pol Pot)",
+    "description": "Régime radical dirigé par Pol Pot, les Khmers rouges imposèrent un communisme agraire extrême, vidèrent les villes et abolirent la monnaie et la propriété, provoquant l’un des plus grands génocides du XXe siècle au Cambodge.",
+    "category": "Totalitarisme agraire et collectiviste"
+  },
+  {
+    "id": "aragao-e-catalunha-anarquistas-revolucao-espanhola",
+    "name": "Aragon et Catalogne anarchistes",
+    "description": "Pendant la révolution espagnole, des régions d’Aragon et de Catalogne vécurent une expérience anarchiste de collectivisation des terres et des usines, avec autogestion ouvrière et organisation sociale sans État central.",
+    "category": "Anarchisme collectiviste et autogéré"
+  },
+  {
+    "id": "argentina-peronista",
+    "name": "Argentine péroniste",
+    "description": "Sous Perón, l’Argentine connut un régime populiste et nationaliste qui unit un fort soutien ouvrier, le corporatisme, l’industrialisation et l’extension des droits sociaux, laissant une marque durable sur la politique du pays.",
+    "category": "Populisme corporatiste et travailliste"
+  },
+  {
+    "id": "egito-de-nasser",
+    "name": "Égypte de Nasser",
+    "description": "Sous Nasser, l’Égypte fut une république nationaliste et développementiste qui nationalisa des secteurs stratégiques, mena le panarabisme et unit socialisme arabe, réforme agraire et fort leadership au Moyen-Orient.",
+    "category": "République nationaliste et étatiste"
+  },
+  {
+    "id": "africa-do-sul-do-apartheid",
+    "name": "Afrique du Sud de l’apartheid",
+    "description": "Régime de ségrégation raciale institutionnalisée, l’Afrique du Sud de l’apartheid niait des droits à la majorité noire et concentrait le pouvoir dans la minorité blanche, avec des lois de séparation qui provoquèrent une forte résistance intérieure et des sanctions.",
+    "category": "État ségrégationniste racial"
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong (Chine)",
+    "description": "Centre financier mondial, Hong Kong est une région autonome de capitalisme de libre marché affirmé et de gestion technocratique, dont la large autonomie a été de plus en plus restreinte par le contrôle politique de la Chine continentale.",
+    "category": "Région technocratique et financière"
+  },
+  {
+    "id": "argentina",
+    "name": "Argentine",
+    "description": "République fédérale présidentielle, l’Argentine de Javier Milei depuis 2023 mène une politique de rigueur budgétaire, de déréglementation et de privatisation tout en conservant des services publics et en s’alignant sur les États-Unis et Israël, en rupture avec le péronisme.",
+    "category": "République fédérale à réformes de marché"
+  },
+  {
+    "id": "liechtenstein",
+    "name": "Liechtenstein",
+    "description": "Minuscule principauté européenne, le Liechtenstein est une monarchie constitutionnelle prospère, dotée d’une forte autonomie locale, d’une économie libérale fondée sur la finance et l’industrie et de l’un des plus hauts niveaux de revenu par habitant au monde.",
+    "category": "Monarchie libérale et rentière"
+  },
+  {
+    "id": "rojava",
+    "name": "Rojava (Nord et Est de la Syrie)",
+    "description": "Région autonome du nord de la Syrie, le Rojava s’organise selon le confédéralisme démocratique, avec autogestion locale, égalité des genres, pluralisme ethnique et écologie, inspiré des idées libertaires d’Abdullah Öcalan.",
+    "category": "Confédéralisme démocratique et égalitaire"
+  },
+  {
+    "id": "iugoslavia-socialista",
+    "name": "Yougoslavie socialiste",
+    "description": "Fédération socialiste dirigée par Tito, la Yougoslavie adopta l’autogestion ouvrière et une voie indépendante de Moscou, unissant des peuples divers sous un parti unique jusqu’à son éclatement en guerres dans les années 1990.",
+    "category": "Socialisme fédéral autogéré"
+  },
+  {
+    "id": "espanha-franquista",
+    "name": "Espagne franquiste",
+    "description": "Dictature née de la guerre civile, l’Espagne de Franco fut un régime autoritaire, catholique et corporatiste qui unit nationalisme et répression politique et dura jusqu’à la transition démocratique après la mort du dictateur.",
+    "category": "Dictature nationale-catholique"
+  },
+  {
+    "id": "islandia-medieval",
+    "name": "Islande médiévale (État libre)",
+    "description": "Société rare sans État central, l’Islande médiévale était organisée par des chefs locaux et une assemblée, l’Althing, réglant les différends par des lois et des accords privés dans un système décentralisé proche de l’anarchie.",
+    "category": "Ordre coutumier polycentrique"
+  },
+  {
+    "id": "emirados-arabes-unidos",
+    "name": "Émirats arabes unis",
+    "description": "Fédération de monarchies du Golfe, les Émirats arabes unis combinent pouvoir concentré dans les familles royales, économie libérale diversifiée au-delà du pétrole et forts paris sur la technologie, le tourisme et la finance mondiale.",
+    "category": "Fédération rentière diversifiée"
+  },
+  {
+    "id": "portugal-estado-novo",
+    "name": "Portugal (Estado Novo)",
+    "description": "Sous Salazar, l’Estado Novo portugais fut une dictature conservatrice et corporatiste qui unit nationalisme catholique, ordre et contrôle politique sans mobilisation de masse, tenant le pays et ses colonies pendant des décennies.",
+    "category": "Dictature corporatiste catholique"
+  },
+  {
+    "id": "prussia",
+    "name": "Royaume de Prusse",
+    "description": "Royaume allemand à la forte tradition militaire et administrative, la Prusse unit monarchie, bureaucratie disciplinée et armée puissante, menant l’unification allemande et incarnant l’État caméraliste et le despotisme éclairé.",
+    "category": "Monarchie bureaucratique et militaire"
+  },
+  {
+    "id": "polonia",
+    "name": "Pologne",
+    "description": "République parlementaire d’Europe de l’Est, la Pologne combine démocratie, forte identité catholique et nationaliste et économie de marché en croissance, avec une politique marquée par les tensions entre conservatisme et libéralisme.",
+    "category": "République nationale-catholique"
+  },
+  {
+    "id": "ucrania-territorio-livre",
+    "name": "Territoire libre makhnoviste",
+    "description": "Pendant la révolution russe, le Territoire libre de Makhno fut une expérience anarchiste en Ukraine, avec des communes paysannes autogérées et des milices populaires qui rejetaient à la fois l’État blanc et le pouvoir bolchevique.",
+    "category": "Anarchisme de milices paysannes"
+  },
+  {
+    "id": "brasil-era-vargas",
+    "name": "Brésil (ère Vargas)",
+    "description": "Sous Vargas, le Brésil connut un régime nationaliste et développementiste qui promut l’industrialisation dirigée par l’État, la législation du travail et la centralisation du pouvoir, posant les bases du travaillisme brésilien.",
+    "category": "État national et travailliste"
+  },
+  {
+    "id": "tchequia",
+    "name": "Tchéquie",
+    "description": "République parlementaire d’Europe centrale, la Tchéquie combine une démocratie libérale consolidée, une forte tradition laïque, une économie de marché industrialisée et l’intégration à l’Union européenne après la fin du bloc socialiste.",
+    "category": "République libérale et laïque"
+  },
+  {
+    "id": "eua-california",
+    "name": "Californie (États-Unis)",
+    "description": "État le plus peuplé des États-Unis, la Californie est un pôle mondial de technologie et de culture, avec une politique fortement progressiste, écologiste et technocratique et une économie de marché gigantesque et innovante.",
+    "category": "Région technoprogressiste"
+  },
+  {
+    "id": "eua-texas",
+    "name": "Texas (États-Unis)",
+    "description": "Deuxième plus grand État des États-Unis, le Texas se distingue par son conservatisme, sa culture de forte liberté individuelle, sa faible fiscalité et une économie de marché dynamique liée à l’énergie et à l’industrie.",
+    "category": "Région libérale et énergétique"
+  },
+  {
+    "id": "eua-nova-york",
+    "name": "New York (États-Unis)",
+    "description": "Centre financier et culturel des États-Unis, New York combine politique libérale et progressiste, énorme diversité d’immigrants, économie de services mondialisée et fort poids symbolique dans le monde.",
+    "category": "Région financière et cosmopolite"
+  },
+  {
+    "id": "eua-new-hampshire",
+    "name": "New Hampshire (États-Unis)",
+    "description": "Petit État du nord-est des États-Unis, le New Hampshire est connu pour sa forte culture libertarienne, sa faible fiscalité, l’absence d’impôt sur le revenu au niveau de l’État et une devise qui exalte la liberté avant tout.",
+    "category": "Région libertarienne à fiscalité allégée"
+  },
+  {
+    "id": "eua-washington-dc",
+    "name": "Washington, D.C. (États-Unis)",
+    "description": "Capitale des États-Unis, Washington concentre le pouvoir fédéral et les institutions gouvernementales, avec le poids important de l’appareil public, une orientation mondialiste et un rôle central dans la diplomatie et la puissance militaire du pays.",
+    "category": "District fédéral et institutionnel"
+  },
+  {
+    "id": "eua-massachusetts",
+    "name": "Massachusetts (États-Unis)",
+    "description": "État du nord-est des États-Unis, le Massachusetts est un bastion progressiste et un pôle d’éducation et de science, avec des universités prestigieuses, une forte tradition libérale et une politique centrée sur les droits sociaux et l’innovation.",
+    "category": "Région universitaire et progressiste"
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "description": "Monarchie parlementaire fédérale, le Canada combine démocratie stable, multiculturalisme, vaste État-providence et économie de marché riche en ressources naturelles, avec un fort attachement aux droits et à la diversité.",
+    "category": "Monarchie multiculturelle et providentielle"
+  },
+  {
+    "id": "paises-baixos",
+    "name": "Pays-Bas",
+    "description": "Monarchie parlementaire, les Pays-Bas sont connus pour leur tradition libérale, leur tolérance sociale et leur libre-échange, avec une économie ouverte et mondialisée et des politiques progressistes en matière de mœurs et de droits individuels.",
+    "category": "Monarchie libérale et marchande"
+  },
+  {
+    "id": "italia",
+    "name": "Italie",
+    "description": "République parlementaire méditerranéenne, l’Italie unit un long patrimoine culturel, une économie de marché diversifiée et une politique instable et fragmentée, avec la montée récente de forces conservatrices et nationalistes.",
+    "category": "République industrielle fragmentée"
+  },
+  {
+    "id": "espanha",
+    "name": "Espagne",
+    "description": "Monarchie parlementaire, l’Espagne combine démocratie consolidée, forte décentralisation en communautés autonomes, économie de marché et politiques sociales et progressistes, avec des tensions régionales comme la question catalane.",
+    "category": "Monarchie décentralisée et sociale"
+  },
+  {
+    "id": "noruega",
+    "name": "Norvège",
+    "description": "Monarchie parlementaire nordique, la Norvège combine un vaste État-providence, une richesse pétrolière gérée par un grand fonds souverain et une forte égalité sociale, servant de référence en matière de qualité de vie et de social-démocratie.",
+    "category": "Monarchie sociale pétrolière"
+  },
+  {
+    "id": "dinamarca",
+    "name": "Danemark",
+    "description": "Monarchie parlementaire nordique, le Danemark combine un État-providence généreux, de lourds impôts et une économie de marché compétitive, alliant une forte égalité sociale à des politiques migratoires plus restrictives.",
+    "category": "Monarchie sociale et compétitive"
+  },
+  {
+    "id": "australia",
+    "name": "Australie",
+    "description": "Monarchie parlementaire fédérale, l’Australie unit démocratie stable, multiculturalisme et économie de marché riche en ressources naturelles, avec un fort alignement sur l’Occident et une politique migratoire rigoureuse et sélective.",
+    "category": "Monarchie multiculturelle et extractive"
+  },
+  {
+    "id": "nova-zelandia",
+    "name": "Nouvelle-Zélande",
+    "description": "Monarchie parlementaire du Pacifique, la Nouvelle-Zélande est connue pour sa démocratie progressiste, sa protection sociale et son économie de marché ouverte, avec une forte reconnaissance de la culture maorie et du partenariat biculturel du pays.",
+    "category": "Monarchie progressiste et biculturelle"
+  },
+  {
+    "id": "irlanda",
+    "name": "Irlande",
+    "description": "République parlementaire européenne, l’Irlande combine démocratie libérale, économie de marché ouverte attractive pour les multinationales, tradition de neutralité et transformation sociale rapide vers des politiques progressistes.",
+    "category": "République libérale et multinationale"
+  },
+  {
+    "id": "ucrania",
+    "name": "Ukraine",
+    "description": "République semi-présidentielle d’Europe de l’Est, l’Ukraine consolide sa démocratie, son identité nationale et ses liens plus étroits avec l’Occident tout en résistant à l’invasion russe, une lutte qui domine sa politique, son économie et sa société.",
+    "category": "République résistante et occidentalisante"
+  },
+  {
+    "id": "bielorrussia",
+    "name": "Biélorussie",
+    "description": "République présidentielle post-soviétique, la Biélorussie est dirigée par un régime autoritaire et personnaliste, avec un fort contrôle de l’économie par l’État, la répression de l’opposition et une étroite alliance politique avec la Russie.",
+    "category": "Autocratie étatiste et personnaliste"
+  },
+  {
+    "id": "catar",
+    "name": "Qatar",
+    "description": "Petite monarchie absolue du Golfe, le Qatar concentre le pouvoir dans la famille royale et fonde sa richesse sur le gaz naturel, alliant conservatisme religieux et intense projection internationale par les investissements, les médias et la diplomatie.",
+    "category": "Monarchie rentière tournée vers l’extérieur"
+  },
+  {
+    "id": "libano",
+    "name": "Liban",
+    "description": "République parlementaire du Moyen-Orient, le Liban partage le pouvoir entre communautés religieuses dans un système confessionnel, avec pluralisme, un solide secteur des services et une instabilité politique et économique chronique.",
+    "category": "République confessionnelle fragmentée"
+  },
+  {
+    "id": "siria",
+    "name": "Syrie",
+    "description": "Sous le président Ahmed al-Charaa, la Syrie est en transition depuis la chute d’Assad, avec une constitution provisoire en 2025, la reconstruction et des défis d’unité, de sécurité et de droits des minorités.",
+    "category": "République transitoire post-Assad"
+  },
+  {
+    "id": "filipinas",
+    "name": "Philippines",
+    "description": "République présidentielle archipélagique, les Philippines combinent une démocratie dominée par des dynasties politiques, une forte identité catholique et une économie de marché, avec des programmes de sécurité et de lutte contre la criminalité au premier plan.",
+    "category": "Démocratie dynastique catholique"
+  },
+  {
+    "id": "tailandia",
+    "name": "Thaïlande",
+    "description": "Monarchie constitutionnelle d’Asie du Sud-Est, la Thaïlande alterne gouvernements civils et forte influence militaire, avec une monarchie vénérée, un bouddhisme prédominant et une économie de marché tournée vers le tourisme et les exportations.",
+    "category": "Monarchie militarisée et religieuse"
+  },
+  {
+    "id": "malasia",
+    "name": "Malaisie",
+    "description": "Monarchie fédérale élective d’Asie du Sud-Est, la Malaisie combine démocratie, société multiethnique, islam comme religion officielle et économie de marché dirigée par l’État, avec des politiques de discrimination positive en faveur des Malais.",
+    "category": "Monarchie islamique multiethnique"
+  },
+  {
+    "id": "taiwan",
+    "name": "Taïwan",
+    "description": "République présidentielle insulaire, Taïwan est une démocratie vigoureuse et un pôle technologique mondial, notamment pour les semi-conducteurs, vivant sous la menace militaire constante de la Chine, et pionnière en Asie sur des causes progressistes comme l’égalité du mariage.",
+    "category": "République démocratique et technologique"
+  },
+  {
+    "id": "el-salvador",
+    "name": "Salvador",
+    "description": "République présidentielle d’Amérique centrale, le Salvador s’est fait connaître par sa politique de sécurité ferme contre les gangs et son adoption du bitcoin, unissant un fort soutien populaire et la concentration du pouvoir dans l’exécutif.",
+    "category": "République sécuritaire et numérique"
+  },
+  {
+    "id": "colombia",
+    "name": "Colombie",
+    "description": "République présidentielle d’Amérique du Sud gouvernée depuis 2026 par Abelardo de la Espriella, qui a mis fin aux pourparlers avec les groupes armés, repris les frappes aériennes et les extraditions et ordonné l’expulsion des migrants en situation irrégulière ; le Congrès et les tribunaux restent indépendants.",
+    "category": "République conservatrice centrée sur la sécurité"
+  },
+  {
+    "id": "uruguai",
+    "name": "Uruguay",
+    "description": "République présidentielle d’Amérique du Sud, l’Uruguay est reconnu pour sa démocratie solide, sa forte laïcité, ses larges droits sociaux et ses politiques progressistes, alliant stabilité institutionnelle et économie de marché.",
+    "category": "République laïque et progressiste"
+  },
+  {
+    "id": "japao-meiji",
+    "name": "Japon de Meiji",
+    "description": "Pendant l’ère Meiji, le Japon connut une modernisation rapide dirigée par l’empereur, qui abolit le féodalisme, industrialisa le pays et créa des institutions modernes, unissant tradition, nationalisme et ascension militaire.",
+    "category": "Monarchie modernisatrice et industrielle"
+  },
+  {
+    "id": "republica-holandesa",
+    "name": "République néerlandaise (Provinces-Unies)",
+    "description": "République marchande moderne pionnière, les Provinces-Unies étaient une confédération gouvernée par une oligarchie commerçante, marquée par la tolérance religieuse, le libre-échange et une immense puissance navale et financière à leur apogée.",
+    "category": "Confédération marchande tolérante"
+  },
+  {
+    "id": "republica-de-weimar",
+    "name": "République de Weimar",
+    "description": "Première démocratie allemande, la République de Weimar unit parlementarisme, représentation proportionnelle et vie culturelle intense, mais fut minée par les crises économiques et l’instabilité politique qui ouvrirent la voie au nazisme.",
+    "category": "République parlementaire instable"
+  },
+  {
+    "id": "gra-colombia",
+    "name": "Grande-Colombie",
+    "description": "République éphémère créée par Simón Bolívar, la Grande-Colombie rassembla de vastes territoires du nord de l’Amérique du Sud en un État centraliste et militarisé, qui se dissolut en quelques années à cause de rivalités régionales et politiques.",
+    "category": "République centraliste et militarisée"
+  },
+  {
+    "id": "vaticano",
+    "name": "Cité du Vatican",
+    "description": "Cité-État gouvernée par le Saint-Siège, le Vatican combine souveraineté religieuse, monarchie absolue élective et administration cléricale, fonctionnant comme centre institutionnel de l’Église catholique et acteur diplomatique mondial.",
+    "category": "Monarchie théocratique cléricale"
+  },
+  {
+    "id": "monaco",
+    "name": "Monaco",
+    "description": "Petite principauté méditerranéenne, Monaco combine monarchie constitutionnelle, faible fiscalité et forte dépendance aux services financiers et au tourisme de luxe, maintenant un ordre social conservateur et une grande ouverture économique.",
+    "category": "Monarchie rentière et touristique"
+  },
+  {
+    "id": "estonia",
+    "name": "Estonie",
+    "description": "République parlementaire balte, l’Estonie unit démocratie libérale, économie ouverte, État numérique avancé et fort alignement euro-atlantique, restant vigilante sur la souveraineté nationale face à la pression russe.",
+    "category": "République numérique et atlantiste"
+  },
+  {
+    "id": "luxemburgo",
+    "name": "Luxembourg",
+    "description": "Grand-duché européen et centre financier mondial, le Luxembourg combine monarchie parlementaire, économie ouverte, profonde intégration européenne et société multiculturelle soutenue par les services, la technologie et la finance.",
+    "category": "Monarchie financière intégrée"
+  },
+  {
+    "id": "eua-florida",
+    "name": "Floride (États-Unis)",
+    "description": "État américain au profil conservateur et favorable au marché, la Floride combine faible fiscalité, tourisme, immigration intense, politique culturelle combative et gouvernement d’État actif en matière de sécurité et d’éducation.",
+    "category": "Région conservatrice et touristique"
+  },
+  {
+    "id": "imperio-do-japao",
+    "name": "Empire du Japon",
+    "description": "Le régime impérial japonais du début du XXe siècle combinait monarchie sacrée, militarisme, industrialisation accélérée, nationalisme expansionniste et forte discipline sociale jusqu’à sa défaite lors de la Seconde Guerre mondiale.",
+    "category": "Monarchie militariste et expansionniste"
+  },
+  {
+    "id": "imperio-austro-hungaro",
+    "name": "Empire austro-hongrois",
+    "description": "Monarchie duale d’Europe centrale, l’Empire austro-hongrois rassembla de multiples nationalités sous la dynastie des Habsbourg, combinant aristocratie, bureaucratie impériale, catholicisme politique et tensions nationalistes croissantes.",
+    "category": "Monarchie duale aristocratique"
+  },
+  {
+    "id": "butao",
+    "name": "Bhoutan",
+    "description": "Petit royaume himalayen, le Bhoutan combine monarchie constitutionnelle bouddhiste, forte protection de la culture traditionnelle et de la nature, et Bonheur national brut comme boussole de gouvernement, avec une ouverture prudente sur l’extérieur.",
+    "category": "Monarchie bouddhiste et écologiste"
+  },
+  {
+    "id": "imperio-persa-aquemenida",
+    "name": "Empire perse (achéménide)",
+    "description": "Premier grand empire universel de l’histoire, la Perse achéménide gouverna des dizaines de peuples par des satrapies autonomes, des routes et le tribut, tolérant langues, lois et religions locales sous l’autorité absolue du Roi des rois.",
+    "category": "Empire satrapique tolérant"
+  },
+  {
+    "id": "comuna-de-paris",
+    "name": "Commune de Paris",
+    "description": "Gouvernement révolutionnaire qui tint Paris pendant 72 jours en 1871, la Commune instaura la démocratie directe avec des mandats révocables, l’autogestion ouvrière des ateliers, la séparation de l’Église et de l’État et l’égalité salariale, devenant un symbole du socialisme communal.",
+    "category": "Socialisme communal autogéré"
+  },
+  {
+    "id": "catalunha",
+    "name": "Catalogne (Espagne)",
+    "description": "Région autonome du nord-est de l’Espagne, la Catalogne combine identité nationale et langue propres, économie industrielle et cosmopolite, politique sociale progressiste et un fort mouvement indépendantiste qui a culminé avec le référendum de 2017.",
+    "category": "Région indépendantiste et industrielle"
+  },
+  {
+    "id": "florenca-renascentista",
+    "name": "Florence de la Renaissance",
+    "description": "Cité-État de la Renaissance italienne, Florence unit capitalisme bancaire et commercial, querelles de factions entre corporations et familles comme les Médicis, et un mécénat qui a révolutionné les arts, les lettres et la pensée politique.",
+    "category": "République marchande et clientéliste"
+  },
+  {
+    "id": "roma-republicana",
+    "name": "Rome républicaine",
+    "description": "République aristocratique de l’Antiquité, Rome équilibrait consuls, Sénat et tribuns de la plèbe dans un système mixte de magistratures électives, s’étendant à travers la Méditerranée grâce à des légions de citoyens et à un fort culte de la vertu civique.",
+    "category": "République sénatoriale et expansionniste"
+  },
+  {
+    "id": "hungria-de-kadar",
+    "name": "Hongrie de Kádár",
+    "description": "Établi après l’écrasement de la révolution de 1956, le régime de Kádár combina parti unique, alignement soviétique, libéralisation économique graduelle, un petit secteur privé et bien-être de consommation.",
+    "category": "Socialisme consumériste à parti unique"
+  },
+  {
+    "id": "chile-de-allende",
+    "name": "Chili d’Allende",
+    "description": "Sous l’Unité populaire d’Allende, le Chili tenta un socialisme démocratique par la nationalisation du cuivre et des banques, la réforme agraire et la planification économique, jusqu’au coup d’État militaire de 1973.",
+    "category": "Socialisme démocratique et nationalisateur"
+  },
+  {
+    "id": "burkina-faso-de-sankara",
+    "name": "Burkina Faso de Sankara",
+    "description": "Sous Thomas Sankara, le Burkina Faso combina autosuffisance alimentaire, campagnes de vaccination et d’alphabétisation de masse, émancipation des femmes, refus de la dette extérieure et rupture frontale avec le néocolonialisme français.",
+    "category": "Socialisme révolutionnaire anticolonial"
+  },
+  {
+    "id": "eua-confederados",
+    "name": "États confédérés d’Amérique",
+    "description": "Formés par la sécession de onze États du Sud pour préserver l’esclavage, les États confédérés combinaient un confédéralisme d’États radical, une société agraire traditionaliste et religieuse et le libre-échange, avant d’être vaincus dans la guerre de Sécession.",
+    "category": "Confédération agraire esclavagiste"
+  },
+  {
+    "id": "macau",
+    "name": "Macao (Chine)",
+    "description": "Région administrative spéciale chinoise et premier centre de jeux d’argent du monde, Macao unit des impôts très bas, une économie hyperouverte de casinos et de tourisme, un héritage catholique portugais et un système politique contrôlé par Pékin, sans démocratie complète.",
+    "category": "Région de loisirs hyperouverte"
+  },
+  {
+    "id": "estados-papais",
+    "name": "États pontificaux",
+    "description": "État temporel de la papauté, les États pontificaux unirent autorité spirituelle et politique sous le pape, appliquant le droit canon et un gouvernement clérical sur l’Italie centrale pendant des siècles.",
+    "category": "Théocratie cléricale territoriale"
+  },
+  {
+    "id": "imperio-bizantino",
+    "name": "Empire byzantin",
+    "description": "Héritier de l’Empire romain d’Orient, Byzance dura mille ans en fusionnant christianisme orthodoxe, autocratie impériale et droit justinien, avec l’empereur comme chef de l’Église et Constantinople comme capitale chrétienne défendant l’Europe.",
+    "category": "Autocratie césaropapiste orthodoxe"
+  },
+  {
+    "id": "espanha-habsburgos",
+    "name": "Espagne des Habsbourg",
+    "description": "L’Espagne des Habsbourg, surtout sous Philippe II, fut un État catholique de la Contre-Réforme, marqué par l’Inquisition, les lois de pureté du sang, les expulsions religieuses et les guerres de défense de la foi.",
+    "category": "Monarchie catholique de la Contre-Réforme"
+  },
+  {
+    "id": "imperio-russo-czarista",
+    "name": "Empire russe tsariste",
+    "description": "L’Empire russe sous les Romanov combinait christianisme orthodoxe, autocratie dynastique, expansion territoriale et bureaucratie impériale, le tsar étant chef politique et défenseur de la foi officielle.",
+    "category": "Autocratie dynastique orthodoxe"
+  },
+  {
+    "id": "genebra-calvinista",
+    "name": "Genève calviniste",
+    "description": "La ville de Genève sous Calvin (1541-1564) s’organisa en théocratie réformée urbaine, le Consistoire disciplinant la morale publique et les Ordonnances ecclésiastiques réglant toute la vie religieuse et civile et exportant le puritanisme.",
+    "category": "Théocratie réformée disciplinaire"
+  },
+  {
+    "id": "imperio-portugues",
+    "name": "Empire portugais",
+    "description": "Le premier et le plus durable des empires coloniaux européens (1415-1822), il unit monarchie absolue, catholicisme militant et thalassocratie mondiale, portant la foi chrétienne, la langue et l’administration portugaises des Amériques à l’Afrique, à l’Inde et à l’Asie.",
+    "category": "Monarchie thalassocratique catholique"
+  },
+  {
+    "id": "austria",
+    "name": "Autriche",
+    "description": "République fédérale parlementaire d’Europe centrale, l’Autriche combine neutralité militaire, État-providence robuste, économie sociale de marché, culture modérée catholique et laïque et profonde intégration à l’Union européenne.",
+    "category": "République sociale et neutraliste"
+  },
+  {
+    "id": "imperio-alemao",
+    "name": "Empire allemand (IIe Reich)",
+    "description": "L’État impérial allemand de 1871 à 1918 unit fédéralisme dirigé par la Prusse, monarchie constitutionnelle limitée, suffrage masculin pour le Reichstag, forte autorité du Kaiser et du chancelier, industrialisation rapide, militarisme et politique étrangère d’une puissance montante.",
+    "category": "Monarchie constitutionnelle et militariste"
+  },
+  {
+    "id": "portugal",
+    "name": "Portugal",
+    "description": "République semi-présidentielle européenne, le Portugal combine démocratie consolidée, économie de marché intégrée à l’Union européenne, État-providence modéré, faible conflictualité institutionnelle, héritage catholique sécularisé et forte ouverture atlantique.",
+    "category": "République sociale et atlantiste"
+  },
+  {
+    "id": "alemanha-oriental",
+    "name": "Allemagne de l’Est",
+    "description": "La République démocratique allemande fut un État socialiste aligné sur l’Union soviétique, avec parti unique, vaste police politique, économie planifiée, contrôle social rigide, sécularisation étatique et intégration militaire au bloc de l’Est.",
+    "category": "Socialisme de surveillance à parti unique"
+  },
+  {
+    "id": "islandia",
+    "name": "Islande",
+    "description": "République parlementaire nordique, l’Islande combine démocratie stable, État-providence, économie de marché ouverte, société très laïque et progressiste, forte confiance dans les institutions et politique étrangère pacifique sans forces armées permanentes.",
+    "category": "République sociale et pacifiste"
+  },
+  {
+    "id": "finlandia",
+    "name": "Finlande",
+    "description": "République parlementaire nordique, la Finlande combine État-providence, économie sociale de marché, hautes performances éducatives et technologiques, valeurs progressistes et culture stratégique façonnée par la défense territoriale et sa frontière avec la Russie.",
+    "category": "République sociale et défensive"
+  },
+  {
+    "id": "imperio-mongol",
+    "name": "Empire mongol",
+    "description": "Fondé par Gengis Khan, l’Empire mongol unifia les tribus de la steppe, s’étendit par des campagnes militaires dévastatrices et gouverna des peuples divers par la vassalité, le tribut et une tolérance religieuse pragmatique.",
+    "category": "Confédération militaire tributaire"
+  },
+  {
+    "id": "brasil-regime-militar",
+    "name": "Brésil sous le régime militaire",
+    "description": "Dictature installée en 1964, combinant répression politique, censure et organes de sécurité avec développementisme d’État, grands projets d’infrastructure, réserves de marché et moralisme conservateur pendant la guerre froide.",
+    "category": "Dictature développementiste et conservatrice"
+  },
+  {
+    "id": "mexico-de-cardenas",
+    "name": "Mexique de Cárdenas",
+    "description": "Gouvernement du sommet du cardénisme, marquant la Révolution mexicaine institutionnalisée par la nationalisation du pétrole, la réforme agraire des ejidos, l’incorporation des ouvriers et des paysans, la laïcité populaire et un fort leadership présidentiel.",
+    "category": "Populisme nationaliste et agrarien"
+  },
+  {
+    "id": "confederacao-helvetica",
+    "name": "Ancienne Confédération suisse",
+    "description": "Alliance médiévale de cantons autonomes formée à partir du Pacte de 1291, l’ancienne Confédération suisse fonctionnait sans pouvoir central fort, combinant démocratie directe dans les assemblées locales (Landsgemeinde), milices paysannes indépendantes et faible coordination militaire et diplomatique commune entre les cantons.",
+    "category": "Confédération cantonale coutumière"
+  },
+  {
+    "id": "imperio-napoleonico",
+    "name": "Empire napoléonien",
+    "description": "Sous Napoléon Bonaparte, le Premier Empire français concentra le pouvoir absolu dans l’empereur, imposa le Code civil et une administration centralisée à travers l’Europe conquise et soutint son expansion territoriale par une guerre continue et une armée de conscription de masse.",
+    "category": "Monarchie autoritaire et militariste"
+  },
+  {
+    "id": "armenia",
+    "name": "Arménie",
+    "description": "République semi-présidentielle du Caucase, l’Arménie combine identité nationale chrétienne et rivalité historique avec l’Azerbaïdjan et la Turquie, cherchant un équilibre entre la Russie, l’Occident et l’Iran.",
+    "category": "République nationale et diasporique"
+  },
+  {
+    "id": "georgia",
+    "name": "Géorgie",
+    "description": "République semi-présidentielle du Caucase, la Géorgie poursuit l’intégration à l’Union européenne et à l’OTAN, maintient une économie de marché ouverte et fait face à l’occupation russe de l’Abkhazie et de l’Ossétie du Sud depuis 2008.",
+    "category": "République occidentalisante de la frontière"
+  },
+  {
+    "id": "belgica",
+    "name": "Belgique",
+    "description": "Monarchie parlementaire fédérale composée de trois régions et de trois communautés linguistiques, avec des élections compétitives, une large protection sociale et une économie ouverte intégrée à l’Union européenne. La politique nationale combine coalitions multipartites, autonomie régionale et garanties de liberté religieuse.",
+    "category": "Monarchie parlementaire fédérale"
+  },
+  {
+    "id": "panama",
+    "name": "Panama",
+    "description": "République présidentielle unitaire qui a aboli ses forces armées permanentes et maintient une économie dollarisée centrée sur le Canal, les services financiers, la zone franche de Colón et l’intégration au commerce international.",
+    "category": "République présidentielle et économie de services"
+  },
+  {
+    "id": "peru",
+    "name": "Pérou",
+    "description": "République présidentielle unitaire marquée par une grave instabilité politique et des destitutions présidentielles successives, avec une économie ouverte fondée sur l’exploitation minière, une informalité du travail généralisée et de profondes inégalités entre la côte et les régions andines et amazoniennes.",
+    "category": "République présidentielle andine"
+  },
+  {
+    "id": "paraguai",
+    "name": "Paraguay",
+    "description": "République présidentielle unitaire gouvernée depuis des décennies par le Parti Colorado, avec une faible fiscalité, une économie exportatrice de soja et de bœuf, une importante production hydroélectrique à Itaipú et une société conservatrice, en majorité catholique, bilingue en guarani.",
+    "category": "République présidentielle"
+  },
+  {
+    "id": "eslovenia",
+    "name": "Slovénie",
+    "description": "République parlementaire qui s’est séparée pacifiquement de la Yougoslavie en 1991 et a rejoint l’Union européenne, l’OTAN et l’euro, combinant économie de marché, forte protection sociale, syndicats influents et société largement laïque.",
+    "category": "République parlementaire"
+  },
+  {
+    "id": "eslovaquia",
+    "name": "Slovaquie",
+    "description": "République parlementaire née de la scission pacifique de la Tchécoslovaquie en 1993, intégrée à l’Union européenne, à l’OTAN et à l’euro, avec une économie industrielle centrée sur la construction automobile et une politique marquée par le nationalisme, le traditionalisme catholique et le scepticisme envers l’aide militaire étrangère.",
+    "category": "République parlementaire"
+  },
+  {
+    "id": "rodesia",
+    "name": "Rhodésie",
+    "description": "Après avoir proclamé unilatéralement son indépendance du Royaume-Uni en 1965, la Rhodésie maintint le pouvoir dans une minorité blanche par un suffrage censitaire, soutint une économie agricole et minière sous sanctions internationales et mena une longue guerre civile jusqu’à la transition vers le Zimbabwe.",
+    "category": "État à minorité blanche"
+  },
+  {
+    "id": "suica-zug",
+    "name": "Zoug (Suisse)",
+    "description": "Plus petit canton de Suisse et l’une des juridictions les moins imposées au monde, Zoug attire holdings et fondations par une faible fiscalité, abrite la Crypto Valley autour d’Ethereum et accepte le paiement des impôts en bitcoin, sous la démocratie directe cantonale.",
+    "category": "Région crypto-fiscale"
+  },
+  {
+    "id": "chiapas",
+    "name": "Chiapas zapatiste (Mexique)",
+    "description": "Territoires zapatistes du sud du Mexique, autogouvernés depuis 1994 par des communautés majoritairement mayas au moyen de caracoles et de Conseils de bon gouvernement, rejetant les partis politiques et l’État, avec une économie agraire coopérative et un fort leadership des femmes.",
+    "category": "Autonomie indigène et communautaire"
+  },
+  {
+    "id": "baviera",
+    "name": "Bavière (Allemagne)",
+    "description": "Plus grand Land d’Allemagne, la Bavière combine forte identité régionale et catholicisme, domination historique de la CSU, industrie de pointe (BMW, Siemens) et défense active de son autonomie fiscale et culturelle face à Berlin.",
+    "category": "Région conservatrice et industrielle"
+  },
+  {
+    "id": "porto-rico",
+    "name": "Porto Rico (États-Unis)",
+    "description": "Territoire non incorporé des États-Unis dans les Caraïbes, Porto Rico détient la citoyenneté américaine sans pleine représentation de vote au Congrès, fait face à un débat permanent entre statut d’État, indépendance et statut actuel, et lutte contre une crise de la dette et une forte dépendance aux incitations fiscales fédérales.",
+    "category": "Territoire colonial non incorporé"
+  },
+  {
+    "id": "eua-wyoming",
+    "name": "Wyoming (États-Unis)",
+    "description": "État américain le moins peuplé, le Wyoming ne prélève aucun impôt d’État sur le revenu ni sur les sociétés, fonde son économie sur le pétrole, le gaz et les mines et combine une forte culture des armes à une profonde méfiance envers le gouvernement fédéral.",
+    "category": "Région libertarienne et extractive"
+  },
+  {
+    "id": "peru-fujimorista",
+    "name": "Pérou de Fujimori",
+    "description": "Sous Alberto Fujimori, le Pérou combina un autocoup d’État et la fermeture du Congrès avec des réformes néolibérales de choc, des privatisations et la libéralisation du commerce, ainsi qu’une sale guerre contre le Sentier lumineux marquée par des massacres et des stérilisations forcées.",
+    "category": "Dictature néolibérale et populiste"
+  },
+  {
+    "id": "palestina",
+    "name": "Palestine",
+    "description": "Reconnue par l’ONU comme État observateur, la Palestine est gouvernée par l’Autorité palestinienne dirigée par le Fatah, avec un territoire divisé entre la Cisjordanie occupée et une bande de Gaza dévastée par la guerre, une économie dépendante de l’aide et des élections suspendues depuis vingt ans.",
+    "category": "Autorité fragmentée sous occupation"
+  },
+  {
+    "id": "escocia",
+    "name": "Écosse (Royaume-Uni)",
+    "description": "Nation constitutive du Royaume-Uni, l’Écosse a son propre parlement, une identité nationale et une langue distinctes, un fort mouvement indépendantiste (référendum de 2014) et une politique social-démocrate plus à gauche que celle de l’Angleterre.",
+    "category": "Nation indépendantiste et social-démocrate"
+  },
+  {
+    "id": "sao-paulo",
+    "name": "São Paulo (Brésil)",
+    "description": "État le plus peuplé et le plus riche du Brésil, São Paulo est le moteur industriel et financier du pays, marqué par un fort libéralisme économique, une culture cosmopolite et un poids décisif dans la politique nationale.",
+    "category": "Région industrielle et financière"
+  },
+  {
+    "id": "rio-de-janeiro",
+    "name": "Rio de Janeiro (Brésil)",
+    "description": "État symbole du tourisme et de la culture brésiliens, Rio de Janeiro fait face à la violence urbaine et à des disputes territoriales entre milices et bandes de trafiquants, avec une politique dominée par la sécurité publique et le populisme.",
+    "category": "Région touristique et sécuritaire"
+  },
+  {
+    "id": "santa-catarina",
+    "name": "Santa Catarina (Brésil)",
+    "description": "État du sud peuplé d’immigrants açoriens et d’autres Européens, Santa Catarina a un indice de développement humain élevé, une économie diversifiée de petites et moyennes entreprises et un électorat majoritairement conservateur.",
+    "category": "Région industrielle et conservatrice"
+  },
+  {
+    "id": "parana",
+    "name": "Paraná (Brésil)",
+    "description": "État du sud doté d’une forte agro-industrie et d’un peuplement d’immigrants européens, le Paraná combine une économie agricole et industrielle prospère avec un électorat majoritairement conservateur et libéral sur le plan économique.",
+    "category": "Région agro-industrielle conservatrice"
+  },
+  {
+    "id": "rio-grande-do-sul",
+    "name": "Rio Grande do Sul (Brésil)",
+    "description": "État le plus méridional du Brésil, le Rio Grande do Sul a une forte identité régionale et une tradition de joutes politiques polarisées, avec une économie fondée sur l’agro-industrie, l’élevage et l’industrie.",
+    "category": "Région d’élevage et d’agrobusiness"
+  },
+  {
+    "id": "minas-gerais",
+    "name": "Minas Gerais (Brésil)",
+    "description": "État minier historique et berceau d’une conjuration indépendantiste avortée du XVIIIe siècle contre la domination coloniale, le Minas Gerais a une économie fondée sur les mines et l’agriculture, avec une politique traditionnellement modérée et conciliante.",
+    "category": "Région historique et modérée"
+  },
+  {
+    "id": "reino-de-jerusalem",
+    "name": "Royaume de Jérusalem",
+    "description": "État croisé fondé après la première croisade, le royaume de Jérusalem était une monarchie féodale catholique latine, appuyée par les ordres militaires des Templiers et des Hospitaliers, avec de puissants barons, une guerre sainte constante et une élite franque au-dessus d’une majorité autochtone.",
+    "category": "Monarchie féodale des croisés"
+  },
+  {
+    "id": "siria-de-assad",
+    "name": "Syrie d’Assad",
+    "description": "Sous Bachar el-Assad (2000-2024), la Syrie fut un régime baasiste centralisé soutenu par les forces de sécurité, une économie d’État clientéliste et des alliances avec la Russie et l’Iran pendant la guerre civile.",
+    "category": "République baasiste autoritaire"
+  },
+  {
+    "id": "ira-pahlavi",
+    "name": "Iran sous le Shah",
+    "description": "Sous Mohammad Reza Pahlavi après 1953, l’Iran combina monarchie autoritaire et répression politique avec l’industrialisation, la réforme agraire et les droits des femmes de la Révolution blanche. Allié des États-Unis, il finança son développement par le pétrole jusqu’en 1979.",
+    "category": "Monarchie autoritaire modernisatrice"
+  },
+  {
+    "id": "libia-de-gaddafi",
+    "name": "Libye de Kadhafi",
+    "description": "Sous Mouammar Kadhafi (1969-2011), la Libye nationalisa le pétrole et proclama la démocratie directe de la Jamahiriya. Le pouvoir resta concentré en Kadhafi, appuyé par des comités révolutionnaires et la répression de l’opposition.",
+    "category": "Jamahiriya socialiste autoritaire"
+  },
+  {
+    "id": "iraque-baathista",
+    "name": "Irak baasiste",
+    "description": "Gouverné par le parti Baas de 1968 à 2003, l’Irak combina nationalisme arabe, pétrole d’État et parti unique. Sous Saddam Hussein, le régime intensifia la répression, fit la guerre à l’Iran et au Koweït et subit des sanctions internationales.",
+    "category": "République baasiste autoritaire"
+  },
+  {
+    "id": "reino-da-franca",
+    "name": "Royaume de France",
+    "description": "De la Francie occidentale à l’abolition de la monarchie en 1792, le royaume passa de la féodalité à l’absolutisme centralisé. L’Église catholique, l’aristocratie foncière et l’expansion militaire ont façonné une grande partie de son histoire.",
+    "category": "Monarchie chrétienne de longue durée"
+  },
+  {
+    "id": "reino-de-castela",
+    "name": "Royaume de Castille",
+    "description": "Uni au León en 1230, la Castille s’étendit à travers l’Ibérie puis aux Amériques. La Couronne, la noblesse et l’Église catholique façonnèrent sa politique ; les institutions évoluèrent au cours des près de cinq siècles couverts ici.",
+    "category": "Monarchie chrétienne ibérique"
+  },
+  {
+    "id": "coroa-de-aragao",
+    "name": "Couronne d’Aragon",
+    "description": "Union dynastique de l’Aragon, de la Catalogne et d’autres terres méditerranéennes dont les royaumes constituants conservaient leurs propres lois et assemblées. La Couronne s’étendit par le commerce et la conquête ; ses institutions furent progressivement abolies après la guerre de Succession d’Espagne.",
+    "category": "Monarchie chrétienne composite"
+  },
+  {
+    "id": "reino-da-hungria",
+    "name": "Royaume de Hongrie",
+    "description": "Fondé sous Étienne Ier, le royaume connut des dynasties autochtones, une domination ottomane partielle et le gouvernement des Habsbourg. Noblesse, catholicisme et autonomie hongroise y jouèrent des rôles changeants pendant près d’un millénaire.",
+    "category": "Monarchie chrétienne d’Europe centrale"
+  },
+  {
+    "id": "antigo-egito",
+    "name": "Égypte antique",
+    "description": "Civilisation de la vallée du Nil gouvernée par des dynasties pharaoniques à travers des périodes d’unité et de fragmentation. La royauté sacrée, les temples et l’administration agricole structuraient la société ; pratiques et institutions variaient sur trois millénaires.",
+    "category": "Monarchie pharaonique"
+  },
+  {
+    "id": "paquistao",
+    "name": "Pakistan",
+    "description": "République islamique parlementaire et puissance nucléaire, le Pakistan alterne gouvernements civils et forte tutelle de l’armée, avec des lois d’inspiration charaïque, une économie mixte dépendante de l’aide étrangère et une rivalité permanente avec l’Inde.",
+    "category": "République islamique sous tutelle militaire"
+  },
+  {
+    "id": "egito-atual",
+    "name": "Égypte",
+    "description": "République présidentielle arabe, l’Égypte est gouvernée par un régime autoritaire au fort poids militaire, qui privilégie la sécurité et la stabilité, contrôle l’opposition et dirige une grande partie de l’économie par l’État.",
+    "category": "Régime militaire et étatiste"
+  },
+  {
+    "id": "afeganistao",
+    "name": "Afghanistan",
+    "description": "Émirat islamique dirigé par les talibans depuis 2021, l’Afghanistan est gouverné par un guide suprême clérical qui impose une interprétation stricte de la charia, interdit aux femmes l’éducation et le travail, et fait face à une crise économique et à l’isolement.",
+    "category": "Émirat théocratique"
+  },
+  {
+    "id": "marrocos",
+    "name": "Maroc",
+    "description": "Monarchie constitutionnelle d’Afrique du Nord, le Maroc a un parlement élu, mais le roi, Commandeur des croyants, détient le pouvoir réel, avec un islam officiel, une économie de marché ouverte au commerce et une revendication sur le Sahara occidental.",
+    "category": "Monarchie islamique parlementaire"
+  },
+  {
+    "id": "bahrein",
+    "name": "Bahreïn",
+    "description": "Monarchie du golfe Persique dirigée par la dynastie sunnite des Al Khalifa sur une majorité chiite, Bahreïn combine un centre financier libéralisé, un parlement aux pouvoirs limités, la répression de l’opposition depuis 2011 et l’alignement sur l’Arabie saoudite et les États-Unis.",
+    "category": "Monarchie sunnite du Golfe"
+  },
+  {
+    "id": "albania",
+    "name": "Albanie",
+    "description": "République parlementaire des Balkans à majorité musulmane, l’Albanie est un État laïque à forte coexistence interconfessionnelle, avec une économie de marché après la fin du régime communiste d’Enver Hoxha, l’appartenance à l’OTAN et la candidature à l’Union européenne.",
+    "category": "République parlementaire laïque"
+  },
+  {
+    "id": "califado-abassida",
+    "name": "Califat abbasside",
+    "description": "Califat sunnite dont la capitale était Bagdad, les Abbassides régnèrent du Maghreb à l’Asie centrale sous un calife doté d’une autorité religieuse et politique, avec une bureaucratie de style persan, un commerce à longue distance et la Maison de la sagesse à l’âge d’or islamique.",
+    "category": "Califat islamique"
+  },
+  {
+    "id": "sri-lanka",
+    "name": "Sri Lanka",
+    "description": "République présidentielle insulaire d’Asie du Sud, le Sri Lanka accorde la primauté constitutionnelle au bouddhisme, a remporté en 2009 la guerre contre les séparatistes tamouls, a connu la crise de la dette de 2022 et a élu une coalition de gauche en 2024.",
+    "category": "République nationale bouddhiste"
+  },
+  {
+    "id": "mianmar",
+    "name": "Myanmar",
+    "description": "Pays d’Asie du Sud-Est dirigé par une junte militaire depuis le coup d’État de 2021, le Myanmar est en guerre civile contre des milices ethniques et prodémocratiques, avec un nationalisme bouddhiste officiel et la persécution de la minorité musulmane rohingya.",
+    "category": "Junte militaire bouddhiste"
+  },
+  {
+    "id": "mongolia",
+    "name": "Mongolie",
+    "description": "République démocratique entre la Russie et la Chine, la Mongolie a quitté le régime communiste en 1990 et connaît des élections compétitives, une économie de marché dépendante des mines, une tradition nomade et un renouveau du bouddhisme tibétain.",
+    "category": "Démocratie postcommuniste"
+  },
+  {
+    "id": "turquia-de-ataturk",
+    "name": "Turquie d’Atatürk",
+    "description": "République fondée par Mustafa Kemal Atatürk sur les ruines de l’Empire ottoman, la Turquie kémaliste abolit le califat et imposa la laïcité, l’alphabet latin, les droits des femmes et l’étatisme économique sous le parti unique CHP.",
+    "category": "République kémaliste à parti unique"
+  },
+  {
+    "id": "daguestao",
+    "name": "Daghestan (Russie)",
+    "description": "République de la Fédération de Russie dans le Caucase du Nord, le Daghestan est multiethnique et majoritairement musulman sunnite, avec une forte religiosité soufie, des clans locaux, une dépendance aux subventions de Moscou, la répression de l’islamisme radical et peu d’autonomie réelle.",
+    "category": "Région musulmane sous tutelle"
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid (Espagne)",
+    "description": "Communauté autonome autour de la capitale espagnole, Madrid est gouvernée par le Parti populaire depuis 1995 et, sous Isabel Díaz Ayuso, est devenue la vitrine des impôts bas, de la liberté économique, du libre choix de l’école et de l’attraction de capitaux et d’immigrants latino-américains.",
+    "category": "Région libérale-conservatrice"
+  },
+  {
+    "id": "japao-tokugawa",
+    "name": "Japon des Tokugawa",
+    "description": "Le shogunat Tokugawa pacifia le Japon après l’époque Sengoku par un système féodal de domaines (bakuhan), une hiérarchie sociale rigide en quatre classes, un néoconfucianisme officiel, l’interdiction du christianisme et l’isolement extérieur (sakoku).",
+    "category": "Shogunat féodal isolationniste"
+  },
+  {
+    "id": "senegal",
+    "name": "Sénégal",
+    "description": "République d’Afrique de l’Ouest à majorité musulmane soufie, le Sénégal est une démocratie laïque stable qui, depuis 2024, sous Bassirou Diomaye Faye et Ousmane Sonko, mène un souverainisme de gauche : il a retiré les troupes françaises et critique le franc CFA.",
+    "category": "République présidentielle souverainiste"
+  },
+  {
+    "id": "nigeria",
+    "name": "Nigéria",
+    "description": "Pays le plus peuplé d’Afrique, le Nigéria est une fédération partagée entre un nord musulman, avec la charia dans douze États, et un sud chrétien, dépendante du pétrole et meurtrie par Boko Haram, et sous Bola Tinubu elle a supprimé les subventions aux carburants.",
+    "category": "République présidentielle fédérale"
+  },
+  {
+    "id": "argelia",
+    "name": "Algérie",
+    "description": "Née de la guerre d’indépendance contre la France, l’Algérie est une république dominée par l’armée, avec l’islam comme religion d’État, une économie dirigée par l’État dépendante du pétrole et du gaz, une politique étrangère non alignée et la répression du mouvement Hirak.",
+    "category": "République présidentielle soutenue par l’armée"
+  },
+  {
+    "id": "china-qing",
+    "name": "Chine des Qing",
+    "description": "Dernière dynastie impériale de Chine, fondée par les Mandchous, les Qing gouvernèrent par une bureaucratie confucéenne recrutée par concours, étendirent l’empire au Tibet et au Xinjiang, restreignirent le commerce extérieur à Canton et déclinèrent avec les guerres de l’opium et la révolte des Taiping.",
+    "category": "Empire dynastique confucéen"
+  },
+  {
+    "id": "grecia",
+    "name": "Grèce",
+    "description": "Démocratie parlementaire du sud-est de l’Europe dont la Constitution reconnaît l’Église orthodoxe, la Grèce a surmonté la crise de la dette sous l’austérité imposée par l’UE, est gouvernée par la Nouvelle Démocratie de Kyriákos Mitsotákis et a légalisé le mariage de personnes de même sexe en 2024.",
+    "category": "République parlementaire"
+  },
+  {
+    "id": "servia",
+    "name": "Serbie",
+    "description": "Pays des Balkans à majorité orthodoxe, la Serbie est dominée depuis 2012 par le parti d’Aleksandar Vučić, est candidate à l’UE tout en restant proche de la Russie et de la Chine, militairement neutre, ne reconnaît pas le Kosovo et a connu d’immenses manifestations étudiantes en 2025.",
+    "category": "République parlementaire nationale-conservatrice"
+  },
+  {
+    "id": "equador",
+    "name": "Équateur",
+    "description": "République andine dollarisée depuis 2000, l’Équateur est gouverné par Daniel Noboa, qui a déclaré un conflit armé interne contre le crime organisé et déployé des soldats dans les rues et les prisons, mais a vu les bases militaires étrangères rejetées lors d’un référendum en 2025.",
+    "category": "République présidentielle"
+  },
+  {
+    "id": "tibete",
+    "name": "Tibet théocratique",
+    "description": "État de fait indépendant entre la chute des Qing et l’invasion chinoise, le Tibet était une théocratie bouddhiste dirigée par le dalaï-lama, avec des monastères et une aristocratie propriétaires de la terre, des paysans qui y étaient attachés et un isolement délibéré du monde moderne.",
+    "category": "Théocratie bouddhiste"
+  },
+  {
+    "id": "reino-de-israel",
+    "name": "Royaume d’Israël",
+    "description": "Monarchie unissant les tribus hébraïques sous Saül, David et Salomon, le royaume d’Israël concentrait le pouvoir dans un roi oint par un prophète, avec Jérusalem et le Temple comme centre religieux, la loi de la Torah, des levées tribales et l’expansion sur ses voisins.",
+    "category": "Monarchie théocratique"
+  },
+  {
+    "id": "inglaterra",
+    "name": "Angleterre (Royaume-Uni)",
+    "description": "Plus grande nation constitutive du Royaume-Uni, l’Angleterre est gouvernée directement par Westminster sans parlement propre, avec une Église d’Angleterre établie, un service public de santé (NHS), un centre financier à Londres, une majorité pour le Brexit et un vote populiste croissant.",
+    "category": "Pays constitutif libéral-conservateur"
+  },
+  {
+    "id": "eua-vermont",
+    "name": "Vermont (États-Unis)",
+    "description": "Petit État rural de Nouvelle-Angleterre, le Vermont combine assemblées municipales de démocratie directe, politique progressiste de Bernie Sanders, coopératives, élevage laitier et écologisme, avec l’une des populations les moins religieuses du pays et des lois permissives sur les armes.",
+    "category": "Région progressiste et communautaire"
+  },
+  {
+    "id": "eua-utah",
+    "name": "Utah (États-Unis)",
+    "description": "État de l’Ouest américain à majorité mormone, l’Utah combine l’influence de l’Église des saints des derniers jours sur la famille et les mœurs, un impôt forfaitaire sur le revenu, des budgets équilibrés, un secteur technologique en plein essor, un accueil favorable aux réfugiés et un strict contrôle de l’alcool.",
+    "category": "Région conservatrice et communautaire"
+  },
+  {
+    "id": "eua-alasca",
+    "name": "Alaska (États-Unis)",
+    "description": "Plus grand État américain et l’un des moins densément peuplés, l’Alaska vit du pétrole, verse à chaque résident un dividende annuel de son Fonds permanent, ne prélève aucun impôt d’État sur le revenu et a une forte culture des armes, des sociétés autochtones et une méfiance envers le gouvernement fédéral.",
+    "category": "Région frontalière rentière"
+  },
+  {
+    "id": "treze-colonias",
+    "name": "Treize colonies britanniques",
+    "description": "Colonies britanniques de la côte atlantique nord-américaine, avec des assemblées de propriétaires blancs, des gouverneurs nommés par la Couronne, des Églises établies et dissidentes, un commerce soumis aux lois de navigation, l’esclavage dans le Sud et l’expansion sur les terres autochtones.",
+    "category": "Colonies marchandes autonomes"
+  },
+  {
+    "id": "eua-pensilvania",
+    "name": "Pennsylvanie (États-Unis)",
+    "description": "État industriel du nord-est et berceau de la Constitution, la Pennsylvanie est partagée entre Philadelphie et Pittsburgh démocrates et un intérieur conservateur, avec le gaz de schiste, une tradition syndicale, une culture de la chasse et un monopole d’État sur le vin et les spiritueux.",
+    "category": "Région industrielle divisée"
+  },
+  {
+    "id": "eua-illinois",
+    "name": "Illinois (États-Unis)",
+    "description": "État du Midwest dominé par Chicago, l’Illinois combine une machine politique démocrate à l’histoire marquée par la corruption, de puissants syndicats du secteur public, une énorme dette de retraites, des lois strictes sur les armes, une politique sociale libéralisée et un intérieur agricole conservateur.",
+    "category": "Région métropolitaine et syndicale"
+  },
+  {
+    "id": "vice-reino-da-nova-espanha",
+    "name": "Vice-royauté de Nouvelle-Espagne",
+    "description": "Vice-royauté espagnole couvrant le Mexique, l’Amérique centrale, le sud-ouest actuel des États-Unis et les Philippines, gouvernée par un vice-roi et des audiences sous patronage royal, avec l’Inquisition, une société de castes, des haciendas, l’exploitation de l’argent et un commerce monopolisé par la Couronne.",
+    "category": "Vice-royauté catholique et bureaucratique"
+  },
+  {
+    "id": "groenlandia",
+    "name": "Groenland (Danemark)",
+    "description": "Territoire autonome du Royaume du Danemark, le Groenland a son propre gouvernement et parlement, une majorité inuite, une économie de pêche soutenue par des subventions danoises, la santé et l’éducation publiques, un débat sur l’indépendance et une rivalité arctique pour les minerais et les bases militaires.",
+    "category": "Territoire autonome arctique à vocation sociale"
+  },
+  {
+    "id": "lituania",
+    "name": "Lituanie",
+    "description": "République semi-présidentielle balte, la Lituanie a quitté l’URSS en 1990 et appartient à l’UE, à l’euro et à l’OTAN, avec une forte hostilité envers la Russie, de fortes dépenses militaires, un soutien à l’Ukraine, une économie ouverte et une société à majorité catholique qui se sécularise.",
+    "category": "République semi-présidentielle atlantiste"
+  },
+  {
+    "id": "letonia",
+    "name": "Lettonie",
+    "description": "République parlementaire balte, la Lettonie combine l’UE, l’OTAN et une économie ouverte avec la défense de la langue lettone, une citoyenneté refusée à une partie de la minorité russophone, la méfiance envers la Russie et une société luthérienne, catholique et orthodoxe très laïque.",
+    "category": "République parlementaire nationale et atlantiste"
+  },
+  {
+    "id": "romenia",
+    "name": "Roumanie",
+    "description": "République semi-présidentielle à majorité orthodoxe, la Roumanie hérite du régime de Ceaușescu et combine l’UE, l’OTAN et des bases américaines avec un impôt forfaitaire bas, une lutte anticorruption, un nationalisme montant, une Église influente et l’annulation de l’élection présidentielle de 2024.",
+    "category": "République semi-présidentielle orthodoxe et atlantiste"
+  },
+  {
+    "id": "bulgaria",
+    "name": "Bulgarie",
+    "description": "République parlementaire à majorité orthodoxe, la Bulgarie appartient à l’UE et à l’OTAN, avec un impôt forfaitaire bas, une instabilité politique chronique, des oligarques et de la corruption, des liens historiques avec la Russie, une centrale nucléaire, une minorité rom et des lois conservatrices sur le genre.",
+    "category": "République parlementaire oligarchique et orthodoxe"
+  },
+  {
+    "id": "croacia",
+    "name": "Croatie",
+    "description": "République parlementaire catholique, la Croatie appartient à l’UE, à l’euro, à Schengen et à l’OTAN, avec un secteur touristique adriatique dominant, de longs gouvernements du HDZ, une mémoire contestée de la guerre d’indépendance, une minorité serbe et une Église influente sur les questions familiales.",
+    "category": "République parlementaire catholique et touristique"
+  },
+  {
+    "id": "chipre",
+    "name": "Chypre",
+    "description": "République présidentielle de l’UE, divisée depuis l’invasion turque de 1974, avec un nord occupé reconnu seulement par la Turquie, une Église orthodoxe influente, une économie de services et de finance, des bases britanniques souveraines, un parti communiste puissant et un plan de paix rejeté en 2004.",
+    "category": "République présidentielle divisée"
+  },
+  {
+    "id": "imperio-sueco",
+    "name": "Empire suédois",
+    "description": "Puissance baltique luthérienne pendant la guerre de Trente Ans et les guerres de Charles X et de Charles XII, l’Empire suédois reposait sur un État fiscal-militaire, une monarchie à quatre ordres et l’Église luthérienne, jusqu’à Poltava et Nystad.",
+    "category": "Monarchie luthérienne fiscale et militaire"
+  },
+  {
+    "id": "suecia-finlandia",
+    "name": "Suède-Finlande",
+    "description": "Le royaume de Suède-Finlande après la perte de l’empire : l’ère de la Liberté avec un Riksdag de quatre ordres, une liberté de la presse pionnière (1766), le coup d’État absolutiste de Gustave III en 1772 et la perte de la Finlande au profit de la Russie en 1809.",
+    "category": "Monarchie éclairée d’États"
+  },
+  {
+    "id": "shenzhen",
+    "name": "Shenzhen (Chine)",
+    "description": "Première zone économique spéciale de Chine, créée par Deng Xiaoping en 1980, Shenzhen est passée de village de pêcheurs à pôle mondial de technologie et de fabrication (Huawei, Tencent, DJI), avec un marché dynamique sous la supervision du Parti communiste.",
+    "category": "Zone économique spéciale exportatrice de technologie"
+  },
+  {
+    "id": "chongqing",
+    "name": "Chongqing (Chine)",
+    "description": "Plus grande municipalité de Chine administrée directement, Chongqing combine industrie lourde, base automobile et trains de fret vers l’Europe avec le « modèle de Chongqing » de Bo Xilai (logement public, campagne anticriminalité, « chants rouges »), terminé en 2012.",
+    "category": "Municipalité industrielle dirigiste"
+  },
+  {
+    "id": "imperio-austriaco",
+    "name": "Empire d’Autriche (Habsbourg)",
+    "description": "Fondé par les Habsbourg en 1804, l’Empire d’Autriche fut une monarchie multinationale d’Europe centrale jusqu’au Compromis de 1867. Sous François Ier et Metternich, il combina administration centralisée, primauté catholique et répression libérale.",
+    "category": "Monarchie multinationale centralisée"
+  },
+  {
+    "id": "quebec",
+    "name": "Québec (Canada)",
+    "description": "Province canadienne majoritairement francophone, le Québec protège le français comme langue commune et officielle et détient de larges pouvoirs au sein de la fédération. Nationalisme et laïcité marquent sa politique ; depuis octobre 2026, il est gouverné en minorité par le Parti québécois souverainiste.",
+    "category": "Province fédérale francophone"
+  },
+  {
+    "id": "pais-basco",
+    "name": "Pays basque (Espagne)",
+    "description": "Communauté autonome espagnole comprenant l’Araba, la Biscaye et le Guipuscoa, avec son propre parlement, le basque co-officiel et une autonomie fiscale distinctive. Le nationalisme basque et les institutions provinciales historiques façonnent la politique régionale.",
+    "category": "Communauté autonome forale"
+  },
+  {
+    "id": "reino-da-irlanda",
+    "name": "Royaume d’Irlande",
+    "description": "Établi en 1542, le royaume fut gouverné en union personnelle par la Couronne anglaise puis britannique, avec une administration à Dublin. La majorité catholique subit des lois pénales et l’exclusion politique ; l’union législative avec la Grande-Bretagne mit fin au royaume en 1800.",
+    "category": "Monarchie parlementaire dépendante"
+  },
+  {
+    "id": "rus-de-kiev",
+    "name": "Rus’ de Kiev",
+    "description": "Fédération dynastique de principautés slaves orientales, avec Kiev comme pôle politique et commercial sur les routes entre la Baltique et Constantinople. La cour adopta le christianisme byzantin en 988 ; les querelles de succession et les invasions mongoles dissolurent son unité.",
+    "category": "Monarchie dynastique décentralisée"
+  },
+  {
+    "id": "reino-da-escocia",
+    "name": "Royaume d’Écosse",
+    "description": "Royaume souverain traditionnellement daté de 843, avec sa propre Couronne, son Parlement et son droit jusqu’à l’union avec l’Angleterre en 1707. L’union dynastique des couronnes en 1603 et la Réforme presbytérienne ont façonné son histoire.",
+    "category": "Monarchie féodale et parlementaire"
+  },
+  {
+    "id": "oma",
+    "name": "Oman",
+    "description": "Sultanat absolu du Golfe, majoritairement ibadite, Oman concentre le pouvoir dans le sultan, qui dirige aussi le gouvernement, et vit du pétrole et du gaz en voie de diversification, avec une politique étrangère neutre de médiation régionale.",
+    "category": "Sultanat absolu ibadite"
+  },
+  {
+    "id": "kuwait",
+    "name": "Koweït",
+    "description": "Émirat héréditaire du Golfe dirigé par la famille Al Sabah, le Koweït avait un parlement élu combatif et une presse relativement libre, mais l’émir l’a suspendu en 2024 et a commencé à révoquer massivement des nationalités. Économie pétrolière d’État avec une large protection sociale pour les citoyens.",
+    "category": "Émirat constitutionnel rentier"
+  },
+  {
+    "id": "jordania",
+    "name": "Jordanie",
+    "description": "Monarchie hachémite dotée d’un parlement élu, mais dont le roi contrôle le gouvernement, l’armée et la politique étrangère, la Jordanie dépend de l’aide étrangère et des transferts des émigrés, accueille de nombreux réfugiés palestiniens et est en paix avec Israël depuis 1994.",
+    "category": "Monarchie parlementaire hachémite"
+  },
+  {
+    "id": "iraque",
+    "name": "Irak",
+    "description": "République parlementaire fédérale depuis 2003, l’Irak partage le pouvoir entre chiites, sunnites et Kurdes par des quotas informels, avec un Kurdistan autonome, des milices armées liées à l’État et une économie dépendante du pétrole d’État.",
+    "category": "République fédérale confessionnelle"
+  },
+  {
+    "id": "bangladesh",
+    "name": "Bangladesh",
+    "description": "République parlementaire à majorité musulmane dotée d’une constitution laïque, le Bangladesh est marqué par la rivalité entre partis et armée, a chassé la Première ministre Hasina en 2024 et exporte surtout des textiles, avec d’importants transferts de la diaspora.",
+    "category": "République parlementaire laïque instable"
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunisie",
+    "description": "République d’Afrique du Nord, la Tunisie fut le berceau du Printemps arabe et la seule démocratie de la région jusqu’en 2021, quand le président Saïed suspendit le parlement et concentra le pouvoir, au milieu d’une crise économique et d’un puissant syndicat, l’UGTT.",
+    "category": "République présidentielle autoritaire"
+  },
+  {
+    "id": "uzbequistao",
+    "name": "Ouzbékistan",
+    "description": "République d’Asie centrale à majorité musulmane, l’Ouzbékistan est dirigé comme un régime autoritaire laïque par le président Mirziyoyev, avec une ouverture économique graduelle après Karimov, une forte surveillance et une économie du coton, de l’or et du gaz.",
+    "category": "République présidentielle laïque et autoritaire"
+  },
+  {
+    "id": "cazaquistao",
+    "name": "Kazakhstan",
+    "description": "Plus grand pays d’Asie centrale, le Kazakhstan est une république présidentielle au pouvoir concentré, héritière du régime de Nazarbaïev, avec un État laïque, une économie du pétrole et des minerais et un équilibre entre la Russie, la Chine et l’Occident.",
+    "category": "République présidentielle pétro-étatique"
+  },
+  {
+    "id": "iemen",
+    "name": "Yémen",
+    "description": "Divisé par la guerre civile depuis 2014, le Yémen compte un gouvernement reconnu soutenu par l’Arabie saoudite dans le sud et les houthis zaydites dans le nord ; les séparatistes du sud ont été vaincus en 2026. Il y a la famine, des attaques en mer Rouge et un État à peine existant.",
+    "category": "État fragmenté en guerre civile"
+  },
+  {
+    "id": "sudao",
+    "name": "Soudan",
+    "description": "En guerre civile depuis 2023 entre l’armée et les Forces de soutien rapide, après la chute de Béchir en 2019 et le coup d’État de 2021, le Soudan fait face à la famine, à des déplacements massifs, à l’effondrement de l’État et à la rivalité entre puissances régionales.",
+    "category": "État militarisé en guerre civile"
+  },
+  {
+    "id": "somalia",
+    "name": "Somalie",
+    "description": "République fédérale fragile, la Somalie a un gouvernement central à l’autorité limitée, un pouvoir partagé entre clans et États fédérés comme le Puntland et le Jubaland, un Somaliland séparatiste de fait et l’insurrection djihadiste des Shebab.",
+    "category": "État fédéral fragile à base de clans"
+  },
+  {
+    "id": "maldivas",
+    "name": "Maldives",
+    "description": "République présidentielle insulaire, les Maldives font de l’islam sunnite la religion d’État et une condition de la citoyenneté, vivent du tourisme de luxe et de la pêche et dépendent de l’Inde et de la Chine, avec une dette élevée, la menace climatique et des querelles politiques.",
+    "category": "République présidentielle islamique insulaire"
+  },
+  {
+    "id": "azerbaijao",
+    "name": "Azerbaïdjan",
+    "description": "République présidentielle autoritaire de la famille Aliyev dans le Caucase, l’Azerbaïdjan est à majorité chiite mais constitue un État laïque, vit du pétrole et du gaz et a repris le Haut-Karabagh en 2023, allié à la Turquie et en équilibre entre la Russie et Israël.",
+    "category": "République présidentielle autoritaire pétro-étatique"
+  },
+  {
+    "id": "bosnia",
+    "name": "Bosnie-Herzégovine",
+    "description": "État post-Dayton partagé entre la Fédération croato-bosniaque et la Republika Srpska serbe, la Bosnie a une présidence tripartite ethnique, un haut représentant international, une politique paralysée par les vetos ethniques et une candidature à l’Union européenne.",
+    "category": "Fédération ethnoconfessionnelle sous supervision"
+  },
+  {
+    "id": "kosovo",
+    "name": "Kosovo",
+    "description": "Ancienne province serbe, le Kosovo a proclamé son indépendance en 2008, reconnue par environ la moitié de l’ONU mais pas par la Serbie, la Russie et la Chine. République parlementaire laïque à majorité albanaise, avec une minorité serbe, des troupes de l’OTAN et une économie de transferts de la diaspora.",
+    "category": "République parlementaire albanaise contestée"
+  },
+  {
+    "id": "laos",
+    "name": "Laos",
+    "description": "République communiste à parti unique, le Laos est dirigé par le Parti populaire révolutionnaire lao depuis 1975, avec une économie de marché contrôlée par le parti, une lourde dette envers la Chine, des barrages hydroélectriques sur le Mékong et un bouddhisme theravada toléré.",
+    "category": "État communiste à parti unique tourné vers le marché"
+  },
+  {
+    "id": "camboja",
+    "name": "Cambodge",
+    "description": "Monarchie constitutionnelle de nom, le Cambodge est dominé depuis quatre décennies par Hun Sen et désormais par son fils Hun Manet, avec une opposition interdite, une presse contrôlée, une économie de l’habillement et du tourisme et une forte influence chinoise.",
+    "category": "Autocratie dynastique à parti dominant"
+  },
+  {
+    "id": "brunei",
+    "name": "Brunei",
+    "description": "Sultanat absolu riche en pétrole et en gaz, le Brunei est dirigé par le sultan Hassanal Bolkiah, chef de l’État et du gouvernement, avec un code pénal fondé sur la charia depuis 2014, une protection sociale sans impôts et l’idéologie officielle de la Monarchie islamique malaise.",
+    "category": "Sultanat absolu islamique"
+  },
+  {
+    "id": "quirguistao",
+    "name": "Kirghizistan",
+    "description": "République d’Asie centrale à majorité musulmane, le Kirghizistan a renversé ses présidents en 2005, 2010 et 2020 et concentre aujourd’hui le pouvoir en Japarov, avec une presse restreinte, une économie de transferts de la diaspora et d’or et une dépendance envers la Russie et la Chine.",
+    "category": "République présidentielle instable"
+  },
+  {
+    "id": "tadjiquistao",
+    "name": "Tadjikistan",
+    "description": "Le Tadjikistan est dirigé par Emomali Rahmon depuis 1992, le pouvoir étant peu à peu transmis à son fils, avec une opposition interdite, la répression des islamistes et du hijab, une économie de transferts de la diaspora et d’aluminium et une dépendance envers la Russie et la Chine.",
+    "category": "Dictature dynastique laïque"
+  },
+  {
+    "id": "timor-leste",
+    "name": "Timor-Leste",
+    "description": "Jeune démocratie semi-présidentielle, le Timor-Leste a obtenu son indépendance vis-à-vis de l’Indonésie en 2002 après 24 ans d’occupation, est majoritairement catholique, utilise le dollar américain, dépend de son fonds souverain pétrolier et a rejoint l’ASEAN en 2025.",
+    "category": "Jeune démocratie semi-présidentielle"
+  },
+  {
+    "id": "etiopia",
+    "name": "Éthiopie",
+    "description": "Fédération ethnique d’Afrique de l’Est et État jamais colonisé, l’Éthiopie est dirigée par Abiy Ahmed et le Parti de la prospérité, sortant de la guerre du Tigré, avec des tensions ethniques et une économie d’État en ouverture, ainsi que le barrage de la Renaissance.",
+    "category": "Fédération ethnique sous parti dominant"
+  },
+  {
+    "id": "rd-congo",
+    "name": "RD Congo",
+    "description": "Deuxième plus grand pays d’Afrique, la République démocratique du Congo est dirigée par Tshisekedi, avec un État fragile, la guerre à l’est contre le M23 et d’autres milices, de vastes richesses en cobalt et en cuivre et un héritage du mobutisme et de la domination belge.",
+    "category": "République présidentielle fragile en guerre"
+  },
+  {
+    "id": "quenia",
+    "name": "Kenya",
+    "description": "République présidentielle aux élections compétitives et à la société civile forte, le Kenya a une constitution de 2010 décentralisée en 47 comtés, une économie de services et de technologie comme M-Pesa, des tensions ethniques et de récentes manifestations contre les impôts.",
+    "category": "République présidentielle décentralisée"
+  },
+  {
+    "id": "gana",
+    "name": "Ghana",
+    "description": "République présidentielle stable d’Afrique de l’Ouest, le Ghana connaît une alternance pacifique du pouvoir depuis 1992, une presse et une société civile libres, une économie du cacao, de l’or et du pétrole, une majorité chrétienne pentecôtiste et une restructuration de la dette appuyée par le FMI.",
+    "category": "Démocratie présidentielle stable"
+  },
+  {
+    "id": "angola",
+    "name": "Angola",
+    "description": "République présidentielle dirigée par le MPLA depuis l’indépendance vis-à-vis du Portugal en 1975, l’Angola est sorti de la guerre civile en 2002, vit du pétrole et des diamants, concentre le pouvoir dans le président Lourenço et fait face aux inégalités et aux manifestations contre le coût de la vie.",
+    "category": "Présidentialisme pétrolier à parti dominant"
+  },
+  {
+    "id": "mocambique",
+    "name": "Mozambique",
+    "description": "République présidentielle dirigée par le Frelimo depuis l’indépendance vis-à-vis du Portugal en 1975, le Mozambique a surmonté la guerre civile, fait face à une insurrection djihadiste à Cabo Delgado, à des élections violemment contestées en 2024 et à une économie du gaz, du charbon et de l’agriculture.",
+    "category": "Parti dominant en conflit"
+  },
+  {
+    "id": "ruanda",
+    "name": "Rwanda",
+    "description": "État développeur autoritaire sous Paul Kagame depuis 2000, le Rwanda s’est reconstruit après le génocide de 1994, interdit le discours ethnique, restreint l’opposition, connaît une croissance axée sur la technologie et, selon l’ONU, soutient le M23 au Congo.",
+    "category": "État développementiste autoritaire"
+  },
+  {
+    "id": "zimbabue",
+    "name": "Zimbabwe",
+    "description": "Dirigé par la Zanu-PF depuis 1980, le Zimbabwe est passé de la dictature de Mugabe au président Mnangagwa, avec une réforme agraire radicale, une hyperinflation historique, des sanctions occidentales, une économie informelle dollarisée, des élections contestées et la répression de l’opposition.",
+    "category": "Parti dominant en crise"
+  },
+  {
+    "id": "imperio-etiope",
+    "name": "Empire éthiopien",
+    "description": "Monarchie de la dynastie salomonide, l’une des plus anciennes du monde, l’Empire éthiopien résista à la colonisation européenne à Adoua en 1896, avait une Église orthodoxe d’État, un système féodal et une modernisation sous Haïlé Sélassié, jusqu’au coup d’État du Derg en 1974.",
+    "category": "Monarchie impériale féodale orthodoxe"
+  },
+  {
+    "id": "cabo-verde",
+    "name": "Cap-Vert",
+    "description": "Archipel lusophone au large de l’Afrique de l’Ouest, le Cap-Vert est l’une des démocraties les plus stables du continent, avec un semi-présidentialisme, une alternance pacifique du pouvoir, une économie du tourisme et des transferts de la diaspora, une majorité catholique et des mœurs relativement libérales.",
+    "category": "Démocratie semi-présidentielle insulaire"
+  },
+  {
+    "id": "tanzania",
+    "name": "Tanzanie",
+    "description": "République présidentielle sous un parti dominant, la Tanzanie est gouvernée par le CCM depuis l’indépendance, héritière du socialisme ujamaa de Nyerere, avec une union du continent et de Zanzibar, une ouverture économique graduelle et une répression croissante de l’opposition.",
+    "category": "Parti dominant postsocialiste"
+  },
+  {
+    "id": "costa-do-marfim",
+    "name": "Côte d’Ivoire",
+    "description": "République présidentielle d’Afrique de l’Ouest, la Côte d’Ivoire est dirigée par Alassane Ouattara, a une économie du cacao et du café, est sortie des guerres civiles de 2002 et 2011, vit avec une division entre un nord musulman et un sud chrétien et garde des liens étroits avec la France.",
+    "category": "République présidentielle postconflit"
+  },
+  {
+    "id": "camaroes",
+    "name": "Cameroun",
+    "description": "République présidentielle bilingue, le Cameroun est dirigé par Paul Biya depuis 1982, avec un pouvoir centralisé, une guerre séparatiste dans les régions anglophones, une menace de Boko Haram dans le nord et une économie du pétrole et du cacao.",
+    "category": "Autocratie présidentielle bilingue"
+  },
+  {
+    "id": "turcomenistao",
+    "name": "Turkménistan",
+    "description": "Dictature fermée d’Asie centrale, le Turkménistan est dirigé par la famille Berdimouhamedov, avec un culte de la personnalité, un contrôle total de la presse, une neutralité permanente, une économie du gaz naturel et une dépendance quasi totale envers la Chine comme acheteur.",
+    "category": "Dictature neutre à culte de la personnalité"
+  },
+  {
+    "id": "malta",
+    "name": "Malte",
+    "description": "Petite république insulaire de l’Union européenne, Malte a une démocratie parlementaire bipartite, une forte influence catholique, une économie du tourisme, des jeux en ligne et des services financiers, une neutralité militaire, le divorce légalisé en 2011 et l’avortement encore très restreint.",
+    "category": "Démocratie parlementaire insulaire catholique"
+  },
+  {
+    "id": "moldavia",
+    "name": "Moldavie",
+    "description": "République parlementaire entre la Roumanie et l’Ukraine, la Moldavie est candidate à l’Union européenne, a une Transnistrie séparatiste soutenue par la Russie, une économie pauvre dépendante des transferts de la diaspora, une fracture entre axes pro-européen et pro-russe et une forte influence orthodoxe.",
+    "category": "Démocratie parlementaire divisée"
+  },
+  {
+    "id": "montenegro",
+    "name": "Monténégro",
+    "description": "Petit pays des Balkans indépendant de la Serbie depuis 2006, le Monténégro est membre de l’OTAN, candidat à l’UE et utilise l’euro, est sorti de la longue domination de Djukanović et vit le conflit entre identité monténégrine et serbe et le rôle de l’Église orthodoxe serbe.",
+    "category": "République parlementaire candidate à l’UE"
+  },
+  {
+    "id": "macedonia-do-norte",
+    "name": "Macédoine du Nord",
+    "description": "République parlementaire des Balkans, la Macédoine du Nord a changé de nom en 2019 pour mettre fin au différend avec la Grèce, a rejoint l’OTAN en 2020 et négocie son adhésion à l’UE, bloquée par la Bulgarie, avec une minorité albanaise de 25 % et une économie à faible revenu.",
+    "category": "République parlementaire multiethnique"
+  },
+  {
+    "id": "reino-da-bulgaria",
+    "name": "Royaume de Bulgarie",
+    "description": "Royaume indépendant de 1908 à 1946, la Bulgarie des tsars Ferdinand et Boris III combattit dans les guerres balkaniques et mondiales, s’allia à l’Axe en 1941, protégea les Juifs bulgares de la déportation et fut abolie par le régime communiste en 1946.",
+    "category": "Monarchie constitutionnelle autoritaire"
+  },
+  {
+    "id": "jamaica",
+    "name": "Jamaïque",
+    "description": "Démocratie parlementaire du Commonwealth dans les Caraïbes, la Jamaïque a le roi britannique pour chef d’État, une alternance entre deux partis, une forte culture religieuse et reggae, une économie du tourisme et des transferts de la diaspora et une violence urbaine élevée.",
+    "category": "Monarchie parlementaire du Commonwealth"
+  },
+  {
+    "id": "guiana",
+    "name": "Guyana",
+    "description": "République présidentielle anglophone d’Amérique du Sud, le Guyana connaît depuis 2019 un boom du pétrole offshore, avec l’une des plus fortes croissances au monde, une politique partagée entre Indo-Guyaniens et Afro-Guyaniens et un différend avec le Venezuela sur l’Essequibo.",
+    "category": "République présidentielle pétrolière en essor"
+  },
+  {
+    "id": "suriname",
+    "name": "Suriname",
+    "description": "Ancienne colonie néerlandaise d’Amérique du Sud, le Suriname est une république parlementaire multiethnique d’Hindoustanis, de Créoles, de Javanais et de Marrons, avec des partis fondés sur l’ethnicité, un héritage du dictateur Bouterse et une économie de l’or, du pétrole offshore et d’une dette élevée.",
+    "category": "République parlementaire multiethnique"
+  },
+  {
+    "id": "califado-omiada",
+    "name": "Califat omeyyade",
+    "description": "Premier califat dynastique de l’islam, basé à Damas, le califat omeyyade régna de 661 à 750, s’étendit de l’Espagne à l’Inde, arabisa l’administration et la monnaie et favorisa l’élite arabe sur les convertis jusqu’à son renversement par les Abbassides.",
+    "category": "Califat dynastique arabe"
+  },
+  {
+    "id": "primeira-republica-francesa",
+    "name": "Première République française",
+    "description": "Proclamée en 1792 après la chute de la monarchie, la Première République française fit exécuter Louis XVI, connut la Terreur jacobine sous le Comité de salut public, déchristianisa le pays, mena des guerres révolutionnaires et s’acheva avec l’Empire de Napoléon en 1804.",
+    "category": "République jacobine révolutionnaire"
+  },
+  {
+    "id": "polonia-lituania",
+    "name": "République des Deux Nations (Pologne-Lituanie)",
+    "description": "Union de la Pologne et de la Lituanie de 1569 à 1795, la République des Deux Nations était une république nobiliaire à roi élu, avec une Diète, le liberum veto, une tolérance religieuse inhabituelle et un vaste territoire multiethnique, jusqu’à son partage entre la Russie, la Prusse et l’Autriche.",
+    "category": "République nobiliaire à roi élu"
+  },
+  {
+    "id": "imperio-cajar",
+    "name": "Empire qadjar",
+    "description": "Empire dynastique perse centré sur l’autorité du shah et du clergé chiite, marqué par des réformes défensives, des rivalités tribales et la pression coloniale croissante de la Russie et de la Grande-Bretagne.",
+    "category": "Monarchie absolutiste théocratique"
+  },
+  {
+    "id": "reino-da-sardenha",
+    "name": "Royaume de Sardaigne",
+    "description": "État piémontais dirigé par la maison de Savoie, qui promulgua le Statut albertin, modernisa ses infrastructures et sa diplomatie et mena l’unification italienne.",
+    "category": "Monarchie constitutionnelle réformiste"
+  },
+  {
+    "id": "grao-ducado-da-toscana",
+    "name": "Grand-duché de Toscane",
+    "description": "État italien sous la dynastie des Habsbourg-Lorraine, pionnier de l’abolition de la peine de mort, caractérisé par une administration modérée et un riche patrimoine culturel.",
+    "category": "Monarchie éclairée et réformiste"
+  },
+  {
+    "id": "reino-da-baviera",
+    "name": "Royaume de Bavière",
+    "description": "Royaume d’Allemagne du Sud allié à la Confédération germanique puis à l’Empire allemand, marqué par une forte identité catholique, le conservatisme et l’autonomie régionale.",
+    "category": "Monarchie constitutionnelle catholique"
+  },
+  {
+    "id": "reino-da-saxonia",
+    "name": "Royaume de Saxe",
+    "description": "État allemand luthérien à l’industrie manufacturière et minière pionnière, doté d’une dynastie catholique et de traditions parlementaires au sein de la Confédération germanique et de l’Empire.",
+    "category": "Monarchie constitutionnelle et industrielle"
+  },
+  {
+    "id": "reino-de-napoles",
+    "name": "Royaume de Naples",
+    "description": "Royaume bourbon du sud de l’Italie, à base agraire, avec une piété catholique populaire, une résistance contre-révolutionnaire et un centralisme royal avant l’unification.",
+    "category": "Monarchie absolutiste traditionaliste"
+  },
+  {
+    "id": "reino-de-italia",
+    "name": "Royaume d’Italie",
+    "description": "État italien unifié par la maison de Savoie sous le Statut albertin, caractérisé par la centralisation administrative, une politique libérale et des ambitions méditerranéennes.",
+    "category": "Monarchie parlementaire unifiée"
+  },
+  {
+    "id": "reino-da-dinamarca-e-noruega",
+    "name": "Royaume de Danemark-Norvège",
+    "description": "Monarchie duale nordique centrée à Copenhague, caractérisée par une Église d’État luthérienne absolutiste, un commerce maritime mercantiliste et des péages sur les détroits de la Baltique.",
+    "category": "Monarchie absolutiste luthérienne"
+  },
+  {
+    "id": "eleitorado-de-hanover",
+    "name": "Électorat de Hanovre",
+    "description": "Principauté électorale du Saint-Empire en union personnelle avec la Couronne britannique, protestante et commercialement active, façonnée par la diplomatie des Lumières.",
+    "category": "Monarchie dynastique luthérienne"
+  },
+  {
+    "id": "reino-da-grecia",
+    "name": "Royaume de Grèce",
+    "description": "État hellénique sous les dynasties Wittelsbach et Glücksburg, forgé dans l’indépendance contre les Ottomans, marqué par une forte foi orthodoxe, l’autorité royale et l’expansionnisme de la Grande Idée (Megali Idea).",
+    "category": "Monarchie parlementaire orthodoxe"
+  },
+  {
+    "id": "india",
+    "name": "Inde",
+    "description": "Plus grande démocratie du monde, l’Inde est une république parlementaire fédérale de 1,4 milliard d’habitants, gouvernée depuis 2014 par Narendra Modi et le BJP, avec un nationalisme hindou croissant, une économie à forte croissance et une politique étrangère d’autonomie stratégique.",
+    "category": "République fédérale à majorité hindoue"
+  },
+  {
+    "id": "nepal",
+    "name": "Népal",
+    "description": "Ancien royaume hindou, le Népal est une république fédérale laïque depuis 2008, après la guerre civile maoïste, avec des coalitions instables, une économie de transferts de la diaspora, de tourisme et d’hydroélectricité, une dépendance envers l’Inde et la Chine et des manifestations de la génération Z en 2025 qui ont renversé le gouvernement.",
+    "category": "République fédérale laïque instable"
+  },
+  {
+    "id": "mauricia",
+    "name": "Maurice",
+    "description": "Île de l’océan Indien indépendante depuis 1968, Maurice est une démocratie parlementaire multiethnique à majorité indo-mauricienne, avec alternance du pouvoir, une économie du tourisme, du sucre et de la finance, un État-providence solide et une société équilibrant hindous, chrétiens et musulmans.",
+    "category": "Démocratie parlementaire insulaire multiethnique"
+  },
+  {
+    "id": "bali",
+    "name": "Bali (Indonésie)",
+    "description": "Province insulaire d’Indonésie, Bali est la seule à majorité hindoue dans un pays à majorité musulmane, avec une culture religieuse qui organise la vie, les temples et le calendrier, une économie touristique et une tension entre tradition, migration et surdéveloppement.",
+    "category": "Province insulaire à majorité hindoue"
+  },
+  {
+    "id": "imperio-maurya",
+    "name": "Empire maurya",
+    "description": "Premier grand empire de l’Inde, les Maurya unifièrent presque tout le sous-continent sous Chandragupta, Bindusara et Ashoka, avec une bureaucratie centralisée, l’espionnage, une armée permanente et l’Arthashastra, jusqu’à ce qu’Ashoka embrasse le bouddhisme et la non-violence après Kalinga.",
+    "category": "Empire bureaucratique centralisé"
+  },
+  {
+    "id": "imperio-gupta",
+    "name": "Empire gupta",
+    "description": "Âge d’or classique de l’Inde, l’Empire gupta (v. 320-550) gouverna le nord de l’Inde comme une monarchie hindoue avec des vassaux, favorisa la science, les mathématiques, la littérature sanskrite et l’art, ranima les rites védiques et consolida le système des castes.",
+    "category": "Monarchie hindoue classique"
+  },
+  {
+    "id": "raj-britanico",
+    "name": "Raj britannique",
+    "description": "Gouvernement direct de la Couronne britannique sur l’Inde de 1858 à 1947, le Raj gouverna par un vice-roi et une administration civile, avec des États princiers alliés, des chemins de fer, des exportations de matières premières, la répression des révoltes, des famines et une partition finale en Inde et Pakistan.",
+    "category": "Empire colonial britannique"
+  },
+  {
+    "id": "reino-do-nepal",
+    "name": "Royaume du Népal",
+    "description": "Monarchie hindoue fondée par Prithvi Narayan Shah en 1768, le royaume du Népal résista à la Compagnie des Indes orientales, connut le pouvoir héréditaire des Rana puis la monarchie absolue jusqu’en 1990 et fut aboli en 2008, à la fin de la guerre civile maoïste.",
+    "category": "Monarchie hindoue himalayenne"
+  },
+  {
+    "id": "tamil-nadu",
+    "name": "Tamil Nadu (Inde)",
+    "description": "État de l’extrême sud de l’Inde, le Tamil Nadu est le berceau du mouvement dravidien, unissant la fierté de la langue tamoule, le rejet de l’hindi et de l’hégémonie brahmane, le populisme social et la défense de l’autonomie fédérale, avec une industrie puissante et le DMK et l’AIADMK au pouvoir.",
+    "category": "État indien dravidien industriel"
+  },
+  {
+    "id": "kerala",
+    "name": "Kerala (Inde)",
+    "description": "État du sud-ouest de l’Inde, le Kerala a élu en 1957 le premier gouvernement communiste du monde par vote populaire et alterne gauche et centre au pouvoir. Il a les meilleurs indicateurs sociaux du pays, une économie de transferts de la diaspora du Golfe et une population plurielle d’hindous, de musulmans et de chrétiens.",
+    "category": "État indien pluriel et social-démocrate"
+  },
+  {
+    "id": "gujarat",
+    "name": "Gujarat (Inde)",
+    "description": "État de l’ouest de l’Inde et terre natale de Narendra Modi, le Gujarat a une culture commerçante végétarienne d’influence jaïne, une économie industrielle et exportatrice, le « modèle du Gujarat » favorable aux affaires, la prohibition de l’alcool et la domination du BJP, et fut un laboratoire du nationalisme hindou.",
+    "category": "État indien marchand de l’hindutva"
+  },
+  {
+    "id": "punjab",
+    "name": "Pendjab (Inde)",
+    "description": "État à majorité sikhe du nord-ouest de l’Inde, le Pendjab est le grenier du pays et un symbole de la Révolution verte, avec une tradition de service communautaire et militaire, la mémoire du mouvement du Khalistan et du massacre du Temple d’or, et un gouvernement de l’AAP.",
+    "category": "État indien agraire sikh"
+  },
+  {
+    "id": "caxemira",
+    "name": "Jammu-et-Cachemire (Inde)",
+    "description": "Région himalayenne à majorité musulmane, disputée par l’Inde, le Pakistan et la Chine, le Jammu-et-Cachemire a perdu son autonomie spéciale en 2019 et est devenu un territoire de l’Union gouverné par New Delhi, avec une insurrection, une forte présence militaire et le tourisme.",
+    "category": "Territoire disputé sous administration indienne"
+  },
+  {
+    "id": "bengala-ocidental",
+    "name": "Bengale-Occidental (Inde)",
+    "description": "État de l’est de l’Inde, le Bengale-Occidental fut gouverné 34 ans par la gauche puis par Mamata Banerjee (2011-2026), jusqu’à la victoire du BJP en 2026. Il a une forte identité bengalie, Calcutta comme capitale culturelle, 27 % de musulmans et une frontière avec le Bangladesh.",
+    "category": "État indien bengali populiste"
+  },
+  {
+    "id": "cuba-de-fidel-castro",
+    "name": "Cuba sous Fidel Castro",
+    "description": "Gouvernée par Fidel Castro de 1959 à 2008, Cuba devint un État socialiste à parti unique, avec une économie nationalisée, la santé et l’éducation universelles, une alliance soviétique, la répression des dissidents, un exil massif et une confrontation avec les États-Unis, de l’embargo à la crise des missiles.",
+    "category": "République socialiste à parti unique"
+  },
+  {
+    "id": "venezuela-de-chavez",
+    "name": "Venezuela de Chávez",
+    "description": "Sous Hugo Chávez, de 1999 à 2013, le Venezuela vécut le « socialisme du XXIe siècle », avec une nouvelle constitution, des programmes sociaux financés par le pétrole, des nationalisations, des contrôles des changes et des prix, une profonde polarisation, une confrontation avec les États-Unis et un pouvoir concentré dans le président.",
+    "category": "Pétro-socialisme bolivarien"
+  },
+  {
+    "id": "terceira-republica-francesa",
+    "name": "Troisième République française",
+    "description": "Proclamée après la chute de Napoléon III en 1870, la Troisième République française fut un régime parlementaire durable, avec la laïcité en 1905, l’école publique gratuite, un empire colonial, l’affaire Dreyfus, la victoire dans la Grande Guerre et l’effondrement face à l’Allemagne en 1940.",
+    "category": "République parlementaire laïque et coloniale"
+  },
+  {
+    "id": "burkina-faso",
+    "name": "Burkina Faso",
+    "description": "Pays du Sahel dirigé par une junte militaire menée par Ibrahim Traoré, qui a dissous les partis politiques en 2026, reporté les élections, nationalisé des mines d’or, quitté la CEDEAO et formé l’Alliance des États du Sahel (AES), avec une rhétorique souverainiste et panafricaniste héritée de Sankara.",
+    "category": "République militaire souverainiste et panafricaine"
+  },
+  {
+    "id": "eua-new-deal",
+    "name": "États-Unis du New Deal",
+    "description": "Sous Franklin Roosevelt, les États-Unis étendirent le pouvoir fédéral avec la Sécurité sociale, la régulation bancaire, les grands travaux et des syndicats renforcés, tout en conservant le capitalisme, la ségrégation raciale dans le Sud et en se mobilisant pour la Seconde Guerre mondiale.",
+    "category": "République sociale et interventionniste"
+  },
+  {
+    "id": "eua-velho-oeste",
+    "name": "États-Unis du Far West",
+    "description": "La frontière américaine après la guerre de Sécession, avec l’expansion des chemins de fer, des mines et de l’élevage, des guerres contre les peuples autochtones, une justice locale et des shérifs, des armes à feu largement portées et peu de présence fédérale.",
+    "category": "Frontière armée et expansionniste"
+  },
+  {
+    "id": "pais-de-gales",
+    "name": "Pays de Galles (Royaume-Uni)",
+    "description": "Nation constitutive du Royaume-Uni dotée de son propre parlement (Senedd), le Pays de Galles combine bilinguisme officiel gallois-anglais, tradition ouvrière et syndicale postindustrielle, santé publique universelle et un gouvernement nationaliste du Plaid Cymru depuis 2026.",
+    "category": "Nation constitutive travailliste et nationaliste"
+  },
+  {
+    "id": "segunda-republica-espanhola",
+    "name": "Seconde République espagnole",
+    "description": "Marquée par le biennat conservateur, la victoire du Front populaire et la guerre civile espagnole, la République défendit la laïcité et la démocratie parlementaire avec le soutien soviétique et les brigades internationales contre le fascisme franquiste.",
+    "category": "République parlementaire laïque en conflit"
+  },
+  {
+    "id": "brasil-republica-velha",
+    "name": "Première République brésilienne",
+    "description": "Marquée par le fédéralisme constitutionnel de 1891, le coronélisme et les oligarchies agraires du « café au lait », la Première République du Brésil reposait sur une économie d’exportation et réprima sévèrement les troubles populaires.",
+    "category": "République fédéraliste oligarchique"
+  },
+  {
+    "id": "franca-de-vichy",
+    "name": "France de Vichy",
+    "description": "Régime autoritaire dirigé par le maréchal Pétain sous occupation allemande, il remplaça la république par une « Révolution nationale » corporatiste et catholique et collabora activement avec l’Axe.",
+    "category": "Régime autoritaire collaborationniste"
+  },
+  {
+    "id": "comunidade-da-inglaterra",
+    "name": "Commonwealth d’Angleterre",
+    "description": "La période républicaine qui abolit la monarchie après l’exécution de Charles Ier, gouvernée comme une république militaire puritaine par Oliver Cromwell, avec une expansion navale et la conquête de l’Irlande.",
+    "category": "République militaire puritaine"
+  },
+  {
+    "id": "liga-hanseatica",
+    "name": "Ligue hanséatique",
+    "description": "Confédération commerciale de guildes de marchands et de villes libres de la Baltique et de la mer du Nord, dirigée par Lübeck, dominant le commerce maritime et défendant ses privilèges sans État central.",
+    "category": "Confédération maritime marchande"
+  },
+  {
+    "id": "eua-alabama",
+    "name": "Alabama (États-Unis)",
+    "description": "État du Sud profond des États-Unis, l’Alabama combine une forte religiosité protestante, les droits des États, de faibles impôts et une industrie aérospatiale à Huntsville, avec un héritage de ségrégation raciale et une dépendance envers les fonds fédéraux.",
+    "category": "Région conservatrice et religieuse"
+  },
+  {
+    "id": "eua-arizona",
+    "name": "Arizona (États-Unis)",
+    "description": "État du Sud-Ouest à la frontière avec le Mexique, l’Arizona combine une tradition libertarienne et conservatrice, l’immigration et la sécurité des frontières au centre du débat, un électorat divisé, un pôle de semi-conducteurs et une croissance rapide.",
+    "category": "Région frontalière libertarienne"
+  },
+  {
+    "id": "eua-minnesota",
+    "name": "Minnesota (États-Unis)",
+    "description": "État du Midwest à la tradition civique et coopérative, le Minnesota combine impôts élevés, services publics solides, syndicats et forte participation électorale avec l’accueil de réfugiés et une économie de la santé, de l’industrie et de la finance.",
+    "category": "Région civique et social-démocrate"
+  },
+  {
+    "id": "eua-oregon",
+    "name": "Oregon (États-Unis)",
+    "description": "État de la côte ouest, l’Oregon combine vote par correspondance, initiatives citoyennes, écologisme et l’une des populations les moins religieuses du pays, avec des lois libérales sur les drogues et l’aide à mourir et une économie de la sylviculture, de la technologie et du vin.",
+    "category": "Région écologiste et progressiste"
+  },
+  {
+    "id": "bahia",
+    "name": "Bahia (Brésil)",
+    "description": "État du Nord-Est et berceau de la culture afro-brésilienne, Bahia a un fort syncrétisme religieux, un électorat orienté à gauche, le pôle pétrochimique de Camaçari et une tradition d’oligarchies comme le carlisme.",
+    "category": "Région afro-brésilienne du Nord-Est"
+  },
+  {
+    "id": "pernambuco",
+    "name": "Pernambuco (Brésil)",
+    "description": "État du Nord-Est à la politique compétitive et à la tradition de gauche, le Pernambuco combine le port de Suape, le pôle numérique de Recife, la culture populaire du frevo et du manguebeat et de fortes inégalités régionales.",
+    "category": "Région carrefour du Nord-Est"
+  },
+  {
+    "id": "ceara",
+    "name": "Ceará (Brésil)",
+    "description": "État du Nord-Est au climat semi-aride et à la forte religiosité populaire, le Ceará se distingue par la gestion éducative de Sobral, l’énergie éolienne, le port de Pecém et une politique de centre gauche, tout en affrontant des factions criminelles.",
+    "category": "Région semi-aride à forte dimension éducative"
+  },
+  {
+    "id": "goias",
+    "name": "Goiás (Brésil)",
+    "description": "État du Centre-Ouest, le Goiás a une économie de l’agro-industrie, des mines et de l’agroalimentaire, un électorat conservateur et évangélique, le plus grand réseau d’écoles gérées par les militaires du pays et l’influence de Brasília sur ses environs.",
+    "category": "Région agro-exportatrice conservatrice"
+  },
+  {
+    "id": "flandres",
+    "name": "Flandre (Belgique)",
+    "description": "Région néerlandophone de Belgique, la Flandre est la plus riche et la plus peuplée du pays, avec une économie exportatrice centrée sur le port d’Anvers, un fort nationalisme régional (N-VA, Vlaams Belang) et une large autonomie en matière d’éducation et de culture.",
+    "category": "Région exportatrice nationaliste"
+  },
+  {
+    "id": "veneto",
+    "name": "Vénétie (Italie)",
+    "description": "Région du nord-est de l’Italie, la Vénétie combine petites entreprises exportatrices, tradition catholique et démocrate-chrétienne, autonomisme de la Ligue et forte identité vénète, ayant voté à une large majorité en 2017 pour une plus grande autonomie fiscale.",
+    "category": "Région autonomiste d’affaires"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubaï (Émirats arabes unis)",
+    "description": "Émirat des Émirats arabes unis dirigé par la famille Al Maktoum, Dubaï est une cité-État de commerce, de finance, de tourisme et de zones franches, avec une majorité de résidents étrangers sans droits politiques et sans élections locales.",
+    "category": "Émirat monarchique commercial"
+  },
+  {
+    "id": "brasil-de-juscelino-kubitschek",
+    "name": "Brésil de Juscelino Kubitschek",
+    "description": "Sous Juscelino Kubitschek, le Brésil fut une démocratie développementiste qui, par son Plan des objectifs, industrialisa le pays par la planification d’État, les infrastructures et le capital étranger, construisit Brasília et accepta inflation et dette au nom de la croissance.",
+    "category": "Démocratie développementiste"
+  },
+  {
+    "id": "japao-do-alto-crescimento",
+    "name": "Japon de la haute croissance",
+    "description": "Entre 1955 et 1973, le Japon connut une croissance bien supérieure à la moyenne mondiale avec un État coordinateur (MITI et banques), de grands conglomérats, la protection industrielle et de fortes exportations, sous une démocratie dominée par le Parti libéral-démocrate.",
+    "category": "Démocratie développementiste à parti dominant"
+  },
+  {
+    "id": "taiwan-do-kuomintang",
+    "name": "Taïwan du Kuomintang",
+    "description": "Sous le Kuomintang, Taïwan vécut sous la loi martiale et le parti unique de Tchang Kaï-chek et de Chiang Ching-kuo, avec réforme agraire, industrialisation tournée vers l’exportation, entreprises publiques et soutien américain, base d’une croissance rapide.",
+    "category": "Dictature développementiste à parti unique"
+  },
+  {
+    "id": "indonesia-de-suharto",
+    "name": "Indonésie de Suharto",
+    "description": "Sous Suharto, l’Indonésie combina pouvoir militaire autoritaire, anticommunisme, un parti officiel (Golkar) et des technocrates libéraux, attirant les capitaux étrangers et croissant vite, avec corruption et répression à l’intérieur et au Timor oriental.",
+    "category": "Dictature militaire et technocratique"
+  },
+  {
+    "id": "eua-de-reagan",
+    "name": "États-Unis de Reagan",
+    "description": "Sous Ronald Reagan, les États-Unis baissèrent les impôts et déréglementèrent l’économie, affrontèrent les syndicats, augmentèrent les dépenses militaires contre l’Union soviétique et donnèrent une voix à la droite religieuse, dans une démocratie compétitive aux déficits croissants.",
+    "category": "République conservatrice de libre marché"
+  },
+  {
+    "id": "eua-independencia",
+    "name": "États-Unis de l’Indépendance",
+    "description": "Treize anciennes colonies combattirent la Couronne pour l’indépendance, le gouvernement par consentement et les droits naturels, créant des républiques dotées de constitutions écrites et d’assemblées élues, la liberté religieuse en Virginie, l’abolition graduelle dans le Nord et l’Ordonnance du Nord-Ouest.",
+    "category": "République confédérale révolutionnaire"
+  },
+  {
+    "id": "franca-de-gaulle",
+    "name": "France de De Gaulle",
+    "description": "Cinquième République sous De Gaulle : présidentialisme fort, plébiscites, planification dirigiste, indépendance nucléaire et sortie du commandement de l’OTAN, fin de la guerre d’Algérie et crise de mai 1968.",
+    "category": "République présidentialiste et dirigiste"
+  },
+  {
+    "id": "africa-do-sul-de-mandela",
+    "name": "Afrique du Sud de Mandela",
+    "description": "Transition post-apartheid sous Nelson Mandela : premières élections multiraciales, un gouvernement d’union nationale, la Constitution de 1996, la Commission Vérité et Réconciliation et une politique économique modérément libérale.",
+    "category": "Démocratie de réconciliation multiraciale"
+  },
+  {
+    "id": "romenia-legionaria",
+    "name": "Roumanie légionnaire",
+    "description": "État national légionnaire de septembre 1940 à janvier 1941, un gouvernement de la Garde de fer avec Antonescu : nationalisme orthodoxe mystique, parti unique, antisémitisme, expropriations et violence politique, jusqu’à la rébellion légionnaire.",
+    "category": "État légionnaire national"
+  },
+  {
+    "id": "austria-corporativista",
+    "name": "Autriche corporatiste",
+    "description": "Le Ständestaat de Dollfuss et de Schuschnigg : guerre civile de 1934, partis dissous, Front patriotique, corporations professionnelles, catholicisme politique, antinazisme et antisocialisme, jusqu’à l’Anschluss de 1938.",
+    "category": "État corporatiste catholique"
+  },
+  {
+    "id": "espanha-primo-de-rivera",
+    "name": "Espagne de Primo de Rivera",
+    "description": "Dictature de Primo de Rivera sous Alphonse XIII : coup d’État de 1923, Constitution suspendue, parti officiel de l’Union patriotique, censure, travaux publics, corporatisme du travail, répression des Catalans et fin de la guerre du Rif.",
+    "category": "Dictature militaire régénérationniste"
+  },
+  {
+    "id": "eua-nevada",
+    "name": "Nevada (États-Unis)",
+    "description": "État de l’Ouest américain, le Nevada ne prélève aucun impôt d’État sur le revenu et vit des casinos, du tourisme et des mines, avec les jeux d’argent légaux, le mariage express et la prostitution réglementée dans certains comtés.",
+    "category": "Région libertarienne et touristique"
+  },
+  {
+    "id": "nova-zelandia-de-roger-douglas",
+    "name": "Nouvelle-Zélande de Roger Douglas",
+    "description": "Sous le gouvernement travailliste de David Lange et le ministre Roger Douglas, la Nouvelle-Zélande privatisa des entreprises publiques, réduisit les subventions agricoles, ouvrit le commerce et déréglementa l’économie, tout en conservant la démocratie et sa politique antinucléaire.",
+    "category": "Démocratie de réformes néolibérales"
+  },
+  {
+    "id": "argentina-regime-militar",
+    "name": "Argentine sous le régime militaire",
+    "description": "Sous la junte du Processus de réorganisation nationale, l’Argentine ferma le Congrès, réprima l’opposition par des disparitions forcées et libéralisa l’économie, jusqu’à la défaite des Malouines et au retour de la démocratie.",
+    "category": "Dictature militaire répressive et libéralisante"
+  },
+  {
+    "id": "tanzania-de-nyerere",
+    "name": "Tanzanie de Nyerere",
+    "description": "Sous Julius Nyerere, la Tanzanie adopta le socialisme ujamaa, avec un parti unique, des banques et des industries nationalisées, des villages collectifs, l’alphabétisation en swahili et une politique étrangère non alignée.",
+    "category": "Socialisme africain de l’ujamaa"
+  },
+  {
+    "id": "brasil-de-fernando-henrique-cardoso",
+    "name": "Brésil de Fernando Henrique Cardoso",
+    "description": "Avec Fernando Henrique Cardoso au ministère des Finances puis à la présidence, le Brésil stabilisa sa monnaie par le Plan Real, privatisa des entreprises publiques et adopta une loi de responsabilité budgétaire, dans une démocratie qui approuva la réélection présidentielle.",
+    "category": "Démocratie sociale-libérale"
+  },
+  {
+    "id": "polonia-socialista",
+    "name": "Pologne socialiste",
+    "description": "La République populaire de Pologne, État à parti unique du Pacte de Varsovie sous le Parti ouvrier unifié polonais, combina économie planifiée et agriculture surtout privée, une Église catholique puissante et des révoltes ouvrières, jusqu’à la victoire de Solidarność en 1989.",
+    "category": "Socialisme contesté à parti unique"
+  },
+  {
+    "id": "mocambique-de-samora-machel",
+    "name": "Mozambique de Samora Machel",
+    "description": "Sous Samora Machel et le Frelimo, le Mozambique devint après l’indépendance un État marxiste-léniniste à parti unique : nationalisations, villages communaux, alphabétisation et santé gratuite, alliance avec l’URSS et guerre civile contre la Renamo.",
+    "category": "Marxisme-léninisme africain"
+  }
+]

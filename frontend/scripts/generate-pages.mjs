@@ -1,7 +1,7 @@
-// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN, ES, DE, IT e RU
+// Gera páginas estáticas de SEO (ideologias, países, personalidades) em PT, EN, ES, DE, IT, RU e FR
 // a partir dos JSONs do backend. Roda após o `vite build` e escreve direto em dist/.
 // Fonte estrutural: backend/src/main/resources/data (PT). Textos EN vêm dos
-// overlays em data/i18n/<lang>/*.json (chaveados por id; fallback: EN usa PT, ES, DE, IT e RU usam EN).
+// overlays em data/i18n/<lang>/*.json (chaveados por id; fallback: EN usa PT, ES, DE, IT, RU e FR usam EN).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -23,6 +23,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -175,8 +176,9 @@ STR.es = { ...STR.en, ...ES.site };
 STR.de = { ...STR.en, ...DE.site };
 STR.it = { ...STR.en, ...IT.site };
 STR.ru = { ...STR.en, ...RU.site };
+STR.fr = { ...STR.en, ...FR.site };
 
-const LOCALES = ['pt', 'en', 'es', 'de', 'it', 'ru'];
+const LOCALES = ['pt', 'en', 'es', 'de', 'it', 'ru', 'fr'];
 
 function groupBy(list, keyFn) {
   const map = new Map();
@@ -398,6 +400,7 @@ function homeVariant(index, locale, c) {
     <link rel="alternate" hreflang="de" href="https://12axes.vercel.app/de" />
     <link rel="alternate" hreflang="it" href="https://12axes.vercel.app/it" />
     <link rel="alternate" hreflang="ru" href="https://12axes.vercel.app/ru" />
+    <link rel="alternate" hreflang="fr" href="https://12axes.vercel.app/fr" />
     <link rel="alternate" hreflang="x-default" href="https://12axes.vercel.app/en" />
 
     `;
@@ -467,7 +470,7 @@ function homeVariant(index, locale, c) {
     name: '12 Axes',
     alternateName: ['12 Eixos', '12axes', '12 Axes Political Test'],
     url,
-    inLanguage: [locale, ...['pt-BR', 'en', 'es', 'de', 'it', 'ru'].filter((l) => l !== locale)]
+    inLanguage: [locale, ...['pt-BR', 'en', 'es', 'de', 'it', 'ru', 'fr'].filter((l) => l !== locale)]
   };
 
   const jsonLdBlocks = [JSON.stringify(webApp), JSON.stringify(faqLd), JSON.stringify(webSite)];
@@ -567,6 +570,7 @@ function buildHomeVariants() {
   writeFileSync(join(DIST, 'de.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'de', DE.home), 'de')));
   writeFileSync(join(DIST, 'it.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'it', IT.home), 'it')));
   writeFileSync(join(DIST, 'ru.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'ru', RU.home), 'ru')));
+  writeFileSync(join(DIST, 'fr.html'), cdnifyShareImage(withSeoHome(homeVariant(index, 'fr', FR.home), 'fr')));
 }
 
 const allPaths = [];
@@ -610,7 +614,7 @@ if (existsSync(booksPtPath)) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-const sitemapUrls = ['/', '/en', '/es', '/de', '/it', '/ru', ...allPaths]
+const sitemapUrls = ['/', '/en', '/es', '/de', '/it', '/ru', '/fr', ...allPaths]
   .map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`)
   .join('\n');
 writeFileSync(

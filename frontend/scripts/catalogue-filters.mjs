@@ -7,6 +7,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 export const FILTER_STR = {
   pt: {
@@ -88,6 +89,7 @@ FILTER_STR.es = { ...FILTER_STR.en, ...ES.filters };
 FILTER_STR.de = { ...FILTER_STR.en, ...DE.filters };
 FILTER_STR.it = { ...FILTER_STR.en, ...IT.filters };
 FILTER_STR.ru = { ...FILTER_STR.en, ...RU.filters };
+FILTER_STR.fr = { ...FILTER_STR.en, ...FR.filters };
 
 // Gera a string compacta de polos para busca instantânea no client-side.
 // Formato: "estrutura:l representacao:r:s poder:r ..." onde :s indica posição forte (>= 60 ou <= 40).

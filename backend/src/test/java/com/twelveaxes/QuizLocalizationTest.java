@@ -109,6 +109,31 @@ class QuizLocalizationTest {
     }
 
     @Test
+    void quizInFrenchHasFrenchLabelsAndNeverFallsBackToPortuguese() throws Exception {
+        String body = mockMvc.perform(get("/api/quiz").param("lang", "fr").param("variant", "extreme"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
+        QuizPayload quiz = objectMapper.readValue(body, QuizPayload.class);
+        QuizPayload portuguese = dataService.getQuiz("extreme", "pt");
+        QuizPayload english = dataService.getQuiz("extreme", "en");
+
+        assertThat(quiz.description()).contains("axes politiques");
+        assertThat(quiz.answerOptions()).anySatisfy(option -> assertThat(option.label()).isEqualTo("D’accord"));
+        var portugueseTexts = portuguese.questions().stream().map(question -> question.text()).toList();
+        var englishTexts = english.questions().stream().map(question -> question.text()).toList();
+        assertThat(quiz.questions()).noneMatch(question -> portugueseTexts.contains(question.text()));
+        assertThat(quiz.questions()).noneMatch(question -> englishTexts.contains(question.text()));
+        assertThat(quiz.questions()).allMatch(question -> question.help() != null);
+    }
+
+    @Test
+    void frenchVariantsNormalizeToFrench() {
+        assertThat(QuizDataService.normalizeLang("fr")).isEqualTo("fr");
+        assertThat(QuizDataService.normalizeLang("fr-FR")).isEqualTo("fr");
+        assertThat(QuizDataService.normalizeLang("fr-CA")).isEqualTo("fr");
+    }
+
+    @Test
     void russianVariantsNormalizeToRussian() {
         assertThat(QuizDataService.normalizeLang("ru")).isEqualTo("ru");
         assertThat(QuizDataService.normalizeLang("ru-RU")).isEqualTo("ru");
@@ -193,7 +218,7 @@ class QuizLocalizationTest {
 
     @Test
     void unknownLangFallsBackToPortuguese() throws Exception {
-        mockMvc.perform(get("/api/quiz").param("lang", "fr"))
+        mockMvc.perform(get("/api/quiz").param("lang", "ja"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.description").value(org.hamcrest.Matchers.containsString("eixos políticos")));
     }

@@ -11,6 +11,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 // Mesma paleta de frontend/src/utils/ideologyColors.ts, na ordem do espectro.
 export const SPECTRUM = [
@@ -51,6 +52,14 @@ export const CATEGORY_KEY = {
   'третья позиция': 'terceira',
   либертарианцы: 'libertario',
   анархисты: 'anarquismo',
+  'gauche radicale': 'esq-radical',
+  gauche: 'esquerda',
+  centre: 'centro',
+  droite: 'direita',
+  'extrême droite': 'ext-direita',
+  'troisième position': 'terceira',
+  libertarien: 'libertario',
+  anarchiste: 'anarquismo',
   anarchico: 'anarquismo',
   libertär: 'libertario',
   anarchistisch: 'anarquismo',
@@ -154,6 +163,7 @@ STR.es = { ...STR.en, ...ES.ideologiesIndex };
 STR.de = { ...STR.en, ...DE.ideologiesIndex };
 STR.it = { ...STR.en, ...IT.ideologiesIndex };
 STR.ru = { ...STR.en, ...RU.ideologiesIndex };
+STR.fr = { ...STR.en, ...FR.ideologiesIndex };
 
 export const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 
@@ -253,7 +263,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <meta name="theme-color" content="#F4F1E8" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены' }[L.locale]}" />
+    <meta name="copyright" content="${{ pt: '© 2026 12 Axes. Todos os direitos reservados', en: '© 2026 12 Axes. All rights reserved', es: '© 2026 12 Axes. Todos los derechos reservados', de: '© 2026 12 Axes. Alle Rechte vorbehalten', it: '© 2026 12 Axes. Tutti i diritti riservati', ru: '© 2026 12 Axes. Все права защищены', fr: '© 2026 12 Axes. Tous droits réservés' }[L.locale]}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="${url}" />
     <link rel="alternate" hreflang="pt-BR" href="${site}${basePath}" />
@@ -262,6 +272,7 @@ export function ideologiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, pr
     <link rel="alternate" hreflang="de" href="${site}/de${basePath}" />
     <link rel="alternate" hreflang="it" href="${site}/it${basePath}" />
     <link rel="alternate" hreflang="ru" href="${site}/ru${basePath}" />
+    <link rel="alternate" hreflang="fr" href="${site}/fr${basePath}" />
     <link rel="alternate" hreflang="x-default" href="${site}/en${basePath}" />
     ${iconLinks()}
     <meta property="og:type" content="website" />

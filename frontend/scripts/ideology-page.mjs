@@ -18,6 +18,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 const STR = {
   pt: {
@@ -133,6 +134,7 @@ STR.es = { ...STR.en, ...ES.ideologyPage };
 STR.de = { ...STR.en, ...DE.ideologyPage };
 STR.it = { ...STR.en, ...IT.ideologyPage };
 STR.ru = { ...STR.en, ...RU.ideologyPage };
+STR.fr = { ...STR.en, ...FR.ideologyPage };
 
 const ARR = '<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
 const pct = (x) => Math.round(x);

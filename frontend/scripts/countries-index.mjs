@@ -11,6 +11,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 // Épocas, na ordem do catálogo. Cada regime entra na época do ano de início;
 // `until` é o ano (exclusivo) que fecha a época. A Antiguidade fecha em 300
@@ -136,6 +137,7 @@ STR.es = { ...STR.en, ...ES.countriesIndex };
 STR.de = { ...STR.en, ...DE.countriesIndex };
 STR.it = { ...STR.en, ...IT.countriesIndex };
 STR.ru = { ...STR.en, ...RU.countriesIndex };
+STR.fr = { ...STR.en, ...FR.countriesIndex };
 
 export function countriesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];

@@ -39,7 +39,8 @@ export const APP_DICTIONARY = {
   es: { ...enDictionary, ...(await loadDictionary('es.ts', 'es')) },
   de: { ...enDictionary, ...(await loadDictionary('de.ts', 'de')) },
   it: { ...enDictionary, ...(await loadDictionary('it.ts', 'it')) },
-  ru: { ...enDictionary, ...(await loadDictionary('ru.ts', 'ru')) }
+  ru: { ...enDictionary, ...(await loadDictionary('ru.ts', 'ru')) },
+  fr: { ...enDictionary, ...(await loadDictionary('fr.ts', 'fr')) }
 };
 
 const en = explanationBlock('en.ts');
@@ -49,5 +50,6 @@ export const AXIS_EXPLANATIONS = {
   es: { ...en, ...explanationBlock('es.ts') },
   de: { ...en, ...explanationBlock('de.ts') },
   it: { ...en, ...explanationBlock('it.ts') },
-  ru: { ...en, ...explanationBlock('ru.ts') }
+  ru: { ...en, ...explanationBlock('ru.ts') },
+  fr: { ...en, ...explanationBlock('fr.ts') }
 };

@@ -164,12 +164,15 @@ public class IdeologyMatcherService {
         boolean de = QuizDataService.LANG_DE.equals(lang);
         boolean it = QuizDataService.LANG_IT.equals(lang);
         boolean ru = QuizDataService.LANG_RU.equals(lang);
+        boolean fr = QuizDataService.LANG_FR.equals(lang);
         DescriptionParts parts = splitDescription(cleanDescription(rawDescription));
         StringBuilder description = new StringBuilder(parts.summary());
         if (!parts.summary().endsWith(".")) {
             description.append(".");
         }
-        description.append(ru
+        description.append(fr
+                ? " La compatibilité indique à quel point vos réponses se rapprochent de ce profil."
+                : ru
                 ? " Совместимость показывает, насколько ваши ответы близки к этому профилю."
                 : it
                 ? " La compatibilità indica quanto le tue risposte sono vicine a questo profilo."

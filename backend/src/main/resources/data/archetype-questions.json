@@ -7,7 +7,8 @@
       "es": "Sociedad",
       "de": "Gesellschaft",
       "it": "Società",
-      "ru": "Общество"
+      "ru": "Общество",
+      "fr": "Société"
     },
     "text": {
       "pt": "A sociedade deve se apoiar em quê?",
@@ -15,7 +16,8 @@
       "es": "¿En qué debe apoyarse la sociedad?",
       "de": "Worauf sollte die Gesellschaft beruhen?",
       "it": "Su che cosa dovrebbe fondarsi la società?",
-      "ru": "На чем должно держаться общество?"
+      "ru": "На чем должно держаться общество?",
+      "fr": "Sur quoi la société doit-elle reposer ?"
     },
     "options": [
       {
@@ -26,7 +28,8 @@
           "es": "Fe, familia y tradición nacional",
           "de": "Glaube, Familie und nationale Tradition",
           "it": "Fede, famiglia e tradizione nazionale",
-          "ru": "Вера, семья и национальная традиция"
+          "ru": "Вера, семья и национальная традиция",
+          "fr": "La foi, la famille et la tradition nationale"
         },
         "effects": {
           "moral": 12,
@@ -42,7 +45,8 @@
           "es": "Costumbres y fe, con cambios lentos",
           "de": "Brauch und Glaube, mit langsamem Wandel",
           "it": "Costumi e fede, con cambiamenti lenti",
-          "ru": "Обычай и вера, меняющиеся медленно"
+          "ru": "Обычай и вера, меняющиеся медленно",
+          "fr": "Les coutumes et la foi, qui changent lentement"
         },
         "effects": {
           "moral": 32,
@@ -58,7 +62,8 @@
           "es": "Vive y deja vivir",
           "de": "Leben und leben lassen",
           "it": "Vivi e lascia vivere",
-          "ru": "Живи сам и давай жить другим"
+          "ru": "Живи сам и давай жить другим",
+          "fr": "Vivre et laisser vivre"
         },
         "effects": {
           "moral": 55,
@@ -74,7 +79,8 @@
           "es": "Igualdad, diversidad y derechos civiles",
           "de": "Gleichheit, Vielfalt und Bürgerrechte",
           "it": "Uguaglianza, diversità e diritti civili",
-          "ru": "Равенство, разнообразие и гражданские права"
+          "ru": "Равенство, разнообразие и гражданские права",
+          "fr": "L’égalité, la diversité et les droits civiques"
         },
         "effects": {
           "moral": 80,
@@ -90,7 +96,8 @@
           "es": "Tradición y orden, sin religión",
           "de": "Tradition und Ordnung, ohne Religion",
           "it": "Tradizione e ordine, senza religione",
-          "ru": "Традиция и порядок, без религии"
+          "ru": "Традиция и порядок, без религии",
+          "fr": "La tradition et l’ordre, sans religion"
         },
         "effects": {
           "moral": 25,
@@ -106,7 +113,8 @@
           "es": "Fe al servicio de la justicia social",
           "de": "Glaube im Dienst sozialer Gerechtigkeit",
           "it": "Fede al servizio della giustizia sociale",
-          "ru": "Вера на службе социальной справедливости"
+          "ru": "Вера на службе социальной справедливости",
+          "fr": "La foi au service de la justice sociale"
         },
         "effects": {
           "moral": 72,
@@ -124,7 +132,8 @@
       "es": "Poder",
       "de": "Macht",
       "it": "Potere",
-      "ru": "Власть"
+      "ru": "Власть",
+      "fr": "Pouvoir"
     },
     "text": {
       "pt": "Como o poder deve ser organizado?",
@@ -132,7 +141,8 @@
       "es": "¿Cómo debe organizarse el poder?",
       "de": "Wie sollte die Macht organisiert sein?",
       "it": "Come dovrebbe essere organizzato il potere?",
-      "ru": "Как должна быть устроена власть?"
+      "ru": "Как должна быть устроена власть?",
+      "fr": "Comment le pouvoir doit-il être organisé ?"
     },
     "options": [
       {
@@ -143,7 +153,8 @@
           "es": "Un solo líder o partido, centralizado",
           "de": "Ein Anführer oder eine Partei, zentralisiert",
           "it": "Un solo capo o partito, centralizzato",
-          "ru": "Единый лидер или партия, централизованно"
+          "ru": "Единый лидер или партия, централизованно",
+          "fr": "Un chef ou un parti unique, de façon centralisée"
         },
         "effects": {
           "representacao": 15,
@@ -159,7 +170,8 @@
           "es": "Deciden las élites, con voto limitado",
           "de": "Eliten entscheiden, mit begrenztem Wahlrecht",
           "it": "Decidono le élite, con voto limitato",
-          "ru": "Решает элита, при ограниченном голосовании"
+          "ru": "Решает элита, при ограниченном голосовании",
+          "fr": "Les élites décident, avec un vote limité"
         },
         "effects": {
           "representacao": 40,
@@ -175,7 +187,8 @@
           "es": "Democracia con contrapesos",
           "de": "Demokratie mit Gewaltenteilung",
           "it": "Democrazia con pesi e contrappesi",
-          "ru": "Демократия с системой сдержек и противовесов"
+          "ru": "Демократия с системой сдержек и противовесов",
+          "fr": "La démocratie, avec des contre-pouvoirs"
         },
         "effects": {
           "representacao": 78,
@@ -191,7 +204,8 @@
           "es": "Poco o ningún Estado",
           "de": "Wenig oder kein Staat",
           "it": "Poco o nessuno Stato",
-          "ru": "Минимум государства или его отсутствие"
+          "ru": "Минимум государства или его отсутствие",
+          "fr": "Un État minimal, ou pas d’État du tout"
         },
         "effects": {
           "representacao": 70,
@@ -207,7 +221,8 @@
           "es": "Sin Estado, con consejos o contratos",
           "de": "Kein Staat, Räte oder Verträge",
           "it": "Nessuno Stato: consigli o contratti",
-          "ru": "Без государства: советы или договоры"
+          "ru": "Без государства: советы или договоры",
+          "fr": "Pas d’État : des conseils ou des contrats"
         },
         "effects": {
           "representacao": 90,
@@ -225,7 +240,8 @@
       "es": "Economía",
       "de": "Wirtschaft",
       "it": "Economia",
-      "ru": "Экономика"
+      "ru": "Экономика",
+      "fr": "Économie"
     },
     "text": {
       "pt": "Quem deve controlar a produção?",
@@ -233,7 +249,8 @@
       "es": "¿Quién debe controlar la producción?",
       "de": "Wer sollte die Produktion kontrollieren?",
       "it": "Chi dovrebbe controllare la produzione?",
-      "ru": "Кто должен контролировать производство?"
+      "ru": "Кто должен контролировать производство?",
+      "fr": "Qui doit contrôler la production ?"
     },
     "options": [
       {
@@ -244,7 +261,8 @@
           "es": "Producción colectiva y planificada, sin patrones",
           "de": "Kollektive Planwirtschaft, ohne Chefs",
           "it": "Produzione collettiva e pianificata, senza padroni",
-          "ru": "Коллективное, плановое производство, без хозяев"
+          "ru": "Коллективное, плановое производство, без хозяев",
+          "fr": "Une production collective et planifiée, sans patrons"
         },
         "effects": {
           "economia": 92,
@@ -260,7 +278,8 @@
           "es": "Cooperativas, Estado de bienestar y regulación",
           "de": "Genossenschaften, Sozialstaat und Regulierung",
           "it": "Cooperative, Stato sociale e regolamentazione",
-          "ru": "Кооперативы, государство всеобщего благосостояния и регулирование"
+          "ru": "Кооперативы, государство всеобщего благосостояния и регулирование",
+          "fr": "Des coopératives, un État-providence et de la régulation"
         },
         "effects": {
           "economia": 76,
@@ -276,7 +295,8 @@
           "es": "Mercados con reglas y una red de protección",
           "de": "Märkte mit Regeln und sozialem Netz",
           "it": "Mercati con regole e una rete di protezione",
-          "ru": "Рынки с правилами и сетью социальной защиты"
+          "ru": "Рынки с правилами и сетью социальной защиты",
+          "fr": "Des marchés encadrés par des règles et un filet de protection sociale"
         },
         "effects": {
           "economia": 42,
@@ -292,7 +312,8 @@
           "es": "Patrones y sindicatos unidos por el Estado",
           "de": "Unternehmer und Gewerkschaften, vom Staat vereint",
           "it": "Imprenditori e sindacati uniti dallo Stato",
-          "ru": "Хозяева и профсоюзы, объединенные государством"
+          "ru": "Хозяева и профсоюзы, объединенные государством",
+          "fr": "Patrons et syndicats réunis par l’État"
         },
         "effects": {
           "economia": 65,
@@ -308,7 +329,8 @@
           "es": "Empresas nacionales protegidas por el Estado",
           "de": "Heimische Firmen, vom Staat geschützt",
           "it": "Imprese nazionali protette dallo Stato",
-          "ru": "Национальные фирмы под защитой государства"
+          "ru": "Национальные фирмы под защитой государства",
+          "fr": "Des entreprises nationales protégées par l’État"
         },
         "effects": {
           "economia": 38,
@@ -324,7 +346,8 @@
           "es": "Libre comercio e impuestos mínimos",
           "de": "Freihandel und minimale Steuern",
           "it": "Libero scambio e tasse minime",
-          "ru": "Свободная торговля и минимальные налоги"
+          "ru": "Свободная торговля и минимальные налоги",
+          "fr": "Le libre-échange et des impôts minimaux"
         },
         "effects": {
           "economia": 12,
@@ -342,7 +365,8 @@
       "es": "Mundo",
       "de": "Welt",
       "it": "Mondo",
-      "ru": "Мир"
+      "ru": "Мир",
+      "fr": "Monde"
     },
     "text": {
       "pt": "Como o país deve agir no mundo?",
@@ -350,7 +374,8 @@
       "es": "¿Cómo debe actuar el país en el exterior?",
       "de": "Wie sollte das Land im Ausland auftreten?",
       "it": "Come dovrebbe agire il paese all'estero?",
-      "ru": "Как стране следует действовать за рубежом?"
+      "ru": "Как стране следует действовать за рубежом?",
+      "fr": "Comment le pays doit-il agir à l’étranger ?"
     },
     "options": [
       {
@@ -361,7 +386,8 @@
           "es": "Una potencia militar influyente",
           "de": "Als einflussreiche Militärmacht",
           "it": "Una potenza militare influente",
-          "ru": "Влиятельная военная держава"
+          "ru": "Влиятельная военная держава",
+          "fr": "Une puissance militaire influente"
         },
         "effects": {
           "diplomacia": 85,
@@ -376,7 +402,8 @@
           "es": "Defensa fuerte y aliados cercanos",
           "de": "Starke Verteidigung und enge Verbündete",
           "it": "Difesa forte e alleati vicini",
-          "ru": "Сильная оборона и близкие союзники"
+          "ru": "Сильная оборона и близкие союзники",
+          "fr": "Une défense forte et des alliés proches"
         },
         "effects": {
           "diplomacia": 60,
@@ -391,7 +418,8 @@
           "es": "Diplomacia antes que fuerza",
           "de": "Diplomatie vor Gewalt",
           "it": "La diplomazia prima della forza",
-          "ru": "Дипломатия прежде силы"
+          "ru": "Дипломатия прежде силы",
+          "fr": "La diplomatie avant la force"
         },
         "effects": {
           "diplomacia": 30,
@@ -406,7 +434,8 @@
           "es": "Armado, pero fuera de guerras ajenas",
           "de": "Bewaffnet, aber raus aus fremden Kriegen",
           "it": "Armato, ma fuori dalle guerre altrui",
-          "ru": "Вооруженный нейтралитет, вне чужих войн"
+          "ru": "Вооруженный нейтралитет, вне чужих войн",
+          "fr": "Une neutralité armée, hors des guerres des autres"
         },
         "effects": {
           "diplomacia": 70,
@@ -421,7 +450,8 @@
           "es": "Paz y no intervención, siempre",
           "de": "Frieden und Nichteinmischung, immer",
           "it": "Pace e non intervento, sempre",
-          "ru": "Мир и невмешательство, всегда"
+          "ru": "Мир и невмешательство, всегда",
+          "fr": "La paix et la non-ingérence, toujours"
         },
         "effects": {
           "diplomacia": 8,
@@ -438,7 +468,8 @@
       "es": "Tecnología",
       "de": "Technologie",
       "it": "Tecnologia",
-      "ru": "Технологии"
+      "ru": "Технологии",
+      "fr": "Technologie"
     },
     "text": {
       "pt": "Qual deve ser o papel da tecnologia?",
@@ -446,7 +477,8 @@
       "es": "¿Qué papel debe tener la tecnología?",
       "de": "Welche Rolle sollte Technologie spielen?",
       "it": "Che ruolo dovrebbe avere la tecnologia?",
-      "ru": "Какую роль должны играть технологии?"
+      "ru": "Какую роль должны играть технологии?",
+      "fr": "Quel rôle la technologie doit-elle jouer ?"
     },
     "options": [
       {
@@ -457,7 +489,8 @@
           "es": "Volver a la naturaleza, sin industria",
           "de": "Zurück zur Natur, ohne Industrie",
           "it": "Ritorno alla natura, niente industria",
-          "ru": "Назад к природе, без промышленности"
+          "ru": "Назад к природе, без промышленности",
+          "fr": "Retour à la nature, sans industrie"
         },
         "effects": {
           "tecnologia": 8
@@ -471,7 +504,8 @@
           "es": "La naturaleza antes que el progreso",
           "de": "Natur vor Fortschritt",
           "it": "La natura prima del progresso",
-          "ru": "Природа важнее прогресса"
+          "ru": "Природа важнее прогресса",
+          "fr": "La nature avant le progrès"
         },
         "effects": {
           "tecnologia": 30
@@ -485,7 +519,8 @@
           "es": "Equilibrar progreso y naturaleza",
           "de": "Fortschritt und Natur im Gleichgewicht",
           "it": "Equilibrio tra progresso e natura",
-          "ru": "Баланс прогресса и природы"
+          "ru": "Баланс прогресса и природы",
+          "fr": "Un équilibre entre progrès et nature"
         },
         "effects": {
           "tecnologia": 50
@@ -499,7 +534,8 @@
           "es": "Tecnología e industria como motor",
           "de": "Technologie und Industrie als Motor",
           "it": "Tecnologia e industria come motore",
-          "ru": "Технологии и промышленность как двигатель"
+          "ru": "Технологии и промышленность как двигатель",
+          "fr": "La technologie et l’industrie comme moteur"
         },
         "effects": {
           "tecnologia": 72
@@ -513,7 +549,8 @@
           "es": "Acelerar la tecnología, sin frenos",
           "de": "Technologie beschleunigen, ohne Bremse",
           "it": "Accelerare la tecnologia, senza freni",
-          "ru": "Ускорять технологии, без тормозов"
+          "ru": "Ускорять технологии, без тормозов",
+          "fr": "Accélérer la technologie, sans frein"
         },
         "effects": {
           "tecnologia": 92

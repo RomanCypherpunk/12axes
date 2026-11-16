@@ -45,8 +45,9 @@ public class QuizDataService {
     public static final String LANG_DE = "de";
     public static final String LANG_IT = "it";
     public static final String LANG_RU = "ru";
+    public static final String LANG_FR = "fr";
     /** Idiomas gerados por i18n-tools/sync.py a partir do inglês: o que faltar neles usa o inglês. */
-    public static final java.util.List<String> GENERATED_LANGS = java.util.List.of(LANG_ES, LANG_DE, LANG_IT, LANG_RU);
+    public static final java.util.List<String> GENERATED_LANGS = java.util.List.of(LANG_ES, LANG_DE, LANG_IT, LANG_RU, LANG_FR);
 
     private final ObjectMapper objectMapper;
     private Map<String, LocaleBundle> bundles;
@@ -157,7 +158,8 @@ public class QuizDataService {
         LocaleBundle de = buildLocaleBundle(en, LANG_DE);
         LocaleBundle it = buildLocaleBundle(en, LANG_IT);
         LocaleBundle ru = buildLocaleBundle(en, LANG_RU);
-        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_ES, es, LANG_DE, de, LANG_IT, it, LANG_RU, ru);
+        LocaleBundle fr = buildLocaleBundle(en, LANG_FR);
+        bundles = Map.of(LANG_PT, pt, LANG_EN, en, LANG_ES, es, LANG_DE, de, LANG_IT, it, LANG_RU, ru, LANG_FR, fr);
 
         List<Book> bookList = readJson("data/books.json", new TypeReference<>() {});
         List<String> unknownBookAuthors = bookList.stream()
@@ -334,6 +336,9 @@ public class QuizDataService {
         if (normalized.equals(LANG_RU) || normalized.startsWith("ru-")) {
             return LANG_RU;
         }
+        if (normalized.equals(LANG_FR) || normalized.startsWith("fr-")) {
+            return LANG_FR;
+        }
         return switch (normalized) {
             case LANG_EN, "en-us", "en-gb" -> LANG_EN;
             default -> LANG_PT;
@@ -463,6 +468,7 @@ public class QuizDataService {
         String description = switch (normalizedLang) {
             case LANG_EN -> "A quiz of " + questionCount + " questions to estimate your position on the 12 political axes.";
             case LANG_ES -> "Un cuestionario de " + questionCount + " preguntas para estimar tu posición en los 12 ejes políticos.";
+            case LANG_FR -> "Un test de " + questionCount + " questions pour estimer votre position sur les 12 axes politiques.";
             case LANG_RU -> "Тест из " + questionCount + " вопросов, который оценивает вашу позицию по 12 политическим осям.";
             case LANG_IT -> "Un test di " + questionCount + " domande per stimare la tua posizione sui 12 assi politici.";
             case LANG_DE -> "Ein Test mit " + questionCount + " Fragen, um deine Position auf den 12 politischen Achsen zu bestimmen.";
@@ -610,6 +616,15 @@ public class QuizDataService {
     }
 
     private String labelFor(AnswerValue value, String lang) {
+        if (LANG_FR.equals(lang)) {
+            return switch (value) {
+                case STRONGLY_AGREE -> "Tout à fait d’accord";
+                case AGREE -> "D’accord";
+                case NEUTRAL -> "Neutre ou ça dépend";
+                case DISAGREE -> "Pas d’accord";
+                case STRONGLY_DISAGREE -> "Pas du tout d’accord";
+            };
+        }
         if (LANG_RU.equals(lang)) {
             return switch (value) {
                 case STRONGLY_AGREE -> "Полностью согласен(-на)";

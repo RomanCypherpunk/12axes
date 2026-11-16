@@ -11,6 +11,7 @@ import { ES } from './locales/es.mjs';
 import { DE } from './locales/de.mjs';
 import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
+import { FR } from './locales/fr.mjs';
 
 // Tipos (campo `category` em PT, valor fechado do backend), na ordem de exibição.
 const KINDS = [
@@ -109,6 +110,7 @@ STR.es = { ...STR.en, ...ES.partiesIndex };
 STR.de = { ...STR.en, ...DE.partiesIndex };
 STR.it = { ...STR.en, ...IT.partiesIndex };
 STR.ru = { ...STR.en, ...RU.partiesIndex };
+STR.fr = { ...STR.en, ...FR.partiesIndex };
 
 export function partiesIndexPage(L, { locale, site, gaSnippet, escapeHtml, profiles, title, description }) {
   const t = STR[locale];
