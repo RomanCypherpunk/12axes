@@ -481,7 +481,7 @@ export const fr: DeepPartial<Strings> = {
   spectrumEyebrow: 'Spectre politique',
   spectrumTitle: 'Découvrez votre spectre politique',
   spectrumLead:
-    'Le résultat vous aide à visualiser votre position politique entre gauche, droite et centre, et identifie aussi des formes plus radicales, autoritaires ou libertaires qui sortent de cet axe, comme l’extrême droite, la gauche radicale, la troisième position, le libertarisme et l’anarchisme.',
+    'Le résultat vous aide à visualiser votre position politique entre gauche, droite et centre, et identifie aussi des formes plus radicales, autoritaires ou libertaires qui sortent de cet axe, comme l’extrême droite, la gauche radicale, la troisième position, le libertarianisme et l’anarchisme.',
   faqTitle: 'Questions fréquentes',
   faqLead: 'Tout ce que l’on demande habituellement avant de passer le test.',
   navStart: 'Accueil',

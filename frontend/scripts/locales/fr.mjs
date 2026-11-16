@@ -38,7 +38,7 @@ export const FR = {
     ideologyHeadline: (name) => `${name} — position politique sur les 12 axes`,
     countryHeadline: (name) => `${name} — profil politique sur les 12 axes`,
     ideologiesIndexTitle: (n) => `Idéologies politiques : liste complète de ${n} courants | 12 Axes`,
-    ideologiesIndexDesc: (n) => `Liste complète de ${n} idéologies politiques, du communisme au libertarisme, avec leur position sur 12 axes. Découvrez la vôtre avec le test politique gratuit et rapide de 12 Axes.`,
+    ideologiesIndexDesc: (n) => `Liste complète de ${n} idéologies politiques, du communisme au libertarianisme, avec leur position sur 12 axes. Découvrez la vôtre avec le test politique gratuit et rapide de 12 Axes.`,
     ideologiesIndexHeading: 'Idéologies politiques',
     countriesIndexTitle: (n) => `Profils politiques de ${n} pays et régimes historiques | 12 Axes`,
     countriesIndexDesc: (n) => `Comparez le profil politique de ${n} pays et régimes historiques sur 12 axes. Découvrez quel pays vous correspond avec le test politique gratuit de 12 Axes.`,
@@ -59,7 +59,7 @@ export const FR = {
     copyright: '© 2026 12 Axes. Tous droits réservés',
     title: 'Test politique gratuit : quelle est votre idéologie ? | 12 Axes',
     description: 'Le test politique gratuit, rapide et précis de 12 Axes. Découvrez l’idéologie, le pays et la figure politique qui vous correspondent sur 12 axes, avec une boussole politique.',
-    keywords: 'test politique, test politique gratuit, quelle est mon idéologie politique, quelle idéologie politique suis-je, test politique en ligne, test d’idéologie politique, test idéologie, idéologie politique, découvrez votre idéologie, découvrez votre idéologie compatible, découvrez votre pays compatible, découvrez votre figure politique compatible, spectre politique, boussole politique, coordonnées politiques, test de la boussole politique, 12 axes, test politique à 12 axes, 12 axes, 12axes, quiz politique, gauche, droite, centre, libéralisme, conservatisme, progressisme, libertarisme, socialisme, capitalisme',
+    keywords: 'test politique, test politique gratuit, quelle est mon idéologie politique, quelle idéologie politique suis-je, test politique en ligne, test d’idéologie politique, test idéologie, idéologie politique, découvrez votre idéologie, découvrez votre idéologie compatible, découvrez votre pays compatible, découvrez votre figure politique compatible, spectre politique, boussole politique, coordonnées politiques, test de la boussole politique, 12 axes, test politique à 12 axes, 12 axes, 12axes, quiz politique, gauche, droite, centre, libéralisme, conservatisme, progressisme, libertarianisme, socialisme, capitalisme',
     languageName: 'French',
     ogLocale: 'fr_FR',
     ogDescription: 'Un quiz politique complet et gratuit : découvrez votre idéologie politique, votre pays et votre figure politique sur 12 axes, avec une boussole politique et un spectre complet.',
@@ -96,7 +96,7 @@ export const FR = {
       'Libéralisme',
       'Conservatisme',
       'Progressisme',
-      'Libertarisme'
+      'Libertarianisme'
     ],
     faq: [
       ['Le test est-il fiable ?', 'Le test politique 12 Axes est un outil fiable pour lire et comparer des positions politiques. Les questions sont réparties sur 12 axes pour qu’un seul sujet ne fausse pas le résultat, mais elles ne remplacent ni l’étude, ni le débat, ni l’analyse universitaire.'],
@@ -106,7 +106,7 @@ export const FR = {
       ['Comment l’algorithme calcule-t-il ?', 'Chaque réponse attribue des points à un pôle précis. L’algorithme calcule des pourcentages par axe, compare votre vecteur idéologique aux profils des courants politiques, des pays et des personnalités et renvoie les plus fortes compatibilités.'],
       ['Le résultat change-t-il ?', 'Il peut changer si vos opinions changent, si vous répondez avec plus de nuance ou si vous passez une version plus longue. La version extrême tend à moins fluctuer, car elle utilise davantage de questions.'],
       ['Le test est-il scientifique ?', '12 Axes n’est pas un instrument scientifique validé cliniquement. C’est un test politique éducatif, inspiré de modèles de spectre politique et de quiz d’idéologie, utile pour réfléchir et comparer.'],
-      ['Puis-je le partager ?', 'Oui. Une fois le test terminé, vous pouvez partager votre résultat pour comparer avec d’autres personnes idéologie politique, spectre politique, gauche, droite, centre et les 12 axes.'],
+      ['Puis-je le partager ?', 'Oui. Une fois le test terminé, vous pouvez partager votre résultat pour comparer avec d’autres personnes sur l’idéologie politique, le spectre politique, la gauche, la droite, le centre et les 12 axes.'],
       ['Le test collecte-t-il des données ?', 'Le test est anonyme et ne demande aucune inscription. Les réponses servent uniquement à calculer le résultat au moment du quiz, sans demander votre nom, votre e-mail ni aucune donnée personnelle.'],
       ['Puis-je le passer sur mon téléphone ?', 'Oui. L’interface est pensée pour le téléphone et l’ordinateur : vous pouvez passer le test politique dans le navigateur de votre smartphone.'],
       ['Qu’est-ce que 12 Axes ?', '12 Axes est un test politique gratuit qui mesure votre position sur 12 axes (structure de l’État, représentation, libertés, immigration, diplomatie, intervention, économie, contrôle économique, commerce, religion, morale et technologie) et montre l’idéologie politique, le pays et la figure politique qui vous correspondent.'],
