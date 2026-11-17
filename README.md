@@ -2,9 +2,9 @@
 
 # 12 Axes
 
-A political quiz that places you on twelve independent axes and compares your answers with +230 ideologies, +170 countries and regimes, and +390 political figures.
+A political quiz that places you on twelve independent axes and compares your answers with +270 ideologies, +320 countries and regimes, +730 political figures, and +200 parties and organizations.
 
-**[12axes.vercel.app](https://12axes.vercel.app)** · Portuguese and English · no sign-up
+**[12axes.vercel.app](https://12axes.vercel.app)** · Portuguese, English and Spanish · no sign-up
 
 ![Java](https://img.shields.io/badge/Java-21-orange) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-6DB33F) ![React](https://img.shields.io/badge/React-18-61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6) ![CI](https://github.com/RomanCypherpunk/12axes/actions/workflows/ci.yml/badge.svg)
 
@@ -29,7 +29,7 @@ People curious about politics who want more than a left-right label, students co
 ### What sets it apart
 
 - Twelve axes scored independently, so the result keeps tensions and unusual combinations.
-- Three catalogs (ideologies, countries, personalities), each matched on its own. Countries include +68 historical regimes, from the Paris Commune to Atatürk's Turkey.
+- Four catalogs (ideologies, countries, personalities, and parties and organizations), each matched on its own. Countries include +120 historical regimes, from the Paris Commune to Atatürk's Turkey.
 - Every profile in the catalogs answered the same 240 questions a user can answer, instead of being placed by hand.
 - An optional religion filter, so a user can hide profiles tied to a faith that is not theirs.
 - A shareable result card, a PDF report, and a link that rebuilds the result from the URL.
@@ -93,9 +93,9 @@ The pool has 240 statements, 20 per axis, half phrased toward each pole so agree
 - An "axis tension" readout for pairs of positions that rarely appear together.
 - Six named political values (economic, political, society, technology, foreign policy and immigration), read from your axes with no extra questions.
 - Book recommendations tied to your profile.
-- Religion filter for Christianity, Judaism, Islam, and Buddhism.
+- Religion filter for Christianity, Judaism, Islam, Buddhism, and Hinduism.
 - Share card (PNG), PDF report, and shareable result link.
-- Static, indexable pages for every ideology, country, and personality.
+- Static, indexable pages for every ideology, country, personality, and party.
 
 ## Demo
 
@@ -183,8 +183,11 @@ Each catalog is ranked separately. A match also reports a percentile inside its 
 | `GET` | `/api/ideologies[/{id}]` | Ideology catalog |
 | `GET` | `/api/countries[/{id}]` | Country catalog |
 | `GET` | `/api/personalities[/{id}]` | Personality catalog |
+| `GET` | `/api/parties[/{id}]` | Party and organization catalog |
+| `GET` | `/api/compare` | Compares a shared axis vector with one catalog profile |
+| `GET` | `/api/compare/profiles` | Compares up to three catalog profiles with each other |
 
-Endpoints accept `lang=pt|en`, and the result endpoints accept `religion` for the filter. `/api/**` answers only requests whose `Origin` or `Referer` is in `FRONTEND_ORIGINS`, and returns `403` otherwise. `/api/health` stays open for the Render health check.
+Endpoints accept `lang=pt|en|es`, and the result endpoints accept `religion` for the filter. `/api/**` answers only requests whose `Origin` or `Referer` is in `FRONTEND_ORIGINS`, and returns `403` otherwise. `/api/health` stays open for the Render health check.
 
 <details>
 <summary>Example request</summary>
@@ -252,9 +255,9 @@ The backend suite covers the question pool, the three formats, every catalog vec
 | JS, CSS and fonts | Cloudflare Pages | Git-connected, root `frontend`, build `npm run build`, output `dist` |
 | Images, icons, catalog CSS, tree data | Cloudflare Pages | Same deploy as `/assets`; the HTML points to it through `VITE_ASSETS_CDN` |
 
-#### Paid report (Stripe)
+#### Paid report (Stripe, Mercado Pago, AbacatePay, Paddle)
 
-The full report is paid per result and off by default. The backend needs `PAYMENTS_ENABLED=true`, `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID_BRL` and `ENTITLEMENT_SECRET` (see `render.yaml`; values are set in the Render dashboard, never committed). The frontend shows the purchase according to `VITE_PAYWALL_ENABLED` (`true` for everyone, `preview` for browsers opened once with `?paywall=1`, empty for nobody). For local development, `PREMIUM_DEV_OPEN=true` on the backend opens the report on your own machine only; never set it in production.
+The full report is paid per result and off by default. Checkout runs through Stripe, Mercado Pago, or AbacatePay on the backend and Paddle on the frontend; which gateways are live depends on the environment. The backend needs `PAYMENTS_ENABLED=true`, `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID_BRL` and `ENTITLEMENT_SECRET` (see `render.yaml`; values are set in the Render dashboard, never committed). The frontend shows the purchase according to `VITE_PAYWALL_ENABLED` (`true` for everyone, `preview` for browsers opened once with `?paywall=1`, empty for nobody). For local development, `PREMIUM_DEV_OPEN=true` on the backend opens the report on your own machine only; never set it in production.
 
 Every push and pull request runs the CI workflow in `.github/workflows/ci.yml`, and a push to `main` deploys each platform on its own.
 
