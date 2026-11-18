@@ -439,6 +439,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-match-tags{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:10px}
 .e-match-tags:not(:has(:not(.e-match-pill))){display:none}
 /* bandeira do país do partido: miniatura proporcional */
+.e-match-election .e-election-portrait{display:block;width:146px;height:146px;object-fit:cover;border-radius:24px}
+.e-match-election .e-election-logo{flex:none;width:38px;height:38px;object-fit:contain;padding:4px;box-sizing:border-box;background:#fff;border-radius:10px;border:1px solid var(--borda)}
 .e-flagmini{width:45px;height:30px;object-fit:cover;border-radius:5px;border:1px solid var(--borda);box-sizing:border-box;flex:none}
 .e-match-pill{display:none}
 .e-match .e-tag{font-size:12px;padding:5px 12px}
@@ -450,6 +452,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .ed .e-more summary::before{content:'+';flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--superficie);font-size:15px;line-height:1}
 .ed .e-more[open] summary::before{content:'–'}
 .ed .e-more p{padding:0;margin:12px 0 0;max-width:640px;font-size:14px;line-height:1.65;color:var(--tinta)}
+.ed .e-more p.e-match-note{margin-top:10px;font-size:12.5px;line-height:1.5;font-style:italic;color:var(--tinta-suave,rgba(16,16,16,.62))}
 .e-sub{font:600 12px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave);margin:30px 0 12px}
 .e-dims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .e-dim-row{display:grid;grid-template-columns:1fr auto;grid-template-areas:"v v" "t p";align-items:end;gap:14px 12px;border:1px solid var(--borda);border-radius:20px;padding:16px;background:var(--papel);min-width:0}
@@ -552,6 +555,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-match:has(.e-portrait) h3{margin:10px 0 4px}
   .e-match:has(.e-portrait) .e-more{margin-top:12px;padding-top:0;border-top:0}
   .e-match:has(.e-portrait) .e-more[open]{grid-column:1/-1;margin-top:14px;padding-top:14px;border-top:1px solid rgba(16,16,16,.1)}
+  .e-match-election .e-match-tags{flex-wrap:wrap;align-items:center;gap:8px}
   .e-axis-row-head{flex-wrap:wrap}
   .e-dims{grid-template-columns:1fr}
 }
@@ -1174,7 +1178,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* mobile: logo do partido com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */
 @media (max-width:720px){
   .e-match{--e-flag-h:min(200px,calc((100vw - 100px) * 2 / 3))}
-  .e-match .e-logobig{width:var(--e-flag-h);height:var(--e-flag-h)}
+  .e-match .e-logobig,.e-match-election .e-election-portrait{width:var(--e-flag-h);height:var(--e-flag-h)}
 }
 
 /* Página de resultados: cartões sem borda, no acabamento dos cartões de "Outras ideologias" (os livros ficam como estavam).
@@ -1514,7 +1518,7 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 /* mobile: logo do partido e mosaico da época com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */
 @media (max-width:720px){
   .e-match{--e-flag-h:min(200px,calc((100vw - 100px) * 2 / 3))}
-  .e-match .e-logobig{width:var(--e-flag-h);height:var(--e-flag-h)}
+  .e-match .e-logobig,.e-match-election .e-election-portrait{width:var(--e-flag-h);height:var(--e-flag-h)}
   .e-tl-best .e-tl-mosaic{width:var(--e-flag-h);height:var(--e-flag-h)}
 }
 
@@ -1782,7 +1786,12 @@ button.e-ppl-dimrow:hover{filter:brightness(.97)}
 .e-sec-share-foot{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:20px}
 .e-sec-share-foot .e-btn{padding:10px 18px;font-size:14px}
 .e-sec-share-foot .inline-error{margin:0;text-align:center}
-@media (max-width:640px){.e-sec-share-foot{align-items:stretch}.e-sec-share-foot .e-btn{width:100%}}
+.e-sec-share-row{display:flex;align-items:stretch;justify-content:center;gap:10px}
+.e-election-pick{flex:none;display:flex}
+.e-sec-share-foot .e-election-pick>summary{height:100%;min-height:40px;padding:0 12px;gap:8px;border:1.5px solid var(--tinta)}
+.e-election-pick-flag{display:block;width:30px;height:20px;object-fit:cover;border-radius:4px;border:1px solid var(--borda);box-sizing:border-box;flex:none}
+.e-sec-share-foot .e-election-pick .e-lang-menu{right:0;left:auto;bottom:calc(100% + 6px);top:auto;min-width:190px}
+@media (max-width:640px){.e-sec-share-foot{align-items:stretch}.e-sec-share-foot .e-btn{width:100%}.e-sec-share-row{width:100%}.e-sec-share-row .e-btn:first-child{flex:1 1 0;width:auto;min-width:0;height:auto;min-height:44px;white-space:normal;line-height:1.2;text-align:center;justify-content:center;font-size:13px;padding:8px 14px}}
 /* Ficha com o que aproxima e afasta o usuário (relatório pago): lado a lado no desktop, uma embaixo da outra no celular. */
 .e-axis-sheet.e-axis-sheet--insight{width:min(880px,100%)}
 .e-profile-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:start}

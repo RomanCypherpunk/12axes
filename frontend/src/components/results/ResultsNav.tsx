@@ -7,6 +7,7 @@ const SECTIONS = [
   { id: 'assinatura', label: () => t.resultsNavSignature },
   { id: 'paises', label: () => t.resultsNavCountries },
   { id: 'personalidades', label: () => t.resultsNavPersonalities },
+  { id: 'eleicoes', label: () => t.resultsNavElections },
   { id: 'areas', label: () => t.resultsNavAreas },
   { id: 'livros', label: () => t.resultsNavBooks },
   { id: 'partidos', label: () => t.resultsNavParties },
@@ -24,8 +25,9 @@ const PREMIUM_SECTIONS = [
   { id: 'premium-paises', label: () => t.resultsNavLiving }
 ];
 
-// Sem livros recomendados, sem partidos ou sem os eixos da bússola, a seção não é renderizada: o item some e a numeração se ajusta.
+// Sem livros recomendados, sem partidos, sem eleição ativa ou sem os eixos da bússola, a seção não é renderizada: o item some e a numeração se ajusta.
 interface ResultsNavProps {
+  hasElections?: boolean;
   hasBooks?: boolean;
   hasCompass?: boolean;
   hasParties?: boolean;
@@ -38,9 +40,9 @@ interface ResultsNavProps {
 
 type NavItem = { id: string; label: () => string };
 
-export function ResultsNav({ hasBooks = true, hasCompass = true, hasParties = true, hasValues = true, premium = false, premiumTarget = null }: ResultsNavProps) {
+export function ResultsNav({ hasElections = false, hasBooks = true, hasCompass = true, hasParties = true, hasValues = true, premium = false, premiumTarget = null }: ResultsNavProps) {
   const base: NavItem[] = SECTIONS.filter(
-    ({ id }) => (id !== 'livros' || hasBooks) && (id !== 'bussola' || hasCompass) && (id !== 'partidos' || hasParties) && (id !== 'valores' || hasValues)
+    ({ id }) => (id !== 'eleicoes' || hasElections) && (id !== 'livros' || hasBooks) && (id !== 'bussola' || hasCompass) && (id !== 'partidos' || hasParties) && (id !== 'valores' || hasValues)
   );
   const locked: NavItem[] = !premium && premiumTarget !== null ? [{ id: premiumTarget, label: () => t.resultsNavReport }] : [];
   const sections: NavItem[] = [...base, ...(premium ? PREMIUM_SECTIONS : locked)];

@@ -383,6 +383,7 @@ export interface Strings {
   resultsNavCountries: string;
   resultsNavParties: string;
   resultsNavPersonalities: string;
+  resultsNavElections: string;
   resultsNavAreas: string;
   resultsNavBooks: string;
   resultsNavIdeologies: string;
@@ -560,6 +561,16 @@ export interface Strings {
   shareCountriesMessage: (country: string, percent: number) => string;
   shareCountriesCta: string;
   sharePersonalitiesCta: string;
+  electionsClosestLabel: string;
+  electionsEnded: string;
+  electionsPickAria: string;
+  shareElectionsHeader: string;
+  electionsNotice: string;
+  shareElectionsCta: string;
+  electionsShareHeadline: (name: string, party: string) => string;
+  shareElectionsFilePrefix: string;
+  shareElectionsTitle: string;
+  shareElectionsMessage: (candidate: string, party: string, percent: number) => string;
   sharePartiesCta: string;
   shareCompassCta: string;
   shareGovernmentCta: string;

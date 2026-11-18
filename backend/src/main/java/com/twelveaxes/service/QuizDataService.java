@@ -8,6 +8,8 @@ import com.twelveaxes.model.ArchetypeQuestion;
 import com.twelveaxes.model.AnswerValue;
 import com.twelveaxes.model.Axis;
 import com.twelveaxes.model.Country;
+import com.twelveaxes.model.Election;
+import com.twelveaxes.model.ElectionCandidate;
 import com.twelveaxes.model.CountryProfile;
 import com.twelveaxes.model.Party;
 import com.twelveaxes.model.PartyProfile;
@@ -57,6 +59,7 @@ public class QuizDataService {
     private Map<String, PersonalityProfile> personalityProfiles;
     private Map<String, Book> books;
     private List<ArchetypeQuestion> archetypeQuestions;
+    private List<Election> elections;
 
     // Textos por locale: profiles/vetores são independentes de idioma e ficam fora do bundle.
     private record LocaleBundle(
@@ -173,6 +176,9 @@ public class QuizDataService {
                 .collect(Collectors.toUnmodifiableMap(Book::personalityId, Function.identity()));
 
         validateCountryProfiles(pt);
+
+        elections = List.copyOf(readOptionalJson("data/elections.json", new TypeReference<List<Election>>() {}));
+        validateElections(elections, pt.personalitiesById().keySet(), pt.partiesById().keySet());
         validateIdeologyProfiles(pt);
         validateIdeologyPersonalityLinks(pt);
         validatePersonalityProfiles(pt);
@@ -602,6 +608,34 @@ public class QuizDataService {
 
     public Map<String, PartyProfile> getPartyProfiles() {
         return partyProfiles;
+    }
+
+    // Eleicoes ativas (elections.json); todos os candidatos e partidos precisam existir no catalogo.
+    public List<Election> getElections() {
+        return elections;
+    }
+
+    // Um id errado em elections.json derruba a subida com o id na mensagem, em vez de sumir em silencio.
+    public static void validateElections(List<Election> elections, java.util.Set<String> personalityIds,
+            java.util.Set<String> partyIds) {
+        List<String> broken = new java.util.ArrayList<>();
+        for (Election election : elections) {
+            if (election.candidates() == null || election.candidates().isEmpty()) {
+                broken.add(election.id() + " sem candidatos");
+                continue;
+            }
+            for (ElectionCandidate candidate : election.candidates()) {
+                if (!personalityIds.contains(candidate.personalityId())) {
+                    broken.add(election.id() + " -> personalityId inexistente: " + candidate.personalityId());
+                }
+                if (!partyIds.contains(candidate.partyId())) {
+                    broken.add(election.id() + " -> partyId inexistente: " + candidate.partyId());
+                }
+            }
+        }
+        if (!broken.isEmpty()) {
+            throw new IllegalStateException("elections.json invalido: " + broken);
+        }
     }
 
     public Map<String, PersonalityProfile> getPersonalityProfiles() {

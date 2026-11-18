@@ -1,14 +1,15 @@
-import type { KeyboardEvent, MouseEvent } from 'react';
+import type { KeyboardEvent, MouseEvent, ReactNode } from 'react';
 import { t } from '../../i18n';
 import { PoleIcon } from '../AxisIcon';
 
 /** Os cartões de compartilhamento que uma seção da página pode gerar. */
-export type ShareKind = 'countries' | 'personalities' | 'parties' | 'compass' | 'government' | 'timeline' | 'living';
+export type ShareKind = 'countries' | 'personalities' | 'parties' | 'elections' | 'compass' | 'government' | 'timeline' | 'living';
 
 const LABELS: Record<ShareKind, () => string> = {
   countries: () => t.shareCountriesCta,
   personalities: () => t.sharePersonalitiesCta,
   parties: () => t.sharePartiesCta,
+  elections: () => t.shareElectionsCta,
   compass: () => t.shareCompassCta,
   government: () => t.shareGovernmentCta,
   timeline: () => t.shareTimelineCta,
@@ -34,6 +35,13 @@ function ShareIcon({ kind }: { kind: ShareKind }) {
           <path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
           <path d="M3 20a5 5 0 0 1 10 0" />
           <path d="M11 20a5 5 0 0 1 10 0" />
+        </>
+      )}
+      {kind === 'elections' && (
+        <>
+          <path d="M5 10h14v10H5z" />
+          <path d="M9 10V6l3 3 3-3v4" />
+          <path d="M9 15h6" />
         </>
       )}
       {kind === 'compass' && (
@@ -77,16 +85,21 @@ interface SectionShareButtonProps {
   sharing: boolean;
   error: string | null;
   onShare: () => void;
+  /** Um botão ao lado do de compartilhar (ex.: alternar a eleição mostrada). */
+  extra?: ReactNode;
 }
 
 /** O botão que gera e compartilha o cartão da seção: embaixo dela, centralizado, com o texto e o ícone do cartão. */
-export function SectionShareButton({ kind, sharing, error, onShare }: SectionShareButtonProps) {
+export function SectionShareButton({ kind, sharing, error, onShare, extra }: SectionShareButtonProps) {
+  const shareButton = (
+    <button className="e-btn e-btn-ghost e-btn-sm" type="button" onClick={onShare} disabled={sharing}>
+      {sharing ? t.generatingPng : LABELS[kind]()}
+      <ShareIcon kind={kind} />
+    </button>
+  );
   return (
     <div className="e-sec-share-foot" onClick={stop} onKeyDown={stop}>
-      <button className="e-btn e-btn-ghost e-btn-sm" type="button" onClick={onShare} disabled={sharing}>
-        {sharing ? t.generatingPng : LABELS[kind]()}
-        <ShareIcon kind={kind} />
-      </button>
+      {extra ? <div className="e-sec-share-row">{shareButton}{extra}</div> : shareButton}
       {error && (
         <p className="inline-error" role="alert">
           {error}

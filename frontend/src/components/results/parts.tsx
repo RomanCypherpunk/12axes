@@ -12,14 +12,18 @@ interface MatchHeroProps {
   description: string;
   /** Miniatura opcional exibida antes da etiqueta "Mais compatível" (ex.: bandeira do país). */
   kickerPrefix?: ReactNode;
+  /** Aviso curto exibido logo depois da descrição (dentro do "Saber mais"). */
+  note?: ReactNode;
+  /** Classe extra no card, para layouts próprios (ex.: o card de eleição). */
+  className?: string;
 }
 
 // Card do item mais compatível de um catálogo (país ou personalidade).
-export function MatchHero({ visual, compatibility, name, tags, description, kickerPrefix }: MatchHeroProps) {
+export function MatchHero({ visual, compatibility, name, tags, description, kickerPrefix, note, className }: MatchHeroProps) {
   const caption = tags.join(' · ');
 
   return (
-    <article className="e-match">
+    <article className={className ? `e-match ${className}` : 'e-match'}>
       <div className="e-match-top">
         {visual}
         <div className="e-match-info">
@@ -38,6 +42,7 @@ export function MatchHero({ visual, compatibility, name, tags, description, kick
         <details className="e-more">
           <summary>{t.knowMoreAbout(name)}</summary>
           <p>{description}</p>
+          {note && <p className="e-match-note">{note}</p>}
         </details>
       )}
     </article>

@@ -271,6 +271,24 @@ export interface QuizResult {
   bottomPartyMatches?: PartyMatch[];
   /** Um valor político nomeado por categoria, derivado só dos eixos. */
   politicalValues?: PoliticalValue[];
+  /** Eleições ativas para o idioma, com os candidatos do mais ao menos compatível; vazio quando não há nenhuma. */
+  elections?: ElectionResult[];
+}
+
+/** Um candidato de uma eleição: a personalidade (com a compatibilidade) e o partido pelo qual concorre. */
+export interface ElectionCandidateMatch {
+  candidate: PersonalityMatch;
+  party: PartyMatch | null;
+}
+
+export interface ElectionResult {
+  id: string;
+  countryId: string;
+  /** Data da eleição (yyyy-MM-dd), só exibição. */
+  date: string;
+  /** Nome já no idioma do pedido. */
+  name: string;
+  candidates: ElectionCandidateMatch[];
 }
 
 

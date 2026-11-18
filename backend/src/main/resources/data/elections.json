@@ -1,0 +1,80 @@
+[
+  {
+    "id": "espanha-2026-gerais",
+    "countryId": "espanha",
+    "date": "2026-11-29",
+    "languages": [
+      "es",
+      "pt"
+    ],
+    "homeLanguages": [
+      "es"
+    ],
+    "name": {
+      "pt": "Eleições gerais da Espanha",
+      "en": "Spanish general election",
+      "es": "Elecciones generales de España",
+      "de": "Spanische Parlamentswahl",
+      "it": "Elezioni generali in Spagna",
+      "ru": "Всеобщие выборы в Испании",
+      "fr": "Élections générales en Espagne"
+    },
+    "candidates": [
+      {
+        "personalityId": "pedro-sanchez",
+        "partyId": "psoe"
+      },
+      {
+        "personalityId": "alberto-nunez-feijoo",
+        "partyId": "partido-popular-espanha"
+      },
+      {
+        "personalityId": "santiago-abascal",
+        "partyId": "vox"
+      }
+    ]
+  },
+  {
+    "id": "brasil-2026-presidenciais",
+    "countryId": "brasil",
+    "date": "2026-10-04",
+    "languages": [
+      "es",
+      "pt"
+    ],
+    "homeLanguages": [
+      "pt"
+    ],
+    "name": {
+      "pt": "Eleições presidenciais do Brasil",
+      "en": "Brazilian presidential election",
+      "es": "Elecciones presidenciales de Brasil",
+      "de": "Brasilianische Präsidentschaftswahl",
+      "it": "Elezioni presidenziali in Brasile",
+      "ru": "Президентские выборы в Бразилии",
+      "fr": "Élection présidentielle au Brésil"
+    },
+    "candidates": [
+      {
+        "personalityId": "lula-da-silva",
+        "partyId": "partido-dos-trabalhadores"
+      },
+      {
+        "personalityId": "flavio-bolsonaro",
+        "partyId": "partido-liberal-brasil"
+      },
+      {
+        "personalityId": "renan-santos",
+        "partyId": "partido-missao"
+      },
+      {
+        "personalityId": "romeu-zema",
+        "partyId": "partido-novo"
+      },
+      {
+        "personalityId": "ronaldo-caiado",
+        "partyId": "psd"
+      }
+    ]
+  }
+]
