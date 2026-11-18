@@ -174,11 +174,68 @@ class ReligionFilterTest {
         assertThat(ReligionFilter.allows(List.of(), "other")).isTrue();
         assertThat(ReligionFilter.allows(List.of("other", ReligionFilter.ONLY), "other")).isTrue();
         assertThat(ReligionFilter.allows(List.of("catholic"), "other")).isFalse();
-        assertThat(ReligionFilter.allows(List.of("islam", "other"), "other")).isFalse();
+        // "other" junto de uma religiao selecionavel (Roma, Japao) aparece para quem escolheu "Outra religiao".
+        assertThat(ReligionFilter.allows(List.of("islam", "other"), "other")).isTrue();
         assertThat(ReligionFilter.allows(List.of("judaism", ReligionFilter.ONLY), "other")).isFalse();
         // As demais preferencias seguem como antes.
         assertThat(ReligionFilter.allows(List.of("other"), "catholic")).isTrue();
         assertThat(ReligionFilter.allows(List.of("other", ReligionFilter.ONLY), "catholic")).isFalse();
+    }
+
+    // A marca "other" de um perfil vale para quem escolheu "Outra religiao": ela diz que o perfil inclui religioes fora das
+    // selecionaveis (Roma pagã, xintoismo, candomble...) ou nao depende de nenhuma (ideologia neutra). Issue #443:
+    // o Nacional-Liberalismo sumia para esse usuario.
+    @Test
+    void theOtherTagOfAProfileMakesItVisibleToOtherReligion() {
+        assertThat(ReligionFilter.allows(List.of("islam", "other"), "other")).isTrue();
+        assertThat(ReligionFilter.allows(List.of("catholic", "protestant", "orthodox", "other"), "other")).isTrue();
+        List<String> neutral = new java.util.ArrayList<>(ReligionFilter.SELECTABLE);
+        neutral.add("other");
+        assertThat(ReligionFilter.allows(neutral, "other")).isTrue();
+        // "other" + "only" (Punjab: sikhismo e hinduismo) fica exclusivo, e aparece para quem escolheu "outra".
+        assertThat(ReligionFilter.allows(List.of("other", "hinduism", ReligionFilter.ONLY), "other")).isTrue();
+        // Sem a marca, perfil ligado a religiao especifica continua escondido de "Outra religiao".
+        assertThat(ReligionFilter.allows(List.of("islam"), "other")).isFalse();
+        assertThat(ReligionFilter.allows(ReligionFilter.CHRISTIAN, "other")).isFalse();
+        assertThat(ReligionFilter.allows(ReligionFilter.SELECTABLE, "other")).isFalse();
+        assertThat(ReligionFilter.allows(List.of("judaism", ReligionFilter.ONLY), "other")).isFalse();
+        // As outras preferencias nao mudam: "other" junto de uma religiao continua so informativo para quem escolheu outra.
+        assertThat(ReligionFilter.allows(List.of("islam", "other"), "catholic")).isFalse();
+        assertThat(ReligionFilter.allows(neutral, "catholic")).isTrue();
+        assertThat(ReligionFilter.allows(neutral, null)).isTrue();
+    }
+
+    // Ideologia neutra (as 7 religioes selecionaveis, sem "only") tambem leva "other", senao some para "Outra religiao".
+    @Test
+    void everyReligionNeutralIdeologyAlsoCarriesTheOtherTag() {
+        var neutral = dataService.getIdeologies().stream()
+                .filter(i -> i.religions().containsAll(ReligionFilter.SELECTABLE) && !i.religions().contains(ReligionFilter.ONLY))
+                .toList();
+
+        assertThat(neutral).as("o catalogo tem ideologias neutras").isNotEmpty();
+        assertThat(neutral).allSatisfy(i -> assertThat(i.religions())
+                .as("%s e neutra e precisa de 'other' para aparecer com 'Outra religiao'", i.id())
+                .contains("other"));
+    }
+
+    @Test
+    void nationalLiberalismShowsUpForOtherReligionWhenTheAnswersMatchIt() throws Exception {
+        Map<String, Double> vector = dataService.getIdeologyProfiles().get("nacional-liberalismo").vector();
+        String values = dataService.getAxes("pt").stream()
+                .map(axis -> String.valueOf(Math.round(vector.get(axis.id()))))
+                .collect(Collectors.joining(","));
+
+        for (String religion : new String[] {null, "other", "catholic", "islam"}) {
+            var request = get("/api/results/by-axes").param("v", values);
+            if (religion != null) {
+                request = request.param("religion", religion);
+            }
+            String body = mockMvc.perform(request).andExpect(status().isOk())
+                    .andReturn().getResponse().getContentAsString(StandardCharsets.UTF_8);
+            QuizResult result = objectMapper.readValue(body, QuizResult.class);
+
+            assertThat(result.topMatch().ideologyId()).as("religion=%s", religion).isEqualTo("nacional-liberalismo");
+        }
     }
 
     @Test

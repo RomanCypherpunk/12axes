@@ -64,8 +64,9 @@ def religion_allows(religions, preference):
         return True
     has_selectable = any(r in SELECTABLE for r in religions)
     if preference == OTHER:
-        # So entra quem nao esta ligado a nenhuma religiao selecionavel.
-        return not has_selectable
+        # Entra quem nao esta ligado a nenhuma religiao selecionavel e quem traz a marca "other" (perfil que inclui
+        # religioes fora das selecionaveis ou nao depende de nenhuma).
+        return not has_selectable or OTHER in religions
     if preference is None:
         preferred = []
     elif preference == LEGACY_CHRISTIANITY:

@@ -16,8 +16,9 @@ import java.util.Set;
  * compatibilidade de cada perfil nao muda; muda so quem entra no ranking.
  *
  * "other" tambem pode ser escolhido pelo usuario ("outra religiao"): some todo perfil ligado a
- * uma das religioes selecionaveis e ficam os perfis so com "other" (xintoismo, sikhismo, religioes
- * antigas) e os seculares ([]).
+ * uma das religioes selecionaveis, EXCETO os que trazem a marca "other" (que diz que o perfil inclui religioes
+ * fora das selecionaveis ou nao depende de nenhuma: Roma pagã, Japao, ideologias neutras). Ficam tambem os perfis so
+ * com "other" (xintoismo, sikhismo, religioes antigas) e os seculares ([]).
  *
  * O marcador "only" (ex.: ["judaism", "only"]) torna o perfil exclusivo: ele so
  * aparece para quem escolheu uma das religioes listadas. Quem escolheu "nenhuma"
@@ -92,7 +93,7 @@ public final class ReligionFilter {
         if (preferred.contains(OTHER)) {
             // "Outra religiao": quem nao esta ligado a nenhuma religiao selecionavel entra; quem esta so entra
             // se tambem combinar com uma das outras religioes escolhidas junto.
-            if (!hasSelectable) {
+            if (!hasSelectable || religions.contains(OTHER)) {
                 return true;
             }
             if (preferred.stream().allMatch(OTHER::equals)) {
