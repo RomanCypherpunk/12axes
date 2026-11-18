@@ -1039,7 +1039,7 @@
   },
   {
     "id": "madrid",
-    "name": "Madrid (Espagne)",
+    "name": "Communauté de Madrid (Espagne)",
     "description": "Communauté autonome autour de la capitale espagnole, Madrid est gouvernée par le Parti populaire depuis 1995 et, sous Isabel Díaz Ayuso, est devenue la vitrine des impôts bas, de la liberté économique, du libre choix de l’école et de l’attraction de capitaux et d’immigrants latino-américains.",
     "category": "Région libérale-conservatrice"
   },
@@ -1918,5 +1918,53 @@
     "name": "Mozambique de Samora Machel",
     "description": "Sous Samora Machel et le Frelimo, le Mozambique devint après l’indépendance un État marxiste-léniniste à parti unique : nationalisations, villages communaux, alphabétisation et santé gratuite, alliance avec l’URSS et guerre civile contre la Renamo.",
     "category": "Marxisme-léninisme africain"
+  },
+  {
+    "id": "andaluzia",
+    "name": "Andalousie (Espagne)",
+    "description": "Région la plus peuplée d’Espagne, l’Andalousie a été gouvernée par le PSOE pendant 36 ans jusqu’en 2018. Le PP de Juanma Moreno a perdu la majorité absolue en 2026 et gouverne avec Vox, qui a imposé la « priorité nationale » pour le logement et les aides.",
+    "category": "Région conservatrice agro-touristique"
+  },
+  {
+    "id": "comunidade-valenciana",
+    "name": "Communauté valencienne (Espagne)",
+    "description": "Communauté autonome du littoral méditerranéen espagnol, avec tourisme, agriculture et industrie, gouvernée par le PP avec l’appui de Vox. Juanfran Pérez Llorca a pris la tête en 2025 après la démission de Carlos Mazón pour sa gestion de la DANA, et a fait adopter un budget avec baisses d’impôts.",
+    "category": "Région conservatrice méditerranéenne"
+  },
+  {
+    "id": "berlim",
+    "name": "Berlin (Allemagne)",
+    "description": "Capitale et ville-État, Berlin a fait en 2026 de Die Linke son premier parti pour la première fois. Elle se distingue par une politique de loyers interventionniste (référendum de 2021 sur l’expropriation des grands bailleurs), une culture bohème et une immigration diverse.",
+    "category": "Ville-État métropolitaine progressiste"
+  },
+  {
+    "id": "saxonia",
+    "name": "Saxe (Allemagne)",
+    "description": "Land de l’est de l’Allemagne gouverné depuis 2024 par une minorité CDU-SPD sous Michael Kretschmer, qui cherche des voix des Verts et de Die Linke pour voter les budgets. L’AfD y est deuxième force, et le Land mêle industrie, scepticisme migratoire et héritage de la RDA.",
+    "category": "Région conservatrice de l’Est"
+  },
+  {
+    "id": "baden-wurttemberg",
+    "name": "Bade-Wurtemberg (Allemagne)",
+    "description": "Land industriel du sud-ouest de l’Allemagne (Mercedes, Bosch, Porsche), gouverné par les Verts et la CDU. Le Vert Cem Özdemir est devenu ministre-président en 2026 après 15 ans de Kretschmann, avec une année de maternelle obligatoire et la transition énergétique industrielle pour priorités.",
+    "category": "Région industrielle modérée"
+  },
+  {
+    "id": "londres",
+    "name": "Londres (Royaume-Uni)",
+    "description": "Capitale britannique et premier centre financier d’Europe, Londres est cosmopolite et a voté contre le Brexit. Dirigée depuis 2016 par le travailliste Sadiq Khan, elle a une zone à ultra-basses émissions (ULEZ) étendue à toute la ville et des objectifs de logement abordable.",
+    "category": "Région cosmopolite travailliste"
+  },
+  {
+    "id": "lombardia",
+    "name": "Lombardie (Italie)",
+    "description": "Région la plus riche et la plus peuplée d’Italie, avec Milan pour capitale financière, la Lombardie est gouvernée depuis 2018 par Attilio Fontana, de la Lega, dans une coalition de centre droit. Elle défend plus d’autonomie fiscale (référendum de 2017) et une santé à forte participation privée.",
+    "category": "Région industrielle autonomiste"
+  },
+  {
+    "id": "sicilia",
+    "name": "Sicile (Italie)",
+    "description": "Île à statut spécial depuis 1946, avec assemblée et budget propres, la Sicile est gouvernée par le centre droit sous Renato Schifani (Forza Italia). Elle a de faibles revenus, un secteur public pesant, la mafia, des affaires de corruption et le pont sur le détroit de Messine à l’ordre du jour.",
+    "category": "Région insulaire à statut spécial"
   }
 ]

@@ -1039,7 +1039,7 @@
   },
   {
     "id": "madrid",
-    "name": "Madrid (España)",
+    "name": "Comunidad de Madrid (España)",
     "description": "Comunidad autónoma de la capital española, Madrid está gobernada por el Partido Popular desde 1995 y, con Isabel Díaz Ayuso, es escaparate de impuestos bajos, libertad económica, libre elección escolar y atracción de capital e inmigrantes latinoamericanos.",
     "category": "Región liberal y conservadora"
   },
@@ -1918,5 +1918,53 @@
     "name": "Mozambique de Samora Machel",
     "description": "Bajo Samora Machel y Frelimo, Mozambique se convirtió tras la independencia en un Estado marxista-leninista de partido único: nacionalizaciones, aldeas comunales, alfabetización y salud gratuita, alianza con la URSS y guerra civil contra la Renamo.",
     "category": "Marxismo-leninismo africano"
+  },
+  {
+    "id": "andaluzia",
+    "name": "Andalucía (España)",
+    "description": "La comunidad más poblada de España, Andalucía fue gobernada por el PSOE durante 36 años hasta 2018. El PP de Juanma Moreno perdió la mayoría absoluta en 2026 y gobierna con Vox, que trajo la «prioridad nacional» en vivienda y ayudas.",
+    "category": "Región conservadora agroturística"
+  },
+  {
+    "id": "comunidade-valenciana",
+    "name": "Comunidad Valenciana (España)",
+    "description": "Comunidad autónoma del litoral mediterráneo con turismo, agricultura e industria, gobernada por el PP con apoyo de Vox. Juanfran Pérez Llorca asumió en 2025 tras la dimisión de Carlos Mazón por su gestión de la DANA, y aprobó un presupuesto con rebajas de impuestos.",
+    "category": "Región conservadora mediterránea"
+  },
+  {
+    "id": "berlim",
+    "name": "Berlín (Alemania)",
+    "description": "Capital de Alemania y ciudad-estado, Berlín eligió en 2026 por primera vez a Die Linke como primera fuerza. Destaca por una política de alquileres intervencionista (referéndum de 2021 para expropiar a grandes arrendadores), cultura bohemia e inmigración diversa.",
+    "category": "Ciudad-estado metropolitana y progresista"
+  },
+  {
+    "id": "saxonia",
+    "name": "Sajonia (Alemania)",
+    "description": "Estado del este de Alemania gobernado desde 2024 por una minoría de CDU y SPD bajo Michael Kretschmer, que busca votos de Verdes e Izquierda para aprobar presupuestos. La AfD es la segunda fuerza y el estado mezcla industria, escepticismo migratorio y herencia de la RDA.",
+    "category": "Región conservadora oriental"
+  },
+  {
+    "id": "baden-wurttemberg",
+    "name": "Baden-Wurtemberg (Alemania)",
+    "description": "Estado industrial del suroeste de Alemania (Mercedes, Bosch, Porsche), gobernado por Verdes y CDU. El verde Cem Özdemir fue investido ministro-presidente en 2026 tras 15 años de Kretschmann, con un año preescolar obligatorio y la transición energética industrial como prioridades.",
+    "category": "Región industrial moderada"
+  },
+  {
+    "id": "londres",
+    "name": "Londres (Reino Unido)",
+    "description": "Capital británica y mayor centro financiero de Europa, Londres es cosmopolita y votó contra el Brexit. Gobernada desde 2016 por el laborista Sadiq Khan, tiene una zona de ultra bajas emisiones (ULEZ) en toda la ciudad y objetivos de vivienda asequible.",
+    "category": "Región cosmopolita y laborista"
+  },
+  {
+    "id": "lombardia",
+    "name": "Lombardía (Italia)",
+    "description": "La región más rica y poblada de Italia, con Milán como capital financiera, Lombardía está gobernada desde 2018 por Attilio Fontana, de la Lega, en una coalición de centroderecha. Defiende mayor autonomía fiscal (referéndum de 2017) y una sanidad con fuerte participación privada.",
+    "category": "Región industrial y autonomista"
+  },
+  {
+    "id": "sicilia",
+    "name": "Sicilia (Italia)",
+    "description": "Isla con estatuto especial desde 1946, con asamblea y presupuesto propios, Sicilia está gobernada por el centroderecha bajo Renato Schifani (Forza Italia). Tiene ingresos bajos, un sector público pesado, mafia, casos de corrupción y el puente sobre el Estrecho de Mesina en debate.",
+    "category": "Región insular de estatuto especial"
   }
 ]

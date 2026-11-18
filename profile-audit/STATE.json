@@ -1,6 +1,6 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-11-18T12:16:12Z",
+  "lastUpdated": "2026-11-18T14:38:04Z",
   "personality": {
     "totalProfiles": 742,
     "pending": [],
@@ -1037,7 +1037,7 @@
     ]
   },
   "country": {
-    "totalProfiles": 321,
+    "totalProfiles": 329,
     "pending": [],
     "done": [
       "brasil",
@@ -1360,10 +1360,18 @@
       "eua-nevada",
       "brasil-de-fernando-henrique-cardoso",
       "mocambique-de-samora-machel",
-      "polonia-socialista"
+      "polonia-socialista",
+      "andaluzia",
+      "comunidade-valenciana",
+      "berlim",
+      "saxonia",
+      "baden-wurttemberg",
+      "sicilia",
+      "londres",
+      "lombardia"
     ]
   },
-  "totalProfiles": 1197,
+  "totalProfiles": 1205,
   "party": {
     "totalProfiles": 207,
     "pending": [],

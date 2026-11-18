@@ -1039,7 +1039,7 @@
   },
   {
     "id": "madrid",
-    "name": "Madrid (Spagna)",
+    "name": "Comunità di Madrid (Spagna)",
     "description": "Comunità autonoma attorno alla capitale spagnola, Madrid è governata dal Partito Popolare dal 1995 e, con Isabel Díaz Ayuso, è diventata una vetrina di tasse basse, libertà economica, libertà di scelta scolastica e attrazione di capitali e immigrati latinoamericani.",
     "category": "Regione liberal-conservatrice"
   },
@@ -1918,5 +1918,53 @@
     "name": "Mozambico di Samora Machel",
     "description": "Sotto Samora Machel e il Frelimo, il Mozambico divenne dopo l'indipendenza uno Stato marxista-leninista a partito unico: nazionalizzazioni, villaggi comunali, alfabetizzazione e sanità gratuita, un'alleanza con l'URSS e una guerra civile contro la Renamo.",
     "category": "Marxismo-leninismo africano"
+  },
+  {
+    "id": "andaluzia",
+    "name": "Andalusia (Spagna)",
+    "description": "La regione più popolosa della Spagna, l'Andalusia è stata governata dal PSOE per 36 anni fino al 2018. Il PP di Juanma Moreno ha perso la maggioranza assoluta nel 2026 e governa con Vox, che ha portato la «priorità nazionale» su alloggi e sussidi.",
+    "category": "Regione conservatrice agrituristica"
+  },
+  {
+    "id": "comunidade-valenciana",
+    "name": "Comunità Valenciana (Spagna)",
+    "description": "Comunità autonoma sulla costa mediterranea spagnola, con turismo, agricoltura e industria, governata dal PP con l'appoggio di Vox. Juanfran Pérez Llorca è subentrato nel 2025 dopo le dimissioni di Carlos Mazón per la gestione della DANA, e ha approvato un bilancio con tagli alle tasse.",
+    "category": "Regione conservatrice mediterranea"
+  },
+  {
+    "id": "berlim",
+    "name": "Berlino (Germania)",
+    "description": "Capitale e città-stato, nel 2026 Berlino ha fatto per la prima volta della Linke il suo primo partito. Si distingue per una politica degli affitti interventista (referendum 2021 per espropriare i grandi locatori), cultura bohémien e immigrazione diversificata.",
+    "category": "Città-stato metropolitana progressista"
+  },
+  {
+    "id": "saxonia",
+    "name": "Sassonia (Germania)",
+    "description": "Stato della Germania orientale governato dal 2024 da una minoranza CDU-SPD guidata da Michael Kretschmer, che cerca voti di Verdi e Linke per approvare i bilanci. L'AfD è la seconda forza e lo Stato unisce industria, scetticismo migratorio ed eredità della DDR.",
+    "category": "Regione conservatrice orientale"
+  },
+  {
+    "id": "baden-wurttemberg",
+    "name": "Baden-Württemberg (Germania)",
+    "description": "Stato industriale della Germania sud-occidentale (Mercedes, Bosch, Porsche), governato da Verdi e CDU. Il verde Cem Özdemir è diventato ministro-presidente nel 2026 dopo 15 anni di Kretschmann, con anno prescolare obbligatorio e transizione energetica industriale come priorità.",
+    "category": "Regione industriale moderata"
+  },
+  {
+    "id": "londres",
+    "name": "Londra (Regno Unito)",
+    "description": "Capitale britannica e maggiore centro finanziario d'Europa, Londra è cosmopolita e ha votato contro la Brexit. Governata dal 2016 dal laburista Sadiq Khan, ha una zona a ultra basse emissioni (ULEZ) estesa a tutta la città e obiettivi di alloggi accessibili.",
+    "category": "Regione cosmopolita laburista"
+  },
+  {
+    "id": "lombardia",
+    "name": "Lombardia (Italia)",
+    "description": "La regione più ricca e popolosa d'Italia, con Milano capitale finanziaria, la Lombardia è governata dal 2018 da Attilio Fontana, della Lega, in una coalizione di centrodestra. Difende maggiore autonomia fiscale (referendum 2017) e una sanità con forte partecipazione privata.",
+    "category": "Regione industriale autonomista"
+  },
+  {
+    "id": "sicilia",
+    "name": "Sicilia (Italia)",
+    "description": "Isola a statuto speciale dal 1946, con assemblea e bilancio propri, la Sicilia è governata dal centrodestra con Renato Schifani (Forza Italia). Ha redditi bassi, un settore pubblico pesante, mafia, casi di corruzione e il ponte sullo Stretto di Messina in agenda.",
+    "category": "Regione insulare a statuto speciale"
   }
 ]

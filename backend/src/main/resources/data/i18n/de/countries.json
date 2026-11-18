@@ -1039,7 +1039,7 @@
   },
   {
     "id": "madrid",
-    "name": "Madrid (Spanien)",
+    "name": "Autonome Gemeinschaft Madrid (Spanien)",
     "description": "Die Autonome Gemeinschaft um die spanische Hauptstadt wird seit 1995 von der Volkspartei regiert und wurde unter Isabel Díaz Ayuso zum Schaufenster für niedrige Steuern, wirtschaftliche Freiheit, Schulwahl und die Anziehung von Kapital und lateinamerikanischen Einwanderern.",
     "category": "Liberal-konservative Region"
   },
@@ -1918,5 +1918,53 @@
     "name": "Samora Machels Mosambik",
     "description": "Unter Samora Machel und der Frelimo wurde Mosambik nach der Unabhängigkeit ein marxistisch-leninistischer Einparteienstaat: Verstaatlichungen, Gemeinschaftsdörfer, Alphabetisierung und kostenlose Gesundheitsversorgung, ein Bündnis mit der UdSSR und ein Bürgerkrieg gegen die Renamo.",
     "category": "Afrikanischer Marxismus-Leninismus"
+  },
+  {
+    "id": "andaluzia",
+    "name": "Andalusien (Spanien)",
+    "description": "Spaniens bevölkerungsreichste Region Andalusien wurde bis 2018 36 Jahre lang von der PSOE regiert. Die PP von Juanma Moreno verlor 2026 die absolute Mehrheit und regiert mit Vox, das die „nationale Priorität“ bei Wohnungen und Zuschüssen durchsetzte.",
+    "category": "Konservative Agrar- und Tourismusregion"
+  },
+  {
+    "id": "comunidade-valenciana",
+    "name": "Valencianische Gemeinschaft (Spanien)",
+    "description": "Autonome Gemeinschaft an Spaniens Mittelmeerküste mit Tourismus, Landwirtschaft und Industrie, von der PP mit Unterstützung von Vox regiert. Juanfran Pérez Llorca übernahm 2025 nach dem Rücktritt von Carlos Mazón wegen dessen Umgang mit der DANA-Flut und verabschiedete einen Haushalt mit Steuersenkungen.",
+    "category": "Konservativ-mediterrane Region"
+  },
+  {
+    "id": "berlim",
+    "name": "Berlin (Deutschland)",
+    "description": "Als Hauptstadt und Stadtstaat machte Berlin 2026 erstmals Die Linke zur stärksten Partei. Bekannt ist es für interventionistische Mietpolitik (Volksentscheid 2021 zur Enteignung großer Vermieter), Bohème-Kultur und vielfältige Zuwanderung.",
+    "category": "Progressiver metropolitaner Stadtstaat"
+  },
+  {
+    "id": "saxonia",
+    "name": "Sachsen (Deutschland)",
+    "description": "Ostdeutsches Bundesland, seit 2024 von einer CDU-SPD-Minderheit unter Michael Kretschmer regiert, der für Haushalte Stimmen von Grünen und Linken sucht. Die AfD ist zweitstärkste Kraft; das Land verbindet Industrie, Migrationsskepsis und das Erbe der DDR.",
+    "category": "Konservative ostdeutsche Region"
+  },
+  {
+    "id": "baden-wurttemberg",
+    "name": "Baden-Württemberg (Deutschland)",
+    "description": "Industrielles Bundesland im Südwesten Deutschlands (Mercedes, Bosch, Porsche), von Grünen und CDU regiert. Der Grüne Cem Özdemir wurde 2026 nach 15 Jahren Kretschmann Ministerpräsident; ein verpflichtendes Kita-Jahr und die industrielle Energiewende sind Prioritäten.",
+    "category": "Gemäßigte Industrieregion"
+  },
+  {
+    "id": "londres",
+    "name": "London (Vereinigtes Königreich)",
+    "description": "Als britische Hauptstadt und größtes Finanzzentrum Europas ist London weltoffen und stimmte gegen den Brexit. Seit 2016 vom Labour-Politiker Sadiq Khan regiert, hat es eine stadtweite Ultra-Low-Emission-Zone (ULEZ) und Ziele für bezahlbaren Wohnraum.",
+    "category": "Kosmopolitische Labour-Region"
+  },
+  {
+    "id": "lombardia",
+    "name": "Lombardei (Italien)",
+    "description": "Italiens reichste und bevölkerungsreichste Region mit Mailand als Finanzhauptstadt wird seit 2018 von Attilio Fontana (Lega) in einer Mitte-rechts-Koalition regiert. Sie verteidigt mehr Steuerautonomie (Referendum 2017) und ein Gesundheitswesen mit starker privater Beteiligung.",
+    "category": "Industriell-autonomistische Region"
+  },
+  {
+    "id": "sicilia",
+    "name": "Sizilien (Italien)",
+    "description": "Die Insel mit Sonderstatut seit 1946, eigener Versammlung und eigenem Haushalt, wird von der Mitte-rechts-Koalition unter Renato Schifani (Forza Italia) regiert. Sie hat niedrige Einkommen, einen aufgeblähten öffentlichen Sektor, Mafia, Korruptionsfälle und die Messina-Brücke auf der Agenda.",
+    "category": "Inselregion mit Sonderstatut"
   }
 ]
