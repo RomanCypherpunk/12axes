@@ -71,8 +71,11 @@ export function GlossaryText({ text, terms }: GlossaryTextProps) {
     };
   }, [active]);
 
+  // O efeito depende do índice (um número), não do objeto `active`: o objeto muda de identidade a cada atualização de
+  // modo (foco, hover, clique) e fazia o efeito rodar de novo e de novo ("Maximum update depth exceeded", issue #439).
+  const activeIndex = active ? active.index : -1;
   useLayoutEffect(() => {
-    const term = active ? termRefs.current[active.index] : null;
+    const term = activeIndex >= 0 ? termRefs.current[activeIndex] : null;
     const container = term?.offsetParent as HTMLElement | null;
     if (!term || !container) {
       setPosition(null);
@@ -90,8 +93,10 @@ export function GlossaryText({ text, terms }: GlossaryTextProps) {
     const box = container.getBoundingClientRect();
     const tooltipWidth = Math.min(300, container.clientWidth);
     const left = Math.max(0, Math.min(first.left - box.left, container.clientWidth - tooltipWidth));
-    setPosition({ top: last.bottom - box.top + 10, left });
-  }, [active, text]);
+    const top = last.bottom - box.top + 10;
+    // Só troca o estado quando a posição mudou: um objeto novo a cada passada refaria o render e este efeito sem parar.
+    setPosition((current) => (current && current.top === top && current.left === left ? current : { top, left }));
+  }, [activeIndex, text]);
 
   if (items.length === 0) return <>{text}</>;
 
