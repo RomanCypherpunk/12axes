@@ -12,10 +12,10 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 /**
- * O pais atual mais proximo do usuario em cada area do relatorio pago. Os eixos principais da area valem metade da nota
+ * O pais (atual ou historico) mais proximo do usuario em cada area do relatorio pago. Os eixos principais da area valem metade da nota
  * (divididos igualmente) e todos os outros eixos juntos valem a outra metade (tambem divididos igualmente): a area manda e
- * o resto desempata. O mesmo pais pode vencer mais de uma area. Respeita o filtro de religiao e ignora paises historicos e
- * regioes (Country.region), que nao sao paises.
+ * o resto desempata. O mesmo pais pode vencer mais de uma area. Respeita o filtro de religiao e ignora regioes (Country.region),
+ * que nao sao paises; paises historicos concorrem normalmente.
  */
 @Service
 public class AreaCountryMatcherService {
@@ -61,7 +61,7 @@ public class AreaCountryMatcherService {
     public List<AreaCountryMatch> findAll(List<AxisResult> axisResults, String lang, String religion) {
         Map<String, Double> userVector = profileMatchScorer.userVectorFor(axisResults);
         List<Country> countries = dataService.getCountries(QuizDataService.normalizeLang(lang)).stream()
-                .filter(country -> !country.historical() && !country.region())
+                .filter(country -> !country.region())
                 .filter(country -> ReligionFilter.allows(country.religions(), religion))
                 .toList();
         if (countries.isEmpty()) {

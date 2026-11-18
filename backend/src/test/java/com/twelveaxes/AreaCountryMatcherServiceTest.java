@@ -71,13 +71,30 @@ class AreaCountryMatcherServiceTest {
     }
 
     @Test
-    void onlyCurrentCountriesAreSuggested() {
+    void historicalCountriesAreSuggestedToo() {
+        Country historical = dataService.getCountries("pt").stream()
+                .filter(c -> c.historical() && !c.region())
+                .filter(c -> dataService.getCountryProfiles().get(c.id()) != null)
+                .findFirst().orElseThrow();
+        CountryProfile profile = dataService.getCountryProfiles().get(historical.id());
+        List<Double> leftPercents = dataService.getAxes("pt").stream().map(axis -> profile.vector().get(axis.id())).toList();
+
+        List<AreaCountryMatch> matches = service.findAll(scoringService.scoreFromLeftPercents(leftPercents, "pt"), "pt", null);
+
+        assertThat(matches).hasSize(6);
+        assertThat(matches).allSatisfy(match -> {
+            assertThat(match.country().countryId()).isEqualTo(historical.id());
+            assertThat(match.country().historical()).isTrue();
+        });
+    }
+
+    @Test
+    void everyAreaIsFilledAndHasAName() {
         List<AxisResult> axes = scoringService.scoreFromLeftPercents(java.util.Collections.nCopies(12, 50.0), "es");
 
         List<AreaCountryMatch> matches = service.findAll(axes, "es", null);
 
         assertThat(matches).hasSize(6);
-        assertThat(matches).allSatisfy(match -> assertThat(match.country().historical()).isFalse());
         assertThat(matches).allSatisfy(match -> assertThat(match.country().name()).isNotBlank());
     }
 
