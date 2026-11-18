@@ -48,6 +48,8 @@ interface PremiumText {
   timelineBestEra: string;
   seats: Record<GovernmentSeat['seatKey'], string>;
   countriesTitle: string;
+  areasTitle: string;
+  areaLabels: Record<string, string>;
   saveTitle: string;
   saveIntro: string;
   saveField: string;
@@ -132,6 +134,8 @@ const pt: PremiumText = {
     cultura: 'Conselheiro de Cultura'
   },
   countriesTitle: '10 países ou regiões para viver',
+  areasTitle: 'Países mais próximos por área',
+  areaLabels: { politico: 'Sistema político', externa: 'Política externa', territorial: 'Organização territorial', economico: 'Sistema econômico', sociedade: 'Sociedade e cultura', tecnologia: 'Tecnologia e natureza' },
   saveTitle: 'Guarde o seu acesso',
   saveIntro: 'Para abrir este relatório em outro aparelho, ou depois de limpar o navegador, salve o link abaixo. Quem tiver o link abre o relatório deste resultado, então guarde-o com cuidado.',
   saveField: 'Link de acesso ao relatório',
@@ -216,6 +220,8 @@ const en: PremiumText = {
     cultura: 'Cultural Adviser'
   },
   countriesTitle: '10 countries or regions to live in',
+  areasTitle: 'Closest countries by area',
+  areaLabels: { politico: 'Political system', externa: 'Foreign policy', territorial: 'Territorial organization', economico: 'Economic system', sociedade: 'Society and culture', tecnologia: 'Technology and nature' },
   saveTitle: 'Keep your access',
   saveIntro: 'To open this report on another device, or after clearing your browser, save the link below. Anyone with the link opens the report for this result, so keep it safe.',
   saveField: 'Report access link',
@@ -300,6 +306,8 @@ const es: PremiumText = {
     cultura: 'Consejero de Cultura'
   },
   countriesTitle: '10 países o regiones para vivir',
+  areasTitle: 'Países más cercanos por área',
+  areaLabels: { politico: 'Sistema político', externa: 'Política exterior', territorial: 'Organización territorial', economico: 'Sistema económico', sociedade: 'Sociedad y cultura', tecnologia: 'Tecnología y naturaleza' },
   saveTitle: 'Guarda tu acceso',
   saveIntro: 'Para abrir este informe en otro dispositivo, o después de borrar los datos del navegador, guarda el enlace de abajo. Quien tenga el enlace abre el informe de este resultado, así que guárdalo con cuidado.',
   saveField: 'Enlace de acceso al informe',
@@ -385,6 +393,8 @@ const de: PremiumText = {
     cultura: 'Berater für Kultur'
   },
   countriesTitle: '10 Länder oder Regionen zum Leben',
+  areasTitle: 'Nächste Länder nach Bereich',
+  areaLabels: { politico: 'Politisches System', externa: 'Außenpolitik', territorial: 'Territoriale Organisation', economico: 'Wirtschaftssystem', sociedade: 'Gesellschaft und Kultur', tecnologia: 'Technologie und Natur' },
   saveTitle: 'Bewahre deinen Zugang auf',
   saveIntro: 'Um diesen Bericht auf einem anderen Gerät oder nach dem Löschen des Browserspeichers zu öffnen, speichere den Link unten. Wer den Link hat, kann den Bericht zu diesem Ergebnis öffnen, also bewahre ihn sorgfältig auf.',
   saveField: 'Zugangslink zum Bericht',
@@ -469,6 +479,8 @@ const it: PremiumText = {
     cultura: 'Consigliere culturale'
   },
   countriesTitle: '10 paesi o regioni in cui vivere',
+  areasTitle: 'Paesi più vicini per area',
+  areaLabels: { politico: 'Sistema politico', externa: 'Politica estera', territorial: 'Organizzazione territoriale', economico: 'Sistema economico', sociedade: 'Società e cultura', tecnologia: 'Tecnologia e natura' },
   saveTitle: 'Conserva il tuo accesso',
   saveIntro: "Per aprire questo rapporto su un altro dispositivo, o dopo aver cancellato i dati del browser, salva il link qui sotto. Chiunque abbia il link apre il rapporto di questo risultato, quindi conservalo con cura.",
   saveField: 'Link di accesso al rapporto',
@@ -553,6 +565,8 @@ const ru: PremiumText = {
     cultura: 'Советник по культуре'
   },
   countriesTitle: '10 стран или регионов для жизни',
+  areasTitle: 'Ближайшие страны по сферам',
+  areaLabels: { politico: 'Политическая система', externa: 'Внешняя политика', territorial: 'Территориальное устройство', economico: 'Экономическая система', sociedade: 'Общество и культура', tecnologia: 'Технологии и природа' },
   saveTitle: 'Сохраните свой доступ',
   saveIntro: 'Чтобы открыть этот отчет на другом устройстве или после очистки браузера, сохраните ссылку ниже. Любой, у кого есть ссылка, откроет отчет по этому результату, поэтому храните ее бережно.',
   saveField: 'Ссылка для доступа к отчету',
@@ -637,6 +651,8 @@ const fr: PremiumText = {
     cultura: 'Conseiller culturel'
   },
   countriesTitle: '10 pays ou régions où vivre',
+  areasTitle: 'Pays les plus proches par domaine',
+  areaLabels: { politico: 'Système politique', externa: 'Politique étrangère', territorial: 'Organisation territoriale', economico: 'Système économique', sociedade: 'Société et culture', tecnologia: 'Technologie et nature' },
   saveTitle: 'Conservez votre accès',
   saveIntro: 'Pour ouvrir ce rapport sur un autre appareil, ou après avoir vidé votre navigateur, enregistrez le lien ci-dessous. Quiconque possède le lien ouvre le rapport de ce résultat : conservez-le donc avec soin.',
   saveField: 'Lien d’accès au rapport',

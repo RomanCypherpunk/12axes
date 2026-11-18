@@ -12,6 +12,8 @@ import java.util.List;
  * @param idealGovernment os cargos do governo ideal, cada um com a personalidade mais compativel da categoria
  * @param timeline as seis eras da historia, cada uma com os perfis (personalidades, paises e partidos) mais compativeis
  * @param ranking ranking completo de compatibilidade com cada perfil do catalogo
+ * @param countriesByArea o pais atual mais compativel em cada area (sistema politico, politica externa, organizacao territorial,
+ *     sistema economico, sociedade e cultura, tecnologia e natureza)
  */
 public record PremiumReport(
         List<AxisAnalysis> axisAnalysis,
@@ -20,6 +22,7 @@ public record PremiumReport(
         List<Disagreement> disagreements,
         List<GovernmentSeat> idealGovernment,
         List<TimelineEra> timeline,
-        PremiumRanking ranking
+        PremiumRanking ranking,
+        List<AreaCountryMatch> countriesByArea
 ) {
 }

@@ -160,6 +160,10 @@ class PremiumControllerTest {
                 .andExpect(jsonPath("$.axisAnalysis.length()").value(12))
                 .andExpect(jsonPath("$.topCountries.length()").value(10))
                 .andExpect(jsonPath("$.idealGovernment.length()").value(9))
+                .andExpect(jsonPath("$.countriesByArea.length()").value(6))
+                .andExpect(jsonPath("$.countriesByArea[0].area").value("politico"))
+                .andExpect(jsonPath("$.countriesByArea[5].area").value("tecnologia"))
+                .andExpect(jsonPath("$.countriesByArea[0].country.name").isNotEmpty())
                 .andExpect(jsonPath("$.disagreements.length()").value(3))
                 .andExpect(jsonPath("$.ranking.ideologies").isNotEmpty())
                 .andExpect(jsonPath("$.personalitiesByArea").isNotEmpty());

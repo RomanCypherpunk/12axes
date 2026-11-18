@@ -3,7 +3,7 @@ import { t } from '../../i18n';
 import { PoleIcon } from '../AxisIcon';
 
 /** Os cartões de compartilhamento que uma seção da página pode gerar. */
-export type ShareKind = 'countries' | 'personalities' | 'parties' | 'elections' | 'compass' | 'government' | 'timeline' | 'living';
+export type ShareKind = 'countries' | 'personalities' | 'parties' | 'elections' | 'compass' | 'government' | 'areas' | 'timeline' | 'living';
 
 const LABELS: Record<ShareKind, () => string> = {
   countries: () => t.shareCountriesCta,
@@ -12,6 +12,7 @@ const LABELS: Record<ShareKind, () => string> = {
   elections: () => t.shareElectionsCta,
   compass: () => t.shareCompassCta,
   government: () => t.shareGovernmentCta,
+  areas: () => t.shareAreasCta,
   timeline: () => t.shareTimelineCta,
   living: () => t.shareLivingCta
 };
@@ -58,6 +59,14 @@ function ShareIcon({ kind }: { kind: ShareKind }) {
           <path d="M12 5v14" />
           <path d="M4 19h16" />
           <path d="m12 4 8 4H4z" />
+        </>
+      )}
+      {kind === 'areas' && (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3a14 14 0 0 1 0 18" />
+          <path d="M12 3a14 14 0 0 0 0 18" />
         </>
       )}
       {kind === 'timeline' && (

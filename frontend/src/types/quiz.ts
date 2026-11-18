@@ -452,6 +452,13 @@ export interface TimelineEra {
   highlights: TimelineEntry[];
 }
 
+/** O país atual mais próximo do usuário em uma área do relatório pago; a compatibilidade é a da área. */
+export interface AreaCountryMatch {
+  /** politico, externa, territorial, economico, sociedade ou tecnologia. */
+  area: string;
+  country: CountryMatch;
+}
+
 export interface PremiumReport {
   axisAnalysis: AxisAnalysis[];
   topCountries: CountryMatch[];
@@ -460,4 +467,6 @@ export interface PremiumReport {
   idealGovernment: GovernmentSeat[];
   timeline: TimelineEra[];
   ranking: PremiumRanking;
+  /** O país atual mais próximo em cada área; ausente em relatórios antigos. */
+  countriesByArea?: AreaCountryMatch[];
 }

@@ -35,6 +35,7 @@ public class PremiumReportService {
     private final IdealGovernmentService idealGovernmentService;
     private final AxisAnalysisService axisAnalysisService;
     private final TimelineService timelineService;
+    private final AreaCountryMatcherService areaCountryMatcherService;
 
     public PremiumReportService(
             ScoringService scoringService,
@@ -45,7 +46,8 @@ public class PremiumReportService {
             DisagreementService disagreementService,
             IdealGovernmentService idealGovernmentService,
             AxisAnalysisService axisAnalysisService,
-            TimelineService timelineService
+            TimelineService timelineService,
+            AreaCountryMatcherService areaCountryMatcherService
     ) {
         this.scoringService = scoringService;
         this.ideologyMatcherService = ideologyMatcherService;
@@ -56,6 +58,7 @@ public class PremiumReportService {
         this.idealGovernmentService = idealGovernmentService;
         this.axisAnalysisService = axisAnalysisService;
         this.timelineService = timelineService;
+        this.areaCountryMatcherService = areaCountryMatcherService;
     }
 
     /** A partir das respostas: o resultado vem delas e o relatorio inclui o que mais pesou em cada eixo. */
@@ -78,7 +81,8 @@ public class PremiumReportService {
                 disagreements,
                 idealGovernmentService.build(axes, lang, religion),
                 timelineService.build(axes, lang, religion, true),
-                ranking(axes, countries, lang, religion)
+                ranking(axes, countries, lang, religion),
+                areaCountryMatcherService.findAll(axes, lang, religion)
         );
     }
 

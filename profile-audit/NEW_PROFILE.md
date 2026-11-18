@@ -98,7 +98,7 @@ ainda reflete a posição mais recente da pessoa; se não refletir, atualize `pe
 |---|---|---|
 | `ideology` | `id`, `name`, `category`, `description`, `phrase`, `countryId`, `personalityId`, `religions` | `phrase` só existe neste catálogo, ver seção própria |
 | `personality` | `id`, `name`, `role`, `lifespan`, `description`, `imagePath`, `imageSourceName`, `imageSourceUrl`, `imageNote`, `religions` | — |
-| `country` | `id`, `name`, `category`, `description`, `flagPath`, `historical`, `period`, `vector` (sempre `null` no arquivo de metadados), `religions` | `period` só é preenchido (e `historical: true`) se o perfil representa um país num momento histórico específico (ex.: "Alemanha Nazista — Terceiro Reich") |
+| `country` | `id`, `name`, `category`, `description`, `flagPath`, `historical`, `period`, `vector` (sempre `null` no arquivo de metadados), `religions` | `period` só é preenchido (e `historical: true`) se o perfil representa um país num momento histórico específico (ex.: "Alemanha Nazista — Terceiro Reich"); `region: true` (logo depois de `historical`, só no PT) quando é uma região de outro país, no padrão "Texas (Estados Unidos)": ela fica de fora de "países mais próximos por área" |
 
 **Nota sobre `ideology.countryId` / `ideology.personalityId`**: toda ideologia do catálogo aponta
 para um país e uma personalidade **já existentes** que a exemplificam bem (ex.: `aceleracionismo-cristao`

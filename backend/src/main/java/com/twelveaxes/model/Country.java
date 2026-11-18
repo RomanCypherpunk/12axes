@@ -20,6 +20,8 @@ import java.util.Map;
  * @param flagSourceUrl URL da fonte da imagem
  * @param flagNote observações sobre a bandeira
  * @param historical indica se a entidade é histórica
+ * @param region indica se a entidade é uma região de outro país ("Texas (Estados Unidos)", "Dubai (Emirados Árabes Unidos)");
+ *     regiões ficam de fora das seções que sugerem países, como "países mais próximos por área"
  * @param period período de existência da entidade, quando aplicável
  * @param vector valores do país em cada eixo ideológico
  * @param religions tradições religiosas que o país representa (ver ReligionFilter)
@@ -35,6 +37,7 @@ public record Country(
         String flagSourceUrl,
         String flagNote,
         boolean historical,
+        boolean region,
         String period,
         Map<String, Double> vector,
         List<String> religions

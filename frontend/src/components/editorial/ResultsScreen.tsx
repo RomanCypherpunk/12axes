@@ -126,6 +126,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       else if (shownReport) {
         // As seções do relatório pago usam o relatório que já está carregado na página, com as trocas do governo ideal que o usuário fez.
         if (kind === 'government') await (await import('../../utils/governmentShareCard')).exportGovernmentShare(result, shownReport, sharedReligion);
+        else if (kind === 'areas') await (await import('../../utils/areasShareCard')).exportAreasShare(result, shownReport, sharedReligion);
         else if (kind === 'timeline') await (await import('../../utils/timelineShareCard')).exportTimelineShare(result, shownReport, sharedReligion);
         else await (await import('../../utils/livingShareCard')).exportLivingShare(result, shownReport, sharedReligion);
       }

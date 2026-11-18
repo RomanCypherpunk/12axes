@@ -21,6 +21,7 @@ const PREMIUM_SECTIONS = [
   { id: 'premium-eixos', label: () => t.resultsNavAxisByAxis },
   { id: 'premium-discorda', label: () => t.resultsNavDisagree },
   { id: 'premium-governo', label: () => t.resultsNavGovernment },
+  { id: 'premium-areas-paises', label: () => t.resultsNavAreaCountries },
   { id: 'premium-linha-do-tempo', label: () => t.resultsNavTimeline },
   { id: 'premium-paises', label: () => t.resultsNavLiving }
 ];
@@ -32,7 +33,7 @@ interface ResultsNavProps {
   hasCompass?: boolean;
   hasParties?: boolean;
   hasValues?: boolean;
-  /** Com acesso ao relatório pago: lista as cinco seções dele (11 a 15) no lugar do item único. */
+  /** Com acesso ao relatório pago: lista as seis seções dele (11 a 15) no lugar do item único. */
   premium?: boolean;
   /** Sem acesso: id do convite à compra. O item "Análise completa" aparece apagado (com um cadeado) e leva até ele; null o esconde. */
   premiumTarget?: string | null;

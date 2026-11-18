@@ -376,6 +376,7 @@ export interface Strings {
   resultsNavAxisByAxis: string;
   resultsNavDisagree: string;
   resultsNavGovernment: string;
+  resultsNavAreaCountries: string;
   resultsNavTimeline: string;
   resultsNavLiving: string;
   resultsNavAxes: string;
@@ -574,6 +575,11 @@ export interface Strings {
   sharePartiesCta: string;
   shareCompassCta: string;
   shareGovernmentCta: string;
+  shareAreasCta: string;
+  shareAreasHeader: string;
+  shareAreasFilePrefix: string;
+  shareAreasTitle: string;
+  shareAreasMessage: string;
   shareTimelineCta: string;
   shareLivingCta: string;
   shareIdealGovernment: string;

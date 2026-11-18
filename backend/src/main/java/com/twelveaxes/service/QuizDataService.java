@@ -259,6 +259,7 @@ public class QuizDataService {
                     country.flagSourceUrl(),
                     country.flagNote(),
                     country.historical(),
+                    country.region(),
                     country.period(),
                     country.vector(),
                     country.religions()

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Axis, AxisResult, PersonalityMatch, PremiumReport } from '../../../types/quiz';
 import { AxisAnalysisPanel } from './AxisAnalysisPanel';
+import { CountriesByAreaPanel } from './CountriesByAreaPanel';
 import { DisagreementPanel } from './DisagreementPanel';
 import { GovernmentPanel, type SeatKey } from './GovernmentPanel';
 import { TimelinePanel } from './TimelinePanel';
@@ -15,7 +16,7 @@ export function premiumPanels(
   axes: Axis[],
   results: Map<string, AxisResult>,
   /** O botão de compartilhar o cartão de cada seção que tem um (só na página; o PDF não passa nada). */
-  shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode,
+  shareButton?: (kind: 'government' | 'areas' | 'timeline' | 'living') => ReactNode,
   /** Troca de quem ocupa cada cargo do governo ideal (só na página; o PDF não passa nada). */
   government?: { swaps: Record<string, string>; onSwap: (seatKey: SeatKey, personalityId: string | null, found?: PersonalityMatch, others?: Record<string, string>) => void }
 ): { id: string; node: ReactNode }[] {
@@ -56,6 +57,7 @@ export function premiumPanels(
         />
       )
     },
+    { id: 'areas-paises', node: <CountriesByAreaPanel areas={report.countriesByArea ?? []} footer={shareButton?.('areas')} /> },
     { id: 'tempo', node: <TimelinePanel timeline={report.timeline} axes={axes} results={results} footer={shareButton?.('timeline')} /> },
     { id: 'paises', node: <TopCountriesPanel countries={report.topCountries} axes={axes} results={results} footer={shareButton?.('living')} /> }
   ];

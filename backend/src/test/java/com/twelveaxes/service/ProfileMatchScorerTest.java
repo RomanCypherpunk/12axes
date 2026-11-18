@@ -220,6 +220,56 @@ class ProfileMatchScorerTest {
         return Math.round(value * 10.0) / 10.0;
     }
 
+    private static final java.util.List<String> ALL_AXES = java.util.List.of(
+            "estrutura", "representacao", "poder", "imigracao", "diplomacia", "intervencao",
+            "economia", "controle", "comercio", "religiao", "moral", "tecnologia");
+
+    private Map<String, Double> sampleUser() {
+        return vector(Map.of("estrutura", 80.0, "representacao", 20.0, "poder", 65.0, "economia", 35.0,
+                "comercio", 70.0, "religiao", 15.0, "moral", 75.0, "tecnologia", 40.0));
+    }
+
+    private Map<String, Double> sampleTarget() {
+        return vector(Map.of("estrutura", 55.0, "representacao", 40.0, "poder", 30.0, "economia", 60.0,
+                "comercio", 45.0, "religiao", 70.0, "moral", 20.0, "tecnologia", 85.0, "controle", 25.0));
+    }
+
+    @Test
+    void weightedScoreWithEqualWeightsOnEveryAxisMatchesTheUnweightedScore() {
+        Map<String, Double> equal = new LinkedHashMap<>();
+        ALL_AXES.forEach(axis -> equal.put(axis, 1.0));
+
+        assertThat(scorer.compatibility(sampleUser(), sampleTarget(), equal))
+                .isEqualTo(scorer.compatibility(sampleUser(), sampleTarget()));
+    }
+
+    @Test
+    void weightedScoreWithEqualWeightsOnASubsetMatchesTheSubsetScore() {
+        java.util.List<String> subset = java.util.List.of("estrutura", "comercio", "moral");
+        Map<String, Double> weights = new LinkedHashMap<>();
+        subset.forEach(axis -> weights.put(axis, 1.0));
+
+        assertThat(scorer.compatibility(sampleUser(), sampleTarget(), weights))
+                .isEqualTo(scorer.compatibility(sampleUser(), sampleTarget(), subset));
+    }
+
+    @Test
+    void aHeavilyWeightedAxisDecidesAndTheOthersOnlyBreakTies() {
+        Map<String, Double> user = vector(Map.of("estrutura", 90.0, "economia", 10.0, "moral", 10.0));
+        // Igual ao usuario em estrutura, oposto nos outros dois.
+        Map<String, Double> sameOnMainAxis = vector(Map.of("estrutura", 90.0, "economia", 90.0, "moral", 90.0));
+        // Oposto em estrutura, igual ao usuario nos outros dois.
+        Map<String, Double> oppositeOnMainAxis = vector(Map.of("estrutura", 10.0, "economia", 10.0, "moral", 10.0));
+        Map<String, Double> weights = new LinkedHashMap<>();
+        ALL_AXES.forEach(axis -> weights.put(axis, 0.5 / 11));
+        weights.put("estrutura", 0.5);
+
+        assertThat(scorer.compatibility(user, sameOnMainAxis, weights))
+                .isGreaterThan(scorer.compatibility(user, oppositeOnMainAxis, weights));
+        // Sem peso, as duas perdem do mesmo jeito (so um terco dos eixos muda de lado): a ordem nao depende da area.
+        assertThat(scorer.compatibility(user, oppositeOnMainAxis, weights)).isBetween(0.0, 100.0);
+    }
+
     private Map<String, Double> vector(Map<String, Double> overrides) {
         Map<String, Double> vector = new LinkedHashMap<>(scorer.neutralVector());
         vector.putAll(overrides);

@@ -64,6 +64,61 @@ public class ProfileMatchScorer {
         ));
     }
 
+    /**
+     * Mesma formula, com um peso por eixo (so entram os eixos com peso positivo). Com todos os pesos iguais o resultado e o da
+     * versao sem pesos. Usada pelas areas do relatorio pago, em que os eixos da area pesam mais que os outros.
+     * No outlier, a diferenca de cada eixo e escalada por peso/pesoMaximo: um eixo secundario quase nao puxa o maior desvio.
+     */
+    public double compatibility(Map<String, Double> userVector, Map<String, Double> targetVector, Map<String, Double> axisWeights) {
+        double totalWeight = 0.0;
+        double maxWeight = 0.0;
+        for (double weight : axisWeights.values()) {
+            if (weight > 0.0) {
+                totalWeight += weight;
+                maxWeight = Math.max(maxWeight, weight);
+            }
+        }
+        if (totalWeight == 0.0) {
+            return 0.0;
+        }
+        double similaritySum = 0.0;
+        double dot = 0.0;
+        double userNormSquared = 0.0;
+        double targetNormSquared = 0.0;
+        double userIntensity = 0.0;
+        double targetIntensity = 0.0;
+        double maxScaledDiff = 0.0;
+        for (Map.Entry<String, Double> entry : axisWeights.entrySet()) {
+            double weight = entry.getValue();
+            if (weight <= 0.0) {
+                continue;
+            }
+            double userValue = userVector.getOrDefault(entry.getKey(), CENTER);
+            double targetValue = targetVector.getOrDefault(entry.getKey(), CENTER);
+            similaritySum += weight * singleAxisSimilarity(userValue, targetValue);
+            double centeredUser = userValue - CENTER;
+            double centeredTarget = targetValue - CENTER;
+            dot += weight * centeredUser * centeredTarget;
+            userNormSquared += weight * centeredUser * centeredUser;
+            targetNormSquared += weight * centeredTarget * centeredTarget;
+            userIntensity += weight * Math.abs(centeredUser);
+            targetIntensity += weight * Math.abs(centeredTarget);
+            maxScaledDiff = Math.max(maxScaledDiff, Math.abs(userValue - targetValue) * (weight / maxWeight));
+        }
+        double axisSimilarity = 100.0 * similaritySum / totalWeight;
+        double augment = totalWeight * DIRECTION_AUGMENT_RADIUS * DIRECTION_AUGMENT_RADIUS;
+        double cosine = (dot + augment) / Math.sqrt((userNormSquared + augment) * (targetNormSquared + augment));
+        double directionSimilarity = CENTER + CENTER * cosine;
+        double magnitudeSimilarity = 100.0 - 2.0 * Math.abs(userIntensity / totalWeight - targetIntensity / totalWeight);
+        double outlierSimilarity = 100.0 * Math.max(0.0, 1.0 - Math.pow(maxScaledDiff / OUTLIER_FULL_SPREAD, OUTLIER_EXPONENT));
+        return round1(clamp(
+                AXIS_WEIGHT * axisSimilarity
+                        + DIRECTION_WEIGHT * directionSimilarity
+                        + MAGNITUDE_WEIGHT * magnitudeSimilarity
+                        + OUTLIER_WEIGHT * outlierSimilarity
+        ));
+    }
+
     public double percentile(double compatibility, List<Double> catalogCompatibilities) {
         if (catalogCompatibilities.isEmpty()) {
             return 0.0;
@@ -112,19 +167,20 @@ public class ProfileMatchScorer {
         return neutral;
     }
 
+    // A similaridade de um eixo: quadratica na distancia, com penalidade quando os dois ficam em lados opostos do centro.
+    private double singleAxisSimilarity(double userValue, double targetValue) {
+        double diff = Math.abs(userValue - targetValue);
+        double similarity = Math.max(0.0, 1.0 - Math.pow(diff / AXIS_SPREAD, 2));
+        if ((userValue - CENTER) * (targetValue - CENTER) < 0.0) {
+            similarity *= oppositeSideSimilarityFactor(userValue, targetValue);
+        }
+        return similarity;
+    }
+
     private double axisSimilarity(Map<String, Double> userVector, Map<String, Double> targetVector, List<String> axisIds) {
         double totalSimilarity = 0.0;
         for (String axisId : axisIds) {
-            double userValue = userVector.getOrDefault(axisId, CENTER);
-            double targetValue = targetVector.getOrDefault(axisId, CENTER);
-            double diff = Math.abs(userValue - targetValue);
-            double similarity = Math.max(0.0, 1.0 - Math.pow(diff / AXIS_SPREAD, 2));
-
-            if ((userValue - CENTER) * (targetValue - CENTER) < 0.0) {
-                similarity *= oppositeSideSimilarityFactor(userValue, targetValue);
-            }
-
-            totalSimilarity += similarity;
+            totalSimilarity += singleAxisSimilarity(userVector.getOrDefault(axisId, CENTER), targetVector.getOrDefault(axisId, CENTER));
         }
 
         return 100.0 * totalSimilarity / axisIds.size();

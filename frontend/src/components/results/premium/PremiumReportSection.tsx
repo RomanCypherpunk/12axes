@@ -25,7 +25,7 @@ interface Props {
   /** O servidor recusou o token (pagamento reembolsado, por exemplo): quem chamou volta ao convite. */
   onDenied?: () => void;
   /** O botão de compartilhar o cartão de cada seção que tem um (governo, linha do tempo e países para viver). */
-  shareButton?: (kind: 'government' | 'timeline' | 'living') => ReactNode;
+  shareButton?: (kind: 'government' | 'areas' | 'timeline' | 'living') => ReactNode;
   /** As trocas do governo ideal feitas pelo usuário e como trocar (ou voltar à sugestão, com null). */
   governmentSwaps?: GovernmentSwaps;
   /** Quem o usuário achou na busca, para o cargo trocado por alguém fora das sugestões. */
