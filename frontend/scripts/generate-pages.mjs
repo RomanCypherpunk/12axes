@@ -526,7 +526,6 @@ function seoHomeContent(locale) {
   const faq = d.faqItems.map((item) => `<h3>${e(item.question)}</h3><p>${e(item.answer)}</p>`).join('');
   return `${SEO_HOME_START}<style>${SEO_HOME_CSS}</style><main class="seo-home">
 <nav aria-label="${e(L.navCatalog)}">${nav}</nav>
-<p>${e(d.heroEyebrow)}</p>
 <h1>${e(d.h1Pre)}${e(d.h1Em)}${e(d.h1Post)}</h1>
 <p>${e(d.introLead)}</p>
 <h2>${e(d.discoveryTitle)}</h2><p>${e(d.discoveryLead)}</p><ul>${discovery}</ul>

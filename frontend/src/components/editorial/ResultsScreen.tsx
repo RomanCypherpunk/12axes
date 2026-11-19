@@ -287,7 +287,6 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
       <div className="e-wrap e-res-grid">
         <div className="e-res-main">
           <header className="e-res-head">
-            <p className="e-eyebrow">{t.resultsEyebrow}</p>
             <h1>
               {t.resultsH1Pre}
               <span>{t.resultsH1Em}</span>

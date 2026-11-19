@@ -934,7 +934,6 @@ function MainApp() {
               {savedProgress && (
                 <>
                   <div className="e-resume-body">
-                    <p className="e-eyebrow">{t.resumeEyebrow}</p>
                     <h3>{t.resumeTitle}</h3>
                     <p className="e-resume-text">
                       {t.resumeBody(savedAnsweredCount(savedProgress), savedProgress.questionIds.length)}
@@ -960,7 +959,6 @@ function MainApp() {
               {!savedProgress && lastResult && (
                 <>
                   <div className="e-resume-body">
-                    <p className="e-eyebrow">{t.doneEyebrow}</p>
                     <h3>{t.doneTitle}</h3>
                     <p className="e-resume-text">{t.doneBody(lastResult.name)}</p>
                     <div className="e-resume-bar" aria-hidden="true">

@@ -300,7 +300,7 @@ export default function TreePage({ kind: initialKind, locale }: { kind: TreeKind
   useEffect(() => {
     const previousTitle = document.title;
     const previousLang = document.documentElement.lang;
-    document.title = `${s.title} · ${s.kinds[kind]} — 12 Axes`;
+    document.title = `${s.title} · ${s.kinds[kind]} | 12 Axes`;
     document.documentElement.lang = locale === 'pt' ? 'pt-BR' : locale;
     let meta = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
     const previousRobots = meta?.content ?? null;

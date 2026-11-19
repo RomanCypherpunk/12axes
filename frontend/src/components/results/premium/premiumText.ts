@@ -549,7 +549,7 @@ const ru: PremiumText = {
     const year = (value: number) => (value < 0 ? `${-value} г. до н. э.` : String(value));
     if (from === null && to !== null) return `До ${year(to)}`;
     if (to === null && from !== null) return `С ${year(from)}`;
-    return `${year(from ?? 0)} — ${year(to ?? 0)}`;
+    return `${year(from ?? 0)}–${year(to ?? 0)}`;
   },
   timelineCurrent: 'Нынешняя',
   timelineBestEra: 'Наиболее совместимая эпоха:',

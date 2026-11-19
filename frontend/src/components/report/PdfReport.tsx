@@ -99,7 +99,6 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
             <span className="cv-line" />
             <span className="cv-lab">{t.report.docLabel}</span>
           </div>
-          <p className="cv-eb">{t.report.profileEyebrow}</p>
           <div className="cv-main">
             <div>
               <span className="tag cv-tag">{top.category}</span>
@@ -486,7 +485,6 @@ function Quote({ phrase }: { phrase: string }) {
     <figure className="quote">
       <span className="q">“</span>
       <div>
-        <p className="eb">{t.phraseTitle}</p>
         <blockquote>{phrase}</blockquote>
       </div>
     </figure>

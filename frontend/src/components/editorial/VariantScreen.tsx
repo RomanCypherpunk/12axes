@@ -12,7 +12,6 @@ export function VariantScreen({ error, onStart }: VariantScreenProps) {
   return (
     <section className="ed e-fmt" aria-labelledby="variant-title">
       <div className="e-wrap">
-        <p className="e-eyebrow">{t.variantEyebrow}</p>
         <h1 id="variant-title">
           {t.variantTitlePre}
           <span className="e-accent">{t.variantTitleEm}</span>

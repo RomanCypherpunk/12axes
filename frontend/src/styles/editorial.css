@@ -349,7 +349,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-toc{padding:20px 14px}
 .e-toc p{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-suave);padding:0 10px 10px}
 .e-toc a{display:flex;gap:12px;align-items:center;padding:9px 10px;border-radius:12px;text-decoration:none;font-size:14.5px}
-.e-toc a span{font-family:var(--font-display);font-weight:600;font-size:12.5px;color:var(--texto-suave);width:20px}
 .e-toc a:hover{background:var(--neutro)}
 .e-toc a.e-on{background:var(--cat-bg);color:var(--cat);font-weight:600}
 /* Relatório pago: 15 itens, então o menu fica compacto (o do resultado grátis não muda). */
@@ -360,7 +359,6 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-toc-premium a span{font-size:12px;width:18px;flex:none;font-variant-numeric:tabular-nums}
 .e-toc-premium a.e-on::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:3px;background:var(--cat)}
 @media (max-height:760px){.e-toc-premium{padding-top:12px}.e-toc-premium a{padding:4px 10px;font-size:13px}.e-toc-premium .e-toc-group{margin-top:6px;padding-top:8px}}
-.e-toc a.e-on span{color:var(--cat)}
 /* phrase */
 .e-phrase{display:grid;grid-template-columns:auto 1fr;gap:18px;margin:0}
 .e-phrase .e-q{font-family:var(--font-display);font-weight:700;font-size:64px;line-height:.75;color:var(--cat);opacity:.9}
@@ -730,14 +728,11 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* código aberto (abaixo de "Apoie" na home) */
 .e-oss{padding:88px 0;background:#101010;color:var(--papel);border-bottom:1px solid rgba(244,241,232,.08)}
 .e-oss-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
-.e-oss-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F0B7B2}
-.e-oss-eyebrow::before{content:"— "}
 .e-oss h2{font-family:var(--font-display);font-weight:600;font-size:clamp(32px,3.8vw,46px);letter-spacing:-.035em;line-height:1.08;margin-top:12px;color:var(--papel)}
 .e-oss-lead{font-size:16px;line-height:1.65;color:#B9B6AE;max-width:520px}
 .e-oss-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .e-oss-card{position:relative;background:rgba(244,241,232,.04);border:1px solid rgba(244,241,232,.1);border-radius:20px;padding:22px 22px 24px;transition:border-color .15s ease,background .15s ease}
 .e-oss-card:hover{border-color:rgba(244,241,232,.24);background:rgba(244,241,232,.07)}
-.e-oss-num{position:absolute;top:20px;right:22px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;color:#7E7B74}
 .e-oss-ico{width:42px;height:42px;padding:10px;border-radius:12px;background:rgba(244,241,232,.1);color:var(--papel);fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .e-oss-card h3{font-family:var(--font-display);font-weight:600;font-size:18px;letter-spacing:-.015em;margin:16px 0 6px;color:var(--papel)}
 .e-oss-card p{font-size:14px;line-height:1.55;color:#A9A69E}
@@ -754,7 +749,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-oss-btn:focus-visible{outline:3px solid var(--papel);outline-offset:3px}
 @media (max-width:1024px){.e-oss-cards{grid-template-columns:1fr 1fr}.e-oss-head{grid-template-columns:1fr;gap:14px}}
 @media (max-width:720px){.e-oss-bar{flex-wrap:wrap;padding:22px}.e-oss-actions{width:100%}.e-oss-actions .e-oss-btn{flex:1;justify-content:center}}
-@media (max-width:560px){.e-oss{padding:64px 0}.e-oss-cards{grid-template-columns:1fr;gap:10px}.e-oss-card{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:18px}.e-oss-card .e-oss-ico{grid-row:span 2}.e-oss-card h3{margin:0;font-size:17px}.e-oss-num{top:18px;right:18px}.e-oss-head{margin-bottom:28px}.e-oss-actions{flex-direction:column}}
+@media (max-width:560px){.e-oss{padding:64px 0}.e-oss-cards{grid-template-columns:1fr;gap:10px}.e-oss-card{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:18px}.e-oss-card .e-oss-ico{grid-row:span 2}.e-oss-card h3{margin:0;font-size:17px}.e-oss-head{margin-bottom:28px}.e-oss-actions{flex-direction:column}}
 @media (prefers-reduced-motion:reduce){.e-oss-btn,.e-oss-card{transition:none}}
 
 /* retomada do quiz (home) */

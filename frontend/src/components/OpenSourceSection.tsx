@@ -31,7 +31,6 @@ export function OpenSourceSection() {
       <div className="e-wrap">
         <div className="e-oss-head">
           <div>
-            <p className="e-oss-eyebrow">{t.ossEyebrow}</p>
             <h2 id="oss-titulo">{t.ossTitle}</h2>
           </div>
           <p className="e-oss-lead">{t.ossLead}</p>
@@ -39,7 +38,6 @@ export function OpenSourceSection() {
         <ul className="e-oss-cards">
           {t.ossCards.map((card, index) => (
             <li className="e-oss-card" key={card.title}>
-              <span className="e-oss-num">/{String(index + 1).padStart(2, '0')}</span>
               <svg className="e-oss-ico" viewBox="0 0 24 24" aria-hidden="true">
                 {CARD_ICONS[index]}
               </svg>

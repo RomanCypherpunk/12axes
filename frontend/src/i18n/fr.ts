@@ -13,13 +13,11 @@ export const fr: DeepPartial<Strings> = {
   crashBody: 'La page a rencontré une erreur inattendue. Rechargez-la pour réessayer.',
   crashBodyWithProgress: 'La page a rencontré une erreur inattendue, mais vos réponses sont enregistrées. Rechargez la page et choisissez de reprendre là où vous en étiez.',
   crashReload: 'Recharger la page',
-  resumeEyebrow: 'Test en cours',
   resumeTitle: 'Reprenez là où vous en étiez',
   resumeBody: (answered, total) => `Vous avez répondu à ${answered} question${answered > 1 ? 's' : ''} sur ${total}. Vos réponses sont enregistrées dans ce navigateur.`,
   resumeContinue: 'Continuer',
   resumeDiscard: 'Recommencer',
   resumeUnavailable: 'Le test précédent n’a pas pu être repris. Veuillez en commencer un nouveau.',
-  doneEyebrow: 'Test terminé',
   doneTitle: 'Vous avez déjà passé le test',
   doneBody: (name) => `Votre résultat était ${name}. Il est enregistré dans ce navigateur : il suffit de le rouvrir.`,
   doneView: 'Voir les résultats',
@@ -68,7 +66,6 @@ export const fr: DeepPartial<Strings> = {
   denominationQuestion: 'De quelle tradition chrétienne vous réclamez-vous ?',
   denominationNames: { catholic: 'Catholique', protestant: 'Protestante', orthodox: 'Orthodoxe' },
   restartQuiz: 'Recommencer le test',
-  heroEyebrow: 'Découverte politique',
   h1Pre: 'Connaissez-vous vraiment votre ',
   h1Em: 'idéologie politique',
   h1Post: ' ?',
@@ -176,8 +173,7 @@ export const fr: DeepPartial<Strings> = {
   compareNoFarLine: (name) => `Aucun axe n’est éloigné de ${name}.`,
   compareValues: (pole, you, them, name) => `${pole} : vous ${you} % · ${name} ${them} %.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
-  comparePageDocTitle: 'Comparer des profils — 12 Axes',
-  comparePageEyebrow: 'Comparer des profils',
+  comparePageDocTitle: 'Comparer des profils | 12 Axes',
   comparePageTitle: 'Côte à côte, sur les 12 axes',
   comparePageProfilesTitle: 'Profils',
   comparePageNeedMore: 'Choisissez un autre profil à comparer.',
@@ -264,7 +260,7 @@ export const fr: DeepPartial<Strings> = {
   peopleNavPersonalities: 'Personnalités',
   peopleNavValues: 'Valeurs',
   peopleNavSharedValues: 'En commun',
-  peoplePageDocTitle: 'Comparer avec quelqu’un d’autre — 12 Axes',
+  peoplePageDocTitle: 'Comparer avec quelqu’un d’autre | 12 Axes',
   peoplePageTitle: 'Vous deux, sur les 12 axes',
   peoplePagePeopleTitle: 'Personnes',
   peoplePageBadLink: 'Ce lien de comparaison est incomplet. Ouvrez votre résultat et utilisez « Comparer avec quelqu’un d’autre ».',
@@ -440,7 +436,6 @@ export const fr: DeepPartial<Strings> = {
       answer: 'Il existe trois versions : rapide, avec 36 questions, complète, avec 60, et extrême, avec 240. Toutes couvrent les mêmes 12 axes ; plus il y a de questions, plus le résultat tend à être précis.'
     }
   ],
-  howEyebrow: 'Comment ça marche',
   howTitle: 'Comment fonctionne le test politique 12 Axes',
   howLead:
     'Un test d’idéologie politique simple et visuel : vous répondez à des affirmations, 12 Axes calcule vos pourcentages et montre où vous vous situez sur le spectre politique dans chaque dimension.',
@@ -458,11 +453,9 @@ export const fr: DeepPartial<Strings> = {
       text: 'Recevez votre profil idéologique, les idéologies les plus compatibles, le pays le plus proche, la personnalité associée et les résultats axe par axe.'
     }
   ],
-  axesGuideEyebrow: '12 axes',
   axesGuideTitle: 'Que signifie chaque axe ?',
   axesGuideLead:
     'Le test d’idéologie 12 Axes analyse le fédéralisme, la représentation politique, la démocratie, les élections, l’immigration, le commerce international, la religion en politique, la politique économique, la morale et la technologie dans des dimensions séparées.',
-  discoveryEyebrow: 'Ce que vous allez découvrir',
   discoveryTitle: 'Un portrait complet de vos convictions politiques',
   discoveryLead:
     'Plus que gauche ou droite : votre résultat montre qui, où et avec quelle force vos idées s’alignent réellement.',
@@ -474,11 +467,9 @@ export const fr: DeepPartial<Strings> = {
     { icon: 'profile', title: 'Votre profil', text: 'Un portrait complet de vos convictions' },
     { icon: 'compatibility', title: 'Compatibilité', text: 'À quel point vous adhérez réellement à votre propre idéologie' }
   ],
-  exampleEyebrow: 'Exemple réel',
   exampleTitle: 'Voici à quoi ressemble votre résultat',
   exampleCaption: 'Exemple illustratif utilisant des données réelles du catalogue 12 Axes.',
   exampleCta: 'Je veux voir mon résultat',
-  spectrumEyebrow: 'Spectre politique',
   spectrumTitle: 'Découvrez votre spectre politique',
   spectrumLead:
     'Le résultat vous aide à visualiser votre position politique entre gauche, droite et centre, et identifie aussi des formes plus radicales, autoritaires ou libertaires qui sortent de cet axe, comme l’extrême droite, la gauche radicale, la troisième position, le libertarianisme et l’anarchisme.',
@@ -489,11 +480,9 @@ export const fr: DeepPartial<Strings> = {
   menuAria: 'Ouvrir le menu',
   roseAria: 'Rose des 12 axes',
   spectrumBarAria: 'Barre du spectre politique avec les huit catégories',
-  versionsEyebrow: 'Versions',
   versionsTitle: 'Choisissez la profondeur',
   versionsLead:
     'Commencez par le test rapide ou allez plus loin pour un portrait plus précis de votre profil idéologique. Toutes les versions utilisent les mêmes 12 axes et renvoient le résultat immédiatement.',
-  variantEyebrow: 'Choisissez le format',
   variantTitlePre: 'Voulez-vous de la vitesse ou de la ',
   variantTitleEm: 'précision ?',
   backToStart: 'Retour au début',
@@ -517,7 +506,6 @@ export const fr: DeepPartial<Strings> = {
   errCalc: 'Impossible de calculer le résultat.',
   errImage: 'Impossible de générer l’image du résultat.',
   errHttp: (status) => `Erreur HTTP ${status}`,
-  resultsEyebrow: 'Analyse terminée',
   resultsH1Pre: 'Votre ',
   resultsH1Em: 'profil',
   resultsLead: (count) =>
@@ -719,7 +707,6 @@ export const fr: DeepPartial<Strings> = {
   areasLockedCta: 'Débloquer mon rapport complet',
   personalitiesDistantTitle: 'Les plus éloignées de vous',
   ideologyDistantTitle: 'L’idéologie la plus éloignée de vous',
-  phraseTitle: 'Une phrase qui vous décrit',
   aboutIdeology: (ideology) => `À propos : ${ideology}`,
   knowMoreAbout: (name) => `En savoir plus sur ${name}`,
   showLess: 'Voir moins',
@@ -773,7 +760,6 @@ export const fr: DeepPartial<Strings> = {
   report: {
     fileName: '12axes-rapport',
     docLabel: 'Rapport complet',
-    profileEyebrow: 'Votre profil idéologique',
     headerLabel: (ideology) => `Rapport de profil politique · ${ideology}`,
     kpiCountry: 'Pays le plus proche',
     kpiPersonality: 'Figure',
@@ -911,9 +897,7 @@ export const fr: DeepPartial<Strings> = {
   shareNearbyCountries: 'PAYS PROCHES',
   shareFooterCta: 'DÉCOUVREZ VOTRE PROFIL',
   shareFooterUrl: '12AXES.VERCEL.APP',
-  supportEyebrow: 'Soutenir le projet',
   supportTitle: '',
-  ossEyebrow: 'Open source',
   ossTitle: 'Un projet indépendant et transparent',
   ossLead: 'Vous n’avez pas à nous croire sur parole. Le code de 12 Axes est public : vous pouvez voir comment chaque réponse est notée, comment la compatibilité est calculée et d’où viennent les profils.',
   ossCards: [

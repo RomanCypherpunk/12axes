@@ -102,13 +102,11 @@ export interface Strings {
   crashBody: string;
   crashBodyWithProgress: string;
   crashReload: string;
-  resumeEyebrow: string;
   resumeTitle: string;
   resumeBody: (answered: number, total: number) => string;
   resumeContinue: string;
   resumeDiscard: string;
   resumeUnavailable: string;
-  doneEyebrow: string;
   doneTitle: string;
   doneBody: (name: string) => string;
   doneView: string;
@@ -150,7 +148,6 @@ export interface Strings {
   denominationQuestion: string;
   denominationNames: Record<'catholic' | 'protestant' | 'orthodox', string>;
   restartQuiz: string;
-  heroEyebrow: string;
   h1Pre: string;
   h1Em: string;
   h1Post: string;
@@ -218,7 +215,6 @@ export interface Strings {
   compareValues: (pole: string, you: number, them: number, name: string) => string;
   compareOptionAria: (name: string, type: string) => string;
   comparePageDocTitle: string;
-  comparePageEyebrow: string;
   comparePageTitle: string;
   comparePageProfilesTitle: string;
   comparePageNeedMore: string;
@@ -308,22 +304,17 @@ export interface Strings {
   homeAxes: Record<string, { label: string; leftPole: string; rightPole: string }>;
   spectrumItems: { id: string; label: string; tone: string; description: string }[];
   faqItems: { question: string; answer: string }[];
-  howEyebrow: string;
   howTitle: string;
   howLead: string;
   steps: { title: string; text: string }[];
-  axesGuideEyebrow: string;
   axesGuideTitle: string;
   axesGuideLead: string;
-  discoveryEyebrow: string;
   discoveryTitle: string;
   discoveryLead: string;
   discoveryItems: { icon: string; title: string; text: string }[];
-  exampleEyebrow: string;
   exampleTitle: string;
   exampleCaption: string;
   exampleCta: string;
-  spectrumEyebrow: string;
   spectrumTitle: string;
   spectrumLead: string;
   faqTitle: string;
@@ -333,10 +324,8 @@ export interface Strings {
   menuAria: string;
   roseAria: string;
   spectrumBarAria: string;
-  versionsEyebrow: string;
   versionsTitle: string;
   versionsLead: string;
-  variantEyebrow: string;
   variantTitlePre: string;
   variantTitleEm: string;
   backToStart: string;
@@ -359,7 +348,6 @@ export interface Strings {
   errCalc: string;
   errImage: string;
   errHttp: (status: number) => string;
-  resultsEyebrow: string;
   resultsH1Pre: string;
   resultsH1Em: string;
   resultsLead: (count: number) => string;
@@ -489,7 +477,6 @@ export interface Strings {
   areasLockedCta: string;
   personalitiesDistantTitle: string;
   ideologyDistantTitle: string;
-  phraseTitle: string;
   phraseNote: (ideology: string) => string;
   aboutIdeology: (ideology: string) => string;
   knowMoreAbout: (name: string) => string;
@@ -533,7 +520,6 @@ export interface Strings {
   report: {
     fileName: string;
     docLabel: string;
-    profileEyebrow: string;
     headerLabel: (ideology: string) => string;
     kpiCountry: string;
     kpiPersonality: string;
@@ -640,9 +626,7 @@ export interface Strings {
   shareNearbyCountries: string;
   shareFooterCta: string;
   shareFooterUrl: string;
-  supportEyebrow: string;
   supportTitle: string;
-  ossEyebrow: string;
   ossTitle: string;
   ossLead: string;
   ossCards: { title: string; text: string }[];

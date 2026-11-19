@@ -54,7 +54,6 @@
 .rp .cv-bar .logo{color:var(--papel);font-size:20px}.rp .cv-bar .logo b{color:var(--papel)}
 .rp .cv-line{flex:1;height:1px;background:rgba(244,241,232,.35)}
 .rp .cv-lab{font-size:8.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
-.rp .cv-eb{margin-top:16mm;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.8;position:relative;z-index:1}
 .rp .cv-main{display:flex;justify-content:space-between;align-items:flex-end;gap:10mm;margin-top:3mm;position:relative;z-index:1}
 .rp .cv-tag{background:var(--papel);color:var(--cat)}
 .rp-cover h1{font-size:44px;line-height:1.02;letter-spacing:-.04em;margin-top:4mm}

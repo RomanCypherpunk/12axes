@@ -13,13 +13,11 @@ export const en: Strings = {
   crashBody: 'The page hit an unexpected error. Reload to try again.',
   crashBodyWithProgress: 'The page hit an unexpected error, but your answers are saved. Reload and choose to continue where you left off.',
   crashReload: 'Reload the page',
-  resumeEyebrow: 'Quiz in progress',
   resumeTitle: 'Pick up where you left off',
   resumeBody: (answered, total) => `You have answered ${answered} of ${total} questions. Your answers are saved in this browser.`,
   resumeContinue: 'Continue',
   resumeDiscard: 'Start over',
   resumeUnavailable: 'The previous quiz could not be resumed. Please start a new one.',
-  doneEyebrow: 'Test completed',
   doneTitle: 'You have already taken the test',
   doneBody: (name) => `Your result was ${name}. It is saved in this browser, just open it again.`,
   doneView: 'View results',
@@ -68,7 +66,6 @@ export const en: Strings = {
   denominationQuestion: 'Which Christian tradition do you follow?',
   denominationNames: { catholic: 'Catholic', protestant: 'Protestant', orthodox: 'Orthodox' },
   restartQuiz: 'Restart quiz',
-  heroEyebrow: 'Political discovery',
   h1Pre: 'Do you really know your ',
   h1Em: 'political ideology',
   h1Post: '?',
@@ -176,8 +173,7 @@ export const en: Strings = {
   compareNoFarLine: (name) => `No axis is far from ${name}.`,
   compareValues: (pole, you, them, name) => `${pole}: you ${you}% · ${name} ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
-  comparePageDocTitle: 'Compare profiles — 12 Axes',
-  comparePageEyebrow: 'Compare profiles',
+  comparePageDocTitle: 'Compare profiles | 12 Axes',
   comparePageTitle: 'Side by side, on the 12 axes',
   comparePageProfilesTitle: 'Profiles',
   comparePageNeedMore: 'Pick one more profile to compare.',
@@ -264,7 +260,7 @@ export const en: Strings = {
   peopleNavPersonalities: 'Personalities',
   peopleNavValues: 'Values',
   peopleNavSharedValues: 'In common',
-  peoplePageDocTitle: 'Compare with someone else — 12 Axes',
+  peoplePageDocTitle: 'Compare with someone else | 12 Axes',
   peoplePageTitle: 'The two of you, on the 12 axes',
   peoplePagePeopleTitle: 'People',
   peoplePageBadLink: 'This comparison link is incomplete. Open your result and use "Compare with someone else".',
@@ -440,7 +436,6 @@ export const en: Strings = {
       answer: 'There are three versions: quick, with 36 questions, full, with 60, and extreme, with 240. All cover the same 12 axes; the more questions, the more precise the result tends to be.'
     }
   ],
-  howEyebrow: 'How it works',
   howTitle: 'How the 12 Axes political quiz works',
   howLead:
     'A simple, visual political ideology test: you respond to statements, 12 Axes calculates your percentages, and shows where you stand on the political spectrum in each dimension.',
@@ -458,11 +453,9 @@ export const en: Strings = {
       text: 'Receive your ideological profile, most compatible ideologies, closest country, related personality, and per-axis results.'
     }
   ],
-  axesGuideEyebrow: '12 axes',
   axesGuideTitle: 'What does each axis mean?',
   axesGuideLead:
     'The 12 Axes ideology test analyzes federalism, political representation, democracy, elections, immigration, international trade, religion in politics, economic policy, morality, and technology in separate dimensions.',
-  discoveryEyebrow: 'What you will discover',
   discoveryTitle: 'A complete portrait of your political convictions',
   discoveryLead:
     'More than left or right: your result shows who, where, and how strongly your ideas actually align.',
@@ -474,11 +467,9 @@ export const en: Strings = {
     { icon: 'profile', title: 'Your profile', text: 'A complete portrait of your convictions' },
     { icon: 'compatibility', title: 'Compatibility', text: 'How much you truly agree with your own ideology' }
   ],
-  exampleEyebrow: 'Real example',
   exampleTitle: "Here's what your result looks like",
   exampleCaption: 'Illustrative example using real data from the 12 Axes catalog.',
   exampleCta: 'I want to see my result',
-  spectrumEyebrow: 'Political spectrum',
   spectrumTitle: 'Discover your political spectrum',
   spectrumLead:
     'The result helps you visualize your political position between left, right, and center, and also identifies more radical, authoritarian, or libertarian forms that fall outside that axis, such as far-right, radical left, third position, libertarianism, and anarchism.',
@@ -489,11 +480,9 @@ export const en: Strings = {
   menuAria: 'Open menu',
   roseAria: 'Rose of the 12 axes',
   spectrumBarAria: 'Political spectrum bar with the eight categories',
-  versionsEyebrow: 'Versions',
   versionsTitle: 'Choose the depth',
   versionsLead:
     'Start with the quick quiz or go deeper for a more precise portrait of your ideological profile. All versions use the same 12 axes and return the result immediately.',
-  variantEyebrow: 'Choose the format',
   variantTitlePre: 'Do you want speed or ',
   variantTitleEm: 'precision?',
   backToStart: 'Back to start',
@@ -517,7 +506,6 @@ export const en: Strings = {
   errCalc: 'Could not calculate the result.',
   errImage: 'Could not generate the result image.',
   errHttp: (status) => `HTTP error ${status}`,
-  resultsEyebrow: 'Analysis complete',
   resultsH1Pre: 'Your ideological ',
   resultsH1Em: 'profile',
   resultsLead: (count) =>
@@ -719,7 +707,6 @@ export const en: Strings = {
   areasLockedCta: 'Unlock my full report',
   personalitiesDistantTitle: 'Furthest from you',
   ideologyDistantTitle: 'The ideology furthest from you',
-  phraseTitle: 'A sentence that describes you',
   aboutIdeology: (ideology) => `About ${ideology}`,
   knowMoreAbout: (name) => `Learn more about ${name}`,
   showLess: 'Show less',
@@ -773,7 +760,6 @@ export const en: Strings = {
   report: {
     fileName: '12axes-report',
     docLabel: 'Full report',
-    profileEyebrow: 'Your ideological profile',
     headerLabel: (ideology) => `Political profile report · ${ideology}`,
     kpiCountry: 'Closest country',
     kpiPersonality: 'Figure',
@@ -911,9 +897,7 @@ export const en: Strings = {
   shareNearbyCountries: 'NEARBY COUNTRIES',
   shareFooterCta: 'DISCOVER YOUR PROFILE',
   shareFooterUrl: '12AXES.VERCEL.APP',
-  supportEyebrow: 'Support the project',
   supportTitle: '',
-  ossEyebrow: 'Open source',
   ossTitle: 'An independent, transparent project',
   ossLead: "You don't have to take our word for it. The 12 Axes code is public: you can see how every answer is scored, how compatibility is calculated and where the profiles come from.",
   ossCards: [

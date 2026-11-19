@@ -24,13 +24,11 @@ export const ru: Strings = {
   crashBody: 'На странице произошла непредвиденная ошибка. Перезагрузите ее и попробуйте снова.',
   crashBodyWithProgress: 'На странице произошла непредвиденная ошибка, но ваши ответы сохранены. Перезагрузите страницу и выберите «Продолжить» с того места, где остановились.',
   crashReload: 'Перезагрузить страницу',
-  resumeEyebrow: 'Тест в процессе',
   resumeTitle: 'Продолжите с того места, где остановились',
   resumeBody: (answered, total) => `Вы ответили на ${answered} из ${total} вопросов. Ваши ответы сохранены в этом браузере.`,
   resumeContinue: 'Продолжить',
   resumeDiscard: 'Начать заново',
   resumeUnavailable: 'Не удалось продолжить предыдущий тест. Пожалуйста, начните новый.',
-  doneEyebrow: 'Тест пройден',
   doneTitle: 'Вы уже прошли тест',
   doneBody: (name) => `Ваш результат: ${name}. Он сохранен в этом браузере, просто откройте его снова.`,
   doneView: 'Посмотреть результаты',
@@ -79,7 +77,6 @@ export const ru: Strings = {
   denominationQuestion: 'К какой христианской традиции вы принадлежите?',
   denominationNames: { catholic: 'Католичество', protestant: 'Протестантство', orthodox: 'Православие' },
   restartQuiz: 'Начать тест заново',
-  heroEyebrow: 'Политическое открытие',
   h1Pre: 'Знаете ли вы свою ',
   h1Em: 'политическую идеологию',
   h1Post: '?',
@@ -187,8 +184,7 @@ export const ru: Strings = {
   compareNoFarLine: (name) => `Ни одна ось не далека от профиля «${name}».`,
   compareValues: (pole, you, them, name) => `${pole}: вы ${you}% · «${name}» ${them}%.`,
   compareOptionAria: (name, type) => `${name}, ${type}`,
-  comparePageDocTitle: 'Сравнение профилей — 12 Axes',
-  comparePageEyebrow: 'Сравнение профилей',
+  comparePageDocTitle: 'Сравнение профилей | 12 Axes',
   comparePageTitle: 'Бок о бок, по 12 осям',
   comparePageProfilesTitle: 'Профили',
   comparePageNeedMore: 'Выберите еще один профиль для сравнения.',
@@ -275,7 +271,7 @@ export const ru: Strings = {
   peopleNavPersonalities: 'Личности',
   peopleNavValues: 'Ценности',
   peopleNavSharedValues: 'Общее',
-  peoplePageDocTitle: 'Сравнение с другим человеком — 12 Axes',
+  peoplePageDocTitle: 'Сравнение с другим человеком | 12 Axes',
   peoplePageTitle: 'Вы двое, по 12 осям',
   peoplePagePeopleTitle: 'Люди',
   peoplePageBadLink: 'Эта ссылка на сравнение неполная. Откройте свой результат и воспользуйтесь функцией «Сравнить с другим человеком».',
@@ -451,7 +447,6 @@ export const ru: Strings = {
       answer: 'Есть три версии: быстрая — 36 вопросов, полная — 60 и экстремальная — 240. Все охватывают одни и те же 12 осей; чем больше вопросов, тем точнее, как правило, результат.'
     }
   ],
-  howEyebrow: 'Как это работает',
   howTitle: 'Как работает политический тест 12 Axes',
   howLead:
     'Простой и наглядный тест на политическую идеологию: вы отвечаете на утверждения, 12 Axes вычисляет ваши проценты и показывает, где вы стоите на политическом спектре по каждому измерению.',
@@ -469,11 +464,9 @@ export const ru: Strings = {
       text: 'Получите свой идеологический профиль, наиболее совместимые идеологии, ближайшую страну, родственную личность и результаты по каждой оси.'
     }
   ],
-  axesGuideEyebrow: '12 осей',
   axesGuideTitle: 'Что означает каждая ось?',
   axesGuideLead:
     'Идеологический тест 12 Axes анализирует федерализм, политическое представительство, демократию, выборы, иммиграцию, международную торговлю, религию в политике, экономическую политику, мораль и технологии по отдельным измерениям.',
-  discoveryEyebrow: 'Что вы узнаете',
   discoveryTitle: 'Полный портрет ваших политических убеждений',
   discoveryLead:
     'Больше, чем «левый» или «правый»: ваш результат показывает, с кем, где и насколько сильно на самом деле совпадают ваши идеи.',
@@ -485,11 +478,9 @@ export const ru: Strings = {
     { icon: 'profile', title: 'Ваш профиль', text: 'Полный портрет ваших убеждений' },
     { icon: 'compatibility', title: 'Совместимость', text: 'Насколько вы на самом деле согласны со своей идеологией' }
   ],
-  exampleEyebrow: 'Реальный пример',
   exampleTitle: 'Вот как выглядит ваш результат',
   exampleCaption: 'Иллюстративный пример на реальных данных каталога 12 Axes.',
   exampleCta: 'Хочу увидеть свой результат',
-  spectrumEyebrow: 'Политический спектр',
   spectrumTitle: 'Узнайте свой политический спектр',
   spectrumLead:
     'Результат помогает увидеть вашу политическую позицию между левыми, правыми и центром, а также выявляет более радикальные, авторитарные или либертарные формы, выходящие за рамки этой оси, такие как крайне правые, радикальные левые, третья позиция, либертарианство и анархизм.',
@@ -500,11 +491,9 @@ export const ru: Strings = {
   menuAria: 'Открыть меню',
   roseAria: 'Роза 12 осей',
   spectrumBarAria: 'Полоса политического спектра с восемью категориями',
-  versionsEyebrow: 'Версии',
   versionsTitle: 'Выберите глубину',
   versionsLead:
     'Начните с быстрого теста или углубитесь для более точного портрета вашего идеологического профиля. Все версии используют одни и те же 12 осей и сразу возвращают результат.',
-  variantEyebrow: 'Выберите формат',
   variantTitlePre: 'Вам нужна скорость или ',
   variantTitleEm: 'точность?',
   backToStart: 'Назад в начало',
@@ -528,7 +517,6 @@ export const ru: Strings = {
   errCalc: 'Не удалось рассчитать результат.',
   errImage: 'Не удалось создать изображение результата.',
   errHttp: (status) => `Ошибка HTTP ${status}`,
-  resultsEyebrow: 'Анализ завершен',
   resultsH1Pre: 'Ваш идеологический ',
   resultsH1Em: 'профиль',
   resultsLead: (count) =>
@@ -730,7 +718,6 @@ export const ru: Strings = {
   areasLockedCta: 'Открыть мой полный отчет',
   personalitiesDistantTitle: 'Дальше всего от вас',
   ideologyDistantTitle: 'Идеология, наиболее далекая от вас',
-  phraseTitle: 'Фраза, которая вас описывает',
   aboutIdeology: (ideology) => `Об идеологии: ${ideology}`,
   knowMoreAbout: (name) => `Подробнее: ${name}`,
   showLess: 'Свернуть',
@@ -784,7 +771,6 @@ export const ru: Strings = {
   report: {
     fileName: '12axes-report',
     docLabel: 'Полный отчет',
-    profileEyebrow: 'Ваш идеологический профиль',
     headerLabel: (ideology) => `Отчет о политическом профиле · ${ideology}`,
     kpiCountry: 'Ближайшая страна',
     kpiPersonality: 'Фигура',
@@ -922,9 +908,7 @@ export const ru: Strings = {
   shareNearbyCountries: 'БЛИЖАЙШИЕ СТРАНЫ',
   shareFooterCta: 'УЗНАЙТЕ СВОЙ ПРОФИЛЬ',
   shareFooterUrl: '12AXES.VERCEL.APP',
-  supportEyebrow: 'Поддержите проект',
   supportTitle: '',
-  ossEyebrow: 'Открытый код',
   ossTitle: 'Независимый и прозрачный проект',
   ossLead: 'Вам не нужно верить нам на слово. Код 12 Axes открыт: вы можете увидеть, как оценивается каждый ответ, как рассчитывается совместимость и откуда берутся профили.',
   ossCards: [

@@ -73,7 +73,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
       <section className="e-hero" id="inicio">
         <div className="e-wrap">
           <div>
-            <p className="e-eyebrow">{t.heroEyebrow}</p>
             <h1>
               {t.h1Pre}
               <span className="e-accent">
@@ -117,7 +116,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
             <div className="e-wrap" data-reveal>
               <div className="e-split-head">
                 <div>
-                  <p className="e-eyebrow">{t.discoveryEyebrow}</p>
                   <h2>{t.discoveryTitle}</h2>
                 </div>
                 <p className="e-lead">{t.discoveryLead}</p>
@@ -141,7 +139,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
           <section className="e-sec e-example" id="exemplo">
             <div className="e-wrap" data-reveal>
               <div className="e-sec-head">
-                <p className="e-eyebrow">{t.exampleEyebrow}</p>
                 <h2>{t.exampleTitle}</h2>
               </div>
               {example && <ExampleGrid example={example} />}
@@ -157,7 +154,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
           <section className="e-sec e-dark" id="como-funciona">
             <div className="e-wrap" data-reveal>
               <div className="e-sec-head">
-                <p className="e-eyebrow">{t.howEyebrow}</p>
                 <h2>{t.howTitle}</h2>
                 <p className="e-lead">{t.howLead}</p>
               </div>
@@ -177,7 +173,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
             <div className="e-wrap" data-reveal>
               <div className="e-split-head">
                 <div>
-                  <p className="e-eyebrow">{t.axesGuideEyebrow}</p>
                   <h2>{t.axesGuideTitle}</h2>
                 </div>
                 <p className="e-lead">{t.axesGuideLead}</p>
@@ -206,7 +201,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
           <section className="e-sec e-spectrum" id="espectro-politico">
             <div className="e-wrap" data-reveal>
               <div className="e-sec-head">
-                <p className="e-eyebrow">{t.spectrumEyebrow}</p>
                 <h2>{t.spectrumTitle}</h2>
                 <p className="e-lead">{t.spectrumLead}</p>
               </div>
@@ -230,7 +224,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
           <section className="e-sec e-faq" id="faq">
             <div className="e-wrap" data-reveal>
               <div>
-                <p className="e-eyebrow">{t.navFaq}</p>
                 <h2>{t.faqTitle}</h2>
                 <p className="e-lead">{t.faqLead}</p>
               </div>
@@ -251,7 +244,6 @@ export function HomeScreen({ example, examples, axes, showBelowFold, onOpenChoos
           <section className="e-sec e-dark" id="versoes">
             <div className="e-wrap" data-reveal>
               <div className="e-sec-head">
-                <p className="e-eyebrow">{t.versionsEyebrow}</p>
                 <h2>{t.versionsTitle}</h2>
                 <p className="e-lead">{t.versionsLead}</p>
               </div>

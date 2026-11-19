@@ -187,7 +187,6 @@ export function ComparePage() {
         <div className="e-wrap e-res-grid">
           <div className="e-res-main">
             <header className="e-res-head">
-              <p className="e-eyebrow">{t.comparePageEyebrow}</p>
               <h1>{t.comparePageTitle}</h1>
               {detail && shareActions('e-actions e-ppl-share')}
             </header>
@@ -323,7 +322,6 @@ export function CompareNav({ data, middle }: { data: CompareProfiles | null; mid
       <p>{t.navOnThisPage}</p>
       {sections.map(({ id, label }, index) => (
         <a key={id} href={`#${id}`} className={active === id ? 'e-on' : undefined}>
-          <span>{String(index + 1).padStart(2, '0')}</span>
           {label()}
         </a>
       ))}

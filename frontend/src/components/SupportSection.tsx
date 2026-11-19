@@ -55,7 +55,6 @@ export function SupportSection({ variant }: SupportSectionProps) {
 
   const head = (
     <div>
-      {variant === 'home' && <p className="e-eyebrow">{t.supportEyebrow}</p>}
       <h2 id="apoie-titulo">
         {t.supportTitle}
         <span className="e-accent">{t.supportTitleEm}</span>

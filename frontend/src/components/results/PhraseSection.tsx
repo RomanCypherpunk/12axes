@@ -16,7 +16,6 @@ export function PhraseSection({ match }: { match: IdeologyMatch }) {
         <figure className="e-phrase">
           <span className="e-q" aria-hidden="true">“</span>
           <div>
-            <p className="e-eyebrow">{t.phraseTitle}</p>
             <blockquote>{match.phrase}</blockquote>
           </div>
         </figure>

@@ -109,7 +109,6 @@ export function ResultsNav({ hasElections = false, hasBooks = true, hasCompass =
           <div key={id} className="e-toc-row">
             {index === firstPremium && <p className="e-toc-group">{t.resultsNavPremiumGroup}</p>}
             <a href={`#${id}`} className={[active === id ? 'e-on' : '', isLocked ? 'e-toc-locked' : ''].filter(Boolean).join(' ') || undefined} aria-current={active === id ? 'location' : undefined}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               {label()}
               {isLocked && <LockIcon className="e-toc-lock" />}
             </a>
