@@ -1,12 +1,13 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { VALUE_COINS } from '../components/results/valueCoins';
-import { COMPASS_GRID_CELLS, compassClamp, compassView, socialStripCells } from '../components/results/PoliticalCompassSection';
+import { COMPASS_COINS } from '../components/results/compassCoins';
+import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../components/results/PoliticalCompassSection';
 import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
 import { religiousPoleIcon } from '../data/religionIcons';
 import { LANG, t } from '../i18n';
 import type { Axis, AxisResult, PoliticalValue, QuizResult } from '../types/quiz';
-import { ideologyColorByKey, resolveIdeologyColor } from './ideologyColors';
+import { resolveIdeologyColor } from './ideologyColors';
 import { computeCompass, type CompassPosition } from './politicalCompass';
 import { valueCoinMonogram } from './politicalValues';
 import type { Religion } from './religion';
@@ -145,78 +146,83 @@ function compassChart(position: CompassPosition, markerColor: string): HTMLEleme
   return chart;
 }
 
-/** O "Extrema direita com valores sociais Fortemente tradicionalistas": a categoria em cor, o resto em cinza e o grifo na cor da barra. */
-function sentence(view: ReturnType<typeof compassView>): HTMLElement {
-  const spectrumKey = view.centerSideKey ?? view.spectrum.key;
-  const spectrumText = view.centerSideKey ? view.centerLabel : t.compassSpectrumLabels[view.spectrum.key];
-  const social = t.compassSocialLabels[view.social];
-  const parts = [spectrumText, t.compassWith, social, t.compassSocialValues].filter(Boolean);
-  // O texto inteiro cabe em até 5 linhas da coluna; a fonte diminui nos idiomas e nas combinações mais longas.
-  const size = fitBlock(parts.join(' '), {
-    weight: 700,
+const COMPASS_TILE_GAP = 16;
+const COMPASS_TILE_PAD_X = 24;
+const COMPASS_COIN = 84;
+const COMPASS_COIN_GAP = 20;
+const COMPASS_TEXT_WIDTH = READ_WIDTH - COMPASS_TILE_PAD_X * 2 - COMPASS_COIN - COMPASS_COIN_GAP;
+
+/** Um dos três retângulos da bússola (Politicamente, Economicamente, Socialmente): moeda à esquerda, rótulo e nome à direita. */
+function compassTile(coinKey: string, label: string, name: string, base: string, bg: string): HTMLElement {
+  const tile = el('div', {
+    minWidth: '0',
+    display: 'flex',
+    alignItems: 'center',
+    gap: `${COMPASS_COIN_GAP}px`,
+    padding: `0 ${COMPASS_TILE_PAD_X}px`,
+    borderRadius: '28px',
+    background: bg
+  });
+  const circle = el('div', {
+    flex: '0 0 auto',
+    display: 'grid',
+    placeItems: 'center',
+    width: `${COMPASS_COIN}px`,
+    height: `${COMPASS_COIN}px`,
+    borderRadius: '50%',
+    background: base
+  });
+  const coin = COMPASS_COINS[coinKey];
+  if (coin?.glyph) {
+    circle.innerHTML = renderToStaticMarkup(
+      createElement('svg', { width: 46, height: 46, fill: bg, viewBox: coin.viewBox, style: { display: 'block' } }, coin.glyph)
+    );
+  } else {
+    circle.append(el('span', { fontFamily: SHARE_FONT_BODY, fontWeight: '700', fontSize: '30px', color: bg }, valueCoinMonogram(name)));
+  }
+  const upper = label.toLocaleUpperCase(LANG);
+  const labelSize = fitFontSize(upper, 600, SHARE_FONT_BODY, COMPASS_TEXT_WIDTH * SAFETY, 1, 19, 11, 0.16);
+  const nameSize = fitBlock(name, {
+    weight: 600,
     family: SHARE_FONT_DISPLAY,
-    width: READ_WIDTH * SAFETY,
-    height: 5 * 36 * 1.25,
+    width: COMPASS_TEXT_WIDTH * SAFETY,
+    height: 2 * 26 * 1.25,
     lineHeight: 1.25,
-    max: 36,
-    min: 20,
-    tracking: -0.03
+    max: 28,
+    min: 14,
+    tracking: -0.0192
   });
-  const p = el('div', {
-    fontFamily: SHARE_FONT_DISPLAY,
-    fontWeight: '700',
-    fontSize: `${size}px`,
-    lineHeight: '1.25',
-    letterSpacing: '-0.03em',
-    color: '#5A5D63',
-    overflowWrap: 'break-word'
-  });
-  const mark = el('span', { background: view.socialColor, color: '#FFFFFF', padding: '0.02em 0.2em', borderRadius: '8px' }, social);
-  mark.style.setProperty('-webkit-box-decoration-break', 'clone');
-  mark.style.setProperty('box-decoration-break', 'clone');
-  p.append(
-    el('span', { color: ideologyColorByKey(spectrumKey).base }, spectrumText),
-    document.createTextNode(` ${t.compassWith} `),
-    mark
+  const text = el('div', { minWidth: '0', flex: '1 1 0' });
+  text.append(
+    el('div', { fontFamily: SHARE_FONT_BODY, fontWeight: '600', fontSize: `${labelSize}px`, letterSpacing: '0.16em', lineHeight: '1.2', whiteSpace: 'nowrap', color: base }, upper),
+    el('div', {
+      marginTop: '6px',
+      fontFamily: SHARE_FONT_DISPLAY,
+      fontWeight: '600',
+      fontSize: `${nameSize}px`,
+      lineHeight: '1.25',
+      letterSpacing: '-0.0192em',
+      overflowWrap: 'break-word',
+      color: base
+    }, name)
   );
-  if (t.compassSocialValues) p.append(document.createTextNode(` ${t.compassSocialValues}`));
-  return p;
+  tile.append(circle, text);
+  return tile;
 }
 
-/** A barra progressista × tradicionalista: nove quadrados em tom pastel e o "X" na cor cheia. */
-function socialStrip(view: ReturnType<typeof compassView>, traditional: number): HTMLElement {
-  const wrap = el('div', { marginTop: '34px' });
-  // Os dois rótulos dividem a largura da coluna numa linha só; a fonte diminui se não couberem.
-  const labelsSize = fitFontSize(
-    `${t.compassProgressive.toLocaleUpperCase(LANG)}   ${t.compassTraditionalist.toLocaleUpperCase(LANG)}`,
-    600,
-    SHARE_FONT_BODY,
-    READ_WIDTH * SAFETY,
-    1,
-    17,
-    10,
-    0.1
-  );
-  const labels = el('div', {
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: '8px',
-    marginBottom: '10px',
-    fontFamily: SHARE_FONT_BODY,
-    fontWeight: '600',
-    fontSize: `${labelsSize}px`,
-    letterSpacing: '0.1em',
-    textTransform: 'uppercase',
-    whiteSpace: 'nowrap',
-    color: INK
+/** Os três retângulos empilhados, esticados até a altura da grade da bússola. */
+function compassTiles(view: ReturnType<typeof compassView>): HTMLElement {
+  const wrap = el('div', {
+    display: 'grid',
+    gridTemplateRows: 'repeat(3, minmax(0, 1fr))',
+    gap: `${COMPASS_TILE_GAP}px`,
+    alignSelf: 'stretch'
   });
-  labels.append(el('span', {}, t.compassProgressive), el('span', {}, t.compassTraditionalist));
-  const strip = el('div', { position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(9, 1fr)', gap: '3px' });
-  view.stripCells.forEach((color) => strip.append(el('span', { height: '46px', borderRadius: '4px', background: color })));
-  strip.append(
-    marker({ left: `${compassClamp(traditional)}%`, top: '50%', width: `${READ_WIDTH / 9 - 3}px`, height: '100%' }, view.socialColor, '6px')
+  wrap.append(
+    compassTile(`political:${view.spectrum.key}`, t.dimensionLabels.political, t.compassSpectrumLabels[view.spectrum.key], view.spectrum.base, view.spectrum.bg),
+    compassTile(`economic:${view.economic}`, t.dimensionLabels.economic, t.compassEconomicLabels[view.economic], view.economicColor, view.economicBg),
+    compassTile(`social:${view.social}`, t.dimensionLabels.social, t.compassSocialLabels[view.social], view.socialBase, view.socialBg)
   );
-  wrap.append(labels, strip);
   return wrap;
 }
 
@@ -224,8 +230,8 @@ function compassBox(position: CompassPosition, color: Palette, category: string,
   const view = compassView(position, category, moralAxis);
   const wrap = box({ padding: `34px ${BOX_PADDING_X}px` }, true);
   const body = el('div', { display: 'flex', alignItems: 'center', gap: `${CHART_GAP}px`, marginTop: '30px' });
-  const read = el('div', { flex: '1 1 0', minWidth: '0' });
-  read.append(sentence(view), socialStrip(view, position.traditional));
+  const read = compassTiles(view);
+  read.style.flex = '1 1 0';
   body.append(compassChart(position, view.markerColor ?? color.base), read);
   wrap.append(boxLabel(t.compassTitle, INK, BOX_INNER), body);
   return wrap;

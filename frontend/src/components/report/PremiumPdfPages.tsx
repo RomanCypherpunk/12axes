@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
+import { Fragment, type CSSProperties, type ReactNode } from 'react';
 import type { Axis, AxisResult, PremiumReport } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
 import { catStyle, resolveIdeologyColor } from '../../utils/ideologyColors';
@@ -51,12 +51,14 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
   const personalityPhoto = resolvePersonalityImageSrc(premium.personalitiesByArea.find((m) => m.personalityId === personality?.profileId)?.imagePath ?? '');
   const countryFlag = resolveCountryFlagSrc(premium.topCountries.find((c) => c.countryId === country?.profileId)?.flagPath ?? '');
   const analysis = premium.axisAnalysis.filter((item) => axes.some((axis) => axis.id === item.axisId));
-  const half = Math.ceil(analysis.length / 2);
+  // Cada eixo traz o texto, os prós e os contras: três por página cabem na folha mesmo nos idiomas de texto mais longo.
+  const AXES_PER_PAGE = 3;
+  const axisPages = Math.ceil(analysis.length / AXES_PER_PAGE);
   const bestEra = bestTimelineEra(premium.timeline);
   const topCountry = premium.topCountries[0];
 
   const axisPage = (items: typeof analysis, part: number) => (
-    <Page topName={topName} title={P.axisTitle} sub={`${part}/2`}>
+    <Page topName={topName} title={P.axisTitle} sub={`${part}/${axisPages}`}>
       <ul className="rx-axes">
         {items.map((item) => {
           const result = axisResults.get(item.axisId);
@@ -103,8 +105,9 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
 
   return (
     <>
-      {axisPage(analysis.slice(0, half), 1)}
-      {axisPage(analysis.slice(half), 2)}
+      {Array.from({ length: axisPages }, (_, index) => (
+        <Fragment key={index}>{axisPage(analysis.slice(index * AXES_PER_PAGE, (index + 1) * AXES_PER_PAGE), index + 1)}</Fragment>
+      ))}
 
       <Page topName={topName} title={P.disagreeTitle}>
         <div className="rx-dis">
@@ -190,30 +193,31 @@ export function PremiumPdfPages({ premium, axes, axisResults, topName, closing }
         </div>
       </Page>
 
-      {roles && (
-        <Page topName={topName} title={P.governmentRolesTitle} sub={P.governmentRolesLead}>
-          <ol className="rx-roles">
-            {ORDER.map((key) => {
-              const seat = premium.idealGovernment.find((candidate) => candidate.seatKey === key);
-              const role = seat && buildSeatRole(roles[key], axes, holderPositions(seat.holder.vector, axisResults), seat.holder.name, P.roleSubject, roleAxes?.get(key));
-              if (!seat || !role) return null;
-              return (
-                <li key={key}>
-                  <p className="rx-roles-h">
-                    <strong>{P.seats[key]}</strong> · {seat.holder.name}
-                  </p>
-                  <p>{role.intro}</p>
-                  {role.lines.map((line) => (
-                    <p key={line.axisId}>
-                      {P.roleAxis[line.axisId]} {line.text}
+      {roles &&
+        [ORDER.slice(0, 5), ORDER.slice(5)].map((keys, pageIndex) => (
+          <Page key={pageIndex} topName={topName} title={P.governmentRolesTitle} sub={pageIndex === 0 ? P.governmentRolesLead : '2/2'}>
+            <ol className="rx-roles">
+              {keys.map((key) => {
+                const seat = premium.idealGovernment.find((candidate) => candidate.seatKey === key);
+                const role = seat && buildSeatRole(roles[key], axes, holderPositions(seat.holder.vector, axisResults), seat.holder.name, P.roleSubject, roleAxes?.get(key));
+                if (!seat || !role) return null;
+                return (
+                  <li key={key}>
+                    <p className="rx-roles-h">
+                      <strong>{P.seats[key]}</strong> · {seat.holder.name}
                     </p>
-                  ))}
-                </li>
-              );
-            })}
-          </ol>
-        </Page>
-      )}
+                    <p>{role.intro}</p>
+                    {role.lines.map((line) => (
+                      <p key={line.axisId}>
+                        {P.roleAxis[line.axisId]} {line.text}
+                      </p>
+                    ))}
+                  </li>
+                );
+              })}
+            </ol>
+          </Page>
+        ))}
 
       <Page topName={topName} title={P.timelineTitle}>
         <ol className="rx-eras">

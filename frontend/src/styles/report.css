@@ -222,13 +222,13 @@
 .rp .cmp-x{left:0;right:0;top:50%;height:1px}.rp .cmp-y{top:0;bottom:0;left:50%;width:1px}
 .rp .cmp-mark{position:absolute;z-index:2;width:calc(100%/9 - 1px);aspect-ratio:1;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:2px;color:#fff}
 .rp .cmp-mark svg{width:60%;height:60%;stroke-width:3}
-.rp .cmp-sentence{font-family:var(--display);font-size:17px;font-weight:700;line-height:1.3;letter-spacing:-.02em}
-.rp .cmp-conn{color:var(--suave)}
-.rp .cmp-sentence mark{padding:0 .2em;border-radius:3px;color:#fff;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.rp .cmp-bar-lbls{display:flex;justify-content:space-between;margin:6mm 0 2mm;font-size:7.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-.rp .cmp-strip{position:relative;display:grid;grid-template-columns:repeat(9,1fr);gap:1px}
-.rp .cmp-strip>span:not(.cmp-mark){height:8mm;border-radius:1px}
-.rp .cmp-strip .cmp-mark{aspect-ratio:auto;height:100%}
+.rp .cmp-tiles{list-style:none;margin:0;padding:0;display:grid;gap:2.5mm}
+.rp .cmp-tiles li{display:flex;align-items:center;gap:3.5mm;padding:3mm 4mm;border-radius:4mm;background:var(--cat-bg)}
+.rp .cmp-tiles li>div{min-width:0}
+.rp .cmp-tiles .dim{display:block}
+.rp .cmp-tiles b{display:block;font-size:11px;line-height:1.25;color:var(--cat)}
+.rp .cmp-tiles svg{display:block;flex:none}
+.rp .el-note{font-size:8.5px;color:var(--suave);margin-top:3mm}
 
 /* seus valores: usa os cartões .dims/.dc dos perfis (3x2); só a moeda precisa de margem */
 .rp .dc .v-wrap svg{display:block}
@@ -399,8 +399,9 @@
 .rp .rx-rank .rk{padding:3.1mm 0}
 .rp .rx-pin.rx-you{width:auto;height:auto;border-radius:99px;overflow:visible;padding:1mm 3.2mm;white-space:nowrap}
 
-/* Páginas do relatório pago: exatamente uma folha A4 (sem estourar para uma página em branco) e eixos mais compactos */
-.rp .rx-page{height:296mm;overflow:hidden;break-inside:avoid;page-break-inside:avoid}
+/* Páginas do relatório pago: no mínimo uma folha A4 (sem estourar para uma página em branco); se o texto for maior, continua na folha seguinte em vez de ser cortado. Eixos mais compactos */
+.rp .rx-page{min-height:296mm;height:auto;overflow:visible;break-inside:auto;page-break-inside:auto}
+.rp .rx-page .rp-sec{break-inside:auto;page-break-inside:auto}
 .rp .rx-ax{padding:3mm 0 2.6mm}
 .rp .rx-track{margin:7mm 7mm 3.4mm}
 .rp .rx-t{font-size:10px;line-height:1.48;margin-top:2mm}

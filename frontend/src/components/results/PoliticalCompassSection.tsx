@@ -2,8 +2,11 @@ import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
-import { centerSide, compassNoteHint, compassRegion, socialLevel, type CompassPosition } from '../../utils/politicalCompass';
+import { compassRegion, economicLevel, socialLevel, type CompassPosition, type EconomicKey, type SocialKey } from '../../utils/politicalCompass';
+import { COMPASS_COINS } from './compassCoins';
 import { clickableProps, InfoSheet } from './InfoSheet';
+import { DimRow } from './parts';
+import { ValueCoin } from './ValueCoin';
 
 // Tom de cada categoria na grade: o matiz vem da cor base da identidade; saturação e luminosidade
 // (0-100) ficam por conta de cada uma, para o resultado ser claro e saturado como a bússola clássica.
@@ -25,6 +28,18 @@ const WHITE = [255, 255, 255] as const;
 // Meio da barra: moderados ficam num cinza neutro, entre o rosa e o marrom.
 const NEUTRAL = [123, 127, 134] as const;
 const SIZE = 9;
+const BLACK = [0, 0, 0] as const;
+// Ponto da escala rosa, cinza e marrom de cada nível social (0 é a ponta progressista, 1 a tradicionalista).
+const SOCIAL_AMOUNT: Record<SocialKey, number> = { veryProgressive: 0, progressive: 0.25, moderate: 0.5, traditional: 0.75, veryTraditional: 1 };
+// Cor do retângulo econômico, na lógica do miolo da grade (verde, cinza, azul): as pontas são a Esquerda e a Direita,
+// o meio é o Centro, e Centro-esquerda e Centro-direita ficam a meio caminho entre o Centro e a ponta.
+const ECONOMIC_BLEND: Record<EconomicKey, [IdeologyColorKey, IdeologyColorKey, number]> = {
+  left: ['esquerda', 'esquerda', 0],
+  centerLeft: ['esquerda', 'centro', 0.5],
+  center: ['centro', 'centro', 0],
+  centerRight: ['centro', 'direita', 0.5],
+  right: ['direita', 'direita', 0]
+};
 
 function mix(a: readonly number[], b: readonly number[], amount: number): number[] {
   return a.map((value, index) => value + (b[index] - value) * amount);
@@ -157,24 +172,27 @@ interface PoliticalCompassSectionProps {
 export function compassView(position: CompassPosition, category: string, moralAxis?: Axis) {
   const { traditional } = position;
   const spectrum = resolveIdeologyColor(category);
-  // Só quando a ideologia mais compatível e a região da bússola são Centro e Esquerda (ou Centro e Direita) a frase
-  // mostra a posição intermediária, centro-esquerda ou centro-direita; nos demais casos vale a categoria da ideologia.
   const compassKey = compassRegion(position);
-  const centerSideKey = centerSide(spectrum.key, compassKey);
-  const centerLabel = centerSideKey === 'esquerda' ? t.compassCenterLeft : t.compassCenterRight;
   // "X" da grade: quando a ideologia e a região da bússola divergem e uma delas é o Centro, a cor é a mistura
   // da base do Centro com a base da outra; nos demais casos vale a cor da categoria da página (--cat).
   const markerColor = centerMixColor(spectrum.key, compassKey);
-  const social = socialLevel(traditional);
   const progressive = hexToRgb(moralAxis?.leftColor ?? FALLBACK_PROGRESSIVE);
   const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
-  const stripCells = socialStripCells(moralAxis);
-  // "X" e grifo na cor cheia da mesma escala da barra.
+  // Cor cheia da escala progressista/tradicionalista: contorna o perfil em /compare.
   const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
-  // Nota sob a bússola: só quando a categoria da ideologia e a região da grade divergem sem ser centro-esquerda/direita.
-  const noteHint = compassNoteHint(spectrum.key, compassKey);
-  const region = ideologyColorByKey(compassKey);
-  return { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor, noteHint, region };
+  // Posição econômica (eixo esquerda-direita da grade), separada da categoria da ideologia (o espectro político).
+  const economic = economicLevel(position.right);
+  const [from, to, amount] = ECONOMIC_BLEND[economic];
+  const blend = (pick: 'base' | 'bg') =>
+    rgb(mix(hexToRgb(ideologyColorByKey(from)[pick]), hexToRgb(ideologyColorByKey(to)[pick]), amount));
+  const economicColor = blend('base');
+  const economicBg = blend('bg');
+  // Retângulo social: o tom do nível na mesma escala da barra antiga, escurecido no texto e clareado no fundo.
+  const social = socialLevel(traditional);
+  const socialTone = threeStop(progressive, NEUTRAL, traditionalist, SOCIAL_AMOUNT[social]);
+  const socialBase = rgb(mix(socialTone, BLACK, 0.3));
+  const socialBg = rgb(mix(socialTone, WHITE, 0.82));
+  return { spectrum, markerColor, socialColor, economic, economicColor, economicBg, social, socialBase, socialBg };
 }
 
 /** Barra progressista/tradicionalista em tom pastel (rosa, cinza, marrom), também usada em /compare. */
@@ -258,76 +276,85 @@ export function SocialStrip({ cells, markers }: { cells: string[]; markers: Comp
   );
 }
 
+interface CompassTile {
+  key: string;
+  label: string;
+  name: string;
+  description: string;
+  style: CSSProperties;
+}
+
 export function PoliticalCompassSection({ position, category, moralAxis, footer }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor, noteHint, region } = compassView(
-    position,
-    category,
-    moralAxis
-  );
+  const [selectedTile, setSelectedTile] = useState<CompassTile | null>(null);
+  const { spectrum, markerColor, economic, economicColor, economicBg, social, socialBase, socialBg } = compassView(position, category, moralAxis);
+  const tiles: CompassTile[] = [
+    {
+      key: `political:${spectrum.key}`,
+      label: t.dimensionLabels.political,
+      name: t.compassSpectrumLabels[spectrum.key],
+      description: t.compassSpectrumDescriptions[spectrum.key],
+      style: { '--cat': spectrum.base, '--cat-bg': spectrum.bg } as CSSProperties
+    },
+    {
+      key: `economic:${economic}`,
+      label: t.dimensionLabels.economic,
+      name: t.compassEconomicLabels[economic],
+      description: t.compassEconomicDescriptions[economic],
+      style: { '--cat': economicColor, '--cat-bg': economicBg } as CSSProperties
+    },
+    {
+      key: `social:${social}`,
+      label: t.dimensionLabels.social,
+      name: t.compassSocialLabels[social],
+      description: t.compassSocialDescriptions[social],
+      style: { '--cat': socialBase, '--cat-bg': socialBg } as CSSProperties
+    }
+  ];
 
   return (
-    <section
-      {...{ ...clickableProps(t.compassInfo.aria, () => setIsInfoOpen(true)), className: 'e-panel e-compass e-clickable' }}
-      id="bussola"
-      data-reveal
-    >
+    <section className="e-panel e-compass" id="bussola" data-reveal>
       <h2>{t.compassTitle}</h2>
 
       <div className="e-compass-body">
-        <CompassChart
-          ariaLabel={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
-          markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor }]}
-        />
+        <div {...{ ...clickableProps(t.compassInfo.aria, () => setIsInfoOpen(true)), className: 'e-compass-hit e-clickable' }}>
+          <CompassChart
+            ariaLabel={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
+            markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor }]}
+          />
+        </div>
 
         <div className="e-compass-read">
-          <p className="e-compass-sentence">
-            {centerSideKey ? (
-              <>
-                <span className="e-compass-spectrum" style={{ color: ideologyColorByKey(centerSideKey).base }}>
-                  {centerLabel}
-                </span>{' '}
-                <span className="e-compass-conn">{t.compassWith}</span>{' '}
-              </>
-            ) : (
-              <>
-                <span className="e-compass-spectrum" style={{ color: spectrum.base }}>
-                  {t.compassSpectrumLabels[spectrum.key]}
-                </span>{' '}
-                <span className="e-compass-conn">{t.compassWith}</span>{' '}
-              </>
-            )}
-            <mark className="e-compass-mark" style={{ background: socialColor }}>
-              {t.compassSocialLabels[social]}
-            </mark>
-            {t.compassSocialValues && (
-              <>
-                {' '}
-                <span className="e-compass-conn">{t.compassSocialValues}</span>
-              </>
-            )}
-          </p>
-
-          <SocialStrip cells={stripCells} markers={[{ key: 'you', left: traditional, color: socialColor }]} />
+          <ul className="e-dims e-values-grid e-compass-tiles">
+            {tiles.map((tile) => (
+              <DimRow
+                key={tile.key}
+                style={tile.style}
+                open={{ label: t.valueInfoAria(tile.name), onOpen: () => setSelectedTile(tile) }}
+                visual={<ValueCoin valueId="" name={tile.name} size={48} coin={COMPASS_COINS[tile.key]} />}
+                label={tile.label}
+                name={tile.name}
+              >
+                {null}
+              </DimRow>
+            ))}
+          </ul>
         </div>
       </div>
 
-      {noteHint && (
-        <aside
-          className="e-compass-note"
-          role="note"
-          style={{ '--note-bg': spectrum.bg, '--note-ink': spectrum.base, '--dot': region.base } as CSSProperties}
-        >
-          <strong>
-            <i aria-hidden="true" />
-            {t.compassNote.label} {t.compassSpectrumLabels[region.key]}
-          </strong>
-          <span>{t.compassNote.hints[noteHint]}</span>
-        </aside>
-      )}
-
       {footer}
+
+      {selectedTile && (
+        <InfoSheet titleId="compass-tile-title" style={selectedTile.style} onClose={() => setSelectedTile(null)}>
+          <div className="e-value-sheet">
+            <ValueCoin valueId="" name={selectedTile.name} size={120} coin={COMPASS_COINS[selectedTile.key]} />
+            <span className="e-dim">{selectedTile.label}</span>
+            <h3 id="compass-tile-title">{selectedTile.name}</h3>
+            <p>{selectedTile.description}</p>
+          </div>
+        </InfoSheet>
+      )}
 
       {isInfoOpen && (
         <InfoSheet titleId="compass-info-title" className="e-compass-sheet" onClose={() => setIsInfoOpen(false)}>

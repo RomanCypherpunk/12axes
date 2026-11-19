@@ -2,7 +2,7 @@ import { FILLED_POLE_ICONS } from '../../data/filledPoleIcons';
 import { religiousPoleIcon } from '../../data/religionIcons';
 import type { Religion } from '../../utils/religion';
 import { valueCoinMonogram } from '../../utils/politicalValues';
-import { VALUE_COINS } from './valueCoins';
+import { VALUE_COINS, type CoinStyle } from './valueCoins';
 
 interface ValueCoinProps {
   valueId: string;
@@ -10,6 +10,8 @@ interface ValueCoinProps {
   size?: number;
   /** Religião escolhida pelo usuário: vira o ícone dos valores religiosos (padrão: a cruz do polo Religioso). */
   religion?: Religion | null;
+  /** Ícone próprio (ex.: o da bússola); sem ele vale o do `valueId`. */
+  coin?: CoinStyle;
 }
 
 // Cores da moeda: --cat é a cor da família da ideologia do usuário e --cat-bg o pastel dela (definidas no topo do
@@ -19,8 +21,8 @@ const BORDER = 'color-mix(in srgb, var(--cat, #4B5058) 55%, #000)';
 const INK = 'var(--cat-bg, #DDE0E3)';
 
 // Moeda redonda de um valor: cor da ideologia do usuário, borda fina e ícone preenchido. Sem ícone, mostra o monograma.
-export function ValueCoin({ valueId, name, size = 112, religion }: ValueCoinProps) {
-  const coin = VALUE_COINS[valueId];
+export function ValueCoin({ valueId, name, size = 112, religion, coin: ownCoin }: ValueCoinProps) {
+  const coin = ownCoin ?? VALUE_COINS[valueId];
   const faith = coin?.religious ? (religiousPoleIcon(religion) ?? FILLED_POLE_ICONS.religiao.right) : null;
   const icon = faith ? (
     <svg x="19" y="19" width="34" height="34" viewBox={faith.viewBox} style={{ fill: INK }}>

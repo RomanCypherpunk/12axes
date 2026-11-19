@@ -570,10 +570,6 @@ export const en: Strings = {
     socialLead: 'The social axis',
     socialText: 'measures the orientation of your values between progressivism and traditionalism, reflecting your position on customs, culture and social values.'
   },
-  compassWith: 'with',
-  compassSocialValues: 'social values',
-  compassCenterLeft: 'Center-left',
-  compassCenterRight: 'Center-right',
   compassSpectrumLabels: {
     'esq-radical': 'Radical left',
     esquerda: 'Left',
@@ -584,6 +580,30 @@ export const en: Strings = {
     libertario: 'Libertarian',
     anarquismo: 'Anarchist'
   },
+  compassEconomicLabels: {
+    left: 'Left',
+    centerLeft: 'Center-left',
+    center: 'Center',
+    centerRight: 'Center-right',
+    right: 'Right'
+  },
+  compassSpectrumDescriptions: {
+    'esq-radical': 'You tend to seek a deep transformation of society, with material equality, collective ownership and a strong state serving working people, breaking with the current economic order.',
+    esquerda: 'You tend to favor more equality and social protection, with a state that reduces inequality through public services, labor rights and redistribution.',
+    centro: 'You tend to look for balance between opposing positions, combining market and state, change and stability, and to distrust solutions that come from only one side.',
+    direita: 'You tend to value order, tradition, individual responsibility and free enterprise, with a more limited state in the economy and attention to security and the nation’s values.',
+    'ext-direita': 'You tend to prioritize hierarchy, national identity and strong authority, putting security and order above pluralism and dissent.',
+    terceira: 'You tend to reject both liberal capitalism and communism, joining a strong state and a directed economy to the nation, community and tradition.',
+    libertario: 'You tend to put individual freedom above everything: as little state as possible, a free market and respect for each person’s choices, in private life and in the economy.',
+    anarquismo: 'You tend to distrust all centralized authority and to favor a society organized by voluntary cooperation and self-management, with no state and no imposed hierarchies.'
+  },
+  compassEconomicDescriptions: {
+    left: 'You tend to favor collective or public ownership of the means of production and economic planning, with the state and society, not the market, at the center.',
+    centerLeft: 'You tend to accept the market, but with a strong state presence: broad public services, regulation and redistribution to reduce inequality.',
+    center: 'You tend to seek an economic middle ground, with market and state in balanced roles: regulation where needed and room for private initiative.',
+    centerRight: 'You tend to trust the market and private initiative more, with a smaller state and clear rules, without giving up some social protection.',
+    right: 'You tend to favor private property and the free market, with little state planning or regulation and competition as the engine of the economy.'
+  },
   compassSocialLabels: {
     veryProgressive: 'Strongly progressive',
     progressive: 'Progressive',
@@ -591,15 +611,12 @@ export const en: Strings = {
     traditional: 'Traditionalist',
     veryTraditional: 'Strongly traditionalist'
   },
-  compassNote: {
-    label: 'On the compass:',
-    hints: {
-      terceira: 'The Third Position joins a strong state to nation and tradition. The compass measures economy and power; nation, morals and religion are left out.',
-      'ext-direita': 'The far right is defined by hierarchy and identity. The compass measures economy and power; morals, religion and nation are left out.',
-      'esq-radical': 'The radical left is defined by revolution and collectivization. The compass measures economy and power; the revolutionary project is left out.',
-      libertarian: 'Your ideology sits on the border between two regions. The compass measures economy and power, and a small difference in either decides the side.',
-      generic: 'The compass measures 5 of the 12 axes; the other 7 are left out.'
-    }
+  compassSocialDescriptions: {
+    veryProgressive: 'You tend to strongly defend freedom of lifestyle, diversity and social change, seeing traditions as something to be questioned and updated.',
+    progressive: 'You tend to support freedom of lifestyle, diversity and equal rights, staying open to new forms of family, culture and identity.',
+    moderate: 'You tend to balance tradition and change, preserving what works in customs and accepting gradual change, without extreme positions on moral issues.',
+    traditional: 'You tend to value family, religion and inherited customs, preferring gradual change and distrusting rapid breaks in social values.',
+    veryTraditional: 'You tend to strongly defend family, faith and traditional customs as the foundation of society, resisting changes that alter them.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `Your position: ${right}% toward the right, ${authoritarian}% toward authoritarian and ${traditional}% toward traditionalist.`,

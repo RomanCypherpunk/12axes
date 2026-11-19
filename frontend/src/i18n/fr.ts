@@ -570,10 +570,6 @@ export const fr: DeepPartial<Strings> = {
     socialLead: 'L’axe social',
     socialText: 'mesure l’orientation de vos valeurs entre progressisme et traditionalisme, reflétant votre position sur les mœurs, la culture et les valeurs sociales.'
   },
-  compassWith: 'avec',
-  compassSocialValues: 'valeurs sociales',
-  compassCenterLeft: 'Centre gauche',
-  compassCenterRight: 'Centre droit',
   compassSpectrumLabels: {
     'esq-radical': 'Gauche radicale',
     esquerda: 'Gauche',
@@ -584,22 +580,43 @@ export const fr: DeepPartial<Strings> = {
     libertario: 'Libertarien',
     anarquismo: 'Anarchiste'
   },
+  compassEconomicLabels: {
+    left: 'Gauche',
+    centerLeft: 'Centre gauche',
+    center: 'Centre',
+    centerRight: 'Centre droit',
+    right: 'Droite'
+  },
+  compassSpectrumDescriptions: {
+    'esq-radical': 'Vous tendez à chercher une transformation profonde de la société, avec l’égalité matérielle, la propriété collective et un État fort au service de ceux qui travaillent, en rupture avec l’ordre économique actuel.',
+    esquerda: 'Vous tendez à défendre plus d’égalité et de protection sociale, avec un État qui réduit les inégalités par les services publics, les droits des travailleurs et la redistribution.',
+    centro: 'Vous tendez à chercher l’équilibre entre des positions opposées, en combinant marché et État, changement et stabilité, et à vous méfier des solutions venues d’un seul camp.',
+    direita: 'Vous tendez à valoriser l’ordre, la tradition, la responsabilité individuelle et la libre entreprise, avec un État plus limité dans l’économie et attentif à la sécurité et aux valeurs de la nation.',
+    'ext-direita': 'Vous tendez à privilégier la hiérarchie, l’identité nationale et une autorité forte, en plaçant la sécurité et l’ordre au-dessus du pluralisme et de la contestation.',
+    terceira: 'Vous tendez à rejeter à la fois le capitalisme libéral et le communisme, en unissant un État fort et une économie dirigée à la nation, à la communauté et à la tradition.',
+    libertario: 'Vous tendez à placer la liberté individuelle au-dessus de tout : le minimum d’État, le marché libre et le respect des choix de chacun, dans la vie privée comme dans l’économie.',
+    anarquismo: 'Vous tendez à vous méfier de toute autorité centralisée et à défendre une société organisée par la coopération volontaire et l’autogestion, sans État ni hiérarchies imposées.'
+  },
+  compassEconomicDescriptions: {
+    left: 'Vous tendez à défendre la propriété collective ou publique des moyens de production et la planification de l’économie, avec l’État et la société, et non le marché, au centre.',
+    centerLeft: 'Vous tendez à accepter le marché, mais avec une forte présence de l’État : de larges services publics, de la régulation et de la redistribution pour réduire les inégalités.',
+    center: 'Vous tendez à chercher un juste milieu économique, avec des rôles équilibrés pour le marché et l’État : de la régulation là où il le faut et de la place pour l’initiative privée.',
+    centerRight: 'Vous tendez à faire davantage confiance au marché et à l’initiative privée, avec un État plus petit et des règles claires, sans renoncer à une certaine protection sociale.',
+    right: 'Vous tendez à défendre la propriété privée et le libre marché, avec peu de planification ou de régulation de l’État et la concurrence comme moteur de l’économie.'
+  },
   compassSocialLabels: {
-    veryProgressive: 'Fortement progressiste',
+    veryProgressive: 'Très progressiste',
     progressive: 'Progressiste',
     moderate: 'Modéré',
     traditional: 'Traditionaliste',
-    veryTraditional: 'Fortement traditionaliste'
+    veryTraditional: 'Très traditionaliste'
   },
-  compassNote: {
-    label: 'Sur la boussole :',
-    hints: {
-      terceira: 'La Troisième position unit un État fort à la nation et à la tradition. La boussole mesure l’économie et le pouvoir ; la nation, la morale et la religion en sont exclues.',
-      'ext-direita': 'L’extrême droite se définit par la hiérarchie et l’identité. La boussole mesure l’économie et le pouvoir ; la morale, la religion et la nation en sont exclues.',
-      'esq-radical': 'La gauche radicale se définit par la révolution et la collectivisation. La boussole mesure l’économie et le pouvoir ; le projet révolutionnaire en est exclu.',
-      libertarian: 'Votre idéologie se situe à la frontière entre deux régions. La boussole mesure l’économie et le pouvoir, et une petite différence dans l’un ou l’autre décide du côté.',
-      generic: 'La boussole mesure 5 des 12 axes ; les 7 autres en sont exclus.'
-    }
+  compassSocialDescriptions: {
+    veryProgressive: 'Vous tendez à défendre fermement la liberté des mœurs, la diversité et le changement social, en voyant les traditions comme quelque chose à questionner et à renouveler.',
+    progressive: 'Vous tendez à soutenir la liberté des mœurs, la diversité et l’égalité des droits, avec une ouverture à de nouvelles formes de famille, de culture et d’identité.',
+    moderate: 'Vous tendez à équilibrer tradition et changement, en préservant ce qui fonctionne dans les mœurs et en acceptant des changements graduels, sans positions extrêmes sur les questions morales.',
+    traditional: 'Vous tendez à valoriser la famille, la religion et les coutumes héritées, en préférant les changements graduels et en vous méfiant des ruptures rapides dans les valeurs sociales.',
+    veryTraditional: 'Vous tendez à défendre fermement la famille, la foi et les coutumes traditionnelles comme fondement de la société, en résistant aux changements qui les altèrent.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `Votre position : ${right} % vers la droite, ${authoritarian} % vers l’autoritaire et ${traditional} % vers le traditionaliste.`,

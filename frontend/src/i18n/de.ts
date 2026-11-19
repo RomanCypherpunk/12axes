@@ -570,10 +570,6 @@ export const de: DeepPartial<Strings> = {
     socialLead: 'Die soziale Achse',
     socialText: 'misst die Ausrichtung deiner Werte zwischen Progressivismus und Traditionalismus und spiegelt deine Haltung zu Sitten, Kultur und gesellschaftlichen Werten wider.'
   },
-  compassWith: 'mit',
-  compassSocialValues: 'gesellschaftlichen Werten',
-  compassCenterLeft: 'Mitte-links',
-  compassCenterRight: 'Mitte-rechts',
   compassSpectrumLabels: {
     'esq-radical': 'Radikale Linke',
     esquerda: 'Linke',
@@ -584,22 +580,43 @@ export const de: DeepPartial<Strings> = {
     libertario: 'Libertär',
     anarquismo: 'Anarchistisch'
   },
+  compassEconomicLabels: {
+    left: 'Links',
+    centerLeft: 'Mitte-links',
+    center: 'Mitte',
+    centerRight: 'Mitte-rechts',
+    right: 'Rechts'
+  },
+  compassSpectrumDescriptions: {
+    'esq-radical': 'Du neigst dazu, eine tiefgreifende Umgestaltung der Gesellschaft anzustreben, mit materieller Gleichheit, kollektivem Eigentum und einem starken Staat im Dienst der Arbeitenden, im Bruch mit der heutigen Wirtschaftsordnung.',
+    esquerda: 'Du neigst dazu, mehr Gleichheit und sozialen Schutz zu befürworten, mit einem Staat, der Ungleichheit durch öffentliche Dienste, Arbeitnehmerrechte und Umverteilung verringert.',
+    centro: 'Du neigst dazu, einen Ausgleich zwischen gegensätzlichen Positionen zu suchen, Markt und Staat, Wandel und Stabilität zu verbinden und Lösungen zu misstrauen, die nur von einer Seite kommen.',
+    direita: 'Du neigst dazu, Ordnung, Tradition, Eigenverantwortung und freies Unternehmertum zu schätzen, mit einem in der Wirtschaft begrenzteren Staat, der auf Sicherheit und die Werte der Nation achtet.',
+    'ext-direita': 'Du neigst dazu, Hierarchie, nationale Identität und starke Autorität zu priorisieren und Sicherheit und Ordnung über Pluralismus und Widerspruch zu stellen.',
+    terceira: 'Du neigst dazu, sowohl den liberalen Kapitalismus als auch den Kommunismus abzulehnen und einen starken Staat und eine gelenkte Wirtschaft mit Nation, Gemeinschaft und Tradition zu verbinden.',
+    libertario: 'Du neigst dazu, die individuelle Freiheit über alles zu stellen: so wenig Staat wie möglich, freier Markt und Respekt vor den Entscheidungen jedes Einzelnen, im Privatleben und in der Wirtschaft.',
+    anarquismo: 'Du neigst dazu, jeder zentralen Autorität zu misstrauen und eine Gesellschaft zu befürworten, die durch freiwillige Zusammenarbeit und Selbstverwaltung organisiert ist, ohne Staat und ohne aufgezwungene Hierarchien.'
+  },
+  compassEconomicDescriptions: {
+    left: 'Du neigst dazu, kollektives oder öffentliches Eigentum an den Produktionsmitteln und eine Planung der Wirtschaft zu befürworten, mit Staat und Gesellschaft statt dem Markt im Zentrum.',
+    centerLeft: 'Du neigst dazu, den Markt zu akzeptieren, aber mit starker Präsenz des Staates: breite öffentliche Dienste, Regulierung und Umverteilung zum Abbau von Ungleichheit.',
+    center: 'Du neigst dazu, einen wirtschaftlichen Mittelweg zu suchen, mit ausgewogenen Rollen von Markt und Staat: Regulierung, wo nötig, und Raum für private Initiative.',
+    centerRight: 'Du neigst dazu, dem Markt und der privaten Initiative mehr zu vertrauen, mit einem kleineren Staat und klaren Regeln, ohne einen gewissen sozialen Schutz aufzugeben.',
+    right: 'Du neigst dazu, Privateigentum und freien Markt zu befürworten, mit wenig staatlicher Planung oder Regulierung und Wettbewerb als Motor der Wirtschaft.'
+  },
   compassSocialLabels: {
     veryProgressive: 'Stark progressiv',
     progressive: 'Progressiv',
-    moderate: 'Gemäßigt',
+    moderate: 'Moderat',
     traditional: 'Traditionalistisch',
     veryTraditional: 'Stark traditionalistisch'
   },
-  compassNote: {
-    label: 'Zum Kompass:',
-    hints: {
-      terceira: 'Die Dritte Position verbindet einen starken Staat mit Nation und Tradition. Der Kompass misst Wirtschaft und Macht; Nation, Moral und Religion bleiben außen vor.',
-      'ext-direita': 'Die extreme Rechte ist durch Hierarchie und Identität geprägt. Der Kompass misst Wirtschaft und Macht; Moral, Religion und Nation bleiben außen vor.',
-      'esq-radical': 'Die radikale Linke ist durch Revolution und Kollektivierung geprägt. Der Kompass misst Wirtschaft und Macht; das revolutionäre Projekt bleibt außen vor.',
-      libertarian: 'Deine Ideologie liegt an der Grenze zwischen zwei Bereichen. Der Kompass misst Wirtschaft und Macht, und ein kleiner Unterschied bei einem von beiden entscheidet über die Seite.',
-      generic: 'Der Kompass misst 5 der 12 Achsen; die anderen 7 bleiben außen vor.'
-    }
+  compassSocialDescriptions: {
+    veryProgressive: 'Du neigst dazu, Freiheit der Lebensweise, Vielfalt und gesellschaftlichen Wandel entschieden zu verteidigen und Traditionen als etwas zu sehen, das hinterfragt und erneuert werden darf.',
+    progressive: 'Du neigst dazu, Freiheit der Lebensweise, Vielfalt und gleiche Rechte zu unterstützen und offen für neue Formen von Familie, Kultur und Identität zu sein.',
+    moderate: 'Du neigst dazu, Tradition und Wandel auszugleichen, zu bewahren, was sich bewährt, und schrittweise Veränderungen zu akzeptieren, ohne extreme Positionen in moralischen Fragen.',
+    traditional: 'Du neigst dazu, Familie, Religion und überlieferte Bräuche zu schätzen, schrittweise Veränderungen zu bevorzugen und schnellen Brüchen bei gesellschaftlichen Werten zu misstrauen.',
+    veryTraditional: 'Du neigst dazu, Familie, Glauben und traditionelle Bräuche als Fundament der Gesellschaft entschieden zu verteidigen und Veränderungen, die sie antasten, zu widerstehen.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `Deine Position: ${right}% in Richtung rechts, ${authoritarian}% in Richtung autoritär und ${traditional}% in Richtung traditionalistisch.`,

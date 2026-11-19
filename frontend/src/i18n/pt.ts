@@ -559,10 +559,6 @@ export const pt: Strings = {
     socialLead: 'O eixo social',
     socialText: 'mede a orientação dos seus valores entre progressismo e tradicionalismo, refletindo sua posição em questões de costumes, cultura e valores sociais.'
   },
-  compassWith: 'com valores sociais',
-  compassSocialValues: '',
-  compassCenterLeft: 'Centro-esquerda',
-  compassCenterRight: 'Centro-direita',
   compassSpectrumLabels: {
     'esq-radical': 'Esquerda radical',
     esquerda: 'Esquerda',
@@ -573,22 +569,43 @@ export const pt: Strings = {
     libertario: 'Libertário',
     anarquismo: 'Anarquista'
   },
-  compassSocialLabels: {
-    veryProgressive: 'Fortemente progressistas',
-    progressive: 'Progressistas',
-    moderate: 'Moderados',
-    traditional: 'Tradicionalistas',
-    veryTraditional: 'Fortemente tradicionalistas'
+  compassEconomicLabels: {
+    left: 'Esquerda',
+    centerLeft: 'Centro-esquerda',
+    center: 'Centro',
+    centerRight: 'Centro-direita',
+    right: 'Direita'
   },
-  compassNote: {
-    label: 'Na bússola:',
-    hints: {
-      terceira: 'A Terceira posição une Estado forte a nação e tradição. A bússola mede economia e poder; nação, moral e religião ficam de fora.',
-      'ext-direita': 'A Extrema direita se define por hierarquia e identidade. A bússola mede economia e poder; moral, religião e nação ficam de fora.',
-      'esq-radical': 'A Esquerda radical se define por revolução e coletivização. A bússola mede economia e poder; o projeto revolucionário fica de fora.',
-      libertarian: 'Sua ideologia fica na divisa entre duas regiões. A bússola mede economia e poder, e uma diferença pequena em um deles decide o lado.',
-      generic: 'A bússola mede 5 dos 12 eixos; os outros 7 ficam de fora.'
-    }
+  compassSpectrumDescriptions: {
+    'esq-radical': 'Você tende a buscar uma transformação profunda da sociedade, com igualdade material, propriedade coletiva e um Estado forte a serviço de quem trabalha, rompendo com a ordem econômica atual.',
+    esquerda: 'Você tende a defender mais igualdade e proteção social, com um Estado que reduz desigualdades por meio de serviços públicos, direitos trabalhistas e redistribuição.',
+    centro: 'Você tende a buscar equilíbrio entre posições opostas, combinando mercado e Estado, mudança e estabilidade, e a desconfiar de soluções que vêm de um lado só.',
+    direita: 'Você tende a valorizar a ordem, a tradição, a responsabilidade individual e a livre iniciativa, com um Estado mais limitado na economia e atento à segurança e aos valores da nação.',
+    'ext-direita': 'Você tende a priorizar hierarquia, identidade nacional e autoridade forte, colocando segurança e ordem acima da pluralidade e da contestação.',
+    terceira: 'Você tende a rejeitar tanto o capitalismo liberal quanto o comunismo, unindo Estado forte e economia dirigida à nação, à comunidade e à tradição.',
+    libertario: 'Você tende a colocar a liberdade individual acima de tudo: o mínimo de Estado, mercado livre e respeito às escolhas de cada pessoa, na vida privada e na economia.',
+    anarquismo: 'Você tende a desconfiar de toda autoridade centralizada e a defender uma sociedade organizada pela cooperação voluntária e pela autogestão, sem Estado nem hierarquias impostas.'
+  },
+  compassEconomicDescriptions: {
+    left: 'Você tende a defender a propriedade coletiva ou pública dos meios de produção e o planejamento da economia, com o Estado e a sociedade, e não o mercado, no centro.',
+    centerLeft: 'Você tende a aceitar o mercado, mas com forte presença do Estado: serviços públicos amplos, regulação e redistribuição para reduzir desigualdades.',
+    center: 'Você tende a buscar um meio-termo econômico, com mercado e Estado em papéis equilibrados: regulação onde for preciso e espaço para a iniciativa privada.',
+    centerRight: 'Você tende a confiar mais no mercado e na iniciativa privada, com um Estado menor e regras claras, sem abrir mão de alguma proteção social.',
+    right: 'Você tende a defender a propriedade privada e o livre mercado, com pouco planejamento ou regulação estatal e a concorrência como motor da economia.'
+  },
+  compassSocialLabels: {
+    veryProgressive: 'Fortemente progressista',
+    progressive: 'Progressista',
+    moderate: 'Moderado',
+    traditional: 'Tradicionalista',
+    veryTraditional: 'Fortemente tradicionalista'
+  },
+  compassSocialDescriptions: {
+    veryProgressive: 'Você tende a defender com força a liberdade de costumes, a diversidade e a mudança social, vendo as tradições como algo a ser questionado e atualizado.',
+    progressive: 'Você tende a apoiar a liberdade de costumes, a diversidade e a igualdade de direitos, abrindo-se a novas formas de família, cultura e identidade.',
+    moderate: 'Você tende a equilibrar tradição e mudança, preservando o que funciona nos costumes e aceitando mudanças graduais, sem posições extremas em temas morais.',
+    traditional: 'Você tende a valorizar a família, a religião e os costumes herdados, preferindo mudanças graduais e desconfiando de rupturas rápidas nos valores sociais.',
+    veryTraditional: 'Você tende a defender com força a família, a fé e os costumes tradicionais como base da sociedade, resistindo a mudanças que os alterem.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `Sua posição: ${right}% rumo à direita, ${authoritarian}% rumo ao autoritarismo e ${traditional}% rumo ao tradicionalismo.`,

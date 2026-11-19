@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { t } from '../../i18n';
 import { CountUpValue } from './CountUpValue';
 import { Ring } from '../editorial/primitives';
@@ -70,12 +70,14 @@ interface DimRowProps {
   note?: ReactNode;
   /** Coluna da direita (a porcentagem ou uma ação). */
   children: ReactNode;
+  /** Variáveis de cor próprias (--cat/--cat-bg) no lugar das da página. */
+  style?: CSSProperties;
 }
 
 /** Linha de perfil (miniatura, tipo, nome e valor à direita), também usada em /compare. */
-export function DimRow({ open, visual, label, name, note, children }: DimRowProps) {
+export function DimRow({ open, visual, label, name, note, children, style }: DimRowProps) {
   return (
-    <li {...(open ? { ...clickableProps(open.label, open.onOpen), className: 'e-dim-row e-clickable' } : { className: 'e-dim-row' })}>
+    <li {...(open ? { ...clickableProps(open.label, open.onOpen), className: 'e-dim-row e-clickable' } : { className: 'e-dim-row' })} style={style}>
       {visual}
       <div>
         <span className="e-dim">{label}</span>

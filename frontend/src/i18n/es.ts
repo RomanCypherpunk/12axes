@@ -558,10 +558,6 @@ export const es: DeepPartial<Strings> = {
     socialLead: 'El eje social',
     socialText: 'mide la orientación de tus valores entre el progresismo y el tradicionalismo, y refleja tu posición sobre costumbres, cultura y valores sociales.'
   },
-  compassWith: 'con valores sociales',
-  compassSocialValues: '',
-  compassCenterLeft: 'Centroizquierda',
-  compassCenterRight: 'Centroderecha',
   compassSpectrumLabels: {
     'esq-radical': 'Izquierda radical',
     esquerda: 'Izquierda',
@@ -572,22 +568,43 @@ export const es: DeepPartial<Strings> = {
     libertario: 'Libertario',
     anarquismo: 'Anarquista'
   },
-  compassSocialLabels: {
-    veryProgressive: 'Muy progresistas',
-    progressive: 'Progresistas',
-    moderate: 'Moderados',
-    traditional: 'Tradicionalistas',
-    veryTraditional: 'Muy tradicionalistas'
+  compassEconomicLabels: {
+    left: 'Izquierda',
+    centerLeft: 'Centroizquierda',
+    center: 'Centro',
+    centerRight: 'Centroderecha',
+    right: 'Derecha'
   },
-  compassNote: {
-    label: 'En la brújula:',
-    hints: {
-      terceira: 'La tercera posición une un Estado fuerte con la nación y la tradición. La brújula mide economía y poder; nación, moral y religión quedan fuera.',
-      'ext-direita': 'La extrema derecha se define por la jerarquía y la identidad. La brújula mide economía y poder; moral, religión y nación quedan fuera.',
-      'esq-radical': 'La izquierda radical se define por la revolución y la colectivización. La brújula mide economía y poder; el proyecto revolucionario queda fuera.',
-      libertarian: 'Tu ideología está en el límite entre dos regiones. La brújula mide economía y poder, y una pequeña diferencia en cualquiera de los dos decide de qué lado queda.',
-      generic: 'La brújula mide 5 de los 12 ejes; los otros 7 quedan fuera.'
-    }
+  compassSpectrumDescriptions: {
+    'esq-radical': 'Tiendes a buscar una transformación profunda de la sociedad, con igualdad material, propiedad colectiva y un Estado fuerte al servicio de quienes trabajan, rompiendo con el orden económico actual.',
+    esquerda: 'Tiendes a defender más igualdad y protección social, con un Estado que reduce las desigualdades mediante servicios públicos, derechos laborales y redistribución.',
+    centro: 'Tiendes a buscar el equilibrio entre posiciones opuestas, combinando mercado y Estado, cambio y estabilidad, y a desconfiar de las soluciones que vienen de un solo lado.',
+    direita: 'Tiendes a valorar el orden, la tradición, la responsabilidad individual y la libre iniciativa, con un Estado más limitado en la economía y atento a la seguridad y a los valores de la nación.',
+    'ext-direita': 'Tiendes a priorizar la jerarquía, la identidad nacional y una autoridad fuerte, poniendo la seguridad y el orden por encima del pluralismo y la disidencia.',
+    terceira: 'Tiendes a rechazar tanto el capitalismo liberal como el comunismo, uniendo un Estado fuerte y una economía dirigida a la nación, la comunidad y la tradición.',
+    libertario: 'Tiendes a poner la libertad individual por encima de todo: el mínimo de Estado, mercado libre y respeto a las decisiones de cada persona, en la vida privada y en la economía.',
+    anarquismo: 'Tiendes a desconfiar de toda autoridad centralizada y a defender una sociedad organizada por la cooperación voluntaria y la autogestión, sin Estado ni jerarquías impuestas.'
+  },
+  compassEconomicDescriptions: {
+    left: 'Tiendes a defender la propiedad colectiva o pública de los medios de producción y la planificación de la economía, con el Estado y la sociedad, y no el mercado, en el centro.',
+    centerLeft: 'Tiendes a aceptar el mercado, pero con una fuerte presencia del Estado: amplios servicios públicos, regulación y redistribución para reducir las desigualdades.',
+    center: 'Tiendes a buscar un punto medio económico, con mercado y Estado en papeles equilibrados: regulación donde haga falta y espacio para la iniciativa privada.',
+    centerRight: 'Tiendes a confiar más en el mercado y en la iniciativa privada, con un Estado menor y reglas claras, sin renunciar a cierta protección social.',
+    right: 'Tiendes a defender la propiedad privada y el libre mercado, con poca planificación o regulación estatal y la competencia como motor de la economía.'
+  },
+  compassSocialLabels: {
+    veryProgressive: 'Fuertemente progresista',
+    progressive: 'Progresista',
+    moderate: 'Moderado',
+    traditional: 'Tradicionalista',
+    veryTraditional: 'Fuertemente tradicionalista'
+  },
+  compassSocialDescriptions: {
+    veryProgressive: 'Tiendes a defender con fuerza la libertad de costumbres, la diversidad y el cambio social, viendo las tradiciones como algo que cuestionar y actualizar.',
+    progressive: 'Tiendes a apoyar la libertad de costumbres, la diversidad y la igualdad de derechos, con apertura a nuevas formas de familia, cultura e identidad.',
+    moderate: 'Tiendes a equilibrar tradición y cambio, conservando lo que funciona en las costumbres y aceptando cambios graduales, sin posiciones extremas en temas morales.',
+    traditional: 'Tiendes a valorar la familia, la religión y las costumbres heredadas, prefiriendo cambios graduales y desconfiando de las rupturas rápidas en los valores sociales.',
+    veryTraditional: 'Tiendes a defender con fuerza la familia, la fe y las costumbres tradicionales como base de la sociedad, resistiendo los cambios que las alteren.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `Tu posición: ${right}% hacia la derecha, ${authoritarian}% hacia lo autoritario y ${traditional}% hacia lo tradicionalista.`,

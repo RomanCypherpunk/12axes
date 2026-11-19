@@ -81,15 +81,15 @@ export function compassPoints(
 export type SocialKey = 'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional';
 
 /**
- * Nível dos valores sociais a partir da barra progressista/tradicionalista (0-100):
- * até 19 fortemente progressistas, 20-39 progressistas, 40-60 moderados, 61-80 tradicionalistas,
- * acima de 80 fortemente tradicionalistas.
+ * Nível dos valores sociais a partir do eixo progressista/tradicionalista (0-100), com as mesmas faixas do eixo
+ * econômico: abaixo de 27,5 fortemente progressista, até 42,5 progressista, até 57,5 moderado, até 72,5
+ * tradicionalista e acima disso fortemente tradicionalista.
  */
 export function socialLevel(traditional: number): SocialKey {
-  if (traditional < 20) return 'veryProgressive';
-  if (traditional < 40) return 'progressive';
-  if (traditional <= 60) return 'moderate';
-  if (traditional <= 80) return 'traditional';
+  if (traditional < 27.5) return 'veryProgressive';
+  if (traditional < 42.5) return 'progressive';
+  if (traditional <= 57.5) return 'moderate';
+  if (traditional <= 72.5) return 'traditional';
   return 'veryTraditional';
 }
 
@@ -117,34 +117,17 @@ export function compassRegion({ right, authoritarian }: CompassPosition): Ideolo
   return right < 50 ? 'anarquismo' : 'libertario';
 }
 
-/**
- * Quando a ideologia e a região da bússola são Centro e Esquerda (ou Centro e Direita), a posição
- * intermediária se chama centro-esquerda (ou centro-direita) em vez de "entre". Qualquer outro par,
- * ou o mesmo lado nos dois, devolve null.
- */
-export function centerSide(first: IdeologyColorKey, second: IdeologyColorKey): 'esquerda' | 'direita' | null {
-  if (first === second) return null;
-  const keys = [first, second];
-  if (!keys.includes('centro')) return null;
-  if (keys.includes('esquerda')) return 'esquerda';
-  if (keys.includes('direita')) return 'direita';
-  return null;
-}
-
-/** Tema da nota sob a bússola: o que explica a diferença entre a categoria da ideologia e a região da grade. */
-export type CompassNoteHint = 'terceira' | 'ext-direita' | 'esq-radical' | 'libertarian' | 'generic';
+export type EconomicKey = 'left' | 'centerLeft' | 'center' | 'centerRight' | 'right';
 
 /**
- * Quando a categoria da ideologia e a região da bússola divergem (e não é o caso centro-esquerda/centro-direita,
- * que a própria frase já mostra), devolve o tema da explicação; caso contrário, null. A Terceira posição vem
- * primeiro porque mistura economia estatal com nação e tradição, o par que mais confunde.
+ * Posição no eixo esquerda-direita (0-100, só economia e controle) com as mesmas faixas de distância do
+ * centro que a interface usa nos eixos: até 7,5 do meio é Centro (42,5-57,5), de 7,5 a 22,5 é Centro-esquerda
+ * ou Centro-direita, e além disso é Esquerda ou Direita. Independe da categoria da ideologia.
  */
-export function compassNoteHint(category: IdeologyColorKey, region: IdeologyColorKey): CompassNoteHint | null {
-  if (category === region || centerSide(category, region)) return null;
-  const keys = [category, region];
-  if (keys.includes('terceira')) return 'terceira';
-  if (keys.includes('ext-direita')) return 'ext-direita';
-  if (keys.includes('esq-radical')) return 'esq-radical';
-  if (keys.includes('anarquismo') || keys.includes('libertario')) return 'libertarian';
-  return 'generic';
+export function economicLevel(right: number): EconomicKey {
+  if (right < 27.5) return 'left';
+  if (right < 42.5) return 'centerLeft';
+  if (right <= 57.5) return 'center';
+  if (right <= 72.5) return 'centerRight';
+  return 'right';
 }

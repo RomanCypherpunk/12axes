@@ -400,12 +400,12 @@ export interface Strings {
   compassRight: string;
   compassProgressive: string;
   compassTraditionalist: string;
-  compassWith: string;
-  compassSocialValues: string;
-  compassCenterLeft: string;
-  compassCenterRight: string;
   compassSpectrumLabels: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
+  compassEconomicLabels: Record<'left' | 'centerLeft' | 'center' | 'centerRight' | 'right', string>;
+  compassSpectrumDescriptions: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
+  compassEconomicDescriptions: Record<'left' | 'centerLeft' | 'center' | 'centerRight' | 'right', string>;
   compassSocialLabels: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
+  compassSocialDescriptions: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
   compassInfo: {
     aria: string;
     title: string;
@@ -415,10 +415,6 @@ export interface Strings {
     econText: string;
     socialLead: string;
     socialText: string;
-  };
-  compassNote: {
-    label: string;
-    hints: Record<'terceira' | 'ext-direita' | 'esq-radical' | 'libertarian' | 'generic', string>;
   };
   compassAria: (right: number, authoritarian: number, traditional: number) => string;
   countriesSectionTitle: string;

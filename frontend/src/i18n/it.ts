@@ -570,10 +570,6 @@ export const it: DeepPartial<Strings> = {
     socialLead: "L'asse sociale",
     socialText: "misura l'orientamento dei tuoi valori tra progressismo e tradizionalismo, riflettendo la tua posizione su costumi, cultura e valori sociali."
   },
-  compassWith: 'con',
-  compassSocialValues: 'valori sociali',
-  compassCenterLeft: 'Centro-sinistra',
-  compassCenterRight: 'Centro-destra',
   compassSpectrumLabels: {
     'esq-radical': 'Sinistra radicale',
     esquerda: 'Sinistra',
@@ -584,6 +580,30 @@ export const it: DeepPartial<Strings> = {
     libertario: 'Libertario',
     anarquismo: 'Anarchico'
   },
+  compassEconomicLabels: {
+    left: 'Sinistra',
+    centerLeft: 'Centro-sinistra',
+    center: 'Centro',
+    centerRight: 'Centro-destra',
+    right: 'Destra'
+  },
+  compassSpectrumDescriptions: {
+    'esq-radical': 'Tendi a cercare una trasformazione profonda della società, con uguaglianza materiale, proprietà collettiva e uno Stato forte al servizio di chi lavora, rompendo con l’attuale ordine economico.',
+    esquerda: 'Tendi a sostenere più uguaglianza e protezione sociale, con uno Stato che riduce le disuguaglianze attraverso servizi pubblici, diritti dei lavoratori e redistribuzione.',
+    centro: 'Tendi a cercare equilibrio tra posizioni opposte, combinando mercato e Stato, cambiamento e stabilità, e a diffidare delle soluzioni che vengono da una parte sola.',
+    direita: 'Tendi a dare valore all’ordine, alla tradizione, alla responsabilità individuale e alla libera iniziativa, con uno Stato più limitato nell’economia e attento alla sicurezza e ai valori della nazione.',
+    'ext-direita': 'Tendi a dare priorità a gerarchia, identità nazionale e autorità forte, ponendo sicurezza e ordine al di sopra del pluralismo e del dissenso.',
+    terceira: 'Tendi a rifiutare sia il capitalismo liberale sia il comunismo, unendo uno Stato forte e un’economia diretta alla nazione, alla comunità e alla tradizione.',
+    libertario: 'Tendi a mettere la libertà individuale al di sopra di tutto: il minimo di Stato, mercato libero e rispetto per le scelte di ciascuno, nella vita privata e nell’economia.',
+    anarquismo: 'Tendi a diffidare di ogni autorità centralizzata e a sostenere una società organizzata dalla cooperazione volontaria e dall’autogestione, senza Stato né gerarchie imposte.'
+  },
+  compassEconomicDescriptions: {
+    left: 'Tendi a sostenere la proprietà collettiva o pubblica dei mezzi di produzione e la pianificazione dell’economia, con lo Stato e la società, e non il mercato, al centro.',
+    centerLeft: 'Tendi ad accettare il mercato, ma con una forte presenza dello Stato: ampi servizi pubblici, regolazione e redistribuzione per ridurre le disuguaglianze.',
+    center: 'Tendi a cercare una via di mezzo economica, con mercato e Stato in ruoli equilibrati: regolazione dove serve e spazio per l’iniziativa privata.',
+    centerRight: 'Tendi a fidarti di più del mercato e dell’iniziativa privata, con uno Stato più piccolo e regole chiare, senza rinunciare a una certa protezione sociale.',
+    right: 'Tendi a sostenere la proprietà privata e il libero mercato, con poca pianificazione o regolazione statale e la concorrenza come motore dell’economia.'
+  },
   compassSocialLabels: {
     veryProgressive: 'Fortemente progressista',
     progressive: 'Progressista',
@@ -591,15 +611,12 @@ export const it: DeepPartial<Strings> = {
     traditional: 'Tradizionalista',
     veryTraditional: 'Fortemente tradizionalista'
   },
-  compassNote: {
-    label: 'Sulla bussola:',
-    hints: {
-      terceira: 'La Terza Posizione unisce uno Stato forte a nazione e tradizione. La bussola misura economia e potere; nazione, morale e religione restano fuori.',
-      'ext-direita': "L'estrema destra è definita da gerarchia e identità. La bussola misura economia e potere; morale, religione e nazione restano fuori.",
-      'esq-radical': 'La sinistra radicale è definita da rivoluzione e collettivizzazione. La bussola misura economia e potere; il progetto rivoluzionario resta fuori.',
-      libertarian: 'La tua ideologia si trova al confine tra due regioni. La bussola misura economia e potere, e una piccola differenza in uno dei due decide da che parte stai.',
-      generic: 'La bussola misura 5 dei 12 assi; gli altri 7 restano fuori.'
-    }
+  compassSocialDescriptions: {
+    veryProgressive: 'Tendi a difendere con forza la libertà di costumi, la diversità e il cambiamento sociale, vedendo le tradizioni come qualcosa da mettere in discussione e aggiornare.',
+    progressive: 'Tendi a sostenere la libertà di costumi, la diversità e la parità di diritti, con apertura a nuove forme di famiglia, cultura e identità.',
+    moderate: 'Tendi a bilanciare tradizione e cambiamento, conservando ciò che funziona nei costumi e accettando cambiamenti graduali, senza posizioni estreme sui temi morali.',
+    traditional: 'Tendi a dare valore alla famiglia, alla religione e ai costumi ereditati, preferendo cambiamenti graduali e diffidando delle rotture rapide nei valori sociali.',
+    veryTraditional: 'Tendi a difendere con forza la famiglia, la fede e i costumi tradizionali come base della società, resistendo ai cambiamenti che li alterano.'
   },
   compassAria: (right, authoritarian, traditional) =>
     `La tua posizione: ${right}% verso destra, ${authoritarian}% verso l'autoritario e ${traditional}% verso il tradizionalista.`,

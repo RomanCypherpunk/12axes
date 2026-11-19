@@ -7,14 +7,16 @@ import type {
   AxisTension,
   CountryDimensionMatch,
   CountryMatch,
+  ElectionResult,
   PartyDimensionMatch,
   PartyMatch,
   PremiumReport,
   QuizResult
 } from '../../types/quiz';
 import { resolveCountryFlagSrc } from '../../utils/countryFlags';
+import { formatElectionDate, isElectionOver } from '../../utils/electionDate';
 import { PARTIES_ENABLED, resolvePartyLogoSrc } from '../../utils/partyLogos';
-import { catStyle, ideologyColorByKey, localCatStyle } from '../../utils/ideologyColors';
+import { catStyle, localCatStyle } from '../../utils/ideologyColors';
 import { personalityInitials, resolvePersonalityImageSrc } from '../../utils/personalityImage';
 import type { Religion } from '../../utils/religion';
 import { PoleIcon } from '../AxisIcon';
@@ -24,6 +26,7 @@ import { PremiumPdfPages } from './PremiumPdfPages';
 import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
+import { COMPASS_COINS } from '../results/compassCoins';
 import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../results/PoliticalCompassSection';
 import { commonNote, unusualLead } from '../results/SignatureSection';
 import { ValueCoin } from '../results/ValueCoin';
@@ -53,11 +56,13 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
   const hasBooks = books.length > 0;
   const values = result.politicalValues ?? [];
   const hasValues = values.length > 0;
+  const elections = (result.elections ?? []).filter((election) => election.candidates.length > 0);
   const sections = [
     t.axesSectionTitle,
     t.signatureTitle,
     t.countriesSectionTitle,
     t.personalitiesSectionTitle,
+    ...(elections.length > 0 ? [t.electionsClosestLabel] : []),
     ...(result.personalityMatches.length > 0 ? [t.areasGeneralTitle] : []),
     ...(hasBooks ? [t.booksTitle] : []),
     ...(showParties ? [t.partiesSectionTitle] : []),
@@ -130,7 +135,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
               {answeredCount ? <span>{t.report.kpiAnswered(answeredCount)}</span> : null}
             </div>
           </div>
-          <div className={sections.length > 12 ? "toc toc-2" : "toc"}>
+          <div className={sections.length > 10 ? "toc toc-2" : "toc"}>
             <p className="eb">{t.report.tocTitle}</p>
             <ol>
               {sections.map((title, index) => (
@@ -248,6 +253,23 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
             </section>
           )}
         </div>
+
+        {/* PÁGINA 4b: Eleições (o candidato mais próximo de cada eleição ativa) */}
+        {elections.length > 0 && (
+          <div className="rp-page">
+            <PageHeader topName={top.name} />
+
+            <section className="rp-sec">
+              <SectionHead title={t.electionsClosestLabel} />
+              {elections.map((election, index) => (
+                <div key={election.id} style={index > 0 ? { marginTop: '5mm' } : undefined}>
+                  <ElectionBlock election={election} />
+                </div>
+              ))}
+              <p className="el-note">{t.electionsNotice}</p>
+            </section>
+          </div>
+        )}
 
         {/* PÁGINA 5: Áreas de atuação + Livros recomendados (quando houver livros) */}
         {hasBooks && (
@@ -398,14 +420,14 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
 }
 
 function Compass({ position, category, moralAxis }: { position: CompassPosition; category: string; moralAxis?: Axis }) {
-  const { right, authoritarian, traditional } = position;
-  const { spectrum, centerSideKey, centerLabel, markerColor, social, stripCells, socialColor } = compassView(
-    position,
-    category,
-    moralAxis
-  );
-  const spectrumLabel = centerSideKey ? centerLabel : t.compassSpectrumLabels[spectrum.key];
-  const spectrumColor = centerSideKey ? ideologyColorByKey(centerSideKey).base : spectrum.base;
+  const { right, authoritarian } = position;
+  const view = compassView(position, category, moralAxis);
+  const { markerColor } = view;
+  const tiles = [
+    { key: `political:${view.spectrum.key}`, label: t.dimensionLabels.political, name: t.compassSpectrumLabels[view.spectrum.key], base: view.spectrum.base, bg: view.spectrum.bg },
+    { key: `economic:${view.economic}`, label: t.dimensionLabels.economic, name: t.compassEconomicLabels[view.economic], base: view.economicColor, bg: view.economicBg },
+    { key: `social:${view.social}`, label: t.dimensionLabels.social, name: t.compassSocialLabels[view.social], base: view.socialBase, bg: view.socialBg }
+  ];
   return (
     <div className="cmp">
       <div className="cmp-chart">
@@ -423,21 +445,17 @@ function Compass({ position, category, moralAxis }: { position: CompassPosition;
         <span className="cmp-lbl cmp-bottom">{t.compassLibertarian}</span>
       </div>
       <div className="cmp-read">
-        <p className="cmp-sentence">
-          <span style={{ color: spectrumColor }}>{spectrumLabel}</span> <span className="cmp-conn">{t.compassWith}</span>{' '}
-          <mark style={{ background: socialColor }}>{t.compassSocialLabels[social]}</mark>
-          {t.compassSocialValues && <span className="cmp-conn"> {t.compassSocialValues}</span>}
-        </p>
-        <div className="cmp-bar-lbls">
-          <span>{t.compassProgressive}</span>
-          <span>{t.compassTraditionalist}</span>
-        </div>
-        <div className="cmp-strip">
-          {stripCells.map((color, index) => (
-            <span key={index} style={{ background: color }} />
+        <ul className="cmp-tiles">
+          {tiles.map((tile) => (
+            <li key={tile.key} style={{ '--cat': tile.base, '--cat-bg': tile.bg } as CSSProperties}>
+              <ValueCoin valueId="" name={tile.name} size={30} coin={COMPASS_COINS[tile.key]} />
+              <div>
+                <span className="dim">{tile.label}</span>
+                <b>{tile.name}</b>
+              </div>
+            </li>
           ))}
-          <CompassX left={traditional} color={socialColor} />
-        </div>
+        </ul>
       </div>
     </div>
   );
@@ -635,6 +653,30 @@ function MatchCard({ visual, compatibility, name, tags, description, kickerPrefi
         <p>{description}</p>
       </div>
     </article>
+  );
+}
+
+function ElectionBlock({ election }: { election: ElectionResult }) {
+  const first = election.candidates[0];
+  if (!first) return null;
+  const { candidate, party } = first;
+  const ended = isElectionOver(election.date) ? ` · ${t.electionsEnded}` : '';
+  return (
+    <>
+      <div className="sub-h">
+        <span>
+          {election.name} · {formatElectionDate(election.date, LANG)}
+          {ended}
+        </span>
+      </div>
+      <MatchCard
+        visual={<Img className="av-b" src={resolvePersonalityImageSrc(candidate.imagePath)} name={candidate.name} />}
+        compatibility={candidate.compatibility}
+        name={candidate.name}
+        tags={[candidate.role, party?.name ?? ''].filter(Boolean)}
+        description={candidate.description}
+      />
+    </>
   );
 }
 
