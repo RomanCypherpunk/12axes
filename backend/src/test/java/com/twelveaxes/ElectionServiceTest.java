@@ -109,9 +109,9 @@ class ElectionServiceTest {
         assertThat(brazil.date()).isEqualTo("2026-10-04");
         assertThat(brazil.name()).containsIgnoringCase("presidenciais");
         assertThat(brazil.candidates().stream().map(c -> c.candidate().personalityId()))
-                .containsExactlyInAnyOrder("lula-da-silva", "flavio-bolsonaro", "renan-santos", "romeu-zema", "ronaldo-caiado");
+                .containsExactlyInAnyOrder("lula-da-silva", "flavio-bolsonaro", "renan-santos", "romeu-zema", "ronaldo-caiado", "augusto-cury");
         assertThat(brazil.candidates().stream().map(c -> c.party().partyId()))
-                .containsExactlyInAnyOrder("partido-dos-trabalhadores", "partido-liberal-brasil", "partido-missao", "partido-novo", "psd");
+                .containsExactlyInAnyOrder("partido-dos-trabalhadores", "partido-liberal-brasil", "partido-missao", "partido-novo", "psd", "avante");
         List<Double> scores = brazil.candidates().stream().map(c -> c.candidate().compatibility()).toList();
         assertThat(scores).isSortedAccordingTo(java.util.Comparator.reverseOrder());
     }

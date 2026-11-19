@@ -31,7 +31,7 @@ class ElectionsPayloadTest {
                 .andExpect(jsonPath("$.elections[0].candidates[0].party.name").isNotEmpty())
                 .andExpect(jsonPath("$.elections[0].candidates[0].party.countryFlagPath").isNotEmpty())
                 .andExpect(jsonPath("$.elections[1].id").value("brasil-2026-presidenciais"))
-                .andExpect(jsonPath("$.elections[1].candidates.length()").value(5));
+                .andExpect(jsonPath("$.elections[1].candidates.length()").value(6));
     }
 
     @Test
