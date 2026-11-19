@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { centerSide, compassFromVector, compassNoteHint, compassPoints, compassRegion, computeCompass, socialLevel } from '../src/utils/politicalCompass';
+import { compassFromVector, compassPoints, compassRegion, computeCompass, economicLevel, socialLevel } from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -92,17 +92,33 @@ describe('polos dos eixos usados na bússola', () => {
 });
 
 describe('socialLevel', () => {
-  it('cobre as cinco faixas nos limites', () => {
+  it('cobre as cinco faixas nos limites, as mesmas do eixo econômico', () => {
     expect(socialLevel(0)).toBe('veryProgressive');
-    expect(socialLevel(19)).toBe('veryProgressive');
-    expect(socialLevel(20)).toBe('progressive');
-    expect(socialLevel(39)).toBe('progressive');
-    expect(socialLevel(40)).toBe('moderate');
-    expect(socialLevel(60)).toBe('moderate');
-    expect(socialLevel(61)).toBe('traditional');
-    expect(socialLevel(80)).toBe('traditional');
-    expect(socialLevel(81)).toBe('veryTraditional');
+    expect(socialLevel(27.4)).toBe('veryProgressive');
+    expect(socialLevel(27.5)).toBe('progressive');
+    expect(socialLevel(42.4)).toBe('progressive');
+    expect(socialLevel(42.5)).toBe('moderate');
+    expect(socialLevel(57.5)).toBe('moderate');
+    expect(socialLevel(57.6)).toBe('traditional');
+    expect(socialLevel(72.5)).toBe('traditional');
+    expect(socialLevel(72.6)).toBe('veryTraditional');
     expect(socialLevel(100)).toBe('veryTraditional');
+  });
+});
+
+describe('economicLevel', () => {
+  it('usa as mesmas faixas de distância do centro dos eixos', () => {
+    expect(economicLevel(0)).toBe('left');
+    expect(economicLevel(27.4)).toBe('left');
+    expect(economicLevel(27.5)).toBe('centerLeft');
+    expect(economicLevel(42.4)).toBe('centerLeft');
+    expect(economicLevel(42.5)).toBe('center');
+    expect(economicLevel(50)).toBe('center');
+    expect(economicLevel(57.5)).toBe('center');
+    expect(economicLevel(57.6)).toBe('centerRight');
+    expect(economicLevel(72.5)).toBe('centerRight');
+    expect(economicLevel(72.6)).toBe('right');
+    expect(economicLevel(100)).toBe('right');
   });
 });
 
@@ -128,20 +144,6 @@ describe('compassRegion', () => {
   it('segura os extremos dentro da grade', () => {
     expect(at(0, 100)).toBe('esq-radical');
     expect(at(100, 0)).toBe('libertario');
-  });
-});
-
-describe('centerSide', () => {
-  it('Centro com esquerda ou direita vira centro-esquerda ou centro-direita, em qualquer ordem', () => {
-    expect(centerSide('centro', 'direita')).toBe('direita');
-    expect(centerSide('direita', 'centro')).toBe('direita');
-    expect(centerSide('esquerda', 'centro')).toBe('esquerda');
-  });
-
-  it('os demais pares, e o mesmo lado, não mudam', () => {
-    expect(centerSide('centro', 'ext-direita')).toBeNull();
-    expect(centerSide('esquerda', 'anarquismo')).toBeNull();
-    expect(centerSide('centro', 'centro')).toBeNull();
   });
 });
 
@@ -177,34 +179,5 @@ describe('bússola com vários perfis', () => {
       { key: 'b', label: 'B', color: '#222', vector: { economia: 50 } }
     ]);
     expect(points.map((point) => point.key)).toEqual(['a']);
-  });
-});
-
-describe('compassNoteHint', () => {
-  it('sem nota quando categoria e região coincidem', () => {
-    expect(compassNoteHint('direita', 'direita')).toBeNull();
-  });
-
-  it('sem nota em centro-esquerda e centro-direita, que a própria frase já mostra', () => {
-    expect(compassNoteHint('esquerda', 'centro')).toBeNull();
-    expect(compassNoteHint('centro', 'direita')).toBeNull();
-  });
-
-  it('Terceira posição em qualquer lado do par leva a explicação própria', () => {
-    expect(compassNoteHint('terceira', 'ext-direita')).toBe('terceira');
-    expect(compassNoteHint('ext-direita', 'terceira')).toBe('terceira');
-    expect(compassNoteHint('terceira', 'esquerda')).toBe('terceira');
-  });
-
-  it('Extrema direita e Esquerda radical têm a sua, e anarquismo/libertário a deles', () => {
-    expect(compassNoteHint('ext-direita', 'esq-radical')).toBe('ext-direita');
-    expect(compassNoteHint('esq-radical', 'anarquismo')).toBe('esq-radical');
-    expect(compassNoteHint('libertario', 'direita')).toBe('libertarian');
-    expect(compassNoteHint('anarquismo', 'libertario')).toBe('libertarian');
-  });
-
-  it('centro contra um extremo ou libertário cai na nota genérica ou na do extremo', () => {
-    expect(compassNoteHint('centro', 'ext-direita')).toBe('ext-direita');
-    expect(compassNoteHint('esquerda', 'direita')).toBe('generic');
   });
 });
