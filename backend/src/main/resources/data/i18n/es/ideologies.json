@@ -1965,5 +1965,33 @@
     "description": "Nacionalismo que ve a la nación como pueblo elegido, con una misión histórica y religiosa de guiar a otros pueblos, que une fe, Estado fuerte, asimilación cultural, expansión de influencia y una economía dirigida al destino nacional.",
     "phrase": "Quiero una nación que se sienta elegida para una misión histórica y de fe, con Estado fuerte, asimilación cultural, influencia creciente y economía dirigida.",
     "category": "Derecha"
+  },
+  {
+    "id": "capitalismo-dinastico",
+    "name": "Capitalismo dinástico",
+    "description": "Orden en el que una casa o dinastía gobierna con autoridad y abre la economía al mercado y al capital global, apoyada en la tradición, la religión y la modernización tecnológica, con la estabilidad y la prosperidad como base de la lealtad.",
+    "phrase": "Quiero una dinastía al mando, con economía abierta al capital global, tradición y fe como cimiento y prosperidad a cambio de lealtad.",
+    "category": "Derecha"
+  },
+  {
+    "id": "liberalismo-civico",
+    "name": "Liberalismo cívico",
+    "description": "Liberalismo que defiende la democracia, el libre mercado, el Estado laico y las libertades individuales como valores cívicos comunes, exigiendo que la inmigración se asimile a ellos, con una nación definida por la ciudadanía y no por la etnia ni la religión.",
+    "phrase": "Quiero democracia liberal, mercado libre y Estado laico, con valores cívicos comunes asumidos por todos y ciudadanía por encima de la etnia y la religión.",
+    "category": "Derecha"
+  },
+  {
+    "id": "conservadorismo-tecnocratico",
+    "name": "Conservadurismo tecnocrático",
+    "description": "Conservadurismo que confía la gestión del Estado a expertos y a una administración meritocrática, preservando el orden, la familia y la fe tradicional, con mercado regulado, seguridad fuerte y modernización técnica sin ruptura.",
+    "phrase": "Quiero un Estado gestionado por expertos y mérito, que preserve el orden, la familia y la fe, con mercado regulado y modernización sin ruptura.",
+    "category": "Derecha"
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigismo",
+    "description": "Doctrina en la que el Estado dirige la economía de mercado mediante planificación, grandes proyectos, campeones nacionales y protección de la industria, bajo una alta burocracia técnica al servicio del interés nacional.",
+    "phrase": "Quiero un Estado que oriente el mercado con planes, grandes proyectos y campeones nacionales, protegiendo la industria con una élite técnica.",
+    "category": "Centro"
   }
 ]

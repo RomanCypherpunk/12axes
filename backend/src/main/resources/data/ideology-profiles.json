@@ -4775,5 +4775,73 @@
       "moral": 29.1,
       "tecnologia": 63.0
     }
+  },
+  {
+    "ideologyId": "liberalismo-civico",
+    "vector": {
+      "estrutura": 37.9,
+      "representacao": 88.2,
+      "poder": 34.1,
+      "imigracao": 71.0,
+      "diplomacia": 46.9,
+      "intervencao": 36.4,
+      "economia": 35.3,
+      "controle": 28.3,
+      "comercio": 19.9,
+      "religiao": 81.4,
+      "moral": 68.1,
+      "tecnologia": 77.2
+    }
+  },
+  {
+    "ideologyId": "capitalismo-dinastico",
+    "vector": {
+      "estrutura": 24.7,
+      "representacao": 11.4,
+      "poder": 89.8,
+      "imigracao": 51.5,
+      "diplomacia": 52.1,
+      "intervencao": 45.5,
+      "economia": 38.7,
+      "controle": 42.0,
+      "comercio": 19.6,
+      "religiao": 16.4,
+      "moral": 14.9,
+      "tecnologia": 73.7
+    }
+  },
+  {
+    "ideologyId": "conservadorismo-tecnocratico",
+    "vector": {
+      "estrutura": 22.0,
+      "representacao": 21.0,
+      "poder": 71.0,
+      "imigracao": 68.3,
+      "diplomacia": 52.9,
+      "intervencao": 43.6,
+      "economia": 43.5,
+      "controle": 43.3,
+      "comercio": 39.5,
+      "religiao": 21.0,
+      "moral": 14.6,
+      "tecnologia": 60.6
+    }
+  },
+  {
+    "ideologyId": "dirigismo",
+    "vector": {
+      "estrutura": 22.4,
+      "representacao": 70.4,
+      "poder": 63.9,
+      "imigracao": 63.8,
+      "diplomacia": 56.9,
+      "intervencao": 39.5,
+      "economia": 63.7,
+      "controle": 75.5,
+      "comercio": 69.3,
+      "religiao": 70.7,
+      "moral": 56.2,
+      "tecnologia": 71.3
+    }
   }
 ]

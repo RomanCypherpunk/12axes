@@ -1971,5 +1971,33 @@
     "category": "Right",
     "description": "Nationalism that sees the nation as a chosen people with a historical and religious mission to guide other peoples, uniting faith, a strong state, cultural assimilation, expanding influence and an economy directed to the national destiny.",
     "phrase": "I want a nation that sees itself as chosen for a historical and faith-based mission, with a strong state, cultural assimilation, growing influence and a directed economy."
+  },
+  {
+    "id": "capitalismo-dinastico",
+    "name": "Dynastic Capitalism",
+    "category": "Right",
+    "description": "Order in which a house or dynasty rules with authority and opens the economy to the market and global capital, grounded in tradition, religion and technological modernization, with stability and prosperity as the basis of loyalty.",
+    "phrase": "I want a dynasty in command, with an economy open to global capital, tradition and faith as foundation, and prosperity in exchange for loyalty."
+  },
+  {
+    "id": "liberalismo-civico",
+    "name": "Civic Liberalism",
+    "category": "Right",
+    "description": "Liberalism that upholds democracy, the free market, a secular state and individual freedoms as shared civic values, requiring immigration to assimilate to them, with a nation defined by citizenship rather than ethnicity or religion.",
+    "phrase": "I want liberal democracy, a free market and a secular state, with shared civic values adopted by all and citizenship above ethnicity and religion."
+  },
+  {
+    "id": "conservadorismo-tecnocratico",
+    "name": "Technocratic Conservatism",
+    "category": "Right",
+    "description": "Conservatism that entrusts the running of the state to experts and a meritocratic administration, preserving order, family and traditional faith, with a regulated market, strong security and technical modernization without rupture.",
+    "phrase": "I want a state run by experts and merit, preserving order, family and faith, with a regulated market and modernization without rupture."
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigisme",
+    "category": "Center",
+    "description": "Doctrine in which the state steers the market economy through planning, major projects, national champions and protection of industry, led by a senior technical civil service serving the national interest.",
+    "phrase": "I want a state that steers the market with plans, major projects and national champions, protecting industry with a technical elite."
   }
 ]

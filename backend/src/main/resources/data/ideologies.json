@@ -3635,5 +3635,63 @@
       "hinduism",
       "other"
     ]
+  },
+  {
+    "id": "capitalismo-dinastico",
+    "name": "Capitalismo Dinástico",
+    "category": "Direita",
+    "description": "Ordem em que uma casa ou dinastia governa com autoridade e abre a economia ao mercado e ao capital global, apoiada na tradição, na religião e na modernização tecnológica, com estabilidade e prosperidade como base da lealdade.",
+    "phrase": "Quero uma dinastia no comando, com economia aberta ao capital global, tradição e fé como alicerce e prosperidade em troca de lealdade.",
+    "countryId": "emirados-arabes-unidos",
+    "personalityId": "mohamed-bin-zayed-al-nahyan",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism",
+      "other"
+    ]
+  },
+  {
+    "id": "liberalismo-civico",
+    "name": "Liberalismo Cívico",
+    "category": "Direita",
+    "description": "Liberalismo que defende a democracia, o mercado livre, o Estado laico e as liberdades individuais como valores cívicos comuns, exigindo que a imigração se assimile a eles, com nação definida pela cidadania e não pela etnia ou pela religião.",
+    "phrase": "Quero democracia liberal, mercado livre e Estado laico, com valores cívicos comuns assimilados por todos e cidadania acima de etnia e religião.",
+    "countryId": "estonia",
+    "personalityId": "pim-fortuyn",
+    "religions": []
+  },
+  {
+    "id": "conservadorismo-tecnocratico",
+    "name": "Conservadorismo Tecnocrático",
+    "category": "Direita",
+    "description": "Conservadorismo que confia a gestão do Estado a especialistas e a uma administração meritocrática, preservando ordem, família e fé tradicional, com mercado regulado, segurança forte e modernização técnica sem ruptura.",
+    "phrase": "Quero um Estado gerido por especialistas e mérito, que preserve ordem, família e fé, com mercado regulado e modernização sem ruptura.",
+    "countryId": "jordania",
+    "personalityId": "castelo-branco",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism",
+      "other"
+    ]
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigismo",
+    "category": "Centro",
+    "description": "Doutrina em que o Estado dirige a economia de mercado por planejamento, grandes projetos, campeões nacionais e proteção da indústria, conduzido por uma alta burocracia técnica a serviço do interesse nacional.",
+    "phrase": "Quero um Estado que oriente o mercado com planos, grandes projetos e campeões nacionais, protegendo a indústria com uma elite técnica.",
+    "countryId": "franca",
+    "personalityId": "friedrich-list",
+    "religions": []
   }
 ]

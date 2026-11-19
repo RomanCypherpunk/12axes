@@ -1965,5 +1965,33 @@
     "description": "Nationalisme qui voit la nation comme un peuple élu, investi d’une mission historique et religieuse de guider les autres peuples, et qui unit foi, État fort, assimilation culturelle, expansion de l’influence et économie dirigée vers le destin national.",
     "phrase": "Je veux une nation qui se sente élue pour une mission historique et de foi, avec un État fort, une assimilation culturelle, une influence croissante et une économie dirigée.",
     "category": "Droite"
+  },
+  {
+    "id": "capitalismo-dinastico",
+    "name": "Capitalisme dynastique",
+    "description": "Ordre dans lequel une maison ou une dynastie gouverne avec autorité et ouvre l’économie au marché et au capital mondial, appuyé sur la tradition, la religion et la modernisation technologique, avec la stabilité et la prospérité comme fondement de la loyauté.",
+    "phrase": "Je veux une dynastie aux commandes, avec une économie ouverte au capital mondial, la tradition et la foi pour fondement, et la prospérité en échange de la loyauté.",
+    "category": "Droite"
+  },
+  {
+    "id": "liberalismo-civico",
+    "name": "Libéralisme civique",
+    "description": "Libéralisme qui défend la démocratie, le marché libre, l’État laïque et les libertés individuelles comme valeurs civiques communes, exigeant que l’immigration s’y assimile, avec une nation définie par la citoyenneté plutôt que par l’ethnie ou la religion.",
+    "phrase": "Je veux une démocratie libérale, un marché libre et un État laïque, avec des valeurs civiques communes adoptées par tous et une citoyenneté au-dessus de l’ethnie et de la religion.",
+    "category": "Droite"
+  },
+  {
+    "id": "conservadorismo-tecnocratico",
+    "name": "Conservatisme technocratique",
+    "description": "Conservatisme qui confie la gestion de l’État à des experts et à une administration méritocratique, préservant l’ordre, la famille et la foi traditionnelle, avec un marché régulé, une sécurité forte et une modernisation technique sans rupture.",
+    "phrase": "Je veux un État géré par des experts et par le mérite, qui préserve l’ordre, la famille et la foi, avec un marché régulé et une modernisation sans rupture.",
+    "category": "Droite"
+  },
+  {
+    "id": "dirigismo",
+    "name": "Dirigisme",
+    "description": "Doctrine selon laquelle l’État dirige l’économie de marché par la planification, les grands projets, les champions nationaux et la protection de l’industrie, sous la conduite d’une haute administration technique au service de l’intérêt national.",
+    "phrase": "Je veux un État qui oriente le marché par des plans, de grands projets et des champions nationaux, en protégeant l’industrie grâce à une élite technique.",
+    "category": "Centre"
   }
 ]
