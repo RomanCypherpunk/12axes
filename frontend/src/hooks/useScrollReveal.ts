@@ -10,6 +10,20 @@ import { useEffect } from 'react';
 // [data-reveal] no DOM. Por isso o hook tambem observa mutacoes da arvore e
 // passa a observar o que aparecer mais tarde — sem isso o conteudo tardio
 // ficaria preso em opacity: 0.
+/** Fração do elemento que precisa estar à vista para ele aparecer. */
+const REVEAL_RATIO = 0.08;
+
+/**
+ * Quando um elemento que cruzou a área de observação deve aparecer. Um bloco tão alto que 8% dele nunca cabe na tela
+ * (a análise eixo a eixo do relatório pago no celular passa de 8.000 px) jamais atingiria a fração mínima e ficaria
+ * invisível: ele aparece assim que a ponta dele entra, e sem animação, porque subir e esmaecer um bloco desse tamanho
+ * é pesado para o celular. Os demais seguem a regra de sempre.
+ */
+export function revealMode(intersectionRatio: number, targetHeight: number, rootHeight: number): 'animate' | 'instant' | null {
+  if (targetHeight * REVEAL_RATIO > rootHeight) return 'instant';
+  return intersectionRatio >= REVEAL_RATIO ? 'animate' : null;
+}
+
 export function useScrollReveal(enabled: boolean = true, deps: unknown[] = []) {
   useEffect(() => {
     if (!enabled || typeof window === 'undefined') {
@@ -34,13 +48,17 @@ export function useScrollReveal(enabled: boolean = true, deps: unknown[] = []) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.setAttribute('data-revealed', '');
-            observer.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          const mode = revealMode(entry.intersectionRatio, entry.boundingClientRect.height, entry.rootBounds?.height ?? window.innerHeight);
+          if (!mode) return;
+          // Sem animação para os blocos muito altos: a página só mostra o conteúdo.
+          if (mode === 'instant') entry.target.setAttribute('data-reveal-instant', '');
+          entry.target.setAttribute('data-revealed', '');
+          observer.unobserve(entry.target);
         });
       },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
+      // O 0 garante uma chamada quando a ponta do bloco entra, que é a única que um bloco muito alto recebe.
+      { rootMargin: '0px 0px -10% 0px', threshold: [0, REVEAL_RATIO] }
     );
 
     const observePending = () => pending().forEach((target) => observer.observe(target));

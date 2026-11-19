@@ -11125,6 +11125,11 @@
   transform: none;
 }
 
+/* Bloco muito alto (a análise do relatório pago no celular): aparece de uma vez, sem subir nem esmaecer. */
+[data-reveal][data-reveal-instant] {
+  transition: none;
+}
+
 /* Cards internos entram em sequencia: o bloco todo nao aparece de uma vez. */
 [data-reveal] .axis-guide-card,
 [data-reveal] .spectrum-card,
