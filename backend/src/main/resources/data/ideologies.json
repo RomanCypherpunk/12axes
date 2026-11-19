@@ -3573,5 +3573,38 @@
       "hinduism",
       "other"
     ]
+  },
+  {
+    "id": "nacionalismo-gaullista",
+    "name": "Nacionalismo Gaullista",
+    "category": "Direita",
+    "description": "Doutrina de Charles de Gaulle que une grandeza nacional, independência frente aos blocos, dissuasão nuclear própria, presidencialismo forte com plebiscitos e dirigismo econômico com participação dos trabalhadores.",
+    "phrase": "Quero uma nação grande e independente dos blocos, com presidente forte consultando o povo por plebiscito, força nuclear própria e economia dirigida pelo Estado.",
+    "countryId": "franca-de-gaulle",
+    "personalityId": "charles-de-gaulle",
+    "religions": []
+  },
+  {
+    "id": "legionarismo",
+    "name": "Legionarismo",
+    "category": "Terceira Posição",
+    "description": "Doutrina da Guarda de Ferro romena de Codreanu: ultranacionalismo, antissemitismo, misticismo cristão ortodoxo e culto ao martírio, em busca de um homem novo e de uma comunidade camponesa sob um Capitão.",
+    "phrase": "Quero uma comunidade camponesa regenerada pela fé ortodoxa e pelo sacrifício, sem partidos, guiada por um Capitão, com economia cooperativa nacional.",
+    "countryId": "romenia-legionaria",
+    "personalityId": "corneliu-zelea-codreanu",
+    "religions": [
+      "orthodox",
+      "only"
+    ]
+  },
+  {
+    "id": "nacionalismo-brasileiro",
+    "name": "Nacionalismo Brasileiro",
+    "category": "Centro",
+    "description": "Corrente que afirma a nação mestiça e sincrética, a unidade territorial contra os regionalismos, a soberania sobre a Amazônia e os recursos naturais, a indústria nacional e a política externa sem alinhamento automático.",
+    "phrase": "Quero uma nação mestiça e soberana, unida contra regionalismos, dona de seus recursos naturais, com indústria nacional protegida e sem alinhamento automático.",
+    "countryId": "brasil",
+    "personalityId": "aldo-rebelo",
+    "religions": []
   }
 ]
