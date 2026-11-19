@@ -3616,5 +3616,24 @@
     "countryId": "brasil",
     "personalityId": "carlos-marighella",
     "religions": []
+  },
+  {
+    "id": "nacionalismo-messianico",
+    "name": "Nacionalismo Messiânico",
+    "category": "Direita",
+    "description": "Nacionalismo que vê a nação como povo eleito, com missão histórica e religiosa de guiar outros povos, unindo fé, Estado forte, assimilação cultural, expansão de influência e economia dirigida ao destino nacional.",
+    "phrase": "Quero uma nação que se sinta escolhida para uma missão histórica e de fé, com Estado forte, assimilação cultural, influência crescente e economia dirigida.",
+    "countryId": "japao-meiji",
+    "personalityId": "theodore-roosevelt",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism",
+      "other"
+    ]
   }
 ]
