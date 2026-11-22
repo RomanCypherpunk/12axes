@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "D66 defende um Estado unitário holandês com municípios fortes e prefeitos eleitos, mas apoia leis nacionais uniformes, polícia nacional e integração europeia; não é federalista nem separatista.",
+    "answers": {
+      "estrutura_06": "C", "estrutura_01": "C", "estrutura_05": "D", "estrutura_16": "C", "estrutura_04": "C",
+      "estrutura_13": "D", "estrutura_20": "D", "estrutura_15": "D", "estrutura_18": "C", "estrutura_17": "N",
+      "estrutura_19": "D", "estrutura_12": "C", "estrutura_09": "D", "estrutura_02": "C", "estrutura_08": "C",
+      "estrutura_07": "D", "estrutura_11": "N", "estrutura_14": "D", "estrutura_03": "C", "estrutura_10": "C"
+    }
+  },
+  "representacao": {
+    "personaBrief": "Partido nascido para reformar a democracia: prefeitos eleitos, referendo corretivo, controle constitucional, pluralismo e direitos da oposição, com rejeição total de autoritarismo.",
+    "answers": {
+      "representacao_01": "CT", "representacao_05": "CT", "representacao_20": "DT", "representacao_11": "C", "representacao_04": "DT",
+      "representacao_03": "CT", "representacao_08": "DT", "representacao_12": "DT", "representacao_17": "DT", "representacao_14": "DT",
+      "representacao_13": "C", "representacao_09": "C", "representacao_02": "DT", "representacao_15": "C", "representacao_19": "CT",
+      "representacao_06": "D", "representacao_16": "DT", "representacao_18": "DT", "representacao_10": "DT", "representacao_07": "CT"
+    }
+  },
+  "poder": {
+    "personaBrief": "Liberal em liberdades civis: eutanásia, cannabis regulada e privacidade, contra pena de morte e detenção sem julgamento, mas apoia combate ao crime organizado e restrição de armas.",
+    "answers": {
+      "poder_03": "D", "poder_15": "DT", "poder_13": "D", "poder_02": "CT", "poder_12": "CT",
+      "poder_17": "D", "poder_20": "C", "poder_18": "C", "poder_14": "C", "poder_16": "CT",
+      "poder_11": "N", "poder_06": "C", "poder_01": "C", "poder_19": "DT", "poder_04": "C",
+      "poder_10": "DT", "poder_05": "D", "poder_07": "D", "poder_09": "CT", "poder_08": "D"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "Aceita o Pacto de Migração da UE, asilo humano mas controlado e migração de trabalho qualificado; valoriza diversidade e cidadania cosmopolita, esperando domínio do idioma e respeito às leis.",
+    "answers": {
+      "imigracao_09": "DT", "imigracao_10": "C", "imigracao_06": "C", "imigracao_19": "DT", "imigracao_04": "C",
+      "imigracao_15": "C", "imigracao_07": "D", "imigracao_20": "C", "imigracao_17": "D", "imigracao_13": "C",
+      "imigracao_11": "N", "imigracao_08": "C", "imigracao_02": "C", "imigracao_18": "D", "imigracao_05": "D",
+      "imigracao_03": "DT", "imigracao_01": "N", "imigracao_14": "C", "imigracao_16": "C", "imigracao_12": "C"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "Pró-OTAN, apoia a Ucrânia e aumento do gasto em defesa, valorizando diplomacia e direito internacional e rejeitando guerras de escolha e armas nucleares próprias.",
+    "answers": {
+      "diplomacia_02": "C", "diplomacia_08": "DT", "diplomacia_15": "D", "diplomacia_19": "C", "diplomacia_11": "N",
+      "diplomacia_05": "D", "diplomacia_12": "D", "diplomacia_10": "D", "diplomacia_17": "DT", "diplomacia_03": "D",
+      "diplomacia_07": "DT", "diplomacia_06": "N", "diplomacia_14": "C", "diplomacia_20": "C", "diplomacia_16": "C",
+      "diplomacia_01": "C", "diplomacia_04": "C", "diplomacia_13": "C", "diplomacia_09": "D", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Internacionalista e multilateralista: favorece ONU, UE, sanções e missões de paz e proteção contra genocídio, rejeitando hegemonia regional e nacionalismo assertivo.",
+    "answers": {
+      "intervencao_01": "C", "intervencao_14": "DT", "intervencao_20": "C", "intervencao_19": "D", "intervencao_08": "C",
+      "intervencao_13": "D", "intervencao_12": "N", "intervencao_04": "D", "intervencao_18": "C", "intervencao_11": "D",
+      "intervencao_05": "DT", "intervencao_02": "C", "intervencao_10": "D", "intervencao_09": "C", "intervencao_16": "DT",
+      "intervencao_06": "C", "intervencao_03": "DT", "intervencao_07": "DT", "intervencao_17": "DT", "intervencao_15": "DT"
+    }
+  },
+  "economia": {
+    "personaBrief": "Social-liberal: confia em mercado e empreendedorismo, mas quer Estado de bem-estar forte, educação e saúde sem lógica de lucro, renda mínima e mais imposto sobre patrimônio.",
+    "answers": {
+      "economia_05": "D", "economia_06": "D", "economia_07": "C", "economia_13": "C", "economia_03": "N",
+      "economia_14": "N", "economia_19": "D", "economia_16": "DT", "economia_17": "C", "economia_12": "C",
+      "economia_04": "D", "economia_11": "C", "economia_18": "D", "economia_15": "D", "economia_20": "D",
+      "economia_01": "DT", "economia_10": "DT", "economia_09": "C", "economia_02": "C", "economia_08": "D"
+    }
+  },
+  "controle": {
+    "personaBrief": "Economia de mercado com política industrial e climática verde, imposto menor sobre trabalho e maior sobre patrimônio, banco central independente e planejamento apenas em habitação e energia.",
+    "answers": {
+      "controle_05": "C", "controle_20": "C", "controle_19": "C", "controle_14": "D", "controle_07": "C",
+      "controle_04": "D", "controle_02": "D", "controle_17": "D", "controle_16": "CT", "controle_10": "C",
+      "controle_06": "N", "controle_08": "D", "controle_13": "DT", "controle_01": "C", "controle_11": "N",
+      "controle_03": "DT", "controle_15": "C", "controle_12": "D", "controle_18": "DT", "controle_09": "C"
+    }
+  },
+  "comercio": {
+    "personaBrief": "Fortemente pró-UE e mercado único, a favor de livre comércio e investimento estrangeiro, com cautela só em cadeias estratégicas europeias.",
+    "answers": {
+      "comercio_13": "D", "comercio_06": "C", "comercio_12": "C", "comercio_20": "C", "comercio_15": "N",
+      "comercio_19": "D", "comercio_04": "C", "comercio_17": "C", "comercio_07": "D", "comercio_02": "D",
+      "comercio_03": "D", "comercio_10": "C", "comercio_16": "C", "comercio_09": "D", "comercio_05": "DT",
+      "comercio_11": "D", "comercio_01": "D", "comercio_18": "C", "comercio_08": "N", "comercio_14": "C"
+    }
+  },
+  "religiao": {
+    "personaBrief": "Um dos partidos mais seculares da Europa: aboliu a lei de blasfêmia, questiona privilégios de escolas religiosas e defende neutralidade do Estado, sem hostilidade à fé privada.",
+    "answers": {
+      "religiao_02": "DT", "religiao_11": "D", "religiao_19": "C", "religiao_03": "CT", "religiao_10": "N",
+      "religiao_13": "N", "religiao_12": "D", "religiao_15": "C", "religiao_18": "DT", "religiao_05": "C",
+      "religiao_01": "C", "religiao_14": "DT", "religiao_06": "D", "religiao_16": "DT", "religiao_08": "DT",
+      "religiao_07": "C", "religiao_09": "C", "religiao_17": "C", "religiao_20": "DT", "religiao_04": "DT"
+    }
+  },
+  "moral": {
+    "personaBrief": "Ética liberal e progressista: eutanásia, aborto, direitos LGBT, regulação de cannabis e prostituição, e diversidade familiar, com cautela sobre cotas.",
+    "answers": {
+      "moral_07": "CT", "moral_04": "N", "moral_15": "C", "moral_12": "D", "moral_03": "CT",
+      "moral_01": "CT", "moral_09": "C", "moral_06": "DT", "moral_19": "C", "moral_02": "D",
+      "moral_05": "N", "moral_17": "C", "moral_13": "C", "moral_11": "C", "moral_10": "DT",
+      "moral_18": "DT", "moral_16": "D", "moral_14": "D", "moral_08": "N", "moral_20": "D"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "Entusiasta de inovação e ciência, aceita energia nuclear, transgênicos e edição genética médica, e une isso a política climática ambiciosa.",
+    "answers": {
+      "tecnologia_01": "C", "tecnologia_13": "C", "tecnologia_19": "C", "tecnologia_12": "N", "tecnologia_18": "D",
+      "tecnologia_10": "D", "tecnologia_05": "C", "tecnologia_04": "D", "tecnologia_16": "D", "tecnologia_07": "DT",
+      "tecnologia_08": "N", "tecnologia_03": "C", "tecnologia_15": "C", "tecnologia_20": "D", "tecnologia_06": "C",
+      "tecnologia_09": "C", "tecnologia_17": "C", "tecnologia_02": "D", "tecnologia_14": "C", "tecnologia_11": "C"
+    }
+  },
+  "archetype": { "sociedade": "C", "poder": "C", "economia": "C", "mundo": "B", "tecnologia": "C" }
+}

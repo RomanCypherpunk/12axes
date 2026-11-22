@@ -1240,5 +1240,89 @@
     "name": "Neue Leute",
     "description": "Liberale Mitte-rechts-Partei, 2020 von Alexey Nechayev, dem Besitzer von Faberlic, gegründet; systemische Opposition, die den Krieg in der Ukraine unterstützt und sich für Kleinunternehmen, Regionalismus, gewählte Bürgermeister und strengere Migrationskontrollen einsetzt.",
     "category": "Partei"
+  },
+  {
+    "id": "d66",
+    "name": "Democraten 66 (D66)",
+    "description": "Sozialliberale Partei, 1966 gegründet und von Rob Jetten geführt. Sie gewann 2025 die Wahl und führt seit 2026 eine Minderheitsregierung. Sie setzt sich für europäische Integration, Bildung, Klimaschutz, Sterbehilfe, LGBT-Rechte und demokratische Reformen ein.",
+    "category": "Partei"
+  },
+  {
+    "id": "vvd",
+    "name": "Volkspartij voor Vrijheid en Democratie (VVD)",
+    "description": "Liberalkonservative Partei von Mark Rutte, der von 2010 bis 2024 die Regierung führte. Unter Dilan Yeşilgöz steht sie für niedrige Steuern, Unternehmertum, die NATO, mehr Polizei und eine restriktive Asylpolitik und sitzt seit 2026 in der Regierung Jetten.",
+    "category": "Partei"
+  },
+  {
+    "id": "progressief-nederland",
+    "name": "Progressief Nederland (PRO)",
+    "description": "Mitte-links-Partei, 2026 durch den Zusammenschluss von GroenLinks und der Partij van de Arbeid (PvdA) entstanden und von Jesse Klaver geführt. Sie steht für den Klimawandel-Umbau, öffentliche Dienste, bezahlbaren Wohnraum, Vermögensteuern, Minderheitenrechte und die EU.",
+    "category": "Partei"
+  },
+  {
+    "id": "cda",
+    "name": "Christen-Democratisch Appèl (CDA)",
+    "description": "Christdemokratische Partei von Katholiken und Protestanten, 1980 gegründet, die Partei von Ruud Lubbers und Balkenende. Unter Henri Bontenbal steht sie für Zivilgesellschaft, Familie, soziale Marktwirtschaft und die NATO und sitzt seit 2026 in der Regierung Jetten.",
+    "category": "Partei"
+  },
+  {
+    "id": "ja21",
+    "name": "JA21",
+    "description": "Konservativ-liberale Partei, 2020 von Abtrünnigen des Forum voor Democratie gegründet und von Joost Eerdmans geführt. Sie fordert drastische Kürzungen bei Asyl und Einwanderung, niedrige Steuern, Recht und Ordnung, Atomkraft und eine weniger mächtige EU.",
+    "category": "Partei"
+  },
+  {
+    "id": "forum-voor-democratie",
+    "name": "Forum voor Democratie (FvD)",
+    "description": "Nationalkonservative Partei, 2016 von Thierry Baudet gegründet. Sie fordert den EU-Austritt (Nexit), direkte Demokratie durch Referenden, ein Ende der Masseneinwanderung, ist skeptisch gegenüber Klimapolitik und COVID-Impfstoffen und vertritt eine weiche Linie gegenüber Russland.",
+    "category": "Partei"
+  },
+  {
+    "id": "bbb",
+    "name": "BoerBurgerBeweging (BBB)",
+    "description": "Agrarpartei, 2019 von Caroline van der Plas gegen Stickstoffkürzungen gegründet, die Landwirte bedrohen. Sie verteidigt den ländlichen Raum und die Regionen, bäuerliche Familienbetriebe, weniger EU- und nationale Vorschriften, begrenzte Einwanderung und traditionelle Werte.",
+    "category": "Partei"
+  },
+  {
+    "id": "denk",
+    "name": "DENK",
+    "description": "2015 gegründete Partei türkischstämmiger Abgeordneter, die die PvdA verlassen hatten. Sie verteidigt die Rechte von Einwanderern und Muslimen, bekämpft Rassismus und Islamophobie, unterstützt Sozialstaat und palästinensische Sache und ist gesellschaftlich konservativ.",
+    "category": "Partei"
+  },
+  {
+    "id": "sgp",
+    "name": "Staatkundig Gereformeerde Partij (SGP)",
+    "description": "Orthodox-calvinistische Partei von 1918, die älteste im niederländischen Parlament. Sie will eine Regierung auf biblischer Grundlage, lehnt Abtreibung, Sterbehilfe und Homo-Ehe ab, verteidigt Sonntagsruhe und Monarchie und ist finanzpolitisch konservativ.",
+    "category": "Partei"
+  },
+  {
+    "id": "partij-voor-de-dieren",
+    "name": "Partij voor de Dieren (PvdD)",
+    "description": "Ökologische Partei, 2002 gegründet und weltweit die erste, die wegen der Tierrechte in ein nationales Parlament einzog. Sie fordert ein Ende der Massentierhaltung, den Schutz der Natur, radikalen Klimaschutz und eine Postwachstumswirtschaft.",
+    "category": "Partei"
+  },
+  {
+    "id": "christenunie",
+    "name": "ChristenUnie (CU)",
+    "description": "Protestantisch-christlich-soziale Partei, 2000 gegründet. Sie verteidigt das Leben gegen Abtreibung und Sterbehilfe, die Familie, die Aufnahme von Flüchtlingen, Hilfe für Arme, die Bewahrung der Schöpfung und eine nachhaltige Wirtschaft und regierte von 2017 bis 2024 mit Rutte.",
+    "category": "Partei"
+  },
+  {
+    "id": "sp-paises-baixos",
+    "name": "Socialistische Partij (SP)",
+    "description": "Sozialistische Partei maoistischen Ursprungs, 1972 gegründet. Sie will Gesundheitsversorgung ohne Eigenanteil, keine Märkte bei Gesundheit und Wohnen, höheren Mindestlohn und höhere Steuern für Reiche und ist skeptisch gegenüber EU, NATO und Arbeitsmigration.",
+    "category": "Partei"
+  },
+  {
+    "id": "50plus",
+    "name": "50PLUS",
+    "description": "Partei, 2009 gegründet, um sich für Rentner einzusetzen. Sie fordert den Ruhestand mit 65, inflationsangepasste Renten, Altenpflege und Maßnahmen gegen Altersdiskriminierung und zog 2025 mit zwei Abgeordneten wieder ins Parlament ein.",
+    "category": "Partei"
+  },
+  {
+    "id": "volt-paises-baixos",
+    "name": "Volt",
+    "description": "Niederländischer Zweig der paneuropäischen Partei Volt, 2018 gegründet. Sie steht für ein föderales Europa, Digitalisierung und Innovation, Klimaschutz, die Aufnahme von Flüchtlingen und evidenzbasierte Politik und gewann 2025 einen Sitz.",
+    "category": "Partei"
   }
 ]
