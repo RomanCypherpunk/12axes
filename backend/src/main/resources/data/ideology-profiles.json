@@ -4843,5 +4843,56 @@
       "moral": 56.2,
       "tecnologia": 71.3
     }
+  },
+  {
+    "ideologyId": "neofascismo",
+    "vector": {
+      "estrutura": 21.1,
+      "representacao": 28.1,
+      "poder": 68.3,
+      "imigracao": 95.6,
+      "diplomacia": 88.6,
+      "intervencao": 35.2,
+      "economia": 61.3,
+      "controle": 73.1,
+      "comercio": 91.9,
+      "religiao": 30.7,
+      "moral": 8.9,
+      "tecnologia": 48.7
+    }
+  },
+  {
+    "ideologyId": "neonazismo",
+    "vector": {
+      "estrutura": 8.0,
+      "representacao": 9.0,
+      "poder": 79.0,
+      "imigracao": 95.6,
+      "diplomacia": 93.3,
+      "intervencao": 34.0,
+      "economia": 63.7,
+      "controle": 80.2,
+      "comercio": 95.5,
+      "religiao": 51.0,
+      "moral": 17.2,
+      "tecnologia": 52.2
+    }
+  },
+  {
+    "ideologyId": "tecno-neoliberalismo",
+    "vector": {
+      "estrutura": 53.0,
+      "representacao": 63.8,
+      "poder": 30.5,
+      "imigracao": 11.4,
+      "diplomacia": 24.0,
+      "intervencao": 57.7,
+      "economia": 18.4,
+      "controle": 11.1,
+      "comercio": 4.1,
+      "religiao": 83.8,
+      "moral": 71.7,
+      "tecnologia": 84.4
+    }
   }
 ]

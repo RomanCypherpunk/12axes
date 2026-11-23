@@ -1,0 +1,12 @@
+# Revisão de categoria: Tecno-Neoliberalismo
+
+- ID: `tecno-neoliberalismo`
+- Categoria atual: Direita
+- Três vizinhos após merge: Neoliberalismo — 96,3% — Direita; Iluminismo — 94,4% — Centro; Liberalismo Clássico — 93,3% — Libertário
+- Proposta: mantém Direita
+- Confiança: média
+- Evidências textuais e referências: governo de especialistas escolhidos por competência (tecnocracia), livre mercado sem intervenção (laissez-faire), comércio global e fronteiras abertas (globalismo), economia pós-industrial de software e plataformas, cosmopolitismo e rejeição do governo movido por paixões de massa (contra a oclocracia). A fonte do Hypervalues não pôde ser lida (página em JavaScript); o verbete "Technoliberalism" da Wikipédia descreve uma variante descentralizada e mais regulada, diferente deste perfil, e foi usado só como pano de fundo.
+- Eixos relevantes: `economia` 18,4, `controle` 11,1 e `comercio` 4,1 (laissez-faire e globalismo, o núcleo de mercado); `imigracao` 11,4 (fronteiras abertas); `tecnologia` 84,4 e `religiao` 83,8 (pós-industrialismo e cosmopolitismo secular); `representacao` 63,8 (especialistas e instituições insuladas, mas com eleições mantidas); `poder` 30,5 (liberdades civis amplas).
+- Sinal dos vizinhos: um Direita (Neoliberalismo), um Centro (Iluminismo) e um Libertário (Liberalismo Clássico). Não há maioria; a bússola, com a regra de cálculo atual, coloca o vetor em Direita (direita 81,6; autoritarismo ~35).
+- Melhor argumento contrário: laissez-faire, fronteiras abertas e `poder` 30,5 aproximam o perfil da família Libertário (Liberalismo Clássico, Tecno-Comercialismo). A Direita prevalece porque o perfil defende governo por especialistas insulados da multidão (`representacao` 63,8, abaixo dos libertários) e a tradição dele é o neoliberalismo e a tecnocracia, não a limitação do Estado por direitos naturais.
+- Contradições ou dados a revisar: (1) 96,3% de proximidade com o Neoliberalismo, abaixo do limite de 97%; o que separa é tecnologia (84 contra 78), representação (64 contra 74), imigração (11 contra 31) e religião. (2) A personalidade é Ray Kurzweil (94,4%); Bill Gates deu 88,8% e Jeff Bezos 91,9%, então não serviram. Roger Douglas bate mais (96,3%), mas é figura do neoliberalismo clássico. (3) `religions` fica `[]`, porque `religiao` = 83,8 não exige marca. (4) O país é a Califórnia (83,2%); Luxemburgo bateu 89,5%, mas a Califórnia é a referência da economia de plataformas.

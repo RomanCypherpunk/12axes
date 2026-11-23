@@ -3693,5 +3693,44 @@
     "countryId": "franca",
     "personalityId": "friedrich-list",
     "religions": []
+  },
+  {
+    "id": "neofascismo",
+    "name": "Neofascismo",
+    "category": "Terceira Posição",
+    "description": "Herdeiro do fascismo adaptado às democracias: ultranacionalismo regenerador, etnopluralismo e xenofobia, antiglobalismo, líder forte e disputa cultural, com protecionismo e bem-estar só para nativos.",
+    "phrase": "Quero a nação regenerada sob um líder forte, cada povo em sua terra, fora o globalismo, com protecionismo e bem-estar só para nativos.",
+    "countryId": "italia",
+    "personalityId": "julius-evola",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "judaism",
+      "islam",
+      "buddhism",
+      "hinduism",
+      "other"
+    ]
+  },
+  {
+    "id": "neonazismo",
+    "name": "Neonazismo",
+    "category": "Terceira Posição",
+    "description": "Movimentos e células surgidos após 1945 para reviver o nacional-socialismo, com racismo biológico e antissemitismo conspiratório, etnonacionalismo branco transnacional, rejeição da democracia liberal e, em parte, ação sem líder.",
+    "phrase": "Quero etnoestados brancos de pureza racial, sob um líder absoluto e um Estado totalitário, sem democracia, com autarquia e bem-estar só para a raça.",
+    "countryId": "alemanha",
+    "personalityId": "hitler",
+    "religions": []
+  },
+  {
+    "id": "tecno-neoliberalismo",
+    "name": "Tecno-Neoliberalismo",
+    "category": "Direita",
+    "description": "Combina governo de especialistas, livre mercado sem intervenção, comércio e fronteiras abertos e cosmopolitismo, com uma economia pós-industrial movida por software e plataformas e desconfiança das paixões das massas.",
+    "phrase": "Quero um governo de especialistas, com mercado livre, fronteiras abertas e comércio global, numa economia movida por software e plataformas.",
+    "countryId": "eua-california",
+    "personalityId": "ray-kurzweil",
+    "religions": []
   }
 ]
