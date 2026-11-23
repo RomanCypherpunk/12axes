@@ -918,6 +918,9 @@ export const en: Strings = {
   footerPrivacy: 'Privacy',
   footerRefund: 'Refund',
   footerReport: 'Report',
+  feedbackTitle: 'Found a problem or have an idea?',
+  feedbackReport: 'Report a problem',
+  feedbackSuggest: 'Suggest an improvement',
   supportTitleEm: 'Support',
   supportLead:
     '12 Axes is independent and free. If the quiz helped you better understand your political ideology, consider donating via Pix or crypto to help keep the project running.',

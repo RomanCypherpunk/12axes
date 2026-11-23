@@ -907,6 +907,9 @@ export const pt: Strings = {
   footerPrivacy: 'Privacidade',
   footerRefund: 'Reembolso',
   footerReport: 'Reportar',
+  feedbackTitle: 'Encontrou um problema ou tem uma ideia?',
+  feedbackReport: 'Reportar um problema',
+  feedbackSuggest: 'Sugerir melhoria',
   supportTitleEm: 'Apoie',
   supportLead:
     'O 12 Axes é independente e gratuito. Se o teste te ajudou a entender melhor sua ideologia política, considere fazer uma doação via Pix ou criptomoedas para manter o projeto no ar.',

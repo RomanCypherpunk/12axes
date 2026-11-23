@@ -3,6 +3,7 @@ import { LANG, langPrefix, t } from '../../i18n';
 import { NEW_ISSUE_URL, REPO_URL } from '../../data/repo';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import { localAssetUrl, retryLocalAsset } from '../../utils/assetUrl';
+import { FeedbackLinks } from './FeedbackLinks';
 
 export function Logo({ onClick, href }: { onClick?: () => void; href?: string }) {
   const content = (
@@ -55,33 +56,36 @@ export function SiteFooter() {
           <Logo />
           <p>{t.footerRights}</p>
         </div>
-        <div className="e-foot-cols">
-          <nav className="e-foot-col" aria-label={t.footerProject}>
-            <h3>{t.footerProject}</h3>
-            <ul>
-              {project.map((link) => (
-                <li key={link.label}>
-                  {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
-                      {link.label}
-                    </a>
-                  ) : (
+        <div className="e-foot-side">
+          <FeedbackLinks />
+          <div className="e-foot-cols">
+            <nav className="e-foot-col" aria-label={t.footerProject}>
+              <h3>{t.footerProject}</h3>
+              <ul>
+                {project.map((link) => (
+                  <li key={link.label}>
+                    {link.external ? (
+                      <a href={link.href} target="_blank" rel="noopener noreferrer">
+                        {link.label}
+                      </a>
+                    ) : (
+                      <a href={link.href}>{link.label}</a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav className="e-foot-col" aria-label={t.footerExplore}>
+              <h3>{t.footerExplore}</h3>
+              <ul>
+                {explore.map((link) => (
+                  <li key={link.label}>
                     <a href={link.href}>{link.label}</a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <nav className="e-foot-col" aria-label={t.footerExplore}>
-            <h3>{t.footerExplore}</h3>
-            <ul>
-              {explore.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </footer>

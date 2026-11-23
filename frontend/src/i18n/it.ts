@@ -918,6 +918,9 @@ export const it: DeepPartial<Strings> = {
   footerPrivacy: 'Privacy',
   footerRefund: 'Rimborso',
   footerReport: 'Segnala',
+  feedbackTitle: 'Hai trovato un problema o hai un’idea?',
+  feedbackReport: 'Segnala un problema',
+  feedbackSuggest: 'Suggerisci un miglioramento',
   supportTitleEm: 'Sostieni',
   supportLead:
     "12 Axes è indipendente e gratuito. Se il quiz ti ha aiutato a capire meglio la tua ideologia politica, valuta di donare tramite Pix o criptovalute per aiutare a mantenere vivo il progetto.",

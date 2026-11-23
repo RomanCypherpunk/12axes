@@ -918,6 +918,9 @@ export const de: DeepPartial<Strings> = {
   footerPrivacy: 'Datenschutz',
   footerRefund: 'Erstattung',
   footerReport: 'Bericht',
+  feedbackTitle: 'Problem gefunden oder eine Idee?',
+  feedbackReport: 'Problem melden',
+  feedbackSuggest: 'Verbesserung vorschlagen',
   supportTitleEm: 'Unterstütze',
   supportLead:
     '12 Axes ist unabhängig und kostenlos. Wenn dir der Test geholfen hat, deine politische Ideologie besser zu verstehen, überlege eine Spende per Pix oder Krypto, damit das Projekt weiterläuft.',

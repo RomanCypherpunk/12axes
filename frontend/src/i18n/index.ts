@@ -633,6 +633,9 @@ export interface Strings {
   footerContribute: string;
   footerLicense: string;
   footerReport: string;
+  feedbackTitle: string;
+  feedbackReport: string;
+  feedbackSuggest: string;
   footerFullReport: string;
   footerTerms: string;
   footerPrivacy: string;
