@@ -548,15 +548,14 @@ export const de: DeepPartial<Strings> = {
   compassRight: 'Rechts',
   compassProgressive: 'Progressiv',
   compassTraditionalist: 'Traditionalistisch',
+  compassQuadrants: {
+    authLeft: 'Autoritäre Linke',
+    authRight: 'Autoritäre Rechte',
+    libLeft: 'Libertäre Linke',
+    libRight: 'Libertäre Rechte'
+  },
   compassInfo: {
-    aria: 'Wie der politische Kompass entsteht',
-    title: 'Wie der Kompass entsteht',
-    authLead: 'Die Achse autoritär × libertär',
-    authText: 'misst den Grad der Konzentration politischer Macht und des staatlichen Eingriffs in das Leben der Einzelnen. Sie berücksichtigt drei Hauptdimensionen: individuelle Freiheiten, politische Repräsentation und Staatsstruktur.',
-    econLead: 'Die Achse links × rechts',
-    econText: 'misst, wie weit links oder rechts du stehst, anhand der Wirtschaftsordnung: von kollektivem Eigentum und staatlicher Planung auf der einen Seite bis zu Privateigentum und freien Märkten auf der anderen. Sie berücksichtigt die grundlegenden Dimensionen Wirtschaft (Eigentum an den Produktionsmitteln) und Kontrolle (Markt gegenüber Planung und Regulierung).',
-    socialLead: 'Die soziale Achse',
-    socialText: 'misst die Ausrichtung deiner Werte zwischen Progressivismus und Traditionalismus und spiegelt deine Haltung zu Sitten, Kultur und gesellschaftlichen Werten wider.'
+    aria: 'Ansehen, was deine Kompassposition bedeutet'
   },
   compassSpectrumLabels: {
     'esq-radical': 'Radikale Linke',
@@ -586,11 +585,11 @@ export const de: DeepPartial<Strings> = {
     anarquismo: 'Du neigst dazu, jeder zentralen Autorität zu misstrauen und eine Gesellschaft zu befürworten, die durch freiwillige Zusammenarbeit und Selbstverwaltung organisiert ist, ohne Staat und ohne aufgezwungene Hierarchien.'
   },
   compassEconomicDescriptions: {
-    left: 'Du neigst dazu, kollektives oder öffentliches Eigentum an den Produktionsmitteln und eine Planung der Wirtschaft zu befürworten, mit Staat und Gesellschaft statt dem Markt im Zentrum.',
-    centerLeft: 'Du neigst dazu, den Markt zu akzeptieren, aber mit starker Präsenz des Staates: breite öffentliche Dienste, Regulierung und Umverteilung zum Abbau von Ungleichheit.',
-    center: 'Du neigst dazu, einen wirtschaftlichen Mittelweg zu suchen, mit ausgewogenen Rollen von Markt und Staat: Regulierung, wo nötig, und Raum für private Initiative.',
+    left: 'Du neigst dazu, kollektives oder öffentliches Eigentum an den Produktionsmitteln zu befürworten, mit Staat und Gesellschaft statt dem Markt im Zentrum der Wirtschaft.',
+    centerLeft: 'Du neigst dazu, den Markt zu akzeptieren, aber mit starker Präsenz des Staates: breite öffentliche Dienste, öffentliche Unternehmen in Schlüsselsektoren und Umverteilung zum Abbau von Ungleichheit.',
+    center: 'Du neigst dazu, einen wirtschaftlichen Mittelweg zu suchen, mit ausgewogenen Rollen von Markt und Staat: öffentliche Unternehmen, wo sie strategisch sind, und Raum für private Initiative.',
     centerRight: 'Du neigst dazu, dem Markt und der privaten Initiative mehr zu vertrauen, mit einem kleineren Staat und klaren Regeln, ohne einen gewissen sozialen Schutz aufzugeben.',
-    right: 'Du neigst dazu, Privateigentum und freien Markt zu befürworten, mit wenig staatlicher Planung oder Regulierung und Wettbewerb als Motor der Wirtschaft.'
+    right: 'Du neigst dazu, Privateigentum und freien Markt zu befürworten, mit wenigen Staatsunternehmen und Wettbewerb als Motor der Wirtschaft.'
   },
   compassSocialLabels: {
     veryProgressive: 'Stark progressiv',

@@ -13,26 +13,20 @@ export interface CompassPosition {
 
 const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
 
-// Pesos do eixo esquerda-direita: estritamente econômicos, focados nos dois pilares da
-// economia política clássica: `economia` (propriedade privada dos meios de produção, 60%) e
-// `controle` (livre mercado contra planejamento e regulação, 40%). Pautas como comércio
-// internacional (livre comércio vs tarifas), imigração e costumes não entram no cálculo
-// Pesos do eixo esquerda-direita: estritamente econômicos, focados nos dois pilares da
-// economia política clássica: `economia` (propriedade privada dos meios de produção, 60%) e
-// `controle` (livre mercado contra planejamento e regulação, 40%). Cálculo direto linear de 0 a 100,
-// proporcional aos eixos sem distorção ou afastamento não-linear.
-const WEIGHT_ECONOMIA = 0.6;
-const WEIGHT_CONTROLE = 0.4;
+// Eixo esquerda-direita: só `economia` (propriedade dos meios de produção, privada à direita), como o eixo econômico do
+// Political Compass. O planejamento estatal (`controle`) não decide a posição horizontal: uma economia dirigida pelo Estado
+// com propriedade privada (corporativismo, dirigismo, boa parte da extrema direita) não é "de esquerda". Ele entra no eixo
+// vertical, com um peso pequeno, porque diz o quanto o Estado conduz a vida econômica.
+const WEIGHT_PLANNING_IN_AUTHORITY = 0.1;
 
 /**
  * Compõe a bússola a partir dos eixos do quiz. `leftPercent` é o quanto o usuário pende ao polo
  * esquerdo do eixo em `axes.json` (100 = polo esquerdo inteiro), então cada eixo é invertido
  * quando o polo esquerdo não é o que a bússola chama de direita, autoritário ou tradicionalista:
  *
- * - direita: média ponderada linear (60% economia privada, 40% livre mercado):
- *   `economia` (esq. Público) e `controle` (esq. Planejamento) entram invertidos;
- * - autoritário: `poder` (esq. Segurança, direto), `representacao` (esq. Democracia) e `estrutura`
- *   (esq. Federal), estes dois invertidos;
+ * - direita: só a propriedade privada dos meios de produção, `economia` (esq. Público), invertido;
+ * - autoritário: 90% a média de `poder` (esq. Segurança, direto), `representacao` (esq. Democracia) e `estrutura`
+ *   (esq. Federal), estes dois invertidos, e 10% `controle` (esq. Planejamento, direto);
  * - tradicionalista (a barra): `moral` (esq. Progressista), invertido.
  *
  * Devolve null se algum desses eixos faltar no resultado (ex.: resultado compartilhado antigo).
@@ -55,8 +49,10 @@ function compassFromLeftPercents(left: (axisId: string) => number | undefined): 
     values[id] = value;
   }
   return {
-    right: WEIGHT_ECONOMIA * (100 - values.economia) + WEIGHT_CONTROLE * (100 - values.controle),
-    authoritarian: mean([values.poder, 100 - values.representacao, 100 - values.estrutura]),
+    right: 100 - values.economia,
+    authoritarian:
+      (1 - WEIGHT_PLANNING_IN_AUTHORITY) * mean([values.poder, 100 - values.representacao, 100 - values.estrutura]) +
+      WEIGHT_PLANNING_IN_AUTHORITY * values.controle,
     traditional: 100 - values.moral
   };
 }

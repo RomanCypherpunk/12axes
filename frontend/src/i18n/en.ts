@@ -548,15 +548,14 @@ export const en: Strings = {
   compassRight: 'Right',
   compassProgressive: 'Progressive',
   compassTraditionalist: 'Traditionalist',
+  compassQuadrants: {
+    authLeft: 'Authoritarian left',
+    authRight: 'Authoritarian right',
+    libLeft: 'Libertarian left',
+    libRight: 'Libertarian right'
+  },
   compassInfo: {
-    aria: 'How the political compass is made',
-    title: 'How the compass is made',
-    authLead: 'The authoritarian × libertarian axis',
-    authText: 'measures the degree of concentration of political power and of state intervention in the lives of individuals. It considers three main dimensions: individual liberties, political representation and state structure.',
-    econLead: 'The left × right axis',
-    econText: 'measures how far left or right you sit based on economic organization: from collective ownership and state planning on one side to private property and free markets on the other. It considers the fundamental dimensions of economy (ownership of the means of production) and control (market versus planning and regulation).',
-    socialLead: 'The social axis',
-    socialText: 'measures the orientation of your values between progressivism and traditionalism, reflecting your position on customs, culture and social values.'
+    aria: 'See what your compass position means'
   },
   compassSpectrumLabels: {
     'esq-radical': 'Radical left',
@@ -586,11 +585,11 @@ export const en: Strings = {
     anarquismo: 'You tend to distrust all centralized authority and to favor a society organized by voluntary cooperation and self-management, with no state and no imposed hierarchies.'
   },
   compassEconomicDescriptions: {
-    left: 'You tend to favor collective or public ownership of the means of production and economic planning, with the state and society, not the market, at the center.',
-    centerLeft: 'You tend to accept the market, but with a strong state presence: broad public services, regulation and redistribution to reduce inequality.',
-    center: 'You tend to seek an economic middle ground, with market and state in balanced roles: regulation where needed and room for private initiative.',
+    left: 'You tend to favor collective or public ownership of the means of production, with the state and society, not the market, at the center of the economy.',
+    centerLeft: 'You tend to accept the market, but with a strong state presence: broad public services, public enterprises in key sectors and redistribution to reduce inequality.',
+    center: 'You tend to seek an economic middle ground, with market and state in balanced roles: public enterprises where they are strategic and room for private initiative.',
     centerRight: 'You tend to trust the market and private initiative more, with a smaller state and clear rules, without giving up some social protection.',
-    right: 'You tend to favor private property and the free market, with little state planning or regulation and competition as the engine of the economy.'
+    right: 'You tend to favor private property and the free market, with few state-owned enterprises and competition as the engine of the economy.'
   },
   compassSocialLabels: {
     veryProgressive: 'Strongly progressive',

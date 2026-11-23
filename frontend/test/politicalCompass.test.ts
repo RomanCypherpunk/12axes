@@ -19,15 +19,20 @@ describe('computeCompass', () => {
     expect(computeCompass(results(ALL))).toEqual({ right: 50, authoritarian: 50, traditional: 50 });
   });
 
-  it('economia privada e livre mercado levam à direita; propriedade pública e planejamento, à esquerda', () => {
-    const right = computeCompass(results({ ...ALL, economia: 0, controle: 0 }))?.right ?? 0;
-    const left = computeCompass(results({ ...ALL, economia: 100, controle: 100 }))?.right ?? 100;
+  it('propriedade privada leva à direita e propriedade pública, à esquerda', () => {
+    const right = computeCompass(results({ ...ALL, economia: 0 }))?.right ?? 0;
+    const left = computeCompass(results({ ...ALL, economia: 100 }))?.right ?? 100;
     expect(right).toBe(100);
     expect(left).toBe(0);
   });
 
+  it('o planejamento estatal não mexe no eixo esquerda-direita', () => {
+    expect(computeCompass(results({ ...ALL, controle: 0 }))?.right).toBe(50);
+    expect(computeCompass(results({ ...ALL, controle: 100 }))?.right).toBe(50);
+  });
+
   it('é proporcional e linear: 75% público resulta em 25% na bússola', () => {
-    const pos = computeCompass(results({ ...ALL, economia: 75, controle: 75 }));
+    const pos = computeCompass(results({ ...ALL, economia: 75 }));
     expect(pos?.right).toBe(25);
   });
 
@@ -37,12 +42,12 @@ describe('computeCompass', () => {
     expect([...xs].sort((a, b) => a - b)).toEqual(xs);
   });
 
-  it('o perfil do nacional-socialismo fica no centro horizontal (Terceira Posição)', () => {
+  it('o perfil do nacional-socialismo fica no centro horizontal (propriedade mista) e acima no vertical (planejamento)', () => {
     // Nacional-socialismo no catálogo: economia 47.5 (propriedade sob controle), controle 78.8 (planejamento)
     const position = computeCompass(results({ ...ALL, economia: 47.5, controle: 78.8 }));
-    // faixa central de 33.3 a 66.7: a Terceira Posição rejeita tanto o liberalismo quanto o socialismo
-    expect(position?.right).toBeGreaterThan(33.3);
-    expect(position?.right).toBeLessThan(45);
+    expect(position?.right).toBeCloseTo(52.5, 5);
+    // o planejamento (10% do vertical) o empurra um pouco para o lado autoritário
+    expect(position?.authoritarian).toBeCloseTo(52.88, 2);
   });
 
   it('um perfil com intervencionismo moderado (Trump) não fica no mesmo ponto de um anarcocapitalista', () => {
@@ -54,9 +59,14 @@ describe('computeCompass', () => {
   });
 
   it('ordem, autocracia e unitarismo são autoritários; liberdade, democracia e federalismo, libertários', () => {
-    // esq. Segurança / esq. Democracia / esq. Federal: 100 = polo esquerdo
-    expect(computeCompass(results({ ...ALL, poder: 100, representacao: 0, estrutura: 0 }))?.authoritarian).toBe(100);
-    expect(computeCompass(results({ ...ALL, poder: 0, representacao: 100, estrutura: 100 }))?.authoritarian).toBe(0);
+    // esq. Segurança / esq. Democracia / esq. Federal: 100 = polo esquerdo; controle (esq. Planejamento) entra direto, com 10%
+    expect(computeCompass(results({ ...ALL, poder: 100, representacao: 0, estrutura: 0, controle: 100 }))?.authoritarian).toBe(100);
+    expect(computeCompass(results({ ...ALL, poder: 0, representacao: 100, estrutura: 100, controle: 0 }))?.authoritarian).toBe(0);
+  });
+
+  it('o planejamento pesa 10% no eixo vertical: mais planejamento, mais autoritário', () => {
+    expect(computeCompass(results({ ...ALL, controle: 100 }))?.authoritarian).toBe(55);
+    expect(computeCompass(results({ ...ALL, controle: 0 }))?.authoritarian).toBe(45);
   });
 
   it('progressista (polo esquerdo de moral) vira 0 na barra e tradicionalista vira 100', () => {

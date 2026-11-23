@@ -2,7 +2,8 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { VALUE_COINS } from '../components/results/valueCoins';
 import { COMPASS_COINS } from '../components/results/compassCoins';
-import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../components/results/PoliticalCompassSection';
+import { compassClamp, compassView } from '../components/results/PoliticalCompassSection';
+import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from './compassQuadrants';
 import { FILLED_POLE_ICONS } from '../data/filledPoleIcons';
 import { religiousPoleIcon } from '../data/religionIcons';
 import { LANG, t } from '../i18n';
@@ -46,7 +47,6 @@ const CHART_GAP = 36;
 const READ_WIDTH = BOX_INNER - CHART_WIDTH - CHART_GAP;
 // A grade 9x9: o lado é a largura da caixa do gráfico menos os dois rótulos laterais (22px) e os espaços (12px).
 const GRID_SIDE = CHART_WIDTH - 22 * 2 - 12 * 2;
-const GRID_GAP = 4;
 const MARKER_SIDE = 40;
 const VALUE_COLUMNS = 3;
 const VALUE_GAP = 16;
@@ -128,14 +128,33 @@ function compassChart(position: CompassPosition, markerColor: string): HTMLEleme
     width: `${GRID_SIDE}px`,
     height: `${GRID_SIDE}px`,
     display: 'grid',
-    gridTemplateColumns: 'repeat(9, 1fr)',
-    gridAutoRows: '1fr',
-    gap: `${GRID_GAP}px`
+    gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: '1fr 1fr'
   });
-  COMPASS_GRID_CELLS.forEach((color) => grid.append(el('span', { borderRadius: '5px', background: color })));
+  COMPASS_QUADRANT_ORDER.forEach((key) => {
+    const quad = el('div', {
+      display: 'grid',
+      placeItems: 'center',
+      padding: '8%',
+      textAlign: 'center',
+      fontFamily: SHARE_FONT_BODY,
+      fontWeight: '500',
+      fontSize: '20px',
+      lineHeight: '1.25',
+      background: COMPASS_QUADRANTS[key].bg,
+      color: COMPASS_QUADRANTS[key].ink
+    });
+    grid.append(quad);
+  });
+  const axisLine = (style: Partial<CSSStyleDeclaration>) => el('i', { position: 'absolute', background: '#101010', ...style });
+  const arrow = (style: Partial<CSSStyleDeclaration>) => el('i', { position: 'absolute', width: '0', height: '0', borderStyle: 'solid', borderColor: 'transparent', ...style });
   grid.append(
-    el('i', { position: 'absolute', left: '0', right: '0', top: '50%', height: '2px', background: 'rgba(16, 16, 16, 0.45)' }),
-    el('i', { position: 'absolute', top: '0', bottom: '0', left: '50%', width: '2px', background: 'rgba(16, 16, 16, 0.45)' }),
+    axisLine({ left: '-2%', right: '-2%', top: '50%', height: '2px', transform: 'translateY(-1px)' }),
+    axisLine({ top: '-2%', bottom: '-2%', left: '50%', width: '2px', transform: 'translateX(-1px)' }),
+    arrow({ left: '-3%', top: '50%', transform: 'translateY(-50%)', borderWidth: '7px 12px 7px 0', borderRightColor: '#101010' }),
+    arrow({ right: '-3%', top: '50%', transform: 'translateY(-50%)', borderWidth: '7px 0 7px 12px', borderLeftColor: '#101010' }),
+    arrow({ top: '-3%', left: '50%', transform: 'translateX(-50%)', borderWidth: '0 7px 12px 7px', borderBottomColor: '#101010' }),
+    arrow({ bottom: '-3%', left: '50%', transform: 'translateX(-50%)', borderWidth: '12px 7px 0 7px', borderTopColor: '#101010' }),
     marker(
       { left: `${compassClamp(position.right)}%`, top: `${compassClamp(100 - position.authoritarian)}%`, width: `${MARKER_SIDE}px`, height: `${MARKER_SIDE}px` },
       markerColor,

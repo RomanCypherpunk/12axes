@@ -27,7 +27,8 @@ import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
 import { COMPASS_COINS } from '../results/compassCoins';
-import { COMPASS_GRID_CELLS, compassClamp, compassView } from '../results/PoliticalCompassSection';
+import { compassClamp, compassView } from '../results/PoliticalCompassSection';
+import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from '../../utils/compassQuadrants';
 import { commonNote, unusualLead } from '../results/SignatureSection';
 import { ValueCoin } from '../results/ValueCoin';
 import { computeCompass, type CompassPosition } from '../../utils/politicalCompass';
@@ -432,9 +433,9 @@ function Compass({ position, category, moralAxis }: { position: CompassPosition;
       <div className="cmp-chart">
         <span className="cmp-lbl cmp-top">{t.compassAuthoritarian}</span>
         <span className="cmp-lbl cmp-left">{t.compassLeft}</span>
-        <div className="cmp-grid">
-          {COMPASS_GRID_CELLS.map((color, index) => (
-            <span key={index} style={{ background: color }} />
+        <div className="cmp-plot">
+          {COMPASS_QUADRANT_ORDER.map((key) => (
+            <div key={key} className="cmp-quad" style={{ background: COMPASS_QUADRANTS[key].bg }} />
           ))}
           <i className="cmp-axis cmp-x" />
           <i className="cmp-axis cmp-y" />

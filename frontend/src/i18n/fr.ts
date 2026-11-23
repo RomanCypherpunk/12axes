@@ -548,15 +548,14 @@ export const fr: DeepPartial<Strings> = {
   compassRight: 'Droite',
   compassProgressive: 'Progressiste',
   compassTraditionalist: 'Traditionaliste',
+  compassQuadrants: {
+    authLeft: 'Gauche autoritaire',
+    authRight: 'Droite autoritaire',
+    libLeft: 'Gauche libertaire',
+    libRight: 'Droite libertaire'
+  },
   compassInfo: {
-    aria: 'Comment la boussole politique est construite',
-    title: 'Comment la boussole est construite',
-    authLead: 'L’axe autoritaire × libertaire',
-    authText: 'mesure le degré de concentration du pouvoir politique et de l’intervention de l’État dans la vie des individus. Il prend en compte trois dimensions principales : les libertés individuelles, la représentation politique et la structure de l’État.',
-    econLead: 'L’axe gauche × droite',
-    econText: 'mesure votre position à gauche ou à droite selon l’organisation économique : de la propriété collective et de la planification étatique d’un côté à la propriété privée et aux marchés libres de l’autre. Il prend en compte les dimensions fondamentales de l’économie (propriété des moyens de production) et du contrôle (marché contre planification et régulation).',
-    socialLead: 'L’axe social',
-    socialText: 'mesure l’orientation de vos valeurs entre progressisme et traditionalisme, reflétant votre position sur les mœurs, la culture et les valeurs sociales.'
+    aria: 'Voir ce que signifie votre position sur la boussole'
   },
   compassSpectrumLabels: {
     'esq-radical': 'Gauche radicale',
@@ -586,11 +585,11 @@ export const fr: DeepPartial<Strings> = {
     anarquismo: 'Vous tendez à vous méfier de toute autorité centralisée et à défendre une société organisée par la coopération volontaire et l’autogestion, sans État ni hiérarchies imposées.'
   },
   compassEconomicDescriptions: {
-    left: 'Vous tendez à défendre la propriété collective ou publique des moyens de production et la planification de l’économie, avec l’État et la société, et non le marché, au centre.',
-    centerLeft: 'Vous tendez à accepter le marché, mais avec une forte présence de l’État : de larges services publics, de la régulation et de la redistribution pour réduire les inégalités.',
-    center: 'Vous tendez à chercher un juste milieu économique, avec des rôles équilibrés pour le marché et l’État : de la régulation là où il le faut et de la place pour l’initiative privée.',
+    left: 'Vous tendez à défendre la propriété collective ou publique des moyens de production, avec l’État et la société, et non le marché, au centre de l’économie.',
+    centerLeft: 'Vous tendez à accepter le marché, mais avec une forte présence de l’État : de larges services publics, des entreprises publiques dans les secteurs clés et de la redistribution pour réduire les inégalités.',
+    center: 'Vous tendez à chercher un juste milieu économique, avec des rôles équilibrés pour le marché et l’État : des entreprises publiques là où elles sont stratégiques et de la place pour l’initiative privée.',
     centerRight: 'Vous tendez à faire davantage confiance au marché et à l’initiative privée, avec un État plus petit et des règles claires, sans renoncer à une certaine protection sociale.',
-    right: 'Vous tendez à défendre la propriété privée et le libre marché, avec peu de planification ou de régulation de l’État et la concurrence comme moteur de l’économie.'
+    right: 'Vous tendez à défendre la propriété privée et le libre marché, avec peu d’entreprises d’État et la concurrence comme moteur de l’économie.'
   },
   compassSocialLabels: {
     veryProgressive: 'Très progressiste',

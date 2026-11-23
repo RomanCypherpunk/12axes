@@ -388,6 +388,7 @@ export interface Strings {
   compassRight: string;
   compassProgressive: string;
   compassTraditionalist: string;
+  compassQuadrants: Record<'authLeft' | 'authRight' | 'libLeft' | 'libRight', string>;
   compassSpectrumLabels: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
   compassEconomicLabels: Record<'left' | 'centerLeft' | 'center' | 'centerRight' | 'right', string>;
   compassSpectrumDescriptions: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
@@ -396,13 +397,6 @@ export interface Strings {
   compassSocialDescriptions: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
   compassInfo: {
     aria: string;
-    title: string;
-    authLead: string;
-    authText: string;
-    econLead: string;
-    econText: string;
-    socialLead: string;
-    socialText: string;
   };
   compassAria: (right: number, authoritarian: number, traditional: number) => string;
   countriesSectionTitle: string;
