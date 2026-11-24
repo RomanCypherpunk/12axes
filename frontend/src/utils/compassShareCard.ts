@@ -146,6 +146,17 @@ function compassChart(position: CompassPosition, markerColor: string): HTMLEleme
     });
     grid.append(quad);
   });
+  // Grade do Political Compass (20×20 células, 10×10 por quadrante), por cima das cores e por baixo dos eixos e do "X".
+  const gridLine = 'rgba(90, 90, 90, 0.22)';
+  grid.append(
+    el('i', {
+      position: 'absolute',
+      inset: '0',
+      backgroundImage: `linear-gradient(to right, ${gridLine} 2px, transparent 2px), linear-gradient(to bottom, ${gridLine} 2px, transparent 2px)`,
+      backgroundSize: '5% 5%',
+      boxShadow: `inset 0 0 0 2px ${gridLine}`
+    })
+  );
   const axisLine = (style: Partial<CSSStyleDeclaration>) => el('i', { position: 'absolute', background: '#101010', ...style });
   const arrow = (style: Partial<CSSStyleDeclaration>) => el('i', { position: 'absolute', width: '0', height: '0', borderStyle: 'solid', borderColor: 'transparent', ...style });
   grid.append(

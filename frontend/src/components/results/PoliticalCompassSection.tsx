@@ -165,6 +165,7 @@ export function CompassChart({ ariaLabel, markers }: { ariaLabel: string; marker
         {COMPASS_QUADRANT_ORDER.map((key) => (
           <div key={key} className="e-compass-quad" style={{ background: COMPASS_QUADRANTS[key].bg }} />
         ))}
+        <i className="e-compass-grid" aria-hidden="true" />
         <i className="e-compass-axis is-x" aria-hidden="true" />
         <i className="e-compass-axis is-y" aria-hidden="true" />
         {markers.map(({ key, ...marker }) => (

@@ -217,6 +217,7 @@
 .rp .cmp-right{grid-column:3;grid-row:2;writing-mode:vertical-rl}
 .rp .cmp-plot{grid-column:2;grid-row:2;position:relative;aspect-ratio:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 .rp .cmp-quad{display:grid;place-items:center;padding:8%;text-align:center;white-space:pre-line;font-size:7px;font-weight:500;line-height:1.25}
+.rp .cmp-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(90,90,90,.2) 1px,transparent 1px),linear-gradient(to bottom,rgba(90,90,90,.2) 1px,transparent 1px);background-size:5% 5%;box-shadow:inset 0 0 0 1px rgba(90,90,90,.2)}
 .rp .cmp-axis{position:absolute;background:#101010}
 .rp .cmp-x{left:-2%;right:-2%;top:50%;height:.75px;transform:translateY(-.375px)}.rp .cmp-y{top:-2%;bottom:-2%;left:50%;width:.75px;transform:translateX(-.375px)}
 .rp .cmp-axis::before,.rp .cmp-axis::after{content:"";position:absolute;border:3.5px solid transparent}

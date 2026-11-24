@@ -437,6 +437,7 @@ function Compass({ position, category, ideologyId, moralAxis }: { position: Comp
           {COMPASS_QUADRANT_ORDER.map((key) => (
             <div key={key} className="cmp-quad" style={{ background: COMPASS_QUADRANTS[key].bg }} />
           ))}
+          <i className="cmp-grid" />
           <i className="cmp-axis cmp-x" />
           <i className="cmp-axis cmp-y" />
           <CompassX left={right} top={100 - authoritarian} color={markerColor ?? 'var(--cat)'} />
