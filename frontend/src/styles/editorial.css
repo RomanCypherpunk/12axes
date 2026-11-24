@@ -348,7 +348,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-match.e-ideology-hero .e-match-pill{background:#fff;color:var(--cat)}
 .ed .e-ideology-hero .e-more,.e-ideology-hero .e-match-intro{border-top-color:color-mix(in srgb,var(--cat) 22%,transparent)}
 /* Desktop: a imagem nunca é cortada nem ganha barras: fica no tamanho da própria proporção, com a largura máxima da bandeira dos países (220px) e uma altura máxima. */
-@media(min-width:721px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:220px;max-height:170px;object-fit:fill}}
+@media(min-width:721px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:220px;max-height:146px;object-fit:contain}}
 @media(max-width:720px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:100%;max-height:200px;aspect-ratio:auto;object-fit:contain}.e-ideology-hero .e-match-tags{display:flex;justify-content:center}.e-ideology-hero .e-match-sub{display:none}}
 .e-top-head .e-ring{width:92px!important;height:92px!important}.e-top-head .e-ring strong{font-size:22px}
 .e-top-body{margin:0 36px;padding:18px 0 20px;border-top:1px solid color-mix(in srgb,var(--cat) 22%,transparent)}
