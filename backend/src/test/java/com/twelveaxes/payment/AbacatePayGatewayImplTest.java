@@ -124,6 +124,7 @@ class AbacatePayGatewayImplTest {
         JsonNode metadata = JSON.readTree(bodies.get(1)).at("/metadata");
         assertThat(metadata.at("/return_url").asText()).isEqualTo("https://12axes.vercel.app/results?est=1");
         assertThat(metadata.at("/email").asText()).isEqualTo("a@b.com");
+        assertThat(metadata.at("/lang").asText()).isEqualTo("pt");
         assertThat(metadata.at("/vector_hash").asText()).isEqualTo(HASH);
     }
 
@@ -137,14 +138,15 @@ class AbacatePayGatewayImplTest {
     }
 
     @Test
-    void aFoundCheckoutCarriesTheEmailAndTheResultAddressFromItsMetadata() {
+    void aFoundCheckoutCarriesTheEmailTheResultAddressAndTheLangFromItsMetadata() {
         routes.put("GET /checkouts/list", list("{\"id\":\"" + BILL + "\",\"status\":\"PAID\",\"metadata\":{\"vector_hash\":\"" + HASH
-                + "\",\"email\":\"a@b.com\",\"return_url\":\"https://12axes.vercel.app/results?est=1\"}}"));
+                + "\",\"email\":\"a@b.com\",\"return_url\":\"https://12axes.vercel.app/results?est=1\",\"lang\":\"pt\"}}"));
 
         PaymentGateway.PaidPayment payment = gateway.findByNonce(NONCE).orElseThrow();
 
         assertThat(payment.email()).isEqualTo("a@b.com");
         assertThat(payment.returnUrl()).isEqualTo("https://12axes.vercel.app/results?est=1");
+        assertThat(payment.lang()).isEqualTo("pt");
     }
 
     @Test

@@ -142,6 +142,10 @@ class PaymentResendControllerTest {
         GATEWAY.byNonce.put(PAY, new PaymentGateway.PaidPayment(PAY, HASH, false, email, returnUrl));
     }
 
+    private static void paid(String email, String returnUrl, String lang) {
+        GATEWAY.byNonce.put(PAY, new PaymentGateway.PaidPayment(PAY, HASH, false, email, returnUrl, lang));
+    }
+
     private org.springframework.test.web.servlet.ResultActions call(Map<String, String> fields) throws Exception {
         return mockMvc.perform(post("/api/webhooks/resend-access")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -178,8 +182,8 @@ class PaymentResendControllerTest {
         assertThat(mail.subject()).isEqualTo("Your full 12 Axes report");
         assertThat(mail.html()).contains("Open my report");
         String link = mail.text().lines().filter(line -> line.startsWith("http")).findFirst().orElseThrow();
-        assertThat(link).startsWith(RESULT_URL + "#access=");
-        String token = URLDecoder.decode(link.substring((RESULT_URL + "#access=").length()), StandardCharsets.UTF_8);
+        assertThat(link).startsWith(RESULT_URL + "&access=");
+        String token = URLDecoder.decode(link.substring((RESULT_URL + "&access=").length()), StandardCharsets.UTF_8);
         assertThat(entitlementToken.isValidFor(token, HASH)).isTrue();
     }
 
@@ -191,6 +195,38 @@ class PaymentResendControllerTest {
 
         assertThat(MAILER.sent).hasSize(1);
         assertThat(MAILER.sent.getFirst().subject()).isEqualTo("Seu relatório completo do 12 Axes");
+    }
+
+    @Test
+    void usesTheLanguageSavedInThePaymentWhenTheRequestDoesNotOverrideIt() throws Exception {
+        // Caminho real de producao: o idioma vem do que o gateway gravou (a pagina de resultado no momento da compra),
+        // nao do pedido de reenvio.
+        paid("ana@exemplo.com", RESULT_URL, "es");
+
+        call(request(SECRET, PAY, V, null, null, null)).andExpect(status().isOk());
+
+        assertThat(MAILER.sent).hasSize(1);
+        assertThat(MAILER.sent.getFirst().subject()).isEqualTo("Tu informe completo de 12 Axes");
+    }
+
+    @Test
+    void aLangInTheRequestOverridesAnOldPaymentThatSavedNone() throws Exception {
+        paid("ana@exemplo.com", RESULT_URL, null);
+
+        call(request(SECRET, PAY, V, null, null, "de")).andExpect(status().isOk());
+
+        assertThat(MAILER.sent).hasSize(1);
+        assertThat(MAILER.sent.getFirst().subject()).isEqualTo("Dein vollständiger 12-Axes-Bericht");
+    }
+
+    @Test
+    void anUnknownLanguageFallsBackToEnglish() throws Exception {
+        paid("ana@exemplo.com", RESULT_URL, "xx");
+
+        call(request(SECRET, PAY, V, null, null, null)).andExpect(status().isOk());
+
+        assertThat(MAILER.sent).hasSize(1);
+        assertThat(MAILER.sent.getFirst().subject()).isEqualTo("Your full 12 Axes report");
     }
 
     @Test

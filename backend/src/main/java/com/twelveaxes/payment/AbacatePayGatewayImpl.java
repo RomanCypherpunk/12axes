@@ -87,9 +87,13 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         // So Pix: a loja ainda nao tem cartao liberado na AbacatePay (sem isso ela recusa o checkout: "CARD is not available").
         body.putArray("methods").add("PIX");
         body.put("externalId", nonce);
-        // O e-mail e o endereco do resultado ficam no pagamento: o webhook de "pago" os le daqui para mandar o acesso por e-mail
-        // sem depender do navegador (o evento nao traz o metadata, entao o checkout e consultado de novo pela API).
+        // O e-mail, o endereco do resultado e o idioma ficam no pagamento: o webhook de "pago" os le daqui para mandar o
+        // acesso por e-mail (no idioma que a pessoa usava ao comprar) sem depender do navegador (o evento nao traz o
+        // metadata, entao o checkout e consultado de novo pela API).
         ObjectNode metadata = body.putObject("metadata").put("vector_hash", vectorHash).put("nonce", nonce).put("return_url", returnUrl);
+        if (lang != null && !lang.isBlank()) {
+            metadata.put("lang", lang.trim());
+        }
         if (email != null && !email.isBlank()) {
             metadata.put("email", email.trim());
         }
@@ -169,7 +173,7 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
     private static PaidPayment paymentOf(JsonNode checkout, boolean pending) {
         JsonNode metadata = checkout.path("metadata");
         return new PaidPayment(checkout.path("id").asText(), metadata.path("vector_hash").asText(""), pending,
-                textOrNull(metadata.path("email")), textOrNull(metadata.path("return_url")));
+                textOrNull(metadata.path("email")), textOrNull(metadata.path("return_url")), textOrNull(metadata.path("lang")));
     }
 
     private static String textOrNull(JsonNode node) {

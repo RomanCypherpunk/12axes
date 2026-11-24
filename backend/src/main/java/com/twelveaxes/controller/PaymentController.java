@@ -106,7 +106,6 @@ public class PaymentController {
         // Só o português paga em reais; qualquer outro idioma vai para a Paddle, em inglês e em dólar.
         String requested = request.lang() == null ? "" : request.lang().trim().toLowerCase();
         boolean english = !requested.isEmpty() && !requested.equals(QuizDataService.LANG_PT) && !requested.startsWith("pt-");
-        String lang = english ? QuizDataService.LANG_EN : QuizDataService.LANG_PT;
         String amount = english ? priceUsd : priceBrl;
         if (amount == null || amount.isBlank()) {
             // Moeda ainda nao liberada para venda.
@@ -116,7 +115,10 @@ public class PaymentController {
         String vectorHash = EntitlementToken.hashOf(AxisValuesParser.parse(request.v()));
         String email = validEmail(request.email());
         String nonce = newNonce();
-        CheckoutSession session = gateway().create(amount.trim(), english ? "USD" : "BRL", nonce, vectorHash, returnUrl, lang, email);
+        // O idioma gravado no pagamento e o real da pagina de resultado (es/de/it/ru/fr/pt/en), nao so pt/en: e o que
+        // decide o idioma do e-mail de acesso depois, mesmo a Paddle so cobrando em dolar/ingles.
+        String emailLang = QuizDataService.normalizeLang(request.lang());
+        CheckoutSession session = gateway().create(amount.trim(), english ? "USD" : "BRL", nonce, vectorHash, returnUrl, emailLang, email);
         return new CheckoutResponse(session.url());
     }
 

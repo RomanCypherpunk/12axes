@@ -11,6 +11,10 @@ describe('resultUrlWithoutPaymentParams', () => {
     );
   });
 
+  it('tira o acesso do link do e-mail (?access=)', () => {
+    expect(resultUrlWithoutPaymentParams('https://12axes.vercel.app/results?est=92.3&access=v2%7Cabc')).toBe('https://12axes.vercel.app/results?est=92.3');
+  });
+
   it('tira também a senha de cortesia', () => {
     expect(resultUrlWithoutPaymentParams('https://12axes.vercel.app/results?est=92.3&gift=abc')).toBe('https://12axes.vercel.app/results?est=92.3');
   });

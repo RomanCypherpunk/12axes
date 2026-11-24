@@ -148,8 +148,9 @@ class AbacatePayWebhookControllerTest {
         return mockMvc.perform(request);
     }
 
+    // A AbacatePay so vende em reais: o pagamento gravado sempre traz "pt", como o gateway real faria.
     private static void paid(String email, String returnUrl) {
-        GATEWAY.byNonce.put(NONCE, new PaymentGateway.PaidPayment(BILL, HASH, false, email, returnUrl));
+        GATEWAY.byNonce.put(NONCE, new PaymentGateway.PaidPayment(BILL, HASH, false, email, returnUrl, "pt"));
     }
 
     @Test
@@ -164,10 +165,10 @@ class AbacatePayWebhookControllerTest {
         assertThat(mail.to()).isEqualTo("ana@exemplo.com");
         assertThat(mail.key()).isEqualTo("abacatepay-" + BILL);
         assertThat(mail.subject()).isEqualTo("Seu relatório completo do 12 Axes");
-        assertThat(mail.html()).contains("Abrir meu relatório").contains("est=50&amp;rep=85#access=");
+        assertThat(mail.html()).contains("Abrir meu relatório").contains("est=50&amp;rep=85&amp;access=");
         String link = mail.text().lines().filter(line -> line.startsWith("http")).findFirst().orElseThrow();
-        assertThat(link).startsWith(RESULT_URL + "#access=");
-        String token = URLDecoder.decode(link.substring((RESULT_URL + "#access=").length()), StandardCharsets.UTF_8);
+        assertThat(link).startsWith(RESULT_URL + "&access=");
+        String token = URLDecoder.decode(link.substring((RESULT_URL + "&access=").length()), StandardCharsets.UTF_8);
         assertThat(entitlementToken.isValidFor(token, HASH)).isTrue();
     }
 

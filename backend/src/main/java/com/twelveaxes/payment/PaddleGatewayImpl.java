@@ -80,6 +80,9 @@ public class PaddleGatewayImpl implements PaymentGateway {
         item.put("price_id", priceId);
         item.put("quantity", 1);
         ObjectNode customData = body.putObject("custom_data").put("vector_hash", vectorHash).put("nonce", nonce).put("return_url", returnUrl);
+        if (lang != null && !lang.isBlank()) {
+            customData.put("lang", lang.trim());
+        }
         if (email != null && !email.isBlank()) {
             customData.put("email", email.trim());
         }
@@ -118,7 +121,7 @@ public class PaddleGatewayImpl implements PaymentGateway {
         }
         JsonNode customData = data.path("custom_data");
         return Optional.of(new PaidPayment(data.path("id").asText(nonce), customData.path("vector_hash").asText(""), false,
-                textOrNull(customData.path("email")), textOrNull(customData.path("return_url"))));
+                textOrNull(customData.path("email")), textOrNull(customData.path("return_url")), textOrNull(customData.path("lang"))));
     }
 
     private static String textOrNull(JsonNode node) {

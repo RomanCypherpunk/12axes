@@ -4,7 +4,7 @@ import { startCheckout, unlockPayment } from '../../services/premiumApi';
 import { ApiError } from '../../services/quizApi';
 import { track } from '../../utils/analytics';
 import { openPaddleCheckout, PADDLE_CLIENT_TOKEN, paddleTransactionFromSearch } from '../../utils/paddle';
-import { accessTokenFromHash, findRenewableToken, returnUrlWithLang, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from '../../utils/entitlement';
+import { accessTokenFromLocation, findRenewableToken, returnUrlWithLang, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from '../../utils/entitlement';
 
 /** Por que o acesso não abriu: outro resultado ou reembolso ("denied"), gateway/servidor fora ("unavailable"), ou o Pix demorou ("timeout"). */
 export type AccessProblem = 'denied' | 'unavailable' | 'timeout';
@@ -32,7 +32,7 @@ const MAX_ATTEMPTS = 20;
 
 // A volta do pagamento traz ?unlock=<sessão> (retorno do checkout) ou ?pay=<código> (link do recibo).
 // ?gift=<senha> é o link de cortesia (GIFT_KEY no servidor): libera sem pagamento; o token é salvo e o parâmetro permanece na URL.
-const PAYMENT_PARAMS = ['unlock', 'pay', 'gift'] as const;
+const PAYMENT_PARAMS = ['unlock', 'pay', 'gift', 'access'] as const;
 
 function paymentFromUrl(): { sessionId?: string; pay?: string; gift?: string } | null {
   const params = new URLSearchParams(window.location.search);
@@ -101,7 +101,7 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
   useEffect(() => {
     if (!enabled) return;
     const onHashChange = () => {
-      if (accessTokenFromHash(window.location.hash)) setAttempt((value) => value + 1);
+      if (accessTokenFromLocation(window.location.search, window.location.hash)) setAttempt((value) => value + 1);
     };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
@@ -120,7 +120,7 @@ export function usePremiumAccess(vector: number[], enabled: boolean): PremiumAcc
 
       // Link guardado do relatório (#access=): o acesso vem no próprio endereço. Sai do endereço logo; se o servidor o
       // recusar (outro resultado, vencido, reembolsado), o relatório pede o acesso de novo, como com qualquer token.
-      const fromLink = accessTokenFromHash(window.location.hash);
+      const fromLink = accessTokenFromLocation(window.location.search, window.location.hash);
       if (fromLink) {
         window.history.replaceState(null, '', resultUrlWithoutPaymentParams());
         const expiresAt = tokenExpiresAt(fromLink);

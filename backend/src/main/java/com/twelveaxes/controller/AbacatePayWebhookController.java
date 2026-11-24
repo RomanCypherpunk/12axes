@@ -12,7 +12,6 @@ import com.twelveaxes.payment.PaymentGatewayException;
 import com.twelveaxes.payment.TransactionalMailSender;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.time.Duration;
@@ -147,9 +146,10 @@ public class AbacatePayWebhookController {
             return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).build();
         }
         String token = entitlementToken.issue(payment.vectorHash(), payment.paymentRef(), tokenValidity);
-        String link = resultUrl.get() + "#access=" + URLEncoder.encode(token, StandardCharsets.UTF_8);
+        String link = AccessEmail.link(resultUrl.get(), token);
         try {
-            mailer.send(email.trim(), AccessEmail.SUBJECT, AccessEmail.html(link), AccessEmail.text(link), "abacatepay-" + payment.paymentRef());
+            mailer.send(email.trim(), AccessEmail.subject(payment.lang()), AccessEmail.html(payment.lang(), link), AccessEmail.text(payment.lang(), link),
+                    "abacatepay-" + payment.paymentRef());
         } catch (MailSendException e) {
             LOG.warn("Webhook da AbacatePay: falha ao enviar o e-mail do pagamento {}: {}", payment.paymentRef(), e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();

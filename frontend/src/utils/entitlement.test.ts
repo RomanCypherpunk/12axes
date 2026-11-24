@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { accessLink, accessTokenFromHash, canonicalResultLink, returnUrlWithLang, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
+import { accessLink, accessTokenFromHash, accessTokenFromLocation, canonicalResultLink, returnUrlWithLang, findRenewableToken, loadToken, removeToken, saveToken, tokenExpiresAt, vectorHash } from './entitlement';
 
 const base64url = (text: string) => btoa(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 const tokenExpiringAt = (seconds: number) => `${base64url(`v2|hash|pi_3Test|1000|${seconds}`)}.assinatura`;
@@ -176,5 +176,13 @@ describe('canonicalResultLink', () => {
     const link = accessLink(canonicalResultLink(sorted, 'pt'), 'TOKEN');
     expect(link.endsWith('&religion=catholic#access=TOKEN')).toBe(true);
     expect(link.indexOf('est=')).toBeLessThan(link.indexOf('rep='));
+  });
+});
+
+describe('accessTokenFromLocation', () => {
+  it('lê o acesso da busca (link do e-mail) e do fragmento (links antigos)', () => {
+    expect(accessTokenFromLocation('?est=1&access=TOK%2BEN', '')).toBe('TOK+EN');
+    expect(accessTokenFromLocation('?est=1', '#access=TOKEN')).toBe('TOKEN');
+    expect(accessTokenFromLocation('?est=1', '')).toBeNull();
   });
 });

@@ -12,7 +12,6 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.time.Duration;
@@ -129,13 +128,12 @@ public class PaymentResendController {
         }
         // Mesma validade e emissao do token de acesso normal, presa ao pagamento reconsultado (nao ao que o pedido informou).
         String token = entitlementToken.issue(vectorHash, payment.paymentRef(), tokenValidity);
-        String link = returnUrl + "#access=" + URLEncoder.encode(token, StandardCharsets.UTF_8);
-        boolean portuguese = "pt".equalsIgnoreCase(request.lang());
-        String subject = portuguese ? AccessEmail.SUBJECT : AccessEmail.SUBJECT_EN;
-        String html = portuguese ? AccessEmail.html(link) : AccessEmail.htmlEn(link);
-        String text = portuguese ? AccessEmail.text(link) : AccessEmail.textEn(link);
+        String link = AccessEmail.link(returnUrl, token);
+        // O idioma vem do pagamento (o que a Paddle/AbacatePay gravou ao abrir o checkout); 'lang' no pedido so reforca
+        // pagamentos antigos que nao o gravaram.
+        String lang = firstNonBlank(request.lang(), payment.lang());
         try {
-            mailer.send(email, subject, html, text, "resend-" + payment.paymentRef());
+            mailer.send(email, AccessEmail.subject(lang), AccessEmail.html(lang, link), AccessEmail.text(lang, link), "resend-" + payment.paymentRef());
         } catch (MailSendException e) {
             LOG.warn("Reenvio: falha ao enviar o e-mail do pagamento {}: {}", payment.paymentRef(), e.getMessage());
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao enviar o e-mail");

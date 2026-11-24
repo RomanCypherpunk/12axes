@@ -92,7 +92,33 @@ class PaddleGatewayImplTest {
         assertThat(body.at("/items/0/quantity").asInt()).isEqualTo(1);
         assertThat(body.at("/custom_data/vector_hash").asText()).isEqualTo(HASH);
         assertThat(body.at("/custom_data/nonce").asText()).isEqualTo(NONCE);
+        assertThat(body.at("/custom_data/return_url").asText()).isEqualTo("https://12axes.vercel.app/results?est=1");
+        assertThat(body.at("/custom_data/email").isMissingNode()).isTrue();
         assertThat(body.at("/checkout/url").asText()).isEqualTo("https://12axes.vercel.app/results?est=1");
+    }
+
+    @Test
+    void createWithEmailAndLangSavesBothInCustomDataForTheAccessEmailLater() throws Exception {
+        routes.put("POST /transactions", "{\"data\":{\"id\":\"" + TXN + "\",\"checkout\":{\"url\":\"https://12axes.vercel.app/results?_ptxn=" + TXN + "&est=1\"}}}");
+
+        gateway.create("3.99", "USD", NONCE, HASH, "https://12axes.vercel.app/results?est=1", "es", "michael@exemplo.com");
+
+        JsonNode body = JSON.readTree(bodies.getFirst());
+        assertThat(body.at("/custom_data/lang").asText()).isEqualTo("es");
+        assertThat(body.at("/custom_data/email").asText()).isEqualTo("michael@exemplo.com");
+    }
+
+    @Test
+    void findByNonceReturnsTheEmailReturnUrlAndLangSavedInCustomData() throws Exception {
+        routes.put("GET /transactions/" + TXN,
+                "{\"data\":{\"id\":\"" + TXN + "\",\"status\":\"completed\",\"custom_data\":{\"vector_hash\":\"" + HASH
+                        + "\",\"email\":\"michael@exemplo.com\",\"return_url\":\"https://12axes.vercel.app/results?est=1\",\"lang\":\"es\"}}}");
+
+        assertThat(gateway.findByNonce(TXN)).hasValueSatisfying(paid -> {
+            assertThat(paid.email()).isEqualTo("michael@exemplo.com");
+            assertThat(paid.returnUrl()).isEqualTo("https://12axes.vercel.app/results?est=1");
+            assertThat(paid.lang()).isEqualTo("es");
+        });
     }
 
     @Test

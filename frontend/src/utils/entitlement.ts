@@ -136,6 +136,15 @@ export function accessTokenFromHash(hash: string): string | null {
   return value && value.length > 0 ? value : null;
 }
 
+/**
+ * O acesso do link do e-mail: ?access=... (o e-mail usa a busca, não o fragmento, que rastreadores de clique e navegadores
+ * embutidos de e-mail costumam perder), ou o fragmento #access=... dos links guardados e e-mails antigos.
+ */
+export function accessTokenFromLocation(search: string, hash: string): string | null {
+  const value = new URLSearchParams(search).get(ACCESS_HASH_KEY);
+  return value && value.length > 0 ? value : accessTokenFromHash(hash);
+}
+
 /** Endereço de volta do pagamento, sempre com o idioma atual: quem chegou por /es ou /en não pode voltar em outro idioma. */
 export function returnUrlWithLang(url: string, lang: string): string {
   if (lang === 'pt') return url;
