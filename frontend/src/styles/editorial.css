@@ -344,6 +344,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* Fundo pastel do espectro (como o cartão sem imagem), com a fitinha na cor base; os divisores seguem a cor do espectro. */
 .e-match.e-ideology-hero{background:var(--cat-bg)}
 .e-ideology-hero .e-match-info h3{color:var(--cat);letter-spacing:-.035em}
+/* A etiqueta de match usaria o pastel, que agora é o fundo do cartão: branca para continuar visível. */
+.e-match.e-ideology-hero .e-match-pill{background:#fff;color:var(--cat)}
 .ed .e-ideology-hero .e-more,.e-ideology-hero .e-match-intro{border-top-color:color-mix(in srgb,var(--cat) 22%,transparent)}
 /* Desktop: a imagem nunca é cortada nem ganha barras: fica no tamanho da própria proporção, com a largura máxima da bandeira dos países (220px) e uma altura máxima. */
 @media(min-width:721px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:220px;max-height:170px;object-fit:fill}}
