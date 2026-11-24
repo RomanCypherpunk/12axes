@@ -22,8 +22,6 @@ import { applyGovernmentSwaps, loadGovernmentPicks, loadGovernmentSwaps, saveGov
 import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
-import { IdeologyHero } from '../results/IdeologyImage';
-import { ideologyImageUrl } from '../../data/ideologyImages';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
@@ -295,20 +293,16 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             </h1>
           </header>
 
-          {ideologyImageUrl(top.ideologyId) ? (
-            <IdeologyHero match={top} />
-          ) : (
-            <article className="e-panel e-top">
-              <div className="e-top-head">
-                <div>
-                  <span className="e-tag e-tag-solid">{top.category}</span>
-                  <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
-                </div>
-                <Ring pct={top.compatibility} size={120} stroke={6} />
+          <article className="e-panel e-top">
+            <div className="e-top-head">
+              <div>
+                <span className="e-tag e-tag-solid">{top.category}</span>
+                <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
               </div>
-              <PhraseSection match={top} />
-            </article>
-          )}
+              <Ring pct={top.compatibility} size={120} stroke={6} />
+            </div>
+            <PhraseSection match={top} />
+          </article>
 
           <AxesSection axes={axes} results={axisResults} religion={religion} onEditAnswers={onEditAnswers} />
 
