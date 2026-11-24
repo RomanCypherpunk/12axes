@@ -62,6 +62,16 @@ public class PaddleGatewayImpl implements PaymentGateway {
     /** O preco vem do cadastro da Paddle ({@code priceId}); {@code amount} so e conferido contra a moeda. */
     @Override
     public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang) {
+        return create(amount, currency, nonce, vectorHash, returnUrl, lang, null);
+    }
+
+    /**
+     * {@code email}, quando informado, e gravado em {@code custom_data} junto do endereco do resultado: a Paddle devolve
+     * {@code custom_data} integralmente em {@link #findByNonce}, entao os dois ficam disponiveis depois para o reenvio
+     * manual do e-mail de acesso (sem precisar consultar o comprador na API da Paddle).
+     */
+    @Override
+    public CheckoutSession create(String amount, String currency, String nonce, String vectorHash, String returnUrl, String lang, String email) {
         if (!USD.equals(currency)) {
             throw new PaymentGatewayException("A Paddle so vende em dolar neste site", new IllegalArgumentException(currency));
         }
@@ -69,7 +79,10 @@ public class PaddleGatewayImpl implements PaymentGateway {
         ObjectNode item = body.putArray("items").addObject();
         item.put("price_id", priceId);
         item.put("quantity", 1);
-        body.putObject("custom_data").put("vector_hash", vectorHash).put("nonce", nonce);
+        ObjectNode customData = body.putObject("custom_data").put("vector_hash", vectorHash).put("nonce", nonce).put("return_url", returnUrl);
+        if (email != null && !email.isBlank()) {
+            customData.put("email", email.trim());
+        }
         // O comprador volta ao proprio resultado (dominio aprovado na Paddle), com ?_ptxn=<transacao> acrescentado por ela.
         body.putObject("checkout").put("url", returnUrl);
 
@@ -103,7 +116,14 @@ public class PaddleGatewayImpl implements PaymentGateway {
         if (!PAID.contains(data.path("status").asText())) {
             return Optional.empty();
         }
-        return Optional.of(new PaidPayment(data.path("id").asText(nonce), data.path("custom_data").path("vector_hash").asText(""), false));
+        JsonNode customData = data.path("custom_data");
+        return Optional.of(new PaidPayment(data.path("id").asText(nonce), customData.path("vector_hash").asText(""), false,
+                textOrNull(customData.path("email")), textOrNull(customData.path("return_url"))));
+    }
+
+    private static String textOrNull(JsonNode node) {
+        String text = node.asText("");
+        return text.isBlank() ? null : text;
     }
 
     @Override
