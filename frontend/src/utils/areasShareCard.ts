@@ -187,7 +187,7 @@ export function buildAreasShareCard(
   report: PremiumReport,
   religion: Religion | null
 ): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
 
   const scene = el('div', { position: 'relative', alignSelf: 'center', width: `${GRID_WIDTH}px`, height: `${GRID_HEIGHT}px` });

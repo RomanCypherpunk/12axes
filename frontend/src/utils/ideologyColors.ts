@@ -29,6 +29,23 @@ const PALETTE: Record<IdeologyColorKey, IdeologyColor> = {
   anarquismo: { key: 'anarquismo', base: '#2B2B2B', bg: '#E2DFD8' }
 };
 
+// Conjunto próprio do cluster neorreacionário (neorreação, iluminismo sombrio, aceleracionismo de direita, tecno-monarquismo, tecno-feudalismo, neocameralismo e tecno-comercialismo): base do anarquismo (grafite) com o pastel do libertário (creme dourado).
+const DARK_YELLOW = { base: '#2B2B2B', bg: '#F0E4C8' };
+
+/**
+ * Ideologias com cores próprias em vez das da categoria (id da ideologia → par base/pastel). A chave continua sendo a da
+ * categoria, para os mapas por espectro (bússola, árvore, PDF) seguirem funcionando.
+ */
+const IDEOLOGY_OVERRIDES: Record<string, { base: string; bg: string }> = {
+  'aceleracionismo-de-direita': DARK_YELLOW,
+  'iluminismo-sombrio': DARK_YELLOW,
+  neorreacionarismo: DARK_YELLOW,
+  'tecno-monarquismo': DARK_YELLOW,
+  'tecno-feudalismo': DARK_YELLOW,
+  neocameralismo: DARK_YELLOW,
+  'tecno-comercialismo': DARK_YELLOW
+};
+
 // Nomes de categoria vindos da API (PT, EN e ES) e ids do espectro da home.
 const ALIASES: Record<string, IdeologyColorKey> = {
   'esquerda radical': 'esq-radical',
@@ -105,17 +122,20 @@ export function ideologyColorByKey(key: IdeologyColorKey): IdeologyColor {
   return PALETTE[key];
 }
 
-export function resolveIdeologyColor(category: string): IdeologyColor {
-  return PALETTE[ALIASES[category.trim().toLowerCase()] ?? 'centro'];
+/** Com o id da ideologia, as que têm conjunto próprio usam o dele; as demais (e quem não passa o id) seguem a categoria. */
+export function resolveIdeologyColor(category: string, ideologyId?: string): IdeologyColor {
+  const byCategory = PALETTE[ALIASES[category.trim().toLowerCase()] ?? 'centro'];
+  const own = ideologyId ? IDEOLOGY_OVERRIDES[ideologyId] : undefined;
+  return own ? { key: byCategory.key, ...own } : byCategory;
 }
 
 /** Variáveis CSS que os componentes editoriais leem (--cat/--cat-bg ou --c/--cb). */
-export function catStyle(category: string): Record<string, string> {
-  const color = resolveIdeologyColor(category);
+export function catStyle(category: string, ideologyId?: string): Record<string, string> {
+  const color = resolveIdeologyColor(category, ideologyId);
   return { '--cat': color.base, '--cat-bg': color.bg };
 }
 
-export function localCatStyle(category: string): Record<string, string> {
-  const color = resolveIdeologyColor(category);
+export function localCatStyle(category: string, ideologyId?: string): Record<string, string> {
+  const color = resolveIdeologyColor(category, ideologyId);
   return { '--c': color.base, '--cb': color.bg };
 }

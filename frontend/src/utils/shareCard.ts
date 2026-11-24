@@ -157,7 +157,7 @@ export function buildShareCard(
   quiz: QuizPayload,
   religion: Religion | null = null
 ): { stage: HTMLDivElement; target: HTMLDivElement; backgroundColor: string } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const stage = el('div', {
     position: 'fixed',
     top: '0',

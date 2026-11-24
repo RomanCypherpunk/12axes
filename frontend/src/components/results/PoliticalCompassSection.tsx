@@ -82,6 +82,8 @@ interface PoliticalCompassSectionProps {
   position: CompassPosition;
   /** Categoria da ideologia mais compatível (o "espectro"): dá a palavra e a cor da frase. */
   category: string;
+  /** Id da ideologia principal: as de conjunto próprio de cores (ideologyColors.ts) pintam a bússola com ele. */
+  ideologyId?: string;
   /** Eixo `moral` (Progressista × Tradicionalista): suas cores nas pontas pintam a barra, o "X" e o grifo. */
   moralAxis?: Axis;
   /** O que aparece embaixo da seção (o botão de compartilhar o cartão de valores e bússola). */
@@ -89,9 +91,9 @@ interface PoliticalCompassSectionProps {
 }
 
 /** Valores derivados da bússola (cores, frase e barra), compartilhados com o relatório em PDF. */
-export function compassView(position: CompassPosition, category: string, moralAxis?: Axis) {
+export function compassView(position: CompassPosition, category: string, moralAxis?: Axis, ideologyId?: string) {
   const { traditional } = position;
-  const spectrum = resolveIdeologyColor(category);
+  const spectrum = resolveIdeologyColor(category, ideologyId);
   const compassKey = compassRegion(position);
   // "X" da grade: quando a ideologia e a região da bússola divergem e uma delas é o Centro, a cor é a mistura
   // da base do Centro com a base da outra; nos demais casos vale a cor da categoria da página (--cat).
@@ -203,11 +205,11 @@ interface CompassTile {
   style: CSSProperties;
 }
 
-export function PoliticalCompassSection({ position, category, moralAxis, footer }: PoliticalCompassSectionProps) {
+export function PoliticalCompassSection({ position, category, ideologyId, moralAxis, footer }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [selectedTile, setSelectedTile] = useState<CompassTile | null>(null);
-  const { spectrum, markerColor, economic, economicColor, economicBg, social, socialBase, socialBg } = compassView(position, category, moralAxis);
+  const { spectrum, markerColor, economic, economicColor, economicBg, social, socialBase, socialBg } = compassView(position, category, moralAxis, ideologyId);
   const tiles: CompassTile[] = [
     {
       key: `political:${spectrum.key}`,

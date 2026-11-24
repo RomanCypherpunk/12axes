@@ -10,7 +10,7 @@ interface IdeologiesSectionProps {
 
 // Cada card veste a cor da própria categoria, não a do top match.
 export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
-  const distantColor = resolveIdeologyColor(distant.category);
+  const distantColor = resolveIdeologyColor(distant.category, distant.ideologyId);
   const [openId, setOpenId] = useState<string | null>(null);
   const columns = others.map((match) => (!openId || match.ideologyId === openId ? '1fr' : '0fr')).join(' ');
 
@@ -26,7 +26,7 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
             <li
               className={open ? 'e-ocard is-open' : hidden ? 'e-ocard is-hidden' : 'e-ocard'}
               key={match.ideologyId}
-              style={localCatStyle(match.category) as CSSProperties}
+              style={localCatStyle(match.category, match.ideologyId) as CSSProperties}
               aria-hidden={hidden}
             >
               <span className="e-tag e-osolid">{match.category}</span>
@@ -48,7 +48,7 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
         })}
       </ul>
 
-      <div className="e-distant" style={localCatStyle(distant.category) as CSSProperties}>
+      <div className="e-distant" style={localCatStyle(distant.category, distant.ideologyId) as CSSProperties}>
         <p className="e-sub">{t.ideologyDistantTitle}</p>
         <strong>{distant.name}</strong>
         <span className="e-tag" style={{ background: distantColor.bg, color: distantColor.base }}>

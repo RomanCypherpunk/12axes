@@ -22,6 +22,8 @@ import { applyGovernmentSwaps, loadGovernmentPicks, loadGovernmentSwaps, saveGov
 import { SharePreviewSection } from '../results/SharePreviewSection';
 import { SignatureSection } from '../results/SignatureSection';
 import { PoliticalValuesSection } from '../results/PoliticalValuesSection';
+import { IdeologyHero } from '../results/IdeologyImage';
+import { ideologyImageUrl } from '../../data/ideologyImages';
 import { computeCompass } from '../../utils/politicalCompass';
 import { PARTIES_ENABLED } from '../../utils/partyLogos';
 import type { SavedAnswers } from '../../utils/quizProgress';
@@ -283,7 +285,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
   );
 
   const screen = (
-    <main className="ed e-res" id="resultados" style={catStyle(top.category) as CSSProperties}>
+    <main className="ed e-res" id="resultados" style={catStyle(top.category, top.ideologyId) as CSSProperties}>
       <div className="e-wrap e-res-grid">
         <div className="e-res-main">
           <header className="e-res-head">
@@ -293,16 +295,20 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             </h1>
           </header>
 
-          <article className="e-panel e-top">
-            <div className="e-top-head">
-              <div>
-                <span className="e-tag e-tag-solid">{top.category}</span>
-                <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
+          {ideologyImageUrl(top.ideologyId) ? (
+            <IdeologyHero match={top} />
+          ) : (
+            <article className="e-panel e-top">
+              <div className="e-top-head">
+                <div>
+                  <span className="e-tag e-tag-solid">{top.category}</span>
+                  <h2 className={top.name.length >= 18 ? 'e-long-name' : undefined}>{top.name}</h2>
+                </div>
+                <Ring pct={top.compatibility} size={120} stroke={6} />
               </div>
-              <Ring pct={top.compatibility} size={120} stroke={6} />
-            </div>
-            <PhraseSection match={top} />
-          </article>
+              <PhraseSection match={top} />
+            </article>
+          )}
 
           <AxesSection axes={axes} results={axisResults} religion={religion} onEditAnswers={onEditAnswers} />
 
@@ -375,7 +381,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             />
           )}
 
-          <PoliticalValuesSection values={politicalValues} category={top.category} religion={religion} footer={shareButton('compass')} />
+          <PoliticalValuesSection values={politicalValues} category={top.category} ideologyId={top.ideologyId} religion={religion} footer={shareButton('compass')} />
 
           <IdeologiesSection others={result.matches.slice(1, 4)} distant={result.bottomIdeologyMatch} />
 
@@ -383,6 +389,7 @@ export function ResultsScreen({ result, quiz, axes, axisResults, isSharing, erro
             <PoliticalCompassSection
               position={compass}
               category={top.category}
+              ideologyId={top.ideologyId}
               moralAxis={axes.find((axis) => axis.id === 'moral')}
               footer={shareButton('compass')}
             />

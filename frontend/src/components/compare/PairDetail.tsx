@@ -108,7 +108,7 @@ export function usePairShare(loaded: Loaded | null, profiles: CompareProfiles | 
   const stage =
     loaded && shareData && preview.status !== 'error'
       ? {
-          colors: stageColors(resolveIdeologyColor(loaded.results[0].topMatch.category), resolveIdeologyColor(loaded.results[1].topMatch.category)),
+          colors: stageColors(resolveIdeologyColor(loaded.results[0].topMatch.category, loaded.results[0].topMatch.ideologyId), resolveIdeologyColor(loaded.results[1].topMatch.category, loaded.results[1].topMatch.ideologyId)),
           src: preview.src,
           sectionRef: preview.ref,
           isSharing,

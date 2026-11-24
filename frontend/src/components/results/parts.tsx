@@ -16,10 +16,14 @@ interface MatchHeroProps {
   note?: ReactNode;
   /** Classe extra no card, para layouts próprios (ex.: o card de eleição). */
   className?: string;
+  /** No lugar da legenda de texto abaixo do nome (ex.: a etiqueta do espectro da ideologia). */
+  subtitle?: ReactNode;
+  /** Conteúdo opcional entre a linha do nome e o "Saber mais" (ex.: a frase da ideologia). */
+  intro?: ReactNode;
 }
 
 // Card do item mais compatível de um catálogo (país ou personalidade).
-export function MatchHero({ visual, compatibility, name, tags, description, kickerPrefix, note, className }: MatchHeroProps) {
+export function MatchHero({ visual, compatibility, name, tags, description, kickerPrefix, note, className, intro, subtitle }: MatchHeroProps) {
   const caption = tags.join(' · ');
 
   return (
@@ -34,10 +38,11 @@ export function MatchHero({ visual, compatibility, name, tags, description, kick
             </span>
           </div>
           <h3>{name}</h3>
-          {caption && <p>{caption}</p>}
+          {subtitle ? <div className="e-match-sub">{subtitle}</div> : caption && <p>{caption}</p>}
         </div>
         <Ring pct={compatibility} size={104} stroke={6} />
       </div>
+      {intro && <div className="e-match-intro">{intro}</div>}
       {description && (
         <details className="e-more">
           <summary>{t.knowMoreAbout(name)}</summary>

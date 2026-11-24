@@ -92,7 +92,7 @@ function pickFeatured(result: QuizResult): { current: PartyMatch | null; histori
 }
 
 export function buildPartiesShareCard(result: QuizResult, religion: Religion | null): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
   const { current, historical } = pickFeatured(result);
 

@@ -137,7 +137,7 @@ function dimensionRow(item: DimensionMatch, color: Palette): HTMLElement {
 }
 
 export function buildPersonalitiesShareCard(result: QuizResult, religion: Religion | null): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
   const distant = (result.bottomPersonalityMatches ?? []).map((match) => match.name);
   // Com três linhas de etiquetas a caixa fica compacta e a foto cede o resto do espaço.

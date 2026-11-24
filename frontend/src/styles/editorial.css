@@ -335,6 +335,15 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-top{overflow:hidden;padding:0;background:var(--cat-bg);border:0}
 .e-top-head{padding:24px 36px 18px;display:flex;justify-content:space-between;align-items:center;gap:24px}
 .e-top-head h2{font-size:clamp(28px,3.2vw,40px);letter-spacing:-.035em;color:var(--cat);margin-top:8px}
+/* Cartão do topo de uma ideologia com imagem: o mesmo cartão dos países (MatchHero), com a imagem no lugar da bandeira e a frase entre a linha do nome e o "Saber mais". */
+.e-ideology-hero .e-match-intro{margin-top:20px;padding-top:18px;border-top:1px solid rgba(16,16,16,.1)}
+.e-ideology-hero .e-match-note a{color:inherit;text-decoration:underline}
+/* Desktop: o espectro vai embaixo do nome, no selo de sempre. Celular (como nos cartões de pessoa): selo do espectro e "NN% match" lado a lado, acima do nome. */
+.e-ideology-hero .e-match-tags{display:none}
+.e-ideology-hero .e-match-sub{margin-top:10px}
+/* Desktop: a imagem nunca é cortada nem ganha barras: fica no tamanho da própria proporção, com a largura máxima da bandeira dos países (220px) e uma altura máxima. */
+@media(min-width:721px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:220px;max-height:170px;object-fit:fill}}
+@media(max-width:720px){.e-ideology-hero .e-match-tags{display:flex;justify-content:center}.e-ideology-hero .e-match-sub{display:none}}
 .e-top-head .e-ring{width:92px!important;height:92px!important}.e-top-head .e-ring strong{font-size:22px}
 .e-top-body{margin:0 36px;padding:18px 0 20px;border-top:1px solid color-mix(in srgb,var(--cat) 22%,transparent)}
 .e-about{margin-top:16px;border-bottom:0}

@@ -11,6 +11,8 @@ interface PoliticalValuesSectionProps {
   values: PoliticalValue[];
   /** Categoria da ideologia principal do usuário: define a cor das moedas. */
   category: string;
+  /** Id da ideologia principal: algumas têm conjunto de cores próprio (ideologyColors.ts). */
+  ideologyId?: string;
   /** Religião escolhida pelo usuário, para o ícone dos valores religiosos. */
   religion?: Religion | null;
   /** Para reusar a seção fora dos resultados (página de comparação entre pessoas). */
@@ -36,7 +38,7 @@ function fitNames(list: HTMLElement) {
   });
 }
 
-export function PoliticalValuesSection({ values, category, religion, title, id, header, footer }: PoliticalValuesSectionProps) {
+export function PoliticalValuesSection({ values, category, ideologyId, religion, title, id, header, footer }: PoliticalValuesSectionProps) {
   const [selected, setSelected] = useState<PoliticalValue | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -77,7 +79,7 @@ export function PoliticalValuesSection({ values, category, religion, title, id, 
       {footer}
 
       {selected && (
-        <InfoSheet titleId="value-sheet-title" style={catStyle(category) as CSSProperties} onClose={() => setSelected(null)}>
+        <InfoSheet titleId="value-sheet-title" style={catStyle(category, ideologyId) as CSSProperties} onClose={() => setSelected(null)}>
           <div className="e-value-sheet">
             <ValueCoin valueId={selected.valueId} name={selected.name} size={120} religion={religion} />
             <span className="e-dim">{selected.categoryLabel}</span>

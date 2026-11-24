@@ -92,7 +92,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
   );
 
   return (
-    <div className="rp" style={catStyle(top.category) as CSSProperties}>
+    <div className="rp" style={catStyle(top.category, top.ideologyId) as CSSProperties}>
       <section className="rp-cover">
         <div className="cv-top">
           <div className="cv-bar">
@@ -387,14 +387,14 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
             <SectionHead title={t.otherMatches} />
             <ul className="others">
               {others.map((match) => (
-                <li className="oc" key={match.ideologyId} style={localCatStyle(match.category) as CSSProperties}>
+                <li className="oc" key={match.ideologyId} style={localCatStyle(match.category, match.ideologyId) as CSSProperties}>
                   <span className="tag osol">{match.category}</span>
                   <h3>{match.name}</h3>
                   <p>{match.longDescription || match.description}</p>
                 </li>
               ))}
             </ul>
-            <div className="far-i" style={localCatStyle(result.bottomIdeologyMatch.category) as CSSProperties}>
+            <div className="far-i" style={localCatStyle(result.bottomIdeologyMatch.category, result.bottomIdeologyMatch.ideologyId) as CSSProperties}>
               <span className="lab">{t.ideologyDistantTitle}</span>
               <b>{result.bottomIdeologyMatch.name}</b>
               <span className="tag osol-l">{result.bottomIdeologyMatch.category}</span>
@@ -405,7 +405,7 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
           {compass && (
             <section className="rp-sec">
               <SectionHead title={t.compassTitle} />
-              <Compass position={compass} category={top.category} moralAxis={axes.find((axis) => axis.id === 'moral')} />
+              <Compass position={compass} category={top.category} ideologyId={top.ideologyId} moralAxis={axes.find((axis) => axis.id === 'moral')} />
             </section>
           )}
 
@@ -419,9 +419,9 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
   );
 }
 
-function Compass({ position, category, moralAxis }: { position: CompassPosition; category: string; moralAxis?: Axis }) {
+function Compass({ position, category, ideologyId, moralAxis }: { position: CompassPosition; category: string; ideologyId?: string; moralAxis?: Axis }) {
   const { right, authoritarian } = position;
-  const view = compassView(position, category, moralAxis);
+  const view = compassView(position, category, moralAxis, ideologyId);
   const { markerColor } = view;
   const tiles = [
     { key: `political:${view.spectrum.key}`, label: t.dimensionLabels.political, name: t.compassSpectrumLabels[view.spectrum.key], base: view.spectrum.base, bg: view.spectrum.bg },

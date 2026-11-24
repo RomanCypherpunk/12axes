@@ -116,7 +116,7 @@ export function buildLivingShareCard(
   report: PremiumReport,
   religion: Religion | null
 ): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
   const countries = report.topCountries.slice(0, 10);
 

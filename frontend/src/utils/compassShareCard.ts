@@ -245,8 +245,8 @@ function compassTiles(view: ReturnType<typeof compassView>): HTMLElement {
   return wrap;
 }
 
-function compassBox(position: CompassPosition, color: Palette, category: string, moralAxis: Axis | undefined): HTMLElement {
-  const view = compassView(position, category, moralAxis);
+function compassBox(position: CompassPosition, color: Palette, category: string, moralAxis: Axis | undefined, ideologyId?: string): HTMLElement {
+  const view = compassView(position, category, moralAxis, ideologyId);
   const wrap = box({ padding: `34px ${BOX_PADDING_X}px` }, true);
   const body = el('div', { display: 'flex', alignItems: 'center', gap: `${CHART_GAP}px`, marginTop: '30px' });
   const read = compassTiles(view);
@@ -356,7 +356,7 @@ export function buildCompassShareCard(
   axes: Axis[],
   religion: Religion | null
 ): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = lightShell(color);
   // Os ícones dos valores usam --cat e --cat-bg (a cor da ideologia), como na página.
   target.style.setProperty('--cat', color.base);
@@ -370,7 +370,7 @@ export function buildCompassShareCard(
     buildShareHeader(t.shareValuesCompass, { ink: INK, label: color.base, rule: rgba(INK, 0.2) }),
     buildShareIdentity(result, color.base, color.base)
   );
-  if (position) target.append(compassBox(position, color, result.topMatch.category, moralAxis));
+  if (position) target.append(compassBox(position, color, result.topMatch.category, moralAxis, result.topMatch.ideologyId));
   const values = result.politicalValues ?? [];
   if (values.length > 0) target.append(valuesBox(values, color, religion));
   target.append(

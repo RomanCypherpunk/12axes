@@ -88,7 +88,7 @@ function vivid(hex: string): string {
 }
 
 function sidesOf(data: CompareShareData): [Side, Side] {
-  const colors = data.results.map((result) => resolveIdeologyColor(result.topMatch.category));
+  const colors = data.results.map((result) => resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId));
   // Mesma ideologia nas duas: a segunda vira papel, para os selos e as etiquetas não ficarem iguais.
   const sameColor = colors[0].base === colors[1].base;
   return [0, 1].map((index) => ({

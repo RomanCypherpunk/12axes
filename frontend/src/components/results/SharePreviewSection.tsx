@@ -28,7 +28,7 @@ export function SharePreviewSection({ result, quiz, axes, religion = null, isSha
     <SharePhoneStage
       id="compartilhar"
       title={t.sharePreviewTitle}
-      colors={stageColors(resolveIdeologyColor(result.topMatch.category))}
+      colors={stageColors(resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId))}
       src={src}
       isSharing={isSharing}
       onShare={onShare}

@@ -380,6 +380,9 @@ export interface Strings {
   resultsNavValues: string;
   valuesSectionTitle: string;
   valuesNeutralTag: string;
+  ideologyImgSource: string;
+  ideologyImgAuthor: string;
+  ideologyImgLicense: string;
   valueInfoAria: (name: string) => string;
   compassTitle: string;
   compassAuthoritarian: string;

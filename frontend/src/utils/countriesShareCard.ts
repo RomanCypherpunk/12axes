@@ -62,7 +62,7 @@ function dimensionRow(item: CountryDimensionMatch, color: Palette): HTMLElement 
 }
 
 export function buildCountriesShareCard(result: QuizResult, religion: Religion | null): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
 
   const features = el('div', { display: 'flex', gap: '24px' });

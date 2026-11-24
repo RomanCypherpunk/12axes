@@ -142,7 +142,7 @@ export function buildElectionsShareCard(
   election: ElectionResult,
   religion: Religion | null
 ): { stage: HTMLDivElement; target: HTMLDivElement } {
-  const color = resolveIdeologyColor(result.topMatch.category);
+  const color = resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId);
   const { stage, target } = darkShell(color);
   const top = election.candidates[0];
 
