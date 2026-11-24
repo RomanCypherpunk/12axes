@@ -3760,5 +3760,20 @@
       "protestant",
       "orthodox"
     ]
+  },
+  {
+    "id": "monarco-distributismo",
+    "name": "Monarco-Distributismo",
+    "category": "Direita",
+    "description": "Síntese de monarquismo e distributismo que defende um rei cristão como protetor de famílias proprietárias, guildas e comunidades autônomas, unindo realeza social e subsidiariedade à ampla distribuição da propriedade contra o grande capital e o Estado socialista.",
+    "phrase": "Quero um rei cristão, pai do povo, protegendo famílias proprietárias, guildas e comunidades autônomas contra o grande capital e a burocracia do Estado.",
+    "countryId": "sacro-imperio-romano-germanico",
+    "personalityId": "gk-chesterton",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox",
+      "only"
+    ]
   }
 ]
