@@ -3732,5 +3732,33 @@
     "countryId": "eua-california",
     "personalityId": "ray-kurzweil",
     "religions": []
+  },
+  {
+    "id": "nacional-distributismo",
+    "name": "Nacional Distributismo",
+    "category": "Terceira Posição",
+    "description": "Fusão de distributismo e nacionalismo, na linha da Terceira Posição, que defende a propriedade distribuída entre famílias e corporações da nação, contra o capitalismo financeiro e o comunismo, com identidade nacional e tradição cristã.",
+    "phrase": "Quero uma nação de famílias proprietárias e comunidades enraizadas, de fé cristã e ordem corporativa, contra o grande capital e o comunismo.",
+    "countryId": "austria-corporativista",
+    "personalityId": "engelbert-dollfuss",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox"
+    ]
+  },
+  {
+    "id": "social-distributismo",
+    "name": "Social Distributismo",
+    "category": "Centro",
+    "description": "Vertente de esquerda do distributismo, inspirada na doutrina social da Igreja, que defende a propriedade distribuída entre cooperativas de trabalhadores, sindicatos e comunidades, com democracia, Estado de bem-estar e freio aos monopólios.",
+    "phrase": "Quero oficinas, terras e cooperativas nas mãos de quem trabalha, com sindicatos, democracia local e proteção social contra monopólios e latifúndios.",
+    "countryId": "pais-basco",
+    "personalityId": "peter-maurin",
+    "religions": [
+      "catholic",
+      "protestant",
+      "orthodox"
+    ]
   }
 ]
