@@ -21,7 +21,7 @@ describe('imagem da ideologia pelo nome do arquivo', () => {
   });
 
   it('ideologia sem arquivo (ou sem id) não tem imagem, e um id estranho nunca monta caminho', () => {
-    expect(ideologyImageUrl('reacionarismo')).toBeNull();
+    expect(ideologyImageUrl('ideologia-sem-imagem')).toBeNull();
     expect(ideologyImageUrl(undefined)).toBeNull();
     expect(ideologyImageUrl('../neorreacionarismo')).toBeNull();
   });
@@ -46,7 +46,7 @@ describe('IdeologyHero (o cartão do topo com imagem, igual ao dos países)', ()
   });
 
   it('sem arquivo de imagem não renderiza nada (o cartão de sempre é usado)', () => {
-    expect(renderToStaticMarkup(<IdeologyHero match={match('reacionarismo', 'Reacionarismo')} />)).toBe('');
+    expect(renderToStaticMarkup(<IdeologyHero match={match('ideologia-sem-imagem', 'Ideologia sem imagem')} />)).toBe('');
   });
 });
 
