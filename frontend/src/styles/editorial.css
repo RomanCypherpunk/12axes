@@ -341,6 +341,10 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 /* Desktop: o espectro vai embaixo do nome, no selo de sempre. Celular (como nos cartões de pessoa): selo do espectro e "NN% match" lado a lado, acima do nome. */
 .e-ideology-hero .e-match-tags{display:none}
 .e-ideology-hero .e-match-sub{margin-top:10px}
+/* Fundo pastel do espectro (como o cartão sem imagem), com a fitinha na cor base; os divisores seguem a cor do espectro. */
+.e-match.e-ideology-hero{background:var(--cat-bg)}
+.e-ideology-hero .e-match-info h3{color:var(--cat);letter-spacing:-.035em}
+.ed .e-ideology-hero .e-more,.e-ideology-hero .e-match-intro{border-top-color:color-mix(in srgb,var(--cat) 22%,transparent)}
 /* Desktop: a imagem nunca é cortada nem ganha barras: fica no tamanho da própria proporção, com a largura máxima da bandeira dos países (220px) e uma altura máxima. */
 @media(min-width:721px){.e-match.e-ideology-hero .e-flagbig{width:auto;height:auto;max-width:220px;max-height:170px;object-fit:fill}}
 @media(max-width:720px){.e-ideology-hero .e-match-tags{display:flex;justify-content:center}.e-ideology-hero .e-match-sub{display:none}}
