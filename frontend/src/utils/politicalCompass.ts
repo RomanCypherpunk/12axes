@@ -23,7 +23,64 @@ export interface CompassPosition {
 // de fora. Simulação nas 291 ideologias do catálogo, já com o eixo vertical abaixo (todas as combinações de economia,
 // controle, religião, imigração e moral, conferida por validação cruzada): acerto da própria região 65,6% -> 68,0%,
 // média por espectro 70,1% -> 73,1% (Extrema Direita 27% -> 42%).
-const RIGHT_WEIGHTS = { economia: 0.6, moral: 0.3, religiao: 0.1 } as const;
+const RIGHT_WEIGHTS: RightWeights = { economia: 60, moral: 30, religiao: 10 };
+
+// Pesos do eixo esquerda-direita por canto da bússola. O que separa os espectros muda com o canto: embaixo, anarquista e
+// libertário se distinguem pela economia (e, à direita, pelo livre mercado e pelo globalismo), não pela moral nem pela
+// religião; em cima à direita, a religião, a moral e a imigração pesam mais. A posição de partida vem da fórmula acima
+// (`RIGHT_WEIGHTS`), e os pesos usados são a mistura dos quatro cantos proporcional à proximidade de cada um (bilinear,
+// sem cortes). O canto esquerdo autoritário fica com a fórmula de partida. Simulação nas 291 ideologias: acerto da própria
+// região igual (68,0%), média por espectro 73,1% -> 73,4%, Libertário 83% -> 87%, e a direita libertária vai para o
+// extremo (anarcocapitalismo 73 -> 91, Rothbard 73 -> 90), sem mexer na esquerda.
+const CORNER_RIGHT_WEIGHTS: Record<'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight', RightWeights> = {
+  topLeft: RIGHT_WEIGHTS,
+  topRight: { economia: 40, moral: 25, religiao: 20, imigracao: 15 },
+  bottomLeft: { economia: 80, moral: 20 },
+  bottomRight: { economia: 70, controle: 15, comercio: 15 }
+};
+
+type RightAxis = 'economia' | 'moral' | 'religiao' | 'imigracao' | 'controle' | 'comercio';
+type RightWeights = Partial<Record<RightAxis, number>>;
+
+/** Valor de cada eixo no sentido da direita: privado, tradicional, religioso, assimilação, livre mercado e globalismo. */
+function rightValue(axis: RightAxis, values: Record<string, number>): number {
+  switch (axis) {
+    case 'imigracao':
+      return values.imigracao; // esq. Assimilação: o polo esquerdo do eixo é o lado direito da bússola
+    default:
+      return 100 - values[axis]; // esq. Público, Progressista, Irreligioso, Planejamento e Protecionismo
+  }
+}
+
+function weightedRight(weights: RightWeights, values: Record<string, number>): number {
+  let sum = 0;
+  let total = 0;
+  for (const [axis, weight] of Object.entries(weights) as [RightAxis, number][]) {
+    sum += weight * rightValue(axis, values);
+    total += weight;
+  }
+  return sum / total;
+}
+
+/** Posição esquerda-direita com os pesos de cada canto misturados pela posição de partida e pela altura. */
+function rightPosition(values: Record<string, number>, authoritarian: number): number {
+  const up = authoritarian / 100;
+  const toRight = weightedRight(RIGHT_WEIGHTS, values) / 100;
+  const corners: [RightWeights, number][] = [
+    [CORNER_RIGHT_WEIGHTS.topLeft, up * (1 - toRight)],
+    [CORNER_RIGHT_WEIGHTS.topRight, up * toRight],
+    [CORNER_RIGHT_WEIGHTS.bottomLeft, (1 - up) * (1 - toRight)],
+    [CORNER_RIGHT_WEIGHTS.bottomRight, (1 - up) * toRight]
+  ];
+  const mixed: RightWeights = {};
+  for (const [weights, share] of corners) {
+    const total = Object.values(weights).reduce((sum, weight) => sum + weight, 0);
+    for (const [axis, weight] of Object.entries(weights) as [RightAxis, number][]) {
+      mixed[axis] = (mixed[axis] ?? 0) + (share * weight) / total;
+    }
+  }
+  return weightedRight(mixed, values);
+}
 
 // Eixo autoritário-libertário: `poder` (segurança e vigilância contra liberdade civil) domina, com 70%; `representacao`
 // (autocracia) e `estrutura` (unitarismo) entram com 12,5% cada e `controle` (planejamento) com 5%. O poder é o eixo que
@@ -38,8 +95,9 @@ const AUTHORITY_WEIGHTS = { poder: 0.7, representacao: 0.125, estrutura: 0.125, 
  * esquerdo do eixo em `axes.json` (100 = polo esquerdo inteiro), então cada eixo é invertido
  * quando o polo esquerdo não é o que a bússola chama de direita, autoritário ou tradicionalista:
  *
- * - direita: 60% `economia` (esq. Público), 30% `moral` (esq. Progressista) e 10% `religiao` (esq. Irreligioso), os três
- *   invertidos;
+ * - direita: parte de 60% `economia` (esq. Público), 30% `moral` (esq. Progressista) e 10% `religiao` (esq. Irreligioso),
+ *   os três invertidos, e mistura os pesos de cada canto (`CORNER_RIGHT_WEIGHTS`), que trazem também `imigracao`
+ *   (esq. Assimilação, direto), `controle` e `comercio` (esq. Planejamento e Protecionismo, invertidos);
  * - autoritário: 70% `poder` (esq. Segurança, direto), 12,5% `representacao` (esq. Democracia) e 12,5% `estrutura`
  *   (esq. Federal), estes dois invertidos, e 5% `controle` (esq. Planejamento, direto);
  * - tradicionalista (a barra): `moral` (esq. Progressista), invertido.
@@ -56,25 +114,23 @@ export function compassFromVector(vector: Record<string, number>): CompassPositi
 }
 
 function compassFromLeftPercents(left: (axisId: string) => number | undefined): CompassPosition | null {
-  const ids = ['economia', 'controle', 'poder', 'representacao', 'estrutura', 'moral', 'religiao'] as const;
+  const ids = ['economia', 'controle', 'comercio', 'poder', 'representacao', 'estrutura', 'imigracao', 'moral', 'religiao'] as const;
   const values: Record<string, number> = {};
   for (const id of ids) {
     const value = left(id);
     if (value === undefined || value === null) return null;
     values[id] = value;
   }
+  const authoritarian =
+    AUTHORITY_WEIGHTS.poder * values.poder +
+    AUTHORITY_WEIGHTS.representacao * (100 - values.representacao) +
+    AUTHORITY_WEIGHTS.estrutura * (100 - values.estrutura) +
+    AUTHORITY_WEIGHTS.controle * values.controle;
   return {
     economy: 100 - values.economia,
     planning: values.controle,
-    right:
-      RIGHT_WEIGHTS.economia * (100 - values.economia) +
-      RIGHT_WEIGHTS.moral * (100 - values.moral) +
-      RIGHT_WEIGHTS.religiao * (100 - values.religiao),
-    authoritarian:
-      AUTHORITY_WEIGHTS.poder * values.poder +
-      AUTHORITY_WEIGHTS.representacao * (100 - values.representacao) +
-      AUTHORITY_WEIGHTS.estrutura * (100 - values.estrutura) +
-      AUTHORITY_WEIGHTS.controle * values.controle,
+    right: rightPosition(values, authoritarian),
+    authoritarian,
     traditional: 100 - values.moral
   };
 }
