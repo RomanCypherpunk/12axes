@@ -15,25 +15,33 @@ export interface CompassPosition {
   traditional: number;
 }
 
-const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
+// Eixo esquerda-direita: 60% `economia` (propriedade dos meios de produção, privada à direita), 30% `moral` (tradicional à
+// direita) e 10% `religiao` (religioso à direita). Só a economia colocava a economia dirigida com moral conservadora
+// (Terceira Posição, teocracias, comunismos nacionais) na esquerda radical; com moral e religião (o conservadorismo
+// cultural, 40%) ela cai no meio, e a extrema direita religiosa vai para a direita. Planejamento (`controle`) e imigração
+// não melhoraram o encaixe (o planejamento também é alto na extrema direita; libertários são abertos à imigração) e ficam
+// de fora. Simulação nas 291 ideologias do catálogo, já com o eixo vertical abaixo (todas as combinações de economia,
+// controle, religião, imigração e moral, conferida por validação cruzada): acerto da própria região 65,6% -> 68,0%,
+// média por espectro 70,1% -> 73,1% (Extrema Direita 27% -> 42%).
+const RIGHT_WEIGHTS = { economia: 0.6, moral: 0.3, religiao: 0.1 } as const;
 
-// Eixo esquerda-direita: `economia` (propriedade dos meios de produção, privada à direita) com peso 2 e `moral` (conservadora
-// à direita) com peso 1. Só a economia colocava a economia dirigida com moral conservadora (Terceira Posição, teocracias,
-// comunismos nacionais) na esquerda radical; com a moral no eixo, ela cai no meio. O planejamento estatal (`controle`) fica
-// fora do horizontal (também é alto na extrema direita) e entra no eixo vertical, com um peso pequeno. Simulação nas 291
-// ideologias do catálogo: acerto da própria região 56,4% -> 59,8% (Terceira Posição 45% -> 77%, Centro 70% -> 88%).
-const WEIGHT_ECONOMY_IN_RIGHT = 2;
-const WEIGHT_MORAL_IN_RIGHT = 1;
-const WEIGHT_PLANNING_IN_AUTHORITY = 0.1;
+// Eixo autoritário-libertário: `poder` (segurança e vigilância contra liberdade civil) domina, com 70%; `representacao`
+// (autocracia) e `estrutura` (unitarismo) entram com 12,5% cada e `controle` (planejamento) com 5%. O poder é o eixo que
+// mais separa os espectros: sozinho acerta a faixa vertical de 82% das ideologias, contra 63-66% de cada um dos outros.
+// Simulação nas 291 ideologias do catálogo (busca em todos os 12 eixos, conferida por validação cruzada): acerto da
+// própria região 61,9% -> 65,3% e média por espectro 65,1% -> 69,8%, sem nenhum espectro piorar. Comércio, imigração,
+// diplomacia, religião e moral não melhoraram o encaixe e ficam de fora.
+const AUTHORITY_WEIGHTS = { poder: 0.7, representacao: 0.125, estrutura: 0.125, controle: 0.05 } as const;
 
 /**
  * Compõe a bússola a partir dos eixos do quiz. `leftPercent` é o quanto o usuário pende ao polo
  * esquerdo do eixo em `axes.json` (100 = polo esquerdo inteiro), então cada eixo é invertido
  * quando o polo esquerdo não é o que a bússola chama de direita, autoritário ou tradicionalista:
  *
- * - direita: média ponderada (2:1) de `economia` (esq. Público) e `moral` (esq. Progressista), invertida;
- * - autoritário: 90% a média de `poder` (esq. Segurança, direto), `representacao` (esq. Democracia) e `estrutura`
- *   (esq. Federal), estes dois invertidos, e 10% `controle` (esq. Planejamento, direto);
+ * - direita: 60% `economia` (esq. Público), 30% `moral` (esq. Progressista) e 10% `religiao` (esq. Irreligioso), os três
+ *   invertidos;
+ * - autoritário: 70% `poder` (esq. Segurança, direto), 12,5% `representacao` (esq. Democracia) e 12,5% `estrutura`
+ *   (esq. Federal), estes dois invertidos, e 5% `controle` (esq. Planejamento, direto);
  * - tradicionalista (a barra): `moral` (esq. Progressista), invertido.
  *
  * Devolve null se algum desses eixos faltar no resultado (ex.: resultado compartilhado antigo).
@@ -48,7 +56,7 @@ export function compassFromVector(vector: Record<string, number>): CompassPositi
 }
 
 function compassFromLeftPercents(left: (axisId: string) => number | undefined): CompassPosition | null {
-  const ids = ['economia', 'controle', 'poder', 'representacao', 'estrutura', 'moral'] as const;
+  const ids = ['economia', 'controle', 'poder', 'representacao', 'estrutura', 'moral', 'religiao'] as const;
   const values: Record<string, number> = {};
   for (const id of ids) {
     const value = left(id);
@@ -58,10 +66,15 @@ function compassFromLeftPercents(left: (axisId: string) => number | undefined): 
   return {
     economy: 100 - values.economia,
     planning: values.controle,
-    right: 100 - (WEIGHT_ECONOMY_IN_RIGHT * values.economia + WEIGHT_MORAL_IN_RIGHT * values.moral) / (WEIGHT_ECONOMY_IN_RIGHT + WEIGHT_MORAL_IN_RIGHT),
+    right:
+      RIGHT_WEIGHTS.economia * (100 - values.economia) +
+      RIGHT_WEIGHTS.moral * (100 - values.moral) +
+      RIGHT_WEIGHTS.religiao * (100 - values.religiao),
     authoritarian:
-      (1 - WEIGHT_PLANNING_IN_AUTHORITY) * mean([values.poder, 100 - values.representacao, 100 - values.estrutura]) +
-      WEIGHT_PLANNING_IN_AUTHORITY * values.controle,
+      AUTHORITY_WEIGHTS.poder * values.poder +
+      AUTHORITY_WEIGHTS.representacao * (100 - values.representacao) +
+      AUTHORITY_WEIGHTS.estrutura * (100 - values.estrutura) +
+      AUTHORITY_WEIGHTS.controle * values.controle,
     traditional: 100 - values.moral
   };
 }
