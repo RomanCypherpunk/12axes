@@ -9,6 +9,11 @@
     "description": "Unternehmen in öffentlichem oder kollektivem Eigentum, die auf einem Markt konkurrieren, mit übergeordneter Planung und weitgehend freien Preisen."
   },
   {
+    "id": "capitalismo-de-estado",
+    "name": "Staatskapitalismus",
+    "description": "Markt und Profit unter staatlicher Führung: Der Staat plant, hält strategische Branchen und lässt private Unternehmen bestehen."
+  },
+  {
     "id": "desenvolvimentismo",
     "name": "Developmentalismus",
     "description": "Öffentliche Investitionen und Planung, um das Land zu industrialisieren, mit Schutz der heimischen Industrie, solange sie wächst."
@@ -270,6 +275,11 @@
     "description": "Eine starke Zentralregierung entscheidet das Wesentliche, Regionen und Städte sind ihr untergeordnet."
   },
   {
+    "id": "unitarismo",
+    "name": "Unitarismus",
+    "description": "Ein Einheitsstaat, in dem das Zentrum das Wesentliche entscheidet und die Verwaltung und einen Teil der Entscheidungen an Regionen und Städte überträgt."
+  },
+  {
     "id": "regionalismo",
     "name": "Regionalismus",
     "description": "Autonomie für die Regionen innerhalb eines Staates, der weiterhin ein gemeinsames Zentrum behält."
@@ -407,6 +417,11 @@
     "description": "Die Nation behauptet sich gegen Fremdherrschaft: Befreiung, Souveränität und eigene Entwicklung."
   },
   {
+    "id": "nacional-desenvolvimentismo",
+    "name": "Nationaler Developmentalismus",
+    "description": "Die Nation behauptet sich durch Entwicklung: ein starker Staat in der Wirtschaft, geschützte Industrie und eigener technischer Fortschritt."
+  },
+  {
     "id": "socialismo",
     "name": "Internationalistischer Sozialismus",
     "description": "Klassensolidarität kommt vor der Nation: Was die Arbeiter verbindet, sind Arbeit und Gleichheit, nicht Grenzen."
@@ -460,6 +475,11 @@
     "id": "industrialismo-socialista",
     "name": "Sozialistischer Industrialismus",
     "description": "Industrialisierung und technischer Fortschritt, gelenkt von Staat und öffentlichem Eigentum, im Dienst der Gemeinschaft."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialismus",
+    "description": "Industrie und technischer Fortschritt als Motor des Landes, mit Staat und Privatinitiative, je nachdem, was funktioniert."
   },
   {
     "id": "modernismo",

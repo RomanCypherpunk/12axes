@@ -9,6 +9,11 @@
     "description": "Aziende di proprietà pubblica o collettiva che competono in un mercato, con una pianificazione generale e prezzi in gran parte liberi."
   },
   {
+    "id": "capitalismo-de-estado",
+    "name": "Capitalismo di Stato",
+    "description": "Mercato e profitto sotto la guida dello Stato, che pianifica, controlla i settori strategici e convive con l'impresa privata."
+  },
+  {
     "id": "desenvolvimentismo",
     "name": "Sviluppismo",
     "description": "Investimenti pubblici e pianificazione per industrializzare il Paese, proteggendo l'industria nazionale mentre cresce."
@@ -270,6 +275,11 @@
     "description": "Un governo centrale forte decide l'essenziale, con regioni e città subordinate."
   },
   {
+    "id": "unitarismo",
+    "name": "Unitarismo",
+    "description": "Uno Stato unitario in cui il centro decide l'essenziale e delega l'amministrazione e parte delle scelte a regioni e città."
+  },
+  {
     "id": "regionalismo",
     "name": "Regionalismo",
     "description": "Autonomia alle regioni, in uno Stato che mantiene comunque un centro comune."
@@ -407,6 +417,11 @@
     "description": "La nazione si afferma contro il dominio straniero: liberazione, sovranità e sviluppo proprio."
   },
   {
+    "id": "nacional-desenvolvimentismo",
+    "name": "Nazional-sviluppismo",
+    "description": "La nazione si afferma con lo sviluppo: Stato forte nell'economia, industria protetta e progresso tecnologico proprio."
+  },
+  {
     "id": "socialismo",
     "name": "Socialismo internazionalista",
     "description": "La solidarietà di classe viene prima della nazione: a unire i lavoratori sono il lavoro e l'uguaglianza, non i confini."
@@ -460,6 +475,11 @@
     "id": "industrialismo-socialista",
     "name": "Industrialismo socialista",
     "description": "Industrializzazione e progresso tecnico guidati dallo Stato e dalla proprietà pubblica, al servizio della collettività."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialismo",
+    "description": "Industria e progresso tecnico come motore del Paese, combinando Stato e iniziativa privata secondo ciò che funziona."
   },
   {
     "id": "modernismo",

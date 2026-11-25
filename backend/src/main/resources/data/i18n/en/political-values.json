@@ -9,6 +9,11 @@
     "description": "Publicly or collectively owned firms competing in a market, with overall planning and largely free prices."
   },
   {
+    "id": "capitalismo-de-estado",
+    "name": "State Capitalism",
+    "description": "Markets and profit under state command, which plans, holds strategic sectors and coexists with private enterprise."
+  },
+  {
     "id": "desenvolvimentismo",
     "name": "Developmentalism",
     "description": "Public investment and planning to industrialize the country, protecting domestic industry while it grows."
@@ -270,6 +275,11 @@
     "description": "A strong central government decides the essentials, with regions and cities subordinate to it."
   },
   {
+    "id": "unitarismo",
+    "name": "Unitarism",
+    "description": "A unitary state in which the center decides what matters most and delegates administration and some choices to regions and cities."
+  },
+  {
     "id": "regionalismo",
     "name": "Regionalism",
     "description": "Autonomy for the regions, within a state that still keeps a common center."
@@ -407,6 +417,11 @@
     "description": "The nation asserts itself against foreign rule: liberation, sovereignty and its own development."
   },
   {
+    "id": "nacional-desenvolvimentismo",
+    "name": "National Developmentalism",
+    "description": "The nation asserts itself through development: a strong state in the economy, protected industry and its own technological advance."
+  },
+  {
     "id": "socialismo",
     "name": "Internationalist socialism",
     "description": "Class solidarity comes before the nation: what unites workers is labor and equality, not borders."
@@ -460,6 +475,11 @@
     "id": "industrialismo-socialista",
     "name": "Socialist industrialism",
     "description": "Industrialization and technical progress led by the state and public ownership, serving the collective."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialism",
+    "description": "Industry and technical progress as the engine of the country, combining state and private initiative as works best."
   },
   {
     "id": "modernismo",

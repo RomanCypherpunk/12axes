@@ -419,6 +419,9 @@ const mutualArrows = (
   </>
 );
 
+// Capitalismo de Estado: cifrão escolhido pelo autor.
+const STATE_DOLLAR = 'M7 2H5a3.5 3.5 0 1 0 0 7h2v3H2.5v2H7v2h2v-2h2a3.5 3.5 0 1 0 0-7H9V4h4.5V2H9V0H7zm2 7h2a1.5 1.5 0 0 1 0 3H9zM7 7H5a1.5 1.5 0 1 1 0-3h2z';
+
 /** Ícones por id de valor. Valor sem entrada cai na moeda de monograma. */
 export const VALUE_COINS: Record<string, CoinStyle> = {
   'socialismo-de-mercado': { viewBox: '0 0 512 512', glyph: path(HAMMER_SICKLE) },
@@ -454,6 +457,7 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   confederalismo: { viewBox: '0 0 24 24', glyph: path(TOWER_BLOCKS) },
   hipercentralismo: { viewBox: '0 0 512 512', glyph: path(HYPERCENTRAL) },
   centralismo: { viewBox: '0 0 14 14', glyph: path(COLUMNS_ARROW) },
+  unitarismo: { viewBox: '0 0 14 14', glyph: path(COLUMNS_ARROW) },
   regionalismo: { viewBox: '0 0 24 24', glyph: regionStars },
   comunalismo: { viewBox: '0 0 24 24', glyph: commune },
   patchwork: { viewBox: '0 0 24 24', glyph: path(PATCHWORK_HEX) },
@@ -518,6 +522,7 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   'neutralidade-tecnologica': { viewBox: '0 0 640 640', glyph: path(SCALES_MOUNTAINS) },
   'industrialismo-nacional': { viewBox: '0 0 24 24', glyph: path(FACTORY_BLOCK) },
   'industrialismo-capitalista': { viewBox: '0 0 24 24', glyph: path(FACTORY_BLOCK) },
+  industrialismo: { viewBox: '0 0 24 24', glyph: path(FACTORY_BLOCK) },
   'industrialismo-socialista': { viewBox: '0 0 24 24', glyph: path(WRENCH_CROSS) },
   modernismo: { viewBox: '0 0 14 14', glyph: brightBulb },
   tecnocapitalismo: { viewBox: '0 0 24 24', glyph: chip },
@@ -526,9 +531,11 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   'nacionalismo-cultural': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   'nacionalismo-civico': { viewBox: '0 0 24 24', glyph: path(JUSTICE_SCALES) },
   patriotismo: { viewBox: '0 0 24 24', glyph: path(FLAG) },
+  'nacional-desenvolvimentismo': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   'nacional-liberalismo': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   mercantilismo: { viewBox: '-1.5 0 24 24', glyph: tradeShip },
   mutualismo: { viewBox: '0 0 20 20', glyph: mutualArrows },
+  'capitalismo-de-estado': { viewBox: '0 0 16 16', glyph: path(STATE_DOLLAR) },
   'nacionalismo-religioso': { viewBox: '0 0 768 1024', religious: true },
   comunitarismo: { viewBox: '0 0 1200 1200', glyph: path(CROWD_PEOPLE) },
   socialismo: { viewBox: '0 0 512 512', glyph: path(HAMMER_SICKLE) },

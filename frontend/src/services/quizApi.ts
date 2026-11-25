@@ -87,7 +87,7 @@ export function submitResults(
 // o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo). 3: saiu a lista de áreas de atuação,
 // que agora é do Relatório completo.
 // 4: os valores políticos viraram oito categorias, com nomes novos.
-const SHARED_RESULT_VERSION = 8;
+const SHARED_RESULT_VERSION = 11;
 
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';

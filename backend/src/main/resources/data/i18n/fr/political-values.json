@@ -9,6 +9,11 @@
     "description": "Entreprises publiques ou collectives en concurrence sur un marché, avec une planification d’ensemble et des prix largement libres."
   },
   {
+    "id": "capitalismo-de-estado",
+    "name": "Capitalisme d’État",
+    "description": "Le marché et le profit sous la direction de l’État, qui planifie, tient les secteurs stratégiques et coexiste avec l’entreprise privée."
+  },
+  {
     "id": "desenvolvimentismo",
     "name": "Développementisme",
     "description": "Investissement public et planification pour industrialiser le pays, en protégeant l’industrie nationale pendant sa croissance."
@@ -270,6 +275,11 @@
     "description": "Un gouvernement central fort décide de l’essentiel, les régions et les villes lui étant subordonnées."
   },
   {
+    "id": "unitarismo",
+    "name": "Unitarisme",
+    "description": "Un État unitaire où le centre décide de l’essentiel et délègue l’administration et une partie des choix aux régions et aux villes."
+  },
+  {
     "id": "regionalismo",
     "name": "Régionalisme",
     "description": "Autonomie pour les régions, au sein d’un État qui conserve un centre commun."
@@ -407,6 +417,11 @@
     "description": "La nation s’affirme contre la domination étrangère : libération, souveraineté et développement propre."
   },
   {
+    "id": "nacional-desenvolvimentismo",
+    "name": "National-développementisme",
+    "description": "La nation s’affirme par le développement : un État fort dans l’économie, une industrie protégée et un progrès technique propre."
+  },
+  {
     "id": "socialismo",
     "name": "Socialisme internationaliste",
     "description": "La solidarité de classe passe avant la nation : ce qui unit les travailleurs, ce sont le travail et l’égalité, pas les frontières."
@@ -460,6 +475,11 @@
     "id": "industrialismo-socialista",
     "name": "Industrialisme socialiste",
     "description": "Industrialisation et progrès technique conduits par l’État et la propriété publique, au service de la collectivité."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialisme",
+    "description": "L’industrie et le progrès technique comme moteur du pays, en combinant l’État et l’initiative privée selon ce qui fonctionne."
   },
   {
     "id": "modernismo",

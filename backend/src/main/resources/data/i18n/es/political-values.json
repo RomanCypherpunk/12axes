@@ -9,6 +9,11 @@
     "description": "Empresas de propiedad pública o colectiva que compiten en un mercado, con planificación general y precios en gran parte libres."
   },
   {
+    "id": "capitalismo-de-estado",
+    "name": "Capitalismo de Estado",
+    "description": "Mercado y lucro bajo el mando del Estado, que planifica, controla sectores estratégicos y convive con la empresa privada."
+  },
+  {
     "id": "desenvolvimentismo",
     "name": "Desarrollismo",
     "description": "Inversión y planificación públicas para industrializar el país, protegiendo la industria nacional mientras crece."
@@ -270,6 +275,11 @@
     "description": "Un gobierno central fuerte decide lo esencial, con regiones y ciudades subordinadas a él."
   },
   {
+    "id": "unitarismo",
+    "name": "Unitarismo",
+    "description": "Un Estado unitario en el que el centro decide lo principal y delega la administración y parte de las decisiones en regiones y ciudades."
+  },
+  {
     "id": "regionalismo",
     "name": "Regionalismo",
     "description": "Autonomía para las regiones, dentro de un Estado que aún mantiene un centro común."
@@ -407,6 +417,11 @@
     "description": "La nación se afirma frente al dominio extranjero: liberación, soberanía y desarrollo propio."
   },
   {
+    "id": "nacional-desenvolvimentismo",
+    "name": "Nacional-desarrollismo",
+    "description": "La nación se afirma con el desarrollo: Estado fuerte en la economía, industria protegida y avance tecnológico propio."
+  },
+  {
     "id": "socialismo",
     "name": "Socialismo internacionalista",
     "description": "La solidaridad de clase está antes que la nación: lo que une a los trabajadores es el trabajo y la igualdad, no las fronteras."
@@ -460,6 +475,11 @@
     "id": "industrialismo-socialista",
     "name": "Industrialismo socialista",
     "description": "Industrialización y progreso técnico dirigidos por el Estado y la propiedad pública, al servicio de la colectividad."
+  },
+  {
+    "id": "industrialismo",
+    "name": "Industrialismo",
+    "description": "La industria y el progreso técnico como motor del país, combinando Estado e iniciativa privada según lo que funcione."
   },
   {
     "id": "modernismo",

@@ -103,9 +103,9 @@
         "name": "Minarquismo",
         "description": "Poder público reduzido ao mínimo: segurança, justiça e defesa, e mais nada.",
         "profile": {
-          "representacao": 81,
-          "poder": 12,
-          "controle": 14
+          "representacao": 76,
+          "poder": 5,
+          "controle": 5
         }
       },
       {
@@ -192,7 +192,15 @@
         "name": "Centralismo",
         "description": "Um governo central forte decide o essencial, com regiões e cidades subordinadas a ele.",
         "profile": {
-          "estrutura": 25
+          "estrutura": 18
+        }
+      },
+      {
+        "id": "unitarismo",
+        "name": "Unitarismo",
+        "description": "Um Estado unitário, em que o centro decide o principal e delega a administração e parte das escolhas a regiões e cidades.",
+        "profile": {
+          "estrutura": 34
         }
       },
       {
@@ -412,10 +420,10 @@
         "name": "Internacionalismo",
         "description": "Cooperação entre países por meio de organismos e acordos comuns, com comércio aberto.",
         "profile": {
-          "diplomacia": 39,
-          "intervencao": 62,
-          "comercio": 43,
-          "religiao": 85
+          "diplomacia": 9,
+          "intervencao": 55,
+          "comercio": 21,
+          "religiao": 80
         }
       },
       {
@@ -454,10 +462,10 @@
         "name": "Colonialismo",
         "description": "Ocupar e governar territórios no exterior, povoando-os com colonos e tratando os povos locais como subordinados.",
         "profile": {
-          "diplomacia": 78,
-          "intervencao": 18,
-          "religiao": 7,
-          "imigracao": 80
+          "diplomacia": 89,
+          "intervencao": 11,
+          "religiao": 1,
+          "imigracao": 87
         }
       }
     ]
@@ -480,8 +488,8 @@
         "name": "Nacionalismo cívico",
         "description": "A nação é a comunidade de cidadãos que aceitam as mesmas leis e instituições, seja qual for a origem.",
         "profile": {
-          "imigracao": 57,
-          "moral": 59
+          "imigracao": 39,
+          "moral": 76
         }
       },
       {
@@ -550,7 +558,7 @@
         "description": "Valores e vínculos de comunidades locais, como família, bairro e tradição, dão sentido à vida em sociedade.",
         "profile": {
           "representacao": 84,
-          "estrutura": 76
+          "estrutura": 65
         }
       },
       {
@@ -589,6 +597,16 @@
           "imigracao": 28,
           "economia": 87,
           "intervencao": 56
+        }
+      },
+      {
+        "id": "nacional-desenvolvimentismo",
+        "name": "Nacional-desenvolvimentismo",
+        "description": "A nação se afirma pelo desenvolvimento: Estado forte na economia, indústria protegida e avanço tecnológico próprio.",
+        "profile": {
+          "economia": 75,
+          "comercio": 69,
+          "tecnologia": 79
         }
       },
       {
@@ -640,6 +658,16 @@
           "economia": 78,
           "controle": 70,
           "comercio": 61
+        }
+      },
+      {
+        "id": "capitalismo-de-estado",
+        "name": "Capitalismo de Estado",
+        "description": "Mercado e lucro sob comando do Estado, que planeja, controla setores estratégicos e convive com a empresa privada.",
+        "profile": {
+          "economia": 54,
+          "controle": 64,
+          "comercio": 42
         }
       },
       {
@@ -934,10 +962,10 @@
         "name": "Progressismo",
         "description": "Apoia mudanças nos costumes e a ampliação dos direitos individuais, com religião e vida pública separadas.",
         "profile": {
-          "moral": 85,
-          "religiao": 81,
-          "imigracao": 19,
-          "economia": 61
+          "moral": 82,
+          "religiao": 76,
+          "imigracao": 22,
+          "economia": 76
         }
       },
       {
@@ -1033,10 +1061,10 @@
         "name": "Neorreacionarismo",
         "description": "Crítica à democracia moderna e retorno da hierarquia, aliados à alta tecnologia e à fragmentação do poder.",
         "profile": {
-          "moral": 37,
-          "religiao": 65,
-          "imigracao": 75,
-          "tecnologia": 88
+          "moral": 26,
+          "religiao": 40,
+          "imigracao": 82,
+          "tecnologia": 82
         }
       },
       {
@@ -1237,6 +1265,15 @@
         "profile": {
           "tecnologia": 70,
           "economia": 88
+        }
+      },
+      {
+        "id": "industrialismo",
+        "name": "Industrialismo",
+        "description": "Indústria e progresso técnico como motor do país, combinando Estado e iniciativa privada conforme o que funcionar.",
+        "profile": {
+          "tecnologia": 70,
+          "economia": 52
         }
       },
       {

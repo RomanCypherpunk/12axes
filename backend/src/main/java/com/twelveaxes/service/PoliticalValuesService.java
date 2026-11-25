@@ -25,9 +25,11 @@ import org.springframework.stereotype.Service;
  * a mesma escala dos vetores do catalogo), e pode definir eixos EXTRAS alem
  * deles (por exemplo, a ditadura do proletariado exige economia publica, para
  * um autoritario capitalista nao cair nela). O usuario recebe o valor de perfil
- * mais proximo, como nos arquetipos; a distancia e a media dos quadrados sobre
- * os eixos que o valor define, para valores com mais eixos nao sairem em
- * desvantagem. Quem esta perto do centro em TODOS os eixos da categoria (so os
+ * mais proximo, como nos arquetipos; a distancia e a media ponderada dos
+ * quadrados sobre os eixos que o valor define, para valores com mais eixos nao
+ * sairem em desvantagem. Os eixos extras pesam um terco dos eixos base: eles
+ * desempatam, mas nao podem entregar um valor distante no eixo da categoria.
+ * Categoria sem eixos base: todos pesam igual. Quem esta perto do centro em TODOS os eixos da categoria (so os
  * eixos base) recebe o valor neutro dela, para o centro nunca ganhar um rotulo
  * forte e enganoso.
  *
@@ -39,6 +41,8 @@ public class PoliticalValuesService {
     private static final double CENTER = 50.0;
     /** Mesmo limiar do "equilibrado" do ScoringService: distancia do centro abaixo dele nao pende para lado nenhum. */
     static final double NEUTRAL_BAND = 7.5;
+    /** Peso de um eixo extra na distancia, em relacao a um eixo base da categoria. */
+    static final double EXTRA_AXIS_WEIGHT = 1.0 / 3;
 
     private final List<Category> categories;
     private final Map<String, Map<String, String>> englishText;
@@ -119,11 +123,14 @@ public class PoliticalValuesService {
                 continue;
             }
             double distance = 0;
+            double totalWeight = 0;
             for (Map.Entry<String, Double> target : value.profile().entrySet()) {
+                double weight = category.freeAxes() || category.axes().contains(target.getKey()) ? 1 : EXTRA_AXIS_WEIGHT;
                 double delta = user.getOrDefault(target.getKey(), CENTER) - target.getValue();
-                distance += delta * delta;
+                distance += weight * delta * delta;
+                totalWeight += weight;
             }
-            distance /= value.profile().size();
+            distance /= totalWeight;
             if (distance < bestDistance) {
                 bestDistance = distance;
                 best = value;

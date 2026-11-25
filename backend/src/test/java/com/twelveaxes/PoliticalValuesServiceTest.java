@@ -138,9 +138,9 @@ class PoliticalValuesServiceTest {
         // Nacionalismo exige comercio protecionista e fronteira fechada; messianismo e colonialismo exigem religiao forte.
         assertThat(foreign(Map.of("diplomacia", 65.0, "intervencao", 38.0, "comercio", 72.0, "imigracao", 73.0)).valueId()).isEqualTo("nacionalismo");
         assertThat(foreign(Map.of("diplomacia", 83.0, "intervencao", 18.0, "religiao", 6.0, "moral", 11.0)).valueId()).isEqualTo("messianismo");
-        assertThat(foreign(Map.of("diplomacia", 78.0, "intervencao", 18.0, "religiao", 7.0, "imigracao", 80.0)).valueId()).isEqualTo("colonialismo");
+        assertThat(foreign(Map.of("diplomacia", 89.0, "intervencao", 11.0, "religiao", 1.0, "imigracao", 87.0)).valueId()).isEqualTo("colonialismo");
         assertThat(foreign(Map.of("diplomacia", 41.0, "intervencao", 68.0, "comercio", 38.0)).valueId()).isEqualTo("neutralidade-armada");
-        assertThat(foreign(Map.of("diplomacia", 39.0, "intervencao", 62.0, "comercio", 43.0, "religiao", 85.0)).valueId()).isEqualTo("internacionalismo");
+        assertThat(foreign(Map.of("diplomacia", 9.0, "intervencao", 55.0, "comercio", 21.0, "religiao", 80.0)).valueId()).isEqualTo("internacionalismo");
     }
 
     @Test
@@ -313,7 +313,7 @@ class PoliticalValuesServiceTest {
         assertThat(society(Map.of("moral", 74.0, "religiao", 88.0, "imigracao", 21.0, "economia", 89.0)).valueId()).isEqualTo("marxismo");
         // Modernismo reacionario e neorreacionarismo se apoiam na tecnologia.
         assertThat(society(Map.of("moral", 15.0, "religiao", 45.0, "imigracao", 86.0, "tecnologia", 82.0)).valueId()).isEqualTo("modernismo-reacionario");
-        assertThat(society(Map.of("moral", 37.0, "religiao", 65.0, "imigracao", 75.0, "tecnologia", 88.0)).valueId()).isEqualTo("neorreacionarismo");
+        assertThat(society(Map.of("moral", 26.0, "religiao", 40.0, "imigracao", 82.0, "tecnologia", 82.0)).valueId()).isEqualTo("neorreacionarismo");
     }
 
     @Test
