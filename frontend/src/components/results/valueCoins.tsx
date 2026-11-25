@@ -442,6 +442,9 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   // Sociedade. Os valores "religiosos" usam o ícone da religião do usuário (a cruz padrão se não escolheu), como o polo Religioso do eixo.
   'tradicionalismo-religioso': { viewBox: '0 0 768 1024', religious: true },
   'conservadorismo-secular': { viewBox: '0 0 24 24', glyph: orbit },
+  // Ateísmo: o mesmo átomo (órbitas) do secularismo, nos dois valores de ateísmo.
+  'ateismo-moderado': { viewBox: '0 0 24 24', glyph: orbit },
+  'ateismo-tradicionalista': { viewBox: '0 0 24 24', glyph: orbit },
   moderado: { viewBox: '0 0 640 640', glyph: path(SCALES_MOUNTAINS) },
   'progressismo-religioso': { viewBox: '0 0 48 48', glyph: peaceDove },
   progressismo: { viewBox: '0 0 640 640', glyph: path(HAND) },

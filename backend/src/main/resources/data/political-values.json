@@ -698,7 +698,8 @@
         "profile": {
           "economia": 74,
           "controle": 68,
-          "comercio": 76
+          "comercio": 76,
+          "religiao": 20
         }
       },
       {
@@ -708,7 +709,8 @@
         "profile": {
           "economia": 61,
           "controle": 50,
-          "comercio": 74
+          "comercio": 74,
+          "religiao": 25
         }
       },
       {
@@ -718,7 +720,8 @@
         "profile": {
           "economia": 51,
           "controle": 54,
-          "comercio": 74
+          "comercio": 74,
+          "religiao": 30
         }
       },
       {
@@ -1096,6 +1099,26 @@
           "moral": 50,
           "religiao": 92,
           "imigracao": 35
+        }
+      },
+      {
+        "id": "ateismo-moderado",
+        "name": "Ateísmo moderado",
+        "description": "Sem fé religiosa, mas sem cruzada contra ela: costumes sem posição extrema e a religião tratada como assunto privado.",
+        "profile": {
+          "moral": 50,
+          "religiao": 95,
+          "imigracao": 55
+        }
+      },
+      {
+        "id": "ateismo-tradicionalista",
+        "name": "Ateísmo tradicionalista",
+        "description": "Sem fé religiosa, mas apegado à tradição, à família e à ordem como base da vida em comum, sem fundamento em Deus.",
+        "profile": {
+          "moral": 25,
+          "religiao": 95,
+          "imigracao": 60
         }
       },
       {
