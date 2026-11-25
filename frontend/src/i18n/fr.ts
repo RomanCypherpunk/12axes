@@ -568,11 +568,17 @@ export const fr: DeepPartial<Strings> = {
     anarquismo: 'Anarchiste'
   },
   compassEconomicLabels: {
+    socialism: 'Socialisme',
     left: 'Gauche',
     centerLeft: 'Centre gauche',
     center: 'Centre',
     centerRight: 'Centre droit',
-    right: 'Droite'
+    right: 'Droite',
+    capitalism: 'Capitalisme'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'économie planifiée',
+    market: 'économie de marché'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'Vous tendez à chercher une transformation profonde de la société, avec l’égalité matérielle, la propriété collective et un État fort au service de ceux qui travaillent, en rupture avec l’ordre économique actuel.',
@@ -585,11 +591,13 @@ export const fr: DeepPartial<Strings> = {
     anarquismo: 'Vous tendez à vous méfier de toute autorité centralisée et à défendre une société organisée par la coopération volontaire et l’autogestion, sans État ni hiérarchies imposées.'
   },
   compassEconomicDescriptions: {
-    left: 'Vous tendez à défendre la propriété collective ou publique des moyens de production, avec l’État et la société, et non le marché, au centre de l’économie.',
+    socialism: 'Vous tendez à défendre la propriété collective ou publique des moyens de production, avec l’État et la société, et non le marché, au centre de l’économie.',
+    left: 'Vous tendez à défendre une économie où l’État joue un rôle important : de grands services et entreprises publics, de la planification et une large redistribution, avec le marché au second plan.',
     centerLeft: 'Vous tendez à accepter le marché, mais avec une forte présence de l’État : de larges services publics, des entreprises publiques dans les secteurs clés et de la redistribution pour réduire les inégalités.',
     center: 'Vous tendez à chercher un juste milieu économique, avec des rôles équilibrés pour le marché et l’État : des entreprises publiques là où elles sont stratégiques et de la place pour l’initiative privée.',
     centerRight: 'Vous tendez à faire davantage confiance au marché et à l’initiative privée, avec un État plus petit et des règles claires, sans renoncer à une certaine protection sociale.',
-    right: 'Vous tendez à défendre la propriété privée et le libre marché, avec peu d’entreprises d’État et la concurrence comme moteur de l’économie.'
+    right: 'Vous tendez à défendre le marché et la propriété privée, avec peu d’entreprises d’État, la concurrence comme moteur de l’économie et une intervention de l’État seulement là où elle est nécessaire.',
+    capitalism: 'Vous tendez à défendre la propriété privée des moyens de production et le libre marché avec peu de restrictions, avec un État réduit au minimum et la concurrence comme moteur de l’économie.'
   },
   compassSocialLabels: {
     veryProgressive: 'Très progressiste',

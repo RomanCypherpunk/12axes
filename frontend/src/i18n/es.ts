@@ -556,11 +556,17 @@ export const es: DeepPartial<Strings> = {
     anarquismo: 'Anarquista'
   },
   compassEconomicLabels: {
+    socialism: 'Socialismo',
     left: 'Izquierda',
     centerLeft: 'Centroizquierda',
     center: 'Centro',
     centerRight: 'Centroderecha',
-    right: 'Derecha'
+    right: 'Derecha',
+    capitalism: 'Capitalismo'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'economía planificada',
+    market: 'economía de mercado'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'Tiendes a buscar una transformación profunda de la sociedad, con igualdad material, propiedad colectiva y un Estado fuerte al servicio de quienes trabajan, rompiendo con el orden económico actual.',
@@ -573,11 +579,13 @@ export const es: DeepPartial<Strings> = {
     anarquismo: 'Tiendes a desconfiar de toda autoridad centralizada y a defender una sociedad organizada por la cooperación voluntaria y la autogestión, sin Estado ni jerarquías impuestas.'
   },
   compassEconomicDescriptions: {
-    left: 'Tiendes a defender la propiedad colectiva o pública de los medios de producción, con el Estado y la sociedad, y no el mercado, en el centro de la economía.',
+    socialism: 'Tiendes a defender la propiedad colectiva o pública de los medios de producción, con el Estado y la sociedad, y no el mercado, en el centro de la economía.',
+    left: 'Tiendes a defender una economía con un fuerte papel del Estado: grandes servicios y empresas públicas, planificación y amplia redistribución, con el mercado en segundo plano.',
     centerLeft: 'Tiendes a aceptar el mercado, pero con una fuerte presencia del Estado: amplios servicios públicos, empresas públicas en sectores clave y redistribución para reducir las desigualdades.',
     center: 'Tiendes a buscar un punto medio económico, con mercado y Estado en papeles equilibrados: empresas públicas donde sean estratégicas y espacio para la iniciativa privada.',
     centerRight: 'Tiendes a confiar más en el mercado y en la iniciativa privada, con un Estado menor y reglas claras, sin renunciar a cierta protección social.',
-    right: 'Tiendes a defender la propiedad privada y el libre mercado, con pocas empresas estatales y la competencia como motor de la economía.'
+    right: 'Tiendes a defender el mercado y la propiedad privada, con pocas empresas estatales, la competencia como motor de la economía y la intervención del Estado solo donde sea necesaria.',
+    capitalism: 'Tiendes a defender la propiedad privada de los medios de producción y el libre mercado con pocas restricciones, con el Estado reducido al mínimo y la competencia como motor de la economía.'
   },
   compassSocialLabels: {
     veryProgressive: 'Fuertemente progresista',

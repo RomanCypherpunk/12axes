@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AxisResult } from '../src/types/quiz';
-import { compassFromVector, compassPoints, compassRegion, computeCompass, economicLevel, socialLevel } from '../src/utils/politicalCompass';
+import { compassFromVector, compassPoints, compassRegion, computeCompass, economicLevel, economicMethod, economicName, socialLevel } from '../src/utils/politicalCompass';
 
 function results(left: Record<string, number>): Map<string, AxisResult> {
   return new Map(
@@ -16,12 +16,16 @@ const ALL = { economia: 50, controle: 50, poder: 50, representacao: 50, estrutur
 
 describe('computeCompass', () => {
   it('centro em tudo fica no meio da bússola', () => {
-    expect(computeCompass(results(ALL))).toEqual({ right: 50, authoritarian: 50, traditional: 50 });
+    expect(computeCompass(results(ALL))).toEqual({ right: 50, economy: 50, planning: 50, authoritarian: 50, traditional: 50 });
   });
 
-  it('propriedade privada leva à direita e propriedade pública, à esquerda', () => {
-    const right = computeCompass(results({ ...ALL, economia: 0 }))?.right ?? 0;
-    const left = computeCompass(results({ ...ALL, economia: 100 }))?.right ?? 100;
+  it('o cartão econômico (economy) usa só a economia, sem a moral', () => {
+    expect(computeCompass(results({ ...ALL, economia: 70.9, moral: 7.7 }))?.economy).toBeCloseTo(29.1, 5);
+  });
+
+  it('propriedade privada com moral conservadora leva à direita; pública com moral progressista, à esquerda', () => {
+    const right = computeCompass(results({ ...ALL, economia: 0, moral: 0 }))?.right ?? 0;
+    const left = computeCompass(results({ ...ALL, economia: 100, moral: 100 }))?.right ?? 100;
     expect(right).toBe(100);
     expect(left).toBe(0);
   });
@@ -31,9 +35,21 @@ describe('computeCompass', () => {
     expect(computeCompass(results({ ...ALL, controle: 100 }))?.right).toBe(50);
   });
 
-  it('é proporcional e linear: 75% público resulta em 25% na bússola', () => {
-    const pos = computeCompass(results({ ...ALL, economia: 75 }));
+  it('é proporcional e linear: 75% público e 75% progressista resulta em 25% na bússola', () => {
+    const pos = computeCompass(results({ ...ALL, economia: 75, moral: 75 }));
     expect(pos?.right).toBe(25);
+  });
+
+  it('a economia pesa o dobro da moral no eixo esquerda-direita (2:1)', () => {
+    // só economia pública: 100 - (2*100 + 50) / 3; só moral progressista: 100 - (2*50 + 100) / 3
+    expect(computeCompass(results({ ...ALL, economia: 100 }))?.right).toBeCloseTo(16.67, 2);
+    expect(computeCompass(results({ ...ALL, moral: 100 }))?.right).toBeCloseTo(33.33, 2);
+  });
+
+  it('economia dirigida com moral conservadora fica no meio, não na esquerda radical', () => {
+    // Teocratismo Islâmico no catálogo: economia 70.9, moral 7.7
+    const position = computeCompass(results({ ...ALL, economia: 70.9, moral: 7.7 }));
+    expect(position?.right).toBeCloseTo(50.17, 2);
   });
 
   it('é monótono: mais mercado nunca leva mais à esquerda', () => {
@@ -42,20 +58,25 @@ describe('computeCompass', () => {
     expect([...xs].sort((a, b) => a - b)).toEqual(xs);
   });
 
-  it('o perfil do nacional-socialismo fica no centro horizontal (propriedade mista) e acima no vertical (planejamento)', () => {
-    // Nacional-socialismo no catálogo: economia 47.5 (propriedade sob controle), controle 78.8 (planejamento)
-    const position = computeCompass(results({ ...ALL, economia: 47.5, controle: 78.8 }));
-    expect(position?.right).toBeCloseTo(52.5, 5);
+  it('o perfil do nacional-socialismo vai à direita pela moral (propriedade mista) e acima no vertical (planejamento)', () => {
+    // Nacional-socialismo no catálogo: economia 47.5 (propriedade sob controle), controle 78.8 (planejamento), moral 11.2
+    const position = computeCompass(results({ ...ALL, economia: 47.5, controle: 78.8, moral: 11.2 }));
+    expect(position?.right).toBeCloseTo(64.6, 1);
     // o planejamento (10% do vertical) o empurra um pouco para o lado autoritário
     expect(position?.authoritarian).toBeCloseTo(52.88, 2);
   });
 
   it('um perfil com intervencionismo moderado (Trump) não fica no mesmo ponto de um anarcocapitalista', () => {
     // Vetores do catálogo, em percentual do polo esquerdo de cada eixo.
-    const trump = computeCompass(results({ ...ALL, economia: 25, controle: 37 }));
-    const rothbard = computeCompass(results({ ...ALL, economia: 6, controle: 5 }));
+    const trump = computeCompass(
+      results({ economia: 25, controle: 37.5, poder: 62.5, representacao: 38.8, estrutura: 25, moral: 21.2 })
+    );
+    const rothbard = computeCompass(
+      results({ economia: 6.2, controle: 5, poder: 1.2, representacao: 77.5, estrutura: 96.2, moral: 53.8 })
+    );
     expect(trump?.right).toBeGreaterThan(70);
-    expect((rothbard?.right ?? 0) - (trump?.right ?? 0)).toBeGreaterThan(12);
+    // os dois ficam à direita; o que os separa é o eixo vertical (Trump mais autoritário)
+    expect((trump?.authoritarian ?? 0) - (rothbard?.authoritarian ?? 0)).toBeGreaterThan(12);
   });
 
   it('ordem, autocracia e unitarismo são autoritários; liberdade, democracia e federalismo, libertários', () => {
@@ -118,7 +139,9 @@ describe('socialLevel', () => {
 
 describe('economicLevel', () => {
   it('usa as mesmas faixas de distância do centro dos eixos', () => {
-    expect(economicLevel(0)).toBe('left');
+    expect(economicLevel(0)).toBe('socialism');
+    expect(economicLevel(12.4)).toBe('socialism');
+    expect(economicLevel(12.5)).toBe('left');
     expect(economicLevel(27.4)).toBe('left');
     expect(economicLevel(27.5)).toBe('centerLeft');
     expect(economicLevel(42.4)).toBe('centerLeft');
@@ -128,7 +151,9 @@ describe('economicLevel', () => {
     expect(economicLevel(57.6)).toBe('centerRight');
     expect(economicLevel(72.5)).toBe('centerRight');
     expect(economicLevel(72.6)).toBe('right');
-    expect(economicLevel(100)).toBe('right');
+    expect(economicLevel(87.5)).toBe('right');
+    expect(economicLevel(87.6)).toBe('capitalism');
+    expect(economicLevel(100)).toBe('capitalism');
   });
 });
 
@@ -180,7 +205,7 @@ describe('bússola com vários perfis', () => {
     expect(points[0].position.right).toBeLessThan(50);
     expect(points[1].position.right).toBeGreaterThan(50);
     expect(points[1].position.authoritarian).toBeGreaterThan(points[0].position.authoritarian);
-    expect(points[2].position).toEqual({ right: 50, authoritarian: 50, traditional: 50 });
+    expect(points[2].position).toEqual({ right: 50, economy: 50, planning: 50, authoritarian: 50, traditional: 50 });
   });
 
   it('perfil sem os eixos da bússola fica de fora sem tirar os outros', () => {
@@ -189,5 +214,34 @@ describe('bússola com vários perfis', () => {
       { key: 'b', label: 'B', color: '#222', vector: { economia: 50 } }
     ]);
     expect(points.map((point) => point.key)).toEqual(['a']);
+  });
+});
+
+describe('economicMethod e economicName', () => {
+  it('planejada a partir de 66,7, de mercado até 33,3 e sem rótulo no meio', () => {
+    expect(economicMethod(100)).toBe('planned');
+    expect(economicMethod(66.7)).toBe('planned');
+    expect(economicMethod(66.6)).toBeNull();
+    expect(economicMethod(50)).toBeNull();
+    expect(economicMethod(33.4)).toBeNull();
+    expect(economicMethod(33.3)).toBe('market');
+    expect(economicMethod(0)).toBe('market');
+  });
+
+  const t = {
+    compassEconomicLabels: { socialism: 'Socialismo', left: 'Esquerda', centerLeft: 'Centro-esquerda', center: 'Centro', centerRight: 'Centro-direita', right: 'Direita', capitalism: 'Capitalismo' },
+    compassEconomicMethodLabels: { planned: 'economia planejada', market: 'economia de mercado' }
+  };
+
+  it('junta o nível e o método com vírgula (com quebra de linha só em Centro-esquerda e Centro-direita), e deixa só o nível quando não há método', () => {
+    expect(economicName(t, 'centerLeft', 'planned')).toBe('Centro-esquerda,\neconomia planejada');
+    expect(economicName(t, 'centerRight', 'market')).toBe('Centro-direita,\neconomia de mercado');
+    expect(economicName(t, 'capitalism', 'market')).toBe('Capitalismo, economia de mercado');
+    expect(economicName(t, 'center', 'planned')).toBe('Centro, economia planejada');
+    expect(economicName(t, 'center', null)).toBe('Centro');
+  });
+
+  it('o planejamento (controle) vem só do eixo controle, sem a economia nem a moral', () => {
+    expect(computeCompass(results({ ...ALL, controle: 80, economia: 10, moral: 10 }))?.planning).toBe(80);
   });
 });

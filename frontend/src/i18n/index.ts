@@ -390,9 +390,10 @@ export interface Strings {
   compassTraditionalist: string;
   compassQuadrants: Record<'authLeft' | 'authRight' | 'libLeft' | 'libRight', string>;
   compassSpectrumLabels: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
-  compassEconomicLabels: Record<'left' | 'centerLeft' | 'center' | 'centerRight' | 'right', string>;
+  compassEconomicLabels: Record<'socialism' | 'left' | 'centerLeft' | 'center' | 'centerRight' | 'right' | 'capitalism', string>;
+  compassEconomicMethodLabels: Record<'planned' | 'market', string>;
   compassSpectrumDescriptions: Record<'esq-radical' | 'esquerda' | 'centro' | 'direita' | 'ext-direita' | 'terceira' | 'libertario' | 'anarquismo', string>;
-  compassEconomicDescriptions: Record<'left' | 'centerLeft' | 'center' | 'centerRight' | 'right', string>;
+  compassEconomicDescriptions: Record<'socialism' | 'left' | 'centerLeft' | 'center' | 'centerRight' | 'right' | 'capitalism', string>;
   compassSocialLabels: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
   compassSocialDescriptions: Record<'veryProgressive' | 'progressive' | 'moderate' | 'traditional' | 'veryTraditional', string>;
   compassInfo: {

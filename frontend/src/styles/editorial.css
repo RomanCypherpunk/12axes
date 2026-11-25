@@ -893,6 +893,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-dims.e-values-grid.e-compass-tiles{grid-template-columns:1fr;margin-top:0;gap:10px}
 .e-dims.e-compass-tiles .e-dim-row{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"v t";align-items:center;gap:0 18px;padding:14px 22px;border-radius:22px}
 .e-dims.e-compass-tiles .e-dim-row>div:not(.e-dim-visual){grid-area:t;align-self:center}
+.e-dims.e-compass-tiles .e-dim-row strong{white-space:pre-line}
 .e-compass-bar{margin-top:26px;max-width:420px}
 .e-compass-bar-lbls{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta)}
 .e-compass-strip{position:relative;display:grid;grid-template-columns:repeat(9,1fr);gap:2px}

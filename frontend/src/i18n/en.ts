@@ -568,11 +568,17 @@ export const en: Strings = {
     anarquismo: 'Anarchist'
   },
   compassEconomicLabels: {
+    socialism: 'Socialism',
     left: 'Left',
     centerLeft: 'Center-left',
     center: 'Center',
     centerRight: 'Center-right',
-    right: 'Right'
+    right: 'Right',
+    capitalism: 'Capitalism'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'planned economy',
+    market: 'market economy'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'You tend to seek a deep transformation of society, with material equality, collective ownership and a strong state serving working people, breaking with the current economic order.',
@@ -585,11 +591,13 @@ export const en: Strings = {
     anarquismo: 'You tend to distrust all centralized authority and to favor a society organized by voluntary cooperation and self-management, with no state and no imposed hierarchies.'
   },
   compassEconomicDescriptions: {
-    left: 'You tend to favor collective or public ownership of the means of production, with the state and society, not the market, at the center of the economy.',
+    socialism: 'You tend to favor collective or public ownership of the means of production, with the state and society, not the market, at the center of the economy.',
+    left: 'You tend to favor an economy with a strong state role: large public services and enterprises, planning and broad redistribution, with the market in second place.',
     centerLeft: 'You tend to accept the market, but with a strong state presence: broad public services, public enterprises in key sectors and redistribution to reduce inequality.',
     center: 'You tend to seek an economic middle ground, with market and state in balanced roles: public enterprises where they are strategic and room for private initiative.',
     centerRight: 'You tend to trust the market and private initiative more, with a smaller state and clear rules, without giving up some social protection.',
-    right: 'You tend to favor private property and the free market, with few state-owned enterprises and competition as the engine of the economy.'
+    right: 'You tend to favor the market and private property, with few state-owned enterprises, competition as the engine of the economy and state intervention only where needed.',
+    capitalism: 'You tend to favor private ownership of the means of production and the free market with few restrictions, with the state reduced to a minimum and competition as the engine of the economy.'
   },
   compassSocialLabels: {
     veryProgressive: 'Strongly progressive',

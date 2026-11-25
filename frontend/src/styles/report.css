@@ -231,7 +231,7 @@
 .rp .cmp-tiles li{display:flex;align-items:center;gap:3.5mm;padding:3mm 4mm;border-radius:4mm;background:var(--cat-bg)}
 .rp .cmp-tiles li>div{min-width:0}
 .rp .cmp-tiles .dim{display:block}
-.rp .cmp-tiles b{display:block;font-size:11px;line-height:1.25;color:var(--cat)}
+.rp .cmp-tiles b{white-space:pre-line;display:block;font-size:11px;line-height:1.25;color:var(--cat)}
 .rp .cmp-tiles svg{display:block;flex:none}
 .rp .el-note{font-size:8.5px;color:var(--suave);margin-top:3mm}
 

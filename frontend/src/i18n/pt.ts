@@ -557,11 +557,17 @@ export const pt: Strings = {
     anarquismo: 'Anarquista'
   },
   compassEconomicLabels: {
+    socialism: 'Socialismo',
     left: 'Esquerda',
     centerLeft: 'Centro-esquerda',
     center: 'Centro',
     centerRight: 'Centro-direita',
-    right: 'Direita'
+    right: 'Direita',
+    capitalism: 'Capitalismo'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'economia planejada',
+    market: 'economia de mercado'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'Você tende a buscar uma transformação profunda da sociedade, com igualdade material, propriedade coletiva e um Estado forte a serviço de quem trabalha, rompendo com a ordem econômica atual.',
@@ -574,11 +580,13 @@ export const pt: Strings = {
     anarquismo: 'Você tende a desconfiar de toda autoridade centralizada e a defender uma sociedade organizada pela cooperação voluntária e pela autogestão, sem Estado nem hierarquias impostas.'
   },
   compassEconomicDescriptions: {
-    left: 'Você tende a defender a propriedade coletiva ou pública dos meios de produção, com o Estado e a sociedade, e não o mercado, no centro da economia.',
+    socialism: 'Você tende a defender a propriedade coletiva ou pública dos meios de produção, com o Estado e a sociedade, e não o mercado, no centro da economia.',
+    left: 'Você tende a defender uma economia com forte papel do Estado: grandes serviços e empresas públicas, planejamento e ampla redistribuição, com o mercado em segundo plano.',
     centerLeft: 'Você tende a aceitar o mercado, mas com forte presença do Estado: serviços públicos amplos, empresas públicas em setores-chave e redistribuição para reduzir desigualdades.',
     center: 'Você tende a buscar um meio-termo econômico, com mercado e Estado em papéis equilibrados: empresas públicas onde forem estratégicas e espaço para a iniciativa privada.',
     centerRight: 'Você tende a confiar mais no mercado e na iniciativa privada, com um Estado menor e regras claras, sem abrir mão de alguma proteção social.',
-    right: 'Você tende a defender a propriedade privada e o livre mercado, com poucas empresas estatais e a concorrência como motor da economia.'
+    right: 'Você tende a defender o mercado e a propriedade privada, com poucas empresas estatais, concorrência como motor da economia e intervenção do Estado só onde for necessária.',
+    capitalism: 'Você tende a defender a propriedade privada dos meios de produção e o livre mercado com poucas restrições, com o Estado reduzido ao mínimo e a concorrência como motor da economia.'
   },
   compassSocialLabels: {
     veryProgressive: 'Fortemente progressista',

@@ -568,11 +568,17 @@ export const it: DeepPartial<Strings> = {
     anarquismo: 'Anarchico'
   },
   compassEconomicLabels: {
+    socialism: 'Socialismo',
     left: 'Sinistra',
     centerLeft: 'Centro-sinistra',
     center: 'Centro',
     centerRight: 'Centro-destra',
-    right: 'Destra'
+    right: 'Destra',
+    capitalism: 'Capitalismo'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'economia pianificata',
+    market: 'economia di mercato'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'Tendi a cercare una trasformazione profonda della società, con uguaglianza materiale, proprietà collettiva e uno Stato forte al servizio di chi lavora, rompendo con l’attuale ordine economico.',
@@ -585,11 +591,13 @@ export const it: DeepPartial<Strings> = {
     anarquismo: 'Tendi a diffidare di ogni autorità centralizzata e a sostenere una società organizzata dalla cooperazione volontaria e dall’autogestione, senza Stato né gerarchie imposte.'
   },
   compassEconomicDescriptions: {
-    left: 'Tendi a sostenere la proprietà collettiva o pubblica dei mezzi di produzione, con lo Stato e la società, e non il mercato, al centro dell’economia.',
+    socialism: 'Tendi a sostenere la proprietà collettiva o pubblica dei mezzi di produzione, con lo Stato e la società, e non il mercato, al centro dell’economia.',
+    left: 'Tendi a sostenere un’economia con un forte ruolo dello Stato: grandi servizi e imprese pubbliche, pianificazione e ampia redistribuzione, con il mercato in secondo piano.',
     centerLeft: 'Tendi ad accettare il mercato, ma con una forte presenza dello Stato: ampi servizi pubblici, imprese pubbliche nei settori chiave e redistribuzione per ridurre le disuguaglianze.',
     center: 'Tendi a cercare una via di mezzo economica, con mercato e Stato in ruoli equilibrati: imprese pubbliche dove sono strategiche e spazio per l’iniziativa privata.',
     centerRight: 'Tendi a fidarti di più del mercato e dell’iniziativa privata, con uno Stato più piccolo e regole chiare, senza rinunciare a una certa protezione sociale.',
-    right: 'Tendi a sostenere la proprietà privata e il libero mercato, con poche imprese statali e la concorrenza come motore dell’economia.'
+    right: 'Tendi a sostenere il mercato e la proprietà privata, con poche imprese statali, la concorrenza come motore dell’economia e l’intervento dello Stato solo dove serve.',
+    capitalism: 'Tendi a sostenere la proprietà privata dei mezzi di produzione e il libero mercato con poche restrizioni, con lo Stato ridotto al minimo e la concorrenza come motore dell’economia.'
   },
   compassSocialLabels: {
     veryProgressive: 'Fortemente progressista',

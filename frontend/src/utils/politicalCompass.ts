@@ -5,6 +5,10 @@ import type { IdeologyColorKey } from './ideologyColors';
 export interface CompassPosition {
   /** 0 = esquerda, 100 = direita. */
   right: number;
+  /** 0 = esquerda, 100 = direita, só pela `economia`: o que a pessoa pensa de economia, sem a moral (cartão "Economicamente"). */
+  economy: number;
+  /** 0 = livre mercado, 100 = planejamento, só pelo `controle`: o método econômico (cartão "Economicamente"). */
+  planning: number;
   /** 0 = libertário, 100 = autoritário. */
   authoritarian: number;
   /** 0 = progressista, 100 = tradicionalista. */
@@ -13,10 +17,13 @@ export interface CompassPosition {
 
 const mean = (values: number[]): number => values.reduce((sum, value) => sum + value, 0) / values.length;
 
-// Eixo esquerda-direita: só `economia` (propriedade dos meios de produção, privada à direita), como o eixo econômico do
-// Political Compass. O planejamento estatal (`controle`) não decide a posição horizontal: uma economia dirigida pelo Estado
-// com propriedade privada (corporativismo, dirigismo, boa parte da extrema direita) não é "de esquerda". Ele entra no eixo
-// vertical, com um peso pequeno, porque diz o quanto o Estado conduz a vida econômica.
+// Eixo esquerda-direita: `economia` (propriedade dos meios de produção, privada à direita) com peso 2 e `moral` (conservadora
+// à direita) com peso 1. Só a economia colocava a economia dirigida com moral conservadora (Terceira Posição, teocracias,
+// comunismos nacionais) na esquerda radical; com a moral no eixo, ela cai no meio. O planejamento estatal (`controle`) fica
+// fora do horizontal (também é alto na extrema direita) e entra no eixo vertical, com um peso pequeno. Simulação nas 291
+// ideologias do catálogo: acerto da própria região 56,4% -> 59,8% (Terceira Posição 45% -> 77%, Centro 70% -> 88%).
+const WEIGHT_ECONOMY_IN_RIGHT = 2;
+const WEIGHT_MORAL_IN_RIGHT = 1;
 const WEIGHT_PLANNING_IN_AUTHORITY = 0.1;
 
 /**
@@ -24,7 +31,7 @@ const WEIGHT_PLANNING_IN_AUTHORITY = 0.1;
  * esquerdo do eixo em `axes.json` (100 = polo esquerdo inteiro), então cada eixo é invertido
  * quando o polo esquerdo não é o que a bússola chama de direita, autoritário ou tradicionalista:
  *
- * - direita: só a propriedade privada dos meios de produção, `economia` (esq. Público), invertido;
+ * - direita: média ponderada (2:1) de `economia` (esq. Público) e `moral` (esq. Progressista), invertida;
  * - autoritário: 90% a média de `poder` (esq. Segurança, direto), `representacao` (esq. Democracia) e `estrutura`
  *   (esq. Federal), estes dois invertidos, e 10% `controle` (esq. Planejamento, direto);
  * - tradicionalista (a barra): `moral` (esq. Progressista), invertido.
@@ -49,7 +56,9 @@ function compassFromLeftPercents(left: (axisId: string) => number | undefined): 
     values[id] = value;
   }
   return {
-    right: 100 - values.economia,
+    economy: 100 - values.economia,
+    planning: values.controle,
+    right: 100 - (WEIGHT_ECONOMY_IN_RIGHT * values.economia + WEIGHT_MORAL_IN_RIGHT * values.moral) / (WEIGHT_ECONOMY_IN_RIGHT + WEIGHT_MORAL_IN_RIGHT),
     authoritarian:
       (1 - WEIGHT_PLANNING_IN_AUTHORITY) * mean([values.poder, 100 - values.representacao, 100 - values.estrutura]) +
       WEIGHT_PLANNING_IN_AUTHORITY * values.controle,
@@ -99,7 +108,7 @@ const toCell = (percent: number): number => Math.max(0, Math.min(GRID_SIZE - 1, 
  * do meio = Esquerda, Centro e Direita, e de baixo = Anarquismo e Libertário. A coluna do meio da
  * faixa de baixo é dividida pelo lado esquerda-direita.
  */
-export function compassRegion({ right, authoritarian }: CompassPosition): IdeologyColorKey {
+export function compassRegion({ right, authoritarian }: Pick<CompassPosition, 'right' | 'authoritarian'>): IdeologyColorKey {
   const column = toCell(right);
   const row = toCell(100 - authoritarian);
   if (row <= 2) {
@@ -113,17 +122,46 @@ export function compassRegion({ right, authoritarian }: CompassPosition): Ideolo
   return right < 50 ? 'anarquismo' : 'libertario';
 }
 
-export type EconomicKey = 'left' | 'centerLeft' | 'center' | 'centerRight' | 'right';
+export type EconomicKey = 'socialism' | 'left' | 'centerLeft' | 'center' | 'centerRight' | 'right' | 'capitalism';
 
 /**
- * Posição no eixo esquerda-direita (0-100, só economia e controle) com as mesmas faixas de distância do
- * centro que a interface usa nos eixos: até 7,5 do meio é Centro (42,5-57,5), de 7,5 a 22,5 é Centro-esquerda
- * ou Centro-direita, e além disso é Esquerda ou Direita. Independe da categoria da ideologia.
+ * Nível econômico a partir da posição no eixo esquerda-direita da economia (0-100, só `economia`), em sete faixas:
+ * até 12,5 Socialismo (propriedade pública alta), 12,5-27,5 Esquerda, 27,5-42,5 Centro-esquerda, 42,5-57,5 Centro,
+ * 57,5-72,5 Centro-direita, 72,5-87,5 Direita e acima de 87,5 Capitalismo (propriedade privada alta).
+ * Independe da categoria da ideologia.
  */
 export function economicLevel(right: number): EconomicKey {
+  if (right < 12.5) return 'socialism';
   if (right < 27.5) return 'left';
   if (right < 42.5) return 'centerLeft';
   if (right <= 57.5) return 'center';
   if (right <= 72.5) return 'centerRight';
-  return 'right';
+  if (right <= 87.5) return 'right';
+  return 'capitalism';
+}
+
+export type EconomicMethod = 'planned' | 'market';
+
+/**
+ * Método econômico pelo eixo `controle` (0-100, 100 = planejamento): planejada a partir de 66,7, de mercado até 33,3 e,
+ * entre os dois, nenhum (o meio-termo não ganha rótulo). Independe do nível de propriedade (`economicLevel`).
+ */
+export function economicMethod(planning: number): EconomicMethod | null {
+  if (planning >= 66.7) return 'planned';
+  if (planning <= 33.3) return 'market';
+  return null;
+}
+
+/**
+ * O nível de propriedade e, quando há um, o método, separados por vírgula: "Esquerda, economia planejada". Nos níveis de nome
+ * longo (Centro-esquerda e Centro-direita) a vírgula é seguida de quebra de linha, para o nome não ficar espremido.
+ */
+export function economicName(
+  t: { compassEconomicLabels: Record<EconomicKey, string>; compassEconomicMethodLabels: Record<EconomicMethod, string> },
+  level: EconomicKey,
+  method: EconomicMethod | null
+): string {
+  if (!method) return t.compassEconomicLabels[level];
+  const separator = level === 'centerLeft' || level === 'centerRight' ? ',\n' : ', ';
+  return `${t.compassEconomicLabels[level]}${separator}${t.compassEconomicMethodLabels[method]}`;
 }

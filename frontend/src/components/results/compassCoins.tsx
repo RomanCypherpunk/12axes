@@ -56,7 +56,7 @@ const PROGRESSIVE = coin('0 0 640 640', PROGRESSIVE_HAND);
 /**
  * Ícones das duas peças da bússola (Politicamente e Economicamente), na mesma moeda dos valores.
  * Chaves: `political:<categoria>` (esq-radical, esquerda, centro, direita, ext-direita, terceira, libertario,
- * anarquismo), `economic:<nível>` (left, centerLeft, center, centerRight, right) e `social:<nível>`
+ * anarquismo), `economic:<nível>` (socialism, left, centerLeft, center, centerRight, right, capitalism) e `social:<nível>`
  * (veryProgressive, progressive, moderate, traditional, veryTraditional). Sem ícone, a moeda mostra
  * o monograma do rótulo.
  */
@@ -69,11 +69,13 @@ export const COMPASS_COINS: Partial<Record<string, CoinStyle>> = {
   'political:terceira': coin('0 0 15 15', THIRD_POSITION),
   'political:libertario': coin('0 0 24 24', LIBERTARIAN),
   'political:anarquismo': coin('0 0 512 512', ANARCHIST),
+  'economic:socialism': coin('0 0 512 512', HAMMER_SICKLE),
   'economic:left': LEFT,
   'economic:centerLeft': coin('0 0 640 640', CENTER_LEFT),
   'economic:center': MIDDLE,
   'economic:centerRight': coin('0 0 640 640', CENTER_RIGHT),
-  'economic:right': coin('0 0 16 16', ECONOMIC_RIGHT),
+  'economic:right': coin('0 0 1025 1024', POLITICAL_RIGHT),
+  'economic:capitalism': coin('0 0 16 16', ECONOMIC_RIGHT),
   'social:veryProgressive': PROGRESSIVE,
   'social:progressive': PROGRESSIVE,
   'social:moderate': MIDDLE,

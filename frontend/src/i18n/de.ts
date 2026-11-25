@@ -568,11 +568,17 @@ export const de: DeepPartial<Strings> = {
     anarquismo: 'Anarchistisch'
   },
   compassEconomicLabels: {
+    socialism: 'Sozialismus',
     left: 'Links',
     centerLeft: 'Mitte-links',
     center: 'Mitte',
     centerRight: 'Mitte-rechts',
-    right: 'Rechts'
+    right: 'Rechts',
+    capitalism: 'Kapitalismus'
+  },
+  compassEconomicMethodLabels: {
+    planned: 'Planwirtschaft',
+    market: 'Marktwirtschaft'
   },
   compassSpectrumDescriptions: {
     'esq-radical': 'Du neigst dazu, eine tiefgreifende Umgestaltung der Gesellschaft anzustreben, mit materieller Gleichheit, kollektivem Eigentum und einem starken Staat im Dienst der Arbeitenden, im Bruch mit der heutigen Wirtschaftsordnung.',
@@ -585,11 +591,13 @@ export const de: DeepPartial<Strings> = {
     anarquismo: 'Du neigst dazu, jeder zentralen Autorität zu misstrauen und eine Gesellschaft zu befürworten, die durch freiwillige Zusammenarbeit und Selbstverwaltung organisiert ist, ohne Staat und ohne aufgezwungene Hierarchien.'
   },
   compassEconomicDescriptions: {
-    left: 'Du neigst dazu, kollektives oder öffentliches Eigentum an den Produktionsmitteln zu befürworten, mit Staat und Gesellschaft statt dem Markt im Zentrum der Wirtschaft.',
+    socialism: 'Du neigst dazu, kollektives oder öffentliches Eigentum an den Produktionsmitteln zu befürworten, mit Staat und Gesellschaft statt dem Markt im Zentrum der Wirtschaft.',
+    left: 'Du neigst dazu, eine Wirtschaft mit starker Rolle des Staates zu befürworten: große öffentliche Dienste und Unternehmen, Planung und breite Umverteilung, mit dem Markt an zweiter Stelle.',
     centerLeft: 'Du neigst dazu, den Markt zu akzeptieren, aber mit starker Präsenz des Staates: breite öffentliche Dienste, öffentliche Unternehmen in Schlüsselsektoren und Umverteilung zum Abbau von Ungleichheit.',
     center: 'Du neigst dazu, einen wirtschaftlichen Mittelweg zu suchen, mit ausgewogenen Rollen von Markt und Staat: öffentliche Unternehmen, wo sie strategisch sind, und Raum für private Initiative.',
     centerRight: 'Du neigst dazu, dem Markt und der privaten Initiative mehr zu vertrauen, mit einem kleineren Staat und klaren Regeln, ohne einen gewissen sozialen Schutz aufzugeben.',
-    right: 'Du neigst dazu, Privateigentum und freien Markt zu befürworten, mit wenigen Staatsunternehmen und Wettbewerb als Motor der Wirtschaft.'
+    right: 'Du neigst dazu, Markt und Privateigentum zu befürworten, mit wenigen Staatsunternehmen, Wettbewerb als Motor der Wirtschaft und staatlichen Eingriffen nur dort, wo sie nötig sind.',
+    capitalism: 'Du neigst dazu, Privateigentum an den Produktionsmitteln und den freien Markt mit wenigen Beschränkungen zu befürworten, mit einem auf das Minimum reduzierten Staat und Wettbewerb als Motor der Wirtschaft.'
   },
   compassSocialLabels: {
     veryProgressive: 'Stark progressiv',

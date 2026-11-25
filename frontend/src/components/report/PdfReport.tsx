@@ -31,7 +31,7 @@ import { compassClamp, compassView } from '../results/PoliticalCompassSection';
 import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from '../../utils/compassQuadrants';
 import { commonNote, unusualLead } from '../results/SignatureSection';
 import { ValueCoin } from '../results/ValueCoin';
-import { computeCompass, type CompassPosition } from '../../utils/politicalCompass';
+import { computeCompass, economicName, type CompassPosition } from '../../utils/politicalCompass';
 
 interface PdfReportProps {
   result: QuizResult;
@@ -425,7 +425,7 @@ function Compass({ position, category, ideologyId, moralAxis }: { position: Comp
   const { markerColor } = view;
   const tiles = [
     { key: `political:${view.spectrum.key}`, label: t.dimensionLabels.political, name: t.compassSpectrumLabels[view.spectrum.key], base: view.spectrum.base, bg: view.spectrum.bg },
-    { key: `economic:${view.economic}`, label: t.dimensionLabels.economic, name: t.compassEconomicLabels[view.economic], base: view.economicColor, bg: view.economicBg },
+    { key: `economic:${view.economic}`, label: t.dimensionLabels.economic, name: economicName(t, view.economic, view.method), base: view.economicColor, bg: view.economicBg },
     { key: `social:${view.social}`, label: t.dimensionLabels.social, name: t.compassSocialLabels[view.social], base: view.socialBase, bg: view.socialBg }
   ];
   return (

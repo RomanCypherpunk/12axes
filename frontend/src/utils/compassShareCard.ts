@@ -9,7 +9,7 @@ import { religiousPoleIcon } from '../data/religionIcons';
 import { LANG, t } from '../i18n';
 import type { Axis, AxisResult, PoliticalValue, QuizResult } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
-import { computeCompass, type CompassPosition } from './politicalCompass';
+import { computeCompass, economicName, type CompassPosition } from './politicalCompass';
 import { valueCoinMonogram } from './politicalValues';
 import type { Religion } from './religion';
 import { buildShareFooter, buildShareHeader, buildShareIdentity, SHARE_COLORS } from './shareCard';
@@ -212,16 +212,19 @@ function compassTile(coinKey: string, label: string, name: string, base: string,
   }
   const upper = label.toLocaleUpperCase(LANG);
   const labelSize = fitFontSize(upper, 600, SHARE_FONT_BODY, COMPASS_TEXT_WIDTH * SAFETY, 1, 19, 11, 0.16);
-  const nameSize = fitBlock(name, {
+  // Nome com quebra forçada (nível, e embaixo o método): cada linha precisa caber em uma linha só.
+  const nameLines = name.split('\n');
+  const nameFit = {
     weight: 600,
     family: SHARE_FONT_DISPLAY,
     width: COMPASS_TEXT_WIDTH * SAFETY,
-    height: 2 * 26 * 1.25,
+    height: (nameLines.length > 1 ? 1 : 2) * 26 * 1.25,
     lineHeight: 1.25,
     max: 28,
     min: 14,
     tracking: -0.0192
-  });
+  };
+  const nameSize = Math.min(...nameLines.map((line) => fitBlock(line, nameFit)));
   const text = el('div', { minWidth: '0', flex: '1 1 0' });
   text.append(
     el('div', { fontFamily: SHARE_FONT_BODY, fontWeight: '600', fontSize: `${labelSize}px`, letterSpacing: '0.16em', lineHeight: '1.2', whiteSpace: 'nowrap', color: base }, upper),
@@ -233,6 +236,7 @@ function compassTile(coinKey: string, label: string, name: string, base: string,
       lineHeight: '1.25',
       letterSpacing: '-0.0192em',
       overflowWrap: 'break-word',
+      whiteSpace: 'pre-line',
       color: base
     }, name)
   );
@@ -250,7 +254,7 @@ function compassTiles(view: ReturnType<typeof compassView>): HTMLElement {
   });
   wrap.append(
     compassTile(`political:${view.spectrum.key}`, t.dimensionLabels.political, t.compassSpectrumLabels[view.spectrum.key], view.spectrum.base, view.spectrum.bg),
-    compassTile(`economic:${view.economic}`, t.dimensionLabels.economic, t.compassEconomicLabels[view.economic], view.economicColor, view.economicBg),
+    compassTile(`economic:${view.economic}`, t.dimensionLabels.economic, economicName(t, view.economic, view.method), view.economicColor, view.economicBg),
     compassTile(`social:${view.social}`, t.dimensionLabels.social, t.compassSocialLabels[view.social], view.socialBase, view.socialBg)
   );
   return wrap;

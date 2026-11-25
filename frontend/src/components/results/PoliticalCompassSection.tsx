@@ -2,7 +2,7 @@ import { useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import { ideologyColorByKey, resolveIdeologyColor, type IdeologyColorKey } from '../../utils/ideologyColors';
 import type { Axis } from '../../types/quiz';
-import { compassRegion, economicLevel, socialLevel, type CompassPosition, type EconomicKey, type SocialKey } from '../../utils/politicalCompass';
+import { compassRegion, economicLevel, economicMethod, economicName, socialLevel, type CompassPosition, type EconomicKey, type SocialKey } from '../../utils/politicalCompass';
 import { COMPASS_COINS } from './compassCoins';
 import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from '../../utils/compassQuadrants';
 import { clickableProps, InfoSheet } from './InfoSheet';
@@ -22,11 +22,13 @@ const SOCIAL_AMOUNT: Record<SocialKey, number> = { veryProgressive: 0, progressi
 // Cor do retângulo econômico, na lógica do miolo da grade (verde, cinza, azul): as pontas são a Esquerda e a Direita,
 // o meio é o Centro, e Centro-esquerda e Centro-direita ficam a meio caminho entre o Centro e a ponta.
 const ECONOMIC_BLEND: Record<EconomicKey, [IdeologyColorKey, IdeologyColorKey, number]> = {
+  socialism: ['esq-radical', 'esq-radical', 0],
   left: ['esquerda', 'esquerda', 0],
   centerLeft: ['esquerda', 'centro', 0.5],
   center: ['centro', 'centro', 0],
   centerRight: ['centro', 'direita', 0.5],
-  right: ['direita', 'direita', 0]
+  right: ['direita', 'direita', 0],
+  capitalism: ['libertario', 'libertario', 0]
 };
 
 function mix(a: readonly number[], b: readonly number[], amount: number): number[] {
@@ -102,8 +104,10 @@ export function compassView(position: CompassPosition, category: string, moralAx
   const traditionalist = hexToRgb(moralAxis?.rightColor ?? FALLBACK_TRADITIONAL);
   // Cor cheia da escala progressista/tradicionalista: contorna o perfil em /compare.
   const socialColor = rgb(threeStop(progressive, NEUTRAL, traditionalist, traditional / 100));
-  // Posição econômica (eixo esquerda-direita da grade), separada da categoria da ideologia (o espectro político).
-  const economic = economicLevel(position.right);
+  // Posição econômica só pelo eixo `economia` (a moral entra na posição horizontal do ponto, não neste cartão), separada da
+  // categoria da ideologia (o espectro político).
+  const economic = economicLevel(position.economy);
+  const method = economicMethod(position.planning);
   const [from, to, amount] = ECONOMIC_BLEND[economic];
   const blend = (pick: 'base' | 'bg') =>
     rgb(mix(hexToRgb(ideologyColorByKey(from)[pick]), hexToRgb(ideologyColorByKey(to)[pick]), amount));
@@ -114,7 +118,7 @@ export function compassView(position: CompassPosition, category: string, moralAx
   const socialTone = threeStop(progressive, NEUTRAL, traditionalist, SOCIAL_AMOUNT[social]);
   const socialBase = rgb(mix(socialTone, BLACK, 0.3));
   const socialBg = rgb(mix(socialTone, WHITE, 0.82));
-  return { spectrum, markerColor, socialColor, economic, economicColor, economicBg, social, socialBase, socialBg };
+  return { spectrum, markerColor, socialColor, economic, method, economicColor, economicBg, social, socialBase, socialBg };
 }
 
 /** Barra progressista/tradicionalista em tom pastel (rosa, cinza, marrom), também usada em /compare. */
@@ -210,7 +214,7 @@ export function PoliticalCompassSection({ position, category, ideologyId, moralA
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [selectedTile, setSelectedTile] = useState<CompassTile | null>(null);
-  const { spectrum, markerColor, economic, economicColor, economicBg, social, socialBase, socialBg } = compassView(position, category, moralAxis, ideologyId);
+  const { spectrum, markerColor, economic, method, economicColor, economicBg, social, socialBase, socialBg } = compassView(position, category, moralAxis, ideologyId);
   const tiles: CompassTile[] = [
     {
       key: `political:${spectrum.key}`,
@@ -222,7 +226,7 @@ export function PoliticalCompassSection({ position, category, ideologyId, moralA
     {
       key: `economic:${economic}`,
       label: t.dimensionLabels.economic,
-      name: t.compassEconomicLabels[economic],
+      name: economicName(t, economic, method),
       description: t.compassEconomicDescriptions[economic],
       style: { '--cat': economicColor, '--cat-bg': economicBg } as CSSProperties
     },
@@ -272,7 +276,7 @@ export function PoliticalCompassSection({ position, category, ideologyId, moralA
           <div className="e-value-sheet">
             <ValueCoin valueId="" name={selectedTile.name} size={120} coin={COMPASS_COINS[selectedTile.key]} />
             <span className="e-dim">{selectedTile.label}</span>
-            <h3 id="compass-tile-title">{selectedTile.name}</h3>
+            <h3 id="compass-tile-title" style={{ whiteSpace: 'pre-line' }}>{selectedTile.name}</h3>
             <p>{selectedTile.description}</p>
           </div>
         </InfoSheet>
