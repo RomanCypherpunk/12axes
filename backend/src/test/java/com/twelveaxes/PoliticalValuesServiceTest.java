@@ -320,7 +320,9 @@ class PoliticalValuesServiceTest {
     void representationValuesResolveFromRepresentationAndNuances() {
         assertThat(politics(Map.of("representacao", 23.0, "religiao", 2.0)).valueId()).isEqualTo("teocracia");
         assertThat(politics(Map.of("representacao", 10.0, "poder", 84.0)).valueId()).isEqualTo("monarquismo-absoluto");
-        assertThat(politics(Map.of("representacao", 13.0, "imigracao", 91.0, "comercio", 89.0)).valueId()).isEqualTo("fascismo");
+        assertThat(politics(Map.of("representacao", 13.0, "poder", 90.0, "imigracao", 91.0, "comercio", 89.0)).valueId()).isEqualTo("fascismo");
+        // Autocrata que prefere liberdade civil (poder baixo) não cai mais no fascismo: ele exige o Estado que controla a vida.
+        assertThat(politics(Map.of("representacao", 10.0, "poder", 29.0, "imigracao", 96.0, "comercio", 64.0)).valueId()).isNotEqualTo("fascismo");
         assertThat(politics(Map.of("representacao", 13.0, "poder", 78.0)).valueId()).isEqualTo("autocracia");
         assertThat(politics(Map.of("representacao", 92.0, "estrutura", 89.0, "poder", 8.0)).valueId()).isEqualTo("anarquismo");
         assertThat(politics(Map.of("representacao", 20.0, "poder", 88.0, "controle", 89.0)).valueId()).isEqualTo("partocracia");
