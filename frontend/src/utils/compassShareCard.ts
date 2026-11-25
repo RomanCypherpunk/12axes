@@ -48,16 +48,18 @@ const READ_WIDTH = BOX_INNER - CHART_WIDTH - CHART_GAP;
 // A grade 9x9: o lado é a largura da caixa do gráfico menos os dois rótulos laterais (22px) e os espaços (12px).
 const GRID_SIDE = CHART_WIDTH - 22 * 2 - 12 * 2;
 const MARKER_SIDE = 40;
-// Um cartão por categoria (8), numa grade 4x2, com a moeda em cima e o texto no pé.
-const VALUE_COLUMNS = 4;
-const VALUE_GAP = 12;
-const VALUE_TILE_PAD_X = 12;
-// A grade avança sobre o respiro lateral da caixa, para os nomes terem mais largura.
-const VALUE_BLEED = 12;
-const VALUE_COIN = 84;
-const VALUE_NAME_HEIGHT = 76;
-const VALUE_TILE_HEIGHT = 262;
-const VALUE_TEXT_WIDTH = (BOX_INNER + VALUE_BLEED * 2 - VALUE_GAP * (VALUE_COLUMNS - 1)) / VALUE_COLUMNS - VALUE_TILE_PAD_X * 2;
+// Um cartão por categoria (8), numa grade de 2 colunas por 4 linhas: a moeda à esquerda e, à direita, o rótulo da categoria
+// e o nome do valor (até 2 linhas). A altura do cartão é fixa, para a grade não crescer com um nome comprido.
+const VALUE_COLUMNS = 2;
+const VALUE_GAP = 14;
+const VALUE_TILE_PAD_X = 20;
+const VALUE_COIN = 76;
+const VALUE_COIN_GAP = 18;
+const VALUE_TILE_HEIGHT = 126;
+const VALUE_NAME_LINE = 1.2;
+const VALUE_NAME_MAX_PX = 26;
+const VALUE_NAME_HEIGHT = Math.round(VALUE_NAME_MAX_PX * VALUE_NAME_LINE * 2);
+const VALUE_TEXT_WIDTH = (BOX_INNER - VALUE_GAP * (VALUE_COLUMNS - 1)) / VALUE_COLUMNS - VALUE_TILE_PAD_X * 2 - VALUE_COIN - VALUE_COIN_GAP;
 
 const X_MARK =
   '<svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" width="55%" height="55%" style="display:block"><path d="M6 6l12 12M18 6 6 18"/></svg>';
@@ -287,7 +289,7 @@ function valueCoin(value: PoliticalValue, color: Palette, religion: Religion | n
   });
   const coin = VALUE_COINS[value.valueId];
   const faith = coin?.religious ? (religiousPoleIcon(religion) ?? FILLED_POLE_ICONS.religiao.right) : null;
-  const common = { width: 46, height: 46, fill: color.bg, style: { display: 'block' } };
+  const common = { width: 42, height: 42, fill: color.bg, style: { display: 'block' } };
   if (faith) {
     circle.innerHTML = renderToStaticMarkup(
       createElement(
@@ -310,34 +312,33 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
     height: `${VALUE_TILE_HEIGHT}px`,
     borderRadius: '28px',
     background: color.bg,
-    padding: `26px ${VALUE_TILE_PAD_X}px 24px`,
+    padding: `0 ${VALUE_TILE_PAD_X}px`,
     display: 'flex',
-    flexDirection: 'column'
+    alignItems: 'center',
+    gap: `${VALUE_COIN_GAP}px`,
+    overflow: 'hidden'
   });
   const label = value.categoryLabel.toLocaleUpperCase(LANG);
-  const labelSize = fitFontSize(label, 600, SHARE_FONT_BODY, VALUE_TEXT_WIDTH * SAFETY, 1, 18, 10, 0.1);
+  const labelSize = fitFontSize(label, 600, SHARE_FONT_BODY, VALUE_TEXT_WIDTH * SAFETY, 1, 17, 10, 0.14);
   const name = valueCardName(value.name);
-  // 20px no máximo: com as quebras acima, praticamente todos os nomes cabem nesse tamanho e ficam iguais entre si.
+  // O nome cabe em até 2 linhas: a fonte diminui (até 13px) se uma palavra ou o texto não couberem.
   const nameSize = fitBlock(name, {
     weight: 600,
     family: SHARE_FONT_DISPLAY,
     width: VALUE_TEXT_WIDTH * SAFETY,
     height: VALUE_NAME_HEIGHT,
-    lineHeight: 1.25,
-    max: 20,
-    min: 12,
+    lineHeight: VALUE_NAME_LINE,
+    max: VALUE_NAME_MAX_PX,
+    min: 13,
     tracking: -0.0192
   });
-  tile.append(
-    valueCoin(value, color, religion),
-    // O ícone sobe e o texto desce para o pé do cartão: o espaço que sobra fica entre os dois.
-    el('div', { marginTop: 'auto' }),
+  const text = el('div', { minWidth: '0', flex: '1 1 0' });
+  text.append(
     el('div', {
-      marginTop: '22px',
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
       fontSize: `${labelSize}px`,
-      letterSpacing: '0.1em',
+      letterSpacing: '0.14em',
       lineHeight: '1.2',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
@@ -345,18 +346,19 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
     }, label),
     el('div', {
       marginTop: '6px',
-      height: `${VALUE_NAME_HEIGHT}px`,
+      maxHeight: `${VALUE_NAME_HEIGHT}px`,
       overflow: 'hidden',
       fontFamily: SHARE_FONT_DISPLAY,
       fontWeight: '600',
       fontSize: `${nameSize}px`,
-      lineHeight: '1.25',
+      lineHeight: String(VALUE_NAME_LINE),
       letterSpacing: '-0.0192em',
       overflowWrap: 'break-word',
       whiteSpace: 'pre-line',
       color: color.base
     }, name)
   );
+  tile.append(valueCoin(value, color, religion), text);
   return tile;
 }
 
@@ -366,7 +368,7 @@ function valuesBox(values: PoliticalValue[], color: Palette, religion: Religion 
     display: 'grid',
     gridTemplateColumns: `repeat(${VALUE_COLUMNS}, minmax(0, 1fr))`,
     gap: `${VALUE_GAP}px`,
-    margin: `28px -${VALUE_BLEED}px 0`
+    marginTop: '28px'
   });
   values.forEach((value) => grid.append(valueTile(value, color, religion)));
   wrap.append(boxLabel(t.valuesSectionTitle, INK, BOX_INNER), grid);
