@@ -1170,19 +1170,19 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
   .e-deck-edit{min-height:420px}
 }
 
-/* ── Seus valores: cartões no padrão dos perfis (moeda, categoria, nome e botão de informação), 3x2 no desktop e 2x3 no mobile ── */
-.e-dims.e-values-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:22px}
+/* ── Seus valores: cartões no padrão dos perfis (moeda, categoria, nome e botão de informação), 4x2 no desktop e 2x4 no mobile ── */
+.e-dims.e-values-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px}
 .e-values-grid .e-dim-row>.e-pctc{display:none}
 /* mesmo acabamento dos cartões de "Outras ideologias": fundo pastel da ideologia, sem borda */
-.e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:18px;border:0;border-radius:24px;padding:22px;background:var(--cat-bg)}
-.e-values-grid .e-dim-row strong{color:var(--cat);overflow-wrap:normal;word-break:normal;hyphens:manual}
+.e-values-grid .e-dim-row{grid-template-columns:1fr;grid-template-areas:"v" "t";gap:18px;border:0;border-radius:24px;padding:18px 14px;background:var(--cat-bg);min-width:0}
+.e-values-grid .e-dim-row>*{min-width:0;max-width:100%}
+.e-values-grid .e-dim-row strong{white-space:pre-line;color:var(--cat);overflow-wrap:normal;word-break:normal;hyphens:manual}
 @media (max-width:720px){.e-values-grid .e-dim-row{padding:16px;gap:14px}}
 .e-vcoin{display:block}
 .e-value-sheet{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:8px 4px 4px}
 .e-value-sheet .e-dim{margin-top:4px}
 .e-value-sheet h3{margin:0}
 .e-value-sheet p{margin:6px 0 0;font-size:15px;line-height:1.55}
-@media (max-width:860px){.e-dims.e-values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:720px){.e-dims.e-values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* mobile: logo do partido com a MESMA ALTURA da bandeira do país (3:2, até 300px de largura), sem a mesma largura */
 @media (max-width:720px){

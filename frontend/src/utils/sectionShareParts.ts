@@ -39,18 +39,22 @@ export { clamp, el, mixHex, rgba, shorten, SHARE_FONT_BODY, SHARE_FONT_DISPLAY }
 
 /** Quantas linhas o texto ocupa em `width` no tamanho dado, e se alguma palavra sozinha já passa da largura. */
 function wrapCount(text: string, weight: number, family: string, size: number, width: number, tracking: number): { lines: number; tooWide: boolean } {
-  let lines = 1;
-  let line = '';
+  let lines = 0;
   let tooWide = false;
-  for (const word of text.split(/\s+/)) {
-    if (textWidth(word, weight, size, family) + tracking * size * word.length > width) tooWide = true;
-    const candidate = line ? `${line} ${word}` : word;
-    const measured = textWidth(candidate, weight, size, family) + tracking * size * candidate.length;
-    if (measured > width && line) {
-      lines += 1;
-      line = word;
-    } else {
-      line = candidate;
+  // Quebra forçada ("\n") abre linha nova; como o navegador, a linha também pode quebrar depois de um hífen.
+  for (const paragraph of text.split('\n')) {
+    lines += 1;
+    let line = '';
+    for (const word of paragraph.split(/\s+|(?<=-)/)) {
+      if (textWidth(word, weight, size, family) + tracking * size * word.length > width) tooWide = true;
+      const candidate = line ? `${line}${line.endsWith('-') ? '' : ' '}${word}` : word;
+      const measured = textWidth(candidate, weight, size, family) + tracking * size * candidate.length;
+      if (measured > width && line) {
+        lines += 1;
+        line = word;
+      } else {
+        line = candidate;
+      }
     }
   }
   return { lines, tooWide };

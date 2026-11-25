@@ -235,8 +235,12 @@
 .rp .cmp-tiles svg{display:block;flex:none}
 .rp .el-note{font-size:8.5px;color:var(--suave);margin-top:3mm}
 
-/* seus valores: usa os cartões .dims/.dc dos perfis (3x2); só a moeda precisa de margem */
+/* seus valores: usa os cartões .dims/.dc dos perfis (4x2); só a moeda precisa de margem */
 .rp .dc .v-wrap svg{display:block}
+.rp .dims.v4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rp .dims.v4 .dc{min-width:0;align-content:start}
+.rp .dims.v4 .dc>.dim,.rp .dims.v4 .dc>b{min-width:0;overflow-wrap:anywhere}
+.rp .dims.v4 .dc>b{white-space:pre-line}
 /* a regra geral ".rp svg" põe contorno escuro em todo SVG; nas moedas o ícone é só preenchimento */
 .rp .e-vcoin svg{stroke:none}
 

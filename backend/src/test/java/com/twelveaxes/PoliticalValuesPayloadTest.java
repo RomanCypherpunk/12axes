@@ -23,12 +23,12 @@ class PoliticalValuesPayloadTest {
     void sharedResultCarriesPoliticalValuesAndNoTimeline() throws Exception {
         mockMvc.perform(get("/api/results/by-axes").param("v", CENTRO))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.politicalValues.length()").value(6))
+                .andExpect(jsonPath("$.politicalValues.length()").value(8))
                 .andExpect(jsonPath("$.politicalValues[0].categoryId").value("politicos"))
                 .andExpect(jsonPath("$.politicalValues[0].valueId").value("neutralidade-politica"))
                 .andExpect(jsonPath("$.politicalValues[0].neutral").value(true))
                 .andExpect(jsonPath("$.politicalValues[*].categoryId").value(
-                        org.hamcrest.Matchers.contains("politicos", "externa", "economicos", "imigracao", "sociedade", "tecnologicos")))
+                        org.hamcrest.Matchers.contains("politicos", "territorial", "controle-social", "externa", "nacao", "economicos", "sociedade", "tecnologicos")))
                 .andExpect(jsonPath("$.timeline").doesNotExist());
     }
 
@@ -37,6 +37,6 @@ class PoliticalValuesPayloadTest {
         mockMvc.perform(get("/api/results/by-axes").param("v", EXTREMO).param("lang", "en"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.politicalValues[0].name").isNotEmpty())
-                .andExpect(jsonPath("$.politicalValues[0].categoryLabel").value("Politics"));
+                .andExpect(jsonPath("$.politicalValues[0].categoryLabel").value("Representation"));
     }
 }

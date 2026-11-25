@@ -2813,10 +2813,6 @@
     "economicos": {
       "label": "0a4b2a9d347a"
     },
-    "socialismo-planificado": {
-      "name": "698e12b23f24",
-      "description": "feb9fd34a84e"
-    },
     "socialismo-de-mercado": {
       "name": "28bd07a66909",
       "description": "9ba8dc162243"
@@ -2824,10 +2820,6 @@
     "desenvolvimentismo": {
       "name": "df078866b263",
       "description": "c44f522c56ef"
-    },
-    "geosocialismo": {
-      "name": "5404d2778259",
-      "description": "bc265cae6351"
     },
     "liberalismo-social": {
       "name": "db581802dc0f",
@@ -2842,8 +2834,8 @@
       "description": "39bab596d3d2"
     },
     "trabalhismo": {
-      "name": "ce4205205d36",
-      "description": "525e1d13ffba"
+      "name": "2eaa2c009d18",
+      "description": "eee35dfc54a0"
     },
     "social-democracia": {
       "name": "63b1402efbff",
@@ -2861,21 +2853,13 @@
       "name": "7e18314e16bf",
       "description": "723ff9747202"
     },
-    "neoliberalismo": {
-      "name": "c5303a792bd5",
-      "description": "ec556d1e6981"
-    },
     "liberal-desenvolvimentismo": {
       "name": "b977738698e3",
       "description": "8f97c63fa69d"
     },
     "protecionismo": {
       "name": "09992b1ef37c",
-      "description": "481794230cd6"
-    },
-    "capitalismo": {
-      "name": "13ca6a5e8279",
-      "description": "3f066408a82d"
+      "description": "79137edfeceb"
     },
     "corporativismo": {
       "name": "6e1b9a3dc043",
@@ -2885,18 +2869,6 @@
       "name": "35ccc929eb01",
       "description": "7f7988a3f5a4"
     },
-    "georgismo": {
-      "name": "5b03ce623f72",
-      "description": "8a6d2f443936"
-    },
-    "mercantilismo": {
-      "name": "f4af9b174da3",
-      "description": "5f9e842d2b93"
-    },
-    "mutualismo": {
-      "name": "b2b5f659a2db",
-      "description": "298bb15d1330"
-    },
     "sociedade": {
       "label": "5d76a0dbbc5c"
     },
@@ -2904,60 +2876,24 @@
       "name": "9a4977fc6c6e",
       "description": "5976018c1fe2"
     },
-    "tradicionalismo-secular": {
-      "name": "00ed2cdfd719",
-      "description": "b2f74966483e"
-    },
-    "tradicionalismo-irreligioso": {
-      "name": "e0b263bb148b",
-      "description": "2d3495b393be"
-    },
-    "conservadorismo-religioso": {
-      "name": "aab84d63b429",
-      "description": "996a2dc0bd69"
-    },
     "conservadorismo-secular": {
-      "name": "02060f312ccc",
-      "description": "6ef9dc0223b1"
-    },
-    "conservadorismo-irreligioso": {
-      "name": "8e93691a545d",
-      "description": "9b11fb802c28"
-    },
-    "conservadorismo-moderado": {
-      "name": "b9d62a369cc1",
-      "description": "1efe7e7c9e5e"
+      "name": "e5d7e2c409f1",
+      "description": "d90bc33bf263"
     },
     "moderado": {
       "name": "6c01396d13ce",
       "description": "2b80954dbe7d"
     },
-    "progressismo-moderado": {
-      "name": "7954c2020d32",
-      "description": "0ab9bd021aac"
-    },
     "progressismo-religioso": {
-      "name": "f0478f06d975",
-      "description": "c019161399f9"
+      "name": "235c848d92b5",
+      "description": "b7790f470469"
     },
     "progressismo": {
       "name": "c6c3fb514ee6",
       "description": "9a6675252ff5"
     },
-    "progressismo-irreligioso": {
-      "name": "8dd5b99f95cb",
-      "description": "6c78cdff7bd5"
-    },
-    "moderado-religioso": {
-      "name": "6a9f27e817b0",
-      "description": "a789485d1a58"
-    },
-    "moderado-irreligioso": {
-      "name": "f13f6738a5d1",
-      "description": "153470d1f2d9"
-    },
     "politicos": {
-      "label": "b6197e0c0bcf"
+      "label": "a64e98f55da1"
     },
     "autocracia": {
       "name": "fee1f5022ae6",
@@ -2972,20 +2908,16 @@
       "description": "dfc9cb232272"
     },
     "democracia": {
-      "name": "63f9741f1097",
+      "name": "cec6f6b0fa12",
       "description": "b1f99058572b"
     },
     "conselhos": {
-      "name": "33cc40bc0b97",
+      "name": "d58f669bb1e9",
       "description": "584c72d310b6"
     },
     "monarquismo-absoluto": {
-      "name": "bfd8873d0c7c",
+      "name": "9382a392132b",
       "description": "e86d27b5d5bd"
-    },
-    "monarquismo-constitucional": {
-      "name": "9cc066c2f9cb",
-      "description": "f7a911e406ee"
     },
     "tecnocracia": {
       "name": "3747e554c773",
@@ -3001,7 +2933,7 @@
     },
     "municipalismo": {
       "name": "ac6b36eaaddd",
-      "description": "50f191c7ef48"
+      "description": "9a363c0b1d35"
     },
     "neocameralismo": {
       "name": "352ccec840e2",
@@ -3011,44 +2943,20 @@
       "name": "898accb44416",
       "description": "d969a37d1266"
     },
-    "ditadura-do-proletariado": {
-      "name": "9f1dd6e2d34c",
-      "description": "c707e09d73e8"
-    },
-    "comunismo": {
-      "name": "40918a6a71e3",
-      "description": "9a2cc88c425e"
-    },
     "neutralidade-politica": {
       "name": "4daeea89d33d",
-      "description": "a8f9d19c769c"
+      "description": "540a78190b6d"
     },
     "teocracia": {
       "name": "91cf5abf1940",
       "description": "a72a96cee224"
     },
-    "democracia-securitaria": {
-      "name": "b88473972185",
-      "description": "caa380382ae6"
-    },
-    "monarquismo-libertario": {
-      "name": "c545332986bd",
-      "description": "79749aa00a2d"
-    },
-    "corporacao-governamental": {
-      "name": "7cc7752ed2d3",
-      "description": "85c2e354a100"
-    },
     "externa": {
-      "label": "5b36fe05f845"
+      "label": "62a28f9524fa"
     },
     "imperialismo": {
       "name": "d1db5d1581e2",
       "description": "fa36f5b26699"
-    },
-    "expansionismo": {
-      "name": "d942e65fc733",
-      "description": "0720d8cdca7b"
     },
     "nacionalismo": {
       "name": "0ab77a331d64",
@@ -3062,10 +2970,6 @@
       "name": "aacad316ace8",
       "description": "d3a8f2ba1bd4"
     },
-    "neutralidade": {
-      "name": "c5d1672148fb",
-      "description": "4c3d0baaf8ce"
-    },
     "pacifismo": {
       "name": "3250c7983a25",
       "description": "4e6255d67fdb"
@@ -3076,11 +2980,7 @@
     },
     "isolacionismo": {
       "name": "43baf24cee3f",
-      "description": "b27f972faed6"
-    },
-    "intervencionismo-humanitario": {
-      "name": "4dd9a1ec59d4",
-      "description": "f0d07ec89563"
+      "description": "22ba62db9d56"
     },
     "tecnologicos": {
       "label": "901121d0d733"
@@ -3089,44 +2989,13 @@
       "name": "44c2468b1e34",
       "description": "94f8a051800e"
     },
-    "naturalismo": {
-      "name": "0cf402ae8ff8",
-      "description": "2face24177f1"
-    },
     "ambientalismo": {
       "name": "f5a4c534a4df",
       "description": "fa5f60923ed0"
     },
-    "cautela-tecnologica": {
-      "name": "87842021dd73",
-      "description": "74a52bef8b3e"
-    },
-    "equilibrio-tecnologico": {
-      "name": "ccc2af63ca4c",
-      "description": "bc8dd6758893"
-    },
-    "modernismo-tecnologico": {
-      "name": "4b2cae16f407",
-      "description": "5270aa37bd31"
-    },
-    "industrialismo": {
-      "name": "1bb1b9836426",
-      "description": "9bd46bed9ba2"
-    },
-    "otimismo-tecnologico": {
-      "name": "92a7d7001cb2",
-      "description": "66cebd37ca96"
-    },
-    "futurismo": {
-      "name": "2ff15cb8e3b6",
-      "description": "db44c457aa48"
-    },
     "aceleracionismo": {
       "name": "c16a97fc1f80",
-      "description": "8964ddadc5de"
-    },
-    "imigracao": {
-      "label": "19afeb547f14"
+      "description": "9dde3429870a"
     },
     "cosmopolitismo": {
       "name": "01466a1764c2",
@@ -3136,137 +3005,326 @@
       "name": "2ff63bbdd07f",
       "description": "e329ac57f7fc"
     },
-    "pluralismo": {
-      "name": "e57a05b33b55",
-      "description": "778b5a3b548f"
-    },
-    "integracao-civica": {
-      "name": "d177a58bfad6",
-      "description": "033abe1a7929"
-    },
-    "equilibrio-migratorio": {
-      "name": "d0465fb1fb8e",
-      "description": "5e97ba019845"
-    },
-    "integracao-cultural": {
-      "name": "0100c74139d5",
-      "description": "c3287420e3d5"
-    },
-    "assimilacionismo": {
-      "name": "cc82ea903515",
-      "description": "4e99eafd8f9c"
-    },
-    "preservacionismo-cultural": {
-      "name": "24a52614825f",
-      "description": "09ccf7d67ced"
-    },
     "nacionalismo-etnico": {
       "name": "29780d33b796",
       "description": "f16ec170907d"
     },
-    "federalismo-autoritario": {
-      "name": "4b8b5eaaee2e",
-      "description": "5037bc637a80"
-    },
-    "democracia-moderada": {
-      "name": "3f6ed062e827",
-      "description": "87fc537553e6"
-    },
-    "governo-forte": {
-      "name": "4fd04bc477f7",
-      "description": "514649a14ee4"
-    },
-    "democracia-central": {
-      "name": "28042bca3e33",
-      "description": "006249341af3"
-    },
     "socialismo-internacionalista": {
-      "name": "39fd638f1a71",
-      "description": "2d0db9d0058c"
-    },
-    "capitalismo-protecionista": {
-      "name": "4a5a1e6bf444",
-      "description": "4b824b28f9de"
-    },
-    "dirigismo": {
-      "name": "ac33b2453cf1",
-      "description": "4f3a07f85af2"
-    },
-    "tradicionalismo-cultural": {
-      "name": "6b80613eeb24",
-      "description": "cce07d45fa74"
-    },
-    "progressismo-moderado-irreligioso": {
-      "name": "db146d6513e6",
-      "description": "40e1ba237f4f"
-    },
-    "moderado-secular": {
-      "name": "f96b7688a81c",
-      "description": "92c04471cf56"
-    },
-    "nao-alinhamento": {
-      "name": "b86a42dfed54",
-      "description": "7ff85a490715"
+      "name": "1f77d3ec72fb",
+      "description": "1acea76ba85b"
     },
     "nao-intervencionismo": {
       "name": "638409a218b0",
       "description": "5873d92aea60"
     },
-    "militarismo": {
-      "name": "474c54ff24b2",
-      "description": "3dac8968937f"
-    },
     "democracia-direta": {
       "name": "bb3f4a44309e",
       "description": "c532d192580e"
-    },
-    "livre-mercado-moderado": {
-      "name": "f094a3c087ad",
-      "description": "73b1e9e49fd9"
-    },
-    "coletivismo": {
-      "name": "511309de3f34",
-      "description": "7b867e29f9ad"
     },
     "liberalismo-pragmatico": {
       "name": "17a6e980909a",
       "description": "bd1ef2cbd58a"
     },
-    "libertarianismo-social": {
-      "name": "24016dafef75",
-      "description": "06a869e8b339"
+    "comunalismo": {
+      "name": "aa93706c5645",
+      "description": "ba1fa1acaea8"
     },
-    "liberalismo-nacional": {
+    "partocracia": {
+      "name": "867c869c7f08",
+      "description": "cd035b20d286"
+    },
+    "democracia-digital": {
+      "name": "8775229507bf",
+      "description": "5336d149dee1"
+    },
+    "fascismo": {
+      "name": "06479bbe4764",
+      "description": "1a01f1b616d6"
+    },
+    "hipercentralismo": {
+      "name": "76289c983309",
+      "description": "709c4422875f"
+    },
+    "centralismo": {
+      "name": "69b63360a6f8",
+      "description": "49a848e5010b"
+    },
+    "regionalismo": {
+      "name": "94f0dea64e54",
+      "description": "09c9272d12f8"
+    },
+    "patchwork": {
+      "name": "a456440774db",
+      "description": "6b52be5d42f4"
+    },
+    "territorial": {
+      "label": "ca800d4ccd52"
+    },
+    "libertarianismo": {
+      "name": "91068e29adc0",
+      "description": "ba97287a8a2d"
+    },
+    "liberalismo-social-civil": {
+      "name": "58185a77848c",
+      "description": "0cb62d21932e"
+    },
+    "paternalismo": {
+      "name": "2edbda40536a",
+      "description": "d4e55b34f968"
+    },
+    "moralismo": {
+      "name": "0038a0b3e664",
+      "description": "4a147ae362e3"
+    },
+    "securitismo": {
+      "name": "54a395535336",
+      "description": "2099baf705f7"
+    },
+    "regimentalismo": {
+      "name": "3ae87ee3f9b7",
+      "description": "e55977e3dc9e"
+    },
+    "totalismo": {
+      "name": "917da32d03e7",
+      "description": "5e1b9fe0b0fe"
+    },
+    "controle-social": {
+      "label": "141c0dd9a6c8"
+    },
+    "intervencionismo": {
+      "name": "71cd0aec8c20",
+      "description": "488d0e1aa1d4"
+    },
+    "globalismo": {
+      "name": "ecca653b8a11",
+      "description": "8310e1f567a4"
+    },
+    "messianismo": {
+      "name": "7eff1dac48ff",
+      "description": "4f54ea9dc3e7"
+    },
+    "colonialismo": {
+      "name": "c9c235e65184",
+      "description": "d335ffe7732b"
+    },
+    "nacionalismo-civico": {
+      "name": "b83c6bfa0084",
+      "description": "1eed752eba3e"
+    },
+    "nacionalismo-cultural": {
+      "name": "c7c142cc150f",
+      "description": "315deff85588"
+    },
+    "nacionalismo-religioso": {
+      "name": "b0c42ff046b0",
+      "description": "a82955035e06"
+    },
+    "pan-islamismo": {
+      "name": "2aac5fddaada",
+      "description": "839da61d5241"
+    },
+    "tribalismo": {
+      "name": "5edd673db80e",
+      "description": "04b8934dd24e"
+    },
+    "individualismo": {
+      "name": "665b843c23e2",
+      "description": "07e7ac7898c4"
+    },
+    "comunitarismo": {
+      "name": "1ba7d0cc2786",
+      "description": "a8de5bb1dc5a"
+    },
+    "nacionalismo-regional": {
+      "name": "85f30f578869",
+      "description": "e0fe7c9291f4"
+    },
+    "nacao": {
+      "label": "b554b55d3f3c"
+    },
+    "patriotismo": {
+      "name": "fc51ebb455f2",
+      "description": "fea4a73410e3"
+    },
+    "nacionalismo-anticolonial": {
+      "name": "ba3a172d3a78",
+      "description": "6c3e1346a0e8"
+    },
+    "socialismo": {
+      "name": "1f77d3ec72fb",
+      "description": "57a5e23012be"
+    },
+    "socialismo-de-estado": {
+      "name": "07b546cb23eb",
+      "description": "c539f14dd462"
+    },
+    "agrarianismo": {
+      "name": "c8baf2debf48",
+      "description": "4554411c46d5"
+    },
+    "tecnocapitalismo": {
+      "name": "dde41305f5b4",
+      "description": "d28ddfdd5cff"
+    },
+    "cybercomunismo": {
+      "name": "546f702e98f1",
+      "description": "cba67da10aef"
+    },
+    "transhumanismo": {
+      "name": "9fa64c7dc93a",
+      "description": "31a196ce85c4"
+    },
+    "neutralidade-tecnologica": {
+      "name": "c5d1672148fb",
+      "description": "1c6ccd08aa4e"
+    },
+    "industrialismo-nacional": {
+      "name": "43315d1735c9",
+      "description": "bcadbede41b9"
+    },
+    "industrialismo-capitalista": {
+      "name": "2daf50f50ce7",
+      "description": "29da78436df5"
+    },
+    "industrialismo-socialista": {
+      "name": "0ac473c51967",
+      "description": "94dc8db03c84"
+    },
+    "modernismo": {
+      "name": "9bed11bd890b",
+      "description": "9c78c72ed08f"
+    },
+    "socialismo-estatal": {
+      "name": "07b546cb23eb",
+      "description": "d849c6bfd2bc"
+    },
+    "socialismo-classico": {
+      "name": "3f929f2c9994",
+      "description": "277905e0c2f0"
+    },
+    "social-distributismo": {
+      "name": "c9516e5e0e17",
+      "description": "f8ab8b422aab"
+    },
+    "distributismo-de-mercado": {
+      "name": "024aa20fc9f7",
+      "description": "a6ffbe8cac8c"
+    },
+    "cameralismo": {
+      "name": "3ac1b0dc0739",
+      "description": "dd224e961e0b"
+    },
+    "terceira-via": {
+      "name": "410d70d21d5e",
+      "description": "0010ad967279"
+    },
+    "liberalismo-keynesiano": {
+      "name": "8c02dd0825c0",
+      "description": "7d6021e8aa19"
+    },
+    "feudalismo": {
+      "name": "6da573e89fff",
+      "description": "b81a7507b3bb"
+    },
+    "nacionalismo-economico": {
+      "name": "0ab77a331d64",
+      "description": "94ababbd0140"
+    },
+    "progressismo-social": {
+      "name": "924d8abf182a",
+      "description": "b3773f7013a3"
+    },
+    "liberalismo-conservador": {
+      "name": "84dac2ea0c63",
+      "description": "57998c3a5c07"
+    },
+    "conservadorismo-liberal": {
+      "name": "5255fcd02aa2",
+      "description": "8c169212d350"
+    },
+    "conservadorismo-progressista": {
+      "name": "385b011617fb",
+      "description": "c0712ce1d9af"
+    },
+    "conservadorismo": {
+      "name": "20be68e186f7",
+      "description": "6e93ca949270"
+    },
+    "conservadorismo-tradicionalista": {
+      "name": "e76f4cea8ef7",
+      "description": "050d7fd51ee0"
+    },
+    "reacionarismo": {
+      "name": "ebe2d12d3f55",
+      "description": "88a574c94c62"
+    },
+    "paleoconservadorismo": {
+      "name": "1722eeae16b4",
+      "description": "4b90a900ab2c"
+    },
+    "neorreacionarismo": {
+      "name": "7d3ac2a0ff16",
+      "description": "69f7ae4341e1"
+    },
+    "modernismo-reacionario": {
+      "name": "61b00cebfeab",
+      "description": "e2a2b4c84dab"
+    },
+    "secularismo": {
+      "name": "028f56d3e0fc",
+      "description": "4153fe7280fb"
+    },
+    "tradicionalismo-universalista": {
+      "name": "ebe0a2a27290",
+      "description": "998b251ae86f"
+    },
+    "progressismo-assimilacionista": {
+      "name": "0e7a105ca8d7",
+      "description": "1e2849aa1804"
+    },
+    "iluminismo": {
+      "name": "38f256035a4e",
+      "description": "17a350363d70"
+    },
+    "objetivismo": {
+      "name": "23af1cd0cafa",
+      "description": "3423feb84ebb"
+    },
+    "nietzschianismo": {
+      "name": "0a2c992a569e",
+      "description": "dee484435ea5"
+    },
+    "marxismo": {
+      "name": "763f714496a9",
+      "description": "629e014a74c8"
+    },
+    "stratocracia": {
+      "name": "f62409576d83",
+      "description": "e94efdc5559d"
+    },
+    "anarco-monarquismo": {
+      "name": "e7cb26d5ee5a",
+      "description": "07ac935eee22"
+    },
+    "legalismo": {
+      "name": "ddb051bdacd4",
+      "description": "345b4593a230"
+    },
+    "nacional-liberalismo": {
       "name": "34bcc155ccef",
-      "description": "3e0d37bbf908"
+      "description": "75bc264c8896"
     },
-    "diplomacia-moderada": {
-      "name": "48a3b872d314",
-      "description": "e3824e9a3857"
+    "mutualismo": {
+      "name": "b2b5f659a2db",
+      "description": "e79d3d1b3fc7"
     },
-    "militarismo-defensivo": {
-      "name": "d3dff5a5fa9d",
-      "description": "cf0a5a9fc3af"
+    "mercantilismo": {
+      "name": "f4af9b174da3",
+      "description": "4ea2a171c736"
     },
-    "conservadorismo-moderado-religioso": {
-      "name": "9e4c4f17dadf",
-      "description": "504fe925d95d"
-    },
-    "progressismo-moderado-secular": {
-      "name": "0b73a1908e7d",
-      "description": "efb466aafb6f"
-    },
-    "autoritarismo-desenvolvimentista": {
-      "name": "9fe493c9a9e4",
-      "description": "bc705ad79893"
-    },
-    "democracia-social": {
-      "name": "63b1402efbff",
-      "description": "d6c12a287258"
-    },
-    "autoritarismo-misto": {
-      "name": "e3da584eeb74",
-      "description": "dc16289896ef"
+    "liberalismo-classico": {
+      "name": "b1409b6285ff",
+      "description": "f2cfcdae912d"
     }
   },
   "axis-analysis": {

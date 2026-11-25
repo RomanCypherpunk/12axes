@@ -23,6 +23,7 @@ const INK = 'var(--cat-bg, #DDE0E3)';
 // Moeda redonda de um valor: cor da ideologia do usuário, borda fina e ícone preenchido. Sem ícone, mostra o monograma.
 export function ValueCoin({ valueId, name, size = 112, religion, coin: ownCoin }: ValueCoinProps) {
   const coin = ownCoin ?? VALUE_COINS[valueId];
+  const side = coin?.iconSize ?? 34;
   const faith = coin?.religious ? (religiousPoleIcon(religion) ?? FILLED_POLE_ICONS.religiao.right) : null;
   const icon = faith ? (
     <svg x="19" y="19" width="34" height="34" viewBox={faith.viewBox} style={{ fill: INK }}>
@@ -31,7 +32,7 @@ export function ValueCoin({ valueId, name, size = 112, religion, coin: ownCoin }
       ))}
     </svg>
   ) : coin?.glyph ? (
-    <svg x="19" y="19" width="34" height="34" viewBox={coin.viewBox} style={{ fill: INK }}>
+    <svg x={(72 - side) / 2} y={(72 - side) / 2} width={side} height={side} viewBox={coin.viewBox} style={{ fill: INK }}>
       {coin.glyph}
     </svg>
   ) : null;

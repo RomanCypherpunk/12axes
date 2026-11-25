@@ -181,7 +181,7 @@ public class QuizController {
                 topHistoricalParty,
                 partyDimensionMatches,
                 partyMatcherService.findBottomMatches(axes, lang, religion),
-                politicalValuesService.resolve(axes, lang),
+                politicalValuesService.resolve(axes, lang, religion),
                 electionService.findActive(axes, lang)
         );
     }

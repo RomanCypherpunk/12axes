@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode }
 import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
+import { valueCardName } from '../../utils/politicalValues';
 import type { Religion } from '../../utils/religion';
 import { InfoSheet } from './InfoSheet';
 import { DimRow } from './parts';
@@ -25,10 +26,10 @@ interface PoliticalValuesSectionProps {
 
 const MIN_NAME_FONT = 9;
 
-// O nome do valor nunca quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
+// O nome do valor (e o da categoria) nunca quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
 // a fonte diminui (em passos de 0,5px, até um mínimo) em vez de a palavra ser cortada.
 function fitNames(list: HTMLElement) {
-  list.querySelectorAll<HTMLElement>('.e-dim-row strong').forEach((name) => {
+  list.querySelectorAll<HTMLElement>('.e-dim-row strong, .e-dim-row .e-dim').forEach((name) => {
     name.style.fontSize = '';
     let size = parseFloat(getComputedStyle(name).fontSize);
     while (name.scrollWidth > name.clientWidth + 0.5 && size > MIN_NAME_FONT) {
@@ -70,7 +71,7 @@ export function PoliticalValuesSection({ values, category, ideologyId, religion,
             open={{ label: t.valueInfoAria(value.name), onOpen: () => setSelected(value) }}
             visual={<ValueCoin valueId={value.valueId} name={value.name} size={56} religion={religion} />}
             label={value.categoryLabel}
-            name={value.name}
+            name={valueCardName(value.name)}
           >
             {null}
           </DimRow>

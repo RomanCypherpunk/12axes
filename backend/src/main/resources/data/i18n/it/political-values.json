@@ -4,11 +4,6 @@
     "label": "Economia"
   },
   {
-    "id": "socialismo-planificado",
-    "name": "Socialismo pianificato",
-    "description": "Mezzi di produzione di proprietà pubblica o collettiva, con l'economia pianificata centralmente."
-  },
-  {
     "id": "socialismo-de-mercado",
     "name": "Socialismo di mercato",
     "description": "Aziende di proprietà pubblica o collettiva che competono in un mercato, con una pianificazione generale e prezzi in gran parte liberi."
@@ -17,11 +12,6 @@
     "id": "desenvolvimentismo",
     "name": "Sviluppismo",
     "description": "Investimenti pubblici e pianificazione per industrializzare il Paese, proteggendo l'industria nazionale mentre cresce."
-  },
-  {
-    "id": "geosocialismo",
-    "name": "Geosocialismo",
-    "description": "Terra e risorse naturali appartengono a tutti, con la loro rendita condivisa dalla comunità e il commercio lasciato aperto."
   },
   {
     "id": "liberalismo-social",
@@ -39,11 +29,6 @@
     "description": "Un'economia organizzata da sindacati e organizzazioni di lavoratori, che gestiscono la produzione e negoziano per ogni settore."
   },
   {
-    "id": "trabalhismo",
-    "name": "Laburismo",
-    "description": "Difesa dei diritti dei lavoratori e di un'economia nazionale coordinata che garantisce occupazione e reddito."
-  },
-  {
     "id": "social-democracia",
     "name": "Socialdemocrazia",
     "description": "Un'economia di mercato con una forte rete di protezione sociale, ampi servizi pubblici e ridistribuzione del reddito."
@@ -59,29 +44,19 @@
     "description": "Proprietà privata e libera concorrenza come base dell'economia, con regole chiare e intervento limitato."
   },
   {
+    "id": "nacional-liberalismo",
+    "name": "Nazional-liberalismo",
+    "description": "Libero mercato e poco Stato nell'economia del Paese, con un'apertura verso l'estero misurata sull'interesse nazionale."
+  },
+  {
     "id": "ordoliberalismo",
     "name": "Ordoliberalismo",
     "description": "Un libero mercato entro regole ferme che proteggono la concorrenza e impediscono i monopoli."
   },
   {
-    "id": "neoliberalismo",
-    "name": "Neoliberismo",
-    "description": "Mercati aperti, privatizzazioni, deregolamentazione e disciplina fiscale come via verso la crescita."
-  },
-  {
     "id": "liberal-desenvolvimentismo",
     "name": "Sviluppismo liberale",
     "description": "Mercati e iniziativa privata guidano la crescita, con un sostegno pubblico mirato a industria e infrastrutture."
-  },
-  {
-    "id": "protecionismo",
-    "name": "Protezionismo",
-    "description": "Proteggere la produzione nazionale dalla concorrenza straniera con dazi, quote e preferenza per i beni nazionali."
-  },
-  {
-    "id": "capitalismo",
-    "name": "Capitalismo",
-    "description": "Proprietà privata dei mezzi di produzione, ricerca del profitto e prezzi fissati da domanda e offerta."
   },
   {
     "id": "corporativismo",
@@ -94,19 +69,9 @@
     "description": "Prezzi liberi e scelta individuale, con forte proprietà privata e interferenza minima nell'economia."
   },
   {
-    "id": "georgismo",
-    "name": "Georgismo",
-    "description": "Proprietà privata di ciò che le persone producono, mentre la rendita di terra e risorse naturali è raccolta a beneficio di tutti."
-  },
-  {
-    "id": "mercantilismo",
-    "name": "Mercantilismo",
-    "description": "Ricchezza nazionale costruita con esportazioni, riserve e protezione della produzione nazionale."
-  },
-  {
-    "id": "mutualismo",
-    "name": "Mutualismo",
-    "description": "Scambio equo tra produttori, con cooperative, credito mutuo e proprietà legata all'uso e al lavoro."
+    "id": "liberalismo-classico",
+    "name": "Liberalismo classico",
+    "description": "Libero mercato, proprietà privata e libero scambio, con lo Stato dedito a garantire leggi, contratti e sicurezza."
   },
   {
     "id": "sociedade",
@@ -118,49 +83,9 @@
     "description": "Ritiene che la fede e le tradizioni ereditate tengano unita la società e debbano guidare costumi e leggi."
   },
   {
-    "id": "tradicionalismo-secular",
-    "name": "Tradizionalismo laico",
-    "description": "Difende la conservazione di costumi e istituzioni ereditati per il valore che danno alla società, senza appoggiarsi alla religione."
-  },
-  {
-    "id": "tradicionalismo-irreligioso",
-    "name": "Tradizionalismo irreligioso",
-    "description": "Difende la conservazione di costumi e tradizioni ereditati, e non vede la religione come fondamento morale."
-  },
-  {
-    "id": "conservadorismo-religioso",
-    "name": "Conservatorismo religioso",
-    "description": "Preferisce cambiamenti graduali e cauti nei costumi, con la fede come base morale."
-  },
-  {
-    "id": "conservadorismo-secular",
-    "name": "Conservatorismo laico",
-    "description": "Preferisce cambiamenti graduali e cauti nei costumi, senza appoggiarsi alla religione."
-  },
-  {
-    "id": "conservadorismo-irreligioso",
-    "name": "Conservatorismo irreligioso",
-    "description": "Preferisce cambiamenti graduali e cauti nei costumi, e non dà alcun ruolo alla religione."
-  },
-  {
-    "id": "conservadorismo-moderado",
-    "name": "Conservatorismo moderato",
-    "description": "Valorizza costumi e istituzioni consolidati, ma accetta il cambiamento quando c'è una ragione chiara."
-  },
-  {
     "id": "moderado",
     "name": "Moderato",
     "description": "Nessuna inclinazione ferma tra tradizione e cambiamento nei costumi, né tra religione e laicità."
-  },
-  {
-    "id": "progressismo-moderado",
-    "name": "Progressismo moderato",
-    "description": "Sostiene il cambiamento nei costumi e nei diritti individuali, in modo graduale e con equilibrio."
-  },
-  {
-    "id": "progressismo-religioso",
-    "name": "Progressismo religioso",
-    "description": "Sostiene il cambiamento nei costumi e nei diritti individuali, con la fede come parte della vita e dei valori."
   },
   {
     "id": "progressismo",
@@ -168,23 +93,8 @@
     "description": "Sostiene il cambiamento nei costumi e diritti individuali più ampi, con religione e vita pubblica separate."
   },
   {
-    "id": "progressismo-irreligioso",
-    "name": "Progressismo irreligioso",
-    "description": "Sostiene il cambiamento nei costumi e diritti individuali più ampi, e non vede la religione come fondamento morale."
-  },
-  {
-    "id": "moderado-religioso",
-    "name": "Moderato religioso",
-    "description": "Nessuna inclinazione ferma tra tradizione e cambiamento nei costumi, con la fede come parte importante della vita."
-  },
-  {
-    "id": "moderado-irreligioso",
-    "name": "Moderato irreligioso",
-    "description": "Nessuna inclinazione ferma tra tradizione e cambiamento nei costumi, e non vede la religione come fondamento morale."
-  },
-  {
     "id": "politicos",
-    "label": "Politica"
+    "label": "Rappresentanza"
   },
   {
     "id": "autocracia",
@@ -203,23 +113,18 @@
   },
   {
     "id": "democracia",
-    "name": "Democrazia",
+    "name": "Democrazia rappresentativa",
     "description": "Governo scelto con elezioni libere, con diritti garantiti e limiti al potere."
   },
   {
     "id": "conselhos",
-    "name": "Consigli",
+    "name": "Comunismo dei consigli",
     "description": "Decisioni prese da consigli di lavoratori e comunità, eletti dal basso verso l'alto."
   },
   {
     "id": "monarquismo-absoluto",
-    "name": "Monarchismo assoluto",
+    "name": "Monarchia assoluta",
     "description": "Un monarca con potere totale ed ereditario e senza limiti costituzionali."
-  },
-  {
-    "id": "monarquismo-constitucional",
-    "name": "Monarchismo costituzionale",
-    "description": "Un monarca con un ruolo simbolico o limitato, entro una costituzione e un parlamento."
   },
   {
     "id": "tecnocracia",
@@ -239,7 +144,12 @@
   {
     "id": "municipalismo",
     "name": "Municipalismo",
-    "description": "Le decisioni politiche più importanti spettano a città e comunità locali."
+    "description": "Forte decentramento: le decisioni politiche più importanti spettano a città e comunità locali, che si coordinano tra loro."
+  },
+  {
+    "id": "comunalismo",
+    "name": "Comunalismo",
+    "description": "Comunità locali che si governano da sé, con economia e decisioni in comune, senza uno Stato centrale."
   },
   {
     "id": "neocameralismo",
@@ -252,19 +162,9 @@
     "description": "Governo di un'élite scelta per nascita, tradizione o merito riconosciuto."
   },
   {
-    "id": "ditadura-do-proletariado",
-    "name": "Dittatura del proletariato",
-    "description": "Potere politico detenuto in modo centralizzato dalla classe operaia, per trasformare l'economia."
-  },
-  {
-    "id": "comunismo",
-    "name": "Comunismo",
-    "description": "Una società senza classi con proprietà collettiva, guidata da un partito o da un movimento."
-  },
-  {
-    "id": "neutralidade-politica",
-    "name": "Neutralità politica",
-    "description": "Posizioni miste, senza un modello politico dominante tra struttura, rappresentanza e potere."
+    "id": "partocracia",
+    "name": "Partitocrazia",
+    "description": "Governo di un partito unico o dominante che controlla lo Stato e la società."
   },
   {
     "id": "teocracia",
@@ -272,38 +172,13 @@
     "description": "Governo gestito da leader religiosi o dalla legge religiosa."
   },
   {
-    "id": "democracia-securitaria",
-    "name": "Democrazia della sicurezza",
-    "description": "Elezioni libere unite a un forte potere centrale e a un'enfasi su ordine e sicurezza."
-  },
-  {
-    "id": "monarquismo-libertario",
-    "name": "Monarchismo libertario",
-    "description": "Favorisce un monarca o un ordine ereditario, con forte proprietà privata e potere pubblico minimo."
-  },
-  {
-    "id": "corporacao-governamental",
-    "name": "Corporazione di governo",
-    "description": "Piccoli territori gestiti come aziende tecnologiche, con un esecutivo forte e senza elezioni, in competizione per attirare residenti."
-  },
-  {
     "id": "externa",
-    "label": "Politica estera"
+    "label": "Geopolitica"
   },
   {
     "id": "imperialismo",
     "name": "Imperialismo",
     "description": "Espandere l'influenza o il controllo del Paese su altri territori e popoli, con la forza e con la politica."
-  },
-  {
-    "id": "expansionismo",
-    "name": "Espansionismo",
-    "description": "Allargare il territorio o la sfera d'influenza del Paese, con un forte uso della potenza militare."
-  },
-  {
-    "id": "nacionalismo",
-    "name": "Nazionalismo",
-    "description": "Priorità agli interessi e alla sovranità della propria nazione, anche nel commercio con altri Paesi."
   },
   {
     "id": "realismo-politico",
@@ -314,11 +189,6 @@
     "id": "neutralidade-armada",
     "name": "Neutralità armata",
     "description": "Restare fuori dalle guerre altrui mantenendo forze armate forti per difendere il proprio territorio."
-  },
-  {
-    "id": "neutralidade",
-    "name": "Neutralità",
-    "description": "Nessuna inclinazione ferma tra forza e diplomazia, né tra agire all'estero o restarne fuori."
   },
   {
     "id": "pacifismo",
@@ -333,12 +203,7 @@
   {
     "id": "isolacionismo",
     "name": "Isolazionismo",
-    "description": "Tenere il Paese fuori da alleanze e conflitti stranieri, e protetto nel commercio."
-  },
-  {
-    "id": "intervencionismo-humanitario",
-    "name": "Interventismo umanitario",
-    "description": "Agire all'estero, anche con la forza, per fermare gravi abusi e proteggere le popolazioni."
+    "description": "Tenere il Paese fuori da alleanze e conflitti esterni, concentrato su se stesso e con confini più chiusi."
   },
   {
     "id": "tecnologicos",
@@ -350,53 +215,9 @@
     "description": "Rifiuta la tecnologia industriale e moderna, preferendo una vita vicina alla natura e su piccola scala."
   },
   {
-    "id": "naturalismo",
-    "name": "Naturalismo",
-    "description": "Preferisce soluzioni naturali e una vita in armonia con la natura, usando la tecnologia solo quando serve."
-  },
-  {
     "id": "ambientalismo",
     "name": "Ambientalismo",
     "description": "Accetta la tecnologia purché limitata dalla protezione dell'ambiente."
-  },
-  {
-    "id": "cautela-tecnologica",
-    "name": "Cautela tecnologica",
-    "description": "Accetta le nuove tecnologie, ma con cautela, regole e attenzione ai rischi."
-  },
-  {
-    "id": "equilibrio-tecnologico",
-    "name": "Equilibrio tecnologico",
-    "description": "Nessuna inclinazione ferma tra fidarsi di più della tecnologia o della natura."
-  },
-  {
-    "id": "modernismo-tecnologico",
-    "name": "Modernismo tecnologico",
-    "description": "La tecnologia è la via per migliorare la vita e risolvere i problemi collettivi."
-  },
-  {
-    "id": "industrialismo",
-    "name": "Industrialismo",
-    "description": "Valorizza l'industria e la produzione su larga scala come base del progresso."
-  },
-  {
-    "id": "otimismo-tecnologico",
-    "name": "Ottimismo tecnologico",
-    "description": "Confida che la tecnologia risolverà la maggior parte dei problemi umani e ambientali."
-  },
-  {
-    "id": "futurismo",
-    "name": "Futurismo",
-    "description": "Orienta la società verso il futuro, dando priorità a innovazione e rapido cambiamento tecnologico."
-  },
-  {
-    "id": "aceleracionismo",
-    "name": "Accelerazionismo",
-    "description": "Sostiene di accelerare il più possibile il progresso tecnologico, anche se trasforma profondamente la società."
-  },
-  {
-    "id": "imigracao",
-    "label": "Immigrazione"
   },
   {
     "id": "cosmopolitismo",
@@ -409,94 +230,9 @@
     "description": "Valorizza la convivenza di più culture nello stesso Paese, ciascuna con le proprie tradizioni."
   },
   {
-    "id": "pluralismo",
-    "name": "Pluralismo",
-    "description": "Accetta la diversità culturale entro regole e valori condivisi da tutti."
-  },
-  {
-    "id": "integracao-civica",
-    "name": "Integrazione civica",
-    "description": "I nuovi arrivati si integrano tramite legge, lingua e cittadinanza, mantenendo i propri costumi nella vita privata."
-  },
-  {
-    "id": "equilibrio-migratorio",
-    "name": "Equilibrio",
-    "description": "Nessuna inclinazione ferma tra preservare la cultura nazionale e accogliere la diversità."
-  },
-  {
-    "id": "integracao-cultural",
-    "name": "Integrazione culturale",
-    "description": "I nuovi arrivati dovrebbero adottare in gran parte la cultura, la lingua e i costumi del Paese."
-  },
-  {
-    "id": "assimilacionismo",
-    "name": "Assimilazionismo",
-    "description": "I nuovi arrivati dovrebbero assimilarsi completamente alla cultura nazionale, lasciando da parte quella d'origine."
-  },
-  {
-    "id": "preservacionismo-cultural",
-    "name": "Conservazionismo culturale",
-    "description": "Dà priorità alla conservazione della cultura nazionale esistente, con limiti fermi all'immigrazione."
-  },
-  {
     "id": "nacionalismo-etnico",
     "name": "Nazionalismo etnico",
     "description": "La nazione è definita da origine e discendenza comuni, e l'immigrazione dovrebbe essere rigidamente limitata."
-  },
-  {
-    "id": "federalismo-autoritario",
-    "name": "Federalismo autoritario",
-    "description": "Potere diviso tra le regioni, ma con forte autorità e poca libertà individuale a ogni livello di governo."
-  },
-  {
-    "id": "democracia-moderada",
-    "name": "Democrazia moderata",
-    "description": "Governo scelto con elezioni, con partecipazione limitata e attenzione a ordine e stabilità."
-  },
-  {
-    "id": "governo-forte",
-    "name": "Governo forte",
-    "description": "Un governo centrale forte, con rappresentanza limitata e enfasi su sicurezza e ordine."
-  },
-  {
-    "id": "democracia-central",
-    "name": "Democrazia centrale",
-    "description": "Elezioni libere e ampie libertà, con decisioni concentrate in un governo centrale."
-  },
-  {
-    "id": "socialismo-internacionalista",
-    "name": "Socialismo internazionalista",
-    "description": "Proprietà collettiva e pianificazione economica, con cooperazione e commercio aperto tra i popoli."
-  },
-  {
-    "id": "capitalismo-protecionista",
-    "name": "Capitalismo protezionista",
-    "description": "Proprietà privata e libero mercato all'interno, con la produzione nazionale protetta dalla concorrenza straniera."
-  },
-  {
-    "id": "dirigismo",
-    "name": "Dirigismo",
-    "description": "Un mix di proprietà privata e coordinamento centrale dell'economia, con piani nazionali e protezione della produzione interna."
-  },
-  {
-    "id": "tradicionalismo-cultural",
-    "name": "Tradizionalismo culturale",
-    "description": "Difende la conservazione di tradizioni e costumi ereditati, vedendo la religione più come patrimonio culturale che come fede."
-  },
-  {
-    "id": "progressismo-moderado-irreligioso",
-    "name": "Progressismo moderato irreligioso",
-    "description": "Sostiene un cambiamento graduale nei costumi e nei diritti individuali, e non vede la religione come fondamento morale."
-  },
-  {
-    "id": "moderado-secular",
-    "name": "Moderato laico",
-    "description": "Nessuna inclinazione ferma tra tradizione e cambiamento nei costumi, tenendo la religione fuori dalla vita pubblica."
-  },
-  {
-    "id": "nao-alinhamento",
-    "name": "Non allineamento",
-    "description": "Restare fuori dai blocchi di potere, mantenendo una politica estera indipendente e relazioni con molti Paesi."
   },
   {
     "id": "nao-intervencionismo",
@@ -504,24 +240,14 @@
     "description": "Non interferire negli affari di altri Paesi, evitando guerre e coinvolgimenti oltre i propri confini."
   },
   {
-    "id": "militarismo",
-    "name": "Militarismo",
-    "description": "Forze armate forti e priorità alla potenza militare nella politica estera, senza necessariamente cercare l'espansione."
-  },
-  {
     "id": "democracia-direta",
     "name": "Democrazia diretta",
     "description": "Decisioni importanti prese direttamente dai cittadini con plebisciti e referendum, con il potere decentralizzato."
   },
   {
-    "id": "livre-mercado-moderado",
-    "name": "Libero mercato moderato",
-    "description": "Prezzi e concorrenza fissati dal mercato, con proprietà mista e apertura moderata al commercio estero."
-  },
-  {
-    "id": "coletivismo",
-    "name": "Collettivismo",
-    "description": "Proprietà e decisioni economiche nelle mani della comunità, con pianificazione moderata e commercio aperto."
+    "id": "democracia-digital",
+    "name": "Democrazia digitale",
+    "description": "Partecipazione e decisioni tramite strumenti digitali, con i cittadini che votano e propongono direttamente su piattaforme online."
   },
   {
     "id": "liberalismo-pragmatico",
@@ -529,48 +255,395 @@
     "description": "Il mercato come base dell'economia, con regole pratiche e aggiustamenti secondo le circostanze, e apertura commerciale moderata."
   },
   {
-    "id": "libertarianismo-social",
-    "name": "Libertarismo sociale",
-    "description": "Prezzi liberi e commercio molto aperto, con proprietà mista e attenzione alla giustizia sociale."
+    "id": "fascismo",
+    "name": "Fascismo",
+    "description": "Uno Stato forte e un partito unico, con la nazione sopra l'individuo e il controllo di economia e società."
   },
   {
-    "id": "liberalismo-nacional",
-    "name": "Liberalismo nazionale",
-    "description": "Libero mercato e proprietà privata, con apertura commerciale moderata e priorità agli interessi della nazione."
+    "id": "hipercentralismo",
+    "name": "Ipercentralismo",
+    "description": "Tutto il potere concentrato nel governo centrale, senza autonomia per regioni o città."
   },
   {
-    "id": "diplomacia-moderada",
-    "name": "Diplomazia moderata",
-    "description": "Preferisce la cooperazione tra i Paesi, accettando un'azione limitata e negoziata all'estero."
+    "id": "centralismo",
+    "name": "Centralismo",
+    "description": "Un governo centrale forte decide l'essenziale, con regioni e città subordinate."
   },
   {
-    "id": "militarismo-defensivo",
-    "name": "Militarismo difensivo",
-    "description": "Mantiene forze armate forti per difendere il proprio territorio e i propri interessi, senza cercare l'espansione."
+    "id": "regionalismo",
+    "name": "Regionalismo",
+    "description": "Autonomia alle regioni, in uno Stato che mantiene comunque un centro comune."
   },
   {
-    "id": "conservadorismo-moderado-religioso",
-    "name": "Conservatorismo moderato religioso",
-    "description": "Valorizza tradizione e fede come base dei costumi, ma accetta un cambiamento graduale."
+    "id": "patchwork",
+    "name": "Patchwork",
+    "description": "Un mosaico di città e comunità sovrane, in genere a gestione privata, ognuna con le proprie regole."
   },
   {
-    "id": "progressismo-moderado-secular",
-    "name": "Progressismo moderato laico",
-    "description": "Sostiene un cambiamento graduale nei costumi e nei diritti individuali, con la religione separata dalla vita pubblica."
+    "id": "territorial",
+    "label": "Struttura"
   },
   {
-    "id": "autoritarismo-desenvolvimentista",
-    "name": "Autoritarismo sviluppista",
-    "description": "Potere centralizzato, chiuso alla competizione politica, usato per dirigere l'economia e la modernizzazione del Paese."
+    "id": "libertarianismo",
+    "name": "Libertarismo",
+    "description": "Lo Stato resta fuori dalla vita privata: poche leggi, poca sorveglianza e ampia libertà individuale."
   },
   {
-    "id": "democracia-social",
-    "name": "Democrazia sociale",
-    "description": "Elezioni libere con attenzione ai diritti sociali e alla riduzione della disuguaglianza, con un governo centrale più attivo."
+    "id": "liberalismo-social-civil",
+    "name": "Liberalismo sociale",
+    "description": "Libertà civili tutelate dalla legge, con lo Stato che garantisce i diritti e limita gli abusi di potere."
   },
   {
-    "id": "autoritarismo-misto",
-    "name": "Autoritarismo misto",
-    "description": "Forte autorità e poca competizione politica, con potere condiviso tra il centro e le regioni."
+    "id": "legalismo",
+    "name": "Legalismo",
+    "description": "Libertà e ordine nel quadro della legge: diritti garantiti e regole applicate, con uno Stato né assente né sorvegliante."
+  },
+  {
+    "id": "paternalismo",
+    "name": "Paternalismo",
+    "description": "Lo Stato protegge e guida i cittadini, con sostegno economico e difesa dei costumi, anche contro le loro stesse scelte."
+  },
+  {
+    "id": "moralismo",
+    "name": "Moralismo",
+    "description": "La legge impone costumi e morale, in genere di origine religiosa, e punisce ciò che li contraddice."
+  },
+  {
+    "id": "securitismo",
+    "name": "Securitarismo",
+    "description": "Sicurezza e ordine prima di tutto: più polizia, sorveglianza e pene, all'interno delle istituzioni."
+  },
+  {
+    "id": "regimentalismo",
+    "name": "Reggimentalismo",
+    "description": "Una società disciplinata e gerarchica, con obbedienza, ordine e comando fermo, e poca partecipazione."
+  },
+  {
+    "id": "totalismo",
+    "name": "Totalismo",
+    "description": "Lo Stato controlla ogni sfera della vita, dall'economia al privato, senza spazio per il dissenso."
+  },
+  {
+    "id": "controle-social",
+    "label": "Controllo"
+  },
+  {
+    "id": "intervencionismo",
+    "name": "Interventismo",
+    "description": "Intervenire all'estero, politicamente o militarmente, per difendere interessi o valori del Paese."
+  },
+  {
+    "id": "globalismo",
+    "name": "Globalismo",
+    "description": "Cooperazione tramite organizzazioni globali come l'ONU, con decisioni e regole comuni tra i Paesi."
+  },
+  {
+    "id": "messianismo",
+    "name": "Messianismo",
+    "description": "Una missione religiosa o storica del Paese che giustifica la diffusione della sua fede, dei suoi valori o del suo destino."
+  },
+  {
+    "id": "colonialismo",
+    "name": "Colonialismo",
+    "description": "Occupare e governare territori d'oltremare, popolandoli di coloni e trattando i popoli locali come subordinati."
+  },
+  {
+    "id": "nacionalismo",
+    "name": "Nazionalismo",
+    "description": "Priorità agli interessi e alla sovranità della propria nazione, anche nel commercio con altri Paesi."
+  },
+  {
+    "id": "nacionalismo-civico",
+    "name": "Nazionalismo civico",
+    "description": "La nazione è la comunità dei cittadini che condividono le stesse leggi e istituzioni, qualunque sia la loro origine."
+  },
+  {
+    "id": "nacionalismo-cultural",
+    "name": "Nazionalismo culturale",
+    "description": "La nazione è la sua cultura, lingua e costumi, che vanno preservati e adottati da chi arriva."
+  },
+  {
+    "id": "nacionalismo-religioso",
+    "name": "Nazionalismo religioso",
+    "description": "L'identità della nazione nasce dalla sua fede, e lo Stato deve difenderla e promuoverla."
+  },
+  {
+    "id": "pan-islamismo",
+    "name": "Panislamismo",
+    "description": "La comunità musulmana come un'unica nazione, unita dalla fede al di sopra dei confini tra i Paesi."
+  },
+  {
+    "id": "tribalismo",
+    "name": "Tribalismo",
+    "description": "La lealtà va al clan, alla tribù o alla comunità d'origine, che viene prima dello Stato e della nazione."
+  },
+  {
+    "id": "individualismo",
+    "name": "Individualismo",
+    "description": "L'individuo viene prima della nazione e del gruppo, con autonomia e libertà di fare le proprie scelte."
+  },
+  {
+    "id": "comunitarismo",
+    "name": "Comunitarismo",
+    "description": "Valori e legami delle comunità locali, come famiglia, quartiere e tradizione, danno senso alla vita in società."
+  },
+  {
+    "id": "nacionalismo-regional",
+    "name": "Nazionalismo regionale",
+    "description": "L'identità della regione, con lingua, storia e autonomia proprie, viene prima dell'identità dello Stato."
+  },
+  {
+    "id": "nacao",
+    "label": "Nazione"
+  },
+  {
+    "id": "patriotismo",
+    "name": "Patriottismo",
+    "description": "Amore e lealtà verso il proprio Paese, le sue istituzioni e i suoi simboli, senza base etnica o religiosa."
+  },
+  {
+    "id": "nacionalismo-anticolonial",
+    "name": "Nazionalismo anticoloniale",
+    "description": "La nazione si afferma contro il dominio straniero: liberazione, sovranità e sviluppo proprio."
+  },
+  {
+    "id": "socialismo",
+    "name": "Socialismo internazionalista",
+    "description": "La solidarietà di classe viene prima della nazione: a unire i lavoratori sono il lavoro e l'uguaglianza, non i confini."
+  },
+  {
+    "id": "socialismo-de-estado",
+    "name": "Socialismo di Stato",
+    "description": "Lo Stato nazionale, forte e centralizzato, controlla l'economia e guida la società verso il socialismo."
+  },
+  {
+    "id": "agrarianismo",
+    "name": "Agrarianismo",
+    "description": "La vita rurale e l'agricoltura come base della società, con la terra in mano a chi la lavora."
+  },
+  {
+    "id": "tecnocapitalismo",
+    "name": "Tecnocapitalismo",
+    "description": "L'innovazione e le grandi aziende tecnologiche trainano il progresso, con libero mercato e poche regole."
+  },
+  {
+    "id": "cybercomunismo",
+    "name": "Cybercomunismo",
+    "description": "Tecnologia e automazione al servizio di un'economia pianificata e comune, con abbondanza per tutti."
+  },
+  {
+    "id": "transhumanismo",
+    "name": "Transumanesimo",
+    "description": "Superare i limiti del corpo e della mente umana con scienza e tecnologia, come l'estensione della vita e la fusione con le macchine."
+  },
+  {
+    "id": "neutralidade-tecnologica",
+    "name": "Neutralità",
+    "description": "Nessuna posizione netta su tecnologia e natura: valuta ogni caso, senza rifiutare né celebrare la tecnica."
+  },
+  {
+    "id": "aceleracionismo",
+    "name": "Accelerazionismo",
+    "description": "Accelerare al massimo il progresso tecnologico e i cambiamenti che porta, senza freni, per trasformare la società."
+  },
+  {
+    "id": "industrialismo-nacional",
+    "name": "Industrialismo nazionale",
+    "description": "L'industria al servizio della nazione: proteggere la produzione nazionale e usare il potere dello Stato per industrializzare il Paese."
+  },
+  {
+    "id": "industrialismo-capitalista",
+    "name": "Industrialismo capitalista",
+    "description": "Industria e progresso tecnico trainati dall'iniziativa e dal capitale privati, con libero mercato."
+  },
+  {
+    "id": "industrialismo-socialista",
+    "name": "Industrialismo socialista",
+    "description": "Industrializzazione e progresso tecnico guidati dallo Stato e dalla proprietà pubblica, al servizio della collettività."
+  },
+  {
+    "id": "modernismo",
+    "name": "Modernismo",
+    "description": "Fiducia nel progresso tecnico e scientifico come motore di una società più giusta, moderna e razionale."
+  },
+  {
+    "id": "socialismo-estatal",
+    "name": "Socialismo di Stato",
+    "description": "Lo Stato possiede e pianifica l'intera economia, con controllo centrale di produzione, prezzi e commercio."
+  },
+  {
+    "id": "socialismo-classico",
+    "name": "Socialismo",
+    "description": "Proprietà sociale dei mezzi di produzione e uguaglianza economica, con pianificazione e redistribuzione."
+  },
+  {
+    "id": "social-distributismo",
+    "name": "Socialdistributismo",
+    "description": "Proprietà ampiamente distribuita tra famiglie e cooperative, con uno Stato che garantisce diritti e protezione sociale."
+  },
+  {
+    "id": "distributismo-de-mercado",
+    "name": "Distributismo di mercato",
+    "description": "Proprietà ampiamente distribuita tra famiglie e piccoli produttori, in un mercato libero e locale."
+  },
+  {
+    "id": "mutualismo",
+    "name": "Mutualismo",
+    "description": "Libero mercato con la proprietà in mano a chi lavora: scambio tra piccoli produttori e cooperative, credito mutuo e poco Stato."
+  },
+  {
+    "id": "cameralismo",
+    "name": "Cameralismo",
+    "description": "Lo Stato amministra l'economia come una grande casa: finanze pubbliche, sostegno alla produzione e burocrazia efficiente."
+  },
+  {
+    "id": "terceira-via",
+    "name": "Terza via",
+    "description": "Una via di mezzo tra capitalismo e socialismo: mercato con politiche sociali, senza gli estremi dell'uno o dell'altro."
+  },
+  {
+    "id": "liberalismo-keynesiano",
+    "name": "Liberalismo keynesiano",
+    "description": "Libero mercato con lo Stato che interviene per stabilizzare l'economia e sostenere occupazione e domanda."
+  },
+  {
+    "id": "feudalismo",
+    "name": "Feudalesimo",
+    "description": "Un'economia locale e gerarchica, basata sulla terra e su legami di servizio e protezione tra signori e contadini."
+  },
+  {
+    "id": "socialismo-internacionalista",
+    "name": "Socialismo internazionalista",
+    "description": "Un'economia pubblica e pianificata, con cooperazione e commercio aperto tra i popoli, oltre i confini nazionali."
+  },
+  {
+    "id": "protecionismo",
+    "name": "Protezionismo",
+    "description": "Capitalismo protezionista: proprietà e mercato privati, con dazi e barriere per proteggere la produzione nazionale."
+  },
+  {
+    "id": "mercantilismo",
+    "name": "Mercantilismo",
+    "description": "Lo Stato guida l'iniziativa privata per arricchire la nazione: esportare molto e importare poco, con dazi, monopoli e controllo della produzione."
+  },
+  {
+    "id": "nacionalismo-economico",
+    "name": "Nazionalismo",
+    "description": "L'economia al servizio della nazione: lo Stato guida lo sviluppo, protegge la produzione nazionale e mette al primo posto gli interessi del Paese."
+  },
+  {
+    "id": "trabalhismo",
+    "name": "Laburismo",
+    "description": "Il lavoro al centro dell'economia: diritti dei lavoratori, sindacati forti e uno Stato che li protegge."
+  },
+  {
+    "id": "progressismo-social",
+    "name": "Progressismo sociale",
+    "description": "Cambiamento culturale con giustizia sociale: ampliare diritti e libertà con redistribuzione e tutela dei più vulnerabili."
+  },
+  {
+    "id": "liberalismo-conservador",
+    "name": "Liberalismo conservatore",
+    "description": "Libero mercato unito a costumi e valori tradizionali, con prudenza verso i cambiamenti sociali."
+  },
+  {
+    "id": "conservadorismo-liberal",
+    "name": "Conservatorismo liberale",
+    "description": "Preservare le tradizioni dentro istituzioni liberali: riforme graduali, diritti garantiti e governo limitato."
+  },
+  {
+    "id": "conservadorismo-progressista",
+    "name": "Conservatorismo progressista",
+    "description": "Valori tradizionali con riforme sociali: lo Stato sostiene famiglie e più deboli senza rompere con i costumi."
+  },
+  {
+    "id": "conservadorismo",
+    "name": "Conservatorismo",
+    "description": "Prudenza e rispetto per tradizione, famiglia e istituzioni, con cambiamenti lenti e cautela verso l'immigrazione."
+  },
+  {
+    "id": "conservadorismo-tradicionalista",
+    "name": "Conservatorismo tradizionalista",
+    "description": "I costumi ereditati, la fede e la vita comunitaria valgono più del progresso materiale e della modernizzazione."
+  },
+  {
+    "id": "reacionarismo",
+    "name": "Reazionarismo",
+    "description": "Annullare i cambiamenti moderni e restaurare l'ordine sociale, i costumi e la gerarchia del passato."
+  },
+  {
+    "id": "paleoconservadorismo",
+    "name": "Paleoconservatorismo",
+    "description": "Tradizione, sovranità nazionale e immigrazione limitata, contro l'interventismo e il globalismo."
+  },
+  {
+    "id": "neorreacionarismo",
+    "name": "Neoreazione",
+    "description": "Critica alla democrazia moderna e ritorno della gerarchia, uniti all'alta tecnologia e alla frammentazione del potere."
+  },
+  {
+    "id": "modernismo-reacionario",
+    "name": "Modernismo reazionario",
+    "description": "Tecnologia e modernizzazione al servizio di un ordine gerarchico e antiliberale, con una forte identità nazionale."
+  },
+  {
+    "id": "secularismo",
+    "name": "Secolarismo",
+    "description": "Ragione, scienza e diritti umani come base della vita pubblica, con la religione separata dallo Stato."
+  },
+  {
+    "id": "conservadorismo-secular",
+    "name": "Conservatorismo laico",
+    "description": "Tradizione, ordine e identità nazionale difesi senza fondamento religioso."
+  },
+  {
+    "id": "tradicionalismo-universalista",
+    "name": "Tradizionalismo universalista",
+    "description": "Fede e costumi tradizionali aperti a tutti i popoli, con accoglienza per chi viene da fuori."
+  },
+  {
+    "id": "progressismo-assimilacionista",
+    "name": "Progressismo assimilazionista",
+    "description": "Costumi progressisti e Stato laico, con la richiesta che chi arriva adotti i valori del Paese."
+  },
+  {
+    "id": "progressismo-religioso",
+    "name": "Progressismo religioso",
+    "description": "Una fede che ispira giustizia sociale, diritti, accoglienza e riforme dei costumi."
+  },
+  {
+    "id": "iluminismo",
+    "name": "Illuminismo",
+    "description": "Ragione, scienza, tolleranza e progresso contro il dogma e l'assolutismo, con diritti e libertà individuali."
+  },
+  {
+    "id": "objetivismo",
+    "name": "Oggettivismo",
+    "description": "La ragione e l'interesse personale guidano la vita, e solo un capitalismo libero rispetta i diritti dell'individuo."
+  },
+  {
+    "id": "nietzschianismo",
+    "name": "Nietzscheanesimo",
+    "description": "Affermare la vita e creare i propri valori, superando la morale del gregge a favore di individui eccezionali."
+  },
+  {
+    "id": "marxismo",
+    "name": "Marxismo",
+    "description": "Cultura, costumi e istituzioni riflettono rapporti di potere, ed emancipare la società richiede di trasformarli insieme all'economia."
+  },
+  {
+    "id": "stratocracia",
+    "name": "Stratocrazia",
+    "description": "Governo dei militari, con il comando delle forze armate che esercita il potere dello Stato."
+  },
+  {
+    "id": "anarco-monarquismo",
+    "name": "Anarcomonarchismo",
+    "description": "Niente Stato moderno: comunità libere sotto l'autorità simbolica o volontaria di un re radicato nella tradizione."
+  },
+  {
+    "id": "neutralidade-politica",
+    "name": "Neutralità politica",
+    "description": "Posizioni miste, senza un'inclinazione chiara su chi debba governare né su quanta voce debba avere il popolo."
   }
 ]

@@ -27,6 +27,7 @@ import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
 import { COMPASS_COINS } from '../results/compassCoins';
+import { valueCardName } from '../../utils/politicalValues';
 import { compassClamp, compassView } from '../results/PoliticalCompassSection';
 import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from '../../utils/compassQuadrants';
 import { commonNote, unusualLead } from '../results/SignatureSection';
@@ -364,14 +365,14 @@ export function PdfReport({ result, axes, axisResults, answeredCount, religion, 
 
             <section className="rp-sec">
               <SectionHead title={t.valuesSectionTitle} />
-              <ul className="dims">
+              <ul className="dims v4">
                 {values.map((value) => (
                   <li className="dc" key={value.categoryId}>
                     <span className="v-wrap">
                       <ValueCoin valueId={value.valueId} name={value.name} size={44} religion={religion} />
                     </span>
                     <span className="dim">{value.categoryLabel}</span>
-                    <b>{value.name}</b>
+                    <b>{valueCardName(value.name)}</b>
                   </li>
                 ))}
               </ul>

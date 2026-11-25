@@ -10,7 +10,7 @@ import { LANG, t } from '../i18n';
 import type { Axis, AxisResult, PoliticalValue, QuizResult } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
 import { computeCompass, economicName, type CompassPosition } from './politicalCompass';
-import { valueCoinMonogram } from './politicalValues';
+import { valueCardName, valueCoinMonogram } from './politicalValues';
 import type { Religion } from './religion';
 import { buildShareFooter, buildShareHeader, buildShareIdentity, SHARE_COLORS } from './shareCard';
 import {
@@ -48,13 +48,16 @@ const READ_WIDTH = BOX_INNER - CHART_WIDTH - CHART_GAP;
 // A grade 9x9: o lado é a largura da caixa do gráfico menos os dois rótulos laterais (22px) e os espaços (12px).
 const GRID_SIDE = CHART_WIDTH - 22 * 2 - 12 * 2;
 const MARKER_SIDE = 40;
-const VALUE_COLUMNS = 3;
-const VALUE_GAP = 16;
-const VALUE_TILE_PAD_X = 22;
-const VALUE_NAME_HEIGHT = 70;
+// Um cartão por categoria (8), numa grade 4x2, com a moeda em cima e o texto no pé.
+const VALUE_COLUMNS = 4;
+const VALUE_GAP = 12;
+const VALUE_TILE_PAD_X = 12;
+// A grade avança sobre o respiro lateral da caixa, para os nomes terem mais largura.
+const VALUE_BLEED = 12;
+const VALUE_COIN = 84;
+const VALUE_NAME_HEIGHT = 76;
 const VALUE_TILE_HEIGHT = 262;
-const MAX_VALUES = 6;
-const VALUE_TEXT_WIDTH = (BOX_INNER - VALUE_GAP * (VALUE_COLUMNS - 1)) / VALUE_COLUMNS - VALUE_TILE_PAD_X * 2;
+const VALUE_TEXT_WIDTH = (BOX_INNER + VALUE_BLEED * 2 - VALUE_GAP * (VALUE_COLUMNS - 1)) / VALUE_COLUMNS - VALUE_TILE_PAD_X * 2;
 
 const X_MARK =
   '<svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" width="55%" height="55%" style="display:block"><path d="M6 6l12 12M18 6 6 18"/></svg>';
@@ -277,8 +280,8 @@ function valueCoin(value: PoliticalValue, color: Palette, religion: Religion | n
     flex: '0 0 auto',
     display: 'grid',
     placeItems: 'center',
-    width: '84px',
-    height: '84px',
+    width: `${VALUE_COIN}px`,
+    height: `${VALUE_COIN}px`,
     borderRadius: '50%',
     background: color.base
   });
@@ -312,14 +315,16 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
     flexDirection: 'column'
   });
   const label = value.categoryLabel.toLocaleUpperCase(LANG);
-  const labelSize = fitFontSize(label, 600, SHARE_FONT_BODY, VALUE_TEXT_WIDTH * SAFETY, 1, 19, 11, 0.16);
-  const nameSize = fitBlock(value.name, {
+  const labelSize = fitFontSize(label, 600, SHARE_FONT_BODY, VALUE_TEXT_WIDTH * SAFETY, 1, 18, 10, 0.1);
+  const name = valueCardName(value.name);
+  // 20px no máximo: com as quebras acima, praticamente todos os nomes cabem nesse tamanho e ficam iguais entre si.
+  const nameSize = fitBlock(name, {
     weight: 600,
     family: SHARE_FONT_DISPLAY,
     width: VALUE_TEXT_WIDTH * SAFETY,
     height: VALUE_NAME_HEIGHT,
     lineHeight: 1.25,
-    max: 26,
+    max: 20,
     min: 12,
     tracking: -0.0192
   });
@@ -332,9 +337,10 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
       fontFamily: SHARE_FONT_BODY,
       fontWeight: '600',
       fontSize: `${labelSize}px`,
-      letterSpacing: '0.16em',
+      letterSpacing: '0.1em',
       lineHeight: '1.2',
       whiteSpace: 'nowrap',
+      overflow: 'hidden',
       color: color.base
     }, label),
     el('div', {
@@ -347,8 +353,9 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
       lineHeight: '1.25',
       letterSpacing: '-0.0192em',
       overflowWrap: 'break-word',
+      whiteSpace: 'pre-line',
       color: color.base
-    }, value.name)
+    }, name)
   );
   return tile;
 }
@@ -359,9 +366,9 @@ function valuesBox(values: PoliticalValue[], color: Palette, religion: Religion 
     display: 'grid',
     gridTemplateColumns: `repeat(${VALUE_COLUMNS}, minmax(0, 1fr))`,
     gap: `${VALUE_GAP}px`,
-    marginTop: '28px'
+    margin: `28px -${VALUE_BLEED}px 0`
   });
-  values.slice(0, MAX_VALUES).forEach((value) => grid.append(valueTile(value, color, religion)));
+  values.forEach((value) => grid.append(valueTile(value, color, religion)));
   wrap.append(boxLabel(t.valuesSectionTitle, INK, BOX_INNER), grid);
   return wrap;
 }
