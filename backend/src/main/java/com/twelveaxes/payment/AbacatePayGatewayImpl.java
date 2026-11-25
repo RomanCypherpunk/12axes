@@ -24,7 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * AbacatePay (API v2, reais, Pix e cartao). O produto (nome, foto e preco) mora no painel da AbacatePay; o servidor abre
+ * AbacatePay (API v2, reais, Pix). O produto (nome, foto e preco) mora no painel da AbacatePay; o servidor abre
  * um checkout desse produto com o codigo do resultado ({@code externalId}) e o hash do vetor ({@code metadata}), o
  * comprador paga na pagina da AbacatePay e volta para {@code returnUrl?pay=<codigo>}; o checkout e entao procurado por esse
  * codigo. Nada fica guardado aqui: a AbacatePay e a fonte da verdade.
@@ -84,8 +84,8 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         item.put("id", productId);
         item.put("quantity", 1);
         body.put("frequency", "ONE_TIME");
-        // Pix e cartao (credito e debito). Sem o cartao liberado na loja a AbacatePay recusa o checkout: "CARD is not available".
-        body.putArray("methods").add("PIX").add("CARD");
+        // So Pix: a loja ainda nao tem cartao liberado na AbacatePay (sem isso ela recusa o checkout: "CARD is not available").
+        body.putArray("methods").add("PIX");
         body.put("externalId", nonce);
         // O e-mail, o endereco do resultado e o idioma ficam no pagamento: o webhook de "pago" os le daqui para mandar o
         // acesso por e-mail (no idioma que a pessoa usava ao comprar) sem depender do navegador (o evento nao traz o
@@ -109,8 +109,8 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         if (id.isBlank() || url.isBlank()) {
             throw new PaymentGatewayException("Resposta da AbacatePay sem endereco de pagamento", new IllegalStateException(data.toString()));
         }
-        // Sem as etapas de dados pessoais e de endereco (o relatorio e digital): o Pix usa o nome e o CPF que vem do banco, e o
-        // cartao ainda pede so o CPF do titular. Apple Pay, Google Pay e boleto somem do checkout com essa opcao.
+        // Sem as etapas de dados pessoais e de endereco (o relatorio e digital): o Pix usa o nome e o CPF que vem do banco.
+        // Apple Pay, Google Pay e boleto somem do checkout com essa opcao.
         return new CheckoutSession(id, withParam(withParam(url, "skip_customer", "true"), "skip_address", "true"));
     }
 
