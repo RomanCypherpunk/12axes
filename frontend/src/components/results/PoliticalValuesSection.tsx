@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode }
 import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
-import { valueCardName } from '../../utils/politicalValues';
 import type { Religion } from '../../utils/religion';
 import { InfoSheet } from './InfoSheet';
 import { DimRow } from './parts';
@@ -25,17 +24,22 @@ interface PoliticalValuesSectionProps {
 }
 
 const MIN_NAME_FONT = 9;
+// Folga que o cartão tem à direita do texto (o respiro interno): sobra até esse tanto não conta como estouro.
+const OVERFLOW_SLACK = 8;
 
-// O nome do valor (e o da categoria) nunca quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
-// a fonte diminui (em passos de 0,5px, até um mínimo) em vez de a palavra ser cortada.
+// O nome do valor (e o da categoria) não quebra no meio da palavra: se a maior palavra não couber na largura do cartão,
+// a fonte diminui (em passos de 0,5px, até um mínimo). Só se mesmo no mínimo ela não couber (palavra enorme num celular
+// estreito) a palavra pode ser quebrada, em vez de passar da borda do cartão.
 function fitNames(list: HTMLElement) {
   list.querySelectorAll<HTMLElement>('.e-dim-row strong, .e-dim-row .e-dim').forEach((name) => {
     name.style.fontSize = '';
+    name.style.overflowWrap = '';
     let size = parseFloat(getComputedStyle(name).fontSize);
     while (name.scrollWidth > name.clientWidth + 0.5 && size > MIN_NAME_FONT) {
       size -= 0.5;
       name.style.fontSize = `${size}px`;
     }
+    if (name.scrollWidth > name.clientWidth + OVERFLOW_SLACK) name.style.overflowWrap = 'anywhere';
   });
 }
 
@@ -71,7 +75,7 @@ export function PoliticalValuesSection({ values, category, ideologyId, religion,
             open={{ label: t.valueInfoAria(value.name), onOpen: () => setSelected(value) }}
             visual={<ValueCoin valueId={value.valueId} name={value.name} size={56} religion={religion} />}
             label={value.categoryLabel}
-            name={valueCardName(value.name)}
+            name={value.name}
           >
             {null}
           </DimRow>

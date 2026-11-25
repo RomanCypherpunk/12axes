@@ -89,7 +89,7 @@ export default defineConfig(({ mode }) => {
     },
     // Bibliotecas carregadas sob demanda (cartão de compartilhar e planilha): sem isto o servidor de desenvolvimento só as
     // descobre ao clicar, re-otimiza no meio da sessão e o navegador fica com um arquivo desatualizado (504 "Outdated Optimize Dep").
-    optimizeDeps: { include: ['html-to-image', 'exceljs'] },
+    optimizeDeps: { include: ['html-to-image', 'exceljs', 'react-dom/server'] },
     // es2022: o dicionário de idioma é carregado com await no topo do módulo (src/i18n).
     build: {
       target: 'es2022',

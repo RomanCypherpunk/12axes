@@ -1191,8 +1191,8 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 .e-values-grid.e-values-2x4 .e-dim-row strong{margin-top:4px}
 @media (max-width:720px){
   .e-dims.e-values-grid.e-values-2x4{gap:8px}
-  .e-values-grid.e-values-2x4 .e-dim-row{gap:0 9px;padding:11px 10px;border-radius:18px}
-  .e-values-grid.e-values-2x4 .e-vcoin{width:36px;height:36px}
+  .e-values-grid.e-values-2x4 .e-dim-row{gap:0 8px;padding:11px 10px;border-radius:18px}
+  .e-values-grid.e-values-2x4 .e-vcoin{width:34px;height:34px}
   .e-values-grid.e-values-2x4 .e-dim{font-size:9px;letter-spacing:.08em}
   .e-values-grid.e-values-2x4 .e-dim-row strong{font-size:13px;line-height:1.25}
 }

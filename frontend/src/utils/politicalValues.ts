@@ -62,7 +62,7 @@ const LONG_WORDS: Record<string, string> = {
   Интернациональный: 'Интернацио-\nнальный',
 };
 
-/** O nome do valor para os cartões: quebra a linha no hífen das palavras longas (pede white-space: pre-line). */
+/** O nome do valor para o PDF: quebra a linha no hífen das palavras longas (pede white-space: pre-line). */
 export function valueCardName(name: string): string {
   return name.replace(/\p{L}+/gu, (word) => LONG_WORDS[word] ?? word);
 }

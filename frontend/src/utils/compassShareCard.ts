@@ -10,7 +10,7 @@ import { LANG, t } from '../i18n';
 import type { Axis, AxisResult, PoliticalValue, QuizResult } from '../types/quiz';
 import { resolveIdeologyColor } from './ideologyColors';
 import { computeCompass, economicName, type CompassPosition } from './politicalCompass';
-import { valueCardName, valueCoinMonogram } from './politicalValues';
+import { valueCoinMonogram } from './politicalValues';
 import type { Religion } from './religion';
 import { buildShareFooter, buildShareHeader, buildShareIdentity, SHARE_COLORS } from './shareCard';
 import {
@@ -320,7 +320,7 @@ function valueTile(value: PoliticalValue, color: Palette, religion: Religion | n
   });
   const label = value.categoryLabel.toLocaleUpperCase(LANG);
   const labelSize = fitFontSize(label, 600, SHARE_FONT_BODY, VALUE_TEXT_WIDTH * SAFETY, 1, 17, 10, 0.14);
-  const name = valueCardName(value.name);
+  const name = value.name;
   // O nome cabe em até 2 linhas: a fonte diminui (até 13px) se uma palavra ou o texto não couberem.
   const nameSize = fitBlock(name, {
     weight: 600,
