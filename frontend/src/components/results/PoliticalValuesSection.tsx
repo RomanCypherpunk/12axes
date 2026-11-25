@@ -64,7 +64,7 @@ export function PoliticalValuesSection({ values, category, ideologyId, religion,
       <h2>{title ?? t.valuesSectionTitle}</h2>
       {header}
 
-      <ul ref={listRef} className="e-dims e-values-grid">
+      <ul ref={listRef} className="e-dims e-values-grid e-values-2x4">
         {values.map((value) => (
           <DimRow
             key={value.categoryId}
