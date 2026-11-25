@@ -84,8 +84,8 @@ public class AbacatePayGatewayImpl implements PaymentGateway {
         item.put("id", productId);
         item.put("quantity", 1);
         body.put("frequency", "ONE_TIME");
-        // So Pix: a loja ainda nao tem cartao liberado na AbacatePay (sem isso ela recusa o checkout: "CARD is not available").
-        body.putArray("methods").add("PIX");
+        // Pix e cartao (credito e debito). Sem o cartao liberado na loja a AbacatePay recusa o checkout: "CARD is not available".
+        body.putArray("methods").add("PIX").add("CARD");
         body.put("externalId", nonce);
         // O e-mail, o endereco do resultado e o idioma ficam no pagamento: o webhook de "pago" os le daqui para mandar o
         // acesso por e-mail (no idioma que a pessoa usava ao comprar) sem depender do navegador (o evento nao traz o

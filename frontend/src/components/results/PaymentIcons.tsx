@@ -1,9 +1,9 @@
 import { LANG } from '../../i18n';
 
 // Formas de pagamento aceitas no checkout, só como marcas (cinza, discretas) no modal de compra.
-// Em português (AbacatePay) há só Pix, a única forma liberada na loja; em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
+// Em português (AbacatePay) há Pix e cartão; em inglês o pagamento é pela Paddle (cartão, PayPal, carteiras).
 export function PaymentIcons({ label }: { label: string }) {
-  const card = LANG === 'es' ? 'Tarjeta' : LANG === 'de' ? 'Karte' : LANG === 'it' ? 'Carta' : LANG === 'ru' ? 'Карта' : LANG === 'fr' ? 'Carte' : 'Card';
+  const card = LANG === 'pt' ? 'Cartão' : LANG === 'es' ? 'Tarjeta' : LANG === 'de' ? 'Karte' : LANG === 'it' ? 'Carta' : LANG === 'ru' ? 'Карта' : LANG === 'fr' ? 'Carte' : 'Card';
   return (
     <ul className="e-pay-icons" aria-label={label}>
       {LANG === 'pt' && (
@@ -38,16 +38,14 @@ export function PaymentIcons({ label }: { label: string }) {
           </li>
         </>
       )}
-      {LANG !== 'pt' && (
-        <li title={card}>
-          <svg viewBox="0 0 432 384" role="img" aria-label={card}>
-            <path
-              fill="currentColor"
-              d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21zm0 299V192H43v128zm0-213V64H43v43z"
-            />
-          </svg>
-        </li>
-      )}
+      <li title={card}>
+        <svg viewBox="0 0 432 384" role="img" aria-label={card}>
+          <path
+            fill="currentColor"
+            d="M384 21q18 0 30.5 12.5T427 64v256q0 18-12.5 30.5T384 363H43q-18 0-30.5-12.5T0 320V64q0-18 12.5-30.5T43 21zm0 299V192H43v128zm0-213V64H43v43z"
+          />
+        </svg>
+      </li>
     </ul>
   );
 }
