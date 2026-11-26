@@ -26,6 +26,7 @@ import { PremiumPdfPages } from './PremiumPdfPages';
 import { pct } from '../editorial/primitives';
 import { axisLeaning, displayRank } from '../results/AxesSection';
 import { AmazonIcon } from '../results/BooksSection';
+import { CompassBlend } from '../results/CompassBlend';
 import { COMPASS_COINS } from '../results/compassCoins';
 import { valueCardName } from '../../utils/politicalValues';
 import { compassClamp, compassView } from '../results/PoliticalCompassSection';
@@ -438,6 +439,7 @@ function Compass({ position, category, ideologyId, moralAxis }: { position: Comp
           {COMPASS_QUADRANT_ORDER.map((key) => (
             <div key={key} className="cmp-quad" style={{ background: COMPASS_QUADRANTS[key].bg }} />
           ))}
+          <CompassBlend className="cmp-blend" />
           <i className="cmp-grid" />
           <i className="cmp-axis cmp-x" />
           <i className="cmp-axis cmp-y" />

@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { VALUE_COINS } from '../components/results/valueCoins';
+import { CompassBlend } from '../components/results/CompassBlend';
 import { COMPASS_COINS } from '../components/results/compassCoins';
 import { compassClamp, compassView } from '../components/results/PoliticalCompassSection';
 import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from './compassQuadrants';
@@ -151,6 +152,9 @@ function compassChart(position: CompassPosition, markerColor: string): HTMLEleme
     });
     grid.append(quad);
   });
+  const blend = el('div', { position: 'absolute', inset: '0' });
+  blend.innerHTML = renderToStaticMarkup(createElement(CompassBlend, { style: { display: 'block', width: '100%', height: '100%' } }));
+  grid.append(blend);
   // Grade do Political Compass (20×20 células, 10×10 por quadrante), por cima das cores e por baixo dos eixos e do "X".
   const gridLine = 'rgba(90, 90, 90, 0.22)';
   grid.append(
