@@ -3775,5 +3775,44 @@
       "orthodox",
       "only"
     ]
+  },
+  {
+    "id": "comunismo-tan-malakista",
+    "name": "Comunismo Tan Malakista",
+    "category": "Esquerda Radical",
+    "description": "Comunismo nacional do indonésio Tan Malaka: marxismo e materialismo racional (Madilog) a serviço da independência total e de uma república de operários e camponeses, sem tutela de Moscou e com aliança tática com o islã anticolonial.",
+    "phrase": "Quero uma república de operários e camponeses 100% independente do imperialismo e de Moscou, com materialismo contra a superstição e aliança com o islã anticolonial.",
+    "countryId": "indonesia",
+    "personalityId": "tan-malaka",
+    "religions": []
+  },
+  {
+    "id": "pancasila",
+    "name": "Pancasila",
+    "category": "Centro",
+    "description": "Filosofia oficial do Estado indonésio (1945), de cinco princípios: crença em um só Deus, humanidade justa, unidade nacional, democracia deliberativa e justiça social, como caminho do meio entre o capitalismo liberal e o comunismo ateu.",
+    "phrase": "Quero uma nação unida na diversidade, de fé em um só Deus, democracia por consenso e justiça social, nem capitalismo liberal nem comunismo ateu.",
+    "countryId": "indonesia",
+    "personalityId": "sukarno",
+    "religions": [
+      "catholic",
+      "protestant",
+      "islam",
+      "buddhism",
+      "hinduism",
+      "other"
+    ]
+  },
+  {
+    "id": "nasakomismo",
+    "name": "Nasakomismo",
+    "category": "Terceira Posição",
+    "description": "Doutrina de Sukarno na Democracia Guiada (anos 1960) que une nacionalismo, religião e comunismo numa frente antiimperialista sob um presidente vitalício, com economia estatizada e confronto com o Ocidente liberal.",
+    "phrase": "Quero unir nacionalistas, religiosos e comunistas sob um líder revolucionário, num Estado antiimperialista que expulsa o capital estrangeiro e enfrenta o Ocidente.",
+    "countryId": "indonesia",
+    "personalityId": "sukarno",
+    "religions": [
+      "islam"
+    ]
   }
 ]

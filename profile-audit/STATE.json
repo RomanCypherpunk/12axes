@@ -1,8 +1,8 @@
 {
   "_comment": "Estado unico da auditoria pergunta-a-pergunta (240 perguntas / 12 eixos). Um objeto por catalogo. Veja README.md para o processo completo.",
-  "lastUpdated": "2026-11-25T23:48:47Z",
+  "lastUpdated": "2026-11-26T00:18:12Z",
   "personality": {
-    "totalProfiles": 748,
+    "totalProfiles": 749,
     "pending": [],
     "done": [
       "lenin",
@@ -752,14 +752,15 @@
       "nicolae-ceausescu",
       "palmiro-togliatti",
       "franjo-tudjman",
-      "alija-izetbegovic"
+      "alija-izetbegovic",
+      "tan-malaka"
     ],
     "lastUpdated": "2026-11-06T13:54:09Z",
     "audited": 509,
     "unanswered": 0
   },
   "ideology": {
-    "totalProfiles": 288,
+    "totalProfiles": 291,
     "pending": [
       "quilombismo",
       "democracia-intervencionista",
@@ -1054,7 +1055,10 @@
       "tecno-neoliberalismo",
       "nacional-distributismo",
       "social-distributismo",
-      "monarco-distributismo"
+      "monarco-distributismo",
+      "comunismo-tan-malakista",
+      "pancasila",
+      "nasakomismo"
     ]
   },
   "country": {
