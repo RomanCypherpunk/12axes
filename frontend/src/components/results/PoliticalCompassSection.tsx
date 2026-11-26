@@ -5,6 +5,7 @@ import type { Axis } from '../../types/quiz';
 import { compassRegion, economicLevel, economicMethod, economicName, socialLevel, type CompassPosition, type EconomicKey, type SocialKey } from '../../utils/politicalCompass';
 import { COMPASS_COINS } from './compassCoins';
 import { COMPASS_QUADRANTS, COMPASS_QUADRANT_ORDER } from '../../utils/compassQuadrants';
+import { CompassBlend } from './CompassBlend';
 import { clickableProps, InfoSheet } from './InfoSheet';
 import { DimRow } from './parts';
 import { ValueCoin } from './ValueCoin';
@@ -169,6 +170,7 @@ export function CompassChart({ ariaLabel, markers }: { ariaLabel: string; marker
         {COMPASS_QUADRANT_ORDER.map((key) => (
           <div key={key} className="e-compass-quad" style={{ background: COMPASS_QUADRANTS[key].bg }} />
         ))}
+        <CompassBlend className="e-compass-blend" />
         <i className="e-compass-grid" aria-hidden="true" />
         <i className="e-compass-axis is-x" aria-hidden="true" />
         <i className="e-compass-axis is-y" aria-hidden="true" />
