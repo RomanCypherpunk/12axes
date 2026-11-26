@@ -2103,13 +2103,6 @@
     "description": "Ancien juge fédéral, Moro mena l’opération Lava Jato, la plus grande enquête sur la corruption au Brésil, visant le géant pétrolier d’État Petrobras, puis fut ministre de la Justice sous Bolsonaro avant de démissionner ; il se présente désormais au poste de gouverneur du Paraná en 2026."
   },
   {
-    "id": "belisario",
-    "name": "Bélisaire",
-    "role": "Général de Justinien",
-    "lifespan": "v. 500–565",
-    "description": "Général byzantin le plus victorieux sous Justinien Ier, il reconquit l’Afrique du Nord vandale et l’Italie ostrogothe et écrasa les émeutes Nika (532) par un massacre à l’Hippodrome. Loyal à l’empereur même sous les soupçons et les humiliations, il dirigeait une armée à la discipline rigide."
-  },
-  {
     "id": "robert-oppenheimer",
     "name": "J. Robert Oppenheimer",
     "role": "Père de la bombe atomique",
@@ -2122,20 +2115,6 @@
     "role": "Cofondateur du MBL",
     "lifespan": "1996–",
     "description": "Député fédéral de São Paulo, cofondateur du MBL, réélu en 2026 pour Mission. Il combine marchés libres et réforme administrative avec une politique ferme contre la criminalité, une politique industrielle centrée sur la technologie et un conservatisme social modéré."
-  },
-  {
-    "id": "pablo-marcal",
-    "name": "Pablo Marçal",
-    "role": "Influenceur évangélique",
-    "lifespan": "1987–",
-    "description": "Entrepreneur et influenceur évangélique dont la candidature à la présidentielle de 2026 a été rejetée. Il prône une société entrepreneuriale, la privatisation, une gestion technocratique numérique et une lutte nationale contre les gangs, combinant baisses d’impôts et maintien des transferts monétaires."
-  },
-  {
-    "id": "richard-rasmussen",
-    "name": "Richard Rasmussen",
-    "role": "Animateur TV animalier",
-    "lifespan": "1970–",
-    "description": "Biologiste et animateur d’émissions d’aventure à la télévision, il fut ambassadeur du tourisme de Bolsonaro et se présenta au Congrès en 2026. Il défend les éleveurs d’animaux sauvages, les petits exploitants d’Amazonie et le pâturage du bétail comme prévention des incendies, critiquant le contrôle environnemental et les ONG."
   },
   {
     "id": "machado-de-assis",
@@ -2459,13 +2438,6 @@
     "description": "Général de la Garde nationale russe et allié de Poutine, Melikov dirigea le Daghestan de 2020 à 2026, période marquée par la mobilisation de guerre, le pogrom antisémite de l’aéroport et des attentats djihadistes, et devint en 2026 sénateur de Briansk."
   },
   {
-    "id": "imperador-jimmu",
-    "name": "Empereur Jimmu",
-    "role": "Empereur légendaire du Japon",
-    "lifespan": "711–585 av. J.-C.",
-    "description": "Premier empereur légendaire du Japon selon le Kojiki et le Nihon Shoki, Jimmu, descendant de la déesse du soleil Amaterasu, aurait conquis le Yamato par les armes et fondé la lignée impériale, mythe central du shintoïsme d’État et du nationalisme japonais."
-  },
-  {
     "id": "imperador-meiji",
     "name": "Empereur Meiji",
     "role": "Empereur de l’ère Meiji",
@@ -2604,13 +2576,6 @@
     "role": "Premier ministre du Brexit",
     "lifespan": "1964–",
     "description": "Conservateur et chef du Brexit, Premier ministre de 2019 à 2022, Johnson fit sortir le Royaume-Uni de l’UE, arma l’Ukraine, augmenta les impôts et les dépenses publiques, ouvrit l’immigration hors UE et tomba après le Partygate ; il est aujourd’hui chroniqueur au Daily Mail."
-  },
-  {
-    "id": "james-cook",
-    "name": "James Cook",
-    "role": "Navigateur britannique",
-    "lifespan": "1728–1779",
-    "description": "Officier de la Royal Navy et cartographe, Cook mena trois expéditions scientifiques dans le Pacifique, cartographia la Nouvelle-Zélande et la côte est de l’Australie, revendiqua des terres au nom de la Couronne, lutta contre le scorbut et mourut lors d’un affrontement avec des Hawaïens."
   },
   {
     "id": "lachlan-macquarie",
@@ -2974,39 +2939,11 @@
     "description": "Maître de fait de Florence à partir de 1469, Laurent équilibra la diplomatie entre les puissances italiennes et consolida l’influence des Médicis. Poète et humaniste, il rassembla artistes et philosophes à sa cour."
   },
   {
-    "id": "filippo-brunelleschi",
-    "name": "Filippo Brunelleschi",
-    "role": "Bâtisseur du dôme de Florence",
-    "lifespan": "1377–1446",
-    "description": "L’architecte et ingénieur florentin conçut la coupole de la cathédrale Santa Maria del Fiore et des projets comme l’hôpital des Innocents. Il étudia les édifices antiques et appliqua des principes mathématiques à l’architecture."
-  },
-  {
     "id": "leonardo-da-vinci",
     "name": "Léonard de Vinci",
     "role": "Génie de la Renaissance",
     "lifespan": "1452–1519",
     "description": "L’artiste et chercheur florentin travailla pour des cours comme celle des Sforza à Milan et servit César Borgia comme ingénieur militaire. Ses carnets consignent des études d’anatomie, de mécanique, d’hydraulique et de dessin."
-  },
-  {
-    "id": "sandro-botticelli",
-    "name": "Sandro Botticelli",
-    "role": "Peintre de la Renaissance",
-    "lifespan": "v. 1445–1510",
-    "description": "Associé à la cour des Médicis à Florence, Botticelli peignit des œuvres comme La Naissance de Vénus et Le Printemps. Il réalisa aussi des peintures religieuses et travailla tard dans sa vie au milieu de la prédication de Savonarole."
-  },
-  {
-    "id": "michelangelo-buonarroti",
-    "name": "Michel-Ange",
-    "role": "Artiste de la Renaissance",
-    "lifespan": "1475–1564",
-    "description": "Le sculpteur, peintre et architecte florentin créa le David, la Pietà et les fresques de la chapelle Sixtine. Il travailla pour les papes et les Médicis et participa à la défense de Florence pendant la république de 1529."
-  },
-  {
-    "id": "rafael-sanzio",
-    "name": "Raphaël",
-    "role": "Maître de la Haute Renaissance",
-    "lifespan": "1483–1520",
-    "description": "Le peintre et architecte d’Urbino travailla à Florence et à Rome pour les papes Jules II et Léon X. Ses fresques du Vatican et ses études de l’Antiquité contribuèrent à façonner l’art de la Haute Renaissance."
   },
   {
     "id": "thomas-carlyle",
@@ -3336,13 +3273,6 @@
     "role": "Créateur de Filosofia do Zero",
     "lifespan": "1991–",
     "description": "Philosophe et éducateur catholique, titulaire d’un master de la PUC-SP et créateur de Filosofia do Zero. Il enseigne Aristote et Thomas d’Aquin, critique le relativisme et la centralisation de l’État, et voit dans la République de 1889 l’origine de la crise politique du Brésil."
-  },
-  {
-    "id": "nando-moura",
-    "name": "Nando Moura",
-    "role": "YouTubeur conservateur",
-    "lifespan": "1984–",
-    "description": "Musicien, commentateur politique et influenceur numérique brésilien. Connu pour un style franc et passionné défendant le conservatisme moral chrétien, combattant la corruption politique et critiquant durement la gauche comme le bolsonarisme."
   },
   {
     "id": "raphael-lima",
@@ -3817,12 +3747,6 @@
     "description": "Président des Philippines de 1965 à 1986, il instaura la loi martiale en 1972 et gouverna en dictateur. Anticommuniste allié des États-Unis, il centralisa le pouvoir, persécuta l’opposition et s’enrichit par un capitalisme de copinage."
   },
   {
-    "id": "bobby-fischer",
-    "name": "Bobby Fischer",
-    "role": "Champion du monde d’échecs",
-    "description": "Joueur d’échecs américain et champion du monde en 1972 qui rompit avec les États-Unis et en vint à promouvoir des théories du complot antisémites, le négationnisme de la Shoah et le soutien aux attentats du 11 septembre. Il vécut ses dernières années en exil en Islande."
-  },
-  {
     "id": "leonid-brezhnev",
     "name": "Léonid Brejnev",
     "role": "Dirigeant de la stagnation",
@@ -3938,12 +3862,6 @@
     "description": "Ancien gouverneur républicain du Nouveau-Mexique (1995-2003) et candidat libertarien à la présidentielle en 2012 et 2016. Il défend la réduction des dépenses et des impôts, la légalisation de la marijuana, l’équilibre budgétaire, le libre-échange, une immigration plus ouverte et moins d’intervention militaire."
   },
   {
-    "id": "chase-oliver",
-    "name": "Chase Oliver",
-    "role": "Candidat libertarien 2024",
-    "description": "Homme politique et candidat du Parti libertarien à la présidentielle de 2024. Il défend la légalisation des drogues, la fermeture des bases à l’étranger, la sortie de l’OTAN, la fin de l’aide militaire à Israël et à l’Ukraine, une réforme ouverte de l’immigration, le droit à l’avortement, des impôts plus bas et les libertés civiles."
-  },
-  {
     "id": "joao-amoedo",
     "name": "João Amoêdo",
     "role": "Fondateur du Partido Novo",
@@ -3978,12 +3896,6 @@
     "name": "Gatis Lagzdiņš (Sv3rige)",
     "role": "YouTubeur anti-végane",
     "description": "YouTubeur letton qui prône la consommation de viande crue, la théorie de la Terre plate et l’opposition au véganisme, avec des manifestations lors de festivals végans, comme celui de Londres en 2019 qui lui valut une amende."
-  },
-  {
-    "id": "aajonus-vonderplanitz",
-    "name": "Aajonus Vonderplanitz",
-    "role": "Nutritionniste alternatif",
-    "description": "Nutritionniste alternatif américain qui prônait le régime primal de viande crue, d’œufs et de produits laitiers et fonda Right to Choose Healthy Food pour le droit au lait cru, s’opposant à la FDA, aux vaccins et à la médecine conventionnelle."
   },
   {
     "id": "raphael-machado",
@@ -4144,12 +4056,6 @@
     "name": "Allan Kardec",
     "role": "Codificateur du spiritisme",
     "description": "Éducateur français, Kardec codifia le spiritisme dans Le Livre des esprits (1857) : Dieu, réincarnation et évolution morale, charité au-dessus du dogme et pas de clergé, conciliant science et foi tout en restant à l’écart de la politique partisane."
-  },
-  {
-    "id": "bezerra-de-menezes",
-    "name": "Bezerra de Menezes",
-    "role": "Médecin des pauvres",
-    "description": "Médecin et homme politique libéral de l’Empire du Brésil, conseiller municipal et député surnommé le « Médecin des pauvres », il embrassa le spiritisme en 1886 et présida la Fédération spirite brésilienne, faisant de la charité et de la doctrine de Kardec son fondement au Brésil."
   },
   {
     "id": "miguel-primo-de-rivera",
@@ -4622,12 +4528,6 @@
     "description": "Économiste argentin, ministre des Affaires étrangères et de l’Économie sous Menem puis De la Rúa. Il créa la convertibilité, qui arrima le peso au dollar et mit fin à l’hyperinflation ; le « corralito » de 2001 précéda la crise et la chute du gouvernement."
   },
   {
-    "id": "michael-jackson",
-    "name": "Michael Jackson",
-    "role": "Roi de la pop",
-    "description": "Chanteur et danseur américain, créateur de Thriller. Il associa célébrité et philanthropie dans « We Are the World » et « Heal the World » (la Fondation Heal the World), chanta contre le racisme et la guerre et critiqua l’industrie musicale ; des accusations d’abus sur mineurs ont marqué sa vie."
-  },
-  {
     "id": "charlie-chaplin",
     "name": "Charlie Chaplin",
     "role": "Créateur de Charlot",
@@ -4644,12 +4544,6 @@
     "name": "John Lennon",
     "role": "Cofondateur des Beatles",
     "description": "Musicien britannique, cofondateur des Beatles. En solo, il chanta « Imagine » et « Give Peace a Chance », mena campagne contre la guerre du Vietnam avec Yoko Ono et fut surveillé par le FBI de Nixon. Il fut assassiné à New York en 1980."
-  },
-  {
-    "id": "ludwig-van-beethoven",
-    "name": "Ludwig van Beethoven",
-    "role": "Compositeur de la Neuvième",
-    "description": "Compositeur allemand, pont entre le classicisme et le romantisme. Il admirait les idéaux des Lumières et républicains, raya la dédicace à Napoléon lorsque celui-ci devint empereur et mit en musique l’« Ode à la joie » de Schiller, sur la fraternité humaine, dans la Neuvième Symphonie."
   },
   {
     "id": "victor-jara",

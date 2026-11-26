@@ -87,7 +87,7 @@ export function submitResults(
 // o mesmo link não ficar com uma versão antiga (sem os valores políticos, por exemplo). 3: saiu a lista de áreas de atuação,
 // que agora é do Relatório completo.
 // 4: os valores políticos viraram oito categorias, com nomes novos.
-const SHARED_RESULT_VERSION = 14;
+const SHARED_RESULT_VERSION = 15;
 
 export function fetchSharedResult(leftPercents: number[], religion: string | null = null): Promise<QuizResult> {
   const religionParam = religion ? `&religion=${encodeURIComponent(religion)}` : '';
@@ -97,7 +97,7 @@ export function fetchSharedResult(leftPercents: number[], religion: string | nul
 
 // A busca de perfis acha qualquer um do catálogo: o filtro de religião dos rankings não vale aqui, porque quem digita o nome
 // de um perfil (Distributismo, que é só para cristãos nos rankings) quer encontrá-lo. `rv` troca a URL em cache de uma hora.
-const COMPARE_CATALOG_VERSION = 2;
+const COMPARE_CATALOG_VERSION = 3;
 
 export function fetchCompareCatalog(_religion: string | null = null): Promise<CompareItem[]> {
   return request<CompareItem[]>(`/api/compare/catalog?lang=${LANG}&rv=${COMPARE_CATALOG_VERSION}`);
@@ -105,7 +105,7 @@ export function fetchCompareCatalog(_religion: string | null = null): Promise<Co
 
 // `rv` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
 // comparação ficaria com a resposta antiga (sem `religions`).
-const COMPARE_DETAIL_VERSION = 3;
+const COMPARE_DETAIL_VERSION = 4;
 
 export function fetchCompare(type: CompareType, id: string, leftPercents: number[]): Promise<CompareDetail> {
   const values = leftPercents.map((value) => Math.round(value * 10) / 10).join(',');
@@ -116,7 +116,7 @@ export function fetchCompare(type: CompareType, id: string, leftPercents: number
 
 // `v` acompanha o formato da resposta: o endpoint é cacheado por uma hora e, sem isso, quem já abriu uma
 // comparação ficaria com a resposta antiga (sem as ideologias, países e partidos mais próximos).
-const COMPARE_PROFILES_VERSION = 2;
+const COMPARE_PROFILES_VERSION = 3;
 
 export function fetchCompareProfiles(refs: CompareRef[]): Promise<CompareProfiles> {
   return request<CompareProfiles>(
