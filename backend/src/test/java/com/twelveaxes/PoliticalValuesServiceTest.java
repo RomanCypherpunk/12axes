@@ -313,7 +313,7 @@ class PoliticalValuesServiceTest {
         assertThat(society(Map.of("moral", 74.0, "religiao", 88.0, "imigracao", 21.0, "economia", 89.0)).valueId()).isEqualTo("marxismo");
         // Modernismo reacionario e neorreacionarismo se apoiam na tecnologia.
         assertThat(society(Map.of("moral", 15.0, "religiao", 45.0, "imigracao", 86.0, "tecnologia", 82.0)).valueId()).isEqualTo("modernismo-reacionario");
-        assertThat(society(Map.of("moral", 26.0, "religiao", 40.0, "imigracao", 82.0, "tecnologia", 82.0)).valueId()).isEqualTo("neorreacionarismo");
+        assertThat(society(Map.of("representacao", 14.0, "imigracao", 79.0, "moral", 35.0, "tecnologia", 89.0, "economia", 19.0)).valueId()).isEqualTo("neorreacionarismo");
     }
 
     @Test

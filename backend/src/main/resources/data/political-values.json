@@ -955,11 +955,6 @@
   {
     "id": "sociedade",
     "label": "Sociedade",
-    "axes": [
-      "moral",
-      "religiao",
-      "imigracao"
-    ],
     "values": [
       {
         "id": "progressismo",
@@ -1065,10 +1060,11 @@
         "name": "Neorreacionarismo",
         "description": "Crítica à democracia moderna e retorno da hierarquia, aliados à alta tecnologia e à fragmentação do poder.",
         "profile": {
-          "moral": 26,
-          "religiao": 40,
-          "imigracao": 82,
-          "tecnologia": 82
+          "representacao": 14,
+          "imigracao": 79,
+          "moral": 35,
+          "tecnologia": 89,
+          "economia": 19
         }
       },
       {
