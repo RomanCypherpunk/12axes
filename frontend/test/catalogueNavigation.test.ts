@@ -1,7 +1,17 @@
+import { get } from 'node:http';
 import { fileURLToPath } from 'node:url';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { createServer, type ViteDevServer } from 'vite';
 import { catalogueDevPlugin } from '../scripts/catalogue-dev';
+
+// node:http em vez de fetch: o fetch desiste depois de 5 minutos sem cabeçalhos, e a geração a frio passa disso em
+// máquinas mais lentas.
+const warmUp = (url: string) =>
+  new Promise<number>((done, fail) => {
+    get(url, (response) => {
+      response.resume().on('end', () => done(response.statusCode ?? 0)).on('error', fail);
+    }).on('error', fail);
+  });
 
 describe('local catalogue navigation', () => {
   let server: ViteDevServer;
@@ -19,10 +29,8 @@ describe('local catalogue navigation', () => {
 
     // A cold cache generates every catalogue page; allow extra time on CI runners. Since the wiki pages are rendered with the
     // results components (about 1,400 profiles x 7 languages), a full generation takes a few minutes.
-    const response = await fetch(`${base}ideologies`);
-    expect(response.status).toBe(200);
-    await response.text();
-  }, 600_000);
+    expect(await warmUp(`${base}ideologies`)).toBe(200);
+  }, 1_200_000);
 
   afterAll(async () => { await server?.close(); });
 

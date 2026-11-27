@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { t } from '../i18n';
 import type { Axis } from '../types/quiz';
+import { resolveIdeologyColor } from '../utils/ideologyColors';
 import { loadCatalogs } from './engine/catalogs.ts';
 import { buildProfileResult } from './engine/profileResult.ts';
 import { applyPerspective, WIKI_TEXT } from './strings';
@@ -71,5 +72,31 @@ describe('WikiProfilePage', () => {
     expect(html).toContain('Mediana das ideologias');
     expect(html).toContain('País mais próximo');
     expect(result.matches.map((m) => m.ideologyId)).not.toContain(ideology.id);
+  });
+
+  it('ideologia: a bússola usa a categoria da própria ideologia e o país mais próximo inclui os históricos', () => {
+    // O Fascismo Britânico (Terceira Posição) tem como ideologia mais próxima uma de outra categoria.
+    const ideology = catalogs.ideologies.find((i) => i.id === 'fascismo-britanico')!;
+    const result = buildProfileResult({ catalog: 'ideology', id: ideology.id }, catalogs);
+    expect(result.topMatch.category).not.toBe(ideology.category);
+    // E o país mais próximo de todos é um histórico, na frente do melhor país atual.
+    const best = result.topCountryMatches[0];
+    expect(best.historical).toBe(true);
+    applyPerspective(t, 'pt', ideology.name, 'ideology');
+    const html = renderToStaticMarkup(
+      <WikiProfilePage
+        subject={{ kind: 'ideology', id: ideology.id, name: ideology.name, tags: [{ label: ideology.category, solid: true }], description: ideology.description,
+          colorCategory: ideology.category, colorIdeologyId: ideology.id, compareHref: '/', quizHref: '/', prefix: '' }}
+        result={result}
+        axes={catalogs.axes as unknown as Axis[]}
+        religion={null}
+        text={WIKI_TEXT.pt}
+      />
+    );
+    const compass = html.slice(html.indexOf('id="bussola"'), html.indexOf('id="ideologias"'));
+    expect(compass).toContain(t.compassSpectrumLabels[resolveIdeologyColor(ideology.category, ideology.id).key]);
+    expect(compass).not.toContain(t.compassSpectrumLabels[resolveIdeologyColor(result.topMatch.category, result.topMatch.ideologyId).key]);
+    const hero = html.slice(0, html.indexOf('id="eixos-resultado"'));
+    expect(hero).toContain(`href="/countries/${best.countryId}"`);
   });
 });

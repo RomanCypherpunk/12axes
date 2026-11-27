@@ -101,8 +101,12 @@ export function WikiProfilePage({ subject, result, axes, religion, text }: WikiP
   const vector = Object.fromEntries(result.axes.map((axis) => [axis.axisId, axis.leftPercent]));
   const compass = compassFromVector(vector);
   const closest = result.topPersonalityMatch;
-  const country = result.topCountryMatch;
+  // O país do cabeçalho é o mais próximo de todos (atuais, históricos e regiões); a seção Países separa em abas.
+  const country = result.topCountryMatches[0] ?? result.topCountryMatch;
   const p = subject.prefix;
+  // O espectro do perfil: numa ideologia é o dela mesma; nos outros perfis, o da ideologia mais próxima.
+  const spectrumCategory = subject.kind === 'ideology' ? subject.colorCategory ?? top.category : top.category;
+  const spectrumIdeologyId = subject.kind === 'ideology' ? subject.colorIdeologyId ?? top.ideologyId : top.ideologyId;
   const pageColor = catStyle(subject.colorCategory ?? top.category, subject.colorIdeologyId ?? top.ideologyId) as CSSProperties;
 
   const spectrumCard = (
@@ -247,10 +251,10 @@ export function WikiProfilePage({ subject, result, axes, religion, text }: WikiP
             />
           )}
 
-          <PoliticalValuesSection values={result.politicalValues ?? []} category={top.category} ideologyId={top.ideologyId} religion={religion} />
+          <PoliticalValuesSection values={result.politicalValues ?? []} category={spectrumCategory} ideologyId={spectrumIdeologyId} religion={religion} />
 
           {compass && (
-            <PoliticalCompassSection position={compass} category={top.category} ideologyId={top.ideologyId} moralAxis={axes.find((axis) => axis.id === 'moral')} face={compassFace(subject)} />
+            <PoliticalCompassSection position={compass} category={spectrumCategory} ideologyId={spectrumIdeologyId} moralAxis={axes.find((axis) => axis.id === 'moral')} face={compassFace(subject)} />
           )}
 
           <IdeologiesSection others={result.matches.slice(0, 3)} />

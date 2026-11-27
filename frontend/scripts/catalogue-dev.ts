@@ -5,6 +5,8 @@ import { promisify } from 'node:util';
 import type { Plugin } from 'vite';
 
 const run = promisify(execFile);
+// O gerador importa módulos .ts; antes do Node 22.18 isso só funciona com a flag (nas versões novas ela não faz nada).
+const STRIP_TYPES = '--experimental-strip-types';
 
 // Catalogue pages are generated HTML, so Vite's SPA fallback cannot render them.
 export function catalogueDevPlugin(): Plugin {
@@ -35,7 +37,7 @@ export function catalogueDevPlugin(): Plugin {
         if (!catalogue && !stylesheet && !treeData) return next();
 
         try {
-          generation ??= run(process.execPath, [join(scripts, 'generate-pages.mjs'), '--catalogue-only']);
+          generation ??= run(process.execPath, [STRIP_TYPES, join(scripts, 'generate-pages.mjs'), '--catalogue-only']);
           await generation;
           const file = stylesheet || treeData || path.endsWith('.html') ? path : `${path}.html`;
           const content = await readFile(join(output, file));
