@@ -1,0 +1,111 @@
+{
+  "estrutura": {
+    "personaBrief": "O proprietário rural comercial tem força no poder local e regional e prefere que regras sobre território, polícia e impostos se ajustem às regiões produtoras. Rejeita, porém, a secessão e autonomias territoriais que disputem a propriedade privada da terra.",
+    "answers": {
+      "estrutura_06": "D", "estrutura_01": "C", "estrutura_05": "D", "estrutura_16": "D", "estrutura_04": "D",
+      "estrutura_13": "D", "estrutura_20": "D", "estrutura_15": "C", "estrutura_18": "C", "estrutura_17": "N",
+      "estrutura_19": "C", "estrutura_12": "D", "estrutura_09": "D", "estrutura_02": "D", "estrutura_08": "N",
+      "estrutura_07": "C", "estrutura_11": "D", "estrutura_14": "D", "estrutura_03": "C", "estrutura_10": "C"
+    }
+  },
+  "representacao": {
+    "personaBrief": "O campo como negócio busca previsibilidade jurídica e influência pela representação parlamentar, com um conservadorismo rural que aceita a democracia constitucional e desconfia de assembleias populares. Valoriza a ordem, mas não faz da ruptura autoritária um programa.",
+    "answers": {
+      "representacao_01": "C", "representacao_05": "C", "representacao_20": "D", "representacao_11": "D", "representacao_04": "D",
+      "representacao_03": "C", "representacao_08": "D", "representacao_12": "D", "representacao_17": "DT", "representacao_14": "D",
+      "representacao_13": "C", "representacao_09": "D", "representacao_02": "D", "representacao_15": "C", "representacao_19": "C",
+      "representacao_06": "D", "representacao_16": "D", "representacao_18": "D", "representacao_10": "D", "representacao_07": "C"
+    }
+  },
+  "poder": {
+    "personaBrief": "A terra privada explorada como negócio precisa ser protegida contra invasões, roubo e violência em áreas isoladas, o que leva à defesa do porte de armas e da repressão firme ao crime. O conservadorismo rural também rejeita a liberalização de drogas e costumes.",
+    "answers": {
+      "poder_03": "C", "poder_15": "C", "poder_13": "C", "poder_02": "D", "poder_12": "D",
+      "poder_17": "D", "poder_20": "D", "poder_18": "C", "poder_14": "C", "poder_16": "C",
+      "poder_11": "C", "poder_06": "D", "poder_01": "CT", "poder_19": "D", "poder_04": "C",
+      "poder_10": "CT", "poder_05": "C", "poder_07": "C", "poder_09": "DT", "poder_08": "DT"
+    }
+  },
+  "imigracao": {
+    "personaBrief": "A produção rural com trabalho assalariado aproveita mão de obra imigrante, enquanto o conservadorismo do campo espera que quem chega se adapte à língua e aos costumes locais.",
+    "answers": {
+      "imigracao_09": "C", "imigracao_10": "C", "imigracao_06": "C", "imigracao_19": "C", "imigracao_04": "C",
+      "imigracao_15": "C", "imigracao_07": "C", "imigracao_20": "D", "imigracao_17": "D", "imigracao_13": "C",
+      "imigracao_11": "C", "imigracao_08": "D", "imigracao_02": "D", "imigracao_18": "DT", "imigracao_05": "C",
+      "imigracao_03": "DT", "imigracao_01": "C", "imigracao_14": "C", "imigracao_16": "N", "imigracao_12": "C"
+    }
+  },
+  "diplomacia": {
+    "personaBrief": "A produção voltada à exportação depende de paz, rotas abertas e boas relações com compradores, de modo que prefere negociar. O conservadorismo rural, ainda assim, apoia Forças Armadas respeitadas e capazes de guardar o território.",
+    "answers": {
+      "diplomacia_02": "CT", "diplomacia_08": "D", "diplomacia_15": "N", "diplomacia_19": "D", "diplomacia_11": "C",
+      "diplomacia_05": "D", "diplomacia_12": "C", "diplomacia_10": "D", "diplomacia_17": "D", "diplomacia_03": "D",
+      "diplomacia_07": "D", "diplomacia_06": "C", "diplomacia_14": "D", "diplomacia_20": "C", "diplomacia_16": "C",
+      "diplomacia_01": "C", "diplomacia_04": "C", "diplomacia_13": "C", "diplomacia_09": "C", "diplomacia_18": "DT"
+    }
+  },
+  "intervencao": {
+    "personaBrief": "Quem produz para o mercado externo quer uma política externa pragmática, sem alinhamentos ou conflitos que fechem mercados. Defende com firmeza diplomática seus interesses, inclusive os de produtores em países vizinhos e frente a exigências externas sobre o uso da terra.",
+    "answers": {
+      "intervencao_01": "C", "intervencao_14": "D", "intervencao_20": "C", "intervencao_19": "C", "intervencao_08": "D",
+      "intervencao_13": "C", "intervencao_12": "C", "intervencao_04": "D", "intervencao_18": "CT", "intervencao_11": "CT",
+      "intervencao_05": "D", "intervencao_02": "C", "intervencao_10": "C", "intervencao_09": "C", "intervencao_16": "C",
+      "intervencao_06": "CT", "intervencao_03": "C", "intervencao_07": "C", "intervencao_17": "CT", "intervencao_15": "C"
+    }
+  },
+  "economia": {
+    "personaBrief": "A propriedade privada da terra, o lucro e o trabalho assalariado ou arrendamento são o núcleo da corrente, que rejeita reforma agrária e coletivização. Aceita o banco público quando ele financia o crédito rural.",
+    "answers": {
+      "economia_05": "DT", "economia_06": "C", "economia_07": "D", "economia_13": "D", "economia_03": "D",
+      "economia_14": "C", "economia_19": "D", "economia_16": "C", "economia_17": "CT", "economia_12": "C",
+      "economia_04": "C", "economia_11": "D", "economia_18": "CT", "economia_15": "DT", "economia_20": "C",
+      "economia_01": "DT", "economia_10": "D", "economia_09": "D", "economia_02": "C", "economia_08": "CT"
+    }
+  },
+  "controle": {
+    "personaBrief": "O campo como negócio quer preços formados no mercado, menos impostos e regulações trabalhistas ou ambientais, mas também pede crédito, seguro, infraestrutura e apoio público à produção.",
+    "answers": {
+      "controle_05": "D", "controle_20": "C", "controle_19": "D", "controle_14": "CT", "controle_07": "C",
+      "controle_04": "C", "controle_02": "C", "controle_17": "D", "controle_16": "C", "controle_10": "CT",
+      "controle_06": "CT", "controle_08": "C", "controle_13": "DT", "controle_01": "C", "controle_11": "D",
+      "controle_03": "D", "controle_15": "D", "controle_12": "N", "controle_18": "D", "controle_09": "D"
+    }
+  },
+  "comercio": {
+    "personaBrief": "A produção para o mercado e a exportação leva à defesa de acordos de livre comércio e abertura de mercados, e ao temor de retaliações a tarifas. Há ressalvas pontuais quando importações ameaçam o abastecimento ou o produtor de alimentos nacional.",
+    "answers": {
+      "comercio_13": "N", "comercio_06": "C", "comercio_12": "C", "comercio_20": "CT", "comercio_15": "D",
+      "comercio_19": "D", "comercio_04": "CT", "comercio_17": "N", "comercio_07": "D", "comercio_02": "C",
+      "comercio_03": "D", "comercio_10": "CT", "comercio_16": "C", "comercio_09": "D", "comercio_05": "DT",
+      "comercio_11": "C", "comercio_01": "D", "comercio_18": "C", "comercio_08": "C", "comercio_14": "CT"
+    }
+  },
+  "religiao": {
+    "personaBrief": "A tendência ao conservadorismo rural valoriza a fé cristã e sua transmissão como parte da vida comunitária e da identidade do campo, sem chegar a pedir um Estado confessional.",
+    "answers": {
+      "religiao_02": "C", "religiao_11": "DT", "religiao_19": "D", "religiao_03": "D", "religiao_10": "CT",
+      "religiao_13": "D", "religiao_12": "C", "religiao_15": "D", "religiao_18": "D", "religiao_05": "D",
+      "religiao_01": "D", "religiao_14": "C", "religiao_06": "C", "religiao_16": "C", "religiao_08": "D",
+      "religiao_07": "D", "religiao_09": "D", "religiao_17": "D", "religiao_20": "C", "religiao_04": "C"
+    }
+  },
+  "moral": {
+    "personaBrief": "O conservadorismo rural ligado à propriedade familiar e à herança defende a família tradicional, a autoridade dos pais e mudanças culturais lentas. A pecuária como negócio também rejeita restrições morais ao consumo de carne.",
+    "answers": {
+      "moral_07": "D", "moral_04": "CT", "moral_15": "DT", "moral_12": "C", "moral_03": "D",
+      "moral_01": "D", "moral_09": "D", "moral_06": "C", "moral_19": "D", "moral_02": "CT",
+      "moral_05": "D", "moral_17": "D", "moral_13": "D", "moral_11": "D", "moral_10": "C",
+      "moral_18": "C", "moral_16": "C", "moral_14": "CT", "moral_08": "C", "moral_20": "CT"
+    }
+  },
+  "tecnologia": {
+    "personaBrief": "O agronegócio adota mecanização, transgênicos, insumos e biotecnologia para produzir mais, e resiste a limites ambientais que reduzam a produtividade. Preza a vida no campo e desconfia de substitutos da pecuária e de intervenções no corpo humano.",
+    "answers": {
+      "tecnologia_01": "C", "tecnologia_13": "D", "tecnologia_19": "CT", "tecnologia_12": "D", "tecnologia_18": "C",
+      "tecnologia_10": "D", "tecnologia_05": "CT", "tecnologia_04": "C", "tecnologia_16": "N", "tecnologia_07": "C",
+      "tecnologia_08": "D", "tecnologia_03": "C", "tecnologia_15": "D", "tecnologia_20": "C", "tecnologia_06": "D",
+      "tecnologia_09": "C", "tecnologia_17": "DT", "tecnologia_02": "D", "tecnologia_14": "C", "tecnologia_11": "C"
+    }
+  },
+  "archetype": { "sociedade": "B", "poder": "C", "economia": "F", "mundo": "C", "tecnologia": "D" }
+}
