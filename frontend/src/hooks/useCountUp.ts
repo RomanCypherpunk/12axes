@@ -12,12 +12,12 @@ export function useCountUp(
 ) {
   const { durationMs = 900, decimals = 1, delayMs = 0 } = options;
   const ref = useRef<HTMLElement | null>(null);
-  const [value, setValue] = useState(() => (prefersReducedMotion() ? target : 0));
+  const [value, setValue] = useState(() => (prefersReducedMotion() || preRendered() ? target : 0));
 
   useEffect(() => {
     const element = ref.current;
 
-    if (prefersReducedMotion() || typeof IntersectionObserver === 'undefined' || !element) {
+    if (prefersReducedMotion() || preRendered() || typeof IntersectionObserver === 'undefined' || !element) {
       setValue(target);
       return;
     }
@@ -61,6 +61,11 @@ export function useCountUp(
   }, [target, durationMs, delayMs]);
 
   return { ref, text: value.toFixed(decimals) };
+}
+
+// Páginas da wiki geradas no build: o número já vem pronto no HTML, então aparece direto, sem contar de 0.
+function preRendered(): boolean {
+  return typeof (globalThis as { __WIKI_LANG?: unknown }).__WIKI_LANG === 'string';
 }
 
 // Aproximacao da curva --ease-settle: sai rapido, chega devagar e assenta sem

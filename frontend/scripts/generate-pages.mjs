@@ -5,17 +5,17 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ideologiesIndexPage, IDEOLOGIES_CSS } from './ideologies-index.mjs';
+import { IDEOLOGIES_CSS } from './ideologies-index.mjs';
 import { SITE_HEADER_CSS } from './site-header.mjs';
 import { writeTreeData } from './tree-data.mjs';
 import { personalitiesIndexPage, PERSONALITIES_CSS } from './personalities-index.mjs';
-import { personalityPage, PROFILE_CSS } from './personality-page.mjs';
-import { ideologyPage } from './ideology-page.mjs';
-import { countryPage, COUNTRY_PAGE_CSS } from './country-page.mjs';
-import { countriesIndexPage, COUNTRIES_CSS } from './countries-index.mjs';
+import { PROFILE_CSS } from './personality-page.mjs';
+import { buildWikiServer, loadWikiServer, wikiAssets, wikiIndexPage, wikiProfilePage, WIKI_SHELL_CSS } from './wiki-ssr.mjs';
+import { COUNTRY_PAGE_CSS } from './country-page.mjs';
+import { COUNTRIES_CSS } from './countries-index.mjs';
 import { booksIndexPage, BOOKS_CSS } from './books-index.mjs';
-import { partiesIndexPage, PARTIES_CSS } from './parties-index.mjs';
-import { partyPage, PARTY_PAGE_CSS } from './party-page.mjs';
+import { PARTIES_CSS } from './parties-index.mjs';
+import { PARTY_PAGE_CSS } from './party-page.mjs';
 import { policyPages, POLICY_CSS } from './policy-pages.mjs';
 import { cdnifyHtml, cdnifyShareImage } from './cdn.mjs';
 import { APP_DICTIONARY } from './app-strings.mjs';
@@ -217,42 +217,6 @@ function buildIndexes(L) {
       profiles: personalityProfiles,
       title: L.s.booksIndexTitle(n.b),
       description: L.s.booksIndexDesc(n.b)
-    }),
-    ideologiesIndexPage(L, {
-      locale: L.locale,
-      site: SITE,
-      gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
-      escapeHtml,
-      profiles: ideologyProfiles,
-      title: L.s.ideologiesIndexTitle(n.i),
-      description: L.s.ideologiesIndexDesc(n.i)
-    }),
-    countriesIndexPage(L, {
-      locale: L.locale,
-      site: SITE,
-      gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
-      escapeHtml,
-      profiles: countryProfiles,
-      title: L.s.countriesIndexTitle(n.c),
-      description: L.s.countriesIndexDesc(n.c)
-    }),
-    personalitiesIndexPage(L, {
-      locale: L.locale,
-      site: SITE,
-      gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
-      escapeHtml,
-      profiles: personalityProfiles,
-      title: L.s.personalitiesIndexTitle(n.p),
-      description: L.s.personalitiesIndexDesc(n.p)
-    }),
-    partiesIndexPage(L, {
-      locale: L.locale,
-      site: SITE,
-      gaSnippet: GOOGLE_ANALYTICS_SNIPPET,
-      escapeHtml,
-      profiles: partyProfiles,
-      title: L.s.partiesIndexTitle(n.pa),
-      description: L.s.partiesIndexDesc(n.pa)
     })
   ];
 }
@@ -573,8 +537,14 @@ function buildHomeVariants() {
 }
 
 const allPaths = [];
+// Personalidades: páginas montadas com os componentes da página de resultados (scripts/wiki-ssr.mjs, src/wiki).
+await buildWikiServer();
+const WIKI_ASSETS = wikiAssets(DIST, CATALOGUE_ONLY);
 for (const locale of LOCALES) {
   const L = buildLocaleContext(locale);
+  const wikiServer = await loadWikiServer(locale);
+  const wikiCatalogs = wikiServer.loadCatalogs(DATA_DIR, locale);
+  const wikiCtx = { site: SITE, gaSnippet: GOOGLE_ANALYTICS_SNIPPET, escapeHtml, truncate, assets: WIKI_ASSETS };
   const profileCtx = {
     locale,
     site: SITE,
@@ -586,10 +556,15 @@ for (const locale of LOCALES) {
   const pages = [
     ...buildIndexes(L),
     ...policyPages(L, { site: SITE, gaSnippet: GOOGLE_ANALYTICS_SNIPPET, escapeHtml }),
-    ...L.ideologies.map((i) => ideologyPage(L, i, profileCtx)),
-    ...L.countries.map((c) => countryPage(L, c, profileCtx)),
-    ...L.personalities.map((p) => personalityPage(L, p, profileCtx)),
-    ...L.parties.map((p) => partyPage(L, p, profileCtx))
+    // Listas e perfis: componentes da página de resultados (scripts/wiki-ssr.mjs, src/wiki).
+    wikiIndexPage(wikiServer, wikiCatalogs, L, 'ideology', { ...wikiCtx, title: L.s.ideologiesIndexTitle(L.ideologies.length), description: L.s.ideologiesIndexDesc(L.ideologies.length) }),
+    wikiIndexPage(wikiServer, wikiCatalogs, L, 'country', { ...wikiCtx, title: L.s.countriesIndexTitle(L.countries.length), description: L.s.countriesIndexDesc(L.countries.length) }),
+    wikiIndexPage(wikiServer, wikiCatalogs, L, 'personality', { ...wikiCtx, title: L.s.personalitiesIndexTitle(L.personalities.length), description: L.s.personalitiesIndexDesc(L.personalities.length) }),
+    wikiIndexPage(wikiServer, wikiCatalogs, L, 'party', { ...wikiCtx, title: L.s.partiesIndexTitle(L.parties.length), description: L.s.partiesIndexDesc(L.parties.length) }),
+    ...wikiCatalogs.ideologies.map((i) => wikiProfilePage(wikiServer, wikiCatalogs, L, 'ideology', i, wikiCtx)),
+    ...wikiCatalogs.countries.map((c) => wikiProfilePage(wikiServer, wikiCatalogs, L, 'country', c, wikiCtx)),
+    ...wikiCatalogs.personalities.map((p) => wikiProfilePage(wikiServer, wikiCatalogs, L, 'personality', p, wikiCtx)),
+    ...wikiCatalogs.parties.map((p) => wikiProfilePage(wikiServer, wikiCatalogs, L, 'party', p, wikiCtx))
   ];
   for (const page of pages) allPaths.push(writePage(L.s.prefix, page));
 }
@@ -598,6 +573,7 @@ if (!CATALOGUE_ONLY) buildHomeVariants();
 
 writeFileSync(join(DIST, 'ideologies.css'), IDEOLOGIES_CSS + SITE_HEADER_CSS);
 writeFileSync(join(DIST, 'personalities.css'), PERSONALITIES_CSS + SITE_HEADER_CSS);
+writeFileSync(join(DIST, 'wiki-shell.css'), WIKI_SHELL_CSS);
 writeFileSync(join(DIST, 'profile.css'), PROFILE_CSS + COUNTRY_PAGE_CSS + PARTY_PAGE_CSS + SITE_HEADER_CSS);
 writeFileSync(join(DIST, 'countries.css'), COUNTRIES_CSS + SITE_HEADER_CSS);
 writeFileSync(join(DIST, 'parties.css'), PARTIES_CSS + SITE_HEADER_CSS);

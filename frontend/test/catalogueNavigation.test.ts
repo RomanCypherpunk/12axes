@@ -17,11 +17,12 @@ describe('local catalogue navigation', () => {
     await server.listen();
     base = server.resolvedUrls!.local[0];
 
-    // A cold cache generates every catalogue page; allow extra time on CI runners.
+    // A cold cache generates every catalogue page; allow extra time on CI runners. Since the wiki pages are rendered with the
+    // results components (about 1,400 profiles x 7 languages), a full generation takes a few minutes.
     const response = await fetch(`${base}ideologies`);
     expect(response.status).toBe(200);
     await response.text();
-  }, 120_000);
+  }, 600_000);
 
   afterAll(async () => { await server?.close(); });
 

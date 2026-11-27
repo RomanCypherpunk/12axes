@@ -43,6 +43,11 @@ export function langSwitchPath(pathname: string, lang: Lang): string | null {
 }
 
 export function resolveLang(): Lang {
+  // Páginas da wiki geradas no build: o idioma vem fixo da página (no Node e na hidratação no navegador).
+  const forcedByPage = (globalThis as { __WIKI_LANG?: unknown }).__WIKI_LANG;
+  if (typeof forcedByPage === 'string' && isLang(forcedByPage)) {
+    return forcedByPage;
+  }
   if (typeof window === 'undefined') {
     return 'pt';
   }

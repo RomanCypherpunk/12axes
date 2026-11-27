@@ -1,136 +1,43 @@
-// Porte fiel de backend/.../ProfileMatchScorer.java e dos grupos de eixos de
-// DimensionMatcherService.java. As páginas estáticas mostram as mesmas
-// porcentagens que o quiz mostraria para um usuário com o vetor da pessoa.
-// Se a fórmula mudar no backend, mude aqui também.
+// Ponte para o motor de resultados da wiki (src/wiki/engine), a cópia fiel do backend conferida contra o gabarito que o
+// próprio backend grava (WikiParityFixtureTest + parity.test.ts). As páginas estáticas usam estas funções para mostrar
+// as mesmas porcentagens que o quiz mostraria para um usuário com o vetor do perfil. Não reimplemente cálculo aqui.
+import { AXIS_IDS, compatibility as score, javaCompare } from '../src/wiki/engine/score.ts';
+import { OTHER, SELECTABLE, profileReligion, religionAllows as allows } from '../src/wiki/engine/religion.ts';
+import { axisDimensions, personalityDimensions } from '../src/wiki/engine/matchers.ts';
 
-export const AXIS_IDS = [
-  'estrutura', 'representacao', 'poder', 'imigracao', 'diplomacia', 'intervencao',
-  'economia', 'controle', 'comercio', 'religiao', 'moral', 'tecnologia'
-];
-
-export const DIMENSIONS = [
-  {
-    key: 'political',
-    axes: ['estrutura', 'representacao', 'poder', 'diplomacia', 'imigracao', 'intervencao',
-      'tecnologia', 'controle', 'comercio', 'religiao', 'economia', 'moral']
-  },
-  { key: 'social', axes: ['representacao', 'moral', 'religiao', 'economia', 'controle', 'comercio', 'imigracao', 'poder', 'tecnologia'] },
-  { key: 'economic', axes: ['economia', 'controle', 'comercio'] }
-];
-
-const CENTER = 50;
-const AXIS_SPREAD = 50;
-const AXIS_WEIGHT = 0.42;
-const DIRECTION_WEIGHT = 0.33;
-const MAGNITUDE_WEIGHT = 0.18;
-const OUTLIER_WEIGHT = 0.07;
-const OPPOSITE_SIDE_MAX_PENALTY = 0.45;
-const OPPOSITE_SIDE_SPREAD = 25;
-const OUTLIER_FULL_SPREAD = 100;
-const OUTLIER_EXPONENT = 2.5;
-const DIRECTION_AUGMENT_RADIUS = 8;
-
-const get = (v, id) => v?.[id] ?? CENTER;
-const round1 = (x) => Math.round(x * 10) / 10;
+export { AXIS_IDS };
+export const SELECTABLE_RELIGIONS = SELECTABLE;
+export const OTHER_RELIGION = OTHER;
 
 export function compatibility(user, target, axisIds = AXIS_IDS) {
-  const n = axisIds.length;
-  let axisSum = 0;
-  let dot = 0;
-  let uu = 0;
-  let tt = 0;
-  let uMag = 0;
-  let tMag = 0;
-  let maxDiff = 0;
-  for (const id of axisIds) {
-    const u = get(user, id);
-    const t = get(target, id);
-    const diff = Math.abs(u - t);
-    let sim = Math.max(0, 1 - (diff / AXIS_SPREAD) ** 2);
-    if ((u - CENTER) * (t - CENTER) < 0) {
-      sim *= 1 - OPPOSITE_SIDE_MAX_PENALTY
-        * Math.tanh(Math.abs(u - CENTER) / OPPOSITE_SIDE_SPREAD)
-        * Math.tanh(Math.abs(t - CENTER) / OPPOSITE_SIDE_SPREAD);
-    }
-    axisSum += sim;
-    const cu = u - CENTER;
-    const ct = t - CENTER;
-    dot += cu * ct;
-    uu += cu * cu;
-    tt += ct * ct;
-    uMag += Math.abs(cu);
-    tMag += Math.abs(ct);
-    maxDiff = Math.max(maxDiff, diff);
-  }
-  const augment = n * DIRECTION_AUGMENT_RADIUS * DIRECTION_AUGMENT_RADIUS;
-  const cosine = (dot + augment) / Math.sqrt((uu + augment) * (tt + augment));
-  const axisSimilarity = (100 * axisSum) / n;
-  const directionSimilarity = CENTER + CENTER * cosine;
-  const magnitudeSimilarity = 100 - 2 * Math.abs(uMag / n - tMag / n);
-  const outlierSimilarity = 100 * Math.max(0, 1 - (maxDiff / OUTLIER_FULL_SPREAD) ** OUTLIER_EXPONENT);
-  const score = AXIS_WEIGHT * axisSimilarity
-    + DIRECTION_WEIGHT * directionSimilarity
-    + MAGNITUDE_WEIGHT * magnitudeSimilarity
-    + OUTLIER_WEIGHT * outlierSimilarity;
-  return round1(Math.max(0, Math.min(100, score)));
+  return score(user, target, axisIds);
 }
 
-// Ranking decrescente de um catálogo contra `user`, com desempate por nome
-// (mesmo comparador dos matcher services).
+// Ranking por compatibilidade, com desempate pelo nome como no backend (String.compareTo).
 export function rank(user, items, vectorOf, axisIds = AXIS_IDS) {
   return items
-    .map((item) => ({ item, score: compatibility(user, vectorOf(item), axisIds) }))
-    .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name));
+    .map((item) => ({ item, score: score(user, vectorOf(item), axisIds) }))
+    .sort((a, b) => b.score - a.score || javaCompare(a.item.name, b.item.name));
 }
 
-// Destaque por dimensão (política, social, econômica), excluindo em sequência
-// quem já apareceu — como DimensionMatcherService.findAll.
+// Destaques por dimensão como no backend: personalidades (itens com `role`) pela área de atuação, nos 12 eixos
+// (DimensionMatcherService); países e partidos pelo grupo de eixos de cada dimensão (Country/PartyDimensionMatcherService).
+// A lista já chega filtrada pela religião.
 export function dimensionMatches(user, items, vectorOf, excludeIds = []) {
-  const excluded = new Set(excludeIds);
-  const out = [];
-  for (const dim of DIMENSIONS) {
-    const best = rank(user, items.filter((i) => !excluded.has(i.id)), vectorOf, dim.axes)[0];
-    if (!best) continue;
-    out.push({ dimension: dim.key, ...best });
-    excluded.add(best.item.id);
-  }
-  return out;
+  const vectors = new Map(items.map((item) => [item.id, vectorOf(item)]));
+  const people = items.length > 0 && 'role' in items[0];
+  const found = people
+    ? personalityDimensions(user, items, vectors, null, excludeIds[0] ?? null).filter((d) => !excludeIds.includes(d.ranked.item.id))
+    : axisDimensions(user, items, vectors, null, excludeIds);
+  return found.map(({ dimension, ranked }) => ({ dimension, item: ranked.item, score: ranked.compatibility }));
 }
-
-// ── Filtro de religião ──────────────────────────────────────────────────────
-// Porte de ReligionFilter.java. Na tela de resultado o usuário escolhe uma
-// religião e o ranking exclui os perfis ligados só a outras religiões; "only"
-// torna o perfil exclusivo de quem escolheu uma das religiões listadas.
-// "other" ("outra religião") também pode ser a preferência: some todo perfil
-// ligado a uma religião selecionável e ficam os só com "other" e os seculares.
-export const SELECTABLE_RELIGIONS = ['catholic', 'protestant', 'orthodox', 'judaism', 'islam', 'buddhism', 'hinduism'];
-export const OTHER_RELIGION = 'other';
-const ONLY = 'only';
 
 export function religionAllows(religions, preference) {
-  if (!religions || religions.length === 0) return true;
-  const hasSelectable = religions.some((r) => SELECTABLE_RELIGIONS.includes(r));
-  if (preference === OTHER_RELIGION) return !hasSelectable;
-  if (religions.includes(ONLY)) {
-    // ["other", "only"] (xintoísmo): fica só para quem não escolheu religião (ou escolheu "outra").
-    return hasSelectable ? preference != null && religions.includes(preference) : preference == null;
-  }
-  if (preference == null) return true;
-  return religions.includes(preference) || !hasSelectable;
+  return allows(religions, preference);
 }
 
-// Nas páginas de perfil, a religião do próprio perfil faz o papel da escolha
-// do usuário: um perfil cristão só vê, nos rankings, perfis compatíveis com o
-// cristianismo (some o "only" de outras religiões); um perfil só com "other"
-// equivale a "outra religião" (some quem é ligado a uma religião específica);
-// um perfil sem religião equivale a "nenhuma" e também não vê perfis "only".
-// Com mais de uma religião, basta o item servir a uma delas.
+// Na página de um perfil, a religião dele faz o papel da escolha do usuário (a mesma regra do gabarito do backend).
 export function religionVisibility(subject) {
-  const religions = subject?.religions ?? [];
-  const prefs = religions.filter((r) => SELECTABLE_RELIGIONS.includes(r));
-  if (prefs.length === 0) {
-    const preference = religions.includes(OTHER_RELIGION) ? OTHER_RELIGION : null;
-    return (item) => religionAllows(item.religions, preference);
-  }
-  return (item) => prefs.some((pref) => religionAllows(item.religions, pref));
+  const preference = profileReligion(subject?.religions);
+  return (item) => allows(item.religions, preference);
 }

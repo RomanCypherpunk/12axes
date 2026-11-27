@@ -20,7 +20,7 @@ import { IT } from './locales/it.mjs';
 import { RU } from './locales/ru.mjs';
 import { FR } from './locales/fr.mjs';
 
-const STR = {
+export const STR = {
   pt: {
     skip: 'Pular para o conteúdo',
     catalogNav: 'Catálogo',

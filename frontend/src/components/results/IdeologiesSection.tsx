@@ -5,12 +5,13 @@ import { localCatStyle, resolveIdeologyColor } from '../../utils/ideologyColors'
 
 interface IdeologiesSectionProps {
   others: IdeologyMatch[];
-  distant: IdeologyMatch;
+  /** Sem ele (wiki), o bloco da ideologia mais distante não aparece. */
+  distant?: IdeologyMatch;
 }
 
 // Cada card veste a cor da própria categoria, não a do top match.
 export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
-  const distantColor = resolveIdeologyColor(distant.category, distant.ideologyId);
+  const distantColor = distant ? resolveIdeologyColor(distant.category, distant.ideologyId) : null;
   const [openId, setOpenId] = useState<string | null>(null);
   const columns = others.map((match) => (!openId || match.ideologyId === openId ? '1fr' : '0fr')).join(' ');
 
@@ -48,6 +49,7 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
         })}
       </ul>
 
+      {distant && distantColor && (
       <div className="e-distant" style={localCatStyle(distant.category, distant.ideologyId) as CSSProperties}>
         <p className="e-sub">{t.ideologyDistantTitle}</p>
         <strong>{distant.name}</strong>
@@ -56,6 +58,7 @@ export function IdeologiesSection({ others, distant }: IdeologiesSectionProps) {
         </span>
         <More name={distant.name} text={distant.longDescription || distant.description} />
       </div>
+      )}
     </section>
   );
 }

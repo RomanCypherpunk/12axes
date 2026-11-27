@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { t } from '../../i18n';
 import type { PoliticalValue } from '../../types/quiz';
 import { catStyle } from '../../utils/ideologyColors';
@@ -22,6 +22,9 @@ interface PoliticalValuesSectionProps {
   /** O que aparece embaixo da seção (o botão de compartilhar o cartão de valores e bússola). */
   footer?: ReactNode;
 }
+
+// No build da wiki (HTML gerado no Node) não há tela para medir: o ajuste roda só no navegador.
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 const MIN_NAME_FONT = 9;
 // Folga que o cartão tem à direita do texto (o respiro interno): sobra até esse tanto não conta como estouro.
@@ -47,7 +50,7 @@ export function PoliticalValuesSection({ values, category, ideologyId, religion,
   const [selected, setSelected] = useState<PoliticalValue | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
-  useLayoutEffect(() => {
+  useBrowserLayoutEffect(() => {
     const list = listRef.current;
     if (!list) return;
     const fit = () => fitNames(list);

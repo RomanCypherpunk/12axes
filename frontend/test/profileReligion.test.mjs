@@ -34,12 +34,13 @@ describe('religionAllows (porte de ReligionFilter.java)', () => {
     expect(religionAllows(['other'], null)).toBe(true);
   });
 
-  it('"outra religião" some quem é ligado a uma religião específica e mantém só "other" e os seculares', () => {
+  it('"outra religião" some quem é ligado só a uma religião específica e mantém "other" e os seculares', () => {
     expect(religionAllows(['other'], 'other')).toBe(true);
     expect(religionAllows([], 'other')).toBe(true);
     expect(religionAllows(['other', 'only'], 'other')).toBe(true);
     expect(religionAllows(['catholic'], 'other')).toBe(false);
-    expect(religionAllows(['islam', 'other'], 'other')).toBe(false);
+    // Como no backend (ReligionFilter.allows): quem traz a marca "other" fica, mesmo ligado a outra religião.
+    expect(religionAllows(['islam', 'other'], 'other')).toBe(true);
     expect(religionAllows(['judaism', 'only'], 'other')).toBe(false);
   });
 
@@ -75,7 +76,7 @@ describe('religionVisibility (página do perfil)', () => {
   it('perfil só com "other" vê o ranking como quem escolheu "outra religião"', () => {
     const visible = religionVisibility({ religions: ['other'] });
     expect(visible({ religions: ['catholic'] })).toBe(false);
-    expect(visible({ religions: ['islam', 'other'] })).toBe(false);
+    expect(visible({ religions: ['islam', 'other'] })).toBe(true);
     expect(visible({ religions: ['other'] })).toBe(true);
     expect(visible({ religions: ['other', 'only'] })).toBe(true);
     expect(visible({ religions: [] })).toBe(true);

@@ -37,12 +37,16 @@ interface ResultsNavProps {
   premium?: boolean;
   /** Sem acesso: id do convite à compra. O item "Análise completa" aparece apagado (com um cadeado) e leva até ele; null o esconde. */
   premiumTarget?: string | null;
+  /** Fora dos resultados (wiki): só estas seções, nesta ordem. */
+  only?: string[];
 }
 
 type NavItem = { id: string; label: () => string };
 
-export function ResultsNav({ hasElections = false, hasBooks = true, hasCompass = true, hasParties = true, hasValues = true, premium = false, premiumTarget = null }: ResultsNavProps) {
-  const base: NavItem[] = SECTIONS.filter(
+export function ResultsNav({ hasElections = false, hasBooks = true, hasCompass = true, hasParties = true, hasValues = true, premium = false, premiumTarget = null, only }: ResultsNavProps) {
+  const base: NavItem[] = only
+    ? only.flatMap((id) => SECTIONS.filter((section) => section.id === id))
+    : SECTIONS.filter(
     ({ id }) => (id !== 'eleicoes' || hasElections) && (id !== 'livros' || hasBooks) && (id !== 'bussola' || hasCompass) && (id !== 'partidos' || hasParties) && (id !== 'valores' || hasValues)
   );
   const locked: NavItem[] = !premium && premiumTarget !== null ? [{ id: premiumTarget, label: () => t.resultsNavReport }] : [];

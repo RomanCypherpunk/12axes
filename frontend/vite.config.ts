@@ -97,15 +97,18 @@ export default defineConfig(({ mode }) => {
       // sai diferente em cada um: o HTML da Vercel pedia à CDN arquivos que só existiam na própria Vercel, o pedido falhava
       // e todo o JS voltava a ser servido (e cobrado) pela Vercel. Com o SHA do commit no nome, JS e CSS têm o mesmo nome
       // nos dois lugares. Sem SHA (build local), vale o hash de sempre.
+      // Entrada extra: a hidratação das páginas da wiki (src/wiki/client.tsx); o manifest diz ao gerador de páginas o nome final.
+      manifest: true,
       rollupOptions: commitSha
         ? {
+            input: { main: 'index.html', wiki: 'src/wiki/client.tsx' },
             output: {
               entryFileNames: `assets/[name]-${commitSha}.js`,
               chunkFileNames: `assets/[name]-${commitSha}.js`,
               assetFileNames: (info) => (info.name?.endsWith('.css') ? `assets/[name]-${commitSha}[extname]` : 'assets/[name]-[hash][extname]')
             }
           }
-        : {}
+        : { input: { main: 'index.html', wiki: 'src/wiki/client.tsx' } }
     },
     test: {
       environment: 'node',

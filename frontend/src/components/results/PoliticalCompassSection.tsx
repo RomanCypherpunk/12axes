@@ -91,6 +91,8 @@ interface PoliticalCompassSectionProps {
   moralAxis?: Axis;
   /** O que aparece embaixo da seção (o botão de compartilhar o cartão de valores e bússola). */
   footer?: ReactNode;
+  /** Fora dos resultados (wiki): retrato, bandeira ou logo do perfil no lugar do "X", contornado com a cor do espectro. */
+  face?: ReactNode;
 }
 
 /** Valores derivados da bússola (cores, frase e barra), compartilhados com o relatório em PDF. */
@@ -212,7 +214,7 @@ interface CompassTile {
   style: CSSProperties;
 }
 
-export function PoliticalCompassSection({ position, category, ideologyId, moralAxis, footer }: PoliticalCompassSectionProps) {
+export function PoliticalCompassSection({ position, category, ideologyId, moralAxis, footer, face }: PoliticalCompassSectionProps) {
   const { right, authoritarian, traditional } = position;
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   const [selectedTile, setSelectedTile] = useState<CompassTile | null>(null);
@@ -249,7 +251,7 @@ export function PoliticalCompassSection({ position, category, ideologyId, moralA
         <div {...{ ...clickableProps(t.compassInfo.aria, () => setIsInfoOpen(true)), className: 'e-compass-hit e-clickable' }}>
           <CompassChart
             ariaLabel={t.compassAria(Math.round(right), Math.round(authoritarian), Math.round(traditional))}
-            markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor }]}
+            markers={[{ key: 'you', left: right, top: 100 - authoritarian, color: markerColor, face, outline: face ? spectrum.base : undefined }]}
           />
         </div>
 
