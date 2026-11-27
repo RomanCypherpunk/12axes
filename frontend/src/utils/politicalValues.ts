@@ -3,6 +3,7 @@ const CONNECTORS = new Set(['de', 'da', 'do', 'das', 'dos', 'e', 'of', 'and', 't
 // Palavras longas demais para o cartão do valor, já com o ponto de quebra: assim todos os nomes ficam do mesmo tamanho.
 const LONG_WORDS: Record<string, string> = {
   Tecnocapitalismo: 'Tecno-\nCapitalismo',
+  Modernisierungsnationalismus: 'Modernisierungs-\nnationalismus',
   développementisme: 'développe-\nmentisme',
   Staatskapitalismus: 'Staats-\nkapitalismus',
   Nacionalliberalismo: 'Nacional-\nliberalismo',

@@ -534,7 +534,7 @@ export const VALUE_COINS: Record<string, CoinStyle> = {
   'nacionalismo-cultural': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   'nacionalismo-civico': { viewBox: '0 0 24 24', glyph: path(JUSTICE_SCALES) },
   patriotismo: { viewBox: '0 0 24 24', glyph: path(FLAG) },
-  'nacional-desenvolvimentismo': { viewBox: '0 0 24 24', glyph: path(FLAG) },
+  'nacionalismo-modernizador': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   'nacional-liberalismo': { viewBox: '0 0 24 24', glyph: path(FLAG) },
   mercantilismo: { viewBox: '-1.5 0 24 24', glyph: tradeShip },
   mutualismo: { viewBox: '0 0 20 20', glyph: mutualArrows },

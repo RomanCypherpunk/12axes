@@ -601,13 +601,14 @@
         }
       },
       {
-        "id": "nacional-desenvolvimentismo",
-        "name": "Nacional-desenvolvimentismo",
-        "description": "A nação se afirma pelo desenvolvimento: Estado forte na economia, indústria protegida e avanço tecnológico próprio.",
+        "id": "nacionalismo-modernizador",
+        "name": "Nacionalismo modernizador",
+        "description": "A nação se afirma pela modernização, com Estado forte, indústria própria e avanço técnico, para se igualar às potências ou superá-las.",
         "profile": {
           "economia": 75,
           "comercio": 69,
-          "tecnologia": 79
+          "tecnologia": 79,
+          "imigracao": 60
         }
       },
       {
